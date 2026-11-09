@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Zucchini",
-    "sl": "Bučke"
+    "sl": "Bučke",
+    "nl": "Courgette"
   },
   "question": {
     "en": "Can dogs eat zucchini?",
-    "sl": "Ali lahko psi jedo bučke?"
+    "sl": "Ali lahko psi jedo bučke?",
+    "nl": "Mogen honden courgette eten?"
   },
   "url_slug": {
     "en": "zucchini",
-    "sl": "bucke"
+    "sl": "bucke",
+    "nl": "courgette"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, zucchini is perfectly safe for dogs. Plain raw, steamed or cooked zucchini is fine in moderation. Chop it into small pieces, as large pieces can be a choking hazard, and skip oil, salt and seasonings.",
-    "sl": "Da, bučke so za pse povsem varne. Navadne surove, na pari ali kuhane bučke so v zmernih količinah v redu. Narežite jih na majhne koščke, saj se lahko pes z večjimi kosi zaduši, in ne dodajajte olja, soli ali začimb."
+    "sl": "Da, bučke so za pse povsem varne. Navadne surove, na pari ali kuhane bučke so v zmernih količinah v redu. Narežite jih na majhne koščke, saj se lahko pes z večjimi kosi zaduši, in ne dodajajte olja, soli ali začimb.",
+    "nl": "Ja, courgette is voor honden volkomen veilig. Naturel, rauw, gestoomd of gaar is courgette met mate prima. Snijd hem in kleine stukjes, want grote stukken kunnen een verstikkingsgevaar zijn, en laat olie, zout en kruiden weg."
   },
   "why": {
     "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
-    "sl": "Noben del rastline bučke ni strupen. Nevarnosti izvirajo iz načina priprave: večji kosi lahko povzročijo dušenje, velika količina lahko razdraži prebavo, olja, sol, začimbe, česen in čebula pa psom škodijo."
+    "sl": "Noben del rastline bučke ni strupen. Nevarnosti izvirajo iz načina priprave: večji kosi lahko povzročijo dušenje, velika količina lahko razdraži prebavo, olja, sol, začimbe, česen in čebula pa psom škodijo.",
+    "nl": "Geen enkel deel van de courgetteplant is giftig. De risico’s zitten in de manier waarop je de courgette geeft: grote stukken kunnen verstikking veroorzaken, een grote hoeveelheid kan de spijsvertering van streek maken, en olie, zout, kruiden, knoflook en ui zijn schadelijk voor honden."
   },
   "signs": null,
   "what_to_do": {
     "en": "Keep zucchini to small amounts: feeding a dog a large amount of anything can lead to digestive upset. Never give a whole zucchini.",
-    "sl": "Bučke ponudite le v majhnih količinah: velika količina katere koli hrane lahko psu razdraži prebavo. Nikoli mu ne dajte cele bučke."
+    "sl": "Bučke ponudite le v majhnih količinah: velika količina katere koli hrane lahko psu razdraži prebavo. Nikoli mu ne dajte cele bučke.",
+    "nl": "Houd het bij kleine hoeveelheden: van een grote hoeveelheid van wat dan ook kan een hond spijsverteringsklachten krijgen. Geef nooit een hele courgette."
   },
   "serving": {
     "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
-    "sl": "Navadne, surove, na pari ali kuhane, narezane na majhne koščke; psom, ki težko žvečijo, jih pripravite na pari. Brez olja, soli, začimb, česna in čebule."
+    "sl": "Navadne, surove, na pari ali kuhane, narezane na majhne koščke; psom, ki težko žvečijo, jih pripravite na pari. Brez olja, soli, začimb, česna in čebule.",
+    "nl": "Naturel, rauw, gestoomd of gaar, in kleine stukjes gesneden; stoom hem voor honden die moeite hebben met kauwen. Geen olie, zout, kruiden, knoflook of ui."
   },
   "child": {
     "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
-    "sl": "Psi lahko pogrizljajo malo navadnih bučk. Odrasli jih najprej nareže na majhne koščke."
+    "sl": "Psi lahko pogrizljajo malo navadnih bučk. Odrasli jih najprej nareže na majhne koščke.",
+    "nl": "Honden mogen een beetje naturel courgette knabbelen. Een volwassene snijdt hem eerst in kleine stukjes."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat zucchini bread?",
-        "sl": "Ali lahko psi jedo kruh ali pecivo z bučkami?"
+        "sl": "Ali lahko psi jedo kruh ali pecivo z bučkami?",
+        "nl": "Mogen honden courgettebrood eten?"
       },
       "a": {
         "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
-        "sl": "Ne. Kruh in drugo pecivo z bučkami ni primerno. Posebej pazite na ksilitol, sladilo, ki je za pse strupeno."
+        "sl": "Ne. Kruh in drugo pecivo z bučkami ni primerno. Posebej pazite na ksilitol, sladilo, ki je za pse strupeno.",
+        "nl": "Nee. Courgettebrood en ander gebak met courgette zijn problematisch. Pas vooral op voor xylitol, een zoetstof die giftig is voor honden."
       }
     }
   ],
@@ -110,6 +120,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a1a09215cbbc545e0a91072b25f0f7b587fb22592d80ffd5495e52f5f00c3187"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f1d4a4be24c3a9133f8a44ff29cc0d3dbefbaee5f0a446af0329f02000b95100"
     }
   }
 }

@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Brussels sprouts",
-    "sl": "Brstični ohrovt"
+    "sl": "Brstični ohrovt",
+    "nl": "Spruitjes"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
-    "sl": "Ali lahko psi jedo brstični ohrovt?"
+    "sl": "Ali lahko psi jedo brstični ohrovt?",
+    "nl": "Mogen honden spruitjes eten?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
-    "sl": "brsticni-ohrovt"
+    "sl": "brsticni-ohrovt",
+    "nl": "spruitjes"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, with a few precautions. Plain cooked Brussels sprouts are fine for dogs in small amounts, but too many can cause lots of gas, stomach upset and diarrhoea. Don't serve them raw: they are too hard for dogs to digest.",
-    "sl": "Da, z nekaj previdnosti. Navaden kuhan brstični ohrovt je za pse v majhnih količinah v redu, preveč pa lahko povzroči močne vetrove, želodčne težave in drisko. Ne ponudite ga surovega: psi ga težko prebavijo."
+    "sl": "Da, z nekaj previdnosti. Navaden kuhan brstični ohrovt je za pse v majhnih količinah v redu, preveč pa lahko povzroči močne vetrove, želodčne težave in drisko. Ne ponudite ga surovega: psi ga težko prebavijo.",
+    "nl": "Ja, als je een paar dingen in acht neemt. Naturel gaar gemaakte spruitjes zijn in kleine hoeveelheden prima voor honden, maar van te veel kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef ze niet rauw: dan zijn ze te hard om goed te verteren."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
-    "sl": "Brstični ohrovt je poln hranil in antioksidantov ter ne vsebuje strupov. Vsebuje pa veliko snovi, imenovane izotiocianat, in preveč ga lahko povzroči močne vetrove, želodčne težave in drisko, zato ga psu ne dajajte preveč."
+    "sl": "Brstični ohrovt je poln hranil in antioksidantov ter ne vsebuje strupov. Vsebuje pa veliko snovi, imenovane izotiocianat, in preveč ga lahko povzroči močne vetrove, želodčne težave in drisko, zato ga psu ne dajajte preveč.",
+    "nl": "Spruitjes zitten vol voedingsstoffen en antioxidanten en bevatten geen gifstoffen. Ze bevatten wel veel isothiocyanaten, en van te veel spruitjes kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef dus niet te veel."
   },
   "signs": null,
   "what_to_do": {
     "en": "Give only a little and don't overfeed. If your dog has dietary issues or allergies, talk to your vet first before offering Brussels sprouts.",
-    "sl": "Ponudite le malo in ne pretiravajte. Če ima pes težave s prehrano ali alergije, se pred tem posvetujte z veterinarjem."
+    "sl": "Ponudite le malo in ne pretiravajte. Če ima pes težave s prehrano ali alergije, se pred tem posvetujte z veterinarjem.",
+    "nl": "Geef maar een klein beetje en niet te veel. Heeft je hond problemen met bepaalde voeding of allergieën, overleg dan eerst met je dierenarts voordat je spruitjes geeft."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
-    "sl": "Opran, z odrezanim večjim delom peclja in ohranjenimi listi, kuhan (kuhanje na pari ohrani največ hranil). Navaden, brez zelišč in začimb, v majhnih količinah."
+    "sl": "Opran, z odrezanim večjim delom peclja in ohranjenimi listi, kuhan (kuhanje na pari ohrani največ hranil). Navaden, brez zelišč in začimb, v majhnih količinah.",
+    "nl": "Gewassen, met het grootste deel van de stronk eraf gesneden (de blaadjes blijven eraan) en gaar gemaakt; stomen behoudt de meeste voedingsstoffen. Naturel, zonder kruiden en in kleine hoeveelheden."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
-    "sl": "Psi lahko za priboljšek dobijo malo kuhanega brstičnega ohrovta. Če ga pojedo preveč, imajo poln trebušček vetrov!"
+    "sl": "Psi lahko za priboljšek dobijo malo kuhanega brstičnega ohrovta. Če ga pojedo preveč, imajo poln trebušček vetrov!",
+    "nl": "Honden mogen af en toe een beetje gaar spruitje als traktatie. Van te veel krijgen ze een heel winderige buik!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw Brussels sprouts?",
-        "sl": "Ali lahko psi jedo surov brstični ohrovt?"
+        "sl": "Ali lahko psi jedo surov brstični ohrovt?",
+        "nl": "Mogen honden rauwe spruitjes eten?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
-        "sl": "Raje ne: surov ohrovt psi težko prebavijo. Najprej ga skuhajte; kuhanje na pari ohrani največ hranil."
+        "sl": "Raje ne: surov ohrovt psi težko prebavijo. Najprej ga skuhajte; kuhanje na pari ohrani največ hranil.",
+        "nl": "Liever niet: rauwe spruitjes zijn te hard voor honden om goed te verteren. Maak ze eerst gaar; stomen behoudt de meeste voedingsstoffen."
       }
     }
   ],
@@ -110,6 +120,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "827f588258b9d39e03fce407847b51e52525b4b013f15efbe4f5a3bf2fa41ae2"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0677dba4631e1b600881035e1eea3e09f4998ccb86ac698afc6e918628f13bd2"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Raw potatoes",
-    "sl": "Surov krompir"
+    "sl": "Surov krompir",
+    "nl": "Rauwe aardappelen"
   },
   "question": {
     "en": "Can dogs eat raw potatoes?",
-    "sl": "Ali lahko psi jedo surov krompir?"
+    "sl": "Ali lahko psi jedo surov krompir?",
+    "nl": "Mogen honden rauwe aardappelen eten?"
   },
   "url_slug": {
     "en": "raw-potatoes",
-    "sl": "surov-krompir"
+    "sl": "surov-krompir",
+    "nl": "rauwe-aardappelen"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your dog raw potatoes. Raw and green potatoes are unsafe and potentially toxic because they contain solanine, a natural toxin. Plain, well-cooked potato is different and is fine in moderation.",
-    "sl": "Ne, psu ne dajajte surovega krompirja. Surov in zelen krompir je nevaren in potencialno strupen, ker vsebuje solanin, naravni strup. Navaden, dobro kuhan krompir je nekaj drugega in je v zmernih količinah v redu."
+    "sl": "Ne, psu ne dajajte surovega krompirja. Surov in zelen krompir je nevaren in potencialno strupen, ker vsebuje solanin, naravni strup. Navaden, dobro kuhan krompir je nekaj drugega in je v zmernih količinah v redu.",
+    "nl": "Nee, geef je hond geen rauwe aardappelen. Rauwe en groene aardappelen zijn onveilig en mogelijk giftig, omdat ze solanine bevatten, een natuurlijke gifstof. Naturel, goed gare aardappel is iets anders en is met mate prima."
   },
   "why": {
     "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
-    "sl": "Surov krompir ter krompir z zeleno lupino ali zelenimi lisami vsebuje solanin, naravni strup, ki ga najdemo v rastlinah iz družine razhudnikovk. Zelene lise se pri nekaterih sortah pojavijo na svetlobi in kažejo, da se je količina solanina povečala. Koščki surovega ali napol kuhanega krompirja lahko povzročijo tudi dušenje."
+    "sl": "Surov krompir ter krompir z zeleno lupino ali zelenimi lisami vsebuje solanin, naravni strup, ki ga najdemo v rastlinah iz družine razhudnikovk. Zelene lise se pri nekaterih sortah pojavijo na svetlobi in kažejo, da se je količina solanina povečala. Koščki surovega ali napol kuhanega krompirja lahko povzročijo tudi dušenje.",
+    "nl": "Rauwe aardappelen, en aardappelen met een groene schil of groene plekken, bevatten solanine, een van nature voorkomende gifstof in planten uit de nachtschadefamilie. Groene plekken ontstaan wanneer sommige aardappelen aan licht worden blootgesteld en wijzen erop dat het solaninegehalte is gestegen. Stukjes rauwe of halfgare aardappel kunnen ook een verstikkingsgevaar zijn."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Driska",
       "Zaspanost in brezvoljnost",
       "Mišična šibkost"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Lusteloosheid",
+      "Spierzwakte"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate raw or green potato, contact your vet or a pet poison helpline. What to do next depends on your dog's size, how much was eaten and whether there are symptoms. If your dog is vomiting, has diarrhoea, seems lethargic or weak, see a vet immediately.",
-    "sl": "Če je pes pojedel surov ali zelen krompir, se obrnite na veterinarja ali na center za zastrupitve živali. Nadaljnji koraki so odvisni od velikosti psa, pojedene količine in znakov. Če pes bruha, ima drisko, je zaspan ali šibek, takoj poiščite veterinarja."
+    "sl": "Če je pes pojedel surov ali zelen krompir, se obrnite na veterinarja ali na center za zastrupitve živali. Nadaljnji koraki so odvisni od velikosti psa, pojedene količine in znakov. Če pes bruha, ima drisko, je zaspan ali šibek, takoj poiščite veterinarja.",
+    "nl": "Heeft je hond rauwe of groene aardappel gegeten, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren. Wat je daarna moet doen, hangt af van de grootte van je hond, hoeveel hij heeft gegeten en of er verschijnselen zijn. Braakt je hond, heeft hij diarree of lijkt hij lusteloos of zwak, ga dan meteen naar een dierenarts."
   },
   "serving": null,
   "child": {
     "en": "Raw potatoes are not for dogs. If a dog grabs one, tell a grown-up straight away.",
-    "sl": "Surov krompir ni za pse. Če ga pes zgrabi, takoj povej odraslemu."
+    "sl": "Surov krompir ni za pse. Če ga pes zgrabi, takoj povej odraslemu.",
+    "nl": "Rauwe aardappelen zijn niet voor honden. Pakt een hond er een, vertel het dan meteen aan een volwassene."
   },
   "faq": [
     {
       "q": {
         "en": "Are cooked potatoes okay for dogs?",
-        "sl": "Je kuhan krompir za pse v redu?"
+        "sl": "Je kuhan krompir za pse v redu?",
+        "nl": "Mogen honden gare aardappelen eten?"
       },
       "a": {
         "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
-        "sl": "Da, navaden kuhan krompir je v zmernih količinah v redu, kuhan toliko, da se ga da pretlačiti, da se pes ne zaduši. Prepričajte se, da ni zelen."
+        "sl": "Da, navaden kuhan krompir je v zmernih količinah v redu, kuhan toliko, da se ga da pretlačiti, da se pes ne zaduši. Prepričajte se, da ni zelen.",
+        "nl": "Ja, naturel gare aardappelen zijn met mate prima. Maak ze zo gaar dat je ze kunt prakken, zodat je hond zich er niet in verslikt. Zorg dat ze niet groen zijn."
       }
     },
     {
       "q": {
         "en": "Can dogs eat potato skins?",
-        "sl": "Ali lahko psi jedo krompirjeve olupke?"
+        "sl": "Ali lahko psi jedo krompirjeve olupke?",
+        "nl": "Mogen honden aardappelschillen eten?"
       },
       "a": {
         "en": "Potato skins are okay, but not if they are green.",
-        "sl": "Krompirjevi olupki so v redu, vendar ne, če so zeleni."
+        "sl": "Krompirjevi olupki so v redu, vendar ne, če so zeleni.",
+        "nl": "Aardappelschillen zijn prima, maar niet als ze groen zijn."
       }
     }
   ],
@@ -144,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "abae89ea53365594596264fc362b167154dc13d4a7aa9335f97af6837d9efc84"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "21e859af2bfa72af098066d2509b0a12821f18aaf0d34f916523ea53f5097a5b"
     }
   }
 }

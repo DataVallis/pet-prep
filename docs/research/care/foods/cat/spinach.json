@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Spinach",
-    "sl": "Špinača"
+    "sl": "Špinača",
+    "nl": "Spinazie"
   },
   "question": {
     "en": "Can cats eat spinach?",
-    "sl": "Ali lahko mačke jedo špinačo?"
+    "sl": "Ali lahko mačke jedo špinačo?",
+    "nl": "Mogen katten spinazie eten?"
   },
   "url_slug": {
     "en": "spinach",
-    "sl": "spinaca"
+    "sl": "spinaca",
+    "nl": "spinazie"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small bit of plain spinach is fine as an occasional treat. Cats Protection lists spinach among the few vegetables you can feed your cat, if they're keen. Cats don't need vegetables, so keep it a tiny extra.",
-    "sl": "Da, malo navadne špinače je v redu kot občasen priboljšek. Cats Protection špinačo navaja med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek."
+    "sl": "Da, malo navadne špinače je v redu kot občasen priboljšek. Cats Protection špinačo navaja med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek.",
+    "nl": "Ja, een klein beetje naturel spinazie is af en toe prima als traktatie. Volgens Cats Protection is spinazie een van de weinige groenten die je je kat kunt geven, als hij het lekker vindt. Katten hebben geen groente nodig, dus houd het bij een klein extraatje."
   },
   "why": {
     "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
-    "sl": "Cats Protection špinačo uvršča med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+    "sl": "Cats Protection špinačo uvršča med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "nl": "Volgens Cats Protection is spinazie een van de weinige groenten die je een kat kunt geven, als die het lekker vindt. De organisatie stelt gestoomde of gekookte groente voor, zonder boter, zout of kruiden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
   },
   "serving": {
     "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
-    "sl": "Malo špinače, kuhane na pari ali v vodi, brez masla, soli in začimb."
+    "sl": "Malo špinače, kuhane na pari ali v vodi, brez masla, soli in začimb.",
+    "nl": "Een klein beetje, gestoomd of gekookt, zonder boter, zout of kruiden."
   },
   "child": {
     "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Malo špinače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Malo špinače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "nl": "Een heel klein beetje spinazie kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "nl": "Hebben katten groente nodig?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
       }
     }
   ],
@@ -102,6 +112,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cd48dfbf42f6a2aa042b415e4fe93559d5bf78b819cc33fc770a2313b2b1e95c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "32af7bb0df9fd73c3ac2d313417bb02511f0ee7cbfb56abbbdf5ba98f415a595"
     }
   }
 }
