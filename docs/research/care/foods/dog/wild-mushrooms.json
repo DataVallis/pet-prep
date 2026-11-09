@@ -1,0 +1,258 @@
+{
+  "slug": "wild-mushrooms",
+  "species": "dog",
+  "name": {
+    "en": "Wild mushrooms",
+    "sl": "Gobe iz narave"
+  },
+  "question": {
+    "en": "Can dogs eat wild mushrooms?",
+    "sl": "Ali lahko psi jedo gobe, ki jih najdejo zunaj?"
+  },
+  "url_slug": {
+    "en": "wild-mushrooms",
+    "sl": "gobe-iz-narave"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Treat every mushroom your dog finds outside as toxic. Toxic and non-toxic mushrooms are hard to tell apart, and the toxic ones are extremely dangerous. If your dog ate a wild mushroom, contact your vet immediately.",
+    "sl": "Ne. Vsako gobo, ki jo pes najde zunaj, obravnavajte kot strupeno. Strupene in nestrupene gobe je težko ločiti, strupene pa so izjemno nevarne. Če je pes pojedel gobo iz narave, se takoj obrnite na veterinarja."
+  },
+  "why": {
+    "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
+    "sl": "Vrst gob je na tisoče in mnoge lahko pri psih povzročijo resno bolezen. Nekatere povzročijo blago bruhanje ali drisko, druge lahko vodijo v odpoved jeter in ledvic ali v krče. Znaki so odvisni od vrste gobe, ni pa vedno mogoče vedeti, katero gobo je pes pojedel."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Drooling",
+      "Weakness",
+      "Lethargy or drowsiness",
+      "Disorientation or staggering",
+      "Tremors",
+      "Seizures",
+      "Abdominal pain",
+      "Jaundice"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slinjenje",
+      "Šibkost",
+      "Zaspanost in brezvoljnost",
+      "Zmedenost ali opotekanje",
+      "Tresenje",
+      "Krči",
+      "Bolečine v trebuhu",
+      "Zlatenica"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet, an animal poison centre or an emergency vet hospital immediately, even before any signs appear. If you can, bring a sample of the mushroom, wrapped in a damp paper towel in a paper bag, to help the vet.",
+    "sl": "Takoj se obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico, tudi preden se pojavijo znaki. Če lahko, prinesite vzorec gobe, zavit v vlažno papirnato brisačo v papirnati vrečki, da bo veterinar lažje pomagal."
+  },
+  "serving": null,
+  "child": {
+    "en": "Mushrooms outside are not for dogs. If you see a dog eat one, tell a grown-up straight away.",
+    "sl": "Gobe zunaj niso za pse. Če vidiš, da pes poje gobo, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Should I wait to see if my dog gets sick?",
+        "sl": "Naj počakam, ali bo pes zbolel?"
+      },
+      "a": {
+        "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
+        "sl": "Ne. Ne čakajte, da se pojavijo znaki. Hiter odziv je najboljše, kar lahko storite za psa."
+      }
+    },
+    {
+      "q": {
+        "en": "How can I prevent it?",
+        "sl": "Kako to preprečim?"
+      },
+      "a": {
+        "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
+        "sl": "Predpostavite, da je vsaka goba, ki jo pes najde, nevarna, in psa zunaj spremljajte."
+      }
+    },
+    {
+      "q": {
+        "en": "Are store-bought mushrooms different?",
+        "sl": "So gobe iz trgovine drugačne?"
+      },
+      "a": {
+        "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
+        "sl": "Da. Navadne gobe iz velikih trgovin so za pse načeloma lahko varne, čeprav jih psi ne potrebujejo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD157",
+      "quote": "It can be difficult to distinguish toxic mushrooms from non-toxic mushrooms."
+    },
+    {
+      "id": "KD157",
+      "quote": "the ones that are toxic are extremely dangerous."
+    },
+    {
+      "id": "KD157",
+      "quote": "veterinarians recommend treating all wild mushrooms as potentially toxic"
+    },
+    {
+      "id": "KD157",
+      "quote": "The symptoms of mushroom poisoning in dogs depend on the species of mushroom."
+    },
+    {
+      "id": "KD157",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD157",
+      "quote": "Salivation"
+    },
+    {
+      "id": "KD157",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD157",
+      "quote": "Ataxia (staggering gait)"
+    },
+    {
+      "id": "KD157",
+      "quote": "Jaundice"
+    },
+    {
+      "id": "KD157",
+      "quote": "Abdominal pain"
+    },
+    {
+      "id": "KD157",
+      "quote": "If your dog has ingested a wild mushroom,"
+    },
+    {
+      "id": "KD157",
+      "quote": "contact your veterinarian, animal poison control center, or emergency veterinary hospital immediately."
+    },
+    {
+      "id": "KD157",
+      "quote": "If you can get a sample of the mushroom, preferably wrapped in a damp paper towel and stored in a paper bag,"
+    },
+    {
+      "id": "KD157",
+      "quote": "bring it to your veterinarian, as this will help them determine the best course of action."
+    },
+    {
+      "id": "KD157",
+      "quote": "Mushrooms sold in large and chain grocery stores may be generally safe for dogs to eat."
+    },
+    {
+      "id": "KD157",
+      "quote": "Dogs do not need mushrooms in their diet, so play it safe and give them a different reward,"
+    },
+    {
+      "id": "KD158",
+      "quote": "To be safe, it’s best to assume that all mushrooms are toxic and harmful to your dog."
+    },
+    {
+      "id": "KD158",
+      "quote": "With thousands of mushroom species and over 100 toxic mushrooms in North America"
+    },
+    {
+      "id": "KD158",
+      "quote": "it is not always possible to know what your dog has eaten."
+    },
+    {
+      "id": "KD158",
+      "quote": "Mushrooms that contain cyclopeptides can cause symptoms such as vomiting and diarrhea"
+    },
+    {
+      "id": "KD158",
+      "quote": "that can develop into liver failure and renal failure."
+    },
+    {
+      "id": "KD158",
+      "quote": "Mushrooms that contain hydrazine toxins can cause vomiting and diarrhea"
+    },
+    {
+      "id": "KD158",
+      "quote": "which quickly leads to seizures and liver necrosis within hours of consuming."
+    },
+    {
+      "id": "KD158",
+      "quote": "Do not wait for clinical signs of poisoning to develop, as it could be too late."
+    },
+    {
+      "id": "KD158",
+      "quote": "always assume that any mushroom your dog interacts with is toxic"
+    },
+    {
+      "id": "KD158",
+      "quote": "take steps to monitor your pet’s activity when they are outside."
+    },
+    {
+      "id": "KD159",
+      "quote": "many mushrooms are toxic and can cause serious illness if eaten by our dogs."
+    },
+    {
+      "id": "KD159",
+      "quote": "Some mushrooms may cause mild vomiting or diarrhea whereas others can cause extreme illness."
+    },
+    {
+      "id": "KD159",
+      "quote": "Clinical signs of mushroom poisoning include:"
+    },
+    {
+      "id": "KD159",
+      "quote": "Disorientation"
+    },
+    {
+      "id": "KD159",
+      "quote": "Drowsiness"
+    },
+    {
+      "id": "KD159",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KD159",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KD159",
+      "quote": "Weakness"
+    },
+    {
+      "id": "KD159",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD159",
+      "quote": "responding fast to a suspected mushroom snack is the best thing you can do for your dog in these situations."
+    },
+    {
+      "id": "KD159",
+      "quote": "This is why it is best to assume any mushroom you find is likely unsafe for your pet to consume."
+    }
+  ],
+  "related": [
+    "mushrooms-store"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d35699754cdecd48be759b65005e30bd4b00af1a3d312c3e1751dd338aae209a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "545df040db35a71d82954a339f3bd0384aab9f8e519c818d3acfaf0ded57cf44"
+    }
+  }
+}

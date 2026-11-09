@@ -1,0 +1,128 @@
+{
+  "slug": "corn",
+  "species": "dog",
+  "name": {
+    "en": "Corn kernels",
+    "sl": "Koruzna zrna"
+  },
+  "question": {
+    "en": "Can dogs eat corn?",
+    "sl": "Ali lahko psi jedo koruzo?"
+  },
+  "url_slug": {
+    "en": "corn",
+    "sl": "koruza"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
+    "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte."
+  },
+  "why": {
+    "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
+    "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer only plain kernels, cut off the cob, now and then. Before offering corn, make sure your dog doesn't have a corn allergy. Keep corn cobs well out of reach.",
+    "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega."
+  },
+  "serving": {
+    "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
+    "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
+    "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat buttered corn?",
+        "sl": "Ali lahko psi jedo koruzo z maslom?"
+      },
+      "a": {
+        "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
+        "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec."
+      }
+    },
+    {
+      "q": {
+        "en": "Is corn in dog food bad?",
+        "sl": "Je koruza v pasji hrani slaba?"
+      },
+      "a": {
+        "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
+        "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD23",
+      "quote": "The good news is that dogs can safely eat plain corn that has been removed from the cob in moderation."
+    },
+    {
+      "id": "KD23",
+      "quote": "While some cookout foods are unsafe for dogs, plain kernels cut off the cob are safe in small amounts as an occasional treat."
+    },
+    {
+      "id": "KD23",
+      "quote": "Yes. Dogs can eat plain sweet corn kernels in moderation, as long as they’re removed from the cob."
+    },
+    {
+      "id": "KD23",
+      "quote": "It’s best to avoid buttered corn."
+    },
+    {
+      "id": "KD23",
+      "quote": "Butter, salt, and seasonings can add unnecessary fat and sodium that may upset your dog’s stomach."
+    },
+    {
+      "id": "KD23",
+      "quote": "Many veterinary nutritionists agree that corn isn’t a problem for most dogs and can be part of a well-balanced diet."
+    },
+    {
+      "id": "KD23",
+      "quote": "It can provide several nutritional benefits for dogs when included as part of a balanced diet."
+    },
+    {
+      "id": "KD23",
+      "quote": "which provide energy for active dogs"
+    },
+    {
+      "id": "KD23",
+      "quote": "which can help promote digestion and gut health"
+    },
+    {
+      "id": "KD23",
+      "quote": "Before offering corn, however, make sure your dog doesn’t have a corn allergy."
+    },
+    {
+      "id": "KD23",
+      "quote": "Corn cobs are a serious risk because dogs may swallow pieces or even the entire cob."
+    },
+    {
+      "id": "KD23",
+      "quote": "Corn on the cob should never be fed to dogs because it can cause choking or intestinal blockages."
+    }
+  ],
+  "related": [
+    "corn-cob",
+    "peas",
+    "green-beans"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f85fbacd878cfb38c564f40f85a7acb09294182fc7181a48943e11cf4f0876f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a206a5aab6e4f9fea69714a3a628f158da044209fef33e69e814c990519f3237"
+    }
+  }
+}

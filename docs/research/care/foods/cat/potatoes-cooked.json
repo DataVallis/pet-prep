@@ -1,0 +1,129 @@
+{
+  "slug": "potatoes-cooked",
+  "species": "cat",
+  "name": {
+    "en": "Cooked potatoes",
+    "sl": "Kuhan krompir"
+  },
+  "question": {
+    "en": "Can cats eat cooked potatoes?",
+    "sl": "Ali lahko mačke jedo kuhan krompir?"
+  },
+  "url_slug": {
+    "en": "cooked-potatoes",
+    "sl": "kuhan-krompir"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
+    "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite."
+  },
+  "why": {
+    "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
+    "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small taste. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
+    "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja."
+  },
+  "child": {
+    "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
+    "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can cats eat potato skins?",
+        "sl": "Ali lahko mačke jedo krompirjeve olupke?"
+      },
+      "a": {
+        "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
+        "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati."
+      }
+    },
+    {
+      "q": {
+        "en": "Can cats eat mashed potatoes?",
+        "sl": "Ali lahko mačke jedo krompirjev pire?"
+      },
+      "a": {
+        "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
+        "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC76",
+      "quote": "that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "But only if they’re mashed, boiled and don’t contain additional foods like butter or cheese"
+    },
+    {
+      "id": "KC26",
+      "quote": "Plain mashed potato with no butter, cream or garlic"
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans. Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC83",
+      "quote": "Similarly, raw potatoes may be problematic for your pet, but cooked potatoes are fine in moderation."
+    },
+    {
+      "id": "KC84",
+      "quote": "While cooked potatoes are not toxic to cats, they’re not good for cats either."
+    },
+    {
+      "id": "KC84",
+      "quote": "peeled potatoes that are cooked without any fats, salts, or seasonings is best."
+    },
+    {
+      "id": "KC84",
+      "quote": "Potato skins in any form (raw or cooked) contain the toxin solanine and should be avoided."
+    },
+    {
+      "id": "KC84",
+      "quote": "Raw potatoes, potatoes with green spots in them, and all parts of the potato plant are toxic to cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "many can be given in very small quantities as an occasional treat."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "potatoes-raw",
+    "sweet-potato",
+    "garlic",
+    "butter"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "283015216c27b735ac3158477973032ee8b5d9a5e9e5a70fcd0142b8a77e4b20"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c0a09c14c9a58f9d7ba4fc68eb8fdcf89c7cf019567a0f7f181443b71d74b61"
+    }
+  }
+}

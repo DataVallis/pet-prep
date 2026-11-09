@@ -1,0 +1,103 @@
+{
+  "slug": "corn",
+  "species": "cat",
+  "name": {
+    "en": "Corn (sweetcorn kernels)",
+    "sl": "Koruza (zrna sladke koruze)"
+  },
+  "question": {
+    "en": "Can cats eat corn?",
+    "sl": "Ali lahko mačke jedo koruzo?"
+  },
+  "url_slug": {
+    "en": "corn",
+    "sl": "koruza"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
+    "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb."
+  },
+  "why": {
+    "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+    "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a few kernels. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
+    "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj."
+  },
+  "child": {
+    "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "There are a few vegetables that you can feed your cat (if they’re keen)."
+    },
+    {
+      "id": "KC5",
+      "quote": "These include carrots, peas, corn, broccoli and spinach."
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "many can be given in very small quantities as an occasional treat."
+    },
+    {
+      "id": "KC49",
+      "quote": "make sure whatever you give is in bite-sized pieces"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans. Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "peas",
+    "carrots",
+    "broccoli",
+    "spinach"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc84b54820e339638f7eecf8ee765c4b0ff3aff4bb9fa9fe3815fef5cf365180"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca0f34a528f64de5add9deadd3390c0937cc8211bf1ac073be3051376b0a5e58"
+    }
+  }
+}

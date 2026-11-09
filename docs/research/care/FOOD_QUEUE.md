@@ -120,9 +120,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] pumpkin
 - [x] sweet-potato
 - [x] potatoes-raw
-- [ ] potatoes-cooked
-- [ ] tomatoes · tomato-plant · peppers · chili-peppers · mushrooms-store · wild-mushrooms · asparagus
-- [ ] beetroot · corn · edamame · radish · eggplant · artichoke · seaweed · herbs-parsley · basil · mint
+- [x] potatoes-cooked
+- [x] tomatoes
+- [x] tomato-plant
+- [d] peppers — no source cat 2026-11-09
+- [x] chili-peppers
+- [x] mushrooms-store
+- [x] wild-mushrooms
+- [d] asparagus — no source cat 2026-11-09
+- [x] beetroot
+- [x] corn
+- [ ] edamame · radish · eggplant · artichoke · seaweed · herbs-parsley · basil · mint
 - [ ] catnip (cat) · cat-grass (cat)
 
 ## W4 — grains, kitchen, sweets

@@ -1,0 +1,128 @@
+{
+  "slug": "tomatoes",
+  "species": "cat",
+  "name": {
+    "en": "Tomatoes",
+    "sl": "Paradižnik"
+  },
+  "question": {
+    "en": "Can cats eat tomatoes?",
+    "sl": "Ali lahko mačke jedo paradižnik?"
+  },
+  "url_slug": {
+    "en": "tomatoes",
+    "sl": "paradiznik"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
+    "sl": "Mački je bolje ne dajati paradižnika. ASPCA navaja, da zreli plodovi za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati. Sama paradižnikova rastlina je za mačke strupena, zato naj bo zunaj njihovega dosega."
+  },
+  "why": {
+    "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
+    "sl": "ASPCA paradižnikovo rastlino zaradi solanina navaja kot strupeno za mačke in pojasnjuje, da zreli plodovi niso strupeni. Agriculture Victoria paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, ker vsebuje snov, ki povzroča hude prebavne težave, zreli plodovi pa niso strupeni. Ker ga en vir uvršča med živila, ki se jim je treba izogibati, upoštevamo strožji nasvet. Mačke zelenjave v prehrani tako ali tako ne potrebujejo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate tomato and then vomits or seems unwell, contact your vet. If your cat chewed the leaves, stems or green tomatoes, contact your vet right away. Don't try to make your cat sick without asking the vet.",
+    "sl": "Če je mačka pojedla paradižnik in nato bruha ali se ne počuti dobro, pokličite veterinarja. Če je grizljala liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Tomatoes are people food, not cat food. Keep tomato plants away from kitty and tell a grown-up if kitty nibbles one.",
+    "sl": "Paradižnik je hrana za ljudi, ne za muce. Paradižnikove rastline naj bodo stran od muce. Če muca katero pogrizlja, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are tomato leaves and green tomatoes safe for cats?",
+        "sl": "Ali so paradižnikovi listi in zeleni paradižniki varni za mačke?"
+      },
+      "a": {
+        "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
+        "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, nestrupeni so le zreli plodovi. International Cat Care dodaja, da lahko stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC85",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC85",
+      "quote": "Solanine"
+    },
+    {
+      "id": "KC85",
+      "quote": "Hypersalivation, inappetence, severe gastrointestinal upset, depression, weakness, dilated pupils, slow heart rate; ripe fruit is non-toxic"
+    },
+    {
+      "id": "KC38",
+      "quote": "There are a number of human foods that you should avoid feeding to cats as they can have an adverse effect on their health."
+    },
+    {
+      "id": "KC38",
+      "quote": "Tomatoes contain a substance that causes violent gastro-intestinal problems."
+    },
+    {
+      "id": "KC38",
+      "quote": "Ripe fruit is non-toxic."
+    },
+    {
+      "id": "KC83",
+      "quote": "The plant and small green tomatoes contain tomatine, which can cause vomiting, weakness and even heart issues."
+    },
+    {
+      "id": "KC82",
+      "quote": "Certain plants may cause blistering or itching of your cat’s mouth and gums, sneezing and eye problems."
+    },
+    {
+      "id": "KC82",
+      "quote": "Contact with the leaves of food plants, such as tomatoes, strawberries, rhubarb, parsnips, carrots, celery,"
+    },
+    {
+      "id": "KC82",
+      "quote": "contact your veterinary team immediately."
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "tomato-plant",
+    "potatoes-raw",
+    "cucumber"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "92a5f5a83c845f69153a4859cb106429bd495170a25960781dea8ebc15e66b9b"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bbded705f55fe4565dc068a76ca2f2f61a1cb5799e234e8e0961f4767f136970"
+    }
+  }
+}

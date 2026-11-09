@@ -2140,6 +2140,68 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "beetroot",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Beetroot",
+        "sl": "Rdeča pesa"
+      },
+      "question": {
+        "en": "Can cats eat beetroot?",
+        "sl": "Ali lahko mačke jedo rdečo peso?"
+      },
+      "url_slug": {
+        "en": "beetroot",
+        "sl": "rdeca-pesa"
+      },
+      "answer": {
+        "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
+        "sl": "Da, majhen navaden košček rdeče pese je v redu kot občasen priboljšek. ASPCA peso, tudi rdečo peso, navaja kot nestrupeno za mačke. Velikih listov pa mački ne dajajte: ASPCA navaja, da veliki zreli listi vsebujejo oksalno kislino."
+      },
+      "why": {
+        "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "ASPCA peso (Beta vulgaris, imenovano tudi rdeča pesa) navaja kot nestrupeno za mačke in opozarja, da veliki zreli listi vsebujejo oksalno kislino. Mačke sadja in zelenjave v prehrani ne potrebujejo, PDSA pa navaja, da jim lahko veliko vrst damo v zelo majhnih količinah kot občasen priboljšek. ASPCA še opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
+        "sl": "Majhen košček navadne rdeče pese za en grižljaj, brez masla, soli in začimb. Velikih listov mački ne dajajte."
+      },
+      "child": {
+        "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
+        "sl": "Majhen košček rdeče pese je lahko občasno priboljšek za muco. Muce potrebujejo predvsem svojo mačjo hrano."
+      },
+      "faq": [],
+      "source_ids": [
+        "KC88",
+        "KC88",
+        "KC88",
+        "KC88",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC26",
+        "KC62"
+      ],
+      "related": [
+        "carrots",
+        "spinach",
+        "zucchini",
+        "sweet-potato"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "blueberries",
       "species": "cat",
       "level": "small_amounts",
@@ -4768,6 +4830,71 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "chili-peppers",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Chilli peppers",
+        "sl": "Čili papričice"
+      },
+      "question": {
+        "en": "Can cats eat chilli peppers?",
+        "sl": "Ali lahko mačke jedo čili papričice?"
+      },
+      "url_slug": {
+        "en": "chilli-peppers",
+        "sl": "cili-papricice"
+      },
+      "answer": {
+        "en": "No, don't share chilli peppers or other spicy food with your cat. VCA Animal Hospitals says spicy foods may not be toxic to cats, but they are certain to cause stomach upset.",
+        "sl": "Ne, čili papričic in druge pekoče hrane ne delite z mačko. VCA Animal Hospitals navaja, da pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave."
+      },
+      "why": {
+        "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "VCA Animal Hospitals svetuje, naj pekoče hrane ne delimo z mačko in naj polnjene jalapeño papričice ostanejo nam: pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave. Mačke zelenjave v prehrani ne potrebujejo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset",
+          "Vomiting"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Bruhanje"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate chilli or spicy food and then vomits or has an upset stomach, contact your vet for advice. Don't try to make your cat sick without asking the vet.",
+        "sl": "Če je mačka pojedla čili ali pekočo hrano in nato bruha ali ima prebavne težave, se za nasvet obrnite na veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Spicy chilli peppers are for people, not cats. They can give kitty a sore tummy.",
+        "sl": "Pekoče čili papričice so za ljudi, ne za muce. Muco lahko zaboli trebušček."
+      },
+      "faq": [],
+      "source_ids": [
+        "KC44",
+        "KC44",
+        "KC44",
+        "KC5",
+        "KC62",
+        "KC8",
+        "KC22"
+      ],
+      "related": [
+        "onion",
+        "garlic",
+        "salt",
+        "tomatoes"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "chives",
       "species": "cat",
       "level": "toxic",
@@ -6511,6 +6638,77 @@
         "garlic"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "corn",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Corn (sweetcorn kernels)",
+        "sl": "Koruza (zrna sladke koruze)"
+      },
+      "question": {
+        "en": "Can cats eat corn?",
+        "sl": "Ali lahko mačke jedo koruzo?"
+      },
+      "url_slug": {
+        "en": "corn",
+        "sl": "koruza"
+      },
+      "answer": {
+        "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
+        "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb."
+      },
+      "why": {
+        "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a few kernels. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
+        "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj."
+      },
+      "child": {
+        "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC5",
+        "KC5",
+        "KC5",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC26",
+        "KC62"
+      ],
+      "related": [
+        "peas",
+        "carrots",
+        "broccoli",
+        "spinach"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "cranberries",
@@ -12728,6 +12926,84 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "mushrooms-store",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Store-bought mushrooms",
+        "sl": "Kupljene gobe"
+      },
+      "question": {
+        "en": "Can cats eat store-bought mushrooms?",
+        "sl": "Ali lahko mačke jedo kupljene gobe?"
+      },
+      "url_slug": {
+        "en": "store-bought-mushrooms",
+        "sl": "kupljene-gobe"
+      },
+      "answer": {
+        "en": "It's best not to share mushrooms with your cat. Pet Poison Helpline says some mushrooms are safe for cats but urges caution, and cats don't need anything beyond a complete cat food. Never give mushrooms cooked with garlic or onion.",
+        "sl": "Gob je bolje ne deliti z mačko. Pet Poison Helpline navaja, da so nekatere gobe za mačke varne, a svetuje previdnost, mačke pa poleg popolne mačje hrane ne potrebujejo ničesar drugega. Nikoli ne dajajte gob, kuhanih s česnom ali čebulo."
+      },
+      "why": {
+        "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
+        "sl": "Pet Poison Helpline navaja, da so nekatere gobe za mačke sicer varne, a da je pri tem potrebna previdnost, in svetuje, naj vse gobe, ki niso kupljene za ljudi, obravnavamo kot strupene. Svetuje tudi, naj gob ne dodajamo v mačjo prehrano. PDSA navaja, da mačke ne potrebujejo ničesar drugega kot popolno prehrano, Cats Protection pa opozarja, da lahko česen in čebula mačkam zelo škodita, zato gobje jedi za ljudi niso primerne."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If you are not sure the mushroom came from a shop, treat it as toxic and take your cat to the vet straight away. If your cat eats a mushroom and then vomits or has diarrhoea, seek veterinary care straight away.",
+        "sl": "Če niste prepričani, da je bila goba kupljena v trgovini, jo obravnavajte kot strupeno in mačko takoj odpeljite k veterinarju. Če mačka poje gobo in nato bruha ali ima drisko, takoj poiščite veterinarsko pomoč."
+      },
+      "serving": null,
+      "child": {
+        "en": "Mushrooms are people food, not cat food. Cats get everything they need from their own cat food.",
+        "sl": "Gobe so hrana za ljudi, ne za muce. Muce dobijo vse, kar potrebujejo, iz svoje mačje hrane."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What if my cat ate a mushroom from the garden?",
+            "sl": "Kaj, če je mačka pojedla gobo z vrta?"
+          },
+          "a": {
+            "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
+            "sl": "Obravnavajte jo kot strupeno. Pet Poison Helpline svetuje, naj mačko takoj odpeljete k veterinarju in s seboj, če je mogoče, previdno vzamete vzorec gobe, da jo strokovnjak prepozna."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC49",
+        "KC5"
+      ],
+      "related": [
+        "wild-mushrooms",
+        "garlic",
+        "onion",
+        "butter"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "onion",
       "species": "cat",
       "level": "toxic",
@@ -14782,6 +15058,91 @@
         "fatty-meat"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "potatoes-cooked",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cooked potatoes",
+        "sl": "Kuhan krompir"
+      },
+      "question": {
+        "en": "Can cats eat cooked potatoes?",
+        "sl": "Ali lahko mačke jedo kuhan krompir?"
+      },
+      "url_slug": {
+        "en": "cooked-potatoes",
+        "sl": "kuhan-krompir"
+      },
+      "answer": {
+        "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
+        "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite."
+      },
+      "why": {
+        "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
+        "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small taste. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
+        "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja."
+      },
+      "child": {
+        "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
+        "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can cats eat potato skins?",
+            "sl": "Ali lahko mačke jedo krompirjeve olupke?"
+          },
+          "a": {
+            "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
+            "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati."
+          }
+        },
+        {
+          "q": {
+            "en": "Can cats eat mashed potatoes?",
+            "sl": "Ali lahko mačke jedo krompirjev pire?"
+          },
+          "a": {
+            "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
+            "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC76",
+        "KC76",
+        "KC26",
+        "KC26",
+        "KC83",
+        "KC84",
+        "KC84",
+        "KC84",
+        "KC84",
+        "KC5",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "potatoes-raw",
+        "sweet-potato",
+        "garlic",
+        "butter"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "potatoes-raw",
@@ -18968,6 +19329,176 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "tomato-plant",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Tomato plant (leaves, stems, green tomatoes)",
+        "sl": "Paradižnikova rastlina (listi, stebla, zeleni paradižniki)"
+      },
+      "question": {
+        "en": "Is the tomato plant safe for cats?",
+        "sl": "Ali je paradižnikova rastlina varna za mačke?"
+      },
+      "url_slug": {
+        "en": "tomato-plant",
+        "sl": "paradiznikova-rastlina"
+      },
+      "answer": {
+        "en": "No. The ASPCA lists the tomato plant as toxic to cats because it contains solanine; only the ripe fruit is non-toxic. Keep leaves, stems and green tomatoes away from your cat, and call your vet if your cat chews any.",
+        "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, ker vsebuje solanin; nestrupeni so le zreli plodovi. Listi, stebla in zeleni paradižniki naj bodo zunaj mačkinega dosega. Če jih mačka pogrizlja, pokličite veterinarja."
+      },
+      "why": {
+        "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
+        "sl": "ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, kot strupeno snov navaja solanin in pojasnjuje, da zreli plodovi niso strupeni. Tudi Agriculture Victoria navaja, da so nestrupeni le zreli plodovi paradižnika. ASPCA v nasvetih o vrtu za hišne živali dodaja, da rastlina in majhni zeleni paradižniki vsebujejo tomatin. International Cat Care opozarja, da lahko že stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi."
+      },
+      "signs": {
+        "en": [
+          "Drooling",
+          "Loss of appetite",
+          "Severe stomach upset",
+          "Low mood or tiredness",
+          "Weakness",
+          "Dilated pupils",
+          "Slow heart rate"
+        ],
+        "sl": [
+          "Slinjenje",
+          "Izguba apetita",
+          "Hude prebavne težave",
+          "Potrtost ali utrujenost",
+          "Šibkost",
+          "Razširjene zenice",
+          "Upočasnjen srčni utrip"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat chewed tomato leaves, stems or green tomatoes, contact your vet right away. Note what was eaten and when. Don't try to make your cat sick without asking the vet.",
+        "sl": "Če je mačka grizljala paradižnikove liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Zapišite si, kaj je pojedla in kdaj. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Tomato plants are not for cats. If kitty nibbles a leaf, tell a grown-up so they can call the vet.",
+        "sl": "Paradižnikove rastline niso za muce. Če muca pogrizlja list, povej odraslemu, da lahko pokliče veterinarja."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can cats eat ripe tomatoes?",
+            "sl": "Ali lahko mačke jedo zrele paradižnike?"
+          },
+          "a": {
+            "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
+            "sl": "ASPCA navaja, da zreli plodovi paradižnika za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, zato jih je bolje ne deliti z mačko."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC85",
+        "KC85",
+        "KC85",
+        "KC38",
+        "KC38",
+        "KC38",
+        "KC83",
+        "KC82",
+        "KC82",
+        "KC8",
+        "KC22"
+      ],
+      "related": [
+        "tomatoes",
+        "potatoes-raw",
+        "rhubarb"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
+      "slug": "tomatoes",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Tomatoes",
+        "sl": "Paradižnik"
+      },
+      "question": {
+        "en": "Can cats eat tomatoes?",
+        "sl": "Ali lahko mačke jedo paradižnik?"
+      },
+      "url_slug": {
+        "en": "tomatoes",
+        "sl": "paradiznik"
+      },
+      "answer": {
+        "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
+        "sl": "Mački je bolje ne dajati paradižnika. ASPCA navaja, da zreli plodovi za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati. Sama paradižnikova rastlina je za mačke strupena, zato naj bo zunaj njihovega dosega."
+      },
+      "why": {
+        "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
+        "sl": "ASPCA paradižnikovo rastlino zaradi solanina navaja kot strupeno za mačke in pojasnjuje, da zreli plodovi niso strupeni. Agriculture Victoria paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, ker vsebuje snov, ki povzroča hude prebavne težave, zreli plodovi pa niso strupeni. Ker ga en vir uvršča med živila, ki se jim je treba izogibati, upoštevamo strožji nasvet. Mačke zelenjave v prehrani tako ali tako ne potrebujejo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Stomach upset"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate tomato and then vomits or seems unwell, contact your vet. If your cat chewed the leaves, stems or green tomatoes, contact your vet right away. Don't try to make your cat sick without asking the vet.",
+        "sl": "Če je mačka pojedla paradižnik in nato bruha ali se ne počuti dobro, pokličite veterinarja. Če je grizljala liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Tomatoes are people food, not cat food. Keep tomato plants away from kitty and tell a grown-up if kitty nibbles one.",
+        "sl": "Paradižnik je hrana za ljudi, ne za muce. Paradižnikove rastline naj bodo stran od muce. Če muca katero pogrizlja, povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are tomato leaves and green tomatoes safe for cats?",
+            "sl": "Ali so paradižnikovi listi in zeleni paradižniki varni za mačke?"
+          },
+          "a": {
+            "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
+            "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, nestrupeni so le zreli plodovi. International Cat Care dodaja, da lahko stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC85",
+        "KC85",
+        "KC85",
+        "KC38",
+        "KC38",
+        "KC38",
+        "KC83",
+        "KC82",
+        "KC82",
+        "KC82",
+        "KC5",
+        "KC62",
+        "KC22"
+      ],
+      "related": [
+        "tomato-plant",
+        "potatoes-raw",
+        "cucumber"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "tuna",
       "species": "cat",
       "level": "not_recommended",
@@ -19944,6 +20475,102 @@
         "blueberries"
       ],
       "updated": "2026-11-01"
+    },
+    {
+      "slug": "wild-mushrooms",
+      "species": "cat",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Wild mushrooms",
+        "sl": "Divje gobe"
+      },
+      "question": {
+        "en": "Are wild mushrooms dangerous for cats?",
+        "sl": "Ali so divje gobe nevarne za mačke?"
+      },
+      "url_slug": {
+        "en": "wild-mushrooms",
+        "sl": "divje-gobe"
+      },
+      "answer": {
+        "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
+        "sl": "Da. Pet Poison Helpline svetuje, naj vsako gobo, ki ni kupljena za ljudi, obravnavamo kot strupeno za mačke, saj so številne strupene gobe videti enako kot neškodljive. Če mačka poje gobo, ki jo je našla zunaj, jo takoj odpeljite k veterinarju."
+      },
+      "why": {
+        "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
+        "sl": "Pet Poison Helpline navaja, da samo v Severni Ameriki raste več kot 100 vrst strupenih gob, med njimi Amanita, Galerina in Lepiota, in da so številne videti enako kot nestrupene gobe. Nekatere gobe na hišne živali učinkujejo v 15 do 30 minutah, druge šele po največ 24 urah. Odvisno od gobe in pojedene količine so lahko prizadeti prebavila, živčevje, jetra ali ledvice."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Black, tarry stool",
+          "Wobbly walking",
+          "Trembling",
+          "Seizures (fits)",
+          "Problems seeing",
+          "Aggression or confusion"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Črno, katranasto blato",
+          "Opotekanje",
+          "Tresenje",
+          "Krči (napadi)",
+          "Težave z vidom",
+          "Napadalnost ali zmedenost"
+        ]
+      },
+      "what_to_do": {
+        "en": "Take your cat to your vet immediately, even before any signs appear. If you can do it safely, bring a sample of the mushroom so a specialist can identify it. Don't try to make your cat sick without asking the vet.",
+        "sl": "Mačko takoj odpeljite k veterinarju, tudi če še nima znakov. Če lahko to storite varno, s seboj vzemite vzorec gobe, da jo strokovnjak prepozna. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Mushrooms growing outside are not for cats. If kitty sniffs or nibbles one, tell a grown-up right away.",
+        "sl": "Gobe, ki rastejo zunaj, niso za muce. Če muca kakšno povoha ali pogrizlja, takoj povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "How can I keep my cat away from wild mushrooms?",
+            "sl": "Kako mačko obvarujem pred divjimi gobami?"
+          },
+          "a": {
+            "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
+            "sl": "Pet Poison Helpline svetuje, naj mačko pozorno spremljate, ko je zunaj, in ji ne dovolite do divjih gob ali katerekoli gobe, za katero ne veste, od kod je."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC86",
+        "KC87",
+        "KC22"
+      ],
+      "related": [
+        "mushrooms-store",
+        "tomato-plant",
+        "onion"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "yogurt",
@@ -21976,6 +22603,94 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "asparagus",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Asparagus",
+        "sl": "Beluši"
+      },
+      "question": {
+        "en": "Can dogs eat asparagus?",
+        "sl": "Ali lahko psi jedo beluše?"
+      },
+      "url_slug": {
+        "en": "asparagus",
+        "sl": "belusi"
+      },
+      "answer": {
+        "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
+        "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti."
+      },
+      "why": {
+        "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
+        "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog has vomiting, gas or diarrhoea after raw asparagus, try lightly cooking it next time. Eating the asparagus fern can cause vomiting, diarrhoea and severe abdominal pain, so keep your dog away from the plant.",
+        "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline."
+      },
+      "serving": {
+        "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
+        "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj."
+      },
+      "child": {
+        "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
+        "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Why does my dog's pee smell after asparagus?",
+            "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?"
+          },
+          "a": {
+            "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
+            "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava."
+          }
+        },
+        {
+          "q": {
+            "en": "Is the asparagus fern safe?",
+            "sl": "Je belušna praprot varna?"
+          },
+          "a": {
+            "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
+            "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160",
+        "KD160"
+      ],
+      "related": [
+        "green-beans",
+        "broccoli",
+        "butter"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "avocado",
       "species": "dog",
       "level": "dangerous",
@@ -23071,6 +23786,97 @@
         "salt"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "beetroot",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Beetroot",
+        "sl": "Rdeča pesa"
+      },
+      "question": {
+        "en": "Can dogs eat beetroot?",
+        "sl": "Ali lahko psi jedo rdečo peso?"
+      },
+      "url_slug": {
+        "en": "beetroot",
+        "sl": "rdeca-pesa"
+      },
+      "answer": {
+        "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
+        "sl": "Da, rdeča pesa je za pse v redu, če je sveža in v zmernih količinah, kot občasen priboljšek. Vsebuje veliko sladkorja in oksalne kisline, zato naj bodo porcije majhne; če je pes nagnjen k ledvičnim kamnom, se najprej posvetujte z veterinarjem."
+      },
+      "why": {
+        "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
+        "sl": "Pesa vsebuje veliko ogljikovih hidratov in sladkorja, preveč sladkorja pa lahko prispeva k vnetju trebušne slinavke ali debelosti. Vsebuje tudi veliko oksalne kisline, ki lahko tvori kamne v mehurju, kristale v urinu in ledvične kamne ter povzroči pomanjkanje kalcija. Ker je kisla, lahko pri nekaterih psih povzroči vetrove in drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Beetroot can turn your dog's urine dark pink or red, so don't panic. If the colour doesn't go away after a day, something else may be going on, such as a urinary tract infection or stones, so talk to your vet.",
+        "sl": "Pesa lahko psu obarva urin temno roza ali rdeče, zato ne paničarite. Če barva po enem dnevu ne izgine, gre morda za kaj drugega, na primer okužbo sečil ali kamne, zato se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
+        "sl": "Sveža, dobro očiščena in olupljena, surova ali kuhana, naribana ali narezana na majhne koščke. Pesa iz pločevinke le brez dodane soli in drugih dodatkov."
+      },
+      "child": {
+        "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
+        "sl": "Psi lahko občasno dobijo malo rdeče pese. Lulanje je lahko potem rožnato, in to je v redu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Raw or cooked beetroot?",
+            "sl": "Surova ali kuhana pesa?"
+          },
+          "a": {
+            "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
+            "sl": "Obe sta v redu. Surova pesa ohrani največ hranil, kuhana pa je najbolj vsestranska izbira."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat canned beetroot?",
+            "sl": "Ali lahko psi jedo peso iz pločevinke?"
+          },
+          "a": {
+            "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
+            "sl": "Da, vendar izbirajte previdno: izberite izdelek brez dodane soli in drugih dodatkov."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161",
+        "KD161"
+      ],
+      "related": [
+        "carrots",
+        "spinach",
+        "sweet-potato"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "blackberries",
@@ -26167,6 +26973,88 @@
         "grapes"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "chili-peppers",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Chili peppers",
+        "sl": "Pekoča paprika (čili)"
+      },
+      "question": {
+        "en": "Can dogs eat chili peppers?",
+        "sl": "Ali lahko psi jedo pekočo papriko?"
+      },
+      "url_slug": {
+        "en": "chili-peppers",
+        "sl": "pekoca-paprika"
+      },
+      "answer": {
+        "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
+        "sl": "Ne, psu nikoli ne dajajte pekoče paprike, kot sta jalapeño ali čili. Pekoča paprika je dražilna: v ustih povzroči pekoč občutek, v večjih količinah pa lahko povzroči bruhanje in drisko."
+      },
+      "why": {
+        "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
+        "sl": "Pekoča paprika vsebuje kapsaicin, močno dražilno snov, ki je je največ v plodu in še posebej v semenih. Lahko prizadene pse, ki papriko prežvečijo in pogoltnejo. Pri domačih živalih so težave redke, vendar AKC svetuje, da psom pekoče paprike nikoli ne dajemo."
+      },
+      "signs": {
+        "en": [
+          "Burning feeling in the mouth",
+          "Burning, irritated eyes",
+          "Vomiting",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Pekoč občutek v ustih",
+          "Pekoče, razdražene oči",
+          "Bruhanje",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "Keep spicy peppers and dishes with them out of your dog's reach. The burning effect of capsaicin is usually short-lived and can be eased by rinsing the mouth with water.",
+        "sl": "Pekočo papriko in jedi z njo hranite zunaj dosega psa. Pekoč učinek kapsaicina je običajno kratkotrajen in ga lahko omilite z izpiranjem ust z vodo."
+      },
+      "serving": null,
+      "child": {
+        "en": "Spicy peppers are not for dogs. They make a dog's mouth feel hot. Sweet peppers are the dog-friendly kind.",
+        "sl": "Pekoča paprika ni za pse. V gobčku jih peče. Sladka paprika je tista, ki je primerna za pse."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are sweet bell peppers okay?",
+            "sl": "Je sladka paprika v redu?"
+          },
+          "a": {
+            "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
+            "sl": "Da, navadna sladka paprika je za večino psov v zmernih količinah varna, če odstranite semena in pecelj."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD156",
+        "KD156",
+        "KD156",
+        "KD156",
+        "KD156",
+        "KD156",
+        "KD156",
+        "KD156"
+      ],
+      "related": [
+        "peppers",
+        "salty-snacks"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "chips",
@@ -29319,6 +30207,90 @@
         "avocado"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "corn",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Corn kernels",
+        "sl": "Koruzna zrna"
+      },
+      "question": {
+        "en": "Can dogs eat corn?",
+        "sl": "Ali lahko psi jedo koruzo?"
+      },
+      "url_slug": {
+        "en": "corn",
+        "sl": "koruza"
+      },
+      "answer": {
+        "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
+        "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte."
+      },
+      "why": {
+        "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
+        "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer only plain kernels, cut off the cob, now and then. Before offering corn, make sure your dog doesn't have a corn allergy. Keep corn cobs well out of reach.",
+        "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega."
+      },
+      "serving": {
+        "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
+        "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb."
+      },
+      "child": {
+        "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
+        "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat buttered corn?",
+            "sl": "Ali lahko psi jedo koruzo z maslom?"
+          },
+          "a": {
+            "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
+            "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec."
+          }
+        },
+        {
+          "q": {
+            "en": "Is corn in dog food bad?",
+            "sl": "Je koruza v pasji hrani slaba?"
+          },
+          "a": {
+            "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
+            "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23",
+        "KD23"
+      ],
+      "related": [
+        "corn-cob",
+        "peas",
+        "green-beans"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "cranberries",
@@ -37348,6 +38320,90 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "mushrooms-store",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Store-bought mushrooms",
+        "sl": "Kupljene gobe"
+      },
+      "question": {
+        "en": "Can dogs eat store-bought mushrooms?",
+        "sl": "Ali lahko psi jedo kupljene gobe?"
+      },
+      "url_slug": {
+        "en": "store-bought-mushrooms",
+        "sl": "kupljene-gobe"
+      },
+      "answer": {
+        "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
+        "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek."
+      },
+      "why": {
+        "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
+        "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you do share, give only plain store-bought mushrooms. Never let your dog eat mushrooms found outside; if that happens, contact your vet, an animal poison centre or an emergency vet hospital immediately.",
+        "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico."
+      },
+      "serving": {
+        "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
+        "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami."
+      },
+      "child": {
+        "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
+        "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat mushroom sauce or other mushroom dishes?",
+            "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?"
+          },
+          "a": {
+            "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
+            "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo."
+          }
+        },
+        {
+          "q": {
+            "en": "What about mushrooms growing in the garden?",
+            "sl": "Kaj pa gobe, ki rastejo na vrtu?"
+          },
+          "a": {
+            "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
+            "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157"
+      ],
+      "related": [
+        "wild-mushrooms",
+        "garlic",
+        "onion",
+        "carrots",
+        "apples"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "olives",
       "species": "dog",
       "level": "small_amounts",
@@ -40033,6 +41089,105 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "peppers",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Bell peppers",
+        "sl": "Paprika"
+      },
+      "question": {
+        "en": "Can dogs eat bell peppers?",
+        "sl": "Ali lahko psi jedo papriko?"
+      },
+      "url_slug": {
+        "en": "bell-peppers",
+        "sl": "paprika"
+      },
+      "answer": {
+        "en": "Yes, bell peppers are safe for most dogs in moderation. They are non-toxic, and green, yellow, orange and red peppers are all fine when served plain. Remove the seeds and stem, and never give spicy peppers.",
+        "sl": "Da, sladka paprika je za večino psov v zmernih količinah varna. Ni strupena, zelena, rumena, oranžna in rdeča pa so vse v redu, če so navadne. Odstranite semena in pecelj in nikoli ne dajajte pekoče paprike."
+      },
+      "why": {
+        "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
+        "sl": "Sladka paprika ni strupena in vsebuje hranila, ki lahko podprejo zdravje psa. Preveč lahko povzroči prebavne težave, tudi bruhanje ali drisko, zunanjo kožico pa nekateri psi težko prežvečijo in prebavijo. Nekaterim psom ustreza, drugim ne."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Introduce bell pepper gradually so you can see whether it agrees with your dog's digestion, and don't overdo it. Never give peppers mixed with onions or garlic, as those are toxic to dogs.",
+        "sl": "Papriko uvajajte postopoma, da vidite, ali psu ustreza, in ne pretiravajte. Nikoli ne dajajte paprike, pomešane s čebulo ali česnom, saj sta ta za pse strupena."
+      },
+      "serving": {
+        "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
+        "sl": "Navadna, surova ali kuhana, brez semen in peclja. Na pari ali pretlačeno jo pes laže poje. Brez soli, začimb in drugih sestavin."
+      },
+      "child": {
+        "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
+        "sl": "Psi lahko dobijo malo navadne sladke paprike. Odrasli najprej odstrani semena. Pekoča paprika ni za pse."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat raw bell peppers?",
+            "sl": "Ali lahko psi jedo surovo papriko?"
+          },
+          "a": {
+            "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
+            "sl": "Da, čeprav nekateri psi laže prežvečijo in prebavijo kuhano, na pari pripravljeno ali pretlačeno papriko."
+          }
+        },
+        {
+          "q": {
+            "en": "Which colour is best?",
+            "sl": "Katera barva je najboljša?"
+          },
+          "a": {
+            "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
+            "sl": "Vse barve so varne. Rdeča paprika vsebuje največ vitaminov in antioksidantov."
+          }
+        },
+        {
+          "q": {
+            "en": "What about jalapeños or chili peppers?",
+            "sl": "Kaj pa jalapeño ali čili?"
+          },
+          "a": {
+            "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
+            "sl": "Psu nikoli ne dajajte pekočih vrst paprike, kot sta jalapeño ali čili."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155",
+        "KD155"
+      ],
+      "related": [
+        "chili-peppers",
+        "tomatoes",
+        "onion",
+        "garlic"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "persimmon",
       "species": "dog",
       "level": "small_amounts",
@@ -41702,6 +42857,102 @@
         "cooked-bones"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "potatoes-cooked",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cooked potatoes",
+        "sl": "Kuhan krompir"
+      },
+      "question": {
+        "en": "Can dogs eat cooked potatoes?",
+        "sl": "Ali lahko psi jedo kuhan krompir?"
+      },
+      "url_slug": {
+        "en": "cooked-potatoes",
+        "sl": "kuhan-krompir"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat cooked potatoes in moderation when they are served plain. Boiled or baked potato without butter, milk, salt or seasonings is fine in small amounts, as long as it is soft and not green.",
+        "sl": "Da, psi lahko v zmernih količinah jedo kuhan krompir, če je navaden. Kuhan ali pečen krompir brez masla, mleka, soli in začimb je v majhnih količinah v redu, če je mehak in ni zelen."
+      },
+      "why": {
+        "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
+        "sl": "Navaden kuhan krompir je za pse v redu, vendar naj bo priboljšek, ne nadomestek obroka, in le majhen del prehrane. Preveč porcij lahko vodi v debelost, veliko masla pa lahko sproži vnetje trebušne slinavke. Surov ali zelen krompir je nevaren in potencialno strupen."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Keep cooked potato as an occasional treat in small amounts. Never give raw potato or potato with green spots, and skip potato dishes made with butter, milk, salt or spices.",
+        "sl": "Kuhan krompir ponudite le občasno in v majhnih količinah. Nikoli ne dajajte surovega krompirja ali krompirja z zelenimi lisami in se izogibajte krompirjevim jedem z maslom, mlekom, soljo ali začimbami."
+      },
+      "serving": {
+        "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
+        "sl": "Navaden, kuhan ali pečen, dovolj mehak, da se ga da pretlačiti, da se pes ne zaduši. Brez masla, mleka, soli in začimb. Olupki so v redu, če niso zeleni."
+      },
+      "child": {
+        "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
+        "sl": "Psi lahko za priboljšek dobijo malo navadnega kuhanega krompirja. Odrasli poskrbi, da je mehak ter brez masla in soli."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat mashed potatoes?",
+            "sl": "Ali lahko psi jedo pire krompir?"
+          },
+          "a": {
+            "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
+            "sl": "Le navaden pretlačen krompir, v majhnih količinah, brez masla, mleka, soli in začimb."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat potato skins?",
+            "sl": "Ali lahko psi jedo krompirjeve olupke?"
+          },
+          "a": {
+            "en": "Yes, potato skins are okay too, but not if they are green.",
+            "sl": "Da, tudi krompirjevi olupki so v redu, vendar ne, če so zeleni."
+          }
+        },
+        {
+          "q": {
+            "en": "Are French fries okay for dogs?",
+            "sl": "Je pomfri primeren za pse?"
+          },
+          "a": {
+            "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
+            "sl": "Pri pomfriju, krompirjevih ploščicah in drugih krompirjevih jedeh hitro pretiravamo. Krompir naj bo priboljšek, ne nadomestek obroka."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151"
+      ],
+      "related": [
+        "potatoes-raw",
+        "sweet-potato",
+        "butter",
+        "chips"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "potatoes-raw",
@@ -47596,6 +48847,225 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "tomato-plant",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Tomato plant and green tomatoes",
+        "sl": "Paradižnikova rastlina in zelen paradižnik"
+      },
+      "question": {
+        "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
+        "sl": "Ali lahko psi jedo paradižnikove liste, stebla ali zelen paradižnik?"
+      },
+      "url_slug": {
+        "en": "tomato-plant",
+        "sl": "paradiznikova-rastlina"
+      },
+      "answer": {
+        "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
+        "sl": "Ne. Zeleni deli paradižnikove rastline, vključno z nezrelimi plodovi, listi, stebli, poganjki in cvetovi, so za pse strupeni. Pes nikoli ne sme jesti listov in stebel, izogibati pa se mora tudi mladim, zelenim paradižnikom."
+      },
+      "why": {
+        "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
+        "sl": "Listi, stebla, poganjki in cvetovi vsebujejo tomatin in solanin, naravni obrambni snovi rastline; zelen paradižnik ju vsebuje več kot zrel. ASPCA paradižnikovo rastlino uvršča med strupene za pse. Huda zastrupitev je razmeroma redka in večina primerov ob hitrem ukrepanju mine, zato jo uvrščamo med nevarne, ne strupene."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Drooling",
+          "Loss of appetite",
+          "Muscle weakness",
+          "Tremors",
+          "Loss of coordination",
+          "Dilated pupils",
+          "Lethargy",
+          "Slow or irregular heartbeat"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slinjenje",
+          "Izguba apetita",
+          "Mišična šibkost",
+          "Tresenje",
+          "Slaba koordinacija gibov",
+          "Razširjene zenice",
+          "Zaspanost in brezvoljnost",
+          "Počasen ali nepravilen srčni utrip"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate parts of the tomato plant or green tomatoes, call your vet or a pet poison helpline for guidance. If your dog is already showing symptoms, contact your vet; it is important to get them checked as soon as possible.",
+        "sl": "Če je pes pojedel dele paradižnikove rastline ali zelen paradižnik, za nasvet pokličite veterinarja ali center za zastrupitve živali. Če pes že kaže znake, se obrnite na veterinarja; pomembno je, da ga čim prej pregleda."
+      },
+      "serving": null,
+      "child": {
+        "en": "Tomato leaves, stems and green tomatoes are not for dogs. If a dog nibbles the plant, tell a grown-up straight away.",
+        "sl": "Paradižnikovi listi, stebla in zeleni plodovi niso za pse. Če pes gricka rastlino, takoj povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are ripe red tomatoes okay?",
+            "sl": "Je zrel rdeč paradižnik v redu?"
+          },
+          "a": {
+            "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
+            "sl": "Da. Zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah."
+          }
+        },
+        {
+          "q": {
+            "en": "How do I keep my dog safe in a vegetable garden?",
+            "sl": "Kako psa zavarujem na zelenjavnem vrtu?"
+          },
+          "a": {
+            "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
+            "sl": "Postavite fizične ovire ali vrt ogradite in pomnite, da zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD153",
+        "KD153",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154"
+      ],
+      "related": [
+        "tomatoes",
+        "potatoes-raw"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
+      "slug": "tomatoes",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Tomatoes",
+        "sl": "Paradižnik"
+      },
+      "question": {
+        "en": "Can dogs eat tomatoes?",
+        "sl": "Ali lahko psi jedo paradižnik?"
+      },
+      "url_slug": {
+        "en": "tomatoes",
+        "sl": "paradiznik"
+      },
+      "answer": {
+        "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
+        "sl": "Da, zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah. Zelen, nezrel paradižnik in zeleni deli rastline pa so nekaj drugega in se jim je treba izogibati."
+      },
+      "why": {
+        "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
+        "sl": "Glavni strupeni snovi v paradižniku sta tomatin in solanin, ki ju je največ v zelenih delih rastline. Ko paradižnik dozori in postane rdeč, se njuna količina močno zmanjša, zato zrel paradižnik velja za nestrupenega. Izdelki iz paradižnika pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with small amounts to see how your dog reacts, and only give tomato in moderation under supervision. If you think your dog ate a large amount of tomatoes or the tomato plant itself, call your vet for guidance.",
+        "sl": "Začnite z majhnimi količinami, da vidite, kako se pes odzove, in paradižnik ponujajte le zmerno in pod nadzorom. Če mislite, da je pes pojedel veliko paradižnika ali samo rastlino, pokličite veterinarja za nasvet."
+      },
+      "serving": {
+        "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
+        "sl": "Le zrel, rdeč in navaden. Odstranite vse zelene dele in meso narežite na kocke; češnjeve paradižnike narežite na majhne koščke. Nikoli paradižnika, začinjenega s soljo, česnom, čebulo ali drugimi dodatki."
+      },
+      "child": {
+        "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
+        "sl": "Psi lahko dobijo malo zrelega rdečega paradižnika. Odrasli odstrani zelene dele in ga nareže na majhne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat green tomatoes?",
+            "sl": "Ali lahko psi jedo zelen paradižnik?"
+          },
+          "a": {
+            "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
+            "sl": "Ne. Zelen paradižnik vsebuje več tomatina in solanina kot zrel, nezrel paradižnik pa lahko povzroči znake zastrupitve s tomatinom."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat tomato sauce or ketchup?",
+            "sl": "Ali lahko psi jedo paradižnikovo omako ali kečap?"
+          },
+          "a": {
+            "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
+            "sl": "Bolje se jim je izogniti. Paradižnikovi izdelki, kot so omaka, kečap in juha, pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo."
+          }
+        },
+        {
+          "q": {
+            "en": "I grow tomatoes. What should I watch for?",
+            "sl": "Gojim paradižnik. Na kaj moram paziti?"
+          },
+          "a": {
+            "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
+            "sl": "Zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse. Vrt ogradite, da pes ne more pokusiti rastlin."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD152",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154",
+        "KD154"
+      ],
+      "related": [
+        "tomato-plant",
+        "potatoes-raw",
+        "garlic",
+        "onion"
+      ],
+      "updated": "2026-11-09"
+    },
+    {
       "slug": "tuna",
       "species": "dog",
       "level": "small_amounts",
@@ -48622,6 +50092,145 @@
         "apples"
       ],
       "updated": "2026-11-01"
+    },
+    {
+      "slug": "wild-mushrooms",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Wild mushrooms",
+        "sl": "Gobe iz narave"
+      },
+      "question": {
+        "en": "Can dogs eat wild mushrooms?",
+        "sl": "Ali lahko psi jedo gobe, ki jih najdejo zunaj?"
+      },
+      "url_slug": {
+        "en": "wild-mushrooms",
+        "sl": "gobe-iz-narave"
+      },
+      "answer": {
+        "en": "No. Treat every mushroom your dog finds outside as toxic. Toxic and non-toxic mushrooms are hard to tell apart, and the toxic ones are extremely dangerous. If your dog ate a wild mushroom, contact your vet immediately.",
+        "sl": "Ne. Vsako gobo, ki jo pes najde zunaj, obravnavajte kot strupeno. Strupene in nestrupene gobe je težko ločiti, strupene pa so izjemno nevarne. Če je pes pojedel gobo iz narave, se takoj obrnite na veterinarja."
+      },
+      "why": {
+        "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
+        "sl": "Vrst gob je na tisoče in mnoge lahko pri psih povzročijo resno bolezen. Nekatere povzročijo blago bruhanje ali drisko, druge lahko vodijo v odpoved jeter in ledvic ali v krče. Znaki so odvisni od vrste gobe, ni pa vedno mogoče vedeti, katero gobo je pes pojedel."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Drooling",
+          "Weakness",
+          "Lethargy or drowsiness",
+          "Disorientation or staggering",
+          "Tremors",
+          "Seizures",
+          "Abdominal pain",
+          "Jaundice"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slinjenje",
+          "Šibkost",
+          "Zaspanost in brezvoljnost",
+          "Zmedenost ali opotekanje",
+          "Tresenje",
+          "Krči",
+          "Bolečine v trebuhu",
+          "Zlatenica"
+        ]
+      },
+      "what_to_do": {
+        "en": "Contact your vet, an animal poison centre or an emergency vet hospital immediately, even before any signs appear. If you can, bring a sample of the mushroom, wrapped in a damp paper towel in a paper bag, to help the vet.",
+        "sl": "Takoj se obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico, tudi preden se pojavijo znaki. Če lahko, prinesite vzorec gobe, zavit v vlažno papirnato brisačo v papirnati vrečki, da bo veterinar lažje pomagal."
+      },
+      "serving": null,
+      "child": {
+        "en": "Mushrooms outside are not for dogs. If you see a dog eat one, tell a grown-up straight away.",
+        "sl": "Gobe zunaj niso za pse. Če vidiš, da pes poje gobo, takoj povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Should I wait to see if my dog gets sick?",
+            "sl": "Naj počakam, ali bo pes zbolel?"
+          },
+          "a": {
+            "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
+            "sl": "Ne. Ne čakajte, da se pojavijo znaki. Hiter odziv je najboljše, kar lahko storite za psa."
+          }
+        },
+        {
+          "q": {
+            "en": "How can I prevent it?",
+            "sl": "Kako to preprečim?"
+          },
+          "a": {
+            "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
+            "sl": "Predpostavite, da je vsaka goba, ki jo pes najde, nevarna, in psa zunaj spremljajte."
+          }
+        },
+        {
+          "q": {
+            "en": "Are store-bought mushrooms different?",
+            "sl": "So gobe iz trgovine drugačne?"
+          },
+          "a": {
+            "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
+            "sl": "Da. Navadne gobe iz velikih trgovin so za pse načeloma lahko varne, čeprav jih psi ne potrebujejo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD157",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD158",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159",
+        "KD159"
+      ],
+      "related": [
+        "mushrooms-store"
+      ],
+      "updated": "2026-11-09"
     },
     {
       "slug": "xylitol",
@@ -50049,6 +51658,38 @@
     },
     {
       "species": "cat",
+      "id": "KC85",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Tomato Plant",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/tomato-plant"
+    },
+    {
+      "species": "cat",
+      "id": "KC86",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (A. Benzow; published 2023-12-04, modified 2026-05-27)",
+      "title": "Can Cats Eat Mushrooms?",
+      "url": "https://www.petpoisonhelpline.com/pet-tips/can-cats-eat-mushrooms/"
+    },
+    {
+      "species": "cat",
+      "id": "KC87",
+      "tier": "B",
+      "publisher": "PDSA (no date shown)",
+      "title": "My cat has eaten something harmful",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/my-cat-has-eaten-something-harmful"
+    },
+    {
+      "species": "cat",
+      "id": "KC88",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Beets",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/beets"
+    },
+    {
+      "species": "cat",
       "id": "KC9",
       "tier": "B",
       "publisher": "VCA Animal Hospitals (R. Schmid, A. Brutlag, L. Buzhardt)",
@@ -50529,11 +52170,91 @@
     },
     {
       "species": "dog",
+      "id": "KD152",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (modified 2026-05-27)",
+      "title": "Are Tomatoes Bad for Dogs? What's Safe and What's Toxic",
+      "url": "https://www.petpoisonhelpline.com/pet-safety-tips/are-tomatoes-poisonous-to-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD153",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Tomato Plant (Lycopersicon spp)",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/tomato-plant"
+    },
+    {
+      "species": "dog",
+      "id": "KD154",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-06-04)",
+      "title": "Can Dogs Eat Tomatoes?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-tomatoes/"
+    },
+    {
+      "species": "dog",
+      "id": "KD155",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2026-10-20)",
+      "title": "Can Dogs Eat Bell Peppers?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-bell-peppers"
+    },
+    {
+      "species": "dog",
+      "id": "KD156",
+      "tier": "A",
+      "publisher": "IVIS, Knight A., A Guide to Poisonous House and Garden Plants (Teton NewMedia; updated 2010-03-25)",
+      "title": "Capsicum species: Chili pepper",
+      "url": "https://www.ivis.org/library/guide-to-poisonous-house-and-garden-plants/capsicum-species-chili-pepper"
+    },
+    {
+      "species": "dog",
+      "id": "KD157",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2024-11-15)",
+      "title": "Can Dogs Eat Mushrooms?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-mushrooms/"
+    },
+    {
+      "species": "dog",
+      "id": "KD158",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2023-03-22; modified 2026-05-27)",
+      "title": "Wild Mushrooms and Dogs",
+      "url": "https://www.petpoisonhelpline.com/pet-tips/wild-mushrooms-and-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD159",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2022-06-20; modified 2026-05-27)",
+      "title": "Are Mushrooms Poisonous to Dogs",
+      "url": "https://petpoisonhelpline.com/?p=14009"
+    },
+    {
+      "species": "dog",
       "id": "KD16",
       "tier": "B",
       "publisher": "Pet Poison Helpline",
       "title": "Xylitol Is Toxic To Dogs",
       "url": "https://www.petpoisonhelpline.com/poison/xylitol/"
+    },
+    {
+      "species": "dog",
+      "id": "KD160",
+      "tier": "B",
+      "publisher": "American Kennel Club, Katherine Ripley (updated 2026-04-01)",
+      "title": "Can Dogs Eat Asparagus?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-asparagus/"
+    },
+    {
+      "species": "dog",
+      "id": "KD161",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2025-08-08)",
+      "title": "Can Dogs Eat Beets?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-beets/"
     },
     {
       "species": "dog",

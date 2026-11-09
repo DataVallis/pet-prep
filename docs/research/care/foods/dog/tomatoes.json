@@ -1,0 +1,163 @@
+{
+  "slug": "tomatoes",
+  "species": "dog",
+  "name": {
+    "en": "Tomatoes",
+    "sl": "Paradižnik"
+  },
+  "question": {
+    "en": "Can dogs eat tomatoes?",
+    "sl": "Ali lahko psi jedo paradižnik?"
+  },
+  "url_slug": {
+    "en": "tomatoes",
+    "sl": "paradiznik"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
+    "sl": "Da, zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah. Zelen, nezrel paradižnik in zeleni deli rastline pa so nekaj drugega in se jim je treba izogibati."
+  },
+  "why": {
+    "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
+    "sl": "Glavni strupeni snovi v paradižniku sta tomatin in solanin, ki ju je največ v zelenih delih rastline. Ko paradižnik dozori in postane rdeč, se njuna količina močno zmanjša, zato zrel paradižnik velja za nestrupenega. Izdelki iz paradižnika pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with small amounts to see how your dog reacts, and only give tomato in moderation under supervision. If you think your dog ate a large amount of tomatoes or the tomato plant itself, call your vet for guidance.",
+    "sl": "Začnite z majhnimi količinami, da vidite, kako se pes odzove, in paradižnik ponujajte le zmerno in pod nadzorom. Če mislite, da je pes pojedel veliko paradižnika ali samo rastlino, pokličite veterinarja za nasvet."
+  },
+  "serving": {
+    "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
+    "sl": "Le zrel, rdeč in navaden. Odstranite vse zelene dele in meso narežite na kocke; češnjeve paradižnike narežite na majhne koščke. Nikoli paradižnika, začinjenega s soljo, česnom, čebulo ali drugimi dodatki."
+  },
+  "child": {
+    "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
+    "sl": "Psi lahko dobijo malo zrelega rdečega paradižnika. Odrasli odstrani zelene dele in ga nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat green tomatoes?",
+        "sl": "Ali lahko psi jedo zelen paradižnik?"
+      },
+      "a": {
+        "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
+        "sl": "Ne. Zelen paradižnik vsebuje več tomatina in solanina kot zrel, nezrel paradižnik pa lahko povzroči znake zastrupitve s tomatinom."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat tomato sauce or ketchup?",
+        "sl": "Ali lahko psi jedo paradižnikovo omako ali kečap?"
+      },
+      "a": {
+        "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
+        "sl": "Bolje se jim je izogniti. Paradižnikovi izdelki, kot so omaka, kečap in juha, pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo."
+      }
+    },
+    {
+      "q": {
+        "en": "I grow tomatoes. What should I watch for?",
+        "sl": "Gojim paradižnik. Na kaj moram paziti?"
+      },
+      "a": {
+        "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
+        "sl": "Zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse. Vrt ogradite, da pes ne more pokusiti rastlin."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD152",
+      "quote": "Ripe, red tomatoes are not toxic to dogs and can be offered as an occasional treat in small amounts."
+    },
+    {
+      "id": "KD152",
+      "quote": "Ripe tomatoes are safe for dogs in moderation, but green tomatoes and plants are toxic."
+    },
+    {
+      "id": "KD152",
+      "quote": "In tomatoes, the primary toxic compounds are tomatine and solanine."
+    },
+    {
+      "id": "KD152",
+      "quote": "As a tomato ripens and turns red, the levels of tomatine and solanine drop significantly."
+    },
+    {
+      "id": "KD152",
+      "quote": "Green tomatoes contain higher levels of tomatine and solanine than ripe tomatoes."
+    },
+    {
+      "id": "KD152",
+      "quote": "AVOID: Tomato-based products like sauce, ketchup, and soup"
+    },
+    {
+      "id": "KD152",
+      "quote": "Never give your dog tomatoes seasoned with salt, garlic, onion, or other additions."
+    },
+    {
+      "id": "KD152",
+      "quote": "Green or partially ripened tomatoes that fall from the vine can be attractive to dogs"
+    },
+    {
+      "id": "KD154",
+      "quote": "Ripe tomatoes are considered non-toxic to dogs and can be fed in moderation as an occasional snack."
+    },
+    {
+      "id": "KD154",
+      "quote": "Solanine and its cousin tomatine are toxins found mostly in the green parts of the tomato plant."
+    },
+    {
+      "id": "KD154",
+      "quote": "Ingesting an unripe (green) tomato or any of the green parts of the tomato can lead to symptoms of tomatine poisoning."
+    },
+    {
+      "id": "KD154",
+      "quote": "Start with small amounts of tomato to see how your dog reacts."
+    },
+    {
+      "id": "KD154",
+      "quote": "Remove all of the green parts and dice the flesh to make them easier to eat."
+    },
+    {
+      "id": "KD154",
+      "quote": "Cut them into small pieces"
+    },
+    {
+      "id": "KD154",
+      "quote": "Tomatoes are like any other treat — dogs should only consume them in moderation under supervision."
+    },
+    {
+      "id": "KD154",
+      "quote": "If you think your dog has eaten a large amount of tomatoes or the tomato plant itself, call your veterinarian for guidance."
+    },
+    {
+      "id": "KD154",
+      "quote": "No. Tomato-based products often contain garlic, onions, salt, or sugar, which can be harmful or irritating to dogs."
+    },
+    {
+      "id": "KD154",
+      "quote": "If you have a garden at home, keep it fenced off so your dog can’t access it and won’t be tempted to sample the produce."
+    }
+  ],
+  "related": [
+    "tomato-plant",
+    "potatoes-raw",
+    "garlic",
+    "onion"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eb65f3be9076e0890a6600d82cf7c36dd2f5ed479de9f1a02e126bfee08e7d3a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "abf93c33df25cee3862b8639b6d9f48bc2ae00e4dd370adc2d47b95dac87df5e"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "mushrooms-store",
+  "species": "dog",
+  "name": {
+    "en": "Store-bought mushrooms",
+    "sl": "Kupljene gobe"
+  },
+  "question": {
+    "en": "Can dogs eat store-bought mushrooms?",
+    "sl": "Ali lahko psi jedo kupljene gobe?"
+  },
+  "url_slug": {
+    "en": "store-bought-mushrooms",
+    "sl": "kupljene-gobe"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
+    "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek."
+  },
+  "why": {
+    "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
+    "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you do share, give only plain store-bought mushrooms. Never let your dog eat mushrooms found outside; if that happens, contact your vet, an animal poison centre or an emergency vet hospital immediately.",
+    "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico."
+  },
+  "serving": {
+    "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
+    "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami."
+  },
+  "child": {
+    "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
+    "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat mushroom sauce or other mushroom dishes?",
+        "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?"
+      },
+      "a": {
+        "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
+        "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo."
+      }
+    },
+    {
+      "q": {
+        "en": "What about mushrooms growing in the garden?",
+        "sl": "Kaj pa gobe, ki rastejo na vrtu?"
+      },
+      "a": {
+        "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
+        "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD157",
+      "quote": "Mushrooms sold in large and chain grocery stores may be generally safe for dogs to eat."
+    },
+    {
+      "id": "KD157",
+      "quote": "Even if the mushroom is served plain, it is generally safer to avoid feeding dishes with mushrooms to dogs."
+    },
+    {
+      "id": "KD157",
+      "quote": "Oils, butter, seasoning, and ingredients like garlic and onions can be harmful to dogs."
+    },
+    {
+      "id": "KD157",
+      "quote": "Dogs do not need mushrooms in their diet, so play it safe and give them a different reward,"
+    },
+    {
+      "id": "KD157",
+      "quote": "like a carrot stick or slice of apple, instead."
+    },
+    {
+      "id": "KD157",
+      "quote": "It can be difficult to distinguish toxic mushrooms from non-toxic mushrooms."
+    },
+    {
+      "id": "KD157",
+      "quote": "the ones that are toxic are extremely dangerous."
+    },
+    {
+      "id": "KD157",
+      "quote": "veterinarians recommend treating all wild mushrooms as potentially toxic"
+    },
+    {
+      "id": "KD157",
+      "quote": "If your dog has ingested a wild mushroom,"
+    },
+    {
+      "id": "KD157",
+      "quote": "contact your veterinarian, animal poison control center, or emergency veterinary hospital immediately."
+    }
+  ],
+  "related": [
+    "wild-mushrooms",
+    "garlic",
+    "onion",
+    "carrots",
+    "apples"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "05f0fb6789c014f59358f89184c921d0daf66c036da8d9bfdc5efe7675c7ad0d"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40de6b0b43af87e2ee11cdf4cb71200d1e094d31a5d1b7d4262545588397c70a"
+    }
+  }
+}

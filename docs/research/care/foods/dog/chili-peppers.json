@@ -1,0 +1,123 @@
+{
+  "slug": "chili-peppers",
+  "species": "dog",
+  "name": {
+    "en": "Chili peppers",
+    "sl": "Pekoča paprika (čili)"
+  },
+  "question": {
+    "en": "Can dogs eat chili peppers?",
+    "sl": "Ali lahko psi jedo pekočo papriko?"
+  },
+  "url_slug": {
+    "en": "chili-peppers",
+    "sl": "pekoca-paprika"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
+    "sl": "Ne, psu nikoli ne dajajte pekoče paprike, kot sta jalapeño ali čili. Pekoča paprika je dražilna: v ustih povzroči pekoč občutek, v večjih količinah pa lahko povzroči bruhanje in drisko."
+  },
+  "why": {
+    "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
+    "sl": "Pekoča paprika vsebuje kapsaicin, močno dražilno snov, ki je je največ v plodu in še posebej v semenih. Lahko prizadene pse, ki papriko prežvečijo in pogoltnejo. Pri domačih živalih so težave redke, vendar AKC svetuje, da psom pekoče paprike nikoli ne dajemo."
+  },
+  "signs": {
+    "en": [
+      "Burning feeling in the mouth",
+      "Burning, irritated eyes",
+      "Vomiting",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Pekoč občutek v ustih",
+      "Pekoče, razdražene oči",
+      "Bruhanje",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "Keep spicy peppers and dishes with them out of your dog's reach. The burning effect of capsaicin is usually short-lived and can be eased by rinsing the mouth with water.",
+    "sl": "Pekočo papriko in jedi z njo hranite zunaj dosega psa. Pekoč učinek kapsaicina je običajno kratkotrajen in ga lahko omilite z izpiranjem ust z vodo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Spicy peppers are not for dogs. They make a dog's mouth feel hot. Sweet peppers are the dog-friendly kind.",
+    "sl": "Pekoča paprika ni za pse. V gobčku jih peče. Sladka paprika je tista, ki je primerna za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are sweet bell peppers okay?",
+        "sl": "Je sladka paprika v redu?"
+      },
+      "a": {
+        "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
+        "sl": "Da, navadna sladka paprika je za večino psov v zmernih količinah varna, če odstranite semena in pecelj."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD155",
+      "quote": "You should also never give your dog spicy pepper varieties, such as jalapeños or chili peppers."
+    },
+    {
+      "id": "KD155",
+      "quote": "When it comes to bell peppers, the good news is that they’re safe for most dogs to eat in moderation."
+    },
+    {
+      "id": "KD155",
+      "quote": "It’s also a good idea to remove the seeds and stems before serving to prevent indigestion."
+    },
+    {
+      "id": "KD156",
+      "quote": "Although rarely a problem to household pets the hot peppers are irritants"
+    },
+    {
+      "id": "KD156",
+      "quote": "are capable of affecting dogs and cats that chew and swallow the fruits."
+    },
+    {
+      "id": "KD156",
+      "quote": "Capsaicin, and to a minor extent 4 other naturally occurring derivatives of capsaicin"
+    },
+    {
+      "id": "KD156",
+      "quote": "are the major irritants found in Capsicum species."
+    },
+    {
+      "id": "KD156",
+      "quote": "Highest concentrations of the capsaicinoids are found in the fruits and especially in the seeds."
+    },
+    {
+      "id": "KD156",
+      "quote": "As strong irritants the capsaicinoids cause a burning sensation in the mouth and eyes."
+    },
+    {
+      "id": "KD156",
+      "quote": "In larger doses vomiting and diarrhea may occur."
+    },
+    {
+      "id": "KD156",
+      "quote": "The effects of the capsaicin are usually transitory, but can be relieved by irrigation of the mucous membranes with water."
+    }
+  ],
+  "related": [
+    "peppers",
+    "salty-snacks"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ea836cb120a7fd64d3ff6ba56c6a065119aeaf521809c9ec38d86c2406a5a987"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8896d87b023d66b63ab19503928a7cf66a8c19054bbc744afdf375a01ffddf6c"
+    }
+  }
+}
