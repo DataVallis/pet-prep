@@ -140,7 +140,7 @@ describe('breed, config and database', function () {
             ->and($refused(['breed_type' => 'lhasa']))->toThrow(QueryException::class)
             ->and($refused(['breed_type' => 'apso']))->toThrow(QueryException::class);
 
-        $migration = require database_path('migrations/2027_03_16_120000_add_lhasa_apso_breed.php');
+        $migration = require database_path('migrations/2027_03_17_120000_add_lhasa_apso_breed.php');
         // down() refuses while a Lhasa Apso exists (no silent data loss).
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
