@@ -1,0 +1,128 @@
+{
+  "slug": "spinach",
+  "species": "dog",
+  "name": {
+    "en": "Spinach",
+    "sl": "Špinača"
+  },
+  "question": {
+    "en": "Can dogs eat spinach?",
+    "sl": "Ali lahko psi jedo špinačo?"
+  },
+  "url_slug": {
+    "en": "spinach",
+    "sl": "spinaca"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Dogs can eat spinach, but it isn't one of the best vegetables to share with them. It is high in oxalic acid, which blocks calcium absorption and can lead to kidney damage. A dog would have to eat a lot to be harmed, but another vegetable is a better choice.",
+    "sl": "Psi lahko jedo špinačo, vendar ni med najboljšo zelenjavo, ki bi jo delili z njimi. Vsebuje veliko oksalne kisline, ki zavira vsrkavanje kalcija in lahko škodi ledvicam. Pes bi jo moral pojesti veliko, da bi mu škodila, a druga zelenjava je boljša izbira."
+  },
+  "why": {
+    "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
+    "sl": "Špinača vsebuje veliko oksalne kisline, ki telesu zavira vsrkavanje kalcija in lahko škodi ledvicam. Psi z zdravimi ledvicami majhne količine predelajo, pes pa bi je moral pojesti zelo veliko, da bi mu škodila, vendar lahko dolgotrajno uživanje obremeni ledvice. Ker viri svetujejo drugo zelenjavo, je ne priporočamo."
+  },
+  "signs": {
+    "en": [
+      "Muscle weakness (after eating spinach over a long time)",
+      "Abnormal heart rhythm (after eating spinach over a long time)"
+    ],
+    "sl": [
+      "Mišična šibkost (po dolgotrajnem uživanju špinače)",
+      "Nenormalen srčni ritem (po dolgotrajnem uživanju špinače)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Always ask your vet before adding spinach to your dog's diet, even as a snack. If your dog is prone to kidney or bladder stones, avoid spinach.",
+    "sl": "Preden psu v prehrano dodate špinačo, tudi kot prigrizek, se vedno posvetujte z veterinarjem. Če je pes nagnjen k ledvičnim ali mehurnim kamnom, se špinači izogibajte."
+  },
+  "serving": {
+    "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
+    "sl": "Le če veterinar soglaša in ima pes zdrave ledvice: majhne količine, poredko, pripravljeno na pari, brez začimb, zelišč, soli, olja, čebule in česna."
+  },
+  "child": {
+    "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
+    "sl": "Špinača ni dober prigrizek za pse. Prosi odraslega, naj za psa izbere drugo zelenjavo."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is raw or cooked spinach better for dogs?",
+        "sl": "Je za pse boljša surova ali kuhana špinača?"
+      },
+      "a": {
+        "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
+        "sl": "Če jo že ponudite, jo pripravite na pari: surovo špinačo psi težko prebavijo, kuhana v vodi pa izgubi večino hranil."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD89",
+      "quote": "Dogs can eat spinach, but it’s not one of the top vegetables you’ll want to be sharing with them."
+    },
+    {
+      "id": "KD89",
+      "quote": "Spinach is high in oxalic acid, which blocks the body’s ability to absorb calcium and can lead to kidney damage."
+    },
+    {
+      "id": "KD89",
+      "quote": "it might be best to go with another vegetable."
+    },
+    {
+      "id": "KD145",
+      "quote": "Dogs that have healthy kidneys can easily process small amounts of soluble oxalates."
+    },
+    {
+      "id": "KD145",
+      "quote": "Many sources agree that a dog would have to eat very large quantities of spinach to cause damage."
+    },
+    {
+      "id": "KD145",
+      "quote": "long-term consumption can cause kidney stress, muscle weakness, abnormal heart rhythms"
+    },
+    {
+      "id": "KD145",
+      "quote": "you may want to avoid giving your dog spinach if they’re prone to kidney or bladder stones"
+    },
+    {
+      "id": "KD145",
+      "quote": "Always consult your vet before adding spinach to your dog’s diet, even as a snack."
+    },
+    {
+      "id": "KD145",
+      "quote": "If your dog’s kidneys are healthy, and you choose to feed them spinach, give them only small amounts infrequently."
+    },
+    {
+      "id": "KD145",
+      "quote": "The best way to prepare it is by steaming it."
+    },
+    {
+      "id": "KD145",
+      "quote": "Boiled spinach loses most of its nutrients, and raw spinach is difficult for a dog to digest."
+    },
+    {
+      "id": "KD145",
+      "quote": "Even steamed, don’t add any spices, herbs, salt, oil, onion, or garlic, since these substances can be toxic for dogs."
+    }
+  ],
+  "related": [
+    "kale",
+    "lettuce",
+    "green-beans",
+    "carrots"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e47dfda29a430580256d320da5df580163b5def5c7436793ecf2ff711e51c74f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7ec00e5bc71892a9db7c92ecd64496a72e7868ed54c62065575be010bd72899"
+    }
+  }
+}

@@ -1,88 +1,75 @@
 /**
- * Wand v2 — one ~25 s hunt scored in stars (GAMES_SPEC §5.2–§5.4, David 2026-10-30 P1 / P2;
- * strict calm rule David 2026-10-31), pure. No native import: `WandGameV2` (game layer) plays it,
- * Jest checks it with plain numbers.
+ * The cat wand hunt — the SIMPLE rule (rules 3, GAMES_SPEC §5.2–§5.4; David 2026-11-08 »naredi
+ * bolj preprosto igro«, the rule designed by Claude), pure. No native import: `WandGameV2` (game
+ * layer) plays it, Jest checks it with plain numbers.
  *
- * - **Every timing comes from the session** (`crouch_cues_ms`, `calm_window_ms`, `calm_max_moves`,
- *   `dodge_window_ms`, `catch_at_ms`, `catch_window_ms`, `max_speed_pt_s`, `min_dodge_pt`, …) —
- *   nothing here is a copy of `backend/config/wand.php`. A start body without one of them is not
- *   a playable v2 session (`readWandV2Session` → null → »bad response«; never guessed).
- * - `scoreWandV2` mirrors `WandPlayService::scoreV2` line by line (same merge, same reason order,
- *   same hint) for INSTANT feedback only; the finish response is the truth (result screen).
- * - `wandLive` = the mirror at a moment of the hunt: which pounce / the catch is decided already
- *   (a verdict can't change any more), which is still open — the stars and cues come from it.
- * - `wandStageAt` = which clip role the stage should show at a moment (`wandDeck.ts`).
+ * The child drags the feather; after the stalk the cat crouches with a 👀 cue. Letting go (the
+ * finger lifted, or »Pusti!« in »Lažje kretnje«) ANY time while the cue shows = the cat pounces
+ * and catches the feather (★). Too early or never = nothing (no ✗, no penalty): the cat loses
+ * interest and crouches again. 3 catches = the hunt is over and counts.
+ *
+ * - **Every number comes from the session** (`first_cue_ms`, `cue_window_ms`, `after_catch_ms`,
+ *   `after_miss_ms`, `max_cues`, `catches_needed`, `catch_clip_ms`, …) — nothing here is a copy of
+ *   `backend/config/wand.php`. A start body without one of them is not a playable hunt
+ *   (`readWandHuntSession` → null → »bad response«; never guessed).
+ * - `wandTimeline` mirrors `WandPlayService::simpleTimeline` line by line (same cue order, same
+ *   window bounds, same `done_ms`) — instant feedback only; the finish response is the truth.
+ * - `wandHuntAt` = the timeline at a moment (which cue is showing, whether the cat is catching).
+ * - `wandStageAt` = which clip role the stage shows at a moment (`wandDeck.ts`).
  */
 
 import { readCatSessionBase, type CatSessionBase } from '@/modules/catCare/catCare';
 
-export const WAND_RULES_V2 = 2;
+/** The simple hunt's rules version (the server's `WandPlayService::RULES_SIMPLE`). */
+export const WAND_RULES_SIMPLE = 3;
 
-/** `session` of `wand/start {rules: 2}` (and of the child state's own running v2 session). */
-export interface WandV2Session extends CatSessionBase {
-  rules_version: 2;
+/** `session` of `wand/start {rules: 3}` (and of the child state's own running hunt). */
+export interface WandHuntSession extends CatSessionBase {
+  rules_version: 3;
   /** `wand_stalking` (stand → crouch) runs 0 … stalk_ms. */
   stalk_ms: number;
-  /** Pounce instants (sorted). */
-  pounces_ms: number[];
-  /** 👀 cue per pounce (same order): the feather must come to rest. */
-  crouch_cues_ms: number[];
-  catch_at_ms: number;
-  catch_window_ms: number;
-  /** At most `calm_max_moves` counted moves in [p − calm_window_ms, p). */
-  calm_window_ms: number;
-  calm_max_moves: number;
-  /** The first away move after p must lie in [p + from, p + to]. */
-  dodge_window_ms: readonly [number, number];
-  /** Calm count only: a move closer than this to the previous counted one counts once. */
-  min_move_interval_ms: number;
-  min_stars: number;
-  max_stars: number;
-  /** What the app checks for `speed_ok`. */
-  max_speed_pt_s: number;
-  min_dodge_pt: number;
+  /** The first 👀 cue. */
+  first_cue_ms: number;
+  /** How long a 👀 cue shows: a let-go in [cue, cue + window] is a catch. */
+  cue_window_ms: number;
+  /** A catch at r → the next cue at r + after_catch_ms. */
+  after_catch_ms: number;
+  /** A missed window → the next cue at its end + after_miss_ms. */
+  after_miss_ms: number;
+  max_cues: number;
+  catches_needed: number;
+  /** The hunt is over this long after the deciding let-go (the catch clip plays out). */
+  catch_clip_ms: number;
 }
 
-/** One feather move as the v2 server scores it (ms since the local start). */
-export interface WandV2Move {
-  t: number;
-  away: boolean;
-  /** The stroke ended inside the play zone. */
-  in_zone: boolean;
-  /** Peak ≤ `max_speed_pt_s` and length ≥ `min_dodge_pt`. */
-  speed_ok: boolean;
+export interface WandCueResult {
+  cue_ms: number;
+  caught: boolean;
+  release_ms: number | null;
 }
 
-export type DodgeReason = 'moved_during_crouch' | 'too_early' | 'no_dodge' | 'out_of_zone' | 'bad_stroke';
-export type CatchReason = 'pulled_away' | 'out_of_zone';
-export type WandHint = 'calm' | 'dodge' | 'catch';
-
-export interface WandDodge {
-  pounce_ms: number;
-  star: boolean;
-  reason: DodgeReason | null;
-  move_ms: number | null;
+export interface WandTimeline {
+  cues: WandCueResult[];
+  catches: number;
+  /** When the hunt is over (the finish is accepted from here on). */
+  done_ms: number;
 }
 
-export interface WandV2Score {
+/** The finish `result` of a simple hunt (server), read from `unknown`. */
+export interface WandHuntResult {
+  session_id: string;
+  rules_version: 3;
   success: boolean;
-  reason: 'too_few_stars' | null;
+  reason: 'too_few_catches' | null;
   stars: number;
   min_stars: number;
   max_stars: number;
-  dodges: WandDodge[];
-  catch: { star: boolean; reason: CatchReason | null };
-  hint: WandHint | null;
+  cues: WandCueResult[];
+  hint: 'let_go' | null;
 }
 
-/** The v2 finish `result` (server), read from `unknown`. */
-export interface WandV2Result extends WandV2Score {
-  session_id: string;
-  rules_version: 2;
-}
-
-/** Validation bound of one finish (`wand.max_moves`, the request rule). */
-export const WAND_V2_MAX_MOVES = 600;
+/** Validation bound of one finish (`wand.simple.max_releases`, the request rule). */
+export const WAND_MAX_RELEASES = 200;
 
 // ── Readers ───────────────────────────────────────────────────
 
@@ -92,345 +79,251 @@ function isObj(value: unknown): value is Obj {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
-function int(value: unknown): number | null {
-  return typeof value === 'number' && Number.isFinite(value) ? Math.round(value) : null;
-}
-
 function nonNegInt(value: unknown): number | null {
-  const n = int(value);
-  return n !== null && n >= 0 ? n : null;
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? Math.round(value) : null;
 }
 
-function intList(value: unknown): number[] | null {
-  if (!Array.isArray(value)) return null;
-  const out: number[] = [];
-  for (const item of value) {
-    const n = nonNegInt(item);
-    if (n === null) return null;
-    out.push(n);
-  }
-  return out;
-}
-
-/**
- * A playable v2 hunt, or null. Every timing must be present and consistent — the app never
- * fills in a rule of its own (David 2026-10-31: the calm rule is server config).
- */
-export function readWandV2Session(raw: unknown): WandV2Session | null {
-  if (!isObj(raw) || raw.rules_version !== WAND_RULES_V2) return null;
+/** A playable simple hunt, or null. Every number must be present — the app never fills in a rule of its own. */
+export function readWandHuntSession(raw: unknown): WandHuntSession | null {
+  if (!isObj(raw) || raw.rules_version !== WAND_RULES_SIMPLE) return null;
   const base = readCatSessionBase(raw);
   if (base === null) return null;
-  const pounces = intList(raw.pounces_ms);
-  const cues = intList(raw.crouch_cues_ms);
-  const dodge = intList(raw.dodge_window_ms);
-  const numbers = {
-    stalk: nonNegInt(raw.stalk_ms),
-    catchAt: nonNegInt(raw.catch_at_ms),
-    catchWindow: nonNegInt(raw.catch_window_ms),
-    calmWindow: nonNegInt(raw.calm_window_ms),
-    calmMax: nonNegInt(raw.calm_max_moves),
-    interval: nonNegInt(raw.min_move_interval_ms),
-    minStars: nonNegInt(raw.min_stars),
-    maxStars: nonNegInt(raw.max_stars),
-    maxSpeed: nonNegInt(raw.max_speed_pt_s),
-    minDodge: nonNegInt(raw.min_dodge_pt),
-  };
-  if (pounces === null || cues === null || dodge === null || dodge.length !== 2 || pounces.length === 0 || cues.length !== pounces.length) return null;
-  const n = numbers;
-  if (
-    n.stalk === null ||
-    n.catchAt === null ||
-    n.catchWindow === null ||
-    n.calmWindow === null ||
-    n.calmMax === null ||
-    n.interval === null ||
-    n.minStars === null ||
-    n.maxStars === null ||
-    n.maxSpeed === null ||
-    n.minDodge === null
-  ) {
-    return null;
-  }
-  const order = pounces.map((p, i) => ({ p, cue: cues[i] })).sort((a, b) => a.p - b.p);
-  if (order.some(({ p, cue }) => cue > p || p > base.duration_ms) || n.catchAt > base.duration_ms || dodge[0] > dodge[1] || n.minStars < 1 || n.maxSpeed < 1) {
-    return null;
-  }
+  const stalk = nonNegInt(raw.stalk_ms);
+  const first = nonNegInt(raw.first_cue_ms);
+  const win = nonNegInt(raw.cue_window_ms);
+  const afterCatch = nonNegInt(raw.after_catch_ms);
+  const afterMiss = nonNegInt(raw.after_miss_ms);
+  const maxCues = nonNegInt(raw.max_cues);
+  const needed = nonNegInt(raw.catches_needed);
+  const clip = nonNegInt(raw.catch_clip_ms);
+  if (stalk === null || first === null || win === null || afterCatch === null || afterMiss === null || maxCues === null || needed === null || clip === null) return null;
+  if (win < 1 || maxCues < 1 || needed < 1 || first > base.duration_ms) return null;
   return {
     ...base,
-    rules_version: WAND_RULES_V2,
-    stalk_ms: n.stalk,
-    pounces_ms: order.map((o) => o.p),
-    crouch_cues_ms: order.map((o) => o.cue),
-    catch_at_ms: n.catchAt,
-    catch_window_ms: n.catchWindow,
-    calm_window_ms: n.calmWindow,
-    calm_max_moves: n.calmMax,
-    dodge_window_ms: [dodge[0], dodge[1]],
-    min_move_interval_ms: n.interval,
-    min_stars: n.minStars,
-    max_stars: n.maxStars,
-    max_speed_pt_s: n.maxSpeed,
-    min_dodge_pt: n.minDodge,
+    rules_version: WAND_RULES_SIMPLE,
+    stalk_ms: stalk,
+    first_cue_ms: first,
+    cue_window_ms: win,
+    after_catch_ms: afterCatch,
+    after_miss_ms: afterMiss,
+    max_cues: maxCues,
+    catches_needed: needed,
+    catch_clip_ms: clip,
   };
 }
 
-const DODGE_REASONS: readonly DodgeReason[] = ['moved_during_crouch', 'too_early', 'no_dodge', 'out_of_zone', 'bad_stroke'];
-const CATCH_REASONS: readonly CatchReason[] = ['pulled_away', 'out_of_zone'];
-const HINTS: readonly WandHint[] = ['calm', 'dodge', 'catch'];
-
-function oneOf<T extends string>(value: unknown, list: readonly T[]): T | null {
-  return typeof value === 'string' && (list as readonly string[]).includes(value) ? (value as T) : null;
-}
-
-/** A v2 finish `result`, or null (a v1 result / a broken body → »bad response«). */
-export function readWandV2Result(raw: unknown): WandV2Result | null {
-  if (!isObj(raw) || raw.rules_version !== WAND_RULES_V2 || typeof raw.session_id !== 'string' || typeof raw.success !== 'boolean') return null;
+/** A simple-hunt finish `result`, or null (a v1 result / a broken body → »bad response«). */
+export function readWandHuntResult(raw: unknown): WandHuntResult | null {
+  if (!isObj(raw) || raw.rules_version !== WAND_RULES_SIMPLE || typeof raw.session_id !== 'string' || typeof raw.success !== 'boolean') return null;
   const stars = nonNegInt(raw.stars);
   const minStars = nonNegInt(raw.min_stars);
   const maxStars = nonNegInt(raw.max_stars);
-  if (stars === null || minStars === null || maxStars === null || !Array.isArray(raw.dodges) || !isObj(raw.catch)) return null;
-  const dodges: WandDodge[] = [];
-  for (const d of raw.dodges) {
-    if (!isObj(d) || typeof d.star !== 'boolean') return null;
-    const pounce = nonNegInt(d.pounce_ms);
-    if (pounce === null) return null;
-    dodges.push({ pounce_ms: pounce, star: d.star, reason: d.star ? null : oneOf(d.reason, DODGE_REASONS), move_ms: nonNegInt(d.move_ms) });
+  if (stars === null || minStars === null || maxStars === null || !Array.isArray(raw.cues)) return null;
+  const cues: WandCueResult[] = [];
+  for (const c of raw.cues) {
+    if (!isObj(c) || typeof c.caught !== 'boolean') return null;
+    const cue = nonNegInt(c.cue_ms);
+    if (cue === null) return null;
+    cues.push({ cue_ms: cue, caught: c.caught, release_ms: nonNegInt(c.release_ms) });
   }
-  const catchStar = raw.catch.star === true;
   return {
     session_id: raw.session_id,
-    rules_version: WAND_RULES_V2,
+    rules_version: WAND_RULES_SIMPLE,
     success: raw.success,
-    reason: raw.success ? null : 'too_few_stars',
+    reason: raw.success ? null : 'too_few_catches',
     stars,
     min_stars: minStars,
     max_stars: maxStars,
-    dodges,
-    catch: { star: catchStar, reason: catchStar ? null : oneOf(raw.catch.reason, CATCH_REASONS) },
-    hint: oneOf(raw.hint, HINTS),
+    cues,
+    hint: raw.hint === 'let_go' ? 'let_go' : null,
   };
 }
 
-// ── Scorer mirror (WandPlayService::scoreV2) ──────────────────
+// ── The timeline (mirror of WandPlayService::simpleTimeline) ──
 
-/** Sorted by time (stable, like PHP 8's usort). */
-function sortedMoves(moves: readonly WandV2Move[]): WandV2Move[] {
-  return [...moves].sort((a, b) => a.t - b.t);
-}
+type TimelineRules = Pick<WandHuntSession, 'first_cue_ms' | 'cue_window_ms' | 'after_catch_ms' | 'after_miss_ms' | 'max_cues' | 'catches_needed' | 'catch_clip_ms'>;
 
-/** Moves the CALM rule counts: one closer than `interval` to the previous counted one counts once. */
-export function countedV2Moves(sorted: readonly WandV2Move[], intervalMs: number): WandV2Move[] {
-  const out: WandV2Move[] = [];
-  let last: number | null = null;
-  for (const m of sorted) {
-    if (last !== null && intervalMs > m.t - last) continue;
-    last = m.t;
-    out.push(m);
+/**
+ * The hunt as it played with these let-go moments. Cue 1 at `first_cue_ms`; a cue is caught by
+ * the first release in [cue, cue + window] and the next cue comes `after_catch_ms` after it; a
+ * cue without one passes and the next comes `after_miss_ms` after its window; stop at
+ * `catches_needed` catches or `max_cues` cues. `done_ms` = the deciding release + `catch_clip_ms`,
+ * else the end of the last window.
+ */
+export function wandTimeline(releases: readonly number[], s: TimelineRules): WandTimeline {
+  const sorted = [...releases].sort((a, b) => a - b);
+  const cues: WandCueResult[] = [];
+  let catches = 0;
+  let cue = s.first_cue_ms;
+  let done = cue + s.cue_window_ms;
+  for (let i = 0; i < s.max_cues && catches < s.catches_needed; i++) {
+    const hit = sorted.find((t) => t >= cue && t <= cue + s.cue_window_ms) ?? null;
+    cues.push({ cue_ms: cue, caught: hit !== null, release_ms: hit });
+    if (hit !== null) {
+      catches++;
+      done = hit + s.catch_clip_ms;
+      cue = hit + s.after_catch_ms;
+    } else {
+      done = cue + s.cue_window_ms;
+      cue += s.cue_window_ms + s.after_miss_ms;
+    }
   }
-  return out;
+  return { cues, catches, done_ms: done };
 }
 
-function dodgeOf(p: number, raw: readonly WandV2Move[], counted: readonly WandV2Move[], s: WandV2Session): WandDodge {
-  const calmMoves = counted.filter((m) => m.t >= p - s.calm_window_ms && m.t < p).length;
-  const first = raw.find((m) => m.away && m.t >= p) ?? null;
-  const [from, to] = s.dodge_window_ms;
-  const inTime = first !== null && first.t >= p + from && first.t <= p + to;
-  let reason: DodgeReason | null = null;
-  if (calmMoves > s.calm_max_moves) reason = 'moved_during_crouch';
-  else if (first !== null && first.t < p + from) reason = 'too_early';
-  else if (!inTime || first === null) reason = 'no_dodge';
-  else if (!first.in_zone) reason = 'out_of_zone';
-  else if (!first.speed_ok) reason = 'bad_stroke';
-  return { pounce_ms: p, star: reason === null, reason, move_ms: inTime && first !== null ? first.t : null };
-}
-
-function catchOf(raw: readonly WandV2Move[], s: WandV2Session): { star: boolean; reason: CatchReason | null } {
-  const end = s.catch_at_ms + s.catch_window_ms;
-  let pulled = false;
-  let lastBefore: WandV2Move | null = null;
-  for (const m of raw) {
-    if (m.t > end) break;
-    lastBefore = m;
-    if (m.away && m.t >= s.catch_at_ms) pulled = true;
-  }
-  const reason: CatchReason | null = pulled ? 'pulled_away' : lastBefore !== null && !lastBefore.in_zone ? 'out_of_zone' : null;
-  return { star: reason === null, reason };
-}
-
-/** Mirror of `WandPlayService::scoreV2` (same merge, same reason order, same hint). */
-export function scoreWandV2(moves: readonly WandV2Move[], s: WandV2Session): WandV2Score {
-  const raw = sortedMoves(moves);
-  const counted = countedV2Moves(raw, s.min_move_interval_ms);
-  const failures: { at: number; hint: WandHint }[] = [];
-  let stars = 0;
-  const dodges = s.pounces_ms.map((p) => {
-    const d = dodgeOf(p, raw, counted, s);
-    if (d.star) stars++;
-    else failures.push({ at: p, hint: d.reason === 'moved_during_crouch' ? 'calm' : 'dodge' });
-    return d;
-  });
-  const caught = catchOf(raw, s);
-  if (caught.star) stars++;
-  else failures.push({ at: s.catch_at_ms, hint: 'catch' });
-  failures.sort((a, b) => a.at - b.at);
-  const success = stars >= s.min_stars;
+/** The ★ the server will give (instant feedback; the finish response replaces it). */
+export function scoreWandHunt(releases: readonly number[], s: WandHuntSession): Omit<WandHuntResult, 'session_id'> {
+  const tl = wandTimeline(releases, s);
+  const success = tl.catches >= s.catches_needed;
   return {
+    rules_version: WAND_RULES_SIMPLE,
     success,
-    reason: success ? null : 'too_few_stars',
-    stars,
-    min_stars: s.min_stars,
-    max_stars: s.pounces_ms.length + 1,
-    dodges,
-    catch: caught,
-    hint: failures[0]?.hint ?? null,
+    reason: success ? null : 'too_few_catches',
+    stars: tl.catches,
+    min_stars: s.catches_needed,
+    max_stars: s.catches_needed,
+    cues: tl.cues,
+    hint: success ? null : 'let_go',
   };
 }
 
-/** Add a move (bounds 0…duration, ≤ `WAND_V2_MAX_MOVES`); the same array when dropped. */
-export function addWandV2Move(moves: readonly WandV2Move[], move: WandV2Move, durationMs: number): readonly WandV2Move[] {
-  const t = Math.round(move.t);
-  if (!Number.isFinite(t) || t < 0 || t > durationMs || moves.length >= WAND_V2_MAX_MOVES) return moves;
-  return [...moves, { t, away: move.away, in_zone: move.in_zone, speed_ok: move.speed_ok }];
+/** Add a let-go (bounds 0…duration, ≤ `WAND_MAX_RELEASES`); the same array when dropped. */
+export function addWandRelease(releases: readonly number[], t: number, durationMs: number): readonly number[] {
+  const at = Math.round(t);
+  if (!Number.isFinite(at) || at < 0 || at > durationMs || releases.length >= WAND_MAX_RELEASES) return releases;
+  return [...releases, at];
 }
 
-// ── The hunt at a moment (instant feedback) ───────────────────
+// ── The hunt at a moment ──────────────────────────────────────
 
-export type PounceLive =
-  | { state: 'upcoming' }
-  /** 👀 cue … pounce: `calmBroken` = the feather already moved inside the calm window. */
-  | { state: 'cue'; calmBroken: boolean; calmFrom: number }
-  /** Pounced, no verdict yet (waiting for the dodge). */
-  | { state: 'open' }
-  | { state: 'done'; star: boolean; reason: DodgeReason | null };
+export type WandMoment =
+  /** Before the first cue (the stalk), or between cues (the cat watches the feather). */
+  | { kind: 'waiting' }
+  /** A 👀 cue is showing: let go now. */
+  | { kind: 'cue'; index: number; cueMs: number; endsMs: number }
+  /** The cat pounced at `releaseMs` and catches the feather. */
+  | { kind: 'catching'; index: number; releaseMs: number }
+  /** The hunt is decided (3 catches, or every cue passed). */
+  | { kind: 'over' };
 
-export type CatchLive = { state: 'upcoming' } | { state: 'open' } | { state: 'done'; star: boolean; reason: CatchReason | null };
-
-export interface WandLive {
-  pounces: PounceLive[];
-  catch: CatchLive;
-  /** Stars decided so far (display only — the server's result replaces them). */
-  stars: number;
+export interface WandHuntState {
+  /** The cues decided so far (caught, or their window passed). */
+  decided: WandCueResult[];
+  catches: number;
+  moment: WandMoment;
 }
 
 /**
- * The mirror at `nowMs`, given the moves seen so far (all ≤ now). A verdict is `done` only when
- * no later move can change it: the counted set is prefix-determined, the dodge is the FIRST away
- * move after p, the catch ends with its window. The `done` verdicts equal `scoreWandV2` of the
- * same moves (tested).
+ * The hunt at `nowMs` from the let-go moments seen so far (all ≤ now). A cue is decided once it
+ * is caught or its window is over; equal to `wandTimeline` of the same releases for every decided
+ * cue (tested).
  */
-export function wandLive(s: WandV2Session, moves: readonly WandV2Move[], nowMs: number): WandLive {
-  const raw = sortedMoves(moves.filter((m) => m.t <= nowMs));
-  const counted = countedV2Moves(raw, s.min_move_interval_ms);
-  const [, to] = s.dodge_window_ms;
-  let stars = 0;
-  const pounces = s.pounces_ms.map((p, i): PounceLive => {
-    const cue = s.crouch_cues_ms[i];
-    const calmFrom = p - s.calm_window_ms;
-    const calmMoves = counted.filter((m) => m.t >= calmFrom && m.t < Math.min(p, nowMs + 1)).length;
-    if (nowMs < cue) return { state: 'upcoming' };
-    if (nowMs < p) return { state: 'cue', calmBroken: calmMoves > s.calm_max_moves, calmFrom };
-    const first = raw.find((m) => m.away && m.t >= p);
-    const decided = calmMoves > s.calm_max_moves || first !== undefined || nowMs > p + to;
-    if (!decided) return { state: 'open' };
-    const d = dodgeOf(p, raw, counted, s);
-    if (d.star) stars++;
-    return { state: 'done', star: d.star, reason: d.reason };
-  });
-  let caught: CatchLive;
-  if (nowMs < s.catch_at_ms) caught = { state: 'upcoming' };
-  else {
-    const pulled = raw.some((m) => m.away && m.t >= s.catch_at_ms);
-    if (pulled) caught = { state: 'done', star: false, reason: 'pulled_away' };
-    else if (nowMs <= s.catch_at_ms + s.catch_window_ms) caught = { state: 'open' };
-    else caught = { state: 'done', ...catchOf(raw, s) };
+export function wandHuntAt(s: WandHuntSession, releases: readonly number[], nowMs: number): WandHuntState {
+  const tl = wandTimeline(releases.filter((t) => t <= nowMs), s);
+  const decided: WandCueResult[] = [];
+  let catches = 0;
+  for (let i = 0; i < tl.cues.length; i++) {
+    const c = tl.cues[i];
+    if (c.caught && c.release_ms !== null) {
+      decided.push(c);
+      catches++;
+      if (nowMs < c.release_ms + s.catch_clip_ms) return { decided, catches, moment: { kind: 'catching', index: i, releaseMs: c.release_ms } };
+      continue;
+    }
+    if (nowMs < c.cue_ms) return { decided, catches, moment: { kind: 'waiting' } };
+    if (nowMs <= c.cue_ms + s.cue_window_ms) return { decided, catches, moment: { kind: 'cue', index: i, cueMs: c.cue_ms, endsMs: c.cue_ms + s.cue_window_ms } };
+    decided.push(c);
   }
-  if (caught.state === 'done' && caught.star) stars++;
-  return { pounces, catch: caught, stars };
+  return { decided, catches, moment: { kind: 'over' } };
 }
 
-/** Progress dots: one per pounce + the catch, true once decided. */
-export function wandDots(live: WandLive): boolean[] {
-  return [...live.pounces.map((p) => p.state === 'done'), live.catch.state === 'done'];
+/** Catches whose clip has played out (the ★ is shown) — the top bar's star count. */
+export function wandStars(state: WandHuntState): number {
+  return state.catches - (state.moment.kind === 'catching' ? 1 : 0);
+}
+
+/** Progress dots: one per needed catch, true once caught. */
+export function wandDots(state: WandHuntState, s: WandHuntSession): boolean[] {
+  return Array.from({ length: s.catches_needed }, (_, i) => i < state.catches);
 }
 
 export type WandCue =
-  | { kind: 'crouch'; pounce: number }
-  | { kind: 'pounce'; pounce: number }
-  | { kind: 'dodged'; pounce: number }
-  | { kind: 'grabbed'; pounce: number }
-  | { kind: 'calmBroken'; pounce: number }
-  | { kind: 'catchCue' }
-  | { kind: 'caught' };
+  /** A 👀 cue starts. */
+  | { kind: 'crouch'; index: number }
+  /** The child let go during it: the cat pounces. */
+  | { kind: 'pounce'; index: number }
+  /** The catch clip played: ★ »Ujela ga je!«. */
+  | { kind: 'caught'; index: number }
+  /** The window passed without a let-go: the cat loses interest (no ✗). */
+  | { kind: 'lostInterest'; index: number };
 
-/** What the child sees / hears / feels between two evaluations (never anything for a miss but the picture). */
-export function wandCues(prev: WandLive | null, next: WandLive): WandCue[] {
+/** What the child sees / hears / feels between two evaluations (a miss shows nothing but the cat). */
+export function wandCues(prev: WandHuntState | null, next: WandHuntState): WandCue[] {
   const cues: WandCue[] = [];
-  next.pounces.forEach((p, i) => {
-    const before = prev?.pounces[i] ?? { state: 'upcoming' as const };
-    if (before.state === 'upcoming' && p.state !== 'upcoming') cues.push({ kind: 'crouch', pounce: i });
-    if (p.state === 'cue' && p.calmBroken && !(before.state === 'cue' && before.calmBroken)) cues.push({ kind: 'calmBroken', pounce: i });
-    if ((before.state === 'upcoming' || before.state === 'cue') && (p.state === 'open' || p.state === 'done')) cues.push({ kind: 'pounce', pounce: i });
-    if (before.state !== 'done' && p.state === 'done') cues.push({ kind: p.star ? 'dodged' : 'grabbed', pounce: i });
-  });
-  const c = next.catch;
-  const cb = prev?.catch ?? { state: 'upcoming' as const };
-  if (cb.state === 'upcoming' && c.state !== 'upcoming') cues.push({ kind: 'catchCue' });
-  if (cb.state !== 'done' && c.state === 'done' && c.star) cues.push({ kind: 'caught' });
+  const pm = prev?.moment ?? null;
+  const nm = next.moment;
+  if (nm.kind === 'cue' && !(pm?.kind === 'cue' && pm.index === nm.index)) cues.push({ kind: 'crouch', index: nm.index });
+  const before = prev?.decided.length ?? 0;
+  next.decided.slice(before).forEach((c, k) => cues.push({ kind: c.caught ? 'pounce' : 'lostInterest', index: before + k }));
+  // The ★ comes once the catch clip has played (the cat »made the kill«).
+  const caughtIdx = next.decided.flatMap((c, i) => (c.caught ? [i] : []));
+  for (let n = prev === null ? 0 : wandStars(prev); n < wandStars(next); n++) cues.push({ kind: 'caught', index: caughtIdx[n] });
   return cues;
 }
 
 // ── Stage and time ────────────────────────────────────────────
 
 /** The clip roles of the hunt (`wandDeck.ts`). */
-export type WandRole = 'stalking' | 'crouch' | 'pounce' | 'catching';
+export type WandRole = 'stalking' | 'crouch' | 'catching';
 
 /**
  * Which role the stage should show at `t` (the queue plays it as soon as the chain rules allow):
- * the stalk, the crouch loop between pounces, the pounce clip from each pounce for its stored
- * length (`pounceClipMs`), the catch from `catch_at_ms` to the end.
+ * the stalk, the crouch loop while the cat watches / crouches, the catch from each let-go that
+ * caught for `catch_clip_ms` (the ★ mask then cuts back to the crouch loop).
  */
-export function wandStageAt(s: WandV2Session, t: number, pounceClipMs: number): WandRole {
-  if (t >= s.catch_at_ms) return 'catching';
+export function wandStageAt(s: WandHuntSession, releases: readonly number[], t: number): WandRole {
+  const state = wandHuntAt(s, releases, t);
+  // The last catch holds its catch pose to the end (the result card comes over it).
+  if (state.moment.kind === 'catching' || (state.moment.kind === 'over' && state.catches >= s.catches_needed)) return 'catching';
   if (t < s.stalk_ms) return 'stalking';
-  if (s.pounces_ms.some((p) => t >= p && t < p + pounceClipMs)) return 'pounce';
   return 'crouch';
 }
 
-/** The paw swipes over the feather this long after the pounce (GAMES_SPEC §5.2: p + 600). */
+/** The paw swipes over the feather this long after the let-go. */
 export const WAND_PAW_AFTER_MS = 600;
-/** The grabbed feather shakes in the paw this long (no ✗, no text — §5.2). */
-export const WAND_GRAB_SHAKE_MS = 800;
 
 /**
- * When the game should re-evaluate next after `t` (the next boundary of the schedule), so a cue
+ * When the game should re-evaluate next after `t` (the next boundary of the timeline), so a cue
  * is never late by more than one frame of the 100 ms game tick — or null after the end.
  */
-export function wandNextBoundary(s: WandV2Session, t: number, pounceClipMs: number): number | null {
-  const [from, to] = s.dodge_window_ms;
-  const points = [
-    s.stalk_ms,
-    ...s.crouch_cues_ms,
-    ...s.pounces_ms.flatMap((p) => [p, p + from, p + WAND_PAW_AFTER_MS, p + to + 1, p + pounceClipMs]),
-    s.catch_at_ms,
-    s.catch_at_ms + s.catch_window_ms + 1,
-    s.duration_ms,
-  ];
+export function wandNextBoundary(s: WandHuntSession, releases: readonly number[], t: number): number | null {
+  const tl = wandTimeline(releases.filter((r) => r <= t), s);
+  const points: number[] = [s.stalk_ms, tl.done_ms];
+  for (const c of tl.cues) {
+    points.push(c.cue_ms);
+    if (c.release_ms !== null) points.push(c.release_ms + WAND_PAW_AFTER_MS, c.release_ms + s.catch_clip_ms);
+    else points.push(c.cue_ms + s.cue_window_ms + 1);
+  }
+  // The cue after the last decided one (not in the timeline until its window opens).
+  const last = tl.cues[tl.cues.length - 1];
+  if (last !== undefined && tl.cues.length < s.max_cues && tl.catches < s.catches_needed) {
+    points.push(last.caught && last.release_ms !== null ? last.release_ms + s.after_catch_ms : last.cue_ms + s.cue_window_ms + s.after_miss_ms);
+  }
   let best: number | null = null;
   for (const at of points) if (at > t && (best === null || at < best)) best = at;
   return best;
 }
 
 /**
- * QA M1 analogue: can a v2 hunt resumed at `elapsedMs` still count? Never — the deck (every
- * clip preloaded) must be ready before the hunt clock starts, which a resume can't wait for;
- * the intro stays and a new start replaces the session on the server (no penalty). Its time
- * already over → `useCatSessionGame` still closes it quietly (frees the cat for siblings).
+ * Can a hunt resumed at `elapsedMs` still count? Never — the deck (every clip preloaded) must be
+ * ready before the hunt clock starts, which a resume can't wait for; the intro stays and a new
+ * start replaces the session on the server (no penalty).
  */
 export function canWandV2StillCount(): boolean {
   return false;
 }
 
-/** The finish is sent once the catch clip has played out (the server accepts it from catch + window). */
-export function wandV2FinishAt(s: WandV2Session): number {
-  return Math.max(s.duration_ms, s.catch_at_ms + s.catch_window_ms);
+/** The finish is sent once the hunt is over: the third catch played out, or the last window passed. */
+export function wandHuntFinishAt(s: WandHuntSession, releases: readonly number[]): number {
+  return Math.min(s.duration_ms, wandTimeline(releases, s).done_ms);
 }

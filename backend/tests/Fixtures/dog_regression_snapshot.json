@@ -926,7 +926,7 @@
                         "take_out": {
                             "hold_hours": 2,
                             "clock_started_at": "2026-10-25T00:00:00+02:00",
-                            "next_due_at": "2026-10-25T14:00:00+01:00",
+                            "next_due_at": "2026-10-25T07:30:00+01:00",
                             "last_taken_out_at": "2026-10-24T10:00:00+02:00"
                         },
                         "active_events": [
@@ -976,9 +976,11 @@
                         "children_sharing": 1,
                         "my_share_seconds": 420,
                         "my_seconds_left": 373,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": "training_pet_sleeping",
-                        "next_allowed_at": "2026-10-25T07:00:00+01:00"
+                        "next_allowed_at": "2026-10-25T07:00:00+01:00",
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,
@@ -1575,9 +1577,11 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": null,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,
@@ -1699,6 +1703,12 @@
                     ],
                     [
                         "accident",
+                        "2026-10-25T06:30:00+00:00",
+                        "applied",
+                        "2026-10-25T11:00:00+00:00"
+                    ],
+                    [
+                        "accident",
                         "2026-10-25T14:30:00+00:00",
                         "applied",
                         "2026-10-25T17:00:00+00:00"
@@ -1781,6 +1791,12 @@
                         "ignored_warning",
                         "2026-10-24T18:00:00+00:00",
                         0,
+                        null
+                    ],
+                    [
+                        "pet_accident",
+                        "2026-10-25T06:30:00+00:00",
+                        null,
                         null
                     ],
                     [
@@ -2033,6 +2049,19 @@
                     ],
                     [
                         "2026-10-25",
+                        "clean",
+                        0,
+                        "done",
+                        "2026-10-25T06:30:00+00:00",
+                        "2026-10-25T13:30:00+00:00",
+                        "2026-10-25T11:00:00+00:00",
+                        "child",
+                        null,
+                        null,
+                        "accident"
+                    ],
+                    [
+                        "2026-10-25",
                         "feed",
                         2,
                         "missed",
@@ -2047,7 +2076,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        0,
+                        1,
                         "missed",
                         "2026-10-25T14:30:00+00:00",
                         "2026-10-25T16:30:00+00:00",
@@ -2060,7 +2089,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        1,
+                        2,
                         "done",
                         "2026-10-25T16:30:00+00:00",
                         "2026-10-25T18:30:00+00:00",
@@ -2086,7 +2115,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        2,
+                        3,
                         "pending",
                         "2026-10-25T18:30:00+00:00",
                         "2026-10-26T06:30:00+00:00",
@@ -2149,16 +2178,16 @@
                         ]
                     },
                     "care_score": {
-                        "score": 33,
-                        "done": 5,
-                        "expected": 15,
+                        "score": 38,
+                        "done": 6,
+                        "expected": 16,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-25",
-                        "expected": 10,
-                        "done": 4,
+                        "expected": 11,
+                        "done": 5,
                         "done_by_child": null,
                         "pending": 2,
                         "missed_count": 4,
@@ -2202,18 +2231,18 @@
                         ]
                     },
                     "care_score": {
-                        "score": 33,
-                        "done": 5,
-                        "expected": 15,
-                        "routines": 15,
+                        "score": 38,
+                        "done": 6,
+                        "expected": 16,
+                        "routines": 16,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-25",
-                        "expected": 10,
-                        "done": 4,
-                        "done_by_child": 4,
+                        "expected": 11,
+                        "done": 5,
+                        "done_by_child": 5,
                         "pending": 2,
                         "missed_count": 4,
                         "missed": [
@@ -2334,10 +2363,10 @@
                         },
                         {
                             "date": "2026-10-25",
-                            "expected": 10,
-                            "fair_expected": 10,
-                            "done": 4,
-                            "done_by_child": 4,
+                            "expected": 11,
+                            "fair_expected": 11,
+                            "done": 5,
+                            "done_by_child": 5,
                             "missed": 4,
                             "pending": 2,
                             "walk_steps": 9000,
@@ -2394,6 +2423,14 @@
                         "scheduled",
                         null,
                         "2026-10-25T08:00:00+00:00",
+                        "2026-10-25T06:00:00+00:00"
+                    ],
+                    [
+                        "take_out_reminder",
+                        "morning:2026-10-25",
+                        "queued",
+                        null,
+                        null,
                         "2026-10-25T06:00:00+00:00"
                     ],
                     [
@@ -2616,7 +2653,7 @@
                         "take_out": {
                             "hold_hours": 2,
                             "clock_started_at": "2026-10-26T00:00:00+01:00",
-                            "next_due_at": "2026-10-26T14:00:00+01:00",
+                            "next_due_at": "2026-10-26T07:30:00+01:00",
                             "last_taken_out_at": "2026-10-25T13:30:00+01:00"
                         },
                         "active_events": [
@@ -2666,9 +2703,11 @@
                         "children_sharing": 1,
                         "my_share_seconds": 420,
                         "my_seconds_left": 374,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": "training_pet_sleeping",
-                        "next_allowed_at": "2026-10-26T07:00:00+01:00"
+                        "next_allowed_at": "2026-10-26T07:00:00+01:00",
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,
@@ -3540,9 +3579,11 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": null,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,
@@ -3630,7 +3671,7 @@
                     "is_game_over": false,
                     "last_decay_at": "2026-10-26T08:30:00+00:00",
                     "last_step_reset_at": "2026-10-25T23:00:00+00:00",
-                    "potty_clock_started_at": "2026-10-25T18:30:00+00:00",
+                    "potty_clock_started_at": "2026-10-26T06:30:00+00:00",
                     "routines_closed_through": "2026-10-25"
                 },
                 "walks": [
@@ -3672,6 +3713,12 @@
                     ],
                     [
                         "accident",
+                        "2026-10-25T06:30:00+00:00",
+                        "applied",
+                        "2026-10-25T11:00:00+00:00"
+                    ],
+                    [
+                        "accident",
                         "2026-10-25T14:30:00+00:00",
                         "applied",
                         "2026-10-25T17:00:00+00:00"
@@ -3685,6 +3732,12 @@
                     [
                         "accident",
                         "2026-10-25T18:30:00+00:00",
+                        "applied",
+                        null
+                    ],
+                    [
+                        "accident",
+                        "2026-10-26T06:30:00+00:00",
                         "applied",
                         null
                     ]
@@ -3754,6 +3807,12 @@
                         "ignored_warning",
                         "2026-10-24T18:00:00+00:00",
                         0,
+                        null
+                    ],
+                    [
+                        "pet_accident",
+                        "2026-10-25T06:30:00+00:00",
+                        null,
                         null
                     ],
                     [
@@ -3844,6 +3903,12 @@
                         "ignored_warning",
                         "2026-10-25T19:30:00+00:00",
                         0,
+                        null
+                    ],
+                    [
+                        "pet_accident",
+                        "2026-10-26T06:30:00+00:00",
+                        null,
                         null
                     ]
                 ],
@@ -4006,6 +4071,19 @@
                     ],
                     [
                         "2026-10-25",
+                        "clean",
+                        0,
+                        "done",
+                        "2026-10-25T06:30:00+00:00",
+                        "2026-10-25T13:30:00+00:00",
+                        "2026-10-25T11:00:00+00:00",
+                        "child",
+                        null,
+                        null,
+                        "accident"
+                    ],
+                    [
+                        "2026-10-25",
                         "feed",
                         2,
                         "missed",
@@ -4020,7 +4098,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        0,
+                        1,
                         "missed",
                         "2026-10-25T14:30:00+00:00",
                         "2026-10-25T16:30:00+00:00",
@@ -4033,7 +4111,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        1,
+                        2,
                         "done",
                         "2026-10-25T16:30:00+00:00",
                         "2026-10-25T18:30:00+00:00",
@@ -4059,7 +4137,7 @@
                     [
                         "2026-10-25",
                         "clean",
-                        2,
+                        3,
                         "missed",
                         "2026-10-25T18:30:00+00:00",
                         "2026-10-26T06:30:00+00:00",
@@ -4136,6 +4214,19 @@
                     ],
                     [
                         "2026-10-26",
+                        "clean",
+                        0,
+                        "pending",
+                        "2026-10-26T06:30:00+00:00",
+                        "2026-10-26T13:30:00+00:00",
+                        null,
+                        null,
+                        null,
+                        null,
+                        "accident"
+                    ],
+                    [
+                        "2026-10-26",
                         "feed",
                         2,
                         "pending",
@@ -4208,18 +4299,24 @@
                         "2026-10-25",
                         "clean",
                         0,
-                        "missed"
-                    ],
-                    [
-                        "2026-10-25",
-                        "clean",
-                        1,
                         "done"
                     ],
                     [
                         "2026-10-25",
                         "clean",
+                        1,
+                        "missed"
+                    ],
+                    [
+                        "2026-10-25",
+                        "clean",
                         2,
+                        "done"
+                    ],
+                    [
+                        "2026-10-25",
+                        "clean",
+                        3,
                         "missed"
                     ],
                     [
@@ -4273,18 +4370,18 @@
                         ]
                     },
                     "care_score": {
-                        "score": 28,
-                        "done": 5,
-                        "expected": 18,
+                        "score": 32,
+                        "done": 6,
+                        "expected": 19,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-26",
-                        "expected": 8,
+                        "expected": 9,
                         "done": 0,
                         "done_by_child": null,
-                        "pending": 6,
+                        "pending": 7,
                         "missed_count": 2,
                         "missed": [
                             {
@@ -4312,19 +4409,19 @@
                         ]
                     },
                     "care_score": {
-                        "score": 28,
-                        "done": 5,
-                        "expected": 18,
-                        "routines": 18,
+                        "score": 32,
+                        "done": 6,
+                        "expected": 19,
+                        "routines": 19,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-26",
-                        "expected": 8,
+                        "expected": 9,
                         "done": 0,
                         "done_by_child": 0,
-                        "pending": 6,
+                        "pending": 7,
                         "missed_count": 2,
                         "missed": [
                             {
@@ -4416,10 +4513,10 @@
                         },
                         {
                             "date": "2026-10-25",
-                            "expected": 10,
-                            "fair_expected": 10,
-                            "done": 4,
-                            "done_by_child": 4,
+                            "expected": 11,
+                            "fair_expected": 11,
+                            "done": 5,
+                            "done_by_child": 5,
                             "missed": 6,
                             "pending": 0,
                             "walk_steps": 9000,
@@ -4430,12 +4527,12 @@
                         },
                         {
                             "date": "2026-10-26",
-                            "expected": 7,
-                            "fair_expected": 7,
+                            "expected": 8,
+                            "fair_expected": 8,
                             "done": 0,
                             "done_by_child": 0,
                             "missed": 1,
-                            "pending": 6,
+                            "pending": 7,
                             "walk_steps": 0,
                             "walk_goal": 2000,
                             "walk_done": false,
@@ -4493,6 +4590,14 @@
                         "2026-10-25T06:00:00+00:00"
                     ],
                     [
+                        "take_out_reminder",
+                        "morning:2026-10-25",
+                        "queued",
+                        null,
+                        null,
+                        "2026-10-25T06:00:00+00:00"
+                    ],
+                    [
                         "critical_alert",
                         "hygiene",
                         "queued",
@@ -4530,6 +4635,14 @@
                         "scheduled",
                         null,
                         "2026-10-26T08:00:00+00:00",
+                        "2026-10-26T06:00:00+00:00"
+                    ],
+                    [
+                        "take_out_reminder",
+                        "morning:2026-10-26",
+                        "queued",
+                        null,
+                        null,
                         "2026-10-26T06:00:00+00:00"
                     ]
                 ],
@@ -4719,8 +4832,8 @@
                     "behaviour": {
                         "take_out": {
                             "hold_hours": 2,
-                            "clock_started_at": "2026-10-26T00:00:00+01:00",
-                            "next_due_at": "2026-10-26T14:00:00+01:00",
+                            "clock_started_at": "2026-10-26T07:30:00+01:00",
+                            "next_due_at": "2026-10-26T14:30:00+01:00",
                             "last_taken_out_at": "2026-10-25T13:30:00+01:00"
                         },
                         "active_events": [
@@ -4728,6 +4841,11 @@
                                 "kind": "accident",
                                 "started_at": "2026-10-25T19:30:00+01:00",
                                 "due_at": "2026-10-26T07:30:00+01:00"
+                            },
+                            {
+                                "kind": "accident",
+                                "started_at": "2026-10-26T07:30:00+01:00",
+                                "due_at": "2026-10-26T14:30:00+01:00"
                             }
                         ],
                         "scene": "accident",
@@ -4770,9 +4888,11 @@
                         "children_sharing": 1,
                         "my_share_seconds": 420,
                         "my_seconds_left": 420,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": "training_pet_sleeping",
-                        "next_allowed_at": "2026-10-26T13:00:00+01:00"
+                        "next_allowed_at": "2026-10-26T13:00:00+01:00",
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,
@@ -5729,9 +5849,11 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
+                        "treat_token": false,
                         "can_start": false,
                         "blocked_reason": null,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "media_ready": true
                     },
                     "play": null,
                     "wand": null,

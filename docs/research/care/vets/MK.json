@@ -41,7 +41,8 @@
       "emergency_24h": true,
       "duty": "Urgent cases and on-call vet open 24/7. Regular hours Mon-Fri 10:00-14:00 and 17:00-19:00, Sat 10:00-14:00, Sun closed.",
       "duty_i18n": {
-        "sl": "Nujni primeri in dežurni veterinar 24 ur na dan. Redni delovni čas pon–pet 10–14 in 17–19, sob 10–14, ob nedeljah zaprto."
+        "sl": "Nujni primeri in dežurni veterinar 24 ur na dan. Redni delovni čas pon–pet 10–14 in 17–19, sob 10–14, ob nedeljah zaprto.",
+        "hr": "Hitni slučajevi i dežurni veterinar dostupni 24/7. Redovno radno vrijeme pon–pet 10:00–14:00 i 17:00–19:00, sub 10:00–14:00, ned zatvoreno."
       },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
@@ -59,7 +60,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-14:00, Sun 10:00-14:00.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 9–14, ned 10–14."
+        "sl": "pon–pet 8–20, sob 9–14, ned 10–14.",
+        "hr": "pon–pet 08:00–20:00, sub 09:00–14:00, ned 10:00–14:00."
       },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
@@ -77,7 +79,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-19:00, Sat 8:00-15:00. Phone 070 722 967 answered 9:00-19:00.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19, sob 8–15. Na telefon 070 722 967 se oglasijo 9–19."
+        "sl": "pon–pet 8–19, sob 8–15. Na telefon 070 722 967 se oglasijo 9–19.",
+        "hr": "pon–pet 8:00–19:00, sub 8:00–15:00. Na telefon 070 722 967 javljaju se 9:00–19:00."
       },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
@@ -95,7 +98,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, Sat 09:00-16:00, Sun closed.",
       "duty_i18n": {
-        "sl": "pon–pet 8–18, sob 9–16, ob nedeljah zaprto."
+        "sl": "pon–pet 8–18, sob 9–16, ob nedeljah zaprto.",
+        "hr": "pon–pet 08:00–18:00, sub 09:00–16:00, ned zatvoreno."
       },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
@@ -113,7 +117,8 @@
       "emergency_24h": false,
       "duty": "Second phone +389 70 265 872.",
       "duty_i18n": {
-        "sl": "Druga telefonska številka +389 70 265 872."
+        "sl": "Druga telefonska številka +389 70 265 872.",
+        "hr": "Drugi telefon +389 70 265 872."
       },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
@@ -145,7 +150,8 @@
       "emergency_24h": false,
       "duty": "Separate duty line may exist; call ahead.",
       "duty_i18n": {
-        "sl": "Morda obstaja ločena dežurna številka; vnaprej pokličite."
+        "sl": "Morda obstaja ločena dežurna številka; vnaprej pokličite.",
+        "hr": "Možda postoji zasebna dežurna linija; nazovi unaprijed."
       },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",

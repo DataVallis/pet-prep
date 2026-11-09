@@ -1,0 +1,111 @@
+{
+  "slug": "lettuce",
+  "species": "dog",
+  "name": {
+    "en": "Lettuce",
+    "sl": "Zelena solata"
+  },
+  "question": {
+    "en": "Can dogs eat lettuce?",
+    "sl": "Ali lahko psi jedo zeleno solato?"
+  },
+  "url_slug": {
+    "en": "lettuce",
+    "sl": "zelena-solata"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, plain lettuce is generally safe for dogs in moderation. Romaine, iceberg and arugula are non-toxic. Wash it well and chop it up, and don't share your leftover salad, which often contains onions.",
+    "sl": "Da, navadna zelena solata je za pse v zmernih količinah praviloma varna. Rimska solata, ledenka in rukola niso strupene. Dobro jo operite in narežite, ne delite pa s psom ostankov svoje solate, ki pogosto vsebuje čebulo."
+  },
+  "why": {
+    "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
+    "sl": "Zelena solata je za pse praviloma varna, vendar ima veliko vlaknin in jo v velikih kosih težko prebavijo, preveč pa lahko povzroči drisko. Solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Zaradi odpoklicev solate, okužene z E. coli ali listerijo, jo dobro operite in skrbno izbirajte."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Keep it to a plain piece now and then: too much can cause diarrhoea. Don't share leftover salad, as salads often include onions, which are toxic to dogs.",
+    "sl": "Ponudite le občasen košček navadne solate: preveč lahko povzroči drisko. Ne delite ostankov solate, saj ta pogosto vsebuje čebulo, ki je za pse strupena."
+  },
+  "serving": {
+    "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
+    "sl": "Občasen košček navadne, temeljito oprane solate, narezan in ne cel list. Nikoli iz mešane solate."
+  },
+  "child": {
+    "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
+    "sl": "Psi lahko pohrustajo malo navadne zelene solate. Odrasli jo opere in nareže na majhne koščke. Ostanki solate pa ne!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat salad?",
+        "sl": "Ali lahko psi jedo solato z dodatki?"
+      },
+      "a": {
+        "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
+        "sl": "Ostankov vaše solate ne: solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Občasen košček navadne zelene solate je v redu."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD146",
+      "quote": "Lettuce is generally safe for dogs to eat in moderation."
+    },
+    {
+      "id": "KD146",
+      "quote": "Romaine and iceberg lettuce, arugula, and spinach are all non-toxic to dogs."
+    },
+    {
+      "id": "KD146",
+      "quote": "Be aware that just because your dog can eat lettuce doesn’t mean you should give them your leftover salad."
+    },
+    {
+      "id": "KD146",
+      "quote": "Salads often include ingredients that are toxic to dogs, such as onions."
+    },
+    {
+      "id": "KD146",
+      "quote": "Giving them too much could cause diarrhea, so moderation is important."
+    },
+    {
+      "id": "KD146",
+      "quote": "Because it’s very fibrous, lettuce can also be hard to digest in big pieces."
+    },
+    {
+      "id": "KD146",
+      "quote": "Chopping it up is better than handing your dog a whole leaf"
+    },
+    {
+      "id": "KD146",
+      "quote": "But, generally speaking, it’s okay to sneak your dog a plain piece of lettuce from time to time."
+    },
+    {
+      "id": "KD146",
+      "quote": "Make sure you wash your lettuce thoroughly and that you know where it originates."
+    },
+    {
+      "id": "KD146",
+      "quote": "Due to recalls of lettuce contaminated by E. coli or listeria, you should be extra cautious about the lettuce you buy"
+    }
+  ],
+  "related": [
+    "cucumber",
+    "spinach",
+    "cabbage",
+    "onion"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ba89e60546b39663c513782bc468a4d752451111d4a8525cf5813f53c8310d5c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4db9a0ee97ed59a7adb79fc2201f44d9edab39fa41c4b2b95daef5a4e0db0c8a"
+    }
+  }
+}

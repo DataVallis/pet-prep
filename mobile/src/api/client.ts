@@ -149,6 +149,19 @@ export interface PetNameErrorBody extends ValidationErrorBody {
 
 /** `PATCH /api/parent/pets/{pet}/name` 200 body: the name as stored (null = none). */
 export type PetNameResponse = operations['petName.update']['responses'][200]['content']['application/json'];
+/** PUT /api/parent/settings (family time zone, David 2026-11-08). */
+export type UpdateFamilySettingsResponse =
+  operations['parentSettings.update']['responses'][200]['content']['application/json'];
+/**
+ * 422 body of PUT /api/parent/settings when the family zone changed less than 24 h ago
+ * (FamilySettingsService). Hand-typed: Scramble doesn't infer this caught-exception body.
+ */
+export interface TimezoneChangeTooSoonBody {
+  message: string;
+  reason: 'timezone_change_too_soon';
+  /** ISO 8601 in the current family zone. */
+  next_allowed_at: string;
+}
 
 /** `GET /api/parent/certificates` 200 body (M2-01d). */
 export type CertificatesResponse =
@@ -1197,27 +1210,29 @@ export const api = {
   startWand: () => apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST' }),
 
   /**
-   * POST /api/child/pet/wand/start {rules: 2} — the v2 hunt (GAMES_SPEC §5.2, ~25 s, stars): the
-   * session additionally carries `rules_version: 2`, `stalk_ms`, `crouch_cues_ms`, `calm_window_ms`,
-   * `calm_max_moves`, `dodge_window_ms`, `catch_window_ms`, `min_stars`, `max_stars`,
-   * `max_speed_pt_s`, `min_dodge_pt` (read with `wandV2/wandRules.ts#readWandV2Session`). Only the
-   * game-layer build sends it; an older build keeps `startWand()` (v1).
+   * POST /api/child/pet/wand/start {rules: 3} — the simple hunt (GAMES_SPEC §5.2, David 2026-11-08:
+   * let go when the cat crouches): the session additionally carries `rules_version: 3`, `stalk_ms`,
+   * `first_cue_ms`, `cue_window_ms`, `after_catch_ms`, `after_miss_ms`, `max_cues`,
+   * `catches_needed`, `catch_clip_ms` (read with `wandV2/wandRules.ts#readWandHuntSession`). Only
+   * the game-layer build sends it; an older build keeps `startWand()` (v1).
    */
-  startWandV2: () =>
-    apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST', body: { rules: 2 } satisfies components['schemas']['StartWandRequest'] }),
+  startWandHunt: () =>
+    apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST', body: { rules: 3 } satisfies components['schemas']['StartWandRequest'] }),
 
   /**
-   * POST /api/child/pet/wand/finish of a v2 hunt: every move also carries `in_zone` and `speed_ok`
-   * (a v2 move without them never earns a star). The v2 `result` has `stars`, `dodges[]`,
-   * `catch`, `hint` (read with `readWandV2Result`).
+   * POST /api/child/pet/wand/finish of a simple hunt: `releases` = the let-go moments (ms since the
+   * local start), `moves` empty. The `result` has `stars`, `cues[]`, `hint` (read with
+   * `readWandHuntResult`). `releases` is newer than the generated `schema.ts` (regenerate it with
+   * the backend running — HANDOFF debt), hence the intersection type.
    */
-  finishWandV2: (sessionId: string, moves: readonly { t: number; away: boolean; in_zone: boolean; speed_ok: boolean }[]) =>
+  finishWandHunt: (sessionId: string, releases: readonly number[]) =>
     apiRequest<unknown>('/api/child/pet/wand/finish', {
       method: 'POST',
       body: {
         session_id: sessionId,
-        moves: moves.map((m) => ({ t: m.t, away: m.away, in_zone: m.in_zone, speed_ok: m.speed_ok })),
-      } satisfies components['schemas']['FinishWandRequest'],
+        moves: [],
+        releases: [...releases],
+      } satisfies components['schemas']['FinishWandRequest'] & { releases: number[] },
     }),
 
   /**
@@ -1300,9 +1315,20 @@ export const api = {
   /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
   getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),
 
-  /** GET /api/parent/quiet-hours — Get quiet hours config. */
+  /** GET /api/parent/quiet-hours — quiet hours config + the family zone they are read in. */
   getQuietHours: () =>
-    apiRequest<{ quiet_hours: QuietHours | null }>('/api/parent/quiet-hours'),
+    apiRequest<{ quiet_hours: QuietHours | null; timezone?: string }>('/api/parent/quiet-hours'),
+
+  /**
+   * PUT /api/parent/settings {timezone} — change the family time zone (David 2026-11-08).
+   * Same zone again = no-op; a change at most once per 24 h → 422 `timezone_change_too_soon`
+   * (`TimezoneChangeTooSoonBody`), an invalid IANA name → 422 validation.
+   */
+  updateFamilyTimezone: (timezone: string) =>
+    apiRequest<UpdateFamilySettingsResponse>('/api/parent/settings', {
+      method: 'PUT',
+      body: { timezone },
+    }),
 
   /** PUT /api/parent/quiet-hours — Update quiet hours config. */
   updateQuietHours: (data: Partial<QuietHours>) =>

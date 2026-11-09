@@ -79,6 +79,10 @@ return [
     // vozička), ker gre obvestilo prek Expo / APNs / FCM in se vidi na zaklenjenem zaslonu.
     'walk_reminder' => 'Tvoj kuža si želi na pravi sprehod. Gremo?',
 
+    // M5-R02 (David 8. 11. 2026, »ja, daj 30 min«): noč (tihe ure) se je končala, mladiček mora
+    // kmalu ven. Samo otrokom, brez imen; brez števila minut (rok se šteje izven tihih ur).
+    'take_out_reminder' => 'Dobro jutro! Kuža mora po noči čim prej ven. Pritisni »Pelji ven«.',
+
     // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
     'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',
 

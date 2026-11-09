@@ -4,6 +4,7 @@ namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
+use App\Enums\PetPhaseClip;
 use App\Jobs\GeneratePetKeyframe;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\RegeneratePetStageMedia;
@@ -116,6 +117,8 @@ class ReferenceImageRetryService
                 ->whereColumn('img.pet_id', 'pet_media.pet_id')
                 ->where('img.kind', PetMedia::KIND_IMAGE)
                 ->whereNotNull('img.storage_path'))
+            // David 2026-11-08: a retired phase clip (wand_pouncing) is never retried — old rows stay as they are.
+            ->whereNot(fn (Builder $q) => $q->where('kind', PetMedia::KIND_PHASE)->whereIn('state', PetPhaseClip::retiredValues()))
             // Frugal clips (QA #451 m1): a dog's frugal target is left to its source while the switch is
             // on — filtered here, before the limit (the per-row check in the loop stays as the guard).
             ->when(app(MediaEntitlementService::class)->frugalClipsEnabled(fresh: true), fn (Builder $q) => $q->whereNot(fn (Builder $q) => $q

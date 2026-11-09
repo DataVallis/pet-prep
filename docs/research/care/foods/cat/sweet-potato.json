@@ -1,0 +1,125 @@
+{
+  "slug": "sweet-potato",
+  "species": "cat",
+  "name": {
+    "en": "Sweet potato",
+    "sl": "Sladki krompir"
+  },
+  "question": {
+    "en": "Can cats eat sweet potato?",
+    "sl": "Ali lahko mačke jedo sladki krompir?"
+  },
+  "url_slug": {
+    "en": "sweet-potato",
+    "sl": "sladki-krompir"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Sweet potato is not toxic to cats: the ASPCA lists the sweet potato plant as non-toxic to them. Cats don't need vegetables, though, and any plant material can cause vomiting or stomach upset, so keep it a tiny, occasional extra.",
+    "sl": "Sladki krompir za mačke ni strupen: ASPCA rastlino sladkega krompirja navaja kot nestrupeno za mačke. Vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave, zato naj bo le majhen, občasen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+    "sl": "ASPCA rastlino sladkega krompirja (Ipomoea batatas) navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small plain piece now and then, with no butter, salt or seasoning.",
+    "sl": "Občasno majhen navaden košček, brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Sladki krompir za muce ni strupen. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is sweet potato the same as a normal potato?",
+        "sl": "Ali je sladki krompir enak navadnemu krompirju?"
+      },
+      "a": {
+        "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
+        "sl": "Ne. ASPCA sladki krompir navaja kot drugo rastlino (Ipomoea batatas, družina slakovk). Surov navaden krompir je nekaj drugega: ASPCA navaja, da je za hišne živali lahko problematičen."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC79",
+      "quote": "Additional Common Names: Sweet potato"
+    },
+    {
+      "id": "KC79",
+      "quote": "Scientific Name: Ipomoea batatas"
+    },
+    {
+      "id": "KC79",
+      "quote": "Family: Convolvulaceae"
+    },
+    {
+      "id": "KC79",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC83",
+      "quote": "Similarly, raw potatoes may be problematic for your pet, but cooked potatoes are fine in moderation."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "it’s fine for them to enjoy the occasional treat as long as they don’t have too many"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "potatoes-raw",
+    "pumpkin",
+    "carrots",
+    "peas"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2a10425a1860a954f825a0026632f40ac2545fafaa807c8565b08a397d37fa3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fddbe4d640283fae794ea6449f676a880cbec04ea2222bf4c715843aa4d008be"
+    }
+  }
+}

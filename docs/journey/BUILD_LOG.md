@@ -8,6 +8,25 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Muca brez odvečnega posnetka skoka
+
+**Kaj:** strežnik za novo muco ne ustvari več posnetka skoka (`wand_pouncing`), ki ga preprosta igra s palico ne predvaja — vsak nov videz muce je zato ≈ 0,34 $ cenejši (7,40 → 7,06 $ po ceniku fal), obstoječi posnetki pa ostanejo.
+
+## 2026-11-08 — Palica s peresom: ko se muca pritaji, spusti pero
+
+**Kaj:** igro s palico smo naredili čisto preprosto — ko se muca pritaji (👀), otrok spusti pero in muca ga ujame ★; trije ulovi in igra je končana (~20–30 s), brez kazni za prezgodnji ali zamujen izpust.
+**Zakaj je pomembno:** David je igro preizkusil na iPhonu in nihče ni dobil točke (pero je moralo popolnoma mirovati že pol sekunde po znaku, nato pa hitro, a ne prehitro stran); zdaj jo mlajši otrok razume v prvem poskusu, učna točka — muca mora lov končati z ulovom — pa ostane.
+**Kako povedati:** 🧒 »Ko se muca pritaji, spusti pero — ujela ga bo!« · 👩 »Igra je kratka in jasna: otrok se nauči, da mora muca plen na koncu ujeti.« · 🛠 »Ko testiranje pokaže, da pravila nihče ne zna, pravilo poenostaviš — ne razlagaš ga.«
+
+## 2026-11-08 — Časovni pas družine se da zamenjati (in aplikacija ga predlaga na potovanju)
+
+**Kaj:** starš v Nadzoru zamenja časovni pas družine (z opozorilom, največ enkrat na dan, tudi med izzivom), pregled mu menjavo predlaga, ko je telefon v drugem pasu, ob tem pa smo popravili napako, zaradi katere bi menjava proti zahodu (npr. Ljubljana → Lizbona) sredi dneva izbrisala današnje korake.
+**Kako povedati:** 👩 »Na dopustu v tujini kuža spi po vašem času, ne po domačem — en dotik v Nadzoru.«
+
+## 2026-11-08 — Mladiček mora zjutraj takoj ven
+
+**Kaj:** po noči (tihe ure) mora mladiček ven v 30 minutah — 5-mesečna Suki z nočjo do 7:00 mora ven najkasneje ob 7:30 (prej je aplikacija rekla »najkasneje ob 12:00«), otrok pa ob koncu noči dobi obvestilo »Dobro jutro! Kuža mora po noči čim prej ven.«
+
 ## 2026-11-05 — Čiščenje diska po deployu zdaj res briše stare slike
 
 **Kaj:** samodejno čiščenje starih Docker slik ob deployu na produkciji ni odstranilo ničesar (disk je bil spet na 89 %), ker produkcijski Docker prenesene slike izpiše brez oznake (`ghcr.io/…:<none>`); zdaj jih briše po ID-ju slike, ohrani trenutno, prejšnjo in vse, kar teče, test pa preverja točno tak izpis kot na strežniku.

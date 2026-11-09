@@ -60,7 +60,7 @@ describe('cuddles v2', () => {
 
   it.each([false, true])('three held strokes with pauses → done, one report (cat: %s)', async (cat) => {
     const { onFinished } = renderCuddle(view({ cat, easy: true }));
-    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Boži počasi, 3 sekunde.');
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Božaj počasi, 3 sekunde.');
     const hold = screen.getByTestId(`${ID}-hold`);
     for (let heart = 1; heart <= 3; heart++) {
       fireEvent(hold, 'pressIn');

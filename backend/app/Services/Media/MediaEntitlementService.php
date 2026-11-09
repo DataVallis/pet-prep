@@ -576,7 +576,8 @@ class MediaEntitlementService
             };
 
             foreach ($usable ? PetPhaseClip::ofGroup((string) $group) : [] as $clip) {
-                if ($clip->species() === $species && ! in_array($clip, $out, true)) {
+                // David 2026-11-08: a retired clip (wand_pouncing) is never made or required again.
+                if ($clip->species() === $species && ! $clip->isRetired() && ! in_array($clip, $out, true)) {
                     $out[] = $clip;
                 }
             }

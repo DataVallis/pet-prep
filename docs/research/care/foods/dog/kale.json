@@ -1,0 +1,132 @@
+{
+  "slug": "kale",
+  "species": "dog",
+  "name": {
+    "en": "Kale",
+    "sl": "Listnati ohrovt"
+  },
+  "question": {
+    "en": "Can dogs eat kale?",
+    "sl": "Ali lahko psi jedo listnati ohrovt?"
+  },
+  "url_slug": {
+    "en": "kale",
+    "sl": "listnati-ohrovt"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Better not as a regular treat. A little kale now and then is unlikely to harm most dogs, but some vets caution against it: kale contains calcium oxalate, linked to kidney and bladder stones, and isothiocyanates, which can irritate the stomach.",
+    "sl": "Raje ne kot reden priboljšek. Malo listnatega ohrovta občasno večini psov verjetno ne škodi, nekateri veterinarji pa odsvetujejo: vsebuje kalcijev oksalat, povezan z ledvičnimi in mehurnimi kamni, ter izotiocianate, ki lahko dražijo želodec."
+  },
+  "why": {
+    "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
+    "sl": "Listnati ohrovt vsebuje kalcijev oksalat, ki lahko povzroči ledvične in mehurne kamne, ter izotiocianate, ki lahko pri psih povzročijo blago do potencialno hudo draženje želodca. Če ga pes dobiva redno, lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom. Majhne količine so morda v redu, ker pa ga nekateri veterinarji odsvetujejo, sledimo strožjemu nasvetu."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Difficulty urinating",
+      "Any change in urination habits"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Težave z uriniranjem",
+      "Kakršna koli sprememba pri uriniranju"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate kale, watch closely for tummy upset or signs of kidney and bladder stones. Contact your vet if you notice vomiting, diarrhoea, difficulty urinating or any change in urination habits.",
+    "sl": "Če je pes pojedel listnati ohrovt, ga pozorno opazujte, ali ima prebavne težave ali znake ledvičnih in mehurnih kamnov. Če opazite bruhanje, drisko, težave z uriniranjem ali kakršno koli spremembo pri uriniranju, se obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Kale is not a good snack for dogs. Green beans or cucumber are better treats to share, with a grown-up's help.",
+    "sl": "Listnati ohrovt ni dober prigrizek za pse. Stročji fižol ali kumara sta boljša priboljška, ki ju ponudite s pomočjo odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which dogs should avoid kale?",
+        "sl": "Kateri psi naj se izogibajo listnatemu ohrovtu?"
+      },
+      "a": {
+        "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
+        "sl": "Psi, nagnjeni k ledvičnim ali mehurnim kamnom, naj se izogibajo hrani z veliko kalcijevega oksalata, tudi listnatemu ohrovtu. Ta lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom."
+      }
+    },
+    {
+      "q": {
+        "en": "What can I give my dog instead of kale?",
+        "sl": "Kaj lahko psu ponudim namesto listnatega ohrovta?"
+      },
+      "a": {
+        "en": "Green beans and cucumbers are safe for most dogs.",
+        "sl": "Stročji fižol in kumare so za večino psov varni."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD144",
+      "quote": "Kale can cause medical problems for dogs."
+    },
+    {
+      "id": "KD144",
+      "quote": "Occasional small amounts of kale are unlikely to cause harm in most dogs, but some veterinarians caution against it"
+    },
+    {
+      "id": "KD144",
+      "quote": "Calcium oxalate can cause health issues such as kidney and bladder stones."
+    },
+    {
+      "id": "KD144",
+      "quote": "in dogs, they can cause mild to potentially severe gastric irritation"
+    },
+    {
+      "id": "KD144",
+      "quote": "Kale can also interfere with thyroid function if fed regularly, especially in dogs with hypothyroidism"
+    },
+    {
+      "id": "KD144",
+      "quote": "while kale could be safe in small quantities, it should not be a regular treat."
+    },
+    {
+      "id": "KD144",
+      "quote": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including:"
+    },
+    {
+      "id": "KD144",
+      "quote": "the best thing you can do is monitor them closely for signs of intestinal upset or kidney and bladder stones"
+    },
+    {
+      "id": "KD144",
+      "quote": "Contact your veterinarian if you notice vomiting, diarrhea, difficulty urinating, or any change in urination habits."
+    },
+    {
+      "id": "KD144",
+      "quote": "For example, green beans and cucumbers are safe for most dogs,"
+    }
+  ],
+  "related": [
+    "spinach",
+    "broccoli",
+    "cabbage",
+    "green-beans",
+    "cucumber"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1739f1cc8a201b56cd314a04b161c6633f532c674cbaf00bed70c449729a840c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8ddf71d2677e27a4450caeb599bfdbdefeb52efcae20f0bfc1d0bbe2c50a4b90"
+    }
+  }
+}

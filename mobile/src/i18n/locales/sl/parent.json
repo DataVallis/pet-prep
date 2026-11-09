@@ -249,6 +249,34 @@
     "saveError": "Shranjevanje ni uspelo. Preverite čase in poskusite znova.",
     "offline": "Ni povezave s strežnikom. Poskusite znova."
   },
+  "familyZone": {
+    "title": "Časovni pas družine",
+    "hint": "Po tem pasu veljajo vse ure: tihe ure, obroki, polnoč in dan za korake.",
+    "change": "Spremeni",
+    "changeA11y": "Spremeni časovni pas družine",
+    "sheetTitle": "Izberite časovni pas",
+    "search": "Poiščite mesto",
+    "phone": "Ta telefon",
+    "current": "Zdaj",
+    "noResults": "Ni zadetkov.",
+    "confirmTitle": "Zamenjam časovni pas?",
+    "warning": "Polnoč, obroki, tihe ure in dan za korake se premaknejo, zato je današnji dan lahko krajši ali daljši. To je dovoljeno tudi med 12-tedenskim izzivom. Pas lahko spremenite enkrat na 24 ur.",
+    "confirm": "Zamenjaj",
+    "back": "Nazaj",
+    "close": "Zapri",
+    "saved": "Časovni pas je spremenjen.",
+    "errors": {
+      "tooSoon": "Pas lahko spremenite enkrat na 24 ur. Znova {{when}}.",
+      "tooSoonNoTime": "Pas lahko spremenite enkrat na 24 ur.",
+      "invalid": "Tega časovnega pasu strežnik ne pozna. Izberite drugega.",
+      "offline": "Ni povezave s strežnikom. Poskusite znova.",
+      "failed": "Spreminjanje ni uspelo. Poskusite znova."
+    },
+    "banner": "Telefon je v drugem časovnem pasu ({{phone}}) kot družina ({{family}}). Zamenjam?",
+    "bannerAction": "Zamenjam",
+    "bannerClose": "Ne zdaj",
+    "familyTimeNote": "po času družine ({{city}})"
+  },
   "notifications": {
     "title": "Obvestila",
     "status": {

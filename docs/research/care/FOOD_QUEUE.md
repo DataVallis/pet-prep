@@ -110,8 +110,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] peas
 - [x] broccoli
 - [x] cauliflower
-- [ ] brussels-sprouts · cabbage · kale
-- [ ] spinach · lettuce · celery · zucchini · pumpkin · sweet-potato · potatoes-raw · potatoes-cooked
+- [x] brussels-sprouts
+- [x] cabbage
+- [d] kale — no source cat 2026-11-08
+- [x] spinach
+- [d] lettuce — no source cat 2026-11-08
+- [x] celery
+- [x] zucchini
+- [x] pumpkin
+- [x] sweet-potato
+- [x] potatoes-raw
+- [ ] potatoes-cooked
 - [ ] tomatoes · tomato-plant · peppers · chili-peppers · mushrooms-store · wild-mushrooms · asparagus
 - [ ] beetroot · corn · edamame · radish · eggplant · artichoke · seaweed · herbs-parsley · basil · mint
 - [ ] catnip (cat) · cat-grass (cat)

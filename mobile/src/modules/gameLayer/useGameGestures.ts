@@ -21,6 +21,12 @@ export interface GameGestureHandlers {
   onPanUpdate?: (e: GestureUpdateEvent<PanGestureHandlerEventPayload>) => void;
   onPanEnd?: (e: GestureStateChangeEvent<PanGestureHandlerEventPayload>) => void;
   onTap?: (e: GestureStateChangeEvent<TapGestureHandlerEventPayload>) => void;
+  /**
+   * The finger lifted (or the touch was cancelled) after ANY touch on the field — a drag, a tap,
+   * or a finger that rested without moving (the pan never activated, so `onPanEnd` / `onTap` do
+   * not fire for it). The wand hunt's »let go« (David 2026-11-08).
+   */
+  onPanFinalize?: (e: GestureStateChangeEvent<PanGestureHandlerEventPayload>) => void;
 }
 
 export interface GameGestures {
@@ -32,7 +38,7 @@ export interface GameGestures {
 export function useGameGestures(view: { settings?: { easy_gestures?: boolean } } | null | undefined, handlers: GameGestureHandlers): GameGestures {
   const inputMode = useGestureMode(view);
   const screenReader = useScreenReader();
-  const { onPanBegin, onPanUpdate, onPanEnd, onTap } = handlers;
+  const { onPanBegin, onPanUpdate, onPanEnd, onTap, onPanFinalize } = handlers;
   const gesture = useMemo(() => {
     const pan = Gesture.Pan()
       .minDistance(6)
@@ -47,6 +53,10 @@ export function useGameGestures(view: { settings?: { easy_gestures?: boolean } }
       .onEnd((e) => {
         'worklet';
         onPanEnd?.(e);
+      })
+      .onFinalize((e) => {
+        'worklet';
+        onPanFinalize?.(e);
       });
     const tap = Gesture.Tap()
       .maxDuration(600)
@@ -55,6 +65,6 @@ export function useGameGestures(view: { settings?: { easy_gestures?: boolean } }
         onTap?.(e);
       });
     return Gesture.Exclusive(pan, tap);
-  }, [onPanBegin, onPanUpdate, onPanEnd, onTap]);
+  }, [onPanBegin, onPanUpdate, onPanEnd, onTap, onPanFinalize]);
   return { gesture, inputMode, screenReader };
 }

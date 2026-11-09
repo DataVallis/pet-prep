@@ -8,6 +8,8 @@ export const PUSH_TYPES = [
   'soft_warning',
   'critical_alert',
   'walk_reminder',
+  // M5-R02 morning rule (2026-11-08): the night ended, the puppy must go out soon (caretaker children).
+  'take_out_reminder',
   'parent_intervention_alarm',
   'illness_triggered',
   'game_over_virtual_shelter',
@@ -64,6 +66,7 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== undefined &&
     type !== 'soft_warning' &&
     type !== 'walk_reminder' &&
+    type !== 'take_out_reminder' &&
     // Good news / a reminder, never an alarm (M2-01d, M5-T06, M5-T13, M5-R18).
     type !== 'challenge_completed' &&
     type !== 'pet_ready' &&

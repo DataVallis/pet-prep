@@ -77,42 +77,39 @@
   "wandV2": {
     "title": "Palica s peresom",
     "preparing": "Muca se pripravlja …",
-    "ruleLine": "Pritaji se? Miruj. Skok? Umakni!",
-    "intro": "Pero premikaj po svetlem polju.",
+    "ruleLine": "Ko se pritaji, spusti pero!",
+    "intro": "Vleci pero po zaslonu. Muca ga zalezuje.",
     "rules": {
-      "crouch": "Pritaji se: pero miruje.",
-      "pounce": "Skoči: pero hitro umakni!",
-      "catch": "Na koncu jo pusti, da ujame."
+      "crouch": "Ko se pritaji 👀, spusti pero.",
+      "pounce": "Skoči in ga ujame.",
+      "catch": "Muca mora plen na koncu ujeti."
     },
-    "easyIntro": "Pero plava samo. Ko muca skoči, tapni »Umakni!«.",
+    "easyIntro": "Pero plava samo. Ko se muca pritaji 👀, tapni »Pusti!«.",
     "start": "Začni lov",
-    "freeze": "Miruj!",
+    "letGo": "Spusti pero!",
     "fb": {
-      "dodge": "Ušlo!",
       "caught": "Ujela ga je!"
     },
-    "catchCue": "Pusti jo, da ujame!",
     "saving": "Shranjujem lov …",
-    "dodgeButton": "Umakni!",
+    "letGoButton": "Pusti!",
     "result": {
       "success": "Kakšen lov!",
       "again": "Še en lov?",
       "counts": "Igra šteje za danes.",
       "stored": "Ta lov je že shranjen.",
+      "learn": "Muca mora plen na koncu ujeti – tako je lov zanjo srečen.",
       "againButton": "Še en lov",
       "done": "Končano"
     },
     "hint": {
-      "calm": "Ko se pritaji, pero miruje.",
-      "dodge": "Ko skoči, pero hitro stran.",
-      "catch": "Na koncu jo pusti, da ujame."
+      "letGo": "Ko se pritaji 👀, spusti pero."
     },
     "a11y": {
-      "crouch": "Pritaja se. Miruj.",
+      "crouch": "Pritaja se. Spusti pero.",
       "pounce": "Skok!",
       "field": "Igralno polje s peresom",
-      "dodgeHint": "Tapni, ko muca skoči.",
-      "progress": "Lov: {{done}} od {{total}}, zvezdice: {{stars}}",
+      "letGoHint": "Tapni, ko se muca pritaji.",
+      "progress": "Ulovi: {{done}} od {{total}}",
       "stars": "Zvezdice: {{stars}} od {{max}}"
     }
   },

@@ -1,0 +1,149 @@
+{
+  "slug": "potatoes-raw",
+  "species": "dog",
+  "name": {
+    "en": "Raw potatoes",
+    "sl": "Surov krompir"
+  },
+  "question": {
+    "en": "Can dogs eat raw potatoes?",
+    "sl": "Ali lahko psi jedo surov krompir?"
+  },
+  "url_slug": {
+    "en": "raw-potatoes",
+    "sl": "surov-krompir"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, don't give your dog raw potatoes. Raw and green potatoes are unsafe and potentially toxic because they contain solanine, a natural toxin. Plain, well-cooked potato is different and is fine in moderation.",
+    "sl": "Ne, psu ne dajajte surovega krompirja. Surov in zelen krompir je nevaren in potencialno strupen, ker vsebuje solanin, naravni strup. Navaden, dobro kuhan krompir je nekaj drugega in je v zmernih količinah v redu."
+  },
+  "why": {
+    "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
+    "sl": "Surov krompir ter krompir z zeleno lupino ali zelenimi lisami vsebuje solanin, naravni strup, ki ga najdemo v rastlinah iz družine razhudnikovk. Zelene lise se pri nekaterih sortah pojavijo na svetlobi in kažejo, da se je količina solanina povečala. Koščki surovega ali napol kuhanega krompirja lahko povzročijo tudi dušenje."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Lethargy",
+      "Muscle weakness"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Zaspanost in brezvoljnost",
+      "Mišična šibkost"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate raw or green potato, contact your vet or a pet poison helpline. What to do next depends on your dog's size, how much was eaten and whether there are symptoms. If your dog is vomiting, has diarrhoea, seems lethargic or weak, see a vet immediately.",
+    "sl": "Če je pes pojedel surov ali zelen krompir, se obrnite na veterinarja ali na center za zastrupitve živali. Nadaljnji koraki so odvisni od velikosti psa, pojedene količine in znakov. Če pes bruha, ima drisko, je zaspan ali šibek, takoj poiščite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Raw potatoes are not for dogs. If a dog grabs one, tell a grown-up straight away.",
+    "sl": "Surov krompir ni za pse. Če ga pes zgrabi, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are cooked potatoes okay for dogs?",
+        "sl": "Je kuhan krompir za pse v redu?"
+      },
+      "a": {
+        "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
+        "sl": "Da, navaden kuhan krompir je v zmernih količinah v redu, kuhan toliko, da se ga da pretlačiti, da se pes ne zaduši. Prepričajte se, da ni zelen."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat potato skins?",
+        "sl": "Ali lahko psi jedo krompirjeve olupke?"
+      },
+      "a": {
+        "en": "Potato skins are okay, but not if they are green.",
+        "sl": "Krompirjevi olupki so v redu, vendar ne, če so zeleni."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD151",
+      "quote": "Raw or green potatoes are unsafe and potentially toxic."
+    },
+    {
+      "id": "KD151",
+      "quote": "Additionally, potatoes with green spots should be avoided altogether, as they can be toxic."
+    },
+    {
+      "id": "KD151",
+      "quote": "When exposed to light, some varieties of potatoes will develop green spots, indicating an increase in solanine,"
+    },
+    {
+      "id": "KD151",
+      "quote": "a naturally occurring toxin found in members of the nightshade family."
+    },
+    {
+      "id": "KD151",
+      "quote": "Cooked potatoes also have to be cooked sufficiently to be mashed so the pet doesn’t choke"
+    },
+    {
+      "id": "KD151",
+      "quote": "on a piece of raw or half-cooked potato."
+    },
+    {
+      "id": "KD151",
+      "quote": "If your dog eats a green potato (say, one from the trash), your next steps may depend on your dog’s size,"
+    },
+    {
+      "id": "KD151",
+      "quote": "how much they consumed, and whether they have any adverse symptoms."
+    },
+    {
+      "id": "KD151",
+      "quote": "If your pet is vomiting, [has] diarrhea, shows lethargy, or [has] muscle weakness, find a veterinarian immediately,"
+    },
+    {
+      "id": "KD151",
+      "quote": "In the event of a suspected poisoning, contact your local emergency veterinarian or the Pet Poison Helpline"
+    },
+    {
+      "id": "KD151",
+      "quote": "Dogs can eat cooked potatoes in moderation when served plain."
+    },
+    {
+      "id": "KD151",
+      "quote": "If a pet owner tries to feed a homemade diet and adds cooked white potatoes, make sure they are not green,"
+    },
+    {
+      "id": "KD151",
+      "quote": "Potato skins are okay too, but not if they are green."
+    },
+    {
+      "id": "KD141",
+      "quote": "Raw potatoes, or potato with green skin, should be avoided, as they contain a toxin called solanine"
+    },
+    {
+      "id": "KD141",
+      "quote": "Cooked potatoes are fine to feed your dog."
+    }
+  ],
+  "related": [
+    "sweet-potato",
+    "pumpkin"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9fad08f6577b66979e01c1163abe6d9ebab76fdca9b816db6eba4ed89705bd5d"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "abae89ea53365594596264fc362b167154dc13d4a7aa9335f97af6837d9efc84"
+    }
+  }
+}

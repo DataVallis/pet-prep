@@ -107,7 +107,7 @@ class DailyWalkService
             $illnessAt = $this->endOfQuietStretch($pet->quietHours(), $midnight);
         }
 
-        PetDailyWalk::firstOrCreate(
+        $walk = PetDailyWalk::firstOrCreate(
             ['pet_id' => $pet->id, 'local_date' => $closedDate],
             [
                 'steps' => max(0, $steps),
@@ -120,7 +120,9 @@ class DailyWalkService
 
         $pet->resetDailyStepsIfNewDay($now);
 
-        if ($illnessAt !== null) {
+        // A date that was already closed (a family time zone change to the west
+        // repeats it, David 2026-11-08) never schedules a second walk illness.
+        if ($illnessAt !== null && $walk->wasRecentlyCreated) {
             $pet->walk_illness_due_at = $illnessAt;
 
             Log::info('DailyWalkService: no walk yesterday, illness scheduled', [

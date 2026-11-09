@@ -1678,7 +1678,11 @@ export interface paths {
         get?: never;
         /**
          * Update family settings (currently the family timezone)
-         * @description PUT /api/parent/settings
+         * @description PUT /api/parent/settings — the app's »Časovni pas družine« row (David
+         *     2026-11-08). The same zone again is a no-op. A real change is allowed at
+         *     most once per 24 h per family → otherwise 422 `timezone_change_too_soon`
+         *     with `next_allowed_at` (ISO 8601 in the current family zone). On success
+         *     every family pet gets a `family_timezone_changed` broadcast.
          */
         put: operations["parentSettings.update"];
         post?: never;
@@ -1963,7 +1967,7 @@ export interface paths {
          *     missing → first design; the wished item keeps the wish's). The item's AI
          *     content is queued at once (`media_ready` false until it is there).
          *     409 no_credit (retry); 422 already_owned | bundle_not_eligible |
-         *     unknown_product | pet_not_active | wish_mismatch | invalid_design; 404 pet_not_found
+         *     unknown_product | pet_not_active | wish_mismatch; 404 pet_not_found
          * @description POST /api/parent/pets/{pet}/items/redeem
          */
         post: operations["wish.redeem"];
@@ -1995,8 +1999,8 @@ export interface paths {
         put?: never;
         /**
          * Wish for an item (push to the parents, max one per child per 10 min).
-         *     M6-W03: `design` (one of the row's `designs[].key`) is required for an item
-         *     with designs and must be absent for treats.
+         *     M6-W03: `design` = one of the row's `designs[].key` (missing → the item's
+         *     first design, for app builds without the picker; must be absent for treats).
          *     422 wish_limit_reached | already_requested | already_owned |
          *     declined_recently (+ retry_at) | treats_still_left | unknown_item |
          *     bundle_not_wishable | invalid_design; 423 game_over | pet_not_started | payment_required
@@ -2217,8 +2221,8 @@ export interface components {
         CreateWishRequest: {
             item_key: string;
             /**
-             * @description M6-W03: the design the child picked (`designs[].key` of the catalogue row) — required
-             *     for an item with designs, absent for treats (WishService → 422 `invalid_design`).
+             * @description M6-W03: the design the child picked (`designs[].key` of the catalogue row); missing → the
+             *     item's first design (older app builds); unknown / any for treats → 422 `invalid_design`.
              */
             design?: string | null;
         };
@@ -2851,7 +2855,7 @@ export interface components {
             wish_id?: number | null;
             /**
              * @description M6-W03: the design of a purchase without a wish (a wish carries its own); missing →
-             *     the item's first design; unknown → 422 `invalid_design`.
+             *     the item's first design; an unknown one too (a paid purchase is never refused over a design).
              */
             design?: string | null;
             /**
@@ -29290,6 +29294,11 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description Mood label (David 2026-11-05): the server's pet state, the same value
+                                 *     the child state and the PetUpdated broadcast carry — the app never re-derives it.
+                                 */
+                                pet_state: string;
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
                                     type: string;
@@ -29854,6 +29863,11 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description Mood label (David 2026-11-05): the server's pet state, the same value
+                                 *     the child state and the PetUpdated broadcast carry — the app never re-derives it.
+                                 */
+                                pet_state: string;
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
                                     type: string;

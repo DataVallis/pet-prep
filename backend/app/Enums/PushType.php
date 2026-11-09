@@ -40,6 +40,18 @@ enum PushType: string
      */
     case LitterReminder = 'litter_reminder';
 
+    /**
+     * M5-R02 morning rule (David 2026-11-08 »ja, daj 30 min«): the night's quiet
+     * stretch just ended and the puppy must go out within
+     * `behaviour.puppy.morning_take_out_minutes` — »Dobro jutro! Kuža mora …
+     * ven«. Caretaker children, normal priority, once per pet and family-local
+     * day (metric `morning:<Y-m-d>`); decided at the first tick after the
+     * night's end; dropped at send time once the puppy was taken out (or had
+     * its accident), in quiet hours or while the pet is locked. Dog puppies
+     * with behaviour events only.
+     */
+    case TakeOutReminder = 'take_out_reminder';
+
     /** Phase 3 — parent alarm (all parents of the family). */
     case ParentAlarm = 'parent_intervention_alarm';
 
@@ -125,7 +137,7 @@ enum PushType: string
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady], true);
     }
 
     /**
@@ -156,7 +168,7 @@ enum PushType: string
      */
     public function asksChildToAct(): bool
     {
-        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder], true);
+        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder], true);
     }
 
     /**
@@ -183,6 +195,8 @@ enum PushType: string
     {
         return match ($this) {
             self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder => 3600,
+            // The morning deadline is this far away: a later delivery would be wrong.
+            self::TakeOutReminder => max(60, (int) config('behaviour.puppy.morning_take_out_minutes', 30) * 60),
             self::ParentAlarm => 3 * 3600,
             self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted => 12 * 3600,
             // "Ready" hours later is stale — the app shows it anyway.

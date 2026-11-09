@@ -215,6 +215,10 @@ class EscalationService
                 $this->notifications()->walkReminder($pet);
             }
         }
+        // M5-R02 morning rule: the night just ended — the puppy must go out soon.
+        if (! $isQuiet && ! $pet->isCat() && $pet->behaviourEventsEnabled()) {
+            $this->notifications()->takeOutReminder($pet);
+        }
         // M5-R06-05: the cat's tray is due to be scooped within the hour.
         if (! $isQuiet && $pet->isCat()) {
             $this->notifications()->litterReminder($pet);

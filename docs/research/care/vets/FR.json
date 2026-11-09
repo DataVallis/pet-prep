@@ -124,7 +124,8 @@
       "emergency_24h": false,
       "duty": "Animal poison information line for owners and vets, every day 8:30–24:00",
       "duty_i18n": {
-        "sl": "Telefonska linija za informacije o zastrupitvah živali, za lastnike in veterinarje, vsak dan 8.30–24"
+        "sl": "Telefonska linija za informacije o zastrupitvah živali, za lastnike in veterinarje, vsak dan 8.30–24",
+        "hr": "Telefonska linija za informacije o trovanju životinja, za vlasnike i veterinare, svaki dan 8:30–24:00"
       },
       "url": "https://www.cnitv.fr/",
       "source_url": "https://www.cnitv.fr/centre-anti-poison",
@@ -142,7 +143,8 @@
       "emergency_24h": false,
       "duty": "Free animal poison information line for owners and vets, 8:30–24:00, 7 days a week",
       "duty_i18n": {
-        "sl": "Brezplačna telefonska linija za informacije o zastrupitvah živali, za lastnike in veterinarje, 8.30–24, 7 dni v tednu"
+        "sl": "Brezplačna telefonska linija za informacije o zastrupitvah živali, za lastnike in veterinarje, 8.30–24, 7 dni v tednu",
+        "hr": "Besplatna telefonska linija za informacije o trovanju životinja, za vlasnike i veterinare, 8:30–24:00, sedam dana u tjednu"
       },
       "url": "https://www.centre-antipoison-animal.com/",
       "source_url": "https://www.veterinaire.fr/je-suis-proprietaire-danimaux/les-contacts-durgence/centres-anti-poison",
@@ -157,7 +159,8 @@
       "emergency_24h": true,
       "duty": "Free short number from French landlines/mobiles; routes by postcode to the nearest on-duty vet / emergency clinic; call centre 24/7",
       "duty_i18n": {
-        "sl": "Brezplačna kratka številka iz francoskih fiksnih in mobilnih omrežij; glede na poštno številko usmeri k najbližjemu dežurnemu veterinarju / nujni kliniki; klicni center 24 ur na dan, vse dni"
+        "sl": "Brezplačna kratka številka iz francoskih fiksnih in mobilnih omrežij; glede na poštno številko usmeri k najbližjemu dežurnemu veterinarju / nujni kliniki; klicni center 24 ur na dan, vse dni",
+        "hr": "Besplatan kratki broj s francuskih fiksnih i mobilnih mreža; prema poštanskom broju te povezuje s najbližim dežurnim veterinarom ili hitnom klinikom; pozivni centar radi 24/7"
       },
       "url": "https://www.urgences-veterinaires.fr/",
       "source_url": "https://www.urgences-veterinaires.fr/",
@@ -175,7 +178,8 @@
       "emergency_24h": true,
       "duty": "Free phone line that triages and directs to a 24-h emergency clinic, a consultation or a home visit; departments 75, 77, 78, 91, 92, 93, 94, 95",
       "duty_i18n": {
-        "sl": "Brezplačna telefonska linija, ki presodi nujnost in napoti v 24-urno nujno kliniko, na pregled ali na obisk na domu; departmaji 75, 77, 78, 91, 92, 93, 94, 95"
+        "sl": "Brezplačna telefonska linija, ki presodi nujnost in napoti v 24-urno nujno kliniko, na pregled ali na obisk na domu; departmaji 75, 77, 78, 91, 92, 93, 94, 95",
+        "hr": "Besplatna telefonska linija koja procjenjuje hitnost i upućuje u hitnu kliniku koja radi 24 sata, na pregled ili na kućni posjet; departmani 75, 77, 78, 91, 92, 93, 94, 95"
       },
       "url": "https://univet.fr/service/urgence/",
       "source_url": "https://univet.fr/service/urgence/",
@@ -194,7 +198,8 @@
       "emergency_24h": true,
       "duty": "Emergency vet home visits in departments 75, 77, 78, 91, 92, 93, 94, 95 and 60",
       "duty_i18n": {
-        "sl": "Nujni veterinarski obiski na domu v departmajih 75, 77, 78, 91, 92, 93, 94, 95 in 60"
+        "sl": "Nujni veterinarski obiski na domu v departmajih 75, 77, 78, 91, 92, 93, 94, 95 in 60",
+        "hr": "Hitni kućni posjeti veterinara u departmanima 75, 77, 78, 91, 92, 93, 94, 95 i 60"
       },
       "url": "https://www.vetoadom.com/",
       "source_url": "https://www.vetoadom.com/",
@@ -213,7 +218,8 @@
       "emergency_24h": true,
       "duty": "Vet school teaching hospital; emergencies 24/7 (appointments +33 1 43 96 73 73)",
       "duty_i18n": {
-        "sl": "Učna bolnišnica veterinarske fakultete; nujni primeri 24 ur na dan, vse dni (naročanje +33 1 43 96 73 73)"
+        "sl": "Učna bolnišnica veterinarske fakultete; nujni primeri 24 ur na dan, vse dni (naročanje +33 1 43 96 73 73)",
+        "hr": "Nastavna bolnica veterinarskog fakulteta; hitni slučajevi 24/7 (naručivanje +33 1 43 96 73 73)"
       },
       "url": "https://www.vet-alfort.fr/",
       "source_url": "https://www.vet-alfort.fr/acces-au-campus-et-au-plan-de-l-ecole",
@@ -232,7 +238,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital, emergencies 24/7",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica, nujni primeri 24 ur na dan, vse dni"
+        "sl": "Veterinarska bolnišnica, nujni primeri 24 ur na dan, vse dni",
+        "hr": "Veterinarska bolnica, hitni slučajevi 24/7"
       },
       "url": "https://www.fregis.com/",
       "source_url": "https://www.fregis.com/nous-contacter/",
@@ -250,7 +257,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital, emergencies 24/7 for dogs, cats and exotics",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica, nujni primeri 24 ur na dan, vse dni za pse, mačke in eksotične živali (NAC)"
+        "sl": "Veterinarska bolnišnica, nujni primeri 24 ur na dan, vse dni za pse, mačke in eksotične živali (NAC)",
+        "hr": "Veterinarska bolnica, hitni slučajevi 24/7 za pse, mačke i egzotične ljubimce"
       },
       "url": "https://advetia.fr/",
       "source_url": "https://advetia.fr/urgences-veterinaires/",
@@ -268,7 +276,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7, dogs and cats",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Odprto 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Otvoreno 24/7, psi i mačke"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-crozatier-referes-urgences-gardes-24h-24-paris-sta/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-crozatier-referes-urgences-gardes-24h-24-paris-sta/",
@@ -286,7 +295,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 24/7 every day of the year; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan, vse dni v letu; psi, mačke, eksotične živali (NAC)"
+        "sl": "Nujni primeri 24 ur na dan, vse dni v letu; psi, mačke, eksotične živali (NAC)",
+        "hr": "Hitni slučajevi 24/7, svaki dan u godini; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://www.vetinparis.com/",
       "source_url": "https://www.vetinparis.com/urgences-veterinaires",
@@ -304,7 +314,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Nujni primeri 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Hitni slučajevi 24/7; psi i mačke"
       },
       "url": "https://univet.fr/clinique/clinique-veterinaire-univet-levallois-perret-v24/",
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-univet-levallois-perret-v24/",
@@ -322,7 +333,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:00, Saturday from 19:00, Sundays and public holidays continuously",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 19, ob nedeljah in praznikih neprekinjeno"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 19, ob nedeljah in praznikih neprekinjeno",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:00, subotom od 19:00, nedjeljom i blagdanima neprekidno"
       },
       "url": "https://www.maisondesurgences-cityparis3.com/",
       "source_url": "https://www.maisondesurgences-cityparis3.com/CGF.php",
@@ -340,7 +352,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:00, Saturday from 14:00, Sundays and public holidays continuously",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih neprekinjeno"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih neprekinjeno",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:00, subotom od 14:00, nedjeljom i blagdanima neprekidno"
       },
       "url": "https://www.maisondesurgences.com/",
       "source_url": "https://www.maisondesurgences.com/CGF.php",
@@ -358,7 +371,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:00, Saturday from 14:00, Sundays and public holidays continuously; call before coming",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih neprekinjeno; pokličite pred prihodom"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih neprekinjeno; pokličite pred prihodom",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:00, subotom od 14:00, nedjeljom i blagdanima neprekidno; nazovi unaprijed"
       },
       "url": "https://www.urgencesveterinaires-77.com/",
       "source_url": "https://www.urgencesveterinaires-77.com/acces.php",
@@ -375,7 +389,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:00, Saturday from 14:00, 24 h on Sundays and public holidays; call before coming",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih 24 ur na dan; pokličite pred prihodom"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 14, ob nedeljah in praznikih 24 ur na dan; pokličite pred prihodom",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:00, subotom od 14:00, nedjeljom i blagdanima 24 sata; nazovi unaprijed"
       },
       "url": "https://www.urgencesveterinaires-95.com/",
       "source_url": "https://www.urgencesveterinaires-95.com/acces.php",
@@ -392,7 +407,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday 17:00 to Monday 08:00, 24 h on public holidays; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote 17 do ponedeljka 8, ob praznikih 24 ur na dan; psi, mačke, eksotične živali (NAC)"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote 17 do ponedeljka 8, ob praznikih 24 ur na dan; psi, mačke, eksotične živali (NAC)",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote 17:00 do ponedjeljka 08:00, blagdanima 24 sata; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-paris/",
       "source_url": "https://veterinaires2touteurgence.com/urgence-veterinaire-paris/",
@@ -409,7 +425,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights, weekends and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih"
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću, vikendom i blagdanima"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-lisle-adam/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -426,7 +443,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital, emergency service 24/7 for dogs and cats",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica, nujna služba 24 ur na dan, vse dni za pse in mačke"
+        "sl": "Veterinarska bolnišnica, nujna služba 24 ur na dan, vse dni za pse in mačke",
+        "hr": "Veterinarska bolnica, hitna služba 24/7 za pse i mačke"
       },
       "url": "https://www.anicura.fr/cliniques/chv-nordvet/",
       "source_url": "https://www.anicura.fr/cliniques/chv-nordvet/nos-services/urgences-veterinaires/",
@@ -444,7 +462,8 @@
       "emergency_24h": true,
       "duty": "Emergency clinic open 24/7 incl. nights and Sundays; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Nujna klinika odprta 24 ur na dan, vse dni, tudi ponoči in ob nedeljah; psi, mačke, eksotične živali (NAC)"
+        "sl": "Nujna klinika odprta 24 ur na dan, vse dni, tudi ponoči in ob nedeljah; psi, mačke, eksotične živali (NAC)",
+        "hr": "Hitna ambulanta otvorena 24/7, uključujući noći i nedjelje; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://www.anicura.fr/cliniques/vet24/",
       "source_url": "https://www.anicura.fr/cliniques/vet24/services/urgences-veterinaires/",
@@ -462,7 +481,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights, weekends and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih"
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću, vikendom i blagdanima"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-lille/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -479,7 +499,8 @@
       "emergency_24h": true,
       "duty": "Exotic-pet (NAC) clinic with care and on-call 24/7: rabbits, rodents, ferrets, birds, reptiles",
       "duty_i18n": {
-        "sl": "Klinika za eksotične živali (NAC) z oskrbo in dežurstvom 24 ur na dan, vse dni: kunci, glodavci, dihurji, ptice, plazilci"
+        "sl": "Klinika za eksotične živali (NAC) z oskrbo in dežurstvom 24 ur na dan, vse dni: kunci, glodavci, dihurji, ptice, plazilci",
+        "hr": "Klinika za egzotične ljubimce (NAC) s njegom i dežurstvom 24/7: kunići, glodavci, tvorovi, ptice, gmazovi"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vet-hauts-de-france-nac-henin-beaumont-vh2/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vet-hauts-de-france-nac-henin-beaumont-vh2/",
@@ -498,7 +519,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 12:00, 24 h on Sundays and public holidays; also serves Boulogne-sur-Mer",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; oskrbuje tudi območje Boulogne-sur-Mer"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; oskrbuje tudi območje Boulogne-sur-Mer",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 12:00, nedjeljom i blagdanima 24 sata; prima i hitne slučajeve iz Boulogne-sur-Mera"
       },
       "url": "https://www.maisondesurgences-calais.com/",
       "source_url": "https://www.maisondesurgences-calais.com/pas-de-calais/veterinaire-garde-boulogne-sur-mer.php",
@@ -515,7 +537,8 @@
       "emergency_24h": true,
       "duty": "General practice, weekdays 9:00–12:00/14:00–19:00, Sat morning; 24-h phone that gives the duty vet's number",
       "duty_i18n": {
-        "sl": "Splošna ambulanta, med tednom 9–12 / 14–19, sob dopoldne; 24-urni telefon, ki posreduje številko dežurnega veterinarja"
+        "sl": "Splošna ambulanta, med tednom 9–12 / 14–19, sob dopoldne; 24-urni telefon, ki posreduje številko dežurnega veterinarja",
+        "hr": "Opća praksa, radnim danima 9:00–12:00 / 14:00–19:00, subotom prijepodne; telefon koji radi 24 sata daje broj dežurnog veterinara"
       },
       "url": "https://www.cliniqueveterinairedelacotedopale.fr/",
       "source_url": "https://www.cliniqueveterinairedelacotedopale.fr/",
@@ -534,7 +557,8 @@
       "emergency_24h": false,
       "duty": "Mon–Wed, Fri 8:30–12:00/14:00–19:00, Sat 9:00–12:30; daytime emergencies; phone stays active out of hours to direct emergencies",
       "duty_i18n": {
-        "sl": "pon–sre, pet 8.30–12 / 14–19, sob 9–12.30; nujni primeri čez dan; zunaj delovnega časa je telefon aktiven za usmerjanje nujnih primerov"
+        "sl": "pon–sre, pet 8.30–12 / 14–19, sob 9–12.30; nujni primeri čez dan; zunaj delovnega časa je telefon aktiven za usmerjanje nujnih primerov",
+        "hr": "Pon–sri, pet 8:30–12:00 / 14:00–19:00, sub 9:00–12:30; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje u hitnim slučajevima"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vallee-des-vignes-amiens-am2/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vallee-des-vignes-amiens-am2/",
@@ -552,7 +576,8 @@
       "emergency_24h": true,
       "duty": "Vet school teaching hospital, emergency service 24/7; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Učna bolnišnica veterinarske fakultete, nujna služba 24 ur na dan, vse dni; psi, mačke, eksotične živali (NAC)"
+        "sl": "Učna bolnišnica veterinarske fakultete, nujna služba 24 ur na dan, vse dni; psi, mačke, eksotične živali (NAC)",
+        "hr": "Nastavna bolnica veterinarskog fakulteta, hitna služba 24/7; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://indivisa.unilasalle.fr/",
       "source_url": "https://indivisa.unilasalle.fr/urgences-veterinaires",
@@ -570,7 +595,8 @@
       "emergency_24h": true,
       "duty": "Referral and emergency clinic open 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Specijalistička i hitna klinika otvorena 24/7; psi i mačke"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-grand-quevilly-lgq/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-grand-quevilly-lgq/",
@@ -588,7 +614,8 @@
       "emergency_24h": true,
       "duty": "Referral and emergency clinic open 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Specijalistička i hitna klinika otvorena 24/7; psi i mačke"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-havre-lhv/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-havre-lhv/",
@@ -605,7 +632,8 @@
       "emergency_24h": true,
       "duty": "Emergency vet service 24/7 (Rouen and Boos sites)",
       "duty_i18n": {
-        "sl": "Nujna veterinarska služba 24 ur na dan, vse dni (lokaciji Rouen in Boos)"
+        "sl": "Nujna veterinarska služba 24 ur na dan, vse dni (lokaciji Rouen in Boos)",
+        "hr": "Hitna veterinarska služba 24/7 (lokacije Rouen i Boos)"
       },
       "url": "https://www.seinevet.fr/",
       "source_url": "https://www.seinevet.fr/",
@@ -624,7 +652,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights, weekends and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih"
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću, vikendom i blagdanima"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-rouen/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -641,7 +670,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 8:00–19:00; on-site emergency team nights, Sundays, holidays; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "pon–sob 8–19; nujna ekipa na kraju samem ponoči, ob nedeljah in praznikih; psi, mačke, eksotične živali (NAC)"
+        "sl": "pon–sob 8–19; nujna ekipa na kraju samem ponoči, ob nedeljah in praznikih; psi, mačke, eksotične živali (NAC)",
+        "hr": "Pon–sub 8:00–19:00; hitni tim na lokaciji noću, nedjeljom i blagdanima; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://www.cliniqueveterinaireducedre.com/",
       "source_url": "https://www.cliniqueveterinaireducedre.com/urgences",
@@ -659,7 +689,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 8:30–19:00; on-call duty by phone 24/7",
       "duty_i18n": {
-        "sl": "pon–sob 8.30–19; telefonsko dežurstvo 24 ur na dan, vse dni"
+        "sl": "pon–sob 8.30–19; telefonsko dežurstvo 24 ur na dan, vse dni",
+        "hr": "Pon–sub 8:30–19:00; telefonsko dežurstvo 24/7"
       },
       "url": "https://www.vetorino.com/veterinaire/caen-14000/",
       "source_url": "https://www.vetorino.com/veterinaire/caen-14000/",
@@ -678,7 +709,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 9:00–12:00/14:00–18:30, Sat 9:00–12:00; out-of-hours emergencies via +33 2 99 48 03 69 (Dol-de-Bretagne clinic)",
       "duty_i18n": {
-        "sl": "pon–pet 9–12 / 14–18.30, sob 9–12; nujni primeri zunaj delovnega časa prek +33 2 99 48 03 69 (klinika Dol-de-Bretagne)"
+        "sl": "pon–pet 9–12 / 14–18.30, sob 9–12; nujni primeri zunaj delovnega časa prek +33 2 99 48 03 69 (klinika Dol-de-Bretagne)",
+        "hr": "Pon–pet 9:00–12:00 / 14:00–18:30, sub 9:00–12:00; hitni slučajevi izvan radnog vremena na +33 2 99 48 03 69 (klinika u Dol-de-Bretagneu)"
       },
       "url": "https://www.veterinairedolpontorson.fr/",
       "source_url": "https://www.veterinairedolpontorson.fr/",
@@ -697,7 +729,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00/13:30–19:00, Sat 8:30–12:30/13:30–17:30; out-of-hours emergency service",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12 / 13.30–19, sob 8.30–12.30 / 13.30–17.30; nujna služba zunaj delovnega časa"
+        "sl": "pon–pet 8.30–12 / 13.30–19, sob 8.30–12.30 / 13.30–17.30; nujna služba zunaj delovnega časa",
+        "hr": "Pon–pet 8:30–12:00 / 13:30–19:00, sub 8:30–12:30 / 13:30–17:30; hitna služba izvan radnog vremena"
       },
       "url": "https://www.veterinairedolpontorson.fr/",
       "source_url": "https://www.veterinairedolpontorson.fr/",
@@ -716,7 +749,8 @@
       "emergency_24h": false,
       "duty": "Open 8:00–19:00; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Odprto 8–19; psi, mačke, eksotične živali (NAC)"
+        "sl": "Odprto 8–19; psi, mačke, eksotične živali (NAC)",
+        "hr": "Otvoreno 8:00–19:00; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://www.anicura.fr/cliniques/broceliande/",
       "source_url": "https://www.anicura.fr/cliniques/broceliande/",
@@ -734,7 +768,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights, weekends and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih"
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči, ob koncih tedna in praznikih",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću, vikendom i blagdanima"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-rennes/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -751,7 +786,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 12:00, 24 h Sundays and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 12:00, nedjeljom i blagdanima 24 sata"
       },
       "url": "https://www.maisondesurgences-brest.com/",
       "source_url": "https://www.maisondesurgences-brest.com/",
@@ -768,7 +804,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:00, Saturday from 13:00, Sundays and public holidays continuously",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 13, ob nedeljah in praznikih neprekinjeno"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8, v soboto od 13, ob nedeljah in praznikih neprekinjeno",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:00, subotom od 13:00, nedjeljom i blagdanima neprekidno"
       },
       "url": "https://www.maisondesurgences-auray.com/",
       "source_url": "https://www.maisondesurgences-auray.com/acces.php",
@@ -785,7 +822,8 @@
       "emergency_24h": true,
       "duty": "Vet school teaching hospital; dogs and cats 24/7 all year except August; call before coming",
       "duty_i18n": {
-        "sl": "Učna bolnišnica veterinarske fakultete; psi in mačke 24 ur na dan, vse dni v letu razen avgusta; pokličite pred prihodom"
+        "sl": "Učna bolnišnica veterinarske fakultete; psi in mačke 24 ur na dan, vse dni v letu razen avgusta; pokličite pred prihodom",
+        "hr": "Nastavna bolnica veterinarskog fakulteta; psi i mačke 24/7 cijele godine osim u kolovozu; nazovi unaprijed"
       },
       "url": "https://chuv.oniris-nantes.fr/",
       "source_url": "https://chuv.oniris-nantes.fr/animaux-de-compagnie/urgences",
@@ -804,7 +842,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital, emergency consultations 24/7",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica, nujni pregledi 24 ur na dan, vse dni"
+        "sl": "Veterinarska bolnišnica, nujni pregledi 24 ur na dan, vse dni",
+        "hr": "Veterinarska bolnica, hitni pregledi 24/7"
       },
       "url": "https://www.chv-atlantia.fr/",
       "source_url": "https://www.chv-atlantia.fr/urgences/",
@@ -822,7 +861,8 @@
       "emergency_24h": true,
       "duty": "Appointments Mon–Fri 8–19, Sat 8–17; emergencies 24/7; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Naročanje pon–pet 8–19, sob 8–17; nujni primeri 24 ur na dan, vse dni; psi, mačke, eksotične živali (NAC)"
+        "sl": "Naročanje pon–pet 8–19, sob 8–17; nujni primeri 24 ur na dan, vse dni; psi, mačke, eksotične živali (NAC)",
+        "hr": "Naručivanje pon–pet 8–19, sub 8–17; hitni slučajevi 24/7; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://univet.fr/clinique/clinique-veterinaire-vertou-vetoceane-44120-univet/",
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-vertou-vetoceane-44120-univet/",
@@ -840,7 +880,8 @@
       "emergency_24h": true,
       "duty": "Referral clinic with emergency service 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "Napotna klinika z nujno službo 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Napotna klinika z nujno službo 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Specijalistička klinika s hitnom službom 24/7; psi i mačke"
       },
       "url": "https://www.anicura.fr/cliniques/vetref/",
       "source_url": "https://www.anicura.fr/cliniques/vetref/nos-services/service-des-urgences/",
@@ -858,7 +899,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 20:00–08:30, Saturday 13:00 to Monday 08:30, 24 h Sundays and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8.30, od sobote 13 do ponedeljka 8.30, ob nedeljah in praznikih 24 ur na dan"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 20–8.30, od sobote 13 do ponedeljka 8.30, ob nedeljah in praznikih 24 ur na dan",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 20:00–08:30, od subote 13:00 do ponedjeljka 08:30, nedjeljom i blagdanima 24 sata"
       },
       "url": "https://www.maisondesurgences-lemans.com/",
       "source_url": "https://www.maisondesurgences-lemans.com/",
@@ -875,7 +917,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 13:00, Sundays and public holidays continuously; also serves Blois area",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 13, ob nedeljah in praznikih neprekinjeno; oskrbuje tudi območje Blois"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 13, ob nedeljah in praznikih neprekinjeno; oskrbuje tudi območje Blois",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 13:00, nedjeljom i blagdanima neprekidno; prima i područje Bloisa"
       },
       "url": "https://www.maisondesurgences-orleans.com/",
       "source_url": "https://www.maisondesurgences-orleans.com/",
@@ -891,7 +934,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency number that local clinics refer owners to",
       "duty_i18n": {
-        "sl": "Nujna številka zunaj delovnega časa, na katero lokalne klinike napotujejo lastnike"
+        "sl": "Nujna številka zunaj delovnega časa, na katero lokalne klinike napotujejo lastnike",
+        "hr": "Broj za hitne slučajeve izvan radnog vremena na koji lokalne klinike upućuju vlasnike"
       },
       "url": "https://www.cliniqueligeria.fr/urgences",
       "source_url": "https://www.cliniqueligeria.fr/urgences",
@@ -909,7 +953,8 @@
       "emergency_24h": false,
       "duty": "Emergency clinic: every night 19:00–08:00, weekends and public holidays; dogs, cats, NAC",
       "duty_i18n": {
-        "sl": "Nujna klinika: vsako noč 19–8, ob koncih tedna in praznikih; psi, mačke, eksotične živali (NAC)"
+        "sl": "Nujna klinika: vsako noč 19–8, ob koncih tedna in praznikih; psi, mačke, eksotične živali (NAC)",
+        "hr": "Hitna klinika: svaku noć 19:00–08:00, vikendom i blagdanima; psi, mačke, NAC (egzotični ljubimci)"
       },
       "url": "https://www.urgvet.fr/",
       "source_url": "https://www.urgvet.fr/",
@@ -927,7 +972,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:30/14:00–19:00, Sat 8:00–12:30/14:00–17:00; on-call vet nights and holidays after phone call (shared Blois rota, screened by Vétophonie)",
       "duty_i18n": {
-        "sl": "pon–pet 8–12.30 / 14–19, sob 8–12.30 / 14–17; dežurni veterinar ponoči in ob praznikih po telefonskem klicu (skupno dežurstvo za Blois, klice presoja Vétophonie)"
+        "sl": "pon–pet 8–12.30 / 14–19, sob 8–12.30 / 14–17; dežurni veterinar ponoči in ob praznikih po telefonskem klicu (skupno dežurstvo za Blois, klice presoja Vétophonie)",
+        "hr": "Pon–pet 8:00–12:30 / 14:00–19:00, sub 8:00–12:30 / 14:00–17:00; dežurni veterinar noću i blagdanima nakon telefonskog poziva (zajednički raspored za Blois, a pozive prethodno procjenjuje Vétophonie)"
       },
       "url": "https://fovea-vet.fr/cliniques/clinique-veterinaire-des-quais/",
       "source_url": "https://fovea-vet.fr/cliniques/clinique-veterinaire-des-quais/",
@@ -944,7 +990,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital, vets and nurses available 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica, veterinarji in veterinarski tehniki na voljo 24 ur na dan, vse dni; psi in mačke"
+        "sl": "Veterinarska bolnišnica, veterinarji in veterinarski tehniki na voljo 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Veterinarska bolnica, veterinari i tehničari dostupni 24/7; psi i mačke"
       },
       "url": "https://www.anicura.fr/cliniques/chv-pommery/",
       "source_url": "https://www.anicura.fr/cliniques/chv-pommery/nos-services/urgences-veterinaires/",
@@ -962,7 +1009,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30/14:00–19:00, Sat 8:00–16:30; out of hours call +33 3 26 85 85 85 (CHV Pommery, Reims)",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30 / 14–19, sob 8–16.30; zunaj delovnega časa pokličite +33 3 26 85 85 85 (CHV Pommery, Reims)"
+        "sl": "pon–pet 8.30–12.30 / 14–19, sob 8–16.30; zunaj delovnega časa pokličite +33 3 26 85 85 85 (CHV Pommery, Reims)",
+        "hr": "Pon–pet 8:30–12:30 / 14:00–19:00, sub 8:00–16:30; izvan radnog vremena nazovi +33 3 26 85 85 85 (CHV Pommery, Reims)"
       },
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/epernay-saint-pierre-180",
       "source_url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/epernay-saint-pierre-180",
@@ -979,7 +1027,8 @@
       "emergency_24h": true,
       "duty": "Weekdays 8:30–12:00/13:30–19:00, Sat 8:30–16:00; emergencies every day 00–24",
       "duty_i18n": {
-        "sl": "med tednom 8.30–12 / 13.30–19, sob 8.30–16; nujni primeri vsak dan 0–24"
+        "sl": "med tednom 8.30–12 / 13.30–19, sob 8.30–16; nujni primeri vsak dan 0–24",
+        "hr": "Radnim danima 8:30–12:00 / 13:30–19:00, sub 8:30–16:00; hitni slučajevi svaki dan 0–24"
       },
       "url": "https://www.anicura.fr/cliniques/airelles/",
       "source_url": "https://www.anicura.fr/cliniques/airelles/contact/",
@@ -998,7 +1047,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 12:30, 24 h Sundays and public holidays",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12.30, ob nedeljah in praznikih 24 ur na dan"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12.30, ob nedeljah in praznikih 24 ur na dan",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 12:30, nedjeljom i blagdanima 24 sata"
       },
       "url": "https://www.maisondesurgences-strasbourg.com/",
       "source_url": "https://www.maisondesurgences-strasbourg.com/",
@@ -1016,7 +1066,8 @@
       "emergency_24h": false,
       "duty": "Emergency/referral centre: nights Mon–Fri 19:00–08:00, Saturday 12:00 to Monday 08:00, public holidays; triage by phone first",
       "duty_i18n": {
-        "sl": "Nujni in napotni center: ponoči pon–pet 19–8, od sobote 12 do ponedeljka 8, prazniki; najprej telefonska triaža"
+        "sl": "Nujni in napotni center: ponoči pon–pet 19–8, od sobote 12 do ponedeljka 8, prazniki; najprej telefonska triaža",
+        "hr": "Hitni i specijalistički centar: noću pon–pet 19:00–08:00, od subote 12:00 do ponedjeljka 08:00, blagdanima; najprije telefonska procjena hitnosti"
       },
       "url": "https://urgence-veterinaire-67.fr/",
       "source_url": "https://urgence-veterinaire-67.fr/",
@@ -1034,7 +1085,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 12:00, 24 h Sundays and public holidays; also receives Colmar emergencies",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; sprejema tudi nujne primere iz Colmarja"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; sprejema tudi nujne primere iz Colmarja",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 12:00, nedjeljom i blagdanima 24 sata; prima i hitne slučajeve iz Colmara"
       },
       "url": "https://www.maisondesurgences-mulhouse.com/",
       "source_url": "https://www.maisondesurgences-mulhouse.com/haut-rhin/veterinaire-garde-colmar.php",
@@ -1051,7 +1103,8 @@
       "emergency_24h": false,
       "duty": "Premium-rate number giving the on-call vet for the Colmar duty sector (midday, nights, weekends)",
       "duty_i18n": {
-        "sl": "Številka po posebni tarifi, ki sporoči dežurnega veterinarja za dežurni sektor Colmar (opoldne, ponoči, ob koncih tedna)"
+        "sl": "Številka po posebni tarifi, ki sporoči dežurnega veterinarja za dežurni sektor Colmar (opoldne, ponoči, ob koncih tedna)",
+        "hr": "Broj s povišenom tarifom koji daje dežurnog veterinara za dežurno područje Colmar (u podne, noću, vikendom)"
       },
       "url": "https://www.anivia.fr/gardes",
       "source_url": "https://www.anivia.fr/gardes",
@@ -1069,7 +1122,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8–12/14–19, Sat 8–12; emergency team and dispatch 24/7; dogs and cats",
       "duty_i18n": {
-        "sl": "pon–pet 8–12 / 14–19, sob 8–12; nujna ekipa in dispečerstvo 24 ur na dan, vse dni; psi in mačke"
+        "sl": "pon–pet 8–12 / 14–19, sob 8–12; nujna ekipa in dispečerstvo 24 ur na dan, vse dni; psi in mačke",
+        "hr": "Pon–pet 8–12 / 14–19, sub 8–12; hitni tim i dispečerska služba 24/7; psi i mačke"
       },
       "url": "https://www.mvet.fr/",
       "source_url": "https://www.mvet.fr/urgences",
@@ -1087,7 +1141,8 @@
       "emergency_24h": true,
       "duty": "Appointments Mon–Fri 8:30–12/14:30–18:30, Sat morning; daytime emergencies at clinic, nights/weekends via regulation line with the VETONIMO centre",
       "duty_i18n": {
-        "sl": "Naročanje pon–pet 8.30–12 / 14.30–18.30, sob dopoldne; nujni primeri čez dan v kliniki, ponoči in ob koncih tedna prek usmerjevalne linije s centrom VETONIMO"
+        "sl": "Naročanje pon–pet 8.30–12 / 14.30–18.30, sob dopoldne; nujni primeri čez dan v kliniki, ponoči in ob koncih tedna prek usmerjevalne linije s centrom VETONIMO",
+        "hr": "Naručivanje pon–pet 8:30–12 / 14:30–18:30, sub prijepodne; hitni slučajevi tijekom dana u klinici, noću i vikendom preko telefonske linije za procjenu hitnosti s centrom VETONIMO"
       },
       "url": "https://www.clinvetmetz.fr/",
       "source_url": "https://www.clinvetmetz.fr/index.php/bienvenue/nos-services/les-urgences/",
@@ -1106,7 +1161,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–19:00, Sat 8:30–12:00, Sunday emergencies only; emergency duty 24/7 shared with two other clinics (number tells which is on duty)",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–19, sob 8.30–12, ob nedeljah samo nujni primeri; nujna služba 24 ur na dan, vse dni, ki si jo deli z dvema drugima klinikama (številka pove, katera je dežurna)"
+        "sl": "pon–pet 8.30–19, sob 8.30–12, ob nedeljah samo nujni primeri; nujna služba 24 ur na dan, vse dni, ki si jo deli z dvema drugima klinikama (številka pove, katera je dežurna)",
+        "hr": "Pon–pet 8:30–19:00, sub 8:30–12:00, nedjeljom samo hitni slučajevi; hitno dežurstvo 24/7 dijeli se s dvije druge klinike (broj pokazuje koja je dežurna)"
       },
       "url": "https://www.vetosaintmax.fr/",
       "source_url": "https://www.vetosaintmax.fr/urgence",
@@ -1125,7 +1181,8 @@
       "emergency_24h": true,
       "duty": "Referral consultations Mon–Fri 8–19, Sat 8–12; emergencies 24/7",
       "duty_i18n": {
-        "sl": "Napotni pregledi pon–pet 8–19, sob 8–12; nujni primeri 24 ur na dan, vse dni"
+        "sl": "Napotni pregledi pon–pet 8–19, sob 8–12; nujni primeri 24 ur na dan, vse dni",
+        "hr": "Specijalistički pregledi pon–pet 8–19, sub 8–12; hitni slučajevi 24/7"
       },
       "url": "https://www.vetddb.fr/",
       "source_url": "https://www.vetddb.fr/",
@@ -1143,7 +1200,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:30–07:30, Saturday from 12:00, Sundays and public holidays continuously",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih neprekinjeno"
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih neprekinjeno",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:30–07:30, subotom od 12:00, nedjeljom i blagdanima neprekidno"
       },
       "url": "https://www.maisondesurgences-besancon.com/",
       "source_url": "https://www.maisondesurgences-besancon.com/",
@@ -1160,7 +1218,8 @@
       "emergency_24h": true,
       "duty": "University small-animal emergency, resuscitation and intensive care unit, 24/7; dogs, cats and NAC.",
       "duty_i18n": {
-        "sl": "Univerzitetna enota za male živali za nujne primere, oživljanje in intenzivno nego, 24 ur na dan, vse dni; psi, mačke in eksotične živali (NAC)."
+        "sl": "Univerzitetna enota za male živali za nujne primere, oživljanje in intenzivno nego, 24 ur na dan, vse dni; psi, mačke in eksotične živali (NAC).",
+        "hr": "Sveučilišna hitna služba i jedinica intenzivne njege za male životinje, 24/7; psi, mačke i egzotični ljubimci (NAC)."
       },
       "small_animals": true,
       "url": "https://www.vetagro-sup.fr/",
@@ -1177,7 +1236,8 @@
       "emergency_24h": true,
       "duty": "Emergency-only service: home visits within ~30 km of Lyon or consultation at its duty clinic in Lyon 7e; phone line 24/7.",
       "duty_i18n": {
-        "sl": "Samo nujna služba: obiski na domu v krogu ~30 km od Lyona ali pregled v dežurni kliniki v Lyonu 7e; telefonska linija 24 ur na dan, vse dni."
+        "sl": "Samo nujna služba: obiski na domu v krogu ~30 km od Lyona ali pregled v dežurni kliniki v Lyonu 7e; telefonska linija 24 ur na dan, vse dni.",
+        "hr": "Samo hitni slučajevi: kućni posjeti u krugu od oko 30 km od Lyona ili pregled u dežurnoj klinici u Lyonu 7e; telefonska linija 24/7."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-lyon.fr/",
@@ -1196,7 +1256,8 @@
       "emergency_24h": true,
       "duty": "Referral and emergency clinic, open 24h every day.",
       "duty_i18n": {
-        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vsak dan."
+        "sl": "Napotna in nujna klinika, odprta 24 ur na dan, vsak dan.",
+        "hr": "Specijalistička i hitna klinika, otvorena 24 sata svaki dan."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-mermoz-vet-mz1/",
@@ -1214,7 +1275,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00 to 08:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19 do 8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19 do 8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00 do 08:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-dardilly/",
@@ -1232,7 +1294,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights from 19:00, weekends, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči od 19, ob koncih tedna, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči od 19, ob koncih tedna, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću od 19:00, vikendom, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/",
@@ -1250,7 +1313,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital with 24/7 emergency service (Nord-Isère, east of Lyon).",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica z nujno službo 24 ur na dan, vse dni (Nord-Isère, vzhodno od Lyona)."
+        "sl": "Veterinarska bolnišnica z nujno službo 24 ur na dan, vse dni (Nord-Isère, vzhodno od Lyona).",
+        "hr": "Veterinarska bolnica s hitnom službom 24/7 (Nord-Isère, istočno od Lyona)."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/armonia/",
@@ -1268,7 +1332,8 @@
       "emergency_24h": false,
       "duty": "Clinic weekdays 08:00–19:00, Sat 08:00–17:00; emergency service every day 08:00–19:00.",
       "duty_i18n": {
-        "sl": "Klinika med tednom 8–19, sob 8–17; nujna služba vsak dan 8–19."
+        "sl": "Klinika med tednom 8–19, sob 8–17; nujna služba vsak dan 8–19.",
+        "hr": "Klinika radnim danima 08:00–19:00, sub 08:00–17:00; hitna služba svaki dan 08:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/belleville/",
@@ -1286,7 +1351,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-saint-etienne/",
@@ -1304,7 +1370,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-clermont-ferrand/",
@@ -1320,7 +1387,8 @@
       "emergency_24h": false,
       "duty": "Emergency home-visit service for the Grenoble and Chambéry areas; hours Mon–Fri 19:00–08:00, Sat from 14:00, Sundays and holidays continuous.",
       "duty_i18n": {
-        "sl": "Nujna služba z obiski na domu za območji Grenoble in Chambéry; urnik: pon–pet 19–8, sob od 14, ob nedeljah in praznikih neprekinjeno."
+        "sl": "Nujna služba z obiski na domu za območji Grenoble in Chambéry; urnik: pon–pet 19–8, sob od 14, ob nedeljah in praznikih neprekinjeno.",
+        "hr": "Hitni kućni posjeti za područja Grenoblea i Chambéryja; pon–pet 19:00–08:00, sub od 14:00, nedjeljom i blagdanima neprekidno."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-grenoble.fr/",
@@ -1339,7 +1407,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–12:00 / 13:30–18:30, Sat 08:00–12:00 (appointments). Out-of-hours: clinic line +33 4 76 25 59 63 or Maison des Urgences de Grenoble +33 4 80 42 33 23.",
       "duty_i18n": {
-        "sl": "pon–pet 8–12 / 13.30–18.30, sob 8–12 (po dogovoru). Zunaj delovnega časa: številka klinike +33 4 76 25 59 63 ali Maison des Urgences de Grenoble +33 4 80 42 33 23."
+        "sl": "pon–pet 8–12 / 13.30–18.30, sob 8–12 (po dogovoru). Zunaj delovnega časa: številka klinike +33 4 76 25 59 63 ali Maison des Urgences de Grenoble +33 4 80 42 33 23.",
+        "hr": "Pon–pet 08:00–12:00 / 13:30–18:30, sub 08:00–12:00 (po dogovoru). Izvan radnog vremena: telefon klinike +33 4 76 25 59 63 ili Maison des Urgences de Grenoble +33 4 80 42 33 23."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-etoile-grenoble-38000-univet/",
@@ -1356,7 +1425,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital near Annecy (A41 exit 18); emergencies 24/7 on site; specialist consultations Mon–Fri 08:00–19:00, Sat 08:00–12:30.",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica pri Annecyju (izvoz 18 z A41); nujni primeri 24 ur na dan, vse dni, na kraju samem; specialistični pregledi pon–pet 8–19, sob 8–12.30."
+        "sl": "Veterinarska bolnišnica pri Annecyju (izvoz 18 z A41); nujni primeri 24 ur na dan, vse dni, na kraju samem; specialistični pregledi pon–pet 8–19, sob 8–12.30.",
+        "hr": "Veterinarska bolnica kod Annecyja (A41, izlaz 18); hitni slučajevi 24/7 na lokaciji; specijalistički pregledi pon–pet 08:00–19:00, sub 08:00–12:30."
       },
       "small_animals": true,
       "url": "https://www.chvsaintmartin.com/",
@@ -1374,7 +1444,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–12:00 / 14:00–19:00, Sat 08:30–12:00. Nights/weekends handled by Maison des Urgences Alpine (+33 4 58 39 00 00) and CHV de Saint-Martin (+33 4 50 60 09 00).",
       "duty_i18n": {
-        "sl": "pon–pet 8–12 / 14–19, sob 8.30–12. Ponoči in ob koncih tedna prevzemata Maison des Urgences Alpine (+33 4 58 39 00 00) in CHV de Saint-Martin (+33 4 50 60 09 00)."
+        "sl": "pon–pet 8–12 / 14–19, sob 8.30–12. Ponoči in ob koncih tedna prevzemata Maison des Urgences Alpine (+33 4 58 39 00 00) in CHV de Saint-Martin (+33 4 50 60 09 00).",
+        "hr": "Pon–pet 08:00–12:00 / 14:00–19:00, sub 08:30–12:00. Noću i vikendom: Maison des Urgences Alpine (+33 4 58 39 00 00) i CHV de Saint-Martin (+33 4 50 60 09 00)."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -1392,7 +1463,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:30–12:30 / 15:00–18:30, Sat 08:30–12:00 (appointments); own on-call service for emergencies at night, weekends and holidays.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30 / 15–18.30, sob 8.30–12 (po dogovoru); lastna dežurna služba za nujne primere ponoči, ob koncih tedna in praznikih."
+        "sl": "pon–pet 8.30–12.30 / 15–18.30, sob 8.30–12 (po dogovoru); lastna dežurna služba za nujne primere ponoči, ob koncih tedna in praznikih.",
+        "hr": "Pon–pet 08:30–12:30 / 15:00–18:30, sub 08:30–12:00 (po dogovoru); vlastito dežurstvo za hitne slučajeve noću, vikendom i blagdanima."
       },
       "small_animals": true,
       "source_url": "https://www.haute-savoie-tourisme.org/services/sante/services-sante/790485-clinique-veterinaire-d-abondance",
@@ -1409,7 +1481,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:30–12:00 / 14:00–19:00, Sat 08:30–12:00 / 14:00–16:00; 'Gardes assurées' (on-call duty provided).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12 / 14–19, sob 8.30–12 / 14–16; „Gardes assurées“ (zagotovljena dežurna služba)."
+        "sl": "pon–pet 8.30–12 / 14–19, sob 8.30–12 / 14–16; „Gardes assurées“ (zagotovljena dežurna služba).",
+        "hr": "Pon–pet 08:30–12:00 / 14:00–19:00, sub 08:30–12:00 / 14:00–16:00; osigurano dežurstvo („Gardes assurées”)."
       },
       "small_animals": true,
       "source_url": "https://www.haute-savoie-tourisme.org/services/sante/services-sante/245171-cabinet-medico-chirurgical-veterinaire-dr-edouard-senger",
@@ -1426,7 +1499,8 @@
       "emergency_24h": false,
       "duty": "Open all year, closed Sunday.",
       "duty_i18n": {
-        "sl": "Odprto vse leto, ob nedeljah zaprto."
+        "sl": "Odprto vse leto, ob nedeljah zaprto.",
+        "hr": "Otvoreno cijele godine, nedjeljom zatvoreno."
       },
       "small_animals": true,
       "source_url": "https://www.oz-en-oisans.com/winter/offers/veterinary-surgery-le-bourg-doisans-en-winter-2795237",
@@ -1443,7 +1517,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:00 / 14:30–19:00, Sat 09:00–12:00 / 14:30–18:00. Out of hours: shared rota with Clinique de l'Enclave (Valréas); weekends/holidays Clinique Sainte Anne Sorgues +33 4 90 83 37 74 or V2TU Avignon +33 4 48 75 05 15.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12 / 14.30–19, sob 9–12 / 14.30–18. Zunaj delovnega časa: skupno dežurstvo s Clinique de l'Enclave (Valréas); ob koncih tedna in praznikih Clinique Sainte Anne Sorgues +33 4 90 83 37 74 ali V2TU Avignon +33 4 48 75 05 15."
+        "sl": "pon–pet 9–12 / 14.30–19, sob 9–12 / 14.30–18. Zunaj delovnega časa: skupno dežurstvo s Clinique de l'Enclave (Valréas); ob koncih tedna in praznikih Clinique Sainte Anne Sorgues +33 4 90 83 37 74 ali V2TU Avignon +33 4 48 75 05 15.",
+        "hr": "Pon–pet 09:00–12:00 / 14:30–19:00, sub 09:00–12:00 / 14:30–18:00. Izvan radnog vremena: zajednički raspored s Clinique de l'Enclave (Valréas); vikendom i blagdanima Clinique Sainte Anne Sorgues +33 4 90 83 37 74 ili V2TU Avignon +33 4 48 75 05 15."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -1461,7 +1536,8 @@
       "emergency_24h": true,
       "duty": "University emergency and intensive care unit, 24/7; call before coming.",
       "duty_i18n": {
-        "sl": "Univerzitetna enota za nujne primere in intenzivno nego, 24 ur na dan, vse dni; pokličite pred prihodom."
+        "sl": "Univerzitetna enota za nujne primere in intenzivno nego, 24 ur na dan, vse dni; pokličite pred prihodom.",
+        "hr": "Sveučilišna hitna služba i jedinica intenzivne njege, 24/7; nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://envt.fr/",
@@ -1480,7 +1556,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: Mon–Fri 19:00–08:30, Saturday noon to Monday 08:30, holidays from 19:00 the evening before.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: pon–pet 19–8.30, od sobote opoldne do ponedeljka 8.30, ob praznikih od 19. ure prejšnjega večera."
+        "sl": "Nujna klinika zunaj delovnega časa: pon–pet 19–8.30, od sobote opoldne do ponedeljka 8.30, ob praznikih od 19. ure prejšnjega večera.",
+        "hr": "Hitna ambulanta izvan radnog vremena: pon–pet 19:00–08:30, od subote u podne do ponedjeljka 08:30, blagdanima od 19:00 prethodne večeri."
       },
       "small_animals": true,
       "url": "https://vet-urgentys.fr/",
@@ -1498,7 +1575,8 @@
       "emergency_24h": true,
       "duty": "Emergency home visits 24/7 in Toulouse area; duty practice Mon–Fri 20:00–08:00, Saturday from 18:00, Sunday 24h, holidays from 19:00 the evening before.",
       "duty_i18n": {
-        "sl": "Nujni obiski na domu 24 ur na dan, vse dni na območju Toulousa; dežurna ordinacija pon–pet 20–8, sob od 18, ned 24 ur na dan, ob praznikih od 19. ure prejšnjega večera."
+        "sl": "Nujni obiski na domu 24 ur na dan, vse dni na območju Toulousa; dežurna ordinacija pon–pet 20–8, sob od 18, ned 24 ur na dan, ob praznikih od 19. ure prejšnjega večera.",
+        "hr": "Hitni kućni posjeti 24/7 na području Toulousea; dežurna ordinacija pon–pet 20:00–08:00, sub od 18:00, nedjeljom 24 sata, blagdanima od 19:00 prethodne večeri."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-toulouse.fr/",
@@ -1515,7 +1593,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours vet options for Toulouse: ENVT emergencies, Vet-Urgentys, home-visit emergency service.",
       "duty_i18n": {
-        "sl": "Možnosti veterinarske oskrbe zunaj delovnega časa v Toulousu: nujna pomoč ENVT, Vet-Urgentys, nujna služba z obiski na domu."
+        "sl": "Možnosti veterinarske oskrbe zunaj delovnega časa v Toulousu: nujna pomoč ENVT, Vet-Urgentys, nujna služba z obiski na domu.",
+        "hr": "Mogućnosti veterinarske skrbi izvan radnog vremena u Toulouseu: hitna služba ENVT-a, Vet-Urgentys, hitna služba s kućnim posjetima."
       },
       "small_animals": true,
       "url": "https://metropole.toulouse.fr/",
@@ -1533,7 +1612,8 @@
       "emergency_24h": false,
       "duty": "Small-animal clinic; call for advice.",
       "duty_i18n": {
-        "sl": "Klinika za male živali; za nasvet pokličite."
+        "sl": "Klinika za male živali; za nasvet pokličite.",
+        "hr": "Klinika za male životinje; nazovi za savjet."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/volvestre/",
@@ -1551,7 +1631,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights 19:00–08:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću 19:00–08:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-montpellier/",
@@ -1569,7 +1650,8 @@
       "emergency_24h": false,
       "duty": "Referral clinic, daytime emergencies; Mon–Fri 08:00–12:00 / 14:00–19:00, Sat 08:00–12:00 / 14:00–17:00.",
       "duty_i18n": {
-        "sl": "Napotna klinika, nujni primeri čez dan; pon–pet 8–12 / 14–19, sob 8–12 / 14–17."
+        "sl": "Napotna klinika, nujni primeri čez dan; pon–pet 8–12 / 14–19, sob 8–12 / 14–17.",
+        "hr": "Specijalistička klinika, hitni slučajevi tijekom dana; pon–pet 08:00–12:00 / 14:00–19:00, sub 08:00–12:00 / 14:00–17:00."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-sevetys-occitanie-montpellier-mtp/",
@@ -1587,7 +1669,8 @@
       "emergency_24h": false,
       "duty": "Mon–Sat 08:00–19:00; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–sob 8–19; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–sob 8–19; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–sub 08:00–19:00; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-grand-m-montpellier-lgm/",
@@ -1604,7 +1687,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:15–12:00 / 14:00–18:00, Sat 08:15–12:00; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 8.15–12 / 14–18, sob 8.15–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 8.15–12 / 14–18, sob 8.15–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 08:15–12:00 / 14:00–18:00, sub 08:15–12:00; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-cap-d-agde-agd/",
@@ -1621,7 +1705,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–19:00, Sat 08:30–12:30; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 8.30–12.30; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 9–19, sob 8.30–12.30; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 09:00–19:00, sub 08:30–12:30; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-des-remparts-aigues-mortes-aig/",
@@ -1638,7 +1723,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-nimes/",
@@ -1655,7 +1741,8 @@
       "emergency_24h": true,
       "duty": "Consultations Mon–Fri 08:00–12:00 / 14:00–19:00, Sat 08:00–12:00 / 14:00–18:00; emergency service 24/7 all year.",
       "duty_i18n": {
-        "sl": "Pregledi pon–pet 8–12 / 14–19, sob 8–12 / 14–18; nujna služba 24 ur na dan, vse dni v letu."
+        "sl": "Pregledi pon–pet 8–12 / 14–19, sob 8–12 / 14–18; nujna služba 24 ur na dan, vse dni v letu.",
+        "hr": "Pregledi pon–pet 08:00–12:00 / 14:00–19:00, sub 08:00–12:00 / 14:00–18:00; hitna služba 24/7 cijele godine."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-perpignan.fr/",
@@ -1673,7 +1760,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:30 / 14:00–18:30, Sat 09:00–12:30 / 14:00–17:00; out-of-hours continuity by Neovet La Croix Bleue, Perpignan.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12.30 / 14–18.30, sob 9–12.30 / 14–17; zunaj delovnega časa nadaljevanje oskrbe zagotavlja Neovet La Croix Bleue, Perpignan."
+        "sl": "pon–pet 9–12.30 / 14–18.30, sob 9–12.30 / 14–17; zunaj delovnega časa nadaljevanje oskrbe zagotavlja Neovet La Croix Bleue, Perpignan.",
+        "hr": "Pon–pet 09:00–12:30 / 14:00–18:30, sub 09:00–12:30 / 14:00–17:00; izvan radnog vremena skrb preuzima Neovet La Croix Bleue u Perpignanu."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -1691,7 +1779,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital (Bordeaux) with 24/7 emergency service incl. public holidays.",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica (Bordeaux) z nujno službo 24 ur na dan, vse dni, tudi ob praznikih."
+        "sl": "Veterinarska bolnišnica (Bordeaux) z nujno službo 24 ur na dan, vse dni, tudi ob praznikih.",
+        "hr": "Veterinarska bolnica (Bordeaux) s hitnom službom 24/7, uključujući blagdane."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/chv-aquivet/",
@@ -1709,7 +1798,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours duty clinic: Mon–Fri 19:00–08:00, Saturday 18:00 to Monday 08:00 (Sunday 24h), holidays from 19:00 the evening before; by appointment.",
       "duty_i18n": {
-        "sl": "Dežurna klinika zunaj delovnega časa: pon–pet 19–8, od sobote 18 do ponedeljka 8 (nedelja 24 ur na dan), ob praznikih od 19. ure prejšnjega večera; po dogovoru."
+        "sl": "Dežurna klinika zunaj delovnega časa: pon–pet 19–8, od sobote 18 do ponedeljka 8 (nedelja 24 ur na dan), ob praznikih od 19. ure prejšnjega večera; po dogovoru.",
+        "hr": "Dežurna klinika izvan radnog vremena: pon–pet 19:00–08:00, od subote 18:00 do ponedjeljka 08:00 (nedjeljom 24 sata), blagdanima od 19:00 prethodne večeri; uz prethodnu najavu."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-bordeaux.fr/",
@@ -1727,7 +1817,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:30 / 14:00–19:00, Sat 09:00–12:30 / 14:00–16:00; out of hours an answering message gives the duty practice.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12.30 / 14–19, sob 9–12.30 / 14–16; zunaj delovnega časa sporočilo na odzivniku navede dežurno ordinacijo."
+        "sl": "pon–pet 9–12.30 / 14–19, sob 9–12.30 / 14–16; zunaj delovnega časa sporočilo na odzivniku navede dežurno ordinacijo.",
+        "hr": "Pon–pet 09:00–12:30 / 14:00–19:00, sub 09:00–12:30 / 14:00–16:00; izvan radnog vremena snimljena poruka javlja koja je ordinacija dežurna."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-arcavet.fr/",
@@ -1745,7 +1836,8 @@
       "emergency_24h": true,
       "duty": "Clinic 08:00–19:00; emergency service 24/7 with a vet on site; dogs, cats, NAC.",
       "duty_i18n": {
-        "sl": "Klinika 8–19; nujna služba 24 ur na dan, vse dni z veterinarjem na kraju samem; psi, mačke, eksotične živali (NAC)."
+        "sl": "Klinika 8–19; nujna služba 24 ur na dan, vse dni z veterinarjem na kraju samem; psi, mačke, eksotične živali (NAC).",
+        "hr": "Klinika 08:00–19:00; hitna služba 24/7 s veterinarom na lokaciji; psi, mačke, NAC (egzotični ljubimci)."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/saint-roch/",
@@ -1763,7 +1855,8 @@
       "emergency_24h": true,
       "duty": "Emergency clinic open 24 h every day.",
       "duty_i18n": {
-        "sl": "Nujna klinika odprta 24 ur na dan, vsak dan."
+        "sl": "Nujna klinika odprta 24 ur na dan, vsak dan.",
+        "hr": "Hitna klinika otvorena 24 sata svaki dan."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-la-paix-pau-pau/",
@@ -1781,7 +1874,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic for the Basque coast: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa za baskovsko obalo: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa za baskovsko obalo: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena za baskijsku obalu: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-biarritz/",
@@ -1798,7 +1892,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:30–19:00, Sat 09:00–18:00; nights, weekends and holidays relayed to V2TU Biarritz.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–19, sob 9–18; ponoči, ob koncih tedna in praznikih preusmeritev na V2TU Biarritz."
+        "sl": "pon–pet 8.30–19, sob 9–18; ponoči, ob koncih tedna in praznikih preusmeritev na V2TU Biarritz.",
+        "hr": "Pon–pet 08:30–19:00, sub 09:00–18:00; noću, vikendom i blagdanima upućuju na V2TU Biarritz."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-croix-basque/",
@@ -1829,7 +1924,8 @@
       "emergency_24h": true,
       "duty": "Veterinary hospital; dog and cat emergencies 24/7 with team on site.",
       "duty_i18n": {
-        "sl": "Veterinarska bolnišnica; nujni primeri psov in mačk 24 ur na dan, vse dni z ekipo na kraju samem."
+        "sl": "Veterinarska bolnišnica; nujni primeri psov in mačk 24 ur na dan, vse dni z ekipo na kraju samem.",
+        "hr": "Veterinarska bolnica; hitni slučajevi za pse i mačke 24/7 s timom na lokaciji."
       },
       "small_animals": true,
       "url": "https://www.animedis.fr/",
@@ -1848,7 +1944,8 @@
       "emergency_24h": true,
       "duty": "Emergency clinic without appointment, non-stop incl. public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika brez naročanja, neprekinjeno, tudi ob praznikih."
+        "sl": "Nujna klinika brez naročanja, neprekinjeno, tudi ob praznikih.",
+        "hr": "Hitna klinika bez naručivanja, neprekidno, uključujući blagdane."
       },
       "small_animals": true,
       "url": "https://www.kurgence.fr/",
@@ -1867,7 +1964,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: Mon–Fri 19:00–08:00, Saturday noon to Monday 08:00, 24h on public holidays; dogs, cats, NAC.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: pon–pet 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan; psi, mačke, eksotične živali (NAC)."
+        "sl": "Nujna klinika zunaj delovnega časa: pon–pet 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan; psi, mačke, eksotične živali (NAC).",
+        "hr": "Hitna ambulanta izvan radnog vremena: pon–pet 19:00–08:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata; psi, mačke, NAC (egzotični ljubimci)."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/",
@@ -1885,7 +1983,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:00 / 14:00–19:00; nights/weekends relayed to V2TU Marseille, midday/Saturday morning to K d'Urgence.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12 / 14–19; ponoči in ob koncih tedna preusmeritev na V2TU Marseille, opoldne in v soboto dopoldne na K d'Urgence."
+        "sl": "pon–pet 9–12 / 14–19; ponoči in ob koncih tedna preusmeritev na V2TU Marseille, opoldne in v soboto dopoldne na K d'Urgence.",
+        "hr": "Pon–pet 09:00–12:00 / 14:00–19:00; noću i vikendom upućuju na V2TU Marseille, u podne i subotom prijepodne na K d'Urgence."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -1903,7 +2002,8 @@
       "emergency_24h": false,
       "duty": "Clinic Mon–Sat 08:00–19:30; emergencies Mon–Sat 08:30–19:00, Sundays and holidays 10:00–12:00 and 17:00–19:00.",
       "duty_i18n": {
-        "sl": "Klinika pon–sob 8–19.30; nujni primeri pon–sob 8.30–19, ob nedeljah in praznikih 10–12 in 17–19."
+        "sl": "Klinika pon–sob 8–19.30; nujni primeri pon–sob 8.30–19, ob nedeljah in praznikih 10–12 in 17–19.",
+        "hr": "Klinika pon–sub 08:00–19:30; hitni slučajevi pon–sub 08:30–19:00, nedjeljom i blagdanima 10:00–12:00 i 17:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/vetetoile/",
@@ -1920,7 +2020,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights 19:00–08:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću 19:00–08:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-aix/",
@@ -1938,7 +2039,8 @@
       "emergency_24h": true,
       "duty": "Emergency clinic receiving emergencies day and night, weekends and holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika, ki sprejema nujne primere podnevi in ponoči, ob koncih tedna in praznikih."
+        "sl": "Nujna klinika, ki sprejema nujne primere podnevi in ponoči, ob koncih tedna in praznikih.",
+        "hr": "Hitna klinika koja prima hitne slučajeve danju i noću, vikendom i blagdanima."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-aix-karukera-13090-univet/",
@@ -1957,7 +2059,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-avignon/",
@@ -1975,7 +2078,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–19:00, Sat 08:30–13:00 / 14:00–18:30; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19, sob 8.30–13 / 14–18.30; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 8–19, sob 8.30–13 / 14–18.30; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 08:00–19:00, sub 08:30–13:00 / 14:00–18:30; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vetos-alpilles-saint-remy-de-provence-srp/",
@@ -1992,7 +2096,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: nights 19:00–08:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: ponoči 19–8, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: noću 19:00–08:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-toulon/",
@@ -2009,7 +2114,8 @@
       "emergency_24h": false,
       "duty": "Emergency home visits in Toulon and ~30 communes: weekdays 19:00–08:00, Saturday 08:00 to Sunday 08:00, Sunday/holidays 08:00 to next day 08:00.",
       "duty_i18n": {
-        "sl": "Nujni obiski na domu v Toulonu in ~30 občinah: med tednom 19–8, sob od 8 do nedelje 8, ob nedeljah in praznikih od 8 do 8 naslednjega dne."
+        "sl": "Nujni obiski na domu v Toulonu in ~30 občinah: med tednom 19–8, sob od 8 do nedelje 8, ob nedeljah in praznikih od 8 do 8 naslednjega dne.",
+        "hr": "Hitni kućni posjeti u Toulonu i oko 30 općina: radnim danima 19:00–08:00, od subote 08:00 do nedjelje 08:00, nedjeljom i blagdanima od 08:00 do 08:00 idućeg dana."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-toulon.fr/",
@@ -2027,7 +2133,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:30–12:00 / 14:30–19:00, Sat 08:30–12:00; nights and weekends relayed to Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12 / 14.30–19, sob 8.30–12; ponoči in ob koncih tedna preusmeritev na Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34."
+        "sl": "pon–pet 8.30–12 / 14.30–19, sob 8.30–12; ponoči in ob koncih tedna preusmeritev na Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
+        "hr": "Pon–pet 08:30–12:00 / 14:30–19:00, sub 08:30–12:00; noću i vikendom upućuju na Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -2045,7 +2152,8 @@
       "emergency_24h": false,
       "duty": "Open all year.",
       "duty_i18n": {
-        "sl": "Odprto vse leto."
+        "sl": "Odprto vse leto.",
+        "hr": "Otvoreno cijele godine."
       },
       "small_animals": true,
       "source_url": "https://cotedazurfrance.fr/offres/clinique-veterinaire-a-saint-tropez-saint-tropez-fr-3485477/",
@@ -2062,7 +2170,8 @@
       "emergency_24h": true,
       "duty": "Emergency clinic open every day; vet on site at all times, second vet on call for surgery; call ahead.",
       "duty_i18n": {
-        "sl": "Nujna klinika odprta vsak dan; veterinar je ves čas na kraju samem, drugi veterinar je na klic za operacije; vnaprej pokličite."
+        "sl": "Nujna klinika odprta vsak dan; veterinar je ves čas na kraju samem, drugi veterinar je na klic za operacije; vnaprej pokličite.",
+        "hr": "Hitna klinika otvorena svaki dan; veterinar je stalno na lokaciji, a drugi veterinar je pripravan za kirurgiju; nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://www.vetriviera.fr/a-propos/vetriviera-nice",
@@ -2080,7 +2189,8 @@
       "emergency_24h": true,
       "duty": "Emergency-only home visits in several Alpes-Maritimes communes; 24/7 call regulation.",
       "duty_i18n": {
-        "sl": "Samo nujni obiski na domu v več občinah departmaja Alpes-Maritimes; telefonska regulacija klicev 24 ur na dan, vse dni."
+        "sl": "Samo nujni obiski na domu v več občinah departmaja Alpes-Maritimes; telefonska regulacija klicev 24 ur na dan, vse dni.",
+        "hr": "Samo hitni kućni posjeti u nekoliko općina departmana Alpes-Maritimes; telefonska procjena hitnosti 24/7."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-nice.fr",
@@ -2099,7 +2209,8 @@
       "emergency_24h": true,
       "duty": "Emergency care at the clinic or at home, 24/7 via emergency phone line.",
       "duty_i18n": {
-        "sl": "Nujna oskrba v kliniki ali na domu, 24 ur na dan, vse dni, prek nujne telefonske linije."
+        "sl": "Nujna oskrba v kliniki ali na domu, 24 ur na dan, vse dni, prek nujne telefonske linije.",
+        "hr": "Hitna skrb u klinici ili kod kuće, 24/7 preko hitne telefonske linije."
       },
       "small_animals": true,
       "url": "http://www.urgences-veterinaires-delta-06.fr",
@@ -2118,7 +2229,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays from 19:00, Saturday noon to Monday 08:00, 24h on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom od 19, od sobote opoldne do ponedeljka 8, ob praznikih 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima od 19:00, od subote u podne do ponedjeljka 08:00, blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-nice/",
@@ -2136,7 +2248,8 @@
       "emergency_24h": true,
       "duty": "Consultations Mon–Sat 09:00–12:00 / 14:00–19:00; emergency service 24/7 for dogs, cats, NAC.",
       "duty_i18n": {
-        "sl": "Pregledi pon–sob 9–12 / 14–19; nujna služba 24 ur na dan, vse dni za pse, mačke, eksotične živali (NAC)."
+        "sl": "Pregledi pon–sob 9–12 / 14–19; nujna služba 24 ur na dan, vse dni za pse, mačke, eksotične živali (NAC).",
+        "hr": "Pregledi pon–sub 09:00–12:00 / 14:00–19:00; hitna služba 24/7 za pse, mačke i egzotične ljubimce (NAC)."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-cannes-carnot-06400-univet/",
@@ -2154,7 +2267,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:00 / 14:30–19:00, Sat 09:00–12:00; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12 / 14.30–19, sob 9–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 9–12 / 14.30–19, sob 9–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 09:00–12:00 / 14:30–19:00, sub 09:00–12:00; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/cabinet-veterinaire-biot-3000-biot-bio/",
@@ -2172,7 +2286,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–12:00 / 15:00–19:00, Sat 09:00–12:00; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12 / 15–19, sob 9–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 9–12 / 15–19, sob 9–12; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 09:00–12:00 / 15:00–19:00, sub 09:00–12:00; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-ray-nice-nic/",
@@ -2189,7 +2304,8 @@
       "emergency_24h": false,
       "duty": "By appointment Mon, Tue, Thu, Fri; closed Wednesday; emergencies (voice message required) +33 6 95 32 42 20.",
       "duty_i18n": {
-        "sl": "Po dogovoru pon, tor, čet, pet; sre zaprto; nujni primeri (obvezno glasovno sporočilo) +33 6 95 32 42 20."
+        "sl": "Po dogovoru pon, tor, čet, pet; sre zaprto; nujni primeri (obvezno glasovno sporočilo) +33 6 95 32 42 20.",
+        "hr": "Po dogovoru pon, uto, čet, pet; srijedom zatvoreno; hitni slučajevi (obavezno ostavi glasovnu poruku) +33 6 95 32 42 20."
       },
       "small_animals": true,
       "url": "https://www.vethautetinee.com",
@@ -2207,7 +2323,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08:30–12:00 / 14:30–19:00, Sat 08:30–12:00 / 14:30–18:00; daytime emergencies; phone redirects out of hours.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12 / 14.30–19, sob 8.30–12 / 14.30–18; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice."
+        "sl": "pon–pet 8.30–12 / 14.30–19, sob 8.30–12 / 14.30–18; nujni primeri čez dan; zunaj delovnega časa telefon preusmeri klice.",
+        "hr": "Pon–pet 08:30–12:00 / 14:30–19:00, sub 08:30–12:00 / 14:30–18:00; hitni slučajevi tijekom dana; izvan radnog vremena telefon te upućuje dalje."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-altivet-briancon-bi2/",
@@ -2225,7 +2342,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:00–18:00, Sat 8:00–16:00, Sun closed; emergencies 24/7 at the clinic on phone call (also covers after-hours for Clinique Abbatucci).",
       "duty_i18n": {
-        "sl": "pon–pet 8–18, sob 8–16, ned zaprto; nujni primeri 24 ur na dan, vse dni v kliniki po telefonskem klicu (zagotavlja tudi dežurstvo zunaj delovnega časa za Clinique Abbatucci)."
+        "sl": "pon–pet 8–18, sob 8–16, ned zaprto; nujni primeri 24 ur na dan, vse dni v kliniki po telefonskem klicu (zagotavlja tudi dežurstvo zunaj delovnega časa za Clinique Abbatucci).",
+        "hr": "Pon–pet 8:00–18:00, sub 8:00–16:00, ned zatvoreno; hitni slučajevi 24/7 u klinici nakon telefonskog poziva (pokriva i dežurstvo Clinique Abbatucci izvan radnog vremena)."
       },
       "small_animals": true,
       "url": "https://www.cliniquedesvallees.com/",
@@ -2244,7 +2362,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:30, 14:00–19:00; Sat 8:30–12:00; out of hours the clinic line gives the on-call vet's mobile number.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–12; zunaj delovnega časa na številki klinike dobite mobilno številko dežurnega veterinarja."
+        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–12; zunaj delovnega časa na številki klinike dobite mobilno številko dežurnega veterinarja.",
+        "hr": "Pon–pet 8:30–12:30, 14:00–19:00; sub 8:30–12:00; izvan radnog vremena telefon klinike daje mobilni broj dežurnog veterinara."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-saint-andre.com/",
@@ -2263,7 +2382,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:00–18:30; Sat 8:30–12:00; emergencies 24/7 shared with neighbouring clinics.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–18.30; sob 8.30–12; nujni primeri 24 ur na dan, vse dni, si jih delijo s sosednjimi klinikami."
+        "sl": "pon–pet 8.30–12, 14–18.30; sob 8.30–12; nujni primeri 24 ur na dan, vse dni, si jih delijo s sosednjimi klinikami.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–18:30; sub 8:30–12:00; hitni slučajevi 24/7 u dogovoru sa susjednim klinikama."
       },
       "small_animals": true,
       "url": "https://www.kallistevet.com/",
@@ -2282,7 +2402,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24/7 for the clinic's clients; a regulating vet triages by phone; on-call may be at Clinique du Val de l'Aurence (288 rue Armand Dutreix) or Cabinet Armand Dutreix (123 rue Armand Dutreix).",
       "duty_i18n": {
-        "sl": "Nujna služba 24 ur na dan, vse dni za stranke klinike; veterinar po telefonu presodi nujnost; dežurstvo je lahko v Clinique du Val de l'Aurence (288 rue Armand Dutreix) ali Cabinet Armand Dutreix (123 rue Armand Dutreix)."
+        "sl": "Nujna služba 24 ur na dan, vse dni za stranke klinike; veterinar po telefonu presodi nujnost; dežurstvo je lahko v Clinique du Val de l'Aurence (288 rue Armand Dutreix) ali Cabinet Armand Dutreix (123 rue Armand Dutreix).",
+        "hr": "Hitna služba 24/7 za klijente klinike; veterinar na telefonu procjenjuje hitnost; dežurstvo može biti u Clinique du Val de l'Aurence (288 rue Armand Dutreix) ili Cabinet Armand Dutreix (123 rue Armand Dutreix)."
       },
       "small_animals": true,
       "url": "https://www.vetovanteaux.fr/",
@@ -2301,7 +2422,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:30–19:00; Sat 8:30–12:00; evenings/weekends: SOS-VETO Poitiers association (number on the clinic's answering machine), clients of member clinics only.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; zvečer in ob koncih tedna: združenje SOS-VETO Poitiers (številka na odzivniku klinike), samo za stranke včlanjenih klinik."
+        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; zvečer in ob koncih tedna: združenje SOS-VETO Poitiers (številka na odzivniku klinike), samo za stranke včlanjenih klinik.",
+        "hr": "Pon–pet 8:30–12:00, 14:30–19:00; sub 8:30–12:00; navečer i vikendom: udruga SOS-VETO Poitiers (broj je na telefonskoj sekretarici klinike), samo za klijente klinika članica."
       },
       "small_animals": true,
       "url": "https://veterinaire-delaroche-poitiers.fr/",
@@ -2320,7 +2442,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00; emergencies by phone 24/7.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; nujni primeri po telefonu 24 ur na dan, vse dni."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; nujni primeri po telefonu 24 ur na dan, vse dni.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00; hitni slučajevi telefonom 24/7."
       },
       "small_animals": true,
       "url": "https://atlanticvet.fr/",
@@ -2339,7 +2462,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 9:00–12:00, 14:00–19:00; Sat 9:00–12:00; by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12, 14–19; sob 9–12; po dogovoru."
+        "sl": "pon–pet 9–12, 14–19; sob 9–12; po dogovoru.",
+        "hr": "Pon–pet 9:00–12:00, 14:00–19:00; sub 9:00–12:00; po dogovoru."
       },
       "small_animals": true,
       "url": "https://www.1001pattes.vet/",
@@ -2358,7 +2482,8 @@
       "emergency_24h": true,
       "duty": "Consultations Mon–Tue & Thu–Fri 9:00–12:30, 14:00–19:00; Wed & Sat 9:00–12:30; Sundays emergencies; nights/Sundays/holidays seen in Bayonne or at a BIO'VET on-call site (e.g. Saint-Paul-lès-Dax).",
       "duty_i18n": {
-        "sl": "Pregledi pon–tor in čet–pet 9–12.30, 14–19; sre in sob 9–12.30; ob nedeljah nujni primeri; ponoči, ob nedeljah in praznikih sprejem v Bayonnu ali na dežurni lokaciji BIO'VET (npr. Saint-Paul-lès-Dax)."
+        "sl": "Pregledi pon–tor in čet–pet 9–12.30, 14–19; sre in sob 9–12.30; ob nedeljah nujni primeri; ponoči, ob nedeljah in praznikih sprejem v Bayonnu ali na dežurni lokaciji BIO'VET (npr. Saint-Paul-lès-Dax).",
+        "hr": "Pregledi pon, uto, čet, pet 9:00–12:30, 14:00–19:00; sri i sub 9:00–12:30; nedjeljom hitni slučajevi; noću, nedjeljom i blagdanima primaju u Bayonneu ili na dežurnoj lokaciji BIO'VET (npr. Saint-Paul-lès-Dax)."
       },
       "small_animals": true,
       "url": "https://www.biovetbayonne.fr/",
@@ -2377,7 +2502,8 @@
       "emergency_24h": true,
       "duty": "Open 8:00–19:00 without a break; Sat 8:00–12:00, 14:00–18:00; emergencies 24/7 at the clinic.",
       "duty_i18n": {
-        "sl": "Odprto 8–19 brez odmora; sob 8–12, 14–18; nujni primeri 24 ur na dan, vse dni v kliniki."
+        "sl": "Odprto 8–19 brez odmora; sob 8–12, 14–18; nujni primeri 24 ur na dan, vse dni v kliniki.",
+        "hr": "Otvoreno 8:00–19:00 bez stanke; sub 8:00–12:00, 14:00–18:00; hitni slučajevi 24/7 u klinici."
       },
       "small_animals": true,
       "url": "https://veterinaire-saintjacques.fr/",
@@ -2395,7 +2521,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 9:00–12:00, 14:00–17:00; Sun closed; emergency line 24/7.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 9–12, 14–17; ned zaprto; nujna linija 24 ur na dan, vse dni."
+        "sl": "pon–pet 8.30–12, 14–19; sob 9–12, 14–17; ned zaprto; nujna linija 24 ur na dan, vse dni.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 9:00–12:00, 14:00–17:00; ned zatvoreno; hitna linija 24/7."
       },
       "small_animals": true,
       "url": "https://clinique-veterinaire-montauban.fr/",
@@ -2414,7 +2541,8 @@
       "emergency_24h": true,
       "duty": "On-duty clinic for Pau, Tarbes and the region, 7 days a week incl. Sundays and holidays; phone reachable 24/7; national line 3115.",
       "duty_i18n": {
-        "sl": "Dežurna klinika za Pau, Tarbes in regijo, 7 dni v tednu, tudi ob nedeljah in praznikih; telefon dosegljiv 24 ur na dan, vse dni; državna številka 3115."
+        "sl": "Dežurna klinika za Pau, Tarbes in regijo, 7 dni v tednu, tudi ob nedeljah in praznikih; telefon dosegljiv 24 ur na dan, vse dni; državna številka 3115.",
+        "hr": "Dežurna klinika za Pau, Tarbes i okolicu, sedam dana u tjednu, uključujući nedjelje i blagdane; telefon dostupan 24/7; nacionalna linija 3115."
       },
       "small_animals": true,
       "url": "https://www.urgence-veterinaire-pau-tarbes.fr/",
@@ -2433,7 +2561,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:30–19:00; Sat 8:30–12:00; emergencies day and night.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujni primeri podnevi in ponoči."
+        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujni primeri podnevi in ponoči.",
+        "hr": "Pon–pet 8:30–12:00, 14:30–19:00; sub 8:30–12:00; hitni slučajevi danju i noću."
       },
       "small_animals": true,
       "url": "https://vetolonzac.fr/",
@@ -2452,7 +2581,8 @@
       "emergency_24h": true,
       "duty": "Home-visit emergency vets 24/7 all year, Sundays and holidays included; regulation centre advises by phone 24/7.",
       "duty_i18n": {
-        "sl": "Nujni veterinarji z obiski na domu 24 ur na dan, vse dni v letu, tudi ob nedeljah in praznikih; regulacijski center svetuje po telefonu 24 ur na dan, vse dni."
+        "sl": "Nujni veterinarji z obiski na domu 24 ur na dan, vse dni v letu, tudi ob nedeljah in praznikih; regulacijski center svetuje po telefonu 24 ur na dan, vse dni.",
+        "hr": "Hitni kućni posjeti veterinara 24/7 cijele godine, uključujući nedjelje i blagdane; centar za procjenu hitnosti savjetuje telefonom 24/7."
       },
       "small_animals": true,
       "url": "https://www.vetoadom-alpin.com/",
@@ -2471,7 +2601,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00; by appointment; out of hours the answering machine gives the on-call vet's mobile number.",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12; po dogovoru; zunaj delovnega časa odzivnik sporoči mobilno številko dežurnega veterinarja."
+        "sl": "pon–pet 8–12, 14–19; sob 8–12; po dogovoru; zunaj delovnega časa odzivnik sporoči mobilno številko dežurnega veterinarja.",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00; po dogovoru; izvan radnog vremena telefonska sekretarica daje mobilni broj dežurnog veterinara."
       },
       "small_animals": true,
       "url": "https://clinique3v.wixsite.com/clinique3v",
@@ -2490,7 +2621,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00; Sun closed; emergencies 24/7 at the clinic on phone call.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; ned zaprto; nujni primeri 24 ur na dan, vse dni v kliniki po telefonskem klicu."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; ned zaprto; nujni primeri 24 ur na dan, vse dni v kliniki po telefonskem klicu.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00; ned zatvoreno; hitni slučajevi 24/7 u klinici nakon telefonskog poziva."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-antibes-lacroixrouge.fr/",
@@ -2509,7 +2641,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat–Sun closed; emergencies outside hours by phone.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob in ned zaprto; nujni primeri zunaj delovnega časa po telefonu."
+        "sl": "pon–pet 8.30–12, 14–19; sob in ned zaprto; nujni primeri zunaj delovnega časa po telefonu.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub–ned zatvoreno; hitni slučajevi izvan radnog vremena telefonom."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-antibes-laclairiere.fr/",
@@ -2528,7 +2661,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: weekdays 19:00–8:00; Saturday 12:00 to Monday 8:00; holidays from 19:00 the day before to 8:00 the day after. Also the after-19:00 number for the Golfe de Saint-Tropez.",
       "duty_i18n": {
-        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19–8; od sobote 12 do ponedeljka 8; ob praznikih od 19. ure prejšnjega dne do 8. ure naslednjega dne. Tudi številka po 19. uri za Golfe de Saint-Tropez."
+        "sl": "Nujna klinika zunaj delovnega časa: med tednom 19–8; od sobote 12 do ponedeljka 8; ob praznikih od 19. ure prejšnjega dne do 8. ure naslednjega dne. Tudi številka po 19. uri za Golfe de Saint-Tropez.",
+        "hr": "Hitna ambulanta izvan radnog vremena: radnim danima 19:00–8:00; od subote 12:00 do ponedjeljka 8:00; blagdanima od 19:00 prethodnog dana do 8:00 sljedećeg dana. Ujedno i broj za zaljev Saint-Tropez nakon 19:00."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-delta-83.fr/",
@@ -2547,7 +2681,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 19:30–7:30, Saturday from 12:00, 24 h on Sundays and public holidays; call before coming.",
       "duty_i18n": {
-        "sl": "Med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; pokličite pred prihodom."
+        "sl": "Med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan; pokličite pred prihodom.",
+        "hr": "Radnim danima 19:30–7:30, subotom od 12:00, nedjeljom i blagdanima 24 sata; nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-grenoble.com/",
@@ -2566,7 +2701,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 19:30–7:30, Saturday from 14:00, continuous on Sundays and public holidays; call before coming.",
       "duty_i18n": {
-        "sl": "Med tednom 19.30–7.30, v soboto od 14, ob nedeljah in praznikih neprekinjeno; pokličite pred prihodom."
+        "sl": "Med tednom 19.30–7.30, v soboto od 14, ob nedeljah in praznikih neprekinjeno; pokličite pred prihodom.",
+        "hr": "Radnim danima 19:30–7:30, subotom od 14:00, nedjeljom i blagdanima neprekidno; nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-alpine.com/",
@@ -2584,7 +2720,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 19:30–7:30, Saturday from 12:00, 24 h on Sundays and public holidays.",
       "duty_i18n": {
-        "sl": "Med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan."
+        "sl": "Med tednom 19.30–7.30, v soboto od 12, ob nedeljah in praznikih 24 ur na dan.",
+        "hr": "Radnim danima 19:30–7:30, subotom od 12:00, nedjeljom i blagdanima 24 sata."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-hautesavoie.com/",
@@ -2602,7 +2739,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours clinic: Mon–Fri from 19:00 to 8:00; weekends from Saturday to Monday 8:00, open all Sunday; holidays from 19:00 the day before to 8:00 the day after. Call centre answers 7/7; consultations by appointment except life-threatening cases.",
       "duty_i18n": {
-        "sl": "Klinika zunaj delovnega časa: pon–pet od 19 do 8; ob koncih tedna od sobote do ponedeljka 8, odprto vso nedeljo; ob praznikih od 19. ure prejšnjega dne do 8. ure naslednjega dne. Klicni center odgovarja 7 dni v tednu; pregledi po dogovoru, razen pri življenjsko ogroženih primerih."
+        "sl": "Klinika zunaj delovnega časa: pon–pet od 19 do 8; ob koncih tedna od sobote do ponedeljka 8, odprto vso nedeljo; ob praznikih od 19. ure prejšnjega dne do 8. ure naslednjega dne. Klicni center odgovarja 7 dni v tednu; pregledi po dogovoru, razen pri življenjsko ogroženih primerih.",
+        "hr": "Klinika izvan radnog vremena: pon–pet od 19:00 do 8:00; vikendom od subote do ponedjeljka 8:00, nedjeljom cijeli dan otvoreno; blagdanima od 19:00 prethodnog dana do 8:00 sljedećeg dana. Pozivni centar radi 7/7; pregledi po dogovoru, osim kod životno ugroženih ljubimaca."
       },
       "small_animals": true,
       "url": "https://maison-des-urgences-veterinaires-valence.fr/",
@@ -2621,7 +2759,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–18:00; Sat 8:00–12:00; emergencies during opening hours; nights/Sundays/holidays handled by Clinique vétérinaire des Vallées.",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–18; sob 8–12; nujni primeri v delovnem času; ponoči, ob nedeljah in praznikih prevzame Clinique vétérinaire des Vallées."
+        "sl": "pon–pet 8–12, 14–18; sob 8–12; nujni primeri v delovnem času; ponoči, ob nedeljah in praznikih prevzame Clinique vétérinaire des Vallées.",
+        "hr": "Pon–pet 8:00–12:00, 14:00–18:00; sub 8:00–12:00; hitni slučajevi tijekom radnog vremena; noću, nedjeljom i blagdanima preuzima Clinique vétérinaire des Vallées."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-abbatucci.fr/",
@@ -2640,7 +2779,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–19:00, Sat 9:00–13:00; walk-in and by appointment; emergencies by phone. Other sites: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–13; brez naročanja in po dogovoru; nujni primeri po telefonu. Druge lokacije: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando)."
+        "sl": "pon–pet 9–19, sob 9–13; brez naročanja in po dogovoru; nujni primeri po telefonu. Druge lokacije: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
+        "hr": "Pon–pet 9:00–19:00, sub 9:00–13:00; bez najave i po dogovoru; hitni slučajevi telefonom. Ostale lokacije: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando)."
       },
       "small_animals": true,
       "url": "https://www.cyrnevet.com/",
@@ -2658,7 +2798,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:00; Sat 8:00–17:00; out-of-hours emergencies at the same number, own clients and referring vets only.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19; sob 8–17; nujni primeri zunaj delovnega časa na isti številki, samo za lastne stranke in veterinarje, ki napotujejo bolnike."
+        "sl": "pon–pet 8–19; sob 8–17; nujni primeri zunaj delovnega časa na isti številki, samo za lastne stranke in veterinarje, ki napotujejo bolnike.",
+        "hr": "Pon–pet 8:00–19:00; sub 8:00–17:00; hitni slučajevi izvan radnog vremena na istom broju, samo za vlastite klijente i veterinare koji upućuju pacijente."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/limoges-val-de-l-aurence-204",
@@ -2676,7 +2817,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00; out-of-hours emergencies shared with other local clinics (procedure on the answering machine).",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12; nujne primere zunaj delovnega časa si delijo z drugimi lokalnimi klinikami (postopek na odzivniku)."
+        "sl": "pon–pet 8–12, 14–19; sob 8–12; nujne primere zunaj delovnega časa si delijo z drugimi lokalnimi klinikami (postopek na odzivniku).",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00; hitne slučajeve izvan radnog vremena dijele s drugim lokalnim klinikama (postupak je na telefonskoj sekretarici)."
       },
       "small_animals": true,
       "url": "https://vplus.fr/nos-cliniques/beaulieupoitiers/",
@@ -2694,7 +2836,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:00, 14:00–19:00; Sat 9:00–14:00; Sun closed; clinic number stays active out of hours to direct emergencies.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12, 14–19; sob 9–14; ned zaprto; zunaj delovnega časa je številka klinike aktivna za usmerjanje nujnih primerov."
+        "sl": "pon–pet 9–12, 14–19; sob 9–14; ned zaprto; zunaj delovnega časa je številka klinike aktivna za usmerjanje nujnih primerov.",
+        "hr": "Pon–pet 9:00–12:00, 14:00–19:00; sub 9:00–14:00; ned zatvoreno; broj klinike radi i izvan radnog vremena te upućuje u hitnim slučajevima."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-perigueux-per/",
@@ -2712,7 +2855,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:00; Sat 8:00–12:00; by appointment; out of hours call the clinic.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19; sob 8–12; po dogovoru; zunaj delovnega časa pokličite kliniko."
+        "sl": "pon–pet 8–19; sob 8–12; po dogovoru; zunaj delovnega časa pokličite kliniko.",
+        "hr": "Pon–pet 8:00–19:00; sub 8:00–12:00; po dogovoru; izvan radnog vremena nazovi kliniku."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-mondoux-perigueux-24000-univet/",
@@ -2730,7 +2874,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00; clinic number stays active out of hours to direct emergencies.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; zunaj delovnega časa je številka klinike aktivna za usmerjanje nujnih primerov."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; zunaj delovnega časa je številka klinike aktivna za usmerjanje nujnih primerov.",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00; broj klinike radi i izvan radnog vremena te upućuje u hitnim slučajevima."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-faubourg-bergerac-be2/",
@@ -2748,7 +2893,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30, 14:00–18:30; Sat 8:30–12:30; by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 14–18.30; sob 8.30–12.30; po dogovoru."
+        "sl": "pon–pet 8.30–12.30, 14–18.30; sob 8.30–12.30; po dogovoru.",
+        "hr": "Pon–pet 8:30–12:30, 14:00–18:30; sub 8:30–12:30; po dogovoru."
       },
       "small_animals": true,
       "url": "https://vetlouisonbobet.wixsite.com/clinvetsarlat",
@@ -2767,7 +2913,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00; by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12; po dogovoru."
+        "sl": "pon–pet 8–12, 14–19; sob 8–12; po dogovoru.",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00; po dogovoru."
       },
       "small_animals": true,
       "url": "https://vetoperigaud.wixsite.com/selarlgp",
@@ -2785,7 +2932,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–13:00, 14:00–19:00; Sat 8:30–12:30; out of hours the answering machine gives the on-duty vet.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–13, 14–19; sob 8.30–12.30; zunaj delovnega časa odzivnik sporoči dežurnega veterinarja."
+        "sl": "pon–pet 8.30–13, 14–19; sob 8.30–12.30; zunaj delovnega časa odzivnik sporoči dežurnega veterinarja.",
+        "hr": "Pon–pet 8:30–13:00, 14:00–19:00; sub 8:30–12:30; izvan radnog vremena telefonska sekretarica javlja dežurnog veterinara."
       },
       "small_animals": true,
       "url": "https://veto16.fr/",
@@ -2803,7 +2951,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:30–19:00; Sat 8:30–12:00; out-of-hours emergency service one week in three; call the same number for the weekend duty clinic.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujna služba zunaj delovnega časa vsak tretji teden; za dežurno kliniko ob koncu tedna pokličite isto številko."
+        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujna služba zunaj delovnega časa vsak tretji teden; za dežurno kliniko ob koncu tedna pokličite isto številko.",
+        "hr": "Pon–pet 8:30–12:00, 14:30–19:00; sub 8:30–12:00; hitna služba izvan radnog vremena svaki treći tjedan; za dežurnu kliniku vikendom nazovi isti broj."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/albi-pastel-205",
@@ -2821,7 +2970,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00; Sun closed; out of hours the answering machine gives the duty vet (rota with Clinique de la Madeleine and other Albi practices).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; ned zaprto; zunaj delovnega časa odzivnik sporoči dežurnega veterinarja (izmenično dežurstvo s Clinique de la Madeleine in drugimi ordinacijami v Albiju)."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12; ned zaprto; zunaj delovnega časa odzivnik sporoči dežurnega veterinarja (izmenično dežurstvo s Clinique de la Madeleine in drugimi ordinacijami v Albiju).",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00; ned zatvoreno; izvan radnog vremena telefonska sekretarica javlja dežurnog veterinara (raspored s Clinique de la Madeleine i drugim ordinacijama u Albiju)."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-parc.com/",
@@ -2839,7 +2989,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00, 14:00–18:00; Sun closed; out-of-hours calls redirected to the nearest emergency service.",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12, 14–18; ned zaprto; klice zunaj delovnega časa preusmerijo na najbližjo nujno službo."
+        "sl": "pon–pet 8–12, 14–19; sob 8–12, 14–18; ned zaprto; klice zunaj delovnega časa preusmerijo na najbližjo nujno službo.",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00, 14:00–18:00; ned zatvoreno; pozive izvan radnog vremena preusmjeravaju na najbližu hitnu službu."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-mazeran-de-beziers-bez/",
@@ -2857,7 +3008,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:00; Sat 8:00–18:00; Sun closed; emergencies: duty structure on +33 4 67 01 29 22.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19, sob 8–18, ned zaprto; nujni primeri: dežurna služba na +33 4 67 01 29 22."
+        "sl": "pon–pet 8–19, sob 8–18, ned zaprto; nujni primeri: dežurna služba na +33 4 67 01 29 22.",
+        "hr": "Pon–pet 8:00–19:00; sub 8:00–18:00; ned zatvoreno; hitni slučajevi: dežurna služba na +33 4 67 01 29 22."
       },
       "small_animals": true,
       "url": "https://www.veterinairefoch.com/",
@@ -2876,7 +3028,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:00; Sat 8:00–18:00; by appointment; in an emergency the same number reaches the duty vet.",
       "duty_i18n": {
-        "sl": "pon–pet 8–19, sob 8–18, po dogovoru; v nujnem primeru na isti številki dosežete dežurnega veterinarja."
+        "sl": "pon–pet 8–19, sob 8–18, po dogovoru; v nujnem primeru na isti številki dosežete dežurnega veterinarja.",
+        "hr": "Pon–pet 8:00–19:00; sub 8:00–18:00; po dogovoru; u hitnom slučaju isti broj povezuje s dežurnim veterinarom."
       },
       "small_animals": true,
       "url": "https://www.vetosud.com/",
@@ -2894,7 +3047,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00, 14:00–18:00; out of hours urgent line +33 4 65 00 10 70; evening/weekend/holiday emergencies at the Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (rota of six Carcassonne-area practices).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12, 14–18; zunaj delovnega časa nujna linija +33 4 65 00 10 70; nujni primeri zvečer, ob koncih tedna in praznikih v Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (dežurstvo šestih ambulant na območju Carcassonne)."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12, 14–18; zunaj delovnega časa nujna linija +33 4 65 00 10 70; nujni primeri zvečer, ob koncih tedna in praznikih v Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (dežurstvo šestih ambulant na območju Carcassonne).",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00, 14:00–18:00; izvan radnog vremena hitna linija +33 4 65 00 10 70; navečer, vikendom i blagdanima hitni slučajevi u Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (raspored šest ordinacija s područja Carcassonnea)."
       },
       "small_animals": true,
       "url": "https://www.vetoremparts.fr/",
@@ -2912,7 +3066,8 @@
       "emergency_24h": false,
       "duty": "For out-of-hours emergencies in the Tarbes area see the Bizanos duty clinic (Urgences vétérinaires Pau–Tarbes).",
       "duty_i18n": {
-        "sl": "Za nujne primere zunaj delovnega časa na območju Tarbes glejte dežurno kliniko v kraju Bizanos (Urgences vétérinaires Pau–Tarbes)."
+        "sl": "Za nujne primere zunaj delovnega časa na območju Tarbes glejte dežurno kliniko v kraju Bizanos (Urgences vétérinaires Pau–Tarbes).",
+        "hr": "Za hitne slučajeve izvan radnog vremena na području Tarbesa obrati se dežurnoj klinici u Bizanosu (Urgences vétérinaires Pau–Tarbes)."
       },
       "small_animals": true,
       "url": "https://veterinairelaeropostale.fr/",
@@ -2931,7 +3086,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 8:30–12:00, 14:00–17:00; out of hours: VetoAdom Alpin (+33 4 58 17 32 32) or Maison des Urgences Alpine (+33 4 58 39 00 00).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12, 14–17; zunaj delovnega časa: VetoAdom Alpin (+33 4 58 17 32 32) ali Maison des Urgences Alpine (+33 4 58 39 00 00)."
+        "sl": "pon–pet 8.30–12, 14–19; sob 8.30–12, 14–17; zunaj delovnega časa: VetoAdom Alpin (+33 4 58 17 32 32) ali Maison des Urgences Alpine (+33 4 58 39 00 00).",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 8:30–12:00, 14:00–17:00; izvan radnog vremena: VetoAdom Alpin (+33 4 58 17 32 32) ili Maison des Urgences Alpine (+33 4 58 39 00 00)."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/chamnord-236",
@@ -2949,7 +3105,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:30–19:00; Sat 8:30–12:00, 14:30–17:00; Sun closed; number stays active out of hours to direct emergencies.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12, 14.30–17; ned zaprto; številka je zunaj delovnega časa aktivna za usmerjanje nujnih primerov."
+        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12, 14.30–17; ned zaprto; številka je zunaj delovnega časa aktivna za usmerjanje nujnih primerov.",
+        "hr": "Pon–pet 8:30–12:00, 14:30–19:00; sub 8:30–12:00, 14:30–17:00; ned zatvoreno; broj radi i izvan radnog vremena te upućuje u hitnim slučajevima."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-des-chabanneries-bourg-les-valence-blv/",
@@ -2967,7 +3124,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:30, 14:00–18:30; weekends closed; out-of-hours emergencies via the on-duty vet of the Domancy clinic (+33 4 50 93 51 46).",
       "duty_i18n": {
-        "sl": "pon–pet 9–12.30, 14–18.30; ob koncih tedna zaprto; nujni primeri zunaj delovnega časa prek dežurnega veterinarja klinike Domancy (+33 4 50 93 51 46)."
+        "sl": "pon–pet 9–12.30, 14–18.30; ob koncih tedna zaprto; nujni primeri zunaj delovnega časa prek dežurnega veterinarja klinike Domancy (+33 4 50 93 51 46).",
+        "hr": "Pon–pet 9:00–12:30, 14:00–18:30; vikendom zatvoreno; hitni slučajevi izvan radnog vremena preko dežurnog veterinara klinike u Domancyju (+33 4 50 93 51 46)."
       },
       "small_animals": true,
       "url": "https://cabinetvetdelavallee.fr/",
@@ -2985,7 +3143,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–19:00; Sat 9:00–12:00, 14:00–17:00; out of hours callers are connected to the group's on-call service (covers Chamonix and Megève sites).",
       "duty_i18n": {
-        "sl": "pon–pet 9–19; sob 9–12, 14–17; zunaj delovnega časa vas povežejo z dežurno službo skupine (pokriva lokaciji Chamonix in Megève)."
+        "sl": "pon–pet 9–19; sob 9–12, 14–17; zunaj delovnega časa vas povežejo z dežurno službo skupine (pokriva lokaciji Chamonix in Megève).",
+        "hr": "Pon–pet 9:00–19:00; sub 9:00–12:00, 14:00–17:00; izvan radnog vremena poziv se povezuje s dežurnom službom grupe (pokriva lokacije Chamonix i Megève)."
       },
       "small_animals": true,
       "url": "https://www.cliniquevetdelavallee.com/",
@@ -3003,7 +3162,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:30, 14:00–18:30; Sat 9:00–13:00; out of hours: group on-call service.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12.30, 14–18.30; sob 9–13; zunaj delovnega časa: dežurna služba skupine."
+        "sl": "pon–pet 9–12.30, 14–18.30; sob 9–13; zunaj delovnega časa: dežurna služba skupine.",
+        "hr": "Pon–pet 9:00–12:30, 14:00–18:30; sub 9:00–13:00; izvan radnog vremena: dežurna služba grupe."
       },
       "small_animals": true,
       "url": "https://www.cliniquevetdelavallee.com/",
@@ -3021,7 +3181,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:30–19:00; Sat 8:30–12:00; emergencies nights, Sundays and holidays on the same number. Second site: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujni primeri ponoči, ob nedeljah in praznikih na isti številki. Druga lokacija: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11)."
+        "sl": "pon–pet 8.30–12, 14.30–19; sob 8.30–12; nujni primeri ponoči, ob nedeljah in praznikih na isti številki. Druga lokacija: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
+        "hr": "Pon–pet 8:30–12:00, 14:30–19:00; sub 8:30–12:00; hitni slučajevi noću, nedjeljom i blagdanima na istom broju. Druga lokacija: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11)."
       },
       "small_animals": true,
       "url": "https://vetocareicarnoles.fr/",
@@ -3039,7 +3200,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:00, 15:00–19:00; Sat 9:00–12:00; Sun closed; emergencies outside opening hours +33 4 93 65 40 54.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12, 15–19; sob 9–12; ned zaprto; nujni primeri zunaj delovnega časa +33 4 93 65 40 54."
+        "sl": "pon–pet 9–12, 15–19; sob 9–12; ned zaprto; nujni primeri zunaj delovnega časa +33 4 93 65 40 54.",
+        "hr": "Pon–pet 9:00–12:00, 15:00–19:00; sub 9:00–12:00; ned zatvoreno; hitni slučajevi izvan radnog vremena +33 4 93 65 40 54."
       },
       "small_animals": true,
       "url": "https://antibes.vet/",
@@ -3057,7 +3219,8 @@
       "emergency_24h": true,
       "duty": "Consultations Mon–Sat 8:00–19:00; emergencies 24/7 incl. Sunday",
       "duty_i18n": {
-        "sl": "Pregledi pon–sob 8–19; nujna pomoč 24 ur na dan, tudi ob nedeljah"
+        "sl": "Pregledi pon–sob 8–19; nujna pomoč 24 ur na dan, tudi ob nedeljah",
+        "hr": "Pregledi pon–sub 8:00–19:00; hitni slučajevi 24/7, uključujući nedjelju"
       },
       "url": "https://www.chvcordeliers.com/",
       "source_url": "https://www.chvcordeliers.com/",
@@ -3075,7 +3238,8 @@
       "emergency_24h": false,
       "duty": "Emergency-only practice: weekdays 20:00–8:00, Saturday from 14:00, 24 h on Sundays and public holidays",
       "duty_i18n": {
-        "sl": "Samo nujna pomoč: ob delavnikih 20–8, ob sobotah od 14, ob nedeljah in praznikih 24 ur na dan"
+        "sl": "Samo nujna pomoč: ob delavnikih 20–8, ob sobotah od 14, ob nedeljah in praznikih 24 ur na dan",
+        "hr": "Ordinacija samo za hitne slučajeve: radnim danima 20:00–8:00, subotom od 14:00, nedjeljom i blagdanima 24 sata"
       },
       "url": "https://www.maisondesurgences-neuilly.com/",
       "source_url": "https://www.maisondesurgences-neuilly.com/",
@@ -3093,7 +3257,8 @@
       "emergency_24h": false,
       "duty": "Emergency-only practice by appointment (except life-threatening cases): weekdays 19:00–8:00, weekends until Monday 8:00 (24 h on Sundays), public holidays from 19:00 the evening before",
       "duty_i18n": {
-        "sl": "Samo nujna pomoč, po dogovoru (razen pri življenjsko ogroženih primerih): ob delavnikih 19–8, ob koncih tedna do ponedeljka 8 (ob nedeljah 24 ur na dan), ob praznikih od 19. ure prejšnjega večera"
+        "sl": "Samo nujna pomoč, po dogovoru (razen pri življenjsko ogroženih primerih): ob delavnikih 19–8, ob koncih tedna do ponedeljka 8 (ob nedeljah 24 ur na dan), ob praznikih od 19. ure prejšnjega večera",
+        "hr": "Ordinacija samo za hitne slučajeve, po dogovoru (osim kod životno ugroženih ljubimaca): radnim danima 19:00–8:00, vikendom do ponedjeljka 8:00 (nedjeljom 24 sata), blagdanima od 19:00 prethodne večeri"
       },
       "url": "https://maison-des-urgences-veterinaires-macon.fr/cabinet-veterinaire-de-garde/",
       "source_url": "https://maison-des-urgences-veterinaires-macon.fr/cabinet-veterinaire-de-garde/",
@@ -3112,7 +3277,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–18:30; Sat 8:30–12:00; out of hours call the practice number",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–18.30; sob 8.30–12; zunaj delovnega časa pokličite številko ambulante"
+        "sl": "pon–pet 8–12, 14–18.30; sob 8.30–12; zunaj delovnega časa pokličite številko ambulante",
+        "hr": "Pon–pet 8:00–12:00, 14:00–18:30; sub 8:30–12:00; izvan radnog vremena nazovi broj ordinacije"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-dunkerque-59140-univet/",
       "quote": "En cas d'urgence, en dehors de nos horaires d'ouverture, Merci de contacter le cabinet au 03 28 66 62 63",
@@ -3131,7 +3297,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00; out of hours via the Arras shared duty rota",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12; zunaj delovnega časa prek skupnega dežurstva ambulant Arras"
+        "sl": "pon–pet 8–12, 14–19; sob 8–12; zunaj delovnega časa prek skupnega dežurstva ambulant Arras",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00; izvan radnog vremena preko zajedničkog dežurnog rasporeda Arrasa"
       },
       "url": "https://www.cliniquedelaliberte.fr/",
       "source_url": "https://www.cliniquedelaliberte.fr/urgences",
@@ -3149,7 +3316,8 @@
       "emergency_24h": true,
       "duty": "Each Arras practice is on duty for a full week, 24 h; get the on-duty number from your usual vet's voicemail; life-threatening emergencies only, no home visits, surcharge",
       "duty_i18n": {
-        "sl": "Vsaka ambulanta na območju Arras je dežurna cel teden, 24 ur na dan; številko dežurne ambulante izveste na odzivniku svojega veterinarja; samo za življenjsko ogrožene primere, brez obiskov na domu, doplačilo"
+        "sl": "Vsaka ambulanta na območju Arras je dežurna cel teden, 24 ur na dan; številko dežurne ambulante izveste na odzivniku svojega veterinarja; samo za življenjsko ogrožene primere, brez obiskov na domu, doplačilo",
+        "hr": "Svaka ordinacija u Arrasu dežura cijeli tjedan, 24 sata; broj dežurne ordinacije dobit ćeš na glasovnoj pošti svog veterinara; samo za životno ugrožene ljubimce, bez kućnih posjeta, uz doplatak"
       },
       "url": "https://www.cliniquedelaliberte.fr/urgences",
       "source_url": "https://www.cliniquedelaliberte.fr/urgences",
@@ -3168,7 +3336,8 @@
       "emergency_24h": true,
       "duty": "Shared out-of-hours rota of Valenciennes-area practices; the call is transferred to the practice on duty",
       "duty_i18n": {
-        "sl": "Skupno dežurstvo ambulant na območju Valenciennes zunaj delovnega časa; klic preusmerijo k dežurni ambulanti"
+        "sl": "Skupno dežurstvo ambulant na območju Valenciennes zunaj delovnega časa; klic preusmerijo k dežurni ambulanti",
+        "hr": "Zajednički raspored dežurstava ordinacija s područja Valenciennesa izvan radnog vremena; poziv se prosljeđuje dežurnoj ordinaciji"
       },
       "url": "https://calipsis.fr/",
       "source_url": "https://calipsis.fr/",
@@ -3186,7 +3355,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 8:00–18:30; emergencies 24/7 after a phone call (GVGV rota, seen at the practice on duty, no home visits)",
       "duty_i18n": {
-        "sl": "pon–sob 8–18.30; nujna pomoč 24 ur na dan po telefonskem klicu (dežurstvo GVGV, pregled v dežurni ambulanti, brez obiskov na domu)"
+        "sl": "pon–sob 8–18.30; nujna pomoč 24 ur na dan po telefonskem klicu (dežurstvo GVGV, pregled v dežurni ambulanti, brez obiskov na domu)",
+        "hr": "Pon–sub 8:00–18:30; hitni slučajevi 24/7 nakon telefonskog poziva (raspored GVGV, pregled u dežurnoj ordinaciji, bez kućnih posjeta)"
       },
       "url": "https://www.vetomusee.fr/",
       "source_url": "https://www.vetomusee.fr/la-clinique/les-urgences",
@@ -3205,7 +3375,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:15–12:15, 14:00–18:30; Sat 8:15–12:15, 14:00–17:00; emergencies nights, weekends and public holidays by phone",
       "duty_i18n": {
-        "sl": "pon–pet 8.15–12.15, 14–18.30; sob 8.15–12.15, 14–17; nujni primeri ponoči, ob koncih tedna in praznikih po telefonu"
+        "sl": "pon–pet 8.15–12.15, 14–18.30; sob 8.15–12.15, 14–17; nujni primeri ponoči, ob koncih tedna in praznikih po telefonu",
+        "hr": "Pon–pet 8:15–12:15, 14:00–18:30; sub 8:15–12:15, 14:00–17:00; hitni slučajevi noću, vikendom i blagdanima telefonom"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-beauvais-60000-univet/",
       "quote": "Urgences assurées les nuits, week-end et jours fériés sur appel téléphonique : 03 44 06 00 00",
@@ -3223,7 +3394,8 @@
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu, Fri 9:00–12:00, 14:00–19:00; Wed 9:00–14:30; Sat 9:00–13:00; out of hours the VET'TEAM rota of ten Compiègne-area clinics — call this number at any hour to get the on-duty vet",
       "duty_i18n": {
-        "sl": "pon, tor, čet, pet 9–12, 14–19; sre 9–14.30; sob 9–13; zunaj delovnega časa dežurstvo VET'TEAM desetih klinik na območju Compiègne – pokličite to številko kadar koli in dobite dežurnega veterinarja"
+        "sl": "pon, tor, čet, pet 9–12, 14–19; sre 9–14.30; sob 9–13; zunaj delovnega časa dežurstvo VET'TEAM desetih klinik na območju Compiègne – pokličite to številko kadar koli in dobite dežurnega veterinarja",
+        "hr": "Pon, uto, čet, pet 9:00–12:00, 14:00–19:00; sri 9:00–14:30; sub 9:00–13:00; izvan radnog vremena raspored VET'TEAM deset klinika s područja Compiègnea – nazovi ovaj broj u bilo koje doba i dobit ćeš dežurnog veterinara"
       },
       "url": "https://clinique-veto-familiale.fr/",
       "source_url": "https://clinique-veto-familiale.fr/urgences/",
@@ -3241,7 +3413,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00; Sat 8:00–12:00, 14:00–17:00; emergencies until 21:00",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19; sob 8–12, 14–17; nujni primeri do 21"
+        "sl": "pon–pet 8–12, 14–19; sob 8–12, 14–17; nujni primeri do 21",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00; sub 8:00–12:00, 14:00–17:00; hitni slučajevi do 21:00"
       },
       "url": "https://www.alliavet.fr/",
       "source_url": "https://www.alliavet.fr/",
@@ -3259,7 +3432,8 @@
       "emergency_24h": false,
       "duty": "Mon, Tue, Wed, Fri 8:00–12:00, 13:45–18:45; Thu to 17:45; Sat 9:00–12:00",
       "duty_i18n": {
-        "sl": "pon, tor, sre, pet 8–12, 13.45–18.45; čet do 17.45; sob 9–12"
+        "sl": "pon, tor, sre, pet 8–12, 13.45–18.45; čet do 17.45; sob 9–12",
+        "hr": "Pon, uto, sri, pet 8:00–12:00, 13:45–18:45; čet do 17:45; sub 9:00–12:00"
       },
       "source_url": "https://www.vetorino.com/veterinaire/saintquentin-02100/",
       "quote": "En cas d'urgence, veuillez appeler le 03 23 08 88 60",
@@ -3277,7 +3451,8 @@
       "emergency_24h": true,
       "duty": "Sideville Mon–Fri 8:30–18:30, Sat 8:30–14:00; emergencies 24 h by phone",
       "duty_i18n": {
-        "sl": "Sideville pon–pet 8.30–18.30, sob 8.30–14; nujna pomoč 24 ur na dan po telefonu"
+        "sl": "Sideville pon–pet 8.30–18.30, sob 8.30–14; nujna pomoč 24 ur na dan po telefonu",
+        "hr": "Sideville pon–pet 8:30–18:30, sub 8:30–14:00; hitni slučajevi 24 sata telefonom"
       },
       "url": "https://www.cliniqueveterinaireladivette.com/",
       "source_url": "https://www.cliniqueveterinaireladivette.com/",
@@ -3296,7 +3471,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–18:30; Sat 8:00–12:00, 14:00–16:30",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–18.30; sob 8–12, 14–16.30"
+        "sl": "pon–pet 8–12, 14–18.30; sob 8–12, 14–16.30",
+        "hr": "Pon–pet 8:00–12:00, 14:00–18:30; sub 8:00–12:00, 14:00–16:30"
       },
       "url": "https://www.vetocherbourgcentre.fr/",
       "source_url": "https://www.vetocherbourgcentre.fr/nos-services/",
@@ -3313,7 +3489,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30, 14:00–19:00; Sat 8:30–19:00; nights, weekends and holidays relayed to V2TU Rouen",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–19; ponoči, ob koncih tedna in praznikih preusmeritev na V2TU Rouen"
+        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–19; ponoči, ob koncih tedna in praznikih preusmeritev na V2TU Rouen",
+        "hr": "Pon–pet 8:30–12:30, 14:00–19:00; sub 8:30–19:00; noću, vikendom i blagdanima upućuju na V2TU Rouen"
       },
       "source_url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-la-foret/",
       "quote": "V2TU Rouen assure notre relais en dehors de nos heures d’ouverture : la nuit, les week-ends et les jours fériés.",
@@ -3332,7 +3509,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:30, 13:30–19:00; Sat 8:30–12:00, 14:00–18:00; emergencies 24/7 via the clinic number",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 13.30–19; sob 8.30–12, 14–18; nujna pomoč 24 ur na dan prek številke klinike"
+        "sl": "pon–pet 8.30–12.30, 13.30–19; sob 8.30–12, 14–18; nujna pomoč 24 ur na dan prek številke klinike",
+        "hr": "Pon–pet 8:30–12:30, 13:30–19:00; sub 8:30–12:00, 14:00–18:00; hitni slučajevi 24/7 preko broja klinike"
       },
       "url": "https://clinique-coubertin.fr/",
       "source_url": "https://clinique-coubertin.fr/clinique-a-alencon/",
@@ -3351,7 +3529,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30, 14:00–19:00; Sat 8:30–12:15, 14:00–18:30; nights, Sundays and holidays call the clinic and press 1 (small animals) or 2 (horses)",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–12.15, 14–18.30; ponoči, ob nedeljah in praznikih pokličite kliniko in pritisnite 1 (male živali) ali 2 (konji)"
+        "sl": "pon–pet 8.30–12.30, 14–19; sob 8.30–12.15, 14–18.30; ponoči, ob nedeljah in praznikih pokličite kliniko in pritisnite 1 (male živali) ali 2 (konji)",
+        "hr": "Pon–pet 8:30–12:30, 14:00–19:00; sub 8:30–12:15, 14:00–18:30; noću, nedjeljom i blagdanima nazovi kliniku i pritisni 1 (male životinje) ili 2 (konji)"
       },
       "url": "https://cvcf.fr/",
       "source_url": "https://cvcf.fr/",
@@ -3370,7 +3549,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:45–12:30, 13:30–18:30; out of hours the on-duty vet via the same number",
       "duty_i18n": {
-        "sl": "pon–pet 8.45–12.30, 13.30–18.30; zunaj delovnega časa dežurni veterinar na isti številki"
+        "sl": "pon–pet 8.45–12.30, 13.30–18.30; zunaj delovnega časa dežurni veterinar na isti številki",
+        "hr": "Pon–pet 8:45–12:30, 13:30–18:30; izvan radnog vremena dežurnog veterinara dobit ćeš na istom broju"
       },
       "url": "https://www.cliniqueveterinairequimper-cornouaille.fr/",
       "source_url": "https://www.cliniqueveterinairequimper-cornouaille.fr/",
@@ -3389,7 +3569,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30, 13:45–19:00; Sat 9:00–12:00; out-of-hours emergency service on the same number",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30, 13.45–19; sob 9–12; nujna služba zunaj delovnega časa na isti številki"
+        "sl": "pon–pet 8.30–12.30, 13.45–19; sob 9–12; nujna služba zunaj delovnega časa na isti številki",
+        "hr": "Pon–pet 8:30–12:30, 13:45–19:00; sub 9:00–12:00; hitna služba izvan radnog vremena na istom broju"
       },
       "source_url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/lorient-la-decouverte-930",
       "quote": "En dehors de nos horaires d'ouverture, un service d'urgence est assuré par nos soins au même numéro.",
@@ -3407,7 +3588,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 9:00–12:00, 14:00–19:00; Sat 9:00–12:00; 24-h emergencies via a Vannes-area duty service",
       "duty_i18n": {
-        "sl": "pon–pet 9–12, 14–19; sob 9–12; nujna pomoč 24 ur na dan prek dežurne službe na območju Vannes"
+        "sl": "pon–pet 9–12, 14–19; sob 9–12; nujna pomoč 24 ur na dan prek dežurne službe na območju Vannes",
+        "hr": "Pon–pet 9:00–12:00, 14:00–19:00; sub 9:00–12:00; hitni slučajevi 24 sata preko dežurne službe s područja Vannesa"
       },
       "url": "https://www.clinique-veterinaire-copernic.com/",
       "source_url": "https://www.clinique-veterinaire-copernic.com/",
@@ -3426,7 +3608,8 @@
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu, Fri 8:30–12:30, 14:00–19:00; Wed 8:30–12:30; Sat 8:30–12:30, 14:00–17:00; out of hours the voicemail gives the on-duty vet",
       "duty_i18n": {
-        "sl": "pon, tor, čet, pet 8.30–12.30, 14–19; sre 8.30–12.30; sob 8.30–12.30, 14–17; zunaj delovnega časa dežurnega veterinarja sporoči odzivnik"
+        "sl": "pon, tor, čet, pet 8.30–12.30, 14–19; sre 8.30–12.30; sob 8.30–12.30, 14–17; zunaj delovnega časa dežurnega veterinarja sporoči odzivnik",
+        "hr": "Pon, uto, čet, pet 8:30–12:30, 14:00–19:00; sri 8:30–12:30; sub 8:30–12:30, 14:00–17:00; izvan radnog vremena glasovna pošta javlja dežurnog veterinara"
       },
       "url": "https://www.vetodelaprunelle.com/",
       "source_url": "https://www.vetodelaprunelle.com/",
@@ -3444,7 +3627,8 @@
       "emergency_24h": false,
       "duty": "Mon–Sat 9:00–12:00, 14:00–19:00 by appointment; emergencies by phone with the Presqu'île duty system",
       "duty_i18n": {
-        "sl": "pon–sob 9–12, 14–19 po dogovoru; nujni primeri po telefonu prek dežurnega sistema Presqu'île"
+        "sl": "pon–sob 9–12, 14–19 po dogovoru; nujni primeri po telefonu prek dežurnega sistema Presqu'île",
+        "hr": "Pon–sub 9:00–12:00, 14:00–19:00 po dogovoru; hitni slučajevi telefonom preko dežurnog sustava Presqu'île"
       },
       "url": "https://www.clinique-immavet.fr/",
       "source_url": "https://www.clinique-immavet.fr/",
@@ -3462,7 +3646,8 @@
       "emergency_24h": false,
       "duty": "Duty vet every night, Sundays and public holidays for the clinic's own patients; number on the clinic voicemail",
       "duty_i18n": {
-        "sl": "Dežurni veterinar vsako noč, ob nedeljah in praznikih za paciente klinike; številka je na odzivniku klinike"
+        "sl": "Dežurni veterinar vsako noč, ob nedeljah in praznikih za paciente klinike; številka je na odzivniku klinike",
+        "hr": "Dežurni veterinar svaku noć, nedjeljom i blagdanima za vlastite pacijente klinike; broj je na glasovnoj pošti klinike"
       },
       "url": "https://laroche.animea-vet.com/",
       "source_url": "https://laroche.animea-vet.com/urgences/",
@@ -3481,7 +3666,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 13:30–19:00; Sat 8:30–13:00",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 13.30–19; sob 8.30–13"
+        "sl": "pon–pet 8.30–12, 13.30–19; sob 8.30–13",
+        "hr": "Pon–pet 8:30–12:00, 13:30–19:00; sub 8:30–13:00"
       },
       "url": "https://vetobootz.fr/",
       "source_url": "https://vetobootz.fr/",
@@ -3500,7 +3686,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:00–12:00, 13:30–19:00; Sat 8:00–12:00, 14:00–18:00; emergency service 24 h — call ahead",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 13.30–19; sob 8–12, 14–18; nujna služba 24 ur na dan – vnaprej pokličite"
+        "sl": "pon–pet 8–12, 13.30–19; sob 8–12, 14–18; nujna služba 24 ur na dan – vnaprej pokličite",
+        "hr": "Pon–pet 8:00–12:00, 13:30–19:00; sub 8:00–12:00, 14:00–18:00; hitna služba 24 sata – nazovi unaprijed"
       },
       "url": "https://www.cliniqueveterinairedelabutte.fr/",
       "source_url": "https://www.cliniqueveterinairedelabutte.fr/",
@@ -3519,7 +3706,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:30; Sat 8:00–18:00; out of hours call the clinic",
       "duty_i18n": {
-        "sl": "pon–pet 8–19.30; sob 8–18; zunaj delovnega časa pokličite kliniko"
+        "sl": "pon–pet 8–19.30; sob 8–18; zunaj delovnega časa pokličite kliniko",
+        "hr": "Pon–pet 8:00–19:30; sub 8:00–18:00; izvan radnog vremena nazovi kliniku"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-drouaise-chartes-28000-univet/",
       "quote": "En cas d’urgence, en dehors des horaires d’ouverture,",
@@ -3536,7 +3724,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00, 14:00–19:00; Sat 9:00–12:00, 14:00–18:00; on duty 7/7 8:00–21:00, Sundays/holidays by phone 8:30–21:00",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 14–19; sob 9–12, 14–18; dežurstvo 7 dni v tednu 8–21, ob nedeljah in praznikih po telefonu 8.30–21"
+        "sl": "pon–pet 8.30–12, 14–19; sob 9–12, 14–18; dežurstvo 7 dni v tednu 8–21, ob nedeljah in praznikih po telefonu 8.30–21",
+        "hr": "Pon–pet 8:30–12:00, 14:00–19:00; sub 9:00–12:00, 14:00–18:00; dežurstvo 7/7 8:00–21:00, nedjeljom i blagdanima telefonom 8:30–21:00"
       },
       "source_url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-vetamboise/",
       "quote": "La clinique assure les gardes 7/7 de 8h à 21h, le dimanche et jours fériés sur appel téléphonique de 8h30 à 21h.",
@@ -3555,7 +3744,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 15:00–19:00; Sat 8:30–12:00, 14:00–17:00; emergencies 24/7 for existing patients — call first",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 15–19; sob 8.30–12, 14–17; nujna pomoč 24 ur na dan za obstoječe paciente – najprej pokličite"
+        "sl": "pon–pet 8.30–12, 15–19; sob 8.30–12, 14–17; nujna pomoč 24 ur na dan za obstoječe paciente – najprej pokličite",
+        "hr": "Pon–pet 8:30–12:00, 15:00–19:00; sub 8:30–12:00, 14:00–17:00; hitni slučajevi 24/7 za postojeće pacijente – prvo nazovi"
       },
       "url": "https://www.vetescapade.fr/",
       "source_url": "https://www.vetescapade.fr/",
@@ -3574,7 +3764,8 @@
       "emergency_24h": false,
       "duty": "Emergencies for dogs, cats and NAC at the Épinal clinic; out of hours a paid regulation vet advises and connects to the on-duty vet",
       "duty_i18n": {
-        "sl": "Nujni primeri za pse, mačke in eksotične živali (NAC) v kliniki Épinal; zunaj delovnega časa vas plačljivi veterinar na telefonu svetuje in poveže z dežurnim veterinarjem"
+        "sl": "Nujni primeri za pse, mačke in eksotične živali (NAC) v kliniki Épinal; zunaj delovnega časa vas plačljivi veterinar na telefonu svetuje in poveže z dežurnim veterinarjem",
+        "hr": "Hitni slučajevi za pse, mačke i egzotične ljubimce (NAC) u klinici u Épinalu; izvan radnog vremena veterinar na telefonu (uz naplatu) savjetuje i povezuje s dežurnim veterinarom"
       },
       "url": "https://www.clinique-veto.fr/",
       "source_url": "https://www.clinique-veto.fr/",
@@ -3592,7 +3783,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 14:00–19:00 by appointment; Sat 8:00–17:00",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 14–19 po dogovoru; sob 8–17"
+        "sl": "pon–pet 8–12, 14–19 po dogovoru; sob 8–17",
+        "hr": "Pon–pet 8:00–12:00, 14:00–19:00 po dogovoru; sub 8:00–17:00"
       },
       "url": "https://www.vetoarche.fr/",
       "source_url": "https://www.vetoarche.fr/",
@@ -3610,7 +3802,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–12:00, 13:30–18:30; Sat 8:30–12:00, 13:30–16:00; emergencies 24/7 (also large animals)",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12, 13.30–18.30; sob 8.30–12, 13.30–16; nujna pomoč 24 ur na dan (tudi za velike živali)"
+        "sl": "pon–pet 8.30–12, 13.30–18.30; sob 8.30–12, 13.30–16; nujna pomoč 24 ur na dan (tudi za velike živali)",
+        "hr": "Pon–pet 8:30–12:00, 13:30–18:30; sub 8:30–12:00, 13:30–16:00; hitni slučajevi 24/7 (i velike životinje)"
       },
       "source_url": "https://www.vetorino.com/veterinaire/charleville-mezieres-08000/",
       "quote": "les vétérinaires assurent la gestion des urgences 24h/24 et 7j/7",
@@ -3629,7 +3822,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:00–18:30; Sat 8:00–16:00; 24/7 shared duty rota by phone — call before travelling",
       "duty_i18n": {
-        "sl": "pon–pet 8–18.30; sob 8–16; skupno dežurstvo 24 ur na dan po telefonu – pokličite, preden se odpravite na pot"
+        "sl": "pon–pet 8–18.30; sob 8–16; skupno dežurstvo 24 ur na dan po telefonu – pokličite, preden se odpravite na pot",
+        "hr": "Pon–pet 8:00–18:30; sub 8:00–16:00; zajednički dežurni raspored 24/7 telefonom – nazovi prije dolaska"
       },
       "url": "https://www.vetosources.fr/",
       "source_url": "https://www.vetosources.fr/urgence",
@@ -3648,7 +3842,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–18:30; Sat 9:00–12:00, 14:00–17:00; 24/7 continuity of care for own patients after a phone call",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–18.30; sob 9–12, 14–17; neprekinjena oskrba lastnih pacientov 24 ur na dan po telefonskem klicu"
+        "sl": "pon–pet 8.30–18.30; sob 9–12, 14–17; neprekinjena oskrba lastnih pacientov 24 ur na dan po telefonskem klicu",
+        "hr": "Pon–pet 8:30–18:30; sub 9:00–12:00, 14:00–17:00; kontinuirana skrb 24/7 za vlastite pacijente nakon telefonskog poziva"
       },
       "url": "https://veterinaires-piedalloues.fr/",
       "source_url": "https://veterinaires-piedalloues.fr/",
@@ -3667,7 +3862,8 @@
       "emergency_24h": true,
       "duty": "Emergencies and duty 24/7 after a phone call",
       "duty_i18n": {
-        "sl": "Nujna pomoč in dežurstvo 24 ur na dan po telefonskem klicu"
+        "sl": "Nujna pomoč in dežurstvo 24 ur na dan po telefonskem klicu",
+        "hr": "Hitni slučajevi i dežurstvo 24/7 nakon telefonskog poziva"
       },
       "url": "https://www.amandiers-veterinaire-beaune.com/",
       "source_url": "https://www.amandiers-veterinaire-beaune.com/urgences-veterinaires-a-la-clinique-veterinaire-des-amandiers-situee-a-beaune/",
@@ -3686,7 +3882,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–12:00, 13:00–18:00; Sat 8:00–12:30; after 21:00 on weekdays emergencies are sent to Chenôve (Dijon)",
       "duty_i18n": {
-        "sl": "pon–pet 8–12, 13–18; sob 8–12.30; ob delavnikih po 21 nujne primere usmerijo v Chenôve (Dijon)"
+        "sl": "pon–pet 8–12, 13–18; sob 8–12.30; ob delavnikih po 21 nujne primere usmerijo v Chenôve (Dijon)",
+        "hr": "Pon–pet 8:00–12:00, 13:00–18:00; sub 8:00–12:30; radnim danima nakon 21:00 hitne slučajeve upućuju u Chenôve (Dijon)"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-chateau-beaune-21200-univet/",
       "quote": "Après 21h en semaine, les urgences sont envoyées vers Chenôve",

@@ -684,10 +684,11 @@ class PetActivityService
      * wand_session_interrupted; 423 while locked.
      *
      * @param  list<array{t: int, away: bool}>  $moves
+     * @param  list<int>  $releases  the simple hunt's let-go moments (rules 3)
      */
-    public function finishWand(Pet $pet, User $child, string $sessionId, array $moves): ActionResult
+    public function finishWand(Pet $pet, User $child, string $sessionId, array $moves, array $releases = []): ActionResult
     {
-        return $this->withLockedPet($pet, ActivityType::PlayedWand, function (Pet $locked) use ($child, $sessionId, $moves): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::PlayedWand, function (Pet $locked) use ($child, $sessionId, $moves, $releases): ActionResult {
             $now = now();
 
             if ($reason = $locked->actionLockReasonFor($child)) {
@@ -696,7 +697,7 @@ class PetActivityService
 
             $this->decay->catchUpLocked($locked);
 
-            $finished = $this->wand->finish($locked, $child, $sessionId, $moves, $now);
+            $finished = $this->wand->finish($locked, $child, $sessionId, $moves, $now, $releases);
             if ($finished['refusal'] !== null) {
                 return $this->refused($locked, $finished['refusal']);
             }
@@ -1050,7 +1051,7 @@ class PetActivityService
     /**
      * The wand session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int, rules_version?: int, stalk_ms?: int, crouch_cues_ms?: list<int>, catch_window_ms?: int, calm_window_ms?: int, calm_max_moves?: int, dodge_window_ms?: list<int>, min_stars?: int, max_stars?: int, max_speed_pt_s?: int, min_dodge_pt?: int}
+     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int, rules_version?: int, stalk_ms?: int, first_cue_ms?: int, cue_window_ms?: int, after_catch_ms?: int, after_miss_ms?: int, max_cues?: int, catches_needed?: int, catch_clip_ms?: int}
      */
     public static function wandSessionPayload(PetCareSession $session, string $tz): array
     {
@@ -1072,28 +1073,17 @@ class PetActivityService
             'min_move_interval_ms' => (int) ($schedule['min_move_interval_ms'] ?? 0),
             // An "away" move must follow each pounce within this window (QA M5-R06-04).
             'pounce_window_ms' => (int) ($schedule['pounce_window_ms'] ?? 0),
-        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_V2 ? [
-            // GAMES_SPEC §5.2 / §7.2: only for a session started with `rules: 2` (a v1 payload stays byte for byte).
-            'rules_version' => WandPlayService::RULES_V2,
-            'stalk_ms' => (int) ($schedule['stalk_ms'] ?? 0),
-            // The 👀 cue before each pounce (pounce − crouch_cue_ms): the feather must be still.
-            'crouch_cues_ms' => array_map('intval', array_values($schedule['crouch_cues_ms'] ?? [])),
-            'catch_window_ms' => (int) ($schedule['catch_window_ms'] ?? 0),
-            'calm_window_ms' => (int) ($schedule['calm_window_ms'] ?? 0),
-            'calm_max_moves' => (int) ($schedule['calm_max_moves'] ?? 0),
-            'dodge_window_ms' => array_map('intval', array_values($schedule['dodge_window_ms'] ?? [0, 0])),
-            'min_stars' => (int) ($schedule['min_stars'] ?? 0),
-            'max_stars' => (int) ($schedule['max_stars'] ?? 0),
-            // What the app checks for a move's `speed_ok`.
-            'max_speed_pt_s' => (int) ($schedule['max_speed_pt_s'] ?? 0),
-            'min_dodge_pt' => (int) ($schedule['min_dodge_pt'] ?? 0),
-        ] : []);
+        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_SIMPLE ? [
+            // GAMES_SPEC §5.2 / §7.2: only for a simple-hunt session (a v1 payload stays byte for byte).
+            // The app plays the same timeline as WandPlayService::simpleTimeline() from these numbers.
+            'rules_version' => WandPlayService::RULES_SIMPLE,
+        ] + WandPlayService::simpleParams((array) $schedule) : []);
     }
 
     /**
      * The server's verdict on finish.
      *
-     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|'too_few_stars'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int, rules_version?: int, stars?: int, min_stars?: int, max_stars?: int, dodges?: list<array{pounce_ms: int, star: bool, reason: 'moved_during_crouch'|'too_early'|'no_dodge'|'out_of_zone'|'bad_stroke'|null, move_ms: int|null}>, catch?: array{star: bool, reason: 'pulled_away'|'out_of_zone'|null}, hint?: 'calm'|'dodge'|'catch'|null}
+     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|'too_few_catches'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int, rules_version?: int, stars?: int, min_stars?: int, max_stars?: int, cues?: list<array{cue_ms: int, caught: bool, release_ms: int|null}>, hint?: 'let_go'|null}
      */
     public static function wandResultPayload(PetCareSession $session): array
     {
@@ -1109,21 +1099,19 @@ class PetActivityService
             'segments' => (int) ($r['segments'] ?? 0),
             'pounces_hit' => (int) ($r['pounces_hit'] ?? 0),
             'pounces' => (int) ($r['pounces'] ?? 0),
-        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_V2 ? [
-            // GAMES_SPEC §5.3 / §5.4: only for a rules-v2 session.
-            'rules_version' => WandPlayService::RULES_V2,
+        ] + (WandPlayService::rulesOf($session) === WandPlayService::RULES_SIMPLE ? [
+            // GAMES_SPEC §5.3 / §5.4: only for a simple-hunt session. One ★ per catch.
+            'rules_version' => WandPlayService::RULES_SIMPLE,
             'stars' => (int) ($r['stars'] ?? 0),
             'min_stars' => (int) ($r['min_stars'] ?? 0),
             'max_stars' => (int) ($r['max_stars'] ?? 0),
-            'dodges' => array_values(array_map(fn (array $d): array => [
-                'pounce_ms' => (int) $d['pounce_ms'],
-                'star' => (bool) $d['star'],
-                'reason' => $d['reason'] ?? null,
-                'move_ms' => isset($d['move_ms']) ? (int) $d['move_ms'] : null,
-            ], (array) ($r['dodges'] ?? []))),
-            'catch' => ['star' => (bool) ($r['catch']['star'] ?? false), 'reason' => $r['catch']['reason'] ?? null],
-            // The one hint to show after a hunt with < min_stars (first failed event in time).
-            'hint' => $r['hint'] ?? null,
+            'cues' => array_values(array_map(fn (array $c): array => [
+                'cue_ms' => (int) ($c['cue_ms'] ?? 0),
+                'caught' => (bool) ($c['caught'] ?? false),
+                'release_ms' => isset($c['release_ms']) ? (int) $c['release_ms'] : null,
+            ], array_filter((array) ($r['cues'] ?? []), 'is_array'))),
+            // The one hint after a hunt that did not count (null when it did).
+            'hint' => ($r['hint'] ?? null) === 'let_go' ? 'let_go' : null,
         ] : []);
     }
 

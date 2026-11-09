@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
 
 /**
  * A family (M2-01, ADR-012): several parents, several children, one or more
@@ -18,6 +19,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  *
  * @property int $id
  * @property string $timezone
+ * @property Carbon|null $timezone_changed_at
  */
 class Family extends Model
 {
@@ -27,6 +29,17 @@ class Family extends Model
      * @var list<string>
      */
     protected $fillable = ['timezone'];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            // Last parent change of the family zone (FamilySettingsService, once per 24 h).
+            'timezone_changed_at' => 'datetime',
+        ];
+    }
 
     public function members(): HasMany
     {

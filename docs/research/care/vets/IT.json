@@ -213,7 +213,8 @@
       "emergency_24h": false,
       "duty": "Weekends/holidays: from 20:00 the evening before a holiday until 09:00 the next working day; the Ordine gives the contacts of the two clinics on duty. Paid service.",
       "duty_i18n": {
-        "sl": "Ob vikendih in praznikih: od 20 zvečer pred praznikom do 9 naslednjega delovnega dne; zbornica (Ordine) posreduje kontaktne podatke dveh dežurnih klinik. Plačljiva storitev."
+        "sl": "Ob vikendih in praznikih: od 20 zvečer pred praznikom do 9 naslednjega delovnega dne; zbornica (Ordine) posreduje kontaktne podatke dveh dežurnih klinik. Plačljiva storitev.",
+        "hr": "Vikendom/blagdanima: od 20:00 uoči blagdana do 09:00 sljedećeg radnog dana; Ordine daje kontakte dviju dežurnih klinika. Usluga se plaća."
       },
       "small_animals": true,
       "url": "https://www.ordinevetverona.it/default.asp?iId=JJJDD",
@@ -231,7 +232,8 @@
       "emergency_24h": false,
       "duty": "Voluntary weekend and holiday on-call rota of small-animal practices, published as PDFs per district (Meran & Vinschgau, Brixen, Bozen, Pustertal). Weekdays: own vet.",
       "duty_i18n": {
-        "sl": "Prostovoljna dežurna služba ambulant za male živali ob vikendih in praznikih, objavljena v PDF po okrožjih (Meran in Vinschgau, Brixen, Bozen, Pustertal). Med tednom: vaš veterinar."
+        "sl": "Prostovoljna dežurna služba ambulant za male živali ob vikendih in praznikih, objavljena v PDF po okrožjih (Meran in Vinschgau, Brixen, Bozen, Pustertal). Med tednom: vaš veterinar.",
+        "hr": "Dobrovoljno dežurstvo ambulanti za male životinje vikendom i blagdanima, objavljeno u PDF-ovima po okruzima (Meran & Vinschgau, Brixen, Bozen, Pustertal). Radnim danom: vlastiti veterinar."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/bereitschaftsdienste/",
@@ -247,7 +249,8 @@
       "emergency_24h": true,
       "duty": "Six vet practices in Trentino offering a 24h service (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
       "duty_i18n": {
-        "sl": "Šest veterinarskih ambulant v Trentinu z 24-urno službo (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles)."
+        "sl": "Šest veterinarskih ambulant v Trentinu z 24-urno službo (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
+        "hr": "Šest veterinarskih ambulanti u Trentinu s uslugom 24 h (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles)."
       },
       "small_animals": true,
       "url": "https://www.visittrentino.info/it/articoli/vacanze-a-quattro-zampe/veterinari-disponibili-24-7",
@@ -266,7 +269,8 @@
       "emergency_24h": true,
       "duty": "Small-animal emergency 24h every day; call before arriving. Info line +39 051 2097546 (9-16).",
       "duty_i18n": {
-        "sl": "Nujna pomoč za male živali 24 ur na dan, vsak dan; pred prihodom pokličite. Informacije: +39 051 2097546 (9–16)."
+        "sl": "Nujna pomoč za male živali 24 ur na dan, vsak dan; pred prihodom pokličite. Informacije: +39 051 2097546 (9–16).",
+        "hr": "Hitna pomoć za male životinje 24 h svaki dan; nazovi prije dolaska. Info linija +39 051 2097546 (9–16)."
       },
       "small_animals": true,
       "url": "https://site.unibo.it/ospedale-veterinario/it",
@@ -285,7 +289,8 @@
       "emergency_24h": false,
       "duty": "Pronto soccorso Mon-Fri 8:30-18:00; weekends/holidays 8:00-18:00 for urgent cases.",
       "duty_i18n": {
-        "sl": "Nujna pomoč pon–pet 8.30–18, ob vikendih in praznikih 8–18 za nujne primere."
+        "sl": "Nujna pomoč pon–pet 8.30–18, ob vikendih in praznikih 8–18 za nujne primere.",
+        "hr": "Pronto soccorso pon–pet 8:30–18:00; vikendom/blagdanima 8:00–18:00 za hitne slučajeve."
       },
       "small_animals": true,
       "url": "https://ovud.maps.unipd.it/il-pronto-soccorso-veterinario",
@@ -303,7 +308,8 @@
       "emergency_24h": false,
       "duty": "Small animals Mon-Fri 8:00-20:00; no new cases accepted 20:00-8:00.",
       "duty_i18n": {
-        "sl": "Male živali pon–pet 8–20; od 20 do 8 novih primerov ne sprejemajo."
+        "sl": "Male živali pon–pet 8–20; od 20 do 8 novih primerov ne sprejemajo.",
+        "hr": "Male životinje pon–pet 8:00–20:00; od 20:00 do 8:00 ne primaju se novi slučajevi."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinario.unimi.it/",
@@ -321,7 +327,8 @@
       "emergency_24h": true,
       "duty": "Dog and cat emergency 24/7, all year.",
       "duty_i18n": {
-        "sl": "Nujna pomoč za pse in mačke 24 ur na dan, vse leto."
+        "sl": "Nujna pomoč za pse in mačke 24 ur na dan, vse leto.",
+        "hr": "Hitna pomoć za pse i mačke 24/7, cijele godine."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-san-siro/",
@@ -340,7 +347,8 @@
       "emergency_24h": true,
       "duty": "Emergency and hospitalisation 24h/24 Mon-Sun incl. holidays (day 8-20, night 20-8).",
       "duty_i18n": {
-        "sl": "Nujna pomoč in hospitalizacija 24 ur na dan, pon–ned, tudi ob praznikih (dan 8–20, noč 20–8)."
+        "sl": "Nujna pomoč in hospitalizacija 24 ur na dan, pon–ned, tudi ob praznikih (dan 8–20, noč 20–8).",
+        "hr": "Hitna pomoć i hospitalizacija 24 h/24, pon–ned, i blagdanima (dan 8–20, noć 20–8)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariagransasso.it/",
@@ -359,7 +367,8 @@
       "emergency_24h": true,
       "duty": "Open 24h, 365 days.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 365 dni v letu."
+        "sl": "Odprto 24 ur na dan, 365 dni v letu.",
+        "hr": "Otvoreno 24 h, 365 dana."
       },
       "small_animals": true,
       "url": "https://mypetclinic.it/",
@@ -377,7 +386,8 @@
       "emergency_24h": true,
       "duty": "Emergency department 24/7.",
       "duty_i18n": {
-        "sl": "Urgentni oddelek 24 ur na dan."
+        "sl": "Urgentni oddelek 24 ur na dan.",
+        "hr": "Hitni odjel 24/7."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/animal-hospital-cvc/",
@@ -395,7 +405,8 @@
       "emergency_24h": true,
       "duty": "Visits Mon-Sat 8:30-20, Sun 10-12; emergency on-call 24/7 from Codogno.",
       "duty_i18n": {
-        "sl": "Pregledi pon–sob 8.30–20, ned 10–12; nujna dežurna služba 24 ur na dan iz kraja Codogno."
+        "sl": "Pregledi pon–sob 8.30–20, ned 10–12; nujna dežurna služba 24 ur na dan iz kraja Codogno.",
+        "hr": "Pregledi pon–sub 8:30–20, ned 10–12; hitno dežurstvo 24/7 iz Codogna."
       },
       "small_animals": true,
       "url": "https://www.cdcvet.it/",
@@ -414,7 +425,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24/7 with vet always on site.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, veterinar je vedno prisoten."
+        "sl": "Nujna pomoč 24 ur na dan, veterinar je vedno prisoten.",
+        "hr": "Hitna pomoć 24/7, veterinar je uvijek u klinici."
       },
       "small_animals": true,
       "url": "https://www.sancarloveterinaria.it/",
@@ -432,7 +444,8 @@
       "emergency_24h": true,
       "duty": "Outpatient 10-19; emergency H24.",
       "duty_i18n": {
-        "sl": "Ambulanta 10–19; nujna pomoč 24 ur na dan."
+        "sl": "Ambulanta 10–19; nujna pomoč 24 ur na dan.",
+        "hr": "Ambulanta 10–19; hitna pomoć 24 h."
       },
       "small_animals": true,
       "url": "https://www.clinicasantantonio.it/",
@@ -451,7 +464,8 @@
       "emergency_24h": true,
       "duty": "Urgent/emergency cases 24h every day incl. holidays; ring the main-entrance bell at night, call ahead if possible.",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan, vsak dan, tudi ob praznikih; ponoči pozvonite pri glavnem vhodu; če je mogoče, vnaprej pokličite."
+        "sl": "Nujni primeri 24 ur na dan, vsak dan, tudi ob praznikih; ponoči pozvonite pri glavnem vhodu; če je mogoče, vnaprej pokličite.",
+        "hr": "Hitni slučajevi 24 h svaki dan, i blagdanima; noću pozvoni na glavnom ulazu, a ako možeš, nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/istituto-veterinario-novara/",
@@ -470,7 +484,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24/7, no booking. Sundays/holidays door may be closed temporarily: call +39 366 7209024.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, brez naročanja. Ob nedeljah in praznikih so vrata lahko začasno zaprta: pokličite +39 366 7209024."
+        "sl": "Nujna pomoč 24 ur na dan, brez naročanja. Ob nedeljah in praznikih so vrata lahko začasno zaprta: pokličite +39 366 7209024.",
+        "hr": "Hitna pomoć 24/7, bez najave. Nedjeljom/blagdanima vrata mogu privremeno biti zatvorena: nazovi +39 366 7209024."
       },
       "small_animals": true,
       "url": "https://www.clinvetorino.eu/",
@@ -487,7 +502,8 @@
       "emergency_24h": true,
       "duty": "Emergency open H24 7/7.",
       "duty_i18n": {
-        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v tednu."
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v tednu.",
+        "hr": "Hitna pomoć otvorena 24 h, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://www.bluvet.it/pronto-soccorso-veterinario-torino/",
@@ -506,7 +522,8 @@
       "emergency_24h": true,
       "duty": "Via Barabino studio open 24h.",
       "duty_i18n": {
-        "sl": "Ambulanta Via Barabino odprta 24 ur na dan."
+        "sl": "Ambulanta Via Barabino odprta 24 ur na dan.",
+        "hr": "Ambulanta u Via Barabino otvorena 24 h."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariogenovese.it/",
@@ -524,7 +541,8 @@
       "emergency_24h": true,
       "duty": "Always open; emergency H24 with at least one vet on site.",
       "duty_i18n": {
-        "sl": "Vedno odprto; nujna pomoč 24 ur na dan, vsaj en veterinar je vedno prisoten."
+        "sl": "Vedno odprto; nujna pomoč 24 ur na dan, vsaj en veterinar je vedno prisoten.",
+        "hr": "Uvijek otvoreno; hitna pomoć 24 h, uz barem jednog veterinara u klinici."
       },
       "small_animals": true,
       "url": "https://www.cvsangiorgio.it/",
@@ -542,7 +560,8 @@
       "emergency_24h": false,
       "duty": "Emergency service 20:00-8:30 and on public holidays (plus day hours).",
       "duty_i18n": {
-        "sl": "Nujna pomoč od 20 do 8.30 in ob praznikih (poleg dnevnega delovnega časa)."
+        "sl": "Nujna pomoč od 20 do 8.30 in ob praznikih (poleg dnevnega delovnega časa).",
+        "hr": "Hitna služba 20:00–8:30 i blagdanima (uz dnevno radno vrijeme)."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-foce/",
@@ -560,7 +579,8 @@
       "emergency_24h": false,
       "duty": "Visits by appointment Mon-Fri 9-20; for emergencies call the clinic directly.",
       "duty_i18n": {
-        "sl": "Pregledi po dogovoru pon–pet 9–20; v nujnih primerih pokličite ambulanto neposredno."
+        "sl": "Pregledi po dogovoru pon–pet 9–20; v nujnih primerih pokličite ambulanto neposredno.",
+        "hr": "Pregledi uz prethodnu najavu pon–pet 9–20; za hitne slučajeve nazovi izravno ambulantu."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariahaziel.it/",
@@ -578,7 +598,8 @@
       "emergency_24h": true,
       "duty": "Emergency and intensive care 24/7, every day of the year.",
       "duty_i18n": {
-        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan, vse dni v letu."
+        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan, vse dni v letu.",
+        "hr": "Hitna pomoć i intenzivna njega 24/7, svaki dan u godini."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/ospedale-veterinario-portoni-rossi/",
@@ -596,7 +617,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 9-19, Sat 9-17; 24h on-call (reperibilità) and home visits.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–17; 24-urna dežurna služba in obiski na domu."
+        "sl": "pon–pet 9–19, sob 9–17; 24-urna dežurna služba in obiski na domu.",
+        "hr": "pon–pet 9–19, sub 9–17; dežurstvo 24 h (reperibilità) i kućni posjeti."
       },
       "small_animals": true,
       "url": "https://www.casadelcanerimini.com/",
@@ -615,7 +637,8 @@
       "emergency_24h": true,
       "duty": "Emergency first aid for Padova/Vicenza area every day incl. holidays.",
       "duty_i18n": {
-        "sl": "Prva pomoč v nujnih primerih za območje Padove in Vicenze vsak dan, tudi ob praznikih."
+        "sl": "Prva pomoč v nujnih primerih za območje Padove in Vicenze vsak dan, tudi ob praznikih.",
+        "hr": "Prva hitna pomoć za područje Padove/Vicenze svaki dan, i blagdanima."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-arcella/",
@@ -633,7 +656,8 @@
       "emergency_24h": true,
       "duty": "Open H24 all year.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vse leto."
+        "sl": "Odprto 24 ur na dan, vse leto.",
+        "hr": "Otvoreno 24 h cijele godine."
       },
       "small_animals": true,
       "url": "https://www.clinicavetlafenice.it/",
@@ -651,7 +675,8 @@
       "emergency_24h": true,
       "duty": "Open 24h, 365 days, vet always on site.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 365 dni v letu, veterinar je vedno prisoten."
+        "sl": "Odprto 24 ur na dan, 365 dni v letu, veterinar je vedno prisoten.",
+        "hr": "Otvoreno 24 h, 365 dana, veterinar je uvijek u klinici."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanfrancesco.it/",
@@ -670,7 +695,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 8:30-19:30, Sat 9-14; emergency 24/7 (Sat afternoon and Sun emergency only).",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–19.30, sob 9–14; nujna pomoč 24 ur na dan (v soboto popoldne in ob nedeljah samo nujna pomoč)."
+        "sl": "pon–pet 8.30–19.30, sob 9–14; nujna pomoč 24 ur na dan (v soboto popoldne in ob nedeljah samo nujna pomoč).",
+        "hr": "pon–pet 8:30–19:30, sub 9–14; hitna pomoć 24/7 (sub poslijepodne i ned samo hitni slučajevi)."
       },
       "small_animals": true,
       "url": "https://www.ospedalesantalucia.it/",
@@ -688,7 +714,8 @@
       "emergency_24h": false,
       "duty": "Reception Mon–Fri 9–19, Sat 9–13; emergency service and overnight hospitalisation.",
       "duty_i18n": {
-        "sl": "Sprejem pon–pet 9–19, sob 9–13; nujna pomoč in nočna hospitalizacija."
+        "sl": "Sprejem pon–pet 9–19, sob 9–13; nujna pomoč in nočna hospitalizacija.",
+        "hr": "Recepcija pon–pet 9–19, sub 9–13; hitna služba i noćna hospitalizacija."
       },
       "small_animals": true,
       "url": "https://www.clinicajesolo.com/",
@@ -719,7 +746,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 10-12:30 and 16-19:30; Sunday closed except urgent cases; emergency on-call by phone.",
       "duty_i18n": {
-        "sl": "pon–sob 10–12.30 in 16–19.30; ob nedeljah zaprto, razen za nujne primere; nujna dežurna služba po telefonu."
+        "sl": "pon–sob 10–12.30 in 16–19.30; ob nedeljah zaprto, razen za nujne primere; nujna dežurna služba po telefonu.",
+        "hr": "pon–sub 10–12:30 i 16–19:30; nedjeljom zatvoreno, osim hitnih slučajeva; hitno dežurstvo telefonom."
       },
       "url": "https://www.vetcortina.it/",
       "source_url": "https://www.vetcortina.it/",
@@ -736,7 +764,8 @@
       "emergency_24h": true,
       "duty": "Trieste Mon-Fri 8:30-19:30, Sat 9:30-15:30; emergency phone reachable 24/7. Main line +39 040 3480845; Muggia branch Viale Luigi Frausin 5, +39 040 271043.",
       "duty_i18n": {
-        "sl": "Trieste pon–pet 8.30–19.30, sob 9.30–15.30; telefon za nujne primere dosegljiv 24 ur na dan. Glavna številka +39 040 3480845; podružnica Muggia Viale Luigi Frausin 5, +39 040 271043."
+        "sl": "Trieste pon–pet 8.30–19.30, sob 9.30–15.30; telefon za nujne primere dosegljiv 24 ur na dan. Glavna številka +39 040 3480845; podružnica Muggia Viale Luigi Frausin 5, +39 040 271043.",
+        "hr": "Trst pon–pet 8:30–19:30, sub 9:30–15:30; hitni telefon dostupan 24/7. Glavna linija +39 040 3480845; podružnica Muggia, Viale Luigi Frausin 5, +39 040 271043."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariatergeste.com/",
@@ -754,7 +783,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergency on-call number; intensive care H24.",
       "duty_i18n": {
-        "sl": "Dežurna številka za nujne primere zunaj delovnega časa; intenzivna nega 24 ur na dan."
+        "sl": "Dežurna številka za nujne primere zunaj delovnega časa; intenzivna nega 24 ur na dan.",
+        "hr": "Dežurni broj za hitne slučajeve izvan radnog vremena; intenzivna njega 24 h."
       },
       "small_animals": true,
       "url": "https://www.clinicamiramare.it/",
@@ -772,7 +802,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 9-19; night on-call for emergencies on +39 366 4779079.",
       "duty_i18n": {
-        "sl": "Med tednom 9–19; ponoči dežurna služba za nujne primere na +39 366 4779079."
+        "sl": "Med tednom 9–19; ponoči dežurna služba za nujne primere na +39 366 4779079.",
+        "hr": "Radnim danom 9–19; noćno dežurstvo za hitne slučajeve na +39 366 4779079."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-gaspardis/",
@@ -790,7 +821,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19, Sat 9-12:30; emergency line +39 334 3817613 for Sundays, holidays, out of hours — not always active for private clients, call first.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–12.30; številka za nujne primere +39 334 3817613 za nedelje, praznike in čas zunaj delovnega časa – za zasebne stranke ni vedno aktivna, zato najprej pokličite."
+        "sl": "pon–pet 9–19, sob 9–12.30; številka za nujne primere +39 334 3817613 za nedelje, praznike in čas zunaj delovnega časa – za zasebne stranke ni vedno aktivna, zato najprej pokličite.",
+        "hr": "pon–pet 9–19, sub 9–12:30; hitna linija +39 334 3817613 za nedjelje, blagdane i izvan radnog vremena; nije uvijek aktivna za privatne klijente, prvo nazovi."
       },
       "small_animals": true,
       "url": "https://www.laclinicadeglianimali.it/",
@@ -808,7 +840,8 @@
       "emergency_24h": true,
       "duty": "Emergency station open 24h daily incl. holidays; general line +39 0471 204212 (Mon-Fri 7-20, Sat-Sun 8-19).",
       "duty_i18n": {
-        "sl": "Nujna pomoč odprta 24 ur na dan, tudi ob praznikih; splošna številka +39 0471 204212 (pon–pet 7–20, sob–ned 8–19)."
+        "sl": "Nujna pomoč odprta 24 ur na dan, tudi ob praznikih; splošna številka +39 0471 204212 (pon–pet 7–20, sob–ned 8–19).",
+        "hr": "Hitna postaja otvorena 24 h svaki dan, i blagdanima; opća linija +39 0471 204212 (pon–pet 7–20, sub–ned 8–19)."
       },
       "small_animals": true,
       "url": "https://www.vetbz.it/",
@@ -826,7 +859,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 10-12, 16-19; Sat emergencies 12-20, Sun 8-20; 24/7 emergency service, phone ahead.",
       "duty_i18n": {
-        "sl": "pon–pet 10–12 in 16–19; nujni primeri ob sobotah 12–20, ob nedeljah 8–20; nujna pomoč 24 ur na dan, vnaprej pokličite."
+        "sl": "pon–pet 10–12 in 16–19; nujni primeri ob sobotah 12–20, ob nedeljah 8–20; nujna pomoč 24 ur na dan, vnaprej pokličite.",
+        "hr": "pon–pet 10–12, 16–19; sub hitni slučajevi 12–20, ned 8–20; hitna služba 24/7, nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://vetclinic.bz/",
@@ -845,7 +879,8 @@
       "emergency_24h": true,
       "duty": "Emergency service with 24h on-call.",
       "duty_i18n": {
-        "sl": "Nujna pomoč z 24-urno dežurno službo."
+        "sl": "Nujna pomoč z 24-urno dežurno službo.",
+        "hr": "Hitna služba s dežurstvom 24 h."
       },
       "small_animals": true,
       "url": "https://www.vetpartnersitalia.it/strutture/clinica-veterinaria-animal-care/",
@@ -863,7 +898,8 @@
       "emergency_24h": true,
       "duty": "Emergency line on call 24/7 incl. holidays (call, don't text). Clinic +39 0461 263826.",
       "duty_i18n": {
-        "sl": "Številka za nujne primere dosegljiva 24 ur na dan, tudi ob praznikih (pokličite, ne pišite sporočil). Ambulanta +39 0461 263826."
+        "sl": "Številka za nujne primere dosegljiva 24 ur na dan, tudi ob praznikih (pokličite, ne pišite sporočil). Ambulanta +39 0461 263826.",
+        "hr": "Hitna linija radi 24/7, i blagdanima (nazovi, ne šalji poruke). Klinika +39 0461 263826."
       },
       "small_animals": true,
       "url": "https://www.veterinariotrento.it/",
@@ -881,7 +917,8 @@
       "emergency_24h": true,
       "duty": "University teaching hospital; emergency service 24/24, 365 days. Alt. PS line +39 050 2210106; switchboard +39 050 2210100",
       "duty_i18n": {
-        "sl": "Univerzitetna učna bolnišnica; nujna pomoč 24 ur na dan, 365 dni v letu. Druga številka nujne pomoči +39 050 2210106; centrala +39 050 2210100"
+        "sl": "Univerzitetna učna bolnišnica; nujna pomoč 24 ur na dan, 365 dni v letu. Druga številka nujne pomoči +39 050 2210106; centrala +39 050 2210100",
+        "hr": "Sveučilišna nastavna bolnica; hitna služba 24/24, 365 dana. Alternativna linija za hitnu +39 050 2210106; centrala +39 050 2210100"
       },
       "url": "https://ospedale.vet.unipi.it/",
       "source_url": "https://ospedale.vet.unipi.it/terapia-intensiva-medicina-durgenza-2/",
@@ -899,7 +936,8 @@
       "emergency_24h": true,
       "duty": "Pronto Soccorso e Terapia intensiva 24h/7d on +39 081 2536088; visits Mon–Fri 9:30–17:00 by appointment (CUP +39 081 2536029)",
       "duty_i18n": {
-        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan, vse dni v tednu na +39 081 2536088; pregledi pon–pet 9.30–17 po dogovoru (naročanje +39 081 2536029)"
+        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan, vse dni v tednu na +39 081 2536088; pregledi pon–pet 9.30–17 po dogovoru (naročanje +39 081 2536029)",
+        "hr": "Pronto soccorso i intenzivna njega 24 h/7 dana na +39 081 2536088; pregledi pon–pet 9:30–17:00 uz prethodnu najavu (CUP +39 081 2536029)"
       },
       "url": "https://www.mvpa-unina.org/ospedale/contatti_ovud.xhtml",
       "source_url": "https://www.mvpa-unina.org/ospedale/contatti_ovud.xhtml",
@@ -917,7 +955,8 @@
       "emergency_24h": false,
       "duty": "Open H24 for emergencies; urgent visits should be announced by phone first",
       "duty_i18n": {
-        "sl": "Za nujne primere odprto 24 ur na dan; nujne obiske najavite vnaprej po telefonu"
+        "sl": "Za nujne primere odprto 24 ur na dan; nujne obiske najavite vnaprej po telefonu",
+        "hr": "Otvoreno 24 h za hitne slučajeve; hitne preglede najavi telefonom."
       },
       "url": "https://archivio.unime.it/sites/default/files/OVUD%20al%20servizio%20della%20cittadinanza%201%20%281%29.pdf",
       "source_url": "https://archivio.unime.it/sites/default/files/OVUD%20al%20servizio%20della%20cittadinanza%201%20%281%29.pdf",
@@ -935,7 +974,8 @@
       "emergency_24h": false,
       "duty": "Clinic Mon–Fri 8:00–17:00; Medicina e Terapia d'urgenza line +39 380 388 3406",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 8–17; številka za nujno medicino in terapijo +39 380 388 3406"
+        "sl": "Ambulanta pon–pet 8–17; številka za nujno medicino in terapijo +39 380 388 3406",
+        "hr": "Klinika pon–pet 8:00–17:00; linija za internu medicinu i hitnu terapiju +39 380 388 3406"
       },
       "url": "https://www.ovudteramo.it/",
       "source_url": "https://www.ovudteramo.it/portfolio/servizio-di-accettazione-pronto-soccorso-ricovero/",
@@ -953,7 +993,8 @@
       "emergency_24h": true,
       "duty": "Pronto soccorso every day, 24h",
       "duty_i18n": {
-        "sl": "Nujna pomoč vsak dan, 24 ur na dan"
+        "sl": "Nujna pomoč vsak dan, 24 ur na dan",
+        "hr": "Pronto soccorso svaki dan, 24 h"
       },
       "url": "https://www.anicura.it/cliniche/policlinico-veterinario-roma-sud/",
       "source_url": "https://www.anicura.it/cliniche/policlinico-veterinario-roma-sud/",
@@ -971,7 +1012,8 @@
       "emergency_24h": true,
       "duty": "Open h24, 7/7 (also outpatient site Via Prenestina 364d)",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vse dni v tednu (tudi ambulanta Via Prenestina 364d)"
+        "sl": "Odprto 24 ur na dan, vse dni v tednu (tudi ambulanta Via Prenestina 364d)",
+        "hr": "Otvoreno 24 h, 7/7 (ambulanta i u Via Prenestina 364d)"
       },
       "url": "https://www.polivet.it/",
       "source_url": "https://www.polivet.it/",
@@ -989,7 +1031,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24/7 incl. holidays; specialist visits Mon–Fri 10–19 by appointment",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, tudi ob praznikih; specialistični pregledi pon–pet 10–19 po dogovoru"
+        "sl": "Nujna pomoč 24 ur na dan, tudi ob praznikih; specialistični pregledi pon–pet 10–19 po dogovoru",
+        "hr": "Hitna pomoć 24/7, i blagdanima; specijalistički pregledi pon–pet 10–19 uz prethodnu najavu"
       },
       "url": "https://www.ospedalecroceazzurra.it/",
       "source_url": "https://www.ospedalecroceazzurra.it/",
@@ -1007,7 +1050,8 @@
       "emergency_24h": true,
       "duty": "Open H24, 365 days",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+        "sl": "Odprto 24 ur na dan, 365 dni v letu",
+        "hr": "Otvoreno 24 h, 365 dana"
       },
       "url": "https://www.prontosoccorsoveterinarioroma.it/",
       "source_url": "https://www.prontosoccorsoveterinarioroma.it/",
@@ -1025,7 +1069,8 @@
       "emergency_24h": false,
       "duty": "Clinic 08:30–19:00; day and night emergency activity.",
       "duty_i18n": {
-        "sl": "Ambulanta 8.30–19; nujna pomoč podnevi in ponoči."
+        "sl": "Ambulanta 8.30–19; nujna pomoč podnevi in ponoči.",
+        "hr": "Klinika 08:30–19:00; hitna služba danju i noću."
       },
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
       "source_url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
@@ -1043,7 +1088,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h, 365 days",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu"
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu",
+        "hr": "Hitna pomoć 24 h, 365 dana"
       },
       "url": "https://www.vethospital.it/",
       "source_url": "https://www.vethospital.it/pronto-soccorso/",
@@ -1061,7 +1107,8 @@
       "emergency_24h": true,
       "duty": "Private on-call service by phone, mainly nights and holidays",
       "duty_i18n": {
-        "sl": "Zasebna dežurna služba po telefonu, predvsem ponoči in ob praznikih"
+        "sl": "Zasebna dežurna služba po telefonu, predvsem ponoči in ob praznikih",
+        "hr": "Privatna telefonska dežurna služba, uglavnom noću i blagdanima"
       },
       "url": "https://www.guardiamedicaveterinariafirenze.it/",
       "source_url": "https://www.guardiamedicaveterinariafirenze.it/",
@@ -1080,7 +1127,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 9–13 & 14–18, Sat 9–13; on-call H24.",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 14–18, sob 9–13; dežurna služba 24 ur na dan."
+        "sl": "pon–pet 9–13 in 14–18, sob 9–13; dežurna služba 24 ur na dan.",
+        "hr": "pon–pet 9–13 i 14–18, sub 9–13; dežurstvo 24 h."
       },
       "url": "https://www.veterinariagrosseto.it/",
       "source_url": "https://www.veterinariagrosseto.it/contatti/",
@@ -1099,7 +1147,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 8:30–19:30, Sat 9:30–12:30; Sat afternoon & Sun on call; urgent calls H24",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–19.30, sob 9.30–12.30; v soboto popoldne in ob nedeljah dežurstvo; nujni klici 24 ur na dan"
+        "sl": "pon–pet 8.30–19.30, sob 9.30–12.30; v soboto popoldne in ob nedeljah dežurstvo; nujni klici 24 ur na dan",
+        "hr": "pon–pet 8:30–19:30, sub 9:30–12:30; sub poslijepodne i ned dežurstvo; hitni pozivi 24 h"
       },
       "url": "https://www.clinicaveterinariavalmusone.it/",
       "source_url": "https://www.clinicaveterinariavalmusone.it/",
@@ -1117,7 +1166,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24/7",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu"
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu",
+        "hr": "Hitna služba 24/7"
       },
       "url": "https://www.clinicaveterinariapontefelcino.it/",
       "source_url": "https://www.prontosoccorsoveterinarioperugia.it/",
@@ -1135,7 +1185,8 @@
       "emergency_24h": true,
       "duty": "Emergency presidio 24h, 365 days",
       "duty_i18n": {
-        "sl": "Enota za nujno pomoč 24 ur na dan, 365 dni v letu"
+        "sl": "Enota za nujno pomoč 24 ur na dan, 365 dni v letu",
+        "hr": "Hitna postaja 24 h, 365 dana"
       },
       "url": "https://www.anicura.it/cliniche/ospedale-veterinario-h24-abruzzo/",
       "source_url": "https://www.anicura.it/cliniche/ospedale-veterinario-h24-abruzzo/",
@@ -1153,7 +1204,8 @@
       "emergency_24h": true,
       "duty": "Emergency h24 – call the emergency line before arriving; general line +39 081 19335838",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan – pred prihodom pokličite številko za nujne primere; splošna številka +39 081 19335838"
+        "sl": "Nujna pomoč 24 ur na dan – pred prihodom pokličite številko za nujne primere; splošna številka +39 081 19335838",
+        "hr": "Hitna pomoć 24 h; nazovi hitnu liniju prije dolaska; opća linija +39 081 19335838"
       },
       "url": "https://www.vetvillage.it/",
       "source_url": "https://www.vetvillage.it/pronto-soccorso-veterinario",
@@ -1171,7 +1223,8 @@
       "emergency_24h": true,
       "duty": "Clinic Mon–Fri 9:30–19:00; evening/night emergency 19:00–9:30; weekends and holidays all day",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 9.30–19; nujna pomoč zvečer in ponoči 19–9.30; ob vikendih in praznikih ves dan"
+        "sl": "Ambulanta pon–pet 9.30–19; nujna pomoč zvečer in ponoči 19–9.30; ob vikendih in praznikih ves dan",
+        "hr": "Klinika pon–pet 9:30–19:00; večernja/noćna hitna pomoć 19:00–9:30; vikendom i blagdanima cijeli dan"
       },
       "url": "https://clinicaveterinariacavour.com/",
       "source_url": "https://clinicaveterinariacavour.com/",
@@ -1187,7 +1240,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 9:30–20:00; emergency service 24/7",
       "duty_i18n": {
-        "sl": "pon–sob 9.30–20; nujna pomoč 24 ur na dan"
+        "sl": "pon–sob 9.30–20; nujna pomoč 24 ur na dan",
+        "hr": "pon–sub 9:30–20:00; hitna služba 24/7"
       },
       "url": "https://www.nolavet.it/",
       "source_url": "https://www.nolavet.it/pronto-soccorso/",
@@ -1207,7 +1261,8 @@
       "emergency_24h": true,
       "duty": "Emergency line active H24",
       "duty_i18n": {
-        "sl": "Številka za nujne primere dosegljiva 24 ur na dan"
+        "sl": "Številka za nujne primere dosegljiva 24 ur na dan",
+        "hr": "Hitna linija aktivna 24 h"
       },
       "url": "https://www.clinicaveterinariasanleonardo.it/",
       "source_url": "https://www.clinicaveterinariasanleonardo.it/",
@@ -1226,7 +1281,8 @@
       "emergency_24h": true,
       "duty": "Open every day H24",
       "duty_i18n": {
-        "sl": "Odprto vsak dan, 24 ur na dan"
+        "sl": "Odprto vsak dan, 24 ur na dan",
+        "hr": "Otvoreno svaki dan 24 h"
       },
       "url": "https://checkupvet.it/",
       "source_url": "https://checkupvet.it/",
@@ -1245,7 +1301,8 @@
       "emergency_24h": false,
       "duty": "Mon–Sat 9–13 & 16–19; for night/holiday emergencies call the pronto soccorso at +39 081 7763859.",
       "duty_i18n": {
-        "sl": "pon–sob 9–13 in 16–19; za nujne primere ponoči in ob praznikih pokličite nujno pomoč na +39 081 7763859."
+        "sl": "pon–sob 9–13 in 16–19; za nujne primere ponoči in ob praznikih pokličite nujno pomoč na +39 081 7763859.",
+        "hr": "pon–sub 9–13 i 16–19; za noćne/blagdanske hitne slučajeve nazovi pronto soccorso na +39 081 7763859."
       },
       "url": "https://www.ambulatorioveterinarioiaccarino.it/",
       "source_url": "https://www.ambulatorioveterinarioiaccarino.it/",
@@ -1263,7 +1320,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan"
+        "sl": "Nujna pomoč 24 ur na dan",
+        "hr": "Hitna pomoć 24 h"
       },
       "url": "https://www.ospedalesantafara.it/",
       "source_url": "https://www.ospedalesantafara.it/pronto-soccorso",
@@ -1281,7 +1339,8 @@
       "emergency_24h": true,
       "duty": "Open 24h",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan"
+        "sl": "Odprto 24 ur na dan",
+        "hr": "Otvoreno 24 h"
       },
       "url": "https://www.pingry.it/",
       "source_url": "https://www.pingry.it/",
@@ -1299,7 +1358,8 @@
       "emergency_24h": true,
       "duty": "Outpatients Mon–Sat 9:00–19:30; reception 24/7 incl. holidays",
       "duty_i18n": {
-        "sl": "Ambulanta pon–sob 9–19.30; sprejem 24 ur na dan, tudi ob praznikih"
+        "sl": "Ambulanta pon–sob 9–19.30; sprejem 24 ur na dan, tudi ob praznikih",
+        "hr": "Ambulantni pregledi pon–sub 9:00–19:30; recepcija 24/7, i blagdanima"
       },
       "url": "https://centroveterinarioeinaudi.it/",
       "source_url": "https://centroveterinarioeinaudi.it/emergenza-24h/",
@@ -1317,7 +1377,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h, 7 days (Salento)",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu (Salento)"
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu (Salento)",
+        "hr": "Hitna pomoć 24 h, 7 dana (Salento)"
       },
       "url": "https://clinicaveterinariagbs.it/",
       "source_url": "https://clinicaveterinariagbs.it/pronto-soccorso-veterinario-lecce/",
@@ -1335,7 +1396,8 @@
       "emergency_24h": true,
       "duty": "Private emergency service 24/7 (Salento)",
       "duty_i18n": {
-        "sl": "Zasebna nujna pomoč 24 ur na dan, vse dni v tednu (Salento)"
+        "sl": "Zasebna nujna pomoč 24 ur na dan, vse dni v tednu (Salento)",
+        "hr": "Privatna hitna služba 24/7 (Salento)"
       },
       "url": "https://prontosoccorsoveterinariolecce.it/",
       "source_url": "https://prontosoccorsoveterinariolecce.it/pronto-soccorso-veterinario-lecce-clinica-h-24/",
@@ -1353,7 +1415,8 @@
       "emergency_24h": true,
       "duty": "Visits Mon–Fri 8:30–20:00, Sat–Sun 8:30–13:00 by appointment; emergencies 24h, 365 days",
       "duty_i18n": {
-        "sl": "Pregledi pon–pet 8.30–20, sob–ned 8.30–13 po dogovoru; nujna pomoč 24 ur na dan, 365 dni v letu"
+        "sl": "Pregledi pon–pet 8.30–20, sob–ned 8.30–13 po dogovoru; nujna pomoč 24 ur na dan, 365 dni v letu",
+        "hr": "Pregledi pon–pet 8:30–20:00, sub–ned 8:30–13:00 uz prethodnu najavu; hitni slučajevi 24 h, 365 dana"
       },
       "url": "https://www.clinicaveterinariacamagna.it/",
       "source_url": "https://www.clinicaveterinariacamagna.it/pronto-soccorso",
@@ -1371,7 +1434,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 9–12 & 16–19; emergencies/on call +39 340 3948206",
       "duty_i18n": {
-        "sl": "pon–sob 9–12 in 16–19; nujni primeri/dežurstvo +39 340 3948206"
+        "sl": "pon–sob 9–12 in 16–19; nujni primeri/dežurstvo +39 340 3948206",
+        "hr": "pon–sub 9–12 i 16–19; hitni slučajevi/dežurstvo +39 340 3948206"
       },
       "url": "https://www.clinicaveterinariacittacatanzaro.it/",
       "source_url": "https://www.clinicaveterinariacittacatanzaro.it/chirurgia-d-urgenza",
@@ -1389,7 +1453,8 @@
       "emergency_24h": false,
       "duty": "Pronto soccorso Mon–Sat 08:30–20:30; closed nights and holidays; clinic line +39 0984 1907872",
       "duty_i18n": {
-        "sl": "Nujna pomoč pon–sob 8.30–20.30; ponoči in ob praznikih zaprto; številka ambulante +39 0984 1907872"
+        "sl": "Nujna pomoč pon–sob 8.30–20.30; ponoči in ob praznikih zaprto; številka ambulante +39 0984 1907872",
+        "hr": "Pronto soccorso pon–sub 08:30–20:30; noću i blagdanima zatvoreno; linija klinike +39 0984 1907872"
       },
       "url": "https://www.clinicavetlife.it/",
       "source_url": "https://www.clinicavetlife.it/pronto-soccorso/",
@@ -1406,7 +1471,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h every day incl. holidays",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih"
+        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih",
+        "hr": "Hitna pomoć 24 h svaki dan, i blagdanima"
       },
       "url": "https://www.clinicaveterinariahimera.it/",
       "source_url": "https://www.clinicaveterinariahimera.it/pronto-soccorso-veterinario/",
@@ -1424,7 +1490,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h, 7/7",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu"
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu",
+        "hr": "Hitna pomoć 24 h, 7/7"
       },
       "url": "https://www.clinicaveterinariaprimavera.it/",
       "source_url": "https://www.clinicaveterinariaprimavera.it/",
@@ -1442,7 +1509,8 @@
       "emergency_24h": true,
       "duty": "Open H24, 365 days",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+        "sl": "Odprto 24 ur na dan, 365 dni v letu",
+        "hr": "Otvoreno 24 h, 365 dana"
       },
       "url": "https://www.palermovet.it/",
       "source_url": "https://www.palermovet.it/about",
@@ -1460,7 +1528,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur na dan"
+        "sl": "pon–ned 24 ur na dan",
+        "hr": "pon–ned 24 h"
       },
       "url": "https://www.clinicaveterinariaferrarotto.it/",
       "source_url": "https://www.clinicaveterinariaferrarotto.it/",
@@ -1479,7 +1548,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24h",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan"
+        "sl": "Nujna pomoč 24 ur na dan",
+        "hr": "Hitna pomoć 24 h"
       },
       "url": "https://www.clinicaveterinariacatania.it/",
       "source_url": "https://www.clinicaveterinariacatania.it/contatti",
@@ -1497,7 +1567,8 @@
       "emergency_24h": true,
       "duty": "Open 24h incl. holidays; first-aid service 20:00–08:00",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, tudi ob praznikih; prva pomoč 20–8"
+        "sl": "Odprto 24 ur na dan, tudi ob praznikih; prva pomoč 20–8",
+        "hr": "Otvoreno 24 h, i blagdanima; prva pomoć 20:00–08:00"
       },
       "url": "https://clinicalaveterinaria.it/",
       "source_url": "https://clinicalaveterinaria.it/en/",
@@ -1516,7 +1587,8 @@
       "emergency_24h": true,
       "duty": "24h with pronto soccorso via phone on-call; landline +39 0789 21104; English line +39 340 3976803 (Costa Smeralda)",
       "duty_i18n": {
-        "sl": "24 ur na dan, nujna pomoč prek telefonskega dežurstva; stacionarna številka +39 0789 21104; angleška številka +39 340 3976803 (Costa Smeralda)"
+        "sl": "24 ur na dan, nujna pomoč prek telefonskega dežurstva; stacionarna številka +39 0789 21104; angleška številka +39 340 3976803 (Costa Smeralda)",
+        "hr": "24 h, a pronto soccorso preko telefonskog dežurstva; fiksni telefon +39 0789 21104; linija na engleskom +39 340 3976803 (Costa Smeralda)"
       },
       "url": "https://www.clinicaveterinariaolbia.it/",
       "source_url": "https://www.clinicaveterinariaolbia.it/",
@@ -1534,7 +1606,8 @@
       "emergency_24h": false,
       "duty": "Emergency service 8:00–20:00 incl. holidays; also sites in Pula (Viale G. Marconi 24) and Capoterra (Via Lampedusa 40)",
       "duty_i18n": {
-        "sl": "Nujna pomoč 8–20, tudi ob praznikih; enoti tudi v Puli (Viale G. Marconi 24) in Capoterri (Via Lampedusa 40)"
+        "sl": "Nujna pomoč 8–20, tudi ob praznikih; enoti tudi v Puli (Viale G. Marconi 24) in Capoterri (Via Lampedusa 40)",
+        "hr": "Hitna služba 8:00–20:00, i blagdanima; ambulante i u Puli (Viale G. Marconi 24) i Capoterri (Via Lampedusa 40)"
       },
       "url": "https://www.clinicanora.it/",
       "source_url": "https://www.clinicanora.it/",
@@ -1552,7 +1625,8 @@
       "emergency_24h": false,
       "duty": "Public holidays 08:00–20:00: one number, the vet on duty answers and sees the animal at their own practice (small animals).",
       "duty_i18n": {
-        "sl": "Ob praznikih 8–20: ena številka, dežurni veterinar se oglasi in sprejme hišnega ljubljenčka v svoji ambulanti (male živali)."
+        "sl": "Ob praznikih 8–20: ena številka, dežurni veterinar se oglasi in sprejme hišnega ljubljenčka v svoji ambulanti (male živali).",
+        "hr": "Blagdanima 08:00–20:00: jedan broj, javlja se dežurni veterinar i prima životinju u vlastitoj ambulanti (male životinje)."
       },
       "small_animals": true,
       "url": "https://www.ordinevetcremona.it/",
@@ -1569,7 +1643,8 @@
       "emergency_24h": false,
       "duty": "Paid private on-call vet service: weekdays 19:00–09:00, holidays 09:00 to 09:00 of the next working day; one number for the province.",
       "duty_i18n": {
-        "sl": "Plačljiva zasebna dežurna veterinarska služba: med tednom 19–9, ob praznikih od 9 do 9 naslednjega delovnega dne; ena številka za celotno pokrajino."
+        "sl": "Plačljiva zasebna dežurna veterinarska služba: med tednom 19–9, ob praznikih od 9 do 9 naslednjega delovnega dne; ena številka za celotno pokrajino.",
+        "hr": "Plaćena privatna dežurna veterinarska služba: radnim danom 19:00–09:00, blagdanima od 09:00 do 09:00 sljedećeg radnog dana; jedan broj za cijelu pokrajinu."
       },
       "small_animals": true,
       "url": "https://ordineveterinaririmini.it/",
@@ -1587,7 +1662,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24/7 for dogs, cats, exotic pets, horses and farm animals (dial 1). Exotics night line 20:00–08:30: +39 366 6867428.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan za pse, mačke, eksotične hišne ljubljenčke, konje in kmetijske živali (pritisnite 1). Nočna številka za eksotične živali 20–8.30: +39 366 6867428."
+        "sl": "Nujna pomoč 24 ur na dan za pse, mačke, eksotične hišne ljubljenčke, konje in kmetijske živali (pritisnite 1). Nočna številka za eksotične živali 20–8.30: +39 366 6867428.",
+        "hr": "Hitna služba 24/7 za pse, mačke, egzotične životinje, konje i domaće životinje (biraj 1). Noćna linija za egzotične životinje 20:00–08:30: +39 366 6867428."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinario.unito.it/",
@@ -1605,7 +1681,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24 hours / 7 days (emergency line); reception +39 0521 902817 Mon–Fri 08:30–13:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu (številka za nujne primere); sprejem +39 0521 902817 pon–pet 8.30–13."
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu (številka za nujne primere); sprejem +39 0521 902817 pon–pet 8.30–13.",
+        "hr": "Hitna služba 24 sata / 7 dana (hitna linija); recepcija +39 0521 902817 pon–pet 08:30–13:00."
       },
       "small_animals": true,
       "url": "https://smv.unipr.it/en/services/hospital-veterinary-university-didactic",
@@ -1624,7 +1701,8 @@
       "emergency_24h": true,
       "duty": "Emergency room open 24h, 7 days; visits Mon–Fri 09:00–19:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v tednu; pregledi pon–pet 9–19."
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v tednu; pregledi pon–pet 9–19.",
+        "hr": "Hitna 24 h, 7 dana; pregledi pon–pet 09:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinariobg.com/",
@@ -1642,7 +1720,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours every day of the year, holidays included.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vse dni v letu, tudi ob praznikih."
+        "sl": "Odprto 24 ur na dan, vse dni v letu, tudi ob praznikih.",
+        "hr": "Otvoreno 24 sata svaki dan u godini, i blagdanima."
       },
       "small_animals": true,
       "url": "https://ospedaleveterinariobaioni.com/",
@@ -1660,7 +1739,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu."
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu.",
+        "hr": "Hitna služba 24 sata, 365 dana u godini."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-malpensa/",
@@ -1678,7 +1758,8 @@
       "emergency_24h": true,
       "duty": "Emergency room every day of the year, 24 hours without interruption.",
       "duty_i18n": {
-        "sl": "Nujna pomoč vsak dan v letu, 24 ur na dan brez prekinitve."
+        "sl": "Nujna pomoč vsak dan v letu, 24 ur na dan brez prekinitve.",
+        "hr": "Hitna svaki dan u godini, 24 sata bez prekida."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-cmv/",
@@ -1696,7 +1777,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24/7 incl. nights and holidays.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, tudi ponoči in ob praznikih."
+        "sl": "Nujna pomoč 24 ur na dan, tudi ponoči in ob praznikih.",
+        "hr": "Hitna služba 24/7, i noću i blagdanima."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinaria24ore.com/",
@@ -1714,7 +1796,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24 hours, 7 days; mobile +39 331 5238524.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu; mobilna številka +39 331 5238524."
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu; mobilna številka +39 331 5238524.",
+        "hr": "Hitna služba 24 sata, 7 dana; mobitel +39 331 5238524."
       },
       "small_animals": true,
       "url": "https://prealpivet.it/",
@@ -1731,7 +1814,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency service with vets always on site.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, veterinarji so vedno prisotni."
+        "sl": "Nujna pomoč 24 ur na dan, veterinarji so vedno prisotni.",
+        "hr": "Hitna služba 24/7, veterinari su uvijek u klinici."
       },
       "small_animals": true,
       "url": "https://www.clinvetmonza.it/",
@@ -1750,7 +1834,8 @@
       "emergency_24h": true,
       "duty": "Emergency room open 24 hours.",
       "duty_i18n": {
-        "sl": "Nujna pomoč odprta 24 ur na dan."
+        "sl": "Nujna pomoč odprta 24 ur na dan.",
+        "hr": "Hitna otvorena 24 sata."
       },
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
@@ -1768,7 +1853,8 @@
       "emergency_24h": true,
       "duty": "Emergency room open 24 hours.",
       "duty_i18n": {
-        "sl": "Nujna pomoč odprta 24 ur na dan."
+        "sl": "Nujna pomoč odprta 24 ur na dan.",
+        "hr": "Hitna otvorena 24 sata."
       },
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
@@ -1786,7 +1872,8 @@
       "emergency_24h": true,
       "duty": "24/7 on-call emergency line (also WhatsApp); call first. Appointments +39 0172 636575, Mon–Fri 09:00–12:30, 15:30–19:30, Sat mornings/late afternoon.",
       "duty_i18n": {
-        "sl": "Dežurna številka za nujne primere 24 ur na dan (tudi WhatsApp); najprej pokličite. Naročanje +39 0172 636575, pon–pet 9–12.30, 15.30–19.30, ob sobotah dopoldne/pozno popoldne."
+        "sl": "Dežurna številka za nujne primere 24 ur na dan (tudi WhatsApp); najprej pokličite. Naročanje +39 0172 636575, pon–pet 9–12.30, 15.30–19.30, ob sobotah dopoldne/pozno popoldne.",
+        "hr": "Hitna dežurna linija 24/7 (i WhatsApp); prvo nazovi. Termini +39 0172 636575, pon–pet 09:00–12:30, 15:30–19:30, sub ujutro/kasno poslijepodne."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariofossanese.eu/",
@@ -1804,7 +1891,8 @@
       "emergency_24h": true,
       "duty": "24-hour veterinary emergency room, every day (opened 12 January 2026).",
       "duty_i18n": {
-        "sl": "24-urna veterinarska nujna pomoč vsak dan (odprta od 12. januarja 2026)."
+        "sl": "24-urna veterinarska nujna pomoč vsak dan (odprta od 12. januarja 2026).",
+        "hr": "Veterinarska hitna služba 24 sata, svaki dan (otvorena 12. siječnja 2026.)."
       },
       "small_animals": true,
       "url": "https://croceblu.it/",
@@ -1823,7 +1911,8 @@
       "emergency_24h": false,
       "duty": "Daytime emergency service during opening hours only.",
       "duty_i18n": {
-        "sl": "Dnevna nujna pomoč samo med delovnim časom."
+        "sl": "Dnevna nujna pomoč samo med delovnim časom.",
+        "hr": "Dnevna hitna služba samo u radnom vremenu."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamarengo.it/",
@@ -1841,7 +1930,8 @@
       "emergency_24h": true,
       "duty": "On-call emergency line 24/7 (same number); clinic Mon–Fri 09:00–12:00, 15:30–19:30, Sat 09:30–12:00; Sundays/holidays urgent on-call only.",
       "duty_i18n": {
-        "sl": "Dežurna številka za nujne primere 24 ur na dan (ista številka); ambulanta pon–pet 9–12, 15.30–19.30, sob 9.30–12; ob nedeljah in praznikih samo nujno dežurstvo."
+        "sl": "Dežurna številka za nujne primere 24 ur na dan (ista številka); ambulanta pon–pet 9–12, 15.30–19.30, sob 9.30–12; ob nedeljah in praznikih samo nujno dežurstvo.",
+        "hr": "Dežurna hitna linija 24/7 (isti broj); klinika pon–pet 09:00–12:00, 15:30–19:30, sub 09:30–12:00; nedjeljom/blagdanima samo hitno dežurstvo."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavaldostana.it/",
@@ -1860,7 +1950,8 @@
       "emergency_24h": true,
       "duty": "Inpatients, intensive care and 24h emergency; appointments Mon–Fri 08:30–20:30. Together with Poliambulatorio Argentina (Arma di Taggia) emergency cover is guaranteed 24h, 7 days.",
       "duty_i18n": {
-        "sl": "Hospitalizacija, intenzivna nega in nujna pomoč 24 ur na dan; naročanje pon–pet 8.30–20.30. Skupaj s Poliambulatorio Argentina (Arma di Taggia) je nujna pomoč zagotovljena 24 ur na dan, vse dni v tednu."
+        "sl": "Hospitalizacija, intenzivna nega in nujna pomoč 24 ur na dan; naročanje pon–pet 8.30–20.30. Skupaj s Poliambulatorio Argentina (Arma di Taggia) je nujna pomoč zagotovljena 24 ur na dan, vse dni v tednu.",
+        "hr": "Hospitalizirani pacijenti, intenzivna njega i hitna 24 h; termini pon–pet 08:30–20:30. Zajedno s Poliambulatorio Argentina (Arma di Taggia) hitna pomoć zajamčena je 24 h, 7 dana."
       },
       "small_animals": true,
       "url": "https://www.centroveterinarioimperiese.it/",
@@ -1879,7 +1970,8 @@
       "emergency_24h": false,
       "duty": "Walk-in emergency Tue–Thu 19:00–24:00, Sat–Sun 09:00–19:00; appointments +39 0184 462458 Mon–Fri 10:00–13:00, 15:00–19:00. Out of hours: Centro Veterinario Imperiese.",
       "duty_i18n": {
-        "sl": "Nujni primeri brez naročanja tor–čet 19–24, sob–ned 9–19; naročanje +39 0184 462458 pon–pet 10–13, 15–19. Zunaj delovnega časa: Centro Veterinario Imperiese."
+        "sl": "Nujni primeri brez naročanja tor–čet 19–24, sob–ned 9–19; naročanje +39 0184 462458 pon–pet 10–13, 15–19. Zunaj delovnega časa: Centro Veterinario Imperiese.",
+        "hr": "Hitni prijem bez najave uto–čet 19:00–24:00, sub–ned 09:00–19:00; termini +39 0184 462458 pon–pet 10:00–13:00, 15:00–19:00. Izvan radnog vremena: Centro Veterinario Imperiese."
       },
       "small_animals": true,
       "url": "https://pva-taggia.gruppoanimalia.it/",
@@ -1898,7 +1990,8 @@
       "emergency_24h": false,
       "duty": "Open every day 08:30–23:30.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 8.30–23.30."
+        "sl": "Odprto vsak dan 8.30–23.30.",
+        "hr": "Otvoreno svaki dan 08:30–23:30."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-letimbro/",
@@ -1916,7 +2009,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24h, 365 days a year incl. nights and holidays; dogs, cats, exotics.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu, tudi ponoči in ob praznikih; psi, mačke, eksotični hišni ljubljenčki."
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu, tudi ponoči in ob praznikih; psi, mačke, eksotični hišni ljubljenčki.",
+        "hr": "Hitna služba 24 h, 365 dana u godini, i noću i blagdanima; psi, mačke, egzotične životinje."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamodenasud.it/",
@@ -1934,7 +2028,8 @@
       "emergency_24h": true,
       "duty": "24h emergency line; information +39 0522 286266, Mon–Sat 09:30–19:30.",
       "duty_i18n": {
-        "sl": "Številka za nujne primere 24 ur na dan; informacije +39 0522 286266, pon–sob 9.30–19.30."
+        "sl": "Številka za nujne primere 24 ur na dan; informacije +39 0522 286266, pon–sob 9.30–19.30.",
+        "hr": "Hitna linija 24 h; informacije +39 0522 286266, pon–sub 09:30–19:30."
       },
       "small_animals": true,
       "url": "https://www.clinicatrefontane.it/",
@@ -1952,7 +2047,8 @@
       "emergency_24h": true,
       "duty": "On-call 24 hours (call any time); surgery hours Mon–Sat, Sun closed.",
       "duty_i18n": {
-        "sl": "Dežurstvo 24 ur na dan (pokličite kadar koli); ordinacija pon–sob, ob nedeljah zaprto."
+        "sl": "Dežurstvo 24 ur na dan (pokličite kadar koli); ordinacija pon–sob, ob nedeljah zaprto.",
+        "hr": "Dežurstvo 24 sata (nazovi bilo kada); ambulanta radi pon–sub, nedjeljom zatvoreno."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariobandini.com/",
@@ -1971,7 +2067,8 @@
       "emergency_24h": true,
       "duty": "Emergency room always active incl. holidays.",
       "duty_i18n": {
-        "sl": "Nujna pomoč vedno na voljo, tudi ob praznikih."
+        "sl": "Nujna pomoč vedno na voljo, tudi ob praznikih.",
+        "hr": "Hitna uvijek aktivna, i blagdanima."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinariofarnesiana.com/",
@@ -1990,7 +2087,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days; vets on site nights and weekends.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vse dni v tednu; ponoči in ob vikendih so veterinarji prisotni."
+        "sl": "Odprto 24 ur na dan, vse dni v tednu; ponoči in ob vikendih so veterinarji prisotni.",
+        "hr": "Otvoreno 24 sata, 7 dana; veterinari su u klinici noću i vikendom."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaestense.com/",
@@ -2008,7 +2106,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 all year incl. holidays; dogs, cats, rabbits.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan vse leto, tudi ob praznikih; psi, mačke, kunci."
+        "sl": "Odprto 24 ur na dan vse leto, tudi ob praznikih; psi, mačke, kunci.",
+        "hr": "Otvoreno 24/7 cijele godine, i blagdanima; psi, mačke, kunići."
       },
       "small_animals": true,
       "url": "https://www.ospedaledeglianimali.it/",
@@ -2026,7 +2125,8 @@
       "emergency_24h": true,
       "duty": "24h emergency every day; urgent service 19:30–08:30 and on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vsak dan; nujna služba 19.30–8.30 in ob praznikih."
+        "sl": "Nujna pomoč 24 ur na dan, vsak dan; nujna služba 19.30–8.30 in ob praznikih.",
+        "hr": "Hitna 24 h svaki dan; hitna služba 19:30–08:30 i blagdanima."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-dellorologio/",
@@ -2044,7 +2144,8 @@
       "emergency_24h": true,
       "duty": "First-aid care 24h, 365 days (out-of-hours on-call); clinic Mon–Fri 09:00–19:00, Sat 09:00–13:00.",
       "duty_i18n": {
-        "sl": "Prva pomoč 24 ur na dan, 365 dni v letu (dežurstvo zunaj delovnega časa); ambulanta pon–pet 9–19, sob 9–13."
+        "sl": "Prva pomoč 24 ur na dan, 365 dni v letu (dežurstvo zunaj delovnega časa); ambulanta pon–pet 9–19, sob 9–13.",
+        "hr": "Prva pomoć 24 h, 365 dana (dežurstvo izvan radnog vremena); klinika pon–pet 09:00–19:00, sub 09:00–13:00."
       },
       "small_animals": true,
       "url": "https://clinicaveterinarialevante.it/",
@@ -2063,7 +2164,8 @@
       "emergency_24h": false,
       "duty": "Mon–Sat 08:00–20:00, Sun and holidays 10:00–17:00. Not a 24h service.",
       "duty_i18n": {
-        "sl": "pon–sob 8–20, ned in prazniki 10–17. Ni 24-urna služba."
+        "sl": "pon–sob 8–20, ned in prazniki 10–17. Ni 24-urna služba.",
+        "hr": "pon–sub 08:00–20:00, ned i blagdani 10:00–17:00. Nije služba 24 h."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanmarcoravenna.it/",
@@ -2082,7 +2184,8 @@
       "emergency_24h": true,
       "duty": "On-call 24h (nights, pre-holidays, holidays) and 24h clinical-surgical emergency; emergency mobile +39 339 4631224; clinic Mon–Sat 09:00–13:00, 15:00–20:00.",
       "duty_i18n": {
-        "sl": "Dežurstvo 24 ur na dan (ponoči, pred prazniki, ob praznikih) in klinično-kirurška nujna pomoč 24 ur na dan; mobilna številka za nujne primere +39 339 4631224; ambulanta pon–sob 9–13, 15–20."
+        "sl": "Dežurstvo 24 ur na dan (ponoči, pred prazniki, ob praznikih) in klinično-kirurška nujna pomoč 24 ur na dan; mobilna številka za nujne primere +39 339 4631224; ambulanta pon–sob 9–13, 15–20.",
+        "hr": "Dežurstvo 24 h (noću, uoči blagdana, blagdanima) i klinička i kirurška hitna 24 h; hitni mobitel +39 339 4631224; klinika pon–sub 09:00–13:00, 15:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariacittadiforli.it/",
@@ -2100,7 +2203,8 @@
       "emergency_24h": false,
       "duty": "Open 7 days 09:00–19:00 by phone appointment; Sundays urgent cases only; telephone on-call for urgencies.",
       "duty_i18n": {
-        "sl": "Odprto 7 dni v tednu 9–19 po telefonskem dogovoru; ob nedeljah samo nujni primeri; telefonsko dežurstvo za nujne primere."
+        "sl": "Odprto 7 dni v tednu 9–19 po telefonskem dogovoru; ob nedeljah samo nujni primeri; telefonsko dežurstvo za nujne primere.",
+        "hr": "Otvoreno 7 dana 09:00–19:00 uz telefonsku najavu; nedjeljom samo hitni slučajevi; telefonsko dežurstvo za hitne slučajeve."
       },
       "small_animals": true,
       "url": "https://alfiobulgarelli.com/",
@@ -2119,7 +2223,8 @@
       "emergency_24h": true,
       "duty": "24h emergency (pronto soccorso h24).",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan."
+        "sl": "Nujna pomoč 24 ur na dan.",
+        "hr": "Hitna pomoć (pronto soccorso) 24 h."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanmarco.it/",
@@ -2137,7 +2242,8 @@
       "emergency_24h": true,
       "duty": "Emergency department 24/7; dogs and cats only.",
       "duty_i18n": {
-        "sl": "Urgentni oddelek 24 ur na dan; samo psi in mačke."
+        "sl": "Urgentni oddelek 24 ur na dan; samo psi in mačke.",
+        "hr": "Hitni odjel 24/7; samo psi i mačke."
       },
       "small_animals": true,
       "url": "https://www.ospvet.it/",
@@ -2155,7 +2261,8 @@
       "emergency_24h": true,
       "duty": "Open every day 24h with a vet on site; appointments Mon–Sat 10:00–19:30.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 24 ur na dan, veterinar je prisoten; naročanje pon–sob 10–19.30."
+        "sl": "Odprto vsak dan 24 ur na dan, veterinar je prisoten; naročanje pon–sob 10–19.30.",
+        "hr": "Otvoreno svaki dan 24 h, uz veterinara u klinici; termini pon–sub 10:00–19:30."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariastradaovest.com/",
@@ -2173,7 +2280,8 @@
       "emergency_24h": true,
       "duty": "Emergency always active 24h (mobile line); clinic +39 0444 276070 Mon–Sat 09:00–20:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč vedno na voljo, 24 ur na dan (mobilna številka); ambulanta +39 0444 276070 pon–sob 9–20."
+        "sl": "Nujna pomoč vedno na voljo, 24 ur na dan (mobilna številka); ambulanta +39 0444 276070 pon–sob 9–20.",
+        "hr": "Hitna uvijek aktivna 24 h (mobitel); klinika +39 0444 276070 pon–sub 09:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.vetbase.it/",
@@ -2191,7 +2299,8 @@
       "emergency_24h": true,
       "duty": "On-call 24h, 365 days (emergency mobile); surgery +39 0444 611232.",
       "duty_i18n": {
-        "sl": "Dežurstvo 24 ur na dan, 365 dni v letu (mobilna številka za nujne primere); ordinacija +39 0444 611232."
+        "sl": "Dežurstvo 24 ur na dan, 365 dni v letu (mobilna številka za nujne primere); ordinacija +39 0444 611232.",
+        "hr": "Dežurstvo 24 h, 365 dana (hitni mobitel); ambulanta +39 0444 611232."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariocamisano.it/",
@@ -2210,7 +2319,8 @@
       "emergency_24h": true,
       "duty": "Urgent line 24h; appointments +39 045 6211221 Mon–Fri 10:00–12:30, 15:00–19:00, Sat 10:00–12:30.",
       "duty_i18n": {
-        "sl": "Številka za nujne primere 24 ur na dan; naročanje +39 045 6211221 pon–pet 10–12.30, 15–19, sob 10–12.30."
+        "sl": "Številka za nujne primere 24 ur na dan; naročanje +39 045 6211221 pon–pet 10–12.30, 15–19, sob 10–12.30.",
+        "hr": "Hitna linija 24 h; termini +39 045 6211221 pon–pet 10:00–12:30, 15:00–19:00, sub 10:00–12:30."
       },
       "small_animals": true,
       "url": "https://www.vetbardolino.it/",
@@ -2229,7 +2339,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–19:00 (appointment preferred), Sat by appointment. No 24h emergency service.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19 (priporočljivo po dogovoru), sob po dogovoru. Brez 24-urne nujne pomoči."
+        "sl": "pon–pet 9–19 (priporočljivo po dogovoru), sob po dogovoru. Brez 24-urne nujne pomoči.",
+        "hr": "pon–pet 09:00–19:00 (poželjna najava), sub uz prethodnu najavu. Nema hitne službe 24 h."
       },
       "small_animals": true,
       "url": "https://www.veterinariopeschiera.it/",
@@ -2247,7 +2358,8 @@
       "emergency_24h": true,
       "duty": "Emergencies H24, 7 days, vet always present; clinic +39 0434 783070 Mon–Fri 09:00–19:00, Sat 09:00–17:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu, veterinar je vedno prisoten; ambulanta +39 0434 783070 pon–pet 9–19, sob 9–17."
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu, veterinar je vedno prisoten; ambulanta +39 0434 783070 pon–pet 9–19, sob 9–17.",
+        "hr": "Hitni slučajevi 24 h, 7 dana, veterinar je uvijek prisutan; klinika +39 0434 783070 pon–pet 09:00–19:00, sub 09:00–17:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaserenissima.it/",
@@ -2265,7 +2377,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–18:30, Sat 09:00–12:30 by appointment; night and holiday on-call shared with other Udine practices — the answering machine gives the on-call vet's number.",
       "duty_i18n": {
-        "sl": "pon–pet 9–18.30, sob 9–12.30 po dogovoru; nočno dežurstvo in dežurstvo ob praznikih si delijo z drugimi ambulantami v Vidmu (Udine) – odzivnik sporoči številko dežurnega veterinarja."
+        "sl": "pon–pet 9–18.30, sob 9–12.30 po dogovoru; nočno dežurstvo in dežurstvo ob praznikih si delijo z drugimi ambulantami v Vidmu (Udine) – odzivnik sporoči številko dežurnega veterinarja.",
+        "hr": "pon–pet 09:00–18:30, sub 09:00–12:30 uz prethodnu najavu; noćno i blagdansko dežurstvo dijeli s drugim ambulantama u Udinama, a na telefonskoj sekretarici je broj dežurnog veterinara."
       },
       "small_animals": true,
       "url": "https://ambulatorioveterinarioschiavi.com/",
@@ -2283,7 +2396,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–19:00, Sat 09:00–14:00.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–14."
+        "sl": "pon–pet 9–19, sob 9–14.",
+        "hr": "pon–pet 09:00–19:00, sub 09:00–14:00."
       },
       "small_animals": true,
       "url": "https://www.clinicadiana.it/",
@@ -2301,7 +2415,8 @@
       "emergency_24h": true,
       "duty": "Pronto Soccorso and intensive care H24 (Veterinario Contrattista H24 at night, weekends and holidays); reception Mon–Fri 8:30–17:00, +39 075 5857792. Large-animal emergency +39 349 7602689.",
       "duty_i18n": {
-        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan (pogodbeni veterinar 24 ur na dan ponoči, ob vikendih in praznikih); sprejem pon–pet 8.30–17, +39 075 5857792. Nujna pomoč za velike živali +39 349 7602689."
+        "sl": "Nujna pomoč in intenzivna nega 24 ur na dan (pogodbeni veterinar 24 ur na dan ponoči, ob vikendih in praznikih); sprejem pon–pet 8.30–17, +39 075 5857792. Nujna pomoč za velike živali +39 349 7602689.",
+        "hr": "Pronto soccorso i intenzivna njega 24 h (Veterinario Contrattista H24 noću, vikendom i blagdanima); recepcija pon–pet 8:30–17:00, +39 075 5857792. Hitni slučajevi za velike životinje +39 349 7602689."
       },
       "small_animals": true,
       "url": "https://medvet.unipg.it/en/structures",
@@ -2320,7 +2435,8 @@
       "emergency_24h": false,
       "duty": "Pronto soccorso 7 days a week 9:00–20:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 7 dni v tednu 9–20."
+        "sl": "Nujna pomoč 7 dni v tednu 9–20.",
+        "hr": "Pronto soccorso 7 dana u tjednu 9:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.vetsassari.it/",
@@ -2339,7 +2455,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency room for dogs and cats, every day of the year.",
       "duty_i18n": {
-        "sl": "24-urna nujna pomoč za pse in mačke, vsak dan v letu."
+        "sl": "24-urna nujna pomoč za pse in mačke, vsak dan v letu.",
+        "hr": "Hitna za pse i mačke 24 sata, svaki dan u godini."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinarioardenza.com/",
@@ -2357,7 +2474,8 @@
       "emergency_24h": true,
       "duty": "Open every day 24 hours.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 24 ur na dan."
+        "sl": "Odprto vsak dan 24 ur na dan.",
+        "hr": "Otvoreno svaki dan 24 sata."
       },
       "small_animals": true,
       "url": "https://www.clinicamelosi.it/",
@@ -2375,7 +2493,8 @@
       "emergency_24h": true,
       "duty": "Clinic open 24 hours.",
       "duty_i18n": {
-        "sl": "Ambulanta odprta 24 ur na dan."
+        "sl": "Ambulanta odprta 24 ur na dan.",
+        "hr": "Klinika otvorena 24 sata."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaetruria.it/",
@@ -2393,7 +2512,8 @@
       "emergency_24h": true,
       "duty": "Emergencies H24, 365 days a year.",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan, 365 dni v letu."
+        "sl": "Nujni primeri 24 ur na dan, 365 dni v letu.",
+        "hr": "Hitni slučajevi 24 h, 365 dana u godini."
       },
       "small_animals": true,
       "url": "https://www.sosveterinario.it/",
@@ -2411,7 +2531,8 @@
       "emergency_24h": true,
       "duty": "Open every day 24 h; same number for emergencies.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 24 ur na dan; ista številka tudi za nujne primere."
+        "sl": "Odprto vsak dan 24 ur na dan; ista številka tudi za nujne primere.",
+        "hr": "Otvoreno svaki dan 24 h; isti broj i za hitne slučajeve."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialucca.it/",
@@ -2429,7 +2550,8 @@
       "emergency_24h": true,
       "duty": "Service active 24 h, 365 days a year.",
       "duty_i18n": {
-        "sl": "Služba deluje 24 ur na dan, 365 dni v letu."
+        "sl": "Služba deluje 24 ur na dan, 365 dni v letu.",
+        "hr": "Služba aktivna 24 h, 365 dana u godini."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinaria-colombo.com/",
@@ -2447,7 +2569,8 @@
       "emergency_24h": false,
       "duty": "Sundays and public holidays 9:00–19:00 open for urgent visits.",
       "duty_i18n": {
-        "sl": "Ob nedeljah in praznikih 9–19 odprto za nujne preglede."
+        "sl": "Ob nedeljah in praznikih 9–19 odprto za nujne preglede.",
+        "hr": "Nedjeljom i blagdanima 9:00–19:00 otvoreno za hitne preglede."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariapietrasanta.com/",
@@ -2466,7 +2589,8 @@
       "emergency_24h": true,
       "duty": "Pronto soccorso h24 7/7; office hours Mon–Sat 9:00–19:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu; redni delovni čas pon–sob 9–19."
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu; redni delovni čas pon–sob 9–19.",
+        "hr": "Pronto soccorso 24 h, 7/7; radno vrijeme pon–sub 9:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.fanumfortunaevet.it/",
@@ -2485,7 +2609,8 @@
       "emergency_24h": false,
       "duty": "Pronto soccorso Sat 13:00–19:00, Sun 9:00–19:00; on-call 20:00–24:00.",
       "duty_i18n": {
-        "sl": "Nujna pomoč ob sobotah 13–19, ob nedeljah 9–19; dežurstvo 20–24."
+        "sl": "Nujna pomoč ob sobotah 13–19, ob nedeljah 9–19; dežurstvo 20–24.",
+        "hr": "Pronto soccorso sub 13:00–19:00, ned 9:00–19:00; dežurstvo 20:00–24:00."
       },
       "small_animals": true,
       "url": "https://santateresavet.wixsite.com/clinicasantateresa",
@@ -2503,7 +2628,8 @@
       "emergency_24h": true,
       "duty": "On-call for emergencies H24; regular hours Mon–Fri 8:30–19:30, Sat 8:30–17:30. Mobile +39 389 4457032.",
       "duty_i18n": {
-        "sl": "Dežurstvo za nujne primere 24 ur na dan; redni delovni čas pon–pet 8.30–19.30, sob 8.30–17.30. Mobilna številka +39 389 4457032."
+        "sl": "Dežurstvo za nujne primere 24 ur na dan; redni delovni čas pon–pet 8.30–19.30, sob 8.30–17.30. Mobilna številka +39 389 4457032.",
+        "hr": "Dežurstvo za hitne slučajeve 24 h; redovno radno vrijeme pon–pet 8:30–19:30, sub 8:30–17:30. Mobitel +39 389 4457032."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariagaudenzi.it/",
@@ -2522,7 +2648,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24 h every day incl. holidays.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih."
+        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih.",
+        "hr": "Hitna služba 24 h svaki dan, uključujući blagdane."
       },
       "small_animals": true,
       "url": "https://www.futuravet.it/",
@@ -2540,7 +2667,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 00–24.",
       "duty_i18n": {
-        "sl": "Nujni primeri 0–24."
+        "sl": "Nujni primeri 0–24.",
+        "hr": "Hitni slučajevi 0–24."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-tyrus/",
@@ -2558,7 +2686,8 @@
       "emergency_24h": true,
       "duty": "On-call H24 for emergencies incl. holidays (call first); clinic +39 0744 282530, Mon–Fri 10–13/16:30–19:30, Sat 10–13.",
       "duty_i18n": {
-        "sl": "Dežurstvo za nujne primere 24 ur na dan, tudi ob praznikih (najprej pokličite); ambulanta +39 0744 282530, pon–pet 10–13 in 16.30–19.30, sob 10–13."
+        "sl": "Dežurstvo za nujne primere 24 ur na dan, tudi ob praznikih (najprej pokličite); ambulanta +39 0744 282530, pon–pet 10–13 in 16.30–19.30, sob 10–13.",
+        "hr": "Telefonsko dežurstvo 0–24 za hitne slučajeve, uključujući blagdane (nazovi unaprijed); ambulanta +39 0744 282530, pon–pet 10–13 i 16:30–19:30, sub 10–13."
       },
       "small_animals": true,
       "url": "https://www.veterinariotriola.com/",
@@ -2577,7 +2706,8 @@
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu.",
+        "hr": "Otvoreno 24 h, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://www.cazampa.it/clinica/latina-ospedale-veterinario-amici-degli-animali/",
@@ -2595,7 +2725,8 @@
       "emergency_24h": true,
       "duty": "Emergency number active H24, 7 days incl. holidays; clinic +39 0761 824579.",
       "duty_i18n": {
-        "sl": "Številka za nujne primere dosegljiva 24 ur na dan, 7 dni v tednu, tudi ob praznikih; ambulanta +39 0761 824579."
+        "sl": "Številka za nujne primere dosegljiva 24 ur na dan, 7 dni v tednu, tudi ob praznikih; ambulanta +39 0761 824579.",
+        "hr": "Hitni broj aktivan 0–24, 7 dana u tjednu, uključujući blagdane; ambulanta +39 0761 824579."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadellatuscia.com/",
@@ -2614,7 +2745,8 @@
       "emergency_24h": true,
       "duty": "Pronto soccorso 24H.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan."
+        "sl": "Nujna pomoč 24 ur na dan.",
+        "hr": "Hitna pomoć 24 h."
       },
       "small_animals": true,
       "url": "https://www.fidoefelix.it/",
@@ -2632,7 +2764,8 @@
       "emergency_24h": true,
       "duty": "Open H24, 7 days a week.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu.",
+        "hr": "Otvoreno 0–24, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://www.vetprime.it/",
@@ -2650,7 +2783,8 @@
       "emergency_24h": false,
       "duty": "Open every day incl. holidays 07:00–23:00.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan, tudi ob praznikih, 7–23."
+        "sl": "Odprto vsak dan, tudi ob praznikih, 7–23.",
+        "hr": "Otvoreno svaki dan, uključujući blagdane, 07:00–23:00."
       },
       "small_animals": true,
       "url": "https://clinicavetaretusea.it/",
@@ -2668,7 +2802,8 @@
       "emergency_24h": true,
       "duty": "Pronto soccorso H24 with constant on-call availability; hospitalisation H24.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan s stalno dežurno pripravljenostjo; hospitalizacija 24 ur na dan."
+        "sl": "Nujna pomoč 24 ur na dan s stalno dežurno pripravljenostjo; hospitalizacija 24 ur na dan.",
+        "hr": "Hitna pomoć 0–24 s stalnim dežurstvom; bolničko liječenje 0–24."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarianoto.it/",
@@ -2686,7 +2821,8 @@
       "emergency_24h": false,
       "duty": "Augusta Mon–Fri 9:00–13:00 and 15:15–19:30; Lentini Mon/Wed/Fri 9:30–12:00. Mobile +39 338 8827347.",
       "duty_i18n": {
-        "sl": "Augusta pon–pet 9–13 in 15.15–19.30; Lentini pon, sre, pet 9.30–12. Mobilna številka +39 338 8827347."
+        "sl": "Augusta pon–pet 9–13 in 15.15–19.30; Lentini pon, sre, pet 9.30–12. Mobilna številka +39 338 8827347.",
+        "hr": "Augusta pon–pet 9:00–13:00 i 15:15–19:30; Lentini pon, sri, pet 9:30–12:00. Mobitel +39 338 8827347."
       },
       "small_animals": true,
       "url": "https://www.animalhospitalsrls.it/",
@@ -2704,7 +2840,8 @@
       "emergency_24h": false,
       "duty": "Pronto soccorso 24 h, 7 days; office hours Mon–Fri 9:30–19:30, Sat 10–13. Mobile +39 366 2878385.",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu; ordinacijske ure pon–pet 9.30–19.30, sob 10–13. Mobilna številka +39 366 2878385."
+        "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu; ordinacijske ure pon–pet 9.30–19.30, sob 10–13. Mobilna številka +39 366 2878385.",
+        "hr": "Hitna pomoć 24 h, 7 dana; radno vrijeme pon–pet 9:30–19:30, sub 10–13. Mobitel +39 366 2878385."
       },
       "small_animals": true,
       "url": "https://www.veterinaritrapani.it/",
@@ -2723,7 +2860,8 @@
       "emergency_24h": true,
       "duty": "On call H24.",
       "duty_i18n": {
-        "sl": "Dežurstvo 24 ur na dan."
+        "sl": "Dežurstvo 24 ur na dan.",
+        "hr": "Dežurstvo 0–24."
       },
       "small_animals": true,
       "url": "https://www.trapanivet.it/",
@@ -2742,7 +2880,8 @@
       "emergency_24h": false,
       "duty": "Clinic Mon–Fri 10:00–13:00 and 16:30–20:00; available h24 for home visits and day hospital in the most urgent cases. Mobile +39 320 3387772.",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 10–13 in 16.30–20; za najnujnejše primere na voljo 24 ur na dan za obiske na domu in dnevno bolnišnico. Mobilna številka +39 320 3387772."
+        "sl": "Ambulanta pon–pet 10–13 in 16.30–20; za najnujnejše primere na voljo 24 ur na dan za obiske na domu in dnevno bolnišnico. Mobilna številka +39 320 3387772.",
+        "hr": "Ambulanta pon–pet 10:00–13:00 i 16:30–20:00; u najhitnijim slučajevima dostupni 0–24 za kućne posjete i dnevnu bolnicu. Mobitel +39 320 3387772."
       },
       "small_animals": true,
       "url": "https://www.centroveterinarioizzo.it/",
@@ -2761,7 +2900,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:30 and 15:30–19:00, Sat morning.",
       "duty_i18n": {
-        "sl": "pon–pet 9–12.30 in 15.30–19, sob dopoldne."
+        "sl": "pon–pet 9–12.30 in 15.30–19, sob dopoldne.",
+        "hr": "pon–pet 9:00–12:30 i 15:30–19:00, sub ujutro."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaragusa.it/",
@@ -2779,7 +2919,8 @@
       "emergency_24h": false,
       "duty": "Holiday emergencies: +39 380 7839368.",
       "duty_i18n": {
-        "sl": "Nujni primeri ob praznikih: +39 380 7839368."
+        "sl": "Nujni primeri ob praznikih: +39 380 7839368.",
+        "hr": "Hitni slučajevi na blagdane: +39 380 7839368."
       },
       "small_animals": true,
       "url": "https://www.clinicaamicomio.it/",
@@ -2797,7 +2938,8 @@
       "emergency_24h": true,
       "duty": "Veterinary on-call 24 h every day; clinic Mon–Fri 9:00–12:30 and 16:30–20:00, Sat 9–13.",
       "duty_i18n": {
-        "sl": "Veterinarsko dežurstvo 24 ur na dan, vsak dan; ambulanta pon–pet 9–12.30 in 16.30–20, sob 9–13."
+        "sl": "Veterinarsko dežurstvo 24 ur na dan, vsak dan; ambulanta pon–pet 9–12.30 in 16.30–20, sob 9–13.",
+        "hr": "Veterinarsko dežurstvo 24 h svaki dan; ambulanta pon–pet 9:00–12:30 i 16:30–20:00, sub 9–13."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamagnagraecia.it/",
@@ -2816,7 +2958,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:30 and 16:30–19:30, Sat 8:30–12:00; urgent cases by phone during contact hours.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–12.30 in 16.30–19.30, sob 8.30–12; nujni primeri po telefonu v ordinacijskem času."
+        "sl": "pon–pet 8.30–12.30 in 16.30–19.30, sob 8.30–12; nujni primeri po telefonu v ordinacijskem času.",
+        "hr": "pon–pet 8:30–12:30 i 16:30–19:30, sub 8:30–12:00; hitni slučajevi telefonom tijekom radnog vremena."
       },
       "small_animals": true,
       "url": "https://www.veterinariovetland.it/",
@@ -2834,7 +2977,8 @@
       "emergency_24h": false,
       "duty": "Emergency service; available also on public holidays.",
       "duty_i18n": {
-        "sl": "Nujna pomoč; na voljo tudi ob praznikih."
+        "sl": "Nujna pomoč; na voljo tudi ob praznikih.",
+        "hr": "Hitna služba; dostupna i na blagdane."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariosardo.it/",
@@ -2853,7 +2997,8 @@
       "emergency_24h": false,
       "duty": "Urgent cases: +39 342 1758375.",
       "duty_i18n": {
-        "sl": "Nujni primeri: +39 342 1758375."
+        "sl": "Nujni primeri: +39 342 1758375.",
+        "hr": "Hitni slučajevi: +39 342 1758375."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariodarwin.it/",
@@ -2872,7 +3017,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–13:00 and 15:00–17:00; on-call number +39 328 0739567.",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 15–17; dežurna številka +39 328 0739567."
+        "sl": "pon–pet 9–13 in 15–17; dežurna številka +39 328 0739567.",
+        "hr": "pon–pet 9:00–13:00 i 15:00–17:00; broj za dežurstvo +39 328 0739567."
       },
       "small_animals": true,
       "url": "https://www.ambvetderosi.com/",
@@ -2889,7 +3035,8 @@
       "emergency_24h": false,
       "duty": "Weekends and public holidays; voluntary small-animal on-call rota per district (PDF download). Weekdays: own vet.",
       "duty_i18n": {
-        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar."
+        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar.",
+        "hr": "Vikendom i na blagdane; dobrovoljno dežurstvo za male životinje po okruzima (PDF za preuzimanje). Radnim danima: tvoj veterinar."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-animali-daffezione-distretto-merano-val-venosta/",
@@ -2906,7 +3053,8 @@
       "emergency_24h": false,
       "duty": "Weekends and public holidays; voluntary small-animal on-call rota per district (PDF download). Weekdays: own vet.",
       "duty_i18n": {
-        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar."
+        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar.",
+        "hr": "Vikendom i na blagdane; dobrovoljno dežurstvo za male životinje po okruzima (PDF za preuzimanje). Radnim danima: tvoj veterinar."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-per-animali-daffezione-bressanone/",
@@ -2923,7 +3071,8 @@
       "emergency_24h": false,
       "duty": "Weekends and public holidays; voluntary small-animal on-call rota per district (PDF download). Weekdays: own vet.",
       "duty_i18n": {
-        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar."
+        "sl": "Ob vikendih in praznikih; prostovoljna dežurna služba za male živali po okrožjih (prenos PDF). Med tednom: vaš veterinar.",
+        "hr": "Vikendom i na blagdane; dobrovoljno dežurstvo za male životinje po okruzima (PDF za preuzimanje). Radnim danima: tvoj veterinar."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-per-animali-daffezione-val-pusteria/",
@@ -3444,7 +3593,8 @@
       "emergency_24h": true,
       "duty": "Staffed clinic open 24 h, 365 days; clinic hours 08:30-19:30, emergencies 00-24.",
       "duty_i18n": {
-        "sl": "Ambulanta z osebjem odprta 24 ur na dan, 365 dni v letu; ambulantne ure 8.30–19.30, nujni primeri 0–24."
+        "sl": "Ambulanta z osebjem odprta 24 ur na dan, 365 dni v letu; ambulantne ure 8.30–19.30, nujni primeri 0–24.",
+        "hr": "Ambulanta s osobljem otvorena 24 h, 365 dana; radno vrijeme ambulante 08:30–19:30, hitni slučajevi 0–24."
       },
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-orobica/",
       "source_url": "https://www.anicura.it/cliniche/clinica-veterinaria-orobica/",
@@ -3462,7 +3612,8 @@
       "emergency_24h": true,
       "duty": "Outpatient visits 09:00-20:00 every day incl. Sundays/holidays; emergency service (pronto soccorso) 24/7 incl. nights.",
       "duty_i18n": {
-        "sl": "Ambulantni pregledi 9–20 vsak dan, tudi ob nedeljah in praznikih; nujna pomoč 24 ur na dan, tudi ponoči."
+        "sl": "Ambulantni pregledi 9–20 vsak dan, tudi ob nedeljah in praznikih; nujna pomoč 24 ur na dan, tudi ponoči.",
+        "hr": "Ambulantni pregledi 09:00–20:00 svaki dan, uključujući nedjelje i blagdane; hitna pomoć (pronto soccorso) 24/7, i noću."
       },
       "url": "https://www.gruppoanimalia.it/cliniche/ospedale-veterinario-dr-rosi/",
       "source_url": "https://www.clinicaveterinariadottpaolorosi.it/contatti/",
@@ -3480,7 +3631,8 @@
       "emergency_24h": true,
       "duty": "Mobile home-visit vet (no clinic). Phone on-call 24 h for emergencies incl. nights/holidays; routine visits by appointment Mon-Fri 09:00-20:00, Sat 09:00-13:00. Covers Brescia and province, Desenzano, Montichiari, Castiglione d/S, Verona.",
       "duty_i18n": {
-        "sl": "Mobilni veterinar za obiske na domu (brez ambulante). Telefonsko dežurstvo 24 ur na dan za nujne primere, tudi ponoči in ob praznikih; redni obiski po dogovoru pon–pet 9–20, sob 9–13. Pokriva Brescio in pokrajino, Desenzano, Montichiari, Castiglione d/S, Verono."
+        "sl": "Mobilni veterinar za obiske na domu (brez ambulante). Telefonsko dežurstvo 24 ur na dan za nujne primere, tudi ponoči in ob praznikih; redni obiski po dogovoru pon–pet 9–20, sob 9–13. Pokriva Brescio in pokrajino, Desenzano, Montichiari, Castiglione d/S, Verono.",
+        "hr": "Mobilni veterinar za kućne posjete (bez ambulante). Telefonsko dežurstvo 24 h za hitne slučajeve, uključujući noći i blagdane; redoviti posjeti uz prethodnu najavu pon–pet 09:00–20:00, sub 09:00–13:00. Pokriva Bresciu i provinciju, Desenzano, Montichiari, Castiglione d/S i Veronu."
       },
       "url": "https://www.tinavet.it/veterinario-domicilio-brescia-desenzano.php",
       "source_url": "https://www.tinavet.it/veterinario-domicilio-brescia-desenzano.php",
@@ -3499,7 +3651,8 @@
       "emergency_24h": false,
       "duty": "Since 1 July 2023: Mon-Sat 09:00-23:00 (excl. holidays), Sun 09:00-12:00 and 15:00-19:00. Night and holiday 24h emergency service has ended.",
       "duty_i18n": {
-        "sl": "Od 1. julija 2023: pon–sob 9–23 (razen ob praznikih), ned 9–12 in 15–19. Nočne in praznične 24-urne nujne pomoči ni več."
+        "sl": "Od 1. julija 2023: pon–sob 9–23 (razen ob praznikih), ned 9–12 in 15–19. Nočne in praznične 24-urne nujne pomoči ni več.",
+        "hr": "Od 1. srpnja 2023.: pon–sub 09:00–23:00 (osim blagdana), ned 09:00–12:00 i 15:00–19:00. Noćna i blagdanska hitna služba 24 h ukinuta je."
       },
       "url": "https://www.ospedaleveterinarioh24.it/",
       "source_url": "https://www.ospedaleveterinarioh24.it/",
@@ -3516,10 +3669,10 @@
       "address": "Via Brescia 126 H, 25018 Montichiari (BS)",
       "phone": "+39 030 9660972",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-18:00 (page also shows 10-12/15-18); phone on-call Sundays and holidays 09:00-19:00; at night refers to nearby emergency clinics.",
+      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-18:00; phone on-call Sundays and holidays 09:00-19:00; at night refers to nearby emergency clinics.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–18 (stran navaja tudi 10–12 in 15–18); telefonsko dežurstvo ob nedeljah in praznikih 9–19; ponoči napotijo na bližnje nujne klinike."
-      },
+        "hr": "pon–pet 09:00–19:00, sub 09:00–18:00; telefonsko dežurstvo nedjeljom i na blagdane 09:00–19:00; noću upućuju na obližnje hitne klinike."
+      }, "note": "Page also shows Sat 10-12/15-18.",
       "url": "https://www.veterinariocornoldi.it/",
       "source_url": "https://www.veterinariocornoldi.it/",
       "quote": "Domenica e festivi reperibili dalle 9.00 alle 19.00",
@@ -3536,7 +3689,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 16:30-19:00, Sat 10:00-12:00; outside hours by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 16.30–19, sob 10–12; zunaj delovnega časa po dogovoru."
+        "sl": "pon–pet 16.30–19, sob 10–12; zunaj delovnega časa po dogovoru.",
+        "hr": "pon–pet 16:30–19:00, sub 10:00–12:00; izvan radnog vremena uz prethodnu najavu."
       },
       "url": "https://www.veterinariofreddi.com/",
       "source_url": "https://www.veterinariofreddi.com/",
@@ -3554,7 +3708,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-13:00 and 14:30-20:00; Sat-Sun 09:00-13:00 and 14:30-19:30 (open weekends).",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 14.30–20; sob–ned 9–13 in 14.30–19.30 (odprto ob vikendih)."
+        "sl": "pon–pet 9–13 in 14.30–20; sob–ned 9–13 in 14.30–19.30 (odprto ob vikendih).",
+        "hr": "pon–pet 09:00–13:00 i 14:30–20:00; sub–ned 09:00–13:00 i 14:30–19:30 (otvoreno vikendom)."
       },
       "url": "https://www.cvvf.it/",
       "source_url": "https://www.cvvf.it/contatti",
@@ -3572,7 +3727,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-13:00 and 15:00-19:00, Sat 10:00-13:00, closed Sun; by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 15–19, sob 10–13, ob nedeljah zaprto; po dogovoru."
+        "sl": "pon–pet 10–13 in 15–19, sob 10–13, ob nedeljah zaprto; po dogovoru.",
+        "hr": "pon–pet 10:00–13:00 i 15:00–19:00, sub 10:00–13:00, ned zatvoreno; uz prethodnu najavu."
       },
       "url": "https://www.ambulatorioveterinariodalmine.com/",
       "source_url": "https://www.ambulatorioveterinariodalmine.com/contatti/",
@@ -3590,7 +3746,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-13:00 and 15:00-19:00; visits by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 15–19; pregledi po dogovoru."
+        "sl": "pon–pet 9–13 in 15–19; pregledi po dogovoru.",
+        "hr": "pon–pet 09:00–13:00 i 15:00–19:00; pregledi uz prethodnu najavu."
       },
       "url": "https://www.gardavet.com/",
       "source_url": "https://www.gardavet.com/",
@@ -3609,7 +3766,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-12:00 and 16:00-19:00; Sat 10:00-12:00 and 15:00-17:00.",
       "duty_i18n": {
-        "sl": "pon–pet 10–12 in 16–19; sob 10–12 in 15–17."
+        "sl": "pon–pet 10–12 in 16–19; sob 10–12 in 15–17.",
+        "hr": "pon–pet 10:00–12:00 i 16:00–19:00; sub 10:00–12:00 i 15:00–17:00."
       },
       "url": "https://www.clinicavetchiari.com/",
       "source_url": "https://www.clinicavetchiari.com/",
@@ -3627,7 +3785,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00 continuous, Sat 09:00-13:00, closed Sun; emergencies prioritised during opening hours. Also exotic animals.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19 brez odmora, sob 9–13, ob nedeljah zaprto; nujni primeri imajo med delovnim časom prednost. Tudi eksotične živali."
+        "sl": "pon–pet 9–19 brez odmora, sob 9–13, ob nedeljah zaprto; nujni primeri imajo med delovnim časom prednost. Tudi eksotične živali.",
+        "hr": "pon–pet 09:00–19:00 bez stanke, sub 09:00–13:00, ned zatvoreno; hitni slučajevi imaju prednost tijekom radnog vremena. Liječe i egzotične životinje."
       },
       "url": "https://www.veterinarioanimaliesotici.com/",
       "source_url": "https://www.veterinarioanimaliesotici.com/contatti",
@@ -3659,7 +3818,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:30-19:30, Sat 09:30-17:00 (no lunch break); separate mobile line for urgent cases 10:00-19:30. No night/24h service.",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–19.30, sob 9.30–17 (brez odmora za kosilo); ločena mobilna številka za nujne primere 10–19.30. Ni nočne/24-urne službe."
+        "sl": "pon–pet 9.30–19.30, sob 9.30–17 (brez odmora za kosilo); ločena mobilna številka za nujne primere 10–19.30. Ni nočne/24-urne službe.",
+        "hr": "pon–pet 09:30–19:30, sub 09:30–17:00 (bez stanke za ručak); zasebna mobilna linija za hitne slučajeve 10:00–19:30. Nema noćne službe ni službe 24 h."
       },
       "url": "https://www.clinicaveterinariaguidi.info/",
       "source_url": "https://www.clinicaveterinariaguidi.info/",
@@ -3677,7 +3837,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-20:00 (call first for 9-10 and 12:30-15 slots).",
       "duty_i18n": {
-        "sl": "pon–sob 9–20 (za termine 9–10 in 12.30–15 najprej pokličite)."
+        "sl": "pon–sob 9–20 (za termine 9–10 in 12.30–15 najprej pokličite).",
+        "hr": "pon–sub 09:00–20:00 (za termine 9–10 i 12:30–15 nazovi unaprijed)."
       },
       "url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
       "source_url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
@@ -3695,7 +3856,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sun 09:00-20:00 (7 days).",
       "duty_i18n": {
-        "sl": "pon–ned 9–20 (7 dni v tednu)."
+        "sl": "pon–ned 9–20 (7 dni v tednu).",
+        "hr": "pon–ned 09:00–20:00 (7 dana)."
       },
       "url": "https://mypetclinic.it/cliniche/curno/",
       "source_url": "https://mypetclinic.it/cliniche/curno/",
@@ -3713,7 +3875,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00, Sat 10:00-17:00, closed Sun. No emergency service.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 10–17, ob nedeljah zaprto. Brez nujne pomoči."
+        "sl": "pon–pet 9–19, sob 10–17, ob nedeljah zaprto. Brez nujne pomoči.",
+        "hr": "pon–pet 09:00–19:00, sub 10:00–17:00, ned zatvoreno. Nema hitne službe."
       },
       "url": "https://www.gruppoanimalia.it/cliniche/ambulatorio-veterinario-costa-volpino/",
       "source_url": "https://visitlakeiseo.info/en/info/vet/",
@@ -3783,7 +3946,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:30-20:30; Sat 09:30-13:00 and 17:00-20:00; appointment preferred.",
       "duty_i18n": {
-        "sl": "pon–pet 8.30–20.30; sob 9.30–13 in 17–20; priporočljivo po dogovoru."
+        "sl": "pon–pet 8.30–20.30; sob 9.30–13 in 17–20; priporočljivo po dogovoru.",
+        "hr": "pon–pet 08:30–20:30; sub 09:30–13:00 i 17:00–20:00; poželjna je prethodna najava."
       },
       "url": "https://www.studioveterinariotaraschi.it/",
       "source_url": "https://www.studioveterinariotaraschi.it/contatti/",
@@ -3854,7 +4018,8 @@
       "emergency_24h": false,
       "duty": "Open every day 09:00-19:30.",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 9–19.30."
+        "sl": "Odprto vsak dan 9–19.30.",
+        "hr": "Otvoreno svaki dan 09:00–19:30."
       },
       "url": "https://www.clinicaanimallife.it/",
       "source_url": "https://www.clinicaanimallife.it/contatti/",
@@ -3873,7 +4038,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 09:30-19:00, closed Sun.",
       "duty_i18n": {
-        "sl": "pon–sob 9.30–19, ob nedeljah zaprto."
+        "sl": "pon–sob 9.30–19, ob nedeljah zaprto.",
+        "hr": "pon–sub 09:30–19:00, ned zatvoreno."
       },
       "url": "https://www.veterinariatac.com/index.htm",
       "source_url": "https://www.veterinariatac.com/index.htm",
@@ -3889,15 +4055,15 @@
       "address": "Via Monte Grappa 7/9, 25016 Ghedi (BS)",
       "phone": "+39 030 9033105",
       "emergency_24h": false,
-      "duty": "Mon–Fri 09:00–19:00, Sat 10:00–16:00. After-hours on-call number published as 'Reperibilità fuori orario': +39 335 6569279.",
+      "duty": "Mon–Fri 09:00–19:00, Sat 10:00–16:00. After-hours on-call number: +39 335 6569279.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 10–16. Dežurna številka zunaj delovnega časa je objavljena kot „Reperibilità fuori orario“: +39 335 6569279."
+        "hr": "pon–pet 09:00–19:00, sub 10:00–16:00. Broj za dežurstvo izvan radnog vremena: +39 335 6569279."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariobogonipasotti.com/",
       "source_url": "https://www.ambulatorioveterinariobogonipasotti.com/",
       "quote": "Reperibilità fuori orario",
-      "note": "Dogs and cats (services page https://www.ambulatorioveterinariobogonipasotti.com/services-1: day hospital, surgery, radiology, ultrasound); no 24 h claim.",
+      "note": "Dogs and cats (services page https://www.ambulatorioveterinariobogonipasotti.com/services-1: day hospital, surgery, radiology, ultrasound); no 24 h claim. Page labels the number 'Reperibilità fuori orario'.",
       "checked": "2026-11-01"
     },
     {
@@ -3910,7 +4076,8 @@
       "emergency_24h": false,
       "duty": "By appointment; secretariat Mon–Fri 09:00–12:00 and 15:00–18:00.",
       "duty_i18n": {
-        "sl": "Po dogovoru; tajništvo pon–pet 9–12 in 15–18."
+        "sl": "Po dogovoru; tajništvo pon–pet 9–12 in 15–18.",
+        "hr": "Uz prethodnu najavu; tajništvo pon–pet 09:00–12:00 i 15:00–18:00."
       },
       "small_animals": true,
       "url": "https://www.veterinarisalo.it/",
@@ -3928,7 +4095,8 @@
       "emergency_24h": false,
       "duty": "By appointment; Mon–Fri 09:00–18:00, Sat 09:00–13:00. WhatsApp +39 351 8277037.",
       "duty_i18n": {
-        "sl": "Po dogovoru; pon–pet 9–18, sob 9–13. WhatsApp +39 351 8277037."
+        "sl": "Po dogovoru; pon–pet 9–18, sob 9–13. WhatsApp +39 351 8277037.",
+        "hr": "Uz prethodnu najavu; pon–pet 09:00–18:00, sub 09:00–13:00. WhatsApp +39 351 8277037."
       },
       "small_animals": true,
       "url": "https://www.clinicayourpet.it/",
@@ -3946,7 +4114,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10:00–13:00 and 14:30–19:00, Sat 10:00–16:00.",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 14.30–19, sob 10–16."
+        "sl": "pon–pet 10–13 in 14.30–19, sob 10–16.",
+        "hr": "pon–pet 10:00–13:00 i 14:30–19:00, sub 10:00–16:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialalupa.it/",

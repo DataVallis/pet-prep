@@ -1,6 +1,6 @@
 # PetPrep — Igre, šola in čiščenje: interaktivni sloj (GAMES_SPEC)
 
-> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 Š1–Š3, C1, P1, P2 **potrjene** (David 30. 10. 2026, V1); v `PRODUCT_SPEC` / `CAT_SPEC` / `PLAY_CUDDLE_SPEC` zapisane 30. 10. 2026 (PR strežnika faz 2–4). **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija zgrajena 30. 10. 2026 na veji `feat/games-phase1-app` (PR #459: igralni sloj, žoga v2, stikalo staršev »Zvoki in vibracija v igrah«; PR #460: neredi in čiščenje) — potrebuje novo gradnjo v trgovini. **Faze 2–4: strežniški del zgrajen 30. 10. 2026** (`feat/games-rules-v2-backend`: `rules: 2` za palico in šolo, zvezdice, krogi, maska, predčasen konec, `training.treat_token`, izpeljanka `wand_crouch_loop`; crkljanje C1 je samo v aplikaciji). **Šola v2 v aplikaciji (faza 3) zgrajena 31. 10. 2026** na veji `feat/games-school-app` (zložena na `feat/games-phase1-app`): §4.1 / §4.2 za `gameLayerAvailable()` — `rules: 2`, 2 kroga × 3, rez pod masko 1,2 s brez `release`, velik čip ukaza + zvok (glas ukaza še ni posnet — V5), priboljšek / »Pohvali« ♥ (V6), »Končaj« v premoru, zaslon rezultata po ukazih; stara gradnja ostane pri šoli v1. Potrebuje novo gradnjo v trgovini. **Palica v2 (faza 2), crkljanje v2 (C1) in skupni sloj za praskanje / česanje / pesek / nego pasme (faza 4, §5.5 / §7.7) v aplikaciji zgrajeni 31. 10. 2026** na veji `feat/games-wand-cuddle-app` (zložena na `feat/games-phase1-app`): palica §5 za `gameLayerAvailable()` — `rules: 2`, celozaslonski lov na `ClipDeck` (`wand_stalking` → `wand_crouch_loop`, brez nje zanka `wand_stalking` → `wand_pouncing` → `wand_catching`), pero skia v igralnem polju, znak 👀 z obročem odštevanja, vsi časi iz seje, zrcalo `scoreV2` za takojšnje ★, rezultat z zvezdicami in namigom strežnika; crkljanje §4.4 (3 srca × 3 s s premorom, pes in muca); nega §7.7 na `CareGameShell` (pravila nespremenjena). Stara gradnja ostane pri palici v1, crkljanju s 5 potegi in kartičnih zaslonih nege. Potrebuje novo gradnjo v trgovini. Pogodba za aplikacijo: `docs/engineering/ARCHITECTURE.md` → *Games rules v2 — contract for the app*.
+> **Status:** POTRJENO (David 30. 10. 2026, odgovori v §11) — smer, faze in odgovori V2, V5, V6, V10–V12. Spremembe pravil §10 Š1–Š3, C1, P1, P2 **potrjene** (David 30. 10. 2026, V1); v `PRODUCT_SPEC` / `CAT_SPEC` / `PLAY_CUDDLE_SPEC` zapisane 30. 10. 2026 (PR strežnika faz 2–4). **Faza 1 v gradnji** — strežniški del zgrajen 30. 10. 2026 (`feat/games-phase1-backend`: stikalo `users.game_feedback`, izpeljanki `ball_waiting_loop` in `exit_side`); aplikacija zgrajena 30. 10. 2026 na veji `feat/games-phase1-app` (PR #459: igralni sloj, žoga v2, stikalo staršev »Zvoki in vibracija v igrah«; PR #460: neredi in čiščenje) — potrebuje novo gradnjo v trgovini. **Faze 2–4: strežniški del zgrajen 30. 10. 2026** (`feat/games-rules-v2-backend`: `rules: 2` za palico in šolo, zvezdice, krogi, maska, predčasen konec, `training.treat_token`, izpeljanka `wand_crouch_loop`; crkljanje C1 je samo v aplikaciji). **Šola v2 v aplikaciji (faza 3) zgrajena 31. 10. 2026** na veji `feat/games-school-app` (zložena na `feat/games-phase1-app`): §4.1 / §4.2 za `gameLayerAvailable()` — `rules: 2`, 2 kroga × 3, rez pod masko 1,2 s brez `release`, velik čip ukaza + zvok (glas ukaza še ni posnet — V5), priboljšek / »Pohvali« ♥ (V6), »Končaj« v premoru, zaslon rezultata po ukazih; stara gradnja ostane pri šoli v1. Potrebuje novo gradnjo v trgovini. **Palica v2 (faza 2), crkljanje v2 (C1) in skupni sloj za praskanje / česanje / pesek / nego pasme (faza 4, §5.5 / §7.7) v aplikaciji zgrajeni 31. 10. 2026** na veji `feat/games-wand-cuddle-app` (zložena na `feat/games-phase1-app`): palica §5 za `gameLayerAvailable()` — `rules: 2`, celozaslonski lov na `ClipDeck` (`wand_stalking` → `wand_crouch_loop`, brez nje zanka `wand_stalking` → `wand_pouncing` → `wand_catching`), pero skia v igralnem polju, znak 👀 z obročem odštevanja, vsi časi iz seje, zrcalo `scoreV2` za takojšnje ★, rezultat z zvezdicami in namigom strežnika (**8. 11. 2026 zamenjano s preprostim pravilom**, §5); crkljanje §4.4 (3 srca × 3 s s premorom, pes in muca); nega §7.7 na `CareGameShell` (pravila nespremenjena). Stara gradnja ostane pri palici v1, crkljanju s 5 potegi in kartičnih zaslonih nege. Potrebuje novo gradnjo v trgovini. Pogodba za aplikacijo: `docs/engineering/ARCHITECTURE.md` → *Games rules v2 — contract for the app*. **Palica 8. 11. 2026:** preprosto pravilo (David »naredi bolj preprosto igro«, §5) namesto strogega mirovanja / izmika — samo JS + strežnik (OTA).
 > **Smer (David 30. 10. 2026):** »**Pes ostane video, igra postane interaktiven sloj.**« Realističen AI video ljubljenčka ostane (81 pasem × 333 barv, premium videz — brez 3D modela in brez risanega ljubljenčka); nad njim zgradimo nativni interaktivni sloj (60 fps, fizikalni predmeti, zvok, haptika).
 > **Oznake:** **SPREMEMBA PRAVILA — potrdil David 30. 10.** = obstoječe pravilo iz `PRODUCT_SPEC.md` / `CAT_SPEC.md` / `PLAY_CUDDLE_SPEC.md` se spremeni. **(D)** = Claudov predlog brez spremembe obstoječega pravila. Vse ostalo je opis stanja (s potjo do kode).
 > **Povezano:** `PRODUCT_SPEC.md` §5, §11, §13 · `PLAY_CUDDLE_SPEC.md` · `CAT_SPEC.md` §5 · `APP_REFINEMENT_SPEC.md` §3, §6, §10–§12 · `docs/engineering/SCHOOL_SMOOTH_PLAYBACK.md` · `brand/README.md`.
@@ -14,7 +14,7 @@
 3. **Prekrivni odziv (David):** velik animiran ✓ »Bravo!« ob uspehu, mehak ✗ ob zgrešenem, pike napredka zgoraj. Prekrivni sloj hkrati **zakrije menjavo posnetka**.
 4. **Veriga posnetkov brez skokov:** vsak posnetek igre se začne in konča v isti »osrednji pozi« (hub), naslednji posnetek je že naložen v drugem predvajalniku, menjava ob prvem izrisanem okvirju, nikoli sredi posnetka; kratek preliv samo med enakima pozama.
 5. **Krogi 20–30 s** namesto 60 s; vsak posamezen uspeh je nagrajen takoj (zvezdica), nobene seje »vse ali nič«.
-6. **Palica s peresom (muca):** en lov ~25 s s tremi skoki in ulovom; **izmik šteje samo kot odziv na viden znak** (muca se pritaji → pero miruje, muca skoči → pero zbeži); spamanje ne prinese nič. Popravi dokazano napako v `WandPlayService::score`.
+6. **Palica s peresom (muca):** ~~en lov ~25 s s tremi skoki in ulovom; izmik šteje samo kot odziv na viden znak~~ → **od 8. 11. 2026 preprosto pravilo** (David: »naredi bolj preprosto igro«): ko se muca pritaji 👀, otrok **spusti pero** in muca ga ujame ★; 3 ulovi = konec (§5).
 7. **Šola:** vaja = 2 kroga po 3 ukaze; namesto gumba »Pohvali« velik priboljšek, ki odleti h kužku — **samo če je družina kupila priboljške (»Želje«), sicer ostane »Pohvali« z ♥** (David 30. 10.); »vstane« (obrnjen posnetek, videti kot previjanje traku) zamenja prekrivni odziv.
 8. **Žoga:** pravi met s fiziko, žoga odleti na stran, kamor kuža steče, kuža se vrne, otrok ga **pokliče** in **ujame žogo** — 3 meti ostanejo, a vsak ima tri dejanja.
 9. **Čiščenje:** jasne, različne ilustracije za kakec, lužo, copat, mačji pesek in praskanje; pobiranje z vrečko, brisanje s krpo, zajemanje z lopatko — z zadovoljivo animacijo.
@@ -25,9 +25,9 @@
 ## 1. Popis današnjega stanja (iz kode, `main` @ b721460)
 
 ### 1.1 Skupno: posnetki faz in poze
-- `backend/app/Enums/PetPhaseClip.php`: 18 posnetkov faz — šola `school_<sit|come|place|potty>_<attention|performing|success>`, žoga `ball_<waiting|running|fetching>`, palica `wand_<stalking|pouncing|catching>`. Dolžine: `config/media.php` `state_media.clip_seconds` — šola 3 s, **performing 5 s**, igre 3 s. Kling 3.0 Pro: 3 s = 0,336 $, 5 s = 0,56 $ (ARCHITECTURE »School and game phase clips«).
+- `backend/app/Enums/PetPhaseClip.php`: 18 posnetkov faz — šola `school_<sit|come|place|potty>_<attention|performing|success>`, žoga `ball_<waiting|running|fetching>`, palica `wand_<stalking|pouncing|catching>` (`wand_pouncing` se od 8. 11. 2026 ne ustvarja več — `PetPhaseClip::RETIRED`, David »ok ja daj«; strežnik zdaj ustvari 17). Dolžine: `config/media.php` `state_media.clip_seconds` — šola 3 s, **performing 5 s**, igre 3 s. Kling 3.0 Pro: 3 s = 0,336 $, 5 s = 0,56 $ (ARCHITECTURE »School and game phase clips«).
 - Začetna / končna slika = poza (`startPose()` / `endPose()`; `null` = referenčna slika, stoječa poza). Poze: `backend/app/Enums/PetPose.php` — pes `sit`, `come`, `place`, `door`, `empty` (prazna soba); muca `crouch`, `catch`. Nano Banana Pro Edit, 0,15 $ na sliko. `PetMedia::frames()` (`backend/app/Models/PetMedia.php`) vrne začetni / končni okvir posnetka.
-- **Posnetki z isto začetno in končno pozo** (`sharesFrames()`: `school_*_attention`, `school_*_success`, `ball_waiting`, `wand_pouncing`) se pošljejo **samo z začetno sliko** (Kling z isto sliko na obeh koncih zamrzne) → **zadnji okvir ni zagotovljeno enak prvemu**. To je eden od virov skokov.
+- **Posnetki z isto začetno in končno pozo** (`sharesFrames()`: `school_*_attention`, `school_*_success`, `ball_waiting`, `wand_pouncing` — slednji se od 8. 11. 2026 ne ustvarja več) se pošljejo **samo z začetno sliko** (Kling z isto sliko na obeh koncih zamrzne) → **zadnji okvir ni zagotovljeno enak prvemu**. To je eden od virov skokov.
 - Izpeljani posnetki (ffmpeg, 0 $, `SchoolClipDerivativeService`, SCHOOL_SMOOTH_PLAYBACK §A): `school_<cmd>_attention_loop` in `_success_loop` (naprej + nazaj, brezšivna zanka), `school_<cmd>_release` (performing **nazaj**, ≤ 2,5 s).
 - Varčni posnetki (`MediaEntitlementService::FRUGAL_PHASE_SOURCES`, stikalo `frugal_clips`, privzeto izklopljeno, samo pes): pozornost za pridi / prostor / potrebico = posnetek pozornosti »sedi«.
 - Aplikacija: `mobile/src/modules/petMedia/phasePlayer.ts` (kateri posnetek kdaj), `mobile/src/modules/training/SchoolStage.tsx` (šola: do 4 trajni predvajalniki, menjava ob `onFirstFrameRender`, brez prelivanja). **Žoga in palica ne uporabljata odra** — `PetMediaView phase={…}` z novim ključem za vsako fazo → predvajalnik se naloži šele ob menjavi, vmes se pokaže `still` = **končna** poza faze.
@@ -54,7 +54,7 @@
 
 ### 1.5 Palica s peresom (muca)
 - **Pravila** (`backend/app/Services/WandPlayService.php`, `backend/config/wand.php`, CAT_SPEC §5.2, PRODUCT_SPEC §13): igra **60 s** (David 8. 10.), konec z »ulovom«; cilj 2 / dan (mucek 3), **2 h** med uspešnima igrama; merilnik »Igra« (`energy_level`); **rutina »Igra«** v Care Score; zamujen dan → naslednji dan »opraskala je kavč«. Ocena `WandPlayService::score` — igra šteje samo, če velja **vse**: ≥ 8 premikov »stran« (`min_away_moves`), vsaj en v vsaki od 4 četrtin (`segments`), ≥ 50 % premikov stran, **po vsakem skoku premik stran v 2 s** (`pounce_window_ms`), razmiki niso strojno enakomerni (`uniform_*`). Premiki bližje kot 300 ms se štejejo enkrat. Skoki: 3–5 naključno, ne v prvih / zadnjih 8 s.
-- **Potek** (`mobile/src/modules/catCare/WandOverlay.tsx`, `catGames.ts`, `phasePlayer.ts#wandMomentAt`): `wand_stalking` (stoji → pritajena) → med skoki **mirna slika** pritajene poze (`clip: null`) → `wand_pouncing` ob skoku → `wand_catching` zadnji 2 s. Aplikacija iz prsta naredi en premik na potezo (`moveWandStroke`).
+- **Potek** (`mobile/src/modules/catCare/WandOverlay.tsx`, `catGames.ts`, `phasePlayer.ts#wandMomentAt`): `wand_stalking` (stoji → pritajena) → med skoki **mirna slika** pritajene poze (`clip: null`) → `wand_pouncing` ob skoku (le, če je posnetek iz časa pred 8. 11. 2026; nov videz ga nima → poza pritajene) → `wand_catching` zadnji 2 s. Aplikacija iz prsta naredi en premik na potezo (`moveWandStroke`).
 - **Besedila** (`cat.json` `wand.*`): »Muca opazuje pero …« → »Pripravlja se na skok …« (**0,7 s**, `CROUCH_MS`) → »Skok! Umakni pero!« (**0,8 s**, `POUNCE_MS`) → »Zdaj ga bo ujela …«; povratne vrstice 1,5 s (`WAND_FEEDBACK_MS`); razlog neuspeha šele po minuti.
 - **Roke:** vlečenje peresa po odru; »Lažje kretnje«: pero beži samo (premik vsakih 0,56–0,90 s).
 
@@ -99,7 +99,7 @@ Potrjeno v kodi:
 - Ulov je samodejen v zadnjih 2 s, ne glede na otroka — »dober ulov« ni nekaj, kar otrok naredi.
 
 ### 2.3 Dodatno najdeno v kodi
-1. `wand_pouncing` in `ball_waiting` sta poslana samo z začetno sliko → konec ni nujno na osrednji pozi; ob naslednji menjavi je skok.
+1. `wand_pouncing` (od 8. 11. 2026 se ne ustvarja več) in `ball_waiting` sta poslana samo z začetno sliko → konec ni nujno na osrednji pozi; ob naslednji menjavi je skok.
 2. Žoga: `PHASE_CLIP_MS` 3000 je privzeta dolžina; strežnik pošilja dejansko (`media.phase_seconds`), igra je ne uporabi.
 3. Šola: »Ukaz n od 6« + »še N s« + pike + vrstica psa + povratna vrstica + oblaček = **šest** sočasnih virov besedila.
 4. Ni zvoka in haptike nikjer (`expo-haptics` ni nameščen; PLAY_CUDDLE §4.3).
@@ -257,7 +257,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 **Potek:**
 | Korak | Ljubljenček | Sloj | Otrok |
 |---|---|---|---|
-| začetek | zanka `playing` (sicer `idle`) | vrstica »Boži počasi, 3 sekunde.« (≥ 2,5 s); tri srca ♡♡♡ zgoraj | — |
+| začetek | zanka `playing` (sicer `idle`) | vrstica »Božaj počasi, 3 sekunde.« (≥ 2,5 s); tri srca ♡♡♡ zgoraj | — |
 | božanje | zanka | sled srčkov za prstom (skia), srce se polni 0 → 3 s; tiho »predenje«/mehka haptika vsakih 0,5 s | počasi vleče prst po ljubljenčku |
 | prehitro (hitrost > 900 pt/s) | zanka | srce se ne polni; ikona 🐢 (≥ 2 s) | upočasni |
 | po 3 s | zanka | srce polno → ikona ✋ »Počakaj …« (≥ 2 s) | **dvigne prst** |
@@ -266,7 +266,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 | 3 srca | zanka | »Uživa! ♥♥♥« → konec, `POST play {kind:"cuddle"}` | — |
 
 **Posnetki:** obstoječi (`playing` / `idle`). Izbirni nov posnetek C (§8.3).
-**Besedila:** `cuddle.slow` »Boži počasi, 3 sekunde.« / »Stroke slowly, 3 seconds.« · `cuddle.wait` »Počakaj …« / »Wait …« · `cuddle.more` »Še!« / »More!« · `cuddle.done` »Uživa! Hvala za crkljanje.« / »It loves it! Thanks for the cuddles.«
+**Besedila:** `cuddle.slow` »Božaj počasi, 3 sekunde.« / »Stroke slowly, 3 seconds.« · `cuddle.wait` »Počakaj …« / »Wait …« · `cuddle.more` »Še!« / »More!« · `cuddle.done` »Uživa! Hvala za crkljanje.« / »It loves it! Thanks for the cuddles.«
 **Dostopnost:** »Lažje kretnje« / bralnik: gumb »Pobožaj« — držanje polni srce 3 s, spust = premor; »zmanjšaj gibanje«: srčki brez sledi in letenja.
 
 ---
@@ -274,64 +274,55 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 ## 5. Muca
 
 ### 5.1 Palica s peresom — cilj
-Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se konča z **ulovom**, sicer je muca razočarana [G1]. Otrok se nauči tri stvari: pero premikaj stran od muce (ne pred nosom), **ko se pritaji, pero miruje**, **ko skoči, pero zbeži**, na koncu jo **pusti, da ujame**.
+Muca lovi plen, ki **beži stran** in se **ustavi, ko jo opazi** [C11]; lov se konča z **ulovom**, sicer je muca razočarana [G1]. Otrok se nauči: pero vleci stran od muce (ne pred nosom), ko se muca **pritaji, ji pusti, da plen ujame** — **muca mora lov na koncu »zaključiti« z ulovom** (to je učna točka, ki ostane v besedilu igre in na zaslonu rezultata).
 
-> **SPREMEMBA PRAVILA — potrdil David 30. 10. (P1):** ena igra = **en lov ~25 s** (prej ~60 s, David 8. 10. 2026), ki se konča z ulovom. Cilj na dan (2 / mucek 3), razmik 2 h med uspešnima igrama, merilnik »Igra«, rutina »Igra«, opraskan kavč po zamujenem dnevu — **nespremenjeno**.
+> **SPREMEMBA PRAVILA — David 8. 11. 2026 po testu na iPhonu:** »Igra z mačko je zelo težka, nihče ne zna igrati … nič ne prime, stojim, umikam, nikakor ne dobimo točke … naredi bolj preprosto igro.« David je obliko prepustil Claudu. **Novo preprosto pravilo (»pravila 3«) zamenja strogo pravilo mirovanja in izmika iz 30. / 31. 10.** (spodaj v §5.3 je zakaj nihče ni dobil točke). Cilj na dan (2 / mucek 3), razmik 2 h med uspešnima igrama, merilnik »Igra«, rutina »Igra«, opraskan kavč po zamujenem dnevu — **nespremenjeno**.
 
-### 5.2 Potek lova (urnik strežnika)
-- `stalk`: 0–3,0 s · skoki `p1 ∈ [6,0; 7,5] s`, `p2 = p1 + [5,0; 6,5] s`, `p3 = p2 + [5,0; 6,5] s` · znak pritajitve `p − 1500 ms` (pravilo mirovanja, David 31. 10. 2026) · ulov `c = p3 + 3,5 s` · konec `c + 3,5 s` → lov **~23–29 s**.
+### 5.2 Potek lova (urnik strežnika, `config/wand.php` → `simple`)
+- Zalezovanje 0–3 s · prvi znak 👀 pri **4–5 s** (žreb) · znak traja **2 s** · po ulovu naslednji znak **6 s** po izpustu · brez izpusta naslednji znak **2,5 s** po koncu okna · največ **6 znakov** · **3 ulovi = konec**. Lov s tremi ulovi traja **~20–30 s**.
 
 | Čas | Muca (posnetek) | Sloj | Otrok |
 |---|---|---|---|
-| 0–3 s | `wand_stalking` (stoji → pritajena) | pero v **igralnem polju** (zgornja polovica, kamor muca gleda — svetel obroč); vrstica »Pritaji se: miruj. Skoči: umakni!« (3 s); zvezdice ☆☆☆☆ | premika pero |
-| med skoki | `wand_crouch_loop` (izpeljana zanka, rep trza) | iskrice, ko se pero premika v kratkih skokih znotraj polja | premika pero počasi |
-| `p − 1500` … `p` | zanka | **ikona 👀 nad muco pulzira** + naraščajoč zvok + rahla haptika (*selection* × 3) | **pero obmiruje** (najpozneje v `p − 1000` popolnoma mirno) |
-| `p` | `wand_pouncing` (enkrat; zanka se preklopi ob koncu svojega okvira ≤ 200 ms) | ⚡ šapa zamahne čez pero (skia lok, sinhronizirano s `p + 600`) | **potegne pero stran** |
-| izmik v oknu | — | ★ + »Ušlo!« (1,0 s), zvok »švist«, haptika *success* | — |
-| brez izmika do `p + 1500` | — | pero se zatrese v šapi (»ulovila«), brez ✗, brez besedila — 0,8 s, nato se izvije | — |
-| `p + 3 s` | preliv ≤ 150 ms → `wand_crouch_loop` (pod odzivom, ker je konec skoka start-only) | — | — |
-| `c` | `wand_catching` (pritajena → ulov) | vrstica »Pusti jo, da ujame!« (≥ 2,5 s), pero se spusti k muci | **ne vleče stran** (ali pero potegne k muci) |
-| `c` … `c + 1500` | — | brez premika stran: ★ »Ujela ga je!«; s premikom stran: posnetek ulova vseeno, brez zvezdice | — |
-| konec | poza `catch` (ostane) | rezultat (§5.4) | — |
+| 0–3 s | `wand_stalking` (stoji → pritajena) | pero sledi prstu (malo nad prstom); vrstica »Ko se pritaji, spusti pero!«; pike ○○○ | vleče pero |
+| med znaki | `wand_crouch_loop` (izpeljana zanka, rep trza) — muca opazuje pero | iskrice za peresom | vleče pero |
+| znak (2 s) | zanka | **👀 nad muco pulzira z obročem odštevanja** + zvok + rahla haptika (*selection* × 3); vrstica »Spusti pero!« | **spusti pero** (dvigne prst — tudi prst, ki je miroval; v »Lažje kretnje« gumb **»Pusti!«**) |
+| izpust v oknu | `wand_catching` (pritajena → ulov) **takoj** | ⚡ šapa zamahne čez pero (+ 0,6 s), zvok »švist« | — |
+| konec posnetka ulova | poza `catch`; pod ★ (maska) rez nazaj v zanko | **★ + »Ujela ga je!«**, zvok, haptika *success* | — |
+| prezgodaj / nikoli | zanka | 👀 ugasne, vrstica spet »Ko se pritaji, spusti pero!« — **brez ✗, brez kazni** | — |
+| 3. ulov | poza `catch` ostane | rezultat (§5.4) | — |
 
-### 5.3 Točkovanje (strežnik, `WandPlayService::score` v2)
-> **SPREMEMBA PRAVILA — potrdil David 30. 10. (P2):** pragovi sodelovanja (8 premikov stran, vse četrtine, ≥ 50 % stran, odziv na **vsak** skok v 2 s, CAT_SPEC §5.2 / PRODUCT_SPEC §13) se zamenjajo z **zvezdicami**: 3 × izmik + 1 × ulov. **Igra šteje pri ≥ 2 zvezdicah.** Zvezdice se prikažejo takoj.
+### 5.3 Točkovanje (strežnik, `WandPlayService::scoreSimple`, »pravila 3«)
+- **★ za vsak znak, med katerim otrok spusti pero** (prvi izpust v `[znak, znak + 2000 ms]`); muca skoči v trenutku izpusta, naslednji znak pride 6 s pozneje.
+- **Prezgodaj ali nikoli = nič** (ni napake, ni ✗): muca izgubi zanimanje, naslednji znak 2,5 s po oknu.
+- **Ni pravila mirovanja, ni potega stran, ni štetja premikov**; premiki peresa se ne točkujejo.
+- **Igra šteje pri 3 ulovih**; po 6 znakih brez treh ulovov ne šteje (brez kazni, takoj znova). Igra se konča takoj po 3. ulovu (ko se posnetek ulova odigra) — konec sprejme strežnik od 3. ulova + 3,5 s naprej.
+- Aplikacija pošlje **en klic na igro** (`POST /wand/finish` z `releases` = trenutki izpustov); zrcalo `wandTimeline` v aplikaciji je vrstica za vrstico enako `simpleTimeline` na strežniku.
 
-Zvezdica za **izmik pri skoku `p`** (vse mora veljati):
-1. **mirovanje pred skokom (strogo pravilo — odločil David 31. 10. 2026):** v `[p − 1000, p)` **noben** štet premik (`calm_max_moves` 0; 300-ms pravilo štetja ostane) — viden znak 👀 je tam **1500 ms** pred skokom, torej ima otrok ~0,5 s, da ustavi potezo, ki jo je začel; prej (30. 10.) 0,9 s / 0,8 s / največ 1 premik — tako je enakomerno počasno premikanje dobilo zvezdice v ~90 % lovov;
-2. **odziv:** prvi premik stran v `[p + 150, p + 1500]` (150 ms = človeški prag, kot pri šoli);
-3. **v polju:** premik se konča znotraj igralnega polja (`in_zone: true`, poroča aplikacija) — poteg iz zaslona ne šteje;
-4. **hitrostna meja:** največja hitrost poteze ≤ 4000 pt/s in dolžina ≥ 40 pt (`speed_ok`, poroča aplikacija);
-5. šteje samo prvi izmik na skok.
+**Zakaj je strogo pravilo (30. / 31. 10.) odpovedalo — vzrok (Claude, 8. 11. 2026):** zvezdica za izmik je zahtevala vse hkrati: (1) **0 premikov v zadnji 1 s pred skokom**, znak pa je bil le 1,5 s prej — otrok je imel **0,5 s**, da ustavi potezo, ki jo je začel (QA je simuliral odrasli odziv 0,3–0,45 s; otroški odziv je 0,6–1 s), in poteza šteje šele v trenutku, ko doseže najdaljšo točko, torej pozneje, kot je otrok »mislil, da je nehal«; (2) navodilo je reklo »**hitro** potegni stran«, pravilo pa je zavrnilo vsak poteg nad **4000 pt/s** (hiter poteg s palcem na telefonu je pogosto 3000–8000 pt/s → `bad_stroke`); (3) poteg se je moral **končati v polju**, ki se konča pri 15 % višine zaslona, pero pa je 56 pt nad prstom — poteg »stran od muce« (navzgor) je hitro ušel iz polja (`out_of_zone`); (4) okno 150–1500 ms po skoku. Kdor je stal pri miru, je dobil samo zvezdico ulova (1 < 2), kdor je umikal, je padel na (1)–(3). Ura in enote niso bile krive (časi so relativni na ločeno uro aplikacije, `t` je v ms na obeh straneh).
 
-Zvezdica za **ulov `c`:** v `[c, c + 1500]` ni premika stran in pero je v polju.
-
-Zakaj je to odporno proti spamu: hitro neprekinjeno metanje peresa **in tudi počasno neprekinjeno premikanje** (poteza vsakih 0,8–1,2 s) kršita pravilo 1 pri vsakem skoku (v zadnji sekundi pred skokom je vedno premik — simulacija QA: počasni ≈ 0 % lovov, pošten otrok, ki se ustavi do ~0,45 s po znaku, ~98–100 %), poteg iz zaslona krši pravilo 3, ulov pa zahteva **mirovanje**. Nagrajen je **odziv na viden znak**, ne število premikov. `too_uniform` ostane kot zapis v dnevnik (ne zavrača več — pri treh tarčnih dogodkih je statistika premajhna).
-Zaupanje: `in_zone` / `speed_ok` poroča aplikacija — enak sprejet model kot pri šoli (spremenjena aplikacija lahko ponaredi, David 6. 10. 2026); popravek naslavlja **običajno otroško strategijo**, ne goljufije.
-
-Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces` 3, `first_pounce_ms` [6000, 7500], `pounce_gap_ms` [5000, 6500], `crouch_cue_lead_ms` 1500, `calm_window_ms` 1000, `calm_max_moves` 0 (David 31. 10. 2026), `dodge_window_ms` [150, 1500], `catch_after_last_ms` 3500, `catch_window_ms` 1500, `catch_clip_ms` 3500, `min_stars` 2, `max_speed_pt_s` 4000, `min_dodge_pt` 40.
+Konfiguracija `config/wand.php` → `simple`: `stalk_ms` 3000, `first_cue_ms` [4000, 5000], `cue_window_ms` 2000, `after_catch_ms` 6000, `after_miss_ms` 2500, `max_cues` 6, `catches_needed` 3, `catch_clip_ms` 3500, `max_releases` 200. Vsaka seja si številke shrani v urnik. Ključ `v2` (strogo pravilo) je odstranjen; seja, shranjena po v2, se oceni kot preprosta (brez izpustov ne šteje, brez napake).
 
 ### 5.4 Rezultat
-- ≥ 2 zvezdici: »Kakšen lov! ★★★☆« — igra šteje (merilnik, rutina kot doslej).
-- < 2: »Še en lov?« + **en** namig po prvem manjkajočem pravilu (»Ko se pritaji, pero miruje.« / »Ko skoči, pero hitro stran.« / »Na koncu jo pusti, da ujame.«); brez kazni, takoj znova (kot doslej).
+- 3 ulovi: »Kakšen lov! ★★★« — igra šteje (merilnik, rutina kot doslej).
+- Manj: »Še en lov?« + **en** namig »Ko se pritaji 👀, spusti pero.«; brez kazni, takoj znova (kot doslej).
+- Vedno: učna vrstica »Muca mora plen na koncu ujeti – tako je lov zanjo srečen.«
 
-| Ključ | SL | EN |
+| Ključ (`cat:wandV2.*`) | SL | EN |
 |---|---|---|
-| `wand.rule` | Pritaji se: miruj. Skoči: umakni! | Crouch: freeze. Pounce: pull away! |
-| `wand.fb.dodge` | Ušlo! | Escaped! |
-| `wand.catchCue` | Pusti jo, da ujame! | Let her catch it! |
-| `wand.fb.caught` | Ujela ga je! | She caught it! |
-| `wand.result.success` | Kakšen lov! | What a hunt! |
-| `wand.result.again` | Še en lov? | One more hunt? |
-| `wand.hint.calm` | Ko se pritaji, pero miruje. | When she crouches, keep the feather still. |
-| `wand.hint.dodge` | Ko skoči, pero hitro stran. | When she pounces, pull it away fast. |
-| `wand.hint.catch` | Na koncu jo pusti, da ujame. | At the end, let her catch it. |
+| `ruleLine` | Ko se pritaji, spusti pero! | When she crouches, let go! |
+| `letGo` | Spusti pero! | Let go now! |
+| `fb.caught` | Ujela ga je! | She caught it! |
+| `letGoButton` | Pusti! | Let go! |
+| `rules.crouch` / `.pounce` / `.catch` | Ko se pritaji 👀, spusti pero. / Skoči in ga ujame. / Muca mora plen na koncu ujeti. | When she crouches 👀, let go. / She pounces and catches it. / A cat needs to catch its prey. |
+| `result.success` / `.again` | Kakšen lov! / Še en lov? | What a hunt! / One more hunt? |
+| `result.learn` | Muca mora plen na koncu ujeti – tako je lov zanjo srečen. | A cat needs to catch its prey at the end – that makes the hunt a happy one. |
+| `hint.letGo` | Ko se pritaji 👀, spusti pero. | When she crouches 👀, let go. |
 
-**Posnetki:** obstoječi `wand_stalking`, `wand_pouncing`, `wand_catching`; nov **izpeljan** `wand_crouch_loop` = zadnjih ~1,0 s `wand_stalking` naprej + nazaj (0 $; konec stalking je poslan s končno sliko `crouch`, zato je pritajen). Če je zanka slaba: izbirni posnetek B (§8.3).
+**Posnetki:** obstoječi `wand_stalking`, `wand_catching` in izpeljan `wand_crouch_loop` (0 $). `wand_pouncing` aplikacija ne predvaja več in ga strežnik od 8. 11. 2026 tudi **ne ustvarja več** (David »ok ja daj«; `PetPhaseClip::RETIRED`): ni v naboru novega videza / obdobja, ni pogoj za »pripravlja se«, ni v samodejnih ponovitvah, v nočnem `media:retry` ne v ocenah stroška — **≈ 0,34 $ manj na videz muce × obdobje**. Obstoječi posnetki in vrstice ostanejo (nič se ne briše); muca brez njega ni zaklenjena.
 
-**Dostopnost:** »Lažje kretnje« / bralnik: pero samo plava v polju; **ob znaku 👀 samodejno obmiruje** (pravilo 1 se izpolni samo), izmik = gumb **»Umakni!«** (tap, velik), ulov = ne narediš nič. Bralnik napove »Pritaja se.«, »Skok!«, »Pusti jo, da ujame.«. »Zmanjšaj gibanje«: brez sledi peresa in loka šape (statična ikona ⚡), brez tresenja.
+**Dostopnost:** »Lažje kretnje« / bralnik: pero samo plava v polju, izpust = velik gumb **»Pusti!«** (dvig prsta deluje tudi). Bralnik napove »Pritaja se. Spusti pero.«, »Skok!«, »Ujela ga je!«. »Zmanjšaj gibanje«: brez sledi peresa in loka šape (statična ikona ⚡), brez pulza. Način »Slika«: poze.
 
-**Izvedba v aplikaciji (31. 10. 2026, `catCare/wandV2/`; podrobnosti, ki jih spec ni določil, odločil Claude — čakajo Davida):** (1) vrstica pravila zgoraj je skrajšana na ≤ 32 znakov — »Pritaji se? Miruj. Skok? Umakni!« / »Crouch: freeze! Pounce: away!«; celotno pravilo (tri vrstice z ikonami 👀 / ⚡ / ✋) je na kartici pred začetkom; (2) dolg poteg se v v2 **ne deli** po 180 pt kot v v1 — poteg, ki gre iz zaslona, je en premik s koncem izven polja (sicer bi prvi kos štel kot »v polju«); (3) lov v2 se po ponovnem zagonu aplikacije **ne nadaljuje** (vsi posnetki morajo biti naloženi, preden steče ura) — nov začetek ga na strežniku zamenja brez kazni; (4) »Lažje kretnje«: plavajoče pero **ne pošilja premikov** (ni premika = mirovanje), »Umakni!« pošlje en čist premik stran v polju; (5) namig `result.hint` se pokaže tudi pri uspehu, kadar kakšna zvezdica manjka (manjše, kot nasvet); (6) brez izpeljane `wand_crouch_loop` se kot zanka vrti `wand_stalking` (§7.3 »nadomestilo«); (7) besedila odziva (»Miruj!«, »Ušlo!«, »Pusti jo, da ujame!«, »Ujela ga je!«) so v vrstici zgoraj, sredina pokaže samo ★; (8) zvok znaka je `crouch.wav` (šola že uporablja `cue.wav`).
+**Izvedba v aplikaciji (8. 11. 2026, `catCare/wandV2/`; podrobnosti, ki jih je odločil Claude):** (1) izpust = **vsak dvig prsta** s polja (`onPanFinalize` — tudi prst, ki je samo miroval, in tap), ker otrok ob znaku pogosto drži prst pri miru; (2) ★ pride, ko se posnetek ulova odigra (muca »zaključi« lov), ★ hkrati zakrije rez iz poze ulova nazaj v pritajeno zanko; (3) pri zgrešenem znaku ni posebnega posnetka »izgubi zanimanje« — muca ostane v pritajeni zanki, 👀 ugasne (sprememba poze brez maske bi kršila verigo posnetkov §3.2, ✗ pa po pravilu ni); (4) svetel obroč »igralnega polja« je odstranjen (polje nima več pravila); (5) lov se po ponovnem zagonu aplikacije **ne nadaljuje** (kot doslej); (6) besedila odziva so v vrstici zgoraj (≤ 32 znakov), sredina pokaže samo ★.
 
 **Crkljanje v aplikaciji (31. 10. 2026, `play/cuddleV2/`, odločil Claude):** srce se polni samo, ko se prst premika (počasi, ≤ 900 pt/s; vzorec šteje največ 120 ms), mirujoč prst ne polni; tretje srce konča crkljanje takoj (brez premora); bralnik zaslona z »aktiviraj« napolni trenutno srce in začne premor.
 
@@ -395,8 +386,8 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 | Kje | Sprememba |
 |---|---|
 | `TrainingService` | v2: `ROUND_BREAK_MS` 2500 za 3. ukazom (polje `round_breaks_ms`), `R` = `MASK_MS` 1200 namesto dolžine release (Š2), `finish` sprejme predčasen konec po 1. krogu (`ended_after_round: 1`, Š3: napredek da, rutina ne, `duration_ms` = konec kroga); `maxSessionMs()` po v2. Pest z `Carbon::setTestNow()`. |
-| `WandPlayService` | `schedule()` v2 (§5.2), `score()` v2 (§5.3) z zvezdicami; `FinishWandRequest` sprejme `in_zone`, `speed_ok` (neobvezno, aditivno); v1 ostane za stare aplikacije. |
-| `config/wand.php` | ključ `v2` (§5.3). `wand.session_seconds` ostane za v1. |
+| `WandPlayService` | ~~`schedule()` v2, `score()` v2 z zvezdicami, `in_zone` / `speed_ok`~~ → od 8. 11. 2026 `scheduleSimple()` / `simpleTimeline()` / `scoreSimple()` (§5.2–§5.3, `rules: 3`; `rules: 2` stare gradnje dobi isto); `FinishWandRequest` sprejme `releases` (neobvezno, aditivno; `in_zone` / `speed_ok` se še preverita in prezreta); v1 ostane za stare aplikacije. |
+| `config/wand.php` | ključ `simple` (§5.3; ključ `v2` odstranjen 8. 11. 2026). `wand.session_seconds` ostane za v1. |
 | `SchoolClipDerivativeService` → `ClipDerivativeService` | še `ball_waiting_loop` (ping-pong `ball_waiting`), `wand_crouch_loop` (ping-pong zadnje sekunde `wand_stalking`), `ball_running` → `exit_side` (§8.4); isti posel, ista pravila (nice, prlimit, en težek ffmpeg naenkrat), 0 $. |
 | `PetMediaPayload` | novi ključi v `media.phases` / `phase_seconds`; `media.phase_meta.ball_running.exit_side`. Stare aplikacije neznane ključe ignorirajo. |
 | `ChildProfileService` | **faza 1:** `users.game_feedback` (bool, privzeto `true`) — stikalo staršev »Zvoki in vibracija v igrah« prek `PATCH /api/parent/children/{child}/settings` (kot `easy_gestures`); v stanju otroka `settings.game_feedback`, v nadzorni plošči `family.children[].game_feedback`, v izvozu. Samo nastavitev, pravila ga ne berejo. |
@@ -404,12 +395,12 @@ Konfiguracija `config/wand.php` → `v2`: `round_ms`, `stalk_ms` 3000, `pounces`
 | Dokumenti | PRODUCT_SPEC §5 / §13, CAT_SPEC §5.2, PLAY_CUDDLE §4, ARCHITECTURE §3 + DIAGRAMS, FEATURES, `schema.ts` — v PR-jih posameznih faz. |
 | Crkljanje (C1) | **Brez spremembe strežnika** (preverjeno 30. 10. 2026): `POST /play {kind: "cuddle"}` sprejme samo vrsto, potegov strežnik nikoli ni preverjal — pravilo 3 sekund je samo v aplikaciji. |
 
-**Zgrajeno 30. 10. 2026 (faze 2–4, strežnik):** vse zgornje vrstice za `TrainingService`, `WandPlayService`, `config/wand.php` (`v2`), izpeljanko `wand_crouch_loop` in `PetMediaPayload`; dodatno `training.treat_token` v stanju otroka (V6). Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) `treat_token` je `true` tudi, ko je paket priboljškov porabljen (»kupila« ≠ »ima še«; preklican paket = `false`); (2) zavrnitve začetka palice (tihe ure, polnoč) obe različici računata z 60 s v1 (stanje `can_start` se vedno ujema z začetkom); (3) prvi premik stran v `[p, p + 150)` je »prezgodaj« (izmik brez zvezdice); (4) premik brez `in_zone` / `speed_ok` v v2 ne prinese zvezdice; (5) predčasen konec še vedno pošlje `trained_pet` kot dogodek osvežitve (brez vrstice v dnevniku). Po QA #461: predčasen konec porabi **dejanski čas** (čas do »Končaj«, najmanj 1. krog) in je mogoč samo do začetka 2. kroga + 2 s (pozneje 422 `training_round_two_started`); konec palice v2 je mogoč šele po oknu ulova (brez 5-s tolerance); izmik in ulov štejeta vsak prijavljen premik (300-ms združevanje velja samo za pravilo mirovanja). **Pravilo mirovanja odločeno (David 31. 10. 2026, strogo):** znak 👀 1500 ms pred skokom, v zadnjih 1000 ms 0 premikov (`crouch_cues_ms` = p − 1500, `calm_window_ms` 1000, `calm_max_moves` 0) — samo `config/wand.php`; vsaka seja si pravilo shrani v urnik (lov, ki že teče, ostane pri svojem). Prej (0,9 s / 0,8 s / 1 premik) je enakomerno počasno premikanje dobilo zvezdice v ~90 % lovov.
+**Zgrajeno 30. 10. 2026 (faze 2–4, strežnik):** vse zgornje vrstice za `TrainingService`, `WandPlayService`, `config/wand.php` (`v2`), izpeljanko `wand_crouch_loop` in `PetMediaPayload`; dodatno `training.treat_token` v stanju otroka (V6). Podrobnosti, ki jih spec ni določil, odločil Claude (čakajo Davida): (1) `treat_token` je `true` tudi, ko je paket priboljškov porabljen (»kupila« ≠ »ima še«; preklican paket = `false`); (2) zavrnitve začetka palice (tihe ure, polnoč) obe različici računata z 60 s v1 (stanje `can_start` se vedno ujema z začetkom); (3) prvi premik stran v `[p, p + 150)` je »prezgodaj« (izmik brez zvezdice); (4) premik brez `in_zone` / `speed_ok` v v2 ne prinese zvezdice; (5) predčasen konec še vedno pošlje `trained_pet` kot dogodek osvežitve (brez vrstice v dnevniku). Po QA #461: predčasen konec porabi **dejanski čas** (čas do »Končaj«, najmanj 1. krog) in je mogoč samo do začetka 2. kroga + 2 s (pozneje 422 `training_round_two_started`); konec palice v2 je mogoč šele po oknu ulova (brez 5-s tolerance); izmik in ulov štejeta vsak prijavljen premik (300-ms združevanje velja samo za pravilo mirovanja). **Pravilo mirovanja odločeno (David 31. 10. 2026, strogo):** znak 👀 1500 ms pred skokom, v zadnjih 1000 ms 0 premikov (`crouch_cues_ms` = p − 1500, `calm_window_ms` 1000, `calm_max_moves` 0) — samo `config/wand.php`; vsaka seja si pravilo shrani v urnik (lov, ki že teče, ostane pri svojem). Prej (0,9 s / 0,8 s / 1 premik) je enakomerno počasno premikanje dobilo zvezdice v ~90 % lovov. **8. 11. 2026:** palica je preklopljena na preprosto pravilo (§5, `rules: 3`, `config/wand.php` → `simple`; ključ `v2` odstranjen) — s strogim pravilom ni nihče dobil točke.
 
 #### Pogodba za aplikacijo (pravila v2)
 Celotna pogodba (vsa polja zahtev in odgovorov za šolo, palico, `treat_token`, `wand_crouch_loop`) je v `docs/engineering/ARCHITECTURE.md` → **»Games rules v2 — contract for the app«** (angleško, tehnični dokument). Na kratko:
 - **Šola:** `POST /training/start {command, rules: 2}` → `session` + `rules_version: 2`, `mask_ms` 1200, `round_break_ms` 2500, `round_breaks_ms[]`, `rounds[{round, first_index, last_index, start_ms, end_ms}]`; `POST /training/finish {session_id, taps, ended_after_round?: 1}` (samo do začetka 2. kroga + 2 s, sicer 422 `training_round_two_started`) → `result` + `rules_version`, `ended_after_round`, `counts_for_routine`. Stanje: `training.treat_token`.
-- **Palica:** `POST /wand/start {rules: 2}` → `session` + `rules_version`, `stalk_ms`, `crouch_cues_ms[3]` (= p − 1500), `catch_window_ms`, `calm_window_ms` (1000), `calm_max_moves` (0), `dodge_window_ms`, `min_stars`, `max_stars`, `max_speed_pt_s`, `min_dodge_pt`; `POST /wand/finish {session_id, moves[{t, away, in_zone, speed_ok}]}` → `result` + `rules_version`, `stars`, `min_stars`, `max_stars`, `dodges[{pounce_ms, star, reason, move_ms}]`, `catch{star, reason}`, `hint`. Posnetek: `media.phases.wand_crouch_loop`.
+- **Palica (preprosto pravilo, 8. 11. 2026):** `POST /wand/start {rules: 3}` → `session` + `rules_version: 3`, `stalk_ms`, `first_cue_ms`, `cue_window_ms` (2000), `after_catch_ms` (6000), `after_miss_ms` (2500), `max_cues` (6), `catches_needed` (3), `catch_clip_ms` (3500); `POST /wand/finish {session_id, moves: [], releases[]}` → `result` + `rules_version`, `stars`, `min_stars`, `max_stars`, `cues[{cue_ms, caught, release_ms}]`, `hint` (`let_go` | null). Posnetek: `media.phases.wand_crouch_loop`.
 - **Brez `rules`:** v1 nespremenjen (stare gradnje). Sejo v2, ki jo nadaljuje stara gradnja, strežnik oceni po v2 — brez `in_zone` / `speed_ok` palica ne dobi zvezdic (odpove zaprto), šola nima predčasnega konca.
 
 ### 7.4 Nativne odvisnosti in izdaja
@@ -436,7 +427,7 @@ Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslons
 |---|---|---|---|
 | Šola | stoji (ref) | `attention_loop` → `performing` (ref → poza) → `success_loop` (poza) → **[maska]** → `attention_loop` | edini rez poza → stoji, pod masko odziva |
 | Žoga | stoji (ref) | `ball_waiting_loop` → `ball_running` (ref → prazno) → `ball_fetching` (prazno → ref) → `ball_waiting_loop` | prelivi ≤ 200 ms iz / v zanko; running → fetching brez reza (isti okvir) |
-| Palica | pritajena | `wand_stalking` (ref → crouch) → `wand_crouch_loop` ⇄ `wand_pouncing` (crouch → ≈crouch) → `wand_catching` (crouch → catch) | konec skoka je start-only → preliv 150 ms v zanko pod odzivom |
+| Palica | pritajena | `wand_stalking` (ref → crouch) → `wand_crouch_loop` ⇄ `wand_catching` (crouch → catch) ob vsakem izpustu (od 8. 11. 2026; `wand_pouncing` se ne predvaja) | iz poze ulova nazaj v zanko = rez pod ★ (maska) |
 | Crkljanje | zanka `playing` / `idle` | ena zanka | — |
 
 ### 8.2 Seznam (obstoječi / izpeljani / novi)
@@ -447,7 +438,8 @@ Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslons
 | šola `*_release` | obstoječi izpeljani — se ne predvaja več (Š2) | 0 $ |
 | `ball_waiting`, `ball_running`, `ball_fetching` | obstoječi | 0 $ |
 | **`ball_waiting_loop`** | **nov izpeljan** (ffmpeg) | 0 $ |
-| `wand_stalking`, `wand_pouncing`, `wand_catching` | obstoječi | 0 $ |
+| `wand_stalking`, `wand_catching` | obstoječi | 0 $ |
+| `wand_pouncing` | **se ne ustvarja več** (David 8. 11. 2026; stari ostanejo) | **−0,336 $** na videz muce × obdobje |
 | **`wand_crouch_loop`** | **nov izpeljan** (ffmpeg) | 0 $ |
 | `playing`, `idle` | obstoječi | 0 $ |
 
@@ -477,7 +469,7 @@ Strežnik ob izpeljankah primerja zadnji okvir `ball_running` (prazna soba) s sr
 |---|---|---|---|
 | ~~0 — hitri popravki~~ | odpade (David 30. 10.) — vsebina v fazah 2 in 3 | — | — |
 | **1 — sloj + žoga + neredi** | `gameLayer` (ClipDeck, ClipQueue, FeedbackLayer, PlayField, GameFx), žoga v2, `ball_waiting_loop`, `exit_side`, nove ilustracije nereda in čiščenje — **stanje 30. 10. 2026:** strežnik (#457), sloj + žoga v2 + stikalo staršev v aplikaciji (#459) in neredi / čiščenje (`feat/games-phase1-messes`) zgrajeni, čaka novo gradnjo v trgovini | žoga nima pravil na strežniku → najnižje tveganje za preizkus nativnega sloja na napravi; neredi so samo prikaz | **nov EAS build** (+ OTA JS za stare gradnje ostane v1) |
-| **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 — **strežnik zgrajen 30. 10. 2026; aplikacija zgrajena 31. 10. 2026** (`feat/games-wand-cuddle-app`), čaka novo gradnjo v trgovini | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
+| **2 — palica v2** | §5, `wand_crouch_loop`, rules v2 — **strežnik zgrajen 30. 10. 2026; aplikacija zgrajena 31. 10. 2026** (`feat/games-wand-cuddle-app`); **8. 11. 2026 zamenjano s preprostim pravilom** (`feat/wand-simple`, samo JS + strežnik → OTA na gradnjo z igralnim slojem) | največ pritožb testerjev; uporabi sloj iz faze 1 | JS + strežnik (sloj je že v gradnji) |
 | **3 — šola v2** | §4.1, krogi, maska namesto release, priboljšek — **strežnik zgrajen 30. 10. 2026; aplikacija zgrajena 31. 10. 2026** (`feat/games-school-app`, čaka novo gradnjo v trgovini) | največ pravil in najpomembnejša učna vsebina → zadnja, ko je sloj preverjen; QA krog (napredek, rutina) | JS + strežnik |
 | **4 — crkljanje, praskanje, nega** | §4.4, §5.5, §7.7 — strežnik brez sprememb (C1 samo aplikacija) — **aplikacija zgrajena 31. 10. 2026** (`feat/games-wand-cuddle-app`), čaka novo gradnjo v trgovini | majhne, brez tveganja | JS |
 
@@ -494,7 +486,7 @@ Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na en
 | **Š3** | nedokončana vaja se ne šteje | po 1. krogu lahko konča: napredek šteje, rutina samo cela vaja |
 | **C1** | crkljanje = 5 potegov ≥ 60 pt (D) | 3 božanja po ~3 s s premorom (pravilo 3 sekund) |
 | **P1** | igra s palico ~60 s (David 8. 10.) | en lov ~25 s z ulovom |
-| **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom (👀 1,5 s prej, zadnjo 1 s brez premika — David 31. 10.), v 150–1500 ms, v polju, pod hitrostno mejo |
+| **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | ~~zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom (👀 1,5 s prej, zadnjo 1 s brez premika — David 31. 10.), v 150–1500 ms, v polju, pod hitrostno mejo~~ → **od 8. 11. 2026 (David »naredi bolj preprosto igro«):** ★ za vsak izpust peresa med znakom 👀 (2 s); prezgodaj / nikoli = nič; šteje pri 3 ulovih (§5.3) |
 | ~~**P0**~~ | odpade s fazo 0 (David 30. 10.) | — |
 
 Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole, 7 min / dan in pošten delež, rutine, Care Score, cilj in razmik iger muce, merilnik »Igra«, opraskan kavč, žoga (3 meti, mood only), vsa pravila nereda.
@@ -517,7 +509,8 @@ Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole
 | V10 | Krogi žoge: ostane 3 meti ali 4 (~35 s)? | 3 (+ »Še en krog«) | **3 meti** (David 30. 10.) |
 | V11 | Haptika za otroke — privzeto vklopljena? | da, samo pozitivna | **da**, s stikalom staršev skupaj z zvokom (David 30. 10.) |
 | V12 | Neredi: kakec kot »sladoledni zavoj« (prepoznaven, ne gnusen) — v redu, ali raje bolj abstrakten kupček? | zavoj brez obraza | **zavoj** (David 30. 10., skica A) |
-| V13 | Pravilo mirovanja pri palici (QA #461 M3): pri 0,9 s / 0,8 s / 1 premik počasno neprekinjeno premikanje dobi zvezdice v ~90 % lovov. Strožje? | 1,5 s / 1 s / 0 | **strogo: 👀 1500 ms pred skokom, zadnjih 1000 ms 0 premikov** (David 31. 10. 2026) |
+| V13 | Pravilo mirovanja pri palici (QA #461 M3): pri 0,9 s / 0,8 s / 1 premik počasno neprekinjeno premikanje dobi zvezdice v ~90 % lovov. Strožje? | 1,5 s / 1 s / 0 | **strogo: 👀 1500 ms pred skokom, zadnjih 1000 ms 0 premikov** (David 31. 10. 2026) — **preklicano 8. 11. 2026** (V14) |
+| V14 | Palica je pretežka, nihče ne dobi točke (David po testu na iPhonu, 8. 11. 2026) | preprosto pravilo | **»naredi bolj preprosto igro«** — obliko odločil Claude: ob 👀 spusti pero → ulov ★, 3 ulovi (§5) |
 
 ---
 

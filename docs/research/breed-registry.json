@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "363e51bb1babec06ebc8ae81f0efab9f0489a2a98dcb6ad4e29b772d1e3a9fbc"
+      "sha256": "92787060db2dc5db561153908abcf83a13f2badc3c4d2ce26339973895312e45"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -54472,7 +54472,7 @@
       "id": "english_setter",
       "species": "dog",
       "order": 90,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "English Setter",
         "sl": "Angleški seter"

@@ -68,7 +68,7 @@ describe('dog (SL)', () => {
     expect(t.food).toBe('Kuža dobi 4 obroke na dan. Nahrani ga v teh časih: 7:00–8:00, 15:00–16:00, 19:00–20:00. Med tihimi urami ga nahrani starš: 11:00–12:00.');
     expect(t.water).toBe('Ko je posoda skoraj prazna (voda 60 % ali manj), mu dolij svežo vodo. Med dvema dolivanjema naj mine vsaj 3 h.');
     expect(t.walk).toBe('Danes potrebuje 1.000 korakov sprehoda. Koraki mu dajo energijo.');
-    expect(t.takeOut).toBe('Mladiček zdrži približno 2 h. Prej ga pelji ven s tipko »Pelji ven«.');
+    expect(t.takeOut).toBe('Mladiček zdrži približno 2 h. Prej ga pelji ven s tipko »Pelji ven«. Zjutraj, ko se zbudi, ga pelji ven v 30 minutah.');
     expect(t.difference).toContain('Koraki sprehoda kužka ne peljejo lulat');
     expect(t.digestion).toBe('Po obroku počakaj 1 h, preden greš na sprehod.');
     expect(t.grooming).toBe('Počeši ga 3-krat na teden.');
@@ -101,7 +101,7 @@ describe('dog (EN)', () => {
     const t = texts(puppy);
     expect(t.food).toBe('Your pup gets 4 meals a day. Feed it at these times: 7:00–8:00, 15:00–16:00, 19:00–20:00. During quiet hours a parent feeds it: 11:00–12:00.');
     expect(t.walk).toBe('Today it needs 1,000 steps of walking. Steps give it energy.');
-    expect(t.takeOut).toBe('A puppy can hold it for about 2 h. Before that, press “Take out”.');
+    expect(t.takeOut).toBe('A puppy can hold it for about 2 h. Before that, press “Take out”. In the morning, take it out within 30 minutes of waking up.');
     expect(t.difference).toContain('Walking steps never take your pup to pee');
     expect(t.grooming).toBe('Brush it 3 times a week.');
     expect(careGuideTitle('dog', null)).toBe('How I care for my pup');
@@ -173,7 +173,7 @@ describe('parent wording (M5-T05b)', () => {
       'Kuža dobi 4 obroke na dan. Vaš otrok ga nahrani v teh časih: 7:00–8:00, 15:00–16:00, 19:00–20:00. Obroke med tihimi urami prevzamete vi — aplikacija jih da samodejno: 11:00–12:00.',
     );
     expect(p.walk).toBe('Danes potrebuje 1.000 korakov sprehoda. Koraki vašega otroka mu dajo energijo.');
-    expect(p.takeOut).toBe('Mladiček zdrži približno 2 h. Prej ga mora otrok peljati ven s tipko »Pelji ven«.');
+    expect(p.takeOut).toBe('Mladiček zdrži približno 2 h. Prej ga mora otrok peljati ven s tipko »Pelji ven«. Zjutraj, ko se zbudi, mora ven v 30 minutah.');
     expect(p.difference).toContain('za to mora otrok vedno pritisniti »Pelji ven«');
     expect(p.water).toContain('voda 60 % ali manj');
     expect(p.digestion).toBe('Po obroku naj otrok počaka 1 h, preden gre na sprehod.');
@@ -193,7 +193,7 @@ describe('parent wording (M5-T05b)', () => {
       'The pup gets 4 meals a day. Your child feeds it at these times: 7:00–8:00, 15:00–16:00, 19:00–20:00. Meals during quiet hours are yours — the app gives them automatically: 11:00–12:00.',
     );
     expect(p.walk).toBe("Today it needs 1,000 steps of walking. Your child's steps give it energy.");
-    expect(p.takeOut).toBe('A puppy can hold it for about 2 h. Before that, your child has to press “Take out”.');
+    expect(p.takeOut).toBe('A puppy can hold it for about 2 h. Before that, your child has to press “Take out”. In the morning, it has to go out within 30 minutes of waking up.');
     expect(p.grooming).toBe('Your child brushes it 3 times a week.');
     expect(careGuideTitle('cat', 'Mici', 'parent')).toBe('How to care for ⁨Mici⁩');
     expect(careGuideTitle('dog', null, 'parent')).toBe('How to care for the pup');

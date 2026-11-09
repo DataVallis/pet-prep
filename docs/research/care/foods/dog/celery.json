@@ -1,0 +1,110 @@
+{
+  "slug": "celery",
+  "species": "dog",
+  "name": {
+    "en": "Celery",
+    "sl": "Zelena"
+  },
+  "question": {
+    "en": "Can dogs eat celery?",
+    "sl": "Ali lahko psi jedo zeleno?"
+  },
+  "url_slug": {
+    "en": "celery",
+    "sl": "zelena"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, celery is generally safe for dogs as an occasional treat. Wash it and always cut it into bite-size pieces, because celery can be a choking hazard, especially for small dogs.",
+    "sl": "Da, stebelna zelena je za pse kot občasen priboljšek praviloma varna. Operite jo in vedno narežite na koščke za en grižljaj, saj se lahko pes z njo zaduši, zlasti majhen pes."
+  },
+  "why": {
+    "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
+    "sl": "Zelena je varna za večino psov, znano pa je tudi, da osveži pasji dah. Glavna nevarnost je dušenje z večjimi kosi, zlasti pri majhnih psih. Je priboljšek, ne osnovna hrana, in nikoli ne sme nadomestiti popolnega in uravnoteženega obroka."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Introduce celery slowly and watch your dog for digestive upset or other changes after the first taste.",
+    "sl": "Zeleno uvajajte postopoma in po prvem okušanju opazujte, ali ima pes prebavne težave ali druge spremembe."
+  },
+  "serving": {
+    "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
+    "sl": "Oprana, lahko surova, vedno narezana na koščke za en grižljaj. Majhen priboljšek, ne obrok."
+  },
+  "child": {
+    "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
+    "sl": "Psi lahko pohrustajo malo zelene! Odrasli jo najprej opere in nareže na drobne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can puppies eat celery?",
+        "sl": "Ali lahko mladički jedo zeleno?"
+      },
+      "a": {
+        "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
+        "sl": "Mladički lahko jedo majhne količine zelene, če je narezana na primerno velike koščke."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD147",
+      "quote": "Yes, celery is generally safe for dogs."
+    },
+    {
+      "id": "KD147",
+      "quote": "Although celery is safe for most dogs, it can pose a choking hazard, especially for small dogs."
+    },
+    {
+      "id": "KD147",
+      "quote": "To reduce this risk, always cut celery into bite-size pieces before serving it."
+    },
+    {
+      "id": "KD147",
+      "quote": "advises introducing any new food slowly into a dog’s diet."
+    },
+    {
+      "id": "KD147",
+      "quote": "Monitor your dog for digestive upset or other changes after trying celery for the first time."
+    },
+    {
+      "id": "KD147",
+      "quote": "celery should be considered a treat rather than a dietary staple."
+    },
+    {
+      "id": "KD147",
+      "quote": "It should never replace a complete and balanced meal."
+    },
+    {
+      "id": "KD147",
+      "quote": "Dogs can safely eat raw celery as long as it is washed and cut into bite-size pieces to reduce the risk of choking."
+    },
+    {
+      "id": "KD147",
+      "quote": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces."
+    },
+    {
+      "id": "KD89",
+      "quote": "As if that wasn’t enough, celery is also known to freshen doggy breath."
+    }
+  ],
+  "related": [
+    "carrots",
+    "cucumber",
+    "green-beans"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "05be85022f166288717a2158315b1d75dc3276becdeb411dc44fc5dffd3ff5f6"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85e14f3e68082c063e48a6f49d3da7613007be763b5ea3df1aeed7a3c33ae223"
+    }
+  }
+}

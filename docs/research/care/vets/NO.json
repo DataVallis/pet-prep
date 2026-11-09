@@ -36,7 +36,8 @@
       "emergency_24h": true,
       "duty": "Emergency reception open every day, around the clock, all year",
       "duty_i18n": {
-        "sl": "Nujni sprejem je odprt vsak dan, 24 ur na dan, vse leto"
+        "sl": "Nujni sprejem je odprt vsak dan, 24 ur na dan, vse leto",
+        "hr": "Hitni prijem otvoren svaki dan, 0–24, cijele godine."
       },
       "url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
@@ -54,7 +55,8 @@
       "emergency_24h": true,
       "duty": "Open 24 h every day; regular hours Mon–Fri 8–18, Sat 9–15",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vsak dan; redni delovni čas pon–pet 8–18, sob 9–15"
+        "sl": "Odprto 24 ur na dan, vsak dan; redni delovni čas pon–pet 8–18, sob 9–15",
+        "hr": "Otvoreno 24 h svaki dan; redovno radno vrijeme pon–pet 8–18, sub 9–15."
       },
       "url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
@@ -72,7 +74,8 @@
       "emergency_24h": true,
       "duty": "24-h small-animal duty every day all year; regular hours Mon–Fri 7:30–20, Sat 9–16",
       "duty_i18n": {
-        "sl": "24-urno dežurstvo za male živali vsak dan vse leto; redni delovni čas pon–pet 7.30–20, sob 9–16"
+        "sl": "24-urno dežurstvo za male živali vsak dan vse leto; redni delovni čas pon–pet 7.30–20, sob 9–16",
+        "hr": "Dežurstvo za male životinje 24 h svaki dan, cijele godine; redovno radno vrijeme pon–pet 7:30–20, sub 9–16."
       },
       "url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
@@ -89,7 +92,8 @@
       "emergency_24h": true,
       "duty": "Emergency duty 00–24",
       "duty_i18n": {
-        "sl": "Nujna služba 0–24"
+        "sl": "Nujna služba 0–24",
+        "hr": "Hitno dežurstvo 0–24."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -108,7 +112,8 @@
       "emergency_24h": true,
       "duty": "Emergency duty 00–24; clinic hours 8–18",
       "duty_i18n": {
-        "sl": "Nujna služba 0–24; delovni čas ambulante 8–18"
+        "sl": "Nujna služba 0–24; delovni čas ambulante 8–18",
+        "hr": "Hitno dežurstvo 0–24; radno vrijeme klinike 8–18."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/?clinic-id=21683",
@@ -126,7 +131,8 @@
       "emergency_24h": true,
       "duty": "24-h emergency and phone duty",
       "duty_i18n": {
-        "sl": "24-urna nujna in telefonska dežurna služba"
+        "sl": "24-urna nujna in telefonska dežurna služba",
+        "hr": "Hitna i telefonska služba 24 h."
       },
       "url": "https://www.nmbu.no/aktuelt/tema/veterinaerhogskolen/dyresykehuset-smadyr?page=2",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikk-osteras/akuttvakt/",
@@ -144,7 +150,8 @@
       "source_url": "https://www.bergen.kommune.no/innbyggerhjelpen/kultur-idrett-og-fritid/fritid/dyrehold/veterinarvakt-i-bergen-kommune",
       "duty": "Weekly rota Fri 16:00 to next Fri 08:00, rotating between clinics (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); many weeks have NO duty (Oct–Dec 2026). Always phone the duty number before travelling.",
       "duty_i18n": {
-        "sl": "Tedenski razpored od pet 16 do naslednjega petka 8, izmenjuje se med ambulantami (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); veliko tednov je BREZ dežurstva (okt–dec 2026). Pred potjo vedno pokličite dežurno številko."
+        "sl": "Tedenski razpored od pet 16 do naslednjega petka 8, izmenjuje se med ambulantami (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); veliko tednov je BREZ dežurstva (okt–dec 2026). Pred potjo vedno pokličite dežurno številko.",
+        "hr": "Tjedni raspored od petka 16:00 do sljedećeg petka 08:00, izmjenjuju se klinike (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); mnogo tjedana nema dežurstvo (listopad–prosinac 2026.). Prije dolaska uvijek nazovi dežurni broj."
       },
       "note": "No small-animal vakt phone published on the page. No night emergency service when no vakt. Bergen kommune news (updated 2026-10-09): long periods without small-animal vakt 9 Oct-19 Dec 2026; new tender answer deadline 10 Nov 2026. Do not use the horse/production-animal numbers for pets."
     },
@@ -160,7 +167,8 @@
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/",
       "duty": "Small-animal on-call for Haugaland",
       "duty_i18n": {
-        "sl": "Dežurstvo za male živali za Haugaland"
+        "sl": "Dežurstvo za male živali za Haugaland",
+        "hr": "Dežurstvo za male životinje za Haugaland."
       },
       "quote": "Ring smådyrvakta på Haugalandet på 820 90 020",
       "note": "Hours not given."
@@ -177,7 +185,8 @@
       "source_url": "https://evidensia.no/veterinaervakt-dyrlegevakt/",
       "duty": "Round-the-clock on-call via Mjøsvakta; partners Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
       "duty_i18n": {
-        "sl": "Dežurstvo 24 ur na dan prek Mjøsvakta; partnerji Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik"
+        "sl": "Dežurstvo 24 ur na dan prek Mjøsvakta; partnerji Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
+        "hr": "Dežurstvo 0–24 preko Mjøsvakta; partneri Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik."
       }
     },
     {
@@ -193,7 +202,8 @@
       "source_url": "https://www.anicura.no/klinikker/dyreklinikk-sandvika/om-oss/akuttvakt/",
       "duty": "Phone staffed until 23:00 every day; later urgent cases referred to AniCura Dyresykehus Oslo 21 52 53 00",
       "duty_i18n": {
-        "sl": "Telefon je dosegljiv do 23 vsak dan; kasnejše nujne primere napotijo na AniCura Dyresykehus Oslo 21 52 53 00"
+        "sl": "Telefon je dosegljiv do 23 vsak dan; kasnejše nujne primere napotijo na AniCura Dyresykehus Oslo 21 52 53 00",
+        "hr": "Na telefon se javljaju svaki dan do 23:00; kasnije hitne slučajeve upućuju u AniCura Dyresykehus Oslo 21 52 53 00."
       },
       "quote": "Telefonen er bemannet frem til klokken 23:00 alle dager."
     },
@@ -209,7 +219,8 @@
       "source_url": "https://www.anicura.no/klinikker/eidsvoll-dyreklinikk/kontakt/akuttvakt/",
       "duty": "Municipal duty service for small and large animals; weekdays AniCura Dyresykehus Oslo 08:00–23:00; after hours/weekends NMBU duty 820 90 102",
       "duty_i18n": {
-        "sl": "Občinska dežurna služba za male in velike živali; ob delavnikih AniCura Dyresykehus Oslo 8–23; zunaj delovnega časa/ob vikendih dežurstvo NMBU 820 90 102"
+        "sl": "Občinska dežurna služba za male in velike živali; ob delavnikih AniCura Dyresykehus Oslo 8–23; zunaj delovnega časa/ob vikendih dežurstvo NMBU 820 90 102",
+        "hr": "Općinska dežurna služba za male i velike životinje; radnim danima AniCura Dyresykehus Oslo 08:00–23:00; izvan radnog vremena i vikendom dežurstvo NMBU 820 90 102."
       }
     },
     {
@@ -224,7 +235,8 @@
       "source_url": "https://evidensia.no/veterinaervakt-dyrlegevakt/",
       "duty": "Evidensia Alltid 22 12 00 00 covers Oslo, Trondheim and Kristiansand around the clock; per-clinic duty numbers listed",
       "duty_i18n": {
-        "sl": "Evidensia Alltid 22 12 00 00 pokriva Oslo, Trondheim in Kristiansand 24 ur na dan; navedene so dežurne številke po ambulantah"
+        "sl": "Evidensia Alltid 22 12 00 00 pokriva Oslo, Trondheim in Kristiansand 24 ur na dan; navedene so dežurne številke po ambulantah",
+        "hr": "Evidensia Alltid 22 12 00 00 pokriva Oslo, Trondheim i Kristiansand 0–24; navedeni su dežurni brojevi po klinikama."
       },
       "note": "Page says the Alltid number is for Oslo, Trondheim and Kristiansand and not tied to one clinic."
     },
@@ -240,7 +252,8 @@
       "emergency_24h": false,
       "duty": "Part of Tromsø small-animal duty; 24-h duty every Thursday and every fourth weekend; Mon–Wed, Fri 8–16, Thu 8–18:30, Sat 10–13",
       "duty_i18n": {
-        "sl": "Del dežurne službe za male živali v Tromsøju; 24-urno dežurstvo vsak četrtek in vsak četrti vikend; pon–sre, pet 8–16, čet 8–18.30, sob 10–13"
+        "sl": "Del dežurne službe za male živali v Tromsøju; 24-urno dežurstvo vsak četrtek in vsak četrti vikend; pon–sre, pet 8–16, čet 8–18.30, sob 10–13",
+        "hr": "Dio dežurstva za male životinje u Tromsøu; dežurstvo 24 h svakog četvrtka i svaki četvrti vikend; pon–sri i pet 8–16, čet 8–18:30, sub 10–13."
       },
       "url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
       "source_url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
@@ -258,7 +271,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–15:30; outside hours calls forwarded to the duty vet",
       "duty_i18n": {
-        "sl": "pon–pet 8–15.30; zunaj delovnega časa se klici preusmerijo k dežurnemu veterinarju"
+        "sl": "pon–pet 8–15.30; zunaj delovnega časa se klici preusmerijo k dežurnemu veterinarju",
+        "hr": "pon–pet 8:00–15:30; izvan radnog vremena pozivi se preusmjeravaju dežurnom veterinaru."
       },
       "url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/"
@@ -275,7 +289,8 @@
       "emergency_24h": false,
       "duty": "Mon, Thu 08:00-18:00; Tue, Wed, Fri 08:00-15:30",
       "duty_i18n": {
-        "sl": "pon, čet 8–18; tor, sre, pet 8–15.30"
+        "sl": "pon, čet 8–18; tor, sre, pet 8–15.30",
+        "hr": "pon, čet 08:00–18:00; uto, sri, pet 08:00–15:30."
       },
       "url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/"
@@ -291,7 +306,8 @@
       "emergency_24h": false,
       "duty": "Emergency duty every evening and weekend until 22:00",
       "duty_i18n": {
-        "sl": "Nujna služba vsak večer in vikend do 22"
+        "sl": "Nujna služba vsak večer in vikend do 22",
+        "hr": "Hitno dežurstvo svake večeri i vikendom do 22:00."
       },
       "url": "https://evidensia.no/dyreklinikk/fana/",
       "source_url": "https://evidensia.no/dyreklinikk/fana/akuttvakt",
@@ -309,7 +325,8 @@
       "emergency_24h": false,
       "duty": "Mon–Wed, Fri 8–16, Thu 8–18; part of the Bergen small-animal duty outside hours",
       "duty_i18n": {
-        "sl": "pon–sre, pet 8–16, čet 8–18; zunaj delovnega časa del bergenske dežurne službe za male živali"
+        "sl": "pon–sre, pet 8–16, čet 8–18; zunaj delovnega časa del bergenske dežurne službe za male živali",
+        "hr": "pon–sri i pet 8–16, čet 8–18; izvan radnog vremena dio dežurstva za male životinje u Bergenu."
       },
       "url": "https://evidensia.no/dyreklinikk/sandviken/",
       "source_url": "https://evidensia.no/dyreklinikk/sandviken/"
@@ -326,7 +343,8 @@
       "emergency_24h": false,
       "duty": "Mon, Wed–Fri 8:30–16, Tue 8:30–21; small-animal duty 820 90 020",
       "duty_i18n": {
-        "sl": "pon, sre–pet 8.30–16, tor 8.30–21; dežurstvo za male živali 820 90 020"
+        "sl": "pon, sre–pet 8.30–16, tor 8.30–21; dežurstvo za male živali 820 90 020",
+        "hr": "pon, sri–pet 8:30–16, uto 8:30–21; dežurstvo za male životinje 820 90 020."
       },
       "url": "https://evidensia.no/dyreklinikk/haugaland/",
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/"
@@ -343,7 +361,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 8–18, Sat 9–16",
       "duty_i18n": {
-        "sl": "pon–pet 8–18, sob 9–16"
+        "sl": "pon–pet 8–18, sob 9–16",
+        "hr": "pon–pet 8–18, sub 9–16."
       },
       "url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
@@ -446,7 +465,8 @@
       "emergency_24h": false,
       "duty": "Emergency duty 8–21 (call ahead)",
       "duty_i18n": {
-        "sl": "Nujna služba 8–21 (vnaprej pokličite)"
+        "sl": "Nujna služba 8–21 (vnaprej pokličite)",
+        "hr": "Hitno dežurstvo 8–21 (nazovi unaprijed)."
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
@@ -462,7 +482,8 @@
       "phone": "23 03 15 00",
       "duty": "Emergency duty 8–19",
       "duty_i18n": {
-        "sl": "Nujna služba 8–19"
+        "sl": "Nujna služba 8–19",
+        "hr": "Hitno dežurstvo 8–19."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -477,7 +498,8 @@
       "phone": "22 51 58 00",
       "duty": "Emergency duty 8–15:30",
       "duty_i18n": {
-        "sl": "Nujna služba 8–15.30"
+        "sl": "Nujna služba 8–15.30",
+        "hr": "Hitno dežurstvo 8–15:30."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -494,7 +516,8 @@
       "emergency_24h": false,
       "duty": "Emergency Mon-Thu 08:15-18:00, Fri 08:15-15:30",
       "duty_i18n": {
-        "sl": "Nujni primeri pon–čet 8.15–18, pet 8.15–15.30"
+        "sl": "Nujni primeri pon–čet 8.15–18, pet 8.15–15.30",
+        "hr": "Hitni slučajevi pon–čet 08:15–18:00, pet 08:15–15:30."
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/kontakt/"
@@ -509,7 +532,8 @@
       "phone": "72 88 77 00",
       "duty": "Emergency duty 8–19",
       "duty_i18n": {
-        "sl": "Nujna služba 8–19"
+        "sl": "Nujna služba 8–19",
+        "hr": "Hitno dežurstvo 8–19."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -525,7 +549,8 @@
       "phone": "55 11 60 60",
       "duty": "Emergency duty 8–17",
       "duty_i18n": {
-        "sl": "Nujna služba 8–17"
+        "sl": "Nujna služba 8–17",
+        "hr": "Hitno dežurstvo 8–17."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -540,7 +565,8 @@
       "phone": "55 53 52 20",
       "duty": "Emergency duty 8–16; takes part in Bergen duty rota",
       "duty_i18n": {
-        "sl": "Nujna služba 8–16; sodeluje v bergenskem dežurnem razporedu"
+        "sl": "Nujna služba 8–16; sodeluje v bergenskem dežurnem razporedu",
+        "hr": "Hitno dežurstvo 8–16; sudjeluje u dežurstvu u Bergenu."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -555,7 +581,8 @@
       "phone": "56 32 14 20",
       "duty": "Emergency duty 8–16",
       "duty_i18n": {
-        "sl": "Nujna služba 8–16"
+        "sl": "Nujna služba 8–16",
+        "hr": "Hitno dežurstvo 8–16."
       },
       "url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/kontakt/veterinarvakt-bergen/"
@@ -570,7 +597,8 @@
       "phone": "380 95 500",
       "duty": "Emergency duty 8–18",
       "duty_i18n": {
-        "sl": "Nujna služba 8–18"
+        "sl": "Nujna služba 8–18",
+        "hr": "Hitno dežurstvo 8–18."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -585,7 +613,8 @@
       "phone": "51 66 69 98",
       "duty": "Emergency duty 8–19",
       "duty_i18n": {
-        "sl": "Nujna služba 8–19"
+        "sl": "Nujna služba 8–19",
+        "hr": "Hitno dežurstvo 8–19."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -600,7 +629,8 @@
       "phone": "51 89 20 02",
       "duty": "Emergency duty 8–18",
       "duty_i18n": {
-        "sl": "Nujna služba 8–18"
+        "sl": "Nujna služba 8–18",
+        "hr": "Hitno dežurstvo 8–18."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -615,7 +645,8 @@
       "phone": "61 13 73 33",
       "duty": "Emergency duty 8–19",
       "duty_i18n": {
-        "sl": "Nujna služba 8–19"
+        "sl": "Nujna služba 8–19",
+        "hr": "Hitno dežurstvo 8–19."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -630,7 +661,8 @@
       "phone": "62 41 16 60",
       "duty": "Emergency duty 8–16",
       "duty_i18n": {
-        "sl": "Nujna služba 8–16"
+        "sl": "Nujna služba 8–16",
+        "hr": "Hitno dežurstvo 8–16."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -645,7 +677,8 @@
       "phone": "+47 71 25 44 20",
       "duty": "Emergency duty 8–16",
       "duty_i18n": {
-        "sl": "Nujna služba 8–16"
+        "sl": "Nujna služba 8–16",
+        "hr": "Hitno dežurstvo 8–16."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -660,7 +693,8 @@
       "phone": "77 06 13 20",
       "duty": "Emergency duty 8–18",
       "duty_i18n": {
-        "sl": "Nujna služba 8–18"
+        "sl": "Nujna služba 8–18",
+        "hr": "Hitno dežurstvo 8–18."
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
