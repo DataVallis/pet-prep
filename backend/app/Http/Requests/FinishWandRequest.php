@@ -16,7 +16,12 @@ use Illuminate\Foundation\Http\FormRequest;
  * Rules v2 (GAMES_SPEC §5.3, additive — a v1 session ignores them): per move
  * `in_zone` (the stroke ended inside the play zone) and `speed_ok` (peak speed
  * ≤ max_speed_pt_s and length ≥ min_dodge_pt of the schedule). Both are
- * reported by the app; in a v2 session a move without them never earns a star.
+ * reported by the app (the strict v2 hunt is gone — old TestFlight builds still
+ * send them; they are validated and ignored).
+ *
+ * Simple hunt (rules 3, David 2026-11-08): `releases` = the moments (ms since the
+ * session start) the child let go of the feather (finger lifted / »Pusti!»).
+ * Optional; `moves` stays required and is empty for a simple hunt.
  */
 class FinishWandRequest extends FormRequest
 {
@@ -51,12 +56,25 @@ class FinishWandRequest extends FormRequest
             'moves.*.away' => ['required', 'boolean'],
             'moves.*.in_zone' => ['sometimes', 'boolean'],
             'moves.*.speed_ok' => ['sometimes', 'boolean'],
+            // The simple hunt's let-go moments (rules 3); a v1 session ignores them.
+            'releases' => ['sometimes', 'array', 'max:'.max(1, (int) config('wand.simple.max_releases', 200))],
+            'releases.*' => ['integer', 'min:0', 'max:'.self::MAX_MOVE_MS],
         ];
     }
 
     public function sessionId(): string
     {
         return strtolower((string) $this->validated('session_id'));
+    }
+
+    /**
+     * The simple hunt's let-go moments (ms since the start), as sent.
+     *
+     * @return list<int>
+     */
+    public function releases(): array
+    {
+        return array_values(array_map('intval', (array) $this->validated('releases', [])));
     }
 
     /**

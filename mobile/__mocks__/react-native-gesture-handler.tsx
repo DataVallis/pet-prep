@@ -9,7 +9,7 @@ import { View, type ViewProps } from 'react-native';
 type Handler = (e: Record<string, number>) => void;
 
 export class MockGesture {
-  readonly handlers: Partial<Record<'begin' | 'update' | 'end', Handler>> = {};
+  readonly handlers: Partial<Record<'begin' | 'update' | 'end' | 'finalize', Handler>> = {};
   constructor(readonly kind: 'pan' | 'tap' | 'longPress') {}
   onBegin(fn: Handler) {
     this.handlers.begin = fn;
@@ -27,7 +27,8 @@ export class MockGesture {
     this.handlers.end = fn;
     return this;
   }
-  onFinalize() {
+  onFinalize(fn: Handler) {
+    this.handlers.finalize = fn;
     return this;
   }
   minDistance() {
@@ -83,6 +84,7 @@ export function fireGameGesture(testID: string, kind: 'pan' | 'tap', event: Reco
   gesture.handlers.begin?.(e);
   gesture.handlers.update?.(e);
   gesture.handlers.end?.(e);
+  gesture.handlers.finalize?.(e);
 }
 
 /** Fire a recorded pan as a real drag: begin at the first sample, update through every one, end at the last. */
@@ -93,6 +95,16 @@ export function fireGamePan(testID: string, samples: Record<string, number>[]): 
   gesture.handlers.begin?.(events[0]);
   for (const e of events.slice(1)) gesture.handlers.update?.(e);
   gesture.handlers.end?.(events[events.length - 1]);
+  gesture.handlers.finalize?.(events[events.length - 1]);
+}
+
+/** A finger that touches the field and lifts again without moving (the pan never activates): begin → finalize. */
+export function fireGameRelease(testID: string, event: Record<string, number> = {}): void {
+  const gesture = registry.get(testID)?.find((g) => g.kind === 'pan');
+  if (gesture === undefined) throw new Error(`no pan gesture on ${testID}`);
+  const e = { x: 0, y: 0, translationX: 0, translationY: 0, velocityX: 0, velocityY: 0, ...event };
+  gesture.handlers.begin?.(e);
+  gesture.handlers.finalize?.(e);
 }
 
 export function GestureHandlerRootView({ children, ...props }: ViewProps & { children?: ReactNode }) {

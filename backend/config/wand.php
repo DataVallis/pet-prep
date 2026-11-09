@@ -27,8 +27,8 @@
 | A failed / aborted / expired session has no consequence: no penalty and
 | the child can start again at once.
 |
-| These are the v1 rules (old apps, a start without `rules: 2`); the v2
-| stars rules are under `v2` below (GAMES_SPEC §5.3).
+| These are the v1 rules (old apps, a start without `rules`); the simple
+| hunt (rules 3) is under `simple` below (GAMES_SPEC §5.3).
 |
 | Numbers are mini-game mechanics (game abstraction, Claude 2026-10-08 —
 | DECISIONS.md), not cat data — so they live here, not in
@@ -79,52 +79,39 @@ return [
 
     /*
     |----------------------------------------------------------------------
-    | Rules v2 — one ~25 s hunt scored in stars (GAMES_SPEC §5.2–§5.4,
-    | David 2026-10-30, P1 + P2)
+    | Simple hunt — rules version 3 (David 2026-11-08 »naredi bolj preprosto
+    | igro«; the rule designed by Claude, GAMES_SPEC §5.2–§5.4)
     |----------------------------------------------------------------------
-    | Only for a session started with `rules: 2` (a new app); without it the
-    | keys above stay the v1 rules byte for byte. Schedule: stalk 0–stalk_ms,
-    | pounce p1 ∈ first_pounce_ms, p(n+1) = p(n) + pounce_gap_ms, crouch cue
-    | p − crouch_cue_lead_ms, catch c = p_last + catch_after_last_ms, end =
-    | c + catch_clip_ms (~23–29 s; never longer than round_ms).
-    | Stars: one per pounce p when (1) at most calm_max_moves counted moves
-    | in [p − calm_window_ms, p), (2) the FIRST away move after p lies in
-    | [p + dodge_window_ms[0], p + dodge_window_ms[1]], (3) it ended inside
-    | the play zone (`in_zone`, app) and (4) it was a clean stroke
-    | (`speed_ok`, app: ≤ max_speed_pt_s and ≥ min_dodge_pt); one for the
-    | catch when no away move lies in [c, c + catch_window_ms] and the
-    | feather is in the zone. The hunt counts at ≥ min_stars.
-    | `too_uniform` (v1 keys) is only logged in v2. A v2 finish is accepted
-| from catch + catch_window_ms at the earliest (no early-finish tolerance
-| inside the catch window — QA #461 m1).
+    | Only for a session started with `rules: 3` (a new app; `rules: 2` from an
+    | older TestFlight build gets the same simple hunt). Without `rules` the
+    | keys above stay the v1 rules byte for byte.
+    | The child drags the feather; after the stalk the cat crouches with a 👀
+    | cue at `first_cue_ms`. Letting go (finger lifted / »Pusti!«) at any
+    | moment in [cue, cue + cue_window_ms] = the cat pounces and catches the
+    | feather (one ★); the next cue comes `after_catch_ms` after that release.
+    | No let-go in the window = nothing (no ✗, no penalty): the cat loses
+    | interest and crouches again `after_miss_ms` after the window. The hunt
+    | ends after `catches_needed` catches (it counts) or `max_cues` cues (it
+    | doesn't — start again at once). The finish is accepted from the
+    | `catches_needed`-th catch on (or the last window's end). The old v2
+    | stillness / pull-away rule (David 2026-10-31) is gone: nobody scored.
     */
-    'v2' => [
-        // Upper bound of a v2 hunt (the drawn schedule is ~23–29 s).
-        'round_ms' => 30000,
+    'simple' => [
+        // The cat stands up and crouches (wand_stalking) — no cue yet.
         'stalk_ms' => 3000,
-        'pounces' => 3,
-        'first_pounce_ms' => [6000, 7500],
-        'pounce_gap_ms' => [5000, 6500],
-        // The calm rule — decided by David 2026-10-31 (strict rule, GAMES_SPEC §5.3, QA #461 M3):
-        // the 👀 crouch cue shows `crouch_cue_lead_ms` before each pounce (→ the schedule's
-        // `crouch_cues_ms` = p − 1500) and the feather must be completely still in the last
-        // `calm_window_ms` before the pounce (`calm_max_moves` counted moves in [p − 1000, p)).
-        // Why: with the old 900 / 800 / 1 a steady slow mover (one stroke every ~0.8–1.2 s) got
-        // the stars in ~90 % of hunts; now ≈ 0 %, while a fair child who stops mid-stroke up to
-        // ~0.45 s after the cue still gets every star. Keep crouch_cue_lead_ms ≥ calm_window_ms
-        // + a reaction time, or a fair child cannot comply. Values are copied into each
-        // session's schedule (a running hunt keeps the rule it started with).
-        'crouch_cue_lead_ms' => 1500,
-        'calm_window_ms' => 1000,
-        'calm_max_moves' => 0,
-        // The first away move after the pounce must lie in [p + 150, p + 1500].
-        'dodge_window_ms' => [150, 1500],
-        'catch_after_last_ms' => 3500,
-        'catch_window_ms' => 1500,
+        // The first 👀 cue (drawn per session).
+        'first_cue_ms' => [4000, 5000],
+        // How long the 👀 cue shows: a young child's reaction fits easily.
+        'cue_window_ms' => 2000,
+        // Release → next cue: the catch clip (~3 s) + the ★ + a breath.
+        'after_catch_ms' => 6000,
+        // End of a missed window → next cue (the cat loses interest for a moment).
+        'after_miss_ms' => 2500,
+        'max_cues' => 6,
+        'catches_needed' => 3,
+        // The catch clip plays this long after the last release before the hunt ends.
         'catch_clip_ms' => 3500,
-        'min_stars' => 2,
-        // What the app checks for `speed_ok` (sent to the app in the schedule).
-        'max_speed_pt_s' => 4000,
-        'min_dodge_pt' => 40,
+        // Validation bound of one finish (`releases`).
+        'max_releases' => 200,
     ],
 ];

@@ -54,11 +54,14 @@ use Random\Randomizer;
  * (`pets.play_missed_on`, closeDay()) for M5-R06-05's "scratched the sofa
  * the next day" (CAT_SPEC Q10).
  *
- * Rules v2 (GAMES_SPEC §5, David 2026-10-30, P1 + P2): a start with `rules: 2`
- * (new app) gets ONE ~25 s hunt (scheduleV2(): three pounces with a crouch cue,
- * the catch at the end) judged in stars (scoreV2(): 3 dodges + the catch,
- * counted at ≥ 2). The version lives in the session's schedule (`rules_version`,
- * rulesOf()); a start without it keeps the v1 minute and score() byte for byte.
+ * Simple hunt (rules 3, GAMES_SPEC §5, David 2026-11-08 »naredi bolj preprosto
+ * igro«): a start with `rules: 3` (new app; `rules: 2` from an older TestFlight
+ * build too) gets the simple hunt (scheduleSimple(): 👀 cues; simpleTimeline():
+ * letting go during a cue = a catch, the next cue follows from it) — counted at
+ * `catches_needed` catches (scoreSimple()). It replaced the strict v2 stillness /
+ * pull-away rule (2026-10-30 / 31), which nobody could score. The version lives in
+ * the session's schedule (`rules_version`, rulesOf()); a start without it keeps
+ * the v1 minute and score() byte for byte.
  * Goal, 2 h gap, play meter, routine and the scratched sofa are the same for
  * both. Start refusals (quiet hours, day ending) keep reserving the v1 minute
  * for both versions — the payload's `can_start` and every start agree.
@@ -72,8 +75,15 @@ class WandPlayService
     /** GAMES_SPEC §7.2: the v1 minute (old apps, a start without `rules`). */
     public const RULES_V1 = 1;
 
-    /** GAMES_SPEC §5 (David 2026-10-30, P1 + P2): one ~25 s hunt scored in stars. */
-    public const RULES_V2 = 2;
+    /**
+     * The strict v2 hunt (David 2026-10-30 / 31) — gone. Only a marker: an older TestFlight
+     * build still asks for it (it gets the simple hunt) and a session stored with it is scored
+     * as a simple hunt (rulesOf()).
+     */
+    public const RULES_LEGACY_V2 = 2;
+
+    /** GAMES_SPEC §5 (David 2026-11-08): the simple hunt — let go when the cat crouches. */
+    public const RULES_SIMPLE = 3;
 
     public function __construct(
         private readonly LifeStageService $lifeStages,
@@ -357,10 +367,11 @@ class WandPlayService
             ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
         CatChoreService::abortOwnOtherKinds($pet, CareSessionKind::WandPlay, $child, $now);
 
-        // GAMES_SPEC §7.2: a new app asks for rules v2 (one ~25 s hunt in stars); without it
-        // the v1 minute stays byte for byte. The session stores its version in the schedule.
-        if ($rules === self::RULES_V2) {
-            $schedule = self::scheduleV2(new Randomizer);
+        // GAMES_SPEC §7.2: a new app asks for the simple hunt (rules 3; an older TestFlight build's
+        // `rules: 2` gets it too); without it the v1 minute stays byte for byte. The session stores
+        // its version in the schedule.
+        if ($rules >= self::RULES_LEGACY_V2) {
+            $schedule = self::scheduleSimple(new Randomizer);
             $durationMs = $schedule['duration_ms'];
         } else {
             $durationMs = self::sessionDurationMs();
@@ -392,10 +403,13 @@ class WandPlayService
      * the session is `completed` and counts (meter, routine, gap); otherwise
      * it is `failed` — no consequence.
      *
+     * A simple hunt (rules 3) is judged on `$releases` (ms of each let-go), not on moves.
+     *
      * @param  list<array{t: int, away: bool}>  $moves
+     * @param  list<int>  $releases
      * @return array{refusal: CareRefusal|null, session: PetCareSession|null, repeat: bool, counted: bool}
      */
-    public function finish(Pet $pet, User $child, string $publicId, array $moves, CarbonInterface $now): array
+    public function finish(Pet $pet, User $child, string $publicId, array $moves, CarbonInterface $now, array $releases = []): array
     {
         $exact = CarbonImmutable::instance($now)->utc();
         $now = $exact->startOfSecond();
@@ -430,13 +444,18 @@ class WandPlayService
         }
         $tolerance = max(0, (int) config('wand.finish_early_tolerance_seconds', 5));
         $earliest = CarbonImmutable::instance($session->ends_at)->utc()->subSeconds($tolerance);
-        if (self::rulesOf($session) === self::RULES_V2) {
-            // QA #461 m1: no early-finish tolerance inside the catch window — a finish before
-            // catch + catch_window would get the catch star for free.
-            $schedule = (array) $session->schedule;
-            $catchEnd = CarbonImmutable::instance($session->started_at)->utc()
-                ->addMilliseconds((int) ($schedule['catch_at_ms'] ?? 0) + (int) ($schedule['catch_window_ms'] ?? 0));
-            $earliest = $earliest->max($catchEnd);
+        $simple = self::rulesOf($session) === self::RULES_SIMPLE;
+        if ($simple) {
+            foreach ($releases as $t) {
+                if (! is_int($t) || $t < 0 || $t > $session->duration_ms) {
+                    return $refuse(CareRefusal::WandInvalidMoves, $session);
+                }
+            }
+            // The simple hunt ends early: from the `catches_needed`-th catch on, else from the end
+            // of the last window (the same timeline the app plays). The server's start is the
+            // start response truncated to the second, so it is never later than the app's clock.
+            $done = self::simpleTimeline($releases, (array) $session->schedule)['done_ms'];
+            $earliest = $earliest->min(CarbonImmutable::instance($session->started_at)->utc()->addMilliseconds($done));
         }
         if ($exact->lessThan($earliest)) {
             return $refuse(CareRefusal::WandSessionNotOver, $session);
@@ -450,12 +469,8 @@ class WandPlayService
             }
         }
 
-        if (self::rulesOf($session) === self::RULES_V2) {
-            $result = self::scoreV2($moves, (array) $session->schedule);
-            if ($result['uniform']) {
-                // v2: logged only, never a refusal (GAMES_SPEC §5.3 — three target events are too few for statistics).
-                Log::warning('WandPlayService: wand session with machine-regular moves', ['pet_id' => $pet->id]);
-            }
+        if ($simple) {
+            $result = self::scoreSimple($releases, (array) $session->schedule);
         } else {
             $result = self::score($moves, $session->duration_ms, array_map('intval', array_values($session->schedule['pounces_ms'] ?? [])));
         }
@@ -601,207 +616,145 @@ class WandPlayService
         ];
     }
 
-    /** The rules version a session was started with (stored in its schedule; none = v1). */
+    /**
+     * The rules version a session was started with (stored in its schedule; none = v1). A session
+     * stored as the strict v2 hunt is scored as a simple hunt (its old app sends no releases → not
+     * counted, no penalty; the defaults of `config('wand.simple')` fill its missing keys).
+     */
     public static function rulesOf(PetCareSession $session): int
     {
-        return (int) (((array) $session->schedule)['rules_version'] ?? self::RULES_V1) === self::RULES_V2 ? self::RULES_V2 : self::RULES_V1;
+        return (int) (((array) $session->schedule)['rules_version'] ?? self::RULES_V1) >= self::RULES_LEGACY_V2 ? self::RULES_SIMPLE : self::RULES_V1;
     }
 
     /**
-     * Rules v2 schedule (GAMES_SPEC §5.2, config `wand.v2`): stalk, three pounces with a
-     * crouch cue `crouch_cue_lead_ms` (1500) before each (calm rule decided by David 2026-10-31; config only), the catch `catch_after_last_ms` after the last
-     * pounce and the end `catch_clip_ms` after the catch (~23–29 s, ≤ `round_ms`). Carries
-     * every number the app needs to mirror the server's star rules. Pure apart from the RNG.
+     * The simple hunt's schedule (GAMES_SPEC §5.2, config `wand.simple`): the stalk, the first 👀
+     * cue (drawn) and the numbers the app needs to play the same timeline as simpleTimeline().
+     * `duration_ms` = the latest possible end (every cue happens, each followed by the longer of
+     * a late catch and a miss, then the catch clip) — the TTL; the hunt usually ends earlier.
+     * Pure apart from the RNG.
      *
-     * @return array{rules_version: int, duration_ms: int, stalk_ms: int, pounces_ms: list<int>, crouch_cues_ms: list<int>, catch_at_ms: int, catch_window_ms: int, calm_window_ms: int, calm_max_moves: int, dodge_window_ms: array{0: int, 1: int}, min_move_interval_ms: int, min_stars: int, max_stars: int, max_speed_pt_s: int, min_dodge_pt: int}
+     * @return array{rules_version: int, duration_ms: int, stalk_ms: int, first_cue_ms: int, cue_window_ms: int, after_catch_ms: int, after_miss_ms: int, max_cues: int, catches_needed: int, catch_clip_ms: int}
      */
-    public static function scheduleV2(Randomizer $rng): array
+    public static function scheduleSimple(Randomizer $rng): array
     {
-        $c = (array) config('wand.v2', []);
-        $range = function (string $key, array $default) use ($c): array {
-            $v = array_values((array) ($c[$key] ?? $default));
-            $lo = max(0, (int) ($v[0] ?? $default[0]));
-
-            return [$lo, max($lo, (int) ($v[1] ?? $default[1]))];
-        };
-        $stalk = max(0, (int) ($c['stalk_ms'] ?? 3000));
-        $count = max(1, (int) ($c['pounces'] ?? 3));
-        $cue = max(0, (int) ($c['crouch_cue_lead_ms'] ?? 1500));
-        [$firstLo, $firstHi] = $range('first_pounce_ms', [6000, 7500]);
-        [$gapLo, $gapHi] = $range('pounce_gap_ms', [5000, 6500]);
-
-        $pounces = [];
-        $p = max($stalk + $cue, $rng->getInt($firstLo, $firstHi));
-        for ($i = 0; $i < $count; $i++) {
-            $pounces[] = $p;
-            $p += $rng->getInt($gapLo, $gapHi);
-        }
-        $catchAt = end($pounces) + max(0, (int) ($c['catch_after_last_ms'] ?? 3500));
-        $duration = min(max(1, (int) ($c['round_ms'] ?? 30000)), $catchAt + max(0, (int) ($c['catch_clip_ms'] ?? 3500)));
-        $catchAt = min($catchAt, $duration);
+        $c = (array) config('wand.simple', []);
+        $first = array_values((array) ($c['first_cue_ms'] ?? [4000, 5000]));
+        $firstLo = max(0, (int) ($first[0] ?? 4000));
+        $firstHi = max($firstLo, (int) ($first[1] ?? $firstLo));
+        $p = self::simpleParams(['first_cue_ms' => $rng->getInt($firstLo, $firstHi)]);
+        $p['first_cue_ms'] = max($p['stalk_ms'], $p['first_cue_ms']);
+        $step = $p['cue_window_ms'] + max($p['after_catch_ms'], $p['after_miss_ms']);
 
         return [
-            'rules_version' => self::RULES_V2,
-            'duration_ms' => $duration,
-            'stalk_ms' => $stalk,
-            'pounces_ms' => $pounces,
-            'crouch_cues_ms' => array_map(fn (int $at): int => max(0, $at - $cue), $pounces),
-            'catch_at_ms' => $catchAt,
-            'catch_window_ms' => max(0, (int) ($c['catch_window_ms'] ?? 1500)),
-            'calm_window_ms' => max(0, (int) ($c['calm_window_ms'] ?? 1000)),
-            'calm_max_moves' => max(0, (int) ($c['calm_max_moves'] ?? 0)),
-            'dodge_window_ms' => $range('dodge_window_ms', [150, 1500]),
-            'min_move_interval_ms' => max(0, (int) config('wand.min_move_interval_ms', 300)),
-            'min_stars' => max(1, (int) ($c['min_stars'] ?? 2)),
-            'max_stars' => $count + 1,
-            'max_speed_pt_s' => max(1, (int) ($c['max_speed_pt_s'] ?? 4000)),
-            'min_dodge_pt' => max(0, (int) ($c['min_dodge_pt'] ?? 40)),
+            'rules_version' => self::RULES_SIMPLE,
+            'duration_ms' => $p['first_cue_ms'] + ($p['max_cues'] - 1) * $step + $p['cue_window_ms'] + $p['catch_clip_ms'],
+        ] + $p;
+    }
+
+    /**
+     * The numbers of a simple hunt from a stored schedule, each missing one from `config('wand.simple')`
+     * (a stored strict-v2 schedule gets the defaults). The session payload sends exactly these.
+     *
+     * @param  array<string, mixed>  $s
+     * @return array{stalk_ms: int, first_cue_ms: int, cue_window_ms: int, after_catch_ms: int, after_miss_ms: int, max_cues: int, catches_needed: int, catch_clip_ms: int}
+     */
+    public static function simpleParams(array $s): array
+    {
+        $c = (array) config('wand.simple', []);
+        $int = fn (string $key, int $default, int $min): int => max($min, (int) (is_numeric($s[$key] ?? null) ? $s[$key] : ($c[$key] ?? $default)));
+        $first = $s['first_cue_ms'] ?? null;
+        $legacyCue = is_array($s['crouch_cues_ms'] ?? null) ? ($s['crouch_cues_ms'][0] ?? null) : null;
+
+        return [
+            'stalk_ms' => $int('stalk_ms', 3000, 0),
+            // A stored strict-v2 schedule has no first cue: its first crouch cue stands in.
+            'first_cue_ms' => max(0, (int) (is_numeric($first) ? $first : (is_numeric($legacyCue) ? $legacyCue : 4000))),
+            'cue_window_ms' => $int('cue_window_ms', 2000, 1),
+            'after_catch_ms' => $int('after_catch_ms', 6000, 0),
+            'after_miss_ms' => $int('after_miss_ms', 2500, 0),
+            'max_cues' => $int('max_cues', 6, 1),
+            'catches_needed' => $int('catches_needed', 3, 1),
+            'catch_clip_ms' => $int('catch_clip_ms', 3500, 0),
         ];
     }
 
     /**
-     * Rules v2 verdict (GAMES_SPEC §5.3, David 2026-10-30 P2) — pure, no I/O. For the calm
-     * rule (and the totals) moves closer than `min_move_interval_ms` to the previous counted
-     * move count once (as v1); the dodge and the catch read every reported move. One star
-     * per pounce p when ALL hold:
-     *  1. calm: at most `calm_max_moves` counted moves (any direction) in [p − calm_window, p);
-     *     the 👀 cue is at p − `crouch_cue_lead_ms` (config `wand.v2`, stored per session);
-     *  2. reaction: the FIRST counted away move at or after p lies in [p + dodge_window[0],
-     *     p + dodge_window[1]] (earlier = `too_early`, none in time = `no_dodge`);
-     *  3. that move ended inside the play zone (`in_zone: true`, reported by the app);
-     *  4. it was a clean stroke (`speed_ok: true`: ≤ max_speed_pt_s and ≥ min_dodge_pt).
-     * A move without `in_zone` / `speed_ok` fails 3 / 4 (fail closed — the v2 app sends both).
-     * One star for the catch c: no counted away move in [c, c + catch_window] and the feather
-     * is in the zone (the last counted move up to c + catch_window, if any, has `in_zone`).
-     * The hunt counts at ≥ `min_stars`. `hint` = the first failed event in time (calm | dodge
-     * | catch, GAMES_SPEC §5.4), null with every star. `uniform` = machine-regular gaps (the
-     * v1 `uniform_*` test) — logged only, never a refusal in v2.
+     * The simple hunt as it played (GAMES_SPEC §5.2) — pure, no I/O; the app's `wandTimeline`
+     * mirrors it line by line. Cue 1 at `first_cue_ms`; a cue is CAUGHT by the first release
+     * in [cue, cue + cue_window_ms] (the cat pounces at that moment) and the next cue comes
+     * `after_catch_ms` after that release; a cue without a release passes (no penalty) and the
+     * next comes `after_miss_ms` after its window. It stops at `catches_needed` catches or
+     * `max_cues` cues. Releases outside every window (too early, during a catch) change nothing.
+     * `done_ms` = when the hunt is over: the deciding release + `catch_clip_ms`, else the end of
+     * the last window.
      *
-     * Rapid spam earns nothing: continuous rapid strokes put ≥ 2 counted moves into every calm
-     * window (rule 1) and an away move into the catch window — 0 stars. The strict calm rule
-     * (David 2026-10-31: cue 1500 ms before, still for the last 1000 ms, 0 moves) also fails a
-     * steady SLOW mover (one stroke every ~0.8–1.2 s), who passed ~90 % of hunts with 900 / 800 / 1.
-     *
-     * @param  list<array{t: int, away: bool, in_zone?: bool, speed_ok?: bool}>  $moves
-     * @param  array<string, mixed>  $schedule  a scheduleV2() schedule
-     * @return array{success: bool, reason: 'too_few_stars'|null, stars: int, min_stars: int, max_stars: int, dodges: list<array{pounce_ms: int, star: bool, reason: 'moved_during_crouch'|'too_early'|'no_dodge'|'out_of_zone'|'bad_stroke'|null, move_ms: int|null}>, catch: array{star: bool, reason: 'pulled_away'|'out_of_zone'|null}, hint: 'calm'|'dodge'|'catch'|null, uniform: bool, away_moves: int, toward_moves: int, segments_hit: int, segments: int, min_away_moves: int, pounces_hit: int, pounces: int}
+     * @param  list<int>  $releases
+     * @param  array<string, mixed>  $schedule
+     * @return array{cues: list<array{cue_ms: int, caught: bool, release_ms: int|null}>, catches: int, done_ms: int}
      */
-    public static function scoreV2(array $moves, array $schedule): array
+    public static function simpleTimeline(array $releases, array $schedule): array
     {
-        $interval = max(0, (int) ($schedule['min_move_interval_ms'] ?? 300));
-        $calmWindow = max(0, (int) ($schedule['calm_window_ms'] ?? 1000));
-        $calmMax = max(0, (int) ($schedule['calm_max_moves'] ?? 0));
-        $dodge = array_values((array) ($schedule['dodge_window_ms'] ?? [150, 1500]));
-        $dodgeFrom = (int) ($dodge[0] ?? 150);
-        $dodgeTo = (int) ($dodge[1] ?? 1500);
-        $catchAt = (int) ($schedule['catch_at_ms'] ?? 0);
-        $catchWindow = max(0, (int) ($schedule['catch_window_ms'] ?? 1500));
-        $pounces = array_map('intval', array_values((array) ($schedule['pounces_ms'] ?? [])));
-        $minStars = max(1, (int) ($schedule['min_stars'] ?? 2));
-        $uniformGaps = max(2, (int) config('wand.uniform_min_gaps', 6));
-        $uniformSpread = max(0, (int) config('wand.uniform_max_spread_ms', 60));
+        $p = self::simpleParams($schedule);
+        $sorted = array_map('intval', $releases);
+        sort($sorted);
 
-        usort($moves, fn (array $a, array $b): int => $a['t'] <=> $b['t']);
-
-        /** @var list<array{t: int, away: bool, in_zone: bool, speed_ok: bool}> $raw every reported move, sorted */
-        $raw = array_map(fn (array $move): array => [
-            't' => (int) $move['t'],
-            'away' => (bool) $move['away'],
-            'in_zone' => ($move['in_zone'] ?? false) === true,
-            'speed_ok' => ($move['speed_ok'] ?? false) === true,
-        ], $moves);
-
-        // The 300 ms merge applies to COUNTING moves (calm rule, totals, uniform log) only. The
-        // dodge and the catch read every reported move (QA #461 m2: a real dodge right after a
-        // calm move must not be merged away, and a pull-away at the catch must not hide either).
-        /** @var list<array{t: int, away: bool, in_zone: bool, speed_ok: bool}> $counted */
-        $counted = [];
-        $gaps = [];
-        $last = null;
-        foreach ($raw as $move) {
-            if ($last !== null && $interval > $move['t'] - $last) {
-                continue;
-            }
-            if ($last !== null) {
-                $gaps[] = $move['t'] - $last;
-            }
-            $last = $move['t'];
-            $counted[] = $move;
-        }
-
-        $failures = []; // [time, hint]
-        $dodges = [];
-        $stars = 0;
-        foreach ($pounces as $p) {
-            $calmMoves = count(array_filter($counted, fn (array $m): bool => $m['t'] >= $p - $calmWindow && $m['t'] < $p));
-            $first = null;
-            foreach ($raw as $m) {
-                if ($m['away'] && $m['t'] >= $p) {
-                    $first = $m;
+        $cues = [];
+        $catches = 0;
+        $cue = $p['first_cue_ms'];
+        $done = $cue + $p['cue_window_ms'];
+        for ($i = 0; $i < $p['max_cues'] && $catches < $p['catches_needed']; $i++) {
+            $hit = null;
+            foreach ($sorted as $t) {
+                if ($t >= $cue && $t <= $cue + $p['cue_window_ms']) {
+                    $hit = $t;
                     break;
                 }
             }
-            $inTime = $first !== null && $first['t'] >= $p + $dodgeFrom && $first['t'] <= $p + $dodgeTo;
-            $reason = match (true) {
-                $calmMoves > $calmMax => 'moved_during_crouch',
-                $first !== null && $first['t'] < $p + $dodgeFrom => 'too_early',
-                ! $inTime => 'no_dodge',
-                ! $first['in_zone'] => 'out_of_zone',
-                ! $first['speed_ok'] => 'bad_stroke',
-                default => null,
-            };
-            if ($reason === null) {
-                $stars++;
+            $cues[] = ['cue_ms' => $cue, 'caught' => $hit !== null, 'release_ms' => $hit];
+            if ($hit !== null) {
+                $catches++;
+                $done = $hit + $p['catch_clip_ms'];
+                $cue = $hit + $p['after_catch_ms'];
             } else {
-                $failures[] = [$p, $reason === 'moved_during_crouch' ? 'calm' : 'dodge'];
+                $done = $cue + $p['cue_window_ms'];
+                $cue += $p['cue_window_ms'] + $p['after_miss_ms'];
             }
-            $dodges[] = ['pounce_ms' => $p, 'star' => $reason === null, 'reason' => $reason, 'move_ms' => $inTime ? $first['t'] : null];
         }
 
-        $catchEnd = $catchAt + $catchWindow;
-        $pulled = false;
-        $lastBefore = null;
-        foreach ($raw as $m) {
-            if ($m['t'] > $catchEnd) {
-                break;
-            }
-            $lastBefore = $m;
-            if ($m['away'] && $m['t'] >= $catchAt) {
-                $pulled = true;
-            }
-        }
-        $catchReason = match (true) {
-            $pulled => 'pulled_away',
-            $lastBefore !== null && ! $lastBefore['in_zone'] => 'out_of_zone',
-            default => null,
-        };
-        if ($catchReason === null) {
-            $stars++;
-        } else {
-            $failures[] = [$catchAt, 'catch'];
-        }
+        return ['cues' => $cues, 'catches' => $catches, 'done_ms' => $done];
+    }
 
-        usort($failures, fn (array $a, array $b): int => $a[0] <=> $b[0]);
-        $away = count(array_filter($counted, fn (array $m): bool => $m['away']));
+    /**
+     * The simple hunt's verdict (GAMES_SPEC §5.3) — pure. One ★ per catch; it counts at
+     * `catches_needed`. Too early / never letting go is no fault (no reason per cue); `hint`
+     * `let_go` only when the hunt did not count.
+     *
+     * @param  list<int>  $releases
+     * @param  array<string, mixed>  $schedule
+     * @return array{success: bool, reason: 'too_few_catches'|null, stars: int, min_stars: int, max_stars: int, cues: list<array{cue_ms: int, caught: bool, release_ms: int|null}>, hint: 'let_go'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, min_away_moves: int, pounces_hit: int, pounces: int}
+     */
+    public static function scoreSimple(array $releases, array $schedule): array
+    {
+        $need = self::simpleParams($schedule)['catches_needed'];
+        $timeline = self::simpleTimeline($releases, $schedule);
+        $success = $timeline['catches'] >= $need;
 
         return [
-            'success' => $stars >= $minStars,
-            'reason' => $stars >= $minStars ? null : 'too_few_stars',
-            'stars' => $stars,
-            'min_stars' => $minStars,
-            'max_stars' => count($pounces) + 1,
-            'dodges' => $dodges,
-            'catch' => ['star' => $catchReason === null, 'reason' => $catchReason],
-            'hint' => $failures[0][1] ?? null,
-            'uniform' => count($gaps) >= $uniformGaps && max($gaps) - min($gaps) <= $uniformSpread,
-            // v1 keys kept so the result shape stays one type (counts only in v2).
-            'away_moves' => $away,
-            'toward_moves' => count($counted) - $away,
+            'success' => $success,
+            'reason' => $success ? null : 'too_few_catches',
+            'stars' => $timeline['catches'],
+            'min_stars' => $need,
+            'max_stars' => $need,
+            'cues' => $timeline['cues'],
+            'hint' => $success ? null : 'let_go',
+            // v1 keys kept so the result shape stays one type (counts only).
+            'away_moves' => 0,
+            'toward_moves' => 0,
             'segments_hit' => 0,
             'segments' => 0,
             'min_away_moves' => 0,
-            'pounces_hit' => count(array_filter($dodges, fn (array $d): bool => $d['star'])),
-            'pounces' => count($pounces),
+            'pounces_hit' => $timeline['catches'],
+            'pounces' => count($timeline['cues']),
         ];
     }
 

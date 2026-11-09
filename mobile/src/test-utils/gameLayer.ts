@@ -28,6 +28,11 @@ export function fireGamePan(testID: string, samples: Record<string, number>[]): 
   jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGamePan(testID, samples);
 }
 
+/** A finger that rests on `testID` and lifts without moving (begin → finalize; no pan end, no tap). */
+export function fireGameRelease(testID: string, event: Record<string, number> = {}): void {
+  jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGameRelease(testID, event);
+}
+
 // ── Exit + z-order (ball v2 device bug, 2026-10-31) ─────────────────────────────
 
 type BackPressHandler = Parameters<typeof BackHandler.addEventListener>[1];

@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Palica s peresom: ko se muca pritaji, spusti pero
+
+**Kaj:** igro s palico smo naredili čisto preprosto — ko se muca pritaji (👀), otrok spusti pero in muca ga ujame ★; trije ulovi in igra je končana (~20–30 s), brez kazni za prezgodnji ali zamujen izpust.
+**Zakaj je pomembno:** David je igro preizkusil na iPhonu in nihče ni dobil točke (pero je moralo popolnoma mirovati že pol sekunde po znaku, nato pa hitro, a ne prehitro stran); zdaj jo mlajši otrok razume v prvem poskusu, učna točka — muca mora lov končati z ulovom — pa ostane.
+**Kako povedati:** 🧒 »Ko se muca pritaji, spusti pero — ujela ga bo!« · 👩 »Igra je kratka in jasna: otrok se nauči, da mora muca plen na koncu ujeti.« · 🛠 »Ko testiranje pokaže, da pravila nihče ne zna, pravilo poenostaviš — ne razlagaš ga.«
+
 ## 2026-11-08 — Časovni pas družine se da zamenjati (in aplikacija ga predlaga na potovanju)
 
 **Kaj:** starš v Nadzoru zamenja časovni pas družine (z opozorilom, največ enkrat na dan, tudi med izzivom), pregled mu menjavo predlaga, ko je telefon v drugem pasu, ob tem pa smo popravili napako, zaradi katere bi menjava proti zahodu (npr. Ljubljana → Lizbona) sredi dneva izbrisala današnje korake.

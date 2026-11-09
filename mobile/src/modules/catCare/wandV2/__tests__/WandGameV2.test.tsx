@@ -1,9 +1,10 @@
 /**
- * GAMES_SPEC §5 — the wand v2 hunt through the cat game host (`CatCareOverlay`): the capability
- * fallback (no layer → the v1 minute, which never sends `rules`), the deck gating the start, the
- * `rules: 2` start, the server's schedule driving the cues, real strokes through the recorded
- * gesture worklets carrying `in_zone` / `speed_ok`, the ★ for a dodge, and the result screen with
- * the server's stars and hint. Hold mode: »Umakni!« is one clean away move.
+ * GAMES_SPEC §5 — the simple wand hunt (David 2026-11-08) through the cat game host
+ * (`CatCareOverlay`): the capability fallback (no layer → the v1 minute, which never sends
+ * `rules`), the deck gating the start, the `rules: 3` start, the server's numbers driving the 👀
+ * cues, letting go (a resting finger lifted / a drag ended, via the recorded gesture worklets)
+ * during a cue = a catch with ★, three catches = the finish (one call) and the result screen with
+ * the learning line. Too early / never = nothing. Hold mode: »Pusti!« is the let-go.
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
@@ -11,18 +12,18 @@ import { api, ApiError, type ChildPetState } from '@/api/client';
 import { i18n } from '@/i18n';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { loadWandGameV2, resetWandGameV2ForTests } from '@/modules/catCare/wandV2/loadWandGameV2';
-import { readWandV2Session, scoreWandV2, type WandV2Move, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
+import { readWandHuntSession, scoreWandHunt, type WandHuntSession } from '@/modules/catCare/wandV2/wandRules';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { useAppStore } from '@/store/appStore';
 import { makeLiveChildState, makeMedia, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
-import { captureAndroidBack, expectHudAboveStage, fireGamePan } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectHudAboveStage, fireGamePan, fireGameRelease } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, startWand: jest.fn(), finishWand: jest.fn(), startWandV2: jest.fn(), finishWandV2: jest.fn(), getChildPet: jest.fn() } };
+  return { ...actual, api: { ...actual.api, startWand: jest.fn(), finishWand: jest.fn(), startWandHunt: jest.fn(), finishWandHunt: jest.fn(), getChildPet: jest.fn() } };
 });
 
 const mocked = api as unknown as Record<string, jest.Mock>;
@@ -44,30 +45,28 @@ const URLS = {
 const SESSION = {
   id: '9b1f0c1e-4c1a-4b8e-9d1e-0f2a3b4c5d6e',
   started_at: '2026-10-31T11:00:00Z',
-  ends_at: '2026-10-31T11:00:26Z',
-  expires_at: '2026-10-31T11:01:26Z',
-  rules_version: 2,
-  duration_ms: 26000,
+  ends_at: '2026-10-31T11:00:50Z',
+  expires_at: '2026-10-31T11:01:50Z',
+  rules_version: 3,
+  duration_ms: 50500,
   stalk_ms: 3000,
-  pounces_ms: [7000, 13000, 19000],
-  crouch_cues_ms: [5500, 11500, 17500],
-  catch_at_ms: 22500,
-  catch_window_ms: 1500,
-  calm_window_ms: 1000,
-  calm_max_moves: 0,
-  dodge_window_ms: [150, 1500],
-  min_move_interval_ms: 300,
-  min_stars: 2,
-  max_stars: 4,
-  max_speed_pt_s: 4000,
-  min_dodge_pt: 40,
-  // v1 keys, neutral in v2
+  first_cue_ms: 4500,
+  cue_window_ms: 2000,
+  after_catch_ms: 6000,
+  after_miss_ms: 2500,
+  max_cues: 6,
+  catches_needed: 3,
+  catch_clip_ms: 3500,
+  // v1 keys, neutral in the simple hunt
+  catch_at_ms: 50500,
+  pounces_ms: [],
   min_away_moves: 0,
   segments: 0,
+  min_move_interval_ms: 0,
   pounce_window_ms: 0,
 };
 
-const PARSED = readWandV2Session(SESSION) as WandV2Session;
+const PARSED = readWandHuntSession(SESSION) as WandHuntSession;
 
 function catState(): ChildPetState {
   return makeLiveChildState({ pet: { breed_type: 'maine_coon', species: 'cat' } as Partial<ChildPetState['pet']>, wand: makeWandState() });
@@ -101,17 +100,30 @@ function open(view: ChildPetView) {
 }
 
 function deckReady() {
-  for (let i = 0; i < 4; i += 1) fireEvent(screen.getByTestId(`${ID}-deck-player-${i}`), 'firstFrameRender');
+  for (let i = 0; i < 3; i += 1) fireEvent(screen.getByTestId(`${ID}-deck-player-${i}`), 'firstFrameRender');
 }
 
 function layoutField() {
   fireEvent(screen.getByTestId(`${ID}-field`, { includeHiddenElements: true }), 'layout', { nativeEvent: { layout: { x: 0, y: 0, ...SIZE } } });
 }
 
-/** A calm pull away inside the zone: finger from y 520 to 380 (feather 464 → 324). */
-function pullAway() {
+/** A drag of the feather that ends with the finger lifted (the lift = a let-go). */
+function dragAndLift() {
   const samples = Array.from({ length: 11 }, (_, i) => ({ x: 200, y: 520 - i * 14, velocityX: 0, velocityY: -900 }));
-  fireGamePan(`${ID}-field`, samples);
+  act(() => fireGamePan(`${ID}-field`, samples));
+}
+
+/** A finger resting on the feather lifts without moving (no pan end, no tap — only the finalize). */
+function liftResting() {
+  act(() => fireGameRelease(`${ID}-field`, { x: 200, y: 400 }));
+}
+
+function answerFinish() {
+  mocked.finishWandHunt.mockImplementation(async (_id: string, releases: number[]) => ({
+    status: 'accepted',
+    result: { session_id: SESSION.id, ...scoreWandHunt(releases, PARSED) },
+    state: catState(),
+  }));
 }
 
 beforeEach(async () => {
@@ -120,7 +132,7 @@ beforeEach(async () => {
   setGameLayerAvailableForTests(true);
   resetWandGameV2ForTests();
   useAppStore.setState({ catOverlay: null });
-  for (const k of ['startWand', 'finishWand', 'startWandV2', 'finishWandV2', 'getChildPet']) mocked[k].mockReset();
+  for (const k of ['startWand', 'finishWand', 'startWandHunt', 'finishWandHunt', 'getChildPet']) mocked[k].mockReset();
 });
 
 afterEach(() => {
@@ -150,57 +162,79 @@ describe('capability fallback', () => {
 });
 
 describe('the hunt', () => {
-  it('starts with rules: 2, plays the server schedule, reports in_zone / speed_ok moves, shows the server result', async () => {
-    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
-    open(catView());
+  async function started(view = catView()) {
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    answerFinish();
+    open(view);
     deckReady();
     layoutField();
     await advance(0);
     fireEvent.press(screen.getByTestId(`${ID}-start`));
     await advance(0);
-    expect(mocked.startWandV2).toHaveBeenCalledTimes(1);
+  }
+
+  it('starts with rules: 3; letting go during the 👀 cue = a catch (★ »Ujela ga je!«); three catches = one finish and the result', async () => {
+    await started();
+    expect(mocked.startWandHunt).toHaveBeenCalledTimes(1);
     expect(mocked.startWand).not.toHaveBeenCalled();
 
-    // Calm until the pounce at 7000, then a clean pull-away at ~7400 → ★ »Ušlo!« on the top line.
-    await advance(7400);
-    pullAway();
-    await advance(2100);
-    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Ušlo!');
+    // The cue at 4500: the top line says what to do.
+    await advance(4_600);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Spusti pero!');
+    // A finger that rested on the feather lifts at ~5300 → the cat catches it; ★ when the clip played.
+    await advance(700);
+    liftResting();
+    await advance(3_700);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Ujela ga je!');
     expect(screen.getByTestId(`${ID}-top-stars`)).toBeTruthy();
 
-    let sent: WandV2Move[] = [];
-    mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => {
-      sent = moves;
-      return { status: 'accepted', result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) }, state: catState() };
-    });
-    await advance(26000 - 9500 + 200);
-    expect(mocked.finishWandV2).toHaveBeenCalledTimes(1);
-    expect(sent).toHaveLength(1);
-    expect(sent[0]).toMatchObject({ away: true, in_zone: true, speed_ok: true });
-    expect(sent[0].t).toBeGreaterThanOrEqual(7150);
-    expect(sent[0].t).toBeLessThanOrEqual(8500);
+    // Cue 2 at ~11300: a drag that ends (the finger lifts) inside the window.
+    await advance(11_400 - 9_000);
+    dragAndLift();
+    // Cue 3 at ~17400.
+    await advance(17_500 - 11_400);
+    liftResting();
+    expect(mocked.finishWandHunt).not.toHaveBeenCalled();
+    await advance(3_700);
+    expect(mocked.finishWandHunt).toHaveBeenCalledTimes(1);
+    const [, sent] = mocked.finishWandHunt.mock.calls[0] as [string, number[]];
+    expect(sent).toHaveLength(3);
+    expect(scoreWandHunt(sent, PARSED)).toMatchObject({ success: true, stars: 3 });
     await advance(0);
     expect(screen.getByTestId(`${ID}-result-title`).props.children).toBe('Kakšen lov!');
-    expect(screen.getByTestId(`${ID}-result-hint`).props.children).toBe('Ko skoči, pero hitro stran.');
+    expect(screen.getByTestId(`${ID}-result-learn`).props.children).toBe('Muca mora plen na koncu ujeti – tako je lov zanjo srečen.');
+    expect(screen.queryByTestId(`${ID}-result-hint`)).toBeNull();
   });
 
-  it('»Lažje kretnje«: »Umakni!« is one clean away move; nothing else is reported', async () => {
-    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
-    mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => ({
-      status: 'accepted',
-      result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) },
-      state: catState(),
-    }));
-    open(catView(true));
-    deckReady();
-    layoutField();
+  it('too early or never: no ★, no fault — the next cue comes; the hunt ends after the last cue with the hint', async () => {
+    await started();
+    // Let go before the first cue: nothing happens.
+    await advance(2_000);
+    liftResting();
+    await advance(5_000);
+    expect(screen.queryByTestId(`${ID}-top-stars`)).toBeNull();
+    // Never again: six cues pass (the last window ends at 29000), then one finish.
+    await advance(29_000 - 7_000 + 200);
+    expect(mocked.finishWandHunt).toHaveBeenCalledTimes(1);
+    const [, sent] = mocked.finishWandHunt.mock.calls[0] as [string, number[]];
+    expect(scoreWandHunt(sent, PARSED)).toMatchObject({ success: false, stars: 0 });
     await advance(0);
-    fireEvent.press(screen.getByTestId(`${ID}-start`));
-    await advance(7500);
-    fireEvent.press(screen.getByTestId(`${ID}-dodge`));
-    await advance(19000);
-    const [, moves] = mocked.finishWandV2.mock.calls[0] as [string, WandV2Move[]];
-    expect(moves).toEqual([{ t: expect.any(Number), away: true, in_zone: true, speed_ok: true }]);
+    expect(screen.getByTestId(`${ID}-result-title`).props.children).toBe('Še en lov?');
+    expect(screen.getByTestId(`${ID}-result-hint`).props.children).toBe('Ko se pritaji 👀, spusti pero.');
+  });
+
+  it('»Lažje kretnje«: »Pusti!« is the let-go', async () => {
+    await started(catView(true));
+    await advance(5_000);
+    fireEvent.press(screen.getByTestId(`${ID}-let-go`));
+    await advance(6_600);
+    fireEvent.press(screen.getByTestId(`${ID}-let-go`));
+    await advance(6_600);
+    fireEvent.press(screen.getByTestId(`${ID}-let-go`));
+    await advance(3_700);
+    expect(mocked.finishWandHunt).toHaveBeenCalledTimes(1);
+    const [, sent] = mocked.finishWandHunt.mock.calls[0] as [string, number[]];
+    expect(scoreWandHunt(sent, PARSED)).toMatchObject({ success: true, stars: 3 });
   });
 });
 
@@ -270,12 +304,8 @@ describe('device crash 2026-11-02: no UI-thread worklet calls a non-worklet func
   }
 
   it.each(CASES)('%s: the card, the deck wait and a full hunt run without a crash', async (_name, view) => {
-    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
-    mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => ({
-      status: 'accepted',
-      result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) },
-      state: catState(),
-    }));
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    answerFinish();
     open(view);
     layoutField();
     // »Muca se pripravlja …« — the moment the device crashed.
@@ -285,23 +315,23 @@ describe('device crash 2026-11-02: no UI-thread worklet calls a non-worklet func
     await advance(12_000);
     expect(screen.getByTestId(`${ID}-start`).props.accessibilityState?.disabled).toBe(false);
     fireEvent.press(screen.getByTestId(`${ID}-start`));
-    await advance(7_400);
-    pullAway();
-    await advance(19_000);
-    expect(mocked.finishWandV2).toHaveBeenCalledTimes(1);
+    await advance(5_000);
+    liftResting();
+    await advance(30_000);
+    expect(mocked.finishWandHunt).toHaveBeenCalledTimes(1);
     expect(screen.getByTestId(`${ID}-result-title`)).toBeTruthy();
     expect(screen.queryByTestId(`${ID}-escape`)).toBeNull();
   });
 
   it('a start refusal (422 media_not_ready) shows a friendly card, never a crash', async () => {
-    mocked.startWandV2.mockRejectedValue(new ApiError('refused', 422, { reason: 'media_not_ready' }));
+    mocked.startWandHunt.mockRejectedValue(new ApiError('refused', 422, { reason: 'media_not_ready' }));
     open(catView());
     layoutField();
     deckReady();
     await advance(0);
     fireEvent.press(screen.getByTestId(`${ID}-start`));
     await advance(0);
-    expect(mocked.finishWandV2).not.toHaveBeenCalled();
+    expect(mocked.finishWandHunt).not.toHaveBeenCalled();
     expect(screen.queryByTestId(`${ID}-escape`)).toBeNull();
     expect(screen.queryByTestId(`${ID}-failed-text`) ?? screen.queryByTestId(`${ID}-intro`)).toBeTruthy();
   });
@@ -324,7 +354,7 @@ describe('z-order and exit', () => {
 
   it('while running the × and Android back stop the hunt (no dead end)', async () => {
     const back = captureAndroidBack();
-    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
     open(catView());
     deckReady();
     layoutField();
@@ -338,7 +368,7 @@ describe('z-order and exit', () => {
     expect(back.pressBack()).toBe(true);
     await advance(0);
     expect(screen.getByTestId(`${ID}-start`)).toBeTruthy();
-    expect(mocked.finishWandV2).not.toHaveBeenCalled();
+    expect(mocked.finishWandHunt).not.toHaveBeenCalled();
     jest.restoreAllMocks();
   });
 });

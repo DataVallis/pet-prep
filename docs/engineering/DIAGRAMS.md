@@ -776,15 +776,15 @@ sequenceDiagram
   else ok
     W->>DB: same child's active game → aborted (no penalty)
     W->>DB: pet_care_sessions (wand_play, active, 60 s, schedule: pounces, catch_at_ms)
-    Note over W: rules 2 (GAMES_SPEC §5.2, David 2026-10-30): one ~25 s hunt — 3 pounces (p1 6–7.5 s, +5–6.5 s),<br/>crouch cue p − 0.9 s, catch p3 + 3.5 s, end catch + 3.5 s · schedule.rules_version 2
-    API-->>C: 200 {session {id, ends_at, expires_at, catch_at_ms, pounces_ms, min_away_moves, segments<br/>+ v2: rules_version, crouch_cues_ms, dodge_window_ms, calm_*, catch_window_ms, min/max_stars, max_speed_pt_s, min_dodge_pt}, state.wand}
+    Note over W: rules 3 (or 2 from an older build) — the simple hunt (GAMES_SPEC §5.2, David 2026-11-08):<br/>stalk 3 s, first 👀 cue 4–5 s, window 2 s, +6 s after a catch, +2.5 s after a miss, ≤ 6 cues, 3 catches · schedule.rules_version 3
+    API-->>C: 200 {session {id, ends_at, expires_at, catch_at_ms, pounces_ms, min_away_moves, segments<br/>+ simple: rules_version 3, stalk_ms, first_cue_ms, cue_window_ms, after_catch_ms, after_miss_ms, max_cues, catches_needed, catch_clip_ms}, state.wand}
     API-->>R: PetUpdated wand_started
   end
   Note over C: child drags the feather ~60 s; the cat pounces and catches it at the end;<br/>app records each move {t ms, away: moved away from the cat?}
-  C->>API: POST /api/child/pet/wand/finish {session_id, moves[{t, away, in_zone?, speed_ok?}]}
+  C->>API: POST /api/child/pet/wand/finish {session_id, moves[{t, away}], releases?[t]}
   API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
   W->>W: v1 score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
-  W->>W: v2 scoreV2() (finish only from catch + 1.5 s): ★ per pounce = ≤ calm_max_moves (0) counted moves in [p − calm_window (1000 ms), p), 👀 cue at p − 1500 ms<br/>· first reported away move in [p + 150, p + 1500 ms] · in_zone · speed_ok; ★ catch = no away move in [c, c + 1.5 s], feather in zone · counts at ≥ 2 of 4
+  W->>W: simple scoreSimple() over simpleTimeline(releases) (finish from the 3rd catch + 3.5 s, else the last window's end):<br/>★ per cue = a let-go in [cue, cue + 2 s] (next cue = let-go + 6 s); none = no fault (next cue = window end + 2.5 s) · counts at 3 catches
   alt took part
     W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
     W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine
@@ -1887,26 +1887,26 @@ flowchart TD
   RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
 ```
 
-### 10f-5. Wand v2, cuddles v2 and the care games on the game layer (GAMES_SPEC §5, §4.4 C1, §5.5 / §7.7 — phases 2 + 4 app side, 2026-10-31)
+### 10f-5. Wand hunt (simple rule), cuddles v2 and the care games on the game layer (GAMES_SPEC §5, §4.4 C1, §5.5 / §7.7 — phases 2 + 4 app side, 2026-10-31; the wand's simple rule David 2026-11-08)
 
 ```mermaid
 flowchart TD
   C[CatCareOverlay: »Palica s peresom«] --> F{loadWandGameV2<br/>= gameLayerAvailable?}
   F -->|no: older binary| V1["WandOverlay v1<br/>POST /wand/start (no rules) · ~60 s"]
-  F -->|yes| D["WandGameV2: ClipDeck mounts stalking · crouch_loop · pouncing · catching<br/>»Začni lov« disabled until ready (12 s → picture)"]
-  D -->|Začni lov| S["POST /wand/start {rules: 2}"]
-  S --> R{readWandV2Session:<br/>every timing present?}
+  F -->|yes| D["WandGameV2: ClipDeck mounts stalking · crouch_loop · catching<br/>»Začni lov« disabled until ready (12 s → picture)"]
+  D -->|Začni lov| S["POST /wand/start {rules: 3}"]
+  S --> R{readWandHuntSession:<br/>every number present?}
   R -->|no| BAD[»bad response« — never a guessed rule]
-  R -->|yes| RUN["running: SessionClock = hunt clock<br/>wandStageAt → ClipQueue (stalk → crouch loop ⇄ pounce → catch)"]
-  RUN --> G["Pan (UI thread) → feather spring + samples → wandStroke<br/>one move per stroke {t, away, in_zone, speed_ok}<br/>(zone + session max_speed_pt_s / min_dodge_pt)"]
-  G --> L["wandLive (mirror of scoreV2) → wandCues"]
+  R -->|yes| RUN["running: SessionClock = hunt clock<br/>wandStageAt → ClipQueue (stalk → crouch loop ⇄ catch)"]
+  RUN --> G["Pan (UI thread) → the feather follows the finger (not scored)<br/>onPanFinalize = the finger lifted → a let-go · hold mode: »Pusti!«"]
+  G --> L["wandHuntAt (mirror of simpleTimeline) → wandCues"]
   RUN --> L
-  L -->|crouch_cues_ms| CUE["👀 badge + countdown ring · crouch sound · 3 × cue haptic · »Miruj!«<br/>ring amber if a move lands in the calm window"]
-  L -->|dodge in window| STAR["★ + swish + success · »Ušlo!«"]
-  L -->|miss| GRAB[feather shakes in the paw — no ✗, no text]
-  L -->|catch_at_ms| CC[»Pusti jo, da ujame!« → ★ »Ujela ga je!«]
-  RUN -->|"max(duration, catch + window)"| FIN["POST /wand/finish {moves[t, away, in_zone, speed_ok]}"]
-  FIN --> RES["result: SERVER stars + hint (calm / dodge / catch)<br/>»Še en lov« (not counted) / »Končano«"]
+  L -->|cue starts| CUE["👀 badge + 2 s countdown ring · crouch sound · 3 × cue haptic · »Spusti pero!«"]
+  L -->|let-go in the window| POUNCE["catch clip + paw arc + swish"]
+  POUNCE -->|clip played| STAR["★ (masks the cut back to the crouch loop) + chime + success · »Ujela ga je!«"]
+  L -->|too early / no let-go| LOST[the cat loses interest — no ✗; next 👀 2.5 s later]
+  RUN -->|"3 catches + 3.5 s, or the last window passed"| FIN["POST /wand/finish {moves: [], releases}"]
+  FIN --> RES["result: SERVER stars + the learning line + hint (let_go)<br/>»Še en lov« (not counted) / »Končano«"]
 
   P[PlayOverlay mode cuddle] --> F2{loadCuddleGameV2?}
   F2 -->|no| CV1[v1: 5 strokes]
