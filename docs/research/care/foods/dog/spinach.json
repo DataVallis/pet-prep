@@ -11,7 +11,8 @@
     "sv": "Spenat",
     "da": "Spinat",
     "fi": "Pinaatti",
-    "nb": "Spinat"
+    "nb": "Spinat",
+    "de": "Spinat"
   },
   "question": {
     "en": "Can dogs eat spinach?",
@@ -23,7 +24,8 @@
     "sv": "Får hundar äta spenat?",
     "da": "Må hunde spise spinat?",
     "fi": "Saako koira syödä pinaattia?",
-    "nb": "Kan hunder spise spinat?"
+    "nb": "Kan hunder spise spinat?",
+    "de": "Dürfen Hunde Spinat fressen?"
   },
   "url_slug": {
     "en": "spinach",
@@ -35,7 +37,8 @@
     "sv": "spenat",
     "da": "spinat",
     "fi": "pinaatti",
-    "nb": "spinat"
+    "nb": "spinat",
+    "de": "spinat"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak.",
     "da": "Hunde kan spise spinat, men det er ikke en af de bedste grøntsager at dele med dem. Spinat indeholder meget oxalsyre, som blokerer for optagelsen af calcium og kan give nyreskader. En hund skal spise store mængder for at tage skade, men en anden grøntsag er et bedre valg.",
     "fi": "Koira voi syödä pinaattia, mutta se ei kuulu parhaisiin kasviksiin, joita koiran kanssa voi jakaa. Siinä on paljon oksaalihappoa, joka estää kalsiumin imeytymistä ja voi johtaa munuaisvaurioon. Haittaa syntyisi vasta, jos koira söisi pinaattia paljon, mutta jokin muu kasvis on parempi valinta.",
-    "nb": "Hunder kan spise spinat, men den er ikke blant de beste grønnsakene å dele med dem. Den inneholder mye oksalsyre, som hindrer opptaket av kalsium og kan gi nyreskade. En hund må spise mye for å ta skade, men en annen grønnsak er et bedre valg."
+    "nb": "Hunder kan spise spinat, men den er ikke blant de beste grønnsakene å dele med dem. Den inneholder mye oksalsyre, som hindrer opptaket av kalsium og kan gi nyreskade. En hund må spise mye for å ta skade, men en annen grønnsak er et bedre valg.",
+    "de": "Hunde dürfen Spinat fressen, aber er ist nicht das beste Gemüse, das Sie mit Ihrem Hund teilen können. Er enthält viel Oxalsäure, die die Aufnahme von Calcium hemmt und zu Nierenschäden führen kann. Ein Hund müsste viel davon fressen, damit es ihm schadet, doch ein anderes Gemüse ist die bessere Wahl."
   },
   "why": {
     "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
@@ -60,7 +64,8 @@
     "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”.",
     "da": "Spinat indeholder meget oxalsyre, som blokerer for kroppens optagelse af calcium og kan give nyreskader. Hunde med sunde nyrer kan klare små mængder, og en hund skal spise meget store mængder for at tage skade, men hvis den får spinat over lang tid, kan nyrerne blive belastet. Fordi kilderne anbefaler at vælge en anden grøntsag, vurderer vi spinat som ikke anbefalet.",
     "fi": "Pinaatissa on paljon oksaalihappoa, joka estää elimistöä imeyttämästä kalsiumia ja voi johtaa munuaisvaurioon. Terveet munuaiset selviävät pienistä määristä, ja haittaa syntyisi vasta hyvin suurista määristä, mutta pitkään jatkuessaan pinaatin syöttäminen voi rasittaa munuaisia. Koska lähteet neuvovat valitsemaan jonkin muun kasviksen, luokittelemme pinaatin tasolle ”Ei suositella”.",
-    "nb": "Spinat inneholder mye oksalsyre, som hindrer kroppen i å ta opp kalsium og kan gi nyreskade. Hunder med friske nyrer klarer små mengder, og en hund må spise svært store mengder for å ta skade, men hvis den spiser spinat over lang tid, kan det belaste nyrene. Fordi kildene anbefaler å velge en annen grønnsak, gir vi spinat vurderingen «Anbefales ikke»."
+    "nb": "Spinat inneholder mye oksalsyre, som hindrer kroppen i å ta opp kalsium og kan gi nyreskade. Hunder med friske nyrer klarer små mengder, og en hund må spise svært store mengder for å ta skade, men hvis den spiser spinat over lang tid, kan det belaste nyrene. Fordi kildene anbefaler å velge en annen grønnsak, gir vi spinat vurderingen «Anbefales ikke».",
+    "de": "Spinat enthält viel Oxalsäure, die die Calciumaufnahme des Körpers hemmt und zu Nierenschäden führen kann. Hunde mit gesunden Nieren können kleine Mengen verarbeiten, und ein Hund müsste sehr große Mengen fressen, damit es ihm schadet; wird Spinat aber über lange Zeit gefressen, kann er die Nieren belasten. Weil die Quellen raten, ein anderes Gemüse zu wählen, stufen wir ihn als „nicht empfohlen“ ein."
   },
   "signs": {
     "en": [
@@ -102,6 +107,10 @@
     "nb": [
       "Muskelsvakhet (etter å ha spist spinat over lang tid)",
       "Unormal hjerterytme (etter å ha spist spinat over lang tid)"
+    ],
+    "de": [
+      "Muskelschwäche (nach längerem Spinatverzehr)",
+      "Unregelmäßiger Herzschlag (nach längerem Spinatverzehr)"
     ]
   },
   "what_to_do": {
@@ -114,7 +123,8 @@
     "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat.",
     "da": "Spørg altid din dyrlæge, før du giver din hund spinat, også som snack. Hvis din hund er udsat for nyre- eller blæresten, skal du undgå spinat.",
     "fi": "Kysy aina eläinlääkäriltä, ennen kuin lisäät pinaattia koirasi ruokavalioon, vaikka vain välipalaksi. Jos koirasi on altis munuais- tai virtsarakkokiville, vältä pinaattia.",
-    "nb": "Spør alltid dyrlegen før du legger spinat til hundens kosthold, selv som en liten godbit. Hvis hunden er utsatt for nyre- eller blærestein, bør du unngå spinat."
+    "nb": "Spør alltid dyrlegen før du legger spinat til hundens kosthold, selv som en liten godbit. Hvis hunden er utsatt for nyre- eller blærestein, bør du unngå spinat.",
+    "de": "Fragen Sie immer Ihren Tierarzt, bevor Sie Spinat in die Ernährung Ihres Hundes aufnehmen, auch als Snack. Wenn Ihr Hund zu Nieren- oder Blasensteinen neigt, meiden Sie Spinat."
   },
   "serving": {
     "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
@@ -126,7 +136,8 @@
     "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök.",
     "da": "Kun hvis din dyrlæge er enig, og hundens nyrer er sunde: små mængder, sjældent, dampet, uden krydderier, krydderurter, salt, olie, løg eller hvidløg.",
     "fi": "Vain jos eläinlääkäri on samaa mieltä ja koirasi munuaiset ovat terveet: pieninä määrinä, harvoin, höyrytettynä, ilman mausteita, yrttejä, suolaa, öljyä, sipulia tai valkosipulia.",
-    "nb": "Bare hvis dyrlegen er enig og hunden har friske nyrer: små mengder, sjelden, dampet, uten krydder, urter, salt, olje, løk eller hvitløk."
+    "nb": "Bare hvis dyrlegen er enig og hunden har friske nyrer: små mengder, sjelden, dampet, uten krydder, urter, salt, olje, løk eller hvitløk.",
+    "de": "Nur wenn Ihr Tierarzt einverstanden ist und die Nieren Ihres Hundes gesund sind: kleine Mengen, selten, gedämpft, ohne Gewürze, Kräuter, Salz, Öl, Zwiebeln oder Knoblauch."
   },
   "child": {
     "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
@@ -138,7 +149,8 @@
     "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden.",
     "da": "Spinat er ikke nogen god snack til hunde. Bed en voksen vælge en anden grøntsag til din hund.",
     "fi": "Pinaatti ei ole kovin hyvä välipala koiralle. Pyydä aikuista valitsemaan koirallesi jokin muu kasvis.",
-    "nb": "Spinat er ikke en så god godbit for hunder. Be en voksen velge en annen grønnsak til hunden."
+    "nb": "Spinat er ikke en så god godbit for hunder. Be en voksen velge en annen grønnsak til hunden.",
+    "de": "Spinat ist kein toller Snack für Hunde. Bitte einen Erwachsenen, ein anderes Gemüse für deinen Hund auszusuchen."
   },
   "faq": [
     {
@@ -152,7 +164,8 @@
         "sv": "Är rå eller kokt spenat bättre för hundar?",
         "da": "Er rå eller kogt spinat bedst for hunde?",
         "fi": "Onko raaka vai kypsennetty pinaatti koiralle parempaa?",
-        "nb": "Er rå eller kokt spinat best for hunder?"
+        "nb": "Er rå eller kokt spinat best for hunder?",
+        "de": "Ist roher oder gekochter Spinat besser für Hunde?"
       },
       "a": {
         "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
@@ -164,7 +177,8 @@
         "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen.",
         "da": "Hvis du giver spinat, så damp den: rå spinat er svær for en hund at fordøje, og kogt spinat mister det meste af sit næringsindhold.",
         "fi": "Jos annat pinaattia, höyrytä se: koiran on vaikea sulattaa raakaa pinaattia, ja keitettäessä pinaatista häviää suurin osa ravintoaineista.",
-        "nb": "Hvis du gir noe, bør du dampe den: Rå spinat er vanskelig for hunder å fordøye, og kokt spinat mister det meste av næringsstoffene."
+        "nb": "Hvis du gir noe, bør du dampe den: Rå spinat er vanskelig for hunder å fordøye, og kokt spinat mister det meste av næringsstoffene.",
+        "de": "Wenn Sie Spinat geben, dann gedämpft: Roher Spinat ist für Hunde schwer verdaulich, und gekochter Spinat verliert die meisten Nährstoffe."
       }
     }
   ],
@@ -275,6 +289,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "24287e4cda7f0556861d47e99eb6ac63facae347b7a199aa0f5995bf09b309a3"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "45abbc2a4977e136e17d4c6c23844570bb75a1c9a06e14e236fbef98676f73fa"
     }
   }
 }

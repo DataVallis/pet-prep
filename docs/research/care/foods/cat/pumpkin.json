@@ -11,7 +11,8 @@
     "sv": "Pumpa",
     "da": "Græskar",
     "fi": "Kurpitsa",
-    "nb": "Gresskar"
+    "nb": "Gresskar",
+    "de": "Kürbis"
   },
   "question": {
     "en": "Can cats eat pumpkin?",
@@ -23,7 +24,8 @@
     "sv": "Får katter äta pumpa?",
     "da": "Må katte spise græskar?",
     "fi": "Saako kissa syödä kurpitsaa?",
-    "nb": "Kan katter spise gresskar?"
+    "nb": "Kan katter spise gresskar?",
+    "de": "Dürfen Katzen Kürbis fressen?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -35,7 +37,8 @@
     "sv": "pumpa",
     "da": "graeskar",
     "fi": "kurpitsa",
-    "nb": "gresskar"
+    "nb": "gresskar",
+    "de": "kuerbis"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "sv": "Ja, lite kokt pumpa utan tillsatser går bra som en godbit då och då. Pet Poison Helpline kallar pumpa säker för hundar och katter, men VCA påpekar att pumpa och pumpafrön kan ge katter orolig mage i stora mängder, så hoppa över frön och skal.",
     "da": "Ja, lidt kogt græskar uden tilsætninger er fint som godbid af og til. Pet Poison Helpline kalder græskar ufarligt for hunde og katte, men VCA skriver at græskar og græskarkerner kan give en kat ondt i maven i store mængder, så spring kernerne og skallen over.",
     "fi": "Saa, vähän maustamatonta kypsennettyä kurpitsaa kelpaa satunnaiseksi herkuksi. Pet Poison Helplinen mukaan kurpitsa on turvallista koirille ja kissoille, mutta VCA huomauttaa, että kurpitsa ja sen siemenet voivat suurina määrinä aiheuttaa kissalle vatsavaivoja, joten jätä siemenet ja kuori pois.",
-    "nb": "Ja, litt kokt gresskar uten tilsetninger er greit som en godbit en gang iblant. Pet Poison Helpline regner gresskar som trygt for hunder og katter, men VCA peker på at gresskar og gresskarkjerner kan gi katten urolig mage i store mengder, så dropp kjernene og skallet."
+    "nb": "Ja, litt kokt gresskar uten tilsetninger er greit som en godbit en gang iblant. Pet Poison Helpline regner gresskar som trygt for hunder og katter, men VCA peker på at gresskar og gresskarkjerner kan gi katten urolig mage i store mengder, så dropp kjernene og skallet.",
+    "de": "Ja, ein wenig ungewürzter, gekochter Kürbis ist als gelegentliches Leckerli in Ordnung. Die Pet Poison Helpline bezeichnet Kürbis als unbedenklich für Hunde und Katzen, laut VCA können Kürbis und Kürbiskerne in größeren Mengen einer Katze aber auf den Magen schlagen – lassen Sie deshalb Kerne und Schale weg."
   },
   "why": {
     "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
@@ -60,7 +64,8 @@
     "sv": "Pet Poison Helpline skriver att pumpa är säker för hundar och katter och att kokt eller bearbetad pumpa är mycket lättare att smälta än rå. VCA tillägger att pumpa och pumpafrön, även om de inte är giftiga, kan ge katter orolig mage, särskilt i stora mängder. Katter behöver inte frukt eller grönsaker i kosten, och godbitar ska ges sparsamt.",
     "da": "Pet Poison Helpline skriver at græskar er ufarligt for hunde og katte, og at kogt eller forarbejdet græskar er meget lettere at fordøje end råt. VCA tilføjer at græskar og græskarkerner ikke er giftige, men kan give en kat ondt i maven, især i store mængder. Katte har ikke brug for frugt og grøntsager i kosten, og godbidder bør gives sparsomt.",
     "fi": "Pet Poison Helplinen mukaan kurpitsa on turvallista koirille ja kissoille, ja kypsennetty tai muuten käsitelty kurpitsa on paljon helpompi sulattaa kuin raaka. VCA lisää, että vaikka kurpitsa ja sen siemenet eivät ole myrkyllisiä, ne voivat aiheuttaa kissalle vatsavaivoja etenkin suurina määrinä. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, ja herkkuja kuuluu antaa vain vähän.",
-    "nb": "Pet Poison Helpline skriver at gresskar er trygt for hunder og katter, og at kokt eller bearbeidet gresskar er mye lettere å fordøye enn rått. VCA legger til at gresskar og gresskarkjerner, selv om de ikke er giftige, kan gi katten urolig mage, særlig i store mengder. Katter trenger ikke frukt eller grønnsaker i kostholdet, og godbiter bør gis sjelden."
+    "nb": "Pet Poison Helpline skriver at gresskar er trygt for hunder og katter, og at kokt eller bearbeidet gresskar er mye lettere å fordøye enn rått. VCA legger til at gresskar og gresskarkjerner, selv om de ikke er giftige, kan gi katten urolig mage, særlig i store mengder. Katter trenger ikke frukt eller grønnsaker i kostholdet, og godbiter bør gis sjelden.",
+    "de": "Die Pet Poison Helpline schreibt, dass Kürbis für Hunde und Katzen unbedenklich ist und dass gekochter oder verarbeiteter Kürbis viel leichter verdaulich ist als roher. Die VCA ergänzt, dass Kürbis und Kürbiskerne zwar ungiftig sind, einer Katze aber auf den Magen schlagen können, besonders in größeren Mengen. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, und Leckerlis sollten selten sein."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
     "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
     "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-    "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten gresskar og spør dyrlegen."
+    "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten gresskar og spør dyrlegen.",
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
@@ -85,7 +91,8 @@
     "sv": "En liten bit kokt pumpa utan tillsatser, eller ren pumpapuré på burk där pumpa är den enda ingrediensen. Inga frön, inget skal, inget salt eller kryddor.",
     "da": "Et lille stykke naturel, kogt græskar eller græskarpuré på dåse, hvor græskar er den eneste ingrediens. Ingen kerner, ingen skal og intet salt eller krydderier.",
     "fi": "Pieni pala maustamatonta kypsennettyä kurpitsaa tai maustamatonta purkitettua kurpitsasosetta, jonka ainoa ainesosa on kurpitsa. Ei siemeniä, ei kuorta, ei suolaa eikä mausteita.",
-    "nb": "En liten bit kokt gresskar uten tilsetninger, eller gresskarpuré på boks der gresskar er den eneste ingrediensen. Uten kjerner og skall, og uten salt eller krydder."
+    "nb": "En liten bit kokt gresskar uten tilsetninger, eller gresskarpuré på boks der gresskar er den eneste ingrediensen. Uten kjerner og skall, og uten salt eller krydder.",
+    "de": "Ein kleines Stück ungewürzter, gekochter Kürbis oder reines Kürbispüree aus der Dose, das nur aus Kürbis besteht. Ohne Kerne, ohne Schale, ohne Salz oder Gewürze."
   },
   "child": {
     "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
@@ -97,7 +104,8 @@
     "sv": "Lite kokt pumpa kan vara en kattgodbit då och då. Inga frön eller skal, och katter behöver framför allt kött.",
     "da": "Lidt kogt græskar kan være en godbid til katten en gang imellem. Ingen kerner eller skal, og katte har mest brug for kød.",
     "fi": "Vähän kypsennettyä kurpitsaa voi joskus antaa kissalle herkuksi. Siemeniä ja kuorta ei anneta, ja kissat tarvitsevat enimmäkseen lihaa.",
-    "nb": "Litt kokt gresskar kan være en godbit for pusen nå og da. Ingen kjerner eller skall, og katter trenger mest kjøtt."
+    "nb": "Litt kokt gresskar kan være en godbit for pusen nå og da. Ingen kjerner eller skall, og katter trenger mest kjøtt.",
+    "de": "Ein bisschen gekochter Kürbis kann ab und zu ein Leckerli für Katzen sein. Ohne Kerne und Schale – und Katzen brauchen vor allem Fleisch."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "sv": "Hur är det med halloweenpumpor?",
         "da": "Hvad med halloweengræskar?",
         "fi": "Entä halloweenkurpitsat?",
-        "nb": "Hva med gresskar til Halloween?"
+        "nb": "Hva med gresskar til Halloween?",
+        "de": "Und was ist mit Halloween-Kürbissen?"
       },
       "a": {
         "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
@@ -123,7 +132,8 @@
         "sv": "Färska pumpor är inte skadliga, men Blue Cross skriver att ruttna pumpor kan ge katter ont i magen. Håll utskurna pumpor utom räckhåll eller ta bort dem när de inte längre är färska.",
         "da": "Friske græskar er ikke skadelige, men Blue Cross skriver at rådne græskar kan give katten ondt i maven. Hold derfor udskårne græskar uden for kattens rækkevidde, eller fjern dem, når de ikke længere er friske.",
         "fi": "Tuoreet kurpitsat eivät ole haitallisia, mutta Blue Crossin mukaan mädäntyneet kurpitsat voivat aiheuttaa kissalle vatsavaivoja. Pidä kaiverretut kurpitsat poissa kissan ulottuvilta tai poista ne, kun ne eivät enää ole tuoreita.",
-        "nb": "Ferske gresskar er ikke skadelige, men Blue Cross skriver at råtne gresskar kan gi katten vondt i magen, så hold utskårne gresskar utenfor rekkevidde, eller fjern dem når de ikke lenger er ferske."
+        "nb": "Ferske gresskar er ikke skadelige, men Blue Cross skriver at råtne gresskar kan gi katten vondt i magen, så hold utskårne gresskar utenfor rekkevidde, eller fjern dem når de ikke lenger er ferske.",
+        "de": "Frische Kürbisse sind nicht schädlich, aber laut Blue Cross können verdorbene einer Katze auf den Magen schlagen. Halten Sie ausgehöhlte Kürbisse deshalb außer Reichweite oder entfernen Sie sie, sobald sie nicht mehr frisch sind."
       }
     },
     {
@@ -137,7 +147,8 @@
         "sv": "Behöver katter grönsaker?",
         "da": "Har katte brug for grøntsager?",
         "fi": "Tarvitsevatko kissat kasviksia?",
-        "nb": "Trenger katter grønnsaker?"
+        "nb": "Trenger katter grønnsaker?",
+        "de": "Brauchen Katzen Gemüse?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -149,7 +160,8 @@
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
         "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
-        "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg."
+        "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
       }
     }
   ],
@@ -268,6 +280,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3895589d6f54242dd2bdab25cc897e2785bb2e4960b13d07c4dcd4e33a3582d3"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1995255e9c1f0b72ba40e83e4c6ffe909014f9d1d6bce5c92901ae56c7b24172"
     }
   }
 }
