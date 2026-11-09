@@ -6,21 +6,24 @@
     "sl": "Listnati ohrovt",
     "nl": "Boerenkool",
     "pl": "Jarmuż",
-    "cs": "Kadeřávek"
+    "cs": "Kadeřávek",
+    "hr": "Kovrčavi kelj"
   },
   "question": {
     "en": "Can dogs eat kale?",
     "sl": "Ali lahko psi jedo listnati ohrovt?",
     "nl": "Mogen honden boerenkool eten?",
     "pl": "Czy psy mogą jeść jarmuż?",
-    "cs": "Mohou psi jíst kadeřávek?"
+    "cs": "Mohou psi jíst kadeřávek?",
+    "hr": "Smiju li psi jesti kovrčavi kelj?"
   },
   "url_slug": {
     "en": "kale",
     "sl": "listnati-ohrovt",
     "nl": "boerenkool",
     "pl": "jarmuz",
-    "cs": "kaderavek"
+    "cs": "kaderavek",
+    "hr": "kovrcavi-kelj"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Raje ne kot reden priboljšek. Malo listnatega ohrovta občasno večini psov verjetno ne škodi, nekateri veterinarji pa odsvetujejo: vsebuje kalcijev oksalat, povezan z ledvičnimi in mehurnimi kamni, ter izotiocianate, ki lahko dražijo želodec.",
     "nl": "Liever niet als vaste traktatie. Af en toe een beetje boerenkool is voor de meeste honden waarschijnlijk niet schadelijk, maar sommige dierenartsen raden het af: boerenkool bevat calciumoxalaat, dat in verband wordt gebracht met nierstenen en blaasstenen, en isothiocyanaten, die de maag kunnen irriteren.",
     "pl": "Lepiej nie dawać go regularnie. Odrobina jarmużu od czasu do czasu raczej nie zaszkodzi większości psów, ale niektórzy weterynarze go odradzają: jarmuż zawiera szczawian wapnia, który wiąże się z kamieniami nerkowymi i pęcherzowymi, oraz izotiocyjaniany, które mogą podrażniać żołądek.",
-    "cs": "Raději ne jako pravidelný pamlsek. Trocha kadeřávku jednou za čas většině psů pravděpodobně neublíží, ale někteří veterináři před ním varují: kadeřávek obsahuje šťavelan vápenatý, který souvisí s tvorbou kamenů v ledvinách a močovém měchýři, a izotiokyanáty, které mohou dráždit žaludek."
+    "cs": "Raději ne jako pravidelný pamlsek. Trocha kadeřávku jednou za čas většině psů pravděpodobně neublíží, ale někteří veterináři před ním varují: kadeřávek obsahuje šťavelan vápenatý, který souvisí s tvorbou kamenů v ledvinách a močovém měchýři, a izotiokyanáty, které mohou dráždit žaludek.",
+    "hr": "Bolje ga ne davati kao redovitu poslasticu. Malo kovrčavog kelja povremeno vjerojatno neće naštetiti većini pasa, ali neki veterinari savjetuju oprez: kovrčavi kelj sadrži kalcijev oksalat, povezan s kamencima u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji mogu nadražiti želudac."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
     "sl": "Listnati ohrovt vsebuje kalcijev oksalat, ki lahko povzroči ledvične in mehurne kamne, ter izotiocianate, ki lahko pri psih povzročijo blago do potencialno hudo draženje želodca. Če ga pes dobiva redno, lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom. Majhne količine so morda v redu, ker pa ga nekateri veterinarji odsvetujejo, sledimo strožjemu nasvetu.",
     "nl": "Boerenkool bevat calciumoxalaat, dat nierstenen en blaasstenen kan veroorzaken, en isothiocyanaten, die bij honden maagirritatie kunnen geven, van licht tot mogelijk ernstig. Krijgt een hond boerenkool regelmatig, dan kan het ook de werking van de schildklier verstoren, vooral bij honden met hypothyreoïdie. Kleine hoeveelheden zijn mogelijk prima, maar omdat sommige dierenartsen boerenkool afraden, volgen wij het strengere advies.",
     "pl": "Jarmuż zawiera szczawian wapnia, który może powodować kamienie nerkowe i pęcherzowe, oraz izotiocyjaniany, które u psów mogą wywołać podrażnienie żołądka od łagodnego do potencjalnie silnego. Podawany regularnie może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy. Małe ilości mogą być w porządku, ale ponieważ niektórzy weterynarze jarmuż odradzają, kierujemy się ostrzejszą radą.",
-    "cs": "Kadeřávek obsahuje šťavelan vápenatý, který může způsobit kameny v ledvinách a močovém měchýři, a izotiokyanáty, které mohou u psů způsobit podráždění žaludku, od mírného až po potenciálně závažné. Při pravidelném krmení může také narušovat funkci štítné žlázy, zejména u psů s hypotyreózou. Malé množství může být v pořádku, ale protože někteří veterináři před kadeřávkem varují, řídíme se přísnější radou."
+    "cs": "Kadeřávek obsahuje šťavelan vápenatý, který může způsobit kameny v ledvinách a močovém měchýři, a izotiokyanáty, které mohou u psů způsobit podráždění žaludku, od mírného až po potenciálně závažné. Při pravidelném krmení může také narušovat funkci štítné žlázy, zejména u psů s hypotyreózou. Malé množství může být v pořádku, ale protože někteří veterináři před kadeřávkem varují, řídíme se přísnější radou.",
+    "hr": "Kovrčavi kelj sadrži kalcijev oksalat, koji može uzrokovati kamence u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji kod pasa mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Ako se daje redovito, može ometati i rad štitnjače, osobito kod pasa s hipotireozom. Male količine možda su u redu, ali budući da neki veterinari savjetuju oprez s kovrčavim keljom, držimo se strožeg savjeta."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Průjem",
       "Potíže s močením",
       "Jakákoli změna v močení"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Poteškoće s mokrenjem",
+      "Bilo kakva promjena u mokrenju"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Če je pes pojedel listnati ohrovt, ga pozorno opazujte, ali ima prebavne težave ali znake ledvičnih in mehurnih kamnov. Če opazite bruhanje, drisko, težave z uriniranjem ali kakršno koli spremembo pri uriniranju, se obrnite na veterinarja.",
     "nl": "Heeft je hond boerenkool gegeten, let dan goed op maagklachten of tekenen van nierstenen en blaasstenen. Neem contact op met je dierenarts als je braken, diarree, moeite met plassen of een verandering in het plasgedrag opmerkt.",
     "pl": "Jeśli pies zjadł jarmuż, uważnie obserwuj, czy nie ma rozstroju żołądka ani objawów kamieni nerkowych lub pęcherzowych. Skontaktuj się z weterynarzem, jeśli zauważysz wymioty, biegunkę, trudności z oddawaniem moczu lub jakąkolwiek zmianę w oddawaniu moczu.",
-    "cs": "Pokud váš pes snědl kadeřávek, pozorně ho sledujte, zda nemá potíže s trávením nebo příznaky kamenů v ledvinách a močovém měchýři. Obraťte se na veterináře, pokud si všimnete zvracení, průjmu, potíží s močením nebo jakékoli změny v močení."
+    "cs": "Pokud váš pes snědl kadeřávek, pozorně ho sledujte, zda nemá potíže s trávením nebo příznaky kamenů v ledvinách a močovém měchýři. Obraťte se na veterináře, pokud si všimnete zvracení, průjmu, potíží s močením nebo jakékoli změny v močení.",
+    "hr": "Ako je tvoj pas pojeo kovrčavi kelj, pažljivo prati ima li probavnih tegoba ili znakova kamenaca u bubrezima i mokraćnom mjehuru. Obrati se veterinaru ako primijetiš povraćanje, proljev, poteškoće s mokrenjem ili bilo kakvu promjenu u mokrenju."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Listnati ohrovt ni dober prigrizek za pse. Stročji fižol ali kumara sta boljša priboljška, ki ju ponudite s pomočjo odraslega.",
     "nl": "Boerenkool is geen goed tussendoortje voor honden. Sperziebonen of komkommer zijn betere traktaties om te delen, met hulp van een volwassene.",
     "pl": "Jarmuż nie jest dobrą przekąską dla psów. Lepiej poczęstuj psa fasolką szparagową albo ogórkiem – z pomocą dorosłego.",
-    "cs": "Kadeřávek není pro psy dobrá svačinka. Lepší je dát pejskovi s pomocí dospělého zelené fazolky nebo okurku."
+    "cs": "Kadeřávek není pro psy dobrá svačinka. Lepší je dát pejskovi s pomocí dospělého zelené fazolky nebo okurku.",
+    "hr": "Kovrčavi kelj nije dobra užina za pse. Zelene mahune ili krastavac bolje su poslastice za dijeljenje, uz pomoć odrasle osobe."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Kateri psi naj se izogibajo listnatemu ohrovtu?",
         "nl": "Welke honden moeten boerenkool vermijden?",
         "pl": "Które psy powinny unikać jarmużu?",
-        "cs": "Kteří psi by se měli kadeřávku vyhnout?"
+        "cs": "Kteří psi by se měli kadeřávku vyhnout?",
+        "hr": "Koji psi trebaju izbjegavati kovrčavi kelj?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
         "sl": "Psi, nagnjeni k ledvičnim ali mehurnim kamnom, naj se izogibajo hrani z veliko kalcijevega oksalata, tudi listnatemu ohrovtu. Ta lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom.",
         "nl": "Honden die vatbaar zijn voor nierstenen of blaasstenen moeten voeding met veel calciumoxalaat vermijden, boerenkool inbegrepen. Boerenkool kan ook de werking van de schildklier verstoren, vooral bij honden met hypothyreoïdie.",
         "pl": "Psy skłonne do kamieni nerkowych lub pęcherzowych powinny unikać pokarmów bogatych w szczawian wapnia, w tym jarmużu. Jarmuż może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy.",
-        "cs": "Psi náchylní ke kamenům v ledvinách nebo močovém měchýři by se měli vyhýbat potravinám s vysokým obsahem šťavelanu vápenatého, mezi které patří i kadeřávek. Kadeřávek také může narušovat funkci štítné žlázy, zejména u psů s hypotyreózou."
+        "cs": "Psi náchylní ke kamenům v ledvinách nebo močovém měchýři by se měli vyhýbat potravinám s vysokým obsahem šťavelanu vápenatého, mezi které patří i kadeřávek. Kadeřávek také může narušovat funkci štítné žlázy, zejména u psů s hypotyreózou.",
+        "hr": "Psi skloni kamencima u bubrezima ili mokraćnom mjehuru trebaju izbjegavati hranu s mnogo kalcijeva oksalata, što uključuje i kovrčavi kelj. Kovrčavi kelj može ometati i rad štitnjače, osobito kod pasa s hipotireozom."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Kaj lahko psu ponudim namesto listnatega ohrovta?",
         "nl": "Wat kan ik mijn hond geven in plaats van boerenkool?",
         "pl": "Co mogę dać psu zamiast jarmużu?",
-        "cs": "Co mohu dát psovi místo kadeřávku?"
+        "cs": "Co mohu dát psovi místo kadeřávku?",
+        "hr": "Što mogu dati psu umjesto kovrčavog kelja?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
         "sl": "Stročji fižol in kumare so za večino psov varni.",
         "nl": "Sperziebonen en komkommer zijn voor de meeste honden veilig.",
         "pl": "Fasolka szparagowa i ogórek są bezpieczne dla większości psów.",
-        "cs": "Zelené fazolky a okurky jsou bezpečné pro většinu psů."
+        "cs": "Zelené fazolky a okurky jsou bezpečné pro většinu psů.",
+        "hr": "Zelene mahune i krastavci sigurni su za većinu pasa."
       }
     }
   ],
@@ -193,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e9f8008db728a3ef3a70a5bca41507130ba24c2b7573d0e52bb20b6aeb39c80a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "73b3d7755ce88961f96fde15d8f69e013615fc4ebeca7d66ff302f49db7c691e"
     }
   }
 }

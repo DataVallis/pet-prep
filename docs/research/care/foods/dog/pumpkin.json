@@ -6,21 +6,24 @@
     "sl": "Buča",
     "nl": "Pompoen",
     "pl": "Dynia",
-    "cs": "Dýně"
+    "cs": "Dýně",
+    "hr": "Bundeva"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
     "sl": "Ali lahko psi jedo bučo?",
     "nl": "Mogen honden pompoen eten?",
     "pl": "Czy psy mogą jeść dynię?",
-    "cs": "Mohou psi jíst dýni?"
+    "cs": "Mohou psi jíst dýni?",
+    "hr": "Smiju li psi jesti bundevu?"
   },
   "url_slug": {
     "en": "pumpkin",
     "sl": "buca",
     "nl": "pompoen",
     "pl": "dynia",
-    "cs": "dyne"
+    "cs": "dyne",
+    "hr": "bundeva"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, navadna kuhana buča je za pse zdrava hrana. Izberite svežo kuhano bučo ali navaden bučni pire iz pločevinke, nikoli nadeva za bučno pito, in psu ne dajajte surove lupine.",
     "nl": "Ja, naturel gare pompoen is gezond voor honden. Kies verse, gare pompoen of naturel pompoenpuree uit blik, nooit vulling voor pompoentaart, en geef geen ongekookte schil.",
     "pl": "Tak, zwykła ugotowana dynia jest dla psów zdrowa. Wybierz świeżą ugotowaną dynię albo zwykłe puree z dyni z puszki – nigdy nadzienia do placka z dyni. Nie dawaj też nieugotowanej skórki.",
-    "cs": "Ano, tepelně upravená dýně bez dalších přísad je pro psy zdravá. Vyberte čerstvou uvařenou dýni nebo čisté dýňové pyré z konzervy, nikdy ne náplň do dýňového koláče, a nedávejte psovi nevařenou slupku."
+    "cs": "Ano, tepelně upravená dýně bez dalších přísad je pro psy zdravá. Vyberte čerstvou uvařenou dýni nebo čisté dýňové pyré z konzervy, nikdy ne náplň do dýňového koláče, a nedávejte psovi nevařenou slupku.",
+    "hr": "Da, obična termički obrađena bundeva zdrava je hrana za pse. Odaberi svježu termički obrađenu bundevu ili običan pire od bundeve iz konzerve, nikad nadjev za pitu od bundeve, i ne daj psu sirovu koru."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
     "sl": "Čista buča je polna antioksidantov in psom lahko pomaga tako pri driski kot pri zaprtju. Nadev za bučno pito lahko vsebuje strupeni ksilitol ter druge začimbe in dodatke, ki bi lahko škodili. Surove lupine so trde in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
     "nl": "Naturel pompoen zit vol antioxidanten en kan bij honden helpen bij zowel diarree als verstopping. Vulling voor pompoentaart kan xylitol bevatten, dat giftig is, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn. Ongekookte schillen zijn taai en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
     "pl": "Czysta dynia jest pełna przeciwutleniaczy i może pomagać psom zarówno przy biegunce, jak i przy zaparciach. Nadzienie do placka z dyni może zawierać ksylitol, który jest toksyczny, a także inne przyprawy i dodatki, które mogą szkodzić. Nieugotowana skórka jest twarda i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
-    "cs": "Čistá dýně je plná antioxidantů a psům může pomáhat při průjmu i při zácpě. Náplň do dýňového koláče může obsahovat xylitol, který je toxický, a také koření a další přísady, které by mohly škodit. Nevařená slupka je tvrdá a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev."
+    "cs": "Čistá dýně je plná antioxidantů a psům může pomáhat při průjmu i při zácpě. Náplň do dýňového koláče může obsahovat xylitol, který je toxický, a také koření a další přísady, které by mohly škodit. Nevařená slupka je tvrdá a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
+    "hr": "Čista je bundeva puna antioksidansa i može pomoći psima i kod proljeva i kod zatvora. Nadjev za pitu od bundeve može sadržavati ksilitol, koji je otrovan, te druge začine i dodatke koji bi mogli biti štetni. Sirova je kora žilava i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Kot pri vsaki novi hrani se tudi pred uvedbo buče v pasji jedilnik posvetujte z veterinarjem.",
     "nl": "Zoals bij elk nieuw voedsel: vraag je dierenarts om advies voordat je pompoen aan de voeding van je hond toevoegt.",
     "pl": "Jak przy każdym nowym pokarmie, zapytaj weterynarza, zanim dodasz dynię do psiego jadłospisu.",
-    "cs": "Jako u každé nové potraviny se před zařazením dýně do jídelníčku psa poraďte s veterinářem."
+    "cs": "Jako u každé nové potraviny se před zařazením dýně do jídelníčku psa poraďte s veterinářem.",
+    "hr": "Kao i kod svake nove hrane, pitaj veterinara prije nego što bundevu uvedeš u prehranu svog psa."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
     "sl": "Sveža, kuhana, navadna in olupljena ali navaden bučni pire iz pločevinke, brez dodanega sladkorja, začimb in umetnih arom. Brez nadeva za pito in brez surove lupine.",
     "nl": "Verse pompoen, gaar gemaakt en geschild, of naturel pompoenpuree uit blik, zonder toegevoegde suiker, kruiden of kunstmatige smaakstoffen. Geen taartvulling en geen rauwe schil.",
     "pl": "Świeża, obrana i ugotowana, bez dodatków, albo zwykłe puree z dyni z puszki, bez dodatku cukru, przypraw ani sztucznych aromatów. Bez nadzienia do placka i bez surowej skórki.",
-    "cs": "Čerstvá, uvařená, bez dodatků a oloupaná, nebo čisté dýňové pyré z konzervy bez přidaného cukru, koření a umělých aromat. Žádná náplň do koláče a žádná syrová slupka."
+    "cs": "Čerstvá, uvařená, bez dodatků a oloupaná, nebo čisté dýňové pyré z konzervy bez přidaného cukru, koření a umělých aromat. Žádná náplň do koláče a žádná syrová slupka.",
+    "hr": "Svježa, termički obrađena, obična i oguljena, ili običan pire od bundeve iz konzerve, bez dodanog šećera, začina i umjetnih aroma. Bez nadjeva za pitu i bez sirove kore."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
     "sl": "Psi se lahko posladkajo z malo navadne kuhane buče. Odrasli poskrbi, da to ni sladek nadev za pito!",
     "nl": "Honden mogen genieten van een beetje naturel gare pompoen. Een volwassene let erop dat het geen zoete taartvulling is!",
     "pl": "Psy mogą zjeść odrobinę zwykłej ugotowanej dyni. Dorosły dopilnuje, żeby to nie było słodkie nadzienie do placka!",
-    "cs": "Pejsek si může pochutnat na troše uvařené dýně bez dalších přísad. Dospělý dohlédne, aby to nebyla sladká náplň do koláče!"
+    "cs": "Pejsek si může pochutnat na troše uvařené dýně bez dalších přísad. Dospělý dohlédne, aby to nebyla sladká náplň do koláče!",
+    "hr": "Psi mogu uživati u malo obične kuhane bundeve. Odrasla osoba neka pripazi da to nije slatki nadjev za pitu!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo nadev za bučno pito?",
         "nl": "Mogen honden vulling voor pompoentaart eten?",
         "pl": "Czy psy mogą jeść nadzienie do placka z dyni?",
-        "cs": "Mohou psi jíst náplň do dýňového koláče?"
+        "cs": "Mohou psi jíst náplň do dýňového koláče?",
+        "hr": "Smiju li psi jesti nadjev za pitu od bundeve?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
         "sl": "Ne. Nadev za bučno pito lahko vsebuje ksilitol, sladilo, ki je za pse strupeno, ter druge začimbe in dodatke, ki bi lahko škodili.",
         "nl": "Nee. Vulling voor pompoentaart kan xylitol bevatten, een zoetstof die giftig is voor honden, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn.",
         "pl": "Nie. Nadzienie do placka z dyni może zawierać ksylitol, słodzik toksyczny dla psów, oraz inne przyprawy i dodatki, które mogą szkodzić.",
-        "cs": "Ne. Náplň do dýňového koláče může obsahovat xylitol, sladidlo toxické pro psy, a také koření a další přísady, které by mohly škodit."
+        "cs": "Ne. Náplň do dýňového koláče může obsahovat xylitol, sladidlo toxické pro psy, a také koření a další přísady, které by mohly škodit.",
+        "hr": "Ne. Nadjev za pitu od bundeve može sadržavati ksilitol, sladilo otrovno za pse, te druge začine i dodatke koji bi mogli biti štetni."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo surovo bučno lupino?",
         "nl": "Mogen honden rauwe pompoenschil eten?",
         "pl": "Czy psy mogą jeść surową skórkę dyni?",
-        "cs": "Mohou psi jíst syrovou dýňovou slupku?"
+        "cs": "Mohou psi jíst syrovou dýňovou slupku?",
+        "hr": "Smiju li psi jesti sirovu koru bundeve?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
         "sl": "Ne. Surove lupine so trde, goste in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
         "nl": "Nee. Ongekookte schillen zijn taai, stevig en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
         "pl": "Nie. Nieugotowana skórka jest twarda, zbita i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
-        "cs": "Ne. Nevařená slupka je tvrdá, hutná a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev."
+        "cs": "Ne. Nevařená slupka je tvrdá, hutná a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
+        "hr": "Ne. Sirova je kora žilava, gusta i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva."
       }
     }
   ],
@@ -179,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "79bcdd5ffdd4db5f3ef3d2d66dd925372e346a037aae2400c115da851cdc3315"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "05f14b59dd3a904aedecef18060dac6c658f2b299d5e27ded0743973b58a32b7"
     }
   }
 }

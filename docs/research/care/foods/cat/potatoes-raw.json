@@ -6,21 +6,24 @@
     "sl": "Surov krompir",
     "nl": "Rauwe aardappelen",
     "pl": "Surowe ziemniaki",
-    "cs": "Syrové brambory"
+    "cs": "Syrové brambory",
+    "hr": "Sirovi krumpir"
   },
   "question": {
     "en": "Can cats eat raw potatoes?",
     "sl": "Ali lahko mačke jedo surov krompir?",
     "nl": "Mogen katten rauwe aardappelen eten?",
     "pl": "Czy koty mogą jeść surowe ziemniaki?",
-    "cs": "Mohou kočky jíst syrové brambory?"
+    "cs": "Mohou kočky jíst syrové brambory?",
+    "hr": "Smiju li mačke jesti sirovi krumpir?"
   },
   "url_slug": {
     "en": "raw-potatoes",
     "sl": "surov-krompir",
     "nl": "rauwe-aardappelen",
     "pl": "surowe-ziemniaki",
-    "cs": "syrove-brambory"
+    "cs": "syrove-brambory",
+    "hr": "sirovi-krumpir"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, mački ne dajajte surovega krompirja. RSPCA krompir navaja kot primeren za mačke le, če je pretlačen ali kuhan v vodi ter brez masla in sira, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen. Če mačka poje surov krompir, se obrnite na veterinarja.",
     "nl": "Nee, geef je kat geen rauwe aardappel. Volgens de RSPCA is aardappel alleen geschikt voor katten als die gepureerd of gekookt is, zonder boter of kaas, en volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren. Heeft je kat rauwe aardappel gegeten, neem dan contact op met je dierenarts.",
     "pl": "Nie, nie dawaj kotu surowego ziemniaka. RSPCA wymienia ziemniaki jako odpowiednie dla kotów tylko w formie puree lub gotowane, bez masła i sera, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt. Jeśli kot zje surowy ziemniak, skontaktuj się z weterynarzem.",
-    "cs": "Ne, nedávejte kočce syrové brambory. RSPCA uvádí brambory jako vhodné pro kočky jen rozmačkané nebo vařené bez másla a sýra a ASPCA říká, že syrové brambory mohou být pro zvířata problematické. Pokud kočka snědla syrovou bramboru, obraťte se na veterináře."
+    "cs": "Ne, nedávejte kočce syrové brambory. RSPCA uvádí brambory jako vhodné pro kočky jen rozmačkané nebo vařené bez másla a sýra a ASPCA říká, že syrové brambory mohou být pro zvířata problematické. Pokud kočka snědla syrovou bramboru, obraťte se na veterináře.",
+    "hr": "Ne, ne daj mački sirov krumpir. RSPCA navodi krumpir kao prikladan za mačke samo ako je zgnječen ili kuhan, bez maslaca i sira, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce. Ako mačka pojede sirov krumpir, obrati se veterinaru."
   },
   "why": {
     "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
     "sl": "RSPCA in Cats Protection krompir za mačke predlagata le kuhan v vodi ali kot navaden pire, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen, kuhan pa je v zmernih količinah v redu. Članek veterinarke za PetMD gre še dlje: surov krompir, zelen krompir in krompirjevo rastlino označuje kot strupene za mačke in navaja, da krompirjevi olupki vsebujejo strup solanin.",
     "nl": "De RSPCA en Cats Protection raden aardappel voor katten alleen aan als die gekookt of naturel gepureerd is. Volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren, terwijl gare aardappelen met mate prima zijn. Een artikel van PetMD, geschreven door een dierenarts, gaat verder: rauwe en groene aardappelen en de aardappelplant zijn daarin giftig voor katten, en aardappelschillen bevatten de gifstof solanine.",
     "pl": "RSPCA i Cats Protection proponują ziemniaki dla kotów tylko gotowane lub w postaci zwykłego puree, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt, natomiast ugotowane są w porządku w umiarkowanych ilościach. Artykuł PetMD napisany przez weterynarza idzie dalej: nazywa surowe ziemniaki, zielone ziemniaki i roślinę ziemniaka toksycznymi dla kotów i podaje, że skórki ziemniaków zawierają toksynę solaninę.",
-    "cs": "RSPCA a Cats Protection doporučují brambory pro kočky jen vařené nebo rozmačkané bez dalších přísad a ASPCA uvádí, že syrové brambory mohou být pro zvířata problematické, zatímco uvařené brambory jsou v mírném množství v pořádku. Článek PetMD, který napsali veterináři, jde ještě dál: syrové brambory, zelené brambory i bramborovou nať označuje za toxické pro kočky a uvádí, že bramborové slupky obsahují toxin solanin."
+    "cs": "RSPCA a Cats Protection doporučují brambory pro kočky jen vařené nebo rozmačkané bez dalších přísad a ASPCA uvádí, že syrové brambory mohou být pro zvířata problematické, zatímco uvařené brambory jsou v mírném množství v pořádku. Článek PetMD, který napsali veterináři, jde ještě dál: syrové brambory, zelené brambory i bramborovou nať označuje za toxické pro kočky a uvádí, že bramborové slupky obsahují toxin solanin.",
+    "hr": "RSPCA i Cats Protection krumpir mačkama predlažu samo kuhan ili kao običan pire, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce, dok je termički obrađen krumpir u umjerenim količinama u redu. Članak PetMD-a, koji su napisali veterinari, ide i dalje: sirov krumpir, zeleni krumpir i biljku krumpira naziva otrovnima za mačke i navodi da kora krumpira sadrži toksin solanin."
   },
   "signs": {
     "en": [
@@ -62,6 +67,11 @@
       "Nevolnost",
       "Zvracení",
       "Průjem"
+    ],
+    "hr": [
+      "Mučnina",
+      "Povraćanje",
+      "Proljev"
     ]
   },
   "what_to_do": {
@@ -69,7 +79,8 @@
     "sl": "Če je mačka pojedla surov krompir ali krompirjeve olupke, takoj pokličite veterinarja za nasvet. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
     "nl": "Heeft je kat rauwe aardappel of aardappelschil gegeten, neem dan meteen contact op met je dierenarts voor advies. Noteer wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken.",
     "pl": "Jeśli kot zjadł surowy ziemniak albo skórkę ziemniaka, od razu skontaktuj się z weterynarzem po radę. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud kočka snědla syrovou bramboru nebo bramborovou slupku, ihned se obraťte na veterináře. Poznamenejte si, co snědla a kdy. Nesnažte se kočku doma přimět ke zvracení."
+    "cs": "Pokud kočka snědla syrovou bramboru nebo bramborovou slupku, ihned se obraťte na veterináře. Poznamenejte si, co snědla a kdy. Nesnažte se kočku doma přimět ke zvracení.",
+    "hr": "Ako je mačka pojela sirov krumpir ili koru krumpira, odmah se obrati veterinaru za savjet. Zapiši što je pojedeno i kada. Ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -77,7 +88,8 @@
     "sl": "Surov krompir ni za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
     "nl": "Rauwe aardappelen zijn niets voor katten. Knabbelt je kat aan een rauwe aardappel, vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
     "pl": "Surowe ziemniaki nie są dla kotów. Jeśli kotek skubnie kawałek, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
-    "cs": "Syrové brambory nejsou pro kočky. Pokud kočka nějakou okousá, řekni to dospělému, ať zavolá veterináři."
+    "cs": "Syrové brambory nejsou pro kočky. Pokud kočka nějakou okousá, řekni to dospělému, ať zavolá veterináři.",
+    "hr": "Sirov krumpir nije za mačke. Ako maca pogrize sirov krumpir, reci odrasloj osobi da nazove veterinara."
   },
   "faq": [
     {
@@ -86,14 +98,16 @@
         "sl": "Ali lahko mačke jedo kuhan krompir?",
         "nl": "Mogen katten gare aardappel eten?",
         "pl": "Czy koty mogą jeść ugotowane ziemniaki?",
-        "cs": "Mohou kočky jíst uvařené brambory?"
+        "cs": "Mohou kočky jíst uvařené brambory?",
+        "hr": "Smiju li mačke jesti termički obrađen krumpir?"
       },
       "a": {
         "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
         "sl": "RSPCA krompir za mačke navaja le, če je pretlačen ali kuhan v vodi ter brez masla in sira, Cats Protection pa predlaga navaden krompirjev pire brez masla, smetane in česna. Olupke izpustite.",
         "nl": "Volgens de RSPCA is aardappel voor katten alleen geschikt als die gepureerd of gekookt is, zonder boter of kaas, en Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook. Laat de schil weg.",
         "pl": "RSPCA wymienia ziemniaki dla kotów tylko w formie puree lub gotowane, bez masła i sera, a Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku. Pomiń skórkę.",
-        "cs": "RSPCA uvádí brambory pro kočky jen rozmačkané nebo vařené bez másla a sýra a Cats Protection doporučuje bramborovou kaši bez dalších přísad, bez másla, smetany a česneku. Slupku vynechte."
+        "cs": "RSPCA uvádí brambory pro kočky jen rozmačkané nebo vařené bez másla a sýra a Cats Protection doporučuje bramborovou kaši bez dalších přísad, bez másla, smetany a česneku. Slupku vynechte.",
+        "hr": "RSPCA krumpir za mačke navodi samo ako je zgnječen ili kuhan, bez maslaca i sira, a Cats Protection predlaže običan pire bez maslaca, vrhnja i češnjaka. Koru izostavi."
       }
     }
   ],
@@ -171,6 +185,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1350c0e8bd2aec2ba8b7a0ae826e0def1e8f7d3d4a9eec923648303c5850779d"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0e0d69eadc92cf974491e8b060873c9b8851b21dda938e6646b1804cafa3b263"
     }
   }
 }
