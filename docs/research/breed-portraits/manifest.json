@@ -1195,6 +1195,19 @@
             "prompt_hash": "sha256:d17596c37befd6c67b53ef5727a27f9fc01a3d3e40e4b49ed2adc26bdfbc05db",
             "generated_at": "2026-11-06T00:50:37+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "lhasa_apso",
+            "species": "dog",
+            "colour": "golden",
+            "file": "dog/lhasa-apso.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:28960f587b25ebeb4a99b00e0482c7a1351b6a803af7dd1e0dcc803a17155b8a",
+            "generated_at": "2026-11-09T11:00:58+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
