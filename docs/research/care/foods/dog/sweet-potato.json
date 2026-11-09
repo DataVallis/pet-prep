@@ -9,7 +9,8 @@
     "cs": "Batáty",
     "hr": "Batat",
     "sv": "Sötpotatis",
-    "da": "Søde kartofler"
+    "da": "Søde kartofler",
+    "fi": "Bataatti"
   },
   "question": {
     "en": "Can dogs eat sweet potato?",
@@ -19,7 +20,8 @@
     "cs": "Mohou psi jíst batáty?",
     "hr": "Smiju li psi jesti batat?",
     "sv": "Får hundar äta sötpotatis?",
-    "da": "Må hunde spise søde kartofler?"
+    "da": "Må hunde spise søde kartofler?",
+    "fi": "Saako koira syödä bataattia?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -29,7 +31,8 @@
     "cs": "bataty",
     "hr": "batat",
     "sv": "sotpotatis",
-    "da": "soede-kartofler"
+    "da": "soede-kartofler",
+    "fi": "bataatti"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "cs": "Ano, v malém množství, tepelně upravené a oloupané. Měkce uvařený nebo spařený batát je jako pamlsek v pořádku, ale syrový batát psovi nikdy nedávejte: špatně se kouše, může dráždit žaludek a způsobit ucpání střev.",
     "hr": "Da, u malim količinama, termički obrađen i oguljen. Batat kuhan do mekoće u vodi ili na pari u redu je kao poslastica, ali psu nikad ne daj sirov batat: teško se žvače, može nadražiti želudac i izazvati začepljenje crijeva.",
     "sv": "Ja, i små mängder, kokt och skalad. Mjukkokt eller ångad sötpotatis går bra som godbit, men ge aldrig rå sötpotatis: den är svår att tugga, kan ge orolig mage och kan orsaka stopp i tarmen.",
-    "da": "Ja, i små mængder, kogt og skrællet. Sød kartoffel, der er kogt eller dampet blød, er fin som godbid, men giv aldrig rå sød kartoffel: den er svær at tygge, kan give ondt i maven og kan give tarmblokering."
+    "da": "Ja, i små mængder, kogt og skrællet. Sød kartoffel, der er kogt eller dampet blød, er fin som godbid, men giv aldrig rå sød kartoffel: den er svær at tygge, kan give ondt i maven og kan give tarmblokering.",
+    "fi": "Saa, pieninä määrinä, kypsennettynä ja kuorittuna. Pehmeäksi keitetty tai höyrytetty bataatti sopii herkuksi, mutta älä koskaan anna raakaa bataattia: sitä on vaikea pureskella, se voi ärsyttää vatsaa ja aiheuttaa suolitukoksen."
   },
   "why": {
     "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
@@ -50,7 +54,8 @@
     "cs": "Batáty nejsou jedovaté, ale syrové se špatně kousají a mohou způsobit ucpání střev; se slupkou se navíc hůř tráví. Příliš mnoho může kvůli nadbytku vitaminu A způsobit slabost kostí a svalů a kvůli vysokému glykemickému indexu je u psů s cukrovkou potřeba opatrnost. Nedávný výzkum naznačuje, že se do psího jídelníčku nemusí hodit, a hlavním zdrojem výživy by nikdy neměly být.",
     "hr": "Batat nije otrovan, ali se sirov teško žvače i može izazvati začepljenje crijeva, a s korom se teže probavlja. Previše batata može zbog viška vitamina A uzrokovati slabost kostiju i mišića, a zbog visokog glikemijskog indeksa potreban je oprez kod pasa s dijabetesom. Nedavna istraživanja upućuju na to da se možda ne uklapa u prehranu psa, a nikad ne smije biti glavni dio prehrane.",
     "sv": "Sötpotatis är inte giftig, men rå sötpotatis är svår att tugga och kan orsaka stopp i tarmen, och skalet gör den svårare att smälta. För mycket kan ge försvagade ben och muskler på grund av för mycket vitamin A, och eftersom sötpotatis har högt glykemiskt index behöver man vara extra försiktig med hundar som har diabetes. Ny forskning tyder på att sötpotatis kanske inte passar i hundars kost, och den ska aldrig vara den främsta näringskällan.",
-    "da": "Søde kartofler er ikke giftige, men rå søde kartofler er svære at tygge og kan give tarmblokering, og skrællen gør dem sværere at fordøje. For meget kan give svaghed i knogler og muskler på grund af for meget vitamin A, og det høje glykæmiske indeks betyder, at hunde med diabetes kræver forsigtighed. Nyere forskning tyder på at de måske ikke passer til en hunds kost, og de bør aldrig være hundens vigtigste kilde til ernæring."
+    "da": "Søde kartofler er ikke giftige, men rå søde kartofler er svære at tygge og kan give tarmblokering, og skrællen gør dem sværere at fordøje. For meget kan give svaghed i knogler og muskler på grund af for meget vitamin A, og det høje glykæmiske indeks betyder, at hunde med diabetes kræver forsigtighed. Nyere forskning tyder på at de måske ikke passer til en hunds kost, og de bør aldrig være hundens vigtigste kilde til ernæring.",
+    "fi": "Bataatti ei ole myrkyllistä, mutta raakaa bataattia on vaikea pureskella ja se voi aiheuttaa suolitukoksen, ja kuori tekee siitä vaikeammin sulavaa. Liian suuri määrä voi aiheuttaa luiden ja lihasten heikkoutta, koska A-vitamiinia tulee liikaa, ja korkean glykeemisen indeksin vuoksi diabetesta sairastavien koirien kanssa on oltava varovainen. Tuoreen tutkimuksen perusteella bataatti ei välttämättä sovi koiran ruokavalioon, eikä sen pidä koskaan olla pääasiallinen ravinnonlähde."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "cs": "Než psovi změníte jídelníček, poraďte se s veterinářem, a pak začněte malým množstvím a sledujte, jak pes reaguje.",
     "hr": "Prije promjene prehrane svog psa pitaj veterinara, a zatim počni s malom količinom da vidiš kako pas reagira.",
     "sv": "Fråga veterinären innan du ändrar hundens kost och börja sedan med en liten mängd för att se hur hunden reagerar.",
-    "da": "Spørg din dyrlæge, før du ændrer din hunds kost, og start med en lille mængde for at se, hvordan din hund reagerer."
+    "da": "Spørg din dyrlæge, før du ændrer din hunds kost, og start med en lille mængde for at se, hvordan din hund reagerer.",
+    "fi": "Kysy eläinlääkäriltä ennen kuin muutat koirasi ruokavaliota. Aloita sitten pienellä määrällä ja seuraa, miten koirasi reagoi."
   },
   "serving": {
     "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
@@ -71,7 +77,8 @@
     "cs": "Uvařený nebo spařený do měkka, bez slupky, v malém množství. Nikdy syrový a nikdy jako hlavní součást jídelníčku.",
     "hr": "Kuhan u vodi ili na pari do mekoće, bez kore, u malim količinama. Nikad sirov i nikad kao glavni dio prehrane.",
     "sv": "Kokt eller ångad tills den är mjuk, med skalet borttaget, i små mängder. Aldrig rå och aldrig huvuddelen av kosten.",
-    "da": "Kogt eller dampet, til de er bløde, med skrællen fjernet og i små mængder. Aldrig rå og aldrig hovedparten af kosten."
+    "da": "Kogt eller dampet, til de er bløde, med skrællen fjernet og i små mængder. Aldrig rå og aldrig hovedparten af kosten.",
+    "fi": "Keitettynä tai höyrytettynä pehmeäksi, kuori poistettuna, pieninä määrinä. Ei koskaan raakana eikä ruokavalion pääosana."
   },
   "child": {
     "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
@@ -81,7 +88,8 @@
     "cs": "Pejsek může dostat trochu měkce uvařeného batátu. Dospělý ho nejdřív oloupe a uvaří.",
     "hr": "Psi smiju dobiti malo mekog, kuhanog batata. Odrasla osoba ga prvo oguli i skuha.",
     "sv": "Hundar kan få lite mjuk, kokt sötpotatis. En vuxen skalar och kokar den först.",
-    "da": "Hunde må gerne få lidt blød, kogt sød kartoffel. En voksen skræller og koger den først."
+    "da": "Hunde må gerne få lidt blød, kogt sød kartoffel. En voksen skræller og koger den først.",
+    "fi": "Koira saa syödä vähän pehmeää, kypsennettyä bataattia. Aikuinen kuorii ja kypsentää sen ensin."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "cs": "Mohou psi jíst slupku z batátů?",
         "hr": "Smiju li psi jesti koru batata?",
         "sv": "Får hundar äta sötpotatisskal?",
-        "da": "Må hunde spise skrællen fra søde kartofler?"
+        "da": "Må hunde spise skrællen fra søde kartofler?",
+        "fi": "Saako koira syödä bataatin kuorta?"
       },
       "a": {
         "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
@@ -103,7 +112,8 @@
         "cs": "Nejlépe ji odstraňte: se slupkou se batát psovi hůř tráví.",
         "hr": "Najbolje je ukloniti je: s korom se batat psu teže probavlja.",
         "sv": "Det är bäst att ta bort det: om skalet sitter kvar blir sötpotatisen svårare för hunden att smälta.",
-        "da": "Det er bedst at fjerne den: hvis skrællen sidder på, er sød kartoffel sværere for din hund at fordøje."
+        "da": "Det er bedst at fjerne den: hvis skrællen sidder på, er sød kartoffel sværere for din hund at fordøje.",
+        "fi": "Se kannattaa poistaa: kuori tekee bataatista koiralle vaikeammin sulavaa."
       }
     },
     {
@@ -115,7 +125,8 @@
         "cs": "Mohou psi jíst syrové batáty?",
         "hr": "Smiju li psi jesti sirov batat?",
         "sv": "Får hundar äta rå sötpotatis?",
-        "da": "Må hunde spise rå sød kartoffel?"
+        "da": "Må hunde spise rå sød kartoffel?",
+        "fi": "Saako koira syödä raakaa bataattia?"
       },
       "a": {
         "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
@@ -125,7 +136,8 @@
         "cs": "Ne. Syrový batát se špatně kouše, může psovi podráždit žaludek a způsobit ucpání střev. Uvařte ho do měkka.",
         "hr": "Ne. Sirov se batat teško žvače, može psu nadražiti želudac i izazvati začepljenje crijeva. Termički ga obradi do mekoće.",
         "sv": "Nej. Rå sötpotatis är svår att tugga, kan ge hunden orolig mage och kan orsaka stopp i tarmen. Koka den tills den är mjuk.",
-        "da": "Nej. Rå sød kartoffel er svær at tygge, kan give din hund ondt i maven og kan give tarmblokering. Kog den, til den er blød."
+        "da": "Nej. Rå sød kartoffel er svær at tygge, kan give din hund ondt i maven og kan give tarmblokering. Kog den, til den er blød.",
+        "fi": "Ei. Raakaa bataattia on vaikea pureskella, ja se voi ärsyttää koiran vatsaa ja aiheuttaa suolitukoksen. Kypsennä se pehmeäksi."
       }
     }
   ],
@@ -233,6 +245,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "638bc3c81ff783a30a0deb89423184055d146671d961e0761653bf3070ad5053"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "41dc0f736ec965acf9db2ce0cb757bf4e2d1a8eaef1e704370a2bd889c8c6278"
     }
   }
 }
