@@ -44,7 +44,8 @@
       "emergency_24h": true,
       "duty": "Emergency veterinary service available 24/7. WhatsApp +382 68 119 100.",
       "duty_i18n": {
-        "sl": "Nujna veterinarska pomoč 24 ur na dan. WhatsApp +382 68 119 100."
+        "sl": "Nujna veterinarska pomoč 24 ur na dan. WhatsApp +382 68 119 100.",
+        "hr": "Hitna veterinarska služba dostupna 24/7. WhatsApp +382 68 119 100."
       },
       "small_animals": true,
       "url": "https://hasvetpganimalhospital.me/cg/",
@@ -62,7 +63,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:30, Sat 08:00-19:00, Sun 09:00-15:00. Emergency line +382 69 190 488.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20.30, sob 8–19, ned 9–15. Številka za nujne primere +382 69 190 488."
+        "sl": "pon–pet 8–20.30, sob 8–19, ned 9–15. Številka za nujne primere +382 69 190 488.",
+        "hr": "pon–pet 08:00–20:30, sub 08:00–19:00, ned 09:00–15:00. Hitna linija +382 69 190 488."
       },
       "small_animals": true,
       "url": "https://montvet.com/",
@@ -80,7 +82,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-19:00, Sun closed. Mobile +382 69 280 728.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 8–19, ob nedeljah zaprto. Mobilna številka +382 69 280 728."
+        "sl": "pon–pet 8–20, sob 8–19, ob nedeljah zaprto. Mobilna številka +382 69 280 728.",
+        "hr": "pon–pet 08:00–20:00, sub 08:00–19:00, ned zatvoreno. Mobitel +382 69 280 728."
       },
       "small_animals": true,
       "url": "https://www.royalvet.me/",
@@ -98,7 +101,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-19:00, Sun 10:00-13:00. Mobile +382 69 297 442.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 8–19, ned 10–13. Mobilna številka +382 69 297 442."
+        "sl": "pon–pet 8–20, sob 8–19, ned 10–13. Mobilna številka +382 69 297 442.",
+        "hr": "pon–pet 08:00–20:00, sub 08:00–19:00, ned 10:00–13:00. Mobitel +382 69 297 442."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -115,7 +119,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-20:30, Sun 09:00-14:00. Mobile +382 69 206 840.",
       "duty_i18n": {
-        "sl": "pon–sob 8–20.30, ned 9–14. Mobilna številka +382 69 206 840."
+        "sl": "pon–sob 8–20.30, ned 9–14. Mobilna številka +382 69 206 840.",
+        "hr": "pon–sub 08:00–20:30, ned 09:00–14:00. Mobitel +382 69 206 840."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -132,7 +137,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-14:00, Sun closed. Mobile +382 67 630 149.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 9–14, ob nedeljah zaprto. Mobilna številka +382 67 630 149."
+        "sl": "pon–pet 8–20, sob 9–14, ob nedeljah zaprto. Mobilna številka +382 67 630 149.",
+        "hr": "pon–pet 08:00–20:00, sub 09:00–14:00, ned zatvoreno. Mobitel +382 67 630 149."
       },
       "small_animals": true,
       "url": "https://www.veterina.me/site/kontakt/",
@@ -150,7 +156,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-13:00 and 16:00-19:00, Sat 09:00-12:00 and 16:00-18:00, Sun closed. Also +382 67 323 033.",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 16–19, sob 9–12 in 16–18, ob nedeljah zaprto. Tudi +382 67 323 033."
+        "sl": "pon–pet 9–13 in 16–19, sob 9–12 in 16–18, ob nedeljah zaprto. Tudi +382 67 323 033.",
+        "hr": "pon–pet 09:00–13:00 i 16:00–19:00, sub 09:00–12:00 i 16:00–18:00, ned zatvoreno. Dodatni broj: +382 67 323 033."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -167,7 +174,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-20:00, Sun 09:00-12:00 (Sunday for emergencies only, by phone).",
       "duty_i18n": {
-        "sl": "pon–sob 8–20, ned 9–12 (ob nedeljah samo za nujne primere, po telefonu)."
+        "sl": "pon–sob 8–20, ned 9–12 (ob nedeljah samo za nujne primere, po telefonu).",
+        "hr": "pon–sub 08:00–20:00, ned 09:00–12:00 (nedjeljom samo za hitne slučajeve, telefonom)."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -184,7 +192,8 @@
       "emergency_24h": false,
       "duty": "Call ahead; Sunday emergencies by phone only.",
       "duty_i18n": {
-        "sl": "Vnaprej pokličite; nujni primeri ob nedeljah samo po telefonu."
+        "sl": "Vnaprej pokličite; nujni primeri ob nedeljah samo po telefonu.",
+        "hr": "Nazovi unaprijed; nedjeljom hitni slučajevi samo telefonom."
       },
       "small_animals": true,
       "url": "https://www.vetport.me/",
@@ -202,7 +211,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-20:00, Sun closed.",
       "duty_i18n": {
-        "sl": "pon–sob 8–20, ob nedeljah zaprto."
+        "sl": "pon–sob 8–20, ob nedeljah zaprto.",
+        "hr": "pon–sub 08:00–20:00, ned zatvoreno."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -219,7 +229,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-14:00, Sun closed.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20, sob 9–14, ob nedeljah zaprto."
+        "sl": "pon–pet 9–20, sob 9–14, ob nedeljah zaprto.",
+        "hr": "pon–pet 09:00–20:00, sub 09:00–14:00, ned zatvoreno."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -236,7 +247,8 @@
       "emergency_24h": false,
       "duty": "Daily 08:00-13:00 and 17:00-20:00; confirm by phone. Mobile +382 69 044 422.",
       "duty_i18n": {
-        "sl": "Vsak dan 8–13 in 17–20; potrdite po telefonu. Mobilna številka +382 69 044 422."
+        "sl": "Vsak dan 8–13 in 17–20; potrdite po telefonu. Mobilna številka +382 69 044 422.",
+        "hr": "Svaki dan 08:00–13:00 i 17:00–20:00; potvrdi telefonom. Mobitel +382 69 044 422."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -253,7 +265,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-12:00, Sun closed; confirm by phone.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 8–12, ob nedeljah zaprto; potrdite po telefonu."
+        "sl": "pon–pet 8–20, sob 8–12, ob nedeljah zaprto; potrdite po telefonu.",
+        "hr": "pon–pet 08:00–20:00, sub 08:00–12:00, ned zatvoreno; potvrdi telefonom."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -270,7 +283,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-20:00, Sun closed. Mobile +382 69 633 339.",
       "duty_i18n": {
-        "sl": "pon–sob 8–20, ob nedeljah zaprto. Mobilna številka +382 69 633 339."
+        "sl": "pon–sob 8–20, ob nedeljah zaprto. Mobilna številka +382 69 633 339.",
+        "hr": "pon–sub 08:00–20:00, ned zatvoreno. Mobitel +382 69 633 339."
       },
       "small_animals": true,
       "source_url": "https://kotorkitties.org/de/partner-veterinary-clinics/",
@@ -287,7 +301,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-21:00, Sun 09:00-12:00. Also +382 67 503 479, +382 68 090 797.",
       "duty_i18n": {
-        "sl": "pon–sob 8–21, ned 9–12. Tudi +382 67 503 479, +382 68 090 797."
+        "sl": "pon–sob 8–21, ned 9–12. Tudi +382 67 503 479, +382 68 090 797.",
+        "hr": "pon–sub 08:00–21:00, ned 09:00–12:00. Dodatni brojevi: +382 67 503 479, +382 68 090 797."
       },
       "small_animals": true,
       "source_url": "https://strayteam-mne.tilda.ws/vet_clinics/en",
@@ -318,7 +333,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 08:00-14:00, Sun closed; confirm by phone.",
       "duty_i18n": {
-        "sl": "pon–sob 8–14, ob nedeljah zaprto; potrdite po telefonu."
+        "sl": "pon–sob 8–14, ob nedeljah zaprto; potrdite po telefonu.",
+        "hr": "pon–sub 08:00–14:00, ned zatvoreno; potvrdi telefonom."
       },
       "small_animals": true,
       "source_url": "https://kotorkitties.org/de/partner-veterinary-clinics/",
@@ -335,7 +351,8 @@
       "emergency_24h": false,
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
-        "sl": "Za delovni čas vnaprej pokličite."
+        "sl": "Za delovni čas vnaprej pokličite.",
+        "hr": "Radno vrijeme provjeri telefonom."
       },
       "small_animals": true,
       "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
@@ -352,7 +369,8 @@
       "emergency_24h": false,
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
-        "sl": "Za delovni čas vnaprej pokličite."
+        "sl": "Za delovni čas vnaprej pokličite.",
+        "hr": "Radno vrijeme provjeri telefonom."
       },
       "small_animals": true,
       "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
@@ -368,7 +386,8 @@
       "emergency_24h": false,
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
-        "sl": "Za delovni čas vnaprej pokličite."
+        "sl": "Za delovni čas vnaprej pokličite.",
+        "hr": "Radno vrijeme provjeri telefonom."
       },
       "small_animals": true,
       "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",

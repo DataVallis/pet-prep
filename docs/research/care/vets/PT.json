@@ -69,7 +69,8 @@
       "emergency_24h": true,
       "duty": "Open every day 24 h, including weekends and holidays; emergencies without prior appointment",
       "duty_i18n": {
-        "sl": "Odprto vsak dan 24 ur na dan, tudi ob vikendih in praznikih; nujni primeri brez predhodnega naročila"
+        "sl": "Odprto vsak dan 24 ur na dan, tudi ob vikendih in praznikih; nujni primeri brez predhodnega naročila",
+        "hr": "Otvoreno svaki dan 24 h, i vikendom i blagdanima; hitni slučajevi bez prethodne najave."
       },
       "small_animals": true,
       "url": "https://fmv.ulusofona.pt/contactos",
@@ -88,7 +89,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 24 h; emergency line +351 961 560 331",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan; telefon za nujne primere +351 961 560 331"
+        "sl": "Nujni primeri 24 ur na dan; telefon za nujne primere +351 961 560 331",
+        "hr": "Hitni slučajevi 24 h; telefon za hitne slučajeve +351 961 560 331"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinario.uevora.pt/",
@@ -106,7 +108,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency service, subject to clinical priority criteria; emergency e-mail upvet@icbas.up.pt",
       "duty_i18n": {
-        "sl": "24-urna nujna služba glede na kriterije klinične prednosti; e-naslov za nujne primere upvet@icbas.up.pt"
+        "sl": "24-urna nujna služba glede na kriterije klinične prednosti; e-naslov za nujne primere upvet@icbas.up.pt",
+        "hr": "Hitna služba 24 h, prema kliničkim kriterijima prioriteta; e-adresa za hitne slučajeve upvet@icbas.up.pt"
       },
       "small_animals": true,
       "url": "https://icbas.up.pt/clinicavet/en/",
@@ -125,7 +128,8 @@
       "emergency_24h": true,
       "duty": "Emergency 24 h / 365 days; WhatsApp 910 932 022",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24 ur / 365 dni; WhatsApp 910 932 022"
+        "sl": "Nujna pomoč 24 ur / 365 dni; WhatsApp 910 932 022",
+        "hr": "Hitni slučajevi 24 h / 365 dana; WhatsApp 910 932 022"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/restelo-hospital-veterinario/",
@@ -143,7 +147,8 @@
       "emergency_24h": true,
       "duty": "Emergencies every day 00:00–24:00; clinic Mon–Sat 09:00–21:00",
       "duty_i18n": {
-        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–sob 9–21"
+        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–sob 9–21",
+        "hr": "Hitni slučajevi svaki dan 0–24; klinika pon–sub 09:00–21:00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/arco-do-cego-hospital-veterinario/",
@@ -161,7 +166,8 @@
       "emergency_24h": true,
       "duty": "Emergencies every day 00:00–24:00; clinic Mon–Sat 10:00–21:00",
       "duty_i18n": {
-        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–sob 10–21"
+        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–sob 10–21",
+        "hr": "Hitni slučajevi svaki dan 0–24; klinika pon–sub 10:00–21:00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/vasco-da-gama-hospital-veterinario/",
@@ -179,7 +185,8 @@
       "emergency_24h": true,
       "duty": "Emergencies every day 00:00–24:00; clinic Mon–Fri 08:00–21:00, Sat 09:00–19:00",
       "duty_i18n": {
-        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–pet 8–21, sob 9–19"
+        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–pet 8–21, sob 9–19",
+        "hr": "Hitni slučajevi svaki dan 0–24; klinika pon–pet 08:00–21:00, sub 09:00–19:00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-alma-veterinaria-hospital-veterinario/",
@@ -197,7 +204,8 @@
       "emergency_24h": true,
       "duty": "Regular hours 09:00–21:00; a vet on site 24 h / 7 days for emergencies",
       "duty_i18n": {
-        "sl": "Redni delovni čas 9–21; za nujne primere je veterinar prisoten 24 ur / 7 dni"
+        "sl": "Redni delovni čas 9–21; za nujne primere je veterinar prisoten 24 ur / 7 dni",
+        "hr": "Redovno radno vrijeme 09:00–21:00; veterinar je na licu mjesta 24 h / 7 dana za hitne slučajeve"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-atlantico-hospital-veterinario/",
@@ -215,7 +223,8 @@
       "emergency_24h": true,
       "duty": "Emergencies every day 00:00–24:00; clinic Mon–Fri 10:00–20:00, Sat 10:00–17:00",
       "duty_i18n": {
-        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–pet 10–20, sob 10–17"
+        "sl": "Nujni primeri vsak dan 0–24; ambulanta pon–pet 10–20, sob 10–17",
+        "hr": "Hitni slučajevi svaki dan 0–24; klinika pon–pet 10:00–20:00, sub 10:00–17:00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-aveiro-hospital-veterinario/",
@@ -233,7 +242,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 00–24; clinic 09:00–21:00",
       "duty_i18n": {
-        "sl": "Nujni primeri 0–24; ambulanta 9–21"
+        "sl": "Nujni primeri 0–24; ambulanta 9–21",
+        "hr": "Hitni slučajevi 0–24; klinika 09:00–21:00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/algarve-hospital-veterinario/",
@@ -252,7 +262,8 @@
       "emergency_24h": true,
       "duty": "24 h a day incl. weekends and holidays",
       "duty_i18n": {
-        "sl": "24 ur na dan, tudi ob vikendih in praznikih"
+        "sl": "24 ur na dan, tudi ob vikendih in praznikih",
+        "hr": "24 h dnevno, i vikendom i blagdanima"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/chv-porto-hospital-veterinario/",
@@ -270,7 +281,8 @@
       "emergency_24h": true,
       "duty": "Emergencies 00–24; permanent vet, surgical emergency and 24 h monitored hospitalisation",
       "duty_i18n": {
-        "sl": "Nujni primeri 0–24; stalno prisoten veterinar, kirurška nujna pomoč in 24-urna nadzorovana hospitalizacija"
+        "sl": "Nujni primeri 0–24; stalno prisoten veterinar, kirurška nujna pomoč in 24-urna nadzorovana hospitalizacija",
+        "hr": "Hitni slučajevi 0–24; stalno prisutan veterinar, kirurški hitni slučajevi i hospitalizacija uz 24-satni nadzor"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-maisanimais-hospital-veterinario/",
@@ -288,7 +300,8 @@
       "emergency_24h": true,
       "duty": "Permanent vet 24 h / 365 days",
       "duty_i18n": {
-        "sl": "Stalno prisoten veterinar 24 ur / 365 dni"
+        "sl": "Stalno prisoten veterinar 24 ur / 365 dni",
+        "hr": "Stalno prisutan veterinar 24 h / 365 dana"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-santa-marinha-hospital-veterinario/",
@@ -306,7 +319,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/seixal/",
@@ -324,7 +338,8 @@
       "emergency_24h": true,
       "duty": "Permanent 24 h emergency service",
       "duty_i18n": {
-        "sl": "Stalna 24-urna nujna služba"
+        "sl": "Stalna 24-urna nujna služba",
+        "hr": "Stalna hitna služba 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/porto/",
@@ -343,7 +358,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cascais/",
@@ -361,7 +377,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/berna/",
@@ -379,7 +396,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/hvpalmela/",
@@ -398,7 +416,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/coimbra/",
@@ -416,7 +435,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sun 24 h",
       "duty_i18n": {
-        "sl": "pon–ned 24 ur"
+        "sl": "pon–ned 24 ur",
+        "hr": "pon–ned 24 h"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/hvanimar/",
@@ -465,7 +485,8 @@
       "emergency_24h": true,
       "duty": "24 h emergency via +351 915 173 454",
       "duty_i18n": {
-        "sl": "24-urna nujna pomoč na +351 915 173 454"
+        "sl": "24-urna nujna pomoč na +351 915 173 454",
+        "hr": "Hitna služba 24 h na +351 915 173 454"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -484,7 +505,8 @@
       "emergency_24h": true,
       "duty": "24 h emergency via +351 915 179 795",
       "duty_i18n": {
-        "sl": "24-urna nujna pomoč na +351 915 179 795"
+        "sl": "24-urna nujna pomoč na +351 915 179 795",
+        "hr": "Hitna služba 24 h na +351 915 179 795"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -503,7 +525,8 @@
       "emergency_24h": true,
       "duty": "24 h service via +351 926 707 922",
       "duty_i18n": {
-        "sl": "24-urna služba na +351 926 707 922"
+        "sl": "24-urna služba na +351 926 707 922",
+        "hr": "Služba 24 h na +351 926 707 922"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -612,7 +635,8 @@
       "emergency_24h": true,
       "duty": "24 h emergency every day incl. holidays; emergency mobile +351 964 896 707; general +351 291 145 500; clinic Mon–Fri 09–21, Sat 09–18",
       "duty_i18n": {
-        "sl": "24-urna nujna pomoč vsak dan, tudi ob praznikih; mobilna številka za nujne primere +351 964 896 707; splošna +351 291 145 500; ambulanta pon–pet 9–21, sob 9–18"
+        "sl": "24-urna nujna pomoč vsak dan, tudi ob praznikih; mobilna številka za nujne primere +351 964 896 707; splošna +351 291 145 500; ambulanta pon–pet 9–21, sob 9–18",
+        "hr": "Hitni slučajevi 24 h svaki dan, i blagdanima; mobitel za hitne slučajeve +351 964 896 707; opći broj +351 291 145 500; klinika pon–pet 09–21, sub 09–18"
       },
       "small_animals": true,
       "url": "https://hospitalveterinariodamadeira.pt/",
@@ -630,7 +654,8 @@
       "emergency_24h": false,
       "duty": "Emergency phone +351 919 004 050; clinic Mon–Fri 09–13 and 14–18, Sat 09–17 (Vilamoura); emergency service 09–22",
       "duty_i18n": {
-        "sl": "Telefon za nujne primere +351 919 004 050; ambulanta pon–pet 9–13 in 14–18, sob 9–17 (Vilamoura); nujna služba 9–22"
+        "sl": "Telefon za nujne primere +351 919 004 050; ambulanta pon–pet 9–13 in 14–18, sob 9–17 (Vilamoura); nujna služba 9–22",
+        "hr": "Telefon za hitne slučajeve +351 919 004 050; klinika pon–pet 09–13 i 14–18, sub 09–17 (Vilamoura); hitna služba 09–22"
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria.pt/",
@@ -647,7 +672,8 @@
       "emergency_24h": true,
       "duty": "24 h / 7 days; mobile +351 968 759 065",
       "duty_i18n": {
-        "sl": "24 ur / 7 dni; mobilna številka +351 968 759 065"
+        "sl": "24 ur / 7 dni; mobilna številka +351 968 759 065",
+        "hr": "24 h / 7 dana; mobitel +351 968 759 065"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinariodeportimao.com/",
@@ -680,7 +706,8 @@
       "emergency_24h": true,
       "duty": "Clinic Mon–Fri 08–20, Sat 08–13; emergencies 24h every day",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 8–20, sob 8–13; nujni primeri 24 ur na dan, vsak dan"
+        "sl": "Ambulanta pon–pet 8–20, sob 8–13; nujni primeri 24 ur na dan, vsak dan",
+        "hr": "Klinika pon–pet 08–20, sub 08–13; hitni slučajevi 24 h svaki dan"
       },
       "small_animals": true,
       "url": "https://www.hvbomjesus.pt/",
@@ -770,7 +797,8 @@
       "emergency_24h": true,
       "duty": "Emergency phone +351 966 442 741; clinic Mon–Fri 10–14 and 15–21, Sat 10–18",
       "duty_i18n": {
-        "sl": "Telefon za nujne primere +351 966 442 741; ambulanta pon–pet 10–14 in 15–21, sob 10–18"
+        "sl": "Telefon za nujne primere +351 966 442 741; ambulanta pon–pet 10–14 in 15–21, sob 10–18",
+        "hr": "Telefon za hitne slučajeve +351 966 442 741; klinika pon–pet 10–14 i 15–21, sub 10–18"
       },
       "small_animals": true,
       "url": "https://vetrinarea.pt/",
@@ -788,7 +816,8 @@
       "emergency_24h": false,
       "duty": "Clinic Mon–Fri 09:00–19:30, Sat 09:00–18:00",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 9–19.30, sob 9–18"
+        "sl": "Ambulanta pon–pet 9–19.30, sob 9–18",
+        "hr": "Klinika pon–pet 09:00–19:30, sub 09:00–18:00"
       },
       "small_animals": true,
       "url": "https://cvpopulo.com/",
@@ -806,7 +835,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09:30–13:30 and 14:30–18:30, Sat 09:30–13:30 and 14:30–18:00; out of hours refers to AniCura Algarve (Faro)",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–13.30 in 14.30–18.30, sob 9.30–13.30 in 14.30–18; zunaj delovnega časa napotijo na AniCura Algarve (Faro)"
+        "sl": "pon–pet 9.30–13.30 in 14.30–18.30, sob 9.30–13.30 in 14.30–18; zunaj delovnega časa napotijo na AniCura Algarve (Faro)",
+        "hr": "pon–pet 09:30–13:30 i 14:30–18:30, sub 09:30–13:30 i 14:30–18:00; izvan radnog vremena upućuju na AniCura Algarve (Faro)"
       },
       "small_animals": true,
       "url": "https://www.vetgilao.pt/",
@@ -823,7 +853,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–18, Sat 10–13; 24 h telephone support line +351 913 341 526 only",
       "duty_i18n": {
-        "sl": "pon–pet 10–18, sob 10–13; samo 24-urna telefonska podporna linija +351 913 341 526"
+        "sl": "pon–pet 10–18, sob 10–13; samo 24-urna telefonska podporna linija +351 913 341 526",
+        "hr": "pon–pet 10–18, sub 10–13; samo 24-satna telefonska linija podrške +351 913 341 526"
       },
       "small_animals": true,
       "url": "https://vetalbufeira.pt/",
@@ -841,7 +872,8 @@
       "emergency_24h": false,
       "duty": "Open every day: weekdays 10–22, weekends and holidays 10–18",
       "duty_i18n": {
-        "sl": "Odprto vsak dan: ob delavnikih 10–22, ob vikendih in praznikih 10–18"
+        "sl": "Odprto vsak dan: ob delavnikih 10–22, ob vikendih in praznikih 10–18",
+        "hr": "Otvoreno svaki dan: radnim danom 10–22, vikendom i blagdanima 10–18"
       },
       "small_animals": true,
       "url": "https://govet24h.pt/",
@@ -859,7 +891,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–19:30, Sat 10–18; emergency +351 925 998 098, temporarily closed 22:00–10:00",
       "duty_i18n": {
-        "sl": "pon–pet 10–19.30, sob 10–18; nujni primeri +351 925 998 098, začasno zaprto 22–10"
+        "sl": "pon–pet 10–19.30, sob 10–18; nujni primeri +351 925 998 098, začasno zaprto 22–10",
+        "hr": "pon–pet 10–19:30, sub 10–18; hitni slučajevi +351 925 998 098, privremeno zatvoreno 22:00–10:00"
       },
       "small_animals": true,
       "url": "https://cvsg.pt/en/homepage/",
@@ -877,7 +910,8 @@
       "emergency_24h": false,
       "duty": "Emergency mobile +351 962 454 248",
       "duty_i18n": {
-        "sl": "Mobilna številka za nujne primere +351 962 454 248"
+        "sl": "Mobilna številka za nujne primere +351 962 454 248",
+        "hr": "Mobitel za hitne slučajeve +351 962 454 248"
       },
       "small_animals": true,
       "url": "https://www.clivetareosa.pt/",
@@ -895,7 +929,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-5-de-outubro",
@@ -913,7 +948,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ajuda",
@@ -931,7 +967,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-boa-nova",
@@ -949,7 +986,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Sun 09:00–22:00",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–ned 9–22"
+        "sl": "Delovni čas: pon–ned 9–22",
+        "hr": "Radno vrijeme: pon–ned 09:00–22:00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-plaza",
@@ -967,7 +1005,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–21:00; Sat, Sun and holidays 10:00–13:00 and 14:00–19:00",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–21; sob, ned in prazniki 10–13 in 14–19"
+        "sl": "Delovni čas: pon–pet 10–21; sob, ned in prazniki 10–13 in 14–19",
+        "hr": "Radno vrijeme: pon–pet 10:00–21:00; sub, ned i blagdanima 10:00–13:00 i 14:00–19:00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-sao-martinho",
@@ -985,7 +1024,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–21:00; Sat, Sun and holidays 10:00–13:00 and 14:00–19:00",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–21; sob, ned in prazniki 10–13 in 14–19"
+        "sl": "Delovni čas: pon–pet 10–21; sob, ned in prazniki 10–13 in 14–19",
+        "hr": "Radno vrijeme: pon–pet 10:00–21:00; sub, ned i blagdanima 10:00–13:00 i 14:00–19:00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-viveiros",
@@ -1003,7 +1043,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-camara-de-lobos",
@@ -1021,7 +1062,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-machico",
@@ -1039,7 +1081,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ribeira-brava",
@@ -1057,7 +1100,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ponta-do-sol",
@@ -1075,7 +1119,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–13 and 15–19, Sat 10–14; SMS line for urgent cases until 23:00 (919 141 281)",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 15–19, sob 10–14; SMS linija za nujne primere do 23 (919 141 281)"
+        "sl": "pon–pet 10–13 in 15–19, sob 10–14; SMS linija za nujne primere do 23 (919 141 281)",
+        "hr": "pon–pet 10–13 i 15–19, sub 10–14; SMS linija za hitne slučajeve do 23:00 (919 141 281)"
       },
       "small_animals": true,
       "url": "https://solvet.pt/",
@@ -1092,7 +1137,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–13 and 15–19, Sat 10–14",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 15–19, sob 10–14"
+        "sl": "pon–pet 10–13 in 15–19, sob 10–14",
+        "hr": "pon–pet 10–13 i 15–19, sub 10–14"
       },
       "small_animals": true,
       "url": "https://solvet.pt/",
@@ -1109,7 +1155,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 09–13 and 15–19, Sat 10–12; emergency service 9–22",
       "duty_i18n": {
-        "sl": "pon–pet 9–13 in 15–19, sob 10–12; nujna služba 9–22"
+        "sl": "pon–pet 9–13 in 15–19, sob 10–12; nujna služba 9–22",
+        "hr": "pon–pet 09–13 i 15–19, sub 10–12; hitna služba 9–22"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvpetvetlagos/",
@@ -1153,7 +1200,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–13 and 16–20, Sat 10–13",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 16–20, sob 10–13"
+        "sl": "pon–pet 10–13 in 16–20, sob 10–13",
+        "hr": "pon–pet 10–13 i 16–20, sub 10–13"
       },
       "small_animals": true,
       "url": "https://clinicaveterinariadefaro.pt/",
@@ -1169,7 +1217,8 @@
       "emergency_24h": true,
       "duty": "24 h emergency service; mobile +351 967 721 777",
       "duty_i18n": {
-        "sl": "24-urna nujna služba; mobilna številka +351 967 721 777"
+        "sl": "24-urna nujna služba; mobilna številka +351 967 721 777",
+        "hr": "Hitna služba 24 h; mobitel +351 967 721 777"
       },
       "small_animals": true,
       "url": "https://cvportoseguro.pt/",
@@ -1188,7 +1237,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 09:30–13 and 14:30–19, Sat 10–14; urgent care at any hour, mobile +351 966 452 297",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–13 in 14.30–19, sob 10–14; nujna oskrba ob vseh urah, mobilna številka +351 966 452 297"
+        "sl": "pon–pet 9.30–13 in 14.30–19, sob 10–14; nujna oskrba ob vseh urah, mobilna številka +351 966 452 297",
+        "hr": "pon–pet 09:30–13 i 14:30–19, sub 10–14; hitna pomoć u bilo koje doba, mobitel +351 966 452 297"
       },
       "small_animals": true,
       "url": "https://112animal.pt/",
@@ -1221,7 +1271,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:30–20:00, Sat 9:30–17:30, closed Sun and holidays",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–20, sob 9.30–17.30, ned in prazniki zaprto"
+        "sl": "pon–pet 9.30–20, sob 9.30–17.30, ned in prazniki zaprto",
+        "hr": "pon–pet 9:30–20:00, sub 9:30–17:30, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://www.patasepenas.pt/",
@@ -1238,7 +1289,8 @@
       "emergency_24h": false,
       "duty": "10–14 and 15–19; mobile 919 832 913",
       "duty_i18n": {
-        "sl": "10–14 in 15–19; mobilna številka 919 832 913"
+        "sl": "10–14 in 15–19; mobilna številka 919 832 913",
+        "hr": "10–14 i 15–19; mobitel 919 832 913"
       },
       "small_animals": true,
       "url": "https://www.vetmontalvao.pt/",
@@ -1255,7 +1307,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 08–20, Sat 08–17, closed Sun",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 8–17, ned zaprto"
+        "sl": "pon–pet 8–20, sob 8–17, ned zaprto",
+        "hr": "pon–pet 08–20, sub 08–17, ned zatvoreno"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvsaopedro/sobre-nos/",
@@ -1272,7 +1325,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10:00–19:30, Sat 10:00–12:30, closed Sun and holidays",
       "duty_i18n": {
-        "sl": "pon–pet 10–19.30, sob 10–12.30, ned in prazniki zaprto"
+        "sl": "pon–pet 10–19.30, sob 10–12.30, ned in prazniki zaprto",
+        "hr": "pon–pet 10:00–19:30, sub 10:00–12:30, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://cvcapelas.pt/",
@@ -1289,7 +1343,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–19, Sat 10–13",
       "duty_i18n": {
-        "sl": "pon–pet 10–19, sob 10–13"
+        "sl": "pon–pet 10–19, sob 10–13",
+        "hr": "pon–pet 10–19, sub 10–13"
       },
       "small_animals": true,
       "url": "https://www.clinicavetdopaim.pt/",
@@ -1306,7 +1361,8 @@
       "emergency_24h": true,
       "duty": "Clinic Mon–Fri 9:30–19:30, Sat 10–19, Sun/holidays 11–14 by appointment; consultório Ribeira Grande; mobile +351 926 720 400",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 9.30–19.30, sob 10–19, ned/prazniki 11–14 po dogovoru; consultório Ribeira Grande; mobilna številka +351 926 720 400"
+        "sl": "Ambulanta pon–pet 9.30–19.30, sob 10–19, ned/prazniki 11–14 po dogovoru; consultório Ribeira Grande; mobilna številka +351 926 720 400",
+        "hr": "Klinika pon–pet 9:30–19:30, sub 10–19, ned i blagdanima 11–14 uz prethodnu najavu; ordinacija (consultório) Ribeira Grande; mobitel +351 926 720 400"
       },
       "small_animals": true,
       "url": "https://www.mypet.pt/",
@@ -1325,7 +1381,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:30–12:30 and 14:30–19:30, Sat 10–12:30 and 14–16; emergency line 960 339 136",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–12.30 in 14.30–19.30, sob 10–12.30 in 14–16; linija za nujne primere 960 339 136"
+        "sl": "pon–pet 9.30–12.30 in 14.30–19.30, sob 10–12.30 in 14–16; linija za nujne primere 960 339 136",
+        "hr": "pon–pet 9:30–12:30 i 14:30–19:30, sub 10–12:30 i 14–16; linija za hitne slučajeve 960 339 136"
       },
       "small_animals": true,
       "url": "https://vetaltominho.wordpress.com/",
@@ -1343,7 +1400,8 @@
       "emergency_24h": true,
       "duty": "Consultations Mon–Sat 10–22; emergency every day incl. Sundays and holidays",
       "duty_i18n": {
-        "sl": "Pregledi pon–sob 10–22; nujni primeri vsak dan, tudi ob nedeljah in praznikih"
+        "sl": "Pregledi pon–sob 10–22; nujni primeri vsak dan, tudi ob nedeljah in praznikih",
+        "hr": "Pregledi pon–sub 10–22; hitni slučajevi svaki dan, uključujući nedjelje i blagdane"
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.eu/",
@@ -1361,7 +1419,8 @@
       "emergency_24h": false,
       "duty": "Daily 10:00–13:30 and 14:30–19:00",
       "duty_i18n": {
-        "sl": "Vsak dan 10–13.30 in 14.30–19"
+        "sl": "Vsak dan 10–13.30 in 14.30–19",
+        "hr": "Svaki dan 10:00–13:30 i 14:30–19:00"
       },
       "small_animals": true,
       "url": "https://vetplanet.pt/",
@@ -1379,7 +1438,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–14 and 15–20, Sat 10–14, closed Sun and holidays",
       "duty_i18n": {
-        "sl": "pon–pet 10–14 in 15–20, sob 10–14, ned in prazniki zaprto"
+        "sl": "pon–pet 10–14 in 15–20, sob 10–14, ned in prazniki zaprto",
+        "hr": "pon–pet 10–14 i 15–20, sub 10–14, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadolambert-petvet.pt/",
@@ -1396,7 +1456,8 @@
       "emergency_24h": true,
       "duty": "Mon–Sat 10–20; 24 h emergency by phone, mobile +351 964 015 950",
       "duty_i18n": {
-        "sl": "pon–sob 10–20; 24-urna nujna pomoč po telefonu, mobilna številka +351 964 015 950"
+        "sl": "pon–sob 10–20; 24-urna nujna pomoč po telefonu, mobilna številka +351 964 015 950",
+        "hr": "pon–sub 10–20; hitna služba 24 h telefonom, mobitel +351 964 015 950"
       },
       "small_animals": true,
       "url": "https://en.vieiralopesvet.pt/",
@@ -1414,7 +1475,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 10–13 and 15:30–20:30, Sat 10–14; SOS +351 932 497 794",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 15.30–20.30, sob 10–14; SOS +351 932 497 794"
+        "sl": "pon–pet 10–13 in 15.30–20.30, sob 10–14; SOS +351 932 497 794",
+        "hr": "pon–pet 10–13 i 15:30–20:30, sub 10–14; SOS +351 932 497 794"
       },
       "small_animals": true,
       "url": "https://www.vetfachada.pt/",
@@ -1433,7 +1495,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–13 and 15–20, Sat 10–13; emergency line 968 387 609",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 15–20, sob 10–13; linija za nujne primere 968 387 609"
+        "sl": "pon–pet 10–13 in 15–20, sob 10–13; linija za nujne primere 968 387 609",
+        "hr": "pon–pet 10–13 i 15–20, sub 10–13; linija za hitne slučajeve 968 387 609"
       },
       "small_animals": true,
       "url": "http://www.helpvetestoril.pt/",
@@ -1450,7 +1513,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 9–21, Sat 9–19; nights, Sundays and holidays open; urgent/appointments +351 964 355 346",
       "duty_i18n": {
-        "sl": "pon–pet 9–21, sob 9–19; ponoči, ob nedeljah in praznikih odprto; nujni primeri/naročanje +351 964 355 346"
+        "sl": "pon–pet 9–21, sob 9–19; ponoči, ob nedeljah in praznikih odprto; nujni primeri/naročanje +351 964 355 346",
+        "hr": "pon–pet 9–21, sub 9–19; noću, nedjeljom i blagdanima otvoreno; hitni slučajevi i naručivanje +351 964 355 346"
       },
       "small_animals": true,
       "url": "https://www.animalcare.pt/",
@@ -1468,7 +1532,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 10–20, Sat 10–13 and 15–18",
       "duty_i18n": {
-        "sl": "pon–pet 10–20, sob 10–13 in 15–18"
+        "sl": "pon–pet 10–20, sob 10–13 in 15–18",
+        "hr": "pon–pet 10–20, sub 10–13 i 15–18"
       },
       "small_animals": true,
       "url": "https://clinicaveterinariadeserralves.pt/",
@@ -1486,7 +1551,8 @@
       "emergency_24h": true,
       "duty": "Mon–Fri 10–19:30, Sat 10–14",
       "duty_i18n": {
-        "sl": "pon–pet 10–19.30, sob 10–14"
+        "sl": "pon–pet 10–19.30, sob 10–14",
+        "hr": "pon–pet 10–19:30, sub 10–14"
       },
       "small_animals": true,
       "url": "https://cvfm.pt/",
@@ -1505,7 +1571,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 9:30–19, Sat 10–14",
       "duty_i18n": {
-        "sl": "pon–pet 9.30–19, sob 10–14"
+        "sl": "pon–pet 9.30–19, sob 10–14",
+        "hr": "pon–pet 9:30–19, sub 10–14"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadafoz.pt/",
@@ -1522,7 +1589,8 @@
       "emergency_24h": false,
       "duty": "Mon–Fri 10–13 and 14:30–20, Sat 10–13:30; urgências mobile 912 561 021",
       "duty_i18n": {
-        "sl": "pon–pet 10–13 in 14.30–20, sob 10–13.30; mobilna številka za nujne primere 912 561 021"
+        "sl": "pon–pet 10–13 in 14.30–20, sob 10–13.30; mobilna številka za nujne primere 912 561 021",
+        "hr": "pon–pet 10–13 i 14:30–20, sub 10–13:30; mobitel za hitne slučajeve 912 561 021"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadaprelada.pt/",
@@ -1552,7 +1620,8 @@
       "emergency_24h": true,
       "duty": "Emergency number +351 962 518 494",
       "duty_i18n": {
-        "sl": "Številka za nujne primere +351 962 518 494"
+        "sl": "Številka za nujne primere +351 962 518 494",
+        "hr": "Broj za hitne slučajeve +351 962 518 494"
       },
       "small_animals": true,
       "url": "https://www.coimbrapethospital.pt/",
@@ -1570,7 +1639,8 @@
       "emergency_24h": true,
       "duty": "Daily 10:00–20:00; mobile +351 914 905 440",
       "duty_i18n": {
-        "sl": "Vsak dan 10–20; mobilna številka +351 914 905 440"
+        "sl": "Vsak dan 10–20; mobilna številka +351 914 905 440",
+        "hr": "Svaki dan 10:00–20:00; mobitel +351 914 905 440"
       },
       "small_animals": true,
       "url": "https://hospvetcoimbra.com/",
@@ -1588,7 +1658,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-anadia",
@@ -1606,7 +1677,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://www.vetmedis.pt/centros-vetmedis/vetmedis-calheta",
@@ -1624,7 +1696,8 @@
       "emergency_24h": false,
       "duty": "Hours: Wed–Sun 10:00–13:00 and 14:00–19:00, Mon–Tue closed",
       "duty_i18n": {
-        "sl": "Delovni čas: sre–ned 10–13 in 14–19, pon–tor zaprto"
+        "sl": "Delovni čas: sre–ned 10–13 in 14–19, pon–tor zaprto",
+        "hr": "Radno vrijeme: sri–ned 10:00–13:00 i 14:00–19:00, pon–uto zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-camacha",
@@ -1642,7 +1715,8 @@
       "emergency_24h": false,
       "duty": "Hours: Mon–Fri 10:00–12:30 and 14:00–19:00, Sat 10:00–13:00, Sun and holidays closed",
       "duty_i18n": {
-        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto"
+        "sl": "Delovni čas: pon–pet 10–12.30 in 14–19, sob 10–13, ned in prazniki zaprto",
+        "hr": "Radno vrijeme: pon–pet 10:00–12:30 i 14:00–19:00, sub 10:00–13:00, ned i blagdanima zatvoreno"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-canico",
@@ -1660,7 +1734,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–13:00 and 15:00–20:00, Sat 10:00–13:00 and 14:30–19:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Porto (HVPO) (phone 228 348 170)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)"
+        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–13:00 i 15:00–20:00, sub 10:00–13:00 i 14:30–19:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/valongo/",
@@ -1679,7 +1754,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–13:00 and 15:00–20:00, Sat 10:00–13:00 and 14:30–19:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Porto (HVPO) (phone 228 348 170)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)"
+        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–13:00 i 15:00–20:00, sub 10:00–13:00 i 14:30–19:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/ermesinde/",
@@ -1698,7 +1774,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–20:00, Sat 10:00–13:00 and 14:30–19:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Porto (HVPO) (phone 228 348 170)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)"
+        "sl": "Delovni čas ambulante: pon–pet 10–20, sob 10–13 in 14.30–19, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–20:00, sub 10:00–13:00 i 14:30–19:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/rio-tinto/",
@@ -1717,7 +1794,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–13:00 and 15:00–20:00, Sat 10:00–13:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Porto (HVPO) (phone 228 348 170)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)"
+        "sl": "Delovni čas ambulante: pon–pet 10–13 in 15–20, sob 10–13, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–13:00 i 15:00–20:00, sub 10:00–13:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/carvalha/",
@@ -1736,7 +1814,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–20:00, Sat 10:00–13:00 and 15:00–18:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Porto (HVPO) (phone 228 348 170)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–20, sob 10–13 in 15–18, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)"
+        "sl": "Delovni čas ambulante: pon–pet 10–20, sob 10–13 in 15–18, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–20:00, sub 10:00–13:00 i 15:00–18:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/canidelo/",
@@ -1755,7 +1834,8 @@
       "emergency_24h": false,
       "duty": "Clinic hours: Mon–Fri 10:00–12:30 and 14:30–19:30, Sat 10:00–13:00 and 14:00–17:00, Sun closed. Out-of-hours emergencies: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
       "duty_i18n": {
-        "sl": "Delovni čas ambulante: pon–pet 10–12.30 in 14.30–19.30, sob 10–13 in 14–17, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Trás-os-Montes (HVTM)"
+        "sl": "Delovni čas ambulante: pon–pet 10–12.30 in 14.30–19.30, sob 10–13 in 14–17, ned zaprto. Nujni primeri zunaj delovnega časa: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
+        "hr": "Radno vrijeme klinike: pon–pet 10:00–12:30 i 14:30–19:30, sub 10:00–13:00 i 14:00–17:00, ned zatvoreno. Izvan radnog vremena hitni slučajevi: Onevet Hospital Veterinário Trás-os-Montes (HVTM)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/peso-da-regua/",
@@ -1774,7 +1854,8 @@
       "emergency_24h": true,
       "duty": "24 h emergencies; clinic hours Mon–Fri 09:30–20:00, Sat 10:00–19:00, Sun closed - phone first out of hours",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan; delovni čas ambulante pon–pet 9.30–20, sob 10–19, ned zaprto – zunaj delovnega časa najprej pokličite"
+        "sl": "Nujni primeri 24 ur na dan; delovni čas ambulante pon–pet 9.30–20, sob 10–19, ned zaprto – zunaj delovnega časa najprej pokličite",
+        "hr": "Hitni slučajevi 24 h; radno vrijeme klinike pon–pet 09:30–20:00, sub 10:00–19:00, ned zatvoreno – izvan radnog vremena prvo nazovi"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/gondomar/",
@@ -1793,7 +1874,8 @@
       "emergency_24h": false,
       "duty": "24 h emergency service (travel to the unit); clinic hours Mon–Sat 10:00–13:00 and 15:00–20:00, Sun closed - phone first",
       "duty_i18n": {
-        "sl": "24-urna nujna služba (pridite v enoto); delovni čas ambulante pon–sob 10–13 in 15–20, ned zaprto – najprej pokličite"
+        "sl": "24-urna nujna služba (pridite v enoto); delovni čas ambulante pon–sob 10–13 in 15–20, ned zaprto – najprej pokličite",
+        "hr": "Hitna služba 24 h (dolazak u ambulantu); radno vrijeme klinike pon–sub 10:00–13:00 i 15:00–20:00, ned zatvoreno – prvo nazovi"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/figueiradafoz/",
@@ -1810,15 +1892,15 @@
       "address": "Av. Almirante Gago Coutinho 8, Bairro Ouressa",
       "phone": "+351 219 264 188",
       "emergency_24h": true,
-      "duty": "24 h emergencies; clinic hours Mon–Fri 10:00–20:00, Sat 10:00–16:00 (sources differ) - phone first out of hours",
+      "duty": "24 h emergencies; clinic hours Mon–Fri 10:00–20:00, Sat 10:00–16:00 - phone first out of hours",
       "duty_i18n": {
-        "sl": "Nujni primeri 24 ur na dan; delovni čas ambulante pon–pet 10–20, sob 10–16 (viri se razlikujejo) – zunaj delovnega časa najprej pokličite"
+        "hr": "Hitni slučajevi 24 h; radno vrijeme klinike pon–pet 10:00–20:00, sub 10:00–16:00 – izvan radnog vremena prvo nazovi"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvvetlirios/",
       "source_url": "https://onevetgroup.pt/cvvetlirios/",
       "checked": "2026-11-03",
-      "note": "City from the Onevet group listing; footer phone on the page (259 328 918) differs from the listed clinic number. Header and footer differ.",
+      "note": "City from the Onevet group listing; footer phone on the page (259 328 918) differs from the listed clinic number. Header and footer differ. Sources differ on hours.",
       "quote": "Onevet Clínica Veterinária Vetlírios com serviço de Urgências 24h"
     },
     {
