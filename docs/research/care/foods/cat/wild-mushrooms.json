@@ -4,28 +4,33 @@
   "name": {
     "en": "Wild mushrooms",
     "sl": "Divje gobe",
-    "pt": "Cogumelos silvestres"
+    "pt": "Cogumelos silvestres",
+    "nl": "Wilde paddenstoelen"
   },
   "question": {
     "en": "Are wild mushrooms dangerous for cats?",
     "sl": "Ali so divje gobe nevarne za mačke?",
-    "pt": "Os cogumelos silvestres são perigosos para os gatos?"
+    "pt": "Os cogumelos silvestres são perigosos para os gatos?",
+    "nl": "Zijn wilde paddenstoelen gevaarlijk voor katten?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
     "sl": "divje-gobe",
-    "pt": "cogumelos-silvestres"
+    "pt": "cogumelos-silvestres",
+    "nl": "wilde-paddenstoelen"
   },
   "level": "toxic",
   "answer": {
     "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
     "sl": "Da. Pet Poison Helpline svetuje, naj vsako gobo, ki ni kupljena za ljudi, obravnavamo kot strupeno za mačke, saj so številne strupene gobe videti enako kot neškodljive. Če mačka poje gobo, ki jo je našla zunaj, jo takoj odpeljite k veterinarju.",
-    "pt": "Sim. A Pet Poison Helpline aconselha a tratar como tóxico qualquer cogumelo que não tenha sido comprado para consumo humano, porque muitos cogumelos venenosos têm exatamente o mesmo aspeto que os inofensivos. Se o teu gato comer um cogumelo encontrado no exterior, leva-o imediatamente ao veterinário."
+    "pt": "Sim. A Pet Poison Helpline aconselha a tratar como tóxico qualquer cogumelo que não tenha sido comprado para consumo humano, porque muitos cogumelos venenosos têm exatamente o mesmo aspeto que os inofensivos. Se o teu gato comer um cogumelo encontrado no exterior, leva-o imediatamente ao veterinário.",
+    "nl": "Ja. Pet Poison Helpline adviseert elke paddenstoel die niet als voedsel voor mensen is gekocht als giftig voor katten te beschouwen, omdat veel giftige paddenstoelen er precies zo uitzien als onschuldige. Heeft je kat een paddenstoel gegeten die buiten groeide, ga dan meteen met je kat naar de dierenarts."
   },
   "why": {
     "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
     "sl": "Pet Poison Helpline navaja, da samo v Severni Ameriki raste več kot 100 vrst strupenih gob, med njimi Amanita, Galerina in Lepiota, in da so številne videti enako kot nestrupene gobe. Nekatere gobe na hišne živali učinkujejo v 15 do 30 minutah, druge šele po največ 24 urah. Odvisno od gobe in pojedene količine so lahko prizadeti prebavila, živčevje, jetra ali ledvice.",
-    "pt": "A Pet Poison Helpline diz que só na América do Norte existem mais de 100 espécies de cogumelos venenosos, incluindo Amanita, Galerina e Lepiota, e que muitos têm o mesmo aspeto que os cogumelos não tóxicos. Alguns cogumelos fazem efeito em 15 a 30 minutos; noutros, os efeitos só surgem até 24 horas depois. Consoante o cogumelo e a quantidade ingerida, podem ser afetados o estômago e os intestinos, o sistema nervoso, o fígado ou os rins."
+    "pt": "A Pet Poison Helpline diz que só na América do Norte existem mais de 100 espécies de cogumelos venenosos, incluindo Amanita, Galerina e Lepiota, e que muitos têm o mesmo aspeto que os cogumelos não tóxicos. Alguns cogumelos fazem efeito em 15 a 30 minutos; noutros, os efeitos só surgem até 24 horas depois. Consoante o cogumelo e a quantidade ingerida, podem ser afetados o estômago e os intestinos, o sistema nervoso, o fígado ou os rins.",
+    "nl": "Pet Poison Helpline zegt dat alleen al in Noord-Amerika meer dan 100 giftige paddenstoelsoorten voorkomen, waaronder Amanita, Galerina en Lepiota, en dat veel ervan er net zo uitzien als niet-giftige paddenstoelen. Sommige paddenstoelen kunnen binnen 15 tot 30 minuten effect hebben op huisdieren, andere pas na maximaal 24 uur. Afhankelijk van de paddenstoel en de hoeveelheid die is gegeten, kunnen maag en darmen, het zenuwstelsel, de lever of de nieren worden aangetast."
   },
   "signs": {
     "en": [
@@ -57,30 +62,44 @@
       "Convulsões",
       "Problemas de visão",
       "Agressividade ou confusão"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Zwarte, teerachtige ontlasting",
+      "Wankel lopen",
+      "Trillen",
+      "Toevallen",
+      "Problemen met zien",
+      "Agressie of verwardheid"
     ]
   },
   "what_to_do": {
     "en": "Take your cat to your vet immediately, even before any signs appear. If you can do it safely, bring a sample of the mushroom so a specialist can identify it. Don't try to make your cat sick without asking the vet.",
     "sl": "Mačko takoj odpeljite k veterinarju, tudi če še nima znakov. Če lahko to storite varno, s seboj vzemite vzorec gobe, da jo strokovnjak prepozna. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-    "pt": "Leva o teu gato imediatamente ao veterinário, mesmo antes de aparecerem sinais. Se o puderes fazer em segurança, leva uma amostra do cogumelo para que um especialista o possa identificar. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+    "pt": "Leva o teu gato imediatamente ao veterinário, mesmo antes de aparecerem sinais. Se o puderes fazer em segurança, leva uma amostra do cogumelo para que um especialista o possa identificar. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+    "nl": "Ga meteen met je kat naar de dierenarts, ook voordat er verschijnselen zijn. Als je dat veilig kunt doen, neem dan een monster van de paddenstoel mee, zodat een specialist hem kan identificeren. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
   },
   "serving": null,
   "child": {
     "en": "Mushrooms growing outside are not for cats. If kitty sniffs or nibbles one, tell a grown-up right away.",
     "sl": "Gobe, ki rastejo zunaj, niso za muce. Če muca kakšno povoha ali pogrizlja, takoj povej odraslemu.",
-    "pt": "Os cogumelos que crescem no exterior não são para os gatos. Se o teu gatinho cheirar ou trincar um, avisa logo um adulto."
+    "pt": "Os cogumelos que crescem no exterior não são para os gatos. Se o teu gatinho cheirar ou trincar um, avisa logo um adulto.",
+    "nl": "Paddenstoelen die buiten groeien zijn niet voor katten. Snuffelt of knabbelt je kat aan een paddenstoel, vertel het dan meteen aan een volwassene."
   },
   "faq": [
     {
       "q": {
         "en": "How can I keep my cat away from wild mushrooms?",
         "sl": "Kako mačko obvarujem pred divjimi gobami?",
-        "pt": "Como posso manter o meu gato longe dos cogumelos silvestres?"
+        "pt": "Como posso manter o meu gato longe dos cogumelos silvestres?",
+        "nl": "Hoe houd ik mijn kat uit de buurt van wilde paddenstoelen?"
       },
       "a": {
         "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
         "sl": "Pet Poison Helpline svetuje, naj mačko pozorno spremljate, ko je zunaj, in ji ne dovolite do divjih gob ali katerekoli gobe, za katero ne veste, od kod je.",
-        "pt": "A Pet Poison Helpline aconselha a vigiar de perto o gato quando está no exterior e a não o deixar chegar perto de cogumelos silvestres, nem de qualquer cogumelo cuja origem desconheças."
+        "pt": "A Pet Poison Helpline aconselha a vigiar de perto o gato quando está no exterior e a não o deixar chegar perto de cogumelos silvestres, nem de qualquer cogumelo cuja origem desconheças.",
+        "nl": "Pet Poison Helpline adviseert goed in de gaten te houden wat je kat buiten doet en je kat niet in de buurt te laten komen van wilde paddenstoelen of paddenstoelen waarvan je niet weet waar ze vandaan komen."
       }
     }
   ],
@@ -171,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "41b92c3738d897b226424f3ff64759e54f242ad658b99d51624fdd577150fad3"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ee364199af502a19c971f8e5569ba3317bdca3c31f066cb1b39bc295db6e169b"
     }
   }
 }

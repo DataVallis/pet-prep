@@ -4,28 +4,33 @@
   "name": {
     "en": "Tomato plant (leaves, stems, green tomatoes)",
     "sl": "Paradižnikova rastlina (listi, stebla, zeleni paradižniki)",
-    "pt": "Tomateiro (folhas, caules, tomates verdes)"
+    "pt": "Tomateiro (folhas, caules, tomates verdes)",
+    "nl": "Tomatenplant (bladeren, stengels, groene tomaten)"
   },
   "question": {
     "en": "Is the tomato plant safe for cats?",
     "sl": "Ali je paradižnikova rastlina varna za mačke?",
-    "pt": "O tomateiro é seguro para os gatos?"
+    "pt": "O tomateiro é seguro para os gatos?",
+    "nl": "Is de tomatenplant veilig voor katten?"
   },
   "url_slug": {
     "en": "tomato-plant",
     "sl": "paradiznikova-rastlina",
-    "pt": "tomateiro"
+    "pt": "tomateiro",
+    "nl": "tomatenplant"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. The ASPCA lists the tomato plant as toxic to cats because it contains solanine; only the ripe fruit is non-toxic. Keep leaves, stems and green tomatoes away from your cat, and call your vet if your cat chews any.",
     "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, ker vsebuje solanin; nestrupeni so le zreli plodovi. Listi, stebla in zeleni paradižniki naj bodo zunaj mačkinega dosega. Če jih mačka pogrizlja, pokličite veterinarja.",
-    "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos porque contém solanina; só o fruto maduro não é tóxico. Mantém as folhas, os caules e os tomates verdes longe do teu gato e liga ao teu veterinário se ele mastigar alguma parte."
+    "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos porque contém solanina; só o fruto maduro não é tóxico. Mantém as folhas, os caules e os tomates verdes longe do teu gato e liga ao teu veterinário se ele mastigar alguma parte.",
+    "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten, omdat hij solanine bevat; alleen de rijpe vrucht is niet giftig. Houd bladeren, stengels en groene tomaten uit de buurt van je kat en bel je dierenarts als je kat ergens aan heeft gekauwd."
   },
   "why": {
     "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
     "sl": "ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, kot strupeno snov navaja solanin in pojasnjuje, da zreli plodovi niso strupeni. Tudi Agriculture Victoria navaja, da so nestrupeni le zreli plodovi paradižnika. ASPCA v nasvetih o vrtu za hišne živali dodaja, da rastlina in majhni zeleni paradižniki vsebujejo tomatin. International Cat Care opozarja, da lahko že stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi.",
-    "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos, indica a solanina como a substância tóxica e refere que o fruto maduro não é tóxico. A Agriculture Victoria também diz que só o tomate maduro não é tóxico. Nos conselhos da ASPCA para jardins com animais, acrescenta-se que a planta e os tomates verdes pequenos contêm tomatina. A International Cat Care avisa que até o simples contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos."
+    "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos, indica a solanina como a substância tóxica e refere que o fruto maduro não é tóxico. A Agriculture Victoria também diz que só o tomate maduro não é tóxico. Nos conselhos da ASPCA para jardins com animais, acrescenta-se que a planta e os tomates verdes pequenos contêm tomatina. A International Cat Care avisa que até o simples contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos.",
+    "nl": "De ASPCA noemt de tomatenplant giftig voor katten, noemt solanine als de giftige stof en merkt op dat de rijpe vrucht niet giftig is. Ook Agriculture Victoria zegt dat alleen rijpe tomaten niet giftig zijn. Het tuinadvies van de ASPCA voor huisdieren voegt eraan toe dat de plant en kleine groene tomaten tomatine bevatten. International Cat Care waarschuwt dat zelfs contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat, niezen en oogklachten kan veroorzaken."
   },
   "signs": {
     "en": [
@@ -54,30 +59,43 @@
       "Fraqueza",
       "Pupilas dilatadas",
       "Batimento cardíaco lento"
+    ],
+    "nl": [
+      "Kwijlen",
+      "Verlies van eetlust",
+      "Ernstige maagklachten",
+      "Sombere stemming of vermoeidheid",
+      "Zwakte",
+      "Wijde pupillen",
+      "Trage hartslag"
     ]
   },
   "what_to_do": {
     "en": "If your cat chewed tomato leaves, stems or green tomatoes, contact your vet right away. Note what was eaten and when. Don't try to make your cat sick without asking the vet.",
     "sl": "Če je mačka grizljala paradižnikove liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Zapišite si, kaj je pojedla in kdaj. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-    "pt": "Se o teu gato mastigou folhas, caules ou tomates verdes, liga imediatamente ao teu veterinário. Anota o que ele comeu e quando. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+    "pt": "Se o teu gato mastigou folhas, caules ou tomates verdes, liga imediatamente ao teu veterinário. Anota o que ele comeu e quando. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+    "nl": "Heeft je kat op tomatenbladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Noteer wat je kat heeft gegeten en wanneer. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
   },
   "serving": null,
   "child": {
     "en": "Tomato plants are not for cats. If kitty nibbles a leaf, tell a grown-up so they can call the vet.",
     "sl": "Paradižnikove rastline niso za muce. Če muca pogrizlja list, povej odraslemu, da lahko pokliče veterinarja.",
-    "pt": "Os tomateiros não são para os gatos. Se o teu gatinho trincar uma folha, avisa um adulto para ligar ao veterinário."
+    "pt": "Os tomateiros não são para os gatos. Se o teu gatinho trincar uma folha, avisa um adulto para ligar ao veterinário.",
+    "nl": "Tomatenplanten zijn niet voor katten. Knabbelt je kat aan een blaadje, vertel het dan aan een volwassene. Die kan de dierenarts bellen."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats eat ripe tomatoes?",
         "sl": "Ali lahko mačke jedo zrele paradižnike?",
-        "pt": "Os gatos podem comer tomates maduros?"
+        "pt": "Os gatos podem comer tomates maduros?",
+        "nl": "Mogen katten rijpe tomaten eten?"
       },
       "a": {
         "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
         "sl": "ASPCA navaja, da zreli plodovi paradižnika za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, zato jih je bolje ne deliti z mačko.",
-        "pt": "A ASPCA diz que o tomate maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos; por isso, o melhor é não os partilhar."
+        "pt": "A ASPCA diz que o tomate maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos; por isso, o melhor é não os partilhar.",
+        "nl": "De ASPCA zegt dat de rijpe tomatenvrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft, dus deel ze liever niet."
       }
     }
   ],
@@ -148,6 +166,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "91e6269405117765091028f679d00cef9fd481e42df69f7a59b6db96dc53d4d5"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "606d5a4912e6fb2e10f44b3d9ecebe668e32863a82d49c10fe48848e32aa0a39"
     }
   }
 }

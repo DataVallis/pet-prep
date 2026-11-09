@@ -4,28 +4,33 @@
   "name": {
     "en": "Tomato plant and green tomatoes",
     "sl": "Paradižnikova rastlina in zelen paradižnik",
-    "pt": "Tomateiro e tomates verdes"
+    "pt": "Tomateiro e tomates verdes",
+    "nl": "Tomatenplant en groene tomaten"
   },
   "question": {
     "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
     "sl": "Ali lahko psi jedo paradižnikove liste, stebla ali zelen paradižnik?",
-    "pt": "Os cães podem comer folhas, caules ou tomates verdes do tomateiro?"
+    "pt": "Os cães podem comer folhas, caules ou tomates verdes do tomateiro?",
+    "nl": "Mogen honden tomatenbladeren, tomatenstengels of groene tomaten eten?"
   },
   "url_slug": {
     "en": "tomato-plant",
     "sl": "paradiznikova-rastlina",
-    "pt": "tomateiro"
+    "pt": "tomateiro",
+    "nl": "tomatenplant"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
     "sl": "Ne. Zeleni deli paradižnikove rastline, vključno z nezrelimi plodovi, listi, stebli, poganjki in cvetovi, so za pse strupeni. Pes nikoli ne sme jesti listov in stebel, izogibati pa se mora tudi mladim, zelenim paradižnikom.",
-    "pt": "Não. As partes verdes do tomateiro, incluindo os tomates ainda verdes, as folhas, os caules, as ramas e as flores, são tóxicas para os cães. O teu cão nunca deve comer as folhas e os caules e deve evitar os tomates verdes e ainda novos."
+    "pt": "Não. As partes verdes do tomateiro, incluindo os tomates ainda verdes, as folhas, os caules, as ramas e as flores, são tóxicas para os cães. O teu cão nunca deve comer as folhas e os caules e deve evitar os tomates verdes e ainda novos.",
+    "nl": "Nee. De groene delen van de tomatenplant, waaronder onrijpe tomaten, bladeren, stengels, ranken en bloemen, zijn giftig voor honden. Je hond mag nooit de bladeren en stengels eten en moet jonge, groene tomaten vermijden."
   },
   "why": {
     "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
     "sl": "Listi, stebla, poganjki in cvetovi vsebujejo tomatin in solanin, naravni obrambni snovi rastline; zelen paradižnik ju vsebuje več kot zrel. ASPCA paradižnikovo rastlino uvršča med strupene za pse. Huda zastrupitev je razmeroma redka in večina primerov ob hitrem ukrepanju mine, zato jo uvrščamo med nevarne, ne strupene.",
-    "pt": "As folhas, os caules, as ramas e as flores contêm tomatina e solanina, substâncias naturais de defesa da planta; os tomates verdes contêm mais do que os maduros. A ASPCA classifica o tomateiro como tóxico para os cães. A intoxicação grave é relativamente rara e a maioria dos casos resolve-se quando é tratada rapidamente, por isso classificamos como perigoso e não como tóxico."
+    "pt": "As folhas, os caules, as ramas e as flores contêm tomatina e solanina, substâncias naturais de defesa da planta; os tomates verdes contêm mais do que os maduros. A ASPCA classifica o tomateiro como tóxico para os cães. A intoxicação grave é relativamente rara e a maioria dos casos resolve-se quando é tratada rapidamente, por isso classificamos como perigoso e não como tóxico.",
+    "nl": "De bladeren, stengels, ranken en bloemen bevatten tomatine en solanine, natuurlijke afweerstoffen van de plant; groene tomaten bevatten er meer van dan rijpe. De ASPCA noemt de tomatenplant giftig voor honden. Ernstige vergiftiging komt relatief zelden voor en de meeste gevallen verlopen goed als je er snel op reageert, daarom beoordelen wij de tomatenplant als gevaarlijk en niet als giftig."
   },
   "signs": {
     "en": [
@@ -63,42 +68,60 @@
       "Pupilas dilatadas",
       "Letargia",
       "Batimento cardíaco lento ou irregular"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Kwijlen",
+      "Verlies van eetlust",
+      "Spierzwakte",
+      "Trillen",
+      "Verlies van coördinatie",
+      "Wijde pupillen",
+      "Lusteloosheid",
+      "Trage of onregelmatige hartslag"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate parts of the tomato plant or green tomatoes, call your vet or a pet poison helpline for guidance. If your dog is already showing symptoms, contact your vet; it is important to get them checked as soon as possible.",
     "sl": "Če je pes pojedel dele paradižnikove rastline ali zelen paradižnik, za nasvet pokličite veterinarja ali center za zastrupitve živali. Če pes že kaže znake, se obrnite na veterinarja; pomembno je, da ga čim prej pregleda.",
-    "pt": "Se o teu cão comeu partes do tomateiro ou tomates verdes, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais para obteres orientação. Se o teu cão já apresenta sinais, liga ao teu veterinário: convém que seja visto o mais depressa possível."
+    "pt": "Se o teu cão comeu partes do tomateiro ou tomates verdes, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais para obteres orientação. Se o teu cão já apresenta sinais, liga ao teu veterinário: convém que seja visto o mais depressa possível.",
+    "nl": "Heeft je hond delen van de tomatenplant of groene tomaten gegeten, bel dan je dierenarts of een vergiftigingenlijn voor dieren voor advies. Vertoont je hond al verschijnselen, neem dan contact op met je dierenarts; het is belangrijk dat je hond zo snel mogelijk wordt onderzocht."
   },
   "serving": null,
   "child": {
     "en": "Tomato leaves, stems and green tomatoes are not for dogs. If a dog nibbles the plant, tell a grown-up straight away.",
     "sl": "Paradižnikovi listi, stebla in zeleni plodovi niso za pse. Če pes gricka rastlino, takoj povej odraslemu.",
-    "pt": "As folhas, os caules e os tomates verdes do tomateiro não são para os cães. Se um cão trincar a planta, avisa logo um adulto."
+    "pt": "As folhas, os caules e os tomates verdes do tomateiro não são para os cães. Se um cão trincar a planta, avisa logo um adulto.",
+    "nl": "Tomatenbladeren, tomatenstengels en groene tomaten zijn niet voor honden. Knabbelt een hond aan de plant, vertel het dan meteen aan een volwassene."
   },
   "faq": [
     {
       "q": {
         "en": "Are ripe red tomatoes okay?",
         "sl": "Je zrel rdeč paradižnik v redu?",
-        "pt": "Os tomates maduros e vermelhos não têm problema?"
+        "pt": "Os tomates maduros e vermelhos não têm problema?",
+        "nl": "Zijn rijpe rode tomaten oké?"
       },
       "a": {
         "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
         "sl": "Da. Zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah.",
-        "pt": "Não têm. Os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades."
+        "pt": "Não têm. Os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades.",
+        "nl": "Ja. Rijpe, rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven."
       }
     },
     {
       "q": {
         "en": "How do I keep my dog safe in a vegetable garden?",
         "sl": "Kako psa zavarujem na zelenjavnem vrtu?",
-        "pt": "Como mantenho o meu cão em segurança numa horta?"
+        "pt": "Como mantenho o meu cão em segurança numa horta?",
+        "nl": "Hoe houd ik mijn hond veilig in de moestuin?"
       },
       "a": {
         "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
         "sl": "Postavite fizične ovire ali vrt ogradite in pomnite, da zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse.",
-        "pt": "Cria barreiras físicas ou veda a horta e lembra-te de que os tomates verdes que caem da planta podem atrair os cães."
+        "pt": "Cria barreiras físicas ou veda a horta e lembra-te de que os tomates verdes que caem da planta podem atrair os cães.",
+        "nl": "Zorg voor een afscheiding of zet een hek om de tuin, en houd er rekening mee dat groene tomaten die van de plant vallen honden kunnen aantrekken."
       }
     }
   ],
@@ -224,6 +247,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e2129926c5e124d65df298fc04e0b22d65b3b99f23d61463454fbc6698cfeec1"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1670826ceb77077b42a2299b66cb21c5cfeca57c3318b1c03a9fbb8f07f78f2c"
     }
   }
 }

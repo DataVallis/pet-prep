@@ -4,28 +4,33 @@
   "name": {
     "en": "Chili peppers",
     "sl": "Pekoča paprika (čili)",
-    "pt": "Malaguetas"
+    "pt": "Malaguetas",
+    "nl": "Chilipepers"
   },
   "question": {
     "en": "Can dogs eat chili peppers?",
     "sl": "Ali lahko psi jedo pekočo papriko?",
-    "pt": "Os cães podem comer malaguetas?"
+    "pt": "Os cães podem comer malaguetas?",
+    "nl": "Mogen honden chilipepers eten?"
   },
   "url_slug": {
     "en": "chili-peppers",
     "sl": "pekoca-paprika",
-    "pt": "malaguetas"
+    "pt": "malaguetas",
+    "nl": "chilipepers"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
     "sl": "Ne, psu nikoli ne dajajte pekoče paprike, kot sta jalapeño ali čili. Pekoča paprika je dražilna: v ustih povzroči pekoč občutek, v večjih količinah pa lahko povzroči bruhanje in drisko.",
-    "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia."
+    "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia.",
+    "nl": "Nee, geef je hond nooit pittige pepers zoals jalapeños of chilipepers. Hete pepers zijn irriterend: ze geven een brandend gevoel in de mond en kunnen in grotere hoeveelheden braken en diarree veroorzaken."
   },
   "why": {
     "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
     "sl": "Pekoča paprika vsebuje kapsaicin, močno dražilno snov, ki je je največ v plodu in še posebej v semenih. Lahko prizadene pse, ki papriko prežvečijo in pogoltnejo. Pri domačih živalih so težave redke, vendar AKC svetuje, da psom pekoče paprike nikoli ne dajemo.",
-    "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães."
+    "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães.",
+    "nl": "Hete pepers bevatten capsaïcine, een sterk irriterende stof, met de hoogste concentraties in de vrucht en vooral in de zaadjes. Honden die op pepers kauwen en ze doorslikken, kunnen daar last van krijgen. Bij huisdieren zijn problemen zeldzaam, maar de AKC zegt dat je honden nooit pittige pepers moet geven."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Ardor e irritação nos olhos",
       "Vómitos",
       "Diarreia"
+    ],
+    "nl": [
+      "Brandend gevoel in de mond",
+      "Brandende, geïrriteerde ogen",
+      "Braken",
+      "Diarree"
     ]
   },
   "what_to_do": {
     "en": "Keep spicy peppers and dishes with them out of your dog's reach. The burning effect of capsaicin is usually short-lived and can be eased by rinsing the mouth with water.",
     "sl": "Pekočo papriko in jedi z njo hranite zunaj dosega psa. Pekoč učinek kapsaicina je običajno kratkotrajen in ga lahko omilite z izpiranjem ust z vodo.",
-    "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água."
+    "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água.",
+    "nl": "Houd pittige pepers en gerechten met pepers buiten het bereik van je hond. Het brandende gevoel van capsaïcine gaat meestal snel over en wordt minder als je de mond van je hond met water spoelt."
   },
   "serving": null,
   "child": {
     "en": "Spicy peppers are not for dogs. They make a dog's mouth feel hot. Sweet peppers are the dog-friendly kind.",
     "sl": "Pekoča paprika ni za pse. V gobčku jih peče. Sladka paprika je tista, ki je primerna za pse.",
-    "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães."
+    "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães.",
+    "nl": "Pittige pepers zijn niet voor honden. Ze geven een hond een brandend gevoel in de mond. Paprika is de hondvriendelijke variant."
   },
   "faq": [
     {
       "q": {
         "en": "Are sweet bell peppers okay?",
         "sl": "Je sladka paprika v redu?",
-        "pt": "Os pimentos doces são aceitáveis?"
+        "pt": "Os pimentos doces são aceitáveis?",
+        "nl": "Is zoete paprika oké?"
       },
       "a": {
         "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
         "sl": "Da, navadna sladka paprika je za večino psov v zmernih količinah varna, če odstranite semena in pecelj.",
-        "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo."
+        "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo.",
+        "nl": "Ja, naturele paprika is voor de meeste honden met mate veilig, mits je de zaadjes en de steel verwijdert."
       }
     }
   ],
@@ -138,6 +153,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8528c1cb439a21342308d2928f3629dcdc35a78c9966108d33b96867248d42b7"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "22f09fcce1a0dd938bfd4842ecad0e8df522c37ca312d4d3f809087893b4e383"
     }
   }
 }
