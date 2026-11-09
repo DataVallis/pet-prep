@@ -13,7 +13,8 @@
     "fi": "Lehtikaali",
     "nb": "Grønnkål",
     "de": "Grünkohl",
-    "fr": "Chou frisé"
+    "fr": "Chou frisé",
+    "es": "Col rizada (kale)"
   },
   "question": {
     "en": "Can dogs eat kale?",
@@ -27,7 +28,8 @@
     "fi": "Saako koira syödä lehtikaalia?",
     "nb": "Kan hunder spise grønnkål?",
     "de": "Dürfen Hunde Grünkohl fressen?",
-    "fr": "Les chiens peuvent-ils manger du chou frisé ?"
+    "fr": "Les chiens peuvent-ils manger du chou frisé ?",
+    "es": "¿Pueden los perros comer col rizada (kale)?"
   },
   "url_slug": {
     "en": "kale",
@@ -41,7 +43,8 @@
     "fi": "lehtikaali",
     "nb": "gronnkal",
     "de": "gruenkohl",
-    "fr": "chou-frise"
+    "fr": "chou-frise",
+    "es": "col-rizada"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "fi": "Ei kannata antaa säännöllisenä herkkuna. Vähän lehtikaalia silloin tällöin ei todennäköisesti vahingoita useimpia koiria, mutta jotkut eläinlääkärit varoittavat sen antamisesta: lehtikaalissa on kalsiumoksalaattia, jota yhdistetään munuais- ja virtsarakkokiviin, sekä isotiosyanaatteja, jotka voivat ärsyttää vatsaa.",
     "nb": "Helst ikke som fast godbit. Litt grønnkål nå og da skader neppe de fleste hunder, men noen dyrleger advarer mot den: Grønnkål inneholder kalsiumoksalat, som er knyttet til nyre- og blærestein, og isotiocyanater, som kan irritere magen.",
     "de": "Besser nicht als regelmäßiges Leckerli. Ein bisschen Grünkohl ab und zu schadet den meisten Hunden wahrscheinlich nicht, aber manche Tierärzte raten davon ab: Grünkohl enthält Calciumoxalat, das mit Nieren- und Blasensteinen in Verbindung gebracht wird, und Isothiocyanate, die den Magen reizen können.",
-    "fr": "Mieux vaut ne pas en faire une friandise régulière. Un peu de chou frisé de temps en temps ne risque guère de nuire à la plupart des chiens, mais certains vétérinaires le déconseillent : il contient de l’oxalate de calcium, associé aux calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent irriter l’estomac."
+    "fr": "Mieux vaut ne pas en faire une friandise régulière. Un peu de chou frisé de temps en temps ne risque guère de nuire à la plupart des chiens, mais certains vétérinaires le déconseillent : il contient de l’oxalate de calcium, associé aux calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent irriter l’estomac.",
+    "es": "Mejor no darla como premio habitual. Un poco de col rizada de vez en cuando es poco probable que dañe a la mayoría de los perros, pero algunos veterinarios lo desaconsejan: contiene oxalato de calcio, relacionado con los cálculos en el riñón y en la vejiga, e isotiocianatos, que pueden irritar el estómago."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
@@ -70,7 +74,8 @@
     "fi": "Lehtikaalissa on kalsiumoksalaattia, joka voi aiheuttaa munuais- ja virtsarakkokiviä, sekä isotiosyanaatteja, jotka voivat aiheuttaa koirille lievää tai mahdollisesti vakavaa vatsan ärsytystä. Säännöllisesti annettuna se voi myös häiritä kilpirauhasen toimintaa, etenkin kilpirauhasen vajaatoimintaa sairastavilla koirilla. Pieni määrä voi olla vaaraton, mutta koska osa eläinlääkäreistä varoittaa lehtikaalista, noudatamme tiukempaa ohjetta.",
     "nb": "Grønnkål inneholder kalsiumoksalat, som kan gi nyre- og blærestein, og isotiocyanater, som kan gi mild til potensielt kraftig irritasjon i magen hos hunder. Hvis hunden får den jevnlig, kan den også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose. Små mengder kan være greit, men fordi noen dyrleger advarer mot grønnkål, følger vi det strengeste rådet.",
     "de": "Grünkohl enthält Calciumoxalat, das Nieren- und Blasensteine verursachen kann, und Isothiocyanate, die bei Hunden eine leichte bis möglicherweise starke Magenreizung auslösen können. Regelmäßig gefüttert, kann er außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion. Kleine Mengen sind womöglich unproblematisch, aber weil manche Tierärzte von Grünkohl abraten, folgen wir dem strengeren Rat.",
-    "fr": "Le chou frisé contient de l’oxalate de calcium, qui peut provoquer des calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent provoquer chez le chien une irritation de l’estomac légère à potentiellement sévère. Donné régulièrement, il peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie. De petites quantités peuvent convenir, mais comme certains vétérinaires déconseillent le chou frisé, nous suivons l’avis le plus strict."
+    "fr": "Le chou frisé contient de l’oxalate de calcium, qui peut provoquer des calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent provoquer chez le chien une irritation de l’estomac légère à potentiellement sévère. Donné régulièrement, il peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie. De petites quantités peuvent convenir, mais comme certains vétérinaires déconseillent le chou frisé, nous suivons l’avis le plus strict.",
+    "es": "La col rizada contiene oxalato de calcio, que puede provocar cálculos en el riñón y en la vejiga, e isotiocianatos, que en los perros pueden causar una irritación de estómago de leve a potencialmente grave. Si se da con regularidad, también puede interferir en el funcionamiento de la tiroides, sobre todo en perros con hipotiroidismo. Las cantidades pequeñas pueden estar bien, pero como algunos veterinarios desaconsejan la col rizada, seguimos el consejo más estricto."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Diarrhée",
       "Difficulté à uriner",
       "Tout changement dans les habitudes urinaires"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Dificultad para orinar",
+      "Cualquier cambio en los hábitos urinarios"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "fi": "Jos koirasi söi lehtikaalia, tarkkaile sitä vatsaoireiden sekä munuais- ja virtsarakkokivien merkkien varalta. Ota yhteyttä eläinlääkäriin, jos huomaat oksentelua, ripulia, virtsaamisvaikeuksia tai muutoksia virtsaamistottumuksissa.",
     "nb": "Hvis hunden har spist grønnkål, må du følge nøye med på om den får urolig mage eller tegn på nyre- og blærestein. Kontakt dyrlegen hvis du ser oppkast, diaré, problemer med å late vannet eller andre endringer i hvordan hunden tisser.",
     "de": "Wenn Ihr Hund Grünkohl gefressen hat, beobachten Sie ihn genau auf Magenbeschwerden oder Anzeichen von Nieren- und Blasensteinen. Wenden Sie sich an Ihren Tierarzt, wenn Sie Erbrechen, Durchfall, Schwierigkeiten beim Urinieren oder eine Veränderung beim Urinieren bemerken.",
-    "fr": "Si votre chien a mangé du chou frisé, surveillez-le de près : troubles digestifs ou signes de calculs rénaux et vésicaux. Contactez votre vétérinaire si vous constatez des vomissements, de la diarrhée, une difficulté à uriner ou tout changement dans ses habitudes urinaires."
+    "fr": "Si votre chien a mangé du chou frisé, surveillez-le de près : troubles digestifs ou signes de calculs rénaux et vésicaux. Contactez votre vétérinaire si vous constatez des vomissements, de la diarrhée, une difficulté à uriner ou tout changement dans ses habitudes urinaires.",
+    "es": "Si tu perro ha comido col rizada, obsérvalo con atención por si tiene molestias de estómago o síntomas de cálculos en el riñón y en la vejiga. Contacta con tu veterinario si notas vómitos, diarrea, dificultad para orinar o cualquier cambio en los hábitos urinarios."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "fi": "Lehtikaali ei ole hyvä välipala koiralle. Vihreät pavut tai kurkku ovat parempia herkkuja, kun aikuinen auttaa.",
     "nb": "Grønnkål er ikke en god godbit for hunder. Grønne bønner eller agurk er bedre å dele med hunden, med hjelp fra en voksen.",
     "de": "Grünkohl ist kein guter Snack für Hunde. Grüne Bohnen oder Gurkenstücke sind bessere Leckerlis zum Teilen – mit Hilfe eines Erwachsenen.",
-    "fr": "Le chou frisé n’est pas une bonne friandise pour les chiens. Les haricots verts ou le concombre sont de meilleures friandises à partager, avec l’aide d’un adulte."
+    "fr": "Le chou frisé n’est pas une bonne friandise pour les chiens. Les haricots verts ou le concombre sont de meilleures friandises à partager, avec l’aide d’un adulte.",
+    "es": "La col rizada no es un buen tentempié para los perros. Las judías verdes o el pepino son mejores premios para compartir, con la ayuda de un adulto."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "fi": "Minkä koirien tulee välttää lehtikaalia?",
         "nb": "Hvilke hunder bør unngå grønnkål?",
         "de": "Welche Hunde sollten Grünkohl meiden?",
-        "fr": "Quels chiens doivent éviter le chou frisé ?"
+        "fr": "Quels chiens doivent éviter le chou frisé ?",
+        "es": "¿Qué perros deben evitar la col rizada?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
@@ -203,7 +217,8 @@
         "fi": "Munuais- tai virtsarakkokiville alttiiden koirien tulee välttää runsaasti kalsiumoksalaattia sisältäviä ruokia, myös lehtikaalia. Lehtikaali voi myös häiritä kilpirauhasen toimintaa, etenkin kilpirauhasen vajaatoimintaa sairastavilla koirilla.",
         "nb": "Hunder som er utsatt for nyre- eller blærestein, bør unngå mat med mye kalsiumoksalat, deriblant grønnkål. Grønnkål kan også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose.",
         "de": "Hunde, die zu Nieren- oder Blasensteinen neigen, sollten Lebensmittel mit viel Calciumoxalat meiden, darunter auch Grünkohl. Grünkohl kann außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion.",
-        "fr": "Les chiens sujets aux calculs rénaux ou vésicaux doivent éviter les aliments riches en oxalate de calcium, dont le chou frisé. Le chou frisé peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie."
+        "fr": "Les chiens sujets aux calculs rénaux ou vésicaux doivent éviter les aliments riches en oxalate de calcium, dont le chou frisé. Le chou frisé peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie.",
+        "es": "Los perros propensos a los cálculos en el riñón o en la vejiga deben evitar los alimentos con mucho oxalato de calcio, entre ellos la col rizada. La col rizada también puede interferir en el funcionamiento de la tiroides, sobre todo en perros con hipotiroidismo."
       }
     },
     {
@@ -219,7 +234,8 @@
         "fi": "Mitä koiralle voi antaa lehtikaalin tilalle?",
         "nb": "Hva kan jeg gi hunden i stedet for grønnkål?",
         "de": "Was kann ich meinem Hund statt Grünkohl geben?",
-        "fr": "Que donner à mon chien à la place du chou frisé ?"
+        "fr": "Que donner à mon chien à la place du chou frisé ?",
+        "es": "¿Qué puedo darle a mi perro en lugar de col rizada?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
@@ -233,7 +249,8 @@
         "fi": "Vihreät pavut ja kurkku ovat turvallisia useimmille koirille.",
         "nb": "Grønne bønner og agurk er trygge for de fleste hunder.",
         "de": "Grüne Bohnen und Gurken sind für die meisten Hunde unbedenklich.",
-        "fr": "Les haricots verts et les concombres sont sans danger pour la plupart des chiens."
+        "fr": "Les haricots verts et les concombres sont sans danger pour la plupart des chiens.",
+        "es": "Las judías verdes y los pepinos son seguros para la mayoría de los perros."
       }
     }
   ],
@@ -347,6 +364,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ff00f1def53b06b8cecf111a8187422eff878765927c9f30a313c0aea74e8893"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57ea6054010643b2ea61a19a2a87ead2d0d10c4c11a34e3ca435c2380b740239"
     }
   }
 }

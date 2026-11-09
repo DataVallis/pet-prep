@@ -13,7 +13,8 @@
     "fi": "Kaali",
     "nb": "Kål",
     "de": "Kohl",
-    "fr": "Chou"
+    "fr": "Chou",
+    "es": "Col"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
@@ -27,7 +28,8 @@
     "fi": "Saako koira syödä kaalia?",
     "nb": "Kan hunder spise kål?",
     "de": "Dürfen Hunde Kohl fressen?",
-    "fr": "Les chiens peuvent-ils manger du chou ?"
+    "fr": "Les chiens peuvent-ils manger du chou ?",
+    "es": "¿Pueden los perros comer col?"
   },
   "url_slug": {
     "en": "cabbage",
@@ -41,7 +43,8 @@
     "fi": "kaali",
     "nb": "kal",
     "de": "kohl",
-    "fr": "chou"
+    "fr": "chou",
+    "es": "col"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "fi": "Saa, pieninä määrinä. Kaikki kaalilajit sopivat koirille, mutta kaalista tulee paljon ilmavaivoja, joten totuta koira siihen vähitellen. Keitetty tai höyrytetty kaali on vatsalle lempeämpää kuin raaka.",
     "nb": "Ja, i små mengder. Alle slags kål er greit for hunder, men kål gir mye gass, så innfør den langsomt. Kokt eller dampet kål gir sjeldnere urolig mage enn rå kål.",
     "de": "Ja, in kleinen Mengen. Alle Kohlsorten sind für Hunde in Ordnung, aber Kohl verursacht viele Blähungen – führen Sie ihn deshalb langsam ein. Gekochter oder gedämpfter Kohl ist besser verträglich als roher.",
-    "fr": "Oui, en petite quantité. Toutes les variétés de chou conviennent aux chiens, mais le chou produit beaucoup de gaz : introduisez-le progressivement. Le chou bouilli ou cuit à la vapeur risque moins de provoquer des troubles digestifs que le chou cru."
+    "fr": "Oui, en petite quantité. Toutes les variétés de chou conviennent aux chiens, mais le chou produit beaucoup de gaz : introduisez-le progressivement. Le chou bouilli ou cuit à la vapeur risque moins de provoquer des troubles digestifs que le chou cru.",
+    "es": "Sí, en pequeñas cantidades. Todas las variedades de col son aptas para los perros, pero la col produce muchos gases, así que introdúcela poco a poco. La col hervida o al vapor suele sentar mejor al estómago que la cruda."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
@@ -70,7 +74,8 @@
     "fi": "Kaali on koirille terveellistä, mutta siitä muodostuu paljon kaasua, ja monet koirat eivät siedä sitä hyvin. Mausteet ovat suurempi ongelma: voi ja muut rasvaiset ruoat voivat aiheuttaa haimatulehduksen, ja sipuli ja valkosipuli ovat koirille myrkyllisiä.",
     "nb": "Kål er sunt for hunder, men den gir mye gass, og mange hunder tåler det kanskje ikke så godt. Krydder og tilsetninger er det største problemet: Smør og annen fet mat kan gi betennelse i bukspyttkjertelen (pankreatitt), og løk og hvitløk er giftig for hunder.",
     "de": "Kohl ist gesund für Hunde, verursacht aber viele Blähungen, und viele Hunde vertragen das womöglich nicht gut. Das größere Problem sind Gewürze und Zutaten: Butter und andere fettige Lebensmittel können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und Zwiebeln und Knoblauch sind für Hunde giftig.",
-    "fr": "Le chou est bon pour la santé des chiens, mais il produit beaucoup de gaz, que de nombreux chiens ne supportent pas bien. Les assaisonnements posent un problème plus grave : le beurre et d’autres aliments gras peuvent entraîner une pancréatite, et l’oignon et l’ail sont toxiques pour les chiens."
+    "fr": "Le chou est bon pour la santé des chiens, mais il produit beaucoup de gaz, que de nombreux chiens ne supportent pas bien. Les assaisonnements posent un problème plus grave : le beurre et d’autres aliments gras peuvent entraîner une pancréatite, et l’oignon et l’ail sont toxiques pour les chiens.",
+    "es": "La col es sana para los perros, pero produce muchos gases y a muchos les cuesta tolerarlos. Lo más delicado son los condimentos: la mantequilla y otros alimentos grasos pueden provocar pancreatitis, y la cebolla y el ajo son tóxicos para los perros."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "fi": "Seuraa koiraasi tarkasti ensimmäisen kaalimaistiaisen jälkeen. Jos koirallasi on usein paljon ilmavaivoja tai se on altis mahan turpoamiselle, kysy eläinlääkäriltä, ennen kuin annat kaalia.",
     "nb": "Følg nøye med på hunden etter at den har smakt på kål første gang. Hvis hunden ofte har mye gass eller er utsatt for oppblåst mage, bør du spørre dyrlegen før du gir kål.",
     "de": "Beobachten Sie Ihren Hund nach den ersten Bissen Kohl genau. Wenn Ihr Hund oft unter Blähungen leidet oder zu einem aufgegasten Magen (Bloat) neigt, fragen Sie Ihren Tierarzt, bevor Sie Kohl geben.",
-    "fr": "Surveillez de près votre chien après la première bouchée de chou. S’il a souvent beaucoup de gaz ou s’il est sujet à la dilatation de l’estomac (« bloat »), demandez conseil à votre vétérinaire avant de lui donner du chou."
+    "fr": "Surveillez de près votre chien après la première bouchée de chou. S’il a souvent beaucoup de gaz ou s’il est sujet à la dilatation de l’estomac (« bloat »), demandez conseil à votre vétérinaire avant de lui donner du chou.",
+    "es": "Observa con atención a tu perro la primera vez que pruebe la col. Si suele tener muchos gases o es propenso a la dilatación gástrica, consulta con tu veterinario antes de darle col."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
@@ -99,7 +105,8 @@
     "fi": "Pestynä, varsi ja kantaosa poistettuina, keitettynä tai höyrytettynä ja pieniksi paloiksi pilkottuna. Mausteettomana: ei voita, sipulia eikä valkosipulia. Vain pieniä määriä.",
     "nb": "Vasket, med stokken og kjernen fjernet, kokt eller dampet og skåret i små terninger. Uten krydder: ikke smør, løk eller hvitløk. Bare små mengder.",
     "de": "Gewaschen, ohne Strunk, gekocht oder gedämpft und in kleine Stücke geschnitten. Ungewürzt: ohne Butter, Zwiebeln oder Knoblauch. Nur in kleinen Mengen.",
-    "fr": "Lavé, sans la tige ni le trognon, bouilli ou cuit à la vapeur, et coupé en petits morceaux. Sans assaisonnement : ni beurre, ni oignon, ni ail. En petite quantité seulement."
+    "fr": "Lavé, sans la tige ni le trognon, bouilli ou cuit à la vapeur, et coupé en petits morceaux. Sans assaisonnement : ni beurre, ni oignon, ni ail. En petite quantité seulement.",
+    "es": "Lavada, sin tallo ni troncho, hervida o al vapor y cortada en trocitos pequeños. Sin condimentar: sin mantequilla, cebolla ni ajo. Solo en pequeñas cantidades."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
@@ -113,7 +120,8 @@
     "fi": "Koira saa maistaa vähän maustamatonta kypsennettyä kaalia. Siitä voi tulla ilmavaivoja, joten vain pieni pala!",
     "nb": "Hunder kan smake litt kokt kål uten tilsetninger. Den kan gi dem mye luft i magen, så bare en liten bit!",
     "de": "Hunde dürfen ein bisschen ungewürzten, gekochten Kohl probieren. Er kann sie pupsen lassen – also nur ein kleines Stück!",
-    "fr": "Les chiens peuvent goûter un peu de chou cuit nature. Cela peut leur donner des gaz : juste un petit morceau !"
+    "fr": "Les chiens peuvent goûter un peu de chou cuit nature. Cela peut leur donner des gaz : juste un petit morceau !",
+    "es": "Los perros pueden probar un poco de col cocida sin condimentar. Les puede dar gases, ¡así que solo un trocito!"
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "fi": "Saako koira syödä raakaa kaalia?",
         "nb": "Kan hunder spise rå kål?",
         "de": "Dürfen Hunde rohen Kohl fressen?",
-        "fr": "Les chiens peuvent-ils manger du chou cru ?"
+        "fr": "Les chiens peuvent-ils manger du chou cru ?",
+        "es": "¿Pueden los perros comer col cruda?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
@@ -143,7 +152,8 @@
         "fi": "Saa, mutta keitetty tai höyrytetty kaali on koiran ruoansulatukselle lempeämpää. Pilko se joka tapauksessa pieniksi paloiksi.",
         "nb": "Det kan de, men kokt eller dampet kål gir sjeldnere urolig mage hos hunder. Skjær den i små biter uansett.",
         "de": "Ja, aber gekocht oder gedämpft ist Kohl für die Verdauung eines Hundes besser verträglich. Schneiden Sie ihn in beiden Fällen in kleine Stücke.",
-        "fr": "Oui, mais le chou bouilli ou cuit à la vapeur risque moins de perturber la digestion d’un chien. Dans les deux cas, coupez-le en petits morceaux."
+        "fr": "Oui, mais le chou bouilli ou cuit à la vapeur risque moins de perturber la digestion d’un chien. Dans les deux cas, coupez-le en petits morceaux.",
+        "es": "Sí, pero la col hervida o al vapor suele sentar mejor a la digestión que la cruda. En cualquier caso, córtala en trocitos pequeños."
       }
     }
   ],
@@ -269,6 +279,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7494a830582b7eab0bb45dd29bf92e88fb4f0f4bd08b22de8734cb02d15ee5af"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2249da85ffac3e9aa7e7abc3791ea1e82cf8144614f4a901464738d7ffef1639"
     }
   }
 }
