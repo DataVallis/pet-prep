@@ -14,7 +14,8 @@
     "nb": "Søtpotet",
     "de": "Süßkartoffel",
     "fr": "Patate douce",
-    "es": "Boniato"
+    "es": "Boniato",
+    "it": "Patata dolce"
   },
   "question": {
     "en": "Can dogs eat sweet potato?",
@@ -29,7 +30,8 @@
     "nb": "Kan hunder spise søtpotet?",
     "de": "Dürfen Hunde Süßkartoffeln fressen?",
     "fr": "Les chiens peuvent-ils manger de la patate douce ?",
-    "es": "¿Pueden los perros comer boniato?"
+    "es": "¿Pueden los perros comer boniato?",
+    "it": "I cani possono mangiare la patata dolce?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -44,7 +46,8 @@
     "nb": "sotpotet",
     "de": "suesskartoffel",
     "fr": "patate-douce",
-    "es": "boniato"
+    "es": "boniato",
+    "it": "patata-dolce"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nb": "Ja, i små mengder, kokt og skrellet. Myk, kokt eller dampet søtpotet er greit som en godbit, men gi aldri rå søtpotet: Den er vanskelig å tygge, kan gi urolig mage og kan føre til tarmblokkering.",
     "de": "Ja, in kleinen Mengen, gekocht und geschält. Weich gekochte oder gedämpfte Süßkartoffel ist als Leckerli in Ordnung, geben Sie aber niemals rohe Süßkartoffel: Sie ist schwer zu kauen, kann den Magen verstimmen und möglicherweise einen Darmverschluss verursachen.",
     "fr": "Oui, en petite quantité, cuite et pelée. La patate douce bouillie ou cuite à la vapeur jusqu’à ce qu’elle soit tendre convient comme friandise, mais ne donnez jamais de patate douce crue : elle est dure à mâcher, peut causer des troubles digestifs et risque de provoquer une occlusion intestinale.",
-    "es": "Sí, en pequeñas cantidades, cocinado y pelado. El boniato blando, hervido o al vapor, está bien como premio, pero nunca le des boniato crudo: es difícil de masticar, puede sentarle mal al estómago y provocar una obstrucción intestinal."
+    "es": "Sí, en pequeñas cantidades, cocinado y pelado. El boniato blando, hervido o al vapor, está bien como premio, pero nunca le des boniato crudo: es difícil de masticar, puede sentarle mal al estómago y provocar una obstrucción intestinal.",
+    "it": "Sì, in piccole quantità, cotta e sbucciata. La patata dolce lessata o cotta al vapore fino a diventare morbida va bene come premio, ma non dare mai patata dolce cruda: è difficile da masticare, può far venire mal di stomaco e può causare un’ostruzione intestinale."
   },
   "why": {
     "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
@@ -75,7 +79,8 @@
     "nb": "Søtpoteter er ikke giftige, men rå søtpoteter er vanskelige å tygge og kan gi tarmblokkering, og skallet gjør dem tyngre å fordøye. For mye kan gi svake bein og muskler på grunn av for mye vitamin A, og på grunn av den høye glykemiske indeksen må du være forsiktig hvis hunden har diabetes. Nyere forskning tyder på at søtpoteter kanskje ikke egner seg i hundens kosthold, og de bør aldri utgjøre hovedkilden til næring.",
     "de": "Süßkartoffeln sind nicht giftig, aber rohe sind schwer zu kauen und können einen Darmverschluss verursachen, und mit Schale sind sie schwerer verdaulich. Zu viel kann wegen des Überschusses an Vitamin A zu Knochen- und Muskelschwäche führen, und wegen ihres hohen glykämischen Index brauchen Hunde mit Diabetes besondere Vorsicht. Neuere Studien legen nahe, dass sie sich womöglich nicht für die Ernährung von Hunden eignen, und sie sollten nie die Hauptnahrungsquelle sein.",
     "fr": "Les patates douces ne sont pas toxiques, mais crues elles sont dures à mâcher et peuvent provoquer une occlusion intestinale, et la peau les rend plus difficiles à digérer. Trop de patate douce peut entraîner une faiblesse des os et des muscles due à un excès de vitamine A, et son indice glycémique élevé impose de la prudence chez les chiens diabétiques. Des recherches récentes suggèrent qu’elle pourrait ne pas convenir à l’alimentation d’un chien, et elle ne doit jamais en être la source principale.",
-    "es": "Los boniatos no son venenosos, pero los crudos son difíciles de masticar y pueden provocar una obstrucción intestinal, y la piel los hace más difíciles de digerir. Demasiado boniato puede causar debilidad ósea y muscular por exceso de vitamina A, y su alto índice glucémico exige precaución con los perros diabéticos. Investigaciones recientes sugieren que quizá no sean adecuados para la dieta de un perro, y nunca deben ser la principal fuente de alimentación."
+    "es": "Los boniatos no son venenosos, pero los crudos son difíciles de masticar y pueden provocar una obstrucción intestinal, y la piel los hace más difíciles de digerir. Demasiado boniato puede causar debilidad ósea y muscular por exceso de vitamina A, y su alto índice glucémico exige precaución con los perros diabéticos. Investigaciones recientes sugieren que quizá no sean adecuados para la dieta de un perro, y nunca deben ser la principal fuente de alimentación.",
+    "it": "Le patate dolci non sono velenose, ma quelle crude sono troppo dure da masticare e possono causare un’ostruzione intestinale, e la buccia le rende più difficili da digerire. Se ne vengono mangiate troppe, l’eccesso di vitamina A può causare debolezza alle ossa e ai muscoli, e il loro alto indice glicemico richiede attenzione nei cani diabetici. Ricerche recenti suggeriscono che potrebbero non essere adatte all’alimentazione del cane, e non devono mai essere la fonte principale di nutrimento."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nb": "Spør dyrlegen før du endrer hundens kosthold, og begynn med en liten mengde for å se hvordan hunden reagerer.",
     "de": "Fragen Sie Ihren Tierarzt, bevor Sie die Ernährung Ihres Hundes umstellen, und beginnen Sie dann mit einer kleinen Menge, um zu sehen, wie Ihr Hund reagiert.",
     "fr": "Demandez conseil à votre vétérinaire avant de modifier l’alimentation de votre chien, puis commencez par une petite quantité pour voir comment il réagit.",
-    "es": "Consulta con tu veterinario antes de cambiar la dieta de tu perro y empieza con una pequeña cantidad para ver cómo reacciona."
+    "es": "Consulta con tu veterinario antes de cambiar la dieta de tu perro y empieza con una pequeña cantidad para ver cómo reacciona.",
+    "it": "Chiedi al veterinario prima di cambiare l’alimentazione del tuo cane, poi comincia con una piccola quantità per vedere come reagisce."
   },
   "serving": {
     "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
@@ -106,7 +112,8 @@
     "nb": "Kokt eller dampet til den er myk, uten skall, i små mengder. Aldri rå, og aldri hoveddelen av kostholdet.",
     "de": "Gekocht oder gedämpft, bis sie weich ist, ohne Schale, in kleinen Mengen. Niemals roh und niemals als Hauptbestandteil der Ernährung.",
     "fr": "Bouillie ou cuite à la vapeur jusqu’à ce qu’elle soit tendre, sans la peau, en petite quantité. Jamais crue, et jamais la base de l’alimentation.",
-    "es": "Hervido o al vapor hasta que esté blando, sin piel, en pequeñas cantidades. Nunca crudo, y nunca como parte principal de la dieta."
+    "es": "Hervido o al vapor hasta que esté blando, sin piel, en pequeñas cantidades. Nunca crudo, y nunca como parte principal de la dieta.",
+    "it": "Lessata o cotta al vapore fino a diventare morbida, senza buccia, in piccole quantità. Mai cruda e mai come parte principale dell’alimentazione."
   },
   "child": {
     "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
@@ -121,7 +128,8 @@
     "nb": "Hunder kan få litt myk, kokt søtpotet. En voksen skreller og koker den først.",
     "de": "Hunde dürfen ein bisschen weiche, gekochte Süßkartoffel bekommen. Ein Erwachsener schält und kocht sie vorher.",
     "fr": "Les chiens peuvent manger un peu de patate douce tendre et cuite. Un adulte l’épluche et la fait cuire d’abord.",
-    "es": "Los perros pueden tomar un poquito de boniato blando y cocido. Un adulto lo pela y lo cocina antes."
+    "es": "Los perros pueden tomar un poquito de boniato blando y cocido. Un adulto lo pela y lo cocina antes.",
+    "it": "I cani possono mangiare un po’ di patata dolce cotta e morbida. Prima un adulto la sbuccia e la cuoce."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nb": "Kan hunder spise søtpotetskall?",
         "de": "Dürfen Hunde Süßkartoffelschale fressen?",
         "fr": "Les chiens peuvent-ils manger la peau de la patate douce ?",
-        "es": "¿Pueden los perros comer piel de boniato?"
+        "es": "¿Pueden los perros comer piel de boniato?",
+        "it": "I cani possono mangiare la buccia della patata dolce?"
       },
       "a": {
         "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
@@ -153,7 +162,8 @@
         "nb": "Det er best å fjerne det: Med skallet på blir søtpoteten vanskeligere for hunden å fordøye.",
         "de": "Am besten schälen Sie die Süßkartoffel: Mit Schale ist sie für Ihren Hund schwerer verdaulich.",
         "fr": "Mieux vaut la retirer : avec la peau, la patate douce est plus difficile à digérer pour votre chien.",
-        "es": "Lo mejor es quitársela: si se deja la piel, al perro le resulta más difícil digerir el boniato."
+        "es": "Lo mejor es quitársela: si se deja la piel, al perro le resulta más difícil digerir el boniato.",
+        "it": "Meglio toglierla: lasciare la buccia rende la patata dolce più difficile da digerire per il cane."
       }
     },
     {
@@ -170,7 +180,8 @@
         "nb": "Kan hunder spise rå søtpotet?",
         "de": "Dürfen Hunde rohe Süßkartoffel fressen?",
         "fr": "Les chiens peuvent-ils manger de la patate douce crue ?",
-        "es": "¿Pueden los perros comer boniato crudo?"
+        "es": "¿Pueden los perros comer boniato crudo?",
+        "it": "I cani possono mangiare la patata dolce cruda?"
       },
       "a": {
         "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
@@ -185,7 +196,8 @@
         "nb": "Nei. Rå søtpotet er vanskelig å tygge, kan gi hunden urolig mage og kan føre til tarmblokkering. Kok den til den er myk.",
         "de": "Nein. Rohe Süßkartoffel ist schwer zu kauen, kann den Magen Ihres Hundes verstimmen und möglicherweise einen Darmverschluss verursachen. Kochen Sie sie, bis sie weich ist.",
         "fr": "Non. La patate douce crue est difficile à mâcher, peut causer des troubles digestifs chez votre chien et risque de provoquer une occlusion intestinale. Faites-la cuire jusqu’à ce qu’elle soit tendre.",
-        "es": "No. El boniato crudo es difícil de masticar, puede sentarle mal al estómago de tu perro y provocar una obstrucción intestinal. Cuécelo hasta que esté blando."
+        "es": "No. El boniato crudo es difícil de masticar, puede sentarle mal al estómago de tu perro y provocar una obstrucción intestinal. Cuécelo hasta que esté blando.",
+        "it": "No. La patata dolce cruda è difficile da masticare, può far venire mal di stomaco al cane e può causare un’ostruzione intestinale. Cuocila fino a renderla morbida."
       }
     }
   ],
@@ -318,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2d3044c465ba6f306a2ae7eb1707fb7c95283e3e293e3c17150c6e9d7cdb7524"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68909af505381d35fa04890203a1072599904ced7b2eeb201df41e11e49bcab0"
     }
   }
 }

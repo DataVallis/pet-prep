@@ -14,7 +14,8 @@
     "nb": "Gresskar",
     "de": "Kürbis",
     "fr": "Citrouille",
-    "es": "Calabaza"
+    "es": "Calabaza",
+    "it": "Zucca"
   },
   "question": {
     "en": "Can cats eat pumpkin?",
@@ -29,7 +30,8 @@
     "nb": "Kan katter spise gresskar?",
     "de": "Dürfen Katzen Kürbis fressen?",
     "fr": "Les chats peuvent-ils manger de la citrouille ?",
-    "es": "¿Pueden los gatos comer calabaza?"
+    "es": "¿Pueden los gatos comer calabaza?",
+    "it": "I gatti possono mangiare la zucca?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -44,7 +46,8 @@
     "nb": "gresskar",
     "de": "kuerbis",
     "fr": "citrouille",
-    "es": "calabaza"
+    "es": "calabaza",
+    "it": "zucca"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nb": "Ja, litt kokt gresskar uten tilsetninger er greit som en godbit en gang iblant. Pet Poison Helpline regner gresskar som trygt for hunder og katter, men VCA peker på at gresskar og gresskarkjerner kan gi katten urolig mage i store mengder, så dropp kjernene og skallet.",
     "de": "Ja, ein wenig ungewürzter, gekochter Kürbis ist als gelegentliches Leckerli in Ordnung. Die Pet Poison Helpline bezeichnet Kürbis als unbedenklich für Hunde und Katzen, laut VCA können Kürbis und Kürbiskerne in größeren Mengen einer Katze aber auf den Magen schlagen – lassen Sie deshalb Kerne und Schale weg.",
     "fr": "Oui, un peu de citrouille cuite nature convient en friandise de temps en temps. Pet Poison Helpline la juge sans danger pour les chiens et les chats, mais VCA précise qu’en grande quantité, elle et ses graines peuvent causer des troubles digestifs chez le chat : évitez les graines et l’écorce.",
-    "es": "Sí, un poco de calabaza cocida sin condimentar está bien como premio ocasional. Pet Poison Helpline considera la calabaza segura para perros y gatos, pero VCA señala que la calabaza y sus pipas pueden sentarle mal al estómago del gato en cantidades grandes, así que evita las pipas y la corteza."
+    "es": "Sí, un poco de calabaza cocida sin condimentar está bien como premio ocasional. Pet Poison Helpline considera la calabaza segura para perros y gatos, pero VCA señala que la calabaza y sus pipas pueden sentarle mal al estómago del gato en cantidades grandes, así que evita las pipas y la corteza.",
+    "it": "Sì, un po’ di zucca cotta senza condimenti va bene come premio occasionale. Per Pet Poison Helpline la zucca è sicura per cani e gatti, ma secondo VCA la zucca e i suoi semi, in grandi quantità, possono far venire mal di stomaco al gatto, per cui niente semi né buccia."
   },
   "why": {
     "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
@@ -75,7 +79,8 @@
     "nb": "Pet Poison Helpline skriver at gresskar er trygt for hunder og katter, og at kokt eller bearbeidet gresskar er mye lettere å fordøye enn rått. VCA legger til at gresskar og gresskarkjerner, selv om de ikke er giftige, kan gi katten urolig mage, særlig i store mengder. Katter trenger ikke frukt eller grønnsaker i kostholdet, og godbiter bør gis sjelden.",
     "de": "Die Pet Poison Helpline schreibt, dass Kürbis für Hunde und Katzen unbedenklich ist und dass gekochter oder verarbeiteter Kürbis viel leichter verdaulich ist als roher. Die VCA ergänzt, dass Kürbis und Kürbiskerne zwar ungiftig sind, einer Katze aber auf den Magen schlagen können, besonders in größeren Mengen. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, und Leckerlis sollten selten sein.",
     "fr": "Pet Poison Helpline indique que la citrouille est sans danger pour les chiens et les chats, et que la citrouille cuite ou transformée est bien plus facile à digérer que la citrouille crue. VCA ajoute que, bien que non toxiques, la citrouille et ses graines peuvent provoquer des troubles digestifs chez un chat, surtout en grande quantité. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, et les friandises doivent rester occasionnelles.",
-    "es": "Pet Poison Helpline afirma que la calabaza es segura para perros y gatos, y que la calabaza cocinada o procesada se digiere mucho mejor que la cruda. VCA añade que, aunque no es tóxica, la calabaza y sus pipas pueden sentarle mal al estómago del gato, sobre todo en cantidades grandes. Los gatos no necesitan fruta ni verdura en su dieta, y los premios deben ser pocos."
+    "es": "Pet Poison Helpline afirma que la calabaza es segura para perros y gatos, y que la calabaza cocinada o procesada se digiere mucho mejor que la cruda. VCA añade que, aunque no es tóxica, la calabaza y sus pipas pueden sentarle mal al estómago del gato, sobre todo en cantidades grandes. Los gatos no necesitan fruta ni verdura en su dieta, y los premios deben ser pocos.",
+    "it": "Per Pet Poison Helpline la zucca è sicura per cani e gatti e quella cotta o lavorata è molto più digeribile di quella cruda. VCA aggiunge che, pur non essendo tossici, la zucca e i suoi semi possono far venire mal di stomaco al gatto, soprattutto in grandi quantità. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione e i premi vanno dati con parsimonia."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten gresskar og spør dyrlegen.",
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
-    "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario."
+    "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
   },
   "serving": {
     "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
@@ -106,7 +112,8 @@
     "nb": "En liten bit kokt gresskar uten tilsetninger, eller gresskarpuré på boks der gresskar er den eneste ingrediensen. Uten kjerner og skall, og uten salt eller krydder.",
     "de": "Ein kleines Stück ungewürzter, gekochter Kürbis oder reines Kürbispüree aus der Dose, das nur aus Kürbis besteht. Ohne Kerne, ohne Schale, ohne Salz oder Gewürze.",
     "fr": "Un petit morceau de citrouille cuite nature, ou de la purée de citrouille en conserve nature, dont la citrouille est le seul ingrédient. Ni graines, ni écorce, ni sel, ni assaisonnement.",
-    "es": "Un trocito de calabaza cocida sin condimentar, o puré de calabaza en conserva sin nada añadido, cuyo único ingrediente sea la calabaza. Sin pipas, sin corteza, sin sal ni condimentos."
+    "es": "Un trocito de calabaza cocida sin condimentar, o puré de calabaza en conserva sin nada añadido, cuyo único ingrediente sea la calabaza. Sin pipas, sin corteza, sin sal ni condimentos.",
+    "it": "Un pezzettino di zucca cotta senza condimenti, oppure purea di zucca in scatola al naturale che abbia la zucca come unico ingrediente. Niente semi, niente buccia, niente sale né condimenti."
   },
   "child": {
     "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
@@ -121,7 +128,8 @@
     "nb": "Litt kokt gresskar kan være en godbit for pusen nå og da. Ingen kjerner eller skall, og katter trenger mest kjøtt.",
     "de": "Ein bisschen gekochter Kürbis kann ab und zu ein Leckerli für Katzen sein. Ohne Kerne und Schale – und Katzen brauchen vor allem Fleisch.",
     "fr": "Un petit morceau de citrouille cuite, c’est parfois une friandise pour un chat. Ni graines ni peau, et les chats ont surtout besoin de viande.",
-    "es": "Un poquito de calabaza cocida puede ser un premio para un gato de vez en cuando. Sin pipas ni piel, y recuerda que los gatos necesitan sobre todo carne."
+    "es": "Un poquito de calabaza cocida puede ser un premio para un gato de vez en cuando. Sin pipas ni piel, y recuerda que los gatos necesitan sobre todo carne.",
+    "it": "Ogni tanto il gatto può avere un pochino di zucca cotta come premietto. Niente semi né buccia, e i gatti hanno bisogno soprattutto di carne."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nb": "Hva med gresskar til Halloween?",
         "de": "Und was ist mit Halloween-Kürbissen?",
         "fr": "Et les citrouilles d’Halloween ?",
-        "es": "¿Y las calabazas de Halloween?"
+        "es": "¿Y las calabazas de Halloween?",
+        "it": "E le zucche di Halloween?"
       },
       "a": {
         "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
@@ -153,7 +162,8 @@
         "nb": "Ferske gresskar er ikke skadelige, men Blue Cross skriver at råtne gresskar kan gi katten vondt i magen, så hold utskårne gresskar utenfor rekkevidde, eller fjern dem når de ikke lenger er ferske.",
         "de": "Frische Kürbisse sind nicht schädlich, aber laut Blue Cross können verdorbene einer Katze auf den Magen schlagen. Halten Sie ausgehöhlte Kürbisse deshalb außer Reichweite oder entfernen Sie sie, sobald sie nicht mehr frisch sind.",
         "fr": "Les citrouilles fraîches ne sont pas nocives, mais Blue Cross indique que celles qui pourrissent peuvent donner mal au ventre à un chat : gardez les citrouilles sculptées hors de sa portée ou retirez-les quand elles ne sont plus fraîches.",
-        "es": "Las calabazas frescas no son dañinas, pero Blue Cross advierte de que las podridas pueden sentarle mal a la barriguita del gato, así que mantén las calabazas talladas fuera de su alcance o retíralas cuando dejen de estar frescas."
+        "es": "Las calabazas frescas no son dañinas, pero Blue Cross advierte de que las podridas pueden sentarle mal a la barriguita del gato, así que mantén las calabazas talladas fuera de su alcance o retíralas cuando dejen de estar frescas.",
+        "it": "Le zucche fresche non fanno male, ma secondo Blue Cross quelle marce possono far venire mal di pancia al gatto: tieni le zucche intagliate fuori dalla sua portata o toglile quando non sono più fresche."
       }
     },
     {
@@ -170,7 +180,8 @@
         "nb": "Trenger katter grønnsaker?",
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
-        "es": "¿Necesitan los gatos verdura?"
+        "es": "¿Necesitan los gatos verdura?",
+        "it": "I gatti hanno bisogno di verdure?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -185,7 +196,8 @@
         "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg.",
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
-        "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra."
+        "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
       }
     }
   ],
@@ -319,6 +331,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d018ca525adedba5dba610f3c762f7ece3cbcd481b2a422541bafbd2d1ff7120"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "098bc83ca8dd6b6b3731e832e60057c4f64657d363dc81c6551063a713992790"
     }
   }
 }

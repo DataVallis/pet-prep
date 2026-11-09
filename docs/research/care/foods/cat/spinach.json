@@ -14,7 +14,8 @@
     "nb": "Spinat",
     "de": "Spinat",
     "fr": "Épinards",
-    "es": "Espinacas"
+    "es": "Espinacas",
+    "it": "Spinaci"
   },
   "question": {
     "en": "Can cats eat spinach?",
@@ -29,7 +30,8 @@
     "nb": "Kan katter spise spinat?",
     "de": "Dürfen Katzen Spinat fressen?",
     "fr": "Les chats peuvent-ils manger des épinards ?",
-    "es": "¿Pueden los gatos comer espinacas?"
+    "es": "¿Pueden los gatos comer espinacas?",
+    "it": "I gatti possono mangiare gli spinaci?"
   },
   "url_slug": {
     "en": "spinach",
@@ -44,7 +46,8 @@
     "nb": "spinat",
     "de": "spinat",
     "fr": "epinards",
-    "es": "espinacas"
+    "es": "espinacas",
+    "it": "spinaci"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nb": "Ja, en liten bit spinat uten tilsetninger er greit som en godbit en gang iblant. Cats Protection oppgir spinat blant de få grønnsakene du kan gi katten, hvis den har lyst. Katter trenger ikke grønnsaker, så la det bli et bitte lite tillegg.",
     "de": "Ja, ein bisschen ungewürzter Spinat ist als gelegentliches Leckerli in Ordnung. Cats Protection nennt Spinat unter den wenigen Gemüsesorten, die Sie Ihrer Katze geben können, wenn sie Interesse daran zeigt. Katzen brauchen kein Gemüse, deshalb sollte es nur ein winziges Extra bleiben.",
     "fr": "Oui, un petit peu d’épinards nature peut être donné de temps en temps en friandise. Cats Protection compte les épinards parmi les rares légumes que l’on peut donner à un chat, à condition qu’il en mange volontiers. Comme les chats n’ont pas besoin de légumes, réservez-les à un petit plus occasionnel.",
-    "es": "Sí, un poquito de espinacas sin condimentar está bien como premio ocasional. Cats Protection incluye las espinacas entre las pocas verduras que se pueden dar a un gato, si le apetecen. Los gatos no necesitan verdura, así que dale solo una pequeña cantidad como extra."
+    "es": "Sí, un poquito de espinacas sin condimentar está bien como premio ocasional. Cats Protection incluye las espinacas entre las pocas verduras que se pueden dar a un gato, si le apetecen. Los gatos no necesitan verdura, así que dale solo una pequeña cantidad como extra.",
+    "it": "Sì, un po’ di spinaci senza condimenti vanno bene come premio occasionale. Cats Protection mette gli spinaci tra le poche verdure che si possono dare al gatto, se le gradisce. I gatti non hanno bisogno di verdure, quindi considerali solo un piccolissimo extra."
   },
   "why": {
     "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -75,7 +79,8 @@
     "nb": "Cats Protection nevner spinat blant de få grønnsakene du kan gi en katt, hvis den har lyst, og anbefaler dampede eller kokte grønnsaker uten smør, salt eller krydder. Katter trenger ikke frukt eller grønnsaker i kostholdet, godbiter bør gis sjelden, og ASPCA påpeker at alt plantemateriale kan gi katter oppkast og urolig mage.",
     "de": "Cats Protection nennt Spinat unter den wenigen Gemüsesorten, die Sie einer Katze geben können, wenn sie Interesse daran zeigt, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "Cats Protection compte les épinards parmi les rares légumes que l’on peut donner à un chat, à condition qu’il en mange volontiers, et suggère des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat.",
-    "es": "Cats Protection cita las espinacas entre las pocas verduras que se pueden dar a un gato, si le apetecen, y sugiere verduras al vapor o hervidas, sin mantequilla, sal ni condimentos. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos."
+    "es": "Cats Protection cita las espinacas entre las pocas verduras que se pueden dar a un gato, si le apetecen, y sugiere verduras al vapor o hervidas, sin mantequilla, sal ni condimentos. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
+    "it": "Cats Protection cita gli spinaci tra le poche verdure che si possono dare a un gatto, se le gradisce, e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten spinat og spør dyrlegen.",
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
-    "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario."
+    "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
   },
   "serving": {
     "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
@@ -106,7 +112,8 @@
     "nb": "En liten bit, dampet eller kokt, uten smør, salt eller krydder.",
     "de": "Eine kleine Menge, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit peu, cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement.",
-    "es": "Una pequeña cantidad, al vapor o hervidas, sin mantequilla, sal ni condimentos."
+    "es": "Una pequeña cantidad, al vapor o hervidas, sin mantequilla, sal ni condimentos.",
+    "it": "Una piccola quantità, cotta al vapore o lessata, senza burro, sale o condimenti."
   },
   "child": {
     "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -121,7 +128,8 @@
     "nb": "En bitteliten bit spinat kan være en godbit for pusen nå og da. Katter trenger mest kjøtt, så grønnsaker er bare litt ekstra.",
     "de": "Ein winziges Stück Spinat kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un tout petit peu d’épinards, c’est parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit plus.",
-    "es": "Un poquito de espinacas puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es solo un pequeño extra."
+    "es": "Un poquito de espinacas puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es solo un pequeño extra.",
+    "it": "Ogni tanto il gatto può avere un pochino di spinaci come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nb": "Trenger katter grønnsaker?",
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
-        "es": "¿Necesitan los gatos verdura?"
+        "es": "¿Necesitan los gatos verdura?",
+        "it": "I gatti hanno bisogno di verdure?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -153,7 +162,8 @@
         "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg.",
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
-        "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra."
+        "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
       }
     }
   ],
@@ -267,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aa74f94683cfe0068e49d97428b24fd9ce862cb4c80de964595307aaf41f366d"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "663818aa0dd53929fba9676d69fa1a23ea7a48e867a0ed175d1389873b1e4164"
     }
   }
 }
