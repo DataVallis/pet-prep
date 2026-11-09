@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "d3bf0107d2d8c7f8651f4ced29e41bf87d5e029f11949b2af3132cc92d86a56d"
+      "sha256": "7ec92b3bddbfc5ef6a9951a3a40135a3a751642fc2876bc32a423f1149a21afc"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "bd9171bb5a9970daa3f95ea8c0ad6950af6886d3a7f8dcea9c85b1be2ebe1c3f"
+      "sha256": "c00e1964037f0c53f492abe31cb9d584d233d1d3a758d523d1219f2968475bbe"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d8ee5cec5f6dfd68c6df0ded904f298069d89409500ab838dc962faf7f19e464"
+      "sha256": "93fd05f032da8f37e361031392628e6fe5ce4fbedcedef50365ce6b34a964881"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8684df3251477b1f7d834952792dcd4cef2d6bca735d6f95842478d4b9055b39"
+      "sha256": "b460f4f681dcfd8fc057c32eb7c3ad2bcc4368b24cf12f3adb28cb978436c6fc"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c78ddcc40723ce1690e566d34d195f6289a359559c12e274911c9b82737e5bed"
+      "sha256": "5583832ea1f58fc8ad131cd81ec4de0a30ec6cdb2e3de6c1d99babe12cbce514"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "beed65ad2c620bfad6503a31c17a5378ec9ec13a59b7551e07b677853daed62f"
+      "sha256": "b7e265c58a353cc278b9519ec2728993c274d966de98d6e56a97530bd3f65875"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "1c9c8739869f30e82b9319350e91f36d6f30182a25497c15fe1a97d5b4fbcb2c"
+      "sha256": "1f03b30760c17f7c54b48b45f6de37485a821cada05bafb28b12319eb7d52e07"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 91,
+      "breed_count": 92,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -55122,6 +55122,620 @@
       ]
     },
     {
+      "id": "lhasa_apso",
+      "species": "dog",
+      "order": 91,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Lhasa Apso",
+        "sl": "Lhasa apso"
+      },
+      "slug": {
+        "en": "lhasa-apso",
+        "sl": "lhasa-apso"
+      },
+      "synonyms": {
+        "en": [
+          "Lhasa",
+          "Apso",
+          "Lhasa Apso dog"
+        ],
+        "sl": [
+          "lhasa",
+          "lasa apso",
+          "tibetanski pes lhasa apso"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              28
+            ],
+            "female": [
+              25,
+              28
+            ]
+          },
+          "source_ids": [
+            "S742"
+          ],
+          "ref": "lhasa_apso.height.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.9,
+              6.8
+            ],
+            "female": [
+              5.9,
+              6.8
+            ]
+          },
+          "source_ids": [
+            "S742"
+          ],
+          "ref": "lhasa_apso.adult_weight.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "lhasa_apso.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S740"
+          ],
+          "ref": "lhasa_apso.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 68,
+          "source_ids": [
+            "S744"
+          ],
+          "ref": "lhasa_apso.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 227,
+            "group": 9,
+            "section": 5,
+            "origin": "CN-XZ"
+          },
+          "source_ids": [
+            "S737"
+          ],
+          "ref": "lhasa_apso.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.glaucoma",
+          "confidence": "medium"
+        },
+        {
+          "key": "dry_eye",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.dry_eye",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.skin",
+          "confidence": "medium"
+        },
+        {
+          "key": "back_disc_disease",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.ivdd",
+          "confidence": "medium"
+        },
+        {
+          "key": "hydrocephalus",
+          "source_ids": [
+            "S741"
+          ],
+          "ref": "lhasa_apso.health.hydrocephalus",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S740"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_size_of_home",
+              "lhasa_apso.suitability.rkc_garden"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S741",
+              "S742"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.pdsa_children",
+              "lhasa_apso.suitability.vca_children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S741"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.pdsa_children",
+              "lhasa_apso.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S740"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S740",
+              "S741"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_grooming",
+              "lhasa_apso.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 14
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S740"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S740 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S740"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S740)"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.learning_multiplier",
+            "basis_source_ids": [
+              "S744"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 68, tier Fair, S744)"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.grooming",
+            "basis_source_ids": [
+              "S740"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): »Every day« → 7 (RKC S740, PDSA S741); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.tooth_brushing",
+            "basis_source_ids": [
+              "S743"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brushing daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.nail_trimming",
+            "basis_source_ids": [
+              "S743"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »once every 3 to 4 weeks« → vsake 4 tedne (3 tedne ni programsko obdobje — odprto za Davida)"
+          },
+          {
+            "ref": "proposed_game_parameters.lhasa_apso.bathing",
+            "basis_source_ids": [
+              "S743"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once every two weeks« → vsaka 2 tedna"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S45",
+          "S740",
+          "S743",
+          "S744"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_pra4",
+            "level": "minimum",
+            "source_ids": [
+              "S740"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S740"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S740"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S45",
+        "S737",
+        "S740",
+        "S741",
+        "S742",
+        "S743",
+        "S744",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -60825,6 +61439,48 @@
       "publisher": "Wikipedia",
       "title": "English Setter",
       "url": "https://en.wikipedia.org/wiki/English_Setter"
+    },
+    {
+      "id": "S737",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — LHASA APSO (227)",
+      "url": "https://fci.be/en/nomenclature/LHASA-APSO-227.html"
+    },
+    {
+      "id": "S740",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Lhasa Apso",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/"
+    },
+    {
+      "id": "S741",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Lhasa Apso breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/lhasa-apso"
+    },
+    {
+      "id": "S742",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no author / date shown)",
+      "title": "Lhasa Apso — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/lhasa-apso"
+    },
+    {
+      "id": "S743",
+      "tier": "B",
+      "publisher": "WebMD Pets — Hailey Marshall, medically reviewed by Vanesa Farmer, DVM (2026-05-26)",
+      "title": "What to Know About Lhasa Apso Dogs",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-lhasa-apso-dogs"
+    },
+    {
+      "id": "S744",
+      "tier": "C",
+      "publisher": "Wikipedia",
+      "title": "Lhasa Apso",
+      "url": "https://en.wikipedia.org/wiki/Lhasa_Apso"
     },
     {
       "id": "C1",

@@ -639,6 +639,19 @@ return [
         ['key' => 'liver-belton', 'value' => 'liver belton (white evenly flecked with liver)', 'en' => 'Liver belton', 'sl' => 'Jetrni belton'],
         ['key' => 'liver-belton-tan', 'value' => 'tricolour (liver belton with tan markings)', 'en' => 'Tricolour (liver belton and tan)', 'sl' => 'Tribarven (jetrni belton z rjavim)'],
     ],
+    // M5-R10-98: FCI-Standard N° 227 (S738) — the ten standard colours, same order and values as breed_appearance.php.
+    'lhasa_apso' => [
+        ['key' => 'golden', 'value' => 'golden', 'en' => 'Golden', 'sl' => 'Zlat'],
+        ['key' => 'sandy', 'value' => 'sandy', 'en' => 'Sandy', 'sl' => 'Peščen'],
+        ['key' => 'honey', 'value' => 'honey', 'en' => 'Honey', 'sl' => 'Medeno rjav'],
+        ['key' => 'dark-grizzle', 'value' => 'dark grizzle', 'en' => 'Dark grizzle', 'sl' => 'Temno sivkast'],
+        ['key' => 'slate', 'value' => 'slate grey', 'en' => 'Slate', 'sl' => 'Skrilasto siv'],
+        ['key' => 'smoke', 'value' => 'smoke grey', 'en' => 'Smoke', 'sl' => 'Dimast'],
+        ['key' => 'parti-colour', 'value' => 'parti-colour (white with coloured patches)', 'en' => 'Parti-colour', 'sl' => 'Dvobarven'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

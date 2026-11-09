@@ -481,6 +481,7 @@ const SPECIES = [
       { id: 'standard_schnauzer', synonyms: { en: ['Schnauzer', 'Mittelschnauzer', 'Wire-Haired Pinscher'], sl: ['srednji snavcer', 'šnavcer', 'mittelschnauzer'] } },
       { id: 'coton_de_tulear', synonyms: { en: ['Coton', 'Coton de Tuléar', 'Royal Dog of Madagascar'], sl: ['coton', 'cotonček', 'coton de tuléar'] } },
       { id: 'english_setter', synonyms: { en: ['Laverack Setter', 'Llewellin Setter', 'Setter'], sl: ['angleški seter', 'seter'] } },
+      { id: 'lhasa_apso', synonyms: { en: ['Lhasa', 'Apso', 'Lhasa Apso dog'], sl: ['lhasa', 'lasa apso', 'tibetanski pes lhasa apso'] } },
     ],
   },
   {
@@ -2571,6 +2572,31 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-98. RKC page (S740): exercise 'Up to 1 hour per day', coat 'Long', grooming 'Every day', sheds 'No',
+  // lifespan 'Over 12 years'; height VCA 10–11 in ≈ 25–28 cm (S742; FCI N° 227 S738 gives only the males' ideal 25 cm);
+  // weight VCA 13–15 lb ≈ 5.9–6.8 kg (S742; no standard gives one). Coren rank 68 (S744). FCI origin Tibet (China).
+  // Not exported: height.fci (males only), lifespan.pdsa / vca / mcmillan_2024 (null; 14 y only via Wikipedia, tier C) /
+  // senior_from (derived), health.cherry_eye (no register key). No new health key.
+  lhasa_apso: {
+    height: ['height.vca'],
+    weight: [['adult_weight.vca', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['cataracts', 'health.cataracts'],
+      ['glaucoma', 'health.glaucoma'],
+      ['dry_eye', 'health.dry_eye'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['back_disc_disease', 'health.ivdd'],
+      ['hydrocephalus', 'health.hydrocephalus'],
+    ],
+  },
 
 
 };
@@ -2632,6 +2658,7 @@ export const DOG_CARE_TASKS = {
   standard_schnauzer: [['nail_trim', 1, 7, 'proposed_game_parameters.standard_schnauzer.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.standard_schnauzer.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.standard_schnauzer.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.standard_schnauzer.professional_grooming']],
   coton_de_tulear: [['ear_cleaning', 1, 7, 'proposed_game_parameters.coton_de_tulear.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.coton_de_tulear.bathing']],
   english_setter: [['bath', 1, 42, 'proposed_game_parameters.english_setter.bathing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.english_setter.professional_grooming']],
+  lhasa_apso: [['tooth_brushing', 7, 7, 'proposed_game_parameters.lhasa_apso.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.lhasa_apso.nail_trimming'], ['bath', 1, 14, 'proposed_game_parameters.lhasa_apso.bathing']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3382,6 +3409,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.english_setter.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.english_setter.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.english_setter.exercise_minutes_senior',
+  },
+  lhasa_apso: {
+    adult_minutes: ['proposed_game_parameters.lhasa_apso.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.lhasa_apso.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.lhasa_apso.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.lhasa_apso.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.lhasa_apso.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.lhasa_apso.exercise_minutes_senior',
   },
 
 

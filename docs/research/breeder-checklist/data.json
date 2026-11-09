@@ -3559,6 +3559,33 @@
         }
       ],
       "notes": "RKC breed page (dog-data S731, 2026-11-06; 'Good Practice' tests = minimum, 'Best Practice'): minimum genetic diversity (inbreeding_coi) and the BVA/RKC hip scheme (hip_scheme); Best Practice NCL8 DNA test (new key dna_ncl8), elbow scheme and the BAER hearing test (hearing_baer, existing key)."
+    },
+    "lhasa_apso": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S740",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_pra4",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (PRA4)",
+          "source_id": "S740",
+          "quote": "DNA test for progressive retinal atrophy (PRA4)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S740",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page 'Lhasa Apso' (dog-data S740, 2026-11-06): minimum (Good Practice, 'as evidence indicates these conditions are a significant concern in the breed') — DNA test for PRA4 (new key dna_pra4); Best Practice — BVA/KC/ISDS eye scheme (eye_scheme)."
     }
   }
 }

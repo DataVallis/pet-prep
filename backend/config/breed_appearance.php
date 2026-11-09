@@ -775,6 +775,13 @@
 | patches. Coat never trimmed except the feet (S723). One standard colour (weight 100); `verified => false` like every
 | new breed.
 |
+| Lhasa Apso (M5-R10-98, docs/research/dog-data lhasa_apso.appearance): "Well-balanced, sturdy, heavily coated,
+| without excess." (FCI-Standard N° 227, S738); colours "Golden, sandy, honey, dark grizzle, slate, smoke, parti-colour,
+| black, white, or brown. All equally acceptable." (S738; KC S739 the same); muzzle "About 4cm … roughly one-third total
+| length from nose to back of skull" — not flat-faced; eyes dark, oval; ears "Pendant, heavily feathered."; tail carried
+| well over the back (S738). Not a welfare breed (RKC Breed Watch Category 1, S740). Golden first with the highest weight
+| (the portrait default); weights unsourced → `verified => false`.
+|
 | English Setter (M5-R10-97, docs/research/dog-data english_setter.appearance):
 | "Of medium height, clean in outline, elegant in appearance and movement." (FCI-Standard N° 2, S730); colours blue,
 | orange, lemon and liver belton or tricolour (blue / liver belton and tan), "Any other colour or combination of colours
@@ -4295,6 +4302,47 @@ return [
             'ear_carriage' => ['low-set ears of moderate length hanging in neat folds, with fine silky hair'],
             'eye_color' => ['bright, mild, dark brown oval eyes'],
             'tail' => ['natural tail of medium length, slightly curved, carried level with the back, with long feathering'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-98 (docs/research/dog-data/data.json lhasa_apso.appearance; runbook rules 2026-10-10: the ten standard colours
+    // of FCI-Standard N° 227 (S738), golden first = the portrait default; moderate muzzle visible; never merle).
+    'lhasa_apso' => [
+        'display_name' => 'Lhasa Apso',
+        // Colour frequencies are in no source (lhasa_apso.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 227 (S738), the KC standard (S739) and the RKC breed page (S740) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S738 "Ideal height at withers: Males: 25cm (approx. 10”). Females: slightly smaller."; RKC S740 "Small"; VCA S742 13 - 15 pounds',
+            'build' => 'S738 "Well-balanced, sturdy, heavily coated, without excess."',
+            'coat_length' => 'S738 "Top coat long, heavy, straight, hard, neither woolly nor silky. Moderate undercoat. Coat never impeding action."',
+            'coat_color' => 'S738 "Golden, sandy, honey, dark grizzle, slate, smoke, parti-colour, black, white, or brown. All equally acceptable." (weights unsourced)',
+            'muzzle' => 'S738 "About 4cm (approx. 1½”), but not square; length from tip of nose roughly one-third total length from nose to back of skull. Foreface straight."; nose "Black."',
+            'ear_carriage' => 'S738 "Pendant, heavily feathered."',
+            'eye_color' => 'S738 "Dark. Medium size, frontally placed, oval, neither large nor full, nor small and sunk."',
+            'tail' => 'S738 "High-set, carried well over back but not like a pot-hook. Often a kink at end. Well-feathered."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'well-balanced, sturdy small dog, slightly longer than high', 'weight' => 3], 'compact, sturdy little companion dog'],
+            'coat_length' => ['long, heavy, straight, hard top coat with a moderate undercoat and heavy head furnishings falling over the eyes'],
+            // Standard colours (FCI S738, all equally acceptable); golden first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'golden', 'weight' => 30],
+                ['value' => 'sandy', 'weight' => 10],
+                ['value' => 'honey', 'weight' => 10],
+                ['value' => 'dark grizzle', 'weight' => 10],
+                ['value' => 'slate grey', 'weight' => 5],
+                ['value' => 'smoke grey', 'weight' => 5],
+                ['value' => 'parti-colour (white with coloured patches)', 'weight' => 10],
+                ['value' => 'black', 'weight' => 10],
+                ['value' => 'white', 'weight' => 5],
+                ['value' => 'brown', 'weight' => 5],
+            ],
+            'muzzle' => ['moderate straight muzzle about one-third of the head length, black nose, whiskers and beard'],
+            'ear_carriage' => ['pendant, heavily feathered ears'],
+            'eye_color' => ['dark, oval, medium-size eyes'],
+            'tail' => ['high-set, well-feathered tail carried well over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

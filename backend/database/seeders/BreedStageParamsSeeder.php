@@ -1202,6 +1202,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ENGLISH_SETTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-97)';
 
     /**
+     * M5-R10-98 Lhasa Apso (unattended run 2026-11-06, data.json proposed_game_parameters.lhasa_apso.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S740 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 108 (0.75 × RKC lower bound "Over 12 years", S740 — McMillan 2024's breed value not
+     * reachable, 14 y only via Wikipedia S744, tier C), arrival 2 / 9 / 36 / 108, learning multiplier 0.7 (Coren rank 68,
+     * Fair, S744); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_LHASA_APSO = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-98)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1520,6 +1530,11 @@ class BreedStageParamsSeeder extends Seeder
             'bath' => [1, 'six_weeks', 'S733', 'Bathe your English Setter every six to eight weeks or whenever they get dirty outside.', 'proposed_game_parameters.english_setter.bathing', '"every six to eight weeks" → the lower bound, every 6 weeks (VCA S734 "monthly bathing" — alternative)'],
             'groomer_visit' => [1, 'month', 'S734', 'Some clipping and trimming is needed every month to maintain optimal looks.', 'proposed_game_parameters.english_setter.professional_grooming', '"every month" → every 4 weeks (ears "regularly", no tooth / nail frequency → no task)'],
         ],
+        'lhasa_apso' => [
+            'tooth_brushing' => [7, 'day', 'S743', 'brushing daily is the best way to prevent this', 'proposed_game_parameters.lhasa_apso.tooth_brushing', '"brushing daily is the best way" (teeth "as regularly as possible") → every day (no lower minimum stated — open for David)'],
+            'nail_trim' => [1, 'month', 'S743', "You should also clip your dog's nails once every 3 to 4 weeks", 'proposed_game_parameters.lhasa_apso.nail_trimming', '"once every 3 to 4 weeks" → every 4 weeks (3 weeks is no program period — open for David)'],
+            'bath' => [1, 'two_weeks', 'S743', 'You should expect to bathe your Lhasa Apso at least once every two weeks.', 'proposed_game_parameters.lhasa_apso.bathing', '"at least once every two weeks" → every 2 weeks (no ear / groomer frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1636,6 +1651,7 @@ class BreedStageParamsSeeder extends Seeder
         'standard_schnauzer' => [3, 'S715', 'Grooming is needed 2-3 times a week', 'high', false],
         'coton_de_tulear' => [7, 'S724', 'Grooming: Every day', 'high', false],
         'english_setter' => [3, 'S732', "They'll need grooming 2-3 times per week, and occasional clipping and trimming.", 'high', false],
+        'lhasa_apso' => [7, 'S740', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -1791,13 +1807,14 @@ class BreedStageParamsSeeder extends Seeder
         'standard_schnauzer' => ['S717', 'early socialization and training is necessary.'],
         'coton_de_tulear' => ['S726', "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about."],
         'english_setter' => ['S732', 'As with all breeds, early socialisation and training is still important to ensure they grow up into confident, sociable dogs'],
+        'lhasa_apso' => ['S741', 'Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2614,6 +2631,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::StandardSchnauzer => self::standardSchnauzerProfile(),
             BreedType::CotonDeTulear => self::cotonDeTulearProfile(),
             BreedType::EnglishSetter => self::englishSetterProfile(),
+            BreedType::LhasaApso => self::lhasaApsoProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9473,6 +9491,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'english_setter.lifespan.rkc',
                 'quote' => 'Over 10 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S731); PDSA "Over 10 years" (S732), PetMD average 12 y (S733) and VCA 10–12 y (S734) are consistent. No McMillan 2024 value reachable (13.1 y only via Wikipedia S735, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Lhasa Apso (M5-R10-98). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_LHASA_APSO); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function lhasaApsoProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_LHASA_APSO;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S740', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.lhasa_apso.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog is full-grown at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S740; PDSA "Over 12 years", S741) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 126 (McMillan 14 y only via Wikipedia S744, tier C), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.lhasa_apso.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S740', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.lhasa_apso.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S740) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S741) "Minimum exercise (per day)" 1 hour and "around an hour of exercise per day" agree.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.lhasa_apso.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[5.9, 6.8], [
+                'unit' => 'kg', 'source_id' => 'S742', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'lhasa_apso.adult_weight.vca',
+                'quote' => 'Weight 13 - 15 pounds',
+                'notes' => 'VCA key fact (S742): 13–15 lb = 5.9–6.8 kg, one range for both sexes. No breed standard gives a weight (FCI S738, KC S739, UKC S745); PDSA 6 kg (S741) and WebMD 12–18 lb (S743) are alternatives.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'lhasa_apso.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (VCA 13–15 lb, S742 → the Small class of S10).',
+            ]],
+            'coren_rank' => [68, [
+                'unit' => 'rank', 'source_id' => 'S744', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'lhasa_apso.trainability.coren_rank',
+                'notes' => 'Coren rank 68, fair working/obedience intelligence (ranks 55–69) — Wikipedia Lhasa Apso article (S744, citing Coren, checked 2026-11-06).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S744', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.lhasa_apso.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 68 = Fair (S744) → 0.7 (PDSA S741: "quite stubborn"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S740', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'lhasa_apso.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S740); PDSA "Over 12 years" (S741) agrees, VCA 12–14 y (S742) and WebMD 12–15 y (S743) are consistent. No McMillan 2024 value reachable (14 y only via Wikipedia S744, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

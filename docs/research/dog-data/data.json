@@ -50900,6 +50900,646 @@
       }
     }
   },
+  "lhasa_apso": {
+    "_note": "Added 2026-11-06 (M5-R10-98, unattended run — appended after the English Setter: AKC 2024 No. 94 'Lhasa Apso', S174 full-list table as recorded 2026-11-05). Quotes as returned by the web-fetch tool on 2026-11-06; paraphrase only in notes, marked '(paraphrase)'. Sources S737–S745 (reused S8, S10, S11, S14, S24, S35, S45, S54, S92, S174). No health percentages anywhere. Identity from the FCI nomenclature (S737, 'LHASA APSO (227)', Tibet (China), patronage Great Britain); appearance, colour and height from FCI-Standard N° 227 (S738, KUSA copy — the copy names no publication date, only 'Most recent changes to this Standard have an effective date of 01/01/2026'; the FCI page lists a valid standard of 9/8/2026, not fetched) and the Kennel Club standard (S739, KUSA copy, effective 01/01/2018); RKC Breeds A–Z page (S740) key facts, Breed Watch Category 1 and the health tests; PDSA (S741); VCA (S742); WebMD (S743). No standard gives a weight → VCA key fact '13 - 15 pounds' (S742) is the register / game range. Lifespan: McMillan 2024 (S54) names the breed only as a Fig. 5 label (no number); the Dogs Trust table (S123) was refused by the fetch tool → RKC lower bound 'Over 12 years' (runbook order). Not a flat-faced breed: muzzle 'roughly one-third total length from nose to back of skull' (S738), RKC Breed Watch Category 1 (S740), not named in the BVA brachycephalic list (S236). EN name 'Lhasa Apso' (AKC S174 / FCI S737 / RKC S740); Slovenian »lhasa apso« (the breed name is used unchanged in Slovenian; no Slovenian breed club page fetched).",
+    "identity": {
+      "value": "FCI No. 227, Group 9 Section 5 (Tibetan breeds), Tibet (China)",
+      "unit": "—",
+      "source_id": "S737",
+      "quote": "LHASA APSO (227)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S737, as returned): breed 'LHASA APSO (227)', group 'n°9 - Companion and Toy Dogs', section 'Tibetan breeds', country of origin 'Tibet (China)', patronage 'GREAT BRITAIN', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '11/19/1960', official valid standard '9/8/2026'. FCI-Standard N° 227 (S738): 'ORIGIN: Tibet (China). (Patronage: Great Britain)', 'Group 9 – Companion and Toy Dogs.' 'Section 5.1. Tibetan breeds' 'Without working trial.' Origin already in FCI_ORIGINS ('Tibet (China)', Shih Tzu precedent)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S740",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S740, value 'Small' as returned); PDSA (S741) 'Size' 'Small' (its page sits under 'small-dogs'). VCA 13–15 lb (S742) → S10 'Small (12–24 pounds)' for growth. RKC places the breed in the Utility group."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            25
+          ],
+          "female": [
+            25,
+            25
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S738",
+        "quote": "Ideal height at withers: Males: 25cm (approx. 10”). Females: slightly smaller.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 227 (S738), Size — an ideal height for males only; 'Females: slightly smaller.' has no number, so the female value repeats the male ideal as an upper reference — not exported (the register shows the VCA range, height.vca). Kennel Club standard (S739): 'Height at withers: Males: 25cm (approx. 10”). Females: slightly smaller.'; UKC (S745): 'the desired height at the withers is about ten inches for males, with females being slightly smaller.'; VCA (S742) 'Height 10 - 11 inches' (≈ 25–28 cm); PDSA (S741) 'Average height' '25 cm' — alternatives."
+      },
+      "vca": {
+        "value": {
+          "male": [
+            25,
+            28
+          ],
+          "female": [
+            25,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S742",
+        "quote": "Height 10 - 11 inches",
+        "confidence": "medium",
+        "notes": "VCA key fact (S742, one range for both sexes; 10 / 11 in = 25.4 / 27.9 cm → 25–28 cm, our conversion). The register range: the FCI standard (S738) gives only the males' ideal 25 cm and 'Females: slightly smaller.' (no number)."
+      }
+    },
+    "adult_weight": {
+      "vca": {
+        "value": {
+          "male": [
+            5.9,
+            6.8
+          ],
+          "female": [
+            5.9,
+            6.8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S742",
+        "quote": "Weight 13 - 15 pounds",
+        "confidence": "medium",
+        "notes": "VCA key fact (S742, one range for both sexes; stored per sex; 13 / 15 lb = 5.9 / 6.8 kg, our conversion). No breed standard gives a weight (FCI S738, KC S739, UKC S745 — height only). PDSA (S741) 'Average weight' '6 kg' (inside the VCA range); WebMD (S743) '12 to 18 pounds' — alternatives. The game / register range.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                6,
+                6
+              ],
+              "female": [
+                6,
+                6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S741",
+            "quote": "6 kg",
+            "notes": "PDSA key fact 'Average weight' (S741), one average for both sexes."
+          },
+          {
+            "value": {
+              "male": [
+                5.4,
+                8.2
+              ],
+              "female": [
+                5.4,
+                8.2
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S743",
+            "quote": "12 to 18 pounds in weight",
+            "notes": "WebMD (S743, fragment); 12 / 18 lb = 5.4 / 8.2 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I (<6.5 kg) / II (6.5–<9 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 5.9–6.8 kg straddles bands I and II. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. VCA 13–15 lb (S742) → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Lhasa Apso growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S740",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S740, value 'Over 12 years' as returned). PDSA (S741) 'Average lifespan' 'Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S741",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S741). Same lower bound as the RKC."
+      },
+      "vca": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S742",
+        "quote": "Lifespan 12 - 14 years",
+        "confidence": "medium",
+        "notes": "VCA key fact (S742, tier B, US). WebMD (S743): 'they live on for an average of 12 to 15 years, with some having a lifespan of as long as 20 years.' — alternative. Not used for the senior boundary (no median, not a breed study)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (S54, Nature PDF re-read 2026-11-06): 'Lhasa Apso' appears only as a Fig. 5 phylogeny label ('Shih Tzu / Lhasa Apso / Tibetan Spaniel'; median shown by colour, no number); the breed estimate is in Supplementary Table 3 (not reached); the Dogs Trust table (S123) was refused by the fetch tool. Wikipedia (S744, tier C): 'A 2024 UK study found a life expectancy of 14 years for the breed compared to an average of 12.7 for purebreeds and 12 for crossbreeds.' (cites McMillan 2024) — not verified in the paper → open for David (0.75 × 14 × 12 = 126 if confirmed)."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S740) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (table not reachable; 14 y only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 126 (14 y, Wikipedia S744); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S740"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S740",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S740, value 'Up to 1 hour per day' as returned), runbook first choice → 60 min. PDSA (S741) 'Minimum exercise (per day)' '1 hour' and 'Lhasa Apsos need around an hour of exercise per day.' agree. VCA (S742): 'A walk around the block once or twice daily will meet its outdoor needs' (no minutes)."
+      },
+      "daily_text": {
+        "value": "around an hour a day",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos need around an hour of exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S741), exercise."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No advice to leave a gap between eating and exercising found: RKC (S740), PDSA (S741), VCA (S742) and WebMD (S743) do not name bloat / GDV → no meal_exercise_gap row (never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gay and assertive; alert, steady, but somewhat aloof with strangers; affectionate and loving to those they know, also quite independent",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Gay and assertive. Alert, steady, but somewhat aloof with strangers.",
+        "confidence": "high",
+        "notes": "FCI (S738), Behaviour / temperament; KC standard (S739) 'Gay and assertive.' / 'Alert, steady, but somewhat aloof with strangers.'; PDSA (S741): 'Lhasa Apsos are very affectionate, loving dogs to those they know. They can also be quite independent.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B sentence calls the breed a family dog (PDSA S741 speaks of 'children and other pets in the household' → children / other_pets; VCA S742 'Playful and good with children.') → no family_pet chip."
+      },
+      "children": {
+        "value": "gets along well with children given the right socialisation as puppies; playful and good with children",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S741) — an explicit statement with a socialisation condition (kept here); VCA (S742): 'Playful and good with children.'; WebMD (S743): 'Lhasa Apsos need to be socialized around children early in their lives to prevent aggression problems.' → children (runbook); no small-children rating → no small_children chip."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No time-alone statement found → neither often_alone nor needs_company."
+      },
+      "other_pets": {
+        "value": "gets along well with other pets in the household given the right socialisation; generally friendly toward other dogs and pets",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S741); VCA (S742): 'Generally friendly toward other dogs and pets.'; WebMD (S743): 'Because of their protective personalities, Lhasa Apsos should be watched around other dogs.' (kept here). Basis of other_pets. No source names a prey drive → no chases_small_pets."
+      },
+      "socialisation": {
+        "value": "the right socialisation as puppies; socialise around children early",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S741), a condition (runbook M5-R17 'given the right socialisation as puppies'); WebMD (S743): 'Lhasa Apsos need to be socialized around children early in their lives to prevent aggression problems.' → proposed_game_parameters.lhasa_apso.socialisation (DOG_SOCIALISATION row)."
+      },
+      "strangers": {
+        "value": "can be a little warier of strangers; somewhat aloof with strangers",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "They can be a little warier of strangers.",
+        "confidence": "high",
+        "notes": "PDSA (S741); FCI (S738) 'somewhat aloof with strangers'. Not a chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found → no food_motivated_weight tag."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 68,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S744",
+        "quote": "It is ranked in the 68th group (out of 79) in Stanley Coren's The Intelligence of Dogs, having fair working-obedience intelligence.",
+        "confidence": "medium",
+        "notes": "Wikipedia breed page (S744, tier C, citing Coren) — runbook: Coren's rank may come from Wikipedia when Coren's own top / bottom-10 article (S34) does not list the breed (English Setter precedent S735). Rank 68 → tier Fair (55–69)."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S744",
+        "quote": "having fair working-obedience intelligence",
+        "confidence": "medium",
+        "notes": "Wikipedia (S744, fragment) — tier Fair (S35 tier definitions: ranks 55–69)."
+      },
+      "training_notes": {
+        "value": "quite stubborn, so training can be a bit more of a challenge",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "They are known to be quite stubborn, so sometimes training can be a bit more of a challenge.",
+        "confidence": "high",
+        "notes": "PDSA (S741). The game uses Coren's rank only (68 → 0.7)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.lhasa_apso.learning_multiplier (0.7, runbook rule: Coren tier Fair).",
+        "derived_from": [
+          "S744"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well-balanced, sturdy, heavily coated small dog, without excess",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Well-balanced, sturdy, heavily coated, without excess.",
+        "confidence": "high",
+        "notes": "FCI (S738), General appearance."
+      },
+      "colours": {
+        "value": [
+          "golden",
+          "sandy",
+          "honey",
+          "dark grizzle",
+          "slate",
+          "smoke",
+          "parti-colour",
+          "black",
+          "white",
+          "brown"
+        ],
+        "unit": "list (all equally acceptable)",
+        "source_id": "S738",
+        "quote": "Golden, sandy, honey, dark grizzle, slate, smoke, parti-colour, black, white, or brown. All equally acceptable.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC standard (S739) the same sentence; UKC (S745): 'All colors are acceptable. Dark tips on the ears and beard may or may not be present.' The game draws the ten standard colours (no colour is disqualifying; never merle — not named by FCI / KC). Wikipedia (S744, tier C) lists the same colours plus 'red'."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Golden first with the highest weight → the portrait default (FCI / KC list it first)."
+      },
+      "coat": {
+        "value": "top coat long, heavy, straight, hard, neither woolly nor silky; moderate undercoat; never impeding action",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Top coat long, heavy, straight, hard, neither woolly nor silky. Moderate undercoat. Coat never impeding action.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC (S739) the same. RKC 'Coat length: Long' (S740)."
+      },
+      "head": {
+        "value": "heavy head furnishings with good fall over eyes, good whiskers and beard; skull moderately narrow; medium stop; straight foreface",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "moderately narrow, falling away behind eyes, not quite flat, but not domed or apple-headed.",
+        "confidence": "high",
+        "notes": "FCI (S738), skull (fragment); 'Stop: Medium.'; muzzle 'About 4cm (approx. 1½”), but not square; length from tip of nose roughly one-third total length from nose to back of skull. Foreface straight.' — not a flat-faced breed (the head furnishings are paraphrase from the standard's head description, not quoted)."
+      },
+      "muzzle": {
+        "value": "about 4 cm, not square; about one-third of the head length; straight foreface",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "About 4cm (approx. 1½”), but not square; length from tip of nose roughly one-third total length from nose to back of skull. Foreface straight.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC (S739): 'Muzzle about 4cm (approx. 1½”), but not square; length from tip of nose roughly one-third total length from nose to back of skull.' A moderate (not flat) face → no brachycephalic chip; the AI trait keeps the muzzle visible."
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI (S738), Nose."
+      },
+      "ears": {
+        "value": "pendant, heavily feathered",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Pendant, heavily feathered.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC (S739) the same."
+      },
+      "eyes": {
+        "value": "dark, medium size, frontally placed, oval; no white showing",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Dark. Medium size, frontally placed, oval, neither large nor full, nor small and sunk. No white showing at base or top.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC (S739) the same."
+      },
+      "tail": {
+        "value": "high-set, carried well over the back, often a kink at the end, well feathered",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "High-set, carried well over back but not like a pot-hook. Often a kink at end. Well-feathered.",
+        "confidence": "high",
+        "notes": "FCI (S738); KC (S739) the same."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page key facts (S740, reached 2026-11-06), PDSA (S741), VCA (S742), WebMD (S743). Dogs Trust / Woodgreen breed pages not found.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S740)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S740). Not a long-exercise breed (no active_family / long_daily_exercise)."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S740) → apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S740)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S740) → brushing every day (M5-R13 rule 'Every day' → 7). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "RKC key fact (S740); PDSA (S741) 'Coat length' 'Long'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S740); VCA (S742) 'Shedding is below average.' agrees → low_shedding. Never hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S740). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S740)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S740)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S740), Category 1, '… other than those covered routinely by The Kennel Club breed standard.' (fragment) → no welfare chip."
+      },
+      "pdsa_children": {
+        "value": "gets along well with children and other pets given the right socialisation as puppies",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S741). Basis of children and other_pets (socialisation condition → never small_children)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": "Grooming on a daily basis is required to keep their long coats in tip-top condition and prevent matting.",
+        "confidence": "high",
+        "notes": "PDSA (S741). Agrees with RKC 'Every day' (S740) → 7."
+      },
+      "vca_grooming": {
+        "value": "brushing and combing every other day",
+        "unit": "—",
+        "source_id": "S742",
+        "quote": "Brushing and combing every other day is necessary to prevent mats.",
+        "confidence": "high",
+        "notes": "VCA (S742) → alternative (every other day); RKC 'Every day' (S740) and PDSA 'daily' (S741) win (M5-R13: 'Every day' → 7). VCA: 'Many pet owners elect to have their dogs professionally groomed, or clipped into a trim that is more easily cared for.' (no frequency → no groomer reminder); 'Hair must be kept out of eyes to avoid irritation.' (no frequency → no task)."
+      },
+      "vca_children": {
+        "value": "playful and good with children; generally friendly toward other dogs and pets",
+        "unit": "—",
+        "source_id": "S742",
+        "quote": "Playful and good with children.",
+        "confidence": "high",
+        "notes": "VCA (S742); 'Generally friendly toward other dogs and pets.'"
+      },
+      "webmd_bath": {
+        "value": "bath at least once every two weeks",
+        "unit": "—",
+        "source_id": "S743",
+        "quote": "You should expect to bathe your Lhasa Apso at least once every two weeks.",
+        "confidence": "high",
+        "notes": "WebMD (S743) → parent bath reminder every 2 weeks (M5-R19)."
+      },
+      "webmd_nails": {
+        "value": "nails clipped once every 3 to 4 weeks",
+        "unit": "—",
+        "source_id": "S743",
+        "quote": "You should also clip your dog's nails once every 3 to 4 weeks",
+        "confidence": "high",
+        "notes": "WebMD (S743, fragment) → the child's nail mini-game every 4 program weeks (M5-R18; 3 weeks is not a program period — see proposed_game_parameters.lhasa_apso.nail_trimming)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth as regularly as possible; daily brushing is best",
+        "unit": "—",
+        "source_id": "S743",
+        "quote": "brushing daily is the best way to prevent this",
+        "confidence": "high",
+        "notes": "WebMD (S743, fragment): 'You should brush your Lhasa Apso's teeth as regularly as possible.' → the child's tooth-brushing mini-game every day (M5-R15)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S740: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC minimum (Good Practice) — DNA test for PRA4; Best Practice — BVA/KC/ISDS eye scheme (S740).",
+      "luxating_patella": {
+        "value": "luxating patellas (kneecap)",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Luxating patellas' (heading only). Register health key kneecap_luxation."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (eye)",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Progressive retinal atrophy' (heading only); RKC minimum DNA test PRA4 (S740). Register health key pra_inherited_blindness."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Cataracts' (heading only). Register health key cataracts."
+      },
+      "glaucoma": {
+        "value": "glaucoma",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Glaucoma' (heading only). Register health key glaucoma."
+      },
+      "dry_eye": {
+        "value": "keratoconjunctivitis sicca ('dry eye')",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list \"Keratoconjunctivitis sicca or 'Dry eye'\" (heading only). Register health key dry_eye."
+      },
+      "skin": {
+        "value": "atopy (skin allergy)",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Atopy' (heading only). Register health key itchy_skin_allergy."
+      },
+      "ivdd": {
+        "value": "intervertebral disc disease (back)",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Intervertebral disc disease' (heading only). Register health key back_disc_disease."
+      },
+      "cherry_eye": {
+        "value": "cherry eye",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Cherry eye' (heading only). Not exported (no register key for cherry eye alone) — research only."
+      },
+      "hydrocephalus": {
+        "value": "hydrocephalus",
+        "unit": "—",
+        "source_id": "S741",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S741) health list 'Hydrocephalus' (heading only). Register health key hydrocephalus."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -76150,6 +76790,277 @@
         "confidence": "high",
         "notes": "FCI-Standard N° 2 (S730). Six standard colours; blue belton (the most typical, S735 caption) first with the highest unsourced weight → portrait default.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue belton (FCI S730) is the portrait default; natural tail; only the six standard belton / tricolour colours"
+      }
+    },
+    "lhasa_apso": {
+      "_note": "Unattended run M5-R10-98 (2026-11-06): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from RKC (S740 'Up to 1 hour per day' → 60; PDSA S741 agrees). Senior 108 from the RKC lower bound 'Over 12 years' (S740; McMillan 2024 14 y only via Wikipedia S744 → 126, open for David). Coren rank 68 (S744) → Fair → 0.7. Built: brushing every day (RKC 'Every day', PDSA 'daily', M5-R13), puppy socialisation with the PDSA quote (S741, M5-R17), care tasks with a WebMD frequency (S743): tooth brushing every day (M5-R15), nail trimming every 4 weeks ('once every 3 to 4 weeks', M5-R18 — 3 weeks is no program period, open for David), bath every 2 weeks (M5-R19). No ear or groomer task (no frequency), no meal gap, no heat warning. RKC Breed Watch Category 1 → no welfare chip; in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S740",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S740). Rule: one number N ('up to N') → N = 60. PDSA (S741) 'Minimum exercise (per day)' '1 hour' and 'around an hour of exercise per day' agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S741",
+            "notes": "PDSA 'Lhasa Apsos need around an hour of exercise per day.'"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S740 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S740",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S740; PDSA 'Over 12 years', S741, agrees). The Dogs Trust McMillan 2024 table (S123) could not be fetched; McMillan 2024 (S54) names the breed only in Fig. 5; no VetCompass median found. Alternatives: 126 (14 y — Wikipedia S744 citing McMillan 2024, tier C — open for David); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S740"
+        ],
+        "alternatives": {
+          "senior_wikipedia_14_y": 126,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S740)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 68 (Wikipedia S744, citing Coren) → tier Fair (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S744"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 68, tier Fair, S744)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S740",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "lhasa_apso.suitability.rkc_grooming. RKC 'Every day' (S740) → 7; PDSA 'Grooming on a daily basis is required …' (S741) agrees. VCA (S742) 'every other day' → alternative (4, upper bound of 3–4 sessions). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 4,
+            "source_id": "S742",
+            "quote": "Brushing and combing every other day is necessary to prevent mats."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): »Every day« → 7 (RKC S740, PDSA S741); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S741",
+        "quote": "Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "lhasa_apso.behaviour.socialisation (PDSA S741, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S741)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S743",
+        "quote": "brushing daily is the best way to prevent this",
+        "confidence": "medium",
+        "notes": "WebMD (S743), lhasa_apso.suitability.webmd_teeth: 'You should brush your Lhasa Apso's teeth as regularly as possible.' + 'brushing daily is the best way to prevent this' → every day (no lower minimum is stated — the Basenji's 'at least twice a week' reading does not apply). Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15). Open for David: 'daily is best' is an ideal, not a minimum.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brushing daily« → vsak dan"
+      },
+      "nail_trimming": {
+        "value": 1,
+        "unit": "nail trims per 4 program weeks (sourced need)",
+        "source_id": "S743",
+        "quote": "You should also clip your dog's nails once every 3 to 4 weeks",
+        "confidence": "medium",
+        "notes": "WebMD (S743), lhasa_apso.suitability.webmd_nails. The range's lower bound (3 weeks) is not a program period (CARE_PERIOD_DAYS: 1, 2, 4, 6, 8, 12 weeks) → every 4 weeks, the range's upper bound and the nearest program period inside the stated range (never more often than the source says). Built: the child's nail mini-game every 4 program weeks (DOG_CARE_TASKS nail_trim [1, month], M5-R18). Open for David: a 3-week period would need a new CARE_PERIOD_DAYS key.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »once every 3 to 4 weeks« → vsake 4 tedne (3 tedne ni programsko obdobje — odprto za Davida)"
+      },
+      "bathing": {
+        "value": "bath every two weeks",
+        "unit": "baths (sourced need)",
+        "source_id": "S743",
+        "quote": "You should expect to bathe your Lhasa Apso at least once every two weeks.",
+        "confidence": "high",
+        "notes": "WebMD (S743), lhasa_apso.suitability.webmd_bath. Built: the parent's bath reminder every 2 program weeks (DOG_CARE_TASKS bath [1, two_weeks], M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once every two weeks« → vsaka 2 tedna"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-98); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S740"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_size_of_home",
+              "lhasa_apso.suitability.rkc_garden"
+            ],
+            "quote": "S740 'Size of home: Flat/ Apartment'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S741",
+              "S742"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.pdsa_children",
+              "lhasa_apso.suitability.vca_children"
+            ],
+            "quote": "S741 'Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.'; S742 'Playful and good with children.' (socialisation condition → never small_children)"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S741"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.pdsa_children",
+              "lhasa_apso.behaviour.other_pets"
+            ],
+            "quote": "S741 same sentence; VCA S742 'Generally friendly toward other dogs and pets.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S740"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_shedding"
+            ],
+            "quote": "S740 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S740",
+              "S741"
+            ],
+            "refs": [
+              "lhasa_apso.suitability.rkc_grooming",
+              "lhasa_apso.suitability.pdsa_grooming"
+            ],
+            "quote": "S740 'Grooming: Every day'; S741 'Grooming on a daily basis is required to keep their long coats in tip-top condition and prevent matting.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No A/B sentence calls the breed a family dog (PDSA / VCA speak of children and other pets → children / other_pets).",
+          "small_children": "No explicit small-children rating; PDSA is conditional (the right socialisation as puppies, S741); WebMD: socialise around children early to prevent aggression problems (S743).",
+          "large_home": "RKC 'Flat/ Apartment' (S740).",
+          "first_time_owner": "No A/B statement about first-time owners (PDSA: 'quite stubborn', S741).",
+          "active_family": "RKC 'Up to 1 hour per day' (S740).",
+          "long_daily_exercise": "60 minutes a day (S740, S741).",
+          "often_alone": "No time-alone statement.",
+          "needs_company": "No time-alone statement.",
+          "chases_small_pets": "No A/B source names a prey drive — runbook rule.",
+          "sheds": "RKC 'Sheds: No' (S740).",
+          "needs_mental_stimulation": "No A/B statement (WebMD: a medium level of activity to keep their minds busy, S743 — not a stimulation warning).",
+          "food_motivated_weight": "No food-motivation statement.",
+          "chews_when_bored": "No chewing statement.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S740).",
+          "experienced_owner": "No source.",
+          "brachycephalic_breathing": "Not a flat-faced breed (muzzle about one-third of the head length, S738; RKC Breed Watch Category 1, S740; not in the BVA list, S236).",
+          "hypoallergenic": "Never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S740",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S740); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92; the FCI muzzle is about one-third of the head length, S738; the BVA Figure 1 brachycephalic legend names Boxer, Bulldog, French Bulldog, Pug, Shih-tzu — not the Lhasa Apso, S236). Marketing never promises the breed's health and never shows it as hypoallergenic.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa)"
+      },
+      "ai_appearance": {
+        "value": "adult Lhasa Apso, golden coat (the first of the ten standard colours); small, well-balanced, sturdy, slightly longer than high; long, heavy, straight, hard top coat with a moderate undercoat, natural length, never impeding movement; heavy head furnishings falling over the eyes, whiskers and beard; moderate muzzle about one-third of the head length with a black nose (not flat-faced); dark oval medium-size eyes; pendant, heavily feathered ears; high-set, well-feathered tail carried over the back; never merle",
+        "unit": "—",
+        "source_id": "S738",
+        "quote": "Golden, sandy, honey, dark grizzle, slate, smoke, parti-colour, black, white, or brown. All equally acceptable.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S738) and KC standard (S739). Weights unsourced in prompts. Golden as the portrait default — listed first by both standards.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): golden is the portrait default (first standard colour); moderate muzzle visible (not a flat face)"
       }
     }
   }

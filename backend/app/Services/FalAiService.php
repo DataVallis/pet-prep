@@ -791,6 +791,13 @@ class FalAiService
                 .'a long head with a moderately deep, fairly square muzzle and a black nose, bright, mild dark brown oval eyes, '
                 .'low-set ears of moderate length hanging in neat folds, a natural slightly curved tail of medium length carried level with the back, '
                 .'gentle and friendly expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-98: FCI-Standard N° 227 (S738) — a small, sturdy, heavily coated Tibetan companion dog, golden (first
+            // standard colour), moderate muzzle about one-third of the head (not flat-faced), tail carried over the back.
+            BreedType::LhasaApso => 'A small, well-balanced, sturdy Lhasa Apso, slightly longer than high, golden coat, '
+                .'a long, heavy, straight, hard top coat falling to the ground with a moderate undercoat, never impeding movement, '
+                .'heavy head furnishings falling over the eyes with whiskers and a beard, a moderate muzzle about one-third of the head length with a black nose, '
+                .'dark oval medium-size eyes, pendant heavily feathered ears, a high-set well-feathered tail carried over the back, '
+                .'alert, steady expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1907,6 +1914,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'slightly wavy, long silky coat with feathering',
                 'markings' => 'flecked (belton) all over rather than heavy patches, never solid coloured',
+            ],
+            // M5-R10-98: standard colours only (FCI S738, all equally acceptable); never merle.
+            BreedType::LhasaApso => [
+                'color_scheme' => 'golden',
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, heavy, straight, hard coat with a moderate undercoat',
+                'markings' => 'heavy head furnishings with whiskers and beard, black nose, never merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
