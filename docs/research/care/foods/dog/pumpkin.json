@@ -10,7 +10,8 @@
     "hr": "Bundeva",
     "sv": "Pumpa",
     "da": "Græskar",
-    "fi": "Kurpitsa"
+    "fi": "Kurpitsa",
+    "nb": "Gresskar"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti bundevu?",
     "sv": "Får hundar äta pumpa?",
     "da": "Må hunde spise græskar?",
-    "fi": "Saako koira syödä kurpitsaa?"
+    "fi": "Saako koira syödä kurpitsaa?",
+    "nb": "Kan hunder spise gresskar?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -32,7 +34,8 @@
     "hr": "bundeva",
     "sv": "pumpa",
     "da": "graeskar",
-    "fi": "kurpitsa"
+    "fi": "kurpitsa",
+    "nb": "gresskar"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, obična termički obrađena bundeva zdrava je hrana za pse. Odaberi svježu termički obrađenu bundevu ili običan pire od bundeve iz konzerve, nikad nadjev za pitu od bundeve, i ne daj psu sirovu koru.",
     "sv": "Ja, kokt pumpa utan tillsatser är nyttigt för hundar. Välj nykokt pumpa eller ren pumpapuré på burk, aldrig fyllning till pumpapaj, och ge inte hunden okokta skal.",
     "da": "Ja, kogt græskar uden tilsætninger er sund mad for hunde. Vælg friskt kogt græskar eller græskarpuré på dåse uden tilsætninger, aldrig fyld til græskartærte, og del ikke rå græskarskal.",
-    "fi": "Saa, maustamaton kypsennetty kurpitsa on koirille terveellistä ruokaa. Valitse tuore, kypsennetty kurpitsa tai maustamaton purkitettu kurpitsasose. Älä koskaan anna kurpitsapiiraan täytettä, äläkä anna kypsentämätöntä kuorta."
+    "fi": "Saa, maustamaton kypsennetty kurpitsa on koirille terveellistä ruokaa. Valitse tuore, kypsennetty kurpitsa tai maustamaton purkitettu kurpitsasose. Älä koskaan anna kurpitsapiiraan täytettä, äläkä anna kypsentämätöntä kuorta.",
+    "nb": "Ja, kokt gresskar uten tilsetninger er sunn mat for hunder. Velg ferskt, kokt gresskar eller gresskarpuré på boks uten tilsetninger, aldri fyll til gresskarpai, og ikke gi hunden rått skall."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
@@ -55,7 +59,8 @@
     "hr": "Čista je bundeva puna antioksidansa i može pomoći psima i kod proljeva i kod zatvora. Nadjev za pitu od bundeve može sadržavati ksilitol, koji je otrovan, te druge začine i dodatke koji bi mogli biti štetni. Sirova je kora žilava i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
     "sv": "Ren pumpa är full av antioxidanter och kan hjälpa vid både diarré och förstoppning hos hundar. Fyllning till pumpapaj kan innehålla xylitol, som är giftigt, samt kryddor och andra tillsatser som kan vara skadliga. Okokta skal är sega och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen.",
     "da": "Rent græskar er fyldt med antioxidanter og kan hjælpe mod både diarré og forstoppelse hos hunde. Fyld til græskartærte kan indeholde xylitol, som er giftigt, samt andre krydderier og tilsætningsstoffer, der kan være skadelige. Rå græskarskal er hård og fibrøs: den kan sætte sig fast i halsen, er svær at fordøje og kan give tarmblokering.",
-    "fi": "Puhdas kurpitsa on täynnä antioksidantteja ja voi auttaa koiraa sekä ripuliin että ummetukseen. Kurpitsapiiraan täytteessä voi olla ksylitolia, joka on myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia. Kypsentämättömät kuoret ovat sitkeitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen."
+    "fi": "Puhdas kurpitsa on täynnä antioksidantteja ja voi auttaa koiraa sekä ripuliin että ummetukseen. Kurpitsapiiraan täytteessä voi olla ksylitolia, joka on myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia. Kypsentämättömät kuoret ovat sitkeitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen.",
+    "nb": "Rent gresskar er fullt av antioksidanter og kan hjelpe hunder både ved diaré og ved forstoppelse. Fyll til gresskarpai kan inneholde xylitol, som er giftig, og dessuten krydder og andre tilsetninger som kan være skadelige. Rått skall er seigt og fiberrikt: Det er en kvelningsfare, er vanskelig å fordøye og kan gi tarmblokkering."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Kao i kod svake nove hrane, pitaj veterinara prije nego što bundevu uvedeš u prehranu svog psa.",
     "sv": "Som med all ny mat: fråga veterinären innan du lägger till pumpa i hundens vanliga kost.",
     "da": "Som med alle nye fødevarer: spørg din dyrlæge, før du begynder at give din hund græskar.",
-    "fi": "Kuten minkä tahansa uuden ruoan kanssa, kysy eläinlääkäriltä ennen kuin lisäät kurpitsaa koirasi ruokavalioon."
+    "fi": "Kuten minkä tahansa uuden ruoan kanssa, kysy eläinlääkäriltä ennen kuin lisäät kurpitsaa koirasi ruokavalioon.",
+    "nb": "Som med all ny mat: Spør dyrlegen før du begynner å gi hunden gresskar."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
@@ -78,7 +84,8 @@
     "hr": "Svježa, termički obrađena, obična i oguljena, ili običan pire od bundeve iz konzerve, bez dodanog šećera, začina i umjetnih aroma. Bez nadjeva za pitu i bez sirove kore.",
     "sv": "Nykokt, skalad och utan tillsatser, eller ren pumpapuré på burk, utan tillsatt socker, kryddor eller konstgjorda smaker. Ingen pajfyllning och inget rått skal.",
     "da": "Friskt græskar, kogt, skrællet og uden tilsætninger, eller græskarpuré på dåse uden tilsat sukker, krydderier eller kunstige smagsstoffer. Intet tærtefyld og ingen rå skal.",
-    "fi": "Tuore kurpitsa kypsennettynä, maustamattomana ja kuorittuna tai maustamaton purkitettu kurpitsasose, jossa ei ole lisättyä sokeria, mausteita eikä keinotekoisia makuaineita. Ei piiraan täytettä eikä raakaa kuorta."
+    "fi": "Tuore kurpitsa kypsennettynä, maustamattomana ja kuorittuna tai maustamaton purkitettu kurpitsasose, jossa ei ole lisättyä sokeria, mausteita eikä keinotekoisia makuaineita. Ei piiraan täytettä eikä raakaa kuorta.",
+    "nb": "Ferskt, kokt, skrelt og uten tilsetninger, eller gresskarpuré på boks uten tilsatt sukker, krydder eller kunstige smaksstoffer. Ikke paifyll og ikke rått skall."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
@@ -89,7 +96,8 @@
     "hr": "Psi mogu uživati u malo obične kuhane bundeve. Odrasla osoba neka pripazi da to nije slatki nadjev za pitu!",
     "sv": "Hundar kan njuta av lite kokt pumpa utan tillsatser. En vuxen ser till att det inte är söt pajfyllning!",
     "da": "Hunde må gerne få lidt kogt græskar uden tilsætninger. En voksen sørger for, at det ikke er sødt tærtefyld!",
-    "fi": "Koira saa nauttia vähän maustamatonta kypsennettyä kurpitsaa. Aikuinen tarkistaa, ettei se ole makeaa piiraantäytettä!"
+    "fi": "Koira saa nauttia vähän maustamatonta kypsennettyä kurpitsaa. Aikuinen tarkistaa, ettei se ole makeaa piiraantäytettä!",
+    "nb": "Hunder kan få litt kokt gresskar uten tilsetninger. En voksen passer på at det ikke er søtt paifyll!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li psi jesti nadjev za pitu od bundeve?",
         "sv": "Får hundar äta fyllning till pumpapaj?",
         "da": "Må hunde spise fyld til græskartærte?",
-        "fi": "Saako koira syödä kurpitsapiiraan täytettä?"
+        "fi": "Saako koira syödä kurpitsapiiraan täytettä?",
+        "nb": "Kan hunder spise fyll til gresskarpai?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
@@ -113,7 +122,8 @@
         "hr": "Ne. Nadjev za pitu od bundeve može sadržavati ksilitol, sladilo otrovno za pse, te druge začine i dodatke koji bi mogli biti štetni.",
         "sv": "Nej. Fyllning till pumpapaj kan innehålla xylitol, ett sötningsmedel som är giftigt för hundar, samt kryddor och andra tillsatser som kan vara skadliga.",
         "da": "Nej. Fyld til græskartærte kan indeholde xylitol, et sødemiddel, som er giftigt for hunde, samt andre krydderier og tilsætningsstoffer, der kan være skadelige.",
-        "fi": "Ei. Kurpitsapiiraan täytteessä voi olla ksylitolia, makeutusainetta, joka on koirille myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia."
+        "fi": "Ei. Kurpitsapiiraan täytteessä voi olla ksylitolia, makeutusainetta, joka on koirille myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia.",
+        "nb": "Nei. Fyll til gresskarpai kan inneholde xylitol, et søtstoff som er giftig for hunder, og dessuten krydder og andre tilsetninger som kan være skadelige."
       }
     },
     {
@@ -126,7 +136,8 @@
         "hr": "Smiju li psi jesti sirovu koru bundeve?",
         "sv": "Får hundar äta rått pumpaskal?",
         "da": "Må hunde spise rå græskarskal?",
-        "fi": "Saako koira syödä raakaa kurpitsankuorta?"
+        "fi": "Saako koira syödä raakaa kurpitsankuorta?",
+        "nb": "Kan hunder spise rått gresskarskall?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
@@ -137,7 +148,8 @@
         "hr": "Ne. Sirova je kora žilava, gusta i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
         "sv": "Nej. Okokta skal är sega, täta och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen.",
         "da": "Nej. Rå græskarskal er hård, tæt og fibrøs: den kan sætte sig fast i halsen, er svær at fordøje og kan give tarmblokering.",
-        "fi": "Ei. Kypsentämättömät kuoret ovat sitkeitä, tiiviitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen."
+        "fi": "Ei. Kypsentämättömät kuoret ovat sitkeitä, tiiviitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen.",
+        "nb": "Nei. Rått skall er seigt, tett og fiberrikt: Det er en kvelningsfare, er vanskelig å fordøye og kan gi tarmblokkering."
       }
     }
   ],
@@ -247,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "afb9ccd686cc1fa26db8bf4afe225dda4dbef00df68795e00876a451ff6a6f06"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "efcd9f8237e9b9135d6015cc84b494a1cd6b8bfe6d8a3bed18233c5f232da6c1"
     }
   }
 }

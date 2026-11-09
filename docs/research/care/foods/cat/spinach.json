@@ -10,7 +10,8 @@
     "hr": "Špinat",
     "sv": "Spenat",
     "da": "Spinat",
-    "fi": "Pinaatti"
+    "fi": "Pinaatti",
+    "nb": "Spinat"
   },
   "question": {
     "en": "Can cats eat spinach?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li mačke jesti špinat?",
     "sv": "Får katter äta spenat?",
     "da": "Må katte spise spinat?",
-    "fi": "Saako kissa syödä pinaattia?"
+    "fi": "Saako kissa syödä pinaattia?",
+    "nb": "Kan katter spise spinat?"
   },
   "url_slug": {
     "en": "spinach",
@@ -32,7 +34,8 @@
     "hr": "spinat",
     "sv": "spenat",
     "da": "spinat",
-    "fi": "pinaatti"
+    "fi": "pinaatti",
+    "nb": "spinat"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, malo običnog špinata u redu je kao povremena poslastica. Cats Protection navodi špinat među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede. Mačkama povrće nije potrebno, pa neka bude samo sasvim mali dodatak.",
     "sv": "Ja, en liten bit spenat utan tillsatser går bra som en godbit då och då. Cats Protection nämner spenat bland de få grönsaker du kan ge katten, om den visar intresse. Katter behöver inte grönsaker, så se det som ett litet extra.",
     "da": "Ja, lidt naturel spinat er fint som godbid af og til. Cats Protection nævner spinat blandt de få grøntsager, man kan give sin kat, hvis den har lyst. Katte har ikke brug for grøntsager, så det bør kun være et lille ekstra.",
-    "fi": "Saa, vähän maustamatonta pinaattia kelpaa satunnaiseksi herkuksi. Cats Protectionin mukaan pinaatti on yksi harvoista kasviksista, joita kissalle voi antaa, jos se maistuu kissalle. Kissat eivät tarvitse kasviksia, joten se saa olla vain pieni lisä."
+    "fi": "Saa, vähän maustamatonta pinaattia kelpaa satunnaiseksi herkuksi. Cats Protectionin mukaan pinaatti on yksi harvoista kasviksista, joita kissalle voi antaa, jos se maistuu kissalle. Kissat eivät tarvitse kasviksia, joten se saa olla vain pieni lisä.",
+    "nb": "Ja, en liten bit spinat uten tilsetninger er greit som en godbit en gang iblant. Cats Protection oppgir spinat blant de få grønnsakene du kan gi katten, hvis den har lyst. Katter trenger ikke grønnsaker, så la det bli et bitte lite tillegg."
   },
   "why": {
     "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -55,7 +59,8 @@
     "hr": "Cats Protection navodi špinat među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede, i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
     "sv": "Cats Protection nämner spenat bland de få grönsaker du kan ge en katt, om den visar intresse, och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
     "da": "Cats Protection nævner spinat blandt de få grøntsager, man kan give en kat, hvis den har lyst, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte.",
-    "fi": "Cats Protectionin mukaan pinaatti on yksi harvoista kasviksista, joita kissalle voi antaa, jos se maistuu kissalle, ja se ehdottaa höyrytettyjä tai keitettyjä kasviksia ilman voita, suolaa tai mausteita. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja."
+    "fi": "Cats Protectionin mukaan pinaatti on yksi harvoista kasviksista, joita kissalle voi antaa, jos se maistuu kissalle, ja se ehdottaa höyrytettyjä tai keitettyjä kasviksia ilman voita, suolaa tai mausteita. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja.",
+    "nb": "Cats Protection nevner spinat blant de få grønnsakene du kan gi en katt, hvis den har lyst, og anbefaler dampede eller kokte grønnsaker uten smør, salt eller krydder. Katter trenger ikke frukt eller grønnsaker i kostholdet, godbiter bør gis sjelden, og ASPCA påpeker at alt plantemateriale kan gi katter oppkast og urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
     "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
-    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten spinat og spør dyrlegen."
   },
   "serving": {
     "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
@@ -78,7 +84,8 @@
     "hr": "Malo špinata, kuhanog na pari ili u vodi, bez maslaca, soli i začina.",
     "sv": "En liten bit, ångad eller kokt, utan smör, salt eller kryddor.",
     "da": "Lidt spinat, dampet eller kogt, uden smør, salt eller krydderier.",
-    "fi": "Pieni määrä höyrytettynä tai keitettynä, ilman voita, suolaa tai mausteita."
+    "fi": "Pieni määrä höyrytettynä tai keitettynä, ilman voita, suolaa tai mausteita.",
+    "nb": "En liten bit, dampet eller kokt, uten smør, salt eller krydder."
   },
   "child": {
     "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -89,7 +96,8 @@
     "hr": "Sasvim malo špinata mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "Lite spenat kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
     "da": "Lidt spinat kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
-    "fi": "Aivan vähän pinaattia voi joskus antaa kissalle herkuksi. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
+    "fi": "Aivan vähän pinaattia voi joskus antaa kissalle herkuksi. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
+    "nb": "En bitteliten bit spinat kan være en godbit for pusen nå og da. Katter trenger mest kjøtt, så grønnsaker er bare litt ekstra."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
         "da": "Har katte brug for grøntsager?",
-        "fi": "Tarvitsevatko kissat kasviksia?"
+        "fi": "Tarvitsevatko kissat kasviksia?",
+        "nb": "Trenger katter grønnsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +122,8 @@
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
-        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
+        "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg."
       }
     }
   ],
@@ -207,6 +217,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9033671970af0135a20291725e5fa6ec9e1dc093d0a43a13942e7eb6ce9ef8c1"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c403e8958b80366dcf1527b76c7d0f095b15273b6a49b5e5bb4e5168555a65c"
     }
   }
 }

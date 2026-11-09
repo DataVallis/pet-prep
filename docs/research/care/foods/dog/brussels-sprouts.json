@@ -10,7 +10,8 @@
     "hr": "Prokulice",
     "sv": "Brysselkål",
     "da": "Rosenkål",
-    "fi": "Ruusukaali"
+    "fi": "Ruusukaali",
+    "nb": "Rosenkål"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti prokulice?",
     "sv": "Får hundar äta brysselkål?",
     "da": "Må hunde spise rosenkål?",
-    "fi": "Saako koira syödä ruusukaalia?"
+    "fi": "Saako koira syödä ruusukaalia?",
+    "nb": "Kan hunder spise rosenkål?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -32,7 +34,8 @@
     "hr": "prokulice",
     "sv": "brysselkal",
     "da": "rosenkal",
-    "fi": "ruusukaali"
+    "fi": "ruusukaali",
+    "nb": "rosenkal"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, uz nekoliko mjera opreza. Obične termički obrađene prokulice u malim su količinama u redu za pse, ali previše njih može izazvati mnogo plinova, želučane tegobe i proljev. Ne daj ih sirove: pretvrde su, pa ih pas teško probavlja.",
     "sv": "Ja, med några försiktighetsåtgärder. Kokt brysselkål utan tillsatser går bra för hundar i små mängder, men för mycket kan ge kraftiga gaser, orolig mage och diarré. Ge den inte rå: den är för hård för att hunden ska kunna smälta den.",
     "da": "Ja, men med visse forholdsregler. Kogt rosenkål uden tilsætninger er fint for hunde i små mængder, men for meget kan give meget luft i maven, mavegener og diarré. Giv dem ikke rå, for de er for hårde for hunde at fordøje.",
-    "fi": "Saa, mutta muutama varotoimi on syytä muistaa. Maustamatonta, kypsennettyä ruusukaalia voi antaa koiralle pieninä määrinä, mutta liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia. Älä anna ruusukaalia raakana: koiran on vaikea sulattaa sitä."
+    "fi": "Saa, mutta muutama varotoimi on syytä muistaa. Maustamatonta, kypsennettyä ruusukaalia voi antaa koiralle pieninä määrinä, mutta liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia. Älä anna ruusukaalia raakana: koiran on vaikea sulattaa sitä.",
+    "nb": "Ja, med noen forholdsregler. Kokt rosenkål uten tilsetninger er greit for hunder i små mengder, men for mye kan gi mye gass, urolig mage og diaré. Ikke server den rå: Den er for hard for hunder å fordøye."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
@@ -55,7 +59,8 @@
     "hr": "Prokulice su pune hranjivih tvari i antioksidansa te ne sadrže toksine ni otrove. Sadrže, međutim, visoku razinu tvari koja se zove izotiocijanat, a previše prokulica može dovesti do mnogo plinova, želučanih tegoba i proljeva, zato ih ne daj previše.",
     "sv": "Brysselkål är full av näringsämnen och antioxidanter och innehåller inga gifter. Den innehåller dock mycket av ett ämne som kallas isotiocyanat, och för mycket kan ge kraftiga gaser, orolig mage och diarré, så ge inte för stora portioner.",
     "da": "Rosenkål er fyldt med næringsstoffer og antioxidanter og indeholder ingen giftstoffer. Den indeholder til gengæld meget af stoffet isothiocyanat, og for meget kan give luft i maven, mavegener og diarré, så undgå at give for meget.",
-    "fi": "Ruusukaali on täynnä ravintoaineita ja antioksidantteja, eikä siinä ole myrkkyjä. Siinä on kuitenkin runsaasti isotiosyanaatti-nimistä ainetta, ja liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia, joten älä anna sitä liikaa."
+    "fi": "Ruusukaali on täynnä ravintoaineita ja antioksidantteja, eikä siinä ole myrkkyjä. Siinä on kuitenkin runsaasti isotiosyanaatti-nimistä ainetta, ja liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia, joten älä anna sitä liikaa.",
+    "nb": "Rosenkål er full av næringsstoffer og antioksidanter og inneholder ingen giftstoffer. Den inneholder mye av et stoff som heter isotiocyanat, og for mye kan gi mye gass, urolig mage og diaré, så ikke gi for mye."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Daj samo malo i nemoj pretjerati. Ako tvoj pas ima tegobe s prehranom ili alergije, razgovaraj s veterinarom prije nego što mu ponudiš prokulice.",
     "sv": "Ge bara lite och ge inte för mycket. Om hunden har kostrelaterade problem eller allergier bör du prata med veterinären innan du ger brysselkål.",
     "da": "Giv kun lidt, og undgå at overfodre. Hvis din hund har særlige kostbehov eller allergi, skal du tale med din dyrlæge, før du giver rosenkål.",
-    "fi": "Anna vain vähän, älä liikaa. Jos koirallasi on ruokavalioon liittyviä ongelmia tai allergioita, kysy neuvoa eläinlääkäriltä ennen kuin tarjoat ruusukaalia."
+    "fi": "Anna vain vähän, älä liikaa. Jos koirallasi on ruokavalioon liittyviä ongelmia tai allergioita, kysy neuvoa eläinlääkäriltä ennen kuin tarjoat ruusukaalia.",
+    "nb": "Gi bare litt, og ikke overfôr. Hvis hunden har kostholdsproblemer eller allergier, bør du snakke med dyrlegen før du gir rosenkål."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
@@ -78,7 +84,8 @@
     "hr": "Oprane, s odrezanim većim dijelom stabljike (listovi ostaju) i termički obrađene (kuhanje na pari sačuva najviše hranjivih tvari). Obične, bez začinskog bilja i začina, u malim količinama.",
     "sv": "Tvättad, med det mesta av stammen bortskuren och bladen kvar, och tillagad (ångkokning bevarar mest näring). Utan örter eller kryddor, i små mängder.",
     "da": "Vasket, med det meste af stilken skåret af, men bladene på, og kogt (dampning bevarer mest af næringsstofferne). Uden krydderurter og krydderier og kun i små mængder.",
-    "fi": "Pestynä, varren suurin osa pois leikattuna ja lehdet paikoillaan, kypsennettynä (höyryttäminen säilyttää ravintoaineet parhaiten). Ilman yrttejä tai mausteita, pieninä määrinä."
+    "fi": "Pestynä, varren suurin osa pois leikattuna ja lehdet paikoillaan, kypsennettynä (höyryttäminen säilyttää ravintoaineet parhaiten). Ilman yrttejä tai mausteita, pieninä määrinä.",
+    "nb": "Vasket, med mesteparten av stilken skåret av og bladene på, og kokt (damping beholder mest næring). Uten tilsetninger, urter eller krydder, i små mengder."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
@@ -89,7 +96,8 @@
     "hr": "Psi smiju dobiti malo kuhanih prokulica kao poslasticu. Ako ih pojedu previše, trbuščić će im biti pun plinova!",
     "sv": "Hundar kan få lite kokt brysselkål som godbit. Får de för mycket blir magen väldigt gasig!",
     "da": "Hunde må gerne få lidt kogt rosenkål som godbid. For meget giver en mave fuld af luft!",
-    "fi": "Koira saa syödä vähän kypsennettyä ruusukaalia herkuksi. Liian monen jälkeen koiran masu on ihan ilmaa täynnä!"
+    "fi": "Koira saa syödä vähän kypsennettyä ruusukaalia herkuksi. Liian monen jälkeen koiran masu on ihan ilmaa täynnä!",
+    "nb": "Hunder kan få litt kokt rosenkål som godbit. For mye gir dem masse luft i magen!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li psi jesti sirove prokulice?",
         "sv": "Får hundar äta rå brysselkål?",
         "da": "Må hunde spise rå rosenkål?",
-        "fi": "Saako koira syödä raakaa ruusukaalia?"
+        "fi": "Saako koira syödä raakaa ruusukaalia?",
+        "nb": "Kan hunder spise rå rosenkål?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
@@ -113,7 +122,8 @@
         "hr": "Bolje ne: sirove su prokulice pretvrde da bi ih pas probavio. Prvo ih termički obradi; kuhanje na pari sačuva najviše hranjivih tvari.",
         "sv": "Det är bäst att låta bli: rå brysselkål är för hård för att hunden ska kunna smälta den. Koka den först; ångkokning bevarar mest näring.",
         "da": "Det er bedst at lade være: rå rosenkål er for hård for hunde at fordøje. Kog den først – dampning bevarer mest af næringsstofferne.",
-        "fi": "Parempi olla antamatta: koiran on vaikea sulattaa raakaa ruusukaalia. Kypsennä se ensin, mieluiten höyryttämällä, sillä silloin ravintoaineita säilyy eniten."
+        "fi": "Parempi olla antamatta: koiran on vaikea sulattaa raakaa ruusukaalia. Kypsennä se ensin, mieluiten höyryttämällä, sillä silloin ravintoaineita säilyy eniten.",
+        "nb": "Det er best å la være: Rå rosenkål er for hard for hunder å fordøye. Kok den først. Damping beholder mest næring."
       }
     }
   ],
@@ -215,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7b4416f58131800e428b57375ba8f92043c27637f5100b38625f914d4ed57f77"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d43c26609c34b3ee5e55fe8a5b06ff841764bb6edb3138b447237c181d55716a"
     }
   }
 }

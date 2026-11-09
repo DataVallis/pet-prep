@@ -10,7 +10,8 @@
     "hr": "Zelena salata",
     "sv": "Sallat",
     "da": "Salat",
-    "fi": "Lehtisalaatti"
+    "fi": "Lehtisalaatti",
+    "nb": "Salat"
   },
   "question": {
     "en": "Can dogs eat lettuce?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti zelenu salatu?",
     "sv": "Får hundar äta sallat?",
     "da": "Må hunde spise salat?",
-    "fi": "Saako koira syödä lehtisalaattia?"
+    "fi": "Saako koira syödä lehtisalaattia?",
+    "nb": "Kan hunder spise salat?"
   },
   "url_slug": {
     "en": "lettuce",
@@ -32,7 +34,8 @@
     "hr": "zelena-salata",
     "sv": "sallat",
     "da": "salat",
-    "fi": "lehtisalaatti"
+    "fi": "lehtisalaatti",
+    "nb": "salat"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, obična zelena salata općenito je sigurna za pse ako je jedu umjereno. Rimska salata, ledena salata i rikula nisu otrovne. Dobro je operi i nasjeckaj te psu ne daj ostatke svoje salate, jer često sadrže luk.",
     "sv": "Ja, sallat utan tillsatser är i allmänhet säker för hundar med måtta. Romansallat, isbergssallat och ruccola är ogiftiga. Tvätta den ordentligt och hacka den, och ge inte hunden rester av sallad, som ofta innehåller lök.",
     "da": "Ja, salat uden tilsætninger er som regel ufarligt for hunde i moderate mængder. Romainesalat, icebergsalat og rucola er ugiftige. Vask den godt og hak den, og giv ikke hunden rester af din egen salat, som ofte indeholder løg.",
-    "fi": "Saa, maustamaton lehtisalaatti on yleensä turvallista koirille kohtuudella. Romaine-, jäävuori- ja rucolasalaatti eivät ole myrkyllisiä. Pese salaatti hyvin ja pilko se. Älä anna koiralle ylijäänyttä salaattia, sillä siinä on usein sipulia."
+    "fi": "Saa, maustamaton lehtisalaatti on yleensä turvallista koirille kohtuudella. Romaine-, jäävuori- ja rucolasalaatti eivät ole myrkyllisiä. Pese salaatti hyvin ja pilko se. Älä anna koiralle ylijäänyttä salaattia, sillä siinä on usein sipulia.",
+    "nb": "Ja, salat uten tilsetninger er som regel trygt for hunder i moderate mengder. Romanosalat, isbergsalat og ruccola er ikke giftige. Vask den godt og hakk den opp, og ikke gi hunden rester av salaten din, som ofte inneholder løk."
   },
   "why": {
     "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
@@ -55,7 +59,8 @@
     "hr": "Zelena je salata općenito sigurna za pse, ali je vrlo vlaknasta i u velikim se komadima teško probavlja, a previše je može izazvati proljev. Salate često sadrže sastojke koji su otrovni za pse, poput luka. Zelena je salata povlačena iz prodaje i zbog onečišćenja bakterijom E. coli ili listerijom, zato je temeljito operi i kupuj pažljivo.",
     "sv": "Sallat är i allmänhet säker för hundar, men den är mycket fiberrik och svår att smälta i stora bitar, och för mycket kan ge diarré. Sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. Sallat har dessutom återkallats på grund av E. coli eller listeria, så tvätta den noga och var noga med var du köper den.",
     "da": "Salat er som regel ufarligt for hunde, men det er meget fibrøst og svært at fordøje i store stykker, og for meget kan give diarré. Salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Salat er også blevet kaldt tilbage på grund af forurening med E. coli eller listeria, så vask den grundigt, og køb den med omtanke.",
-    "fi": "Lehtisalaatti on yleensä turvallista koirille, mutta se on hyvin kuitupitoista ja isoina paloina vaikeasti sulavaa, ja liiasta voi tulla ripulia. Salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Lehtisalaattia on myös vedetty pois markkinoilta E. coli -bakteerin tai listerian aiheuttaman saastumisen vuoksi, joten pese se hyvin ja osta huolella."
+    "fi": "Lehtisalaatti on yleensä turvallista koirille, mutta se on hyvin kuitupitoista ja isoina paloina vaikeasti sulavaa, ja liiasta voi tulla ripulia. Salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Lehtisalaattia on myös vedetty pois markkinoilta E. coli -bakteerin tai listerian aiheuttaman saastumisen vuoksi, joten pese se hyvin ja osta huolella.",
+    "nb": "Salat er som regel trygt for hunder, men den er veldig fiberrik og tung å fordøye i store biter, og for mye kan gi diaré. Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. Salat har også vært trukket tilbake fra markedet på grunn av E. coli- eller listeriasmitte, så vask den godt og velg med omhu når du handler."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Daj samo običan komadić s vremena na vrijeme: previše može izazvati proljev. Ne daj ostatke salate jer takve salate često sadrže luk, koji je otrovan za pse.",
     "sv": "Ge bara en bit utan tillsatser då och då: för mycket kan ge diarré. Ge inte hunden rester av sallad, eftersom sallader ofta innehåller lök, som är giftig för hundar.",
     "da": "Hold dig til et stykke salat uden tilsætninger en gang imellem: for meget kan give diarré. Giv ikke hunden rester af en blandet salat, for salater indeholder ofte løg, som er giftige for hunde.",
-    "fi": "Anna vain silloin tällöin pieni, maustamaton pala: liiasta voi tulla ripulia. Älä anna ylijäänyttä salaattia, sillä salaateissa on usein sipulia, joka on koirille myrkyllistä."
+    "fi": "Anna vain silloin tällöin pieni, maustamaton pala: liiasta voi tulla ripulia. Älä anna ylijäänyttä salaattia, sillä salaateissa on usein sipulia, joka on koirille myrkyllistä.",
+    "nb": "Hold deg til en bit uten tilsetninger nå og da: For mye kan gi diaré. Ikke gi hunden salatrester, for salater inneholder ofte løk, som er giftig for hunder."
   },
   "serving": {
     "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
@@ -78,7 +84,8 @@
     "hr": "Običan, temeljito opran komadić s vremena na vrijeme, nasjeckan, a ne cijeli list. Nikad iz miješane salate.",
     "sv": "En bit utan tillsatser, ordentligt tvättad, då och då, hackad i stället för ett helt blad. Aldrig ur en blandad sallad.",
     "da": "Af og til et stykke salat uden tilsætninger, grundigt vasket og hakket i stedet for et helt blad. Aldrig fra en blandet salat.",
-    "fi": "Silloin tällöin maustamaton, huolellisesti pesty pala, pilkottuna eikä kokonaisena lehtenä. Ei koskaan sekasalaatista."
+    "fi": "Silloin tällöin maustamaton, huolellisesti pesty pala, pilkottuna eikä kokonaisena lehtenä. Ei koskaan sekasalaatista.",
+    "nb": "Nå og da en grundig vasket bit uten tilsetninger, hakket opp i stedet for et helt blad. Aldri fra en blandet salat."
   },
   "child": {
     "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
@@ -89,7 +96,8 @@
     "hr": "Psi smiju grickati malo obične zelene salate. Odrasla osoba je opere i nasjecka na sitno. Ostatke salate ne, molim te!",
     "sv": "Hundar kan mumsa på lite sallat utan tillsatser. En vuxen tvättar den och hackar den smått. Inga rester av sallad, tack!",
     "da": "Hunde må gerne gnaske lidt salat uden tilsætninger. En voksen vasker den og hakker den i små stykker. Ingen salatrester, tak!",
-    "fi": "Koira saa mutustella vähän maustamatonta lehtisalaattia. Aikuinen pesee sen ja pilkkoo pieniksi paloiksi. Ei salaatintähteitä, kiitos!"
+    "fi": "Koira saa mutustella vähän maustamatonta lehtisalaattia. Aikuinen pesee sen ja pilkkoo pieniksi paloiksi. Ei salaatintähteitä, kiitos!",
+    "nb": "Hunder kan knaske litt salat uten tilsetninger. En voksen vasker den og hakker den i små biter. Ingen salatrester, takk!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li psi jesti salatu?",
         "sv": "Får hundar äta sallad?",
         "da": "Må hunde spise en blandet salat?",
-        "fi": "Saako koira syödä salaattia?"
+        "fi": "Saako koira syödä salaattia?",
+        "nb": "Kan hunder spise blandet salat?"
       },
       "a": {
         "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
@@ -113,7 +122,8 @@
         "hr": "Ne ostatke tvoje salate: salate često sadrže sastojke otrovne za pse, poput luka. Običan komadić zelene salate povremeno je u redu.",
         "sv": "Inte rester av din sallad: sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. En bit sallat utan tillsatser då och då går bra.",
         "da": "Ikke rester af din egen salat: salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Et stykke salat uden tilsætninger af og til er fint.",
-        "fi": "Ei sinun salaattisi tähteitä: salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Maustamaton pala lehtisalaattia silloin tällöin sen sijaan sopii."
+        "fi": "Ei sinun salaattisi tähteitä: salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Maustamaton pala lehtisalaattia silloin tällöin sen sijaan sopii.",
+        "nb": "Ikke salatrester fra middagen: Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. En bit salat uten tilsetninger nå og da er greit."
       }
     }
   ],
@@ -211,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "809cd75d3089271f327e30608682ccf5b404737b730798cb5a6a179d522f19f6"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3dba456c6ea6b642361ed43baa8c191694b323e69cd4d56c4ac5ec349123a4bb"
     }
   }
 }

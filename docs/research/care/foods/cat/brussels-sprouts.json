@@ -10,7 +10,8 @@
     "hr": "Prokulice",
     "sv": "Brysselkål",
     "da": "Rosenkål",
-    "fi": "Ruusukaali"
+    "fi": "Ruusukaali",
+    "nb": "Rosenkål"
   },
   "question": {
     "en": "Can cats eat Brussels sprouts?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li mačke jesti prokulice?",
     "sv": "Får katter äta brysselkål?",
     "da": "Må katte spise rosenkål?",
-    "fi": "Saako kissa syödä ruusukaalia?"
+    "fi": "Saako kissa syödä ruusukaalia?",
+    "nb": "Kan katter spise rosenkål?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -32,7 +34,8 @@
     "hr": "prokulice",
     "sv": "brysselkal",
     "da": "rosenkal",
-    "fi": "ruusukaali"
+    "fi": "ruusukaali",
+    "nb": "rosenkal"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, mali komadić obične prokulice, termički obrađen do mekoće, u redu je kao povremena poslastica. RSPCA navodi prokulice među namirnicama prikladnima za mačke u umjerenim količinama. Mačkama povrće nije potrebno, pa neka bude samo sasvim mali dodatak.",
     "sv": "Ja, en liten bit brysselkål utan tillsatser, kokt tills den är mjuk, går bra som en godbit då och då. RSPCA nämner brysselkål bland maten som passar katter med måtta. Katter behöver inte grönsaker, så se det som ett litet extra.",
     "da": "Ja, et lille stykke naturel rosenkål, kogt blød, er fint som godbid af og til. RSPCA nævner rosenkål blandt de fødevarer, der passer til katte i moderate mængder. Katte har ikke brug for grøntsager, så det bør kun være et lille ekstra.",
-    "fi": "Saa, pieni pala maustamatonta, pehmeäksi kypsennettyä ruusukaalia kelpaa satunnaiseksi herkuksi. RSPCA:n mukaan ruusukaali on yksi niistä ruoista, jotka sopivat kissoille kohtuudella. Kissat eivät tarvitse kasviksia, joten se saa olla vain pieni lisä."
+    "fi": "Saa, pieni pala maustamatonta, pehmeäksi kypsennettyä ruusukaalia kelpaa satunnaiseksi herkuksi. RSPCA:n mukaan ruusukaali on yksi niistä ruoista, jotka sopivat kissoille kohtuudella. Kissat eivät tarvitse kasviksia, joten se saa olla vain pieni lisä.",
+    "nb": "Ja, en liten bit rosenkål uten tilsetninger, kokt til den er myk, er greit som en godbit en gang iblant. RSPCA oppgir rosenkål blant maten som passer for katter med måte. Katter trenger ikke grønnsaker, så la det bli et bitte lite tillegg."
   },
   "why": {
     "en": "The RSPCA lists Brussels sprouts, cooked until soft, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -55,7 +59,8 @@
     "hr": "RSPCA navodi prokulice, termički obrađene do mekoće, među božićnim namirnicama sigurnima za ljubimce, prikladnima za mačke i pse u umjerenim količinama. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
     "sv": "RSPCA nämner brysselkål, kokt tills den är mjuk, bland julmat som passar katter och hundar med måtta. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
     "da": "RSPCA nævner rosenkål, kogt blød, blandt julemad, der er ufarlig for kæledyr og passer til katte og hunde i moderate mængder. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte.",
-    "fi": "RSPCA luettelee pehmeäksi kypsennetyn ruusukaalin lemmikeille turvallisiin jouluruokiin, joita kissat ja koirat voivat syödä kohtuudella. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja."
+    "fi": "RSPCA luettelee pehmeäksi kypsennetyn ruusukaalin lemmikeille turvallisiin jouluruokiin, joita kissat ja koirat voivat syödä kohtuudella. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja.",
+    "nb": "RSPCA oppgir rosenkål, kokt til den er myk, blant julemat som er trygg for kjæledyr og passer for katter og hunder med måte. Katter trenger ikke frukt eller grønnsaker i kostholdet, godbiter bør gis sjelden, og ASPCA påpeker at alt plantemateriale kan gi katter oppkast og urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
     "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
-    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten rosenkål og spør dyrlegen."
   },
   "serving": {
     "en": "A small piece, cooked until soft, with no butter, salt or seasoning.",
@@ -78,7 +84,8 @@
     "hr": "Mali komadić, termički obrađen do mekoće, bez maslaca, soli i začina.",
     "sv": "En liten bit, kokt tills den är mjuk, utan smör, salt eller kryddor.",
     "da": "Et lille stykke, kogt blødt, uden smør, salt eller krydderier.",
-    "fi": "Pieni pala pehmeäksi kypsennettynä, ilman voita, suolaa tai mausteita."
+    "fi": "Pieni pala pehmeäksi kypsennettynä, ilman voita, suolaa tai mausteita.",
+    "nb": "En liten bit, kokt til den er myk, uten smør, salt eller krydder."
   },
   "child": {
     "en": "A soft cooked sprout piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -89,7 +96,8 @@
     "hr": "Komadić meko kuhane prokulice mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "En mjuk, kokt bit brysselkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
     "da": "Et blødt, kogt stykke rosenkål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
-    "fi": "Pehmeäksi kypsennettyä ruusukaalia voi joskus antaa kissalle herkuksi. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
+    "fi": "Pehmeäksi kypsennettyä ruusukaalia voi joskus antaa kissalle herkuksi. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
+    "nb": "En bit myk, kokt rosenkål kan være en godbit for pusen nå og da. Katter trenger mest kjøtt, så grønnsaker er bare litt ekstra."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
         "da": "Har katte brug for grøntsager?",
-        "fi": "Tarvitsevatko kissat kasviksia?"
+        "fi": "Tarvitsevatko kissat kasviksia?",
+        "nb": "Trenger katter grønnsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +122,8 @@
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
-        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
+        "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg."
       }
     }
   ],
@@ -203,6 +213,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "91400da5a1e8e985dd5d9a3f5c916e107b24927b1563a5e1ad82b7aaefaaa00d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ff6e3cdaa637a98a53d0d836652197124594d3738183cad596236ec48a2dfa15"
     }
   }
 }

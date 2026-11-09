@@ -10,7 +10,8 @@
     "hr": "Sirovi krumpir",
     "sv": "Rå potatis",
     "da": "Rå kartofler",
-    "fi": "Raa’at perunat"
+    "fi": "Raa’at perunat",
+    "nb": "Rå poteter"
   },
   "question": {
     "en": "Can cats eat raw potatoes?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li mačke jesti sirovi krumpir?",
     "sv": "Får katter äta rå potatis?",
     "da": "Må katte spise rå kartofler?",
-    "fi": "Saako kissa syödä raakoja perunoita?"
+    "fi": "Saako kissa syödä raakoja perunoita?",
+    "nb": "Kan katter spise rå poteter?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -32,7 +34,8 @@
     "hr": "sirovi-krumpir",
     "sv": "ra-potatis",
     "da": "raa-kartofler",
-    "fi": "raaka-perunat"
+    "fi": "raaka-perunat",
+    "nb": "ra-poteter"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Ne, ne daj mački sirov krumpir. RSPCA navodi krumpir kao prikladan za mačke samo ako je zgnječen ili kuhan, bez maslaca i sira, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce. Ako mačka pojede sirov krumpir, obrati se veterinaru.",
     "sv": "Nej, ge inte katten rå potatis. RSPCA nämner potatis som lämplig för katter bara som mos eller kokt, utan smör eller ost, och ASPCA skriver att rå potatis kan vara problematisk för husdjur. Om katten har ätit rå potatis, kontakta veterinären.",
     "da": "Nej, giv ikke din kat rå kartofler. RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og ASPCA skriver at rå kartofler kan være et problem for kæledyr. Hvis din kat spiser rå kartoffel, skal du kontakte din dyrlæge.",
-    "fi": "Ei. Älä anna kissalle raakaa perunaa. RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia. Jos kissasi söi raakaa perunaa, ota yhteyttä eläinlääkäriin."
+    "fi": "Ei. Älä anna kissalle raakaa perunaa. RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia. Jos kissasi söi raakaa perunaa, ota yhteyttä eläinlääkäriin.",
+    "nb": "Nei, ikke gi katten rå potet. RSPCA mener at potet bare passer for katter når den er moset eller kokt uten smør eller ost, og ASPCA skriver at rå poteter kan være problematiske for kjæledyr. Hvis katten spiser rå potet, må du kontakte dyrlegen."
   },
   "why": {
     "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
@@ -55,7 +59,8 @@
     "hr": "RSPCA i Cats Protection krumpir mačkama predlažu samo kuhan ili kao običan pire, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce, dok je termički obrađen krumpir u umjerenim količinama u redu. Članak PetMD-a, koji su napisali veterinari, ide i dalje: sirov krumpir, zeleni krumpir i biljku krumpira naziva otrovnima za mačke i navodi da kora krumpira sadrži toksin solanin.",
     "sv": "RSPCA och Cats Protection föreslår bara potatis till katter när den är kokt eller som enkelt mos, och ASPCA skriver att rå potatis kan vara problematisk för husdjur medan tillagad potatis går bra med måtta. En veterinärskriven artikel på PetMD går längre: den kallar rå potatis, grön potatis och potatisplantan giftiga för katter och skriver att potatisskal innehåller giftet solanin.",
     "da": "RSPCA og Cats Protection foreslår kun kartofler til katte, hvis de er kogte eller moste uden tilsætninger, og ASPCA skriver at rå kartofler kan være et problem for kæledyr, mens kogte kartofler er fine i moderate mængder. En artikel fra PetMD, skrevet af en dyrlæge, går længere: den kalder rå kartofler, grønne kartofler og selve kartoffelplanten giftige for katte og skriver at kartoffelskræl indeholder giftstoffet solanin.",
-    "fi": "RSPCA ja Cats Protection ehdottavat kissoille perunaa vain keitettynä tai pelkkänä muusina, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia, kun taas kypsennetty peruna sopii kohtuudella. Eläinlääkärin kirjoittama PetMD-artikkeli menee pidemmälle: sen mukaan raa’at perunat, vihreät perunat ja perunakasvi ovat kissoille myrkyllisiä, ja perunan kuorissa on solaniini-nimistä myrkkyä."
+    "fi": "RSPCA ja Cats Protection ehdottavat kissoille perunaa vain keitettynä tai pelkkänä muusina, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia, kun taas kypsennetty peruna sopii kohtuudella. Eläinlääkärin kirjoittama PetMD-artikkeli menee pidemmälle: sen mukaan raa’at perunat, vihreät perunat ja perunakasvi ovat kissoille myrkyllisiä, ja perunan kuorissa on solaniini-nimistä myrkkyä.",
+    "nb": "RSPCA og Cats Protection foreslår bare potet til katter når den er kokt eller moset uten tilsetninger, og ASPCA skriver at rå poteter kan være problematiske for kjæledyr, mens kokte poteter er greit i moderate mengder. En artikkel fra PetMD, skrevet av en dyrlege, går lenger: Den kaller rå poteter, grønne poteter og potetplanten giftige for katter og skriver at potetskall inneholder giftstoffet solanin."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Pahoinvointi",
       "Oksentelu",
       "Ripuli"
+    ],
+    "nb": [
+      "Kvalme",
+      "Oppkast",
+      "Diaré"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "hr": "Ako je mačka pojela sirov krumpir ili koru krumpira, odmah se obrati veterinaru za savjet. Zapiši što je pojedeno i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Om katten har ätit rå potatis eller potatisskal, kontakta veterinären för råd direkt. Notera vad katten åt och när. Försök inte få katten att kräkas hemma.",
     "da": "Hvis din kat har spist rå kartoffel eller kartoffelskræl, skal du straks kontakte din dyrlæge og få råd. Skriv ned, hvad katten har spist, og hvornår. Prøv ikke selv at få katten til at kaste op.",
-    "fi": "Jos kissasi söi raakaa perunaa tai perunankuorta, ota heti yhteyttä eläinlääkäriin ja kysy neuvoa. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaasi."
+    "fi": "Jos kissasi söi raakaa perunaa tai perunankuorta, ota heti yhteyttä eläinlääkäriin ja kysy neuvoa. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaasi.",
+    "nb": "Hvis katten har spist rå potet eller potetskall, må du kontakte dyrlegen for råd med en gang. Skriv ned hva katten har spist, og når. Ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -125,7 +136,8 @@
     "hr": "Sirov krumpir nije za mačke. Ako maca pogrize sirov krumpir, reci odrasloj osobi da nazove veterinara.",
     "sv": "Rå potatis är inget för katter. Om katten nafsar på en bit, berätta det för en vuxen, som kan ringa veterinären.",
     "da": "Rå kartofler er ikke til katte. Hvis katten nasker af en, så sig det til en voksen, som kan ringe til dyrlægen.",
-    "fi": "Raa’at perunat eivät ole kissoille. Jos kisu maistelee sellaista, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille."
+    "fi": "Raa’at perunat eivät ole kissoille. Jos kisu maistelee sellaista, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille.",
+    "nb": "Rå poteter er ikke noe for katter. Hvis pusen napper i en, må du si fra til en voksen, så den voksne kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -138,7 +150,8 @@
         "hr": "Smiju li mačke jesti termički obrađen krumpir?",
         "sv": "Får katter äta kokt potatis?",
         "da": "Må katte spise kogte kartofler?",
-        "fi": "Saako kissa syödä kypsennettyä perunaa?"
+        "fi": "Saako kissa syödä kypsennettyä perunaa?",
+        "nb": "Kan katter spise kokt potet?"
       },
       "a": {
         "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
@@ -149,7 +162,8 @@
         "hr": "RSPCA krumpir za mačke navodi samo ako je zgnječen ili kuhan, bez maslaca i sira, a Cats Protection predlaže običan pire bez maslaca, vrhnja i češnjaka. Koru izostavi.",
         "sv": "RSPCA nämner potatis till katter bara som mos eller kokt, utan smör eller ost, och Cats Protection föreslår enkelt potatismos utan smör, grädde eller vitlök. Ta bort skalet.",
         "da": "RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og Cats Protection foreslår kartoffelmos uden smør, fløde eller hvidløg. Brug ikke skrællen.",
-        "fi": "RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja Cats Protection ehdottaa pelkkää perunamuusia ilman voita, kermaa tai valkosipulia. Jätä kuori pois."
+        "fi": "RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja Cats Protection ehdottaa pelkkää perunamuusia ilman voita, kermaa tai valkosipulia. Jätä kuori pois.",
+        "nb": "RSPCA mener at poteter bare passer for katter hvis de er moset eller kokt uten smør eller ost, og Cats Protection foreslår potetmos uten smør, fløte eller hvitløk. Fjern skallet."
       }
     }
   ],
@@ -247,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "df610a960c081aab08a6fb1d011fd627eff8bcbc8f1d6c8b17bbc46ced5c8610"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e4c714550f29aabbb95326f45b38f1a97bebbba75f81a11306f60bbcd308efd6"
     }
   }
 }
