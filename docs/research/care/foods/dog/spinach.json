@@ -14,7 +14,8 @@
     "nb": "Spinat",
     "de": "Spinat",
     "fr": "Épinards",
-    "es": "Espinacas"
+    "es": "Espinacas",
+    "it": "Spinaci"
   },
   "question": {
     "en": "Can dogs eat spinach?",
@@ -29,7 +30,8 @@
     "nb": "Kan hunder spise spinat?",
     "de": "Dürfen Hunde Spinat fressen?",
     "fr": "Les chiens peuvent-ils manger des épinards ?",
-    "es": "¿Pueden los perros comer espinacas?"
+    "es": "¿Pueden los perros comer espinacas?",
+    "it": "I cani possono mangiare gli spinaci?"
   },
   "url_slug": {
     "en": "spinach",
@@ -44,7 +46,8 @@
     "nb": "spinat",
     "de": "spinat",
     "fr": "epinards",
-    "es": "espinacas"
+    "es": "espinacas",
+    "it": "spinaci"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "nb": "Hunder kan spise spinat, men den er ikke blant de beste grønnsakene å dele med dem. Den inneholder mye oksalsyre, som hindrer opptaket av kalsium og kan gi nyreskade. En hund må spise mye for å ta skade, men en annen grønnsak er et bedre valg.",
     "de": "Hunde dürfen Spinat fressen, aber er ist nicht das beste Gemüse, das Sie mit Ihrem Hund teilen können. Er enthält viel Oxalsäure, die die Aufnahme von Calcium hemmt und zu Nierenschäden führen kann. Ein Hund müsste viel davon fressen, damit es ihm schadet, doch ein anderes Gemüse ist die bessere Wahl.",
     "fr": "Les chiens peuvent manger des épinards, mais ce n’est pas l’un des meilleurs légumes à partager avec eux. Les épinards sont riches en acide oxalique, qui empêche l’absorption du calcium et peut entraîner des lésions rénales. Un chien devrait en manger beaucoup pour en pâtir, mais mieux vaut choisir un autre légume.",
-    "es": "Los perros pueden comer espinacas, pero no son de las mejores verduras para compartir con ellos. Contienen mucho ácido oxálico, que bloquea la absorción del calcio y puede dañar los riñones. Un perro tendría que comer muchísimas para sufrir algún daño, pero es mejor elegir otra verdura."
+    "es": "Los perros pueden comer espinacas, pero no son de las mejores verduras para compartir con ellos. Contienen mucho ácido oxálico, que bloquea la absorción del calcio y puede dañar los riñones. Un perro tendría que comer muchísimas para sufrir algún daño, pero es mejor elegir otra verdura.",
+    "it": "I cani possono mangiare gli spinaci, ma non sono tra le verdure migliori da dare loro. Contengono molto acido ossalico, che blocca l’assorbimento del calcio e può portare a danni ai reni. Ce ne vorrebbero parecchi per far stare male un cane, ma è meglio scegliere un’altra verdura."
   },
   "why": {
     "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
@@ -75,7 +79,8 @@
     "nb": "Spinat inneholder mye oksalsyre, som hindrer kroppen i å ta opp kalsium og kan gi nyreskade. Hunder med friske nyrer klarer små mengder, og en hund må spise svært store mengder for å ta skade, men hvis den spiser spinat over lang tid, kan det belaste nyrene. Fordi kildene anbefaler å velge en annen grønnsak, gir vi spinat vurderingen «Anbefales ikke».",
     "de": "Spinat enthält viel Oxalsäure, die die Calciumaufnahme des Körpers hemmt und zu Nierenschäden führen kann. Hunde mit gesunden Nieren können kleine Mengen verarbeiten, und ein Hund müsste sehr große Mengen fressen, damit es ihm schadet; wird Spinat aber über lange Zeit gefressen, kann er die Nieren belasten. Weil die Quellen raten, ein anderes Gemüse zu wählen, stufen wir ihn als „nicht empfohlen“ ein.",
     "fr": "Les épinards sont riches en acide oxalique, qui empêche l’organisme d’absorber le calcium et peut entraîner des lésions rénales. Les chiens dont les reins sont sains peuvent en tolérer de petites quantités, et il faudrait qu’un chien en mange de très grandes quantités pour en pâtir, mais une consommation prolongée peut mettre les reins à rude épreuve. Comme les sources conseillent de choisir un autre légume, nous classons les épinards parmi les aliments déconseillés.",
-    "es": "Las espinacas tienen mucho ácido oxálico, que impide que el organismo absorba el calcio y puede dañar los riñones. Los perros con riñones sanos pueden procesar pequeñas cantidades, y un perro tendría que comer cantidades muy grandes para sufrir daños, pero comerlas durante mucho tiempo puede sobrecargar los riñones. Como las fuentes aconsejan elegir otra verdura, las clasificamos como no recomendadas."
+    "es": "Las espinacas tienen mucho ácido oxálico, que impide que el organismo absorba el calcio y puede dañar los riñones. Los perros con riñones sanos pueden procesar pequeñas cantidades, y un perro tendría que comer cantidades muy grandes para sufrir daños, pero comerlas durante mucho tiempo puede sobrecargar los riñones. Como las fuentes aconsejan elegir otra verdura, las clasificamos como no recomendadas.",
+    "it": "Gli spinaci contengono molto acido ossalico, che blocca la capacità dell’organismo di assorbire il calcio e può portare a danni ai reni. I cani con reni sani riescono a gestirne piccole quantità e ci vorrebbero quantità molto grandi per fargli del male, ma mangiarli a lungo nel tempo può sovraccaricare i reni. Poiché le fonti consigliano di scegliere un’altra verdura, li classifichiamo come sconsigliati."
   },
   "signs": {
     "en": [
@@ -129,6 +134,10 @@
     "es": [
       "Debilidad muscular (tras un consumo prolongado de espinacas)",
       "Ritmo cardíaco anormal (tras un consumo prolongado de espinacas)"
+    ],
+    "it": [
+      "Debolezza muscolare (dopo aver mangiato spinaci per molto tempo)",
+      "Ritmo cardiaco anomalo (dopo aver mangiato spinaci per molto tempo)"
     ]
   },
   "what_to_do": {
@@ -144,7 +153,8 @@
     "nb": "Spør alltid dyrlegen før du legger spinat til hundens kosthold, selv som en liten godbit. Hvis hunden er utsatt for nyre- eller blærestein, bør du unngå spinat.",
     "de": "Fragen Sie immer Ihren Tierarzt, bevor Sie Spinat in die Ernährung Ihres Hundes aufnehmen, auch als Snack. Wenn Ihr Hund zu Nieren- oder Blasensteinen neigt, meiden Sie Spinat.",
     "fr": "Demandez toujours conseil à votre vétérinaire avant d’ajouter des épinards à l’alimentation de votre chien, même en simple friandise. Si votre chien est sujet aux calculs rénaux ou vésicaux, évitez les épinards.",
-    "es": "Consulta siempre con tu veterinario antes de incluir espinacas en la dieta de tu perro, incluso como tentempié. Si tu perro es propenso a los cálculos en el riñón o en la vejiga, evita las espinacas."
+    "es": "Consulta siempre con tu veterinario antes de incluir espinacas en la dieta de tu perro, incluso como tentempié. Si tu perro es propenso a los cálculos en el riñón o en la vejiga, evita las espinacas.",
+    "it": "Chiedi sempre al veterinario prima di aggiungere gli spinaci all’alimentazione del tuo cane, anche come spuntino. Se il tuo cane è predisposto ai calcoli renali o della vescica, evita gli spinaci."
   },
   "serving": {
     "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
@@ -159,7 +169,8 @@
     "nb": "Bare hvis dyrlegen er enig og hunden har friske nyrer: små mengder, sjelden, dampet, uten krydder, urter, salt, olje, løk eller hvitløk.",
     "de": "Nur wenn Ihr Tierarzt einverstanden ist und die Nieren Ihres Hundes gesund sind: kleine Mengen, selten, gedämpft, ohne Gewürze, Kräuter, Salz, Öl, Zwiebeln oder Knoblauch.",
     "fr": "Seulement si votre vétérinaire est d’accord et que les reins de votre chien sont en bonne santé : de petites quantités, rarement, cuits à la vapeur, sans épices, herbes, sel, huile, oignon ni ail.",
-    "es": "Solo si tu veterinario está de acuerdo y los riñones de tu perro están sanos: en pequeñas cantidades, de vez en cuando, al vapor, sin especias, hierbas, sal, aceite, cebolla ni ajo."
+    "es": "Solo si tu veterinario está de acuerdo y los riñones de tu perro están sanos: en pequeñas cantidades, de vez en cuando, al vapor, sin especias, hierbas, sal, aceite, cebolla ni ajo.",
+    "it": "Solo se il veterinario è d’accordo e i reni del tuo cane sono sani: piccole quantità, di rado, cotti al vapore, senza spezie, erbe aromatiche, sale, olio, cipolla né aglio."
   },
   "child": {
     "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
@@ -174,7 +185,8 @@
     "nb": "Spinat er ikke en så god godbit for hunder. Be en voksen velge en annen grønnsak til hunden.",
     "de": "Spinat ist kein toller Snack für Hunde. Bitte einen Erwachsenen, ein anderes Gemüse für deinen Hund auszusuchen.",
     "fr": "Les épinards ne sont pas une super friandise pour les chiens. Demande à un adulte de choisir un autre légume pour ton chien.",
-    "es": "Las espinacas no son un gran tentempié para los perros. Pídele a un adulto que elija otra verdura para tu perro."
+    "es": "Las espinacas no son un gran tentempié para los perros. Pídele a un adulto que elija otra verdura para tu perro.",
+    "it": "Gli spinaci non sono uno spuntino ideale per i cani. Chiedi a un adulto di scegliere un’altra verdura per il tuo cane."
   },
   "faq": [
     {
@@ -191,7 +203,8 @@
         "nb": "Er rå eller kokt spinat best for hunder?",
         "de": "Ist roher oder gekochter Spinat besser für Hunde?",
         "fr": "Vaut-il mieux donner des épinards crus ou cuits aux chiens ?",
-        "es": "¿Es mejor que los perros coman las espinacas crudas o cocinadas?"
+        "es": "¿Es mejor que los perros coman las espinacas crudas o cocinadas?",
+        "it": "Per i cani sono meglio gli spinaci crudi o cotti?"
       },
       "a": {
         "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
@@ -206,7 +219,8 @@
         "nb": "Hvis du gir noe, bør du dampe den: Rå spinat er vanskelig for hunder å fordøye, og kokt spinat mister det meste av næringsstoffene.",
         "de": "Wenn Sie Spinat geben, dann gedämpft: Roher Spinat ist für Hunde schwer verdaulich, und gekochter Spinat verliert die meisten Nährstoffe.",
         "fr": "Si vous en donnez, faites-les cuire à la vapeur : les épinards crus sont difficiles à digérer pour un chien, et les épinards bouillis perdent la plupart de leurs nutriments.",
-        "es": "Si se las das, hazlo al vapor: las espinacas crudas son difíciles de digerir para un perro, y las hervidas pierden la mayor parte de sus nutrientes."
+        "es": "Si se las das, hazlo al vapor: las espinacas crudas son difíciles de digerir para un perro, y las hervidas pierden la mayor parte de sus nutrientes.",
+        "it": "Se ne dai, cuocili al vapore: gli spinaci crudi sono difficili da digerire per il cane e quelli lessati perdono la maggior parte dei nutrienti."
       }
     }
   ],
@@ -332,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ea6815feeef05d9e58c6323205fa59edba6477eb532060312ca4dd997e585adf"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "788319501120f437d39c9c710a93118f745b7d6578ddd74bb26836546345c134"
     }
   }
 }
