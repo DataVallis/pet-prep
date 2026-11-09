@@ -3,7 +3,8 @@
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { whenText } from '@/modules/childPet/familyTime';
-import type { TimezoneChangeError } from './familyZone';
+import type { Language } from '@/i18n/language';
+import { zoneCity, type TimezoneChangeError } from './familyZone';
 
 export const FAMILY_ZONE_STRINGS = strings('parent', 'familyZone', {
   banner: (phone: string, family: string) => t('parent:familyZone.banner', { phone, family }),
@@ -16,7 +17,20 @@ export const FAMILY_ZONE_STRINGS = strings('parent', 'familyZone', {
   petBannerList: (phone: string) => t('parent:familyZone.petBannerList', { phone }),
   petBannerRow: (pet: string, petZone: string) => t('parent:familyZone.petBannerRow', { pet, petZone }),
   petTimeNote: (city: string) => t('parent:familyZone.petTimeNote', { city }),
+  petRefused: (pet: string, reason: string) => t('parent:familyZone.petRefused', { pet, reason }),
 });
+
+/**
+ * A pet change's error line for the dashboard banner (QA #891 m4): the »Znova …« time is read on
+ * the pet's clock and labelled with its city, since the phone is on another clock.
+ */
+export function petTimezoneErrorText(error: TimezoneChangeError, petZone: string | null, nowMs: number, language: Language): string {
+  if (error.kind === 'tooSoon' && petZone !== null) {
+    const when = whenText(error.nextAllowedAt, new Date(nowMs).toISOString(), petZone);
+    if (when) return t('parent:familyZone.tooSoonCity', { when, city: zoneCity(petZone, language) });
+  }
+  return timezoneErrorText(error, petZone, nowMs);
+}
 
 /** The sheet's error line; »Znova jutri ob 19:30« read in the (current) family zone. */
 export function timezoneErrorText(error: TimezoneChangeError, familyZone: string | null, nowMs: number): string {

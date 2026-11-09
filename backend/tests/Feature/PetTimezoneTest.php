@@ -9,7 +9,9 @@ use App\Models\PetDailyWalk;
 use App\Models\PushNotification;
 use App\Models\User;
 use App\Services\CareScheduleService;
+use App\Services\CareScoreService;
 use App\Services\EscalationService;
+use App\Services\FamilyInviteService;
 use App\Services\FamilyService;
 use App\Services\PetActivityService;
 use App\Services\PetDecayService;
@@ -17,6 +19,7 @@ use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Testing\TestResponse;
 
 use function Pest\Laravel\actingAs;
@@ -349,5 +352,109 @@ describe('Pushes', function () {
             ->and($ljPush?->suppressed_reason)->toBe('quiet_hours')
             ->and($liPush)->not->toBeNull()
             ->and($liPush?->suppressed_reason)->toBeNull();
+    });
+});
+
+describe('QA #891 follow-ups', function () {
+    it('lets a co-parent of the family change the zone', function () {
+        ['parent' => $parent, 'lj' => $pet] = ptzFamily();
+        $second = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        app(FamilyInviteService::class)->joinFamily($second, app(FamilyInviteService::class)->createInvite($parent)['code']);
+
+        ptzChange($second, $pet, 'Europe/Lisbon', '2026-11-08 12:00')->assertOk()->assertJsonPath('timezone', 'Europe/Lisbon');
+    });
+
+    it('repeats a date on a move west through the pet endpoint without a second walk illness', function () {
+        // Day 2026-11-07 (Ljubljana) walked in full and closed at 23:00 UTC.
+        ptzAt('2026-11-07 22:00');
+        ['parent' => $parent, 'lj' => $pet] = ptzFamily(secondZone: null, steps: 6000);
+        Pet::whereKey($pet->id)->update(['last_step_reset_at' => Carbon::parse('2026-11-06 23:00', 'UTC')]);
+        expect(ptzTick($pet, '2026-11-07 23:01')->daily_step_count)->toBe(0)
+            ->and(ptzWalks($pet))->toBe(['2026-11-07' => 6000]);
+
+        // 03:30 Ljubljana 2026-11-08 = 21:30 New York 2026-11-07: the date repeats, energy 0.
+        ptzChange($parent, $pet, 'America/New_York', '2026-11-08 02:30')->assertOk();
+        expect(ptzTick($pet, '2026-11-08 02:35')->walk_illness_due_at)->toBeNull();
+
+        $again = ptzTick($pet, '2026-11-08 05:01'); // New York midnight
+        expect(ptzWalks($pet))->toBe(['2026-11-07' => 6000])
+            ->and($again->walk_illness_due_at)->toBeNull()
+            ->and($again->illness_until)->toBeNull();
+    });
+
+    it('closes the old day like the tick: frozen without a walk illness, game over / inactive not at all', function () {
+        ['parent' => $parent, 'lj' => $normal, 'li' => $stopped] = ptzFamily(secondZone: null);
+        $kid3 = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $over = disableHygieneEvents(Pet::factory()->create([
+            'user_id' => $kid3->id, 'born_at' => Carbon::parse('2026-11-01 10:00', 'UTC'), 'energy_level' => 0,
+            'daily_step_count' => 0, 'last_step_reset_at' => Carbon::parse('2026-11-06 23:00', 'UTC'), 'last_decay_at' => now(),
+        ]));
+        $over->forceFill(['is_game_over' => true, 'is_active' => false])->save();
+        // Day 2026-11-07 (Ljubljana) not walked and not closed yet.
+        Pet::whereIn('id', [$normal->id, $stopped->id])->update(['last_step_reset_at' => Carbon::parse('2026-11-06 23:00', 'UTC')]);
+        $stopped->fresh()->forceFill(['is_hard_stopped' => true])->save();
+
+        foreach ([$normal, $stopped, $over] as $pet) {
+            ptzChange($parent, $pet->fresh(), 'Europe/Lisbon', '2026-11-08 12:00')->assertOk();
+        }
+
+        expect(ptzWalks($normal))->toHaveKey('2026-11-07')
+            ->and($normal->fresh()->walk_illness_due_at)->not->toBeNull()
+            ->and(ptzWalks($stopped))->toHaveKey('2026-11-07')
+            ->and($stopped->fresh()->walk_illness_due_at)->toBeNull()
+            ->and(ptzWalks($over))->toBe([])
+            ->and($over->fresh()->timezone)->toBe('Europe/Lisbon');
+    });
+
+    it('changes the zone of an ill pet without a walk illness', function () {
+        ['parent' => $parent, 'lj' => $pet] = ptzFamily(secondZone: null);
+        Pet::whereKey($pet->id)->update(['last_step_reset_at' => Carbon::parse('2026-11-06 23:00', 'UTC')]);
+        $pet->fresh()->forceFill(['illness_until' => Carbon::parse('2026-11-09 12:00', 'UTC')])->save();
+
+        ptzChange($parent, $pet->fresh(), 'Europe/Lisbon', '2026-11-08 12:00')->assertOk();
+        expect($pet->fresh()->walk_illness_due_at)->toBeNull()
+            ->and($pet->fresh()->effectiveTimezone())->toBe('Europe/Lisbon');
+    });
+
+    it('builds the Care Score board with each pet\'s own »today«', function () {
+        ['lj' => $lj, 'li' => $li] = ptzFamily();
+        $now = Carbon::parse('2026-11-09 23:30', 'UTC'); // 00:30 Ljubljana 11-10, 23:30 Lisbon 11-09
+        $scores = app(CareScoreService::class);
+        $board = $scores->board(collect([$lj->fresh(), $li->fresh()]), 'Europe/Ljubljana', now: $now);
+
+        expect(CareScoreService::todayOf($board, $board['pets'][$lj->id]))->toBe('2026-11-10')
+            ->and(CareScoreService::todayOf($board, $board['pets'][$li->id]))->toBe('2026-11-09')
+            ->and(CareScoreService::zoneOf($board, $board['pets'][$li->id]))->toBe('Europe/Lisbon')
+            ->and($scores->petSummary($board, $board['pets'][$lj->id])['today']['date'])->toBe('2026-11-10')
+            ->and($scores->petSummary($board, $board['pets'][$li->id])['today']['date'])->toBe('2026-11-09');
+    });
+
+    it('writes one audit line per saved change, also for a pin that does not move the clock', function () {
+        ['parent' => $parent, 'lj' => $pet] = ptzFamily();
+        Log::spy();
+
+        ptzChange($parent, $pet, 'Europe/Ljubljana', '2026-11-08 12:00')->assertOk();
+        ptzChange($parent, $pet, 'Europe/Lisbon', '2026-11-08 12:01')->assertOk();
+
+        $lines = [];
+        Log::shouldHaveReceived('info')->withArgs(function (string $message, array $context = []) use (&$lines): bool {
+            if ($message === 'PetTimezoneService: pet timezone changed') {
+                $lines[] = $context;
+            }
+
+            return true;
+        });
+        expect($lines)->toHaveCount(2)
+            ->and($lines[0])->toMatchArray(['pet_id' => $pet->id, 'by_user_id' => $parent->id, 'from' => 'Europe/Ljubljana', 'to' => 'Europe/Ljubljana', 'follows_family' => false, 'clock_moved' => false])
+            ->and($lines[1])->toMatchArray(['from' => 'Europe/Ljubljana', 'to' => 'Europe/Lisbon', 'clock_moved' => true]);
+    });
+
+    it('exports each pet\'s effective zone (its local_date values are in it)', function () {
+        ['parent' => $parent, 'lj' => $lj, 'li' => $li] = ptzFamily();
+        actingAs($parent, 'sanctum');
+        $pets = collect(getJson('/api/parent/account/export')->assertOk()->json('pets'))->keyBy('id');
+
+        expect($pets[$li->id])->toMatchArray(['timezone' => 'Europe/Lisbon', 'timezone_follows_family' => false])
+            ->and($pets[$lj->id])->toMatchArray(['timezone' => 'Europe/Ljubljana', 'timezone_follows_family' => true]);
     });
 });

@@ -68,6 +68,7 @@ class PetTimezoneService
                 // Pin / unpin without moving the clock: no game effect, never counted.
                 $locked->forceFill(['timezone' => $timezone])->save();
                 PetUpdated::afterCommit($locked, 'pet_timezone_changed');
+                $this->audit($family, $locked, $parent, $oldZone, $newZone, $timezone, clockMoved: false);
 
                 return $locked;
             }
@@ -86,14 +87,7 @@ class PetTimezoneService
             $locked->save();
             PetUpdated::afterCommit($locked, 'pet_timezone_changed');
 
-            Log::info('PetTimezoneService: pet timezone changed', [
-                'family_id' => $family->id,
-                'pet_id' => $locked->id,
-                'by_user_id' => $parent->id,
-                'from' => $oldZone,
-                'to' => $newZone,
-                'follows_family' => $timezone === null,
-            ]);
+            $this->audit($family, $locked, $parent, $oldZone, $newZone, $timezone, clockMoved: true);
 
             return $locked;
         });
@@ -102,12 +96,36 @@ class PetTimezoneService
     }
 
     /**
+     * The audit line of every saved pet zone change (also a pin / unpin that
+     * does not move the clock — `clock_moved` false).
+     */
+    private function audit(Family $family, Pet $pet, User $parent, string $from, string $to, ?string $own, bool $clockMoved): void
+    {
+        Log::info('PetTimezoneService: pet timezone changed', [
+            'family_id' => $family->id,
+            'pet_id' => $pet->id,
+            'by_user_id' => $parent->id,
+            'from' => $from,
+            'to' => $to,
+            'follows_family' => $own === null,
+            'clock_moved' => $clockMoved,
+        ]);
+    }
+
+    /**
      * Step 1 of a zone move (pet change or family change): close a day that
-     * is already over on the pet's CURRENT (old) clock. The caller holds the
-     * pet's row lock and saves.
+     * is already over on the pet's CURRENT (old) clock, exactly as the decay
+     * tick would (PetDecayService::isFrozen): an inactive or game-over pet
+     * closes no day at all; a frozen one (hard stop, illness, payment lock)
+     * closes it without a walk illness. The caller holds the pet's row lock
+     * and saves.
      */
     public function closeOldDay(Pet $locked, CarbonImmutable $now): void
     {
+        if (! $locked->is_active || $locked->is_game_over) {
+            return;
+        }
+
         $this->dailyWalks->closeDayIfNeeded($locked, $now, allowIllness: ! $locked->isFrozen());
     }
 

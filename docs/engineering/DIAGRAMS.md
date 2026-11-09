@@ -4,6 +4,8 @@ Living diagrams of the system **as built**. Update in the same PR as the code. G
 
 Legend: solid = built and deployed · dashed = planned (roadmap ID in label).
 
+> **Terminology (time zone per pet, David 2026-11-09):** wherever a diagram below says »family timezone«, »family-local«, »family day« or »family midnight« about a pet's rule (its windows, quiet hours, midnight, step day, routines, budgets, pushes), read **the pet's effective zone** (`Pet::effectiveTimezone()` = `pets.timezone ?? families.timezone`) — the family zone unless the pet has its own. Family-wide things without a pet stay on `families.timezone`.
+
 ## 1. System context
 
 ```mermaid
@@ -2552,7 +2554,7 @@ sequenceDiagram
     S->>DB: pets.timezone = value (not counted)
   else clock moves
     S->>S: < 24 h since pets.timezone_changed_at → 422 timezone_change_too_soon
-    S->>S: closeOldDay (old zone: walk row, step reset)
+    S->>S: closeOldDay (old zone: walk row, step reset —<br/>inactive / game over: nothing; frozen: no walk illness)
     S->>S: pets.timezone = value · settleNewZone<br/>(same date → step day continues; close pointer → now)
     S->>DB: save · timezone_changed_at = now
   end

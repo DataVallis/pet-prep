@@ -67,8 +67,10 @@ class CertificateController extends Controller
         $parent = $request->user();
         $family = $this->families->ensureFamilyFor($parent);
 
+        // `timezone`: the answer's dates on the pet's clock (David 2026-11-09) — a partial
+        // select without it would silently fall back to the family zone.
         $row = ctype_digit($certificate)
-            ? ChallengeCertificate::where('family_id', $family->id)->with(['child:id,name', 'pet:id,name'])->find((int) $certificate)
+            ? ChallengeCertificate::where('family_id', $family->id)->with(['child:id,name', 'pet:id,name,timezone,family_id'])->find((int) $certificate)
             : null;
         if ($row === null || ! $parent->can('generate', $row)) {
             return response()->json(['message' => 'No such certificate in your family.', 'reason' => 'certificate_not_found'], 404);

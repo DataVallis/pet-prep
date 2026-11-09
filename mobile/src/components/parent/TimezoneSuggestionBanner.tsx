@@ -7,7 +7,9 @@
  *   several  → a short list with checkboxes, pre-checked only for this phone's pets (pets other
  *              family members care for are listed, never pre-selected).
  * »Zamenjam« → the warning (same text as the sheet) → »Zamenjaj« sets each checked pet to the
- * phone's zone (`PUT /api/parent/pets/{id}/timezone`, one by one; not optimistic). »Ne zdaj«
+ * phone's zone (`PUT /api/parent/pets/{id}/timezone`, one by one — a refused pet (422, e.g. the
+ * 24 h limit) never stops the others and is named with its »Znova …« time on its own clock;
+ * not optimistic). »Ne zdaj«
  * hides it for THIS phone zone (device store) — it comes back only in yet another zone.
  * Re-checked when the app returns to the foreground.
  */
@@ -31,7 +33,7 @@ import {
 } from '@/modules/familyZone/familyZone';
 import { usePhoneChildIds } from '@/modules/familyZone/usePhoneChildIds';
 import { usePhoneZone } from '@/modules/familyZone/usePhoneZone';
-import { FAMILY_ZONE_STRINGS as S, timezoneErrorText } from '@/modules/familyZone/strings';
+import { FAMILY_ZONE_STRINGS as S, petTimezoneErrorText } from '@/modules/familyZone/strings';
 import { dismissZoneSuggestion, useZoneSuggestionDismissal } from '@/modules/familyZone/zoneSuggestionPrefs';
 import { readPetName } from '@/modules/petName/petName';
 import { MIN_TOUCH, palette } from '@/theme';
@@ -62,7 +64,8 @@ function Banner({ familyZone, pets, phoneChildIds }: TimezoneSuggestionBannerPro
   const [unchecked, setUnchecked] = useState<Set<number>>(new Set());
   const [checkedOthers, setCheckedOthers] = useState<Set<number>>(new Set());
   const [confirming, setConfirming] = useState(false);
-  const [error, setError] = useState<TimezoneChangeError | null>(null);
+  /** Pets the server refused (QA #891 m4: the loop goes on past a 422 and names them). */
+  const [refused, setRefused] = useState<{ petId: number; zone: string; error: TimezoneChangeError }[]>([]);
   const [busy, setBusy] = useState(false);
 
   const mine = useMemo(() => phonePetIds(pets, phoneChildIds), [pets, phoneChildIds]);
@@ -93,18 +96,19 @@ function Banner({ familyZone, pets, phoneChildIds }: TimezoneSuggestionBannerPro
   const apply = async () => {
     if (busy || chosen.length === 0) return;
     setBusy(true);
-    setError(null);
-    try {
-      // One by one: the server limits each pet separately; the first refusal stops here.
-      for (const c of chosen) {
+    setRefused([]);
+    const failed: { petId: number; zone: string; error: TimezoneChangeError }[] = [];
+    // One by one: the server limits each pet separately — a refusal never stops the others.
+    for (const c of chosen) {
+      try {
         await update.mutateAsync({ petId: c.petId, timezone: phoneZone });
+      } catch (err) {
+        failed.push({ petId: c.petId, zone: c.zone, error: readTimezoneChangeError(err) });
       }
-      setConfirming(false);
-    } catch (err) {
-      setError(readTimezoneChangeError(err));
-    } finally {
-      setBusy(false);
     }
+    setRefused(failed);
+    if (failed.length === 0) setConfirming(false);
+    setBusy(false);
   };
 
   return (
@@ -144,11 +148,14 @@ function Banner({ familyZone, pets, phoneChildIds }: TimezoneSuggestionBannerPro
           {S.warning}
         </Text>
       )}
-      {error !== null && (
-        <Text style={styles.error} accessibilityRole="alert" testID="zone-suggestion-error">
-          {timezoneErrorText(error, chosen[0]?.zone ?? familyZone, Date.now())}
-        </Text>
-      )}
+      {refused.map((r) => {
+        const pet = byId.get(r.petId);
+        return (
+          <Text key={r.petId} style={styles.error} accessibilityRole="alert" testID={`zone-suggestion-error-${r.petId}`}>
+            {S.petRefused(pet ? bannerPetName(pet) : '', petTimezoneErrorText(r.error, r.zone, Date.now(), language))}
+          </Text>
+        );
+      })}
       {!single && chosen.length === 0 && <Text style={styles.muted}>{S.petBannerNone}</Text>}
       <View style={styles.actions}>
         <Pressable

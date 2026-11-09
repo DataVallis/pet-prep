@@ -200,6 +200,17 @@ describe('The change itself', function () {
         expect($family->fresh()->timezone)->toBe('Europe/Ljubljana');
     });
 
+    it('closes a frozen pet\'s finished day without a walk illness (allowIllness = not frozen, like the tick)', function () {
+        // Day 2026-11-07 (Ljubljana) not walked and not closed yet; the pet is hard-stopped.
+        [$parent, $pet] = tzcFamily(lastReset: '2026-11-06 23:00');
+        $pet->fresh()->forceFill(['is_hard_stopped' => true])->save();
+
+        tzcChange($parent, '2026-11-08 12:00', 'Europe/Lisbon')->assertOk();
+
+        expect(tzcWalks($pet))->toHaveKey('2026-11-07')
+            ->and($pet->fresh()->walk_illness_due_at)->toBeNull();
+    });
+
     it('applies the same limit to the timezone of PUT /api/parent/quiet-hours and saves nothing', function () {
         [$parent] = tzcFamily();
         tzcChange($parent, '2026-11-08 19:30', 'Europe/Lisbon')->assertOk();

@@ -142,6 +142,29 @@ describe('TimezoneSuggestionBanner (per pet)', () => {
     expect(updatePetTimezone).toHaveBeenCalledWith(1, 'Europe/Lisbon');
   });
 
+  it('goes on past a refused pet and names it with its »Znova …« time on its own clock', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    const both = [suki, { ...bela, caretakers: [{ child_id: 10 }] }];
+    updatePetTimezone.mockImplementation(async (petId: number) => {
+      if (petId === 1) {
+        throw new ApiError('too soon', 422, { reason: 'timezone_change_too_soon', next_allowed_at: '2026-11-10T19:30:00+01:00' });
+      }
+      return { pet_id: petId, timezone: 'Europe/Lisbon', timezone_follows_family: false };
+    });
+    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={both} phoneChildIds={[10]} />);
+    await flush();
+
+    fireEvent.press(screen.getByTestId('zone-suggestion-change'));
+    fireEvent.press(screen.getByTestId('zone-suggestion-confirm'));
+    await flush();
+
+    expect(updatePetTimezone).toHaveBeenCalledTimes(2);
+    expect(updatePetTimezone).toHaveBeenCalledWith(2, 'Europe/Lisbon');
+    const line = screen.getByTestId('zone-suggestion-error-1').props.children as string;
+    expect(line).toMatch(/^Suki: Pas lahko spremenite enkrat na 24 ur\. Znova .*19:30.* \(Ljubljana\)\.$/);
+    expect(screen.queryByTestId('zone-suggestion-error-2')).toBeNull();
+  });
+
   it('lists several pets, pre-checks only this phone\'s, and never changes the unchecked ones', async () => {
     setPhoneZoneForTests('Europe/Lisbon');
     updatePetTimezone.mockResolvedValue({ pet_id: 1, timezone: 'Europe/Lisbon', timezone_follows_family: false });
@@ -205,6 +228,14 @@ describe('QuietHoursCard family time note', () => {
     renderWithQuery(<QuietHoursCard familyZone="Europe/Ljubljana" />);
     await flush();
     expect(screen.getByTestId('qh-family-time').props.children).toBe('po času družine (Ljubljana)');
+  });
+
+  it('says »po uri vsakega ljubljenčka« once any pet has its own zone', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    renderWithQuery(<QuietHoursCard familyZone="Europe/Ljubljana" perPetZones />);
+    await flush();
+    expect(screen.getByTestId('qh-each-pet-time').props.children).toBe('po uri vsakega ljubljenčka');
+    expect(screen.queryByTestId('qh-family-time')).toBeNull();
   });
 
   it('shows no note on the family clock', async () => {

@@ -65,3 +65,22 @@ describe('familyTimezone', () => {
     expect(isZoneName(42)).toBe(false);
   });
 });
+
+describe('familyTimezone per child (QA #891 m6)', () => {
+  beforeEach(() => resetFamilyTimezoneCacheForTests());
+
+  it('keeps one pet zone per child on a shared phone and reads the legacy value as a fallback', async () => {
+    const store = memoryStore();
+    store.data.set(FAMILY_TIMEZONE_KEY, 'Europe/Ljubljana');
+    rememberFamilyTimezone('Europe/Lisbon', store, 7);
+    await Promise.resolve();
+
+    expect(store.data.get(`${FAMILY_TIMEZONE_KEY}.7`)).toBe('Europe/Lisbon');
+    await expect(loadFamilyTimezone(store, 7)).resolves.toBe('Europe/Lisbon');
+    await expect(loadFamilyTimezone(store, 8)).resolves.toBe('Europe/Ljubljana');
+
+    await forgetFamilyTimezone(store, 7);
+    expect(store.data.has(`${FAMILY_TIMEZONE_KEY}.7`)).toBe(false);
+    expect(store.data.has(FAMILY_TIMEZONE_KEY)).toBe(false);
+  });
+});

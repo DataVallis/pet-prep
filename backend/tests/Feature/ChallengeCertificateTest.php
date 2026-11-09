@@ -451,6 +451,18 @@ describe('parent API', function () {
             ->and(Storage::disk('certificates')->allFiles())->toBe([$pet->id.'/certificate-'.$row->id.'.pdf']);
     });
 
+    it('answers generate and the list on the pet\'s own clock (David 2026-11-09, QA #891 M2)', function () {
+        [$parent, $child, $pet] = certFamily();
+        certPlant($pet, $child, 86, 14);
+        certTick(CERT_DONE);
+        $row = certRow($pet, $child);
+        $pet->forceFill(['timezone' => 'Europe/Lisbon'])->save(); // UTC+0 in December, Ljubljana +01:00
+
+        expect(certGenerate($parent, $row)->assertOk()->json('completed_at'))->toEndWith('+00:00');
+        actingAsRole($parent);
+        expect(getJson('/api/parent/certificates')->assertOk()->json('certificates.0.completed_at'))->toEndWith('+00:00');
+    });
+
     it('keeps the longest names on one page', function () {
         $pdf = app(CertificatePdfRenderer::class)->render([
             'locale' => 'sl', 'child_name' => str_repeat('Š', 30), 'pet_name' => str_repeat('Ž', 30),

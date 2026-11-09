@@ -366,6 +366,10 @@ class AccountExportService
                 'species' => $pet->speciesValue()->value,
                 // M5-R08: the pet's name (null = none).
                 'name' => $pet->name,
+                // David 2026-11-09: the pet's effective IANA zone — its local_date values are in it.
+                'timezone' => $pet->effectiveTimezone(),
+                // True = the pet follows the family zone (no own zone set).
+                'timezone_follows_family' => ! $pet->hasOwnTimezone(),
                 'created_at' => $this->iso($pet->created_at),
                 'born_at' => $this->iso($pet->born_at),
                 'is_active' => (bool) $pet->is_active,

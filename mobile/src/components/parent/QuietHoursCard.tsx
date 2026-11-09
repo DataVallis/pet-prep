@@ -74,9 +74,14 @@ interface QuietHoursCardProps {
    * (David 2026-11-08).
    */
   familyZone?: string | null;
+  /**
+   * True when any pet of the family has its own zone (David 2026-11-09): the windows are read on
+   * each pet's clock, so the note says »po uri vsakega ljubljenčka« instead (QA #891 m3).
+   */
+  perPetZones?: boolean;
 }
 
-export default function QuietHoursCard({ familyZone = null }: QuietHoursCardProps) {
+export default function QuietHoursCard({ familyZone = null, perPetZones = false }: QuietHoursCardProps) {
   const query = useQuietHours();
   const phoneZone = usePhoneZone();
   const update = useUpdateQuietHours();
@@ -141,7 +146,11 @@ export default function QuietHoursCard({ familyZone = null }: QuietHoursCardProp
         {S.title}
       </SectionTitle>
       <Text style={styles.muted}>{S.hint}</Text>
-      {familyZone !== null && phoneDiffersFromFamily(familyZone, phoneZone, Date.now()) && (
+      {perPetZones ? (
+        <Text style={styles.zoneNote} testID="qh-each-pet-time">
+          {FAMILY_ZONE_STRINGS.eachPetTimeNote}
+        </Text>
+      ) : familyZone !== null && phoneDiffersFromFamily(familyZone, phoneZone, Date.now()) && (
         <Text style={styles.zoneNote} testID="qh-family-time">
           {FAMILY_ZONE_STRINGS.familyTimeNote(zoneCity(familyZone, currentLanguage()))}
         </Text>

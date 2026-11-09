@@ -1480,6 +1480,11 @@ class Pet extends Model
      * behaviour events, hygiene schedule, training / play budgets, pushes,
      * report and timeline dates, certificates) reads this — never
      * familyTimezone() directly. Only PetTimezoneService writes the column.
+     *
+     * Trap: a model loaded with a partial column list (`->with('pet:id,name')`,
+     * `->get(['id', …])`) has no `timezone` attribute and SILENTLY falls back to
+     * the family zone — select `timezone` (and `family_id`) wherever the zone of
+     * such a model is read.
      */
     public function effectiveTimezone(): string
     {

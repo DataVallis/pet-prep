@@ -287,7 +287,10 @@
     "petBannerRow": "{{pet}} ({{petZone}})",
     "petBannerNone": "Izberite vsaj enega ljubljenčka.",
     "petBannerDone": "Časovni pas je zamenjan.",
-    "petTimeNote": "po času ljubljenčka ({{city}})"
+    "petTimeNote": "po času ljubljenčka ({{city}})",
+    "eachPetTimeNote": "po uri vsakega ljubljenčka",
+    "petRefused": "{{pet}}: {{reason}}",
+    "tooSoonCity": "Pas lahko spremenite enkrat na 24 ur. Znova {{when}} ({{city}})."
   },
   "notifications": {
     "title": "Obvestila",

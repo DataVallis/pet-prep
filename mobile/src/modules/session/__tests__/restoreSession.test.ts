@@ -70,14 +70,17 @@ describe('restoreSession', () => {
 
   it('hotfix 2026-10-06: a child session carries the remembered family timezone (lock overlay before the state loads)', async () => {
     getItem.mockImplementation((key: string) =>
-      Promise.resolve(key === 'petprep.family_timezone' ? 'Europe/Ljubljana' : 'tok-5'),
+      // QA #891 m6: no per-child value yet (`petprep.family_timezone.4`) → the legacy one.
+      Promise.resolve(key === 'petprep.family_timezone' ? 'Europe/Ljubljana' : key.startsWith('petprep.family_timezone.') ? null : 'tok-5'),
     );
     getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
     const result = await restoreSession();
     expect(result.status === 'authenticated' && result.session.familyTimezone).toBe('Europe/Ljubljana');
 
     // A garbage value is ignored; a parent never reads it.
-    getItem.mockImplementation((key: string) => Promise.resolve(key === 'petprep.family_timezone' ? '../etc' : 'tok-5'));
+    getItem.mockImplementation((key: string) =>
+      Promise.resolve(key === 'petprep.family_timezone' ? '../etc' : key.startsWith('petprep.family_timezone.') ? null : 'tok-5'),
+    );
     getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
     const garbage = await restoreSession();
     expect(garbage.status === 'authenticated' && garbage.session.familyTimezone).toBeNull();

@@ -22,6 +22,7 @@ import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
+import { followsFamily } from '@/modules/familyZone/familyZone';
 import FamilyTimezoneCard from '@/components/parent/FamilyTimezoneCard';
 import PurchasesRow from '@/components/parent/PurchasesRow';
 import { showPurchasesRow } from '@/modules/plan/purchaseEntry';
@@ -95,7 +96,7 @@ export default function ControlsScreen({
 
         {/* David 2026-11-08 / 2026-11-09: the default zone of pets without their own (each pet card has its own row). */}
         <FamilyTimezoneCard familyZone={family?.timezone ?? null} />
-        <QuietHoursCard familyZone={family?.timezone ?? null} />
+        <QuietHoursCard familyZone={family?.timezone ?? null} perPetZones={(family?.pets ?? []).some((p) => !followsFamily(p))} />
         <NotificationsCard />
 
         {family && <FamilyParentsCard family={family} />}
