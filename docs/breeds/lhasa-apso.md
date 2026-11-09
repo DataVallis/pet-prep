@@ -10,7 +10,8 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `lhasa_apso` (viri S737–S745; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: RKC (`listed`) — DNA test PRA4 (minimum), pregled oči BVA/KC/ISDS (dobra praksa) |
 | Izvor | FCI št. 227 »Lhasa Apso«, skupina 9, sekcija 5 (tibetanske pasme), Tibet (Kitajska), pokroviteljstvo Velika Britanija (S737, S738) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 94. mesto »Lhasa Apso« (S174, zapisano 2026-11-05) |
-| PR-ji | pet-prep #825 (pasma, združen `6eef5cc`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 42605444780, koda `6eef5cc`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-lhasa-apso` (PR sledi) |
+| PR-ji | pet-prep #825 (pasma, združen `6eef5cc`) · portret pet-prep #854 (združen `404341d`; zagon `breed-portraits.yml` 42605444780, koda `6eef5cc`, brez namestitve; sprejet v prvem poskusu) · spletna stran pet-prep-website #301 (združen `3a76c0b`) · zaključni dokumenti pet-prep (ta PR) |
+| Potek zagona | Samodejni zagon 2026-11-06 se je ustavil takoj po gradnji (CI zelen ob 02:55 UTC): PR #825 je ostal osnutek in je 3 dni držal zaklep, zato so se vsi naslednji urni zagoni ustavili. **Zagon je 2026-11-09 dokončal naknadni zagon:** v vejo je združil `main` (35 commitov, brez konfliktov), migracijo premaknil na prvi prosti datum (`2027_03_17_120000`, ker je `main` medtem dobil migracijo z enakim časovnim žigom), opravil samopregled po runbooku §6 (brez blokad; zapisan v opisu PR #825), ponovno zagnal teste in združil #825. Portret (#854) in spletno stran (#301) je nato naredila prvotna seja, ki se je ob združitvi znova oglasila. |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -44,7 +45,7 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička, zobje vsak dan, kremplji vsake 4 tedne, opomnik staršu za kopanje (2 tedna) | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R17 / M5-R18 / M5-R19 | 2026-11-06 |
 | Barva (izbirnik: 10 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-06 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; zlata dolga dlaka, temnejše konice brade, rep čez hrbet, siva studijska podlaga) | — | M5-R11-04 | 2026-11-09 |
-| Stran na petprep.si (`/animals/dogs/lhasa-apso`, `/sl/zivali/psi/lhasa-apso`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije (le s portretom) | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/lhasa-apso`, `/sl/zivali/psi/lhasa-apso`) | 🗓 stran s portretom združena (pet-prep-website #301), na spletu z naslednjo dnevno namestitvijo spletne strani; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-11-09 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
