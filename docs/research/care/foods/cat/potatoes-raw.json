@@ -15,7 +15,8 @@
     "de": "Rohe Kartoffeln",
     "fr": "Pommes de terre crues",
     "es": "Patatas crudas",
-    "it": "Patate crude"
+    "it": "Patate crude",
+    "pt": "Batata crua"
   },
   "question": {
     "en": "Can cats eat raw potatoes?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen rohe Kartoffeln fressen?",
     "fr": "Les chats peuvent-ils manger des pommes de terre crues ?",
     "es": "¿Pueden los gatos comer patatas crudas?",
-    "it": "I gatti possono mangiare le patate crude?"
+    "it": "I gatti possono mangiare le patate crude?",
+    "pt": "Os gatos podem comer batata crua?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -47,7 +49,8 @@
     "de": "rohe-kartoffeln",
     "fr": "pommes-de-terre-crues",
     "es": "patatas-crudas",
-    "it": "patate-crude"
+    "it": "patate-crude",
+    "pt": "batata-crua"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, geben Sie Ihrer Katze keine rohen Kartoffeln. Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein. Wenn Ihre Katze rohe Kartoffeln gefressen hat, wenden Sie sich an Ihren Tierarzt.",
     "fr": "Non, ne donnez pas de pomme de terre crue à votre chat. La RSPCA ne mentionne la pomme de terre pour les chats que bouillie ou en purée, sans beurre ni fromage, et l’ASPCA indique que les pommes de terre crues peuvent poser problème aux animaux. Si votre chat mange de la pomme de terre crue, contactez votre vétérinaire.",
     "es": "No, no le des patata cruda a tu gato. La RSPCA solo incluye la patata entre los alimentos adecuados para gatos si está en puré o hervida, sin mantequilla ni queso, y la ASPCA señala que las patatas crudas pueden dar problemas a las mascotas. Si tu gato come patata cruda, contacta con tu veterinario.",
-    "it": "No, non dare patate crude al tuo gatto. La RSPCA indica la patata come adatta ai gatti solo schiacciata o lessata, senza burro né formaggio, e l’ASPCA dice che le patate crude possono essere problematiche per gli animali domestici. Se il tuo gatto mangia una patata cruda, contatta il veterinario."
+    "it": "No, non dare patate crude al tuo gatto. La RSPCA indica la patata come adatta ai gatti solo schiacciata o lessata, senza burro né formaggio, e l’ASPCA dice che le patate crude possono essere problematiche per gli animali domestici. Se il tuo gatto mangia una patata cruda, contatta il veterinario.",
+    "pt": "Não, não dês batata crua ao teu gato. A RSPCA só indica a batata como adequada para gatos se for cozida ou em puré, sem manteiga nem queijo, e a ASPCA diz que a batata crua pode ser problemática para os animais de estimação. Se o teu gato comer batata crua, liga ao teu veterinário."
   },
   "why": {
     "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
@@ -80,7 +84,8 @@
     "de": "Die RSPCA und Cats Protection empfehlen Kartoffeln für Katzen nur gekocht oder als ungewürztes Püree, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein, gekochte dagegen sind in Maßen in Ordnung. Ein von Tierärzten verfasster PetMD-Artikel geht weiter: Er bezeichnet rohe und grüne Kartoffeln sowie die Kartoffelpflanze als giftig für Katzen und schreibt, dass Kartoffelschalen das Gift Solanin enthalten.",
     "fr": "La RSPCA et Cats Protection ne suggèrent la pomme de terre pour les chats que bouillie ou en purée nature, et l’ASPCA indique que les pommes de terre crues peuvent poser problème aux animaux, alors que les pommes de terre cuites sont acceptables avec modération. Un article de PetMD rédigé par des vétérinaires va plus loin : il qualifie de toxiques pour les chats les pommes de terre crues, les pommes de terre vertes et le plant de pomme de terre, et précise que les peaux de pomme de terre contiennent de la solanine, une toxine.",
     "es": "La RSPCA y Cats Protection solo recomiendan la patata para gatos hervida o en puré sin nada añadido, y la ASPCA señala que las patatas crudas pueden dar problemas a las mascotas, mientras que las cocidas están bien con moderación. Un artículo de PetMD escrito por veterinarios va más allá: califica de tóxicas para los gatos las patatas crudas, las patatas verdes y la planta de la patata, y afirma que la piel de la patata contiene una toxina, la solanina.",
-    "it": "La RSPCA e Cats Protection suggeriscono la patata per i gatti solo lessata o in purè semplice, e l’ASPCA dice che le patate crude possono essere problematiche per gli animali domestici, mentre quelle cotte vanno bene in quantità moderate. Un articolo di PetMD scritto da veterinari si spinge oltre: definisce tossiche per i gatti le patate crude, quelle verdi e la pianta della patata, e dice che le bucce di patata contengono la tossina solanina."
+    "it": "La RSPCA e Cats Protection suggeriscono la patata per i gatti solo lessata o in purè semplice, e l’ASPCA dice che le patate crude possono essere problematiche per gli animali domestici, mentre quelle cotte vanno bene in quantità moderate. Un articolo di PetMD scritto da veterinari si spinge oltre: definisce tossiche per i gatti le patate crude, quelle verdi e la pianta della patata, e dice che le bucce di patata contengono la tossina solanina.",
+    "pt": "A RSPCA e a Cats Protection só sugerem a batata para gatos quando é cozida ou em puré simples, e a ASPCA diz que a batata crua pode ser problemática para os animais de estimação, ao passo que a batata cozida não faz mal com moderação. Um artigo da PetMD, escrito por veterinários, vai mais longe: considera tóxicos para os gatos a batata crua, a batata esverdeada e a planta da batata, e diz que as peles da batata contêm solanina, uma toxina."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Nausea",
       "Vomito",
       "Diarrea"
+    ],
+    "pt": [
+      "Náuseas",
+      "Vómitos",
+      "Diarreia"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "de": "Wenn Ihre Katze rohe Kartoffeln oder Kartoffelschalen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Si votre chat a mangé de la pomme de terre crue ou des épluchures de pomme de terre, contactez immédiatement votre vétérinaire pour lui demander conseil. Notez ce qu’il a mangé et à quel moment. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Si tu gato ha comido patata cruda o piel de patata, contacta enseguida con tu veterinario para pedirle consejo. Anota qué ha comido y cuándo. No intentes hacerle vomitar en casa.",
-    "it": "Se il tuo gatto ha mangiato patata cruda o bucce di patata, contatta subito il veterinario per un consiglio. Prendi nota di cosa ha mangiato e di quando. Non provare a farlo vomitare a casa."
+    "it": "Se il tuo gatto ha mangiato patata cruda o bucce di patata, contatta subito il veterinario per un consiglio. Prendi nota di cosa ha mangiato e di quando. Non provare a farlo vomitare a casa.",
+    "pt": "Se o teu gato comeu batata crua ou pele de batata, liga já ao teu veterinário para pedir conselho. Anota o que foi comido e a que horas. Não tentes fazer o teu gato vomitar em casa."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "de": "Rohe Kartoffeln sind nichts für Katzen. Wenn eine Katze an einer knabbert, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
     "fr": "Les pommes de terre crues ne sont pas pour les chats. Si ton chat en grignote une, préviens un adulte pour qu’il appelle le vétérinaire.",
     "es": "Las patatas crudas no son para los gatos. Si tu gato mordisquea una, avisa a un adulto para que llame al veterinario.",
-    "it": "Le patate crude non sono per i gatti. Se il micio ne mordicchia una, dillo a un adulto, così può chiamare il veterinario."
+    "it": "Le patate crude non sono per i gatti. Se il micio ne mordicchia una, dillo a un adulto, così può chiamare il veterinario.",
+    "pt": "A batata crua não é para gatos. Se o gatinho trincar uma, avisa um adulto para ligar ao veterinário."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "de": "Dürfen Katzen gekochte Kartoffeln fressen?",
         "fr": "Les chats peuvent-ils manger de la pomme de terre cuite ?",
         "es": "¿Pueden los gatos comer patata cocida?",
-        "it": "I gatti possono mangiare la patata cotta?"
+        "it": "I gatti possono mangiare la patata cotta?",
+        "pt": "Os gatos podem comer batata cozida?"
       },
       "a": {
         "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
@@ -219,7 +232,8 @@
         "de": "Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und Cats Protection empfiehlt reines Kartoffelpüree ohne Butter, Sahne oder Knoblauch. Lassen Sie die Schale weg.",
         "fr": "La RSPCA ne mentionne la pomme de terre pour les chats que bouillie ou en purée, sans beurre ni fromage, et Cats Protection suggère une purée nature, sans beurre, crème ni ail. Retirez la peau.",
         "es": "La RSPCA incluye la patata para gatos solo si está en puré o hervida, sin mantequilla ni queso, y Cats Protection sugiere puré de patata sin nada añadido: sin mantequilla, nata ni ajo. Quítale la piel.",
-        "it": "La RSPCA elenca le patate per i gatti solo se sono schiacciate o lessate, senza burro né formaggio, e Cats Protection suggerisce il purè di patate semplice, senza burro, panna né aglio. Lascia da parte la buccia."
+        "it": "La RSPCA elenca le patate per i gatti solo se sono schiacciate o lessate, senza burro né formaggio, e Cats Protection suggerisce il purè di patate semplice, senza burro, panna né aglio. Lascia da parte la buccia.",
+        "pt": "A RSPCA só indica a batata para gatos se for cozida ou em puré, sem manteiga nem queijo, e a Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho. Tira a pele."
       }
     }
   ],
@@ -342,6 +356,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "13a7fa6aea6c5c5bab7e1439eed9dd0e225bb937f64c92a2ed33ee9b9d63808a"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a0818a1705f3691ca3e928e34da3056ea5a774d051eb7c48fa7c816c604cd2b1"
     }
   }
 }

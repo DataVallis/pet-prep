@@ -3,37 +3,45 @@
   "species": "cat",
   "name": {
     "en": "Beetroot",
-    "sl": "Rdeča pesa"
+    "sl": "Rdeča pesa",
+    "pt": "Beterraba"
   },
   "question": {
     "en": "Can cats eat beetroot?",
-    "sl": "Ali lahko mačke jedo rdečo peso?"
+    "sl": "Ali lahko mačke jedo rdečo peso?",
+    "pt": "Os gatos podem comer beterraba?"
   },
   "url_slug": {
     "en": "beetroot",
-    "sl": "rdeca-pesa"
+    "sl": "rdeca-pesa",
+    "pt": "beterraba"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
-    "sl": "Da, majhen navaden košček rdeče pese je v redu kot občasen priboljšek. ASPCA peso, tudi rdečo peso, navaja kot nestrupeno za mačke. Velikih listov pa mački ne dajajte: ASPCA navaja, da veliki zreli listi vsebujejo oksalno kislino."
+    "sl": "Da, majhen navaden košček rdeče pese je v redu kot občasen priboljšek. ASPCA peso, tudi rdečo peso, navaja kot nestrupeno za mačke. Velikih listov pa mački ne dajajte: ASPCA navaja, da veliki zreli listi vsebujejo oksalno kislino.",
+    "pt": "Sim, um pedacinho de beterraba simples é aceitável como guloseima ocasional. A ASPCA classifica a beterraba como não tóxica para os gatos. Mantém, no entanto, as folhas grandes fora do alcance: a ASPCA refere que as folhas grandes e maduras contêm ácido oxálico."
   },
   "why": {
     "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
-    "sl": "ASPCA peso (Beta vulgaris, imenovano tudi rdeča pesa) navaja kot nestrupeno za mačke in opozarja, da veliki zreli listi vsebujejo oksalno kislino. Mačke sadja in zelenjave v prehrani ne potrebujejo, PDSA pa navaja, da jim lahko veliko vrst damo v zelo majhnih količinah kot občasen priboljšek. ASPCA še opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+    "sl": "ASPCA peso (Beta vulgaris, imenovano tudi rdeča pesa) navaja kot nestrupeno za mačke in opozarja, da veliki zreli listi vsebujejo oksalno kislino. Mačke sadja in zelenjave v prehrani ne potrebujejo, PDSA pa navaja, da jim lahko veliko vrst damo v zelo majhnih količinah kot občasen priboljšek. ASPCA še opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "pt": "A ASPCA classifica a beterraba (Beta vulgaris) como não tóxica para os gatos e refere que as folhas grandes e maduras contêm ácido oxálico. Os gatos não precisam de fruta nem de legumes na alimentação, mas a PDSA diz que muitos podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere ainda que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
-    "sl": "Majhen košček navadne rdeče pese za en grižljaj, brez masla, soli in začimb. Velikih listov mački ne dajajte."
+    "sl": "Majhen košček navadne rdeče pese za en grižljaj, brez masla, soli in začimb. Velikih listov mački ne dajajte.",
+    "pt": "Um pedacinho de beterraba simples, do tamanho de uma dentada, sem manteiga, sal nem temperos. Mantém as folhas grandes longe do teu gato."
   },
   "child": {
     "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
-    "sl": "Majhen košček rdeče pese je lahko občasno priboljšek za muco. Muce potrebujejo predvsem svojo mačjo hrano."
+    "sl": "Majhen košček rdeče pese je lahko občasno priboljšek za muco. Muce potrebujejo predvsem svojo mačjo hrano.",
+    "pt": "Um pedacinho de beterraba pode ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo da sua própria comida de gato."
   },
   "faq": [],
   "sources": [
@@ -95,6 +103,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "01d148725dcb3fff81256a61023a4c9880bae8711e989c8f8e10179054edc673"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "17f311b02cc8b6379f585c4ad45a05e6bbd9754500eb3283a53c8f88a3ecb22e"
     }
   }
 }

@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Asparagus",
-    "sl": "Beluši"
+    "sl": "Beluši",
+    "pt": "Espargos"
   },
   "question": {
     "en": "Can dogs eat asparagus?",
-    "sl": "Ali lahko psi jedo beluše?"
+    "sl": "Ali lahko psi jedo beluše?",
+    "pt": "Os cães podem comer espargos?"
   },
   "url_slug": {
     "en": "asparagus",
-    "sl": "belusi"
+    "sl": "belusi",
+    "pt": "espargos"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
-    "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti."
+    "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti.",
+    "pt": "Sim, os espargos não são tóxicos para os cães. Os espargos cozinhados são a melhor opção, porque são mais fáceis de mastigar. Serve-os simples, cozidos em água ou a vapor, e mantém os cães longe da folhagem do espargo."
   },
   "why": {
     "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
-    "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena."
+    "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena.",
+    "pt": "Os espargos crus são muito difíceis de mastigar, e o cão pode tentar engoli-los inteiros e engasgar-se. Alguns cães têm dificuldade em digerir espargos crus. A manteiga ou o óleo de cozinha podem fazer mal ao cão. A folhagem do espargo, a parte não comestível da planta, é tóxica para os cães."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog has vomiting, gas or diarrhoea after raw asparagus, try lightly cooking it next time. Eating the asparagus fern can cause vomiting, diarrhoea and severe abdominal pain, so keep your dog away from the plant.",
-    "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline."
+    "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline.",
+    "pt": "Se o teu cão tiver vómitos, gases ou diarreia depois de comer espargos crus, experimenta cozê-los ligeiramente da próxima vez. Comer a folhagem do espargo pode causar vómitos, diarreia e dores abdominais fortes, por isso mantém o teu cão afastado da planta."
   },
   "serving": {
     "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
-    "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj."
+    "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj.",
+    "pt": "Cozidos em água ou a vapor, sem manteiga nem óleo. Se os servires crus, corta-os em pedaços pequenos, do tamanho de uma dentada."
   },
   "child": {
     "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
-    "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse."
+    "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse.",
+    "pt": "Os cães podem comer um bocadinho de espargo cozinhado, dado por um adulto. A parte da planta com folhagem não é para os cães."
   },
   "faq": [
     {
       "q": {
         "en": "Why does my dog's pee smell after asparagus?",
-        "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?"
+        "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?",
+        "pt": "Porque é que a urina do meu cão cheira mal depois de comer espargos?"
       },
       "a": {
         "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
-        "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava."
+        "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava.",
+        "pt": "Os espargos podem dar um cheiro desagradável à urina, tanto nos cães como nas pessoas. Se o teu cão já estiver completamente habituado a fazer as necessidades no sítio certo, isto não deve ser um problema."
       }
     },
     {
       "q": {
         "en": "Is the asparagus fern safe?",
-        "sl": "Je belušna praprot varna?"
+        "sl": "Je belušna praprot varna?",
+        "pt": "A folhagem do espargo é segura?"
       },
       "a": {
         "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
-        "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu."
+        "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu.",
+        "pt": "Não. A folhagem do espargo é tóxica para os cães e pode causar vómitos, diarreia e dores abdominais fortes."
       }
     }
   ],
@@ -139,6 +151,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e1995ffd753e209eb8a3a85f1e9720143949f62f8e0a3c3838d60fd7f2564244"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a6edf768f0cc4bb53cdc2e4bb288e16f2554e7d3506217a8792d35013ed97cf3"
     }
   }
 }

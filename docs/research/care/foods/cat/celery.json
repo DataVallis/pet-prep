@@ -15,7 +15,8 @@
     "de": "Stangensellerie",
     "fr": "Céleri",
     "es": "Apio",
-    "it": "Sedano"
+    "it": "Sedano",
+    "pt": "Aipo"
   },
   "question": {
     "en": "Can cats eat celery?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen Stangensellerie fressen?",
     "fr": "Les chats peuvent-ils manger du céleri ?",
     "es": "¿Pueden los gatos comer apio?",
-    "it": "I gatti possono mangiare il sedano?"
+    "it": "I gatti possono mangiare il sedano?",
+    "pt": "Os gatos podem comer aipo?"
   },
   "url_slug": {
     "en": "celery",
@@ -47,7 +49,8 @@
     "de": "stangensellerie",
     "fr": "celeri",
     "es": "apio",
-    "it": "sedano"
+    "it": "sedano",
+    "pt": "aipo"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Am besten geben Sie keinen Stangensellerie. International Cat Care warnt, dass der Kontakt mit den Blättern von Nutzpflanzen wie Stangensellerie Blasen oder Juckreiz im Maul und am Zahnfleisch einer Katze verursachen kann; außerdem kann jede Pflanze einer Katze auf den Magen schlagen. Katzen brauchen kein Gemüse.",
     "fr": "Mieux vaut ne pas en donner. International Cat Care avertit que le contact avec les feuilles de plantes potagères comme le céleri peut provoquer des cloques ou des démangeaisons dans la bouche et sur les gencives du chat, et que n’importe quelle plante peut lui donner mal au ventre. Les chats n’ont pas besoin de légumes.",
     "es": "Es mejor no ofrecerle apio. International Cat Care advierte de que el contacto con las hojas de plantas comestibles como el apio puede provocar ampollas o picor en la boca y las encías del gato, y cualquier planta puede sentarle mal al estómago. Los gatos no necesitan verdura.",
-    "it": "Meglio non dare il sedano. International Cat Care avverte che il contatto con le foglie di piante alimentari come il sedano può causare vesciche o prurito alla bocca e alle gengive del gatto, e qualsiasi pianta può far venire mal di stomaco a un gatto. I gatti non hanno bisogno di verdure."
+    "it": "Meglio non dare il sedano. International Cat Care avverte che il contatto con le foglie di piante alimentari come il sedano può causare vesciche o prurito alla bocca e alle gengive del gatto, e qualsiasi pianta può far venire mal di stomaco a un gatto. I gatti non hanno bisogno di verdure.",
+    "pt": "É melhor não dar aipo. A International Cat Care avisa que o contacto com as folhas de plantas alimentares como o aipo pode causar bolhas ou comichão na boca e nas gengivas do gato, e qualquer planta pode causar mal-estar no estômago de um gato. Os gatos não precisam de legumes."
   },
   "why": {
     "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
@@ -80,7 +84,8 @@
     "de": "International Cat Care nennt Stangensellerie unter den Nutzpflanzen, deren Blätter Blasen oder Juckreiz im Maul und am Zahnfleisch, Niesen und Augenprobleme auslösen können, und weist darauf hin, dass alle Pflanzen, selbst Gras, Magen und Darm einer Katze reizen und Erbrechen verursachen können. Ein ASPCA-Gartenartikel führt Stangensellerie unter den Snacks auf, die für Haustiere in Maßen in Ordnung sind, wir folgen aber dem strengeren, katzenspezifischen Rat. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung.",
     "fr": "International Cat Care cite le céleri parmi les plantes potagères dont les feuilles peuvent provoquer des cloques ou des démangeaisons dans la bouche et sur les gencives, des éternuements et des troubles oculaires, et indique que toutes les plantes, même l’herbe, peuvent irriter l’estomac et les intestins d’un chat et provoquer des vomissements. Un article de jardinage de l’ASPCA cite le céleri parmi les en-cas acceptables avec modération pour les animaux de compagnie, mais nous suivons l’avis le plus strict, propre aux chats. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation.",
     "es": "International Cat Care incluye el apio entre las plantas comestibles cuyas hojas pueden provocar ampollas o picor en la boca y las encías del gato, estornudos y problemas en los ojos, y explica que todas las plantas, incluso la hierba, pueden irritar el estómago y el intestino del gato y provocarle vómitos. Un artículo de jardinería de la ASPCA incluye el apio entre los tentempiés aptos para mascotas con moderación, pero seguimos el consejo más estricto, específico para gatos. Los gatos no necesitan fruta ni verdura en su dieta.",
-    "it": "International Cat Care cita il sedano tra le piante alimentari le cui foglie possono causare vesciche o prurito alla bocca e alle gengive del gatto, starnuti e problemi agli occhi, e dice che tutte le piante, perfino l’erba, possono irritare lo stomaco e l’intestino del gatto e provocare vomito. Un articolo dell’ASPCA sull’orto elenca il sedano tra gli spuntini per gli animali domestici in quantità moderate, ma noi seguiamo l’indicazione più severa, specifica per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione."
+    "it": "International Cat Care cita il sedano tra le piante alimentari le cui foglie possono causare vesciche o prurito alla bocca e alle gengive del gatto, starnuti e problemi agli occhi, e dice che tutte le piante, perfino l’erba, possono irritare lo stomaco e l’intestino del gatto e provocare vomito. Un articolo dell’ASPCA sull’orto elenca il sedano tra gli spuntini per gli animali domestici in quantità moderate, ma noi seguiamo l’indicazione più severa, specifica per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione.",
+    "pt": "A International Cat Care inclui o aipo entre as plantas alimentares cujas folhas podem causar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos, e diz que todas as plantas, até a relva, podem irritar o estômago e os intestinos do gato e causar vómitos. Um artigo da ASPCA sobre jardinagem inclui o aipo entre as guloseimas para animais de estimação, com moderação, mas seguimos o conselho mais prudente, específico para gatos. Os gatos não precisam de fruta nem de legumes na alimentação."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Prurito o vesciche alla bocca e alle gengive",
       "Starnuti",
       "Problemi agli occhi"
+    ],
+    "pt": [
+      "Vómitos",
+      "Comichão ou bolhas na boca e nas gengivas",
+      "Espirros",
+      "Problemas nos olhos"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "de": "Wenn Ihre Katze Stangensellerie angeknabbert hat und sich unwohl fühlt, zum Beispiel erbricht oder sich am Maul kratzt, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Si votre chat a mâchonné du céleri et semble mal en point, par exemple s’il vomit ou a la bouche qui le démange, appelez votre vétérinaire pour lui demander conseil. N’essayez pas de le faire vomir vous-même.",
     "es": "Si tu gato ha mordisqueado apio y parece encontrarse mal, por ejemplo si vomita o tiene picor en la boca, llama a tu veterinario para pedirle consejo. No intentes hacerle vomitar en casa.",
-    "it": "Se il tuo gatto ha masticato del sedano e sembra stare male, per esempio vomita o ha prurito alla bocca, chiama il veterinario per un consiglio. Non provare a farlo vomitare a casa."
+    "it": "Se il tuo gatto ha masticato del sedano e sembra stare male, per esempio vomita o ha prurito alla bocca, chiama il veterinario per un consiglio. Non provare a farlo vomitare a casa.",
+    "pt": "Se o teu gato mastigou aipo e parece estar mal, por exemplo, se vomita ou tem comichão na boca, liga ao teu veterinário para pedir conselho. Não tentes fazer o teu gato vomitar em casa."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "de": "Stangensellerie ist kein Snack für Katzen. Seine Blätter können bei Katzen Juckreiz im Maul auslösen, deshalb ist Stangensellerie besser für Menschen.",
     "fr": "Le céleri n’est pas un en-cas pour chat. Ses feuilles peuvent faire démanger la bouche d’un chat : le céleri, c’est mieux pour les humains.",
     "es": "El apio no es un tentempié para gatos. Sus hojas pueden darle picor en la boca, así que el apio es mejor para las personas.",
-    "it": "Il sedano non è uno spuntino per gatti. Le sue foglie possono far prudere la bocca al gatto, quindi lascialo alle persone."
+    "it": "Il sedano non è uno spuntino per gatti. Le sue foglie possono far prudere la bocca al gatto, quindi lascialo alle persone.",
+    "pt": "O aipo não é uma guloseima para gatos. As folhas podem dar comichão na boca do gato, por isso é melhor deixá-lo para as pessoas."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan los gatos verdura?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -233,7 +247,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -352,6 +367,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "49ffb2386373aa5f68c97a73632460aa282091a749b759daf8121f597d6106a2"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "494ec8ce202edba81dd89ce6612fdcaadde9e697953e6e01cddde52044a3afc8"
     }
   }
 }

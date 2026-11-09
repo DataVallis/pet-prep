@@ -15,7 +15,8 @@
     "de": "Rosenkohl",
     "fr": "Choux de Bruxelles",
     "es": "Coles de Bruselas",
-    "it": "Cavoletti di Bruxelles"
+    "it": "Cavoletti di Bruxelles",
+    "pt": "Couves-de-bruxelas"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Rosenkohl fressen?",
     "fr": "Les chiens peuvent-ils manger des choux de Bruxelles ?",
     "es": "¿Pueden los perros comer coles de Bruselas?",
-    "it": "I cani possono mangiare i cavoletti di Bruxelles?"
+    "it": "I cani possono mangiare i cavoletti di Bruxelles?",
+    "pt": "Os cães podem comer couves-de-bruxelas?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -47,7 +49,8 @@
     "de": "rosenkohl",
     "fr": "choux-de-bruxelles",
     "es": "coles-de-bruselas",
-    "it": "cavoletti-di-bruxelles"
+    "it": "cavoletti-di-bruxelles",
+    "pt": "couves-de-bruxelas"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, mit ein paar Vorsichtsmaßnahmen. Ungewürzter, gekochter Rosenkohl ist für Hunde in kleinen Mengen in Ordnung, zu viel kann aber starke Blähungen, Magenverstimmung und Durchfall verursachen. Füttern Sie ihn nicht roh: Er ist zu hart und für Hunde schwer verdaulich.",
     "fr": "Oui, avec quelques précautions. Les choux de Bruxelles cuits nature conviennent aux chiens en petite quantité, mais en trop grande quantité ils peuvent provoquer beaucoup de gaz, des troubles digestifs et de la diarrhée. Ne les servez pas crus : ils sont trop difficiles à digérer pour les chiens.",
     "es": "Sí, con precaución. Las coles de Bruselas cocidas y sin condimentar son aptas para los perros en pequeñas cantidades, pero si comen demasiadas pueden sufrir muchos gases, malestar de estómago y diarrea. No se las des crudas: son demasiado duras para que el perro las digiera.",
-    "it": "Sì, con qualche precauzione. I cavoletti di Bruxelles cotti e senza condimenti vanno bene per i cani in piccole quantità, ma in quantità eccessive possono causare molto gas, mal di stomaco e diarrea. Non darli crudi: sono troppo difficili da digerire per il cane."
+    "it": "Sì, con qualche precauzione. I cavoletti di Bruxelles cotti e senza condimenti vanno bene per i cani in piccole quantità, ma in quantità eccessive possono causare molto gas, mal di stomaco e diarrea. Non darli crudi: sono troppo difficili da digerire per il cane.",
+    "pt": "Sim, com algumas precauções. As couves-de-bruxelas simples e cozinhadas são aceitáveis para os cães em pequenas quantidades, mas demasiadas podem causar muitos gases, mal-estar no estômago e diarreia. Não as sirvas cruas: são demasiado duras para os cães digerirem."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
@@ -80,7 +84,8 @@
     "de": "Rosenkohl steckt voller Nährstoffe und Antioxidantien und enthält keine Giftstoffe. Allerdings ist er reich an einer Substanz namens Isothiocyanat, und zu viel davon kann zu starken Blähungen, Magenverstimmung und Durchfall führen – füttern Sie also nicht zu viel davon.",
     "fr": "Les choux de Bruxelles regorgent de nutriments et d’antioxydants et ne contiennent ni toxines ni poisons. Ils sont en revanche riches en isothiocyanate, une substance qui, en trop grande quantité, peut provoquer beaucoup de gaz, des troubles digestifs et de la diarrhée : n’en donnez donc pas trop.",
     "es": "Las coles de Bruselas están llenas de nutrientes y antioxidantes y no contienen toxinas ni venenos. Eso sí, tienen bastante isotiocianato, y si el perro come demasiadas puede tener muchos gases, malestar de estómago y diarrea, así que no te pases con la cantidad.",
-    "it": "I cavoletti di Bruxelles sono ricchi di nutrienti e antiossidanti e non contengono tossine né veleni. Contengono però molti isotiocianati e, in quantità eccessive, possono provocare molto gas, mal di stomaco e diarrea: quindi non esagerare con le dosi."
+    "it": "I cavoletti di Bruxelles sono ricchi di nutrienti e antiossidanti e non contengono tossine né veleni. Contengono però molti isotiocianati e, in quantità eccessive, possono provocare molto gas, mal di stomaco e diarrea: quindi non esagerare con le dosi.",
+    "pt": "As couves-de-bruxelas são ricas em nutrientes e antioxidantes e não contêm toxinas nem venenos. Contêm um nível elevado de uma substância chamada isotiocianato, e demasiadas podem causar muitos gases, mal-estar no estômago e diarreia, por isso não exageres."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Geben Sie nur eine kleine Menge und nicht zu viel. Wenn Ihr Hund Futterunverträglichkeiten oder Allergien hat, sprechen Sie zuerst mit Ihrem Tierarzt, bevor Sie Rosenkohl anbieten.",
     "fr": "N’en donnez qu’un peu. Si votre chien a des problèmes alimentaires ou des allergies, parlez-en d’abord à votre vétérinaire avant de lui proposer des choux de Bruxelles.",
     "es": "Dale solo un poquito, sin pasarte. Si tu perro tiene problemas de alimentación o alergias, consulta con tu veterinario antes de ofrecerle coles de Bruselas.",
-    "it": "Dagliene solo un po’, senza esagerare. Se il tuo cane ha problemi legati all’alimentazione o allergie, parlane con il veterinario prima di offrirgli i cavoletti di Bruxelles."
+    "it": "Dagliene solo un po’, senza esagerare. Se il tuo cane ha problemi legati all’alimentazione o allergie, parlane con il veterinario prima di offrirgli i cavoletti di Bruxelles.",
+    "pt": "Dá só um pouco e não exageres. Se o teu cão tiver problemas alimentares ou alergias, fala com o teu veterinário antes de lhe oferecer couves-de-bruxelas."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
@@ -113,7 +119,8 @@
     "de": "Gewaschen, der Strunk zum größten Teil abgeschnitten, die Blätter dran, und gekocht (Dämpfen erhält die meisten Nährstoffe). Pur, ohne Kräuter oder Gewürze, in kleinen Mengen.",
     "fr": "Lavés, en retirant l’essentiel du trognon mais en gardant les feuilles, puis cuits (la cuisson à la vapeur est celle qui préserve le mieux les nutriments). Nature, sans herbes ni épices, en petite quantité.",
     "es": "Lavadas, con la mayor parte del tallo cortado y las hojas intactas, y cocinadas (al vapor conservan más nutrientes). Sin condimentar, sin hierbas ni especias, en pequeñas cantidades.",
-    "it": "Lavati, con la maggior parte del gambo eliminata e le foglie lasciate intere, e cotti (la cottura al vapore conserva più nutrienti). Senza erbe aromatiche né spezie, in piccole quantità."
+    "it": "Lavati, con la maggior parte del gambo eliminata e le foglie lasciate intere, e cotti (la cottura al vapore conserva più nutrienti). Senza erbe aromatiche né spezie, in piccole quantità.",
+    "pt": "Lavadas, com a maior parte do talo cortada e as folhas mantidas, e cozinhadas (a vapor conservam mais nutrientes). Simples, sem ervas nem especiarias, em pequenas quantidades."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein bisschen gekochten Rosenkohl als Leckerli bekommen. Von zu viel müssen sie ganz schön viel pupsen!",
     "fr": "Les chiens peuvent manger un peu de chou de Bruxelles cuit en friandise. Mais attention : s’ils en mangent trop, leur ventre se remplit de gaz !",
     "es": "Los perros pueden tomar un poquito de col de Bruselas cocida como premio. ¡Si comen demasiada, se les llena la barriguita de gases!",
-    "it": "I cani possono avere un pochino di cavoletto di Bruxelles cotto come premio. Se ne mangiano troppi, però, la pancia si riempie di puzzette!"
+    "it": "I cani possono avere un pochino di cavoletto di Bruxelles cotto come premio. Se ne mangiano troppi, però, la pancia si riempie di puzzette!",
+    "pt": "Os cães podem comer um bocadinho de couve-de-bruxelas cozinhada como guloseima. Se comerem demasiadas, ficam com a barriga cheia de gases!"
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde rohen Rosenkohl fressen?",
         "fr": "Les chiens peuvent-ils manger des choux de Bruxelles crus ?",
         "es": "¿Pueden los perros comer coles de Bruselas crudas?",
-        "it": "I cani possono mangiare i cavoletti di Bruxelles crudi?"
+        "it": "I cani possono mangiare i cavoletti di Bruxelles crudi?",
+        "pt": "Os cães podem comer couves-de-bruxelas cruas?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
@@ -163,7 +172,8 @@
         "de": "Besser nicht: Roher Rosenkohl ist für Hunde zu hart und schwer verdaulich. Kochen Sie ihn vorher, am besten durch Dämpfen – so bleiben die meisten Nährstoffe erhalten.",
         "fr": "Mieux vaut éviter : les choux de Bruxelles crus sont trop difficiles à digérer pour les chiens. Faites-les cuire d’abord ; la cuisson à la vapeur préserve le mieux les nutriments.",
         "es": "Mejor que no: las coles de Bruselas crudas son demasiado duras para que el perro las digiera. Cuécelas antes; al vapor conservan más nutrientes.",
-        "it": "Meglio di no: i cavoletti crudi sono troppo difficili da digerire per i cani. Cuocili prima; la cottura al vapore conserva più nutrienti."
+        "it": "Meglio di no: i cavoletti crudi sono troppo difficili da digerire per i cani. Cuocili prima; la cottura al vapore conserva più nutrienti.",
+        "pt": "É melhor não: as couves-de-bruxelas cruas são demasiado duras para os cães digerirem. Cozinha-as primeiro; a vapor conservam mais nutrientes."
       }
     }
   ],
@@ -290,6 +300,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0165677083647ef63a9e4dd811e4e00581b3c33e38c069e9ff2fe3ddf04afc1b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eb6972c30e463a9674412d26e49a322a1691a515c46b46189760997c85fb77ec"
     }
   }
 }

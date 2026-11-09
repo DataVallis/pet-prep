@@ -3,67 +3,81 @@
   "species": "dog",
   "name": {
     "en": "Bell peppers",
-    "sl": "Paprika"
+    "sl": "Paprika",
+    "pt": "Pimentos"
   },
   "question": {
     "en": "Can dogs eat bell peppers?",
-    "sl": "Ali lahko psi jedo papriko?"
+    "sl": "Ali lahko psi jedo papriko?",
+    "pt": "Os cães podem comer pimentos?"
   },
   "url_slug": {
     "en": "bell-peppers",
-    "sl": "paprika"
+    "sl": "paprika",
+    "pt": "pimentos"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, bell peppers are safe for most dogs in moderation. They are non-toxic, and green, yellow, orange and red peppers are all fine when served plain. Remove the seeds and stem, and never give spicy peppers.",
-    "sl": "Da, sladka paprika je za večino psov v zmernih količinah varna. Ni strupena, zelena, rumena, oranžna in rdeča pa so vse v redu, če so navadne. Odstranite semena in pecelj in nikoli ne dajajte pekoče paprike."
+    "sl": "Da, sladka paprika je za večino psov v zmernih količinah varna. Ni strupena, zelena, rumena, oranžna in rdeča pa so vse v redu, če so navadne. Odstranite semena in pecelj in nikoli ne dajajte pekoče paprike.",
+    "pt": "Sim, os pimentos são seguros para a maioria dos cães, com moderação. Não são tóxicos, e os pimentos verdes, amarelos, laranja e vermelhos servem todos, desde que simples. Tira as sementes e o pedúnculo, e nunca dês pimentos picantes."
   },
   "why": {
     "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
-    "sl": "Sladka paprika ni strupena in vsebuje hranila, ki lahko podprejo zdravje psa. Preveč lahko povzroči prebavne težave, tudi bruhanje ali drisko, zunanjo kožico pa nekateri psi težko prežvečijo in prebavijo. Nekaterim psom ustreza, drugim ne."
+    "sl": "Sladka paprika ni strupena in vsebuje hranila, ki lahko podprejo zdravje psa. Preveč lahko povzroči prebavne težave, tudi bruhanje ali drisko, zunanjo kožico pa nekateri psi težko prežvečijo in prebavijo. Nekaterim psom ustreza, drugim ne.",
+    "pt": "Os pimentos não são tóxicos e fornecem nutrientes que podem ajudar a saúde do teu cão. Em excesso podem causar mal-estar digestivo, incluindo vómitos ou diarreia, e a pele pode ser difícil de mastigar e digerir para alguns cães. Alguns cães não têm qualquer problema; outros têm."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce bell pepper gradually so you can see whether it agrees with your dog's digestion, and don't overdo it. Never give peppers mixed with onions or garlic, as those are toxic to dogs.",
-    "sl": "Papriko uvajajte postopoma, da vidite, ali psu ustreza, in ne pretiravajte. Nikoli ne dajajte paprike, pomešane s čebulo ali česnom, saj sta ta za pse strupena."
+    "sl": "Papriko uvajajte postopoma, da vidite, ali psu ustreza, in ne pretiravajte. Nikoli ne dajajte paprike, pomešane s čebulo ali česnom, saj sta ta za pse strupena.",
+    "pt": "Introduz o pimento aos poucos, para veres se o teu cão o digere bem, e não exageres. Nunca dês pimentos misturados com cebola ou alho, porque são tóxicos para os cães."
   },
   "serving": {
     "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
-    "sl": "Navadna, surova ali kuhana, brez semen in peclja. Na pari ali pretlačeno jo pes laže poje. Brez soli, začimb in drugih sestavin."
+    "sl": "Navadna, surova ali kuhana, brez semen in peclja. Na pari ali pretlačeno jo pes laže poje. Brez soli, začimb in drugih sestavin.",
+    "pt": "Simples, crus ou cozinhados, sem sementes nem pedúnculo. Cozer a vapor ou fazer em puré torna-o mais fácil de comer. Sem sal, temperos nem outros ingredientes."
   },
   "child": {
     "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
-    "sl": "Psi lahko dobijo malo navadne sladke paprike. Odrasli najprej odstrani semena. Pekoča paprika ni za pse."
+    "sl": "Psi lahko dobijo malo navadne sladke paprike. Odrasli najprej odstrani semena. Pekoča paprika ni za pse.",
+    "pt": "Os cães podem comer um pouco de pimento doce simples. Um adulto tira primeiro as sementes. Os pimentos picantes não são para cães."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw bell peppers?",
-        "sl": "Ali lahko psi jedo surovo papriko?"
+        "sl": "Ali lahko psi jedo surovo papriko?",
+        "pt": "Os cães podem comer pimentos crus?"
       },
       "a": {
         "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
-        "sl": "Da, čeprav nekateri psi laže prežvečijo in prebavijo kuhano, na pari pripravljeno ali pretlačeno papriko."
+        "sl": "Da, čeprav nekateri psi laže prežvečijo in prebavijo kuhano, na pari pripravljeno ali pretlačeno papriko.",
+        "pt": "Sim, embora alguns cães lidem melhor com pimentos cozinhados, a vapor ou em puré, que são mais fáceis de mastigar e digerir."
       }
     },
     {
       "q": {
         "en": "Which colour is best?",
-        "sl": "Katera barva je najboljša?"
+        "sl": "Katera barva je najboljša?",
+        "pt": "Qual é a melhor cor?"
       },
       "a": {
         "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
-        "sl": "Vse barve so varne. Rdeča paprika vsebuje največ vitaminov in antioksidantov."
+        "sl": "Vse barve so varne. Rdeča paprika vsebuje največ vitaminov in antioksidantov.",
+        "pt": "Todas as cores são seguras. Os pimentos vermelhos são os que contêm mais vitaminas e antioxidantes."
       }
     },
     {
       "q": {
         "en": "What about jalapeños or chili peppers?",
-        "sl": "Kaj pa jalapeño ali čili?"
+        "sl": "Kaj pa jalapeño ali čili?",
+        "pt": "E os jalapeños ou as malaguetas?"
       },
       "a": {
         "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
-        "sl": "Psu nikoli ne dajajte pekočih vrst paprike, kot sta jalapeño ali čili."
+        "sl": "Psu nikoli ne dajajte pekočih vrst paprike, kot sta jalapeño ali čili.",
+        "pt": "Nunca dês ao teu cão variedades picantes, como jalapeños ou malaguetas."
       }
     }
   ],
@@ -150,6 +164,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bf8c91bf43c8abbcc00b994444f05f45713ba3995fba26df21be1d20d164da41"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7891e6a0429e623cd59067a751510f2c98216b6c6ce75b630a5a04da0fd5b0b6"
     }
   }
 }

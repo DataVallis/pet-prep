@@ -3,67 +3,81 @@
   "species": "dog",
   "name": {
     "en": "Cooked potatoes",
-    "sl": "Kuhan krompir"
+    "sl": "Kuhan krompir",
+    "pt": "Batata cozida"
   },
   "question": {
     "en": "Can dogs eat cooked potatoes?",
-    "sl": "Ali lahko psi jedo kuhan krompir?"
+    "sl": "Ali lahko psi jedo kuhan krompir?",
+    "pt": "Os cães podem comer batata cozida?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
-    "sl": "kuhan-krompir"
+    "sl": "kuhan-krompir",
+    "pt": "batata-cozida"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat cooked potatoes in moderation when they are served plain. Boiled or baked potato without butter, milk, salt or seasonings is fine in small amounts, as long as it is soft and not green.",
-    "sl": "Da, psi lahko v zmernih količinah jedo kuhan krompir, če je navaden. Kuhan ali pečen krompir brez masla, mleka, soli in začimb je v majhnih količinah v redu, če je mehak in ni zelen."
+    "sl": "Da, psi lahko v zmernih količinah jedo kuhan krompir, če je navaden. Kuhan ali pečen krompir brez masla, mleka, soli in začimb je v majhnih količinah v redu, če je mehak in ni zelen.",
+    "pt": "Sim, os cães podem comer batata cozida com moderação, desde que simples. A batata cozida ou assada, sem manteiga, leite, sal nem temperos, não faz mal em pequenas quantidades, desde que esteja mole e não esteja esverdeada."
   },
   "why": {
     "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
-    "sl": "Navaden kuhan krompir je za pse v redu, vendar naj bo priboljšek, ne nadomestek obroka, in le majhen del prehrane. Preveč porcij lahko vodi v debelost, veliko masla pa lahko sproži vnetje trebušne slinavke. Surov ali zelen krompir je nevaren in potencialno strupen."
+    "sl": "Navaden kuhan krompir je za pse v redu, vendar naj bo priboljšek, ne nadomestek obroka, in le majhen del prehrane. Preveč porcij lahko vodi v debelost, veliko masla pa lahko sproži vnetje trebušne slinavke. Surov ali zelen krompir je nevaren in potencialno strupen.",
+    "pt": "A batata cozida simples não faz mal aos cães, mas deve ser uma guloseima, não substituir uma refeição, e ocupar apenas uma pequena parte da alimentação. Doses demasiado grandes podem levar à obesidade, e muita manteiga pode desencadear pancreatite. A batata crua ou esverdeada não é segura e é potencialmente tóxica."
   },
   "signs": null,
   "what_to_do": {
     "en": "Keep cooked potato as an occasional treat in small amounts. Never give raw potato or potato with green spots, and skip potato dishes made with butter, milk, salt or spices.",
-    "sl": "Kuhan krompir ponudite le občasno in v majhnih količinah. Nikoli ne dajajte surovega krompirja ali krompirja z zelenimi lisami in se izogibajte krompirjevim jedem z maslom, mlekom, soljo ali začimbami."
+    "sl": "Kuhan krompir ponudite le občasno in v majhnih količinah. Nikoli ne dajajte surovega krompirja ali krompirja z zelenimi lisami in se izogibajte krompirjevim jedem z maslom, mlekom, soljo ali začimbami.",
+    "pt": "Dá a batata cozida como guloseima ocasional, em pequenas quantidades. Nunca dês batata crua nem com manchas verdes, e dispensa pratos de batata feitos com manteiga, leite, sal ou especiarias."
   },
   "serving": {
     "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
-    "sl": "Navaden, kuhan ali pečen, dovolj mehak, da se ga da pretlačiti, da se pes ne zaduši. Brez masla, mleka, soli in začimb. Olupki so v redu, če niso zeleni."
+    "sl": "Navaden, kuhan ali pečen, dovolj mehak, da se ga da pretlačiti, da se pes ne zaduši. Brez masla, mleka, soli in začimb. Olupki so v redu, če niso zeleni.",
+    "pt": "Simples, cozida ou assada, até ficar tão mole que se possa esmagar, para que o cão não se engasgue. Sem manteiga, leite, sal nem temperos. As peles não fazem mal se não estiverem esverdeadas."
   },
   "child": {
     "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
-    "sl": "Psi lahko za priboljšek dobijo malo navadnega kuhanega krompirja. Odrasli poskrbi, da je mehak ter brez masla in soli."
+    "sl": "Psi lahko za priboljšek dobijo malo navadnega kuhanega krompirja. Odrasli poskrbi, da je mehak ter brez masla in soli.",
+    "pt": "Os cães podem comer um pouco de batata cozida simples como guloseima. Um adulto confirma que está mole e sem manteiga nem sal."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat mashed potatoes?",
-        "sl": "Ali lahko psi jedo pire krompir?"
+        "sl": "Ali lahko psi jedo pire krompir?",
+        "pt": "Os cães podem comer puré de batata?"
       },
       "a": {
         "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
-        "sl": "Le navaden pretlačen krompir, v majhnih količinah, brez masla, mleka, soli in začimb."
+        "sl": "Le navaden pretlačen krompir, v majhnih količinah, brez masla, mleka, soli in začimb.",
+        "pt": "Apenas puré de batata simples, em pequenas quantidades, sem manteiga, leite, sal nem temperos."
       }
     },
     {
       "q": {
         "en": "Can dogs eat potato skins?",
-        "sl": "Ali lahko psi jedo krompirjeve olupke?"
+        "sl": "Ali lahko psi jedo krompirjeve olupke?",
+        "pt": "Os cães podem comer peles de batata?"
       },
       "a": {
         "en": "Yes, potato skins are okay too, but not if they are green.",
-        "sl": "Da, tudi krompirjevi olupki so v redu, vendar ne, če so zeleni."
+        "sl": "Da, tudi krompirjevi olupki so v redu, vendar ne, če so zeleni.",
+        "pt": "Sim, as peles também não fazem mal, desde que não estejam esverdeadas."
       }
     },
     {
       "q": {
         "en": "Are French fries okay for dogs?",
-        "sl": "Je pomfri primeren za pse?"
+        "sl": "Je pomfri primeren za pse?",
+        "pt": "As batatas fritas são adequadas para cães?"
       },
       "a": {
         "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
-        "sl": "Pri pomfriju, krompirjevih ploščicah in drugih krompirjevih jedeh hitro pretiravamo. Krompir naj bo priboljšek, ne nadomestek obroka."
+        "sl": "Pri pomfriju, krompirjevih ploščicah in drugih krompirjevih jedeh hitro pretiravamo. Krompir naj bo priboljšek, ne nadomestek obroka.",
+        "pt": "É fácil exagerar com batatas fritas, rösti e outros pratos de batata. As batatas devem ser guloseimas, não substituir refeições."
       }
     }
   ],
@@ -138,6 +152,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f8d6388535636688ce36b737fa95dfdaac13407dbbba6f918665d890a3fe6764"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b99a4e3c78a1ee48bb82f992aba1aa6d7ecd951b448c9d3f8cad6caa1e537e76"
     }
   }
 }

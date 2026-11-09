@@ -15,7 +15,8 @@
     "de": "Kohl",
     "fr": "Chou",
     "es": "Col",
-    "it": "Cavolo"
+    "it": "Cavolo",
+    "pt": "Couve"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Kohl fressen?",
     "fr": "Les chiens peuvent-ils manger du chou ?",
     "es": "¿Pueden los perros comer col?",
-    "it": "I cani possono mangiare il cavolo?"
+    "it": "I cani possono mangiare il cavolo?",
+    "pt": "Os cães podem comer couve?"
   },
   "url_slug": {
     "en": "cabbage",
@@ -47,7 +49,8 @@
     "de": "kohl",
     "fr": "chou",
     "es": "col",
-    "it": "cavolo"
+    "it": "cavolo",
+    "pt": "couve"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, in kleinen Mengen. Alle Kohlsorten sind für Hunde in Ordnung, aber Kohl verursacht viele Blähungen – führen Sie ihn deshalb langsam ein. Gekochter oder gedämpfter Kohl ist besser verträglich als roher.",
     "fr": "Oui, en petite quantité. Toutes les variétés de chou conviennent aux chiens, mais le chou produit beaucoup de gaz : introduisez-le progressivement. Le chou bouilli ou cuit à la vapeur risque moins de provoquer des troubles digestifs que le chou cru.",
     "es": "Sí, en pequeñas cantidades. Todas las variedades de col son aptas para los perros, pero la col produce muchos gases, así que introdúcela poco a poco. La col hervida o al vapor suele sentar mejor al estómago que la cruda.",
-    "it": "Sì, in piccole quantità. Tutti i tipi di cavolo vanno bene per i cani, ma il cavolo provoca molto gas, quindi introducilo gradualmente. Il cavolo lessato o cotto al vapore ha meno probabilità di far venire mal di stomaco rispetto a quello crudo."
+    "it": "Sì, in piccole quantità. Tutti i tipi di cavolo vanno bene per i cani, ma il cavolo provoca molto gas, quindi introducilo gradualmente. Il cavolo lessato o cotto al vapore ha meno probabilità di far venire mal di stomaco rispetto a quello crudo.",
+    "pt": "Sim, em pequenas quantidades. Todos os tipos de couve são aceitáveis para os cães, mas a couve produz muitos gases, por isso introduz-a aos poucos. A couve cozida ou a vapor é menos provável que cause mal-estar no estômago do que a crua."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
@@ -80,7 +84,8 @@
     "de": "Kohl ist gesund für Hunde, verursacht aber viele Blähungen, und viele Hunde vertragen das womöglich nicht gut. Das größere Problem sind Gewürze und Zutaten: Butter und andere fettige Lebensmittel können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und Zwiebeln und Knoblauch sind für Hunde giftig.",
     "fr": "Le chou est bon pour la santé des chiens, mais il produit beaucoup de gaz, que de nombreux chiens ne supportent pas bien. Les assaisonnements posent un problème plus grave : le beurre et d’autres aliments gras peuvent entraîner une pancréatite, et l’oignon et l’ail sont toxiques pour les chiens.",
     "es": "La col es sana para los perros, pero produce muchos gases y a muchos les cuesta tolerarlos. Lo más delicado son los condimentos: la mantequilla y otros alimentos grasos pueden provocar pancreatitis, y la cebolla y el ajo son tóxicos para los perros.",
-    "it": "Il cavolo fa bene ai cani, ma provoca molto gas e molti cani potrebbero non tollerarlo bene. Il problema più grosso sono i condimenti: il burro e altri cibi grassi possono portare alla pancreatite, mentre cipolla e aglio sono tossici per i cani."
+    "it": "Il cavolo fa bene ai cani, ma provoca molto gas e molti cani potrebbero non tollerarlo bene. Il problema più grosso sono i condimenti: il burro e altri cibi grassi possono portare alla pancreatite, mentre cipolla e aglio sono tossici per i cani.",
+    "pt": "A couve é saudável para os cães, mas produz uma grande quantidade de gases, e muitos cães podem não a tolerar bem. Os temperos são o maior problema: a manteiga e outros alimentos gordos podem causar pancreatite, e as cebolas e o alho são tóxicos para os cães."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Beobachten Sie Ihren Hund nach den ersten Bissen Kohl genau. Wenn Ihr Hund oft unter Blähungen leidet oder zu einem aufgegasten Magen (Bloat) neigt, fragen Sie Ihren Tierarzt, bevor Sie Kohl geben.",
     "fr": "Surveillez de près votre chien après la première bouchée de chou. S’il a souvent beaucoup de gaz ou s’il est sujet à la dilatation de l’estomac (« bloat »), demandez conseil à votre vétérinaire avant de lui donner du chou.",
     "es": "Observa con atención a tu perro la primera vez que pruebe la col. Si suele tener muchos gases o es propenso a la dilatación gástrica, consulta con tu veterinario antes de darle col.",
-    "it": "Osserva attentamente il tuo cane dopo il primo assaggio di cavolo. Se il tuo cane soffre spesso di gas o è predisposto alla dilatazione gastrica, chiedi al veterinario prima di dargli il cavolo."
+    "it": "Osserva attentamente il tuo cane dopo il primo assaggio di cavolo. Se il tuo cane soffre spesso di gas o è predisposto alla dilatazione gastrica, chiedi al veterinario prima di dargli il cavolo.",
+    "pt": "Observa o teu cão com atenção depois da primeira prova de couve. Se o teu cão costuma ter muitos gases ou tem tendência para a dilatação gástrica (barriga inchada), pergunta ao teu veterinário antes de lhe dar couve."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
@@ -113,7 +119,8 @@
     "de": "Gewaschen, ohne Strunk, gekocht oder gedämpft und in kleine Stücke geschnitten. Ungewürzt: ohne Butter, Zwiebeln oder Knoblauch. Nur in kleinen Mengen.",
     "fr": "Lavé, sans la tige ni le trognon, bouilli ou cuit à la vapeur, et coupé en petits morceaux. Sans assaisonnement : ni beurre, ni oignon, ni ail. En petite quantité seulement.",
     "es": "Lavada, sin tallo ni troncho, hervida o al vapor y cortada en trocitos pequeños. Sin condimentar: sin mantequilla, cebolla ni ajo. Solo en pequeñas cantidades.",
-    "it": "Lavato, senza gambo né torsolo, lessato o cotto al vapore e tagliato a dadini. Senza condimenti: niente burro, cipolla né aglio. Solo piccole quantità."
+    "it": "Lavato, senza gambo né torsolo, lessato o cotto al vapore e tagliato a dadini. Senza condimenti: niente burro, cipolla né aglio. Solo piccole quantità.",
+    "pt": "Lavada, sem o talo e o centro, cozida em água ou a vapor e cortada em pedaços pequenos. Sem temperos: sem manteiga, cebola nem alho. Só em pequenas quantidades."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein bisschen ungewürzten, gekochten Kohl probieren. Er kann sie pupsen lassen – also nur ein kleines Stück!",
     "fr": "Les chiens peuvent goûter un peu de chou cuit nature. Cela peut leur donner des gaz : juste un petit morceau !",
     "es": "Los perros pueden probar un poco de col cocida sin condimentar. Les puede dar gases, ¡así que solo un trocito!",
-    "it": "I cani possono assaggiare un po’ di cavolo cotto senza condimenti. Può far venire tante puzzette, quindi solo un pezzettino!"
+    "it": "I cani possono assaggiare un po’ di cavolo cotto senza condimenti. Può far venire tante puzzette, quindi solo un pezzettino!",
+    "pt": "Os cães podem provar um bocadinho de couve cozida simples. Pode dar-lhes gases, por isso só um pedacinho!"
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde rohen Kohl fressen?",
         "fr": "Les chiens peuvent-ils manger du chou cru ?",
         "es": "¿Pueden los perros comer col cruda?",
-        "it": "I cani possono mangiare il cavolo crudo?"
+        "it": "I cani possono mangiare il cavolo crudo?",
+        "pt": "Os cães podem comer couve crua?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
@@ -163,7 +172,8 @@
         "de": "Ja, aber gekocht oder gedämpft ist Kohl für die Verdauung eines Hundes besser verträglich. Schneiden Sie ihn in beiden Fällen in kleine Stücke.",
         "fr": "Oui, mais le chou bouilli ou cuit à la vapeur risque moins de perturber la digestion d’un chien. Dans les deux cas, coupez-le en petits morceaux.",
         "es": "Sí, pero la col hervida o al vapor suele sentar mejor a la digestión que la cruda. En cualquier caso, córtala en trocitos pequeños.",
-        "it": "Possono, ma il cavolo lessato o cotto al vapore ha meno probabilità di disturbare la digestione del cane. In entrambi i casi, taglialo a dadini."
+        "it": "Possono, ma il cavolo lessato o cotto al vapore ha meno probabilità di disturbare la digestione del cane. In entrambi i casi, taglialo a dadini.",
+        "pt": "Podem, mas a couve cozida ou a vapor é menos provável que cause problemas de digestão ao cão. Em qualquer dos casos, corta-a em pedaços pequenos."
       }
     }
   ],
@@ -299,6 +309,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "34e97cefe0cc70f6e10868ebca7031531479d14dd77427e0a10b31f2b69751c2"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a4a4aa4df6d384af4fc2fdb2d60da14f988050d262258eec12e47dadb636285d"
     }
   }
 }
