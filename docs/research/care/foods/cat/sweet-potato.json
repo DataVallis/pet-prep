@@ -12,7 +12,8 @@
     "da": "Søde kartofler",
     "fi": "Bataatti",
     "nb": "Søtpotet",
-    "de": "Süßkartoffel"
+    "de": "Süßkartoffel",
+    "fr": "Patate douce"
   },
   "question": {
     "en": "Can cats eat sweet potato?",
@@ -25,7 +26,8 @@
     "da": "Må katte spise søde kartofler?",
     "fi": "Saako kissa syödä bataattia?",
     "nb": "Kan katter spise søtpotet?",
-    "de": "Dürfen Katzen Süßkartoffeln fressen?"
+    "de": "Dürfen Katzen Süßkartoffeln fressen?",
+    "fr": "Les chats peuvent-ils manger de la patate douce ?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -38,7 +40,8 @@
     "da": "soede-kartofler",
     "fi": "bataatti",
     "nb": "sotpotet",
-    "de": "suesskartoffel"
+    "de": "suesskartoffel",
+    "fr": "patate-douce"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Søde kartofler er ikke giftige for katte: ASPCA betragter planten sød kartoffel som ugiftig for dem. Katte har dog ikke brug for grøntsager, og al planteføde kan give opkast eller ondt i maven, så det bør kun være et lille ekstra en gang imellem.",
     "fi": "Bataatti ei ole kissoille myrkyllistä: ASPCA luokittelee bataattikasvin kissoille myrkyttömäksi. Kissat eivät kuitenkaan tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja, joten se saa olla vain pieni, satunnainen lisä.",
     "nb": "Søtpotet er ikke giftig for katter: ASPCA oppgir søtpotetplanten som ikke giftig for dem. Katter trenger likevel ikke grønnsaker, og alt plantemateriale kan gi oppkast eller urolig mage, så la det bli et bitte lite tillegg en gang iblant.",
-    "de": "Süßkartoffeln sind für Katzen nicht giftig: Die ASPCA führt die Süßkartoffelpflanze als ungiftig für Katzen auf. Katzen brauchen aber kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen – bleiben Sie also bei einem winzigen, gelegentlichen Extra."
+    "de": "Süßkartoffeln sind für Katzen nicht giftig: Die ASPCA führt die Süßkartoffelpflanze als ungiftig für Katzen auf. Katzen brauchen aber kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen – bleiben Sie also bei einem winzigen, gelegentlichen Extra.",
+    "fr": "La patate douce n’est pas toxique pour les chats : l’ASPCA classe la plante parmi les plantes non toxiques pour eux. Mais les chats n’ont pas besoin de légumes, et tout végétal peut provoquer des vomissements ou des troubles digestifs : gardez-la pour un tout petit extra, occasionnel."
   },
   "why": {
     "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -65,7 +69,8 @@
     "da": "ASPCA betragter planten sød kartoffel (Ipomoea batatas) som ugiftig for katte. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte.",
     "fi": "ASPCA luokittelee bataattikasvin (Ipomoea batatas) kissoille myrkyttömäksi. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja.",
     "nb": "ASPCA oppgir søtpotetplanten (Ipomoea batatas) som ikke giftig for katter. Katter trenger ikke frukt eller grønnsaker i kostholdet, godbiter bør gis sjelden, og ASPCA påpeker at alt plantemateriale kan gi katter oppkast og urolig mage.",
-    "de": "Die ASPCA führt die Süßkartoffelpflanze (Ipomoea batatas) als ungiftig für Katzen auf. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen."
+    "de": "Die ASPCA führt die Süßkartoffelpflanze (Ipomoea batatas) als ungiftig für Katzen auf. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
+    "fr": "L’ASPCA classe la patate douce (Ipomoea batatas) parmi les plantes non toxiques pour les chats. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
     "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
     "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten søtpotet og spør dyrlegen.",
-    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+    "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire."
   },
   "serving": {
     "en": "A small plain piece now and then, with no butter, salt or seasoning.",
@@ -92,7 +98,8 @@
     "da": "Et lille stykke naturel sød kartoffel af og til, uden smør, salt eller krydderier.",
     "fi": "Silloin tällöin pieni maustamaton pala, ilman voita, suolaa tai mausteita.",
     "nb": "En liten bit uten tilsetninger nå og da, uten smør, salt eller krydder.",
-    "de": "Ab und zu ein kleines Stück, pur und ohne Butter, Salz oder Gewürze."
+    "de": "Ab und zu ein kleines Stück, pur und ohne Butter, Salz oder Gewürze.",
+    "fr": "Un petit morceau nature de temps en temps, sans beurre, sel ni assaisonnement."
   },
   "child": {
     "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -105,7 +112,8 @@
     "da": "Søde kartofler er ikke giftige for katte. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
     "fi": "Bataatti ei ole kissoille myrkyllistä. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
     "nb": "Søtpotet er ikke giftig for katter. Katter trenger mest kjøtt, så grønnsaker er bare litt ekstra.",
-    "de": "Süßkartoffeln sind für Katzen nicht giftig. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+    "de": "Süßkartoffeln sind für Katzen nicht giftig. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+    "fr": "La patate douce n’est pas toxique pour les chats. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit plus."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "da": "Er søde kartofler det samme som almindelige kartofler?",
         "fi": "Onko bataatti sama asia kuin tavallinen peruna?",
         "nb": "Er søtpotet det samme som vanlig potet?",
-        "de": "Ist eine Süßkartoffel dasselbe wie eine normale Kartoffel?"
+        "de": "Ist eine Süßkartoffel dasselbe wie eine normale Kartoffel?",
+        "fr": "La patate douce est-elle la même chose qu’une pomme de terre ordinaire ?"
       },
       "a": {
         "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
@@ -133,7 +142,8 @@
         "da": "Nej. ASPCA betragter sød kartoffel som en anden plante (Ipomoea batatas, familien Convolvulaceae). Rå almindelige kartofler er noget andet: ASPCA skriver at de kan være et problem for kæledyr.",
         "fi": "Ei. ASPCA luokittelee bataatin eri kasviksi (Ipomoea batatas, heimo Convolvulaceae). Raa’at tavalliset perunat ovat eri asia: ASPCA:n mukaan ne voivat olla lemmikeille ongelmallisia.",
         "nb": "Nei. ASPCA oppgir søtpoteten som en annen plante (Ipomoea batatas, familien Convolvulaceae). Rå poteter er en annen sak: ASPCA skriver at de kan være problematiske for kjæledyr.",
-        "de": "Nein. Die ASPCA führt die Süßkartoffel als eigene Pflanze auf (Ipomoea batatas, Familie Convolvulaceae). Bei rohen gewöhnlichen Kartoffeln sieht es anders aus: Laut ASPCA können sie für Haustiere problematisch sein."
+        "de": "Nein. Die ASPCA führt die Süßkartoffel als eigene Pflanze auf (Ipomoea batatas, Familie Convolvulaceae). Bei rohen gewöhnlichen Kartoffeln sieht es anders aus: Laut ASPCA können sie für Haustiere problematisch sein.",
+        "fr": "Non. L’ASPCA classe la patate douce comme une plante différente (Ipomoea batatas, famille des Convolvulacées). Les pommes de terre ordinaires crues, c’est une autre affaire : l’ASPCA indique qu’elles peuvent poser problème aux animaux."
       }
     },
     {
@@ -148,7 +158,8 @@
         "da": "Har katte brug for grøntsager?",
         "fi": "Tarvitsevatko kissat kasviksia?",
         "nb": "Trenger katter grønnsaker?",
-        "de": "Brauchen Katzen Gemüse?"
+        "de": "Brauchen Katzen Gemüse?",
+        "fr": "Les chats ont-ils besoin de légumes ?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -161,7 +172,8 @@
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
         "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
         "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg.",
-        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus."
       }
     }
   ],
@@ -273,6 +285,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1a03dde979df4010ca17f50895c85a7d87880a2da82943284bea4a62a4aa03f3"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "03e750d4e48c859f114c15ead6524bdd38cabab057dd0b7a7984a6a802184b9b"
     }
   }
 }

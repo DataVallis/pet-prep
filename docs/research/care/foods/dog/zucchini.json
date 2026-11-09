@@ -12,7 +12,8 @@
     "da": "Zucchini",
     "fi": "Kesäkurpitsa",
     "nb": "Squash",
-    "de": "Zucchini"
+    "de": "Zucchini",
+    "fr": "Courgette"
   },
   "question": {
     "en": "Can dogs eat zucchini?",
@@ -25,7 +26,8 @@
     "da": "Må hunde spise zucchini?",
     "fi": "Saako koira syödä kesäkurpitsaa?",
     "nb": "Kan hunder spise squash?",
-    "de": "Dürfen Hunde Zucchini fressen?"
+    "de": "Dürfen Hunde Zucchini fressen?",
+    "fr": "Les chiens peuvent-ils manger de la courgette ?"
   },
   "url_slug": {
     "en": "zucchini",
@@ -38,7 +40,8 @@
     "da": "zucchini",
     "fi": "kesakurpitsa",
     "nb": "squash",
-    "de": "zucchini"
+    "de": "zucchini",
+    "fr": "courgette"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Ja, zucchini er helt ufarlig for hunde. Rå, dampet eller kogt zucchini uden tilsætninger er fin i moderate mængder. Skær den i små stykker, da store stykker kan sætte sig fast i halsen, og undlad olie, salt og krydderier.",
     "fi": "Saa, kesäkurpitsa on koirille täysin turvallista. Maustamaton raaka, höyrytetty tai kypsennetty kesäkurpitsa sopii kohtuudella. Pilko se pieniksi paloiksi, sillä isot palat voivat aiheuttaa tukehtumisvaaran. Älä käytä öljyä, suolaa tai mausteita.",
     "nb": "Ja, squash (zucchini) er helt trygt for hunder. Squash uten tilsetninger, rå, dampet eller kokt, er greit i moderate mengder. Skjær den i små biter, for store biter kan være en kvelningsfare, og ikke bruk olje, salt og krydder.",
-    "de": "Ja, Zucchini sind für Hunde völlig unbedenklich. Ungewürzt – roh, gedämpft oder gekocht – sind sie in Maßen in Ordnung. Schneiden Sie sie in kleine Stücke, denn große Stücke können zum Ersticken führen, und verzichten Sie auf Öl, Salz und Gewürze."
+    "de": "Ja, Zucchini sind für Hunde völlig unbedenklich. Ungewürzt – roh, gedämpft oder gekocht – sind sie in Maßen in Ordnung. Schneiden Sie sie in kleine Stücke, denn große Stücke können zum Ersticken führen, und verzichten Sie auf Öl, Salz und Gewürze.",
+    "fr": "Oui, la courgette est sans danger pour les chiens. Nature, crue ou cuite (à la vapeur, par exemple), elle convient avec modération. Coupez-la en petits morceaux, car de gros morceaux peuvent présenter un risque d’étouffement, et évitez l’huile, le sel et les assaisonnements."
   },
   "why": {
     "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
@@ -65,7 +69,8 @@
     "da": "Alle dele af zucchiniplanten er ugiftige. Risikoen ligger i, hvordan den serveres: store stykker kan sætte sig fast i halsen, en stor mængde kan give fordøjelsesproblemer, og olie, salt, krydderier, hvidløg og løg er skadelige for hunde.",
     "fi": "Kaikki kesäkurpitsakasvin osat ovat myrkyttömiä. Riskit liittyvät tarjoilutapaan: isot palat voivat aiheuttaa tukehtumisen, suuri määrä voi aiheuttaa vatsavaivoja, ja öljy, suola, mausteet, valkosipuli ja sipuli ovat koirille haitallisia.",
     "nb": "Ingen deler av squashplanten er giftige. Risikoen ligger i hvordan den serveres: Store biter kan gi kvelning, en stor mengde kan gi urolig mage, og olje, salt, krydder, hvitløk og løk er skadelig for hunder.",
-    "de": "Alle Teile der Zucchinipflanze sind ungiftig. Die Risiken liegen in der Zubereitung: Große Stücke können zum Ersticken führen, eine große Menge kann die Verdauung stören, und Öl, Salz, Gewürze, Knoblauch und Zwiebeln sind für Hunde schädlich."
+    "de": "Alle Teile der Zucchinipflanze sind ungiftig. Die Risiken liegen in der Zubereitung: Große Stücke können zum Ersticken führen, eine große Menge kann die Verdauung stören, und Öl, Salz, Gewürze, Knoblauch und Zwiebeln sind für Hunde schädlich.",
+    "fr": "Aucune partie du plant de courgette n’est toxique. Les risques tiennent à la façon de la servir : de gros morceaux peuvent provoquer un étouffement, une grande quantité peut perturber la digestion, et l’huile, le sel, les assaisonnements, l’ail et l’oignon sont nocifs pour les chiens."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "da": "Hold dig til små mængder zucchini: hvis en hund får en stor mængde af hvad som helst, kan det give fordøjelsesproblemer. Giv aldrig en hel zucchini.",
     "fi": "Anna kesäkurpitsaa vain pieniä määriä: suuri määrä mitä tahansa ruokaa voi aiheuttaa koiralle vatsavaivoja. Älä koskaan anna kokonaista kesäkurpitsaa.",
     "nb": "Hold deg til små mengder: Å gi en hund en stor mengde av hva som helst kan gi urolig mage. Gi aldri en hel squash.",
-    "de": "Geben Sie Zucchini nur in kleinen Mengen: Große Mengen von irgendetwas können bei einem Hund zu Verdauungsbeschwerden führen. Geben Sie niemals eine ganze Zucchini."
+    "de": "Geben Sie Zucchini nur in kleinen Mengen: Große Mengen von irgendetwas können bei einem Hund zu Verdauungsbeschwerden führen. Geben Sie niemals eine ganze Zucchini.",
+    "fr": "Limitez la courgette à de petites quantités : donner une grande quantité de n’importe quel aliment à un chien peut entraîner des troubles digestifs. Ne donnez jamais une courgette entière."
   },
   "serving": {
     "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
@@ -92,7 +98,8 @@
     "da": "Rå, dampet eller kogt og skåret i små stykker, uden tilsætninger. Damp den til hunde, der har svært ved at tygge. Ingen olie, salt, krydderier, hvidløg eller løg.",
     "fi": "Maustamattomana, raakana, höyrytettynä tai kypsennettynä, pieniksi paloiksi pilkottuna; höyrytä se koirille, joilla on vaikeuksia pureskella. Ei öljyä, suolaa, mausteita, valkosipulia eikä sipulia.",
     "nb": "Uten tilsetninger, rå, dampet eller kokt, skåret i små biter. Damp den til hunder som har vanskelig for å tygge. Ikke olje, salt, krydder, hvitløk eller løk.",
-    "de": "Pur, roh, gedämpft oder gekocht, in kleine Stücke geschnitten; bei Hunden, die schlecht kauen, am besten dämpfen. Ohne Öl, Salz, Gewürze, Knoblauch oder Zwiebeln."
+    "de": "Pur, roh, gedämpft oder gekocht, in kleine Stücke geschnitten; bei Hunden, die schlecht kauen, am besten dämpfen. Ohne Öl, Salz, Gewürze, Knoblauch oder Zwiebeln.",
+    "fr": "Nature, crue, cuite à la vapeur ou cuite, coupée en petits morceaux ; faites-la cuire à la vapeur pour les chiens qui ont du mal à mâcher. Sans huile, sel, assaisonnement, ail ni oignon."
   },
   "child": {
     "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
@@ -105,7 +112,8 @@
     "da": "Hunde må gerne nippe til lidt zucchini uden tilsætninger. En voksen skærer den først i små stykker.",
     "fi": "Koira saa nakertaa vähän maustamatonta kesäkurpitsaa. Aikuinen pilkkoo sen ensin pieniksi paloiksi.",
     "nb": "Hunder kan nappe i litt squash uten tilsetninger. En voksen skjærer den i små biter først.",
-    "de": "Hunde dürfen ein bisschen ungewürzte Zucchini knabbern. Ein Erwachsener schneidet sie vorher in kleine Stücke."
+    "de": "Hunde dürfen ein bisschen ungewürzte Zucchini knabbern. Ein Erwachsener schneidet sie vorher in kleine Stücke.",
+    "fr": "Les chiens peuvent grignoter un peu de courgette nature. Un adulte la coupe d’abord en petits morceaux."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "da": "Må hunde spise zucchinibrød?",
         "fi": "Saako koira syödä kesäkurpitsaleipää?",
         "nb": "Kan hunder spise squashbrød?",
-        "de": "Dürfen Hunde Zucchinibrot fressen?"
+        "de": "Dürfen Hunde Zucchinibrot fressen?",
+        "fr": "Les chiens peuvent-ils manger du gâteau à la courgette ?"
       },
       "a": {
         "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
@@ -133,7 +142,8 @@
         "da": "Nej. Zucchinibrød og andet bagværk med zucchini er problematiske. Pas især på xylitol, et sødemiddel, der er giftigt for hunde.",
         "fi": "Ei. Kesäkurpitsaleipä ja muut kesäkurpitsaa sisältävät leivonnaiset ovat ongelmallisia. Varo erityisesti ksylitolia, makeutusainetta, joka on koirille myrkyllistä.",
         "nb": "Nei. Squashbrød og andre bakverk med squash er problematiske. Se særlig opp for xylitol, et søtstoff som er giftig for hunder.",
-        "de": "Nein. Zucchinibrot und andere Backwaren mit Zucchini sind problematisch. Achten Sie dabei besonders auf Xylit, einen Süßstoff, der für Hunde giftig ist."
+        "de": "Nein. Zucchinibrot und andere Backwaren mit Zucchini sind problematisch. Achten Sie dabei besonders auf Xylit, einen Süßstoff, der für Hunde giftig ist.",
+        "fr": "Non. Le gâteau à la courgette et les autres pâtisseries qui en contiennent sont à éviter. Méfiez-vous surtout du xylitol, un édulcorant toxique pour les chiens."
       }
     }
   ],
@@ -245,6 +255,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b1ddd75a280d4211a1c3ed17be7b527e5ae88b7fceafaf035e7e70f78b5a2f3"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7e3b6dcb84f1ccbb603af224d0191130a407210c612e7c0b4d73c5c1d4083f95"
     }
   }
 }

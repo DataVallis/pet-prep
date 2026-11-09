@@ -12,7 +12,8 @@
     "da": "Rå kartofler",
     "fi": "Raa’at perunat",
     "nb": "Rå poteter",
-    "de": "Rohe Kartoffeln"
+    "de": "Rohe Kartoffeln",
+    "fr": "Pommes de terre crues"
   },
   "question": {
     "en": "Can cats eat raw potatoes?",
@@ -25,7 +26,8 @@
     "da": "Må katte spise rå kartofler?",
     "fi": "Saako kissa syödä raakoja perunoita?",
     "nb": "Kan katter spise rå poteter?",
-    "de": "Dürfen Katzen rohe Kartoffeln fressen?"
+    "de": "Dürfen Katzen rohe Kartoffeln fressen?",
+    "fr": "Les chats peuvent-ils manger des pommes de terre crues ?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -38,7 +40,8 @@
     "da": "raa-kartofler",
     "fi": "raaka-perunat",
     "nb": "ra-poteter",
-    "de": "rohe-kartoffeln"
+    "de": "rohe-kartoffeln",
+    "fr": "pommes-de-terre-crues"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Nej, giv ikke din kat rå kartofler. RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og ASPCA skriver at rå kartofler kan være et problem for kæledyr. Hvis din kat spiser rå kartoffel, skal du kontakte din dyrlæge.",
     "fi": "Ei. Älä anna kissalle raakaa perunaa. RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia. Jos kissasi söi raakaa perunaa, ota yhteyttä eläinlääkäriin.",
     "nb": "Nei, ikke gi katten rå potet. RSPCA mener at potet bare passer for katter når den er moset eller kokt uten smør eller ost, og ASPCA skriver at rå poteter kan være problematiske for kjæledyr. Hvis katten spiser rå potet, må du kontakte dyrlegen.",
-    "de": "Nein, geben Sie Ihrer Katze keine rohen Kartoffeln. Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein. Wenn Ihre Katze rohe Kartoffeln gefressen hat, wenden Sie sich an Ihren Tierarzt."
+    "de": "Nein, geben Sie Ihrer Katze keine rohen Kartoffeln. Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein. Wenn Ihre Katze rohe Kartoffeln gefressen hat, wenden Sie sich an Ihren Tierarzt.",
+    "fr": "Non, ne donnez pas de pomme de terre crue à votre chat. La RSPCA ne mentionne la pomme de terre pour les chats que bouillie ou en purée, sans beurre ni fromage, et l’ASPCA indique que les pommes de terre crues peuvent poser problème aux animaux. Si votre chat mange de la pomme de terre crue, contactez votre vétérinaire."
   },
   "why": {
     "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
@@ -65,7 +69,8 @@
     "da": "RSPCA og Cats Protection foreslår kun kartofler til katte, hvis de er kogte eller moste uden tilsætninger, og ASPCA skriver at rå kartofler kan være et problem for kæledyr, mens kogte kartofler er fine i moderate mængder. En artikel fra PetMD, skrevet af en dyrlæge, går længere: den kalder rå kartofler, grønne kartofler og selve kartoffelplanten giftige for katte og skriver at kartoffelskræl indeholder giftstoffet solanin.",
     "fi": "RSPCA ja Cats Protection ehdottavat kissoille perunaa vain keitettynä tai pelkkänä muusina, ja ASPCA:n mukaan raa’at perunat voivat olla lemmikeille ongelmallisia, kun taas kypsennetty peruna sopii kohtuudella. Eläinlääkärin kirjoittama PetMD-artikkeli menee pidemmälle: sen mukaan raa’at perunat, vihreät perunat ja perunakasvi ovat kissoille myrkyllisiä, ja perunan kuorissa on solaniini-nimistä myrkkyä.",
     "nb": "RSPCA og Cats Protection foreslår bare potet til katter når den er kokt eller moset uten tilsetninger, og ASPCA skriver at rå poteter kan være problematiske for kjæledyr, mens kokte poteter er greit i moderate mengder. En artikkel fra PetMD, skrevet av en dyrlege, går lenger: Den kaller rå poteter, grønne poteter og potetplanten giftige for katter og skriver at potetskall inneholder giftstoffet solanin.",
-    "de": "Die RSPCA und Cats Protection empfehlen Kartoffeln für Katzen nur gekocht oder als ungewürztes Püree, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein, gekochte dagegen sind in Maßen in Ordnung. Ein von Tierärzten verfasster PetMD-Artikel geht weiter: Er bezeichnet rohe und grüne Kartoffeln sowie die Kartoffelpflanze als giftig für Katzen und schreibt, dass Kartoffelschalen das Gift Solanin enthalten."
+    "de": "Die RSPCA und Cats Protection empfehlen Kartoffeln für Katzen nur gekocht oder als ungewürztes Püree, und laut ASPCA können rohe Kartoffeln für Haustiere problematisch sein, gekochte dagegen sind in Maßen in Ordnung. Ein von Tierärzten verfasster PetMD-Artikel geht weiter: Er bezeichnet rohe und grüne Kartoffeln sowie die Kartoffelpflanze als giftig für Katzen und schreibt, dass Kartoffelschalen das Gift Solanin enthalten.",
+    "fr": "La RSPCA et Cats Protection ne suggèrent la pomme de terre pour les chats que bouillie ou en purée nature, et l’ASPCA indique que les pommes de terre crues peuvent poser problème aux animaux, alors que les pommes de terre cuites sont acceptables avec modération. Un article de PetMD rédigé par des vétérinaires va plus loin : il qualifie de toxiques pour les chats les pommes de terre crues, les pommes de terre vertes et le plant de pomme de terre, et précise que les peaux de pomme de terre contiennent de la solanine, une toxine."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Übelkeit",
       "Erbrechen",
       "Durchfall"
+    ],
+    "fr": [
+      "Nausées",
+      "Vomissements",
+      "Diarrhée"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "da": "Hvis din kat har spist rå kartoffel eller kartoffelskræl, skal du straks kontakte din dyrlæge og få råd. Skriv ned, hvad katten har spist, og hvornår. Prøv ikke selv at få katten til at kaste op.",
     "fi": "Jos kissasi söi raakaa perunaa tai perunankuorta, ota heti yhteyttä eläinlääkäriin ja kysy neuvoa. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaasi.",
     "nb": "Hvis katten har spist rå potet eller potetskall, må du kontakte dyrlegen for råd med en gang. Skriv ned hva katten har spist, og når. Ikke prøv å få katten til å kaste opp selv.",
-    "de": "Wenn Ihre Katze rohe Kartoffeln oder Kartoffelschalen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenn Ihre Katze rohe Kartoffeln oder Kartoffelschalen gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mangé de la pomme de terre crue ou des épluchures de pomme de terre, contactez immédiatement votre vétérinaire pour lui demander conseil. Notez ce qu’il a mangé et à quel moment. N’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "da": "Rå kartofler er ikke til katte. Hvis katten nasker af en, så sig det til en voksen, som kan ringe til dyrlægen.",
     "fi": "Raa’at perunat eivät ole kissoille. Jos kisu maistelee sellaista, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille.",
     "nb": "Rå poteter er ikke noe for katter. Hvis pusen napper i en, må du si fra til en voksen, så den voksne kan ringe dyrlegen.",
-    "de": "Rohe Kartoffeln sind nichts für Katzen. Wenn eine Katze an einer knabbert, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann."
+    "de": "Rohe Kartoffeln sind nichts für Katzen. Wenn eine Katze an einer knabbert, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
+    "fr": "Les pommes de terre crues ne sont pas pour les chats. Si ton chat en grignote une, préviens un adulte pour qu’il appelle le vétérinaire."
   },
   "faq": [
     {
@@ -164,7 +176,8 @@
         "da": "Må katte spise kogte kartofler?",
         "fi": "Saako kissa syödä kypsennettyä perunaa?",
         "nb": "Kan katter spise kokt potet?",
-        "de": "Dürfen Katzen gekochte Kartoffeln fressen?"
+        "de": "Dürfen Katzen gekochte Kartoffeln fressen?",
+        "fr": "Les chats peuvent-ils manger de la pomme de terre cuite ?"
       },
       "a": {
         "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
@@ -177,7 +190,8 @@
         "da": "RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og Cats Protection foreslår kartoffelmos uden smør, fløde eller hvidløg. Brug ikke skrællen.",
         "fi": "RSPCA:n mukaan peruna sopii kissalle vain muusattuna tai keitettynä ilman voita tai juustoa, ja Cats Protection ehdottaa pelkkää perunamuusia ilman voita, kermaa tai valkosipulia. Jätä kuori pois.",
         "nb": "RSPCA mener at poteter bare passer for katter hvis de er moset eller kokt uten smør eller ost, og Cats Protection foreslår potetmos uten smør, fløte eller hvitløk. Fjern skallet.",
-        "de": "Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und Cats Protection empfiehlt reines Kartoffelpüree ohne Butter, Sahne oder Knoblauch. Lassen Sie die Schale weg."
+        "de": "Laut RSPCA sind Kartoffeln für Katzen nur als Püree oder gekocht geeignet, jeweils ohne Butter oder Käse, und Cats Protection empfiehlt reines Kartoffelpüree ohne Butter, Sahne oder Knoblauch. Lassen Sie die Schale weg.",
+        "fr": "La RSPCA ne mentionne la pomme de terre pour les chats que bouillie ou en purée, sans beurre ni fromage, et Cats Protection suggère une purée nature, sans beurre, crème ni ail. Retirez la peau."
       }
     }
   ],
@@ -285,6 +299,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a38dc99b7e9fa38ecaf0f3caae63f48d629ab46d57076b441cd61a923174a2f6"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "63e6b285b1bf5df592b5fafddde7e5fe7c4413f1dc7e5bd9d440753da54d8b62"
     }
   }
 }
