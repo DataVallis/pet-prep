@@ -11,7 +11,8 @@
     "sv": "Grönkål",
     "da": "Grønkål",
     "fi": "Lehtikaali",
-    "nb": "Grønnkål"
+    "nb": "Grønnkål",
+    "de": "Grünkohl"
   },
   "question": {
     "en": "Can dogs eat kale?",
@@ -23,7 +24,8 @@
     "sv": "Får hundar äta grönkål?",
     "da": "Må hunde spise grønkål?",
     "fi": "Saako koira syödä lehtikaalia?",
-    "nb": "Kan hunder spise grønnkål?"
+    "nb": "Kan hunder spise grønnkål?",
+    "de": "Dürfen Hunde Grünkohl fressen?"
   },
   "url_slug": {
     "en": "kale",
@@ -35,7 +37,8 @@
     "sv": "gronkal",
     "da": "gronkal",
     "fi": "lehtikaali",
-    "nb": "gronnkal"
+    "nb": "gronnkal",
+    "de": "gruenkohl"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "sv": "Helst inte som en vanlig godbit. Lite grönkål då och då skadar sannolikt inte de flesta hundar, men en del veterinärer avråder: grönkål innehåller kalciumoxalat, som har kopplats till njur- och blåsstenar, och isotiocyanater, som kan irritera magen.",
     "da": "Hellere ikke som fast godbid. Lidt grønkål af og til skader næppe de fleste hunde, men nogle dyrlæger advarer imod det: grønkål indeholder calciumoxalat, som sættes i forbindelse med nyre- og blæresten, og isothiocyanater, som kan irritere maven.",
     "fi": "Ei kannata antaa säännöllisenä herkkuna. Vähän lehtikaalia silloin tällöin ei todennäköisesti vahingoita useimpia koiria, mutta jotkut eläinlääkärit varoittavat sen antamisesta: lehtikaalissa on kalsiumoksalaattia, jota yhdistetään munuais- ja virtsarakkokiviin, sekä isotiosyanaatteja, jotka voivat ärsyttää vatsaa.",
-    "nb": "Helst ikke som fast godbit. Litt grønnkål nå og da skader neppe de fleste hunder, men noen dyrleger advarer mot den: Grønnkål inneholder kalsiumoksalat, som er knyttet til nyre- og blærestein, og isotiocyanater, som kan irritere magen."
+    "nb": "Helst ikke som fast godbit. Litt grønnkål nå og da skader neppe de fleste hunder, men noen dyrleger advarer mot den: Grønnkål inneholder kalsiumoksalat, som er knyttet til nyre- og blærestein, og isotiocyanater, som kan irritere magen.",
+    "de": "Besser nicht als regelmäßiges Leckerli. Ein bisschen Grünkohl ab und zu schadet den meisten Hunden wahrscheinlich nicht, aber manche Tierärzte raten davon ab: Grünkohl enthält Calciumoxalat, das mit Nieren- und Blasensteinen in Verbindung gebracht wird, und Isothiocyanate, die den Magen reizen können."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
@@ -60,7 +64,8 @@
     "sv": "Grönkål innehåller kalciumoxalat, som kan ge njur- och blåsstenar, och isotiocyanater, som kan ge lindrig till potentiellt kraftig irritation i hundens mage. Om den ges regelbundet kan den också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln. Små mängder kan gå bra, men eftersom en del veterinärer avråder från grönkål följer vi det strängare rådet.",
     "da": "Grønkål indeholder calciumoxalat, som kan give nyre- og blæresten, og isothiocyanater, som kan give fra let til potentielt alvorlig irritation af maven hos hunde. Hvis hunden får det jævnligt, kan det også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose). Små mængder kan være i orden, men fordi nogle dyrlæger advarer imod grønkål, følger vi det strengere råd.",
     "fi": "Lehtikaalissa on kalsiumoksalaattia, joka voi aiheuttaa munuais- ja virtsarakkokiviä, sekä isotiosyanaatteja, jotka voivat aiheuttaa koirille lievää tai mahdollisesti vakavaa vatsan ärsytystä. Säännöllisesti annettuna se voi myös häiritä kilpirauhasen toimintaa, etenkin kilpirauhasen vajaatoimintaa sairastavilla koirilla. Pieni määrä voi olla vaaraton, mutta koska osa eläinlääkäreistä varoittaa lehtikaalista, noudatamme tiukempaa ohjetta.",
-    "nb": "Grønnkål inneholder kalsiumoksalat, som kan gi nyre- og blærestein, og isotiocyanater, som kan gi mild til potensielt kraftig irritasjon i magen hos hunder. Hvis hunden får den jevnlig, kan den også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose. Små mengder kan være greit, men fordi noen dyrleger advarer mot grønnkål, følger vi det strengeste rådet."
+    "nb": "Grønnkål inneholder kalsiumoksalat, som kan gi nyre- og blærestein, og isotiocyanater, som kan gi mild til potensielt kraftig irritasjon i magen hos hunder. Hvis hunden får den jevnlig, kan den også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose. Små mengder kan være greit, men fordi noen dyrleger advarer mot grønnkål, følger vi det strengeste rådet.",
+    "de": "Grünkohl enthält Calciumoxalat, das Nieren- und Blasensteine verursachen kann, und Isothiocyanate, die bei Hunden eine leichte bis möglicherweise starke Magenreizung auslösen können. Regelmäßig gefüttert, kann er außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion. Kleine Mengen sind womöglich unproblematisch, aber weil manche Tierärzte von Grünkohl abraten, folgen wir dem strengeren Rat."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Diaré",
       "Problemer med å late vannet",
       "Endringer i hvordan hunden tisser"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Schwierigkeiten beim Urinieren",
+      "Jede Veränderung beim Urinieren"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "sv": "Om hunden har ätit grönkål bör du hålla noga utkik efter magbesvär eller tecken på njur- och blåsstenar. Kontakta veterinären om du ser kräkningar, diarré, svårigheter att kissa eller ändrade kissvanor.",
     "da": "Hvis din hund har spist grønkål, så hold nøje øje med mavegener eller tegn på nyre- og blæresten. Kontakt din dyrlæge, hvis du bemærker opkast, diarré, besvær med at tisse eller enhver ændring i hundens tissevaner.",
     "fi": "Jos koirasi söi lehtikaalia, tarkkaile sitä vatsaoireiden sekä munuais- ja virtsarakkokivien merkkien varalta. Ota yhteyttä eläinlääkäriin, jos huomaat oksentelua, ripulia, virtsaamisvaikeuksia tai muutoksia virtsaamistottumuksissa.",
-    "nb": "Hvis hunden har spist grønnkål, må du følge nøye med på om den får urolig mage eller tegn på nyre- og blærestein. Kontakt dyrlegen hvis du ser oppkast, diaré, problemer med å late vannet eller andre endringer i hvordan hunden tisser."
+    "nb": "Hvis hunden har spist grønnkål, må du følge nøye med på om den får urolig mage eller tegn på nyre- og blærestein. Kontakt dyrlegen hvis du ser oppkast, diaré, problemer med å late vannet eller andre endringer i hvordan hunden tisser.",
+    "de": "Wenn Ihr Hund Grünkohl gefressen hat, beobachten Sie ihn genau auf Magenbeschwerden oder Anzeichen von Nieren- und Blasensteinen. Wenden Sie sich an Ihren Tierarzt, wenn Sie Erbrechen, Durchfall, Schwierigkeiten beim Urinieren oder eine Veränderung beim Urinieren bemerken."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "sv": "Grönkål är ingen bra godbit för hundar. Gröna bönor eller gurka är bättre godbitar att dela med dem. Be en vuxen hjälpa dig.",
     "da": "Grønkål er ikke en god snack til hunde. Grønne bønner eller agurk er bedre godbidder at dele, når en voksen hjælper.",
     "fi": "Lehtikaali ei ole hyvä välipala koiralle. Vihreät pavut tai kurkku ovat parempia herkkuja, kun aikuinen auttaa.",
-    "nb": "Grønnkål er ikke en god godbit for hunder. Grønne bønner eller agurk er bedre å dele med hunden, med hjelp fra en voksen."
+    "nb": "Grønnkål er ikke en god godbit for hunder. Grønne bønner eller agurk er bedre å dele med hunden, med hjelp fra en voksen.",
+    "de": "Grünkohl ist kein guter Snack für Hunde. Grüne Bohnen oder Gurkenstücke sind bessere Leckerlis zum Teilen – mit Hilfe eines Erwachsenen."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "sv": "Vilka hundar bör undvika grönkål?",
         "da": "Hvilke hunde bør undgå grønkål?",
         "fi": "Minkä koirien tulee välttää lehtikaalia?",
-        "nb": "Hvilke hunder bør unngå grønnkål?"
+        "nb": "Hvilke hunder bør unngå grønnkål?",
+        "de": "Welche Hunde sollten Grünkohl meiden?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
@@ -173,7 +187,8 @@
         "sv": "Hundar som är benägna att få njur- eller blåsstenar bör undvika livsmedel med mycket kalciumoxalat, till exempel grönkål. Grönkål kan också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln.",
         "da": "Hunde, der er udsat for nyre- eller blæresten, bør undgå fødevarer med meget calciumoxalat, herunder grønkål. Grønkål kan også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose).",
         "fi": "Munuais- tai virtsarakkokiville alttiiden koirien tulee välttää runsaasti kalsiumoksalaattia sisältäviä ruokia, myös lehtikaalia. Lehtikaali voi myös häiritä kilpirauhasen toimintaa, etenkin kilpirauhasen vajaatoimintaa sairastavilla koirilla.",
-        "nb": "Hunder som er utsatt for nyre- eller blærestein, bør unngå mat med mye kalsiumoksalat, deriblant grønnkål. Grønnkål kan også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose."
+        "nb": "Hunder som er utsatt for nyre- eller blærestein, bør unngå mat med mye kalsiumoksalat, deriblant grønnkål. Grønnkål kan også forstyrre skjoldbruskkjertelens funksjon, særlig hos hunder med hypotyreose.",
+        "de": "Hunde, die zu Nieren- oder Blasensteinen neigen, sollten Lebensmittel mit viel Calciumoxalat meiden, darunter auch Grünkohl. Grünkohl kann außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion."
       }
     },
     {
@@ -187,7 +202,8 @@
         "sv": "Vad kan jag ge hunden i stället för grönkål?",
         "da": "Hvad kan jeg give min hund i stedet for grønkål?",
         "fi": "Mitä koiralle voi antaa lehtikaalin tilalle?",
-        "nb": "Hva kan jeg gi hunden i stedet for grønnkål?"
+        "nb": "Hva kan jeg gi hunden i stedet for grønnkål?",
+        "de": "Was kann ich meinem Hund statt Grünkohl geben?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
@@ -199,7 +215,8 @@
         "sv": "Gröna bönor och gurka är säkra för de flesta hundar.",
         "da": "Grønne bønner og agurk er ufarlige for de fleste hunde.",
         "fi": "Vihreät pavut ja kurkku ovat turvallisia useimmille koirille.",
-        "nb": "Grønne bønner og agurk er trygge for de fleste hunder."
+        "nb": "Grønne bønner og agurk er trygge for de fleste hunder.",
+        "de": "Grüne Bohnen und Gurken sind für die meisten Hunde unbedenklich."
       }
     }
   ],
@@ -303,6 +320,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "60b56d1b08d2613b3a58a87252919f116d61ace393433ea620256d4764476954"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "78196af1fee1ac3c8bdac4c97e44ca44d03efc85fd6a2091cd3405d73ad59b97"
     }
   }
 }
