@@ -8,7 +8,8 @@
     "pl": "Jarmuż",
     "cs": "Kadeřávek",
     "hr": "Kovrčavi kelj",
-    "sv": "Grönkål"
+    "sv": "Grönkål",
+    "da": "Grønkål"
   },
   "question": {
     "en": "Can dogs eat kale?",
@@ -17,7 +18,8 @@
     "pl": "Czy psy mogą jeść jarmuż?",
     "cs": "Mohou psi jíst kadeřávek?",
     "hr": "Smiju li psi jesti kovrčavi kelj?",
-    "sv": "Får hundar äta grönkål?"
+    "sv": "Får hundar äta grönkål?",
+    "da": "Må hunde spise grønkål?"
   },
   "url_slug": {
     "en": "kale",
@@ -26,7 +28,8 @@
     "pl": "jarmuz",
     "cs": "kaderavek",
     "hr": "kovrcavi-kelj",
-    "sv": "gronkal"
+    "sv": "gronkal",
+    "da": "gronkal"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "pl": "Lepiej nie dawać go regularnie. Odrobina jarmużu od czasu do czasu raczej nie zaszkodzi większości psów, ale niektórzy weterynarze go odradzają: jarmuż zawiera szczawian wapnia, który wiąże się z kamieniami nerkowymi i pęcherzowymi, oraz izotiocyjaniany, które mogą podrażniać żołądek.",
     "cs": "Raději ne jako pravidelný pamlsek. Trocha kadeřávku jednou za čas většině psů pravděpodobně neublíží, ale někteří veterináři před ním varují: kadeřávek obsahuje šťavelan vápenatý, který souvisí s tvorbou kamenů v ledvinách a močovém měchýři, a izotiokyanáty, které mohou dráždit žaludek.",
     "hr": "Bolje ga ne davati kao redovitu poslasticu. Malo kovrčavog kelja povremeno vjerojatno neće naštetiti većini pasa, ali neki veterinari savjetuju oprez: kovrčavi kelj sadrži kalcijev oksalat, povezan s kamencima u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji mogu nadražiti želudac.",
-    "sv": "Helst inte som en vanlig godbit. Lite grönkål då och då skadar sannolikt inte de flesta hundar, men en del veterinärer avråder: grönkål innehåller kalciumoxalat, som har kopplats till njur- och blåsstenar, och isotiocyanater, som kan irritera magen."
+    "sv": "Helst inte som en vanlig godbit. Lite grönkål då och då skadar sannolikt inte de flesta hundar, men en del veterinärer avråder: grönkål innehåller kalciumoxalat, som har kopplats till njur- och blåsstenar, och isotiocyanater, som kan irritera magen.",
+    "da": "Hellere ikke som fast godbid. Lidt grønkål af og til skader næppe de fleste hunde, men nogle dyrlæger advarer imod det: grønkål indeholder calciumoxalat, som sættes i forbindelse med nyre- og blæresten, og isothiocyanater, som kan irritere maven."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
@@ -45,7 +49,8 @@
     "pl": "Jarmuż zawiera szczawian wapnia, który może powodować kamienie nerkowe i pęcherzowe, oraz izotiocyjaniany, które u psów mogą wywołać podrażnienie żołądka od łagodnego do potencjalnie silnego. Podawany regularnie może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy. Małe ilości mogą być w porządku, ale ponieważ niektórzy weterynarze jarmuż odradzają, kierujemy się ostrzejszą radą.",
     "cs": "Kadeřávek obsahuje šťavelan vápenatý, který může způsobit kameny v ledvinách a močovém měchýři, a izotiokyanáty, které mohou u psů způsobit podráždění žaludku, od mírného až po potenciálně závažné. Při pravidelném krmení může také narušovat funkci štítné žlázy, zejména u psů s hypotyreózou. Malé množství může být v pořádku, ale protože někteří veterináři před kadeřávkem varují, řídíme se přísnější radou.",
     "hr": "Kovrčavi kelj sadrži kalcijev oksalat, koji može uzrokovati kamence u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji kod pasa mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Ako se daje redovito, može ometati i rad štitnjače, osobito kod pasa s hipotireozom. Male količine možda su u redu, ali budući da neki veterinari savjetuju oprez s kovrčavim keljom, držimo se strožeg savjeta.",
-    "sv": "Grönkål innehåller kalciumoxalat, som kan ge njur- och blåsstenar, och isotiocyanater, som kan ge lindrig till potentiellt kraftig irritation i hundens mage. Om den ges regelbundet kan den också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln. Små mängder kan gå bra, men eftersom en del veterinärer avråder från grönkål följer vi det strängare rådet."
+    "sv": "Grönkål innehåller kalciumoxalat, som kan ge njur- och blåsstenar, och isotiocyanater, som kan ge lindrig till potentiellt kraftig irritation i hundens mage. Om den ges regelbundet kan den också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln. Små mängder kan gå bra, men eftersom en del veterinärer avråder från grönkål följer vi det strängare rådet.",
+    "da": "Grønkål indeholder calciumoxalat, som kan give nyre- og blæresten, og isothiocyanater, som kan give fra let til potentielt alvorlig irritation af maven hos hunde. Hvis hunden får det jævnligt, kan det også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose). Små mængder kan være i orden, men fordi nogle dyrlæger advarer imod grønkål, følger vi det strengere råd."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Diarré",
       "Svårigheter att kissa",
       "Förändrade kissvanor"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Besvær med at tisse",
+      "Enhver ændring i hundens tissevaner"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "pl": "Jeśli pies zjadł jarmuż, uważnie obserwuj, czy nie ma rozstroju żołądka ani objawów kamieni nerkowych lub pęcherzowych. Skontaktuj się z weterynarzem, jeśli zauważysz wymioty, biegunkę, trudności z oddawaniem moczu lub jakąkolwiek zmianę w oddawaniu moczu.",
     "cs": "Pokud váš pes snědl kadeřávek, pozorně ho sledujte, zda nemá potíže s trávením nebo příznaky kamenů v ledvinách a močovém měchýři. Obraťte se na veterináře, pokud si všimnete zvracení, průjmu, potíží s močením nebo jakékoli změny v močení.",
     "hr": "Ako je tvoj pas pojeo kovrčavi kelj, pažljivo prati ima li probavnih tegoba ili znakova kamenaca u bubrezima i mokraćnom mjehuru. Obrati se veterinaru ako primijetiš povraćanje, proljev, poteškoće s mokrenjem ili bilo kakvu promjenu u mokrenju.",
-    "sv": "Om hunden har ätit grönkål bör du hålla noga utkik efter magbesvär eller tecken på njur- och blåsstenar. Kontakta veterinären om du ser kräkningar, diarré, svårigheter att kissa eller ändrade kissvanor."
+    "sv": "Om hunden har ätit grönkål bör du hålla noga utkik efter magbesvär eller tecken på njur- och blåsstenar. Kontakta veterinären om du ser kräkningar, diarré, svårigheter att kissa eller ändrade kissvanor.",
+    "da": "Hvis din hund har spist grønkål, så hold nøje øje med mavegener eller tegn på nyre- og blæresten. Kontakt din dyrlæge, hvis du bemærker opkast, diarré, besvær med at tisse eller enhver ændring i hundens tissevaner."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "pl": "Jarmuż nie jest dobrą przekąską dla psów. Lepiej poczęstuj psa fasolką szparagową albo ogórkiem – z pomocą dorosłego.",
     "cs": "Kadeřávek není pro psy dobrá svačinka. Lepší je dát pejskovi s pomocí dospělého zelené fazolky nebo okurku.",
     "hr": "Kovrčavi kelj nije dobra užina za pse. Zelene mahune ili krastavac bolje su poslastice za dijeljenje, uz pomoć odrasle osobe.",
-    "sv": "Grönkål är ingen bra godbit för hundar. Gröna bönor eller gurka är bättre godbitar att dela med dem. Be en vuxen hjälpa dig."
+    "sv": "Grönkål är ingen bra godbit för hundar. Gröna bönor eller gurka är bättre godbitar att dela med dem. Be en vuxen hjälpa dig.",
+    "da": "Grønkål er ikke en god snack til hunde. Grønne bønner eller agurk er bedre godbidder at dele, når en voksen hjælper."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "pl": "Które psy powinny unikać jarmużu?",
         "cs": "Kteří psi by se měli kadeřávku vyhnout?",
         "hr": "Koji psi trebaju izbjegavati kovrčavi kelj?",
-        "sv": "Vilka hundar bör undvika grönkål?"
+        "sv": "Vilka hundar bör undvika grönkål?",
+        "da": "Hvilke hunde bør undgå grønkål?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
@@ -128,7 +142,8 @@
         "pl": "Psy skłonne do kamieni nerkowych lub pęcherzowych powinny unikać pokarmów bogatych w szczawian wapnia, w tym jarmużu. Jarmuż może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy.",
         "cs": "Psi náchylní ke kamenům v ledvinách nebo močovém měchýři by se měli vyhýbat potravinám s vysokým obsahem šťavelanu vápenatého, mezi které patří i kadeřávek. Kadeřávek také může narušovat funkci štítné žlázy, zejména u psů s hypotyreózou.",
         "hr": "Psi skloni kamencima u bubrezima ili mokraćnom mjehuru trebaju izbjegavati hranu s mnogo kalcijeva oksalata, što uključuje i kovrčavi kelj. Kovrčavi kelj može ometati i rad štitnjače, osobito kod pasa s hipotireozom.",
-        "sv": "Hundar som är benägna att få njur- eller blåsstenar bör undvika livsmedel med mycket kalciumoxalat, till exempel grönkål. Grönkål kan också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln."
+        "sv": "Hundar som är benägna att få njur- eller blåsstenar bör undvika livsmedel med mycket kalciumoxalat, till exempel grönkål. Grönkål kan också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln.",
+        "da": "Hunde, der er udsat for nyre- eller blæresten, bør undgå fødevarer med meget calciumoxalat, herunder grønkål. Grønkål kan også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose)."
       }
     },
     {
@@ -139,7 +154,8 @@
         "pl": "Co mogę dać psu zamiast jarmużu?",
         "cs": "Co mohu dát psovi místo kadeřávku?",
         "hr": "Što mogu dati psu umjesto kovrčavog kelja?",
-        "sv": "Vad kan jag ge hunden i stället för grönkål?"
+        "sv": "Vad kan jag ge hunden i stället för grönkål?",
+        "da": "Hvad kan jeg give min hund i stedet for grønkål?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
@@ -148,7 +164,8 @@
         "pl": "Fasolka szparagowa i ogórek są bezpieczne dla większości psów.",
         "cs": "Zelené fazolky a okurky jsou bezpečné pro většinu psů.",
         "hr": "Zelene mahune i krastavci sigurni su za većinu pasa.",
-        "sv": "Gröna bönor och gurka är säkra för de flesta hundar."
+        "sv": "Gröna bönor och gurka är säkra för de flesta hundar.",
+        "da": "Grønne bønner og agurk er ufarlige for de fleste hunde."
       }
     }
   ],
@@ -237,6 +254,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b9d95209ec74691d21415cb078acb2790fbe6bb223fccbb7d1da80dcc80ae2c3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8427bf7a094426498c3a71103d4ddecb04a7b1164896e976eeb9cf38d3531577"
     }
   }
 }

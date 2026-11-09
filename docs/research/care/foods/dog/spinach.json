@@ -8,7 +8,8 @@
     "pl": "Szpinak",
     "cs": "Špenát",
     "hr": "Špinat",
-    "sv": "Spenat"
+    "sv": "Spenat",
+    "da": "Spinat"
   },
   "question": {
     "en": "Can dogs eat spinach?",
@@ -17,7 +18,8 @@
     "pl": "Czy psy mogą jeść szpinak?",
     "cs": "Mohou psi jíst špenát?",
     "hr": "Smiju li psi jesti špinat?",
-    "sv": "Får hundar äta spenat?"
+    "sv": "Får hundar äta spenat?",
+    "da": "Må hunde spise spinat?"
   },
   "url_slug": {
     "en": "spinach",
@@ -26,7 +28,8 @@
     "pl": "szpinak",
     "cs": "spenat",
     "hr": "spinat",
-    "sv": "spenat"
+    "sv": "spenat",
+    "da": "spinat"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "pl": "Psy mogą jeść szpinak, ale to nie najlepszy wybór spośród warzyw. Zawiera dużo kwasu szczawiowego, który blokuje wchłanianie wapnia i może prowadzić do uszkodzenia nerek. Pies musiałby zjeść go bardzo dużo, żeby sobie zaszkodzić, ale lepiej wybrać inne warzywo.",
     "cs": "Psi špenát jíst mohou, ale není to nejlepší zelenina, kterou s nimi můžete sdílet. Obsahuje hodně kyseliny šťavelové, která blokuje vstřebávání vápníku a může vést k poškození ledvin. Pes by musel sníst hodně, aby mu uškodil, ale jiná zelenina je lepší volbou.",
     "hr": "Psi smiju jesti špinat, ali nije među najboljim povrćem koje možeš dijeliti s njima. Sadrži mnogo oksalne kiseline, koja blokira apsorpciju kalcija i može dovesti do oštećenja bubrega. Pas bi morao pojesti mnogo da bi mu naštetilo, ali drugo je povrće bolji izbor.",
-    "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak."
+    "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak.",
+    "da": "Hunde kan spise spinat, men det er ikke en af de bedste grøntsager at dele med dem. Spinat indeholder meget oxalsyre, som blokerer for optagelsen af calcium og kan give nyreskader. En hund skal spise store mængder for at tage skade, men en anden grøntsag er et bedre valg."
   },
   "why": {
     "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
@@ -45,7 +49,8 @@
     "pl": "Szpinak zawiera dużo kwasu szczawiowego, który blokuje zdolność organizmu do wchłaniania wapnia i może prowadzić do uszkodzenia nerek. Psy ze zdrowymi nerkami radzą sobie z małymi ilościami i musiałyby zjeść bardzo duże ilości, żeby sobie zaszkodzić, ale jedzenie go przez długi czas może obciążać nerki. Ponieważ źródła radzą wybrać inne warzywo, uznajemy go za niezalecany.",
     "cs": "Špenát obsahuje hodně kyseliny šťavelové, která brání tělu ve vstřebávání vápníku a může vést k poškození ledvin. Psi se zdravýma ledvinama zvládnou malé množství zpracovat a pes by musel sníst opravdu velké množství, aby mu uškodil, ale dlouhodobé krmení špenátem může ledviny zatěžovat. Protože zdroje radí zvolit raději jinou zeleninu, řadíme ho mezi nedoporučované.",
     "hr": "Špinat sadrži mnogo oksalne kiseline, koja tijelu otežava apsorpciju kalcija i može dovesti do oštećenja bubrega. Psi sa zdravim bubrezima mogu preraditi male količine, a pas bi morao pojesti vrlo velike količine da bi mu naštetilo, ali dugotrajno jedenje špinata može opteretiti bubrege. Budući da izvori savjetuju drugo povrće, ocjenjujemo ga kao namirnicu koju ne preporučujemo.",
-    "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”."
+    "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”.",
+    "da": "Spinat indeholder meget oxalsyre, som blokerer for kroppens optagelse af calcium og kan give nyreskader. Hunde med sunde nyrer kan klare små mængder, og en hund skal spise meget store mængder for at tage skade, men hvis den får spinat over lang tid, kan nyrerne blive belastet. Fordi kilderne anbefaler at vælge en anden grøntsag, vurderer vi spinat som ikke anbefalet."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "sv": [
       "Muskelsvaghet (efter att ha ätit spenat under lång tid)",
       "Onormal hjärtrytm (efter att ha ätit spenat under lång tid)"
+    ],
+    "da": [
+      "Muskelsvaghed (hvis hunden får spinat over lang tid)",
+      "Unormal hjerterytme (hvis hunden får spinat over lang tid)"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "pl": "Zawsze zapytaj weterynarza, zanim dodasz szpinak do psiej diety, nawet jako przekąskę. Jeśli twój pies jest skłonny do kamieni nerkowych lub pęcherzowych, unikaj szpinaku.",
     "cs": "Před zařazením špenátu do jídelníčku psa, i jako pamlsku, se vždy poraďte s veterinářem. Pokud je váš pes náchylný ke kamenům v ledvinách nebo močovém měchýři, špenátu se vyhněte.",
     "hr": "Uvijek pitaj veterinara prije nego što špinat uvedeš u prehranu svog psa, čak i kao užinu. Ako je tvoj pas sklon kamencima u bubrezima ili mokraćnom mjehuru, izbjegavaj špinat.",
-    "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat."
+    "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat.",
+    "da": "Spørg altid din dyrlæge, før du giver din hund spinat, også som snack. Hvis din hund er udsat for nyre- eller blæresten, skal du undgå spinat."
   },
   "serving": {
     "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
@@ -93,7 +103,8 @@
     "pl": "Tylko za zgodą weterynarza i gdy nerki psa są zdrowe: małe ilości, rzadko, gotowany na parze, bez przypraw, ziół, soli, oleju, cebuli i czosnku.",
     "cs": "Jen pokud s tím veterinář souhlasí a pes má zdravé ledviny: malé množství, zřídka, spařený, bez koření, bylinek, soli, oleje, cibule a česneku.",
     "hr": "Samo ako se veterinar slaže i ako pas ima zdrave bubrege: male količine, rijetko, kuhan na pari, bez začina, začinskog bilja, soli, ulja, luka i češnjaka.",
-    "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök."
+    "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök.",
+    "da": "Kun hvis din dyrlæge er enig, og hundens nyrer er sunde: små mængder, sjældent, dampet, uden krydderier, krydderurter, salt, olie, løg eller hvidløg."
   },
   "child": {
     "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
@@ -102,7 +113,8 @@
     "pl": "Szpinak nie jest świetną przekąską dla psów. Poproś dorosłego, żeby wybrał dla twojego psa inne warzywo.",
     "cs": "Špenát není pro psy skvělá svačinka. Požádej dospělého, ať pejskovi vybere jinou zeleninu.",
     "hr": "Špinat nije sjajna užina za pse. Zamoli odraslu osobu da za tvog psa odabere neko drugo povrće.",
-    "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden."
+    "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden.",
+    "da": "Spinat er ikke nogen god snack til hunde. Bed en voksen vælge en anden grøntsag til din hund."
   },
   "faq": [
     {
@@ -113,7 +125,8 @@
         "pl": "Czy dla psa lepszy jest szpinak surowy, czy gotowany?",
         "cs": "Je pro psy lepší syrový, nebo tepelně upravený špenát?",
         "hr": "Je li psima bolji sirov ili termički obrađen špinat?",
-        "sv": "Är rå eller kokt spenat bättre för hundar?"
+        "sv": "Är rå eller kokt spenat bättre för hundar?",
+        "da": "Er rå eller kogt spinat bedst for hunde?"
       },
       "a": {
         "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
@@ -122,7 +135,8 @@
         "pl": "Jeśli już go dajesz, ugotuj go na parze: surowy szpinak jest dla psa trudny do strawienia, a szpinak gotowany w wodzie traci większość składników odżywczych.",
         "cs": "Pokud ho psovi přesto dáváte, spařte ho: syrový se špatně tráví a vařený přichází o většinu živin.",
         "hr": "Ako ga već daješ, skuhaj ga na pari: sirov se psu teško probavlja, a špinat kuhan u vodi gubi većinu hranjivih tvari.",
-        "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen."
+        "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen.",
+        "da": "Hvis du giver spinat, så damp den: rå spinat er svær for en hund at fordøje, og kogt spinat mister det meste af sit næringsindhold."
       }
     }
   ],
@@ -218,6 +232,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0d38197a1637f5dee5204f12f3f652e8170c5dc801d961cccb3d7db7fc7dd02"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a6b01da33d79a4bc7602b4c7ff682967efc7fadb5e0c72ab5ae35e57c9e7604"
     }
   }
 }
