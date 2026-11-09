@@ -1,0 +1,136 @@
+{
+  "slug": "sweet-potato",
+  "species": "dog",
+  "name": {
+    "en": "Sweet potato",
+    "sl": "Sladki krompir"
+  },
+  "question": {
+    "en": "Can dogs eat sweet potato?",
+    "sl": "Ali lahko psi jedo sladki krompir?"
+  },
+  "url_slug": {
+    "en": "sweet-potato",
+    "sl": "sladki-krompir"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts, cooked and peeled. Soft boiled or steamed sweet potato is fine as a treat, but never give raw sweet potato: it is hard to chew, can upset the stomach and may cause an intestinal blockage.",
+    "sl": "Da, v majhnih količinah, kuhan in olupljen. Mehak sladki krompir, kuhan v vodi ali na pari, je v redu kot priboljšek, nikoli pa ne ponudite surovega: težko se žveči, lahko razdraži želodec in povzroči zamašitev črevesja."
+  },
+  "why": {
+    "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
+    "sl": "Sladki krompir ni strupen, vendar se surov težko žveči in lahko povzroči zamašitev črevesja, lupina pa otežuje prebavo. Preveč ga lahko zaradi prevelike količine vitamina A povzroči šibkost kosti in mišic, zaradi visokega glikemičnega indeksa pa je pri psih s sladkorno boleznijo potrebna previdnost. Nedavne raziskave nakazujejo, da morda ni primeren za pasjo prehrano, in nikoli ne sme biti glavni vir hrane."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Ask your vet before changing your dog's diet, then start with a small amount to see how your dog reacts.",
+    "sl": "Pred spremembo pasje prehrane se posvetujte z veterinarjem, nato začnite z majhno količino in opazujte, kako se pes odzove."
+  },
+  "serving": {
+    "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
+    "sl": "Kuhan v vodi ali na pari, dokler ni mehak, olupljen, v majhnih količinah. Nikoli surov in nikoli kot glavni del prehrane."
+  },
+  "child": {
+    "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
+    "sl": "Psi lahko dobijo malo mehkega kuhanega sladkega krompirja. Odrasli ga najprej olupi in skuha."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat sweet potato skin?",
+        "sl": "Ali lahko psi jedo lupino sladkega krompirja?"
+      },
+      "a": {
+        "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
+        "sl": "Najbolje jo je odstraniti: z lupino pes sladki krompir težje prebavi."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat raw sweet potato?",
+        "sl": "Ali lahko psi jedo surov sladki krompir?"
+      },
+      "a": {
+        "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
+        "sl": "Ne. Surov sladki krompir se težko žveči, lahko razdraži pasji želodec in povzroči zamašitev črevesja. Skuhajte ga, da se zmehča."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD150",
+      "quote": "Yes, they can."
+    },
+    {
+      "id": "KD150",
+      "quote": "Recent research has suggested that sweet potatoes, while not poisonous, may not be appropriate for a dog’s diet."
+    },
+    {
+      "id": "KD150",
+      "quote": "You should never feed your dog a raw sweet potato."
+    },
+    {
+      "id": "KD150",
+      "quote": "Not only are they difficult to chew, but they can upset your dog’s stomach and potentially cause intestinal blockage."
+    },
+    {
+      "id": "KD150",
+      "quote": "leaving the skin on makes it harder for your dog to digest."
+    },
+    {
+      "id": "KD150",
+      "quote": "make sure it’s cooked and that the skin is removed;"
+    },
+    {
+      "id": "KD150",
+      "quote": "making sure the potato is of a soft consistency lessons the risk of choking"
+    },
+    {
+      "id": "KD150",
+      "quote": "Too much of a good thing can cause bone and muscle weakness, due to excessive vitamin A,"
+    },
+    {
+      "id": "KD150",
+      "quote": "They should be incorporated with caution in the diets of diabetic dogs, due to a high glycemic index,"
+    },
+    {
+      "id": "KD150",
+      "quote": "Carbohydrates, such as sweet potatoes, should not be a dog’s main source of nutrition;"
+    },
+    {
+      "id": "KD150",
+      "quote": "Consult with your veterinarian before making any dietary changes."
+    },
+    {
+      "id": "KD150",
+      "quote": "start with a small amount to see how your dog reacts"
+    },
+    {
+      "id": "KD141",
+      "quote": "You can include sweet potatoes in your dog’s diet in small amounts (boiled or steamed)."
+    },
+    {
+      "id": "KD151",
+      "quote": "Sweet potatoes are great when they are soft and well cooked,"
+    }
+  ],
+  "related": [
+    "pumpkin",
+    "potatoes-raw",
+    "carrots"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9346f206170bb71f4cebe24af44d7d461230db4dcfebeffba0a22711296843ff"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6cb12402d83c53d5c8001ab76b9f53014b174b52e15012c9ba58d1b1267e350"
+    }
+  }
+}

@@ -2571,6 +2571,77 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "brussels-sprouts",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Brussels sprouts",
+        "sl": "Brstični ohrovt"
+      },
+      "question": {
+        "en": "Can cats eat Brussels sprouts?",
+        "sl": "Ali lahko mačke jedo brstični ohrovt?"
+      },
+      "url_slug": {
+        "en": "brussels-sprouts",
+        "sl": "brsticni-ohrovt"
+      },
+      "answer": {
+        "en": "Yes, a small piece of plain Brussels sprout, cooked until soft, is fine as an occasional treat. The RSPCA lists Brussels sprouts among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
+        "sl": "Da, majhen košček navadnega brstičnega ohrovta, kuhanega do mehkega, je v redu kot občasen priboljšek. RSPCA brstični ohrovt navaja med hrano, primerno za mačke v zmernih količinah. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The RSPCA lists Brussels sprouts, cooked until soft, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "RSPCA brstični ohrovt, kuhan do mehkega, navaja med božično hrano, ki je v zmernih količinah primerna za mačke in pse. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece, cooked until soft, with no butter, salt or seasoning.",
+        "sl": "Majhen košček, kuhan do mehkega, brez masla, soli in začimb."
+      },
+      "child": {
+        "en": "A soft cooked sprout piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Majhen košček mehkega kuhanega brstičnega ohrovta je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC76",
+        "KC76",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "cabbage",
+        "broccoli",
+        "cauliflower",
+        "carrots"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "butter",
       "species": "cat",
       "level": "not_recommended",
@@ -2805,6 +2876,77 @@
         "fatty-meat"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cabbage",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cabbage",
+        "sl": "Zelje"
+      },
+      "question": {
+        "en": "Can cats eat cabbage?",
+        "sl": "Ali lahko mačke jedo zelje?"
+      },
+      "url_slug": {
+        "en": "cabbage",
+        "sl": "zelje"
+      },
+      "answer": {
+        "en": "Yes, a small piece of plain cooked cabbage is fine as an occasional treat. The RSPCA lists cooked red or green cabbage among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
+        "sl": "Da, majhen košček navadnega kuhanega zelja je v redu kot občasen priboljšek. RSPCA kuhano rdeče ali zeleno zelje navaja med hrano, primerno za mačke v zmernih količinah. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The RSPCA lists cooked cabbage, red or green, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "RSPCA kuhano zelje, rdeče ali zeleno, navaja med božično hrano, ki je v zmernih količinah primerna za mačke in pse. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece of cooked red or green cabbage, with no butter, salt or seasoning.",
+        "sl": "Majhen košček kuhanega rdečega ali zelenega zelja, brez masla, soli in začimb."
+      },
+      "child": {
+        "en": "A little piece of cooked cabbage can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Majhen košček kuhanega zelja je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC76",
+        "KC76",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "brussels-sprouts",
+        "broccoli",
+        "cauliflower",
+        "carrots"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "cantaloupe",
@@ -3486,6 +3628,88 @@
         "green-beans"
       ],
       "updated": "2026-11-04"
+    },
+    {
+      "slug": "celery",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Celery",
+        "sl": "Zelena"
+      },
+      "question": {
+        "en": "Can cats eat celery?",
+        "sl": "Ali lahko mačke jedo zeleno?"
+      },
+      "url_slug": {
+        "en": "celery",
+        "sl": "zelena"
+      },
+      "answer": {
+        "en": "It's best not to offer celery. International Cat Care warns that contact with the leaves of food plants such as celery may cause blistering or itching of a cat's mouth and gums, and any plant can upset a cat's stomach. Cats don't need vegetables.",
+        "sl": "Zelene je bolje ne ponujati. International Cat Care opozarja, da lahko stik z listi užitnih rastlin, kot je zelena, mački povzroči mehurje ali srbenje v ustih in na dlesnih, vsaka rastlina pa ji lahko razdraži želodec. Mačke zelenjave ne potrebujejo."
+      },
+      "why": {
+        "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
+        "sl": "International Cat Care zeleno navaja med užitnimi rastlinami, katerih listi lahko mački povzročijo mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi, ter pravi, da lahko vse rastline, celo trava, razdražijo mačji želodec in črevesje ter povzročijo bruhanje. Članek ASPCA o vrtovih zeleno navaja med zmernimi prigrizki za hišne živali, vendar sledimo strožjemu nasvetu, ki velja posebej za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Itching or blisters in the mouth and on the gums",
+          "Sneezing",
+          "Eye problems"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Srbenje ali mehurji v ustih in na dlesnih",
+          "Kihanje",
+          "Težave z očmi"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat chewed celery and seems unwell, for example vomits or has an itchy mouth, call your vet for advice. Don't try to make your cat sick at home.",
+        "sl": "Če je mačka grizljala zeleno in se ne počuti dobro, na primer bruha ali jo srbijo usta, pokličite veterinarja za nasvet. Mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Celery is not a cat snack. Its leaves can make a cat's mouth itchy, so celery is better for people.",
+        "sl": "Zelena ni prigrizek za muce. Njeni listi lahko muci povzročijo srbenje v ustih, zato je zelena raje za ljudi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC82",
+        "KC82",
+        "KC82",
+        "KC82",
+        "KC83",
+        "KC22",
+        "KC22",
+        "KC49",
+        "KC5"
+      ],
+      "related": [
+        "cucumber",
+        "carrots",
+        "zucchini",
+        "rhubarb"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "cheese",
@@ -14142,6 +14366,174 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "potatoes-raw",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Raw potatoes",
+        "sl": "Surov krompir"
+      },
+      "question": {
+        "en": "Can cats eat raw potatoes?",
+        "sl": "Ali lahko mačke jedo surov krompir?"
+      },
+      "url_slug": {
+        "en": "raw-potatoes",
+        "sl": "surov-krompir"
+      },
+      "answer": {
+        "en": "No, don't give your cat raw potato. The RSPCA lists potato as suitable for cats only when mashed or boiled with no butter or cheese, and the ASPCA says raw potatoes may be problematic for pets. If your cat eats raw potato, contact your vet.",
+        "sl": "Ne, mački ne dajajte surovega krompirja. RSPCA krompir navaja kot primeren za mačke le, če je pretlačen ali kuhan v vodi ter brez masla in sira, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen. Če mačka poje surov krompir, se obrnite na veterinarja."
+      },
+      "why": {
+        "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
+        "sl": "RSPCA in Cats Protection krompir za mačke predlagata le kuhan v vodi ali kot navaden pire, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen, kuhan pa je v zmernih količinah v redu. Članek veterinarke za PetMD gre še dlje: surov krompir, zelen krompir in krompirjevo rastlino označuje kot strupene za mačke in navaja, da krompirjevi olupki vsebujejo strup solanin."
+      },
+      "signs": {
+        "en": [
+          "Nausea",
+          "Vomiting",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Slabost",
+          "Bruhanje",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat has eaten raw potato or potato skin, contact your vet for advice right away. Note what was eaten and when. Don't try to make your cat sick at home.",
+        "sl": "Če je mačka pojedla surov krompir ali krompirjeve olupke, takoj pokličite veterinarja za nasvet. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Raw potatoes are not for cats. If kitty nibbles one, tell a grown-up so they can call the vet.",
+        "sl": "Surov krompir ni za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can cats eat cooked potato?",
+            "sl": "Ali lahko mačke jedo kuhan krompir?"
+          },
+          "a": {
+            "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
+            "sl": "RSPCA krompir za mačke navaja le, če je pretlačen ali kuhan v vodi ter brez masla in sira, Cats Protection pa predlaga navaden krompirjev pire brez masla, smetane in česna. Olupke izpustite."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC84",
+        "KC84",
+        "KC84",
+        "KC84",
+        "KC83",
+        "KC76",
+        "KC76",
+        "KC26",
+        "KC8",
+        "KC22"
+      ],
+      "related": [
+        "sweet-potato",
+        "rhubarb",
+        "onion",
+        "garlic"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
+      "slug": "pumpkin",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pumpkin",
+        "sl": "Buča"
+      },
+      "question": {
+        "en": "Can cats eat pumpkin?",
+        "sl": "Ali lahko mačke jedo bučo?"
+      },
+      "url_slug": {
+        "en": "pumpkin",
+        "sl": "buca"
+      },
+      "answer": {
+        "en": "Yes, a little plain cooked pumpkin is fine as an occasional treat. Pet Poison Helpline calls pumpkin safe for dogs and cats, but VCA notes that pumpkin and its seeds can upset a cat's stomach in large amounts, so skip the seeds and rind.",
+        "sl": "Da, malo navadne kuhane buče je v redu kot občasen priboljšek. Pet Poison Helpline bučo označuje kot varno za pse in mačke, VCA pa opozarja, da lahko buča in njena semena v velikih količinah mački razdražijo želodec, zato semena in lupino izpustite."
+      },
+      "why": {
+        "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
+        "sl": "Pet Poison Helpline navaja, da je buča varna za pse in mačke ter da je kuhana ali predelana buča veliko lažje prebavljiva od surove. VCA dodaja, da lahko buča in bučna semena kljub nestrupenosti mački razdražijo želodec, zlasti v velikih količinah. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov pa naj bo malo."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
+        "sl": "Majhen košček navadne kuhane buče ali navaden bučni pire iz pločevinke, v katerem je buča edina sestavina. Brez semen, lupine, soli in začimb."
+      },
+      "child": {
+        "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
+        "sl": "Malo kuhane buče je lahko občasno priboljšek za muco. Brez semen in lupine. Muce pa potrebujejo predvsem meso."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about Halloween pumpkins?",
+            "sl": "Kaj pa buče za noč čarovnic?"
+          },
+          "a": {
+            "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
+            "sl": "Sveže buče niso škodljive, Blue Cross pa opozarja, da lahko gnile buče mački razdražijo trebušček, zato izrezljane buče hranite izven njenega dosega ali jih odstranite, ko niso več sveže."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC64",
+        "KC80",
+        "KC81",
+        "KC81",
+        "KC81",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC49"
+      ],
+      "related": [
+        "zucchini",
+        "sweet-potato",
+        "carrots",
+        "cucumber"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "raisins",
       "species": "cat",
       "level": "toxic",
@@ -16919,6 +17311,78 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "spinach",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Spinach",
+        "sl": "Špinača"
+      },
+      "question": {
+        "en": "Can cats eat spinach?",
+        "sl": "Ali lahko mačke jedo špinačo?"
+      },
+      "url_slug": {
+        "en": "spinach",
+        "sl": "spinaca"
+      },
+      "answer": {
+        "en": "Yes, a small bit of plain spinach is fine as an occasional treat. Cats Protection lists spinach among the few vegetables you can feed your cat, if they're keen. Cats don't need vegetables, so keep it a tiny extra.",
+        "sl": "Da, malo navadne špinače je v redu kot občasen priboljšek. Cats Protection špinačo navaja med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "Cats Protection špinačo uvršča med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
+        "sl": "Malo špinače, kuhane na pari ali v vodi, brez masla, soli in začimb."
+      },
+      "child": {
+        "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Malo špinače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC5",
+        "KC5",
+        "KC26",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "broccoli",
+        "peas",
+        "carrots",
+        "green-beans"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "strawberries",
       "species": "cat",
       "level": "small_amounts",
@@ -17133,6 +17597,90 @@
         "watermelon"
       ],
       "updated": "2026-11-01"
+    },
+    {
+      "slug": "sweet-potato",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sweet potato",
+        "sl": "Sladki krompir"
+      },
+      "question": {
+        "en": "Can cats eat sweet potato?",
+        "sl": "Ali lahko mačke jedo sladki krompir?"
+      },
+      "url_slug": {
+        "en": "sweet-potato",
+        "sl": "sladki-krompir"
+      },
+      "answer": {
+        "en": "Sweet potato is not toxic to cats: the ASPCA lists the sweet potato plant as non-toxic to them. Cats don't need vegetables, though, and any plant material can cause vomiting or stomach upset, so keep it a tiny, occasional extra.",
+        "sl": "Sladki krompir za mačke ni strupen: ASPCA rastlino sladkega krompirja navaja kot nestrupeno za mačke. Vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave, zato naj bo le majhen, občasen dodatek."
+      },
+      "why": {
+        "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "ASPCA rastlino sladkega krompirja (Ipomoea batatas) navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small plain piece now and then, with no butter, salt or seasoning.",
+        "sl": "Občasno majhen navaden košček, brez masla, soli in začimb."
+      },
+      "child": {
+        "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Sladki krompir za muce ni strupen. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is sweet potato the same as a normal potato?",
+            "sl": "Ali je sladki krompir enak navadnemu krompirju?"
+          },
+          "a": {
+            "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
+            "sl": "Ne. ASPCA sladki krompir navaja kot drugo rastlino (Ipomoea batatas, družina slakovk). Surov navaden krompir je nekaj drugega: ASPCA navaja, da je za hišne živali lahko problematičen."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC79",
+        "KC79",
+        "KC79",
+        "KC79",
+        "KC83",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "potatoes-raw",
+        "pumpkin",
+        "carrots",
+        "peas"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "tea",
@@ -18697,6 +19245,80 @@
         "butter"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "zucchini",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Zucchini",
+        "sl": "Bučke"
+      },
+      "question": {
+        "en": "Can cats eat zucchini?",
+        "sl": "Ali lahko mačke jedo bučke?"
+      },
+      "url_slug": {
+        "en": "zucchini",
+        "sl": "bucke"
+      },
+      "answer": {
+        "en": "Yes, a small plain piece of zucchini is fine as an occasional treat. The ASPCA lists zucchini squash as non-toxic to cats. Keep the plant's leaves away, though: International Cat Care says contact with them can irritate a cat's mouth.",
+        "sl": "Da, majhen navaden košček bučke je v redu kot občasen priboljšek. ASPCA bučke navaja kot nestrupene za mačke. Listov rastline pa mački ne dajajte: International Cat Care opozarja, da lahko stik z njimi razdraži mačja usta."
+      },
+      "why": {
+        "en": "The ASPCA lists zucchini squash as non-toxic to cats. International Cat Care warns that contact with the leaves of food plants, including zucchini, can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+        "sl": "ASPCA bučke navaja kot nestrupene za mačke. International Cat Care opozarja, da lahko stik z listi užitnih rastlin, tudi bučk, mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+        "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A small plain piece of the zucchini itself, with no butter, salt or seasoning. Keep the plant's leaves away from your cat.",
+        "sl": "Majhen navaden košček same bučke, brez masla, soli in začimb. Listov rastline mački ne dajajte."
+      },
+      "child": {
+        "en": "A little piece of zucchini can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+        "sl": "Majhen košček bučke je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need vegetables?",
+            "sl": "Ali mačke potrebujejo zelenjavo?"
+          },
+          "a": {
+            "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+            "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC78",
+        "KC78",
+        "KC83",
+        "KC82",
+        "KC82",
+        "KC26",
+        "KC49",
+        "KC5",
+        "KC49",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "cucumber",
+        "pumpkin",
+        "carrots",
+        "peas"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "alcohol",
@@ -21989,6 +22611,80 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "brussels-sprouts",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Brussels sprouts",
+        "sl": "Brstični ohrovt"
+      },
+      "question": {
+        "en": "Can dogs eat Brussels sprouts?",
+        "sl": "Ali lahko psi jedo brstični ohrovt?"
+      },
+      "url_slug": {
+        "en": "brussels-sprouts",
+        "sl": "brsticni-ohrovt"
+      },
+      "answer": {
+        "en": "Yes, with a few precautions. Plain cooked Brussels sprouts are fine for dogs in small amounts, but too many can cause lots of gas, stomach upset and diarrhoea. Don't serve them raw: they are too hard for dogs to digest.",
+        "sl": "Da, z nekaj previdnosti. Navaden kuhan brstični ohrovt je za pse v majhnih količinah v redu, preveč pa lahko povzroči močne vetrove, želodčne težave in drisko. Ne ponudite ga surovega: psi ga težko prebavijo."
+      },
+      "why": {
+        "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
+        "sl": "Brstični ohrovt je poln hranil in antioksidantov ter ne vsebuje strupov. Vsebuje pa veliko snovi, imenovane izotiocianat, in preveč ga lahko povzroči močne vetrove, želodčne težave in drisko, zato ga psu ne dajajte preveč."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Give only a little and don't overfeed. If your dog has dietary issues or allergies, talk to your vet first before offering Brussels sprouts.",
+        "sl": "Ponudite le malo in ne pretiravajte. Če ima pes težave s prehrano ali alergije, se pred tem posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
+        "sl": "Opran, z odrezanim večjim delom peclja in ohranjenimi listi, kuhan (kuhanje na pari ohrani največ hranil). Navaden, brez zelišč in začimb, v majhnih količinah."
+      },
+      "child": {
+        "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
+        "sl": "Psi lahko za priboljšek dobijo malo kuhanega brstičnega ohrovta. Če ga pojedo preveč, imajo poln trebušček vetrov!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat raw Brussels sprouts?",
+            "sl": "Ali lahko psi jedo surov brstični ohrovt?"
+          },
+          "a": {
+            "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
+            "sl": "Raje ne: surov ohrovt psi težko prebavijo. Najprej ga skuhajte; kuhanje na pari ohrani največ hranil."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD142",
+        "KD89",
+        "KD89"
+      ],
+      "related": [
+        "broccoli",
+        "cauliflower",
+        "cabbage",
+        "kale"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "butter",
       "species": "dog",
       "level": "not_recommended",
@@ -22276,6 +22972,83 @@
         "bacon"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cabbage",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cabbage",
+        "sl": "Zelje"
+      },
+      "question": {
+        "en": "Can dogs eat cabbage?",
+        "sl": "Ali lahko psi jedo zelje?"
+      },
+      "url_slug": {
+        "en": "cabbage",
+        "sl": "zelje"
+      },
+      "answer": {
+        "en": "Yes, in small amounts. All kinds of cabbage are fine for dogs, but cabbage makes a lot of gas, so introduce it slowly. Boiled or steamed cabbage is less likely to upset the stomach than raw cabbage.",
+        "sl": "Da, v majhnih količinah. Vse vrste zelja so za pse v redu, vendar zelje povzroča veliko vetrov, zato ga uvajajte postopoma. Kuhano ali na pari pripravljeno zelje manj verjetno razdraži prebavo kot surovo."
+      },
+      "why": {
+        "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
+        "sl": "Zelje je za pse zdravo, vendar povzroča veliko vetrov, česar mnogi psi ne prenašajo dobro. Večja težava so dodatki: maslo in druga mastna hrana lahko povzročita vnetje trebušne slinavke, čebula in česen pa sta za pse strupena."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Watch your dog closely after the first taste of cabbage. If your dog tends to have a lot of gas or is prone to bloat, ask your vet before giving cabbage.",
+        "sl": "Po prvem okušanju zelja psa pozorno opazujte. Če ima pes pogosto veliko vetrov ali je nagnjen k napihnjenosti, se pred tem posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
+        "sl": "Oprano, brez stebla in kocena, kuhano ali pripravljeno na pari in narezano na majhne koščke. Brez dodatkov: brez masla, čebule in česna. Le v majhnih količinah."
+      },
+      "child": {
+        "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
+        "sl": "Psi lahko poskusijo malo navadnega kuhanega zelja. Lahko jim povzroči vetrove, zato le majhen košček!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat raw cabbage?",
+            "sl": "Ali lahko psi jedo surovo zelje?"
+          },
+          "a": {
+            "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
+            "sl": "Lahko, vendar kuhano ali na pari pripravljeno zelje manj verjetno razdraži pasjo prebavo. V vsakem primeru ga narežite na majhne koščke."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD143",
+        "KD141",
+        "KD141"
+      ],
+      "related": [
+        "brussels-sprouts",
+        "kale",
+        "broccoli",
+        "onion",
+        "garlic"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "cantaloupe",
@@ -23152,6 +23925,78 @@
         "green-beans"
       ],
       "updated": "2026-11-04"
+    },
+    {
+      "slug": "celery",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Celery",
+        "sl": "Zelena"
+      },
+      "question": {
+        "en": "Can dogs eat celery?",
+        "sl": "Ali lahko psi jedo zeleno?"
+      },
+      "url_slug": {
+        "en": "celery",
+        "sl": "zelena"
+      },
+      "answer": {
+        "en": "Yes, celery is generally safe for dogs as an occasional treat. Wash it and always cut it into bite-size pieces, because celery can be a choking hazard, especially for small dogs.",
+        "sl": "Da, stebelna zelena je za pse kot občasen priboljšek praviloma varna. Operite jo in vedno narežite na koščke za en grižljaj, saj se lahko pes z njo zaduši, zlasti majhen pes."
+      },
+      "why": {
+        "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
+        "sl": "Zelena je varna za večino psov, znano pa je tudi, da osveži pasji dah. Glavna nevarnost je dušenje z večjimi kosi, zlasti pri majhnih psih. Je priboljšek, ne osnovna hrana, in nikoli ne sme nadomestiti popolnega in uravnoteženega obroka."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Introduce celery slowly and watch your dog for digestive upset or other changes after the first taste.",
+        "sl": "Zeleno uvajajte postopoma in po prvem okušanju opazujte, ali ima pes prebavne težave ali druge spremembe."
+      },
+      "serving": {
+        "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
+        "sl": "Oprana, lahko surova, vedno narezana na koščke za en grižljaj. Majhen priboljšek, ne obrok."
+      },
+      "child": {
+        "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
+        "sl": "Psi lahko pohrustajo malo zelene! Odrasli jo najprej opere in nareže na drobne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can puppies eat celery?",
+            "sl": "Ali lahko mladički jedo zeleno?"
+          },
+          "a": {
+            "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
+            "sl": "Mladički lahko jedo majhne količine zelene, če je narezana na primerno velike koščke."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD147",
+        "KD89"
+      ],
+      "related": [
+        "carrots",
+        "cucumber",
+        "green-beans"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "cheese",
@@ -31839,6 +32684,100 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "kale",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Kale",
+        "sl": "Listnati ohrovt"
+      },
+      "question": {
+        "en": "Can dogs eat kale?",
+        "sl": "Ali lahko psi jedo listnati ohrovt?"
+      },
+      "url_slug": {
+        "en": "kale",
+        "sl": "listnati-ohrovt"
+      },
+      "answer": {
+        "en": "Better not as a regular treat. A little kale now and then is unlikely to harm most dogs, but some vets caution against it: kale contains calcium oxalate, linked to kidney and bladder stones, and isothiocyanates, which can irritate the stomach.",
+        "sl": "Raje ne kot reden priboljšek. Malo listnatega ohrovta občasno večini psov verjetno ne škodi, nekateri veterinarji pa odsvetujejo: vsebuje kalcijev oksalat, povezan z ledvičnimi in mehurnimi kamni, ter izotiocianate, ki lahko dražijo želodec."
+      },
+      "why": {
+        "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
+        "sl": "Listnati ohrovt vsebuje kalcijev oksalat, ki lahko povzroči ledvične in mehurne kamne, ter izotiocianate, ki lahko pri psih povzročijo blago do potencialno hudo draženje želodca. Če ga pes dobiva redno, lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom. Majhne količine so morda v redu, ker pa ga nekateri veterinarji odsvetujejo, sledimo strožjemu nasvetu."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Difficulty urinating",
+          "Any change in urination habits"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Težave z uriniranjem",
+          "Kakršna koli sprememba pri uriniranju"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate kale, watch closely for tummy upset or signs of kidney and bladder stones. Contact your vet if you notice vomiting, diarrhoea, difficulty urinating or any change in urination habits.",
+        "sl": "Če je pes pojedel listnati ohrovt, ga pozorno opazujte, ali ima prebavne težave ali znake ledvičnih in mehurnih kamnov. Če opazite bruhanje, drisko, težave z uriniranjem ali kakršno koli spremembo pri uriniranju, se obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Kale is not a good snack for dogs. Green beans or cucumber are better treats to share, with a grown-up's help.",
+        "sl": "Listnati ohrovt ni dober prigrizek za pse. Stročji fižol ali kumara sta boljša priboljška, ki ju ponudite s pomočjo odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which dogs should avoid kale?",
+            "sl": "Kateri psi naj se izogibajo listnatemu ohrovtu?"
+          },
+          "a": {
+            "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
+            "sl": "Psi, nagnjeni k ledvičnim ali mehurnim kamnom, naj se izogibajo hrani z veliko kalcijevega oksalata, tudi listnatemu ohrovtu. Ta lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom."
+          }
+        },
+        {
+          "q": {
+            "en": "What can I give my dog instead of kale?",
+            "sl": "Kaj lahko psu ponudim namesto listnatega ohrovta?"
+          },
+          "a": {
+            "en": "Green beans and cucumbers are safe for most dogs.",
+            "sl": "Stročji fižol in kumare so za večino psov varni."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144",
+        "KD144"
+      ],
+      "related": [
+        "spinach",
+        "broccoli",
+        "cabbage",
+        "green-beans",
+        "cucumber"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "kiwi",
       "species": "dog",
       "level": "small_amounts",
@@ -32894,6 +33833,79 @@
         "oranges"
       ],
       "updated": "2026-11-02"
+    },
+    {
+      "slug": "lettuce",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lettuce",
+        "sl": "Zelena solata"
+      },
+      "question": {
+        "en": "Can dogs eat lettuce?",
+        "sl": "Ali lahko psi jedo zeleno solato?"
+      },
+      "url_slug": {
+        "en": "lettuce",
+        "sl": "zelena-solata"
+      },
+      "answer": {
+        "en": "Yes, plain lettuce is generally safe for dogs in moderation. Romaine, iceberg and arugula are non-toxic. Wash it well and chop it up, and don't share your leftover salad, which often contains onions.",
+        "sl": "Da, navadna zelena solata je za pse v zmernih količinah praviloma varna. Rimska solata, ledenka in rukola niso strupene. Dobro jo operite in narežite, ne delite pa s psom ostankov svoje solate, ki pogosto vsebuje čebulo."
+      },
+      "why": {
+        "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
+        "sl": "Zelena solata je za pse praviloma varna, vendar ima veliko vlaknin in jo v velikih kosih težko prebavijo, preveč pa lahko povzroči drisko. Solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Zaradi odpoklicev solate, okužene z E. coli ali listerijo, jo dobro operite in skrbno izbirajte."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Keep it to a plain piece now and then: too much can cause diarrhoea. Don't share leftover salad, as salads often include onions, which are toxic to dogs.",
+        "sl": "Ponudite le občasen košček navadne solate: preveč lahko povzroči drisko. Ne delite ostankov solate, saj ta pogosto vsebuje čebulo, ki je za pse strupena."
+      },
+      "serving": {
+        "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
+        "sl": "Občasen košček navadne, temeljito oprane solate, narezan in ne cel list. Nikoli iz mešane solate."
+      },
+      "child": {
+        "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
+        "sl": "Psi lahko pohrustajo malo navadne zelene solate. Odrasli jo opere in nareže na majhne koščke. Ostanki solate pa ne!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat salad?",
+            "sl": "Ali lahko psi jedo solato z dodatki?"
+          },
+          "a": {
+            "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
+            "sl": "Ostankov vaše solate ne: solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Občasen košček navadne zelene solate je v redu."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146",
+        "KD146"
+      ],
+      "related": [
+        "cucumber",
+        "spinach",
+        "cabbage",
+        "onion"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "limes",
@@ -38899,6 +39911,188 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "potatoes-raw",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Raw potatoes",
+        "sl": "Surov krompir"
+      },
+      "question": {
+        "en": "Can dogs eat raw potatoes?",
+        "sl": "Ali lahko psi jedo surov krompir?"
+      },
+      "url_slug": {
+        "en": "raw-potatoes",
+        "sl": "surov-krompir"
+      },
+      "answer": {
+        "en": "No, don't give your dog raw potatoes. Raw and green potatoes are unsafe and potentially toxic because they contain solanine, a natural toxin. Plain, well-cooked potato is different and is fine in moderation.",
+        "sl": "Ne, psu ne dajajte surovega krompirja. Surov in zelen krompir je nevaren in potencialno strupen, ker vsebuje solanin, naravni strup. Navaden, dobro kuhan krompir je nekaj drugega in je v zmernih količinah v redu."
+      },
+      "why": {
+        "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
+        "sl": "Surov krompir ter krompir z zeleno lupino ali zelenimi lisami vsebuje solanin, naravni strup, ki ga najdemo v rastlinah iz družine razhudnikovk. Zelene lise se pri nekaterih sortah pojavijo na svetlobi in kažejo, da se je količina solanina povečala. Koščki surovega ali napol kuhanega krompirja lahko povzročijo tudi dušenje."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Lethargy",
+          "Muscle weakness"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Zaspanost in brezvoljnost",
+          "Mišična šibkost"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate raw or green potato, contact your vet or a pet poison helpline. What to do next depends on your dog's size, how much was eaten and whether there are symptoms. If your dog is vomiting, has diarrhoea, seems lethargic or weak, see a vet immediately.",
+        "sl": "Če je pes pojedel surov ali zelen krompir, se obrnite na veterinarja ali na center za zastrupitve živali. Nadaljnji koraki so odvisni od velikosti psa, pojedene količine in znakov. Če pes bruha, ima drisko, je zaspan ali šibek, takoj poiščite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Raw potatoes are not for dogs. If a dog grabs one, tell a grown-up straight away.",
+        "sl": "Surov krompir ni za pse. Če ga pes zgrabi, takoj povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are cooked potatoes okay for dogs?",
+            "sl": "Je kuhan krompir za pse v redu?"
+          },
+          "a": {
+            "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
+            "sl": "Da, navaden kuhan krompir je v zmernih količinah v redu, kuhan toliko, da se ga da pretlačiti, da se pes ne zaduši. Prepričajte se, da ni zelen."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat potato skins?",
+            "sl": "Ali lahko psi jedo krompirjeve olupke?"
+          },
+          "a": {
+            "en": "Potato skins are okay, but not if they are green.",
+            "sl": "Krompirjevi olupki so v redu, vendar ne, če so zeleni."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD151",
+        "KD141",
+        "KD141"
+      ],
+      "related": [
+        "sweet-potato",
+        "pumpkin"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
+      "slug": "pumpkin",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pumpkin",
+        "sl": "Buča"
+      },
+      "question": {
+        "en": "Can dogs eat pumpkin?",
+        "sl": "Ali lahko psi jedo bučo?"
+      },
+      "url_slug": {
+        "en": "pumpkin",
+        "sl": "buca"
+      },
+      "answer": {
+        "en": "Yes, plain cooked pumpkin is a healthy food for dogs. Choose fresh cooked pumpkin or plain canned pumpkin puree, never pumpkin pie filling, and don't share uncooked rinds.",
+        "sl": "Da, navadna kuhana buča je za pse zdrava hrana. Izberite svežo kuhano bučo ali navaden bučni pire iz pločevinke, nikoli nadeva za bučno pito, in psu ne dajajte surove lupine."
+      },
+      "why": {
+        "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
+        "sl": "Čista buča je polna antioksidantov in psom lahko pomaga tako pri driski kot pri zaprtju. Nadev za bučno pito lahko vsebuje strupeni ksilitol ter druge začimbe in dodatke, ki bi lahko škodili. Surove lupine so trde in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "As with any new food, ask your vet before adding pumpkin to your dog's routine.",
+        "sl": "Kot pri vsaki novi hrani se tudi pred uvedbo buče v pasji jedilnik posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
+        "sl": "Sveža, kuhana, navadna in olupljena ali navaden bučni pire iz pločevinke, brez dodanega sladkorja, začimb in umetnih arom. Brez nadeva za pito in brez surove lupine."
+      },
+      "child": {
+        "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
+        "sl": "Psi se lahko posladkajo z malo navadne kuhane buče. Odrasli poskrbi, da to ni sladek nadev za pito!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat pumpkin pie filling?",
+            "sl": "Ali lahko psi jedo nadev za bučno pito?"
+          },
+          "a": {
+            "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
+            "sl": "Ne. Nadev za bučno pito lahko vsebuje ksilitol, sladilo, ki je za pse strupeno, ter druge začimbe in dodatke, ki bi lahko škodili."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat raw pumpkin rind?",
+            "sl": "Ali lahko psi jedo surovo bučno lupino?"
+          },
+          "a": {
+            "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
+            "sl": "Ne. Surove lupine so trde, goste in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD89",
+        "KD89",
+        "KD89",
+        "KD89",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149",
+        "KD149"
+      ],
+      "related": [
+        "sweet-potato",
+        "zucchini",
+        "carrots",
+        "xylitol"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "raisins",
       "species": "dog",
       "level": "toxic",
@@ -42848,6 +44042,90 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "spinach",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Spinach",
+        "sl": "Špinača"
+      },
+      "question": {
+        "en": "Can dogs eat spinach?",
+        "sl": "Ali lahko psi jedo špinačo?"
+      },
+      "url_slug": {
+        "en": "spinach",
+        "sl": "spinaca"
+      },
+      "answer": {
+        "en": "Dogs can eat spinach, but it isn't one of the best vegetables to share with them. It is high in oxalic acid, which blocks calcium absorption and can lead to kidney damage. A dog would have to eat a lot to be harmed, but another vegetable is a better choice.",
+        "sl": "Psi lahko jedo špinačo, vendar ni med najboljšo zelenjavo, ki bi jo delili z njimi. Vsebuje veliko oksalne kisline, ki zavira vsrkavanje kalcija in lahko škodi ledvicam. Pes bi jo moral pojesti veliko, da bi mu škodila, a druga zelenjava je boljša izbira."
+      },
+      "why": {
+        "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
+        "sl": "Špinača vsebuje veliko oksalne kisline, ki telesu zavira vsrkavanje kalcija in lahko škodi ledvicam. Psi z zdravimi ledvicami majhne količine predelajo, pes pa bi je moral pojesti zelo veliko, da bi mu škodila, vendar lahko dolgotrajno uživanje obremeni ledvice. Ker viri svetujejo drugo zelenjavo, je ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Muscle weakness (after eating spinach over a long time)",
+          "Abnormal heart rhythm (after eating spinach over a long time)"
+        ],
+        "sl": [
+          "Mišična šibkost (po dolgotrajnem uživanju špinače)",
+          "Nenormalen srčni ritem (po dolgotrajnem uživanju špinače)"
+        ]
+      },
+      "what_to_do": {
+        "en": "Always ask your vet before adding spinach to your dog's diet, even as a snack. If your dog is prone to kidney or bladder stones, avoid spinach.",
+        "sl": "Preden psu v prehrano dodate špinačo, tudi kot prigrizek, se vedno posvetujte z veterinarjem. Če je pes nagnjen k ledvičnim ali mehurnim kamnom, se špinači izogibajte."
+      },
+      "serving": {
+        "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
+        "sl": "Le če veterinar soglaša in ima pes zdrave ledvice: majhne količine, poredko, pripravljeno na pari, brez začimb, zelišč, soli, olja, čebule in česna."
+      },
+      "child": {
+        "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
+        "sl": "Špinača ni dober prigrizek za pse. Prosi odraslega, naj za psa izbere drugo zelenjavo."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is raw or cooked spinach better for dogs?",
+            "sl": "Je za pse boljša surova ali kuhana špinača?"
+          },
+          "a": {
+            "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
+            "sl": "Če jo že ponudite, jo pripravite na pari: surovo špinačo psi težko prebavijo, kuhana v vodi pa izgubi večino hranil."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD89",
+        "KD89",
+        "KD89",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145",
+        "KD145"
+      ],
+      "related": [
+        "kale",
+        "lettuce",
+        "green-beans",
+        "carrots"
+      ],
+      "updated": "2026-11-08"
+    },
+    {
       "slug": "star-fruit",
       "species": "dog",
       "level": "toxic",
@@ -43425,6 +44703,92 @@
         "xylitol"
       ],
       "updated": "2026-11-01"
+    },
+    {
+      "slug": "sweet-potato",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sweet potato",
+        "sl": "Sladki krompir"
+      },
+      "question": {
+        "en": "Can dogs eat sweet potato?",
+        "sl": "Ali lahko psi jedo sladki krompir?"
+      },
+      "url_slug": {
+        "en": "sweet-potato",
+        "sl": "sladki-krompir"
+      },
+      "answer": {
+        "en": "Yes, in small amounts, cooked and peeled. Soft boiled or steamed sweet potato is fine as a treat, but never give raw sweet potato: it is hard to chew, can upset the stomach and may cause an intestinal blockage.",
+        "sl": "Da, v majhnih količinah, kuhan in olupljen. Mehak sladki krompir, kuhan v vodi ali na pari, je v redu kot priboljšek, nikoli pa ne ponudite surovega: težko se žveči, lahko razdraži želodec in povzroči zamašitev črevesja."
+      },
+      "why": {
+        "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
+        "sl": "Sladki krompir ni strupen, vendar se surov težko žveči in lahko povzroči zamašitev črevesja, lupina pa otežuje prebavo. Preveč ga lahko zaradi prevelike količine vitamina A povzroči šibkost kosti in mišic, zaradi visokega glikemičnega indeksa pa je pri psih s sladkorno boleznijo potrebna previdnost. Nedavne raziskave nakazujejo, da morda ni primeren za pasjo prehrano, in nikoli ne sme biti glavni vir hrane."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Ask your vet before changing your dog's diet, then start with a small amount to see how your dog reacts.",
+        "sl": "Pred spremembo pasje prehrane se posvetujte z veterinarjem, nato začnite z majhno količino in opazujte, kako se pes odzove."
+      },
+      "serving": {
+        "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
+        "sl": "Kuhan v vodi ali na pari, dokler ni mehak, olupljen, v majhnih količinah. Nikoli surov in nikoli kot glavni del prehrane."
+      },
+      "child": {
+        "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
+        "sl": "Psi lahko dobijo malo mehkega kuhanega sladkega krompirja. Odrasli ga najprej olupi in skuha."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat sweet potato skin?",
+            "sl": "Ali lahko psi jedo lupino sladkega krompirja?"
+          },
+          "a": {
+            "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
+            "sl": "Najbolje jo je odstraniti: z lupino pes sladki krompir težje prebavi."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat raw sweet potato?",
+            "sl": "Ali lahko psi jedo surov sladki krompir?"
+          },
+          "a": {
+            "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
+            "sl": "Ne. Surov sladki krompir se težko žveči, lahko razdraži pasji želodec in povzroči zamašitev črevesja. Skuhajte ga, da se zmehča."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD150",
+        "KD141",
+        "KD151"
+      ],
+      "related": [
+        "pumpkin",
+        "potatoes-raw",
+        "carrots"
+      ],
+      "updated": "2026-11-08"
     },
     {
       "slug": "tea",
@@ -45419,6 +46783,80 @@
         "xylitol"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "zucchini",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Zucchini",
+        "sl": "Bučke"
+      },
+      "question": {
+        "en": "Can dogs eat zucchini?",
+        "sl": "Ali lahko psi jedo bučke?"
+      },
+      "url_slug": {
+        "en": "zucchini",
+        "sl": "bucke"
+      },
+      "answer": {
+        "en": "Yes, zucchini is perfectly safe for dogs. Plain raw, steamed or cooked zucchini is fine in moderation. Chop it into small pieces, as large pieces can be a choking hazard, and skip oil, salt and seasonings.",
+        "sl": "Da, bučke so za pse povsem varne. Navadne surove, na pari ali kuhane bučke so v zmernih količinah v redu. Narežite jih na majhne koščke, saj se lahko pes z večjimi kosi zaduši, in ne dodajajte olja, soli ali začimb."
+      },
+      "why": {
+        "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
+        "sl": "Noben del rastline bučke ni strupen. Nevarnosti izvirajo iz načina priprave: večji kosi lahko povzročijo dušenje, velika količina lahko razdraži prebavo, olja, sol, začimbe, česen in čebula pa psom škodijo."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Keep zucchini to small amounts: feeding a dog a large amount of anything can lead to digestive upset. Never give a whole zucchini.",
+        "sl": "Bučke ponudite le v majhnih količinah: velika količina katere koli hrane lahko psu razdraži prebavo. Nikoli mu ne dajte cele bučke."
+      },
+      "serving": {
+        "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
+        "sl": "Navadne, surove, na pari ali kuhane, narezane na majhne koščke; psom, ki težko žvečijo, jih pripravite na pari. Brez olja, soli, začimb, česna in čebule."
+      },
+      "child": {
+        "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
+        "sl": "Psi lahko pogrizljajo malo navadnih bučk. Odrasli jih najprej nareže na majhne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat zucchini bread?",
+            "sl": "Ali lahko psi jedo kruh ali pecivo z bučkami?"
+          },
+          "a": {
+            "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
+            "sl": "Ne. Kruh in drugo pecivo z bučkami ni primerno. Posebej pazite na ksilitol, sladilo, ki je za pse strupeno."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148",
+        "KD148"
+      ],
+      "related": [
+        "cucumber",
+        "pumpkin",
+        "carrots",
+        "xylitol"
+      ],
+      "updated": "2026-11-08"
     }
   ],
   "sources": [
@@ -45984,11 +47422,67 @@
     },
     {
       "species": "cat",
+      "id": "KC78",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Zucchini Squash",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/zucchini-squash"
+    },
+    {
+      "species": "cat",
+      "id": "KC79",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Sweet Potato Vine",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/sweet-potato-vine"
+    },
+    {
+      "species": "cat",
       "id": "KC8",
       "tier": "B",
       "publisher": "International Cat Care",
       "title": "Cats and poisons",
       "url": "https://icatcare.org/articles/cats-and-poisons"
+    },
+    {
+      "species": "cat",
+      "id": "KC80",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no author or date shown)",
+      "title": "Halloween safety tips for cats",
+      "url": "https://vcahospitals.com/resources/lifestyle-cat/hazards-safety/halloween-safety-tips-for-cats"
+    },
+    {
+      "species": "cat",
+      "id": "KC81",
+      "tier": "B",
+      "publisher": "Blue Cross (no date shown)",
+      "title": "How to keep your cat safe during Halloween",
+      "url": "https://www.bluecross.org.uk/advice/cat/wellbeing-and-care/how-to-keep-your-cat-safe-during-halloween"
+    },
+    {
+      "species": "cat",
+      "id": "KC82",
+      "tier": "B",
+      "publisher": "International Cat Care (no date shown)",
+      "title": "Poisonous Plants",
+      "url": "https://icatcare.org/articles/poisonous-plants"
+    },
+    {
+      "species": "cat",
+      "id": "KC83",
+      "tier": "B",
+      "publisher": "ASPCA (no date or author shown)",
+      "title": "Pets and Produce: Top Tips on Vegetable Garden Safety",
+      "url": "https://www.aspca.org/news/pets-and-produce-top-tips-vegetable-garden-safety"
+    },
+    {
+      "species": "cat",
+      "id": "KC84",
+      "tier": "C",
+      "publisher": "PetMD (Sandra C. Mitchell, DVM, DABVP; 2024-05-06)",
+      "title": "Can Cats Eat Potatoes?",
+      "url": "https://petmd.com/cat/nutrition/can-cats-eat-potatoes"
     },
     {
       "species": "cat",
@@ -46376,11 +47870,99 @@
     },
     {
       "species": "dog",
+      "id": "KD141",
+      "tier": "B",
+      "publisher": "Blue Cross (reviewed 2024-02-27)",
+      "title": "What fruit and vegetables can dogs eat?",
+      "url": "https://www.bluecross.org.uk/pet-advice/can-dogs-eat-apples"
+    },
+    {
+      "species": "dog",
+      "id": "KD142",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2025-05-13)",
+      "title": "Can Dogs Eat Brussels Sprouts?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-brussels-sprouts"
+    },
+    {
+      "species": "dog",
+      "id": "KD143",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-08-20)",
+      "title": "Can Dogs Eat Cabbage?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cabbage/"
+    },
+    {
+      "species": "dog",
+      "id": "KD144",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-04-23)",
+      "title": "Can Dogs Eat Kale?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-kale/"
+    },
+    {
+      "species": "dog",
+      "id": "KD145",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2026-03-18)",
+      "title": "Can Dogs Eat Spinach?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-spinach/"
+    },
+    {
+      "species": "dog",
+      "id": "KD146",
+      "tier": "B",
+      "publisher": "American Kennel Club, Kristina Lotz (updated 2025-09-24)",
+      "title": "Can Dogs Eat Lettuce?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-lettuce"
+    },
+    {
+      "species": "dog",
+      "id": "KD147",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-13)",
+      "title": "Can Dogs Eat Celery? Benefits, Risks, and Serving Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-celery"
+    },
+    {
+      "species": "dog",
+      "id": "KD148",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2025-04-16)",
+      "title": "Can Dogs Eat Zucchini?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-zucchini/"
+    },
+    {
+      "species": "dog",
+      "id": "KD149",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Michele Moncrief & Samantha Koch CVT (published 2023-10-19; modified 2026-05-27)",
+      "title": "Pumpkins: A Safe and Nutritious Treat for Your Furry Friend",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/pumpkins-a-safe-and-nutritious-treat-for-your-furry-friend/"
+    },
+    {
+      "species": "dog",
       "id": "KD15",
       "tier": "A",
       "publisher": "Merck Veterinary Manual",
       "title": "Macadamia Nut Toxicosis in Dogs",
       "url": "https://www.merckvetmanual.com/toxicology/food-hazards/macadamia-nut-toxicosis-in-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD150",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2026-05-12)",
+      "title": "Can Dogs Eat Sweet Potatoes?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-sweet-potatoes/"
+    },
+    {
+      "species": "dog",
+      "id": "KD151",
+      "tier": "B",
+      "publisher": "American Kennel Club, Katherine Ripley (updated 2026-06-01)",
+      "title": "Can Dogs Eat Potatoes?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-potatoes"
     },
     {
       "species": "dog",

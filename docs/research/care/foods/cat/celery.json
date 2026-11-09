@@ -1,0 +1,117 @@
+{
+  "slug": "celery",
+  "species": "cat",
+  "name": {
+    "en": "Celery",
+    "sl": "Zelena"
+  },
+  "question": {
+    "en": "Can cats eat celery?",
+    "sl": "Ali lahko mačke jedo zeleno?"
+  },
+  "url_slug": {
+    "en": "celery",
+    "sl": "zelena"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to offer celery. International Cat Care warns that contact with the leaves of food plants such as celery may cause blistering or itching of a cat's mouth and gums, and any plant can upset a cat's stomach. Cats don't need vegetables.",
+    "sl": "Zelene je bolje ne ponujati. International Cat Care opozarja, da lahko stik z listi užitnih rastlin, kot je zelena, mački povzroči mehurje ali srbenje v ustih in na dlesnih, vsaka rastlina pa ji lahko razdraži želodec. Mačke zelenjave ne potrebujejo."
+  },
+  "why": {
+    "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
+    "sl": "International Cat Care zeleno navaja med užitnimi rastlinami, katerih listi lahko mački povzročijo mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi, ter pravi, da lahko vse rastline, celo trava, razdražijo mačji želodec in črevesje ter povzročijo bruhanje. Članek ASPCA o vrtovih zeleno navaja med zmernimi prigrizki za hišne živali, vendar sledimo strožjemu nasvetu, ki velja posebej za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Itching or blisters in the mouth and on the gums",
+      "Sneezing",
+      "Eye problems"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Srbenje ali mehurji v ustih in na dlesnih",
+      "Kihanje",
+      "Težave z očmi"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat chewed celery and seems unwell, for example vomits or has an itchy mouth, call your vet for advice. Don't try to make your cat sick at home.",
+    "sl": "Če je mačka grizljala zeleno in se ne počuti dobro, na primer bruha ali jo srbijo usta, pokličite veterinarja za nasvet. Mački ne poskušajte sami izzvati bruhanja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Celery is not a cat snack. Its leaves can make a cat's mouth itchy, so celery is better for people.",
+    "sl": "Zelena ni prigrizek za muce. Njeni listi lahko muci povzročijo srbenje v ustih, zato je zelena raje za ljudi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC82",
+      "quote": "Certain plants may cause blistering or itching of your cat’s mouth and gums, sneezing and eye problems."
+    },
+    {
+      "id": "KC82",
+      "quote": "Contact with the leaves of food plants, such as tomatoes, strawberries, rhubarb, parsnips, carrots, celery,"
+    },
+    {
+      "id": "KC82",
+      "quote": "marrow (also known as zucchini and courgette) and cucumbers can all potentially affect your cat in this way."
+    },
+    {
+      "id": "KC82",
+      "quote": "All plants, even grass, can irritate your cat’s stomach and intestines, causing vomiting."
+    },
+    {
+      "id": "KC83",
+      "quote": "The following garden staples can be fed as snacks (in moderation) or baked into yummy goodies for your pets:"
+    },
+    {
+      "id": "KC22",
+      "quote": "if your cat eats or comes into contact with anything unusual you should call your vet immediately."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    }
+  ],
+  "related": [
+    "cucumber",
+    "carrots",
+    "zucchini",
+    "rhubarb"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f6dd8710d2673dc9fae25aa3fb5ff037b7974bf1b928a394f226331bac301b0f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "be789b8072d9205daa6c777115206b6df05c5e0d44629471b92ff6c37ccb0fb2"
+    }
+  }
+}

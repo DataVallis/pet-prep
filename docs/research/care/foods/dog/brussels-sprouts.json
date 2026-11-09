@@ -1,0 +1,115 @@
+{
+  "slug": "brussels-sprouts",
+  "species": "dog",
+  "name": {
+    "en": "Brussels sprouts",
+    "sl": "Brstični ohrovt"
+  },
+  "question": {
+    "en": "Can dogs eat Brussels sprouts?",
+    "sl": "Ali lahko psi jedo brstični ohrovt?"
+  },
+  "url_slug": {
+    "en": "brussels-sprouts",
+    "sl": "brsticni-ohrovt"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, with a few precautions. Plain cooked Brussels sprouts are fine for dogs in small amounts, but too many can cause lots of gas, stomach upset and diarrhoea. Don't serve them raw: they are too hard for dogs to digest.",
+    "sl": "Da, z nekaj previdnosti. Navaden kuhan brstični ohrovt je za pse v majhnih količinah v redu, preveč pa lahko povzroči močne vetrove, želodčne težave in drisko. Ne ponudite ga surovega: psi ga težko prebavijo."
+  },
+  "why": {
+    "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
+    "sl": "Brstični ohrovt je poln hranil in antioksidantov ter ne vsebuje strupov. Vsebuje pa veliko snovi, imenovane izotiocianat, in preveč ga lahko povzroči močne vetrove, želodčne težave in drisko, zato ga psu ne dajajte preveč."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Give only a little and don't overfeed. If your dog has dietary issues or allergies, talk to your vet first before offering Brussels sprouts.",
+    "sl": "Ponudite le malo in ne pretiravajte. Če ima pes težave s prehrano ali alergije, se pred tem posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
+    "sl": "Opran, z odrezanim večjim delom peclja in ohranjenimi listi, kuhan (kuhanje na pari ohrani največ hranil). Navaden, brez zelišč in začimb, v majhnih količinah."
+  },
+  "child": {
+    "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
+    "sl": "Psi lahko za priboljšek dobijo malo kuhanega brstičnega ohrovta. Če ga pojedo preveč, imajo poln trebušček vetrov!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat raw Brussels sprouts?",
+        "sl": "Ali lahko psi jedo surov brstični ohrovt?"
+      },
+      "a": {
+        "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
+        "sl": "Raje ne: surov ohrovt psi težko prebavijo. Najprej ga skuhajte; kuhanje na pari ohrani največ hranil."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD142",
+      "quote": "The answer is yes, with a few precautions."
+    },
+    {
+      "id": "KD142",
+      "quote": "This nutritious veggie has no toxins or poisons"
+    },
+    {
+      "id": "KD142",
+      "quote": "Sprouts contain a high level of a substance called isothiocyanate"
+    },
+    {
+      "id": "KD142",
+      "quote": "Too much and your dog can suffer from stomach upset and diarrhea."
+    },
+    {
+      "id": "KD142",
+      "quote": "Don’t serve them raw; they’ll be too hard for your dog to digest."
+    },
+    {
+      "id": "KD142",
+      "quote": "Steaming preserves the largest amount of nutrients."
+    },
+    {
+      "id": "KD142",
+      "quote": "Wash them thoroughly and cut off most of the stem, leaving the leaves intact."
+    },
+    {
+      "id": "KD142",
+      "quote": "And skip the herbs and spices."
+    },
+    {
+      "id": "KD142",
+      "quote": "If your dog has any dietary issues or allergies, do not feed them Brussels sprouts without first consulting your veterinarian."
+    },
+    {
+      "id": "KD89",
+      "quote": "Brussels sprouts are loaded with nutrients and antioxidants that are great for humans and dogs, alike."
+    },
+    {
+      "id": "KD89",
+      "quote": "Don’t overfeed them to your dog, however, because they can cause lots and lots of gas."
+    }
+  ],
+  "related": [
+    "broccoli",
+    "cauliflower",
+    "cabbage",
+    "kale"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0a005ff4e524a52dc5654a46149e73368f75922b4d8c9a87694ba32bee6fcb83"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "827f588258b9d39e03fce407847b51e52525b4b013f15efbe4f5a3bf2fa41ae2"
+    }
+  }
+}
