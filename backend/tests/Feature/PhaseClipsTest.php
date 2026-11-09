@@ -238,12 +238,13 @@ describe('phase clips (enum + entitlement)', function () {
             ->and((require config_path('media.php'))['state_media']['phase_clips'])->toBe(['ball', 'wand', 'school']);
     });
 
-    it('a paid cat gets the 3 wand clips and 2 poses — no school, no ball', function () {
+    it('a paid cat gets the 2 wand clips and 2 poses — no school, no ball, no pounce (retired 2026-11-08)', function () {
         config(['services.fal_ai.key' => null]);
         $cat = phcPet('maine_coon', 'brown');
         $e = app(MediaEntitlementService::class);
 
-        expect(array_map(fn ($c) => $c->value, $e->phaseClipsFor($cat)))->toBe(['wand_stalking', 'wand_pouncing', 'wand_catching'])
+        expect(array_map(fn ($c) => $c->value, $e->phaseClipsFor($cat)))->toBe(['wand_stalking', 'wand_catching'])
+            ->and(array_map(fn ($c) => $c->value, $e->phaseClipsOfSet($cat)))->toBe(['wand_stalking', 'wand_catching'])
             ->and(array_map(fn ($p) => $p->value, $e->posesFor($cat)))->toBe(['crouch', 'catch']);
     });
 
@@ -546,14 +547,15 @@ describe('shared look of breed + colour', function () {
         phcCompleteClips();
 
         $phases = PetMedia::where('pet_id', $cat->id)->where('kind', 'phase')->pluck('state')->all();
-        expect($phases)->toEqualCanonicalizing(['wand_stalking', 'wand_pouncing', 'wand_catching'])
+        expect($phases)->toEqualCanonicalizing(['wand_stalking', 'wand_catching'])
             ->and(PetMedia::where('pet_id', $cat->id)->where('kind', 'pose')->pluck('state')->all())->toEqualCanonicalizing(['crouch', 'catch'])
             ->and(phcCalls()->map(fn (Request $r) => (string) ($r['prompt'] ?? ''))->implode(' '))->not->toContain(' dog ')
-            ->and(app(GameMediaReadiness::class)->requiredClips($cat->fresh(), GameMediaReadiness::WAND))->toBe(['wand_stalking', 'wand_pouncing', 'wand_catching'])
+            ->and(app(GameMediaReadiness::class)->requiredClips($cat->fresh(), GameMediaReadiness::WAND))->toBe(['wand_stalking', 'wand_catching'])
             ->and(app(GameMediaReadiness::class)->ready($cat->fresh(), GameMediaReadiness::WAND))->toBeTrue()
             // Cost of the cat set (scratching is in every profiled cat's full set): 1 + 6 key images
-            // + 2 poses (0.15 $) · 7 loops + 2 transitions (0.56 $) · 3 wand clips (0.336 $) = 7.40 $.
-            ->and(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe(round(9 * 0.15 + 9 * 0.56 + 3 * 0.336, 2))
+            // + 2 poses (0.15 $) · 7 loops + 2 transitions (0.56 $) · 2 wand clips (0.336 $) = 7.06 $
+            // (7.40 $ with the pounce clip, retired David 2026-11-08).
+            ->and(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe(round(9 * 0.15 + 9 * 0.56 + 2 * 0.336, 2))
             // A cat's play is cuddles only: no ball clips, the M5-T04 list.
             ->and(app(GameMediaReadiness::class)->requiredClips($cat->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle']);
     });
@@ -1290,5 +1292,103 @@ describe('QA m6: preparation without the phase clips', function () {
             }
         }
         expect($prep->summary($pet->fresh())->toArray()['school_pending'])->toBeFalse();
+    });
+});
+
+/* ───────────── wand_pouncing retired (David 2026-11-08 »ok ja daj«) ───────────── */
+
+describe('wand_pouncing is no longer generated (David 2026-11-08)', function () {
+    /** An own-media cat with its wand slots, stalking + catching stored and shown. */
+    function wprCat(): array
+    {
+        phcFakeFal();
+        useUniquePetMedia(true);
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class, SendActivityMediaAlert::class]);
+        $cat = phcBirth(phcPet('maine_coon', 'brown'));
+        $media = app(PetMediaService::class);
+        foreach ([PetPhaseClip::WandStalking, PetPhaseClip::WandCatching] as $clip) {
+            $media->slot($cat, PetMedia::KIND_PHASE, $clip)
+                ->update(['status' => 'ready', 'storage_path' => "{$cat->id}/{$clip->value}-g1.mp4", 'completed_at' => now()]);
+        }
+
+        return [$cat->fresh(), $media];
+    }
+
+    it('the enum marks only wand_pouncing as retired; the case and its CHECK value stay', function () {
+        config(['services.fal_ai.key' => null]);
+        expect(PetPhaseClip::retiredValues())->toBe(['wand_pouncing'])
+            ->and(PetPhaseClip::WandPouncing->isRetired())->toBeTrue()
+            ->and(collect(PetPhaseClip::cases())->reject(fn (PetPhaseClip $c) => $c === PetPhaseClip::WandPouncing)->contains(fn (PetPhaseClip $c) => $c->isRetired()))->toBeFalse()
+            ->and(PetPhaseClip::tryFrom('wand_pouncing'))->toBe(PetPhaseClip::WandPouncing)
+            // The pounce's crouch pose is still needed by stalking (end) and catching (start).
+            ->and(array_map(fn ($p) => $p->value, app(MediaEntitlementService::class)->posesFor(phcPet('maine_coon', 'brown'))))->toBe(['crouch', 'catch']);
+    });
+
+    it('a new cat look queues no wand_pouncing slot (pet or look row) and never asks fal for a pounce', function () {
+        phcFakeFal();
+        $cat = phcBirth(phcPet('maine_coon', 'brown'));
+        phcCompleteClips();
+
+        $pounceMotion = PetPhaseClip::WandPouncing->motion();
+        expect(PetMedia::where('state', 'wand_pouncing')->count())->toBe(0)
+            ->and(PetMedia::where('pet_look_id', $cat->pet_look_id)->where('kind', 'phase')->pluck('state')->all())->toEqualCanonicalizing(['wand_stalking', 'wand_catching'])
+            ->and(phcCalls()->contains(fn (Request $r) => str_contains((string) ($r['prompt'] ?? ''), $pounceMotion)))->toBeFalse()
+            // »Generate missing« / cost plans see nothing left for the wand.
+            ->and(app(PetMediaService::class)->planMissing($cat->fresh())['phases'])->toBe([]);
+    });
+
+    it('the wand is ready without wand_pouncing — »preparing« never waits for it, an old failed row neither', function () {
+        [$cat, $media] = wprCat();
+        $readiness = app(GameMediaReadiness::class);
+
+        expect($readiness->requiredClips($cat, GameMediaReadiness::WAND))->toBe(['wand_stalking', 'wand_catching'])
+            ->and($readiness->missing($cat, GameMediaReadiness::WAND))->toBe([])
+            ->and($readiness->ready($cat, GameMediaReadiness::WAND))->toBeTrue()
+            ->and($readiness->phaseGroups($cat))->toContain('wand');
+
+        // A pounce row left from before (failed, no file) changes nothing — no lock, no simple mode.
+        $media->slot($cat, PetMedia::KIND_PHASE, PetPhaseClip::WandPouncing)
+            ->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'completed_at' => now()->subHour()]);
+        $fresh = $cat->fresh();
+        expect($readiness->ready($fresh, GameMediaReadiness::WAND))->toBeTrue()
+            ->and($readiness->activities($fresh)['wand']['failed'])->toBe([])
+            ->and($readiness->phaseGroups($fresh))->toContain('wand')
+            ->and($fresh->simple_activities)->toBeNull();
+    });
+
+    it('existing wand_pouncing rows and files stay (still served), but are never retried, re-submitted or reported', function () {
+        [$cat, $media] = wprCat();
+        $stored = $media->slot($cat, PetMedia::KIND_PHASE, PetPhaseClip::WandPouncing);
+        $stored->update(['status' => 'ready', 'storage_path' => "{$cat->id}/wand_pouncing-g1.mp4", 'completed_at' => now()]);
+        expect(array_keys((array) $media->payloadFor($cat->fresh())['phases']))->toContain('wand_pouncing');
+
+        // A failed chain (transient reason, outside the delay): the activity retry service ignores it.
+        $stored->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'storage_path' => null, 'completed_at' => now()->subHour()]);
+        $retry = app(ActivityClipRetryService::class);
+        expect($retry->locksActivity($cat->fresh(), $stored->fresh()))->toBeFalse();
+        $result = $retry->run();
+        expect($result['retried'])->toBe(0)
+            ->and($result['reported'])->toBe(0)
+            ->and($result['simple'])->toBe(0)
+            ->and($stored->fresh()->status)->toBe('failed')
+            ->and($stored->fresh()->auto_retries)->toBe(0)
+            ->and($stored->fresh()->auto_alerted_at)->toBeNull();
+        Queue::assertNotPushed(SubmitPetStateVideo::class, fn ($j) => $j->petMediaId === $stored->id);
+        Queue::assertNotPushed(SendActivityMediaAlert::class);
+
+        // Budget-blocked: the nightly media:retry never picks it.
+        $stored->update(['error_reason' => 'budget_daily']);
+        expect(app(ReferenceImageRetryService::class)->videoRetryCandidates()->pluck('id')->all())->not->toContain($stored->id);
+        app(ReferenceImageRetryService::class)->retryDueWithVideos();
+        expect($stored->fresh()->status)->toBe('failed');
+        Queue::assertNotPushed(SubmitPetStateVideo::class, fn ($j) => $j->petMediaId === $stored->id);
+
+        // A queued submit left over from before makes no fal call.
+        $stored->update(['status' => 'pending', 'error_reason' => null, 'request_id' => null]);
+        $before = phcCalls()->count();
+        (new SubmitPetStateVideo($stored->id))->handle($media);
+        expect(phcCalls()->count())->toBe($before)
+            ->and($stored->fresh()->status)->toBe('pending')
+            ->and(PetMedia::whereKey($stored->id)->exists())->toBeTrue();
     });
 });

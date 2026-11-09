@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Muca brez odvečnega posnetka skoka
+
+**Kaj:** strežnik za novo muco ne ustvari več posnetka skoka (`wand_pouncing`), ki ga preprosta igra s palico ne predvaja — vsak nov videz muce je zato ≈ 0,34 $ cenejši (7,40 → 7,06 $ po ceniku fal), obstoječi posnetki pa ostanejo.
+
 ## 2026-11-08 — Palica s peresom: ko se muca pritaji, spusti pero
 
 **Kaj:** igro s palico smo naredili čisto preprosto — ko se muca pritaji (👀), otrok spusti pero in muca ga ujame ★; trije ulovi in igra je končana (~20–30 s), brez kazni za prezgodnji ali zamujen izpust.

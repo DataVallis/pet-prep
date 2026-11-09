@@ -254,9 +254,9 @@
 | Nabor stanj M5-T08 (slika, ključne slike, zanke 5 s, 2 prehoda 5 s) | 5,38 $ (mladiček z vedenjskimi dogodki 6,80 $) | 6,09 $ (vedno s praskanjem) |
 | Poze šole in iger (Nano Banana Pro Edit) | 5 × 0,15 $ = 0,75 $ | 2 × 0,15 $ = 0,30 $ |
 | Šola (4 ukazi × 3 faze; izvaja 5 s od 23. 10. 2026, pozornost in uspeh 3 s) | 4 × 0,56 $ + 8 × 0,336 $ = 4,93 $ (prej 12 × 0,336 $ = 4,03 $) | — |
-| Igra (3 faze, 3 s) | žoga 3 × 0,336 $ = 1,01 $ | palica 3 × 0,336 $ = 1,01 $ |
-| **Skupaj** | **12,07 $** (mladiček 13,49 $; do 23. 10. 2026 11,17 $ / 12,59 $) | **7,40 $** |
-| **Skupaj z »Varčnimi posnetki«** (David 30. 10. 2026, stikalo; samo psi): pozornost 1 × namesto 4 × (−1,01 $), zanke spi / utrujen / bolan 3 s (−0,67 $); `sleeping_to_idle` ponovno naredi fal (obrnjen posnetek z ffmpeg, −0,56 $, je David 30. 10. 2026 opustil — »kot previjanje kasete nazaj«) | **10,39 $** (−1,68 $ na videz in obdobje; prej z obratom 9,83 $) | 7,40 $ (nespremenjeno) |
+| Igra (3 s) | žoga 3 × 0,336 $ = 1,01 $ | palica 2 × 0,336 $ = 0,67 $ (`wand_pouncing` se od 8. 11. 2026 ne ustvarja več; prej 3 × = 1,01 $) |
+| **Skupaj** | **12,07 $** (mladiček 13,49 $; do 23. 10. 2026 11,17 $ / 12,59 $) | **7,06 $** (do 8. 11. 2026 7,40 $) |
+| **Skupaj z »Varčnimi posnetki«** (David 30. 10. 2026, stikalo; samo psi): pozornost 1 × namesto 4 × (−1,01 $), zanke spi / utrujen / bolan 3 s (−0,67 $); `sleeping_to_idle` ponovno naredi fal (obrnjen posnetek z ffmpeg, −0,56 $, je David 30. 10. 2026 opustil — »kot previjanje kasete nazaj«) | **10,39 $** (−1,68 $ na videz in obdobje; prej z obratom 9,83 $) | 7,06 $ (stikalo muc ne zadeva) |
 | Preverjanje kakovosti (od 23. 10. 2026) | ≈ 0,001–0,003 $ na posnetek (cena preverjena 4. 11. 2026; ~35 posnetkov psa ≈ 0,10 $) + en ponovni posnetek na neuspešen klip; od 4. 11. še ≈ 0,001 $ na sliko (ključne slike, poze, slike stvari) | enako |
 
 Vsak naslednji kupec iste pasme + barve + obdobja **0 $**. Rojstnodnevni klip (0,56 $) še ni zgrajen. **Dnevna meja AI (privzeto 5 $ / dan v produkciji):** prvi kupec nove pasme + barve + obdobja psa (12,07 $) svoj nabor dobi v ≈ 3 dneh — najprej slika, ključne slike in zanke, nato igre in šola; igre medtem ne obvisijo, šola kaže poze. Za vse v enem dnevu David dvigne mejo v »AI budget«. 12-tedenski izziv z mladičem (2 obdobji) ≈ 27 $ ≈ 23 € (od 23. 10. 2026; prej 25,18 $) — prvi kupec ≈ 12 € v plusu, vsak naslednji iste pasme in barve ≈ 34,80 € (ocena po ceniku; resnica je račun fal).

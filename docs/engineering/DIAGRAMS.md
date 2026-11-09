@@ -1759,11 +1759,12 @@ flowchart LR
   P --> SP
   P --> SS[school_X_success<br/>pose → same pose]
   R --> BW[ball_waiting] --> BR[ball_running<br/>stands → empty room] --> BF[ball_fetching<br/>empty room → stands]
-  R --> WS[wand_stalking<br/>stands → crouch] --> WP[wand_pouncing<br/>crouch → crouch, per pounce] --> WC[wand_catching<br/>crouch → catch]
+  R --> WS[wand_stalking<br/>stands → crouch] --> WC[wand_catching<br/>crouch → catch]
+  WP[wand_pouncing<br/>retired 2026-11-08: not generated, not required<br/>old rows kept + served]
   subgraph Gate [phaseClipsFor = switch »School & game clips« + usesStateMedia + version 3 + group]
-    G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each · school performing 5 s, 0.56 $ (David 2026-10-23)]
+    G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each · school performing 5 s, 0.56 $ (David 2026-10-23) · PetPhaseClip::RETIRED skipped]
   end
-  N[same start + end pose: attention · success · ball_waiting · wand_pouncing<br/>→ start frame only, motion prompt — fix 2026-10-23]
+  N[same start + end pose: attention · success · ball_waiting<br/>→ start frame only, motion prompt — fix 2026-10-23]
 ```
 
 ```mermaid

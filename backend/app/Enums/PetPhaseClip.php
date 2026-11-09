@@ -15,9 +15,10 @@ use InvalidArgumentException;
  *   performing (does it) → success (holds the position); a cue it ignores = the
  *   standing pose; potty = the dog goes to the door (David approved 2026-10-21).
  * - Ball game (dog): waiting → running (out of frame after the ball) → fetching (back).
- * - Wand game (cat): stalking (into the crouch) → pouncing (leaps, lands back in the
- *   crouch — repeatable) → catching (from the crouch, ends holding the catch).
- *   Ball and wand phases approved by David 2026-10-21 (ball airtime 6 s OK).
+ * - Wand game (cat): stalking (into the crouch) → catching (from the crouch, ends holding
+ *   the catch). Ball and wand phases approved by David 2026-10-21 (ball airtime 6 s OK).
+ *   `wand_pouncing` (leaps, lands back in the crouch) is RETIRED since David 2026-11-08:
+ *   no longer generated ({@see RETIRED}), old rows stay.
  *
  * Start / end frame = pose images: null = the stage's reference image (the
  * standing / idle pose), else a PetPose image (pet_media kind `pose`). The
@@ -57,6 +58,18 @@ enum PetPhaseClip: string
     public const PHASE_PERFORMING = 'performing';
 
     public const PHASE_SUCCESS = 'success';
+
+    /**
+     * Clips that are no longer made (David 2026-11-08 »ok ja daj«): `wand_pouncing` — the simple
+     * wand hunt (rules 3) plays only stalking → the derived crouch loop → catching, so the pounce
+     * clip (≈ 0.34 $ per cat look) is never generated, required, retried or priced again. The
+     * case stays: stored rows / files are kept and still served (the v1 minute of an older binary
+     * plays it when present and shows the crouch pose otherwise), and pet_media_state_check keeps
+     * the value. Filtered only in MediaEntitlementService::phaseClipsOfSet() (the one source of
+     * generation, readiness, preparation, retries, cost plans and `phase_groups`) and in the
+     * nightly media:retry query.
+     */
+    public const RETIRED = [self::WandPouncing];
 
     /** school | ball | wand */
     public function group(): string
@@ -200,6 +213,20 @@ enum PetPhaseClip: string
     public static function values(): array
     {
         return array_map(fn (self $c) => $c->value, self::cases());
+    }
+
+    /** No longer generated ({@see RETIRED}). */
+    public function isRetired(): bool
+    {
+        return in_array($this, self::RETIRED, true);
+    }
+
+    /**
+     * @return list<string> the values of the retired clips ({@see RETIRED})
+     */
+    public static function retiredValues(): array
+    {
+        return array_map(fn (self $c) => $c->value, self::RETIRED);
     }
 
     /**
