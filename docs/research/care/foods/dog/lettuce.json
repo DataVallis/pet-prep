@@ -4,56 +4,66 @@
   "name": {
     "en": "Lettuce",
     "sl": "Zelena solata",
-    "nl": "Sla"
+    "nl": "Sla",
+    "pl": "Sałata"
   },
   "question": {
     "en": "Can dogs eat lettuce?",
     "sl": "Ali lahko psi jedo zeleno solato?",
-    "nl": "Mogen honden sla eten?"
+    "nl": "Mogen honden sla eten?",
+    "pl": "Czy psy mogą jeść sałatę?"
   },
   "url_slug": {
     "en": "lettuce",
     "sl": "zelena-solata",
-    "nl": "sla"
+    "nl": "sla",
+    "pl": "salata"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain lettuce is generally safe for dogs in moderation. Romaine, iceberg and arugula are non-toxic. Wash it well and chop it up, and don't share your leftover salad, which often contains onions.",
     "sl": "Da, navadna zelena solata je za pse v zmernih količinah praviloma varna. Rimska solata, ledenka in rukola niso strupene. Dobro jo operite in narežite, ne delite pa s psom ostankov svoje solate, ki pogosto vsebuje čebulo.",
-    "nl": "Ja, naturel sla is over het algemeen met mate veilig voor honden. Romaine, ijsbergsla en rucola zijn niet giftig. Was de sla goed en snijd hem fijn, en geef je hond geen restjes van je salade, want die bevatten vaak ui."
+    "nl": "Ja, naturel sla is over het algemeen met mate veilig voor honden. Romaine, ijsbergsla en rucola zijn niet giftig. Was de sla goed en snijd hem fijn, en geef je hond geen restjes van je salade, want die bevatten vaak ui.",
+    "pl": "Tak, zwykła sałata jest na ogół bezpieczna dla psów w umiarkowanych ilościach. Sałata rzymska, lodowa i rukola nie są toksyczne. Umyj ją dokładnie i posiekaj, ale nie dawaj psu resztek ze swojej sałatki, bo często zawierają cebulę."
   },
   "why": {
     "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
     "sl": "Zelena solata je za pse praviloma varna, vendar ima veliko vlaknin in jo v velikih kosih težko prebavijo, preveč pa lahko povzroči drisko. Solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Zaradi odpoklicev solate, okužene z E. coli ali listerijo, jo dobro operite in skrbno izbirajte.",
-    "nl": "Sla is over het algemeen veilig voor honden, maar zit vol vezels en is in grote stukken moeilijk te verteren, en te veel kan diarree veroorzaken. In salades zitten vaak ingrediënten die giftig zijn voor honden, zoals ui. Sla is ook weleens teruggeroepen vanwege besmetting met E. coli of listeria, dus was de sla goed en let bij het kopen op."
+    "nl": "Sla is over het algemeen veilig voor honden, maar zit vol vezels en is in grote stukken moeilijk te verteren, en te veel kan diarree veroorzaken. In salades zitten vaak ingrediënten die giftig zijn voor honden, zoals ui. Sla is ook weleens teruggeroepen vanwege besmetting met E. coli of listeria, dus was de sla goed en let bij het kopen op.",
+    "pl": "Sałata jest na ogół bezpieczna dla psów, ale ma dużo błonnika i w dużych kawałkach trudno ją strawić, a jej nadmiar może wywołać biegunkę. W sałatkach często są składniki toksyczne dla psów, na przykład cebula. Sałata bywała też wycofywana ze sprzedaży z powodu skażenia bakteriami E. coli lub listerią, więc dobrze ją myj i kupuj z rozwagą."
   },
   "signs": null,
   "what_to_do": {
     "en": "Keep it to a plain piece now and then: too much can cause diarrhoea. Don't share leftover salad, as salads often include onions, which are toxic to dogs.",
     "sl": "Ponudite le občasen košček navadne solate: preveč lahko povzroči drisko. Ne delite ostankov solate, saj ta pogosto vsebuje čebulo, ki je za pse strupena.",
-    "nl": "Geef alleen af en toe een naturel stukje: te veel kan diarree geven. Geef geen saladerestjes, want salades bevatten vaak ui, en die is giftig voor honden."
+    "nl": "Geef alleen af en toe een naturel stukje: te veel kan diarree geven. Geef geen saladerestjes, want salades bevatten vaak ui, en die is giftig voor honden.",
+    "pl": "Ogranicz się do zwykłego kawałka od czasu do czasu: za dużo może wywołać biegunkę. Nie dawaj psu resztek sałatki, bo często zawierają cebulę, która jest dla psów toksyczna."
   },
   "serving": {
     "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
     "sl": "Občasen košček navadne, temeljito oprane solate, narezan in ne cel list. Nikoli iz mešane solate.",
-    "nl": "Af en toe een naturel, grondig gewassen stukje, fijngesneden en niet als heel blad. Nooit uit een gemengde salade."
+    "nl": "Af en toe een naturel, grondig gewassen stukje, fijngesneden en niet als heel blad. Nooit uit een gemengde salade.",
+    "pl": "Zwykły, dokładnie umyty kawałek od czasu do czasu, posiekany, a nie cały liść. Nigdy z sałatki mieszanej."
   },
   "child": {
     "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
     "sl": "Psi lahko pohrustajo malo navadne zelene solate. Odrasli jo opere in nareže na majhne koščke. Ostanki solate pa ne!",
-    "nl": "Honden mogen een beetje naturel sla knabbelen. Een volwassene wast de sla en snijdt hem klein. Geen saladerestjes, alsjeblieft!"
+    "nl": "Honden mogen een beetje naturel sla knabbelen. Een volwassene wast de sla en snijdt hem klein. Geen saladerestjes, alsjeblieft!",
+    "pl": "Psy mogą schrupać odrobinę zwykłej sałaty. Dorosły dokładnie ją myje i drobno kroi. Żadnych resztek sałatki, proszę!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat salad?",
         "sl": "Ali lahko psi jedo solato z dodatki?",
-        "nl": "Mogen honden salade eten?"
+        "nl": "Mogen honden salade eten?",
+        "pl": "Czy psy mogą jeść sałatkę?"
       },
       "a": {
         "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
         "sl": "Ostankov vaše solate ne: solate pogosto vsebujejo sestavine, ki so za pse strupene, na primer čebulo. Občasen košček navadne zelene solate je v redu.",
-        "nl": "Niet je eigen saladerestjes: in salades zitten vaak ingrediënten die giftig zijn voor honden, zoals ui. Af en toe een naturel stukje sla is prima."
+        "nl": "Niet je eigen saladerestjes: in salades zitten vaak ingrediënten die giftig zijn voor honden, zoals ui. Af en toe een naturel stukje sla is prima.",
+        "pl": "Resztek z twojej sałatki lepiej nie dawać: sałatki często zawierają składniki toksyczne dla psów, na przykład cebulę. Zwykły kawałek sałaty od czasu do czasu jest w porządku."
       }
     }
   ],
@@ -121,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a53172879e7c5921c1890bd169d5cbe0f6ae53f619fce55371b0a9c1b5d568f3"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "93035dbce439ffeff3b1f0f3de7329f03bdf51e646c31abf982ec4555e55812e"
     }
   }
 }

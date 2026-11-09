@@ -4,68 +4,80 @@
   "name": {
     "en": "Pumpkin",
     "sl": "Buča",
-    "nl": "Pompoen"
+    "nl": "Pompoen",
+    "pl": "Dynia"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
     "sl": "Ali lahko psi jedo bučo?",
-    "nl": "Mogen honden pompoen eten?"
+    "nl": "Mogen honden pompoen eten?",
+    "pl": "Czy psy mogą jeść dynię?"
   },
   "url_slug": {
     "en": "pumpkin",
     "sl": "buca",
-    "nl": "pompoen"
+    "nl": "pompoen",
+    "pl": "dynia"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked pumpkin is a healthy food for dogs. Choose fresh cooked pumpkin or plain canned pumpkin puree, never pumpkin pie filling, and don't share uncooked rinds.",
     "sl": "Da, navadna kuhana buča je za pse zdrava hrana. Izberite svežo kuhano bučo ali navaden bučni pire iz pločevinke, nikoli nadeva za bučno pito, in psu ne dajajte surove lupine.",
-    "nl": "Ja, naturel gare pompoen is gezond voor honden. Kies verse, gare pompoen of naturel pompoenpuree uit blik, nooit vulling voor pompoentaart, en geef geen ongekookte schil."
+    "nl": "Ja, naturel gare pompoen is gezond voor honden. Kies verse, gare pompoen of naturel pompoenpuree uit blik, nooit vulling voor pompoentaart, en geef geen ongekookte schil.",
+    "pl": "Tak, zwykła ugotowana dynia jest dla psów zdrowa. Wybierz świeżą ugotowaną dynię albo zwykłe puree z dyni z puszki – nigdy nadzienia do placka z dyni. Nie dawaj też nieugotowanej skórki."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
     "sl": "Čista buča je polna antioksidantov in psom lahko pomaga tako pri driski kot pri zaprtju. Nadev za bučno pito lahko vsebuje strupeni ksilitol ter druge začimbe in dodatke, ki bi lahko škodili. Surove lupine so trde in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
-    "nl": "Naturel pompoen zit vol antioxidanten en kan bij honden helpen bij zowel diarree als verstopping. Vulling voor pompoentaart kan xylitol bevatten, dat giftig is, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn. Ongekookte schillen zijn taai en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken."
+    "nl": "Naturel pompoen zit vol antioxidanten en kan bij honden helpen bij zowel diarree als verstopping. Vulling voor pompoentaart kan xylitol bevatten, dat giftig is, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn. Ongekookte schillen zijn taai en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
+    "pl": "Czysta dynia jest pełna przeciwutleniaczy i może pomagać psom zarówno przy biegunce, jak i przy zaparciach. Nadzienie do placka z dyni może zawierać ksylitol, który jest toksyczny, a także inne przyprawy i dodatki, które mogą szkodzić. Nieugotowana skórka jest twarda i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit."
   },
   "signs": null,
   "what_to_do": {
     "en": "As with any new food, ask your vet before adding pumpkin to your dog's routine.",
     "sl": "Kot pri vsaki novi hrani se tudi pred uvedbo buče v pasji jedilnik posvetujte z veterinarjem.",
-    "nl": "Zoals bij elk nieuw voedsel: vraag je dierenarts om advies voordat je pompoen aan de voeding van je hond toevoegt."
+    "nl": "Zoals bij elk nieuw voedsel: vraag je dierenarts om advies voordat je pompoen aan de voeding van je hond toevoegt.",
+    "pl": "Jak przy każdym nowym pokarmie, zapytaj weterynarza, zanim dodasz dynię do psiego jadłospisu."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
     "sl": "Sveža, kuhana, navadna in olupljena ali navaden bučni pire iz pločevinke, brez dodanega sladkorja, začimb in umetnih arom. Brez nadeva za pito in brez surove lupine.",
-    "nl": "Verse pompoen, gaar gemaakt en geschild, of naturel pompoenpuree uit blik, zonder toegevoegde suiker, kruiden of kunstmatige smaakstoffen. Geen taartvulling en geen rauwe schil."
+    "nl": "Verse pompoen, gaar gemaakt en geschild, of naturel pompoenpuree uit blik, zonder toegevoegde suiker, kruiden of kunstmatige smaakstoffen. Geen taartvulling en geen rauwe schil.",
+    "pl": "Świeża, obrana i ugotowana, bez dodatków, albo zwykłe puree z dyni z puszki, bez dodatku cukru, przypraw ani sztucznych aromatów. Bez nadzienia do placka i bez surowej skórki."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
     "sl": "Psi se lahko posladkajo z malo navadne kuhane buče. Odrasli poskrbi, da to ni sladek nadev za pito!",
-    "nl": "Honden mogen genieten van een beetje naturel gare pompoen. Een volwassene let erop dat het geen zoete taartvulling is!"
+    "nl": "Honden mogen genieten van een beetje naturel gare pompoen. Een volwassene let erop dat het geen zoete taartvulling is!",
+    "pl": "Psy mogą zjeść odrobinę zwykłej ugotowanej dyni. Dorosły dopilnuje, żeby to nie było słodkie nadzienie do placka!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat pumpkin pie filling?",
         "sl": "Ali lahko psi jedo nadev za bučno pito?",
-        "nl": "Mogen honden vulling voor pompoentaart eten?"
+        "nl": "Mogen honden vulling voor pompoentaart eten?",
+        "pl": "Czy psy mogą jeść nadzienie do placka z dyni?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
         "sl": "Ne. Nadev za bučno pito lahko vsebuje ksilitol, sladilo, ki je za pse strupeno, ter druge začimbe in dodatke, ki bi lahko škodili.",
-        "nl": "Nee. Vulling voor pompoentaart kan xylitol bevatten, een zoetstof die giftig is voor honden, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn."
+        "nl": "Nee. Vulling voor pompoentaart kan xylitol bevatten, een zoetstof die giftig is voor honden, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn.",
+        "pl": "Nie. Nadzienie do placka z dyni może zawierać ksylitol, słodzik toksyczny dla psów, oraz inne przyprawy i dodatki, które mogą szkodzić."
       }
     },
     {
       "q": {
         "en": "Can dogs eat raw pumpkin rind?",
         "sl": "Ali lahko psi jedo surovo bučno lupino?",
-        "nl": "Mogen honden rauwe pompoenschil eten?"
+        "nl": "Mogen honden rauwe pompoenschil eten?",
+        "pl": "Czy psy mogą jeść surową skórkę dyni?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
         "sl": "Ne. Surove lupine so trde, goste in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
-        "nl": "Nee. Ongekookte schillen zijn taai, stevig en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken."
+        "nl": "Nee. Ongekookte schillen zijn taai, stevig en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
+        "pl": "Nie. Nieugotowana skórka jest twarda, zbita i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit."
       }
     }
   ],
@@ -145,6 +157,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "46d0a42e2dcaee2e8a615baac9ae184e3f0012fe29072cc5d661f9bf6040e2e2"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5fe4027aae75c0d0195d08d59ad1c9fc15dc2dbeea4734c506844debd18d1aae"
     }
   }
 }

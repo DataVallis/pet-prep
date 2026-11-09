@@ -4,28 +4,33 @@
   "name": {
     "en": "Raw potatoes",
     "sl": "Surov krompir",
-    "nl": "Rauwe aardappelen"
+    "nl": "Rauwe aardappelen",
+    "pl": "Surowe ziemniaki"
   },
   "question": {
     "en": "Can cats eat raw potatoes?",
     "sl": "Ali lahko mačke jedo surov krompir?",
-    "nl": "Mogen katten rauwe aardappelen eten?"
+    "nl": "Mogen katten rauwe aardappelen eten?",
+    "pl": "Czy koty mogą jeść surowe ziemniaki?"
   },
   "url_slug": {
     "en": "raw-potatoes",
     "sl": "surov-krompir",
-    "nl": "rauwe-aardappelen"
+    "nl": "rauwe-aardappelen",
+    "pl": "surowe-ziemniaki"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, don't give your cat raw potato. The RSPCA lists potato as suitable for cats only when mashed or boiled with no butter or cheese, and the ASPCA says raw potatoes may be problematic for pets. If your cat eats raw potato, contact your vet.",
     "sl": "Ne, mački ne dajajte surovega krompirja. RSPCA krompir navaja kot primeren za mačke le, če je pretlačen ali kuhan v vodi ter brez masla in sira, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen. Če mačka poje surov krompir, se obrnite na veterinarja.",
-    "nl": "Nee, geef je kat geen rauwe aardappel. Volgens de RSPCA is aardappel alleen geschikt voor katten als die gepureerd of gekookt is, zonder boter of kaas, en volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren. Heeft je kat rauwe aardappel gegeten, neem dan contact op met je dierenarts."
+    "nl": "Nee, geef je kat geen rauwe aardappel. Volgens de RSPCA is aardappel alleen geschikt voor katten als die gepureerd of gekookt is, zonder boter of kaas, en volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren. Heeft je kat rauwe aardappel gegeten, neem dan contact op met je dierenarts.",
+    "pl": "Nie, nie dawaj kotu surowego ziemniaka. RSPCA wymienia ziemniaki jako odpowiednie dla kotów tylko w formie puree lub gotowane, bez masła i sera, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt. Jeśli kot zje surowy ziemniak, skontaktuj się z weterynarzem."
   },
   "why": {
     "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
     "sl": "RSPCA in Cats Protection krompir za mačke predlagata le kuhan v vodi ali kot navaden pire, ASPCA pa navaja, da je surov krompir za hišne živali lahko problematičen, kuhan pa je v zmernih količinah v redu. Članek veterinarke za PetMD gre še dlje: surov krompir, zelen krompir in krompirjevo rastlino označuje kot strupene za mačke in navaja, da krompirjevi olupki vsebujejo strup solanin.",
-    "nl": "De RSPCA en Cats Protection raden aardappel voor katten alleen aan als die gekookt of naturel gepureerd is. Volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren, terwijl gare aardappelen met mate prima zijn. Een artikel van PetMD, geschreven door een dierenarts, gaat verder: rauwe en groene aardappelen en de aardappelplant zijn daarin giftig voor katten, en aardappelschillen bevatten de gifstof solanine."
+    "nl": "De RSPCA en Cats Protection raden aardappel voor katten alleen aan als die gekookt of naturel gepureerd is. Volgens de ASPCA kunnen rauwe aardappelen problematisch zijn voor huisdieren, terwijl gare aardappelen met mate prima zijn. Een artikel van PetMD, geschreven door een dierenarts, gaat verder: rauwe en groene aardappelen en de aardappelplant zijn daarin giftig voor katten, en aardappelschillen bevatten de gifstof solanine.",
+    "pl": "RSPCA i Cats Protection proponują ziemniaki dla kotów tylko gotowane lub w postaci zwykłego puree, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt, natomiast ugotowane są w porządku w umiarkowanych ilościach. Artykuł PetMD napisany przez weterynarza idzie dalej: nazywa surowe ziemniaki, zielone ziemniaki i roślinę ziemniaka toksycznymi dla kotów i podaje, że skórki ziemniaków zawierają toksynę solaninę."
   },
   "signs": {
     "en": [
@@ -42,30 +47,39 @@
       "Misselijkheid",
       "Braken",
       "Diarree"
+    ],
+    "pl": [
+      "Nudności",
+      "Wymioty",
+      "Biegunka"
     ]
   },
   "what_to_do": {
     "en": "If your cat has eaten raw potato or potato skin, contact your vet for advice right away. Note what was eaten and when. Don't try to make your cat sick at home.",
     "sl": "Če je mačka pojedla surov krompir ali krompirjeve olupke, takoj pokličite veterinarja za nasvet. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
-    "nl": "Heeft je kat rauwe aardappel of aardappelschil gegeten, neem dan meteen contact op met je dierenarts voor advies. Noteer wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken."
+    "nl": "Heeft je kat rauwe aardappel of aardappelschil gegeten, neem dan meteen contact op met je dierenarts voor advies. Noteer wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken.",
+    "pl": "Jeśli kot zjadł surowy ziemniak albo skórkę ziemniaka, od razu skontaktuj się z weterynarzem po radę. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Raw potatoes are not for cats. If kitty nibbles one, tell a grown-up so they can call the vet.",
     "sl": "Surov krompir ni za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
-    "nl": "Rauwe aardappelen zijn niets voor katten. Knabbelt je kat aan een rauwe aardappel, vertel het dan aan een volwassene, zodat die de dierenarts kan bellen."
+    "nl": "Rauwe aardappelen zijn niets voor katten. Knabbelt je kat aan een rauwe aardappel, vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
+    "pl": "Surowe ziemniaki nie są dla kotów. Jeśli kotek skubnie kawałek, powiedz dorosłemu, żeby zadzwonił do weterynarza."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats eat cooked potato?",
         "sl": "Ali lahko mačke jedo kuhan krompir?",
-        "nl": "Mogen katten gare aardappel eten?"
+        "nl": "Mogen katten gare aardappel eten?",
+        "pl": "Czy koty mogą jeść ugotowane ziemniaki?"
       },
       "a": {
         "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
         "sl": "RSPCA krompir za mačke navaja le, če je pretlačen ali kuhan v vodi ter brez masla in sira, Cats Protection pa predlaga navaden krompirjev pire brez masla, smetane in česna. Olupke izpustite.",
-        "nl": "Volgens de RSPCA is aardappel voor katten alleen geschikt als die gepureerd of gekookt is, zonder boter of kaas, en Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook. Laat de schil weg."
+        "nl": "Volgens de RSPCA is aardappel voor katten alleen geschikt als die gepureerd of gekookt is, zonder boter of kaas, en Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook. Laat de schil weg.",
+        "pl": "RSPCA wymienia ziemniaki dla kotów tylko w formie puree lub gotowane, bez masła i sera, a Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku. Pomiń skórkę."
       }
     }
   ],
@@ -133,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "04fffe39b5055491e75cf89d5e0dd8cb71eddd10eec2d63150e3807d621f002d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2ba31c532bec028c51189e0d5a1702cf9f384b5524f799a84b59dfe178d79909"
     }
   }
 }

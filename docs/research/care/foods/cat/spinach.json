@@ -4,56 +4,66 @@
   "name": {
     "en": "Spinach",
     "sl": "Špinača",
-    "nl": "Spinazie"
+    "nl": "Spinazie",
+    "pl": "Szpinak"
   },
   "question": {
     "en": "Can cats eat spinach?",
     "sl": "Ali lahko mačke jedo špinačo?",
-    "nl": "Mogen katten spinazie eten?"
+    "nl": "Mogen katten spinazie eten?",
+    "pl": "Czy koty mogą jeść szpinak?"
   },
   "url_slug": {
     "en": "spinach",
     "sl": "spinaca",
-    "nl": "spinazie"
+    "nl": "spinazie",
+    "pl": "szpinak"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small bit of plain spinach is fine as an occasional treat. Cats Protection lists spinach among the few vegetables you can feed your cat, if they're keen. Cats don't need vegetables, so keep it a tiny extra.",
     "sl": "Da, malo navadne špinače je v redu kot občasen priboljšek. Cats Protection špinačo navaja med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek.",
-    "nl": "Ja, een klein beetje naturel spinazie is af en toe prima als traktatie. Volgens Cats Protection is spinazie een van de weinige groenten die je je kat kunt geven, als hij het lekker vindt. Katten hebben geen groente nodig, dus houd het bij een klein extraatje."
+    "nl": "Ja, een klein beetje naturel spinazie is af en toe prima als traktatie. Volgens Cats Protection is spinazie een van de weinige groenten die je je kat kunt geven, als hij het lekker vindt. Katten hebben geen groente nodig, dus houd het bij een klein extraatje.",
+    "pl": "Tak, odrobina zwykłego szpinaku jest w porządku jako okazjonalny smakołyk. Cats Protection wymienia szpinak wśród niewielu warzyw, które można dawać kotu, jeśli ma na nie ochotę. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek."
   },
   "why": {
     "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "Cats Protection špinačo uvršča med redke vrste zelenjave, ki jih lahko daste mački, če ji je všeč, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-    "nl": "Volgens Cats Protection is spinazie een van de weinige groenten die je een kat kunt geven, als die het lekker vindt. De organisatie stelt gestoomde of gekookte groente voor, zonder boter, zout of kruiden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken."
+    "nl": "Volgens Cats Protection is spinazie een van de weinige groenten die je een kat kunt geven, als die het lekker vindt. De organisatie stelt gestoomde of gekookte groente voor, zonder boter, zout of kruiden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken.",
+    "pl": "Cats Protection wymienia szpinak wśród niewielu warzyw, które można podawać kotu, jeśli ma na nie ochotę, i radzi warzywa gotowane na parze lub w wodzie, bez masła, soli i przypraw. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
     "sl": "Malo špinače, kuhane na pari ali v vodi, brez masla, soli in začimb.",
-    "nl": "Een klein beetje, gestoomd of gekookt, zonder boter, zout of kruiden."
+    "nl": "Een klein beetje, gestoomd of gekookt, zonder boter, zout of kruiden.",
+    "pl": "Odrobina, gotowana na parze lub w wodzie, bez masła, soli i przypraw."
   },
   "child": {
     "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Malo špinače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-    "nl": "Een heel klein beetje spinazie kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
+    "nl": "Een heel klein beetje spinazie kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
+    "pl": "Odrobiną szpinaku można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -117,6 +127,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "32af7bb0df9fd73c3ac2d313417bb02511f0ee7cbfb56abbbdf5ba98f415a595"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "55918b905fa71c8261b616d33753bed54801d0f2450982bbad6ce7951527460a"
     }
   }
 }
