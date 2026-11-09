@@ -6,21 +6,24 @@
     "sl": "Surov krompir",
     "nl": "Rauwe aardappelen",
     "pl": "Surowe ziemniaki",
-    "cs": "Syrové brambory"
+    "cs": "Syrové brambory",
+    "hr": "Sirovi krumpir"
   },
   "question": {
     "en": "Can dogs eat raw potatoes?",
     "sl": "Ali lahko psi jedo surov krompir?",
     "nl": "Mogen honden rauwe aardappelen eten?",
     "pl": "Czy psy mogą jeść surowe ziemniaki?",
-    "cs": "Mohou psi jíst syrové brambory?"
+    "cs": "Mohou psi jíst syrové brambory?",
+    "hr": "Smiju li psi jesti sirovi krumpir?"
   },
   "url_slug": {
     "en": "raw-potatoes",
     "sl": "surov-krompir",
     "nl": "rauwe-aardappelen",
     "pl": "surowe-ziemniaki",
-    "cs": "syrove-brambory"
+    "cs": "syrove-brambory",
+    "hr": "sirovi-krumpir"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, psu ne dajajte surovega krompirja. Surov in zelen krompir je nevaren in potencialno strupen, ker vsebuje solanin, naravni strup. Navaden, dobro kuhan krompir je nekaj drugega in je v zmernih količinah v redu.",
     "nl": "Nee, geef je hond geen rauwe aardappelen. Rauwe en groene aardappelen zijn onveilig en mogelijk giftig, omdat ze solanine bevatten, een natuurlijke gifstof. Naturel, goed gare aardappel is iets anders en is met mate prima.",
     "pl": "Nie, nie dawaj psu surowych ziemniaków. Surowe i zazielenione ziemniaki są niebezpieczne i potencjalnie toksyczne, bo zawierają solaninę, naturalną toksynę. Co innego zwykły, dobrze ugotowany ziemniak – w umiarkowanej ilości jest w porządku.",
-    "cs": "Ne, nedávejte psovi syrové brambory. Syrové a zelené brambory jsou nebezpečné a potenciálně toxické, protože obsahují solanin, přírodní toxin. Brambory bez dalších přísad, důkladně uvařené, jsou jiná věc a v mírném množství jsou v pořádku."
+    "cs": "Ne, nedávejte psovi syrové brambory. Syrové a zelené brambory jsou nebezpečné a potenciálně toxické, protože obsahují solanin, přírodní toxin. Brambory bez dalších přísad, důkladně uvařené, jsou jiná věc a v mírném množství jsou v pořádku.",
+    "hr": "Ne, ne daj psu sirov krumpir. Sirov i zelen krumpir nije siguran i potencijalno je otrovan jer sadrži solanin, prirodni toksin. Običan, dobro termički obrađen krumpir druga je stvar i u umjerenim je količinama u redu."
   },
   "why": {
     "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
     "sl": "Surov krompir ter krompir z zeleno lupino ali zelenimi lisami vsebuje solanin, naravni strup, ki ga najdemo v rastlinah iz družine razhudnikovk. Zelene lise se pri nekaterih sortah pojavijo na svetlobi in kažejo, da se je količina solanina povečala. Koščki surovega ali napol kuhanega krompirja lahko povzročijo tudi dušenje.",
     "nl": "Rauwe aardappelen, en aardappelen met een groene schil of groene plekken, bevatten solanine, een van nature voorkomende gifstof in planten uit de nachtschadefamilie. Groene plekken ontstaan wanneer sommige aardappelen aan licht worden blootgesteld en wijzen erop dat het solaninegehalte is gestegen. Stukjes rauwe of halfgare aardappel kunnen ook een verstikkingsgevaar zijn.",
     "pl": "Surowe ziemniaki oraz ziemniaki z zieloną skórką lub zielonymi plamami zawierają solaninę, naturalnie występującą toksynę roślin z rodziny psiankowatych. Zielone plamy pojawiają się, gdy niektóre ziemniaki są wystawione na światło, i oznaczają, że poziom solaniny wzrósł. Kawałki surowego lub niedogotowanego ziemniaka mogą też grozić zadławieniem.",
-    "cs": "Syrové brambory a brambory se zelenou slupkou nebo zelenými skvrnami obsahují solanin, přirozeně se vyskytující toxin z rostlin čeledi lilkovitých. Zelené skvrny se objevují, když jsou některé brambory vystaveny světlu, a ukazují, že se zvýšil obsah solaninu. Kousky syrových nebo nedovařených brambor mohou také představovat riziko zadušení."
+    "cs": "Syrové brambory a brambory se zelenou slupkou nebo zelenými skvrnami obsahují solanin, přirozeně se vyskytující toxin z rostlin čeledi lilkovitých. Zelené skvrny se objevují, když jsou některé brambory vystaveny světlu, a ukazují, že se zvýšil obsah solaninu. Kousky syrových nebo nedovařených brambor mohou také představovat riziko zadušení.",
+    "hr": "Sirov krumpir te krumpir sa zelenom korom ili zelenim mrljama sadrže solanin, prirodno prisutan toksin u biljkama iz porodice pomoćnica. Zelene se mrlje pojavljuju kad je krumpir izložen svjetlu i pokazuju da se količina solanina povećala. Komadi sirovog ili napola kuhanog krumpira mogu uzrokovati i gušenje."
   },
   "signs": {
     "en": [
@@ -67,6 +72,12 @@
       "Průjem",
       "Malátnost",
       "Svalová slabost"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Malaksalost",
+      "Slabost mišića"
     ]
   },
   "what_to_do": {
@@ -74,7 +85,8 @@
     "sl": "Če je pes pojedel surov ali zelen krompir, se obrnite na veterinarja ali na center za zastrupitve živali. Nadaljnji koraki so odvisni od velikosti psa, pojedene količine in znakov. Če pes bruha, ima drisko, je zaspan ali šibek, takoj poiščite veterinarja.",
     "nl": "Heeft je hond rauwe of groene aardappel gegeten, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren. Wat je daarna moet doen, hangt af van de grootte van je hond, hoeveel hij heeft gegeten en of er verschijnselen zijn. Braakt je hond, heeft hij diarree of lijkt hij lusteloos of zwak, ga dan meteen naar een dierenarts.",
     "pl": "Jeśli pies zjadł surowy lub zielony ziemniak, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Dalsze postępowanie zależy od wielkości psa, ilości zjedzonego ziemniaka i tego, czy pojawiły się objawy. Jeśli pies wymiotuje, ma biegunkę, wydaje się ospały lub osłabiony, od razu jedź z nim do weterynarza.",
-    "cs": "Pokud váš pes snědl syrovou nebo zelenou bramboru, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Další postup závisí na velikosti psa, na tom, kolik snědl, a na tom, zda má příznaky. Pokud pes zvrací, má průjem, působí malátně nebo slabě, jděte okamžitě k veterináři."
+    "cs": "Pokud váš pes snědl syrovou nebo zelenou bramboru, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Další postup závisí na velikosti psa, na tom, kolik snědl, a na tom, zda má příznaky. Pokud pes zvrací, má průjem, působí malátně nebo slabě, jděte okamžitě k veterináři.",
+    "hr": "Ako je tvoj pas pojeo sirov ili zelen krumpir, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Što dalje, ovisi o veličini psa, pojedenoj količini i o tome ima li znakova. Ako pas povraća, ima proljev, djeluje malaksalo ili slabo, odmah ga odvedi veterinaru."
   },
   "serving": null,
   "child": {
@@ -82,7 +94,8 @@
     "sl": "Surov krompir ni za pse. Če ga pes zgrabi, takoj povej odraslemu.",
     "nl": "Rauwe aardappelen zijn niet voor honden. Pakt een hond er een, vertel het dan meteen aan een volwassene.",
     "pl": "Surowe ziemniaki nie są dla psów. Jeśli twój pies capnie kawałek, od razu powiedz dorosłemu.",
-    "cs": "Syrové brambory nejsou pro psy. Pokud pes nějaký popadne, hned to řekni dospělému."
+    "cs": "Syrové brambory nejsou pro psy. Pokud pes nějaký popadne, hned to řekni dospělému.",
+    "hr": "Sirov krumpir nije za pse. Ako ga pas zgrabi, odmah reci odrasloj osobi."
   },
   "faq": [
     {
@@ -91,14 +104,16 @@
         "sl": "Je kuhan krompir za pse v redu?",
         "nl": "Mogen honden gare aardappelen eten?",
         "pl": "Czy ugotowane ziemniaki są dla psów w porządku?",
-        "cs": "Jsou uvařené brambory pro psy v pořádku?"
+        "cs": "Jsou uvařené brambory pro psy v pořádku?",
+        "hr": "Je li termički obrađen krumpir u redu za pse?"
       },
       "a": {
         "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
         "sl": "Da, navaden kuhan krompir je v zmernih količinah v redu, kuhan toliko, da se ga da pretlačiti, da se pes ne zaduši. Prepričajte se, da ni zelen.",
         "nl": "Ja, naturel gare aardappelen zijn met mate prima. Maak ze zo gaar dat je ze kunt prakken, zodat je hond zich er niet in verslikt. Zorg dat ze niet groen zijn.",
         "pl": "Tak, zwykłe ugotowane ziemniaki w umiarkowanych ilościach są w porządku, o ile są na tyle miękkie, że da się je rozgnieść – wtedy pies się nie zadławi. Upewnij się, że nie są zielone.",
-        "cs": "Ano, brambory bez dalších přísad jsou v mírném množství v pořádku, pokud jsou uvařené tak, aby se daly rozmačkat a pes se jimi nezadusil. Dbejte na to, aby nebyly zelené."
+        "cs": "Ano, brambory bez dalších přísad jsou v mírném množství v pořádku, pokud jsou uvařené tak, aby se daly rozmačkat a pes se jimi nezadusil. Dbejte na to, aby nebyly zelené.",
+        "hr": "Da, običan termički obrađen krumpir u umjerenim je količinama u redu, ako je obrađen toliko da se može zgnječiti kako se pas ne bi ugušio. Pazi da nije zelen."
       }
     },
     {
@@ -107,14 +122,16 @@
         "sl": "Ali lahko psi jedo krompirjeve olupke?",
         "nl": "Mogen honden aardappelschillen eten?",
         "pl": "Czy psy mogą jeść skórki ziemniaków?",
-        "cs": "Mohou psi jíst bramborové slupky?"
+        "cs": "Mohou psi jíst bramborové slupky?",
+        "hr": "Smiju li psi jesti koru krumpira?"
       },
       "a": {
         "en": "Potato skins are okay, but not if they are green.",
         "sl": "Krompirjevi olupki so v redu, vendar ne, če so zeleni.",
         "nl": "Aardappelschillen zijn prima, maar niet als ze groen zijn.",
         "pl": "Skórki ziemniaków są w porządku, ale nie wtedy, gdy są zielone.",
-        "cs": "Bramborové slupky jsou v pořádku, ale ne zelené."
+        "cs": "Bramborové slupky jsou v pořádku, ale ne zelené.",
+        "hr": "Kora krumpira je u redu, ali ne ako je zelena."
       }
     }
   ],
@@ -210,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8045e1b32333d1443396dabbeb38605be847145fc8bf5978955dba24b2d7b6fb"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7cc7e0043e24324c5637c08a2a6c1800d7aba11c663ddd3de764812d66a3bde5"
     }
   }
 }

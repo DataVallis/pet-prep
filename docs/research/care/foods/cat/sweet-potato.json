@@ -6,21 +6,24 @@
     "sl": "Sladki krompir",
     "nl": "Zoete aardappel",
     "pl": "Batat",
-    "cs": "Batáty"
+    "cs": "Batáty",
+    "hr": "Batat"
   },
   "question": {
     "en": "Can cats eat sweet potato?",
     "sl": "Ali lahko mačke jedo sladki krompir?",
     "nl": "Mogen katten zoete aardappel eten?",
     "pl": "Czy koty mogą jeść batat?",
-    "cs": "Mohou kočky jíst batáty?"
+    "cs": "Mohou kočky jíst batáty?",
+    "hr": "Smiju li mačke jesti batat?"
   },
   "url_slug": {
     "en": "sweet-potato",
     "sl": "sladki-krompir",
     "nl": "zoete-aardappel",
     "pl": "batat",
-    "cs": "bataty"
+    "cs": "bataty",
+    "hr": "batat"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Sladki krompir za mačke ni strupen: ASPCA rastlino sladkega krompirja navaja kot nestrupeno za mačke. Vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave, zato naj bo le majhen, občasen dodatek.",
     "nl": "Zoete aardappel is niet giftig voor katten: volgens de ASPCA is de zoete-aardappelplant niet giftig voor katten. Katten hebben echter geen groente nodig en van elk plantaardig materiaal kunnen ze gaan braken of maagklachten krijgen, dus houd het bij een klein extraatje, en alleen af en toe.",
     "pl": "Batat nie jest toksyczny dla kotów: ASPCA uznaje roślinę batata za nietoksyczną dla nich. Koty nie potrzebują jednak warzyw, a zjedzenie jakiegokolwiek materiału roślinnego może wywołać wymioty lub rozstrój żołądka, więc niech to będzie malutki, okazjonalny dodatek.",
-    "cs": "Batáty nejsou pro kočky toxické: ASPCA řadí rostlinu batát mezi netoxické pro kočky. Kočky ale zeleninu nepotřebují a jakákoli rostlinná hmota může způsobit zvracení nebo potíže se žaludkem, proto je dávejte jen jako drobný, občasný doplněk."
+    "cs": "Batáty nejsou pro kočky toxické: ASPCA řadí rostlinu batát mezi netoxické pro kočky. Kočky ale zeleninu nepotřebují a jakákoli rostlinná hmota může způsobit zvracení nebo potíže se žaludkem, proto je dávejte jen jako drobný, občasný doplněk.",
+    "hr": "Batat nije otrovan za mačke: ASPCA biljku batat navodi kao neotrovnu. Mačkama povrće ipak nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe, zato neka to bude samo sasvim mali, povremeni dodatak."
   },
   "why": {
     "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "ASPCA rastlino sladkega krompirja (Ipomoea batatas) navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
     "nl": "De ASPCA noemt de zoete-aardappelplant (Ipomoea batatas) niet giftig voor katten. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken.",
     "pl": "ASPCA uznaje roślinę batata (Ipomoea batatas) za nietoksyczną dla kotów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
-    "cs": "ASPCA řadí rostlinu batát (Ipomoea batatas) mezi netoxické pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem."
+    "cs": "ASPCA řadí rostlinu batát (Ipomoea batatas) mezi netoxické pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
+    "hr": "ASPCA navodi biljku batat (Ipomoea batatas) kao neotrovnu za mačke. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
-    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte batáty podávat a poraďte se s veterinářem."
+    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte batáty podávat a poraďte se s veterinářem.",
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
   },
   "serving": {
     "en": "A small plain piece now and then, with no butter, salt or seasoning.",
     "sl": "Občasno majhen navaden košček, brez masla, soli in začimb.",
     "nl": "Af en toe een klein naturel stukje, zonder boter, zout of kruiden.",
     "pl": "Mały zwykły kawałek od czasu do czasu, bez masła, soli i przypraw.",
-    "cs": "Malý kousek jen občas, bez dalších přísad, másla, soli a koření."
+    "cs": "Malý kousek jen občas, bez dalších přísad, másla, soli a koření.",
+    "hr": "Povremeno mali običan komadić, bez maslaca, soli i začina."
   },
   "child": {
     "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Sladki krompir za muce ni strupen. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
     "nl": "Zoete aardappel is niet giftig voor katten. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Batat nie jest dla kotów trujący. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
-    "cs": "Batáty nejsou pro kočky jedovaté. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk."
+    "cs": "Batáty nejsou pro kočky jedovaté. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
+    "hr": "Batat nije otrovan za mačke. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali je sladki krompir enak navadnemu krompirju?",
         "nl": "Is zoete aardappel hetzelfde als gewone aardappel?",
         "pl": "Czy batat to to samo co zwykły ziemniak?",
-        "cs": "Jsou batáty totéž co běžné brambory?"
+        "cs": "Jsou batáty totéž co běžné brambory?",
+        "hr": "Je li batat isto što i običan krumpir?"
       },
       "a": {
         "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
         "sl": "Ne. ASPCA sladki krompir navaja kot drugo rastlino (Ipomoea batatas, družina slakovk). Surov navaden krompir je nekaj drugega: ASPCA navaja, da je za hišne živali lahko problematičen.",
         "nl": "Nee. Volgens de ASPCA is de zoete aardappel een andere plant (Ipomoea batatas, familie Convolvulaceae). Met rauwe gewone aardappelen ligt dat anders: die kunnen volgens de ASPCA problematisch zijn voor huisdieren.",
         "pl": "Nie. ASPCA podaje, że batat to inna roślina (Ipomoea batatas, rodzina powojowatych). Surowe zwykłe ziemniaki to inna sprawa: według ASPCA mogą być problematyczne dla zwierząt.",
-        "cs": "Ne. ASPCA vede batáty jako jinou rostlinu (Ipomoea batatas, čeleď Convolvulaceae). Syrové běžné brambory jsou něco jiného: podle ASPCA mohou být pro zvířata problematické."
+        "cs": "Ne. ASPCA vede batáty jako jinou rostlinu (Ipomoea batatas, čeleď Convolvulaceae). Syrové běžné brambory jsou něco jiného: podle ASPCA mohou být pro zvířata problematické.",
+        "hr": "Ne. ASPCA navodi batat kao drugu biljku (Ipomoea batatas, porodica Convolvulaceae). Sirov običan krumpir druga je stvar: prema ASPCA može biti problematičan za ljubimce."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
-        "cs": "Potřebují kočky zeleninu?"
+        "cs": "Potřebují kočky zeleninu?",
+        "hr": "Treba li mačkama povrće?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
-        "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk."
+        "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
       }
     }
   ],
@@ -171,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e8519543276e6c9ea214d25c100c181f170c502104b0fd6936b6ba99124c231f"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "88695c613e26f39e8867bb67e63bc871a04c88882b579882a89b1cb690105ace"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Zelje",
     "nl": "Kool",
     "pl": "Kapusta",
-    "cs": "Zelí"
+    "cs": "Zelí",
+    "hr": "Kupus"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
     "sl": "Ali lahko psi jedo zelje?",
     "nl": "Mogen honden kool eten?",
     "pl": "Czy psy mogą jeść kapustę?",
-    "cs": "Mohou psi jíst zelí?"
+    "cs": "Mohou psi jíst zelí?",
+    "hr": "Smiju li psi jesti kupus?"
   },
   "url_slug": {
     "en": "cabbage",
     "sl": "zelje",
     "nl": "kool",
     "pl": "kapusta",
-    "cs": "zeli"
+    "cs": "zeli",
+    "hr": "kupus"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah. Vse vrste zelja so za pse v redu, vendar zelje povzroča veliko vetrov, zato ga uvajajte postopoma. Kuhano ali na pari pripravljeno zelje manj verjetno razdraži prebavo kot surovo.",
     "nl": "Ja, in kleine hoeveelheden. Alle soorten kool zijn prima voor honden, maar kool geeft veel gasvorming, dus laat je hond er rustig aan wennen. Van gekookte of gestoomde kool krijgt een hond minder snel maagklachten dan van rauwe kool.",
     "pl": "Tak, w małych ilościach. Każdy rodzaj kapusty jest dla psów w porządku, ale kapusta powoduje dużo gazów, więc wprowadzaj ją powoli. Kapusta gotowana w wodzie lub na parze rzadziej rozstraja żołądek niż surowa.",
-    "cs": "Ano, v malém množství. Všechny druhy zelí jsou pro psy v pořádku, ale zelí způsobuje nadýmání, proto ho zařazujte postupně. Vařené nebo spařené zelí psovi žaludek podráždí méně než syrové."
+    "cs": "Ano, v malém množství. Všechny druhy zelí jsou pro psy v pořádku, ale zelí způsobuje nadýmání, proto ho zařazujte postupně. Vařené nebo spařené zelí psovi žaludek podráždí méně než syrové.",
+    "hr": "Da, u malim količinama. Sve vrste kupusa u redu su za pse, ali kupus stvara mnogo plinova, zato ga uvodi polako. Kuhan u vodi ili na pari kupus psu će rjeđe uznemiriti želudac nego sirov."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
     "sl": "Zelje je za pse zdravo, vendar povzroča veliko vetrov, česar mnogi psi ne prenašajo dobro. Večja težava so dodatki: maslo in druga mastna hrana lahko povzročita vnetje trebušne slinavke, čebula in česen pa sta za pse strupena.",
     "nl": "Kool is gezond voor honden, maar geeft veel gasvorming, en daar hebben veel honden last van. Kruiden en andere toevoegingen zijn een groter probleem: boter en andere vette producten kunnen een alvleesklierontsteking veroorzaken, en ui en knoflook zijn giftig voor honden.",
     "pl": "Kapusta jest dla psów zdrowa, ale wytwarza dużo gazów, a wiele psów źle to znosi. Większym problemem są przyprawy: masło i inne tłuste dodatki mogą prowadzić do zapalenia trzustki, a cebula i czosnek są dla psów toksyczne.",
-    "cs": "Zelí je pro psy zdravé, ale vytváří velké množství plynů, které mnoho psů nemusí dobře snášet. Větším problémem je ochucení: máslo a další tučná jídla mohou vést k zánětu slinivky břišní a cibule a česnek jsou pro psy toxické."
+    "cs": "Zelí je pro psy zdravé, ale vytváří velké množství plynů, které mnoho psů nemusí dobře snášet. Větším problémem je ochucení: máslo a další tučná jídla mohou vést k zánětu slinivky břišní a cibule a česnek jsou pro psy toxické.",
+    "hr": "Kupus je zdrav za pse, ali stvara velike količine plinova, a mnogi psi to možda neće dobro podnijeti. Veći je problem ono čime se kupus začini: maslac i druga masna hrana mogu dovesti do upale gušterače, a luk i češnjak otrovni su za pse."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Po prvem okušanju zelja psa pozorno opazujte. Če ima pes pogosto veliko vetrov ali je nagnjen k napihnjenosti, se pred tem posvetujte z veterinarjem.",
     "nl": "Let goed op je hond na de eerste hap kool. Heeft je hond vaak last van gasvorming of loopt hij een verhoogd risico op maagtorsie, vraag het dan eerst aan je dierenarts voordat je kool geeft.",
     "pl": "Po pierwszej próbce kapusty uważnie obserwuj psa. Jeśli twój pies ma skłonność do nadmiernych gazów lub wzdęć, zapytaj weterynarza, zanim dasz mu kapustę.",
-    "cs": "Po prvním ochutnání zelí psa pozorně sledujte. Pokud má váš pes často hodně plynů nebo je náchylný k torzi žaludku, poraďte se před podáním zelí s veterinářem."
+    "cs": "Po prvním ochutnání zelí psa pozorně sledujte. Pokud má váš pes často hodně plynů nebo je náchylný k torzi žaludku, poraďte se před podáním zelí s veterinářem.",
+    "hr": "Nakon prvog zalogaja kupusa pažljivo prati psa. Ako tvoj pas često ima mnogo plinova ili je sklon nadutosti, pitaj veterinara prije nego što mu daš kupus."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
     "sl": "Oprano, brez stebla in kocena, kuhano ali pripravljeno na pari in narezano na majhne koščke. Brez dodatkov: brez masla, čebule in česna. Le v majhnih količinah.",
     "nl": "Gewassen, zonder stronk en kern, gekookt of gestoomd en in kleine stukjes gesneden. Ongekruid, dus geen boter, ui of knoflook. Alleen in kleine hoeveelheden.",
     "pl": "Umyta, bez głąba, ugotowana w wodzie lub na parze i pokrojona na małe kawałki. Bez przypraw: bez masła, cebuli i czosnku. Tylko małe ilości.",
-    "cs": "Omyté, bez košťálu a jádra, vařené nebo spařené a nakrájené na malé kousky. Bez ochucení: žádné máslo, cibule ani česnek. Jen v malém množství."
+    "cs": "Omyté, bez košťálu a jádra, vařené nebo spařené a nakrájené na malé kousky. Bez ochucení: žádné máslo, cibule ani česnek. Jen v malém množství.",
+    "hr": "Opran, bez kocena i jezgre, kuhan u vodi ili na pari i narezan na male komadiće. Bez začina: bez maslaca, luka i češnjaka. Samo u malim količinama."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
     "sl": "Psi lahko poskusijo malo navadnega kuhanega zelja. Lahko jim povzroči vetrove, zato le majhen košček!",
     "nl": "Honden mogen een beetje naturel gare kool proberen. Het kan winderigheid geven, dus geef maar een klein stukje!",
     "pl": "Psy mogą spróbować odrobiny zwykłej ugotowanej kapusty. Po niej łatwo o bąki, więc tylko mały kawałek!",
-    "cs": "Pejsek může zkusit trochu uvařeného zelí bez dalších přísad. Může z něj mít nadýmání, tak jen malý kousek!"
+    "cs": "Pejsek může zkusit trochu uvařeného zelí bez dalších přísad. Může z něj mít nadýmání, tak jen malý kousek!",
+    "hr": "Psi smiju probati malo kuhanog kupusa bez dodataka. Može im izazvati plinove, zato samo mali komadić!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo surovo zelje?",
         "nl": "Mogen honden rauwe kool eten?",
         "pl": "Czy psy mogą jeść surową kapustę?",
-        "cs": "Mohou psi jíst syrové zelí?"
+        "cs": "Mohou psi jíst syrové zelí?",
+        "hr": "Smiju li psi jesti sirov kupus?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
         "sl": "Lahko, vendar kuhano ali na pari pripravljeno zelje manj verjetno razdraži pasjo prebavo. V vsakem primeru ga narežite na majhne koščke.",
         "nl": "Dat kan, maar van gekookte of gestoomde kool krijgt een hond minder snel last van zijn spijsvertering. Snijd de kool hoe dan ook in kleine stukjes.",
         "pl": "Mogą, ale kapusta gotowana w wodzie lub na parze rzadziej zaburza psu trawienie. Tak czy inaczej pokrój ją na małe kawałki.",
-        "cs": "Mohou, ale vařené nebo spařené zelí psovi trávení podráždí méně. Nakrájejte ho na malé kousky tak či onak."
+        "cs": "Mohou, ale vařené nebo spařené zelí psovi trávení podráždí méně. Nakrájejte ho na malé kousky tak či onak.",
+        "hr": "Smiju, ali kupus kuhan u vodi ili na pari manje će nadražiti pasju probavu. U oba ga slučaja nareži na male komadiće."
       }
     }
   ],
@@ -164,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2bf455dcb846a7050e29004573a98b4cc657e46162fbfbfa621290cc05107829"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ae99a2c2d42c74d9c5c125d14421429e4e984fb3c6e6bf10f7d30eed45fa1d3c"
     }
   }
 }

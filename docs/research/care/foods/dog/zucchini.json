@@ -6,21 +6,24 @@
     "sl": "Bučke",
     "nl": "Courgette",
     "pl": "Cukinia",
-    "cs": "Cuketa"
+    "cs": "Cuketa",
+    "hr": "Tikvice"
   },
   "question": {
     "en": "Can dogs eat zucchini?",
     "sl": "Ali lahko psi jedo bučke?",
     "nl": "Mogen honden courgette eten?",
     "pl": "Czy psy mogą jeść cukinię?",
-    "cs": "Mohou psi jíst cuketu?"
+    "cs": "Mohou psi jíst cuketu?",
+    "hr": "Smiju li psi jesti tikvice?"
   },
   "url_slug": {
     "en": "zucchini",
     "sl": "bucke",
     "nl": "courgette",
     "pl": "cukinia",
-    "cs": "cuketa"
+    "cs": "cuketa",
+    "hr": "tikvice"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, bučke so za pse povsem varne. Navadne surove, na pari ali kuhane bučke so v zmernih količinah v redu. Narežite jih na majhne koščke, saj se lahko pes z večjimi kosi zaduši, in ne dodajajte olja, soli ali začimb.",
     "nl": "Ja, courgette is voor honden volkomen veilig. Naturel, rauw, gestoomd of gaar is courgette met mate prima. Snijd hem in kleine stukjes, want grote stukken kunnen een verstikkingsgevaar zijn, en laat olie, zout en kruiden weg.",
     "pl": "Tak, cukinia jest dla psów całkowicie bezpieczna. Zwykła cukinia – surowa, gotowana na parze lub gotowana w wodzie – jest w porządku w umiarkowanych ilościach. Pokrój ją na małe kawałki, bo duże mogą grozić zadławieniem, i pomiń olej, sól i przyprawy.",
-    "cs": "Ano, cuketa je pro psy naprosto bezpečná. Syrová, spařená nebo tepelně upravená cuketa bez dalších přísad je v mírném množství v pořádku. Nakrájejte ji na malé kousky, protože velké kusy mohou způsobit zadušení, a vynechte olej, sůl a koření."
+    "cs": "Ano, cuketa je pro psy naprosto bezpečná. Syrová, spařená nebo tepelně upravená cuketa bez dalších přísad je v mírném množství v pořádku. Nakrájejte ji na malé kousky, protože velké kusy mohou způsobit zadušení, a vynechte olej, sůl a koření.",
+    "hr": "Da, tikvice su za pse potpuno sigurne. Obične tikvice, sirove, kuhane na pari ili termički obrađene, u umjerenim su količinama u redu. Nareži ih na male komadiće jer veliki komadi mogu izazvati gušenje, a ulje, sol i začine izostavi."
   },
   "why": {
     "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
     "sl": "Noben del rastline bučke ni strupen. Nevarnosti izvirajo iz načina priprave: večji kosi lahko povzročijo dušenje, velika količina lahko razdraži prebavo, olja, sol, začimbe, česen in čebula pa psom škodijo.",
     "nl": "Geen enkel deel van de courgetteplant is giftig. De risico’s zitten in de manier waarop je de courgette geeft: grote stukken kunnen verstikking veroorzaken, een grote hoeveelheid kan de spijsvertering van streek maken, en olie, zout, kruiden, knoflook en ui zijn schadelijk voor honden.",
     "pl": "Wszystkie części rośliny są nietoksyczne. Ryzyko wynika ze sposobu podania: duże kawałki mogą spowodować zadławienie, duża ilość może zaburzyć trawienie, a olej, sól, przyprawy, czosnek i cebula szkodzą psom.",
-    "cs": "Všechny části rostliny cukety jsou netoxické. Rizika vyplývají ze způsobu podání: velké kusy mohou způsobit zadušení, větší množství může podráždit trávení a olej, sůl, koření, česnek a cibule jsou pro psy škodlivé."
+    "cs": "Všechny části rostliny cukety jsou netoxické. Rizika vyplývají ze způsobu podání: velké kusy mohou způsobit zadušení, větší množství může podráždit trávení a olej, sůl, koření, česnek a cibule jsou pro psy škodlivé.",
+    "hr": "Svi su dijelovi biljke tikvice neotrovni. Rizici dolaze od načina posluživanja: veliki komadi mogu izazvati gušenje, velika količina može uznemiriti probavu, a ulja, sol, začini, češnjak i luk štetni su za pse."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Bučke ponudite le v majhnih količinah: velika količina katere koli hrane lahko psu razdraži prebavo. Nikoli mu ne dajte cele bučke.",
     "nl": "Houd het bij kleine hoeveelheden: van een grote hoeveelheid van wat dan ook kan een hond spijsverteringsklachten krijgen. Geef nooit een hele courgette.",
     "pl": "Podawaj cukinię w małych ilościach: duża porcja czegokolwiek może wywołać rozstrój trawienia. Nigdy nie dawaj psu całej cukinii.",
-    "cs": "Dávejte cuketu v malém množství: velké množství čehokoli může u psa vést k potížím s trávením. Nikdy nedávejte psovi celou cuketu."
+    "cs": "Dávejte cuketu v malém množství: velké množství čehokoli může u psa vést k potížím s trávením. Nikdy nedávejte psovi celou cuketu.",
+    "hr": "Tikvice daj u malim količinama: velika količina bilo čega može kod psa dovesti do probavnih smetnji. Nikad psu ne daj cijelu tikvicu."
   },
   "serving": {
     "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
     "sl": "Navadne, surove, na pari ali kuhane, narezane na majhne koščke; psom, ki težko žvečijo, jih pripravite na pari. Brez olja, soli, začimb, česna in čebule.",
     "nl": "Naturel, rauw, gestoomd of gaar, in kleine stukjes gesneden; stoom hem voor honden die moeite hebben met kauwen. Geen olie, zout, kruiden, knoflook of ui.",
     "pl": "Zwykła, surowa, gotowana na parze lub w wodzie, pokrojona na małe kawałki; dla psów, które mają trudności z gryzieniem, ugotuj ją na parze. Bez oleju, soli, przypraw, czosnku i cebuli.",
-    "cs": "Bez dodatků, syrová, spařená nebo tepelně upravená, nakrájená na malé kousky; psům, kteří mají potíže s kousáním, ji spařte. Bez oleje, soli, koření, česneku a cibule."
+    "cs": "Bez dodatků, syrová, spařená nebo tepelně upravená, nakrájená na malé kousky; psům, kteří mají potíže s kousáním, ji spařte. Bez oleje, soli, koření, česneku a cibule.",
+    "hr": "Obične, sirove, kuhane na pari ili termički obrađene, narezane na male komadiće; za pse koji teško žvaču skuhaj ih na pari. Bez ulja, soli, začina, češnjaka i luka."
   },
   "child": {
     "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
     "sl": "Psi lahko pogrizljajo malo navadnih bučk. Odrasli jih najprej nareže na majhne koščke.",
     "nl": "Honden mogen een beetje naturel courgette knabbelen. Een volwassene snijdt hem eerst in kleine stukjes.",
     "pl": "Psy mogą skubnąć odrobinę zwykłej cukinii. Dorosły najpierw kroi ją na małe kawałki.",
-    "cs": "Pejsek může okusovat trochu cukety bez dalších přísad. Dospělý ji nejdřív nakrájí na malé kousky."
+    "cs": "Pejsek může okusovat trochu cukety bez dalších přísad. Dospělý ji nejdřív nakrájí na malé kousky.",
+    "hr": "Psi smiju grickati malo običnih tikvica. Odrasla osoba ih prvo nareže na male komadiće."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo kruh ali pecivo z bučkami?",
         "nl": "Mogen honden courgettebrood eten?",
         "pl": "Czy psy mogą jeść chleb z cukinii?",
-        "cs": "Mohou psi jíst cuketový chlebíček?"
+        "cs": "Mohou psi jíst cuketový chlebíček?",
+        "hr": "Smiju li psi jesti kruh od tikvica?"
       },
       "a": {
         "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
         "sl": "Ne. Kruh in drugo pecivo z bučkami ni primerno. Posebej pazite na ksilitol, sladilo, ki je za pse strupeno.",
         "nl": "Nee. Courgettebrood en ander gebak met courgette zijn problematisch. Pas vooral op voor xylitol, een zoetstof die giftig is voor honden.",
         "pl": "Nie. Chleb z cukinii i inne wypieki z cukinią są problematyczne. Uważaj zwłaszcza na ksylitol, słodzik toksyczny dla psów.",
-        "cs": "Ne. Cuketový chlebíček a další pečivo s cuketou jsou problematické. Dejte pozor hlavně na xylitol, sladidlo toxické pro psy."
+        "cs": "Ne. Cuketový chlebíček a další pečivo s cuketou jsou problematické. Dejte pozor hlavně na xylitol, sladidlo toxické pro psy.",
+        "hr": "Ne. Kruh od tikvica i druga pečena jela s tikvicama problematični su. Pazi osobito na ksilitol, sladilo otrovno za pse."
       }
     }
   ],
@@ -155,6 +165,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9e1fe9522f4487fc15c4324fc2fc2aa57802b30b96e295561046e4e3d0fd9aaa"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ebcbdbaf02049ea34e5304705efd64cd81bdb5d197086ec7b0af4e308b57298e"
     }
   }
 }
