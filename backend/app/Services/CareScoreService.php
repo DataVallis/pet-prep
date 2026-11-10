@@ -43,12 +43,34 @@ use Illuminate\Support\Collection;
  *        child: every missed routine they shared — a sibling can't hide
  *        behind the other); else GREEN. Today = the family-local day.
  *        Illnesses count from the first ledger day (and the child's start).
+ * Upgrade (M6-U01, FREE_PET_UPGRADE_SPEC §5.1 / §5.4, K1 / K2): for a free pet
+ *        upgraded by a purchase (`pets.challenge_started_at`) the Care Score,
+ *        the pet score, the illnesses and the 12-week progress count only from
+ *        the purchase: a child's challenge start = max(their start, the
+ *        purchase) (`challenge_starts`); a daily routine counts when its
+ *        deadline is after the purchase, a weekly / monthly period only when it
+ *        opens after it (challengeCounts()). History (`starts`, day rows, last 7
+ *        days, the fair share) is unchanged — days before the purchase stay
+ *        visible, marked `pre_challenge`.
  */
 class CareScoreService
 {
     public const ILLNESS_PENALTY = 10;
 
     public const CHALLENGE_WEEKS = 12;
+
+    /**
+     * Routines of a period longer than a day (weekly / monthly — K1): they count for
+     * an upgraded pet only when the period opens after the purchase.
+     */
+    public const PERIOD_ROUTINES = [
+        RoutineType::LitterChange,
+        RoutineType::Grooming,
+        RoutineType::ToothBrushing,
+        RoutineType::FoldCleaning,
+        RoutineType::EarCleaning,
+        RoutineType::NailTrim,
+    ];
 
     /** Yellow when MORE than this many routines of today were missed. */
     public const YELLOW_AFTER_MISSED = 2;
@@ -124,6 +146,19 @@ class CareScoreService
             }
         }
 
+        // M6-U01: an upgraded free pet's challenge starts at the purchase — per child
+        // max(their start, the purchase); a child joining later starts at their contract.
+        $challengeStarted = [];
+        $challengeStarts = [];
+        foreach ($pets as $pet) {
+            $started = $pet->challenge_started_at !== null ? CarbonImmutable::instance($pet->challenge_started_at)->utc() : null;
+            $challengeStarted[$pet->id] = $started;
+            $challengeStarts[$pet->id] = [];
+            foreach ($starts[$pet->id] as $key => $start) {
+                $challengeStarts[$pet->id][$key] = $start !== null && $started !== null && $start->lessThan($started) ? $started : $start;
+            }
+        }
+
         // Illnesses count only from the first ledger day on (routines before
         // it aren't scored either); per child additionally from their start.
         $ledgerStart = [];
@@ -188,6 +223,10 @@ class CareScoreService
             'pets' => $pets->keyBy('id'),
             'routines' => $routines,
             'starts' => $starts,
+            // M6-U01: when each child's CHALLENGE started (score, progress, certificate) and
+            // the pet's upgrade purchase (null = not upgraded: equal to `starts`).
+            'challenge_starts' => $challengeStarts,
+            'challenge_started' => $challengeStarted,
             'ends' => $ends,
             'illnesses' => $illnesses->map(fn ($rows) => $rows->map(fn ($r) => CarbonImmutable::instance($r->started_at)->utc())->values()->all())->all(),
             'steps' => $steps,
@@ -207,10 +246,12 @@ class CareScoreService
      */
     public function petSummary(array $board, Pet $pet): array
     {
-        $routines = array_values(array_filter($board['routines'][$pet->id] ?? [], fn (Routine $r) => ! $r->isPending()));
+        // K2 (M6-U01): an upgraded pet's score counts from the purchase, like the certificate.
+        $since = self::challengeStartedOf($board, $pet);
+        $routines = array_values(array_filter($board['routines'][$pet->id] ?? [], fn (Routine $r) => ! $r->isPending() && self::challengeCounts($r, $since)));
         $done = count(array_filter($routines, fn (Routine $r) => $r->isDone()));
         $expected = count($routines);
-        $illnesses = count($board['illnesses'][$pet->id] ?? []);
+        $illnesses = count(array_filter($board['illnesses'][$pet->id] ?? [], fn (CarbonImmutable $at) => $since === null || $at->greaterThanOrEqualTo($since)));
 
         return [
             'traffic_light' => $this->petLight($board, $pet),
@@ -219,7 +260,7 @@ class CareScoreService
                 'done' => $done,
                 'expected' => $expected,
                 'illnesses' => $illnesses,
-                'since' => $pet->born_at?->toIso8601String(),
+                'since' => $since !== null ? $since->toIso8601String() : $pet->born_at?->toIso8601String(),
             ],
             'today' => $this->dayBlock($board, $pet, null, self::todayOf($board, $pet)),
         ];
@@ -277,7 +318,8 @@ class CareScoreService
                 : $this->emptyDay($today),
             'last_7_days' => array_map(fn (string $date) => $this->dailyRow($board, $childId, $pet, $date), $days),
             // M3-11: the free plan has no 12-week program → no progress.
-            'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $start, $pet),
+            // M6-U01: the week counts from the child's CHALLENGE start (an upgrade: the purchase).
+            'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $pet !== null ? self::challengeStartOf($board, $pet, $childId) : null, $pet),
         ];
     }
 
@@ -292,17 +334,20 @@ class CareScoreService
      */
     public function childScore(array $board, int $childId, ?Pet $pet, ?string $fromDate = null, ?string $toDate = null): array
     {
-        $start = $pet !== null ? ($board['starts'][$pet->id][$childId] ?? null) : null;
+        // M6-U01: the child's CHALLENGE start (an upgraded pet: never before the purchase).
+        $start = $pet !== null ? self::challengeStartOf($board, $pet, $childId) : null;
         if ($pet === null || $start === null) {
             return ['score' => null, 'done' => 0, 'expected' => 0, 'routines' => 0, 'illnesses' => 0, 'since' => null];
         }
+        $since = self::challengeStartedOf($board, $pet);
 
         $fair = 0.0;
         $done = 0;
         $count = 0;
         foreach ($board['routines'][$pet->id] ?? [] as $r) {
             if ($r->isPending() || ($fromDate !== null && $r->localDate < $fromDate)
-                || ($toDate !== null && $r->localDate > $toDate)) {
+                || ($toDate !== null && $r->localDate > $toDate)
+                || ! self::challengeCounts($r, $since)) {
                 continue;
             }
             $n = $this->sharers($board, $pet, $r, $childId);
@@ -437,6 +482,9 @@ class CareScoreService
                 : StepUnit::Steps->value,
             // M5-T12: walk minutes a parent logged for this child that day (part of walk_steps).
             'walk_logged_minutes' => $pet !== null ? (int) ($board['logged_minutes'][$pet->id][$childId][$date] ?? 0) : 0,
+            // M6-U01 (§5.5): a day before the purchase that upgraded the free pet — shown in the
+            // history (labelled »pred izzivom«), never counted in the Care Score / certificate.
+            'pre_challenge' => $pet !== null && self::isPreChallengeDate($board, $pet, $date),
         ];
         // M5-R06-08b: a cat's day carries its wand play (all children together; null
         // while no play routine exists that day) — dogs' rows stay byte-identical.
@@ -564,6 +612,63 @@ class CareScoreService
             fn (Routine $r) => $r->localDate === $today
                 || ($r->isMissed() && $r->dueAt->greaterThan($start) && $r->dueAt->lessThanOrEqualTo($end)),
         ));
+    }
+
+    /**
+     * M6-U01: the purchase that upgraded the pet to the challenge (null = not an
+     * upgraded pet — every rule below is then exactly as before).
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function challengeStartedOf(array $board, Pet $pet): ?CarbonImmutable
+    {
+        if (array_key_exists('challenge_started', $board)) {
+            return $board['challenge_started'][$pet->id] ?? null;
+        }
+
+        return $pet->challenge_started_at !== null ? CarbonImmutable::instance($pet->challenge_started_at)->utc() : null;
+    }
+
+    /**
+     * When one child's 12-week CHALLENGE started on this pet: their start (contract /
+     * birth / stored start), but never before an upgrade purchase (M6-U01).
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function challengeStartOf(array $board, Pet $pet, int $childId): ?CarbonImmutable
+    {
+        return $board['challenge_starts'][$pet->id][$childId] ?? ($board['starts'][$pet->id][$childId] ?? null);
+    }
+
+    /**
+     * K1 (M6-U01, David 2026-11-10): does routine $r count for a challenge that
+     * started at $since? Daily routines count when their deadline is after the
+     * purchase (an already open feed window / mess / today's walk included); a weekly
+     * or monthly period only when it opens at or after the purchase (the next period).
+     * Always true for a pet that was not upgraded ($since null).
+     */
+    public static function challengeCounts(Routine $r, ?CarbonImmutable $since): bool
+    {
+        if ($since === null) {
+            return true;
+        }
+
+        return in_array($r->type, self::PERIOD_ROUTINES, true)
+            ? $r->opensAt->greaterThanOrEqualTo($since)
+            : $r->dueAt->greaterThan($since);
+    }
+
+    /**
+     * A local date of the pet (its own zone) wholly before the upgrade purchase —
+     * »pred izzivom« in the history (§5.5). The purchase day itself is a challenge day.
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function isPreChallengeDate(array $board, Pet $pet, string $date): bool
+    {
+        $since = self::challengeStartedOf($board, $pet);
+
+        return $since !== null && $date < $since->setTimezone(self::zoneOf($board, $pet))->toDateString();
     }
 
     /**

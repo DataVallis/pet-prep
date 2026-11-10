@@ -127,8 +127,12 @@ class ChallengeCertificateService
         $launch = self::launchedAt();
 
         // Lower bound of a caretaker's start (completion ≥ start + 84 days).
-        $start = 'COALESCE(c.started_at, (SELECT MIN(k.signed_at) FROM pet_contracts k WHERE k.pet_id = c.pet_id AND k.user_id = c.user_id), '
+        $caretakerStart = 'COALESCE(c.started_at, (SELECT MIN(k.signed_at) FROM pet_contracts k WHERE k.pet_id = c.pet_id AND k.user_id = c.user_id), '
             .'CASE WHEN c.requires_contract THEN NULL ELSE pets.born_at END)';
+        // M6-U01: an upgraded free pet's challenge starts at the purchase — the child's
+        // CHALLENGE start = max(their start, pets.challenge_started_at); still NULL while
+        // the child has not started (GREATEST alone would ignore that NULL).
+        $start = "(CASE WHEN {$caretakerStart} IS NULL THEN NULL ELSE GREATEST({$caretakerStart}, pets.challenge_started_at) END)";
         $pending = fn ($q) => $q->selectRaw('1')
             ->from('pet_caretakers as c')
             ->whereColumn('c.pet_id', 'pets.id')
@@ -321,9 +325,11 @@ class ChallengeCertificateService
     }
 
     /**
-     * When the child started caring (same rule as CareScoreService::board):
+     * When the child's CHALLENGE started (same rule as CareScoreService::board):
      * the stored start, their contract, or the birth for grandfathered
-     * caretakers; never before the birth.
+     * caretakers; never before the birth — and (M6-U01) never before the purchase
+     * that upgraded a free pet (`pets.challenge_started_at`): the 84 program days,
+     * the certificate's `started_at` and its score count from there.
      *
      * @param  Collection<int, PetContract>  $contracts
      */
@@ -343,7 +349,13 @@ class ChallengeCertificateService
             $start = $signed?->signed_at !== null ? CarbonImmutable::instance($signed->signed_at)->utc() : null;
         }
 
-        return $start !== null && $start->lessThan($bornAt) ? $bornAt : $start;
+        $start = $start !== null && $start->lessThan($bornAt) ? $bornAt : $start;
+        if ($start !== null && $pet->challenge_started_at !== null) {
+            $upgrade = CarbonImmutable::instance($pet->challenge_started_at)->utc();
+            $start = $start->lessThan($upgrade) ? $upgrade : $start;
+        }
+
+        return $start;
     }
 
     /**

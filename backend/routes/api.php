@@ -214,6 +214,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         // payment status; assign a purchase (challenge credit) to a pet.
         Route::get('billing', [BillingController::class, 'index']);
         Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
+        // M6-U01 (FREE_PET_UPGRADE_SPEC §5.3): which pet the next store purchase is for (before the store sheet).
+        Route::post('pets/{pet}/challenge/intent', [BillingController::class, 'intent']);
 
         // M6-W01 / W02 »Želje«: the family's wish list, »Ne zdaj«, and putting a bought item on a pet.
         Route::get('wishes', [WishController::class, 'parentIndex']);

@@ -193,8 +193,12 @@ class ChallengeService
      * challenge clock resumes where it stopped at the lock (M3-11b: lock time
      * is not program time — Pet::programSecondsAt), no trial extension. Caller
      * holds the pet row lock. Returns false when it already was paid.
+     *
+     * `$upgrade` (M6-U01): a free pet upgraded to the challenge by this purchase —
+     * it was playing, so it never "waited" and never sees the set-up screen; the
+     * caller has already switched the plan / challenge clock on the same row.
      */
-    public function markPaid(Pet $pet, ChallengePaidSource $source, CarbonInterface $now): bool
+    public function markPaid(Pet $pet, ChallengePaidSource $source, CarbonInterface $now, bool $upgrade = false): bool
     {
         if ($pet->challenge_paid_at !== null) {
             return false;
@@ -202,7 +206,7 @@ class ChallengeService
 
         // M5-T06 (QA M1): only a pet that waited behind the payment lock starts its
         // preparation with the purchase — read BEFORE the lock is lifted below.
-        $waited = $pet->payment_locked_at !== null || $pet->awaitsPayment();
+        $waited = ! $upgrade && ($pet->payment_locked_at !== null || $pet->awaitsPayment());
 
         $pet->forceFill([
             'challenge_paid_at' => $now,
@@ -287,7 +291,9 @@ class ChallengeService
      * The pet's credit was refunded (PAYMENTS_SPEC §2): unless the 12-week
      * challenge is already finished, the pet is unpaid again — locked at once
      * (with the lock pushes); only a pre-M3-13 pet still inside its old 7-day
-     * trial goes back to that trial. A mutt becomes the free plan instead (P4 — never locked).
+     * trial goes back to that trial. A mutt becomes the free plan instead (P4 — never locked);
+     * so does a free pet upgraded to the challenge (M6-U01 — mutt or domestic cat). The
+     * "finished" guard reads the challenge clock (from the upgrade purchase, M6-U01).
      * Caller holds the pet row lock. Returns true if changed.
      */
     public function markRefunded(Pet $pet, CarbonInterface $now): bool
@@ -301,6 +307,8 @@ class ChallengeService
 
         // PAYMENTS_SPEC P4 / M5-F02: a refunded mutt (bought before M5-F03) is never
         // re-locked — it becomes the free mutt (same bookkeeping as the migration).
+        // M6-U01: an upgraded free pet (mutt / domestic cat) goes back to the free plan the
+        // same way; its challenge clock ends (a new purchase starts a new one — K7).
         if (! $pet->breed_type->isPremium()) {
             $pet->forceFill([
                 'challenge_paid_at' => null,
@@ -309,6 +317,7 @@ class ChallengeService
                 'trial_ends_at' => null,
                 'payment_locked_at' => null,
                 'converted_to_free_at' => $now,
+                'challenge_started_at' => null,
             ])->save();
             PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
 

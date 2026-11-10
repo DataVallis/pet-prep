@@ -625,6 +625,15 @@ return [
             'threshold' => 'Opozorilo po (min)',
         ],
     ],
+    'unassigned_credit' => [
+        'discord' => [
+            'title' => 'Nakupov izziva brez ljubljenčka več kot :minutes min: :count',
+            'body' => 'Starš je plačal 12-tedenski izziv, nakup pa še ni na nobenem ljubljenčku, čeprav ima družina ljubljenčka, ki čaka na nakup, ali je pred nakupom izbrala ljubljenčka (namen nakupa). Nova aplikacija ob naslednjem zagonu ponudi »Izberite ljubljenčka«; sicer ga dodeli v /admin (Challenge credits) ali piši družini (M6-U01).',
+            'credits' => 'ID-ji nakupov',
+            'families' => 'ID-ji družin',
+            'environments' => 'Okolje trgovine',
+        ],
+    ],
     'disk_space' => [
         'discord' => [
             'title' => 'Disk strežnika je poln :percent',

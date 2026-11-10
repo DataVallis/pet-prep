@@ -130,7 +130,7 @@ describe('familyPetMood (parent card)', () => {
         normalizePet(
           makeFamilyPet({
             pet_state: 'idle',
-            plan: { type: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' },
+            plan: { type: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge', challenge_started_at: null },
           }),
         ),
       ),

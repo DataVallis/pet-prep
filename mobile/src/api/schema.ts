@@ -269,7 +269,11 @@ export interface paths {
          *     `payment_required` (also before birth — buy first, M3-13) or `trial`
          *     (a pre-M3-13 trial still running, or payments not enforced).
          *     `trial_ends_at` null = free plan or not born yet; `trial_available` is
-         *     deprecated (no free trial since M3-13)
+         *     deprecated (no free trial since M3-13). M6-U01: `upgrade` (free pets only,
+         *     null for a challenge pet) says whether the free pet can be upgraded to the
+         *     challenge (`reason` when not — `legacy_profile` → the app explains);
+         *     `challenge_started_at` = the purchase that upgraded a free pet (its 12 weeks
+         *     start there), null for every other pet
          * @description GET /api/parent/billing
          */
         get: operations["billing.index"];
@@ -297,10 +301,42 @@ export interface paths {
          *     webhook may have assigned it already). 409 `no_credit` = the purchase
          *     has not reached the server yet (retry shortly). 422 `free_plan`,
          *     `already_paid` (grandfathered pet), `pet_not_active`. Another family's
-         *     pet → 404 `pet_not_found`
+         *     pet → 404 `pet_not_found`. M6-U01: a born, active free pet (mutt / domestic
+         *     cat) is upgraded to the 12-week challenge — the challenge starts now; 422
+         *     `game_over`, `pet_not_born`, `legacy_profile` (a pre-M5 mutt), `free_plan`
+         *     (a free pet of a paid breed)
          * @description POST /api/parent/pets/{pet}/challenge/activate
          */
         post: operations["billing.activate"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/pets/{pet}/challenge/intent": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * M6-U01 purchase intent (FREE_PET_UPGRADE_SPEC §5.3): call it right BEFORE
+         *     opening the store sheet — the server remembers, for this parent (the
+         *     RevenueCat app user), which pet the next challenge purchase is for, and the
+         *     webhook assigns the purchase to it (a free pet is upgraded). Single use,
+         *     valid 30 minutes; a new intent replaces the parent's earlier one. Still
+         *     call `activate` after the purchase (idempotent). Allowed for an active
+         *     unpaid challenge pet (also unborn) or an upgradeable free pet; 422
+         *     `already_paid`, `pet_not_active`, `game_over`, `pet_not_born`,
+         *     `legacy_profile`, `free_plan`. Another family's pet → 404 `pet_not_found`.
+         *     The app must not open the store sheet when this fails
+         * @description POST /api/parent/pets/{pet}/challenge/intent
+         */
+        post: operations["billing.intent"];
         delete?: never;
         options?: never;
         head?: never;
@@ -2817,6 +2853,8 @@ export interface components {
             state_media_version: number;
             care_tasks_enabled: boolean;
             timezone: string | null;
+            /** Format: date-time */
+            challenge_started_at: string | null;
         };
         /**
          * PetOrigin
@@ -3642,6 +3680,12 @@ export interface operations {
                             paid_at: string | null;
                             trial_available: boolean | null;
                             deletion_loses_purchase: boolean;
+                            challenge_started_at: string | null;
+                            upgrade: {
+                                available: boolean;
+                                /** @enum {string|null} */
+                                reason: "legacy_profile" | "pet_not_born" | "game_over" | "pet_not_active" | "free_plan" | null;
+                            } | null;
                         }[];
                     };
                 };
@@ -3683,9 +3727,63 @@ export interface operations {
                              * @enum {string}
                              */
                             display_type: "free" | "challenge";
+                            /**
+                             * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                             *     start here); null for every other pet.
+                             */
+                            challenge_started_at: string | null;
                         };
                         credits_available: number;
                     } | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such pet in your family.";
+                        /** @constant */
+                        reason: "pet_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "billing.intent": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pet: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string;
+                };
+            };
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        intent_id: number;
+                        pet_id: number;
+                        expires_at: string;
+                    };
                 };
             };
             401: components["responses"]["AuthenticationException"];
@@ -4501,6 +4599,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -5524,6 +5627,11 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 display_type: "free" | "challenge";
+                                /**
+                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                 *     start here); null for every other pet.
+                                 */
+                                challenge_started_at: string | null;
                             };
                             /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                             current_video_url: string | null;
@@ -6567,6 +6675,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -7608,6 +7721,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -8649,6 +8767,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -9690,6 +9813,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -10731,6 +10859,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -11776,6 +11909,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -12821,6 +12959,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -13866,6 +14009,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -14911,6 +15059,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -15956,6 +16109,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -16997,6 +17155,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -18038,6 +18201,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -19083,6 +19251,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -20124,6 +20297,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -21169,6 +21347,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -22210,6 +22393,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -23255,6 +23443,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -24300,6 +24493,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -25345,6 +25543,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -26390,6 +26593,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -27435,6 +27643,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -29060,6 +29273,11 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 display_type: "free" | "challenge";
+                                /**
+                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                 *     start here); null for every other pet.
+                                 */
+                                challenge_started_at: string | null;
                             };
                             /** @description M5-R01: origin, age, life stage and today's rules. */
                             profile: {
@@ -29374,7 +29592,22 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
+                                /**
+                                 * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
+                                 *     (`reason` when not: `legacy_profile` → the app explains, D3)? Null for a
+                                 *     challenge pet. Parent dashboard only (never in the child state).
+                                 */
+                                upgrade: {
+                                    available: boolean;
+                                    /** @enum {string|null} */
+                                    reason: "legacy_profile" | "pet_not_born" | "game_over" | "pet_not_active" | "free_plan" | null;
+                                } | null;
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by
                                  *     child / by parent in quiet hours, step goal).
@@ -29953,7 +30186,22 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
+                                /**
+                                 * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
+                                 *     (`reason` when not: `legacy_profile` → the app explains, D3)? Null for a
+                                 *     challenge pet. Parent dashboard only (never in the child state).
+                                 */
+                                upgrade: {
+                                    available: boolean;
+                                    /** @enum {string|null} */
+                                    reason: "legacy_profile" | "pet_not_born" | "game_over" | "pet_not_active" | "free_plan" | null;
+                                } | null;
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by
                                  *     child / by parent in quiet hours, step goal).
@@ -31466,6 +31714,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -32489,6 +32742,11 @@ export interface operations {
                                      * @enum {string}
                                      */
                                     display_type: "free" | "challenge";
+                                    /**
+                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+                                     *     start here); null for every other pet.
+                                     */
+                                    challenge_started_at: string | null;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;

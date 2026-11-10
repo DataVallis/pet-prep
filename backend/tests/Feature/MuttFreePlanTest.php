@@ -256,7 +256,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
             ->and($pet->converted_to_free_at)->not->toBeNull();
 
         $plan = mfDashboardPlan($parent, $pet);
-        expect($plan)->toMatchArray(['type' => 'free', 'status' => null, 'display_type' => 'free']);
+        expect($plan)->toMatchArray(['type' => 'free', 'status' => null, 'display_type' => 'free', 'challenge_started_at' => null]);
 
         // Weeks later: no lock, no payment status.
         Carbon::setTestNow(Carbon::parse('2026-10-20 10:00:00', 'UTC'));
@@ -265,7 +265,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
         // Nothing to buy for it.
         app('auth')->forgetGuards();
         actingAsRole($parent);
-        postJson("/api/parent/pets/{$pet->id}/challenge/activate")->assertStatus(422)->assertJsonPath('reason', 'free_plan');
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate")->assertStatus(422)->assertJsonPath('reason', 'legacy_profile'); // M6-U01: a pre-M5 free mutt is never upgraded (K5)
     });
 
     it('makes a payment-locked mutt playable again; the lock period is closed and stays out of the program clock', function () {

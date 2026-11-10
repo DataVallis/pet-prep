@@ -626,6 +626,15 @@ return [
             'threshold' => 'Alert after (min)',
         ],
     ],
+    'unassigned_credit' => [
+        'discord' => [
+            'title' => ':count challenge purchase(s) not assigned to a pet for over :minutes min',
+            'body' => 'A parent paid for the 12-week challenge, but the purchase is not on any pet yet, although the family has a pet waiting for payment or chose a pet before buying (purchase intent). The new app offers »Choose a pet« on its next start; otherwise assign it in /admin (Challenge credits) or contact the family (M6-U01).',
+            'credits' => 'Purchase ids',
+            'families' => 'Family ids',
+            'environments' => 'Store environment',
+        ],
+    ],
     'disk_space' => [
         'discord' => [
             'title' => 'Server disk :percent full',

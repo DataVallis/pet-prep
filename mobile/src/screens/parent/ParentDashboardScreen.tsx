@@ -35,6 +35,7 @@ import { useServerOutage } from '@/store/serverStatusStore';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
+import UnusedPurchasePrompt from '@/components/parent/UnusedPurchasePrompt';
 import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import TimezoneSuggestionBanner from '@/components/parent/TimezoneSuggestionBanner';
 import { petZoneOf } from '@/modules/familyZone/familyZone';
@@ -67,7 +68,8 @@ type Overlay =
   /** `logWalk`: opened from »Vpiši sprehod« → the detail scrolls to the log-walk card (M5-T12). */
   | { kind: 'child'; childId: number; logWalk?: boolean }
   /** `backToChildId`: opened from a child's detail → "Back" returns there (M5-F01). */
-  | { kind: 'challenge'; backToChildId?: number }
+  /** `focusPetId` (M6-U01): opened from a free pet's »Začni 12-tedenski izziv« → the upgrade copy for that pet. */
+  | { kind: 'challenge'; backToChildId?: number; focusPetId?: number }
   /** M6-W05 »Želje« (dashboard row or a tapped `wish_created` push). */
   | { kind: 'wishes' };
 
@@ -138,7 +140,7 @@ export default function ParentDashboardScreen() {
     setOverlay({ kind: 'child', childId: child.id, logWalk: true });
   };
   const closeOverlay = () => setOverlay({ kind: 'none' });
-  const openChallenge = (backToChildId?: number) => setOverlay({ kind: 'challenge', backToChildId });
+  const openChallenge = (backToChildId?: number, focusPetId?: number) => setOverlay({ kind: 'challenge', backToChildId, focusPetId });
 
   // The child shown in the detail left the family list (removed / other parent's change)
   // → back to the overview instead of a stale or empty screen.
@@ -207,6 +209,7 @@ export default function ParentDashboardScreen() {
       return (
         <ChallengeScreen
           family={family}
+          focusPetId={overlay.focusPetId}
           onBack={() => {
             setOverlay(backTo !== undefined ? { kind: 'child', childId: backTo } : { kind: 'none' });
             void dashboard.refetch();
@@ -235,6 +238,7 @@ export default function ParentDashboardScreen() {
           family={family}
           onBack={closeOverlay}
           onOpenChallenge={() => openChallenge(detailChild.id)}
+          onUpgradeChallenge={(petId) => openChallenge(detailChild.id, petId)}
           focusLogWalk={overlay.logWalk === true}
         />
       );
@@ -286,6 +290,8 @@ export default function ParentDashboardScreen() {
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
+          {/* M6-U01 (§5.3): a purchase on no pet yet (late webhook, several pets waiting) → choose a pet. */}
+          <UnusedPurchasePrompt family={family} onChoose={() => openChallenge()} />
           {/* David 2026-11-09: per pet — only the pets cared for on this phone are suggested. */}
           <TimezoneSuggestionBanner familyZone={family?.timezone ?? null} pets={family?.pets ?? []} />
           {wishesOpenCount !== null && children.length > 0 && (
@@ -327,6 +333,7 @@ export default function ParentDashboardScreen() {
                 onLogWalk={openLogWalk}
                 onChildPin={openChildPin}
                 onOpenChallenge={() => openChallenge()}
+                onUpgradeChallenge={(petId) => openChallenge(undefined, petId)}
               />
             ))
           )}

@@ -114,6 +114,8 @@ import {
 import { useMessageQueue } from '@/modules/childPet/messageQueue';
 import PetPreparationScreen from '@/modules/preparation/PetPreparationScreen';
 import { NO_PREPARATION, readyMessage, showPreparationScreen } from '@/modules/preparation/preparation';
+import { challengeStartedMessage, useChallengeStartAnnouncement } from '@/modules/plan/challengeStarted';
+import { challengeStartedAt } from '@/modules/plan/plan';
 import { useReadyAnnouncement } from '@/modules/preparation/readyAnnounced';
 import { usePreparationScreen } from '@/modules/preparation/usePreparationScreen';
 import {
@@ -554,6 +556,11 @@ export default function ChildHudScreen() {
   useReadyAnnouncement(view?.pet.id ?? null, view?.pet.preparation ?? NO_PREPARATION, view?.lock.is_locked ?? true, readyNow, () =>
     showToast({ tone: 'ok', message: readyMessage(readyName, readySpecies) }),
   );
+  // M6-U01: a parent upgraded the free pet to the 12-week challenge — said once (no price, no purchase).
+  const upgradeWeeks = view?.pet.virtual_age_months ?? 0;
+  useChallengeStartAnnouncement(view?.pet.id ?? null, view ? challengeStartedAt(view.pet.plan) : null, view?.lock.is_locked ?? true, readyNow, () =>
+    showToast({ tone: 'ok', message: challengeStartedMessage(upgradeWeeks) }),
+  );
 
   // Breathing animation for avatar fallback
   const bounceAnim = useRef(new Animated.Value(0)).current;
@@ -729,7 +736,10 @@ export default function ChildHudScreen() {
     hunger: pet.hunger_level,
     thirst: pet.thirst_level,
   });
-  const profileRows = pet.profile ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile) : [];
+  // M6-U01: an upgraded pet's sheet also says »Izziv: Teden N od 12« (week from the purchase).
+  const profileRows = pet.profile
+    ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile, challengeStartedAt(pet.plan) !== null ? pet.virtual_age_months : null)
+    : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   // M5-T02: one rules table for every HUD action (server flags + the sleeping / lock reason).

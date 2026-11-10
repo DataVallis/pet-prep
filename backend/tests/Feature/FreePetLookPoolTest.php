@@ -12,14 +12,16 @@ use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
+use App\Models\ChallengeCredit;
 use App\Models\Pet;
 use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
+use App\Models\PurchaseEvent;
 use App\Models\User;
 use App\Services\AccountDeletionService;
 use App\Services\AccountExportService;
-use App\Services\ChallengeService;
+use App\Services\ChallengeCreditService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
@@ -182,12 +184,17 @@ function lpPath(string $url): string
 
 function lpPurchase(Pet $pet): void
 {
-    DB::transaction(function () use ($pet): void {
-        $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
-        // No app path buys a free-breed challenge today (M5-F03) — simulated for the look rule.
-        $locked->forceFill(['plan' => PetPlan::Challenge]);
-        app(ChallengeService::class)->markPaid($locked, ChallengePaidSource::Purchase, now());
-    });
+    // M6-U01: the real path — a store purchase (credit) upgrades the free pet through the
+    // activation (FREE_PET_UPGRADE_SPEC §5.2 / §5.8), no simulated plan switch any more.
+    $event = PurchaseEvent::create(['event_id' => 'lp-'.$pet->id.'-'.uniqid(), 'type' => 'NON_RENEWING_PURCHASE', 'payload' => []]);
+    ChallengeCredit::create([
+        'family_id' => $pet->family_id, 'purchase_event_id' => $event->id, 'product_id' => 'petprep_challenge_12w',
+        'store' => 'APP_STORE', 'environment' => 'PRODUCTION', 'transaction_id' => 'lp-tx-'.$event->id, 'purchased_at' => now(),
+    ]);
+    $result = app(ChallengeCreditService::class)->activate($pet);
+    expect($result['status'])->toBe('activated')
+        ->and($result['pet']->plan)->toBe(PetPlan::Challenge)
+        ->and($result['pet']->challenge_paid_source)->toBe(ChallengePaidSource::Purchase);
 }
 
 /* ─────────────────────────── Pool fill + pick ─────────────────────────── */

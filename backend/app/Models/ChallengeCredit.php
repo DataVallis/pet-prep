@@ -32,6 +32,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $revoke_event_id
  * @property Carbon|null $transferred_at
  * @property int|null $transferred_from_family_id
+ * @property Carbon|null $unassigned_alerted_at
  */
 class ChallengeCredit extends Model
 {
@@ -41,6 +42,12 @@ class ChallengeCredit extends Model
 
     /** M3-13: a credit the family already held paid a challenge pet at its birth (contract). */
     public const VIA_BIRTH = 'birth';
+
+    /**
+     * M6-U01 (FREE_PET_UPGRADE_SPEC §5.3): the webhook assigned it to the pet the
+     * parent's purchase intent named (a free pet is upgraded on this path).
+     */
+    public const VIA_INTENT = 'intent';
 
     /**
      * @var list<string>
@@ -61,6 +68,7 @@ class ChallengeCredit extends Model
             'assigned_at' => 'datetime',
             'revoked_at' => 'datetime',
             'transferred_at' => 'datetime',
+            'unassigned_alerted_at' => 'datetime',
             'revoke_reason' => ChallengeCreditRevokeReason::class,
         ];
     }

@@ -103,6 +103,11 @@ export interface DayRow {
   play_sessions: number | null;
   play_goal: number | null;
   play_done: boolean | null;
+  /**
+   * M6-U01: a day before the purchase that upgraded the free pet to the challenge — shown,
+   * labelled »pred izzivom«, never in the score. Present (true) only on such days.
+   */
+  pre_challenge?: true;
 }
 
 export interface ChallengeProgress {
@@ -284,6 +289,7 @@ export function readDayRows(value: unknown): DayRow[] {
         play_sessions: numOrNull(item.play_sessions),
         play_goal: numOrNull(item.play_goal),
         play_done: boolOrNull(item.play_done),
+        ...(item.pre_challenge === true ? { pre_challenge: true as const } : {}),
       },
     ];
   });

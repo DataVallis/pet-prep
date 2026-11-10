@@ -80,9 +80,32 @@
     "restoredNoCredit": "Nakupi so obnovljeni, a ni neuporabljenega izziva. Vsak izziv velja za enega psa.",
     "noCredit": "Ni kupljenega izziva, ki bi ga lahko uporabili.",
     "refused": "Ta pes izziva ne potrebuje (brezplačni načrt ali je že plačan).",
-    "activateFailed": "Izziva ni bilo mogoče odkleniti. Preverite povezavo in poskusite znova."
+    "activateFailed": "Izziva ni bilo mogoče odkleniti. Preverite povezavo in poskusite znova.",
+    "upgraded": "Hvala! 12-tedenski izziv se je začel — teden 1 od 12."
   },
   "history": {
-    "limited": "Brezplačni načrt: zgodovina kaže zadnjih 7 dni. 12-tedenski izziv hrani celotno zgodovino."
+    "limited": "Brezplačni načrt: zgodovina kaže zadnjih 7 dni. 12-tedenski izziv hrani celotno zgodovino.",
+    "preChallenge": "pred izzivom"
+  },
+  "upgrade": {
+    "button": "Začni 12-tedenski izziv z {{name}}",
+    "buttonS": "Začni 12-tedenski izziv s {{name}}",
+    "buttonNoName": "Začni 12-tedenski izziv",
+    "buttonA11y": "Začni 12-tedenski izziv z ljubljenčkom, za katerega skrbi {{child}}",
+    "buttonHint": "Odpre nakup izziva za istega ljubljenčka",
+    "legacyNote": "Tega ljubljenčka ni mogoče nadgraditi v 12-tedenski izziv: ustvarjen je bil v starejši različici aplikacije, še brez profila (starosti in porekla), na katerem temelji program. Izziv lahko začnete z novim ljubljenčkom.",
+    "title": "Isti ljubljenček, zdaj z 12-tedenskim izzivom",
+    "stays": "Kaj ostane: {{name}} ostane isti — ime, videz, starost, naučeni ukazi in stvari iz »Želja«.",
+    "staysNoName": "Kaj ostane: ljubljenček ostane isti — ime, videz, starost, naučeni ukazi in stvari iz »Želja«.",
+    "adds": "Kaj se doda: 12-tedenski program s tedenskim napredkom, potrdilo ob uspešnem koncu, celotna zgodovina in vsi posnetki.",
+    "starts": "Kdaj se začne: takoj ob nakupu. Ocena skrbi šteje od nakupa naprej; dnevi prej ostanejo v zgodovini, označeni »pred izzivom«.",
+    "price": "Enkratni nakup {{price}}. Brez naročnine in brez samodejnega plačila.",
+    "priceNoPrice": "Enkratni nakup. Brez naročnine in brez samodejnega plačila.",
+    "petLine": "Brezplačni načrt · izziv se začne ob nakupu."
+  },
+  "unusedPurchase": {
+    "title": "Imate neporabljen nakup — izberite ljubljenčka",
+    "body": "Plačan 12-tedenski izziv še ni na nobenem ljubljenčku. Izberite, za katerega je.",
+    "action": "Izberi ljubljenčka"
   }
 }

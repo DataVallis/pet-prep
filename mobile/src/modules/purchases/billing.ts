@@ -9,6 +9,7 @@
  */
 
 import { api, type BillingPet, type BillingResponse, type ChallengeStatus, type PetPlanType } from '@/api/client';
+import { readPetUpgrade } from '@/modules/plan/plan';
 
 /** TanStack Query key of the family's billing state (shared contract with the backend agent). */
 export const BILLING_KEY = ['parent', 'billing'] as const;
@@ -37,6 +38,9 @@ function readBillingPet(raw: unknown): BillingPet | null {
     paid_at: plan === 'free' ? null : strOrNull(o.paid_at),
     trial_available: plan === 'free' || typeof o.trial_available !== 'boolean' ? null : o.trial_available,
     deletion_loses_purchase: o.deletion_loses_purchase === true,
+    // M6-U01: the upgrade purchase of a former free pet; can a free pet be upgraded.
+    challenge_started_at: plan === 'free' ? null : strOrNull(o.challenge_started_at),
+    upgrade: plan === 'free' ? readPetUpgrade(o.upgrade) : null,
   };
 }
 

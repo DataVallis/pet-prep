@@ -72,4 +72,14 @@ class PetPolicy
     {
         return $this->manage($user, $pet);
     }
+
+    /**
+     * Buy / assign the 12-week challenge for this pet (M3-11 activation, M6-U01
+     * purchase intent and free-pet upgrade): a parent of the pet's family only —
+     * never a child (purchases live only in the parent app, PAYMENTS_SPEC).
+     */
+    public function buyChallenge(User $user, Pet $pet): bool
+    {
+        return $this->manage($user, $pet);
+    }
 }
