@@ -61,6 +61,26 @@
       "name": "Clinics' own websites",
       "url": "https://servivet.co/",
       "note": "Each private clinic entry cites its own site as source_url."
+    },
+    {
+      "name": "Animal Center Cúcuta",
+      "url": "https://animalcentercuc.com/urgencias/",
+      "note": "Own site; 24 h clinic in Cúcuta."
+    },
+    {
+      "name": "Universidad de Caldas — Hospital Veterinario",
+      "url": "https://www.ucaldas.edu.co/portal/servicios-hospital-veterinario-de-la-u-de-caldas/",
+      "note": "Official university page; daytime hours only."
+    },
+    {
+      "name": "Corporación Universitaria Uniagraria — Clínica Veterinaria",
+      "url": "https://uniagraria.edu.co/en/clinica-veterinaria/",
+      "note": "Official university page; daytime hours only."
+    },
+    {
+      "name": "ASVET / Vida Animal / Conexión Animal / La Estrella (Manizales)",
+      "url": "https://asvets.com/",
+      "note": "Clinics' own websites; only ASVET claims 24/7."
     }
   ],
   "entries": [
@@ -833,7 +853,140 @@
       "url": "https://www.medellin.gov.co/es/secretaria-medio-ambiente/proteccion-y-bienestar-animal/bienestar-animal-del-distrito-de-medellin/centro-de-bienestar-animal-la-perla/",
       "source_url": "https://www.medellin.gov.co/es/secretaria-medio-ambiente/proteccion-y-bienestar-animal/bienestar-animal-del-distrito-de-medellin/centro-de-bienestar-animal-la-perla/",
       "checked": "2026-11-10"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Center Cúcuta",
+      "city": "Cúcuta",
+      "region": "Norte de Santander",
+      "address": "Av. 0A # 5-17, Lleras",
+      "phone": "+57 310 343 8639",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day, with emergency care and no appointment needed. Landline 607 549 4476.",
+      "small_animals": true,
+      "url": "https://animalcentercuc.com/urgencias/",
+      "source_url": "https://animalcentercuc.com/urgencias/",
+      "checked": "2026-11-10",
+      "note": "Home page: 'Clínica: 24h todos los días', 'Urgencias 24 horas', 'Atención inmediata todos los días del año, sin cita previa'. Urgencias page: 'las 24 horas del día, los 7 días de la semana'. Phones 607 549 4476 / 310 343 8639 (WhatsApp)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Veterinaria Animal Medical",
+      "city": "Cúcuta",
+      "region": "Norte de Santander",
+      "address": "Calle 1 # 9E-06",
+      "phone": "+57 313 280 2542",
+      "emergency_24h": false,
+      "duty": "Lists veterinary emergency care as a service; opening hours not published - call ahead.",
+      "small_animals": true,
+      "url": "https://clinica-veterinaria-animal-medical-s-a-s.ueniweb.com/",
+      "source_url": "https://clinica-veterinaria-animal-medical-s-a-s.ueniweb.com/",
+      "checked": "2026-11-10",
+      "note": "Page lists 'Urgencias veterinarias' but no hours and no 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "ASVET",
+      "city": "Manizales",
+      "region": "Caldas",
+      "emergency_24h": false,
+      "duty": "Website advertises 24/7 emergency care and hospitalisation for 'Manizales y Pereira' but gives no branch address or phone; confirm with the clinic before relying on it at night.",
+      "small_animals": true,
+      "url": "https://asvets.com/",
+      "source_url": "https://asvets.com/",
+      "checked": "2026-11-10",
+      "note": "Page meta: 'Urgencias 24/7, cirugía, laboratorio y más en Manizales y Pereira' and 'hospitalización 24/7'. No address or phone on the home page (WhatsApp booking, number not shown). Independent check: 24/7 wording covers both cities without identifying a Manizales branch, so emergency_24h set to false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vida Animal Clínica Veterinaria",
+      "city": "Manizales",
+      "region": "Caldas",
+      "address": "Carrera 28 # 49-07, Nuevo Versalles",
+      "phone": "+57 310 464 9119",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 8-22 h, weekends and holidays 8-20 h; landline (6) 885 47 06. Call ahead for emergencies.",
+      "small_animals": true,
+      "url": "https://vidanimalclinicavet.com/",
+      "source_url": "https://vidanimalclinicavet.com/",
+      "checked": "2026-11-10",
+      "note": "'urgencias 24 horas' only in page metadata keywords; page says night service was suspended during the public-health emergency - hours may be outdated."
+    },
+    {
+      "kind": "clinic",
+      "name": "Conexión Animal",
+      "city": "Manizales",
+      "region": "Caldas",
+      "address": "Carrera 23B # 67-39",
+      "phone": "+57 304 276 1949",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8-18 h, Sat 8-14 h; emergency care during clinic hours only.",
+      "small_animals": true,
+      "url": "https://conexion-animal.co/",
+      "source_url": "https://conexion-animal.co/",
+      "checked": "2026-11-10",
+      "note": "Page: 'Atención de urgencias veterinarias disponible durante el horario de la clínica.'"
+    },
+    {
+      "kind": "clinic",
+      "name": "La Estrella Clínica Veterinaria y Centro de Nutrición",
+      "city": "Manizales",
+      "region": "Caldas",
+      "address": "Carrera 24B # 61A-37, La Estrella",
+      "phone": "+57 315 230 8233",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9-18 h, Sat 10-17 h; landline (6) 879 3131.",
+      "small_animals": true,
+      "url": "https://www.laestrellaveterinaria.com/",
+      "source_url": "https://www.laestrellaveterinaria.com/",
+      "checked": "2026-11-10",
+      "note": "Address in page title differs (Calle 61 #23a). No 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Diego Villegas Toro - Universidad de Caldas",
+      "city": "Manizales",
+      "region": "Caldas",
+      "address": "Calle 65 # 26-10 (main campus)",
+      "phone": "+57 6 878 1500 ext. 16317",
+      "emergency_24h": false,
+      "duty": "University teaching hospital, mostly dogs and cats. Mon-Fri 8-12 h and 14-18 h.",
+      "small_animals": true,
+      "url": "https://www.ucaldas.edu.co/portal/servicios-hospital-veterinario-de-la-u-de-caldas/",
+      "source_url": "https://www.ucaldas.edu.co/portal/servicios-hospital-veterinario-de-la-u-de-caldas/",
+      "checked": "2026-11-10",
+      "note": "Official university page; hospital's own street address not given (campus address used). No emergency / 24 h statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "Servicios Veterinarios MV",
+      "city": "Villavicencio",
+      "region": "Meta",
+      "address": "Calle 5 # 34-36, La Vega",
+      "phone": "+57 310 222 9836",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9-18 h, Sat 9-15 h; offers an emergency service - call ahead.",
+      "small_animals": true,
+      "url": "https://serviciosveterinariosmv.webnode.com.co/",
+      "source_url": "https://serviciosveterinariosmv.webnode.com.co/",
+      "checked": "2026-11-10",
+      "note": "Page has a standalone heading 'URGENCIAS 24 HORAS' but lists only office hours (no Sunday) and no sentence confirming round-the-clock service, so emergency_24h left false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Veterinaria Uniagraria",
+      "city": "Bogotá",
+      "region": "Bogotá D.C.",
+      "address": "Calle 170A # 54C-04",
+      "phone": "+57 313 294 9370",
+      "emergency_24h": false,
+      "duty": "University clinic for dogs and cats. Mon-Sat 7-16 h; first aid for emergencies, may refer on.",
+      "small_animals": true,
+      "url": "https://uniagraria.edu.co/en/clinica-veterinaria/",
+      "source_url": "https://uniagraria.edu.co/en/clinica-veterinaria/",
+      "checked": "2026-11-10",
+      "note": "Official university page; explicitly not 24 h."
     }
   ],
-  "notes": "Partial run (first pass). WebFetch only opens URLs that surface in search results (provenance), and generic searches were dominated by AgendaPro/job boards/aggregators, so only clinics whose own sites surfaced were opened. 24-hour clinics found: Movet (13, Bogotá/Medellín), VETAS (5), plus own-site 24 h clinics in Bogotá (Zoovet), Medellín/Rionegro/Envigado (evi, San Antonio, CES El Escobero, Maxpuppies), Cali (Supermascotas sur, Servivet, Athenea, Dogspital, Alfa, municipal CBA), Barranquilla (Don Perro, El Country), Cartagena (Veterinaria Cartagena - emergencies by phone), Bucaramanga, Santa Marta (3), Pereira (Vet & Spa, Mascovet), Armenia (Puerto Veterinario). Entries sourced only from the SURA insurer PDF (Pepe Sierra/Virrey/Calle 147/El Country/Pradilla in Bogotá-Chía; Caninos y Felinos, San Lucas, Safari, MeVet in Antioquia) need confirmation from the clinics' own pages. No animal poison line found: CIEMTO-Vet (UdeA animal toxicology advisory) page could not be opened (URL too long for the fetcher; search gave no short URL); the UdeA/other toxicology lines opened are human-only (300 303 8000), so none added. The Movet #909 entry is a clinic-dispatch emergency line, labelled poison_line only because the schema has no 'emergency_line' kind - recommend dropping it from publication. Official duty rota: none exists nationally; IDPYBA Bogotá (123) serves only street animals. Not reachable: unal.edu.co vet faculty (robots), hospitalmisanimales.com (robots), barranquilla.gov.co CBA pages and cartagena.gov.co UMATA page (fetch errors), cambiocolombia article (error), cvzces.com.co (provenance), Javeriana (no clinic page found), COMVEZCOL/CMVZ (not searched successfully). Not covered: San Andrés, Villa de Leyva (no clinic pages found), Cartagena street addresses, Manizales 24 h, Cali Movet (announced 'próximamente'), Tolima hospital hours, Santa Marta/Cartagena beyond the above. Independent check 2026-11-10: opened the source_url of every 24-h entry and of 14 other entries; confirmed names, phones and explicit 24 h text (Movet, VETAS, Zoovet, CES, evi, San Antonio, Supermascotas, CBA Cali, Servivet, Athenea, Dogspital, Alfa, Don Perro, El Country, Cartagena, Bucaramanga, Santa Marta x3, Vet & Spa, Mascovet, Puerto Veterinario); Maxpuppies downgraded (24 h only in title/meta, no phone/address on page); removed the Movet #909 dispatch line and nine entries whose only source was the SURA insurer PDF (no own clinic page found)."
+  "notes": "Partial run (first pass). WebFetch only opens URLs that surface in search results (provenance), and generic searches were dominated by AgendaPro/job boards/aggregators, so only clinics whose own sites surfaced were opened. 24-hour clinics found: Movet (13, Bogotá/Medellín), VETAS (5), plus own-site 24 h clinics in Bogotá (Zoovet), Medellín/Rionegro/Envigado (evi, San Antonio, CES El Escobero, Maxpuppies), Cali (Supermascotas sur, Servivet, Athenea, Dogspital, Alfa, municipal CBA), Barranquilla (Don Perro, El Country), Cartagena (Veterinaria Cartagena - emergencies by phone), Bucaramanga, Santa Marta (3), Pereira (Vet & Spa, Mascovet), Armenia (Puerto Veterinario). Entries sourced only from the SURA insurer PDF (Pepe Sierra/Virrey/Calle 147/El Country/Pradilla in Bogotá-Chía; Caninos y Felinos, San Lucas, Safari, MeVet in Antioquia) need confirmation from the clinics' own pages. No animal poison line found: CIEMTO-Vet (UdeA animal toxicology advisory) page could not be opened (URL too long for the fetcher; search gave no short URL); the UdeA/other toxicology lines opened are human-only (300 303 8000), so none added. The Movet #909 entry is a clinic-dispatch emergency line, labelled poison_line only because the schema has no 'emergency_line' kind - recommend dropping it from publication. Official duty rota: none exists nationally; IDPYBA Bogotá (123) serves only street animals. Not reachable: unal.edu.co vet faculty (robots), hospitalmisanimales.com (robots), barranquilla.gov.co CBA pages and cartagena.gov.co UMATA page (fetch errors), cambiocolombia article (error), cvzces.com.co (provenance), Javeriana (no clinic page found), COMVEZCOL/CMVZ (not searched successfully). Not covered: San Andrés, Villa de Leyva (no clinic pages found), Cartagena street addresses, Manizales 24 h, Cali Movet (announced 'próximamente'), Tolima hospital hours, Santa Marta/Cartagena beyond the above. Independent check 2026-11-10: opened the source_url of every 24-h entry and of 14 other entries; confirmed names, phones and explicit 24 h text (Movet, VETAS, Zoovet, CES, evi, San Antonio, Supermascotas, CBA Cali, Servivet, Athenea, Dogspital, Alfa, Don Perro, El Country, Cartagena, Bucaramanga, Santa Marta x3, Vet & Spa, Mascovet, Puerto Veterinario); Maxpuppies downgraded (24 h only in title/meta, no phone/address on page); removed the Movet #909 dispatch line and nine entries whose only source was the SURA insurer PDF (no own clinic page found). Follow-up run 2026-11-10 (queue line: San Andrés, Villa de Leyva, Manizales, Javeriana, Universidad Nacional, COMVEZCOL/CMVZ, CIEMTO-Vet, extra 24 h cities). Search returned mostly aggregators (AgendaPro, doctoralia, coolvet, michigatitos, job boards), which are not used as sources; only own sites were opened. Added 9 entries: Cúcuta (Animal Center 24 h; Animal Medical not 24 h), Manizales (ASVET 24/7 claim without phone; Vida Animal, Conexión Animal, La Estrella, U. de Caldas hospital - daytime), Villavicencio (Servicios Veterinarios MV - 'URGENCIAS 24 HORAS' heading only, kept false), Bogotá (Uniagraria, daytime). Rejected: Shuncu Vet (Mexico City, surfaced under a Cúcuta search). Not found / nothing usable: San Andrés (only government vaccination campaign pages, no clinic site), Villa de Leyva (no own clinic pages), Neiva, Pasto, Popayán, Montería, Valledupar (only AgendaPro/aggregators), Javeriana (no hospital page surfaced), Universidad Nacional (unal.edu.co robots-blocked earlier, no new URL), COMVEZCOL/CMVZ (only journal articles and news, no official list/page), CIEMTO-Vet (search surfaced only an elpalpitar.com 2015 news piece about the UdeA human toxicology line; no animal-specific page, so no poison_line added). Unreachable again: cambiocolombia.com public veterinary hospital article (client error twice; skipped). Independent check of the follow-up 2026-11-10: opened the source_url of all 9 new entries; names, phones and addresses confirmed (Animal Center Cúcuta explicit 24 h, 7 days; others as stated), ASVET downgraded to emergency_24h false because the 24/7 text does not identify a Manizales branch, none removed."
 }
