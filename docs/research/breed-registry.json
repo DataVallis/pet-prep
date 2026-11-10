@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "69fc47f65a48963c6dd9cf7aae0de16cc7bb822bb1e3fccd4606d4699f207804"
+      "sha256": "7ce5c99083622033cc7859988c0ce08ec98da583ee5f753a4918ab47df431d04"
     }
   },
   "suitability_vocabulary": {
@@ -56937,7 +56937,12 @@
           "S763"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "flat-coated-retriever.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
