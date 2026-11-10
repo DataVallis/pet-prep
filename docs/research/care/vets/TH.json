@@ -43,6 +43,31 @@
       "note": "Opened: hotline 1367 (24/7) but page does not mention animals, so not listed as an animal poison line."
     },
     {
+      "name": "Phyathai 7 Animal Hospital (own site)",
+      "url": "https://www.phyathai7pet.com/",
+      "note": "Opened: Ari and Bangna branches, address, phone, 'Everyday 24 hours'."
+    },
+    {
+      "name": "Happy Pet Hospital (own site)",
+      "url": "https://happypet-hospital.com/en",
+      "note": "Opened: Sukhumvit and Ratchada, 24/7 wording."
+    },
+    {
+      "name": "PIPC Phuket International Petcare Center (own site)",
+      "url": "https://pipc.co.th/",
+      "note": "Opened: Head Quarter (Thalang) 24 hrs daily, phone 076-644-333."
+    },
+    {
+      "name": "Mahidol Faculty of Veterinary Science - contact",
+      "url": "https://vs.mahidol.ac.th/th/contact-us",
+      "note": "Opened: Prasu-Arthorn Animal Hospital phone only."
+    },
+    {
+      "name": "Chiang Mai Chotana Animal Hospital (own site)",
+      "url": "https://chotanavet.com/en/",
+      "note": "Opened: hours only."
+    },
+    {
       "name": "Aggregators opened for cross-checking only",
       "url": "https://www.thailandstarterkit.com/lifestyle/bangkok-veterinarians/",
       "note": "thailandstarterkit, superagent.co, phuket101, thailandnomads, phil.uk.net, cmhy.city, asialifestylemagazine, 2012 Samui blog: never used as sole source."
@@ -459,7 +484,109 @@
       "source_url": "https://www.soidog.org/content/emergency-help",
       "checked": "2026-11-10",
       "note": "Soi Dog emergency-help page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Phyathai 7 Animal Hospital - Ari",
+      "city": "Bangkok",
+      "region": "Bangkok",
+      "address": "9/9 Soi Chamnan Aksorn, Phaya Thai, Bangkok 10400",
+      "phone": "087-087-0445",
+      "emergency_24h": true,
+      "duty": "Open every day, 24 hours.",
+      "small_animals": true,
+      "url": "https://www.phyathai7pet.com/",
+      "source_url": "https://www.phyathai7pet.com/",
+      "checked": "2026-11-10",
+      "note": "Official site contact section: 'Everyday 24 hours' (one hours line for both branches). Address from the Thai text, English rendering by hand. Call center 02-619-5782."
+    },
+    {
+      "kind": "clinic",
+      "name": "Phyathai 7 Animal Hospital - Bangna",
+      "city": "Bangkok",
+      "region": "Bangkok",
+      "address": "27 Srinakarin Road, Bang Na Nuea, Bang Na, Bangkok 10260",
+      "phone": "096-993-9945",
+      "emergency_24h": true,
+      "duty": "Open every day, 24 hours.",
+      "small_animals": true,
+      "url": "https://www.phyathai7pet.com/",
+      "source_url": "https://www.phyathai7pet.com/",
+      "checked": "2026-11-10",
+      "note": "Official site contact section: 'Everyday 24 hours' (one hours line for both branches). Address from the Thai text, English rendering by hand. Call center 02-619-5782."
+    },
+    {
+      "kind": "clinic",
+      "name": "Happy Pet Hospital - Sukhumvit",
+      "city": "Bangkok",
+      "region": "Bangkok",
+      "address": "750 Sukhumvit Road, Khlong Tan, Khlong Toei, Bangkok 10110",
+      "phone": "098-886-0687",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 7 days a week.",
+      "small_animals": true,
+      "url": "https://happypet-hospital.com/en",
+      "source_url": "https://happypet-hospital.com/en",
+      "checked": "2026-11-10",
+      "note": "Own site: 'Open Daily 24Hr', 'Happy Pet Hospital is open 24/7 at Sukhumvit 30/1 and Ratchada', 'Our veterinary team is here, 24 hours a day'. 098-886-0687 is the 24 h call line."
+    },
+    {
+      "kind": "clinic",
+      "name": "Happy Pet Hospital - Ratchada",
+      "city": "Bangkok",
+      "region": "Bangkok",
+      "address": "69 Soi Rung Rueang, Sam Sen Nok, Huai Khwang, Bangkok 10310",
+      "phone": "02-096-6453",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 7 days a week.",
+      "small_animals": true,
+      "url": "https://happypet-hospital.com/en",
+      "source_url": "https://happypet-hospital.com/en",
+      "checked": "2026-11-10",
+      "note": "Own site: 'Open Daily 24Hr', 'Happy Pet Hospital is open 24/7 at Sukhumvit 30/1 and Ratchada'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Phuket International Petcare Center (PIPC) - Head Quarter",
+      "city": "Thalang",
+      "region": "Phuket",
+      "address": "191 Moo 7, Si Sunthon, Thalang, Phuket 83110",
+      "phone": "076-644-333",
+      "emergency_24h": true,
+      "duty": "Open every day, 24 hours. Grooming and hotel 08:00-18:00.",
+      "small_animals": true,
+      "url": "https://pipc.co.th/",
+      "source_url": "https://pipc.co.th/",
+      "checked": "2026-11-10",
+      "note": "Own site, Head Quarter: 'Open Every day from 24 hrs.'; grooming & hotel 8.00 AM - 6.00 PM. Other PIPC locations on the page (Boat Avenue, My Front Yard, Blue Tree, Alpha Health Club) not listed: not clearly veterinary hospitals. An aggregator (phuket101) says 8 am - 8 pm; the own site wins."
+    },
+    {
+      "kind": "clinic",
+      "name": "Prasu-Arthorn Animal Hospital, Faculty of Veterinary Science, Mahidol University",
+      "city": "Salaya",
+      "region": "Nakhon Pathom",
+      "address": "999 Phutthamonthon Sai 4 Road, Salaya, Phutthamonthon, Nakhon Pathom 73170",
+      "phone": "02-441-5245",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://vs.mahidol.ac.th/th/contact-us",
+      "source_url": "https://vs.mahidol.ac.th/th/contact-us",
+      "checked": "2026-11-10",
+      "note": "Faculty contact page lists Prasu-Arthorn Animal Hospital tel. 02-441-5245-6; the address is the faculty address (page gives no separate hospital address); no hours, no 24 h wording; page does not say small animals, so small_animals is an assumption."
+    },
+    {
+      "kind": "clinic",
+      "name": "Chiang Mai Chotana Animal Hospital",
+      "city": "Chiang Mai",
+      "region": "Chiang Mai",
+      "emergency_24h": false,
+      "duty": "Open 09:00-19:00.",
+      "small_animals": true,
+      "url": "https://chotanavet.com/en/",
+      "source_url": "https://chotanavet.com/en/",
+      "checked": "2026-11-10",
+      "note": "Own site (home page): 'We are ready to serve you and your pet from 9.00 am - 7.00 pm'; no address or phone on the page; no 24 h wording. small_animals assumed."
     }
   ],
-  "notes": "No duty rota and no confirmed animal poison line found (Ramathibodi Poison Center hotline 1367 is 24/7 but its page does not mention animals; a 10-year animal-poisoning study from it exists but its page could not be read). Not added because only aggregators were available (or provenance-blocked pages): Phya Thai 7 Animal Hospital (Ari 087-087-0445, Bangna 096-993-9945, said 24 h by thailandstarterkit), Don Kaew Animal Hospital Chiang Mai (097-957-2519, 24 h per thailandnomads), Chiang Mai University small animal hospital (+66 53 948 031) and CMU local animal hospital (emergency 24 h tel. 053-037071 per cmhy.city copy of faculty text), PIPC Phuket (076 644 333), RTB Animal Hospital Phuket (076 213 464), Aura Pets Phuket (065 141 6964), Dr Film Animal Clinic Hat Yai (24 h phone calls), Metta Animal Hospital Hat Yai, Bangkok Pet Hospital, Pet Avenue, Ari Pet Hospital. pattayapets.com, phyathai7pet.com and other Pattaya clinics could not be opened (provenance block). Koh Samui, Hua Hin, Krabi, Mahidol university hospital: no usable official source found; still to do. Mahidol vs.mahidol.ac.th not opened."
+  "notes":"No duty rota and no confirmed animal poison line found (Ramathibodi Poison Center hotline 1367 is 24/7 but its page does not mention animals; a 10-year animal-poisoning study from it exists but its page could not be read). Follow-up 2026-11-10 added Phyathai 7 (2), Happy Pet (2), PIPC HQ, Mahidol Prasu-Arthorn, Chotana. Still not added because only aggregators were available or the official page could not be opened (provenance block / robots / redirect): Don Kaew Animal Hospital Chiang Mai (097-957-2519, 24 h per thailandnomads), Chiang Mai University small animal hospital (+66 53 948 031; vet.cmu.ac.th only redirects to vmcmu.vet.cmu.ac.th, which could not be opened; cmu.ac.th article has no hospital contact) and CMU local animal hospital (emergency 24 h tel. 053-037071 per cmhy.city), Tongkaew Animal Hospital Chiang Mai, San Sai Animal Hospital (053-397884, pet-variety list only), RTB Animal Hospital Phuket (076 213 464, rtbcenter.com not opened), Aura Pets Phuket (065 141 6964, aurapetswellness.com not opened), Dr Film Animal Clinic Hat Yai, Metta Animal Hospital Hat Yai, Setthakit Animal Hospital Hat Yai (robots.txt disallowed), PSU hospital pages (vet.psu.ac.th/hospital/?p=84 and agency page: only faculty phones 074-289600/-608, no hours or 24 h wording opened), Bangkok Pet Hospital, Pet Avenue, Ari Pet Hospital. Koh Samui (Animalia Pet Hospital, Samui Animal Clinic: only aggregators and Facebook), Hua Hin (Kasetsart Hua Hin page opened but gives only the Bang Khen faculty address/phone; Pet Time, Tan-diau only Facebook) and Krabi (Krabi Veterinary Clinic only Facebook): no usable official source found. Mahidol hospital has no hours/24 h wording on any opened page."
 }
