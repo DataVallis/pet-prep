@@ -10,7 +10,8 @@
     "cs": "Červená řepa",
     "hr": "Cikla",
     "sv": "Rödbetor",
-    "da": "Rødbeder"
+    "da": "Rødbeder",
+    "fi": "Punajuuri"
   },
   "question": {
     "en": "Can cats eat beetroot?",
@@ -21,7 +22,8 @@
     "cs": "Mohou kočky jíst červenou řepu?",
     "hr": "Smiju li mačke jesti ciklu?",
     "sv": "Får katter äta rödbetor?",
-    "da": "Må katte spise rødbeder?"
+    "da": "Må katte spise rødbeder?",
+    "fi": "Saako kissa syödä punajuurta?"
   },
   "url_slug": {
     "en": "beetroot",
@@ -32,7 +34,8 @@
     "cs": "cervena-repa",
     "hr": "cikla",
     "sv": "rodbetor",
-    "da": "roedbeder"
+    "da": "roedbeder",
+    "fi": "punajuuri"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Ano, malý kousek červené řepy bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA řadí řepu, včetně červené, mezi rostliny netoxické pro kočky. Držte ale kočku dál od velkých listů: ASPCA upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou.",
     "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu.",
     "sv": "Ja, en liten bit rödbeta utan tillsatser går bra som en godbit då och då. ASPCA räknar rödbeta som ogiftig för katter. Se till att katten inte kommer åt de stora bladen: ASPCA påpekar att stora, mogna blad innehåller oxalsyra.",
-    "da": "Ja, et lille stykke naturel rødbede er fint som godbid en gang imellem. ASPCA regner bede, herunder rødbeder, for ugiftige for katte. Hold dog katten væk fra de store blade: ASPCA skriver at store, modne blade indeholder oxalsyre."
+    "da": "Ja, et lille stykke naturel rødbede er fint som godbid en gang imellem. ASPCA regner bede, herunder rødbeder, for ugiftige for katte. Hold dog katten væk fra de store blade: ASPCA skriver at store, modne blade indeholder oxalsyre.",
+    "fi": "Saa, pieni pala maustamatonta punajuurta sopii satunnaiseksi herkuksi. ASPCA luokittelee punajuuren kissoille myrkyttömäksi. Pidä isot lehdet kuitenkin poissa: ASPCA:n mukaan suurissa, täysikasvuisissa lehdissä on oksaalihappoa."
   },
   "why": {
     "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -55,7 +59,8 @@
     "cs": "ASPCA řadí řepu (Beta vulgaris, česky také červená řepa) mezi rostliny netoxické pro kočky a upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou. Kočky ve stravě ovoce ani zeleninu nepotřebují, ale podle PDSA lze mnohé z nich podávat ve velmi malém množství jako občasný pamlsek. ASPCA také upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
     "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
     "sv": "ASPCA räknar rödbeta (Beta vulgaris) som ogiftig för katter och påpekar att stora, mogna blad innehåller oxalsyra. Katter behöver inte frukt eller grönsaker i kosten, men enligt PDSA kan många sorter ges i mycket små mängder som en godbit då och då. ASPCA påpekar också att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
-    "da": "ASPCA regner bede (Beta vulgaris, også kaldet rødbeder) for ugiftige for katte og skriver at store, modne blade indeholder oxalsyre. Katte har ikke brug for frugt og grønt i kosten, men ifølge PDSA kan man give mange af dem i meget små mængder som godbid en gang imellem. ASPCA skriver også at alt plantemateriale kan give katte opkast og ondt i maven."
+    "da": "ASPCA regner bede (Beta vulgaris, også kaldet rødbeder) for ugiftige for katte og skriver at store, modne blade indeholder oxalsyre. Katte har ikke brug for frugt og grønt i kosten, men ifølge PDSA kan man give mange af dem i meget små mængder som godbid en gang imellem. ASPCA skriver også at alt plantemateriale kan give katte opkast og ondt i maven.",
+    "fi": "ASPCA luokittelee punajuuren (Beta vulgaris) kissoille myrkyttömäksi ja huomauttaa, että suurissa, täysikasvuisissa lehdissä on oksaalihappoa. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, mutta PDSA:n mukaan monia niistä voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte řepu podávat a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge."
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
@@ -78,7 +84,8 @@
     "cs": "Malý kousek červené řepy na jedno sousto, bez másla, soli a koření. Velké listy držte mimo dosah kočky.",
     "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke.",
     "sv": "En liten munsbit rödbeta utan smör, salt eller kryddor. Se till att katten inte kommer åt de stora bladen.",
-    "da": "Et lille stykke naturel rødbede i bidstørrelse uden smør, salt eller krydderier. Hold de store blade væk fra din kat."
+    "da": "Et lille stykke naturel rødbede i bidstørrelse uden smør, salt eller krydderier. Hold de store blade væk fra din kat.",
+    "fi": "Pieni, suupalan kokoinen pala maustamatonta punajuurta ilman voita, suolaa tai mausteita. Pidä suuret lehdet poissa kissan ulottuvilta."
   },
   "child": {
     "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
@@ -89,7 +96,8 @@
     "cs": "Kousek červené řepy může být pro kočku občas pamlsek. Kočky potřebují hlavně vlastní kočičí krmivo.",
     "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke.",
     "sv": "En liten bit rödbeta kan vara en godbit för katten då och då. Katter behöver framför allt sin egen kattmat.",
-    "da": "Et lille stykke rødbede kan være en godbid til katten en gang imellem. Katte har mest brug for deres egen kattemad."
+    "da": "Et lille stykke rødbede kan være en godbid til katten en gang imellem. Katte har mest brug for deres egen kattemad.",
+    "fi": "Pieni pala punajuurta voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen omaa kissanruokaansa."
   },
   "faq": [],
   "sources": [
@@ -186,6 +194,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3d167cbc0d5783a421e09298d9af7a28c2f267a31801b3527eb48380f4d819ca"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "985793e3f7cafa65da2e18f8376dba9b21cc472a17a4dd2896b108315c34aa5f"
     }
   }
 }

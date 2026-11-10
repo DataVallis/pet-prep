@@ -10,7 +10,8 @@
     "cs": "Uvařené brambory",
     "hr": "Kuhani krumpir",
     "sv": "Kokt potatis",
-    "da": "Kogte kartofler"
+    "da": "Kogte kartofler",
+    "fi": "Keitetyt perunat"
   },
   "question": {
     "en": "Can cats eat cooked potatoes?",
@@ -21,7 +22,8 @@
     "cs": "Mohou kočky jíst uvařené brambory?",
     "hr": "Smiju li mačke jesti kuhani krumpir?",
     "sv": "Får katter äta kokt potatis?",
-    "da": "Må katte spise kogte kartofler?"
+    "da": "Må katte spise kogte kartofler?",
+    "fi": "Saako kissa syödä keitettyjä perunoita?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
@@ -32,7 +34,8 @@
     "cs": "uvarene-brambory",
     "hr": "kuhani-krumpir",
     "sv": "kokt-potatis",
-    "da": "kogte-kartofler"
+    "da": "kogte-kartofler",
+    "fi": "keitetyt-perunat"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Ano, trochu uvařených brambor bez dalších přísad je jako občasný pamlsek v pořádku. RSPCA řadí brambory mezi potraviny vhodné pro kočky v mírném množství, pokud jsou rozmačkané nebo vařené bez másla a sýra. Slupku, sůl a koření vynechte.",
     "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine.",
     "sv": "Ja, lite tillagad potatis utan tillsatser går bra som en godbit då och då. RSPCA nämner potatis som lämplig för katter med måtta om den är mosad eller kokt, utan smör eller ost. Skala potatisen och låt bli salt och kryddor.",
-    "da": "Ja, lidt naturel tilberedt kartoffel er fint som godbid en gang imellem. RSPCA regner kartofler for egnede til katte med måde, hvis de er moste eller kogte uden smør eller ost. Fjern skrællen, og undlad salt og krydderier."
+    "da": "Ja, lidt naturel tilberedt kartoffel er fint som godbid en gang imellem. RSPCA regner kartofler for egnede til katte med måde, hvis de er moste eller kogte uden smør eller ost. Fjern skrællen, og undlad salt og krydderier.",
+    "fi": "Saa, vähän maustamatonta kypsennettyä perunaa sopii satunnaiseksi herkuksi. RSPCA:n mukaan peruna sopii kissoille kohtuudella, jos se on muussattua tai keitettyä ilman voita tai juustoa. Jätä kuori, suola ja mausteet pois."
   },
   "why": {
     "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
@@ -55,7 +59,8 @@
     "cs": "RSPCA řadí rozmačkané nebo vařené brambory bez másla a sýra mezi potraviny vhodné pro kočky v mírném množství, Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku a ASPCA uvádí, že uvařené brambory jsou pro zvířata v mírném množství v pořádku. Článek na PetMD, který napsali veterináři, dodává, že uvařené brambory nejsou pro kočky toxické, ale ani jim neprospívají, a že bramborové slupky obsahují toxin solanin. Kočky zeleninu ve stravě nepotřebují, takže by to měl být jen malý pamlsek.",
     "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica.",
     "sv": "RSPCA nämner mosad eller kokt potatis utan smör eller ost bland den mat som passar katter med måtta, Cats Protection föreslår enkel potatismos utan smör, grädde eller vitlök, och ASPCA skriver att tillagad potatis går bra för husdjur med måtta. En artikel på PetMD, skriven av veterinärer, tillägger att tillagad potatis inte är giftig för katter men inte heller bra för dem, och att potatisskal innehåller giftet solanin. Katter behöver inte grönsaker i kosten, så se det som en liten godbit.",
-    "da": "RSPCA regner moste eller kogte kartofler uden smør eller ost for mad der egner sig til katte med måde. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg, og ASPCA skriver at tilberedte kartofler er fine for kæledyr med måde. En artikel fra PetMD skrevet af en dyrlæge tilføjer at tilberedte kartofler ikke er giftige for katte, men heller ikke gode for dem, og at kartoffelskræl indeholder giftstoffet solanin. Katte har ikke brug for grøntsager i kosten, så hold det til en lille godbid."
+    "da": "RSPCA regner moste eller kogte kartofler uden smør eller ost for mad der egner sig til katte med måde. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg, og ASPCA skriver at tilberedte kartofler er fine for kæledyr med måde. En artikel fra PetMD skrevet af en dyrlæge tilføjer at tilberedte kartofler ikke er giftige for katte, men heller ikke gode for dem, og at kartoffelskræl indeholder giftstoffet solanin. Katte har ikke brug for grøntsager i kosten, så hold det til en lille godbid.",
+    "fi": "RSPCA luettelee muussatun tai keitetyn perunan ilman voita tai juustoa kohtuudella kissoille sopivien ruokien joukkoon, Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia, ja ASPCA:n mukaan kypsennetty peruna sopii lemmikeille kohtuudella. Eläinlääkärin kirjoittamassa PetMD-artikkelissa lisätään, että kypsennetty peruna ei ole kissoille myrkyllistä mutta ei myöskään hyväksi, ja että perunankuoressa on solaniinimyrkkyä. Kissat eivät tarvitse kasviksia ruokavaliossaan, joten pidä peruna pienenä herkkuna."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "cs": "Začněte malou ochutnávkou. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte brambory podávat a poraďte se s veterinářem.",
     "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten smakbit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med en lille smagsprøve. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge."
+    "da": "Start med en lille smagsprøve. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
+    "fi": "Aloita pienellä maistiaisella. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
@@ -78,7 +84,8 @@
     "cs": "Oloupané vařené nebo rozmačkané brambory bez másla, sýra, smetany, česneku, soli a koření. Nikdy ne syrové ani zelené brambory.",
     "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir.",
     "sv": "Kokt eller mosad potatis, skalad, utan smör, ost, grädde, vitlök, salt eller kryddor. Aldrig rå eller grön potatis.",
-    "da": "Naturel kogt kartoffel eller kartoffelmos, skrællet, uden smør, ost, fløde, hvidløg, salt eller krydderier. Aldrig rå eller grøn kartoffel."
+    "da": "Naturel kogt kartoffel eller kartoffelmos, skrællet, uden smør, ost, fløde, hvidløg, salt eller krydderier. Aldrig rå eller grøn kartoffel.",
+    "fi": "Maustamatonta, keitettyä tai muussattua ja kuorittua perunaa ilman voita, juustoa, kermaa, valkosipulia, suolaa tai mausteita. Ei koskaan raakaa tai vihreää perunaa."
   },
   "child": {
     "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
@@ -89,7 +96,8 @@
     "cs": "Trocha uvařených brambor bez dalších přísad může být pro kočku občas pamlsek. Syrové brambory pro kočky nejsou.",
     "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke.",
     "sv": "Lite kokt potatis utan tillsatser kan vara en godbit för katten då och då. Rå potatis är inte för katter.",
-    "da": "Et lille stykke naturel kogt kartoffel kan være en godbid til katten en gang imellem. Rå kartoffel er ikke til katte."
+    "da": "Et lille stykke naturel kogt kartoffel kan være en godbid til katten en gang imellem. Rå kartoffel er ikke til katte.",
+    "fi": "Pieni pala maustamatonta kypsennettyä perunaa voi joskus olla kissan herkku. Raaka peruna ei ole kissoille."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "cs": "Mohou kočky jíst bramborové slupky?",
         "hr": "Smiju li mačke jesti koru krumpira?",
         "sv": "Får katter äta potatisskal?",
-        "da": "Må katte spise kartoffelskræl?"
+        "da": "Må katte spise kartoffelskræl?",
+        "fi": "Saako kissa syödä perunankuoria?"
       },
       "a": {
         "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
@@ -113,7 +122,8 @@
         "cs": "Ne. Článek na PetMD, který napsali veterináři, uvádí, že bramborové slupky, syrové i uvařené, obsahují toxin solanin a je třeba se jim vyhnout.",
         "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati.",
         "sv": "Nej. Enligt en artikel på PetMD, skriven av veterinärer, innehåller potatisskal, både råa och tillagade, giftet solanin och bör undvikas.",
-        "da": "Nej. En artikel fra PetMD skrevet af en dyrlæge skriver at kartoffelskræl, både rå og tilberedt, indeholder giftstoffet solanin og bør undgås."
+        "da": "Nej. En artikel fra PetMD skrevet af en dyrlæge skriver at kartoffelskræl, både rå og tilberedt, indeholder giftstoffet solanin og bør undgås.",
+        "fi": "Ei. Eläinlääkärin kirjoittaman PetMD-artikkelin mukaan perunankuoret, olivatpa ne raakoja tai kypsennettyjä, sisältävät solaniinimyrkkyä, ja niitä pitää välttää."
       }
     },
     {
@@ -126,7 +136,8 @@
         "cs": "Mohou kočky jíst bramborovou kaši?",
         "hr": "Smiju li mačke jesti pire od krumpira?",
         "sv": "Får katter äta potatismos?",
-        "da": "Må katte spise kartoffelmos?"
+        "da": "Må katte spise kartoffelmos?",
+        "fi": "Saako kissa syödä perunamuusia?"
       },
       "a": {
         "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
@@ -137,7 +148,8 @@
         "cs": "Bramborová kaše bez dalších přísad je jako malý pamlsek v pořádku. Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku.",
         "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka.",
         "sv": "Potatismos utan tillsatser går bra som en liten godbit. Cats Protection föreslår potatismos utan smör, grädde eller vitlök.",
-        "da": "Lidt naturel kartoffelmos er fint som en lille godbid. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg."
+        "da": "Lidt naturel kartoffelmos er fint som en lille godbid. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg.",
+        "fi": "Maustamaton perunamuusi sopii pieneksi herkuksi. Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia."
       }
     }
   ],
@@ -243,6 +255,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ed5f39efdde0001885f1381fdabcb63e5ff95ff588347962196c6fcc22f3315"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "141431435d0d934e6d655f9c90d3a586574222c13b10ea03330f6cdddad359e9"
     }
   }
 }

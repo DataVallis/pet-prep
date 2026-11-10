@@ -10,7 +10,8 @@
     "cs": "Chilli papričky",
     "hr": "Čili papričice",
     "sv": "Chilipeppar",
-    "da": "Chilipeber"
+    "da": "Chilipeber",
+    "fi": "Chilipippurit"
   },
   "question": {
     "en": "Can cats eat chilli peppers?",
@@ -21,7 +22,8 @@
     "cs": "Mohou kočky jíst chilli papričky?",
     "hr": "Smiju li mačke jesti čili papričice?",
     "sv": "Får katter äta chilipeppar?",
-    "da": "Må katte spise chilipeber?"
+    "da": "Må katte spise chilipeber?",
+    "fi": "Saako kissa syödä chilipippureita?"
   },
   "url_slug": {
     "en": "chilli-peppers",
@@ -32,7 +34,8 @@
     "cs": "chilli-papricky",
     "hr": "cili-papricice",
     "sv": "chilipeppar",
-    "da": "chilipeber"
+    "da": "chilipeber",
+    "fi": "chilipippurit"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Ne, nedávejte kočce chilli papričky ani jiná pálivá jídla. VCA Animal Hospitals uvádí, že pálivá jídla pro kočky nemusejí být toxická, ale žaludek jim určitě podráždí.",
     "hr": "Ne, ne daj mački čili papričice ni drugu ljutu hranu. VCA Animal Hospitals navodi da ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe.",
     "sv": "Nej, dela inte chilipeppar eller annan stark mat med katten. VCA Animal Hospitals skriver att stark mat inte nödvändigtvis är giftig för katter, men att den helt säkert ger orolig mage.",
-    "da": "Nej, del ikke chilipeber eller anden stærk mad med din kat. VCA Animal Hospitals skriver at stærk mad måske ikke er giftig for katte, men helt sikkert giver dem ondt i maven."
+    "da": "Nej, del ikke chilipeber eller anden stærk mad med din kat. VCA Animal Hospitals skriver at stærk mad måske ikke er giftig for katte, men helt sikkert giver dem ondt i maven.",
+    "fi": "Ei saa. Älä jaa chilipippureita tai muuta tulista ruokaa kissasi kanssa. VCA Animal Hospitalsin mukaan tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja."
   },
   "why": {
     "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -55,7 +59,8 @@
     "cs": "VCA Animal Hospitals radí nedávat kočce pálivá jídla a chuťovky typu jalapeño poppers nechat pro sebe: pálivá jídla pro kočky nemusejí být toxická, ale žaludek jim určitě podráždí. Kočky zeleninu ve stravě nepotřebují a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
     "hr": "VCA Animal Hospitals savjetuje da s mačkom ne dijeliš ljutu hranu, a pohane punjene jalapeño papričice (jalapeño poppers) zadrži za sebe: ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe. Mačkama povrće u prehrani nije potrebno, a ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
     "sv": "VCA Animal Hospitals avråder från att ge katten stark mat och menar att du ska behålla dina jalapeño poppers för dig själv: stark mat behöver inte vara giftig för katter, men den ger helt säkert orolig mage. Katter behöver inte grönsaker i kosten, och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
-    "da": "VCA Animal Hospitals råder dig til ikke at dele stærk mad med din kat og til at lade jalapeño poppers blive hos dig selv: stærk mad er måske ikke giftig for katte, men giver helt sikkert ondt i maven. Katte har ikke brug for grøntsager i kosten, og ASPCA skriver at alt plantemateriale kan give katte opkast og ondt i maven."
+    "da": "VCA Animal Hospitals råder dig til ikke at dele stærk mad med din kat og til at lade jalapeño poppers blive hos dig selv: stærk mad er måske ikke giftig for katte, men giver helt sikkert ondt i maven. Katte har ikke brug for grøntsager i kosten, og ASPCA skriver at alt plantemateriale kan give katte opkast og ondt i maven.",
+    "fi": "VCA Animal Hospitals neuvoo olemaan jakamatta tulista ruokaa kissan kanssa ja pitämään jalapeño popperit omana herkkunaan: tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja. Kissat eivät tarvitse kasviksia ruokavaliossaan, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "da": [
       "Ondt i maven",
       "Opkast"
+    ],
+    "fi": [
+      "Vatsavaivat",
+      "Oksentelu"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "cs": "Pokud kočka snědla chilli nebo pálivé jídlo a poté zvrací nebo má potíže se žaludkem, poraďte se s veterinářem. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
     "hr": "Ako je mačka pojela čili ili ljutu hranu pa povraća ili ima želučane tegobe, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
     "sv": "Om katten har ätit chili eller stark mat och sedan kräks eller får orolig mage, kontakta veterinären för råd. Försök inte få katten att kräkas utan att först fråga veterinären.",
-    "da": "Hvis din kat har spist chili eller stærk mad og derefter kaster op eller får ondt i maven, så kontakt din dyrlæge for at få råd. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen."
+    "da": "Hvis din kat har spist chili eller stærk mad og derefter kaster op eller får ondt i maven, så kontakt din dyrlæge for at få råd. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
+    "fi": "Jos kissasi söi chilipippuria tai tulista ruokaa ja oksentaa tai sen vatsa on sekaisin, ota yhteyttä eläinlääkäriin neuvoa varten. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "cs": "Pálivé chilli papričky jsou pro lidi, ne pro kočky. Kočičku by z nich mohlo rozbolet bříško.",
     "hr": "Ljute čili papričice nisu za mačke, nego za ljude. Od njih mački može boljeti trbuščić.",
     "sv": "Stark chilipeppar är för människor, inte för katter. Den kan ge katten ont i magen.",
-    "da": "Stærke chilipeber er til mennesker, ikke til katte. De kan give katten ondt i maven."
+    "da": "Stærke chilipeber er til mennesker, ikke til katte. De kan give katten ondt i maven.",
+    "fi": "Tuliset chilipippurit ovat ihmisille, eivät kissoille. Ne voivat aiheuttaa kisulle vatsakipua."
   },
   "faq": [],
   "sources": [
@@ -201,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8d2fbc88fef379b8d60bfa8a285d33e39dd9114c3071b180abece0695681ebfe"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2c190a0960d6ca91ff1b80eb93f5aca35f5c77c77e95c2efd421a508246c7a3"
     }
   }
 }

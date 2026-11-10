@@ -10,7 +10,8 @@
     "cs": "Houby z obchodu",
     "hr": "Gljive iz trgovine",
     "sv": "Svamp från affären",
-    "da": "Svampe fra butikken"
+    "da": "Svampe fra butikken",
+    "fi": "Kaupan sienet"
   },
   "question": {
     "en": "Can cats eat store-bought mushrooms?",
@@ -21,7 +22,8 @@
     "cs": "Mohou kočky jíst houby z obchodu?",
     "hr": "Smiju li mačke jesti gljive iz trgovine?",
     "sv": "Får katter äta svamp från affären?",
-    "da": "Må katte spise svampe fra butikken?"
+    "da": "Må katte spise svampe fra butikken?",
+    "fi": "Saako kissa syödä kaupan sieniä?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
@@ -32,7 +34,8 @@
     "cs": "houby-z-obchodu",
     "hr": "gljive-iz-trgovine",
     "sv": "svamp-fran-affaren",
-    "da": "svampe-fra-butikken"
+    "da": "svampe-fra-butikken",
+    "fi": "kaupan-sienet"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Nejlepší je kočce houby nedávat. Pet Poison Helpline uvádí, že některé houby jsou pro kočky bezpečné, ale radí k opatrnosti, a kočky nepotřebují nic kromě kompletního krmiva. Nikdy nedávejte houby připravené s česnekem nebo cibulí.",
     "hr": "Najbolje je ne davati gljive mački. Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali poziva na oprez, a mačkama ne treba ništa osim potpune hrane za mačke. Nikad ne daj gljive pripremljene s češnjakom ili lukom.",
     "sv": "Det är bäst att inte dela svamp med katten. Pet Poison Helpline skriver att en del svampar är säkra för katter men uppmanar till försiktighet, och katter behöver inget utöver en komplett kattmat. Ge aldrig svamp som har tillagats med vitlök eller lök.",
-    "da": "Det er bedst ikke at dele svampe med din kat. Pet Poison Helpline skriver at nogle svampe er sikre for katte, men opfordrer til forsigtighed, og katte har ikke brug for andet end komplet kattefoder. Giv aldrig svampe der er tilberedt med hvidløg eller løg."
+    "da": "Det er bedst ikke at dele svampe med din kat. Pet Poison Helpline skriver at nogle svampe er sikre for katte, men opfordrer til forsigtighed, og katte har ikke brug for andet end komplet kattefoder. Giv aldrig svampe der er tilberedt med hvidløg eller løg.",
+    "fi": "Ei kannata. Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta se kehottaa varovaisuuteen, eivätkä kissat tarvitse täysravinnon lisäksi mitään muuta. Älä koskaan anna sieniä, jotka on kypsennetty valkosipulin tai sipulin kanssa."
   },
   "why": {
     "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
@@ -55,7 +59,8 @@
     "cs": "Pet Poison Helpline uvádí, že i když jsou některé houby pro kočky bezpečné, je třeba opatrnosti, a radí považovat za toxické všechny houby, které nebyly koupeny jako potravina pro lidi. Také radí houby do jídelníčku kočky nezařazovat. Podle PDSA kočky nepotřebují nic kromě kompletní stravy a Cats Protection varuje, že česnek a cibule mohou u koček vyvolat vážné onemocnění, takže houbová jídla připravená pro lidi nejsou vhodná.",
     "hr": "Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali da je potreban oprez, te savjetuje da se otrovnom smatra svaka gljiva koja nije kupljena za ljudsku prehranu. Savjetuje i da se gljive ne dodaju u prehranu mačke. PDSA navodi da mačkama ne treba ništa osim potpune prehrane, a Cats Protection upozorava da češnjak i luk mogu jako razboljeti mačke, pa jela s gljivama pripremljena za ljude nisu prikladna.",
     "sv": "Pet Poison Helpline skriver att en del svampar visserligen är säkra för katter men att man bör vara försiktig, och rekommenderar att alla svampar som inte är köpta för att ätas av människor behandlas som giftiga. Organisationen avråder också från att lägga till svamp i kattens kost. PDSA skriver att katter inte behöver något annat än en komplett kost, och Cats Protection varnar för att vitlök och lök kan göra katter mycket sjuka, så svamprätter som är gjorda för människor passar inte.",
-    "da": "Pet Poison Helpline skriver at nogle svampe er sikre for katte, men at emnet kræver forsigtighed, og anbefaler at behandle alle svampe der ikke er købt som menneskemad som giftige. Pet Poison Helpline fraråder også at tilføje svampe til en kats kost. PDSA skriver at katte ikke har brug for andet end komplet kost, og Cats Protection advarer om at hvidløg og løg kan gøre katte meget syge, så svamperetter lavet til mennesker ikke egner sig."
+    "da": "Pet Poison Helpline skriver at nogle svampe er sikre for katte, men at emnet kræver forsigtighed, og anbefaler at behandle alle svampe der ikke er købt som menneskemad som giftige. Pet Poison Helpline fraråder også at tilføje svampe til en kats kost. PDSA skriver at katte ikke har brug for andet end komplet kost, og Cats Protection advarer om at hvidløg og løg kan gøre katte meget syge, så svamperetter lavet til mennesker ikke egner sig.",
+    "fi": "Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta aihe vaatii varovaisuutta, ja sen ohjeen mukaan kaikkia sieniä, joita ei ole ostettu ihmisten syötäväksi, on pidettävä myrkyllisinä. Se neuvoo myös olemaan lisäämättä sieniä kissan ruokavalioon. PDSA:n mukaan kissat eivät tarvitse täysravinnon lisäksi mitään muuta, ja Cats Protection varoittaa, että valkosipuli ja sipuli voivat sairastuttaa kissan vakavasti, joten ihmisille tehdyt sieniruoat eivät sovi."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "da": [
       "Opkast",
       "Diarré"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "cs": "Pokud si nejste jistí, že houba pocházela z obchodu, považujte ji za toxickou a okamžitě jeďte s kočkou k veterináři. Pokud kočka snědla houbu a poté zvrací nebo má průjem, okamžitě vyhledejte veterinární pomoc.",
     "hr": "Ako nije sigurno da gljiva potječe iz trgovine, smatraj je otrovnom i odmah odvedi mačku veterinaru. Ako mačka pojede gljivu pa povraća ili ima proljev, odmah potraži veterinarsku pomoć.",
     "sv": "Om du inte är säker på att svampen kommer från en affär, behandla den som giftig och åk direkt till veterinären med katten. Om katten har ätit en svamp och sedan kräks eller får diarré, sök veterinärvård direkt.",
-    "da": "Hvis du ikke er sikker på at svampen kommer fra en butik, så behandl den som giftig og tag straks din kat med til dyrlægen. Hvis din kat har spist en svamp og derefter kaster op eller får diarré, så søg straks hjælp hos en dyrlæge."
+    "da": "Hvis du ikke er sikker på at svampen kommer fra en butik, så behandl den som giftig og tag straks din kat med til dyrlægen. Hvis din kat har spist en svamp og derefter kaster op eller får diarré, så søg straks hjælp hos en dyrlæge.",
+    "fi": "Jos et ole varma, onko sieni peräisin kaupasta, pidä sitä myrkyllisenä ja vie kissa heti eläinlääkäriin. Jos kissasi syö sienen ja oksentaa tai sillä on ripulia, hakeudu heti eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "cs": "Houby jsou jídlo pro lidi, ne pro kočky. Kočky najdou ve vlastním krmivu všechno, co potřebují.",
     "hr": "Gljive su hrana za ljude, a ne za mačke. Sve što im treba, mačke dobivaju iz svoje hrane.",
     "sv": "Svamp är mat för människor, inte för katter. Katter får allt de behöver från sin egen kattmat.",
-    "da": "Svampe er mad til mennesker, ikke kattemad. Katte får alt, hvad de har brug for, i deres egen kattemad."
+    "da": "Svampe er mad til mennesker, ikke kattemad. Katte får alt, hvad de har brug for, i deres egen kattemad.",
+    "fi": "Sienet ovat ihmisten ruokaa, eivät kissanruokaa. Kissa saa kaiken tarvitsemansa omasta kissanruoastaan."
   },
   "faq": [
     {
@@ -129,7 +140,8 @@
         "cs": "Co když kočka snědla houbu ze zahrady?",
         "hr": "Što ako je mačka pojela gljivu iz vrta?",
         "sv": "Vad gör jag om katten har ätit en svamp från trädgården?",
-        "da": "Hvad hvis min kat har spist en svamp fra haven?"
+        "da": "Hvad hvis min kat har spist en svamp fra haven?",
+        "fi": "Entä jos kissani söi puutarhasta sienen?"
       },
       "a": {
         "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
@@ -140,7 +152,8 @@
         "cs": "Považujte ji za toxickou. Pet Poison Helpline radí okamžitě odvézt kočku k veterináři a pokud možno s sebou opatrně vzít vzorek houby, aby ji odborník mohl určit.",
         "hr": "Smatraj je otrovnom. Pet Poison Helpline savjetuje da mačku odmah odvedeš veterinaru i, ako je moguće, pažljivo poneseš uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ.",
         "sv": "Behandla den som giftig. Pet Poison Helpline uppmanar dig att åka direkt till veterinären med katten och, om det går, försiktigt ta med ett prov av svampen så att en specialist kan identifiera den.",
-        "da": "Behandl den som giftig. Pet Poison Helpline anbefaler at tage katten med til dyrlægen med det samme og om muligt forsigtigt tage en prøve af svampen med, så en specialist kan identificere den."
+        "da": "Behandl den som giftig. Pet Poison Helpline anbefaler at tage katten med til dyrlægen med det samme og om muligt forsigtigt tage en prøve af svampen med, så en specialist kan identificere den.",
+        "fi": "Pidä sitä myrkyllisenä. Pet Poison Helplinen mukaan kissa pitää viedä heti eläinlääkäriin ja, jos mahdollista, mukaan kannattaa ottaa varovasti näyte sienestä, jotta asiantuntija voi tunnistaa sen."
       }
     }
   ],
@@ -234,6 +247,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5f2d8d63f7edda611c109664d597de93323aa60899e3247e34b41d4da2f4fd6b"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a10bb37a72c7c7fb8cefa3be4f4d7328bfdea470bdde816250a46843270ad95e"
     }
   }
 }
