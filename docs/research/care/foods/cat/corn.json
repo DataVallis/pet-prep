@@ -4,6 +4,7 @@
   "name": {
     "en": "Corn (sweetcorn kernels)",
     "sl": "Koruza (zrna sladke koruze)",
+    "de": "Mais (Maiskörner)",
     "pt": "Milho (grãos de milho doce)",
     "nl": "Maïs (maïskorrels)",
     "pl": "Kukurydza (ziarna kukurydzy cukrowej)",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can cats eat corn?",
     "sl": "Ali lahko mačke jedo koruzo?",
+    "de": "Dürfen Katzen Mais fressen?",
     "pt": "Os gatos podem comer milho?",
     "nl": "Mogen katten maïs eten?",
     "pl": "Czy koty mogą jeść kukurydzę?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "corn",
     "sl": "koruza",
+    "de": "mais",
     "pt": "milho",
     "nl": "mais",
     "pl": "ziarna-kukurydzy",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
     "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb.",
+    "de": "Ja, ein paar pure Maiskörner sind als gelegentliches Leckerli in Ordnung, wenn Ihre Katze Interesse zeigt. Cats Protection nennt Mais unter den wenigen Gemüsesorten, die Sie einer Katze geben können. Reichen Sie ihn ohne Butter, Salz und Gewürze.",
     "pt": "Sim, alguns grãos de milho simples são aceitáveis como guloseima ocasional, se o teu gato gostar. A Cats Protection inclui o milho entre os poucos legumes que se podem dar a um gato. Serve-o sem manteiga, sal nem temperos.",
     "nl": "Ja, een paar naturele maïskorrels zijn af en toe prima als traktatie, als je kat ze lekker vindt. Cats Protection noemt maïs een van de weinige groenten die je een kat kunt geven. Geef het zonder boter, zout of kruiden.",
     "pl": "Tak, kilka zwykłych ziaren kukurydzy jest w porządku jako okazjonalny smakołyk, jeśli kot ma na nie ochotę. Cats Protection wymienia kukurydzę wśród niewielu warzyw, które można dawać kotu. Podawaj ją bez masła, soli i przypraw.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "de": "Cats Protection sagt, dass es ein paar Gemüsesorten gibt, die Sie Ihrer Katze geben können, wenn sie Interesse zeigt, darunter Mais. Katzen fressen von Natur aus aber kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Laut PDSA können viele Obst- und Gemüsesorten in sehr kleinen Mengen als gelegentliches Leckerli gegeben werden. Die ASPCA merkt an, dass Pflanzliches ganz allgemein bei Katzen Erbrechen und Magenverstimmungen auslösen kann.",
     "pt": "A Cats Protection diz que há alguns legumes que podes dar ao teu gato, se ele gostar, incluindo o milho, mas que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. A PDSA diz que muitas frutas e legumes podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
     "nl": "Cats Protection zegt dat er een paar groenten zijn die je je kat kunt geven als die er zin in heeft, waaronder maïs, maar katten eten van nature zelden groente en je hoeft het niet aan hun voeding toe te voegen. Volgens PDSA kun je veel soorten fruit en groente in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
     "pl": "Cats Protection podaje, że kilka warzyw, w tym kukurydzę, można dawać kotu, jeśli ma na nie ochotę, ale koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Według PDSA wiele owoców i warzyw można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
@@ -66,6 +71,7 @@
   "what_to_do": {
     "en": "Start with a few kernels. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit ein paar Körnern. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "pt": "Começa com alguns grãos. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
     "nl": "Begin met een paar korrels. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od kilku ziaren. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
@@ -78,6 +84,7 @@
   "serving": {
     "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
     "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj.",
+    "de": "Ein paar pure, gekochte Maiskörner ohne Butter, Salz oder Gewürze, in mundgerechten Stücken.",
     "pt": "Alguns grãos de milho simples, cozinhados, sem manteiga, sal nem temperos.",
     "nl": "Een paar naturele, gekookte maïskorrels, zonder boter, zout of kruiden, in hapklare stukjes.",
     "pl": "Kilka zwykłych, ugotowanych ziaren kukurydzy, bez masła, soli i przypraw, w kawałkach na jeden kęs.",
@@ -90,6 +97,7 @@
   "child": {
     "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "de": "Ein paar Maiskörner können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "pt": "Alguns grãos de milho podem ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra.",
     "nl": "Een paar maïskorrels kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Kilka ziaren kukurydzy można czasem dać kotu jako smakołyk. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
@@ -104,6 +112,7 @@
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
+        "de": "Brauchen Katzen Gemüse?",
         "pt": "Os gatos precisam de legumes?",
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
@@ -116,6 +125,7 @@
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra.",
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente en hoef je het niet aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Cats Protection podaje, że koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
@@ -178,6 +188,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ca0f34a528f64de5add9deadd3390c0937cc8211bf1ac073be3051376b0a5e58"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2c257733e5d4217e619763bd80b601954f36b06ddc096184727e5714583280ed"
     },
     "pt": {
       "status": "verified",
