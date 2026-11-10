@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "0dbae5bd29d95d31e4039c5722b74f4d4ad8f16d317d8ecb6c1eae6d113ec689"
+      "sha256": "a600affb1c406438ba9ed959e2ec7e222e2b0c0f270229e5c6c5783b06693946"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "fa7be9a7cf0d53cd0cdc453e65f3b8710f9cdb227a6b1f9c06ba344a2728120e"
+      "sha256": "2bd15217c76b0ae60a675cda7610525083a1a393bf50db36cea544788fb3bef9"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0dd11d8615551e3e9218db155356b44d883190200b30e1280e3b8ef8414974b0"
+      "sha256": "216768685b9e1817a7ac9643bc573fb463d540e3c5cd005c6ba9d656f315a04c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ad1cc13f9eff143ecf363c8873c57c9094f9723fdd1b6e6c16f0d54b2c583e3c"
+      "sha256": "4324ba27e3ad13269b53aa4520949a16b491ddab817d9c3b23d60b0feba87cc2"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "f62adcdf8149c87046da091562ae004985f5f319f24d53f0bae55f66a01e1f91"
+      "sha256": "a514e807eeefce5d8e7819358dbf1d1fa1bc01f513ba2655f0117b1c7518f2a3"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "673bcd5b6d86a84170dcdc0c5db5e1a34bc0db77e7aee523e812e390e727fc2a"
+      "sha256": "318eed53c426db850f8170b33d20fce6aef1c14a7003b446973114892f8aeda9"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "fc0bd941d90a207aaea95e843a0a901b96d0cbbd755373c48cb44deddd8d6991"
+      "sha256": "e4352a89ede1e21ad91114bfbf7af9c0305b23243333d083910caef88a8d02a7"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 93,
+      "breed_count": 94,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -56356,6 +56356,646 @@
       ]
     },
     {
+      "id": "flat_coated_retriever",
+      "species": "dog",
+      "order": 93,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Flat-Coated Retriever",
+        "sl": "Ravnodlaki prinašalec"
+      },
+      "slug": {
+        "en": "flat-coated-retriever",
+        "sl": "ravnodlaki-prinasalec"
+      },
+      "synonyms": {
+        "en": [
+          "Flatcoat",
+          "Flattie",
+          "Flat-coat",
+          "Flat Coated Retriever"
+        ],
+        "sl": [
+          "ravnodlaki prinasalec",
+          "flat coated retriever",
+          "flatcoat"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              59,
+              61.5
+            ],
+            "female": [
+              56.5,
+              59
+            ]
+          },
+          "source_ids": [
+            "S761"
+          ],
+          "ref": "flat_coated_retriever.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              27,
+              36
+            ],
+            "female": [
+              25,
+              32
+            ]
+          },
+          "source_ids": [
+            "S761"
+          ],
+          "ref": "flat_coated_retriever.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "flat_coated_retriever.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.7,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "flat_coated_retriever.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 18,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "flat_coated_retriever.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 121,
+            "group": 8,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S760"
+          ],
+          "ref": "flat_coated_retriever.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S763"
+          ],
+          "ref": "flat_coated_retriever.health.cancer",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S763"
+          ],
+          "ref": "flat_coated_retriever.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.health.eyes",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S762"
+          ],
+          "ref": "flat_coated_retriever.health.hips",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.exercise.adult",
+              "flat_coated_retriever.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.lifespan.rkc",
+              "flat_coated_retriever.suitability.rkc_lifespan"
+            ]
+          },
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.exercise.adult",
+              "flat_coated_retriever.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S762",
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_grooming",
+              "flat_coated_retriever.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 105
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 105
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S762"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S762 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 105 (0.75 × 11.7 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 18, Excellent, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.grooming",
+            "basis_source_ids": [
+              "S763"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PetMD »twice-weekly«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.ear_care",
+            "basis_source_ids": [
+              "S763"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every week or two« → spodnja meja, 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.nail_care",
+            "basis_source_ids": [
+              "S763"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every month or two« → spodnja meja, vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.flat_coated_retriever.bathing",
+            "basis_source_ids": [
+              "S763"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every month or two« → spodnja meja, vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S762",
+          "S763"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S762"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S762"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S762"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S762"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S760",
+        "S761",
+        "S762",
+        "S763",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -62143,6 +62783,34 @@
       "publisher": "PetMD",
       "title": "Dogue de Bordeaux Dog Breed Health and Care",
       "url": "https://www.petmd.com/dog/breeds/dogue-de-bordeaux"
+    },
+    {
+      "id": "S760",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Flat Coated Retriever (121)",
+      "url": "https://www.fci.be/en/nomenclature/FLAT-COATED-RETRIEVER-121.html"
+    },
+    {
+      "id": "S761",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 121 — Flat Coated Retriever (PDF, English 06.10.2026)",
+      "url": "https://www.fci.be/Nomenclature/Standards/121g08-en.pdf"
+    },
+    {
+      "id": "S762",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Retriever (Flat Coated) — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-flat-coated/"
+    },
+    {
+      "id": "S763",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Sep. 13, 2023)",
+      "title": "Flat-Coated Retriever Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/flat-coated-retriever"
     },
     {
       "id": "C1",
