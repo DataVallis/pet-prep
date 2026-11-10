@@ -141,7 +141,7 @@
     "en": "Tomatoes are people food, not cat food. Keep tomato plants away from kitty and tell a grown-up if kitty nibbles one.",
     "sl": "Paradižnik je hrana za ljudi, ne za muce. Paradižnikove rastline naj bodo stran od muce. Če muca katero pogrizlja, povej odraslemu.",
     "de": "Tomaten sind Essen für Menschen, nicht für Katzen. Halte Tomatenpflanzen von der Katze fern und sag einem Erwachsenen Bescheid, wenn sie an einer knabbert.",
-    "fr": "Les tomates sont de la nourriture pour les humains, pas pour les chats. Garde les plants de tomate hors de portée de ton chat, et dis-le à un adulte s’il en grignote un.",
+    "fr": "Les tomates, c’est pour les humains, pas pour les chats. Garde les plants de tomate loin de ton chat, et dis-le à un adulte s’il en grignote.",
     "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum.",
     "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt.",
     "pl": "Pomidory to jedzenie dla ludzi, nie dla kotów. Trzymaj rośliny pomidora z dala od kotka i powiedz dorosłemu, jeśli kotek którąś skubnie.",
@@ -262,7 +262,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cc5e35493ef6179167c5cea3ad1cdae328edec89c52d11474f2b213f30e6696e"
+      "verified_hash": "f8d82db670533f64bfe6ecadb06b199a37665cd2ea3bf004214be72bfd92a740"
     },
     "pt": {
       "status": "verified",

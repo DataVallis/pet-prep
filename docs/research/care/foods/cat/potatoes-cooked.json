@@ -105,7 +105,7 @@
     "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
     "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce.",
     "de": "Ein winziges Stück pure gekochte Kartoffel kann ab und zu ein Leckerli für Katzen sein. Rohe Kartoffeln sind nichts für Katzen.",
-    "fr": "Un tout petit peu de pomme de terre cuite nature peut faire une friandise pour ton chat, de temps en temps. La pomme de terre crue n’est pas pour les chats.",
+    "fr": "Un tout petit peu de pomme de terre cuite nature peut être une friandise pour ton chat, de temps en temps. La pomme de terre crue, non.",
     "pt": "Um bocadinho de batata cozida simples pode ser uma guloseima para o gato de vez em quando. A batata crua não é para gatos.",
     "nl": "Een heel klein beetje naturel gekookte aardappel kan af en toe een traktatie voor je kat zijn. Rauwe aardappel is niet voor katten.",
     "pl": "Odrobinę zwykłego ugotowanego ziemniaka można czasem dać kotu jako smakołyk. Surowe ziemniaki nie są dla kotów.",
@@ -253,7 +253,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9df62b040de66c97194eba363db21d4f75ef07c33f871da981918e8567ce71c0"
+      "verified_hash": "39d82b497b31fa32bf1d8eb1700a4a3a66f5e487b0cec7aae5747b7db3bd62ae"
     },
     "pt": {
       "status": "verified",
