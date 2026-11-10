@@ -1,0 +1,152 @@
+{
+  "country": "JP",
+  "checked": "2026-11-10",
+  "sources": [
+    {"name": "Japan Animal Medical Center (日本動物医療センター) – Emergency/night page and access", "url": "https://jamc.co.jp/yakanshinryo/faq/", "note": "Clinic's own site; says emergency care 24 h / 365 days."},
+    {"name": "Daktari Animal Hospital Tokyo Medical Center – emergency", "url": "https://www.daktari.gr.jp/dear-owner/emergency/", "note": "Clinic's own site; says emergency reception 24 h / 365 days."},
+    {"name": "JARVIS Animal Medical Center Tokyo", "url": "https://jarvis.anicom-med.co.jp/", "note": "Clinic's own site; emergency 24 h / 365 days."},
+    {"name": "Kariya Animal Hospital Group – night emergency", "url": "https://www.kariya-ah.co.jp/service/emergency", "note": "Group page listing 24 h hospitals (Koto, Adachi)."},
+    {"name": "TRVA Animal Medical Center – emergency support", "url": "https://trva.jp/emergencysupport/", "note": "Night emergency line from 20:00 every day (not 24 h)."},
+    {"name": "Night Emergency Animal Hospital Meguro (夜間救急動物病院-目黒)", "url": "https://www.yakan-99.com/", "note": "Night emergency only."},
+    {"name": "Higashi-Tokyo Night Animal Emergency Center", "url": "https://www.doubutsu-yakan99.com/access.html", "note": "Night emergency only."},
+    {"name": "Tokyo Animal Hospital 24", "url": "https://animal24.tokyo/hospi.html", "note": "Clinic's own site."},
+    {"name": "University of Tokyo Veterinary Medical Center", "url": "https://www.vm.a.u-tokyo.ac.jp/vmc/", "note": "University teaching hospital; referral-based, no emergency service."},
+    {"name": "Nippon Veterinary and Life Science University Animal Medical Center", "url": "https://www.nvlu.ac.jp/amedical/", "note": "University teaching hospital; appointment required, no 24 h service stated."}
+  ],
+  "entries": [
+    {
+      "kind": "clinic", "name": "Japan Animal Medical Center (日本動物医療センター)", "city": "Shibuya", "region": "Tokyo",
+      "address": "6-22-3 Honmachi, Shibuya-ku, Tokyo", "phone": "+81 3-3378-3366", "emergency_24h": true,
+      "duty": "Emergency care 24 hours, 365 days a year. Regular hours 9:00-20:00 (closed Wednesdays, emergencies still accepted). Call before coming; after-hours surcharges may apply.",
+      "small_animals": true, "url": "https://jamc.co.jp/english/", "source_url": "https://jamc.co.jp/guide/", "checked": "2026-11-10",
+      "note": "Guide page: 救急は24時間（年中無休）対応. FAQ page says 21:00-9:00 night phone vet consultation (Anicli24) can be connected. Access page confirms address; nearest Hatagaya Station."
+    },
+    {
+      "kind": "clinic", "name": "Daktari Animal Hospital Tokyo Medical Center (ダクタリ動物病院 東京医療センター)", "city": "Minato", "region": "Tokyo",
+      "address": "Shirokanedai Apartment 2F, 5-14-1 Shirokanedai, Minato-ku, Tokyo", "phone": "+81 3-5420-0012", "emergency_24h": true,
+      "duty": "Emergency reception 24 hours, 365 days a year. Regular hours 10:00-12:30 and 14:30-19:00; out-of-hours fee applies. Call before coming.",
+      "small_animals": true, "url": "https://www.daktari.gr.jp/", "source_url": "https://www.daktari.gr.jp/emergency-medicine/", "checked": "2026-11-10",
+      "note": "Page: 救急外来受付：24時間365日. Other Daktari branches (Tomigaya, Kugayama) only seen on an aggregator-type article, not opened on own site; not added."
+    },
+    {
+      "kind": "clinic", "name": "JARVIS Animal Medical Center Tokyo (JARVISどうぶつ医療センター Tokyo)", "city": "Minato", "region": "Tokyo",
+      "address": "2-13-37 Konan, Minato-ku, Tokyo", "phone": "+81 3-6260-2997", "emergency_24h": true,
+      "duty": "Emergency and critical care 24 hours, 365 days a year (emergency line +81 3-6260-2997; backup +81 3-6706-7170). Specialty care by referral and appointment 9:00-19:00. Call before coming.",
+      "small_animals": true, "url": "https://jarvis.anicom-med.co.jp/", "source_url": "https://jarvis.anicom-med.co.jp/", "checked": "2026-11-10",
+      "note": "Page: 救命・救急診療 24時間対応・年中無休. Specialty line 03-6260-2996."
+    },
+    {
+      "kind": "clinic", "name": "Kariya Animal Hospital Group - Koto General Hospital (苅谷動物病院 江東総合病院)", "city": "Koto", "region": "Tokyo",
+      "address": "3-12-7 Kitasuna, Koto-ku, Tokyo", "phone": "+81 3-5617-7555", "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
+      "small_animals": true, "url": "https://www.kariya-ah.co.jp/access/koto", "source_url": "https://www.kariya-ah.co.jp/access/koto", "checked": "2026-11-10",
+      "note": "Page: 年中無休 24時間. Night emergency page: surcharge 15,000 yen + 40,000 yen deposit, no online booking at night."
+    },
+    {
+      "kind": "clinic", "name": "Kariya Animal Hospital Group - Adachi General Hospital (苅谷動物病院 足立総合病院)", "city": "Adachi", "region": "Tokyo",
+      "address": "1-14-25 Nishihokima, Adachi-ku, Tokyo", "phone": "+81 3-3858-8150", "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
+      "small_animals": true, "url": "https://www.kariya-ah.co.jp/access/adachi", "source_url": "https://www.kariya-ah.co.jp/access/adachi", "checked": "2026-11-10",
+      "note": "Page: 年中無休 24時間. Same group page lists Ichikawa (Chiba, outside scope)."
+    },
+    {
+      "kind": "clinic", "name": "Tokyo Animal Hospital 24 (東京動物病院24)", "city": "Shinagawa", "region": "Tokyo",
+      "address": "2-5-8 Hiratsuka, Shinagawa-ku, Tokyo", "phone": "+81 3-5702-0012", "emergency_24h": true,
+      "duty": "Presents itself as a 24-hour animal hospital open on holidays and at night. Call ahead to confirm, as it may temporarily be treating patients at another site.",
+      "small_animals": true, "url": "https://animal24.tokyo/", "source_url": "https://animal24.tokyo/hospi.html", "checked": "2026-11-10",
+      "note": "hospi.html title/description: 東京動物病院24は夜間救急時など、24時間対応の動物病院です; map.html: 夜間や緊急時など24時間診療しています. hospi.html also says that from 'Nov 1 for a while' treatment takes place at the Japan Animal Emergency Medical Center in Musashi-Kosugi (Kanagawa); year of notice not stated, so possibly stale. Hours table is an image."
+    },
+    {
+      "kind": "clinic", "name": "TRVA Animal Medical Center Setagaya Nakamachi (TRVA動物医療センター)", "city": "Setagaya", "region": "Tokyo",
+      "address": "Senmi Building 2F, 8-19-12 Fukasawa, Setagaya-ku, Tokyo", "phone": "+81 3-5760-1212", "emergency_24h": false,
+      "duty": "Night emergency service every day of the year, starting at 20:00 (call +81 3-5760-1212 first). Secondary-care line +81 3-5760-1211.",
+      "small_animals": true, "url": "https://trva.jp/", "source_url": "https://trva.jp/emergencysupport/", "checked": "2026-11-10",
+      "note": "Page: 年中無休20:00から; no closing time and no 24時間 statement, so emergency_24h false. Operated by Tokyo Jonan Regional Veterinary Alliance for Medical Advancement."
+    },
+    {
+      "kind": "clinic", "name": "Night Emergency Animal Hospital Meguro (夜間救急動物病院-目黒)", "city": "Meguro", "region": "Tokyo",
+      "address": "Fuji Building, 4-15-15 Himonya, Meguro-ku, Tokyo", "phone": "+81 3-5720-1299", "emergency_24h": false,
+      "duty": "Night emergency hospital open every day of the year from 20:00 until early morning. Call first; opening hours were temporarily shortened, so confirm by phone.",
+      "small_animals": true, "url": "https://www.yakan-99.com/", "source_url": "https://www.yakan-99.com/", "checked": "2026-11-10",
+      "note": "Top page: reception 20:00 to next morning 5:00 (notice: changed from 8:00 'for the time being', year not stated); access section still says 8:00. No 24h claim. Crown Animal Hospital's page also refers to this hospital."
+    },
+    {
+      "kind": "clinic", "name": "Higashi-Tokyo Night Animal Emergency Center (ひがし東京 夜間動物救急医療センター)", "city": "Koto", "region": "Tokyo",
+      "address": "Nobir Mente Ueda Building 1F, 6-38-11 Kameido, Koto-ku, Tokyo", "phone": "+81 3-5858-9969", "emergency_24h": false,
+      "duty": "Night emergency care every day of the year, 19:00 to 7:00 the next morning (phone reception 19:00-6:00).",
+      "small_animals": true, "url": "https://www.doubutsu-yakan99.com/", "source_url": "https://www.doubutsu-yakan99.com/access.html", "checked": "2026-11-10",
+      "note": "Page: 年中無休 夜7時から翌朝7時まで【電話受付は夜7時から翌朝6時まで】. No 24h claim. Parking note refers to a nearby animal hospital's lot."
+    },
+    {
+      "kind": "clinic", "name": "Azabu Pet Clinic (麻布ペットクリニック)", "city": "Tokyo", "region": "Tokyo",
+      "phone": "+81 50-5491-7200", "emergency_24h": false,
+      "duty": "Night emergency clinic and home visits. Night emergency hours 20:00-5:00 (check the clinic calendar for closed days); phone reception 9:00-18:00.",
+      "small_animals": true, "url": "https://azabupet.jp/en/", "source_url": "https://azabupet.jp/en/", "checked": "2026-11-10",
+      "note": "English page gave no address; Japanese pages clinic.azabupet.jp/clinical and the emergency-hospital page failed to load. Only 'contact form accepted 24 hours' is 24 h, not care."
+    },
+    {
+      "kind": "clinic", "name": "Veterinary Medical Center, The University of Tokyo (東京大学附属動物医療センター)", "city": "Bunkyo", "region": "Tokyo",
+      "address": "1-1-1 Yayoi, Bunkyo-ku, Tokyo", "phone": "+81 3-5841-8004", "emergency_24h": false,
+      "duty": "University teaching hospital, weekdays only (reception 9:00-11:30 and 13:30-15:30). First visits need a referral from your current vet; no emergency service.",
+      "small_animals": true, "url": "https://www.vm.a.u-tokyo.ac.jp/vmc/", "source_url": "https://www.vm.a.u-tokyo.ac.jp/vmc/", "checked": "2026-11-10",
+      "note": "Appointment line 03-5841-8004 weekdays 11:00-16:00; general 03-5841-5420. Older newsletter PDF says emergency surgery is generally not accepted."
+    },
+    {
+      "kind": "clinic", "name": "Animal Medical Center, Nippon Veterinary and Life Science University (日本獣医生命科学大学付属動物医療センター)", "city": "Musashino", "region": "Tokyo",
+      "address": "1-7-1 Kyonancho, Musashino-shi, Tokyo", "phone": "+81 422-90-4000", "emergency_24h": false,
+      "duty": "University teaching hospital. Weekdays 9:00-16:00; book first on the reservation line. No after-hours emergency service stated.",
+      "small_animals": true, "url": "https://www.nvlu.ac.jp/amedical/", "source_url": "https://www.nvlu.ac.jp/amedical/medical-guidance/001-001.html/", "checked": "2026-11-10",
+      "note": "Address is the university's (page gives no separate one). Saturday outpatient care suspended for now (imaging/surgery only). Direct booking without referral possible online. Not in the 23 wards."
+    },
+    {
+      "kind": "clinic", "name": "Akasaka Animal Hospital (赤坂動物病院)", "city": "Minato", "region": "Tokyo",
+      "address": "Akasaka Akabishi Building 2F, 4-1-29 Akasaka, Minato-ku, Tokyo", "phone": "+81 3-3583-5852", "emergency_24h": false,
+      "duty": "Reception 9:30-18:00 on weekdays, until 17:00 on weekends and holidays. English-language website available.",
+      "small_animals": true, "url": "https://akasaka-ah-en.com/", "source_url": "https://akasaka-ah.com/access", "checked": "2026-11-10",
+      "note": "No emergency statement. English site akasaka-ah-en.com found via search (not fetched directly)."
+    },
+    {
+      "kind": "clinic", "name": "West Cross Veterinary Hospital (ウエストクロス動物病院)", "city": "Meguro", "region": "Tokyo",
+      "address": "Custalia Nakameguro 1F, 1-18-7 Aobadai, Meguro-ku, Tokyo", "phone": "+81 3-6416-9533", "emergency_24h": false,
+      "duty": "Mornings 10:00-13:00 and afternoons 16:00-19:00; closed Wednesdays; Sundays and holidays mornings only. Call if the case may be urgent.",
+      "small_animals": true, "url": "https://www.westcross.jp/English.html", "source_url": "https://westcross.jp/access.html", "checked": "2026-11-10",
+      "note": "Friday afternoon by appointment only. No after-hours service described."
+    },
+    {
+      "kind": "clinic", "name": "Animal Medical Center Motoazabu (動物医療センター元麻布)", "city": "Minato", "region": "Tokyo",
+      "address": "4-11-4 Nishiazabu, Minato-ku, Tokyo", "phone": "+81 3-6384-5351", "emergency_24h": false,
+      "duty": "Open daily 9:00-12:00 and 16:00-19:00; English phone support available. Check by phone for emergencies and night care.",
+      "small_animals": true, "url": "https://amc-motoazabu.com/english.php", "source_url": "https://amc-motoazabu.com/english_medicalguide.php", "checked": "2026-11-10",
+      "note": "English medical guide said it is 'currently closed at night due to COVID-19' - possibly outdated; ICU for post-surgical care."
+    },
+    {
+      "kind": "clinic", "name": "PetLife Veterinary Clinic", "city": "Minato", "region": "Tokyo",
+      "address": "Daiichi Building 1F, 2-3-5 Higashi Azabu, Minato-ku, Tokyo", "phone": "+81 3-6807-4058", "emergency_24h": false,
+      "duty": "English-speaking veterinary clinic; call for opening hours.",
+      "small_animals": true, "url": "https://petlife.co.jp/en/", "source_url": "https://petlife.co.jp/en/contact/", "checked": "2026-11-10",
+      "note": "Contact page lists no hours and no emergency statement."
+    },
+    {
+      "kind": "clinic", "name": "Nishiazabu Mitsubachi Animal Hospital (西麻布みつばち動物病院)", "city": "Minato", "region": "Tokyo",
+      "address": "2-13-1 Nishiazabu, Minato-ku, Tokyo", "phone": "+81 3-6433-5433", "emergency_24h": false,
+      "duty": "Dogs and cats, by appointment; English-speaking vet and nurse. Roughly 10:00-13:00 and 16:00-19:00, closed Thursdays - confirm by phone.",
+      "small_animals": true, "url": "https://www.mitsubachi-ah.com/", "source_url": "https://www.mitsubachi-ah.com/access/", "checked": "2026-11-10",
+      "note": "Page shows two conflicting hour schedules; closed-day cases referred to another hospital and TRVA."
+    },
+    {
+      "kind": "clinic", "name": "Crown Animal Hospital (クラウン動物病院)", "city": "Ota", "region": "Tokyo",
+      "address": "3-25-11 Naka-Magome, Ota-ku, Tokyo", "phone": "+81 3-5728-9012", "emergency_24h": false,
+      "duty": "Appointment-only (phone or online). Not an emergency hospital; refers night emergencies to a night emergency hospital.",
+      "small_animals": true, "url": "https://crown-ah.tokyo/", "source_url": "https://crown-ah.tokyo/access/", "checked": "2026-11-10",
+      "note": "Only Monday hours (9:00-12:00, 15:00-18:00) were visible."
+    },
+    {
+      "kind": "clinic", "name": "Azabu-Juban Dog & Cat Clinic (麻布十番犬猫クリニック)", "city": "Minato", "region": "Tokyo",
+      "address": "Building 4F (401), 2-8-5 Azabujuban, Minato-ku, Tokyo", "phone": "+81 3-3457-8612", "emergency_24h": false,
+      "duty": "10:00-13:00 and 14:30-18:30; closed Wednesday afternoons and at New Year. Dental and dermatology; emergencies go to the Japan Animal Medical Center (+81 3-3378-3366).",
+      "small_animals": true, "url": "https://azabu.jamc.co.jp/about/", "source_url": "https://azabu.jamc.co.jp/about/", "checked": "2026-11-10",
+      "note": "Branch of JAMC; the clinic itself does not claim 24 h."
+    }
+  ],
+  "notes": "WebFetch could only open URLs surfaced by search results, so many own-site pages were reachable only after a domain-restricted search. NOT FOUND/UNREACHABLE: Tokyo Metropolitan Veterinary Medical Association (東京都獣医師会) and ward veterinary associations (no official duty-rota page located; tvma/tokyo-vet domains were not fetchable), so no duty_rota entries. Poison line: no official animal poison line page found (Japan Poison Information Center pages are for humans) - none added. Tokyo Metropolitan Government animal pages (hokeniryo.metro.tokyo.lg.jp) and Setagaya city page opened: no emergency vet list or rota, only welfare-centre phones. Not opened / skipped: Toranomon Animal Hospital (site redirect loop), Daktari Tomigaya and Kugayama branches, ER Bunkyo/Nerima/Fuchu, Grace Animal Hospital, Meguro/Taito/Toshima/Shinjuku/Chiyoda general clinics (only aggregator results surfaced), Azabu University, Nihon University (Fujisawa, Kanagawa - outside Tokyo). Tokyo Animal Hospital 24 notice of temporary relocation to Musashi-Kosugi may be stale. Aggregators (wankonowa, metropolisjapan, japanlivingguide) were used only to find leads, never as the source."
+}
