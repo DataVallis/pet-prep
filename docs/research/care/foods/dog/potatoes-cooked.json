@@ -9,7 +9,8 @@
     "pl": "Ugotowane ziemniaki",
     "cs": "Uvařené brambory",
     "hr": "Kuhani krumpir",
-    "sv": "Kokt potatis"
+    "sv": "Kokt potatis",
+    "da": "Kogte kartofler"
   },
   "question": {
     "en": "Can dogs eat cooked potatoes?",
@@ -19,7 +20,8 @@
     "pl": "Czy psy mogą jeść ugotowane ziemniaki?",
     "cs": "Mohou psi jíst uvařené brambory?",
     "hr": "Smiju li psi jesti kuhani krumpir?",
-    "sv": "Får hundar äta kokt potatis?"
+    "sv": "Får hundar äta kokt potatis?",
+    "da": "Må hunde spise kogte kartofler?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
@@ -29,7 +31,8 @@
     "pl": "ugotowane-ziemniaki",
     "cs": "uvarene-brambory",
     "hr": "kuhani-krumpir",
-    "sv": "kokt-potatis"
+    "sv": "kokt-potatis",
+    "da": "kogte-kartofler"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "pl": "Tak, psy mogą jeść ugotowane ziemniaki w umiarkowanych ilościach, jeśli są podane bez dodatków. Ziemniak gotowany lub pieczony, bez masła, mleka, soli i przypraw, jest w porządku w małych ilościach, o ile jest miękki i nie jest zielony.",
     "cs": "Ano, psi mohou jíst uvařené brambory v mírném množství, pokud jsou podané bez dalších přísad. Vařená nebo pečená brambora bez másla, mléka, soli a koření je v malém množství v pořádku, pokud je měkká a není zelená.",
     "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen.",
-    "sv": "Ja, hundar kan äta tillagad potatis med måtta när den ges utan tillsatser. Kokt eller bakad potatis utan smör, mjölk, salt eller kryddor går bra i små mängder, så länge den är mjuk och inte grön."
+    "sv": "Ja, hundar kan äta tillagad potatis med måtta när den ges utan tillsatser. Kokt eller bakad potatis utan smör, mjölk, salt eller kryddor går bra i små mängder, så länge den är mjuk och inte grön.",
+    "da": "Ja, hunde kan spise tilberedte kartofler med måde, når de gives uden tilbehør. Kogt eller bagt kartoffel uden smør, mælk, salt eller krydderier er fin i små mængder, så længe den er blød og ikke grøn."
   },
   "why": {
     "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
@@ -50,7 +54,8 @@
     "pl": "Zwykły ugotowany ziemniak jest dla psów w porządku, ale powinien być smakołykiem, a nie zamiennikiem posiłku, i stanowić tylko niewielką część diety. Zbyt duże porcje mogą prowadzić do otyłości, a dużo masła może wywołać zapalenie trzustki. Surowe lub zielone ziemniaki są niebezpieczne i potencjalnie toksyczne.",
     "cs": "Uvařené brambory bez dalších přísad jsou pro psy v pořádku, ale měly by být pamlskem, ne náhradou jídla, a tvořit jen malou část jídelníčku. Příliš velké porce mohou vést k obezitě a hodně másla může spustit zánět slinivky břišní. Syrové nebo zelené brambory jsou nebezpečné a potenciálně toxické.",
     "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan.",
-    "sv": "Tillagad potatis utan tillsatser går bra för hundar, men den ska vara en godbit och inte ersätta en måltid, och bara utgöra en liten del av kosten. För många portioner kan leda till övervikt, och mycket smör kan utlösa bukspottkörtelinflammation. Rå eller grön potatis är inte säker och kan vara giftig."
+    "sv": "Tillagad potatis utan tillsatser går bra för hundar, men den ska vara en godbit och inte ersätta en måltid, och bara utgöra en liten del av kosten. För många portioner kan leda till övervikt, och mycket smör kan utlösa bukspottkörtelinflammation. Rå eller grön potatis är inte säker och kan vara giftig.",
+    "da": "Naturel tilberedt kartoffel er fin til hunde, men den skal være en godbid og ikke erstatte et måltid, og den bør kun udgøre en lille del af kosten. For mange portioner kan give overvægt, og meget smør kan udløse betændelse i bugspytkirtlen (pankreatitis). Rå eller grønne kartofler er ikke sikre og kan være giftige."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "pl": "Traktuj ugotowany ziemniak jako okazjonalny smakołyk w małych ilościach. Nigdy nie dawaj surowego ziemniaka ani ziemniaka z zielonymi plamami, a potrawy ziemniaczane z masłem, mlekiem, solą lub przyprawami omijaj.",
     "cs": "Uvařené brambory dávejte jen občas a v malém množství. Nikdy nedávejte syrové brambory ani brambory se zelenými skvrnami a vyhněte se bramborovým pokrmům s máslem, mlékem, solí nebo kořením.",
     "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima.",
-    "sv": "Ge tillagad potatis som en godbit då och då, i små mängder. Ge aldrig rå potatis eller potatis med gröna fläckar, och hoppa över potatisrätter med smör, mjölk, salt eller kryddor."
+    "sv": "Ge tillagad potatis som en godbit då och då, i små mängder. Ge aldrig rå potatis eller potatis med gröna fläckar, och hoppa över potatisrätter med smör, mjölk, salt eller kryddor.",
+    "da": "Giv tilberedt kartoffel som en godbid en gang imellem og i små mængder. Giv aldrig rå kartoffel eller kartoffel med grønne pletter, og undlad kartoffelretter lavet med smør, mælk, salt eller krydderier."
   },
   "serving": {
     "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
@@ -71,7 +77,8 @@
     "pl": "Zwykły, gotowany lub pieczony, do takiej miękkości, żeby dało się go rozgnieść – wtedy pies się nie zadławi. Bez masła, mleka, soli i przypraw. Skórka też może być, o ile nie jest zielona.",
     "cs": "Vařené nebo pečené bez dalších přísad, dokud nejsou tak měkké, že jdou rozmačkat a pes se jimi nezadusí. Bez másla, mléka, soli a koření. Slupky jsou v pořádku, pokud nejsou zelené.",
     "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena.",
-    "sv": "Kokt eller bakad, utan tillsatser, tillagad tills den är så mjuk att den går att mosa, så att det inte blir någon kvävningsrisk. Inget smör, mjölk, salt eller kryddor. Skalet går bra om det inte är grönt."
+    "sv": "Kokt eller bakad, utan tillsatser, tillagad tills den är så mjuk att den går att mosa, så att det inte blir någon kvävningsrisk. Inget smör, mjölk, salt eller kryddor. Skalet går bra om det inte är grönt.",
+    "da": "Naturel kogt eller bagt kartoffel, så blød at den kan moses, så din hund ikke får den galt i halsen. Uden smør, mælk, salt og krydderier. Skrællen er i orden, hvis den ikke er grøn."
   },
   "child": {
     "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
@@ -81,7 +88,8 @@
     "pl": "Psy mogą dostać odrobinę zwykłego ugotowanego ziemniaka jako smakołyk. Dorosły pilnuje, żeby był miękki i bez masła czy soli.",
     "cs": "Pejsek může jako pamlsek dostat trochu uvařených brambor bez dalších přísad. Dospělý dohlédne na to, aby byly měkké a bez másla a soli.",
     "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli.",
-    "sv": "Hundar kan få lite kokt potatis utan tillsatser som godbit. En vuxen ser till att den är mjuk och utan smör eller salt."
+    "sv": "Hundar kan få lite kokt potatis utan tillsatser som godbit. En vuxen ser till att den är mjuk och utan smör eller salt.",
+    "da": "Hunde må få lidt naturel kogt kartoffel som godbid. En voksen sørger for, at den er blød og uden smør og salt."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "pl": "Czy psy mogą jeść puree ziemniaczane?",
         "cs": "Mohou psi jíst bramborovou kaši?",
         "hr": "Smiju li psi jesti pire od krumpira?",
-        "sv": "Får hundar äta potatismos?"
+        "sv": "Får hundar äta potatismos?",
+        "da": "Må hunde spise kartoffelmos?"
       },
       "a": {
         "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
@@ -103,7 +112,8 @@
         "pl": "Tylko zwykłe puree, w małych ilościach, bez masła, mleka, soli i przypraw.",
         "cs": "Jen bramborovou kaši bez dalších přísad, v malém množství, bez másla, mléka, soli a koření.",
         "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina.",
-        "sv": "Bara potatismos utan tillsatser, i små mängder, utan smör, mjölk, salt eller kryddor."
+        "sv": "Bara potatismos utan tillsatser, i små mängder, utan smör, mjölk, salt eller kryddor.",
+        "da": "Kun naturel kartoffelmos i små mængder og uden smør, mælk, salt eller krydderier."
       }
     },
     {
@@ -115,7 +125,8 @@
         "pl": "Czy psy mogą jeść skórki ziemniaków?",
         "cs": "Mohou psi jíst bramborové slupky?",
         "hr": "Smiju li psi jesti koru krumpira?",
-        "sv": "Får hundar äta potatisskal?"
+        "sv": "Får hundar äta potatisskal?",
+        "da": "Må hunde spise kartoffelskræl?"
       },
       "a": {
         "en": "Yes, potato skins are okay too, but not if they are green.",
@@ -125,7 +136,8 @@
         "pl": "Tak, skórki ziemniaków też są w porządku, ale nie wtedy, gdy są zielone.",
         "cs": "Ano, slupky jsou také v pořádku, ale ne zelené.",
         "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena.",
-        "sv": "Ja, potatisskal går också bra, men inte om de är gröna."
+        "sv": "Ja, potatisskal går också bra, men inte om de är gröna.",
+        "da": "Ja, kartoffelskræl er også i orden, men ikke hvis den er grøn."
       }
     },
     {
@@ -137,7 +149,8 @@
         "pl": "Czy frytki są w porządku dla psów?",
         "cs": "Jsou hranolky pro psy v pořádku?",
         "hr": "Je li pomfrit u redu za pse?",
-        "sv": "Går pommes frites bra för hundar?"
+        "sv": "Går pommes frites bra för hundar?",
+        "da": "Er pommes frites i orden for hunde?"
       },
       "a": {
         "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
@@ -147,7 +160,8 @@
         "pl": "Przy frytkach, plackach ziemniaczanych i innych potrawach ziemniaczanych łatwo przesadzić z ilością. Ziemniaki powinny być smakołykami, a nie zamiennikami posiłków.",
         "cs": "U hranolků, bramborových placek a dalších bramborových pokrmů je snadné to přehnat. Brambory mají být pamlskem, ne náhradou jídla.",
         "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke.",
-        "sv": "Med pommes frites, hash browns och andra potatisrätter blir det lätt för mycket av det goda. Potatis ska vara en godbit och inte ersätta en måltid."
+        "sv": "Med pommes frites, hash browns och andra potatisrätter blir det lätt för mycket av det goda. Potatis ska vara en godbit och inte ersätta en måltid.",
+        "da": "Det er let at give for meget af det gode med pommes frites, hashbrowns og andre kartoffelretter. Kartofler skal være godbidder og ikke erstatte måltider."
       }
     }
   ],
@@ -252,6 +266,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "69aaa3a0c9cbe5d6aa2f479fa85a92c12f1c47da4bde88ef4749c886ee703325"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c5530baae7b73634d9a15aac78ad9b8e20cf720fae3d89ae0df00b6cdc7c5dda"
     }
   }
 }

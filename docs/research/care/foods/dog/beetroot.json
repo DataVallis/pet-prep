@@ -9,7 +9,8 @@
     "pl": "Buraki ćwikłowe",
     "cs": "Červená řepa",
     "hr": "Cikla",
-    "sv": "Rödbetor"
+    "sv": "Rödbetor",
+    "da": "Rødbeder"
   },
   "question": {
     "en": "Can dogs eat beetroot?",
@@ -19,7 +20,8 @@
     "pl": "Czy psy mogą jeść buraki ćwikłowe?",
     "cs": "Mohou psi jíst červenou řepu?",
     "hr": "Smiju li psi jesti ciklu?",
-    "sv": "Får hundar äta rödbetor?"
+    "sv": "Får hundar äta rödbetor?",
+    "da": "Må hunde spise rødbeder?"
   },
   "url_slug": {
     "en": "beetroot",
@@ -29,7 +31,8 @@
     "pl": "buraki-cwiklowe",
     "cs": "cervena-repa",
     "hr": "cikla",
-    "sv": "rodbetor"
+    "sv": "rodbetor",
+    "da": "roedbeder"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "pl": "Tak, świeże buraki ćwikłowe są dla psów w porządku w umiarkowanych ilościach, jako okazjonalny smakołyk. Mają dużo cukru i kwasu szczawiowego, więc porcje powinny być małe, a jeśli twój pies jest podatny na kamienie nerkowe, najpierw zapytaj weterynarza.",
     "cs": "Ano, červená řepa je pro psy v pořádku, pokud je čerstvá a podaná v mírném množství jako občasný pamlsek. Obsahuje hodně cukru a kyseliny šťavelové, proto dávejte malé porce, a pokud je pes náchylný ke kamenům v ledvinách, nejprve se poraďte s veterinářem.",
     "hr": "Da, svježa je cikla u umjerenim količinama u redu za pse kao povremena poslastica. Sadrži mnogo šećera i oksalne kiseline, zato daj male porcije, a ako je tvoj pas sklon bubrežnim kamencima, prvo se posavjetuj s veterinarom.",
-    "sv": "Ja, rödbeta går bra för hundar om den är färsk och ges med måtta, som en godbit då och då. Den innehåller mycket socker och oxalsyra, så håll portionerna små, och fråga veterinären först om hunden är benägen att få njurstenar."
+    "sv": "Ja, rödbeta går bra för hundar om den är färsk och ges med måtta, som en godbit då och då. Den innehåller mycket socker och oxalsyra, så håll portionerna små, och fråga veterinären först om hunden är benägen att få njurstenar.",
+    "da": "Ja, rødbeder er fine for hunde, når de er friske og gives med måde som godbid en gang imellem. De har et højt indhold af sukker og oxalsyre, så hold portionerne små, og spørg først din dyrlæge, hvis din hund let får nyresten."
   },
   "why": {
     "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
@@ -50,7 +54,8 @@
     "pl": "Buraki mają dużo węglowodanów i cukru, a nadmiar cukru może przyczyniać się do zapalenia trzustki lub otyłości. Mają też dużo kwasu szczawiowego, który może sprzyjać powstawaniu kamieni w pęcherzu, kryształów w moczu i kamieni nerkowych oraz powodować niedobory wapnia. Ponieważ buraki są kwaśne, u niektórych psów mogą powodować gazy i biegunkę.",
     "cs": "Červená řepa je bohatá na sacharidy a cukr a příliš mnoho cukru může přispívat k zánětu slinivky břišní nebo obezitě. Je také bohatá na kyselinu šťavelovou, která může vytvářet kameny v močovém měchýři, močové krystaly a kameny v ledvinách a může způsobit nedostatek vápníku. Kvůli kyselosti může u některých psů způsobit plynatost a průjem.",
     "hr": "Cikla je bogata ugljikohidratima i šećerom, a previše šećera može pridonijeti upali gušterače ili pretilosti. Sadrži i mnogo oksalne kiseline, koja može uzrokovati kamence u mokraćnom mjehuru, kristale u mokraći i bubrežne kamence te manjak kalcija. Zbog kiselosti cikla kod nekih pasa može izazvati nadutost i proljev.",
-    "sv": "Rödbetor innehåller mycket kolhydrater och socker, och för mycket socker kan bidra till inflammation i bukspottkörteln eller övervikt. De innehåller också mycket oxalsyra, som kan ge upphov till blåsstenar, urinkristaller och njurstenar och kan orsaka kalciumbrist. Eftersom rödbetor är sura kan de ge gasbildning och diarré hos en del hundar."
+    "sv": "Rödbetor innehåller mycket kolhydrater och socker, och för mycket socker kan bidra till inflammation i bukspottkörteln eller övervikt. De innehåller också mycket oxalsyra, som kan ge upphov till blåsstenar, urinkristaller och njurstenar och kan orsaka kalciumbrist. Eftersom rödbetor är sura kan de ge gasbildning och diarré hos en del hundar.",
+    "da": "Rødbeder har et højt indhold af kulhydrater og sukker, og for meget sukker kan bidrage til betændelse i bugspytkirtlen (pankreatitis) eller overvægt. De har også et højt indhold af oxalsyre, som kan danne blærestene, urinkrystaller og nyresten og give calciummangel. Fordi rødbeder er sure, kan de give luft i maven og diarré hos nogle hunde."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "pl": "Burak ćwikłowy może zabarwić mocz psa na ciemnoróżowo lub czerwono, ale to nie powód do paniki. Jeśli kolor nie zniknie po dobie, przyczyna może być inna, na przykład zakażenie dróg moczowych lub kamienie, więc porozmawiaj z weterynarzem.",
     "cs": "Červená řepa může psí moč zbarvit do tmavě růžova nebo do červena, takže nepropadejte panice. Pokud barva po dni nezmizí, může jít o něco jiného, například o infekci močových cest nebo kameny, a poraďte se s veterinářem.",
     "hr": "Zbog cikle mokraća tvog psa može poprimiti tamnoružičastu ili crvenu boju, pa nemoj paničariti. Ako boja ne nestane nakon jednog dana, možda je posrijedi nešto drugo, primjerice infekcija mokraćnog sustava ili kamenci, pa se javi veterinaru.",
-    "sv": "Rödbeta kan göra hundens kiss mörkrosa eller rött, så ingen panik. Om färgen inte har försvunnit efter ett dygn kan något annat ligga bakom, till exempel urinvägsinfektion eller stenar, så kontakta veterinären."
+    "sv": "Rödbeta kan göra hundens kiss mörkrosa eller rött, så ingen panik. Om färgen inte har försvunnit efter ett dygn kan något annat ligga bakom, till exempel urinvägsinfektion eller stenar, så kontakta veterinären.",
+    "da": "Rødbeder kan farve din hunds urin mørkerosa eller rød, så bare rolig. Hvis farven ikke forsvinder efter en dag, kan der være noget andet på færde, fx en urinvejsinfektion eller urinsten, så tal med din dyrlæge."
   },
   "serving": {
     "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
@@ -71,7 +77,8 @@
     "pl": "Świeże, dokładnie wyszorowane i obrane, surowe lub ugotowane, starte albo pokrojone na małe kawałki na jeden kęs. Buraki z puszki tylko bez soli i innych dodatków.",
     "cs": "Čerstvá, důkladně očištěná a oloupaná, syrová nebo uvařená, nastrouhaná nebo nakrájená na malé kousky na jedno sousto. Konzervovaná červená řepa jen bez soli a bez dalších přísad.",
     "hr": "Svježa, dobro oprana i oguljena, sirova ili termički obrađena, naribana ili narezana na male komadiće za jedan zalogaj. Cikla iz konzerve samo bez soli i drugih dodataka.",
-    "sv": "Färsk, ordentligt skrubbad och skalad, rå eller kokt, riven eller skuren i små munsbitar. Rödbetor på burk bara om de är utan salt och andra tillsatser."
+    "sv": "Färsk, ordentligt skrubbad och skalad, rå eller kokt, riven eller skuren i små munsbitar. Rödbetor på burk bara om de är utan salt och andra tillsatser.",
+    "da": "Friske, skrubbet rene og skrællede, rå eller tilberedte, revne eller skåret i små, mundrette stykker. Rødbeder på dåse kun uden tilsat salt og uden andre tilsætningsstoffer."
   },
   "child": {
     "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
@@ -81,7 +88,8 @@
     "pl": "Pies może czasem dostać odrobinę buraka ćwikłowego. Jego siusiu może wtedy być różowe, ale to nic złego.",
     "cs": "Pejsek může občas dostat trochu červené řepy. Čůrání mu pak může zrůžovět, a to je v pořádku.",
     "hr": "Pas smije povremeno dobiti malo cikle. Od nje mu mokraća može postati ružičasta, a to je u redu.",
-    "sv": "Hundar kan få lite rödbeta då och då. Kissen kan bli rosa av den, och det är helt okej."
+    "sv": "Hundar kan få lite rödbeta då och då. Kissen kan bli rosa av den, och det är helt okej.",
+    "da": "Hunde må få lidt rødbede en gang imellem. Den kan gøre hundens tis lyserød, og det er helt i orden."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "pl": "Surowe czy gotowane buraki?",
         "cs": "Syrová, nebo uvařená červená řepa?",
         "hr": "Sirova ili termički obrađena cikla?",
-        "sv": "Rå eller kokt rödbeta?"
+        "sv": "Rå eller kokt rödbeta?",
+        "da": "Rå eller tilberedte rødbeder?"
       },
       "a": {
         "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
@@ -103,7 +112,8 @@
         "pl": "Oba rodzaje są w porządku. Surowe buraki zachowują najwięcej składników odżywczych, a gotowane są najbardziej uniwersalne.",
         "cs": "Obě jsou v pořádku. Syrová červená řepa si zachovává nejvíc živin a uvařená je nejuniverzálnější volbou.",
         "hr": "Obje su u redu. Sirova cikla zadržava najviše hranjivih tvari, a termički obrađenu možeš pripremiti na najviše načina.",
-        "sv": "Båda går bra. Rå rödbeta behåller mest näring, och kokt rödbeta är det mest mångsidiga valet."
+        "sv": "Båda går bra. Rå rödbeta behåller mest näring, och kokt rödbeta är det mest mångsidiga valet.",
+        "da": "Begge dele er fine. Rå rødbeder bevarer flest næringsstoffer, og tilberedte rødbeder kan bruges på flest måder."
       }
     },
     {
@@ -115,7 +125,8 @@
         "pl": "Czy psy mogą jeść buraki z puszki?",
         "cs": "Mohou psi jíst červenou řepu z konzervy?",
         "hr": "Smiju li psi jesti ciklu iz konzerve?",
-        "sv": "Får hundar äta rödbetor på burk?"
+        "sv": "Får hundar äta rödbetor på burk?",
+        "da": "Må hunde spise rødbeder på dåse?"
       },
       "a": {
         "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
@@ -125,7 +136,8 @@
         "pl": "Tak, ale wybieraj uważnie: kup buraki bez dodatku soli i innych dodatków.",
         "cs": "Ano, ale vybírejte pozorně: zvolte značku bez přidané soli a bez dalších přísad.",
         "hr": "Da, ali pažljivo biraj: uzmi proizvod bez dodane soli i drugih dodataka.",
-        "sv": "Ja, men välj noga: ta ett märke utan tillsatt salt och utan andra tillsatser."
+        "sv": "Ja, men välj noga: ta ett märke utan tillsatt salt och utan andra tillsatser.",
+        "da": "Ja, men vælg med omtanke: køb et mærke uden tilsat salt og uden andre tilsætningsstoffer."
       }
     }
   ],
@@ -253,6 +265,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ade06606ca17051cdc9d3ebf01df9d78d881848983463542d963a678779e914b"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0123d21d1f2bf67ae9117ec0958e17f907399fac7e1ae03a9ef2b6c0f2f42c7d"
     }
   }
 }

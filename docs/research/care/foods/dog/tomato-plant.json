@@ -9,7 +9,8 @@
     "pl": "Roślina pomidora i zielone pomidory",
     "cs": "Rajčatová rostlina a zelená rajčata",
     "hr": "Biljka rajčice i zelene rajčice",
-    "sv": "Tomatplanta och gröna tomater"
+    "sv": "Tomatplanta och gröna tomater",
+    "da": "Tomatplante og grønne tomater"
   },
   "question": {
     "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
@@ -19,7 +20,8 @@
     "pl": "Czy psy mogą jeść liście i łodygi pomidora albo zielone pomidory?",
     "cs": "Mohou psi jíst rajčatové listy, stonky nebo zelená rajčata?",
     "hr": "Smiju li psi jesti listove, stabljike ili zelene rajčice?",
-    "sv": "Får hundar äta tomatblad, tomatstjälkar eller gröna tomater?"
+    "sv": "Får hundar äta tomatblad, tomatstjälkar eller gröna tomater?",
+    "da": "Må hunde spise tomatblade, stængler eller grønne tomater?"
   },
   "url_slug": {
     "en": "tomato-plant",
@@ -29,7 +31,8 @@
     "pl": "roslina-pomidora",
     "cs": "rajcatova-rostlina",
     "hr": "biljka-rajcice",
-    "sv": "tomatplanta"
+    "sv": "tomatplanta",
+    "da": "tomatplante"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "pl": "Nie. Zielone części rośliny pomidora, w tym niedojrzałe pomidory, liście, łodygi, pędy i kwiaty, są toksyczne dla psów. Twój pies nigdy nie powinien jeść liści ani łodyg, a młodych, zielonych pomidorów powinien unikać.",
     "cs": "Ne. Zelené části rajčatové rostliny, včetně nezralých rajčat, listů, stonků, výhonků a květů, jsou pro psy toxické. Pes by nikdy neměl jíst listy a stonky a měl by se vyhýbat mladým zeleným rajčatům.",
     "hr": "Ne. Zeleni dijelovi biljke rajčice, uključujući nezrele rajčice, listove, stabljike, vriježe i cvjetove, otrovni su za pse. Pas nikad ne smije jesti listove i stabljike, a mlade zelene rajčice treba izbjegavati.",
-    "sv": "Nej. De gröna delarna av tomatplantan, bland annat omogna tomater, blad, stjälkar, rankor och blommor, är giftiga för hundar. Hunden ska aldrig äta blad och stjälkar och bör inte äta unga, gröna tomater."
+    "sv": "Nej. De gröna delarna av tomatplantan, bland annat omogna tomater, blad, stjälkar, rankor och blommor, är giftiga för hundar. Hunden ska aldrig äta blad och stjälkar och bör inte äta unga, gröna tomater.",
+    "da": "Nej. De grønne dele af tomatplanten, herunder umodne tomater, blade, stængler, ranker og blomster, er giftige for hunde. Din hund må aldrig spise bladene og stænglerne og bør undgå unge, grønne tomater."
   },
   "why": {
     "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
@@ -50,7 +54,8 @@
     "pl": "Liście, łodygi, pędy i kwiaty zawierają tomatynę i solaninę, naturalne substancje obronne rośliny; zielone pomidory mają ich więcej niż dojrzałe. ASPCA uznaje roślinę pomidora za toksyczną dla psów. Ciężkie zatrucia zdarzają się stosunkowo rzadko, a większość przypadków kończy się dobrze, jeśli zareaguje się szybko, dlatego oceniamy roślinę jako niebezpieczną, a nie toksyczną.",
     "cs": "Listy, stonky, výhonky a květy obsahují tomatin a solanin, přirozené obranné látky rostliny; zelená rajčata jich obsahují víc než zralá. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro psy. Závažná otrava je poměrně vzácná a většina případů odezní, pokud se zasáhne včas, proto ji hodnotíme jako nebezpečnou, nikoli toxickou.",
     "hr": "Listovi, stabljike, vriježe i cvjetovi sadrže tomatin i solanin, prirodne obrambene tvari biljke; zelene rajčice sadrže ih više od zrelih. ASPCA navodi biljku rajčice kao otrovnu za pse. Teška su trovanja razmjerno rijetka, a većina slučajeva dobro završi ako se brzo reagira, pa je ocjenjujemo kao opasnu, a ne kao otrovnu.",
-    "sv": "Bladen, stjälkarna, rankorna och blommorna innehåller tomatin och solanin, växtens naturliga försvarsämnen; gröna tomater innehåller mer av dem än mogna. ASPCA anger att tomatplantan är giftig för hundar. Allvarlig förgiftning är relativt ovanlig, och de flesta fall går över om man agerar snabbt, så vi bedömer den som farlig snarare än giftig."
+    "sv": "Bladen, stjälkarna, rankorna och blommorna innehåller tomatin och solanin, växtens naturliga försvarsämnen; gröna tomater innehåller mer av dem än mogna. ASPCA anger att tomatplantan är giftig för hundar. Allvarlig förgiftning är relativt ovanlig, och de flesta fall går över om man agerar snabbt, så vi bedömer den som farlig snarare än giftig.",
+    "da": "Bladene, stænglerne, rankerne og blomsterne indeholder tomatin og solanin, planteens naturlige forsvarsstoffer; grønne tomater indeholder mere af dem end modne. ASPCA anfører tomatplanten som giftig for hunde. Alvorlig forgiftning er forholdsvis sjælden, og de fleste tilfælde går over, når man handler hurtigt, så vi vurderer den som farlig frem for giftig."
   },
   "signs": {
     "en": [
@@ -148,6 +153,18 @@
       "Vidgade pupiller",
       "Slöhet",
       "Långsam eller oregelbunden puls"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Savlen",
+      "Nedsat appetit",
+      "Muskelsvaghed",
+      "Rysten",
+      "Nedsat koordination",
+      "Udvidede pupiller",
+      "Sløvhed",
+      "Langsom eller uregelmæssig hjerterytme"
     ]
   },
   "what_to_do": {
@@ -158,7 +175,8 @@
     "pl": "Jeśli pies zjadł części rośliny pomidora lub zielone pomidory, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt po wskazówki. Jeśli pies ma już objawy, jak najszybciej skontaktuj się z weterynarzem – ważne, żeby został zbadany.",
     "cs": "Pokud pes snědl části rajčatové rostliny nebo zelená rajčata, zavolejte veterináři nebo na toxikologickou linku pro zvířata a požádejte o radu. Pokud už pes příznaky má, obraťte se na veterináře; je důležité nechat ho co nejdříve vyšetřit.",
     "hr": "Ako je pas pojeo dijelove biljke rajčice ili zelene rajčice, nazovi veterinara ili telefonsku liniju za otrovanja životinja i zatraži savjet. Ako pas već ima znakove trovanja, obrati se veterinaru; važno je da ga veterinar što prije pregleda.",
-    "sv": "Om hunden har ätit delar av tomatplantan eller gröna tomater, ring veterinären eller en giftrådgivning för djur för råd. Om hunden redan har symtom, kontakta veterinären; det är viktigt att få den undersökt så snart som möjligt."
+    "sv": "Om hunden har ätit delar av tomatplantan eller gröna tomater, ring veterinären eller en giftrådgivning för djur för råd. Om hunden redan har symtom, kontakta veterinären; det är viktigt att få den undersökt så snart som möjligt.",
+    "da": "Hvis din hund har spist dele af tomatplanten eller grønne tomater, skal du ringe til din dyrlæge eller en giftrådgivning for dyr for at få råd. Hvis din hund allerede har symptomer, skal du kontakte din dyrlæge – det er vigtigt, at hunden bliver undersøgt så hurtigt som muligt."
   },
   "serving": null,
   "child": {
@@ -169,7 +187,8 @@
     "pl": "Liście, łodygi i zielone pomidory nie są dla psów. Jeśli pies skubnie roślinę, od razu powiedz dorosłemu.",
     "cs": "Rajčatové listy, stonky a zelená rajčata nejsou pro psy. Když pes rostlinu okusuje, hned to řekni dospělému.",
     "hr": "Listovi, stabljike i zelene rajčice nisu za pse. Ako pas nagrize biljku, odmah reci odrasloj osobi.",
-    "sv": "Tomatblad, tomatstjälkar och gröna tomater är inte för hundar. Om en hund knaprar på plantan, berätta det för en vuxen direkt."
+    "sv": "Tomatblad, tomatstjälkar och gröna tomater är inte för hundar. Om en hund knaprar på plantan, berätta det för en vuxen direkt.",
+    "da": "Tomatblade, stængler og grønne tomater er ikke til hunde. Hvis en hund nasker af planten, så sig det til en voksen med det samme."
   },
   "faq": [
     {
@@ -181,7 +200,8 @@
         "pl": "Czy dojrzałe, czerwone pomidory są w porządku?",
         "cs": "Jsou zralá červená rajčata v pořádku?",
         "hr": "Jesu li zrele crvene rajčice u redu?",
-        "sv": "Är mogna röda tomater okej?"
+        "sv": "Är mogna röda tomater okej?",
+        "da": "Er modne røde tomater i orden?"
       },
       "a": {
         "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
@@ -191,7 +211,8 @@
         "pl": "Tak. Dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach.",
         "cs": "Ano. Zralá červená rajčata nejsou pro psy toxická a mohou být občasným pamlskem v malém množství.",
         "hr": "Da. Zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama.",
-        "sv": "Ja. Mogna, röda tomater är inte giftiga för hundar och kan vara en godbit då och då i små mängder."
+        "sv": "Ja. Mogna, röda tomater är inte giftiga för hundar och kan vara en godbit då och då i små mängder.",
+        "da": "Ja. Modne, røde tomater er ikke giftige for hunde og kan være en godbid en gang imellem i små mængder."
       }
     },
     {
@@ -203,7 +224,8 @@
         "pl": "Jak zadbać o bezpieczeństwo psa w ogródku warzywnym?",
         "cs": "Jak ochráním psa na zeleninové zahradě?",
         "hr": "Kako zaštititi psa u povrtnjaku?",
-        "sv": "Hur håller jag hunden säker i grönsaksodlingen?"
+        "sv": "Hur håller jag hunden säker i grönsaksodlingen?",
+        "da": "Hvordan beskytter jeg min hund i min køkkenhave?"
       },
       "a": {
         "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
@@ -213,7 +235,8 @@
         "pl": "Postaw przy grządkach barierki albo ogrodź ogródek i pamiętaj, że zielone pomidory spadające z krzaka mogą przyciągać psy.",
         "cs": "Zajistěte zábrany nebo zahradu oplotte a pamatujte, že zelená rajčata, která spadnou z rostliny, mohou psy lákat.",
         "hr": "Postavi fizičke prepreke ili ogradi vrt i imaj na umu da zelene rajčice koje padnu s biljke mogu privući pse.",
-        "sv": "Sätt upp hinder eller staket runt odlingen, och kom ihåg att gröna tomater som faller av plantan kan locka hundar."
+        "sv": "Sätt upp hinder eller staket runt odlingen, och kom ihåg att gröna tomater som faller av plantan kan locka hundar.",
+        "da": "Sæt hegn om haven eller lav andre fysiske barrierer, og husk at grønne tomater kan lokke hunde til, hvis de falder af planten."
       }
     }
   ],
@@ -364,6 +387,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5319edd970f66756c1ed5419d63f03b0fbce79bef2094e66dd170df76c5e337a"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "83bb027a7918476db72eba5474cfe3790cd99f8fd543f8ce3df72bf9a8205797"
     }
   }
 }
