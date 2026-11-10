@@ -561,8 +561,9 @@ describe('breed search', () => {
     expect(find('zlati prinasalec')).toEqual(['golden_retriever']);
     expect(find('Zlati')).toEqual(['golden_retriever']);
     expect(find('golden')).toEqual(['golden_retriever']);
-    // M5-R10-56: … and the Chesapeake Bay Retriever (»chesapeake bay retriever«); M5-R10-73: … and the Nova Scotia Duck Tolling Retriever.
-    expect(find('retriever')).toEqual(['labrador_retriever', 'golden_retriever', 'chesapeake_bay_retriever', 'nova_scotia_duck_tolling_retriever']);
+    // M5-R10-56: … and the Chesapeake Bay Retriever (»chesapeake bay retriever«); M5-R10-73: … and the Nova Scotia Duck Tolling Retriever;
+    // M5-R10-101: … and the Flat-Coated Retriever.
+    expect(find('retriever')).toEqual(['labrador_retriever', 'golden_retriever', 'chesapeake_bay_retriever', 'nova_scotia_duck_tolling_retriever', 'flat_coated_retriever']);
   });
 
   it('M5-R10-03: finds the French Bulldog by its SL / EN name and "frenchie"', () => {
