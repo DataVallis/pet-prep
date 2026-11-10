@@ -7,6 +7,7 @@
     "de": "Chilischoten",
     "fr": "Piments forts",
     "es": "Guindillas",
+    "it": "Peperoncini",
     "pt": "Malaguetas",
     "nl": "Chilipepers",
     "pl": "Papryczki chili",
@@ -22,6 +23,7 @@
     "de": "Dürfen Hunde Chilischoten fressen?",
     "fr": "Les chiens peuvent-ils manger des piments forts ?",
     "es": "¿Pueden los perros comer guindillas?",
+    "it": "I cani possono mangiare i peperoncini?",
     "pt": "Os cães podem comer malaguetas?",
     "nl": "Mogen honden chilipepers eten?",
     "pl": "Czy psy mogą jeść papryczki chili?",
@@ -37,6 +39,7 @@
     "de": "chilischoten",
     "fr": "piments-forts",
     "es": "guindillas",
+    "it": "peperoncini",
     "pt": "malaguetas",
     "nl": "chilipepers",
     "pl": "papryczki-chili",
@@ -53,6 +56,7 @@
     "de": "Nein, geben Sie Ihrem Hund niemals scharfe Schoten wie Jalapeños oder Chilischoten. Scharfe Schoten wirken reizend: Sie verursachen ein Brennen im Maul und können in größeren Mengen Erbrechen und Durchfall auslösen.",
     "fr": "Non, ne donnez jamais à votre chien de piments forts comme les jalapeños ou les piments chili. Les piments forts sont irritants : ils provoquent une sensation de brûlure dans la bouche et, en plus grande quantité, peuvent causer des vomissements et de la diarrhée.",
     "es": "No, no le des nunca a tu perro pimientos picantes como jalapeños o guindillas. Los pimientos picantes son irritantes: provocan sensación de ardor en la boca y, en mayor cantidad, pueden causar vómitos y diarrea.",
+    "it": "No, non dare mai al tuo cane peperoncini o altri peperoni piccanti, come i jalapeño. Sono irritanti: causano bruciore alla bocca e, in quantità maggiori, possono provocare vomito e diarrea.",
     "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia.",
     "nl": "Nee, geef je hond nooit pittige pepers zoals jalapeños of chilipepers. Hete pepers zijn irriterend: ze geven een brandend gevoel in de mond en kunnen in grotere hoeveelheden braken en diarree veroorzaken.",
     "pl": "Nie, nigdy nie dawaj psu ostrych papryczek, takich jak jalapeño czy chili. Ostre papryczki działają drażniąco: powodują uczucie pieczenia w pysku, a w większych ilościach mogą wywołać wymioty i biegunkę.",
@@ -68,6 +72,7 @@
     "de": "Scharfe Schoten enthalten Capsaicin, einen starken Reizstoff, am meisten in der Frucht und besonders in den Samen. Das kann Hunde betreffen, die die Schoten zerkauen und verschlucken. Bei Haustieren kommen Probleme selten vor, aber der AKC sagt, dass man Hunden niemals scharfe Schoten geben soll.",
     "fr": "Les piments forts contiennent de la capsaïcine, un puissant irritant, présente en plus forte concentration dans le fruit et surtout dans les graines. Elle peut affecter les chiens qui mâchent et avalent les piments. Les problèmes sont rares chez les animaux de compagnie, mais l’AKC recommande de ne jamais donner de piments forts aux chiens.",
     "es": "Los pimientos picantes contienen capsaicina, un irritante potente, que se concentra sobre todo en el fruto y, en especial, en las semillas. Puede afectar a los perros que muerden y se tragan los pimientos. Los problemas en las mascotas son poco frecuentes, pero el AKC afirma que nunca hay que dar pimientos picantes a los perros.",
+    "it": "I peperoncini contengono capsaicina, un forte irritante, presente in quantità maggiori nel frutto e soprattutto nei semi. Può avere effetti sui cani che masticano e ingoiano i peperoncini. I problemi negli animali domestici sono rari, ma l’AKC raccomanda di non dare mai peperoncini piccanti ai cani.",
     "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães.",
     "nl": "Hete pepers bevatten capsaïcine, een sterk irriterende stof, met de hoogste concentraties in de vrucht en vooral in de zaadjes. Honden die op pepers kauwen en ze doorslikken, kunnen daar last van krijgen. Bij huisdieren zijn problemen zeldzaam, maar de AKC zegt dat je honden nooit pittige pepers moet geven.",
     "pl": "Ostre papryczki zawierają kapsaicynę, silną substancję drażniącą, której najwięcej jest w owocu, a zwłaszcza w nasionach. Może ona zaszkodzić psom, które gryzą i połykają papryczki. U zwierząt domowych problemy zdarzają się rzadko, ale AKC radzi, by nigdy nie dawać psom ostrych papryczek.",
@@ -106,6 +111,12 @@
       "Sensación de ardor en la boca",
       "Ardor e irritación en los ojos",
       "Vómitos",
+      "Diarrea"
+    ],
+    "it": [
+      "Bruciore alla bocca",
+      "Bruciore e irritazione agli occhi",
+      "Vomito",
       "Diarrea"
     ],
     "pt": [
@@ -163,6 +174,7 @@
     "de": "Halten Sie scharfe Schoten und Gerichte damit außer Reichweite Ihres Hundes. Das Brennen durch Capsaicin hält meist nur kurz an und lässt sich lindern, indem man das Maul mit Wasser ausspült.",
     "fr": "Gardez les piments forts et les plats qui en contiennent hors de portée de votre chien. L’effet brûlant de la capsaïcine est généralement de courte durée et peut être soulagé en rinçant la bouche à l’eau.",
     "es": "Mantén los pimientos picantes y los platos que los llevan fuera del alcance de tu perro. El efecto de ardor de la capsaicina suele ser breve y se puede aliviar enjuagando la boca con agua.",
+    "it": "Tieni i peperoncini piccanti e i piatti che li contengono fuori dalla portata del tuo cane. L’effetto bruciante della capsaicina di solito dura poco e si può alleviare sciacquando la bocca con acqua.",
     "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água.",
     "nl": "Houd pittige pepers en gerechten met pepers buiten het bereik van je hond. Het brandende gevoel van capsaïcine gaat meestal snel over en wordt minder als je de mond van je hond met water spoelt.",
     "pl": "Trzymaj ostre papryczki i potrawy z ich dodatkiem poza zasięgiem psa. Pieczenie wywołane kapsaicyną zwykle szybko mija i można je złagodzić, płucząc pysk wodą.",
@@ -179,6 +191,7 @@
     "de": "Scharfe Schoten sind nichts für Hunde. Sie machen das Maul eines Hundes heiß. Süße Paprika dagegen ist die hundefreundliche Sorte.",
     "fr": "Les piments forts ne sont pas pour les chiens. Ils donnent la sensation d’avoir la bouche en feu. Les poivrons doux, eux, leur conviennent.",
     "es": "Los pimientos picantes no son para los perros. Les hacen sentir la boca caliente. Los pimientos dulces son los que sí pueden comer.",
+    "it": "I peperoncini piccanti non sono per i cani. Fanno sentire la bocca in fiamme. I peperoni dolci sono invece quelli adatti ai cani.",
     "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães.",
     "nl": "Pittige pepers zijn niet voor honden. Ze geven een hond een brandend gevoel in de mond. Paprika is de hondvriendelijke variant.",
     "pl": "Ostre papryczki nie są dla psów. Od nich w pysku robi się gorąco. Dla psów nadaje się słodka papryka.",
@@ -196,6 +209,7 @@
         "de": "Ist süße Paprika in Ordnung?",
         "fr": "Les poivrons doux conviennent-ils ?",
         "es": "¿Están bien los pimientos dulces?",
+        "it": "I peperoni dolci vanno bene?",
         "pt": "Os pimentos doces são aceitáveis?",
         "nl": "Is zoete paprika oké?",
         "pl": "Czy słodka papryka jest dla psa w porządku?",
@@ -211,6 +225,7 @@
         "de": "Ja, pure Paprika ist für die meisten Hunde in Maßen unbedenklich, wenn Samen und Stiel entfernt wurden.",
         "fr": "Oui, les poivrons nature sont sans danger pour la plupart des chiens avec modération, une fois les graines et le pédoncule retirés.",
         "es": "Sí, los pimientos al natural son seguros para la mayoría de los perros con moderación, sin las semillas ni el rabillo.",
+        "it": "Sì, i peperoni dolci al naturale sono sicuri per la maggior parte dei cani, se dati con moderazione e privati di semi e picciolo.",
         "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo.",
         "nl": "Ja, naturele paprika is voor de meeste honden met mate veilig, mits je de zaadjes en de steel verwijdert.",
         "pl": "Tak, zwykła papryka jest bezpieczna dla większości psów w umiarkowanych ilościach, o ile usuniesz nasiona i szypułkę.",
@@ -298,6 +313,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a17cd30ba915efe8257f47b216072ed2cb5821a15c5f473b754657363f75cc08"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a12858bbb888781e078ec954b3785140a89b356bbb150c89d23937c13128553b"
     },
     "pt": {
       "status": "verified",

@@ -7,6 +7,7 @@
     "de": "Tomaten",
     "fr": "Tomates",
     "es": "Tomates",
+    "it": "Pomodori",
     "pt": "Tomates",
     "nl": "Tomaten",
     "pl": "Pomidory",
@@ -22,6 +23,7 @@
     "de": "Dürfen Katzen Tomaten fressen?",
     "fr": "Les chats peuvent-ils manger des tomates ?",
     "es": "¿Pueden los gatos comer tomates?",
+    "it": "I gatti possono mangiare i pomodori?",
     "pt": "Os gatos podem comer tomate?",
     "nl": "Mogen katten tomaten eten?",
     "pl": "Czy koty mogą jeść pomidory?",
@@ -37,6 +39,7 @@
     "de": "tomaten",
     "fr": "tomates",
     "es": "tomates",
+    "it": "pomodori",
     "pt": "tomates",
     "nl": "tomaten",
     "pl": "pomidory",
@@ -53,6 +56,7 @@
     "de": "Am besten geben Sie Ihrer Katze keine Tomaten. Die ASPCA sagt, dass die reife Frucht für Katzen ungiftig ist, aber Agriculture Victoria führt Tomaten unter den Lebensmitteln für Menschen auf, die Katzen nicht bekommen sollten. Die Tomatenpflanze selbst ist für Katzen giftig; halten Sie sie deshalb außer Reichweite.",
     "fr": "Mieux vaut ne pas donner de tomates à votre chat. L’ASPCA indique que le fruit mûr n’est pas toxique pour les chats, mais Agriculture Victoria range les tomates parmi les aliments pour humains à ne pas donner aux chats. Le plant de tomate lui-même est toxique pour les chats : gardez-le hors de portée.",
     "es": "Es mejor no darle tomate a tu gato. La ASPCA indica que el fruto maduro no es tóxico para los gatos, pero Agriculture Victoria incluye los tomates entre los alimentos humanos que no conviene dar a los gatos. La planta del tomate sí es tóxica para los gatos, así que mantenla fuera de su alcance.",
+    "it": "Meglio non dare pomodori al tuo gatto. L’ASPCA dice che il frutto maturo non è tossico per i gatti, ma Agriculture Victoria elenca i pomodori tra i cibi umani da non dare ai gatti. La pianta del pomodoro è tossica per i gatti, quindi tienila fuori dalla portata del gatto.",
     "pt": "O melhor é não dar tomate ao teu gato. A ASPCA diz que o fruto maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos. O próprio tomateiro é tóxico para os gatos, por isso mantém-no fora do alcance.",
     "nl": "Geef je kat liever geen tomaten. De ASPCA zegt dat de rijpe vrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft. De tomatenplant zelf is giftig voor katten, dus houd hem buiten bereik.",
     "pl": "Najlepiej nie dawać kotu pomidorów. ASPCA podaje, że dojrzały owoc jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom. Sama roślina pomidora jest dla kotów toksyczna, więc trzymaj ją poza zasięgiem.",
@@ -68,6 +72,7 @@
     "de": "Die ASPCA führt die Tomatenpflanze wegen Solanin als giftig für Katzen auf und weist darauf hin, dass die reife Frucht ungiftig ist. Agriculture Victoria führt Tomaten unter den Lebensmitteln für Menschen auf, die Katzen nicht bekommen sollten, und sagt, sie enthielten einen Stoff, der schwere Magen-Darm-Probleme verursache; reife Früchte seien dagegen ungiftig. Weil eine Quelle Tomaten als zu vermeidendes Lebensmittel aufführt, folgen wir dem strengeren Rat. Katzen brauchen ohnehin kein Gemüse.",
     "fr": "L’ASPCA classe le plant de tomate parmi les plantes toxiques pour les chats à cause de la solanine et précise que le fruit mûr n’est pas toxique. Agriculture Victoria range les tomates parmi les aliments pour humains à ne pas donner aux chats, en expliquant qu’elles contiennent une substance qui provoque de graves troubles de l’estomac et de l’intestin, tandis que le fruit mûr n’est pas toxique. Comme une source classe les tomates parmi les aliments à éviter, nous suivons le conseil le plus strict. Les chats n’ont de toute façon pas besoin de légumes dans leur alimentation.",
     "es": "La ASPCA incluye la planta del tomate entre las tóxicas para los gatos por la solanina y apunta que el fruto maduro no es tóxico. Agriculture Victoria incluye los tomates entre los alimentos humanos que no conviene dar a los gatos y explica que contienen una sustancia que provoca problemas graves de estómago e intestino, mientras que el fruto maduro no es tóxico. Como una de las fuentes incluye los tomates entre los alimentos que hay que evitar, seguimos el consejo más estricto. Además, los gatos no necesitan verduras en su dieta.",
+    "it": "L’ASPCA indica la pianta del pomodoro come tossica per i gatti a causa della solanina e segnala che il frutto maturo non è tossico. Agriculture Victoria elenca i pomodori tra i cibi umani da non dare ai gatti, perché contengono una sostanza che causa gravi problemi allo stomaco e all’intestino, mentre il frutto maturo non è tossico. Poiché una fonte indica i pomodori come cibo da evitare, seguiamo il consiglio più prudente. Del resto i gatti non hanno bisogno di verdure nella loro alimentazione.",
     "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos por causa da solanina e refere que o fruto maduro não é tóxico. A Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos, porque contêm uma substância que causa problemas graves no estômago e nos intestinos, embora o fruto maduro não seja tóxico. Como uma das fontes inclui o tomate nos alimentos a evitar, seguimos o conselho mais prudente. De qualquer forma, os gatos não precisam de legumes na alimentação.",
     "nl": "De ASPCA noemt de tomatenplant giftig voor katten vanwege solanine en merkt op dat de rijpe vrucht niet giftig is. Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft; volgens die bron bevatten ze een stof die ernstige maag- en darmklachten veroorzaakt, terwijl rijpe vruchten niet giftig zijn. Omdat één bron tomaten als te vermijden voedsel noemt, volgen wij het strengere advies. Katten hebben sowieso geen groente nodig in hun voeding.",
     "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów z powodu solaniny i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, i podaje, że zawierają substancję powodującą poważne problemy z żołądkiem i jelitami, a dojrzały owoc jest nietoksyczny. Ponieważ jedno ze źródeł wymienia pomidory jako pokarm, którego należy unikać, kierujemy się ostrzejszą radą. Koty i tak nie potrzebują w diecie warzyw.",
@@ -97,6 +102,10 @@
     "es": [
       "Vómitos",
       "Malestar de estómago"
+    ],
+    "it": [
+      "Vomito",
+      "Mal di stomaco"
     ],
     "pt": [
       "Vómitos",
@@ -137,6 +146,7 @@
     "de": "Hat Ihre Katze Tomate gefressen und erbricht danach oder wirkt unwohl, wenden Sie sich an Ihren Tierarzt. Hat Ihre Katze Blätter, Stängel oder grüne Tomaten angekaut, wenden Sie sich sofort an Ihren Tierarzt. Versuchen Sie nicht, Ihre Katze ohne Rücksprache mit dem Tierarzt zum Erbrechen zu bringen.",
     "fr": "Si votre chat a mangé de la tomate puis vomit ou semble mal en point, contactez votre vétérinaire. Si votre chat a mâchonné des feuilles, des tiges ou des tomates vertes, contactez immédiatement votre vétérinaire. N’essayez pas de faire vomir votre chat sans l’avis du vétérinaire.",
     "es": "Si tu gato ha comido tomate y después vomita o parece encontrarse mal, contacta con tu veterinario. Si ha masticado las hojas, los tallos o los tomates verdes, contacta con tu veterinario enseguida. No intentes provocarle el vómito sin consultarlo antes con el veterinario.",
+    "it": "Se il tuo gatto ha mangiato pomodoro e poi vomita o sembra stare male, contatta il veterinario. Se ha masticato foglie, steli o pomodori verdi, contatta subito il veterinario. Non provare a farlo vomitare senza aver chiesto al veterinario.",
     "pt": "Se o teu gato comeu tomate e depois vomita ou parece indisposto, liga ao teu veterinário. Se mastigou as folhas, os caules ou tomates verdes, liga imediatamente ao teu veterinário. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
     "nl": "Als je kat tomaat heeft gegeten en daarna braakt of er ziek uitziet, neem dan contact op met je dierenarts. Heeft je kat op de bladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
     "pl": "Jeśli kot zjadł pomidora, a potem wymiotuje albo źle się czuje, skontaktuj się z weterynarzem. Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
@@ -153,6 +163,7 @@
     "de": "Tomaten sind Essen für Menschen, nicht für Katzen. Halte Tomatenpflanzen von der Katze fern und sag einem Erwachsenen Bescheid, wenn sie an einer knabbert.",
     "fr": "Les tomates, c’est pour les humains, pas pour les chats. Garde les plants de tomate loin de ton chat, et dis-le à un adulte s’il en grignote.",
     "es": "Los tomates son comida de personas, no de gatos. Mantén las plantas de tomate lejos de tu gato y avisa a un adulto si mordisquea alguna.",
+    "it": "I pomodori sono cibo per le persone, non per i gatti. Tieni le piante di pomodoro lontane dal micio e dillo a un adulto se ne mordicchia una.",
     "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum.",
     "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt.",
     "pl": "Pomidory to jedzenie dla ludzi, nie dla kotów. Trzymaj rośliny pomidora z dala od kotka i powiedz dorosłemu, jeśli kotek którąś skubnie.",
@@ -170,6 +181,7 @@
         "de": "Sind Tomatenblätter und grüne Tomaten für Katzen unbedenklich?",
         "fr": "Les feuilles de tomate et les tomates vertes sont-elles sans danger pour les chats ?",
         "es": "¿Son seguros para los gatos las hojas de tomate y los tomates verdes?",
+        "it": "Le foglie di pomodoro e i pomodori verdi sono sicuri per i gatti?",
         "pt": "As folhas e os tomates verdes são seguros para os gatos?",
         "nl": "Zijn tomatenbladeren en groene tomaten veilig voor katten?",
         "pl": "Czy liście pomidora i zielone pomidory są bezpieczne dla kotów?",
@@ -185,6 +197,7 @@
         "de": "Nein. Die ASPCA führt die Tomatenpflanze als giftig für Katzen auf; nur die reife Frucht ist ungiftig. International Cat Care ergänzt, dass der Kontakt mit Tomatenblättern Blasenbildung oder Juckreiz im Maul und am Zahnfleisch einer Katze verursachen kann.",
         "fr": "Non. L’ASPCA classe le plant de tomate parmi les plantes toxiques pour les chats ; seul le fruit mûr n’est pas toxique. International Cat Care ajoute que le contact avec les feuilles de tomate peut provoquer chez le chat des cloques ou des démangeaisons de la bouche et des gencives.",
         "es": "No. La ASPCA incluye la planta del tomate entre las tóxicas para los gatos; solo el fruto maduro no es tóxico. International Cat Care añade que el contacto con las hojas del tomate puede provocar ampollas o picor en la boca y las encías del gato.",
+        "it": "No. L’ASPCA indica la pianta del pomodoro come tossica per i gatti; solo il frutto maturo non è tossico. International Cat Care aggiunge che il contatto con le foglie del pomodoro può causare vesciche o prurito alla bocca e alle gengive del gatto.",
         "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos; só o fruto maduro não é tóxico. A International Cat Care acrescenta que o contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato.",
         "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten; alleen de rijpe vrucht is niet giftig. International Cat Care voegt eraan toe dat contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat kan veroorzaken.",
         "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów; nietoksyczny jest tylko dojrzały owoc. International Cat Care dodaje, że kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota.",
@@ -281,6 +294,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e721a07c1426ede4bcdaa4efd6b049d168b2533db5deba43761552dd7a01fb35"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18614ad34d441ca814883a72046522fac50db740642db2cc166dfab246cae666"
     },
     "pt": {
       "status": "verified",
