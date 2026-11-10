@@ -5,6 +5,7 @@
     "en": "Store-bought mushrooms",
     "sl": "Kupljene gobe",
     "de": "Pilze aus dem Laden",
+    "fr": "Champignons du commerce",
     "pt": "Cogumelos comprados no supermercado",
     "nl": "Champignons uit de winkel",
     "pl": "Grzyby ze sklepu",
@@ -18,6 +19,7 @@
     "en": "Can cats eat store-bought mushrooms?",
     "sl": "Ali lahko mačke jedo kupljene gobe?",
     "de": "Dürfen Katzen Pilze aus dem Laden fressen?",
+    "fr": "Les chats peuvent-ils manger des champignons du commerce ?",
     "pt": "Os gatos podem comer cogumelos comprados no supermercado?",
     "nl": "Mogen katten champignons uit de winkel eten?",
     "pl": "Czy koty mogą jeść grzyby ze sklepu?",
@@ -31,6 +33,7 @@
     "en": "store-bought-mushrooms",
     "sl": "kupljene-gobe",
     "de": "pilze-aus-dem-laden",
+    "fr": "champignons-du-commerce",
     "pt": "cogumelos-do-supermercado",
     "nl": "champignons",
     "pl": "grzyby-ze-sklepu",
@@ -45,6 +48,7 @@
     "en": "It's best not to share mushrooms with your cat. Pet Poison Helpline says some mushrooms are safe for cats but urges caution, and cats don't need anything beyond a complete cat food. Never give mushrooms cooked with garlic or onion.",
     "sl": "Gob je bolje ne deliti z mačko. Pet Poison Helpline navaja, da so nekatere gobe za mačke varne, a svetuje previdnost, mačke pa poleg popolne mačje hrane ne potrebujejo ničesar drugega. Nikoli ne dajajte gob, kuhanih s česnom ali čebulo.",
     "de": "Am besten teilen Sie Pilze nicht mit Ihrer Katze. Die Pet Poison Helpline sagt, dass manche Pilze für Katzen unbedenklich sind, mahnt aber zur Vorsicht, und Katzen kommen mit einem Alleinfutter völlig aus. Geben Sie niemals Pilze, die mit Knoblauch oder Zwiebeln zubereitet wurden.",
+    "fr": "Mieux vaut ne pas partager de champignons avec votre chat. Selon Pet Poison Helpline, certains champignons sont sans danger pour les chats, mais la prudence s’impose, et un chat n’a besoin de rien d’autre qu’une alimentation complète. Ne donnez jamais de champignons cuisinés avec de l’ail ou de l’oignon.",
     "pt": "É melhor não dar cogumelos ao teu gato. A Pet Poison Helpline refere que alguns cogumelos são seguros para gatos, mas aconselha cautela, e os gatos não precisam de nada além de uma alimentação completa. Nunca dês cogumelos cozinhados com alho ou cebola.",
     "nl": "Deel liever geen champignons met je kat. Pet Poison Helpline zegt dat sommige paddenstoelen veilig zijn voor katten, maar roept op tot voorzichtigheid, en katten hebben niets nodig behalve een compleet kattenvoer. Geef nooit champignons die met knoflook of ui zijn bereid.",
     "pl": "Najlepiej nie dawać kotu grzybów. Pet Poison Helpline podaje, że niektóre grzyby są dla kotów bezpieczne, ale zaleca ostrożność, a koty nie potrzebują niczego poza pełnowartościową karmą. Nigdy nie dawaj grzybów przyrządzonych z czosnkiem lub cebulą.",
@@ -58,6 +62,7 @@
     "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
     "sl": "Pet Poison Helpline navaja, da so nekatere gobe za mačke sicer varne, a da je pri tem potrebna previdnost, in svetuje, naj vse gobe, ki niso kupljene za ljudi, obravnavamo kot strupene. Svetuje tudi, naj gob ne dodajamo v mačjo prehrano. PDSA navaja, da mačke ne potrebujejo ničesar drugega kot popolno prehrano, Cats Protection pa opozarja, da lahko česen in čebula mačkam zelo škodita, zato gobje jedi za ljudi niso primerne.",
     "de": "Die Pet Poison Helpline sagt, dass manche Pilze für Katzen zwar unbedenklich sind, das Thema aber Vorsicht erfordert, und rät, alle Pilze, die nicht als Lebensmittel für Menschen gekauft wurden, als giftig zu behandeln. Sie rät außerdem davon ab, Pilze in den Speiseplan einer Katze aufzunehmen. Laut PDSA reicht Katzen ein vollwertiges Alleinfutter, und Cats Protection warnt, dass Knoblauch und Zwiebeln Katzen schwer krank machen können; deshalb sind Pilzgerichte, die für Menschen zubereitet wurden, nicht geeignet.",
+    "fr": "Pet Poison Helpline indique que, si certains champignons sont sans danger pour les chats, le sujet demande de la prudence, et recommande de considérer comme toxique tout champignon qui n’a pas été acheté pour être consommé par des humains. Elle déconseille aussi d’ajouter des champignons à l’alimentation d’un chat. La PDSA précise que les chats n’ont besoin de rien d’autre qu’une alimentation complète, et Cats Protection avertit que l’ail et l’oignon peuvent rendre les chats très malades : les plats de champignons préparés pour les humains ne conviennent donc pas.",
     "pt": "A Pet Poison Helpline refere que, embora alguns cogumelos sejam seguros para os gatos, convém ter cautela, e aconselha tratar como tóxicos todos os cogumelos que não tenham sido comprados para consumo humano. Aconselha ainda a não acrescentar cogumelos à alimentação do gato. A PDSA diz que os gatos não precisam de nada além de uma alimentação completa, e a Cats Protection avisa que o alho e a cebola podem deixar os gatos muito doentes, pelo que os pratos de cogumelos feitos para pessoas não são adequados.",
     "nl": "Pet Poison Helpline zegt dat sommige paddenstoelen weliswaar veilig zijn voor katten, maar dat je er voorzichtig mee moet zijn, en adviseert om alle paddenstoelen die niet als voedsel voor mensen zijn gekocht als giftig te beschouwen. Ook raadt de organisatie af om paddenstoelen aan het voer van een kat toe te voegen. Volgens PDSA hebben katten niets nodig behalve een compleet voer, en Cats Protection waarschuwt dat knoflook en ui katten erg ziek kunnen maken, dus gerechten met paddenstoelen die voor mensen zijn gemaakt zijn niet geschikt.",
     "pl": "Pet Poison Helpline podaje, że choć niektóre grzyby są dla kotów bezpieczne, trzeba zachować ostrożność, a grzyby, które nie zostały kupione jako jedzenie dla ludzi, traktować jak toksyczne. Odradza też dodawanie grzybów do diety kota. Według PDSA koty nie potrzebują niczego poza pełnowartościową dietą, a Cats Protection ostrzega, że czosnek i cebula mogą bardzo rozchorować kota, więc dania z grzybami przygotowane dla ludzi się nie nadają.",
@@ -79,6 +84,10 @@
     "de": [
       "Erbrechen",
       "Durchfall"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée"
     ],
     "pt": [
       "Vómitos",
@@ -117,6 +126,7 @@
     "en": "If you are not sure the mushroom came from a shop, treat it as toxic and take your cat to the vet straight away. If your cat eats a mushroom and then vomits or has diarrhoea, seek veterinary care straight away.",
     "sl": "Če niste prepričani, da je bila goba kupljena v trgovini, jo obravnavajte kot strupeno in mačko takoj odpeljite k veterinarju. Če mačka poje gobo in nato bruha ali ima drisko, takoj poiščite veterinarsko pomoč.",
     "de": "Sind Sie nicht sicher, ob der Pilz aus dem Laden stammt, behandeln Sie ihn als giftig und fahren Sie sofort mit Ihrer Katze zum Tierarzt. Frisst Ihre Katze einen Pilz und erbricht danach oder bekommt Durchfall, suchen Sie sofort tierärztliche Hilfe auf.",
+    "fr": "Si vous n’êtes pas sûr que le champignon vienne d’un magasin, considérez-le comme toxique et emmenez immédiatement votre chat chez le vétérinaire. Si votre chat mange un champignon puis vomit ou a de la diarrhée, consultez immédiatement un vétérinaire.",
     "pt": "Se não tens a certeza de que o cogumelo foi comprado numa loja, trata-o como tóxico e leva imediatamente o teu gato ao veterinário. Se o teu gato comer um cogumelo e depois tiver vómitos ou diarreia, procura imediatamente assistência veterinária.",
     "nl": "Weet je niet zeker of de paddenstoel uit de winkel komt? Behandel hem dan als giftig en ga meteen met je kat naar de dierenarts. Als je kat een paddenstoel eet en daarna braakt of diarree krijgt, zoek dan meteen dierenartshulp.",
     "pl": "Jeśli nie masz pewności, że grzyb pochodzi ze sklepu, traktuj go jak toksyczny i od razu zawiez kota do weterynarza. Jeśli kot zjadł grzyba, a potem wymiotuje albo ma biegunkę, od razu skontaktuj się z weterynarzem.",
@@ -131,6 +141,7 @@
     "en": "Mushrooms are people food, not cat food. Cats get everything they need from their own cat food.",
     "sl": "Gobe so hrana za ljudi, ne za muce. Muce dobijo vse, kar potrebujejo, iz svoje mačje hrane.",
     "de": "Pilze sind Essen für Menschen, nicht für Katzen. Alles, was Katzen brauchen, steckt in ihrem eigenen Katzenfutter.",
+    "fr": "Les champignons sont de la nourriture pour les humains, pas pour les chats. Ton chat trouve tout ce dont il a besoin dans sa propre nourriture pour chats.",
     "pt": "Os cogumelos são comida de pessoas, não de gatos. A comida própria para gatos já tem tudo o que eles precisam.",
     "nl": "Champignons zijn voor mensen, niet voor katten. Katten krijgen alles wat ze nodig hebben uit hun eigen kattenvoer.",
     "pl": "Grzyby to jedzenie dla ludzi, nie dla kotów. Koty dostają z własnej karmy wszystko, czego potrzebują.",
@@ -146,6 +157,7 @@
         "en": "What if my cat ate a mushroom from the garden?",
         "sl": "Kaj, če je mačka pojedla gobo z vrta?",
         "de": "Was, wenn meine Katze einen Pilz aus dem Garten gefressen hat?",
+        "fr": "Que faire si mon chat a mangé un champignon du jardin ?",
         "pt": "E se o meu gato comeu um cogumelo do jardim?",
         "nl": "Wat als mijn kat een paddenstoel uit de tuin heeft gegeten?",
         "pl": "Co zrobić, jeśli kot zjadł grzyba z ogrodu?",
@@ -159,6 +171,7 @@
         "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
         "sl": "Obravnavajte jo kot strupeno. Pet Poison Helpline svetuje, naj mačko takoj odpeljete k veterinarju in s seboj, če je mogoče, previdno vzamete vzorec gobe, da jo strokovnjak prepozna.",
         "de": "Behandeln Sie ihn als giftig. Die Pet Poison Helpline rät, sofort mit der Katze zum Tierarzt zu fahren und, wenn möglich, vorsichtig eine Probe des Pilzes mitzubringen, damit ein Spezialist ihn bestimmen kann.",
+        "fr": "Considérez-le comme toxique. Selon Pet Poison Helpline, emmenez immédiatement votre chat chez le vétérinaire et, si possible, apportez avec précaution un échantillon du champignon pour qu’un spécialiste puisse l’identifier.",
         "pt": "Trata-o como tóxico. A Pet Poison Helpline aconselha a levar imediatamente o gato ao veterinário e, se possível, a recolher com cuidado uma amostra do cogumelo, para que um especialista o possa identificar.",
         "nl": "Behandel hem als giftig. Pet Poison Helpline zegt dat je meteen met je kat naar de dierenarts moet gaan en, als dat kan, voorzichtig een monster van de paddenstoel moet meenemen, zodat een specialist hem kan identificeren.",
         "pl": "Traktuj go jak toksycznego. Pet Poison Helpline radzi od razu zawieźć kota do weterynarza i, jeśli to możliwe, ostrożnie zabrać próbkę grzyba, żeby specjalista mógł go rozpoznać.",
@@ -230,6 +243,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "80cab13a82fee0a24e02bb4fabaa1bfde5abff7cffb593d4bd14fcf3249fd190"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0458f0ea92e04f3fc6a6f2dc38d379d12d6848fbf561d000e250439394c2d1a5"
     },
     "pt": {
       "status": "verified",
