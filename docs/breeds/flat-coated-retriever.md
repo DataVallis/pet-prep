@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `flat_coated_retriever` (viri S760–S766; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: stran RKC (S762) |
 | Izvor | FCI št. 121, skupina 8, sekcija 1 (prinašalci), Velika Britanija (S760, S761) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 97. mesto »Flat-Coated Retriever« (S174, prebrano 2026-11-10) |
-| PR-ji | pet-prep #931 (pasma) · portret pet-prep PR `feat/M5-R10-101-flat-coated-retriever-portrait` · spletna stran: pet-prep-website `feat/register-flat-coated-retriever` |
+| PR-ji | pet-prep #931 (pasma, združen `21339b8`) · portret pet-prep PR `feat/M5-R10-101-flat-coated-retriever-portrait` (zagon `breed-portraits.yml` 42770957873, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-flat-coated-retriever` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje 2× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-10 |
 | Nega: čiščenje ušes 1× na teden in kremplji vsake 4 tedne (otrok), opomnik za kopanje vsake 4 tedne (starši) | 🛠 | 💶 izziv | M5-R19 / M5-R20 | 2026-11-10 |
 | Barva (izbirnik: črna, jetrno rjava) | 🛠 | 💶 izziv | M5-R21 | 2026-11-10 |
-| AI portret v registru | 🗓 po združitvi (črn, naraven rep) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/flat-coated-retriever`, `/sl/zivali/psi/ravnodlaki-prinasalec`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, naraven rep | — | M5-R11-04 | 2026-11-10 |
+| Stran na petprep.si (`/animals/dogs/flat-coated-retriever`, `/sl/zivali/psi/ravnodlaki-prinasalec`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
