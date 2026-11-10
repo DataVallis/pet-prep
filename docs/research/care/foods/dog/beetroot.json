@@ -5,51 +5,59 @@
     "en": "Beetroot",
     "sl": "Rdeča pesa",
     "pt": "Beterraba",
-    "nl": "Rode biet"
+    "nl": "Rode biet",
+    "pl": "Buraki ćwikłowe"
   },
   "question": {
     "en": "Can dogs eat beetroot?",
     "sl": "Ali lahko psi jedo rdečo peso?",
     "pt": "Os cães podem comer beterraba?",
-    "nl": "Mogen honden rode biet eten?"
+    "nl": "Mogen honden rode biet eten?",
+    "pl": "Czy psy mogą jeść buraki ćwikłowe?"
   },
   "url_slug": {
     "en": "beetroot",
     "sl": "rdeca-pesa",
     "pt": "beterraba",
-    "nl": "rode-biet"
+    "nl": "rode-biet",
+    "pl": "buraki-cwiklowe"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
     "sl": "Da, rdeča pesa je za pse v redu, če je sveža in v zmernih količinah, kot občasen priboljšek. Vsebuje veliko sladkorja in oksalne kisline, zato naj bodo porcije majhne; če je pes nagnjen k ledvičnim kamnom, se najprej posvetujte z veterinarjem.",
     "pt": "Sim, a beterraba é aceitável para os cães quando servida fresca e com moderação, como guloseima ocasional. Tem muito açúcar e ácido oxálico, por isso mantém as porções pequenas e fala primeiro com o teu veterinário se o teu cão tiver tendência para pedras nos rins.",
-    "nl": "Ja, rode biet is prima voor honden als je hem vers en met mate geeft: af en toe een snoepje. Rode biet bevat veel suiker en oxaalzuur, dus houd de porties klein en overleg eerst met je dierenarts als je hond gevoelig is voor nierstenen."
+    "nl": "Ja, rode biet is prima voor honden als je hem vers en met mate geeft: af en toe een snoepje. Rode biet bevat veel suiker en oxaalzuur, dus houd de porties klein en overleg eerst met je dierenarts als je hond gevoelig is voor nierstenen.",
+    "pl": "Tak, świeże buraki ćwikłowe są dla psów w porządku w umiarkowanych ilościach, jako okazjonalny smakołyk. Mają dużo cukru i kwasu szczawiowego, więc porcje powinny być małe, a jeśli twój pies jest podatny na kamienie nerkowe, najpierw zapytaj weterynarza."
   },
   "why": {
     "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
     "sl": "Pesa vsebuje veliko ogljikovih hidratov in sladkorja, preveč sladkorja pa lahko prispeva k vnetju trebušne slinavke ali debelosti. Vsebuje tudi veliko oksalne kisline, ki lahko tvori kamne v mehurju, kristale v urinu in ledvične kamne ter povzroči pomanjkanje kalcija. Ker je kisla, lahko pri nekaterih psih povzroči vetrove in drisko.",
     "pt": "A beterraba é rica em hidratos de carbono e açúcar, e demasiado açúcar pode contribuir para pancreatite ou obesidade. Também é rica em ácido oxálico, que pode formar pedras na bexiga, cristais urinários e pedras nos rins, e pode causar deficiências de cálcio. Por ser ácida, a beterraba pode causar gases e diarreia em alguns cães.",
-    "nl": "Bieten bevatten veel koolhydraten en suiker, en te veel suiker kan bijdragen aan alvleesklierontsteking of obesitas. Ze bevatten ook veel oxaalzuur, dat blaasstenen, urinekristallen en nierstenen kan vormen en een calciumtekort kan veroorzaken. Omdat bieten zuur zijn, kunnen ze bij sommige honden winderigheid en diarree veroorzaken."
+    "nl": "Bieten bevatten veel koolhydraten en suiker, en te veel suiker kan bijdragen aan alvleesklierontsteking of obesitas. Ze bevatten ook veel oxaalzuur, dat blaasstenen, urinekristallen en nierstenen kan vormen en een calciumtekort kan veroorzaken. Omdat bieten zuur zijn, kunnen ze bij sommige honden winderigheid en diarree veroorzaken.",
+    "pl": "Buraki mają dużo węglowodanów i cukru, a nadmiar cukru może przyczyniać się do zapalenia trzustki lub otyłości. Mają też dużo kwasu szczawiowego, który może sprzyjać powstawaniu kamieni w pęcherzu, kryształów w moczu i kamieni nerkowych oraz powodować niedobory wapnia. Ponieważ buraki są kwaśne, u niektórych psów mogą powodować gazy i biegunkę."
   },
   "signs": null,
   "what_to_do": {
     "en": "Beetroot can turn your dog's urine dark pink or red, so don't panic. If the colour doesn't go away after a day, something else may be going on, such as a urinary tract infection or stones, so talk to your vet.",
     "sl": "Pesa lahko psu obarva urin temno roza ali rdeče, zato ne paničarite. Če barva po enem dnevu ne izgine, gre morda za kaj drugega, na primer okužbo sečil ali kamne, zato se posvetujte z veterinarjem.",
     "pt": "A beterraba pode deixar a urina do teu cão rosa-escura ou vermelha, por isso não entres em pânico. Se a cor não desaparecer ao fim de um dia, pode haver outra causa, como uma infeção urinária ou pedras, por isso fala com o teu veterinário.",
-    "nl": "Rode biet kan de urine van je hond donkerroze of rood kleuren, dus schrik daar niet van. Is de kleur na een dag nog niet weg, dan kan er iets anders aan de hand zijn, zoals een urineweginfectie of stenen. Overleg dan met je dierenarts."
+    "nl": "Rode biet kan de urine van je hond donkerroze of rood kleuren, dus schrik daar niet van. Is de kleur na een dag nog niet weg, dan kan er iets anders aan de hand zijn, zoals een urineweginfectie of stenen. Overleg dan met je dierenarts.",
+    "pl": "Burak ćwikłowy może zabarwić mocz psa na ciemnoróżowo lub czerwono, ale to nie powód do paniki. Jeśli kolor nie zniknie po dobie, przyczyna może być inna, na przykład zakażenie dróg moczowych lub kamienie, więc porozmawiaj z weterynarzem."
   },
   "serving": {
     "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
     "sl": "Sveža, dobro očiščena in olupljena, surova ali kuhana, naribana ali narezana na majhne koščke. Pesa iz pločevinke le brez dodane soli in drugih dodatkov.",
     "pt": "Fresca, bem lavada e descascada, crua ou cozinhada, ralada ou cortada em pedaços pequenos, do tamanho de uma dentada. A beterraba em conserva só se não tiver sal nem outros aditivos.",
-    "nl": "Vers, goed schoongeboend en geschild, rauw of gekookt, geraspt of in kleine, hapklare stukjes gesneden. Bieten uit blik alleen zonder zout en zonder andere toevoegingen."
+    "nl": "Vers, goed schoongeboend en geschild, rauw of gekookt, geraspt of in kleine, hapklare stukjes gesneden. Bieten uit blik alleen zonder zout en zonder andere toevoegingen.",
+    "pl": "Świeże, dokładnie wyszorowane i obrane, surowe lub ugotowane, starte albo pokrojone na małe kawałki na jeden kęs. Buraki z puszki tylko bez soli i innych dodatków."
   },
   "child": {
     "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
     "sl": "Psi lahko občasno dobijo malo rdeče pese. Lulanje je lahko potem rožnato, in to je v redu.",
     "pt": "Os cães podem comer um bocadinho de beterraba de vez em quando. Pode deixar o xixi cor-de-rosa, e não faz mal.",
-    "nl": "Honden mogen af en toe een beetje rode biet. Het kan hun plas roze maken, en dat is niet erg."
+    "nl": "Honden mogen af en toe een beetje rode biet. Het kan hun plas roze maken, en dat is niet erg.",
+    "pl": "Pies może czasem dostać odrobinę buraka ćwikłowego. Jego siusiu może wtedy być różowe, ale to nic złego."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Raw or cooked beetroot?",
         "sl": "Surova ali kuhana pesa?",
         "pt": "Beterraba crua ou cozinhada?",
-        "nl": "Rauwe of gekookte rode biet?"
+        "nl": "Rauwe of gekookte rode biet?",
+        "pl": "Surowe czy gotowane buraki?"
       },
       "a": {
         "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
         "sl": "Obe sta v redu. Surova pesa ohrani največ hranil, kuhana pa je najbolj vsestranska izbira.",
         "pt": "Ambas servem. A beterraba crua conserva mais nutrientes, e a cozinhada é a opção mais versátil.",
-        "nl": "Beide zijn prima. Rauwe bieten behouden de meeste voedingsstoffen en gekookte bieten zijn het veelzijdigst."
+        "nl": "Beide zijn prima. Rauwe bieten behouden de meeste voedingsstoffen en gekookte bieten zijn het veelzijdigst.",
+        "pl": "Oba rodzaje są w porządku. Surowe buraki zachowują najwięcej składników odżywczych, a gotowane są najbardziej uniwersalne."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Can dogs eat canned beetroot?",
         "sl": "Ali lahko psi jedo peso iz pločevinke?",
         "pt": "Os cães podem comer beterraba em conserva?",
-        "nl": "Mogen honden rode biet uit blik eten?"
+        "nl": "Mogen honden rode biet uit blik eten?",
+        "pl": "Czy psy mogą jeść buraki z puszki?"
       },
       "a": {
         "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
         "sl": "Da, vendar izbirajte previdno: izberite izdelek brez dodane soli in drugih dodatkov.",
         "pt": "Sim, mas escolhe com cuidado: opta por uma marca sem sal adicionado e sem outros aditivos.",
-        "nl": "Ja, maar kies zorgvuldig: neem een merk zonder toegevoegd zout en zonder andere toevoegingen."
+        "nl": "Ja, maar kies zorgvuldig: neem een merk zonder toegevoegd zout en zonder andere toevoegingen.",
+        "pl": "Tak, ale wybieraj uważnie: kup buraki bez dodatku soli i innych dodatków."
       }
     }
   ],
@@ -185,6 +197,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d5341a51153b4acc8d6f8c77a1daa8dd6c7f02018ba66f2a5039874f1fd2d721"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb98890737822c171055b3c4ed2f8fdfa92be9164b4b4873c497d1df9ae1672d"
     }
   }
 }

@@ -5,51 +5,59 @@
     "en": "Tomatoes",
     "sl": "Paradižnik",
     "pt": "Tomates",
-    "nl": "Tomaten"
+    "nl": "Tomaten",
+    "pl": "Pomidory"
   },
   "question": {
     "en": "Can dogs eat tomatoes?",
     "sl": "Ali lahko psi jedo paradižnik?",
     "pt": "Os cães podem comer tomate?",
-    "nl": "Mogen honden tomaten eten?"
+    "nl": "Mogen honden tomaten eten?",
+    "pl": "Czy psy mogą jeść pomidory?"
   },
   "url_slug": {
     "en": "tomatoes",
     "sl": "paradiznik",
     "pt": "tomates",
-    "nl": "tomaten"
+    "nl": "tomaten",
+    "pl": "pomidory"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
     "sl": "Da, zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah. Zelen, nezrel paradižnik in zeleni deli rastline pa so nekaj drugega in se jim je treba izogibati.",
     "pt": "Sim, os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades. Os tomates verdes, ainda por amadurecer, e as partes verdes da planta são outra questão e devem ser evitados.",
-    "nl": "Ja, rijpe rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven. Groene, onrijpe tomaten en de groene delen van de plant zijn een ander verhaal: vermijd die."
+    "nl": "Ja, rijpe rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven. Groene, onrijpe tomaten en de groene delen van de plant zijn een ander verhaal: vermijd die.",
+    "pl": "Tak, dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach. Zielone, niedojrzałe pomidory i zielone części rośliny to co innego i należy ich unikać."
   },
   "why": {
     "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
     "sl": "Glavni strupeni snovi v paradižniku sta tomatin in solanin, ki ju je največ v zelenih delih rastline. Ko paradižnik dozori in postane rdeč, se njuna količina močno zmanjša, zato zrel paradižnik velja za nestrupenega. Izdelki iz paradižnika pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo.",
     "pt": "Os principais compostos tóxicos do tomate são a tomatina e a solanina, presentes sobretudo nas partes verdes da planta. À medida que o tomate amadurece e fica vermelho, os níveis baixam muito, por isso os tomates maduros são considerados não tóxicos. Os produtos à base de tomate contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães.",
-    "nl": "De belangrijkste giftige stoffen in tomaten zijn tomatine en solanine, die vooral in de groene delen van de plant zitten. Naarmate een tomaat rijpt en rood wordt, daalt het gehalte aanzienlijk, daarom worden rijpe tomaten als niet giftig beschouwd. Producten op basis van tomaat bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden."
+    "nl": "De belangrijkste giftige stoffen in tomaten zijn tomatine en solanine, die vooral in de groene delen van de plant zitten. Naarmate een tomaat rijpt en rood wordt, daalt het gehalte aanzienlijk, daarom worden rijpe tomaten als niet giftig beschouwd. Producten op basis van tomaat bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
+    "pl": "Głównymi związkami toksycznymi w pomidorach są tomatyna i solanina, występujące głównie w zielonych częściach rośliny. Gdy pomidor dojrzewa i robi się czerwony, ich poziom znacznie spada, dlatego dojrzałe pomidory uważa się za nietoksyczne. Produkty pomidorowe często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with small amounts to see how your dog reacts, and only give tomato in moderation under supervision. If you think your dog ate a large amount of tomatoes or the tomato plant itself, call your vet for guidance.",
     "sl": "Začnite z majhnimi količinami, da vidite, kako se pes odzove, in paradižnik ponujajte le zmerno in pod nadzorom. Če mislite, da je pes pojedel veliko paradižnika ali samo rastlino, pokličite veterinarja za nasvet.",
     "pt": "Começa com pequenas quantidades para ver como o teu cão reage e dá tomate só com moderação e sob vigilância. Se achas que o teu cão comeu uma grande quantidade de tomates ou o próprio tomateiro, liga ao teu veterinário para obteres orientação.",
-    "nl": "Begin met kleine hoeveelheden om te zien hoe je hond reageert en geef tomaat alleen met mate en onder toezicht. Denk je dat je hond veel tomaten of de tomatenplant zelf heeft gegeten, bel dan je dierenarts voor advies."
+    "nl": "Begin met kleine hoeveelheden om te zien hoe je hond reageert en geef tomaat alleen met mate en onder toezicht. Denk je dat je hond veel tomaten of de tomatenplant zelf heeft gegeten, bel dan je dierenarts voor advies.",
+    "pl": "Zacznij od małych ilości, żeby zobaczyć, jak reaguje twój pies, i dawaj pomidory tylko w umiarkowanej ilości, pod nadzorem. Jeśli uważasz, że pies zjadł dużo pomidorów albo samą roślinę pomidora, zadzwoń do weterynarza po wskazówki."
   },
   "serving": {
     "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
     "sl": "Le zrel, rdeč in navaden. Odstranite vse zelene dele in meso narežite na kocke; češnjeve paradižnike narežite na majhne koščke. Nikoli paradižnika, začinjenega s soljo, česnom, čebulo ali drugimi dodatki.",
     "pt": "Só maduro, vermelho e simples. Retira todas as partes verdes e corta a polpa em cubinhos; corta os tomates-cereja em pedaços pequenos. Nunca tomates temperados com sal, alho, cebola ou outros ingredientes.",
-    "nl": "Alleen rijp, rood en naturel. Haal alle groene delen weg en snijd het vruchtvlees in blokjes; snijd cherrytomaatjes in kleine stukjes. Nooit tomaten die met zout, knoflook, ui of andere toevoegingen zijn gekruid."
+    "nl": "Alleen rijp, rood en naturel. Haal alle groene delen weg en snijd het vruchtvlees in blokjes; snijd cherrytomaatjes in kleine stukjes. Nooit tomaten die met zout, knoflook, ui of andere toevoegingen zijn gekruid.",
+    "pl": "Tylko dojrzałe, czerwone, bez dodatków. Usuń wszystkie zielone części i pokrój miąższ w kostkę; pomidorki koktajlowe pokrój na małe kawałki. Nigdy nie podawaj pomidorów doprawionych solą, czosnkiem, cebulą ani innymi dodatkami."
   },
   "child": {
     "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
     "sl": "Psi lahko dobijo malo zrelega rdečega paradižnika. Odrasli odstrani zelene dele in ga nareže na majhne koščke.",
     "pt": "Os cães podem comer um bocadinho de tomate maduro e vermelho. Um adulto tira as partes verdes e corta-o em bocadinhos.",
-    "nl": "Honden mogen een beetje rijpe rode tomaat. Een volwassene haalt de groene stukjes eraf en snijdt hem klein."
+    "nl": "Honden mogen een beetje rijpe rode tomaat. Een volwassene haalt de groene stukjes eraf en snijdt hem klein.",
+    "pl": "Psy mogą dostać odrobinę dojrzałego, czerwonego pomidora. Dorosły usuwa zielone części i kroi go na małe kawałki."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat green tomatoes?",
         "sl": "Ali lahko psi jedo zelen paradižnik?",
         "pt": "Os cães podem comer tomates verdes?",
-        "nl": "Mogen honden groene tomaten eten?"
+        "nl": "Mogen honden groene tomaten eten?",
+        "pl": "Czy psy mogą jeść zielone pomidory?"
       },
       "a": {
         "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
         "sl": "Ne. Zelen paradižnik vsebuje več tomatina in solanina kot zrel, nezrel paradižnik pa lahko povzroči znake zastrupitve s tomatinom.",
         "pt": "Não. Os tomates verdes contêm mais tomatina e solanina do que os maduros, e comer um tomate verde pode levar a sinais de intoxicação por tomatina.",
-        "nl": "Nee. Groene tomaten bevatten meer tomatine en solanine dan rijpe, en van het eten van een onrijpe tomaat kan een hond verschijnselen van tomatinevergiftiging krijgen."
+        "nl": "Nee. Groene tomaten bevatten meer tomatine en solanine dan rijpe, en van het eten van een onrijpe tomaat kan een hond verschijnselen van tomatinevergiftiging krijgen.",
+        "pl": "Nie. Zielone pomidory zawierają więcej tomatyny i solaniny niż dojrzałe, a zjedzenie niedojrzałego pomidora może wywołać objawy zatrucia tomatyną."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Can dogs eat tomato sauce or ketchup?",
         "sl": "Ali lahko psi jedo paradižnikovo omako ali kečap?",
         "pt": "Os cães podem comer molho de tomate ou ketchup?",
-        "nl": "Mogen honden tomatensaus of ketchup eten?"
+        "nl": "Mogen honden tomatensaus of ketchup eten?",
+        "pl": "Czy psy mogą jeść sos pomidorowy lub keczup?"
       },
       "a": {
         "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
         "sl": "Bolje se jim je izogniti. Paradižnikovi izdelki, kot so omaka, kečap in juha, pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo.",
         "pt": "O melhor é evitá-los. Os produtos à base de tomate, como o molho, o ketchup e a sopa, contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães.",
-        "nl": "Dat kun je beter vermijden. Producten op basis van tomaat, zoals saus, ketchup en soep, bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden."
+        "nl": "Dat kun je beter vermijden. Producten op basis van tomaat, zoals saus, ketchup en soep, bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
+        "pl": "Lepiej ich unikać. Produkty pomidorowe, takie jak sos, keczup czy zupa, często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać."
       }
     },
     {
@@ -85,13 +97,15 @@
         "en": "I grow tomatoes. What should I watch for?",
         "sl": "Gojim paradižnik. Na kaj moram paziti?",
         "pt": "Cultivo tomates. A que devo estar atento?",
-        "nl": "Ik kweek tomaten. Waar moet ik op letten?"
+        "nl": "Ik kweek tomaten. Waar moet ik op letten?",
+        "pl": "Uprawiam pomidory. Na co mam uważać?"
       },
       "a": {
         "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
         "sl": "Zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse. Vrt ogradite, da pes ne more pokusiti rastlin.",
         "pt": "Os tomates verdes que caem da planta podem atrair os cães. Veda a horta para que o teu cão não possa provar as plantas.",
-        "nl": "Groene tomaten die van de plant vallen, kunnen honden aantrekken. Zet een hek om de tuin, zodat je hond niet van de planten kan proeven."
+        "nl": "Groene tomaten die van de plant vallen, kunnen honden aantrekken. Zet een hek om de tuin, zodat je hond niet van de planten kan proeven.",
+        "pl": "Zielone pomidory, które spadną z krzaka, mogą przyciągać psy. Ogrodź ogród, żeby pies nie mógł podjadać roślin."
       }
     }
   ],
@@ -196,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6dc805723f783fdec2a4691f4901cd8993f95e1ab35ce6bee0dcc53059e900a2"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e36183969633bfde97d8b110d60f8ea38cdefc5d9bcca379fa321a39b045b18a"
     }
   }
 }

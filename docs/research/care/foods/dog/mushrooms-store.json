@@ -5,51 +5,59 @@
     "en": "Store-bought mushrooms",
     "sl": "Kupljene gobe",
     "pt": "Cogumelos comprados no supermercado",
-    "nl": "Champignons uit de winkel"
+    "nl": "Champignons uit de winkel",
+    "pl": "Grzyby ze sklepu"
   },
   "question": {
     "en": "Can dogs eat store-bought mushrooms?",
     "sl": "Ali lahko psi jedo kupljene gobe?",
     "pt": "Os cães podem comer cogumelos comprados no supermercado?",
-    "nl": "Mogen honden champignons uit de winkel eten?"
+    "nl": "Mogen honden champignons uit de winkel eten?",
+    "pl": "Czy psy mogą jeść grzyby ze sklepu?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
     "sl": "kupljene-gobe",
     "pt": "cogumelos-do-supermercado",
-    "nl": "champignons"
+    "nl": "champignons",
+    "pl": "grzyby-ze-sklepu"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
     "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek.",
     "pt": "Os cogumelos simples vendidos nas grandes superfícies podem ser, em geral, seguros para os cães. Ainda assim, os cães não precisam de cogumelos e convém evitar pratos que os levem; um pauzinho de cenoura ou uma fatia de maçã é uma guloseima melhor.",
-    "nl": "Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden. Toch hebben honden geen paddenstoelen nodig en geef je gerechten met paddenstoelen beter niet, dus een wortelstaafje of een schijfje appel is een beter snoepje."
+    "nl": "Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden. Toch hebben honden geen paddenstoelen nodig en geef je gerechten met paddenstoelen beter niet, dus een wortelstaafje of een schijfje appel is een beter snoepje.",
+    "pl": "Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów. Mimo to psy nie potrzebują grzybów, a potraw z grzybami najlepiej unikać, więc lepszym smakołykiem będzie kawałek marchewki lub plasterek jabłka."
   },
   "why": {
     "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
     "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne.",
     "pt": "Os cogumelos do supermercado são geralmente considerados seguros, mas os pratos de cogumelos levam muitas vezes óleo, manteiga, temperos, alho e cebola, que podem ser prejudiciais para os cães. Os cogumelos silvestres são outra questão: é difícil distinguir os tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos.",
-    "nl": "Champignons uit de supermarkt worden over het algemeen als veilig beschouwd, maar gerechten met paddenstoelen bevatten vaak olie, boter, kruiden, knoflook en ui, die schadelijk kunnen zijn voor honden. Wilde paddenstoelen zijn een ander verhaal: giftige en niet-giftige soorten zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk."
+    "nl": "Champignons uit de supermarkt worden over het algemeen als veilig beschouwd, maar gerechten met paddenstoelen bevatten vaak olie, boter, kruiden, knoflook en ui, die schadelijk kunnen zijn voor honden. Wilde paddenstoelen zijn een ander verhaal: giftige en niet-giftige soorten zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk.",
+    "pl": "Grzyby ze sklepu spożywczego są na ogół uważane za bezpieczne, ale potrawy z grzybami często zawierają olej, masło, przyprawy, czosnek i cebulę, które mogą szkodzić psom. Dzikie grzyby to zupełnie inna sprawa: trudno odróżnić toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you do share, give only plain store-bought mushrooms. Never let your dog eat mushrooms found outside; if that happens, contact your vet, an animal poison centre or an emergency vet hospital immediately.",
     "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico.",
     "pt": "Se quiseres partilhar, dá apenas cogumelos simples comprados numa loja. Nunca deixes o teu cão comer cogumelos encontrados no exterior; se isso acontecer, liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência.",
-    "nl": "Als je ze toch deelt, geef dan alleen naturele champignons uit de winkel. Laat je hond nooit paddenstoelen eten die buiten zijn gevonden; gebeurt dat toch, neem dan meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren."
+    "nl": "Als je ze toch deelt, geef dan alleen naturele champignons uit de winkel. Laat je hond nooit paddenstoelen eten die buiten zijn gevonden; gebeurt dat toch, neem dan meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren.",
+    "pl": "Jeśli już chcesz poczęstować psa, dawaj tylko zwykłe grzyby ze sklepu. Nigdy nie pozwalaj psu jeść grzybów znalezionych na dworze; jeśli do tego dojdzie, od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej."
   },
   "serving": {
     "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
     "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami.",
     "pt": "Apenas simples, de uma grande superfície. Sem óleo, manteiga, temperos, alho nem cebola, e sem pratos de cogumelos.",
-    "nl": "Alleen naturel, uit een grote supermarkt. Zonder olie, boter, kruiden, knoflook of ui en geen gerechten met paddenstoelen."
+    "nl": "Alleen naturel, uit een grote supermarkt. Zonder olie, boter, kruiden, knoflook of ui en geen gerechten met paddenstoelen.",
+    "pl": "Tylko zwykłe grzyby z dużego sklepu spożywczego, bez oleju, masła, przypraw, czosnku i cebuli. Żadnych potraw z grzybami."
   },
   "child": {
     "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
     "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj.",
     "pt": "Os cães não precisam de cogumelos. Uma cenoura ou uma fatia de maçã é uma guloseima melhor. Nunca deixes um cão comer cogumelos encontrados no exterior.",
-    "nl": "Honden hebben geen paddenstoelen nodig. Een wortel of een schijfje appel is een beter snoepje. Laat een hond nooit paddenstoelen van buiten eten."
+    "nl": "Honden hebben geen paddenstoelen nodig. Een wortel of een schijfje appel is een beter snoepje. Laat een hond nooit paddenstoelen van buiten eten.",
+    "pl": "Psy nie potrzebują grzybów. Lepszym smakołykiem jest marchewka lub plasterek jabłka. Nigdy nie pozwól psu zjeść grzyba znalezionego na dworze."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat mushroom sauce or other mushroom dishes?",
         "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?",
         "pt": "Os cães podem comer molho de cogumelos ou outros pratos com cogumelos?",
-        "nl": "Mogen honden champignonsaus of andere gerechten met paddenstoelen eten?"
+        "nl": "Mogen honden champignonsaus of andere gerechten met paddenstoelen eten?",
+        "pl": "Czy psy mogą jeść sos grzybowy lub inne potrawy z grzybami?"
       },
       "a": {
         "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
         "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo.",
         "pt": "É mais seguro evitá-los. O óleo, a manteiga, os temperos, o alho e a cebola nestes pratos podem ser prejudiciais para os cães.",
-        "nl": "Dat kun je beter vermijden. Olie, boter, kruiden, knoflook en ui in zulke gerechten kunnen schadelijk zijn voor honden."
+        "nl": "Dat kun je beter vermijden. Olie, boter, kruiden, knoflook en ui in zulke gerechten kunnen schadelijk zijn voor honden.",
+        "pl": "Bezpieczniej ich unikać. Olej, masło, przyprawy, czosnek i cebula w tych potrawach mogą szkodzić psom."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "What about mushrooms growing in the garden?",
         "sl": "Kaj pa gobe, ki rastejo na vrtu?",
         "pt": "E os cogumelos que crescem no jardim?",
-        "nl": "En paddenstoelen die in de tuin groeien?"
+        "nl": "En paddenstoelen die in de tuin groeien?",
+        "pl": "A co z grzybami rosnącymi w ogrodzie?"
       },
       "a": {
         "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
         "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja.",
         "pt": "Trata todos os cogumelos silvestres como potencialmente tóxicos. Se o teu cão comer um, liga imediatamente ao teu veterinário.",
-        "nl": "Beschouw elke wilde paddenstoel als mogelijk giftig. Eet je hond er een, neem dan meteen contact op met je dierenarts."
+        "nl": "Beschouw elke wilde paddenstoel als mogelijk giftig. Eet je hond er een, neem dan meteen contact op met je dierenarts.",
+        "pl": "Traktuj każdego dzikiego grzyba jak potencjalnie toksycznego. Jeśli twój pies któregoś zje, od razu skontaktuj się z weterynarzem."
       }
     }
   ],
@@ -151,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "883f4d5569bfb2c39026aa96e73c7dde9e472e70d1b3c3497d3696da5e601a91"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2088a7319d6f3d425d9089907540777658038ab35a406885dcf62c1a2696519e"
     }
   }
 }
