@@ -5,32 +5,37 @@
     "en": "Tomato plant and green tomatoes",
     "sl": "Paradižnikova rastlina in zelen paradižnik",
     "pt": "Tomateiro e tomates verdes",
-    "nl": "Tomatenplant en groene tomaten"
+    "nl": "Tomatenplant en groene tomaten",
+    "pl": "Roślina pomidora i zielone pomidory"
   },
   "question": {
     "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
     "sl": "Ali lahko psi jedo paradižnikove liste, stebla ali zelen paradižnik?",
     "pt": "Os cães podem comer folhas, caules ou tomates verdes do tomateiro?",
-    "nl": "Mogen honden tomatenbladeren, tomatenstengels of groene tomaten eten?"
+    "nl": "Mogen honden tomatenbladeren, tomatenstengels of groene tomaten eten?",
+    "pl": "Czy psy mogą jeść liście i łodygi pomidora albo zielone pomidory?"
   },
   "url_slug": {
     "en": "tomato-plant",
     "sl": "paradiznikova-rastlina",
     "pt": "tomateiro",
-    "nl": "tomatenplant"
+    "nl": "tomatenplant",
+    "pl": "roslina-pomidora"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
     "sl": "Ne. Zeleni deli paradižnikove rastline, vključno z nezrelimi plodovi, listi, stebli, poganjki in cvetovi, so za pse strupeni. Pes nikoli ne sme jesti listov in stebel, izogibati pa se mora tudi mladim, zelenim paradižnikom.",
     "pt": "Não. As partes verdes do tomateiro, incluindo os tomates ainda verdes, as folhas, os caules, as ramas e as flores, são tóxicas para os cães. O teu cão nunca deve comer as folhas e os caules e deve evitar os tomates verdes e ainda novos.",
-    "nl": "Nee. De groene delen van de tomatenplant, waaronder onrijpe tomaten, bladeren, stengels, ranken en bloemen, zijn giftig voor honden. Je hond mag nooit de bladeren en stengels eten en moet jonge, groene tomaten vermijden."
+    "nl": "Nee. De groene delen van de tomatenplant, waaronder onrijpe tomaten, bladeren, stengels, ranken en bloemen, zijn giftig voor honden. Je hond mag nooit de bladeren en stengels eten en moet jonge, groene tomaten vermijden.",
+    "pl": "Nie. Zielone części rośliny pomidora, w tym niedojrzałe pomidory, liście, łodygi, pędy i kwiaty, są toksyczne dla psów. Twój pies nigdy nie powinien jeść liści ani łodyg, a młodych, zielonych pomidorów powinien unikać."
   },
   "why": {
     "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
     "sl": "Listi, stebla, poganjki in cvetovi vsebujejo tomatin in solanin, naravni obrambni snovi rastline; zelen paradižnik ju vsebuje več kot zrel. ASPCA paradižnikovo rastlino uvršča med strupene za pse. Huda zastrupitev je razmeroma redka in večina primerov ob hitrem ukrepanju mine, zato jo uvrščamo med nevarne, ne strupene.",
     "pt": "As folhas, os caules, as ramas e as flores contêm tomatina e solanina, substâncias naturais de defesa da planta; os tomates verdes contêm mais do que os maduros. A ASPCA classifica o tomateiro como tóxico para os cães. A intoxicação grave é relativamente rara e a maioria dos casos resolve-se quando é tratada rapidamente, por isso classificamos como perigoso e não como tóxico.",
-    "nl": "De bladeren, stengels, ranken en bloemen bevatten tomatine en solanine, natuurlijke afweerstoffen van de plant; groene tomaten bevatten er meer van dan rijpe. De ASPCA noemt de tomatenplant giftig voor honden. Ernstige vergiftiging komt relatief zelden voor en de meeste gevallen verlopen goed als je er snel op reageert, daarom beoordelen wij de tomatenplant als gevaarlijk en niet als giftig."
+    "nl": "De bladeren, stengels, ranken en bloemen bevatten tomatine en solanine, natuurlijke afweerstoffen van de plant; groene tomaten bevatten er meer van dan rijpe. De ASPCA noemt de tomatenplant giftig voor honden. Ernstige vergiftiging komt relatief zelden voor en de meeste gevallen verlopen goed als je er snel op reageert, daarom beoordelen wij de tomatenplant als gevaarlijk en niet als giftig.",
+    "pl": "Liście, łodygi, pędy i kwiaty zawierają tomatynę i solaninę, naturalne substancje obronne rośliny; zielone pomidory mają ich więcej niż dojrzałe. ASPCA uznaje roślinę pomidora za toksyczną dla psów. Ciężkie zatrucia zdarzają się stosunkowo rzadko, a większość przypadków kończy się dobrze, jeśli zareaguje się szybko, dlatego oceniamy roślinę jako niebezpieczną, a nie toksyczną."
   },
   "signs": {
     "en": [
@@ -80,20 +85,34 @@
       "Wijde pupillen",
       "Lusteloosheid",
       "Trage of onregelmatige hartslag"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Ślinienie się",
+      "Utrata apetytu",
+      "Osłabienie mięśni",
+      "Drżenie",
+      "Utrata koordynacji",
+      "Rozszerzone źrenice",
+      "Ospałość",
+      "Zwolnione lub nieregularne bicie serca"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate parts of the tomato plant or green tomatoes, call your vet or a pet poison helpline for guidance. If your dog is already showing symptoms, contact your vet; it is important to get them checked as soon as possible.",
     "sl": "Če je pes pojedel dele paradižnikove rastline ali zelen paradižnik, za nasvet pokličite veterinarja ali center za zastrupitve živali. Če pes že kaže znake, se obrnite na veterinarja; pomembno je, da ga čim prej pregleda.",
     "pt": "Se o teu cão comeu partes do tomateiro ou tomates verdes, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais para obteres orientação. Se o teu cão já apresenta sinais, liga ao teu veterinário: convém que seja visto o mais depressa possível.",
-    "nl": "Heeft je hond delen van de tomatenplant of groene tomaten gegeten, bel dan je dierenarts of een vergiftigingenlijn voor dieren voor advies. Vertoont je hond al verschijnselen, neem dan contact op met je dierenarts; het is belangrijk dat je hond zo snel mogelijk wordt onderzocht."
+    "nl": "Heeft je hond delen van de tomatenplant of groene tomaten gegeten, bel dan je dierenarts of een vergiftigingenlijn voor dieren voor advies. Vertoont je hond al verschijnselen, neem dan contact op met je dierenarts; het is belangrijk dat je hond zo snel mogelijk wordt onderzocht.",
+    "pl": "Jeśli pies zjadł części rośliny pomidora lub zielone pomidory, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt po wskazówki. Jeśli pies ma już objawy, jak najszybciej skontaktuj się z weterynarzem – ważne, żeby został zbadany."
   },
   "serving": null,
   "child": {
     "en": "Tomato leaves, stems and green tomatoes are not for dogs. If a dog nibbles the plant, tell a grown-up straight away.",
     "sl": "Paradižnikovi listi, stebla in zeleni plodovi niso za pse. Če pes gricka rastlino, takoj povej odraslemu.",
     "pt": "As folhas, os caules e os tomates verdes do tomateiro não são para os cães. Se um cão trincar a planta, avisa logo um adulto.",
-    "nl": "Tomatenbladeren, tomatenstengels en groene tomaten zijn niet voor honden. Knabbelt een hond aan de plant, vertel het dan meteen aan een volwassene."
+    "nl": "Tomatenbladeren, tomatenstengels en groene tomaten zijn niet voor honden. Knabbelt een hond aan de plant, vertel het dan meteen aan een volwassene.",
+    "pl": "Liście, łodygi i zielone pomidory nie są dla psów. Jeśli pies skubnie roślinę, od razu powiedz dorosłemu."
   },
   "faq": [
     {
@@ -101,13 +120,15 @@
         "en": "Are ripe red tomatoes okay?",
         "sl": "Je zrel rdeč paradižnik v redu?",
         "pt": "Os tomates maduros e vermelhos não têm problema?",
-        "nl": "Zijn rijpe rode tomaten oké?"
+        "nl": "Zijn rijpe rode tomaten oké?",
+        "pl": "Czy dojrzałe, czerwone pomidory są w porządku?"
       },
       "a": {
         "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
         "sl": "Da. Zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah.",
         "pt": "Não têm. Os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades.",
-        "nl": "Ja. Rijpe, rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven."
+        "nl": "Ja. Rijpe, rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven.",
+        "pl": "Tak. Dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach."
       }
     },
     {
@@ -115,13 +136,15 @@
         "en": "How do I keep my dog safe in a vegetable garden?",
         "sl": "Kako psa zavarujem na zelenjavnem vrtu?",
         "pt": "Como mantenho o meu cão em segurança numa horta?",
-        "nl": "Hoe houd ik mijn hond veilig in de moestuin?"
+        "nl": "Hoe houd ik mijn hond veilig in de moestuin?",
+        "pl": "Jak zadbać o bezpieczeństwo psa w ogródku warzywnym?"
       },
       "a": {
         "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
         "sl": "Postavite fizične ovire ali vrt ogradite in pomnite, da zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse.",
         "pt": "Cria barreiras físicas ou veda a horta e lembra-te de que os tomates verdes que caem da planta podem atrair os cães.",
-        "nl": "Zorg voor een afscheiding of zet een hek om de tuin, en houd er rekening mee dat groene tomaten die van de plant vallen honden kunnen aantrekken."
+        "nl": "Zorg voor een afscheiding of zet een hek om de tuin, en houd er rekening mee dat groene tomaten die van de plant vallen honden kunnen aantrekken.",
+        "pl": "Postaw przy grządkach barierki albo ogrodź ogródek i pamiętaj, że zielone pomidory spadające z krzaka mogą przyciągać psy."
       }
     }
   ],
@@ -252,6 +275,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1670826ceb77077b42a2299b66cb21c5cfeca57c3318b1c03a9fbb8f07f78f2c"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d10f9b2096692337d9d01f505c67b9a4cced45cb0ccc5fc7d2ba9b8de9599cd8"
     }
   }
 }

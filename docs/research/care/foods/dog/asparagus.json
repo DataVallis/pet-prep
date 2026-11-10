@@ -5,51 +5,59 @@
     "en": "Asparagus",
     "sl": "Beluši",
     "pt": "Espargos",
-    "nl": "Asperges"
+    "nl": "Asperges",
+    "pl": "Szparagi"
   },
   "question": {
     "en": "Can dogs eat asparagus?",
     "sl": "Ali lahko psi jedo beluše?",
     "pt": "Os cães podem comer espargos?",
-    "nl": "Mogen honden asperges eten?"
+    "nl": "Mogen honden asperges eten?",
+    "pl": "Czy psy mogą jeść szparagi?"
   },
   "url_slug": {
     "en": "asparagus",
     "sl": "belusi",
     "pt": "espargos",
-    "nl": "asperges"
+    "nl": "asperges",
+    "pl": "szparagi"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
     "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti.",
     "pt": "Sim, os espargos não são tóxicos para os cães. Os espargos cozinhados são a melhor opção, porque são mais fáceis de mastigar. Serve-os simples, cozidos em água ou a vapor, e mantém os cães longe da folhagem do espargo.",
-    "nl": "Ja, asperges zijn niet giftig voor honden. Gekookte asperges zijn de betere keuze, omdat ze makkelijker te kauwen zijn. Geef ze naturel, gekookt of gestoomd, en houd je hond uit de buurt van het aspergeloof."
+    "nl": "Ja, asperges zijn niet giftig voor honden. Gekookte asperges zijn de betere keuze, omdat ze makkelijker te kauwen zijn. Geef ze naturel, gekookt of gestoomd, en houd je hond uit de buurt van het aspergeloof.",
+    "pl": "Tak, szparagi nie są toksyczne dla psów. Lepiej wybrać ugotowane, bo łatwiej je przeżuć. Podawaj je bez dodatków, gotowane w wodzie lub na parze, a psa trzymaj z dala od pierzastych, zielonych pędów rośliny."
   },
   "why": {
     "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
     "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena.",
     "pt": "Os espargos crus são muito difíceis de mastigar, e o cão pode tentar engoli-los inteiros e engasgar-se. Alguns cães têm dificuldade em digerir espargos crus. A manteiga ou o óleo de cozinha podem fazer mal ao cão. A folhagem do espargo, a parte não comestível da planta, é tóxica para os cães.",
-    "nl": "Rauwe asperges zijn heel moeilijk te kauwen en een hond kan proberen ze in één keer door te slikken en zich te verslikken. Sommige honden kunnen rauwe asperges moeilijk verteren. Boter of bakolie kan een hond ziek maken. Het aspergeloof, het oneetbare deel van de plant, is giftig voor honden."
+    "nl": "Rauwe asperges zijn heel moeilijk te kauwen en een hond kan proberen ze in één keer door te slikken en zich te verslikken. Sommige honden kunnen rauwe asperges moeilijk verteren. Boter of bakolie kan een hond ziek maken. Het aspergeloof, het oneetbare deel van de plant, is giftig voor honden.",
+    "pl": "Surowe szparagi są bardzo twarde i trudno je przegryźć, a pies może próbować połknąć je w całości i się zadławić. Niektóre psy mają trudności z trawieniem surowych szparagów. Masło lub olej do smażenia mogą rozchorować psa. Pierzaste, zielone pędy szparaga, niejadalna część rośliny, są toksyczne dla psów."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog has vomiting, gas or diarrhoea after raw asparagus, try lightly cooking it next time. Eating the asparagus fern can cause vomiting, diarrhoea and severe abdominal pain, so keep your dog away from the plant.",
     "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline.",
     "pt": "Se o teu cão tiver vómitos, gases ou diarreia depois de comer espargos crus, experimenta cozê-los ligeiramente da próxima vez. Comer a folhagem do espargo pode causar vómitos, diarreia e dores abdominais fortes, por isso mantém o teu cão afastado da planta.",
-    "nl": "Krijgt je hond na rauwe asperges last van braken, winderigheid of diarree, bereid ze dan de volgende keer licht gaar. Als een hond aspergeloof eet, kan hij gaan braken, diarree krijgen en hevige buikpijn krijgen, dus houd je hond uit de buurt van de plant."
+    "nl": "Krijgt je hond na rauwe asperges last van braken, winderigheid of diarree, bereid ze dan de volgende keer licht gaar. Als een hond aspergeloof eet, kan hij gaan braken, diarree krijgen en hevige buikpijn krijgen, dus houd je hond uit de buurt van de plant.",
+    "pl": "Jeśli po surowych szparagach pies ma wymioty, gazy lub biegunkę, następnym razem spróbuj je lekko ugotować. Zjedzenie pierzastych pędów szparaga może wywołać wymioty, biegunkę i silny ból brzucha, więc nie pozwalaj psu zbliżać się do rośliny."
   },
   "serving": {
     "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
     "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj.",
     "pt": "Cozidos em água ou a vapor, sem manteiga nem óleo. Se os servires crus, corta-os em pedaços pequenos, do tamanho de uma dentada.",
-    "nl": "Naturel gekookt of gestoomd, zonder boter of olie. Geef je ze rauw, snijd ze dan in kleine, hapklare stukjes."
+    "nl": "Naturel gekookt of gestoomd, zonder boter of olie. Geef je ze rauw, snijd ze dan in kleine, hapklare stukjes.",
+    "pl": "Ugotowane w wodzie lub na parze, bez masła i oleju. Jeśli podajesz je surowe, pokrój na małe kawałki na jeden kęs."
   },
   "child": {
     "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
     "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse.",
     "pt": "Os cães podem comer um bocadinho de espargo cozinhado, dado por um adulto. A parte da planta com folhagem não é para os cães.",
-    "nl": "Honden mogen een beetje gekookte asperges, als een volwassene die geeft. Het bladerige loof van de plant is niet voor honden."
+    "nl": "Honden mogen een beetje gekookte asperges, als een volwassene die geeft. Het bladerige loof van de plant is niet voor honden.",
+    "pl": "Dorosły może dać psu odrobinę ugotowanych szparagów. Pierzaste, zielone pędy rośliny nie są dla psów."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Why does my dog's pee smell after asparagus?",
         "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?",
         "pt": "Porque é que a urina do meu cão cheira mal depois de comer espargos?",
-        "nl": "Waarom ruikt de plas van mijn hond na asperges?"
+        "nl": "Waarom ruikt de plas van mijn hond na asperges?",
+        "pl": "Dlaczego po szparagach mocz psa tak pachnie?"
       },
       "a": {
         "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
         "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava.",
         "pt": "Os espargos podem dar um cheiro desagradável à urina, tanto nos cães como nas pessoas. Se o teu cão já estiver completamente habituado a fazer as necessidades no sítio certo, isto não deve ser um problema.",
-        "nl": "Van asperges kan urine onaangenaam gaan ruiken, bij honden net als bij mensen. Is je hond helemaal zindelijk, dan zou dat geen probleem moeten zijn."
+        "nl": "Van asperges kan urine onaangenaam gaan ruiken, bij honden net als bij mensen. Is je hond helemaal zindelijk, dan zou dat geen probleem moeten zijn.",
+        "pl": "Szparagi mogą sprawić, że mocz nieprzyjemnie pachnie, u psów tak samo jak u ludzi. Jeśli twój pies jest w pełni nauczony czystości, nie powinno to być problemem."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Is the asparagus fern safe?",
         "sl": "Je belušna praprot varna?",
         "pt": "A folhagem do espargo é segura?",
-        "nl": "Is aspergeloof veilig?"
+        "nl": "Is aspergeloof veilig?",
+        "pl": "Czy pierzaste pędy szparaga są bezpieczne?"
       },
       "a": {
         "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
         "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu.",
         "pt": "Não. A folhagem do espargo é tóxica para os cães e pode causar vómitos, diarreia e dores abdominais fortes.",
-        "nl": "Nee. Aspergeloof is giftig voor honden en kan braken, diarree en hevige buikpijn veroorzaken."
+        "nl": "Nee. Aspergeloof is giftig voor honden en kan braken, diarree en hevige buikpijn veroorzaken.",
+        "pl": "Nie. Pierzaste pędy szparaga są toksyczne dla psów i mogą wywołać wymioty, biegunkę i silny ból brzucha."
       }
     }
   ],
@@ -173,6 +185,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cc9a59cb93a747d271b54713a71cc25fac7f4d91a5158bcb295b66773fc87d0c"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b42dec8988df984ed85ea027f9a4f0613b39c50fbb3598e8451806dea52d9c6c"
     }
   }
 }
