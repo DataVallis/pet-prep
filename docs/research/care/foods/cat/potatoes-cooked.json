@@ -4,6 +4,7 @@
   "name": {
     "en": "Cooked potatoes",
     "sl": "Kuhan krompir",
+    "de": "Gekochte Kartoffeln",
     "pt": "Batata cozida",
     "nl": "Gekookte aardappelen",
     "pl": "Ugotowane ziemniaki",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can cats eat cooked potatoes?",
     "sl": "Ali lahko mačke jedo kuhan krompir?",
+    "de": "Dürfen Katzen gekochte Kartoffeln fressen?",
     "pt": "Os gatos podem comer batata cozida?",
     "nl": "Mogen katten gekookte aardappelen eten?",
     "pl": "Czy koty mogą jeść ugotowane ziemniaki?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "cooked-potatoes",
     "sl": "kuhan-krompir",
+    "de": "gekochte-kartoffeln",
     "pt": "batata-cozida",
     "nl": "gekookte-aardappelen",
     "pl": "ugotowane-ziemniaki",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
     "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite.",
+    "de": "Ja, ein wenig pure gekochte Kartoffel ist als gelegentliches Leckerli in Ordnung. Laut RSPCA sind Kartoffeln für Katzen in Maßen geeignet, wenn sie als Püree oder gekocht und ohne Butter oder Käse gegeben werden. Lassen Sie Schale, Salz und Gewürze weg.",
     "pt": "Sim, um pouco de batata cozida simples não faz mal como guloseima ocasional. A RSPCA indica a batata como adequada para gatos com moderação, se for cozida ou em puré, sem manteiga nem queijo. Tira a pele e não juntes sal nem temperos.",
     "nl": "Ja, een beetje naturele gekookte aardappel is af en toe prima als traktatie. De RSPCA noemt aardappelen met mate geschikt voor katten, als ze gepureerd of gekookt zijn zonder boter of kaas. Laat de schil, zout en kruiden weg.",
     "pl": "Tak, odrobina zwykłego ugotowanego ziemniaka jest w porządku jako okazjonalny smakołyk. RSPCA uznaje ziemniaki za odpowiednie dla kotów w umiarkowanych ilościach, jeśli są gotowane lub w formie puree, bez masła i sera. Pomiń skórkę, sól i przyprawy.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
     "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek.",
+    "de": "Die RSPCA führt Kartoffelpüree oder gekochte Kartoffeln ohne Butter oder Käse unter den Lebensmitteln auf, die für Katzen in Maßen geeignet sind, Cats Protection empfiehlt pures Kartoffelpüree ohne Butter, Sahne oder Knoblauch, und die ASPCA sagt, dass gekochte Kartoffeln für Haustiere in Maßen in Ordnung sind. Ein von Tierärzten verfasster PetMD-Artikel ergänzt, dass gekochte Kartoffeln für Katzen zwar nicht giftig, aber auch nicht gut für sie sind und dass Kartoffelschalen das Gift Solanin enthalten. Katzen brauchen kein Gemüse; belassen Sie es also bei einem kleinen Leckerli.",
     "pt": "A RSPCA inclui o puré ou a batata cozida, sem manteiga nem queijo, entre os alimentos adequados para gatos com moderação, a Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho, e a ASPCA diz que a batata cozida não faz mal aos animais de estimação com moderação. Um artigo da PetMD, escrito por veterinários, acrescenta que a batata cozida não é tóxica para os gatos, mas também não lhes faz bem, e que as peles da batata contêm solanina, uma toxina. Os gatos não precisam de legumes na alimentação, por isso limita-te a uma pequena guloseima.",
     "nl": "De RSPCA noemt gepureerde of gekookte aardappelen zonder boter of kaas als voedsel dat met mate geschikt is voor katten, Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook, en de ASPCA zegt dat gekookte aardappelen met mate prima zijn voor huisdieren. Een artikel op PetMD, geschreven door een dierenarts, voegt eraan toe dat gekookte aardappelen niet giftig zijn voor katten maar ook niet goed voor ze, en dat aardappelschillen de gifstof solanine bevatten. Katten hebben geen groente nodig in hun voeding, dus houd het bij een kleine traktatie.",
     "pl": "RSPCA wymienia puree ziemniaczane i gotowane ziemniaki bez masła i sera wśród produktów odpowiednich dla kotów w umiarkowanych ilościach, Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku, a ASPCA podaje, że ugotowane ziemniaki są dla zwierząt w porządku w umiarkowanych ilościach. Artykuł w PetMD napisany przez weterynarza dodaje, że ugotowane ziemniaki nie są toksyczne dla kotów, ale też im nie służą, a skórki ziemniaków zawierają toksynę solaninę. Koty nie potrzebują w diecie warzyw, więc niech to będzie tylko mały smakołyk.",
@@ -66,6 +71,7 @@
   "what_to_do": {
     "en": "Start with a small taste. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit einer kleinen Kostprobe. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "pt": "Começa por uma pequena prova. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
     "nl": "Begin met een klein hapje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kęsa. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
@@ -78,6 +84,7 @@
   "serving": {
     "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
     "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja.",
+    "de": "Pure gekochte oder zerdrückte Kartoffel, geschält, ohne Butter, Käse, Sahne, Knoblauch, Salz oder Gewürze. Niemals rohe oder grüne Kartoffeln.",
     "pt": "Batata cozida ou em puré simples, sem pele, sem manteiga, queijo, natas, alho, sal nem temperos. Nunca crua nem esverdeada.",
     "nl": "Naturel gekookte of gepureerde aardappel, geschild, zonder boter, kaas, room, knoflook, zout of kruiden. Nooit rauwe of groene aardappel.",
     "pl": "Zwykły ziemniak, gotowany lub w formie puree, obrany, bez masła, sera, śmietanki, czosnku, soli i przypraw. Nigdy surowy ani zielony ziemniak.",
@@ -90,6 +97,7 @@
   "child": {
     "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
     "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce.",
+    "de": "Ein winziges Stück pure gekochte Kartoffel kann ab und zu ein Leckerli für Katzen sein. Rohe Kartoffeln sind nichts für Katzen.",
     "pt": "Um bocadinho de batata cozida simples pode ser uma guloseima para o gato de vez em quando. A batata crua não é para gatos.",
     "nl": "Een heel klein beetje naturel gekookte aardappel kan af en toe een traktatie voor je kat zijn. Rauwe aardappel is niet voor katten.",
     "pl": "Odrobinę zwykłego ugotowanego ziemniaka można czasem dać kotu jako smakołyk. Surowe ziemniaki nie są dla kotów.",
@@ -104,6 +112,7 @@
       "q": {
         "en": "Can cats eat potato skins?",
         "sl": "Ali lahko mačke jedo krompirjeve olupke?",
+        "de": "Dürfen Katzen Kartoffelschalen fressen?",
         "pt": "Os gatos podem comer peles de batata?",
         "nl": "Mogen katten aardappelschillen eten?",
         "pl": "Czy koty mogą jeść skórki ziemniaków?",
@@ -116,6 +125,7 @@
       "a": {
         "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
         "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati.",
+        "de": "Nein. Ein von Tierärzten verfasster PetMD-Artikel sagt, dass Kartoffelschalen, roh oder gekocht, das Gift Solanin enthalten und vermieden werden sollten.",
         "pt": "Não. Um artigo da PetMD, escrito por veterinários, diz que as peles da batata, cruas ou cozinhadas, contêm solanina, uma toxina, e devem ser evitadas.",
         "nl": "Nee. Een artikel op PetMD, geschreven door een dierenarts, zegt dat aardappelschillen, rauw of gekookt, de gifstof solanine bevatten en vermeden moeten worden.",
         "pl": "Nie. Artykuł w PetMD napisany przez weterynarza podaje, że skórki ziemniaków, surowe lub ugotowane, zawierają toksynę solaninę i należy ich unikać.",
@@ -130,6 +140,7 @@
       "q": {
         "en": "Can cats eat mashed potatoes?",
         "sl": "Ali lahko mačke jedo krompirjev pire?",
+        "de": "Dürfen Katzen Kartoffelpüree fressen?",
         "pt": "Os gatos podem comer puré de batata?",
         "nl": "Mogen katten aardappelpuree eten?",
         "pl": "Czy koty mogą jeść puree ziemniaczane?",
@@ -142,6 +153,7 @@
       "a": {
         "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
         "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna.",
+        "de": "Pures Kartoffelpüree ist als kleines Leckerli in Ordnung. Cats Protection empfiehlt pures Kartoffelpüree ohne Butter, Sahne oder Knoblauch.",
         "pt": "O puré de batata simples não faz mal como pequena guloseima. A Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho.",
         "nl": "Naturel aardappelpuree is prima als kleine traktatie. Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook.",
         "pl": "Zwykłe puree ziemniaczane jest w porządku jako mały smakołyk. Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku.",
@@ -220,6 +232,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0c0a09c14c9a58f9d7ba4fc68eb8fdcf89c7cf019567a0f7f181443b71d74b61"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d5ea7fbd606451154b30a001803f644b96997a46294ea527beca51182fea7542"
     },
     "pt": {
       "status": "verified",
