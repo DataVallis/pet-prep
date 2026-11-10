@@ -1222,6 +1222,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_DOGUE_DE_BORDEAUX = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-100)';
 
     /**
+     * M5-R10-101 Flat-Coated Retriever (unattended run 2026-11-10, data.json proposed_game_parameters.flat_coated_retriever.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S762 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 105 (0.75 × McMillan 2024 median 11.7 y via Dogs Trust S123 — not provisional),
+     * arrival 2 / 9 / 36 / 105, learning multiplier 1.5 (Coren rank 18, Excellent, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_FLAT_COATED_RETRIEVER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-101)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1545,6 +1554,11 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'month', 'S743', "You should also clip your dog's nails once every 3 to 4 weeks", 'proposed_game_parameters.lhasa_apso.nail_trimming', '"once every 3 to 4 weeks" → every 4 weeks (3 weeks is no program period — open for David)'],
             'bath' => [1, 'two_weeks', 'S743', 'You should expect to bathe your Lhasa Apso at least once every two weeks.', 'proposed_game_parameters.lhasa_apso.bathing', '"at least once every two weeks" → every 2 weeks (no ear / groomer frequency → no task)'],
         ],
+        'flat_coated_retriever' => [
+            'ear_cleaning' => [1, 'week', 'S763', 'Cleaning your dog’s ears every week or two can help stave off potential ear infections.', 'proposed_game_parameters.flat_coated_retriever.ear_care', '"every week or two" → the lower bound, once a week'],
+            'nail_trim' => [1, 'month', 'S763', 'a nail trim) every month or two will be beneficial.', 'proposed_game_parameters.flat_coated_retriever.nail_care', '"every month or two" → the lower bound, every 4 weeks'],
+            'bath' => [1, 'month', 'S763', 'an occasional spa day (where your Flat-Coated Retriever gets a bath', 'proposed_game_parameters.flat_coated_retriever.bathing', '"every month or two" (same PetMD sentence) → the lower bound, every 4 weeks (no groomer, no tooth frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1664,6 +1678,7 @@ class BreedStageParamsSeeder extends Seeder
         'english_setter' => [3, 'S732', "They'll need grooming 2-3 times per week, and occasional clipping and trimming.", 'high', false],
         'lhasa_apso' => [7, 'S740', 'Grooming: Every day', 'high', false],
         'dogue_de_bordeaux' => [1, 'S756', 'Grooming: Once a week', 'high', false],
+        'flat_coated_retriever' => [2, 'S763', 'A twice-weekly brushing routine is ideal to maintain their luxurious coat', 'high', false],
     ];
 
     /**
@@ -1716,6 +1731,7 @@ class BreedStageParamsSeeder extends Seeder
         'chow_chow' => ['S700', 'Remember to leave a gap after eating and before exercising.'],
         'old_english_sheepdog' => ['S705', 'Remember to leave a gap after eating and before exercising.'],
         'dogue_de_bordeaux' => ['S757', 'Remember to leave a gap after eating and before exercising.'],
+        'flat_coated_retriever' => ['S763', 'Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1822,13 +1838,14 @@ class BreedStageParamsSeeder extends Seeder
         'english_setter' => ['S732', 'As with all breeds, early socialisation and training is still important to ensure they grow up into confident, sociable dogs'],
         'lhasa_apso' => ['S741', 'Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.'],
         'dogue_de_bordeaux' => ['S757', 'Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.'],
+        'flat_coated_retriever' => ['S763', 'They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2647,6 +2664,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::EnglishSetter => self::englishSetterProfile(),
             BreedType::LhasaApso => self::lhasaApsoProfile(),
             BreedType::DogueDeBordeaux => self::dogueDeBordeauxProfile(),
+            BreedType::FlatCoatedRetriever => self::flatCoatedRetrieverProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9650,6 +9668,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'dogue_de_bordeaux.lifespan.median_uk',
                 'quote' => 'Dogue de Bordeaux 5.5 3.3-6.1 0.0-8.8 21',
                 'notes' => 'O\'Neill et al. 2013 (S212), VetCompass England, Table 1 — 21 deaths (small sample); "the shortest-lived breeds were the Dogue de Bordeaux (n=21; 5.5 years; IQR 3.3-6.1)". PetMD 5–8 y (S759) agrees; RKC / PDSA "Over 10 years" (S756, S757) conflict — open for David. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Flat-Coated Retriever (M5-R10-101). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_FLAT_COATED_RETRIEVER); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the McMillan 2024 median (via Dogs Trust S123) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function flatCoatedRetrieverProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_FLAT_COATED_RETRIEVER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.flat_coated_retriever.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [105, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 11.7 y (Dogs Trust table S123) = 8.775 y = 105.3 → 105 months. Not chosen: 84 (Dogs Trust > 7 y, S14); 72 (0.75 × 8 y, PetMD S763 lower bound).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 105],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.flat_coated_retriever.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S762', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.flat_coated_retriever.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S762) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PetMD (S763) gives no number; no PDSA breed page.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.flat_coated_retriever.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[25.0, 36.0], [
+                'unit' => 'kg', 'source_id' => 'S761', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'flat_coated_retriever.adult_weight.fci',
+                'quote' => 'Preferred weight in hard condition: Dogs: 27 - 36 kg (60-80 lbs), Bitches: 25 - 32 kg (55-70 lbs).',
+                'notes' => 'FCI-Standard N° 121 (S761): dogs 27–36 kg, bitches 25–32 kg → 25–36 kg for both sexes. PetMD (S763) 60–70 lb (≈ 27–32 kg) — alternative.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'flat_coated_retriever.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Large", S762; FCI 25–36 kg, S761).',
+            ]],
+            'coren_rank' => [18, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'flat_coated_retriever.trainability.coren_rank',
+                'quote' => '| 18 | Flat-Coated Retriever | Excellent Working Dogs',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, checked 2026-11-10), rank 18 shared with the English Cocker Spaniel and the Standard Schnauzer, tier "Excellent Working Dogs" (ranks 11–26).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.flat_coated_retriever.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 18 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [11.7, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'flat_coated_retriever.lifespan.median_uk',
+                'quote' => 'Flat Coated Retriever 11.7 11.5 - 11.9 2148 784',
+                'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). RKC "Under 10 years" (S762) and PetMD 8–10 years (S763) are the basis of the shorter_lifespan chip only. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

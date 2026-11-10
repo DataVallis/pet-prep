@@ -659,6 +659,11 @@ return [
         ['key' => 'fawn-no-mask', 'value' => 'fawn without a mask', 'en' => 'Fawn, no mask', 'sl' => 'Plavo rjav, brez maske'],
         ['key' => 'isabella', 'value' => 'pale isabella fawn', 'en' => 'Isabella', 'sl' => 'Izabela'],
     ],
+    // M5-R10-101: FCI-Standard N° 121 (S761) "Black or liver only." — same order and values as breed_appearance.php.
+    'flat_coated_retriever' => [
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'liver', 'value' => 'solid liver', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

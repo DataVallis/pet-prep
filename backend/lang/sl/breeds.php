@@ -101,6 +101,7 @@ return [
     'english_setter' => 'Angleški seter',
     'lhasa_apso' => 'Lhasa apso',
     'dogue_de_bordeaux' => 'Bordojska doga',
+    'flat_coated_retriever' => 'Ravnodlaki prinašalec',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
