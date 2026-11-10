@@ -9,7 +9,8 @@
     "pl": "Grzyby ze sklepu",
     "cs": "Houby z obchodu",
     "hr": "Gljive iz trgovine",
-    "sv": "Svamp från affären"
+    "sv": "Svamp från affären",
+    "da": "Svampe fra butikken"
   },
   "question": {
     "en": "Can dogs eat store-bought mushrooms?",
@@ -19,7 +20,8 @@
     "pl": "Czy psy mogą jeść grzyby ze sklepu?",
     "cs": "Mohou psi jíst houby z obchodu?",
     "hr": "Smiju li psi jesti gljive iz trgovine?",
-    "sv": "Får hundar äta svamp från affären?"
+    "sv": "Får hundar äta svamp från affären?",
+    "da": "Må hunde spise svampe fra butikken?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
@@ -29,7 +31,8 @@
     "pl": "grzyby-ze-sklepu",
     "cs": "houby-z-obchodu",
     "hr": "gljive-iz-trgovine",
-    "sv": "svamp-fran-affaren"
+    "sv": "svamp-fran-affaren",
+    "da": "svampe-fra-butikken"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "pl": "Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów. Mimo to psy nie potrzebują grzybów, a potraw z grzybami najlepiej unikać, więc lepszym smakołykiem będzie kawałek marchewki lub plasterek jabłka.",
     "cs": "Houby bez dalších přísad prodávané ve velkých obchodech s potravinami mohou být pro psy obecně bezpečné. Přesto psi houby nepotřebují a pokrmům s houbami je lepší se vyhnout, takže lepším pamlskem je mrkvová tyčinka nebo plátek jablka.",
     "hr": "Obične gljive iz supermarketa općenito mogu biti sigurne za pse. Ipak, psima gljive nisu potrebne, a jela s gljivama najbolje je izbjegavati, pa je štapić mrkve ili kriška jabuke bolja poslastica.",
-    "sv": "Svamp utan tillsatser som säljs i stora livsmedelsbutiker kan i allmänhet vara säker för hundar. Hundar behöver ändå ingen svamp, och rätter med svamp bör helst undvikas, så en morotsstav eller en äppelskiva är en bättre godbit."
+    "sv": "Svamp utan tillsatser som säljs i stora livsmedelsbutiker kan i allmänhet vara säker för hundar. Hundar behöver ändå ingen svamp, och rätter med svamp bör helst undvikas, så en morotsstav eller en äppelskiva är en bättre godbit.",
+    "da": "Naturelle svampe fra store dagligvarebutikker kan som regel anses for ufarlige for hunde. Hunde har dog ikke brug for svampe, og retter med svampe bør helst undgås, så en gulerodsstang eller en skive æble er en bedre godbid."
   },
   "why": {
     "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
@@ -50,7 +54,8 @@
     "pl": "Grzyby ze sklepu spożywczego są na ogół uważane za bezpieczne, ale potrawy z grzybami często zawierają olej, masło, przyprawy, czosnek i cebulę, które mogą szkodzić psom. Dzikie grzyby to zupełnie inna sprawa: trudno odróżnić toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne.",
     "cs": "Houby z obchodu s potravinami se obecně považují za bezpečné, ale pokrmy z hub často obsahují oleje, máslo, koření, česnek a cibuli, které mohou psům škodit. Divoké houby jsou něco jiného: toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné.",
     "hr": "Gljive iz trgovine općenito se smatraju sigurnima, ali jela s gljivama često sadrže ulje, maslac, začine, češnjak i luk, što može biti štetno za pse. Divlje su gljive druga stvar: teško je razlikovati otrovne od neotrovnih, a otrovne su iznimno opasne.",
-    "sv": "Svamp från livsmedelsbutiker anses i allmänhet vara säker, men svamprätter innehåller ofta olja, smör, kryddor, vitlök och lök, vilket kan vara skadligt för hundar. Vilda svampar är något helt annat: det är svårt att skilja giftiga från ogiftiga, och de giftiga är extremt farliga."
+    "sv": "Svamp från livsmedelsbutiker anses i allmänhet vara säker, men svamprätter innehåller ofta olja, smör, kryddor, vitlök och lök, vilket kan vara skadligt för hundar. Vilda svampar är något helt annat: det är svårt att skilja giftiga från ogiftiga, och de giftiga är extremt farliga.",
+    "da": "Svampe fra dagligvarebutikken anses generelt for ufarlige, men svamperetter indeholder ofte olie, smør, krydderier, hvidløg og løg, som kan skade hunde. Vilde svampe er noget andet: det er svært at skelne giftige fra ugiftige, og de giftige er ekstremt farlige."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "pl": "Jeśli już chcesz poczęstować psa, dawaj tylko zwykłe grzyby ze sklepu. Nigdy nie pozwalaj psu jeść grzybów znalezionych na dworze; jeśli do tego dojdzie, od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej.",
     "cs": "Pokud houby dopřejete, dávejte jen houby z obchodu bez dalších přísad. Nikdy nenechte psa jíst houby nalezené venku; pokud k tomu dojde, okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost.",
     "hr": "Ako ih ipak daješ, neka to budu samo obične gljive iz trgovine. Nikad ne dopusti psu da jede gljive pronađene vani; ako se to dogodi, odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti.",
-    "sv": "Om du ändå ger hunden svamp, välj bara butiksköpt svamp utan tillsatser. Låt aldrig hunden äta svamp som den har hittat utomhus. Om det händer, kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt."
+    "sv": "Om du ändå ger hunden svamp, välj bara butiksköpt svamp utan tillsatser. Låt aldrig hunden äta svamp som den har hittat utomhus. Om det händer, kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt.",
+    "da": "Hvis du vil dele, så giv kun naturelle svampe fra butikken. Lad aldrig din hund spise svampe fra naturen; sker det alligevel, skal du straks kontakte din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt."
   },
   "serving": {
     "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
@@ -71,7 +77,8 @@
     "pl": "Tylko zwykłe grzyby z dużego sklepu spożywczego, bez oleju, masła, przypraw, czosnku i cebuli. Żadnych potraw z grzybami.",
     "cs": "Jen čisté houby z velkého obchodu s potravinami. Bez oleje, másla, koření, česneku a cibule, žádné pokrmy z hub.",
     "hr": "Samo obične, iz supermarketa. Bez ulja, maslaca, začina, češnjaka i luka te bez jela s gljivama.",
-    "sv": "Bara svamp utan tillsatser från en stor livsmedelsbutik. Ingen olja, smör, kryddor, vitlök eller lök, och inga svamprätter."
+    "sv": "Bara svamp utan tillsatser från en stor livsmedelsbutik. Ingen olja, smör, kryddor, vitlök eller lök, och inga svamprätter.",
+    "da": "Kun naturelle svampe fra en stor dagligvarebutik. Uden olie, smør, krydderier, hvidløg eller løg – og ingen svamperetter."
   },
   "child": {
     "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
@@ -81,7 +88,8 @@
     "pl": "Psy nie potrzebują grzybów. Lepszym smakołykiem jest marchewka lub plasterek jabłka. Nigdy nie pozwól psu zjeść grzyba znalezionego na dworze.",
     "cs": "Psi houby nepotřebují. Lepší pamlsek je mrkev nebo plátek jablka. Nikdy nenech psa jíst houby, které najde venku.",
     "hr": "Psima gljive nisu potrebne. Štapić mrkve ili kriška jabuke bolja je poslastica. Nikad ne dopusti psu da jede gljive koje rastu vani.",
-    "sv": "Hundar behöver ingen svamp. En morot eller en äppelskiva är en bättre godbit. Låt aldrig en hund äta svamp som växer utomhus."
+    "sv": "Hundar behöver ingen svamp. En morot eller en äppelskiva är en bättre godbit. Låt aldrig en hund äta svamp som växer utomhus.",
+    "da": "Hunde har ikke brug for svampe. En gulerod eller en skive æble er en bedre godbid. Lad aldrig en hund spise svampe ude i naturen."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "pl": "Czy psy mogą jeść sos grzybowy lub inne potrawy z grzybami?",
         "cs": "Mohou psi jíst houbovou omáčku nebo jiné pokrmy z hub?",
         "hr": "Smiju li psi jesti umak od gljiva ili druga jela s gljivama?",
-        "sv": "Får hundar äta svampsås eller andra svamprätter?"
+        "sv": "Får hundar äta svampsås eller andra svamprätter?",
+        "da": "Må hunde spise svampesauce eller andre svamperetter?"
       },
       "a": {
         "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
@@ -103,7 +112,8 @@
         "pl": "Bezpieczniej ich unikać. Olej, masło, przyprawy, czosnek i cebula w tych potrawach mogą szkodzić psom.",
         "cs": "Bezpečnější je vyhnout se jim. Oleje, máslo, koření, česnek a cibule v těchto pokrmech mohou psům škodit.",
         "hr": "Sigurnije ih je izbjegavati. Ulje, maslac, začini, češnjak i luk u tim jelima mogu biti štetni za pse.",
-        "sv": "Det är säkrast att undvika dem. Olja, smör, kryddor, vitlök och lök i sådana rätter kan vara skadliga för hundar."
+        "sv": "Det är säkrast att undvika dem. Olja, smör, kryddor, vitlök och lök i sådana rätter kan vara skadliga för hundar.",
+        "da": "Det er sikrere at undgå dem. Olie, smør, krydderier, hvidløg og løg i disse retter kan skade hunde."
       }
     },
     {
@@ -115,7 +125,8 @@
         "pl": "A co z grzybami rosnącymi w ogrodzie?",
         "cs": "A co houby rostoucí na zahradě?",
         "hr": "A gljive koje rastu u vrtu?",
-        "sv": "Vad gäller svamp som växer i trädgården?"
+        "sv": "Vad gäller svamp som växer i trädgården?",
+        "da": "Hvad med svampe i haven?"
       },
       "a": {
         "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
@@ -125,7 +136,8 @@
         "pl": "Traktuj każdego dzikiego grzyba jak potencjalnie toksycznego. Jeśli twój pies któregoś zje, od razu skontaktuj się z weterynarzem.",
         "cs": "Každou divokou houbu považujte za potenciálně toxickou. Pokud ji pes sní, okamžitě kontaktujte veterináře.",
         "hr": "Svaku divlju gljivu smatraj potencijalno otrovnom. Ako je pas pojede, odmah se obrati veterinaru.",
-        "sv": "Behandla varje vild svamp som potentiellt giftig. Om hunden äter en, kontakta veterinären direkt."
+        "sv": "Behandla varje vild svamp som potentiellt giftig. Om hunden äter en, kontakta veterinären direkt.",
+        "da": "Behandl alle vilde svampe som potentielt giftige. Hvis din hund spiser en, skal du straks kontakte din dyrlæge."
       }
     }
   ],
@@ -219,6 +231,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d60961319a56e81fa30444dfc6b880d001a4c4611f9e88dcecd5812d0ee47d58"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0a552c2a1439b5cf345d9098b2e069e58dcb31e0f2e1f22a96ec9dc60eb5bd4c"
     }
   }
 }
