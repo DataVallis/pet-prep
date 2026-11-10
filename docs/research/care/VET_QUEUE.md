@@ -147,7 +147,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] ZA South Africa — follow-up: Bloemfontein, Pietermaritzburg, Gqeberha, Durban, Centurion/Pretoria, George, Polokwane, Cape Town south — 32 entries (Potchefstroom mixed practice set to not small-animal, unpublished), 4 × 24 h (Olympus Pretoria, George Animal Hospital, Vitalvet George, Veterinary House Pietermaritzburg), no duty rota, no animal poison line, check: 17 checked, 0 fixed, 0 removed, 2026-11-10 — not reachable (robots / aggregator only, see `vets/ZA.json` notes): Vets247 Bloemfontein, KimVet Kimberley, Stellenbosch, Linton Grange/Newton Park, Hoedspruit
 - [~] EG Egypt — 21 entries, 14 × 24 h (American Vet Center ×5 shared page, Petlivery and Vetongo are mobile 24-h services), no duty rota, no animal poison line, check: 19 checked, 0 fixed, 0 removed, 2026-11-10 — left: Alexandria, Sharm El-Sheikh, Aswan, Dahab, Cairo Dokki/Mohandessin/Nasr City/Heliopolis, Egyptian Veterinary Syndicate / GOVS / Cairo University hospital (unreachable, see `vets/EG.json` notes)
 - [~] MA Morocco — 21 entries, 10 × 24 h, no duty rota, no animal poison line (CAPM serves humans), IAV/ONSSA/Ordre not reachable, check: 13 checked, 0 fixed, 0 downgraded, 0 removed, 2026-11-10 — left: Tétouan, Oujda, Dakhla, Salé, Settat, Taghazout, Tanger, Témara/Rabat 24-h leads (aggregators only, see `vets/MA.json` notes)
-- [ ] TN Tunisia
+- [!] TN Tunisia — no usable source: no official register/rota/poison line found, WebFetch refused clinic sites (PROVENANCE_REQUIRED) or robots blocked, only aggregator leads (see `vets/TN.json` notes); retry only with pre-approved clinic URLs, 2026-11-10
 - [ ] IN India
 - [ ] ID Indonesia
 - [ ] MY Malaysia

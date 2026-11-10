@@ -1,0 +1,33 @@
+{
+  "country": "TN",
+  "checked": "2026-11-10",
+  "sources": [
+    {
+      "name": "Ordre National des Vétérinaires / Ordre des médecins vétérinaires de Tunisie",
+      "url": "https://rr-africa.woah.org/fr/notre-mission/organismes-statutaires-veterinaires/",
+      "note": "No official register, duty rota or poison line page could be found by search (only WOAH/FAO legal texts and presentations, none with clinic data). No official source used."
+    },
+    {
+      "name": "ENMV Sidi Thabet (Université de la Manouba)",
+      "url": "https://www.universite.tn/Universite-de-la-Manouba/ecole-nationale-de-medecine-veterinaire-de-sidi-thabet.html",
+      "note": "Opened: school page lists only school phones (71 552 470, 71 552 260); no teaching hospital, hours or 24 h service described. Not listed."
+    },
+    {
+      "name": "Cliniqueveterinaire-elghazela.com (Clinique Vétérinaire El Ghazela, Ariana)",
+      "url": "https://cliniqueveterinaire-elghazela.com/",
+      "note": "robots disallow automated access; skipped."
+    },
+    {
+      "name": "Directories (animalia.tn, tunisievet.com, petzone-live.com, expat.com, med.tn)",
+      "url": "https://www.animalia.tn/veterinaires",
+      "note": "Aggregators, used only as leads, never as source_url. animalia.tn lists 'Experts Veterinarians VETS' (30 Rue de Cordoue, Manar 1, +216 98 177 947, website vetsclinics.com) as 'Ouvert 24h/24' every day, but the same page also shows 'Fermé'; the vetsclinics.com site could not be opened with WebFetch (URL not in provenance set), so the 24 h claim is unverified. animalia.tn blog 'urgence 24h' article contains placeholder phone numbers and is not trustworthy."
+    },
+    {
+      "name": "La Presse (lapresse.tn)",
+      "url": "https://www.lapresse.tn/?p=148976",
+      "note": "Opened: names 'Vets Réseaux d'experts' running a mobile veterinary unit working around the clock; no addresses or phones. Not listed."
+    }
+  ],
+  "entries": [],
+  "notes": "Zero publishable entries from this run. No official Tunisian source (chamber, ministry, ENMV hospital) offers a clinic list, duty rota or animal poison line that could be opened. Every clinic website tried was either blocked (robots: cliniqueveterinaire-elghazela.com) or refused by WebFetch as outside the provenance set (vetsclinics.com, petscarevet.com), so no clinic could be sourced from its own page; aggregator-only data was not used per runbook section 2. Centre Anti-Poison de Tunis serves humans; no animal poison line found. Leads for a follow-up run (phones from aggregator listings, UNVERIFIED, not published): VETS Experts Veterinarians Manar 1 Tunis (vetsclinics.com, 24 h claim to verify on own site); Pets Care La Soukra (petscarevet.com); Klania Vet Clinic La Soukra; Clinique Vétérinaire Les Pins La Marsa; Clinique Vétérinaire des Acacias La Marsa; C.H.A.T Centre Hospitalier Animal de Tunis (La Marsa/Carthage); Pets'Doctor Ennasr 2 Ariana; Beloved PetsClinic El Aouina; Clinique Vétérinaire Hammamet; Aura clinique vétérinaire Hammamet; Clinique Vétérinaire Mzabi / Sahloul Sousse; Clinique La Falaise Monastir; Djerba: My Vet Djerba, Dr Sellaouti. Left: all of Tunisia. A run with WebFetch able to open clinic domains (or a user-approved URL list) is needed."
+}
