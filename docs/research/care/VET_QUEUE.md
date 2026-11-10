@@ -148,7 +148,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] EG Egypt — 21 entries, 14 × 24 h (American Vet Center ×5 shared page, Petlivery and Vetongo are mobile 24-h services), no duty rota, no animal poison line, check: 19 checked, 0 fixed, 0 removed, 2026-11-10 — left: Alexandria, Sharm El-Sheikh, Aswan, Dahab, Cairo Dokki/Mohandessin/Nasr City/Heliopolis, Egyptian Veterinary Syndicate / GOVS / Cairo University hospital (unreachable, see `vets/EG.json` notes)
 - [~] MA Morocco — 21 entries, 10 × 24 h, no duty rota, no animal poison line (CAPM serves humans), IAV/ONSSA/Ordre not reachable, check: 13 checked, 0 fixed, 0 downgraded, 0 removed, 2026-11-10 — left: Tétouan, Oujda, Dakhla, Salé, Settat, Taghazout, Tanger, Témara/Rabat 24-h leads (aggregators only, see `vets/MA.json` notes)
 - [!] TN Tunisia — no usable source: no official register/rota/poison line found, WebFetch refused clinic sites (PROVENANCE_REQUIRED) or robots blocked, only aggregator leads (see `vets/TN.json` notes); retry only with pre-approved clinic URLs, 2026-11-10
-- [ ] IN India
+- [x] IN India — 49 entries, 29 × 24 h (several chain branches, e.g. Crown Vet, Zigly), no official duty rota, no animal poison line (AIIMS/CMC Vellore lines serve humans), check: 33 checked, 0 fixed, 0 removed, 2026-11-10 — thin: Goa, Surat, Nagpur, Lucknow, Bhopal, Patna, Guwahati, Bhubaneswar (see `vets/IN.json` notes)
 - [ ] ID Indonesia
 - [ ] MY Malaysia
 - [ ] PH Philippines
