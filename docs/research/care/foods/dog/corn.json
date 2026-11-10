@@ -6,21 +6,24 @@
     "sl": "Koruzna zrna",
     "pt": "Grãos de milho",
     "nl": "Maïskorrels",
-    "pl": "Ziarna kukurydzy"
+    "pl": "Ziarna kukurydzy",
+    "cs": "Kukuřičná zrna"
   },
   "question": {
     "en": "Can dogs eat corn?",
     "sl": "Ali lahko psi jedo koruzo?",
     "pt": "Os cães podem comer milho?",
     "nl": "Mogen honden maïs eten?",
-    "pl": "Czy psy mogą jeść kukurydzę?"
+    "pl": "Czy psy mogą jeść kukurydzę?",
+    "cs": "Mohou psi jíst kukuřici?"
   },
   "url_slug": {
     "en": "corn",
     "sl": "koruza",
     "pt": "milho",
     "nl": "mais",
-    "pl": "ziarna-kukurydzy"
+    "pl": "ziarna-kukurydzy",
+    "cs": "kukuricna-zrna"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte.",
     "pt": "Sim, os cães podem comer sem problema grãos de milho simples, retirados da espiga, em pequenas quantidades como guloseima ocasional. Dispensa a manteiga, o sal e os temperos, e nunca dês ao teu cão a espiga de milho.",
     "nl": "Ja, honden mogen naturele maïskorrels eten die van de kolf zijn gehaald, in kleine hoeveelheden en af en toe als snoepje. Laat boter, zout en kruiden weg en geef je hond nooit een maïskolf.",
-    "pl": "Tak, psy mogą bezpiecznie jeść zwykłe ziarna kukurydzy zdjęte z kolby, w małych ilościach, jako okazjonalny smakołyk. Pomiń masło, sól i przyprawy, a kolby nigdy nie dawaj psu."
+    "pl": "Tak, psy mogą bezpiecznie jeść zwykłe ziarna kukurydzy zdjęte z kolby, w małych ilościach, jako okazjonalny smakołyk. Pomiń masło, sól i przyprawy, a kolby nigdy nie dawaj psu.",
+    "cs": "Ano, psi mohou bezpečně jíst kukuřičná zrna bez dalších přísad, oddělená od klasu, v malém množství jako občasný pamlsek. Vynechte máslo, sůl a koření a nikdy psovi nedávejte kukuřici na klasu."
   },
   "why": {
     "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
     "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja.",
     "pt": "O milho não é um problema para a maioria dos cães e pode até fazer parte de uma alimentação equilibrada, fornecendo energia e ajudando a digestão. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão. O verdadeiro perigo é a espiga: os cães podem engolir pedaços ou a espiga inteira, o que pode causar engasgo ou obstruções intestinais.",
     "nl": "Maïs is voor de meeste honden geen probleem en kan zelfs deel uitmaken van een evenwichtige voeding, omdat het energie levert en de spijsvertering ondersteunt. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken. De kolf is het echte gevaar: honden kunnen stukken of de hele kolf doorslikken, wat verstikking of een darmverstopping kan veroorzaken.",
-    "pl": "Dla większości psów kukurydza nie jest problemem i może nawet wchodzić w skład zbilansowanej diety: dostarcza energii i wspiera trawienie. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek. Prawdziwym zagrożeniem jest kolba: psy mogą połknąć jej kawałki lub całą kolbę, co może spowodować zadławienie lub niedrożność jelit."
+    "pl": "Dla większości psów kukurydza nie jest problemem i może nawet wchodzić w skład zbilansowanej diety: dostarcza energii i wspiera trawienie. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek. Prawdziwym zagrożeniem jest kolba: psy mogą połknąć jej kawałki lub całą kolbę, co może spowodować zadławienie lub niedrożność jelit.",
+    "cs": "Kukuřice většině psů nevadí a může být dokonce součástí vyvážené stravy, protože dodává energii a podporuje trávení. Máslo, sůl a koření přidávají tuk a sodík, které mohou psovi podráždit žaludek. Skutečné nebezpečí představuje klas: psi mohou spolknout jeho kousky nebo celý klas, což může způsobit dušení nebo ucpání střev."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega.",
     "pt": "Dá apenas grãos simples, retirados da espiga, de vez em quando. Antes de dares milho, confirma que o teu cão não tem alergia ao milho. Mantém as espigas de milho bem fora do alcance.",
     "nl": "Geef alleen naturele korrels, van de kolf gesneden, en niet te vaak. Controleer eerst of je hond niet allergisch is voor maïs. Houd maïskolven ver buiten bereik.",
-    "pl": "Podawaj tylko zwykłe ziarna, odcięte od kolby, i tylko od czasu do czasu. Zanim dasz psu kukurydzę, upewnij się, że nie ma na nią alergii. Kolby kukurydzy trzymaj poza zasięgiem psa."
+    "pl": "Podawaj tylko zwykłe ziarna, odcięte od kolby, i tylko od czasu do czasu. Zanim dasz psu kukurydzę, upewnij się, że nie ma na nią alergii. Kolby kukurydzy trzymaj poza zasięgiem psa.",
+    "cs": "Nabízejte jen zrna bez dalších přísad, odkrojená z klasu, a jen občas. Než kukuřici nabídnete, ujistěte se, že pes nemá alergii na kukuřici. Klasy držte opravdu mimo dosah psa."
   },
   "serving": {
     "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
     "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb.",
     "pt": "Grãos de milho doce simples, retirados da espiga. Sem manteiga, sal nem temperos.",
     "nl": "Naturele suikermaïskorrels, van de kolf gehaald. Zonder boter, zout of kruiden.",
-    "pl": "Zwykłe ziarna kukurydzy cukrowej, zdjęte z kolby. Bez masła, soli i przypraw."
+    "pl": "Zwykłe ziarna kukurydzy cukrowej, zdjęte z kolby. Bez masła, soli i przypraw.",
+    "cs": "Zrna sladké kukuřice bez dalších přísad, oddělená od klasu. Bez másla, soli a koření."
   },
   "child": {
     "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
     "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi.",
     "pt": "Os cães podem comer alguns grãos de milho simples. A espiga não é para cães, por isso um adulto trata de a pôr de parte.",
     "nl": "Honden mogen een paar naturele maïskorrels. De kolf is niet voor honden, dus een volwassene houdt die uit de buurt.",
-    "pl": "Psy mogą dostać kilka zwykłych ziaren kukurydzy. Kolba nie jest dla psów, więc dorosły chowa ją przed nimi."
+    "pl": "Psy mogą dostać kilka zwykłych ziaren kukurydzy. Kolba nie jest dla psów, więc dorosły chowa ją przed nimi.",
+    "cs": "Pejsek může dostat pár zrnek kukuřice bez dalších přísad. Klas pro psy není, a tak ho dospělý uklidí z dosahu."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo koruzo z maslom?",
         "pt": "Os cães podem comer milho com manteiga?",
         "nl": "Mogen honden maïs met boter eten?",
-        "pl": "Czy psy mogą jeść kukurydzę z masłem?"
+        "pl": "Czy psy mogą jeść kukurydzę z masłem?",
+        "cs": "Mohou psi jíst kukuřici s máslem?"
       },
       "a": {
         "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
         "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec.",
         "pt": "É melhor evitar. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão.",
         "nl": "Dat kun je beter vermijden. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken.",
-        "pl": "Lepiej tego unikać. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek."
+        "pl": "Lepiej tego unikać. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek.",
+        "cs": "Raději ne. Máslo, sůl a koření přidávají tuk a sodík, které mohou psovi podráždit žaludek."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Je koruza v pasji hrani slaba?",
         "pt": "O milho na ração é mau para o cão?",
         "nl": "Is maïs in hondenvoer slecht?",
-        "pl": "Czy kukurydza w karmie dla psów jest szkodliwa?"
+        "pl": "Czy kukurydza w karmie dla psów jest szkodliwa?",
+        "cs": "Je kukuřice v krmivu pro psy špatná?"
       },
       "a": {
         "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
         "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane.",
         "pt": "Muitos nutricionistas veterinários concordam que o milho não é um problema para a maioria dos cães e pode fazer parte de uma alimentação bem equilibrada.",
         "nl": "Veel dierenartsen met een specialisatie in voeding zijn het erover eens dat maïs voor de meeste honden geen probleem is en deel kan uitmaken van een evenwichtige voeding.",
-        "pl": "Wielu specjalistów od żywienia zwierząt zgadza się, że kukurydza nie jest problemem dla większości psów i może wchodzić w skład dobrze zbilansowanej diety."
+        "pl": "Wielu specjalistów od żywienia zwierząt zgadza się, że kukurydza nie jest problemem dla większości psów i może wchodzić w skład dobrze zbilansowanej diety.",
+        "cs": "Mnoho veterinárních odborníků na výživu se shoduje, že kukuřice většině psů nevadí a může být součástí dobře vyvážené stravy."
       }
     }
   ],
@@ -174,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ba2e211b872b4c2a5dd991ba785a6a0ce07b58f46ef1bbe27d1016dbc0209ab0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bddbb70b42b0ccf80ac75fdb8682eec750138633b6e66cdcb7db0ec65fc6350b"
     }
   }
 }

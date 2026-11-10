@@ -6,21 +6,24 @@
     "sl": "Paradižnikova rastlina (listi, stebla, zeleni paradižniki)",
     "pt": "Tomateiro (folhas, caules, tomates verdes)",
     "nl": "Tomatenplant (bladeren, stengels, groene tomaten)",
-    "pl": "Roślina pomidora (liście, łodygi, zielone pomidory)"
+    "pl": "Roślina pomidora (liście, łodygi, zielone pomidory)",
+    "cs": "Rajčatová rostlina (listy, stonky, zelená rajčata)"
   },
   "question": {
     "en": "Is the tomato plant safe for cats?",
     "sl": "Ali je paradižnikova rastlina varna za mačke?",
     "pt": "O tomateiro é seguro para os gatos?",
     "nl": "Is de tomatenplant veilig voor katten?",
-    "pl": "Czy roślina pomidora jest bezpieczna dla kotów?"
+    "pl": "Czy roślina pomidora jest bezpieczna dla kotów?",
+    "cs": "Je rajčatová rostlina pro kočky bezpečná?"
   },
   "url_slug": {
     "en": "tomato-plant",
     "sl": "paradiznikova-rastlina",
     "pt": "tomateiro",
     "nl": "tomatenplant",
-    "pl": "roslina-pomidora"
+    "pl": "roslina-pomidora",
+    "cs": "rajcatova-rostlina"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, ker vsebuje solanin; nestrupeni so le zreli plodovi. Listi, stebla in zeleni paradižniki naj bodo zunaj mačkinega dosega. Če jih mačka pogrizlja, pokličite veterinarja.",
     "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos porque contém solanina; só o fruto maduro não é tóxico. Mantém as folhas, os caules e os tomates verdes longe do teu gato e liga ao teu veterinário se ele mastigar alguma parte.",
     "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten, omdat hij solanine bevat; alleen de rijpe vrucht is niet giftig. Houd bladeren, stengels en groene tomaten uit de buurt van je kat en bel je dierenarts als je kat ergens aan heeft gekauwd.",
-    "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów, bo zawiera solaninę; nietoksyczny jest tylko dojrzały owoc. Trzymaj liście, łodygi i zielone pomidory z dala od kota, a jeśli kot coś z nich pogryzie, zadzwoń do weterynarza."
+    "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów, bo zawiera solaninę; nietoksyczny jest tylko dojrzały owoc. Trzymaj liście, łodygi i zielone pomidory z dala od kota, a jeśli kot coś z nich pogryzie, zadzwoń do weterynarza.",
+    "cs": "Ne. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky, protože obsahuje solanin; netoxický je jen zralý plod. Listy, stonky a zelená rajčata držte mimo dosah kočky, a pokud kočka cokoli z toho okousala, zavolejte veterináři."
   },
   "why": {
     "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
     "sl": "ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, kot strupeno snov navaja solanin in pojasnjuje, da zreli plodovi niso strupeni. Tudi Agriculture Victoria navaja, da so nestrupeni le zreli plodovi paradižnika. ASPCA v nasvetih o vrtu za hišne živali dodaja, da rastlina in majhni zeleni paradižniki vsebujejo tomatin. International Cat Care opozarja, da lahko že stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi.",
     "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos, indica a solanina como a substância tóxica e refere que o fruto maduro não é tóxico. A Agriculture Victoria também diz que só o tomate maduro não é tóxico. Nos conselhos da ASPCA para jardins com animais, acrescenta-se que a planta e os tomates verdes pequenos contêm tomatina. A International Cat Care avisa que até o simples contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos.",
     "nl": "De ASPCA noemt de tomatenplant giftig voor katten, noemt solanine als de giftige stof en merkt op dat de rijpe vrucht niet giftig is. Ook Agriculture Victoria zegt dat alleen rijpe tomaten niet giftig zijn. Het tuinadvies van de ASPCA voor huisdieren voegt eraan toe dat de plant en kleine groene tomaten tomatine bevatten. International Cat Care waarschuwt dat zelfs contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat, niezen en oogklachten kan veroorzaken.",
-    "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów, wskazuje solaninę jako substancję toksyczną i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria też podaje, że nietoksyczny jest tylko dojrzały owoc pomidora. Z porad ASPCA dotyczących ogrodu dla zwierząt wynika, że roślina i małe zielone pomidory zawierają tomatynę. International Cat Care ostrzega, że nawet kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami."
+    "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów, wskazuje solaninę jako substancję toksyczną i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria też podaje, że nietoksyczny jest tylko dojrzały owoc pomidora. Z porad ASPCA dotyczących ogrodu dla zwierząt wynika, że roślina i małe zielone pomidory zawierają tomatynę. International Cat Care ostrzega, że nawet kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami.",
+    "cs": "ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky, jako toxickou látku uvádí solanin a upozorňuje, že zralý plod je netoxický. Také podle Agriculture Victoria je netoxický jen zralý plod rajčete. Zahradnické rady ASPCA pro majitele zvířat dodávají, že rostlina a malá zelená rajčata obsahují tomatin. International Cat Care varuje, že už samotný kontakt s rajčatovými listy může kočce způsobit puchýře nebo svědění v tlamě a na dásních, kýchání a potíže s očima."
   },
   "signs": {
     "en": [
@@ -82,6 +87,15 @@
       "Osłabienie",
       "Rozszerzone źrenice",
       "Zwolnione tętno"
+    ],
+    "cs": [
+      "Slinění",
+      "Nechuť k jídlu",
+      "Silné potíže se žaludkem",
+      "Skleslost nebo únava",
+      "Slabost",
+      "Rozšířené zorničky",
+      "Zpomalený tep"
     ]
   },
   "what_to_do": {
@@ -89,7 +103,8 @@
     "sl": "Če je mačka grizljala paradižnikove liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Zapišite si, kaj je pojedla in kdaj. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
     "pt": "Se o teu gato mastigou folhas, caules ou tomates verdes, liga imediatamente ao teu veterinário. Anota o que ele comeu e quando. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
     "nl": "Heeft je kat op tomatenbladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Noteer wat je kat heeft gegeten en wanneer. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
-    "pl": "Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem."
+    "pl": "Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
+    "cs": "Pokud kočka okousala rajčatové listy, stonky nebo zelená rajčata, ihned se obraťte na veterináře. Poznamenejte si, co kočka snědla a kdy. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem."
   },
   "serving": null,
   "child": {
@@ -97,7 +112,8 @@
     "sl": "Paradižnikove rastline niso za muce. Če muca pogrizlja list, povej odraslemu, da lahko pokliče veterinarja.",
     "pt": "Os tomateiros não são para os gatos. Se o teu gatinho trincar uma folha, avisa um adulto para ligar ao veterinário.",
     "nl": "Tomatenplanten zijn niet voor katten. Knabbelt je kat aan een blaadje, vertel het dan aan een volwassene. Die kan de dierenarts bellen.",
-    "pl": "Rośliny pomidora nie są dla kotów. Jeśli kotek skubnie liść, powiedz dorosłemu, żeby zadzwonił do weterynarza."
+    "pl": "Rośliny pomidora nie są dla kotów. Jeśli kotek skubnie liść, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
+    "cs": "Rajčatové rostliny nejsou pro kočky. Když kočička okousá list, řekni to dospělému, ať zavolá veterináři."
   },
   "faq": [
     {
@@ -106,14 +122,16 @@
         "sl": "Ali lahko mačke jedo zrele paradižnike?",
         "pt": "Os gatos podem comer tomates maduros?",
         "nl": "Mogen katten rijpe tomaten eten?",
-        "pl": "Czy koty mogą jeść dojrzałe pomidory?"
+        "pl": "Czy koty mogą jeść dojrzałe pomidory?",
+        "cs": "Mohou kočky jíst zralá rajčata?"
       },
       "a": {
         "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
         "sl": "ASPCA navaja, da zreli plodovi paradižnika za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, zato jih je bolje ne deliti z mačko.",
         "pt": "A ASPCA diz que o tomate maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos; por isso, o melhor é não os partilhar.",
         "nl": "De ASPCA zegt dat de rijpe tomatenvrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft, dus deel ze liever niet.",
-        "pl": "ASPCA podaje, że dojrzały owoc pomidora jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, więc najlepiej z nich zrezygnować."
+        "pl": "ASPCA podaje, że dojrzały owoc pomidora jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, więc najlepiej z nich zrezygnować.",
+        "cs": "ASPCA uvádí, že zralý plod rajčete je pro kočky netoxický, ale Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly, takže je nejlepší jim je nedávat."
       }
     }
   ],
@@ -194,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "95852d6bf3109ba174de9b461bdcea2e1110b92b16ff0a9bbf877c51f25e6cbf"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "27a002a84369073dd13b6896c39e1d749215e84bfef26d8512223b1e53cfc194"
     }
   }
 }
