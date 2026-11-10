@@ -8,7 +8,8 @@
     "nl": "Wilde paddenstoelen",
     "pl": "Dzikie grzyby",
     "cs": "Divoké houby",
-    "hr": "Divlje gljive"
+    "hr": "Divlje gljive",
+    "sv": "Vilda svampar"
   },
   "question": {
     "en": "Are wild mushrooms dangerous for cats?",
@@ -17,7 +18,8 @@
     "nl": "Zijn wilde paddenstoelen gevaarlijk voor katten?",
     "pl": "Czy dzikie grzyby są niebezpieczne dla kotów?",
     "cs": "Jsou divoké houby pro kočky nebezpečné?",
-    "hr": "Jesu li divlje gljive opasne za mačke?"
+    "hr": "Jesu li divlje gljive opasne za mačke?",
+    "sv": "Är vilda svampar farliga för katter?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
@@ -26,7 +28,8 @@
     "nl": "wilde-paddenstoelen",
     "pl": "dzikie-grzyby",
     "cs": "divoke-houby",
-    "hr": "divlje-gljive"
+    "hr": "divlje-gljive",
+    "sv": "vilda-svampar"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Ja. Pet Poison Helpline adviseert elke paddenstoel die niet als voedsel voor mensen is gekocht als giftig voor katten te beschouwen, omdat veel giftige paddenstoelen er precies zo uitzien als onschuldige. Heeft je kat een paddenstoel gegeten die buiten groeide, ga dan meteen met je kat naar de dierenarts.",
     "pl": "Tak. Pet Poison Helpline radzi traktować każdego grzyba, który nie został kupiony do jedzenia dla ludzi, jak toksycznego dla kotów, bo wiele toksycznych grzybów wygląda identycznie jak nieszkodliwe. Jeśli kot zje grzyba znalezionego na dworze, od razu zawiez go do weterynarza.",
     "cs": "Ano. Pet Poison Helpline radí považovat každou houbu, která nebyla koupena jako potravina pro lidi, za toxickou pro kočky, protože se mnoho jedovatých hub na pohled neliší od neškodných. Pokud kočka snědla houbu nalezenou venku, jeďte s ní okamžitě k veterináři.",
-    "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru."
+    "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru.",
+    "sv": "Ja. Pet Poison Helpline rekommenderar att varje svamp som inte är köpt för att ätas av människor behandlas som giftig för katter, eftersom många giftiga svampar ser likadana ut som ofarliga. Om katten äter en svamp som har hittats utomhus, åk direkt till veterinären med katten."
   },
   "why": {
     "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
@@ -45,7 +49,8 @@
     "nl": "Pet Poison Helpline zegt dat alleen al in Noord-Amerika meer dan 100 giftige paddenstoelsoorten voorkomen, waaronder Amanita, Galerina en Lepiota, en dat veel ervan er net zo uitzien als niet-giftige paddenstoelen. Sommige paddenstoelen kunnen binnen 15 tot 30 minuten effect hebben op huisdieren, andere pas na maximaal 24 uur. Afhankelijk van de paddenstoel en de hoeveelheid die is gegeten, kunnen maag en darmen, het zenuwstelsel, de lever of de nieren worden aangetast.",
     "pl": "Pet Poison Helpline podaje, że w samej Ameryce Północnej występuje ponad 100 gatunków toksycznych grzybów, w tym z rodzajów Amanita, Galerina i Lepiota, a wiele z nich wygląda identycznie jak grzyby nietoksyczne. Niektóre grzyby działają na zwierzęta już w ciągu 15–30 minut, inne dopiero po upływie nawet 24 godzin. W zależności od gatunku i zjedzonej ilości mogą ucierpieć żołądek i jelita, układ nerwowy, wątroba lub nerki.",
     "cs": "Pet Poison Helpline uvádí, že jen v Severní Americe existuje přes 100 druhů jedovatých hub, včetně rodů Amanita, Galerina a Lepiota, a mnohé se na pohled neliší od netoxických hub. Některé houby působí na zvířata během 15 až 30 minut, jiným trvá, než se projeví, až 24 hodin. Podle druhu houby a množství, které kočka snědla, mohou být zasaženy žaludek a střeva, nervový systém, játra nebo ledviny.",
-    "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi."
+    "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi.",
+    "sv": "Pet Poison Helpline skriver att det bara i Nordamerika finns över 100 giftiga svamparter, bland dem Amanita, Galerina och Lepiota, och att många ser likadana ut som ogiftiga svampar. En del svampar påverkar husdjur inom 15 till 30 minuter, andra först efter upp till 24 timmar. Beroende på svampen och hur mycket katten har ätit kan mage och tarm, nervsystem, lever eller njurar påverkas."
   },
   "signs": {
     "en": [
@@ -117,6 +122,16 @@
       "Napadaji (grčevi)",
       "Problemi s vidom",
       "Agresivnost ili smetenost"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Svart, tjärlik avföring",
+      "Vinglig gång",
+      "Darrningar",
+      "Kramper",
+      "Synproblem",
+      "Aggressivitet eller förvirring"
     ]
   },
   "what_to_do": {
@@ -126,7 +141,8 @@
     "nl": "Ga meteen met je kat naar de dierenarts, ook voordat er verschijnselen zijn. Als je dat veilig kunt doen, neem dan een monster van de paddenstoel mee, zodat een specialist hem kan identificeren. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
     "pl": "Od razu zawiez kota do weterynarza, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz to zrobić bezpiecznie, zabierz próbkę grzyba, żeby specjalista mógł go rozpoznać. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
     "cs": "Odvezte kočku k veterináři okamžitě, ještě než se objeví příznaky. Pokud to jde bezpečně, vezměte s sebou vzorek houby, aby ji odborník mohl určit. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-    "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+    "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+    "sv": "Åk direkt till veterinären med katten, även innan några symtom har visat sig. Om det går att göra på ett säkert sätt, ta med ett prov av svampen så att en specialist kan identifiera den. Försök inte få katten att kräkas utan att först fråga veterinären."
   },
   "serving": null,
   "child": {
@@ -136,7 +152,8 @@
     "nl": "Paddenstoelen die buiten groeien zijn niet voor katten. Snuffelt of knabbelt je kat aan een paddenstoel, vertel het dan meteen aan een volwassene.",
     "pl": "Grzyby rosnące na dworze nie są dla kotów. Jeśli kotek obwąchuje grzyby albo skubnie któregoś, od razu powiedz dorosłemu.",
     "cs": "Houby rostoucí venku nejsou pro kočky. Když je kočička očichává nebo okusuje, hned to řekni dospělému.",
-    "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi."
+    "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi.",
+    "sv": "Svampar som växer utomhus är inte för katter. Om katten nosar eller knaprar på en, berätta det för en vuxen direkt."
   },
   "faq": [
     {
@@ -147,7 +164,8 @@
         "nl": "Hoe houd ik mijn kat uit de buurt van wilde paddenstoelen?",
         "pl": "Jak uchronić kota przed dzikimi grzybami?",
         "cs": "Jak udržet kočku dál od divokých hub?",
-        "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?"
+        "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?",
+        "sv": "Hur håller jag katten borta från vilda svampar?"
       },
       "a": {
         "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
@@ -156,7 +174,8 @@
         "nl": "Pet Poison Helpline adviseert goed in de gaten te houden wat je kat buiten doet en je kat niet in de buurt te laten komen van wilde paddenstoelen of paddenstoelen waarvan je niet weet waar ze vandaan komen.",
         "pl": "Pet Poison Helpline radzi uważnie obserwować, co kot robi na dworze, i nie pozwalać mu zbliżać się do dzikich grzybów ani do żadnych grzybów, których pochodzenia nie znasz.",
         "cs": "Pet Poison Helpline radí dávat pozor na to, co kočka venku dělá, a nepouštět ji k divokým houbám ani k houbám, jejichž původ neznáte.",
-        "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš."
+        "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš.",
+        "sv": "Pet Poison Helpline rekommenderar att du har god uppsikt över kattens utomhusaktiviteter och inte låter katten komma i närheten av vilda svampar eller någon svamp vars ursprung du inte känner till."
       }
     }
   ],
@@ -267,6 +286,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bb32fbc029011c8f0f73e5a165527bdf23989f9bea629b5df77d5e602d550f6f"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c143df907f6ac4fff52d175e92f0d95f3219b7c1d75c1644a1326d88ce284122"
     }
   }
 }

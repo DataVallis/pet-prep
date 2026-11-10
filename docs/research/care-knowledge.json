@@ -2150,7 +2150,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Beetroot",
@@ -2159,7 +2160,8 @@
         "nl": "Rode biet",
         "pl": "Buraki ćwikłowe",
         "cs": "Červená řepa",
-        "hr": "Cikla"
+        "hr": "Cikla",
+        "sv": "Rödbetor"
       },
       "question": {
         "en": "Can cats eat beetroot?",
@@ -2168,7 +2170,8 @@
         "nl": "Mogen katten rode biet eten?",
         "pl": "Czy koty mogą jeść buraki ćwikłowe?",
         "cs": "Mohou kočky jíst červenou řepu?",
-        "hr": "Smiju li mačke jesti ciklu?"
+        "hr": "Smiju li mačke jesti ciklu?",
+        "sv": "Får katter äta rödbetor?"
       },
       "url_slug": {
         "en": "beetroot",
@@ -2177,7 +2180,8 @@
         "nl": "rode-biet",
         "pl": "buraki-cwiklowe",
         "cs": "cervena-repa",
-        "hr": "cikla"
+        "hr": "cikla",
+        "sv": "rodbetor"
       },
       "answer": {
         "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
@@ -2186,7 +2190,8 @@
         "nl": "Ja, een klein stukje naturele rode biet is af en toe prima als traktatie. De ASPCA noemt bieten, waaronder rode biet, niet giftig voor katten. Houd de grote bladeren wel uit de buurt: volgens de ASPCA bevatten grote, volgroeide bladeren oxaalzuur.",
         "pl": "Tak, mały kawałek zwykłego buraka ćwikłowego jest w porządku jako okazjonalny smakołyk. ASPCA uznaje buraki, także ćwikłowe, za nietoksyczne dla kotów. Trzymaj jednak kota z dala od dużych liści: ASPCA zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy.",
         "cs": "Ano, malý kousek červené řepy bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA řadí řepu, včetně červené, mezi rostliny netoxické pro kočky. Držte ale kočku dál od velkých listů: ASPCA upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou.",
-        "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu."
+        "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu.",
+        "sv": "Ja, en liten bit rödbeta utan tillsatser går bra som en godbit då och då. ASPCA räknar rödbeta som ogiftig för katter. Se till att katten inte kommer åt de stora bladen: ASPCA påpekar att stora, mogna blad innehåller oxalsyra."
       },
       "why": {
         "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -2195,7 +2200,8 @@
         "nl": "De ASPCA noemt bieten (Beta vulgaris, ook wel rode biet genoemd) niet giftig voor katten en meldt dat grote, volgroeide bladeren oxaalzuur bevatten. Katten hebben geen fruit of groente nodig in hun voeding, maar volgens PDSA kun je veel soorten in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
         "pl": "ASPCA uznaje buraki (Beta vulgaris, czyli burak ćwikłowy) za nietoksyczne dla kotów i zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy. Koty nie potrzebują w diecie owoców ani warzyw, ale według PDSA wiele z nich można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza też, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "ASPCA řadí řepu (Beta vulgaris, česky také červená řepa) mezi rostliny netoxické pro kočky a upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou. Kočky ve stravě ovoce ani zeleninu nepotřebují, ale podle PDSA lze mnohé z nich podávat ve velmi malém množství jako občasný pamlsek. ASPCA také upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
-        "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
+        "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
+        "sv": "ASPCA räknar rödbeta (Beta vulgaris) som ogiftig för katter och påpekar att stora, mogna blad innehåller oxalsyra. Katter behöver inte frukt eller grönsaker i kosten, men enligt PDSA kan många sorter ges i mycket små mängder som en godbit då och då. ASPCA påpekar också att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
       },
       "signs": null,
       "what_to_do": {
@@ -2205,7 +2211,8 @@
         "nl": "Begin met een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
         "pl": "Zacznij od małego kawałka. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte řepu podávat a poraďte se s veterinářem.",
-        "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+        "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
       },
       "serving": {
         "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
@@ -2214,7 +2221,8 @@
         "nl": "Een klein, hapklaar stukje naturele rode biet, zonder boter, zout of kruiden. Houd de grote bladeren uit de buurt van je kat.",
         "pl": "Mały kawałek zwykłego buraka ćwikłowego, na jeden kęs, bez masła, soli i przypraw. Duże liście trzymaj z dala od kota.",
         "cs": "Malý kousek červené řepy na jedno sousto, bez másla, soli a koření. Velké listy držte mimo dosah kočky.",
-        "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke."
+        "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke.",
+        "sv": "En liten munsbit rödbeta utan smör, salt eller kryddor. Se till att katten inte kommer åt de stora bladen."
       },
       "child": {
         "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
@@ -2223,7 +2231,8 @@
         "nl": "Een heel klein stukje rode biet kan af en toe een traktatie voor je kat zijn. Katten hebben vooral hun eigen kattenvoer nodig.",
         "pl": "Malutki kawałek buraka można czasem dać kotu jako smakołyk. Najważniejsza dla kota jest jego własna karma.",
         "cs": "Kousek červené řepy může být pro kočku občas pamlsek. Kočky potřebují hlavně vlastní kočičí krmivo.",
-        "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke."
+        "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke.",
+        "sv": "En liten bit rödbeta kan vara en godbit för katten då och då. Katter behöver framför allt sin egen kattmat."
       },
       "faq": [],
       "source_ids": [
@@ -4961,7 +4970,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Chilli peppers",
@@ -4970,7 +4980,8 @@
         "nl": "Chilipepers",
         "pl": "Papryczki chili",
         "cs": "Chilli papričky",
-        "hr": "Čili papričice"
+        "hr": "Čili papričice",
+        "sv": "Chilipeppar"
       },
       "question": {
         "en": "Can cats eat chilli peppers?",
@@ -4979,7 +4990,8 @@
         "nl": "Mogen katten chilipepers eten?",
         "pl": "Czy koty mogą jeść papryczki chili?",
         "cs": "Mohou kočky jíst chilli papričky?",
-        "hr": "Smiju li mačke jesti čili papričice?"
+        "hr": "Smiju li mačke jesti čili papričice?",
+        "sv": "Får katter äta chilipeppar?"
       },
       "url_slug": {
         "en": "chilli-peppers",
@@ -4988,7 +5000,8 @@
         "nl": "chilipepers",
         "pl": "papryczki-chili",
         "cs": "chilli-papricky",
-        "hr": "cili-papricice"
+        "hr": "cili-papricice",
+        "sv": "chilipeppar"
       },
       "answer": {
         "en": "No, don't share chilli peppers or other spicy food with your cat. VCA Animal Hospitals says spicy foods may not be toxic to cats, but they are certain to cause stomach upset.",
@@ -4997,7 +5010,8 @@
         "nl": "Nee, deel chilipepers of ander pittig eten niet met je kat. Volgens VCA Animal Hospitals zijn pittige gerechten misschien niet giftig voor katten, maar ze veroorzaken zeker maagklachten.",
         "pl": "Nie, nie dawaj kotu papryczek chili ani innych ostrych potraw. VCA Animal Hospitals podaje, że ostre potrawy mogą nie być toksyczne dla kotów, ale z pewnością rozstroją im żołądek.",
         "cs": "Ne, nedávejte kočce chilli papričky ani jiná pálivá jídla. VCA Animal Hospitals uvádí, že pálivá jídla pro kočky nemusejí být toxická, ale žaludek jim určitě podráždí.",
-        "hr": "Ne, ne daj mački čili papričice ni drugu ljutu hranu. VCA Animal Hospitals navodi da ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe."
+        "hr": "Ne, ne daj mački čili papričice ni drugu ljutu hranu. VCA Animal Hospitals navodi da ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe.",
+        "sv": "Nej, dela inte chilipeppar eller annan stark mat med katten. VCA Animal Hospitals skriver att stark mat inte nödvändigtvis är giftig för katter, men att den helt säkert ger orolig mage."
       },
       "why": {
         "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -5006,7 +5020,8 @@
         "nl": "VCA Animal Hospitals raadt af om pittig eten met je kat te delen en adviseert de gevulde jalapeños voor jezelf te houden: pittig eten is misschien niet giftig voor katten, maar het veroorzaakt zeker maagklachten. Katten hebben geen groente nodig in hun voeding en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
         "pl": "VCA Animal Hospitals radzi nie dawać kotu ostrych potraw, a przekąski w rodzaju jalapeño poppers zostawić sobie: ostre potrawy mogą nie być toksyczne dla kotów, ale z pewnością rozstroją im żołądek. Koty nie potrzebują w diecie warzyw, a ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "VCA Animal Hospitals radí nedávat kočce pálivá jídla a chuťovky typu jalapeño poppers nechat pro sebe: pálivá jídla pro kočky nemusejí být toxická, ale žaludek jim určitě podráždí. Kočky zeleninu ve stravě nepotřebují a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
-        "hr": "VCA Animal Hospitals savjetuje da s mačkom ne dijeliš ljutu hranu, a pohane punjene jalapeño papričice (jalapeño poppers) zadrži za sebe: ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe. Mačkama povrće u prehrani nije potrebno, a ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
+        "hr": "VCA Animal Hospitals savjetuje da s mačkom ne dijeliš ljutu hranu, a pohane punjene jalapeño papričice (jalapeño poppers) zadrži za sebe: ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe. Mačkama povrće u prehrani nije potrebno, a ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
+        "sv": "VCA Animal Hospitals avråder från att ge katten stark mat och menar att du ska behålla dina jalapeño poppers för dig själv: stark mat behöver inte vara giftig för katter, men den ger helt säkert orolig mage. Katter behöver inte grönsaker i kosten, och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
       },
       "signs": {
         "en": [
@@ -5036,6 +5051,10 @@
         "hr": [
           "Želučane tegobe",
           "Povraćanje"
+        ],
+        "sv": [
+          "Magbesvär",
+          "Kräkningar"
         ]
       },
       "what_to_do": {
@@ -5045,7 +5064,8 @@
         "nl": "Als je kat chilipeper of pittig eten heeft gegeten en daarna braakt of maagklachten krijgt, neem dan contact op met je dierenarts voor advies. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
         "pl": "Jeśli kot zjadł chili lub ostrą potrawę, a potem wymiotuje albo ma rozstrój żołądka, skontaktuj się z weterynarzem po radę. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
         "cs": "Pokud kočka snědla chilli nebo pálivé jídlo a poté zvrací nebo má potíže se žaludkem, poraďte se s veterinářem. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-        "hr": "Ako je mačka pojela čili ili ljutu hranu pa povraća ili ima želučane tegobe, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+        "hr": "Ako je mačka pojela čili ili ljutu hranu pa povraća ili ima želučane tegobe, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+        "sv": "Om katten har ätit chili eller stark mat och sedan kräks eller får orolig mage, kontakta veterinären för råd. Försök inte få katten att kräkas utan att först fråga veterinären."
       },
       "serving": null,
       "child": {
@@ -5055,7 +5075,8 @@
         "nl": "Pittige chilipepers zijn voor mensen, niet voor katten. Je kat kan er buikpijn van krijgen.",
         "pl": "Ostre papryczki chili są dla ludzi, nie dla kotów. Od nich kotkowi może rozboleć brzuszek.",
         "cs": "Pálivé chilli papričky jsou pro lidi, ne pro kočky. Kočičku by z nich mohlo rozbolet bříško.",
-        "hr": "Ljute čili papričice nisu za mačke, nego za ljude. Od njih mački može boljeti trbuščić."
+        "hr": "Ljute čili papričice nisu za mačke, nego za ljude. Od njih mački može boljeti trbuščić.",
+        "sv": "Stark chilipeppar är för människor, inte för katter. Den kan ge katten ont i magen."
       },
       "faq": [],
       "source_ids": [
@@ -6831,7 +6852,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Corn (sweetcorn kernels)",
@@ -6840,7 +6862,8 @@
         "nl": "Maïs (maïskorrels)",
         "pl": "Kukurydza (ziarna kukurydzy cukrowej)",
         "cs": "Kukuřice (zrna sladké kukuřice)",
-        "hr": "Kukuruz (zrna kukuruza šećerca)"
+        "hr": "Kukuruz (zrna kukuruza šećerca)",
+        "sv": "Majs (sockermajskorn)"
       },
       "question": {
         "en": "Can cats eat corn?",
@@ -6849,7 +6872,8 @@
         "nl": "Mogen katten maïs eten?",
         "pl": "Czy koty mogą jeść kukurydzę?",
         "cs": "Mohou kočky jíst kukuřici?",
-        "hr": "Smiju li mačke jesti kukuruz?"
+        "hr": "Smiju li mačke jesti kukuruz?",
+        "sv": "Får katter äta majs?"
       },
       "url_slug": {
         "en": "corn",
@@ -6858,7 +6882,8 @@
         "nl": "mais",
         "pl": "ziarna-kukurydzy",
         "cs": "kukuricna-zrna",
-        "hr": "kukuruz"
+        "hr": "kukuruz",
+        "sv": "majs"
       },
       "answer": {
         "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
@@ -6867,7 +6892,8 @@
         "nl": "Ja, een paar naturele maïskorrels zijn af en toe prima als traktatie, als je kat ze lekker vindt. Cats Protection noemt maïs een van de weinige groenten die je een kat kunt geven. Geef het zonder boter, zout of kruiden.",
         "pl": "Tak, kilka zwykłych ziaren kukurydzy jest w porządku jako okazjonalny smakołyk, jeśli kot ma na nie ochotę. Cats Protection wymienia kukurydzę wśród niewielu warzyw, które można dawać kotu. Podawaj ją bez masła, soli i przypraw.",
         "cs": "Ano, několik zrnek kukuřice bez dalších přísad je jako občasný pamlsek v pořádku, pokud o ni kočka stojí. Cats Protection řadí kukuřici mezi několik druhů zeleniny, které můžete kočce dát. Podávejte ji bez másla, soli a koření.",
-        "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina."
+        "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina.",
+        "sv": "Ja, några få majskorn utan tillsatser går bra som en godbit då och då, om katten visar intresse. Cats Protection nämner majs bland de få grönsaker man kan ge en katt. Servera dem utan smör, salt eller kryddor."
       },
       "why": {
         "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -6876,7 +6902,8 @@
         "nl": "Cats Protection zegt dat er een paar groenten zijn die je je kat kunt geven als die er zin in heeft, waaronder maïs, maar katten eten van nature zelden groente en je hoeft het niet aan hun voeding toe te voegen. Volgens PDSA kun je veel soorten fruit en groente in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
         "pl": "Cats Protection podaje, że kilka warzyw, w tym kukurydzę, można dawać kotu, jeśli ma na nie ochotę, ale koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Według PDSA wiele owoców i warzyw można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "Cats Protection uvádí, že existuje několik druhů zeleniny, které můžete kočce dát, pokud o ni stojí, mimo jiné kukuřice, ale kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Podle PDSA lze mnohé druhy ovoce a zeleniny podávat ve velmi malém množství jako občasný pamlsek. ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
-        "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
+        "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
+        "sv": "Cats Protection skriver att det finns några grönsaker man kan ge katten om den visar intresse, bland dem majs, men att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. PDSA skriver att många frukter och grönsaker kan ges i mycket små mängder som en godbit då och då. ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
       },
       "signs": null,
       "what_to_do": {
@@ -6886,7 +6913,8 @@
         "nl": "Begin met een paar korrels. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
         "pl": "Zacznij od kilku ziaren. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
         "cs": "Začněte několika zrnky. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte kukuřici podávat a poraďte se s veterinářem.",
-        "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+        "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+        "sv": "Börja med några få korn. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
       },
       "serving": {
         "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
@@ -6895,7 +6923,8 @@
         "nl": "Een paar naturele, gekookte maïskorrels, zonder boter, zout of kruiden, in hapklare stukjes.",
         "pl": "Kilka zwykłych, ugotowanych ziaren kukurydzy, bez masła, soli i przypraw, w kawałkach na jeden kęs.",
         "cs": "Několik zrnek tepelně upravené kukuřice bez másla, soli a koření, v kouscích na jedno sousto.",
-        "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj."
+        "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj.",
+        "sv": "Några få tillagade majskorn utan smör, salt eller kryddor, i små munsbitar."
       },
       "child": {
         "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -6904,7 +6933,8 @@
         "nl": "Een paar maïskorrels kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
         "pl": "Kilka ziaren kukurydzy można czasem dać kotu jako smakołyk. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Pár zrnek kukuřice může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
-        "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak."
+        "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak.",
+        "sv": "Några majskorn kan vara en godbit för katten då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
       },
       "faq": [
         {
@@ -6915,7 +6945,8 @@
             "nl": "Hebben katten groente nodig?",
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
-            "hr": "Treba li mačkama povrće?"
+            "hr": "Treba li mačkama povrće?",
+            "sv": "Behöver katter grönsaker?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -6924,7 +6955,8 @@
             "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente en hoef je het niet aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
             "pl": "Nie. Cats Protection podaje, że koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být jen malým doplňkem.",
-            "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
+            "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. En grönsak är aldrig mer än ett litet extra."
           }
         }
       ],
@@ -13172,7 +13204,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Store-bought mushrooms",
@@ -13181,7 +13214,8 @@
         "nl": "Champignons uit de winkel",
         "pl": "Grzyby ze sklepu",
         "cs": "Houby z obchodu",
-        "hr": "Gljive iz trgovine"
+        "hr": "Gljive iz trgovine",
+        "sv": "Svamp från affären"
       },
       "question": {
         "en": "Can cats eat store-bought mushrooms?",
@@ -13190,7 +13224,8 @@
         "nl": "Mogen katten champignons uit de winkel eten?",
         "pl": "Czy koty mogą jeść grzyby ze sklepu?",
         "cs": "Mohou kočky jíst houby z obchodu?",
-        "hr": "Smiju li mačke jesti gljive iz trgovine?"
+        "hr": "Smiju li mačke jesti gljive iz trgovine?",
+        "sv": "Får katter äta svamp från affären?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
@@ -13199,7 +13234,8 @@
         "nl": "champignons",
         "pl": "grzyby-ze-sklepu",
         "cs": "houby-z-obchodu",
-        "hr": "gljive-iz-trgovine"
+        "hr": "gljive-iz-trgovine",
+        "sv": "svamp-fran-affaren"
       },
       "answer": {
         "en": "It's best not to share mushrooms with your cat. Pet Poison Helpline says some mushrooms are safe for cats but urges caution, and cats don't need anything beyond a complete cat food. Never give mushrooms cooked with garlic or onion.",
@@ -13208,7 +13244,8 @@
         "nl": "Deel liever geen champignons met je kat. Pet Poison Helpline zegt dat sommige paddenstoelen veilig zijn voor katten, maar roept op tot voorzichtigheid, en katten hebben niets nodig behalve een compleet kattenvoer. Geef nooit champignons die met knoflook of ui zijn bereid.",
         "pl": "Najlepiej nie dawać kotu grzybów. Pet Poison Helpline podaje, że niektóre grzyby są dla kotów bezpieczne, ale zaleca ostrożność, a koty nie potrzebują niczego poza pełnowartościową karmą. Nigdy nie dawaj grzybów przyrządzonych z czosnkiem lub cebulą.",
         "cs": "Nejlepší je kočce houby nedávat. Pet Poison Helpline uvádí, že některé houby jsou pro kočky bezpečné, ale radí k opatrnosti, a kočky nepotřebují nic kromě kompletního krmiva. Nikdy nedávejte houby připravené s česnekem nebo cibulí.",
-        "hr": "Najbolje je ne davati gljive mački. Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali poziva na oprez, a mačkama ne treba ništa osim potpune hrane za mačke. Nikad ne daj gljive pripremljene s češnjakom ili lukom."
+        "hr": "Najbolje je ne davati gljive mački. Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali poziva na oprez, a mačkama ne treba ništa osim potpune hrane za mačke. Nikad ne daj gljive pripremljene s češnjakom ili lukom.",
+        "sv": "Det är bäst att inte dela svamp med katten. Pet Poison Helpline skriver att en del svampar är säkra för katter men uppmanar till försiktighet, och katter behöver inget utöver en komplett kattmat. Ge aldrig svamp som har tillagats med vitlök eller lök."
       },
       "why": {
         "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
@@ -13217,7 +13254,8 @@
         "nl": "Pet Poison Helpline zegt dat sommige paddenstoelen weliswaar veilig zijn voor katten, maar dat je er voorzichtig mee moet zijn, en adviseert om alle paddenstoelen die niet als voedsel voor mensen zijn gekocht als giftig te beschouwen. Ook raadt de organisatie af om paddenstoelen aan het voer van een kat toe te voegen. Volgens PDSA hebben katten niets nodig behalve een compleet voer, en Cats Protection waarschuwt dat knoflook en ui katten erg ziek kunnen maken, dus gerechten met paddenstoelen die voor mensen zijn gemaakt zijn niet geschikt.",
         "pl": "Pet Poison Helpline podaje, że choć niektóre grzyby są dla kotów bezpieczne, trzeba zachować ostrożność, a grzyby, które nie zostały kupione jako jedzenie dla ludzi, traktować jak toksyczne. Odradza też dodawanie grzybów do diety kota. Według PDSA koty nie potrzebują niczego poza pełnowartościową dietą, a Cats Protection ostrzega, że czosnek i cebula mogą bardzo rozchorować kota, więc dania z grzybami przygotowane dla ludzi się nie nadają.",
         "cs": "Pet Poison Helpline uvádí, že i když jsou některé houby pro kočky bezpečné, je třeba opatrnosti, a radí považovat za toxické všechny houby, které nebyly koupeny jako potravina pro lidi. Také radí houby do jídelníčku kočky nezařazovat. Podle PDSA kočky nepotřebují nic kromě kompletní stravy a Cats Protection varuje, že česnek a cibule mohou u koček vyvolat vážné onemocnění, takže houbová jídla připravená pro lidi nejsou vhodná.",
-        "hr": "Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali da je potreban oprez, te savjetuje da se otrovnom smatra svaka gljiva koja nije kupljena za ljudsku prehranu. Savjetuje i da se gljive ne dodaju u prehranu mačke. PDSA navodi da mačkama ne treba ništa osim potpune prehrane, a Cats Protection upozorava da češnjak i luk mogu jako razboljeti mačke, pa jela s gljivama pripremljena za ljude nisu prikladna."
+        "hr": "Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali da je potreban oprez, te savjetuje da se otrovnom smatra svaka gljiva koja nije kupljena za ljudsku prehranu. Savjetuje i da se gljive ne dodaju u prehranu mačke. PDSA navodi da mačkama ne treba ništa osim potpune prehrane, a Cats Protection upozorava da češnjak i luk mogu jako razboljeti mačke, pa jela s gljivama pripremljena za ljude nisu prikladna.",
+        "sv": "Pet Poison Helpline skriver att en del svampar visserligen är säkra för katter men att man bör vara försiktig, och rekommenderar att alla svampar som inte är köpta för att ätas av människor behandlas som giftiga. Organisationen avråder också från att lägga till svamp i kattens kost. PDSA skriver att katter inte behöver något annat än en komplett kost, och Cats Protection varnar för att vitlök och lök kan göra katter mycket sjuka, så svamprätter som är gjorda för människor passar inte."
       },
       "signs": {
         "en": [
@@ -13247,6 +13285,10 @@
         "hr": [
           "Povraćanje",
           "Proljev"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -13256,7 +13298,8 @@
         "nl": "Weet je niet zeker of de paddenstoel uit de winkel komt? Behandel hem dan als giftig en ga meteen met je kat naar de dierenarts. Als je kat een paddenstoel eet en daarna braakt of diarree krijgt, zoek dan meteen dierenartshulp.",
         "pl": "Jeśli nie masz pewności, że grzyb pochodzi ze sklepu, traktuj go jak toksyczny i od razu zawiez kota do weterynarza. Jeśli kot zjadł grzyba, a potem wymiotuje albo ma biegunkę, od razu skontaktuj się z weterynarzem.",
         "cs": "Pokud si nejste jistí, že houba pocházela z obchodu, považujte ji za toxickou a okamžitě jeďte s kočkou k veterináři. Pokud kočka snědla houbu a poté zvrací nebo má průjem, okamžitě vyhledejte veterinární pomoc.",
-        "hr": "Ako nije sigurno da gljiva potječe iz trgovine, smatraj je otrovnom i odmah odvedi mačku veterinaru. Ako mačka pojede gljivu pa povraća ili ima proljev, odmah potraži veterinarsku pomoć."
+        "hr": "Ako nije sigurno da gljiva potječe iz trgovine, smatraj je otrovnom i odmah odvedi mačku veterinaru. Ako mačka pojede gljivu pa povraća ili ima proljev, odmah potraži veterinarsku pomoć.",
+        "sv": "Om du inte är säker på att svampen kommer från en affär, behandla den som giftig och åk direkt till veterinären med katten. Om katten har ätit en svamp och sedan kräks eller får diarré, sök veterinärvård direkt."
       },
       "serving": null,
       "child": {
@@ -13266,7 +13309,8 @@
         "nl": "Champignons zijn voor mensen, niet voor katten. Katten krijgen alles wat ze nodig hebben uit hun eigen kattenvoer.",
         "pl": "Grzyby to jedzenie dla ludzi, nie dla kotów. Koty dostają z własnej karmy wszystko, czego potrzebują.",
         "cs": "Houby jsou jídlo pro lidi, ne pro kočky. Kočky najdou ve vlastním krmivu všechno, co potřebují.",
-        "hr": "Gljive su hrana za ljude, a ne za mačke. Sve što im treba, mačke dobivaju iz svoje hrane."
+        "hr": "Gljive su hrana za ljude, a ne za mačke. Sve što im treba, mačke dobivaju iz svoje hrane.",
+        "sv": "Svamp är mat för människor, inte för katter. Katter får allt de behöver från sin egen kattmat."
       },
       "faq": [
         {
@@ -13277,7 +13321,8 @@
             "nl": "Wat als mijn kat een paddenstoel uit de tuin heeft gegeten?",
             "pl": "Co zrobić, jeśli kot zjadł grzyba z ogrodu?",
             "cs": "Co když kočka snědla houbu ze zahrady?",
-            "hr": "Što ako je mačka pojela gljivu iz vrta?"
+            "hr": "Što ako je mačka pojela gljivu iz vrta?",
+            "sv": "Vad gör jag om katten har ätit en svamp från trädgården?"
           },
           "a": {
             "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
@@ -13286,7 +13331,8 @@
             "nl": "Behandel hem als giftig. Pet Poison Helpline zegt dat je meteen met je kat naar de dierenarts moet gaan en, als dat kan, voorzichtig een monster van de paddenstoel moet meenemen, zodat een specialist hem kan identificeren.",
             "pl": "Traktuj go jak toksycznego. Pet Poison Helpline radzi od razu zawieźć kota do weterynarza i, jeśli to możliwe, ostrożnie zabrać próbkę grzyba, żeby specjalista mógł go rozpoznać.",
             "cs": "Považujte ji za toxickou. Pet Poison Helpline radí okamžitě odvézt kočku k veterináři a pokud možno s sebou opatrně vzít vzorek houby, aby ji odborník mohl určit.",
-            "hr": "Smatraj je otrovnom. Pet Poison Helpline savjetuje da mačku odmah odvedeš veterinaru i, ako je moguće, pažljivo poneseš uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ."
+            "hr": "Smatraj je otrovnom. Pet Poison Helpline savjetuje da mačku odmah odvedeš veterinaru i, ako je moguće, pažljivo poneseš uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ.",
+            "sv": "Behandla den som giftig. Pet Poison Helpline uppmanar dig att åka direkt till veterinären med katten och, om det går, försiktigt ta med ett prov av svampen så att en specialist kan identifiera den."
           }
         }
       ],
@@ -15376,7 +15422,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Cooked potatoes",
@@ -15385,7 +15432,8 @@
         "nl": "Gekookte aardappelen",
         "pl": "Ugotowane ziemniaki",
         "cs": "Uvařené brambory",
-        "hr": "Kuhani krumpir"
+        "hr": "Kuhani krumpir",
+        "sv": "Kokt potatis"
       },
       "question": {
         "en": "Can cats eat cooked potatoes?",
@@ -15394,7 +15442,8 @@
         "nl": "Mogen katten gekookte aardappelen eten?",
         "pl": "Czy koty mogą jeść ugotowane ziemniaki?",
         "cs": "Mohou kočky jíst uvařené brambory?",
-        "hr": "Smiju li mačke jesti kuhani krumpir?"
+        "hr": "Smiju li mačke jesti kuhani krumpir?",
+        "sv": "Får katter äta kokt potatis?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
@@ -15403,7 +15452,8 @@
         "nl": "gekookte-aardappelen",
         "pl": "ugotowane-ziemniaki",
         "cs": "uvarene-brambory",
-        "hr": "kuhani-krumpir"
+        "hr": "kuhani-krumpir",
+        "sv": "kokt-potatis"
       },
       "answer": {
         "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
@@ -15412,7 +15462,8 @@
         "nl": "Ja, een beetje naturele gekookte aardappel is af en toe prima als traktatie. De RSPCA noemt aardappelen met mate geschikt voor katten, als ze gepureerd of gekookt zijn zonder boter of kaas. Laat de schil, zout en kruiden weg.",
         "pl": "Tak, odrobina zwykłego ugotowanego ziemniaka jest w porządku jako okazjonalny smakołyk. RSPCA uznaje ziemniaki za odpowiednie dla kotów w umiarkowanych ilościach, jeśli są gotowane lub w formie puree, bez masła i sera. Pomiń skórkę, sól i przyprawy.",
         "cs": "Ano, trochu uvařených brambor bez dalších přísad je jako občasný pamlsek v pořádku. RSPCA řadí brambory mezi potraviny vhodné pro kočky v mírném množství, pokud jsou rozmačkané nebo vařené bez másla a sýra. Slupku, sůl a koření vynechte.",
-        "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine."
+        "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine.",
+        "sv": "Ja, lite tillagad potatis utan tillsatser går bra som en godbit då och då. RSPCA nämner potatis som lämplig för katter med måtta om den är mosad eller kokt, utan smör eller ost. Skala potatisen och låt bli salt och kryddor."
       },
       "why": {
         "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
@@ -15421,7 +15472,8 @@
         "nl": "De RSPCA noemt gepureerde of gekookte aardappelen zonder boter of kaas als voedsel dat met mate geschikt is voor katten, Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook, en de ASPCA zegt dat gekookte aardappelen met mate prima zijn voor huisdieren. Een artikel op PetMD, geschreven door een dierenarts, voegt eraan toe dat gekookte aardappelen niet giftig zijn voor katten maar ook niet goed voor ze, en dat aardappelschillen de gifstof solanine bevatten. Katten hebben geen groente nodig in hun voeding, dus houd het bij een kleine traktatie.",
         "pl": "RSPCA wymienia puree ziemniaczane i gotowane ziemniaki bez masła i sera wśród produktów odpowiednich dla kotów w umiarkowanych ilościach, Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku, a ASPCA podaje, że ugotowane ziemniaki są dla zwierząt w porządku w umiarkowanych ilościach. Artykuł w PetMD napisany przez weterynarza dodaje, że ugotowane ziemniaki nie są toksyczne dla kotów, ale też im nie służą, a skórki ziemniaków zawierają toksynę solaninę. Koty nie potrzebują w diecie warzyw, więc niech to będzie tylko mały smakołyk.",
         "cs": "RSPCA řadí rozmačkané nebo vařené brambory bez másla a sýra mezi potraviny vhodné pro kočky v mírném množství, Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku a ASPCA uvádí, že uvařené brambory jsou pro zvířata v mírném množství v pořádku. Článek na PetMD, který napsali veterináři, dodává, že uvařené brambory nejsou pro kočky toxické, ale ani jim neprospívají, a že bramborové slupky obsahují toxin solanin. Kočky zeleninu ve stravě nepotřebují, takže by to měl být jen malý pamlsek.",
-        "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica."
+        "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica.",
+        "sv": "RSPCA nämner mosad eller kokt potatis utan smör eller ost bland den mat som passar katter med måtta, Cats Protection föreslår enkel potatismos utan smör, grädde eller vitlök, och ASPCA skriver att tillagad potatis går bra för husdjur med måtta. En artikel på PetMD, skriven av veterinärer, tillägger att tillagad potatis inte är giftig för katter men inte heller bra för dem, och att potatisskal innehåller giftet solanin. Katter behöver inte grönsaker i kosten, så se det som en liten godbit."
       },
       "signs": null,
       "what_to_do": {
@@ -15431,7 +15483,8 @@
         "nl": "Begin met een klein hapje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
         "pl": "Zacznij od małego kęsa. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
         "cs": "Začněte malou ochutnávkou. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte brambory podávat a poraďte se s veterinářem.",
-        "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+        "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+        "sv": "Börja med en liten smakbit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
       },
       "serving": {
         "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
@@ -15440,7 +15493,8 @@
         "nl": "Naturel gekookte of gepureerde aardappel, geschild, zonder boter, kaas, room, knoflook, zout of kruiden. Nooit rauwe of groene aardappel.",
         "pl": "Zwykły ziemniak, gotowany lub w formie puree, obrany, bez masła, sera, śmietanki, czosnku, soli i przypraw. Nigdy surowy ani zielony ziemniak.",
         "cs": "Oloupané vařené nebo rozmačkané brambory bez másla, sýra, smetany, česneku, soli a koření. Nikdy ne syrové ani zelené brambory.",
-        "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir."
+        "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir.",
+        "sv": "Kokt eller mosad potatis, skalad, utan smör, ost, grädde, vitlök, salt eller kryddor. Aldrig rå eller grön potatis."
       },
       "child": {
         "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
@@ -15449,7 +15503,8 @@
         "nl": "Een heel klein beetje naturel gekookte aardappel kan af en toe een traktatie voor je kat zijn. Rauwe aardappel is niet voor katten.",
         "pl": "Odrobinę zwykłego ugotowanego ziemniaka można czasem dać kotu jako smakołyk. Surowe ziemniaki nie są dla kotów.",
         "cs": "Trocha uvařených brambor bez dalších přísad může být pro kočku občas pamlsek. Syrové brambory pro kočky nejsou.",
-        "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke."
+        "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke.",
+        "sv": "Lite kokt potatis utan tillsatser kan vara en godbit för katten då och då. Rå potatis är inte för katter."
       },
       "faq": [
         {
@@ -15460,7 +15515,8 @@
             "nl": "Mogen katten aardappelschillen eten?",
             "pl": "Czy koty mogą jeść skórki ziemniaków?",
             "cs": "Mohou kočky jíst bramborové slupky?",
-            "hr": "Smiju li mačke jesti koru krumpira?"
+            "hr": "Smiju li mačke jesti koru krumpira?",
+            "sv": "Får katter äta potatisskal?"
           },
           "a": {
             "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
@@ -15469,7 +15525,8 @@
             "nl": "Nee. Een artikel op PetMD, geschreven door een dierenarts, zegt dat aardappelschillen, rauw of gekookt, de gifstof solanine bevatten en vermeden moeten worden.",
             "pl": "Nie. Artykuł w PetMD napisany przez weterynarza podaje, że skórki ziemniaków, surowe lub ugotowane, zawierają toksynę solaninę i należy ich unikać.",
             "cs": "Ne. Článek na PetMD, který napsali veterináři, uvádí, že bramborové slupky, syrové i uvařené, obsahují toxin solanin a je třeba se jim vyhnout.",
-            "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati."
+            "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati.",
+            "sv": "Nej. Enligt en artikel på PetMD, skriven av veterinärer, innehåller potatisskal, både råa och tillagade, giftet solanin och bör undvikas."
           }
         },
         {
@@ -15480,7 +15537,8 @@
             "nl": "Mogen katten aardappelpuree eten?",
             "pl": "Czy koty mogą jeść puree ziemniaczane?",
             "cs": "Mohou kočky jíst bramborovou kaši?",
-            "hr": "Smiju li mačke jesti pire od krumpira?"
+            "hr": "Smiju li mačke jesti pire od krumpira?",
+            "sv": "Får katter äta potatismos?"
           },
           "a": {
             "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
@@ -15489,7 +15547,8 @@
             "nl": "Naturel aardappelpuree is prima als kleine traktatie. Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook.",
             "pl": "Zwykłe puree ziemniaczane jest w porządku jako mały smakołyk. Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku.",
             "cs": "Bramborová kaše bez dalších přísad je jako malý pamlsek v pořádku. Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku.",
-            "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka."
+            "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka.",
+            "sv": "Potatismos utan tillsatser går bra som en liten godbit. Cats Protection föreslår potatismos utan smör, grädde eller vitlök."
           }
         }
       ],
@@ -19814,7 +19873,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Tomato plant (leaves, stems, green tomatoes)",
@@ -19823,7 +19883,8 @@
         "nl": "Tomatenplant (bladeren, stengels, groene tomaten)",
         "pl": "Roślina pomidora (liście, łodygi, zielone pomidory)",
         "cs": "Rajčatová rostlina (listy, stonky, zelená rajčata)",
-        "hr": "Biljka rajčice (listovi, stabljike, zelene rajčice)"
+        "hr": "Biljka rajčice (listovi, stabljike, zelene rajčice)",
+        "sv": "Tomatplanta (blad, stjälkar, gröna tomater)"
       },
       "question": {
         "en": "Is the tomato plant safe for cats?",
@@ -19832,7 +19893,8 @@
         "nl": "Is de tomatenplant veilig voor katten?",
         "pl": "Czy roślina pomidora jest bezpieczna dla kotów?",
         "cs": "Je rajčatová rostlina pro kočky bezpečná?",
-        "hr": "Je li biljka rajčice sigurna za mačke?"
+        "hr": "Je li biljka rajčice sigurna za mačke?",
+        "sv": "Är tomatplantan säker för katter?"
       },
       "url_slug": {
         "en": "tomato-plant",
@@ -19841,7 +19903,8 @@
         "nl": "tomatenplant",
         "pl": "roslina-pomidora",
         "cs": "rajcatova-rostlina",
-        "hr": "biljka-rajcice"
+        "hr": "biljka-rajcice",
+        "sv": "tomatplanta"
       },
       "answer": {
         "en": "No. The ASPCA lists the tomato plant as toxic to cats because it contains solanine; only the ripe fruit is non-toxic. Keep leaves, stems and green tomatoes away from your cat, and call your vet if your cat chews any.",
@@ -19850,7 +19913,8 @@
         "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten, omdat hij solanine bevat; alleen de rijpe vrucht is niet giftig. Houd bladeren, stengels en groene tomaten uit de buurt van je kat en bel je dierenarts als je kat ergens aan heeft gekauwd.",
         "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów, bo zawiera solaninę; nietoksyczny jest tylko dojrzały owoc. Trzymaj liście, łodygi i zielone pomidory z dala od kota, a jeśli kot coś z nich pogryzie, zadzwoń do weterynarza.",
         "cs": "Ne. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky, protože obsahuje solanin; netoxický je jen zralý plod. Listy, stonky a zelená rajčata držte mimo dosah kočky, a pokud kočka cokoli z toho okousala, zavolejte veterináři.",
-        "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke jer sadrži solanin; neotrovan je samo zreo plod. Listove, stabljike i zelene rajčice drži podalje od mačke, a ako ih mačka žvače, nazovi veterinara."
+        "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke jer sadrži solanin; neotrovan je samo zreo plod. Listove, stabljike i zelene rajčice drži podalje od mačke, a ako ih mačka žvače, nazovi veterinara.",
+        "sv": "Nej. ASPCA räknar tomatplantan som giftig för katter eftersom den innehåller solanin; bara den mogna frukten är ogiftig. Se till att katten inte kommer åt blad, stjälkar och gröna tomater, och kontakta veterinären om katten har tuggat på något av dem."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
@@ -19859,7 +19923,8 @@
         "nl": "De ASPCA noemt de tomatenplant giftig voor katten, noemt solanine als de giftige stof en merkt op dat de rijpe vrucht niet giftig is. Ook Agriculture Victoria zegt dat alleen rijpe tomaten niet giftig zijn. Het tuinadvies van de ASPCA voor huisdieren voegt eraan toe dat de plant en kleine groene tomaten tomatine bevatten. International Cat Care waarschuwt dat zelfs contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat, niezen en oogklachten kan veroorzaken.",
         "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów, wskazuje solaninę jako substancję toksyczną i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria też podaje, że nietoksyczny jest tylko dojrzały owoc pomidora. Z porad ASPCA dotyczących ogrodu dla zwierząt wynika, że roślina i małe zielone pomidory zawierają tomatynę. International Cat Care ostrzega, że nawet kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami.",
         "cs": "ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky, jako toxickou látku uvádí solanin a upozorňuje, že zralý plod je netoxický. Také podle Agriculture Victoria je netoxický jen zralý plod rajčete. Zahradnické rady ASPCA pro majitele zvířat dodávají, že rostlina a malá zelená rajčata obsahují tomatin. International Cat Care varuje, že už samotný kontakt s rajčatovými listy může kočce způsobit puchýře nebo svědění v tlamě a na dásních, kýchání a potíže s očima.",
-        "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke, solanin imenuje kao otrovnu tvar i napominje da je zreo plod neotrovan. I Agriculture Victoria kaže da je neotrovan samo zreo plod rajčice. ASPCA-ov vrtni savjet za kućne ljubimce dodaje da biljka i male zelene rajčice sadrže tomatin. International Cat Care upozorava da već i dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima."
+        "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke, solanin imenuje kao otrovnu tvar i napominje da je zreo plod neotrovan. I Agriculture Victoria kaže da je neotrovan samo zreo plod rajčice. ASPCA-ov vrtni savjet za kućne ljubimce dodaje da biljka i male zelene rajčice sadrže tomatin. International Cat Care upozorava da već i dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima.",
+        "sv": "ASPCA anger att tomatplantan är giftig för katter, pekar ut solanin som det giftiga ämnet och påpekar att den mogna frukten är ogiftig. Även Agriculture Victoria skriver att bara mogna tomater är ogiftiga. ASPCA:s trädgårdsråd för husdjur tillägger att plantan och små gröna tomater innehåller tomatin. International Cat Care varnar för att redan kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött, nysningar och ögonproblem."
       },
       "signs": {
         "en": [
@@ -19924,6 +19989,15 @@
           "Slabost",
           "Proširene zjenice",
           "Usporen rad srca"
+        ],
+        "sv": [
+          "Dregling",
+          "Aptitlöshet",
+          "Kraftiga magbesvär",
+          "Slöhet eller trötthet",
+          "Svaghet",
+          "Vidgade pupiller",
+          "Långsam puls"
         ]
       },
       "what_to_do": {
@@ -19933,7 +20007,8 @@
         "nl": "Heeft je kat op tomatenbladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Noteer wat je kat heeft gegeten en wanneer. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
         "pl": "Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
         "cs": "Pokud kočka okousala rajčatové listy, stonky nebo zelená rajčata, ihned se obraťte na veterináře. Poznamenejte si, co kočka snědla a kdy. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-        "hr": "Ako je mačka žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Zapiši što je pojela i kada. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+        "hr": "Ako je mačka žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Zapiši što je pojela i kada. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+        "sv": "Om katten har tuggat på tomatblad, stjälkar eller gröna tomater, kontakta veterinären direkt. Anteckna vad katten har ätit och när. Försök inte få katten att kräkas utan att först fråga veterinären."
       },
       "serving": null,
       "child": {
@@ -19943,7 +20018,8 @@
         "nl": "Tomatenplanten zijn niet voor katten. Knabbelt je kat aan een blaadje, vertel het dan aan een volwassene. Die kan de dierenarts bellen.",
         "pl": "Rośliny pomidora nie są dla kotów. Jeśli kotek skubnie liść, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
         "cs": "Rajčatové rostliny nejsou pro kočky. Když kočička okousá list, řekni to dospělému, ať zavolá veterináři.",
-        "hr": "Biljke rajčice nisu za mačke. Ako mačka nagrize list, reci odrasloj osobi da nazove veterinara."
+        "hr": "Biljke rajčice nisu za mačke. Ako mačka nagrize list, reci odrasloj osobi da nazove veterinara.",
+        "sv": "Tomatplantor är inte för katter. Om katten knaprar på ett blad, berätta det för en vuxen så att den vuxna kan ringa veterinären."
       },
       "faq": [
         {
@@ -19954,7 +20030,8 @@
             "nl": "Mogen katten rijpe tomaten eten?",
             "pl": "Czy koty mogą jeść dojrzałe pomidory?",
             "cs": "Mohou kočky jíst zralá rajčata?",
-            "hr": "Smiju li mačke jesti zrele rajčice?"
+            "hr": "Smiju li mačke jesti zrele rajčice?",
+            "sv": "Får katter äta mogna tomater?"
           },
           "a": {
             "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
@@ -19963,7 +20040,8 @@
             "nl": "De ASPCA zegt dat de rijpe tomatenvrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft, dus deel ze liever niet.",
             "pl": "ASPCA podaje, że dojrzały owoc pomidora jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, więc najlepiej z nich zrezygnować.",
             "cs": "ASPCA uvádí, že zralý plod rajčete je pro kočky netoxický, ale Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly, takže je nejlepší jim je nedávat.",
-            "hr": "ASPCA navodi da je zreo plod rajčice neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati, pa ih je najbolje ne dijeliti."
+            "hr": "ASPCA navodi da je zreo plod rajčice neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati, pa ih je najbolje ne dijeliti.",
+            "sv": "ASPCA uppger att mogen tomatfrukt är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika, så det är bäst att inte ge katten några."
           }
         }
       ],
@@ -19998,7 +20076,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Tomatoes",
@@ -20007,7 +20086,8 @@
         "nl": "Tomaten",
         "pl": "Pomidory",
         "cs": "Rajčata",
-        "hr": "Rajčice"
+        "hr": "Rajčice",
+        "sv": "Tomater"
       },
       "question": {
         "en": "Can cats eat tomatoes?",
@@ -20016,7 +20096,8 @@
         "nl": "Mogen katten tomaten eten?",
         "pl": "Czy koty mogą jeść pomidory?",
         "cs": "Mohou kočky jíst rajčata?",
-        "hr": "Smiju li mačke jesti rajčice?"
+        "hr": "Smiju li mačke jesti rajčice?",
+        "sv": "Får katter äta tomater?"
       },
       "url_slug": {
         "en": "tomatoes",
@@ -20025,7 +20106,8 @@
         "nl": "tomaten",
         "pl": "pomidory",
         "cs": "rajcata",
-        "hr": "rajcice"
+        "hr": "rajcice",
+        "sv": "tomater"
       },
       "answer": {
         "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
@@ -20034,7 +20116,8 @@
         "nl": "Geef je kat liever geen tomaten. De ASPCA zegt dat de rijpe vrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft. De tomatenplant zelf is giftig voor katten, dus houd hem buiten bereik.",
         "pl": "Najlepiej nie dawać kotu pomidorów. ASPCA podaje, że dojrzały owoc jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom. Sama roślina pomidora jest dla kotów toksyczna, więc trzymaj ją poza zasięgiem.",
         "cs": "Nejlepší je kočce rajčata nedávat. ASPCA uvádí, že zralý plod je pro kočky netoxický, ale Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly. Samotná rajčatová rostlina je pro kočky toxická, proto ji držte mimo dosah kočky.",
-        "hr": "Mački je najbolje ne davati rajčice. ASPCA navodi da je zreo plod neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati. Sama je biljka rajčice otrovna za mačke, zato je drži izvan njezina dosega."
+        "hr": "Mački je najbolje ne davati rajčice. ASPCA navodi da je zreo plod neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati. Sama je biljka rajčice otrovna za mačke, zato je drži izvan njezina dosega.",
+        "sv": "Det är bäst att inte ge katten tomater. ASPCA uppger att den mogna frukten är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika. Själva tomatplantan är giftig för katter, så se till att katten inte kommer åt den."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
@@ -20043,7 +20126,8 @@
         "nl": "De ASPCA noemt de tomatenplant giftig voor katten vanwege solanine en merkt op dat de rijpe vrucht niet giftig is. Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft; volgens die bron bevatten ze een stof die ernstige maag- en darmklachten veroorzaakt, terwijl rijpe vruchten niet giftig zijn. Omdat één bron tomaten als te vermijden voedsel noemt, volgen wij het strengere advies. Katten hebben sowieso geen groente nodig in hun voeding.",
         "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów z powodu solaniny i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, i podaje, że zawierają substancję powodującą poważne problemy z żołądkiem i jelitami, a dojrzały owoc jest nietoksyczny. Ponieważ jedno ze źródeł wymienia pomidory jako pokarm, którego należy unikać, kierujemy się ostrzejszą radą. Koty i tak nie potrzebują w diecie warzyw.",
         "cs": "ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky kvůli solaninu a upozorňuje, že zralý plod je netoxický. Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly, a uvádí, že obsahují látku, která způsobuje vážné potíže se žaludkem a střevy, zatímco zralý plod je netoxický. Protože jeden zdroj řadí rajčata mezi potraviny, kterým je třeba se vyhnout, řídíme se přísnější radou. Kočky zeleninu ve stravě stejně nepotřebují.",
-        "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke zbog solanina i napominje da je zreo plod neotrovan. Agriculture Victoria navodi rajčice među ljudskom hranom koju mačkama ne treba davati, uz tvrdnju da sadrže tvar koja uzrokuje teške probleme sa želucem i crijevima, a zreo je plod neotrovan. Budući da jedan izvor rajčice navodi kao hranu koju treba izbjegavati, držimo se strožeg savjeta. Mačkama u prehrani ionako ne treba povrće."
+        "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke zbog solanina i napominje da je zreo plod neotrovan. Agriculture Victoria navodi rajčice među ljudskom hranom koju mačkama ne treba davati, uz tvrdnju da sadrže tvar koja uzrokuje teške probleme sa želucem i crijevima, a zreo je plod neotrovan. Budući da jedan izvor rajčice navodi kao hranu koju treba izbjegavati, držimo se strožeg savjeta. Mačkama u prehrani ionako ne treba povrće.",
+        "sv": "ASPCA anger att tomatplantan är giftig för katter på grund av solanin och påpekar att den mogna frukten är ogiftig. Agriculture Victoria räknar tomater till den människomat som katter bör undvika och skriver att de innehåller ett ämne som ger kraftiga mag- och tarmproblem, medan mogen frukt är ogiftig. Eftersom en källa tar upp tomater som mat att undvika följer vi det strängare rådet. Katter behöver ändå inte grönsaker i kosten."
       },
       "signs": {
         "en": [
@@ -20073,6 +20157,10 @@
         "hr": [
           "Povraćanje",
           "Želučane tegobe"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Magbesvär"
         ]
       },
       "what_to_do": {
@@ -20082,7 +20170,8 @@
         "nl": "Als je kat tomaat heeft gegeten en daarna braakt of er ziek uitziet, neem dan contact op met je dierenarts. Heeft je kat op de bladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
         "pl": "Jeśli kot zjadł pomidora, a potem wymiotuje albo źle się czuje, skontaktuj się z weterynarzem. Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
         "cs": "Pokud kočka snědla rajče a poté zvrací nebo se necítí dobře, obraťte se na veterináře. Pokud kočka okousala listy, stonky nebo zelená rajčata, obraťte se na veterináře ihned. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-        "hr": "Ako je mačka pojela rajčicu pa povraća ili djeluje bolesno, nazovi veterinara. Ako je žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+        "hr": "Ako je mačka pojela rajčicu pa povraća ili djeluje bolesno, nazovi veterinara. Ako je žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+        "sv": "Om katten har ätit tomat och sedan kräks eller verkar sjuk, kontakta veterinären. Om katten har tuggat på blad, stjälkar eller gröna tomater, kontakta veterinären direkt. Försök inte få katten att kräkas utan att först fråga veterinären."
       },
       "serving": null,
       "child": {
@@ -20092,7 +20181,8 @@
         "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt.",
         "pl": "Pomidory to jedzenie dla ludzi, nie dla kotów. Trzymaj rośliny pomidora z dala od kotka i powiedz dorosłemu, jeśli kotek którąś skubnie.",
         "cs": "Rajčata jsou jídlo pro lidi, ne pro kočky. Rajčatové rostliny musí být od kočičky dál. Kdyby nějakou okusovala, řekni to dospělému.",
-        "hr": "Rajčice su hrana za ljude, a ne za mačke. Biljke rajčice drži podalje od mačke, a ako ih nagrize, reci odrasloj osobi."
+        "hr": "Rajčice su hrana za ljude, a ne za mačke. Biljke rajčice drži podalje od mačke, a ako ih nagrize, reci odrasloj osobi.",
+        "sv": "Tomater är människomat, inte kattmat. Håll tomatplantor borta från katten och berätta för en vuxen om katten knaprar på en."
       },
       "faq": [
         {
@@ -20103,7 +20193,8 @@
             "nl": "Zijn tomatenbladeren en groene tomaten veilig voor katten?",
             "pl": "Czy liście pomidora i zielone pomidory są bezpieczne dla kotów?",
             "cs": "Jsou rajčatové listy a zelená rajčata pro kočky bezpečné?",
-            "hr": "Jesu li listovi rajčice i zelene rajčice sigurni za mačke?"
+            "hr": "Jesu li listovi rajčice i zelene rajčice sigurni za mačke?",
+            "sv": "Är tomatblad och gröna tomater säkra för katter?"
           },
           "a": {
             "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
@@ -20112,7 +20203,8 @@
             "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten; alleen de rijpe vrucht is niet giftig. International Cat Care voegt eraan toe dat contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat kan veroorzaken.",
             "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów; nietoksyczny jest tylko dojrzały owoc. International Cat Care dodaje, że kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota.",
             "cs": "Ne. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky; netoxický je jen zralý plod. International Cat Care dodává, že kontakt s rajčatovými listy může způsobit puchýře nebo svědění v tlamě a na dásních.",
-            "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke; neotrovan je samo zreo plod. International Cat Care dodaje da dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke."
+            "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke; neotrovan je samo zreo plod. International Cat Care dodaje da dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke.",
+            "sv": "Nej. ASPCA anger att tomatplantan är giftig för katter; bara den mogna frukten är ogiftig. International Cat Care tillägger att kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött."
           }
         }
       ],
@@ -21127,7 +21219,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Wild mushrooms",
@@ -21136,7 +21229,8 @@
         "nl": "Wilde paddenstoelen",
         "pl": "Dzikie grzyby",
         "cs": "Divoké houby",
-        "hr": "Divlje gljive"
+        "hr": "Divlje gljive",
+        "sv": "Vilda svampar"
       },
       "question": {
         "en": "Are wild mushrooms dangerous for cats?",
@@ -21145,7 +21239,8 @@
         "nl": "Zijn wilde paddenstoelen gevaarlijk voor katten?",
         "pl": "Czy dzikie grzyby są niebezpieczne dla kotów?",
         "cs": "Jsou divoké houby pro kočky nebezpečné?",
-        "hr": "Jesu li divlje gljive opasne za mačke?"
+        "hr": "Jesu li divlje gljive opasne za mačke?",
+        "sv": "Är vilda svampar farliga för katter?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
@@ -21154,7 +21249,8 @@
         "nl": "wilde-paddenstoelen",
         "pl": "dzikie-grzyby",
         "cs": "divoke-houby",
-        "hr": "divlje-gljive"
+        "hr": "divlje-gljive",
+        "sv": "vilda-svampar"
       },
       "answer": {
         "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
@@ -21163,7 +21259,8 @@
         "nl": "Ja. Pet Poison Helpline adviseert elke paddenstoel die niet als voedsel voor mensen is gekocht als giftig voor katten te beschouwen, omdat veel giftige paddenstoelen er precies zo uitzien als onschuldige. Heeft je kat een paddenstoel gegeten die buiten groeide, ga dan meteen met je kat naar de dierenarts.",
         "pl": "Tak. Pet Poison Helpline radzi traktować każdego grzyba, który nie został kupiony do jedzenia dla ludzi, jak toksycznego dla kotów, bo wiele toksycznych grzybów wygląda identycznie jak nieszkodliwe. Jeśli kot zje grzyba znalezionego na dworze, od razu zawiez go do weterynarza.",
         "cs": "Ano. Pet Poison Helpline radí považovat každou houbu, která nebyla koupena jako potravina pro lidi, za toxickou pro kočky, protože se mnoho jedovatých hub na pohled neliší od neškodných. Pokud kočka snědla houbu nalezenou venku, jeďte s ní okamžitě k veterináři.",
-        "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru."
+        "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru.",
+        "sv": "Ja. Pet Poison Helpline rekommenderar att varje svamp som inte är köpt för att ätas av människor behandlas som giftig för katter, eftersom många giftiga svampar ser likadana ut som ofarliga. Om katten äter en svamp som har hittats utomhus, åk direkt till veterinären med katten."
       },
       "why": {
         "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
@@ -21172,7 +21269,8 @@
         "nl": "Pet Poison Helpline zegt dat alleen al in Noord-Amerika meer dan 100 giftige paddenstoelsoorten voorkomen, waaronder Amanita, Galerina en Lepiota, en dat veel ervan er net zo uitzien als niet-giftige paddenstoelen. Sommige paddenstoelen kunnen binnen 15 tot 30 minuten effect hebben op huisdieren, andere pas na maximaal 24 uur. Afhankelijk van de paddenstoel en de hoeveelheid die is gegeten, kunnen maag en darmen, het zenuwstelsel, de lever of de nieren worden aangetast.",
         "pl": "Pet Poison Helpline podaje, że w samej Ameryce Północnej występuje ponad 100 gatunków toksycznych grzybów, w tym z rodzajów Amanita, Galerina i Lepiota, a wiele z nich wygląda identycznie jak grzyby nietoksyczne. Niektóre grzyby działają na zwierzęta już w ciągu 15–30 minut, inne dopiero po upływie nawet 24 godzin. W zależności od gatunku i zjedzonej ilości mogą ucierpieć żołądek i jelita, układ nerwowy, wątroba lub nerki.",
         "cs": "Pet Poison Helpline uvádí, že jen v Severní Americe existuje přes 100 druhů jedovatých hub, včetně rodů Amanita, Galerina a Lepiota, a mnohé se na pohled neliší od netoxických hub. Některé houby působí na zvířata během 15 až 30 minut, jiným trvá, než se projeví, až 24 hodin. Podle druhu houby a množství, které kočka snědla, mohou být zasaženy žaludek a střeva, nervový systém, játra nebo ledviny.",
-        "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi."
+        "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi.",
+        "sv": "Pet Poison Helpline skriver att det bara i Nordamerika finns över 100 giftiga svamparter, bland dem Amanita, Galerina och Lepiota, och att många ser likadana ut som ogiftiga svampar. En del svampar påverkar husdjur inom 15 till 30 minuter, andra först efter upp till 24 timmar. Beroende på svampen och hur mycket katten har ätit kan mage och tarm, nervsystem, lever eller njurar påverkas."
       },
       "signs": {
         "en": [
@@ -21244,6 +21342,16 @@
           "Napadaji (grčevi)",
           "Problemi s vidom",
           "Agresivnost ili smetenost"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Diarré",
+          "Svart, tjärlik avföring",
+          "Vinglig gång",
+          "Darrningar",
+          "Kramper",
+          "Synproblem",
+          "Aggressivitet eller förvirring"
         ]
       },
       "what_to_do": {
@@ -21253,7 +21361,8 @@
         "nl": "Ga meteen met je kat naar de dierenarts, ook voordat er verschijnselen zijn. Als je dat veilig kunt doen, neem dan een monster van de paddenstoel mee, zodat een specialist hem kan identificeren. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
         "pl": "Od razu zawiez kota do weterynarza, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz to zrobić bezpiecznie, zabierz próbkę grzyba, żeby specjalista mógł go rozpoznać. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
         "cs": "Odvezte kočku k veterináři okamžitě, ještě než se objeví příznaky. Pokud to jde bezpečně, vezměte s sebou vzorek houby, aby ji odborník mohl určit. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-        "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+        "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+        "sv": "Åk direkt till veterinären med katten, även innan några symtom har visat sig. Om det går att göra på ett säkert sätt, ta med ett prov av svampen så att en specialist kan identifiera den. Försök inte få katten att kräkas utan att först fråga veterinären."
       },
       "serving": null,
       "child": {
@@ -21263,7 +21372,8 @@
         "nl": "Paddenstoelen die buiten groeien zijn niet voor katten. Snuffelt of knabbelt je kat aan een paddenstoel, vertel het dan meteen aan een volwassene.",
         "pl": "Grzyby rosnące na dworze nie są dla kotów. Jeśli kotek obwąchuje grzyby albo skubnie któregoś, od razu powiedz dorosłemu.",
         "cs": "Houby rostoucí venku nejsou pro kočky. Když je kočička očichává nebo okusuje, hned to řekni dospělému.",
-        "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi."
+        "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi.",
+        "sv": "Svampar som växer utomhus är inte för katter. Om katten nosar eller knaprar på en, berätta det för en vuxen direkt."
       },
       "faq": [
         {
@@ -21274,7 +21384,8 @@
             "nl": "Hoe houd ik mijn kat uit de buurt van wilde paddenstoelen?",
             "pl": "Jak uchronić kota przed dzikimi grzybami?",
             "cs": "Jak udržet kočku dál od divokých hub?",
-            "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?"
+            "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?",
+            "sv": "Hur håller jag katten borta från vilda svampar?"
           },
           "a": {
             "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
@@ -21283,7 +21394,8 @@
             "nl": "Pet Poison Helpline adviseert goed in de gaten te houden wat je kat buiten doet en je kat niet in de buurt te laten komen van wilde paddenstoelen of paddenstoelen waarvan je niet weet waar ze vandaan komen.",
             "pl": "Pet Poison Helpline radzi uważnie obserwować, co kot robi na dworze, i nie pozwalać mu zbliżać się do dzikich grzybów ani do żadnych grzybów, których pochodzenia nie znasz.",
             "cs": "Pet Poison Helpline radí dávat pozor na to, co kočka venku dělá, a nepouštět ji k divokým houbám ani k houbám, jejichž původ neznáte.",
-            "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš."
+            "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš.",
+            "sv": "Pet Poison Helpline rekommenderar att du har god uppsikt över kattens utomhusaktiviteter och inte låter katten komma i närheten av vilda svampar eller någon svamp vars ursprung du inte känner till."
           }
         }
       ],
@@ -23375,7 +23487,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Asparagus",
@@ -23384,7 +23497,8 @@
         "nl": "Asperges",
         "pl": "Szparagi",
         "cs": "Chřest",
-        "hr": "Šparoge"
+        "hr": "Šparoge",
+        "sv": "Sparris"
       },
       "question": {
         "en": "Can dogs eat asparagus?",
@@ -23393,7 +23507,8 @@
         "nl": "Mogen honden asperges eten?",
         "pl": "Czy psy mogą jeść szparagi?",
         "cs": "Mohou psi jíst chřest?",
-        "hr": "Smiju li psi jesti šparoge?"
+        "hr": "Smiju li psi jesti šparoge?",
+        "sv": "Får hundar äta sparris?"
       },
       "url_slug": {
         "en": "asparagus",
@@ -23402,7 +23517,8 @@
         "nl": "asperges",
         "pl": "szparagi",
         "cs": "chrest",
-        "hr": "sparoge"
+        "hr": "sparoge",
+        "sv": "sparris"
       },
       "answer": {
         "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
@@ -23411,7 +23527,8 @@
         "nl": "Ja, asperges zijn niet giftig voor honden. Gekookte asperges zijn de betere keuze, omdat ze makkelijker te kauwen zijn. Geef ze naturel, gekookt of gestoomd, en houd je hond uit de buurt van het aspergeloof.",
         "pl": "Tak, szparagi nie są toksyczne dla psów. Lepiej wybrać ugotowane, bo łatwiej je przeżuć. Podawaj je bez dodatków, gotowane w wodzie lub na parze, a psa trzymaj z dala od pierzastych, zielonych pędów rośliny.",
         "cs": "Ano, chřest pro psy není toxický. Lepší volbou je tepelně upravený chřest, protože se snáz kouše. Podávejte ho bez dalších přísad, vařený nebo napařený, a držte psy dál od chřestové natě.",
-        "hr": "Da, šparoge nisu otrovne za pse. Bolje su termički obrađene jer ih je lakše žvakati. Posluži ih obične, kuhane u vodi ili na pari, a pse drži podalje od perastog lišća šparoge."
+        "hr": "Da, šparoge nisu otrovne za pse. Bolje su termički obrađene jer ih je lakše žvakati. Posluži ih obične, kuhane u vodi ili na pari, a pse drži podalje od perastog lišća šparoge.",
+        "sv": "Ja, sparris är inte giftig för hundar. Tillagad sparris är det bästa valet eftersom den är lättare att tugga. Servera den utan tillsatser, kokt eller ångad, och se till att hunden inte kommer åt sparrisriset."
       },
       "why": {
         "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
@@ -23420,7 +23537,8 @@
         "nl": "Rauwe asperges zijn heel moeilijk te kauwen en een hond kan proberen ze in één keer door te slikken en zich te verslikken. Sommige honden kunnen rauwe asperges moeilijk verteren. Boter of bakolie kan een hond ziek maken. Het aspergeloof, het oneetbare deel van de plant, is giftig voor honden.",
         "pl": "Surowe szparagi są bardzo twarde i trudno je przegryźć, a pies może próbować połknąć je w całości i się zadławić. Niektóre psy mają trudności z trawieniem surowych szparagów. Masło lub olej do smażenia mogą rozchorować psa. Pierzaste, zielone pędy szparaga, niejadalna część rośliny, są toksyczne dla psów.",
         "cs": "Syrový chřest se velmi těžko kouše a pes se ho může pokusit spolknout celý a udusit se. Některým psům se syrový chřest hůř tráví. Máslo nebo olej na vaření mohou psovi způsobit nevolnost. Chřestová nať, nejedlá část rostliny, je pro psy toxická.",
-        "hr": "Sirove je šparoge vrlo teško žvakati pa ih pas može pokušati progutati cijele, što može izazvati gušenje. Nekim je psima sirova šparoga teško probavljiva. Maslac ili ulje za kuhanje mogu psa razboljeti. Perasto lišće šparoge, nejestivi dio biljke, otrovno je za pse."
+        "hr": "Sirove je šparoge vrlo teško žvakati pa ih pas može pokušati progutati cijele, što može izazvati gušenje. Nekim je psima sirova šparoga teško probavljiva. Maslac ili ulje za kuhanje mogu psa razboljeti. Perasto lišće šparoge, nejestivi dio biljke, otrovno je za pse.",
+        "sv": "Rå sparris är mycket svår att tugga, och en hund kan försöka svälja den hel och riskera att kvävas. En del hundar har svårt att smälta rå sparris. Smör eller matolja kan göra hunden sjuk. Sparrisriset, den oätliga delen av växten, är giftigt för hundar."
       },
       "signs": null,
       "what_to_do": {
@@ -23430,7 +23548,8 @@
         "nl": "Krijgt je hond na rauwe asperges last van braken, winderigheid of diarree, bereid ze dan de volgende keer licht gaar. Als een hond aspergeloof eet, kan hij gaan braken, diarree krijgen en hevige buikpijn krijgen, dus houd je hond uit de buurt van de plant.",
         "pl": "Jeśli po surowych szparagach pies ma wymioty, gazy lub biegunkę, następnym razem spróbuj je lekko ugotować. Zjedzenie pierzastych pędów szparaga może wywołać wymioty, biegunkę i silny ból brzucha, więc nie pozwalaj psu zbliżać się do rośliny.",
         "cs": "Pokud má pes po syrovém chřestu zvracení, plynatost nebo průjem, příště ho zkuste krátce uvařit. Snědení chřestové natě může způsobit zvracení, průjem a silnou bolest břicha, proto psa od rostliny držte dál.",
-        "hr": "Ako pas nakon sirovih šparoga povraća, ima nadutost ili proljev, sljedeći put ih lagano termički obradi. Perasto lišće šparoge može izazvati povraćanje, proljev i jake bolove u trbuhu, zato psa drži podalje od te biljke."
+        "hr": "Ako pas nakon sirovih šparoga povraća, ima nadutost ili proljev, sljedeći put ih lagano termički obradi. Perasto lišće šparoge može izazvati povraćanje, proljev i jake bolove u trbuhu, zato psa drži podalje od te biljke.",
+        "sv": "Om hunden får kräkningar, gasbildning eller diarré efter rå sparris, prova att koka den lätt nästa gång. Att äta sparrisris kan ge kräkningar, diarré och kraftiga magsmärtor, så håll hunden borta från växten."
       },
       "serving": {
         "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
@@ -23439,7 +23558,8 @@
         "nl": "Naturel gekookt of gestoomd, zonder boter of olie. Geef je ze rauw, snijd ze dan in kleine, hapklare stukjes.",
         "pl": "Ugotowane w wodzie lub na parze, bez masła i oleju. Jeśli podajesz je surowe, pokrój na małe kawałki na jeden kęs.",
         "cs": "Jen uvařený nebo napařený, bez másla a oleje. Pokud ho podáváte syrový, nakrájejte ho na malé kousky na jedno sousto.",
-        "hr": "Obične, kuhane u vodi ili na pari, bez maslaca i ulja. Ako ih daješ sirove, nareži ih na sitne komadiće za jedan zalogaj."
+        "hr": "Obične, kuhane u vodi ili na pari, bez maslaca i ulja. Ako ih daješ sirove, nareži ih na sitne komadiće za jedan zalogaj.",
+        "sv": "Enkelt kokt eller ångad, utan smör eller olja. Om du ger den rå, skär den i små munsbitar."
       },
       "child": {
         "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
@@ -23448,7 +23568,8 @@
         "nl": "Honden mogen een beetje gekookte asperges, als een volwassene die geeft. Het bladerige loof van de plant is niet voor honden.",
         "pl": "Dorosły może dać psu odrobinę ugotowanych szparagów. Pierzaste, zielone pędy rośliny nie są dla psów.",
         "cs": "Pejsek může od dospělého dostat trochu uvařeného chřestu. Listnatá nať rostliny pro psy není.",
-        "hr": "Odrasla osoba psu može dati malo kuhanih šparoga. Perasto lišće biljke nije za pse."
+        "hr": "Odrasla osoba psu može dati malo kuhanih šparoga. Perasto lišće biljke nije za pse.",
+        "sv": "Hundar kan få lite kokt sparris av en vuxen. Det gröna, fjäderlika sparrisriset på växten är inte för hundar."
       },
       "faq": [
         {
@@ -23459,7 +23580,8 @@
             "nl": "Waarom ruikt de plas van mijn hond na asperges?",
             "pl": "Dlaczego po szparagach mocz psa tak pachnie?",
             "cs": "Proč má moč psa po chřestu zvláštní zápach?",
-            "hr": "Zašto mokraća mog psa neugodno miriše nakon šparoga?"
+            "hr": "Zašto mokraća mog psa neugodno miriše nakon šparoga?",
+            "sv": "Varför luktar hundens kiss efter sparris?"
           },
           "a": {
             "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
@@ -23468,7 +23590,8 @@
             "nl": "Van asperges kan urine onaangenaam gaan ruiken, bij honden net als bij mensen. Is je hond helemaal zindelijk, dan zou dat geen probleem moeten zijn.",
             "pl": "Szparagi mogą sprawić, że mocz nieprzyjemnie pachnie, u psów tak samo jak u ludzi. Jeśli twój pies jest w pełni nauczony czystości, nie powinno to być problemem.",
             "cs": "Chřest může způsobit nepříjemný zápach moči, u psů stejně jako u lidí. Pokud je pes zcela čistotný, nemělo by to být problém.",
-            "hr": "Zbog šparoga mokraća može neugodno mirisati, kod pasa jednako kao i kod ljudi. Ako je pas potpuno naučen na čistoću, to ne bi trebao biti problem."
+            "hr": "Zbog šparoga mokraća može neugodno mirisati, kod pasa jednako kao i kod ljudi. Ako je pas potpuno naučen na čistoću, to ne bi trebao biti problem.",
+            "sv": "Sparris kan ge kissen en obehaglig lukt, hos hundar liksom hos människor. Om hunden är helt rumsren borde det inte vara något problem."
           }
         },
         {
@@ -23479,7 +23602,8 @@
             "nl": "Is aspergeloof veilig?",
             "pl": "Czy pierzaste pędy szparaga są bezpieczne?",
             "cs": "Je chřestová nať bezpečná?",
-            "hr": "Je li perasto lišće šparoge sigurno?"
+            "hr": "Je li perasto lišće šparoge sigurno?",
+            "sv": "Är sparrisriset säkert?"
           },
           "a": {
             "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
@@ -23488,7 +23612,8 @@
             "nl": "Nee. Aspergeloof is giftig voor honden en kan braken, diarree en hevige buikpijn veroorzaken.",
             "pl": "Nie. Pierzaste pędy szparaga są toksyczne dla psów i mogą wywołać wymioty, biegunkę i silny ból brzucha.",
             "cs": "Ne. Chřestová nať je pro psy toxická a může způsobit zvracení, průjem a silnou bolest břicha.",
-            "hr": "Ne. Perasto lišće šparoge otrovno je za pse i može izazvati povraćanje, proljev i jake bolove u trbuhu."
+            "hr": "Ne. Perasto lišće šparoge otrovno je za pse i može izazvati povraćanje, proljev i jake bolove u trbuhu.",
+            "sv": "Nej. Sparrisriset är giftigt för hundar och kan ge kräkningar, diarré och kraftiga magsmärtor."
           }
         }
       ],
@@ -24625,7 +24750,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Beetroot",
@@ -24634,7 +24760,8 @@
         "nl": "Rode biet",
         "pl": "Buraki ćwikłowe",
         "cs": "Červená řepa",
-        "hr": "Cikla"
+        "hr": "Cikla",
+        "sv": "Rödbetor"
       },
       "question": {
         "en": "Can dogs eat beetroot?",
@@ -24643,7 +24770,8 @@
         "nl": "Mogen honden rode biet eten?",
         "pl": "Czy psy mogą jeść buraki ćwikłowe?",
         "cs": "Mohou psi jíst červenou řepu?",
-        "hr": "Smiju li psi jesti ciklu?"
+        "hr": "Smiju li psi jesti ciklu?",
+        "sv": "Får hundar äta rödbetor?"
       },
       "url_slug": {
         "en": "beetroot",
@@ -24652,7 +24780,8 @@
         "nl": "rode-biet",
         "pl": "buraki-cwiklowe",
         "cs": "cervena-repa",
-        "hr": "cikla"
+        "hr": "cikla",
+        "sv": "rodbetor"
       },
       "answer": {
         "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
@@ -24661,7 +24790,8 @@
         "nl": "Ja, rode biet is prima voor honden als je hem vers en met mate geeft: af en toe een snoepje. Rode biet bevat veel suiker en oxaalzuur, dus houd de porties klein en overleg eerst met je dierenarts als je hond gevoelig is voor nierstenen.",
         "pl": "Tak, świeże buraki ćwikłowe są dla psów w porządku w umiarkowanych ilościach, jako okazjonalny smakołyk. Mają dużo cukru i kwasu szczawiowego, więc porcje powinny być małe, a jeśli twój pies jest podatny na kamienie nerkowe, najpierw zapytaj weterynarza.",
         "cs": "Ano, červená řepa je pro psy v pořádku, pokud je čerstvá a podaná v mírném množství jako občasný pamlsek. Obsahuje hodně cukru a kyseliny šťavelové, proto dávejte malé porce, a pokud je pes náchylný ke kamenům v ledvinách, nejprve se poraďte s veterinářem.",
-        "hr": "Da, svježa je cikla u umjerenim količinama u redu za pse kao povremena poslastica. Sadrži mnogo šećera i oksalne kiseline, zato daj male porcije, a ako je tvoj pas sklon bubrežnim kamencima, prvo se posavjetuj s veterinarom."
+        "hr": "Da, svježa je cikla u umjerenim količinama u redu za pse kao povremena poslastica. Sadrži mnogo šećera i oksalne kiseline, zato daj male porcije, a ako je tvoj pas sklon bubrežnim kamencima, prvo se posavjetuj s veterinarom.",
+        "sv": "Ja, rödbeta går bra för hundar om den är färsk och ges med måtta, som en godbit då och då. Den innehåller mycket socker och oxalsyra, så håll portionerna små, och fråga veterinären först om hunden är benägen att få njurstenar."
       },
       "why": {
         "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
@@ -24670,7 +24800,8 @@
         "nl": "Bieten bevatten veel koolhydraten en suiker, en te veel suiker kan bijdragen aan alvleesklierontsteking of obesitas. Ze bevatten ook veel oxaalzuur, dat blaasstenen, urinekristallen en nierstenen kan vormen en een calciumtekort kan veroorzaken. Omdat bieten zuur zijn, kunnen ze bij sommige honden winderigheid en diarree veroorzaken.",
         "pl": "Buraki mają dużo węglowodanów i cukru, a nadmiar cukru może przyczyniać się do zapalenia trzustki lub otyłości. Mają też dużo kwasu szczawiowego, który może sprzyjać powstawaniu kamieni w pęcherzu, kryształów w moczu i kamieni nerkowych oraz powodować niedobory wapnia. Ponieważ buraki są kwaśne, u niektórych psów mogą powodować gazy i biegunkę.",
         "cs": "Červená řepa je bohatá na sacharidy a cukr a příliš mnoho cukru může přispívat k zánětu slinivky břišní nebo obezitě. Je také bohatá na kyselinu šťavelovou, která může vytvářet kameny v močovém měchýři, močové krystaly a kameny v ledvinách a může způsobit nedostatek vápníku. Kvůli kyselosti může u některých psů způsobit plynatost a průjem.",
-        "hr": "Cikla je bogata ugljikohidratima i šećerom, a previše šećera može pridonijeti upali gušterače ili pretilosti. Sadrži i mnogo oksalne kiseline, koja može uzrokovati kamence u mokraćnom mjehuru, kristale u mokraći i bubrežne kamence te manjak kalcija. Zbog kiselosti cikla kod nekih pasa može izazvati nadutost i proljev."
+        "hr": "Cikla je bogata ugljikohidratima i šećerom, a previše šećera može pridonijeti upali gušterače ili pretilosti. Sadrži i mnogo oksalne kiseline, koja može uzrokovati kamence u mokraćnom mjehuru, kristale u mokraći i bubrežne kamence te manjak kalcija. Zbog kiselosti cikla kod nekih pasa može izazvati nadutost i proljev.",
+        "sv": "Rödbetor innehåller mycket kolhydrater och socker, och för mycket socker kan bidra till inflammation i bukspottkörteln eller övervikt. De innehåller också mycket oxalsyra, som kan ge upphov till blåsstenar, urinkristaller och njurstenar och kan orsaka kalciumbrist. Eftersom rödbetor är sura kan de ge gasbildning och diarré hos en del hundar."
       },
       "signs": null,
       "what_to_do": {
@@ -24680,7 +24811,8 @@
         "nl": "Rode biet kan de urine van je hond donkerroze of rood kleuren, dus schrik daar niet van. Is de kleur na een dag nog niet weg, dan kan er iets anders aan de hand zijn, zoals een urineweginfectie of stenen. Overleg dan met je dierenarts.",
         "pl": "Burak ćwikłowy może zabarwić mocz psa na ciemnoróżowo lub czerwono, ale to nie powód do paniki. Jeśli kolor nie zniknie po dobie, przyczyna może być inna, na przykład zakażenie dróg moczowych lub kamienie, więc porozmawiaj z weterynarzem.",
         "cs": "Červená řepa může psí moč zbarvit do tmavě růžova nebo do červena, takže nepropadejte panice. Pokud barva po dni nezmizí, může jít o něco jiného, například o infekci močových cest nebo kameny, a poraďte se s veterinářem.",
-        "hr": "Zbog cikle mokraća tvog psa može poprimiti tamnoružičastu ili crvenu boju, pa nemoj paničariti. Ako boja ne nestane nakon jednog dana, možda je posrijedi nešto drugo, primjerice infekcija mokraćnog sustava ili kamenci, pa se javi veterinaru."
+        "hr": "Zbog cikle mokraća tvog psa može poprimiti tamnoružičastu ili crvenu boju, pa nemoj paničariti. Ako boja ne nestane nakon jednog dana, možda je posrijedi nešto drugo, primjerice infekcija mokraćnog sustava ili kamenci, pa se javi veterinaru.",
+        "sv": "Rödbeta kan göra hundens kiss mörkrosa eller rött, så ingen panik. Om färgen inte har försvunnit efter ett dygn kan något annat ligga bakom, till exempel urinvägsinfektion eller stenar, så kontakta veterinären."
       },
       "serving": {
         "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
@@ -24689,7 +24821,8 @@
         "nl": "Vers, goed schoongeboend en geschild, rauw of gekookt, geraspt of in kleine, hapklare stukjes gesneden. Bieten uit blik alleen zonder zout en zonder andere toevoegingen.",
         "pl": "Świeże, dokładnie wyszorowane i obrane, surowe lub ugotowane, starte albo pokrojone na małe kawałki na jeden kęs. Buraki z puszki tylko bez soli i innych dodatków.",
         "cs": "Čerstvá, důkladně očištěná a oloupaná, syrová nebo uvařená, nastrouhaná nebo nakrájená na malé kousky na jedno sousto. Konzervovaná červená řepa jen bez soli a bez dalších přísad.",
-        "hr": "Svježa, dobro oprana i oguljena, sirova ili termički obrađena, naribana ili narezana na male komadiće za jedan zalogaj. Cikla iz konzerve samo bez soli i drugih dodataka."
+        "hr": "Svježa, dobro oprana i oguljena, sirova ili termički obrađena, naribana ili narezana na male komadiće za jedan zalogaj. Cikla iz konzerve samo bez soli i drugih dodataka.",
+        "sv": "Färsk, ordentligt skrubbad och skalad, rå eller kokt, riven eller skuren i små munsbitar. Rödbetor på burk bara om de är utan salt och andra tillsatser."
       },
       "child": {
         "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
@@ -24698,7 +24831,8 @@
         "nl": "Honden mogen af en toe een beetje rode biet. Het kan hun plas roze maken, en dat is niet erg.",
         "pl": "Pies może czasem dostać odrobinę buraka ćwikłowego. Jego siusiu może wtedy być różowe, ale to nic złego.",
         "cs": "Pejsek může občas dostat trochu červené řepy. Čůrání mu pak může zrůžovět, a to je v pořádku.",
-        "hr": "Pas smije povremeno dobiti malo cikle. Od nje mu mokraća može postati ružičasta, a to je u redu."
+        "hr": "Pas smije povremeno dobiti malo cikle. Od nje mu mokraća može postati ružičasta, a to je u redu.",
+        "sv": "Hundar kan få lite rödbeta då och då. Kissen kan bli rosa av den, och det är helt okej."
       },
       "faq": [
         {
@@ -24709,7 +24843,8 @@
             "nl": "Rauwe of gekookte rode biet?",
             "pl": "Surowe czy gotowane buraki?",
             "cs": "Syrová, nebo uvařená červená řepa?",
-            "hr": "Sirova ili termički obrađena cikla?"
+            "hr": "Sirova ili termički obrađena cikla?",
+            "sv": "Rå eller kokt rödbeta?"
           },
           "a": {
             "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
@@ -24718,7 +24853,8 @@
             "nl": "Beide zijn prima. Rauwe bieten behouden de meeste voedingsstoffen en gekookte bieten zijn het veelzijdigst.",
             "pl": "Oba rodzaje są w porządku. Surowe buraki zachowują najwięcej składników odżywczych, a gotowane są najbardziej uniwersalne.",
             "cs": "Obě jsou v pořádku. Syrová červená řepa si zachovává nejvíc živin a uvařená je nejuniverzálnější volbou.",
-            "hr": "Obje su u redu. Sirova cikla zadržava najviše hranjivih tvari, a termički obrađenu možeš pripremiti na najviše načina."
+            "hr": "Obje su u redu. Sirova cikla zadržava najviše hranjivih tvari, a termički obrađenu možeš pripremiti na najviše načina.",
+            "sv": "Båda går bra. Rå rödbeta behåller mest näring, och kokt rödbeta är det mest mångsidiga valet."
           }
         },
         {
@@ -24729,7 +24865,8 @@
             "nl": "Mogen honden rode biet uit blik eten?",
             "pl": "Czy psy mogą jeść buraki z puszki?",
             "cs": "Mohou psi jíst červenou řepu z konzervy?",
-            "hr": "Smiju li psi jesti ciklu iz konzerve?"
+            "hr": "Smiju li psi jesti ciklu iz konzerve?",
+            "sv": "Får hundar äta rödbetor på burk?"
           },
           "a": {
             "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
@@ -24738,7 +24875,8 @@
             "nl": "Ja, maar kies zorgvuldig: neem een merk zonder toegevoegd zout en zonder andere toevoegingen.",
             "pl": "Tak, ale wybieraj uważnie: kup buraki bez dodatku soli i innych dodatków.",
             "cs": "Ano, ale vybírejte pozorně: zvolte značku bez přidané soli a bez dalších přísad.",
-            "hr": "Da, ali pažljivo biraj: uzmi proizvod bez dodane soli i drugih dodataka."
+            "hr": "Da, ali pažljivo biraj: uzmi proizvod bez dodane soli i drugih dodataka.",
+            "sv": "Ja, men välj noga: ta ett märke utan tillsatt salt och utan andra tillsatser."
           }
         }
       ],
@@ -27943,7 +28081,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Chili peppers",
@@ -27952,7 +28091,8 @@
         "nl": "Chilipepers",
         "pl": "Papryczki chili",
         "cs": "Chilli papričky",
-        "hr": "Čili papričice"
+        "hr": "Čili papričice",
+        "sv": "Chilipeppar"
       },
       "question": {
         "en": "Can dogs eat chili peppers?",
@@ -27961,7 +28101,8 @@
         "nl": "Mogen honden chilipepers eten?",
         "pl": "Czy psy mogą jeść papryczki chili?",
         "cs": "Mohou psi jíst chilli papričky?",
-        "hr": "Smiju li psi jesti čili papričice?"
+        "hr": "Smiju li psi jesti čili papričice?",
+        "sv": "Får hundar äta chilipeppar?"
       },
       "url_slug": {
         "en": "chili-peppers",
@@ -27970,7 +28111,8 @@
         "nl": "chilipepers",
         "pl": "papryczki-chili",
         "cs": "chilli-papricky",
-        "hr": "cili-papricice"
+        "hr": "cili-papricice",
+        "sv": "chilipeppar"
       },
       "answer": {
         "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
@@ -27979,7 +28121,8 @@
         "nl": "Nee, geef je hond nooit pittige pepers zoals jalapeños of chilipepers. Hete pepers zijn irriterend: ze geven een brandend gevoel in de mond en kunnen in grotere hoeveelheden braken en diarree veroorzaken.",
         "pl": "Nie, nigdy nie dawaj psu ostrych papryczek, takich jak jalapeño czy chili. Ostre papryczki działają drażniąco: powodują uczucie pieczenia w pysku, a w większych ilościach mogą wywołać wymioty i biegunkę.",
         "cs": "Ne, nikdy nedávejte psovi pálivé papričky, například jalapeño nebo chilli. Pálivé papričky dráždí: vyvolávají pálení v tlamě a ve větším množství mohou způsobit zvracení a průjem.",
-        "hr": "Ne, nikad ne daj psu ljute papričice, poput jalapeño ili čili papričica. Ljute su papričice nadražujuće: u ustima izazivaju osjećaj pečenja, a u većim količinama mogu izazvati povraćanje i proljev."
+        "hr": "Ne, nikad ne daj psu ljute papričice, poput jalapeño ili čili papričica. Ljute su papričice nadražujuće: u ustima izazivaju osjećaj pečenja, a u većim količinama mogu izazvati povraćanje i proljev.",
+        "sv": "Nej, ge aldrig hunden stark chili, till exempel jalapeño eller annan chilipeppar. Stark chili är irriterande: den ger en brännande känsla i munnen och kan i större mängder ge kräkningar och diarré."
       },
       "why": {
         "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
@@ -27988,7 +28131,8 @@
         "nl": "Hete pepers bevatten capsaïcine, een sterk irriterende stof, met de hoogste concentraties in de vrucht en vooral in de zaadjes. Honden die op pepers kauwen en ze doorslikken, kunnen daar last van krijgen. Bij huisdieren zijn problemen zeldzaam, maar de AKC zegt dat je honden nooit pittige pepers moet geven.",
         "pl": "Ostre papryczki zawierają kapsaicynę, silną substancję drażniącą, której najwięcej jest w owocu, a zwłaszcza w nasionach. Może ona zaszkodzić psom, które gryzą i połykają papryczki. U zwierząt domowych problemy zdarzają się rzadko, ale AKC radzi, by nigdy nie dawać psom ostrych papryczek.",
         "cs": "Pálivé papričky obsahují kapsaicin, silnou dráždivou látku, nejvíce v plodu a zejména v semínkách. Může působit na psy, kteří papričky rozkousají a spolknou. U domácích zvířat jsou potíže vzácné, ale AKC uvádí, že pálivé papričky by se psům nikdy neměly dávat.",
-        "hr": "Ljute papričice sadrže kapsaicin, jaku nadražujuću tvar, a najviše ga ima u plodu, osobito u sjemenkama. Može djelovati na pse koji papričice žvaču i gutaju. Kod kućnih ljubimaca problemi su rijetki, ali AKC kaže da psima nikad ne treba davati ljute papričice."
+        "hr": "Ljute papričice sadrže kapsaicin, jaku nadražujuću tvar, a najviše ga ima u plodu, osobito u sjemenkama. Može djelovati na pse koji papričice žvaču i gutaju. Kod kućnih ljubimaca problemi su rijetki, ali AKC kaže da psima nikad ne treba davati ljute papričice.",
+        "sv": "Stark chili innehåller capsaicin, ett kraftigt irriterande ämne, med högst halt i frukten och framför allt i kärnorna. Det kan påverka hundar som tuggar och sväljer chilifrukterna. Problem hos husdjur är sällsynta, men AKC skriver att man aldrig ska ge hundar stark chili."
       },
       "signs": {
         "en": [
@@ -28032,6 +28176,12 @@
           "Pečenje i nadraženost očiju",
           "Povraćanje",
           "Proljev"
+        ],
+        "sv": [
+          "Brännande känsla i munnen",
+          "Svidande, irriterade ögon",
+          "Kräkningar",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -28041,7 +28191,8 @@
         "nl": "Houd pittige pepers en gerechten met pepers buiten het bereik van je hond. Het brandende gevoel van capsaïcine gaat meestal snel over en wordt minder als je de mond van je hond met water spoelt.",
         "pl": "Trzymaj ostre papryczki i potrawy z ich dodatkiem poza zasięgiem psa. Pieczenie wywołane kapsaicyną zwykle szybko mija i można je złagodzić, płucząc pysk wodą.",
         "cs": "Pálivé papričky a pokrmy s nimi uchovávejte mimo dosah psa. Pálivý účinek kapsaicinu obvykle rychle odezní a lze ho zmírnit vypláchnutím tlamy vodou.",
-        "hr": "Ljute papričice i jela s njima drži izvan dosega psa. Pečenje koje izaziva kapsaicin obično je kratkotrajno, a može se ublažiti ispiranjem usta vodom."
+        "hr": "Ljute papričice i jela s njima drži izvan dosega psa. Pečenje koje izaziva kapsaicin obično je kratkotrajno, a može se ublažiti ispiranjem usta vodom.",
+        "sv": "Se till att hunden inte kommer åt stark chili eller rätter med chili. Capsaicinets brännande effekt går oftast över snabbt och kan lindras genom att man sköljer munnen med vatten."
       },
       "serving": null,
       "child": {
@@ -28051,7 +28202,8 @@
         "nl": "Pittige pepers zijn niet voor honden. Ze geven een hond een brandend gevoel in de mond. Paprika is de hondvriendelijke variant.",
         "pl": "Ostre papryczki nie są dla psów. Od nich w pysku robi się gorąco. Dla psów nadaje się słodka papryka.",
         "cs": "Pálivé papričky nejsou pro psy. Pejskovi by pálily v tlamě. Sladká paprika je pro psy v pořádku.",
-        "hr": "Ljute papričice nisu za pse. Od njih psu peče u ustima. Slatka paprika je vrsta koju psi smiju jesti."
+        "hr": "Ljute papričice nisu za pse. Od njih psu peče u ustima. Slatka paprika je vrsta koju psi smiju jesti.",
+        "sv": "Stark chili är inte för hundar. Den gör att hundens mun känns het. Paprika är den hundvänliga sorten."
       },
       "faq": [
         {
@@ -28062,7 +28214,8 @@
             "nl": "Is zoete paprika oké?",
             "pl": "Czy słodka papryka jest dla psa w porządku?",
             "cs": "Je sladká paprika v pořádku?",
-            "hr": "Je li slatka paprika u redu?"
+            "hr": "Je li slatka paprika u redu?",
+            "sv": "Går söt paprika bra?"
           },
           "a": {
             "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
@@ -28071,7 +28224,8 @@
             "nl": "Ja, naturele paprika is voor de meeste honden met mate veilig, mits je de zaadjes en de steel verwijdert.",
             "pl": "Tak, zwykła papryka jest bezpieczna dla większości psów w umiarkowanych ilościach, o ile usuniesz nasiona i szypułkę.",
             "cs": "Ano, paprika bez dalších přísad je pro většinu psů v mírném množství bezpečná, pokud z ní odstraníte semínka a stopku.",
-            "hr": "Da, obična slatka paprika sigurna je za većinu pasa u umjerenim količinama, bez sjemenki i peteljke."
+            "hr": "Da, obična slatka paprika sigurna je za većinu pasa u umjerenim količinama, bez sjemenki i peteljke.",
+            "sv": "Ja, ren paprika är säker för de flesta hundar om den ges med måtta och utan kärnor och skaft."
           }
         }
       ],
@@ -31257,7 +31411,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Corn kernels",
@@ -31266,7 +31421,8 @@
         "nl": "Maïskorrels",
         "pl": "Ziarna kukurydzy",
         "cs": "Kukuřičná zrna",
-        "hr": "Zrna kukuruza"
+        "hr": "Zrna kukuruza",
+        "sv": "Majskorn"
       },
       "question": {
         "en": "Can dogs eat corn?",
@@ -31275,7 +31431,8 @@
         "nl": "Mogen honden maïs eten?",
         "pl": "Czy psy mogą jeść kukurydzę?",
         "cs": "Mohou psi jíst kukuřici?",
-        "hr": "Smiju li psi jesti kukuruz?"
+        "hr": "Smiju li psi jesti kukuruz?",
+        "sv": "Får hundar äta majs?"
       },
       "url_slug": {
         "en": "corn",
@@ -31284,7 +31441,8 @@
         "nl": "mais",
         "pl": "ziarna-kukurydzy",
         "cs": "kukuricna-zrna",
-        "hr": "zrna-kukuruza"
+        "hr": "zrna-kukuruza",
+        "sv": "majskorn"
       },
       "answer": {
         "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
@@ -31293,7 +31451,8 @@
         "nl": "Ja, honden mogen naturele maïskorrels eten die van de kolf zijn gehaald, in kleine hoeveelheden en af en toe als snoepje. Laat boter, zout en kruiden weg en geef je hond nooit een maïskolf.",
         "pl": "Tak, psy mogą bezpiecznie jeść zwykłe ziarna kukurydzy zdjęte z kolby, w małych ilościach, jako okazjonalny smakołyk. Pomiń masło, sól i przyprawy, a kolby nigdy nie dawaj psu.",
         "cs": "Ano, psi mohou bezpečně jíst kukuřičná zrna bez dalších přísad, oddělená od klasu, v malém množství jako občasný pamlsek. Vynechte máslo, sůl a koření a nikdy psovi nedávejte kukuřici na klasu.",
-        "hr": "Da, psi smiju jesti obična zrna kukuruza skinuta s klipa, u malim količinama i povremeno kao poslasticu. Izostavi maslac, sol i začine, a psu nikad ne daj kukuruz na klipu."
+        "hr": "Da, psi smiju jesti obična zrna kukuruza skinuta s klipa, u malim količinama i povremeno kao poslasticu. Izostavi maslac, sol i začine, a psu nikad ne daj kukuruz na klipu.",
+        "sv": "Ja, hundar kan äta majskorn utan tillsatser som har skurits av kolven, i små mängder som en godbit då och då. Låt bli smör, salt och kryddor, och ge aldrig hunden majskolv."
       },
       "why": {
         "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
@@ -31302,7 +31461,8 @@
         "nl": "Maïs is voor de meeste honden geen probleem en kan zelfs deel uitmaken van een evenwichtige voeding, omdat het energie levert en de spijsvertering ondersteunt. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken. De kolf is het echte gevaar: honden kunnen stukken of de hele kolf doorslikken, wat verstikking of een darmverstopping kan veroorzaken.",
         "pl": "Dla większości psów kukurydza nie jest problemem i może nawet wchodzić w skład zbilansowanej diety: dostarcza energii i wspiera trawienie. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek. Prawdziwym zagrożeniem jest kolba: psy mogą połknąć jej kawałki lub całą kolbę, co może spowodować zadławienie lub niedrożność jelit.",
         "cs": "Kukuřice většině psů nevadí a může být dokonce součástí vyvážené stravy, protože dodává energii a podporuje trávení. Máslo, sůl a koření přidávají tuk a sodík, které mohou psovi podráždit žaludek. Skutečné nebezpečí představuje klas: psi mohou spolknout jeho kousky nebo celý klas, což může způsobit dušení nebo ucpání střev.",
-        "hr": "Kukuruz nije problem za većinu pasa, a može biti i dio uravnotežene prehrane jer daje energiju i pomaže probavi. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac. Prava je opasnost klip: psi mogu progutati komade ili cijeli klip, što može izazvati gušenje ili začepljenje crijeva."
+        "hr": "Kukuruz nije problem za većinu pasa, a može biti i dio uravnotežene prehrane jer daje energiju i pomaže probavi. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac. Prava je opasnost klip: psi mogu progutati komade ili cijeli klip, što može izazvati gušenje ili začepljenje crijeva.",
+        "sv": "Majs är inget problem för de flesta hundar och kan till och med ingå i en balanserad kost, eftersom den ger energi och underlättar matsmältningen. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage. Kolven är den verkliga faran: hundar kan svälja bitar av den eller hela kolven, vilket kan ge kvävningsrisk eller stopp i tarmarna."
       },
       "signs": null,
       "what_to_do": {
@@ -31312,7 +31472,8 @@
         "nl": "Geef alleen naturele korrels, van de kolf gesneden, en niet te vaak. Controleer eerst of je hond niet allergisch is voor maïs. Houd maïskolven ver buiten bereik.",
         "pl": "Podawaj tylko zwykłe ziarna, odcięte od kolby, i tylko od czasu do czasu. Zanim dasz psu kukurydzę, upewnij się, że nie ma na nią alergii. Kolby kukurydzy trzymaj poza zasięgiem psa.",
         "cs": "Nabízejte jen zrna bez dalších přísad, odkrojená z klasu, a jen občas. Než kukuřici nabídnete, ujistěte se, že pes nemá alergii na kukuřici. Klasy držte opravdu mimo dosah psa.",
-        "hr": "Nudi samo obična zrna odrezana s klipa, i to povremeno. Prije nego što psu daš kukuruz, provjeri nije li alergičan na njega. Klipove drži posve izvan dosega."
+        "hr": "Nudi samo obična zrna odrezana s klipa, i to povremeno. Prije nego što psu daš kukuruz, provjeri nije li alergičan na njega. Klipove drži posve izvan dosega.",
+        "sv": "Ge bara majskorn utan tillsatser som har skurits av kolven, och bara då och då. Kontrollera att hunden inte är allergisk mot majs innan du ger den. Förvara majskolvar långt utom räckhåll."
       },
       "serving": {
         "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
@@ -31321,7 +31482,8 @@
         "nl": "Naturele suikermaïskorrels, van de kolf gehaald. Zonder boter, zout of kruiden.",
         "pl": "Zwykłe ziarna kukurydzy cukrowej, zdjęte z kolby. Bez masła, soli i przypraw.",
         "cs": "Zrna sladké kukuřice bez dalších přísad, oddělená od klasu. Bez másla, soli a koření.",
-        "hr": "Obična zrna kukuruza šećerca, skinuta s klipa. Bez maslaca, soli i začina."
+        "hr": "Obična zrna kukuruza šećerca, skinuta s klipa. Bez maslaca, soli i začina.",
+        "sv": "Söta majskorn utan tillsatser, avskurna från kolven. Inget smör, salt eller kryddor."
       },
       "child": {
         "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
@@ -31330,7 +31492,8 @@
         "nl": "Honden mogen een paar naturele maïskorrels. De kolf is niet voor honden, dus een volwassene houdt die uit de buurt.",
         "pl": "Psy mogą dostać kilka zwykłych ziaren kukurydzy. Kolba nie jest dla psów, więc dorosły chowa ją przed nimi.",
         "cs": "Pejsek může dostat pár zrnek kukuřice bez dalších přísad. Klas pro psy není, a tak ho dospělý uklidí z dosahu.",
-        "hr": "Pas smije dobiti nekoliko običnih zrna kukuruza. Klip nije za pse, pa ga odrasla osoba drži podalje."
+        "hr": "Pas smije dobiti nekoliko običnih zrna kukuruza. Klip nije za pse, pa ga odrasla osoba drži podalje.",
+        "sv": "Hundar kan få några majskorn utan tillsatser. Kolven är inte för hundar, så en vuxen ser till att hunden inte kommer åt den."
       },
       "faq": [
         {
@@ -31341,7 +31504,8 @@
             "nl": "Mogen honden maïs met boter eten?",
             "pl": "Czy psy mogą jeść kukurydzę z masłem?",
             "cs": "Mohou psi jíst kukuřici s máslem?",
-            "hr": "Smiju li psi jesti kukuruz s maslacem?"
+            "hr": "Smiju li psi jesti kukuruz s maslacem?",
+            "sv": "Får hundar äta majs med smör?"
           },
           "a": {
             "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
@@ -31350,7 +31514,8 @@
             "nl": "Dat kun je beter vermijden. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken.",
             "pl": "Lepiej tego unikać. Masło, sól i przyprawy dodają tłuszczu i sodu, które mogą rozstroić psu żołądek.",
             "cs": "Raději ne. Máslo, sůl a koření přidávají tuk a sodík, které mohou psovi podráždit žaludek.",
-            "hr": "Najbolje je to izbjegavati. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac."
+            "hr": "Najbolje je to izbjegavati. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac.",
+            "sv": "Det är bäst att undvika det. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage."
           }
         },
         {
@@ -31361,7 +31526,8 @@
             "nl": "Is maïs in hondenvoer slecht?",
             "pl": "Czy kukurydza w karmie dla psów jest szkodliwa?",
             "cs": "Je kukuřice v krmivu pro psy špatná?",
-            "hr": "Je li kukuruz u hrani za pse loš?"
+            "hr": "Je li kukuruz u hrani za pse loš?",
+            "sv": "Är det dåligt med majs i hundfoder?"
           },
           "a": {
             "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
@@ -31370,7 +31536,8 @@
             "nl": "Veel dierenartsen met een specialisatie in voeding zijn het erover eens dat maïs voor de meeste honden geen probleem is en deel kan uitmaken van een evenwichtige voeding.",
             "pl": "Wielu specjalistów od żywienia zwierząt zgadza się, że kukurydza nie jest problemem dla większości psów i może wchodzić w skład dobrze zbilansowanej diety.",
             "cs": "Mnoho veterinárních odborníků na výživu se shoduje, že kukuřice většině psů nevadí a může být součástí dobře vyvážené stravy.",
-            "hr": "Mnogi se veterinarski nutricionisti slažu da kukuruz nije problem za većinu pasa i da može biti dio dobro uravnotežene prehrane."
+            "hr": "Mnogi se veterinarski nutricionisti slažu da kukuruz nije problem za većinu pasa i da može biti dio dobro uravnotežene prehrane.",
+            "sv": "Många veterinärer med nutrition som specialitet är överens om att majs inte är något problem för de flesta hundar och kan ingå i en väl balanserad kost."
           }
         }
       ],
@@ -39491,7 +39658,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Store-bought mushrooms",
@@ -39500,7 +39668,8 @@
         "nl": "Champignons uit de winkel",
         "pl": "Grzyby ze sklepu",
         "cs": "Houby z obchodu",
-        "hr": "Gljive iz trgovine"
+        "hr": "Gljive iz trgovine",
+        "sv": "Svamp från affären"
       },
       "question": {
         "en": "Can dogs eat store-bought mushrooms?",
@@ -39509,7 +39678,8 @@
         "nl": "Mogen honden champignons uit de winkel eten?",
         "pl": "Czy psy mogą jeść grzyby ze sklepu?",
         "cs": "Mohou psi jíst houby z obchodu?",
-        "hr": "Smiju li psi jesti gljive iz trgovine?"
+        "hr": "Smiju li psi jesti gljive iz trgovine?",
+        "sv": "Får hundar äta svamp från affären?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
@@ -39518,7 +39688,8 @@
         "nl": "champignons",
         "pl": "grzyby-ze-sklepu",
         "cs": "houby-z-obchodu",
-        "hr": "gljive-iz-trgovine"
+        "hr": "gljive-iz-trgovine",
+        "sv": "svamp-fran-affaren"
       },
       "answer": {
         "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
@@ -39527,7 +39698,8 @@
         "nl": "Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden. Toch hebben honden geen paddenstoelen nodig en geef je gerechten met paddenstoelen beter niet, dus een wortelstaafje of een schijfje appel is een beter snoepje.",
         "pl": "Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów. Mimo to psy nie potrzebują grzybów, a potraw z grzybami najlepiej unikać, więc lepszym smakołykiem będzie kawałek marchewki lub plasterek jabłka.",
         "cs": "Houby bez dalších přísad prodávané ve velkých obchodech s potravinami mohou být pro psy obecně bezpečné. Přesto psi houby nepotřebují a pokrmům s houbami je lepší se vyhnout, takže lepším pamlskem je mrkvová tyčinka nebo plátek jablka.",
-        "hr": "Obične gljive iz supermarketa općenito mogu biti sigurne za pse. Ipak, psima gljive nisu potrebne, a jela s gljivama najbolje je izbjegavati, pa je štapić mrkve ili kriška jabuke bolja poslastica."
+        "hr": "Obične gljive iz supermarketa općenito mogu biti sigurne za pse. Ipak, psima gljive nisu potrebne, a jela s gljivama najbolje je izbjegavati, pa je štapić mrkve ili kriška jabuke bolja poslastica.",
+        "sv": "Svamp utan tillsatser som säljs i stora livsmedelsbutiker kan i allmänhet vara säker för hundar. Hundar behöver ändå ingen svamp, och rätter med svamp bör helst undvikas, så en morotsstav eller en äppelskiva är en bättre godbit."
       },
       "why": {
         "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
@@ -39536,7 +39708,8 @@
         "nl": "Champignons uit de supermarkt worden over het algemeen als veilig beschouwd, maar gerechten met paddenstoelen bevatten vaak olie, boter, kruiden, knoflook en ui, die schadelijk kunnen zijn voor honden. Wilde paddenstoelen zijn een ander verhaal: giftige en niet-giftige soorten zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk.",
         "pl": "Grzyby ze sklepu spożywczego są na ogół uważane za bezpieczne, ale potrawy z grzybami często zawierają olej, masło, przyprawy, czosnek i cebulę, które mogą szkodzić psom. Dzikie grzyby to zupełnie inna sprawa: trudno odróżnić toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne.",
         "cs": "Houby z obchodu s potravinami se obecně považují za bezpečné, ale pokrmy z hub často obsahují oleje, máslo, koření, česnek a cibuli, které mohou psům škodit. Divoké houby jsou něco jiného: toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné.",
-        "hr": "Gljive iz trgovine općenito se smatraju sigurnima, ali jela s gljivama često sadrže ulje, maslac, začine, češnjak i luk, što može biti štetno za pse. Divlje su gljive druga stvar: teško je razlikovati otrovne od neotrovnih, a otrovne su iznimno opasne."
+        "hr": "Gljive iz trgovine općenito se smatraju sigurnima, ali jela s gljivama često sadrže ulje, maslac, začine, češnjak i luk, što može biti štetno za pse. Divlje su gljive druga stvar: teško je razlikovati otrovne od neotrovnih, a otrovne su iznimno opasne.",
+        "sv": "Svamp från livsmedelsbutiker anses i allmänhet vara säker, men svamprätter innehåller ofta olja, smör, kryddor, vitlök och lök, vilket kan vara skadligt för hundar. Vilda svampar är något helt annat: det är svårt att skilja giftiga från ogiftiga, och de giftiga är extremt farliga."
       },
       "signs": null,
       "what_to_do": {
@@ -39546,7 +39719,8 @@
         "nl": "Als je ze toch deelt, geef dan alleen naturele champignons uit de winkel. Laat je hond nooit paddenstoelen eten die buiten zijn gevonden; gebeurt dat toch, neem dan meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren.",
         "pl": "Jeśli już chcesz poczęstować psa, dawaj tylko zwykłe grzyby ze sklepu. Nigdy nie pozwalaj psu jeść grzybów znalezionych na dworze; jeśli do tego dojdzie, od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej.",
         "cs": "Pokud houby dopřejete, dávejte jen houby z obchodu bez dalších přísad. Nikdy nenechte psa jíst houby nalezené venku; pokud k tomu dojde, okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost.",
-        "hr": "Ako ih ipak daješ, neka to budu samo obične gljive iz trgovine. Nikad ne dopusti psu da jede gljive pronađene vani; ako se to dogodi, odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti."
+        "hr": "Ako ih ipak daješ, neka to budu samo obične gljive iz trgovine. Nikad ne dopusti psu da jede gljive pronađene vani; ako se to dogodi, odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti.",
+        "sv": "Om du ändå ger hunden svamp, välj bara butiksköpt svamp utan tillsatser. Låt aldrig hunden äta svamp som den har hittat utomhus. Om det händer, kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt."
       },
       "serving": {
         "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
@@ -39555,7 +39729,8 @@
         "nl": "Alleen naturel, uit een grote supermarkt. Zonder olie, boter, kruiden, knoflook of ui en geen gerechten met paddenstoelen.",
         "pl": "Tylko zwykłe grzyby z dużego sklepu spożywczego, bez oleju, masła, przypraw, czosnku i cebuli. Żadnych potraw z grzybami.",
         "cs": "Jen čisté houby z velkého obchodu s potravinami. Bez oleje, másla, koření, česneku a cibule, žádné pokrmy z hub.",
-        "hr": "Samo obične, iz supermarketa. Bez ulja, maslaca, začina, češnjaka i luka te bez jela s gljivama."
+        "hr": "Samo obične, iz supermarketa. Bez ulja, maslaca, začina, češnjaka i luka te bez jela s gljivama.",
+        "sv": "Bara svamp utan tillsatser från en stor livsmedelsbutik. Ingen olja, smör, kryddor, vitlök eller lök, och inga svamprätter."
       },
       "child": {
         "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
@@ -39564,7 +39739,8 @@
         "nl": "Honden hebben geen paddenstoelen nodig. Een wortel of een schijfje appel is een beter snoepje. Laat een hond nooit paddenstoelen van buiten eten.",
         "pl": "Psy nie potrzebują grzybów. Lepszym smakołykiem jest marchewka lub plasterek jabłka. Nigdy nie pozwól psu zjeść grzyba znalezionego na dworze.",
         "cs": "Psi houby nepotřebují. Lepší pamlsek je mrkev nebo plátek jablka. Nikdy nenech psa jíst houby, které najde venku.",
-        "hr": "Psima gljive nisu potrebne. Štapić mrkve ili kriška jabuke bolja je poslastica. Nikad ne dopusti psu da jede gljive koje rastu vani."
+        "hr": "Psima gljive nisu potrebne. Štapić mrkve ili kriška jabuke bolja je poslastica. Nikad ne dopusti psu da jede gljive koje rastu vani.",
+        "sv": "Hundar behöver ingen svamp. En morot eller en äppelskiva är en bättre godbit. Låt aldrig en hund äta svamp som växer utomhus."
       },
       "faq": [
         {
@@ -39575,7 +39751,8 @@
             "nl": "Mogen honden champignonsaus of andere gerechten met paddenstoelen eten?",
             "pl": "Czy psy mogą jeść sos grzybowy lub inne potrawy z grzybami?",
             "cs": "Mohou psi jíst houbovou omáčku nebo jiné pokrmy z hub?",
-            "hr": "Smiju li psi jesti umak od gljiva ili druga jela s gljivama?"
+            "hr": "Smiju li psi jesti umak od gljiva ili druga jela s gljivama?",
+            "sv": "Får hundar äta svampsås eller andra svamprätter?"
           },
           "a": {
             "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
@@ -39584,7 +39761,8 @@
             "nl": "Dat kun je beter vermijden. Olie, boter, kruiden, knoflook en ui in zulke gerechten kunnen schadelijk zijn voor honden.",
             "pl": "Bezpieczniej ich unikać. Olej, masło, przyprawy, czosnek i cebula w tych potrawach mogą szkodzić psom.",
             "cs": "Bezpečnější je vyhnout se jim. Oleje, máslo, koření, česnek a cibule v těchto pokrmech mohou psům škodit.",
-            "hr": "Sigurnije ih je izbjegavati. Ulje, maslac, začini, češnjak i luk u tim jelima mogu biti štetni za pse."
+            "hr": "Sigurnije ih je izbjegavati. Ulje, maslac, začini, češnjak i luk u tim jelima mogu biti štetni za pse.",
+            "sv": "Det är säkrast att undvika dem. Olja, smör, kryddor, vitlök och lök i sådana rätter kan vara skadliga för hundar."
           }
         },
         {
@@ -39595,7 +39773,8 @@
             "nl": "En paddenstoelen die in de tuin groeien?",
             "pl": "A co z grzybami rosnącymi w ogrodzie?",
             "cs": "A co houby rostoucí na zahradě?",
-            "hr": "A gljive koje rastu u vrtu?"
+            "hr": "A gljive koje rastu u vrtu?",
+            "sv": "Vad gäller svamp som växer i trädgården?"
           },
           "a": {
             "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
@@ -39604,7 +39783,8 @@
             "nl": "Beschouw elke wilde paddenstoel als mogelijk giftig. Eet je hond er een, neem dan meteen contact op met je dierenarts.",
             "pl": "Traktuj każdego dzikiego grzyba jak potencjalnie toksycznego. Jeśli twój pies któregoś zje, od razu skontaktuj się z weterynarzem.",
             "cs": "Každou divokou houbu považujte za potenciálně toxickou. Pokud ji pes sní, okamžitě kontaktujte veterináře.",
-            "hr": "Svaku divlju gljivu smatraj potencijalno otrovnom. Ako je pas pojede, odmah se obrati veterinaru."
+            "hr": "Svaku divlju gljivu smatraj potencijalno otrovnom. Ako je pas pojede, odmah se obrati veterinaru.",
+            "sv": "Behandla varje vild svamp som potentiellt giftig. Om hunden äter en, kontakta veterinären direkt."
           }
         }
       ],
@@ -42325,7 +42505,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Bell peppers",
@@ -42334,7 +42515,8 @@
         "nl": "Paprika’s",
         "pl": "Papryka",
         "cs": "Sladká paprika",
-        "hr": "Slatka paprika"
+        "hr": "Slatka paprika",
+        "sv": "Paprika"
       },
       "question": {
         "en": "Can dogs eat bell peppers?",
@@ -42343,7 +42525,8 @@
         "nl": "Mogen honden paprika eten?",
         "pl": "Czy psy mogą jeść paprykę?",
         "cs": "Mohou psi jíst sladkou papriku?",
-        "hr": "Smiju li psi jesti slatku papriku?"
+        "hr": "Smiju li psi jesti slatku papriku?",
+        "sv": "Får hundar äta paprika?"
       },
       "url_slug": {
         "en": "bell-peppers",
@@ -42352,7 +42535,8 @@
         "nl": "paprika",
         "pl": "papryka",
         "cs": "sladka-paprika",
-        "hr": "slatka-paprika"
+        "hr": "slatka-paprika",
+        "sv": "paprika"
       },
       "answer": {
         "en": "Yes, bell peppers are safe for most dogs in moderation. They are non-toxic, and green, yellow, orange and red peppers are all fine when served plain. Remove the seeds and stem, and never give spicy peppers.",
@@ -42361,7 +42545,8 @@
         "nl": "Ja, paprika’s zijn voor de meeste honden met mate veilig. Ze zijn niet giftig en groene, gele, oranje en rode paprika’s zijn allemaal prima als je ze naturel geeft. Verwijder de zaadjes en de steel en geef nooit pittige pepers.",
         "pl": "Tak, papryka jest bezpieczna dla większości psów w umiarkowanych ilościach. Jest nietoksyczna, a papryka zielona, żółta, pomarańczowa i czerwona jest w porządku, jeśli podajesz ją bez dodatków. Usuń nasiona i szypułkę, a ostrych papryczek nigdy nie dawaj.",
         "cs": "Ano, paprika je pro většinu psů v mírném množství bezpečná. Je netoxická a zelená, žlutá, oranžová i červená jsou v pořádku, pokud je podáte bez dalších přísad. Odstraňte semínka a stopku a nikdy nedávejte pálivé papričky.",
-        "hr": "Da, slatka je paprika sigurna za većinu pasa u umjerenim količinama. Nije otrovna, a sve su boje – zelena, žuta, narančasta i crvena – u redu ako je daješ običnu. Ukloni sjemenke i peteljku, a ljute papričice nikad ne daj."
+        "hr": "Da, slatka je paprika sigurna za većinu pasa u umjerenim količinama. Nije otrovna, a sve su boje – zelena, žuta, narančasta i crvena – u redu ako je daješ običnu. Ukloni sjemenke i peteljku, a ljute papričice nikad ne daj.",
+        "sv": "Ja, paprika är säker för de flesta hundar med måtta. Den är inte giftig, och gröna, gula, orangea och röda paprikor går alla bra när de ges utan tillsatser. Ta bort kärnor och skaft, och ge aldrig stark chili."
       },
       "why": {
         "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
@@ -42370,7 +42555,8 @@
         "nl": "Paprika’s zijn niet giftig en leveren voedingsstoffen die de gezondheid van je hond kunnen ondersteunen. Te veel kan leiden tot spijsverteringsklachten, zoals braken of diarree, en de buitenste schil kan voor sommige honden moeilijk te kauwen en te verteren zijn. Sommige honden hebben er geen last van, andere wel.",
         "pl": "Papryka jest nietoksyczna i dostarcza składników odżywczych, które mogą wspierać zdrowie psa. Zbyt duża ilość może prowadzić do rozstroju trawienia, w tym wymiotów lub biegunki, a zewnętrzna skórka bywa dla niektórych psów trudna do przeżucia i strawienia. Jednym psom papryka służy, innym nie.",
         "cs": "Paprika je netoxická a dodává živiny, které mohou podporovat zdraví psa. Příliš mnoho může vést k potížím s trávením, včetně zvracení nebo průjmu, a vnější slupka se může některým psům hůř kousat a trávit. Některým psům bude vyhovovat, jiným ne.",
-        "hr": "Slatka paprika nije otrovna i sadrži hranjive tvari koje mogu pridonijeti zdravlju psa. Prevelika količina može dovesti do probavnih smetnji, uključujući povraćanje ili proljev, a vanjska kožica nekim je psima teška za žvakanje i probavu. Neki će je psi dobro podnijeti, a neki neće."
+        "hr": "Slatka paprika nije otrovna i sadrži hranjive tvari koje mogu pridonijeti zdravlju psa. Prevelika količina može dovesti do probavnih smetnji, uključujući povraćanje ili proljev, a vanjska kožica nekim je psima teška za žvakanje i probavu. Neki će je psi dobro podnijeti, a neki neće.",
+        "sv": "Paprika är inte giftig och innehåller näringsämnen som kan stödja hundens hälsa. För mycket kan ge magproblem, bland annat kräkningar eller diarré, och skalet kan vara svårt för en del hundar att tugga och smälta. En del hundar klarar det bra, andra inte."
       },
       "signs": null,
       "what_to_do": {
@@ -42380,7 +42566,8 @@
         "nl": "Laat je hond geleidelijk aan paprika wennen, zodat je kunt zien of het goed bij zijn spijsvertering past, en overdrijf niet. Geef nooit paprika’s die met ui of knoflook zijn gemengd, want die zijn giftig voor honden.",
         "pl": "Wprowadzaj paprykę stopniowo i obserwuj, czy twój pies dobrze ją trawi; nie przesadzaj z ilością. Nigdy nie dawaj papryki z cebulą ani czosnkiem, bo są toksyczne dla psów.",
         "cs": "Papriku zařazujte postupně, abyste viděli, jak ji psí trávení snáší, a nepřehánějte to. Nikdy nedávejte papriku smíchanou s cibulí nebo česnekem, které jsou pro psy toxické.",
-        "hr": "Papriku uvodi postupno da vidiš kako je pas podnosi, i ne pretjeruj. Nikad ne daj papriku pomiješanu s lukom ili češnjakom jer su luk i češnjak otrovni za pse."
+        "hr": "Papriku uvodi postupno da vidiš kako je pas podnosi, i ne pretjeruj. Nikad ne daj papriku pomiješanu s lukom ili češnjakom jer su luk i češnjak otrovni za pse.",
+        "sv": "Börja med lite paprika åt gången så att du ser om hundens mage tål den, och överdriv inte. Ge aldrig paprika blandad med lök eller vitlök, eftersom de är giftiga för hundar."
       },
       "serving": {
         "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
@@ -42389,7 +42576,8 @@
         "nl": "Naturel, rauw of gekookt, zonder zaadjes en steel. Stomen of pureren maakt het makkelijker te eten. Geen zout, kruiden of andere ingrediënten.",
         "pl": "Zwykła, surowa lub gotowana, bez nasion i szypułki. Gotowanie na parze lub zblendowanie ułatwia jej zjedzenie. Bez soli, przypraw i innych dodatków.",
         "cs": "Bez dalších přísad, syrovou nebo tepelně upravenou, bez semínek a stopky. Po napaření nebo rozmixování se papriky snáz jedí. Bez soli, koření a jiných přísad.",
-        "hr": "Obična, sirova ili termički obrađena, bez sjemenki i peteljke. Kuhana na pari ili pasirana lakša je za jelo. Bez soli, začina i drugih sastojaka."
+        "hr": "Obična, sirova ili termički obrađena, bez sjemenki i peteljke. Kuhana na pari ili pasirana lakša je za jelo. Bez soli, začina i drugih sastojaka.",
+        "sv": "Utan tillsatser, rå eller tillagad, med kärnor och skaft borttagna. Ångad eller mixad paprika är lättare att äta. Inget salt, inga kryddor eller andra ingredienser."
       },
       "child": {
         "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
@@ -42398,7 +42586,8 @@
         "nl": "Honden mogen een beetje naturele paprika. Een volwassene haalt eerst de zaadjes eruit. Pittige pepers zijn niet voor honden.",
         "pl": "Psy mogą dostać odrobinę zwykłej słodkiej papryki. Dorosły najpierw usuwa nasiona. Ostre papryczki nie są dla psów.",
         "cs": "Pejsek může dostat trochu sladké papriky bez dalších přísad. Dospělý z ní nejdřív vyndá semínka. Pálivé papričky nejsou pro psy.",
-        "hr": "Pas smije dobiti malo obične slatke paprike. Odrasla osoba prvo izvadi sjemenke. Ljute papričice nisu za pse."
+        "hr": "Pas smije dobiti malo obične slatke paprike. Odrasla osoba prvo izvadi sjemenke. Ljute papričice nisu za pse.",
+        "sv": "Hundar kan få lite paprika utan tillsatser. En vuxen tar bort kärnorna först. Stark chili är inte för hundar."
       },
       "faq": [
         {
@@ -42409,7 +42598,8 @@
             "nl": "Mogen honden rauwe paprika eten?",
             "pl": "Czy psy mogą jeść surową paprykę?",
             "cs": "Mohou psi jíst syrovou papriku?",
-            "hr": "Smiju li psi jesti sirovu slatku papriku?"
+            "hr": "Smiju li psi jesti sirovu slatku papriku?",
+            "sv": "Får hundar äta rå paprika?"
           },
           "a": {
             "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
@@ -42418,7 +42608,8 @@
             "nl": "Ja, al vinden sommige honden gekookte, gestoomde of gepureerde paprika makkelijker te kauwen en te verteren.",
             "pl": "Tak, choć niektórym psom łatwiej przeżuć i strawić paprykę gotowaną, na parze lub zblendowaną.",
             "cs": "Ano, i když některým psům se uvařená, napařená nebo rozmixovaná paprika kouše a tráví snáz.",
-            "hr": "Da, iako neki psi lakše žvaču i probavljaju papriku koja je termički obrađena, kuhana na pari ili pasirana."
+            "hr": "Da, iako neki psi lakše žvaču i probavljaju papriku koja je termički obrađena, kuhana na pari ili pasirana.",
+            "sv": "Ja, men en del hundar har lättare att tugga och smälta tillagad, ångad eller mixad paprika."
           }
         },
         {
@@ -42429,7 +42620,8 @@
             "nl": "Welke kleur is het beste?",
             "pl": "Który kolor jest najlepszy?",
             "cs": "Která barva je nejlepší?",
-            "hr": "Koja je boja najbolja?"
+            "hr": "Koja je boja najbolja?",
+            "sv": "Vilken färg är bäst?"
           },
           "a": {
             "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
@@ -42438,7 +42630,8 @@
             "nl": "Alle kleuren zijn veilig. Rode paprika’s bevatten de meeste vitamines en antioxidanten.",
             "pl": "Wszystkie kolory są bezpieczne. Czerwona papryka zawiera najwięcej witamin i przeciwutleniaczy.",
             "cs": "Všechny barvy jsou bezpečné. Nejvíc vitaminů a antioxidantů obsahuje červená paprika.",
-            "hr": "Sve su boje sigurne. Crvena paprika sadrži najviše vitamina i antioksidansa."
+            "hr": "Sve su boje sigurne. Crvena paprika sadrži najviše vitamina i antioksidansa.",
+            "sv": "Alla färger är säkra. Röd paprika innehåller mest vitaminer och antioxidanter."
           }
         },
         {
@@ -42449,7 +42642,8 @@
             "nl": "En jalapeños of chilipepers?",
             "pl": "A co z jalapeño i papryczkami chili?",
             "cs": "A co papričky jalapeño nebo chilli?",
-            "hr": "A jalapeño ili čili papričice?"
+            "hr": "A jalapeño ili čili papričice?",
+            "sv": "Hur är det med jalapeños och chilipeppar?"
           },
           "a": {
             "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
@@ -42458,7 +42652,8 @@
             "nl": "Geef je hond nooit pittige pepersoorten zoals jalapeños of chilipepers.",
             "pl": "Nigdy nie dawaj psu ostrych odmian papryki, takich jak jalapeño czy chili.",
             "cs": "Pálivé druhy papriček, například jalapeño nebo chilli, psovi nikdy nedávejte.",
-            "hr": "Psu nikad ne daj ljute vrste papričica, kao što su jalapeño ili čili."
+            "hr": "Psu nikad ne daj ljute vrste papričica, kao što su jalapeño ili čili.",
+            "sv": "Ge aldrig hunden stark chili, som jalapeño eller annan chilipeppar."
           }
         }
       ],
@@ -44170,7 +44365,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Cooked potatoes",
@@ -44179,7 +44375,8 @@
         "nl": "Gekookte aardappelen",
         "pl": "Ugotowane ziemniaki",
         "cs": "Uvařené brambory",
-        "hr": "Kuhani krumpir"
+        "hr": "Kuhani krumpir",
+        "sv": "Kokt potatis"
       },
       "question": {
         "en": "Can dogs eat cooked potatoes?",
@@ -44188,7 +44385,8 @@
         "nl": "Mogen honden gekookte aardappelen eten?",
         "pl": "Czy psy mogą jeść ugotowane ziemniaki?",
         "cs": "Mohou psi jíst uvařené brambory?",
-        "hr": "Smiju li psi jesti kuhani krumpir?"
+        "hr": "Smiju li psi jesti kuhani krumpir?",
+        "sv": "Får hundar äta kokt potatis?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
@@ -44197,7 +44395,8 @@
         "nl": "gekookte-aardappelen",
         "pl": "ugotowane-ziemniaki",
         "cs": "uvarene-brambory",
-        "hr": "kuhani-krumpir"
+        "hr": "kuhani-krumpir",
+        "sv": "kokt-potatis"
       },
       "answer": {
         "en": "Yes, dogs can eat cooked potatoes in moderation when they are served plain. Boiled or baked potato without butter, milk, salt or seasonings is fine in small amounts, as long as it is soft and not green.",
@@ -44206,7 +44405,8 @@
         "nl": "Ja, honden mogen met mate gare aardappelen eten, als ze naturel zijn. Gekookte of gebakken aardappel zonder boter, melk, zout of kruiden is in kleine hoeveelheden prima, zolang hij zacht is en niet groen.",
         "pl": "Tak, psy mogą jeść ugotowane ziemniaki w umiarkowanych ilościach, jeśli są podane bez dodatków. Ziemniak gotowany lub pieczony, bez masła, mleka, soli i przypraw, jest w porządku w małych ilościach, o ile jest miękki i nie jest zielony.",
         "cs": "Ano, psi mohou jíst uvařené brambory v mírném množství, pokud jsou podané bez dalších přísad. Vařená nebo pečená brambora bez másla, mléka, soli a koření je v malém množství v pořádku, pokud je měkká a není zelená.",
-        "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen."
+        "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen.",
+        "sv": "Ja, hundar kan äta tillagad potatis med måtta när den ges utan tillsatser. Kokt eller bakad potatis utan smör, mjölk, salt eller kryddor går bra i små mängder, så länge den är mjuk och inte grön."
       },
       "why": {
         "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
@@ -44215,7 +44415,8 @@
         "nl": "Naturel gare aardappel is prima voor honden, maar zie het als een snoepje en niet als maaltijdvervanger, en geef er slechts een klein deel van het voer aan. Te grote porties kunnen tot obesitas leiden en veel boter kan alvleesklierontsteking uitlokken. Rauwe of groene aardappelen zijn onveilig en mogelijk giftig.",
         "pl": "Zwykły ugotowany ziemniak jest dla psów w porządku, ale powinien być smakołykiem, a nie zamiennikiem posiłku, i stanowić tylko niewielką część diety. Zbyt duże porcje mogą prowadzić do otyłości, a dużo masła może wywołać zapalenie trzustki. Surowe lub zielone ziemniaki są niebezpieczne i potencjalnie toksyczne.",
         "cs": "Uvařené brambory bez dalších přísad jsou pro psy v pořádku, ale měly by být pamlskem, ne náhradou jídla, a tvořit jen malou část jídelníčku. Příliš velké porce mohou vést k obezitě a hodně másla může spustit zánět slinivky břišní. Syrové nebo zelené brambory jsou nebezpečné a potenciálně toxické.",
-        "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan."
+        "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan.",
+        "sv": "Tillagad potatis utan tillsatser går bra för hundar, men den ska vara en godbit och inte ersätta en måltid, och bara utgöra en liten del av kosten. För många portioner kan leda till övervikt, och mycket smör kan utlösa bukspottkörtelinflammation. Rå eller grön potatis är inte säker och kan vara giftig."
       },
       "signs": null,
       "what_to_do": {
@@ -44225,7 +44426,8 @@
         "nl": "Geef gare aardappel af en toe en in kleine hoeveelheden. Geef nooit rauwe aardappel of aardappel met groene plekken en laat aardappelgerechten met boter, melk, zout of kruiden staan.",
         "pl": "Traktuj ugotowany ziemniak jako okazjonalny smakołyk w małych ilościach. Nigdy nie dawaj surowego ziemniaka ani ziemniaka z zielonymi plamami, a potrawy ziemniaczane z masłem, mlekiem, solą lub przyprawami omijaj.",
         "cs": "Uvařené brambory dávejte jen občas a v malém množství. Nikdy nedávejte syrové brambory ani brambory se zelenými skvrnami a vyhněte se bramborovým pokrmům s máslem, mlékem, solí nebo kořením.",
-        "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima."
+        "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima.",
+        "sv": "Ge tillagad potatis som en godbit då och då, i små mängder. Ge aldrig rå potatis eller potatis med gröna fläckar, och hoppa över potatisrätter med smör, mjölk, salt eller kryddor."
       },
       "serving": {
         "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
@@ -44234,7 +44436,8 @@
         "nl": "Naturel gekookt of gebakken, zo gaar dat je hem kunt prakken, zodat je hond zich er niet in verslikt. Geen boter, melk, zout of kruiden. De schil mag erbij, zolang die niet groen is.",
         "pl": "Zwykły, gotowany lub pieczony, do takiej miękkości, żeby dało się go rozgnieść – wtedy pies się nie zadławi. Bez masła, mleka, soli i przypraw. Skórka też może być, o ile nie jest zielona.",
         "cs": "Vařené nebo pečené bez dalších přísad, dokud nejsou tak měkké, že jdou rozmačkat a pes se jimi nezadusí. Bez másla, mléka, soli a koření. Slupky jsou v pořádku, pokud nejsou zelené.",
-        "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena."
+        "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena.",
+        "sv": "Kokt eller bakad, utan tillsatser, tillagad tills den är så mjuk att den går att mosa, så att det inte blir någon kvävningsrisk. Inget smör, mjölk, salt eller kryddor. Skalet går bra om det inte är grönt."
       },
       "child": {
         "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
@@ -44243,7 +44446,8 @@
         "nl": "Honden mogen een beetje naturel gare aardappel als snoepje. Een volwassene zorgt dat hij zacht is en zonder boter of zout.",
         "pl": "Psy mogą dostać odrobinę zwykłego ugotowanego ziemniaka jako smakołyk. Dorosły pilnuje, żeby był miękki i bez masła czy soli.",
         "cs": "Pejsek může jako pamlsek dostat trochu uvařených brambor bez dalších přísad. Dospělý dohlédne na to, aby byly měkké a bez másla a soli.",
-        "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli."
+        "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli.",
+        "sv": "Hundar kan få lite kokt potatis utan tillsatser som godbit. En vuxen ser till att den är mjuk och utan smör eller salt."
       },
       "faq": [
         {
@@ -44254,7 +44458,8 @@
             "nl": "Mogen honden aardappelpuree eten?",
             "pl": "Czy psy mogą jeść puree ziemniaczane?",
             "cs": "Mohou psi jíst bramborovou kaši?",
-            "hr": "Smiju li psi jesti pire od krumpira?"
+            "hr": "Smiju li psi jesti pire od krumpira?",
+            "sv": "Får hundar äta potatismos?"
           },
           "a": {
             "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
@@ -44263,7 +44468,8 @@
             "nl": "Alleen naturel aardappelpuree, in kleine hoeveelheden en zonder boter, melk, zout of kruiden.",
             "pl": "Tylko zwykłe puree, w małych ilościach, bez masła, mleka, soli i przypraw.",
             "cs": "Jen bramborovou kaši bez dalších přísad, v malém množství, bez másla, mléka, soli a koření.",
-            "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina."
+            "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina.",
+            "sv": "Bara potatismos utan tillsatser, i små mängder, utan smör, mjölk, salt eller kryddor."
           }
         },
         {
@@ -44274,7 +44480,8 @@
             "nl": "Mogen honden aardappelschillen eten?",
             "pl": "Czy psy mogą jeść skórki ziemniaków?",
             "cs": "Mohou psi jíst bramborové slupky?",
-            "hr": "Smiju li psi jesti koru krumpira?"
+            "hr": "Smiju li psi jesti koru krumpira?",
+            "sv": "Får hundar äta potatisskal?"
           },
           "a": {
             "en": "Yes, potato skins are okay too, but not if they are green.",
@@ -44283,7 +44490,8 @@
             "nl": "Aardappelschillen zijn ook prima, maar niet als ze groen zijn.",
             "pl": "Tak, skórki ziemniaków też są w porządku, ale nie wtedy, gdy są zielone.",
             "cs": "Ano, slupky jsou také v pořádku, ale ne zelené.",
-            "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena."
+            "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena.",
+            "sv": "Ja, potatisskal går också bra, men inte om de är gröna."
           }
         },
         {
@@ -44294,7 +44502,8 @@
             "nl": "Is friet oké voor honden?",
             "pl": "Czy frytki są w porządku dla psów?",
             "cs": "Jsou hranolky pro psy v pořádku?",
-            "hr": "Je li pomfrit u redu za pse?"
+            "hr": "Je li pomfrit u redu za pse?",
+            "sv": "Går pommes frites bra för hundar?"
           },
           "a": {
             "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
@@ -44303,7 +44512,8 @@
             "nl": "Bij friet, hashbrowns en andere aardappelgerechten krijgt een hond al snel te veel van het goede. Aardappel is bedoeld als snoepje, niet als maaltijdvervanger.",
             "pl": "Przy frytkach, plackach ziemniaczanych i innych potrawach ziemniaczanych łatwo przesadzić z ilością. Ziemniaki powinny być smakołykami, a nie zamiennikami posiłków.",
             "cs": "U hranolků, bramborových placek a dalších bramborových pokrmů je snadné to přehnat. Brambory mají být pamlskem, ne náhradou jídla.",
-            "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke."
+            "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke.",
+            "sv": "Med pommes frites, hash browns och andra potatisrätter blir det lätt för mycket av det goda. Potatis ska vara en godbit och inte ersätta en måltid."
           }
         }
       ],
@@ -50351,7 +50561,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Tomato plant and green tomatoes",
@@ -50360,7 +50571,8 @@
         "nl": "Tomatenplant en groene tomaten",
         "pl": "Roślina pomidora i zielone pomidory",
         "cs": "Rajčatová rostlina a zelená rajčata",
-        "hr": "Biljka rajčice i zelene rajčice"
+        "hr": "Biljka rajčice i zelene rajčice",
+        "sv": "Tomatplanta och gröna tomater"
       },
       "question": {
         "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
@@ -50369,7 +50581,8 @@
         "nl": "Mogen honden tomatenbladeren, tomatenstengels of groene tomaten eten?",
         "pl": "Czy psy mogą jeść liście i łodygi pomidora albo zielone pomidory?",
         "cs": "Mohou psi jíst rajčatové listy, stonky nebo zelená rajčata?",
-        "hr": "Smiju li psi jesti listove, stabljike ili zelene rajčice?"
+        "hr": "Smiju li psi jesti listove, stabljike ili zelene rajčice?",
+        "sv": "Får hundar äta tomatblad, tomatstjälkar eller gröna tomater?"
       },
       "url_slug": {
         "en": "tomato-plant",
@@ -50378,7 +50591,8 @@
         "nl": "tomatenplant",
         "pl": "roslina-pomidora",
         "cs": "rajcatova-rostlina",
-        "hr": "biljka-rajcice"
+        "hr": "biljka-rajcice",
+        "sv": "tomatplanta"
       },
       "answer": {
         "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
@@ -50387,7 +50601,8 @@
         "nl": "Nee. De groene delen van de tomatenplant, waaronder onrijpe tomaten, bladeren, stengels, ranken en bloemen, zijn giftig voor honden. Je hond mag nooit de bladeren en stengels eten en moet jonge, groene tomaten vermijden.",
         "pl": "Nie. Zielone części rośliny pomidora, w tym niedojrzałe pomidory, liście, łodygi, pędy i kwiaty, są toksyczne dla psów. Twój pies nigdy nie powinien jeść liści ani łodyg, a młodych, zielonych pomidorów powinien unikać.",
         "cs": "Ne. Zelené části rajčatové rostliny, včetně nezralých rajčat, listů, stonků, výhonků a květů, jsou pro psy toxické. Pes by nikdy neměl jíst listy a stonky a měl by se vyhýbat mladým zeleným rajčatům.",
-        "hr": "Ne. Zeleni dijelovi biljke rajčice, uključujući nezrele rajčice, listove, stabljike, vriježe i cvjetove, otrovni su za pse. Pas nikad ne smije jesti listove i stabljike, a mlade zelene rajčice treba izbjegavati."
+        "hr": "Ne. Zeleni dijelovi biljke rajčice, uključujući nezrele rajčice, listove, stabljike, vriježe i cvjetove, otrovni su za pse. Pas nikad ne smije jesti listove i stabljike, a mlade zelene rajčice treba izbjegavati.",
+        "sv": "Nej. De gröna delarna av tomatplantan, bland annat omogna tomater, blad, stjälkar, rankor och blommor, är giftiga för hundar. Hunden ska aldrig äta blad och stjälkar och bör inte äta unga, gröna tomater."
       },
       "why": {
         "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
@@ -50396,7 +50611,8 @@
         "nl": "De bladeren, stengels, ranken en bloemen bevatten tomatine en solanine, natuurlijke afweerstoffen van de plant; groene tomaten bevatten er meer van dan rijpe. De ASPCA noemt de tomatenplant giftig voor honden. Ernstige vergiftiging komt relatief zelden voor en de meeste gevallen verlopen goed als je er snel op reageert, daarom beoordelen wij de tomatenplant als gevaarlijk en niet als giftig.",
         "pl": "Liście, łodygi, pędy i kwiaty zawierają tomatynę i solaninę, naturalne substancje obronne rośliny; zielone pomidory mają ich więcej niż dojrzałe. ASPCA uznaje roślinę pomidora za toksyczną dla psów. Ciężkie zatrucia zdarzają się stosunkowo rzadko, a większość przypadków kończy się dobrze, jeśli zareaguje się szybko, dlatego oceniamy roślinę jako niebezpieczną, a nie toksyczną.",
         "cs": "Listy, stonky, výhonky a květy obsahují tomatin a solanin, přirozené obranné látky rostliny; zelená rajčata jich obsahují víc než zralá. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro psy. Závažná otrava je poměrně vzácná a většina případů odezní, pokud se zasáhne včas, proto ji hodnotíme jako nebezpečnou, nikoli toxickou.",
-        "hr": "Listovi, stabljike, vriježe i cvjetovi sadrže tomatin i solanin, prirodne obrambene tvari biljke; zelene rajčice sadrže ih više od zrelih. ASPCA navodi biljku rajčice kao otrovnu za pse. Teška su trovanja razmjerno rijetka, a većina slučajeva dobro završi ako se brzo reagira, pa je ocjenjujemo kao opasnu, a ne kao otrovnu."
+        "hr": "Listovi, stabljike, vriježe i cvjetovi sadrže tomatin i solanin, prirodne obrambene tvari biljke; zelene rajčice sadrže ih više od zrelih. ASPCA navodi biljku rajčice kao otrovnu za pse. Teška su trovanja razmjerno rijetka, a većina slučajeva dobro završi ako se brzo reagira, pa je ocjenjujemo kao opasnu, a ne kao otrovnu.",
+        "sv": "Bladen, stjälkarna, rankorna och blommorna innehåller tomatin och solanin, växtens naturliga försvarsämnen; gröna tomater innehåller mer av dem än mogna. ASPCA anger att tomatplantan är giftig för hundar. Allvarlig förgiftning är relativt ovanlig, och de flesta fall går över om man agerar snabbt, så vi bedömer den som farlig snarare än giftig."
       },
       "signs": {
         "en": [
@@ -50482,6 +50698,18 @@
           "Proširene zjenice",
           "Bezvoljnost",
           "Usporen ili nepravilan rad srca"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Diarré",
+          "Dregling",
+          "Aptitlöshet",
+          "Muskelsvaghet",
+          "Darrningar",
+          "Nedsatt koordination",
+          "Vidgade pupiller",
+          "Slöhet",
+          "Långsam eller oregelbunden puls"
         ]
       },
       "what_to_do": {
@@ -50491,7 +50719,8 @@
         "nl": "Heeft je hond delen van de tomatenplant of groene tomaten gegeten, bel dan je dierenarts of een vergiftigingenlijn voor dieren voor advies. Vertoont je hond al verschijnselen, neem dan contact op met je dierenarts; het is belangrijk dat je hond zo snel mogelijk wordt onderzocht.",
         "pl": "Jeśli pies zjadł części rośliny pomidora lub zielone pomidory, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt po wskazówki. Jeśli pies ma już objawy, jak najszybciej skontaktuj się z weterynarzem – ważne, żeby został zbadany.",
         "cs": "Pokud pes snědl části rajčatové rostliny nebo zelená rajčata, zavolejte veterináři nebo na toxikologickou linku pro zvířata a požádejte o radu. Pokud už pes příznaky má, obraťte se na veterináře; je důležité nechat ho co nejdříve vyšetřit.",
-        "hr": "Ako je pas pojeo dijelove biljke rajčice ili zelene rajčice, nazovi veterinara ili telefonsku liniju za otrovanja životinja i zatraži savjet. Ako pas već ima znakove trovanja, obrati se veterinaru; važno je da ga veterinar što prije pregleda."
+        "hr": "Ako je pas pojeo dijelove biljke rajčice ili zelene rajčice, nazovi veterinara ili telefonsku liniju za otrovanja životinja i zatraži savjet. Ako pas već ima znakove trovanja, obrati se veterinaru; važno je da ga veterinar što prije pregleda.",
+        "sv": "Om hunden har ätit delar av tomatplantan eller gröna tomater, ring veterinären eller en giftrådgivning för djur för råd. Om hunden redan har symtom, kontakta veterinären; det är viktigt att få den undersökt så snart som möjligt."
       },
       "serving": null,
       "child": {
@@ -50501,7 +50730,8 @@
         "nl": "Tomatenbladeren, tomatenstengels en groene tomaten zijn niet voor honden. Knabbelt een hond aan de plant, vertel het dan meteen aan een volwassene.",
         "pl": "Liście, łodygi i zielone pomidory nie są dla psów. Jeśli pies skubnie roślinę, od razu powiedz dorosłemu.",
         "cs": "Rajčatové listy, stonky a zelená rajčata nejsou pro psy. Když pes rostlinu okusuje, hned to řekni dospělému.",
-        "hr": "Listovi, stabljike i zelene rajčice nisu za pse. Ako pas nagrize biljku, odmah reci odrasloj osobi."
+        "hr": "Listovi, stabljike i zelene rajčice nisu za pse. Ako pas nagrize biljku, odmah reci odrasloj osobi.",
+        "sv": "Tomatblad, tomatstjälkar och gröna tomater är inte för hundar. Om en hund knaprar på plantan, berätta det för en vuxen direkt."
       },
       "faq": [
         {
@@ -50512,7 +50742,8 @@
             "nl": "Zijn rijpe rode tomaten oké?",
             "pl": "Czy dojrzałe, czerwone pomidory są w porządku?",
             "cs": "Jsou zralá červená rajčata v pořádku?",
-            "hr": "Jesu li zrele crvene rajčice u redu?"
+            "hr": "Jesu li zrele crvene rajčice u redu?",
+            "sv": "Är mogna röda tomater okej?"
           },
           "a": {
             "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
@@ -50521,7 +50752,8 @@
             "nl": "Ja. Rijpe, rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven.",
             "pl": "Tak. Dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach.",
             "cs": "Ano. Zralá červená rajčata nejsou pro psy toxická a mohou být občasným pamlskem v malém množství.",
-            "hr": "Da. Zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama."
+            "hr": "Da. Zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama.",
+            "sv": "Ja. Mogna, röda tomater är inte giftiga för hundar och kan vara en godbit då och då i små mängder."
           }
         },
         {
@@ -50532,7 +50764,8 @@
             "nl": "Hoe houd ik mijn hond veilig in de moestuin?",
             "pl": "Jak zadbać o bezpieczeństwo psa w ogródku warzywnym?",
             "cs": "Jak ochráním psa na zeleninové zahradě?",
-            "hr": "Kako zaštititi psa u povrtnjaku?"
+            "hr": "Kako zaštititi psa u povrtnjaku?",
+            "sv": "Hur håller jag hunden säker i grönsaksodlingen?"
           },
           "a": {
             "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
@@ -50541,7 +50774,8 @@
             "nl": "Zorg voor een afscheiding of zet een hek om de tuin, en houd er rekening mee dat groene tomaten die van de plant vallen honden kunnen aantrekken.",
             "pl": "Postaw przy grządkach barierki albo ogrodź ogródek i pamiętaj, że zielone pomidory spadające z krzaka mogą przyciągać psy.",
             "cs": "Zajistěte zábrany nebo zahradu oplotte a pamatujte, že zelená rajčata, která spadnou z rostliny, mohou psy lákat.",
-            "hr": "Postavi fizičke prepreke ili ogradi vrt i imaj na umu da zelene rajčice koje padnu s biljke mogu privući pse."
+            "hr": "Postavi fizičke prepreke ili ogradi vrt i imaj na umu da zelene rajčice koje padnu s biljke mogu privući pse.",
+            "sv": "Sätt upp hinder eller staket runt odlingen, och kom ihåg att gröna tomater som faller av plantan kan locka hundar."
           }
         }
       ],
@@ -50589,7 +50823,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Tomatoes",
@@ -50598,7 +50833,8 @@
         "nl": "Tomaten",
         "pl": "Pomidory",
         "cs": "Rajčata",
-        "hr": "Rajčice"
+        "hr": "Rajčice",
+        "sv": "Tomater"
       },
       "question": {
         "en": "Can dogs eat tomatoes?",
@@ -50607,7 +50843,8 @@
         "nl": "Mogen honden tomaten eten?",
         "pl": "Czy psy mogą jeść pomidory?",
         "cs": "Mohou psi jíst rajčata?",
-        "hr": "Smiju li psi jesti rajčice?"
+        "hr": "Smiju li psi jesti rajčice?",
+        "sv": "Får hundar äta tomater?"
       },
       "url_slug": {
         "en": "tomatoes",
@@ -50616,7 +50853,8 @@
         "nl": "tomaten",
         "pl": "pomidory",
         "cs": "rajcata",
-        "hr": "rajcice"
+        "hr": "rajcice",
+        "sv": "tomater"
       },
       "answer": {
         "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
@@ -50625,7 +50863,8 @@
         "nl": "Ja, rijpe rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven. Groene, onrijpe tomaten en de groene delen van de plant zijn een ander verhaal: vermijd die.",
         "pl": "Tak, dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach. Zielone, niedojrzałe pomidory i zielone części rośliny to co innego i należy ich unikać.",
         "cs": "Ano, zralá červená rajčata nejsou pro psy toxická a mohou být občasným pamlskem v malém množství. Zelená, nezralá rajčata a zelené části rostliny jsou jiná věc a je třeba se jim vyhnout.",
-        "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati."
+        "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati.",
+        "sv": "Ja, mogna röda tomater är inte giftiga för hundar och kan ges som godbit då och då i små mängder. Gröna, omogna tomater och växtens gröna delar är en annan sak och bör undvikas."
       },
       "why": {
         "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -50634,7 +50873,8 @@
         "nl": "De belangrijkste giftige stoffen in tomaten zijn tomatine en solanine, die vooral in de groene delen van de plant zitten. Naarmate een tomaat rijpt en rood wordt, daalt het gehalte aanzienlijk, daarom worden rijpe tomaten als niet giftig beschouwd. Producten op basis van tomaat bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
         "pl": "Głównymi związkami toksycznymi w pomidorach są tomatyna i solanina, występujące głównie w zielonych częściach rośliny. Gdy pomidor dojrzewa i robi się czerwony, ich poziom znacznie spada, dlatego dojrzałe pomidory uważa się za nietoksyczne. Produkty pomidorowe często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać.",
         "cs": "Hlavní toxické látky v rajčatech jsou tomatin a solanin, které se nacházejí hlavně v zelených částech rostliny. Jak rajče zraje a červená, jejich množství výrazně klesá, proto se zralá rajčata považují za netoxická. Výrobky na bázi rajčat často obsahují česnek, cibuli, sůl nebo cukr, které mohou psům škodit nebo je dráždit.",
-        "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse."
+        "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
+        "sv": "De viktigaste giftiga ämnena i tomater är tomatin och solanin, som främst finns i växtens gröna delar. När tomaten mognar och blir röd sjunker halterna kraftigt, så mogna tomater anses vara ogiftiga. Produkter som är gjorda på tomat innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar."
       },
       "signs": null,
       "what_to_do": {
@@ -50644,7 +50884,8 @@
         "nl": "Begin met kleine hoeveelheden om te zien hoe je hond reageert en geef tomaat alleen met mate en onder toezicht. Denk je dat je hond veel tomaten of de tomatenplant zelf heeft gegeten, bel dan je dierenarts voor advies.",
         "pl": "Zacznij od małych ilości, żeby zobaczyć, jak reaguje twój pies, i dawaj pomidory tylko w umiarkowanej ilości, pod nadzorem. Jeśli uważasz, że pies zjadł dużo pomidorów albo samą roślinę pomidora, zadzwoń do weterynarza po wskazówki.",
         "cs": "Začněte malým množstvím, abyste viděli, jak pes reaguje, a rajčata dávejte jen v mírném množství a pod dohledem. Pokud si myslíte, že pes snědl velké množství rajčat nebo samotnou rajčatovou rostlinu, zavolejte veterináři a požádejte o radu.",
-        "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet."
+        "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet.",
+        "sv": "Börja med små mängder för att se hur hunden reagerar, och ge bara tomat med måtta och under uppsikt. Om du tror att hunden har ätit en stor mängd tomater eller själva tomatplantan, ring veterinären för råd."
       },
       "serving": {
         "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
@@ -50653,7 +50894,8 @@
         "nl": "Alleen rijp, rood en naturel. Haal alle groene delen weg en snijd het vruchtvlees in blokjes; snijd cherrytomaatjes in kleine stukjes. Nooit tomaten die met zout, knoflook, ui of andere toevoegingen zijn gekruid.",
         "pl": "Tylko dojrzałe, czerwone, bez dodatków. Usuń wszystkie zielone części i pokrój miąższ w kostkę; pomidorki koktajlowe pokrój na małe kawałki. Nigdy nie podawaj pomidorów doprawionych solą, czosnkiem, cebulą ani innymi dodatkami.",
         "cs": "Jen zralá, červená a bez dalších přísad. Odstraňte všechny zelené části a dužinu nakrájejte na kostičky; cherry rajčata rozkrájejte na malé kousky. Nikdy rajčata dochucená solí, česnekem, cibulí ani jinými přísadami.",
-        "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima."
+        "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima.",
+        "sv": "Bara mogna, röda tomater utan tillsatser. Ta bort alla gröna delar och skär tomatköttet i tärningar; skär körsbärstomater i små bitar. Aldrig tomater som har kryddats med salt, vitlök, lök eller andra tillsatser."
       },
       "child": {
         "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
@@ -50662,7 +50904,8 @@
         "nl": "Honden mogen een beetje rijpe rode tomaat. Een volwassene haalt de groene stukjes eraf en snijdt hem klein.",
         "pl": "Psy mogą dostać odrobinę dojrzałego, czerwonego pomidora. Dorosły usuwa zielone części i kroi go na małe kawałki.",
         "cs": "Pejsek může dostat trochu zralého červeného rajčete. Dospělý odstraní zelené části a nakrájí je na malé kousky.",
-        "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće."
+        "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće.",
+        "sv": "Hundar kan få lite mogen röd tomat. En vuxen tar bort de gröna delarna och skär den i småbitar."
       },
       "faq": [
         {
@@ -50673,7 +50916,8 @@
             "nl": "Mogen honden groene tomaten eten?",
             "pl": "Czy psy mogą jeść zielone pomidory?",
             "cs": "Mohou psi jíst zelená rajčata?",
-            "hr": "Smiju li psi jesti zelene rajčice?"
+            "hr": "Smiju li psi jesti zelene rajčice?",
+            "sv": "Får hundar äta gröna tomater?"
           },
           "a": {
             "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
@@ -50682,7 +50926,8 @@
             "nl": "Nee. Groene tomaten bevatten meer tomatine en solanine dan rijpe, en van het eten van een onrijpe tomaat kan een hond verschijnselen van tomatinevergiftiging krijgen.",
             "pl": "Nie. Zielone pomidory zawierają więcej tomatyny i solaniny niż dojrzałe, a zjedzenie niedojrzałego pomidora może wywołać objawy zatrucia tomatyną.",
             "cs": "Ne. Zelená rajčata obsahují víc tomatinu a solaninu než zralá a po snědení nezralého rajčete se mohou objevit příznaky otravy tomatinem.",
-            "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom."
+            "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom.",
+            "sv": "Nej. Gröna tomater innehåller mer tomatin och solanin än mogna, och om en hund äter en omogen tomat kan det ge symtom på tomatinförgiftning."
           }
         },
         {
@@ -50693,7 +50938,8 @@
             "nl": "Mogen honden tomatensaus of ketchup eten?",
             "pl": "Czy psy mogą jeść sos pomidorowy lub keczup?",
             "cs": "Mohou psi jíst rajčatovou omáčku nebo kečup?",
-            "hr": "Smiju li psi jesti umak od rajčice ili kečap?"
+            "hr": "Smiju li psi jesti umak od rajčice ili kečap?",
+            "sv": "Får hundar äta tomatsås eller ketchup?"
           },
           "a": {
             "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -50702,7 +50948,8 @@
             "nl": "Dat kun je beter vermijden. Producten op basis van tomaat, zoals saus, ketchup en soep, bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
             "pl": "Lepiej ich unikać. Produkty pomidorowe, takie jak sos, keczup czy zupa, często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać.",
             "cs": "Raději ne. Výrobky na bázi rajčat, jako omáčka, kečup a polévka, často obsahují česnek, cibuli, sůl nebo cukr, které mohou psům škodit nebo je dráždit.",
-            "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse."
+            "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
+            "sv": "Det är bäst att undvika dem. Tomatprodukter som sås, ketchup och soppa innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar."
           }
         },
         {
@@ -50713,7 +50960,8 @@
             "nl": "Ik kweek tomaten. Waar moet ik op letten?",
             "pl": "Uprawiam pomidory. Na co mam uważać?",
             "cs": "Pěstuji rajčata. Na co si mám dát pozor?",
-            "hr": "Uzgajam rajčice. Na što moram paziti?"
+            "hr": "Uzgajam rajčice. Na što moram paziti?",
+            "sv": "Jag odlar tomater. Vad ska jag tänka på?"
           },
           "a": {
             "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
@@ -50722,7 +50970,8 @@
             "nl": "Groene tomaten die van de plant vallen, kunnen honden aantrekken. Zet een hek om de tuin, zodat je hond niet van de planten kan proeven.",
             "pl": "Zielone pomidory, które spadną z krzaka, mogą przyciągać psy. Ogrodź ogród, żeby pies nie mógł podjadać roślin.",
             "cs": "Zelená rajčata, která spadnou z rostliny, mohou psy lákat. Zahradu oplotte, aby pes nemohl rostliny ochutnávat.",
-            "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke."
+            "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke.",
+            "sv": "Gröna tomater som faller av plantan kan locka hundar. Sätt upp staket runt odlingen så att hunden inte kan smaka på plantorna."
           }
         }
       ],
@@ -51793,7 +52042,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Wild mushrooms",
@@ -51802,7 +52052,8 @@
         "nl": "Wilde paddenstoelen",
         "pl": "Dzikie grzyby",
         "cs": "Divoké houby",
-        "hr": "Divlje gljive"
+        "hr": "Divlje gljive",
+        "sv": "Vilda svampar"
       },
       "question": {
         "en": "Can dogs eat wild mushrooms?",
@@ -51811,7 +52062,8 @@
         "nl": "Mogen honden wilde paddenstoelen eten?",
         "pl": "Czy psy mogą jeść dzikie grzyby?",
         "cs": "Mohou psi jíst divoké houby?",
-        "hr": "Smiju li psi jesti divlje gljive?"
+        "hr": "Smiju li psi jesti divlje gljive?",
+        "sv": "Får hundar äta vilda svampar?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
@@ -51820,7 +52072,8 @@
         "nl": "wilde-paddenstoelen",
         "pl": "dzikie-grzyby",
         "cs": "divoke-houby",
-        "hr": "divlje-gljive"
+        "hr": "divlje-gljive",
+        "sv": "vilda-svampar"
       },
       "answer": {
         "en": "No. Treat every mushroom your dog finds outside as toxic. Toxic and non-toxic mushrooms are hard to tell apart, and the toxic ones are extremely dangerous. If your dog ate a wild mushroom, contact your vet immediately.",
@@ -51829,7 +52082,8 @@
         "nl": "Nee. Beschouw elke paddenstoel die je hond buiten vindt als giftig. Giftige en niet-giftige paddenstoelen zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk. Heeft je hond een wilde paddenstoel gegeten, neem dan meteen contact op met je dierenarts.",
         "pl": "Nie. Traktuj każdego grzyba, którego pies znajdzie na dworze, jak toksycznego. Trudno odróżnić grzyby toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne. Jeśli twój pies zjadł dzikiego grzyba, od razu skontaktuj się z weterynarzem.",
         "cs": "Ne. Každou houbu, kterou pes venku najde, považujte za toxickou. Toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné. Pokud pes snědl divokou houbu, okamžitě kontaktujte veterináře.",
-        "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru."
+        "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru.",
+        "sv": "Nej. Behandla varje svamp som hunden hittar utomhus som giftig. Giftiga och ogiftiga svampar är svåra att skilja åt, och de giftiga är extremt farliga. Om hunden har ätit en vild svamp, kontakta veterinären direkt."
       },
       "why": {
         "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
@@ -51838,7 +52092,8 @@
         "nl": "Er bestaan duizenden paddenstoelsoorten en veel ervan kunnen honden ernstig ziek maken. Sommige veroorzaken licht braken of diarree, andere kunnen leiden tot lever- en nierfalen of toevallen. De verschijnselen hangen af van de soort en het is niet altijd mogelijk te weten welke paddenstoel je hond heeft gegeten.",
         "pl": "Istnieją tysiące gatunków grzybów i wiele z nich może poważnie rozchorować psa. Niektóre wywołują łagodne wymioty lub biegunkę, a inne mogą prowadzić do niewydolności wątroby i nerek lub drgawek. Objawy zależą od gatunku i nie zawsze da się ustalić, którego grzyba zjadł pies.",
         "cs": "Existují tisíce druhů hub a mnohé mohou psům způsobit vážné onemocnění. Některé vyvolají mírné zvracení nebo průjem, jiné mohou vést k selhání jater a ledvin nebo ke křečím. Příznaky závisejí na druhu houby a ne vždy lze zjistit, kterou houbu pes snědl.",
-        "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo."
+        "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo.",
+        "sv": "Det finns tusentals svamparter, och många kan göra hundar allvarligt sjuka. Vissa ger lindriga kräkningar eller diarré, medan andra kan leda till lever- och njursvikt eller kramper. Symtomen beror på arten, och det går inte alltid att veta vilken svamp hunden har ätit."
       },
       "signs": {
         "en": [
@@ -51924,6 +52179,18 @@
           "Napadaji",
           "Bolovi u trbuhu",
           "Žutica"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Diarré",
+          "Dregling",
+          "Svaghet",
+          "Slöhet eller dåsighet",
+          "Förvirring eller vinglig gång",
+          "Darrningar",
+          "Kramper",
+          "Magsmärtor",
+          "Gulsot"
         ]
       },
       "what_to_do": {
@@ -51933,7 +52200,8 @@
         "nl": "Neem meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren, ook voordat er verschijnselen zijn. Kun je dat, neem dan een monster van de paddenstoel mee, verpakt in een vochtig stuk keukenpapier in een papieren zak. Dat helpt de dierenarts verder.",
         "pl": "Od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz, zabierz próbkę grzyba, owiniętą wilgotnym ręcznikiem papierowym i włożoną do papierowej torby, żeby ułatwić weterynarzowi rozpoznanie.",
         "cs": "Okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost, i když se ještě neobjevily žádné příznaky. Pokud můžete, vezměte s sebou vzorek houby zabalený do vlhké papírové utěrky v papírovém sáčku, což veterináři pomůže.",
-        "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći."
+        "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći.",
+        "sv": "Kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt, även innan några symtom har visat sig. Om du kan, ta med ett prov av svampen, inslaget i ett fuktigt hushållspapper och lagt i en papperspåse, så att veterinären lättare kan identifiera den."
       },
       "serving": null,
       "child": {
@@ -51943,7 +52211,8 @@
         "nl": "Paddenstoelen buiten zijn niet voor honden. Zie je een hond er een eten, vertel het dan meteen aan een volwassene.",
         "pl": "Grzyby z dworu nie są dla psów. Jeśli zobaczysz, że pies zjada grzyba, od razu powiedz dorosłemu.",
         "cs": "Houby z venku nejsou pro psy. Když uvidíš, že pes nějakou jí, hned to řekni dospělému.",
-        "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi."
+        "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi.",
+        "sv": "Svampar som växer utomhus är inte för hundar. Om du ser en hund äta en, berätta det för en vuxen direkt."
       },
       "faq": [
         {
@@ -51954,7 +52223,8 @@
             "nl": "Moet ik afwachten of mijn hond ziek wordt?",
             "pl": "Czy mam czekać, żeby zobaczyć, czy pies zachoruje?",
             "cs": "Mám počkat, jestli pes onemocní?",
-            "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?"
+            "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?",
+            "sv": "Ska jag vänta och se om hunden blir sjuk?"
           },
           "a": {
             "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
@@ -51963,7 +52233,8 @@
             "nl": "Nee. Wacht niet tot er verschijnselen komen. Snel reageren is het beste wat je voor je hond kunt doen.",
             "pl": "Nie. Nie czekaj, aż pojawią się objawy. Szybka reakcja to najlepsze, co możesz zrobić dla swojego psa.",
             "cs": "Ne. Nečekejte, až se příznaky objeví. Rychlá reakce je to nejlepší, co pro svého psa můžete udělat.",
-            "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa."
+            "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa.",
+            "sv": "Nej. Vänta inte på att symtom ska utvecklas. Att agera snabbt är det bästa du kan göra för hunden."
           }
         },
         {
@@ -51974,7 +52245,8 @@
             "nl": "Hoe kan ik het voorkomen?",
             "pl": "Jak temu zapobiec?",
             "cs": "Jak tomu předejít?",
-            "hr": "Kako to spriječiti?"
+            "hr": "Kako to spriječiti?",
+            "sv": "Hur kan jag förebygga det?"
           },
           "a": {
             "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
@@ -51983,7 +52255,8 @@
             "nl": "Ga ervan uit dat elke paddenstoel die je hond vindt onveilig is en houd je hond in de gaten als hij buiten is.",
             "pl": "Zakładaj, że każdy grzyb, który pies znajdzie, jest niebezpieczny, i miej psa na oku, gdy jest na dworze.",
             "cs": "Každou houbu, kterou pes najde, považujte za nebezpečnou a mějte psa venku na očích.",
-            "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani."
+            "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani.",
+            "sv": "Utgå från att varje svamp hunden hittar är osäker, och håll ögonen på hunden när den är ute."
           }
         },
         {
@@ -51994,7 +52267,8 @@
             "nl": "Zijn champignons uit de winkel anders?",
             "pl": "Czy grzyby ze sklepu są inne?",
             "cs": "Liší se houby z obchodu?",
-            "hr": "Razlikuju li se gljive iz trgovine?"
+            "hr": "Razlikuju li se gljive iz trgovine?",
+            "sv": "Är svamp från affären annorlunda?"
           },
           "a": {
             "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
@@ -52003,7 +52277,8 @@
             "nl": "Ja. Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden, al hebben honden ze niet nodig.",
             "pl": "Tak. Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów, choć psy ich nie potrzebują.",
             "cs": "Ano. Houby bez dalších přísad z velkých obchodů s potravinami mohou být pro psy obecně bezpečné, i když je psi nepotřebují.",
-            "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne."
+            "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne.",
+            "sv": "Ja. Svamp utan tillsatser från stora livsmedelsbutiker kan i allmänhet vara säker för hundar, även om hundar inte behöver den."
           }
         }
       ],
