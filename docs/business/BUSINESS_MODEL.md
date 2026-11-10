@@ -96,6 +96,13 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 |---|---|
 | P11 | **7-dnevnega brezplačnega preizkusa izziva ni več.** Brezplačni mešanček je brezplačni preizkus PetPrepa; **12-tedenski izziv se začne z nakupom** (49,99 € na psa, enkratno, brez naročnine). Pes na izzivu čaka zaklenjen od rojstva (podpis pogodbe), dokler starš ne kupi; kupi lahko tudi prej. 12 tednov začne teči ob nakupu. V produkciji velja od 8. 10. 2026 (beta, ~20 testerjev plačuje v sandboxu). **Posledica za trženje:** spletna stran, opisi v trgovinah in vsi materiali, ki obljubljajo »7 dni brezplačno«, se morajo popraviti (seznam v `HANDOFF.md`). |
 
+### Sprejete (David, 10. 11. 2026 — *načrt*, še ni zgrajeno; podrobno [`FREE_PET_UPGRADE_SPEC.md`](../product/FREE_PET_UPGRADE_SPEC.md))
+
+| # | Odločitev |
+|---|---|
+| U1–U3 | **Nadgradnja brezplačnega ljubljenčka v izziv** *(načrt, PR 1 / ROADMAP M6-U01)*: starš bo lahko mešančka ali domačo mačko, za katerega otrok že skrbi, nadgradil v 12-tedenski izziv **z istim ljubljenčkom** (ime, videz, starost, naučeni ukazi ostanejo). **49,99 €, isti izdelek** `petprep_challenge_12w` — v trgovinah ni novega izdelka. 12 tednov teče od nakupa; dnevi pred nakupom ne štejejo v oceno in certifikat. |
+| U4–U5 | *(načrt, PR 2 / M6-U02)* Izbira »mešanček + izziv« že ob ustvarjanju (samo nove aplikacije; nadomesti pravilo M5-F03 »izziv samo s plačljivo pasmo«) in en opomnik staršu 7. dan. |
+
 ### Razmejitev brezplačno / plačljivo (potrdil David 7. 10. 2026, P4)
 
 | | Mešanček (free, za vedno — brezplačni preizkus) | 12-tedenski izziv (49,99 €, začne se z nakupom) |
@@ -110,6 +117,8 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 | Bonusi (Real Cost kalkulator, Breed Matchmaker, fizična licenca) | kalkulator kot lead magnet na webu | ✓ |
 | Breed Downgrade reset | ✓ | ✓ |
 | Second Chance reset (19,99 €) | – | po MVP |
+
+> **Načrt — nadgradnja istega ljubljenčka (David 10. 11. 2026, še ni zgrajeno):** brezplačni mešanček ali domača mačka bo lahko prešel iz levega stolpca v desnega **z istim ljubljenčkom** — 49,99 €, isti izdelek, 12 tednov od nakupa ([`FREE_PET_UPGRADE_SPEC.md`](../product/FREE_PET_UPGRADE_SPEC.md), PR 1 / M6-U01). **Zakaj je to pomembno:** otrok se na brezplačnega ljubljenčka naveže (ime, videz, naučeni ukazi, stvari iz »Želja«), zato je nadgradnja naravna točka konverzije — danes mora starš za izziv začeti z drugo, pasemsko živaljo, in brezplačni ljubljenček je slepa ulica. Konverzija nadgradnje še ni izmerjena; stran »Lijak« jo bo štela ločeno od nakupov z novim ljubljenčkom (VALIDATION_PLAN §4.1). Do izdaje velja tabela zgoraj; spletna stran in opisi v trgovinah se spremenijo šele, ko je funkcija v aplikaciji uporabnikov.
 
 Tehnično (RevenueCat, **odločeno 7. 10. 2026, P1**): produkt **consumable** `petprep_challenge_12w` (49,99 €) — vsak nakup postane »kredit izziva« družine na strežniku, ki se dodeli enemu psu (`challenge_credits`, M3-11). Brezplačnega preizkusa izziva od 8. 10. 2026 ni (P11; prej strežniški `pets.trial_ends_at` = rojstvo + 7 dni, zdaj = rojstvo). Naročnina ni izbrana.
 
