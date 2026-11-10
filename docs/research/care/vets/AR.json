@@ -2,9 +2,21 @@
   "country": "AR",
   "checked": "2026-11-09",
   "sources": [
-    { "name": "Universidad de Buenos Aires — Red de Hospitales", "url": "https://uba.ar/redhospitales", "note": "Official UBA page; Hospital Escuela de Veterinaria entry (address, phone, hours)." },
-    { "name": "Ministerio de Salud — Directorio RedArTox 2015", "url": "https://www.argentina.gob.ar/sites/default/files/0000001060cnt-directorio_redartox_2015.pdf", "note": "Official national poison-centre directory (2015 edition); lists the veterinary toxicology service SNITV (weekdays 8-18 h)." },
-    { "name": "Universidad Nacional del Litoral — news", "url": "https://www.unl.edu.ar/noticias/news/view/el_área_pequeños_animales_atendió_más_de_700_casos", "note": "University article from 2015 describing the small-animal area of the FCV hospital." }
+    {
+      "name": "Universidad de Buenos Aires — Red de Hospitales",
+      "url": "https://uba.ar/redhospitales",
+      "note": "Official UBA page; Hospital Escuela de Veterinaria entry (address, phone, hours)."
+    },
+    {
+      "name": "Ministerio de Salud — Directorio RedArTox 2015",
+      "url": "https://www.argentina.gob.ar/sites/default/files/0000001060cnt-directorio_redartox_2015.pdf",
+      "note": "Official national poison-centre directory (2015 edition); lists the veterinary toxicology service SNITV (weekdays 8-18 h)."
+    },
+    {
+      "name": "Universidad Nacional del Litoral — news",
+      "url": "https://www.unl.edu.ar/noticias/news/view/el_área_pequeños_animales_atendió_más_de_700_casos",
+      "note": "University article from 2015 describing the small-animal area of the FCV hospital."
+    }
   ],
   "entries": [
     {
@@ -20,7 +32,10 @@
       "url": "https://uba.ar/redhospitales",
       "source_url": "https://uba.ar/redhospitales",
       "checked": "2026-11-09",
-      "note": "Page opened 2026-11-09. Says 'Guardia Quirurgica' exists among services but gives no hours; equine hospital has no on-call. fvet.uba.ar itself could not be fetched (PROVENANCE_REQUIRED)."
+      "note": "Page opened 2026-11-09. Says 'Guardia Quirurgica' exists among services but gives no hours; equine hospital has no on-call. fvet.uba.ar itself could not be fetched (PROVENANCE_REQUIRED).",
+      "duty_i18n": {
+        "de": "Kleintierklinik, geöffnet Mo–Fr 9–19 Uhr. Ein chirurgischer Bereitschaftsdienst wird erwähnt, seine Zeiten sind nicht veröffentlicht. Kein Notdienst rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -35,7 +50,10 @@
       "url": "https://www.unl.edu.ar/noticias/news/view/el_área_pequeños_animales_atendió_más_de_700_casos",
       "source_url": "https://www.unl.edu.ar/noticias/news/view/el_área_pequeños_animales_atendió_más_de_700_casos",
       "checked": "2026-11-09",
-      "note": "Source is a university news article dated 2015 (possibly outdated). Article: phones 420639 / 421037 int. 111-357 (8-17 h); emergencies int. 111-362; emergencies Mon-Fri 12-14 and 17-8, weekends and holidays; 'las 24 horas solo se atienden urgencias'. Not a plain '24 h' claim, so emergency_24h left false. Verify before relying."
+      "note": "Source is a university news article dated 2015 (possibly outdated). Article: phones 420639 / 421037 int. 111-357 (8-17 h); emergencies int. 111-362; emergencies Mon-Fri 12-14 and 17-8, weekends and holidays; 'las 24 horas solo se atienden urgencias'. Not a plain '24 h' claim, so emergency_24h left false. Verify before relying.",
+      "duty_i18n": {
+        "de": "Sprechzeiten Mo–Fr 10–12 und 14–17 Uhr. Notfälle werden außerhalb dieser Zeiten versorgt, auch nachts, am Wochenende und an Feiertagen; bitte vorher anrufen."
+      }
     },
     {
       "kind": "poison_line",
@@ -49,7 +67,10 @@
       "source_url": "https://www.argentina.gob.ar/sites/default/files/0000001060cnt-directorio_redartox_2015.pdf",
       "url": "https://www.argentina.gob.ar/sites/default/files/0000001060cnt-directorio_redartox_2015.pdf",
       "checked": "2026-11-09",
-      "note": "From the 2015 national RedArTox directory (opened 2026-11-09); SNITV's own page was not found via search. Phone and hours need re-verification."
+      "note": "From the 2015 national RedArTox directory (opened 2026-11-09); SNITV's own page was not found via search. Phone and hours need re-verification.",
+      "duty_i18n": {
+        "de": "Giftinformationsdienst für Tiere, werktags 8–18 Uhr. Nicht rund um die Uhr erreichbar."
+      }
     }
   ],
   "notes": "Partial run. WebFetch only opened URLs that appeared in search results (PROVENANCE_REQUIRED otherwise) and search returned almost no Argentine clinic own-sites. 61 clinics advertised as 24 h (CABA/GBA/La Plata) were found only on the aggregator veterinarias.com.ar/urgencias-24-hs.html, so none were added (aggregator may not be the sole source). Candidates still to confirm from their own sites: Centro Medico Veterinario Belgrano (Amenabar 2214), Veterinaria del Libertador, Centro Medico Veterinario Buenos Aires (Av. Boedo 840), Hospital Veterinario del Oeste, Hospivet (Martinez), HV Hospital Veterinario (Olivos), Hospital Veterinario Lanus/Temperley/Adrogue/Ezeiza, Sanatorio Veterinario Glew. Tupungato (Mendoza) has a voluntary 24 h on-call rota (published monthly at tupungato.gov.ar/veterinarias-turno/; page could not be opened). Cordoba municipal emergency veterinary hospital (Corrientes 3086) and Rosario Hospital Animal (Av. Francia 1900, 8-20 h, 24 h planned) are not 24 h yet. Bariloche: no emergency vet service reported (news 2026-02). Mar del Plata, Salta, Cordoba private clinics: nothing usable found."

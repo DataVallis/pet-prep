@@ -33,7 +33,8 @@
       "duty": "Emergency service available 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "sl": "Nujna pomoč je na voljo 24 ur na dan, 7 dni v tednu.",
-        "hr": "Hitna služba radi 24 sata dnevno, 7 dana u tjednu."
+        "hr": "Hitna služba radi 24 sata dnevno, 7 dana u tjednu.",
+        "de": "Notdienst täglich rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://vethospitaltirana.com",

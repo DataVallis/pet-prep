@@ -77,7 +77,11 @@
       "address": "F. R. Kreutzwaldi 62, Tartu",
       "phone": "+372 731 3224",
       "emergency_24h": true,
-      "duty": "Emergency care 24/7. Phone 09:00-20:00 +372 731 3224, night 20:00-09:00 +372 503 3878 (on-duty vet). Call before coming; critical patients are seen first and you may be referred elsewhere if the clinic is full.", "duty_i18n": {"hr": "Hitna pomoć 24/7. Telefon 09:00–20:00 +372 731 3224, noću 20:00–09:00 +372 503 3878 (dežurni veterinar). Nazovi unaprijed; najteži slučajevi imaju prednost, a ako je klinika puna, mogu te uputiti drugamo."},
+      "duty": "Emergency care 24/7. Phone 09:00-20:00 +372 731 3224, night 20:00-09:00 +372 503 3878 (on-duty vet). Call before coming; critical patients are seen first and you may be referred elsewhere if the clinic is full.",
+      "duty_i18n": {
+        "hr": "Hitna pomoć 24/7. Telefon 09:00–20:00 +372 731 3224, noću 20:00–09:00 +372 503 3878 (dežurni veterinar). Nazovi unaprijed; najteži slučajevi imaju prednost, a ako je klinika puna, mogu te uputiti drugamo.",
+        "de": "Notdienst rund um die Uhr. Telefon 09.00–20.00 Uhr +372 731 3224, nachts 20.00–09.00 Uhr +372 503 3878 (diensthabender Tierarzt). Bitte vor dem Besuch anrufen; kritische Patienten werden zuerst behandelt, bei voller Klinik kann an eine andere Klinik verwiesen werden."
+      },
       "small_animals": true,
       "url": "https://loomakliinik.emu.ee/en",
       "source_url": "https://loomakliinik.emu.ee/en/emergency-care",
@@ -93,7 +97,11 @@
       "address": "Rannamõisa tee 8, Tallinn",
       "phone": "+372 602 0888",
       "emergency_24h": true,
-      "duty": "Pet emergency clinic, open 24 hours every day including public holidays, with a vet and assistant on site. Phone +372 602 0888 or short number 15222. Call ahead because doors are locked after regular hours; a 50% surcharge applies to out-of-hours emergency visits.", "duty_i18n": {"hr": "Hitna klinika za ljubimce, otvorena 24 sata svaki dan, uključujući blagdane, s veterinarom i asistentom u klinici. Telefon +372 602 0888 ili kratki broj 15222. Nazovi unaprijed jer su vrata nakon redovnog radnog vremena zaključana; za hitne posjete izvan radnog vremena naplaćuje se doplatak od 50 %."},
+      "duty": "Pet emergency clinic, open 24 hours every day including public holidays, with a vet and assistant on site. Phone +372 602 0888 or short number 15222. Call ahead because doors are locked after regular hours; a 50% surcharge applies to out-of-hours emergency visits.",
+      "duty_i18n": {
+        "hr": "Hitna klinika za ljubimce, otvorena 24 sata svaki dan, uključujući blagdane, s veterinarom i asistentom u klinici. Telefon +372 602 0888 ili kratki broj 15222. Nazovi unaprijed jer su vrata nakon redovnog radnog vremena zaključana; za hitne posjete izvan radnog vremena naplaćuje se doplatak od 50 %.",
+        "de": "Notfallklinik für Haustiere, täglich 24 Stunden geöffnet, auch an Feiertagen, mit Tierarzt und Assistenz vor Ort. Telefon +372 602 0888 oder Kurznummer 15222. Bitte vorher anrufen, da die Türen nach den regulären Zeiten verschlossen sind; für Notfallbesuche außerhalb der Öffnungszeiten gilt ein Zuschlag von 50 %."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rannamoisa",
       "source_url": "https://www.petcity.ee/petcity-rannamoisa",
@@ -109,7 +117,11 @@
       "address": "Mustamäe tee 44/2, 10621 Tallinn",
       "phone": "+372 502 3191",
       "emergency_24h": true,
-      "duty": "Animal emergency clinic open 24 hours, 7 days a week; call ahead on +372 502 3191. Out-of-hours visits carry a surcharge.", "duty_i18n": {"hr": "Hitna veterinarska klinika otvorena 24 sata, 7 dana u tjednu; nazovi unaprijed na +372 502 3191. Za posjete izvan radnog vremena naplaćuje se doplatak."},
+      "duty": "Animal emergency clinic open 24 hours, 7 days a week; call ahead on +372 502 3191. Out-of-hours visits carry a surcharge.",
+      "duty_i18n": {
+        "hr": "Hitna veterinarska klinika otvorena 24 sata, 7 dana u tjednu; nazovi unaprijed na +372 502 3191. Za posjete izvan radnog vremena naplaćuje se doplatak.",
+        "de": "Notfallklinik für Tiere, täglich rund um die Uhr geöffnet; bitte vorher unter +372 502 3191 anrufen. Für Besuche außerhalb der Öffnungszeiten wird ein Zuschlag berechnet."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
@@ -125,7 +137,11 @@
       "address": "Västriku 2b, 11315 Tallinn",
       "phone": "+372 655 3366",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Nazovi unaprijed za radno vrijeme."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Nazovi unaprijed za radno vrijeme.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "http://www.vastriku.ee",
       "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
@@ -140,7 +156,11 @@
       "address": "Sõle 3, 10614 Tallinn",
       "phone": "+372 641 3110",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Nazovi unaprijed za radno vrijeme."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Nazovi unaprijed za radno vrijeme.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "http://www.toometikliinik.ee",
       "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
@@ -155,7 +175,11 @@
       "address": "Kalda tee 41, 50707 Tartu",
       "phone": "+372 525 8012",
       "emergency_24h": true,
-      "duty": "Open 24 hours, 7 days a week for emergencies (appointments Mon-Fri 09:00-19:00). Phone ahead before arriving at the emergency department so the team can prepare.", "duty_i18n": {"hr": "Hitni prijem otvoren 24 h, 7 dana u tjednu (termini pon–pet 09:00–19:00). Nazovi prije dolaska na hitni odjel kako bi se tim mogao pripremiti."},
+      "duty": "Open 24 hours, 7 days a week for emergencies (appointments Mon-Fri 09:00-19:00). Phone ahead before arriving at the emergency department so the team can prepare.",
+      "duty_i18n": {
+        "hr": "Hitni prijem otvoren 24 h, 7 dana u tjednu (termini pon–pet 09:00–19:00). Nazovi prije dolaska na hitni odjel kako bi se tim mogao pripremiti.",
+        "de": "Für Notfälle täglich rund um die Uhr geöffnet (Termine Mo–Fr 09.00–19.00 Uhr). Bitte vor der Ankunft in der Notaufnahme anrufen, damit sich das Team vorbereiten kann."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
@@ -171,7 +195,11 @@
       "address": "Ehitajate tee 103a, 12915 Tallinn",
       "phone": "+372 6570 310",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
@@ -186,7 +214,11 @@
       "address": "Tartu mnt 82, 10112 Tallinn",
       "phone": "+372 682 7672",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
@@ -201,7 +233,11 @@
       "address": "Mustamäe tee 44/1, 10621 Tallinn",
       "phone": "+372 667 5676",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
@@ -216,7 +252,11 @@
       "address": "Kadaka tee 133, 12915 Tallinn",
       "phone": "+372 5886 7736",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
@@ -231,7 +271,11 @@
       "address": "Paadi tee 3, Haabneeme, 74001 Viimsi",
       "phone": "+372 600 6675",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
@@ -246,7 +290,11 @@
       "address": "Vabaduse 14, 44308 Rakvere",
       "phone": "+372 322 7707",
       "emergency_24h": false,
-      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; night and weekend emergencies need a 24-hour clinic (Tallinn).", "duty_i18n": {"hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom potrebna je klinika koja radi 24 sata (Tallinn)."},
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; night and weekend emergencies need a 24-hour clinic (Tallinn).",
+      "duty_i18n": {
+        "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom potrebna je klinika koja radi 24 sata (Tallinn).",
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; für Notfälle nachts und am Wochenende ist eine 24-Stunden-Klinik nötig (Tallinn)."
+      },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
       "source_url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
@@ -261,7 +309,11 @@
       "address": "Tallinna mnt 41, Narva",
       "phone": "+372 534 40485",
       "emergency_24h": false,
-      "duty": "Mon-Sat 10:00-18:00 by pre-registration only. For night and weekend emergencies the nearest 24-hour PetCity clinic is Rannamõisa in Tallinn, +372 602 0888.", "duty_i18n": {"hr": "pon–sub 10:00–18:00 samo uz prethodnu najavu. Za hitne slučajeve noću i vikendom najbliža klinika PetCity koja radi 24 h je Rannamõisa u Tallinnu, +372 602 0888."},
+      "duty": "Mon-Sat 10:00-18:00 by pre-registration only. For night and weekend emergencies the nearest 24-hour PetCity clinic is Rannamõisa in Tallinn, +372 602 0888.",
+      "duty_i18n": {
+        "hr": "pon–sub 10:00–18:00 samo uz prethodnu najavu. Za hitne slučajeve noću i vikendom najbliža klinika PetCity koja radi 24 h je Rannamõisa u Tallinnu, +372 602 0888.",
+        "de": "Mo–Sa 10.00–18.00 Uhr nur mit Voranmeldung. Bei Notfällen nachts und am Wochenende ist die nächste 24-Stunden-Klinik von PetCity Rannamõisa in Tallinn, +372 602 0888."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/narva-loomakliinik",
       "source_url": "https://www.petcity.ee/narva-loomakliinik",
@@ -276,7 +328,11 @@
       "address": "Mustakivi tee 17, Tallinn",
       "phone": "+372 530 55622",
       "emergency_24h": false,
-      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. In emergencies call the clinic first; 24-hour care is at PetCity Rannamõisa, +372 602 0888.", "duty_i18n": {"hr": "pon–sub 10:00–20:00, ned 10:00–19:00. U hitnom slučaju prvo nazovi kliniku; skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888."},
+      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. In emergencies call the clinic first; 24-hour care is at PetCity Rannamõisa, +372 602 0888.",
+      "duty_i18n": {
+        "hr": "pon–sub 10:00–20:00, ned 10:00–19:00. U hitnom slučaju prvo nazovi kliniku; skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888.",
+        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Bei Notfällen zuerst die Klinik anrufen; 24-Stunden-Versorgung bei PetCity Rannamõisa, +372 602 0888."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/tahesaju-loomakliinik",
       "source_url": "https://www.petcity.ee/tahesaju-loomakliinik",
@@ -291,7 +347,11 @@
       "address": "Suur-Sõjamäe 4, Tallinn",
       "phone": "+372 513 6990",
       "emergency_24h": false,
-      "duty": "Mon-Sat 10:00-21:00, Sun 10:00-19:00. 24-hour emergency care is at PetCity Rannamõisa, +372 602 0888.", "duty_i18n": {"hr": "pon–sub 10:00–21:00, ned 10:00–19:00. Hitna skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888."},
+      "duty": "Mon-Sat 10:00-21:00, Sun 10:00-19:00. 24-hour emergency care is at PetCity Rannamõisa, +372 602 0888.",
+      "duty_i18n": {
+        "hr": "pon–sub 10:00–21:00, ned 10:00–19:00. Hitna skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888.",
+        "de": "Mo–Sa 10.00–21.00 Uhr, So 10.00–19.00 Uhr. 24-Stunden-Notfallversorgung bei PetCity Rannamõisa, +372 602 0888."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
       "source_url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
@@ -306,7 +366,11 @@
       "address": "Lääneringtee 35, Tartu",
       "phone": "+372 530 35388",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-19:00. In life-threatening cases call the clinic directly.", "duty_i18n": {"hr": "pon–pet 09:00–19:00. U slučajevima opasnim po život nazovi kliniku izravno."},
+      "duty": "Mon-Fri 09:00-19:00. In life-threatening cases call the clinic directly.",
+      "duty_i18n": {
+        "hr": "pon–pet 09:00–19:00. U slučajevima opasnim po život nazovi kliniku izravno.",
+        "de": "Mo–Fr 09.00–19.00 Uhr. In lebensbedrohlichen Fällen die Klinik direkt anrufen."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
       "source_url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
@@ -321,7 +385,11 @@
       "address": "Haljala tee 4, Rakvere",
       "phone": "+372 524 1485",
       "emergency_24h": false,
-      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. Currently no vet at this clinic; for night and public-holiday emergencies call 15222 (24-hour clinic in Tallinn).", "duty_i18n": {"hr": "pon–sub 10:00–20:00, ned 10:00–19:00. Trenutačno u klinici nema veterinara; za hitne slučajeve noću i blagdanima nazovi 15222 (klinika u Tallinnu koja radi 24 sata)."},
+      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. Currently no vet at this clinic; for night and public-holiday emergencies call 15222 (24-hour clinic in Tallinn).",
+      "duty_i18n": {
+        "hr": "pon–sub 10:00–20:00, ned 10:00–19:00. Trenutačno u klinici nema veterinara; za hitne slučajeve noću i blagdanima nazovi 15222 (klinika u Tallinnu koja radi 24 sata).",
+        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Derzeit kein Tierarzt in dieser Klinik; bei Notfällen nachts und an Feiertagen 15222 anrufen (24-Stunden-Klinik in Tallinn)."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
       "source_url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
@@ -336,7 +404,11 @@
       "address": "Pärnu Keskus, 1st floor (entrances Aida and Põhja street), Pärnu",
       "phone": null,
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-20:00, Sat 10:00-20:00, Sun 10:00-18:00 (Pärnu Centre).", "duty_i18n": {"hr": "pon–pet 09:00–20:00, sub 10:00–20:00, ned 10:00–18:00 (Pärnu Centre)."},
+      "duty": "Mon-Fri 09:00-20:00, Sat 10:00-20:00, Sun 10:00-18:00 (Pärnu Centre).",
+      "duty_i18n": {
+        "hr": "pon–pet 09:00–20:00, sub 10:00–20:00, ned 10:00–18:00 (Pärnu Centre).",
+        "de": "Mo–Fr 09.00–20.00 Uhr, Sa 10.00–20.00 Uhr, So 10.00–18.00 Uhr (Pärnu Centre)."
+      },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-parnu-keskuse-loomakliinik",
       "source_url": "https://www.astri.ee/parnu-keskus/en/stores/store/petcity-loomakliinik/?st=PK-108",
@@ -351,7 +423,11 @@
       "address": "Riia mnt 109, 80020 Pärnu",
       "phone": "+372 5130 701",
       "emergency_24h": false,
-      "duty": "Mon-Sat 08:00-18:00 (may vary; call ahead). Alternative phone +372 447 0023.", "duty_i18n": {"hr": "pon–sub 08:00–18:00 (može se razlikovati; nazovi unaprijed). Drugi telefon +372 447 0023."},
+      "duty": "Mon-Sat 08:00-18:00 (may vary; call ahead). Alternative phone +372 447 0023.",
+      "duty_i18n": {
+        "hr": "pon–sub 08:00–18:00 (može se razlikovati; nazovi unaprijed). Drugi telefon +372 447 0023.",
+        "de": "Mo–Sa 08.00–18.00 Uhr (kann abweichen; bitte vorher anrufen). Alternative Rufnummer +372 447 0023."
+      },
       "small_animals": true,
       "url": "https://terveks.ee/",
       "source_url": "https://terveks.ee/",
@@ -366,7 +442,11 @@
       "address": "Kangelaste 30, Narva",
       "phone": "+372 566 28566",
       "emergency_24h": false,
-      "duty": "Sep-May Mon-Fri 10:00-18:00, Sat 10:00-13:00; Jun-Aug Mon-Fri 10:00-17:00. Out of hours, message by WhatsApp/Telegram/Viber; help is not guaranteed.", "duty_i18n": {"hr": "Rujan–svibanj pon–pet 10:00–18:00, sub 10:00–13:00; lipanj–kolovoz pon–pet 10:00–17:00. Izvan radnog vremena pošalji poruku putem WhatsAppa/Telegrama/Vibera; pomoć nije zajamčena."},
+      "duty": "Sep-May Mon-Fri 10:00-18:00, Sat 10:00-13:00; Jun-Aug Mon-Fri 10:00-17:00. Out of hours, message by WhatsApp/Telegram/Viber; help is not guaranteed.",
+      "duty_i18n": {
+        "hr": "Rujan–svibanj pon–pet 10:00–18:00, sub 10:00–13:00; lipanj–kolovoz pon–pet 10:00–17:00. Izvan radnog vremena pošalji poruku putem WhatsAppa/Telegrama/Vibera; pomoć nije zajamčena.",
+        "de": "Sep–Mai Mo–Fr 10.00–18.00 Uhr, Sa 10.00–13.00 Uhr; Jun–Aug Mo–Fr 10.00–17.00 Uhr. Außerhalb der Öffnungszeiten per WhatsApp/Telegram/Viber schreiben; Hilfe ist nicht garantiert."
+      },
       "small_animals": true,
       "url": "https://www.kuldbis.eu/ru/",
       "source_url": "https://www.kuldbis.eu/ru/",
@@ -381,7 +461,11 @@
       "address": "Maleva 31, Ahtme, Kohtla-Järve",
       "phone": "+372 3377463",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-18:00, Sat 09:00-14:00, closed Sun.", "duty_i18n": {"hr": "pon–pet 09:00–18:00, sub 09:00–14:00, ned zatvoreno."},
+      "duty": "Mon-Fri 09:00-18:00, Sat 09:00-14:00, closed Sun.",
+      "duty_i18n": {
+        "hr": "pon–pet 09:00–18:00, sub 09:00–14:00, ned zatvoreno.",
+        "de": "Mo–Fr 09.00–18.00 Uhr, Sa 09.00–14.00 Uhr, So geschlossen."
+      },
       "small_animals": true,
       "url": "https://vetdok.eu/en/index.php?route=information/contact",
       "source_url": "https://vetdok.eu/en/index.php?route=information/contact",

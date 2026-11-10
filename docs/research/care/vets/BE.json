@@ -335,7 +335,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -354,7 +355,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -373,7 +375,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -392,7 +395,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number; the centres page gives no centre-specific number.",
       "checked": "2026-11-03"
@@ -411,7 +415,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -430,7 +435,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -449,7 +455,8 @@
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
       "duty_i18n": {
         "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan",
-        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24"
+        "hr": "Hitni centar izvan radnog vremena: radnim danom 19:00–07:30, od subote 12:00 do ponedjeljka 07:30, blagdanima 24 h/24",
+        "de": "Notdienstzentrum außerhalb der Öffnungszeiten: Mo–Fr 19.00–7.30 Uhr, Sa 12.00 Uhr bis Mo 7.30 Uhr, an Feiertagen rund um die Uhr."
       },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
@@ -492,7 +499,8 @@
       "duty": "BeVet clinics with Urgences 24/7 or 24/24 (Boitsfort, Manage, Wanze, Florenville) and an on-call emergency vet service for Brabant wallon and periphery",
       "duty_i18n": {
         "sl": "Ambulante BeVet z nujno pomočjo 24 ur na dan, 7 dni v tednu (Boitsfort, Manage, Wanze, Florenville) ter dežurna služba nujne veterinarske pomoči za Brabant wallon in okolico",
-        "hr": "BeVet klinike s hitnom službom 24/7 ili 24/24 (Boitsfort, Manage, Wanze, Florenville) i deneodgodiva hitna veterinarska služba za Brabant wallon i okolicu"
+        "hr": "BeVet klinike s hitnom službom 24/7 ili 24/24 (Boitsfort, Manage, Wanze, Florenville) i deneodgodiva hitna veterinarska služba za Brabant wallon i okolicu",
+        "de": "BeVet-Kliniken mit Notdienst (Urgences) rund um die Uhr (Boitsfort, Manage, Wanze, Florenville) und ein tierärztlicher Bereitschaftsdienst für Wallonisch-Brabant und Umgebung."
       },
       "url": "https://bevet.be/veterinaire-de-garde/",
       "source_url": "https://bevet.be/veterinaire-de-garde/",
@@ -510,7 +518,8 @@
       "duty": "Operator looks up vets on duty near you (about 20 km) and gives their numbers by voice or SMS; Dutch, French, English",
       "duty_i18n": {
         "sl": "Operater poišče dežurne veterinarje v vaši bližini (do približno 20 km) in vam posreduje njihove številke po telefonu ali SMS; v nizozemščini, francoščini in angleščini",
-        "hr": "Operater pronalazi dežurne veterinare u tvojoj blizini (oko 20 km) i daje njihove brojeve glasom ili SMS-om; na nizozemskom, francuskom i engleskom"
+        "hr": "Operater pronalazi dežurne veterinare u tvojoj blizini (oko 20 km) i daje njihove brojeve glasom ili SMS-om; na nizozemskom, francuskom i engleskom",
+        "de": "Die Vermittlung nennt Tierärzte im Notdienst in Ihrer Nähe (ca. 20 km) und teilt deren Nummern per Ansage oder SMS mit; Niederländisch, Französisch, Englisch."
       },
       "url": "https://dierenarts-van-wacht.be/",
       "source_url": "https://dierenarts-van-wacht.be/",
@@ -533,7 +542,8 @@
       "duty": "For animals the centre answers on 070 245 245 weekdays 8:00-16:00 and weekends/public holidays 10:00-16:00 (human emergencies take priority); otherwise call your vet",
       "duty_i18n": {
         "sl": "Za hišne ljubljenčke se center oglasi na 070 245 245 ob delavnikih 8–16 ter ob koncih tedna in praznikih 10–16 (nujni primeri pri ljudeh imajo prednost); sicer pokličite svojega veterinarja",
-        "hr": "Za životinje centar odgovara na 070 245 245 radnim danom 8:00–16:00 te vikendom i blagdanima 10:00–16:00 (hitni slučajevi kod ljudi imaju prednost); inače nazovi svog veterinara"
+        "hr": "Za životinje centar odgovara na 070 245 245 radnim danom 8:00–16:00 te vikendom i blagdanima 10:00–16:00 (hitni slučajevi kod ljudi imaju prednost); inače nazovi svog veterinara",
+        "de": "Für Tiere ist das Giftinformationszentrum unter 070 245 245 Mo–Fr 8–16 Uhr und am Wochenende/an Feiertagen 10–16 Uhr erreichbar (Notfälle bei Menschen haben Vorrang); sonst bitte die eigene Tierarztpraxis anrufen."
       }
     }
   ],

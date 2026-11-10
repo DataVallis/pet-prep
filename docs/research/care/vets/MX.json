@@ -62,7 +62,10 @@
       "url": "https://www.fmvz.unam.mx/fmvz/servicios/s_pequenas.html",
       "source_url": "https://www.fmvz.unam.mx/fmvz/servicios/s_pequenas.html",
       "checked": "2026-11-09",
-      "note": "Page opened; explicitly no 24 h statement. Also phones 5622 5865/5866. Page says urgencias service may be suspended in a contingency."
+      "note": "Page opened; explicitly no 24 h statement. Also phones 5622 5865/5866. Page says urgencias service may be suspended in a contingency.",
+      "duty_i18n": {
+        "de": "Kleintier-Lehrklinik der Universität. Notfälle Mo–Fr 8–17 Uhr und Sa 8–14 Uhr (kein 24-Stunden-Dienst); Termine Mo–Fr 10–17 Uhr, Sa 10–14 Uhr. Der Betrieb kann ohne Vorankündigung ausgesetzt werden."
+      }
     },
     {
       "kind": "clinic",
@@ -76,7 +79,10 @@
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/sucursal-polanco",
       "source_url": "https://www.vetalia.com.mx/sucursales/sucursal-polanco",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -90,7 +96,10 @@
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/sucursal-condesa",
       "source_url": "https://www.vetalia.com.mx/sucursales/sucursal-condesa",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -100,12 +109,15 @@
       "address": "Av. Coyoacán 1052, Del Valle, 03100 Benito Juárez",
       "phone": "+52 55 1952 1630",
       "emergency_24h": true,
-      "duty": "Hours listed as Monday to Sunday, 24 hours. Call ahead to confirm emergency service.",
+      "duty": "Open Monday to Sunday, 24 hours. Call ahead to confirm emergency service.",
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/veterinaria-del-valle",
       "source_url": "https://www.vetalia.com.mx/sucursales/veterinaria-del-valle",
       "checked": "2026-11-09",
-      "note": "Branch page says 'Lunes a Domingo / 24 horas' and the site FAQ lists Del Valle among 24 h branches, but its Urgencias card says 'Muy pronto en Del Valle'. Flagged for re-check."
+      "note": "Branch page says 'Lunes a Domingo / 24 horas' and the site FAQ lists Del Valle among 24 h branches, but its Urgencias card says 'Muy pronto en Del Valle'. Flagged for re-check. Moved from duty (2026-11-10): Hours listed as Monday to Sunday, 24 hours (as stated on source).",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet. Notdienst bitte vorher telefonisch bestätigen."
+      }
     },
     {
       "kind": "clinic",
@@ -119,7 +131,10 @@
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/vetalia-coapa",
       "source_url": "https://www.vetalia.com.mx/sucursales/vetalia-coapa",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -133,7 +148,10 @@
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/veterinaria-las-aguilas",
       "source_url": "https://www.vetalia.com.mx/sucursales/veterinaria-las-aguilas",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -147,7 +165,10 @@
       "small_animals": true,
       "url": "https://www.vetalia.com.mx/sucursales/veterinaria-pedregal",
       "source_url": "https://www.vetalia.com.mx/sucursales/veterinaria-pedregal",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -162,7 +183,10 @@
       "url": "https://atencionmedicoveterinaria.com/",
       "source_url": "https://atencionmedicoveterinaria.com/",
       "checked": "2026-11-09",
-      "note": "Page: 'Las 24 Horas 7 Días de la semana, atendemos cualquier urgencia clínica'. FAQ lists 5243 7982 vs 5243 7482 elsewhere; 7482 used."
+      "note": "Page: 'Las 24 Horas 7 Días de la semana, atendemos cualquier urgencia clínica'. FAQ lists 5243 7982 vs 5243 7482 elsewhere; 7482 used.",
+      "duty_i18n": {
+        "de": "Notfälle und Labor täglich rund um die Uhr. Reguläre Öffnungszeiten Mo–Sa 11–21 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -176,7 +200,10 @@
       "small_animals": true,
       "url": "https://hospitalveterinariodelta.com.mx/",
       "source_url": "https://hospitalveterinariodelta.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer; WhatsApp nur für Nachrichten."
+      }
     },
     {
       "kind": "clinic",
@@ -191,7 +218,10 @@
       "url": "https://hospitalveterinariodelta.com.mx/",
       "source_url": "https://hospitalveterinariodelta.com.mx/",
       "checked": "2026-11-09",
-      "note": "Page gives no separate phone for Delta Gatos; the main Urgencias number is used."
+      "note": "Page gives no separate phone for Delta Gatos; the main Urgencias number is used.",
+      "duty_i18n": {
+        "de": "Katzenklinik; täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -206,7 +236,10 @@
       "url": "https://hospitalveterinariodelta.com.mx/",
       "source_url": "https://hospitalveterinariodelta.com.mx/",
       "checked": "2026-11-09",
-      "note": "Phone is the main DELTA number; page gives no separate one."
+      "note": "Phone is the main DELTA number; page gives no separate one.",
+      "duty_i18n": {
+        "de": "Vorsorge, täglich 7.30–21 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -221,7 +254,10 @@
       "url": "https://www.hospitalveterinariosos.com/",
       "source_url": "https://www.hospitalveterinariosos.com/",
       "checked": "2026-11-09",
-      "note": "Page banner lists a different emergency number (557095-1044 / 7095-2453); 55 4555 6302 used."
+      "note": "Page banner lists a different emergency number (557095-1044 / 7095-2453); 55 4555 6302 used.",
+      "duty_i18n": {
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Klinik Mo–Sa 10–18 Uhr, So 10–15 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -235,7 +271,10 @@
       "small_animals": true,
       "url": "https://hospitalcarson.com/",
       "source_url": "https://hospitalcarson.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet (Tagdienst 9–19.30 Uhr, Nachtdienst 19.31–8.59 Uhr)."
+      }
     },
     {
       "kind": "clinic",
@@ -249,7 +288,10 @@
       "small_animals": true,
       "url": "https://www.aztekan.com/",
       "source_url": "https://www.aztekan.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -263,7 +305,10 @@
       "small_animals": true,
       "url": "https://www.aztekan.com/",
       "source_url": "https://www.aztekan.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -278,7 +323,10 @@
       "url": "https://www.aztekan.com/",
       "source_url": "https://www.aztekan.com/",
       "checked": "2026-11-09",
-      "note": "Branch text gives no hours; footer lists 'Hospital 24 horas' for all three addresses."
+      "note": "Branch text gives no hours; footer lists 'Hospital 24 horas' for all three addresses.",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -292,7 +340,10 @@
       "url": "https://www.hospitalveterinariowestcare.com.mx/",
       "source_url": "https://www.hospitalveterinariowestcare.com.mx/",
       "checked": "2026-11-09",
-      "note": "Page gives no street address; WhatsApp scheduling staffed Mon-Sat 10:00-19:00 only."
+      "note": "Page gives no street address; WhatsApp scheduling staffed Mon-Sat 10:00-19:00 only.",
+      "duty_i18n": {
+        "de": "Täglich und an Feiertagen rund um die Uhr geöffnet. Notfälle der Inneren Medizin rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -306,7 +357,10 @@
       "small_animals": true,
       "url": "https://animalhome.com.mx/hospital-veterinario-coapa-cdmx-animal-home/",
       "source_url": "https://animalhome.com.mx/hospital-veterinario-coapa-cdmx-animal-home/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Sprechstunde 9–19 Uhr, Nachtsprechstunde 19–9 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -335,7 +389,10 @@
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
-      "note": "Branch list says 'Servicio 24 hrs' / 'Urgencias 24 hrs'."
+      "note": "Branch list says 'Servicio 24 hrs' / 'Urgencias 24 hrs'.",
+      "duty_i18n": {
+        "de": "Notaufnahme rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -349,7 +406,10 @@
       "small_animals": true,
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+      }
     },
     {
       "kind": "clinic",
@@ -363,7 +423,10 @@
       "small_animals": true,
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+      }
     },
     {
       "kind": "clinic",
@@ -377,7 +440,10 @@
       "small_animals": true,
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+      }
     },
     {
       "kind": "clinic",
@@ -391,7 +457,10 @@
       "small_animals": true,
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+      }
     },
     {
       "kind": "clinic",
@@ -405,7 +474,10 @@
       "small_animals": true,
       "url": "https://www.petandvet.mx/sucursales",
       "source_url": "https://www.petandvet.mx/sucursales",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+      }
     },
     {
       "kind": "clinic",
@@ -420,7 +492,10 @@
       "url": "https://alivet.mx/cdmx/hospital-veterinario-roma",
       "source_url": "https://alivet.mx/cdmx/hospital-veterinario-roma",
       "checked": "2026-11-09",
-      "note": "hospitalveterinarioroma.com redirects to this page."
+      "note": "hospitalveterinarioroma.com redirects to this page.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "kind": "clinic",
@@ -434,7 +509,10 @@
       "url": "https://condesapetcenter.com/",
       "source_url": "https://condesapetcenter.com/",
       "checked": "2026-11-09",
-      "note": "Page gives no street address. Other branches (Oasis, Universidad, Pedregal) open daily 8:00-21:00, not checked individually."
+      "note": "Page gives no street address. Other branches (Oasis, Universidad, Pedregal) open daily 8:00-21:00, not checked individually.",
+      "duty_i18n": {
+        "de": "Tierklinik in Condesa 365 Tage im Jahr rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -449,7 +527,10 @@
       "url": "https://vetme.com.mx/veterinario-24-horas-cdmx/",
       "source_url": "https://vetme.com.mx/veterinario-24-horas-cdmx/",
       "checked": "2026-11-09",
-      "note": "Footer lists 55 7588 6159. A Condesa branch (55 5553 5818) has no address on the page; not added."
+      "note": "Footer lists 55 7588 6159. A Condesa branch (55 5553 5818) has no address on the page; not added.",
+      "duty_i18n": {
+        "de": "Das ganze Jahr über täglich rund um die Uhr geöffnet, für Vorsorge und Notfälle."
+      }
     },
     {
       "kind": "clinic",
@@ -459,12 +540,15 @@
       "address": "José María Rico 125, Actipan, 03230 Benito Juárez",
       "phone": "+52 56 1140 3189",
       "emergency_24h": false,
-      "duty": "Hours not confirmed on the clinic page; call ahead.",
+      "duty": "Call ahead for hours.",
       "small_animals": true,
       "url": "https://www.hospivetvalle.com/",
       "source_url": "https://www.hospivetvalle.com/",
       "checked": "2026-11-09",
-      "note": "24-h claim only in the page meta description, not in visible text (downgraded by independent check 2026-11-09). Phone is the WhatsApp number given on the page."
+      "note": "24-h claim only in the page meta description, not in visible text (downgraded by independent check 2026-11-09). Phone is the WhatsApp number given on the page. Moved from duty (2026-11-10): Hours not confirmed on the clinic page.",
+      "duty_i18n": {
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -478,7 +562,10 @@
       "url": "https://www.bruselas.com.mx/",
       "source_url": "https://www.bruselas.com.mx/",
       "checked": "2026-11-09",
-      "note": "Page gives only 'Coyoacán, CDMX' (map link); read first 100000 of 118526 characters. Number also given as 'Emergencias'."
+      "note": "Page gives only 'Coyoacán, CDMX' (map link); read first 100000 of 118526 characters. Number also given as 'Emergencias'.",
+      "duty_i18n": {
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Fachärzte für Orthopädie und Neurologie Mo–Fr."
+      }
     },
     {
       "kind": "clinic",
@@ -493,7 +580,10 @@
       "url": "https://capcancun.com/",
       "source_url": "https://capcancun.com/",
       "checked": "2026-11-09",
-      "note": "Both pages opened; page says 'Atención las 24 horas del día, los 7 días de la semana, los 365 días del año' and 'Urgencias 24/7'. The urgencias page also links to +52 998 354 4140 (differs from displayed 998 361 1641). Same group has a clinic in Estado de México (not listed)."
+      "note": "Both pages opened; page says 'Atención las 24 horas del día, los 7 días de la semana, los 365 días del año' and 'Urgencias 24/7'. The urgencias page also links to +52 998 354 4140 (differs from displayed 998 361 1641). Same group has a clinic in Estado de México (not listed).",
+      "duty_i18n": {
+        "de": "Notfallversorgung täglich rund um die Uhr. Sprechstunde Mo–Sa 9–20 Uhr; sonntags nur Notfälle."
+      }
     },
     {
       "kind": "clinic",
@@ -501,12 +591,15 @@
       "city": "Cancún",
       "region": "Quintana Roo",
       "emergency_24h": false,
-      "duty": "Veterinary clinics in the Hotel Zone, Downtown and Puerto Cancún. Opening hours not published on the page; call ahead.",
+      "duty": "Veterinary clinics in the Hotel Zone, Downtown and Puerto Cancún. Call ahead for opening hours.",
       "small_animals": true,
       "url": "https://vetcancun.com/",
       "source_url": "https://vetcancun.com/",
       "checked": "2026-11-09",
-      "note": "Page opened but only title/meta rendered: 'Clínica Veterinaria 24 Horas' and 'Atención 24 horas, urgencias, vacunas y más. Clínicas en Zona Hotelera, Downtown y Puerto Cancún'. No phone/address/hours on the fetched page; /contacto could not be opened (not retrievable). Needs a follow-up for branch addresses and phones."
+      "note": "Page opened but only title/meta rendered: 'Clínica Veterinaria 24 Horas' and 'Atención 24 horas, urgencias, vacunas y más. Clínicas en Zona Hotelera, Downtown y Puerto Cancún'. No phone/address/hours on the fetched page; /contacto could not be opened (not retrievable). Needs a follow-up for branch addresses and phones. Moved from duty (2026-11-10): Opening hours not published on the page.",
+      "duty_i18n": {
+        "de": "Tierkliniken in der Hotelzone, in der Innenstadt und in Puerto Cancún. Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -516,12 +609,15 @@
       "address": "Av. 135, Mz. 69, Lote 21, locales 3 y 4, SM 320, Jardines del Sur, 77536 Cancún",
       "phone": "+52 998 273 1184",
       "emergency_24h": false,
-      "duty": "Small-animal clinic in Jardines del Sur. Opening hours not published; call ahead.",
+      "duty": "Small-animal clinic in Jardines del Sur. Call ahead for opening hours.",
       "small_animals": true,
       "url": "https://www.kolitas.net/",
       "source_url": "https://www.kolitas.net/index.html",
       "checked": "2026-11-09",
-      "note": "Home page opened. Visible text does not state 24 h; only an image alt text reads 'Urgencias veterinarias 24 horas Cancún', so emergency_24h left false. Email info@kolitas.net."
+      "note": "Home page opened. Visible text does not state 24 h; only an image alt text reads 'Urgencias veterinarias 24 horas Cancún', so emergency_24h left false. Email info@kolitas.net. Moved from duty (2026-11-10): Opening hours not published.",
+      "duty_i18n": {
+        "de": "Kleintierklinik in Jardines del Sur. Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -536,7 +632,10 @@
       "url": "https://mundoanimal.com.mx/",
       "source_url": "https://mundoanimal.com.mx/contacto/",
       "checked": "2026-11-09",
-      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
+      "duty_i18n": {
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -551,7 +650,10 @@
       "url": "https://mundoanimal.com.mx/",
       "source_url": "https://mundoanimal.com.mx/contacto/",
       "checked": "2026-11-09",
-      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
+      "duty_i18n": {
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -566,7 +668,10 @@
       "url": "https://mundoanimal.com.mx/",
       "source_url": "https://mundoanimal.com.mx/contacto/",
       "checked": "2026-11-09",
-      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
+      "duty_i18n": {
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -581,7 +686,10 @@
       "url": "https://mundoanimal.com.mx/",
       "source_url": "https://mundoanimal.com.mx/contacto/",
       "checked": "2026-11-09",
-      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
+      "duty_i18n": {
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -596,7 +704,10 @@
       "url": "https://mundoanimal.com.mx/",
       "source_url": "https://mundoanimal.com.mx/contacto/",
       "checked": "2026-11-09",
-      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
+      "duty_i18n": {
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -606,12 +717,15 @@
       "address": "Calle 30 Nte 304, Local 1, entre 32 Nte y 34 Nte, Col. Gonzalo Guerrero, 77720 Playa del Carmen",
       "phone": "+52 984 803 6212",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-19:00 (contact page) and Sat 9:00-16:00; closed Sunday. After-hours emergencies: call first for guidance. English and Spanish.",
+      "duty": "Mon-Fri 9:00-19:00 and Sat 9:00-16:00; closed Sunday. After-hours emergencies: call first for guidance. English and Spanish.",
       "small_animals": true,
       "url": "https://clinicvetpdc.com/",
       "source_url": "https://clinicvetpdc.com/contacto/",
       "checked": "2026-11-09",
-      "note": "Contact page and home page opened. Contact page says Mon-Fri 9-19 on home, 9-19 on contact; no 24 h. Phone is also WhatsApp. Home page says urgencias only within regular hours for non-critical cases."
+      "note": "Contact page and home page opened. Contact page says Mon-Fri 9-19 on home, 9-19 on contact; no 24 h. Phone is also WhatsApp. Home page says urgencias only within regular hours for non-critical cases. Moved from duty (2026-11-10): Weekday hours taken from the contact page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–19 Uhr und Sa 9–16 Uhr; So geschlossen. Notfälle außerhalb der Öffnungszeiten: bitte zuerst anrufen, Sie werden telefonisch beraten. Englisch und Spanisch."
+      }
     },
     {
       "kind": "clinic",
@@ -626,7 +740,10 @@
       "url": "https://alfaanimal.mx/urgencias-veterinarias-guadalajara/",
       "source_url": "https://alfaanimal.mx/urgencias-veterinarias-guadalajara/",
       "checked": "2026-11-09",
-      "note": "Page opened; no street address published."
+      "note": "Page opened; no street address published.",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer und WhatsApp +52 33 2162 6445; Termine +52 33 2316 2714."
+      }
     },
     {
       "kind": "clinic",
@@ -640,7 +757,10 @@
       "small_animals": true,
       "url": "https://lomont.com.mx/",
       "source_url": "https://lomont.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -654,7 +774,10 @@
       "small_animals": true,
       "url": "https://lomont.com.mx/",
       "source_url": "https://lomont.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -668,7 +791,10 @@
       "small_animals": true,
       "url": "https://lomont.com.mx/",
       "source_url": "https://lomont.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -682,7 +808,10 @@
       "small_animals": true,
       "url": "https://lomont.com.mx/",
       "source_url": "https://lomont.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -696,7 +825,10 @@
       "small_animals": true,
       "url": "https://dactary.com/",
       "source_url": "https://dactary.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik 365 Tage im Jahr rund um die Uhr geöffnet. WhatsApp +52 33 3849 4603."
+      }
     },
     {
       "kind": "clinic",
@@ -711,7 +843,10 @@
       "url": "https://dactary.com/",
       "source_url": "https://dactary.com/",
       "checked": "2026-11-09",
-      "note": "Page gives no separate hours for this branch; the 24 h statement applies to the main hospital."
+      "note": "Page gives no separate hours for this branch; the 24 h statement applies to the main hospital.",
+      "duty_i18n": {
+        "de": "Zweigstelle; Öffnungszeiten bitte telefonisch erfragen. Die Hauptklinik an der Av. Patria ist rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -725,7 +860,10 @@
       "small_animals": true,
       "url": "https://animalcarecentergdl.com/contacto/",
       "source_url": "https://animalcarecentergdl.com/contacto/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfälle täglich rund um die Uhr; Sprechstunde täglich 9–20 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -739,7 +877,10 @@
       "small_animals": true,
       "url": "https://animalcarecentergdl.com/contacto/",
       "source_url": "https://animalcarecentergdl.com/contacto/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Sprechstunde täglich 9–21 Uhr. Notfälle rund um die Uhr in der Tierklinik an der Av. La Calma 4471."
+      }
     },
     {
       "kind": "clinic",
@@ -754,7 +895,10 @@
       "url": "https://petscaremty.com.mx/",
       "source_url": "https://petscaremty.com.mx/",
       "checked": "2026-11-09",
-      "note": "Page also mentions consultations in San Pedro Garza García; address vs. text mismatch, confirm by phone."
+      "note": "Page also mentions consultations in San Pedro Garza García; address vs. text mismatch, confirm by phone.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle. Termine +52 81 1871 0654."
+      }
     },
     {
       "kind": "clinic",
@@ -769,7 +913,10 @@
       "url": "https://www.clinicavillarrealgarza.com/",
       "source_url": "https://www.clinicavillarrealgarza.com/",
       "checked": "2026-11-09",
-      "note": "Page also lists Petco in-store clinics (9-21 h, not 24 h); not added."
+      "note": "Page also lists Petco in-store clinics (9-21 h, not 24 h); not added.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet. Zweite Nummer: +52 81 8348 0492."
+      }
     },
     {
       "kind": "clinic",
@@ -777,12 +924,15 @@
       "city": "Puebla",
       "region": "Puebla",
       "emergency_24h": false,
-      "duty": "Veterinary hospital with emergency care; check the website or call for opening hours.",
+      "duty": "Veterinary hospital with emergency care; call for opening hours.",
       "small_animals": true,
       "url": "https://hospitalveterinariominerva.com/",
       "source_url": "https://hospitalveterinariominerva.com/",
       "checked": "2026-11-09",
-      "note": "Independent check 2026-11-09: page body only shows a JavaScript notice; 24 h appears only in meta description, so not explicit. No phone readable. Downgraded."
+      "note": "Independent check 2026-11-09: page body only shows a JavaScript notice; 24 h appears only in meta description, so not explicit. No phone readable. Downgraded. Moved from duty (2026-11-10): Check the website for opening hours.",
+      "duty_i18n": {
+        "de": "Tierklinik mit Notfallversorgung; Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -796,7 +946,10 @@
       "small_animals": true,
       "url": "https://www.cvp.com.mx/",
       "source_url": "https://www.cvp.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet. Weitere Nummern: +52 222 169 6687 und +52 221 195 3312."
+      }
     },
     {
       "kind": "clinic",
@@ -810,7 +963,10 @@
       "small_animals": true,
       "url": "https://www.hveterinario.com/",
       "source_url": "https://www.hveterinario.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -825,7 +981,10 @@
       "url": "https://www.hveterinario.com/",
       "source_url": "https://www.hveterinario.com/",
       "checked": "2026-11-09",
-      "note": "Page labels only the Recta a Cholula unit as 24 h."
+      "note": "Page labels only the Recta a Cholula unit as 24 h.",
+      "duty_i18n": {
+        "de": "Öffnungszeiten bitte telefonisch erfragen. Die Tierklinik an der Recta a Cholula ist rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -839,7 +998,10 @@
       "small_animals": true,
       "url": "https://hospitalveterinarioqueretaro24.com/",
       "source_url": "https://hospitalveterinarioqueretaro24.com/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen. Telefon und WhatsApp."
+      }
     },
     {
       "kind": "clinic",
@@ -854,7 +1016,10 @@
       "url": "https://livetveterinaria.com/",
       "source_url": "https://livetveterinaria.com/",
       "checked": "2026-11-09",
-      "note": "Page says 'Urgencias 24h previa llamada' but hours section limits to after-8pm by call; not treated as 24 h."
+      "note": "Page says 'Urgencias 24h previa llamada' but hours section limits to after-8pm by call; not treated as 24 h.",
+      "duty_i18n": {
+        "de": "Täglich 10–20 Uhr geöffnet; nach 20 Uhr Notfälle nach vorherigem Anruf. WhatsApp +52 442 269 8977."
+      }
     },
     {
       "kind": "clinic",
@@ -869,7 +1034,10 @@
       "url": "https://hospitaldeemergenciasveterinarias.com/",
       "source_url": "https://hospitaldeemergenciasveterinarias.com/",
       "checked": "2026-11-09",
-      "note": "Only Sunday is explicitly 24 h, so emergency_24h false."
+      "note": "Only Sunday is explicitly 24 h, so emergency_24h false.",
+      "duty_i18n": {
+        "de": "Nacht-Notfallklinik: Mo–Fr 18–8 Uhr, Sa von 13 bis 8 Uhr, So rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -883,7 +1051,10 @@
       "small_animals": true,
       "url": "https://www.profauna.com.mx/en",
       "source_url": "https://www.profauna.com.mx/en",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr erreichbar. Telefon und WhatsApp."
+      }
     },
     {
       "kind": "clinic",
@@ -897,7 +1068,10 @@
       "small_animals": true,
       "url": "https://www.drzoo.mx/",
       "source_url": "https://www.drzoo.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet. WhatsApp +52 619 507 7283."
+      }
     },
     {
       "kind": "clinic",
@@ -911,7 +1085,10 @@
       "small_animals": true,
       "url": "https://www.emevet.com.mx/",
       "source_url": "https://www.emevet.com.mx/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfälle rund um die Uhr (Notfallnummer +52 664 356 3990). Reguläre Öffnungszeiten Mo–Sa 7–24 Uhr, So 9–24 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -925,7 +1102,10 @@
       "small_animals": true,
       "url": "https://alivet.mx/toluca/hospital-veterinario-monarca",
       "source_url": "https://alivet.mx/toluca/hospital-veterinario-monarca",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet; Notfälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -940,7 +1120,10 @@
       "url": "https://hospitalveterinarioechegaray.mx/",
       "source_url": "https://hospitalveterinarioechegaray.mx/",
       "checked": "2026-11-09",
-      "note": "Page lists two different sets of emergency numbers; confirm."
+      "note": "Page lists two different sets of emergency numbers; confirm.",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Weitere Nummer: +52 55 5373 4573; WhatsApp +52 56 1995 0824."
+      }
     },
     {
       "kind": "clinic",
@@ -954,7 +1137,10 @@
       "small_animals": true,
       "url": "https://puntovet.mx/urgencias-veterinarias-24-horas/",
       "source_url": "https://puntovet.mx/urgencias-veterinarias-24-horas/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notdienst täglich rund um die Uhr. Zweite Nummer: +52 612 171 9708."
+      }
     },
     {
       "kind": "clinic",
@@ -969,7 +1155,10 @@
       "url": "https://erimar.laicos.com/",
       "source_url": "https://erimar.laicos.com/",
       "checked": "2026-11-09",
-      "note": "Independent check 2026-11-09: page says 24 h emergencies Mon-Sat only, Sunday 9:00-19:00, so not round-the-clock every day. Downgraded."
+      "note": "Independent check 2026-11-09: page says 24 h emergencies Mon-Sat only, Sunday 9:00-19:00, so not round-the-clock every day. Downgraded.",
+      "duty_i18n": {
+        "de": "Notfälle Mo–Sa rund um die Uhr; So 9–19 Uhr. Telefon und WhatsApp."
+      }
     },
     {
       "kind": "clinic",
@@ -983,7 +1172,10 @@
       "url": "https://petscaresaltillo.com.mx/",
       "source_url": "https://petscaresaltillo.com.mx/",
       "checked": "2026-11-09",
-      "note": "No street address on page."
+      "note": "No street address on page.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     }
   ],
   "notes": "Mexico City only (queue line 'MX Mexico — Mexico City'). Not done: public Hospital Veterinario de la Ciudad de México (agatan.cdmx.gob.mx and sedema.cdmx.gob.mx blocked by robots.txt; only news articles, not used), Hospital Veterinario CDMX (hospitalveterinariocdmx.com, no address/phone on page), Shiko (placeholder phone), Animal Home and Medipet home pages (redirect loop), Oftalvet, Banfield/UNAM, Peques (no own-site page found). No official duty rota and no animal poison line found; no official national animal poison line page located. QUINTANA ROO run (2026-11-09): 9 entries added, 2 x 24 h (CAP Cancún, VetCancun). Not reachable/not done: sacvetcancun.com, veterinaria24.com.mx, infoveterinarias.com.mx and Facebook pages blocked by robots.txt (skipped); WebFetch could only open URLs that appeared in search results or page links, so own sites found only in third-party articles (Hospipet, Sanimal, Coco's Animal Welfare Clinic, Playa Pet, Playa Pet Tulum, Cozumel Pet Center, Animalia Tulum, Ambulacia Veterinaria 24 h Cancún, Urgencias Veterinarias Exóticos Cancún, Clínica Veterinaria Tulum, Petventiva Akumal, Vitanimal) could not be opened and are NOT included (leads only: Ambulacia, Palenque 71-3, 998 166 2632; Animalia Tulum, Av. La Selva 460, 984 317 5058). VetCancun branch addresses/phones missing. No clinic pages found for Cozumel, Chetumal, Isla Mujeres, Puerto Morelos, Bacalar, Holbox, Akumal, Tulum. Public animal welfare hospitals (Cancún, Playa del Carmen Cencaaz) were still under construction per news; Cancún Centro de Bienestar Animal is a municipal shelter, not listed. No Colegio de MVZ Quintana Roo directory, official duty rota or animal poison line found. QUINTANA ROO FOLLOW-UP (2026-11-09, second run): 0 entries added. Spanish WebSearch for Tulum, Cozumel, Chetumal, Isla Mujeres, Puerto Morelos, Bacalar, Holbox, Akumal returned only news, directories and hotel pages, no clinic own sites; third-party pages opened (Riviera Maya News, ruptura360, Expediente Quintana Roo, cozumel4you) named clinics (Alma Animal Shelter clinic Tulum, Akumalix, La Vet del Puerto, Cozumel Pet Center) but gave no own page, and direct fetches of guessed own domains were refused (PROVENANCE_REQUIRED), so nothing was added."

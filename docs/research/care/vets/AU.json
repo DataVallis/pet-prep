@@ -149,7 +149,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year. Emergency cases do not need an appointment.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini. Za hitne slučajeve nije potrebna najava."
+        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini. Za hitne slučajeve nije potrebna najava.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Für Notfälle ist kein Termin nötig."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/emergency/sydney-emergency.html",
@@ -167,7 +168,8 @@
       "emergency_24h": false,
       "duty": "Monday to Friday 8am to 6pm. No 24-hour small animal emergency care; use a 24-hour hospital after hours.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18. Nema 24-satne hitne službe za male životinje; izvan radnog vremena obrati se 24-satnoj bolnici."
+        "hr": "Pon–pet 8–18. Nema 24-satne hitne službe za male životinje; izvan radnog vremena obrati se 24-satnoj bolnici.",
+        "de": "Mo–Fr 8–18 Uhr. Kein Notdienst rund um die Uhr für Kleintiere; außerhalb der Öffnungszeiten bitte eine Tierklinik mit Notdienst rund um die Uhr aufsuchen."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/about-us/contact-us.html",
@@ -185,7 +187,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. No booking needed for emergencies; cases are triaged on arrival.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Za hitne slučajeve nije potrebna najava; po dolasku slijedi trijaža."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Za hitne slučajeve nije potrebna najava; po dolasku slijedi trijaža.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Für Notfälle ist keine Voranmeldung nötig; die Triage erfolgt bei Ankunft."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -203,7 +206,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. No booking needed for emergencies.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Za hitne slučajeve nije potrebna najava."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Za hitne slučajeve nije potrebna najava.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Für Notfälle ist keine Voranmeldung nötig."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/alexandria/",
@@ -221,7 +225,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year, including weekends and public holidays. No appointment needed for emergencies.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini, uključujući vikende i blagdane. Za hitne slučajeve nije potrebna najava."
+        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini, uključujući vikende i blagdane. Za hitne slučajeve nije potrebna najava.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr, auch am Wochenende und an Feiertagen. Für Notfälle ist kein Termin nötig."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/northern-beaches/",
@@ -239,7 +244,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. Walk-in emergencies welcome without an appointment.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Hitni slučajevi primaju se bez najave."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Hitni slučajevi primaju se bez najave.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Notfälle sind ohne Termin willkommen."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/central-coast/",
@@ -257,7 +263,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency care.",
       "duty_i18n": {
-        "hr": "Hitna služba 24 sata."
+        "hr": "Hitna služba 24 sata.",
+        "de": "Notdienst rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -275,7 +282,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week, including public holidays. Specialist consultations by referral, Mon-Fri 8am to 6pm.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu, uključujući blagdane. Specijalistički pregledi uz uputnicu, pon–pet 8–18."
+        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu, uključujući blagdane. Specijalistički pregledi uz uputnicu, pon–pet 8–18.",
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen. Fachsprechstunden auf Überweisung Mo–Fr 8–18 Uhr."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-homebush.html",
@@ -293,7 +301,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week, every day of the year.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata, 7 dana u tjednu, svaki dan u godini."
+        "hr": "Otvoreno 24 sata, 7 dana u tjednu, svaki dan u godini.",
+        "de": "Täglich rund um die Uhr geöffnet, das ganze Jahr über."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-gosford.html",
@@ -311,7 +320,8 @@
       "emergency_24h": false,
       "duty": "Open 24 hours on Saturday and Sunday, and after hours Monday to Friday, including public holidays. Call ahead for weekday opening times.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata subotom i nedjeljom te izvan radnog vremena pon–pet, uključujući blagdane. Radno vrijeme radnim danom provjeri telefonom."
+        "hr": "Otvoreno 24 sata subotom i nedjeljom te izvan radnog vremena pon–pet, uključujući blagdane. Radno vrijeme radnim danom provjeri telefonom.",
+        "de": "Sa und So rund um die Uhr geöffnet sowie Mo–Fr außerhalb der Sprechzeiten, auch an Feiertagen. Zeiten unter der Woche bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/arh-wollongong.html",
@@ -329,7 +339,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for emergencies. Please call before bringing your pet in.",
       "duty_i18n": {
-        "hr": "Otvoreno 24/7 za hitne slučajeve. Nazovi prije nego dovedeš ljubimca."
+        "hr": "Otvoreno 24/7 za hitne slučajeve. Nazovi prije nego dovedeš ljubimca.",
+        "de": "Notdienst täglich rund um die Uhr. Bitte vor dem Kommen anrufen."
       },
       "small_animals": true,
       "url": "https://arecvet.com.au/",
@@ -347,7 +358,8 @@
       "emergency_24h": false,
       "duty": "Specialist and emergency hospital in the Sutherland Shire. Call ahead to confirm opening hours.",
       "duty_i18n": {
-        "hr": "Specijalistička i hitna bolnica u Sutherland Shireu. Nazovi unaprijed i provjeri radno vrijeme."
+        "hr": "Specijalistička i hitna bolnica u Sutherland Shireu. Nazovi unaprijed i provjeri radno vrijeme.",
+        "de": "Fach- und Notfallklinik im Sutherland Shire. Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.theleader.com.au/story/6794828/24-hour-vet-clinic-opens-at-miranda/",
@@ -365,7 +377,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 emergency service on Sydney's northern side.",
       "duty_i18n": {
-        "hr": "Hitna služba otvorena 24/7 u sjevernom dijelu Sydneyja."
+        "hr": "Hitna služba otvorena 24/7 u sjevernom dijelu Sydneyja.",
+        "de": "Notdienst rund um die Uhr im Norden Sydneys."
       },
       "small_animals": true,
       "url": "https://nevs.net.au",
@@ -383,7 +396,8 @@
       "emergency_24h": false,
       "duty": "Open 7 days, 7:30am to 7pm. Not a 24-hour hospital; after hours use NEVS Terrey Hills or SASH.",
       "duty_i18n": {
-        "hr": "Otvoreno 7 dana u tjednu, 7:30–19. Nije 24-satna bolnica; izvan radnog vremena obrati se NEVS Terrey Hills ili SASH."
+        "hr": "Otvoreno 7 dana u tjednu, 7:30–19. Nije 24-satna bolnica; izvan radnog vremena obrati se NEVS Terrey Hills ili SASH.",
+        "de": "Täglich 7.30–19 Uhr geöffnet. Nicht rund um die Uhr geöffnet; außerhalb der Öffnungszeiten bitte NEVS Terrey Hills oder SASH aufsuchen."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -401,7 +415,8 @@
       "emergency_24h": false,
       "duty": "Monday to Friday 8am to 7pm, Saturday 8:30am to 4pm. Closed Sundays and public holidays. Not a 24-hour hospital.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–19, sub 8:30–16. Nedjeljom i blagdanima zatvoreno. Nije 24-satna bolnica."
+        "hr": "Pon–pet 8–19, sub 8:30–16. Nedjeljom i blagdanima zatvoreno. Nije 24-satna bolnica.",
+        "de": "Mo–Fr 8–19 Uhr, Sa 8.30–16 Uhr. So und feiertags geschlossen. Nicht rund um die Uhr geöffnet."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -419,7 +434,8 @@
       "emergency_24h": false,
       "duty": "Mon-Tue 8am to 6pm, Wed-Fri 8am to 8pm, Sat-Sun 8am to 4pm. After hours call ahead and go to a 24-hour emergency centre.",
       "duty_i18n": {
-        "hr": "Pon–uto 8–18, sri–pet 8–20, sub–ned 8–16. Izvan radnog vremena nazovi unaprijed i otiđi u 24-satni hitni centar."
+        "hr": "Pon–uto 8–18, sri–pet 8–20, sub–ned 8–16. Izvan radnog vremena nazovi unaprijed i otiđi u 24-satni hitni centar.",
+        "de": "Mo–Di 8–18 Uhr, Mi–Fr 8–20 Uhr, Sa–So 8–16 Uhr. Außerhalb der Öffnungszeiten bitte anrufen und ein Notfallzentrum mit Notdienst rund um die Uhr aufsuchen."
       },
       "small_animals": true,
       "url": "https://cardiffvethospital.com.au/emergency-vet-newcastle/",
@@ -437,7 +453,8 @@
       "emergency_24h": false,
       "duty": "After hours call the clinic first; emergencies are referred to a 24-hour emergency centre.",
       "duty_i18n": {
-        "hr": "Izvan radnog vremena prvo nazovi kliniku; hitni slučajevi upućuju se u 24-satni hitni centar."
+        "hr": "Izvan radnog vremena prvo nazovi kliniku; hitni slučajevi upućuju se u 24-satni hitni centar.",
+        "de": "Außerhalb der Öffnungszeiten bitte zuerst die Klinik anrufen; Notfälle werden an ein rund um die Uhr geöffnetes Notfallzentrum verwiesen."
       },
       "small_animals": true,
       "url": "https://brunkerroadvets.com.au/information/after-hours-emergency-service/",
@@ -454,7 +471,8 @@
       "emergency_24h": true,
       "duty": "24/7 animal poisons helpline for Australian pet owners. A consultation fee applies (from AUD 79).",
       "duty_i18n": {
-        "hr": "Telefonska linija za otrovanja životinja za vlasnike ljubimaca u Australiji, 24/7. Savjetovanje se naplaćuje (od 79 AUD)."
+        "hr": "Telefonska linija za otrovanja životinja za vlasnike ljubimaca u Australiji, 24/7. Savjetovanje se naplaćuje (od 79 AUD).",
+        "de": "Tiergiftnotruf für Haustierhalter in Australien, rund um die Uhr erreichbar. Beratungsgebühr ab 79 AUD."
       },
       "small_animals": true,
       "url": "https://www.animalpoisons.com.au/",
@@ -472,7 +490,8 @@
       "emergency_24h": false,
       "duty": "After-hours emergency hospital. Hours: Monday to Friday 6pm to 7am, open 24 hours on weekends; public holiday hours vary, so call ahead.",
       "duty_i18n": {
-        "hr": "Hitna bolnica izvan radnog vremena. Pon–pet 18–7, vikendom otvoreno 24 sata; radno vrijeme na blagdane razlikuje se, zato nazovi unaprijed."
+        "hr": "Hitna bolnica izvan radnog vremena. Pon–pet 18–7, vikendom otvoreno 24 sata; radno vrijeme na blagdane razlikuje se, zato nazovi unaprijed.",
+        "de": "Notfallklinik außerhalb der Sprechzeiten. Öffnungszeiten: Mo–Fr 18–7 Uhr, am Wochenende rund um die Uhr; an Feiertagen abweichende Zeiten, bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/ARH_Baulkham_Hills.html",
@@ -490,7 +509,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week, every day of the year.",
       "duty_i18n": {
-        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu, svaki dan u godini."
+        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu, svaki dan u godini.",
+        "de": "Täglich rund um die Uhr geöffnet, das ganze Jahr über."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-minchinbury.html",
@@ -509,7 +529,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 8:30am-12pm, closed Sunday and public holidays. After hours: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 8:30–12, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
+        "hr": "Pon–pet 8–18, sub 8:30–12, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 8.30–12 Uhr, So und feiertags geschlossen. Außerhalb der Öffnungszeiten: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
       },
       "small_animals": true,
       "url": "https://coffsharbourvet.com.au/services/",
@@ -527,7 +548,8 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 8am-11:30am and 3pm-5:30pm. Sundays and after hours for emergencies or by appointment; call and listen to the recorded message.",
       "duty_i18n": {
-        "hr": "Pon–sub 8–11:30 i 15–17:30. Nedjeljom i izvan radnog vremena za hitne slučajeve ili uz prethodnu najavu; nazovi i poslušaj snimljenu poruku."
+        "hr": "Pon–sub 8–11:30 i 15–17:30. Nedjeljom i izvan radnog vremena za hitne slučajeve ili uz prethodnu najavu; nazovi i poslušaj snimljenu poruku.",
+        "de": "Mo–Sa 8–11.30 und 15–17.30 Uhr. Sonntags und außerhalb der Öffnungszeiten für Notfälle oder nach Vereinbarung; bitte anrufen und die Ansage anhören."
       },
       "small_animals": true,
       "url": "https://www.blueandwhitevet.com.au/contact",
@@ -545,7 +567,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5:30pm, Sat 8:30am-12pm, closed Sunday. After-hours emergency service available; call the clinic.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–17:30, sub 8:30–12, nedjeljom zatvoreno. Dostupna je hitna služba izvan radnog vremena; nazovi kliniku."
+        "hr": "Pon–pet 8:30–17:30, sub 8:30–12, nedjeljom zatvoreno. Dostupna je hitna služba izvan radnog vremena; nazovi kliniku.",
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 8.30–12 Uhr, So geschlossen. Notdienst außerhalb der Öffnungszeiten verfügbar; bitte die Klinik anrufen."
       },
       "small_animals": true,
       "url": "https://mooneevet.com.au/",
@@ -563,7 +586,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5pm, closed weekends and public holidays. Emergencies in business hours: call ahead. Out of hours, contact the nearest emergency centre.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–17, vikendom i blagdanima zatvoreno. Hitni slučajevi u radno vrijeme: nazovi unaprijed. Izvan radnog vremena obrati se najbližem hitnom centru."
+        "hr": "Pon–pet 8–17, vikendom i blagdanima zatvoreno. Hitni slučajevi u radno vrijeme: nazovi unaprijed. Izvan radnog vremena obrati se najbližem hitnom centru.",
+        "de": "Mo–Fr 8–17 Uhr, am Wochenende und an Feiertagen geschlossen. Notfälle während der Öffnungszeiten: bitte vorher anrufen. Außerhalb der Öffnungszeiten bitte das nächste Notfallzentrum kontaktieren."
       },
       "small_animals": true,
       "url": "https://www.oxleyhighwayvet.com.au/emergency-vet",
@@ -581,7 +605,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 8am-12pm.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 8–12."
+        "hr": "Pon–pet 8–18, sub 8–12.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr."
       },
       "small_animals": true,
       "url": "https://www.portvet.com.au/",
@@ -599,7 +624,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5:30pm, Sat 9am-12pm, closed Sunday and public holidays. Emergencies in business hours: call ahead.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–17:30, sub 9–12, nedjeljom i blagdanima zatvoreno. Hitni slučajevi u radno vrijeme: nazovi unaprijed."
+        "hr": "Pon–pet 8–17:30, sub 9–12, nedjeljom i blagdanima zatvoreno. Hitni slučajevi u radno vrijeme: nazovi unaprijed.",
+        "de": "Mo–Fr 8–17.30 Uhr, Sa 9–12 Uhr, So und feiertags geschlossen. Notfälle während der Öffnungszeiten: bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.eastportvet.com/vetchat-call-service-for-veterinary-emergencies/",
@@ -617,7 +643,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5pm, Sat 8:30am-11am. Out-of-hours emergencies: call the duty vet; an after-hours fee applies.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–17, sub 8:30–11. Hitni slučajevi izvan radnog vremena: nazovi dežurnog veterinara; naplaćuje se doplatak za rad izvan radnog vremena."
+        "hr": "Pon–pet 8:30–17, sub 8:30–11. Hitni slučajevi izvan radnog vremena: nazovi dežurnog veterinara; naplaćuje se doplatak za rad izvan radnog vremena.",
+        "de": "Mo–Fr 8.30–17 Uhr, Sa 8.30–11 Uhr. Notfälle außerhalb der Öffnungszeiten: bitte den diensthabenden Tierarzt anrufen; es fällt eine Notdienstgebühr an."
       },
       "small_animals": true,
       "url": "https://wauchopevets.com.au/contact/",
@@ -635,7 +662,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency service: call the practice and listen to the recorded message to reach the vet on duty. Consultations by appointment Mon-Fri 8:30am-5:30pm, Sat 8:30am-12pm.",
       "duty_i18n": {
-        "hr": "Hitna služba 24 sata: nazovi ordinaciju i poslušaj snimljenu poruku kako bi došao do dežurnog veterinara. Pregledi uz prethodnu najavu pon–pet 8:30–17:30, sub 8:30–12."
+        "hr": "Hitna služba 24 sata: nazovi ordinaciju i poslušaj snimljenu poruku kako bi došao do dežurnog veterinara. Pregledi uz prethodnu najavu pon–pet 8:30–17:30, sub 8:30–12.",
+        "de": "Notdienst rund um die Uhr: Praxis anrufen und der Ansage folgen, um den diensthabenden Tierarzt zu erreichen. Sprechstunden nach Terminvereinbarung Mo–Fr 8.30–17.30 Uhr, Sa 8.30–12 Uhr."
       },
       "small_animals": true,
       "url": "https://www.tamworthvet.com.au/contact-us",
@@ -654,7 +682,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 9am-1pm, closed Sunday. After hours: 0409 487 486.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 9–13, nedjeljom zatvoreno. Izvan radnog vremena: 0409 487 486."
+        "hr": "Pon–pet 8–18, sub 9–13, nedjeljom zatvoreno. Izvan radnog vremena: 0409 487 486.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Öffnungszeiten: 0409 487 486."
       },
       "small_animals": true,
       "url": "https://www.goonoovet.com.au/",
@@ -672,7 +701,8 @@
       "emergency_24h": true,
       "duty": "24/7 after-hours service with a vet on duty, 365 days a year. Hours Mon-Fri 8:30am-5:30pm, Sat 8:30am-12pm.",
       "duty_i18n": {
-        "hr": "Služba izvan radnog vremena 24/7 s dežurnim veterinarom, 365 dana u godini. Radno vrijeme pon–pet 8:30–17:30, sub 8:30–12."
+        "hr": "Služba izvan radnog vremena 24/7 s dežurnim veterinarom, 365 dana u godini. Radno vrijeme pon–pet 8:30–17:30, sub 8:30–12.",
+        "de": "Notdienst rund um die Uhr mit diensthabendem Tierarzt, 365 Tage im Jahr. Öffnungszeiten Mo–Fr 8.30–17.30 Uhr, Sa 8.30–12 Uhr."
       },
       "small_animals": true,
       "url": "https://orangevet.com.au/",
@@ -691,7 +721,8 @@
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu, Fri 8:30am-6pm, Wed 8:30am-5pm, Sat 8:30am-11am. The clinic number is answered 24 hours a day by the on-call vet for urgent cases.",
       "duty_i18n": {
-        "hr": "Pon, uto, čet, pet 8:30–18, sri 8:30–17, sub 8:30–11. Na broj klinike 24 sata dnevno odgovara dežurni veterinar za hitne slučajeve."
+        "hr": "Pon, uto, čet, pet 8:30–18, sri 8:30–17, sub 8:30–11. Na broj klinike 24 sata dnevno odgovara dežurni veterinar za hitne slučajeve.",
+        "de": "Mo, Di, Do, Fr 8.30–18 Uhr, Mi 8.30–17 Uhr, Sa 8.30–11 Uhr. Bei dringenden Fällen ist unter der Kliniknummer rund um die Uhr der diensthabende Tierarzt erreichbar."
       },
       "small_animals": true,
       "url": "https://mulberrylanevet.com.au/",
@@ -709,7 +740,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5:30pm, Sat 9am-4pm, Sun 11am-3pm, closed public holidays. After-hours emergencies: call the clinic number.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–17:30, sub 9–16, ned 11–15, blagdanima zatvoreno. Hitni slučajevi izvan radnog vremena: nazovi broj klinike."
+        "hr": "Pon–pet 8:30–17:30, sub 9–16, ned 11–15, blagdanima zatvoreno. Hitni slučajevi izvan radnog vremena: nazovi broj klinike.",
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 9–16 Uhr, So 11–15 Uhr, an Feiertagen geschlossen. Notfälle außerhalb der Öffnungszeiten: bitte die Kliniknummer anrufen."
       },
       "small_animals": true,
       "url": "https://www.canobolasvet.com/contact-us.pml",
@@ -727,7 +759,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5:30pm, closed weekends and public holidays. After hours: the clinic refers emergencies to ARH Homebush, (02) 9758 8666.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–17:30, vikendom i blagdanima zatvoreno. Izvan radnog vremena klinika upućuje hitne slučajeve u ARH Homebush, (02) 9758 8666."
+        "hr": "Pon–pet 8:30–17:30, vikendom i blagdanima zatvoreno. Izvan radnog vremena klinika upućuje hitne slučajeve u ARH Homebush, (02) 9758 8666.",
+        "de": "Mo–Fr 8.30–17.30 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Öffnungszeiten verweist die Klinik Notfälle an ARH Homebush, (02) 9758 8666."
       },
       "small_animals": true,
       "url": "https://bathurstvethospital.com.au/emergency-vet/",
@@ -745,7 +778,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm, Sat 9am-5:30pm, closed Sunday. After-hours calls on the same number.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–18, sub 9–17:30, nedjeljom zatvoreno. Pozivi izvan radnog vremena na istom broju."
+        "hr": "Pon–pet 8:30–18, sub 9–17:30, nedjeljom zatvoreno. Pozivi izvan radnog vremena na istom broju.",
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 9–17.30 Uhr, So geschlossen. Anrufe außerhalb der Öffnungszeiten unter derselben Nummer."
       },
       "small_animals": true,
       "url": "https://www.stewartstreetvet.com.au/",
@@ -763,7 +797,8 @@
       "emergency_24h": true,
       "duty": "Veterinary care available 24/7 every day of the year via the on-call service. Hours Mon-Fri 8am-6pm, Sat 8am-12pm.",
       "duty_i18n": {
-        "hr": "Veterinarska pomoć dostupna je 24/7 svaki dan u godini preko dežurne službe. Radno vrijeme pon–pet 8–18, sub 8–12."
+        "hr": "Veterinarska pomoć dostupna je 24/7 svaki dan u godini preko dežurne službe. Radno vrijeme pon–pet 8–18, sub 8–12.",
+        "de": "Tierärztliche Versorgung rund um die Uhr, das ganze Jahr über, durch den Bereitschaftsdienst. Öffnungszeiten Mo–Fr 8–18 Uhr, Sa 8–12 Uhr."
       },
       "small_animals": true,
       "url": "https://www.waggavet.com.au/",
@@ -782,7 +817,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency hospital, staffed around the clock every day of the year.",
       "duty_i18n": {
-        "hr": "24-satna hitna bolnica, osoblje je prisutno non-stop svaki dan u godini."
+        "hr": "24-satna hitna bolnica, osoblje je prisutno non-stop svaki dan u godini.",
+        "de": "Notfallklinik, das ganze Jahr über rund um die Uhr besetzt."
       },
       "small_animals": true,
       "url": "https://www.lakerdvet.com.au/",
@@ -801,7 +837,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 8am-6pm. Emergencies at any time: call 02 6041 2522 (after-hours vet on call until 10pm for existing clients). After 10pm, the nearest 24-hour clinic is Lake Road Veterinary Clinic in Wagga Wagga.",
       "duty_i18n": {
-        "hr": "Radnim danom 8–18. Hitni slučajevi u svako doba: nazovi 02 6041 2522 (dežurni veterinar u pripravnosti do 22 sata za postojeće klijente). Nakon 22 sata najbliža 24-satna klinika je Lake Road Veterinary Clinic u Wagga Wagga."
+        "hr": "Radnim danom 8–18. Hitni slučajevi u svako doba: nazovi 02 6041 2522 (dežurni veterinar u pripravnosti do 22 sata za postojeće klijente). Nakon 22 sata najbliža 24-satna klinika je Lake Road Veterinary Clinic u Wagga Wagga.",
+        "de": "Werktags 8–18 Uhr. Notfälle jederzeit: bitte 02 6041 2522 anrufen (Tierarzt in Bereitschaft bis 22 Uhr für Bestandskunden). Nach 22 Uhr ist die nächste rund um die Uhr geöffnete Klinik die Lake Road Veterinary Clinic in Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://familyvet.com.au/clinics/",
@@ -819,7 +856,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 9am-1pm. Limited on-call evening cover; for other times the nearest 24/7 emergency hospital is Lake Road Veterinary Centre in Wagga Wagga.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 9–13. Ograničena večernja pripravnost; u ostalo vrijeme najbliža 24/7 hitna bolnica je Lake Road Veterinary Centre u Wagga Wagga."
+        "hr": "Pon–pet 8–18, sub 9–13. Ograničena večernja pripravnost; u ostalo vrijeme najbliža 24/7 hitna bolnica je Lake Road Veterinary Centre u Wagga Wagga.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–13 Uhr. Eingeschränkter Bereitschaftsdienst am Abend; zu anderen Zeiten ist die nächste rund um die Uhr geöffnete Notfallklinik das Lake Road Veterinary Centre in Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://alburyanimalhospital.com.au/about-us/",
@@ -837,7 +875,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergencies: call the clinic number to reach the after-hours triage team.",
       "duty_i18n": {
-        "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj klinike i javit će ti se trijažni tim."
+        "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj klinike i javit će ti se trijažni tim.",
+        "de": "Notfälle außerhalb der Öffnungszeiten: bitte die Kliniknummer anrufen, um das Triage-Team zu erreichen."
       },
       "small_animals": true,
       "url": "https://dubbo.furlifevet.com.au/",
@@ -855,7 +894,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 8:30am-12:30pm, closed Sunday. After-hours vet service available for emergencies that cannot wait; call the clinic.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 8:30–12:30, nedjeljom zatvoreno. Veterinarska služba izvan radnog vremena dostupna je za hitne slučajeve koji ne mogu čekati; nazovi kliniku."
+        "hr": "Pon–pet 8–18, sub 8:30–12:30, nedjeljom zatvoreno. Veterinarska služba izvan radnog vremena dostupna je za hitne slučajeve koji ne mogu čekati; nazovi kliniku.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 8.30–12.30 Uhr, So geschlossen. Tierärztlicher Dienst außerhalb der Öffnungszeiten für Notfälle, die nicht warten können; bitte die Klinik anrufen."
       },
       "small_animals": true,
       "url": "https://www.petmedicalcentre.com.au/",
@@ -873,7 +913,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm, Sat 8:30am-1pm. No after-hours service; for emergencies contact Orana Veterinary Services or another clinic.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–18, sub 8:30–13. Nema službe izvan radnog vremena; u hitnom slučaju obrati se Orana Veterinary Services ili drugoj klinici."
+        "hr": "Pon–pet 8:30–18, sub 8:30–13. Nema službe izvan radnog vremena; u hitnom slučaju obrati se Orana Veterinary Services ili drugoj klinici.",
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–13 Uhr. Kein Notdienst außerhalb der Öffnungszeiten; bei Notfällen bitte Orana Veterinary Services oder eine andere Klinik kontaktieren."
       },
       "small_animals": true,
       "url": "https://www.dmvs.com.au/contact-us",
@@ -891,7 +932,8 @@
       "emergency_24h": false,
       "duty": "Out-of-hours emergencies: call the clinic number to reach the after-hours triage team.",
       "duty_i18n": {
-        "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj klinike i javit će ti se trijažni tim."
+        "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj klinike i javit će ti se trijažni tim.",
+        "de": "Notfälle außerhalb der Öffnungszeiten: bitte die Kliniknummer anrufen, um das Triage-Team zu erreichen."
       },
       "small_animals": true,
       "url": "https://northhillvet.com.au/",
@@ -909,7 +951,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for emergencies. Hours Mon-Fri 8am-6pm, Sat 9am-12pm, closed Sunday.",
       "duty_i18n": {
-        "hr": "Otvoreno 24/7 za hitne slučajeve. Radno vrijeme pon–pet 8–18, sub 9–12, nedjeljom zatvoreno."
+        "hr": "Otvoreno 24/7 za hitne slučajeve. Radno vrijeme pon–pet 8–18, sub 9–12, nedjeljom zatvoreno.",
+        "de": "Notdienst rund um die Uhr. Öffnungszeiten Mo–Fr 8–18 Uhr, Sa 9–12 Uhr, So geschlossen."
       },
       "small_animals": true,
       "url": "https://www.newenglandvetservices.com.au/",
@@ -928,7 +971,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5pm, Sat 8am-12pm, closed Sunday and public holidays. After hours: North Coast Emergency Vets, (02) 7255 4095.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–17, sub 8–12, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena: North Coast Emergency Vets, (02) 7255 4095."
+        "hr": "Pon–pet 8–17, sub 8–12, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena: North Coast Emergency Vets, (02) 7255 4095.",
+        "de": "Mo–Fr 8–17 Uhr, Sa 8–12 Uhr, So und feiertags geschlossen. Außerhalb der Öffnungszeiten: North Coast Emergency Vets, (02) 7255 4095."
       },
       "small_animals": true,
       "url": "https://myvetbyronbay.com.au/",
@@ -945,7 +989,8 @@
       "emergency_24h": false,
       "duty": "Handles most emergencies in business hours, including tick paralysis, road accidents and snake bites. After hours: Animal Emergency Service or North Coast Emergency Vets.",
       "duty_i18n": {
-        "hr": "Rješava većinu hitnih slučajeva u radno vrijeme, uključujući paralizu od krpelja, prometne nesreće i ugrize zmija. Izvan radnog vremena: Animal Emergency Service ili North Coast Emergency Vets."
+        "hr": "Rješava većinu hitnih slučajeva u radno vrijeme, uključujući paralizu od krpelja, prometne nesreće i ugrize zmija. Izvan radnog vremena: Animal Emergency Service ili North Coast Emergency Vets.",
+        "de": "Behandelt die meisten Notfälle während der Öffnungszeiten, darunter Zeckenlähmung, Verkehrsunfälle und Schlangenbisse. Außerhalb der Öffnungszeiten: Animal Emergency Service oder North Coast Emergency Vets."
       },
       "small_animals": true,
       "url": "https://byronbayvet.com.au/",
@@ -963,7 +1008,8 @@
       "emergency_24h": false,
       "duty": "Emergency vet for the Northern Rivers. Hours vary by day (24 hours Saturday, Sunday and Monday, shorter hours Tuesday to Friday); call before travelling.",
       "duty_i18n": {
-        "hr": "Hitna veterinarska služba za Northern Rivers. Radno vrijeme ovisi o danu (24 sata subotom, nedjeljom i ponedjeljkom, kraće uto–pet); nazovi prije puta."
+        "hr": "Hitna veterinarska služba za Northern Rivers. Radno vrijeme ovisi o danu (24 sata subotom, nedjeljom i ponedjeljkom, kraće uto–pet); nazovi prije puta.",
+        "de": "Notdienst für die Northern Rivers. Die Zeiten variieren je nach Tag (Sa, So und Mo rund um die Uhr, Di–Fr kürzere Zeiten); bitte vor der Anfahrt anrufen."
       },
       "small_animals": true,
       "url": "https://animalemergencyservice.com.au/aes_location/animal-emergency-service-north-coast/",
@@ -981,7 +1027,8 @@
       "emergency_24h": false,
       "duty": "Mon-Thu 7am-7pm, Fri 7am-5pm, Sat 8am-12pm, Sunday emergency only. On-call service outside these hours.",
       "duty_i18n": {
-        "hr": "Pon–čet 7–19, pet 7–17, sub 8–12, nedjeljom samo hitni slučajevi. Izvan tog vremena pripravna služba."
+        "hr": "Pon–čet 7–19, pet 7–17, sub 8–12, nedjeljom samo hitni slučajevi. Izvan tog vremena pripravna služba.",
+        "de": "Mo–Do 7–19 Uhr, Fr 7–17 Uhr, Sa 8–12 Uhr, So nur Notfälle. Bereitschaftsdienst außerhalb dieser Zeiten."
       },
       "small_animals": true,
       "url": "https://ballinacoastvets.com.au/",
@@ -999,7 +1046,8 @@
       "emergency_24h": true,
       "duty": "Available 24/7 for after-hours emergencies on the clinic number. Hours Mon-Fri 8:30am-6pm, Sat 8:30am-12:30pm, closed Sunday.",
       "duty_i18n": {
-        "hr": "Dostupno 24/7 za hitne slučajeve izvan radnog vremena na broju klinike. Radno vrijeme pon–pet 8:30–18, sub 8:30–12:30, nedjeljom zatvoreno."
+        "hr": "Dostupno 24/7 za hitne slučajeve izvan radnog vremena na broju klinike. Radno vrijeme pon–pet 8:30–18, sub 8:30–12:30, nedjeljom zatvoreno.",
+        "de": "Notdienst außerhalb der Öffnungszeiten rund um die Uhr unter der Kliniknummer. Öffnungszeiten Mo–Fr 8.30–18 Uhr, Sa 8.30–12.30 Uhr, So geschlossen."
       },
       "small_animals": true,
       "url": "https://lismorevet.com.au/",
@@ -1018,7 +1066,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 9am-4pm, Sun 9am-1pm (lunch closure 1-2pm Mon-Sat). After hours: phone the clinic to be directed to the after-hours mobile.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18, sub 9–16, ned 9–13 (stanka za ručak 13–14 pon–sub). Izvan radnog vremena nazovi kliniku da te preusmjere na mobitel dežurnog."
+        "hr": "Pon–pet 8–18, sub 9–16, ned 9–13 (stanka za ručak 13–14 pon–sub). Izvan radnog vremena nazovi kliniku da te preusmjere na mobitel dežurnog.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–16 Uhr, So 9–13 Uhr (Mittagspause 13–14 Uhr, Mo–Sa). Außerhalb der Öffnungszeiten: bitte die Klinik anrufen; der Anruf wird an das Bereitschaftshandy weitergeleitet."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1036,7 +1085,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5:30pm (closed 1-2pm), closed weekends. After hours: phone the clinic to be directed to the after-hours mobile.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–17:30 (zatvoreno 13–14), vikendom zatvoreno. Izvan radnog vremena nazovi kliniku da te preusmjere na mobitel dežurnog."
+        "hr": "Pon–pet 8–17:30 (zatvoreno 13–14), vikendom zatvoreno. Izvan radnog vremena nazovi kliniku da te preusmjere na mobitel dežurnog.",
+        "de": "Mo–Fr 8–17.30 Uhr (Mittagspause 13–14 Uhr), am Wochenende geschlossen. Außerhalb der Öffnungszeiten: bitte die Klinik anrufen; der Anruf wird an das Bereitschaftshandy weitergeleitet."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1054,7 +1104,8 @@
       "emergency_24h": true,
       "duty": "After-hours service gives 24/7 assistance in emergencies; call 02 4421 3133. Clinic hours Mon-Fri 8am-6pm, weekend appointments 9am-1pm.",
       "duty_i18n": {
-        "hr": "Služba izvan radnog vremena pruža pomoć 24/7 u hitnim slučajevima; nazovi 02 4421 3133. Radno vrijeme klinike pon–pet 8–18, vikendom termini 9–13."
+        "hr": "Služba izvan radnog vremena pruža pomoć 24/7 u hitnim slučajevima; nazovi 02 4421 3133. Radno vrijeme klinike pon–pet 8–18, vikendom termini 9–13.",
+        "de": "Notdienst außerhalb der Öffnungszeiten rund um die Uhr; für Notfälle bitte 02 4421 3133 anrufen. Klinikzeiten Mo–Fr 8–18 Uhr, Termine am Wochenende 9–13 Uhr."
       },
       "small_animals": true,
       "url": "https://bomaderryvets.com.au/",
@@ -1073,7 +1124,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 8am-6pm, Sat 8:30am-2pm, Sun 2pm-5pm (emergencies only), public holidays 3pm-5pm (emergencies only).",
       "duty_i18n": {
-        "hr": "Radnim danom 8–18, sub 8:30–14, ned 14–17 (samo hitni slučajevi), blagdanima 15–17 (samo hitni slučajevi)."
+        "hr": "Radnim danom 8–18, sub 8:30–14, ned 14–17 (samo hitni slučajevi), blagdanima 15–17 (samo hitni slučajevi).",
+        "de": "Werktags 8–18 Uhr, Sa 8.30–14 Uhr, So 14–17 Uhr (nur Notfälle), an Feiertagen 15–17 Uhr (nur Notfälle)."
       },
       "small_animals": true,
       "url": "http://westqueanbeyanvet.com.au/",
@@ -1090,7 +1142,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6:30pm, Sat 8am-12pm, closed Sunday.",
       "duty_i18n": {
-        "hr": "Pon–pet 8–18:30, sub 8–12, nedjeljom zatvoreno."
+        "hr": "Pon–pet 8–18:30, sub 8–12, nedjeljom zatvoreno.",
+        "de": "Mo–Fr 8–18.30 Uhr, Sa 8–12 Uhr, So geschlossen."
       },
       "small_animals": true,
       "url": "https://queanbeyanvet.com.au/",
@@ -1108,7 +1161,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 9am-5:30pm, Sat 9am-11am, closed Sunday. After-hours emergency service for the clinic's clients via answering service; may be referred to a Newcastle emergency centre.",
       "duty_i18n": {
-        "hr": "Radnim danom 9–17:30, sub 9–11, nedjeljom zatvoreno. Hitna služba izvan radnog vremena za klijente klinike preko telefonske sekretarice; moguće je upućivanje u hitni centar u Newcastleu."
+        "hr": "Radnim danom 9–17:30, sub 9–11, nedjeljom zatvoreno. Hitna služba izvan radnog vremena za klijente klinike preko telefonske sekretarice; moguće je upućivanje u hitni centar u Newcastleu.",
+        "de": "Werktags 9–17.30 Uhr, Sa 9–11 Uhr, So geschlossen. Notdienst außerhalb der Öffnungszeiten für Kunden der Klinik über einen Telefonservice; gegebenenfalls wird an ein Notfallzentrum in Newcastle verwiesen."
       },
       "small_animals": true,
       "url": "https://www.raymondterraceveterinaryclinic.com.au/",
@@ -1126,7 +1180,8 @@
       "emergency_24h": false,
       "duty": "Mon, Tue, Wed, Fri 8am-5pm, Sat 8am-12pm; closed Thursday, Sunday and public holidays.",
       "duty_i18n": {
-        "hr": "Pon, uto, sri, pet 8–17, sub 8–12; četvrtkom, nedjeljom i blagdanima zatvoreno."
+        "hr": "Pon, uto, sri, pet 8–17, sub 8–12; četvrtkom, nedjeljom i blagdanima zatvoreno.",
+        "de": "Mo, Di, Mi, Fr 8–17 Uhr, Sa 8–12 Uhr; Do, So und feiertags geschlossen."
       },
       "small_animals": true,
       "url": "https://www.golfcoursevets.com.au/",
@@ -1144,7 +1199,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5:30pm, Sat 8:30am-12:30pm. After-hours emergencies: on-call vet via the clinic number (surcharge applies), or Animal Emergency Services 07 5530 6370.",
       "duty_i18n": {
-        "hr": "Pon–pet 8:30–17:30, sub 8:30–12:30. Hitni slučajevi izvan radnog vremena: dežurni veterinar preko broja klinike (uz doplatak) ili Animal Emergency Services 07 5530 6370."
+        "hr": "Pon–pet 8:30–17:30, sub 8:30–12:30. Hitni slučajevi izvan radnog vremena: dežurni veterinar preko broja klinike (uz doplatak) ili Animal Emergency Services 07 5530 6370.",
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 8.30–12.30 Uhr. Notfälle außerhalb der Öffnungszeiten: diensthabender Tierarzt über die Kliniknummer (mit Zuschlag) oder Animal Emergency Services 07 5530 6370."
       },
       "small_animals": true,
       "url": "https://murwillumbahvet.com.au/",
@@ -1162,7 +1218,8 @@
       "emergency_24h": false,
       "duty": "After hours: phone Newcastle Animal Referral and Emergency Centre on 02 4957 7106.",
       "duty_i18n": {
-        "hr": "Izvan radnog vremena nazovi Newcastle Animal Referral and Emergency Centre na 02 4957 7106."
+        "hr": "Izvan radnog vremena nazovi Newcastle Animal Referral and Emergency Centre na 02 4957 7106.",
+        "de": "Außerhalb der Öffnungszeiten: bitte das Newcastle Animal Referral and Emergency Centre unter 02 4957 7106 anrufen."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1180,7 +1237,8 @@
       "emergency_24h": false,
       "duty": "By appointment. After hours: phone Charlestown (02 4943 6066) or Belmont (02 4945 9677).",
       "duty_i18n": {
-        "hr": "Uz prethodnu najavu. Izvan radnog vremena nazovi Charlestown (02 4943 6066) ili Belmont (02 4945 9677)."
+        "hr": "Uz prethodnu najavu. Izvan radnog vremena nazovi Charlestown (02 4943 6066) ili Belmont (02 4945 9677).",
+        "de": "Nur mit Termin. Außerhalb der Öffnungszeiten: bitte Charlestown (02 4943 6066) oder Belmont (02 4945 9677) anrufen."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1198,7 +1256,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 8am-6pm, Sat 8am-12pm. Phone first for emergencies; some cases are referred to the Newcastle emergency centre in Broadmeadow.",
       "duty_i18n": {
-        "hr": "Radnim danom 8–18, sub 8–12. Za hitne slučajeve prvo nazovi; neki se slučajevi upućuju u hitni centar u Newcastleu u Broadmeadowu."
+        "hr": "Radnim danom 8–18, sub 8–12. Za hitne slučajeve prvo nazovi; neki se slučajevi upućuju u hitni centar u Newcastleu u Broadmeadowu.",
+        "de": "Werktags 8–18 Uhr, Sa 8–12 Uhr. Bei Notfällen bitte zuerst anrufen; einige Fälle werden an das Notfallzentrum Newcastle in Broadmeadow verwiesen."
       },
       "small_animals": true,
       "url": "https://charlestownvet.com.au/",
@@ -1216,7 +1275,8 @@
       "emergency_24h": false,
       "duty": "Open 7 days. When closed, emergency care is provided by AREC in Newcastle and SASH Tuggerah.",
       "duty_i18n": {
-        "hr": "Otvoreno 7 dana u tjednu. Kad je zatvoreno, hitnu skrb pružaju AREC u Newcastleu i SASH Tuggerah."
+        "hr": "Otvoreno 7 dana u tjednu. Kad je zatvoreno, hitnu skrb pružaju AREC u Newcastleu i SASH Tuggerah.",
+        "de": "Täglich geöffnet. Wenn die Klinik geschlossen ist, übernehmen AREC in Newcastle und SASH Tuggerah die Notfallversorgung."
       },
       "small_animals": true,
       "url": "https://merewethervets.com.au/",
@@ -1237,7 +1297,10 @@
       "url": "https://animalemergencyservice.com.au/aes_location/animal-emergency-service-hawthorn-east/",
       "source_url": "https://animalemergencyservice.com.au/aes_location/animal-emergency-service-hawthorn-east/",
       "checked": "2026-11-08",
-      "note": "Page: 'We're open 24 hours, 7days a week, 365 days a year, no appointment required.'"
+      "note": "Page: 'We're open 24 hours, 7days a week, 365 days a year, no appointment required.'",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Kein Termin erforderlich."
+      }
     },
     {
       "kind": "clinic",
@@ -1252,7 +1315,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-essendon-fields.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-essendon-fields.html",
       "checked": "2026-11-08",
-      "note": "Page meta: 'Open 24 hours, 7 days a week, every day of the year.' Animal Referral & Emergency Network."
+      "note": "Page meta: 'Open 24 hours, 7 days a week, every day of the year.' Animal Referral & Emergency Network.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, das ganze Jahr über."
+      }
     },
     {
       "kind": "clinic",
@@ -1267,7 +1333,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/care.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/care.html",
       "checked": "2026-11-08",
-      "note": "Page: 'Emergency and Critical Care service 24 hours a day, 365 days a year'; meta 'Open 24 hours, 7 days a week'."
+      "note": "Page: 'Emergency and Critical Care service 24 hours a day, 365 days a year'; meta 'Open 24 hours, 7 days a week'.",
+      "duty_i18n": {
+        "de": "Notfall- und Intensivversorgung rund um die Uhr, 365 Tage im Jahr."
+      }
     },
     {
       "kind": "clinic",
@@ -1282,7 +1351,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-mt-waverley.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-mt-waverley.html",
       "checked": "2026-11-08",
-      "note": "Page meta: 'Open 24 hours, 7 days a week, every day of the year.'"
+      "note": "Page meta: 'Open 24 hours, 7 days a week, every day of the year.'",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, das ganze Jahr über, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1297,7 +1369,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/vrh-dandenong.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/vrh-dandenong.html",
       "checked": "2026-11-08",
-      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year.' / 'we're here 24/7!'"
+      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year.' / 'we're here 24/7!'",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, das ganze Jahr über."
+      }
     },
     {
       "kind": "clinic",
@@ -1312,7 +1387,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-moorabbin.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-moorabbin.html",
       "checked": "2026-11-08",
-      "note": "Page: 'Open 24 hours a day, 7 days a week, including public holidays.'"
+      "note": "Page: 'Open 24 hours a day, 7 days a week, including public holidays.'",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen. Für Notfälle sind weder Überweisung noch Termin nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -1327,7 +1405,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-frankston.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-frankston.html",
       "checked": "2026-11-08",
-      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year.' Serves Mornington Peninsula too."
+      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year.' Serves Mornington Peninsula too.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1342,7 +1423,10 @@
       "url": "https://www.greencrossvets.com.au/vets/greencrossvethospital/",
       "source_url": "https://www.greencrossvets.com.au/vets/greencrossvethospital/",
       "checked": "2026-11-08",
-      "note": "Greencross page: 'Open 24/7, 365 days a year' (pet emergencies). University of Melbourne page mvs.unimelb.edu.au/engage/clinical-services/veterinary-care-at-werribee confirms it is the university's animal hospital; old U-Vet Werribee closed 24 Dec 2022. Parkville/other U Melbourne small-animal hospital not found."
+      "note": "Greencross page: 'Open 24/7, 365 days a year' (pet emergencies). University of Melbourne page mvs.unimelb.edu.au/engage/clinical-services/veterinary-care-at-werribee confirms it is the university's animal hospital; old U-Vet Werribee closed 24 Dec 2022. Parkville/other U Melbourne small-animal hospital not found.",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr. Termine beim Allgemeintierarzt und bei Fachtierärzten Mo–Fr 8–18 Uhr, Sa 9–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1357,7 +1441,10 @@
       "url": "https://penvetreferral.com.au/emergency/",
       "source_url": "https://penvetreferral.com.au/contact-us/",
       "checked": "2026-11-08",
-      "note": "Contact page: 'Open 24 hours, 7 days a week.' Emergency page: '7 Days a week (24 hours)'."
+      "note": "Contact page: 'Open 24 hours, 7 days a week.' Emergency page: '7 Days a week (24 hours)'.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1372,7 +1459,10 @@
       "url": "https://northernsuburbsvet.com.au/",
       "source_url": "https://northernsuburbsvet.com.au/contact/",
       "checked": "2026-11-08",
-      "note": "Contact page: '24 hours a day, 7 days a week, 365 days a year'. Postcode not on page."
+      "note": "Contact page: '24 hours a day, 7 days a week, 365 days a year'. Postcode not on page.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr."
+      }
     },
     {
       "kind": "clinic",
@@ -1387,7 +1477,10 @@
       "url": "https://caseypetemergency.com.au/",
       "source_url": "https://caseypetemergency.com.au/",
       "checked": "2026-11-08",
-      "note": "Homepage: 'Open 24/7 Including Public Holidays'. Postcode not on page (a map listing showed 471 Princes Hwy; page wins)."
+      "note": "Homepage: 'Open 24/7 Including Public Holidays'. Postcode not on page (a map listing showed 471 Princes Hwy; page wins).",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, auch an Feiertagen. Kein Termin nötig; nach Möglichkeit vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1402,7 +1495,10 @@
       "url": "https://www.southpaws.com.au/malvern-emergency-vet/",
       "source_url": "https://www.southpaws.com.au/malvern-emergency-vet/",
       "checked": "2026-11-08",
-      "note": "Page: 'open 24 hours a day, 7 days a week'; 'emergency hospital ... 24 hours a day, 365 days a year'."
+      "note": "Page: 'open 24 hours a day, 7 days a week'; 'emergency hospital ... 24 hours a day, 365 days a year'.",
+      "duty_i18n": {
+        "de": "Notfallklinik, täglich rund um die Uhr geöffnet. Für Notfälle sind weder Überweisung noch Termin nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -1417,7 +1513,10 @@
       "url": "https://mashvet.com.au/",
       "source_url": "https://mashvet.com.au/",
       "checked": "2026-11-08",
-      "note": "Homepage: 'Open 24/7 for Emergencies'."
+      "note": "Homepage: 'Open 24/7 for Emergencies'.",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr; kein Termin nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -1431,7 +1530,10 @@
       "url": "https://advancedvetcare.com.au/vet-emergency-kensington-melbourne/",
       "source_url": "https://advancedvetcare.com.au/vet-emergency-kensington-melbourne/",
       "checked": "2026-11-08",
-      "note": "Page: 'Emergency care is available 24 hours a day, 365 days a year.' No street address on the opened pages; contact page and Kew page blocked by robots. Third-party clinic pages (Thornbury Vet) list Kew 2/6 Chandler Hwy, 9020 3555 - not used as source."
+      "note": "Page: 'Emergency care is available 24 hours a day, 365 days a year.' No street address on the opened pages; contact page and Kew page blocked by robots. Third-party clinic pages (Thornbury Vet) list Kew 2/6 Chandler Hwy, 9020 3555 - not used as source.",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr, 365 Tage im Jahr. Kein Termin nötig; bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1441,12 +1543,15 @@
       "address": "102 Fyans Street, South Geelong VIC 3220",
       "phone": "+61 3 5222 2139",
       "emergency_24h": false,
-      "duty": "After-hours emergency clinic: weekdays 7-9am and 5pm-midnight, weekends 7am-midnight (as published). Call ahead.",
+      "duty": "After-hours emergency clinic: weekdays 7-9am and 5pm-midnight, weekends 7am-midnight. Call ahead.",
       "small_animals": true,
       "url": "https://www.geelonganimalemergency.com.au/",
       "source_url": "https://www.geelonganimalemergency.com.au/",
       "checked": "2026-11-08",
-      "note": "Own homepage gives set hours (7am-9am and 5pm-midnight weekdays; 7am-midnight weekends); services page says '24hr on weekends'; page title '24hr Emergency Vet'. Bellarine Vet page calls it open 24/7 (third party). Conflicting, so emergency_24h=false."
+      "note": "Own homepage gives set hours (7am-9am and 5pm-midnight weekdays; 7am-midnight weekends); services page says '24hr on weekends'; page title '24hr Emergency Vet'. Bellarine Vet page calls it open 24/7 (third party). Conflicting, so emergency_24h=false. Moved from duty (2026-11-10): '(as published)' qualifier on hours",
+      "duty_i18n": {
+        "de": "Notfallklinik außerhalb der Sprechzeiten: werktags 7–9 Uhr und 17–24 Uhr, am Wochenende 7–24 Uhr. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1461,7 +1566,10 @@
       "url": "https://lortsmith.com/location/north-melbourne-animal-hospital",
       "source_url": "https://lortsmith.com/location/north-melbourne-animal-hospital",
       "checked": "2026-11-08",
-      "note": "Not 24 h: emergency hours 8am-10pm daily."
+      "note": "Not 24 h: emergency hours 8am-10pm daily.",
+      "duty_i18n": {
+        "de": "Notfälle täglich 8–22 Uhr, auch an Feiertagen; reguläre Sprechstunden Mo–Sa 8–19 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1476,7 +1584,10 @@
       "url": "https://gippslandpetemergency.com.au/",
       "source_url": "https://gippslandpetemergency.com.au/emergency-care/",
       "checked": "2026-11-08",
-      "note": "Homepage/emergency page: 24 h from Fri 6pm to Mon 8am + public holidays; FAQ gives slightly different weekend times. Not open weekdays, so emergency_24h=false. Postcode 3820 from The Vets Sale page."
+      "note": "Homepage/emergency page: 24 h from Fri 6pm to Mon 8am + public holidays; FAQ gives slightly different weekend times. Not open weekdays, so emergency_24h=false. Postcode 3820 from The Vets Sale page.",
+      "duty_i18n": {
+        "de": "Notdienst am Wochenende und an Feiertagen: rund um die Uhr geöffnet von Fr 18 Uhr bis Mo 8 Uhr sowie an Feiertagen. Zur Bestätigung bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1491,7 +1602,10 @@
       "url": "https://bendigoanimalhospital.squarespace.com",
       "source_url": "https://bendigoanimalhospital.squarespace.com/vet-emergency-contact",
       "checked": "2026-11-08",
-      "note": "Page: '(03) 5443-3322 - All Hours' and 'Bendigo Combined Clinics 24 hour emergency service' (phone-based)."
+      "note": "Page: '(03) 5443-3322 - All Hours' and 'Bendigo Combined Clinics 24 hour emergency service' (phone-based).",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 9–12.30 Uhr. Außerhalb der Öffnungszeiten bitte dieselbe Nummer anrufen; mit Unterstützung des Notdienstes der Bendigo Combined Clinics (rund um die Uhr)."
+      }
     },
     {
       "kind": "clinic",
@@ -1506,7 +1620,10 @@
       "url": "https://furlifevet.com.au/eaglehawkroad",
       "source_url": "https://furlifevet.com.au/eaglehawkroad",
       "checked": "2026-11-08",
-      "note": "Page lists '24 hour emergency' without detail; phone triage, so emergency_24h=false."
+      "note": "Page lists '24 hour emergency' without detail; phone triage, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Do 9–18 Uhr, Fr 9–17 Uhr, Sa 9–12 Uhr. Für Notfälle außerhalb dieser Zeiten bitte 1800 387 543 anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1521,7 +1638,10 @@
       "url": "https://www.eurekavet.com.au/afterhours-vet-care",
       "source_url": "https://www.eurekavet.com.au/afterhours-vet-care",
       "checked": "2026-11-08",
-      "note": "Page also lists emergency number 0408 512 323 in header; not 24 h."
+      "note": "Page also lists emergency number 0408 512 323 in header; not 24 h.",
+      "duty_i18n": {
+        "de": "Triage außerhalb der Sprechzeiten werktags 18–24 Uhr, am Wochenende und an Feiertagen 8–24 Uhr (für registrierte Kunden; andere sind willkommen, wenn ihre Klinik keinen Notdienst anbietet). Versorgung rund um die Uhr über Notfallkliniken in Melbourne."
+      }
     },
     {
       "kind": "clinic",
@@ -1536,7 +1656,10 @@
       "url": "https://bvp.com.au/",
       "source_url": "https://bvp.com.au/small-animals/contact-sturt-street-ballarat-vet/",
       "checked": "2026-11-08",
-      "note": "Page postcode shows 3352 and 3350. After-hours phone line only."
+      "note": "Page postcode shows 3352 and 3350. After-hours phone line only.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; Notfalltelefon außerhalb der Sprechzeiten 18–8 Uhr unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -1551,7 +1674,10 @@
       "url": "https://www.greencrossvets.com.au/vets/ballarat/",
       "source_url": "https://www.greencrossvets.com.au/vets/ballarat/",
       "checked": "2026-11-08",
-      "note": "Hours may vary; Sat by appointment."
+      "note": "Hours may vary; Sat by appointment.",
+      "duty_i18n": {
+        "de": "Di und Do 9–19 Uhr, übrige Werktage 9–17 Uhr. Die nächste rund um die Uhr geöffnete Notfallklinik ist das Greencross Vet Hospital Werribee."
+      }
     },
     {
       "kind": "clinic",
@@ -1566,7 +1692,10 @@
       "url": "https://www.apiam.com.au/locations/warrnambool-veterinary/",
       "source_url": "https://www.apiam.com.au/locations/warrnambool-veterinary/",
       "checked": "2026-11-08",
-      "note": "Apiam page: '24-hour emergency service is available' (call the clinic number); on-call, not a staffed 24 h hospital."
+      "note": "Apiam page: '24-hour emergency service is available' (call the clinic number); on-call, not a staffed 24 h hospital.",
+      "duty_i18n": {
+        "de": "Mo–Do 8–19.30 Uhr, Fr 8–18 Uhr, Sa 8–12 Uhr, So 9–12 Uhr. Telefonischer Notdienst rund um die Uhr unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -1581,7 +1710,10 @@
       "url": "https://harbourcityvet.com.au/?p=7884",
       "source_url": "https://harbourcityvet.com.au/?p=7884",
       "checked": "2026-11-08",
-      "note": "Found on a partner (Harbour City Vet) page; hours not published there. Weak source, low priority."
+      "note": "Found on a partner (Harbour City Vet) page; hours not published there. Weak source, low priority.",
+      "duty_i18n": {
+        "de": "Sprechstunden tagsüber; Unterstützung außerhalb der Öffnungszeiten über die Warrnambool Veterinary Clinic."
+      }
     },
     {
       "kind": "clinic",
@@ -1596,7 +1728,10 @@
       "url": "https://www.torquayvetclinic.com.au/",
       "source_url": "https://www.torquayvetclinic.com.au/contact",
       "checked": "2026-11-08",
-      "note": "Also runs Anglesea Vet Clinic (1A Diggers Parade, Anglesea) - limited hours."
+      "note": "Also runs Anglesea Vet Clinic (1A Diggers Parade, Anglesea) - limited hours.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–18.30 Uhr, Sa 9–13 Uhr. Für Auskünfte außerhalb der Öffnungszeiten bitte in der Klinik anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1611,7 +1746,10 @@
       "url": "https://www.pisra.com.au/cowes-veterinary-surgery",
       "source_url": "https://www.pisra.com.au/cowes-veterinary-surgery",
       "checked": "2026-11-08",
-      "note": "No emergency arrangement on page; nearest 24 h hospitals are mainland (Frankston, Dandenong)."
+      "note": "No emergency arrangement on page; nearest 24 h hospitals are mainland (Frankston, Dandenong).",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–17.30 Uhr, Sa 9–12 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1626,7 +1764,10 @@
       "url": "https://ryevet.com.au/",
       "source_url": "https://ryevet.com.au/",
       "checked": "2026-11-08",
-      "note": "Closed Sundays and public holidays."
+      "note": "Closed Sundays and public holidays.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–12 Uhr. Außerhalb der Öffnungszeiten: AEC Frankston (03 9770 5555) oder Peninsula Vet Emergency (03 5979 9600)."
+      }
     },
     {
       "kind": "clinic",
@@ -1641,7 +1782,10 @@
       "url": "https://www.penvetcare.com.au/rye",
       "source_url": "https://penvetcare.com.au/locations/",
       "checked": "2026-11-08",
-      "note": "Hours not on locations page; emergency page not openable (provenance)."
+      "note": "Hours not on locations page; emergency page not openable (provenance).",
+      "duty_i18n": {
+        "de": "Tagesklinik; Versorgung rund um die Uhr im Peninsula Vet Emergency & Referral Hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -1656,7 +1800,10 @@
       "url": "https://www.penvetcare.com.au/rosebud",
       "source_url": "https://penvetcare.com.au/locations/",
       "checked": "2026-11-08",
-      "note": "Hours not on locations page."
+      "note": "Hours not on locations page.",
+      "duty_i18n": {
+        "de": "Tagesklinik; Versorgung rund um die Uhr im Peninsula Vet Emergency & Referral Hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -1671,7 +1818,10 @@
       "url": "https://www.penvetcare.com.au/dromana",
       "source_url": "https://penvetcare.com.au/locations/",
       "checked": "2026-11-08",
-      "note": "Hours not on locations page."
+      "note": "Hours not on locations page.",
+      "duty_i18n": {
+        "de": "Tagesklinik; Versorgung rund um die Uhr im Peninsula Vet Emergency & Referral Hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -1686,7 +1836,10 @@
       "url": "https://www.southpaws.com.au/mornington-vet-referral-hospital/",
       "source_url": "https://www.southpaws.com.au/mornington-vet-referral-hospital/",
       "checked": "2026-11-08",
-      "note": "Not 24 h; specialist referral."
+      "note": "Not 24 h; specialist referral.",
+      "duty_i18n": {
+        "de": "Überweisungsklinik Mo–Fr 8–20 Uhr, Sa 8–12 Uhr. Notfälle außerhalb der Öffnungszeiten bitte an Southpaws Malvern (rund um die Uhr geöffnet)."
+      }
     },
     {
       "kind": "clinic",
@@ -1701,7 +1854,10 @@
       "url": "https://www.traralgonvetcentre.com.au/",
       "source_url": "https://www.traralgonvetcentre.com.au/",
       "checked": "2026-11-08",
-      "note": "Page lists '24/7 emergency service' on the phone line; on-call, so emergency_24h=false."
+      "note": "Page lists '24/7 emergency service' on the phone line; on-call, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 8.30–12 Uhr. Notdienst außerhalb der Öffnungszeiten für Bestandskunden unter derselben Nummer; bei Überlastung wird gegebenenfalls an ein anderes Notfallzentrum verwiesen."
+      }
     },
     {
       "kind": "clinic",
@@ -1716,7 +1872,10 @@
       "url": "https://vetsale.com.au/after-hours-emergency-care/",
       "source_url": "https://vetsale.com.au/after-hours-emergency-care/",
       "checked": "2026-11-08",
-      "note": "Clinic states it is not a 24-hour hospital."
+      "note": "Clinic states it is not a 24-hour hospital.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17/18 Uhr, Sa 8.30–12 Uhr. Notfälle am Wochenende und an Feiertagen werden an Gippsland Pet Emergency (Warragul) verwiesen."
+      }
     },
     {
       "kind": "clinic",
@@ -1731,7 +1890,10 @@
       "url": "https://eastwoodvets.com.au/",
       "source_url": "https://eastwoodvets.com.au/contact/",
       "checked": "2026-11-08",
-      "note": "Page: after-hours emergency 'Available 24/7' via phone (on-call); emergency_24h=false. Formerly Bairnsdale Animal Hospital."
+      "note": "Page: after-hours emergency 'Available 24/7' via phone (on-call); emergency_24h=false. Formerly Bairnsdale Animal Hospital.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 9–12 Uhr. Telefonischer Notdienst außerhalb der Öffnungszeiten, gemeinsam mit Main St Vets."
+      }
     },
     {
       "kind": "clinic",
@@ -1746,7 +1908,10 @@
       "url": "https://www.mainstvetclinic.com.au/",
       "source_url": "https://www.mainstvetclinic.com.au/",
       "checked": "2026-11-08",
-      "note": "Phone triage only."
+      "note": "Phone triage only.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 9–12 Uhr. Telefonische Notfall-Triage außerhalb der Öffnungszeiten unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -1761,7 +1926,10 @@
       "url": "https://www.warbyvet.com.au/",
       "source_url": "https://www.warbyvet.com.au/",
       "checked": "2026-11-08",
-      "note": "Page: vet available 24 hours via VETCHAT (03) 6413 0218; an Instagram post lists (03) 6407 5824 - confirm. Phone service, so emergency_24h=false."
+      "note": "Page: vet available 24 hours via VETCHAT (03) 6413 0218; an Instagram post lists (03) 6407 5824 - confirm. Phone service, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 9–12 Uhr. Notfallberatung außerhalb der Öffnungszeiten über den Telefondienst VETCHAT."
+      }
     },
     {
       "kind": "clinic",
@@ -1776,7 +1944,10 @@
       "url": "https://alpinevet.com.au/",
       "source_url": "https://alpinevet.com.au/emergency/",
       "checked": "2026-11-08",
-      "note": "Emergency page: 'not a 24-hour facility', vet on call 24/7 not guaranteed. Covers Bright / Alpine area."
+      "note": "Emergency page: 'not a 24-hour facility', vet on call 24/7 not guaranteed. Covers Bright / Alpine area.",
+      "duty_i18n": {
+        "de": "Mo, Di, Do, Fr 8.30–17.30 Uhr, Sa 9–13 Uhr. Tierarzt in Bereitschaft rund um die Uhr unter derselben Nummer (vor allem für bestehende Kunden; keine rund um die Uhr besetzte Klinik)."
+      }
     },
     {
       "kind": "clinic",
@@ -1791,7 +1962,10 @@
       "url": "http://www.milduravet.com.au/",
       "source_url": "http://www.milduravet.com.au/contact-us/",
       "checked": "2026-11-08",
-      "note": "Emergency mobile number on contact page; weekend hours not published."
+      "note": "Emergency mobile number on contact page; weekend hours not published.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–20 Uhr. Notrufnummer 0419 353 965."
+      }
     },
     {
       "kind": "clinic",
@@ -1805,7 +1979,10 @@
       "small_animals": true,
       "url": "https://www.swanhillvet.com.au/",
       "source_url": "https://www.swanhillvet.com.au/contact-us",
-      "checked": "2026-11-08"
+      "checked": "2026-11-08",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 9–12 Uhr. Notfall außerhalb der Öffnungszeiten 0417 529 462."
+      }
     },
     {
       "kind": "clinic",
@@ -1820,7 +1997,10 @@
       "url": "https://echucavets.com.au/",
       "source_url": "https://echucavets.com.au/",
       "checked": "2026-11-08",
-      "note": "Page heading '24/7 Emergency Vet On-Call' (phone connection to on-call vet), so emergency_24h=false."
+      "note": "Page heading '24/7 Emergency Vet On-Call' (phone connection to on-call vet), so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo 8–18 Uhr, Di–Fr 8.30–18 Uhr, Sa 8.30–13 Uhr. Tierarzt in Bereitschaft für Beratung und dringende Versorgung außerhalb der Öffnungszeiten über die Kliniknummer."
+      }
     },
     {
       "kind": "clinic",
@@ -1834,7 +2014,10 @@
       "small_animals": true,
       "url": "https://perricootavet.com.au/",
       "source_url": "https://perricootavet.com.au/contact-us/",
-      "checked": "2026-11-08"
+      "checked": "2026-11-08",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr. Bei Notfällen außerhalb der Öffnungszeiten bitte die Klinik anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1849,7 +2032,10 @@
       "url": "https://horshamvethospital.com.au/",
       "source_url": "https://horshamvethospital.com.au/vet-services/24-hour-emergency-vet-care/",
       "checked": "2026-11-08",
-      "note": "Address only from map embed text; no hours published on opened page; page does not state 24 h."
+      "note": "Address only from map embed text; no hours published on opened page; page does not state 24 h.",
+      "duty_i18n": {
+        "de": "Notfälle außerhalb der Öffnungszeiten werden über die Kliniknummer vom Telefonteam Vetriage betreut."
+      }
     },
     {
       "kind": "clinic",
@@ -1864,7 +2050,10 @@
       "url": "https://rhodesveterinaryclinic.com.au/",
       "source_url": "https://rhodesveterinaryclinic.com.au/contact-us/",
       "checked": "2026-11-08",
-      "note": "On-call, so emergency_24h=false. Also treats large animals."
+      "note": "On-call, so emergency_24h=false. Also treats large animals.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–12 Uhr. Notdienst täglich rund um die Uhr für Klein- und Großtiere unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -1879,7 +2068,10 @@
       "url": "https://thevetgroup.com.au/portland-vet-clinic-tvg/",
       "source_url": "https://thevetgroup.com.au/portland-vet-clinic-tvg/",
       "checked": "2026-11-08",
-      "note": "Farm services 1300 838 700."
+      "note": "Farm services 1300 838 700.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; außerhalb dieser Zeiten ist das Notfall- und Intensivteam in Bereitschaft."
+      }
     },
     {
       "kind": "clinic",
@@ -1894,7 +2086,10 @@
       "url": "https://www.wodongaanimalhospital.com.au/",
       "source_url": "https://www.wodongaanimalhospital.com.au/contact-us",
       "checked": "2026-11-08",
-      "note": "Emergency page opened: no 24 h claim."
+      "note": "Emergency page opened: no 24 h claim.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr. Außerhalb dieser Zeiten werden Tierhalter an eine Notfallklinik verwiesen."
+      }
     },
     {
       "kind": "clinic",
@@ -1909,7 +2104,10 @@
       "url": "https://www.mrah.com.au/",
       "source_url": "https://www.mrah.com.au/",
       "checked": "2026-11-08",
-      "note": "No after-hours details on the page."
+      "note": "No after-hours details on the page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1924,7 +2122,10 @@
       "url": "https://www.bellvet.com.au/services/after-hours-emergencies",
       "source_url": "https://www.bellvet.com.au/services/after-hours-emergencies",
       "checked": "2026-11-08",
-      "note": "Group also has Drysdale (03 5253 1393), Barwon Heads, Grovedale, Newcomb, Point Lonsdale clinics."
+      "note": "Group also has Drysdale (03 5253 1393), Barwon Heads, Grovedale, Newcomb, Point Lonsdale clinics.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18.30 Uhr, Sa 8.30–12.30 Uhr. Außerhalb der Öffnungszeiten: Geelong Animal Emergency (03 5222 2139)."
+      }
     },
     {
       "kind": "clinic",
@@ -1939,7 +2140,10 @@
       "url": "https://vetsofgeelong.com.au/emergency-vet-geelong/",
       "source_url": "https://vetsofgeelong.com.au/emergency-vet-geelong/",
       "checked": "2026-11-08",
-      "note": "Group also has Geelong West, Lara and East Geelong; same phone."
+      "note": "Group also has Geelong West, Lara and East Geelong; same phone.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 8–16 Uhr, So 10–16 Uhr. Für Auskünfte außerhalb der Öffnungszeiten bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1953,7 +2157,10 @@
       "small_animals": true,
       "url": "https://newtownvet.com.au/emergency/",
       "source_url": "https://newtownvet.com.au/emergency/",
-      "checked": "2026-11-08"
+      "checked": "2026-11-08",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–13 Uhr. Außerhalb der Öffnungszeiten: Geelong Animal Emergency (03 5222 2139)."
+      }
     },
     {
       "kind": "clinic",
@@ -1967,7 +2174,10 @@
       "small_animals": true,
       "url": "https://www.thornburyvet.com.au/contact-us",
       "source_url": "https://www.thornburyvet.com.au/contact-us",
-      "checked": "2026-11-08"
+      "checked": "2026-11-08",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–13 Uhr. Notfälle außerhalb der Öffnungszeiten: Advanced Vetcare Kew."
+      }
     },
     {
       "kind": "clinic",
@@ -1982,7 +2192,10 @@
       "url": "https://belgravesouthvet.com.au/emergencies",
       "source_url": "https://belgravesouthvet.com.au/emergencies",
       "checked": "2026-11-08",
-      "note": "Dandenong Ranges."
+      "note": "Dandenong Ranges.",
+      "duty_i18n": {
+        "de": "Mo–Do 8–20 Uhr, Fr 8–18 Uhr, Sa 9–15 Uhr. Außerhalb der Öffnungszeiten: VRH Dandenong (1300 385 874) oder Casey Pet Emergency (03 8790 1625)."
+      }
     },
     {
       "kind": "clinic",
@@ -1997,7 +2210,10 @@
       "url": "https://ultimatevet.com.au/emergency-vet/",
       "source_url": "https://ultimatevet.com.au/emergency-vet/",
       "checked": "2026-11-08",
-      "note": "No after-hours provider named."
+      "note": "No after-hours provider named.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr. Notfälle werden während der Öffnungszeiten ohne Termin behandelt."
+      }
     },
     {
       "kind": "clinic",
@@ -2012,7 +2228,10 @@
       "url": "https://sashvets.com/locations/sunshine-coast/",
       "source_url": "https://sashvets.com/locations/sunshine-coast/",
       "checked": "2026-11-09",
-      "note": "Page: 'Open 24 hours - 365 days per year'; FAQ 'open 24/7' for emergency care."
+      "note": "Page: 'Open 24 hours - 365 days per year'; FAQ 'open 24/7' for emergency care.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Für Notfälle ist keine Voranmeldung nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -2027,7 +2246,10 @@
       "url": "https://sashvets.com/locations/gold-coast/",
       "source_url": "https://sashvets.com/locations/gold-coast/",
       "checked": "2026-11-09",
-      "note": "Page: 'Open 24 hours - 365 days per year'; FAQ 'fully staffed 24 hour emergency veterinary hospital'. Enter via The Home Hub complex on Christine Ave."
+      "note": "Page: 'Open 24 hours - 365 days per year'; FAQ 'fully staffed 24 hour emergency veterinary hospital'. Enter via The Home Hub complex on Christine Ave.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Für Notfälle ist keine Voranmeldung nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -2042,7 +2264,10 @@
       "url": "https://animalemergencyservice.com.au/?p=17458",
       "source_url": "https://animalemergencyservice.com.au/?p=17458",
       "checked": "2026-11-09",
-      "note": "Page lists 'Open 24 hours' every day and says 'open 24 hours, 7days a week, 365 days a year'; contact page ?p=24 also lists Tanawha as 24 Hours."
+      "note": "Page lists 'Open 24 hours' every day and says 'open 24 hours, 7days a week, 365 days a year'; contact page ?p=24 also lists Tanawha as 24 Hours.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr. Kein Termin nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -2057,7 +2282,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-woolloongabba.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-woolloongabba.html",
       "checked": "2026-11-09",
-      "note": "Meta description 'Open 24 hours, 7 days a week, every day of the year'; body says available 24/7. Page also says 'open after hours' in one place; the hours widget shows only 'Open'. Greencross Brisbane page also lists it as Monday-Sunday 24 hours."
+      "note": "Meta description 'Open 24 hours, 7 days a week, every day of the year'; body says available 24/7. Page also says 'open after hours' in one place; the hours widget shows only 'Open'. Greencross Brisbane page also lists it as Monday-Sunday 24 hours.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -2072,7 +2300,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-brisbane.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-brisbane.html",
       "checked": "2026-11-09",
-      "note": "Page: 'open 24 hours, 7 days a week, every day of the year' and 'here 24 hours a day, 365 days per year'. Page also shows 02 numbers for the network; 07 number used. Email brisbane@arhvets.com on the network page."
+      "note": "Page: 'open 24 hours, 7 days a week, every day of the year' and 'here 24 hours a day, 365 days per year'. Page also shows 02 numbers for the network; 07 number used. Email brisbane@arhvets.com on the network page.",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr, 365 Tage im Jahr. Fachsprechstunden auf Überweisung Mo–Fr 8–18 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2087,7 +2318,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-gold-coast.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-gold-coast.html",
       "checked": "2026-11-09",
-      "note": "FAQ: 'open 24 hours, 7 days a week, every day of the year, including public holidays'. Page also shows 02/03 numbers for other services; 07 5593 4544 is the listing number."
+      "note": "FAQ: 'open 24 hours, 7 days a week, every day of the year, including public holidays'. Page also shows 02/03 numbers for other services; 07 5593 4544 is the listing number.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -2102,7 +2336,10 @@
       "url": "https://jcuvet.com.au/emergency-and-critical-care/",
       "source_url": "https://jcuvet.com.au/contact-us/",
       "checked": "2026-11-09",
-      "note": "Contact page: Emergency and Critical Care '24 hours a day, 7 days a week'; reception 1300 528 838 (1300 JCU VET). Footer postcode 4811 vs 4814 in address. Greencross Aitkenvale page gives 4781 3600 for JCU Vet Emergency; not used."
+      "note": "Contact page: Emergency and Critical Care '24 hours a day, 7 days a week'; reception 1300 528 838 (1300 JCU VET). Footer postcode 4811 vs 4814 in address. Greencross Aitkenvale page gives 4781 3600 for JCU Vet Emergency; not used.",
+      "duty_i18n": {
+        "de": "Notfall- und Intensivmedizin täglich rund um die Uhr geöffnet. Allgemeinpraxis und Überweisungsfälle Mo–Fr nach Terminvereinbarung."
+      }
     },
     {
       "kind": "clinic",
@@ -2117,7 +2354,10 @@
       "url": "https://www.emergencyvets247.com.au/",
       "source_url": "https://www.emergencyvets247.com.au/contact",
       "checked": "2026-11-09",
-      "note": "Page: '24 hours a day, 7 days a week'; walk-ins welcome 24 hours. Edmonton Vet Clinic page also refers after-hours cases here."
+      "note": "Page: '24 hours a day, 7 days a week'; walk-ins welcome 24 hours. Edmonton Vet Clinic page also refers after-hours cases here.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet. Auch ohne Termin willkommen."
+      }
     },
     {
       "kind": "clinic",
@@ -2132,7 +2372,10 @@
       "url": "https://animalemergencyservice.com.au/info/jindalee-emergency-vet/",
       "source_url": "https://animalemergencyservice.com.au/info/jindalee-emergency-vet/",
       "checked": "2026-11-09",
-      "note": "Weekdays 12am-8am and 6pm-12am; Saturday/Sunday 'Open 24 hours'. Not 24 h on weekdays so false. Same on ?p=24 contact page."
+      "note": "Weekdays 12am-8am and 6pm-12am; Saturday/Sunday 'Open 24 hours'. Not 24 h on weekdays so false. Same on ?p=24 contact page.",
+      "duty_i18n": {
+        "de": "Notfallklinik außerhalb der Sprechzeiten: Mo–Fr nachts (0–8 Uhr) und ab 18 Uhr; am Wochenende und an Feiertagen rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -2147,7 +2390,10 @@
       "url": "https://animalemergencyservice.com.au/?p=24",
       "source_url": "https://animalemergencyservice.com.au/?p=24",
       "checked": "2026-11-09",
-      "note": "?p=24 lists Mon-Fri 12am-8am and 6pm-12am, Sat/Sun open 24 hours. ?p=213 page says Mon-Thu 6pm-8am, Fri 6pm-Mon 8am, public holidays 24 h (conflicts); false."
+      "note": "?p=24 lists Mon-Fri 12am-8am and 6pm-12am, Sat/Sun open 24 hours. ?p=213 page says Mon-Thu 6pm-8am, Fri 6pm-Mon 8am, public holidays 24 h (conflicts); false.",
+      "duty_i18n": {
+        "de": "Notfallklinik außerhalb der Sprechzeiten: Mo–Fr nachts und ab 18 Uhr; am Wochenende und an Feiertagen rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -2162,7 +2408,10 @@
       "url": "https://animalemergencyservice.com.au/info/carrara-gold-coast/",
       "source_url": "https://animalemergencyservice.com.au/info/carrara-gold-coast/",
       "checked": "2026-11-09",
-      "note": "Mon-Fri 12am-8am and 6pm-12am; Sat/Sun 'Open 24 hours'. Not 24 h on weekdays so false."
+      "note": "Mon-Fri 12am-8am and 6pm-12am; Sat/Sun 'Open 24 hours'. Not 24 h on weekdays so false.",
+      "duty_i18n": {
+        "de": "Notfallklinik außerhalb der Sprechzeiten: Mo–Fr nachts und ab 18 Uhr; am Wochenende und an Feiertagen rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -2177,7 +2426,10 @@
       "url": "https://bveccs.ntg.co",
       "source_url": "https://bveccs.ntg.co",
       "checked": "2026-11-09",
-      "note": "Page: weeknights 6pm-8am, '24H WEEKENDS & PUBLIC HOLIDAYS'; also says emergency service 'available 24/7' in general text, but weekday daytime not covered so false."
+      "note": "Page: weeknights 6pm-8am, '24H WEEKENDS & PUBLIC HOLIDAYS'; also says emergency service 'available 24/7' in general text, but weekday daytime not covered so false.",
+      "duty_i18n": {
+        "de": "Notdienst außerhalb der Sprechzeiten: Mo–Fr 18–8 Uhr; am Wochenende und an Feiertagen rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -2192,7 +2444,10 @@
       "url": "https://small-animal.hospital.uq.edu.au",
       "source_url": "https://small-animal.hospital.uq.edu.au",
       "checked": "2026-11-09",
-      "note": "UQ page (opened) mentions an emergency service but gives no hours, address or phone; /contact and /services/emergency refused by robots. Phone 5460 1788 only from Greencross South Toowoomba/Wilsonton pages ('afterhours call UQ Vets'); address not on opened pages (campus town only). 24 h not stated."
+      "note": "UQ page (opened) mentions an emergency service but gives no hours, address or phone; /contact and /services/emergency refused by robots. Phone 5460 1788 only from Greencross South Toowoomba/Wilsonton pages ('afterhours call UQ Vets'); address not on opened pages (campus town only). 24 h not stated.",
+      "duty_i18n": {
+        "de": "Kleintierklinik der Universität mit Notdienst für den Raum Ipswich bis Toowoomba; aktuelle Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -2207,7 +2462,10 @@
       "url": "https://www.toowoombavet.com.au/",
       "source_url": "https://www.toowoombavet.com.au/24hr-emergency-vet/",
       "checked": "2026-11-09",
-      "note": "Emergency page lists daytime hours and refers after hours to REDVets Toowoomba (07) 4602 0652 (REDVets own page could not be found/opened). Not 24 h."
+      "note": "Emergency page lists daytime hours and refers after hours to REDVets Toowoomba (07) 4602 0652 (REDVets own page could not be found/opened). Not 24 h.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–13 Uhr; sonn- und feiertags geschlossen. Außerhalb der Öffnungszeiten werden Notfälle an REDVets Toowoomba verwiesen."
+      }
     },
     {
       "kind": "clinic",
@@ -2222,7 +2480,10 @@
       "url": "https://almastreetvet.com.au/",
       "source_url": "https://almastreetvet.com.au/",
       "checked": "2026-11-09",
-      "note": "Page: '24/7 after hour emergencies. (Additional charges apply)' - on-call, not a staffed 24 h hospital; false."
+      "note": "Page: '24/7 after hour emergencies. (Additional charges apply)' - on-call, not a staffed 24 h hospital; false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr, So 9–11 Uhr. Notfälle außerhalb der Öffnungszeiten täglich rund um die Uhr telefonisch (mit Zuschlag); keine Hausbesuche außerhalb der Öffnungszeiten."
+      }
     },
     {
       "kind": "clinic",
@@ -2237,7 +2498,10 @@
       "url": "https://www.rockyvet.com.au/",
       "source_url": "https://rockyvet.com.au/contact-us/",
       "checked": "2026-11-09",
-      "note": "Contact page has an Emergency link (rockyvet.com.au/emergency-vet) not opened."
+      "note": "Contact page has an Emergency link (rockyvet.com.au/emergency-vet) not opened.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr, Sa 8–12 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2252,7 +2516,10 @@
       "url": "https://www.herveybayvet.com/",
       "source_url": "https://www.herveybayvet.com/contact-us/",
       "checked": "2026-11-09",
-      "note": "Page: on-call 24 hours a day every day of the year, shared rota; phone on-call not a staffed hospital, so false."
+      "note": "Page: on-call 24 hours a day every day of the year, shared rota; phone on-call not a staffed hospital, so false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 7–17 Uhr, Sa 8–13 Uhr; sonn- und feiertags geschlossen. Notdienst außerhalb der Öffnungszeiten an jedem Tag des Jahres, im Wechsel mit anderen Praxen in Hervey Bay."
+      }
     },
     {
       "kind": "clinic",
@@ -2267,7 +2534,10 @@
       "url": "https://nissenstreetvet.com.au/",
       "source_url": "https://nissenstreetvet.com.au/index.php/contact-us/",
       "checked": "2026-11-09",
-      "note": "No after-hours info on the page."
+      "note": "No after-hours info on the page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–13 Uhr; So geschlossen. Bei Notfällen bitte in der Praxis anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2277,12 +2547,15 @@
       "address": "83 Broad St, Sarina QLD 4737",
       "phone": "+61 7 4956 1897",
       "emergency_24h": false,
-      "duty": "Monday to Friday 9 am to 6 pm, Saturday 9 to 11 am; closed Sunday. Lists 24/7 emergency vet care; call the clinic.",
+      "duty": "Monday to Friday 9 am to 6 pm, Saturday 9 to 11 am; closed Sunday. For 24/7 emergency vet care, call the clinic.",
       "small_animals": true,
       "url": "https://www.sarinavet.com.au/",
       "source_url": "https://www.sarinavet.com.au/locations/vet-clinic-mackay",
       "checked": "2026-11-09",
-      "note": "Page lists '24/7 Emergency Vet Care' as a service heading without details (linked emergency page not opened); false. Page is the Sarina location page found via Mackay search."
+      "note": "Page lists '24/7 Emergency Vet Care' as a service heading without details (linked emergency page not opened); false. Page is the Sarina location page found via Mackay search. Moved from duty (2026-11-10): Page lists 24/7 emergency vet care.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–11 Uhr; So geschlossen. Für tierärztliche Notfallversorgung rund um die Uhr bitte in der Praxis anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2297,7 +2570,10 @@
       "url": "https://www.valleyvet.com.au/",
       "source_url": "https://www.valleyvet.com.au/contact",
       "checked": "2026-11-09",
-      "note": "Other branches: Marian 3 Hadley St (07 4914 2404), Walkerston 14 Dutton St (07 4959 2099). mackayvet.com.au refused by robots."
+      "note": "Other branches: Marian 3 Hadley St (07 4914 2404), Walkerston 14 Dutton St (07 4959 2099). mackayvet.com.au refused by robots.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr; So geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2312,7 +2588,10 @@
       "url": "https://harbourcityvet.com.au/",
       "source_url": "https://harbourcityvet.com.au/?p=7878",
       "checked": "2026-11-09",
-      "note": "Page gives no times and no emergency info."
+      "note": "Page gives no times and no emergency info.",
+      "duty_i18n": {
+        "de": "Öffnungszeiten Mo–Fr und Sa; aktuelle Zeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -2327,7 +2606,10 @@
       "url": "https://cairnsvet.com.au/",
       "source_url": "https://cairnsvet.com.au/contact/",
       "checked": "2026-11-09",
-      "note": "Emergency section on Resources page not opened."
+      "note": "Emergency section on Resources page not opened.",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–18.30 Uhr; Sa, So und feiertags 8.30–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2342,7 +2624,10 @@
       "url": "https://cairnsvet.com.au/",
       "source_url": "https://cairnsvet.com.au/contact/",
       "checked": "2026-11-09",
-      "note": "Branch of Cairns Veterinary Clinic."
+      "note": "Branch of Cairns Veterinary Clinic.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–17 Uhr, Sa 8.30–12 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2357,7 +2642,10 @@
       "url": "https://www.edmontonvetclinic.com.au/",
       "source_url": "https://www.edmontonvetclinic.com.au/vet-emergencies-in-cairns-weve-got-your-back.html",
       "checked": "2026-11-09",
-      "note": "Opening times given only as 'until 6pm' / 'until midday'."
+      "note": "Opening times given only as 'until 6pm' / 'until midday'.",
+      "duty_i18n": {
+        "de": "Mo–Fr bis 18 Uhr und Sa bis 12 Uhr geöffnet; So geschlossen. Notfälle außerhalb der Öffnungszeiten werden an Emergency Vets 24/7 in Manunda verwiesen."
+      }
     },
     {
       "kind": "clinic",
@@ -2367,12 +2655,15 @@
       "address": "Shop 39/5-21 Faculty Close, Smithfield QLD 4878",
       "phone": "+61 7 4225 3238",
       "emergency_24h": false,
-      "duty": "Monday to Friday about 8 am to 5:30 pm, Saturday 8 am to 2 pm (page lists slightly different times in places); closed Sunday. Call to confirm.",
+      "duty": "Monday to Friday about 8 am to 5:30 pm, Saturday 8 am to 2 pm; closed Sunday. Call to confirm.",
       "small_animals": true,
       "url": "https://nbvc.com.au/",
       "source_url": "https://nbvc.com.au/vet-cairns/",
       "checked": "2026-11-09",
-      "note": "Page gives conflicting hours (5pm/5:30pm, 12pm/2pm); emergencies page not opened."
+      "note": "Page gives conflicting hours (5pm/5:30pm, 12pm/2pm); emergencies page not opened. Moved from duty (2026-11-10): Page lists slightly different times in places.",
+      "duty_i18n": {
+        "de": "Mo–Fr ca. 8–17.30 Uhr, Sa 8–14 Uhr; So geschlossen. Zeiten bitte telefonisch bestätigen."
+      }
     },
     {
       "kind": "clinic",
@@ -2387,7 +2678,10 @@
       "url": "https://kmvs.com.au/",
       "source_url": "https://kmvs.com.au/?p=11777",
       "checked": "2026-11-09",
-      "note": "Page notes a different tooltip number (0885562075) - ignored. Attends emergency and surgical cases."
+      "note": "Page notes a different tooltip number (0885562075) - ignored. Attends emergency and surgical cases.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–12 Uhr. Notfälle außerhalb der Öffnungszeiten bitte in der Praxis anrufen; versorgt auch den Raum Port Douglas."
+      }
     },
     {
       "kind": "clinic",
@@ -2401,7 +2695,10 @@
       "small_animals": true,
       "url": "https://kmvs.com.au/",
       "source_url": "https://kmvs.com.au/?p=11777",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17 Uhr; Sa Sprechstunde in Kuranda. Notfälle außerhalb der Öffnungszeiten bitte in der Praxis anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2416,7 +2713,10 @@
       "url": "https://www.greencrossvets.com.au/vets/westcourt-cairns/",
       "source_url": "https://www.greencrossvets.com.au/vets/westcourt-cairns/",
       "checked": "2026-11-09",
-      "note": "Relocated from Earlville Oct 2025; old Earlville page shows hours and after-hours emergency number 4054 1755 but is superseded."
+      "note": "Relocated from Earlville Oct 2025; old Earlville page shows hours and after-hours emergency number 4054 1755 but is superseded.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2430,7 +2730,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/smithfield/",
       "source_url": "https://www.greencrossvets.com.au/vets/smithfield/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–16 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2445,7 +2748,10 @@
       "url": "https://www.greencrossvets.com.au/vets/aitkenvale-central/",
       "source_url": "https://www.greencrossvets.com.au/vets/aitkenvale-central/",
       "checked": "2026-11-09",
-      "note": "Page gives JCU Vet emergency as 4781 3600 (not used; JCU's own page gives 1300 528 838)."
+      "note": "Page gives JCU Vet emergency as 4781 3600 (not used; JCU's own page gives 1300 528 838).",
+      "duty_i18n": {
+        "de": "Mo–Sa 8–18 Uhr; So geschlossen. Bei Notfällen JCU Vet anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2460,7 +2766,10 @@
       "url": "https://www.greencrossvets.com.au/vets/willows-kirwan/",
       "source_url": "https://www.greencrossvets.com.au/vets/willows-kirwan/",
       "checked": "2026-11-09",
-      "note": "Page: after-hours emergencies phone 4779 2500 (Aitkenvale clinic)."
+      "note": "Page: after-hours emergencies phone 4779 2500 (Aitkenvale clinic).",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; Sa im Wechsel 8–15 Uhr / 18 Uhr (Zeiten bitte telefonisch bestätigen); So geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2474,7 +2783,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/south-toowoomba/",
       "source_url": "https://www.greencrossvets.com.au/vets/south-toowoomba/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Do 7–19 Uhr, Fr 7–18 Uhr, Sa 8–17 Uhr; So geschlossen. Außerhalb der Öffnungszeiten verweist die Praxis an das UQ VETS Small Animal Hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -2488,7 +2800,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/wilsonton/",
       "source_url": "https://www.greencrossvets.com.au/vets/wilsonton/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr; So geschlossen. Außerhalb der Öffnungszeiten verweist die Praxis an das UQ VETS Small Animal Hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -2502,7 +2817,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/barolin/",
       "source_url": "https://www.greencrossvets.com.au/vets/barolin/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–13 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2512,12 +2830,15 @@
       "address": "21 Johanna Boulevard, Kensington QLD 4670",
       "phone": "+61 7 3084 6004",
       "emergency_24h": false,
-      "duty": "Weekdays 9 am to 5 pm (page announces five days a week from 9 November 2026); call to confirm.",
+      "duty": "Weekdays 9 am to 5 pm (five days a week from 9 November 2026); call to confirm.",
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/bundaberg/",
       "source_url": "https://www.greencrossvets.com.au/vets/bundaberg/",
       "checked": "2026-11-09",
-      "note": "Page hours list Friday closed but banner says Mon-Fri from 9 Nov 2026."
+      "note": "Page hours list Friday closed but banner says Mon-Fri from 9 Nov 2026. Moved from duty (2026-11-10): Page announces five days a week from 9 November 2026.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–17 Uhr (ab 9. November 2026 an fünf Tagen pro Woche); Zeiten bitte telefonisch bestätigen."
+      }
     },
     {
       "kind": "clinic",
@@ -2531,7 +2852,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/maroochydore/",
       "source_url": "https://www.greencrossvets.com.au/vets/maroochydore/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–16 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2545,7 +2869,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/caloundra/",
       "source_url": "https://www.greencrossvets.com.au/vets/caloundra/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; Sa nach Terminvereinbarung; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2560,7 +2887,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-noosa.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-noosa.html",
       "checked": "2026-11-09",
-      "note": "AEC Noosa page: urgent care hours listed, arranges transfer to a 24-hour facility; meta description 'open after hours Mon, Thurs & Fri' conflicts. GP appointments 3084 6006."
+      "note": "AEC Noosa page: urgent care hours listed, arranges transfer to a 24-hour facility; meta description 'open after hours Mon, Thurs & Fri' conflicts. GP appointments 3084 6006.",
+      "duty_i18n": {
+        "de": "Urgent Care Mo–Fr 17–23 Uhr und am Wochenende 8–18 Uhr; Allgemeinpraxis Mo–Fr 8–18 Uhr, Sa 8–12.30 Uhr. Keine 24-Stunden-Klinik."
+      }
     },
     {
       "kind": "clinic",
@@ -2574,7 +2904,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/ipswich/",
       "source_url": "https://www.greencrossvets.com.au/vets/ipswich/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 7.30–12.30 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2589,7 +2922,10 @@
       "url": "https://www.greencrossvets.com.au/vets/robina/",
       "source_url": "https://www.greencrossvets.com.au/vets/robina/",
       "checked": "2026-11-09",
-      "note": "Gold Coast list page gives a different Robina address (Robina Quays); clinic page used."
+      "note": "Gold Coast list page gives a different Robina address (Robina Quays); clinic page used.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–14 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2603,7 +2939,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2617,7 +2956,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2631,7 +2973,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2645,7 +2990,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/gold-coast-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr; sonn- und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -2659,7 +3007,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7–20 Uhr, Sa 8–18 Uhr; an Feiertagen geschlossen. Notfälle: AEC Woolloongabba 07 3456 0500."
+      }
     },
     {
       "kind": "clinic",
@@ -2673,7 +3024,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–18 Uhr, Sa 8–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2687,7 +3041,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–18.30 Uhr, Sa 8–15 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2701,7 +3058,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7–18 Uhr, Sa 8–17 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2715,7 +3075,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–20 Uhr, Sa 7.30–17 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2729,7 +3092,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–19 Uhr, Sa 8.30–16 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2743,7 +3109,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/brisbane-vets/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2758,7 +3127,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/avsarc.html",
       "source_url": "https://www.greencrossvets.com.au/vets/greencross-vet-centre/",
       "checked": "2026-11-09",
-      "note": "Greencross page: 'Pet Emergencies: Open 24/7, 365 days a year'; AVSARC page meta: 'Open 24 hours, 7 days a week, every day of the year'. Old Animal Emergency Centre number 8362 1722 still quoted on walkervillevet.com.au - not used."
+      "note": "Greencross page: 'Pet Emergencies: Open 24/7, 365 days a year'; AVSARC page meta: 'Open 24 hours, 7 days a week, every day of the year'. Old Animal Emergency Centre number 8362 1722 still quoted on walkervillevet.com.au - not used.",
+      "duty_i18n": {
+        "de": "Notdienst täglich rund um die Uhr geöffnet. Allgemeinpraxis Mo–Fr 8–18 Uhr, Sa 8–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2773,7 +3145,10 @@
       "url": "https://sashvets.com/locations/adelaide/",
       "source_url": "https://sashvets.com/locations/adelaide/",
       "checked": "2026-11-09",
-      "note": "Page: 'Open 24 hours, 365 days per year'; 'Our emergency team is here 24/7'."
+      "note": "Page: 'Open 24 hours, 365 days per year'; 'Our emergency team is here 24/7'.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr. Notfälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -2788,7 +3163,10 @@
       "url": "https://adelaide.edu.au/partners-and-community/community-engagement/clinics-facilities/roseworthy-veterinary-hospital/emergencies/",
       "source_url": "https://adelaide.edu.au/partners-and-community/community-engagement/clinics-facilities/roseworthy-veterinary-hospital/emergencies/",
       "checked": "2026-11-09",
-      "note": "Emergencies page: small animal hospital open '24 hours a day, 7 days a week'. Address from adelaide.edu.au/vet/contact-us. Consults Mon-Fri 8-6, Sat 8-1."
+      "note": "Emergencies page: small animal hospital open '24 hours a day, 7 days a week'. Address from adelaide.edu.au/vet/contact-us. Consults Mon-Fri 8-6, Sat 8-1.",
+      "duty_i18n": {
+        "de": "Notdienst für Kleintiere täglich rund um die Uhr. Bitte vor der Anfahrt anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2803,7 +3181,10 @@
       "url": "https://murdoch.edu.au/theanimalhospital/emergency",
       "source_url": "https://murdoch.edu.au/theanimalhospital/emergency",
       "checked": "2026-11-09",
-      "note": "Page: 'We are open 24/7 for animal emergencies'. 1300 number rendered as +61 1300 652 494 (national-rate number)."
+      "note": "Page: 'We are open 24/7 for animal emergencies'. 1300 number rendered as +61 1300 652 494 (national-rate number).",
+      "duty_i18n": {
+        "de": "Notdienst täglich rund um die Uhr geöffnet. Grundversorgung und Überweisungen Mo–Fr 8–18 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2818,7 +3199,10 @@
       "url": "https://animalemergencyservice.com.au/aes_location/cannington/",
       "source_url": "https://animalemergencyservice.com.au/contact-us/",
       "checked": "2026-11-09",
-      "note": "Location page says directions use '305 Selby Street North' (copy error); address from contact-us page and animalemergencyaustralia.com.au."
+      "note": "Location page says directions use '305 Selby Street North' (copy error); address from contact-us page and animalemergencyaustralia.com.au.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, an 365 Tagen im Jahr. Ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -2833,7 +3217,10 @@
       "url": "https://animalemergencyservice.com.au/aes_location/osborne-park/",
       "source_url": "https://animalemergencyservice.com.au/aes_location/osborne-park/",
       "checked": "2026-11-09",
-      "note": "Page has no postcode."
+      "note": "Page has no postcode.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, an 365 Tagen im Jahr. Ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -2848,7 +3235,10 @@
       "url": "https://sashvets.com/locations/perth/",
       "source_url": "https://sashvets.com/locations/perth/",
       "checked": "2026-11-09",
-      "note": "Page marked 'Now Open'; 'Open 24 hours, 365 days per year'. A separate SASH media page mentions 'opening late 2026' - page itself says opened."
+      "note": "Page marked 'Now Open'; 'Open 24 hours, 365 days per year'. A separate SASH media page mentions 'opening late 2026' - page itself says opened.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr. Notfälle ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -2863,7 +3253,10 @@
       "url": "https://albanyvet.com.au/",
       "source_url": "https://albanyvet.com.au/",
       "checked": "2026-11-09",
-      "note": "Home page: 'We are a 24/7 Emergency Hospital' and '24 hour emergency service'."
+      "note": "Home page: 'We are a 24/7 Emergency Hospital' and '24 hour emergency service'.",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr; bitte sofort anrufen. Sprechstunde Mo–Fr 8–18 Uhr, Sa 9–12 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -2878,7 +3271,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-canberra.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-canberra.html",
       "checked": "2026-11-09",
-      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year'. A second number (02) 8610 3400 appears in the blood donor section - not used."
+      "note": "Page: 'Open 24 hours, 7 days a week, every day of the year'. A second number (02) 8610 3400 appears in the blood donor section - not used.",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr, an jedem Tag des Jahres, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -2893,7 +3289,10 @@
       "url": "https://animalemergencyservice.com.au/?p=19002",
       "source_url": "https://animalemergencyservice.com.au/contact-us/",
       "checked": "2026-11-09",
-      "note": "Page says 'open 24 hours, 7days a week' but also a temporary notice closes it to the public Mon-Fri 7am-4pm (staff shortage), so emergency_24h=false. Re-check before publishing."
+      "note": "Page says 'open 24 hours, 7days a week' but also a temporary notice closes it to the public Mon-Fri 7am-4pm (staff shortage), so emergency_24h=false. Re-check before publishing.",
+      "duty_i18n": {
+        "de": "Mo–Fr außerhalb der Sprechzeiten geöffnet, am Wochenende rund um die Uhr. Derzeit Mo–Fr 7–16 Uhr für den Publikumsverkehr geschlossen; bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2908,7 +3307,10 @@
       "url": "https://animalemergencyservice.com.au/aes_location/canberra/",
       "source_url": "https://animalemergencyservice.com.au/aes_location/canberra/",
       "checked": "2026-11-09",
-      "note": "Weekday daytime closed; 24 h only weekends/public holidays, so emergency_24h=false."
+      "note": "Weekday daytime closed; 24 h only weekends/public holidays, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr außerhalb der Sprechzeiten geöffnet (0–8 Uhr und 18–24 Uhr), am Wochenende und an Feiertagen rund um die Uhr. Ohne Termin."
+      }
     },
     {
       "kind": "clinic",
@@ -2923,7 +3325,10 @@
       "url": "https://www.launcestonvetclinic.com.au/pet-advice/updates-to-our-out-of-hours-services",
       "source_url": "https://www.launcestonvetclinic.com.au/pet-advice/updates-to-our-out-of-hours-services",
       "checked": "2026-11-09",
-      "note": "Known only via referral pages of Launceston Veterinary Clinic and Mowbray Vet (clinic page aehl.com.au not found by search, not opened). Hours per that notice dated 2024 - verify. No street address."
+      "note": "Known only via referral pages of Launceston Veterinary Clinic and Mowbray Vet (clinic page aehl.com.au not found by search, not opened). Hours per that notice dated 2024 - verify. No street address.",
+      "duty_i18n": {
+        "de": "Notdienst am Wochenende und an Feiertagen, geöffnet Fr 17 Uhr bis Mo 8 Uhr. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -2938,7 +3343,10 @@
       "url": "https://www.capitalvet.com.au/",
       "source_url": "https://www.capitalvet.com.au/contact/",
       "checked": "2026-11-09",
-      "note": "Not a public 24 h service: after-hours for existing clients only."
+      "note": "Not a public 24 h service: after-hours for existing clients only.",
+      "duty_i18n": {
+        "de": "Mo–Fr 7–19 Uhr, Sa–So 8–13 Uhr. Notdienst außerhalb der Sprechzeiten für bestehende Kunden; an Feiertagen rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -2953,7 +3361,10 @@
       "url": "https://ntvet.com.au/alice-veterinary-centre",
       "source_url": "https://ntvet.com.au/alice-veterinary-centre",
       "checked": "2026-11-09",
-      "note": "Page: 'a 24-hour emergency service' via phone call - on-call, not a staffed 24 h hospital, so emergency_24h=false."
+      "note": "Page: 'a 24-hour emergency service' via phone call - on-call, not a staffed 24 h hospital, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, Sa 9–12 Uhr. Telefonischer Notdienst rund um die Uhr unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -2968,7 +3379,10 @@
       "url": "https://www.ntvet.com.au/katherine-veterinary-clinic.html",
       "source_url": "https://www.ntvet.com.au/katherine-veterinary-clinic.html",
       "checked": "2026-11-09",
-      "note": "Advertises '24 hours emergency services' by phone - on-call, so emergency_24h=false."
+      "note": "Advertises '24 hours emergency services' by phone - on-call, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, Sa 9–12 Uhr, So nur Notfälle. Notdienst rund um die Uhr unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -2983,7 +3397,10 @@
       "url": "https://howardspringsvets.com.au/",
       "source_url": "https://howardspringsvets.com.au/contact-howard-springs-vet-clinic/",
       "checked": "2026-11-09",
-      "note": "Home page says '24 hour emergency care' but contact page says 'full after-hours emergency service' by phone - on-call, so emergency_24h=false."
+      "note": "Home page says '24 hour emergency care' but contact page says 'full after-hours emergency service' by phone - on-call, so emergency_24h=false.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–16 Uhr, So und feiertags nur Notfälle. Vollständiger Notdienst außerhalb der Sprechzeiten: 0428 810 596."
+      }
     },
     {
       "kind": "clinic",
@@ -2997,7 +3414,10 @@
       "small_animals": true,
       "url": "https://humptydoovet.com.au/",
       "source_url": "https://humptydoovet.com.au/contact/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So geschlossen. Außerhalb der Öffnungszeiten in der Praxis anrufen; der Anruf wird an die diensthabende Praxis weitergeleitet."
+      }
     },
     {
       "kind": "clinic",
@@ -3007,12 +3427,15 @@
       "address": "65 Vanderlin Drive, Wanguri NT 0810",
       "phone": "+61 8 8927 9033",
       "emergency_24h": false,
-      "duty": "Mon-Fri about 8 am-6:30 pm, Sat 8 am-2 pm. Emergency service available; call (phone listed as all hours).",
+      "duty": "Mon-Fri about 8 am-6:30 pm, Sat 8 am-2 pm. Emergency service available; call the clinic.",
       "small_animals": true,
       "url": "https://www.darwinvet.com.au/",
       "source_url": "https://www.darwinvet.com.au/contact-us-1",
       "checked": "2026-11-09",
-      "note": "Page hours conflict between header and contact section; phone labelled '(all hours)'; no '24 hour' wording. Suburb varies (Wanguri/Casuarina)."
+      "note": "Page hours conflict between header and contact section; phone labelled '(all hours)'; no '24 hour' wording. Suburb varies (Wanguri/Casuarina). Moved from duty (2026-11-10): Phone listed as all hours.",
+      "duty_i18n": {
+        "de": "Mo–Fr ca. 8–18.30 Uhr, Sa 8–14 Uhr. Notdienst verfügbar; bitte in der Praxis anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -3026,7 +3449,10 @@
       "small_animals": true,
       "url": "https://www.walkervillevet.com.au/",
       "source_url": "https://www.walkervillevet.com.au/contact/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–13 Uhr. Kein Notdienst außerhalb der Öffnungszeiten; bitte eine Notfallklinik aufsuchen."
+      }
     },
     {
       "kind": "clinic",
@@ -3041,7 +3467,10 @@
       "url": "https://www.adelaidevet.com.au/contact-us",
       "source_url": "https://www.adelaidevet.com.au/contact-us",
       "checked": "2026-11-09",
-      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened."
+      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened.",
+      "duty_i18n": {
+        "de": "Sprechzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -3056,7 +3485,10 @@
       "url": "https://www.adelaidevet.com.au/contact-us",
       "source_url": "https://www.adelaidevet.com.au/contact-us",
       "checked": "2026-11-09",
-      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened."
+      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened.",
+      "duty_i18n": {
+        "de": "Sprechzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -3071,7 +3503,10 @@
       "url": "https://www.adelaidevet.com.au/contact-us",
       "source_url": "https://www.adelaidevet.com.au/contact-us",
       "checked": "2026-11-09",
-      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened."
+      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened.",
+      "duty_i18n": {
+        "de": "Sprechzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -3086,7 +3521,10 @@
       "url": "https://www.adelaidevet.com.au/contact-us",
       "source_url": "https://www.adelaidevet.com.au/contact-us",
       "checked": "2026-11-09",
-      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened."
+      "note": "Contact page lists address/phone only; hours behind 'View consult hours' not opened.",
+      "duty_i18n": {
+        "de": "Sprechzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "kind": "clinic",
@@ -3101,7 +3539,10 @@
       "url": "https://southeastvets.com.au/",
       "source_url": "https://southeastvets.com.au/",
       "checked": "2026-11-09",
-      "note": "Treats pets and livestock."
+      "note": "Treats pets and livestock.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 8.30–11.30 Uhr. Notdienst außerhalb der Öffnungszeiten; bitte vor dem Besuch anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -3116,7 +3557,10 @@
       "url": "https://www.greencrossvets.com.au/vets/adelaide-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/adelaide-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Adelaide listing page."
+      "note": "Hours/address from group's Adelaide listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -3131,7 +3575,10 @@
       "url": "https://www.greencrossvets.com.au/vets/noarlunga/",
       "source_url": "https://www.greencrossvets.com.au/vets/adelaide-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Adelaide listing page."
+      "note": "Hours/address from group's Adelaide listing page.",
+      "duty_i18n": {
+        "de": "Mo–Mi und Fr 8.30–17.30 Uhr, Do 8.30–19 Uhr, Sa 8.30–14.30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -3146,7 +3593,10 @@
       "url": "https://www.greencrossvets.com.au/vets/para-vista/",
       "source_url": "https://www.greencrossvets.com.au/vets/adelaide-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Adelaide listing page."
+      "note": "Hours/address from group's Adelaide listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–12 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -3161,7 +3611,10 @@
       "url": "https://www.greencrossvets.com.au/vets/paradise/",
       "source_url": "https://www.greencrossvets.com.au/vets/adelaide-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Adelaide listing page."
+      "note": "Hours/address from group's Adelaide listing page.",
+      "duty_i18n": {
+        "de": "Mo–Mi und Fr 8–18.30 Uhr, Do 8–17.30 Uhr, Sa 8–15 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -3176,7 +3629,10 @@
       "url": "https://www.apiam.com.au/locations/bunbury-animal-hospital/",
       "source_url": "https://www.apiam.com.au/locations/bunbury-animal-hospital/",
       "checked": "2026-11-09",
-      "note": "No after-hours wording on page."
+      "note": "No after-hours wording on page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8.30–12 Uhr, So geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3191,7 +3647,10 @@
       "url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-midland.html",
       "source_url": "https://www.emergencyvet.com.au/our-network/aec-home/aec-midland.html",
       "checked": "2026-11-09",
-      "note": "Page meta: 'Open 24 hours Sat-Sun, and after hours Mon, Thurs & Fri' but the page text is inconsistent (mentions Melbourne's eastern suburbs); not 24 h every day, so false. Phone: confirm."
+      "note": "Page meta: 'Open 24 hours Sat-Sun, and after hours Mon, Thurs & Fri' but the page text is inconsistent (mentions Melbourne's eastern suburbs); not 24 h every day, so false. Phone: confirm.",
+      "duty_i18n": {
+        "de": "Außerhalb der Sprechzeiten und am Wochenende geöffnet; bitte vorher anrufen, da sich die Zeiten kurzfristig ändern können."
+      }
     },
     {
       "kind": "clinic",
@@ -3206,7 +3665,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3221,7 +3683,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3236,7 +3701,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–18 Uhr, Sa 8.30–13 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3251,7 +3719,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3266,7 +3737,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Page's tel: link points to 0800000000; printed number used."
+      "note": "Page's tel: link points to 0800000000; printed number used.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3281,7 +3755,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3296,7 +3773,10 @@
       "url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "source_url": "https://www.greencrossvets.com.au/vets/perth-vets/",
       "checked": "2026-11-09",
-      "note": "Hours/address from group's Perth listing page."
+      "note": "Hours/address from group's Perth listing page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–16.30 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3311,7 +3791,10 @@
       "url": "https://www.greencrossvets.com.au/vets/mandurah/",
       "source_url": "https://www.greencrossvets.com.au/vets/mandurah/",
       "checked": "2026-11-09",
-      "note": "Own clinic page confirms 08 6500 3013, address and hours (same number as Subiaco on the Perth listing)."
+      "note": "Own clinic page confirms 08 6500 3013, address and hours (same number as Subiaco on the Perth listing).",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–17 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3326,7 +3809,10 @@
       "url": "https://launcestonvetclinic.com.au/",
       "source_url": "https://www.launcestonvetclinic.com.au/emergency-vet",
       "checked": "2026-11-09",
-      "note": "Own page notes it stopped out-of-hours services Feb 2024. Page names it Launceston Veterinary Clinic (name corrected from Hospital)."
+      "note": "Own page notes it stopped out-of-hours services Feb 2024. Page names it Launceston Veterinary Clinic (name corrected from Hospital).",
+      "duty_i18n": {
+        "de": "Mo–Fr ca. 8.30–18.30 Uhr (dienstags abweichend); am Wochenende und an Feiertagen geschlossen. Kein Notdienst außerhalb der Öffnungszeiten; bitte eine Notfallklinik aufsuchen."
+      }
     },
     {
       "kind": "clinic",
@@ -3341,7 +3827,10 @@
       "url": "https://mowbrayvet.com.au/",
       "source_url": "https://mowbrayvet.com.au/faq/",
       "checked": "2026-11-09",
-      "note": "Opening-hours page not opened."
+      "note": "Opening-hours page not opened.",
+      "duty_i18n": {
+        "de": "Öffnungszeiten bitte telefonisch erfragen. Mo–Do zur Ersteinschätzung (Triage) in der Praxis anrufen; von Freitagabend bis Montagmorgen Animal Emergency Hospital Launceston (03 6310 8499)."
+      }
     },
     {
       "kind": "clinic",
@@ -3355,7 +3844,10 @@
       "small_animals": true,
       "url": "https://hobartanimalhospital.com.au/",
       "source_url": "https://hobartanimalhospital.com.au/contact/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr. Außerhalb der Öffnungszeiten: Animal Emergency Service Hobart 1300 302 912."
+      }
     },
     {
       "kind": "clinic",
@@ -3370,7 +3862,10 @@
       "url": "https://www.kingstonanimalhospital.com.au/",
       "source_url": "https://www.kingstonanimalhospital.com.au/our-team/",
       "checked": "2026-11-09",
-      "note": "Address/phone from page header/footer."
+      "note": "Address/phone from page header/footer.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8.30–12.30 Uhr, So geschlossen. Notfälle außerhalb der Öffnungszeiten: 1300 302 912."
+      }
     },
     {
       "kind": "clinic",
@@ -3385,7 +3880,10 @@
       "url": "https://lindisfarnevet.com.au/",
       "source_url": "https://lindisfarnevet.com.au/vet-bellerive/",
       "checked": "2026-11-09",
-      "note": "Emergency-procedures page not opened."
+      "note": "Emergency-procedures page not opened.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18.30 Uhr, Sa 9–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -3399,7 +3897,10 @@
       "small_animals": true,
       "url": "https://www.vetcentre.net.au/",
       "source_url": "https://www.vetcentre.net.au/petassist-safetynet/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–13 Uhr; So und feiertags geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3413,7 +3914,10 @@
       "small_animals": true,
       "url": "https://www.vetcentre.net.au/",
       "source_url": "https://www.vetcentre.net.au/petassist-safetynet/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3428,7 +3932,10 @@
       "url": "https://burnievetcentre.com.au/",
       "source_url": "https://burnievetcentre.com.au/",
       "checked": "2026-11-09",
-      "note": "Emergency vet page not opened."
+      "note": "Emergency vet page not opened.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–17 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -3443,7 +3950,10 @@
       "url": "https://gungahlinvet.com.au/",
       "source_url": "https://gungahlinvet.com.au/",
       "checked": "2026-11-09",
-      "note": "Page shows a '24/7 Care' label but states after-hours services are no longer available."
+      "note": "Page shows a '24/7 Care' label but states after-hours services are no longer available.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 8–14 Uhr. Kein Notdienst der Klinik außerhalb der Öffnungszeiten."
+      }
     },
     {
       "kind": "clinic",
@@ -3457,7 +3967,10 @@
       "small_animals": true,
       "url": "https://www.greencrossvets.com.au/vets/tuggeranong-all-creatures/",
       "source_url": "https://www.greencrossvets.com.au/vets/tuggeranong-all-creatures/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr; am Wochenende und an Feiertagen geschlossen."
+      }
     }
   ],
   "notes": "NSW run 1. Not covered: regional towns (Coffs Harbour, Port Macquarie, Byron, Tamworth, Orange, Wagga, Albury, Dubbo) - searches returned only aggregators, no clinic own pages opened. Not opened: ARH Baulkham Hills, ARH Greater Western Sydney (Minchinbury), SASH Rosebery/other referral pages, nevs.net.au, vsos.com.au (provenance refused), AVA and NSW VPB pages. Other Australian states not covered. NSW run 2: added 42 entries (ARH Baulkham Hills and Minchinbury, regional clinics from their own sites in Coffs Harbour, Port Macquarie, Tamworth, Orange, Bathurst, Wagga Wagga, Albury, Dubbo, Armidale, Byron/Bangalow, Ballina, Lismore, Nowra, Queanbeyan, Murwillumbah, Taree, Newcastle/Lake Macquarie). Not covered: SASH Rosebery (no such SASH location on sashvets.com/about-sash), Pacific Vet Care Coffs Harbour, Vet on Bathurst, Taree Veterinary Hospital, River Country AEC, Moorong Vet Wagga, vetwagga.com.au, Nowra Veterinary Hospital (robots_disallowed or fetch errors twice), Grafton, Kempsey, Tweed Heads, Maitland/Cessnock, Moree, Broken Hill, Goulburn, Cooma, and the AVA / NSW VPB pages (no emergency list found). Other Australian states not covered. Victoria run: added 52 entries (14 with a page explicitly stating 24 h: AES Hawthorn East, ARH Essendon Fields, CARE Collingwood, AEC Mount Waverley/Moorabbin/Frankston, VRH Dandenong, Greencross Vet Hospital Werribee, Peninsula Vet Emergency Mornington, Northern Suburbs Bundoora, Casey Pet Emergency, Southpaws Malvern, MASH Ringwood, Advanced Vetcare Kensington). Geelong Animal Emergency (own site gives evening/weekend hours, not 24 h), Gippsland Pet Emergency (Fri 6pm-Mon 8am + holidays) and phone on-call services are emergency_24h=false. Not opened / blocked: advancedvetcare.com.au contact and Kew pages (robots_disallowed; Kew phone 9020 3555 only on third-party pages), animaldoc.com.au Inverloch (robots), lsvc.com.au Warrnambool (robots), geelongvet.com.au and gippsvet.com.au (fetch errors), wonthaggivet.com.au, penvetcare.com.au emergency page, Wangaratta Veterinary Clinic (redirect loop), Fur Life Vet Shepparton (site redirects to apiam.com.au), Mornington Peninsula Sorrento/Flinders, MVSC (specialist, not 24 h), RSPCA Victoria, AVA and Veterinary Practitioners Registration Board Victoria pages (no emergency list opened). Not covered: Shepparton, Lorne, Mt Buller/Falls Creek, Pakenham, Sunbury, Craigieburn, Hamilton, Wonthaggi/Leongatha, Mildura second clinics, Kew Advanced Vetcare. University of Melbourne Parkville has no small-animal hospital page found; Werribee hospital is run by Greencross. Queensland run: added 51 entries (8 with a page explicitly stating 24 h: SASH Sunshine Coast, SASH Gold Coast, AES Tanawha, AEC Woolloongabba, ARH Brisbane, AEC Gold Coast, JCU Vet Townsville, Emergency Vets 24/7 Cairns). AES Jindalee/Underwood/Carrara and BVECCS Albany Creek are 24 h only at weekends/public holidays (weekday overnight + evening) so emergency_24h=false; Alma Street Rockhampton, Hervey Bay Vet and Sarina offer 24/7 on-call only so false. Not opened / blocked: small-animal.hospital.uq.edu.au contact and emergency pages, mackayvet.com.au (robots_disallowed), AEC Kedron page (not in provenance), REDVets Toowoomba (no own page found), Mackay's Animal Hospital page (appears to be a US site), animalpoisons.com.au already covered. Not covered: Brisbane independent clinics, Redcliffe/Caboolture/Logan, Noosa independent clinics, Gympie, Emerald, Mt Isa, Airlie Beach/Whitsundays, Port Douglas Vets (no phone/website opened), Yeppoon, Bundaberg independent clinics, Toowoomba REDVets, Veterinary Surgeons Board of Queensland / AVA Qld pages (no emergency list opened). Other Australian states not covered. Other states run: Not covered / refused: limestonecoastvet.com.au and vetsoneyre.com.au (robots disallowed, skipped); forbesstvet.net.au (fetch error); Animal Emergency Hospital Launceston (aehl.com.au) not found by search, so included only from referral pages with no street address; Kangaroo Island Vet Clinic (only directory page opened, entry dropped) and Scottsdale/Smithton vets could not be opened (WebFetch provenance block) - Margaret River, Broome, Fremantle, Port Lincoln, Devonport, Launceston-area others, Darwin/Palmerston clinics beyond those listed, Alice Springs others not found on own pages (search returned only aggregators; Broome council vets PDF dated 2007 not used; Rosabrook Margaret River only on aggregator, dropped). Several of the NT/WA 24 h claims are phone on-call -> emergency_24h false. AES Hobart says 24 h but temporarily closed weekdays 7am-4pm -> false. Greencross Armadale and Majura Park clinics skipped (closed). Entries with the aggregator-only source were excluded."

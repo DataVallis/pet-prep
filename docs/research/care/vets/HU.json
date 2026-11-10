@@ -130,7 +130,8 @@
       "duty": "Dogs and cats 0-24 every day: day service 08:00-20:00, night duty 20:00-08:00, weekend duty 08:00-20:00; night surcharge.",
       "duty_i18n": {
         "sl": "Psi in mačke 0–24 vsak dan: dnevna služba 8–20, nočno dežurstvo 20–8, dežurstvo ob vikendih 8–20; nočno doplačilo.",
-        "hr": "Psi i mačke 0–24 svaki dan: dnevna služba 08:00–20:00, noćno dežurstvo 20:00–08:00, dežurstvo vikendom 08:00–20:00; noću uz doplatak."
+        "hr": "Psi i mačke 0–24 svaki dan: dnevna služba 08:00–20:00, noćno dežurstvo 20:00–08:00, dežurstvo vikendom 08:00–20:00; noću uz doplatak.",
+        "de": "Hunde und Katzen täglich rund um die Uhr: Tagdienst 8–20 Uhr, Nachtdienst 20–8 Uhr, Wochenenddienst 8–20 Uhr; Nachtzuschlag."
       },
       "small_animals": true,
       "url": "https://budapestiallatkorhaz.hu/",
@@ -150,7 +151,8 @@
       "duty": "Open 0-24, 365 days a year; emergency duty 20:00-08:00.",
       "duty_i18n": {
         "sl": "Odprto 0–24, 365 dni v letu; nujno dežurstvo 20–8.",
-        "hr": "Otvoreno 0–24, 365 dana u godini; hitno dežurstvo 20:00–08:00."
+        "hr": "Otvoreno 0–24, 365 dana u godini; hitno dežurstvo 20:00–08:00.",
+        "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr; Notdienst 20–8 Uhr."
       },
       "small_animals": true,
       "url": "https://juhaszallatkorhaz.hu/",
@@ -170,7 +172,8 @@
       "duty": "Open day and night every day; emergency service daily 18:00-06:00 and non-stop at weekends.",
       "duty_i18n": {
         "sl": "Odprto podnevi in ponoči vsak dan; nujna služba vsak dan 18–6 in neprekinjeno ob vikendih.",
-        "hr": "Otvoreno danju i noću svaki dan; hitna služba svaki dan 18:00–06:00 i neprekidno vikendom."
+        "hr": "Otvoreno danju i noću svaki dan; hitna služba svaki dan 18:00–06:00 i neprekidno vikendom.",
+        "de": "Täglich Tag und Nacht geöffnet; Notdienst täglich 18–6 Uhr und am Wochenende durchgehend."
       },
       "small_animals": true,
       "url": "https://ivartalanitas.supervet.hu/",
@@ -190,7 +193,8 @@
       "duty": "Mon-Fri check-in from 08:00, patient care 09:00-19:00. Since 1 March 2024 no new patients are admitted 20:00-08:00 (inpatients continue).",
       "duty_i18n": {
         "sl": "pon–pet sprejem od 8, oskrba pacientov 9–19. Od 1. marca 2024 od 20 do 8 ne sprejemajo novih pacientov (hospitalizirani pacienti se obravnavajo naprej).",
-        "hr": "pon–pet prijam od 08:00, liječenje pacijenata 09:00–19:00. Od 1. ožujka 2024. od 20:00 do 08:00 ne primaju se novi pacijenti (hospitalizirani ostaju)."
+        "hr": "pon–pet prijam od 08:00, liječenje pacijenata 09:00–19:00. Od 1. ožujka 2024. od 20:00 do 08:00 ne primaju se novi pacijenti (hospitalizirani ostaju).",
+        "de": "Mo–Fr Anmeldung ab 8 Uhr, Behandlung 9–19 Uhr. Seit dem 1. März 2024 werden von 20 bis 8 Uhr keine neuen Patienten aufgenommen (stationäre Patienten werden weiter versorgt)."
       },
       "small_animals": true,
       "url": "https://univet.hu/hu/klinikak/kisallatklinika/",
@@ -209,7 +213,8 @@
       "duty": "Mon-Fri 08:00-22:00 (20:00-22:00 duty with surcharge after 19:45); Sat-Sun and holidays 09:00-18:00 (admission until 17:00).",
       "duty_i18n": {
         "sl": "pon–pet 8–22 (20–22 dežurstvo z doplačilom po 19.45); sob–ned in prazniki 9–18 (sprejem do 17).",
-        "hr": "pon–pet 08:00–22:00 (dežurstvo 20:00–22:00 uz doplatak nakon 19:45); subotom, nedjeljom i blagdanima 09:00–18:00 (prijem do 17:00)."
+        "hr": "pon–pet 08:00–22:00 (dežurstvo 20:00–22:00 uz doplatak nakon 19:45); subotom, nedjeljom i blagdanima 09:00–18:00 (prijem do 17:00).",
+        "de": "Mo–Fr 8–22 Uhr (20–22 Uhr Notdienst; Zuschlag ab 19.45 Uhr); Sa–So und feiertags 9–18 Uhr (Aufnahme bis 17 Uhr)."
       },
       "small_animals": true,
       "url": "https://fuziovet.hu/",
@@ -228,7 +233,8 @@
       "duty": "Every day incl. holidays 08:00-21:00; emergency duty 21:00-22:00.",
       "duty_i18n": {
         "sl": "Vsak dan, tudi ob praznikih, 8–21; nujno dežurstvo 21–22.",
-        "hr": "Svaki dan, i blagdanima, 08:00–21:00; hitno dežurstvo 21:00–22:00."
+        "hr": "Svaki dan, i blagdanima, 08:00–21:00; hitno dežurstvo 21:00–22:00.",
+        "de": "Täglich, auch feiertags, 8–21 Uhr; Notdienst 21–22 Uhr."
       },
       "small_animals": true,
       "url": "https://csipetcsapatallatorvos.hu/",
@@ -247,7 +253,8 @@
       "duty": "Mon-Fri 08:00-20:00; weekends and holidays open according to schedule.",
       "duty_i18n": {
         "sl": "pon–pet 8–20; ob vikendih in praznikih odprto po razporedu.",
-        "hr": "pon–pet 08:00–20:00; vikendom i blagdanima otvoreno prema rasporedu."
+        "hr": "pon–pet 08:00–20:00; vikendom i blagdanima otvoreno prema rasporedu.",
+        "de": "Mo–Fr 8–20 Uhr; am Wochenende und an Feiertagen nach Dienstplan geöffnet."
       },
       "small_animals": true,
       "url": "https://budatetenyiallatkorhaz.hu/en/",
@@ -266,7 +273,8 @@
       "duty": "Weekdays 08:00-20:00; duty-type hours weekdays 20:00-22:00, Sat-Sun and holidays 09:00-20:00.",
       "duty_i18n": {
         "sl": "Med tednom 8–20; dežurni čas med tednom 20–22, sob–ned in prazniki 9–20.",
-        "hr": "Radnim danom 08:00–20:00; dežurno radno vrijeme radnim danom 20:00–22:00, sub–ned i blagdani 09:00–20:00."
+        "hr": "Radnim danom 08:00–20:00; dežurno radno vrijeme radnim danom 20:00–22:00, sub–ned i blagdani 09:00–20:00.",
+        "de": "Mo–Fr 8–20 Uhr; Notdienstzeiten Mo–Fr 20–22 Uhr, Sa–So und feiertags 9–20 Uhr."
       },
       "small_animals": true,
       "url": "https://www.primavetrendelo.hu/",
@@ -284,7 +292,8 @@
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun 09:00-12:00 (by appointment).",
       "duty_i18n": {
         "sl": "pon–pet 8–20, sob–ned 9–12 (po dogovoru).",
-        "hr": "pon–pet 08:00–20:00, sub–ned 09:00–12:00 (uz prethodnu najavu)."
+        "hr": "pon–pet 08:00–20:00, sub–ned 09:00–12:00 (uz prethodnu najavu).",
+        "de": "Mo–Fr 8–20 Uhr, Sa–So 9–12 Uhr (nach Terminvereinbarung)."
       },
       "small_animals": true,
       "url": "https://www.rexrendelo.hu/",
@@ -303,7 +312,8 @@
       "duty": "Weekdays 09:00-20:00.",
       "duty_i18n": {
         "sl": "Med tednom 9–20.",
-        "hr": "Radnim danom 09:00–20:00."
+        "hr": "Radnim danom 09:00–20:00.",
+        "de": "Mo–Fr 9–20 Uhr."
       },
       "small_animals": true,
       "url": "https://murmuczok.hu/",
@@ -464,7 +474,8 @@
       "duty": "Every day until midnight; the line connects to the clinic on duty that week (backup number +36 20 350 6656).",
       "duty_i18n": {
         "sl": "Vsak dan do polnoči; linija vas poveže s kliniko, ki je ta teden dežurna (rezervna številka +36 20 350 6656).",
-        "hr": "Svaki dan do ponoći; poziv se preusmjerava na ambulantu koja taj tjedan dežura (pričuvni broj +36 20 350 6656)."
+        "hr": "Svaki dan do ponoći; poziv se preusmjerava na ambulantu koja taj tjedan dežura (pričuvni broj +36 20 350 6656).",
+        "de": "Täglich bis Mitternacht; die Leitung verbindet mit der Klinik, die in der jeweiligen Woche Dienst hat (Ersatznummer +36 20 350 6656)."
       },
       "small_animals": true,
       "source_url": "https://kutyadoktor.hu/ugyelet/",
@@ -483,7 +494,8 @@
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun and holidays 09:00-12:00; own duty Mon-Fri 19:00-22:00, Sat-Sun and holidays 12:00-16:00.",
       "duty_i18n": {
         "sl": "pon–pet 8–20, sob–ned in prazniki 9–12; lastno dežurstvo pon–pet 19–22, sob–ned in prazniki 12–16.",
-        "hr": "pon–pet 08:00–20:00, sub–ned i blagdani 09:00–12:00; vlastito dežurstvo pon–pet 19:00–22:00, sub–ned i blagdani 12:00–16:00."
+        "hr": "pon–pet 08:00–20:00, sub–ned i blagdani 09:00–12:00; vlastito dežurstvo pon–pet 19:00–22:00, sub–ned i blagdani 12:00–16:00.",
+        "de": "Mo–Fr 8–20 Uhr, Sa–So und feiertags 9–12 Uhr; eigener Notdienst Mo–Fr 19–22 Uhr, Sa–So und feiertags 12–16 Uhr."
       },
       "small_animals": true,
       "url": "https://allatkorhazdebrecen.hu/",
@@ -553,7 +565,8 @@
       "duty": "Weekdays 20:00-22:00; weekends 08:00-22:00; long weekends/holidays 08:00-20:00. Phone ahead. For 30 Oct-5 Nov 2026 the duty is at Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
       "duty_i18n": {
         "sl": "Med tednom 20–22; ob vikendih 8–22; ob podaljšanih vikendih in praznikih 8–20. Vnaprej pokličite. Od 30. oktobra do 5. novembra 2026 je dežurstvo v Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
-        "hr": "Radnim danom 20:00–22:00; vikendom 08:00–22:00; produljenim vikendima/blagdanima 08:00–20:00. Nazovi unaprijed. Od 30. 10. do 5. 11. 2026. dežurstvo je u Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371)."
+        "hr": "Radnim danom 20:00–22:00; vikendom 08:00–22:00; produljenim vikendima/blagdanima 08:00–20:00. Nazovi unaprijed. Od 30. 10. do 5. 11. 2026. dežurstvo je u Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
+        "de": "Mo–Fr 20–22 Uhr; am Wochenende 8–22 Uhr; an langen Wochenenden/Feiertagen 8–20 Uhr. Bitte vorher anrufen. Vom 30. Oktober bis 5. November 2026 hat das Móravárosi Állatgyógyászati Központ, Farkas utca 4, Dienst (+36 30 539 1371)."
       },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
@@ -572,7 +585,8 @@
       "duty": "Takes part in the Szeged duty rota (weekdays 20:00-22:00, weekends 08:00-22:00 when on duty).",
       "duty_i18n": {
         "sl": "Sodeluje v dežurnem sistemu Szegeda (med tednom 20–22, ob vikendih 8–22, ko je na vrsti).",
-        "hr": "Sudjeluje u dežurnom rasporedu u Szegedu (radnim danom 20:00–22:00, vikendom 08:00–22:00 kad dežura)."
+        "hr": "Sudjeluje u dežurnom rasporedu u Szegedu (radnim danom 20:00–22:00, vikendom 08:00–22:00 kad dežura).",
+        "de": "Nimmt am Notdienstturnus in Szeged teil (Mo–Fr 20–22 Uhr, am Wochenende 8–22 Uhr, wenn die Praxis Dienst hat)."
       },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
@@ -590,7 +604,8 @@
       "duty": "Takes part in the Szeged small-animal standby duty: Sat-Sun 08:00-22:00, weekdays 20:00-22:00 (phone first).",
       "duty_i18n": {
         "sl": "Sodeluje v dežurni pripravljenosti za male živali v Szegedu: sob–ned 8–22, med tednom 20–22 (najprej pokličite).",
-        "hr": "Sudjeluje u dežurstvu za male životinje u Szegedu: sub–ned 08:00–22:00, radnim danom 20:00–22:00 (prije dolaska nazovi)."
+        "hr": "Sudjeluje u dežurstvu za male životinje u Szegedu: sub–ned 08:00–22:00, radnim danom 20:00–22:00 (prije dolaska nazovi).",
+        "de": "Beteiligt sich am Bereitschaftsdienst für Kleintiere in Szeged: Sa–So 8–22 Uhr, Mo–Fr 20–22 Uhr (zuerst anrufen)."
       },
       "small_animals": true,
       "url": "https://www.szegediallatorvos.hu/",
@@ -633,7 +648,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 18:00-22:00, weekends 10:00-22:00, or Mon-Fri 18:00-20:00, Sat-Sun and holidays 12:00-18:00.",
       "duty_i18n": {
-        "hr": "Radnim danom 18:00–22:00, vikendom 10:00–22:00, ili pon–pet 18:00–20:00, sub–ned i blagdani 12:00–18:00."
+        "hr": "Radnim danom 18:00–22:00, vikendom 10:00–22:00, ili pon–pet 18:00–20:00, sub–ned i blagdani 12:00–18:00.",
+        "de": "Mo–Fr 18–22 Uhr, am Wochenende 10–22 Uhr, oder Mo–Fr 18–20 Uhr, Sa–So und feiertags 12–18 Uhr."
       },
       "small_animals": true,
       "url": "https://allatorvosiugyeletmiskolc.webnode.hu/",
@@ -652,7 +668,8 @@
       "duty": "Mon-Fri 10:00-18:00; closed Sat-Sun.",
       "duty_i18n": {
         "sl": "pon–pet 10–18; sob–ned zaprto.",
-        "hr": "pon–pet 10:00–18:00; sub–ned zatvoreno."
+        "hr": "pon–pet 10:00–18:00; sub–ned zatvoreno.",
+        "de": "Mo–Fr 10–18 Uhr; Sa–So geschlossen."
       },
       "small_animals": true,
       "url": "https://www.nepkertiallatklinika.hu/",
@@ -684,7 +701,8 @@
       "duty": "Weekdays 20:00-22:00 by phone with on-site visits; weekends (and holidays) 08:00-20:00 for urgent, life-threatening cases. Surcharge.",
       "duty_i18n": {
         "sl": "Med tednom 20–22 po telefonu z obiski na kraju samem; ob vikendih (in praznikih) 8–20 za nujne, življenjsko ogrožajoče primere. Doplačilo.",
-        "hr": "Radnim danom 20:00–22:00 telefonski, s izlascima na teren; vikendom (i blagdanima) 08:00–20:00 za hitne slučajeve opasne po život. Uz doplatak."
+        "hr": "Radnim danom 20:00–22:00 telefonski, s izlascima na teren; vikendom (i blagdanima) 08:00–20:00 za hitne slučajeve opasne po život. Uz doplatak.",
+        "de": "Mo–Fr 20–22 Uhr telefonisch und mit Besuchen vor Ort; am Wochenende (und an Feiertagen) 8–20 Uhr für dringende, lebensbedrohliche Fälle. Zuschlag."
       },
       "small_animals": true,
       "url": "https://pecs.hu/allatorvosi-ugyelet/",
@@ -798,7 +816,8 @@
       "duty": "Weekdays 08:00-20:00 outpatients and surgery; nights and weekends emergency duty.",
       "duty_i18n": {
         "sl": "Med tednom 8–20 ambulanta in kirurgija; ponoči in ob vikendih nujno dežurstvo.",
-        "hr": "Radnim danom 08:00–20:00 ambulantni pregledi i operacije; noću i vikendom hitno dežurstvo."
+        "hr": "Radnim danom 08:00–20:00 ambulantni pregledi i operacije; noću i vikendom hitno dežurstvo.",
+        "de": "Mo–Fr 8–20 Uhr ambulante Behandlung und Operationen; nachts und am Wochenende Notdienst."
       },
       "small_animals": true,
       "url": "https://allatkorhaznyiregyhaza.hu/",
@@ -818,7 +837,8 @@
       "duty": "Receives animals on weekdays, weekends and public holidays (hours on its 'Nyitva tartás' page).",
       "duty_i18n": {
         "sl": "Sprejema živali med tednom, ob vikendih in praznikih (delovni čas na strani „Nyitva tartás“).",
-        "hr": "Prima životinje radnim danom, vikendom i blagdanima (radno vrijeme na stranici „Nyitva tartás“)."
+        "hr": "Prima životinje radnim danom, vikendom i blagdanima (radno vrijeme na stranici „Nyitva tartás“).",
+        "de": "Nimmt Haustiere unter der Woche, am Wochenende und an Feiertagen auf (Zeiten auf der Seite „Nyitva tartás“)."
       },
       "small_animals": true,
       "url": "https://allatorvos-szombathely.hu/hu/",
@@ -967,7 +987,8 @@
       "duty": "Mon, Wed, Thu 10:30-12:00 and 16:00-18:00; Tue, Fri 10:30-12:00; weekends closed except announced short duty slots (phone first, surcharge).",
       "duty_i18n": {
         "sl": "pon, sre, čet 10.30–12 in 16–18; tor, pet 10.30–12; ob vikendih zaprto, razen objavljenih kratkih dežurnih terminov (najprej pokličite, doplačilo).",
-        "hr": "pon, sri, čet 10:30–12:00 i 16:00–18:00; uto, pet 10:30–12:00; vikendom zatvoreno, osim najavljenih kratkih dežurnih termina (prvo nazovi, uz doplatak)."
+        "hr": "pon, sri, čet 10:30–12:00 i 16:00–18:00; uto, pet 10:30–12:00; vikendom zatvoreno, osim najavljenih kratkih dežurnih termina (prvo nazovi, uz doplatak).",
+        "de": "Mo, Mi, Do 10.30–12 und 16–18 Uhr; Di, Fr 10.30–12 Uhr; am Wochenende geschlossen, außer zu angekündigten kurzen Notdienstzeiten (zuerst anrufen, Zuschlag)."
       },
       "small_animals": true,
       "url": "https://nemes.vet/",
@@ -1064,7 +1085,8 @@
       "duty": "Saturdays 13:00-18:00; Sundays and public holidays 08:00-18:00. Visit at the animal's location or at a clinic, arranged by phone.",
       "duty_i18n": {
         "sl": "Ob sobotah 13–18; ob nedeljah in praznikih 8–18. Obisk na kraju, kjer je žival, ali v kliniki, po dogovoru po telefonu.",
-        "hr": "Subotom 13:00–18:00; nedjeljom i blagdanima 08:00–18:00. Posjet na lokaciji životinje ili u ambulanti, po dogovoru telefonom."
+        "hr": "Subotom 13:00–18:00; nedjeljom i blagdanima 08:00–18:00. Posjet na lokaciji životinje ili u ambulanti, po dogovoru telefonom.",
+        "de": "Samstag 13–18 Uhr; sonn- und feiertags 8–18 Uhr. Besuch am Aufenthaltsort des Haustiers oder in einer Klinik, nach telefonischer Absprache."
       },
       "small_animals": true,
       "url": "https://www.szolnok.hu/2026/05/19/allatorvosi-ugyelet/",
@@ -1083,7 +1105,8 @@
       "duty": "Mon-Fri 09:00-18:00; Sat, Sun and public holidays 09:00-16:00. No house calls, no out-of-hours duty.",
       "duty_i18n": {
         "sl": "pon–pet 9–18; sob, ned in prazniki 9–16. Brez obiskov na domu, brez dežurstva zunaj delovnega časa.",
-        "hr": "pon–pet 09:00–18:00; sub, ned i blagdani 09:00–16:00. Bez kućnih posjeta i bez dežurstva izvan radnog vremena."
+        "hr": "pon–pet 09:00–18:00; sub, ned i blagdani 09:00–16:00. Bez kućnih posjeta i bez dežurstva izvan radnog vremena.",
+        "de": "Mo–Fr 9–18 Uhr; Sa, So und feiertags 9–16 Uhr. Keine Hausbesuche, kein Notdienst außerhalb der Sprechzeiten."
       },
       "small_animals": true,
       "url": "https://petcity.hu/",
@@ -1099,7 +1122,8 @@
       "duty": "One member clinic on duty each day: weekdays 19:00-22:00, weekends 8:00-22:00, public holidays 8:00-19:00; duty surcharge; call before setting out",
       "duty_i18n": {
         "sl": "Vsak dan je dežurna ena od klinik članic: med tednom 19–22, ob vikendih 8–22, ob praznikih 8–19; dežurno doplačilo; pokličite, preden se odpravite",
-        "hr": "Svaki dan dežura jedna članska ambulanta: radnim danom 19:00–22:00, vikendom 8:00–22:00, blagdanima 8:00–19:00; uz doplatak za dežurstvo; nazovi prije polaska"
+        "hr": "Svaki dan dežura jedna članska ambulanta: radnim danom 19:00–22:00, vikendom 8:00–22:00, blagdanima 8:00–19:00; uz doplatak za dežurstvo; nazovi prije polaska",
+        "de": "Täglich hat eine Mitgliedsklinik Notdienst: Mo–Fr 19–22 Uhr, am Wochenende 8–22 Uhr, an Feiertagen 8–19 Uhr; Notdienstzuschlag; bitte vor dem Kommen anrufen"
       },
       "small_animals": true,
       "url": "https://allatorvosiugyeletgyor.hu/",
@@ -1119,7 +1143,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "url": "https://szigetkoziallatorvos.hu/",
@@ -1138,7 +1163,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1156,7 +1182,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1174,7 +1201,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1192,7 +1220,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1210,7 +1239,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1228,7 +1258,8 @@
       "duty": "Member of the Győr duty group (rotating)",
       "duty_i18n": {
         "sl": "Članica dežurne skupine Győr (izmenično)",
-        "hr": "Članica győrske dežurne skupine (u rotaciji)"
+        "hr": "Članica győrske dežurne skupine (u rotaciji)",
+        "de": "Mitglied der Notdienstgemeinschaft Győr (im Wechsel)"
       },
       "small_animals": true,
       "source_url": "https://allatorvosiugyeletgyor.hu/csoport.html",
@@ -1377,7 +1408,8 @@
       "duty": "Central phone; weekdays 6:00-9:00 and 18:00-22:00, weekends and public holidays 6:00-22:00; 8 participating Kecskemét clinics; urgent companion-animal cases only",
       "duty_i18n": {
         "sl": "Centralna telefonska številka; med tednom 6–9 in 18–22, ob vikendih in praznikih 6–22; 8 sodelujočih klinik v Kecskemétu; samo nujni primeri pri hišnih ljubljenčkih",
-        "hr": "Središnji telefon; radnim danom 6:00–9:00 i 18:00–22:00, vikendom i blagdanima 6:00–22:00; sudjeluje 8 ambulanti iz Kecskeméta; samo hitni slučajevi kod kućnih ljubimaca"
+        "hr": "Središnji telefon; radnim danom 6:00–9:00 i 18:00–22:00, vikendom i blagdanima 6:00–22:00; sudjeluje 8 ambulanti iz Kecskeméta; samo hitni slučajevi kod kućnih ljubimaca",
+        "de": "Zentrale Telefonnummer; Mo–Fr 6–9 und 18–22 Uhr, am Wochenende und an Feiertagen 6–22 Uhr; 8 beteiligte Kliniken in Kecskemét; nur dringende Fälle bei Heimtieren"
       },
       "small_animals": true,
       "url": "https://www.allatorvosiugyeletkecskemet.hu/",
@@ -1397,7 +1429,8 @@
       "duty": "Participates in the Kecskemét duty service",
       "duty_i18n": {
         "sl": "Sodeluje v dežurni službi v Kecskemétu",
-        "hr": "Sudjeluje u dežurnoj službi u Kecskemétu"
+        "hr": "Sudjeluje u dežurnoj službi u Kecskemétu",
+        "de": "Beteiligt sich am Notdienst in Kecskemét"
       },
       "small_animals": true,
       "url": "https://allatorvoskecskemet.hu/",

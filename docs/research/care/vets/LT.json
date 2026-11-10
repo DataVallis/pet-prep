@@ -57,7 +57,11 @@
       "address": "Tilžės g. 18, LT-47181 Kaunas",
       "phone": "+370 620 78353",
       "emergency_24h": true,
-      "duty": "University small animal clinic, open 24 h: emergency and planned outpatient and inpatient care. Call ahead on +370 620 78353.", "duty_i18n": {"hr": "Sveučilišna klinika za male životinje, 24 h: hitna skrb te planirana ambulantna i bolnička skrb. Nazovi unaprijed na +370 620 78353."},
+      "duty": "University small animal clinic, open 24 h: emergency and planned outpatient and inpatient care. Call ahead on +370 620 78353.",
+      "duty_i18n": {
+        "hr": "Sveučilišna klinika za male životinje, 24 h: hitna skrb te planirana ambulantna i bolnička skrb. Nazovi unaprijed na +370 620 78353.",
+        "de": "Universitäre Kleintierklinik, rund um die Uhr geöffnet: Notfälle sowie geplante ambulante und stationäre Behandlung. Bitte vorher anrufen: +370 620 78353."
+      },
       "small_animals": true,
       "url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
       "source_url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
@@ -73,7 +77,11 @@
       "address": "Gardino g. 72, Druskininkai",
       "phone": "+370 676 64525",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Radno vrijeme provjeri telefonom."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Radno vrijeme provjeri telefonom.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
       "source_url": "https://druskininkai.lt/en/pet-friendly",
@@ -88,7 +96,11 @@
       "address": "Turgaus g. 3, Druskininkai",
       "phone": "+370 313 52919",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Radno vrijeme provjeri telefonom."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Radno vrijeme provjeri telefonom.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
       "source_url": "https://druskininkai.lt/en/pet-friendly",
@@ -103,7 +115,11 @@
       "address": "Sodžiaus g. 18, Neravų k., Druskininkų sav.",
       "phone": "+370 699 35788",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Radno vrijeme provjeri telefonom."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Radno vrijeme provjeri telefonom.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
       "source_url": "https://druskininkai.lt/en/pet-friendly",
@@ -118,7 +134,11 @@
       "address": "Tolimoji g. 2B, Vilnius",
       "phone": "+370 612 88788",
       "emergency_24h": true,
-      "duty": "Referral veterinary hospital open 24 hours a day, 7 days a week. Call ahead on +370 612 88788.", "duty_i18n": {"hr": "Referentna veterinarska bolnica otvorena 24 sata dnevno, 7 dana u tjednu. Nazovi unaprijed na +370 612 88788."},
+      "duty": "Referral veterinary hospital open 24 hours a day, 7 days a week. Call ahead on +370 612 88788.",
+      "duty_i18n": {
+        "hr": "Referentna veterinarska bolnica otvorena 24 sata dnevno, 7 dana u tjednu. Nazovi unaprijed na +370 612 88788.",
+        "de": "Überweisungsklinik, rund um die Uhr, 7 Tage die Woche geöffnet. Bitte vorher anrufen: +370 612 88788."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
       "source_url": "https://www.8drambliai.lt/contacts",
@@ -134,7 +154,11 @@
       "address": "Liepų g. 73, Klaipėda",
       "phone": "+370 612 88788",
       "emergency_24h": true,
-      "duty": "Referral veterinary hospital open 24/7. Call ahead on +370 612 88788.", "duty_i18n": {"hr": "Referentna veterinarska bolnica otvorena 24/7. Nazovi unaprijed na +370 612 88788."},
+      "duty": "Referral veterinary hospital open 24/7. Call ahead on +370 612 88788.",
+      "duty_i18n": {
+        "hr": "Referentna veterinarska bolnica otvorena 24/7. Nazovi unaprijed na +370 612 88788.",
+        "de": "Überweisungsklinik, rund um die Uhr geöffnet. Bitte vorher anrufen: +370 612 88788."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/klaipeda-referral-veterinary-hospital",
       "source_url": "https://www.8drambliai.lt/klaipeda-referral-veterinary-hospital",
@@ -150,7 +174,11 @@
       "address": "Nemenčinės plentas 4c, Vilnius",
       "phone": "+370 612 88788",
       "emergency_24h": false,
-      "duty": "Open daily 08:00-24:00.", "duty_i18n": {"hr": "Otvoreno svaki dan 08:00–24:00."},
+      "duty": "Open daily 08:00-24:00.",
+      "duty_i18n": {
+        "hr": "Otvoreno svaki dan 08:00–24:00.",
+        "de": "Täglich 8–24 Uhr geöffnet."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/antakalnis-clinic",
       "source_url": "https://www.8drambliai.lt/antakalnis-clinic",
@@ -165,7 +193,11 @@
       "address": "Naugarduko g. 59, Vilnius",
       "phone": "+370 612 88788",
       "emergency_24h": false,
-      "duty": "Open daily 07:00-23:00.", "duty_i18n": {"hr": "Otvoreno svaki dan 07:00–23:00."},
+      "duty": "Open daily 07:00-23:00.",
+      "duty_i18n": {
+        "hr": "Otvoreno svaki dan 07:00–23:00.",
+        "de": "Täglich 7–23 Uhr geöffnet."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
       "source_url": "https://www.8drambliai.lt/contacts",
@@ -180,7 +212,11 @@
       "address": "M. Mažvydo g. 16, Vilnius",
       "phone": "+370 612 88788",
       "emergency_24h": false,
-      "duty": "Open daily 08:00-21:00.", "duty_i18n": {"hr": "Otvoreno svaki dan 08:00–21:00."},
+      "duty": "Open daily 08:00-21:00.",
+      "duty_i18n": {
+        "hr": "Otvoreno svaki dan 08:00–21:00.",
+        "de": "Täglich 8–21 Uhr geöffnet."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
       "source_url": "https://www.8drambliai.lt/contacts",
@@ -195,7 +231,11 @@
       "address": "Laisvės g. 2, Telšiai",
       "phone": "+370 612 88788",
       "emergency_24h": false,
-      "duty": "Open daily 08:00-21:00.", "duty_i18n": {"hr": "Otvoreno svaki dan 08:00–21:00."},
+      "duty": "Open daily 08:00-21:00.",
+      "duty_i18n": {
+        "hr": "Otvoreno svaki dan 08:00–21:00.",
+        "de": "Täglich 8–21 Uhr geöffnet."
+      },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
       "source_url": "https://www.8drambliai.lt/contacts",
@@ -210,7 +250,11 @@
       "address": "Bukčių g. 8, 04127 Vilnius",
       "phone": "+370 677 05503",
       "emergency_24h": false,
-      "duty": "Animal hospital, open every day 00:00-23:59. Inpatient ward +370 604 77433. Call ahead.", "duty_i18n": {"hr": "Bolnica za životinje, otvorena svaki dan 00:00–23:59. Bolnički odjel +370 604 77433. Nazovi unaprijed."},
+      "duty": "Animal hospital, open every day 00:00-23:59. Inpatient ward +370 604 77433. Call ahead.",
+      "duty_i18n": {
+        "hr": "Bolnica za životinje, otvorena svaki dan 00:00–23:59. Bolnički odjel +370 604 77433. Nazovi unaprijed.",
+        "de": "Tierklinik, täglich rund um die Uhr (0.00–23.59 Uhr) geöffnet. Stationsnummer +370 604 77433. Bitte vorher anrufen."
+      },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
       "source_url": "https://drvet.lt/kontaktai/",
@@ -225,7 +269,11 @@
       "address": "Gerosios Vilties g. 1, LT-03147 Vilnius",
       "phone": "+370 5 2105048",
       "emergency_24h": false,
-      "duty": "Open Mon-Sat 09:00-22:00, Sun 09:00-21:00. Not 24 h; after hours it refers to the Lazdynai animal hospital (+370 677 05503).", "duty_i18n": {"hr": "Otvoreno pon–sub 09:00–22:00, ned 09:00–21:00. Ne radi 24 h; izvan radnog vremena upućuju u bolnicu za životinje Lazdynai (+370 677 05503)."},
+      "duty": "Open Mon-Sat 09:00-22:00, Sun 09:00-21:00. Not 24 h; after hours it refers to the Lazdynai animal hospital (+370 677 05503).",
+      "duty_i18n": {
+        "hr": "Otvoreno pon–sub 09:00–22:00, ned 09:00–21:00. Ne radi 24 h; izvan radnog vremena upućuju u bolnicu za životinje Lazdynai (+370 677 05503).",
+        "de": "Mo–Sa 9–22 Uhr, So 9–21 Uhr geöffnet. Kein 24-Stunden-Dienst; außerhalb der Öffnungszeiten Verweis an die Tierklinik Lazdynai (+370 677 05503)."
+      },
       "small_animals": true,
       "url": "https://vetmed.lt/kontaktai/",
       "source_url": "https://vetmed.lt/kontaktai/",
@@ -240,7 +288,11 @@
       "address": "Žalgirio g. 135, 08217 Vilnius",
       "phone": "+370 611 41596",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-22:00, Sat-Sun 08:00-19:00.", "duty_i18n": {"hr": "pon–pet 08:00–22:00, sub–ned 08:00–19:00."},
+      "duty": "Mon-Fri 08:00-22:00, Sat-Sun 08:00-19:00.",
+      "duty_i18n": {
+        "hr": "pon–pet 08:00–22:00, sub–ned 08:00–19:00.",
+        "de": "Mo–Fr 8–22 Uhr, Sa–So 8–19 Uhr."
+      },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
       "source_url": "https://drvet.lt/kontaktai/",
@@ -255,7 +307,11 @@
       "address": "Ašigalio g. 1b, 49160 Kaunas",
       "phone": "+370 614 82211",
       "emergency_24h": false,
-      "duty": "Mon-Fri 07:00-22:00, Sat-Sun 09:00-20:00.", "duty_i18n": {"hr": "pon–pet 07:00–22:00, sub–ned 09:00–20:00."},
+      "duty": "Mon-Fri 07:00-22:00, Sat-Sun 09:00-20:00.",
+      "duty_i18n": {
+        "hr": "pon–pet 07:00–22:00, sub–ned 09:00–20:00.",
+        "de": "Mo–Fr 7–22 Uhr, Sa–So 9–20 Uhr."
+      },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
       "source_url": "https://drvet.lt/kontaktai/",
@@ -270,7 +326,11 @@
       "address": "Technikos g. 39, LT-51338 Kaunas",
       "phone": "+370 655 55818",
       "emergency_24h": true,
-      "duty": "On-call veterinarian 24/7 for urgent cases at Technikos g. 39; regular hours Mon-Fri 09:00-20:00, Sat-Sun 09:00-17:00. Call ahead.", "duty_i18n": {"hr": "Dežurni veterinar 24/7 za hitne slučajeve na adresi Technikos g. 39; redovno radno vrijeme pon–pet 09:00–20:00, sub–ned 09:00–17:00. Nazovi unaprijed."},
+      "duty": "On-call veterinarian 24/7 for urgent cases at Technikos g. 39; regular hours Mon-Fri 09:00-20:00, Sat-Sun 09:00-17:00. Call ahead.",
+      "duty_i18n": {
+        "hr": "Dežurni veterinar 24/7 za hitne slučajeve na adresi Technikos g. 39; redovno radno vrijeme pon–pet 09:00–20:00, sub–ned 09:00–17:00. Nazovi unaprijed.",
+        "de": "Diensthabender Tierarzt rund um die Uhr für dringende Fälle in der Technikos g. 39; reguläre Sprechzeiten Mo–Fr 9–20 Uhr, Sa–So 9–17 Uhr. Bitte vorher anrufen."
+      },
       "small_animals": true,
       "url": "https://www.snaucerisvet.lt/veterinarijos-klinika-kaune/",
       "source_url": "https://www.snaucerisvet.lt/veterinarijos-klinika-kaune/",
@@ -286,7 +346,11 @@
       "address": "P. Komunos g. 2, Klaipėda",
       "phone": "+370 671 02331",
       "emergency_24h": true,
-      "duty": "On-call clinic 24/7. Regular hours Mon-Fri 09:00-18:00, Sat 10:00-14:00; outside them call for on-call service.", "duty_i18n": {"hr": "Dežurna klinika 24/7. Redovno radno vrijeme pon–pet 09:00–18:00, sub 10:00–14:00; izvan njega nazovi za dežurnu službu."},
+      "duty": "On-call clinic 24/7. Regular hours Mon-Fri 09:00-18:00, Sat 10:00-14:00; outside them call for on-call service.",
+      "duty_i18n": {
+        "hr": "Dežurna klinika 24/7. Redovno radno vrijeme pon–pet 09:00–18:00, sub 10:00–14:00; izvan njega nazovi za dežurnu službu.",
+        "de": "Bereitschaftsklinik rund um die Uhr. Reguläre Sprechzeiten Mo–Fr 9–18 Uhr, Sa 10–14 Uhr; außerhalb dieser Zeiten bitte für den Bereitschaftsdienst anrufen."
+      },
       "small_animals": true,
       "url": "https://mambaveterinaras.lt/",
       "source_url": "https://mambaveterinaras.lt/",
@@ -302,7 +366,11 @@
       "address": "Taikos pr. 62, 91140 Klaipėda",
       "phone": "+370 699 37859",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-21:00, Sat-Sun 09:00-17:00.", "duty_i18n": {"hr": "pon–pet 09:00–21:00, sub–ned 09:00–17:00."},
+      "duty": "Mon-Fri 09:00-21:00, Sat-Sun 09:00-17:00.",
+      "duty_i18n": {
+        "hr": "pon–pet 09:00–21:00, sub–ned 09:00–17:00.",
+        "de": "Mo–Fr 9–21 Uhr, Sa–So 9–17 Uhr."
+      },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
       "source_url": "https://drvet.lt/kontaktai/",
@@ -317,7 +385,11 @@
       "address": "Vytauto g. 137, Šiauliai",
       "phone": "+370 617 02490",
       "emergency_24h": true,
-      "duty": "Urgent help line 24/7 on +370 617 02490; regular hours Mon-Fri 09:00-22:00, Sat-Sun 10:00-18:00. Registration +370 615 75519.", "duty_i18n": {"hr": "Hitna telefonska linija 24/7 na +370 617 02490; redovno radno vrijeme pon–pet 09:00–22:00, sub–ned 10:00–18:00. Recepcija +370 615 75519."},
+      "duty": "Urgent help line 24/7 on +370 617 02490; regular hours Mon-Fri 09:00-22:00, Sat-Sun 10:00-18:00. Registration +370 615 75519.",
+      "duty_i18n": {
+        "hr": "Hitna telefonska linija 24/7 na +370 617 02490; redovno radno vrijeme pon–pet 09:00–22:00, sub–ned 10:00–18:00. Recepcija +370 615 75519.",
+        "de": "Notfalltelefon rund um die Uhr unter +370 617 02490; reguläre Sprechzeiten Mo–Fr 9–22 Uhr, Sa–So 10–18 Uhr. Anmeldung +370 615 75519."
+      },
       "small_animals": true,
       "url": "https://siauliuveterinarijoscentras.lt/",
       "source_url": "https://siauliuveterinarijoscentras.lt/",
@@ -333,7 +405,11 @@
       "address": "Bangų g. 14, Palanga",
       "phone": "+370 687 57870",
       "emergency_24h": false,
-      "duty": "Call ahead for opening hours.", "duty_i18n": {"hr": "Radno vrijeme provjeri telefonom."},
+      "duty": "Call ahead for opening hours.",
+      "duty_i18n": {
+        "hr": "Radno vrijeme provjeri telefonom.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      },
       "small_animals": true,
       "url": "https://www.veterinaraspalanga.lt/kontaktai/",
       "source_url": "https://www.veterinaraspalanga.lt/kontaktai/",
@@ -348,12 +424,15 @@
       "address": "Vilniaus g. 28, Alytus",
       "phone": "+370 656 01917",
       "emergency_24h": false,
-      "duty": "Call ahead before coming in an emergency; opening hours not published.", "duty_i18n": {"hr": "U hitnim slučajevima nazovi prije dolaska; radno vrijeme nije objavljeno."},
+      "duty": "Call ahead before coming in an emergency.",
+      "duty_i18n": {
+        "de": "Im Notfall bitte vor dem Besuch anrufen."
+      },
       "small_animals": true,
       "url": "https://vetaminas.lt/",
       "source_url": "https://vetaminas.lt/",
       "checked": "2026-11-05",
-      "note": "Own site: 'Greitoji veterinarinė pagalba' section says call first; no hours, no 24 h wording."
+      "note": "Own site: 'Greitoji veterinarinė pagalba' section says call first; no hours, no 24 h wording. Moved from duty (2026-11-10): opening hours not published"
     }
   ],
   "notes": "Lithuania 2026-11-05, second run (follow-up). Method: WebSearch with allowed_domains returned own-site URLs, which WebFetch then opened. Added 8 drambliai (6 sites; Pavilnys + Klaipėda 24 h), MAMBA VET Klaipėda (24/7), DR.VET Lazdynai Vilnius (00:00-23:59 daily), Šiauliai Veterinary Centre (24/7 line), Šnauceris Kaunas (on-call 24/7), plus non-24h clinics. Unreachable: mambaveterinaras.lt/kontaktai/ (client_error, main page worked), miskovetklinika.lt (robots_disallowed; search snippet suggests 'Skubi pagalba 24/7' - not used), zoovisata.lt/kontaktai.html (server_error; retry not allowed in-session), 1551.lt not used as source. Not covered: Panevėžys (no own-site page opened: jpvet.lt, doremiau.lt, Kristinos centras only found via search), Birštonas, Nida, Alytus 24 h (Vetaminas has none), Gedmino vet Šiauliai, Bravoveta Šilutė, LSMU sgk.lsmuni.lt. No national duty-rota page found (earlier VMVT/LVGA pages had none). No animal poison line: toksikologija.lt (Lithuanian Apheresis and Clinical Toxicology Association) has only articles, no helpline; 8drambliai emergency page lists no poison line."

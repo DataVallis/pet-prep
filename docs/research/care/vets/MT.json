@@ -41,7 +41,11 @@
       "region": "Malta",
       "phone": "153 (extension 22)",
       "emergency_24h": true,
-      "duty": "24/7 emergency helpline: call freephone 153 and choose extension 22; staff assess the case and refer you to suitable veterinary help. Out-of-hours emergency clinics rotate across Gozo, northern and southern Malta, nightly 8pm-8am and Sundays/public holidays.", "duty_i18n": {"hr": "Hitna linija 24/7: nazovi besplatni broj 153 i odaberi lokal 22; osoblje procjenjuje slučaj i upućuje te na odgovarajuću veterinarsku pomoć. Hitne klinike izvan radnog vremena izmjenjuju se između Gozoa te sjevernog i južnog dijela Malte, svake noći 20–8 h te nedjeljom i na blagdane."},
+      "duty": "24/7 emergency helpline: call freephone 153 and choose extension 22; staff assess the case and refer you to suitable veterinary help. Out-of-hours emergency clinics rotate across Gozo, northern and southern Malta, nightly 8pm-8am and Sundays/public holidays.",
+      "duty_i18n": {
+        "hr": "Hitna linija 24/7: nazovi besplatni broj 153 i odaberi lokal 22; osoblje procjenjuje slučaj i upućuje te na odgovarajuću veterinarsku pomoć. Hitne klinike izvan radnog vremena izmjenjuju se između Gozoa te sjevernog i južnog dijela Malte, svake noći 20–8 h te nedjeljom i na blagdane.",
+        "de": "Notfall-Hotline rund um die Uhr: gebührenfrei 153 wählen, dann Nebenstelle 22; das Personal beurteilt den Fall und verweist an geeignete tierärztliche Hilfe. Die Notdienstkliniken außerhalb der Sprechzeiten wechseln sich auf Gozo sowie im Norden und Süden Maltas ab, nachts 20–8 Uhr sowie sonn- und feiertags."
+      },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
       "source_url": "https://vsc.gov.mt/?p=970",
@@ -57,7 +61,11 @@
       "address": "Reggie Miller Square, Fgura",
       "phone": "153 (extension 22)",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, 8pm-8am; call the 153 ext. 22 helpline first.", "duty_i18n": {"hr": "Hitna klinika izvan radnog vremena, 20–8 h; prvo nazovi liniju 153, lokal 22."},
+      "duty": "Out-of-hours emergency clinic, 8pm-8am; call the 153 ext. 22 helpline first.",
+      "duty_i18n": {
+        "hr": "Hitna klinika izvan radnog vremena, 20–8 h; prvo nazovi liniju 153, lokal 22.",
+        "de": "Notdienstklinik außerhalb der Sprechzeiten, 20–8 Uhr; bitte zuerst die Hotline 153, Nebenstelle 22, anrufen."
+      },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
       "source_url": "https://www.maltatoday.com.mt/news/national/139382/emergency_vet_clinic_to_open_in_fgura",
@@ -71,7 +79,11 @@
       "region": "Gozo",
       "phone": "153 (extension 22)",
       "emergency_24h": false,
-      "duty": "Gozo: on Sundays and public holidays a standby transport takes small pets in genuine emergencies to a clinic in Malta; call the national emergency line first.", "duty_i18n": {"hr": "Gozo: nedjeljom i na blagdane pripravni prijevoz u stvarnim hitnim slučajevima prevozi male ljubimce u kliniku na Malti; prvo nazovi nacionalni hitni broj."},
+      "duty": "Gozo: on Sundays and public holidays a standby transport takes small pets in genuine emergencies to a clinic in Malta; call the national emergency line first.",
+      "duty_i18n": {
+        "hr": "Gozo: nedjeljom i na blagdane pripravni prijevoz u stvarnim hitnim slučajevima prevozi male ljubimce u kliniku na Malti; prvo nazovi nacionalni hitni broj.",
+        "de": "Gozo: Sonn- und feiertags bringt ein Bereitschaftstransport Kleintiere in echten Notfällen zu einer Tierklinik auf Malta; bitte zuerst die nationale Notrufnummer anrufen."
+      },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
       "source_url": "https://www.independent.com.mt/articles/2026-05-11/local-news/Government-introduces-emergency-veterinary-transport-service-for-small-pets-in-Gozo-6736289618",

@@ -57,7 +57,10 @@
       "url": "https://www.veterinaria.uchile.cl/servicios-clinicos",
       "source_url": "https://uchile.cl/productos-y-servicios/atencion-de-salud-en-la-universidad-de-chile",
       "checked": "2026-11-10",
-      "note": "uchile.cl page says 'abierto las 24 horas del día', Monday to Sunday. veterinaria.uchile.cl itself could not be fetched (provenance restriction); url is the one printed on the uchile.cl page."
+      "note": "uchile.cl page says 'abierto las 24 horas del día', Monday to Sunday. veterinaria.uchile.cl itself could not be fetched (provenance restriction); url is the one printed on the uchile.cl page.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -67,12 +70,15 @@
       "address": "Av. Santa Rosa 11735, La Pintana",
       "phone": "+56 2 2978 5523",
       "emergency_24h": false,
-      "duty": "University teaching hospital. Opening hours are not published; the Bilbao site (Providencia) is the one open 24 hours.",
+      "duty": "University teaching hospital. The Bilbao site (Providencia) is the one open 24 hours.",
       "small_animals": true,
       "url": "https://www.veterinaria.uchile.cl/servicios-clinicos",
       "source_url": "https://uchile.cl/productos-y-servicios/atencion-de-salud-en-la-universidad-de-chile",
       "checked": "2026-11-10",
-      "note": "No hours on the uchile.cl page."
+      "note": "No hours on the uchile.cl page. Moved from duty (2026-11-10): Opening hours are not published.",
+      "duty_i18n": {
+        "de": "Universitäre Lehrklinik. Nur der Standort Bilbao (Providencia) ist rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -87,7 +93,10 @@
       "url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "source_url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "checked": "2026-11-10",
-      "note": "UNAB news article (English version, dated May 2023) lists 'Emergencies 24 hrs.' for Colina; email hcv@unab.cl. Article may be outdated; the UNAB faculty page redirected and could not be opened. Checked: page still lists Emergencies 24 hrs for Colina."
+      "note": "UNAB news article (English version, dated May 2023) lists 'Emergencies 24 hrs.' for Colina; email hcv@unab.cl. Article may be outdated; the UNAB faculty page redirected and could not be opened. Checked: page still lists Emergencies 24 hrs for Colina.",
+      "duty_i18n": {
+        "de": "Täglich 10:00–20:00 Uhr geöffnet; Notfälle werden rund um die Uhr behandelt."
+      }
     },
     {
       "kind": "clinic",
@@ -102,7 +111,10 @@
       "url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "source_url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "note": "2023 article; says hours would soon be 08:00-20:00 and Saturdays 08:30-13:30. 24-hour monitoring refers to inpatients only.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Werktags 08:30–18:30 Uhr (erweiterte Öffnungszeiten angekündigt). Stationäre Patienten werden rund um die Uhr überwacht; keine 24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -117,7 +129,10 @@
       "url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "source_url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "note": "2023 article; email hcv.vina@unab.cl.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Werktags 09:00–19:00 Uhr. Keine 24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -132,7 +147,10 @@
       "url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "source_url": "https://noticias.unab.cl/the-unab-network-of-veterinary-clinical-hospitals-adds-two-new-facilities-for-community-service/",
       "note": "2023 article; email recepcionhcvcon@unab.cl.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Täglich 10:00–20:00 Uhr geöffnet. Keine 24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -147,7 +165,10 @@
       "url": "https://vet24.cl/",
       "source_url": "https://vet24.cl/",
       "checked": "2026-11-10",
-      "note": "Page says 'Abiertos las 24 horas' / 'Atención 24 horas · 365 días'. Published emergency number has a 51 (La Serena) area code although the address is in Ñuñoa; WhatsApp +56 9 9305 3823 also published. Phone should be double-checked. Checked: +56 51 emergency line is the number published on the page for the Ñuñoa address; kept."
+      "note": "Page says 'Abiertos las 24 horas' / 'Atención 24 horas · 365 días'. Published emergency number has a 51 (La Serena) area code although the address is in Ñuñoa; WhatsApp +56 9 9305 3823 also published. Phone should be double-checked. Checked: +56 51 emergency line is the number published on the page for the Ñuñoa address; kept.",
+      "duty_i18n": {
+        "de": "Notfälle ohne Termin rund um die Uhr, 365 Tage im Jahr. Termine täglich 09:30–20:00 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -162,7 +183,10 @@
       "url": "https://veterinariamedvet.cl/",
       "source_url": "https://veterinariamedvet.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Atención las 24 horas', 'Estamos Disponibles 24/7'. WhatsApp +56 9 4074 5783."
+      "note": "Page: 'Atención las 24 horas', 'Estamos Disponibles 24/7'. WhatsApp +56 9 4074 5783.",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche."
+      }
     },
     {
       "kind": "clinic",
@@ -177,7 +201,10 @@
       "url": "https://veterinariaprovidencia.cl/",
       "source_url": "https://veterinariaprovidencia.cl/servicios/",
       "checked": "2026-11-10",
-      "note": "Home page: 'Abierto 24 horas, todos los días' for the Providencia branch only. WhatsApp +56 9 8929 7552. Santiago Centro branch Mon-Fri 10:30-18:30, Sat 10:30-16:00."
+      "note": "Home page: 'Abierto 24 horas, todos los días' for the Providencia branch only. WhatsApp +56 9 8929 7552. Santiago Centro branch Mon-Fri 10:30-18:30, Sat 10:30-16:00.",
+      "duty_i18n": {
+        "de": "Die Filiale Providencia ist täglich rund um die Uhr für Notfälle geöffnet. Die Filiale Santiago Centro (Huérfanos 1951) ist nicht rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -192,7 +219,10 @@
       "url": "https://www.invet.cl/",
       "source_url": "https://www.invet.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Hospital 24 horas', 'Urgencias Médicas 24/7'. Second number +56 9 6352 6082."
+      "note": "Page: 'Hospital 24 horas', 'Urgencias Médicas 24/7'. Second number +56 9 6352 6082.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnete Klinik mit Notfallversorgung."
+      }
     },
     {
       "kind": "clinic",
@@ -207,7 +237,10 @@
       "url": "https://vets.cl/",
       "source_url": "https://vets.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Urgencia las 24 Horas'; one address listed. WhatsApp +56 9 7649 2962."
+      "note": "Page: 'Urgencia las 24 Horas'; one address listed. WhatsApp +56 9 7649 2962.",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–18:30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -222,7 +255,10 @@
       "url": "https://hvmvet.com/",
       "source_url": "https://hvmvet.com/",
       "checked": "2026-11-10",
-      "note": "Page says 'Urgencia 24 horas!'; number appears in a WhatsApp link only."
+      "note": "Page says 'Urgencia 24 horas!'; number appears in a WhatsApp link only.",
+      "duty_i18n": {
+        "de": "Täglich 09:00–20:00 Uhr geöffnet; Notdienst rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -237,7 +273,10 @@
       "url": "https://clivema.cl/",
       "source_url": "https://clivema.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Atención veterinaria de urgencia las 24 horas, los 7 días de la semana, en clínica Asunción.' Phone shown as 224 016 854. Other sites: CLIVEMA Esquina Blanca 913 (233 776 378), Guau & Miau Las Torres, Av. Las Torres 461 (22 904 9319) - no 24 h claim."
+      "note": "Page: 'Atención veterinaria de urgencia las 24 horas, los 7 días de la semana, en clínica Asunción.' Phone shown as 224 016 854. Other sites: CLIVEMA Esquina Blanca 913 (233 776 378), Guau & Miau Las Torres, Av. Las Torres 461 (22 904 9319) - no 24 h claim.",
+      "duty_i18n": {
+        "de": "Tierärztliche Notfallversorgung rund um die Uhr, 7 Tage die Woche, in der Klinik Asunción."
+      }
     },
     {
       "kind": "clinic",
@@ -252,7 +291,10 @@
       "url": "https://veterinarialoscastanos.com/",
       "source_url": "https://veterinarialoscastanos.com/",
       "checked": "2026-11-10",
-      "note": "Page: 'Abierto las 24 horas, los 7 días de la semana' in the contact section; urgencias 'las 24 horas, los 365 días del año'. WhatsApp +56 9 9626 2341."
+      "note": "Page: 'Abierto las 24 horas, los 7 días de la semana' in the contact section; urgencias 'las 24 horas, los 365 días del año'. WhatsApp +56 9 9626 2341.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche; Notfälle an jedem Tag des Jahres."
+      }
     },
     {
       "kind": "clinic",
@@ -267,7 +309,10 @@
       "url": "https://veterinarialoscastanos.com/",
       "source_url": "https://veterinarialoscastanos.com/",
       "checked": "2026-11-10",
-      "note": "Independent check: page FAQ says both branches (Viña del Mar and Quilpué) take emergencies 24/7; upgraded to true."
+      "note": "Independent check: page FAQ says both branches (Viña del Mar and Quilpué) take emergencies 24/7; upgraded to true.",
+      "duty_i18n": {
+        "de": "Notfälle werden rund um die Uhr an jedem Tag des Jahres behandelt (beide Filialen Los Castaños)."
+      }
     },
     {
       "kind": "clinic",
@@ -282,7 +327,10 @@
       "url": "https://hospitalveterinariointegral.com/",
       "source_url": "https://hospitalveterinariointegral.com/",
       "note": "Page: 'Urgencias hasta la 1:00 am'. Number is the WhatsApp contact.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Montag bis Samstag 08:00–20:00 Uhr; Notdienst täglich bis 01:00 Uhr. Nicht rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -297,7 +345,10 @@
       "url": "https://veterinariaalcantara.cl/",
       "source_url": "https://veterinariaalcantara.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Abierto 24 Horas' / 'Urgencia Veterinaria Temuco 24 Horas'. Same details on veterinariotemuco.cl."
+      "note": "Page: 'Abierto 24 Horas' / 'Urgencia Veterinaria Temuco 24 Horas'. Same details on veterinariotemuco.cl.",
+      "duty_i18n": {
+        "de": "Notaufnahme täglich rund um die Uhr geöffnet, auch an Feiertagen. Terminsprechstunde Montag bis Freitag 09:00–21:00 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -312,7 +363,10 @@
       "url": "https://veterinariatemuco.cl/",
       "source_url": "https://veterinariatemuco.cl/",
       "note": "Page states emergencies exclusively within 11:00-23:00.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Notdienst täglich 11:00–23:00 Uhr. Nicht rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -327,7 +381,10 @@
       "url": "https://www.centrointegralveterinario.cl/",
       "source_url": "https://www.centrointegralveterinario.cl/contacto",
       "checked": "2026-11-10",
-      "note": "Page: 'ATENCIÓN DE URGENCIAS LAS 24 HORAS LOS 7 DÍAS DE LA SEMANA'. Phone 63-2-201298 (reservations and emergencies); inpatients 63-2-577757; WhatsApp +56 9 5760 9000. Two different opening-hour blocks on the page."
+      "note": "Page: 'ATENCIÓN DE URGENCIAS LAS 24 HORAS LOS 7 DÍAS DE LA SEMANA'. Phone 63-2-201298 (reservations and emergencies); inpatients 63-2-577757; WhatsApp +56 9 5760 9000. Two different opening-hour blocks on the page.",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche. Termine täglich etwa 09:30/10:30–19:30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -342,7 +399,10 @@
       "url": "https://veterinaria.uach.cl/instituto-de-ciencias-clinicas",
       "source_url": "https://veterinaria.uach.cl/instituto-de-ciencias-clinicas",
       "checked": "2026-11-10",
-      "note": "Page has a service description 'Atención médica las 24 horas del día' without saying which area, and gives no out-of-hours emergency arrangement, so emergency_24h left false. Email hospitalveterinario@uach.cl."
+      "note": "Page has a service description 'Atención médica las 24 horas del día' without saying which area, and gives no out-of-hours emergency arrangement, so emergency_24h left false. Email hospitalveterinario@uach.cl.",
+      "duty_i18n": {
+        "de": "Universitätsklinik: Montag bis Donnerstag 09:00–12:00 und 14:00–17:00 Uhr, Freitag 09:00–12:00 Uhr. Kleintier-Notfallnummer +56 9 3775 8382."
+      }
     },
     {
       "kind": "clinic",
@@ -357,7 +417,10 @@
       "url": "https://veterinariaaustral.cl/",
       "source_url": "https://veterinariaaustral.cl/",
       "checked": "2026-11-10",
-      "note": "Page header says 'Abierto 24 Horas'; weekday hours and 'Urgencias 24/7' suggest the 24 h applies to emergencies."
+      "note": "Page header says 'Abierto 24 Horas'; weekday hours and 'Urgencias 24/7' suggest the 24 h applies to emergencies.",
+      "duty_i18n": {
+        "de": "Notfälle rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–19:00 Uhr, Samstag 10:00–18:00 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -372,7 +435,10 @@
       "url": "https://vetsdelvalle.cl/",
       "source_url": "https://vetsdelvalle.cl/",
       "note": "Phone is also WhatsApp. No 24 h emergency claim.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Notfälle Montag bis Samstag 09:30–24:00 Uhr; sonntags nach Verfügbarkeit. Stationäre Patienten werden rund um die Uhr überwacht. Für Sprechstunden ist eine Terminvereinbarung nötig."
+      }
     },
     {
       "kind": "clinic",
@@ -387,7 +453,10 @@
       "url": "https://www.cvmvet.cl/",
       "source_url": "https://www.cvmvet.cl/",
       "checked": "2026-11-10",
-      "note": "Page: 'Abierto las 24 horas del día, 24/7'; listed hours leave short gaps (20:00-20:30, 08:30-09:00). WhatsApp +56 9 9913 3278."
+      "note": "Page: 'Abierto las 24 horas del día, 24/7'; listed hours leave short gaps (20:00-20:30, 08:30-09:00). WhatsApp +56 9 9913 3278.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche: Sprechstunde 09:00–20:00 Uhr, Notfälle 20:30–08:30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -402,7 +471,10 @@
       "url": "http://www.hampivet.cl/",
       "source_url": "http://www.hampivet.cl/",
       "note": "'cuidados 24 horas' refers to hospitalisation only; no opening hours on page.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Stationäre Patienten werden rund um die Uhr von einem Tierarzt betreut; für Notfälle bitte vorab anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -417,7 +489,10 @@
       "url": "https://arrayanveterinaria.cl/",
       "source_url": "https://arrayanveterinaria.cl/",
       "note": "Page title 'Urgencias 24/7' in search listing but body says emergencies until 2 AM; no address/phone in fetched content. Not marked 24 h.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Notdienst bis 02:00 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -432,7 +507,10 @@
       "url": "https://veterinariasosrancagua.cl/",
       "source_url": "https://veterinariasosrancagua.cl/",
       "note": "No address or phone in fetched content.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Notdienst bis 02:00 Uhr; stationäre Aufnahme rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -447,7 +525,10 @@
       "url": "https://vetpurapel.cl/",
       "source_url": "https://vetpurapel.cl/",
       "checked": "2026-11-10",
-      "note": "Number is WhatsApp for bookings; emergency lines +56 9 9817 8630 and +56 9 4552 2002. Hours on the page are inconsistent."
+      "note": "Number is WhatsApp for bookings; emergency lines +56 9 9817 8630 and +56 9 4552 2002. Hours on the page are inconsistent.",
+      "duty_i18n": {
+        "de": "Notfallversorgung bis 22:00 Uhr. Werktags 09:00–18:00 Uhr, Samstag 10:00–14:00 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -457,12 +538,15 @@
       "address": "",
       "phone": "+56 61 221 217",
       "emergency_24h": false,
-      "duty": "24-hour hospital service for hospitalised pets; opening hours not published.",
+      "duty": "24-hour hospital service for hospitalised pets.",
       "small_animals": true,
       "url": "https://www.santasofiaveterinaria.cl/",
       "source_url": "https://www.santasofiaveterinaria.cl/",
-      "note": "Page lists landline '61 2 22 12 17' (formatting unclear) and mobile '9 56 45 42 28'; no address. '24 horas' is for hospitalisation only.",
-      "checked": "2026-11-10"
+      "note": "Page lists landline '61 2 22 12 17' (formatting unclear) and mobile '9 56 45 42 28'; no address. '24 horas' is for hospitalisation only. Moved from duty (2026-11-10): opening hours not published.",
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Stationäre Betreuung von Haustieren rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -477,7 +561,10 @@
       "url": "https://www.clinicavetvillarrica.cl/",
       "source_url": "https://www.clinicavetvillarrica.cl/",
       "note": "Tourist area (Villarrica/Pucón).",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Montag bis Samstag 09:00–19:00 Uhr. Notfälle nach Verfügbarkeit; bitte vor dem Besuch Kontakt aufnehmen."
+      }
     },
     {
       "kind": "clinic",
@@ -487,12 +574,15 @@
       "address": "Calle Victoria 495, Barrio Universitario, Concepción",
       "phone": "+56 41 220 7347",
       "emergency_24h": false,
-      "duty": "Monday to Friday 09:00-17:00. No emergency service published.",
+      "duty": "Monday to Friday 09:00-17:00. No emergency service listed.",
       "small_animals": true,
       "url": "https://clinicaveterinaria.udec.cl/home/",
       "source_url": "https://clinicaveterinaria.udec.cl/home/",
       "note": "Email clinicavet@udec.cl.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Montag bis Freitag 09:00–17:00 Uhr. Kein Notdienst angegeben."
+      }
     },
     {
       "kind": "clinic",
@@ -507,7 +597,10 @@
       "url": "https://hcvudec.cl/sitio/",
       "source_url": "https://hcvudec.cl/sitio/",
       "checked": "2026-11-10",
-      "note": "Faculty news (2026-01-07) announced reopening in March 2026; patients seen in temporary containers meanwhile. Saturday hours inconsistent on page. Mobile +56 9 6198 0749."
+      "note": "Faculty news (2026-01-07) announced reopening in March 2026; patients seen in temporary containers meanwhile. Saturday hours inconsistent on page. Mobile +56 9 6198 0749.",
+      "duty_i18n": {
+        "de": "Montag bis Freitag 09:00–19:00 Uhr; samstags vormittags. 2026 nach Renovierung wiedereröffnet oder kurz vor der Wiedereröffnung; Öffnungszeiten bitte telefonisch bestätigen."
+      }
     },
     {
       "kind": "clinic",
@@ -522,7 +615,10 @@
       "url": "https://www.muniarica.cl/servicios/veterinaria-municipal",
       "source_url": "https://www.muniarica.cl/servicios/veterinaria-municipal",
       "note": "Page says it currently has no urgency and hospitalisation service. Phone published as 432380126.",
-      "checked": "2026-11-10"
+      "checked": "2026-11-10",
+      "duty_i18n": {
+        "de": "Städtische Klinik; Termine telefonisch Dienstag bis Donnerstag ab 09:00 Uhr. Kein Notdienst und keine stationäre Aufnahme."
+      }
     }
   ],
   "notes": "Partial run. WebFetch only opened URLs that surfaced in search results (PROVENANCE_REQUIRED otherwise), and search was dominated by AgendaPro/aggregators, so only clinics whose own site could be opened were added. No duty rota or animal poison line found: CITUC (UC) page lists toxicological emergencies +56 2 2635 3800 but does not mention animals, so no poison_line entry. Not reachable: veterinaria.uchile.cl, facultades.unab.cl (redirect), cituc.uc.cl, vet24chile.cl (robots), veterinariantakari.cl (robots), nuevadogtoraflaca.cl (robots), hospitalveterinariocde.cl (robots), centrovetvalpo.cl (robots), hospitalveterinariotalcahuano.skedu.com (error), vanguardiavet.cl (account suspended), cruzazul.cl (redirect loop). Inmevet (Maipú/Ñuñoa, advertises 24/7) and vet24chile.cl, Hospital Veterinario CDE, Centro Médico Veterinario Valparaíso, Hospital Veterinario Talcahuano (Villa Animal), Cedivet / SOS Vet / Hospital Veterinario Concepción (Concepción), Hospital Veterinario Hualpén, Nueva Dogtora Flaca (Antofagasta), Antakari (La Serena) are candidates still to confirm from reachable own pages. Nothing usable found for Iquique, Arica (private), Osorno, Puerto Varas, Pucón, Coquimbo, Antofagasta 24 h beyond aggregators. Royal Pets (La Serena) has only title/meta evidence for 24/7 and no address/phone: verify. Vet24 Ñuñoa publishes a 51 (La Serena) area-code phone: verify."
