@@ -1,57 +1,138 @@
 {
   "slug": "mint",
   "species": "dog",
-  "name": {"en": "Mint", "sl": "Meta"},
-  "question": {"en": "Can dogs eat mint?", "sl": "Ali lahko psi jedo meto?"},
-  "url_slug": {"en": "mint", "sl": "meta"},
+  "name": {
+    "en": "Mint",
+    "sl": "Meta",
+    "pt": "Hortelã"
+  },
+  "question": {
+    "en": "Can dogs eat mint?",
+    "sl": "Ali lahko psi jedo meto?",
+    "pt": "Os cães podem comer hortelã?"
+  },
+  "url_slug": {
+    "en": "mint",
+    "sl": "meta",
+    "pt": "hortela"
+  },
   "level": "not_recommended",
   "answer": {
     "en": "No, mint is best kept away from dogs. The ASPCA lists garden mint as toxic to dogs because of its essential oils, which can cause vomiting and diarrhoea when a lot is eaten. Mint gum, candy and toothpaste can also be dangerous, as they may contain xylitol.",
-    "sl": "Ne, meto je bolje držati stran od psov. ASPCA vrtno meto uvršča med strupene za pse zaradi eteričnih olj, ki lahko ob zaužitju večje količine povzročijo bruhanje in drisko. Nevarni so lahko tudi mentolni žvečilni gumiji, bonboni in zobne paste, ker lahko vsebujejo ksilitol."
+    "sl": "Ne, meto je bolje držati stran od psov. ASPCA vrtno meto uvršča med strupene za pse zaradi eteričnih olj, ki lahko ob zaužitju večje količine povzročijo bruhanje in drisko. Nevarni so lahko tudi mentolni žvečilni gumiji, bonboni in zobne paste, ker lahko vsebujejo ksilitol.",
+    "pt": "Não, é melhor manter a hortelã longe dos cães. A ASPCA classifica a hortelã-comum como tóxica para os cães, por causa dos óleos essenciais, que podem causar vómitos e diarreia quando se come muita. As pastilhas elásticas, os doces e a pasta de dentes de hortelã também podem ser perigosos, porque podem conter xilitol."
   },
   "why": {
     "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
-    "sl": "Vrtna meta (Mentha) vsebuje eterična olja; ASPCA jo uvršča med strupene za pse, ob zaužitju večjih količin pa povzroči bruhanje in drisko. Tudi Pet Poison Helpline navaja, da meta za pse ni varna. Izdelki z meto lahko vsebujejo tudi ksilitol, sladilo, ki je za pse zelo strupeno. Ker rastlina sama povzroča znake predvsem v večjih količinah, jo uvrščamo med nepriporočljive; izdelki z meto, ki vsebujejo ksilitol, pa so nujen primer."
+    "sl": "Vrtna meta (Mentha) vsebuje eterična olja; ASPCA jo uvršča med strupene za pse, ob zaužitju večjih količin pa povzroči bruhanje in drisko. Tudi Pet Poison Helpline navaja, da meta za pse ni varna. Izdelki z meto lahko vsebujejo tudi ksilitol, sladilo, ki je za pse zelo strupeno. Ker rastlina sama povzroča znake predvsem v večjih količinah, jo uvrščamo med nepriporočljive; izdelki z meto, ki vsebujejo ksilitol, pa so nujen primer.",
+    "pt": "A hortelã-comum (Mentha) contém óleos essenciais; a ASPCA classifica-a como tóxica para os cães, com vómitos e diarreia depois de ingestões grandes. A Pet Poison Helpline também diz que a hortelã não é segura para os cães. Os produtos que contêm hortelã podem conter também xilitol, um adoçante gravemente tóxico para os cães. Como a planta em si causa sinais sobretudo em grandes quantidades, classificamo-la como não recomendada; os produtos de hortelã com xilitol são uma emergência."
   },
   "signs": {
-    "en": ["Vomiting", "Diarrhoea"],
-    "sl": ["Bruhanje", "Driska"]
+    "en": [
+      "Vomiting",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia"
+    ]
   },
   "what_to_do": {
     "en": "If your dog ate a mint product such as gum, candy or toothpaste that may contain xylitol, seek veterinary care right away. In a poisoning emergency, contact your vet or a pet poison helpline.",
-    "sl": "Če je pes pojedel izdelek z meto, na primer žvečilni gumi, bonbon ali zobno pasto, ki lahko vsebuje ksilitol, takoj poiščite veterinarsko pomoč. V primeru zastrupitve pokličite veterinarja ali center za zastrupitve živali."
+    "sl": "Če je pes pojedel izdelek z meto, na primer žvečilni gumi, bonbon ali zobno pasto, ki lahko vsebuje ksilitol, takoj poiščite veterinarsko pomoč. V primeru zastrupitve pokličite veterinarja ali center za zastrupitve živali.",
+    "pt": "Se o teu cão comeu um produto de hortelã, como pastilha elástica, doce ou pasta de dentes, que possa conter xilitol, procura de imediato cuidados veterinários. Numa emergência de intoxicação, contacta o teu veterinário ou uma linha de apoio toxicológico para animais."
   },
   "serving": null,
   "child": {
     "en": "Mint leaves and minty sweets are not for dogs. If a dog finds mint gum or sweets, tell a grown-up right away.",
-    "sl": "Metini listi in mentolni bonboni niso za pse. Če pes najde mentolni žvečilni gumi ali bonbone, takoj povej odraslemu."
+    "sl": "Metini listi in mentolni bonboni niso za pse. Če pes najde mentolni žvečilni gumi ali bonbone, takoj povej odraslemu.",
+    "pt": "As folhas de hortelã e os doces de hortelã não são para cães. Se um cão encontrar pastilhas elásticas ou doces de hortelã, avisa logo um adulto."
   },
   "faq": [
     {
-      "q": {"en": "Is mint gum or candy dangerous for dogs?", "sl": "Ali so mentolni žvečilni gumiji ali bonboni nevarni za pse?"},
+      "q": {
+        "en": "Is mint gum or candy dangerous for dogs?",
+        "sl": "Ali so mentolni žvečilni gumiji ali bonboni nevarni za pse?",
+        "pt": "As pastilhas elásticas ou os doces de hortelã são perigosos para os cães?"
+      },
       "a": {
         "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
-        "sl": "Da. Izdelki z meto, kot so žvečilni gumiji, bonboni in zobne paste, so lahko za pse nevarni, ker lahko vsebujejo ksilitol. Če je pes kaj takega pojedel, takoj poiščite veterinarsko pomoč."
+        "sl": "Da. Izdelki z meto, kot so žvečilni gumiji, bonboni in zobne paste, so lahko za pse nevarni, ker lahko vsebujejo ksilitol. Če je pes kaj takega pojedel, takoj poiščite veterinarsko pomoč.",
+        "pt": "Sim. Os produtos de hortelã, como pastilhas elásticas, doces e pasta de dentes, podem ser perigosos para os cães porque podem conter xilitol. Se o teu cão comeu algum, procura de imediato cuidados veterinários."
       }
     }
   ],
   "sources": [
-    {"id": "KD170", "quote": "Garden Mint"},
-    {"id": "KD170", "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
-    {"id": "KD170", "quote": "Essential Oils"},
-    {"id": "KD170", "quote": "Vomiting and diarrhea with large ingestions"},
-    {"id": "KD172", "quote": "While mint is great for human use, it is not safe for dogs to consume."},
-    {"id": "KD172", "quote": "Products that contain mint may also contain xylitol, a type of sugar alternative sweetener that is severely toxic to dogs."},
-    {"id": "KD172", "quote": "Mint products such as gum, candy, and toothpaste can be dangerous for dogs due to the presence of xylitol."},
-    {"id": "KD172", "quote": "If your dog has ingested a mint product containing xylitol, it is essential to seek veterinary care right away."},
-    {"id": "KD171", "quote": "It is not safe for your dog to have mint."},
-    {"id": "KD171", "quote": "Should your dog ingest a mint product containing xylitol, it is important to seek veterinary care immediately."},
-    {"id": "KD171", "quote": "If you and your dog find yourselves in a poisoning emergency, do not hesitate to call Pet Poison Helpline®"}
+    {
+      "id": "KD170",
+      "quote": "Garden Mint"
+    },
+    {
+      "id": "KD170",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD170",
+      "quote": "Essential Oils"
+    },
+    {
+      "id": "KD170",
+      "quote": "Vomiting and diarrhea with large ingestions"
+    },
+    {
+      "id": "KD172",
+      "quote": "While mint is great for human use, it is not safe for dogs to consume."
+    },
+    {
+      "id": "KD172",
+      "quote": "Products that contain mint may also contain xylitol, a type of sugar alternative sweetener that is severely toxic to dogs."
+    },
+    {
+      "id": "KD172",
+      "quote": "Mint products such as gum, candy, and toothpaste can be dangerous for dogs due to the presence of xylitol."
+    },
+    {
+      "id": "KD172",
+      "quote": "If your dog has ingested a mint product containing xylitol, it is essential to seek veterinary care right away."
+    },
+    {
+      "id": "KD171",
+      "quote": "It is not safe for your dog to have mint."
+    },
+    {
+      "id": "KD171",
+      "quote": "Should your dog ingest a mint product containing xylitol, it is important to seek veterinary care immediately."
+    },
+    {
+      "id": "KD171",
+      "quote": "If you and your dog find yourselves in a poisoning emergency, do not hesitate to call Pet Poison Helpline®"
+    }
   ],
-  "related": ["xylitol", "basil", "herbs-parsley"],
+  "related": [
+    "xylitol",
+    "basil",
+    "herbs-parsley"
+  ],
   "updated": "2026-11-10",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "ee275ec79357a052338de4fc3b549fbe56fc0f8b0668a0c470427882c50beb35"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "9c0860d2fce4dc4539a19150cd0d450b354ce18f1d70c553878dba6c2dbd7a8b"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ee275ec79357a052338de4fc3b549fbe56fc0f8b0668a0c470427882c50beb35"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c0860d2fce4dc4539a19150cd0d450b354ce18f1d70c553878dba6c2dbd7a8b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f5859df0167be308305718618b610cbe8a08e255a663ba4824f6c19deb8e5bcb"
+    }
   }
 }

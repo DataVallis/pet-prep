@@ -1,55 +1,136 @@
 {
   "slug": "herbs-parsley",
   "species": "cat",
-  "name": {"en": "Parsley", "sl": "Peteršilj"},
-  "question": {"en": "Can cats eat parsley?", "sl": "Ali lahko mačke jedo peteršilj?"},
-  "url_slug": {"en": "parsley", "sl": "petersilj"},
+  "name": {
+    "en": "Parsley",
+    "sl": "Peteršilj",
+    "pt": "Salsa"
+  },
+  "question": {
+    "en": "Can cats eat parsley?",
+    "sl": "Ali lahko mačke jedo peteršilj?",
+    "pt": "Os gatos podem comer salsa?"
+  },
+  "url_slug": {
+    "en": "parsley",
+    "sl": "petersilj",
+    "pt": "salsa"
+  },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your cat parsley. The ASPCA lists parsley as toxic to cats: it can make the skin sensitive to sunlight and cause sunburn or skin inflammation, although large amounts are needed for this effect. If your cat has eaten some, contact your vet.",
-    "sl": "Ne, mački ne dajajte peteršilja. ASPCA peteršilj navaja kot strupen za mačke: koža lahko postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože, čeprav so za to potrebne velike količine. Če ga je mačka pojedla, se obrnite na veterinarja."
+    "sl": "Ne, mački ne dajajte peteršilja. ASPCA peteršilj navaja kot strupen za mačke: koža lahko postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože, čeprav so za to potrebne velike količine. Če ga je mačka pojedla, se obrnite na veterinarja.",
+    "pt": "Não, não dês salsa ao teu gato. A ASPCA classifica a salsa como tóxica para os gatos: pode tornar a pele sensível à luz solar e causar queimaduras solares ou inflamação da pele, embora isso só aconteça com grandes quantidades. Se o teu gato comeu alguma, liga ao teu veterinário."
   },
   "why": {
     "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
-    "sl": "ASPCA peteršilj (Petroselinum crispum, tudi italijanski in korenasti peteršilj) navaja kot strupen za mačke. Kot strupeno snov navaja furanokumarine, ki lahko povzročijo preobčutljivost za svetlobo (sončne opekline, vnetje kože), in dodaja, da so za to potrebne velike količine. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa."
+    "sl": "ASPCA peteršilj (Petroselinum crispum, tudi italijanski in korenasti peteršilj) navaja kot strupen za mačke. Kot strupeno snov navaja furanokumarine, ki lahko povzročijo preobčutljivost za svetlobo (sončne opekline, vnetje kože), in dodaja, da so za to potrebne velike količine. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa.",
+    "pt": "A ASPCA classifica a salsa (Petroselinum crispum, incluindo a salsa italiana e a salsa-de-hamburgo) como tóxica para os gatos. Aponta as furanocumarinas como substância tóxica e diz que podem causar fotossensibilização (queimaduras solares, inflamação da pele), acrescentando que isso só acontece com grandes quantidades. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne."
   },
   "signs": {
-    "en": ["Sunburn", "Skin inflammation (dermatitis)", "Vomiting", "Stomach upset"],
-    "sl": ["Sončne opekline", "Vnetje kože (dermatitis)", "Bruhanje", "Prebavne težave"]
+    "en": [
+      "Sunburn",
+      "Skin inflammation (dermatitis)",
+      "Vomiting",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Sončne opekline",
+      "Vnetje kože (dermatitis)",
+      "Bruhanje",
+      "Prebavne težave"
+    ],
+    "pt": [
+      "Queimaduras solares",
+      "Inflamação da pele (dermatite)",
+      "Vómitos",
+      "Mal-estar no estômago"
+    ]
   },
   "what_to_do": {
     "en": "If your cat has eaten parsley, contact your vet straight away. Don't wait for symptoms to appear.",
-    "sl": "Če je mačka pojedla peteršilj, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki."
+    "sl": "Če je mačka pojedla peteršilj, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki.",
+    "pt": "Se o teu gato comeu salsa, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais."
   },
   "serving": null,
   "child": {
     "en": "Parsley is not a cat snack. If kitty nibbles some, tell a grown-up so they can call the vet.",
-    "sl": "Peteršilj ni priboljšek za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja."
+    "sl": "Peteršilj ni priboljšek za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
+    "pt": "A salsa não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário."
   },
   "faq": [
     {
-      "q": {"en": "Why is parsley a problem for cats when people eat it?", "sl": "Zakaj je peteršilj težava za mačke, če ga ljudje jemo?"},
+      "q": {
+        "en": "Why is parsley a problem for cats when people eat it?",
+        "sl": "Zakaj je peteršilj težava za mačke, če ga ljudje jemo?",
+        "pt": "Porque é que a salsa é um problema para os gatos, se as pessoas a comem?"
+      },
       "a": {
         "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
-        "sl": "ASPCA navaja, da peteršilj vsebuje furanokumarine, zaradi katerih lahko mačja koža postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože. Dodaja, da so za to potrebne velike količine."
+        "sl": "ASPCA navaja, da peteršilj vsebuje furanokumarine, zaradi katerih lahko mačja koža postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože. Dodaja, da so za to potrebne velike količine.",
+        "pt": "A ASPCA diz que a salsa contém furanocumarinas, que podem tornar a pele do gato sensível à luz solar e causar queimaduras solares ou inflamação da pele. Refere que são necessárias grandes quantidades para este efeito."
       }
     }
   ],
   "sources": [
-    {"id": "KC89", "quote": "Italian Parsley, Hamburg Parsley, Turnip-rooted Parsley"},
-    {"id": "KC89", "quote": "Petroselinum crispum"},
-    {"id": "KC89", "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
-    {"id": "KC89", "quote": "Furanocoumarins"},
-    {"id": "KC89", "quote": "Photosensitization (sunburn, dermatitis), large amounts are needed to cause this effect"},
-    {"id": "KC62", "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."},
-    {"id": "KC49", "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."},
-    {"id": "KC87", "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."},
-    {"id": "KC87", "quote": "Don’t wait for symptoms to appear."}
+    {
+      "id": "KC89",
+      "quote": "Italian Parsley, Hamburg Parsley, Turnip-rooted Parsley"
+    },
+    {
+      "id": "KC89",
+      "quote": "Petroselinum crispum"
+    },
+    {
+      "id": "KC89",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC89",
+      "quote": "Furanocoumarins"
+    },
+    {
+      "id": "KC89",
+      "quote": "Photosensitization (sunburn, dermatitis), large amounts are needed to cause this effect"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    }
   ],
-  "related": ["mint", "basil", "chives"],
+  "related": [
+    "mint",
+    "basil",
+    "chives"
+  ],
   "updated": "2026-11-10",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "4dee02b1befce156d37e8619b4112e2b5a516d2c56771bf3269ac436d5f57fcf"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "256b41f94495301d1d3a8dc4b7bfa5f6a7fef0e824519695593cb01381c6fa36"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4dee02b1befce156d37e8619b4112e2b5a516d2c56771bf3269ac436d5f57fcf"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "256b41f94495301d1d3a8dc4b7bfa5f6a7fef0e824519695593cb01381c6fa36"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3d725cb252150966048da89b140cecc18c6d78f7243cf2c95329d73e90df87ed"
+    }
   }
 }

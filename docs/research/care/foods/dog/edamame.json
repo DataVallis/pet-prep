@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Edamame",
-    "sl": "Edamame"
+    "sl": "Edamame",
+    "pt": "Edamame"
   },
   "question": {
     "en": "Can dogs eat edamame?",
-    "sl": "Ali lahko psi jedo edamame?"
+    "sl": "Ali lahko psi jedo edamame?",
+    "pt": "Os cães podem comer edamame?"
   },
   "url_slug": {
     "en": "edamame",
-    "sl": "edamame"
+    "sl": "edamame",
+    "pt": "edamame"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Plain edamame beans aren't toxic to dogs, and a few fresh beans as a treat won't harm most dogs. Leave out the tough pods, which are a choking hazard, and never share edamame cooked with salt, spices, soy sauce or oil.",
-    "sl": "Da, zmerno. Navadna zrna edamame za pse niso strupena in nekaj svežih zrn kot priboljšek večini psov ne bo škodovalo. Trdih strokov ne dajajte, ker se lahko pes z njimi zaduši, in nikoli ne delite edamame, kuhanega s soljo, začimbami, sojino omako ali oljem."
+    "sl": "Da, zmerno. Navadna zrna edamame za pse niso strupena in nekaj svežih zrn kot priboljšek večini psov ne bo škodovalo. Trdih strokov ne dajajte, ker se lahko pes z njimi zaduši, in nikoli ne delite edamame, kuhanega s soljo, začimbami, sojino omako ali oljem.",
+    "pt": "Sim, com moderação. Os grãos de edamame simples não são tóxicos para os cães, e alguns grãos frescos como guloseima não farão mal à maioria dos cães. Deixa de fora as vagens rijas, que são um risco de engasgo, e nunca partilhes edamame cozinhado com sal, temperos, molho de soja ou óleo."
   },
   "why": {
     "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
-    "sl": "Edamame so sojina zrna, bogata z vlakninami in obdana s trdimi stroki. Soja je pri psih pogost alergen, alergijska reakcija pa se morda ne pokaže takoj. Soja lahko povzroči tudi vetrove in občasno drisko, preveč vlaknin pa prebavne težave. Vlaknati, žilavi stroki so težko prebavljivi in predstavljajo nevarnost zadušitve, zlasti pri majhnih psih."
+    "sl": "Edamame so sojina zrna, bogata z vlakninami in obdana s trdimi stroki. Soja je pri psih pogost alergen, alergijska reakcija pa se morda ne pokaže takoj. Soja lahko povzroči tudi vetrove in občasno drisko, preveč vlaknin pa prebavne težave. Vlaknati, žilavi stroki so težko prebavljivi in predstavljajo nevarnost zadušitve, zlasti pri majhnih psih.",
+    "pt": "O edamame é feito de grãos de soja, ricos em fibra, que vêm dentro de vagens rijas. A soja é um alergénio comum nos cães, e uma reação alérgica pode não aparecer de imediato. A soja também pode causar gases e, por vezes, diarreia, e o excesso de fibra pode causar problemas de estômago. As vagens, fibrosas e duras de mastigar, são difíceis de digerir e há risco de engasgo, sobretudo para os cães pequenos."
   },
   "signs": null,
   "what_to_do": {
     "en": "Because soy is a common allergy, offer only a very small amount at first to test for an allergy. Signs of an allergic reaction, such as itching, coat loss or ear infections, might not appear straight away. Soy can also cause gas or diarrhoea.",
-    "sl": "Ker je soja pogost alergen, psu sprva ponudite le zelo majhno količino, da preverite, ali je alergičen. Znaki alergijske reakcije, kot so srbenje, izpadanje dlake ali vnetja ušes, se morda ne pokažejo takoj. Soja lahko povzroči tudi vetrove ali drisko."
+    "sl": "Ker je soja pogost alergen, psu sprva ponudite le zelo majhno količino, da preverite, ali je alergičen. Znaki alergijske reakcije, kot so srbenje, izpadanje dlake ali vnetja ušes, se morda ne pokažejo takoj. Soja lahko povzroči tudi vetrove ali drisko.",
+    "pt": "Como a soja é um alergénio comum, oferece só uma quantidade muito pequena no início, para ver se há alergia. Os sinais de uma reação alérgica, como comichão, perda de pelo ou infeções nos ouvidos, podem não aparecer logo. A soja também pode causar gases ou diarreia."
   },
   "serving": {
     "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
-    "sl": "Samo navadna, sveža zrna, odstranjena iz stroka, brez soli, začimb, sojine omake ali olja. Nekaj zrn kot občasen priboljšek; ključna je zmernost."
+    "sl": "Samo navadna, sveža zrna, odstranjena iz stroka, brez soli, začimb, sojine omake ali olja. Nekaj zrn kot občasen priboljšek; ključna je zmernost.",
+    "pt": "Apenas grãos simples e frescos, retirados da vagem, sem sal, temperos, molho de soja nem óleo. Alguns grãos como guloseima ocasional, com moderação."
   },
   "child": {
     "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
-    "sl": "Psi lahko pogrizljajo nekaj navadnih zrn edamame. Odrasli jih najprej vzame iz stroka."
+    "sl": "Psi lahko pogrizljajo nekaj navadnih zrn edamame. Odrasli jih najprej vzame iz stroka.",
+    "pt": "Os cães podem comer alguns grãos de edamame simples. Um adulto tira-os primeiro da vagem."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat salted or seasoned edamame?",
-        "sl": "Ali lahko psi jedo slan ali začinjen edamame?"
+        "sl": "Ali lahko psi jedo slan ali začinjen edamame?",
+        "pt": "Os cães podem comer edamame salgado ou temperado?"
       },
       "a": {
         "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
-        "sl": "Ne. Začimbe, sol, sojina omaka in olje, s katerimi kuhamo edamame, so lahko za pse še posebej nezdravi, zato tako pripravljenega edamame nikoli ne delite s psom."
+        "sl": "Ne. Začimbe, sol, sojina omaka in olje, s katerimi kuhamo edamame, so lahko za pse še posebej nezdravi, zato tako pripravljenega edamame nikoli ne delite s psom.",
+        "pt": "Não. Os temperos, o sal, o molho de soja e o óleo usados na preparação do edamame podem ser especialmente prejudiciais para os cães, por isso nunca lhes dês edamame preparado assim."
       }
     },
     {
       "q": {
         "en": "Can dogs eat edamame pods?",
-        "sl": "Ali lahko psi jedo stroke edamame?"
+        "sl": "Ali lahko psi jedo stroke edamame?",
+        "pt": "Os cães podem comer as vagens de edamame?"
       },
       "a": {
         "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
-        "sl": "Raje ne. Stroki edamame so vlaknati, trdi in žilavi; pes jih lahko težko prebavi in se lahko z njimi zaduši, kar velja zlasti za majhne pse."
+        "sl": "Raje ne. Stroki edamame so vlaknati, trdi in žilavi; pes jih lahko težko prebavi in se lahko z njimi zaduši, kar velja zlasti za majhne pse.",
+        "pt": "É melhor não. As vagens de edamame são fibrosas, rijas e duras de mastigar; podem ser difíceis de digerir para o teu cão e são um risco de engasgo, sobretudo para os cães pequenos."
       }
     }
   ],
@@ -122,7 +134,20 @@
   ],
   "updated": "2026-11-10",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "b526dffe967c09bf50faf34e610e5a8b2e7ef14fc69855cc5f48676976e0fbc7"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "a48bf917796ceff814f518fb201ae1c4f3f07511ee08593990141899a3903995"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b526dffe967c09bf50faf34e610e5a8b2e7ef14fc69855cc5f48676976e0fbc7"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a48bf917796ceff814f518fb201ae1c4f3f07511ee08593990141899a3903995"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d145f8ac33c395ed027c3635f7a9012deccad3ecb238d54081533cfef12739ca"
+    }
   }
 }
