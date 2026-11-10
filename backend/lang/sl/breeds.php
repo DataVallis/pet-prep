@@ -100,6 +100,7 @@ return [
     'coton_de_tulear' => 'Coton de Tulear',
     'english_setter' => 'Angleški seter',
     'lhasa_apso' => 'Lhasa apso',
+    'dogue_de_bordeaux' => 'Bordojska doga',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

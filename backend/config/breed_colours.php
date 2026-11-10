@@ -652,6 +652,13 @@ return [
         ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
     ],
+    // M5-R10-100: FCI-Standard N° 116 (S755) — self-coloured fawn, same order and values as breed_appearance.php.
+    'dogue_de_bordeaux' => [
+        ['key' => 'mahogany-brown-mask', 'value' => 'mahogany fawn with a brown mask', 'en' => 'Mahogany, brown mask', 'sl' => 'Mahagonij, rjava maska'],
+        ['key' => 'fawn-black-mask', 'value' => 'fawn with a black mask', 'en' => 'Fawn, black mask', 'sl' => 'Plavo rjav, črna maska'],
+        ['key' => 'fawn-no-mask', 'value' => 'fawn without a mask', 'en' => 'Fawn, no mask', 'sl' => 'Plavo rjav, brez maske'],
+        ['key' => 'isabella', 'value' => 'pale isabella fawn', 'en' => 'Isabella', 'sl' => 'Izabela'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

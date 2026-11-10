@@ -798,6 +798,12 @@ class FalAiService
                 .'heavy head furnishings falling over the eyes with whiskers and a beard, a moderate muzzle about one-third of the head length with a black nose, '
                 .'dark oval medium-size eyes, pendant heavily feathered ears, a high-set well-feathered tail carried over the back, '
                 .'alert, steady expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-100: FCI-Standard N° 116 (S755) — a powerful, stocky molossoid, mahogany fawn (first standard colour);
+            // welfare breed (short muzzle, S756 / S759) → moderate muzzle with clearly open nostrils, no heavy wrinkles.
+            BreedType::DogueDeBordeaux => 'A large, powerful, stocky and athletic Dogue de Bordeaux with a broad, deep chest, mahogany fawn coat with a brown mask, '
+                .'a fine, short, soft coat, a large broad head with a moderately short, broad muzzle, a broad nose matching the mask with clearly open nostrils and only moderate wrinkles, '
+                .'oval hazel to dark brown eyes with tight eyelids, relatively small hanging ears slightly darker than the coat, a natural tail thick at the base and carried low, '
+                .'calm, balanced expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1921,6 +1927,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'long, heavy, straight, hard coat with a moderate undercoat',
                 'markings' => 'heavy head furnishings with whiskers and beard, black nose, never merle',
+            ],
+            // M5-R10-100: standard colours only (FCI S755, self-coloured fawn); never brindle, never white on head or body.
+            BreedType::DogueDeBordeaux => [
+                'color_scheme' => 'mahogany fawn',
+                'eye_color' => 'hazel to dark brown',
+                'fur_texture' => 'fine, short, soft coat',
+                'markings' => 'brown mask, only a little white on the chest or toes, never brindle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

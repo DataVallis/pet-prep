@@ -2462,5 +2462,34 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S740', 'S741'], 'refs' => ['lhasa_apso.suitability.rkc_grooming', 'lhasa_apso.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-100 Dogue de Bordeaux — welfare breed (RKC Breed Watch Category 3, S756; short muzzle S759, brachycephalic
+        // S758) → short_muzzle_breathing (the Boxer / Bullmastiff key) and sensitive_skin (skin-fold dermatitis, S757);
+        // hips_hind_legs (S757 hip / elbow dysplasia, weak back legs; RKC hip + elbow schemes, S756). No shorter_lifespan:
+        // RKC / PDSA "Over 10 years" (S756 / S757) conflict with VetCompass 5.5 y (S212) and PetMD 5–8 y (S759) — open for
+        // David. No new vocabulary key.
+        'dogue_de_bordeaux' => [
+            'suits' => [
+                // S756 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S756'], 'refs' => ['dogue_de_bordeaux.suitability.rkc_size_of_home', 'dogue_de_bordeaux.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S759 "Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction, especially in hot weather."; S758 "Dogues are brachycephalic which means they have flat faces."
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S759', 'S758'], 'refs' => ['dogue_de_bordeaux.health.short_muzzle_airway', 'dogue_de_bordeaux.health.brachycephalic']],
+                // S757 skin-fold dermatitis; "You’ll need to clean the folds on their face regularly to stop sores and infections with a soft damp cloth."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.health.skin_folds']],
+                // S757 hip / elbow dysplasia, "a tendency towards having weak back legs"; S756 hip + elbow schemes.
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S757', 'S756'], 'refs' => ['dogue_de_bordeaux.health.hind_legs', 'dogue_de_bordeaux.health.rkc_tests']],
+                // S757 "we wouldn’t recommend having one if you have smaller children in case they accidentally hurt them".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.behaviour.children']],
+                // S757 "We wouldn’t recommend Dogues for first-time owners as they can be challenging to handle and train due to their size and personalities."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.behaviour.experienced_owner']],
+                // S757 "You’ll also need to be prepared for a lot of drool."
+                ['tag' => 'drools', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.behaviour.drooling']],
+                // S756 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S756'], 'refs' => ['dogue_de_bordeaux.suitability.rkc_shedding']],
+                // S757 "Many Dogue de Bordeaux have a very high prey drive".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

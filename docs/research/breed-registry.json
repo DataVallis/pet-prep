@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "7ec92b3bddbfc5ef6a9951a3a40135a3a751642fc2876bc32a423f1149a21afc"
+      "sha256": "0dbae5bd29d95d31e4039c5722b74f4d4ad8f16d317d8ecb6c1eae6d113ec689"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "52da490b2645e8b9118f9b21ff805771b1e3d3263aa1ab94e93617f9758f9c7e"
+      "sha256": "fa7be9a7cf0d53cd0cdc453e65f3b8710f9cdb227a6b1f9c06ba344a2728120e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "93fd05f032da8f37e361031392628e6fe5ce4fbedcedef50365ce6b34a964881"
+      "sha256": "0dd11d8615551e3e9218db155356b44d883190200b30e1280e3b8ef8414974b0"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b460f4f681dcfd8fc057c32eb7c3ad2bcc4368b24cf12f3adb28cb978436c6fc"
+      "sha256": "ad1cc13f9eff143ecf363c8873c57c9094f9723fdd1b6e6c16f0d54b2c583e3c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5583832ea1f58fc8ad131cd81ec4de0a30ec6cdb2e3de6c1d99babe12cbce514"
+      "sha256": "f62adcdf8149c87046da091562ae004985f5f319f24d53f0bae55f66a01e1f91"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "b7e265c58a353cc278b9519ec2728993c274d966de98d6e56a97530bd3f65875"
+      "sha256": "673bcd5b6d86a84170dcdc0c5db5e1a34bc0db77e7aee523e812e390e727fc2a"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "1f03b30760c17f7c54b48b45f6de37485a821cada05bafb28b12319eb7d52e07"
+      "sha256": "fc0bd941d90a207aaea95e843a0a901b96d0cbbd755373c48cb44deddd8d6991"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 92,
+      "breed_count": 93,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -55741,6 +55741,616 @@
       ]
     },
     {
+      "id": "dogue_de_bordeaux",
+      "species": "dog",
+      "order": 92,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Dogue de Bordeaux",
+        "sl": "Bordojska doga"
+      },
+      "slug": {
+        "en": "dogue-de-bordeaux",
+        "sl": "bordojska-doga"
+      },
+      "synonyms": {
+        "en": [
+          "Bordeaux Mastiff",
+          "French Mastiff",
+          "Bordeauxdogge",
+          "DDB"
+        ],
+        "sl": [
+          "bordoška doga",
+          "bordoska doga",
+          "francoski mastif",
+          "dogue de bordeaux"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              68
+            ],
+            "female": [
+              58,
+              66
+            ]
+          },
+          "source_ids": [
+            "S755"
+          ],
+          "ref": "dogue_de_bordeaux.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              49.9,
+              65.8
+            ],
+            "female": [
+              44.9,
+              54.4
+            ]
+          },
+          "source_ids": [
+            "S759"
+          ],
+          "ref": "dogue_de_bordeaux.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "dogue_de_bordeaux.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            5,
+            8
+          ],
+          "source_ids": [
+            "S759"
+          ],
+          "ref": "dogue_de_bordeaux.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S756"
+          ],
+          "ref": "dogue_de_bordeaux.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 116,
+            "group": 2,
+            "section": 2,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S754"
+          ],
+          "ref": "dogue_de_bordeaux.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "shorter_face_boas",
+          "source_ids": [
+            "S759"
+          ],
+          "ref": "dogue_de_bordeaux.health.short_muzzle_airway",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S759"
+          ],
+          "ref": "dogue_de_bordeaux.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S757"
+          ],
+          "ref": "dogue_de_bordeaux.health.hind_legs",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_care",
+          "source_ids": [
+            "S757"
+          ],
+          "ref": "dogue_de_bordeaux.health.skin_folds",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S756"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.suitability.rkc_size_of_home",
+              "dogue_de_bordeaux.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S758",
+              "S759"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.short_muzzle_airway",
+              "dogue_de_bordeaux.health.brachycephalic"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.skin_folds"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S756",
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.hind_legs",
+              "dogue_de_bordeaux.health.rkc_tests"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.children"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.drooling"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S756"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 50
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 50
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S756"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S756 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S212"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 50 (0.75 × 5.5 y, VetCompass median S212)"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.grooming",
+            "basis_source_ids": [
+              "S756"
+            ],
+            "decision": "potrdil David 2026-10-12 (pravilo runbooka M5-R13): 1 česanje na teden (RKC S756 'Once a week')"
+          },
+          {
+            "ref": "proposed_game_parameters.dogue_de_bordeaux.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S759"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S212",
+          "S756",
+          "S759"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S756"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S756"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S756"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S756"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S212",
+        "S754",
+        "S755",
+        "S756",
+        "S757",
+        "S758",
+        "S759",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -61486,6 +62096,48 @@
       "publisher": "Wikipedia",
       "title": "Lhasa Apso",
       "url": "https://en.wikipedia.org/wiki/Lhasa_Apso"
+    },
+    {
+      "id": "S754",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Dogue de Bordeaux (116)",
+      "url": "https://www.fci.be/EN/nomenclature/DOGUE-DE-BORDEAUX-116.html"
+    },
+    {
+      "id": "S755",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 116 — Dogue de Bordeaux (PDF, English 23/01/2009)",
+      "url": "https://www.fci.be/Nomenclature/Standards/116g02-en.pdf"
+    },
+    {
+      "id": "S756",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Dogue de Bordeaux — breed information page (Breeds A to Z, current address)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/dogue-de-bordeaux/"
+    },
+    {
+      "id": "S757",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Dogue de Bordeaux breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dogue-de-bordeaux"
+    },
+    {
+      "id": "S758",
+      "tier": "B",
+      "publisher": "Dogs Trust Ireland",
+      "title": "Dogue De Bordeaux (breed guide)",
+      "url": "https://www.dogstrust.ie/dog-advice/getting-dog/breeds/dogue-de-bordeaux"
+    },
+    {
+      "id": "S759",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Dogue de Bordeaux Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/dogue-de-bordeaux"
     },
     {
       "id": "C1",

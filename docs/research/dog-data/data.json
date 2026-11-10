@@ -51540,6 +51540,576 @@
       }
     }
   },
+  "dogue_de_bordeaux": {
+    "_note": "Added 2026-11-10 (M5-R10-100, unattended run — appended after the Dogo Argentino (blocked): AKC 2024 No. 96 'Dogue de Bordeaux', S174 as recorded 2026-11-05). Quotes as returned by the web-fetch tool on 2026-11-10 (125-character limit for non-preapproved sources; longer sentences are paraphrased in notes and marked as such). Sources S754–S759 (reused S8, S10, S11, S14, S24, S35, S45, S92, S174, S212). No health percentages anywhere. Identity from the FCI nomenclature (S754, No. 116, France); appearance, colours, height and weight minimums from FCI-Standard N° 116 (S755). RKC Breeds A–Z page (S756, royalkennelclub.com with the trailing slash): key facts, Breed Watch Category 3 (no individual point returned — the Breed Watch page and the RKC standard page were not reachable) and the health tests. PDSA (S757), Dogs Trust Ireland (S758), PetMD (S759). Lifespan: McMillan 2024 not reachable (the Dogs Trust tables S123 / 'shortest and longest' refused; the paper names the breed only as a phylogeny tip) → VetCompass median 5.5 y (O'Neill et al. 2013, S212, 21 deaths); RKC / PDSA 'Over 10 years' conflict — open for David. Names: FCI / RKC / AKC 'Dogue de Bordeaux'; Slovenian »bordojska doga« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 116, Group 2 Section 2.1 (Molossoid breeds, Mastiff type), France",
+      "unit": "—",
+      "source_id": "S754",
+      "quote": "DOGUE DE BORDEAUX",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S754, as returned): name 'DOGUE DE BORDEAUX' (German 'BORDEAUXDOGGE', Spanish 'DOGO DE BURDEOS'), number 116, group 2 (Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs), section Molossoïdes, subsection 'Type dogue', country of origin 'FRANCE', not subject to a working trial, definitive acceptance 01/01/1954, valid standard 04/11/2008 (English 23/01/2009). France is already in FCI_ORIGINS (FR)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S756",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S756); PDSA (S757) 'Size | Large'; Dogs Trust Ireland (S758) 'Giant'. PetMD 99–145 lb (S759) = the 'Giant (over 100 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            68
+          ],
+          "female": [
+            58,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S755",
+        "quote": "Height at the withers: For males: 60-68 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 116 (S755); 'For females: 58-66 cm.' PDSA (S757) 'Average height | 58-68 cm'; PetMD (S759) males 24–27 in, females 23–26 in — consistent."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            49.9,
+            65.8
+          ],
+          "female": [
+            44.9,
+            54.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S759",
+        "quote": "As for weight, male Dogues de Bordeaux can weigh 110–145 pounds, and females typically range from 99–120 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S759): males 110–145 lb = 49.9–65.8 kg, females 99–120 lb = 44.9–54.4 kg (pounds × 0.4536 by us, rounded) → the game range 44.9–65.8 kg (adult_weight_kg). No A/B source gives a range: FCI (S755) and PDSA (S757) give minimums only (adult_weight.fci_minimum) — consistent with PetMD."
+      },
+      "fci_minimum": {
+        "value": {
+          "male": 50,
+          "female": 45
+        },
+        "unit": "kg (minimum)",
+        "source_id": "S755",
+        "quote": "Dogs: at least 50 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 116 (S755); 'Bitches: at least 45 kg.' PDSA (S757) 'Average weight | At least 45kg'. A minimum, not a range — background for the PetMD range."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 44.9–65.8 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD (S759) 99–145 lb → 'Giant (over 100 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Dogue de Bordeaux growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 5.5,
+        "unit": "years",
+        "source_id": "S212",
+        "quote": "Dogue de Bordeaux 5.5 3.3-6.1 0.0-8.8 21",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2013 (S212), VetCompass England, Table 1 row as returned (columns: breed, median years, IQR, range, number of dogs) — 21 deaths, a small sample. Results: 'the shortest-lived breeds were the Dogue de Bordeaux (n=21; 5.5 years; IQR 3.3-6.1)'; abstract: 'while the shortest-lived were the Dogue de Bordeaux and Great Dane.' McMillan 2024 not reachable this run — runbook rule: else a VetCompass median. Provisional."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S756",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S756). PDSA (S757) 'Average lifespan | Over 10 years' and Dogs Trust Ireland (S758) 'typically 10+ years' agree with each other but conflict with VetCompass (S212) and PetMD (S759) — open for David. Not used for the senior boundary (the runbook prefers a VetCompass median)."
+      },
+      "petmd": {
+        "value": "5–8",
+        "unit": "years",
+        "source_id": "S759",
+        "quote": "because of their extra-large size they typically only live 5–8 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S759). Consistent with VetCompass (S212)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust 'shortest and longest' table returned a client error, the full breed table (S123) was not reachable, and the paper (nature.com PDF) names the Dogue de Bordeaux only as a tip label of Figure 5 — no median in the text (2026-11-10). UNSOURCED value — verify in McMillan 2024 Supplementary Table 3 / S123 before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 4.125,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 5.5 y (S212) → 0.75 × 5.5 = 4.125 y = 49.5 → 50 months (half up). Alternative 90 months from the RKC band 'Over 10 years' (S756) — conflicting sources; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional (small VetCompass sample, conflicting sources — open for David).",
+        "derived_from": [
+          "S11",
+          "S212"
+        ],
+        "months": 50,
+        "alternative": {
+          "value_years": 7.5,
+          "months": 90,
+          "derived_from": [
+            "S11",
+            "S756"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S756",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S756), runbook first choice → 60 min. PDSA (S757) 'Minimum exercise (per day) | 1 hour' and 'We recommend giving your Dogue a minimum of an hour exercise every day.' agree. PetMD (S759) 'A moderate amount of physical activity generally keeps them content.' (no minutes); Dogs Trust Ireland (S758) daily walks, no minimum.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S757",
+            "quote": "We recommend giving your Dogue a minimum of an hour exercise every day.",
+            "confidence": "high",
+            "notes": "PDSA (S757) 'a minimum of an hour' → 60."
+          }
+        ]
+      },
+      "walks_and_play": {
+        "value": "several walks plus playtime and training",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "They enjoy being taken on several walks, but you’ll also need to allow for playtime and training on top of this.",
+        "confidence": "high",
+        "notes": "PDSA (S757). The game's daily walk goal covers the walks; school / play are separate activities."
+      },
+      "puppy": {
+        "value": "a few shorter walks rather than one long one",
+        "unit": "—",
+        "source_id": "S758",
+        "quote": "young or growing dogs might need a few shorter walks each day, rather than one long one.",
+        "confidence": "medium",
+        "notes": "Dogs Trust Ireland (S758). The game's puppy cap (10 min × age in months, S24) already limits puppy walks."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating before exercise",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S757). PetMD (S759) describes gastric dilatation-volvulus (GDV) — health.gdv. Built: proposed_game_parameters.dogue_de_bordeaux.meal_exercise_gap (M5-R16)."
+      },
+      "heat_and_walk_timing": {
+        "value": "avoid strenuous exercise in high temperatures",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": "avoiding strenuous exercise in high temperatures and keeping them cool",
+        "confidence": "medium",
+        "notes": "PetMD (S759), respiratory challenges: 'Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction, especially in hot weather.' Built: the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "calm, balanced, a vigilant guard without aggressiveness, very attached to its master",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Calm balanced with a high stimulus threshold.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 116 (S755): gifted for guarding, 'with vigilance and great courage but without aggressiveness'; 'A good companion, very attached to its master and very affectionate.'; 'The male normally has a dominant character.'"
+      },
+      "family": {
+        "value": "a good companion, very attached and affectionate",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "A good companion, very attached to its master and very affectionate.",
+        "confidence": "high",
+        "notes": "FCI (S755). PetMD (S759) 'typically patient and affectionate with children' — see children."
+      },
+      "children": {
+        "value": "generally fine with older children; not recommended with smaller children",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "we wouldn’t recommend having one if you have smaller children in case they accidentally hurt them",
+        "confidence": "high",
+        "notes": "PDSA (S757): 'They generally get along well with older children' and 'we also wouldn’t recommend Dogues for families with young children or vulnerable adults'. PetMD (S759) 'They can be great with kids, especially when socialized from a young age.' — conflict on small children → not_for_small_children, no children chip."
+      },
+      "time_alone": {
+        "value": "short periods only, never longer than four hours",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "but this should never be for any longer than four hours",
+        "confidence": "high",
+        "notes": "PDSA (S757): 'Dogues shouldn’t be too destructive if you need to pop out and leave them alone for short periods'. Not a needs_company statement (no separation-anxiety wording) → no chip."
+      },
+      "other_pets": {
+        "value": "high prey drive — never alone with smaller pets",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "Many Dogue de Bordeaux have a very high prey drive",
+        "confidence": "high",
+        "notes": "PDSA (S757); with smaller pets they grew up with: 'never leave them alone together'. 'Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.' PetMD (S759) 'When well-socialized from puppyhood, Dogues get along well with kids and other pets.' → chases_small_pets (verbatim prey-drive statement), no other_pets chip (conflict)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S757); 'A confident puppy that’s had a wide variety of experiences from an early age is more likely to grow into a well-adjusted, friendly pet.' PetMD (S759) 'Early and thorough socialization is important for all dogs, especially for Dogue de Bordeaux puppies.' Built: M5-R17 weekly new experience."
+      },
+      "experienced_owner": {
+        "value": "not for first-time owners",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "We wouldn’t recommend Dogues for first-time owners as they can be challenging to handle and train due to their size and personalities.",
+        "confidence": "high",
+        "notes": "PDSA (S757); 'some experience with the breed would be a real advantage before getting one.'"
+      },
+      "drooling": {
+        "value": "drools a lot",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "You’ll also need to be prepared for a lot of drool.",
+        "confidence": "high",
+        "notes": "PDSA (S757). PetMD (S759) 'Dogues de Bordeaux can drool quite a bit, especially after eating or drinking, so keep a towel handy to wipe their face.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement in the sources (PDSA: not too destructive for short periods alone)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation / weight statement → no food_motivated_weight. PDSA (S757): 'it’s usually recommended to split their daily allowance into two meals.' (= the game's adult meals)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 3 (S756) — the breed 'can be affected by conformational concerns'; no individual point of concern returned. Brachycephalic (Dogs Trust Ireland S758, FCI S755 'brachycephalic molossoid') with a short muzzle and airway problems (PetMD S759) → welfare chip short_muzzle_breathing and the BVA marketing rule (S92). Conditions from PDSA (S757) and PetMD (S759).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Category 3",
+        "confidence": "high",
+        "notes": "RKC breed page (S756): Breed Watch 'Category 3', the breed 'can be affected by conformational concerns'; Colour Watch 'Category 0'. PDSA (S757) cites the Kennel Club 'Category Three' with 'their undershot jaws' and 'a tendency towards having weak back legs' (as returned). The Breed Watch page itself was not reachable. Background only."
+      },
+      "brachycephalic": {
+        "value": "brachycephalic (flat face)",
+        "unit": "—",
+        "source_id": "S758",
+        "quote": "Dogues are brachycephalic which means they have flat faces.",
+        "confidence": "high",
+        "notes": "Dogs Trust Ireland (S758). FCI (S755) 'Typical concave lined brachycephalic molossoid.'"
+      },
+      "short_muzzle_airway": {
+        "value": "short muzzle — airway problems, worse in hot weather",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": "Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction, especially in hot weather.",
+        "confidence": "medium",
+        "notes": "PetMD (S759), 'Respiratory Challenges'."
+      },
+      "skin_folds": {
+        "value": "skin-fold dermatitis — face folds need regular cleaning and drying",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "You’ll need to clean the folds on their face regularly to stop sores and infections with a soft damp cloth.",
+        "confidence": "high",
+        "notes": "PDSA (S757) lists skin-fold dermatitis; 'Make sure you dry them thoroughly so bacteria and yeast doesn’t have a nice moist environment to grow.' No frequency ('regularly') → no face-fold task (runbook §3 »Breed care tasks«). PetMD (S759) 'Regularly clean and dry these areas with pet-safe wipes.' and lists skin issues."
+      },
+      "hind_legs": {
+        "value": "hip / elbow dysplasia; a tendency to weak back legs",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "a tendency towards having weak back legs",
+        "confidence": "high",
+        "notes": "PDSA (S757): Kennel Club Category Three point (as returned); elbow and hip dysplasia listed. PetMD (S759) lists hip and elbow dysplasia."
+      },
+      "rkc_tests": {
+        "value": "RKC minimum tests: elbow, eye and hip schemes",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC breed page (S756), 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding': elbow (BVA/KC Elbow Dysplasia Scheme), eye (BVA/KC/ISDS Eye Scheme), hip (BVA/KC Hip Dysplasia Scheme). Breeder checklist."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": "The stomach can then twist upon itself—a life-threatening situation called gastric dilatation-volvulus (GDV).",
+        "confidence": "high",
+        "notes": "PetMD (S759). Built: the meal / walk gap (PDSA S757, M5-R16)."
+      },
+      "eyelids": {
+        "value": "ectropion / entropion",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S759) lists eye conditions (ectropion and entropion) (paraphrase). No Breed Watch eyelid point returned → no eyelid_problems chip; open for David."
+      },
+      "footpads": {
+        "value": "hereditary footpad hyperkeratosis",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S759) lists Hereditary Footpad Hyperkeratosis (heading, paraphrase). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: 'Dogue de Bordeaux' / 'Bordeaux' is not in the Wikipedia table of Coren's ranking (S35, ranks 1–79, checked 2026-11-10)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Unranked → the runbook's 1.0."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.dogue_de_bordeaux.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "typical concave-lined brachycephalic molossoid; stocky, athletic and imposing",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Stocky, athletic, and imposing, it has a very dissuasive aspect.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 116 (S755); 'Typical concave lined brachycephalic molossoid.'"
+      },
+      "colours": {
+        "value": [
+          "fawn (mahogany to isabella)"
+        ],
+        "unit": "list",
+        "source_id": "S755",
+        "quote": "Self-coloured, in all shades of fawn, from mahogany to isabella.",
+        "confidence": "high",
+        "notes": "FCI (S755): masks black, brown or none; 'Limited white patches are permissible on the forechest, and the extremities of the limbs.'; disqualifying 'White on the head or body, any other colour of the coat than fawn (shaded or not) and in particular brindle or solid brown'. RKC (S756) Colour Watch Category 0. Never brindle, solid brown, black, merle or white on the head / body."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Mahogany fawn with a brown mask first with the highest weight (the portrait default), then fawn with a black mask, fawn without a mask, pale isabella."
+      },
+      "coat": {
+        "value": "fine, short, soft to the touch",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Hair: Fine, short, and soft to the touch.",
+        "confidence": "high",
+        "notes": "FCI (S755); RKC key fact 'Coat length: Short' (S756)."
+      },
+      "muzzle": {
+        "value": "powerful, broad, thick, rather short muzzle; broad nose with well-opened nostrils pigmented like the mask",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Broad, well opened nostrils, well pigmented according to the colour of the mask.",
+        "confidence": "high",
+        "notes": "FCI (S755); muzzle 'Powerful, broad, thick, but not fleshy below the eyes, rather short' (as returned). Welfare (PetMD S759 short muzzle / airway, Breed Watch Category 3 S756): the game shows a moderate muzzle with clearly open nostrils — never an exaggerated short face or heavy wrinkles."
+      },
+      "eyes": {
+        "value": "hazel to dark brown (lighter tolerated with a brown or no mask), never blue or bulging",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Blue eyes; bulging eyes.",
+        "confidence": "high",
+        "notes": "FCI (S755) disqualifying faults (as returned); eye colour 'hazel to dark brown for a dog with a black mask'. The game shows tight, normal eyelids (PetMD S759 ectropion / entropion)."
+      },
+      "ears": {
+        "value": "relatively small, slightly darker than the coat",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Relatively small, of a slightly darker colour than the coat.",
+        "confidence": "high",
+        "notes": "FCI (S755)."
+      },
+      "tail": {
+        "value": "very thick at the base, carried low, supple",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Carried low, it is neither broken nor kinked but supple.",
+        "confidence": "high",
+        "notes": "FCI (S755); 'Very thick at the base.' Natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Raw suitability facts from the RKC breed page (S756) and PDSA (S757); the chips are in proposed_game_parameters.dogue_de_bordeaux.suitability_tags.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S756)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S756). No source says it sheds little → sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S756) — conflicts with VetCompass (S212) and PetMD (S759); see lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S756). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S756",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S756). Background only."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of an hour every day",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "We recommend giving your Dogue a minimum of an hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S757)."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "The Dogue de Bordeaux has a fairly low maintenance coat and a weekly brush should be plenty.",
+        "confidence": "high",
+        "notes": "PDSA (S757)."
+      },
+      "pdsa_ears": {
+        "value": "keep the ears clean — ask the vet how often",
+        "unit": "—",
+        "source_id": "S757",
+        "quote": "it’s best to check with your vet how often and what you should use",
+        "confidence": "high",
+        "notes": "PDSA (S757); 'make sure they are kept clean and free of any nasties.' No frequency → no ear task."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing",
+        "unit": "—",
+        "source_id": "S759",
+        "quote": "Brush them at least once a week to remove loose hair.",
+        "confidence": "high",
+        "notes": "PetMD (S759); 'they have a short, dense coat that requires weekly brushing to keep shedding under control.' Ears 'occasional ear cleaning', nails at a groomer, baths 'not too many' — no frequency → no task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -77061,6 +77631,296 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S738) and KC standard (S739). Weights unsourced in prompts. Golden as the portrait default — listed first by both standards.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): golden is the portrait default (first standard colour); moderate muzzle visible (not a flat face)"
+      }
+    },
+    "dogue_de_bordeaux": {
+      "_note": "Unattended run M5-R10-100 (2026-11-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key. Built: brushing 1× a week (RKC S756 'Once a week', M5-R13), meal / walk gap 60 min (PDSA S757, M5-R16), puppy socialisation (PDSA S757 quote, M5-R17), the summer-midday walk warning (PetMD S759, M5-R14). No face-fold / ear / nail / bath / groomer task: no source states a frequency. Senior 50 from a small VetCompass sample (5.5 y, 21 deaths, S212) — RKC / PDSA 'Over 10 years' conflict; provisional, open for David. Not in marketing (BVA S92; brachycephalic, Dogs Trust Ireland S758).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S756",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S756). Rule: one number N ('up to N') → N = 60. PDSA (S757) 'a minimum of an hour' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S756 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S756",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months. Dogs Trust Ireland (S758): growing dogs a few shorter walks a day (paraphrase).",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 50
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 50 = round(0.75 × 5.5 y × 12) = round(49.5) (half up; S11 + VetCompass median 5.5 y, O'Neill et al. 2013, S212 — 21 deaths). No McMillan 2024 value reachable. Alternatives: 90 (0.75 × RKC 'Over 10 years', S756 — conflicting sources), 84 (Dogs Trust > 7 y, S14). Provisional — open for David (small sample, conflicting sources).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S212"
+        ],
+        "alternatives": {
+          "senior_rkc_over_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 50 (0.75 × 5.5 y, VetCompass median S212)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 50
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 50)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35) → 1.0 (Havanese precedent). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA two meals a day (S757) = the game's adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S756",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S756) 'Once a week' → 1 (M5-R13 rule). PDSA (S757) 'a weekly brush should be plenty' and PetMD (S759) 'at least once a week' agree. Matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka M5-R13): 1 česanje na teden (RKC S756 'Once a week')"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S757",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S757); dogue_de_bordeaux.exercise.after_meals; PetMD (S759) GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S757",
+        "quote": "Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S757); quote from dogue_de_bordeaux.behaviour.socialisation. Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S757)"
+      },
+      "no_exercise_in_heat": {
+        "value": "avoid strenuous exercise in high temperatures (short muzzle, airway problems in hot weather)",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S759",
+        "quote": "avoiding strenuous exercise in high temperatures and keeping them cool",
+        "confidence": "medium",
+        "notes": "PetMD (S759), dogue_de_bordeaux.exercise.heat_and_walk_timing; 'Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction, especially in hot weather.' Flat-faced per Dogs Trust Ireland (S758). Built: the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14; no weather data).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-100); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S756"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.suitability.rkc_size_of_home",
+              "dogue_de_bordeaux.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S756 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S759",
+              "S758"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.short_muzzle_airway",
+              "dogue_de_bordeaux.health.brachycephalic"
+            ],
+            "quote": "S759 'Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction, especially in hot weather.'"
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.skin_folds"
+            ],
+            "quote": "S757 'You’ll need to clean the folds on their face regularly to stop sores and infections with a soft damp cloth.'"
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S757",
+              "S756"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.health.hind_legs",
+              "dogue_de_bordeaux.health.rkc_tests"
+            ],
+            "quote": "S757 'a tendency towards having weak back legs'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.children"
+            ],
+            "quote": "S757 'we wouldn’t recommend having one if you have smaller children in case they accidentally hurt them'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.experienced_owner"
+            ],
+            "quote": "S757 'We wouldn’t recommend Dogues for first-time owners …'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.drooling"
+            ],
+            "quote": "S757 'You’ll also need to be prepared for a lot of drool.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S756"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.suitability.rkc_shedding"
+            ],
+            "quote": "S756 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S757"
+            ],
+            "refs": [
+              "dogue_de_bordeaux.behaviour.other_pets"
+            ],
+            "quote": "S757 'Many Dogue de Bordeaux have a very high prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement (FCI S755 'A good companion' is about its master).",
+          "children": "PetMD (S759) 'great with kids' conflicts with PDSA (S757) not with smaller children → no children chip; not_for_small_children instead.",
+          "small_children": "PDSA (S757): not recommended with smaller children.",
+          "first_time_owner": "PDSA (S757): not for first-time owners → experienced_owner.",
+          "apartment": "RKC 'Large house' (S756).",
+          "other_pets": "PDSA (S757) very high prey drive → chases_small_pets.",
+          "often_alone": "PDSA (S757): never longer than four hours.",
+          "needs_company": "PDSA (S757) allows short periods alone; no separation-anxiety statement → no chip.",
+          "active_family": "Up to 1 hour a day (S756) — not a long-exercise breed.",
+          "long_daily_exercise": "RKC 'Up to 1 hour per day' (S756).",
+          "frequent_grooming": "RKC 'Once a week' (S756).",
+          "low_shedding": "RKC 'Sheds: Yes' (S756).",
+          "shorter_lifespan": "RKC / PDSA 'Over 10 years' (S756 / S757) conflict with VetCompass 5.5 y (S212) and PetMD 5–8 y (S759) — conflicting sources → no chip (Nova Scotia Duck Tolling Retriever precedent); open for David.",
+          "brachycephalic_breathing": "Dogs Trust Ireland (S758) names a flat face, but the airway source (PetMD S759) names a short muzzle and the FCI standard a 'rather short' muzzle → short_muzzle_breathing (Boxer / Bullmastiff precedent); open for David.",
+          "eyelid_problems": "PetMD (S759) ectropion / entropion only as a list heading; no Breed Watch eyelid point returned → no chip; open for David.",
+          "heat_sensitive": "Covered by the short-muzzle chip and the walk-in-heat warning.",
+          "chews_when_bored": "No chewing statement.",
+          "food_motivated_weight": "No breed-specific statement."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). The Dogue de Bordeaux is brachycephalic (Dogs Trust Ireland S758 'Dogues are brachycephalic which means they have flat faces.'; FCI S755 'brachycephalic molossoid') and RKC Breed Watch Category 3 (S756) → the rule's brachycephalic exclusion (Boxer / Bullmastiff precedent). If ever shown: never with small children, never with an exaggerated short face or heavy wrinkles.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po Dogs Trust Ireland S758)"
+      },
+      "ai_appearance": {
+        "value": "adult Dogue de Bordeaux, fine short mahogany fawn coat with a brown mask, stocky, athletic and imposing molossoid build with a broad deep chest, large broad head, moderately short broad muzzle with clearly open nostrils and only moderate wrinkles, oval hazel to dark brown eyes with tight eyelids, relatively small hanging ears, natural tail thick at the base carried low",
+        "unit": "—",
+        "source_id": "S755",
+        "quote": "Self-coloured, in all shades of fawn, from mahogany to isabella.",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S755) — self-coloured fawn, mahogany to isabella, with a black, brown or no mask; only limited white on the forechest and toes. Weights unsourced. Welfare (short muzzle PetMD S759, Breed Watch Category 3 S756): moderate, non-exaggerated muzzle with open nostrils, no heavy wrinkles, tight eyelids (`muzzle` trait).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): mahogany fawn with a brown mask is the portrait default; moderate muzzle with open nostrils, natural ears and tail"
       }
     }
   }
