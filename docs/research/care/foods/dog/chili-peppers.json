@@ -7,7 +7,8 @@
     "pt": "Malaguetas",
     "nl": "Chilipepers",
     "pl": "Papryczki chili",
-    "cs": "Chilli papričky"
+    "cs": "Chilli papričky",
+    "hr": "Čili papričice"
   },
   "question": {
     "en": "Can dogs eat chili peppers?",
@@ -15,7 +16,8 @@
     "pt": "Os cães podem comer malaguetas?",
     "nl": "Mogen honden chilipepers eten?",
     "pl": "Czy psy mogą jeść papryczki chili?",
-    "cs": "Mohou psi jíst chilli papričky?"
+    "cs": "Mohou psi jíst chilli papričky?",
+    "hr": "Smiju li psi jesti čili papričice?"
   },
   "url_slug": {
     "en": "chili-peppers",
@@ -23,7 +25,8 @@
     "pt": "malaguetas",
     "nl": "chilipepers",
     "pl": "papryczki-chili",
-    "cs": "chilli-papricky"
+    "cs": "chilli-papricky",
+    "hr": "cili-papricice"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia.",
     "nl": "Nee, geef je hond nooit pittige pepers zoals jalapeños of chilipepers. Hete pepers zijn irriterend: ze geven een brandend gevoel in de mond en kunnen in grotere hoeveelheden braken en diarree veroorzaken.",
     "pl": "Nie, nigdy nie dawaj psu ostrych papryczek, takich jak jalapeño czy chili. Ostre papryczki działają drażniąco: powodują uczucie pieczenia w pysku, a w większych ilościach mogą wywołać wymioty i biegunkę.",
-    "cs": "Ne, nikdy nedávejte psovi pálivé papričky, například jalapeño nebo chilli. Pálivé papričky dráždí: vyvolávají pálení v tlamě a ve větším množství mohou způsobit zvracení a průjem."
+    "cs": "Ne, nikdy nedávejte psovi pálivé papričky, například jalapeño nebo chilli. Pálivé papričky dráždí: vyvolávají pálení v tlamě a ve větším množství mohou způsobit zvracení a průjem.",
+    "hr": "Ne, nikad ne daj psu ljute papričice, poput jalapeño ili čili papričica. Ljute su papričice nadražujuće: u ustima izazivaju osjećaj pečenja, a u većim količinama mogu izazvati povraćanje i proljev."
   },
   "why": {
     "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
@@ -40,7 +44,8 @@
     "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães.",
     "nl": "Hete pepers bevatten capsaïcine, een sterk irriterende stof, met de hoogste concentraties in de vrucht en vooral in de zaadjes. Honden die op pepers kauwen en ze doorslikken, kunnen daar last van krijgen. Bij huisdieren zijn problemen zeldzaam, maar de AKC zegt dat je honden nooit pittige pepers moet geven.",
     "pl": "Ostre papryczki zawierają kapsaicynę, silną substancję drażniącą, której najwięcej jest w owocu, a zwłaszcza w nasionach. Może ona zaszkodzić psom, które gryzą i połykają papryczki. U zwierząt domowych problemy zdarzają się rzadko, ale AKC radzi, by nigdy nie dawać psom ostrych papryczek.",
-    "cs": "Pálivé papričky obsahují kapsaicin, silnou dráždivou látku, nejvíce v plodu a zejména v semínkách. Může působit na psy, kteří papričky rozkousají a spolknou. U domácích zvířat jsou potíže vzácné, ale AKC uvádí, že pálivé papričky by se psům nikdy neměly dávat."
+    "cs": "Pálivé papričky obsahují kapsaicin, silnou dráždivou látku, nejvíce v plodu a zejména v semínkách. Může působit na psy, kteří papričky rozkousají a spolknou. U domácích zvířat jsou potíže vzácné, ale AKC uvádí, že pálivé papričky by se psům nikdy neměly dávat.",
+    "hr": "Ljute papričice sadrže kapsaicin, jaku nadražujuću tvar, a najviše ga ima u plodu, osobito u sjemenkama. Može djelovati na pse koji papričice žvaču i gutaju. Kod kućnih ljubimaca problemi su rijetki, ali AKC kaže da psima nikad ne treba davati ljute papričice."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Pálení a podráždění očí",
       "Zvracení",
       "Průjem"
+    ],
+    "hr": [
+      "Osjećaj pečenja u ustima",
+      "Pečenje i nadraženost očiju",
+      "Povraćanje",
+      "Proljev"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água.",
     "nl": "Houd pittige pepers en gerechten met pepers buiten het bereik van je hond. Het brandende gevoel van capsaïcine gaat meestal snel over en wordt minder als je de mond van je hond met water spoelt.",
     "pl": "Trzymaj ostre papryczki i potrawy z ich dodatkiem poza zasięgiem psa. Pieczenie wywołane kapsaicyną zwykle szybko mija i można je złagodzić, płucząc pysk wodą.",
-    "cs": "Pálivé papričky a pokrmy s nimi uchovávejte mimo dosah psa. Pálivý účinek kapsaicinu obvykle rychle odezní a lze ho zmírnit vypláchnutím tlamy vodou."
+    "cs": "Pálivé papričky a pokrmy s nimi uchovávejte mimo dosah psa. Pálivý účinek kapsaicinu obvykle rychle odezní a lze ho zmírnit vypláchnutím tlamy vodou.",
+    "hr": "Ljute papričice i jela s njima drži izvan dosega psa. Pečenje koje izaziva kapsaicin obično je kratkotrajno, a može se ublažiti ispiranjem usta vodom."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães.",
     "nl": "Pittige pepers zijn niet voor honden. Ze geven een hond een brandend gevoel in de mond. Paprika is de hondvriendelijke variant.",
     "pl": "Ostre papryczki nie są dla psów. Od nich w pysku robi się gorąco. Dla psów nadaje się słodka papryka.",
-    "cs": "Pálivé papričky nejsou pro psy. Pejskovi by pálily v tlamě. Sladká paprika je pro psy v pořádku."
+    "cs": "Pálivé papričky nejsou pro psy. Pejskovi by pálily v tlamě. Sladká paprika je pro psy v pořádku.",
+    "hr": "Ljute papričice nisu za pse. Od njih psu peče u ustima. Slatka paprika je vrsta koju psi smiju jesti."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "pt": "Os pimentos doces são aceitáveis?",
         "nl": "Is zoete paprika oké?",
         "pl": "Czy słodka papryka jest dla psa w porządku?",
-        "cs": "Je sladká paprika v pořádku?"
+        "cs": "Je sladká paprika v pořádku?",
+        "hr": "Je li slatka paprika u redu?"
       },
       "a": {
         "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
@@ -113,7 +127,8 @@
         "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo.",
         "nl": "Ja, naturele paprika is voor de meeste honden met mate veilig, mits je de zaadjes en de steel verwijdert.",
         "pl": "Tak, zwykła papryka jest bezpieczna dla większości psów w umiarkowanych ilościach, o ile usuniesz nasiona i szypułkę.",
-        "cs": "Ano, paprika bez dalších přísad je pro většinu psů v mírném množství bezpečná, pokud z ní odstraníte semínka a stopku."
+        "cs": "Ano, paprika bez dalších přísad je pro většinu psů v mírném množství bezpečná, pokud z ní odstraníte semínka a stopku.",
+        "hr": "Da, obična slatka paprika sigurna je za većinu pasa u umjerenim količinama, bez sjemenki i peteljke."
       }
     }
   ],
@@ -198,6 +213,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "51f23c3a81616e5fe667c33c4e11717ec6ffb24bb7bef254723b10f61f889517"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe07d79fdf4a6d710a0f0903c8b3ee42de0d1223d284a20f9d97374e6c91daaf"
     }
   }
 }
