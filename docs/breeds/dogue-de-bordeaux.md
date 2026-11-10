@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `dogue_de_bordeaux` (viri S754–S759; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S174, S212); seznam za vzreditelja: RKC (`listed`) — komolci, oči, kolki (minimum) |
 | Izvor | FCI št. 116 »Dogue de Bordeaux«, skupina 2, sekcija 2.1 (molosi, tip doge), Francija (S754, S755) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 96. mesto »Dogue de Bordeaux« (S174, zapisano 2026-11-05; 95. mesto argentinska doga je blokirana, vrstica 99) |
-| PR-ji | pet-prep #915 (pasma) · portret (sledi) · spletna stran (sledi) |
+| PR-ji | pet-prep #915 (pasma, združen `b885a5e`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 42746430545, koda `b885a5e`, brez namestitve; sprejet v prvem poskusu) · spletna stran pet-prep-website `feat/register-dogue-de-bordeaux` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 50. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-100 | 2026-11-10 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo po obroku, opozorilo za vročino opoldne poleti | 🛠 | 💶 izziv | M5-R13 / M5-R14 / M5-R16 / M5-R17 | 2026-11-10 |
 | Barva (izbirnik: 4 odtenki plave barve standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-10 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | 2026-11-10 |
-| Stran na petprep.si (`/animals/dogs/dogue-de-bordeaux`, `/sl/zivali/psi/bordojska-doga`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-11-10 |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; mahagonij z rjavo masko, zmerne gube, odprte nosnice, majhna bela lisa na prsih, naraven rep, siva studijska podlaga) | — | M5-R11-04 | 2026-11-10 |
+| Stran na petprep.si (`/animals/dogs/dogue-de-bordeaux`, `/sl/zivali/psi/bordojska-doga`) | 🗓 stran s portretom v PR-ju pet-prep-website; na spletu z naslednjo dnevno namestitvijo spletne strani; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-11-10 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -60,3 +60,4 @@
 - **Teža** je iz PetMD (S759); FCI in PDSA dajeta le najmanjšo težo.
 - **Gube na obrazu:** viri pravijo »redno«, brez pogostosti → ni otrokove naloge (pri bulmastifu je vir rekel »vsak dan«).
 - **Slovensko ime** »bordojska doga« — strani KZS ali kluba nisem odprl. Potrdite ali popravite.
+- **Portret:** narejen 2026-11-10 (zagon 42746430545, brez produkcijske namestitve), sprejet v prvem poskusu; po potrebi ga ponovno ustvarite s `force`.
