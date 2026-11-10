@@ -111,6 +111,36 @@
       "name": "S Animal Medical Center Ulsan (에스동물메디컬센터 울산)",
       "url": "https://blog.24samc.co.kr/",
       "note": "Clinic's own site."
+    },
+    {
+      "name": "Noa Animal Medical Center (노아동물메디컬센터)",
+      "url": "https://noahamc.co.kr/info",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "N Animal Medical Center (N동물의료센터)",
+      "url": "https://www.namc.co.kr/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "VIP Animal Medical Center branches",
+      "url": "https://www.vipah.co.kr/kr/medical/branches/seocho",
+      "note": "Clinic's own site; Seocho, Cheongdam, Nowon, Seongbuk, Dongdaemun branch pages."
+    },
+    {
+      "name": "24HR Worldpet Animal Medical Center",
+      "url": "https://24worldpet.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "Seoul Yes Animal Hospital",
+      "url": "https://www.seoulyes24.com/28",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "My Animal Medical Center",
+      "url": "https://24myamc.com/",
+      "note": "Clinic's own site."
     }
   ],
   "entries": [
@@ -453,7 +483,156 @@
       "source_url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
       "checked": "2026-11-10",
       "note": "City guide gives name/phone only, no hours; not flagged 24 h. A second '24시 코끼리동물의료센터' entry has no phone."
+    },
+    {
+      "kind": "clinic",
+      "name": "Noa Animal Medical Center (24시 노아동물메디컬센터)",
+      "city": "Dong-gu, Gwangju",
+      "region": "Gwangju",
+      "phone": "062-222-0075",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days. Outpatient 09:30-18:30, emergency care 18:30-09:30 (emergency surcharge applies).",
+      "small_animals": true,
+      "url": "https://noahamc.co.kr/",
+      "source_url": "https://noahamc.co.kr/info",
+      "checked": "2026-11-10",
+      "note": "Street address not on the clinic page (removed; unverified). Site states '연중무휴 24시간'."
+    },
+    {
+      "kind": "clinic",
+      "name": "N Animal Medical Center Nowon (N동물의료센터 노원점)",
+      "city": "Nowon-gu, Seoul",
+      "region": "Seoul",
+      "address": "Nowon-ro 408, Nowon-gu, Seoul",
+      "phone": "02-919-0075",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days. General care 10:00-20:00, emergency care 20:00-10:00.",
+      "small_animals": true,
+      "url": "https://www.namc.co.kr/",
+      "source_url": "https://www.namc.co.kr/",
+      "checked": "2026-11-10",
+      "note": "Site says '365일 24시'. Gangbuk branch skipped: page gives two conflicting addresses."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center Seocho (VIP동물의료센터 서초점)",
+      "city": "Seocho-gu, Seoul",
+      "region": "Seoul",
+      "address": "Dongjak-daero 36, Daekwang Bldg 1F-2F, Seocho-gu, Seoul",
+      "phone": "02-525-3102",
+      "emergency_24h": true,
+      "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/kr/medical/branches/seocho",
+      "source_url": "https://www.vipah.co.kr/kr/medical/branches/seocho",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 동물병원'; late night not operated Sundays."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center Cheongdam (VIP동물의료센터 청담점)",
+      "city": "Gangnam-gu, Seoul",
+      "region": "Seoul",
+      "address": "Samseong-ro 133-gil 7, Gangnam-gu, Seoul",
+      "phone": "02-511-7522",
+      "emergency_24h": true,
+      "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Call first to confirm.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/kr/medical/branches/cheongdam",
+      "source_url": "https://www.vipah.co.kr/kr/medical/branches/cheongdam",
+      "checked": "2026-11-10",
+      "note": "Page: '강남 24시간 동물병원', '24시 진료'."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center Nowon (VIP동물의료센터 노원점)",
+      "city": "Nowon-gu, Seoul",
+      "region": "Seoul",
+      "address": "Dongil-ro 1333, Nowon-gu, Seoul",
+      "phone": "02-931-1333",
+      "emergency_24h": true,
+      "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Call first to confirm.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/kr/medical/branches/nowon",
+      "source_url": "https://www.vipah.co.kr/kr/medical/branches/nowon",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 응급진료가 가능', '노원구 24시간 동물병원'."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center Seongbuk (VIP동물의료센터 성북점)",
+      "city": "Seongbuk-gu, Seoul",
+      "region": "Seoul",
+      "address": "Dongsomun-ro 73, Cityplace 1F/L/B1, Seongbuk-gu, Seoul",
+      "phone": "02-953-0075",
+      "emergency_24h": true,
+      "duty": "Day 10:00-18:00, evening 18:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/kr/medical/branches/seongbuk",
+      "source_url": "https://www.vipah.co.kr/kr/medical/branches/seongbuk",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 응급·수술...', '24시 진료'; Sunday closure scope unclear."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center Dongdaemun (VIP동물의료센터 동대문점)",
+      "city": "Dongdaemun-gu, Seoul",
+      "region": "Seoul",
+      "address": "Hancheon-ro 14-gil 87, Dongdaemun-gu, Seoul",
+      "phone": "02-2215-7522",
+      "emergency_24h": true,
+      "duty": "Day 10:00-18:30, evening 18:30-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/kr/medical/branches/dongdaemun",
+      "source_url": "https://www.vipah.co.kr/kr/medical/branches/dongdaemun",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 동물병원'; Sunday closure noted."
+    },
+    {
+      "kind": "clinic",
+      "name": "24HR Worldpet Animal Medical Center (24시월드펫동물메디컬센터)",
+      "city": "Yangcheon-gu, Seoul",
+      "region": "Seoul",
+      "address": "Sinwol-ro 208, Yangcheon-gu, Seoul",
+      "phone": "02-2698-7582",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Night emergency care 21:00-10:00.",
+      "small_animals": true,
+      "url": "https://24worldpet.com/",
+      "source_url": "https://24worldpet.com/",
+      "checked": "2026-11-10",
+      "note": "Page: '연중무휴 24시 진료', '24시간 365일'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Seoul Yes Animal Hospital (24시 서울 예스 동물병원)",
+      "city": "Suji-gu, Yongin",
+      "region": "Gyeonggi",
+      "address": "Hyeonam-ro 81, Venposta I, Suji-gu, Yongin, Gyeonggi-do",
+      "phone": "031-272-1313",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, year-round. Appointments 09:30-21:30, overnight emergency care 21:30-09:30.",
+      "small_animals": true,
+      "url": "https://www.seoulyes24.com/28",
+      "source_url": "https://www.seoulyes24.com/28",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 연중무휴'."
+    },
+    {
+      "kind": "clinic",
+      "name": "My Animal Medical Center (24시마이동물의료센터)",
+      "city": "Paju",
+      "region": "Gyeonggi",
+      "address": "Cheongseok-ro 122, 3F, Paju, Gyeonggi-do",
+      "phone": "031-945-5000",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, year-round. Day 10:00-19:00, evening 19:00-22:00, emergency 22:00-10:00 (night fees apply).",
+      "small_animals": true,
+      "url": "https://24myamc.com/",
+      "source_url": "https://24myamc.com/",
+      "checked": "2026-11-10",
+      "note": "Page: '24시 연중무휴 진료'."
     }
   ],
-  "notes": "No Korean-language animal poison line found (only human poison lines / US services; none used). No duty rota usable: KVMA (kvma.or.kr) search surfaced only association pages with no on-duty list; animal.go.kr 24-hour hospital list and Jungnang-gu holiday-clinic xlsx were disallowed by robots.txt and not used. Blocked by robots.txt / not fetched: Kyungpook (vmc.knu.ac.kr), Jeju National Univ. (vethospital.jejunu.ac.kr), Chungnam (cnuah.cnu.ac.kr), Chungbuk Cheongju (vetmed.chungbuk.ac.kr), Gyeongsang (gamc.gnu.ac.kr), Time AMC Daejeon (timeamc.com), Bless AMC (blessamc.com), Instagram pages. Sites that loop on http/https redirects and could not be read: cenamc.kr (24시센트럴), wooridleclinic.kr (24시우리들), gonggam24.kr (Gwangju), nowamc.co.kr, yeamc.com, vamc.co.kr, theboneamc.com, 24samc.co.kr main page; bonamc.co.kr returned a client error. Gwangju Noa 24 AMC seen only on an aggregator (ban-life.com) so skipped. Gangwon University hospital page and Gyeonggi/city vet association rotas not found. Regular (non-24h) small-animal clinics in Daejeon, Incheon, Ulsan, Seoul not covered."
+  "notes": "No Korean-language animal poison line found (only human poison lines / US services; none used). No duty rota usable: KVMA (kvma.or.kr) search surfaced only association pages with no on-duty list; animal.go.kr 24-hour hospital list and Jungnang-gu holiday-clinic xlsx were disallowed by robots.txt and not used. Blocked by robots.txt / not fetched: Kyungpook (vmc.knu.ac.kr), Jeju National Univ. (vethospital.jejunu.ac.kr), Chungnam (cnuah.cnu.ac.kr), Chungbuk Cheongju (vetmed.chungbuk.ac.kr), Gyeongsang (gamc.gnu.ac.kr), Time AMC Daejeon (timeamc.com), Bless AMC (blessamc.com), Instagram pages. Sites that loop on http/https redirects and could not be read: cenamc.kr (24시센트럴), wooridleclinic.kr (24시우리들), gonggam24.kr (Gwangju), nowamc.co.kr, yeamc.com, vamc.co.kr, theboneamc.com, 24samc.co.kr main page; bonamc.co.kr returned a client error. Gwangju Noa 24 AMC seen only on an aggregator (ban-life.com) so skipped. Gangwon University hospital page and Gyeonggi/city vet association rotas not found. Regular (non-24h) small-animal clinics in Daejeon, Incheon, Ulsan, Seoul not covered. 2026-11-10 follow-up: added Gwangju Noa 24 (own site), N Nowon, five VIP Seoul branches, Worldpet Yangcheon, Seoul Yes (Yongin), My AMC (Paju). Not used: Seoul city '우리동네동물병원' list and Gwangjin-gu list (KOGL type 4 no-commercial-use / unclear reuse terms); N Gangbuk branch (conflicting addresses on page); bpanimal.com (24시부평, Incheon) and 24samc.co.kr/main.html redirect loop twice; timeamc.com robots-blocked; wooridleclinic.kr redirect loop. Incheon, Daejeon, Ulsan and Jeju regular clinics still not covered: only aggregators (goodoc, fitpet etc.) surfaced for them and own sites could not be found via search (24시도안 Daejeon, 24시 SKY Gwangju, Point Incheon seen only on aggregators/news)."
 }
