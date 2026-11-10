@@ -7,7 +7,8 @@
     "pt": "Pimentos",
     "nl": "Paprika’s",
     "pl": "Papryka",
-    "cs": "Sladká paprika"
+    "cs": "Sladká paprika",
+    "hr": "Slatka paprika"
   },
   "question": {
     "en": "Can dogs eat bell peppers?",
@@ -15,7 +16,8 @@
     "pt": "Os cães podem comer pimentos?",
     "nl": "Mogen honden paprika eten?",
     "pl": "Czy psy mogą jeść paprykę?",
-    "cs": "Mohou psi jíst sladkou papriku?"
+    "cs": "Mohou psi jíst sladkou papriku?",
+    "hr": "Smiju li psi jesti slatku papriku?"
   },
   "url_slug": {
     "en": "bell-peppers",
@@ -23,7 +25,8 @@
     "pt": "pimentos",
     "nl": "paprika",
     "pl": "papryka",
-    "cs": "sladka-paprika"
+    "cs": "sladka-paprika",
+    "hr": "slatka-paprika"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "pt": "Sim, os pimentos são seguros para a maioria dos cães, com moderação. Não são tóxicos, e os pimentos verdes, amarelos, laranja e vermelhos servem todos, desde que simples. Tira as sementes e o pedúnculo, e nunca dês pimentos picantes.",
     "nl": "Ja, paprika’s zijn voor de meeste honden met mate veilig. Ze zijn niet giftig en groene, gele, oranje en rode paprika’s zijn allemaal prima als je ze naturel geeft. Verwijder de zaadjes en de steel en geef nooit pittige pepers.",
     "pl": "Tak, papryka jest bezpieczna dla większości psów w umiarkowanych ilościach. Jest nietoksyczna, a papryka zielona, żółta, pomarańczowa i czerwona jest w porządku, jeśli podajesz ją bez dodatków. Usuń nasiona i szypułkę, a ostrych papryczek nigdy nie dawaj.",
-    "cs": "Ano, paprika je pro většinu psů v mírném množství bezpečná. Je netoxická a zelená, žlutá, oranžová i červená jsou v pořádku, pokud je podáte bez dalších přísad. Odstraňte semínka a stopku a nikdy nedávejte pálivé papričky."
+    "cs": "Ano, paprika je pro většinu psů v mírném množství bezpečná. Je netoxická a zelená, žlutá, oranžová i červená jsou v pořádku, pokud je podáte bez dalších přísad. Odstraňte semínka a stopku a nikdy nedávejte pálivé papričky.",
+    "hr": "Da, slatka je paprika sigurna za većinu pasa u umjerenim količinama. Nije otrovna, a sve su boje – zelena, žuta, narančasta i crvena – u redu ako je daješ običnu. Ukloni sjemenke i peteljku, a ljute papričice nikad ne daj."
   },
   "why": {
     "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
@@ -40,7 +44,8 @@
     "pt": "Os pimentos não são tóxicos e fornecem nutrientes que podem ajudar a saúde do teu cão. Em excesso podem causar mal-estar digestivo, incluindo vómitos ou diarreia, e a pele pode ser difícil de mastigar e digerir para alguns cães. Alguns cães não têm qualquer problema; outros têm.",
     "nl": "Paprika’s zijn niet giftig en leveren voedingsstoffen die de gezondheid van je hond kunnen ondersteunen. Te veel kan leiden tot spijsverteringsklachten, zoals braken of diarree, en de buitenste schil kan voor sommige honden moeilijk te kauwen en te verteren zijn. Sommige honden hebben er geen last van, andere wel.",
     "pl": "Papryka jest nietoksyczna i dostarcza składników odżywczych, które mogą wspierać zdrowie psa. Zbyt duża ilość może prowadzić do rozstroju trawienia, w tym wymiotów lub biegunki, a zewnętrzna skórka bywa dla niektórych psów trudna do przeżucia i strawienia. Jednym psom papryka służy, innym nie.",
-    "cs": "Paprika je netoxická a dodává živiny, které mohou podporovat zdraví psa. Příliš mnoho může vést k potížím s trávením, včetně zvracení nebo průjmu, a vnější slupka se může některým psům hůř kousat a trávit. Některým psům bude vyhovovat, jiným ne."
+    "cs": "Paprika je netoxická a dodává živiny, které mohou podporovat zdraví psa. Příliš mnoho může vést k potížím s trávením, včetně zvracení nebo průjmu, a vnější slupka se může některým psům hůř kousat a trávit. Některým psům bude vyhovovat, jiným ne.",
+    "hr": "Slatka paprika nije otrovna i sadrži hranjive tvari koje mogu pridonijeti zdravlju psa. Prevelika količina može dovesti do probavnih smetnji, uključujući povraćanje ili proljev, a vanjska kožica nekim je psima teška za žvakanje i probavu. Neki će je psi dobro podnijeti, a neki neće."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "pt": "Introduz o pimento aos poucos, para veres se o teu cão o digere bem, e não exageres. Nunca dês pimentos misturados com cebola ou alho, porque são tóxicos para os cães.",
     "nl": "Laat je hond geleidelijk aan paprika wennen, zodat je kunt zien of het goed bij zijn spijsvertering past, en overdrijf niet. Geef nooit paprika’s die met ui of knoflook zijn gemengd, want die zijn giftig voor honden.",
     "pl": "Wprowadzaj paprykę stopniowo i obserwuj, czy twój pies dobrze ją trawi; nie przesadzaj z ilością. Nigdy nie dawaj papryki z cebulą ani czosnkiem, bo są toksyczne dla psów.",
-    "cs": "Papriku zařazujte postupně, abyste viděli, jak ji psí trávení snáší, a nepřehánějte to. Nikdy nedávejte papriku smíchanou s cibulí nebo česnekem, které jsou pro psy toxické."
+    "cs": "Papriku zařazujte postupně, abyste viděli, jak ji psí trávení snáší, a nepřehánějte to. Nikdy nedávejte papriku smíchanou s cibulí nebo česnekem, které jsou pro psy toxické.",
+    "hr": "Papriku uvodi postupno da vidiš kako je pas podnosi, i ne pretjeruj. Nikad ne daj papriku pomiješanu s lukom ili češnjakom jer su luk i češnjak otrovni za pse."
   },
   "serving": {
     "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
@@ -57,7 +63,8 @@
     "pt": "Simples, crus ou cozinhados, sem sementes nem pedúnculo. Cozer a vapor ou fazer em puré torna-o mais fácil de comer. Sem sal, temperos nem outros ingredientes.",
     "nl": "Naturel, rauw of gekookt, zonder zaadjes en steel. Stomen of pureren maakt het makkelijker te eten. Geen zout, kruiden of andere ingrediënten.",
     "pl": "Zwykła, surowa lub gotowana, bez nasion i szypułki. Gotowanie na parze lub zblendowanie ułatwia jej zjedzenie. Bez soli, przypraw i innych dodatków.",
-    "cs": "Bez dalších přísad, syrovou nebo tepelně upravenou, bez semínek a stopky. Po napaření nebo rozmixování se papriky snáz jedí. Bez soli, koření a jiných přísad."
+    "cs": "Bez dalších přísad, syrovou nebo tepelně upravenou, bez semínek a stopky. Po napaření nebo rozmixování se papriky snáz jedí. Bez soli, koření a jiných přísad.",
+    "hr": "Obična, sirova ili termički obrađena, bez sjemenki i peteljke. Kuhana na pari ili pasirana lakša je za jelo. Bez soli, začina i drugih sastojaka."
   },
   "child": {
     "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
@@ -65,7 +72,8 @@
     "pt": "Os cães podem comer um pouco de pimento doce simples. Um adulto tira primeiro as sementes. Os pimentos picantes não são para cães.",
     "nl": "Honden mogen een beetje naturele paprika. Een volwassene haalt eerst de zaadjes eruit. Pittige pepers zijn niet voor honden.",
     "pl": "Psy mogą dostać odrobinę zwykłej słodkiej papryki. Dorosły najpierw usuwa nasiona. Ostre papryczki nie są dla psów.",
-    "cs": "Pejsek může dostat trochu sladké papriky bez dalších přísad. Dospělý z ní nejdřív vyndá semínka. Pálivé papričky nejsou pro psy."
+    "cs": "Pejsek může dostat trochu sladké papriky bez dalších přísad. Dospělý z ní nejdřív vyndá semínka. Pálivé papričky nejsou pro psy.",
+    "hr": "Pas smije dobiti malo obične slatke paprike. Odrasla osoba prvo izvadi sjemenke. Ljute papričice nisu za pse."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "pt": "Os cães podem comer pimentos crus?",
         "nl": "Mogen honden rauwe paprika eten?",
         "pl": "Czy psy mogą jeść surową paprykę?",
-        "cs": "Mohou psi jíst syrovou papriku?"
+        "cs": "Mohou psi jíst syrovou papriku?",
+        "hr": "Smiju li psi jesti sirovu slatku papriku?"
       },
       "a": {
         "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
@@ -83,7 +92,8 @@
         "pt": "Sim, embora alguns cães lidem melhor com pimentos cozinhados, a vapor ou em puré, que são mais fáceis de mastigar e digerir.",
         "nl": "Ja, al vinden sommige honden gekookte, gestoomde of gepureerde paprika makkelijker te kauwen en te verteren.",
         "pl": "Tak, choć niektórym psom łatwiej przeżuć i strawić paprykę gotowaną, na parze lub zblendowaną.",
-        "cs": "Ano, i když některým psům se uvařená, napařená nebo rozmixovaná paprika kouše a tráví snáz."
+        "cs": "Ano, i když některým psům se uvařená, napařená nebo rozmixovaná paprika kouše a tráví snáz.",
+        "hr": "Da, iako neki psi lakše žvaču i probavljaju papriku koja je termički obrađena, kuhana na pari ili pasirana."
       }
     },
     {
@@ -93,7 +103,8 @@
         "pt": "Qual é a melhor cor?",
         "nl": "Welke kleur is het beste?",
         "pl": "Który kolor jest najlepszy?",
-        "cs": "Která barva je nejlepší?"
+        "cs": "Která barva je nejlepší?",
+        "hr": "Koja je boja najbolja?"
       },
       "a": {
         "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
@@ -101,7 +112,8 @@
         "pt": "Todas as cores são seguras. Os pimentos vermelhos são os que contêm mais vitaminas e antioxidantes.",
         "nl": "Alle kleuren zijn veilig. Rode paprika’s bevatten de meeste vitamines en antioxidanten.",
         "pl": "Wszystkie kolory są bezpieczne. Czerwona papryka zawiera najwięcej witamin i przeciwutleniaczy.",
-        "cs": "Všechny barvy jsou bezpečné. Nejvíc vitaminů a antioxidantů obsahuje červená paprika."
+        "cs": "Všechny barvy jsou bezpečné. Nejvíc vitaminů a antioxidantů obsahuje červená paprika.",
+        "hr": "Sve su boje sigurne. Crvena paprika sadrži najviše vitamina i antioksidansa."
       }
     },
     {
@@ -111,7 +123,8 @@
         "pt": "E os jalapeños ou as malaguetas?",
         "nl": "En jalapeños of chilipepers?",
         "pl": "A co z jalapeño i papryczkami chili?",
-        "cs": "A co papričky jalapeño nebo chilli?"
+        "cs": "A co papričky jalapeño nebo chilli?",
+        "hr": "A jalapeño ili čili papričice?"
       },
       "a": {
         "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
@@ -119,7 +132,8 @@
         "pt": "Nunca dês ao teu cão variedades picantes, como jalapeños ou malaguetas.",
         "nl": "Geef je hond nooit pittige pepersoorten zoals jalapeños of chilipepers.",
         "pl": "Nigdy nie dawaj psu ostrych odmian papryki, takich jak jalapeño czy chili.",
-        "cs": "Pálivé druhy papriček, například jalapeño nebo chilli, psovi nikdy nedávejte."
+        "cs": "Pálivé druhy papriček, například jalapeño nebo chilli, psovi nikdy nedávejte.",
+        "hr": "Psu nikad ne daj ljute vrste papričica, kao što su jalapeño ili čili."
       }
     }
   ],
@@ -226,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0411b56408c7cc42496fd99c827cb95be5bfeff175785f4eb5218bd2af808d16"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67505d625e3728ee5758a5bef0a89a390d894c3992df69ef86e09878a623f215"
     }
   }
 }
