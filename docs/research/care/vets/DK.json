@@ -55,7 +55,8 @@
       "duty": "Emergency Room and on-call veterinarian reachable 24/7 on the same number, incl. weekends and public holidays. Daytime appointments Mon-Fri 8:30-15:30.",
       "duty_i18n": {
         "sl": "Urgenca in dežurni veterinar sta dosegljiva 24 ur na dan na isti številki, tudi ob koncih tedna in praznikih. Naročanje čez dan pon–pet 8.30–15.30.",
-        "hr": "Hitni prijem i dežurni veterinar dostupni 24/7 na istom broju, uključujući vikende i blagdane. Redovni termini pon–pet 8:30–15:30."
+        "hr": "Hitni prijem i dežurni veterinar dostupni 24/7 na istom broju, uključujući vikende i blagdane. Redovni termini pon–pet 8:30–15:30.",
+        "de": "Notaufnahme und Bereitschaftstierarzt rund um die Uhr unter derselben Nummer erreichbar, auch am Wochenende und an Feiertagen. Termine tagsüber Mo–Fr 8.30–15.30 Uhr."
       },
       "small_animals": true,
       "url": "https://dyrehospitalet.ku.dk/",
@@ -74,7 +75,8 @@
       "duty": "Emergency room open every day around the clock (00–24); clinic weekdays 8–16. Call before arrival.",
       "duty_i18n": {
         "sl": "Urgenca je odprta vsak dan 24 ur na dan (0–24); klinika ob delavnikih 8–16. Pred prihodom pokličite.",
-        "hr": "Hitni prijem radi svaki dan 0–24; klinika radnim danom 8–16. Nazovi prije dolaska."
+        "hr": "Hitni prijem radi svaki dan 0–24; klinika radnim danom 8–16. Nazovi prije dolaska.",
+        "de": "Notaufnahme täglich rund um die Uhr geöffnet (00–24 Uhr); Klinik werktags 8–16 Uhr. Bitte vor der Ankunft anrufen."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koebenhavns-dyrehospital/",
@@ -93,7 +95,8 @@
       "duty": "Emergency room open 24 h; call before arrival. Daytime 8–18.",
       "duty_i18n": {
         "sl": "Urgenca odprta 24 ur na dan; pred prihodom pokličite. Podnevi 8–18.",
-        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–18."
+        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–18.",
+        "de": "Notaufnahme rund um die Uhr geöffnet; bitte vor der Ankunft anrufen. Tagsüber 8–18 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koge-dyrehospital/",
@@ -113,7 +116,8 @@
       "duty": "Emergency line 77 77 77 11; general 46 15 15 25. Emergency room Mon 18–08, Tue–Fri 17–08, Sat–Sun 08–08; hospital open 24 h every day. Call before coming.",
       "duty_i18n": {
         "sl": "Linija za nujne primere 77 77 77 11; splošna številka 46 15 15 25. Urgenca pon 18–8, tor–pet 17–8, sob–ned 8–8; bolnišnica odprta vsak dan 24 ur na dan. Pred prihodom pokličite.",
-        "hr": "Hitna linija 77 77 77 11; opći broj 46 15 15 25. Hitni prijem pon 18–08, uto–pet 17–08, sub–ned 08–08; bolnica radi 24 h svaki dan. Nazovi prije dolaska."
+        "hr": "Hitna linija 77 77 77 11; opći broj 46 15 15 25. Hitni prijem pon 18–08, uto–pet 17–08, sub–ned 08–08; bolnica radi 24 h svaki dan. Nazovi prije dolaska.",
+        "de": "Notfallnummer 77 77 77 11; allgemeine Nummer 46 15 15 25. Notaufnahme Mo 18–08 Uhr, Di–Fr 17–08 Uhr, Sa–So 08–08 Uhr; Tierklinik täglich rund um die Uhr geöffnet. Bitte vor dem Besuch anrufen."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-karlslunde-dyrehospital/",
@@ -132,7 +136,8 @@
       "duty": "24-h emergency room all days of the year; phone reaches the duty vet at any time. Regular consultations weekdays 8–16. Call before coming.",
       "duty_i18n": {
         "sl": "24-urna urgenca vse dni v letu; po telefonu je dežurni veterinar dosegljiv kadar koli. Redni pregledi ob delavnikih 8–16. Pred prihodom pokličite.",
-        "hr": "Hitni prijem 24 h svih dana u godini; telefon u svako doba spaja s dežurnim veterinarom. Redovni pregledi radnim danom 8–16. Nazovi prije dolaska."
+        "hr": "Hitni prijem 24 h svih dana u godini; telefon u svako doba spaja s dežurnim veterinarom. Redovni pregledi radnim danom 8–16. Nazovi prije dolaska.",
+        "de": "Notaufnahme ganzjährig rund um die Uhr; der diensthabende Tierarzt ist jederzeit telefonisch erreichbar. Reguläre Sprechstunden werktags 8–16 Uhr. Bitte vor dem Besuch anrufen."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/odense-dyrehospital/",
@@ -151,7 +156,8 @@
       "duty": "Emergency room open 24 h; call before arrival. Daytime 8–17.",
       "duty_i18n": {
         "sl": "Urgenca odprta 24 ur na dan; pred prihodom pokličite. Podnevi 8–17.",
-        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–17."
+        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–17.",
+        "de": "Notaufnahme rund um die Uhr geöffnet; bitte vor der Ankunft anrufen. Tagsüber 8–17 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/varde-dyrehospital/",
@@ -171,7 +177,8 @@
       "duty": "Emergency room open around the clock, all year; call first. Regular hours Mon-Fri 08:00-17:00.",
       "duty_i18n": {
         "sl": "Urgenca odprta 24 ur na dan, vse leto; najprej pokličite. Redni urnik pon–pet 8–17.",
-        "hr": "Hitni prijem radi 24 sata, cijele godine; prvo nazovi. Redovno radno vrijeme pon–pet 08:00–17:00."
+        "hr": "Hitni prijem radi 24 sata, cijele godine; prvo nazovi. Redovno radno vrijeme pon–pet 08:00–17:00.",
+        "de": "Notaufnahme ganzjährig rund um die Uhr geöffnet; bitte zuerst anrufen. Reguläre Zeiten Mo–Fr 08.00–17.00 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/aarhus-dyrehospital/",
@@ -191,7 +198,8 @@
       "duty": "Emergency room open 24 h; call before arrival. Daytime 8–16:30.",
       "duty_i18n": {
         "sl": "Urgenca odprta 24 ur na dan; pred prihodom pokličite. Podnevi 8–16.30.",
-        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–16:30."
+        "hr": "Hitni prijem radi 24 h; nazovi prije dolaska. Danju 8–16:30.",
+        "de": "Notaufnahme rund um die Uhr geöffnet; bitte vor der Ankunft anrufen. Tagsüber 8–16.30 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
@@ -211,7 +219,8 @@
       "duty": "Duty vet outside regular hours on the same number; acutely ill or injured animals can be treated 'hele døgnet' (around the clock).",
       "duty_i18n": {
         "sl": "Dežurni veterinar izven rednega delovnega časa na isti številki; akutno bolne ali poškodovane hišne ljubljenčke lahko obravnavajo „hele døgnet“ (24 ur na dan).",
-        "hr": "Dežurni veterinar izvan redovnog radnog vremena na istom broju; akutno bolesne ili ozlijeđene životinje mogu se liječiti „hele døgnet” (24 sata)."
+        "hr": "Dežurni veterinar izvan redovnog radnog vremena na istom broju; akutno bolesne ili ozlijeđene životinje mogu se liječiti „hele døgnet” (24 sata).",
+        "de": "Außerhalb der regulären Zeiten Bereitschaftstierarzt unter derselben Nummer; akut kranke oder verletzte Haustiere können „hele døgnet“ (rund um die Uhr) behandelt werden."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/dyrehospitalet-city-syd/",
@@ -230,7 +239,8 @@
       "duty": "Emergency 8–23; regular hours 8–17.",
       "duty_i18n": {
         "sl": "Nujna pomoč 8–23; redni urnik 8–17.",
-        "hr": "Hitni prijem 8–23; redovno radno vrijeme 8–17."
+        "hr": "Hitni prijem 8–23; redovno radno vrijeme 8–17.",
+        "de": "Notfälle 8–23 Uhr; reguläre Zeiten 8–17 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -249,7 +259,8 @@
       "duty": "Emergency 8–17 only.",
       "duty_i18n": {
         "sl": "Nujna pomoč samo 8–17.",
-        "hr": "Hitni prijem samo 8–17."
+        "hr": "Hitni prijem samo 8–17.",
+        "de": "Notfälle nur 8–17 Uhr."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -268,7 +279,8 @@
       "duty": "Call 75 52 23 33 and you are connected to the vet on duty in the Trekant area, 24 h incl. weekends and public holidays. On-call: a vet is not always on site; agree time and place by phone.",
       "duty_i18n": {
         "sl": "Pokličite 75 52 23 33 in povezali vas bodo z dežurnim veterinarjem na območju Trekant, 24 ur na dan, tudi ob koncih tedna in praznikih. Dežurstvo: veterinar ni vedno v ambulanti; uro in kraj dogovorite po telefonu.",
-        "hr": "Nazovi 75 52 23 33 i bit ćeš spojen s dežurnim veterinarom na području Trekanta, 24 h, uključujući vikende i blagdane. Riječ je o pozivnom dežurstvu: veterinar nije uvijek u ambulanti, pa vrijeme i mjesto dogovori telefonom."
+        "hr": "Nazovi 75 52 23 33 i bit ćeš spojen s dežurnim veterinarom na području Trekanta, 24 h, uključujući vikende i blagdane. Riječ je o pozivnom dežurstvu: veterinar nije uvijek u ambulanti, pa vrijeme i mjesto dogovori telefonom.",
+        "de": "Unter 75 52 23 33 werden Sie mit dem diensthabenden Tierarzt im Gebiet Trekant verbunden, rund um die Uhr, auch am Wochenende und an Feiertagen. Bereitschaftsdienst: Ein Tierarzt ist nicht immer vor Ort; Zeit und Ort telefonisch vereinbaren."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -287,7 +299,8 @@
       "duty": "Opening hours Mon 8-18, Tue-Fri 8-17, closed weekends; after hours see the Trekant duty cooperation entry.",
       "duty_i18n": {
         "sl": "Delovni čas pon 8–18, tor–pet 8–17, ob koncih tedna zaprto; izven delovnega časa glejte vnos dežurnega sodelovanja Trekant.",
-        "hr": "Radno vrijeme pon 8–18, uto–pet 8–17, vikendom zatvoreno; izvan radnog vremena vidi unos Trekant vagtsamarbejde."
+        "hr": "Radno vrijeme pon 8–18, uto–pet 8–17, vikendom zatvoreno; izvan radnog vremena vidi unos Trekant vagtsamarbejde.",
+        "de": "Öffnungszeiten Mo 8–18 Uhr, Di–Fr 8–17 Uhr, am Wochenende geschlossen; außerhalb davon siehe den Eintrag zur Notdienstgemeinschaft Trekant."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -305,7 +318,8 @@
       "duty": "On-call Thu–Fri 17:00–22:30 and Sat 8:00–17:00; a vet is not necessarily on site, call to arrange time and place.",
       "duty_i18n": {
         "sl": "Dežurstvo čet–pet 17–22.30 in sob 8–17; veterinar ni nujno v ambulanti, za dogovor o uri in kraju pokličite.",
-        "hr": "Pozivno dežurstvo čet–pet 17:00–22:30 i sub 8:00–17:00; veterinar nije nužno u ambulanti, nazovi i dogovori vrijeme i mjesto."
+        "hr": "Pozivno dežurstvo čet–pet 17:00–22:30 i sub 8:00–17:00; veterinar nije nužno u ambulanti, nazovi i dogovori vrijeme i mjesto.",
+        "de": "Bereitschaft Do–Fr 17.00–22.30 Uhr und Sa 8.00–17.00 Uhr; ein Tierarzt ist nicht unbedingt vor Ort, bitte anrufen und Zeit und Ort vereinbaren."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyrlaegevagten-akut-dyrlaege/",
@@ -324,7 +338,8 @@
       "duty": "Daytime Helsingør +45 49 20 30 16 (Mon–Thu 8–17, Fri 8–16); after hours call Birkerød Dyrehospital +45 81 81 89 81, where you can always reach a vet (Birkerød offers round-the-clock duty).",
       "duty_i18n": {
         "sl": "Podnevi Helsingør +45 49 20 30 16 (pon–čet 8–17, pet 8–16); izven delovnega časa pokličite Birkerød Dyrehospital +45 81 81 89 81, kjer je veterinar vedno dosegljiv (Birkerød ima dežurstvo 24 ur na dan).",
-        "hr": "Danju Helsingør +45 49 20 30 16 (pon–čet 8–17, pet 8–16); izvan radnog vremena nazovi Birkerød Dyrehospital +45 81 81 89 81, gdje se uvijek može dobiti veterinar (Birkerød ima dežurstvo 24 sata)."
+        "hr": "Danju Helsingør +45 49 20 30 16 (pon–čet 8–17, pet 8–16); izvan radnog vremena nazovi Birkerød Dyrehospital +45 81 81 89 81, gdje se uvijek može dobiti veterinar (Birkerød ima dežurstvo 24 sata).",
+        "de": "Tagsüber Helsingør +45 49 20 30 16 (Mo–Do 8–17 Uhr, Fr 8–16 Uhr); außerhalb der Zeiten Birkerød Dyrehospital +45 81 81 89 81, wo immer ein Tierarzt erreichbar ist (Birkerød bietet Notdienst rund um die Uhr)."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/helsingoerdyrehospital/",
@@ -343,7 +358,8 @@
       "duty": "Duty weekdays 17-22 and weekends 8-22 by the clinic's own vet; 'as far as possible' around the clock, otherwise referral to Karlslunde Dyrehospital.",
       "duty_i18n": {
         "sl": "Dežurstvo ob delavnikih 17–22 in ob koncih tedna 8–22 opravlja veterinar ambulante; „kolikor je mogoče“ 24 ur na dan, sicer napotitev v Karlslunde Dyrehospital.",
-        "hr": "Dežurstvo radnim danom 17–22 i vikendom 8–22 vlastitog veterinara klinike; „koliko je moguće” 24 sata, a inače upućivanje u Karlslunde Dyrehospital."
+        "hr": "Dežurstvo radnim danom 17–22 i vikendom 8–22 vlastitog veterinara klinike; „koliko je moguće” 24 sata, a inače upućivanje u Karlslunde Dyrehospital.",
+        "de": "Notdienst werktags 17–22 Uhr und am Wochenende 8–22 Uhr durch die Tierärzte der Klinik; soweit möglich rund um die Uhr, ansonsten Verweis an das Karlslunde Dyrehospital."
       },
       "small_animals": true,
       "url": "https://storehavelsedyreklinik.dk/",
@@ -361,7 +377,8 @@
       "duty": "Duty vet reachable outside opening hours (Mon–Thu 8–17, Fri 8–16) on the same number; on-call arrangement with Guldborgsund Dyrehospital; 100 % duty surcharge.",
       "duty_i18n": {
         "sl": "Dežurni veterinar je izven delovnega časa (pon–čet 8–17, pet 8–16) dosegljiv na isti številki; dogovor o dežurstvu z Guldborgsund Dyrehospital; 100-odstotno doplačilo za dežurstvo.",
-        "hr": "Dežurni veterinar dostupan izvan radnog vremena (pon–čet 8–17, pet 8–16) na istom broju; pozivno dežurstvo s Guldborgsund Dyrehospital; doplatak za dežurstvo 100 %."
+        "hr": "Dežurni veterinar dostupan izvan radnog vremena (pon–čet 8–17, pet 8–16) na istom broju; pozivno dežurstvo s Guldborgsund Dyrehospital; doplatak za dežurstvo 100 %.",
+        "de": "Diensthabender Tierarzt außerhalb der Öffnungszeiten (Mo–Do 8–17 Uhr, Fr 8–16 Uhr) unter derselben Nummer; Bereitschaftsabsprache mit Guldborgsund Dyrehospital; 100 % Notdienstzuschlag."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/nykfdyrehospital/",
@@ -380,7 +397,8 @@
       "duty": "Call 97 51 30 45 to reach the vet on duty: from closing time to 22:00 Skive Dyrehospital, Morsø Dyreklinik and Dyrehospitalet Heden take turns; 22:00–08:00 Dyrehospitalet Heden, Herning.",
       "duty_i18n": {
         "sl": "Za dežurnega veterinarja pokličite 97 51 30 45: od zaprtja do 22. ure se izmenjujejo Skive Dyrehospital, Morsø Dyreklinik in Dyrehospitalet Heden; 22–8 Dyrehospitalet Heden, Herning.",
-        "hr": "Nazovi 97 51 30 45 za dežurnog veterinara: od kraja radnog vremena do 22:00 izmjenjuju se Skive Dyrehospital, Morsø Dyreklinik i Dyrehospitalet Heden; 22:00–08:00 Dyrehospitalet Heden, Herning."
+        "hr": "Nazovi 97 51 30 45 za dežurnog veterinara: od kraja radnog vremena do 22:00 izmjenjuju se Skive Dyrehospital, Morsø Dyreklinik i Dyrehospitalet Heden; 22:00–08:00 Dyrehospitalet Heden, Herning.",
+        "de": "Unter 97 51 30 45 erreichen Sie den diensthabenden Tierarzt: von Dienstschluss bis 22.00 Uhr wechseln sich Skive Dyrehospital, Morsø Dyreklinik und Dyrehospitalet Heden ab; 22.00–08.00 Uhr Dyrehospitalet Heden, Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/",
@@ -399,7 +417,8 @@
       "duty": "Covers the night duty 22:00–08:00 for the Skive/Morsø/Herning duty rota.",
       "duty_i18n": {
         "sl": "Pokriva nočno dežurstvo 22–8 za dežurni razpored Skive/Morsø/Herning.",
-        "hr": "Pokriva noćno dežurstvo 22:00–08:00 za raspored dežurstava Skive/Morsø/Herning."
+        "hr": "Pokriva noćno dežurstvo 22:00–08:00 za raspored dežurstava Skive/Morsø/Herning.",
+        "de": "Übernimmt den Nachtdienst 22.00–08.00 Uhr für die Notdienstgemeinschaft Skive/Morsø/Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
@@ -418,7 +437,8 @@
       "duty": "On-call weekdays 17:00–08:00, weekends from Friday 17:00 to Monday 08:00 and public holidays; call the main number to be told which vet is on duty.",
       "duty_i18n": {
         "sl": "Dežurstvo ob delavnikih 17–8, ob koncih tedna od petka 17 do ponedeljka 8 in ob praznikih; pokličite glavno številko, da izveste, kateri veterinar je dežuren.",
-        "hr": "Pozivno dežurstvo radnim danom 17:00–08:00, vikendom od petka 17:00 do ponedjeljka 08:00 te blagdanima; nazovi glavni broj da saznaš koji je veterinar dežuran."
+        "hr": "Pozivno dežurstvo radnim danom 17:00–08:00, vikendom od petka 17:00 do ponedjeljka 08:00 te blagdanima; nazovi glavni broj da saznaš koji je veterinar dežuran.",
+        "de": "Bereitschaft werktags 17.00–08.00 Uhr, am Wochenende von Freitag 17.00 Uhr bis Montag 08.00 Uhr sowie an Feiertagen; über die Hauptnummer erfahren Sie, welcher Tierarzt Dienst hat."
       },
       "small_animals": true,
       "url": "https://vodskovdyreklinik.dk/",
@@ -437,7 +457,8 @@
       "duty": "24-h on-call for acutely injured animals on the same number; open Mon–Fri 8–17 (closed 12–13). On-call service, not necessarily staffed on site.",
       "duty_i18n": {
         "sl": "24-urno dežurstvo za akutno poškodovane hišne ljubljenčke na isti številki; odprto pon–pet 8–17 (zaprto 12–13). Dežurna služba, ni nujno, da je nekdo v ambulanti.",
-        "hr": "Pozivno dežurstvo 24 h za akutno ozlijeđene životinje na istom broju; radi pon–pet 8–17 (pauza 12–13). Pozivna služba, osoblje nije nužno u ambulanti."
+        "hr": "Pozivno dežurstvo 24 h za akutno ozlijeđene životinje na istom broju; radi pon–pet 8–17 (pauza 12–13). Pozivna služba, osoblje nije nužno u ambulanti.",
+        "de": "24-Stunden-Bereitschaft für akut verletzte Haustiere unter derselben Nummer; geöffnet Mo–Fr 8–17 Uhr (12–13 Uhr geschlossen). Bereitschaftsdienst, nicht unbedingt mit Personal vor Ort."
       },
       "small_animals": true,
       "url": "https://dyrlaegegaardenbornholm.dk/",
@@ -456,7 +477,8 @@
       "duty": "Mon-Fri weekday hours only (e.g. Tue 08:30-16:30); outside opening hours calls are forwarded to Bindslev Dyrehospital. Larger examinations and surgery in Bindslev.",
       "duty_i18n": {
         "sl": "Samo ob delavnikih pon–pet (npr. tor 8.30–16.30); izven delovnega časa se klici preusmerijo v Bindslev Dyrehospital. Obsežnejši pregledi in operacije v Bindslevu.",
-        "hr": "Samo radnim danom pon–pet (npr. uto 08:30–16:30); izvan radnog vremena pozivi se preusmjeravaju na Bindslev Dyrehospital. Veći pregledi i operacije u Bindslevu."
+        "hr": "Samo radnim danom pon–pet (npr. uto 08:30–16:30); izvan radnog vremena pozivi se preusmjeravaju na Bindslev Dyrehospital. Veći pregledi i operacije u Bindslevu.",
+        "de": "Nur Mo–Fr zu den Werktagszeiten (z. B. Di 08.30–16.30 Uhr); außerhalb der Öffnungszeiten werden Anrufe an das Bindslev Dyrehospital weitergeleitet. Größere Untersuchungen und Operationen in Bindslev."
       },
       "small_animals": true,
       "url": "https://bindslevdyrehospital.dk/skagen/",
@@ -474,7 +496,8 @@
       "duty": "Call to confirm hours.",
       "duty_i18n": {
         "sl": "Delovni čas potrdite po telefonu.",
-        "hr": "Nazovi da potvrdiš radno vrijeme."
+        "hr": "Nazovi da potvrdiš radno vrijeme.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.dcvest.dk",
@@ -554,7 +577,8 @@
       "duty": "Mon–Fri 8:00–17:00.",
       "duty_i18n": {
         "sl": "Pon–pet 8–17.",
-        "hr": "pon–pet 8:00–17:00."
+        "hr": "pon–pet 8:00–17:00.",
+        "de": "Mo–Fr 8.00–17.00 Uhr."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/esbjergdyrehospital/",

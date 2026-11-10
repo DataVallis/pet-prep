@@ -57,7 +57,10 @@
       "url": "https://vethospital.massey.ac.nz",
       "source_url": "https://massey.ac.nz/about/clinics-and-services-for-the-public/massey-vets/companion-animal-hospital/pet-emergency-centre",
       "checked": "2026-11-09",
-      "note": "24 h claim is weekday-only for the general public; set true because the page says 'Open 24 hours' Mon-Sat. Number 0800 738 363 (0800 PetEmergency) also on vethospital.massey.ac.nz."
+      "note": "24 h claim is weekday-only for the general public; set true because the page says 'Open 24 hours' Mon-Sat. Number 0800 738 363 (0800 PetEmergency) also on vethospital.massey.ac.nz.",
+      "duty_i18n": {
+        "de": "Montag 8 Uhr bis Samstag 8 Uhr rund um die Uhr geöffnet. Die Notfallversorgung am Wochenende (Samstag 8 Uhr bis Montag 8 Uhr) steht nur Kunden der Community Practice offen; andere Anrufer am Wochenende werden an Totally Vets Fielding verwiesen, +64 6 324 0812. Konsultationsgebühr bei Ankunft; bei stationärer Aufnahme des Haustiers 50 % Anzahlung."
+      }
     },
     {
       "kind": "clinic",
@@ -72,7 +75,10 @@
       "url": "https://www.vsahospital.co.nz/services/vsa-sylvia-park/",
       "source_url": "https://vsahospital.co.nz/",
       "checked": "2026-11-09",
-      "note": "Home page: 'Emergency vets at VSA Sylvia Park and VSA Auckland West, 24 hours a day', emergency line 09 849 2121. Sylvia Park page gives the address and main line 09 320 5645 and says 'available 24/7 to take emergency consults, walk-ins'."
+      "note": "Home page: 'Emergency vets at VSA Sylvia Park and VSA Auckland West, 24 hours a day', emergency line 09 849 2121. Sylvia Park page gives the address and main line 09 320 5645 and says 'available 24/7 to take emergency consults, walk-ins'.",
+      "duty_i18n": {
+        "de": "Tierärztlicher Notdienst rund um die Uhr. Ohne Termin möglich; telefonische Voranmeldung empfohlen."
+      }
     },
     {
       "kind": "clinic",
@@ -87,7 +93,10 @@
       "url": "https://vsahospital.co.nz/",
       "source_url": "https://vsahospital.co.nz/",
       "checked": "2026-11-09",
-      "note": "Home page gives 1/133 Central Park Drive and main line 09 320 5645; another practice page prints 1/33 Central Park Drive (typo likely). VSA Mt Albert closed and moved here (vsahospital ?p=2639). Neighbouring page ?p=360 says 'open 24 hours, 7 days a week, 365 days a year'."
+      "note": "Home page gives 1/133 Central Park Drive and main line 09 320 5645; another practice page prints 1/33 Central Park Drive (typo likely). VSA Mt Albert closed and moved here (vsahospital ?p=2639). Neighbouring page ?p=360 says 'open 24 hours, 7 days a week, 365 days a year'.",
+      "duty_i18n": {
+        "de": "Tierärztlicher Notdienst rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -102,7 +111,10 @@
       "url": "https://www.theskinvet.co.nz/contact-the-skin-vet/",
       "source_url": "https://www.theskinvet.co.nz/contact-the-skin-vet/",
       "checked": "2026-11-09",
-      "note": "Listed on another practice's contact page; hours not stated and clinic's own site not reachable via the fetch tool, so 24 h not claimed."
+      "note": "Listed on another practice's contact page; hours not stated and clinic's own site not reachable via the fetch tool, so 24 h not claimed.",
+      "duty_i18n": {
+        "de": "Notdienst-Klinik außerhalb der Sprechzeiten. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -117,7 +129,10 @@
       "url": "https://www.theskinvet.co.nz/contact-the-skin-vet/",
       "source_url": "https://www.theskinvet.co.nz/contact-the-skin-vet/",
       "checked": "2026-11-09",
-      "note": "Same source and caveats as ARC After Hours (North Shore)."
+      "note": "Same source and caveats as ARC After Hours (North Shore).",
+      "duty_i18n": {
+        "de": "Notdienst-Klinik außerhalb der Sprechzeiten. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -132,7 +147,10 @@
       "url": "https://jobs.vettimes.co.uk/employer/53563/manukau-after-hours-veterinary-clinic/",
       "source_url": "https://www.theskinvet.co.nz/contact-the-skin-vet/",
       "checked": "2026-11-09",
-      "note": "Phone and address from theskinvet contact page; hours from Vet Times employer profile page (opened), not the clinic's own site."
+      "note": "Phone and address from theskinvet contact page; hours from Vet Times employer profile page (opened), not the clinic's own site.",
+      "duty_i18n": {
+        "de": "Notdienst-Klinik außerhalb der Sprechzeiten, nicht rund um die Uhr geöffnet: Mo–Fr 18–8 Uhr; am Wochenende von Samstag 12 Uhr bis Montag 8 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -142,12 +160,15 @@
       "address": "574 Anglesea Street, Hamilton",
       "phone": "+64 800 83 83 97",
       "emergency_24h": false,
-      "duty": "Specialist referral and emergency hospital. Contact page lists business hours Mon-Fri 8am-6pm; call to ask about emergency care.",
+      "duty": "Specialist referral and emergency hospital. Business hours Mon-Fri 8am-6pm; call to ask about emergency care.",
       "small_animals": true,
       "url": "https://thereferralcentre.co.nz/contact-us/",
       "source_url": "https://thereferralcentre.co.nz/contact-us/",
       "checked": "2026-11-09",
-      "note": "Independent check: own site (thereferralcentre.co.nz) confirms phone 0800 83 83 97 and 574 Anglesea Street, Hamilton, but does not state 24/7; only the 2019 NZ Herald article did, so downgraded. Site links separate 'Emergency Hamilton' pages with no hours seen."
+      "note": "Independent check: own site (thereferralcentre.co.nz) confirms phone 0800 83 83 97 and 574 Anglesea Street, Hamilton, but does not state 24/7; only the 2019 NZ Herald article did, so downgraded. Site links separate 'Emergency Hamilton' pages with no hours seen. Moved from duty (2026-11-10): Contact page lists business hours",
+      "duty_i18n": {
+        "de": "Spezialklinik für Überweisungen und Notfälle. Mo–Fr 8–18 Uhr; wegen Notfallversorgung bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -162,7 +183,10 @@
       "url": "http://www.wellingtonafterhoursvetclinic.co.nz",
       "source_url": "https://croftondownsvet.co.nz/emergency-vet",
       "checked": "2026-11-09",
-      "note": "Clinic's own site could not be fetched (not in provenance set). Name/number confirmed on Crofton Downs Veterinary Clinic's page and on plimmerton.nz; opening hours not found."
+      "note": "Clinic's own site could not be fetched (not in provenance set). Name/number confirmed on Crofton Downs Veterinary Clinic's page and on plimmerton.nz; opening hours not found.",
+      "duty_i18n": {
+        "de": "Regionale Notdienst-Klinik für Wellington außerhalb der Sprechzeiten. Bitte vorher anrufen, damit das Team Sie erwartet."
+      }
     },
     {
       "kind": "clinic",
@@ -176,7 +200,10 @@
       "small_animals": true,
       "url": "https://croftondownsvet.co.nz/emergency-vet",
       "source_url": "https://croftondownsvet.co.nz/emergency-vet",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 7.30–19 Uhr, Sa 9–16 Uhr, So und feiertags geschlossen. Notfälle außerhalb der Sprechzeiten übernimmt die Wellington After Hours Vet Clinic, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -191,7 +218,10 @@
       "url": "https://www.afterhoursvet.co.nz/",
       "source_url": "https://www.afterhoursvet.co.nz/",
       "checked": "2026-11-09",
-      "note": "Independent check: own site (branded After Hours Vets / After Hours Veterinary Centre) confirms phone and address and gives set hours, no 24 h claim; the '24-hour' wording came from Hornby Veterinary Centre's page, so downgraded."
+      "note": "Independent check: own site (branded After Hours Vets / After Hours Veterinary Centre) confirms phone and address and gives set hours, no 24 h claim; the '24-hour' wording came from Hornby Veterinary Centre's page, so downgraded.",
+      "duty_i18n": {
+        "de": "Notdienst-Klinik außerhalb der Sprechzeiten: Mo–Do 19–8 Uhr; Fr 19 Uhr bis Mo 8 Uhr; an allen Feiertagen geöffnet. Werktags nicht rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -205,7 +235,10 @@
       "small_animals": true,
       "url": "https://web6q.lifelearn.com/hornbyvc/?p=214",
       "source_url": "https://web6q.lifelearn.com/hornbyvc/?p=214",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 8–14 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Christchurch Afterhours Veterinary Clinic anrufen, +64 3 366 1052."
+      }
     },
     {
       "kind": "clinic",
@@ -220,7 +253,10 @@
       "url": "https://rangioravetcentre.squarespace.com/sa-team-rangiora",
       "source_url": "https://rangioravetcentre.squarespace.com/sa-team-rangiora",
       "checked": "2026-11-09",
-      "note": "Hours and after-hours number not on the opened page."
+      "note": "Hours and after-hours number not on the opened page.",
+      "duty_i18n": {
+        "de": "Regelungen außerhalb der Sprechzeiten siehe Seite „After Hours“ der Klinik."
+      }
     },
     {
       "kind": "clinic",
@@ -235,7 +271,10 @@
       "url": "https://vetsouth.co.nz/clinic-invercargill",
       "source_url": "https://vetsouth.co.nz/clinic-invercargill",
       "checked": "2026-11-09",
-      "note": "Page says '24hr on call service for small animals' (on-call, not a staffed emergency hospital), so emergency_24h left false."
+      "note": "Page says '24hr on call service for small animals' (on-call, not a staffed emergency hospital), so emergency_24h left false.",
+      "duty_i18n": {
+        "de": "Mo, Di, Do, Fr 8–17.30 Uhr; Mi 8–20 Uhr; Sa 9–13 Uhr. Telefonischer Bereitschaftsdienst für Kleintiere rund um die Uhr unter der Nummer der Klinik."
+      }
     },
     {
       "kind": "clinic",
@@ -250,7 +289,10 @@
       "url": "https://www.spca.nz/centre/queenstown-vet-partnership",
       "source_url": "https://www.spca.nz/centre/queenstown-vet-partnership",
       "checked": "2026-11-09",
-      "note": "No after-hours emergency arrangement stated on the page."
+      "note": "No after-hours emergency arrangement stated on the page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–17.30 Uhr, Sa 9–13 Uhr, So geschlossen; an Feiertagen können die Zeiten abweichen. Im Notfall bitte zur Beratung anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -264,7 +306,10 @@
       "url": "https://www.vetent.co.nz/store-locator/vetent-queenstown",
       "source_url": "https://www.vetent.co.nz/store-locator/vetent-queenstown",
       "checked": "2026-11-09",
-      "note": "No phone on the opened page."
+      "note": "No phone on the opened page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So geschlossen. Notfälle außerhalb der Sprechzeiten: siehe Klinikfinder auf der Website."
+      }
     },
     {
       "kind": "poison_line",
@@ -278,7 +323,10 @@
       "url": "https://poisons.co.nz/animal-helpline",
       "source_url": "https://poisons.co.nz/animal-helpline",
       "checked": "2026-11-09",
-      "note": "Hours not stated on the page, so 24 h not claimed. Australian helpline page (animalpoisons.com.au/news/nz-helpline-coming-soon) is a 'coming soon' notice with no number."
+      "note": "Hours not stated on the page, so 24 h not claimed. Australian helpline page (animalpoisons.com.au/news/nz-helpline-coming-soon) is a 'coming soon' notice with no number.",
+      "duty_i18n": {
+        "de": "Telefonische Giftberatung für Haustierhalter und Tierarztpraxen in Neuseeland. Kostenpflichtig. Bei einer Vergiftung zusätzlich den Tierarzt anrufen; das National Poisons Centre für Menschen verweist Fälle mit Tieren hierher."
+      }
     },
     {
       "kind": "clinic",
@@ -293,7 +341,10 @@
       "url": "https://hbah.co.nz/",
       "source_url": "https://hbah.co.nz/",
       "checked": "2026-11-09",
-      "note": "Own site: weekdays 6pm-8am, weekends '24 hour Emergency Service' (true because of the explicit weekend claim). Vet Services emergency page says HBAH team handles Vet Services after-hours from 3 Feb 2025; same number on CareVets, AnimalCare pages."
+      "note": "Own site: weekdays 6pm-8am, weekends '24 hour Emergency Service' (true because of the explicit weekend claim). Vet Services emergency page says HBAH team handles Vet Services after-hours from 3 Feb 2025; same number on CareVets, AnimalCare pages.",
+      "duty_i18n": {
+        "de": "Mo–Fr 18–8 Uhr; am Wochenende rund um die Uhr geöffnet. Bitte vorher anrufen. Übernimmt die Notfälle aller Praxen in Hawke's Bay außerhalb von deren Sprechzeiten."
+      }
     },
     {
       "kind": "clinic",
@@ -308,7 +359,10 @@
       "url": "https://www.neighbourly.co.nz/c/06afM6oeWS5ENQ1CjBXk8rDrRkhrVTrQi9znWbs4YiXP3zL1qG8VpVP3z9YLix8xhR95CA9ojJgAdGpU3b53pwj5DIb",
       "source_url": "https://www.neighbourly.co.nz/c/06afM6oeWS5ENQ1CjBXk8rDrRkhrVTrQi9znWbs4YiXP3zL1qG8VpVP3z9YLix8xhR95CA9ojJgAdGpU3b53pwj5DIb",
       "checked": "2026-11-09",
-      "note": "Business's own Neighbourly page (opened): Mon-Thu 6pm-8am, Fri 6pm-Mon 8am, title says '24 hr weekend emergency service'; no phone there, email vet@wavh.co.nz, domain wavh.co.nz not reachable via fetch. Phone 07 839 5656 and address from CareVets page (carevets.co.nz/services/emergencies/) and CareVets Hamilton clinic pages. Weekday overnight only, so 24 h not claimed."
+      "note": "Business's own Neighbourly page (opened): Mon-Thu 6pm-8am, Fri 6pm-Mon 8am, title says '24 hr weekend emergency service'; no phone there, email vet@wavh.co.nz, domain wavh.co.nz not reachable via fetch. Phone 07 839 5656 and address from CareVets page (carevets.co.nz/services/emergencies/) and CareVets Hamilton clinic pages. Weekday overnight only, so 24 h not claimed.",
+      "duty_i18n": {
+        "de": "Mo–Fr 18–8 Uhr; am Wochenende und an Feiertagen rund um die Uhr (Fr 18 Uhr bis Mo 8 Uhr). Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -323,7 +377,10 @@
       "url": "https://carevets.co.nz/carevets-cameron-road/",
       "source_url": "https://carevets.co.nz/services/emergencies/",
       "checked": "2026-11-09",
-      "note": "Address and number from CareVets emergencies page; CareVets Cameron Road page gives the same 0800 229 838 for after hours. Hours not found, own site not surfaced by search."
+      "note": "Address and number from CareVets emergencies page; CareVets Cameron Road page gives the same 0800 229 838 for after hours. Hours not found, own site not surfaced by search.",
+      "duty_i18n": {
+        "de": "Notfallklinik für Tauranga außerhalb der Sprechzeiten. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -338,7 +395,10 @@
       "url": "https://carevets.co.nz/services/emergencies/",
       "source_url": "https://carevets.co.nz/services/emergencies/",
       "checked": "2026-11-09",
-      "note": "Address and phone only from CareVets emergencies page (clinic own site not surfaced; localist/neighbourly directories not used). Hours unknown."
+      "note": "Address and phone only from CareVets emergencies page (clinic own site not surfaced; localist/neighbourly directories not used). Hours unknown.",
+      "duty_i18n": {
+        "de": "Notfall- und Intensivklinik außerhalb der Sprechzeiten an der North Shore von Auckland. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -353,7 +413,10 @@
       "url": "https://carevets.co.nz/services/emergencies/",
       "source_url": "https://carevets.co.nz/services/emergencies/",
       "checked": "2026-11-09",
-      "note": "Address and phone only from CareVets emergencies page; hours unknown."
+      "note": "Address and phone only from CareVets emergencies page; hours unknown.",
+      "duty_i18n": {
+        "de": "Notdienst-Klinik außerhalb der Sprechzeiten im Westen von Auckland. Bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -368,7 +431,10 @@
       "url": "https://shop.franklinvets.co.nz/contact/hamilton",
       "source_url": "https://shop.franklinvets.co.nz/contact/hamilton",
       "checked": "2026-11-09",
-      "note": "Franklin Vets contact page. A Neighbourly listing for the same number mentions a '24 hour Emergency Service'; not on the Franklin page, so 24 h not claimed. Shares site with Veterinary Referral Services (07 849 0707, Mon-Fri 8:30-4:30)."
+      "note": "Franklin Vets contact page. A Neighbourly listing for the same number mentions a '24 hour Emergency Service'; not on the Franklin page, so 24 h not claimed. Shares site with Veterinary Referral Services (07 849 0707, Mon-Fri 8:30-4:30).",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8.30–16 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten erreichen Sie unter der Nummer der Klinik den diensthabenden Notdienst."
+      }
     },
     {
       "kind": "clinic",
@@ -383,7 +449,10 @@
       "url": "https://www.vetent.co.nz/store-locator/vetent-te-awamutu",
       "source_url": "https://www.vetent.co.nz/store-locator/vetent-te-awamutu",
       "checked": "2026-11-09",
-      "note": "Only the after-hours number is on the page; a phone advice line, not a staffed 24 h clinic."
+      "note": "Only the after-hours number is on the page; a phone advice line, not a staffed 24 h clinic.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Sprechzeiten erreichen Sie unter +64 7 872 2040 eine tiermedizinische Fachkraft (kostenlose Telefonberatung rund um die Uhr), die Notfallversorgung vermitteln kann."
+      }
     },
     {
       "kind": "clinic",
@@ -397,7 +466,10 @@
       "url": "https://www.vetent.co.nz/store-locator/vetent-havelock-north",
       "source_url": "https://www.vetent.co.nz/store-locator/vetent-havelock-north",
       "checked": "2026-11-09",
-      "note": "No phone on the page; page links to a clinic locator for after hours. After-hours number is HBAH per hbah.co.nz."
+      "note": "No phone on the page; page links to a clinic locator for after hours. After-hours number is HBAH per hbah.co.nz.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -411,7 +483,10 @@
       "small_animals": true,
       "url": "https://www.vetent.co.nz/store-locator/vetent-gisborne",
       "source_url": "https://www.vetent.co.nz/store-locator/vetent-gisborne",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr; Sa und So geschlossen, außer an jedem zweiten Samstag 9–12 Uhr (bitte telefonisch bestätigen). Notfälle außerhalb der Sprechzeiten: siehe Klinikfinder auf der Website."
+      }
     },
     {
       "kind": "clinic",
@@ -426,7 +501,10 @@
       "url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "source_url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "checked": "2026-11-09",
-      "note": "VetPlus careers page; 07 376 2800 is the Pets line (Rural 07 376 2809). After-hours arrangements not described (a locum role mentions a shared roster)."
+      "note": "VetPlus careers page; 07 376 2800 is the Pets line (Rural 07 376 2809). After-hours arrangements not described (a locum role mentions a shared roster).",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, Sa 9–12 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -441,7 +519,10 @@
       "url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "source_url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "checked": "2026-11-09",
-      "note": "Pets line; Rural 07 348 9587. Page also lists 'Mon-Fri 8am-5pm' so hours slightly inconsistent. NZ Herald (opened) says some Rotorua clinics cut after-hours; nearest after-hours option is in Tauranga."
+      "note": "Pets line; Rural 07 348 9587. Page also lists 'Mon-Fri 8am-5pm' so hours slightly inconsistent. NZ Herald (opened) says some Rotorua clinics cut after-hours; nearest after-hours option is in Tauranga.",
+      "duty_i18n": {
+        "de": "Öffnungszeiten: Mo, Mi, Fr 8–17 Uhr; Di und Do 8–18 Uhr; Sa 9–14 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -456,7 +537,10 @@
       "url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "source_url": "https://vetplus.co.nz/careers/small-animal-veterinarian-job-taupo/",
       "checked": "2026-11-09",
-      "note": "Mixed/rural practice; small-animal service not confirmed on the page."
+      "note": "Mixed/rural practice; small-animal service not confirmed on the page.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -471,7 +555,10 @@
       "url": "https://www.npvet.co.nz/?p=11550",
       "source_url": "https://www.npvet.co.nz/?p=11550",
       "checked": "2026-11-09",
-      "note": "Page says '24/7 emergency service' via the clinic number (on-call, not a staffed hospital); treated like VetSouth Invercargill, so emergency_24h false. Sunday hours conflict in page footer."
+      "note": "Page says '24/7 emergency service' via the clinic number (on-call, not a staffed hospital); treated like VetSouth Invercargill, so emergency_24h false. Sunday hours conflict in page footer.",
+      "duty_i18n": {
+        "de": "Mo und Mi–Do 7.30–20 Uhr, Di und Fr 7.30–18 Uhr, Sa 9–12 Uhr (nur Notfälle am selben Tag), So geschlossen. Außerhalb der Sprechzeiten Notdienst rund um die Uhr unter derselben Nummer."
+      }
     },
     {
       "kind": "clinic",
@@ -486,7 +573,10 @@
       "url": "https://www.vshb.co.nz/",
       "source_url": "https://www.vshb.co.nz/contact/",
       "checked": "2026-11-09",
-      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement."
+      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -501,7 +591,10 @@
       "url": "https://www.vshb.co.nz/",
       "source_url": "https://www.vshb.co.nz/contact/",
       "checked": "2026-11-09",
-      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement."
+      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -516,7 +609,10 @@
       "url": "https://www.vshb.co.nz/",
       "source_url": "https://www.vshb.co.nz/contact/",
       "checked": "2026-11-09",
-      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement."
+      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -531,7 +627,10 @@
       "url": "https://www.vshb.co.nz/",
       "source_url": "https://www.vshb.co.nz/contact/",
       "checked": "2026-11-09",
-      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement."
+      "note": "Hours from contact page; after-hours number from vshb.co.nz/emergency-vet-care/. Vet Services also covers farm animals; small-animal service assumed from companion-animal after-hours statement.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr, Sa 9–12 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -545,7 +644,10 @@
       "small_animals": true,
       "url": "https://www.animalcare.co.nz/",
       "source_url": "https://www.animalcare.co.nz/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So 10–14 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -559,7 +661,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-cameron-road/",
       "source_url": "https://carevets.co.nz/carevets-cameron-road/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Bay After Hours Veterinary Hospital anrufen, +64 800 229 838."
+      }
     },
     {
       "kind": "clinic",
@@ -573,7 +678,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-napier/",
       "source_url": "https://carevets.co.nz/carevets-napier/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa–So 9–16 Uhr (am Wochenende ist nicht immer ein Tierarzt vor Ort), an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103."
+      }
     },
     {
       "kind": "clinic",
@@ -587,7 +695,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-kilbirnie/",
       "source_url": "https://carevets.co.nz/carevets-kilbirnie/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–15 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -601,7 +712,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-johnsonville/",
       "source_url": "https://carevets.co.nz/carevets-johnsonville/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Mi und Fr 8–18.30 Uhr, Do 8–19 Uhr, Sa 9–16.30 Uhr, So 10–16 Uhr, an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -615,7 +729,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-wainuiomata/",
       "source_url": "https://carevets.co.nz/carevets-wainuiomata/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–16 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -629,7 +746,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-porirua/",
       "source_url": "https://carevets.co.nz/carevets-porirua/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 9.30–16.30 Uhr, So 10–15 Uhr (sonntags kein Tierarzt vor Ort), an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -643,7 +763,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-kapiti/",
       "source_url": "https://carevets.co.nz/carevets-kapiti/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo und Do–Fr 8–18 Uhr, Di–Mi 8–19 Uhr, Sa 9–15 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545."
+      }
     },
     {
       "kind": "clinic",
@@ -657,7 +780,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-hamilton-south/",
       "source_url": "https://carevets.co.nz/carevets-hamilton-south/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656."
+      }
     },
     {
       "kind": "clinic",
@@ -671,7 +797,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-rototuna/",
       "source_url": "https://carevets.co.nz/carevets-rototuna/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo, Di, Do, Fr 8–18 Uhr, Mi 8–19 Uhr, Sa–So 9–16 Uhr, an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656."
+      }
     },
     {
       "kind": "clinic",
@@ -685,7 +814,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-chartwell/",
       "source_url": "https://carevets.co.nz/carevets-chartwell/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Mi und Fr 8–18 Uhr, Do 8–19.30 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656."
+      }
     },
     {
       "kind": "clinic",
@@ -699,7 +831,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-horsham-downs/",
       "source_url": "https://carevets.co.nz/carevets-horsham-downs/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17.30 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656."
+      }
     },
     {
       "kind": "clinic",
@@ -713,7 +848,10 @@
       "small_animals": true,
       "url": "https://carevets.co.nz/carevets-gisborne/",
       "source_url": "https://carevets.co.nz/carevets-gisborne/",
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–17 Uhr, Sa 9–12 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte den diensthabenden Tierarzt anrufen, +64 21 548 387."
+      }
     }
   ],
   "notes": "Partial run. Added Hawke's Bay, Hamilton/Waikato, Wellington region (CareVets), Tauranga after-hours, Taupo/Rotorua (VetPlus), Auckland after-hours entries. Still not verified from an opened own site: animalemergency.co.nz (VSA Animal Emergency site, not openable by fetch, twice); wavh.co.nz; wellingtonafterhoursvetclinic.co.nz; bay after hours hospital site; nsvecc own site (details from CareVets page only); Dunedin Emergency Vet Clinic (only ODT articles: small animals, 7 days a week from May, no address or phone found); Nelson, Whangarei, Dunedin and Tauranga/Mount Maunganui general clinics (only aggregator listings surfaced); Marshall & Pringle PETMED +64 3 327 8455 (town not stated; after hours via +64 3 366 1052); Rotorua after-hours (none found). Community/aggregator directories (pets-org-nz.pages.dev, yellow.co.nz, topvet, neighbourly, localist) used only as leads."

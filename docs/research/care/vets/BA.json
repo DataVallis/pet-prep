@@ -66,7 +66,8 @@
       "duty": "Open daily 09:00-20:00 (not 24 h).",
       "duty_i18n": {
         "sl": "Odprto vsak dan 9–20 (ne 24 ur na dan).",
-        "hr": "Otvoreno svaki dan 09:00–20:00 (nije 24 h)."
+        "hr": "Otvoreno svaki dan 09:00–20:00 (nije 24 h).",
+        "de": "Täglich 9–20 Uhr geöffnet (nicht 24 Stunden)."
       },
       "small_animals": true,
       "url": "https://vssarajevo.ba/",
@@ -109,7 +110,8 @@
       "duty": "Regular hours 09:00-19:00; emergency phones 065 378 810 and 057 340 620.",
       "duty_i18n": {
         "sl": "Redni delovni čas 9–19; številki za nujne primere 065 378 810 in 057 340 620.",
-        "hr": "Redovno radno vrijeme 09:00–19:00; telefoni za hitne slučajeve 065 378 810 i 057 340 620."
+        "hr": "Redovno radno vrijeme 09:00–19:00; telefoni za hitne slučajeve 065 378 810 i 057 340 620.",
+        "de": "Reguläre Öffnungszeiten 9–19 Uhr; Notfalltelefone 065 378 810 und 057 340 620."
       },
       "source_url": "https://n1info.ba/vijesti/a154376-Sarajevo-ima-dezurnu-ambulantu-kod-andquotomiljenog-veterinaraandquot/",
       "checked": "2026-11-04",
@@ -126,7 +128,8 @@
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-14:00; on-call vet outside hours and on Sundays for emergencies: 066/484-373.",
       "duty_i18n": {
         "sl": "Pon–pet 8–20, sob 9–14; izven delovnega časa in ob nedeljah je za nujne primere na voljo dežurni veterinar: 066/484-373.",
-        "hr": "Pon–pet 08:00–20:00, sub 09:00–14:00; dežurni veterinar za hitne slučajeve izvan radnog vremena i nedjeljom: 066/484-373."
+        "hr": "Pon–pet 08:00–20:00, sub 09:00–14:00; dežurni veterinar za hitne slučajeve izvan radnog vremena i nedjeljom: 066/484-373.",
+        "de": "Mo–Fr 8–20 Uhr, Sa 9–14 Uhr; Bereitschaftstierarzt außerhalb der Öffnungszeiten und sonntags für Notfälle: 066/484-373."
       },
       "url": "https://www.blvet.ba/",
       "source_url": "https://www.blvet.ba/",
@@ -144,7 +147,8 @@
       "duty": "Mon-Fri 08:00-19:00, Sat 08:00-13:00, Sun on call; duty phone 066 321 132.",
       "duty_i18n": {
         "sl": "Pon–pet 8–19, sob 8–13, ned v pripravljenosti; dežurna številka 066 321 132.",
-        "hr": "Pon–pet 08:00–19:00, sub 08:00–13:00, ned dežurstvo; dežurni telefon 066 321 132."
+        "hr": "Pon–pet 08:00–19:00, sub 08:00–13:00, ned dežurstvo; dežurni telefon 066 321 132.",
+        "de": "Mo–Fr 8–19 Uhr, Sa 8–13 Uhr, So Bereitschaftsdienst; Notdienst-Telefon 066 321 132."
       },
       "url": "https://veterinarskaambulanta.ba/en/",
       "source_url": "https://veterinarskaambulanta.ba/en/contact-us/",
@@ -162,7 +166,8 @@
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-14:00, Sun closed.",
       "duty_i18n": {
         "sl": "Pon–pet 9–20, sob 9–14, ned zaprto.",
-        "hr": "Pon–pet 09:00–20:00, sub 09:00–14:00, ned zatvoreno."
+        "hr": "Pon–pet 09:00–20:00, sub 09:00–14:00, ned zatvoreno.",
+        "de": "Mo–Fr 9–20 Uhr, Sa 9–14 Uhr, So geschlossen."
       },
       "url": "https://www.vethealth.ba/",
       "source_url": "https://vethealth.ba/dezurni-veterinar.html",
@@ -240,7 +245,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 09:00-15:00, Sun 10:00-14:00; duty vet for emergencies on 063 900 100.",
       "duty_i18n": {
         "sl": "Pon–pet 8–18, sob 9–15, ned 10–14; dežurni veterinar za nujne primere na 063 900 100.",
-        "hr": "Pon–pet 08:00–18:00, sub 09:00–15:00, ned 10:00–14:00; dežurni veterinar za hitne slučajeve na 063 900 100."
+        "hr": "Pon–pet 08:00–18:00, sub 09:00–15:00, ned 10:00–14:00; dežurni veterinar za hitne slučajeve na 063 900 100.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–15 Uhr, So 10–14 Uhr; Bereitschaftstierarzt für Notfälle unter 063 900 100."
       },
       "source_url": "https://www.klix.ba/biznis/u-mostaru-otvorena-najsavremenija-veterinarska-stanica-u-bih-uskoro-krece-i-centar-veterinarske-izvrsnosti/250403131",
       "checked": "2026-11-04",
@@ -353,7 +359,8 @@
       "duty": "Mon-Sat 07:00-18:00, Sun 07:00-11:00; duty phone 035/207-211.",
       "duty_i18n": {
         "sl": "Pon–sob 7–18, ned 7–11; dežurna številka 035/207-211.",
-        "hr": "Pon–sub 07:00–18:00, ned 07:00–11:00; dežurni telefon 035/207-211."
+        "hr": "Pon–sub 07:00–18:00, ned 07:00–11:00; dežurni telefon 035/207-211.",
+        "de": "Mo–Sa 7–18 Uhr, So 7–11 Uhr; Notdienst-Telefon 035/207-211."
       },
       "url": "https://vstuzla.ba/",
       "source_url": "https://vstuzla.ba/kontakt/",
@@ -469,7 +476,8 @@
       "duty": "Emergency line 24 h on +387 65 968 642; regular hours Mon-Fri 08:00-18:00, Sat 08:00-16:00.",
       "duty_i18n": {
         "sl": "Številka za nujne primere 24 ur na dan +387 65 968 642; redni delovni čas pon–pet 8–18, sob 8–16.",
-        "hr": "Hitna linija 24 h na +387 65 968 642; redovno radno vrijeme pon–pet 08:00–18:00, sub 08:00–16:00."
+        "hr": "Hitna linija 24 h na +387 65 968 642; redovno radno vrijeme pon–pet 08:00–18:00, sub 08:00–16:00.",
+        "de": "Notfalltelefon rund um die Uhr unter +387 65 968 642; reguläre Öffnungszeiten Mo–Fr 8–18 Uhr, Sa 8–16 Uhr."
       },
       "url": "https://novavet.ba/",
       "source_url": "https://novavet.ba/pet-shop/",
@@ -487,7 +495,8 @@
       "duty": "Mon-Fri 08:00-16:00.",
       "duty_i18n": {
         "sl": "Pon–pet 8–16.",
-        "hr": "Pon–pet 08:00–16:00."
+        "hr": "Pon–pet 08:00–16:00.",
+        "de": "Mo–Fr 8–16 Uhr."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -505,7 +514,8 @@
       "duty": "Open 24 h.",
       "duty_i18n": {
         "sl": "Odprto 24 ur na dan.",
-        "hr": "Otvoreno 24 h."
+        "hr": "Otvoreno 24 h.",
+        "de": "Rund um die Uhr geöffnet."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -522,7 +532,8 @@
       "duty": "Open 24 h.",
       "duty_i18n": {
         "sl": "Odprto 24 ur na dan.",
-        "hr": "Otvoreno 24 h."
+        "hr": "Otvoreno 24 h.",
+        "de": "Rund um die Uhr geöffnet."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",

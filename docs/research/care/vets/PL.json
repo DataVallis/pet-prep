@@ -92,7 +92,8 @@
       "duty": "Registration 8:00–20:00; clinic open around the clock, 7 days a week.",
       "duty_i18n": {
         "sl": "Registracija 8–20; klinika odprta 24 ur na dan, 7 dni v tednu.",
-        "hr": "Recepcija 8:00–20:00; klinika otvorena 0–24, 7 dana u tjednu."
+        "hr": "Recepcija 8:00–20:00; klinika otvorena 0–24, 7 dana u tjednu.",
+        "de": "Anmeldung 8–20 Uhr; Klinik täglich rund um die Uhr geöffnet."
       },
       "url": "https://klinikawet.sggw.edu.pl/",
       "source_url": "https://klinikawet.sggw.edu.pl/kontakt/",
@@ -112,7 +113,8 @@
       "duty": "Emergency room ER 24 H/7; urgent patients admitted without referral; call ahead.",
       "duty_i18n": {
         "sl": "Urgenca ER 24 H/7; nujne primere sprejmejo brez napotnice; vnaprej pokličite.",
-        "hr": "Hitna ambulanta ER 24 h/7; hitni pacijenti primaju se bez uputnice; nazovi unaprijed."
+        "hr": "Hitna ambulanta ER 24 h/7; hitni pacijenti primaju se bez uputnice; nazovi unaprijed.",
+        "de": "Notaufnahme täglich rund um die Uhr; dringende Fälle werden ohne Überweisung aufgenommen; vorher anrufen."
       },
       "url": "https://veterio.pl/en/",
       "source_url": "https://veterio.pl/en/contact/",
@@ -131,7 +133,8 @@
       "duty": "Clinic open around the clock.",
       "duty_i18n": {
         "sl": "Klinika odprta 24 ur na dan.",
-        "hr": "Klinika otvorena 0–24."
+        "hr": "Klinika otvorena 0–24.",
+        "de": "Klinik rund um die Uhr geöffnet."
       },
       "url": "https://klinikasfora.pl/",
       "source_url": "https://klinikasfora.pl/kontakt/",
@@ -150,7 +153,8 @@
       "duty": "Open 24/7 incl. nights, Sundays and holidays.",
       "duty_i18n": {
         "sl": "Odprto 24/7, tudi ponoči, ob nedeljah in praznikih.",
-        "hr": "Otvoreno 24/7, uključujući noći, nedjelje i blagdane."
+        "hr": "Otvoreno 24/7, uključujući noći, nedjelje i blagdane.",
+        "de": "Rund um die Uhr geöffnet, auch nachts, sonntags und feiertags."
       },
       "url": "https://mkw-24.pl/",
       "source_url": "https://mkw-24.pl/o-nas.html",
@@ -169,7 +173,8 @@
       "duty": "Open 24/7, 365 days.",
       "duty_i18n": {
         "sl": "Odprto 24/7, 365 dni v letu.",
-        "hr": "Otvoreno 24/7, 365 dana."
+        "hr": "Otvoreno 24/7, 365 dana.",
+        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr."
       },
       "url": "https://klinikavet.pl/",
       "source_url": "https://klinikavet.pl/calodobowa-klinika-weterynaryjna-w-warszawie/",
@@ -188,7 +193,8 @@
       "emergency_24h": true,
       "duty": "Daytime duty Mon–Fri 9:00–23:00, Sat–Sun 10:00–18:00; also round-the-clock.",
       "duty_i18n": {
-        "hr": "Dnevno dežurstvo pon–pet 9:00–23:00, sub–ned 10:00–18:00; ujedno radi 0–24."
+        "hr": "Dnevno dežurstvo pon–pet 9:00–23:00, sub–ned 10:00–18:00; ujedno radi 0–24.",
+        "de": "Tagesdienst Mo–Fr 9–23 Uhr, Sa–So 10–18 Uhr; zusätzlich rund um die Uhr erreichbar."
       },
       "url": "https://www.pulsvet.pl/",
       "source_url": "https://www.pulsvet.pl/",
@@ -208,7 +214,8 @@
       "duty": "Emergency duty around the clock; reception 8:00-21:00.",
       "duty_i18n": {
         "sl": "Nujna služba 24 ur na dan; recepcija 8–21.",
-        "hr": "Hitno dežurstvo 0–24; recepcija 8:00–21:00."
+        "hr": "Hitno dežurstvo 0–24; recepcija 8:00–21:00.",
+        "de": "Notdienst rund um die Uhr; Anmeldung 8–21 Uhr."
       },
       "url": "https://www.multiwet.pl/",
       "source_url": "https://www.multiwet.pl/",
@@ -228,7 +235,8 @@
       "duty": "Mon-Sun 7:00-23:00; holidays 9:00-21:00.",
       "duty_i18n": {
         "sl": "pon–ned 7–23; prazniki 9–21.",
-        "hr": "pon–ned 7:00–23:00; na blagdane 9:00–21:00."
+        "hr": "pon–ned 7:00–23:00; na blagdane 9:00–21:00.",
+        "de": "Täglich 7–23 Uhr; an Feiertagen 9–21 Uhr."
       },
       "url": "https://wetwitolin.waw.pl/",
       "source_url": "https://wetwitolin.waw.pl/kontakt/",
@@ -246,7 +254,8 @@
       "emergency_24h": true,
       "duty": "Mon-Thu 8:00-24:00; Fri-Sun 24-hour.",
       "duty_i18n": {
-        "hr": "pon–čet 8:00–24:00; pet–ned 24 h."
+        "hr": "pon–čet 8:00–24:00; pet–ned 24 h.",
+        "de": "Mo–Do 8–24 Uhr; Fr–So rund um die Uhr."
       },
       "url": "https://oiomvet.pl/",
       "source_url": "https://oiomvet.pl/",
@@ -266,7 +275,8 @@
       "duty": "Mon-Fri 8:00-21:00, Sat 9:00-20:00; Dyżur EMERGENCY 24h; hospital care round the clock.",
       "duty_i18n": {
         "sl": "pon–pet 8–21, sob 9–20; Dyżur EMERGENCY 24h; bolnišnična oskrba 24 ur na dan.",
-        "hr": "pon–pet 8:00–21:00, sub 9:00–20:00; HITNO dežurstvo (Dyżur EMERGENCY) 24 h; bolnička skrb 0–24."
+        "hr": "pon–pet 8:00–21:00, sub 9:00–20:00; HITNO dežurstvo (Dyżur EMERGENCY) 24 h; bolnička skrb 0–24.",
+        "de": "Mo–Fr 8–21 Uhr, Sa 9–20 Uhr; Notdienst und stationäre Versorgung rund um die Uhr."
       },
       "url": "https://krakow.amvet.pl/",
       "source_url": "https://krakow.amvet.pl/szpital-24h/",
@@ -286,7 +296,8 @@
       "duty": "Mon-Fri day 9:00-20:00, night 20:00-9:00; Sat 10:00-13:00 day, 13:00-24:00 interventional; Sun interventional.",
       "duty_i18n": {
         "sl": "pon–pet dan 9–20, noč 20–9; sob 10–13 dan, 13–24 interventno; ned interventno.",
-        "hr": "pon–pet danju 9:00–20:00, noću 20:00–9:00; sub 10:00–13:00 danju, 13:00–24:00 interventna služba; ned interventna služba."
+        "hr": "pon–pet danju 9:00–20:00, noću 20:00–9:00; sub 10:00–13:00 danju, 13:00–24:00 interventna služba; ned interventna služba.",
+        "de": "Mo–Fr tagsüber 9–20 Uhr, nachts 20–9 Uhr; Sa tagsüber 10–13 Uhr, Notdienst 13–24 Uhr; So Notdienst."
       },
       "url": "https://luxvet24.pl/",
       "source_url": "https://luxvet24.pl/",
@@ -306,7 +317,8 @@
       "duty": "Mon-Sun 00:00-00:00 (całodobowo).",
       "duty_i18n": {
         "sl": "pon–ned 0–24 (całodobowo).",
-        "hr": "pon–ned 0–24 (całodobowo)."
+        "hr": "pon–ned 0–24 (całodobowo).",
+        "de": "Täglich rund um die Uhr."
       },
       "url": "https://www.skotnicka24.pl/",
       "source_url": "https://www.skotnicka24.pl/",
@@ -325,7 +337,8 @@
       "duty": "Open 24/7 incl. nights, Sundays and holidays.",
       "duty_i18n": {
         "sl": "Odprto 24/7, tudi ponoči, ob nedeljah in praznikih.",
-        "hr": "Otvoreno 24/7, uključujući noći, nedjelje i blagdane."
+        "hr": "Otvoreno 24/7, uključujući noći, nedjelje i blagdane.",
+        "de": "Rund um die Uhr geöffnet, auch nachts, sonntags und feiertags."
       },
       "url": "https://kwt24.pl/",
       "source_url": "https://kwt24.pl/",
@@ -344,7 +357,8 @@
       "duty": "Mon-Fri 8:00-21:00, Sat 8:00-16:00; Sun/holidays and other hours emergency duty.",
       "duty_i18n": {
         "sl": "pon–pet 8–21, sob 8–16; ned/prazniki in ob drugih urah nujna služba.",
-        "hr": "pon–pet 8:00–21:00, sub 8:00–16:00; nedjeljom, blagdanima i u ostalo vrijeme hitno dežurstvo."
+        "hr": "pon–pet 8:00–21:00, sub 8:00–16:00; nedjeljom, blagdanima i u ostalo vrijeme hitno dežurstvo.",
+        "de": "Mo–Fr 8–21 Uhr, Sa 8–16 Uhr; So, feiertags und zu allen übrigen Zeiten Notdienst."
       },
       "url": "https://upw.urk.edu.pl/",
       "source_url": "https://upw.urk.edu.pl/",
@@ -364,7 +378,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00.",
       "duty_i18n": {
         "sl": "pon–pet 9–18, sob 9–14.",
-        "hr": "pon–pet 9:00–18:00, sub 9:00–14:00."
+        "hr": "pon–pet 9:00–18:00, sub 9:00–14:00.",
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–14 Uhr."
       },
       "url": "https://www.wetzakopianka.pl/",
       "source_url": "https://www.wetzakopianka.pl/",
@@ -383,7 +398,8 @@
       "duty": "Registration Mon-Fri 8:00-20:30, Sat-Sun/holidays 9:00-16:00; clinic open around the clock; night duty surcharge.",
       "duty_i18n": {
         "sl": "Registracija pon–pet 8–20.30, sob–ned/prazniki 9–16; klinika odprta 24 ur na dan; nočno dežurstvo z doplačilom.",
-        "hr": "Recepcija pon–pet 8:00–20:30, sub–ned i blagdanima 9:00–16:00; klinika otvorena 0–24; noćno dežurstvo uz doplatak."
+        "hr": "Recepcija pon–pet 8:00–20:30, sub–ned i blagdanima 9:00–16:00; klinika otvorena 0–24; noćno dežurstvo uz doplatak.",
+        "de": "Anmeldung Mo–Fr 8–20.30 Uhr, Sa–So und feiertags 9–16 Uhr; Klinik rund um die Uhr geöffnet; Zuschlag für Nachtdienst."
       },
       "url": "https://www.skvet.pl/",
       "source_url": "https://www.skvet.pl/",
@@ -402,7 +418,8 @@
       "duty": "24/7 veterinary care.",
       "duty_i18n": {
         "sl": "Veterinarska oskrba 24/7.",
-        "hr": "Veterinarska skrb 24/7."
+        "hr": "Veterinarska skrb 24/7.",
+        "de": "Tierärztliche Versorgung rund um die Uhr."
       },
       "url": "https://dolvetwroclaw.pl/",
       "source_url": "https://dolvetwroclaw.pl/",
@@ -422,7 +439,8 @@
       "duty": "Ołtaszyn Mon-Fri 9:00-22:00, Sat 9:00-16:00, Sun 11:00-13:00; separate \"Pogotowie całodobowe\" number 698 922 911.",
       "duty_i18n": {
         "sl": "Ołtaszyn pon–pet 9–22, sob 9–16, ned 11–13; ločena številka „Pogotowie całodobowe“ 698 922 911.",
-        "hr": "Ołtaszyn: pon–pet 9:00–22:00, sub 9:00–16:00, ned 11:00–13:00; poseban broj za hitne slučajeve („Pogotowie całodobowe“) 698 922 911."
+        "hr": "Ołtaszyn: pon–pet 9:00–22:00, sub 9:00–16:00, ned 11:00–13:00; poseban broj za hitne slučajeve („Pogotowie całodobowe“) 698 922 911.",
+        "de": "Ołtaszyn Mo–Fr 9–22 Uhr, Sa 9–16 Uhr, So 11–13 Uhr; separate Notdienstnummer rund um die Uhr („Pogotowie całodobowe“): 698 922 911."
       },
       "url": "https://oltaszynska.pl/",
       "source_url": "https://oltaszynska.pl/kontakt/",
@@ -442,7 +460,8 @@
       "duty": "Mon-Fri 8:00-21:00; Sat-Sun Dyżur EMERGENCY 24h; outside planned visits 24/7 emergency duty mode.",
       "duty_i18n": {
         "sl": "pon–pet 8–21; sob–ned Dyżur EMERGENCY 24h; zunaj načrtovanih pregledov nujna služba 24/7.",
-        "hr": "pon–pet 8:00–21:00; vikendom (sub–ned) hitno dežurstvo 24 h („Dyżur“); izvan planiranih pregleda hitno dežurstvo 24/7."
+        "hr": "pon–pet 8:00–21:00; vikendom (sub–ned) hitno dežurstvo 24 h („Dyżur“); izvan planiranih pregleda hitno dežurstvo 24/7.",
+        "de": "Mo–Fr 8–21 Uhr; Sa–So Notdienst rund um die Uhr; außerhalb der geplanten Termine jederzeit Notdienstbetrieb."
       },
       "url": "https://gdansk.amvet.pl/",
       "source_url": "https://gdansk.amvet.pl/uslugi/dyzury-emergency/",
@@ -462,7 +481,8 @@
       "duty": "Open every day around the clock.",
       "duty_i18n": {
         "sl": "Odprto vsak dan 24 ur na dan.",
-        "hr": "Otvoreno svaki dan, danonoćno."
+        "hr": "Otvoreno svaki dan, danonoćno.",
+        "de": "Täglich rund um die Uhr geöffnet."
       },
       "url": "https://lecznicazwierzyniec.pl/",
       "source_url": "https://lecznicazwierzyniec.pl/",
@@ -481,7 +501,8 @@
       "duty": "Reception Mon-Fri 9:00-20:00, Sat 9:00-16:00; night duty otherwise.",
       "duty_i18n": {
         "sl": "Recepcija pon–pet 9–20, sob 9–16; sicer nočno dežurstvo.",
-        "hr": "Recepcija pon–pet 9:00–20:00, sub 9:00–16:00; inače noćno dežurstvo."
+        "hr": "Recepcija pon–pet 9:00–20:00, sub 9:00–16:00; inače noćno dežurstvo.",
+        "de": "Anmeldung Mo–Fr 9–20 Uhr, Sa 9–16 Uhr; sonst Nachtdienst."
       },
       "url": "https://sosken.pl/",
       "source_url": "https://sosken.pl/",
@@ -500,7 +521,8 @@
       "duty": "Redłowo Mon–Fri 9:00–20:00, Sat–Sun/holidays 9:00–12:00; night duty after hours - call ahead for times.",
       "duty_i18n": {
         "sl": "Redłowo pon–pet 9–20, sob–ned/prazniki 9–12; po delovnem času nočno dežurstvo – za urnik vnaprej pokličite.",
-        "hr": "Redłowo: pon–pet 9:00–20:00, sub–ned i blagdanima 9:00–12:00; izvan radnog vremena noćno dežurstvo – termine dogovori telefonom unaprijed."
+        "hr": "Redłowo: pon–pet 9:00–20:00, sub–ned i blagdanima 9:00–12:00; izvan radnog vremena noćno dežurstvo – termine dogovori telefonom unaprijed.",
+        "de": "Redłowo Mo–Fr 9–20 Uhr, Sa–So und feiertags 9–12 Uhr; außerhalb dieser Zeiten Nachtdienst – Zeiten bitte telefonisch erfragen."
       },
       "url": "https://lecznica.gdynia.pl/",
       "source_url": "https://lecznica.gdynia.pl/",
@@ -519,7 +541,8 @@
       "duty": "Mon-Fri 8:00-20:00, Sat 8:00-15:00, Sun emergency duty only; emergency duty around the clock.",
       "duty_i18n": {
         "sl": "pon–pet 8–20, sob 8–15, ned samo nujna služba; nujna služba 24 ur na dan.",
-        "hr": "pon–pet 8:00–20:00, sub 8:00–15:00, nedjeljom samo hitno dežurstvo; hitno dežurstvo je danonoćno."
+        "hr": "pon–pet 8:00–20:00, sub 8:00–15:00, nedjeljom samo hitno dežurstvo; hitno dežurstvo je danonoćno.",
+        "de": "Mo–Fr 8–20 Uhr, Sa 8–15 Uhr, So nur Notdienst; Notdienst rund um die Uhr."
       },
       "url": "https://wetklinika.pl/",
       "source_url": "https://wetklinika.pl/",
@@ -539,7 +562,8 @@
       "duty": "Day duty 8:00-19:30, holidays 9:00-17:30, then night duty for emergencies (come in person).",
       "duty_i18n": {
         "sl": "Dnevno dežurstvo 8–19.30, prazniki 9–17.30, nato nočno dežurstvo za nujne primere (pridite osebno).",
-        "hr": "Dnevno dežurstvo 8:00–19:30, blagdanima 9:00–17:30, zatim noćno dežurstvo za hitne slučajeve (dođi osobno)."
+        "hr": "Dnevno dežurstvo 8:00–19:30, blagdanima 9:00–17:30, zatim noćno dežurstvo za hitne slučajeve (dođi osobno).",
+        "de": "Tagesdienst 8–19.30 Uhr, feiertags 9–17.30 Uhr, danach Nachtdienst für Notfälle (persönlich vorbeikommen)."
       },
       "url": "https://www.lecznica-brynow.pl/",
       "source_url": "https://www.lecznica-brynow.pl/medycyna-ratunkowa/",
@@ -558,7 +582,8 @@
       "duty": "Open 24/7.",
       "duty_i18n": {
         "sl": "Odprto 24/7.",
-        "hr": "Otvoreno 24/7."
+        "hr": "Otvoreno 24/7.",
+        "de": "Rund um die Uhr geöffnet."
       },
       "url": "https://tauzenwet.pl/",
       "source_url": "https://tauzen-wet.pl/ostry-dyzur-weterynaryjny-katowice/",
@@ -577,7 +602,8 @@
       "duty": "Open 24/7; at night visit in person (phone contact hard).",
       "duty_i18n": {
         "sl": "Odprto 24/7; ponoči pridite osebno (telefonski stik je težaven).",
-        "hr": "Otvoreno 24/7; noću dođi osobno (teško ih je dobiti telefonom)."
+        "hr": "Otvoreno 24/7; noću dođi osobno (teško ih je dobiti telefonom).",
+        "de": "Rund um die Uhr geöffnet; nachts bitte persönlich vorbeikommen (telefonisch schwer erreichbar)."
       },
       "url": "https://www.weterynaria-poznan.pl/",
       "source_url": "https://www.weterynaria-poznan.pl/dyzur-weterynaryjny/",
@@ -597,7 +623,8 @@
       "duty": "Open 24 h / 7 days.",
       "duty_i18n": {
         "sl": "Odprto 24 ur / 7 dni.",
-        "hr": "Otvoreno 24 h, 7 dana u tjednu."
+        "hr": "Otvoreno 24 h, 7 dana u tjednu.",
+        "de": "Täglich rund um die Uhr geöffnet."
       },
       "url": "https://www.klinwet.pl/",
       "source_url": "https://www.klinwet.pl/kontakt",
@@ -617,7 +644,8 @@
       "duty": "24 h, 7 days incl. holidays.",
       "duty_i18n": {
         "sl": "24 ur, 7 dni, tudi ob praznikih.",
-        "hr": "24 h, 7 dana u tjednu, uključujući blagdane."
+        "hr": "24 h, 7 dana u tjednu, uključujući blagdane.",
+        "de": "Täglich rund um die Uhr, auch an Feiertagen."
       },
       "url": "https://www.vet-med-lodz.pl/",
       "source_url": "https://www.vet-med-lodz.pl/",
@@ -637,7 +665,8 @@
       "duty": "24/7.",
       "duty_i18n": {
         "sl": "24/7.",
-        "hr": "24/7."
+        "hr": "24/7.",
+        "de": "Rund um die Uhr geöffnet."
       },
       "url": "https://lancet.pl/",
       "source_url": "https://lancet.pl/",
@@ -653,7 +682,8 @@
       "duty": "Night/holiday help in Łódź: Vet-Med and Lancet (round the clock), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
       "duty_i18n": {
         "sl": "Nočna pomoč in pomoč ob praznikih v Łódźu: Vet-Med in Lancet (24 ur na dan), SOWA (8–23), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
-        "hr": "Noćna i blagdanska pomoć u Łódźu: Vet-Med i Lancet (danonoćno), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki)."
+        "hr": "Noćna i blagdanska pomoć u Łódźu: Vet-Med i Lancet (danonoćno), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
+        "de": "Nacht- und Feiertagshilfe in Łódź: Vet-Med und Lancet (rund um die Uhr), SOWA (8–23 Uhr), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki)."
       },
       "small_animals": true,
       "url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
@@ -674,7 +704,8 @@
       "duty": "24 h / 7 days / 365 days.",
       "duty_i18n": {
         "sl": "24 ur / 7 dni / 365 dni.",
-        "hr": "24 h, 7 dana u tjednu, 365 dana u godini."
+        "hr": "24 h, 7 dana u tjednu, 365 dana u godini.",
+        "de": "Täglich rund um die Uhr, an 365 Tagen im Jahr."
       },
       "url": "https://klinikaszmaragdowa.pl/",
       "source_url": "https://klinikaszmaragdowa.pl/kontakt/",
@@ -693,7 +724,8 @@
       "duty": "Clinic 24 h; hospital 24/7.",
       "duty_i18n": {
         "sl": "Klinika 24 ur; bolnišnica 24/7.",
-        "hr": "Klinika 24 h; bolnica 24/7."
+        "hr": "Klinika 24 h; bolnica 24/7.",
+        "de": "Klinik rund um die Uhr; stationäre Versorgung rund um die Uhr."
       },
       "url": "https://lcmz.pl/",
       "source_url": "https://lcmz.pl/",
@@ -713,7 +745,8 @@
       "duty": "Registration Mon-Fri 8:00-20:00, Sat-Sun 8:00-14:00; on-call vet after hours, weekends and holidays at +48 81 528 46 27 or +48 515 078 885.",
       "duty_i18n": {
         "sl": "Registracija pon–pet 8–20, sob–ned 8–14; dežurni veterinar zunaj delovnega časa, ob vikendih in praznikih na +48 81 528 46 27 ali +48 515 078 885.",
-        "hr": "Prijem pon–pet 8:00–20:00, sub–ned 8:00–14:00; izvan radnog vremena, vikendom i blagdanima dežurni veterinar na +48 81 528 46 27 ili +48 515 078 885."
+        "hr": "Prijem pon–pet 8:00–20:00, sub–ned 8:00–14:00; izvan radnog vremena, vikendom i blagdanima dežurni veterinar na +48 81 528 46 27 ili +48 515 078 885.",
+        "de": "Anmeldung Mo–Fr 8–20 Uhr, Sa–So 8–14 Uhr; außerhalb dieser Zeiten, am Wochenende und an Feiertagen diensthabender Tierarzt unter +48 81 528 46 27 oder +48 515 078 885."
       },
       "url": "https://up.lublin.pl/en/services/veterinary-clinic/",
       "source_url": "https://up.lublin.pl/en/services/veterinary-clinic/",
@@ -746,7 +779,8 @@
       "duty": "Mon-Fri 9:00-17:00, Sat 9:00-13:00.",
       "duty_i18n": {
         "sl": "pon–pet 9–17, sob 9–13.",
-        "hr": "pon–pet 9:00–17:00, sub 9:00–13:00."
+        "hr": "pon–pet 9:00–17:00, sub 9:00–13:00.",
+        "de": "Mo–Fr 9–17 Uhr, Sa 9–13 Uhr."
       },
       "url": "https://vetmaria.mazury.pl/",
       "source_url": "https://vetmaria.mazury.pl/",
@@ -765,7 +799,8 @@
       "duty": "Day shift Mon-Fri 8:00-20:00; night shift 20:00-8:00 Mon-Sun; Sat-Sun day interventional duty 8:00-20:00.",
       "duty_i18n": {
         "sl": "Dnevna izmena pon–pet 8–20; nočna izmena 20–8 pon–ned; sob–ned dnevno interventno dežurstvo 8–20.",
-        "hr": "Dnevna smjena pon–pet 8:00–20:00; noćna smjena 20:00–8:00 svaki dan; vikendom (sub–ned) dnevno interventno dežurstvo 8:00–20:00."
+        "hr": "Dnevna smjena pon–pet 8:00–20:00; noćna smjena 20:00–8:00 svaki dan; vikendom (sub–ned) dnevno interventno dežurstvo 8:00–20:00.",
+        "de": "Tagschicht Mo–Fr 8–20 Uhr; Nachtschicht täglich 20–8 Uhr; Sa–So tagsüber Notdienst 8–20 Uhr."
       },
       "url": "https://www.klinikavet24h.pl/",
       "source_url": "https://www.klinikavet24h.pl/kontakt/",
@@ -784,7 +819,8 @@
       "duty": "Day shift 8:00-22:00, night shift 22:00-8:00 for emergencies; phone appointments only.",
       "duty_i18n": {
         "sl": "Dnevna izmena 8–22, nočna izmena 22–8 za nujne primere; samo po telefonskem dogovoru.",
-        "hr": "Dnevna smjena 8:00–22:00, noćna smjena 22:00–8:00 za hitne slučajeve; samo uz telefonsku najavu."
+        "hr": "Dnevna smjena 8:00–22:00, noćna smjena 22:00–8:00 za hitne slučajeve; samo uz telefonsku najavu.",
+        "de": "Tagschicht 8–22 Uhr, Nachtschicht 22–8 Uhr für Notfälle; nur nach telefonischer Terminvereinbarung."
       },
       "url": "https://klinikacentrum.pl/",
       "source_url": "https://klinikacentrum.pl/",
@@ -803,7 +839,8 @@
       "duty": "Mon-Fri 7:00-22:00, Sat-Sun/holidays 8:00-20:00.",
       "duty_i18n": {
         "sl": "pon–pet 7–22, sob–ned/prazniki 8–20.",
-        "hr": "pon–pet 7:00–22:00, sub–ned i blagdanima 8:00–20:00."
+        "hr": "pon–pet 7:00–22:00, sub–ned i blagdanima 8:00–20:00.",
+        "de": "Mo–Fr 7–22 Uhr, Sa–So und feiertags 8–20 Uhr."
       },
       "url": "https://www.lecznica-kora.pl/",
       "source_url": "https://www.lecznica-kora.pl/",
@@ -822,7 +859,8 @@
       "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
       "duty_i18n": {
         "sl": "pon–sob 20–8; ob nedeljah in praznikih 24 ur.",
-        "hr": "pon–sub 20:00–8:00; nedjeljom i blagdanima 24 h."
+        "hr": "pon–sub 20:00–8:00; nedjeljom i blagdanima 24 h.",
+        "de": "Mo–Sa 20–8 Uhr; sonn- und feiertags rund um die Uhr."
       },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
@@ -842,7 +880,8 @@
       "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
       "duty_i18n": {
         "sl": "pon–sob 20–8; ob nedeljah in praznikih 24 ur.",
-        "hr": "pon–sub 20:00–8:00; nedjeljom i blagdanima 24 h."
+        "hr": "pon–sub 20:00–8:00; nedjeljom i blagdanima 24 h.",
+        "de": "Mo–Sa 20–8 Uhr; sonn- und feiertags rund um die Uhr."
       },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
@@ -862,7 +901,8 @@
       "duty": "Clinic hours Mon-Sat daytime/evening; separate Pogotowie 24/7 number for emergencies, fixed call-out fee.",
       "duty_i18n": {
         "sl": "Delovni čas ambulante pon–sob podnevi/zvečer; ločena številka Pogotowie 24/7 za nujne primere, fiksna cena obiska.",
-        "hr": "Radno vrijeme ambulante pon–sub danju i navečer; za hitne slučajeve zasebni broj „Pogotowie“ 24/7, uz fiksnu naknadu za izlazak."
+        "hr": "Radno vrijeme ambulante pon–sub danju i navečer; za hitne slučajeve zasebni broj „Pogotowie“ 24/7, uz fiksnu naknadu za izlazak.",
+        "de": "Sprechzeiten der Praxis Mo–Sa tagsüber und abends; separate Nummer für den Notdienst rund um die Uhr (Pogotowie 24/7), feste Anfahrtspauschale."
       },
       "url": "https://przychodnia-arka.pl/",
       "source_url": "https://przychodnia-arka.pl/kontakt",
@@ -882,7 +922,8 @@
       "duty": "Round-the-clock veterinary practice providing night-time care; call ahead.",
       "duty_i18n": {
         "sl": "Veterinarska ambulanta, odprta 24 ur na dan, nudi nočno oskrbo; vnaprej pokličite.",
-        "hr": "Veterinarska ambulanta koja radi danonoćno i noću skrbi za kućne ljubimce; nazovi unaprijed."
+        "hr": "Veterinarska ambulanta koja radi danonoćno i noću skrbi za kućne ljubimce; nazovi unaprijed.",
+        "de": "Tierarztpraxis mit Betreuung rund um die Uhr, auch nachts; vorher anrufen."
       },
       "url": "https://aquavet.opole.pl/",
       "source_url": "https://www.opole.pl/print/pdf/node/1884",
@@ -902,7 +943,8 @@
       "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 10:00–12:00.",
       "duty_i18n": {
         "sl": "pon–pet 9–19, sob 9–14, ned 10–12.",
-        "hr": "pon–pet 9:00–19:00, sub 9:00–14:00, ned 10:00–12:00."
+        "hr": "pon–pet 9:00–19:00, sub 9:00–14:00, ned 10:00–12:00.",
+        "de": "Mo–Fr 9–19 Uhr, Sa 9–14 Uhr, So 10–12 Uhr."
       },
       "url": "https://weterynaria.bialystok.pl/",
       "source_url": "https://weterynaria.bialystok.pl/",
@@ -921,7 +963,8 @@
       "duty": "Mon–Fri 9:00–19:00, Sat by arrangement, Sun closed. Booking by phone.",
       "duty_i18n": {
         "sl": "pon–pet 9–19, sob po dogovoru, ned zaprto. Naročanje po telefonu.",
-        "hr": "pon–pet 9:00–19:00, sub po dogovoru, ned zatvoreno. Naručivanje telefonom."
+        "hr": "pon–pet 9:00–19:00, sub po dogovoru, ned zatvoreno. Naručivanje telefonom.",
+        "de": "Mo–Fr 9–19 Uhr, Sa nach Vereinbarung, So geschlossen. Terminbuchung per Telefon."
       },
       "url": "https://pupil.bialystok.pl/",
       "source_url": "https://pupil.bialystok.pl/kontakt/",
@@ -940,7 +983,8 @@
       "duty": "Mon–Fri 10:00–19:00, Sat 10:00–14:00.",
       "duty_i18n": {
         "sl": "pon–pet 10–19, sob 10–14.",
-        "hr": "pon–pet 10:00–19:00, sub 10:00–14:00."
+        "hr": "pon–pet 10:00–19:00, sub 10:00–14:00.",
+        "de": "Mo–Fr 10–19 Uhr, Sa 10–14 Uhr."
       },
       "url": "https://amicus.bialystok.pl/",
       "source_url": "https://amicus.bialystok.pl/",
@@ -959,7 +1003,8 @@
       "duty": "Mon–Fri 8:00–19:00 (by appointment), Sat 8:00–13:00.",
       "duty_i18n": {
         "sl": "pon–pet 8–19 (po dogovoru), sob 8–13.",
-        "hr": "pon–pet 8:00–19:00 (uz prethodnu najavu), sub 8:00–13:00."
+        "hr": "pon–pet 8:00–19:00 (uz prethodnu najavu), sub 8:00–13:00.",
+        "de": "Mo–Fr 8–19 Uhr (nach Terminvereinbarung), Sa 8–13 Uhr."
       },
       "url": "https://help.zgora.pl/",
       "source_url": "https://help.zgora.pl/",
@@ -978,7 +1023,8 @@
       "duty": "Mon–Fri 8:00–18:00, Sat 9:00–15:00, Sun 10:00–12:00.",
       "duty_i18n": {
         "sl": "pon–pet 8–18, sob 9–15, ned 10–12.",
-        "hr": "pon–pet 8:00–18:00, sub 9:00–15:00, ned 10:00–12:00."
+        "hr": "pon–pet 8:00–18:00, sub 9:00–15:00, ned 10:00–12:00.",
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–15 Uhr, So 10–12 Uhr."
       },
       "url": "https://lecznica.zgora.pl/",
       "source_url": "https://lecznica.zgora.pl/kontakt/",
@@ -997,7 +1043,8 @@
       "duty": "Mon–Fri 7:00–20:00, Sat 8:00–16:00, Sun closed.",
       "duty_i18n": {
         "sl": "pon–pet 7–20, sob 8–16, ned zaprto.",
-        "hr": "pon–pet 7:00–20:00, sub 8:00–16:00, ned zatvoreno."
+        "hr": "pon–pet 7:00–20:00, sub 8:00–16:00, ned zatvoreno.",
+        "de": "Mo–Fr 7–20 Uhr, Sa 8–16 Uhr, So geschlossen."
       },
       "url": "https://gswet.pl/",
       "source_url": "https://gswet.pl/strona-glowna/kontakt/",
@@ -1015,7 +1062,8 @@
       "duty": "Mon–Fri 9:00–18:00, Sat 9:00–12:00 (follow-up treatment only).",
       "duty_i18n": {
         "sl": "pon–pet 9–18, sob 9–12 (samo kontrolno zdravljenje).",
-        "hr": "pon–pet 9:00–18:00, sub 9:00–12:00 (samo kontrolno liječenje)."
+        "hr": "pon–pet 9:00–18:00, sub 9:00–12:00 (samo kontrolno liječenje).",
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–12 Uhr (nur Nachbehandlung)."
       },
       "url": "https://przychodniawet.pl/",
       "source_url": "https://przychodniawet.pl/kontakt/",
@@ -1034,7 +1082,8 @@
       "duty": "Mon–Fri 8:00–20:00; Sat–Sun closed. Emergency help is offered as a service; no after-hours contact.",
       "duty_i18n": {
         "sl": "pon–pet 8–20; sob–ned zaprto. Nujna pomoč se nudi kot storitev; zunaj delovnega časa ni stika.",
-        "hr": "pon–pet 8:00–20:00; sub–ned zatvoreno. Hitna pomoć nudi se kao usluga; izvan radnog vremena nema kontakta."
+        "hr": "pon–pet 8:00–20:00; sub–ned zatvoreno. Hitna pomoć nudi se kao usluga; izvan radnog vremena nema kontakta.",
+        "de": "Mo–Fr 8–20 Uhr; Sa–So geschlossen. Notfallhilfe wird angeboten; außerhalb der Sprechzeiten keine Erreichbarkeit."
       },
       "url": "https://czterylapy.com/",
       "source_url": "https://czterylapy.com/",
@@ -1053,7 +1102,8 @@
       "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 9:00–12:00; public holidays closed.",
       "duty_i18n": {
         "sl": "pon–pet 9–19, sob 9–14, ned 9–12; ob praznikih zaprto.",
-        "hr": "pon–pet 9:00–19:00, sub 9:00–14:00, ned 9:00–12:00; blagdanima zatvoreno."
+        "hr": "pon–pet 9:00–19:00, sub 9:00–14:00, ned 9:00–12:00; blagdanima zatvoreno.",
+        "de": "Mo–Fr 9–19 Uhr, Sa 9–14 Uhr, So 9–12 Uhr; an Feiertagen geschlossen."
       },
       "url": "https://weterynarz-kielce.eu/",
       "source_url": "https://weterynarz-kielce.eu/kontakt/",
@@ -1072,7 +1122,8 @@
       "duty": "Mon–Fri 9:00–12:00 and 17:00–20:00; Sat by appointment; Sun closed.",
       "duty_i18n": {
         "sl": "pon–pet 9–12 in 17–20; sob po dogovoru; ned zaprto.",
-        "hr": "pon–pet 9:00–12:00 i 17:00–20:00; sub po dogovoru; ned zatvoreno."
+        "hr": "pon–pet 9:00–12:00 i 17:00–20:00; sub po dogovoru; ned zatvoreno.",
+        "de": "Mo–Fr 9–12 Uhr und 17–20 Uhr; Sa nach Vereinbarung; So geschlossen."
       },
       "url": "https://na4lapy.mragowo.pl/",
       "source_url": "https://na4lapy.mragowo.pl/",

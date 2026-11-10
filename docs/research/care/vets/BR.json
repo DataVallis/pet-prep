@@ -192,7 +192,10 @@
       "note": "District: Ibirapuera.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliches Zentrum täglich rund um die Uhr geöffnet, auch für Notfälle. Fachgebiete und Bildgebung nur nach Terminvereinbarung."
+      }
     },
     {
       "name": "Pet Care Centro Veterinário 24h Morumbi",
@@ -207,7 +210,10 @@
       "note": "District: Morumbi.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliches Zentrum täglich rund um die Uhr geöffnet, auch für Notfälle. Fachgebiete und Bildgebung nur nach Terminvereinbarung."
+      }
     },
     {
       "name": "Pet Care Centro Veterinário 24h Pacaembu",
@@ -222,7 +228,10 @@
       "note": "District: Pacaembu. Own unit page lists consultations 8-21h weekdays and on-call 21-8h; units list page states 24 horas. Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliches Zentrum täglich rund um die Uhr geöffnet, auch für Notfälle. Fachgebiete und Bildgebung nur nach Terminvereinbarung."
+      }
     },
     {
       "name": "Pet Care Centro Veterinário 24h Tatuapé",
@@ -237,7 +246,10 @@
       "note": "District: Tatuapé.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliches Zentrum täglich rund um die Uhr geöffnet, auch für Notfälle. Fachgebiete und Bildgebung nur nach Terminvereinbarung."
+      }
     },
     {
       "name": "Veros Hospital Veterinário",
@@ -251,7 +263,10 @@
       "source_url": "https://veros.vet/pronto-socorro",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notdienst und allgemeine Aufnahme rund um die Uhr geöffnet. Terminvergabe Mo–Fr 8–21 Uhr, Sa, So und feiertags 8–20 Uhr. WhatsApp +55 11 94107 9961."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal Leste (Tatuapé)",
@@ -265,7 +280,10 @@
       "note": "No unit phone on official page; Secretaria Municipal da Saúde (11) 5461-5600 and 156 only. Confirmed also by prefeitura news pages (Leste 24 h).",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffentliche Tierklinik für Hunde und Katzen von Einwohnern São Paulos, die in Sozialprogrammen angemeldet sind; täglich rund um die Uhr geöffnet. Von 17 bis 7 Uhr sowie am Wochenende und an Feiertagen nur dringende Fälle und Notfälle. Stadt-Hotline 156 (kostenlos)."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal Leste II (São Miguel Paulista)",
@@ -279,7 +297,10 @@
       "note": "Social screening for residents without active benefits on Tuesdays from 14:00. No unit phone on official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Kostenlose öffentliche Tierklinik für Hunde und Katzen einkommensschwacher Einwohner São Paulos (Sozialprogramme). Mo–Fr 7–17 Uhr, außer an Feiertagen. Nicht rund um die Uhr geöffnet. Stadt-Hotline 156."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal Sul (Jurubatuba)",
@@ -293,7 +314,10 @@
       "note": "Social screening for residents without active benefits on Mondays from 14:00. No unit phone on official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Kostenlose öffentliche Tierklinik für Hunde und Katzen einkommensschwacher Einwohner São Paulos (Sozialprogramme). Täglich 7–17 Uhr; am Wochenende und an Feiertagen nur dringende Fälle und Notfälle. Nicht rund um die Uhr geöffnet. Stadt-Hotline 156."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal Norte (Casa Verde)",
@@ -307,7 +331,10 @@
       "note": "Social screening for residents without active benefits on Wednesdays from 14:00. No unit phone on official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Kostenlose öffentliche Tierklinik für Hunde und Katzen einkommensschwacher Einwohner São Paulos (Sozialprogramme). Mo–Fr 7–17 Uhr, außer an Feiertagen. Nicht rund um die Uhr geöffnet. Stadt-Hotline 156."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal Oeste (Butantã)",
@@ -321,7 +348,10 @@
       "note": "Non-emergency cases after social screening. No unit phone on official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Kostenlose öffentliche Tierklinik für Hunde und Katzen einkommensschwacher Einwohner São Paulos (Sozialprogramme). Mo–Fr 7–17 Uhr, außer an Feiertagen; ab 7 Uhr Behandlung in der Reihenfolge des Eintreffens. Nicht rund um die Uhr geöffnet. Stadt-Hotline 156."
+      }
     },
     {
       "name": "Hospital Veterinário USP (HOVET FMVZ)",
@@ -336,7 +366,10 @@
       "note": "Home page lists (11) 3091-1320; atendimento page lists 11 3091-1306 for hospital-escola info and 156 for public free service.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Universitäre Lehrklinik. Triage Mo–Fr 7–10 Uhr, Wartenummern werden um 7 Uhr ausgegeben; Untersuchungen und Tests sind kostenpflichtig. Telefon ab 14 Uhr besetzt, WhatsApp 8–16.30 Uhr. Kein Notdienst und kein Rund-um-die-Uhr-Betrieb angegeben."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal de São José dos Campos",
@@ -351,7 +384,10 @@
       "note": "Status 19/08/2026: management call published, proposals due 21/09/2026; recheck. Old Univap-based hospital details not confirmed.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Städtische Tierklinik teilweise geöffnet: Impfungen und Mikrochip-Implantation Mo–Fr 8.30–16 Uhr, ohne Termin. Volle Versorgung und Notdienst rund um die Uhr sind geplant, aber noch nicht verfügbar. Die Telefonnummer ist die der Stadtverwaltung."
+      }
     },
     {
       "name": "Hospital Veterinário Municipal \"Cão Mayke\"",
@@ -366,7 +402,10 @@
       "note": "Opening-article hours; a second city article says urgent cases only 24 Dec-4 Jan (holiday rota). Not described as 24 h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Städtische Tierklinik. Mo–Fr 8–17 Uhr und Sa 8–13 Uhr; außerhalb dieser Zeiten nur dringende Fälle und Notfälle nach Triage. Dringende Versorgung kostenlos für Einwohner von Sorocaba; übrige Versorgung für registrierte einkommensschwache Tierhalter. Die Nummer ist eine WhatsApp-Nummer."
+      }
     },
     {
       "name": "Clínica Veterinária Meu Pet",
@@ -380,7 +419,10 @@
       "note": "Official ribeiraopreto.sp.gov.br pages blocked by robots; data from Correio da Manhã news article only; no phone found. Verify hours.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Kostenlose städtische Tierklinik für Hunde und Katzen von Einwohnern von Ribeirão Preto. Mo–Sa 7–17 Uhr; Notfälle werden ohne Termin behandelt. Nicht rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -395,7 +437,10 @@
       "source_url": "https://vetnasa.com.br/unidades/interlagos.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -410,7 +455,10 @@
       "source_url": "https://vetnasa.com.br/unidades/santo-amaro.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -425,7 +473,10 @@
       "source_url": "https://vetnasa.com.br/unidades/vila-maria.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Phone is the unit line (WhatsApp button) from the unit page. Network central line (11) 3090-2317 also on the page."
+      "note": "Phone is the unit line (WhatsApp button) from the unit page. Network central line (11) 3090-2317 also on the page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -440,7 +491,10 @@
       "source_url": "https://vetnasa.com.br/unidades/bandeirantes.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -455,7 +509,10 @@
       "source_url": "https://vetnasa.com.br/unidades/brigadeiro.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -470,7 +527,10 @@
       "source_url": "https://vetnasa.com.br/unidades/mooca.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -485,7 +545,10 @@
       "source_url": "https://vetnasa.com.br/unidades/butanta.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -500,7 +563,10 @@
       "source_url": "https://vetnasa.com.br/unidades/santana.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -515,7 +581,10 @@
       "source_url": "https://vetnasa.com.br/unidades/freguesia-do-o.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -530,7 +599,10 @@
       "source_url": "https://vetnasa.com.br/unidades/campo-limpo.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -545,7 +617,10 @@
       "source_url": "https://vetnasa.com.br/unidades/pacaembu.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -560,7 +635,10 @@
       "source_url": "https://vetnasa.com.br/unidades/lapa.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -575,7 +653,10 @@
       "source_url": "https://hvpaesdebarros.com.br/",
       "checked": "2026-11-09",
       "duty": "Clinical care 24 hours a day, every day of the year.",
-      "note": "Page: 'atendimento clínico 24 horas todos os dias do ano'."
+      "note": "Page: 'atendimento clínico 24 horas todos os dias do ano'.",
+      "duty_i18n": {
+        "de": "Tierärztliche Versorgung rund um die Uhr, an jedem Tag des Jahres."
+      }
     },
     {
       "kind": "clinic",
@@ -590,7 +671,10 @@
       "source_url": "https://prontvet.com.br/casaverde/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital with an emergency line.",
-      "note": "Heading 'Hospital Veterinário 24 horas', 'Disque emergência 24 horas'. Also treats exotics/wildlife per site menu."
+      "note": "Heading 'Hospital Veterinário 24 horas', 'Disque emergência 24 horas'. Also treats exotics/wildlife per site menu.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik mit Notfalltelefon."
+      }
     },
     {
       "kind": "clinic",
@@ -605,7 +689,10 @@
       "source_url": "https://prontvet.com.br/pompeia/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital with an emergency line.",
-      "note": "'Disque emergência 24 horas'; unit labelled 24h on prontvet.com.br home."
+      "note": "'Disque emergência 24 horas'; unit labelled 24h on prontvet.com.br home.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik mit Notfalltelefon."
+      }
     },
     {
       "kind": "clinic",
@@ -620,7 +707,10 @@
       "source_url": "https://santainesvet.com.br/contato/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency service (pronto socorro).",
-      "note": "Contact page: 'pronto socorro 24h', 'equipe 24h disponível' (literal phrase '24 horas' not on that page; page title 'Pronto Socorro 24 horas' in site menu)."
+      "note": "Contact page: 'pronto socorro 24h', 'equipe 24h disponível' (literal phrase '24 horas' not on that page; page title 'Pronto Socorro 24 horas' in site menu).",
+      "duty_i18n": {
+        "de": "24-Stunden-Notdienst (pronto socorro)."
+      }
     },
     {
       "kind": "clinic",
@@ -634,7 +724,10 @@
       "source_url": "https://vetpopular.com.br/unidades/unidade-vet-popular-vila-carrao/",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day.",
-      "note": "Page: 'funciona 24 horas por dia'. No phone number printed (WhatsApp button only)."
+      "note": "Page: 'funciona 24 horas por dia'. No phone number printed (WhatsApp button only).",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -648,7 +741,10 @@
       "source_url": "https://vetpopular.com.br/unidades/unidade-vet-popular-sapopemba/",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day.",
-      "note": "Page: 'Horário: 24h', 'funciona 24 horas por dia'. Map label says Jardim Colorado. No phone printed."
+      "note": "Page: 'Horário: 24h', 'funciona 24 horas por dia'. Map label says Jardim Colorado. No phone printed.",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -663,7 +759,10 @@
       "source_url": "https://www.ahoraveterinaria.com.br/veterinario-24h",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary clinic.",
-      "note": "dogupvet.com.br: 'Clínica Veterinária 24 horas'; ahoraveterinaria.com.br/veterinario-24h also lists (11) 3721-5719 and says monitored by vets '24 horas por dia'."
+      "note": "dogupvet.com.br: 'Clínica Veterinária 24 horas'; ahoraveterinaria.com.br/veterinario-24h also lists (11) 3721-5719 and says monitored by vets '24 horas por dia'.",
+      "duty_i18n": {
+        "de": "Tierarztpraxis rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -677,7 +776,10 @@
       "url": "https://hospitalveterinariosaude.com.br/",
       "source_url": "https://hospitalveterinariosaude.com.br/",
       "checked": "2026-11-09",
-      "duty": "Open 24 hours, every day, including holidays."
+      "duty": "Open 24 hours, every day, including holidays.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -692,7 +794,10 @@
       "source_url": "https://www.zoovet.com.br/",
       "checked": "2026-11-09",
       "duty": "Emergency care 24 hours a day, every day.",
-      "note": "Page: emergencies 24 h for wild animals, dogs and cats. Phone is the emergency/WhatsApp mobile."
+      "note": "Page: emergencies 24 h for wild animals, dogs and cats. Phone is the emergency/WhatsApp mobile.",
+      "duty_i18n": {
+        "de": "Notfallversorgung täglich rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -707,7 +812,10 @@
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital.",
       "note": "Phone taken from the page's \"PLANTÃO 24h\" WhatsApp link; second link +55 11 2359-6094 is the scheduling line. Page: \"Hospital Veterinário completo 24 horas em Aclimação\".",
-      "phone": "+55 11 3203-2026"
+      "phone": "+55 11 3203-2026",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -722,7 +830,10 @@
       "source_url": "https://clinicavetlousada.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, every day, including holidays.",
-      "note": "Mobile/WhatsApp number."
+      "note": "Mobile/WhatsApp number.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -737,7 +848,10 @@
       "source_url": "https://www.hospitaltaquaral.com.br/clinica-veterinaria-24hs-campinas",
       "checked": "2026-11-09",
       "duty": "24-hour service.",
-      "note": "Same hospital on hvtcampinas.com.br ('Aberto 24 horas'). WhatsApp (19) 99256-5500."
+      "note": "Same hospital on hvtcampinas.com.br ('Aberto 24 horas'). WhatsApp (19) 99256-5500.",
+      "duty_i18n": {
+        "de": "24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -751,7 +865,10 @@
       "url": "https://www.hveicke.com.br/",
       "source_url": "https://www.hveicke.com.br/",
       "checked": "2026-11-09",
-      "duty": "Open 24 hours, every day of the week and on holidays."
+      "duty": "Open 24 hours, every day of the week and on holidays.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -766,7 +883,10 @@
       "source_url": "https://hovetcampinas.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, every day of the year.",
-      "note": "Second number (19) 3294-4113 in footer."
+      "note": "Second number (19) 3294-4113 in footer.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres."
+      }
     },
     {
       "kind": "clinic",
@@ -781,7 +901,10 @@
       "source_url": "https://hospitalveterinariocambui.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital.",
-      "note": "Page heading 'Hospital Veterinário 24h em Campinas'; no hours table. WhatsApp (19) 97415-0222."
+      "note": "Page heading 'Hospital Veterinário 24h em Campinas'; no hours table. WhatsApp (19) 97415-0222.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -796,7 +919,10 @@
       "source_url": "https://www.hvnc.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour service with an emergency team.",
-      "note": "Page: 'Atendimento 24 horas com equipe especializada em emergências'. Also (19) 3520-1717."
+      "note": "Page: 'Atendimento 24 horas com equipe especializada em emergências'. Also (19) 3520-1717.",
+      "duty_i18n": {
+        "de": "24-Stunden-Betrieb mit Notfallteam."
+      }
     },
     {
       "kind": "clinic",
@@ -811,7 +937,10 @@
       "source_url": "https://clinicanimalcampinas.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour service.",
-      "note": "Also (19) 3229-4824."
+      "note": "Also (19) 3229-4824.",
+      "duty_i18n": {
+        "de": "24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -826,7 +955,10 @@
       "source_url": "https://caoxonado.com/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day, including holidays.",
-      "note": "On-call WhatsApp (19) 95325-2042."
+      "note": "On-call WhatsApp (19) 95325-2042.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -841,7 +973,10 @@
       "source_url": "https://clin.vet.br/",
       "checked": "2026-11-09",
       "duty": "24-hour service, every day of the week.",
-      "note": "WhatsApp (13) 99207-9570."
+      "note": "WhatsApp (13) 99207-9570.",
+      "duty_i18n": {
+        "de": "Täglich 24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -856,7 +991,10 @@
       "source_url": "https://pellegrini.vet.br/",
       "checked": "2026-11-09",
       "duty": "Veterinary service open 24 hours.",
-      "note": "Page: 'Veterinário 24 horas em Santos'; no hours table. Also (13) 3223-8855."
+      "note": "Page: 'Veterinário 24 horas em Santos'; no hours table. Also (13) 3223-8855.",
+      "duty_i18n": {
+        "de": "Tierärztlicher Dienst rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -871,7 +1009,10 @@
       "source_url": "https://hospitalveterinariopontopet.com/clinica-vet-24h/",
       "checked": "2026-11-09",
       "duty": "Emergency care 24 hours a day, every day; consultations Mon-Sat 9:00-19:00.",
-      "note": "Footer shows an unrelated (62) number; not used."
+      "note": "Footer shows an unrelated (62) number; not used.",
+      "duty_i18n": {
+        "de": "Notfallversorgung täglich rund um die Uhr; Sprechstunde Mo–Sa 9–19 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -886,7 +1027,10 @@
       "source_url": "https://hospitaleobicho.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, every day, including weekends and holidays.",
-      "note": "WhatsApp (13) 99774-3077."
+      "note": "WhatsApp (13) 99774-3077.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -901,7 +1045,10 @@
       "source_url": "https://www.hospitalveterinariolovets.com.br/emergencias",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, every day of the year.",
-      "note": "Also (16) 3771-1922 and WhatsApp (16) 99794-0062."
+      "note": "Also (16) 3771-1922 and WhatsApp (16) 99794-0062.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres."
+      }
     },
     {
       "kind": "clinic",
@@ -916,7 +1063,10 @@
       "source_url": "https://vfphospital.com.br/unidade-ribeirao-preto/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency hospital.",
-      "note": "Page: 'Emergência 24h'."
+      "note": "Page: 'Emergência 24h'.",
+      "duty_i18n": {
+        "de": "24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -931,7 +1081,10 @@
       "source_url": "https://www.univetrp.com.br/atendimento/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, every day of the week.",
-      "note": "Also (16) 3630-4161, WhatsApp (16) 99177-0618."
+      "note": "Also (16) 3630-4161, WhatsApp (16) 99177-0618.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -946,7 +1099,10 @@
       "source_url": "https://utivet.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary clinic.",
-      "note": "Page: 'Atendimento 24h', 'clínica veterinária 24 horas'. Mobile number."
+      "note": "Page: 'Atendimento 24h', 'clínica veterinária 24 horas'. Mobile number.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierarztpraxis."
+      }
     },
     {
       "kind": "clinic",
@@ -961,7 +1117,10 @@
       "source_url": "https://vfphospital.com.br/unidade-sjc/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency hospital.",
-      "note": "Page label 'São José dos Campos 24h'."
+      "note": "Page label 'São José dos Campos 24h'.",
+      "duty_i18n": {
+        "de": "24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -976,7 +1135,10 @@
       "source_url": "https://vfphospital.com.br/unidade-araraquara/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency hospital.",
-      "note": "Page label 'Araraquara 24h'."
+      "note": "Page label 'Araraquara 24h'.",
+      "duty_i18n": {
+        "de": "24-Stunden-Notfallklinik."
+      }
     },
     {
       "kind": "clinic",
@@ -991,7 +1153,10 @@
       "source_url": "https://www.arca24h.com.br/hospital-veterinario-24-horas-em-sao-paulo",
       "checked": "2026-11-09",
       "duty": "24-hour service.",
-      "note": "Page: 'Atendimento 24 horas'. WhatsApp (11) 2484-4627."
+      "note": "Page: 'Atendimento 24 horas'. WhatsApp (11) 2484-4627.",
+      "duty_i18n": {
+        "de": "24-Stunden-Betrieb."
+      }
     },
     {
       "kind": "clinic",
@@ -1006,7 +1171,10 @@
       "source_url": "https://www.vetnasa.com.br/unidades/santo-andre.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1021,7 +1189,10 @@
       "source_url": "https://vetnasa.com.br/unidades/osasco.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1036,7 +1207,10 @@
       "source_url": "https://vetnasa.com.br/unidades/cotia.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1051,7 +1225,10 @@
       "source_url": "https://vetnasa.com.br/unidades/granja-viana.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1066,7 +1243,10 @@
       "source_url": "https://vetnasa.com.br/unidades/guarulhos.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Number is the unit WhatsApp shown on the page; Network central line (11) 3090-2317 on the unit page."
+      "note": "Number is the unit WhatsApp shown on the page; Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1081,7 +1261,10 @@
       "source_url": "https://vetnasa.com.br/unidades/maua.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Number taken from the unit WhatsApp link on the page; Network central line (11) 3090-2317 on the unit page."
+      "note": "Number taken from the unit WhatsApp link on the page; Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1096,7 +1279,10 @@
       "source_url": "https://vetnasa.com.br/unidades/sao-caetano.html",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week, including weekends and holidays.",
-      "note": "Network central line (11) 3090-2317 on the unit page."
+      "note": "Network central line (11) 3090-2317 on the unit page.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1111,7 +1297,10 @@
       "source_url": "https://bionicao.com.br/",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours a day, 7 days a week.",
-      "note": "WhatsApp (15) 99689-7822."
+      "note": "WhatsApp (15) 99689-7822.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1126,7 +1315,10 @@
       "source_url": "https://vetcentersorocaba.com.br/servicos/atendimento-24h/",
       "checked": "2026-11-09",
       "duty": "Emergency care and on-call service 24 hours, every day.",
-      "note": "Same number for WhatsApp, emergency and plantão."
+      "note": "Same number for WhatsApp, emergency and plantão.",
+      "duty_i18n": {
+        "de": "Notfallversorgung und Bereitschaftsdienst täglich rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1141,7 +1333,10 @@
       "source_url": "https://animaldoctors.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours a day, 7 days a week with an on-duty team; appointments preferred in business hours, first come first served at night, weekends and holidays.",
-      "note": "WhatsApp/emergency (15) 99148-1551."
+      "note": "WhatsApp/emergency (15) 99148-1551.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, mit diensthabendem Team; während der Geschäftszeiten möglichst mit Termin, nachts, am Wochenende und an Feiertagen in der Reihenfolge des Eintreffens."
+      }
     },
     {
       "kind": "clinic",
@@ -1156,7 +1351,10 @@
       "source_url": "https://www.veterinariasantana.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency on-call service, day and night.",
-      "note": "Mobile emergency number; general line (15) 3232-8241 (unlabelled on the page). No regular hours listed."
+      "note": "Mobile emergency number; general line (15) 3232-8241 (unlabelled on the page). No regular hours listed.",
+      "duty_i18n": {
+        "de": "Bereitschaftsdienst für Notfälle rund um die Uhr, Tag und Nacht."
+      }
     },
     {
       "kind": "clinic",
@@ -1171,7 +1369,10 @@
       "source_url": "https://clinicaduovet.com.br/",
       "checked": "2026-11-09",
       "duty": "Regular hours Mon-Fri 8:30-18:00, Sat 8:30-13:00; emergency care available 24 hours, 7 days a week.",
-      "note": "WhatsApp (15) 99177-3925. 24 h applies to emergencies per FAQ."
+      "note": "WhatsApp (15) 99177-3925. 24 h applies to emergencies per FAQ.",
+      "duty_i18n": {
+        "de": "Reguläre Öffnungszeiten Mo–Fr 8.30–18 Uhr, Sa 8.30–13 Uhr; Notfallversorgung täglich rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1186,7 +1387,10 @@
       "source_url": "https://hospitalcaoegato.com.br/unidades/unidade-jundiai-24-horas/",
       "checked": "2026-11-09",
       "duty": "Veterinary hospital open 24 hours, every day of the week.",
-      "note": "WhatsApp (11) 99962-9245."
+      "note": "WhatsApp (11) 99962-9245.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1201,7 +1405,10 @@
       "source_url": "https://www.clubeanimal.vet.br/",
       "checked": "2026-11-09",
       "duty": "Veterinary service and emergency care 24 hours a day for dogs and cats.",
-      "note": "Only one (unlabelled) number on the page; no opening hours listed."
+      "note": "Only one (unlabelled) number on the page; no opening hours listed.",
+      "duty_i18n": {
+        "de": "Tierärztliche Versorgung und Notfallversorgung rund um die Uhr für Hunde und Katzen."
+      }
     },
     {
       "kind": "clinic",
@@ -1216,7 +1423,10 @@
       "source_url": "https://hospitaldogsaude.com.br/contato/",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours.",
-      "note": "WhatsApp (11) 93414-4500."
+      "note": "WhatsApp (11) 93414-4500.",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1231,7 +1441,10 @@
       "source_url": "https://hospitalcentralvet.com.br/",
       "checked": "2026-11-09",
       "duty": "Hospital open 24 hours, every day, including weekends and holidays.",
-      "note": "WhatsApp (17) 99207-7022."
+      "note": "WhatsApp (17) 99207-7022.",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1246,7 +1459,10 @@
       "source_url": "https://veterinariarp24h.com.br/",
       "checked": "2026-11-09",
       "duty": "Clinic open 24 hours a day, every day.",
-      "note": "Main contact/WhatsApp number on the page; second number 17 3363-2063 only in a call link."
+      "note": "Main contact/WhatsApp number on the page; second number 17 3363-2063 only in a call link.",
+      "duty_i18n": {
+        "de": "Tierarztpraxis täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1261,7 +1477,10 @@
       "source_url": "https://www.animalvet24horas.com.br/",
       "checked": "2026-11-09",
       "duty": "Regular hours Mon-Fri 8:00-20:00, Sat 8:00-12:00, closed Sunday; 24-hour emergency on-call service.",
-      "note": "Emergency/WhatsApp (17) 99115-3399. Contact section shows 'Av. Murchid Homsi, 86'; header says 861."
+      "note": "Emergency/WhatsApp (17) 99115-3399. Contact section shows 'Av. Murchid Homsi, 86'; header says 861.",
+      "duty_i18n": {
+        "de": "Reguläre Öffnungszeiten Mo–Fr 8–20 Uhr, Sa 8–12 Uhr, So geschlossen; Notdienst-Bereitschaft rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1276,7 +1495,10 @@
       "source_url": "https://www.hospitalveterinariodebauru.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day, including holidays.",
-      "note": "WhatsApp/24 h emergency (14) 99714-7626."
+      "note": "WhatsApp/24 h emergency (14) 99714-7626.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1291,7 +1513,10 @@
       "source_url": "https://www.hvgvbauru.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day, including weekends and holidays; emergency and hospitalisation around the clock, specialists by appointment.",
-      "note": "Same number for phone, WhatsApp and emergency; map links use '1250'."
+      "note": "Same number for phone, WhatsApp and emergency; map links use '1250'.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen; Notfallversorgung und stationäre Aufnahme durchgehend, Fachärzte nach Terminvereinbarung."
+      }
     },
     {
       "kind": "clinic",
@@ -1306,7 +1531,10 @@
       "source_url": "https://vetnasa.com.br/unidades/barueri.html",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 7 days a week, including holidays; urgent cases seen without appointment, specialists by appointment.",
-      "note": "Central line (11) 3090-2317 also labelled 24 HORAS."
+      "note": "Central line (11) 3090-2317 also labelled 24 HORAS.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen; dringende Fälle ohne Termin, Fachärzte nach Terminvereinbarung."
+      }
     },
     {
       "kind": "clinic",
@@ -1321,7 +1549,10 @@
       "source_url": "http://www.vetcare24h.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 7 days a week, including Sundays and holidays.",
-      "note": "Second number (11) 94730-4205."
+      "note": "Second number (11) 94730-4205.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "kind": "clinic",
@@ -1336,7 +1567,10 @@
       "source_url": "https://hospitalvet24hrs.com.br/alphaville/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day.",
-      "note": "Alphaville area next to Barueri. Phone is the WhatsApp number on the page; other units (Cajamar, Itapevi) listed without addresses."
+      "note": "Alphaville area next to Barueri. Phone is the WhatsApp number on the page; other units (Cajamar, Itapevi) listed without addresses.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1351,7 +1585,10 @@
       "source_url": "https://www.hospitalvetpetplanet.com.br/contato",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day.",
-      "note": "Other phones (19) 3435-6996 and (19) 3302-6443 (WhatsApp)."
+      "note": "Other phones (19) 3435-6996 and (19) 3302-6443 (WhatsApp).",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1366,7 +1603,10 @@
       "source_url": "https://hospitalvetpiracicaba.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours for emergencies (\"24 horas pelo seu PET\"; 24-hour emergency cover).",
-      "note": "Second unit Rua Governador Pedro de Toledo, 463, Centro. Home page says \"24 horas pelo seu PET\"; specialty pages repeat 24 h cover; page does not say which unit is 24 h; scheduling line 3433-0478."
+      "note": "Second unit Rua Governador Pedro de Toledo, 463, Centro. Home page says \"24 horas pelo seu PET\"; specialty pages repeat 24 h cover; page does not say which unit is 24 h; scheduling line 3433-0478.",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr („24 horas pelo seu PET“)."
+      }
     },
     {
       "kind": "clinic",
@@ -1381,7 +1621,10 @@
       "source_url": "https://vetclinic.simples.vet.br/plantao-veterinario-24-horas/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day, including holidays. Other VetClinic units have business hours only.",
-      "note": "Confirmed on vetclinicsaocarlos.com.br too. WhatsApp (16) 99646-1110."
+      "note": "Confirmed on vetclinicsaocarlos.com.br too. WhatsApp (16) 99646-1110.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen. Andere VetClinic-Standorte sind nur zu den üblichen Geschäftszeiten geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1396,7 +1639,10 @@
       "source_url": "https://sanclasaocarlos.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour hospital, emergency on-call line open every day.",
-      "note": "Phone is the Plantão 24h / WhatsApp number."
+      "note": "Phone is the Plantão 24h / WhatsApp number.",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet; Notfall-Bereitschaftsnummer täglich erreichbar."
+      }
     },
     {
       "kind": "clinic",
@@ -1410,7 +1656,10 @@
       "source_url": "https://domvet24h.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital; call or message the on-call number.",
-      "note": "WhatsApp number; no street address on fetched pages. General contact (16) 99796-4117."
+      "note": "WhatsApp number; no street address on fetched pages. General contact (16) 99796-4117.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik; unter der Bereitschaftsnummer anrufen oder schreiben."
+      }
     },
     {
       "kind": "clinic",
@@ -1425,7 +1674,10 @@
       "source_url": "https://www.sanavet.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 8:30-22:00, Sat 8:30-14:00, closed Sunday; urgent care, call ahead.",
-      "note": "Page does not claim 24 h."
+      "note": "Page does not claim 24 h.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–22 Uhr, Sa 8.30–14 Uhr, So geschlossen; dringende Fälle, bitte vorher anrufen."
+      }
     },
     {
       "kind": "clinic",
@@ -1439,7 +1691,10 @@
       "source_url": "https://domvet24h.com.br/clinica-24-horas/",
       "checked": "2026-11-09",
       "duty": "24-hour veterinary hospital; call or message the on-call number.",
-      "note": "WhatsApp number; no street address on fetched pages. One link on the page has an extra digit."
+      "note": "WhatsApp number; no street address on fetched pages. One link on the page has an extra digit.",
+      "duty_i18n": {
+        "de": "24-Stunden-Tierklinik; unter der Bereitschaftsnummer anrufen oder schreiben."
+      }
     },
     {
       "kind": "clinic",
@@ -1454,7 +1709,10 @@
       "source_url": "https://www.clinvetpp.com.br/emergencia-veterinaria-24-horas/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours including holidays; night, weekend and holiday on-call service.",
-      "note": "Emergency/WhatsApp (18) 98119-5129."
+      "note": "Emergency/WhatsApp (18) 98119-5129.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, auch an Feiertagen; Bereitschaftsdienst nachts, am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1469,7 +1727,10 @@
       "source_url": "https://www.saofrancisco.vet.br/",
       "checked": "2026-11-09",
       "duty": "Main clinic open 24 hours. Other units have their own hours.",
-      "note": "Other units listed without addresses."
+      "note": "Other units listed without addresses.",
+      "duty_i18n": {
+        "de": "Hauptklinik rund um die Uhr geöffnet. Andere Standorte haben eigene Öffnungszeiten."
+      }
     },
     {
       "kind": "clinic",
@@ -1484,7 +1745,10 @@
       "source_url": "https://www.hvsaomanoel.com.br/",
       "checked": "2026-11-09",
       "duty": "24-hour emergency and hospital care.",
-      "note": "Other phones (18) 3223-7771, WhatsApp (18) 99117-7469."
+      "note": "Other phones (18) 3223-7771, WhatsApp (18) 99117-7469.",
+      "duty_i18n": {
+        "de": "Notfall- und Klinikversorgung rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1499,7 +1763,10 @@
       "source_url": "https://centervetpp.com.br/",
       "checked": "2026-11-09",
       "duty": "Emergency and inpatient care 24 hours, every day. Reception on business hours.",
-      "note": "Phone is the 24 h emergency number; reception (18) 98811-5500."
+      "note": "Phone is the 24 h emergency number; reception (18) 98811-5500.",
+      "duty_i18n": {
+        "de": "Notfall- und stationäre Versorgung täglich rund um die Uhr. Empfang zu den Geschäftszeiten."
+      }
     },
     {
       "kind": "clinic",
@@ -1514,7 +1781,10 @@
       "source_url": "https://clinicasociedadeanimal.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 7 days a week.",
-      "note": "WhatsApp number. Centro unit (Rua Silva Jardim, 156) is open 8:00-20:00 only."
+      "note": "WhatsApp number. Centro unit (Rua Silva Jardim, 156) is open 8:00-20:00 only.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1529,7 +1799,10 @@
       "source_url": "https://clinicasociedadeanimal.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 7 days a week.",
-      "note": "WhatsApp number."
+      "note": "WhatsApp number.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1544,7 +1817,10 @@
       "source_url": "https://clinicaauvet.com.br/",
       "checked": "2026-11-09",
       "duty": "Open every day 7:00-24:00; 24-hour inpatient care.",
-      "note": "Page footer also lists Av. Independência 1795; page does not claim 24 h opening."
+      "note": "Page footer also lists Av. Independência 1795; page does not claim 24 h opening.",
+      "duty_i18n": {
+        "de": "Täglich 7–24 Uhr geöffnet; stationäre Versorgung rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1559,7 +1835,10 @@
       "source_url": "https://hospitalveterinariopublico.com.br/unidade-taubate/",
       "checked": "2026-11-09",
       "duty": "Public veterinary hospital, Mon-Fri 8:00-17:00.",
-      "note": "Managed by ANCLIVEPA-SP; no phone on page. City page taubate.sp.gov.br failed to open."
+      "note": "Managed by ANCLIVEPA-SP; no phone on page. City page taubate.sp.gov.br failed to open.",
+      "duty_i18n": {
+        "de": "Öffentliche Tierklinik, Mo–Fr 8–17 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1574,7 +1853,10 @@
       "source_url": "https://nippovet.com.br/",
       "checked": "2026-11-09",
       "duty": "Hospital emergency care 24 hours, every day; clinic Mon-Fri 8:00-17:30.",
-      "note": "WhatsApp (11) 94117-7957."
+      "note": "WhatsApp (11) 94117-7957.",
+      "duty_i18n": {
+        "de": "Notfallversorgung in der Klinik täglich rund um die Uhr; Sprechstunde Mo–Fr 8–17.30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1588,7 +1870,10 @@
       "url": "https://www.hovetpolipet.com.br/",
       "source_url": "https://www.hovetpolipet.com.br/",
       "checked": "2026-11-09",
-      "duty": "Open 24 hours, including Sundays and holidays."
+      "duty": "Open 24 hours, including Sundays and holidays.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "kind": "clinic",
@@ -1603,7 +1888,10 @@
       "source_url": "https://hospitalvetscare.com.br/mogi/",
       "checked": "2026-11-09",
       "duty": "24-hour duty every day of the year, including nights, Sundays and holidays.",
-      "note": "Phone is the Central 24h / WhatsApp; other network units are not 24 h."
+      "note": "Phone is the Central 24h / WhatsApp; other network units are not 24 h.",
+      "duty_i18n": {
+        "de": "An jedem Tag des Jahres rund um die Uhr im Dienst, auch nachts, sonn- und feiertags."
+      }
     },
     {
       "kind": "clinic",
@@ -1618,7 +1906,10 @@
       "source_url": "https://haisaudepet.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day.",
-      "note": "WhatsApp (11) 91000-1149."
+      "note": "WhatsApp (11) 91000-1149.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1633,7 +1924,10 @@
       "source_url": "https://sanclamarilia.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours; emergency line and 24-hour on-call WhatsApp.",
-      "note": "Emergency (14) 3454-8500; WhatsApp and Plantão 24h (14) 99775-4386. Page labels it 'Atendimento 24h' / 'Plantão 24h' / 'emergência 24h'."
+      "note": "Emergency (14) 3454-8500; WhatsApp and Plantão 24h (14) 99775-4386. Page labels it 'Atendimento 24h' / 'Plantão 24h' / 'emergência 24h'.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet; Notfallnummer und WhatsApp-Bereitschaftsdienst durchgehend erreichbar."
+      }
     },
     {
       "kind": "clinic",
@@ -1648,7 +1942,10 @@
       "source_url": "https://vetfranca.com.br/internacao-24-horas.html",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:30-18:30 with overnight emergency duty 19:00-08:00; Saturday and Sunday 24-hour duty.",
-      "note": "Page heading 'INTERNAÇÃO 24 HORAS'; 24 h explicit only for weekends (Sat/Sun plantão 24h), weekday nights 19:00-08:00 emergency duty, so not marked 24h. Mobile (16) 99946-6666."
+      "note": "Page heading 'INTERNAÇÃO 24 HORAS'; 24 h explicit only for weekends (Sat/Sun plantão 24h), weekday nights 19:00-08:00 emergency duty, so not marked 24h. Mobile (16) 99946-6666.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18.30 Uhr mit nächtlichem Notdienst 19–8 Uhr; Sa und So Notdienst rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1663,7 +1960,10 @@
       "source_url": "https://vetlim.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day.",
-      "note": "Page: 'Disponível 24h para o seu Pet'. Landline (19) 3034-3045 only appeared in WhatsApp link URLs."
+      "note": "Page: 'Disponível 24h para o seu Pet'. Landline (19) 3034-3045 only appeared in WhatsApp link URLs.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1678,7 +1978,10 @@
       "source_url": "https://www.hvpetcompany.com.br/",
       "checked": "2026-11-09",
       "duty": "Emergency care 24 hours a day, every day; routine consultations by appointment.",
-      "note": "Page: 'Atendimento de emergência disponível 24 horas por dia'. Two different postal codes on page."
+      "note": "Page: 'Atendimento de emergência disponível 24 horas por dia'. Two different postal codes on page.",
+      "duty_i18n": {
+        "de": "Notfallversorgung 24 Stunden am Tag, täglich; reguläre Sprechstunde nach Terminvereinbarung."
+      }
     },
     {
       "kind": "clinic",
@@ -1693,7 +1996,10 @@
       "source_url": "https://hv24h.simples.vet.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 365 days a year.",
-      "note": "Page: '24 horas, 365 dias no ano'."
+      "note": "Page: '24 horas, 365 dias no ano'.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr."
+      }
     },
     {
       "kind": "clinic",
@@ -1708,7 +2014,10 @@
       "source_url": "https://shopdogclinicavet.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day, including weekends and holidays.",
-      "note": "Phone is also WhatsApp. Page: '24 horas, todos os dias'."
+      "note": "Phone is also WhatsApp. Page: '24 horas, todos os dias'.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch am Wochenende und an Feiertagen."
+      }
     },
     {
       "kind": "clinic",
@@ -1723,7 +2032,10 @@
       "source_url": "https://brasilvet24.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day; emergency room always open.",
-      "note": "Page: 'Pronto-socorro aberto 24 horas'."
+      "note": "Page: 'Pronto-socorro aberto 24 horas'.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet; Notaufnahme jederzeit geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1738,7 +2050,10 @@
       "source_url": "https://brasilvet24.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day; emergency room always open.",
-      "note": "Unit listed as 24h on the Brasil Vet site."
+      "note": "Unit listed as 24h on the Brasil Vet site.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet; Notaufnahme jederzeit geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1753,7 +2068,10 @@
       "source_url": "https://brasilvet24.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, every day; emergency room always open.",
-      "note": "Unit listed as 24h on the Brasil Vet site."
+      "note": "Unit listed as 24h on the Brasil Vet site.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet; Notaufnahme jederzeit geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1768,7 +2086,10 @@
       "source_url": "https://veterinariacaicara.com.br/atendimento_veterinario_24_horas/",
       "checked": "2026-11-09",
       "duty": "Veterinary care 24 hours a day; pharmacy open every day.",
-      "note": "Same address and phones as innovaveterinaria.com.br (Innova Vet - 'Atendimento Veterinário 24 horas'); WhatsApp (13) 99196-1338. Page: 'funciona 24 horas por dia'."
+      "note": "Same address and phones as innovaveterinaria.com.br (Innova Vet - 'Atendimento Veterinário 24 horas'); WhatsApp (13) 99196-1338. Page: 'funciona 24 horas por dia'.",
+      "duty_i18n": {
+        "de": "Tierärztliche Versorgung rund um die Uhr; Apotheke täglich geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1783,7 +2104,10 @@
       "source_url": "https://www.clinicaveterinariavioletta.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours; grooming Mon-Sat 08:00-18:00.",
-      "note": "Emergency button links to (13) 3512-1627. Page: 'Atendimento: 24 horas'."
+      "note": "Emergency button links to (13) 3512-1627. Page: 'Atendimento: 24 horas'.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet; Fellpflege Mo–Sa 8–18 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1798,7 +2122,10 @@
       "source_url": "https://lp.caesegatos24horas.com.br/",
       "checked": "2026-11-09",
       "duty": "Veterinary care 24 hours a day.",
-      "note": "Other numbers on page: (13) 3561-5569, WhatsApp (13) 99754-7353. Landing page; page says 'oferece atendimento veterinário 24 horas'."
+      "note": "Other numbers on page: (13) 3561-5569, WhatsApp (13) 99754-7353. Landing page; page says 'oferece atendimento veterinário 24 horas'.",
+      "duty_i18n": {
+        "de": "Tierärztliche Versorgung rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1813,7 +2140,10 @@
       "source_url": "https://www.animallpet.com.br/contato.html",
       "checked": "2026-11-09",
       "duty": "Open 24 hours.",
-      "note": "Contact page shows '(15) 3272-2078 - 24 horas'; WhatsApp (15) 99830-2078. Only that one line says 24 horas."
+      "note": "Contact page shows '(15) 3272-2078 - 24 horas'; WhatsApp (15) 99830-2078. Only that one line says 24 horas.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1828,7 +2158,10 @@
       "source_url": "https://animed.acondigital.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours.",
-      "note": "WhatsApp (19) 99267-9014. Page: 'Hospital Veterinário 24 horas em Americana-SP', 'Aberto 24h'. Open Graph name says 'Arapongas' (template leftover); animed.com.br shows same address/phones."
+      "note": "WhatsApp (19) 99267-9014. Page: 'Hospital Veterinário 24 horas em Americana-SP', 'Aberto 24h'. Open Graph name says 'Arapongas' (template leftover); animed.com.br shows same address/phones.",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1841,7 +2174,10 @@
       "source_url": "https://www.lmveterinaria.com.br/",
       "checked": "2026-11-09",
       "duty": "Open 24 hours, 7 days a week.",
-      "note": "Page: 'Atendimento 24 horas • 7 dias por semana'. No address or phone on the fetched page."
+      "note": "Page: 'Atendimento 24 horas • 7 dias por semana'. No address or phone on the fetched page.",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "kind": "clinic",
@@ -1856,7 +2192,10 @@
       "source_url": "https://hospitalveterinariofam.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 09:00-17:00; 24-hour inpatient care.",
-      "note": "Page says 'INTERNAÇÃO 24H' and 'plantão 24h' for the specialist team, but the listed opening hours are Mon-Fri 9-17, so not marked 24h."
+      "note": "Page says 'INTERNAÇÃO 24H' and 'plantão 24h' for the specialist team, but the listed opening hours are Mon-Fri 9-17, so not marked 24h.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–17 Uhr; stationäre Betreuung rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1871,7 +2210,10 @@
       "source_url": "https://iaveterinaria.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-12:00; emergency service and monitored hospitalisation.",
-      "note": "Page has an 'Emergência 24h' service heading but hours Mon-Sat only, so not marked 24h. Phone is the WhatsApp link."
+      "note": "Page has an 'Emergência 24h' service heading but hours Mon-Sat only, so not marked 24h. Phone is the WhatsApp link.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr, Sa 8–12 Uhr; Notdienst und überwachte stationäre Aufnahme."
+      }
     },
     {
       "kind": "clinic",
@@ -1886,7 +2228,10 @@
       "source_url": "https://www.clinicabichomania.com.br/",
       "checked": "2026-11-09",
       "duty": "Separate emergency number published for out-of-hours cases.",
-      "note": "Commercial WhatsApp (19) 99630-2030; emergency (19) 99141-3786. No 24h statement."
+      "note": "Commercial WhatsApp (19) 99630-2030; emergency (19) 99141-3786. No 24h statement.",
+      "duty_i18n": {
+        "de": "Für Fälle außerhalb der Öffnungszeiten ist eine separate Notfallnummer veröffentlicht."
+      }
     },
     {
       "kind": "clinic",
@@ -1900,7 +2245,10 @@
       "source_url": "https://www.santabarbara.sp.gov.br/portal/noticias/0/3/72246/clinica-meu-pet-completa-um-ano-com-mais-de-35-mil-atendimentos-a-caes-e-gatos-barbarenses",
       "checked": "2026-11-09",
       "duty": "Free municipal clinic for residents of Santa Bárbara d'Oeste only; Mon-Fri 09:00-16:00.",
-      "note": "Prefeitura news page; no clinic phone (only city line (19) 3455-8000). Requires ID and proof of address. Url is the news page."
+      "note": "Prefeitura news page; no clinic phone (only city line (19) 3455-8000). Requires ID and proof of address. Url is the news page.",
+      "duty_i18n": {
+        "de": "Kostenlose städtische Klinik, nur für Einwohner von Santa Bárbara d'Oeste; Mo–Fr 9–16 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1915,7 +2263,10 @@
       "source_url": "https://falascavet.flydigital.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 09:00-18:30, Sat 09:00-13:00.",
-      "note": "Phone is WhatsApp."
+      "note": "Phone is WhatsApp.",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–18.30 Uhr, Sa 9–13 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1930,7 +2281,10 @@
       "source_url": "https://gksaudevet.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:00-19:00, Sat 09:00-13:00; 24-hour inpatient care.",
-      "note": "Mobile (15) 99626-5094. 'Internação 24 Horas' is inpatient care only."
+      "note": "Mobile (15) 99626-5094. 'Internação 24 Horas' is inpatient care only.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–13 Uhr; stationäre Betreuung rund um die Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1945,7 +2299,10 @@
       "source_url": "https://clinicao.com.br/guaratingueta/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-14:00, closed Sunday.",
-      "note": "WhatsApp (12) 99175-0974. Wix site elsewhere calls it '24 horas' but the opened page does not."
+      "note": "WhatsApp (12) 99175-0974. Wix site elsewhere calls it '24 horas' but the opened page does not.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–20 Uhr, Sa 8–14 Uhr, So geschlossen."
+      }
     },
     {
       "kind": "clinic",
@@ -1960,7 +2317,10 @@
       "source_url": "https://clinicaguaravet.simples.vet.br/contato/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:30-18:00, Sat 08:30-12:30.",
-      "note": "Mobile (12) 99646-4846."
+      "note": "Mobile (12) 99646-4846.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–12.30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1975,7 +2335,10 @@
       "source_url": "https://www.totalvet.com.br/",
       "checked": "2026-11-09",
       "duty": "Mon-Fri 08:30-18:30.",
-      "note": "Unit also in São Paulo."
+      "note": "Unit also in São Paulo.",
+      "duty_i18n": {
+        "de": "Mo–Fr 8.30–18.30 Uhr."
+      }
     },
     {
       "kind": "clinic",
@@ -1990,7 +2353,10 @@
       "source_url": "https://www.clinicapontocao.com/",
       "checked": "2026-11-09",
       "duty": "Veterinary care until 21:00 every day.",
-      "note": "Meta/title say 'pronto atendimento 24h' but body says care until 21h, so not marked 24h. Landline (11) 3456-7890 shown on page."
+      "note": "Meta/title say 'pronto atendimento 24h' but body says care until 21h, so not marked 24h. Landline (11) 3456-7890 shown on page.",
+      "duty_i18n": {
+        "de": "Tierärztliche Versorgung täglich bis 21 Uhr."
+      }
     },
     {
       "name": "Veterinária Promove",
@@ -2005,7 +2371,10 @@
       "note": "Second phone 2266-0942.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Grand-Vet Clínica Veterinária",
@@ -2020,7 +2389,10 @@
       "note": "Page also lists mobile/WhatsApp (21) 99993-6299 and 99989-4093.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen; Notfallversorgung."
+      }
     },
     {
       "name": "Clínica Veterinária Vila Isabel",
@@ -2035,7 +2407,10 @@
       "note": "Mobile/WhatsApp number; no landline on page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Cãopacabana Clínica Veterinária 24h",
@@ -2050,7 +2425,10 @@
       "note": "WhatsApp (21) 96721-2744.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "name": "Vet Care Clínica Veterinária 24h",
@@ -2065,7 +2443,10 @@
       "note": "Page's directions link shows R. das Laranjeiras, 84 - address to confirm. 24 h taken from page title/meta description 'Clínica Veterinária 24 horas em Laranjeiras'. WhatsApp (21) 98123-8855.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik, rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital Veterinário Botafogo",
@@ -2080,7 +2461,10 @@
       "note": "Page only says 'Emergência veterinária sempre disponível'; no explicit 24 h text on the fetched page (search title says 24h), so false. WhatsApp (21) 96739-6931.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliche Notfälle; Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "HOVET Tijuca - Hospital Veterinário",
@@ -2095,7 +2479,10 @@
       "note": "Mobile/WhatsApp number only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "SOS Animal Tijuca",
@@ -2110,7 +2497,10 @@
       "note": "Second phone 2238-5163.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Cavet Tijuca Veterinária 24h",
@@ -2124,7 +2514,10 @@
       "source_url": "https://veterinariacavetijuca24h.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "name": "A Casa do Vet",
@@ -2139,7 +2532,10 @@
       "note": "Mobile 21 99903-0330.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Vida de Cão Hospital Veterinário 24h",
@@ -2154,7 +2550,10 @@
       "note": "Second phone 2463-2249; WhatsApp (21) 98920-6424. Pet taxi excluded from 24 h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Anima Animal",
@@ -2169,7 +2568,10 @@
       "note": "Mobile number only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Betrieb rund um die Uhr."
+      }
     },
     {
       "name": "CTvet Clínica Veterinária de Emergência",
@@ -2184,7 +2586,10 @@
       "note": "Also listed as 'CTVET 24H Magalhães Bastos' on a directory (Jardim Sulacap, same phone).",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital Veterinário 5 Estrelas",
@@ -2199,7 +2604,10 @@
       "note": "WhatsApp (21) 98934-5056.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "name": "Cetra Vet Freguesia",
@@ -2214,7 +2622,10 @@
       "note": "WhatsApp (21) 97029-1877.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Versorgung täglich rund um die Uhr."
+      }
     },
     {
       "name": "Cetra Vet Recreio dos Bandeirantes",
@@ -2229,7 +2640,10 @@
       "note": "WhatsApp (21) 96099-7000.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Versorgung täglich rund um die Uhr."
+      }
     },
     {
       "name": "Cetra Vet Campo Grande",
@@ -2244,7 +2658,10 @@
       "note": "Home page marks it 24h at the top but the unit list says 08h-00h; conflicting, so false. WhatsApp (21) 97076-9557.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Aktuelle Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Cetra Vet Jacarepaguá",
@@ -2259,7 +2676,10 @@
       "note": "WhatsApp (21) 96489-6642.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 8–20 Uhr."
+      }
     },
     {
       "name": "Cetra Vet Cachambi",
@@ -2274,7 +2694,10 @@
       "note": "WhatsApp (21) 97039-6264.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich 8–24 Uhr."
+      }
     },
     {
       "name": "Centro de Cuidado Veterinário (CCV) Barra",
@@ -2289,7 +2712,10 @@
       "note": "Second phone (21) 99946-2562.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "name": "Via Care Veterinária",
@@ -2304,7 +2730,10 @@
       "note": "WhatsApp (21) 97533-0590.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztliches Team täglich rund um die Uhr erreichbar."
+      }
     },
     {
       "name": "CTA Clínica Veterinária",
@@ -2319,7 +2748,10 @@
       "note": "WhatsApp (21) 97222-0077.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notdienst rund um die Uhr."
+      }
     },
     {
       "name": "Hospital Città Vet Jardim Oceânico",
@@ -2328,13 +2760,16 @@
       "address": "Av. General Guedes da Fontoura, 747, Barra da Tijuca",
       "phone": "+55 21 2494-3427",
       "emergency_24h": false,
-      "duty": "Hospital site advertises 24-hour care in general, but does not state it for the Jardim Oceânico unit; hours not published per unit.",
+      "duty": "Hours not published for this unit.",
       "url": "https://cittavet.com.br/",
       "source_url": "https://cittavet.com.br/",
-      "note": "Page says 'atendimento ... 24 horas por dia' generally, not per unit. Other units not entered: Città Office Mall (Av. das Américas 700, bloco 8, lojas 103-R/103-Q, (21) 2493-2168) and BarraShopping (Av. das Américas 4666, (21) 3387-0564). WhatsApp (21) 99218-4986. 24-h claim downgraded 2026-11-09: site states 24 h for the hospital as a whole (3 units in Barra da Tijuca), not for this unit.",
+      "note": "Page says 'atendimento ... 24 horas por dia' generally, not per unit. Other units not entered: Città Office Mall (Av. das Américas 700, bloco 8, lojas 103-R/103-Q, (21) 2493-2168) and BarraShopping (Av. das Américas 4666, (21) 3387-0564). WhatsApp (21) 99218-4986. 24-h claim downgraded 2026-11-09: site states 24 h for the hospital as a whole (3 units in Barra da Tijuca), not for this unit. Moved from duty (2026-11-10): Hospital site advertises 24-hour care in general, but does not state it for the Jardim Oceânico unit.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Für diesen Standort sind keine Öffnungszeiten veröffentlicht."
+      }
     },
     {
       "name": "Veterinária Vargem Grande",
@@ -2349,7 +2784,10 @@
       "note": "WhatsApp number only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Veterinária Vargem Grande - unidade Recreio",
@@ -2364,7 +2802,10 @@
       "note": "Same site; third unit Ilha de Guaratiba not described as 24 h, not entered.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Taquara",
@@ -2373,13 +2814,16 @@
       "address": "Rua Bacairis, 141, Taquara",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Flamengo",
@@ -2388,13 +2832,16 @@
       "address": "Rua Paissandu, 230, Flamengo",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Copacabana",
@@ -2403,13 +2850,16 @@
       "address": "Rua Djalma Ulrich, 194, Copacabana",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Tijuca",
@@ -2418,13 +2868,16 @@
       "address": "Rua Dr. Satamini, 193, Tijuca",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Niterói",
@@ -2433,13 +2886,16 @@
       "address": "Avenida Roberto Silveira, 144, Icaraí",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Upa Pet Hospital Veterinário Popular - Nova Iguaçu",
@@ -2448,13 +2904,16 @@
       "address": "Avenida Abílio Augusto Távora, 1000, Centro",
       "phone": "+55 21 3900-7567",
       "emergency_24h": false,
-      "duty": "Network says it offers 24-hour hospital care; call ahead to confirm this unit's hours.",
+      "duty": "Call ahead to confirm this unit's hours.",
       "url": "https://upapet.com.br/",
       "source_url": "https://upapet.com.br/",
-      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city.",
+      "note": "Units page states 'Hospital Veterinário Popular 24 horas' and 'equipe médica disponível 24h todos os dias' network-wide but gives no per-unit hours, so false. Central numbers (21) 3900-7567, 2436-0800, WhatsApp (21) 98717-2000. Taquara/Flamengo/Copacabana/Tijuca are Rio city. Moved from duty (2026-11-10): Network says it offers 24-hour hospital care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten dieses Standorts bitte telefonisch erfragen."
+      }
     },
     {
       "name": "CEMEVI Centro Médico Veterinário Icaraí",
@@ -2469,7 +2928,10 @@
       "note": "Mobile/WhatsApp number also used for emergencies.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet; Notfallversorgung."
+      }
     },
     {
       "name": "Hospital Veterinário Niterói",
@@ -2483,7 +2945,10 @@
       "source_url": "https://hvn.vet.br/a-clinica/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr für Notfälle geöffnet."
+      }
     },
     {
       "name": "PETeVET Medicina Veterinária",
@@ -2498,7 +2963,10 @@
       "note": "Second phone 2711-7557; WhatsApp (21) 96803-6230.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Das ganze Jahr täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Casanimal Clínica Veterinária",
@@ -2513,7 +2981,10 @@
       "note": "WhatsApp (21) 96903-2307.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "GoldenVet Clínica Veterinária",
@@ -2528,7 +2999,10 @@
       "note": "No hours or 24 h claim on page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Hospital Veterinário Animamed",
@@ -2542,7 +3016,10 @@
       "note": "No street address on page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen."
+      }
     },
     {
       "name": "FriPet Veterinária",
@@ -2556,7 +3033,10 @@
       "note": "No phone or street address on page (area Conselheiro Paulino only). Page lists no phone number.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Klinik mit Betrieb rund um die Uhr."
+      }
     },
     {
       "name": "COVET Veterinária",
@@ -2571,7 +3051,10 @@
       "note": "Mobile/WhatsApp number only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr für Notfälle erreichbar."
+      }
     },
     {
       "name": "Hospital Veterinário Agulhas Negras",
@@ -2586,7 +3069,10 @@
       "note": "2109-8355 is the emergency line; WhatsApp (24) 97404-7201.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, mit klinischer Versorgung und Notdienst."
+      }
     },
     {
       "name": "Pet Vitale Clínica Veterinária 24h",
@@ -2600,7 +3086,10 @@
       "source_url": "https://www.petvitale.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Clínica Veterinária Volta Redonda (Veterinária VR)",
@@ -2615,7 +3104,10 @@
       "note": "24 h only for the inpatient ward, so false.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 9–20 Uhr; Sa, So und feiertags 9–15 Uhr; für stationäre Patienten ist rund um die Uhr ein Tierarzt im Dienst."
+      }
     },
     {
       "name": "Amigo Bicho Clínica Veterinária 24h",
@@ -2630,7 +3122,10 @@
       "note": "WhatsApp (24) 98827-2477 until 22h. Pet shop hours on page conflict with footer.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Klinik täglich rund um die Uhr geöffnet. Die Zoohandlung hat kürzere Öffnungszeiten."
+      }
     },
     {
       "name": "Complexo Veterinário Vet Dort",
@@ -2645,7 +3140,10 @@
       "note": "Phone is the WhatsApp number linked on the page; no landline shown.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik, rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Veterinária e PetShop Apaixonados por Quatro Patas",
@@ -2660,7 +3158,10 @@
       "note": "Page states 'serviço de atendimento de emergência 24Hs' alongside daytime hours; treated as not fully 24 h open, so false.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Sa 8–18 Uhr; So und feiertags 8–16 Uhr; nach eigenen Angaben Notdienst rund um die Uhr."
+      }
     },
     {
       "name": "Hospital Municipal Veterinário São Francisco de Assis",
@@ -2674,7 +3175,10 @@
       "note": "News article (Diário do Rio) says opened 2025-10-11, third municipal vet hospital, 8h-20h daily; no phone. Official prefeitura pages blocked (request denied). Not 24h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffentliche städtische Tierklinik; täglich 8–20 Uhr."
+      }
     },
     {
       "name": "Pet Center Veterinária",
@@ -2689,7 +3193,10 @@
       "note": "WhatsApp (22) 99711-5986.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Mo–Fr 8–18 Uhr; Sa 8–12 Uhr."
+      }
     },
     {
       "name": "Pet Support Hospital Veterinário - Zona Norte",
@@ -2698,13 +3205,16 @@
       "address": "Av. Plínio Brasil Milano, 1135, Higienópolis",
       "phone": "+55 51 3023 7111",
       "emergency_24h": false,
-      "duty": "Hospital group with a published emergency line; its site does not state 24-hour service for this unit. Call to confirm.",
+      "duty": "Emergency line available; call to confirm hours.",
       "url": "https://www.petsupport.com.br/",
       "source_url": "https://www.petsupport.com.br/emergencia-24h/",
-      "note": "Emergency page lists (51) 3023-7111, WhatsApp (51) 98217-0138; contact page says Boa Vista for the district.",
+      "note": "Emergency page lists (51) 3023-7111, WhatsApp (51) 98217-0138; contact page says Boa Vista for the district. Moved from duty (2026-11-10): Hospital group; its site does not state 24-hour service for this unit.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallnummer vorhanden; Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Pet Support Hospital Veterinário - Zona Sul",
@@ -2713,13 +3223,16 @@
       "address": "R. Dr. Campos Velho, 1366, Cristal",
       "phone": "+55 51 3277 2020",
       "emergency_24h": false,
-      "duty": "Hospital group with a published emergency line; its site does not state 24-hour service for this unit. Call to confirm.",
+      "duty": "Emergency line available; call to confirm hours.",
       "url": "https://www.petsupport.com.br/porto-alegre-zona-sul/",
       "source_url": "https://www.petsupport.com.br/emergencia-24h/",
-      "note": "WhatsApp (51) 98913-4064; contact page footer shows central number (51) 3023-7111.",
+      "note": "WhatsApp (51) 98913-4064; contact page footer shows central number (51) 3023-7111. Moved from duty (2026-11-10): Hospital group; its site does not state 24-hour service for this unit.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallnummer vorhanden; Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Pet Support Hospital Veterinário - Vale do Sinos",
@@ -2728,13 +3241,16 @@
       "address": "R. Ibirubá, 454, Vila Nova",
       "phone": "+55 51 3939 5111",
       "emergency_24h": false,
-      "duty": "Hospital group with a published emergency line; its site does not state 24-hour service for this unit. Call to confirm.",
+      "duty": "Emergency line available; call to confirm hours.",
       "url": "https://www.petsupport.com.br/",
       "source_url": "https://www.petsupport.com.br/emergencia-24h/",
-      "note": "WhatsApp (51) 99306-4669. petcare.com.br unit page also says Atendimento 24 horas.",
+      "note": "WhatsApp (51) 99306-4669. petcare.com.br unit page also says Atendimento 24 horas. Moved from duty (2026-11-10): Hospital group; its site does not state 24-hour service for this unit.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallnummer vorhanden; Öffnungszeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "Onco Support (Pet Support)",
@@ -2749,7 +3265,10 @@
       "note": "Listed on the 24h emergency page but petcare.com.br unit page describes weekday hours plus an on-call 21h-8h; not marked 24 h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Onkologiezentrum für Tiere; Sprechstunden wochentags, nachts Bereitschaftsdienst für stationäre Patienten."
+      }
     },
     {
       "name": "Hospital Veterinário Petlândia",
@@ -2764,7 +3283,10 @@
       "note": "Branch clinic Visc. de Pelotas 77 (Pio X) is not 24 h and was not entered.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik mit Notfallversorgung rund um die Uhr, ohne Termin."
+      }
     },
     {
       "name": "Veterinária Boff - Hospital Veterinário",
@@ -2778,7 +3300,10 @@
       "source_url": "https://veterinariaboff.com.br/hospital-veterinario/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle."
+      }
     },
     {
       "name": "Vitta de Bicho Hospital Veterinário 24h",
@@ -2792,7 +3317,10 @@
       "source_url": "https://vittadebicho.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle."
+      }
     },
     {
       "name": "Animal Clinic Hospital Veterinário - Batel",
@@ -2806,7 +3334,10 @@
       "source_url": "https://animalclinic.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Animal Clinic Hospital Veterinário - Bacacheri",
@@ -2821,7 +3352,10 @@
       "note": "Site states 24 h for the hospital as a whole, no per-unit hours.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital Veterinário Santa Mônica",
@@ -2835,7 +3369,10 @@
       "source_url": "https://hvsm.com.br/emergencias-veterinarias/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle."
+      }
     },
     {
       "name": "Hospital Veterinário Batel",
@@ -2850,7 +3387,10 @@
       "note": "Other numbers on page: (41) 99242-8355, (41) 98835-2013.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr erreichbar, mit Notdienst."
+      }
     },
     {
       "name": "HVC Centro Veterinário",
@@ -2865,7 +3405,10 @@
       "note": "Mobile/WhatsApp (41) 99977-0316.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags."
+      }
     },
     {
       "name": "Hospital Veterinário da UFPR",
@@ -2880,7 +3423,10 @@
       "note": "Page says internal operations run 24 h but describes no public emergency service; species not stated (Tribuna PR article, not used as source, says all animal types).",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Universitäre Lehrklinik. Öffentlicher Betrieb Mo–Fr 7.30–19.30 Uhr; Terminvergabe telefonisch Mo–Fr 8–18 Uhr."
+      }
     },
     {
       "name": "Hospvet Clínica Veterinária 24h",
@@ -2895,7 +3441,10 @@
       "note": "WhatsApp (43) 99199-9911.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital Veterinário Guanabara",
@@ -2909,7 +3458,10 @@
       "source_url": "https://www.hospveterinarioguanabara.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notaufnahme rund um die Uhr."
+      }
     },
     {
       "name": "Eko Hospital Veterinário",
@@ -2924,7 +3476,10 @@
       "note": "WhatsApp (43) 99616-6109.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Prontodog Hospital Veterinário",
@@ -2939,7 +3494,10 @@
       "note": "Page opened in Spanish version. WhatsApp (45) 99991-3335.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik täglich rund um die Uhr geöffnet, mit Intensivstation, stationärer Aufnahme und Operationen."
+      }
     },
     {
       "name": "Vet Plus Hospital Veterinário 24h",
@@ -2954,7 +3512,10 @@
       "note": "WhatsApp (47) 98900-0058.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Betrieb täglich rund um die Uhr, auch für Notfälle."
+      }
     },
     {
       "name": "Hospital Veterinário San Satri (Rio Tavares)",
@@ -2969,7 +3530,10 @@
       "note": "Capoeiras unit (R. Álvaro Tolentino 1514) not labelled 24 h, not entered.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Standort Rio Tavares das ganze Jahr täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital iPet Florianópolis",
@@ -2983,7 +3547,10 @@
       "source_url": "https://florianopolis.hospitalipet.com.br/clinica-veterinaria-24-horas/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Cão.Com Hospital Veterinário 24h",
@@ -2998,7 +3565,10 @@
       "note": "Mobile/WhatsApp (48) 99222-4004.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik das ganze Jahr täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Lovely Dog Hospital Veterinário 24h",
@@ -3013,7 +3583,10 @@
       "note": "Page lists two addresses (second: Rua Idalina Pereira dos Santos 148, tel (48) 3333-0442) and does not say which one is 24 h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierärztlicher Notdienst rund um die Uhr."
+      }
     },
     {
       "name": "Vettis Centro Veterinário",
@@ -3028,7 +3601,10 @@
       "note": "Second unit Ingleses: Rod. João Gualberto Soares 83, (48) 99158-1896; page does not separate hours per unit.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierarztpraxis mit Bereitschaftsdienst rund um die Uhr."
+      }
     },
     {
       "name": "Hospital Veterinário Santa Vida - Estreito",
@@ -3043,7 +3619,10 @@
       "note": "WhatsApp (48) 3197-1100.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallstation täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "HOVETSC Hospital Veterinário Santa Catarina",
@@ -3058,7 +3637,10 @@
       "note": "WhatsApp (47) 3037-4154.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Dringende Fälle und Notfälle: Versorgung rund um die Uhr."
+      }
     },
     {
       "name": "Clínica Veterinária Satori - Água Verde",
@@ -3073,7 +3655,10 @@
       "note": "Emergency WhatsApp (47) 99662-2794. Fortaleza unit is daytime only, not entered.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Standort Água Verde rund um die Uhr geöffnet; Notfall-WhatsApp-Nummer."
+      }
     },
     {
       "name": "Center Vet Balneário Camboriú",
@@ -3082,13 +3667,16 @@
       "address": "Avenida Alvin Bauer, 523",
       "phone": "+55 47 3311 2032",
       "emergency_24h": false,
-      "duty": "Veterinary clinic; its site does not state 24-hour emergency care. Call to confirm.",
+      "duty": "Call to confirm emergency hours.",
       "url": "https://centervetbc.com/",
       "source_url": "https://centervetbc.com/",
-      "note": "Mobile (47) 99119-0305.",
+      "note": "Mobile (47) 99119-0305. Moved from duty (2026-11-10): Site does not state 24-hour emergency care.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notdienstzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "SOS Clínica Veterinária 24h",
@@ -3102,7 +3690,10 @@
       "source_url": "https://sosclinicavet.com.br/home-nova/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Klinik täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Centro Avançado de Saúde Animal Odete Ferreira Martins (CASA)",
@@ -3117,7 +3708,10 @@
       "note": "Page says continuous hospital operation / continuous emergency care for priority cases but no 24 h wording and no opening hours. Same page: SAMUVET mobile emergency (31) 2888-0000, 24 h every day, free rescues - not a clinic, not entered; UBS Animal Rua Volts 81, scheduled only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffentliche städtische Tierklinik für einkommensschwache Tierhalter (CadÚnico oder Erklärung); dringende Fälle werden nach Risiko eingestuft. Termine und Auskünfte unter Option 2."
+      }
     },
     {
       "name": "Hospital Veterinário Angrisano - Carlos Prates",
@@ -3131,7 +3725,10 @@
       "source_url": "https://www.hospitalveterinariobh.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Versorgung rund um die Uhr, mit ständigem Bereitschaftsdienst und stationärer Betreuung."
+      }
     },
     {
       "name": "Vetvogas Hospital Veterinário",
@@ -3145,7 +3742,10 @@
       "source_url": "https://www.vetvogas.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "ÂME Hospital Veterinário",
@@ -3160,7 +3760,10 @@
       "note": "WhatsApp (31) 99513-1372.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "ClipeVet Clínica Veterinária 24h",
@@ -3174,7 +3777,10 @@
       "source_url": "https://www.clivepobh.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierarzt rund um die Uhr vor Ort."
+      }
     },
     {
       "name": "Clínica Veterinária Meu Pet - Santa Amélia",
@@ -3188,7 +3794,10 @@
       "source_url": "https://clinicaveterinariameupet.com.br/clinica-veterinaria-24-horas-bh/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "name": "Unevet Centro Veterinário",
@@ -3202,7 +3811,10 @@
       "source_url": "https://www.unevet.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallversorgung ohne Termin, täglich rund um die Uhr."
+      }
     },
     {
       "name": "Pronto Socorro Veterinário (PSV)",
@@ -3217,7 +3829,10 @@
       "note": "Mobile/WhatsApp (34) 99801-7501.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Hospital Veterinário VFP - Uberlândia",
@@ -3232,7 +3847,10 @@
       "note": "Page title says Emergência 24h; phone line labelled Uberlândia 24h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr."
+      }
     },
     {
       "name": "HVETRI Centro Veterinário do Triângulo",
@@ -3247,7 +3865,10 @@
       "note": "WhatsApp (34) 99776-0808.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, 365 Tage im Jahr."
+      }
     },
     {
       "name": "Clínica Veterinária de Ensino da UFJF",
@@ -3262,7 +3883,10 @@
       "note": "Page: appointments open first working day of each month; priority to low-income tutors.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Universitäre Lehrklinik, Mo–Fr 7–19 Uhr, nur nach Terminvereinbarung. Kein Notdienst und kein Betrieb rund um die Uhr."
+      }
     },
     {
       "name": "Hospital Veterinário Estrada Real",
@@ -3276,7 +3900,10 @@
       "source_url": "https://veterinariaestradareal.com.br/sobre-nos/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Tierklinik rund um die Uhr geöffnet, mit durchgehendem Notdienst."
+      }
     },
     {
       "name": "Bicho Rei Hospital Veterinário 24h",
@@ -3290,7 +3917,10 @@
       "source_url": "https://bichorei.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Das ganze Jahr täglich rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen."
+      }
     },
     {
       "name": "Movimento Animal Clínica Veterinária",
@@ -3305,7 +3935,10 @@
       "note": "Mobile/WhatsApp (61) 99966-8070.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Rund um die Uhr geöffnet, mit Notfallversorgung."
+      }
     },
     {
       "name": "Clínica Veterinária Asa Norte (CVAN)",
@@ -3320,7 +3953,10 @@
       "note": "Page gives \"SCLRN 706-707 Bloco G, 21\". WhatsApp (61) 99931-0778.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notaufnahme (Pronto Socorro) das ganze Jahr täglich rund um die Uhr."
+      }
     },
     {
       "name": "Pet Master Centro Veterinário 24h",
@@ -3334,7 +3970,10 @@
       "source_url": "https://petmaster.com.br/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Casa do Veterinário",
@@ -3349,7 +3988,10 @@
       "note": "WhatsApp +55 71 99721-7579.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallversorgung rund um die Uhr; Sprechstunden und Untersuchungen 8–18 Uhr."
+      }
     },
     {
       "name": "Hospital Veterinário Bicho Mimado",
@@ -3364,7 +4006,10 @@
       "note": "Also (81) 3228-2590, WhatsApp (81) 99904-2461.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet."
+      }
     },
     {
       "name": "Guararapes Vet Center",
@@ -3379,7 +4024,10 @@
       "note": "Also (85) 3879-5876.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfall- und Akutversorgung, Bereitschaftsdienst rund um die Uhr."
+      }
     },
     {
       "name": "Vet Care Hospital Veterinário",
@@ -3393,7 +4041,10 @@
       "source_url": "https://vetcarehospitalveterinario.com.br/servicos/emergencia-veterinaria-24h-fortaleza",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen."
+      }
     },
     {
       "name": "Wellpet Hospital Veterinário",
@@ -3408,7 +4059,10 @@
       "note": "Page headline says Hospital veterinário 24h and \"emergências a qualquer hora\" but lists limited business hours; conflict, so not marked 24 h.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Klinik mit Notfallversorgung; veröffentlichte Öffnungszeiten Mo–Do 8–18 Uhr, Fr 8–17 Uhr. Notdienstzeiten bitte telefonisch erfragen."
+      }
     },
     {
       "name": "CEIV Centro de Especialidades e Internação Veterinário",
@@ -3423,7 +4077,10 @@
       "note": "WhatsApp (62) 98563-3855.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Notfallversorgung und Intensivstation rund um die Uhr."
+      }
     },
     {
       "name": "Pegasus Hospital Veterinário",
@@ -3432,13 +4089,16 @@
       "address": "Av. Inhumas, qd. 20, lt 02, 478, Vila Regina",
       "phone": "+55 62 3597 4377",
       "emergency_24h": false,
-      "duty": "Veterinary clinic becoming a 24-hour hospital; round-the-clock service not confirmed on its site. Call to confirm.",
+      "duty": "Call to confirm hours.",
       "url": "https://www.hospitalpegasus.com.br/hospital-veterinario-24-horas-goiania",
       "source_url": "https://www.hospitalpegasus.com.br/hospital-veterinario-24-horas-goiania",
-      "note": "Hospital mobile (62) 99260-3236. Page wording: \"emergências 24 horas\".",
+      "note": "Hospital mobile (62) 99260-3236. Page wording: \"emergências 24 horas\". Moved from duty (2026-11-10): Clinic becoming a 24-hour hospital; round-the-clock service not confirmed on its site.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-09"
+      "checked": "2026-11-09",
+      "duty_i18n": {
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
+      }
     }
   ],
   "notes": "Region: São Paulo state. No official animal poison line found (CIATox/CEATOX are human lines). No duty rotas. Not done: many private 24 h hospitals in São Paulo city (Hospital Veterinário Rebouças, Pompeia, Prontvet, Santa Inês, Vet Popular, Dog Up, Vet Caldas, Vetnasa, Paes de Barros) because clinic sites could not be fetched (only URLs surfaced by search can be opened) - leads from Catraca Livre; Campinas private hospitals, Santos/Baixada (municipal hospital still under construction in 2025, Bom Retiro), Ribeirão Preto private 24 h (Marcovet, VFP, Bmvet), PUC-Campinas hospital (24 h contract with city for rescued animals, Campus II, Jardim Ipaussurama), UNESP Araçatuba/Botucatu/Jaboticabal, UNIP, Anhembi Morumbi, Guarujá, other states of Brazil. | Follow-up 2026-11-09: Method: WebSearch (allowed_domains per clinic to surface own-site URLs) + WebFetch of every page used. WebFetch provenance only accepts URLs returned by WebSearch, so each clinic site was found via search first.\nSkipped / unreachable:\n- Vet Rebouças (vetreboucas.com.br): WebFetch robots_disallowed; not used.\n- Vet Caldas (veterinario24h.com.br): robots_disallowed; not used.\n- Animal Prime (animalprimemedvet.com.br): robots_disallowed.\n- Petmania Santos (petmaniasantos.com.br), gironews Petz Campinas article: fetch client_error.\n- Hospital Veterinário Pompeia (hospitalveterinariopompeia.com.br): home says 'Plantão 24h' / emergency 24 h but no street address or phone on any fetched page -> not added (could add with url only if allowed).\n- Hospital Veterinário São Francisco (hovetsf.com.br): page content empty.\n- Marcovet, Bmvet (Ribeirão Preto): no own-site URL surfaced by search.\n- PUC-Campinas hospital, UNESP Araçatuba/Botucatu/Jaboticabal, UNIP: no official page surfaced by search (only news/PDFs); not added.\n- Pet Care Jardins/Vila Prudente: page only says 'Hospitais Veterinários 24 horas' heading, not per-unit; not added.\n- Municipal SP hospitals already in BR.json (prefeitura page showed no new units, no phones).\n- Santos/Guarujá extras from search (Viva Bicho 24h Facebook, Plantão Pet Instagram): social only, skipped.\nLeft (verified on vetnasa.com.br unit pages, 24 HORAS, not added to stay near 40): Vetnasa Santo André (Av. Dom Pedro II 2372, Campestre, (11) 2324-5181), Osasco (Av. Maria Campos 306, (11) 2640-2545), Cotia (Av. Prof. José Barreto 1649, (11) 4148-8885), Granja Viana/Cotia (Rua Ushima Kira 20, (11) 3164-6935), Guarulhos (Av. Paulo Faccini 365, (11) 4378-4480), Mauá (Av. Barão de Mauá 3045, (11) 3068-0637), Barueri (Rua Santo Antônio 235, (11) 4382-4668), São Caetano do Sul (Av. Goiás 315, (11) 2376-7558).\nVetnasa Vila Maria entry uses the central number as phone (unit WhatsApp not a labelled landline). | Follow-up 2 (2026-11-09): added 7 Vetnasa units outside São Paulo city and clinics in Sorocaba, Jundiaí, São José do Rio Preto and Bauru, each from its own site opened with WebFetch. Skipped: Vetnasa Barueri (unit page never surfaced by search, not added); Hospital Fucinhos e Patas Sorocaba and Centro Veterinário Bauru (robots_disallowed); veterinarioemjundiai.com.br (client_error); hospitalveterinariobauru.com.br (maintenance page); PPet Bauru (no address/phone in fetched content); Facebook-only Central Vet page not used. Not covered: Campinas/Ribeirão Preto/Santos beyond earlier entries, other SP-state towns (Piracicaba, São Carlos, Marília etc.), and clinics without 24 h statements.\n\nFollow-up 3 (2026-11-09): added 22 entries (Barueri/Alphaville 3, Piracicaba 2, São Carlos 4, Araraquara 1, Presidente Prudente 4, Taubaté 4, Mogi das Cruzes 4), each from its own site opened with WebFetch. Vetnasa Barueri was added after the home page surfaced its unit page. Skipped: Veterinário Mogi das Cruzes / África Vet (robots_disallowed); Hospital Veterinário Municipal Pró-Pet Mogi (news page only, no street address, mostly strays/free service); Taubaté city page on the public hospital (client_error; used ANCLIVEPA site instead); Biovet Taubaté and UPA Vet 24 Taubaté (only directory pages surfaced, no own site); Only Pet (addresses in Ferraz de Vasconcelos/São Paulo, none in Mogi); Exotic Pet Center 24 Hs, Animavet (Piracicaba) and Pet Vida (Araraquara) (no own-site page surfaced); Veterinária São Carlos (not 24 h, home visits only); university hospitals Unoeste, Unitau, UNIMEP, Uniara (no official page surfaced). DomVet entries have no street address on any page.\n\nFollow-up 4 (2026-11-09): added 25 entries from own sites opened with WebFetch (Marília 2, Franca 1, Limeira 3, Americana 4, Santa Bárbara d'Oeste 3, Praia Grande 5, São Vicente 2, Itapetininga 2, Guaratinguetá 3). Skipped: Animed Franca (robots_disallowed), Vet Melhor Amigo Franca (robots_disallowed), Parque Animal Itapetininga and Cão de Rei Guaratinguetá (robots_disallowed); Hospital da Professora Marília (placeholder WordPress site), Cedvet Marília (online store page, no address), Clinicão Franca (JS-only page, no content), Hospital Veterinário São Francisco Franca (empty page), Hospital Veterinário Unimar Marília (only campus address/phone on university page, species and hours not stated), marilia.vet.br (São Paulo home visits), Franceschini (Hortolândia), Plantão Pet (Fortaleza); Facebook-only pages (InVet Marília, Agrofran) and directory pages (Juntovet partner list, vetclinicasbr, listamais) not used. Not found: official CRMV-SP / prefeitura clinic lists for these towns; public hospital of Americana still under construction per news snippet. Vet Franca marked 24h because the page states 24-hour duty on weekends and emergency duty on weekday nights. Innova Vet and Caiçara are one clinic (same address and phones), entered once.\n\nFollow-up Rio de Janeiro 2026-11-09: added 47 entries (Rio city, Niterói, São Gonçalo, Nova Friburgo, Resende, Volta Redonda, Petrópolis, Cabo Frio, Búzios, Campos), each from its own site opened with WebFetch. No duty rotas or poison lines found; CRMV-RJ not searched successfully (no page surfaced). Skipped / unreachable: Hospital Popular Veterinário (all pages robots_disallowed), Forte dos Animais, Animaleme, Hi Pet, Xatô, Canne & Gatto, Hospital Veterinário Caxias, Vet Barão de Lucena, Cabo Frio hospital sites (veterinariacabofrio.com.br, veterinariocabofrio.com.br), Hospital São Lázaro VR, Hospital Vet 24h Campos, VEP São Gonçalo, Hospital Vet Pet Petrópolis, TwoVets, HPMV, Vet Ilha (robots_disallowed/client_error); prefeitura.rio municipal hospitals (Jorge Vaitsman, Mangueira, Santa Cruz) blocked, so only Irajá via news; Hospital Veterinário Público de Resende (24 h per Correio da Manhã news, no address/phone) not entered; Cetra Vet Duque de Caxias/Nova Iguaçu not entered (daytime). Città Vet Office Mall and BarraShopping units not entered. Not found/not covered: UFF, UFRRJ, UFRJ university vet hospitals (no official page surfaced), Teresópolis, Angra dos Reis, Paraty, Macaé, Campos 24 h hospitals, Medicalpet Campos, Niterói municipal services, CVP Méier/Tijuca (only directory/Instagram), Upa Pet unit pages. Upa Pet units set to false (network-wide 24 h claim only).\n\nFollow-up other states 2026-11-09: added 51 entries outside São Paulo and Rio de Janeiro (Rio Grande do Sul 7, Paraná 10, Santa Catarina 11, Minas Gerais 13, Distrito Federal 2, Bahia 2, Pernambuco 1, Ceará 3, Goiás 2), each from its own page opened with WebFetch. No duty rotas and no animal poison line found (CIATox is human). Public/university: UFPR (not 24 h publicly), UFJF (no emergency), BH municipal CASA (no 24 h wording) added with emergency_24h false. Skipped / unreachable: UFRGS HCV (robots_disallowed), 4 Patas Joinville, Hospital Veterinário Santa Clara Goiânia, Centervet Salvador, Hospital Veterinário São Francisco Brasília, Vetcare/Vivus Londrina (all robots_disallowed); Lemani Pet Fortaleza, hospitalvetmais.com.br Recife (client_error); Vila Velha Pet Hospital, SOS Hospital Veterinário (ES), São Lázaro Fortaleza (client_error/server error) so Espírito Santo has no entries; Hospital Harmonia Recife (no address/phone on page), Vet Socorro Curitiba (no address/phone on page), Life Hospital BH (title only), Pet Care Balneário Camboriú (no address). Not opened/left: UFMG, UnB, Univasf/UFPE/UFC/UFBA/UFG/UFES university hospitals (no official page surfaced except via PDFs), CRMV pages (CRMV-MG/PR/SC/RS/DF/BA/PE/CE/GO/ES not searched successfully), Curitiba municipal vet hospital, HVEP Brasília (only news), Salvador municipal hospital, Recife municipal hospital (news only), Vitória/Vila Velha, other Curitiba/Joinville/Porto Alegre private hospitals, Brasília private 24 h (Asa Sul, Taguatinga), Goiânia others, Recife others, Santa Maria/Pelotas/Natal/Manaus/Belém etc. SAMUVET BH (24 h mobile rescue, (31) 2888-0000) not entered as it is not a clinic. Independent check 2026-11-09: 49 checked (46 24-h + 3 non-24-h), 0 fixed, 5 downgraded, 0 removed."
