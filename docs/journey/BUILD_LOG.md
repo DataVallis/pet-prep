@@ -14,6 +14,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** CPA, konverzija in CAC v poslovnem modelu so bile predpostavke. Od zdaj ima vsak korak številko — brez analitičnega SDK, samo iz podatkov, ki jih igra že zapisuje.
 **Kako povedati:** 💼 »Ne ugibamo: vsak korak od registracije do certifikata merimo sami, brez orodij tretjih strani v otroški aplikaciji.« · 🛠 »Ena bralna poizvedba po tedenskih kohortah, nič novega sledenja.«
 
+## 2026-11-10 — Odločeno: brezplačnega ljubljenčka bo mogoče nadgraditi v 12-tedenski izziv *(načrt)*
+
+**Kaj:** David je odločil, da bo starš lahko brezplačnega mešančka ali domačo mačko, za katerega otrok že skrbi, nadgradil v 12-tedenski izziv **z istim ljubljenčkom** — 49,99 €, isti izdelek v trgovinah, 12 tednov teče od nakupa, ime, videz, starost in naučeni ukazi ostanejo. Dnevi pred nakupom ostanejo vidni z oznako »pred izzivom«, a ne štejejo v oceno in potrdilo. Gradnja v dveh korakih: najprej nadgradnja obstoječega ljubljenčka (M6-U01), nato »mešanček + izziv« že ob ustvarjanju in en opomnik staršu 7. dan (M6-U02). Specifikacija (`FREE_PET_UPGRADE_SPEC.md`) je preverjena v kodi; **zgrajeno še ni nič.**
+**Zakaj je pomembno:** do zdaj je bil brezplačni ljubljenček slepa ulica — za izziv je moral starš začeti znova z drugo, pasemsko živaljo, čeprav se je otrok na svojega ljubljenčka že navezal. Nadgradnja istega ljubljenčka je naravna točka, kjer brezplačna uporaba preide v plačano.
+**Kako povedati** (navzven šele, ko bo funkcija v aplikaciji uporabnikov): 👩 »Izziv lahko začnete s kužkom ali muco, za katero otrok že skrbi — nič se ne začne znova.« · 🧒 »Izziv se je začel! Teden 1 od 12.« (otrok nikoli ne vidi cen) · 💼 »Brezplačni ljubljenček ni več slepa ulica: nadgradnja istega ljubljenčka je načrtovan vzvod konverzije, ura 12 tednov teče od nakupa.« · 🛠 »Ura izziva, ločena od rojstva: en stolpec brez polnjenja obstoječih, starost ostane na rojstvu.«
+
 ## 2026-11-09 — Vsak ljubljenček ima svoj časovni pas
 
 **Kaj:** vsak ljubljenček ima lahko svoj časovni pas (privzeto je pas družine), zato lahko David v Lizboni skrbi za svojega psa po lizbonskem času, žena in otroka v Sloveniji pa svoje pse hranijo ob 19:00 po ljubljanskem času.
