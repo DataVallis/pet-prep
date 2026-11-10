@@ -482,6 +482,7 @@ const SPECIES = [
       { id: 'coton_de_tulear', synonyms: { en: ['Coton', 'Coton de Tuléar', 'Royal Dog of Madagascar'], sl: ['coton', 'cotonček', 'coton de tuléar'] } },
       { id: 'english_setter', synonyms: { en: ['Laverack Setter', 'Llewellin Setter', 'Setter'], sl: ['angleški seter', 'seter'] } },
       { id: 'lhasa_apso', synonyms: { en: ['Lhasa', 'Apso', 'Lhasa Apso dog'], sl: ['lhasa', 'lasa apso', 'tibetanski pes lhasa apso'] } },
+      { id: 'dogue_de_bordeaux', synonyms: { en: ['Bordeaux Mastiff', 'French Mastiff', 'Bordeauxdogge', 'DDB'], sl: ['bordoška doga', 'bordoska doga', 'francoski mastif', 'dogue de bordeaux'] } },
     ],
   },
   {
@@ -2597,6 +2598,31 @@ const DOG_FACTS = {
       ['hydrocephalus', 'health.hydrocephalus'],
     ],
   },
+  // M5-R10-100. Height = FCI 116 by sex (S755), weight = PetMD 110–145 / 99–120 lb by sex (S759; FCI S755 and PDSA S757
+  // give minimums only), lifespan = PetMD '5–8 years' (S759) + the RKC band 'Over 10 years' (S756) — the sources
+  // conflict and both are shown; the VetCompass median 5.5 y (S212, 21 deaths of a 2013 sample) stays the game's basis
+  // only (Great Dane precedent). Exercise = RKC 'Up to 1 hour per day' (S756), coat / grooming / sheds = RKC key facts
+  // (S756). FCI origin France (FR). Coren: not ranked (S35). Not exported: adult_weight.fci_minimum / salt_category,
+  // lifespan.median_uk / mcmillan_2024 / senior_from, health.breed_watch (Category 3, no point returned), health.eyelids /
+  // footpads (no verbatim quote), health.brachycephalic (the BOAS key covers it). New health key: skin_fold_care.
+  dogue_de_bordeaux: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.petmd', 'span'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35): no coren_rank fact (Havanese precedent).
+    coren_rank: false,
+    health: [
+      ['shorter_face_boas', 'health.short_muzzle_airway'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_elbow_dysplasia', 'health.hind_legs'],
+      ['skin_fold_care', 'health.skin_folds'],
+    ],
+  },
 
 
 };
@@ -2670,6 +2696,7 @@ export const DOG_NO_WALK_IN_HEAT = {
   pug: 'proposed_game_parameters.pug.no_exercise_in_heat',
   brussels_griffon: 'proposed_game_parameters.brussels_griffon.no_exercise_in_heat',
   pekingese: 'proposed_game_parameters.pekingese.no_exercise_in_heat',
+  dogue_de_bordeaux: 'proposed_game_parameters.dogue_de_bordeaux.no_exercise_in_heat',
 };
 
 /** M5-R14: the summer midday window of the heat warning (config/care_tasks.php heat; no weather data). */
@@ -3417,6 +3444,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.lhasa_apso.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.lhasa_apso.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.lhasa_apso.exercise_minutes_senior',
+  },
+  dogue_de_bordeaux: {
+    adult_minutes: ['proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.dogue_de_bordeaux.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.dogue_de_bordeaux.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.dogue_de_bordeaux.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_senior',
   },
 
 
