@@ -1,51 +1,104 @@
 {
   "slug": "basil",
   "species": "dog",
-  "name": {"en": "Basil", "sl": "Bazilika"},
-  "question": {"en": "Can dogs eat basil?", "sl": "Ali lahko psi jedo baziliko?"},
-  "url_slug": {"en": "basil", "sl": "bazilika"},
+  "name": {
+    "en": "Basil",
+    "sl": "Bazilika",
+    "pt": "Manjericão"
+  },
+  "question": {
+    "en": "Can dogs eat basil?",
+    "sl": "Ali lahko psi jedo baziliko?",
+    "pt": "Os cães podem comer manjericão?"
+  },
+  "url_slug": {
+    "en": "basil",
+    "sl": "bazilika",
+    "pt": "manjericao"
+  },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small quantities. The ASPCA lists basil as non-toxic to dogs, and it is one of the herbs you can grow in a dog-friendly garden and add to your dog's meals or treats in small quantities.",
-    "sl": "Da, v majhnih količinah. ASPCA baziliko uvršča med rastline, ki za pse niso strupene, in je eno od zelišč, ki jih lahko gojite na psu prijaznem vrtu ter jih v majhnih količinah dodate pasjim obrokom ali priboljškom."
+    "sl": "Da, v majhnih količinah. ASPCA baziliko uvršča med rastline, ki za pse niso strupene, in je eno od zelišč, ki jih lahko gojite na psu prijaznem vrtu ter jih v majhnih količinah dodate pasjim obrokom ali priboljškom.",
+    "pt": "Sim, em pequenas quantidades. A ASPCA inclui o manjericão entre as plantas não tóxicas para os cães. É uma das ervas que podes cultivar num jardim seguro para cães e juntar, em pequenas quantidades, às refeições ou às guloseimas do teu cão."
   },
   "why": {
     "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
-    "sl": "Bazilika (Ocimum basilicum, tudi sladka ali tajska bazilika) za pse ni strupena. Ima antioksidativne, protivirusne in protimikrobne lastnosti. Kot pri drugih zeliščih, ki jih dodamo obrokom ali vmešamo v priboljške, naj bodo količine majhne."
+    "sl": "Bazilika (Ocimum basilicum, tudi sladka ali tajska bazilika) za pse ni strupena. Ima antioksidativne, protivirusne in protimikrobne lastnosti. Kot pri drugih zeliščih, ki jih dodamo obrokom ali vmešamo v priboljške, naj bodo količine majhne.",
+    "pt": "O manjericão (Ocimum basilicum, também chamado manjericão-doce ou manjericão-tailandês) não é tóxico para os cães. Tem propriedades antioxidantes, antivirais e antimicrobianas. Como acontece com qualquer erva aromática que se junte às refeições ou se misture nas guloseimas, mantém as quantidades pequenas."
   },
   "signs": null,
   "what_to_do": {
     "en": "Basil is non-toxic to dogs. Just keep any basil you add to meals or treats to small quantities.",
-    "sl": "Bazilika za pse ni strupena. Baziliko, ki jo dodate obrokom ali priboljškom, le ohranite v majhnih količinah."
+    "sl": "Bazilika za pse ni strupena. Baziliko, ki jo dodate obrokom ali priboljškom, le ohranite v majhnih količinah.",
+    "pt": "O manjericão não é tóxico para os cães. Basta usares pouco manjericão nas refeições ou nas guloseimas."
   },
   "serving": {
     "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
-    "sl": "Malo je dodajte pasjim obrokom ali jo v majhnih količinah vmešajte v priboljške."
+    "sl": "Malo je dodajte pasjim obrokom ali jo v majhnih količinah vmešajte v priboljške.",
+    "pt": "Junta um pouco às refeições do teu cão ou mistura-o, em pequenas quantidades, nas guloseimas."
   },
   "child": {
     "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
-    "sl": "Bazilika je psom prijazno zelišče. Odrasli lahko malo bazilike doda pasji hrani."
+    "sl": "Bazilika je psom prijazno zelišče. Odrasli lahko malo bazilike doda pasji hrani.",
+    "pt": "O manjericão é uma erva amiga dos cães. Um adulto pode juntar um pouco à comida do cão."
   },
   "faq": [
     {
-      "q": {"en": "Is a basil plant safe in a garden with dogs?", "sl": "Je bazilika na vrtu varna, če imamo psa?"},
+      "q": {
+        "en": "Is a basil plant safe in a garden with dogs?",
+        "sl": "Je bazilika na vrtu varna, če imamo psa?",
+        "pt": "O manjericão é seguro num jardim com cães?"
+      },
       "a": {
         "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
-        "sl": "Da. Bazilika za pse ni strupena in je eno od zelišč, ki jih lahko gojimo na psu prijaznem vrtu."
+        "sl": "Da. Bazilika za pse ni strupena in je eno od zelišč, ki jih lahko gojimo na psu prijaznem vrtu.",
+        "pt": "Sim. O manjericão não é tóxico para os cães e é uma das ervas que se podem cultivar num jardim seguro para cães."
       }
     }
   ],
   "sources": [
-    {"id": "KD169", "quote": "Saint Joseph's Wort, Thai Basil, Sweet Basil"},
-    {"id": "KD169", "quote": "Non-Toxic to Dogs, Non-Toxic to Cats"},
-    {"id": "KD168", "quote": "When it comes to herbs, Osborne says the ones listed below can be grown in your garden."},
-    {"id": "KD168", "quote": "Plus, you can add them to your dog’s meals, or mix them into treats in small quantities:"},
-    {"id": "KD168", "quote": "Basil (Ocimum basilicum) has antioxidant, antiviral, and antimicrobial properties."}
+    {
+      "id": "KD169",
+      "quote": "Saint Joseph's Wort, Thai Basil, Sweet Basil"
+    },
+    {
+      "id": "KD169",
+      "quote": "Non-Toxic to Dogs, Non-Toxic to Cats"
+    },
+    {
+      "id": "KD168",
+      "quote": "When it comes to herbs, Osborne says the ones listed below can be grown in your garden."
+    },
+    {
+      "id": "KD168",
+      "quote": "Plus, you can add them to your dog’s meals, or mix them into treats in small quantities:"
+    },
+    {
+      "id": "KD168",
+      "quote": "Basil (Ocimum basilicum) has antioxidant, antiviral, and antimicrobial properties."
+    }
   ],
-  "related": ["herbs-parsley", "mint"],
+  "related": [
+    "herbs-parsley",
+    "mint"
+  ],
   "updated": "2026-11-10",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "a85dd15ae0962665431d442c2304444eb00ddd8a917e4ea89707efb874310e60"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "91cb4c650d1d084bc9d55efcaf65eff87f42fc5cbeaf6f020b53820f50f500f9"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a85dd15ae0962665431d442c2304444eb00ddd8a917e4ea89707efb874310e60"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "91cb4c650d1d084bc9d55efcaf65eff87f42fc5cbeaf6f020b53820f50f500f9"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de009f96f12bf4dae36f3dd1588006cda067c0b5fce5d428f00f53b377746f20"
+    }
   }
 }
