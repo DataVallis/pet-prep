@@ -15,7 +15,8 @@
     "hr": "Čili papričice",
     "sv": "Chilipeppar",
     "da": "Chilipeber",
-    "fi": "Chilipippurit"
+    "fi": "Chilipippurit",
+    "nb": "Chili"
   },
   "question": {
     "en": "Can dogs eat chili peppers?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti čili papričice?",
     "sv": "Får hundar äta chilipeppar?",
     "da": "Må hunde spise chilipeber?",
-    "fi": "Saako koira syödä chilipippureita?"
+    "fi": "Saako koira syödä chilipippureita?",
+    "nb": "Kan hunder spise chili?"
   },
   "url_slug": {
     "en": "chili-peppers",
@@ -47,7 +49,8 @@
     "hr": "cili-papricice",
     "sv": "chilipeppar",
     "da": "chilipeber",
-    "fi": "chilipippurit"
+    "fi": "chilipippurit",
+    "nb": "chilipepper"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, nikad ne daj psu ljute papričice, poput jalapeño ili čili papričica. Ljute su papričice nadražujuće: u ustima izazivaju osjećaj pečenja, a u većim količinama mogu izazvati povraćanje i proljev.",
     "sv": "Nej, ge aldrig hunden stark chili, till exempel jalapeño eller annan chilipeppar. Stark chili är irriterande: den ger en brännande känsla i munnen och kan i större mängder ge kräkningar och diarré.",
     "da": "Nej, giv aldrig din hund stærk peber som jalapeños eller chilipeber. Stærk peber virker irriterende: den giver en brændende fornemmelse i munden og kan i større mængder give opkast og diarré.",
-    "fi": "Ei saa. Älä koskaan anna koirallesi tulisia pippureita, kuten jalapeñoja tai chilipippureita. Tulinen pippuri ärsyttää: se aiheuttaa polttavan tunteen suussa ja suurempina määrinä voi aiheuttaa oksentelua ja ripulia."
+    "fi": "Ei saa. Älä koskaan anna koirallesi tulisia pippureita, kuten jalapeñoja tai chilipippureita. Tulinen pippuri ärsyttää: se aiheuttaa polttavan tunteen suussa ja suurempina määrinä voi aiheuttaa oksentelua ja ripulia.",
+    "nb": "Nei, gi aldri hunden sterk chili, for eksempel jalapeño. Sterk chili virker irriterende: den gir en brennende følelse i munnen og kan i større mengder gi oppkast og diaré."
   },
   "why": {
     "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
@@ -80,7 +84,8 @@
     "hr": "Ljute papričice sadrže kapsaicin, jaku nadražujuću tvar, a najviše ga ima u plodu, osobito u sjemenkama. Može djelovati na pse koji papričice žvaču i gutaju. Kod kućnih ljubimaca problemi su rijetki, ali AKC kaže da psima nikad ne treba davati ljute papričice.",
     "sv": "Stark chili innehåller capsaicin, ett kraftigt irriterande ämne, med högst halt i frukten och framför allt i kärnorna. Det kan påverka hundar som tuggar och sväljer chilifrukterna. Problem hos husdjur är sällsynta, men AKC skriver att man aldrig ska ge hundar stark chili.",
     "da": "Stærk peber indeholder capsaicin, et kraftigt irriterende stof, med de højeste mængder i frugten og især i kernerne. Det kan påvirke hunde der tygger på frugterne og sluger dem. Problemer hos kæledyr i hjemmet er sjældne, men AKC skriver at man aldrig bør give hunde stærk peber.",
-    "fi": "Tulisissa pippureissa on kapsaisiinia, voimakasta ärsyttäjää, jota on eniten hedelmässä ja erityisesti siemenissä. Se voi vaikuttaa koiriin, jotka pureskelevat ja nielevät pippureita. Ongelmat ovat lemmikeillä harvinaisia, mutta AKC:n mukaan tulisia pippureita ei pidä koskaan antaa koirille."
+    "fi": "Tulisissa pippureissa on kapsaisiinia, voimakasta ärsyttäjää, jota on eniten hedelmässä ja erityisesti siemenissä. Se voi vaikuttaa koiriin, jotka pureskelevat ja nielevät pippureita. Ongelmat ovat lemmikeillä harvinaisia, mutta AKC:n mukaan tulisia pippureita ei pidä koskaan antaa koirille.",
+    "nb": "Sterk chili inneholder capsaicin, et kraftig irritasjonsstoff, med høyest innhold i frukten og særlig i frøene. Det kan påvirke hunder som tygger og svelger chilifruktene. Problemer hos kjæledyr er sjeldne, men AKC sier at man aldri bør gi hunder sterk chili."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Polttavat, ärtyneet silmät",
       "Oksentelu",
       "Ripuli"
+    ],
+    "nb": [
+      "Svie i munnen",
+      "Svie og irritasjon i øynene",
+      "Oppkast",
+      "Diaré"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Ljute papričice i jela s njima drži izvan dosega psa. Pečenje koje izaziva kapsaicin obično je kratkotrajno, a može se ublažiti ispiranjem usta vodom.",
     "sv": "Se till att hunden inte kommer åt stark chili eller rätter med chili. Capsaicinets brännande effekt går oftast över snabbt och kan lindras genom att man sköljer munnen med vatten.",
     "da": "Hold stærk peber og retter med stærk peber uden for din hunds rækkevidde. Den brændende virkning af capsaicin er som regel kortvarig og kan lindres, hvis du skyller hundens mund med vand.",
-    "fi": "Pidä tuliset pippurit ja niitä sisältävät ruoat poissa koirasi ulottuvilta. Kapsaisiinin polttava vaikutus on yleensä lyhytkestoinen, ja sitä voi helpottaa huuhtelemalla suu vedellä."
+    "fi": "Pidä tuliset pippurit ja niitä sisältävät ruoat poissa koirasi ulottuvilta. Kapsaisiinin polttava vaikutus on yleensä lyhytkestoinen, ja sitä voi helpottaa huuhtelemalla suu vedellä.",
+    "nb": "Hold sterk chili og retter med chili utenfor hundens rekkevidde. Capsaicin gir en brennende følelse som vanligvis går fort over, og som kan lindres ved å skylle munnen med vann."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Ljute papričice nisu za pse. Od njih psu peče u ustima. Slatka paprika je vrsta koju psi smiju jesti.",
     "sv": "Stark chili är inte för hundar. Den gör att hundens mun känns het. Paprika är den hundvänliga sorten.",
     "da": "Stærk peber er ikke til hunde. Den får hundens mund til at svie. Søde peberfrugter må hunde godt få.",
-    "fi": "Tuliset pippurit eivät ole koirille. Niistä koiran suu tuntuu kuumalta. Makea paprika sen sijaan sopii koirille."
+    "fi": "Tuliset pippurit eivät ole koirille. Niistä koiran suu tuntuu kuumalta. Makea paprika sen sijaan sopii koirille.",
+    "nb": "Sterk chili er ikke for hunder. Den får munnen til å brenne. Søt paprika er et bedre valg."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Je li slatka paprika u redu?",
         "sv": "Går söt paprika bra?",
         "da": "Er søde peberfrugter i orden?",
-        "fi": "Sopivatko makeat paprikat?"
+        "fi": "Sopivatko makeat paprikat?",
+        "nb": "Er søt paprika greit?"
       },
       "a": {
         "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
@@ -233,7 +247,8 @@
         "hr": "Da, obična slatka paprika sigurna je za većinu pasa u umjerenim količinama, bez sjemenki i peteljke.",
         "sv": "Ja, ren paprika är säker för de flesta hundar om den ges med måtta och utan kärnor och skaft.",
         "da": "Ja, naturel peberfrugt er ufarlig for de fleste hunde med måde, hvis kerner og stilk er fjernet.",
-        "fi": "Sopivat. Maustamaton paprika on turvallista useimmille koirille kohtuudella, kun siemenet ja varsi on poistettu."
+        "fi": "Sopivat. Maustamaton paprika on turvallista useimmille koirille kohtuudella, kun siemenet ja varsi on poistettu.",
+        "nb": "Ja, vanlig paprika er trygt for de fleste hunder med måte, hvis du fjerner frø og stilk."
       }
     }
   ],
@@ -358,6 +373,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c7770e853d7c5d08a282f8d23310689d8baf1d8834d63297e60700556fa10751"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a0bcff506e10ef22332061df3f8e70ceca5300a06bc5b4cb117018235203d408"
     }
   }
 }

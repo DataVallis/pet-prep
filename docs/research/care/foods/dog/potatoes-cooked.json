@@ -15,7 +15,8 @@
     "hr": "Kuhani krumpir",
     "sv": "Kokt potatis",
     "da": "Kogte kartofler",
-    "fi": "Keitetyt perunat"
+    "fi": "Keitetyt perunat",
+    "nb": "Kokte poteter"
   },
   "question": {
     "en": "Can dogs eat cooked potatoes?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kuhani krumpir?",
     "sv": "Får hundar äta kokt potatis?",
     "da": "Må hunde spise kogte kartofler?",
-    "fi": "Saako koira syödä keitettyjä perunoita?"
+    "fi": "Saako koira syödä keitettyjä perunoita?",
+    "nb": "Kan hunder spise kokte poteter?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
@@ -47,7 +49,8 @@
     "hr": "kuhani-krumpir",
     "sv": "kokt-potatis",
     "da": "kogte-kartofler",
-    "fi": "keitetyt-perunat"
+    "fi": "keitetyt-perunat",
+    "nb": "kokte-poteter"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen.",
     "sv": "Ja, hundar kan äta tillagad potatis med måtta när den ges utan tillsatser. Kokt eller bakad potatis utan smör, mjölk, salt eller kryddor går bra i små mängder, så länge den är mjuk och inte grön.",
     "da": "Ja, hunde kan spise tilberedte kartofler med måde, når de gives uden tilbehør. Kogt eller bagt kartoffel uden smør, mælk, salt eller krydderier er fin i små mængder, så længe den er blød og ikke grøn.",
-    "fi": "Saa, koira voi syödä kypsennettyä perunaa kohtuudella, kun se tarjotaan maustamattomana. Keitetty tai uunissa kypsennetty peruna ilman voita, maitoa, suolaa tai mausteita sopii pieninä määrinä, kunhan se on pehmeää eikä vihreää."
+    "fi": "Saa, koira voi syödä kypsennettyä perunaa kohtuudella, kun se tarjotaan maustamattomana. Keitetty tai uunissa kypsennetty peruna ilman voita, maitoa, suolaa tai mausteita sopii pieninä määrinä, kunhan se on pehmeää eikä vihreää.",
+    "nb": "Ja, hunder kan spise kokte poteter med måte når de gis uten tilsetninger. Kokt eller bakt potet uten smør, melk, salt eller krydder er greit i små mengder, så lenge den er myk og ikke grønn."
   },
   "why": {
     "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
@@ -80,7 +84,8 @@
     "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan.",
     "sv": "Tillagad potatis utan tillsatser går bra för hundar, men den ska vara en godbit och inte ersätta en måltid, och bara utgöra en liten del av kosten. För många portioner kan leda till övervikt, och mycket smör kan utlösa bukspottkörtelinflammation. Rå eller grön potatis är inte säker och kan vara giftig.",
     "da": "Naturel tilberedt kartoffel er fin til hunde, men den skal være en godbid og ikke erstatte et måltid, og den bør kun udgøre en lille del af kosten. For mange portioner kan give overvægt, og meget smør kan udløse betændelse i bugspytkirtlen (pankreatitis). Rå eller grønne kartofler er ikke sikre og kan være giftige.",
-    "fi": "Maustamaton kypsennetty peruna sopii koirille, mutta sen pitää olla herkku, ei ateriankorvike, ja vain pieni osa ruokavaliosta. Liian suuret annokset voivat johtaa lihavuuteen, ja paljon voita voi laukaista haimatulehduksen. Raa’at tai vihreät perunat eivät ole turvallisia ja voivat olla myrkyllisiä."
+    "fi": "Maustamaton kypsennetty peruna sopii koirille, mutta sen pitää olla herkku, ei ateriankorvike, ja vain pieni osa ruokavaliosta. Liian suuret annokset voivat johtaa lihavuuteen, ja paljon voita voi laukaista haimatulehduksen. Raa’at tai vihreät perunat eivät ole turvallisia ja voivat olla myrkyllisiä.",
+    "nb": "Kokt potet uten tilsetninger er greit for hunder, men den bør være en godbit, ikke en erstatning for et måltid, og bare en liten del av kostholdet. For mange porsjoner kan gi overvekt, og mye smør kan utløse betennelse i bukspyttkjertelen (pankreatitt). Rå eller grønne poteter er farlige og potensielt giftige."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima.",
     "sv": "Ge tillagad potatis som en godbit då och då, i små mängder. Ge aldrig rå potatis eller potatis med gröna fläckar, och hoppa över potatisrätter med smör, mjölk, salt eller kryddor.",
     "da": "Giv tilberedt kartoffel som en godbid en gang imellem og i små mængder. Giv aldrig rå kartoffel eller kartoffel med grønne pletter, og undlad kartoffelretter lavet med smør, mælk, salt eller krydderier.",
-    "fi": "Anna kypsennettyä perunaa satunnaisena herkkuna pieninä määrinä. Älä koskaan anna raakaa perunaa tai perunaa, jossa on vihreitä läikkiä, ja jätä väliin voilla, maidolla, suolalla tai mausteilla tehdyt perunaruoat."
+    "fi": "Anna kypsennettyä perunaa satunnaisena herkkuna pieninä määrinä. Älä koskaan anna raakaa perunaa tai perunaa, jossa on vihreitä läikkiä, ja jätä väliin voilla, maidolla, suolalla tai mausteilla tehdyt perunaruoat.",
+    "nb": "La kokt potet være en godbit nå og da, i små mengder. Gi aldri rå potet eller potet med grønne flekker, og dropp potetretter laget med smør, melk, salt eller krydder."
   },
   "serving": {
     "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
@@ -113,7 +119,8 @@
     "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena.",
     "sv": "Kokt eller bakad, utan tillsatser, tillagad tills den är så mjuk att den går att mosa, så att det inte blir någon kvävningsrisk. Inget smör, mjölk, salt eller kryddor. Skalet går bra om det inte är grönt.",
     "da": "Naturel kogt eller bagt kartoffel, så blød at den kan moses, så din hund ikke får den galt i halsen. Uden smør, mælk, salt og krydderier. Skrællen er i orden, hvis den ikke er grøn.",
-    "fi": "Maustamattomana keitettynä tai uunissa kypsennettynä, niin pehmeäksi, että sen voi muussata, ettei koira tukehdu. Ei voita, maitoa, suolaa eikä mausteita. Kuoret kelpaavat, jos ne eivät ole vihreitä."
+    "fi": "Maustamattomana keitettynä tai uunissa kypsennettynä, niin pehmeäksi, että sen voi muussata, ettei koira tukehdu. Ei voita, maitoa, suolaa eikä mausteita. Kuoret kelpaavat, jos ne eivät ole vihreitä.",
+    "nb": "Kokt eller bakt uten tilsetninger, og så myk at den kan moses, så hunden ikke kveles. Ingen smør, melk, salt eller krydder. Skall er greit hvis det ikke er grønt."
   },
   "child": {
     "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli.",
     "sv": "Hundar kan få lite kokt potatis utan tillsatser som godbit. En vuxen ser till att den är mjuk och utan smör eller salt.",
     "da": "Hunde må få lidt naturel kogt kartoffel som godbid. En voksen sørger for, at den er blød og uden smør og salt.",
-    "fi": "Koira saa herkuksi vähän maustamatonta kypsennettyä perunaa. Aikuinen varmistaa, että se on pehmeää eikä siinä ole voita tai suolaa."
+    "fi": "Koira saa herkuksi vähän maustamatonta kypsennettyä perunaa. Aikuinen varmistaa, että se on pehmeää eikä siinä ole voita tai suolaa.",
+    "nb": "Hunder kan få litt kokt potet uten tilsetninger som en godbit. En voksen passer på at den er myk og uten smør eller salt."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti pire od krumpira?",
         "sv": "Får hundar äta potatismos?",
         "da": "Må hunde spise kartoffelmos?",
-        "fi": "Saako koira syödä perunamuusia?"
+        "fi": "Saako koira syödä perunamuusia?",
+        "nb": "Kan hunder spise potetmos?"
       },
       "a": {
         "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
@@ -163,7 +172,8 @@
         "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina.",
         "sv": "Bara potatismos utan tillsatser, i små mängder, utan smör, mjölk, salt eller kryddor.",
         "da": "Kun naturel kartoffelmos i små mængder og uden smør, mælk, salt eller krydderier.",
-        "fi": "Vain maustamatonta perunamuusia, pieninä määrinä, ilman voita, maitoa, suolaa tai mausteita."
+        "fi": "Vain maustamatonta perunamuusia, pieninä määrinä, ilman voita, maitoa, suolaa tai mausteita.",
+        "nb": "Bare potetmos uten tilsetninger, i små mengder, uten smør, melk, salt eller krydder."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Smiju li psi jesti koru krumpira?",
         "sv": "Får hundar äta potatisskal?",
         "da": "Må hunde spise kartoffelskræl?",
-        "fi": "Saako koira syödä perunankuoria?"
+        "fi": "Saako koira syödä perunankuoria?",
+        "nb": "Kan hunder spise potetskall?"
       },
       "a": {
         "en": "Yes, potato skins are okay too, but not if they are green.",
@@ -197,7 +208,8 @@
         "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena.",
         "sv": "Ja, potatisskal går också bra, men inte om de är gröna.",
         "da": "Ja, kartoffelskræl er også i orden, men ikke hvis den er grøn.",
-        "fi": "Saa, kuoret kelpaavat, kunhan ne eivät ole vihreitä."
+        "fi": "Saa, kuoret kelpaavat, kunhan ne eivät ole vihreitä.",
+        "nb": "Ja, potetskall er også greit, men ikke hvis de er grønne."
       }
     },
     {
@@ -215,7 +227,8 @@
         "hr": "Je li pomfrit u redu za pse?",
         "sv": "Går pommes frites bra för hundar?",
         "da": "Er pommes frites i orden for hunde?",
-        "fi": "Sopivatko ranskalaiset perunat koirille?"
+        "fi": "Sopivatko ranskalaiset perunat koirille?",
+        "nb": "Er pommes frites greit for hunder?"
       },
       "a": {
         "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
@@ -231,7 +244,8 @@
         "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke.",
         "sv": "Med pommes frites, hash browns och andra potatisrätter blir det lätt för mycket av det goda. Potatis ska vara en godbit och inte ersätta en måltid.",
         "da": "Det er let at give for meget af det gode med pommes frites, hashbrowns og andre kartoffelretter. Kartofler skal være godbidder og ikke erstatte måltider.",
-        "fi": "Ranskalaisia perunoita, hash browneja ja muita perunaruokia tulee helposti annettua liikaa. Perunan pitää olla herkku, ei ateriankorvike."
+        "fi": "Ranskalaisia perunoita, hash browneja ja muita perunaruokia tulee helposti annettua liikaa. Perunan pitää olla herkku, ei ateriankorvike.",
+        "nb": "Med pommes frites, hash browns og andre potetretter blir det lett for mye. Poteter bør være godbiter, ikke erstatning for måltider."
       }
     }
   ],
@@ -366,6 +380,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3ee9e1799ed8858538e3add6c450992bed015a99582db8896c3945ea9d1e2dab"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "342aff3fc3d0cdbc205e9a6238dd7a21b81dfe0f518060fca580e6c4a57b0b48"
     }
   }
 }

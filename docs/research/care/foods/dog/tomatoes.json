@@ -15,7 +15,8 @@
     "hr": "Rajčice",
     "sv": "Tomater",
     "da": "Tomater",
-    "fi": "Tomaatit"
+    "fi": "Tomaatit",
+    "nb": "Tomater"
   },
   "question": {
     "en": "Can dogs eat tomatoes?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti rajčice?",
     "sv": "Får hundar äta tomater?",
     "da": "Må hunde spise tomater?",
-    "fi": "Saako koira syödä tomaatteja?"
+    "fi": "Saako koira syödä tomaatteja?",
+    "nb": "Kan hunder spise tomater?"
   },
   "url_slug": {
     "en": "tomatoes",
@@ -47,7 +49,8 @@
     "hr": "rajcice",
     "sv": "tomater",
     "da": "tomater",
-    "fi": "tomaatit"
+    "fi": "tomaatit",
+    "nb": "tomater"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati.",
     "sv": "Ja, mogna röda tomater är inte giftiga för hundar och kan ges som godbit då och då i små mängder. Gröna, omogna tomater och växtens gröna delar är en annan sak och bör undvikas.",
     "da": "Ja, modne røde tomater er ikke giftige for hunde og kan være en godbid en gang imellem i små mængder. Grønne, umodne tomater og planteens grønne dele er noget andet og bør undgås.",
-    "fi": "Saa, kypsät punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä. Vihreät, raa’at tomaatit ja kasvin vihreät osat ovat eri asia, ja niitä pitää välttää."
+    "fi": "Saa, kypsät punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä. Vihreät, raa’at tomaatit ja kasvin vihreät osat ovat eri asia, ja niitä pitää välttää.",
+    "nb": "Ja, modne røde tomater er ikke giftige for hunder og kan være en godbit nå og da i små mengder. Grønne, umodne tomater og de grønne delene av planten er en annen sak og bør unngås."
   },
   "why": {
     "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -80,7 +84,8 @@
     "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
     "sv": "De viktigaste giftiga ämnena i tomater är tomatin och solanin, som främst finns i växtens gröna delar. När tomaten mognar och blir röd sjunker halterna kraftigt, så mogna tomater anses vara ogiftiga. Produkter som är gjorda på tomat innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar.",
     "da": "De vigtigste giftige stoffer i tomater er tomatin og solanin, som hovedsageligt findes i planteens grønne dele. Når en tomat modner og bliver rød, falder indholdet af dem markant, så modne tomater anses for ugiftige. Produkter med tomat indeholder ofte hvidløg, løg, salt eller sukker, som kan være skadelige eller irriterende for hunde.",
-    "fi": "Tomaattien tärkeimmät myrkylliset yhdisteet ovat tomatiini ja solaniini, joita on pääasiassa kasvin vihreissä osissa. Kun tomaatti kypsyy ja punertuu, niiden pitoisuudet laskevat selvästi, joten kypsiä tomaatteja pidetään myrkyttöminä. Tomaattipohjaisissa tuotteissa on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä."
+    "fi": "Tomaattien tärkeimmät myrkylliset yhdisteet ovat tomatiini ja solaniini, joita on pääasiassa kasvin vihreissä osissa. Kun tomaatti kypsyy ja punertuu, niiden pitoisuudet laskevat selvästi, joten kypsiä tomaatteja pidetään myrkyttöminä. Tomaattipohjaisissa tuotteissa on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä.",
+    "nb": "De viktigste giftige stoffene i tomater er tomatin og solanin, som hovedsakelig finnes i de grønne delene av planten. Når en tomat modnes og blir rød, synker nivåene betydelig, så modne tomater regnes som ikke giftige. Tomatbaserte produkter inneholder ofte hvitløk, løk, salt eller sukker, som kan være skadelig eller irriterende for hunder."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet.",
     "sv": "Börja med små mängder för att se hur hunden reagerar, och ge bara tomat med måtta och under uppsikt. Om du tror att hunden har ätit en stor mängd tomater eller själva tomatplantan, ring veterinären för råd.",
     "da": "Start med små mængder for at se, hvordan din hund reagerer, og giv kun tomat med måde og under opsyn. Hvis du tror, at din hund har spist en stor mængde tomater eller selve tomatplanten, skal du ringe til din dyrlæge for at få råd.",
-    "fi": "Aloita pienellä määrällä ja katso, miten koirasi reagoi, ja anna tomaattia vain kohtuudella ja valvotusti. Jos arvelet koirasi syöneen paljon tomaatteja tai itse tomaattikasvia, soita eläinlääkärille ohjeita varten."
+    "fi": "Aloita pienellä määrällä ja katso, miten koirasi reagoi, ja anna tomaattia vain kohtuudella ja valvotusti. Jos arvelet koirasi syöneen paljon tomaatteja tai itse tomaattikasvia, soita eläinlääkärille ohjeita varten.",
+    "nb": "Begynn med små mengder for å se hvordan hunden reagerer, og gi bare tomat med måte og under tilsyn. Hvis du tror at hunden har spist mye tomat eller selve tomatplanten, må du ringe dyrlegen for veiledning."
   },
   "serving": {
     "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
@@ -113,7 +119,8 @@
     "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima.",
     "sv": "Bara mogna, röda tomater utan tillsatser. Ta bort alla gröna delar och skär tomatköttet i tärningar; skär körsbärstomater i små bitar. Aldrig tomater som har kryddats med salt, vitlök, lök eller andra tillsatser.",
     "da": "Kun modne, røde og naturelle tomater. Fjern alt det grønne, og skær frugtkødet i tern; skær cherrytomater i små stykker. Aldrig tomater krydret med salt, hvidløg, løg eller andre tilsætninger.",
-    "fi": "Vain kypsää, punaista ja maustamatonta. Poista kaikki vihreät osat ja kuutioi hedelmäliha; pilko kirsikkatomaatit pieniksi paloiksi. Älä koskaan anna suolalla, valkosipulilla, sipulilla tai muilla lisäaineilla maustettuja tomaatteja."
+    "fi": "Vain kypsää, punaista ja maustamatonta. Poista kaikki vihreät osat ja kuutioi hedelmäliha; pilko kirsikkatomaatit pieniksi paloiksi. Älä koskaan anna suolalla, valkosipulilla, sipulilla tai muilla lisäaineilla maustettuja tomaatteja.",
+    "nb": "Bare modne, røde tomater uten tilsetninger. Fjern alle grønne deler og skjær fruktkjøttet i terninger; skjær cherrytomater i små biter. Aldri tomater krydret med salt, hvitløk, løk eller andre tilsetninger."
   },
   "child": {
     "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće.",
     "sv": "Hundar kan få lite mogen röd tomat. En vuxen tar bort de gröna delarna och skär den i småbitar.",
     "da": "Hunde må få lidt moden rød tomat. En voksen fjerner det grønne og skærer den i små stykker.",
-    "fi": "Koira saa vähän kypsää punaista tomaattia. Aikuinen poistaa vihreät osat ja pilkkoo sen pieneksi."
+    "fi": "Koira saa vähän kypsää punaista tomaattia. Aikuinen poistaa vihreät osat ja pilkkoo sen pieneksi.",
+    "nb": "Hunder kan få litt moden, rød tomat. En voksen tar bort det grønne og skjærer den i små biter."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti zelene rajčice?",
         "sv": "Får hundar äta gröna tomater?",
         "da": "Må hunde spise grønne tomater?",
-        "fi": "Saako koira syödä vihreitä tomaatteja?"
+        "fi": "Saako koira syödä vihreitä tomaatteja?",
+        "nb": "Kan hunder spise grønne tomater?"
       },
       "a": {
         "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
@@ -163,7 +172,8 @@
         "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom.",
         "sv": "Nej. Gröna tomater innehåller mer tomatin och solanin än mogna, och om en hund äter en omogen tomat kan det ge symtom på tomatinförgiftning.",
         "da": "Nej. Grønne tomater indeholder mere tomatin og solanin end modne, og en umoden tomat kan give symptomer på tomatinforgiftning.",
-        "fi": "Ei. Vihreissä tomaateissa on enemmän tomatiinia ja solaniinia kuin kypsissä, ja raa’an tomaatin syöminen voi aiheuttaa tomatiinimyrkytyksen oireita."
+        "fi": "Ei. Vihreissä tomaateissa on enemmän tomatiinia ja solaniinia kuin kypsissä, ja raa’an tomaatin syöminen voi aiheuttaa tomatiinimyrkytyksen oireita.",
+        "nb": "Nei. Grønne tomater inneholder mer tomatin og solanin enn modne, og en umoden tomat kan gi symptomer på tomatinforgiftning."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Smiju li psi jesti umak od rajčice ili kečap?",
         "sv": "Får hundar äta tomatsås eller ketchup?",
         "da": "Må hunde spise tomatsauce eller ketchup?",
-        "fi": "Saako koira syödä tomaattikastiketta tai ketsuppia?"
+        "fi": "Saako koira syödä tomaattikastiketta tai ketsuppia?",
+        "nb": "Kan hunder spise tomatsaus eller ketchup?"
       },
       "a": {
         "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -197,7 +208,8 @@
         "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
         "sv": "Det är bäst att undvika dem. Tomatprodukter som sås, ketchup och soppa innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar.",
         "da": "Det er bedst at undgå dem. Produkter med tomat som sauce, ketchup og suppe indeholder ofte hvidløg, løg, salt eller sukker, som kan være skadelige eller irriterende for hunde.",
-        "fi": "Parempi välttää. Tomaattipohjaisissa tuotteissa, kuten kastikkeessa, ketsupissa ja keitossa, on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä."
+        "fi": "Parempi välttää. Tomaattipohjaisissa tuotteissa, kuten kastikkeessa, ketsupissa ja keitossa, on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä.",
+        "nb": "Det er best å unngå dem. Tomatbaserte produkter som saus, ketchup og suppe inneholder ofte hvitløk, løk, salt eller sukker, som kan være skadelig eller irriterende for hunder."
       }
     },
     {
@@ -215,7 +227,8 @@
         "hr": "Uzgajam rajčice. Na što moram paziti?",
         "sv": "Jag odlar tomater. Vad ska jag tänka på?",
         "da": "Jeg dyrker tomater. Hvad skal jeg være opmærksom på?",
-        "fi": "Kasvatan tomaatteja. Mihin minun pitää kiinnittää huomiota?"
+        "fi": "Kasvatan tomaatteja. Mihin minun pitää kiinnittää huomiota?",
+        "nb": "Jeg dyrker tomater. Hva bør jeg passe på?"
       },
       "a": {
         "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
@@ -231,7 +244,8 @@
         "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke.",
         "sv": "Gröna tomater som faller av plantan kan locka hundar. Sätt upp staket runt odlingen så att hunden inte kan smaka på plantorna.",
         "da": "Grønne tomater kan tiltrække hunde, hvis de falder af planten. Sæt hegn om haven, så din hund ikke kan smage på planterne.",
-        "fi": "Köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria. Aidoita kasvimaa, ettei koirasi pääse maistelemaan kasveja."
+        "fi": "Köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria. Aidoita kasvimaa, ettei koirasi pääse maistelemaan kasveja.",
+        "nb": "Grønne tomater som faller av planten, kan lokke til seg hunder. Gjerd inn hagen, så hunden ikke får smake på plantene."
       }
     }
   ],
@@ -386,6 +400,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "48d616f258abf816dc62b87cafc796381d0c8899efc27889adb7d893ebf87e35"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "59b011fb18f94b5f3ca8b1e80f81b2116707a249d62187eaba14d963f6383050"
     }
   }
 }

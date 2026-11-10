@@ -2157,7 +2157,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Beetroot",
@@ -2173,7 +2174,8 @@
         "hr": "Cikla",
         "sv": "Rödbetor",
         "da": "Rødbeder",
-        "fi": "Punajuuri"
+        "fi": "Punajuuri",
+        "nb": "Rødbeter"
       },
       "question": {
         "en": "Can cats eat beetroot?",
@@ -2189,7 +2191,8 @@
         "hr": "Smiju li mačke jesti ciklu?",
         "sv": "Får katter äta rödbetor?",
         "da": "Må katte spise rødbeder?",
-        "fi": "Saako kissa syödä punajuurta?"
+        "fi": "Saako kissa syödä punajuurta?",
+        "nb": "Kan katter spise rødbeter?"
       },
       "url_slug": {
         "en": "beetroot",
@@ -2205,7 +2208,8 @@
         "hr": "cikla",
         "sv": "rodbetor",
         "da": "roedbeder",
-        "fi": "punajuuri"
+        "fi": "punajuuri",
+        "nb": "rodbeter"
       },
       "answer": {
         "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
@@ -2221,7 +2225,8 @@
         "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu.",
         "sv": "Ja, en liten bit rödbeta utan tillsatser går bra som en godbit då och då. ASPCA räknar rödbeta som ogiftig för katter. Se till att katten inte kommer åt de stora bladen: ASPCA påpekar att stora, mogna blad innehåller oxalsyra.",
         "da": "Ja, et lille stykke naturel rødbede er fint som godbid en gang imellem. ASPCA regner bede, herunder rødbeder, for ugiftige for katte. Hold dog katten væk fra de store blade: ASPCA skriver at store, modne blade indeholder oxalsyre.",
-        "fi": "Saa, pieni pala maustamatonta punajuurta sopii satunnaiseksi herkuksi. ASPCA luokittelee punajuuren kissoille myrkyttömäksi. Pidä isot lehdet kuitenkin poissa: ASPCA:n mukaan suurissa, täysikasvuisissa lehdissä on oksaalihappoa."
+        "fi": "Saa, pieni pala maustamatonta punajuurta sopii satunnaiseksi herkuksi. ASPCA luokittelee punajuuren kissoille myrkyttömäksi. Pidä isot lehdet kuitenkin poissa: ASPCA:n mukaan suurissa, täysikasvuisissa lehdissä on oksaalihappoa.",
+        "nb": "Ja, en liten bit rødbete uten tilsetninger er greit som en godbit nå og da. ASPCA regner rødbeter som ikke giftige for katter. Hold katten unna de store bladene: ASPCA opplyser at store, modne blader inneholder oksalsyre."
       },
       "why": {
         "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -2237,7 +2242,8 @@
         "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
         "sv": "ASPCA räknar rödbeta (Beta vulgaris) som ogiftig för katter och påpekar att stora, mogna blad innehåller oxalsyra. Katter behöver inte frukt eller grönsaker i kosten, men enligt PDSA kan många sorter ges i mycket små mängder som en godbit då och då. ASPCA påpekar också att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
         "da": "ASPCA regner bede (Beta vulgaris, også kaldet rødbeder) for ugiftige for katte og skriver at store, modne blade indeholder oxalsyre. Katte har ikke brug for frugt og grønt i kosten, men ifølge PDSA kan man give mange af dem i meget små mængder som godbid en gang imellem. ASPCA skriver også at alt plantemateriale kan give katte opkast og ondt i maven.",
-        "fi": "ASPCA luokittelee punajuuren (Beta vulgaris) kissoille myrkyttömäksi ja huomauttaa, että suurissa, täysikasvuisissa lehdissä on oksaalihappoa. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, mutta PDSA:n mukaan monia niistä voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
+        "fi": "ASPCA luokittelee punajuuren (Beta vulgaris) kissoille myrkyttömäksi ja huomauttaa, että suurissa, täysikasvuisissa lehdissä on oksaalihappoa. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, mutta PDSA:n mukaan monia niistä voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja.",
+        "nb": "ASPCA regner rødbeter (Beta vulgaris) som ikke giftige for katter og opplyser at store, modne blader inneholder oksalsyre. Katter trenger ikke frukt eller grønnsaker i kostholdet, men ifølge PDSA kan mange typer frukt og grønnsaker gis i svært små mengder som en godbit nå og da. ASPCA opplyser også at alt plantemateriale kan gi oppkast og urolig mage hos katter."
       },
       "signs": null,
       "what_to_do": {
@@ -2254,7 +2260,8 @@
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
         "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
-        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä.",
+        "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, må du slutte å gi det og spørre dyrlegen."
       },
       "serving": {
         "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
@@ -2270,7 +2277,8 @@
         "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke.",
         "sv": "En liten munsbit rödbeta utan smör, salt eller kryddor. Se till att katten inte kommer åt de stora bladen.",
         "da": "Et lille stykke naturel rødbede i bidstørrelse uden smør, salt eller krydderier. Hold de store blade væk fra din kat.",
-        "fi": "Pieni, suupalan kokoinen pala maustamatonta punajuurta ilman voita, suolaa tai mausteita. Pidä suuret lehdet poissa kissan ulottuvilta."
+        "fi": "Pieni, suupalan kokoinen pala maustamatonta punajuurta ilman voita, suolaa tai mausteita. Pidä suuret lehdet poissa kissan ulottuvilta.",
+        "nb": "En liten bit rødbete i passe størrelse, uten smør, salt eller krydder. Hold de store bladene unna katten."
       },
       "child": {
         "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
@@ -2286,7 +2294,8 @@
         "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke.",
         "sv": "En liten bit rödbeta kan vara en godbit för katten då och då. Katter behöver framför allt sin egen kattmat.",
         "da": "Et lille stykke rødbede kan være en godbid til katten en gang imellem. Katte har mest brug for deres egen kattemad.",
-        "fi": "Pieni pala punajuurta voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen omaa kissanruokaansa."
+        "fi": "Pieni pala punajuurta voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen omaa kissanruokaansa.",
+        "nb": "En bitteliten bit rødbete kan være en godbit for katter nå og da. Katter har stort sett nok med sin egen kattemat."
       },
       "faq": [],
       "source_ids": [
@@ -5031,7 +5040,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Chilli peppers",
@@ -5047,7 +5057,8 @@
         "hr": "Čili papričice",
         "sv": "Chilipeppar",
         "da": "Chilipeber",
-        "fi": "Chilipippurit"
+        "fi": "Chilipippurit",
+        "nb": "Chili"
       },
       "question": {
         "en": "Can cats eat chilli peppers?",
@@ -5063,7 +5074,8 @@
         "hr": "Smiju li mačke jesti čili papričice?",
         "sv": "Får katter äta chilipeppar?",
         "da": "Må katte spise chilipeber?",
-        "fi": "Saako kissa syödä chilipippureita?"
+        "fi": "Saako kissa syödä chilipippureita?",
+        "nb": "Kan katter spise chili?"
       },
       "url_slug": {
         "en": "chilli-peppers",
@@ -5079,7 +5091,8 @@
         "hr": "cili-papricice",
         "sv": "chilipeppar",
         "da": "chilipeber",
-        "fi": "chilipippurit"
+        "fi": "chilipippurit",
+        "nb": "chilipepper"
       },
       "answer": {
         "en": "No, don't share chilli peppers or other spicy food with your cat. VCA Animal Hospitals says spicy foods may not be toxic to cats, but they are certain to cause stomach upset.",
@@ -5095,7 +5108,8 @@
         "hr": "Ne, ne daj mački čili papričice ni drugu ljutu hranu. VCA Animal Hospitals navodi da ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe.",
         "sv": "Nej, dela inte chilipeppar eller annan stark mat med katten. VCA Animal Hospitals skriver att stark mat inte nödvändigtvis är giftig för katter, men att den helt säkert ger orolig mage.",
         "da": "Nej, del ikke chilipeber eller anden stærk mad med din kat. VCA Animal Hospitals skriver at stærk mad måske ikke er giftig for katte, men helt sikkert giver dem ondt i maven.",
-        "fi": "Ei saa. Älä jaa chilipippureita tai muuta tulista ruokaa kissasi kanssa. VCA Animal Hospitalsin mukaan tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja."
+        "fi": "Ei saa. Älä jaa chilipippureita tai muuta tulista ruokaa kissasi kanssa. VCA Animal Hospitalsin mukaan tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja.",
+        "nb": "Nei, ikke del chili eller annen sterk mat med katten. VCA Animal Hospitals skriver at sterk mat kanskje ikke er giftig for katter, men at den helt sikkert gir urolig mage."
       },
       "why": {
         "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -5111,7 +5125,8 @@
         "hr": "VCA Animal Hospitals savjetuje da s mačkom ne dijeliš ljutu hranu, a pohane punjene jalapeño papričice (jalapeño poppers) zadrži za sebe: ljuta hrana možda nije otrovna za mačke, ali im sigurno izaziva želučane tegobe. Mačkama povrće u prehrani nije potrebno, a ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
         "sv": "VCA Animal Hospitals avråder från att ge katten stark mat och menar att du ska behålla dina jalapeño poppers för dig själv: stark mat behöver inte vara giftig för katter, men den ger helt säkert orolig mage. Katter behöver inte grönsaker i kosten, och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
         "da": "VCA Animal Hospitals råder dig til ikke at dele stærk mad med din kat og til at lade jalapeño poppers blive hos dig selv: stærk mad er måske ikke giftig for katte, men giver helt sikkert ondt i maven. Katte har ikke brug for grøntsager i kosten, og ASPCA skriver at alt plantemateriale kan give katte opkast og ondt i maven.",
-        "fi": "VCA Animal Hospitals neuvoo olemaan jakamatta tulista ruokaa kissan kanssa ja pitämään jalapeño popperit omana herkkunaan: tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja. Kissat eivät tarvitse kasviksia ruokavaliossaan, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
+        "fi": "VCA Animal Hospitals neuvoo olemaan jakamatta tulista ruokaa kissan kanssa ja pitämään jalapeño popperit omana herkkunaan: tulinen ruoka ei välttämättä ole kissoille myrkyllistä, mutta se aiheuttaa varmasti vatsavaivoja. Kissat eivät tarvitse kasviksia ruokavaliossaan, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja.",
+        "nb": "VCA Animal Hospitals fraråder å dele sterk mat med katten og ber deg ta jalapeño poppers selv: sterk mat er kanskje ikke giftig for katter, men gir helt sikkert urolig mage. Katter trenger ikke grønnsaker i kostholdet, og ASPCA opplyser at alt plantemateriale kan gi oppkast og urolig mage hos katter."
       },
       "signs": {
         "en": [
@@ -5169,6 +5184,10 @@
         "fi": [
           "Vatsavaivat",
           "Oksentelu"
+        ],
+        "nb": [
+          "Urolig mage",
+          "Oppkast"
         ]
       },
       "what_to_do": {
@@ -5185,7 +5204,8 @@
         "hr": "Ako je mačka pojela čili ili ljutu hranu pa povraća ili ima želučane tegobe, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
         "sv": "Om katten har ätit chili eller stark mat och sedan kräks eller får orolig mage, kontakta veterinären för råd. Försök inte få katten att kräkas utan att först fråga veterinären.",
         "da": "Hvis din kat har spist chili eller stærk mad og derefter kaster op eller får ondt i maven, så kontakt din dyrlæge for at få råd. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-        "fi": "Jos kissasi söi chilipippuria tai tulista ruokaa ja oksentaa tai sen vatsa on sekaisin, ota yhteyttä eläinlääkäriin neuvoa varten. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+        "fi": "Jos kissasi söi chilipippuria tai tulista ruokaa ja oksentaa tai sen vatsa on sekaisin, ota yhteyttä eläinlääkäriin neuvoa varten. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+        "nb": "Hvis katten har spist chili eller sterk mat og kaster opp eller får urolig mage, må du kontakte dyrlegen for råd. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
       },
       "serving": null,
       "child": {
@@ -5202,7 +5222,8 @@
         "hr": "Ljute čili papričice nisu za mačke, nego za ljude. Od njih mački može boljeti trbuščić.",
         "sv": "Stark chilipeppar är för människor, inte för katter. Den kan ge katten ont i magen.",
         "da": "Stærke chilipeber er til mennesker, ikke til katte. De kan give katten ondt i maven.",
-        "fi": "Tuliset chilipippurit ovat ihmisille, eivät kissoille. Ne voivat aiheuttaa kisulle vatsakipua."
+        "fi": "Tuliset chilipippurit ovat ihmisille, eivät kissoille. Ne voivat aiheuttaa kisulle vatsakipua.",
+        "nb": "Sterk chili er for mennesker, ikke for katter. Den kan gi pusen vondt i magen."
       },
       "faq": [],
       "source_ids": [
@@ -6985,7 +7006,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Corn (sweetcorn kernels)",
@@ -7001,7 +7023,8 @@
         "hr": "Kukuruz (zrna kukuruza šećerca)",
         "sv": "Majs (sockermajskorn)",
         "da": "Majs (majskorn)",
-        "fi": "Maissi (herkkumaissin jyvät)"
+        "fi": "Maissi (herkkumaissin jyvät)",
+        "nb": "Mais (søtmaiskorn)"
       },
       "question": {
         "en": "Can cats eat corn?",
@@ -7017,7 +7040,8 @@
         "hr": "Smiju li mačke jesti kukuruz?",
         "sv": "Får katter äta majs?",
         "da": "Må katte spise majs?",
-        "fi": "Saako kissa syödä maissia?"
+        "fi": "Saako kissa syödä maissia?",
+        "nb": "Kan katter spise mais?"
       },
       "url_slug": {
         "en": "corn",
@@ -7033,7 +7057,8 @@
         "hr": "kukuruz",
         "sv": "majs",
         "da": "majs",
-        "fi": "maissi"
+        "fi": "maissi",
+        "nb": "mais"
       },
       "answer": {
         "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
@@ -7049,7 +7074,8 @@
         "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina.",
         "sv": "Ja, några få majskorn utan tillsatser går bra som en godbit då och då, om katten visar intresse. Cats Protection nämner majs bland de få grönsaker man kan ge en katt. Servera dem utan smör, salt eller kryddor.",
         "da": "Ja, nogle få naturelle majskorn er fine som godbid en gang imellem, hvis din kat har lyst. Cats Protection nævner majs blandt de få grøntsager du kan give en kat. Server dem uden smør, salt eller krydderier.",
-        "fi": "Saa, muutama maustamaton maissinjyvä sopii satunnaiseksi herkuksi, jos kissa on siitä kiinnostunut. Cats Protection mainitsee maissin yhtenä niistä harvoista kasviksista, joita kissalle voi antaa. Tarjoa se ilman voita, suolaa tai mausteita."
+        "fi": "Saa, muutama maustamaton maissinjyvä sopii satunnaiseksi herkuksi, jos kissa on siitä kiinnostunut. Cats Protection mainitsee maissin yhtenä niistä harvoista kasviksista, joita kissalle voi antaa. Tarjoa se ilman voita, suolaa tai mausteita.",
+        "nb": "Ja, noen få maiskorn uten tilsetninger er greit som en godbit nå og da hvis katten vil ha. Cats Protection nevner mais blant de få grønnsakene du kan gi en katt. Server dem uten smør, salt eller krydder."
       },
       "why": {
         "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -7065,7 +7091,8 @@
         "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
         "sv": "Cats Protection skriver att det finns några grönsaker man kan ge katten om den visar intresse, bland dem majs, men att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. PDSA skriver att många frukter och grönsaker kan ges i mycket små mängder som en godbit då och då. ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
         "da": "Cats Protection skriver at du kan give din kat nogle få grøntsager, hvis den har lyst, blandt andet majs. Men katte spiser sjældent grøntsager af sig selv, og der er ingen grund til at tilføje dem til kosten. PDSA skriver at mange slags frugt og grønt kan gives i meget små mængder som godbid en gang imellem. ASPCA skriver at alt plantemateriale kan give katte opkast og ondt i maven.",
-        "fi": "Cats Protectionin mukaan kissalle voi antaa muutamia kasviksia, jos se niistä pitää, muun muassa maissia. Kissat kuitenkin syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. PDSA:n mukaan monia hedelmiä ja kasviksia voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
+        "fi": "Cats Protectionin mukaan kissalle voi antaa muutamia kasviksia, jos se niistä pitää, muun muassa maissia. Kissat kuitenkin syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. PDSA:n mukaan monia hedelmiä ja kasviksia voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja.",
+        "nb": "Cats Protection sier at det finnes noen få grønnsaker du kan gi katten hvis den viser interesse, blant dem mais, men at katter sjelden spiser grønnsaker av seg selv, og at det ikke er noe behov for å legge dem til i kostholdet. PDSA sier at mange typer frukt og grønnsaker kan gis i svært små mengder som en godbit nå og da. ASPCA opplyser at alt plantemateriale kan gi oppkast og urolig mage hos katter."
       },
       "signs": null,
       "what_to_do": {
@@ -7082,7 +7109,8 @@
         "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med några få korn. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
         "da": "Start med nogle få majskorn. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
-        "fi": "Aloita muutamalla jyvällä. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
+        "fi": "Aloita muutamalla jyvällä. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä.",
+        "nb": "Begynn med noen få korn. Hvis katten kaster opp eller får urolig mage etterpå, må du slutte å gi det og spørre dyrlegen."
       },
       "serving": {
         "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
@@ -7098,7 +7126,8 @@
         "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj.",
         "sv": "Några få tillagade majskorn utan smör, salt eller kryddor, i små munsbitar.",
         "da": "Nogle få naturelle, tilberedte majskorn i mundrette stykker, uden smør, salt eller krydderier.",
-        "fi": "Muutama kypsennetty maissinjyvä suupalan kokoisina paloina, ilman voita, suolaa tai mausteita."
+        "fi": "Muutama kypsennetty maissinjyvä suupalan kokoisina paloina, ilman voita, suolaa tai mausteita.",
+        "nb": "Noen få kokte maiskorn uten smør, salt eller krydder, i små biter."
       },
       "child": {
         "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -7114,7 +7143,8 @@
         "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak.",
         "sv": "Några majskorn kan vara en godbit för katten då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
         "da": "Nogle få majskorn kan være en godbid til katten en gang imellem. Katte har mest brug for kød, så grøntsager er kun et lille ekstra.",
-        "fi": "Muutama maissinjyvä voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
+        "fi": "Muutama maissinjyvä voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
+        "nb": "Noen få maiskorn kan være en godbit for katter nå og da. Katter trenger kjøtt, så grønnsaker er bare et lite ekstra."
       },
       "faq": [
         {
@@ -7132,7 +7162,8 @@
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
             "da": "Har katte brug for grøntsager?",
-            "fi": "Tarvitsevatko kissat kasviksia?"
+            "fi": "Tarvitsevatko kissat kasviksia?",
+            "nb": "Trenger katter grønnsaker?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -7148,7 +7179,8 @@
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. En grönsak är aldrig mer än ett litet extra.",
             "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager af sig selv, og at der ikke er grund til at tilføje dem til kosten. En grøntsag kan højst være et lille ekstra.",
-            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
+            "nb": "Nei. Cats Protection sier at katter sjelden spiser grønnsaker av seg selv, og at det ikke er noe behov for å legge dem til i kostholdet. Grønnsaker kan høyst være et lite tillegg."
           }
         }
       ],
@@ -13403,7 +13435,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Store-bought mushrooms",
@@ -13419,7 +13452,8 @@
         "hr": "Gljive iz trgovine",
         "sv": "Svamp från affären",
         "da": "Svampe fra butikken",
-        "fi": "Kaupan sienet"
+        "fi": "Kaupan sienet",
+        "nb": "Sopp fra butikken"
       },
       "question": {
         "en": "Can cats eat store-bought mushrooms?",
@@ -13435,7 +13469,8 @@
         "hr": "Smiju li mačke jesti gljive iz trgovine?",
         "sv": "Får katter äta svamp från affären?",
         "da": "Må katte spise svampe fra butikken?",
-        "fi": "Saako kissa syödä kaupan sieniä?"
+        "fi": "Saako kissa syödä kaupan sieniä?",
+        "nb": "Kan katter spise sopp fra butikken?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
@@ -13451,7 +13486,8 @@
         "hr": "gljive-iz-trgovine",
         "sv": "svamp-fran-affaren",
         "da": "svampe-fra-butikken",
-        "fi": "kaupan-sienet"
+        "fi": "kaupan-sienet",
+        "nb": "sopp-fra-butikken"
       },
       "answer": {
         "en": "It's best not to share mushrooms with your cat. Pet Poison Helpline says some mushrooms are safe for cats but urges caution, and cats don't need anything beyond a complete cat food. Never give mushrooms cooked with garlic or onion.",
@@ -13467,7 +13503,8 @@
         "hr": "Najbolje je ne davati gljive mački. Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali poziva na oprez, a mačkama ne treba ništa osim potpune hrane za mačke. Nikad ne daj gljive pripremljene s češnjakom ili lukom.",
         "sv": "Det är bäst att inte dela svamp med katten. Pet Poison Helpline skriver att en del svampar är säkra för katter men uppmanar till försiktighet, och katter behöver inget utöver en komplett kattmat. Ge aldrig svamp som har tillagats med vitlök eller lök.",
         "da": "Det er bedst ikke at dele svampe med din kat. Pet Poison Helpline skriver at nogle svampe er sikre for katte, men opfordrer til forsigtighed, og katte har ikke brug for andet end komplet kattefoder. Giv aldrig svampe der er tilberedt med hvidløg eller løg.",
-        "fi": "Ei kannata. Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta se kehottaa varovaisuuteen, eivätkä kissat tarvitse täysravinnon lisäksi mitään muuta. Älä koskaan anna sieniä, jotka on kypsennetty valkosipulin tai sipulin kanssa."
+        "fi": "Ei kannata. Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta se kehottaa varovaisuuteen, eivätkä kissat tarvitse täysravinnon lisäksi mitään muuta. Älä koskaan anna sieniä, jotka on kypsennetty valkosipulin tai sipulin kanssa.",
+        "nb": "Det er best å la være å dele sopp med katten. Pet Poison Helpline sier at noen sopper er trygge for katter, men oppfordrer til forsiktighet, og katter trenger ikke noe mer enn et fullverdig kattefôr. Gi aldri sopp som er tilberedt med hvitløk eller løk."
       },
       "why": {
         "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
@@ -13483,7 +13520,8 @@
         "hr": "Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali da je potreban oprez, te savjetuje da se otrovnom smatra svaka gljiva koja nije kupljena za ljudsku prehranu. Savjetuje i da se gljive ne dodaju u prehranu mačke. PDSA navodi da mačkama ne treba ništa osim potpune prehrane, a Cats Protection upozorava da češnjak i luk mogu jako razboljeti mačke, pa jela s gljivama pripremljena za ljude nisu prikladna.",
         "sv": "Pet Poison Helpline skriver att en del svampar visserligen är säkra för katter men att man bör vara försiktig, och rekommenderar att alla svampar som inte är köpta för att ätas av människor behandlas som giftiga. Organisationen avråder också från att lägga till svamp i kattens kost. PDSA skriver att katter inte behöver något annat än en komplett kost, och Cats Protection varnar för att vitlök och lök kan göra katter mycket sjuka, så svamprätter som är gjorda för människor passar inte.",
         "da": "Pet Poison Helpline skriver at nogle svampe er sikre for katte, men at emnet kræver forsigtighed, og anbefaler at behandle alle svampe der ikke er købt som menneskemad som giftige. Pet Poison Helpline fraråder også at tilføje svampe til en kats kost. PDSA skriver at katte ikke har brug for andet end komplet kost, og Cats Protection advarer om at hvidløg og løg kan gøre katte meget syge, så svamperetter lavet til mennesker ikke egner sig.",
-        "fi": "Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta aihe vaatii varovaisuutta, ja sen ohjeen mukaan kaikkia sieniä, joita ei ole ostettu ihmisten syötäväksi, on pidettävä myrkyllisinä. Se neuvoo myös olemaan lisäämättä sieniä kissan ruokavalioon. PDSA:n mukaan kissat eivät tarvitse täysravinnon lisäksi mitään muuta, ja Cats Protection varoittaa, että valkosipuli ja sipuli voivat sairastuttaa kissan vakavasti, joten ihmisille tehdyt sieniruoat eivät sovi."
+        "fi": "Pet Poison Helplinen mukaan jotkin sienet ovat kissoille turvallisia, mutta aihe vaatii varovaisuutta, ja sen ohjeen mukaan kaikkia sieniä, joita ei ole ostettu ihmisten syötäväksi, on pidettävä myrkyllisinä. Se neuvoo myös olemaan lisäämättä sieniä kissan ruokavalioon. PDSA:n mukaan kissat eivät tarvitse täysravinnon lisäksi mitään muuta, ja Cats Protection varoittaa, että valkosipuli ja sipuli voivat sairastuttaa kissan vakavasti, joten ihmisille tehdyt sieniruoat eivät sovi.",
+        "nb": "Pet Poison Helpline sier at selv om noen sopper er trygge for katter, må man være forsiktig, og de anbefaler å regne all sopp som ikke er kjøpt for å spises av mennesker, som giftig. De anbefaler også å la være å legge sopp til kattens kosthold. PDSA sier at katter ikke trenger noe annet enn et fullverdig fôr, og Cats Protection advarer om at hvitløk og løk kan gjøre katter svært syke, så soppretter som er laget til mennesker, egner seg ikke."
       },
       "signs": {
         "en": [
@@ -13541,6 +13579,10 @@
         "fi": [
           "Oksentelu",
           "Ripuli"
+        ],
+        "nb": [
+          "Oppkast",
+          "Diaré"
         ]
       },
       "what_to_do": {
@@ -13557,7 +13599,8 @@
         "hr": "Ako nije sigurno da gljiva potječe iz trgovine, smatraj je otrovnom i odmah odvedi mačku veterinaru. Ako mačka pojede gljivu pa povraća ili ima proljev, odmah potraži veterinarsku pomoć.",
         "sv": "Om du inte är säker på att svampen kommer från en affär, behandla den som giftig och åk direkt till veterinären med katten. Om katten har ätit en svamp och sedan kräks eller får diarré, sök veterinärvård direkt.",
         "da": "Hvis du ikke er sikker på at svampen kommer fra en butik, så behandl den som giftig og tag straks din kat med til dyrlægen. Hvis din kat har spist en svamp og derefter kaster op eller får diarré, så søg straks hjælp hos en dyrlæge.",
-        "fi": "Jos et ole varma, onko sieni peräisin kaupasta, pidä sitä myrkyllisenä ja vie kissa heti eläinlääkäriin. Jos kissasi syö sienen ja oksentaa tai sillä on ripulia, hakeudu heti eläinlääkäriin."
+        "fi": "Jos et ole varma, onko sieni peräisin kaupasta, pidä sitä myrkyllisenä ja vie kissa heti eläinlääkäriin. Jos kissasi syö sienen ja oksentaa tai sillä on ripulia, hakeudu heti eläinlääkäriin.",
+        "nb": "Hvis du ikke er sikker på at soppen kommer fra en butikk, må du regne den som giftig og ta katten med til dyrlegen med en gang. Hvis katten spiser sopp og deretter kaster opp eller får diaré, må du kontakte dyrlegen med en gang."
       },
       "serving": null,
       "child": {
@@ -13574,7 +13617,8 @@
         "hr": "Gljive su hrana za ljude, a ne za mačke. Sve što im treba, mačke dobivaju iz svoje hrane.",
         "sv": "Svamp är mat för människor, inte för katter. Katter får allt de behöver från sin egen kattmat.",
         "da": "Svampe er mad til mennesker, ikke kattemad. Katte får alt, hvad de har brug for, i deres egen kattemad.",
-        "fi": "Sienet ovat ihmisten ruokaa, eivät kissanruokaa. Kissa saa kaiken tarvitsemansa omasta kissanruoastaan."
+        "fi": "Sienet ovat ihmisten ruokaa, eivät kissanruokaa. Kissa saa kaiken tarvitsemansa omasta kissanruoastaan.",
+        "nb": "Sopp er mat for mennesker, ikke for katter. Katter får alt de trenger gjennom sin egen kattemat."
       },
       "faq": [
         {
@@ -13592,7 +13636,8 @@
             "hr": "Što ako je mačka pojela gljivu iz vrta?",
             "sv": "Vad gör jag om katten har ätit en svamp från trädgården?",
             "da": "Hvad hvis min kat har spist en svamp fra haven?",
-            "fi": "Entä jos kissani söi puutarhasta sienen?"
+            "fi": "Entä jos kissani söi puutarhasta sienen?",
+            "nb": "Hva om katten min har spist en sopp fra hagen?"
           },
           "a": {
             "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
@@ -13608,7 +13653,8 @@
             "hr": "Smatraj je otrovnom. Pet Poison Helpline savjetuje da mačku odmah odvedeš veterinaru i, ako je moguće, pažljivo poneseš uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ.",
             "sv": "Behandla den som giftig. Pet Poison Helpline uppmanar dig att åka direkt till veterinären med katten och, om det går, försiktigt ta med ett prov av svampen så att en specialist kan identifiera den.",
             "da": "Behandl den som giftig. Pet Poison Helpline anbefaler at tage katten med til dyrlægen med det samme og om muligt forsigtigt tage en prøve af svampen med, så en specialist kan identificere den.",
-            "fi": "Pidä sitä myrkyllisenä. Pet Poison Helplinen mukaan kissa pitää viedä heti eläinlääkäriin ja, jos mahdollista, mukaan kannattaa ottaa varovasti näyte sienestä, jotta asiantuntija voi tunnistaa sen."
+            "fi": "Pidä sitä myrkyllisenä. Pet Poison Helplinen mukaan kissa pitää viedä heti eläinlääkäriin ja, jos mahdollista, mukaan kannattaa ottaa varovasti näyte sienestä, jotta asiantuntija voi tunnistaa sen.",
+            "nb": "Regn den som giftig. Pet Poison Helpline sier at du må ta katten med til dyrlegen med en gang og om mulig ta forsiktig med en prøve av soppen, slik at en spesialist kan identifisere den."
           }
         }
       ],
@@ -15705,7 +15751,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Cooked potatoes",
@@ -15721,7 +15768,8 @@
         "hr": "Kuhani krumpir",
         "sv": "Kokt potatis",
         "da": "Kogte kartofler",
-        "fi": "Keitetyt perunat"
+        "fi": "Keitetyt perunat",
+        "nb": "Kokte poteter"
       },
       "question": {
         "en": "Can cats eat cooked potatoes?",
@@ -15737,7 +15785,8 @@
         "hr": "Smiju li mačke jesti kuhani krumpir?",
         "sv": "Får katter äta kokt potatis?",
         "da": "Må katte spise kogte kartofler?",
-        "fi": "Saako kissa syödä keitettyjä perunoita?"
+        "fi": "Saako kissa syödä keitettyjä perunoita?",
+        "nb": "Kan katter spise kokte poteter?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
@@ -15753,7 +15802,8 @@
         "hr": "kuhani-krumpir",
         "sv": "kokt-potatis",
         "da": "kogte-kartofler",
-        "fi": "keitetyt-perunat"
+        "fi": "keitetyt-perunat",
+        "nb": "kokte-poteter"
       },
       "answer": {
         "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
@@ -15769,7 +15819,8 @@
         "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine.",
         "sv": "Ja, lite tillagad potatis utan tillsatser går bra som en godbit då och då. RSPCA nämner potatis som lämplig för katter med måtta om den är mosad eller kokt, utan smör eller ost. Skala potatisen och låt bli salt och kryddor.",
         "da": "Ja, lidt naturel tilberedt kartoffel er fint som godbid en gang imellem. RSPCA regner kartofler for egnede til katte med måde, hvis de er moste eller kogte uden smør eller ost. Fjern skrællen, og undlad salt og krydderier.",
-        "fi": "Saa, vähän maustamatonta kypsennettyä perunaa sopii satunnaiseksi herkuksi. RSPCA:n mukaan peruna sopii kissoille kohtuudella, jos se on muussattua tai keitettyä ilman voita tai juustoa. Jätä kuori, suola ja mausteet pois."
+        "fi": "Saa, vähän maustamatonta kypsennettyä perunaa sopii satunnaiseksi herkuksi. RSPCA:n mukaan peruna sopii kissoille kohtuudella, jos se on muussattua tai keitettyä ilman voita tai juustoa. Jätä kuori, suola ja mausteet pois.",
+        "nb": "Ja, litt kokt potet uten tilsetninger er greit som en godbit nå og da. RSPCA oppgir poteter som egnet for katter i moderate mengder hvis de er moset eller kokt uten smør eller ost. Ta bort skallet, og ikke bruk salt eller krydder."
       },
       "why": {
         "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
@@ -15785,7 +15836,8 @@
         "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica.",
         "sv": "RSPCA nämner mosad eller kokt potatis utan smör eller ost bland den mat som passar katter med måtta, Cats Protection föreslår enkel potatismos utan smör, grädde eller vitlök, och ASPCA skriver att tillagad potatis går bra för husdjur med måtta. En artikel på PetMD, skriven av veterinärer, tillägger att tillagad potatis inte är giftig för katter men inte heller bra för dem, och att potatisskal innehåller giftet solanin. Katter behöver inte grönsaker i kosten, så se det som en liten godbit.",
         "da": "RSPCA regner moste eller kogte kartofler uden smør eller ost for mad der egner sig til katte med måde. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg, og ASPCA skriver at tilberedte kartofler er fine for kæledyr med måde. En artikel fra PetMD skrevet af en dyrlæge tilføjer at tilberedte kartofler ikke er giftige for katte, men heller ikke gode for dem, og at kartoffelskræl indeholder giftstoffet solanin. Katte har ikke brug for grøntsager i kosten, så hold det til en lille godbid.",
-        "fi": "RSPCA luettelee muussatun tai keitetyn perunan ilman voita tai juustoa kohtuudella kissoille sopivien ruokien joukkoon, Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia, ja ASPCA:n mukaan kypsennetty peruna sopii lemmikeille kohtuudella. Eläinlääkärin kirjoittamassa PetMD-artikkelissa lisätään, että kypsennetty peruna ei ole kissoille myrkyllistä mutta ei myöskään hyväksi, ja että perunankuoressa on solaniinimyrkkyä. Kissat eivät tarvitse kasviksia ruokavaliossaan, joten pidä peruna pienenä herkkuna."
+        "fi": "RSPCA luettelee muussatun tai keitetyn perunan ilman voita tai juustoa kohtuudella kissoille sopivien ruokien joukkoon, Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia, ja ASPCA:n mukaan kypsennetty peruna sopii lemmikeille kohtuudella. Eläinlääkärin kirjoittamassa PetMD-artikkelissa lisätään, että kypsennetty peruna ei ole kissoille myrkyllistä mutta ei myöskään hyväksi, ja että perunankuoressa on solaniinimyrkkyä. Kissat eivät tarvitse kasviksia ruokavaliossaan, joten pidä peruna pienenä herkkuna.",
+        "nb": "RSPCA oppgir potetmos eller kokte poteter uten smør eller ost blant maten som egner seg for katter i moderate mengder, Cats Protection foreslår potetmos uten smør, fløte eller hvitløk, og ASPCA sier at kokte poteter er greit for kjæledyr med måte. En artikkel fra PetMD, skrevet av en dyrlege, legger til at kokte poteter ikke er giftige for katter, men heller ikke gode for dem, og at potetskall inneholder giftstoffet solanin. Katter trenger ikke grønnsaker i kostholdet, så la det bli med en liten godbit."
       },
       "signs": null,
       "what_to_do": {
@@ -15802,7 +15854,8 @@
         "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten smakbit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
         "da": "Start med en lille smagsprøve. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
-        "fi": "Aloita pienellä maistiaisella. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
+        "fi": "Aloita pienellä maistiaisella. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä.",
+        "nb": "Begynn med en liten smaksprøve. Hvis katten kaster opp eller får urolig mage etterpå, må du slutte å gi det og spørre dyrlegen."
       },
       "serving": {
         "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
@@ -15818,7 +15871,8 @@
         "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir.",
         "sv": "Kokt eller mosad potatis, skalad, utan smör, ost, grädde, vitlök, salt eller kryddor. Aldrig rå eller grön potatis.",
         "da": "Naturel kogt kartoffel eller kartoffelmos, skrællet, uden smør, ost, fløde, hvidløg, salt eller krydderier. Aldrig rå eller grøn kartoffel.",
-        "fi": "Maustamatonta, keitettyä tai muussattua ja kuorittua perunaa ilman voita, juustoa, kermaa, valkosipulia, suolaa tai mausteita. Ei koskaan raakaa tai vihreää perunaa."
+        "fi": "Maustamatonta, keitettyä tai muussattua ja kuorittua perunaa ilman voita, juustoa, kermaa, valkosipulia, suolaa tai mausteita. Ei koskaan raakaa tai vihreää perunaa.",
+        "nb": "Kokt eller moset potet, skrellet, uten smør, ost, fløte, hvitløk, salt eller krydder. Aldri rå eller grønn potet."
       },
       "child": {
         "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
@@ -15834,7 +15888,8 @@
         "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke.",
         "sv": "Lite kokt potatis utan tillsatser kan vara en godbit för katten då och då. Rå potatis är inte för katter.",
         "da": "Et lille stykke naturel kogt kartoffel kan være en godbid til katten en gang imellem. Rå kartoffel er ikke til katte.",
-        "fi": "Pieni pala maustamatonta kypsennettyä perunaa voi joskus olla kissan herkku. Raaka peruna ei ole kissoille."
+        "fi": "Pieni pala maustamatonta kypsennettyä perunaa voi joskus olla kissan herkku. Raaka peruna ei ole kissoille.",
+        "nb": "En bitteliten bit kokt potet uten tilsetninger kan være en godbit for katter nå og da. Rå potet er ikke for katter."
       },
       "faq": [
         {
@@ -15852,7 +15907,8 @@
             "hr": "Smiju li mačke jesti koru krumpira?",
             "sv": "Får katter äta potatisskal?",
             "da": "Må katte spise kartoffelskræl?",
-            "fi": "Saako kissa syödä perunankuoria?"
+            "fi": "Saako kissa syödä perunankuoria?",
+            "nb": "Kan katter spise potetskall?"
           },
           "a": {
             "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
@@ -15868,7 +15924,8 @@
             "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati.",
             "sv": "Nej. Enligt en artikel på PetMD, skriven av veterinärer, innehåller potatisskal, både råa och tillagade, giftet solanin och bör undvikas.",
             "da": "Nej. En artikel fra PetMD skrevet af en dyrlæge skriver at kartoffelskræl, både rå og tilberedt, indeholder giftstoffet solanin og bør undgås.",
-            "fi": "Ei. Eläinlääkärin kirjoittaman PetMD-artikkelin mukaan perunankuoret, olivatpa ne raakoja tai kypsennettyjä, sisältävät solaniinimyrkkyä, ja niitä pitää välttää."
+            "fi": "Ei. Eläinlääkärin kirjoittaman PetMD-artikkelin mukaan perunankuoret, olivatpa ne raakoja tai kypsennettyjä, sisältävät solaniinimyrkkyä, ja niitä pitää välttää.",
+            "nb": "Nei. En artikkel fra PetMD, skrevet av en dyrlege, sier at potetskall, rå eller kokte, inneholder giftstoffet solanin og bør unngås."
           }
         },
         {
@@ -15886,7 +15943,8 @@
             "hr": "Smiju li mačke jesti pire od krumpira?",
             "sv": "Får katter äta potatismos?",
             "da": "Må katte spise kartoffelmos?",
-            "fi": "Saako kissa syödä perunamuusia?"
+            "fi": "Saako kissa syödä perunamuusia?",
+            "nb": "Kan katter spise potetmos?"
           },
           "a": {
             "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
@@ -15902,7 +15960,8 @@
             "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka.",
             "sv": "Potatismos utan tillsatser går bra som en liten godbit. Cats Protection föreslår potatismos utan smör, grädde eller vitlök.",
             "da": "Lidt naturel kartoffelmos er fint som en lille godbid. Cats Protection foreslår naturel kartoffelmos uden smør, fløde eller hvidløg.",
-            "fi": "Maustamaton perunamuusi sopii pieneksi herkuksi. Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia."
+            "fi": "Maustamaton perunamuusi sopii pieneksi herkuksi. Cats Protection ehdottaa maustamatonta perunamuusia ilman voita, kermaa tai valkosipulia.",
+            "nb": "Potetmos uten tilsetninger er greit som en liten godbit. Cats Protection foreslår potetmos uten smør, fløte eller hvitløk."
           }
         }
       ],
@@ -20234,7 +20293,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Tomato plant (leaves, stems, green tomatoes)",
@@ -20250,7 +20310,8 @@
         "hr": "Biljka rajčice (listovi, stabljike, zelene rajčice)",
         "sv": "Tomatplanta (blad, stjälkar, gröna tomater)",
         "da": "Tomatplante (blade, stængler, grønne tomater)",
-        "fi": "Tomaattikasvi (lehdet, varret, vihreät tomaatit)"
+        "fi": "Tomaattikasvi (lehdet, varret, vihreät tomaatit)",
+        "nb": "Tomatplante (blader, stengler, grønne tomater)"
       },
       "question": {
         "en": "Is the tomato plant safe for cats?",
@@ -20266,7 +20327,8 @@
         "hr": "Je li biljka rajčice sigurna za mačke?",
         "sv": "Är tomatplantan säker för katter?",
         "da": "Er tomatplanten ufarlig for katte?",
-        "fi": "Onko tomaattikasvi turvallinen kissalle?"
+        "fi": "Onko tomaattikasvi turvallinen kissalle?",
+        "nb": "Er tomatplanten trygg for katter?"
       },
       "url_slug": {
         "en": "tomato-plant",
@@ -20282,7 +20344,8 @@
         "hr": "biljka-rajcice",
         "sv": "tomatplanta",
         "da": "tomatplante",
-        "fi": "tomaattikasvi"
+        "fi": "tomaattikasvi",
+        "nb": "tomatplante"
       },
       "answer": {
         "en": "No. The ASPCA lists the tomato plant as toxic to cats because it contains solanine; only the ripe fruit is non-toxic. Keep leaves, stems and green tomatoes away from your cat, and call your vet if your cat chews any.",
@@ -20298,7 +20361,8 @@
         "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke jer sadrži solanin; neotrovan je samo zreo plod. Listove, stabljike i zelene rajčice drži podalje od mačke, a ako ih mačka žvače, nazovi veterinara.",
         "sv": "Nej. ASPCA räknar tomatplantan som giftig för katter eftersom den innehåller solanin; bara den mogna frukten är ogiftig. Se till att katten inte kommer åt blad, stjälkar och gröna tomater, och kontakta veterinären om katten har tuggat på något av dem.",
         "da": "Nej. ASPCA regner tomatplanten for giftig for katte, fordi den indeholder solanin; kun den modne frugt er ugiftig. Hold blade, stængler og grønne tomater væk fra din kat, og ring til din dyrlæge, hvis din kat tygger på noget af det.",
-        "fi": "Ei ole. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, koska siinä on solaniinia; vain kypsä hedelmä on myrkytön. Pidä lehdet, varret ja vihreät tomaatit poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissa pureskelee niitä."
+        "fi": "Ei ole. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, koska siinä on solaniinia; vain kypsä hedelmä on myrkytön. Pidä lehdet, varret ja vihreät tomaatit poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissa pureskelee niitä.",
+        "nb": "Nei. ASPCA oppgir tomatplanten som giftig for katter fordi den inneholder solanin; bare den modne frukten er ikke giftig. Hold blader, stengler og grønne tomater unna katten, og ring dyrlegen hvis katten tygger på noe av det."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
@@ -20314,7 +20378,8 @@
         "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke, solanin imenuje kao otrovnu tvar i napominje da je zreo plod neotrovan. I Agriculture Victoria kaže da je neotrovan samo zreo plod rajčice. ASPCA-ov vrtni savjet za kućne ljubimce dodaje da biljka i male zelene rajčice sadrže tomatin. International Cat Care upozorava da već i dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima.",
         "sv": "ASPCA anger att tomatplantan är giftig för katter, pekar ut solanin som det giftiga ämnet och påpekar att den mogna frukten är ogiftig. Även Agriculture Victoria skriver att bara mogna tomater är ogiftiga. ASPCA:s trädgårdsråd för husdjur tillägger att plantan och små gröna tomater innehåller tomatin. International Cat Care varnar för att redan kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött, nysningar och ögonproblem.",
         "da": "ASPCA regner tomatplanten for giftig for katte, nævner solanin som det giftige stof og skriver at den modne frugt er ugiftig. Agriculture Victoria skriver også at kun modne tomater er ugiftige. ASPCA's havevejledning til kæledyr tilføjer at planten og små grønne tomater indeholder tomatin. International Cat Care advarer om at selv kontakt med tomatblade kan give blærer eller kløe i kattens mund og tandkød, nysen og øjenproblemer.",
-        "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, nimeää myrkylliseksi aineeksi solaniinin ja huomauttaa, että kypsä hedelmä on myrkytön. Myös Agriculture Victoria toteaa, että vain kypsä tomaatti on myrkytön. ASPCA:n lemmikkien puutarhaohjeissa lisätään, että kasvissa ja pienissä vihreissä tomaateissa on tomatiinia. International Cat Care varoittaa, että jo kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa, aivastelua ja silmäoireita."
+        "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, nimeää myrkylliseksi aineeksi solaniinin ja huomauttaa, että kypsä hedelmä on myrkytön. Myös Agriculture Victoria toteaa, että vain kypsä tomaatti on myrkytön. ASPCA:n lemmikkien puutarhaohjeissa lisätään, että kasvissa ja pienissä vihreissä tomaateissa on tomatiinia. International Cat Care varoittaa, että jo kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa, aivastelua ja silmäoireita.",
+        "nb": "ASPCA oppgir tomatplanten som giftig for katter, nevner solanin som det giftige stoffet og opplyser at den modne frukten ikke er giftig. Agriculture Victoria sier også at bare modne tomater ikke er giftige. ASPCAs hageråd for kjæledyr legger til at planten og små grønne tomater inneholder tomatin. International Cat Care advarer om at selv kontakt med tomatblader kan gi blemmer eller kløe i kattens munn og på tannkjøttet, nysing og øyeproblemer."
       },
       "signs": {
         "en": [
@@ -20442,6 +20507,15 @@
           "Heikkous",
           "Laajentuneet pupillit",
           "Hidas syke"
+        ],
+        "nb": [
+          "Sikling",
+          "Dårlig matlyst",
+          "Sterkt urolig mage",
+          "Nedstemthet eller tretthet",
+          "Svakhet",
+          "Utvidede pupiller",
+          "Langsom hjerterytme"
         ]
       },
       "what_to_do": {
@@ -20458,7 +20532,8 @@
         "hr": "Ako je mačka žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Zapiši što je pojela i kada. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
         "sv": "Om katten har tuggat på tomatblad, stjälkar eller gröna tomater, kontakta veterinären direkt. Anteckna vad katten har ätit och när. Försök inte få katten att kräkas utan att först fråga veterinären.",
         "da": "Hvis din kat har tygget på tomatblade, stængler eller grønne tomater, så kontakt straks din dyrlæge. Skriv ned, hvad katten har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-        "fi": "Jos kissasi pureskeli tomaatin lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+        "fi": "Jos kissasi pureskeli tomaatin lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+        "nb": "Hvis katten har tygget på tomatblader, stengler eller grønne tomater, må du kontakte dyrlegen med en gang. Skriv ned hva katten har spist, og når. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
       },
       "serving": null,
       "child": {
@@ -20475,7 +20550,8 @@
         "hr": "Biljke rajčice nisu za mačke. Ako mačka nagrize list, reci odrasloj osobi da nazove veterinara.",
         "sv": "Tomatplantor är inte för katter. Om katten knaprar på ett blad, berätta det för en vuxen så att den vuxna kan ringa veterinären.",
         "da": "Tomatplanter er ikke til katte. Hvis katten nasker af et blad, så sig det til en voksen, som kan ringe til dyrlægen.",
-        "fi": "Tomaattikasvit eivät ole kissoille. Jos kisu nakertaa lehteä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille."
+        "fi": "Tomaattikasvit eivät ole kissoille. Jos kisu nakertaa lehteä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille.",
+        "nb": "Tomatplanter er ikke for katter. Hvis pusen napper i et blad, må du si fra til en voksen, som kan ringe dyrlegen."
       },
       "faq": [
         {
@@ -20493,7 +20569,8 @@
             "hr": "Smiju li mačke jesti zrele rajčice?",
             "sv": "Får katter äta mogna tomater?",
             "da": "Må katte spise modne tomater?",
-            "fi": "Saako kissa syödä kypsiä tomaatteja?"
+            "fi": "Saako kissa syödä kypsiä tomaatteja?",
+            "nb": "Kan katter spise modne tomater?"
           },
           "a": {
             "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
@@ -20509,7 +20586,8 @@
             "hr": "ASPCA navodi da je zreo plod rajčice neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati, pa ih je najbolje ne dijeliti.",
             "sv": "ASPCA uppger att mogen tomatfrukt är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika, så det är bäst att inte ge katten några.",
             "da": "ASPCA skriver at modne tomater er ugiftige for katte, men Agriculture Victoria nævner tomater blandt den menneskemad man bør undgå at give katte, så det er bedst ikke at dele dem.",
-            "fi": "ASPCA:n mukaan kypsä tomaatti on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, joten niitä ei kannata jakaa."
+            "fi": "ASPCA:n mukaan kypsä tomaatti on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, joten niitä ei kannata jakaa.",
+            "nb": "ASPCA sier at modne tomater ikke er giftige for katter, men Agriculture Victoria oppgir tomater blant menneskemat som katter ikke bør få, så det er best å la være å dele dem."
           }
         }
       ],
@@ -20551,7 +20629,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Tomatoes",
@@ -20567,7 +20646,8 @@
         "hr": "Rajčice",
         "sv": "Tomater",
         "da": "Tomater",
-        "fi": "Tomaatit"
+        "fi": "Tomaatit",
+        "nb": "Tomater"
       },
       "question": {
         "en": "Can cats eat tomatoes?",
@@ -20583,7 +20663,8 @@
         "hr": "Smiju li mačke jesti rajčice?",
         "sv": "Får katter äta tomater?",
         "da": "Må katte spise tomater?",
-        "fi": "Saako kissa syödä tomaatteja?"
+        "fi": "Saako kissa syödä tomaatteja?",
+        "nb": "Kan katter spise tomater?"
       },
       "url_slug": {
         "en": "tomatoes",
@@ -20599,7 +20680,8 @@
         "hr": "rajcice",
         "sv": "tomater",
         "da": "tomater",
-        "fi": "tomaatit"
+        "fi": "tomaatit",
+        "nb": "tomater"
       },
       "answer": {
         "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
@@ -20615,7 +20697,8 @@
         "hr": "Mački je najbolje ne davati rajčice. ASPCA navodi da je zreo plod neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati. Sama je biljka rajčice otrovna za mačke, zato je drži izvan njezina dosega.",
         "sv": "Det är bäst att inte ge katten tomater. ASPCA uppger att den mogna frukten är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika. Själva tomatplantan är giftig för katter, så se till att katten inte kommer åt den.",
         "da": "Det er bedst ikke at give din kat tomater. ASPCA skriver at den modne frugt er ugiftig for katte, men Agriculture Victoria nævner tomater blandt den menneskemad man bør undgå at give katte. Selve tomatplanten er giftig for katte, så hold den uden for rækkevidde.",
-        "fi": "Ei kannata. ASPCA:n mukaan kypsä hedelmä on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa. Itse tomaattikasvi on kissoille myrkyllinen, joten pidä se poissa ulottuvilta."
+        "fi": "Ei kannata. ASPCA:n mukaan kypsä hedelmä on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa. Itse tomaattikasvi on kissoille myrkyllinen, joten pidä se poissa ulottuvilta.",
+        "nb": "Det er best å ikke gi katten tomater. ASPCA sier at den modne frukten ikke er giftig for katter, men Agriculture Victoria oppgir tomater blant menneskemat som katter ikke bør få. Selve tomatplanten er giftig for katter, så hold den utenfor rekkevidde."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
@@ -20631,7 +20714,8 @@
         "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke zbog solanina i napominje da je zreo plod neotrovan. Agriculture Victoria navodi rajčice među ljudskom hranom koju mačkama ne treba davati, uz tvrdnju da sadrže tvar koja uzrokuje teške probleme sa želucem i crijevima, a zreo je plod neotrovan. Budući da jedan izvor rajčice navodi kao hranu koju treba izbjegavati, držimo se strožeg savjeta. Mačkama u prehrani ionako ne treba povrće.",
         "sv": "ASPCA anger att tomatplantan är giftig för katter på grund av solanin och påpekar att den mogna frukten är ogiftig. Agriculture Victoria räknar tomater till den människomat som katter bör undvika och skriver att de innehåller ett ämne som ger kraftiga mag- och tarmproblem, medan mogen frukt är ogiftig. Eftersom en källa tar upp tomater som mat att undvika följer vi det strängare rådet. Katter behöver ändå inte grönsaker i kosten.",
         "da": "ASPCA regner tomatplanten for giftig for katte på grund af solanin og skriver at den modne frugt er ugiftig. Agriculture Victoria nævner tomater blandt den menneskemad man bør undgå at give katte og skriver at de indeholder et stof der giver kraftige mave-tarm-problemer, mens modne tomater er ugiftige. Fordi én kilde nævner tomater som mad man bør undgå, følger vi det strengeste råd. Katte har under alle omstændigheder ikke brug for grøntsager i kosten.",
-        "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi solaniinin vuoksi ja huomauttaa, että kypsä hedelmä on myrkytön. Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, ja kertoo, että niissä on ainetta, joka aiheuttaa vakavia vatsa- ja suolistovaivoja, kun taas kypsä hedelmä on myrkytön. Koska yksi lähde pitää tomaattia vältettävänä ruokana, noudatamme tiukempaa neuvoa. Kissat eivät muutenkaan tarvitse kasviksia ruokavaliossaan."
+        "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi solaniinin vuoksi ja huomauttaa, että kypsä hedelmä on myrkytön. Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, ja kertoo, että niissä on ainetta, joka aiheuttaa vakavia vatsa- ja suolistovaivoja, kun taas kypsä hedelmä on myrkytön. Koska yksi lähde pitää tomaattia vältettävänä ruokana, noudatamme tiukempaa neuvoa. Kissat eivät muutenkaan tarvitse kasviksia ruokavaliossaan.",
+        "nb": "ASPCA oppgir tomatplanten som giftig for katter på grunn av solanin og opplyser at den modne frukten ikke er giftig. Agriculture Victoria oppgir tomater blant menneskemat som katter ikke bør få, og sier at de inneholder et stoff som gir alvorlige mage- og tarmproblemer, mens modne tomater ikke er giftige. Siden én kilde oppgir tomater som mat man bør unngå, følger vi det strengere rådet. Katter trenger uansett ikke grønnsaker i kostholdet."
       },
       "signs": {
         "en": [
@@ -20689,6 +20773,10 @@
         "fi": [
           "Oksentelu",
           "Vatsavaivat"
+        ],
+        "nb": [
+          "Oppkast",
+          "Urolig mage"
         ]
       },
       "what_to_do": {
@@ -20705,7 +20793,8 @@
         "hr": "Ako je mačka pojela rajčicu pa povraća ili djeluje bolesno, nazovi veterinara. Ako je žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
         "sv": "Om katten har ätit tomat och sedan kräks eller verkar sjuk, kontakta veterinären. Om katten har tuggat på blad, stjälkar eller gröna tomater, kontakta veterinären direkt. Försök inte få katten att kräkas utan att först fråga veterinären.",
         "da": "Hvis din kat har spist tomat og derefter kaster op eller virker utilpas, så kontakt din dyrlæge. Hvis din kat har tygget på bladene, stænglerne eller grønne tomater, så kontakt straks din dyrlæge. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-        "fi": "Jos kissasi söi tomaattia ja oksentaa tai vaikuttaa huonovointiselta, ota yhteyttä eläinlääkäriin. Jos kissa pureskeli lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+        "fi": "Jos kissasi söi tomaattia ja oksentaa tai vaikuttaa huonovointiselta, ota yhteyttä eläinlääkäriin. Jos kissa pureskeli lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+        "nb": "Hvis katten har spist tomat og så kaster opp eller virker uvel, må du kontakte dyrlegen. Hvis katten har tygget på blader, stengler eller grønne tomater, må du kontakte dyrlegen med en gang. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
       },
       "serving": null,
       "child": {
@@ -20722,7 +20811,8 @@
         "hr": "Rajčice su hrana za ljude, a ne za mačke. Biljke rajčice drži podalje od mačke, a ako ih nagrize, reci odrasloj osobi.",
         "sv": "Tomater är människomat, inte kattmat. Håll tomatplantor borta från katten och berätta för en vuxen om katten knaprar på en.",
         "da": "Tomater er mad til mennesker, ikke kattemad. Hold tomatplanter væk fra katten, og sig det til en voksen, hvis katten nasker af planten.",
-        "fi": "Tomaatit ovat ihmisten ruokaa, eivät kissanruokaa. Pidä tomaattikasvit poissa kisun ulottuvilta ja kerro aikuiselle, jos kisu nakertaa sellaista."
+        "fi": "Tomaatit ovat ihmisten ruokaa, eivät kissanruokaa. Pidä tomaattikasvit poissa kisun ulottuvilta ja kerro aikuiselle, jos kisu nakertaa sellaista.",
+        "nb": "Tomater er mat for mennesker, ikke for katter. Hold tomatplanter unna pusen, og si fra til en voksen hvis pusen napper i en."
       },
       "faq": [
         {
@@ -20740,7 +20830,8 @@
             "hr": "Jesu li listovi rajčice i zelene rajčice sigurni za mačke?",
             "sv": "Är tomatblad och gröna tomater säkra för katter?",
             "da": "Er tomatblade og grønne tomater ufarlige for katte?",
-            "fi": "Ovatko tomaatin lehdet ja vihreät tomaatit turvallisia kissoille?"
+            "fi": "Ovatko tomaatin lehdet ja vihreät tomaatit turvallisia kissoille?",
+            "nb": "Er tomatblader og grønne tomater trygge for katter?"
           },
           "a": {
             "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
@@ -20756,7 +20847,8 @@
             "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke; neotrovan je samo zreo plod. International Cat Care dodaje da dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke.",
             "sv": "Nej. ASPCA anger att tomatplantan är giftig för katter; bara den mogna frukten är ogiftig. International Cat Care tillägger att kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött.",
             "da": "Nej. ASPCA regner tomatplanten for giftig for katte; kun den modne frugt er ugiftig. International Cat Care tilføjer at kontakt med tomatblade kan give blærer eller kløe i kattens mund og tandkød.",
-            "fi": "Eivät. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi; vain kypsä hedelmä on myrkytön. International Cat Care lisää, että kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa."
+            "fi": "Eivät. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi; vain kypsä hedelmä on myrkytön. International Cat Care lisää, että kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa.",
+            "nb": "Nei. ASPCA oppgir tomatplanten som giftig for katter; bare den modne frukten er ikke giftig. International Cat Care legger til at kontakt med tomatblader kan gi blemmer eller kløe i kattens munn og på tannkjøttet."
           }
         }
       ],
@@ -21778,7 +21870,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Wild mushrooms",
@@ -21794,7 +21887,8 @@
         "hr": "Divlje gljive",
         "sv": "Vilda svampar",
         "da": "Vilde svampe",
-        "fi": "Luonnonvaraiset sienet"
+        "fi": "Luonnonvaraiset sienet",
+        "nb": "Ville sopper"
       },
       "question": {
         "en": "Are wild mushrooms dangerous for cats?",
@@ -21810,7 +21904,8 @@
         "hr": "Jesu li divlje gljive opasne za mačke?",
         "sv": "Är vilda svampar farliga för katter?",
         "da": "Er vilde svampe farlige for katte?",
-        "fi": "Ovatko luonnonvaraiset sienet vaarallisia kissoille?"
+        "fi": "Ovatko luonnonvaraiset sienet vaarallisia kissoille?",
+        "nb": "Er ville sopper farlige for katter?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
@@ -21826,7 +21921,8 @@
         "hr": "divlje-gljive",
         "sv": "vilda-svampar",
         "da": "vilde-svampe",
-        "fi": "luonnonvaraiset-sienet"
+        "fi": "luonnonvaraiset-sienet",
+        "nb": "ville-sopper"
       },
       "answer": {
         "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
@@ -21842,7 +21938,8 @@
         "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru.",
         "sv": "Ja. Pet Poison Helpline rekommenderar att varje svamp som inte är köpt för att ätas av människor behandlas som giftig för katter, eftersom många giftiga svampar ser likadana ut som ofarliga. Om katten äter en svamp som har hittats utomhus, åk direkt till veterinären med katten.",
         "da": "Ja. Pet Poison Helpline anbefaler at behandle enhver svamp der ikke er købt som menneskemad som giftig for katte, fordi mange giftige svampe ligner ugiftige. Hvis din kat spiser en svamp fra naturen, så tag straks katten med til dyrlægen.",
-        "fi": "Kyllä. Pet Poison Helplinen mukaan jokaista sientä, jota ei ole ostettu ihmisten syötäväksi, on pidettävä kissalle myrkyllisenä, koska monet myrkylliset sienet näyttävät aivan vaarattomilta. Jos kissasi syö ulkoa löytyneen sienen, vie kissa heti eläinlääkäriin."
+        "fi": "Kyllä. Pet Poison Helplinen mukaan jokaista sientä, jota ei ole ostettu ihmisten syötäväksi, on pidettävä kissalle myrkyllisenä, koska monet myrkylliset sienet näyttävät aivan vaarattomilta. Jos kissasi syö ulkoa löytyneen sienen, vie kissa heti eläinlääkäriin.",
+        "nb": "Ja. Pet Poison Helpline anbefaler å regne all sopp som ikke er kjøpt for å spises av mennesker, som giftig for katter, fordi mange giftige sopper ser helt like ut som harmløse. Hvis katten spiser en sopp den har funnet ute, må du ta den med til dyrlegen med en gang."
       },
       "why": {
         "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
@@ -21858,7 +21955,8 @@
         "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi.",
         "sv": "Pet Poison Helpline skriver att det bara i Nordamerika finns över 100 giftiga svamparter, bland dem Amanita, Galerina och Lepiota, och att många ser likadana ut som ogiftiga svampar. En del svampar påverkar husdjur inom 15 till 30 minuter, andra först efter upp till 24 timmar. Beroende på svampen och hur mycket katten har ätit kan mage och tarm, nervsystem, lever eller njurar påverkas.",
         "da": "Pet Poison Helpline skriver at der alene i Nordamerika findes over 100 giftige svampearter, blandt andet Amanita, Galerina og Lepiota, og at mange af dem ligner ugiftige svampe. Nogle svampe påvirker kæledyr inden for 15–30 minutter, andre først efter op til 24 timer. Afhængigt af svampen og mængden kan mave og tarm, nervesystemet, leveren eller nyrerne blive påvirket.",
-        "fi": "Pet Poison Helplinen mukaan pelkästään Pohjois-Amerikassa on yli 100 myrkyllistä sienilajia, muun muassa Amanita-, Galerina- ja Lepiota-sukujen lajeja, ja monet näyttävät samalta kuin myrkyttömät sienet. Jotkin sienet vaikuttavat lemmikkeihin 15–30 minuutin kuluessa, toiset vasta jopa 24 tunnin kuluttua. Sienestä ja syödystä määrästä riippuen vaikutus voi kohdistua mahaan ja suolistoon, hermostoon, maksaan tai munuaisiin."
+        "fi": "Pet Poison Helplinen mukaan pelkästään Pohjois-Amerikassa on yli 100 myrkyllistä sienilajia, muun muassa Amanita-, Galerina- ja Lepiota-sukujen lajeja, ja monet näyttävät samalta kuin myrkyttömät sienet. Jotkin sienet vaikuttavat lemmikkeihin 15–30 minuutin kuluessa, toiset vasta jopa 24 tunnin kuluttua. Sienestä ja syödystä määrästä riippuen vaikutus voi kohdistua mahaan ja suolistoon, hermostoon, maksaan tai munuaisiin.",
+        "nb": "Pet Poison Helpline sier at Nord-Amerika alene har over 100 giftige soppsorter, blant dem arter av slektene Amanita, Galerina og Lepiota, og at mange ser helt like ut som sopper som ikke er giftige. Noen sopper påvirker dyr innen 15–30 minutter, andre først etter opptil 24 timer. Avhengig av soppen og hvor mye som er spist, kan mage og tarm, nervesystemet, leveren eller nyrene bli påvirket."
       },
       "signs": {
         "en": [
@@ -22000,6 +22098,16 @@
           "Kouristukset",
           "Näköhäiriöt",
           "Aggressiivisuus tai sekavuus"
+        ],
+        "nb": [
+          "Oppkast",
+          "Diaré",
+          "Svart, tjæreaktig avføring",
+          "Ustø gange",
+          "Skjelvinger",
+          "Kramper",
+          "Synsproblemer",
+          "Aggressivitet eller forvirring"
         ]
       },
       "what_to_do": {
@@ -22016,7 +22124,8 @@
         "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
         "sv": "Åk direkt till veterinären med katten, även innan några symtom har visat sig. Om det går att göra på ett säkert sätt, ta med ett prov av svampen så att en specialist kan identifiera den. Försök inte få katten att kräkas utan att först fråga veterinären.",
         "da": "Tag straks din kat med til dyrlægen, også før der viser sig symptomer. Hvis du kan gøre det uden fare, skal du tage en prøve af svampen med, så en specialist kan identificere den. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-        "fi": "Vie kissasi heti eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos se onnistuu turvallisesti, ota mukaan näyte sienestä, jotta asiantuntija voi tunnistaa sen. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+        "fi": "Vie kissasi heti eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos se onnistuu turvallisesti, ota mukaan näyte sienestä, jotta asiantuntija voi tunnistaa sen. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+        "nb": "Ta katten med til dyrlegen med en gang, selv før det dukker opp tegn. Hvis du kan gjøre det uten fare, tar du med en prøve av soppen, slik at en spesialist kan identifisere den. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
       },
       "serving": null,
       "child": {
@@ -22033,7 +22142,8 @@
         "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi.",
         "sv": "Svampar som växer utomhus är inte för katter. Om katten nosar eller knaprar på en, berätta det för en vuxen direkt.",
         "da": "Svampe ude i naturen er ikke til katte. Hvis katten snuser til eller nasker af en, så sig det til en voksen med det samme.",
-        "fi": "Ulkona kasvavat sienet eivät ole kissoille. Jos kisu nuuskii tai nakertaa sellaista, kerro heti aikuiselle."
+        "fi": "Ulkona kasvavat sienet eivät ole kissoille. Jos kisu nuuskii tai nakertaa sellaista, kerro heti aikuiselle.",
+        "nb": "Sopper som vokser ute, er ikke for katter. Hvis pusen snuser på eller napper i en, må du si fra til en voksen med en gang."
       },
       "faq": [
         {
@@ -22051,7 +22161,8 @@
             "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?",
             "sv": "Hur håller jag katten borta från vilda svampar?",
             "da": "Hvordan holder jeg min kat væk fra vilde svampe?",
-            "fi": "Miten pidän kissani erossa luonnonvaraisista sienistä?"
+            "fi": "Miten pidän kissani erossa luonnonvaraisista sienistä?",
+            "nb": "Hvordan kan jeg holde katten unna ville sopper?"
           },
           "a": {
             "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
@@ -22067,7 +22178,8 @@
             "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš.",
             "sv": "Pet Poison Helpline rekommenderar att du har god uppsikt över kattens utomhusaktiviteter och inte låter katten komma i närheten av vilda svampar eller någon svamp vars ursprung du inte känner till.",
             "da": "Pet Poison Helpline anbefaler at du holder godt øje med din kats færden udendørs og ikke lader katten komme nær vilde svampe eller svampe af ukendt oprindelse.",
-            "fi": "Pet Poison Helpline neuvoo seuraamaan tarkasti kissan ulkoilua eikä päästämään kissaa luonnonvaraisten sienten tai sellaisten sienten lähelle, joiden alkuperää et tunne."
+            "fi": "Pet Poison Helpline neuvoo seuraamaan tarkasti kissan ulkoilua eikä päästämään kissaa luonnonvaraisten sienten tai sellaisten sienten lähelle, joiden alkuperää et tunne.",
+            "nb": "Pet Poison Helpline anbefaler å følge nøye med på hva katten gjør ute, og ikke la den komme nær ville sopper eller sopp du ikke vet opprinnelsen til."
           }
         }
       ],
@@ -24166,7 +24278,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Asparagus",
@@ -24182,7 +24295,8 @@
         "hr": "Šparoge",
         "sv": "Sparris",
         "da": "Asparges",
-        "fi": "Parsa"
+        "fi": "Parsa",
+        "nb": "Asparges"
       },
       "question": {
         "en": "Can dogs eat asparagus?",
@@ -24198,7 +24312,8 @@
         "hr": "Smiju li psi jesti šparoge?",
         "sv": "Får hundar äta sparris?",
         "da": "Må hunde spise asparges?",
-        "fi": "Saako koira syödä parsaa?"
+        "fi": "Saako koira syödä parsaa?",
+        "nb": "Kan hunder spise asparges?"
       },
       "url_slug": {
         "en": "asparagus",
@@ -24214,7 +24329,8 @@
         "hr": "sparoge",
         "sv": "sparris",
         "da": "asparges",
-        "fi": "parsa"
+        "fi": "parsa",
+        "nb": "asparges"
       },
       "answer": {
         "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
@@ -24230,7 +24346,8 @@
         "hr": "Da, šparoge nisu otrovne za pse. Bolje su termički obrađene jer ih je lakše žvakati. Posluži ih obične, kuhane u vodi ili na pari, a pse drži podalje od perastog lišća šparoge.",
         "sv": "Ja, sparris är inte giftig för hundar. Tillagad sparris är det bästa valet eftersom den är lättare att tugga. Servera den utan tillsatser, kokt eller ångad, och se till att hunden inte kommer åt sparrisriset.",
         "da": "Ja, asparges er ikke giftige for hunde. Tilberedte asparges er det bedste valg, fordi de er lettere at tygge. Server dem kogte eller dampede og uden tilsætninger, og hold hunde væk fra aspargesrisset.",
-        "fi": "Saa, parsa ei ole koirille myrkyllistä. Kypsennetty parsa on parempi valinta, koska sitä on helpompi pureskella. Tarjoa se maustamattomana, keitettynä tai höyrytettynä, ja pidä koira loitolla parsan lehvästöstä."
+        "fi": "Saa, parsa ei ole koirille myrkyllistä. Kypsennetty parsa on parempi valinta, koska sitä on helpompi pureskella. Tarjoa se maustamattomana, keitettynä tai höyrytettynä, ja pidä koira loitolla parsan lehvästöstä.",
+        "nb": "Ja, asparges er ikke giftig for hunder. Kokt asparges er det bedre valget fordi den er lettere å tygge. Server den uten tilsetninger, kokt eller dampet, og hold hunder unna aspargesriset, den fjæraktige grønne delen av planten."
       },
       "why": {
         "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
@@ -24246,7 +24363,8 @@
         "hr": "Sirove je šparoge vrlo teško žvakati pa ih pas može pokušati progutati cijele, što može izazvati gušenje. Nekim je psima sirova šparoga teško probavljiva. Maslac ili ulje za kuhanje mogu psa razboljeti. Perasto lišće šparoge, nejestivi dio biljke, otrovno je za pse.",
         "sv": "Rå sparris är mycket svår att tugga, och en hund kan försöka svälja den hel och riskera att kvävas. En del hundar har svårt att smälta rå sparris. Smör eller matolja kan göra hunden sjuk. Sparrisriset, den oätliga delen av växten, är giftigt för hundar.",
         "da": "Rå asparges er meget svære at tygge, og en hund kan forsøge at sluge dem hele og risikere at blive kvalt. Nogle hunde har svært ved at fordøje rå asparges. Smør eller madolie kan gøre hunde syge. Aspargesrisset, den uspiselige del af planten, er giftigt for hunde.",
-        "fi": "Raakaa parsaa on hyvin vaikea pureskella, ja koira voi yrittää niellä sen kokonaisena ja tukehtua. Joidenkin koirien on vaikea sulattaa raakaa parsaa. Voi tai ruokaöljy voi tehdä koiran sairaaksi. Parsan lehvästö, kasvin syömäkelvoton osa, on koirille myrkyllistä."
+        "fi": "Raakaa parsaa on hyvin vaikea pureskella, ja koira voi yrittää niellä sen kokonaisena ja tukehtua. Joidenkin koirien on vaikea sulattaa raakaa parsaa. Voi tai ruokaöljy voi tehdä koiran sairaaksi. Parsan lehvästö, kasvin syömäkelvoton osa, on koirille myrkyllistä.",
+        "nb": "Rå asparges er svært seig, og en hund kan prøve å svelge den hel og kveles. Noen hunder har vanskelig for å fordøye rå asparges. Smør eller matolje kan gjøre en hund syk. Aspargesriset, den uspiselige delen av planten, er giftig for hunder."
       },
       "signs": null,
       "what_to_do": {
@@ -24263,7 +24381,8 @@
         "hr": "Ako pas nakon sirovih šparoga povraća, ima nadutost ili proljev, sljedeći put ih lagano termički obradi. Perasto lišće šparoge može izazvati povraćanje, proljev i jake bolove u trbuhu, zato psa drži podalje od te biljke.",
         "sv": "Om hunden får kräkningar, gasbildning eller diarré efter rå sparris, prova att koka den lätt nästa gång. Att äta sparrisris kan ge kräkningar, diarré och kraftiga magsmärtor, så håll hunden borta från växten.",
         "da": "Hvis din hund får opkast, luft i maven eller diarré efter rå asparges, kan du prøve at koge dem let næste gang. Aspargesris kan give opkast, diarré og kraftige mavesmerter, så hold din hund væk fra planten.",
-        "fi": "Jos koirallasi on oksentelua, ilmavaivoja tai ripulia raa’an parsan jälkeen, kypsennä parsa kevyesti seuraavalla kerralla. Parsan lehvästön syöminen voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua, joten pidä koira loitolla kasvista."
+        "fi": "Jos koirallasi on oksentelua, ilmavaivoja tai ripulia raa’an parsan jälkeen, kypsennä parsa kevyesti seuraavalla kerralla. Parsan lehvästön syöminen voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua, joten pidä koira loitolla kasvista.",
+        "nb": "Hvis hunden får oppkast, gass eller diaré etter rå asparges, kan du prøve å koke den lett neste gang. Hvis hunden spiser aspargesriset, kan det gi oppkast, diaré og kraftige magesmerter, så hold hunden unna planten."
       },
       "serving": {
         "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
@@ -24279,7 +24398,8 @@
         "hr": "Obične, kuhane u vodi ili na pari, bez maslaca i ulja. Ako ih daješ sirove, nareži ih na sitne komadiće za jedan zalogaj.",
         "sv": "Enkelt kokt eller ångad, utan smör eller olja. Om du ger den rå, skär den i små munsbitar.",
         "da": "Tilberedt ved simpel kogning eller damping, uden smør eller olie. Hvis du giver dem rå, skal du skære dem i små, mundrette stykker.",
-        "fi": "Kypsennettynä pelkästään keittämällä tai höyryttämällä, ilman voita tai öljyä. Jos tarjoat sen raakana, pilko se pieniksi, suupalan kokoisiksi paloiksi."
+        "fi": "Kypsennettynä pelkästään keittämällä tai höyryttämällä, ilman voita tai öljyä. Jos tarjoat sen raakana, pilko se pieniksi, suupalan kokoisiksi paloiksi.",
+        "nb": "Kokt eller dampet, uten smør eller olje. Hvis du serverer den rå, skjærer du den i små biter."
       },
       "child": {
         "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
@@ -24295,7 +24415,8 @@
         "hr": "Odrasla osoba psu može dati malo kuhanih šparoga. Perasto lišće biljke nije za pse.",
         "sv": "Hundar kan få lite kokt sparris av en vuxen. Det gröna, fjäderlika sparrisriset på växten är inte för hundar.",
         "da": "Hunde må få lidt kogt asparges af en voksen. Det grønne, fjeragtige aspargesris på planten er ikke til hunde.",
-        "fi": "Koira saa aikuiselta vähän keitettyä parsaa. Parsan lehvästö ei ole koirille."
+        "fi": "Koira saa aikuiselta vähän keitettyä parsaa. Parsan lehvästö ei ole koirille.",
+        "nb": "Hunder kan få litt kokt asparges av en voksen. Det fjæraktige, grønne riset på planten er ikke for hunder."
       },
       "faq": [
         {
@@ -24313,7 +24434,8 @@
             "hr": "Zašto mokraća mog psa neugodno miriše nakon šparoga?",
             "sv": "Varför luktar hundens kiss efter sparris?",
             "da": "Hvorfor lugter min hunds tis, efter at den har spist asparges?",
-            "fi": "Miksi koiran virtsa haisee parsan syömisen jälkeen?"
+            "fi": "Miksi koiran virtsa haisee parsan syömisen jälkeen?",
+            "nb": "Hvorfor lukter hundens tiss etter asparges?"
           },
           "a": {
             "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
@@ -24329,7 +24451,8 @@
             "hr": "Zbog šparoga mokraća može neugodno mirisati, kod pasa jednako kao i kod ljudi. Ako je pas potpuno naučen na čistoću, to ne bi trebao biti problem.",
             "sv": "Sparris kan ge kissen en obehaglig lukt, hos hundar liksom hos människor. Om hunden är helt rumsren borde det inte vara något problem.",
             "da": "Asparges kan give tis en ubehagelig lugt, hos hunde som hos mennesker. Hvis din hund er helt stueren, burde det ikke være noget problem.",
-            "fi": "Parsa voi saada virtsan haisemaan epämiellyttävältä, koirilla kuten ihmisilläkin. Jos koira on täysin sisäsiisti, siitä ei pitäisi olla haittaa."
+            "fi": "Parsa voi saada virtsan haisemaan epämiellyttävältä, koirilla kuten ihmisilläkin. Jos koira on täysin sisäsiisti, siitä ei pitäisi olla haittaa.",
+            "nb": "Asparges kan gi urinen en ubehagelig lukt, både hos hunder og hos mennesker. Hvis hunden er husren, er ikke dette noe problem."
           }
         },
         {
@@ -24347,7 +24470,8 @@
             "hr": "Je li perasto lišće šparoge sigurno?",
             "sv": "Är sparrisriset säkert?",
             "da": "Er aspargesrisset ufarligt?",
-            "fi": "Onko parsan lehvästö turvallista?"
+            "fi": "Onko parsan lehvästö turvallista?",
+            "nb": "Er aspargesriset, det fjæraktige grønne på planten, trygt?"
           },
           "a": {
             "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
@@ -24363,7 +24487,8 @@
             "hr": "Ne. Perasto lišće šparoge otrovno je za pse i može izazvati povraćanje, proljev i jake bolove u trbuhu.",
             "sv": "Nej. Sparrisriset är giftigt för hundar och kan ge kräkningar, diarré och kraftiga magsmärtor.",
             "da": "Nej. Aspargesrisset er giftigt for hunde og kan give opkast, diarré og kraftige mavesmerter.",
-            "fi": "Ei. Parsan lehvästö on koirille myrkyllistä ja voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua."
+            "fi": "Ei. Parsan lehvästö on koirille myrkyllistä ja voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua.",
+            "nb": "Nei. Aspargesriset er giftig for hunder og kan gi oppkast, diaré og kraftige magesmerter."
           }
         }
       ],
@@ -25507,7 +25632,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Beetroot",
@@ -25523,7 +25649,8 @@
         "hr": "Cikla",
         "sv": "Rödbetor",
         "da": "Rødbeder",
-        "fi": "Punajuuri"
+        "fi": "Punajuuri",
+        "nb": "Rødbeter"
       },
       "question": {
         "en": "Can dogs eat beetroot?",
@@ -25539,7 +25666,8 @@
         "hr": "Smiju li psi jesti ciklu?",
         "sv": "Får hundar äta rödbetor?",
         "da": "Må hunde spise rødbeder?",
-        "fi": "Saako koira syödä punajuurta?"
+        "fi": "Saako koira syödä punajuurta?",
+        "nb": "Kan hunder spise rødbeter?"
       },
       "url_slug": {
         "en": "beetroot",
@@ -25555,7 +25683,8 @@
         "hr": "cikla",
         "sv": "rodbetor",
         "da": "roedbeder",
-        "fi": "punajuuri"
+        "fi": "punajuuri",
+        "nb": "rodbeter"
       },
       "answer": {
         "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
@@ -25571,7 +25700,8 @@
         "hr": "Da, svježa je cikla u umjerenim količinama u redu za pse kao povremena poslastica. Sadrži mnogo šećera i oksalne kiseline, zato daj male porcije, a ako je tvoj pas sklon bubrežnim kamencima, prvo se posavjetuj s veterinarom.",
         "sv": "Ja, rödbeta går bra för hundar om den är färsk och ges med måtta, som en godbit då och då. Den innehåller mycket socker och oxalsyra, så håll portionerna små, och fråga veterinären först om hunden är benägen att få njurstenar.",
         "da": "Ja, rødbeder er fine for hunde, når de er friske og gives med måde som godbid en gang imellem. De har et højt indhold af sukker og oxalsyre, så hold portionerne små, og spørg først din dyrlæge, hvis din hund let får nyresten.",
-        "fi": "Saa, punajuuri sopii koirille tuoreena ja kohtuudella satunnaisena herkkuna. Siinä on paljon sokeria ja oksaalihappoa, joten pidä annokset pieninä ja kysy ensin eläinlääkäriltä, jos koirasi on altis munuaiskiville."
+        "fi": "Saa, punajuuri sopii koirille tuoreena ja kohtuudella satunnaisena herkkuna. Siinä on paljon sokeria ja oksaalihappoa, joten pidä annokset pieninä ja kysy ensin eläinlääkäriltä, jos koirasi on altis munuaiskiville.",
+        "nb": "Ja, rødbeter er greit for hunder når de er ferske og gis med måte, som en godbit nå og da. De inneholder mye sukker og oksalsyre, så hold porsjonene små, og spør dyrlegen først hvis hunden har lett for å få nyrestein."
       },
       "why": {
         "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
@@ -25587,7 +25717,8 @@
         "hr": "Cikla je bogata ugljikohidratima i šećerom, a previše šećera može pridonijeti upali gušterače ili pretilosti. Sadrži i mnogo oksalne kiseline, koja može uzrokovati kamence u mokraćnom mjehuru, kristale u mokraći i bubrežne kamence te manjak kalcija. Zbog kiselosti cikla kod nekih pasa može izazvati nadutost i proljev.",
         "sv": "Rödbetor innehåller mycket kolhydrater och socker, och för mycket socker kan bidra till inflammation i bukspottkörteln eller övervikt. De innehåller också mycket oxalsyra, som kan ge upphov till blåsstenar, urinkristaller och njurstenar och kan orsaka kalciumbrist. Eftersom rödbetor är sura kan de ge gasbildning och diarré hos en del hundar.",
         "da": "Rødbeder har et højt indhold af kulhydrater og sukker, og for meget sukker kan bidrage til betændelse i bugspytkirtlen (pankreatitis) eller overvægt. De har også et højt indhold af oxalsyre, som kan danne blærestene, urinkrystaller og nyresten og give calciummangel. Fordi rødbeder er sure, kan de give luft i maven og diarré hos nogle hunde.",
-        "fi": "Punajuuressa on paljon hiilihydraatteja ja sokeria, ja liika sokeri voi edistää haimatulehdusta tai lihavuutta. Siinä on myös paljon oksaalihappoa, joka voi muodostaa virtsarakkokiviä, virtsakiteitä ja munuaiskiviä ja voi aiheuttaa kalsiumin puutetta. Happamuutensa vuoksi punajuuri voi aiheuttaa joillekin koirille ilmavaivoja ja ripulia."
+        "fi": "Punajuuressa on paljon hiilihydraatteja ja sokeria, ja liika sokeri voi edistää haimatulehdusta tai lihavuutta. Siinä on myös paljon oksaalihappoa, joka voi muodostaa virtsarakkokiviä, virtsakiteitä ja munuaiskiviä ja voi aiheuttaa kalsiumin puutetta. Happamuutensa vuoksi punajuuri voi aiheuttaa joillekin koirille ilmavaivoja ja ripulia.",
+        "nb": "Rødbeter har mye karbohydrater og sukker, og for mye sukker kan bidra til betennelse i bukspyttkjertelen (pankreatitt) eller overvekt. De inneholder også mye oksalsyre, som kan danne blærestein, urinkrystaller og nyrestein og kan gi kalsiummangel. Fordi rødbeter er syrlige, kan de gi gass og diaré hos noen hunder."
       },
       "signs": null,
       "what_to_do": {
@@ -25604,7 +25735,8 @@
         "hr": "Zbog cikle mokraća tvog psa može poprimiti tamnoružičastu ili crvenu boju, pa nemoj paničariti. Ako boja ne nestane nakon jednog dana, možda je posrijedi nešto drugo, primjerice infekcija mokraćnog sustava ili kamenci, pa se javi veterinaru.",
         "sv": "Rödbeta kan göra hundens kiss mörkrosa eller rött, så ingen panik. Om färgen inte har försvunnit efter ett dygn kan något annat ligga bakom, till exempel urinvägsinfektion eller stenar, så kontakta veterinären.",
         "da": "Rødbeder kan farve din hunds urin mørkerosa eller rød, så bare rolig. Hvis farven ikke forsvinder efter en dag, kan der være noget andet på færde, fx en urinvejsinfektion eller urinsten, så tal med din dyrlæge.",
-        "fi": "Punajuuri voi värjätä koiran virtsan tummanvaaleanpunaiseksi tai punaiseksi, joten älä säikähdä. Jos väri ei häviä päivän kuluessa, taustalla voi olla jotain muuta, kuten virtsatieinfektio tai kivet, joten keskustele eläinlääkärin kanssa."
+        "fi": "Punajuuri voi värjätä koiran virtsan tummanvaaleanpunaiseksi tai punaiseksi, joten älä säikähdä. Jos väri ei häviä päivän kuluessa, taustalla voi olla jotain muuta, kuten virtsatieinfektio tai kivet, joten keskustele eläinlääkärin kanssa.",
+        "nb": "Rødbeter kan gjøre hundens urin mørk rosa eller rød, så ikke få panikk. Hvis fargen ikke forsvinner etter ett døgn, kan noe annet være på gang, for eksempel urinveisinfeksjon eller stein, så snakk med dyrlegen."
       },
       "serving": {
         "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
@@ -25620,7 +25752,8 @@
         "hr": "Svježa, dobro oprana i oguljena, sirova ili termički obrađena, naribana ili narezana na male komadiće za jedan zalogaj. Cikla iz konzerve samo bez soli i drugih dodataka.",
         "sv": "Färsk, ordentligt skrubbad och skalad, rå eller kokt, riven eller skuren i små munsbitar. Rödbetor på burk bara om de är utan salt och andra tillsatser.",
         "da": "Friske, skrubbet rene og skrællede, rå eller tilberedte, revne eller skåret i små, mundrette stykker. Rødbeder på dåse kun uden tilsat salt og uden andre tilsætningsstoffer.",
-        "fi": "Tuoreena, puhtaaksi harjattuna ja kuorittuna, raakana tai kypsennettynä, raastettuna tai pieniksi suupalan kokoisiksi paloiksi leikattuna. Purkitettua punajuurta vain, jos siinä ei ole suolaa eikä muita lisäaineita."
+        "fi": "Tuoreena, puhtaaksi harjattuna ja kuorittuna, raakana tai kypsennettynä, raastettuna tai pieniksi suupalan kokoisiksi paloiksi leikattuna. Purkitettua punajuurta vain, jos siinä ei ole suolaa eikä muita lisäaineita.",
+        "nb": "Ferske, vasket og skrellet, rå eller kokte, revet eller skåret i små biter. Rødbeter på boks bare uten salt og andre tilsetninger."
       },
       "child": {
         "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
@@ -25636,7 +25769,8 @@
         "hr": "Pas smije povremeno dobiti malo cikle. Od nje mu mokraća može postati ružičasta, a to je u redu.",
         "sv": "Hundar kan få lite rödbeta då och då. Kissen kan bli rosa av den, och det är helt okej.",
         "da": "Hunde må få lidt rødbede en gang imellem. Den kan gøre hundens tis lyserød, og det er helt i orden.",
-        "fi": "Koira saa joskus vähän punajuurta. Se voi värjätä koiran pissan vaaleanpunaiseksi, eikä se haittaa."
+        "fi": "Koira saa joskus vähän punajuurta. Se voi värjätä koiran pissan vaaleanpunaiseksi, eikä se haittaa.",
+        "nb": "Hunder kan få litt rødbeter nå og da. Tissen kan bli rosa, og det er helt greit."
       },
       "faq": [
         {
@@ -25654,7 +25788,8 @@
             "hr": "Sirova ili termički obrađena cikla?",
             "sv": "Rå eller kokt rödbeta?",
             "da": "Rå eller tilberedte rødbeder?",
-            "fi": "Raaka vai kypsennetty punajuuri?"
+            "fi": "Raaka vai kypsennetty punajuuri?",
+            "nb": "Rå eller kokte rødbeter?"
           },
           "a": {
             "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
@@ -25670,7 +25805,8 @@
             "hr": "Obje su u redu. Sirova cikla zadržava najviše hranjivih tvari, a termički obrađenu možeš pripremiti na najviše načina.",
             "sv": "Båda går bra. Rå rödbeta behåller mest näring, och kokt rödbeta är det mest mångsidiga valet.",
             "da": "Begge dele er fine. Rå rødbeder bevarer flest næringsstoffer, og tilberedte rødbeder kan bruges på flest måder.",
-            "fi": "Molemmat sopivat. Raakana punajuuressa säilyy eniten ravintoaineita, ja kypsennettynä sitä on monipuolisinta käyttää."
+            "fi": "Molemmat sopivat. Raakana punajuuressa säilyy eniten ravintoaineita, ja kypsennettynä sitä on monipuolisinta käyttää.",
+            "nb": "Begge deler er greit. Rå rødbeter beholder mest næringsstoffer, og kokte rødbeter er det mest allsidige valget."
           }
         },
         {
@@ -25688,7 +25824,8 @@
             "hr": "Smiju li psi jesti ciklu iz konzerve?",
             "sv": "Får hundar äta rödbetor på burk?",
             "da": "Må hunde spise rødbeder på dåse?",
-            "fi": "Saako koira syödä purkitettua punajuurta?"
+            "fi": "Saako koira syödä purkitettua punajuurta?",
+            "nb": "Kan hunder spise rødbeter på boks?"
           },
           "a": {
             "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
@@ -25704,7 +25841,8 @@
             "hr": "Da, ali pažljivo biraj: uzmi proizvod bez dodane soli i drugih dodataka.",
             "sv": "Ja, men välj noga: ta ett märke utan tillsatt salt och utan andra tillsatser.",
             "da": "Ja, men vælg med omtanke: køb et mærke uden tilsat salt og uden andre tilsætningsstoffer.",
-            "fi": "Saa, mutta valitse huolella: ota tuote, jossa ei ole lisättyä suolaa eikä muita lisäaineita."
+            "fi": "Saa, mutta valitse huolella: ota tuote, jossa ei ole lisättyä suolaa eikä muita lisäaineita.",
+            "nb": "Ja, men velg med omhu: ta et merke uten tilsatt salt og andre tilsetninger."
           }
         }
       ],
@@ -28916,7 +29054,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Chili peppers",
@@ -28932,7 +29071,8 @@
         "hr": "Čili papričice",
         "sv": "Chilipeppar",
         "da": "Chilipeber",
-        "fi": "Chilipippurit"
+        "fi": "Chilipippurit",
+        "nb": "Chili"
       },
       "question": {
         "en": "Can dogs eat chili peppers?",
@@ -28948,7 +29088,8 @@
         "hr": "Smiju li psi jesti čili papričice?",
         "sv": "Får hundar äta chilipeppar?",
         "da": "Må hunde spise chilipeber?",
-        "fi": "Saako koira syödä chilipippureita?"
+        "fi": "Saako koira syödä chilipippureita?",
+        "nb": "Kan hunder spise chili?"
       },
       "url_slug": {
         "en": "chili-peppers",
@@ -28964,7 +29105,8 @@
         "hr": "cili-papricice",
         "sv": "chilipeppar",
         "da": "chilipeber",
-        "fi": "chilipippurit"
+        "fi": "chilipippurit",
+        "nb": "chilipepper"
       },
       "answer": {
         "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
@@ -28980,7 +29122,8 @@
         "hr": "Ne, nikad ne daj psu ljute papričice, poput jalapeño ili čili papričica. Ljute su papričice nadražujuće: u ustima izazivaju osjećaj pečenja, a u većim količinama mogu izazvati povraćanje i proljev.",
         "sv": "Nej, ge aldrig hunden stark chili, till exempel jalapeño eller annan chilipeppar. Stark chili är irriterande: den ger en brännande känsla i munnen och kan i större mängder ge kräkningar och diarré.",
         "da": "Nej, giv aldrig din hund stærk peber som jalapeños eller chilipeber. Stærk peber virker irriterende: den giver en brændende fornemmelse i munden og kan i større mængder give opkast og diarré.",
-        "fi": "Ei saa. Älä koskaan anna koirallesi tulisia pippureita, kuten jalapeñoja tai chilipippureita. Tulinen pippuri ärsyttää: se aiheuttaa polttavan tunteen suussa ja suurempina määrinä voi aiheuttaa oksentelua ja ripulia."
+        "fi": "Ei saa. Älä koskaan anna koirallesi tulisia pippureita, kuten jalapeñoja tai chilipippureita. Tulinen pippuri ärsyttää: se aiheuttaa polttavan tunteen suussa ja suurempina määrinä voi aiheuttaa oksentelua ja ripulia.",
+        "nb": "Nei, gi aldri hunden sterk chili, for eksempel jalapeño. Sterk chili virker irriterende: den gir en brennende følelse i munnen og kan i større mengder gi oppkast og diaré."
       },
       "why": {
         "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
@@ -28996,7 +29139,8 @@
         "hr": "Ljute papričice sadrže kapsaicin, jaku nadražujuću tvar, a najviše ga ima u plodu, osobito u sjemenkama. Može djelovati na pse koji papričice žvaču i gutaju. Kod kućnih ljubimaca problemi su rijetki, ali AKC kaže da psima nikad ne treba davati ljute papričice.",
         "sv": "Stark chili innehåller capsaicin, ett kraftigt irriterande ämne, med högst halt i frukten och framför allt i kärnorna. Det kan påverka hundar som tuggar och sväljer chilifrukterna. Problem hos husdjur är sällsynta, men AKC skriver att man aldrig ska ge hundar stark chili.",
         "da": "Stærk peber indeholder capsaicin, et kraftigt irriterende stof, med de højeste mængder i frugten og især i kernerne. Det kan påvirke hunde der tygger på frugterne og sluger dem. Problemer hos kæledyr i hjemmet er sjældne, men AKC skriver at man aldrig bør give hunde stærk peber.",
-        "fi": "Tulisissa pippureissa on kapsaisiinia, voimakasta ärsyttäjää, jota on eniten hedelmässä ja erityisesti siemenissä. Se voi vaikuttaa koiriin, jotka pureskelevat ja nielevät pippureita. Ongelmat ovat lemmikeillä harvinaisia, mutta AKC:n mukaan tulisia pippureita ei pidä koskaan antaa koirille."
+        "fi": "Tulisissa pippureissa on kapsaisiinia, voimakasta ärsyttäjää, jota on eniten hedelmässä ja erityisesti siemenissä. Se voi vaikuttaa koiriin, jotka pureskelevat ja nielevät pippureita. Ongelmat ovat lemmikeillä harvinaisia, mutta AKC:n mukaan tulisia pippureita ei pidä koskaan antaa koirille.",
+        "nb": "Sterk chili inneholder capsaicin, et kraftig irritasjonsstoff, med høyest innhold i frukten og særlig i frøene. Det kan påvirke hunder som tygger og svelger chilifruktene. Problemer hos kjæledyr er sjeldne, men AKC sier at man aldri bør gi hunder sterk chili."
       },
       "signs": {
         "en": [
@@ -29082,6 +29226,12 @@
           "Polttavat, ärtyneet silmät",
           "Oksentelu",
           "Ripuli"
+        ],
+        "nb": [
+          "Svie i munnen",
+          "Svie og irritasjon i øynene",
+          "Oppkast",
+          "Diaré"
         ]
       },
       "what_to_do": {
@@ -29098,7 +29248,8 @@
         "hr": "Ljute papričice i jela s njima drži izvan dosega psa. Pečenje koje izaziva kapsaicin obično je kratkotrajno, a može se ublažiti ispiranjem usta vodom.",
         "sv": "Se till att hunden inte kommer åt stark chili eller rätter med chili. Capsaicinets brännande effekt går oftast över snabbt och kan lindras genom att man sköljer munnen med vatten.",
         "da": "Hold stærk peber og retter med stærk peber uden for din hunds rækkevidde. Den brændende virkning af capsaicin er som regel kortvarig og kan lindres, hvis du skyller hundens mund med vand.",
-        "fi": "Pidä tuliset pippurit ja niitä sisältävät ruoat poissa koirasi ulottuvilta. Kapsaisiinin polttava vaikutus on yleensä lyhytkestoinen, ja sitä voi helpottaa huuhtelemalla suu vedellä."
+        "fi": "Pidä tuliset pippurit ja niitä sisältävät ruoat poissa koirasi ulottuvilta. Kapsaisiinin polttava vaikutus on yleensä lyhytkestoinen, ja sitä voi helpottaa huuhtelemalla suu vedellä.",
+        "nb": "Hold sterk chili og retter med chili utenfor hundens rekkevidde. Capsaicin gir en brennende følelse som vanligvis går fort over, og som kan lindres ved å skylle munnen med vann."
       },
       "serving": null,
       "child": {
@@ -29115,7 +29266,8 @@
         "hr": "Ljute papričice nisu za pse. Od njih psu peče u ustima. Slatka paprika je vrsta koju psi smiju jesti.",
         "sv": "Stark chili är inte för hundar. Den gör att hundens mun känns het. Paprika är den hundvänliga sorten.",
         "da": "Stærk peber er ikke til hunde. Den får hundens mund til at svie. Søde peberfrugter må hunde godt få.",
-        "fi": "Tuliset pippurit eivät ole koirille. Niistä koiran suu tuntuu kuumalta. Makea paprika sen sijaan sopii koirille."
+        "fi": "Tuliset pippurit eivät ole koirille. Niistä koiran suu tuntuu kuumalta. Makea paprika sen sijaan sopii koirille.",
+        "nb": "Sterk chili er ikke for hunder. Den får munnen til å brenne. Søt paprika er et bedre valg."
       },
       "faq": [
         {
@@ -29133,7 +29285,8 @@
             "hr": "Je li slatka paprika u redu?",
             "sv": "Går söt paprika bra?",
             "da": "Er søde peberfrugter i orden?",
-            "fi": "Sopivatko makeat paprikat?"
+            "fi": "Sopivatko makeat paprikat?",
+            "nb": "Er søt paprika greit?"
           },
           "a": {
             "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
@@ -29149,7 +29302,8 @@
             "hr": "Da, obična slatka paprika sigurna je za većinu pasa u umjerenim količinama, bez sjemenki i peteljke.",
             "sv": "Ja, ren paprika är säker för de flesta hundar om den ges med måtta och utan kärnor och skaft.",
             "da": "Ja, naturel peberfrugt er ufarlig for de fleste hunde med måde, hvis kerner og stilk er fjernet.",
-            "fi": "Sopivat. Maustamaton paprika on turvallista useimmille koirille kohtuudella, kun siemenet ja varsi on poistettu."
+            "fi": "Sopivat. Maustamaton paprika on turvallista useimmille koirille kohtuudella, kun siemenet ja varsi on poistettu.",
+            "nb": "Ja, vanlig paprika er trygt for de fleste hunder med måte, hvis du fjerner frø og stilk."
           }
         }
       ],
@@ -32342,7 +32496,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Corn kernels",
@@ -32358,7 +32513,8 @@
         "hr": "Zrna kukuruza",
         "sv": "Majskorn",
         "da": "Majskorn",
-        "fi": "Maissinjyvät"
+        "fi": "Maissinjyvät",
+        "nb": "Maiskorn"
       },
       "question": {
         "en": "Can dogs eat corn?",
@@ -32374,7 +32530,8 @@
         "hr": "Smiju li psi jesti kukuruz?",
         "sv": "Får hundar äta majs?",
         "da": "Må hunde spise majs?",
-        "fi": "Saako koira syödä maissia?"
+        "fi": "Saako koira syödä maissia?",
+        "nb": "Kan hunder spise mais?"
       },
       "url_slug": {
         "en": "corn",
@@ -32390,7 +32547,8 @@
         "hr": "zrna-kukuruza",
         "sv": "majskorn",
         "da": "majs",
-        "fi": "maissi"
+        "fi": "maissi",
+        "nb": "maiskorn"
       },
       "answer": {
         "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
@@ -32406,7 +32564,8 @@
         "hr": "Da, psi smiju jesti obična zrna kukuruza skinuta s klipa, u malim količinama i povremeno kao poslasticu. Izostavi maslac, sol i začine, a psu nikad ne daj kukuruz na klipu.",
         "sv": "Ja, hundar kan äta majskorn utan tillsatser som har skurits av kolven, i små mängder som en godbit då och då. Låt bli smör, salt och kryddor, och ge aldrig hunden majskolv.",
         "da": "Ja, hunde kan trygt spise naturelle majskorn uden kolben i små mængder som godbid en gang imellem. Undlad smør, salt og krydderier, og giv aldrig din hund majs på kolben.",
-        "fi": "Saa, koira voi turvallisesti syödä maustamattomia, tähkästä irrotettuja maissinjyviä pieninä määrinä satunnaisena herkkuna. Jätä voi, suola ja mausteet pois, äläkä koskaan anna koiralle maissintähkää."
+        "fi": "Saa, koira voi turvallisesti syödä maustamattomia, tähkästä irrotettuja maissinjyviä pieninä määrinä satunnaisena herkkuna. Jätä voi, suola ja mausteet pois, äläkä koskaan anna koiralle maissintähkää.",
+        "nb": "Ja, hunder kan trygt spise maiskorn uten tilsetninger som er tatt av kolben, i små mengder som en godbit nå og da. Dropp smør, salt og krydder, og gi aldri hunden maiskolbe."
       },
       "why": {
         "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
@@ -32422,7 +32581,8 @@
         "hr": "Kukuruz nije problem za većinu pasa, a može biti i dio uravnotežene prehrane jer daje energiju i pomaže probavi. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac. Prava je opasnost klip: psi mogu progutati komade ili cijeli klip, što može izazvati gušenje ili začepljenje crijeva.",
         "sv": "Majs är inget problem för de flesta hundar och kan till och med ingå i en balanserad kost, eftersom den ger energi och underlättar matsmältningen. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage. Kolven är den verkliga faran: hundar kan svälja bitar av den eller hela kolven, vilket kan ge kvävningsrisk eller stopp i tarmarna.",
         "da": "Majs er ikke et problem for de fleste hunde og kan endda indgå i en alsidig kost, hvor den giver energi og hjælper fordøjelsen. Smør, salt og krydderier tilfører fedt og natrium, som kan give hunde ondt i maven. Kolben er den egentlige fare: hunde kan sluge stykker af den eller hele kolben, hvilket kan give kvælning eller tarmblokering.",
-        "fi": "Maissi ei ole useimmille koirille ongelma, ja se voi kuulua tasapainoiseen ruokavalioon, sillä se antaa energiaa ja tukee ruoansulatusta. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan. Todellinen vaara on tähkä: koira voi niellä paloja tai koko tähkän, mikä voi aiheuttaa tukehtumisen tai suolitukoksen."
+        "fi": "Maissi ei ole useimmille koirille ongelma, ja se voi kuulua tasapainoiseen ruokavalioon, sillä se antaa energiaa ja tukee ruoansulatusta. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan. Todellinen vaara on tähkä: koira voi niellä paloja tai koko tähkän, mikä voi aiheuttaa tukehtumisen tai suolitukoksen.",
+        "nb": "Mais er ikke noe problem for de fleste hunder og kan til og med inngå i et balansert kosthold, siden den gir energi og hjelper fordøyelsen. Smør, salt og krydder tilfører fett og natrium som kan gi hunden urolig mage. Kolben er den egentlige faren: hunder kan svelge biter av den eller hele kolben, og det kan gi kvelning eller tarmblokkering."
       },
       "signs": null,
       "what_to_do": {
@@ -32439,7 +32599,8 @@
         "hr": "Nudi samo obična zrna odrezana s klipa, i to povremeno. Prije nego što psu daš kukuruz, provjeri nije li alergičan na njega. Klipove drži posve izvan dosega.",
         "sv": "Ge bara majskorn utan tillsatser som har skurits av kolven, och bara då och då. Kontrollera att hunden inte är allergisk mot majs innan du ger den. Förvara majskolvar långt utom räckhåll.",
         "da": "Giv kun naturelle majskorn uden kolben, og kun en gang imellem. Sørg for at din hund ikke har en majsallergi, inden du giver den majs. Hold majskolber godt uden for rækkevidde.",
-        "fi": "Tarjoa vain maustamattomia, tähkästä leikattuja jyviä silloin tällöin. Varmista ennen maissin tarjoamista, ettei koirallasi ole maissiallergiaa. Pidä maissintähkät kaukana koiran ulottuvilta."
+        "fi": "Tarjoa vain maustamattomia, tähkästä leikattuja jyviä silloin tällöin. Varmista ennen maissin tarjoamista, ettei koirallasi ole maissiallergiaa. Pidä maissintähkät kaukana koiran ulottuvilta.",
+        "nb": "Gi bare maiskorn uten tilsetninger som er skåret av kolben, og bare nå og da. Før du gir mais, må du sjekke at hunden ikke har maisallergi. Hold maiskolber godt utenfor rekkevidde."
       },
       "serving": {
         "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
@@ -32455,7 +32616,8 @@
         "hr": "Obična zrna kukuruza šećerca, skinuta s klipa. Bez maslaca, soli i začina.",
         "sv": "Söta majskorn utan tillsatser, avskurna från kolven. Inget smör, salt eller kryddor.",
         "da": "Naturelle majskorn fra sukkermajs, skåret af kolben. Uden smør, salt og krydderier.",
-        "fi": "Maustamattomia herkkumaissin jyviä, tähkästä irrotettuina. Ei voita, suolaa eikä mausteita."
+        "fi": "Maustamattomia herkkumaissin jyviä, tähkästä irrotettuina. Ei voita, suolaa eikä mausteita.",
+        "nb": "Søtmaiskorn uten tilsetninger, tatt av kolben. Ikke smør, salt eller krydder."
       },
       "child": {
         "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
@@ -32471,7 +32633,8 @@
         "hr": "Pas smije dobiti nekoliko običnih zrna kukuruza. Klip nije za pse, pa ga odrasla osoba drži podalje.",
         "sv": "Hundar kan få några majskorn utan tillsatser. Kolven är inte för hundar, så en vuxen ser till att hunden inte kommer åt den.",
         "da": "Hunde må få nogle få naturelle majskorn. Kolben er ikke til hunde, så en voksen sørger for at holde den væk.",
-        "fi": "Koira saa muutaman maustamattoman maissinjyvän. Tähkä ei ole koirille, joten aikuinen pitää sen poissa."
+        "fi": "Koira saa muutaman maustamattoman maissinjyvän. Tähkä ei ole koirille, joten aikuinen pitää sen poissa.",
+        "nb": "Hunder kan få noen få maiskorn uten tilsetninger. Kolben er ikke for hunder, så en voksen holder den unna."
       },
       "faq": [
         {
@@ -32489,7 +32652,8 @@
             "hr": "Smiju li psi jesti kukuruz s maslacem?",
             "sv": "Får hundar äta majs med smör?",
             "da": "Må hunde spise majs med smør?",
-            "fi": "Saako koira syödä voilla maustettua maissia?"
+            "fi": "Saako koira syödä voilla maustettua maissia?",
+            "nb": "Kan hunder spise mais med smør?"
           },
           "a": {
             "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
@@ -32505,7 +32669,8 @@
             "hr": "Najbolje je to izbjegavati. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac.",
             "sv": "Det är bäst att undvika det. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage.",
             "da": "Det er bedst at undgå det. Smør, salt og krydderier tilfører fedt og natrium, som kan give din hund ondt i maven.",
-            "fi": "Parempi välttää. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan."
+            "fi": "Parempi välttää. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan.",
+            "nb": "Det er best å unngå det. Smør, salt og krydder tilfører fett og natrium som kan gi hunden urolig mage."
           }
         },
         {
@@ -32523,7 +32688,8 @@
             "hr": "Je li kukuruz u hrani za pse loš?",
             "sv": "Är det dåligt med majs i hundfoder?",
             "da": "Er majs i hundefoder dårligt?",
-            "fi": "Onko maissi koiranruoassa huono asia?"
+            "fi": "Onko maissi koiranruoassa huono asia?",
+            "nb": "Er mais i hundefôr dårlig?"
           },
           "a": {
             "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
@@ -32539,7 +32705,8 @@
             "hr": "Mnogi se veterinarski nutricionisti slažu da kukuruz nije problem za većinu pasa i da može biti dio dobro uravnotežene prehrane.",
             "sv": "Många veterinärer med nutrition som specialitet är överens om att majs inte är något problem för de flesta hundar och kan ingå i en väl balanserad kost.",
             "da": "Mange dyrlæger med speciale i ernæring er enige om at majs ikke er et problem for de fleste hunde og kan indgå i en alsidig kost.",
-            "fi": "Monet eläinravitsemuksen asiantuntijat ovat sitä mieltä, ettei maissi ole useimmille koirille ongelma ja että se voi kuulua hyvin tasapainotettuun ruokavalioon."
+            "fi": "Monet eläinravitsemuksen asiantuntijat ovat sitä mieltä, ettei maissi ole useimmille koirille ongelma ja että se voi kuulua hyvin tasapainotettuun ruokavalioon.",
+            "nb": "Mange dyrlegeeksperter på ernæring er enige i at mais ikke er noe problem for de fleste hunder og kan inngå i et godt balansert kosthold."
           }
         }
       ],
@@ -40667,7 +40834,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Store-bought mushrooms",
@@ -40683,7 +40851,8 @@
         "hr": "Gljive iz trgovine",
         "sv": "Svamp från affären",
         "da": "Svampe fra butikken",
-        "fi": "Kaupan sienet"
+        "fi": "Kaupan sienet",
+        "nb": "Sopp fra butikken"
       },
       "question": {
         "en": "Can dogs eat store-bought mushrooms?",
@@ -40699,7 +40868,8 @@
         "hr": "Smiju li psi jesti gljive iz trgovine?",
         "sv": "Får hundar äta svamp från affären?",
         "da": "Må hunde spise svampe fra butikken?",
-        "fi": "Saako koira syödä kaupan sieniä?"
+        "fi": "Saako koira syödä kaupan sieniä?",
+        "nb": "Kan hunder spise sopp fra butikken?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
@@ -40715,7 +40885,8 @@
         "hr": "gljive-iz-trgovine",
         "sv": "svamp-fran-affaren",
         "da": "svampe-fra-butikken",
-        "fi": "kaupan-sienet"
+        "fi": "kaupan-sienet",
+        "nb": "sopp-fra-butikken"
       },
       "answer": {
         "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
@@ -40731,7 +40902,8 @@
         "hr": "Obične gljive iz supermarketa općenito mogu biti sigurne za pse. Ipak, psima gljive nisu potrebne, a jela s gljivama najbolje je izbjegavati, pa je štapić mrkve ili kriška jabuke bolja poslastica.",
         "sv": "Svamp utan tillsatser som säljs i stora livsmedelsbutiker kan i allmänhet vara säker för hundar. Hundar behöver ändå ingen svamp, och rätter med svamp bör helst undvikas, så en morotsstav eller en äppelskiva är en bättre godbit.",
         "da": "Naturelle svampe fra store dagligvarebutikker kan som regel anses for ufarlige for hunde. Hunde har dog ikke brug for svampe, og retter med svampe bør helst undgås, så en gulerodsstang eller en skive æble er en bedre godbid.",
-        "fi": "Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille. Koirat eivät silti tarvitse sieniä, ja sieniruokia on parasta välttää, joten porkkanatikku tai omenaviipale on parempi herkku."
+        "fi": "Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille. Koirat eivät silti tarvitse sieniä, ja sieniruokia on parasta välttää, joten porkkanatikku tai omenaviipale on parempi herkku.",
+        "nb": "Sopp uten tilsetninger som selges i store dagligvarebutikker, kan vanligvis være trygg for hunder. Likevel trenger ikke hunder sopp, og retter med sopp bør unngås, så en gulrotstav eller en eplebit er en bedre godbit."
       },
       "why": {
         "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
@@ -40747,7 +40919,8 @@
         "hr": "Gljive iz trgovine općenito se smatraju sigurnima, ali jela s gljivama često sadrže ulje, maslac, začine, češnjak i luk, što može biti štetno za pse. Divlje su gljive druga stvar: teško je razlikovati otrovne od neotrovnih, a otrovne su iznimno opasne.",
         "sv": "Svamp från livsmedelsbutiker anses i allmänhet vara säker, men svamprätter innehåller ofta olja, smör, kryddor, vitlök och lök, vilket kan vara skadligt för hundar. Vilda svampar är något helt annat: det är svårt att skilja giftiga från ogiftiga, och de giftiga är extremt farliga.",
         "da": "Svampe fra dagligvarebutikken anses generelt for ufarlige, men svamperetter indeholder ofte olie, smør, krydderier, hvidløg og løg, som kan skade hunde. Vilde svampe er noget andet: det er svært at skelne giftige fra ugiftige, og de giftige er ekstremt farlige.",
-        "fi": "Ruokakaupan sieniä pidetään yleensä turvallisina, mutta sieniruoissa on usein öljyä, voita, mausteita, valkosipulia ja sipulia, jotka voivat olla koirille haitallisia. Luonnonvaraiset sienet ovat toinen asia: myrkyllisiä ja myrkyttömiä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia."
+        "fi": "Ruokakaupan sieniä pidetään yleensä turvallisina, mutta sieniruoissa on usein öljyä, voita, mausteita, valkosipulia ja sipulia, jotka voivat olla koirille haitallisia. Luonnonvaraiset sienet ovat toinen asia: myrkyllisiä ja myrkyttömiä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia.",
+        "nb": "Sopp fra dagligvarebutikken regnes generelt som trygg, men soppretter inneholder ofte olje, smør, krydder, hvitløk og løk, som kan være skadelig for hunder. Ville sopper er en annen sak: det er vanskelig å skille giftige fra ikke-giftige, og de giftige er ekstremt farlige."
       },
       "signs": null,
       "what_to_do": {
@@ -40764,7 +40937,8 @@
         "hr": "Ako ih ipak daješ, neka to budu samo obične gljive iz trgovine. Nikad ne dopusti psu da jede gljive pronađene vani; ako se to dogodi, odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti.",
         "sv": "Om du ändå ger hunden svamp, välj bara butiksköpt svamp utan tillsatser. Låt aldrig hunden äta svamp som den har hittat utomhus. Om det händer, kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt.",
         "da": "Hvis du vil dele, så giv kun naturelle svampe fra butikken. Lad aldrig din hund spise svampe fra naturen; sker det alligevel, skal du straks kontakte din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt.",
-        "fi": "Jos haluat antaa sieniä, anna vain maustamattomia kaupan sieniä. Älä koskaan anna koiran syödä ulkoa löytyneitä sieniä; jos niin käy, ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin."
+        "fi": "Jos haluat antaa sieniä, anna vain maustamattomia kaupan sieniä. Älä koskaan anna koiran syödä ulkoa löytyneitä sieniä; jos niin käy, ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin.",
+        "nb": "Hvis du likevel vil dele, gir du bare vanlig butikksopp uten tilsetninger. La aldri hunden spise sopp den finner ute; hvis det skjer, må du kontakte dyrlegen, giftinformasjon for dyr eller en dyrlegevakt med en gang."
       },
       "serving": {
         "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
@@ -40780,7 +40954,8 @@
         "hr": "Samo obične, iz supermarketa. Bez ulja, maslaca, začina, češnjaka i luka te bez jela s gljivama.",
         "sv": "Bara svamp utan tillsatser från en stor livsmedelsbutik. Ingen olja, smör, kryddor, vitlök eller lök, och inga svamprätter.",
         "da": "Kun naturelle svampe fra en stor dagligvarebutik. Uden olie, smør, krydderier, hvidløg eller løg – og ingen svamperetter.",
-        "fi": "Vain maustamattomia, isosta ruokakaupasta ostettuja. Ei öljyä, voita, mausteita, valkosipulia eikä sipulia, eikä sieniruokia."
+        "fi": "Vain maustamattomia, isosta ruokakaupasta ostettuja. Ei öljyä, voita, mausteita, valkosipulia eikä sipulia, eikä sieniruokia.",
+        "nb": "Bare sopp uten tilsetninger fra en stor dagligvarebutikk. Ingen olje, smør, krydder, hvitløk eller løk, og ingen soppretter."
       },
       "child": {
         "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
@@ -40796,7 +40971,8 @@
         "hr": "Psima gljive nisu potrebne. Štapić mrkve ili kriška jabuke bolja je poslastica. Nikad ne dopusti psu da jede gljive koje rastu vani.",
         "sv": "Hundar behöver ingen svamp. En morot eller en äppelskiva är en bättre godbit. Låt aldrig en hund äta svamp som växer utomhus.",
         "da": "Hunde har ikke brug for svampe. En gulerod eller en skive æble er en bedre godbid. Lad aldrig en hund spise svampe ude i naturen.",
-        "fi": "Koirat eivät tarvitse sieniä. Porkkana tai omenaviipale on parempi herkku. Älä koskaan anna koiran syödä ulkona kasvavia sieniä."
+        "fi": "Koirat eivät tarvitse sieniä. Porkkana tai omenaviipale on parempi herkku. Älä koskaan anna koiran syödä ulkona kasvavia sieniä.",
+        "nb": "Hunder trenger ikke sopp. En gulrot eller en eplebit er en bedre godbit. La aldri en hund spise sopp som vokser ute."
       },
       "faq": [
         {
@@ -40814,7 +40990,8 @@
             "hr": "Smiju li psi jesti umak od gljiva ili druga jela s gljivama?",
             "sv": "Får hundar äta svampsås eller andra svamprätter?",
             "da": "Må hunde spise svampesauce eller andre svamperetter?",
-            "fi": "Saako koira syödä sienikastiketta tai muita sieniruokia?"
+            "fi": "Saako koira syödä sienikastiketta tai muita sieniruokia?",
+            "nb": "Kan hunder spise soppsaus eller andre soppretter?"
           },
           "a": {
             "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
@@ -40830,7 +41007,8 @@
             "hr": "Sigurnije ih je izbjegavati. Ulje, maslac, začini, češnjak i luk u tim jelima mogu biti štetni za pse.",
             "sv": "Det är säkrast att undvika dem. Olja, smör, kryddor, vitlök och lök i sådana rätter kan vara skadliga för hundar.",
             "da": "Det er sikrere at undgå dem. Olie, smør, krydderier, hvidløg og løg i disse retter kan skade hunde.",
-            "fi": "Niitä on turvallisempaa välttää. Näissä ruoissa oleva öljy, voi, mausteet, valkosipuli ja sipuli voivat olla koirille haitallisia."
+            "fi": "Niitä on turvallisempaa välttää. Näissä ruoissa oleva öljy, voi, mausteet, valkosipuli ja sipuli voivat olla koirille haitallisia.",
+            "nb": "Det er tryggere å unngå dem. Olje, smør, krydder, hvitløk og løk i slike retter kan være skadelig for hunder."
           }
         },
         {
@@ -40848,7 +41026,8 @@
             "hr": "A gljive koje rastu u vrtu?",
             "sv": "Vad gäller svamp som växer i trädgården?",
             "da": "Hvad med svampe i haven?",
-            "fi": "Entä puutarhassa kasvavat sienet?"
+            "fi": "Entä puutarhassa kasvavat sienet?",
+            "nb": "Hva med sopp som vokser i hagen?"
           },
           "a": {
             "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
@@ -40864,7 +41043,8 @@
             "hr": "Svaku divlju gljivu smatraj potencijalno otrovnom. Ako je pas pojede, odmah se obrati veterinaru.",
             "sv": "Behandla varje vild svamp som potentiellt giftig. Om hunden äter en, kontakta veterinären direkt.",
             "da": "Behandl alle vilde svampe som potentielt giftige. Hvis din hund spiser en, skal du straks kontakte din dyrlæge.",
-            "fi": "Pidä jokaista luonnonvaraista sientä mahdollisesti myrkyllisenä. Jos koirasi syö sellaisen, ota heti yhteyttä eläinlääkäriin."
+            "fi": "Pidä jokaista luonnonvaraista sientä mahdollisesti myrkyllisenä. Jos koirasi syö sellaisen, ota heti yhteyttä eläinlääkäriin.",
+            "nb": "Regn all vill sopp som mulig giftig. Hvis hunden spiser en, må du kontakte dyrlegen med en gang."
           }
         }
       ],
@@ -43592,7 +43772,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Bell peppers",
@@ -43608,7 +43789,8 @@
         "hr": "Slatka paprika",
         "sv": "Paprika",
         "da": "Peberfrugter",
-        "fi": "Paprikat"
+        "fi": "Paprikat",
+        "nb": "Paprika"
       },
       "question": {
         "en": "Can dogs eat bell peppers?",
@@ -43624,7 +43806,8 @@
         "hr": "Smiju li psi jesti slatku papriku?",
         "sv": "Får hundar äta paprika?",
         "da": "Må hunde spise peberfrugter?",
-        "fi": "Saako koira syödä paprikaa?"
+        "fi": "Saako koira syödä paprikaa?",
+        "nb": "Kan hunder spise paprika?"
       },
       "url_slug": {
         "en": "bell-peppers",
@@ -43640,7 +43823,8 @@
         "hr": "slatka-paprika",
         "sv": "paprika",
         "da": "peberfrugter",
-        "fi": "paprikat"
+        "fi": "paprikat",
+        "nb": "paprika"
       },
       "answer": {
         "en": "Yes, bell peppers are safe for most dogs in moderation. They are non-toxic, and green, yellow, orange and red peppers are all fine when served plain. Remove the seeds and stem, and never give spicy peppers.",
@@ -43656,7 +43840,8 @@
         "hr": "Da, slatka je paprika sigurna za većinu pasa u umjerenim količinama. Nije otrovna, a sve su boje – zelena, žuta, narančasta i crvena – u redu ako je daješ običnu. Ukloni sjemenke i peteljku, a ljute papričice nikad ne daj.",
         "sv": "Ja, paprika är säker för de flesta hundar med måtta. Den är inte giftig, och gröna, gula, orangea och röda paprikor går alla bra när de ges utan tillsatser. Ta bort kärnor och skaft, och ge aldrig stark chili.",
         "da": "Ja, peberfrugter er ufarlige for de fleste hunde med måde. De er ugiftige, og grønne, gule, orange og røde peberfrugter er alle fine, når de gives uden tilbehør. Fjern kerner og stilk, og giv aldrig stærk peber.",
-        "fi": "Saa, paprika on turvallista useimmille koirille kohtuudella. Se ei ole myrkyllistä, ja vihreät, keltaiset, oranssit ja punaiset paprikat sopivat kaikki, kun ne tarjotaan maustamattomina. Poista siemenet ja varsi, äläkä koskaan anna tulisia pippureita."
+        "fi": "Saa, paprika on turvallista useimmille koirille kohtuudella. Se ei ole myrkyllistä, ja vihreät, keltaiset, oranssit ja punaiset paprikat sopivat kaikki, kun ne tarjotaan maustamattomina. Poista siemenet ja varsi, äläkä koskaan anna tulisia pippureita.",
+        "nb": "Ja, paprika er trygg for de fleste hunder med måte. Den er ikke giftig, og både grønn, gul, oransje og rød paprika kan gis, så lenge den er uten tilsetninger. Fjern frø og stilk, og gi aldri sterk chili."
       },
       "why": {
         "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
@@ -43672,7 +43857,8 @@
         "hr": "Slatka paprika nije otrovna i sadrži hranjive tvari koje mogu pridonijeti zdravlju psa. Prevelika količina može dovesti do probavnih smetnji, uključujući povraćanje ili proljev, a vanjska kožica nekim je psima teška za žvakanje i probavu. Neki će je psi dobro podnijeti, a neki neće.",
         "sv": "Paprika är inte giftig och innehåller näringsämnen som kan stödja hundens hälsa. För mycket kan ge magproblem, bland annat kräkningar eller diarré, och skalet kan vara svårt för en del hundar att tugga och smälta. En del hundar klarar det bra, andra inte.",
         "da": "Peberfrugter er ugiftige og indeholder næringsstoffer der kan understøtte din hunds sundhed. For meget kan give fordøjelsesproblemer, blandt andet opkast eller diarré, og det yderste skind kan være svært for nogle hunde at tygge og fordøje. Nogle hunde tåler det fint, andre ikke.",
-        "fi": "Paprika ei ole myrkyllistä, ja siitä saa ravintoaineita, jotka voivat tukea koirasi terveyttä. Liika voi aiheuttaa ruoansulatusvaivoja, kuten oksentelua tai ripulia, ja ulkokuorta voi olla joidenkin koirien vaikea pureskella ja sulattaa. Jotkin koirat sietävät sitä hyvin, toiset eivät."
+        "fi": "Paprika ei ole myrkyllistä, ja siitä saa ravintoaineita, jotka voivat tukea koirasi terveyttä. Liika voi aiheuttaa ruoansulatusvaivoja, kuten oksentelua tai ripulia, ja ulkokuorta voi olla joidenkin koirien vaikea pureskella ja sulattaa. Jotkin koirat sietävät sitä hyvin, toiset eivät.",
+        "nb": "Paprika er ikke giftig og inneholder næringsstoffer som kan støtte hundens helse. For mye kan gi fordøyelsesproblemer, blant annet oppkast eller diaré, og det ytre skinnet kan være vanskelig for noen hunder å tygge og fordøye. Noen hunder tåler paprika fint, andre ikke."
       },
       "signs": null,
       "what_to_do": {
@@ -43689,7 +43875,8 @@
         "hr": "Papriku uvodi postupno da vidiš kako je pas podnosi, i ne pretjeruj. Nikad ne daj papriku pomiješanu s lukom ili češnjakom jer su luk i češnjak otrovni za pse.",
         "sv": "Börja med lite paprika åt gången så att du ser om hundens mage tål den, och överdriv inte. Ge aldrig paprika blandad med lök eller vitlök, eftersom de är giftiga för hundar.",
         "da": "Giv peberfrugt gradvist, så du kan se, om din hund tåler det, og lad være med at overdrive. Giv aldrig peberfrugt blandet med løg eller hvidløg, for de er giftige for hunde.",
-        "fi": "Totuta koira paprikaan vähitellen ja katso, sopiiko se sen vatsalle. Älä liioittele määrää. Älä koskaan anna paprikaa sipulin tai valkosipulin kanssa, sillä ne ovat koirille myrkyllisiä."
+        "fi": "Totuta koira paprikaan vähitellen ja katso, sopiiko se sen vatsalle. Älä liioittele määrää. Älä koskaan anna paprikaa sipulin tai valkosipulin kanssa, sillä ne ovat koirille myrkyllisiä.",
+        "nb": "Innfør paprika gradvis, slik at du ser om hunden tåler den, og ikke gi for mye. Gi aldri paprika blandet med løk eller hvitløk, for de er giftige for hunder."
       },
       "serving": {
         "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
@@ -43705,7 +43892,8 @@
         "hr": "Obična, sirova ili termički obrađena, bez sjemenki i peteljke. Kuhana na pari ili pasirana lakša je za jelo. Bez soli, začina i drugih sastojaka.",
         "sv": "Utan tillsatser, rå eller tillagad, med kärnor och skaft borttagna. Ångad eller mixad paprika är lättare att äta. Inget salt, inga kryddor eller andra ingredienser.",
         "da": "Naturel peberfrugt, rå eller tilberedt, uden kerner og stilk. Damper eller pureer du den, er den lettere at spise. Uden salt, krydderier eller andre ingredienser.",
-        "fi": "Maustamattomana, raakana tai kypsennettynä, siemenet ja varsi poistettuina. Höyryttäminen tai soseuttaminen helpottaa syömistä. Ei suolaa, mausteita eikä muita aineksia."
+        "fi": "Maustamattomana, raakana tai kypsennettynä, siemenet ja varsi poistettuina. Höyryttäminen tai soseuttaminen helpottaa syömistä. Ei suolaa, mausteita eikä muita aineksia.",
+        "nb": "Uten tilsetninger, rå eller kokt, med frø og stilk fjernet. Damping eller purering gjør den lettere å spise. Uten salt, krydder eller andre ingredienser."
       },
       "child": {
         "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
@@ -43721,7 +43909,8 @@
         "hr": "Pas smije dobiti malo obične slatke paprike. Odrasla osoba prvo izvadi sjemenke. Ljute papričice nisu za pse.",
         "sv": "Hundar kan få lite paprika utan tillsatser. En vuxen tar bort kärnorna först. Stark chili är inte för hundar.",
         "da": "Hunde må få lidt naturel, sød peberfrugt. En voksen tager først kernerne ud. Stærk peber er ikke til hunde.",
-        "fi": "Koira saa vähän maustamatonta makeaa paprikaa. Aikuinen poistaa ensin siemenet. Tuliset pippurit eivät ole koirille."
+        "fi": "Koira saa vähän maustamatonta makeaa paprikaa. Aikuinen poistaa ensin siemenet. Tuliset pippurit eivät ole koirille.",
+        "nb": "Hunder kan få litt søt paprika uten tilsetninger. En voksen tar ut frøene først. Sterk chili er ikke for hunder."
       },
       "faq": [
         {
@@ -43739,7 +43928,8 @@
             "hr": "Smiju li psi jesti sirovu slatku papriku?",
             "sv": "Får hundar äta rå paprika?",
             "da": "Må hunde spise rå peberfrugt?",
-            "fi": "Saako koira syödä raakaa paprikaa?"
+            "fi": "Saako koira syödä raakaa paprikaa?",
+            "nb": "Kan hunder spise rå paprika?"
           },
           "a": {
             "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
@@ -43755,7 +43945,8 @@
             "hr": "Da, iako neki psi lakše žvaču i probavljaju papriku koja je termički obrađena, kuhana na pari ili pasirana.",
             "sv": "Ja, men en del hundar har lättare att tugga och smälta tillagad, ångad eller mixad paprika.",
             "da": "Ja, men nogle hunde har lettere ved at tygge og fordøje tilberedt, dampet eller pureret peberfrugt.",
-            "fi": "Saa, mutta joidenkin koirien on helpompi pureskella ja sulattaa kypsennettyä, höyrytettyä tai soseutettua paprikaa."
+            "fi": "Saa, mutta joidenkin koirien on helpompi pureskella ja sulattaa kypsennettyä, höyrytettyä tai soseutettua paprikaa.",
+            "nb": "Ja, men noen hunder har lettere for å tygge og fordøye kokt, dampet eller purert paprika."
           }
         },
         {
@@ -43773,7 +43964,8 @@
             "hr": "Koja je boja najbolja?",
             "sv": "Vilken färg är bäst?",
             "da": "Hvilken farve er bedst?",
-            "fi": "Mikä väri on paras?"
+            "fi": "Mikä väri on paras?",
+            "nb": "Hvilken farge er best?"
           },
           "a": {
             "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
@@ -43789,7 +43981,8 @@
             "hr": "Sve su boje sigurne. Crvena paprika sadrži najviše vitamina i antioksidansa.",
             "sv": "Alla färger är säkra. Röd paprika innehåller mest vitaminer och antioxidanter.",
             "da": "Alle farver er sikre. Røde peberfrugter indeholder flest vitaminer og antioxidanter.",
-            "fi": "Kaikki värit ovat turvallisia. Punaisessa paprikassa on eniten vitamiineja ja antioksidantteja."
+            "fi": "Kaikki värit ovat turvallisia. Punaisessa paprikassa on eniten vitamiineja ja antioksidantteja.",
+            "nb": "Alle farger er trygge. Rød paprika inneholder mest vitaminer og antioksidanter."
           }
         },
         {
@@ -43807,7 +44000,8 @@
             "hr": "A jalapeño ili čili papričice?",
             "sv": "Hur är det med jalapeños och chilipeppar?",
             "da": "Hvad med jalapeños eller chilipeber?",
-            "fi": "Entä jalapeñot tai chilipippurit?"
+            "fi": "Entä jalapeñot tai chilipippurit?",
+            "nb": "Hva med jalapeño og annen chili?"
           },
           "a": {
             "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
@@ -43823,7 +44017,8 @@
             "hr": "Psu nikad ne daj ljute vrste papričica, kao što su jalapeño ili čili.",
             "sv": "Ge aldrig hunden stark chili, som jalapeño eller annan chilipeppar.",
             "da": "Giv aldrig din hund stærke sorter som jalapeños eller chilipeber.",
-            "fi": "Älä koskaan anna koirallesi tulisia pippurilajeja, kuten jalapeñoja tai chilipippureita."
+            "fi": "Älä koskaan anna koirallesi tulisia pippurilajeja, kuten jalapeñoja tai chilipippureita.",
+            "nb": "Gi aldri hunden sterke sorter som jalapeño eller annen chili."
           }
         }
       ],
@@ -45542,7 +45737,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Cooked potatoes",
@@ -45558,7 +45754,8 @@
         "hr": "Kuhani krumpir",
         "sv": "Kokt potatis",
         "da": "Kogte kartofler",
-        "fi": "Keitetyt perunat"
+        "fi": "Keitetyt perunat",
+        "nb": "Kokte poteter"
       },
       "question": {
         "en": "Can dogs eat cooked potatoes?",
@@ -45574,7 +45771,8 @@
         "hr": "Smiju li psi jesti kuhani krumpir?",
         "sv": "Får hundar äta kokt potatis?",
         "da": "Må hunde spise kogte kartofler?",
-        "fi": "Saako koira syödä keitettyjä perunoita?"
+        "fi": "Saako koira syödä keitettyjä perunoita?",
+        "nb": "Kan hunder spise kokte poteter?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
@@ -45590,7 +45788,8 @@
         "hr": "kuhani-krumpir",
         "sv": "kokt-potatis",
         "da": "kogte-kartofler",
-        "fi": "keitetyt-perunat"
+        "fi": "keitetyt-perunat",
+        "nb": "kokte-poteter"
       },
       "answer": {
         "en": "Yes, dogs can eat cooked potatoes in moderation when they are served plain. Boiled or baked potato without butter, milk, salt or seasonings is fine in small amounts, as long as it is soft and not green.",
@@ -45606,7 +45805,8 @@
         "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen.",
         "sv": "Ja, hundar kan äta tillagad potatis med måtta när den ges utan tillsatser. Kokt eller bakad potatis utan smör, mjölk, salt eller kryddor går bra i små mängder, så länge den är mjuk och inte grön.",
         "da": "Ja, hunde kan spise tilberedte kartofler med måde, når de gives uden tilbehør. Kogt eller bagt kartoffel uden smør, mælk, salt eller krydderier er fin i små mængder, så længe den er blød og ikke grøn.",
-        "fi": "Saa, koira voi syödä kypsennettyä perunaa kohtuudella, kun se tarjotaan maustamattomana. Keitetty tai uunissa kypsennetty peruna ilman voita, maitoa, suolaa tai mausteita sopii pieninä määrinä, kunhan se on pehmeää eikä vihreää."
+        "fi": "Saa, koira voi syödä kypsennettyä perunaa kohtuudella, kun se tarjotaan maustamattomana. Keitetty tai uunissa kypsennetty peruna ilman voita, maitoa, suolaa tai mausteita sopii pieninä määrinä, kunhan se on pehmeää eikä vihreää.",
+        "nb": "Ja, hunder kan spise kokte poteter med måte når de gis uten tilsetninger. Kokt eller bakt potet uten smør, melk, salt eller krydder er greit i små mengder, så lenge den er myk og ikke grønn."
       },
       "why": {
         "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
@@ -45622,7 +45822,8 @@
         "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan.",
         "sv": "Tillagad potatis utan tillsatser går bra för hundar, men den ska vara en godbit och inte ersätta en måltid, och bara utgöra en liten del av kosten. För många portioner kan leda till övervikt, och mycket smör kan utlösa bukspottkörtelinflammation. Rå eller grön potatis är inte säker och kan vara giftig.",
         "da": "Naturel tilberedt kartoffel er fin til hunde, men den skal være en godbid og ikke erstatte et måltid, og den bør kun udgøre en lille del af kosten. For mange portioner kan give overvægt, og meget smør kan udløse betændelse i bugspytkirtlen (pankreatitis). Rå eller grønne kartofler er ikke sikre og kan være giftige.",
-        "fi": "Maustamaton kypsennetty peruna sopii koirille, mutta sen pitää olla herkku, ei ateriankorvike, ja vain pieni osa ruokavaliosta. Liian suuret annokset voivat johtaa lihavuuteen, ja paljon voita voi laukaista haimatulehduksen. Raa’at tai vihreät perunat eivät ole turvallisia ja voivat olla myrkyllisiä."
+        "fi": "Maustamaton kypsennetty peruna sopii koirille, mutta sen pitää olla herkku, ei ateriankorvike, ja vain pieni osa ruokavaliosta. Liian suuret annokset voivat johtaa lihavuuteen, ja paljon voita voi laukaista haimatulehduksen. Raa’at tai vihreät perunat eivät ole turvallisia ja voivat olla myrkyllisiä.",
+        "nb": "Kokt potet uten tilsetninger er greit for hunder, men den bør være en godbit, ikke en erstatning for et måltid, og bare en liten del av kostholdet. For mange porsjoner kan gi overvekt, og mye smør kan utløse betennelse i bukspyttkjertelen (pankreatitt). Rå eller grønne poteter er farlige og potensielt giftige."
       },
       "signs": null,
       "what_to_do": {
@@ -45639,7 +45840,8 @@
         "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima.",
         "sv": "Ge tillagad potatis som en godbit då och då, i små mängder. Ge aldrig rå potatis eller potatis med gröna fläckar, och hoppa över potatisrätter med smör, mjölk, salt eller kryddor.",
         "da": "Giv tilberedt kartoffel som en godbid en gang imellem og i små mængder. Giv aldrig rå kartoffel eller kartoffel med grønne pletter, og undlad kartoffelretter lavet med smør, mælk, salt eller krydderier.",
-        "fi": "Anna kypsennettyä perunaa satunnaisena herkkuna pieninä määrinä. Älä koskaan anna raakaa perunaa tai perunaa, jossa on vihreitä läikkiä, ja jätä väliin voilla, maidolla, suolalla tai mausteilla tehdyt perunaruoat."
+        "fi": "Anna kypsennettyä perunaa satunnaisena herkkuna pieninä määrinä. Älä koskaan anna raakaa perunaa tai perunaa, jossa on vihreitä läikkiä, ja jätä väliin voilla, maidolla, suolalla tai mausteilla tehdyt perunaruoat.",
+        "nb": "La kokt potet være en godbit nå og da, i små mengder. Gi aldri rå potet eller potet med grønne flekker, og dropp potetretter laget med smør, melk, salt eller krydder."
       },
       "serving": {
         "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
@@ -45655,7 +45857,8 @@
         "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena.",
         "sv": "Kokt eller bakad, utan tillsatser, tillagad tills den är så mjuk att den går att mosa, så att det inte blir någon kvävningsrisk. Inget smör, mjölk, salt eller kryddor. Skalet går bra om det inte är grönt.",
         "da": "Naturel kogt eller bagt kartoffel, så blød at den kan moses, så din hund ikke får den galt i halsen. Uden smør, mælk, salt og krydderier. Skrællen er i orden, hvis den ikke er grøn.",
-        "fi": "Maustamattomana keitettynä tai uunissa kypsennettynä, niin pehmeäksi, että sen voi muussata, ettei koira tukehdu. Ei voita, maitoa, suolaa eikä mausteita. Kuoret kelpaavat, jos ne eivät ole vihreitä."
+        "fi": "Maustamattomana keitettynä tai uunissa kypsennettynä, niin pehmeäksi, että sen voi muussata, ettei koira tukehdu. Ei voita, maitoa, suolaa eikä mausteita. Kuoret kelpaavat, jos ne eivät ole vihreitä.",
+        "nb": "Kokt eller bakt uten tilsetninger, og så myk at den kan moses, så hunden ikke kveles. Ingen smør, melk, salt eller krydder. Skall er greit hvis det ikke er grønt."
       },
       "child": {
         "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
@@ -45671,7 +45874,8 @@
         "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli.",
         "sv": "Hundar kan få lite kokt potatis utan tillsatser som godbit. En vuxen ser till att den är mjuk och utan smör eller salt.",
         "da": "Hunde må få lidt naturel kogt kartoffel som godbid. En voksen sørger for, at den er blød og uden smør og salt.",
-        "fi": "Koira saa herkuksi vähän maustamatonta kypsennettyä perunaa. Aikuinen varmistaa, että se on pehmeää eikä siinä ole voita tai suolaa."
+        "fi": "Koira saa herkuksi vähän maustamatonta kypsennettyä perunaa. Aikuinen varmistaa, että se on pehmeää eikä siinä ole voita tai suolaa.",
+        "nb": "Hunder kan få litt kokt potet uten tilsetninger som en godbit. En voksen passer på at den er myk og uten smør eller salt."
       },
       "faq": [
         {
@@ -45689,7 +45893,8 @@
             "hr": "Smiju li psi jesti pire od krumpira?",
             "sv": "Får hundar äta potatismos?",
             "da": "Må hunde spise kartoffelmos?",
-            "fi": "Saako koira syödä perunamuusia?"
+            "fi": "Saako koira syödä perunamuusia?",
+            "nb": "Kan hunder spise potetmos?"
           },
           "a": {
             "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
@@ -45705,7 +45910,8 @@
             "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina.",
             "sv": "Bara potatismos utan tillsatser, i små mängder, utan smör, mjölk, salt eller kryddor.",
             "da": "Kun naturel kartoffelmos i små mængder og uden smør, mælk, salt eller krydderier.",
-            "fi": "Vain maustamatonta perunamuusia, pieninä määrinä, ilman voita, maitoa, suolaa tai mausteita."
+            "fi": "Vain maustamatonta perunamuusia, pieninä määrinä, ilman voita, maitoa, suolaa tai mausteita.",
+            "nb": "Bare potetmos uten tilsetninger, i små mengder, uten smør, melk, salt eller krydder."
           }
         },
         {
@@ -45723,7 +45929,8 @@
             "hr": "Smiju li psi jesti koru krumpira?",
             "sv": "Får hundar äta potatisskal?",
             "da": "Må hunde spise kartoffelskræl?",
-            "fi": "Saako koira syödä perunankuoria?"
+            "fi": "Saako koira syödä perunankuoria?",
+            "nb": "Kan hunder spise potetskall?"
           },
           "a": {
             "en": "Yes, potato skins are okay too, but not if they are green.",
@@ -45739,7 +45946,8 @@
             "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena.",
             "sv": "Ja, potatisskal går också bra, men inte om de är gröna.",
             "da": "Ja, kartoffelskræl er også i orden, men ikke hvis den er grøn.",
-            "fi": "Saa, kuoret kelpaavat, kunhan ne eivät ole vihreitä."
+            "fi": "Saa, kuoret kelpaavat, kunhan ne eivät ole vihreitä.",
+            "nb": "Ja, potetskall er også greit, men ikke hvis de er grønne."
           }
         },
         {
@@ -45757,7 +45965,8 @@
             "hr": "Je li pomfrit u redu za pse?",
             "sv": "Går pommes frites bra för hundar?",
             "da": "Er pommes frites i orden for hunde?",
-            "fi": "Sopivatko ranskalaiset perunat koirille?"
+            "fi": "Sopivatko ranskalaiset perunat koirille?",
+            "nb": "Er pommes frites greit for hunder?"
           },
           "a": {
             "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
@@ -45773,7 +45982,8 @@
             "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke.",
             "sv": "Med pommes frites, hash browns och andra potatisrätter blir det lätt för mycket av det goda. Potatis ska vara en godbit och inte ersätta en måltid.",
             "da": "Det er let at give for meget af det gode med pommes frites, hashbrowns og andre kartoffelretter. Kartofler skal være godbidder og ikke erstatte måltider.",
-            "fi": "Ranskalaisia perunoita, hash browneja ja muita perunaruokia tulee helposti annettua liikaa. Perunan pitää olla herkku, ei ateriankorvike."
+            "fi": "Ranskalaisia perunoita, hash browneja ja muita perunaruokia tulee helposti annettua liikaa. Perunan pitää olla herkku, ei ateriankorvike.",
+            "nb": "Med pommes frites, hash browns og andre potetretter blir det lett for mye. Poteter bør være godbiter, ikke erstatning for måltider."
           }
         }
       ],
@@ -51828,7 +52038,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Tomato plant and green tomatoes",
@@ -51844,7 +52055,8 @@
         "hr": "Biljka rajčice i zelene rajčice",
         "sv": "Tomatplanta och gröna tomater",
         "da": "Tomatplante og grønne tomater",
-        "fi": "Tomaattikasvi ja vihreät tomaatit"
+        "fi": "Tomaattikasvi ja vihreät tomaatit",
+        "nb": "Tomatplante og grønne tomater"
       },
       "question": {
         "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
@@ -51860,7 +52072,8 @@
         "hr": "Smiju li psi jesti listove, stabljike ili zelene rajčice?",
         "sv": "Får hundar äta tomatblad, tomatstjälkar eller gröna tomater?",
         "da": "Må hunde spise tomatblade, stængler eller grønne tomater?",
-        "fi": "Saako koira syödä tomaatin lehtiä, varsia tai vihreitä tomaatteja?"
+        "fi": "Saako koira syödä tomaatin lehtiä, varsia tai vihreitä tomaatteja?",
+        "nb": "Kan hunder spise tomatblader, tomatstengler eller grønne tomater?"
       },
       "url_slug": {
         "en": "tomato-plant",
@@ -51876,7 +52089,8 @@
         "hr": "biljka-rajcice",
         "sv": "tomatplanta",
         "da": "tomatplante",
-        "fi": "tomaattikasvi"
+        "fi": "tomaattikasvi",
+        "nb": "tomatplante"
       },
       "answer": {
         "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
@@ -51892,7 +52106,8 @@
         "hr": "Ne. Zeleni dijelovi biljke rajčice, uključujući nezrele rajčice, listove, stabljike, vriježe i cvjetove, otrovni su za pse. Pas nikad ne smije jesti listove i stabljike, a mlade zelene rajčice treba izbjegavati.",
         "sv": "Nej. De gröna delarna av tomatplantan, bland annat omogna tomater, blad, stjälkar, rankor och blommor, är giftiga för hundar. Hunden ska aldrig äta blad och stjälkar och bör inte äta unga, gröna tomater.",
         "da": "Nej. De grønne dele af tomatplanten, herunder umodne tomater, blade, stængler, ranker og blomster, er giftige for hunde. Din hund må aldrig spise bladene og stænglerne og bør undgå unge, grønne tomater.",
-        "fi": "Ei saa. Tomaattikasvin vihreät osat, myös raa’at tomaatit, lehdet, varret, varvut ja kukat, ovat koirille myrkyllisiä. Koira ei saa koskaan syödä lehtiä ja varsia, ja nuoria, vihreitä tomaatteja pitää välttää."
+        "fi": "Ei saa. Tomaattikasvin vihreät osat, myös raa’at tomaatit, lehdet, varret, varvut ja kukat, ovat koirille myrkyllisiä. Koira ei saa koskaan syödä lehtiä ja varsia, ja nuoria, vihreitä tomaatteja pitää välttää.",
+        "nb": "Nei. De grønne delene av tomatplanten, blant annet umodne tomater, blader, stengler, ranker og blomster, er giftige for hunder. Hunden bør aldri spise bladene og stenglene, og den bør holde seg unna unge, grønne tomater."
       },
       "why": {
         "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
@@ -51908,7 +52123,8 @@
         "hr": "Listovi, stabljike, vriježe i cvjetovi sadrže tomatin i solanin, prirodne obrambene tvari biljke; zelene rajčice sadrže ih više od zrelih. ASPCA navodi biljku rajčice kao otrovnu za pse. Teška su trovanja razmjerno rijetka, a većina slučajeva dobro završi ako se brzo reagira, pa je ocjenjujemo kao opasnu, a ne kao otrovnu.",
         "sv": "Bladen, stjälkarna, rankorna och blommorna innehåller tomatin och solanin, växtens naturliga försvarsämnen; gröna tomater innehåller mer av dem än mogna. ASPCA anger att tomatplantan är giftig för hundar. Allvarlig förgiftning är relativt ovanlig, och de flesta fall går över om man agerar snabbt, så vi bedömer den som farlig snarare än giftig.",
         "da": "Bladene, stænglerne, rankerne og blomsterne indeholder tomatin og solanin, planteens naturlige forsvarsstoffer; grønne tomater indeholder mere af dem end modne. ASPCA anfører tomatplanten som giftig for hunde. Alvorlig forgiftning er forholdsvis sjælden, og de fleste tilfælde går over, når man handler hurtigt, så vi vurderer den som farlig frem for giftig.",
-        "fi": "Lehdissä, varsissa, varvuissa ja kukissa on tomatiinia ja solaniinia, kasvin luontaisia puolustusaineita; vihreissä tomaateissa niitä on enemmän kuin kypsissä. ASPCA luokittelee tomaattikasvin koirille myrkylliseksi. Vaikea myrkytys on suhteellisen harvinainen, ja useimmat tapaukset paranevat, kun niihin puututaan nopeasti, joten luokittelemme sen vaaralliseksi emmekä myrkylliseksi."
+        "fi": "Lehdissä, varsissa, varvuissa ja kukissa on tomatiinia ja solaniinia, kasvin luontaisia puolustusaineita; vihreissä tomaateissa niitä on enemmän kuin kypsissä. ASPCA luokittelee tomaattikasvin koirille myrkylliseksi. Vaikea myrkytys on suhteellisen harvinainen, ja useimmat tapaukset paranevat, kun niihin puututaan nopeasti, joten luokittelemme sen vaaralliseksi emmekä myrkylliseksi.",
+        "nb": "Bladene, stenglene, rankene og blomstene inneholder tomatin og solanin, plantens naturlige forsvarsstoffer; grønne tomater inneholder mer av dem enn modne. ASPCA oppgir tomatplanten som giftig for hunder. Alvorlig forgiftning er relativt uvanlig, og de fleste tilfeller går over når de behandles raskt, så vi klassifiserer den som farlig, ikke giftig."
       },
       "signs": {
         "en": [
@@ -52078,6 +52294,18 @@
           "Laajentuneet pupillit",
           "Velttous",
           "Hidas tai epäsäännöllinen sydämenlyönti"
+        ],
+        "nb": [
+          "Oppkast",
+          "Diaré",
+          "Sikling",
+          "Dårlig matlyst",
+          "Muskelsvakhet",
+          "Skjelvinger",
+          "Nedsatt koordinasjon",
+          "Utvidede pupiller",
+          "Sløvhet",
+          "Langsom eller uregelmessig hjerterytme"
         ]
       },
       "what_to_do": {
@@ -52094,7 +52322,8 @@
         "hr": "Ako je pas pojeo dijelove biljke rajčice ili zelene rajčice, nazovi veterinara ili telefonsku liniju za otrovanja životinja i zatraži savjet. Ako pas već ima znakove trovanja, obrati se veterinaru; važno je da ga veterinar što prije pregleda.",
         "sv": "Om hunden har ätit delar av tomatplantan eller gröna tomater, ring veterinären eller en giftrådgivning för djur för råd. Om hunden redan har symtom, kontakta veterinären; det är viktigt att få den undersökt så snart som möjligt.",
         "da": "Hvis din hund har spist dele af tomatplanten eller grønne tomater, skal du ringe til din dyrlæge eller en giftrådgivning for dyr for at få råd. Hvis din hund allerede har symptomer, skal du kontakte din dyrlæge – det er vigtigt, at hunden bliver undersøgt så hurtigt som muligt.",
-        "fi": "Jos koirasi söi tomaattikasvin osia tai vihreitä tomaatteja, soita eläinlääkärille tai eläinten myrkytysneuvontaan ohjeita varten. Jos koiralla on jo oireita, ota yhteyttä eläinlääkäriin; on tärkeää saada koira tutkittavaksi mahdollisimman pian."
+        "fi": "Jos koirasi söi tomaattikasvin osia tai vihreitä tomaatteja, soita eläinlääkärille tai eläinten myrkytysneuvontaan ohjeita varten. Jos koiralla on jo oireita, ota yhteyttä eläinlääkäriin; on tärkeää saada koira tutkittavaksi mahdollisimman pian.",
+        "nb": "Hvis hunden har spist deler av tomatplanten eller grønne tomater, må du ringe dyrlegen eller giftinformasjon for dyr for å få veiledning. Hvis hunden allerede viser symptomer, må du kontakte dyrlegen; det er viktig å få den undersøkt så fort som mulig."
       },
       "serving": null,
       "child": {
@@ -52111,7 +52340,8 @@
         "hr": "Listovi, stabljike i zelene rajčice nisu za pse. Ako pas nagrize biljku, odmah reci odrasloj osobi.",
         "sv": "Tomatblad, tomatstjälkar och gröna tomater är inte för hundar. Om en hund knaprar på plantan, berätta det för en vuxen direkt.",
         "da": "Tomatblade, stængler og grønne tomater er ikke til hunde. Hvis en hund nasker af planten, så sig det til en voksen med det samme.",
-        "fi": "Tomaatin lehdet, varret ja vihreät tomaatit eivät ole koirille. Jos koira nakertaa kasvia, kerro heti aikuiselle."
+        "fi": "Tomaatin lehdet, varret ja vihreät tomaatit eivät ole koirille. Jos koira nakertaa kasvia, kerro heti aikuiselle.",
+        "nb": "Tomatblader, tomatstengler og grønne tomater er ikke for hunder. Hvis en hund napper i planten, må du si fra til en voksen med en gang."
       },
       "faq": [
         {
@@ -52129,7 +52359,8 @@
             "hr": "Jesu li zrele crvene rajčice u redu?",
             "sv": "Är mogna röda tomater okej?",
             "da": "Er modne røde tomater i orden?",
-            "fi": "Sopivatko kypsät punaiset tomaatit?"
+            "fi": "Sopivatko kypsät punaiset tomaatit?",
+            "nb": "Er modne røde tomater greit?"
           },
           "a": {
             "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
@@ -52145,7 +52376,8 @@
             "hr": "Da. Zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama.",
             "sv": "Ja. Mogna, röda tomater är inte giftiga för hundar och kan vara en godbit då och då i små mängder.",
             "da": "Ja. Modne, røde tomater er ikke giftige for hunde og kan være en godbid en gang imellem i små mængder.",
-            "fi": "Sopivat. Kypsät, punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä."
+            "fi": "Sopivat. Kypsät, punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä.",
+            "nb": "Ja. Modne, røde tomater er ikke giftige for hunder og kan være en godbit nå og da i små mengder."
           }
         },
         {
@@ -52163,7 +52395,8 @@
             "hr": "Kako zaštititi psa u povrtnjaku?",
             "sv": "Hur håller jag hunden säker i grönsaksodlingen?",
             "da": "Hvordan beskytter jeg min hund i min køkkenhave?",
-            "fi": "Miten pidän koirani turvassa kasvimaalla?"
+            "fi": "Miten pidän koirani turvassa kasvimaalla?",
+            "nb": "Hvordan holder jeg hunden trygg i en grønnsakshage?"
           },
           "a": {
             "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
@@ -52179,7 +52412,8 @@
             "hr": "Postavi fizičke prepreke ili ogradi vrt i imaj na umu da zelene rajčice koje padnu s biljke mogu privući pse.",
             "sv": "Sätt upp hinder eller staket runt odlingen, och kom ihåg att gröna tomater som faller av plantan kan locka hundar.",
             "da": "Sæt hegn om haven eller lav andre fysiske barrierer, og husk at grønne tomater kan lokke hunde til, hvis de falder af planten.",
-            "fi": "Rajaa kasvimaa aidalla tai muulla esteellä ja muista, että köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria."
+            "fi": "Rajaa kasvimaa aidalla tai muulla esteellä ja muista, että köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria.",
+            "nb": "Sett opp en fysisk sperre eller gjerd inn grønnsakshagen, og husk at grønne tomater som faller av planten, kan lokke til seg hunder."
           }
         }
       ],
@@ -52234,7 +52468,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Tomatoes",
@@ -52250,7 +52485,8 @@
         "hr": "Rajčice",
         "sv": "Tomater",
         "da": "Tomater",
-        "fi": "Tomaatit"
+        "fi": "Tomaatit",
+        "nb": "Tomater"
       },
       "question": {
         "en": "Can dogs eat tomatoes?",
@@ -52266,7 +52502,8 @@
         "hr": "Smiju li psi jesti rajčice?",
         "sv": "Får hundar äta tomater?",
         "da": "Må hunde spise tomater?",
-        "fi": "Saako koira syödä tomaatteja?"
+        "fi": "Saako koira syödä tomaatteja?",
+        "nb": "Kan hunder spise tomater?"
       },
       "url_slug": {
         "en": "tomatoes",
@@ -52282,7 +52519,8 @@
         "hr": "rajcice",
         "sv": "tomater",
         "da": "tomater",
-        "fi": "tomaatit"
+        "fi": "tomaatit",
+        "nb": "tomater"
       },
       "answer": {
         "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
@@ -52298,7 +52536,8 @@
         "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati.",
         "sv": "Ja, mogna röda tomater är inte giftiga för hundar och kan ges som godbit då och då i små mängder. Gröna, omogna tomater och växtens gröna delar är en annan sak och bör undvikas.",
         "da": "Ja, modne røde tomater er ikke giftige for hunde og kan være en godbid en gang imellem i små mængder. Grønne, umodne tomater og planteens grønne dele er noget andet og bør undgås.",
-        "fi": "Saa, kypsät punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä. Vihreät, raa’at tomaatit ja kasvin vihreät osat ovat eri asia, ja niitä pitää välttää."
+        "fi": "Saa, kypsät punaiset tomaatit eivät ole koirille myrkyllisiä, ja niitä voi antaa satunnaisena herkkuna pieninä määrinä. Vihreät, raa’at tomaatit ja kasvin vihreät osat ovat eri asia, ja niitä pitää välttää.",
+        "nb": "Ja, modne røde tomater er ikke giftige for hunder og kan være en godbit nå og da i små mengder. Grønne, umodne tomater og de grønne delene av planten er en annen sak og bør unngås."
       },
       "why": {
         "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -52314,7 +52553,8 @@
         "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
         "sv": "De viktigaste giftiga ämnena i tomater är tomatin och solanin, som främst finns i växtens gröna delar. När tomaten mognar och blir röd sjunker halterna kraftigt, så mogna tomater anses vara ogiftiga. Produkter som är gjorda på tomat innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar.",
         "da": "De vigtigste giftige stoffer i tomater er tomatin og solanin, som hovedsageligt findes i planteens grønne dele. Når en tomat modner og bliver rød, falder indholdet af dem markant, så modne tomater anses for ugiftige. Produkter med tomat indeholder ofte hvidløg, løg, salt eller sukker, som kan være skadelige eller irriterende for hunde.",
-        "fi": "Tomaattien tärkeimmät myrkylliset yhdisteet ovat tomatiini ja solaniini, joita on pääasiassa kasvin vihreissä osissa. Kun tomaatti kypsyy ja punertuu, niiden pitoisuudet laskevat selvästi, joten kypsiä tomaatteja pidetään myrkyttöminä. Tomaattipohjaisissa tuotteissa on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä."
+        "fi": "Tomaattien tärkeimmät myrkylliset yhdisteet ovat tomatiini ja solaniini, joita on pääasiassa kasvin vihreissä osissa. Kun tomaatti kypsyy ja punertuu, niiden pitoisuudet laskevat selvästi, joten kypsiä tomaatteja pidetään myrkyttöminä. Tomaattipohjaisissa tuotteissa on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä.",
+        "nb": "De viktigste giftige stoffene i tomater er tomatin og solanin, som hovedsakelig finnes i de grønne delene av planten. Når en tomat modnes og blir rød, synker nivåene betydelig, så modne tomater regnes som ikke giftige. Tomatbaserte produkter inneholder ofte hvitløk, løk, salt eller sukker, som kan være skadelig eller irriterende for hunder."
       },
       "signs": null,
       "what_to_do": {
@@ -52331,7 +52571,8 @@
         "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet.",
         "sv": "Börja med små mängder för att se hur hunden reagerar, och ge bara tomat med måtta och under uppsikt. Om du tror att hunden har ätit en stor mängd tomater eller själva tomatplantan, ring veterinären för råd.",
         "da": "Start med små mængder for at se, hvordan din hund reagerer, og giv kun tomat med måde og under opsyn. Hvis du tror, at din hund har spist en stor mængde tomater eller selve tomatplanten, skal du ringe til din dyrlæge for at få råd.",
-        "fi": "Aloita pienellä määrällä ja katso, miten koirasi reagoi, ja anna tomaattia vain kohtuudella ja valvotusti. Jos arvelet koirasi syöneen paljon tomaatteja tai itse tomaattikasvia, soita eläinlääkärille ohjeita varten."
+        "fi": "Aloita pienellä määrällä ja katso, miten koirasi reagoi, ja anna tomaattia vain kohtuudella ja valvotusti. Jos arvelet koirasi syöneen paljon tomaatteja tai itse tomaattikasvia, soita eläinlääkärille ohjeita varten.",
+        "nb": "Begynn med små mengder for å se hvordan hunden reagerer, og gi bare tomat med måte og under tilsyn. Hvis du tror at hunden har spist mye tomat eller selve tomatplanten, må du ringe dyrlegen for veiledning."
       },
       "serving": {
         "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
@@ -52347,7 +52588,8 @@
         "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima.",
         "sv": "Bara mogna, röda tomater utan tillsatser. Ta bort alla gröna delar och skär tomatköttet i tärningar; skär körsbärstomater i små bitar. Aldrig tomater som har kryddats med salt, vitlök, lök eller andra tillsatser.",
         "da": "Kun modne, røde og naturelle tomater. Fjern alt det grønne, og skær frugtkødet i tern; skær cherrytomater i små stykker. Aldrig tomater krydret med salt, hvidløg, løg eller andre tilsætninger.",
-        "fi": "Vain kypsää, punaista ja maustamatonta. Poista kaikki vihreät osat ja kuutioi hedelmäliha; pilko kirsikkatomaatit pieniksi paloiksi. Älä koskaan anna suolalla, valkosipulilla, sipulilla tai muilla lisäaineilla maustettuja tomaatteja."
+        "fi": "Vain kypsää, punaista ja maustamatonta. Poista kaikki vihreät osat ja kuutioi hedelmäliha; pilko kirsikkatomaatit pieniksi paloiksi. Älä koskaan anna suolalla, valkosipulilla, sipulilla tai muilla lisäaineilla maustettuja tomaatteja.",
+        "nb": "Bare modne, røde tomater uten tilsetninger. Fjern alle grønne deler og skjær fruktkjøttet i terninger; skjær cherrytomater i små biter. Aldri tomater krydret med salt, hvitløk, løk eller andre tilsetninger."
       },
       "child": {
         "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
@@ -52363,7 +52605,8 @@
         "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće.",
         "sv": "Hundar kan få lite mogen röd tomat. En vuxen tar bort de gröna delarna och skär den i småbitar.",
         "da": "Hunde må få lidt moden rød tomat. En voksen fjerner det grønne og skærer den i små stykker.",
-        "fi": "Koira saa vähän kypsää punaista tomaattia. Aikuinen poistaa vihreät osat ja pilkkoo sen pieneksi."
+        "fi": "Koira saa vähän kypsää punaista tomaattia. Aikuinen poistaa vihreät osat ja pilkkoo sen pieneksi.",
+        "nb": "Hunder kan få litt moden, rød tomat. En voksen tar bort det grønne og skjærer den i små biter."
       },
       "faq": [
         {
@@ -52381,7 +52624,8 @@
             "hr": "Smiju li psi jesti zelene rajčice?",
             "sv": "Får hundar äta gröna tomater?",
             "da": "Må hunde spise grønne tomater?",
-            "fi": "Saako koira syödä vihreitä tomaatteja?"
+            "fi": "Saako koira syödä vihreitä tomaatteja?",
+            "nb": "Kan hunder spise grønne tomater?"
           },
           "a": {
             "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
@@ -52397,7 +52641,8 @@
             "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom.",
             "sv": "Nej. Gröna tomater innehåller mer tomatin och solanin än mogna, och om en hund äter en omogen tomat kan det ge symtom på tomatinförgiftning.",
             "da": "Nej. Grønne tomater indeholder mere tomatin og solanin end modne, og en umoden tomat kan give symptomer på tomatinforgiftning.",
-            "fi": "Ei. Vihreissä tomaateissa on enemmän tomatiinia ja solaniinia kuin kypsissä, ja raa’an tomaatin syöminen voi aiheuttaa tomatiinimyrkytyksen oireita."
+            "fi": "Ei. Vihreissä tomaateissa on enemmän tomatiinia ja solaniinia kuin kypsissä, ja raa’an tomaatin syöminen voi aiheuttaa tomatiinimyrkytyksen oireita.",
+            "nb": "Nei. Grønne tomater inneholder mer tomatin og solanin enn modne, og en umoden tomat kan gi symptomer på tomatinforgiftning."
           }
         },
         {
@@ -52415,7 +52660,8 @@
             "hr": "Smiju li psi jesti umak od rajčice ili kečap?",
             "sv": "Får hundar äta tomatsås eller ketchup?",
             "da": "Må hunde spise tomatsauce eller ketchup?",
-            "fi": "Saako koira syödä tomaattikastiketta tai ketsuppia?"
+            "fi": "Saako koira syödä tomaattikastiketta tai ketsuppia?",
+            "nb": "Kan hunder spise tomatsaus eller ketchup?"
           },
           "a": {
             "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -52431,7 +52677,8 @@
             "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
             "sv": "Det är bäst att undvika dem. Tomatprodukter som sås, ketchup och soppa innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar.",
             "da": "Det er bedst at undgå dem. Produkter med tomat som sauce, ketchup og suppe indeholder ofte hvidløg, løg, salt eller sukker, som kan være skadelige eller irriterende for hunde.",
-            "fi": "Parempi välttää. Tomaattipohjaisissa tuotteissa, kuten kastikkeessa, ketsupissa ja keitossa, on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä."
+            "fi": "Parempi välttää. Tomaattipohjaisissa tuotteissa, kuten kastikkeessa, ketsupissa ja keitossa, on usein valkosipulia, sipulia, suolaa tai sokeria, jotka voivat olla koirille haitallisia tai ärsyttäviä.",
+            "nb": "Det er best å unngå dem. Tomatbaserte produkter som saus, ketchup og suppe inneholder ofte hvitløk, løk, salt eller sukker, som kan være skadelig eller irriterende for hunder."
           }
         },
         {
@@ -52449,7 +52696,8 @@
             "hr": "Uzgajam rajčice. Na što moram paziti?",
             "sv": "Jag odlar tomater. Vad ska jag tänka på?",
             "da": "Jeg dyrker tomater. Hvad skal jeg være opmærksom på?",
-            "fi": "Kasvatan tomaatteja. Mihin minun pitää kiinnittää huomiota?"
+            "fi": "Kasvatan tomaatteja. Mihin minun pitää kiinnittää huomiota?",
+            "nb": "Jeg dyrker tomater. Hva bør jeg passe på?"
           },
           "a": {
             "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
@@ -52465,7 +52713,8 @@
             "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke.",
             "sv": "Gröna tomater som faller av plantan kan locka hundar. Sätt upp staket runt odlingen så att hunden inte kan smaka på plantorna.",
             "da": "Grønne tomater kan tiltrække hunde, hvis de falder af planten. Sæt hegn om haven, så din hund ikke kan smage på planterne.",
-            "fi": "Köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria. Aidoita kasvimaa, ettei koirasi pääse maistelemaan kasveja."
+            "fi": "Köynnökseltä putoavat vihreät tomaatit voivat houkutella koiria. Aidoita kasvimaa, ettei koirasi pääse maistelemaan kasveja.",
+            "nb": "Grønne tomater som faller av planten, kan lokke til seg hunder. Gjerd inn hagen, så hunden ikke får smake på plantene."
           }
         }
       ],
@@ -53543,7 +53792,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "nb"
       ],
       "name": {
         "en": "Wild mushrooms",
@@ -53559,7 +53809,8 @@
         "hr": "Divlje gljive",
         "sv": "Vilda svampar",
         "da": "Vilde svampe",
-        "fi": "Luonnonvaraiset sienet"
+        "fi": "Luonnonvaraiset sienet",
+        "nb": "Ville sopper"
       },
       "question": {
         "en": "Can dogs eat wild mushrooms?",
@@ -53575,7 +53826,8 @@
         "hr": "Smiju li psi jesti divlje gljive?",
         "sv": "Får hundar äta vilda svampar?",
         "da": "Må hunde spise vilde svampe?",
-        "fi": "Saako koira syödä luonnonvaraisia sieniä?"
+        "fi": "Saako koira syödä luonnonvaraisia sieniä?",
+        "nb": "Kan hunder spise ville sopper?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
@@ -53591,7 +53843,8 @@
         "hr": "divlje-gljive",
         "sv": "vilda-svampar",
         "da": "vilde-svampe",
-        "fi": "luonnonvaraiset-sienet"
+        "fi": "luonnonvaraiset-sienet",
+        "nb": "ville-sopper"
       },
       "answer": {
         "en": "No. Treat every mushroom your dog finds outside as toxic. Toxic and non-toxic mushrooms are hard to tell apart, and the toxic ones are extremely dangerous. If your dog ate a wild mushroom, contact your vet immediately.",
@@ -53607,7 +53860,8 @@
         "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru.",
         "sv": "Nej. Behandla varje svamp som hunden hittar utomhus som giftig. Giftiga och ogiftiga svampar är svåra att skilja åt, och de giftiga är extremt farliga. Om hunden har ätit en vild svamp, kontakta veterinären direkt.",
         "da": "Nej. Betragt alle svampe i naturen som giftige. Det er svært at skelne giftige svampe fra ugiftige, og de giftige er ekstremt farlige. Hvis din hund har spist en vild svamp, skal du straks kontakte din dyrlæge.",
-        "fi": "Ei saa. Pidä jokaista koirasi ulkoa löytämää sientä myrkyllisenä. Myrkyllisiä ja myrkyttömiä sieniä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia. Jos koirasi söi luonnonvaraisen sienen, ota heti yhteyttä eläinlääkäriin."
+        "fi": "Ei saa. Pidä jokaista koirasi ulkoa löytämää sientä myrkyllisenä. Myrkyllisiä ja myrkyttömiä sieniä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia. Jos koirasi söi luonnonvaraisen sienen, ota heti yhteyttä eläinlääkäriin.",
+        "nb": "Nei. Regn all sopp som hunden finner ute, som giftig. Det er vanskelig å skille giftige fra ikke-giftige sopper, og de giftige er ekstremt farlige. Hvis hunden har spist en vill sopp, må du kontakte dyrlegen med en gang."
       },
       "why": {
         "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
@@ -53623,7 +53877,8 @@
         "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo.",
         "sv": "Det finns tusentals svamparter, och många kan göra hundar allvarligt sjuka. Vissa ger lindriga kräkningar eller diarré, medan andra kan leda till lever- och njursvikt eller kramper. Symtomen beror på arten, och det går inte alltid att veta vilken svamp hunden har ätit.",
         "da": "Der findes tusindvis af svampearter, og mange kan gøre hunde alvorligt syge. Nogle giver let opkast eller diarré, mens andre kan føre til lever- og nyresvigt eller kramper. Symptomerne afhænger af arten, og det er ikke altid muligt at vide, hvilken svamp din hund har spist.",
-        "fi": "Sienilajeja on tuhansia, ja monet voivat aiheuttaa koirille vakavan sairastumisen. Jotkin aiheuttavat lievää oksentelua tai ripulia, toiset voivat johtaa maksan ja munuaisten vajaatoimintaan tai kouristuksiin. Oireet riippuvat lajista, eikä aina voi tietää, minkä sienen koira söi."
+        "fi": "Sienilajeja on tuhansia, ja monet voivat aiheuttaa koirille vakavan sairastumisen. Jotkin aiheuttavat lievää oksentelua tai ripulia, toiset voivat johtaa maksan ja munuaisten vajaatoimintaan tai kouristuksiin. Oireet riippuvat lajista, eikä aina voi tietää, minkä sienen koira söi.",
+        "nb": "Det finnes tusenvis av sopparter, og mange kan gjøre hunder alvorlig syke. Noen gir mildt oppkast eller diaré, mens andre kan føre til lever- og nyresvikt eller kramper. Symptomene avhenger av arten, og det er ikke alltid mulig å vite hvilken sopp hunden har spist."
       },
       "signs": {
         "en": [
@@ -53793,6 +54048,18 @@
           "Kouristukset",
           "Vatsakipu",
           "Keltaisuus"
+        ],
+        "nb": [
+          "Oppkast",
+          "Diaré",
+          "Sikling",
+          "Svakhet",
+          "Sløvhet eller døsighet",
+          "Desorientering eller vingling",
+          "Skjelvinger",
+          "Kramper",
+          "Magesmerter",
+          "Gulsott"
         ]
       },
       "what_to_do": {
@@ -53809,7 +54076,8 @@
         "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći.",
         "sv": "Kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt, även innan några symtom har visat sig. Om du kan, ta med ett prov av svampen, inslaget i ett fuktigt hushållspapper och lagt i en papperspåse, så att veterinären lättare kan identifiera den.",
         "da": "Kontakt straks din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt, også før der viser sig symptomer. Hvis du kan, så tag en prøve af svampen med, pakket ind i et fugtigt stykke køkkenrulle i en papirpose, til hjælp for dyrlægen.",
-        "fi": "Ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos mahdollista, ota mukaan näyte sienestä kosteaan talouspaperiin käärittynä ja paperipussissa, jotta eläinlääkäri pystyy tunnistamaan sen."
+        "fi": "Ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos mahdollista, ota mukaan näyte sienestä kosteaan talouspaperiin käärittynä ja paperipussissa, jotta eläinlääkäri pystyy tunnistamaan sen.",
+        "nb": "Kontakt dyrlegen, giftinformasjon for dyr eller en dyrlegevakt med en gang, selv før det dukker opp tegn. Hvis du kan, tar du med en prøve av soppen, pakket inn i fuktig tørkepapir i en papirpose, som en hjelp til dyrlegen."
       },
       "serving": null,
       "child": {
@@ -53826,7 +54094,8 @@
         "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi.",
         "sv": "Svampar som växer utomhus är inte för hundar. Om du ser en hund äta en, berätta det för en vuxen direkt.",
         "da": "Svampe ude i naturen er ikke til hunde. Hvis du ser en hund spise en, så sig det til en voksen med det samme.",
-        "fi": "Ulkona kasvavat sienet eivät ole koirille. Jos näet koiran syövän sellaista, kerro heti aikuiselle."
+        "fi": "Ulkona kasvavat sienet eivät ole koirille. Jos näet koiran syövän sellaista, kerro heti aikuiselle.",
+        "nb": "Sopper som vokser ute, er ikke for hunder. Hvis du ser en hund spise en, må du si fra til en voksen med en gang."
       },
       "faq": [
         {
@@ -53844,7 +54113,8 @@
             "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?",
             "sv": "Ska jag vänta och se om hunden blir sjuk?",
             "da": "Skal jeg vente og se, om min hund bliver syg?",
-            "fi": "Pitäisikö odottaa ja katsoa, sairastuuko koira?"
+            "fi": "Pitäisikö odottaa ja katsoa, sairastuuko koira?",
+            "nb": "Bør jeg vente og se om hunden blir syk?"
           },
           "a": {
             "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
@@ -53860,7 +54130,8 @@
             "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa.",
             "sv": "Nej. Vänta inte på att symtom ska utvecklas. Att agera snabbt är det bästa du kan göra för hunden.",
             "da": "Nej. Se ikke tiden an, og vent ikke på symptomer. Hurtig handling er det bedste du kan gøre for din hund.",
-            "fi": "Ei. Älä odota oireiden kehittymistä. Nopea toiminta on parasta, mitä voit koirasi hyväksi tehdä."
+            "fi": "Ei. Älä odota oireiden kehittymistä. Nopea toiminta on parasta, mitä voit koirasi hyväksi tehdä.",
+            "nb": "Nei. Ikke vent på symptomer. Å reagere raskt er det beste du kan gjøre for hunden."
           }
         },
         {
@@ -53878,7 +54149,8 @@
             "hr": "Kako to spriječiti?",
             "sv": "Hur kan jag förebygga det?",
             "da": "Hvordan kan jeg forebygge det?",
-            "fi": "Miten voin ehkäistä tämän?"
+            "fi": "Miten voin ehkäistä tämän?",
+            "nb": "Hvordan kan jeg forebygge det?"
           },
           "a": {
             "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
@@ -53894,7 +54166,8 @@
             "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani.",
             "sv": "Utgå från att varje svamp hunden hittar är osäker, och håll ögonen på hunden när den är ute.",
             "da": "Betragt alle svampe i naturen som usikre, og hold øje med din hund, når den er ude.",
-            "fi": "Oleta, että jokainen koirasi löytämä sieni on vaarallinen, ja pidä koiraa silmällä ulkona."
+            "fi": "Oleta, että jokainen koirasi löytämä sieni on vaarallinen, ja pidä koiraa silmällä ulkona.",
+            "nb": "Gå ut fra at all sopp hunden finner, er utrygg, og hold øye med hunden når den er ute."
           }
         },
         {
@@ -53912,7 +54185,8 @@
             "hr": "Razlikuju li se gljive iz trgovine?",
             "sv": "Är svamp från affären annorlunda?",
             "da": "Er svampe fra butikken anderledes?",
-            "fi": "Ovatko kaupan sienet erilaisia?"
+            "fi": "Ovatko kaupan sienet erilaisia?",
+            "nb": "Er butikksopp noe annet?"
           },
           "a": {
             "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
@@ -53928,7 +54202,8 @@
             "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne.",
             "sv": "Ja. Svamp utan tillsatser från stora livsmedelsbutiker kan i allmänhet vara säker för hundar, även om hundar inte behöver den.",
             "da": "Ja. Naturelle svampe fra større dagligvarebutikker kan som regel anses for ufarlige for hunde, selvom hunde ikke har brug for dem.",
-            "fi": "Ovat. Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille, vaikka koirat eivät niitä tarvitse."
+            "fi": "Ovat. Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille, vaikka koirat eivät niitä tarvitse.",
+            "nb": "Ja. Sopp uten tilsetninger fra store dagligvarebutikker kan vanligvis være trygg for hunder, selv om de ikke trenger den."
           }
         }
       ],

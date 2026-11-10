@@ -15,7 +15,8 @@
     "hr": "Kukuruz (zrna kukuruza šećerca)",
     "sv": "Majs (sockermajskorn)",
     "da": "Majs (majskorn)",
-    "fi": "Maissi (herkkumaissin jyvät)"
+    "fi": "Maissi (herkkumaissin jyvät)",
+    "nb": "Mais (søtmaiskorn)"
   },
   "question": {
     "en": "Can cats eat corn?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti kukuruz?",
     "sv": "Får katter äta majs?",
     "da": "Må katte spise majs?",
-    "fi": "Saako kissa syödä maissia?"
+    "fi": "Saako kissa syödä maissia?",
+    "nb": "Kan katter spise mais?"
   },
   "url_slug": {
     "en": "corn",
@@ -47,7 +49,8 @@
     "hr": "kukuruz",
     "sv": "majs",
     "da": "majs",
-    "fi": "maissi"
+    "fi": "maissi",
+    "nb": "mais"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina.",
     "sv": "Ja, några få majskorn utan tillsatser går bra som en godbit då och då, om katten visar intresse. Cats Protection nämner majs bland de få grönsaker man kan ge en katt. Servera dem utan smör, salt eller kryddor.",
     "da": "Ja, nogle få naturelle majskorn er fine som godbid en gang imellem, hvis din kat har lyst. Cats Protection nævner majs blandt de få grøntsager du kan give en kat. Server dem uden smør, salt eller krydderier.",
-    "fi": "Saa, muutama maustamaton maissinjyvä sopii satunnaiseksi herkuksi, jos kissa on siitä kiinnostunut. Cats Protection mainitsee maissin yhtenä niistä harvoista kasviksista, joita kissalle voi antaa. Tarjoa se ilman voita, suolaa tai mausteita."
+    "fi": "Saa, muutama maustamaton maissinjyvä sopii satunnaiseksi herkuksi, jos kissa on siitä kiinnostunut. Cats Protection mainitsee maissin yhtenä niistä harvoista kasviksista, joita kissalle voi antaa. Tarjoa se ilman voita, suolaa tai mausteita.",
+    "nb": "Ja, noen få maiskorn uten tilsetninger er greit som en godbit nå og da hvis katten vil ha. Cats Protection nevner mais blant de få grønnsakene du kan gi en katt. Server dem uten smør, salt eller krydder."
   },
   "why": {
     "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
     "sv": "Cats Protection skriver att det finns några grönsaker man kan ge katten om den visar intresse, bland dem majs, men att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. PDSA skriver att många frukter och grönsaker kan ges i mycket små mängder som en godbit då och då. ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
     "da": "Cats Protection skriver at du kan give din kat nogle få grøntsager, hvis den har lyst, blandt andet majs. Men katte spiser sjældent grøntsager af sig selv, og der er ingen grund til at tilføje dem til kosten. PDSA skriver at mange slags frugt og grønt kan gives i meget små mængder som godbid en gang imellem. ASPCA skriver at alt plantemateriale kan give katte opkast og ondt i maven.",
-    "fi": "Cats Protectionin mukaan kissalle voi antaa muutamia kasviksia, jos se niistä pitää, muun muassa maissia. Kissat kuitenkin syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. PDSA:n mukaan monia hedelmiä ja kasviksia voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
+    "fi": "Cats Protectionin mukaan kissalle voi antaa muutamia kasviksia, jos se niistä pitää, muun muassa maissia. Kissat kuitenkin syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. PDSA:n mukaan monia hedelmiä ja kasviksia voi antaa hyvin pieninä määrinä satunnaisena herkkuna. ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja.",
+    "nb": "Cats Protection sier at det finnes noen få grønnsaker du kan gi katten hvis den viser interesse, blant dem mais, men at katter sjelden spiser grønnsaker av seg selv, og at det ikke er noe behov for å legge dem til i kostholdet. PDSA sier at mange typer frukt og grønnsaker kan gis i svært små mengder som en godbit nå og da. ASPCA opplyser at alt plantemateriale kan gi oppkast og urolig mage hos katter."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med några få korn. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
     "da": "Start med nogle få majskorn. Hvis din kat kaster op eller får ondt i maven bagefter, så stop, og spørg din dyrlæge.",
-    "fi": "Aloita muutamalla jyvällä. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Aloita muutamalla jyvällä. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Begynn med noen få korn. Hvis katten kaster opp eller får urolig mage etterpå, må du slutte å gi det og spørre dyrlegen."
   },
   "serving": {
     "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
@@ -113,7 +119,8 @@
     "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj.",
     "sv": "Några få tillagade majskorn utan smör, salt eller kryddor, i små munsbitar.",
     "da": "Nogle få naturelle, tilberedte majskorn i mundrette stykker, uden smør, salt eller krydderier.",
-    "fi": "Muutama kypsennetty maissinjyvä suupalan kokoisina paloina, ilman voita, suolaa tai mausteita."
+    "fi": "Muutama kypsennetty maissinjyvä suupalan kokoisina paloina, ilman voita, suolaa tai mausteita.",
+    "nb": "Noen få kokte maiskorn uten smør, salt eller krydder, i små biter."
   },
   "child": {
     "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak.",
     "sv": "Några majskorn kan vara en godbit för katten då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
     "da": "Nogle få majskorn kan være en godbid til katten en gang imellem. Katte har mest brug for kød, så grøntsager er kun et lille ekstra.",
-    "fi": "Muutama maissinjyvä voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
+    "fi": "Muutama maissinjyvä voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
+    "nb": "Noen få maiskorn kan være en godbit for katter nå og da. Katter trenger kjøtt, så grønnsaker er bare et lite ekstra."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
         "da": "Har katte brug for grøntsager?",
-        "fi": "Tarvitsevatko kissat kasviksia?"
+        "fi": "Tarvitsevatko kissat kasviksia?",
+        "nb": "Trenger katter grønnsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -163,7 +172,8 @@
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. En grönsak är aldrig mer än ett litet extra.",
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager af sig selv, og at der ikke er grund til at tilføje dem til kosten. En grøntsag kan højst være et lille ekstra.",
-        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
+        "nb": "Nei. Cats Protection sier at katter sjelden spiser grønnsaker av seg selv, og at det ikke er noe behov for å legge dem til i kostholdet. Grønnsaker kan høyst være et lite tillegg."
       }
     }
   ],
@@ -278,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bf9275e30e302d5248a827444294be5539fef1f3cbf35e1e68db5366efd297ee"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3dea9da375bf06cad8b6c6554bf0eb0d9293e06208df2e800b8d7be74f8a2e1f"
     }
   }
 }

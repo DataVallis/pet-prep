@@ -15,7 +15,8 @@
     "hr": "Slatka paprika",
     "sv": "Paprika",
     "da": "Peberfrugter",
-    "fi": "Paprikat"
+    "fi": "Paprikat",
+    "nb": "Paprika"
   },
   "question": {
     "en": "Can dogs eat bell peppers?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti slatku papriku?",
     "sv": "Får hundar äta paprika?",
     "da": "Må hunde spise peberfrugter?",
-    "fi": "Saako koira syödä paprikaa?"
+    "fi": "Saako koira syödä paprikaa?",
+    "nb": "Kan hunder spise paprika?"
   },
   "url_slug": {
     "en": "bell-peppers",
@@ -47,7 +49,8 @@
     "hr": "slatka-paprika",
     "sv": "paprika",
     "da": "peberfrugter",
-    "fi": "paprikat"
+    "fi": "paprikat",
+    "nb": "paprika"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, slatka je paprika sigurna za većinu pasa u umjerenim količinama. Nije otrovna, a sve su boje – zelena, žuta, narančasta i crvena – u redu ako je daješ običnu. Ukloni sjemenke i peteljku, a ljute papričice nikad ne daj.",
     "sv": "Ja, paprika är säker för de flesta hundar med måtta. Den är inte giftig, och gröna, gula, orangea och röda paprikor går alla bra när de ges utan tillsatser. Ta bort kärnor och skaft, och ge aldrig stark chili.",
     "da": "Ja, peberfrugter er ufarlige for de fleste hunde med måde. De er ugiftige, og grønne, gule, orange og røde peberfrugter er alle fine, når de gives uden tilbehør. Fjern kerner og stilk, og giv aldrig stærk peber.",
-    "fi": "Saa, paprika on turvallista useimmille koirille kohtuudella. Se ei ole myrkyllistä, ja vihreät, keltaiset, oranssit ja punaiset paprikat sopivat kaikki, kun ne tarjotaan maustamattomina. Poista siemenet ja varsi, äläkä koskaan anna tulisia pippureita."
+    "fi": "Saa, paprika on turvallista useimmille koirille kohtuudella. Se ei ole myrkyllistä, ja vihreät, keltaiset, oranssit ja punaiset paprikat sopivat kaikki, kun ne tarjotaan maustamattomina. Poista siemenet ja varsi, äläkä koskaan anna tulisia pippureita.",
+    "nb": "Ja, paprika er trygg for de fleste hunder med måte. Den er ikke giftig, og både grønn, gul, oransje og rød paprika kan gis, så lenge den er uten tilsetninger. Fjern frø og stilk, og gi aldri sterk chili."
   },
   "why": {
     "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
@@ -80,7 +84,8 @@
     "hr": "Slatka paprika nije otrovna i sadrži hranjive tvari koje mogu pridonijeti zdravlju psa. Prevelika količina može dovesti do probavnih smetnji, uključujući povraćanje ili proljev, a vanjska kožica nekim je psima teška za žvakanje i probavu. Neki će je psi dobro podnijeti, a neki neće.",
     "sv": "Paprika är inte giftig och innehåller näringsämnen som kan stödja hundens hälsa. För mycket kan ge magproblem, bland annat kräkningar eller diarré, och skalet kan vara svårt för en del hundar att tugga och smälta. En del hundar klarar det bra, andra inte.",
     "da": "Peberfrugter er ugiftige og indeholder næringsstoffer der kan understøtte din hunds sundhed. For meget kan give fordøjelsesproblemer, blandt andet opkast eller diarré, og det yderste skind kan være svært for nogle hunde at tygge og fordøje. Nogle hunde tåler det fint, andre ikke.",
-    "fi": "Paprika ei ole myrkyllistä, ja siitä saa ravintoaineita, jotka voivat tukea koirasi terveyttä. Liika voi aiheuttaa ruoansulatusvaivoja, kuten oksentelua tai ripulia, ja ulkokuorta voi olla joidenkin koirien vaikea pureskella ja sulattaa. Jotkin koirat sietävät sitä hyvin, toiset eivät."
+    "fi": "Paprika ei ole myrkyllistä, ja siitä saa ravintoaineita, jotka voivat tukea koirasi terveyttä. Liika voi aiheuttaa ruoansulatusvaivoja, kuten oksentelua tai ripulia, ja ulkokuorta voi olla joidenkin koirien vaikea pureskella ja sulattaa. Jotkin koirat sietävät sitä hyvin, toiset eivät.",
+    "nb": "Paprika er ikke giftig og inneholder næringsstoffer som kan støtte hundens helse. For mye kan gi fordøyelsesproblemer, blant annet oppkast eller diaré, og det ytre skinnet kan være vanskelig for noen hunder å tygge og fordøye. Noen hunder tåler paprika fint, andre ikke."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Papriku uvodi postupno da vidiš kako je pas podnosi, i ne pretjeruj. Nikad ne daj papriku pomiješanu s lukom ili češnjakom jer su luk i češnjak otrovni za pse.",
     "sv": "Börja med lite paprika åt gången så att du ser om hundens mage tål den, och överdriv inte. Ge aldrig paprika blandad med lök eller vitlök, eftersom de är giftiga för hundar.",
     "da": "Giv peberfrugt gradvist, så du kan se, om din hund tåler det, og lad være med at overdrive. Giv aldrig peberfrugt blandet med løg eller hvidløg, for de er giftige for hunde.",
-    "fi": "Totuta koira paprikaan vähitellen ja katso, sopiiko se sen vatsalle. Älä liioittele määrää. Älä koskaan anna paprikaa sipulin tai valkosipulin kanssa, sillä ne ovat koirille myrkyllisiä."
+    "fi": "Totuta koira paprikaan vähitellen ja katso, sopiiko se sen vatsalle. Älä liioittele määrää. Älä koskaan anna paprikaa sipulin tai valkosipulin kanssa, sillä ne ovat koirille myrkyllisiä.",
+    "nb": "Innfør paprika gradvis, slik at du ser om hunden tåler den, og ikke gi for mye. Gi aldri paprika blandet med løk eller hvitløk, for de er giftige for hunder."
   },
   "serving": {
     "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
@@ -113,7 +119,8 @@
     "hr": "Obična, sirova ili termički obrađena, bez sjemenki i peteljke. Kuhana na pari ili pasirana lakša je za jelo. Bez soli, začina i drugih sastojaka.",
     "sv": "Utan tillsatser, rå eller tillagad, med kärnor och skaft borttagna. Ångad eller mixad paprika är lättare att äta. Inget salt, inga kryddor eller andra ingredienser.",
     "da": "Naturel peberfrugt, rå eller tilberedt, uden kerner og stilk. Damper eller pureer du den, er den lettere at spise. Uden salt, krydderier eller andre ingredienser.",
-    "fi": "Maustamattomana, raakana tai kypsennettynä, siemenet ja varsi poistettuina. Höyryttäminen tai soseuttaminen helpottaa syömistä. Ei suolaa, mausteita eikä muita aineksia."
+    "fi": "Maustamattomana, raakana tai kypsennettynä, siemenet ja varsi poistettuina. Höyryttäminen tai soseuttaminen helpottaa syömistä. Ei suolaa, mausteita eikä muita aineksia.",
+    "nb": "Uten tilsetninger, rå eller kokt, med frø og stilk fjernet. Damping eller purering gjør den lettere å spise. Uten salt, krydder eller andre ingredienser."
   },
   "child": {
     "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije dobiti malo obične slatke paprike. Odrasla osoba prvo izvadi sjemenke. Ljute papričice nisu za pse.",
     "sv": "Hundar kan få lite paprika utan tillsatser. En vuxen tar bort kärnorna först. Stark chili är inte för hundar.",
     "da": "Hunde må få lidt naturel, sød peberfrugt. En voksen tager først kernerne ud. Stærk peber er ikke til hunde.",
-    "fi": "Koira saa vähän maustamatonta makeaa paprikaa. Aikuinen poistaa ensin siemenet. Tuliset pippurit eivät ole koirille."
+    "fi": "Koira saa vähän maustamatonta makeaa paprikaa. Aikuinen poistaa ensin siemenet. Tuliset pippurit eivät ole koirille.",
+    "nb": "Hunder kan få litt søt paprika uten tilsetninger. En voksen tar ut frøene først. Sterk chili er ikke for hunder."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti sirovu slatku papriku?",
         "sv": "Får hundar äta rå paprika?",
         "da": "Må hunde spise rå peberfrugt?",
-        "fi": "Saako koira syödä raakaa paprikaa?"
+        "fi": "Saako koira syödä raakaa paprikaa?",
+        "nb": "Kan hunder spise rå paprika?"
       },
       "a": {
         "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
@@ -163,7 +172,8 @@
         "hr": "Da, iako neki psi lakše žvaču i probavljaju papriku koja je termički obrađena, kuhana na pari ili pasirana.",
         "sv": "Ja, men en del hundar har lättare att tugga och smälta tillagad, ångad eller mixad paprika.",
         "da": "Ja, men nogle hunde har lettere ved at tygge og fordøje tilberedt, dampet eller pureret peberfrugt.",
-        "fi": "Saa, mutta joidenkin koirien on helpompi pureskella ja sulattaa kypsennettyä, höyrytettyä tai soseutettua paprikaa."
+        "fi": "Saa, mutta joidenkin koirien on helpompi pureskella ja sulattaa kypsennettyä, höyrytettyä tai soseutettua paprikaa.",
+        "nb": "Ja, men noen hunder har lettere for å tygge og fordøye kokt, dampet eller purert paprika."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Koja je boja najbolja?",
         "sv": "Vilken färg är bäst?",
         "da": "Hvilken farve er bedst?",
-        "fi": "Mikä väri on paras?"
+        "fi": "Mikä väri on paras?",
+        "nb": "Hvilken farge er best?"
       },
       "a": {
         "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
@@ -197,7 +208,8 @@
         "hr": "Sve su boje sigurne. Crvena paprika sadrži najviše vitamina i antioksidansa.",
         "sv": "Alla färger är säkra. Röd paprika innehåller mest vitaminer och antioxidanter.",
         "da": "Alle farver er sikre. Røde peberfrugter indeholder flest vitaminer og antioxidanter.",
-        "fi": "Kaikki värit ovat turvallisia. Punaisessa paprikassa on eniten vitamiineja ja antioksidantteja."
+        "fi": "Kaikki värit ovat turvallisia. Punaisessa paprikassa on eniten vitamiineja ja antioksidantteja.",
+        "nb": "Alle farger er trygge. Rød paprika inneholder mest vitaminer og antioksidanter."
       }
     },
     {
@@ -215,7 +227,8 @@
         "hr": "A jalapeño ili čili papričice?",
         "sv": "Hur är det med jalapeños och chilipeppar?",
         "da": "Hvad med jalapeños eller chilipeber?",
-        "fi": "Entä jalapeñot tai chilipippurit?"
+        "fi": "Entä jalapeñot tai chilipippurit?",
+        "nb": "Hva med jalapeño og annen chili?"
       },
       "a": {
         "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
@@ -231,7 +244,8 @@
         "hr": "Psu nikad ne daj ljute vrste papričica, kao što su jalapeño ili čili.",
         "sv": "Ge aldrig hunden stark chili, som jalapeño eller annan chilipeppar.",
         "da": "Giv aldrig din hund stærke sorter som jalapeños eller chilipeber.",
-        "fi": "Älä koskaan anna koirallesi tulisia pippurilajeja, kuten jalapeñoja tai chilipippureita."
+        "fi": "Älä koskaan anna koirallesi tulisia pippurilajeja, kuten jalapeñoja tai chilipippureita.",
+        "nb": "Gi aldri hunden sterke sorter som jalapeño eller annen chili."
       }
     }
   ],
@@ -378,6 +392,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2617c3aa970c3ac15004df0f569175e85d068e33e57c1baa2d0f7bba2bbc8e56"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4e7d776584efd6169a97a20e8312e90ac29151ba6c2c64b192944abd368bf1d1"
     }
   }
 }

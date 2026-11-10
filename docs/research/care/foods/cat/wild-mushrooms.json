@@ -15,7 +15,8 @@
     "hr": "Divlje gljive",
     "sv": "Vilda svampar",
     "da": "Vilde svampe",
-    "fi": "Luonnonvaraiset sienet"
+    "fi": "Luonnonvaraiset sienet",
+    "nb": "Ville sopper"
   },
   "question": {
     "en": "Are wild mushrooms dangerous for cats?",
@@ -31,7 +32,8 @@
     "hr": "Jesu li divlje gljive opasne za mačke?",
     "sv": "Är vilda svampar farliga för katter?",
     "da": "Er vilde svampe farlige for katte?",
-    "fi": "Ovatko luonnonvaraiset sienet vaarallisia kissoille?"
+    "fi": "Ovatko luonnonvaraiset sienet vaarallisia kissoille?",
+    "nb": "Er ville sopper farlige for katter?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
@@ -47,7 +49,8 @@
     "hr": "divlje-gljive",
     "sv": "vilda-svampar",
     "da": "vilde-svampe",
-    "fi": "luonnonvaraiset-sienet"
+    "fi": "luonnonvaraiset-sienet",
+    "nb": "ville-sopper"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da. Pet Poison Helpline savjetuje da se svaka gljiva koja nije kupljena za ljudsku prehranu smatra otrovnom za mačke, jer mnoge otrovne gljive izgledaju isto kao bezopasne. Ako mačka pojede gljivu pronađenu vani, odmah je odvedi veterinaru.",
     "sv": "Ja. Pet Poison Helpline rekommenderar att varje svamp som inte är köpt för att ätas av människor behandlas som giftig för katter, eftersom många giftiga svampar ser likadana ut som ofarliga. Om katten äter en svamp som har hittats utomhus, åk direkt till veterinären med katten.",
     "da": "Ja. Pet Poison Helpline anbefaler at behandle enhver svamp der ikke er købt som menneskemad som giftig for katte, fordi mange giftige svampe ligner ugiftige. Hvis din kat spiser en svamp fra naturen, så tag straks katten med til dyrlægen.",
-    "fi": "Kyllä. Pet Poison Helplinen mukaan jokaista sientä, jota ei ole ostettu ihmisten syötäväksi, on pidettävä kissalle myrkyllisenä, koska monet myrkylliset sienet näyttävät aivan vaarattomilta. Jos kissasi syö ulkoa löytyneen sienen, vie kissa heti eläinlääkäriin."
+    "fi": "Kyllä. Pet Poison Helplinen mukaan jokaista sientä, jota ei ole ostettu ihmisten syötäväksi, on pidettävä kissalle myrkyllisenä, koska monet myrkylliset sienet näyttävät aivan vaarattomilta. Jos kissasi syö ulkoa löytyneen sienen, vie kissa heti eläinlääkäriin.",
+    "nb": "Ja. Pet Poison Helpline anbefaler å regne all sopp som ikke er kjøpt for å spises av mennesker, som giftig for katter, fordi mange giftige sopper ser helt like ut som harmløse. Hvis katten spiser en sopp den har funnet ute, må du ta den med til dyrlegen med en gang."
   },
   "why": {
     "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
@@ -80,7 +84,8 @@
     "hr": "Pet Poison Helpline navodi da samo Sjeverna Amerika ima više od 100 vrsta otrovnih gljiva, među njima Amanita, Galerina i Lepiota, te da mnoge izgledaju isto kao neotrovne gljive. Neke gljive djeluju na kućne ljubimce već nakon 15 do 30 minuta, a druge tek nakon čak 24 sata. Ovisno o gljivi i pojedenoj količini mogu biti zahvaćeni želudac i crijeva, živčani sustav, jetra ili bubrezi.",
     "sv": "Pet Poison Helpline skriver att det bara i Nordamerika finns över 100 giftiga svamparter, bland dem Amanita, Galerina och Lepiota, och att många ser likadana ut som ogiftiga svampar. En del svampar påverkar husdjur inom 15 till 30 minuter, andra först efter upp till 24 timmar. Beroende på svampen och hur mycket katten har ätit kan mage och tarm, nervsystem, lever eller njurar påverkas.",
     "da": "Pet Poison Helpline skriver at der alene i Nordamerika findes over 100 giftige svampearter, blandt andet Amanita, Galerina og Lepiota, og at mange af dem ligner ugiftige svampe. Nogle svampe påvirker kæledyr inden for 15–30 minutter, andre først efter op til 24 timer. Afhængigt af svampen og mængden kan mave og tarm, nervesystemet, leveren eller nyrerne blive påvirket.",
-    "fi": "Pet Poison Helplinen mukaan pelkästään Pohjois-Amerikassa on yli 100 myrkyllistä sienilajia, muun muassa Amanita-, Galerina- ja Lepiota-sukujen lajeja, ja monet näyttävät samalta kuin myrkyttömät sienet. Jotkin sienet vaikuttavat lemmikkeihin 15–30 minuutin kuluessa, toiset vasta jopa 24 tunnin kuluttua. Sienestä ja syödystä määrästä riippuen vaikutus voi kohdistua mahaan ja suolistoon, hermostoon, maksaan tai munuaisiin."
+    "fi": "Pet Poison Helplinen mukaan pelkästään Pohjois-Amerikassa on yli 100 myrkyllistä sienilajia, muun muassa Amanita-, Galerina- ja Lepiota-sukujen lajeja, ja monet näyttävät samalta kuin myrkyttömät sienet. Jotkin sienet vaikuttavat lemmikkeihin 15–30 minuutin kuluessa, toiset vasta jopa 24 tunnin kuluttua. Sienestä ja syödystä määrästä riippuen vaikutus voi kohdistua mahaan ja suolistoon, hermostoon, maksaan tai munuaisiin.",
+    "nb": "Pet Poison Helpline sier at Nord-Amerika alene har over 100 giftige soppsorter, blant dem arter av slektene Amanita, Galerina og Lepiota, og at mange ser helt like ut som sopper som ikke er giftige. Noen sopper påvirker dyr innen 15–30 minutter, andre først etter opptil 24 timer. Avhengig av soppen og hvor mye som er spist, kan mage og tarm, nervesystemet, leveren eller nyrene bli påvirket."
   },
   "signs": {
     "en": [
@@ -222,6 +227,16 @@
       "Kouristukset",
       "Näköhäiriöt",
       "Aggressiivisuus tai sekavuus"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Svart, tjæreaktig avføring",
+      "Ustø gange",
+      "Skjelvinger",
+      "Kramper",
+      "Synsproblemer",
+      "Aggressivitet eller forvirring"
     ]
   },
   "what_to_do": {
@@ -238,7 +253,8 @@
     "hr": "Odmah odvedi mačku veterinaru, čak i prije nego što se pojave znakovi. Ako to možeš sigurno učiniti, ponesi uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
     "sv": "Åk direkt till veterinären med katten, även innan några symtom har visat sig. Om det går att göra på ett säkert sätt, ta med ett prov av svampen så att en specialist kan identifiera den. Försök inte få katten att kräkas utan att först fråga veterinären.",
     "da": "Tag straks din kat med til dyrlægen, også før der viser sig symptomer. Hvis du kan gøre det uden fare, skal du tage en prøve af svampen med, så en specialist kan identificere den. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-    "fi": "Vie kissasi heti eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos se onnistuu turvallisesti, ota mukaan näyte sienestä, jotta asiantuntija voi tunnistaa sen. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+    "fi": "Vie kissasi heti eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos se onnistuu turvallisesti, ota mukaan näyte sienestä, jotta asiantuntija voi tunnistaa sen. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+    "nb": "Ta katten med til dyrlegen med en gang, selv før det dukker opp tegn. Hvis du kan gjøre det uten fare, tar du med en prøve av soppen, slik at en spesialist kan identifisere den. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
   },
   "serving": null,
   "child": {
@@ -255,7 +271,8 @@
     "hr": "Gljive koje rastu vani nisu za mačke. Ako ih mačka onjuši ili nagrize, odmah reci odrasloj osobi.",
     "sv": "Svampar som växer utomhus är inte för katter. Om katten nosar eller knaprar på en, berätta det för en vuxen direkt.",
     "da": "Svampe ude i naturen er ikke til katte. Hvis katten snuser til eller nasker af en, så sig det til en voksen med det samme.",
-    "fi": "Ulkona kasvavat sienet eivät ole kissoille. Jos kisu nuuskii tai nakertaa sellaista, kerro heti aikuiselle."
+    "fi": "Ulkona kasvavat sienet eivät ole kissoille. Jos kisu nuuskii tai nakertaa sellaista, kerro heti aikuiselle.",
+    "nb": "Sopper som vokser ute, er ikke for katter. Hvis pusen snuser på eller napper i en, må du si fra til en voksen med en gang."
   },
   "faq": [
     {
@@ -273,7 +290,8 @@
         "hr": "Kako mogu spriječiti da mačka dođe do divljih gljiva?",
         "sv": "Hur håller jag katten borta från vilda svampar?",
         "da": "Hvordan holder jeg min kat væk fra vilde svampe?",
-        "fi": "Miten pidän kissani erossa luonnonvaraisista sienistä?"
+        "fi": "Miten pidän kissani erossa luonnonvaraisista sienistä?",
+        "nb": "Hvordan kan jeg holde katten unna ville sopper?"
       },
       "a": {
         "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
@@ -289,7 +307,8 @@
         "hr": "Pet Poison Helpline savjetuje da pomno pratiš što mačka radi vani i da je ne puštaš blizu divljih gljiva ni bilo koje gljive čije podrijetlo ne znaš.",
         "sv": "Pet Poison Helpline rekommenderar att du har god uppsikt över kattens utomhusaktiviteter och inte låter katten komma i närheten av vilda svampar eller någon svamp vars ursprung du inte känner till.",
         "da": "Pet Poison Helpline anbefaler at du holder godt øje med din kats færden udendørs og ikke lader katten komme nær vilde svampe eller svampe af ukendt oprindelse.",
-        "fi": "Pet Poison Helpline neuvoo seuraamaan tarkasti kissan ulkoilua eikä päästämään kissaa luonnonvaraisten sienten tai sellaisten sienten lähelle, joiden alkuperää et tunne."
+        "fi": "Pet Poison Helpline neuvoo seuraamaan tarkasti kissan ulkoilua eikä päästämään kissaa luonnonvaraisten sienten tai sellaisten sienten lähelle, joiden alkuperää et tunne.",
+        "nb": "Pet Poison Helpline anbefaler å følge nøye med på hva katten gjør ute, og ikke la den komme nær ville sopper eller sopp du ikke vet opprinnelsen til."
       }
     }
   ],
@@ -435,6 +454,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1648bafd4b6b0a2761a5ffe59ad747d514a920cabccf039b3b3152aeb0fa20d2"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c51d99e74db52d2521bdef5edd7b2960434d0bf1b8655932a9a33ca898d6261"
     }
   }
 }

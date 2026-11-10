@@ -15,7 +15,8 @@
     "hr": "Cikla",
     "sv": "Rödbetor",
     "da": "Rødbeder",
-    "fi": "Punajuuri"
+    "fi": "Punajuuri",
+    "nb": "Rødbeter"
   },
   "question": {
     "en": "Can dogs eat beetroot?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti ciklu?",
     "sv": "Får hundar äta rödbetor?",
     "da": "Må hunde spise rødbeder?",
-    "fi": "Saako koira syödä punajuurta?"
+    "fi": "Saako koira syödä punajuurta?",
+    "nb": "Kan hunder spise rødbeter?"
   },
   "url_slug": {
     "en": "beetroot",
@@ -47,7 +49,8 @@
     "hr": "cikla",
     "sv": "rodbetor",
     "da": "roedbeder",
-    "fi": "punajuuri"
+    "fi": "punajuuri",
+    "nb": "rodbeter"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, svježa je cikla u umjerenim količinama u redu za pse kao povremena poslastica. Sadrži mnogo šećera i oksalne kiseline, zato daj male porcije, a ako je tvoj pas sklon bubrežnim kamencima, prvo se posavjetuj s veterinarom.",
     "sv": "Ja, rödbeta går bra för hundar om den är färsk och ges med måtta, som en godbit då och då. Den innehåller mycket socker och oxalsyra, så håll portionerna små, och fråga veterinären först om hunden är benägen att få njurstenar.",
     "da": "Ja, rødbeder er fine for hunde, når de er friske og gives med måde som godbid en gang imellem. De har et højt indhold af sukker og oxalsyre, så hold portionerne små, og spørg først din dyrlæge, hvis din hund let får nyresten.",
-    "fi": "Saa, punajuuri sopii koirille tuoreena ja kohtuudella satunnaisena herkkuna. Siinä on paljon sokeria ja oksaalihappoa, joten pidä annokset pieninä ja kysy ensin eläinlääkäriltä, jos koirasi on altis munuaiskiville."
+    "fi": "Saa, punajuuri sopii koirille tuoreena ja kohtuudella satunnaisena herkkuna. Siinä on paljon sokeria ja oksaalihappoa, joten pidä annokset pieninä ja kysy ensin eläinlääkäriltä, jos koirasi on altis munuaiskiville.",
+    "nb": "Ja, rødbeter er greit for hunder når de er ferske og gis med måte, som en godbit nå og da. De inneholder mye sukker og oksalsyre, så hold porsjonene små, og spør dyrlegen først hvis hunden har lett for å få nyrestein."
   },
   "why": {
     "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
@@ -80,7 +84,8 @@
     "hr": "Cikla je bogata ugljikohidratima i šećerom, a previše šećera može pridonijeti upali gušterače ili pretilosti. Sadrži i mnogo oksalne kiseline, koja može uzrokovati kamence u mokraćnom mjehuru, kristale u mokraći i bubrežne kamence te manjak kalcija. Zbog kiselosti cikla kod nekih pasa može izazvati nadutost i proljev.",
     "sv": "Rödbetor innehåller mycket kolhydrater och socker, och för mycket socker kan bidra till inflammation i bukspottkörteln eller övervikt. De innehåller också mycket oxalsyra, som kan ge upphov till blåsstenar, urinkristaller och njurstenar och kan orsaka kalciumbrist. Eftersom rödbetor är sura kan de ge gasbildning och diarré hos en del hundar.",
     "da": "Rødbeder har et højt indhold af kulhydrater og sukker, og for meget sukker kan bidrage til betændelse i bugspytkirtlen (pankreatitis) eller overvægt. De har også et højt indhold af oxalsyre, som kan danne blærestene, urinkrystaller og nyresten og give calciummangel. Fordi rødbeder er sure, kan de give luft i maven og diarré hos nogle hunde.",
-    "fi": "Punajuuressa on paljon hiilihydraatteja ja sokeria, ja liika sokeri voi edistää haimatulehdusta tai lihavuutta. Siinä on myös paljon oksaalihappoa, joka voi muodostaa virtsarakkokiviä, virtsakiteitä ja munuaiskiviä ja voi aiheuttaa kalsiumin puutetta. Happamuutensa vuoksi punajuuri voi aiheuttaa joillekin koirille ilmavaivoja ja ripulia."
+    "fi": "Punajuuressa on paljon hiilihydraatteja ja sokeria, ja liika sokeri voi edistää haimatulehdusta tai lihavuutta. Siinä on myös paljon oksaalihappoa, joka voi muodostaa virtsarakkokiviä, virtsakiteitä ja munuaiskiviä ja voi aiheuttaa kalsiumin puutetta. Happamuutensa vuoksi punajuuri voi aiheuttaa joillekin koirille ilmavaivoja ja ripulia.",
+    "nb": "Rødbeter har mye karbohydrater og sukker, og for mye sukker kan bidra til betennelse i bukspyttkjertelen (pankreatitt) eller overvekt. De inneholder også mye oksalsyre, som kan danne blærestein, urinkrystaller og nyrestein og kan gi kalsiummangel. Fordi rødbeter er syrlige, kan de gi gass og diaré hos noen hunder."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Zbog cikle mokraća tvog psa može poprimiti tamnoružičastu ili crvenu boju, pa nemoj paničariti. Ako boja ne nestane nakon jednog dana, možda je posrijedi nešto drugo, primjerice infekcija mokraćnog sustava ili kamenci, pa se javi veterinaru.",
     "sv": "Rödbeta kan göra hundens kiss mörkrosa eller rött, så ingen panik. Om färgen inte har försvunnit efter ett dygn kan något annat ligga bakom, till exempel urinvägsinfektion eller stenar, så kontakta veterinären.",
     "da": "Rødbeder kan farve din hunds urin mørkerosa eller rød, så bare rolig. Hvis farven ikke forsvinder efter en dag, kan der være noget andet på færde, fx en urinvejsinfektion eller urinsten, så tal med din dyrlæge.",
-    "fi": "Punajuuri voi värjätä koiran virtsan tummanvaaleanpunaiseksi tai punaiseksi, joten älä säikähdä. Jos väri ei häviä päivän kuluessa, taustalla voi olla jotain muuta, kuten virtsatieinfektio tai kivet, joten keskustele eläinlääkärin kanssa."
+    "fi": "Punajuuri voi värjätä koiran virtsan tummanvaaleanpunaiseksi tai punaiseksi, joten älä säikähdä. Jos väri ei häviä päivän kuluessa, taustalla voi olla jotain muuta, kuten virtsatieinfektio tai kivet, joten keskustele eläinlääkärin kanssa.",
+    "nb": "Rødbeter kan gjøre hundens urin mørk rosa eller rød, så ikke få panikk. Hvis fargen ikke forsvinner etter ett døgn, kan noe annet være på gang, for eksempel urinveisinfeksjon eller stein, så snakk med dyrlegen."
   },
   "serving": {
     "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
@@ -113,7 +119,8 @@
     "hr": "Svježa, dobro oprana i oguljena, sirova ili termički obrađena, naribana ili narezana na male komadiće za jedan zalogaj. Cikla iz konzerve samo bez soli i drugih dodataka.",
     "sv": "Färsk, ordentligt skrubbad och skalad, rå eller kokt, riven eller skuren i små munsbitar. Rödbetor på burk bara om de är utan salt och andra tillsatser.",
     "da": "Friske, skrubbet rene og skrællede, rå eller tilberedte, revne eller skåret i små, mundrette stykker. Rødbeder på dåse kun uden tilsat salt og uden andre tilsætningsstoffer.",
-    "fi": "Tuoreena, puhtaaksi harjattuna ja kuorittuna, raakana tai kypsennettynä, raastettuna tai pieniksi suupalan kokoisiksi paloiksi leikattuna. Purkitettua punajuurta vain, jos siinä ei ole suolaa eikä muita lisäaineita."
+    "fi": "Tuoreena, puhtaaksi harjattuna ja kuorittuna, raakana tai kypsennettynä, raastettuna tai pieniksi suupalan kokoisiksi paloiksi leikattuna. Purkitettua punajuurta vain, jos siinä ei ole suolaa eikä muita lisäaineita.",
+    "nb": "Ferske, vasket og skrellet, rå eller kokte, revet eller skåret i små biter. Rødbeter på boks bare uten salt og andre tilsetninger."
   },
   "child": {
     "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije povremeno dobiti malo cikle. Od nje mu mokraća može postati ružičasta, a to je u redu.",
     "sv": "Hundar kan få lite rödbeta då och då. Kissen kan bli rosa av den, och det är helt okej.",
     "da": "Hunde må få lidt rødbede en gang imellem. Den kan gøre hundens tis lyserød, og det er helt i orden.",
-    "fi": "Koira saa joskus vähän punajuurta. Se voi värjätä koiran pissan vaaleanpunaiseksi, eikä se haittaa."
+    "fi": "Koira saa joskus vähän punajuurta. Se voi värjätä koiran pissan vaaleanpunaiseksi, eikä se haittaa.",
+    "nb": "Hunder kan få litt rødbeter nå og da. Tissen kan bli rosa, og det er helt greit."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Sirova ili termički obrađena cikla?",
         "sv": "Rå eller kokt rödbeta?",
         "da": "Rå eller tilberedte rødbeder?",
-        "fi": "Raaka vai kypsennetty punajuuri?"
+        "fi": "Raaka vai kypsennetty punajuuri?",
+        "nb": "Rå eller kokte rødbeter?"
       },
       "a": {
         "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
@@ -163,7 +172,8 @@
         "hr": "Obje su u redu. Sirova cikla zadržava najviše hranjivih tvari, a termički obrađenu možeš pripremiti na najviše načina.",
         "sv": "Båda går bra. Rå rödbeta behåller mest näring, och kokt rödbeta är det mest mångsidiga valet.",
         "da": "Begge dele er fine. Rå rødbeder bevarer flest næringsstoffer, og tilberedte rødbeder kan bruges på flest måder.",
-        "fi": "Molemmat sopivat. Raakana punajuuressa säilyy eniten ravintoaineita, ja kypsennettynä sitä on monipuolisinta käyttää."
+        "fi": "Molemmat sopivat. Raakana punajuuressa säilyy eniten ravintoaineita, ja kypsennettynä sitä on monipuolisinta käyttää.",
+        "nb": "Begge deler er greit. Rå rødbeter beholder mest næringsstoffer, og kokte rødbeter er det mest allsidige valget."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Smiju li psi jesti ciklu iz konzerve?",
         "sv": "Får hundar äta rödbetor på burk?",
         "da": "Må hunde spise rødbeder på dåse?",
-        "fi": "Saako koira syödä purkitettua punajuurta?"
+        "fi": "Saako koira syödä purkitettua punajuurta?",
+        "nb": "Kan hunder spise rødbeter på boks?"
       },
       "a": {
         "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
@@ -197,7 +208,8 @@
         "hr": "Da, ali pažljivo biraj: uzmi proizvod bez dodane soli i drugih dodataka.",
         "sv": "Ja, men välj noga: ta ett märke utan tillsatt salt och utan andra tillsatser.",
         "da": "Ja, men vælg med omtanke: køb et mærke uden tilsat salt og uden andre tilsætningsstoffer.",
-        "fi": "Saa, mutta valitse huolella: ota tuote, jossa ei ole lisättyä suolaa eikä muita lisäaineita."
+        "fi": "Saa, mutta valitse huolella: ota tuote, jossa ei ole lisättyä suolaa eikä muita lisäaineita.",
+        "nb": "Ja, men velg med omhu: ta et merke uten tilsatt salt og andre tilsetninger."
       }
     }
   ],
@@ -355,6 +367,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3470bf6b1407d6272f012e52dbae89e1f1d195ebbf0d9cc6ea9e87fd9c4374fa"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3fda5704b50ef57e1550255f942d8ea40c4fb573130c77c013b45fb793034ab"
     }
   }
 }

@@ -15,7 +15,8 @@
     "hr": "Zrna kukuruza",
     "sv": "Majskorn",
     "da": "Majskorn",
-    "fi": "Maissinjyvät"
+    "fi": "Maissinjyvät",
+    "nb": "Maiskorn"
   },
   "question": {
     "en": "Can dogs eat corn?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti kukuruz?",
     "sv": "Får hundar äta majs?",
     "da": "Må hunde spise majs?",
-    "fi": "Saako koira syödä maissia?"
+    "fi": "Saako koira syödä maissia?",
+    "nb": "Kan hunder spise mais?"
   },
   "url_slug": {
     "en": "corn",
@@ -47,7 +49,8 @@
     "hr": "zrna-kukuruza",
     "sv": "majskorn",
     "da": "majs",
-    "fi": "maissi"
+    "fi": "maissi",
+    "nb": "maiskorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, psi smiju jesti obična zrna kukuruza skinuta s klipa, u malim količinama i povremeno kao poslasticu. Izostavi maslac, sol i začine, a psu nikad ne daj kukuruz na klipu.",
     "sv": "Ja, hundar kan äta majskorn utan tillsatser som har skurits av kolven, i små mängder som en godbit då och då. Låt bli smör, salt och kryddor, och ge aldrig hunden majskolv.",
     "da": "Ja, hunde kan trygt spise naturelle majskorn uden kolben i små mængder som godbid en gang imellem. Undlad smør, salt og krydderier, og giv aldrig din hund majs på kolben.",
-    "fi": "Saa, koira voi turvallisesti syödä maustamattomia, tähkästä irrotettuja maissinjyviä pieninä määrinä satunnaisena herkkuna. Jätä voi, suola ja mausteet pois, äläkä koskaan anna koiralle maissintähkää."
+    "fi": "Saa, koira voi turvallisesti syödä maustamattomia, tähkästä irrotettuja maissinjyviä pieninä määrinä satunnaisena herkkuna. Jätä voi, suola ja mausteet pois, äläkä koskaan anna koiralle maissintähkää.",
+    "nb": "Ja, hunder kan trygt spise maiskorn uten tilsetninger som er tatt av kolben, i små mengder som en godbit nå og da. Dropp smør, salt og krydder, og gi aldri hunden maiskolbe."
   },
   "why": {
     "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
@@ -80,7 +84,8 @@
     "hr": "Kukuruz nije problem za većinu pasa, a može biti i dio uravnotežene prehrane jer daje energiju i pomaže probavi. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac. Prava je opasnost klip: psi mogu progutati komade ili cijeli klip, što može izazvati gušenje ili začepljenje crijeva.",
     "sv": "Majs är inget problem för de flesta hundar och kan till och med ingå i en balanserad kost, eftersom den ger energi och underlättar matsmältningen. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage. Kolven är den verkliga faran: hundar kan svälja bitar av den eller hela kolven, vilket kan ge kvävningsrisk eller stopp i tarmarna.",
     "da": "Majs er ikke et problem for de fleste hunde og kan endda indgå i en alsidig kost, hvor den giver energi og hjælper fordøjelsen. Smør, salt og krydderier tilfører fedt og natrium, som kan give hunde ondt i maven. Kolben er den egentlige fare: hunde kan sluge stykker af den eller hele kolben, hvilket kan give kvælning eller tarmblokering.",
-    "fi": "Maissi ei ole useimmille koirille ongelma, ja se voi kuulua tasapainoiseen ruokavalioon, sillä se antaa energiaa ja tukee ruoansulatusta. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan. Todellinen vaara on tähkä: koira voi niellä paloja tai koko tähkän, mikä voi aiheuttaa tukehtumisen tai suolitukoksen."
+    "fi": "Maissi ei ole useimmille koirille ongelma, ja se voi kuulua tasapainoiseen ruokavalioon, sillä se antaa energiaa ja tukee ruoansulatusta. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan. Todellinen vaara on tähkä: koira voi niellä paloja tai koko tähkän, mikä voi aiheuttaa tukehtumisen tai suolitukoksen.",
+    "nb": "Mais er ikke noe problem for de fleste hunder og kan til og med inngå i et balansert kosthold, siden den gir energi og hjelper fordøyelsen. Smør, salt og krydder tilfører fett og natrium som kan gi hunden urolig mage. Kolben er den egentlige faren: hunder kan svelge biter av den eller hele kolben, og det kan gi kvelning eller tarmblokkering."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Nudi samo obična zrna odrezana s klipa, i to povremeno. Prije nego što psu daš kukuruz, provjeri nije li alergičan na njega. Klipove drži posve izvan dosega.",
     "sv": "Ge bara majskorn utan tillsatser som har skurits av kolven, och bara då och då. Kontrollera att hunden inte är allergisk mot majs innan du ger den. Förvara majskolvar långt utom räckhåll.",
     "da": "Giv kun naturelle majskorn uden kolben, og kun en gang imellem. Sørg for at din hund ikke har en majsallergi, inden du giver den majs. Hold majskolber godt uden for rækkevidde.",
-    "fi": "Tarjoa vain maustamattomia, tähkästä leikattuja jyviä silloin tällöin. Varmista ennen maissin tarjoamista, ettei koirallasi ole maissiallergiaa. Pidä maissintähkät kaukana koiran ulottuvilta."
+    "fi": "Tarjoa vain maustamattomia, tähkästä leikattuja jyviä silloin tällöin. Varmista ennen maissin tarjoamista, ettei koirallasi ole maissiallergiaa. Pidä maissintähkät kaukana koiran ulottuvilta.",
+    "nb": "Gi bare maiskorn uten tilsetninger som er skåret av kolben, og bare nå og da. Før du gir mais, må du sjekke at hunden ikke har maisallergi. Hold maiskolber godt utenfor rekkevidde."
   },
   "serving": {
     "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
@@ -113,7 +119,8 @@
     "hr": "Obična zrna kukuruza šećerca, skinuta s klipa. Bez maslaca, soli i začina.",
     "sv": "Söta majskorn utan tillsatser, avskurna från kolven. Inget smör, salt eller kryddor.",
     "da": "Naturelle majskorn fra sukkermajs, skåret af kolben. Uden smør, salt og krydderier.",
-    "fi": "Maustamattomia herkkumaissin jyviä, tähkästä irrotettuina. Ei voita, suolaa eikä mausteita."
+    "fi": "Maustamattomia herkkumaissin jyviä, tähkästä irrotettuina. Ei voita, suolaa eikä mausteita.",
+    "nb": "Søtmaiskorn uten tilsetninger, tatt av kolben. Ikke smør, salt eller krydder."
   },
   "child": {
     "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
@@ -129,7 +136,8 @@
     "hr": "Pas smije dobiti nekoliko običnih zrna kukuruza. Klip nije za pse, pa ga odrasla osoba drži podalje.",
     "sv": "Hundar kan få några majskorn utan tillsatser. Kolven är inte för hundar, så en vuxen ser till att hunden inte kommer åt den.",
     "da": "Hunde må få nogle få naturelle majskorn. Kolben er ikke til hunde, så en voksen sørger for at holde den væk.",
-    "fi": "Koira saa muutaman maustamattoman maissinjyvän. Tähkä ei ole koirille, joten aikuinen pitää sen poissa."
+    "fi": "Koira saa muutaman maustamattoman maissinjyvän. Tähkä ei ole koirille, joten aikuinen pitää sen poissa.",
+    "nb": "Hunder kan få noen få maiskorn uten tilsetninger. Kolben er ikke for hunder, så en voksen holder den unna."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti kukuruz s maslacem?",
         "sv": "Får hundar äta majs med smör?",
         "da": "Må hunde spise majs med smør?",
-        "fi": "Saako koira syödä voilla maustettua maissia?"
+        "fi": "Saako koira syödä voilla maustettua maissia?",
+        "nb": "Kan hunder spise mais med smør?"
       },
       "a": {
         "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
@@ -163,7 +172,8 @@
         "hr": "Najbolje je to izbjegavati. Maslac, sol i začini dodaju masnoću i natrij koji mogu psu nadražiti želudac.",
         "sv": "Det är bäst att undvika det. Smör, salt och kryddor tillför fett och natrium som kan ge hunden orolig mage.",
         "da": "Det er bedst at undgå det. Smør, salt og krydderier tilfører fedt og natrium, som kan give din hund ondt i maven.",
-        "fi": "Parempi välttää. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan."
+        "fi": "Parempi välttää. Voi, suola ja mausteet lisäävät rasvaa ja natriumia, mikä voi sekoittaa koiran vatsan.",
+        "nb": "Det er best å unngå det. Smør, salt og krydder tilfører fett og natrium som kan gi hunden urolig mage."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Je li kukuruz u hrani za pse loš?",
         "sv": "Är det dåligt med majs i hundfoder?",
         "da": "Er majs i hundefoder dårligt?",
-        "fi": "Onko maissi koiranruoassa huono asia?"
+        "fi": "Onko maissi koiranruoassa huono asia?",
+        "nb": "Er mais i hundefôr dårlig?"
       },
       "a": {
         "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
@@ -197,7 +208,8 @@
         "hr": "Mnogi se veterinarski nutricionisti slažu da kukuruz nije problem za većinu pasa i da može biti dio dobro uravnotežene prehrane.",
         "sv": "Många veterinärer med nutrition som specialitet är överens om att majs inte är något problem för de flesta hundar och kan ingå i en väl balanserad kost.",
         "da": "Mange dyrlæger med speciale i ernæring er enige om at majs ikke er et problem for de fleste hunde og kan indgå i en alsidig kost.",
-        "fi": "Monet eläinravitsemuksen asiantuntijat ovat sitä mieltä, ettei maissi ole useimmille koirille ongelma ja että se voi kuulua hyvin tasapainotettuun ruokavalioon."
+        "fi": "Monet eläinravitsemuksen asiantuntijat ovat sitä mieltä, ettei maissi ole useimmille koirille ongelma ja että se voi kuulua hyvin tasapainotettuun ruokavalioon.",
+        "nb": "Mange dyrlegeeksperter på ernæring er enige i at mais ikke er noe problem for de fleste hunder og kan inngå i et godt balansert kosthold."
       }
     }
   ],
@@ -327,6 +339,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "83ba7143666dc909624002e377498999c581996172a213d3c4008e4899045f10"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dab726cdd0cf49eee48a8281f77f051be92234cd15eef6f4f1e3a780e0cc14ef"
     }
   }
 }
