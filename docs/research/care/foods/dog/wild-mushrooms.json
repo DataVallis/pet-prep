@@ -6,21 +6,24 @@
     "sl": "Gobe iz narave",
     "pt": "Cogumelos silvestres",
     "nl": "Wilde paddenstoelen",
-    "pl": "Dzikie grzyby"
+    "pl": "Dzikie grzyby",
+    "cs": "Divoké houby"
   },
   "question": {
     "en": "Can dogs eat wild mushrooms?",
     "sl": "Ali lahko psi jedo gobe, ki jih najdejo zunaj?",
     "pt": "Os cães podem comer cogumelos silvestres?",
     "nl": "Mogen honden wilde paddenstoelen eten?",
-    "pl": "Czy psy mogą jeść dzikie grzyby?"
+    "pl": "Czy psy mogą jeść dzikie grzyby?",
+    "cs": "Mohou psi jíst divoké houby?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
     "sl": "gobe-iz-narave",
     "pt": "cogumelos-silvestres",
     "nl": "wilde-paddenstoelen",
-    "pl": "dzikie-grzyby"
+    "pl": "dzikie-grzyby",
+    "cs": "divoke-houby"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Vsako gobo, ki jo pes najde zunaj, obravnavajte kot strupeno. Strupene in nestrupene gobe je težko ločiti, strupene pa so izjemno nevarne. Če je pes pojedel gobo iz narave, se takoj obrnite na veterinarja.",
     "pt": "Não. Trata como tóxico qualquer cogumelo que o teu cão encontre no exterior. É difícil distinguir os cogumelos tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos. Se o teu cão comeu um cogumelo silvestre, liga imediatamente ao teu veterinário.",
     "nl": "Nee. Beschouw elke paddenstoel die je hond buiten vindt als giftig. Giftige en niet-giftige paddenstoelen zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk. Heeft je hond een wilde paddenstoel gegeten, neem dan meteen contact op met je dierenarts.",
-    "pl": "Nie. Traktuj każdego grzyba, którego pies znajdzie na dworze, jak toksycznego. Trudno odróżnić grzyby toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne. Jeśli twój pies zjadł dzikiego grzyba, od razu skontaktuj się z weterynarzem."
+    "pl": "Nie. Traktuj każdego grzyba, którego pies znajdzie na dworze, jak toksycznego. Trudno odróżnić grzyby toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne. Jeśli twój pies zjadł dzikiego grzyba, od razu skontaktuj się z weterynarzem.",
+    "cs": "Ne. Každou houbu, kterou pes venku najde, považujte za toxickou. Toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné. Pokud pes snědl divokou houbu, okamžitě kontaktujte veterináře."
   },
   "why": {
     "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
     "sl": "Vrst gob je na tisoče in mnoge lahko pri psih povzročijo resno bolezen. Nekatere povzročijo blago bruhanje ali drisko, druge lahko vodijo v odpoved jeter in ledvic ali v krče. Znaki so odvisni od vrste gobe, ni pa vedno mogoče vedeti, katero gobo je pes pojedel.",
     "pt": "Existem milhares de espécies de cogumelos e muitas podem causar doença grave nos cães. Alguns provocam vómitos ou diarreia ligeiros, enquanto outros podem causar falência do fígado e dos rins ou convulsões. Os sinais dependem da espécie e nem sempre é possível saber que cogumelo o teu cão comeu.",
     "nl": "Er bestaan duizenden paddenstoelsoorten en veel ervan kunnen honden ernstig ziek maken. Sommige veroorzaken licht braken of diarree, andere kunnen leiden tot lever- en nierfalen of toevallen. De verschijnselen hangen af van de soort en het is niet altijd mogelijk te weten welke paddenstoel je hond heeft gegeten.",
-    "pl": "Istnieją tysiące gatunków grzybów i wiele z nich może poważnie rozchorować psa. Niektóre wywołują łagodne wymioty lub biegunkę, a inne mogą prowadzić do niewydolności wątroby i nerek lub drgawek. Objawy zależą od gatunku i nie zawsze da się ustalić, którego grzyba zjadł pies."
+    "pl": "Istnieją tysiące gatunków grzybów i wiele z nich może poważnie rozchorować psa. Niektóre wywołują łagodne wymioty lub biegunkę, a inne mogą prowadzić do niewydolności wątroby i nerek lub drgawek. Objawy zależą od gatunku i nie zawsze da się ustalić, którego grzyba zjadł pies.",
+    "cs": "Existují tisíce druhů hub a mnohé mohou psům způsobit vážné onemocnění. Některé vyvolají mírné zvracení nebo průjem, jiné mohou vést k selhání jater a ledvin nebo ke křečím. Příznaky závisejí na druhu houby a ne vždy lze zjistit, kterou houbu pes snědl."
   },
   "signs": {
     "en": [
@@ -97,6 +102,18 @@
       "Drgawki",
       "Ból brzucha",
       "Żółtaczka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Slinění",
+      "Slabost",
+      "Malátnost nebo ospalost",
+      "Dezorientace nebo vrávorání",
+      "Třes",
+      "Křeče",
+      "Bolest břicha",
+      "Žloutenka"
     ]
   },
   "what_to_do": {
@@ -104,7 +121,8 @@
     "sl": "Takoj se obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico, tudi preden se pojavijo znaki. Če lahko, prinesite vzorec gobe, zavit v vlažno papirnato brisačo v papirnati vrečki, da bo veterinar lažje pomagal.",
     "pt": "Liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência, mesmo antes de aparecerem sinais. Se puderes, leva uma amostra do cogumelo, embrulhada num papel de cozinha húmido e dentro de um saco de papel, para ajudar o veterinário.",
     "nl": "Neem meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren, ook voordat er verschijnselen zijn. Kun je dat, neem dan een monster van de paddenstoel mee, verpakt in een vochtig stuk keukenpapier in een papieren zak. Dat helpt de dierenarts verder.",
-    "pl": "Od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz, zabierz próbkę grzyba, owiniętą wilgotnym ręcznikiem papierowym i włożoną do papierowej torby, żeby ułatwić weterynarzowi rozpoznanie."
+    "pl": "Od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz, zabierz próbkę grzyba, owiniętą wilgotnym ręcznikiem papierowym i włożoną do papierowej torby, żeby ułatwić weterynarzowi rozpoznanie.",
+    "cs": "Okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost, i když se ještě neobjevily žádné příznaky. Pokud můžete, vezměte s sebou vzorek houby zabalený do vlhké papírové utěrky v papírovém sáčku, což veterináři pomůže."
   },
   "serving": null,
   "child": {
@@ -112,7 +130,8 @@
     "sl": "Gobe zunaj niso za pse. Če vidiš, da pes poje gobo, takoj povej odraslemu.",
     "pt": "Os cogumelos que crescem no exterior não são para os cães. Se vires um cão comer um, avisa logo um adulto.",
     "nl": "Paddenstoelen buiten zijn niet voor honden. Zie je een hond er een eten, vertel het dan meteen aan een volwassene.",
-    "pl": "Grzyby z dworu nie są dla psów. Jeśli zobaczysz, że pies zjada grzyba, od razu powiedz dorosłemu."
+    "pl": "Grzyby z dworu nie są dla psów. Jeśli zobaczysz, że pies zjada grzyba, od razu powiedz dorosłemu.",
+    "cs": "Houby z venku nejsou pro psy. Když uvidíš, že pes nějakou jí, hned to řekni dospělému."
   },
   "faq": [
     {
@@ -121,14 +140,16 @@
         "sl": "Naj počakam, ali bo pes zbolel?",
         "pt": "Devo esperar para ver se o meu cão fica doente?",
         "nl": "Moet ik afwachten of mijn hond ziek wordt?",
-        "pl": "Czy mam czekać, żeby zobaczyć, czy pies zachoruje?"
+        "pl": "Czy mam czekać, żeby zobaczyć, czy pies zachoruje?",
+        "cs": "Mám počkat, jestli pes onemocní?"
       },
       "a": {
         "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
         "sl": "Ne. Ne čakajte, da se pojavijo znaki. Hiter odziv je najboljše, kar lahko storite za psa.",
         "pt": "Não. Não esperes que apareçam sinais. Agir depressa é o melhor que podes fazer pelo teu cão.",
         "nl": "Nee. Wacht niet tot er verschijnselen komen. Snel reageren is het beste wat je voor je hond kunt doen.",
-        "pl": "Nie. Nie czekaj, aż pojawią się objawy. Szybka reakcja to najlepsze, co możesz zrobić dla swojego psa."
+        "pl": "Nie. Nie czekaj, aż pojawią się objawy. Szybka reakcja to najlepsze, co możesz zrobić dla swojego psa.",
+        "cs": "Ne. Nečekejte, až se příznaky objeví. Rychlá reakce je to nejlepší, co pro svého psa můžete udělat."
       }
     },
     {
@@ -137,14 +158,16 @@
         "sl": "Kako to preprečim?",
         "pt": "Como posso evitar que aconteça?",
         "nl": "Hoe kan ik het voorkomen?",
-        "pl": "Jak temu zapobiec?"
+        "pl": "Jak temu zapobiec?",
+        "cs": "Jak tomu předejít?"
       },
       "a": {
         "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
         "sl": "Predpostavite, da je vsaka goba, ki jo pes najde, nevarna, in psa zunaj spremljajte.",
         "pt": "Parte do princípio de que nenhum cogumelo que o teu cão encontre é seguro e vigia-o quando está no exterior.",
         "nl": "Ga ervan uit dat elke paddenstoel die je hond vindt onveilig is en houd je hond in de gaten als hij buiten is.",
-        "pl": "Zakładaj, że każdy grzyb, który pies znajdzie, jest niebezpieczny, i miej psa na oku, gdy jest na dworze."
+        "pl": "Zakładaj, że każdy grzyb, który pies znajdzie, jest niebezpieczny, i miej psa na oku, gdy jest na dworze.",
+        "cs": "Každou houbu, kterou pes najde, považujte za nebezpečnou a mějte psa venku na očích."
       }
     },
     {
@@ -153,14 +176,16 @@
         "sl": "So gobe iz trgovine drugačne?",
         "pt": "Os cogumelos comprados em lojas são diferentes?",
         "nl": "Zijn champignons uit de winkel anders?",
-        "pl": "Czy grzyby ze sklepu są inne?"
+        "pl": "Czy grzyby ze sklepu są inne?",
+        "cs": "Liší se houby z obchodu?"
       },
       "a": {
         "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
         "sl": "Da. Navadne gobe iz velikih trgovin so za pse načeloma lahko varne, čeprav jih psi ne potrebujejo.",
         "pt": "Sim. Os cogumelos simples das grandes superfícies podem, em geral, ser seguros para os cães, embora os cães não precisem deles.",
         "nl": "Ja. Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden, al hebben honden ze niet nodig.",
-        "pl": "Tak. Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów, choć psy ich nie potrzebują."
+        "pl": "Tak. Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów, choć psy ich nie potrzebują.",
+        "cs": "Ano. Houby bez dalších přísad z velkých obchodů s potravinami mohou být pro psy obecně bezpečné, i když je psi nepotřebují."
       }
     }
   ],
@@ -343,6 +368,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9184a70dd1f7a3c7da80516bc78a711f021aa95dd366d9b5a43e813f8e4adc99"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57416b802c2f7a48a1d12d8b3e69dcc585d0cdc9136af0978cb523cc9e17addf"
     }
   }
 }
