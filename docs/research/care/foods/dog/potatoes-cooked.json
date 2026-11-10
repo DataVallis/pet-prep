@@ -7,7 +7,8 @@
     "pt": "Batata cozida",
     "nl": "Gekookte aardappelen",
     "pl": "Ugotowane ziemniaki",
-    "cs": "Uvařené brambory"
+    "cs": "Uvařené brambory",
+    "hr": "Kuhani krumpir"
   },
   "question": {
     "en": "Can dogs eat cooked potatoes?",
@@ -15,7 +16,8 @@
     "pt": "Os cães podem comer batata cozida?",
     "nl": "Mogen honden gekookte aardappelen eten?",
     "pl": "Czy psy mogą jeść ugotowane ziemniaki?",
-    "cs": "Mohou psi jíst uvařené brambory?"
+    "cs": "Mohou psi jíst uvařené brambory?",
+    "hr": "Smiju li psi jesti kuhani krumpir?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
@@ -23,7 +25,8 @@
     "pt": "batata-cozida",
     "nl": "gekookte-aardappelen",
     "pl": "ugotowane-ziemniaki",
-    "cs": "uvarene-brambory"
+    "cs": "uvarene-brambory",
+    "hr": "kuhani-krumpir"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "pt": "Sim, os cães podem comer batata cozida com moderação, desde que simples. A batata cozida ou assada, sem manteiga, leite, sal nem temperos, não faz mal em pequenas quantidades, desde que esteja mole e não esteja esverdeada.",
     "nl": "Ja, honden mogen met mate gare aardappelen eten, als ze naturel zijn. Gekookte of gebakken aardappel zonder boter, melk, zout of kruiden is in kleine hoeveelheden prima, zolang hij zacht is en niet groen.",
     "pl": "Tak, psy mogą jeść ugotowane ziemniaki w umiarkowanych ilościach, jeśli są podane bez dodatków. Ziemniak gotowany lub pieczony, bez masła, mleka, soli i przypraw, jest w porządku w małych ilościach, o ile jest miękki i nie jest zielony.",
-    "cs": "Ano, psi mohou jíst uvařené brambory v mírném množství, pokud jsou podané bez dalších přísad. Vařená nebo pečená brambora bez másla, mléka, soli a koření je v malém množství v pořádku, pokud je měkká a není zelená."
+    "cs": "Ano, psi mohou jíst uvařené brambory v mírném množství, pokud jsou podané bez dalších přísad. Vařená nebo pečená brambora bez másla, mléka, soli a koření je v malém množství v pořádku, pokud je měkká a není zelená.",
+    "hr": "Da, psi smiju jesti termički obrađen krumpir u umjerenim količinama ako je običan. Kuhan ili pečen krumpir bez maslaca, mlijeka, soli i začina u redu je u malim količinama, samo neka bude mekan i ne zelen."
   },
   "why": {
     "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
@@ -40,7 +44,8 @@
     "pt": "A batata cozida simples não faz mal aos cães, mas deve ser uma guloseima, não substituir uma refeição, e ocupar apenas uma pequena parte da alimentação. Doses demasiado grandes podem levar à obesidade, e muita manteiga pode desencadear pancreatite. A batata crua ou esverdeada não é segura e é potencialmente tóxica.",
     "nl": "Naturel gare aardappel is prima voor honden, maar zie het als een snoepje en niet als maaltijdvervanger, en geef er slechts een klein deel van het voer aan. Te grote porties kunnen tot obesitas leiden en veel boter kan alvleesklierontsteking uitlokken. Rauwe of groene aardappelen zijn onveilig en mogelijk giftig.",
     "pl": "Zwykły ugotowany ziemniak jest dla psów w porządku, ale powinien być smakołykiem, a nie zamiennikiem posiłku, i stanowić tylko niewielką część diety. Zbyt duże porcje mogą prowadzić do otyłości, a dużo masła może wywołać zapalenie trzustki. Surowe lub zielone ziemniaki są niebezpieczne i potencjalnie toksyczne.",
-    "cs": "Uvařené brambory bez dalších přísad jsou pro psy v pořádku, ale měly by být pamlskem, ne náhradou jídla, a tvořit jen malou část jídelníčku. Příliš velké porce mohou vést k obezitě a hodně másla může spustit zánět slinivky břišní. Syrové nebo zelené brambory jsou nebezpečné a potenciálně toxické."
+    "cs": "Uvařené brambory bez dalších přísad jsou pro psy v pořádku, ale měly by být pamlskem, ne náhradou jídla, a tvořit jen malou část jídelníčku. Příliš velké porce mohou vést k obezitě a hodně másla může spustit zánět slinivky břišní. Syrové nebo zelené brambory jsou nebezpečné a potenciálně toxické.",
+    "hr": "Običan termički obrađen krumpir u redu je za pse, ali treba ostati poslastica, a ne zamjena za obrok, i činiti samo mali dio prehrane. Prevelike porcije mogu dovesti do pretilosti, a mnogo maslaca može izazvati upalu gušterače. Sirov ili zelen krumpir nije siguran i potencijalno je otrovan."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "pt": "Dá a batata cozida como guloseima ocasional, em pequenas quantidades. Nunca dês batata crua nem com manchas verdes, e dispensa pratos de batata feitos com manteiga, leite, sal ou especiarias.",
     "nl": "Geef gare aardappel af en toe en in kleine hoeveelheden. Geef nooit rauwe aardappel of aardappel met groene plekken en laat aardappelgerechten met boter, melk, zout of kruiden staan.",
     "pl": "Traktuj ugotowany ziemniak jako okazjonalny smakołyk w małych ilościach. Nigdy nie dawaj surowego ziemniaka ani ziemniaka z zielonymi plamami, a potrawy ziemniaczane z masłem, mlekiem, solą lub przyprawami omijaj.",
-    "cs": "Uvařené brambory dávejte jen občas a v malém množství. Nikdy nedávejte syrové brambory ani brambory se zelenými skvrnami a vyhněte se bramborovým pokrmům s máslem, mlékem, solí nebo kořením."
+    "cs": "Uvařené brambory dávejte jen občas a v malém množství. Nikdy nedávejte syrové brambory ani brambory se zelenými skvrnami a vyhněte se bramborovým pokrmům s máslem, mlékem, solí nebo kořením.",
+    "hr": "Termički obrađen krumpir daj kao povremenu poslasticu u malim količinama. Nikad ne daj sirov krumpir ni krumpir sa zelenim mrljama, a izbjegavaj jela od krumpira s maslacem, mlijekom, solju ili začinima."
   },
   "serving": {
     "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
@@ -57,7 +63,8 @@
     "pt": "Simples, cozida ou assada, até ficar tão mole que se possa esmagar, para que o cão não se engasgue. Sem manteiga, leite, sal nem temperos. As peles não fazem mal se não estiverem esverdeadas.",
     "nl": "Naturel gekookt of gebakken, zo gaar dat je hem kunt prakken, zodat je hond zich er niet in verslikt. Geen boter, melk, zout of kruiden. De schil mag erbij, zolang die niet groen is.",
     "pl": "Zwykły, gotowany lub pieczony, do takiej miękkości, żeby dało się go rozgnieść – wtedy pies się nie zadławi. Bez masła, mleka, soli i przypraw. Skórka też może być, o ile nie jest zielona.",
-    "cs": "Vařené nebo pečené bez dalších přísad, dokud nejsou tak měkké, že jdou rozmačkat a pes se jimi nezadusí. Bez másla, mléka, soli a koření. Slupky jsou v pořádku, pokud nejsou zelené."
+    "cs": "Vařené nebo pečené bez dalších přísad, dokud nejsou tak měkké, že jdou rozmačkat a pes se jimi nezadusí. Bez másla, mléka, soli a koření. Slupky jsou v pořádku, pokud nejsou zelené.",
+    "hr": "Običan, kuhan ili pečen dok ne omekša toliko da se može zgnječiti, kako se pas ne bi ugušio. Bez maslaca, mlijeka, soli i začina. Kora je u redu ako nije zelena."
   },
   "child": {
     "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
@@ -65,7 +72,8 @@
     "pt": "Os cães podem comer um pouco de batata cozida simples como guloseima. Um adulto confirma que está mole e sem manteiga nem sal.",
     "nl": "Honden mogen een beetje naturel gare aardappel als snoepje. Een volwassene zorgt dat hij zacht is en zonder boter of zout.",
     "pl": "Psy mogą dostać odrobinę zwykłego ugotowanego ziemniaka jako smakołyk. Dorosły pilnuje, żeby był miękki i bez masła czy soli.",
-    "cs": "Pejsek může jako pamlsek dostat trochu uvařených brambor bez dalších přísad. Dospělý dohlédne na to, aby byly měkké a bez másla a soli."
+    "cs": "Pejsek může jako pamlsek dostat trochu uvařených brambor bez dalších přísad. Dospělý dohlédne na to, aby byly měkké a bez másla a soli.",
+    "hr": "Pas smije dobiti malo običnog kuhanog krumpira kao poslasticu. Odrasla osoba pazi da je mekan i bez maslaca i soli."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "pt": "Os cães podem comer puré de batata?",
         "nl": "Mogen honden aardappelpuree eten?",
         "pl": "Czy psy mogą jeść puree ziemniaczane?",
-        "cs": "Mohou psi jíst bramborovou kaši?"
+        "cs": "Mohou psi jíst bramborovou kaši?",
+        "hr": "Smiju li psi jesti pire od krumpira?"
       },
       "a": {
         "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
@@ -83,7 +92,8 @@
         "pt": "Apenas puré de batata simples, em pequenas quantidades, sem manteiga, leite, sal nem temperos.",
         "nl": "Alleen naturel aardappelpuree, in kleine hoeveelheden en zonder boter, melk, zout of kruiden.",
         "pl": "Tylko zwykłe puree, w małych ilościach, bez masła, mleka, soli i przypraw.",
-        "cs": "Jen bramborovou kaši bez dalších přísad, v malém množství, bez másla, mléka, soli a koření."
+        "cs": "Jen bramborovou kaši bez dalších přísad, v malém množství, bez másla, mléka, soli a koření.",
+        "hr": "Samo obični pire, u malim količinama, bez maslaca, mlijeka, soli i začina."
       }
     },
     {
@@ -93,7 +103,8 @@
         "pt": "Os cães podem comer peles de batata?",
         "nl": "Mogen honden aardappelschillen eten?",
         "pl": "Czy psy mogą jeść skórki ziemniaków?",
-        "cs": "Mohou psi jíst bramborové slupky?"
+        "cs": "Mohou psi jíst bramborové slupky?",
+        "hr": "Smiju li psi jesti koru krumpira?"
       },
       "a": {
         "en": "Yes, potato skins are okay too, but not if they are green.",
@@ -101,7 +112,8 @@
         "pt": "Sim, as peles também não fazem mal, desde que não estejam esverdeadas.",
         "nl": "Aardappelschillen zijn ook prima, maar niet als ze groen zijn.",
         "pl": "Tak, skórki ziemniaków też są w porządku, ale nie wtedy, gdy są zielone.",
-        "cs": "Ano, slupky jsou také v pořádku, ale ne zelené."
+        "cs": "Ano, slupky jsou také v pořádku, ale ne zelené.",
+        "hr": "Da, i kora krumpira je u redu, ali ne ako je zelena."
       }
     },
     {
@@ -111,7 +123,8 @@
         "pt": "As batatas fritas são adequadas para cães?",
         "nl": "Is friet oké voor honden?",
         "pl": "Czy frytki są w porządku dla psów?",
-        "cs": "Jsou hranolky pro psy v pořádku?"
+        "cs": "Jsou hranolky pro psy v pořádku?",
+        "hr": "Je li pomfrit u redu za pse?"
       },
       "a": {
         "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
@@ -119,7 +132,8 @@
         "pt": "É fácil exagerar com batatas fritas, rösti e outros pratos de batata. As batatas devem ser guloseimas, não substituir refeições.",
         "nl": "Bij friet, hashbrowns en andere aardappelgerechten krijgt een hond al snel te veel van het goede. Aardappel is bedoeld als snoepje, niet als maaltijdvervanger.",
         "pl": "Przy frytkach, plackach ziemniaczanych i innych potrawach ziemniaczanych łatwo przesadzić z ilością. Ziemniaki powinny być smakołykami, a nie zamiennikami posiłków.",
-        "cs": "U hranolků, bramborových placek a dalších bramborových pokrmů je snadné to přehnat. Brambory mají být pamlskem, ne náhradou jídla."
+        "cs": "U hranolků, bramborových placek a dalších bramborových pokrmů je snadné to přehnat. Brambory mají být pamlskem, ne náhradou jídla.",
+        "hr": "Uz pomfrit, pržene pljeskavice od krumpira (hash browns) i druga jela od krumpira lako je pretjerati. Krumpir treba biti poslastica, a ne zamjena za obroke."
       }
     }
   ],
@@ -214,6 +228,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90e1eaa4ecaa4fc9f2f838ec35c686a8da6e067097a0582523286f1994c0c86b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4678cba8a83dcdea033a35f870d82cdf44d4747d8c00755fe642e97ffb34864b"
     }
   }
 }

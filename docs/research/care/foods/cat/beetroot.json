@@ -7,7 +7,8 @@
     "pt": "Beterraba",
     "nl": "Rode biet",
     "pl": "Buraki ćwikłowe",
-    "cs": "Červená řepa"
+    "cs": "Červená řepa",
+    "hr": "Cikla"
   },
   "question": {
     "en": "Can cats eat beetroot?",
@@ -15,7 +16,8 @@
     "pt": "Os gatos podem comer beterraba?",
     "nl": "Mogen katten rode biet eten?",
     "pl": "Czy koty mogą jeść buraki ćwikłowe?",
-    "cs": "Mohou kočky jíst červenou řepu?"
+    "cs": "Mohou kočky jíst červenou řepu?",
+    "hr": "Smiju li mačke jesti ciklu?"
   },
   "url_slug": {
     "en": "beetroot",
@@ -23,7 +25,8 @@
     "pt": "beterraba",
     "nl": "rode-biet",
     "pl": "buraki-cwiklowe",
-    "cs": "cervena-repa"
+    "cs": "cervena-repa",
+    "hr": "cikla"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "pt": "Sim, um pedacinho de beterraba simples é aceitável como guloseima ocasional. A ASPCA classifica a beterraba como não tóxica para os gatos. Mantém, no entanto, as folhas grandes fora do alcance: a ASPCA refere que as folhas grandes e maduras contêm ácido oxálico.",
     "nl": "Ja, een klein stukje naturele rode biet is af en toe prima als traktatie. De ASPCA noemt bieten, waaronder rode biet, niet giftig voor katten. Houd de grote bladeren wel uit de buurt: volgens de ASPCA bevatten grote, volgroeide bladeren oxaalzuur.",
     "pl": "Tak, mały kawałek zwykłego buraka ćwikłowego jest w porządku jako okazjonalny smakołyk. ASPCA uznaje buraki, także ćwikłowe, za nietoksyczne dla kotów. Trzymaj jednak kota z dala od dużych liści: ASPCA zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy.",
-    "cs": "Ano, malý kousek červené řepy bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA řadí řepu, včetně červené, mezi rostliny netoxické pro kočky. Držte ale kočku dál od velkých listů: ASPCA upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou."
+    "cs": "Ano, malý kousek červené řepy bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA řadí řepu, včetně červené, mezi rostliny netoxické pro kočky. Držte ale kočku dál od velkých listů: ASPCA upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou.",
+    "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu."
   },
   "why": {
     "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -40,7 +44,8 @@
     "pt": "A ASPCA classifica a beterraba (Beta vulgaris) como não tóxica para os gatos e refere que as folhas grandes e maduras contêm ácido oxálico. Os gatos não precisam de fruta nem de legumes na alimentação, mas a PDSA diz que muitos podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere ainda que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
     "nl": "De ASPCA noemt bieten (Beta vulgaris, ook wel rode biet genoemd) niet giftig voor katten en meldt dat grote, volgroeide bladeren oxaalzuur bevatten. Katten hebben geen fruit of groente nodig in hun voeding, maar volgens PDSA kun je veel soorten in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
     "pl": "ASPCA uznaje buraki (Beta vulgaris, czyli burak ćwikłowy) za nietoksyczne dla kotów i zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy. Koty nie potrzebują w diecie owoców ani warzyw, ale według PDSA wiele z nich można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza też, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
-    "cs": "ASPCA řadí řepu (Beta vulgaris, česky také červená řepa) mezi rostliny netoxické pro kočky a upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou. Kočky ve stravě ovoce ani zeleninu nepotřebují, ale podle PDSA lze mnohé z nich podávat ve velmi malém množství jako občasný pamlsek. ASPCA také upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem."
+    "cs": "ASPCA řadí řepu (Beta vulgaris, česky také červená řepa) mezi rostliny netoxické pro kočky a upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou. Kočky ve stravě ovoce ani zeleninu nepotřebují, ale podle PDSA lze mnohé z nich podávat ve velmi malém množství jako občasný pamlsek. ASPCA také upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
+    "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
     "nl": "Begin met een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
-    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte řepu podávat a poraďte se s veterinářem."
+    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte řepu podávat a poraďte se s veterinářem.",
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
   },
   "serving": {
     "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
@@ -57,7 +63,8 @@
     "pt": "Um pedacinho de beterraba simples, do tamanho de uma dentada, sem manteiga, sal nem temperos. Mantém as folhas grandes longe do teu gato.",
     "nl": "Een klein, hapklaar stukje naturele rode biet, zonder boter, zout of kruiden. Houd de grote bladeren uit de buurt van je kat.",
     "pl": "Mały kawałek zwykłego buraka ćwikłowego, na jeden kęs, bez masła, soli i przypraw. Duże liście trzymaj z dala od kota.",
-    "cs": "Malý kousek červené řepy na jedno sousto, bez másla, soli a koření. Velké listy držte mimo dosah kočky."
+    "cs": "Malý kousek červené řepy na jedno sousto, bez másla, soli a koření. Velké listy držte mimo dosah kočky.",
+    "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke."
   },
   "child": {
     "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
@@ -65,7 +72,8 @@
     "pt": "Um pedacinho de beterraba pode ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo da sua própria comida de gato.",
     "nl": "Een heel klein stukje rode biet kan af en toe een traktatie voor je kat zijn. Katten hebben vooral hun eigen kattenvoer nodig.",
     "pl": "Malutki kawałek buraka można czasem dać kotu jako smakołyk. Najważniejsza dla kota jest jego własna karma.",
-    "cs": "Kousek červené řepy může být pro kočku občas pamlsek. Kočky potřebují hlavně vlastní kočičí krmivo."
+    "cs": "Kousek červené řepy může být pro kočku občas pamlsek. Kočky potřebují hlavně vlastní kočičí krmivo.",
+    "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke."
   },
   "faq": [],
   "sources": [
@@ -147,6 +155,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3ef2059220d03014a829017ed981ae9cb6da3a0a28f542e8317b6be88c65e181"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f642f53a4d206e324b77e018f189d924f862118ba5b9d97dea057256fe9cf146"
     }
   }
 }

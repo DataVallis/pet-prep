@@ -7,7 +7,8 @@
     "pt": "Cogumelos comprados no supermercado",
     "nl": "Champignons uit de winkel",
     "pl": "Grzyby ze sklepu",
-    "cs": "Houby z obchodu"
+    "cs": "Houby z obchodu",
+    "hr": "Gljive iz trgovine"
   },
   "question": {
     "en": "Can cats eat store-bought mushrooms?",
@@ -15,7 +16,8 @@
     "pt": "Os gatos podem comer cogumelos comprados no supermercado?",
     "nl": "Mogen katten champignons uit de winkel eten?",
     "pl": "Czy koty mogą jeść grzyby ze sklepu?",
-    "cs": "Mohou kočky jíst houby z obchodu?"
+    "cs": "Mohou kočky jíst houby z obchodu?",
+    "hr": "Smiju li mačke jesti gljive iz trgovine?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
@@ -23,7 +25,8 @@
     "pt": "cogumelos-do-supermercado",
     "nl": "champignons",
     "pl": "grzyby-ze-sklepu",
-    "cs": "houby-z-obchodu"
+    "cs": "houby-z-obchodu",
+    "hr": "gljive-iz-trgovine"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "pt": "É melhor não dar cogumelos ao teu gato. A Pet Poison Helpline refere que alguns cogumelos são seguros para gatos, mas aconselha cautela, e os gatos não precisam de nada além de uma alimentação completa. Nunca dês cogumelos cozinhados com alho ou cebola.",
     "nl": "Deel liever geen champignons met je kat. Pet Poison Helpline zegt dat sommige paddenstoelen veilig zijn voor katten, maar roept op tot voorzichtigheid, en katten hebben niets nodig behalve een compleet kattenvoer. Geef nooit champignons die met knoflook of ui zijn bereid.",
     "pl": "Najlepiej nie dawać kotu grzybów. Pet Poison Helpline podaje, że niektóre grzyby są dla kotów bezpieczne, ale zaleca ostrożność, a koty nie potrzebują niczego poza pełnowartościową karmą. Nigdy nie dawaj grzybów przyrządzonych z czosnkiem lub cebulą.",
-    "cs": "Nejlepší je kočce houby nedávat. Pet Poison Helpline uvádí, že některé houby jsou pro kočky bezpečné, ale radí k opatrnosti, a kočky nepotřebují nic kromě kompletního krmiva. Nikdy nedávejte houby připravené s česnekem nebo cibulí."
+    "cs": "Nejlepší je kočce houby nedávat. Pet Poison Helpline uvádí, že některé houby jsou pro kočky bezpečné, ale radí k opatrnosti, a kočky nepotřebují nic kromě kompletního krmiva. Nikdy nedávejte houby připravené s česnekem nebo cibulí.",
+    "hr": "Najbolje je ne davati gljive mački. Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali poziva na oprez, a mačkama ne treba ništa osim potpune hrane za mačke. Nikad ne daj gljive pripremljene s češnjakom ili lukom."
   },
   "why": {
     "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
@@ -40,7 +44,8 @@
     "pt": "A Pet Poison Helpline refere que, embora alguns cogumelos sejam seguros para os gatos, convém ter cautela, e aconselha tratar como tóxicos todos os cogumelos que não tenham sido comprados para consumo humano. Aconselha ainda a não acrescentar cogumelos à alimentação do gato. A PDSA diz que os gatos não precisam de nada além de uma alimentação completa, e a Cats Protection avisa que o alho e a cebola podem deixar os gatos muito doentes, pelo que os pratos de cogumelos feitos para pessoas não são adequados.",
     "nl": "Pet Poison Helpline zegt dat sommige paddenstoelen weliswaar veilig zijn voor katten, maar dat je er voorzichtig mee moet zijn, en adviseert om alle paddenstoelen die niet als voedsel voor mensen zijn gekocht als giftig te beschouwen. Ook raadt de organisatie af om paddenstoelen aan het voer van een kat toe te voegen. Volgens PDSA hebben katten niets nodig behalve een compleet voer, en Cats Protection waarschuwt dat knoflook en ui katten erg ziek kunnen maken, dus gerechten met paddenstoelen die voor mensen zijn gemaakt zijn niet geschikt.",
     "pl": "Pet Poison Helpline podaje, że choć niektóre grzyby są dla kotów bezpieczne, trzeba zachować ostrożność, a grzyby, które nie zostały kupione jako jedzenie dla ludzi, traktować jak toksyczne. Odradza też dodawanie grzybów do diety kota. Według PDSA koty nie potrzebują niczego poza pełnowartościową dietą, a Cats Protection ostrzega, że czosnek i cebula mogą bardzo rozchorować kota, więc dania z grzybami przygotowane dla ludzi się nie nadają.",
-    "cs": "Pet Poison Helpline uvádí, že i když jsou některé houby pro kočky bezpečné, je třeba opatrnosti, a radí považovat za toxické všechny houby, které nebyly koupeny jako potravina pro lidi. Také radí houby do jídelníčku kočky nezařazovat. Podle PDSA kočky nepotřebují nic kromě kompletní stravy a Cats Protection varuje, že česnek a cibule mohou u koček vyvolat vážné onemocnění, takže houbová jídla připravená pro lidi nejsou vhodná."
+    "cs": "Pet Poison Helpline uvádí, že i když jsou některé houby pro kočky bezpečné, je třeba opatrnosti, a radí považovat za toxické všechny houby, které nebyly koupeny jako potravina pro lidi. Také radí houby do jídelníčku kočky nezařazovat. Podle PDSA kočky nepotřebují nic kromě kompletní stravy a Cats Protection varuje, že česnek a cibule mohou u koček vyvolat vážné onemocnění, takže houbová jídla připravená pro lidi nejsou vhodná.",
+    "hr": "Pet Poison Helpline navodi da su neke gljive sigurne za mačke, ali da je potreban oprez, te savjetuje da se otrovnom smatra svaka gljiva koja nije kupljena za ljudsku prehranu. Savjetuje i da se gljive ne dodaju u prehranu mačke. PDSA navodi da mačkama ne treba ništa osim potpune prehrane, a Cats Protection upozorava da češnjak i luk mogu jako razboljeti mačke, pa jela s gljivama pripremljena za ljude nisu prikladna."
   },
   "signs": {
     "en": [
@@ -66,6 +71,10 @@
     "cs": [
       "Zvracení",
       "Průjem"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev"
     ]
   },
   "what_to_do": {
@@ -74,7 +83,8 @@
     "pt": "Se não tens a certeza de que o cogumelo foi comprado numa loja, trata-o como tóxico e leva imediatamente o teu gato ao veterinário. Se o teu gato comer um cogumelo e depois tiver vómitos ou diarreia, procura imediatamente assistência veterinária.",
     "nl": "Weet je niet zeker of de paddenstoel uit de winkel komt? Behandel hem dan als giftig en ga meteen met je kat naar de dierenarts. Als je kat een paddenstoel eet en daarna braakt of diarree krijgt, zoek dan meteen dierenartshulp.",
     "pl": "Jeśli nie masz pewności, że grzyb pochodzi ze sklepu, traktuj go jak toksyczny i od razu zawiez kota do weterynarza. Jeśli kot zjadł grzyba, a potem wymiotuje albo ma biegunkę, od razu skontaktuj się z weterynarzem.",
-    "cs": "Pokud si nejste jistí, že houba pocházela z obchodu, považujte ji za toxickou a okamžitě jeďte s kočkou k veterináři. Pokud kočka snědla houbu a poté zvrací nebo má průjem, okamžitě vyhledejte veterinární pomoc."
+    "cs": "Pokud si nejste jistí, že houba pocházela z obchodu, považujte ji za toxickou a okamžitě jeďte s kočkou k veterináři. Pokud kočka snědla houbu a poté zvrací nebo má průjem, okamžitě vyhledejte veterinární pomoc.",
+    "hr": "Ako nije sigurno da gljiva potječe iz trgovine, smatraj je otrovnom i odmah odvedi mačku veterinaru. Ako mačka pojede gljivu pa povraća ili ima proljev, odmah potraži veterinarsku pomoć."
   },
   "serving": null,
   "child": {
@@ -83,7 +93,8 @@
     "pt": "Os cogumelos são comida de pessoas, não de gatos. A comida própria para gatos já tem tudo o que eles precisam.",
     "nl": "Champignons zijn voor mensen, niet voor katten. Katten krijgen alles wat ze nodig hebben uit hun eigen kattenvoer.",
     "pl": "Grzyby to jedzenie dla ludzi, nie dla kotów. Koty dostają z własnej karmy wszystko, czego potrzebują.",
-    "cs": "Houby jsou jídlo pro lidi, ne pro kočky. Kočky najdou ve vlastním krmivu všechno, co potřebují."
+    "cs": "Houby jsou jídlo pro lidi, ne pro kočky. Kočky najdou ve vlastním krmivu všechno, co potřebují.",
+    "hr": "Gljive su hrana za ljude, a ne za mačke. Sve što im treba, mačke dobivaju iz svoje hrane."
   },
   "faq": [
     {
@@ -93,7 +104,8 @@
         "pt": "E se o meu gato comeu um cogumelo do jardim?",
         "nl": "Wat als mijn kat een paddenstoel uit de tuin heeft gegeten?",
         "pl": "Co zrobić, jeśli kot zjadł grzyba z ogrodu?",
-        "cs": "Co když kočka snědla houbu ze zahrady?"
+        "cs": "Co když kočka snědla houbu ze zahrady?",
+        "hr": "Što ako je mačka pojela gljivu iz vrta?"
       },
       "a": {
         "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
@@ -101,7 +113,8 @@
         "pt": "Trata-o como tóxico. A Pet Poison Helpline aconselha a levar imediatamente o gato ao veterinário e, se possível, a recolher com cuidado uma amostra do cogumelo, para que um especialista o possa identificar.",
         "nl": "Behandel hem als giftig. Pet Poison Helpline zegt dat je meteen met je kat naar de dierenarts moet gaan en, als dat kan, voorzichtig een monster van de paddenstoel moet meenemen, zodat een specialist hem kan identificeren.",
         "pl": "Traktuj go jak toksycznego. Pet Poison Helpline radzi od razu zawieźć kota do weterynarza i, jeśli to możliwe, ostrożnie zabrać próbkę grzyba, żeby specjalista mógł go rozpoznać.",
-        "cs": "Považujte ji za toxickou. Pet Poison Helpline radí okamžitě odvézt kočku k veterináři a pokud možno s sebou opatrně vzít vzorek houby, aby ji odborník mohl určit."
+        "cs": "Považujte ji za toxickou. Pet Poison Helpline radí okamžitě odvézt kočku k veterináři a pokud možno s sebou opatrně vzít vzorek houby, aby ji odborník mohl určit.",
+        "hr": "Smatraj je otrovnom. Pet Poison Helpline savjetuje da mačku odmah odvedeš veterinaru i, ako je moguće, pažljivo poneseš uzorak gljive kako bi stručnjak mogao odrediti o kojoj je gljivi riječ."
       }
     }
   ],
@@ -180,6 +193,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1228ea49645014f61014fe5ce5c4d4d5ad35e403f245c7b520f366ba0891b308"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16c8cfb344d57c3b1df6df24bd1a3f6e7229174b2289ceb843ccb54e34b8af7e"
     }
   }
 }
