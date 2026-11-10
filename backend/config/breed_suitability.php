@@ -2491,5 +2491,30 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S757'], 'refs' => ['dogue_de_bordeaux.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-101 Flat-Coated Retriever — not a welfare breed (RKC Breed Watch Category 1, S762). shorter_lifespan from the RKC
+        // key fact "Lifespan: Under 10 years" (S762) although McMillan 2024 gives 11.7 y (S123) — Newfoundland precedent, open for
+        // David. No new vocabulary key.
+        'flat_coated_retriever' => [
+            'suits' => [
+                // S762 "Exercise: More than 2 hours per day".
+                ['tag' => 'active_family', 'source_ids' => ['S762'], 'refs' => ['flat_coated_retriever.exercise.adult', 'flat_coated_retriever.suitability.rkc_exercise']],
+                // S763 "Flat-Coated Retrievers are wonderful family dogs that generally do well with children and other pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S763'], 'refs' => ['flat_coated_retriever.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S763'], 'refs' => ['flat_coated_retriever.behaviour.children']],
+                // S763 "They generally mesh well with kids and other furry friends, especially with proper introductions and socialization."
+                ['tag' => 'other_pets', 'source_ids' => ['S763'], 'refs' => ['flat_coated_retriever.behaviour.other_pets']],
+                // S762 "Size of home: Large house".
+                ['tag' => 'large_home', 'source_ids' => ['S762'], 'refs' => ['flat_coated_retriever.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S762 "Lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S762'], 'refs' => ['flat_coated_retriever.lifespan.rkc', 'flat_coated_retriever.suitability.rkc_lifespan']],
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S762'], 'refs' => ['flat_coated_retriever.exercise.adult', 'flat_coated_retriever.suitability.rkc_exercise']],
+                // S762 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S762'], 'refs' => ['flat_coated_retriever.suitability.rkc_shedding']],
+                // S762 "Grooming: More than once a week"; S763 "A twice-weekly brushing routine …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S762', 'S763'], 'refs' => ['flat_coated_retriever.suitability.rkc_grooming', 'flat_coated_retriever.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

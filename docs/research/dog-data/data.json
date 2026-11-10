@@ -52110,6 +52110,507 @@
       }
     }
   },
+  "flat_coated_retriever": {
+    "_note": "Added 2026-11-10 (M5-R10-101, unattended run — appended after the Dogue de Bordeaux: AKC 2024 No. 97 'Flat-Coated Retriever', S174 full-list table re-read 2026-11-10). Quotes as returned by the web-fetch tool on 2026-11-10 (fragments marked as such); paraphrase only in notes. Sources S760–S766 (+ S10 growth, S11 AAHA, S14 Dogs Trust, S35 Coren, S45 steps, S123 McMillan 2024 via Dogs Trust). No health percentages anywhere. A large gundog (FCI Group 8, retrievers), RKC Breed Watch Category 1; no PDSA breed page found.",
+    "identity": {
+      "value": "FCI No. 121, Group 8 Section 1 (Retrievers), Great Britain",
+      "unit": "—",
+      "source_id": "S760",
+      "quote": "FLAT COATED RETRIEVER (121)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S760): 'n°8 - Retrievers - Flushing Dogs - Water Dogs', section 'Retrievers', country of origin 'GREAT BRITAIN', 'Subject to a working trial according to the FCI Breeds Nomenclature', accepted on a definitive basis 12/23/1954, official valid standard published 9/8/2026. FCI-Standard N° 121 (S761) dated 06.10.2026 / EN."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S762",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S762, value as returned). FCI preferred weight 27–36 kg / 25–32 kg (S761) ≈ 55–80 lb sits in the 'Large (59–99 pounds)' class of S10 for most dogs → 'Large' used for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            59,
+            61.5
+          ],
+          "female": [
+            56.5,
+            59
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S761",
+        "quote": "Preferred height: Dogs: 59 - 61,5 cm (23-24 ins), Bitches: 56,5 - 59 cm (22-23 ins).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 121 (S761) 'SIZE' (as returned). The game range. AKC standard (S765) 'Preferred height is 23 to 24½ inches at the withers for dogs, 22 to 23½ inches for bitches.'; PetMD (S763) 22–24.5 in — alternatives."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            27,
+            36
+          ],
+          "female": [
+            25,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S761",
+        "quote": "Preferred weight in hard condition: Dogs: 27 - 36 kg (60-80 lbs), Bitches: 25 - 32 kg (55-70 lbs).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 121 (S761) 'WEIGHT' (as returned) — the game range (adult_weight_kg). PetMD (S763) 'tipping the scales at 60–70 pounds' (≈ 27–32 kg, both sexes) — alternative. The AKC standard (S765) gives no weight."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: RKC 'Large' (S762), FCI 27–36 kg / 25–32 kg (S761). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Flat-Coated Retriever growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.7,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Flat Coated Retriever 11.7 11.5 - 11.9 2148 784",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI* | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals), read 2026-11-10. Runbook first choice (McMillan 2024) → not provisional. Wikipedia (S766, tier C): 'A 2024 UK study found a life expectancy of 11.7 years for the breed' (cites McMillan 2024) — agrees."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S762",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S762, value as returned). PetMD (S763) 'with a typical lifespan of 8–10 years'. Basis of shorter_lifespan (runbook: RKC 'Under 10 years') although the McMillan median is 11.7 y — Newfoundland precedent, noted for David."
+      },
+      "petmd": {
+        "value": "8–10",
+        "unit": "years",
+        "source_id": "S763",
+        "quote": "with a typical lifespan of 8–10 years",
+        "confidence": "medium",
+        "notes": "PetMD (S763, tier B, US), fragment as returned."
+      },
+      "senior_from": {
+        "value": 8.775,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.7 y (McMillan 2024 via S123) → 0.75 × 11.7 = 8.775 y = 105.3 → 105 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 8 y (PetMD lower bound, S763) = 72.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 105,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S762",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S762, value as returned) — the runbook's preferred source. PetMD (S763) 'ample opportunity to expend their energy' (fragment, no number); VCA (S764) no verbatim number. No PDSA page. → 120."
+      },
+      "petmd": {
+        "value": "ample opportunity to expend their energy (walks, hikes, swimming, play)",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "ample opportunity to expend their energy",
+        "confidence": "medium",
+        "notes": "PetMD (S763) fragment as returned; the full sentence names neighbourhood walks, hikes, swim sessions and backyard playtime (paraphrase). No minutes."
+      },
+      "after_meals": {
+        "value": "avoid exercise right before or after eating (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.",
+        "confidence": "high",
+        "notes": "PetMD (S763); the condition is bloat / GDV ('two to three small meals throughout the day (instead of one big meal)' 'to help prevent bloat and GDV.', fragments). Built: proposed_game_parameters.flat_coated_retriever.meal_exercise_gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "natural gundog ability, optimism and friendliness; confident and kindly",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Generously endowed with natural gundog ability, optimism and friendliness demonstrated by enthusiastic tail action;",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 121 (S761) 'BEHAVIOUR / TEMPERAMENT' fragment as returned; continues 'confident and kindly.'. RKC (S762) tagline 'Bright, active retriever with natural gundog ability.'; VCA (S764) 'These dogs are known for their cheerful, outgoing temperament and strong desire to interact with people.'"
+      },
+      "family": {
+        "value": "wonderful family dogs",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Flat-Coated Retrievers are wonderful family dogs that generally do well with children and other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S763) — a breed-specific family statement, basis of the family_pet chip; the sentence begins 'But when their mental and physical needs are met,' (paraphrase: the condition is enough exercise and mental work). The RKC page's family sentence describes the whole Gundog group."
+      },
+      "children": {
+        "value": "generally do well with children",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Flat-Coated Retrievers are wonderful family dogs that generally do well with children and other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S763) — an explicit statement, basis of the children chip ('They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.'). No explicit small-children rating → never small_children."
+      },
+      "other_pets": {
+        "value": "generally do well with other pets",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.",
+        "confidence": "high",
+        "notes": "PetMD (S763). No 'high prey drive' wording → no chases_small_pets chip. Basis of the other_pets chip."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement about time alone found (RKC S762, PetMD S763)."
+      },
+      "socialisation": {
+        "value": "proper introductions and socialisation",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.",
+        "confidence": "high",
+        "notes": "PetMD (S763) — a condition naming socialisation, basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "training keeps them tired and mentally engaged",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Training is a great way to keep your Flat-Coated Retriever tired and mentally engaged.",
+        "confidence": "medium",
+        "notes": "PetMD (S763)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere (the Wikipedia S766 survey share of cancer deaths stays out). RKC Breed Watch Category 1 (S762).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S762) Breed Watch, Category 1; the page says no points of concern specific to the breed have been identified for judges (paraphrase). Not a conformation welfare breed."
+      },
+      "cancer": {
+        "value": "elevated risk of malignant histiocytoma (a cancer)",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "This breed has an elevated risk for a type of cancer called malignant histiocytoma.",
+        "confidence": "high",
+        "notes": "PetMD (S763). Wikipedia (S766, tier C) cites a UK health survey on cancer deaths — background only, no number shown anywhere."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.",
+        "confidence": "high",
+        "notes": "PetMD (S763); smaller meals 'to help prevent bloat and GDV.' (fragment). Basis of the meal gap (M5-R16)."
+      },
+      "ears": {
+        "value": "ear infections",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Cleaning your dog’s ears every week or two can help stave off potential ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S763); also clean after bathing or swimming (paraphrase). Basis of the ear-cleaning task (M5-R20)."
+      },
+      "eyes": {
+        "value": "eye conditions incl. pectinate ligament abnormality (glaucoma risk) — eye testing with gonioscopy",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+        "confidence": "high",
+        "notes": "RKC minimum test (S762); breeder checklist."
+      },
+      "hips": {
+        "value": "hip dysplasia — BVA/KC hip scheme",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S762); breeder checklist."
+      },
+      "elbows": {
+        "value": "elbow dysplasia — BVA/KC elbow scheme",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S762); breeder checklist."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 18,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 18 | Flat-Coated Retriever | Excellent Working Dogs",
+        "confidence": "medium",
+        "notes": "Wikipedia table (S35, read 2026-11-10; tier C) — rank 18, shared with the English Cocker Spaniel and the Standard Schnauzer. Coren's rank may come from Wikipedia (runbook §2.1). Rank 18 → tier 'Excellent' (ranks 11–26). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Excellent Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 category 'Excellent Working Dogs' (ranks 11–26): 'Understanding of new commands: 5 to 15 repetitions'."
+      },
+      "training_notes": {
+        "value": "training keeps them mentally engaged",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Training is a great way to keep your Flat-Coated Retriever tired and mentally engaged.",
+        "confidence": "medium",
+        "notes": "PetMD (S763)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.flat_coated_retriever.learning_multiplier (1.5, runbook rule: Excellent tier, rank 18).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "bright, active retriever of medium size with an intelligent expression",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Bright, active retriever with natural gundog ability.",
+        "confidence": "high",
+        "notes": "RKC tagline (S762). FCI (S761) head 'Long and nicely moulded.'."
+      },
+      "colours": {
+        "value": [
+          "black",
+          "liver"
+        ],
+        "unit": "list",
+        "source_id": "S761",
+        "quote": "Colour: Black or liver only.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 121 (S761); 'Any other colour or combination of colours unacceptable.'. AKC standard (S765) 'Color: Solid black or solid liver.' and 'Disqualification-Yellow, cream or any color other than black or liver.'. RKC Colour Watch lists yellow as non-breed-standard (S762). Never yellow."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): black 0.8 (the breed was bred black-only at first, RKC S762 history, paraphrase), liver 0.2. Portrait default = black."
+      },
+      "coat": {
+        "value": "dense, fine to medium texture, as flat as possible; legs and tail well feathered",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Hair: Dense, of fine to medium texture and good quality, as flat as possible.",
+        "confidence": "high",
+        "notes": "FCI (S761); 'Legs and tail well feathered.'. RKC 'Coat length: Medium' (S762)."
+      },
+      "muzzle": {
+        "value": "long, strong jaws; slight stop; nose of good size with open nostrils",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Nose: Good size, with open nostrils.",
+        "confidence": "high",
+        "notes": "FCI (S761): head 'Long and nicely moulded.', stop 'Slight stop between eyes, in no way accentuated, avoiding a down or dish-faced appearance.', jaws 'Jaws long and strong, capable of carrying a hare or a pheasant,'."
+      },
+      "eyes": {
+        "value": "medium size, dark brown or hazel, intelligent expression",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Medium size, dark brown or hazel, with a very intelligent expression (a round prominent eye undesirable).",
+        "confidence": "high",
+        "notes": "FCI (S761); 'Not obliquely placed.'."
+      },
+      "ears": {
+        "value": "small, well set on, close to the side of the head",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Small and well set on, close to side of head.",
+        "confidence": "high",
+        "notes": "FCI (S761)."
+      },
+      "tail": {
+        "value": "short, straight, gaily carried but never much above the back (natural)",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Short, straight and well set on, gaily carried, but never much above level of back.",
+        "confidence": "high",
+        "notes": "FCI (S761). Never docked."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S762, returned as values — quoted here as the value) and PetMD (S763). No PDSA / Woodgreen page found. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S762)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min. Basis of long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S762). Basis of the large_home chip; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S762)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S762). No number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S763) 'twice-weekly' → 2. Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S762)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S762). Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S762). Basis of shorter_lifespan (no number in the chip)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S762)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact (S762)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S762",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S762) Breed Watch category."
+      },
+      "petmd_grooming": {
+        "value": "brushing twice a week; bath and nail trim every month or two",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "A twice-weekly brushing routine is ideal to maintain their luxurious coat",
+        "confidence": "high",
+        "notes": "PetMD (S763) fragment as returned; the sentence continues 'an occasional spa day (where your Flat-Coated Retriever gets a bath' … 'a nail trim) every month or two will be beneficial.' (fragments). Basis of brushing 2× a week (M5-R13), the bath reminder and the nail-trim task every 4 weeks (M5-R19, range → lower bound). VCA (S764) only a summary ('several times per week'), not verbatim."
+      },
+      "petmd_bath_nails": {
+        "value": "bath and nail trim every month or two",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "a nail trim) every month or two will be beneficial.",
+        "confidence": "high",
+        "notes": "PetMD (S763) fragment as returned; the same sentence names 'an occasional spa day (where your Flat-Coated Retriever gets a bath' (fragment). No groomer named → no groomer task."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every week or two",
+        "unit": "—",
+        "source_id": "S763",
+        "quote": "Cleaning your dog’s ears every week or two can help stave off potential ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S763). Basis of the ear-cleaning task once a week (M5-R20, range → lower bound, Pekingese precedent)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -77921,6 +78422,315 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S755) — self-coloured fawn, mahogany to isabella, with a black, brown or no mask; only limited white on the forechest and toes. Weights unsourced. Welfare (short muzzle PetMD S759, Breed Watch Category 3 S756): moderate, non-exaggerated muzzle with open nostrils, no heavy wrinkles, tight eyelids (`muzzle` trait).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): mahogany fawn with a brown mask is the portrait default; moderate muzzle with open nostrils, natural ears and tail"
+      }
+    },
+    "flat_coated_retriever": {
+      "_note": "Unattended run M5-R10-101 (2026-11-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S762 'More than 2 hours per day' → 120). Senior 105 from the McMillan 2024 median 11.7 y (Dogs Trust table S123) → not provisional. Coren rank 18 (Excellent) → 1.5. Built: brushing 2× a week (PetMD S763 'twice-weekly', M5-R13), meal gap (PetMD S763, M5-R16), puppy socialisation with the PetMD quote (S763, M5-R17), care tasks with a frequency: ear cleaning once a week (PetMD 'every week or two', M5-R20), nail trim every 4 weeks and bath every 4 weeks (PetMD 'every month or two', M5-R19). No tooth / groomer task (no frequency / no groomer), no heat warning. RKC 'Lifespan: Under 10 years' → shorter_lifespan although McMillan gives 11.7 y (Newfoundland precedent, open for David). Not a welfare breed (RKC Breed Watch Category 1) → in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S762",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: More than 2 hours per day' (S762) → rule 'more than N' → 120. PetMD (S763) gives no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S762 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S762",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 105
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 105 = round(0.75 × 11.7 y × 12) = round(105.3) = 105 (S11 + McMillan 2024 median 11.7 y via Dogs Trust S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 105 (0.75 × 11.7 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 105
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 105)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 18 'Flat-Coated Retriever' (S35, checked 2026-11-10) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 18, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S763",
+        "quote": "A twice-weekly brushing routine is ideal to maintain their luxurious coat",
+        "confidence": "high",
+        "notes": "flat_coated_retriever.suitability.petmd_grooming. RKC 'Grooming: More than once a week' (S762) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S763) 'twice-weekly' → 2. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S762",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PetMD »twice-weekly«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S763",
+        "quote": "Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.",
+        "confidence": "high",
+        "notes": "PetMD (S763); flat_coated_retriever.exercise.after_meals (bloat / GDV, health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S763",
+        "quote": "They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.",
+        "confidence": "high",
+        "notes": "flat_coated_retriever.behaviour.socialisation (PetMD S763). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S763)"
+      },
+      "ear_care": {
+        "value": 1,
+        "unit": "ear-cleaning sessions per week (sourced need)",
+        "source_id": "S763",
+        "quote": "Cleaning your dog’s ears every week or two can help stave off potential ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S763), flat_coated_retriever.suitability.petmd_ears. Built: child mini-game once a week (DOG_CARE_TASKS ear_cleaning [1, week], M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every week or two« → spodnja meja, 1× na teden"
+      },
+      "nail_care": {
+        "value": "nail trim every month or two",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S763",
+        "quote": "a nail trim) every month or two will be beneficial.",
+        "confidence": "high",
+        "notes": "PetMD (S763), flat_coated_retriever.suitability.petmd_bath_nails. Built: child mini-game every 4 program weeks (DOG_CARE_TASKS nail_trim [1, month], M5-R19).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every month or two« → spodnja meja, vsake 4 tedne"
+      },
+      "bathing": {
+        "value": "bath every month or two",
+        "unit": "baths (sourced need)",
+        "source_id": "S763",
+        "quote": "an occasional spa day (where your Flat-Coated Retriever gets a bath",
+        "confidence": "high",
+        "notes": "PetMD (S763) fragment, flat_coated_retriever.suitability.petmd_bath_nails; the same sentence ends 'every month or two will be beneficial.'. Built: the parent's bath reminder every 4 program weeks (DOG_CARE_TASKS bath [1, month], M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every month or two« → spodnja meja, vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-101); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.exercise.adult",
+              "flat_coated_retriever.suitability.rkc_exercise"
+            ],
+            "quote": "S762 'More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.family"
+            ],
+            "quote": "S763 'Flat-Coated Retrievers are wonderful family dogs that generally do well with children and other pets.'",
+            "note": "Condition 'when their mental and physical needs are met' kept in notes."
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.children"
+            ],
+            "quote": "S763 'Flat-Coated Retrievers are wonderful family dogs that generally do well with children and other pets.'",
+            "note": "No explicit small-children rating → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.behaviour.other_pets"
+            ],
+            "quote": "S763 'They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_size_of_home"
+            ],
+            "quote": "S762 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.lifespan.rkc",
+              "flat_coated_retriever.suitability.rkc_lifespan"
+            ],
+            "quote": "S762 'Under 10 years'",
+            "note": "Calm chip, no number; McMillan 2024 median 11.7 y (S123) noted for David (Newfoundland precedent)."
+          },
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.exercise.adult",
+              "flat_coated_retriever.suitability.rkc_exercise"
+            ],
+            "quote": "S762 'More than 2 hours per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S762"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_shedding"
+            ],
+            "quote": "S762 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S762",
+              "S763"
+            ],
+            "refs": [
+              "flat_coated_retriever.suitability.rkc_grooming",
+              "flat_coated_retriever.suitability.petmd_grooming"
+            ],
+            "quote": "S762 'More than once a week'; S763 'A twice-weekly brushing routine is ideal to maintain their luxurious coat'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No explicit small-children rating (PetMD S763 says children).",
+          "apartment": "RKC 'Large house' (S762).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "often_alone": "No source.",
+          "needs_company": "No breed-specific time-alone statement found.",
+          "low_shedding": "RKC 'Sheds: Yes' (S762).",
+          "chases_small_pets": "No 'high prey drive' wording.",
+          "hips_hind_legs": "RKC Breed Watch Category 1 (S762) — hip / elbow schemes only as breeder tests, no welfare chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, other_pets, large_home; consider shorter_lifespan, long_daily_exercise, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S762), no BVA / UFAW / VetCompass conformation concern found. Never promise the breed's health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Flat-Coated Retriever, solid black: bright, active, elegant large retriever of medium height; long, nicely moulded head with a flat, moderately broad skull, slight stop and long strong jaws; nose of good size with open nostrils; medium-sized dark brown eyes with an intelligent expression; small ears set close to the side of the head; dense, glossy coat lying as flat as possible, with well-feathered legs and tail; short, straight natural tail carried gaily but never much above the back — never yellow, never docked",
+        "unit": "—",
+        "source_id": "S761",
+        "quote": "Colour: Black or liver only.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 121 (S761). Two standard colours; black first with the highest unsourced weight → portrait default.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black (FCI S761) is the portrait default; natural tail; only the two standard colours"
       }
     }
   }

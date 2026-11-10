@@ -789,6 +789,11 @@
 | a moderate muzzle with clearly open nostrils and only moderate wrinkles, tight eyelids. Mahogany fawn with a brown mask
 | first with the highest weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Flat-Coated Retriever (M5-R10-101, docs/research/dog-data flat_coated_retriever.appearance): "Colour: Black or liver
+| only." (FCI-Standard N° 121, S761; AKC S765 disqualifies yellow, cream or any other colour); dense, flat coat with
+| feathered legs and tail, small ears close to the head, short straight tail (S761). Not a welfare breed (RKC Breed Watch
+| Category 1, S762). Black first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | English Setter (M5-R10-97, docs/research/dog-data english_setter.appearance):
 | "Of medium height, clean in outline, elegant in appearance and movement." (FCI-Standard N° 2, S730); colours blue,
 | orange, lemon and liver belton or tricolour (blue / liver belton and tan), "Any other colour or combination of colours
@@ -4390,6 +4395,37 @@ return [
             'muzzle' => ['moderately short, broad, powerful muzzle with a broad nose pigmented to match the mask, clearly open nostrils and only moderate wrinkles'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-101 (docs/research/dog-data/data.json flat_coated_retriever.appearance; runbook rules 2026-10-10: standard colours
+    // only — black or liver (FCI-Standard N° 121, S761); never yellow or cream (AKC S765 disqualification); natural tail).
+    'flat_coated_retriever' => [
+        'display_name' => 'Flat-Coated Retriever',
+        // Colour frequencies are in no source (flat_coated_retriever.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 121 (S761, https://www.fci.be/Nomenclature/Standards/121g08-en.pdf), RKC breed page (S762), AKC standard (S765) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S762 "Size: Large"; S761 "Preferred height: Dogs: 59 - 61,5 cm (23-24 ins), Bitches: 56,5 - 59 cm (22-23 ins)."',
+            'build' => 'S762 "Bright, active retriever with natural gundog ability."; S761 head "Long and nicely moulded."',
+            'coat_length' => 'S761 "Hair: Dense, of fine to medium texture and good quality, as flat as possible."; "Legs and tail well feathered."',
+            'coat_color' => 'S761 "Colour: Black or liver only."; S765 "Disqualification-Yellow, cream or any color other than black or liver." (weights unsourced)',
+            'ear_carriage' => 'S761 "Small and well set on, close to side of head."',
+            'eye_color' => 'S761 "Medium size, dark brown or hazel, with a very intelligent expression (a round prominent eye undesirable)."',
+            'tail' => 'S761 "Short, straight and well set on, gaily carried, but never much above level of back."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'elegant, active retriever build of medium height with a long, nicely moulded head', 'weight' => 3], 'strong, balanced gundog body, neither cloddy nor lightly built'],
+            'coat_length' => ['dense, glossy, medium-length coat lying as flat as possible, with well-feathered legs and tail'],
+            // Standard colours only (S761); black highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'solid black', 'weight' => 80],
+                ['value' => 'solid liver', 'weight' => 20],
+            ],
+            'ear_carriage' => ['small ears set close to the side of the head'],
+            'eye_color' => ['medium-size dark brown eyes with an intelligent expression'],
+            'tail' => ['natural tail, short and straight, carried gaily but never much above the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

@@ -483,6 +483,7 @@ const SPECIES = [
       { id: 'english_setter', synonyms: { en: ['Laverack Setter', 'Llewellin Setter', 'Setter'], sl: ['angleški seter', 'seter'] } },
       { id: 'lhasa_apso', synonyms: { en: ['Lhasa', 'Apso', 'Lhasa Apso dog'], sl: ['lhasa', 'lasa apso', 'tibetanski pes lhasa apso'] } },
       { id: 'dogue_de_bordeaux', synonyms: { en: ['Bordeaux Mastiff', 'French Mastiff', 'Bordeauxdogge', 'DDB'], sl: ['bordoška doga', 'bordoska doga', 'francoski mastif', 'dogue de bordeaux'] } },
+      { id: 'flat_coated_retriever', synonyms: { en: ['Flatcoat', 'Flattie', 'Flat-coat', 'Flat Coated Retriever'], sl: ['ravnodlaki prinasalec', 'flat coated retriever', 'flatcoat'] } },
     ],
   },
   {
@@ -2623,6 +2624,28 @@ const DOG_FACTS = {
       ['skin_fold_care', 'health.skin_folds'],
     ],
   },
+  // M5-R10-101. Height = FCI 121 by sex (S761), weight = FCI preferred weight by sex (S761), lifespan = the McMillan 2024
+  // median 11.7 y (Dogs Trust table S123) + the RKC band 'Under 10 years' (S762; Newfoundland precedent — both shown),
+  // exercise = RKC 'More than 2 hours per day' (S762), coat / grooming / sheds = RKC key facts (S762). Coren rank 18
+  // (S35). FCI origin Great Britain (GB). Not exported: lifespan.petmd (US alternative) / senior_from (derived),
+  // health.breed_watch (Category 1), health.elbows (inside hip_elbow_dysplasia), health.ears (the ear-cleaning task).
+  // No new health key.
+  flat_coated_retriever: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['certain_cancers', 'health.cancer'],
+      ['bloat_gdv', 'health.gdv'],
+      ['glaucoma', 'health.eyes'],
+      ['hip_elbow_dysplasia', 'health.hips'],
+    ],
+  },
 
 
 };
@@ -2685,6 +2708,7 @@ export const DOG_CARE_TASKS = {
   coton_de_tulear: [['ear_cleaning', 1, 7, 'proposed_game_parameters.coton_de_tulear.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.coton_de_tulear.bathing']],
   english_setter: [['bath', 1, 42, 'proposed_game_parameters.english_setter.bathing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.english_setter.professional_grooming']],
   lhasa_apso: [['tooth_brushing', 7, 7, 'proposed_game_parameters.lhasa_apso.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.lhasa_apso.nail_trimming'], ['bath', 1, 14, 'proposed_game_parameters.lhasa_apso.bathing']],
+  flat_coated_retriever: [['ear_cleaning', 1, 7, 'proposed_game_parameters.flat_coated_retriever.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.flat_coated_retriever.nail_care'], ['bath', 1, 28, 'proposed_game_parameters.flat_coated_retriever.bathing']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3452,6 +3476,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.dogue_de_bordeaux.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.dogue_de_bordeaux.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.dogue_de_bordeaux.exercise_minutes_senior',
+  },
+  flat_coated_retriever: {
+    adult_minutes: ['proposed_game_parameters.flat_coated_retriever.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.flat_coated_retriever.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.flat_coated_retriever.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.flat_coated_retriever.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.flat_coated_retriever.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.flat_coated_retriever.exercise_minutes_senior',
   },
 
 

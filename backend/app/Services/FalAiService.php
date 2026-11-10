@@ -804,6 +804,13 @@ class FalAiService
                 .'a fine, short, soft coat, a large broad head with a moderately short, broad muzzle, a broad nose matching the mask with clearly open nostrils and only moderate wrinkles, '
                 .'oval hazel to dark brown eyes with tight eyelids, relatively small hanging ears slightly darker than the coat, a natural tail thick at the base and carried low, '
                 .'calm, balanced expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-101: FCI-Standard N° 121 (S761) — a bright, active, elegant retriever, solid black (first standard colour).
+            BreedType::FlatCoatedRetriever => 'A bright, active, elegant Flat-Coated Retriever of medium height, solid black, '
+                .'with a dense, glossy coat of fine to medium texture lying as flat as possible and well-feathered legs and tail, '
+                .'a long, nicely moulded head with a flat skull, a slight stop and long, strong jaws, a nose of good size with open nostrils, '
+                .'medium-size dark brown eyes with an intelligent expression, small ears set close to the side of the head, '
+                .'a short, straight natural tail carried gaily but never much above the back, '
+                .'friendly, optimistic expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1934,6 +1941,13 @@ class FalAiService
                 'eye_color' => 'hazel to dark brown',
                 'fur_texture' => 'fine, short, soft coat',
                 'markings' => 'brown mask, only a little white on the chest or toes, never brindle',
+            ],
+            // M5-R10-101: standard colours only (FCI S761 "Black or liver only."); never yellow.
+            BreedType::FlatCoatedRetriever => [
+                'color_scheme' => 'solid black',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense, flat, glossy coat of fine to medium texture with feathered legs and tail',
+                'markings' => 'solid colour, never yellow or cream',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

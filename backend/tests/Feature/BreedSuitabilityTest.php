@@ -321,9 +321,9 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
 
     // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20), the
     // Cane Corso (PDSA "Under 10 years", M5-R10-23), the Great Dane (RKC "Under 10 years", M5-R10-29) and the Mastiff
-    // (PDSA "Under 10 years", M5-R10-45), the Newfoundland (PDSA "Under 10 years", M5-R10-51), the Bloodhound (RKC "Under 10 years", M5-R10-62), the Pyrenean Mountain Dog (RKC "Under 10 years", M5-R10-78) and the Irish Wolfhound (RKC "Under 10 years", M5-R10-80) carry the chip so far.
+    // (PDSA "Under 10 years", M5-R10-45), the Newfoundland (PDSA "Under 10 years", M5-R10-51), the Bloodhound (RKC "Under 10 years", M5-R10-62), the Pyrenean Mountain Dog (RKC "Under 10 years", M5-R10-78), the Irish Wolfhound (RKC "Under 10 years", M5-R10-80) and the Flat-Coated Retriever (RKC "Under 10 years", M5-R10-101) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::SharPei, BreedType::ChowChow], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::SharPei, BreedType::ChowChow, BreedType::FlatCoatedRetriever], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
