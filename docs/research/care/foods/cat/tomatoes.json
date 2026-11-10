@@ -8,7 +8,8 @@
     "nl": "Tomaten",
     "pl": "Pomidory",
     "cs": "Rajčata",
-    "hr": "Rajčice"
+    "hr": "Rajčice",
+    "sv": "Tomater"
   },
   "question": {
     "en": "Can cats eat tomatoes?",
@@ -17,7 +18,8 @@
     "nl": "Mogen katten tomaten eten?",
     "pl": "Czy koty mogą jeść pomidory?",
     "cs": "Mohou kočky jíst rajčata?",
-    "hr": "Smiju li mačke jesti rajčice?"
+    "hr": "Smiju li mačke jesti rajčice?",
+    "sv": "Får katter äta tomater?"
   },
   "url_slug": {
     "en": "tomatoes",
@@ -26,7 +28,8 @@
     "nl": "tomaten",
     "pl": "pomidory",
     "cs": "rajcata",
-    "hr": "rajcice"
+    "hr": "rajcice",
+    "sv": "tomater"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Geef je kat liever geen tomaten. De ASPCA zegt dat de rijpe vrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft. De tomatenplant zelf is giftig voor katten, dus houd hem buiten bereik.",
     "pl": "Najlepiej nie dawać kotu pomidorów. ASPCA podaje, że dojrzały owoc jest nietoksyczny dla kotów, ale Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom. Sama roślina pomidora jest dla kotów toksyczna, więc trzymaj ją poza zasięgiem.",
     "cs": "Nejlepší je kočce rajčata nedávat. ASPCA uvádí, že zralý plod je pro kočky netoxický, ale Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly. Samotná rajčatová rostlina je pro kočky toxická, proto ji držte mimo dosah kočky.",
-    "hr": "Mački je najbolje ne davati rajčice. ASPCA navodi da je zreo plod neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati. Sama je biljka rajčice otrovna za mačke, zato je drži izvan njezina dosega."
+    "hr": "Mački je najbolje ne davati rajčice. ASPCA navodi da je zreo plod neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati. Sama je biljka rajčice otrovna za mačke, zato je drži izvan njezina dosega.",
+    "sv": "Det är bäst att inte ge katten tomater. ASPCA uppger att den mogna frukten är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika. Själva tomatplantan är giftig för katter, så se till att katten inte kommer åt den."
   },
   "why": {
     "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
@@ -45,7 +49,8 @@
     "nl": "De ASPCA noemt de tomatenplant giftig voor katten vanwege solanine en merkt op dat de rijpe vrucht niet giftig is. Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft; volgens die bron bevatten ze een stof die ernstige maag- en darmklachten veroorzaakt, terwijl rijpe vruchten niet giftig zijn. Omdat één bron tomaten als te vermijden voedsel noemt, volgen wij het strengere advies. Katten hebben sowieso geen groente nodig in hun voeding.",
     "pl": "ASPCA uznaje roślinę pomidora za toksyczną dla kotów z powodu solaniny i zaznacza, że dojrzały owoc jest nietoksyczny. Agriculture Victoria wymienia pomidory wśród pokarmów dla ludzi, których nie należy dawać kotom, i podaje, że zawierają substancję powodującą poważne problemy z żołądkiem i jelitami, a dojrzały owoc jest nietoksyczny. Ponieważ jedno ze źródeł wymienia pomidory jako pokarm, którego należy unikać, kierujemy się ostrzejszą radą. Koty i tak nie potrzebują w diecie warzyw.",
     "cs": "ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky kvůli solaninu a upozorňuje, že zralý plod je netoxický. Agriculture Victoria řadí rajčata mezi lidské potraviny, které by se kočkám dávat neměly, a uvádí, že obsahují látku, která způsobuje vážné potíže se žaludkem a střevy, zatímco zralý plod je netoxický. Protože jeden zdroj řadí rajčata mezi potraviny, kterým je třeba se vyhnout, řídíme se přísnější radou. Kočky zeleninu ve stravě stejně nepotřebují.",
-    "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke zbog solanina i napominje da je zreo plod neotrovan. Agriculture Victoria navodi rajčice među ljudskom hranom koju mačkama ne treba davati, uz tvrdnju da sadrže tvar koja uzrokuje teške probleme sa želucem i crijevima, a zreo je plod neotrovan. Budući da jedan izvor rajčice navodi kao hranu koju treba izbjegavati, držimo se strožeg savjeta. Mačkama u prehrani ionako ne treba povrće."
+    "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke zbog solanina i napominje da je zreo plod neotrovan. Agriculture Victoria navodi rajčice među ljudskom hranom koju mačkama ne treba davati, uz tvrdnju da sadrže tvar koja uzrokuje teške probleme sa želucem i crijevima, a zreo je plod neotrovan. Budući da jedan izvor rajčice navodi kao hranu koju treba izbjegavati, držimo se strožeg savjeta. Mačkama u prehrani ionako ne treba povrće.",
+    "sv": "ASPCA anger att tomatplantan är giftig för katter på grund av solanin och påpekar att den mogna frukten är ogiftig. Agriculture Victoria räknar tomater till den människomat som katter bör undvika och skriver att de innehåller ett ämne som ger kraftiga mag- och tarmproblem, medan mogen frukt är ogiftig. Eftersom en källa tar upp tomater som mat att undvika följer vi det strängare rådet. Katter behöver ändå inte grönsaker i kosten."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "hr": [
       "Povraćanje",
       "Želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Magbesvär"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "nl": "Als je kat tomaat heeft gegeten en daarna braakt of er ziek uitziet, neem dan contact op met je dierenarts. Heeft je kat op de bladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
     "pl": "Jeśli kot zjadł pomidora, a potem wymiotuje albo źle się czuje, skontaktuj się z weterynarzem. Jeśli kot pogryzł liście, łodygi lub zielone pomidory, od razu skontaktuj się z weterynarzem. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
     "cs": "Pokud kočka snědla rajče a poté zvrací nebo se necítí dobře, obraťte se na veterináře. Pokud kočka okousala listy, stonky nebo zelená rajčata, obraťte se na veterináře ihned. Nesnažte se kočku přimět ke zvracení bez porady s veterinářem.",
-    "hr": "Ako je mačka pojela rajčicu pa povraća ili djeluje bolesno, nazovi veterinara. Ako je žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara."
+    "hr": "Ako je mačka pojela rajčicu pa povraća ili djeluje bolesno, nazovi veterinara. Ako je žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
+    "sv": "Om katten har ätit tomat och sedan kräks eller verkar sjuk, kontakta veterinären. Om katten har tuggat på blad, stjälkar eller gröna tomater, kontakta veterinären direkt. Försök inte få katten att kräkas utan att först fråga veterinären."
   },
   "serving": null,
   "child": {
@@ -94,7 +104,8 @@
     "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt.",
     "pl": "Pomidory to jedzenie dla ludzi, nie dla kotów. Trzymaj rośliny pomidora z dala od kotka i powiedz dorosłemu, jeśli kotek którąś skubnie.",
     "cs": "Rajčata jsou jídlo pro lidi, ne pro kočky. Rajčatové rostliny musí být od kočičky dál. Kdyby nějakou okusovala, řekni to dospělému.",
-    "hr": "Rajčice su hrana za ljude, a ne za mačke. Biljke rajčice drži podalje od mačke, a ako ih nagrize, reci odrasloj osobi."
+    "hr": "Rajčice su hrana za ljude, a ne za mačke. Biljke rajčice drži podalje od mačke, a ako ih nagrize, reci odrasloj osobi.",
+    "sv": "Tomater är människomat, inte kattmat. Håll tomatplantor borta från katten och berätta för en vuxen om katten knaprar på en."
   },
   "faq": [
     {
@@ -105,7 +116,8 @@
         "nl": "Zijn tomatenbladeren en groene tomaten veilig voor katten?",
         "pl": "Czy liście pomidora i zielone pomidory są bezpieczne dla kotów?",
         "cs": "Jsou rajčatové listy a zelená rajčata pro kočky bezpečné?",
-        "hr": "Jesu li listovi rajčice i zelene rajčice sigurni za mačke?"
+        "hr": "Jesu li listovi rajčice i zelene rajčice sigurni za mačke?",
+        "sv": "Är tomatblad och gröna tomater säkra för katter?"
       },
       "a": {
         "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
@@ -114,7 +126,8 @@
         "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten; alleen de rijpe vrucht is niet giftig. International Cat Care voegt eraan toe dat contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat kan veroorzaken.",
         "pl": "Nie. ASPCA uznaje roślinę pomidora za toksyczną dla kotów; nietoksyczny jest tylko dojrzały owoc. International Cat Care dodaje, że kontakt z liśćmi pomidora może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota.",
         "cs": "Ne. ASPCA řadí rajčatovou rostlinu mezi rostliny toxické pro kočky; netoxický je jen zralý plod. International Cat Care dodává, že kontakt s rajčatovými listy může způsobit puchýře nebo svědění v tlamě a na dásních.",
-        "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke; neotrovan je samo zreo plod. International Cat Care dodaje da dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke."
+        "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke; neotrovan je samo zreo plod. International Cat Care dodaje da dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke.",
+        "sv": "Nej. ASPCA anger att tomatplantan är giftig för katter; bara den mogna frukten är ogiftig. International Cat Care tillägger att kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött."
       }
     }
   ],
@@ -213,6 +226,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "24b07886e8bafdd035cc5a8ac0f0709bf0e31a3bb94ea21921e41222706d6714"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4354217e43bf2196fe1ff76a637f085a8cd01f4c70a5d4e41c1f1a278445e7ad"
     }
   }
 }

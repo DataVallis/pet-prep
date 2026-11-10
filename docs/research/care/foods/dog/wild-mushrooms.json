@@ -8,7 +8,8 @@
     "nl": "Wilde paddenstoelen",
     "pl": "Dzikie grzyby",
     "cs": "Divoké houby",
-    "hr": "Divlje gljive"
+    "hr": "Divlje gljive",
+    "sv": "Vilda svampar"
   },
   "question": {
     "en": "Can dogs eat wild mushrooms?",
@@ -17,7 +18,8 @@
     "nl": "Mogen honden wilde paddenstoelen eten?",
     "pl": "Czy psy mogą jeść dzikie grzyby?",
     "cs": "Mohou psi jíst divoké houby?",
-    "hr": "Smiju li psi jesti divlje gljive?"
+    "hr": "Smiju li psi jesti divlje gljive?",
+    "sv": "Får hundar äta vilda svampar?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
@@ -26,7 +28,8 @@
     "nl": "wilde-paddenstoelen",
     "pl": "dzikie-grzyby",
     "cs": "divoke-houby",
-    "hr": "divlje-gljive"
+    "hr": "divlje-gljive",
+    "sv": "vilda-svampar"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Nee. Beschouw elke paddenstoel die je hond buiten vindt als giftig. Giftige en niet-giftige paddenstoelen zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk. Heeft je hond een wilde paddenstoel gegeten, neem dan meteen contact op met je dierenarts.",
     "pl": "Nie. Traktuj każdego grzyba, którego pies znajdzie na dworze, jak toksycznego. Trudno odróżnić grzyby toksyczne od nietoksycznych, a te toksyczne są wyjątkowo niebezpieczne. Jeśli twój pies zjadł dzikiego grzyba, od razu skontaktuj się z weterynarzem.",
     "cs": "Ne. Každou houbu, kterou pes venku najde, považujte za toxickou. Toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné. Pokud pes snědl divokou houbu, okamžitě kontaktujte veterináře.",
-    "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru."
+    "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru.",
+    "sv": "Nej. Behandla varje svamp som hunden hittar utomhus som giftig. Giftiga och ogiftiga svampar är svåra att skilja åt, och de giftiga är extremt farliga. Om hunden har ätit en vild svamp, kontakta veterinären direkt."
   },
   "why": {
     "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
@@ -45,7 +49,8 @@
     "nl": "Er bestaan duizenden paddenstoelsoorten en veel ervan kunnen honden ernstig ziek maken. Sommige veroorzaken licht braken of diarree, andere kunnen leiden tot lever- en nierfalen of toevallen. De verschijnselen hangen af van de soort en het is niet altijd mogelijk te weten welke paddenstoel je hond heeft gegeten.",
     "pl": "Istnieją tysiące gatunków grzybów i wiele z nich może poważnie rozchorować psa. Niektóre wywołują łagodne wymioty lub biegunkę, a inne mogą prowadzić do niewydolności wątroby i nerek lub drgawek. Objawy zależą od gatunku i nie zawsze da się ustalić, którego grzyba zjadł pies.",
     "cs": "Existují tisíce druhů hub a mnohé mohou psům způsobit vážné onemocnění. Některé vyvolají mírné zvracení nebo průjem, jiné mohou vést k selhání jater a ledvin nebo ke křečím. Příznaky závisejí na druhu houby a ne vždy lze zjistit, kterou houbu pes snědl.",
-    "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo."
+    "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo.",
+    "sv": "Det finns tusentals svamparter, och många kan göra hundar allvarligt sjuka. Vissa ger lindriga kräkningar eller diarré, medan andra kan leda till lever- och njursvikt eller kramper. Symtomen beror på arten, och det går inte alltid att veta vilken svamp hunden har ätit."
   },
   "signs": {
     "en": [
@@ -131,6 +136,18 @@
       "Napadaji",
       "Bolovi u trbuhu",
       "Žutica"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Dregling",
+      "Svaghet",
+      "Slöhet eller dåsighet",
+      "Förvirring eller vinglig gång",
+      "Darrningar",
+      "Kramper",
+      "Magsmärtor",
+      "Gulsot"
     ]
   },
   "what_to_do": {
@@ -140,7 +157,8 @@
     "nl": "Neem meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren, ook voordat er verschijnselen zijn. Kun je dat, neem dan een monster van de paddenstoel mee, verpakt in een vochtig stuk keukenpapier in een papieren zak. Dat helpt de dierenarts verder.",
     "pl": "Od razu zadzwoń do weterynarza, na telefon informacji toksykologicznej dla zwierząt lub do całodobowej przychodni weterynaryjnej, jeszcze zanim pojawią się jakiekolwiek objawy. Jeśli możesz, zabierz próbkę grzyba, owiniętą wilgotnym ręcznikiem papierowym i włożoną do papierowej torby, żeby ułatwić weterynarzowi rozpoznanie.",
     "cs": "Okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost, i když se ještě neobjevily žádné příznaky. Pokud můžete, vezměte s sebou vzorek houby zabalený do vlhké papírové utěrky v papírovém sáčku, což veterináři pomůže.",
-    "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći."
+    "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći.",
+    "sv": "Kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt, även innan några symtom har visat sig. Om du kan, ta med ett prov av svampen, inslaget i ett fuktigt hushållspapper och lagt i en papperspåse, så att veterinären lättare kan identifiera den."
   },
   "serving": null,
   "child": {
@@ -150,7 +168,8 @@
     "nl": "Paddenstoelen buiten zijn niet voor honden. Zie je een hond er een eten, vertel het dan meteen aan een volwassene.",
     "pl": "Grzyby z dworu nie są dla psów. Jeśli zobaczysz, że pies zjada grzyba, od razu powiedz dorosłemu.",
     "cs": "Houby z venku nejsou pro psy. Když uvidíš, že pes nějakou jí, hned to řekni dospělému.",
-    "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi."
+    "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi.",
+    "sv": "Svampar som växer utomhus är inte för hundar. Om du ser en hund äta en, berätta det för en vuxen direkt."
   },
   "faq": [
     {
@@ -161,7 +180,8 @@
         "nl": "Moet ik afwachten of mijn hond ziek wordt?",
         "pl": "Czy mam czekać, żeby zobaczyć, czy pies zachoruje?",
         "cs": "Mám počkat, jestli pes onemocní?",
-        "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?"
+        "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?",
+        "sv": "Ska jag vänta och se om hunden blir sjuk?"
       },
       "a": {
         "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
@@ -170,7 +190,8 @@
         "nl": "Nee. Wacht niet tot er verschijnselen komen. Snel reageren is het beste wat je voor je hond kunt doen.",
         "pl": "Nie. Nie czekaj, aż pojawią się objawy. Szybka reakcja to najlepsze, co możesz zrobić dla swojego psa.",
         "cs": "Ne. Nečekejte, až se příznaky objeví. Rychlá reakce je to nejlepší, co pro svého psa můžete udělat.",
-        "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa."
+        "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa.",
+        "sv": "Nej. Vänta inte på att symtom ska utvecklas. Att agera snabbt är det bästa du kan göra för hunden."
       }
     },
     {
@@ -181,7 +202,8 @@
         "nl": "Hoe kan ik het voorkomen?",
         "pl": "Jak temu zapobiec?",
         "cs": "Jak tomu předejít?",
-        "hr": "Kako to spriječiti?"
+        "hr": "Kako to spriječiti?",
+        "sv": "Hur kan jag förebygga det?"
       },
       "a": {
         "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
@@ -190,7 +212,8 @@
         "nl": "Ga ervan uit dat elke paddenstoel die je hond vindt onveilig is en houd je hond in de gaten als hij buiten is.",
         "pl": "Zakładaj, że każdy grzyb, który pies znajdzie, jest niebezpieczny, i miej psa na oku, gdy jest na dworze.",
         "cs": "Každou houbu, kterou pes najde, považujte za nebezpečnou a mějte psa venku na očích.",
-        "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani."
+        "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani.",
+        "sv": "Utgå från att varje svamp hunden hittar är osäker, och håll ögonen på hunden när den är ute."
       }
     },
     {
@@ -201,7 +224,8 @@
         "nl": "Zijn champignons uit de winkel anders?",
         "pl": "Czy grzyby ze sklepu są inne?",
         "cs": "Liší se houby z obchodu?",
-        "hr": "Razlikuju li se gljive iz trgovine?"
+        "hr": "Razlikuju li se gljive iz trgovine?",
+        "sv": "Är svamp från affären annorlunda?"
       },
       "a": {
         "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
@@ -210,7 +234,8 @@
         "nl": "Ja. Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden, al hebben honden ze niet nodig.",
         "pl": "Tak. Zwykłe grzyby z dużych sklepów spożywczych mogą być na ogół bezpieczne dla psów, choć psy ich nie potrzebują.",
         "cs": "Ano. Houby bez dalších přísad z velkých obchodů s potravinami mohou být pro psy obecně bezpečné, i když je psi nepotřebují.",
-        "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne."
+        "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne.",
+        "sv": "Ja. Svamp utan tillsatser från stora livsmedelsbutiker kan i allmänhet vara säker för hundar, även om hundar inte behöver den."
       }
     }
   ],
@@ -403,6 +428,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c4dad02b8d631d5755da5e275a90d0d4153e00a35be8d5ddc8b794cc8c2d1fb1"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2d9bce8838aff8ebf54122c5b076bf380890df5789c01ad441aded70f1a9e41a"
     }
   }
 }

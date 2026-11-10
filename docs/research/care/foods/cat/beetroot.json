@@ -8,7 +8,8 @@
     "nl": "Rode biet",
     "pl": "Buraki ćwikłowe",
     "cs": "Červená řepa",
-    "hr": "Cikla"
+    "hr": "Cikla",
+    "sv": "Rödbetor"
   },
   "question": {
     "en": "Can cats eat beetroot?",
@@ -17,7 +18,8 @@
     "nl": "Mogen katten rode biet eten?",
     "pl": "Czy koty mogą jeść buraki ćwikłowe?",
     "cs": "Mohou kočky jíst červenou řepu?",
-    "hr": "Smiju li mačke jesti ciklu?"
+    "hr": "Smiju li mačke jesti ciklu?",
+    "sv": "Får katter äta rödbetor?"
   },
   "url_slug": {
     "en": "beetroot",
@@ -26,7 +28,8 @@
     "nl": "rode-biet",
     "pl": "buraki-cwiklowe",
     "cs": "cervena-repa",
-    "hr": "cikla"
+    "hr": "cikla",
+    "sv": "rodbetor"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Ja, een klein stukje naturele rode biet is af en toe prima als traktatie. De ASPCA noemt bieten, waaronder rode biet, niet giftig voor katten. Houd de grote bladeren wel uit de buurt: volgens de ASPCA bevatten grote, volgroeide bladeren oxaalzuur.",
     "pl": "Tak, mały kawałek zwykłego buraka ćwikłowego jest w porządku jako okazjonalny smakołyk. ASPCA uznaje buraki, także ćwikłowe, za nietoksyczne dla kotów. Trzymaj jednak kota z dala od dużych liści: ASPCA zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy.",
     "cs": "Ano, malý kousek červené řepy bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA řadí řepu, včetně červené, mezi rostliny netoxické pro kočky. Držte ale kočku dál od velkých listů: ASPCA upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou.",
-    "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu."
+    "hr": "Da, mali komadić obične cikle u redu je kao povremena poslastica. ASPCA navodi ciklu, uključujući crvenu ciklu, kao neotrovnu za mačke. Velike listove ipak drži podalje: ASPCA napominje da veliki zreli listovi sadrže oksalnu kiselinu.",
+    "sv": "Ja, en liten bit rödbeta utan tillsatser går bra som en godbit då och då. ASPCA räknar rödbeta som ogiftig för katter. Se till att katten inte kommer åt de stora bladen: ASPCA påpekar att stora, mogna blad innehåller oxalsyra."
   },
   "why": {
     "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -45,7 +49,8 @@
     "nl": "De ASPCA noemt bieten (Beta vulgaris, ook wel rode biet genoemd) niet giftig voor katten en meldt dat grote, volgroeide bladeren oxaalzuur bevatten. Katten hebben geen fruit of groente nodig in hun voeding, maar volgens PDSA kun je veel soorten in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
     "pl": "ASPCA uznaje buraki (Beta vulgaris, czyli burak ćwikłowy) za nietoksyczne dla kotów i zaznacza, że duże, dojrzałe liście zawierają kwas szczawiowy. Koty nie potrzebują w diecie owoców ani warzyw, ale według PDSA wiele z nich można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza też, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
     "cs": "ASPCA řadí řepu (Beta vulgaris, česky také červená řepa) mezi rostliny netoxické pro kočky a upozorňuje, že velké vzrostlé listy obsahují kyselinu šťavelovou. Kočky ve stravě ovoce ani zeleninu nepotřebují, ale podle PDSA lze mnohé z nich podávat ve velmi malém množství jako občasný pamlsek. ASPCA také upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
-    "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
+    "hr": "ASPCA navodi ciklu (Beta vulgaris, poznatu i kao crvena cikla) kao neotrovnu za mačke i napominje da veliki zreli listovi sadrže oksalnu kiselinu. Mačkama u prehrani ne trebaju voće ni povrće, ali PDSA navodi da se mnoge vrste mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA također napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
+    "sv": "ASPCA räknar rödbeta (Beta vulgaris) som ogiftig för katter och påpekar att stora, mogna blad innehåller oxalsyra. Katter behöver inte frukt eller grönsaker i kosten, men enligt PDSA kan många sorter ges i mycket små mängder som en godbit då och då. ASPCA påpekar också att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "nl": "Begin met een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte řepu podávat a poraďte se s veterinářem.",
-    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
   },
   "serving": {
     "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
@@ -64,7 +70,8 @@
     "nl": "Een klein, hapklaar stukje naturele rode biet, zonder boter, zout of kruiden. Houd de grote bladeren uit de buurt van je kat.",
     "pl": "Mały kawałek zwykłego buraka ćwikłowego, na jeden kęs, bez masła, soli i przypraw. Duże liście trzymaj z dala od kota.",
     "cs": "Malý kousek červené řepy na jedno sousto, bez másla, soli a koření. Velké listy držte mimo dosah kočky.",
-    "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke."
+    "hr": "Mali komadić obične cikle za jedan zalogaj, bez maslaca, soli i začina. Velike listove drži podalje od mačke.",
+    "sv": "En liten munsbit rödbeta utan smör, salt eller kryddor. Se till att katten inte kommer åt de stora bladen."
   },
   "child": {
     "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
@@ -73,7 +80,8 @@
     "nl": "Een heel klein stukje rode biet kan af en toe een traktatie voor je kat zijn. Katten hebben vooral hun eigen kattenvoer nodig.",
     "pl": "Malutki kawałek buraka można czasem dać kotu jako smakołyk. Najważniejsza dla kota jest jego własna karma.",
     "cs": "Kousek červené řepy může být pro kočku občas pamlsek. Kočky potřebují hlavně vlastní kočičí krmivo.",
-    "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke."
+    "hr": "Mali komadić cikle mačka povremeno smije dobiti kao poslasticu. Mačkama ponajviše treba njihova hrana za mačke.",
+    "sv": "En liten bit rödbeta kan vara en godbit för katten då och då. Katter behöver framför allt sin egen kattmat."
   },
   "faq": [],
   "sources": [
@@ -160,6 +168,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f642f53a4d206e324b77e018f189d924f862118ba5b9d97dea057256fe9cf146"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8200eae1803fcd5d244380544c6aa360dbf746a81c996fda8500442cdebe74b1"
     }
   }
 }

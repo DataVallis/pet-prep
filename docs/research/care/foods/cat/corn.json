@@ -8,7 +8,8 @@
     "nl": "Maïs (maïskorrels)",
     "pl": "Kukurydza (ziarna kukurydzy cukrowej)",
     "cs": "Kukuřice (zrna sladké kukuřice)",
-    "hr": "Kukuruz (zrna kukuruza šećerca)"
+    "hr": "Kukuruz (zrna kukuruza šećerca)",
+    "sv": "Majs (sockermajskorn)"
   },
   "question": {
     "en": "Can cats eat corn?",
@@ -17,7 +18,8 @@
     "nl": "Mogen katten maïs eten?",
     "pl": "Czy koty mogą jeść kukurydzę?",
     "cs": "Mohou kočky jíst kukuřici?",
-    "hr": "Smiju li mačke jesti kukuruz?"
+    "hr": "Smiju li mačke jesti kukuruz?",
+    "sv": "Får katter äta majs?"
   },
   "url_slug": {
     "en": "corn",
@@ -26,7 +28,8 @@
     "nl": "mais",
     "pl": "ziarna-kukurydzy",
     "cs": "kukuricna-zrna",
-    "hr": "kukuruz"
+    "hr": "kukuruz",
+    "sv": "majs"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Ja, een paar naturele maïskorrels zijn af en toe prima als traktatie, als je kat ze lekker vindt. Cats Protection noemt maïs een van de weinige groenten die je een kat kunt geven. Geef het zonder boter, zout of kruiden.",
     "pl": "Tak, kilka zwykłych ziaren kukurydzy jest w porządku jako okazjonalny smakołyk, jeśli kot ma na nie ochotę. Cats Protection wymienia kukurydzę wśród niewielu warzyw, które można dawać kotu. Podawaj ją bez masła, soli i przypraw.",
     "cs": "Ano, několik zrnek kukuřice bez dalších přísad je jako občasný pamlsek v pořádku, pokud o ni kočka stojí. Cats Protection řadí kukuřici mezi několik druhů zeleniny, které můžete kočce dát. Podávejte ji bez másla, soli a koření.",
-    "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina."
+    "hr": "Da, nekoliko običnih zrna kukuruza u redu je kao povremena poslastica ako ih mačka rado jede. Cats Protection kukuruz ubraja među nekoliko vrsta povrća koje možeš dati mački. Posluži ga bez maslaca, soli i začina.",
+    "sv": "Ja, några få majskorn utan tillsatser går bra som en godbit då och då, om katten visar intresse. Cats Protection nämner majs bland de få grönsaker man kan ge en katt. Servera dem utan smör, salt eller kryddor."
   },
   "why": {
     "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -45,7 +49,8 @@
     "nl": "Cats Protection zegt dat er een paar groenten zijn die je je kat kunt geven als die er zin in heeft, waaronder maïs, maar katten eten van nature zelden groente en je hoeft het niet aan hun voeding toe te voegen. Volgens PDSA kun je veel soorten fruit en groente in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
     "pl": "Cats Protection podaje, że kilka warzyw, w tym kukurydzę, można dawać kotu, jeśli ma na nie ochotę, ale koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Według PDSA wiele owoców i warzyw można podawać w bardzo małych ilościach jako okazjonalny smakołyk. ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
     "cs": "Cats Protection uvádí, že existuje několik druhů zeleniny, které můžete kočce dát, pokud o ni stojí, mimo jiné kukuřice, ale kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Podle PDSA lze mnohé druhy ovoce a zeleniny podávat ve velmi malém množství jako občasný pamlsek. ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
-    "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe."
+    "hr": "Cats Protection navodi da postoji nekoliko vrsta povrća koje možeš dati mački ako ga rado jede, među njima i kukuruz, ali mačke u prirodi rijetko jedu povrće i nije ga potrebno dodavati u njihovu prehranu. PDSA navodi da se mnoge vrste voća i povrća mogu davati u vrlo malim količinama kao povremena poslastica. ASPCA napominje da svaka biljna tvar može kod mačaka izazvati povraćanje i želučane tegobe.",
+    "sv": "Cats Protection skriver att det finns några grönsaker man kan ge katten om den visar intresse, bland dem majs, men att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. PDSA skriver att många frukter och grönsaker kan ges i mycket små mängder som en godbit då och då. ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "nl": "Begin met een paar korrels. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od kilku ziaren. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
     "cs": "Začněte několika zrnky. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte kukuřici podávat a poraďte se s veterinářem.",
-    "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Počni s nekoliko zrna. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Börja med några få korn. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
   },
   "serving": {
     "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
@@ -64,7 +70,8 @@
     "nl": "Een paar naturele, gekookte maïskorrels, zonder boter, zout of kruiden, in hapklare stukjes.",
     "pl": "Kilka zwykłych, ugotowanych ziaren kukurydzy, bez masła, soli i przypraw, w kawałkach na jeden kęs.",
     "cs": "Několik zrnek tepelně upravené kukuřice bez másla, soli a koření, v kouscích na jedno sousto.",
-    "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj."
+    "hr": "Nekoliko običnih termički obrađenih zrna kukuruza, bez maslaca, soli i začina, dovoljno sitnih za jedan zalogaj.",
+    "sv": "Några få tillagade majskorn utan smör, salt eller kryddor, i små munsbitar."
   },
   "child": {
     "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -73,7 +80,8 @@
     "nl": "Een paar maïskorrels kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Kilka ziaren kukurydzy można czasem dać kotu jako smakołyk. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Pár zrnek kukuřice může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
-    "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak."
+    "hr": "Nekoliko zrna kukuruza može povremeno biti poslastica za mačku. Mačkama uglavnom treba meso, pa je povrće samo sitan dodatak.",
+    "sv": "Några majskorn kan vara en godbit för katten då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
-        "hr": "Treba li mačkama povrće?"
+        "hr": "Treba li mačkama povrće?",
+        "sv": "Behöver katter grönsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -93,7 +102,8 @@
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente en hoef je het niet aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Cats Protection podaje, że koty rzadko jedzą warzywa w naturze i nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být jen malým doplňkem.",
-        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att det inte är nödvändigt att lägga till dem i kosten. En grönsak är aldrig mer än ett litet extra."
       }
     }
   ],
@@ -173,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "50635b53a451497c55beb1c8a04ea9771a38ad79c7a22c6abeb28e87d14492de"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "56308f9035e2827a418e83bbba3629e7af54e276edf6f769c587cc549c02b28c"
     }
   }
 }

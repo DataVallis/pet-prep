@@ -8,7 +8,8 @@
     "nl": "Gekookte aardappelen",
     "pl": "Ugotowane ziemniaki",
     "cs": "Uvařené brambory",
-    "hr": "Kuhani krumpir"
+    "hr": "Kuhani krumpir",
+    "sv": "Kokt potatis"
   },
   "question": {
     "en": "Can cats eat cooked potatoes?",
@@ -17,7 +18,8 @@
     "nl": "Mogen katten gekookte aardappelen eten?",
     "pl": "Czy koty mogą jeść ugotowane ziemniaki?",
     "cs": "Mohou kočky jíst uvařené brambory?",
-    "hr": "Smiju li mačke jesti kuhani krumpir?"
+    "hr": "Smiju li mačke jesti kuhani krumpir?",
+    "sv": "Får katter äta kokt potatis?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
@@ -26,7 +28,8 @@
     "nl": "gekookte-aardappelen",
     "pl": "ugotowane-ziemniaki",
     "cs": "uvarene-brambory",
-    "hr": "kuhani-krumpir"
+    "hr": "kuhani-krumpir",
+    "sv": "kokt-potatis"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Ja, een beetje naturele gekookte aardappel is af en toe prima als traktatie. De RSPCA noemt aardappelen met mate geschikt voor katten, als ze gepureerd of gekookt zijn zonder boter of kaas. Laat de schil, zout en kruiden weg.",
     "pl": "Tak, odrobina zwykłego ugotowanego ziemniaka jest w porządku jako okazjonalny smakołyk. RSPCA uznaje ziemniaki za odpowiednie dla kotów w umiarkowanych ilościach, jeśli są gotowane lub w formie puree, bez masła i sera. Pomiń skórkę, sól i przyprawy.",
     "cs": "Ano, trochu uvařených brambor bez dalších přísad je jako občasný pamlsek v pořádku. RSPCA řadí brambory mezi potraviny vhodné pro kočky v mírném množství, pokud jsou rozmačkané nebo vařené bez másla a sýra. Slupku, sůl a koření vynechte.",
-    "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine."
+    "hr": "Da, malo običnog termički obrađenog krumpira u redu je kao povremena poslastica. RSPCA navodi krumpir kao prikladan za mačke u umjerenim količinama ako je zgnječen ili kuhan, bez maslaca i sira. Izostavi koru, sol i začine.",
+    "sv": "Ja, lite tillagad potatis utan tillsatser går bra som en godbit då och då. RSPCA nämner potatis som lämplig för katter med måtta om den är mosad eller kokt, utan smör eller ost. Skala potatisen och låt bli salt och kryddor."
   },
   "why": {
     "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
@@ -45,7 +49,8 @@
     "nl": "De RSPCA noemt gepureerde of gekookte aardappelen zonder boter of kaas als voedsel dat met mate geschikt is voor katten, Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook, en de ASPCA zegt dat gekookte aardappelen met mate prima zijn voor huisdieren. Een artikel op PetMD, geschreven door een dierenarts, voegt eraan toe dat gekookte aardappelen niet giftig zijn voor katten maar ook niet goed voor ze, en dat aardappelschillen de gifstof solanine bevatten. Katten hebben geen groente nodig in hun voeding, dus houd het bij een kleine traktatie.",
     "pl": "RSPCA wymienia puree ziemniaczane i gotowane ziemniaki bez masła i sera wśród produktów odpowiednich dla kotów w umiarkowanych ilościach, Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku, a ASPCA podaje, że ugotowane ziemniaki są dla zwierząt w porządku w umiarkowanych ilościach. Artykuł w PetMD napisany przez weterynarza dodaje, że ugotowane ziemniaki nie są toksyczne dla kotów, ale też im nie służą, a skórki ziemniaków zawierają toksynę solaninę. Koty nie potrzebują w diecie warzyw, więc niech to będzie tylko mały smakołyk.",
     "cs": "RSPCA řadí rozmačkané nebo vařené brambory bez másla a sýra mezi potraviny vhodné pro kočky v mírném množství, Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku a ASPCA uvádí, že uvařené brambory jsou pro zvířata v mírném množství v pořádku. Článek na PetMD, který napsali veterináři, dodává, že uvařené brambory nejsou pro kočky toxické, ale ani jim neprospívají, a že bramborové slupky obsahují toxin solanin. Kočky zeleninu ve stravě nepotřebují, takže by to měl být jen malý pamlsek.",
-    "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica."
+    "hr": "RSPCA navodi zgnječen ili kuhan krumpir bez maslaca i sira među hranom prikladnom za mačke u umjerenim količinama, Cats Protection predlaže obični pire od krumpira bez maslaca, vrhnja i češnjaka, a ASPCA kaže da je termički obrađen krumpir u umjerenim količinama u redu za kućne ljubimce. U članku PetMD-a koji je napisao veterinar dodaje se da termički obrađen krumpir nije otrovan za mačke, ali im ne koristi, te da kora krumpira sadrži toksin solanin. Mačkama povrće u prehrani nije potrebno, zato neka bude samo mala poslastica.",
+    "sv": "RSPCA nämner mosad eller kokt potatis utan smör eller ost bland den mat som passar katter med måtta, Cats Protection föreslår enkel potatismos utan smör, grädde eller vitlök, och ASPCA skriver att tillagad potatis går bra för husdjur med måtta. En artikel på PetMD, skriven av veterinärer, tillägger att tillagad potatis inte är giftig för katter men inte heller bra för dem, och att potatisskal innehåller giftet solanin. Katter behöver inte grönsaker i kosten, så se det som en liten godbit."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "nl": "Begin met een klein hapje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kęsa. Jeśli po zjedzeniu kot zwymiotuje albo dostanie rozstroju żołądka, nie podawaj więcej i zapytaj weterynarza.",
     "cs": "Začněte malou ochutnávkou. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte brambory podávat a poraďte se s veterinářem.",
-    "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Počni s malim zalogajem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Börja med en liten smakbit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
   },
   "serving": {
     "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
@@ -64,7 +70,8 @@
     "nl": "Naturel gekookte of gepureerde aardappel, geschild, zonder boter, kaas, room, knoflook, zout of kruiden. Nooit rauwe of groene aardappel.",
     "pl": "Zwykły ziemniak, gotowany lub w formie puree, obrany, bez masła, sera, śmietanki, czosnku, soli i przypraw. Nigdy surowy ani zielony ziemniak.",
     "cs": "Oloupané vařené nebo rozmačkané brambory bez másla, sýra, smetany, česneku, soli a koření. Nikdy ne syrové ani zelené brambory.",
-    "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir."
+    "hr": "Obični kuhani krumpir ili pire, oguljen, bez maslaca, sira, vrhnja, češnjaka, soli i začina. Nikad sirov ni zelen krumpir.",
+    "sv": "Kokt eller mosad potatis, skalad, utan smör, ost, grädde, vitlök, salt eller kryddor. Aldrig rå eller grön potatis."
   },
   "child": {
     "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
@@ -73,7 +80,8 @@
     "nl": "Een heel klein beetje naturel gekookte aardappel kan af en toe een traktatie voor je kat zijn. Rauwe aardappel is niet voor katten.",
     "pl": "Odrobinę zwykłego ugotowanego ziemniaka można czasem dać kotu jako smakołyk. Surowe ziemniaki nie są dla kotów.",
     "cs": "Trocha uvařených brambor bez dalších přísad může být pro kočku občas pamlsek. Syrové brambory pro kočky nejsou.",
-    "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke."
+    "hr": "Sasvim malo običnog kuhanog krumpira može povremeno biti poslastica za mačku. Sirov krumpir nije za mačke.",
+    "sv": "Lite kokt potatis utan tillsatser kan vara en godbit för katten då och då. Rå potatis är inte för katter."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "nl": "Mogen katten aardappelschillen eten?",
         "pl": "Czy koty mogą jeść skórki ziemniaków?",
         "cs": "Mohou kočky jíst bramborové slupky?",
-        "hr": "Smiju li mačke jesti koru krumpira?"
+        "hr": "Smiju li mačke jesti koru krumpira?",
+        "sv": "Får katter äta potatisskal?"
       },
       "a": {
         "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
@@ -93,7 +102,8 @@
         "nl": "Nee. Een artikel op PetMD, geschreven door een dierenarts, zegt dat aardappelschillen, rauw of gekookt, de gifstof solanine bevatten en vermeden moeten worden.",
         "pl": "Nie. Artykuł w PetMD napisany przez weterynarza podaje, że skórki ziemniaków, surowe lub ugotowane, zawierają toksynę solaninę i należy ich unikać.",
         "cs": "Ne. Článek na PetMD, který napsali veterináři, uvádí, že bramborové slupky, syrové i uvařené, obsahují toxin solanin a je třeba se jim vyhnout.",
-        "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati."
+        "hr": "Ne. U članku PetMD-a koji je napisao veterinar stoji da kora krumpira, sirova ili termički obrađena, sadrži toksin solanin i da je treba izbjegavati.",
+        "sv": "Nej. Enligt en artikel på PetMD, skriven av veterinärer, innehåller potatisskal, både råa och tillagade, giftet solanin och bör undvikas."
       }
     },
     {
@@ -104,7 +114,8 @@
         "nl": "Mogen katten aardappelpuree eten?",
         "pl": "Czy koty mogą jeść puree ziemniaczane?",
         "cs": "Mohou kočky jíst bramborovou kaši?",
-        "hr": "Smiju li mačke jesti pire od krumpira?"
+        "hr": "Smiju li mačke jesti pire od krumpira?",
+        "sv": "Får katter äta potatismos?"
       },
       "a": {
         "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
@@ -113,7 +124,8 @@
         "nl": "Naturel aardappelpuree is prima als kleine traktatie. Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook.",
         "pl": "Zwykłe puree ziemniaczane jest w porządku jako mały smakołyk. Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku.",
         "cs": "Bramborová kaše bez dalších přísad je jako malý pamlsek v pořádku. Cats Protection doporučuje bramborovou kaši bez másla, smetany a česneku.",
-        "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka."
+        "hr": "Obični pire od krumpira u redu je kao mala poslastica. Cats Protection predlaže obični pire bez maslaca, vrhnja i češnjaka.",
+        "sv": "Potatismos utan tillsatser går bra som en liten godbit. Cats Protection föreslår potatismos utan smör, grädde eller vitlök."
       }
     }
   ],
@@ -209,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "44e0fb7c5a09fc0020929d3fa39804a37d054d8455b415fba32eae6a50d967b2"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "60413856ecbd7eb839fd3ffa26020f968d46bf1a9490ab6820bcda2c8047d294"
     }
   }
 }

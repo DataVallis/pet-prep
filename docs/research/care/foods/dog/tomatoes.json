@@ -8,7 +8,8 @@
     "nl": "Tomaten",
     "pl": "Pomidory",
     "cs": "Rajčata",
-    "hr": "Rajčice"
+    "hr": "Rajčice",
+    "sv": "Tomater"
   },
   "question": {
     "en": "Can dogs eat tomatoes?",
@@ -17,7 +18,8 @@
     "nl": "Mogen honden tomaten eten?",
     "pl": "Czy psy mogą jeść pomidory?",
     "cs": "Mohou psi jíst rajčata?",
-    "hr": "Smiju li psi jesti rajčice?"
+    "hr": "Smiju li psi jesti rajčice?",
+    "sv": "Får hundar äta tomater?"
   },
   "url_slug": {
     "en": "tomatoes",
@@ -26,7 +28,8 @@
     "nl": "tomaten",
     "pl": "pomidory",
     "cs": "rajcata",
-    "hr": "rajcice"
+    "hr": "rajcice",
+    "sv": "tomater"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "nl": "Ja, rijpe rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven. Groene, onrijpe tomaten en de groene delen van de plant zijn een ander verhaal: vermijd die.",
     "pl": "Tak, dojrzałe, czerwone pomidory nie są toksyczne dla psów i mogą być okazjonalnym smakołykiem w małych ilościach. Zielone, niedojrzałe pomidory i zielone części rośliny to co innego i należy ich unikać.",
     "cs": "Ano, zralá červená rajčata nejsou pro psy toxická a mohou být občasným pamlskem v malém množství. Zelená, nezralá rajčata a zelené části rostliny jsou jiná věc a je třeba se jim vyhnout.",
-    "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati."
+    "hr": "Da, zrele crvene rajčice nisu otrovne za pse i mogu biti povremena poslastica u malim količinama. Zelene, nezrele rajčice i zeleni dijelovi biljke druga su stvar i njih treba izbjegavati.",
+    "sv": "Ja, mogna röda tomater är inte giftiga för hundar och kan ges som godbit då och då i små mängder. Gröna, omogna tomater och växtens gröna delar är en annan sak och bör undvikas."
   },
   "why": {
     "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -45,7 +49,8 @@
     "nl": "De belangrijkste giftige stoffen in tomaten zijn tomatine en solanine, die vooral in de groene delen van de plant zitten. Naarmate een tomaat rijpt en rood wordt, daalt het gehalte aanzienlijk, daarom worden rijpe tomaten als niet giftig beschouwd. Producten op basis van tomaat bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
     "pl": "Głównymi związkami toksycznymi w pomidorach są tomatyna i solanina, występujące głównie w zielonych częściach rośliny. Gdy pomidor dojrzewa i robi się czerwony, ich poziom znacznie spada, dlatego dojrzałe pomidory uważa się za nietoksyczne. Produkty pomidorowe często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać.",
     "cs": "Hlavní toxické látky v rajčatech jsou tomatin a solanin, které se nacházejí hlavně v zelených částech rostliny. Jak rajče zraje a červená, jejich množství výrazně klesá, proto se zralá rajčata považují za netoxická. Výrobky na bázi rajčat často obsahují česnek, cibuli, sůl nebo cukr, které mohou psům škodit nebo je dráždit.",
-    "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse."
+    "hr": "Glavne otrovne tvari u rajčicama su tomatin i solanin, a nalaze se uglavnom u zelenim dijelovima biljke. Kad rajčica dozrije i pocrveni, njihova se razina znatno smanji, pa se zrele rajčice smatraju neotrovnima. Proizvodi od rajčice često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
+    "sv": "De viktigaste giftiga ämnena i tomater är tomatin och solanin, som främst finns i växtens gröna delar. När tomaten mognar och blir röd sjunker halterna kraftigt, så mogna tomater anses vara ogiftiga. Produkter som är gjorda på tomat innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "nl": "Begin met kleine hoeveelheden om te zien hoe je hond reageert en geef tomaat alleen met mate en onder toezicht. Denk je dat je hond veel tomaten of de tomatenplant zelf heeft gegeten, bel dan je dierenarts voor advies.",
     "pl": "Zacznij od małych ilości, żeby zobaczyć, jak reaguje twój pies, i dawaj pomidory tylko w umiarkowanej ilości, pod nadzorem. Jeśli uważasz, że pies zjadł dużo pomidorów albo samą roślinę pomidora, zadzwoń do weterynarza po wskazówki.",
     "cs": "Začněte malým množstvím, abyste viděli, jak pes reaguje, a rajčata dávejte jen v mírném množství a pod dohledem. Pokud si myslíte, že pes snědl velké množství rajčat nebo samotnou rajčatovou rostlinu, zavolejte veterináři a požádejte o radu.",
-    "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet."
+    "hr": "Počni s malim količinama da vidiš kako pas reagira, a rajčicu daj samo umjereno i uz nadzor. Ako sumnjaš da je pas pojeo veću količinu rajčica ili samu biljku rajčice, nazovi veterinara za savjet.",
+    "sv": "Börja med små mängder för att se hur hunden reagerar, och ge bara tomat med måtta och under uppsikt. Om du tror att hunden har ätit en stor mängd tomater eller själva tomatplantan, ring veterinären för råd."
   },
   "serving": {
     "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
@@ -64,7 +70,8 @@
     "nl": "Alleen rijp, rood en naturel. Haal alle groene delen weg en snijd het vruchtvlees in blokjes; snijd cherrytomaatjes in kleine stukjes. Nooit tomaten die met zout, knoflook, ui of andere toevoegingen zijn gekruid.",
     "pl": "Tylko dojrzałe, czerwone, bez dodatków. Usuń wszystkie zielone części i pokrój miąższ w kostkę; pomidorki koktajlowe pokrój na małe kawałki. Nigdy nie podawaj pomidorów doprawionych solą, czosnkiem, cebulą ani innymi dodatkami.",
     "cs": "Jen zralá, červená a bez dalších přísad. Odstraňte všechny zelené části a dužinu nakrájejte na kostičky; cherry rajčata rozkrájejte na malé kousky. Nikdy rajčata dochucená solí, česnekem, cibulí ani jinými přísadami.",
-    "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima."
+    "hr": "Samo zrele, crvene i obične. Ukloni sve zelene dijelove, a plod nareži na kockice; cherry rajčice nareži na male komadiće. Nikad ne daj rajčice začinjene solju, češnjakom, lukom ili drugim dodacima.",
+    "sv": "Bara mogna, röda tomater utan tillsatser. Ta bort alla gröna delar och skär tomatköttet i tärningar; skär körsbärstomater i små bitar. Aldrig tomater som har kryddats med salt, vitlök, lök eller andra tillsatser."
   },
   "child": {
     "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
@@ -73,7 +80,8 @@
     "nl": "Honden mogen een beetje rijpe rode tomaat. Een volwassene haalt de groene stukjes eraf en snijdt hem klein.",
     "pl": "Psy mogą dostać odrobinę dojrzałego, czerwonego pomidora. Dorosły usuwa zielone części i kroi go na małe kawałki.",
     "cs": "Pejsek může dostat trochu zralého červeného rajčete. Dospělý odstraní zelené části a nakrájí je na malé kousky.",
-    "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće."
+    "hr": "Pas smije dobiti malo zrele crvene rajčice. Odrasla osoba skine zelene dijelove i nareže je na male komadiće.",
+    "sv": "Hundar kan få lite mogen röd tomat. En vuxen tar bort de gröna delarna och skär den i småbitar."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "nl": "Mogen honden groene tomaten eten?",
         "pl": "Czy psy mogą jeść zielone pomidory?",
         "cs": "Mohou psi jíst zelená rajčata?",
-        "hr": "Smiju li psi jesti zelene rajčice?"
+        "hr": "Smiju li psi jesti zelene rajčice?",
+        "sv": "Får hundar äta gröna tomater?"
       },
       "a": {
         "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
@@ -93,7 +102,8 @@
         "nl": "Nee. Groene tomaten bevatten meer tomatine en solanine dan rijpe, en van het eten van een onrijpe tomaat kan een hond verschijnselen van tomatinevergiftiging krijgen.",
         "pl": "Nie. Zielone pomidory zawierają więcej tomatyny i solaniny niż dojrzałe, a zjedzenie niedojrzałego pomidora może wywołać objawy zatrucia tomatyną.",
         "cs": "Ne. Zelená rajčata obsahují víc tomatinu a solaninu než zralá a po snědení nezralého rajčete se mohou objevit příznaky otravy tomatinem.",
-        "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom."
+        "hr": "Ne. Zelene rajčice sadrže više tomatina i solanina od zrelih, a jedenje nezrele rajčice može dovesti do znakova trovanja tomatinom.",
+        "sv": "Nej. Gröna tomater innehåller mer tomatin och solanin än mogna, och om en hund äter en omogen tomat kan det ge symtom på tomatinförgiftning."
       }
     },
     {
@@ -104,7 +114,8 @@
         "nl": "Mogen honden tomatensaus of ketchup eten?",
         "pl": "Czy psy mogą jeść sos pomidorowy lub keczup?",
         "cs": "Mohou psi jíst rajčatovou omáčku nebo kečup?",
-        "hr": "Smiju li psi jesti umak od rajčice ili kečap?"
+        "hr": "Smiju li psi jesti umak od rajčice ili kečap?",
+        "sv": "Får hundar äta tomatsås eller ketchup?"
       },
       "a": {
         "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
@@ -113,7 +124,8 @@
         "nl": "Dat kun je beter vermijden. Producten op basis van tomaat, zoals saus, ketchup en soep, bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden.",
         "pl": "Lepiej ich unikać. Produkty pomidorowe, takie jak sos, keczup czy zupa, często zawierają czosnek, cebulę, sól lub cukier, które mogą szkodzić psom lub je podrażniać.",
         "cs": "Raději ne. Výrobky na bázi rajčat, jako omáčka, kečup a polévka, často obsahují česnek, cibuli, sůl nebo cukr, které mohou psům škodit nebo je dráždit.",
-        "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse."
+        "hr": "Najbolje ih je izbjegavati. Proizvodi od rajčice, poput umaka, kečapa i juhe, često sadrže češnjak, luk, sol ili šećer, što može biti štetno ili nadražujuće za pse.",
+        "sv": "Det är bäst att undvika dem. Tomatprodukter som sås, ketchup och soppa innehåller ofta vitlök, lök, salt eller socker, vilket kan vara skadligt eller irriterande för hundar."
       }
     },
     {
@@ -124,7 +136,8 @@
         "nl": "Ik kweek tomaten. Waar moet ik op letten?",
         "pl": "Uprawiam pomidory. Na co mam uważać?",
         "cs": "Pěstuji rajčata. Na co si mám dát pozor?",
-        "hr": "Uzgajam rajčice. Na što moram paziti?"
+        "hr": "Uzgajam rajčice. Na što moram paziti?",
+        "sv": "Jag odlar tomater. Vad ska jag tänka på?"
       },
       "a": {
         "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
@@ -133,7 +146,8 @@
         "nl": "Groene tomaten die van de plant vallen, kunnen honden aantrekken. Zet een hek om de tuin, zodat je hond niet van de planten kan proeven.",
         "pl": "Zielone pomidory, które spadną z krzaka, mogą przyciągać psy. Ogrodź ogród, żeby pies nie mógł podjadać roślin.",
         "cs": "Zelená rajčata, která spadnou z rostliny, mohou psy lákat. Zahradu oplotte, aby pes nemohl rostliny ochutnávat.",
-        "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke."
+        "hr": "Zelene rajčice koje padnu s biljke mogu privući pse. Ogradi vrt da pas ne bi mogao kušati biljke.",
+        "sv": "Gröna tomater som faller av plantan kan locka hundar. Sätt upp staket runt odlingen så att hunden inte kan smaka på plantorna."
       }
     }
   ],
@@ -253,6 +267,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "eac345c90209d78a46dbb2c9a582ae7a4a0566f0d532860fbbfe8c2cd7ab5ac3"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b0f5449f26e0637416f4efcfca77e36364c886138ee53bc72d8614ccde6628d3"
     }
   }
 }
