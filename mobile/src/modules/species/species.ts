@@ -113,6 +113,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   coton_de_tulear: 'dog',
   english_setter: 'dog',
   lhasa_apso: 'dog',
+  dogue_de_bordeaux: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -230,6 +231,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'coton_de_tulear',
   'english_setter',
   'lhasa_apso',
+  'dogue_de_bordeaux',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
