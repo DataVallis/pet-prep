@@ -1,0 +1,137 @@
+{
+  "slug": "seaweed",
+  "species": "dog",
+  "name": {
+    "en": "Seaweed (nori)",
+    "sl": "Morske alge (nori)"
+  },
+  "question": {
+    "en": "Can dogs eat seaweed?",
+    "sl": "Ali lahko psi jedo morske alge?"
+  },
+  "url_slug": {
+    "en": "seaweed",
+    "sl": "morske-alge"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Some types, in moderation. Plain nori or seaweed sheets without added salt, garlic or seasonings are fine in small amounts. Wild beach seaweed is different: it can contain too much salt and dried strands can expand in the stomach, so consult a vet right away if your dog eats it.",
+    "sl": "Nekatere vrste, zmerno. Navaden nori ali listi alg brez dodane soli, česna ali začimb so v majhnih količinah v redu. Divje alge s plaže so nekaj drugega: lahko vsebujejo preveč soli, suhi prameni pa lahko v želodcu nabreknejo, zato se takoj posvetujte z veterinarjem, če jih pes poje."
+  },
+  "why": {
+    "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
+    "sl": "Morske alge so hranljive in vsebujejo beljakovine, železo, jod, magnezij in omega-3 maščobne kisline. Toda preveč alg lahko psu povzroči prebavne težave, preveč joda pa lahko vpliva na ščitnico. Divje alge s plaže lahko vsebujejo zelo veliko soli, zato je pes izpostavljen zastrupitvi s soljo; njihovi dolgi prameni se lahko zagozdijo v črevesju ali v sebi skrivajo drobne živali ali zajedavce, suhe divje alge pa lahko v želodcu nabreknejo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Keep an eye on your dog at the beach so they don't eat wild seaweed. If your dog does eat seaweed on the beach, consult a veterinarian right away; it can cause vomiting, diarrhoea, weakness and lethargy.",
+    "sl": "Na plaži psa pazljivo spremljajte, da ne poje divjih alg. Če jih pes vseeno poje, se takoj posvetujte z veterinarjem; alge lahko povzročijo bruhanje, drisko, šibkost in zaspanost."
+  },
+  "serving": {
+    "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
+    "sl": "Samo navadne, nezačinjene alge v majhnih količinah, na primer pakirani listi nori. Preberite seznam sestavin in se prepričajte, da ni dodanih začimb, soli ali česna."
+  },
+  "child": {
+    "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
+    "sl": "Psi lahko poskusijo malo navadnega norija. Na plaži pomagaj, da se ne približajo algam na pesku."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What if my dog eats seaweed at the beach?",
+        "sl": "Kaj, če pes na plaži poje alge?"
+      },
+      "a": {
+        "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
+        "sl": "Takoj se posvetujte z veterinarjem. Divje alge lahko vsebujejo preveč soli, suhe alge lahko v želodcu nabreknejo, dolgi prameni pa se lahko zagozdijo v črevesju."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat sushi or seaweed with soy sauce?",
+        "sl": "Ali lahko psi jedo suši ali alge s sojino omako?"
+      },
+      "a": {
+        "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
+        "sl": "Ne. Suši s surovo ribo lahko psu škoduje, sojina omaka pa vsebuje veliko soli."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD165",
+      "quote": "In moderation, it is safe to share some types of seaweed with your dog."
+    },
+    {
+      "id": "KD165",
+      "quote": "dogs can eat processed sheets of seaweed or nori, as long as it does not contain added salt or garlic."
+    },
+    {
+      "id": "KD165",
+      "quote": "You can share these prepackaged seaweed sheets and other edible nori with your pet."
+    },
+    {
+      "id": "KD165",
+      "quote": "make sure to read the ingredients list to make sure it doesn’t have added seasonings."
+    },
+    {
+      "id": "KD165",
+      "quote": "Only feed your dog seaweed if it’s plain, unseasoned, and in small amounts."
+    },
+    {
+      "id": "KD165",
+      "quote": "Seaweed is nutritious and contains protein, iron, iodine, magnesium, and Omega-3s"
+    },
+    {
+      "id": "KD165",
+      "quote": "Like any snack, too much seaweed can upset your dog’s stomach."
+    },
+    {
+      "id": "KD165",
+      "quote": "Too much iodine, which is present in seaweed, can also have an impact on your dog’s thyroid."
+    },
+    {
+      "id": "KD165",
+      "quote": "Keep an eye out for your dog while at the beach so they don’t eat wild seaweed."
+    },
+    {
+      "id": "KD165",
+      "quote": "This can contain excessive amounts of salt, which could put your dog at risk for salt toxicosis."
+    },
+    {
+      "id": "KD165",
+      "quote": "long strands can become lodged in the intestines or even carry hidden animals or parasites."
+    },
+    {
+      "id": "KD165",
+      "quote": "Wild seaweed that is dry can also expand in your dog’s stomach."
+    },
+    {
+      "id": "KD165",
+      "quote": "Sometimes referred to as seaweed poisoning, this condition can cause vomiting, diarrhea, weakness, lethargy,"
+    },
+    {
+      "id": "KD165",
+      "quote": "If your dog does consume seaweed on the beach, consult a veterinarian right away."
+    },
+    {
+      "id": "KD165",
+      "quote": "You also shouldn’t feed your dog sushi made with raw fish, which can make your dog sick."
+    },
+    {
+      "id": "KD165",
+      "quote": "Specifically, soy sauce has high salt content, which can be dangerous for your dog if eaten in concentrated amounts."
+    }
+  ],
+  "related": [
+    "salt",
+    "garlic",
+    "raw-fish",
+    "salty-snacks"
+  ],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "2b7e5fe023a337f414c1acb14c01b3e87a3589adcf0049fad91fbc2c4be70c7c"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "f8d72990da3ac139decdafcb5d82c5438fca3a5497a19fe13468f7d641454c17"}
+  }
+}

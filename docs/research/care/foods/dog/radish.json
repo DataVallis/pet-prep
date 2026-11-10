@@ -1,0 +1,65 @@
+{
+  "slug": "radish",
+  "species": "dog",
+  "name": {"en": "Radishes", "sl": "Redkvice"},
+  "question": {"en": "Can dogs eat radishes?", "sl": "Ali lahko psi jedo redkvice?"},
+  "url_slug": {"en": "radishes", "sl": "redkvice"},
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, but only in small amounts. In moderation, radishes are safe for dogs, though some dogs find the taste off-putting. Remove the greens, wash, peel and chop the radish into small pieces, and serve it plain. Horseradish and wild radishes are not for dogs.",
+    "sl": "Da, a le v majhnih količinah. Zmerno so redkvice za pse varne, čeprav nekaterim psom okus ni všeč. Odstranite liste, redkvico operite, olupite in narežite na majhne koščke ter jo ponudite navadno. Hren in divja redkev nista za pse."
+  },
+  "why": {
+    "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
+    "sl": "Zmerne količine redkvic psom ne škodujejo in morda imajo celo nekaj koristi za zdravje. Listi redkvice lahko povzročijo vnetje prebavil, zato jih ne dajajte. Veliki kosi ali cela redkvica lahko povzročijo zadušitev. Hren v resnici ni redkvica in ga psom ne dajajte, divja redkev pa je druga rastlina, ki za hišne ljubljenčke ni varna."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "As always, before adding a new ingredient to your dog's diet, it's best to first consult your veterinarian. Some dogs find the flavour off-putting and won't want to eat radishes.",
+    "sl": "Kot vedno se je najbolje pred uvajanjem nove sestavine v pasjo prehrano najprej posvetovati z veterinarjem. Nekaterim psom okus ni všeč in redkvic ne bodo želeli jesti."
+  },
+  "serving": {
+    "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
+    "sl": "Odstranite liste, nato redkvico operite, olupite in narežite na majhne koščke. Samo navadne redkvice brez začimb, v majhnih količinah."
+  },
+  "child": {
+    "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
+    "sl": "Psi lahko poskusijo nekaj majhnih koščkov redkvice. Odrasli najprej odstrani liste, redkvico olupi in nareže."
+  },
+  "faq": [
+    {
+      "q": {"en": "Can dogs eat radish leaves?", "sl": "Ali lahko psi jedo liste redkvice?"},
+      "a": {
+        "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
+        "sl": "Ne. Psu ne dajajte listov redkvice, ker lahko povzročijo vnetje prebavil."
+      }
+    },
+    {
+      "q": {"en": "Can dogs eat horseradish?", "sl": "Ali lahko psi jedo hren?"},
+      "a": {
+        "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
+        "sl": "Ne. Hren v resnici ni redkvica in ga psom ne smemo dajati."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KD163", "quote": "In moderation, radishes are safe for dogs to eat."},
+    {"id": "KD163", "quote": "Yes, but only in small amounts; there may even be some health benefits for your pet if they like the unique taste."},
+    {"id": "KD163", "quote": "Although modest amounts of radishes aren’t harmful to dogs, it may take a bit of time for your pet to appreciate the taste."},
+    {"id": "KD163", "quote": "Some dogs find the flavor off-putting altogether and won’t want to consume them."},
+    {"id": "KD163", "quote": "Do not feed your dog the radish greens, as they may cause gastroenteritis"},
+    {"id": "KD163", "quote": "Horseradish isn’t actually a radish and should not be fed to dogs."},
+    {"id": "KD163", "quote": "In addition, wild radishes should not be fed to dogs."},
+    {"id": "KD163", "quote": "Wild radishes are not the same vegetable as regular radishes and are unsafe for pets to eat."},
+    {"id": "KD163", "quote": "First, discard the greens and then wash and peel the radish."},
+    {"id": "KD163", "quote": "chop radishes into small pieces, as large pieces or the entire radish could potentially become a choking hazard."},
+    {"id": "KD163", "quote": "Make sure to feed your dog only plain radishes that have not been seasoned with spices."},
+    {"id": "KD163", "quote": "As always, if you’re looking to incorporate new ingredients into your dog’s diet, it’s best to first consult with your veterinarian."}
+  ],
+  "related": ["carrots", "beetroot", "cucumber"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "606b8536a9bde5d696118ee339197260d71d95c1bcae8b84a19efcffbfffaaba"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "8a6fdaef27660eee49f7245af7408db4c5b54e7dc855b1470103a6f1d1603797"}
+  }
+}

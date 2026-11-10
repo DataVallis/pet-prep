@@ -1,0 +1,80 @@
+{
+  "slug": "cat-grass",
+  "species": "cat",
+  "name": {"en": "Cat grass", "sl": "Mačja trava"},
+  "question": {"en": "Is cat grass safe for cats?", "sl": "Ali je mačja trava varna za mačke?"},
+  "url_slug": {"en": "cat-grass", "sl": "macja-trava"},
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, cat grass is safe for cats in moderation. Cats Protection says grass is safe for cats to eat unless it is contaminated with herbicides or pesticides. Cats can't digest large amounts, though, so eating a lot may make them throw up.",
+    "sl": "Da, mačja trava je za mačke varna, če je ne pojedo preveč. Cats Protection navaja, da je trava za mačke varna, razen če je onesnažena s herbicidi ali pesticidi. Mačke pa velikih količin trave ne morejo prebaviti, zato lahko ob večji količini bruhajo."
+  },
+  "why": {
+    "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
+    "sl": "VCA pojasnjuje, da mačja trava običajno pomeni žitne trave, kot so oves, pšenica, ječmen, lucerna in rž. International Cat Care navaja, da je uživanje trave pri mačkah normalno vedenje in naj bi pomagalo pri potovanju hrane ali kepic dlake skozi prebavila, pogosto z bruhanjem. VCA dodaja, da je ključna zmernost, da mačke trave ne potrebujejo in da lahko velike količine povzročijo močno bruhanje ali kopičenje vlaknin v črevesju. Trava na prostem je lahko škodljiva, če je bila tretirana s pesticidi."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Some vomiting after eating grass is common. If your cat is vomiting frequently, or vomits and also seems off their food, take them to the vet.",
+    "sl": "Nekaj bruhanja po uživanju trave je pogosto. Če mačka pogosto bruha ali bruha in hkrati noče jesti, jo peljite k veterinarju."
+  },
+  "serving": {
+    "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
+    "sl": "Mački ponudite lonček mačje trave v stanovanju ali zunaj, brez herbicidov in pesticidov, in ji pustite, da se sama odloči, ali jo bo jedla. Ko trava oveni ali porumeni, odstranite odmirajoče poganjke."
+  },
+  "child": {
+    "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
+    "sl": "Veliko muc rado grizlja travo. Odrasli lahko zanje vzgoji lonček mačje trave, brez vrtnih škropiv."
+  },
+  "faq": [
+    {
+      "q": {"en": "Why do cats eat grass?", "sl": "Zakaj mačke jedo travo?"},
+      "a": {
+        "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
+        "sl": "Tega nihče ne ve zagotovo. International Cat Care navaja, da gre za normalno vedenje, ki ni povsem pojasnjeno, vendar naj bi pomagalo pri potovanju hrane ali kepic dlake skozi prebavila."
+      }
+    },
+    {
+      "q": {"en": "Is garden grass OK for my cat?", "sl": "Ali je trava z vrta primerna za mojo mačko?"},
+      "a": {
+        "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
+        "sl": "Le če ni bila tretirana. VCA opozarja, da je trava na prostem lahko škodljiva, če je bila tretirana s pesticidi. PDSA svetuje mačjo travo, ki jo lahko gojite v stanovanju ali zunaj in za katero veste, da je brez pesticidov."
+      }
+    },
+    {
+      "q": {"en": "My cat lives indoors. Does it need grass?", "sl": "Moja mačka živi v stanovanju. Ali potrebuje travo?"},
+      "a": {
+        "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
+        "sl": "VCA navaja, da mačka trave ne potrebuje. International Cat Care pa opozarja, da lahko mačke v stanovanju brez trave grizljajo druge lončnice, zato jim lahko travo ponudimo tudi v stanovanju."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC96", "quote": "Grass is safe for cats to eat unless it is contaminated with herbicides or pesticides."},
+    {"id": "KC96", "quote": "Cats are not able to digest large amounts of grass, so eating it may make them throw up."},
+    {"id": "KC96", "quote": "Try providing your cat with a pot of grass either outdoors or indoors, depending on where they spend most of their time."},
+    {"id": "KC96", "quote": "It’s important to give your cat the choice and not force them to eat the grass if they don’t want to."},
+    {"id": "KC96", "quote": "Keep it free of herbicides or pesticides."},
+    {"id": "KC96", "quote": "If your cat is vomiting frequently, or if they vomit and also seem to be off their food, take them to the vet"},
+    {"id": "KC95", "quote": "Cat grass usually refers to grass that produces cereal grains, such as oat, wheat, barley, alfalfa, and rye."},
+    {"id": "KC95", "quote": "Moderation is key."},
+    {"id": "KC95", "quote": "Cats don’t have the necessary digestive enzymes to process large quantities of grass and overeating can result in excess vomiting."},
+    {"id": "KC95", "quote": "Conversely, if the cat doesn’t throw up, the insoluble fiber in grass can potentially build up and cause an intestinal blockage."},
+    {"id": "KC95", "quote": "Your cat does not need to eat grass."},
+    {"id": "KC95", "quote": "Eating outdoor grass can be harmful if it has been treated with pesticides."},
+    {"id": "KC95", "quote": "When the grass wilts or turns yellow, pull out the dying shoots."},
+    {"id": "KC93", "quote": "Eating grass is a normal behaviour in cats yet not fully understood"},
+    {"id": "KC93", "quote": "the general understanding is that it helps to move food or hairballs through the digestive tract"},
+    {"id": "KC93", "quote": "(either up or down as grass-eating often results in vomiting)."},
+    {"id": "KC93", "quote": "Indoor cats without access to grass may chew other potted plants they would usually ignore or avoid"},
+    {"id": "KC93", "quote": "Cats without access to grass outside can be provided with a source indoors."},
+    {"id": "KC97", "quote": "Eating grass is perfectly safe for your cat and a lot of them actually really enjoy eating it too!"},
+    {"id": "KC98", "quote": "which can be grown inside or outside and you know is free from pesticides and other nasty chemicals."}
+  ],
+  "related": ["catnip", "basil"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "2e6820f77e15d0746ab5f2b163fb778c9edb2dfcab021a12de172999a17d6aac"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "cd9e70261c0e02a1d0709bde2f64d052acf9eacdd4111b3e2cfc4e1b1a4315db"}
+  }
+}

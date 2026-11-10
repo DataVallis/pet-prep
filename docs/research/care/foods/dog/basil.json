@@ -1,0 +1,51 @@
+{
+  "slug": "basil",
+  "species": "dog",
+  "name": {"en": "Basil", "sl": "Bazilika"},
+  "question": {"en": "Can dogs eat basil?", "sl": "Ali lahko psi jedo baziliko?"},
+  "url_slug": {"en": "basil", "sl": "bazilika"},
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small quantities. The ASPCA lists basil as non-toxic to dogs, and it is one of the herbs you can grow in a dog-friendly garden and add to your dog's meals or treats in small quantities.",
+    "sl": "Da, v majhnih količinah. ASPCA baziliko uvršča med rastline, ki za pse niso strupene, in je eno od zelišč, ki jih lahko gojite na psu prijaznem vrtu ter jih v majhnih količinah dodate pasjim obrokom ali priboljškom."
+  },
+  "why": {
+    "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
+    "sl": "Bazilika (Ocimum basilicum, tudi sladka ali tajska bazilika) za pse ni strupena. Ima antioksidativne, protivirusne in protimikrobne lastnosti. Kot pri drugih zeliščih, ki jih dodamo obrokom ali vmešamo v priboljške, naj bodo količine majhne."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Basil is non-toxic to dogs. Just keep any basil you add to meals or treats to small quantities.",
+    "sl": "Bazilika za pse ni strupena. Baziliko, ki jo dodate obrokom ali priboljškom, le ohranite v majhnih količinah."
+  },
+  "serving": {
+    "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
+    "sl": "Malo je dodajte pasjim obrokom ali jo v majhnih količinah vmešajte v priboljške."
+  },
+  "child": {
+    "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
+    "sl": "Bazilika je psom prijazno zelišče. Odrasli lahko malo bazilike doda pasji hrani."
+  },
+  "faq": [
+    {
+      "q": {"en": "Is a basil plant safe in a garden with dogs?", "sl": "Je bazilika na vrtu varna, če imamo psa?"},
+      "a": {
+        "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
+        "sl": "Da. Bazilika za pse ni strupena in je eno od zelišč, ki jih lahko gojimo na psu prijaznem vrtu."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KD169", "quote": "Saint Joseph's Wort, Thai Basil, Sweet Basil"},
+    {"id": "KD169", "quote": "Non-Toxic to Dogs, Non-Toxic to Cats"},
+    {"id": "KD168", "quote": "When it comes to herbs, Osborne says the ones listed below can be grown in your garden."},
+    {"id": "KD168", "quote": "Plus, you can add them to your dog’s meals, or mix them into treats in small quantities:"},
+    {"id": "KD168", "quote": "Basil (Ocimum basilicum) has antioxidant, antiviral, and antimicrobial properties."}
+  ],
+  "related": ["herbs-parsley", "mint"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "a85dd15ae0962665431d442c2304444eb00ddd8a917e4ea89707efb874310e60"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "91cb4c650d1d084bc9d55efcaf65eff87f42fc5cbeaf6f020b53820f50f500f9"}
+  }
+}
