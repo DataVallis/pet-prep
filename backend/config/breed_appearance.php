@@ -782,6 +782,13 @@
 | well over the back (S738). Not a welfare breed (RKC Breed Watch Category 1, S740). Golden first with the highest weight
 | (the portrait default); weights unsourced → `verified => false`.
 |
+| Dogue de Bordeaux (M5-R10-100, docs/research/dog-data dogue_de_bordeaux.appearance): "Typical concave lined
+| brachycephalic molossoid." (FCI-Standard N° 116, S755); "Self-coloured, in all shades of fawn, from mahogany to
+| isabella." with a black, brown or no mask; limited white only on the forechest and toes; white on the head or body,
+| brindle or solid brown disqualify (S755). Welfare breed (RKC Breed Watch Category 3, S756; short muzzle, PetMD S759) →
+| a moderate muzzle with clearly open nostrils and only moderate wrinkles, tight eyelids. Mahogany fawn with a brown mask
+| first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | English Setter (M5-R10-97, docs/research/dog-data english_setter.appearance):
 | "Of medium height, clean in outline, elegant in appearance and movement." (FCI-Standard N° 2, S730); colours blue,
 | orange, lemon and liver belton or tricolour (blue / liver belton and tan), "Any other colour or combination of colours
@@ -4345,6 +4352,44 @@ return [
             'tail' => ['high-set, well-feathered tail carried well over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-100 (docs/research/dog-data/data.json dogue_de_bordeaux.appearance; runbook rules 2026-10-10: standard colours
+    // only — self-coloured fawn from mahogany to isabella, black / brown / no mask (FCI-Standard N° 116, S755); never brindle,
+    // never solid brown, never white on the head or body; welfare breed (short muzzle, RKC Breed Watch Category 3, S756) →
+    // moderate muzzle with clearly open nostrils and no heavy wrinkles).
+    'dogue_de_bordeaux' => [
+        'display_name' => 'Dogue de Bordeaux',
+        // Colour frequencies are in no source (dogue_de_bordeaux.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 116 (S755, https://www.fci.be/Nomenclature/Standards/116g02-en.pdf), RKC breed page (S756), PDSA (S757), PetMD (S759) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S756 "Size: Large"; S755 "Height at the withers: For males: 60-68 cm." / "For females: 58-66 cm."',
+            'build' => 'S755 "Stocky, athletic, and imposing, it has a very dissuasive aspect."',
+            'coat_length' => 'S755 "Hair: Fine, short, and soft to the touch."',
+            'coat_color' => 'S755 "Self-coloured, in all shades of fawn, from mahogany to isabella."; masks black, brown or none; "Limited white patches are permissible on the forechest, and the extremities of the limbs." (weights unsourced; never brindle or solid brown)',
+            'ear_carriage' => 'S755 "Relatively small, of a slightly darker colour than the coat."',
+            'eye_color' => 'S755 eye colour "hazel to dark brown for a dog with a black mask" (lighter tolerated with a brown or no mask); disqualifying "Blue eyes; bulging eyes."',
+            'tail' => 'S755 "Very thick at the base."; "Carried low, it is neither broken nor kinked but supple."',
+            'muzzle' => 'S755 "Broad, well opened nostrils, well pigmented according to the colour of the mask."; muzzle "Powerful, broad, thick, but not fleshy below the eyes, rather short" (welfare: PetMD S759 "Due to their short muzzle, Dogues de Bordeaux might experience airway dysfunction" — a moderate muzzle with open nostrils)',
+        ],
+        'traits' => [
+            'size' => ['large, powerful'],
+            'build' => [['value' => 'stocky, athletic and imposing molossoid build with a broad, deep chest', 'weight' => 3], 'muscular, thick-set body standing on strong, straight legs'],
+            'coat_length' => ['fine, short coat, soft to the touch, over loose but not excessive skin'],
+            // Standard colours only (S755); mahogany fawn with a brown mask highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'mahogany fawn with a brown mask', 'weight' => 35],
+                ['value' => 'fawn with a black mask', 'weight' => 30],
+                ['value' => 'fawn without a mask', 'weight' => 25],
+                ['value' => 'pale isabella fawn', 'weight' => 10],
+            ],
+            'ear_carriage' => ['relatively small hanging ears, slightly darker than the coat'],
+            // Welfare (PetMD S759 ectropion / entropion; S755 never bulging): tight eyelids.
+            'eye_color' => ['oval hazel to dark brown eyes with tight eyelids, set wide apart, never bulging'],
+            'tail' => ['natural tail, very thick at the base, tapering and carried low'],
+            'muzzle' => ['moderately short, broad, powerful muzzle with a broad nose pigmented to match the mask, clearly open nostrils and only moderate wrinkles'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

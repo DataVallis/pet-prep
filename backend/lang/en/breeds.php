@@ -100,6 +100,7 @@ return [
     'coton_de_tulear' => 'Coton de Tulear',
     'english_setter' => 'English Setter',
     'lhasa_apso' => 'Lhasa Apso',
+    'dogue_de_bordeaux' => 'Dogue de Bordeaux',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
