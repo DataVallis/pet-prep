@@ -1208,6 +1208,19 @@
             "prompt_hash": "sha256:28960f587b25ebeb4a99b00e0482c7a1351b6a803af7dd1e0dcc803a17155b8a",
             "generated_at": "2026-11-09T11:00:58+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "dogue_de_bordeaux",
+            "species": "dog",
+            "colour": "mahogany-brown-mask",
+            "file": "dog/dogue-de-bordeaux.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:5ff2168e51c8dc65738ec7e05678a9ea8ce057cf9b29f9f1b5ebbe6985852332",
+            "generated_at": "2026-11-10T03:00:11+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
