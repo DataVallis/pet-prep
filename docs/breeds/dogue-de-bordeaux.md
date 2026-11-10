@@ -31,7 +31,7 @@
 | 2026-11-10 | pravilo runbooka (§3) | barve za AI in izbirnik: **4 odtenki plave (fawn) barve** — mahagonij z rjavo masko (portret), plava s črno masko, plava brez maske, izabela; nikoli tigrasta, enobarvno rjava ali bela na glavi / telesu; zmeren gobček z odprtimi nosnicami, brez težkih gub | FCI S755 »Self-coloured, in all shades of fawn, from mahogany to isabella.«; uteži niso iz vira (`verified=false`) | #915 |
 | 2026-11-10 | pravilo runbooka (§2.3) | seznam za vzreditelja: **RKC** — komolci (BVA/KC), oči (BVA/KC/ISDS), kolki (BVA/KC), vse minimum | S756 | #915 |
 | 2026-11-10 | pravilo runbooka | zdravstveni ključi registra: `shorter_face_boas`, `bloat_gdv`, `hip_elbow_dysplasia`, nov `skin_fold_care` (gube na obrazu redno čistiti in osušiti); brez odstotkov | PDSA S757, PetMD S759 | #915 |
-| 2026-11-10 | predlog Claude, David lahko spremeni | EN »Dogue de Bordeaux«, SL **»Bordojska doga«** (v stavku »bordojska doga«); iskanje tudi »bordeaux mastiff«, »french mastiff«, »bordoška doga« | FCI S754, RKC S756; slovenske strani KZS nisem odprl | #915 |
+| 2026-11-10 | predlog Claude, David lahko spremeni | EN »Dogue de Bordeaux«, SL **»Bordojska doga«** (v stavku »bordojska doga«); iskanje tudi »bordeaux«, »bordeaux dog«, »bordoška doga« (ne »mastiff«, da iskanje mastifa ostane enako) | FCI S754, RKC S756; slovenske strani KZS nisem odprl | #915 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
 

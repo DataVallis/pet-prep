@@ -77639,7 +77639,7 @@
         "value": 60,
         "unit": "minutes/day",
         "source_id": "S756",
-        "quote": null,
+        "quote": "Exercise: Up to 1 hour per day",
         "confidence": "high",
         "notes": "RKC 'Up to 1 hour per day' (S756). Rule: one number N ('up to N') → N = 60. PDSA (S757) 'a minimum of an hour' agrees.",
         "alternatives": [],

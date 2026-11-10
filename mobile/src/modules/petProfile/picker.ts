@@ -1455,7 +1455,7 @@ const FALLBACK_BREEDS: ReadonlyArray<Omit<CatalogueBreed, 'colours'>> = [
     premium: true,
     free_plan_allowed: false,
     challenge_allowed: true,
-    search_keywords: ['dogue de bordeaux', 'bordeaux mastiff', 'french mastiff', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'],
+    search_keywords: ['dogue de bordeaux', 'bordeaux', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'],
     sort_order: 930,
     suitability: {
       suits: ['large_home'],

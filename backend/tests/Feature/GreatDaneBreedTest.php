@@ -316,7 +316,7 @@ describe('stage rules', function () {
         'senior 54 months' => [54, LifeStage::Senior, 90, 9000],
     ]);
 
-    it('becomes senior at 54 months, before every other dog (the Bernese Mountain Dog at 76)', function () {
+    it('becomes senior at 54 months, before every other dog but the Dogue de Bordeaux (50; the Bernese Mountain Dog at 76)', function () {
         $service = app(LifeStageService::class);
 
         expect($service->stageForAge('great-dane', 53))->toBe(LifeStage::Adult)
@@ -327,8 +327,10 @@ describe('stage rules', function () {
         $seniors = collect(BreedStageParamsSeeder::rows())
             ->where('stage', 'senior')->where('key', StageParamKey::StartsAtMonths->value)
             ->pluck('value', 'breed_slug');
-        expect($seniors->min())->toBe(54)
-            ->and($seniors->filter(fn ($months) => $months <= 54)->keys()->all())->toBe(['great-dane']);
+        // M5-R10-100: the Dogue de Bordeaux (VetCompass median 5.5 y, S212) is the one dog earlier still, at 50.
+        expect($seniors->except('dogue-de-bordeaux')->min())->toBe(54)
+            ->and($seniors->filter(fn ($months) => $months <= 54)->keys()->sort()->values()->all())->toBe(['dogue-de-bordeaux', 'great-dane'])
+            ->and($seniors['dogue-de-bordeaux'])->toBe(50);
     });
 
     it('learns at the mixed-breed speed (Coren Average tier, rank 48) with no individual factor', function () {

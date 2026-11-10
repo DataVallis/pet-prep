@@ -56,7 +56,7 @@ describe('M5-R10-100 Dogue de Bordeaux', () => {
   it('mirrors BreedConfigsSeeder and config/breed_suitability.php in the fallback catalogue', () => {
     const dog = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === KEY);
     expect(dog).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 930 }));
-    expect(dog?.search_keywords).toEqual(['dogue de bordeaux', 'bordeaux mastiff', 'french mastiff', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga']);
+    expect(dog?.search_keywords).toEqual(['dogue de bordeaux', 'bordeaux', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga']);
     expect(dog?.suitability).toEqual({
       suits: ['large_home'],
       consider: ['short_muzzle_breathing', 'sensitive_skin', 'hips_hind_legs', 'not_for_small_children', 'experienced_owner', 'drools', 'sheds', 'chases_small_pets'],
@@ -68,7 +68,7 @@ describe('M5-R10-100 Dogue de Bordeaux', () => {
     expect(find('dogue de bordeaux')).toEqual([KEY]);
     expect(find('Bordeaux')).toEqual([KEY]);
     expect(find('bordojska doga')).toEqual([KEY]);
-    expect(find('french mastiff')).toEqual([KEY]);
+    expect(find('bordeaux dog')).toEqual([KEY]);
   });
 
   it('shows its chips in the picker, quotes 6.000 / 4.500 steps and confirms as a challenge dog', () => {

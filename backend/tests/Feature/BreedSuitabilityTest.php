@@ -298,7 +298,7 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
     // skin-fold dermatitis, M5-R10-39), the Pug (Breed Watch skin-fold dermatitis, M5-R10-43) and the Mastiff (PDSA atopy S370,
     // Breed Watch skin-fold dermatitis S375, M5-R10-45) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff, BreedType::SharPei, BreedType::Pekingese, BreedType::ChowChow], true)) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff, BreedType::SharPei, BreedType::Pekingese, BreedType::ChowChow, BreedType::DogueDeBordeaux], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -370,7 +370,7 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
 
     // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23), the Dobermann (PDSA S211, M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Belgian Malinois (AKC S316 / PetMD S317, M5-R10-38), the Hungarian Vizsla (PDSA S329, M5-R10-40), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Weimaraner (PDSA S480, M5-R10-59), the Giant Schnauzer (PDSA S496, M5-R10-61), the Bloodhound (PDSA S503, M5-R10-62) and the Akita (PDSA S508, M5-R10-63) carry the chip so far (also the Bullmastiff and the Alaskan Malamute, PDSA S639, M5-R10-83).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::RhodesianRidgeback, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::AlaskanMalamute], true)) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::RhodesianRidgeback, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::AlaskanMalamute, BreedType::DogueDeBordeaux], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }
@@ -471,10 +471,10 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
     // `drools` also the Great Dane (PDSA S243, M5-R10-29), the Basset Hound (AKC S324, M5-R10-39) and the Mastiff (PetMD S374, M5-R10-45), the Newfoundland (PDSA S423 / PetMD S424, M5-R10-51) and the Bloodhound (PDSA S503, M5-R10-62); `not_for_small_children` also the Dobermann (PDSA S211,
     // M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Great Dane (PDSA S243, M5-R10-29), the Belgian Malinois (AKC S316, M5-R10-38), the Hungarian Vizsla (PDSA S329, M5-R10-40), the Mastiff (PetMD S374, M5-R10-45), the Rhodesian Ridgeback (PDSA S390 / Woodgreen S392, M5-R10-47) the Dalmatian (PDSA S430, M5-R10-52), the Weimaraner (PDSA S480, M5-R10-59), the Giant Schnauzer (PetMD S497, M5-R10-61), the Bloodhound (PDSA S503, M5-R10-62), the Akita (PDSA S508, M5-R10-63) and the Pyrenean Mountain Dog (PetMD S604, M5-R10-78) and the Anatolian Shepherd Dog (PetMD S687, M5-R10-90).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::DogueDeBordeaux], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow, BreedType::OldEnglishSheepdog], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::DogueDeBordeaux], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -537,8 +537,8 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         // M5-R10-71: the Bullmastiff (PDSA S568 BOAS "caused by their shorter faces"); M5-R10-87: the Shar Pei (PDSA S660 BOAS
-        // "caused by their flatter face").
-        if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu, BreedType::Bullmastiff, BreedType::SharPei], true)) {
+        // "caused by their flatter face"); M5-R10-100: the Dogue de Bordeaux (PetMD S759 "Due to their short muzzle …").
+        if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu, BreedType::Bullmastiff, BreedType::SharPei, BreedType::DogueDeBordeaux], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('short_muzzle_breathing');
         }
     }
@@ -624,6 +624,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::ChowChow->value => 'chow_chow.behaviour.other_pets',
         // M5-R10-93: PDSA S705 "Remember to keep a tight grip on your dog's lead while out, as the herding and prey drive is quite strong"
         BreedType::OldEnglishSheepdog->value => 'old_english_sheepdog.behaviour.other_pets',
+        // M5-R10-100: PDSA S757 "Many Dogue de Bordeaux have a very high prey drive".
+        BreedType::DogueDeBordeaux->value => 'dogue_de_bordeaux.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

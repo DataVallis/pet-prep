@@ -2032,7 +2032,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 930,
                 'label_key' => 'breeds.dogue_de_bordeaux',
-                'search_keywords' => ['dogue de bordeaux', 'bordeaux mastiff', 'french mastiff', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'],
+                'search_keywords' => ['dogue de bordeaux', 'bordeaux', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.

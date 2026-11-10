@@ -114,7 +114,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 930, 'breeds.dogue_de_bordeaux'])
-            ->and($config->search_keywords)->toBe(['dogue de bordeaux', 'bordeaux mastiff', 'french mastiff', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'])
+            ->and($config->search_keywords)->toBe(['dogue de bordeaux', 'bordeaux', 'bordeaux dog', 'bordojska doga', 'bordoška doga', 'bordoska doga'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) ddbData('proposed_game_parameters.dogue_de_bordeaux.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
