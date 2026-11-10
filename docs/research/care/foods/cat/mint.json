@@ -1,57 +1,141 @@
 {
   "slug": "mint",
   "species": "cat",
-  "name": {"en": "Mint (garden mint)", "sl": "Meta (vrtna meta)"},
-  "question": {"en": "Can cats eat mint?", "sl": "Ali lahko mačke jedo meto?"},
-  "url_slug": {"en": "mint", "sl": "meta"},
+  "name": {
+    "en": "Mint (garden mint)",
+    "sl": "Meta (vrtna meta)",
+    "pt": "Hortelã (hortelã-comum)"
+  },
+  "question": {
+    "en": "Can cats eat mint?",
+    "sl": "Ali lahko mačke jedo meto?",
+    "pt": "Os gatos podem comer hortelã?"
+  },
+  "url_slug": {
+    "en": "mint",
+    "sl": "meta",
+    "pt": "hortela"
+  },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your cat mint. The ASPCA lists garden mint as toxic to cats because of its essential oils; eating a lot of it can cause vomiting and diarrhoea. If your cat has eaten some, contact your vet.",
-    "sl": "Ne, mački ne dajajte mete. ASPCA vrtno meto navaja kot strupeno za mačke zaradi njenih eteričnih olj; če je mačka poje veliko, lahko povzroči bruhanje in drisko. Če jo je mačka pojedla, se obrnite na veterinarja."
+    "sl": "Ne, mački ne dajajte mete. ASPCA vrtno meto navaja kot strupeno za mačke zaradi njenih eteričnih olj; če je mačka poje veliko, lahko povzroči bruhanje in drisko. Če jo je mačka pojedla, se obrnite na veterinarja.",
+    "pt": "Não, não dês hortelã ao teu gato. A ASPCA classifica a hortelã-comum como tóxica para os gatos, por causa dos óleos essenciais, que podem causar vómitos e diarreia se o gato comer muita. Se o teu gato comeu alguma, liga ao teu veterinário."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
-    "sl": "ASPCA meto (vrste rodu Mentha, imenovane tudi vrtna meta) navaja kot strupeno za mačke. Kot strupeno snov navaja eterična olja, kot znaka pri zaužitju večjih količin pa bruhanje in drisko. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa."
+    "sl": "ASPCA meto (vrste rodu Mentha, imenovane tudi vrtna meta) navaja kot strupeno za mačke. Kot strupeno snov navaja eterična olja, kot znaka pri zaužitju večjih količin pa bruhanje in drisko. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa.",
+    "pt": "A ASPCA classifica a hortelã (espécies de Mentha, também chamada hortelã-comum) como tóxica para os gatos. Indica os óleos essenciais como a substância tóxica e refere vómitos e diarreia quando é comida em grande quantidade. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne."
   },
   "signs": {
-    "en": ["Vomiting", "Diarrhoea", "Stomach upset"],
-    "sl": ["Bruhanje", "Driska", "Prebavne težave"]
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Prebavne težave"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Mal-estar no estômago"
+    ]
   },
   "what_to_do": {
     "en": "If your cat has eaten mint, contact your vet straight away. Don't wait for symptoms to appear.",
-    "sl": "Če je mačka pojedla meto, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki."
+    "sl": "Če je mačka pojedla meto, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki.",
+    "pt": "Se o teu gato comeu hortelã, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais."
   },
   "serving": null,
   "child": {
     "en": "Mint is not a cat snack. If kitty nibbles some, tell a grown-up so they can call the vet.",
-    "sl": "Meta ni priboljšek za muce. Če jo muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja."
+    "sl": "Meta ni priboljšek za muce. Če jo muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
+    "pt": "A hortelã não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário."
   },
   "faq": [
     {
-      "q": {"en": "Is catnip a kind of mint?", "sl": "Ali je mačja meta vrsta mete?"},
+      "q": {
+        "en": "Is catnip a kind of mint?",
+        "sl": "Ali je mačja meta vrsta mete?",
+        "pt": "A erva-gateira é um tipo de hortelã?"
+      },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
-        "sl": "Mačja meta spada v družino metovk, kot navaja VCA, vendar je samostojna rastlina. ASPCA jo navaja posebej: veliko mačk jo ima zelo rado, vendar lahko njeno uživanje povzroči bruhanje in drisko."
+        "sl": "Mačja meta spada v družino metovk, kot navaja VCA, vendar je samostojna rastlina. ASPCA jo navaja posebej: veliko mačk jo ima zelo rado, vendar lahko njeno uživanje povzroči bruhanje in drisko.",
+        "pt": "A erva-gateira pertence à família da hortelã, como refere a VCA, mas é uma planta diferente. A ASPCA classifica-a em separado: muitos gatos adoram erva-gateira, mas comê-la pode causar vómitos e diarreia."
       }
     }
   ],
   "sources": [
-    {"id": "KC90", "quote": "Garden Mint"},
-    {"id": "KC90", "quote": "Mentha sp."},
-    {"id": "KC90", "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
-    {"id": "KC90", "quote": "Essential Oils"},
-    {"id": "KC90", "quote": "Vomiting and diarrhea with large ingestions"},
-    {"id": "KC62", "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."},
-    {"id": "KC49", "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."},
-    {"id": "KC87", "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."},
-    {"id": "KC87", "quote": "Don’t wait for symptoms to appear."},
-    {"id": "KC95", "quote": "Catnip is a member of the mint family."},
-    {"id": "KC92", "quote": "Many cats love catnip, but it can cause vomiting and diarrhea."}
+    {
+      "id": "KC90",
+      "quote": "Garden Mint"
+    },
+    {
+      "id": "KC90",
+      "quote": "Mentha sp."
+    },
+    {
+      "id": "KC90",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC90",
+      "quote": "Essential Oils"
+    },
+    {
+      "id": "KC90",
+      "quote": "Vomiting and diarrhea with large ingestions"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC95",
+      "quote": "Catnip is a member of the mint family."
+    },
+    {
+      "id": "KC92",
+      "quote": "Many cats love catnip, but it can cause vomiting and diarrhea."
+    }
   ],
-  "related": ["catnip", "herbs-parsley", "basil"],
+  "related": [
+    "catnip",
+    "herbs-parsley",
+    "basil"
+  ],
   "updated": "2026-11-10",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "69f184d0c5490d17b2a1e608377d71df8daab4b4bba5e0e1d55d8f3b89ee81d3"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "b4649a0a3b3b258fdf9eccb1baaed59117d2c67eee17aaaf0458fe37f329776c"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69f184d0c5490d17b2a1e608377d71df8daab4b4bba5e0e1d55d8f3b89ee81d3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b4649a0a3b3b258fdf9eccb1baaed59117d2c67eee17aaaf0458fe37f329776c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf77bf8a2913776a776ef27af360962dfdf38194a68053f798a1496ca4d67233"
+    }
   }
 }
