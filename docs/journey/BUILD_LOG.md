@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-10 — Lijak: prve prave številke namesto predpostavk
+
+**Kaj:** v administraciji je stran »Lijak«: koliko družin je po tednu registracije dodalo otroka, dobilo ljubljenčka, koliko otrok je bilo aktivnih 1. in 7. dan, koliko družin je plačalo, vztrajalo do 4. tedna in prišlo do certifikata. Hkrati je zapisan 8-tedenski načrt validacije (cilj: 100 plačljivih družin).
+**Zakaj je pomembno:** CPA, konverzija in CAC v poslovnem modelu so bile predpostavke. Od zdaj ima vsak korak številko — brez analitičnega SDK, samo iz podatkov, ki jih igra že zapisuje.
+**Kako povedati:** 💼 »Ne ugibamo: vsak korak od registracije do certifikata merimo sami, brez orodij tretjih strani v otroški aplikaciji.« · 🛠 »Ena bralna poizvedba po tedenskih kohortah, nič novega sledenja.«
+
 ## 2026-11-09 — Vsak ljubljenček ima svoj časovni pas
 
 **Kaj:** vsak ljubljenček ima lahko svoj časovni pas (privzeto je pas družine), zato lahko David v Lizboni skrbi za svojega psa po lizbonskem času, žena in otroka v Sloveniji pa svoje pse hranijo ob 19:00 po ljubljanskem času.

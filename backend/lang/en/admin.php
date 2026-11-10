@@ -412,6 +412,42 @@ return [
         'preview_not_vet_reviewed' => 'For information only, not reviewed by a vet. Ask your vet about your pet\'s health.',
     ],
 
+    // Funnel (M5-08, David 2026-11-10).
+    'funnel' => [
+        'navigation' => 'Funnel',
+        'title' => 'Funnel',
+        'description' => 'Families per sign-up week (Monday, Ljubljana time) at every step from registration to the certificate. Each family counts once per step. Numbers only — no names. Families of superadmins are left out.',
+        'period' => 'Sign-up weeks shown',
+        'weeks' => 'last :weeks weeks',
+        'total' => 'Total',
+        'empty' => 'No families signed up in this period.',
+        'legend' => 'What the columns mean',
+        'col' => [
+            'cohort' => 'Week of',
+            'registered' => 'Registered',
+            'child_added' => 'Child added',
+            'pet_born' => 'Pet born',
+            'd1' => 'Child active day 1+',
+            'd7' => 'Child active day 7+',
+            'paid' => 'Paid',
+            'paid_test' => 'Test purchase',
+            'week4' => 'Active week 4',
+            'certificate' => 'Certificate',
+        ],
+        'help' => [
+            'registered' => 'a parent created an account (a family).',
+            'child_added' => 'the family has a child profile. Share of registered.',
+            'pet_born' => 'a child signed the contract, so a pet was born. Share of registered.',
+            'd1' => 'a child did something for the pet at least 1 day after the first pet was born. Shown as families / families whose pet is at least 1 day old.',
+            'd7' => 'the same at least 7 days after the birth. Shown as families / families whose pet is at least 7 days old.',
+            'paid' => 'the family bought the 12-week challenge with real money (store environment PRODUCTION, not refunded). Share of families with a born pet.',
+            'paid_test' => 'the family only has sandbox / test purchases. Share of families with a born pet.',
+            'week4' => 'a child was still active 21 days or more after the family\'s first purchase. Shown as families / families that bought at least 21 days ago.',
+            'certificate' => 'a child finished the 12 weeks with a certificate. Share of registered.',
+            'note' => 'A deleted family disappears from these numbers, so an old week can get smaller. »—« means no family in that week is old enough to be judged yet.',
+        ],
+    ],
+
     // System health (David 2026-10-19).
     'system_health' => [
         'navigation' => 'System health',

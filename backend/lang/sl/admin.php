@@ -411,6 +411,42 @@ return [
         'preview_not_vet_reviewed' => 'Informativno, ni veterinarsko preverjeno. Za zdravje vašega ljubljenčka vprašajte veterinarja.',
     ],
 
+    // Funnel (M5-08, David 2026-11-10).
+    'funnel' => [
+        'navigation' => 'Lijak',
+        'title' => 'Lijak',
+        'description' => 'Družine po tednu registracije (ponedeljek, čas Ljubljane) na vsakem koraku od registracije do certifikata. Vsaka družina šteje enkrat na korak. Samo številke — brez imen. Družine superadminov niso vštete.',
+        'period' => 'Prikazani tedni registracije',
+        'weeks' => 'zadnjih :weeks tednov',
+        'total' => 'Skupaj',
+        'empty' => 'V tem obdobju se ni registrirala nobena družina.',
+        'legend' => 'Kaj pomenijo stolpci',
+        'col' => [
+            'cohort' => 'Teden od',
+            'registered' => 'Registrirani',
+            'child_added' => 'Dodan otrok',
+            'pet_born' => 'Rojen ljubljenček',
+            'd1' => 'Otrok aktiven 1. dan+',
+            'd7' => 'Otrok aktiven 7. dan+',
+            'paid' => 'Plačali',
+            'paid_test' => 'Testni nakup',
+            'week4' => 'Aktivni 4. teden',
+            'certificate' => 'Certifikat',
+        ],
+        'help' => [
+            'registered' => 'starš je ustvaril račun (družino).',
+            'child_added' => 'družina ima otroški profil. Delež registriranih.',
+            'pet_born' => 'otrok je podpisal pogodbo in ljubljenček se je rodil. Delež registriranih.',
+            'd1' => 'otrok je za ljubljenčka nekaj naredil vsaj 1 dan po rojstvu prvega ljubljenčka. Prikazano kot družine / družine, katerih ljubljenček je star vsaj 1 dan.',
+            'd7' => 'enako vsaj 7 dni po rojstvu. Prikazano kot družine / družine, katerih ljubljenček je star vsaj 7 dni.',
+            'paid' => 'družina je kupila 12-tedenski izziv s pravim denarjem (okolje trgovine PRODUCTION, brez vračila). Delež družin z rojenim ljubljenčkom.',
+            'paid_test' => 'družina ima samo testne nakupe (sandbox). Delež družin z rojenim ljubljenčkom.',
+            'week4' => 'otrok je bil aktiven še 21 dni ali več po prvem nakupu družine. Prikazano kot družine / družine, ki so kupile pred vsaj 21 dnevi.',
+            'certificate' => 'otrok je 12 tednov končal s certifikatom. Delež registriranih.',
+            'note' => 'Izbrisana družina izgine iz teh številk, zato se star teden lahko zmanjša. »—« pomeni, da v tem tednu še nobena družina ni dovolj stara za oceno.',
+        ],
+    ],
+
     // System health (David 2026-10-19).
     'system_health' => [
         'navigation' => 'Zdravje sistema',
