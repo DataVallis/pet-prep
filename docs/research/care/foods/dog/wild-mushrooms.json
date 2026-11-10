@@ -10,7 +10,8 @@
     "cs": "Divoké houby",
     "hr": "Divlje gljive",
     "sv": "Vilda svampar",
-    "da": "Vilde svampe"
+    "da": "Vilde svampe",
+    "fi": "Luonnonvaraiset sienet"
   },
   "question": {
     "en": "Can dogs eat wild mushrooms?",
@@ -21,7 +22,8 @@
     "cs": "Mohou psi jíst divoké houby?",
     "hr": "Smiju li psi jesti divlje gljive?",
     "sv": "Får hundar äta vilda svampar?",
-    "da": "Må hunde spise vilde svampe?"
+    "da": "Må hunde spise vilde svampe?",
+    "fi": "Saako koira syödä luonnonvaraisia sieniä?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
@@ -32,7 +34,8 @@
     "cs": "divoke-houby",
     "hr": "divlje-gljive",
     "sv": "vilda-svampar",
-    "da": "vilde-svampe"
+    "da": "vilde-svampe",
+    "fi": "luonnonvaraiset-sienet"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Ne. Každou houbu, kterou pes venku najde, považujte za toxickou. Toxické houby se od netoxických těžko rozeznávají a ty toxické jsou extrémně nebezpečné. Pokud pes snědl divokou houbu, okamžitě kontaktujte veterináře.",
     "hr": "Ne. Svaku gljivu koju pas pronađe vani smatraj otrovnom. Otrovne i neotrovne gljive teško je razlikovati, a otrovne su iznimno opasne. Ako je pas pojeo divlju gljivu, odmah se obrati veterinaru.",
     "sv": "Nej. Behandla varje svamp som hunden hittar utomhus som giftig. Giftiga och ogiftiga svampar är svåra att skilja åt, och de giftiga är extremt farliga. Om hunden har ätit en vild svamp, kontakta veterinären direkt.",
-    "da": "Nej. Betragt alle svampe i naturen som giftige. Det er svært at skelne giftige svampe fra ugiftige, og de giftige er ekstremt farlige. Hvis din hund har spist en vild svamp, skal du straks kontakte din dyrlæge."
+    "da": "Nej. Betragt alle svampe i naturen som giftige. Det er svært at skelne giftige svampe fra ugiftige, og de giftige er ekstremt farlige. Hvis din hund har spist en vild svamp, skal du straks kontakte din dyrlæge.",
+    "fi": "Ei saa. Pidä jokaista koirasi ulkoa löytämää sientä myrkyllisenä. Myrkyllisiä ja myrkyttömiä sieniä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia. Jos koirasi söi luonnonvaraisen sienen, ota heti yhteyttä eläinlääkäriin."
   },
   "why": {
     "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
@@ -55,7 +59,8 @@
     "cs": "Existují tisíce druhů hub a mnohé mohou psům způsobit vážné onemocnění. Některé vyvolají mírné zvracení nebo průjem, jiné mohou vést k selhání jater a ledvin nebo ke křečím. Příznaky závisejí na druhu houby a ne vždy lze zjistit, kterou houbu pes snědl.",
     "hr": "Postoje tisuće vrsta gljiva i mnoge mogu kod pasa izazvati ozbiljnu bolest. Neke uzrokuju blago povraćanje ili proljev, dok druge mogu dovesti do zatajenja jetre i bubrega ili napadaja. Znakovi ovise o vrsti gljive, a nije uvijek moguće znati koju je gljivu pas pojeo.",
     "sv": "Det finns tusentals svamparter, och många kan göra hundar allvarligt sjuka. Vissa ger lindriga kräkningar eller diarré, medan andra kan leda till lever- och njursvikt eller kramper. Symtomen beror på arten, och det går inte alltid att veta vilken svamp hunden har ätit.",
-    "da": "Der findes tusindvis af svampearter, og mange kan gøre hunde alvorligt syge. Nogle giver let opkast eller diarré, mens andre kan føre til lever- og nyresvigt eller kramper. Symptomerne afhænger af arten, og det er ikke altid muligt at vide, hvilken svamp din hund har spist."
+    "da": "Der findes tusindvis af svampearter, og mange kan gøre hunde alvorligt syge. Nogle giver let opkast eller diarré, mens andre kan føre til lever- og nyresvigt eller kramper. Symptomerne afhænger af arten, og det er ikke altid muligt at vide, hvilken svamp din hund har spist.",
+    "fi": "Sienilajeja on tuhansia, ja monet voivat aiheuttaa koirille vakavan sairastumisen. Jotkin aiheuttavat lievää oksentelua tai ripulia, toiset voivat johtaa maksan ja munuaisten vajaatoimintaan tai kouristuksiin. Oireet riippuvat lajista, eikä aina voi tietää, minkä sienen koira söi."
   },
   "signs": {
     "en": [
@@ -165,6 +170,18 @@
       "Kramper",
       "Mavesmerter",
       "Gulsot"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Kuolaaminen",
+      "Heikkous",
+      "Velttous tai uneliaisuus",
+      "Sekavuus tai horjuminen",
+      "Vapina",
+      "Kouristukset",
+      "Vatsakipu",
+      "Keltaisuus"
     ]
   },
   "what_to_do": {
@@ -176,7 +193,8 @@
     "cs": "Okamžitě kontaktujte veterináře, toxikologickou linku pro zvířata nebo nonstop veterinární pohotovost, i když se ještě neobjevily žádné příznaky. Pokud můžete, vezměte s sebou vzorek houby zabalený do vlhké papírové utěrky v papírovém sáčku, což veterináři pomůže.",
     "hr": "Odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti, čak i prije nego što se pojave znakovi. Ako možeš, ponesi uzorak gljive umotan u vlažni papirnati ručnik i stavljen u papirnatu vrećicu, to će veterinaru pomoći.",
     "sv": "Kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt, även innan några symtom har visat sig. Om du kan, ta med ett prov av svampen, inslaget i ett fuktigt hushållspapper och lagt i en papperspåse, så att veterinären lättare kan identifiera den.",
-    "da": "Kontakt straks din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt, også før der viser sig symptomer. Hvis du kan, så tag en prøve af svampen med, pakket ind i et fugtigt stykke køkkenrulle i en papirpose, til hjælp for dyrlægen."
+    "da": "Kontakt straks din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt, også før der viser sig symptomer. Hvis du kan, så tag en prøve af svampen med, pakket ind i et fugtigt stykke køkkenrulle i en papirpose, til hjælp for dyrlægen.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin, jo ennen kuin oireita ilmaantuu. Jos mahdollista, ota mukaan näyte sienestä kosteaan talouspaperiin käärittynä ja paperipussissa, jotta eläinlääkäri pystyy tunnistamaan sen."
   },
   "serving": null,
   "child": {
@@ -188,7 +206,8 @@
     "cs": "Houby z venku nejsou pro psy. Když uvidíš, že pes nějakou jí, hned to řekni dospělému.",
     "hr": "Gljive vani nisu za pse. Ako vidiš da pas jede gljivu, odmah reci odrasloj osobi.",
     "sv": "Svampar som växer utomhus är inte för hundar. Om du ser en hund äta en, berätta det för en vuxen direkt.",
-    "da": "Svampe ude i naturen er ikke til hunde. Hvis du ser en hund spise en, så sig det til en voksen med det samme."
+    "da": "Svampe ude i naturen er ikke til hunde. Hvis du ser en hund spise en, så sig det til en voksen med det samme.",
+    "fi": "Ulkona kasvavat sienet eivät ole koirille. Jos näet koiran syövän sellaista, kerro heti aikuiselle."
   },
   "faq": [
     {
@@ -201,7 +220,8 @@
         "cs": "Mám počkat, jestli pes onemocní?",
         "hr": "Trebam li pričekati i vidjeti hoće li se pas razboljeti?",
         "sv": "Ska jag vänta och se om hunden blir sjuk?",
-        "da": "Skal jeg vente og se, om min hund bliver syg?"
+        "da": "Skal jeg vente og se, om min hund bliver syg?",
+        "fi": "Pitäisikö odottaa ja katsoa, sairastuuko koira?"
       },
       "a": {
         "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
@@ -212,7 +232,8 @@
         "cs": "Ne. Nečekejte, až se příznaky objeví. Rychlá reakce je to nejlepší, co pro svého psa můžete udělat.",
         "hr": "Ne. Nemoj čekati da se pojave znakovi. Brza reakcija najbolje je što možeš učiniti za svog psa.",
         "sv": "Nej. Vänta inte på att symtom ska utvecklas. Att agera snabbt är det bästa du kan göra för hunden.",
-        "da": "Nej. Se ikke tiden an, og vent ikke på symptomer. Hurtig handling er det bedste du kan gøre for din hund."
+        "da": "Nej. Se ikke tiden an, og vent ikke på symptomer. Hurtig handling er det bedste du kan gøre for din hund.",
+        "fi": "Ei. Älä odota oireiden kehittymistä. Nopea toiminta on parasta, mitä voit koirasi hyväksi tehdä."
       }
     },
     {
@@ -225,7 +246,8 @@
         "cs": "Jak tomu předejít?",
         "hr": "Kako to spriječiti?",
         "sv": "Hur kan jag förebygga det?",
-        "da": "Hvordan kan jeg forebygge det?"
+        "da": "Hvordan kan jeg forebygge det?",
+        "fi": "Miten voin ehkäistä tämän?"
       },
       "a": {
         "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
@@ -236,7 +258,8 @@
         "cs": "Každou houbu, kterou pes najde, považujte za nebezpečnou a mějte psa venku na očích.",
         "hr": "Pretpostavi da je svaka gljiva koju pas pronađe opasna i pazi na psa kad je vani.",
         "sv": "Utgå från att varje svamp hunden hittar är osäker, och håll ögonen på hunden när den är ute.",
-        "da": "Betragt alle svampe i naturen som usikre, og hold øje med din hund, når den er ude."
+        "da": "Betragt alle svampe i naturen som usikre, og hold øje med din hund, når den er ude.",
+        "fi": "Oleta, että jokainen koirasi löytämä sieni on vaarallinen, ja pidä koiraa silmällä ulkona."
       }
     },
     {
@@ -249,7 +272,8 @@
         "cs": "Liší se houby z obchodu?",
         "hr": "Razlikuju li se gljive iz trgovine?",
         "sv": "Är svamp från affären annorlunda?",
-        "da": "Er svampe fra butikken anderledes?"
+        "da": "Er svampe fra butikken anderledes?",
+        "fi": "Ovatko kaupan sienet erilaisia?"
       },
       "a": {
         "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
@@ -260,7 +284,8 @@
         "cs": "Ano. Houby bez dalších přísad z velkých obchodů s potravinami mohou být pro psy obecně bezpečné, i když je psi nepotřebují.",
         "hr": "Da. Obične gljive iz supermarketa općenito mogu biti sigurne za pse, iako im nisu potrebne.",
         "sv": "Ja. Svamp utan tillsatser från stora livsmedelsbutiker kan i allmänhet vara säker för hundar, även om hundar inte behöver den.",
-        "da": "Ja. Naturelle svampe fra større dagligvarebutikker kan som regel anses for ufarlige for hunde, selvom hunde ikke har brug for dem."
+        "da": "Ja. Naturelle svampe fra større dagligvarebutikker kan som regel anses for ufarlige for hunde, selvom hunde ikke har brug for dem.",
+        "fi": "Ovat. Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille, vaikka koirat eivät niitä tarvitse."
       }
     }
   ],
@@ -463,6 +488,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6ce736c2bbeecd15b478b2a2f666327bd5c292bad76d89f2d4aec3472cab506a"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "beaff6f6dbebea74579b002f4b27f5cb0244b4ab3102bbda6568f6894397aff6"
     }
   }
 }

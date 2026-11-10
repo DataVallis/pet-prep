@@ -10,7 +10,8 @@
     "cs": "Chřest",
     "hr": "Šparoge",
     "sv": "Sparris",
-    "da": "Asparges"
+    "da": "Asparges",
+    "fi": "Parsa"
   },
   "question": {
     "en": "Can dogs eat asparagus?",
@@ -21,7 +22,8 @@
     "cs": "Mohou psi jíst chřest?",
     "hr": "Smiju li psi jesti šparoge?",
     "sv": "Får hundar äta sparris?",
-    "da": "Må hunde spise asparges?"
+    "da": "Må hunde spise asparges?",
+    "fi": "Saako koira syödä parsaa?"
   },
   "url_slug": {
     "en": "asparagus",
@@ -32,7 +34,8 @@
     "cs": "chrest",
     "hr": "sparoge",
     "sv": "sparris",
-    "da": "asparges"
+    "da": "asparges",
+    "fi": "parsa"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "cs": "Ano, chřest pro psy není toxický. Lepší volbou je tepelně upravený chřest, protože se snáz kouše. Podávejte ho bez dalších přísad, vařený nebo napařený, a držte psy dál od chřestové natě.",
     "hr": "Da, šparoge nisu otrovne za pse. Bolje su termički obrađene jer ih je lakše žvakati. Posluži ih obične, kuhane u vodi ili na pari, a pse drži podalje od perastog lišća šparoge.",
     "sv": "Ja, sparris är inte giftig för hundar. Tillagad sparris är det bästa valet eftersom den är lättare att tugga. Servera den utan tillsatser, kokt eller ångad, och se till att hunden inte kommer åt sparrisriset.",
-    "da": "Ja, asparges er ikke giftige for hunde. Tilberedte asparges er det bedste valg, fordi de er lettere at tygge. Server dem kogte eller dampede og uden tilsætninger, og hold hunde væk fra aspargesrisset."
+    "da": "Ja, asparges er ikke giftige for hunde. Tilberedte asparges er det bedste valg, fordi de er lettere at tygge. Server dem kogte eller dampede og uden tilsætninger, og hold hunde væk fra aspargesrisset.",
+    "fi": "Saa, parsa ei ole koirille myrkyllistä. Kypsennetty parsa on parempi valinta, koska sitä on helpompi pureskella. Tarjoa se maustamattomana, keitettynä tai höyrytettynä, ja pidä koira loitolla parsan lehvästöstä."
   },
   "why": {
     "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
@@ -55,7 +59,8 @@
     "cs": "Syrový chřest se velmi těžko kouše a pes se ho může pokusit spolknout celý a udusit se. Některým psům se syrový chřest hůř tráví. Máslo nebo olej na vaření mohou psovi způsobit nevolnost. Chřestová nať, nejedlá část rostliny, je pro psy toxická.",
     "hr": "Sirove je šparoge vrlo teško žvakati pa ih pas može pokušati progutati cijele, što može izazvati gušenje. Nekim je psima sirova šparoga teško probavljiva. Maslac ili ulje za kuhanje mogu psa razboljeti. Perasto lišće šparoge, nejestivi dio biljke, otrovno je za pse.",
     "sv": "Rå sparris är mycket svår att tugga, och en hund kan försöka svälja den hel och riskera att kvävas. En del hundar har svårt att smälta rå sparris. Smör eller matolja kan göra hunden sjuk. Sparrisriset, den oätliga delen av växten, är giftigt för hundar.",
-    "da": "Rå asparges er meget svære at tygge, og en hund kan forsøge at sluge dem hele og risikere at blive kvalt. Nogle hunde har svært ved at fordøje rå asparges. Smør eller madolie kan gøre hunde syge. Aspargesrisset, den uspiselige del af planten, er giftigt for hunde."
+    "da": "Rå asparges er meget svære at tygge, og en hund kan forsøge at sluge dem hele og risikere at blive kvalt. Nogle hunde har svært ved at fordøje rå asparges. Smør eller madolie kan gøre hunde syge. Aspargesrisset, den uspiselige del af planten, er giftigt for hunde.",
+    "fi": "Raakaa parsaa on hyvin vaikea pureskella, ja koira voi yrittää niellä sen kokonaisena ja tukehtua. Joidenkin koirien on vaikea sulattaa raakaa parsaa. Voi tai ruokaöljy voi tehdä koiran sairaaksi. Parsan lehvästö, kasvin syömäkelvoton osa, on koirille myrkyllistä."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "cs": "Pokud má pes po syrovém chřestu zvracení, plynatost nebo průjem, příště ho zkuste krátce uvařit. Snědení chřestové natě může způsobit zvracení, průjem a silnou bolest břicha, proto psa od rostliny držte dál.",
     "hr": "Ako pas nakon sirovih šparoga povraća, ima nadutost ili proljev, sljedeći put ih lagano termički obradi. Perasto lišće šparoge može izazvati povraćanje, proljev i jake bolove u trbuhu, zato psa drži podalje od te biljke.",
     "sv": "Om hunden får kräkningar, gasbildning eller diarré efter rå sparris, prova att koka den lätt nästa gång. Att äta sparrisris kan ge kräkningar, diarré och kraftiga magsmärtor, så håll hunden borta från växten.",
-    "da": "Hvis din hund får opkast, luft i maven eller diarré efter rå asparges, kan du prøve at koge dem let næste gang. Aspargesris kan give opkast, diarré og kraftige mavesmerter, så hold din hund væk fra planten."
+    "da": "Hvis din hund får opkast, luft i maven eller diarré efter rå asparges, kan du prøve at koge dem let næste gang. Aspargesris kan give opkast, diarré og kraftige mavesmerter, så hold din hund væk fra planten.",
+    "fi": "Jos koirallasi on oksentelua, ilmavaivoja tai ripulia raa’an parsan jälkeen, kypsennä parsa kevyesti seuraavalla kerralla. Parsan lehvästön syöminen voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua, joten pidä koira loitolla kasvista."
   },
   "serving": {
     "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
@@ -78,7 +84,8 @@
     "cs": "Jen uvařený nebo napařený, bez másla a oleje. Pokud ho podáváte syrový, nakrájejte ho na malé kousky na jedno sousto.",
     "hr": "Obične, kuhane u vodi ili na pari, bez maslaca i ulja. Ako ih daješ sirove, nareži ih na sitne komadiće za jedan zalogaj.",
     "sv": "Enkelt kokt eller ångad, utan smör eller olja. Om du ger den rå, skär den i små munsbitar.",
-    "da": "Tilberedt ved simpel kogning eller damping, uden smør eller olie. Hvis du giver dem rå, skal du skære dem i små, mundrette stykker."
+    "da": "Tilberedt ved simpel kogning eller damping, uden smør eller olie. Hvis du giver dem rå, skal du skære dem i små, mundrette stykker.",
+    "fi": "Kypsennettynä pelkästään keittämällä tai höyryttämällä, ilman voita tai öljyä. Jos tarjoat sen raakana, pilko se pieniksi, suupalan kokoisiksi paloiksi."
   },
   "child": {
     "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
@@ -89,7 +96,8 @@
     "cs": "Pejsek může od dospělého dostat trochu uvařeného chřestu. Listnatá nať rostliny pro psy není.",
     "hr": "Odrasla osoba psu može dati malo kuhanih šparoga. Perasto lišće biljke nije za pse.",
     "sv": "Hundar kan få lite kokt sparris av en vuxen. Det gröna, fjäderlika sparrisriset på växten är inte för hundar.",
-    "da": "Hunde må få lidt kogt asparges af en voksen. Det grønne, fjeragtige aspargesris på planten er ikke til hunde."
+    "da": "Hunde må få lidt kogt asparges af en voksen. Det grønne, fjeragtige aspargesris på planten er ikke til hunde.",
+    "fi": "Koira saa aikuiselta vähän keitettyä parsaa. Parsan lehvästö ei ole koirille."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "cs": "Proč má moč psa po chřestu zvláštní zápach?",
         "hr": "Zašto mokraća mog psa neugodno miriše nakon šparoga?",
         "sv": "Varför luktar hundens kiss efter sparris?",
-        "da": "Hvorfor lugter min hunds tis, efter at den har spist asparges?"
+        "da": "Hvorfor lugter min hunds tis, efter at den har spist asparges?",
+        "fi": "Miksi koiran virtsa haisee parsan syömisen jälkeen?"
       },
       "a": {
         "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
@@ -113,7 +122,8 @@
         "cs": "Chřest může způsobit nepříjemný zápach moči, u psů stejně jako u lidí. Pokud je pes zcela čistotný, nemělo by to být problém.",
         "hr": "Zbog šparoga mokraća može neugodno mirisati, kod pasa jednako kao i kod ljudi. Ako je pas potpuno naučen na čistoću, to ne bi trebao biti problem.",
         "sv": "Sparris kan ge kissen en obehaglig lukt, hos hundar liksom hos människor. Om hunden är helt rumsren borde det inte vara något problem.",
-        "da": "Asparges kan give tis en ubehagelig lugt, hos hunde som hos mennesker. Hvis din hund er helt stueren, burde det ikke være noget problem."
+        "da": "Asparges kan give tis en ubehagelig lugt, hos hunde som hos mennesker. Hvis din hund er helt stueren, burde det ikke være noget problem.",
+        "fi": "Parsa voi saada virtsan haisemaan epämiellyttävältä, koirilla kuten ihmisilläkin. Jos koira on täysin sisäsiisti, siitä ei pitäisi olla haittaa."
       }
     },
     {
@@ -126,7 +136,8 @@
         "cs": "Je chřestová nať bezpečná?",
         "hr": "Je li perasto lišće šparoge sigurno?",
         "sv": "Är sparrisriset säkert?",
-        "da": "Er aspargesrisset ufarligt?"
+        "da": "Er aspargesrisset ufarligt?",
+        "fi": "Onko parsan lehvästö turvallista?"
       },
       "a": {
         "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
@@ -137,7 +148,8 @@
         "cs": "Ne. Chřestová nať je pro psy toxická a může způsobit zvracení, průjem a silnou bolest břicha.",
         "hr": "Ne. Perasto lišće šparoge otrovno je za pse i može izazvati povraćanje, proljev i jake bolove u trbuhu.",
         "sv": "Nej. Sparrisriset är giftigt för hundar och kan ge kräkningar, diarré och kraftiga magsmärtor.",
-        "da": "Nej. Aspargesrisset er giftigt for hunde og kan give opkast, diarré og kraftige mavesmerter."
+        "da": "Nej. Aspargesrisset er giftigt for hunde og kan give opkast, diarré og kraftige mavesmerter.",
+        "fi": "Ei. Parsan lehvästö on koirille myrkyllistä ja voi aiheuttaa oksentelua, ripulia ja voimakasta vatsakipua."
       }
     }
   ],
@@ -258,6 +270,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6622563af60f6fffd53bb8dc8b6535f5bf462790c3bfebea9a9c8ebd17bd5ec2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c1aaf9d823340b9c912600f263e0f7eeffeec913adb03c3b000b392ee54cc104"
     }
   }
 }
