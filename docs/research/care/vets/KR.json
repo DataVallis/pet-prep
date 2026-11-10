@@ -1,0 +1,459 @@
+{
+  "country": "KR",
+  "checked": "2026-11-10",
+  "sources": [
+    {
+      "name": "Seoul National University Veterinary Medical Teaching Hospital",
+      "url": "https://vmth.snu.ac.kr/subject/emergencyMedicine.do",
+      "note": "University hospital own site; 24 h emergency since 2019."
+    },
+    {
+      "name": "Konkuk University Veterinary Teaching Hospital",
+      "url": "https://vmth.konkuk.ac.kr/vmth/13162/subview.do",
+      "note": "University hospital; emergency/night but no 24 h statement."
+    },
+    {
+      "name": "Chonnam National University Veterinary Hospital",
+      "url": "https://cnuvmth.jnu.ac.kr/",
+      "note": "University hospital; 24 h emergency room."
+    },
+    {
+      "name": "Jeonbuk Animal Medical Center",
+      "url": "https://jamc.jbnu.ac.kr/jamc/7998/subview.do",
+      "note": "University hospital hours page."
+    },
+    {
+      "name": "Sejong Chungbuk National University Animal Hospital",
+      "url": "https://sjcbuanimal.kr/",
+      "note": "Weekday hours only."
+    },
+    {
+      "name": "Jeonju City – animal hospital guide",
+      "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
+      "note": "Official city list; names only for 24시 hospitals."
+    },
+    {
+      "name": "24 Suwon Animal Hospital – Your Animal Medical Center (24시 수원동물병원 당신의동물의료센터)",
+      "url": "https://youramc.co.kr/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "SNC Animal Medical Center (SNC동물메디컬센터)",
+      "url": "https://www.sncamc.co.kr/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "TheCare24 Animal Medical Center (24시 더케어 동물의료센터)",
+      "url": "https://www.thecare24.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Fatima Animal Medical Center (24시 파티마동물의료센터)",
+      "url": "https://24ftma.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Daegu Barun Animal Medical Center (대구24시바른동물의료센터)",
+      "url": "https://bamc365.kr/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Lead Animal Medical Center (24시 리드동물의료센터)",
+      "url": "https://www.24leadamc.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 UN Animal Medical Center (24시 UN동물의료센터)",
+      "url": "https://unamc24.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Yeonsan Animal Medical Center (24시 연산동물의료센터)",
+      "url": "https://ysamc24.co.kr/sub/about/directions.php",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Animal Medical Center 24-inch (동물의료센터 24인치)",
+      "url": "https://amc24in.com/48",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Su Animal Medical Center (24시수동물메디컬센터)",
+      "url": "https://www.sooamc.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "Lieum Animal Medical Center (리움동물의료센터)",
+      "url": "https://lieumamc.co.kr/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "HUE Animal Medical Center (휴 동물의료센터)",
+      "url": "https://hueanimal.com/medical-hours",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "24 Dogs Animal Hospital (24시독스동물병원)",
+      "url": "https://dogsclub24.wixsite.com/24dogsclub",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "VIP Animal Medical Center (VIP동물의료센터)",
+      "url": "https://www.vipah.co.kr/kr/medical/treatment_time.php",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "Jeju 24 SUM Animal Medical Center (제주24시숨동물의료센터)",
+      "url": "https://jejusamc.com/",
+      "note": "Clinic's own site."
+    },
+    {
+      "name": "S Animal Medical Center Ulsan (에스동물메디컬센터 울산)",
+      "url": "https://blog.24samc.co.kr/",
+      "note": "Clinic's own site."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Seoul National University Veterinary Medical Teaching Hospital (서울대학교 수의과대학 동물병원)",
+      "city": "Gwanak-gu, Seoul",
+      "region": "Seoul",
+      "address": "1 Gwanak-ro, Gwanak-gu, Seoul",
+      "phone": "+82 2-880-8661",
+      "emergency_24h": true,
+      "duty": "Emergency center open 24 hours; walk-in emergency patients accepted without referral. Regular hours 9:00-18:00 by appointment. A 30% surcharge applies to emergency care outside regular hours. Call before coming.",
+      "small_animals": true,
+      "url": "https://vmth.snu.ac.kr/",
+      "source_url": "https://vmth.snu.ac.kr/subject/emergencyMedicine.do",
+      "checked": "2026-11-10",
+      "note": "Emergency page: 2019년 1월부터 24시간 응급 의료체계를 확대 구축하여 시행. Hours page 09:00-18:00 reservation, 30% surcharge. Numbers 02-880-8661~6; no separate emergency line published."
+    },
+    {
+      "kind": "clinic",
+      "name": "Konkuk University Veterinary Medical Teaching Hospital (건국대학교 부속 동물병원)",
+      "city": "Gwangjin-gu, Seoul",
+      "region": "Seoul",
+      "address": "120 Neungdong-ro, Gwangjin-gu, Seoul",
+      "phone": "+82 2-450-3664",
+      "emergency_24h": false,
+      "duty": "Regular hours weekdays 9:00-17:30 by appointment; emergency and night care available at the Emergency and Critical Care department. Call before coming.",
+      "small_animals": true,
+      "url": "https://vmth.konkuk.ac.kr/vmth/index.do",
+      "source_url": "https://vmth.konkuk.ac.kr/vmth/13162/subview.do",
+      "checked": "2026-11-10",
+      "note": "Page mentions night emergency service but no explicit 24 h statement, so not flagged 24 h. 02-450-3664 listed as emergency/critical care and administration line."
+    },
+    {
+      "kind": "clinic",
+      "name": "Chonnam National University Veterinary Hospital (전남대학교 동물병원)",
+      "city": "Buk-gu, Gwangju",
+      "region": "Gwangju",
+      "address": "77 Yongbong-ro, Buk-gu, Gwangju",
+      "phone": "+82 62-530-2882",
+      "emergency_24h": true,
+      "duty": "Emergency room open 24 hours: weekdays 18:00-09:00 next morning, weekends and public holidays around the clock. Regular hours weekdays 9:00-12:00 and 13:00-18:00.",
+      "small_animals": true,
+      "url": "https://cnuvmth.jnu.ac.kr/",
+      "source_url": "https://cnuvmth.jnu.ac.kr/",
+      "checked": "2026-11-10",
+      "note": "Page: 24시간 응급실 운영 평일 18:00 ~ 익일 09:00 토/일 및 공휴일 24시간운영. Also 062-530-2883. News: 24h emergency centre opened 7 May 2025 (dailyvet.co.kr/print?id=245294, secondary)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Jeonbuk Animal Medical Center, Jeonbuk National University (전북동물의료센터)",
+      "city": "Iksan",
+      "region": "Jeonbuk",
+      "address": "79 Gobong-ro, Iksan-si, Jeonbuk",
+      "phone": "+82 63-850-0970",
+      "emergency_24h": false,
+      "duty": "Regular hours weekdays 9:00-12:00 and 13:30-18:00. Emergency care weekdays 18:00-09:00 and around the clock on weekends and public holidays.",
+      "small_animals": true,
+      "url": "https://jamc.jbnu.ac.kr/jamc/index.do",
+      "source_url": "https://jamc.jbnu.ac.kr/jamc/7998/subview.do",
+      "checked": "2026-11-10",
+      "note": "Page lists emergency weekdays 18:00-익일09:00, weekends/holidays 24h; no blanket '24 h' statement so not flagged. Also 063-850-0971."
+    },
+    {
+      "kind": "clinic",
+      "name": "Sejong Chungbuk National University Animal Hospital (세종 충북대학교 동물병원)",
+      "city": "Sejong",
+      "region": "Sejong",
+      "address": "109 Jiphyeonbuk-ro, Sejong",
+      "phone": "+82 44-589-1122",
+      "emergency_24h": false,
+      "duty": "Open weekdays 9:00-18:00; closed weekends and public holidays. No emergency service stated.",
+      "small_animals": true,
+      "url": "https://sjcbuanimal.kr/",
+      "source_url": "https://sjcbuanimal.kr/",
+      "checked": "2026-11-10",
+      "note": "Also 044-589-1123. No 24h/emergency statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Suwon Animal Hospital – Your Animal Medical Center (24시 수원동물병원 당신의동물의료센터)",
+      "city": "Suwon",
+      "region": "Gyeonggi",
+      "address": "100 Cheoncheon-ro, Jangan-gu, Suwon, Gyeonggi",
+      "phone": "+82 31-268-6575",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year with veterinarians on site. Regular care 9:30-21:00, night care 21:00-9:30.",
+      "small_animals": true,
+      "url": "https://youramc.co.kr/",
+      "source_url": "https://youramc.co.kr/",
+      "checked": "2026-11-10",
+      "note": "Page: 연중무휴 365일 24시 수의사 상주 병원."
+    },
+    {
+      "kind": "clinic",
+      "name": "SNC Animal Medical Center (SNC동물메디컬센터)",
+      "city": "Gangnam-gu, Seoul",
+      "region": "Seoul",
+      "address": "416 Nonhyeon-ro, Gangnam-gu, Seoul",
+      "phone": "+82 2-562-7582",
+      "emergency_24h": true,
+      "duty": "Trauma and emergency surgery centre open 24 hours, 365 days a year. Call before coming.",
+      "small_animals": true,
+      "url": "https://www.sncamc.co.kr/",
+      "source_url": "https://www.sncamc.co.kr/",
+      "checked": "2026-11-10",
+      "note": "Page: 365일 24시간 생명의 골든타임을 지키는 중증 외상·응급 수술 센터. No hours table published."
+    },
+    {
+      "kind": "clinic",
+      "name": "TheCare24 Animal Medical Center (24시 더케어 동물의료센터)",
+      "city": "Guri",
+      "region": "Gyeonggi",
+      "address": "294 Gyeongchun-ro, Guri-si, Gyeonggi",
+      "phone": "+82 31-516-8585",
+      "emergency_24h": true,
+      "duty": "Emergency care 24 hours, 365 days a year (24-hour emergency hotline, staff on standby at night, dawn and public holidays). Day 9:30-19:00, evening 19:00-22:00, emergency 22:00-8:00. Call before coming.",
+      "small_animals": true,
+      "url": "https://www.thecare24.com/",
+      "source_url": "https://www.thecare24.com/",
+      "checked": "2026-11-10",
+      "note": "Page (re-checked 2026-11-10): 24시간 365일 응급 동물병원, 24시간 365일 응급 핫라인; only emergency care is described as 24/7, regular clinic hours are 09:30-19:00 and 19:00-22:00."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Fatima Animal Medical Center (24시 파티마동물의료센터)",
+      "city": "Dong-gu, Daegu",
+      "region": "Daegu",
+      "address": "590 Dongdaegu-ro, Dong-gu, Daegu (Building 301, Unit 101)",
+      "phone": "+82 53-710-2475",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 365 days a year.",
+      "small_animals": true,
+      "url": "https://24ftma.com/",
+      "source_url": "https://24ftma.com/",
+      "checked": "2026-11-10",
+      "note": "Page: 24시간 365일 진료합니다."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Daegu Barun Animal Medical Center (대구24시바른동물의료센터)",
+      "city": "Dalseo-gu, Daegu",
+      "region": "Daegu",
+      "address": "142 Waryong-ro (2F), Dalseo-gu, Daegu",
+      "phone": "+82 53-571-0075",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year with staff on site. Regular care 9:00-20:00, evening 20:00-24:00, late night 24:00-9:00.",
+      "small_animals": true,
+      "url": "https://bamc365.kr/",
+      "source_url": "https://bamc365.kr/",
+      "checked": "2026-11-10",
+      "note": "Page: 365일 24시간 진료."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Lead Animal Medical Center (24시 리드동물의료센터)",
+      "city": "Suseong-gu, Daegu",
+      "region": "Daegu",
+      "address": "289 Dongdaegu-ro, Suseong-gu, Daegu",
+      "phone": "+82 53-745-7512",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year. Day 9:00-20:00, evening 20:00-24:00, emergency care 0:00-9:00.",
+      "small_animals": true,
+      "url": "https://www.24leadamc.com/",
+      "source_url": "https://www.24leadamc.com/",
+      "checked": "2026-11-10",
+      "note": "Page: 365일 24시간 연중무휴."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 UN Animal Medical Center (24시 UN동물의료센터)",
+      "city": "Nam-gu, Busan",
+      "region": "Busan",
+      "address": "221 Suyeong-ro, Nam-gu, Busan",
+      "phone": "+82 51-624-2475",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year. Day 10:00-19:00, evening 21:00-24:00, emergency 24:00-8:00; lunch break 12:30-14:00 (emergencies still handled). Phone advice 24 hours.",
+      "small_animals": true,
+      "url": "https://unamc24.com/",
+      "source_url": "https://unamc24.com/",
+      "checked": "2026-11-10",
+      "note": "Page: 24시 연중무휴 l 365일 24시간 응급진료. Day/evening/emergency table has gaps (19-21, 8-10) but page states 24h; flagged per explicit statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Yeonsan Animal Medical Center (24시 연산동물의료센터)",
+      "city": "Yeonje-gu, Busan",
+      "region": "Busan",
+      "address": "135 Yeonsu-ro, Yeonje-gu, Busan",
+      "phone": "+82 51-791-0175",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day of the year. Day 10:00-21:30, night 21:30-10:00 with extra fees for emergency and night visits.",
+      "small_animals": true,
+      "url": "http://ysamc24.co.kr/",
+      "source_url": "https://ysamc24.co.kr/sub/about/directions.php",
+      "checked": "2026-11-10",
+      "note": "Page: 365일 24시간 연중무휴. Home page itself loops on http/https redirects; used the directions page."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Animal Medical Center 24-inch (동물의료센터 24인치)",
+      "city": "Yeongdeungpo-gu, Seoul",
+      "region": "Seoul",
+      "address": "496 Gamasan-ro, Yeongdeungpo-gu, Seoul",
+      "phone": "+82 2-6953-2427",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year. Day 9:00-22:00, night 22:00-9:00.",
+      "small_animals": true,
+      "url": "https://amc24in.com/",
+      "source_url": "https://amc24in.com/48",
+      "checked": "2026-11-10",
+      "note": "Page: 365일, 24시간; 24시간 응급 시스템을 가동."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Su Animal Medical Center (24시수동물메디컬센터)",
+      "city": "Yeongdeungpo-gu, Seoul",
+      "region": "Seoul",
+      "address": "85-1 Yeongdeungpo-ro, Yeongdeungpo-gu, Seoul",
+      "phone": "+82 2-2676-7582",
+      "emergency_24h": false,
+      "duty": "General care 9:00-22:00; night emergency care 22:00-9:00. Call before coming.",
+      "small_animals": true,
+      "url": "https://www.sooamc.com/",
+      "source_url": "https://www.sooamc.com/",
+      "checked": "2026-11-10",
+      "note": "Page calls itself 24시수동물병원 and lists night emergency 22:00-09:00; no explicit '365/24 h' sentence so not flagged."
+    },
+    {
+      "kind": "clinic",
+      "name": "Lieum Animal Medical Center (리움동물의료센터)",
+      "city": "Songpa-gu, Seoul",
+      "region": "Seoul",
+      "address": "115 Dongnam-ro, Songpa-gu, Seoul",
+      "phone": "+82 2-6958-7512",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year; call any time for emergencies.",
+      "small_animals": true,
+      "url": "https://lieumamc.co.kr/",
+      "source_url": "https://lieumamc.co.kr/",
+      "checked": "2026-11-10",
+      "note": "Page: 24시간 365일 연중무휴 운영."
+    },
+    {
+      "kind": "clinic",
+      "name": "HUE Animal Medical Center (휴 동물의료센터)",
+      "city": "Seongnam",
+      "region": "Gyeonggi",
+      "address": "309 Sanseong-daero, Sujeong-gu, Seongnam, Gyeonggi",
+      "phone": "+82 31-735-7582",
+      "emergency_24h": true,
+      "duty": "Open 24 hours every day including weekends and public holidays. Day 9:00-21:00, night 21:00-9:00 with an additional fee.",
+      "small_animals": true,
+      "url": "https://hueanimal.com/",
+      "source_url": "https://hueanimal.com/medical-hours",
+      "checked": "2026-11-10",
+      "note": "Page: 365일 24시간."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Dogs Animal Hospital (24시독스동물병원)",
+      "city": "Namdong-gu, Incheon",
+      "region": "Incheon",
+      "address": "210-2 Ganseok-dong, Namdong-gu, Incheon (Yujin Building)",
+      "phone": "+82 32-433-0075",
+      "emergency_24h": true,
+      "duty": "Day care 10:00-22:00; night care and emergency surgery 22:00-10:00; consultation 24 hours.",
+      "small_animals": true,
+      "url": "https://dogsclub24.wixsite.com/24dogsclub",
+      "source_url": "https://dogsclub24.wixsite.com/24dogsclub",
+      "checked": "2026-11-10",
+      "note": "Page: 진료 및 상담, 24시간."
+    },
+    {
+      "kind": "clinic",
+      "name": "VIP Animal Medical Center (VIP동물의료센터)",
+      "city": "Seoul",
+      "region": "Seoul",
+      "phone": "+82 2-511-7522",
+      "emergency_24h": true,
+      "duty": "Open 365 days, inpatient care 24 hours. Cheongdam branch: day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00 (extra fee). Some branches have no late-night service. Call the branch first.",
+      "small_animals": true,
+      "url": "https://www.vipah.co.kr/",
+      "source_url": "https://www.vipah.co.kr/kr/medical/treatment_time.php",
+      "checked": "2026-11-10",
+      "note": "Page: 365일, 24시간 소중한 반려동물들을 돌보고 있습니다. Phone is Cheongdam branch; others Seongbuk 02-953-0075, Dongdaemun 02-2215-7522, Nowon 02-931-1333, Seocho 02-525-3102 (these branches no late night). Street addresses not on page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Jeju 24 SUM Animal Medical Center (제주24시숨동물의료센터)",
+      "city": "Jeju City",
+      "region": "Jeju",
+      "address": "632 Yeonbuk-ro, Jeju City",
+      "phone": "+82 64-805-8365",
+      "emergency_24h": true,
+      "duty": "Open every day, 24 hours. Day 10:00-21:00 (lunch 13:00-14:30), emergency care 21:00-10:00.",
+      "small_animals": true,
+      "url": "https://jejusamc.com/",
+      "source_url": "https://jejusamc.com/",
+      "checked": "2026-11-10",
+      "note": "Page: 365일. 24시간."
+    },
+    {
+      "kind": "clinic",
+      "name": "S Animal Medical Center Ulsan (에스동물메디컬센터 울산)",
+      "city": "Ulsan",
+      "region": "Ulsan",
+      "emergency_24h": true,
+      "duty": "Open 365 days a year, 24 hours. Day 10:30-19:00, night 19:00-22:00 (night fee), late night 22:00-10:00.",
+      "small_animals": true,
+      "url": "https://blog.24samc.co.kr/",
+      "source_url": "https://blog.24samc.co.kr/",
+      "checked": "2026-11-10",
+      "note": "Content blog only; no address/phone on page (site main page loops on redirects). Kakao channel only. Kept for url."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Olimols Animal Medical Center (24시 올리몰스 동물메디컬센터)",
+      "city": "Deokjin-gu, Jeonju",
+      "region": "Jeonbuk",
+      "address": "Songcheon-dong, Deokjin-gu, Jeonju",
+      "phone": "+82 63-275-7979",
+      "duty": "Listed by the Jeonju city animal hospital guide under a 24-hour name; call to confirm opening hours.",
+      "small_animals": true,
+      "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
+      "source_url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
+      "checked": "2026-11-10",
+      "note": "City guide gives name/phone only, no hours; own site not found; not flagged 24 h."
+    },
+    {
+      "kind": "clinic",
+      "name": "24 Elephant Animal Hospital (24시 코끼리동물병원)",
+      "city": "Wansan-gu, Jeonju",
+      "region": "Jeonbuk",
+      "address": "Pyeonghwa-dong, Wansan-gu, Jeonju",
+      "phone": "+82 63-902-7975",
+      "duty": "Listed by the Jeonju city animal hospital guide under a 24-hour name; call to confirm opening hours.",
+      "small_animals": true,
+      "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
+      "source_url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
+      "checked": "2026-11-10",
+      "note": "City guide gives name/phone only, no hours; not flagged 24 h. A second '24시 코끼리동물의료센터' entry has no phone."
+    }
+  ],
+  "notes": "No Korean-language animal poison line found (only human poison lines / US services; none used). No duty rota usable: KVMA (kvma.or.kr) search surfaced only association pages with no on-duty list; animal.go.kr 24-hour hospital list and Jungnang-gu holiday-clinic xlsx were disallowed by robots.txt and not used. Blocked by robots.txt / not fetched: Kyungpook (vmc.knu.ac.kr), Jeju National Univ. (vethospital.jejunu.ac.kr), Chungnam (cnuah.cnu.ac.kr), Chungbuk Cheongju (vetmed.chungbuk.ac.kr), Gyeongsang (gamc.gnu.ac.kr), Time AMC Daejeon (timeamc.com), Bless AMC (blessamc.com), Instagram pages. Sites that loop on http/https redirects and could not be read: cenamc.kr (24시센트럴), wooridleclinic.kr (24시우리들), gonggam24.kr (Gwangju), nowamc.co.kr, yeamc.com, vamc.co.kr, theboneamc.com, 24samc.co.kr main page; bonamc.co.kr returned a client error. Gwangju Noa 24 AMC seen only on an aggregator (ban-life.com) so skipped. Gangwon University hospital page and Gyeonggi/city vet association rotas not found. Regular (non-24h) small-animal clinics in Daejeon, Incheon, Ulsan, Seoul not covered."
+}
