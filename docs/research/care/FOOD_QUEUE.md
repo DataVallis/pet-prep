@@ -130,8 +130,16 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [d] asparagus — no source cat 2026-11-09
 - [x] beetroot
 - [x] corn
-- [ ] edamame · radish · eggplant · artichoke · seaweed · herbs-parsley · basil · mint
-- [ ] catnip (cat) · cat-grass (cat)
+- [d] edamame — no source cat 2026-11-10
+- [d] radish — no source cat 2026-11-10
+- [d] eggplant — no source cat 2026-11-10
+- [-] artichoke — no source dog 2026-11-10 — no source cat 2026-11-10
+- [d] seaweed — no source cat 2026-11-10
+- [x] herbs-parsley
+- [x] basil
+- [x] mint
+- [x] catnip (cat)
+- [x] cat-grass (cat)
 
 ## W4 — grains, kitchen, sweets
 - [ ] bread · rice · pasta · oatmeal · quinoa · popcorn · cereal · crackers · pizza · french-fries

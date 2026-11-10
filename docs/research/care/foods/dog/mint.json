@@ -1,0 +1,57 @@
+{
+  "slug": "mint",
+  "species": "dog",
+  "name": {"en": "Mint", "sl": "Meta"},
+  "question": {"en": "Can dogs eat mint?", "sl": "Ali lahko psi jedo meto?"},
+  "url_slug": {"en": "mint", "sl": "meta"},
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, mint is best kept away from dogs. The ASPCA lists garden mint as toxic to dogs because of its essential oils, which can cause vomiting and diarrhoea when a lot is eaten. Mint gum, candy and toothpaste can also be dangerous, as they may contain xylitol.",
+    "sl": "Ne, meto je bolje držati stran od psov. ASPCA vrtno meto uvršča med strupene za pse zaradi eteričnih olj, ki lahko ob zaužitju večje količine povzročijo bruhanje in drisko. Nevarni so lahko tudi mentolni žvečilni gumiji, bonboni in zobne paste, ker lahko vsebujejo ksilitol."
+  },
+  "why": {
+    "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
+    "sl": "Vrtna meta (Mentha) vsebuje eterična olja; ASPCA jo uvršča med strupene za pse, ob zaužitju večjih količin pa povzroči bruhanje in drisko. Tudi Pet Poison Helpline navaja, da meta za pse ni varna. Izdelki z meto lahko vsebujejo tudi ksilitol, sladilo, ki je za pse zelo strupeno. Ker rastlina sama povzroča znake predvsem v večjih količinah, jo uvrščamo med nepriporočljive; izdelki z meto, ki vsebujejo ksilitol, pa so nujen primer."
+  },
+  "signs": {
+    "en": ["Vomiting", "Diarrhoea"],
+    "sl": ["Bruhanje", "Driska"]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a mint product such as gum, candy or toothpaste that may contain xylitol, seek veterinary care right away. In a poisoning emergency, contact your vet or a pet poison helpline.",
+    "sl": "Če je pes pojedel izdelek z meto, na primer žvečilni gumi, bonbon ali zobno pasto, ki lahko vsebuje ksilitol, takoj poiščite veterinarsko pomoč. V primeru zastrupitve pokličite veterinarja ali center za zastrupitve živali."
+  },
+  "serving": null,
+  "child": {
+    "en": "Mint leaves and minty sweets are not for dogs. If a dog finds mint gum or sweets, tell a grown-up right away.",
+    "sl": "Metini listi in mentolni bonboni niso za pse. Če pes najde mentolni žvečilni gumi ali bonbone, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {"en": "Is mint gum or candy dangerous for dogs?", "sl": "Ali so mentolni žvečilni gumiji ali bonboni nevarni za pse?"},
+      "a": {
+        "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
+        "sl": "Da. Izdelki z meto, kot so žvečilni gumiji, bonboni in zobne paste, so lahko za pse nevarni, ker lahko vsebujejo ksilitol. Če je pes kaj takega pojedel, takoj poiščite veterinarsko pomoč."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KD170", "quote": "Garden Mint"},
+    {"id": "KD170", "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
+    {"id": "KD170", "quote": "Essential Oils"},
+    {"id": "KD170", "quote": "Vomiting and diarrhea with large ingestions"},
+    {"id": "KD172", "quote": "While mint is great for human use, it is not safe for dogs to consume."},
+    {"id": "KD172", "quote": "Products that contain mint may also contain xylitol, a type of sugar alternative sweetener that is severely toxic to dogs."},
+    {"id": "KD172", "quote": "Mint products such as gum, candy, and toothpaste can be dangerous for dogs due to the presence of xylitol."},
+    {"id": "KD172", "quote": "If your dog has ingested a mint product containing xylitol, it is essential to seek veterinary care right away."},
+    {"id": "KD171", "quote": "It is not safe for your dog to have mint."},
+    {"id": "KD171", "quote": "Should your dog ingest a mint product containing xylitol, it is important to seek veterinary care immediately."},
+    {"id": "KD171", "quote": "If you and your dog find yourselves in a poisoning emergency, do not hesitate to call Pet Poison Helpline®"}
+  ],
+  "related": ["xylitol", "basil", "herbs-parsley"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "ee275ec79357a052338de4fc3b549fbe56fc0f8b0668a0c470427882c50beb35"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "9c0860d2fce4dc4539a19150cd0d450b354ce18f1d70c553878dba6c2dbd7a8b"}
+  }
+}

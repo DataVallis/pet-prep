@@ -1,0 +1,46 @@
+{
+  "slug": "basil",
+  "species": "cat",
+  "name": {"en": "Basil", "sl": "Bazilika"},
+  "question": {"en": "Can cats eat basil?", "sl": "Ali lahko mačke jedo baziliko?"},
+  "url_slug": {"en": "basil", "sl": "bazilika"},
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small nibble of plain basil now and then is fine. The ASPCA lists basil, including sweet and Thai basil, as non-toxic to cats. Cats don't need it, though, and any plant may cause vomiting or an upset stomach.",
+    "sl": "Da, majhen grižljaj navadne bazilike je občasno v redu. ASPCA baziliko, tudi sladko in tajsko, navaja kot nestrupeno za mačke. Mačke je sicer ne potrebujejo, vsaka rastlina pa lahko povzroči bruhanje ali prebavne težave."
+  },
+  "why": {
+    "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
+    "sl": "ASPCA baziliko (Ocimum basilicum, imenovano tudi sladka in tajska bazilika) navaja kot nestrupeno za mačke. Cats Protection pojasnjuje, da lahko tudi nestrupene rastline ob zaužitju povzročijo prebavne težave, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega, občasen priboljšek pa je v redu."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Basil is non-toxic to cats, but like any plant it may cause vomiting or an upset stomach. Keep it to an occasional, bite-sized nibble.",
+    "sl": "Bazilika za mačke ni strupena, vendar lahko kot vsaka rastlina povzroči bruhanje ali prebavne težave. Naj ostane pri občasnem majhnem grižljaju."
+  },
+  "serving": {
+    "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
+    "sl": "Le majhen grižljaj navadnega lista bazilike, kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
+    "sl": "Bazilika mucam ne škoduje, a je ne potrebujejo. Majhen grižljaj je čisto dovolj; najboljša je njihova mačja hrana."
+  },
+  "faq": [],
+  "sources": [
+    {"id": "KC91", "quote": "Thai Basil, Sweet Basil"},
+    {"id": "KC91", "quote": "Ocimum basilicum"},
+    {"id": "KC91", "quote": "Non-Toxic to Dogs, Non-Toxic to Cats"},
+    {"id": "KC94", "quote": "No known toxins that affect cats. However, despite being non-toxic they may still cause a tummy upset if ingested."},
+    {"id": "KC62", "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."},
+    {"id": "KC49", "quote": "cats don’t need anything other than a complete diet to meet their nutritional needs"},
+    {"id": "KC49", "quote": "it’s fine for them to enjoy the occasional treat as long as they don’t have too many"},
+    {"id": "KC49", "quote": "make sure whatever you give is in bite-sized pieces"}
+  ],
+  "related": ["mint", "herbs-parsley", "catnip", "cat-grass"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "794309b920dd5959da91d3b02b52bb163989a2bd0d1d51fe951d7ccfd640d2d4"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "aafd74e1aafcfb1703c63b34ca51bfee4c4cc2708450636fcb4bf0600b258eec"}
+  }
+}

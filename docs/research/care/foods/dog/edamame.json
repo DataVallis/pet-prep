@@ -1,0 +1,128 @@
+{
+  "slug": "edamame",
+  "species": "dog",
+  "name": {
+    "en": "Edamame",
+    "sl": "Edamame"
+  },
+  "question": {
+    "en": "Can dogs eat edamame?",
+    "sl": "Ali lahko psi jedo edamame?"
+  },
+  "url_slug": {
+    "en": "edamame",
+    "sl": "edamame"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Plain edamame beans aren't toxic to dogs, and a few fresh beans as a treat won't harm most dogs. Leave out the tough pods, which are a choking hazard, and never share edamame cooked with salt, spices, soy sauce or oil.",
+    "sl": "Da, zmerno. Navadna zrna edamame za pse niso strupena in nekaj svežih zrn kot priboljšek večini psov ne bo škodovalo. Trdih strokov ne dajajte, ker se lahko pes z njimi zaduši, in nikoli ne delite edamame, kuhanega s soljo, začimbami, sojino omako ali oljem."
+  },
+  "why": {
+    "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
+    "sl": "Edamame so sojina zrna, bogata z vlakninami in obdana s trdimi stroki. Soja je pri psih pogost alergen, alergijska reakcija pa se morda ne pokaže takoj. Soja lahko povzroči tudi vetrove in občasno drisko, preveč vlaknin pa prebavne težave. Vlaknati, žilavi stroki so težko prebavljivi in predstavljajo nevarnost zadušitve, zlasti pri majhnih psih."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Because soy is a common allergy, offer only a very small amount at first to test for an allergy. Signs of an allergic reaction, such as itching, coat loss or ear infections, might not appear straight away. Soy can also cause gas or diarrhoea.",
+    "sl": "Ker je soja pogost alergen, psu sprva ponudite le zelo majhno količino, da preverite, ali je alergičen. Znaki alergijske reakcije, kot so srbenje, izpadanje dlake ali vnetja ušes, se morda ne pokažejo takoj. Soja lahko povzroči tudi vetrove ali drisko."
+  },
+  "serving": {
+    "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
+    "sl": "Samo navadna, sveža zrna, odstranjena iz stroka, brez soli, začimb, sojine omake ali olja. Nekaj zrn kot občasen priboljšek; ključna je zmernost."
+  },
+  "child": {
+    "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
+    "sl": "Psi lahko pogrizljajo nekaj navadnih zrn edamame. Odrasli jih najprej vzame iz stroka."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat salted or seasoned edamame?",
+        "sl": "Ali lahko psi jedo slan ali začinjen edamame?"
+      },
+      "a": {
+        "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
+        "sl": "Ne. Začimbe, sol, sojina omaka in olje, s katerimi kuhamo edamame, so lahko za pse še posebej nezdravi, zato tako pripravljenega edamame nikoli ne delite s psom."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat edamame pods?",
+        "sl": "Ali lahko psi jedo stroke edamame?"
+      },
+      "a": {
+        "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
+        "sl": "Raje ne. Stroki edamame so vlaknati, trdi in žilavi; pes jih lahko težko prebavi in se lahko z njimi zaduši, kar velja zlasti za majhne pse."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD162",
+      "quote": "While plain edamame beans aren't toxic to dogs"
+    },
+    {
+      "id": "KD162",
+      "quote": "These beans are soy, high in fiber, and are surrounded by tough pods."
+    },
+    {
+      "id": "KD162",
+      "quote": "Soy, while high in nutritional value, is a common allergy in dogs, so it's best to only offer your dog a very small amount"
+    },
+    {
+      "id": "KD162",
+      "quote": "An allergic reaction (such as itching, coat loss, or ear infections) might not show up immediately."
+    },
+    {
+      "id": "KD162",
+      "quote": "Soy can also cause flatulence in dogs, and it may occasionally result in diarrhea."
+    },
+    {
+      "id": "KD162",
+      "quote": "Fiber, when fed in excess, can cause stomach problems, vomiting, and diarrhea."
+    },
+    {
+      "id": "KD162",
+      "quote": "Edamame pods are fibrous, tough, and chewy."
+    },
+    {
+      "id": "KD162",
+      "quote": "They can be hard for your dog to digest and are a choking hazard, especially for small dogs."
+    },
+    {
+      "id": "KD162",
+      "quote": "Humans often cook them in salt, spices, and sauces, which are likely to be unhealthy for dogs."
+    },
+    {
+      "id": "KD162",
+      "quote": "Spices, salt, soy sauce, and oil used to cook edamame can be especially unhealthy for dogs."
+    },
+    {
+      "id": "KD162",
+      "quote": "Never share edamame you’ve cooked with spices or in oils."
+    },
+    {
+      "id": "KD162",
+      "quote": "However, fed safely and in moderation, most dogs will not be harmed by a few of the fresh, crunchy beans used as treats."
+    },
+    {
+      "id": "KD162",
+      "quote": "Dr. Klein advises that dog owners initially test for allergies by giving a dog only one or two beans removed from"
+    },
+    {
+      "id": "KD162",
+      "quote": "As with any snack or treat, remember that moderation is key."
+    }
+  ],
+  "related": [
+    "peas",
+    "green-beans",
+    "salty-snacks"
+  ],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "b526dffe967c09bf50faf34e610e5a8b2e7ef14fc69855cc5f48676976e0fbc7"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "a48bf917796ceff814f518fb201ae1c4f3f07511ee08593990141899a3903995"}
+  }
+}

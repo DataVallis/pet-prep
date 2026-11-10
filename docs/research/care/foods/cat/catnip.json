@@ -1,0 +1,67 @@
+{
+  "slug": "catnip",
+  "species": "cat",
+  "name": {"en": "Catnip", "sl": "Mačja meta"},
+  "question": {"en": "Can cats eat catnip?", "sl": "Ali lahko mačke jedo mačjo meto?"},
+  "url_slug": {"en": "catnip", "sl": "macja-meta"},
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not as a snack. Sniffing catnip is harmless for cats, but the ASPCA lists catnip as toxic to cats because eating it can cause vomiting and diarrhoea. Let your cat enjoy the smell rather than eat the plant.",
+    "sl": "Ne kot prigrizek. Vohanje mačje mete je za mačke neškodljivo, vendar ASPCA mačjo meto navaja kot strupeno za mačke, ker lahko njeno uživanje povzroči bruhanje in drisko. Naj mačka uživa v vonju, rastline pa naj ne je."
+  },
+  "why": {
+    "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
+    "sl": "Viri se razlikujejo, zato upoštevamo strožje stališče. International Cat Care navaja, da mačja meta deluje, ko mačka vonja njeno olje, in da so njeni učinki na mačke neškodljivi, ne povzročajo zasvojenosti in so kratkotrajni; Cats Protection pa svetuje, da mačjo meto posadimo, da mačko odvrne od drugih rastlin. ASPCA pa mačjo meto (Nepeta cataria) navaja kot strupeno za mačke: veliko mačk jo ima zelo rado, vendar lahko povzroči bruhanje in drisko, nekatere mačke pa postanejo zaspane, druge pa vznemirjene."
+  },
+  "signs": {
+    "en": ["Vomiting", "Diarrhoea", "Unusual sleepiness", "Overexcitement"],
+    "sl": ["Bruhanje", "Driska", "Nenavadna zaspanost", "Pretirana vznemirjenost"]
+  },
+  "what_to_do": {
+    "en": "If your cat has eaten catnip and is vomiting or has diarrhoea, contact your vet.",
+    "sl": "Če je mačka pojedla mačjo meto in bruha ali ima drisko, se obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Many cats love the smell of catnip. It's for sniffing and playing, not for eating.",
+    "sl": "Veliko muc obožuje vonj mačje mete. Namenjena je vohanju in igri, ne hranjenju."
+  },
+  "faq": [
+    {
+      "q": {"en": "Why doesn't my cat react to catnip?", "sl": "Zakaj se moja mačka ne odziva na mačjo meto?"},
+      "a": {
+        "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
+        "sl": "International Cat Care navaja, da mačja meta vpliva na približno 70–80 % mačk in da je odziv podedovan od staršev. Na mladičke ne vpliva, dokler niso starejši od treh mesecev."
+      }
+    },
+    {
+      "q": {"en": "Is catnip the same as cat grass?", "sl": "Ali je mačja meta isto kot mačja trava?"},
+      "a": {
+        "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
+        "sl": "Ne. VCA pojasnjuje, da mačja trava običajno pomeni žitne trave, na primer oves ali pšenico, mačja meta pa spada v družino metovk."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC92", "quote": "Catswort, Catmint"},
+    {"id": "KC92", "quote": "Nepeta cataria"},
+    {"id": "KC92", "quote": "Toxic to Cats"},
+    {"id": "KC92", "quote": "Many cats love catnip, but it can cause vomiting and diarrhea."},
+    {"id": "KC92", "quote": "It makes some cats sedated and others stimulated."},
+    {"id": "KC93", "quote": "catnip works when the volatile oil within the plant enters the cat’s nasal tissue when they sniff it."},
+    {"id": "KC93", "quote": "Its effects on cats are harmless, nonaddictive and short-lived."},
+    {"id": "KC93", "quote": "Catnip elicits these behaviours in around 70-80% of cats."},
+    {"id": "KC93", "quote": "Their response to the plant is hereditary (a genetic trait passed on from their parents)."},
+    {"id": "KC93", "quote": "Catnip has no effects on cats until they are over three months of age"},
+    {"id": "KC94", "quote": "Plant cat grass and catnip to distract your cat from other plants"},
+    {"id": "KC95", "quote": "Cat grass usually refers to grass that produces cereal grains, such as oat, wheat, barley, alfalfa, and rye."},
+    {"id": "KC95", "quote": "Catnip is a member of the mint family."},
+    {"id": "KC87", "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."}
+  ],
+  "related": ["cat-grass", "mint", "basil"],
+  "updated": "2026-11-10",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "2cde726940ad7b858bdb1994f9978388c20e651ccd9b6017bdefe3a8e2967642"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "d0f6356183bd0cc997031796f2b995ec180acd7180aef64f973724fbd54c62ce"}
+  }
+}
