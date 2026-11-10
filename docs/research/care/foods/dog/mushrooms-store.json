@@ -15,7 +15,8 @@
     "hr": "Gljive iz trgovine",
     "sv": "Svamp från affären",
     "da": "Svampe fra butikken",
-    "fi": "Kaupan sienet"
+    "fi": "Kaupan sienet",
+    "nb": "Sopp fra butikken"
   },
   "question": {
     "en": "Can dogs eat store-bought mushrooms?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti gljive iz trgovine?",
     "sv": "Får hundar äta svamp från affären?",
     "da": "Må hunde spise svampe fra butikken?",
-    "fi": "Saako koira syödä kaupan sieniä?"
+    "fi": "Saako koira syödä kaupan sieniä?",
+    "nb": "Kan hunder spise sopp fra butikken?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
@@ -47,7 +49,8 @@
     "hr": "gljive-iz-trgovine",
     "sv": "svamp-fran-affaren",
     "da": "svampe-fra-butikken",
-    "fi": "kaupan-sienet"
+    "fi": "kaupan-sienet",
+    "nb": "sopp-fra-butikken"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Obične gljive iz supermarketa općenito mogu biti sigurne za pse. Ipak, psima gljive nisu potrebne, a jela s gljivama najbolje je izbjegavati, pa je štapić mrkve ili kriška jabuke bolja poslastica.",
     "sv": "Svamp utan tillsatser som säljs i stora livsmedelsbutiker kan i allmänhet vara säker för hundar. Hundar behöver ändå ingen svamp, och rätter med svamp bör helst undvikas, så en morotsstav eller en äppelskiva är en bättre godbit.",
     "da": "Naturelle svampe fra store dagligvarebutikker kan som regel anses for ufarlige for hunde. Hunde har dog ikke brug for svampe, og retter med svampe bør helst undgås, så en gulerodsstang eller en skive æble er en bedre godbid.",
-    "fi": "Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille. Koirat eivät silti tarvitse sieniä, ja sieniruokia on parasta välttää, joten porkkanatikku tai omenaviipale on parempi herkku."
+    "fi": "Isoista ruokakaupoista ostetut maustamattomat sienet voivat yleensä olla turvallisia koirille. Koirat eivät silti tarvitse sieniä, ja sieniruokia on parasta välttää, joten porkkanatikku tai omenaviipale on parempi herkku.",
+    "nb": "Sopp uten tilsetninger som selges i store dagligvarebutikker, kan vanligvis være trygg for hunder. Likevel trenger ikke hunder sopp, og retter med sopp bør unngås, så en gulrotstav eller en eplebit er en bedre godbit."
   },
   "why": {
     "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
@@ -80,7 +84,8 @@
     "hr": "Gljive iz trgovine općenito se smatraju sigurnima, ali jela s gljivama često sadrže ulje, maslac, začine, češnjak i luk, što može biti štetno za pse. Divlje su gljive druga stvar: teško je razlikovati otrovne od neotrovnih, a otrovne su iznimno opasne.",
     "sv": "Svamp från livsmedelsbutiker anses i allmänhet vara säker, men svamprätter innehåller ofta olja, smör, kryddor, vitlök och lök, vilket kan vara skadligt för hundar. Vilda svampar är något helt annat: det är svårt att skilja giftiga från ogiftiga, och de giftiga är extremt farliga.",
     "da": "Svampe fra dagligvarebutikken anses generelt for ufarlige, men svamperetter indeholder ofte olie, smør, krydderier, hvidløg og løg, som kan skade hunde. Vilde svampe er noget andet: det er svært at skelne giftige fra ugiftige, og de giftige er ekstremt farlige.",
-    "fi": "Ruokakaupan sieniä pidetään yleensä turvallisina, mutta sieniruoissa on usein öljyä, voita, mausteita, valkosipulia ja sipulia, jotka voivat olla koirille haitallisia. Luonnonvaraiset sienet ovat toinen asia: myrkyllisiä ja myrkyttömiä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia."
+    "fi": "Ruokakaupan sieniä pidetään yleensä turvallisina, mutta sieniruoissa on usein öljyä, voita, mausteita, valkosipulia ja sipulia, jotka voivat olla koirille haitallisia. Luonnonvaraiset sienet ovat toinen asia: myrkyllisiä ja myrkyttömiä on vaikea erottaa toisistaan, ja myrkylliset ovat erittäin vaarallisia.",
+    "nb": "Sopp fra dagligvarebutikken regnes generelt som trygg, men soppretter inneholder ofte olje, smør, krydder, hvitløk og løk, som kan være skadelig for hunder. Ville sopper er en annen sak: det er vanskelig å skille giftige fra ikke-giftige, og de giftige er ekstremt farlige."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Ako ih ipak daješ, neka to budu samo obične gljive iz trgovine. Nikad ne dopusti psu da jede gljive pronađene vani; ako se to dogodi, odmah se obrati veterinaru, centru za kontrolu otrovanja životinja ili dežurnoj veterinarskoj ambulanti.",
     "sv": "Om du ändå ger hunden svamp, välj bara butiksköpt svamp utan tillsatser. Låt aldrig hunden äta svamp som den har hittat utomhus. Om det händer, kontakta veterinären, en giftrådgivning för djur eller ett djursjukhus med akutmottagning direkt.",
     "da": "Hvis du vil dele, så giv kun naturelle svampe fra butikken. Lad aldrig din hund spise svampe fra naturen; sker det alligevel, skal du straks kontakte din dyrlæge, en giftrådgivning for dyr eller et dyrehospital med døgnvagt.",
-    "fi": "Jos haluat antaa sieniä, anna vain maustamattomia kaupan sieniä. Älä koskaan anna koiran syödä ulkoa löytyneitä sieniä; jos niin käy, ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin."
+    "fi": "Jos haluat antaa sieniä, anna vain maustamattomia kaupan sieniä. Älä koskaan anna koiran syödä ulkoa löytyneitä sieniä; jos niin käy, ota heti yhteyttä eläinlääkäriin, eläinten myrkytysneuvontaan tai päivystävään eläinlääkäriin.",
+    "nb": "Hvis du likevel vil dele, gir du bare vanlig butikksopp uten tilsetninger. La aldri hunden spise sopp den finner ute; hvis det skjer, må du kontakte dyrlegen, giftinformasjon for dyr eller en dyrlegevakt med en gang."
   },
   "serving": {
     "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
@@ -113,7 +119,8 @@
     "hr": "Samo obične, iz supermarketa. Bez ulja, maslaca, začina, češnjaka i luka te bez jela s gljivama.",
     "sv": "Bara svamp utan tillsatser från en stor livsmedelsbutik. Ingen olja, smör, kryddor, vitlök eller lök, och inga svamprätter.",
     "da": "Kun naturelle svampe fra en stor dagligvarebutik. Uden olie, smør, krydderier, hvidløg eller løg – og ingen svamperetter.",
-    "fi": "Vain maustamattomia, isosta ruokakaupasta ostettuja. Ei öljyä, voita, mausteita, valkosipulia eikä sipulia, eikä sieniruokia."
+    "fi": "Vain maustamattomia, isosta ruokakaupasta ostettuja. Ei öljyä, voita, mausteita, valkosipulia eikä sipulia, eikä sieniruokia.",
+    "nb": "Bare sopp uten tilsetninger fra en stor dagligvarebutikk. Ingen olje, smør, krydder, hvitløk eller løk, og ingen soppretter."
   },
   "child": {
     "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
@@ -129,7 +136,8 @@
     "hr": "Psima gljive nisu potrebne. Štapić mrkve ili kriška jabuke bolja je poslastica. Nikad ne dopusti psu da jede gljive koje rastu vani.",
     "sv": "Hundar behöver ingen svamp. En morot eller en äppelskiva är en bättre godbit. Låt aldrig en hund äta svamp som växer utomhus.",
     "da": "Hunde har ikke brug for svampe. En gulerod eller en skive æble er en bedre godbid. Lad aldrig en hund spise svampe ude i naturen.",
-    "fi": "Koirat eivät tarvitse sieniä. Porkkana tai omenaviipale on parempi herkku. Älä koskaan anna koiran syödä ulkona kasvavia sieniä."
+    "fi": "Koirat eivät tarvitse sieniä. Porkkana tai omenaviipale on parempi herkku. Älä koskaan anna koiran syödä ulkona kasvavia sieniä.",
+    "nb": "Hunder trenger ikke sopp. En gulrot eller en eplebit er en bedre godbit. La aldri en hund spise sopp som vokser ute."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti umak od gljiva ili druga jela s gljivama?",
         "sv": "Får hundar äta svampsås eller andra svamprätter?",
         "da": "Må hunde spise svampesauce eller andre svamperetter?",
-        "fi": "Saako koira syödä sienikastiketta tai muita sieniruokia?"
+        "fi": "Saako koira syödä sienikastiketta tai muita sieniruokia?",
+        "nb": "Kan hunder spise soppsaus eller andre soppretter?"
       },
       "a": {
         "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
@@ -163,7 +172,8 @@
         "hr": "Sigurnije ih je izbjegavati. Ulje, maslac, začini, češnjak i luk u tim jelima mogu biti štetni za pse.",
         "sv": "Det är säkrast att undvika dem. Olja, smör, kryddor, vitlök och lök i sådana rätter kan vara skadliga för hundar.",
         "da": "Det er sikrere at undgå dem. Olie, smør, krydderier, hvidløg og løg i disse retter kan skade hunde.",
-        "fi": "Niitä on turvallisempaa välttää. Näissä ruoissa oleva öljy, voi, mausteet, valkosipuli ja sipuli voivat olla koirille haitallisia."
+        "fi": "Niitä on turvallisempaa välttää. Näissä ruoissa oleva öljy, voi, mausteet, valkosipuli ja sipuli voivat olla koirille haitallisia.",
+        "nb": "Det er tryggere å unngå dem. Olje, smør, krydder, hvitløk og løk i slike retter kan være skadelig for hunder."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "A gljive koje rastu u vrtu?",
         "sv": "Vad gäller svamp som växer i trädgården?",
         "da": "Hvad med svampe i haven?",
-        "fi": "Entä puutarhassa kasvavat sienet?"
+        "fi": "Entä puutarhassa kasvavat sienet?",
+        "nb": "Hva med sopp som vokser i hagen?"
       },
       "a": {
         "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
@@ -197,7 +208,8 @@
         "hr": "Svaku divlju gljivu smatraj potencijalno otrovnom. Ako je pas pojede, odmah se obrati veterinaru.",
         "sv": "Behandla varje vild svamp som potentiellt giftig. Om hunden äter en, kontakta veterinären direkt.",
         "da": "Behandl alle vilde svampe som potentielt giftige. Hvis din hund spiser en, skal du straks kontakte din dyrlæge.",
-        "fi": "Pidä jokaista luonnonvaraista sientä mahdollisesti myrkyllisenä. Jos koirasi syö sellaisen, ota heti yhteyttä eläinlääkäriin."
+        "fi": "Pidä jokaista luonnonvaraista sientä mahdollisesti myrkyllisenä. Jos koirasi syö sellaisen, ota heti yhteyttä eläinlääkäriin.",
+        "nb": "Regn all vill sopp som mulig giftig. Hvis hunden spiser en, må du kontakte dyrlegen med en gang."
       }
     }
   ],
@@ -321,6 +333,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "489207d0174fa05d269c97a33fde3d7a2ff3badfbe23f4bd3ae1aa51faceb960"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ebc51f904d061b8f936d30c1979b073fbdd91d4d1dd089b3c9a714ac72607726"
     }
   }
 }

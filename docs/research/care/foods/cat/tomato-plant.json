@@ -15,7 +15,8 @@
     "hr": "Biljka rajčice (listovi, stabljike, zelene rajčice)",
     "sv": "Tomatplanta (blad, stjälkar, gröna tomater)",
     "da": "Tomatplante (blade, stængler, grønne tomater)",
-    "fi": "Tomaattikasvi (lehdet, varret, vihreät tomaatit)"
+    "fi": "Tomaattikasvi (lehdet, varret, vihreät tomaatit)",
+    "nb": "Tomatplante (blader, stengler, grønne tomater)"
   },
   "question": {
     "en": "Is the tomato plant safe for cats?",
@@ -31,7 +32,8 @@
     "hr": "Je li biljka rajčice sigurna za mačke?",
     "sv": "Är tomatplantan säker för katter?",
     "da": "Er tomatplanten ufarlig for katte?",
-    "fi": "Onko tomaattikasvi turvallinen kissalle?"
+    "fi": "Onko tomaattikasvi turvallinen kissalle?",
+    "nb": "Er tomatplanten trygg for katter?"
   },
   "url_slug": {
     "en": "tomato-plant",
@@ -47,7 +49,8 @@
     "hr": "biljka-rajcice",
     "sv": "tomatplanta",
     "da": "tomatplante",
-    "fi": "tomaattikasvi"
+    "fi": "tomaattikasvi",
+    "nb": "tomatplante"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne. ASPCA navodi biljku rajčice kao otrovnu za mačke jer sadrži solanin; neotrovan je samo zreo plod. Listove, stabljike i zelene rajčice drži podalje od mačke, a ako ih mačka žvače, nazovi veterinara.",
     "sv": "Nej. ASPCA räknar tomatplantan som giftig för katter eftersom den innehåller solanin; bara den mogna frukten är ogiftig. Se till att katten inte kommer åt blad, stjälkar och gröna tomater, och kontakta veterinären om katten har tuggat på något av dem.",
     "da": "Nej. ASPCA regner tomatplanten for giftig for katte, fordi den indeholder solanin; kun den modne frugt er ugiftig. Hold blade, stængler og grønne tomater væk fra din kat, og ring til din dyrlæge, hvis din kat tygger på noget af det.",
-    "fi": "Ei ole. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, koska siinä on solaniinia; vain kypsä hedelmä on myrkytön. Pidä lehdet, varret ja vihreät tomaatit poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissa pureskelee niitä."
+    "fi": "Ei ole. ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, koska siinä on solaniinia; vain kypsä hedelmä on myrkytön. Pidä lehdet, varret ja vihreät tomaatit poissa kissan ulottuvilta ja soita eläinlääkärille, jos kissa pureskelee niitä.",
+    "nb": "Nei. ASPCA oppgir tomatplanten som giftig for katter fordi den inneholder solanin; bare den modne frukten er ikke giftig. Hold blader, stengler og grønne tomater unna katten, og ring dyrlegen hvis katten tygger på noe av det."
   },
   "why": {
     "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
@@ -80,7 +84,8 @@
     "hr": "ASPCA navodi biljku rajčice kao otrovnu za mačke, solanin imenuje kao otrovnu tvar i napominje da je zreo plod neotrovan. I Agriculture Victoria kaže da je neotrovan samo zreo plod rajčice. ASPCA-ov vrtni savjet za kućne ljubimce dodaje da biljka i male zelene rajčice sadrže tomatin. International Cat Care upozorava da već i dodir s listovima rajčice može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima.",
     "sv": "ASPCA anger att tomatplantan är giftig för katter, pekar ut solanin som det giftiga ämnet och påpekar att den mogna frukten är ogiftig. Även Agriculture Victoria skriver att bara mogna tomater är ogiftiga. ASPCA:s trädgårdsråd för husdjur tillägger att plantan och små gröna tomater innehåller tomatin. International Cat Care varnar för att redan kontakt med tomatblad kan ge blåsor eller klåda i kattens mun och tandkött, nysningar och ögonproblem.",
     "da": "ASPCA regner tomatplanten for giftig for katte, nævner solanin som det giftige stof og skriver at den modne frugt er ugiftig. Agriculture Victoria skriver også at kun modne tomater er ugiftige. ASPCA's havevejledning til kæledyr tilføjer at planten og små grønne tomater indeholder tomatin. International Cat Care advarer om at selv kontakt med tomatblade kan give blærer eller kløe i kattens mund og tandkød, nysen og øjenproblemer.",
-    "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, nimeää myrkylliseksi aineeksi solaniinin ja huomauttaa, että kypsä hedelmä on myrkytön. Myös Agriculture Victoria toteaa, että vain kypsä tomaatti on myrkytön. ASPCA:n lemmikkien puutarhaohjeissa lisätään, että kasvissa ja pienissä vihreissä tomaateissa on tomatiinia. International Cat Care varoittaa, että jo kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa, aivastelua ja silmäoireita."
+    "fi": "ASPCA luokittelee tomaattikasvin kissoille myrkylliseksi, nimeää myrkylliseksi aineeksi solaniinin ja huomauttaa, että kypsä hedelmä on myrkytön. Myös Agriculture Victoria toteaa, että vain kypsä tomaatti on myrkytön. ASPCA:n lemmikkien puutarhaohjeissa lisätään, että kasvissa ja pienissä vihreissä tomaateissa on tomatiinia. International Cat Care varoittaa, että jo kosketus tomaatin lehtiin voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa, aivastelua ja silmäoireita.",
+    "nb": "ASPCA oppgir tomatplanten som giftig for katter, nevner solanin som det giftige stoffet og opplyser at den modne frukten ikke er giftig. Agriculture Victoria sier også at bare modne tomater ikke er giftige. ASPCAs hageråd for kjæledyr legger til at planten og små grønne tomater inneholder tomatin. International Cat Care advarer om at selv kontakt med tomatblader kan gi blemmer eller kløe i kattens munn og på tannkjøttet, nysing og øyeproblemer."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Heikkous",
       "Laajentuneet pupillit",
       "Hidas syke"
+    ],
+    "nb": [
+      "Sikling",
+      "Dårlig matlyst",
+      "Sterkt urolig mage",
+      "Nedstemthet eller tretthet",
+      "Svakhet",
+      "Utvidede pupiller",
+      "Langsom hjerterytme"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "hr": "Ako je mačka žvakala listove, stabljike ili zelene rajčice, odmah nazovi veterinara. Zapiši što je pojela i kada. Ne pokušavaj kod kuće izazvati povraćanje bez savjeta veterinara.",
     "sv": "Om katten har tuggat på tomatblad, stjälkar eller gröna tomater, kontakta veterinären direkt. Anteckna vad katten har ätit och när. Försök inte få katten att kräkas utan att först fråga veterinären.",
     "da": "Hvis din kat har tygget på tomatblade, stængler eller grønne tomater, så kontakt straks din dyrlæge. Skriv ned, hvad katten har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op uden først at spørge dyrlægen.",
-    "fi": "Jos kissasi pureskeli tomaatin lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä."
+    "fi": "Jos kissasi pureskeli tomaatin lehtiä, varsia tai vihreitä tomaatteja, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaa kysymättä ensin eläinlääkäriltä.",
+    "nb": "Hvis katten har tygget på tomatblader, stengler eller grønne tomater, må du kontakte dyrlegen med en gang. Skriv ned hva katten har spist, og når. Ikke prøv å få katten til å kaste opp selv uten å ha snakket med dyrlegen."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "hr": "Biljke rajčice nisu za mačke. Ako mačka nagrize list, reci odrasloj osobi da nazove veterinara.",
     "sv": "Tomatplantor är inte för katter. Om katten knaprar på ett blad, berätta det för en vuxen så att den vuxna kan ringa veterinären.",
     "da": "Tomatplanter er ikke til katte. Hvis katten nasker af et blad, så sig det til en voksen, som kan ringe til dyrlægen.",
-    "fi": "Tomaattikasvit eivät ole kissoille. Jos kisu nakertaa lehteä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille."
+    "fi": "Tomaattikasvit eivät ole kissoille. Jos kisu nakertaa lehteä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille.",
+    "nb": "Tomatplanter er ikke for katter. Hvis pusen napper i et blad, må du si fra til en voksen, som kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "hr": "Smiju li mačke jesti zrele rajčice?",
         "sv": "Får katter äta mogna tomater?",
         "da": "Må katte spise modne tomater?",
-        "fi": "Saako kissa syödä kypsiä tomaatteja?"
+        "fi": "Saako kissa syödä kypsiä tomaatteja?",
+        "nb": "Kan katter spise modne tomater?"
       },
       "a": {
         "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
@@ -275,7 +292,8 @@
         "hr": "ASPCA navodi da je zreo plod rajčice neotrovan za mačke, ali Agriculture Victoria rajčice navodi među ljudskom hranom koju mačkama ne treba davati, pa ih je najbolje ne dijeliti.",
         "sv": "ASPCA uppger att mogen tomatfrukt är ogiftig för katter, men Agriculture Victoria räknar tomater till den människomat som katter bör undvika, så det är bäst att inte ge katten några.",
         "da": "ASPCA skriver at modne tomater er ugiftige for katte, men Agriculture Victoria nævner tomater blandt den menneskemad man bør undgå at give katte, så det er bedst ikke at dele dem.",
-        "fi": "ASPCA:n mukaan kypsä tomaatti on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, joten niitä ei kannata jakaa."
+        "fi": "ASPCA:n mukaan kypsä tomaatti on kissoille myrkytön, mutta Agriculture Victoria luettelee tomaatit ihmisten ruokiin, joita kissalle ei pidä antaa, joten niitä ei kannata jakaa.",
+        "nb": "ASPCA sier at modne tomater ikke er giftige for katter, men Agriculture Victoria oppgir tomater blant menneskemat som katter ikke bør få, så det er best å la være å dele dem."
       }
     }
   ],
@@ -401,6 +419,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a66acc92d870ff36ae6178af8910a26f972c1913a8ac889aa2162fad46f0828f"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "980932f31e656faf324c02f584cdb8e4cbbaed99f546aa416ed574481165154a"
     }
   }
 }
