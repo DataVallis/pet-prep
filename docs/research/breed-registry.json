@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "92787060db2dc5db561153908abcf83a13f2badc3c4d2ce26339973895312e45"
+      "sha256": "1f5ce5e7ae1414c536a628ba2e1f6bf4c328e8af4d775c2f24d7f28cb48cb42e"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -55125,7 +55125,7 @@
       "id": "lhasa_apso",
       "species": "dog",
       "order": 91,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Lhasa Apso",
         "sl": "Lhasa apso"
@@ -55744,7 +55744,7 @@
       "id": "dogue_de_bordeaux",
       "species": "dog",
       "order": 92,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Dogue de Bordeaux",
         "sl": "Bordojska doga"
@@ -56359,7 +56359,7 @@
       "id": "flat_coated_retriever",
       "species": "dog",
       "order": 93,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Flat-Coated Retriever",
         "sl": "Ravnodlaki prinašalec"
