@@ -7,6 +7,7 @@
     "de": "Chilischoten",
     "fr": "Piments forts",
     "es": "Guindillas",
+    "it": "Peperoncini",
     "pt": "Malaguetas",
     "nl": "Chilipepers",
     "pl": "Papryczki chili",
@@ -22,6 +23,7 @@
     "de": "Dürfen Katzen Chilischoten fressen?",
     "fr": "Les chats peuvent-ils manger des piments forts ?",
     "es": "¿Pueden los gatos comer guindillas?",
+    "it": "I gatti possono mangiare i peperoncini?",
     "pt": "Os gatos podem comer malaguetas?",
     "nl": "Mogen katten chilipepers eten?",
     "pl": "Czy koty mogą jeść papryczki chili?",
@@ -37,6 +39,7 @@
     "de": "chilischoten",
     "fr": "piments-forts",
     "es": "guindillas",
+    "it": "peperoncini",
     "pt": "malaguetas",
     "nl": "chilipepers",
     "pl": "papryczki-chili",
@@ -53,6 +56,7 @@
     "de": "Nein, teilen Sie Chilischoten oder andere scharfe Speisen nicht mit Ihrer Katze. Laut VCA Animal Hospitals sind scharfe Speisen für Katzen zwar nicht unbedingt giftig, lösen aber mit Sicherheit eine Magenverstimmung aus.",
     "fr": "Non, ne partagez pas de piments ni d’autres plats épicés avec votre chat. Selon VCA Animal Hospitals, les aliments épicés ne sont peut-être pas toxiques pour les chats, mais ils provoquent à coup sûr des troubles digestifs.",
     "es": "No, no compartas guindillas ni otras comidas picantes con tu gato. VCA Animal Hospitals explica que la comida picante puede no ser tóxica para los gatos, pero es seguro que les provoca malestar de estómago.",
+    "it": "No, non dare al tuo gatto peperoncini né altri cibi piccanti. Secondo VCA Animal Hospitals i cibi piccanti potrebbero non essere tossici per i gatti, ma di sicuro causano mal di stomaco.",
     "pt": "Não, não partilhes malaguetas nem outra comida picante com o teu gato. Os VCA Animal Hospitals dizem que a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago.",
     "nl": "Nee, deel chilipepers of ander pittig eten niet met je kat. Volgens VCA Animal Hospitals zijn pittige gerechten misschien niet giftig voor katten, maar ze veroorzaken zeker maagklachten.",
     "pl": "Nie, nie dawaj kotu papryczek chili ani innych ostrych potraw. VCA Animal Hospitals podaje, że ostre potrawy mogą nie być toksyczne dla kotów, ale z pewnością rozstroją im żołądek.",
@@ -68,6 +72,7 @@
     "de": "VCA Animal Hospitals rät, scharfe Speisen nicht mit der Katze zu teilen und Jalapeño Poppers für sich zu behalten: Scharfe Speisen sind für Katzen zwar nicht unbedingt giftig, lösen aber mit Sicherheit eine Magenverstimmung aus. Katzen brauchen kein Gemüse, und die ASPCA merkt an, dass Pflanzliches ganz allgemein bei Katzen Erbrechen und Magenverstimmungen auslösen kann.",
     "fr": "VCA Animal Hospitals conseille de ne pas partager d’aliments épicés avec votre chat et de garder les jalapeños farcis pour vous : les aliments épicés ne sont peut-être pas toxiques pour les chats, mais ils provoquent à coup sûr des troubles digestifs. Les chats n’ont pas besoin de légumes dans leur alimentation, et l’ASPCA rappelle que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "VCA Animal Hospitals aconseja no compartir comida picante con tu gato y quedarte para ti los jalapeños rellenos: la comida picante puede no ser tóxica para los gatos, pero es seguro que les provoca malestar de estómago. Los gatos no necesitan verduras en su dieta, y la ASPCA advierte de que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos.",
+    "it": "VCA Animal Hospitals consiglia di non dare ai gatti cibi piccanti e di tenere per sé i jalapeño poppers: i cibi piccanti potrebbero non essere tossici per i gatti, ma di sicuro causano mal di stomaco. I gatti non hanno bisogno di verdure nella loro alimentazione e l’ASPCA ricorda che qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
     "pt": "Os VCA Animal Hospitals aconselham a não partilhar comida picante com o gato e a guardar os jalapeño poppers para ti: a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago. Os gatos não precisam de legumes na alimentação, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
     "nl": "VCA Animal Hospitals raadt af om pittig eten met je kat te delen en adviseert de gevulde jalapeños voor jezelf te houden: pittig eten is misschien niet giftig voor katten, maar het veroorzaakt zeker maagklachten. Katten hebben geen groente nodig in hun voeding en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
     "pl": "VCA Animal Hospitals radzi nie dawać kotu ostrych potraw, a przekąski w rodzaju jalapeño poppers zostawić sobie: ostre potrawy mogą nie być toksyczne dla kotów, ale z pewnością rozstroją im żołądek. Koty nie potrzebują w diecie warzyw, a ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
@@ -97,6 +102,10 @@
     "es": [
       "Malestar de estómago",
       "Vómitos"
+    ],
+    "it": [
+      "Mal di stomaco",
+      "Vomito"
     ],
     "pt": [
       "Mal-estar no estômago",
@@ -137,6 +146,7 @@
     "de": "Hat Ihre Katze Chili oder scharfe Speisen gefressen und erbricht danach oder hat eine Magenverstimmung, wenden Sie sich an Ihren Tierarzt. Versuchen Sie nicht, Ihre Katze ohne Rücksprache mit dem Tierarzt zum Erbrechen zu bringen.",
     "fr": "Si votre chat a mangé du piment ou un plat épicé, puis vomit ou présente des troubles digestifs, contactez votre vétérinaire pour avis. N’essayez pas de faire vomir votre chat sans l’avis du vétérinaire.",
     "es": "Si tu gato ha comido guindilla o comida picante y después vomita o tiene malestar de estómago, contacta con tu veterinario para pedirle consejo. No intentes provocarle el vómito sin consultarlo antes con el veterinario.",
+    "it": "Se il tuo gatto ha mangiato peperoncino o cibi piccanti e poi vomita o ha mal di stomaco, contatta il veterinario per un consiglio. Non provare a farlo vomitare senza aver chiesto al veterinario.",
     "pt": "Se o teu gato comeu malagueta ou comida picante e depois vomita ou fica com mal-estar no estômago, liga ao teu veterinário para pedir conselho. Não tentes fazer o teu gato vomitar sem perguntar ao veterinário.",
     "nl": "Als je kat chilipeper of pittig eten heeft gegeten en daarna braakt of maagklachten krijgt, neem dan contact op met je dierenarts voor advies. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen.",
     "pl": "Jeśli kot zjadł chili lub ostrą potrawę, a potem wymiotuje albo ma rozstrój żołądka, skontaktuj się z weterynarzem po radę. Nie próbuj wywoływać u kota wymiotów bez konsultacji z weterynarzem.",
@@ -153,6 +163,7 @@
     "de": "Scharfe Chilischoten sind für Menschen da, nicht für Katzen. Sie können der Katze Bauchweh machen.",
     "fr": "Les piments forts sont pour les humains, pas pour les chats. Ils peuvent donner mal au ventre à ton chat.",
     "es": "Las guindillas picantes son para las personas, no para los gatos. Pueden darle dolor de barriga a tu gato.",
+    "it": "I peperoncini piccanti sono per le persone, non per i gatti. Possono far venire il mal di pancia al micio.",
     "pt": "As malaguetas picantes são para as pessoas, não para os gatos. Podem dar dor de barriga ao gatinho.",
     "nl": "Pittige chilipepers zijn voor mensen, niet voor katten. Je kat kan er buikpijn van krijgen.",
     "pl": "Ostre papryczki chili są dla ludzi, nie dla kotów. Od nich kotkowi może rozboleć brzuszek.",
@@ -225,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "996ea4c2bb0dd93d8e641a2a0f881c341d5fdf61f558138ca397c46c7c0e315d"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f4830c988052cb531a33459d50abd28b821fbb78ad3e3ac74a619aedf1187f1b"
     },
     "pt": {
       "status": "verified",
