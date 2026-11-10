@@ -139,6 +139,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] KR South Korea — follow-up 2: Incheon, Daejeon, Ulsan, Jeju regular clinics — 13 entries (Incheon 5, Daejeon 1, Ulsan 2, Jeju 5), 2 × 24 h (24 Songdo OK, Yeonsu AMC Incheon), no duty rota, no animal poison line, check: 6 checked, 0 fixed, 0 removed, 2026-11-10 — not reachable twice, skipped (redirect loops / robots.txt / JS-only, see `vets/KR.json` notes): Kiwa, i-Bone, Point, Raphael, Sorae, Soop, Time AMC, Incheon Sky, Ulsan 24 Smart; Daejeon and Ulsan stay thin
 - [x] SG Singapore — 21 entries, 5 × 24 h (claims rest on news/profile pages and one own hospital page; clinic sites not openable), no duty rota, no animal poison line, check: 9 checked, 0 fixed, 0 downgraded, 0 removed, 2026-11-10 — left: ~100 licensed centres without published phone/url (see `vets/SG.json` notes)
 - [~] TH Thailand — 28 entries, 20 × 24 h (17 Thonglor Pet Hospital branches, Chulalongkorn small-animal hospital, HugMe Phuket), no duty rota, no animal poison line (Ramathibodi 1367 serves humans), check: 21 checked, 0 fixed, 0 removed, 2026-11-10 — left: Koh Samui, Hua Hin, Krabi, Mahidol vet hospital, Phya Thai 7, Chiang Mai clinics beyond Thonglor (see `vets/TH.json` notes)
+- [ ] TH Thailand — follow-up: Koh Samui, Hua Hin, Krabi, Mahidol vet hospital, Phya Thai 7, Chiang Mai clinics beyond Thonglor; skip what was unreachable twice
 - [ ] AE United Arab Emirates
 - [ ] IL Israel
 - [ ] ZA South Africa
