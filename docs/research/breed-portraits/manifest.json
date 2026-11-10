@@ -1221,6 +1221,19 @@
             "prompt_hash": "sha256:5ff2168e51c8dc65738ec7e05678a9ea8ce057cf9b29f9f1b5ebbe6985852332",
             "generated_at": "2026-11-10T03:00:11+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "flat_coated_retriever",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/flat-coated-retriever.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:df4e7d1c8a6aa53eeea64e06afeee3ba0488d1973ef82192641389003266baa1",
+            "generated_at": "2026-11-10T06:48:56+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
