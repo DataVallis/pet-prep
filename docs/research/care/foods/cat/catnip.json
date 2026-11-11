@@ -5,32 +5,37 @@
     "en": "Catnip",
     "sl": "Mačja meta",
     "de": "Katzenminze",
-    "pt": "Erva-gateira"
+    "pt": "Erva-gateira",
+    "fr": "Cataire"
   },
   "question": {
     "en": "Can cats eat catnip?",
     "sl": "Ali lahko mačke jedo mačjo meto?",
     "de": "Dürfen Katzen Katzenminze fressen?",
-    "pt": "Os gatos podem comer erva-gateira?"
+    "pt": "Os gatos podem comer erva-gateira?",
+    "fr": "Les chats peuvent-ils manger de la cataire ?"
   },
   "url_slug": {
     "en": "catnip",
     "sl": "macja-meta",
     "de": "katzenminze",
-    "pt": "erva-gateira"
+    "pt": "erva-gateira",
+    "fr": "cataire"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not as a snack. Sniffing catnip is harmless for cats, but the ASPCA lists catnip as toxic to cats because eating it can cause vomiting and diarrhoea. Let your cat enjoy the smell rather than eat the plant.",
     "sl": "Ne kot prigrizek. Vohanje mačje mete je za mačke neškodljivo, vendar ASPCA mačjo meto navaja kot strupeno za mačke, ker lahko njeno uživanje povzroči bruhanje in drisko. Naj mačka uživa v vonju, rastline pa naj ne je.",
     "de": "Nicht als Snack. Das Schnuppern an Katzenminze ist für Katzen harmlos, aber die ASPCA stuft Katzenminze als giftig für Katzen ein, weil das Fressen Erbrechen und Durchfall auslösen kann. Lassen Sie Ihre Katze lieber den Duft genießen, anstatt die Pflanze zu fressen.",
-    "pt": "Não é para comer. Cheirar erva-gateira é inofensivo para os gatos, mas a ASPCA classifica-a como tóxica para os gatos, porque comê-la pode causar vómitos e diarreia. Deixa o teu gato cheirá-la, em vez de a comer."
+    "pt": "Não é para comer. Cheirar erva-gateira é inofensivo para os gatos, mas a ASPCA classifica-a como tóxica para os gatos, porque comê-la pode causar vómitos e diarreia. Deixa o teu gato cheirá-la, em vez de a comer.",
+    "fr": "Pas en guise de friandise. Renifler de la cataire est sans danger pour les chats, mais l’ASPCA la classe parmi les plantes toxiques pour les chats, car en manger peut provoquer des vomissements et de la diarrhée. Laissez votre chat profiter de l’odeur plutôt que de manger la plante."
   },
   "why": {
     "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
     "sl": "Viri se razlikujejo, zato upoštevamo strožje stališče. International Cat Care navaja, da mačja meta deluje, ko mačka vonja njeno olje, in da so njeni učinki na mačke neškodljivi, ne povzročajo zasvojenosti in so kratkotrajni; Cats Protection pa svetuje, da mačjo meto posadimo, da mačko odvrne od drugih rastlin. ASPCA pa mačjo meto (Nepeta cataria) navaja kot strupeno za mačke: veliko mačk jo ima zelo rado, vendar lahko povzroči bruhanje in drisko, nekatere mačke pa postanejo zaspane, druge pa vznemirjene.",
     "de": "Die Quellen sind sich nicht einig, deshalb folgen wir der strengeren Einschätzung. International Cat Care sagt, Katzenminze wirke, wenn die Katze an ihrem Öl schnuppert; die Wirkung sei harmlos, mache nicht süchtig und halte nur kurz an. Cats Protection empfiehlt, Katzenminze anzupflanzen, um Katzen von anderen Pflanzen abzulenken. Die ASPCA hingegen stuft Katzenminze (Nepeta cataria) als giftig für Katzen ein: Viele Katzen lieben sie, sie kann aber Erbrechen und Durchfall verursachen und wirkt bei manchen Katzen beruhigend, bei anderen anregend.",
-    "pt": "As fontes divergem, por isso seguimos a opinião mais rigorosa. A International Cat Care diz que a erva-gateira atua quando o óleo é cheirado e que os efeitos nos gatos são inofensivos, não causam dependência e são de curta duração, e a Cats Protection sugere plantar erva-gateira para distrair os gatos de outras plantas. A ASPCA, porém, classifica a erva-gateira (Nepeta cataria) como tóxica para os gatos: muitos gatos adoram-na, mas pode causar vómitos e diarreia, e deixa alguns gatos sedados e outros estimulados."
+    "pt": "As fontes divergem, por isso seguimos a opinião mais rigorosa. A International Cat Care diz que a erva-gateira atua quando o óleo é cheirado e que os efeitos nos gatos são inofensivos, não causam dependência e são de curta duração, e a Cats Protection sugere plantar erva-gateira para distrair os gatos de outras plantas. A ASPCA, porém, classifica a erva-gateira (Nepeta cataria) como tóxica para os gatos: muitos gatos adoram-na, mas pode causar vómitos e diarreia, e deixa alguns gatos sedados e outros estimulados.",
+    "fr": "Les sources divergent : nous retenons donc l’avis le plus strict. International Cat Care indique que la cataire agit lorsque le chat en renifle l’huile, et que ses effets sont inoffensifs, sans risque de dépendance et de courte durée. Cats Protection suggère d’en planter pour détourner les chats des autres plantes. L’ASPCA, en revanche, classe la cataire (Nepeta cataria) parmi les plantes toxiques pour les chats : beaucoup de chats l’adorent, mais elle peut provoquer des vomissements et de la diarrhée, et elle rend certains chats somnolents et en excite d’autres."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Diarreia",
       "Sonolência invulgar",
       "Excitação excessiva"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Somnolence inhabituelle",
+      "Surexcitation"
     ]
   },
   "what_to_do": {
     "en": "If your cat has eaten catnip and is vomiting or has diarrhoea, contact your vet.",
     "sl": "Če je mačka pojedla mačjo meto in bruha ali ima drisko, se obrnite na veterinarja.",
     "de": "Wenn Ihre Katze Katzenminze gefressen hat und erbricht oder Durchfall bekommt, wenden Sie sich an Ihren Tierarzt.",
-    "pt": "Se o teu gato comeu erva-gateira e tem vómitos ou diarreia, liga ao teu veterinário."
+    "pt": "Se o teu gato comeu erva-gateira e tem vómitos ou diarreia, liga ao teu veterinário.",
+    "fr": "Si votre chat a mangé de la cataire et qu’il vomit ou a de la diarrhée, contactez votre vétérinaire."
   },
   "serving": null,
   "child": {
     "en": "Many cats love the smell of catnip. It's for sniffing and playing, not for eating.",
     "sl": "Veliko muc obožuje vonj mačje mete. Namenjena je vohanju in igri, ne hranjenju.",
     "de": "Viele Katzen lieben den Duft von Katzenminze. Sie ist zum Schnuppern und Spielen da, nicht zum Fressen.",
-    "pt": "Muitos gatos adoram o cheiro da erva-gateira. É para cheirar e brincar, não para comer."
+    "pt": "Muitos gatos adoram o cheiro da erva-gateira. É para cheirar e brincar, não para comer.",
+    "fr": "Beaucoup de chats adorent l’odeur de la cataire. Elle sert à renifler et à jouer, pas à manger."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Why doesn't my cat react to catnip?",
         "sl": "Zakaj se moja mačka ne odziva na mačjo meto?",
         "de": "Warum reagiert meine Katze nicht auf Katzenminze?",
-        "pt": "Porque é que o meu gato não reage à erva-gateira?"
+        "pt": "Porque é que o meu gato não reage à erva-gateira?",
+        "fr": "Pourquoi mon chat ne réagit-il pas à la cataire ?"
       },
       "a": {
         "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
         "sl": "International Cat Care navaja, da mačja meta vpliva na približno 70–80 % mačk in da je odziv podedovan od staršev. Na mladičke ne vpliva, dokler niso starejši od treh mesecev.",
         "de": "International Cat Care zufolge wirkt Katzenminze bei etwa 70–80 % der Katzen, und die Empfänglichkeit wird von den Eltern vererbt. Bei Kätzchen zeigt sie erst eine Wirkung, wenn sie älter als drei Monate sind.",
-        "pt": "A International Cat Care diz que a erva-gateira afeta cerca de 70–80 % dos gatos e que a reação é hereditária, herdada dos pais. Não faz qualquer efeito nos gatinhos até passarem os três meses de idade."
+        "pt": "A International Cat Care diz que a erva-gateira afeta cerca de 70–80 % dos gatos e que a reação é hereditária, herdada dos pais. Não faz qualquer efeito nos gatinhos até passarem os três meses de idade.",
+        "fr": "International Cat Care indique que la cataire agit sur environ 70 à 80 % des chats et que cette réaction est héréditaire. Elle n’a aucun effet sur les chatons de moins de trois mois."
       }
     },
     {
@@ -91,13 +106,15 @@
         "en": "Is catnip the same as cat grass?",
         "sl": "Ali je mačja meta isto kot mačja trava?",
         "de": "Ist Katzenminze dasselbe wie Katzengras?",
-        "pt": "A erva-gateira é o mesmo que a relva para gatos?"
+        "pt": "A erva-gateira é o mesmo que a relva para gatos?",
+        "fr": "La cataire est-elle la même chose que l’herbe à chat ?"
       },
       "a": {
         "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
         "sl": "Ne. VCA pojasnjuje, da mačja trava običajno pomeni žitne trave, na primer oves ali pšenico, mačja meta pa spada v družino metovk.",
         "de": "Nein. VCA erklärt, dass mit Katzengras meist Getreidegräser wie Hafer oder Weizen gemeint sind, während Katzenminze zur Familie der Minzen gehört.",
-        "pt": "Não. A VCA explica que a relva para gatos costuma referir-se a gramíneas de cereais, como a aveia ou o trigo, enquanto a erva-gateira pertence à família da hortelã."
+        "pt": "Não. A VCA explica que a relva para gatos costuma referir-se a gramíneas de cereais, como a aveia ou o trigo, enquanto a erva-gateira pertence à família da hortelã.",
+        "fr": "Non. Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine ou le blé, alors que la cataire appartient à la famille de la menthe."
       }
     }
   ],
@@ -185,6 +202,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e03c64275d524f4f9bb3e5db25fd3f7170990cf02c0f92933fdee2d88a8d40c5"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b9f075ad704516c7bd25cd07ea6847b2806ded8b8ce44b075ee7c7f3fb33b91"
     }
   }
 }
