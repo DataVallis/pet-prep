@@ -1970,7 +1970,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Basil",
@@ -1980,7 +1981,8 @@
         "fr": "Basilic",
         "es": "Albahaca",
         "it": "Basilico",
-        "nl": "Basilicum"
+        "nl": "Basilicum",
+        "pl": "Bazylia"
       },
       "question": {
         "en": "Can cats eat basil?",
@@ -1990,7 +1992,8 @@
         "fr": "Les chats peuvent-ils manger du basilic ?",
         "es": "¿Pueden los gatos comer albahaca?",
         "it": "I gatti possono mangiare il basilico?",
-        "nl": "Mogen katten basilicum eten?"
+        "nl": "Mogen katten basilicum eten?",
+        "pl": "Czy koty mogą jeść bazylię?"
       },
       "url_slug": {
         "en": "basil",
@@ -2000,7 +2003,8 @@
         "fr": "basilic",
         "es": "albahaca",
         "it": "basilico",
-        "nl": "basilicum"
+        "nl": "basilicum",
+        "pl": "bazylia"
       },
       "answer": {
         "en": "Yes, a small nibble of plain basil now and then is fine. The ASPCA lists basil, including sweet and Thai basil, as non-toxic to cats. Cats don't need it, though, and any plant may cause vomiting or an upset stomach.",
@@ -2010,7 +2014,8 @@
         "fr": "Oui, une petite bouchée de basilic nature de temps en temps ne pose pas de problème. L’ASPCA classe le basilic, y compris le basilic doux et le basilic thaï, parmi les plantes non toxiques pour les chats. Les chats n’en ont toutefois pas besoin, et n’importe quelle plante peut provoquer des vomissements ou des maux d’estomac.",
         "es": "Sí, un mordisquito de albahaca al natural de vez en cuando no pasa nada. La ASPCA incluye la albahaca, también la dulce y la tailandesa, entre las plantas no tóxicas para los gatos. Aun así, los gatos no la necesitan, y cualquier planta puede provocar vómitos o malestar de estómago.",
         "it": "Sì, ogni tanto un piccolo assaggio di basilico al naturale va bene. L’ASPCA indica il basilico, compreso quello dolce e quello thai, come non tossico per i gatti. Ai gatti però non serve, e qualsiasi pianta può provocare vomito o disturbi di stomaco.",
-        "nl": "Ja, af en toe een klein hapje basilicum, zonder iets erop of eraan, kan prima. De ASPCA noemt basilicum, ook zoete en Thaise basilicum, niet giftig voor katten. Katten hebben het alleen niet nodig, en van elke plant kan een kat gaan braken of maagklachten krijgen."
+        "nl": "Ja, af en toe een klein hapje basilicum, zonder iets erop of eraan, kan prima. De ASPCA noemt basilicum, ook zoete en Thaise basilicum, niet giftig voor katten. Katten hebben het alleen niet nodig, en van elke plant kan een kat gaan braken of maagklachten krijgen.",
+        "pl": "Tak, od czasu do czasu odrobina zwykłej bazylii do skubnięcia jest w porządku. ASPCA uznaje bazylię, w tym bazylię pospolitą i tajską, za nietoksyczną dla kotów. Koty jednak jej nie potrzebują, a każda roślina może wywołać wymioty lub rozstrój żołądka."
       },
       "why": {
         "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
@@ -2020,7 +2025,8 @@
         "fr": "L’ASPCA classe le basilic (Ocimum basilicum, aussi appelé basilic doux et basilic thaï) parmi les plantes non toxiques pour les chats. Cats Protection explique que même une plante non toxique peut malgré tout causer des maux de ventre si le chat la mange, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Selon la PDSA, les chats n’ont besoin de rien d’autre qu’une alimentation complète, même si une friandise de temps en temps ne pose pas de problème.",
         "es": "La ASPCA incluye la albahaca (Ocimum basilicum, también llamada albahaca dulce y albahaca tailandesa) entre las plantas no tóxicas para los gatos. Cats Protection explica que incluso las plantas no tóxicas pueden provocar malestar de barriga si se comen, y la ASPCA indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. PDSA dice que los gatos no necesitan nada más que una alimentación completa, aunque un premio ocasional no hace daño.",
         "it": "L’ASPCA indica il basilico (Ocimum basilicum, detto anche basilico dolce e basilico thai) come non tossico per i gatti. Cats Protection spiega che anche le piante non tossiche, se mangiate, possono comunque causare disturbi di pancia, e l’ASPCA segnala che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Secondo PDSA ai gatti non serve altro che un’alimentazione completa, anche se ogni tanto un premio va bene.",
-        "nl": "De ASPCA noemt basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) niet giftig voor katten. Cats Protection legt uit dat ook niet-giftige planten de maag van streek kunnen maken als een kat ze eet, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Volgens PDSA hebben katten niets nodig behalve een compleet kattenvoer, al kan af en toe een traktatie prima."
+        "nl": "De ASPCA noemt basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) niet giftig voor katten. Cats Protection legt uit dat ook niet-giftige planten de maag van streek kunnen maken als een kat ze eet, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Volgens PDSA hebben katten niets nodig behalve een compleet kattenvoer, al kan af en toe een traktatie prima.",
+        "pl": "ASPCA uznaje bazylię (Ocimum basilicum, zwaną też bazylią pospolitą i bazylią tajską) za nietoksyczną dla kotów. Cats Protection wyjaśnia, że nawet nietoksyczne rośliny mogą po zjedzeniu rozstroić żołądek, a ASPCA zaznacza, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. PDSA podaje, że koty nie potrzebują niczego poza pełnowartościową karmą, choć smakołyk od czasu do czasu nie zaszkodzi."
       },
       "signs": null,
       "what_to_do": {
@@ -2031,7 +2037,8 @@
         "fr": "Le basilic n’est pas toxique pour les chats, mais comme toute plante, il peut provoquer des vomissements ou des maux d’estomac. Limitez-vous à une petite bouchée occasionnelle.",
         "es": "La albahaca no es tóxica para los gatos, pero, como cualquier planta, puede provocar vómitos o malestar de estómago. Dale solo un trocito pequeño de vez en cuando.",
         "it": "Il basilico non è tossico per i gatti, ma come qualsiasi pianta può causare vomito o disturbi di stomaco. Limitati a un assaggio occasionale, di un solo boccone.",
-        "nl": "Basilicum is niet giftig voor katten, maar net als elke plant kan het braken of maagklachten veroorzaken. Houd het bij af en toe een klein hapje."
+        "nl": "Basilicum is niet giftig voor katten, maar net als elke plant kan het braken of maagklachten veroorzaken. Houd het bij af en toe een klein hapje.",
+        "pl": "Bazylia jest nietoksyczna dla kotów, ale jak każda roślina może wywołać wymioty lub rozstrój żołądka. Niech to będzie tylko odrobina i tylko od czasu do czasu."
       },
       "serving": {
         "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
@@ -2041,7 +2048,8 @@
         "fr": "Seulement une petite bouchée d’une feuille de basilic nature, en friandise occasionnelle.",
         "es": "Solo un trocito pequeño de hoja de albahaca al natural, como premio ocasional.",
         "it": "Solo un assaggio di una foglia di basilico al naturale, grande quanto un boccone, come premio occasionale.",
-        "nl": "Alleen af en toe, als traktatie, een klein hapje van een basilicumblaadje zonder iets erop of eraan."
+        "nl": "Alleen af en toe, als traktatie, een klein hapje van een basilicumblaadje zonder iets erop of eraan.",
+        "pl": "Tylko kawałeczek zwykłego liścia bazylii jako smakołyk od czasu do czasu."
       },
       "child": {
         "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
@@ -2051,7 +2059,8 @@
         "fr": "Le basilic n’est pas dangereux pour les chats, mais ils n’en ont pas besoin. Une toute petite bouchée suffit ; leur nourriture habituelle reste ce qu’il y a de mieux.",
         "es": "La albahaca no es dañina para los gatos, pero no la necesitan. Con un mordisquito basta; lo mejor es su propia comida para gatos.",
         "it": "Il basilico non fa male ai gatti, ma a loro non serve. Un assaggino basta e avanza: per loro è meglio il cibo per gatti.",
-        "nl": "Basilicum doet katten geen kwaad, maar ze hebben het niet nodig. Een piepklein hapje is meer dan genoeg. Hun eigen kattenvoer is het allerbeste."
+        "nl": "Basilicum doet katten geen kwaad, maar ze hebben het niet nodig. Een piepklein hapje is meer dan genoeg. Hun eigen kattenvoer is het allerbeste.",
+        "pl": "Bazylia nie szkodzi kotom, ale one jej nie potrzebują. Wystarczy odrobinka; najlepsza jest ich własna karma."
       },
       "faq": [],
       "source_ids": [
@@ -4006,7 +4015,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Cat grass",
@@ -4016,7 +4026,8 @@
         "fr": "Herbe à chat (graminées)",
         "es": "Hierba para gatos",
         "it": "Erba per gatti",
-        "nl": "Kattengras"
+        "nl": "Kattengras",
+        "pl": "Trawa dla kotów"
       },
       "question": {
         "en": "Is cat grass safe for cats?",
@@ -4026,7 +4037,8 @@
         "fr": "L’herbe à chat est-elle sans danger pour les chats ?",
         "es": "¿Es segura la hierba para gatos?",
         "it": "L’erba per gatti è sicura per i gatti?",
-        "nl": "Is kattengras veilig voor katten?"
+        "nl": "Is kattengras veilig voor katten?",
+        "pl": "Czy trawa dla kotów jest bezpieczna?"
       },
       "url_slug": {
         "en": "cat-grass",
@@ -4036,7 +4048,8 @@
         "fr": "herbe-a-chat",
         "es": "hierba-para-gatos",
         "it": "erba-per-gatti",
-        "nl": "kattengras"
+        "nl": "kattengras",
+        "pl": "trawa-dla-kotow"
       },
       "answer": {
         "en": "Yes, cat grass is safe for cats in moderation. Cats Protection says grass is safe for cats to eat unless it is contaminated with herbicides or pesticides. Cats can't digest large amounts, though, so eating a lot may make them throw up.",
@@ -4046,7 +4059,8 @@
         "fr": "Oui, l’herbe à chat est sans danger pour les chats, à condition de ne pas en abuser. Selon Cats Protection, l’herbe est sans risque sauf si elle contient des herbicides ou des pesticides. Les chats n’en digèrent pas de grandes quantités : s’ils en mangent beaucoup, ils risquent de vomir.",
         "es": "Sí, la hierba para gatos es segura con moderación. Cats Protection dice que comer hierba es seguro para los gatos, siempre que no esté contaminada con herbicidas ni pesticidas. Eso sí, los gatos no digieren bien las grandes cantidades, así que, si comen mucha, pueden vomitar.",
         "it": "Sì, l’erba per gatti è sicura per i gatti se data in quantità moderate. Cats Protection spiega che per i gatti mangiare erba è sicuro, a meno che non sia contaminata da erbicidi o pesticidi. I gatti però non riescono a digerirne grandi quantità, quindi se ne mangiano tanta possono vomitare.",
-        "nl": "Ja, met mate is kattengras veilig voor katten. Volgens Cats Protection mogen katten gras eten, zolang er geen onkruidverdelgers of bestrijdingsmiddelen op zitten. Grote hoeveelheden kunnen katten alleen niet verteren, dus als ze er veel van eten, kunnen ze gaan braken."
+        "nl": "Ja, met mate is kattengras veilig voor katten. Volgens Cats Protection mogen katten gras eten, zolang er geen onkruidverdelgers of bestrijdingsmiddelen op zitten. Grote hoeveelheden kunnen katten alleen niet verteren, dus als ze er veel van eten, kunnen ze gaan braken.",
+        "pl": "Tak, trawa dla kotów jest bezpieczna, jeśli kot zjada ją z umiarem. Cats Protection podaje, że trawa jest dla kotów bezpieczna, o ile nie została skażona herbicydami ani pestycydami. Koty nie potrafią jednak strawić dużych ilości, więc po zjedzeniu dużej ilości trawy mogą wymiotować."
       },
       "why": {
         "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
@@ -4056,7 +4070,8 @@
         "fr": "Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine, le blé, l’orge, la luzerne et le seigle. International Cat Care explique que manger de l’herbe est un comportement normal chez le chat et qu’elle aiderait à faire avancer les aliments ou les boules de poils dans l’intestin, souvent grâce aux vomissements. VCA ajoute que la modération est essentielle, que les chats n’ont pas besoin de manger de l’herbe et qu’en manger de grandes quantités peut provoquer de nombreux vomissements ou une accumulation de fibres dans l’intestin. L’herbe que l’on trouve dehors peut être dangereuse si elle a été traitée avec des pesticides.",
         "es": "VCA explica que la hierba para gatos suele referirse a gramíneas de cereal como la avena, el trigo, la cebada, la alfalfa y el centeno. International Cat Care dice que comer hierba es un comportamiento normal en los gatos y se cree que ayuda a mover la comida o las bolas de pelo por el intestino, a menudo mediante el vómito. VCA añade que la moderación es la clave, que los gatos no necesitan comer hierba y que comerla en grandes cantidades puede provocar vómitos en exceso o que la fibra se acumule en el intestino. La hierba del exterior puede ser dañina si se ha tratado con pesticidas.",
         "it": "VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena, frumento, orzo, erba medica e segale. International Cat Care spiega che mangiare erba è un comportamento normale nei gatti e che si ritiene aiuti a far avanzare cibo o boli di pelo lungo l’intestino, spesso attraverso il vomito. VCA aggiunge che la moderazione è fondamentale, che ai gatti non serve mangiare erba e che mangiarne tanta può causare vomito frequente o un accumulo di fibre nell’intestino. L’erba all’aperto può essere dannosa se è stata trattata con pesticidi.",
-        "nl": "VCA legt uit dat met kattengras meestal graansoorten worden bedoeld, zoals haver, tarwe, gerst, luzerne en rogge. Volgens International Cat Care is gras eten normaal gedrag bij katten en zou het helpen om voedsel of haarballen door het maag-darmkanaal te laten bewegen, vaak doordat de kat gaat braken. VCA voegt eraan toe dat het vooral met mate moet, dat katten geen gras hoeven te eten en dat veel gras eten kan leiden tot flink braken of een ophoping van vezels in de darmen. Gras buiten kan schadelijk zijn als het met bestrijdingsmiddelen is behandeld."
+        "nl": "VCA legt uit dat met kattengras meestal graansoorten worden bedoeld, zoals haver, tarwe, gerst, luzerne en rogge. Volgens International Cat Care is gras eten normaal gedrag bij katten en zou het helpen om voedsel of haarballen door het maag-darmkanaal te laten bewegen, vaak doordat de kat gaat braken. VCA voegt eraan toe dat het vooral met mate moet, dat katten geen gras hoeven te eten en dat veel gras eten kan leiden tot flink braken of een ophoping van vezels in de darmen. Gras buiten kan schadelijk zijn als het met bestrijdingsmiddelen is behandeld.",
+        "pl": "VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies, pszenica, jęczmień, lucerna i żyto. International Cat Care podaje, że jedzenie trawy jest u kotów normalnym zachowaniem i uważa się, że pomaga przesuwać pokarm lub kule włosowe w jelitach, często właśnie poprzez wymioty. VCA dodaje, że najważniejszy jest umiar, że koty nie muszą jeść trawy, a zjedzenie dużej ilości może powodować częste wymioty lub nagromadzenie błonnika w jelitach. Trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami."
       },
       "signs": null,
       "what_to_do": {
@@ -4067,7 +4082,8 @@
         "fr": "Il est fréquent qu’un chat vomisse un peu après avoir mangé de l’herbe. S’il vomit souvent, ou s’il vomit et semble aussi se désintéresser de sa nourriture, emmenez-le chez le vétérinaire.",
         "es": "Vomitar un poco después de comer hierba es habitual. Si tu gato vomita con frecuencia, o si vomita y, además, no tiene ganas de comer, llévalo al veterinario.",
         "it": "Un po’ di vomito dopo aver mangiato erba è comune. Se il tuo gatto vomita spesso, oppure vomita e in più non mangia, portalo dal veterinario.",
-        "nl": "Een beetje braken na het eten van gras komt vaak voor. Braakt je kat vaak, of braakt hij en heeft hij ook minder trek in zijn eten, ga dan met hem naar de dierenarts."
+        "nl": "Een beetje braken na het eten van gras komt vaak voor. Braakt je kat vaak, of braakt hij en heeft hij ook minder trek in zijn eten, ga dan met hem naar de dierenarts.",
+        "pl": "Zdarza się, że kot po zjedzeniu trawy zwymiotuje. Jeśli kot wymiotuje często albo wymiotuje i do tego nie chce jeść, zabierz go do weterynarza."
       },
       "serving": {
         "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
@@ -4077,7 +4093,8 @@
         "fr": "Proposez un pot d’herbe à chat, à l’intérieur ou à l’extérieur, sans herbicides ni pesticides, et laissez votre chat choisir d’en manger ou non. Quand l’herbe se flétrit ou jaunit, retirez les pousses qui dépérissent.",
         "es": "Ofrece a tu gato una maceta de hierba para gatos, dentro o fuera de casa y sin herbicidas ni pesticidas, y deja que decida él si quiere comerla. Cuando la hierba se marchite o amarillee, arranca los brotes secos.",
         "it": "Metti a disposizione un vasetto di erba per gatti, in casa o all’aperto, senza erbicidi né pesticidi, e lascia che sia il tuo gatto a scegliere se mangiarla. Quando l’erba appassisce o ingiallisce, togli i germogli che stanno morendo.",
-        "nl": "Zet binnen of buiten een pot kattengras neer, zonder onkruidverdelgers of bestrijdingsmiddelen, en laat je kat zelf kiezen of hij ervan eet. Verwelkt het gras of wordt het geel? Trek de afstervende sprietjes er dan uit."
+        "nl": "Zet binnen of buiten een pot kattengras neer, zonder onkruidverdelgers of bestrijdingsmiddelen, en laat je kat zelf kiezen of hij ervan eet. Verwelkt het gras of wordt het geel? Trek de afstervende sprietjes er dan uit.",
+        "pl": "Postaw doniczkę z trawą dla kotów w domu lub na dworze, wolną od herbicydów i pestycydów, i pozwól kotu samemu zdecydować, czy chce ją jeść. Gdy trawa zwiędnie lub zżółknie, wyrwij obumierające pędy."
       },
       "child": {
         "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
@@ -4087,7 +4104,8 @@
         "fr": "Beaucoup de chats adorent grignoter de l’herbe. Un adulte peut faire pousser un pot d’herbe à chat rien que pour eux, sans produits de traitement du jardin.",
         "es": "A muchos gatos les encanta mordisquear hierba. Un adulto puede cultivar una maceta de hierba para gatos solo para ellos, sin productos de jardín.",
         "it": "A tanti gatti piace mordicchiare l’erba. Un adulto può far crescere un vasetto di erba per gatti solo per loro, senza spray da giardino.",
-        "nl": "Veel katten knabbelen graag aan gras. Een volwassene kan een pot kattengras speciaal voor ze kweken, zonder spuitmiddel erop."
+        "nl": "Veel katten knabbelen graag aan gras. Een volwassene kan een pot kattengras speciaal voor ze kweken, zonder spuitmiddel erop.",
+        "pl": "Wiele kotów uwielbia skubać trawę. Dorosły może wyhodować dla nich doniczkę trawy dla kotów, bez ogrodowych oprysków."
       },
       "faq": [
         {
@@ -4099,7 +4117,8 @@
             "fr": "Pourquoi les chats mangent-ils de l’herbe ?",
             "es": "¿Por qué comen hierba los gatos?",
             "it": "Perché i gatti mangiano l’erba?",
-            "nl": "Waarom eten katten gras?"
+            "nl": "Waarom eten katten gras?",
+            "pl": "Dlaczego koty jedzą trawę?"
           },
           "a": {
             "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
@@ -4109,7 +4128,8 @@
             "fr": "On ne sait pas vraiment. International Cat Care indique qu’il s’agit d’un comportement normal, qui n’est pas entièrement compris, mais qui aiderait à faire avancer les aliments ou les boules de poils dans le tube digestif.",
             "es": "Nadie lo sabe con certeza. International Cat Care dice que es un comportamiento normal que aún no se entiende del todo, aunque se cree que ayuda a mover la comida o las bolas de pelo por el aparato digestivo.",
             "it": "Nessuno lo sa con certezza. Secondo International Cat Care è un comportamento normale, non del tutto compreso, ma si ritiene che aiuti a far avanzare cibo o boli di pelo lungo l’apparato digerente.",
-            "nl": "Dat weet niemand precies. Volgens International Cat Care is het normaal gedrag dat nog niet helemaal begrepen wordt, maar vermoedelijk helpt het om voedsel of haarballen door het spijsverteringskanaal te laten bewegen."
+            "nl": "Dat weet niemand precies. Volgens International Cat Care is het normaal gedrag dat nog niet helemaal begrepen wordt, maar vermoedelijk helpt het om voedsel of haarballen door het spijsverteringskanaal te laten bewegen.",
+            "pl": "Nie wiadomo na pewno. International Cat Care podaje, że to normalne zachowanie, które nie zostało w pełni wyjaśnione, ale uważa się, że pomaga przesuwać pokarm lub kule włosowe przez przewód pokarmowy."
           }
         },
         {
@@ -4121,7 +4141,8 @@
             "fr": "L’herbe du jardin convient-elle à mon chat ?",
             "es": "¿Está bien la hierba del jardín para mi gato?",
             "it": "L’erba del giardino va bene per il mio gatto?",
-            "nl": "Is gras uit de tuin goed voor mijn kat?"
+            "nl": "Is gras uit de tuin goed voor mijn kat?",
+            "pl": "Czy mój kot może jeść trawę z ogrodu?"
           },
           "a": {
             "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
@@ -4131,7 +4152,8 @@
             "fr": "Seulement si elle n’a pas été traitée. VCA prévient que l’herbe d’extérieur peut être dangereuse si elle a été traitée avec des pesticides. La PDSA suggère plutôt l’herbe à chat, que l’on peut faire pousser à l’intérieur comme à l’extérieur et dont on est sûr qu’elle ne contient pas de pesticides.",
             "es": "Solo si no se ha tratado. VCA advierte de que la hierba del exterior puede ser dañina si se ha tratado con pesticidas. PDSA sugiere cultivar hierba para gatos, dentro o fuera de casa, porque así sabes que no lleva pesticidas.",
             "it": "Solo se non è stata trattata. VCA avverte che l’erba all’aperto può essere dannosa se trattata con pesticidi. PDSA consiglia l’erba per gatti, che si può coltivare in casa o all’aperto e di cui sai che è priva di pesticidi.",
-            "nl": "Alleen als het niet behandeld is. VCA waarschuwt dat gras buiten schadelijk kan zijn als het met bestrijdingsmiddelen is behandeld. PDSA raadt kattengras aan: dat kun je binnen of buiten kweken, en dan weet je zeker dat er geen bestrijdingsmiddelen op zitten."
+            "nl": "Alleen als het niet behandeld is. VCA waarschuwt dat gras buiten schadelijk kan zijn als het met bestrijdingsmiddelen is behandeld. PDSA raadt kattengras aan: dat kun je binnen of buiten kweken, en dan weet je zeker dat er geen bestrijdingsmiddelen op zitten.",
+            "pl": "Tylko jeśli nie była niczym opryskana. VCA ostrzega, że trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami. PDSA proponuje trawę dla kotów, którą można uprawiać w domu lub na dworze i co do której masz pewność, że jest wolna od pestycydów."
           }
         },
         {
@@ -4143,7 +4165,8 @@
             "fr": "Mon chat vit en intérieur. A-t-il besoin d’herbe ?",
             "es": "Mi gato vive en casa. ¿Necesita hierba?",
             "it": "Il mio gatto vive in casa. Ha bisogno di erba?",
-            "nl": "Mijn kat is een binnenkat. Heeft hij gras nodig?"
+            "nl": "Mijn kat is een binnenkat. Heeft hij gras nodig?",
+            "pl": "Mój kot nie wychodzi z domu. Czy potrzebuje trawy?"
           },
           "a": {
             "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
@@ -4153,7 +4176,8 @@
             "fr": "Selon VCA, votre chat n’a pas besoin d’herbe. Mais International Cat Care note que les chats d’intérieur privés d’herbe peuvent mâchonner d’autres plantes en pot : on peut donc leur proposer de l’herbe à l’intérieur.",
             "es": "Según VCA, tu gato no necesita comer hierba. Pero International Cat Care señala que los gatos de interior sin acceso a hierba pueden mordisquear otras plantas de maceta, así que se les puede ofrecer hierba dentro de casa.",
             "it": "Il tuo gatto non ha bisogno di erba, spiega VCA. International Cat Care però osserva che i gatti che vivono in casa e non hanno erba a disposizione possono mordicchiare altre piante in vaso, quindi si può offrire loro dell’erba in casa.",
-            "nl": "Volgens VCA heeft je kat geen gras nodig. International Cat Care wijst er wel op dat binnenkatten zonder gras op andere potplanten kunnen gaan kauwen, daarom kun je ze binnen ook gras geven."
+            "nl": "Volgens VCA heeft je kat geen gras nodig. International Cat Care wijst er wel op dat binnenkatten zonder gras op andere potplanten kunnen gaan kauwen, daarom kun je ze binnen ook gras geven.",
+            "pl": "Według VCA kot nie potrzebuje trawy. International Cat Care zauważa jednak, że koty niewychodzące, które nie mają trawy, mogą przegryzać inne rośliny doniczkowe, dlatego warto zapewnić im w domu dostęp do trawy."
           }
         }
       ],
@@ -4197,7 +4221,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Catnip",
@@ -4207,7 +4232,8 @@
         "fr": "Cataire",
         "es": "Hierba gatera",
         "it": "Erba gatta (nepeta)",
-        "nl": "Kattenkruid"
+        "nl": "Kattenkruid",
+        "pl": "Kocimiętka"
       },
       "question": {
         "en": "Can cats eat catnip?",
@@ -4217,7 +4243,8 @@
         "fr": "Les chats peuvent-ils manger de la cataire ?",
         "es": "¿Pueden los gatos comer hierba gatera?",
         "it": "I gatti possono mangiare l’erba gatta?",
-        "nl": "Mogen katten kattenkruid eten?"
+        "nl": "Mogen katten kattenkruid eten?",
+        "pl": "Czy koty mogą jeść kocimiętkę?"
       },
       "url_slug": {
         "en": "catnip",
@@ -4227,7 +4254,8 @@
         "fr": "cataire",
         "es": "hierba-gatera",
         "it": "erba-gatta",
-        "nl": "kattenkruid"
+        "nl": "kattenkruid",
+        "pl": "kocimietka"
       },
       "answer": {
         "en": "Not as a snack. Sniffing catnip is harmless for cats, but the ASPCA lists catnip as toxic to cats because eating it can cause vomiting and diarrhoea. Let your cat enjoy the smell rather than eat the plant.",
@@ -4237,7 +4265,8 @@
         "fr": "Pas en guise de friandise. Renifler de la cataire est sans danger pour les chats, mais l’ASPCA la classe parmi les plantes toxiques pour les chats, car en manger peut provoquer des vomissements et de la diarrhée. Laissez votre chat profiter de l’odeur plutôt que de manger la plante.",
         "es": "No para comerla. Oler la hierba gatera es inofensivo para los gatos, pero la ASPCA la incluye entre las plantas tóxicas para ellos, porque ingerirla puede provocar vómitos y diarrea. Deja que tu gato disfrute del olor en vez de comerse la planta.",
         "it": "Non come spuntino. Annusare l’erba gatta non fa male ai gatti, ma l’ASPCA la indica come tossica per i gatti perché mangiarla può causare vomito e diarrea. Lascia che il tuo gatto si goda il profumo, senza mangiare la pianta.",
-        "nl": "Niet als traktatie. Snuffelen aan kattenkruid kan geen kwaad, maar de ASPCA noemt kattenkruid giftig voor katten, omdat het opeten ervan braken en diarree kan veroorzaken. Laat je kat dus liever van de geur genieten dan dat hij de plant opeet."
+        "nl": "Niet als traktatie. Snuffelen aan kattenkruid kan geen kwaad, maar de ASPCA noemt kattenkruid giftig voor katten, omdat het opeten ervan braken en diarree kan veroorzaken. Laat je kat dus liever van de geur genieten dan dat hij de plant opeet.",
+        "pl": "Nie jako przekąskę. Wąchanie kocimiętki jest dla kotów nieszkodliwe, ale ASPCA uznaje kocimiętkę za toksyczną dla kotów, bo jej zjedzenie może wywołać wymioty i biegunkę. Pozwól kotu cieszyć się zapachem, zamiast jeść roślinę."
       },
       "why": {
         "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
@@ -4247,7 +4276,8 @@
         "fr": "Les sources divergent : nous retenons donc l’avis le plus strict. International Cat Care indique que la cataire agit lorsque le chat en renifle l’huile, et que ses effets sont inoffensifs, sans risque de dépendance et de courte durée. Cats Protection suggère d’en planter pour détourner les chats des autres plantes. L’ASPCA, en revanche, classe la cataire (Nepeta cataria) parmi les plantes toxiques pour les chats : beaucoup de chats l’adorent, mais elle peut provoquer des vomissements et de la diarrhée, et elle rend certains chats somnolents et en excite d’autres.",
         "es": "Las fuentes no coinciden, así que seguimos el criterio más estricto. International Cat Care dice que la hierba gatera funciona cuando el gato huele su aceite y que sus efectos son inofensivos, no generan adicción y duran poco, y Cats Protection sugiere plantarla para distraer a los gatos de otras plantas. La ASPCA, en cambio, incluye la hierba gatera (Nepeta cataria) entre las plantas tóxicas para los gatos: a muchos les encanta, pero puede provocar vómitos y diarrea, y a algunos los adormece y a otros los estimula.",
         "it": "Le fonti non concordano, quindi seguiamo la posizione più prudente. International Cat Care spiega che l’erba gatta agisce quando se ne annusa l’olio e che i suoi effetti sui gatti sono innocui, non danno dipendenza e durano poco, e Cats Protection suggerisce di piantare l’erba gatta per distrarre i gatti dalle altre piante. L’ASPCA, invece, indica l’erba gatta (Nepeta cataria) come tossica per i gatti: a molti gatti piace tantissimo, ma può causare vomito e diarrea, e in alcuni gatti provoca sedazione, in altri stimolazione.",
-        "nl": "De bronnen zijn het niet met elkaar eens, dus volgen wij het strengere advies. Volgens International Cat Care werkt kattenkruid als een kat de olie ervan opsnuift, en is het effect op katten onschadelijk, niet verslavend en van korte duur. Cats Protection raadt aan kattenkruid te planten om katten van andere planten af te leiden. De ASPCA noemt kattenkruid (Nepeta cataria) echter giftig voor katten: veel katten zijn er dol op, maar het kan braken en diarree veroorzaken, en sommige katten worden er suf van, andere juist druk."
+        "nl": "De bronnen zijn het niet met elkaar eens, dus volgen wij het strengere advies. Volgens International Cat Care werkt kattenkruid als een kat de olie ervan opsnuift, en is het effect op katten onschadelijk, niet verslavend en van korte duur. Cats Protection raadt aan kattenkruid te planten om katten van andere planten af te leiden. De ASPCA noemt kattenkruid (Nepeta cataria) echter giftig voor katten: veel katten zijn er dol op, maar het kan braken en diarree veroorzaken, en sommige katten worden er suf van, andere juist druk.",
+        "pl": "Źródła się różnią, więc przyjmujemy ostrzejsze stanowisko. International Cat Care podaje, że kocimiętka działa, gdy kot wącha jej olejek, a jej działanie na koty jest nieszkodliwe, nie uzależnia i szybko mija, a Cats Protection radzi posadzić kocimiętkę, żeby odciągnąć koty od innych roślin. ASPCA uznaje jednak kocimiętkę (Nepeta cataria) za toksyczną dla kotów: wiele kotów ją uwielbia, ale może wywołać wymioty i biegunkę, a u jednych kotów działa uspokajająco, a u innych pobudzająco."
       },
       "signs": {
         "en": [
@@ -4297,6 +4327,12 @@
           "Diarree",
           "Ongewone slaperigheid",
           "Overmatige opwinding"
+        ],
+        "pl": [
+          "Wymioty",
+          "Biegunka",
+          "Nietypowa senność",
+          "Nadmierne pobudzenie"
         ]
       },
       "what_to_do": {
@@ -4307,7 +4343,8 @@
         "fr": "Si votre chat a mangé de la cataire et qu’il vomit ou a de la diarrhée, contactez votre vétérinaire.",
         "es": "Si tu gato ha comido hierba gatera y tiene vómitos o diarrea, contacta con tu veterinario.",
         "it": "Se il tuo gatto ha mangiato erba gatta e ha vomito o diarrea, contatta il veterinario.",
-        "nl": "Heeft je kat kattenkruid gegeten en moet hij braken of heeft hij diarree, neem dan contact op met je dierenarts."
+        "nl": "Heeft je kat kattenkruid gegeten en moet hij braken of heeft hij diarree, neem dan contact op met je dierenarts.",
+        "pl": "Jeśli kot zjadł kocimiętkę i ma wymioty lub biegunkę, skontaktuj się z weterynarzem."
       },
       "serving": null,
       "child": {
@@ -4318,7 +4355,8 @@
         "fr": "Beaucoup de chats adorent l’odeur de la cataire. Elle sert à renifler et à jouer, pas à manger.",
         "es": "A muchos gatos les encanta el olor de la hierba gatera. Es para olerla y jugar, no para comerla.",
         "it": "A molti gatti piace tantissimo l’odore dell’erba gatta. Serve per annusare e giocare, non per mangiare.",
-        "nl": "Veel katten zijn dol op de geur van kattenkruid. Het is om aan te snuffelen en mee te spelen, niet om op te eten."
+        "nl": "Veel katten zijn dol op de geur van kattenkruid. Het is om aan te snuffelen en mee te spelen, niet om op te eten.",
+        "pl": "Wiele kotów uwielbia zapach kocimiętki. Jest do wąchania i zabawy, nie do jedzenia."
       },
       "faq": [
         {
@@ -4330,7 +4368,8 @@
             "fr": "Pourquoi mon chat ne réagit-il pas à la cataire ?",
             "es": "¿Por qué mi gato no reacciona a la hierba gatera?",
             "it": "Perché il mio gatto non reagisce all’erba gatta?",
-            "nl": "Waarom reageert mijn kat niet op kattenkruid?"
+            "nl": "Waarom reageert mijn kat niet op kattenkruid?",
+            "pl": "Dlaczego mój kot nie reaguje na kocimiętkę?"
           },
           "a": {
             "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
@@ -4340,7 +4379,8 @@
             "fr": "International Cat Care indique que la cataire agit sur environ 70 à 80 % des chats et que cette réaction est héréditaire. Elle n’a aucun effet sur les chatons de moins de trois mois.",
             "es": "International Cat Care dice que la hierba gatera hace efecto en entre el 70 y el 80 % de los gatos y que la respuesta se hereda de los padres. No tiene ningún efecto en los gatitos hasta que superan los tres meses.",
             "it": "Secondo International Cat Care l’erba gatta fa effetto su circa il 70–80% dei gatti e la reazione è ereditaria, cioè si trasmette dai genitori. Sui gattini non ha alcun effetto finché non hanno più di tre mesi.",
-            "nl": "Volgens International Cat Care reageert ongeveer 70–80% van de katten op kattenkruid, en die gevoeligheid erven ze van hun ouders. Bij kittens werkt het pas als ze ouder zijn dan drie maanden."
+            "nl": "Volgens International Cat Care reageert ongeveer 70–80% van de katten op kattenkruid, en die gevoeligheid erven ze van hun ouders. Bij kittens werkt het pas als ze ouder zijn dan drie maanden.",
+            "pl": "International Cat Care podaje, że kocimiętka działa na około 70–80% kotów, a reakcja jest dziedziczona po rodzicach. Na kocięta nie działa, dopóki nie mają ponad trzech miesięcy."
           }
         },
         {
@@ -4352,7 +4392,8 @@
             "fr": "La cataire est-elle la même chose que l’herbe à chat ?",
             "es": "¿Es lo mismo la hierba gatera que la hierba para gatos?",
             "it": "L’erba gatta è la stessa cosa dell’erba per gatti?",
-            "nl": "Is kattenkruid hetzelfde als kattengras?"
+            "nl": "Is kattenkruid hetzelfde als kattengras?",
+            "pl": "Czy kocimiętka to to samo co trawa dla kotów?"
           },
           "a": {
             "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
@@ -4362,7 +4403,8 @@
             "fr": "Non. Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine ou le blé, alors que la cataire appartient à la famille de la menthe.",
             "es": "No. VCA explica que la hierba para gatos suele referirse a gramíneas de cereal, como la avena o el trigo, mientras que la hierba gatera pertenece a la familia de la menta.",
             "it": "No. VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena o frumento, mentre l’erba gatta appartiene alla famiglia della menta.",
-            "nl": "Nee. VCA legt uit dat met kattengras meestal graansoorten zoals haver of tarwe worden bedoeld, terwijl kattenkruid tot de muntfamilie behoort."
+            "nl": "Nee. VCA legt uit dat met kattengras meestal graansoorten zoals haver of tarwe worden bedoeld, terwijl kattenkruid tot de muntfamilie behoort.",
+            "pl": "Nie. VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies czy pszenica, a kocimiętka należy do rodziny miętowatych."
           }
         }
       ],
@@ -10840,7 +10882,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Parsley",
@@ -10850,7 +10893,8 @@
         "fr": "Persil",
         "es": "Perejil",
         "it": "Prezzemolo",
-        "nl": "Peterselie"
+        "nl": "Peterselie",
+        "pl": "Pietruszka"
       },
       "question": {
         "en": "Can cats eat parsley?",
@@ -10860,7 +10904,8 @@
         "fr": "Les chats peuvent-ils manger du persil ?",
         "es": "¿Pueden los gatos comer perejil?",
         "it": "I gatti possono mangiare il prezzemolo?",
-        "nl": "Mogen katten peterselie eten?"
+        "nl": "Mogen katten peterselie eten?",
+        "pl": "Czy koty mogą jeść pietruszkę?"
       },
       "url_slug": {
         "en": "parsley",
@@ -10870,7 +10915,8 @@
         "fr": "persil",
         "es": "perejil",
         "it": "prezzemolo",
-        "nl": "peterselie"
+        "nl": "peterselie",
+        "pl": "pietruszka"
       },
       "answer": {
         "en": "No, don't give your cat parsley. The ASPCA lists parsley as toxic to cats: it can make the skin sensitive to sunlight and cause sunburn or skin inflammation, although large amounts are needed for this effect. If your cat has eaten some, contact your vet.",
@@ -10880,7 +10926,8 @@
         "fr": "Non, ne donnez pas de persil à votre chat. L’ASPCA classe le persil parmi les plantes toxiques pour les chats : il peut rendre la peau sensible au soleil et provoquer des coups de soleil ou une inflammation de la peau, même s’il en faut beaucoup pour que cet effet apparaisse. Si votre chat en a mangé, contactez votre vétérinaire.",
         "es": "No, no le des perejil a tu gato. La ASPCA incluye el perejil entre las plantas tóxicas para los gatos: puede hacer que la piel se vuelva sensible al sol y causar quemaduras solares o inflamación de la piel, aunque para ese efecto hacen falta cantidades grandes. Si tu gato ha comido un poco, contacta con tu veterinario.",
         "it": "No, non dare prezzemolo al tuo gatto. L’ASPCA lo indica come tossico per i gatti: può rendere la pelle sensibile alla luce del sole e causare scottature o infiammazione della pelle, anche se per questo effetto servono grandi quantità. Se il tuo gatto ne ha mangiato un po’, contatta il veterinario.",
-        "nl": "Nee, geef je kat geen peterselie. De ASPCA noemt peterselie giftig voor katten: het kan de huid gevoelig maken voor zonlicht en zonnebrand of een huidontsteking veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts."
+        "nl": "Nee, geef je kat geen peterselie. De ASPCA noemt peterselie giftig voor katten: het kan de huid gevoelig maken voor zonlicht en zonnebrand of een huidontsteking veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts.",
+        "pl": "Nie, nie dawaj kotu pietruszki. ASPCA uznaje pietruszkę za toksyczną dla kotów: może uwrażliwiać skórę na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry, choć do takiego efektu potrzebne są duże ilości. Jeśli kot zjadł trochę pietruszki, skontaktuj się z weterynarzem."
       },
       "why": {
         "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -10890,7 +10937,8 @@
         "fr": "L’ASPCA classe le persil (Petroselinum crispum, y compris le persil plat et le persil à grosse racine, dit de Hambourg) parmi les plantes toxiques pour les chats. Elle identifie les furanocoumarines comme la substance toxique et indique qu’elles peuvent provoquer une photosensibilisation (coups de soleil, inflammation de la peau), mais qu’il en faut de grandes quantités pour cet effet. L’ASPCA rappelle aussi que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Les chats n’ont pas besoin de plantes dans leur alimentation : selon la PDSA, ce sont des carnivores qui ont besoin des nutriments présents dans la viande.",
         "es": "La ASPCA incluye el perejil (Petroselinum crispum, incluidos el perejil de hoja plana y el perejil de Hamburgo) entre las plantas tóxicas para los gatos. Señala las furanocumarinas como principio tóxico, que pueden provocar fotosensibilización (quemadura solar, inflamación de la piel), y precisa que para ese efecto hacen falta cantidades grandes. La ASPCA también indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. Los gatos no necesitan plantas en su dieta: según PDSA, son carnívoros y necesitan nutrientes presentes en la carne.",
         "it": "L’ASPCA indica il prezzemolo (Petroselinum crispum, compreso il prezzemolo italiano e quello di Amburgo) come tossico per i gatti. Cita le furanocumarine come sostanza tossica e spiega che possono causare fotosensibilizzazione (scottature, infiammazione della pelle), precisando che per questo effetto servono grandi quantità. L’ASPCA segnala inoltre che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Nella dieta dei gatti non servono piante: secondo PDSA i gatti sono carnivori e hanno bisogno dei nutrienti presenti nella carne.",
-        "nl": "De ASPCA noemt peterselie (Petroselinum crispum, waaronder platte peterselie en wortelpeterselie) giftig voor katten. Als giftige stof noemt de ASPCA furanocumarinen, die fotosensibilisatie (zonnebrand, huidontsteking) kunnen veroorzaken, en daarvoor zijn volgens de organisatie grote hoeveelheden nodig. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten."
+        "nl": "De ASPCA noemt peterselie (Petroselinum crispum, waaronder platte peterselie en wortelpeterselie) giftig voor katten. Als giftige stof noemt de ASPCA furanocumarinen, die fotosensibilisatie (zonnebrand, huidontsteking) kunnen veroorzaken, en daarvoor zijn volgens de organisatie grote hoeveelheden nodig. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten.",
+        "pl": "ASPCA uznaje pietruszkę (Petroselinum crispum, w tym pietruszkę włoską i korzeniową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje furanokumaryny i podaje, że mogą one powodować fotouczulenie (oparzenia słoneczne, stan zapalny skóry), dodając, że do takiego efektu potrzebne są duże ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie."
       },
       "signs": {
         "en": [
@@ -10940,6 +10988,12 @@
           "Huidontsteking (dermatitis)",
           "Braken",
           "Maagklachten"
+        ],
+        "pl": [
+          "Oparzenia słoneczne",
+          "Stan zapalny skóry (zapalenie skóry)",
+          "Wymioty",
+          "Rozstrój żołądka"
         ]
       },
       "what_to_do": {
@@ -10950,7 +11004,8 @@
         "fr": "Si votre chat a mangé du persil, contactez immédiatement votre vétérinaire. N’attendez pas que des symptômes apparaissent.",
         "es": "Si tu gato ha comido perejil, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
         "it": "Se il tuo gatto ha mangiato prezzemolo, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
-        "nl": "Heeft je kat peterselie gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet."
+        "nl": "Heeft je kat peterselie gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet.",
+        "pl": "Jeśli kot zjadł pietruszkę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów."
       },
       "serving": null,
       "child": {
@@ -10961,7 +11016,8 @@
         "fr": "Le persil n’est pas une friandise pour chat. Si ton chat en grignote, préviens un adulte pour qu’il appelle le vétérinaire.",
         "es": "El perejil no es un premio para gatos. Si tu gatito mordisquea un poco, avisa a un adulto para que llame al veterinario.",
         "it": "Il prezzemolo non è uno spuntino per gatti. Se il micio ne mordicchia un po’, dillo a un adulto, così può chiamare il veterinario.",
-        "nl": "Peterselie is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen."
+        "nl": "Peterselie is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
+        "pl": "Pietruszka nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza."
       },
       "faq": [
         {
@@ -10973,7 +11029,8 @@
             "fr": "Pourquoi le persil pose-t-il problème aux chats alors que nous en mangeons ?",
             "es": "¿Por qué el perejil es un problema para los gatos si las personas lo comemos?",
             "it": "Perché il prezzemolo è un problema per i gatti, se le persone lo mangiano?",
-            "nl": "Waarom is peterselie een probleem voor katten, terwijl mensen het gewoon eten?"
+            "nl": "Waarom is peterselie een probleem voor katten, terwijl mensen het gewoon eten?",
+            "pl": "Dlaczego pietruszka szkodzi kotom, skoro jedzą ją ludzie?"
           },
           "a": {
             "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
@@ -10983,7 +11040,8 @@
             "fr": "Selon l’ASPCA, le persil contient des furanocoumarines, qui peuvent rendre la peau d’un chat sensible au soleil et provoquer des coups de soleil ou une inflammation de la peau. Elle précise qu’il en faut de grandes quantités pour cet effet.",
             "es": "La ASPCA dice que el perejil contiene furanocumarinas, que pueden hacer que la piel del gato se vuelva sensible al sol y causarle quemaduras solares o inflamación. Precisa que para ese efecto hacen falta cantidades grandes.",
             "it": "L’ASPCA spiega che il prezzemolo contiene furanocumarine, che possono rendere la pelle del gatto sensibile alla luce del sole e causare scottature o infiammazione della pelle. Precisa che per questo effetto servono grandi quantità.",
-            "nl": "Volgens de ASPCA bevat peterselie furanocumarinen, die de huid van een kat gevoelig kunnen maken voor zonlicht en zonnebrand of een huidontsteking kunnen veroorzaken. Wel is daar volgens de ASPCA een grote hoeveelheid voor nodig."
+            "nl": "Volgens de ASPCA bevat peterselie furanocumarinen, die de huid van een kat gevoelig kunnen maken voor zonlicht en zonnebrand of een huidontsteking kunnen veroorzaken. Wel is daar volgens de ASPCA een grote hoeveelheid voor nodig.",
+            "pl": "ASPCA podaje, że pietruszka zawiera furanokumaryny, które mogą uwrażliwiać skórę kota na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry. Zaznacza, że do takiego efektu potrzebne są duże ilości."
           }
         }
       ],
@@ -14115,7 +14173,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Mint (garden mint)",
@@ -14125,7 +14184,8 @@
         "fr": "Menthe (menthe des jardins)",
         "es": "Menta (de jardín)",
         "it": "Menta (menta da giardino)",
-        "nl": "Munt (tuinmunt)"
+        "nl": "Munt (tuinmunt)",
+        "pl": "Mięta (mięta ogrodowa)"
       },
       "question": {
         "en": "Can cats eat mint?",
@@ -14135,7 +14195,8 @@
         "fr": "Les chats peuvent-ils manger de la menthe ?",
         "es": "¿Pueden los gatos comer menta?",
         "it": "I gatti possono mangiare la menta?",
-        "nl": "Mogen katten munt eten?"
+        "nl": "Mogen katten munt eten?",
+        "pl": "Czy koty mogą jeść miętę?"
       },
       "url_slug": {
         "en": "mint",
@@ -14145,7 +14206,8 @@
         "fr": "menthe",
         "es": "menta",
         "it": "menta",
-        "nl": "munt"
+        "nl": "munt",
+        "pl": "mieta"
       },
       "answer": {
         "en": "No, don't give your cat mint. The ASPCA lists garden mint as toxic to cats because of its essential oils; eating a lot of it can cause vomiting and diarrhoea. If your cat has eaten some, contact your vet.",
@@ -14155,7 +14217,8 @@
         "fr": "Non, ne donnez pas de menthe à votre chat. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour les chats, à cause de ses huiles essentielles ; en manger beaucoup peut provoquer des vomissements et de la diarrhée. Si votre chat en a mangé, contactez votre vétérinaire.",
         "es": "No, no le des menta a tu gato. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los gatos por sus aceites esenciales: si come mucha, puede tener vómitos y diarrea. Si tu gato ha comido un poco, contacta con tu veterinario.",
         "it": "No, non dare menta al tuo gatto. L’ASPCA indica la menta da giardino come tossica per i gatti a causa degli oli essenziali: mangiarne molta può causare vomito e diarrea. Se il tuo gatto ne ha mangiato un po’, contatta il veterinario.",
-        "nl": "Nee, geef je kat geen munt. De ASPCA noemt tuinmunt giftig voor katten vanwege de etherische oliën; als een kat er veel van eet, kan dat braken en diarree veroorzaken. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts."
+        "nl": "Nee, geef je kat geen munt. De ASPCA noemt tuinmunt giftig voor katten vanwege de etherische oliën; als een kat er veel van eet, kan dat braken en diarree veroorzaken. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts.",
+        "pl": "Nie, nie dawaj kotu mięty. ASPCA uznaje miętę ogrodową za toksyczną dla kotów z powodu olejków eterycznych; zjedzenie jej dużej ilości może wywołać wymioty i biegunkę. Jeśli kot zjadł trochę mięty, skontaktuj się z weterynarzem."
       },
       "why": {
         "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -14165,7 +14228,8 @@
         "fr": "L’ASPCA classe la menthe (espèces du genre Mentha, aussi appelée menthe des jardins) parmi les plantes toxiques pour les chats. Elle identifie les huiles essentielles comme la substance toxique et cite des vomissements et de la diarrhée en cas d’ingestion de grandes quantités. L’ASPCA rappelle aussi que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Les chats n’ont pas besoin de plantes dans leur alimentation : selon la PDSA, ce sont des carnivores qui ont besoin des nutriments présents dans la viande.",
         "es": "La ASPCA incluye la menta (especies de Mentha, también llamada menta de jardín) entre las plantas tóxicas para los gatos. Señala los aceites esenciales como principio tóxico y recoge vómitos y diarrea cuando se ingiere en grandes cantidades. La ASPCA también indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. Los gatos no necesitan plantas en su dieta: según PDSA, son carnívoros y necesitan nutrientes presentes en la carne.",
         "it": "L’ASPCA indica la menta (specie Mentha, detta anche menta da giardino) come tossica per i gatti. Cita gli oli essenziali come sostanza tossica ed elenca vomito e diarrea in caso di ingestione di grandi quantità. L’ASPCA segnala inoltre che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Nella dieta dei gatti non servono piante: secondo PDSA i gatti sono carnivori e hanno bisogno dei nutrienti presenti nella carne.",
-        "nl": "De ASPCA noemt munt (Mentha-soorten, ook wel tuinmunt genoemd) giftig voor katten. Als giftige stof noemt de ASPCA etherische oliën, en als verschijnselen braken en diarree wanneer een kat er veel van heeft gegeten. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten."
+        "nl": "De ASPCA noemt munt (Mentha-soorten, ook wel tuinmunt genoemd) giftig voor katten. Als giftige stof noemt de ASPCA etherische oliën, en als verschijnselen braken en diarree wanneer een kat er veel van heeft gegeten. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten.",
+        "pl": "ASPCA uznaje miętę (gatunki Mentha, zwane też miętą ogrodową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje olejki eteryczne i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie."
       },
       "signs": {
         "en": [
@@ -14207,6 +14271,11 @@
           "Braken",
           "Diarree",
           "Maagklachten"
+        ],
+        "pl": [
+          "Wymioty",
+          "Biegunka",
+          "Rozstrój żołądka"
         ]
       },
       "what_to_do": {
@@ -14217,7 +14286,8 @@
         "fr": "Si votre chat a mangé de la menthe, contactez immédiatement votre vétérinaire. N’attendez pas que des symptômes apparaissent.",
         "es": "Si tu gato ha comido menta, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
         "it": "Se il tuo gatto ha mangiato menta, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
-        "nl": "Heeft je kat munt gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet."
+        "nl": "Heeft je kat munt gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet.",
+        "pl": "Jeśli kot zjadł miętę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów."
       },
       "serving": null,
       "child": {
@@ -14228,7 +14298,8 @@
         "fr": "La menthe n’est pas une friandise pour chat. Si ton chat en grignote, préviens un adulte pour qu’il appelle le vétérinaire.",
         "es": "La menta no es un premio para gatos. Si tu gatito mordisquea un poco, avisa a un adulto para que llame al veterinario.",
         "it": "La menta non è uno spuntino per gatti. Se il micio ne mordicchia un po’, dillo a un adulto, così può chiamare il veterinario.",
-        "nl": "Munt is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen."
+        "nl": "Munt is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
+        "pl": "Mięta nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza."
       },
       "faq": [
         {
@@ -14240,7 +14311,8 @@
             "fr": "La cataire est-elle une sorte de menthe ?",
             "es": "¿Es la hierba gatera un tipo de menta?",
             "it": "L’erba gatta è un tipo di menta?",
-            "nl": "Is kattenkruid een soort munt?"
+            "nl": "Is kattenkruid een soort munt?",
+            "pl": "Czy kocimiętka to rodzaj mięty?"
           },
           "a": {
             "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -14250,7 +14322,8 @@
             "fr": "La cataire appartient à la famille de la menthe, comme le note VCA, mais c’est une plante à part. L’ASPCA la classe séparément : beaucoup de chats l’adorent, mais en manger peut provoquer des vomissements et de la diarrhée.",
             "es": "La hierba gatera pertenece a la familia de la menta, como señala VCA, pero es una planta distinta. La ASPCA la incluye por separado: a muchos gatos les encanta, pero comerla puede provocar vómitos y diarrea.",
             "it": "L’erba gatta appartiene alla famiglia della menta, come osserva VCA, ma è una pianta a sé. L’ASPCA la elenca separatamente: a molti gatti piace tantissimo, ma mangiarla può causare vomito e diarrea.",
-            "nl": "Kattenkruid hoort bij de muntfamilie, zoals VCA opmerkt, maar het is een aparte plant. De ASPCA vermeldt het apart: veel katten zijn dol op kattenkruid, maar als ze het opeten, kunnen ze ervan gaan braken en diarree krijgen."
+            "nl": "Kattenkruid hoort bij de muntfamilie, zoals VCA opmerkt, maar het is een aparte plant. De ASPCA vermeldt het apart: veel katten zijn dol op kattenkruid, maar als ze het opeten, kunnen ze ervan gaan braken en diarree krijgen.",
+            "pl": "Kocimiętka należy do rodziny miętowatych, jak zauważa VCA, ale jest osobną rośliną. ASPCA wymienia ją osobno: wiele kotów kocimiętkę uwielbia, ale jej zjedzenie może wywołać wymioty i biegunkę."
           }
         }
       ],
@@ -26266,7 +26339,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Basil",
@@ -26276,7 +26350,8 @@
         "fr": "Basilic",
         "es": "Albahaca",
         "it": "Basilico",
-        "nl": "Basilicum"
+        "nl": "Basilicum",
+        "pl": "Bazylia"
       },
       "question": {
         "en": "Can dogs eat basil?",
@@ -26286,7 +26361,8 @@
         "fr": "Les chiens peuvent-ils manger du basilic ?",
         "es": "¿Pueden los perros comer albahaca?",
         "it": "I cani possono mangiare il basilico?",
-        "nl": "Mogen honden basilicum eten?"
+        "nl": "Mogen honden basilicum eten?",
+        "pl": "Czy psy mogą jeść bazylię?"
       },
       "url_slug": {
         "en": "basil",
@@ -26296,7 +26372,8 @@
         "fr": "basilic",
         "es": "albahaca",
         "it": "basilico",
-        "nl": "basilicum"
+        "nl": "basilicum",
+        "pl": "bazylia"
       },
       "answer": {
         "en": "Yes, in small quantities. The ASPCA lists basil as non-toxic to dogs, and it is one of the herbs you can grow in a dog-friendly garden and add to your dog's meals or treats in small quantities.",
@@ -26306,7 +26383,8 @@
         "fr": "Oui, en petite quantité. Pour l’ASPCA, le basilic n’est pas toxique pour les chiens : c’est l’une des herbes aromatiques que l’on peut cultiver dans un jardin sans danger pour eux et glisser en petite quantité dans leurs repas ou leurs friandises.",
         "es": "Sí, en pequeñas cantidades. La ASPCA incluye la albahaca entre las plantas no tóxicas para los perros, y es una de las hierbas que puedes cultivar en un jardín apto para perros y añadir, en pequeñas cantidades, a su comida o a sus premios.",
         "it": "Sì, in piccole quantità. Secondo l’ASPCA il basilico non è tossico per i cani: è una delle erbe aromatiche che si possono coltivare in un giardino a misura di cane e aggiungere, in piccole quantità, ai pasti o ai premi.",
-        "nl": "Ja, in kleine hoeveelheden. De ASPCA noemt basilicum niet giftig voor honden. Het is een van de kruiden die je in een hondvriendelijke tuin kunt kweken en in kleine hoeveelheden door het eten of de snoepjes van je hond kunt doen."
+        "nl": "Ja, in kleine hoeveelheden. De ASPCA noemt basilicum niet giftig voor honden. Het is een van de kruiden die je in een hondvriendelijke tuin kunt kweken en in kleine hoeveelheden door het eten of de snoepjes van je hond kunt doen.",
+        "pl": "Tak, w małych ilościach. ASPCA uznaje bazylię za nietoksyczną dla psów. To jedno z ziół, które możesz uprawiać w ogrodzie bezpiecznym dla psów i w niewielkich ilościach dodawać do ich posiłków lub smakołyków."
       },
       "why": {
         "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
@@ -26316,7 +26394,8 @@
         "fr": "Le basilic (Ocimum basilicum, aussi appelé basilic doux ou basilic thaï) n’est pas toxique pour les chiens. Il possède des propriétés antioxydantes, antivirales et antimicrobiennes. Comme pour les autres herbes aromatiques ajoutées aux repas ou mélangées aux friandises, mieux vaut s’en tenir à de petites quantités.",
         "es": "La albahaca (Ocimum basilicum, también albahaca dulce o albahaca tailandesa) no es tóxica para los perros. Tiene propiedades antioxidantes, antivirales y antimicrobianas. Como con otras hierbas que se añaden a la comida o se mezclan con los premios, mantén las cantidades pequeñas.",
         "it": "Il basilico (Ocimum basilicum, detto anche basilico dolce o basilico thai) non è tossico per i cani. Ha proprietà antiossidanti, antivirali e antimicrobiche. Come per le altre erbe aromatiche aggiunte ai pasti o mescolate ai premi, le quantità devono restare piccole.",
-        "nl": "Basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) is niet giftig voor honden. Het heeft antioxiderende, antivirale en antimicrobiële eigenschappen. Net als bij andere kruiden die je door het eten of door snoepjes mengt, houd je de hoeveelheden klein."
+        "nl": "Basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) is niet giftig voor honden. Het heeft antioxiderende, antivirale en antimicrobiële eigenschappen. Net als bij andere kruiden die je door het eten of door snoepjes mengt, houd je de hoeveelheden klein.",
+        "pl": "Bazylia (Ocimum basilicum, zwana też bazylią pospolitą i bazylią tajską) jest nietoksyczna dla psów. Ma właściwości antyoksydacyjne, przeciwwirusowe i przeciwdrobnoustrojowe. Jak w przypadku innych ziół dodawanych do posiłków lub smakołyków, trzymaj się niewielkich ilości."
       },
       "signs": null,
       "what_to_do": {
@@ -26327,7 +26406,8 @@
         "fr": "Le basilic n’est pas toxique pour les chiens. Veillez simplement à n’en ajouter que de petites quantités aux repas ou aux friandises.",
         "es": "La albahaca no es tóxica para los perros. Basta con añadirla en pequeñas cantidades a su comida o a sus premios.",
         "it": "Il basilico non è tossico per i cani. Basta limitare la quantità che aggiungi ai pasti o ai premi.",
-        "nl": "Basilicum is niet giftig voor honden. Let er alleen op dat je maar een klein beetje door het eten of de snoepjes doet."
+        "nl": "Basilicum is niet giftig voor honden. Let er alleen op dat je maar een klein beetje door het eten of de snoepjes doet.",
+        "pl": "Bazylia jest nietoksyczna dla psów. Pamiętaj tylko, żeby dodawać ją do posiłków lub smakołyków w niewielkich ilościach."
       },
       "serving": {
         "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
@@ -26337,7 +26417,8 @@
         "fr": "Ajoutez-en un peu aux repas de votre chien ou mélangez-en une petite quantité à ses friandises.",
         "es": "Añade un poco a la comida de tu perro o mézclala con sus premios, siempre en pequeñas cantidades.",
         "it": "Aggiungine un po’ ai pasti del tuo cane o mescolalo ai premi, sempre in piccole quantità.",
-        "nl": "Doe een klein beetje door het eten van je hond of meng het in kleine hoeveelheden door snoepjes."
+        "nl": "Doe een klein beetje door het eten van je hond of meng het in kleine hoeveelheden door snoepjes.",
+        "pl": "Dodaj odrobinę do posiłku psa albo wmieszaj w smakołyki – zawsze w niewielkich ilościach."
       },
       "child": {
         "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
@@ -26347,7 +26428,8 @@
         "fr": "Le basilic est une herbe inoffensive pour les chiens. Un adulte peut en ajouter un peu dans la gamelle.",
         "es": "La albahaca es una hierba amiga de los perros. Un adulto puede añadir un poquito a su comida.",
         "it": "Il basilico è un’erba amica dei cani. Un adulto può aggiungerne un pochino al cibo del cane.",
-        "nl": "Basilicum is een kruid dat honden geen kwaad doet. Een volwassene kan een klein beetje door het eten van een hond doen."
+        "nl": "Basilicum is een kruid dat honden geen kwaad doet. Een volwassene kan een klein beetje door het eten van een hond doen.",
+        "pl": "Bazylia to zioło, które psom nie szkodzi. Dorosły może dodać odrobinę do jedzenia psa."
       },
       "faq": [
         {
@@ -26359,7 +26441,8 @@
             "fr": "Peut-on cultiver du basilic dans un jardin où vit un chien ?",
             "es": "¿Es segura una planta de albahaca en un jardín con perros?",
             "it": "Una pianta di basilico è sicura in un giardino con cani?",
-            "nl": "Is een basilicumplant veilig in een tuin met een hond?"
+            "nl": "Is een basilicumplant veilig in een tuin met een hond?",
+            "pl": "Czy bazylia jest bezpieczna w ogrodzie, w którym są psy?"
           },
           "a": {
             "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
@@ -26369,7 +26452,8 @@
             "fr": "Oui. Le basilic n’est pas toxique pour les chiens et fait partie des herbes que l’on peut cultiver dans un jardin sans danger pour eux.",
             "es": "Sí. La albahaca no es tóxica para los perros y es una de las hierbas que se pueden cultivar en un jardín apto para perros.",
             "it": "Sì. Il basilico non è tossico per i cani ed è una delle erbe che si possono coltivare in un giardino a misura di cane.",
-            "nl": "Ja. Basilicum is niet giftig voor honden en is een van de kruiden die je in een hondvriendelijke tuin kunt kweken."
+            "nl": "Ja. Basilicum is niet giftig voor honden en is een van de kruiden die je in een hondvriendelijke tuin kunt kweken.",
+            "pl": "Tak. Bazylia jest nietoksyczna dla psów i należy do ziół, które można uprawiać w ogrodzie, w którym są psy."
           }
         }
       ],
@@ -34874,7 +34958,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Edamame",
@@ -34884,7 +34969,8 @@
         "fr": "Edamame",
         "es": "Edamame",
         "it": "Edamame",
-        "nl": "Edamame"
+        "nl": "Edamame",
+        "pl": "Edamame"
       },
       "question": {
         "en": "Can dogs eat edamame?",
@@ -34894,7 +34980,8 @@
         "fr": "Les chiens peuvent-ils manger des edamame ?",
         "es": "¿Pueden los perros comer edamame?",
         "it": "I cani possono mangiare gli edamame?",
-        "nl": "Mogen honden edamame eten?"
+        "nl": "Mogen honden edamame eten?",
+        "pl": "Czy psy mogą jeść edamame?"
       },
       "url_slug": {
         "en": "edamame",
@@ -34904,7 +34991,8 @@
         "fr": "edamame",
         "es": "edamame",
         "it": "edamame",
-        "nl": "edamame"
+        "nl": "edamame",
+        "pl": "edamame"
       },
       "answer": {
         "en": "Yes, in moderation. Plain edamame beans aren't toxic to dogs, and a few fresh beans as a treat won't harm most dogs. Leave out the tough pods, which are a choking hazard, and never share edamame cooked with salt, spices, soy sauce or oil.",
@@ -34914,7 +35002,8 @@
         "fr": "Oui, avec modération. Les fèves d’edamame nature ne sont pas toxiques pour les chiens, et quelques fèves fraîches en friandise ne feront de mal à la plupart d’entre eux. Retirez les cosses coriaces, qui présentent un risque d’étouffement, et ne leur donnez jamais d’edamame cuisinés avec du sel, des épices, de la sauce soja ou de l’huile.",
         "es": "Sí, con moderación. Las habas de edamame al natural no son tóxicas para los perros, y unas pocas habas frescas como premio no le harán daño a la mayoría. Quítale las vainas duras, que pueden atragantarlo, y nunca le des edamame cocinado con sal, especias, salsa de soja ni aceite.",
         "it": "Sì, con moderazione. Gli edamame al naturale non sono tossici per i cani e qualche fagiolo fresco come premio non fa male alla maggior parte di loro. Togli i baccelli duri, che possono far soffocare, e non dare mai edamame cucinati con sale, spezie, salsa di soia o olio.",
-        "nl": "Ja, met mate. Naturel edamameboontjes zijn niet giftig voor honden, en een paar verse boontjes als snoepje kunnen de meeste honden geen kwaad. Geef de taaie peulen niet, want daar kan een hond in stikken, en geef nooit edamame die met zout, kruiden, sojasaus of olie is bereid."
+        "nl": "Ja, met mate. Naturel edamameboontjes zijn niet giftig voor honden, en een paar verse boontjes als snoepje kunnen de meeste honden geen kwaad. Geef de taaie peulen niet, want daar kan een hond in stikken, en geef nooit edamame die met zout, kruiden, sojasaus of olie is bereid.",
+        "pl": "Tak, z umiarem. Zwykłe ziarna edamame nie są toksyczne dla psów, a kilka świeżych ziaren jako smakołyk nie zaszkodzi większości psów. Pomiń twarde strąki, bo grożą zadławieniem, i nigdy nie dawaj ziaren edamame ugotowanych z solą, przyprawami, sosem sojowym ani olejem."
       },
       "why": {
         "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
@@ -34924,7 +35013,8 @@
         "fr": "Les edamame sont des fèves de soja, riches en fibres et enfermées dans des cosses coriaces. L’allergie au soja est courante chez le chien, et la réaction allergique peut ne pas apparaître tout de suite. Le soja peut aussi provoquer des flatulences et, parfois, de la diarrhée, et un excès de fibres peut causer des troubles digestifs. Les cosses fibreuses et dures à mâcher sont difficiles à digérer et présentent un risque d’étouffement, surtout pour les petits chiens.",
         "es": "El edamame son habas de soja, ricas en fibra y envueltas en vainas duras. La soja es un alérgeno frecuente en los perros, y una reacción alérgica puede tardar en aparecer. La soja también puede provocar gases y, a veces, diarrea, y el exceso de fibra puede dar problemas de estómago. Las vainas, fibrosas y duras de masticar, son difíciles de digerir y suponen un riesgo de atragantamiento, sobre todo para los perros pequeños.",
         "it": "Gli edamame sono semi di soia, ricchi di fibre e racchiusi in baccelli coriacei. La soia è una causa frequente di allergie nei cani e la reazione allergica può non manifestarsi subito. La soia può anche causare flatulenza e, a volte, diarrea, e troppe fibre possono dare problemi di stomaco. I baccelli fibrosi e gommosi sono difficili da digerire e possono far soffocare, soprattutto i cani di piccola taglia.",
-        "nl": "Edamame zijn sojabonen die veel vezels bevatten en in taaie peulen zitten. Een soja-allergie komt bij honden vaak voor, en een allergische reactie is misschien niet meteen te zien. Soja kan ook winderigheid en soms diarree veroorzaken, en te veel vezels kunnen maagklachten geven. De vezelige, taaie peulen zijn moeilijk te verteren en vormen een verstikkingsgevaar, vooral voor kleine honden."
+        "nl": "Edamame zijn sojabonen die veel vezels bevatten en in taaie peulen zitten. Een soja-allergie komt bij honden vaak voor, en een allergische reactie is misschien niet meteen te zien. Soja kan ook winderigheid en soms diarree veroorzaken, en te veel vezels kunnen maagklachten geven. De vezelige, taaie peulen zijn moeilijk te verteren en vormen een verstikkingsgevaar, vooral voor kleine honden.",
+        "pl": "Edamame to nasiona soi, bogate w błonnik i otoczone twardymi strąkami. Soja często uczula psy, a reakcja alergiczna może nie pojawić się od razu. Soja może też powodować gazy, a czasem biegunkę, zaś nadmiar błonnika – problemy z żołądkiem. Włókniste, twarde strąki są ciężkostrawne i grożą zadławieniem, zwłaszcza u małych psów."
       },
       "signs": null,
       "what_to_do": {
@@ -34935,7 +35025,8 @@
         "fr": "Comme l’allergie au soja est fréquente, commencez par une toute petite quantité pour voir si votre chien la supporte. Les signes d’allergie, comme des démangeaisons, une chute de poils ou des otites, peuvent ne pas apparaître tout de suite. Le soja peut aussi provoquer des gaz ou de la diarrhée.",
         "es": "Como la soja es un alérgeno frecuente, empieza con una cantidad muy pequeña para ver si tu perro tiene alergia. Los síntomas de una reacción alérgica, como picor, caída de pelo o infecciones de oído, pueden tardar en aparecer. La soja también puede provocar gases o diarrea.",
         "it": "Poiché la soia è una causa frequente di allergie, all’inizio offrine solo una quantità minima, per vedere se il cane reagisce. I segni di una reazione allergica, come prurito, perdita di pelo o infezioni alle orecchie, possono non comparire subito. La soia può inoltre causare gas o diarrea.",
-        "nl": "Omdat een soja-allergie vaak voorkomt, geef je de eerste keer maar een heel klein beetje, om te zien of je hond allergisch reageert. Verschijnselen van een allergische reactie, zoals jeuk, haaruitval of oorontstekingen, zijn misschien niet meteen te zien. Soja kan ook winderigheid of diarree veroorzaken."
+        "nl": "Omdat een soja-allergie vaak voorkomt, geef je de eerste keer maar een heel klein beetje, om te zien of je hond allergisch reageert. Verschijnselen van een allergische reactie, zoals jeuk, haaruitval of oorontstekingen, zijn misschien niet meteen te zien. Soja kan ook winderigheid of diarree veroorzaken.",
+        "pl": "Soja często uczula, dlatego na początek daj tylko bardzo małą ilość, żeby sprawdzić, czy pies nie ma alergii. Objawy reakcji alergicznej, takie jak swędzenie, utrata sierści czy zapalenie uszu, mogą nie pojawić się od razu. Soja może też powodować gazy lub biegunkę."
       },
       "serving": {
         "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
@@ -34945,7 +35036,8 @@
         "fr": "Uniquement des fèves fraîches et nature, sorties de leur cosse, sans sel, épices, sauce soja ni huile. Quelques fèves de temps en temps, en guise de friandise : la modération est de mise.",
         "es": "Solo habas frescas y al natural, sacadas de la vaina y sin sal, especias, salsa de soja ni aceite. Unas pocas como premio ocasional; la clave es la moderación.",
         "it": "Solo fagioli freschi e al naturale, tolti dal baccello, senza sale, spezie, salsa di soia né olio. Pochi fagioli come premio occasionale: la moderazione è fondamentale.",
-        "nl": "Alleen naturel, verse boontjes, uit de peul gehaald en zonder zout, kruiden, sojasaus of olie. Af en toe een paar boontjes als snoepje; met mate is het devies."
+        "nl": "Alleen naturel, verse boontjes, uit de peul gehaald en zonder zout, kruiden, sojasaus of olie. Af en toe een paar boontjes als snoepje; met mate is het devies.",
+        "pl": "Tylko zwykłe, świeże ziarna wyjęte ze strąków, bez soli, przypraw, sosu sojowego i oleju. Kilka ziaren jako smakołyk od czasu do czasu; najważniejszy jest umiar."
       },
       "child": {
         "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
@@ -34955,7 +35047,8 @@
         "fr": "Les chiens peuvent grignoter quelques fèves d’edamame nature. Un adulte commence par les écosser.",
         "es": "Los perros pueden comer unas pocas habas de edamame al natural. Antes, un adulto las saca de la vaina.",
         "it": "I cani possono assaggiare qualche edamame al naturale. Prima un adulto li toglie dal baccello.",
-        "nl": "Honden mogen een paar naturel edamameboontjes knabbelen. Een volwassene haalt ze eerst uit de peul."
+        "nl": "Honden mogen een paar naturel edamameboontjes knabbelen. Een volwassene haalt ze eerst uit de peul.",
+        "pl": "Pies może skubnąć kilka zwykłych ziaren edamame. Dorosły najpierw wyjmuje je ze strąka."
       },
       "faq": [
         {
@@ -34967,7 +35060,8 @@
             "fr": "Les chiens peuvent-ils manger des edamame salés ou assaisonnés ?",
             "es": "¿Pueden los perros comer edamame salado o sazonado?",
             "it": "I cani possono mangiare edamame salati o conditi?",
-            "nl": "Mogen honden gezouten of gekruide edamame eten?"
+            "nl": "Mogen honden gezouten of gekruide edamame eten?",
+            "pl": "Czy psy mogą jeść edamame z solą lub przyprawami?"
           },
           "a": {
             "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
@@ -34977,7 +35071,8 @@
             "fr": "Non. Les épices, le sel, la sauce soja et l’huile utilisés pour cuisiner les edamame peuvent être particulièrement mauvais pour la santé des chiens : ne leur en donnez jamais préparés ainsi.",
             "es": "No. Las especias, la sal, la salsa de soja y el aceite con los que se prepara el edamame pueden ser especialmente perjudiciales para los perros, así que nunca le des a tu perro edamame cocinado con ellos.",
             "it": "No. Spezie, sale, salsa di soia e olio usati per cucinare gli edamame possono essere particolarmente dannosi per i cani, quindi non dare mai edamame cucinati con questi ingredienti.",
-            "nl": "Nee. Kruiden, zout, sojasaus en olie waarmee edamame wordt bereid, kunnen extra ongezond zijn voor honden. Geef dus nooit edamame die daarmee is bereid."
+            "nl": "Nee. Kruiden, zout, sojasaus en olie waarmee edamame wordt bereid, kunnen extra ongezond zijn voor honden. Geef dus nooit edamame die daarmee is bereid.",
+            "pl": "Nie. Przyprawy, sól, sos sojowy i olej, których używa się do przygotowania edamame, mogą być dla psów wyjątkowo niezdrowe, więc nigdy nie dawaj psu edamame z takimi dodatkami."
           }
         },
         {
@@ -34989,7 +35084,8 @@
             "fr": "Les chiens peuvent-ils manger les cosses d’edamame ?",
             "es": "¿Pueden los perros comer las vainas del edamame?",
             "it": "I cani possono mangiare i baccelli degli edamame?",
-            "nl": "Mogen honden de peulen van edamame eten?"
+            "nl": "Mogen honden de peulen van edamame eten?",
+            "pl": "Czy psy mogą jeść strąki edamame?"
           },
           "a": {
             "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
@@ -34999,7 +35095,8 @@
             "fr": "Mieux vaut éviter. Les cosses d’edamame sont fibreuses, coriaces et dures à mâcher : votre chien risque d’avoir du mal à les digérer, et elles présentent un risque d’étouffement, surtout pour les petits chiens.",
             "es": "Mejor no. Las vainas del edamame son fibrosas, duras y difíciles de masticar; a tu perro pueden resultarle difíciles de digerir y suponen un riesgo de atragantamiento, sobre todo en los perros pequeños.",
             "it": "Meglio di no. I baccelli degli edamame sono fibrosi, coriacei e gommosi: possono essere difficili da digerire per il tuo cane e possono far soffocare, soprattutto i cani di piccola taglia.",
-            "nl": "Liever niet. Edamamepeulen zijn vezelig, taai en moeilijk te kauwen; je hond kan ze slecht verteren en ze vormen een verstikkingsgevaar, vooral voor kleine honden."
+            "nl": "Liever niet. Edamamepeulen zijn vezelig, taai en moeilijk te kauwen; je hond kan ze slecht verteren en ze vormen een verstikkingsgevaar, vooral voor kleine honden.",
+            "pl": "Lepiej nie. Strąki edamame są włókniste, twarde i trudne do przegryzienia; pies może mieć kłopot z ich strawieniem, a do tego grożą zadławieniem, zwłaszcza u małych psów."
           }
         }
       ],
@@ -35038,7 +35135,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Eggplant (aubergine)",
@@ -35048,7 +35146,8 @@
         "fr": "Aubergine",
         "es": "Berenjena",
         "it": "Melanzane",
-        "nl": "Aubergine"
+        "nl": "Aubergine",
+        "pl": "Bakłażan"
       },
       "question": {
         "en": "Can dogs eat eggplant?",
@@ -35058,7 +35157,8 @@
         "fr": "Les chiens peuvent-ils manger de l’aubergine ?",
         "es": "¿Pueden los perros comer berenjena?",
         "it": "I cani possono mangiare le melanzane?",
-        "nl": "Mogen honden aubergine eten?"
+        "nl": "Mogen honden aubergine eten?",
+        "pl": "Czy psy mogą jeść bakłażana?"
       },
       "url_slug": {
         "en": "eggplant",
@@ -35068,7 +35168,8 @@
         "fr": "aubergine",
         "es": "berenjena",
         "it": "melanzane",
-        "nl": "aubergine"
+        "nl": "aubergine",
+        "pl": "baklazan"
       },
       "answer": {
         "en": "Yes, eggplant is safe for dogs when served in moderation. Remove the stem, wash, peel and cook it, then cut it into tiny, bite-sized pieces. Never give a whole eggplant, and remember that too much can cause digestive upset.",
@@ -35078,7 +35179,8 @@
         "fr": "Oui, l’aubergine est sans danger pour les chiens à condition de la donner avec modération. Retirez le pédoncule, lavez-la, pelez-la et faites-la cuire, puis coupez-la en tout petits morceaux de la taille d’une bouchée. Ne donnez jamais une aubergine entière, et n’oubliez pas qu’en trop grande quantité elle peut provoquer des troubles digestifs.",
         "es": "Sí, la berenjena es segura para los perros si se da con moderación. Quítale el rabillo, lávala, pélala, cuécela y córtala en trocitos pequeños. Nunca le des una berenjena entera, y recuerda que, si come demasiada, puede tener molestias digestivas.",
         "it": "Sì, le melanzane sono sicure per i cani in quantità moderate. Elimina il picciolo, lavale, sbucciale e cuocile, poi tagliale in pezzetti minuscoli da un boccone. Non dare mai una melanzana intera e ricorda che mangiarne troppe può causare disturbi digestivi.",
-        "nl": "Ja, met mate is aubergine veilig voor honden. Haal de steel eraf, was en schil de aubergine, maak hem gaar en snijd hem daarna in piepkleine, hapklare stukjes. Geef nooit een hele aubergine, en onthoud dat te veel aubergine de spijsvertering van streek kan maken."
+        "nl": "Ja, met mate is aubergine veilig voor honden. Haal de steel eraf, was en schil de aubergine, maak hem gaar en snijd hem daarna in piepkleine, hapklare stukjes. Geef nooit een hele aubergine, en onthoud dat te veel aubergine de spijsvertering van streek kan maken.",
+        "pl": "Tak, bakłażan jest bezpieczny dla psów, jeśli podajesz go z umiarem. Usuń szypułkę, umyj, obierz i ugotuj, a potem pokrój na malutkie kawałeczki na jeden kęs. Nigdy nie dawaj całego bakłażana i pamiętaj, że zbyt duża ilość może rozstroić układ pokarmowy."
       },
       "why": {
         "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -35088,7 +35190,8 @@
         "fr": "Le fruit comestible n’est pas réellement toxique en quantité normale, mais il contient de la solanine, une substance naturelle que la plante utilise pour se défendre. Les concentrations les plus élevées se trouvent dans les parties vertes de la plante, surtout les feuilles et les fleurs, plutôt que dans le fruit violet. La peau n’est pas toxique, mais elle peut être difficile à mâcher et présenter un risque d’étouffement, et manger trop d’aubergine peut provoquer des troubles digestifs.",
         "es": "El fruto comestible no es tóxico en cantidades normales, pero contiene solanina, una sustancia natural que la planta usa para defenderse. Las concentraciones más altas están en las partes verdes de la planta, sobre todo en las hojas y las flores, y no en el fruto morado. La piel no es tóxica, pero a los perros les cuesta masticarla y puede suponer un riesgo de atragantamiento. Y si comen demasiada berenjena, pueden tener molestias digestivas.",
         "it": "Il frutto commestibile non è davvero tossico nelle quantità normali, ma contiene solanina, una sostanza chimica naturale che la pianta usa come difesa. Le concentrazioni più alte si trovano nelle parti verdi della pianta, in particolare foglie e fiori, più che nel frutto viola. La buccia non è tossica, ma può essere difficile da masticare e far soffocare, e mangiare troppe melanzane può causare disturbi digestivi.",
-        "nl": "De eetbare vrucht is in normale hoeveelheden niet echt giftig, maar bevat solanine, een natuurlijke stof waarmee de plant zich verdedigt. Daarvan zit het meest in de groene delen van de plant, vooral in de bladeren en bloemen, en niet in de paarse vrucht. De schil is niet giftig, maar kan moeilijk te kauwen zijn en een verstikkingsgevaar vormen, en te veel aubergine kan de spijsvertering van streek maken."
+        "nl": "De eetbare vrucht is in normale hoeveelheden niet echt giftig, maar bevat solanine, een natuurlijke stof waarmee de plant zich verdedigt. Daarvan zit het meest in de groene delen van de plant, vooral in de bladeren en bloemen, en niet in de paarse vrucht. De schil is niet giftig, maar kan moeilijk te kauwen zijn en een verstikkingsgevaar vormen, en te veel aubergine kan de spijsvertering van streek maken.",
+        "pl": "Jadalny owoc w normalnych ilościach nie jest tak naprawdę toksyczny, ale zawiera solaninę, naturalną substancję, którą roślina wykorzystuje do obrony. Najwięcej jest jej w zielonych częściach rośliny, czyli w liściach i kwiatach, a nie w fioletowym owocu. Skórka nie jest toksyczna, ale może być trudna do przegryzienia i grozić zadławieniem, a zjedzenie zbyt dużej ilości bakłażana może rozstroić układ pokarmowy."
       },
       "signs": null,
       "what_to_do": {
@@ -35099,7 +35202,8 @@
         "fr": "Commencez par un petit morceau d’aubergine pelée et cuite. Si votre chien a de la diarrhée, des vomissements, des maux d’estomac, des douleurs abdominales ou une baisse d’énergie, ou s’il doit sortir plus souvent après avoir mangé de l’aubergine, contactez votre vétérinaire.",
         "es": "Empieza con un trocito de berenjena pelada y cocinada. Si después de comer berenjena tu perro tiene diarrea, vómitos, molestias de estómago, dolor de barriga o está decaído, o si necesita salir a hacer sus necesidades con más frecuencia, contacta con tu veterinario.",
         "it": "Comincia con un pezzettino di melanzana sbucciata e cotta. Se dopo aver mangiato la melanzana il tuo cane ha diarrea, vomito, disturbi di stomaco, dolore addominale, poca energia o deve fare i bisogni più spesso, contatta il veterinario.",
-        "nl": "Begin met een klein stukje geschilde, gare aubergine. Krijgt je hond na het eten van aubergine diarree, moet hij braken, heeft hij maagklachten, buikpijn of weinig energie, of moet hij vaker naar buiten, neem dan contact op met je dierenarts."
+        "nl": "Begin met een klein stukje geschilde, gare aubergine. Krijgt je hond na het eten van aubergine diarree, moet hij braken, heeft hij maagklachten, buikpijn of weinig energie, of moet hij vaker naar buiten, neem dan contact op met je dierenarts.",
+        "pl": "Zacznij od małego kawałka obranego, ugotowanego bakłażana. Jeśli po zjedzeniu bakłażana pies ma biegunkę, wymioty, rozstrój żołądka, ból brzucha, mniej energii albo częściej musi się załatwiać, skontaktuj się z weterynarzem."
       },
       "serving": {
         "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -35109,7 +35213,8 @@
         "fr": "Retirez le pédoncule, lavez soigneusement l’aubergine pour éliminer les pesticides, pelez-la, coupez-la en petits morceaux de la taille d’une bouchée et faites-la cuire avant de la servir. Jamais une aubergine entière.",
         "es": "Quita el rabillo, lava bien la berenjena para eliminar los pesticidas, pélala, córtala en trocitos pequeños y cuécela antes de servirla. Nunca le des una berenjena entera.",
         "it": "Elimina il picciolo, lava bene per rimuovere i pesticidi, sbuccia, taglia in pezzetti da un boccone e cuoci prima di servire. Mai una melanzana intera.",
-        "nl": "Haal de steel eraf, was de aubergine grondig om resten van bestrijdingsmiddelen te verwijderen, schil hem, snijd hem in kleine, hapklare stukjes en maak hem gaar voordat je hem geeft. Nooit een hele aubergine."
+        "nl": "Haal de steel eraf, was de aubergine grondig om resten van bestrijdingsmiddelen te verwijderen, schil hem, snijd hem in kleine, hapklare stukjes en maak hem gaar voordat je hem geeft. Nooit een hele aubergine.",
+        "pl": "Usuń szypułkę, dokładnie umyj, żeby pozbyć się pestycydów, obierz ze skórki, pokrój na małe kawałeczki na jeden kęs i ugotuj przed podaniem. Nigdy nie dawaj całego bakłażana."
       },
       "child": {
         "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -35119,7 +35224,8 @@
         "fr": "Les chiens peuvent manger un peu d’aubergine cuite. Un adulte la pèle, la fait cuire et la coupe en tout petits morceaux.",
         "es": "Los perros pueden comer un poco de berenjena cocinada. Un adulto la pela, la cuece y la corta en trocitos muy pequeños.",
         "it": "I cani possono mangiare un po’ di melanzana cotta. Un adulto la sbuccia, la cuoce e la taglia in pezzetti minuscoli.",
-        "nl": "Honden mogen een klein beetje gare aubergine. Een volwassene schilt hem, maakt hem gaar en snijdt hem in piepkleine stukjes."
+        "nl": "Honden mogen een klein beetje gare aubergine. Een volwassene schilt hem, maakt hem gaar en snijdt hem in piepkleine stukjes.",
+        "pl": "Pies może dostać odrobinę ugotowanego bakłażana. Dorosły obiera go, gotuje i kroi na malutkie kawałki."
       },
       "faq": [
         {
@@ -35131,7 +35237,8 @@
             "fr": "Les chiens peuvent-ils manger de l’aubergine crue ?",
             "es": "¿Pueden los perros comer berenjena cruda?",
             "it": "I cani possono mangiare le melanzane crude?",
-            "nl": "Mogen honden rauwe aubergine eten?"
+            "nl": "Mogen honden rauwe aubergine eten?",
+            "pl": "Czy psy mogą jeść surowego bakłażana?"
           },
           "a": {
             "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -35141,7 +35248,8 @@
             "fr": "Oui, mais la cuisson ramollit le légume et le rend encore plus facile à manger pour votre chien.",
             "es": "Sí, pero si la cocinas se ablanda y a tu perro le resulta aún más fácil de comer.",
             "it": "Possono, ma la cottura ammorbidisce la verdura e la rende ancora più facile da mangiare per il tuo cane.",
-            "nl": "Dat mag, maar als je aubergine gaar maakt, wordt hij zacht en kan je hond hem nog makkelijker eten."
+            "nl": "Dat mag, maar als je aubergine gaar maakt, wordt hij zacht en kan je hond hem nog makkelijker eten.",
+            "pl": "Mogą, ale po ugotowaniu warzywo jest miększe i psu jeszcze łatwiej je zjeść."
           }
         },
         {
@@ -35153,7 +35261,8 @@
             "fr": "Quelle partie du plant d’aubergine contient le plus de solanine ?",
             "es": "¿Qué parte de la planta de la berenjena tiene más solanina?",
             "it": "Quale parte della pianta di melanzana contiene più solanina?",
-            "nl": "Welk deel van de aubergineplant bevat de meeste solanine?"
+            "nl": "Welk deel van de aubergineplant bevat de meeste solanine?",
+            "pl": "Która część rośliny bakłażana zawiera najwięcej solaniny?"
           },
           "a": {
             "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -35163,7 +35272,8 @@
             "fr": "Les parties vertes de la plante, surtout les feuilles et les fleurs, plutôt que le fruit violet lui-même.",
             "es": "Las partes verdes de la planta, sobre todo las hojas y las flores, y no el fruto morado.",
             "it": "Le parti verdi della pianta, in particolare foglie e fiori, più che il frutto viola.",
-            "nl": "De groene delen van de plant, vooral de bladeren en bloemen, en niet de paarse vrucht zelf."
+            "nl": "De groene delen van de plant, vooral de bladeren en bloemen, en niet de paarse vrucht zelf.",
+            "pl": "Zielone części rośliny, czyli liście i kwiaty, a nie sam fioletowy owoc."
           }
         }
       ],
@@ -38359,7 +38469,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Parsley",
@@ -38369,7 +38480,8 @@
         "fr": "Persil",
         "es": "Perejil",
         "it": "Prezzemolo",
-        "nl": "Peterselie"
+        "nl": "Peterselie",
+        "pl": "Pietruszka"
       },
       "question": {
         "en": "Can dogs eat parsley?",
@@ -38379,7 +38491,8 @@
         "fr": "Les chiens peuvent-ils manger du persil ?",
         "es": "¿Pueden los perros comer perejil?",
         "it": "I cani possono mangiare il prezzemolo?",
-        "nl": "Mogen honden peterselie eten?"
+        "nl": "Mogen honden peterselie eten?",
+        "pl": "Czy psy mogą jeść pietruszkę?"
       },
       "url_slug": {
         "en": "parsley",
@@ -38389,7 +38502,8 @@
         "fr": "persil",
         "es": "perejil",
         "it": "prezzemolo",
-        "nl": "peterselie"
+        "nl": "peterselie",
+        "pl": "pietruszka"
       },
       "answer": {
         "en": "Only a small sprinkle of curly parsley, occasionally. The ASPCA lists parsley as toxic to dogs, because large amounts can make the skin sensitive to sunlight. Curly parsley is the safest option; spring parsley can be toxic, and Italian parsley can be toxic in large quantities.",
@@ -38399,7 +38513,8 @@
         "fr": "Seulement une petite pincée de persil frisé, de temps en temps. L’ASPCA le classe parmi les plantes toxiques pour les chiens : en grande quantité, il peut rendre la peau sensible au soleil. Le persil frisé est le plus sûr ; le « persil de printemps » peut être toxique, le persil plat aussi en grande quantité.",
         "es": "Solo una pizca de perejil rizado, de vez en cuando. La ASPCA incluye el perejil entre las plantas tóxicas para los perros, porque en cantidades grandes puede hacer que la piel se vuelva sensible al sol. El perejil rizado es la opción más segura; el perejil de primavera puede ser tóxico, y el de hoja plana también, en cantidades grandes.",
         "it": "Solo una piccola spolverata di prezzemolo riccio, ogni tanto. L’ASPCA indica il prezzemolo come tossico per i cani, perché grandi quantità possono rendere la pelle sensibile alla luce del sole. Il prezzemolo riccio è l’opzione più sicura; lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico e il prezzemolo a foglia liscia può esserlo in grandi quantità.",
-        "nl": "Alleen af en toe een klein snufje krulpeterselie. De ASPCA noemt peterselie giftig voor honden, omdat grote hoeveelheden de huid gevoelig kunnen maken voor zonlicht. Krulpeterselie is de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie in grote hoeveelheden ook."
+        "nl": "Alleen af en toe een klein snufje krulpeterselie. De ASPCA noemt peterselie giftig voor honden, omdat grote hoeveelheden de huid gevoelig kunnen maken voor zonlicht. Krulpeterselie is de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie in grote hoeveelheden ook.",
+        "pl": "Tylko odrobina pietruszki kędzierzawej, od czasu do czasu. ASPCA uznaje pietruszkę za toksyczną dla psów, ponieważ duże ilości mogą uwrażliwiać skórę na światło słoneczne. Najbezpieczniejsza jest pietruszka kędzierzawa; natomiast „spring parsley” (nazwa angielska) może być toksyczna, a pietruszka włoska – w dużych ilościach."
       },
       "why": {
         "en": "Parsley contains furanocoumarins. In large amounts they can cause sensitivity to sunlight and skin inflammation like a sunburn, although large amounts are needed for this effect. Parsley is also a diuretic; Italian parsley can lead to dehydration in dogs with sensitive stomachs. The AKC says curly parsley can be offered in small amounts, while the ASPCA lists parsley as toxic to dogs, so we take the stricter view and rate it not recommended.",
@@ -38409,7 +38524,8 @@
         "fr": "Le persil contient des furanocoumarines. En grande quantité, elles peuvent rendre la peau sensible au soleil et provoquer une inflammation semblable à un coup de soleil, même s’il en faut beaucoup pour que cet effet apparaisse. Le persil est aussi diurétique ; le persil plat peut entraîner une déshydratation chez les chiens à l’estomac sensible. L’AKC indique que le persil frisé peut être proposé en petite quantité, alors que l’ASPCA classe le persil parmi les plantes toxiques pour les chiens : nous retenons l’avis le plus strict et le classons comme déconseillé.",
         "es": "El perejil contiene furanocumarinas, que en cantidades grandes pueden provocar sensibilidad al sol e inflamación de la piel parecida a una quemadura solar. El perejil también es diurético; el de hoja plana puede provocar deshidratación en perros con el estómago sensible. La AKC dice que el perejil rizado se puede ofrecer en pequeñas cantidades, mientras que la ASPCA lo incluye entre las plantas tóxicas para los perros, así que adoptamos el criterio más estricto y lo clasificamos como no recomendado.",
         "it": "Il prezzemolo contiene furanocumarine. Possono causare sensibilità alla luce del sole e un’infiammazione della pelle simile a una scottatura, anche se per questo effetto servono grandi quantità. Il prezzemolo è anche un diuretico; il prezzemolo a foglia liscia può portare a disidratazione nei cani con lo stomaco delicato. Secondo l’AKC il prezzemolo riccio si può offrire in piccole quantità, mentre l’ASPCA indica il prezzemolo come tossico per i cani: noi adottiamo la posizione più prudente e lo classifichiamo come sconsigliato.",
-        "nl": "Peterselie bevat furanocumarinen. In grote hoeveelheden kunnen die overgevoeligheid voor zonlicht en een huidontsteking zoals bij zonnebrand veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Peterselie werkt ook vochtafdrijvend; platte peterselie kan bij honden met een gevoelige maag tot uitdroging leiden. Volgens de AKC kun je krulpeterselie in kleine hoeveelheden geven, terwijl de ASPCA peterselie giftig noemt voor honden. Wij volgen daarom het strengere advies en beoordelen peterselie als niet aan te raden."
+        "nl": "Peterselie bevat furanocumarinen. In grote hoeveelheden kunnen die overgevoeligheid voor zonlicht en een huidontsteking zoals bij zonnebrand veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Peterselie werkt ook vochtafdrijvend; platte peterselie kan bij honden met een gevoelige maag tot uitdroging leiden. Volgens de AKC kun je krulpeterselie in kleine hoeveelheden geven, terwijl de ASPCA peterselie giftig noemt voor honden. Wij volgen daarom het strengere advies en beoordelen peterselie als niet aan te raden.",
+        "pl": "Pietruszka zawiera furanokumaryny. W dużych ilościach mogą one powodować nadwrażliwość na światło słoneczne i stan zapalny skóry przypominający oparzenie słoneczne, choć do takiego efektu potrzebne są duże ilości. Pietruszka działa też moczopędnie; pietruszka włoska może prowadzić do odwodnienia u psów z wrażliwym żołądkiem. AKC podaje, że pietruszkę kędzierzawą można dawać w małych ilościach, a ASPCA uznaje pietruszkę za toksyczną dla psów, dlatego przyjmujemy ostrzejsze stanowisko i oceniamy ją jako niezalecaną."
       },
       "signs": {
         "en": [
@@ -38443,6 +38559,10 @@
         "nl": [
           "Overgevoeligheid voor zonlicht",
           "Huidontsteking die op zonnebrand lijkt (dermatitis)"
+        ],
+        "pl": [
+          "Nadwrażliwość na światło słoneczne",
+          "Stan zapalny skóry przypominający oparzenie słoneczne (zapalenie skóry)"
         ]
       },
       "what_to_do": {
@@ -38453,7 +38573,8 @@
         "fr": "Si vous donnez du persil à votre chien, surveillez-le de près pour repérer tout symptôme inhabituel. Si des symptômes apparaissent ou s’aggravent, contactez rapidement votre vétérinaire.",
         "es": "Si le das perejil a tu perro, obsérvalo con atención por si notas algo raro. Si aparecen síntomas o empeoran, contacta enseguida con tu veterinario.",
         "it": "Se dai prezzemolo al tuo cane, tienilo d’occhio con attenzione per eventuali sintomi insoliti. Se i sintomi compaiono o peggiorano, contatta subito il veterinario.",
-        "nl": "Geef je je hond peterselie, let dan goed op ongewone verschijnselen. Ontstaan er verschijnselen of worden ze erger, neem dan meteen contact op met je dierenarts."
+        "nl": "Geef je je hond peterselie, let dan goed op ongewone verschijnselen. Ontstaan er verschijnselen of worden ze erger, neem dan meteen contact op met je dierenarts.",
+        "pl": "Jeśli dasz psu pietruszkę, uważnie go obserwuj i zwracaj uwagę na niepokojące objawy. Jeśli się pojawią lub nasilą, od razu skontaktuj się z weterynarzem."
       },
       "serving": {
         "en": "If at all, only a small sprinkle of curly parsley as a garnish, given occasionally. Never large amounts.",
@@ -38463,7 +38584,8 @@
         "fr": "Si vous en donnez, seulement une petite pincée de persil frisé en garniture, de temps en temps. Jamais de grandes quantités.",
         "es": "Como mucho, una pizca de perejil rizado a modo de adorno, de vez en cuando. Nunca en cantidades grandes.",
         "it": "Se proprio vuoi, solo una piccola spolverata di prezzemolo riccio come guarnizione, data ogni tanto. Mai in grandi quantità.",
-        "nl": "Als je het al geeft, dan alleen af en toe een klein snufje krulpeterselie als garnering. Nooit grote hoeveelheden."
+        "nl": "Als je het al geeft, dan alleen af en toe een klein snufje krulpeterselie als garnering. Nooit grote hoeveelheden.",
+        "pl": "Jeśli już, to tylko odrobina pietruszki kędzierzawej do posypania posiłku, podawana od czasu do czasu. Nigdy w dużych ilościach."
       },
       "child": {
         "en": "Parsley is not a dog snack. A grown-up decides if a dog gets a tiny sprinkle of curly parsley.",
@@ -38473,7 +38595,8 @@
         "fr": "Le persil n’est pas une friandise pour chien. C’est à un adulte de décider si le chien peut avoir une toute petite pincée de persil frisé.",
         "es": "El perejil no es un premio para perros. Un adulto decide si el perro puede probar una pizca de perejil rizado.",
         "it": "Il prezzemolo non è uno spuntino per cani. Spetta a un adulto decidere se dare al cane una spolverata minuscola di prezzemolo riccio.",
-        "nl": "Peterselie is geen hondensnoepje. Een volwassene beslist of een hond een piepklein snufje krulpeterselie krijgt."
+        "nl": "Peterselie is geen hondensnoepje. Een volwassene beslist of een hond een piepklein snufje krulpeterselie krijgt.",
+        "pl": "Pietruszka nie jest przekąską dla psa. To dorosły decyduje, czy pies dostanie odrobinkę pietruszki kędzierzawej."
       },
       "faq": [
         {
@@ -38485,7 +38608,8 @@
             "fr": "Le persil frisé est-il différent des autres variétés de persil ?",
             "es": "¿Hay diferencias entre el perejil rizado y otros tipos de perejil?",
             "it": "Il prezzemolo riccio è diverso dagli altri tipi di prezzemolo?",
-            "nl": "Is krulpeterselie anders dan andere peterselie?"
+            "nl": "Is krulpeterselie anders dan andere peterselie?",
+            "pl": "Czy pietruszka kędzierzawa różni się od innych rodzajów pietruszki?"
           },
           "a": {
             "en": "Yes. Curly parsley is generally considered the safest option. Spring parsley can be toxic, and Italian parsley acts as a diuretic and can be toxic in large quantities.",
@@ -38495,7 +38619,8 @@
             "fr": "Oui. Le persil frisé est généralement considéré comme le plus sûr. Le « persil de printemps » (« spring parsley » en anglais, sans équivalent courant en français) peut être toxique, et le persil plat est diurétique et peut être toxique en grande quantité.",
             "es": "Sí. El perejil rizado se considera en general la opción más segura. El perejil de primavera puede ser tóxico, y el de hoja plana es diurético y puede ser tóxico en cantidades grandes.",
             "it": "Sì. Il prezzemolo riccio è considerato in genere l’opzione più sicura. Lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico, mentre il prezzemolo a foglia liscia agisce come diuretico e può essere tossico in grandi quantità.",
-            "nl": "Ja. Krulpeterselie geldt meestal als de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie werkt vochtafdrijvend en kan in grote hoeveelheden giftig zijn."
+            "nl": "Ja. Krulpeterselie geldt meestal als de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie werkt vochtafdrijvend en kan in grote hoeveelheden giftig zijn.",
+            "pl": "Tak. Pietruszkę kędzierzawą uważa się zwykle za najbezpieczniejszą. Natomiast „spring parsley” (nazwa angielska) może być toksyczna, a pietruszka włoska działa moczopędnie i w dużych ilościach może być toksyczna."
           }
         },
         {
@@ -38507,7 +38632,8 @@
             "fr": "Le persil peut-il rendre la peau d’un chien sensible au soleil ?",
             "es": "¿Puede el perejil hacer que la piel de un perro sea sensible al sol?",
             "it": "Il prezzemolo può rendere la pelle del cane sensibile al sole?",
-            "nl": "Kan peterselie de huid van een hond gevoelig maken voor de zon?"
+            "nl": "Kan peterselie de huid van een hond gevoelig maken voor de zon?",
+            "pl": "Czy pietruszka może uwrażliwić skórę psa na słońce?"
           },
           "a": {
             "en": "In large amounts, yes. The furanocoumarins in parsley can cause skin inflammation like a sunburn.",
@@ -38517,7 +38643,8 @@
             "fr": "En grande quantité, oui. Les furanocoumarines du persil peuvent provoquer une inflammation de la peau semblable à un coup de soleil.",
             "es": "En cantidades grandes, sí. Las furanocumarinas del perejil pueden provocar una inflamación de la piel parecida a una quemadura solar.",
             "it": "In grandi quantità, sì. Le furanocumarine del prezzemolo possono causare un’infiammazione della pelle simile a una scottatura.",
-            "nl": "In grote hoeveelheden wel. De furanocumarinen in peterselie kunnen een huidontsteking veroorzaken die op zonnebrand lijkt."
+            "nl": "In grote hoeveelheden wel. De furanocumarinen in peterselie kunnen een huidontsteking veroorzaken die op zonnebrand lijkt.",
+            "pl": "W dużych ilościach tak. Furanokumaryny zawarte w pietruszce mogą powodować stan zapalny skóry przypominający oparzenie słoneczne."
           }
         }
       ],
@@ -42348,7 +42475,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Mint",
@@ -42358,7 +42486,8 @@
         "fr": "Menthe",
         "es": "Menta",
         "it": "Menta",
-        "nl": "Munt"
+        "nl": "Munt",
+        "pl": "Mięta"
       },
       "question": {
         "en": "Can dogs eat mint?",
@@ -42368,7 +42497,8 @@
         "fr": "Les chiens peuvent-ils manger de la menthe ?",
         "es": "¿Pueden los perros comer menta?",
         "it": "I cani possono mangiare la menta?",
-        "nl": "Mogen honden munt eten?"
+        "nl": "Mogen honden munt eten?",
+        "pl": "Czy psy mogą jeść miętę?"
       },
       "url_slug": {
         "en": "mint",
@@ -42378,7 +42508,8 @@
         "fr": "menthe",
         "es": "menta",
         "it": "menta",
-        "nl": "munt"
+        "nl": "munt",
+        "pl": "mieta"
       },
       "answer": {
         "en": "No, mint is best kept away from dogs. The ASPCA lists garden mint as toxic to dogs because of its essential oils, which can cause vomiting and diarrhoea when a lot is eaten. Mint gum, candy and toothpaste can also be dangerous, as they may contain xylitol.",
@@ -42388,7 +42519,8 @@
         "fr": "Non, mieux vaut tenir la menthe à l’écart des chiens. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour eux, à cause de ses huiles essentielles : en grande quantité, elle peut provoquer vomissements et diarrhée. Chewing-gums, bonbons et dentifrices à la menthe peuvent aussi être dangereux, car ils peuvent contenir du xylitol.",
         "es": "No, es mejor mantener la menta lejos de los perros. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los perros por sus aceites esenciales, que pueden provocar vómitos y diarrea si se come mucha. Los chicles, los caramelos y la pasta de dientes de menta también pueden ser peligrosos, porque pueden contener xilitol.",
         "it": "No, meglio tenere la menta lontana dai cani. L’ASPCA indica la menta da giardino come tossica per i cani a causa degli oli essenziali, che in grandi quantità possono causare vomito e diarrea. Anche chewing gum, caramelle e dentifrici alla menta possono essere pericolosi, perché possono contenere xilitolo.",
-        "nl": "Nee, houd munt liever uit de buurt van je hond. De ASPCA noemt tuinmunt giftig voor honden vanwege de etherische oliën, die braken en diarree kunnen veroorzaken als een hond er veel van eet. Ook kauwgom, snoep en tandpasta met munt kunnen gevaarlijk zijn, omdat er xylitol in kan zitten."
+        "nl": "Nee, houd munt liever uit de buurt van je hond. De ASPCA noemt tuinmunt giftig voor honden vanwege de etherische oliën, die braken en diarree kunnen veroorzaken als een hond er veel van eet. Ook kauwgom, snoep en tandpasta met munt kunnen gevaarlijk zijn, omdat er xylitol in kan zitten.",
+        "pl": "Nie, miętę lepiej trzymać z dala od psów. ASPCA uznaje miętę ogrodową za toksyczną dla psów z powodu olejków eterycznych, które po zjedzeniu dużej ilości mogą wywołać wymioty i biegunkę. Niebezpieczne mogą być też miętowa guma do żucia, miętowe cukierki i pasta do zębów, bo mogą zawierać ksylitol."
       },
       "why": {
         "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
@@ -42398,7 +42530,8 @@
         "fr": "La menthe des jardins (Mentha) contient des huiles essentielles ; l’ASPCA la classe parmi les plantes toxiques pour les chiens, avec des vomissements et de la diarrhée après l’ingestion de grandes quantités. Le Pet Poison Helpline indique lui aussi que la menthe n’est pas sans danger pour les chiens. Les produits à la menthe peuvent en outre contenir du xylitol, un édulcorant extrêmement toxique pour les chiens. Comme la plante elle-même provoque surtout des signes lorsque le chien en mange beaucoup, nous la classons comme déconseillée ; les produits à la menthe contenant du xylitol constituent une urgence.",
         "es": "La menta de jardín (Mentha) contiene aceites esenciales; la ASPCA la incluye entre las plantas tóxicas para los perros, con vómitos y diarrea tras ingerir grandes cantidades. Pet Poison Helpline también advierte de que la menta no es segura para los perros. Además, los productos con menta pueden contener xilitol, un edulcorante muy tóxico para los perros. Como la propia planta provoca síntomas sobre todo en cantidades grandes, la clasificamos como no recomendada; en cambio, los productos de menta con xilitol son una urgencia.",
         "it": "La menta da giardino (Mentha) contiene oli essenziali; l’ASPCA la indica come tossica per i cani, con vomito e diarrea dopo l’ingestione di grandi quantità. Anche Pet Poison Helpline afferma che la menta non è sicura per i cani. I prodotti che contengono menta possono contenere anche xilitolo, un dolcificante estremamente tossico per i cani. Poiché la pianta in sé causa sintomi soprattutto in grandi quantità, la classifichiamo come sconsigliata; i prodotti alla menta con xilitolo sono un’emergenza.",
-        "nl": "Tuinmunt (Mentha) bevat etherische oliën; de ASPCA noemt de plant giftig voor honden, met braken en diarree nadat een hond er veel van heeft gegeten. Ook Pet Poison Helpline zegt dat munt niet veilig is voor honden. In producten met munt kan bovendien xylitol zitten, een zoetstof die zeer giftig is voor honden. Omdat de plant zelf vooral in grote hoeveelheden verschijnselen geeft, beoordelen we munt als niet aan te raden; producten met munt waarin xylitol zit, zijn een noodgeval."
+        "nl": "Tuinmunt (Mentha) bevat etherische oliën; de ASPCA noemt de plant giftig voor honden, met braken en diarree nadat een hond er veel van heeft gegeten. Ook Pet Poison Helpline zegt dat munt niet veilig is voor honden. In producten met munt kan bovendien xylitol zitten, een zoetstof die zeer giftig is voor honden. Omdat de plant zelf vooral in grote hoeveelheden verschijnselen geeft, beoordelen we munt als niet aan te raden; producten met munt waarin xylitol zit, zijn een noodgeval.",
+        "pl": "Mięta ogrodowa (Mentha) zawiera olejki eteryczne; ASPCA uznaje ją za toksyczną dla psów i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. Pet Poison Helpline również podaje, że mięta nie jest bezpieczna dla psów. Produkty zawierające miętę mogą też zawierać ksylitol, słodzik silnie toksyczny dla psów. Ponieważ sama roślina wywołuje objawy głównie po zjedzeniu dużych ilości, oceniamy ją jako niezalecaną; produkty miętowe z ksylitolem to nagły przypadek."
       },
       "signs": {
         "en": [
@@ -42432,6 +42565,10 @@
         "nl": [
           "Braken",
           "Diarree"
+        ],
+        "pl": [
+          "Wymioty",
+          "Biegunka"
         ]
       },
       "what_to_do": {
@@ -42442,7 +42579,8 @@
         "fr": "Si votre chien a mangé un produit à la menthe, comme un chewing-gum, un bonbon ou un dentifrice pouvant contenir du xylitol, consultez immédiatement un vétérinaire. En cas d’intoxication, contactez sans attendre votre vétérinaire ou un centre antipoison vétérinaire.",
         "es": "Si tu perro ha comido un producto de menta que pueda contener xilitol, como un chicle, un caramelo o pasta de dientes, acude enseguida a un veterinario. En caso de intoxicación, contacta con tu veterinario o con una línea de información toxicológica para animales.",
         "it": "Se il tuo cane ha mangiato un prodotto alla menta, come chewing gum, caramelle o dentifricio, che potrebbe contenere xilitolo, rivolgiti subito a un veterinario. In caso di emergenza da avvelenamento, contatta il veterinario o un centro antiveleni veterinario.",
-        "nl": "Heeft je hond een product met munt gegeten waarin xylitol kan zitten, zoals kauwgom, snoep of tandpasta, ga dan meteen naar de dierenarts. Bij een vergiftiging neem je contact op met je dierenarts of een vergiftigingenlijn voor dieren."
+        "nl": "Heeft je hond een product met munt gegeten waarin xylitol kan zitten, zoals kauwgom, snoep of tandpasta, ga dan meteen naar de dierenarts. Bij een vergiftiging neem je contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
+        "pl": "Jeśli pies zjadł produkt miętowy, który może zawierać ksylitol (na przykład gumę do żucia, cukierki lub pastę do zębów), od razu zgłoś się do weterynarza. W razie zatrucia zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt."
       },
       "serving": null,
       "child": {
@@ -42453,7 +42591,8 @@
         "fr": "Les feuilles et les bonbons à la menthe ne sont pas pour les chiens. Si un chien trouve un chewing-gum ou des bonbons à la menthe, préviens vite un adulte.",
         "es": "Las hojas de menta y los caramelos de menta no son para los perros. Si un perro encuentra chicles o caramelos de menta, avisa enseguida a un adulto.",
         "it": "Le foglie di menta e le caramelle alla menta non sono per i cani. Se un cane trova chewing gum o caramelle alla menta, dillo subito a un adulto.",
-        "nl": "Muntblaadjes en muntsnoepjes zijn niet voor honden. Vindt een hond kauwgom of snoepjes met munt? Vertel het dan meteen aan een volwassene."
+        "nl": "Muntblaadjes en muntsnoepjes zijn niet voor honden. Vindt een hond kauwgom of snoepjes met munt? Vertel het dan meteen aan een volwassene.",
+        "pl": "Liście mięty i miętowe słodycze nie są dla psów. Jeśli pies znajdzie miętową gumę lub słodycze, od razu powiedz o tym dorosłemu."
       },
       "faq": [
         {
@@ -42465,7 +42604,8 @@
             "fr": "Les chewing-gums et bonbons à la menthe sont-ils dangereux pour les chiens ?",
             "es": "¿Son peligrosos para los perros los chicles o caramelos de menta?",
             "it": "I chewing gum o le caramelle alla menta sono pericolosi per i cani?",
-            "nl": "Zijn kauwgom en snoep met munt gevaarlijk voor honden?"
+            "nl": "Zijn kauwgom en snoep met munt gevaarlijk voor honden?",
+            "pl": "Czy miętowa guma do żucia lub cukierki są niebezpieczne dla psów?"
           },
           "a": {
             "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
@@ -42475,7 +42615,8 @@
             "fr": "Oui. Les produits à la menthe comme les chewing-gums, les bonbons et les dentifrices peuvent être dangereux pour les chiens, car ils peuvent contenir du xylitol. Si votre chien en a mangé, consultez immédiatement un vétérinaire.",
             "es": "Sí. Los productos de menta, como los chicles, los caramelos y la pasta de dientes, pueden ser peligrosos para los perros, porque pueden contener xilitol. Si tu perro ha comido alguno, acude enseguida a un veterinario.",
             "it": "Sì. I prodotti alla menta come chewing gum, caramelle e dentifrici possono essere pericolosi per i cani perché possono contenere xilitolo. Se il tuo cane ne ha mangiato uno, rivolgiti subito a un veterinario.",
-            "nl": "Ja. Producten met munt, zoals kauwgom, snoep en tandpasta, kunnen gevaarlijk zijn voor honden, omdat er xylitol in kan zitten. Heeft je hond er iets van gegeten, ga dan meteen naar de dierenarts."
+            "nl": "Ja. Producten met munt, zoals kauwgom, snoep en tandpasta, kunnen gevaarlijk zijn voor honden, omdat er xylitol in kan zitten. Heeft je hond er iets van gegeten, ga dan meteen naar de dierenarts.",
+            "pl": "Tak. Produkty miętowe, takie jak guma do żucia, cukierki i pasta do zębów, mogą być niebezpieczne dla psów, bo mogą zawierać ksylitol. Jeśli pies coś takiego zjadł, od razu zgłoś się do weterynarza."
           }
         }
       ],
@@ -48290,7 +48431,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Radishes",
@@ -48300,7 +48442,8 @@
         "fr": "Radis",
         "es": "Rábanos",
         "it": "Ravanelli",
-        "nl": "Radijsjes"
+        "nl": "Radijsjes",
+        "pl": "Rzodkiewki"
       },
       "question": {
         "en": "Can dogs eat radishes?",
@@ -48310,7 +48453,8 @@
         "fr": "Les chiens peuvent-ils manger des radis ?",
         "es": "¿Pueden los perros comer rábanos?",
         "it": "I cani possono mangiare i ravanelli?",
-        "nl": "Mogen honden radijsjes eten?"
+        "nl": "Mogen honden radijsjes eten?",
+        "pl": "Czy psy mogą jeść rzodkiewki?"
       },
       "url_slug": {
         "en": "radishes",
@@ -48320,7 +48464,8 @@
         "fr": "radis",
         "es": "rabanos",
         "it": "ravanelli",
-        "nl": "radijsjes"
+        "nl": "radijsjes",
+        "pl": "rzodkiewki"
       },
       "answer": {
         "en": "Yes, but only in small amounts. In moderation, radishes are safe for dogs, though some dogs find the taste off-putting. Remove the greens, wash, peel and chop the radish into small pieces, and serve it plain. Horseradish and wild radishes are not for dogs.",
@@ -48330,7 +48475,8 @@
         "fr": "Oui, mais seulement en petite quantité. Avec modération, les radis sont sans danger pour les chiens, même si leur goût rebute certains d’entre eux. Retirez les fanes, lavez, pelez et coupez le radis en petits morceaux, et servez-le nature. Le raifort et les radis sauvages ne conviennent pas aux chiens.",
         "es": "Sí, pero solo en pequeñas cantidades. Con moderación, los rábanos son seguros para los perros, aunque a algunos no les gusta el sabor. Quítales las hojas, lávalos, pélalos, córtalos en trozos pequeños y sírvelos al natural. El rábano picante y los rábanos silvestres no son para los perros.",
         "it": "Sì, ma solo in piccole quantità. Con moderazione i ravanelli sono sicuri per i cani, anche se ad alcuni il sapore non piace. Togli le foglie, lava e sbuccia il ravanello, taglialo a pezzetti e dallo al naturale. Il rafano e i ravanelli selvatici non vanno dati ai cani.",
-        "nl": "Ja, maar alleen in kleine hoeveelheden. Met mate zijn radijsjes veilig voor honden, al vinden sommige honden de smaak niet lekker. Haal het loof eraf, was en schil het radijsje, snijd het in kleine stukjes en geef het naturel. Mierikswortel en wilde radijs zijn niet voor honden."
+        "nl": "Ja, maar alleen in kleine hoeveelheden. Met mate zijn radijsjes veilig voor honden, al vinden sommige honden de smaak niet lekker. Haal het loof eraf, was en schil het radijsje, snijd het in kleine stukjes en geef het naturel. Mierikswortel en wilde radijs zijn niet voor honden.",
+        "pl": "Tak, ale tylko w małych ilościach. Z umiarem rzodkiewki są dla psów bezpieczne, choć niektórym psom ich smak nie odpowiada. Usuń nać, umyj, obierz i pokrój rzodkiewkę na małe kawałki, a potem podaj ją bez dodatków. Chrzan i dzika rzodkiew nie są dla psów."
       },
       "why": {
         "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
@@ -48340,7 +48486,8 @@
         "fr": "De petites quantités de radis ne font pas de mal aux chiens et peuvent même avoir quelques bienfaits pour la santé. Les fanes de radis peuvent provoquer une gastro-entérite : il ne faut donc pas les donner. Les gros morceaux ou un radis entier pourraient présenter un risque d’étouffement. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens, et les radis sauvages sont un autre légume, dangereux pour les animaux de compagnie.",
         "es": "Las cantidades pequeñas de rábano no son perjudiciales para los perros e incluso pueden tener algún beneficio para su salud. Las hojas del rábano pueden provocar gastroenteritis, así que no se deben dar. Los trozos grandes o un rábano entero podrían suponer un riesgo de atragantamiento. El rábano picante no es en realidad un rábano y no se debe dar a los perros, y los rábanos silvestres no son la misma verdura que los rábanos comunes y no son seguros para las mascotas.",
         "it": "Piccole quantità di ravanelli non fanno male ai cani e possono perfino avere qualche beneficio per la salute. Le foglie dei ravanelli possono causare gastroenterite, quindi non vanno date. I pezzi grandi o un ravanello intero possono far soffocare. Il rafano in realtà non è un ravanello e non va dato ai cani, mentre i ravanelli selvatici sono un’altra verdura e non sono sicuri per gli animali domestici.",
-        "nl": "Kleine hoeveelheden radijs kunnen honden geen kwaad en zijn misschien zelfs goed voor de gezondheid. Het loof kan een maag-darmontsteking veroorzaken, dus geef dat niet. Grote stukken of een heel radijsje kunnen een verstikkingsgevaar vormen. Mierikswortel is eigenlijk geen radijs en hoort niet in de voerbak, en wilde radijs is een andere groente die niet veilig is voor huisdieren."
+        "nl": "Kleine hoeveelheden radijs kunnen honden geen kwaad en zijn misschien zelfs goed voor de gezondheid. Het loof kan een maag-darmontsteking veroorzaken, dus geef dat niet. Grote stukken of een heel radijsje kunnen een verstikkingsgevaar vormen. Mierikswortel is eigenlijk geen radijs en hoort niet in de voerbak, en wilde radijs is een andere groente die niet veilig is voor huisdieren.",
+        "pl": "Niewielkie ilości rzodkiewek nie szkodzą psom, a mogą nawet przynosić pewne korzyści zdrowotne. Nać rzodkiewki może wywołać zapalenie żołądka i jelit, więc nie należy jej podawać. Duże kawałki lub cała rzodkiewka mogą grozić zadławieniem. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom, a dzika rzodkiew to inne warzywo, które nie jest bezpieczne dla zwierząt domowych."
       },
       "signs": null,
       "what_to_do": {
@@ -48351,7 +48498,8 @@
         "fr": "Comme toujours, avant d’introduire un nouvel aliment dans l’alimentation de votre chien, mieux vaut d’abord demander conseil à votre vétérinaire. Le goût des radis rebute certains chiens, qui refuseront d’en manger.",
         "es": "Como siempre, antes de incluir un ingrediente nuevo en la dieta de tu perro, lo mejor es consultarlo con tu veterinario. Hay perros a los que no les gusta el sabor y no querrán comer rábanos.",
         "it": "Come sempre, prima di introdurre un nuovo alimento nella dieta del tuo cane è meglio sentire il veterinario. Ad alcuni cani il sapore non piace e rifiutano i ravanelli.",
-        "nl": "Zoals altijd kun je het beste eerst je dierenarts raadplegen voordat je iets nieuws aan het eten van je hond toevoegt. Sommige honden vinden de smaak niet lekker en willen geen radijsjes eten."
+        "nl": "Zoals altijd kun je het beste eerst je dierenarts raadplegen voordat je iets nieuws aan het eten van je hond toevoegt. Sommige honden vinden de smaak niet lekker en willen geen radijsjes eten.",
+        "pl": "Jak zawsze: zanim dodasz do diety psa nowy składnik, najlepiej skonsultuj się z weterynarzem. Niektórym psom smak rzodkiewek nie odpowiada i nie chcą ich jeść."
       },
       "serving": {
         "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
@@ -48361,7 +48509,8 @@
         "fr": "Jetez les fanes, puis lavez et pelez le radis et coupez-le en petits morceaux. Uniquement des radis nature, sans épices, en petite quantité.",
         "es": "Quita y tira las hojas, lava y pela el rábano y córtalo en trozos pequeños. Solo rábanos al natural, sin condimentar, y en pequeñas cantidades.",
         "it": "Elimina le foglie, poi lava e sbuccia il ravanello e taglialo a pezzetti. Solo ravanelli al naturale, non conditi con spezie, in piccole quantità.",
-        "nl": "Gooi het loof weg, was en schil het radijsje en snijd het in kleine stukjes. Alleen naturel radijsjes zonder kruiden, in kleine hoeveelheden."
+        "nl": "Gooi het loof weg, was en schil het radijsje en snijd het in kleine stukjes. Alleen naturel radijsjes zonder kruiden, in kleine hoeveelheden.",
+        "pl": "Wyrzuć nać, a rzodkiewkę umyj, obierz i pokrój na małe kawałki. Tylko zwykłe rzodkiewki, bez przypraw, w małych ilościach."
       },
       "child": {
         "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
@@ -48371,7 +48520,8 @@
         "fr": "Les chiens peuvent goûter quelques petits morceaux de radis. Un adulte enlève d’abord les fanes, pèle le radis et le coupe en petits morceaux.",
         "es": "Los perros pueden probar unos trocitos pequeños de rábano. Antes, un adulto le quita las hojas, lo pela y lo corta.",
         "it": "I cani possono assaggiare qualche pezzettino di ravanello. Prima un adulto toglie le foglie, sbuccia il ravanello e lo taglia a pezzetti.",
-        "nl": "Honden mogen een paar kleine stukjes radijs proberen. Een volwassene haalt eerst de blaadjes eraf, schilt het radijsje en snijdt het in stukjes."
+        "nl": "Honden mogen een paar kleine stukjes radijs proberen. Een volwassene haalt eerst de blaadjes eraf, schilt het radijsje en snijdt het in stukjes.",
+        "pl": "Pies może spróbować kilku małych kawałków rzodkiewki. Dorosły najpierw usuwa nać, obiera rzodkiewkę i kroi ją."
       },
       "faq": [
         {
@@ -48383,7 +48533,8 @@
             "fr": "Les chiens peuvent-ils manger les fanes de radis ?",
             "es": "¿Pueden los perros comer hojas de rábano?",
             "it": "I cani possono mangiare le foglie dei ravanelli?",
-            "nl": "Mogen honden radijsblaadjes eten?"
+            "nl": "Mogen honden radijsblaadjes eten?",
+            "pl": "Czy psy mogą jeść nać rzodkiewki?"
           },
           "a": {
             "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
@@ -48393,7 +48544,8 @@
             "fr": "Non. Ne donnez pas les fanes de radis à votre chien : elles peuvent provoquer une gastro-entérite.",
             "es": "No. No le des a tu perro las hojas del rábano, porque pueden provocar gastroenteritis.",
             "it": "No. Non dare al tuo cane le foglie dei ravanelli, perché possono causare gastroenterite.",
-            "nl": "Nee. Geef je hond geen radijsloof, want dat kan een maag-darmontsteking veroorzaken."
+            "nl": "Nee. Geef je hond geen radijsloof, want dat kan een maag-darmontsteking veroorzaken.",
+            "pl": "Nie. Nie dawaj psu naci rzodkiewki, bo może wywołać zapalenie żołądka i jelit."
           }
         },
         {
@@ -48405,7 +48557,8 @@
             "fr": "Les chiens peuvent-ils manger du raifort ?",
             "es": "¿Pueden los perros comer rábano picante?",
             "it": "I cani possono mangiare il rafano?",
-            "nl": "Mogen honden mierikswortel eten?"
+            "nl": "Mogen honden mierikswortel eten?",
+            "pl": "Czy psy mogą jeść chrzan?"
           },
           "a": {
             "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
@@ -48415,7 +48568,8 @@
             "fr": "Non. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens.",
             "es": "No. El rábano picante en realidad no es un rábano y no se debe dar a los perros.",
             "it": "No. Il rafano in realtà non è un ravanello e non va dato ai cani.",
-            "nl": "Nee. Mierikswortel is eigenlijk geen radijs. Geef het je hond niet."
+            "nl": "Nee. Mierikswortel is eigenlijk geen radijs. Geef het je hond niet.",
+            "pl": "Nie. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom."
           }
         }
       ],
@@ -52186,7 +52340,8 @@
         "fr",
         "es",
         "it",
-        "nl"
+        "nl",
+        "pl"
       ],
       "name": {
         "en": "Seaweed (nori)",
@@ -52196,7 +52351,8 @@
         "fr": "Algues (nori)",
         "es": "Algas (nori)",
         "it": "Alghe (nori)",
-        "nl": "Zeewier (nori)"
+        "nl": "Zeewier (nori)",
+        "pl": "Wodorosty (nori)"
       },
       "question": {
         "en": "Can dogs eat seaweed?",
@@ -52206,7 +52362,8 @@
         "fr": "Les chiens peuvent-ils manger des algues ?",
         "es": "¿Pueden los perros comer algas?",
         "it": "I cani possono mangiare le alghe?",
-        "nl": "Mogen honden zeewier eten?"
+        "nl": "Mogen honden zeewier eten?",
+        "pl": "Czy psy mogą jeść wodorosty?"
       },
       "url_slug": {
         "en": "seaweed",
@@ -52216,7 +52373,8 @@
         "fr": "algues",
         "es": "algas",
         "it": "alghe",
-        "nl": "zeewier"
+        "nl": "zeewier",
+        "pl": "wodorosty"
       },
       "answer": {
         "en": "Some types, in moderation. Plain nori or seaweed sheets without added salt, garlic or seasonings are fine in small amounts. Wild beach seaweed is different: it can contain too much salt and dried strands can expand in the stomach, so consult a vet right away if your dog eats it.",
@@ -52226,7 +52384,8 @@
         "fr": "Certaines algues, avec modération. Le nori nature ou les feuilles d’algues sans sel, ail ni assaisonnement ajoutés conviennent en petite quantité. Les algues sauvages de la plage sont un tout autre cas : elles peuvent contenir trop de sel et, une fois séchées, leurs filaments peuvent gonfler dans l’estomac ; consultez donc immédiatement un vétérinaire si votre chien en mange.",
         "es": "Algunos tipos, con moderación. El nori al natural y las láminas de alga sin sal, ajo ni condimentos añadidos están bien en pequeñas cantidades. Las algas silvestres de la playa son otra cosa: pueden llevar demasiada sal y, si están secas, hincharse en el estómago. Si tu perro se las come, consulta enseguida con un veterinario.",
         "it": "Solo alcuni tipi, e con moderazione. Le alghe nori o i fogli di alghe al naturale, senza sale, aglio o condimenti aggiunti, vanno bene in piccole quantità. Le alghe selvatiche della spiaggia sono un discorso diverso: possono contenere troppo sale e, secche, possono gonfiarsi nello stomaco, quindi se il tuo cane ne mangia consulta subito il veterinario.",
-        "nl": "Sommige soorten wel, met mate. Naturel nori of zeewiervellen zonder toegevoegd zout, knoflook of kruiden zijn in kleine hoeveelheden prima. Wild zeewier op het strand is iets anders: daar kan te veel zout in zitten en gedroogde slierten kunnen in de maag opzwellen. Heeft je hond het toch gegeten, neem dan meteen contact op met een dierenarts."
+        "nl": "Sommige soorten wel, met mate. Naturel nori of zeewiervellen zonder toegevoegd zout, knoflook of kruiden zijn in kleine hoeveelheden prima. Wild zeewier op het strand is iets anders: daar kan te veel zout in zitten en gedroogde slierten kunnen in de maag opzwellen. Heeft je hond het toch gegeten, neem dan meteen contact op met een dierenarts.",
+        "pl": "Niektóre rodzaje, z umiarem. Zwykłe nori lub arkusze wodorostów bez dodatku soli, czosnku i przypraw są w małych ilościach w porządku. Dzikie wodorosty z plaży to co innego: mogą zawierać zbyt dużo soli, a suche pasma mogą pęcznieć w żołądku, więc jeśli pies je zje, od razu skonsultuj się z weterynarzem."
       },
       "why": {
         "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -52236,7 +52395,8 @@
         "fr": "Les algues sont nutritives et contiennent des protéines, du fer, de l’iode, du magnésium et des oméga-3. Mais une trop grande quantité d’algues peut perturber l’estomac d’un chien, et trop d’iode peut affecter la thyroïde. Les algues sauvages de la plage peuvent contenir trop de sel, ce qui expose le chien à un risque d’intoxication au sel ; leurs longs filaments peuvent se coincer dans l’intestin ou abriter de petits animaux ou des parasites cachés, et les algues sauvages séchées peuvent gonfler dans l’estomac.",
         "es": "Las algas son nutritivas y contienen proteínas, hierro, yodo, magnesio y omega-3. Pero si un perro come demasiadas, pueden sentarle mal al estómago, y un exceso de yodo puede afectar a su tiroides. Las algas silvestres de la playa pueden llevar un exceso de sal, con riesgo de intoxicación por sal; sus hebras largas pueden quedarse atascadas en el intestino o esconder animales y parásitos, y las secas pueden hincharse en el estómago.",
         "it": "Le alghe sono nutrienti e contengono proteine, ferro, iodio, magnesio e omega-3. Ma troppe alghe possono causare disturbi di stomaco al cane e troppo iodio può influire sulla tiroide. Le alghe selvatiche della spiaggia possono contenere troppo sale, con il rischio di intossicazione da sale; i filamenti lunghi possono bloccarsi nell’intestino o portare con sé piccoli animali o parassiti nascosti, e le alghe selvatiche secche possono gonfiarsi nello stomaco.",
-        "nl": "Zeewier is voedzaam en bevat eiwitten, ijzer, jodium, magnesium en omega-3-vetzuren. Maar te veel zeewier kan de maag van een hond van streek maken, en te veel jodium kan de schildklier beïnvloeden. Wild zeewier op het strand kan te veel zout bevatten, waardoor een hond het risico loopt op een zoutvergiftiging. De lange slierten kunnen vast komen te zitten in de darmen of verborgen diertjes of parasieten bevatten, en droog wild zeewier kan in de maag opzwellen."
+        "nl": "Zeewier is voedzaam en bevat eiwitten, ijzer, jodium, magnesium en omega-3-vetzuren. Maar te veel zeewier kan de maag van een hond van streek maken, en te veel jodium kan de schildklier beïnvloeden. Wild zeewier op het strand kan te veel zout bevatten, waardoor een hond het risico loopt op een zoutvergiftiging. De lange slierten kunnen vast komen te zitten in de darmen of verborgen diertjes of parasieten bevatten, en droog wild zeewier kan in de maag opzwellen.",
+        "pl": "Wodorosty są pożywne i zawierają białko, żelazo, jod, magnez i kwasy omega-3. Jednak zbyt duża ilość może rozstroić żołądek psa, a nadmiar jodu może wpływać na tarczycę. Dzikie wodorosty z plaży mogą zawierać nadmiar soli, co naraża psa na zatrucie solą; ich długie pasma mogą utknąć w jelitach lub kryć w sobie zwierzęta albo pasożyty, a suche dzikie wodorosty mogą pęcznieć w żołądku."
       },
       "signs": null,
       "what_to_do": {
@@ -52247,7 +52407,8 @@
         "fr": "Surveillez votre chien à la plage pour qu’il ne mange pas d’algues sauvages. S’il en mange, consultez immédiatement un vétérinaire : elles peuvent provoquer des vomissements, de la diarrhée, de la faiblesse et de la léthargie.",
         "es": "Vigila a tu perro en la playa para que no coma algas silvestres. Si se come algas en la playa, consulta enseguida con un veterinario: pueden causarle vómitos, diarrea, debilidad y decaimiento.",
         "it": "In spiaggia controlla che il tuo cane non mangi alghe selvatiche. Se il tuo cane mangia alghe in spiaggia, consulta subito il veterinario: possono causare vomito, diarrea, debolezza e abbattimento.",
-        "nl": "Houd je hond op het strand in de gaten, zodat hij geen wild zeewier eet. Heeft je hond toch zeewier op het strand gegeten, neem dan meteen contact op met een dierenarts; het kan braken, diarree, zwakte en lusteloosheid veroorzaken."
+        "nl": "Houd je hond op het strand in de gaten, zodat hij geen wild zeewier eet. Heeft je hond toch zeewier op het strand gegeten, neem dan meteen contact op met een dierenarts; het kan braken, diarree, zwakte en lusteloosheid veroorzaken.",
+        "pl": "Pilnuj psa na plaży, żeby nie zjadał dzikich wodorostów. Jeśli pies zje wodorosty na plaży, od razu skonsultuj się z weterynarzem; mogą wywołać wymioty, biegunkę, osłabienie i ospałość."
       },
       "serving": {
         "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -52257,7 +52418,8 @@
         "fr": "Uniquement des algues nature, sans assaisonnement, en petite quantité, par exemple des feuilles de nori préemballées. Lisez la liste des ingrédients pour vous assurer qu’il n’y a ni assaisonnement, ni sel, ni ail ajoutés.",
         "es": "Solo algas al natural y sin condimentar, en pequeñas cantidades, como las láminas de nori envasadas. Lee la lista de ingredientes para asegurarte de que no llevan condimentos, sal ni ajo añadidos.",
         "it": "Solo alghe al naturale e senza condimenti, in piccole quantità, per esempio fogli di nori confezionati. Leggi l’elenco degli ingredienti per assicurarti che non contenga condimenti, sale o aglio aggiunti.",
-        "nl": "Alleen naturel, ongekruid zeewier in kleine hoeveelheden, zoals voorverpakte norivellen. Lees de ingrediëntenlijst om zeker te weten dat er geen kruiden, zout of knoflook aan is toegevoegd."
+        "nl": "Alleen naturel, ongekruid zeewier in kleine hoeveelheden, zoals voorverpakte norivellen. Lees de ingrediëntenlijst om zeker te weten dat er geen kruiden, zout of knoflook aan is toegevoegd.",
+        "pl": "Tylko zwykłe, nieprzyprawione wodorosty w małych ilościach, na przykład gotowe arkusze nori. Sprawdź skład i upewnij się, że nie ma w nim przypraw, soli ani czosnku."
       },
       "child": {
         "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -52267,7 +52429,8 @@
         "fr": "Les chiens peuvent goûter un peu de nori nature. À la plage, aide à les tenir éloignés des algues échouées sur le sable.",
         "es": "Los perros pueden probar un poquito de nori al natural. En la playa, ayuda a que tu perro no se acerque a las algas de la arena.",
         "it": "I cani possono assaggiare un po’ di nori al naturale. In spiaggia aiuta a tenerli lontani dalle alghe sulla sabbia.",
-        "nl": "Honden mogen een klein beetje naturel nori proeven. Op het strand kun je helpen om ze bij het zeewier weg te houden."
+        "nl": "Honden mogen een klein beetje naturel nori proeven. Op het strand kun je helpen om ze bij het zeewier weg te houden.",
+        "pl": "Pies może skosztować odrobiny zwykłego nori. Na plaży dopilnuj, żeby nie zbliżał się do wodorostów leżących na piasku."
       },
       "faq": [
         {
@@ -52279,7 +52442,8 @@
             "fr": "Que faire si mon chien mange des algues à la plage ?",
             "es": "¿Qué hago si mi perro se come algas en la playa?",
             "it": "E se il mio cane mangia alghe in spiaggia?",
-            "nl": "Wat als mijn hond op het strand zeewier eet?"
+            "nl": "Wat als mijn hond op het strand zeewier eet?",
+            "pl": "Co zrobić, jeśli pies zje wodorosty na plaży?"
           },
           "a": {
             "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -52289,7 +52453,8 @@
             "fr": "Consultez immédiatement un vétérinaire. Les algues sauvages peuvent contenir trop de sel, les algues séchées peuvent gonfler dans l’estomac et les longs filaments peuvent se coincer dans l’intestin.",
             "es": "Consulta enseguida con un veterinario. Las algas silvestres pueden contener un exceso de sal, las algas secas pueden hincharse en el estómago y las hebras largas pueden quedarse atascadas en el intestino.",
             "it": "Consulta subito il veterinario. Le alghe selvatiche possono contenere troppo sale, quelle secche possono gonfiarsi nello stomaco e i filamenti lunghi possono bloccarsi nell’intestino.",
-            "nl": "Neem meteen contact op met een dierenarts. Wild zeewier kan te veel zout bevatten, droog zeewier kan in de maag opzwellen en lange slierten kunnen vast komen te zitten in de darmen."
+            "nl": "Neem meteen contact op met een dierenarts. Wild zeewier kan te veel zout bevatten, droog zeewier kan in de maag opzwellen en lange slierten kunnen vast komen te zitten in de darmen.",
+            "pl": "Od razu skonsultuj się z weterynarzem. Dzikie wodorosty mogą zawierać nadmiar soli, suche wodorosty mogą pęcznieć w żołądku, a długie pasma mogą utknąć w jelitach."
           }
         },
         {
@@ -52301,7 +52466,8 @@
             "fr": "Les chiens peuvent-ils manger des sushis ou des algues avec de la sauce soja ?",
             "es": "¿Pueden los perros comer sushi o algas con salsa de soja?",
             "it": "I cani possono mangiare il sushi o le alghe con salsa di soia?",
-            "nl": "Mogen honden sushi of zeewier met sojasaus eten?"
+            "nl": "Mogen honden sushi of zeewier met sojasaus eten?",
+            "pl": "Czy psy mogą jeść sushi lub wodorosty z sosem sojowym?"
           },
           "a": {
             "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -52311,7 +52477,8 @@
             "fr": "Non. Les sushis préparés avec du poisson cru peuvent rendre votre chien malade, et la sauce soja est très riche en sel.",
             "es": "No. El sushi hecho con pescado crudo puede sentarle mal a tu perro, y la salsa de soja tiene mucha sal.",
             "it": "No. Il sushi con pesce crudo può far stare male il cane e la salsa di soia è ricca di sale.",
-            "nl": "Nee. Sushi met rauwe vis kan je hond ziek maken, en in sojasaus zit veel zout."
+            "nl": "Nee. Sushi met rauwe vis kan je hond ziek maken, en in sojasaus zit veel zout.",
+            "pl": "Nie. Sushi z surową rybą może rozchorować psa, a sos sojowy zawiera dużo soli."
           }
         }
       ],
@@ -142788,6 +142955,591 @@
       "duty_i18n": null,
       "url": "https://saigonpet.com/",
       "source_url": "https://saigonpet.com/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dalat Pet Veterinary Clinic",
+      "city": "Da Lat",
+      "region": "Da Lat",
+      "address": "77 bis 3 Thang 2, Ward 4, Da Lat",
+      "phone": "0986 132 381",
+      "emergency_24h": true,
+      "duty": "Open 08:00-17:00; emergency service advertised 24/7 including weekends and holidays; call ahead for emergencies after 19:00.",
+      "duty_i18n": null,
+      "url": "https://dalatpet.com/",
+      "source_url": "https://dalatpet.com/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Nasa Pet Veterinary Clinic Phu Quoc",
+      "city": "Phu Quoc",
+      "region": "Phu Quoc",
+      "address": "149 Nguyen Trung Truc, Duong Dong, Phu Quoc",
+      "phone": "0342 773 774",
+      "emergency_24h": true,
+      "duty": "Open 08:00-19:00; emergency care advertised 24/24; call ahead.",
+      "duty_i18n": null,
+      "url": "https://thuynasapetphuquoc.com/",
+      "source_url": "https://thuynasapetphuquoc.com/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "MB Vet Hue Veterinary Hospital - Phan Van Truong",
+      "city": "Hue",
+      "region": "Hue",
+      "address": "65 Phan Van Truong, Vy Da, Hue",
+      "phone": "039 55 85 115",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty_i18n": null,
+      "url": "https://www.mbvet.vn/",
+      "source_url": "https://www.mbvet.vn/tin-tuc/bang-gia-kham-thu-y-gan-day-tai-thanh-pho-hue-49",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "MB Vet Hue Veterinary Hospital - Thai Phien",
+      "city": "Hue",
+      "region": "Hue",
+      "address": "47 Thai Phien, Phu Xuan, Hue",
+      "phone": "070 55 85 115",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty_i18n": null,
+      "url": "https://www.mbvet.vn/",
+      "source_url": "https://www.mbvet.vn/tin-tuc/bang-gia-kham-thu-y-gan-day-tai-thanh-pho-hue-49",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Pet Nha Trang Pet Clinic",
+      "city": "Nha Trang",
+      "region": "Nha Trang",
+      "address": "148 Nguyen Trai, Nha Trang",
+      "phone": "0899 355 558",
+      "emergency_24h": false,
+      "duty": "Open daily 07:30-21:30 (Saturday to 22:00).",
+      "duty_i18n": null,
+      "url": "https://petnhatrang.com/",
+      "source_url": "https://petnhatrang.com/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Veterinary Hospital, Vietnam National University of Agriculture",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "Ngo 64 Ngo Xuan Quang, Trau Quy, Gia Lam, Hanoi",
+      "phone": "02435 145 145",
+      "emergency_24h": true,
+      "duty": "University teaching hospital; open Mon-Fri 07:30-11:30 and 13:30-17:30; emergency line advertised 24/24 on 0399 065 115.",
+      "duty_i18n": null,
+      "url": "https://vethospital.vnua.edu.vn/",
+      "source_url": "https://vethospital.vnua.edu.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Veterinary Hospital, Nong Lam University HCMC",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "Experimental Area, Quarter 5, Linh Trung, Thu Duc, Ho Chi Minh City",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "University veterinary hospital; no opening hours published, contact by email vethospital@hcmuaf.edu.vn.",
+      "duty_i18n": null,
+      "url": "https://vethospital.hcmuaf.edu.vn/vn/",
+      "source_url": "https://vethospital.hcmuaf.edu.vn/vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Practical Veterinary Clinic, Can Tho University",
+      "city": "Can Tho",
+      "region": "Can Tho",
+      "address": "Gate C, Area II, Can Tho University, 3/2 Street, Xuan Khanh, Ninh Kieu, Can Tho",
+      "phone": "0292 373 0362",
+      "emergency_24h": false,
+      "duty": "University veterinary clinic; opening hours not published, call ahead.",
+      "duty_i18n": null,
+      "url": "https://coa.ctu.edu.vn/bx-thu-y/122-benh-xa-thu-y.html",
+      "source_url": "https://coa.ctu.edu.vn/bx-thu-y/122-benh-xa-thu-y.html",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "New Pet Hospital & Spa",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "53 Dang Dung, Tan Dinh, District 1, Ho Chi Minh City",
+      "phone": "0966 694 839",
+      "emergency_24h": true,
+      "duty": "Open 08:00-19:00; after-hours emergency care 19:00-08:00 with a surcharge; advertised 24/7, 365 days a year.",
+      "duty_i18n": null,
+      "url": "http://newpethospital.com.vn/cap-cuu-2424/",
+      "source_url": "http://newpethospital.com.vn/cap-cuu-2424/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 01",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "550 Luy Ban Bich, Hoa Thanh, Tan Phu, Ho Chi Minh City",
+      "phone": "(028) 38 612 977",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 02",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "387-389 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City",
+      "phone": "(028) 62 972 290",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 03",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "111 Truong Chinh, Ward 12, Tan Binh, Ho Chi Minh City",
+      "phone": "0916 219 211",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 04",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "155 Nguyen Thi Tu, Binh Hung Hoa, Binh Tan, Ho Chi Minh City",
+      "phone": "0912 219 211",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 05",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "277 Kinh Duong Vuong, An Lac, Binh Tan, Ho Chi Minh City",
+      "phone": "0911 368 041",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 06",
+      "city": "Vung Tau",
+      "region": "Ho Chi Minh City",
+      "address": "383 Nguyen An Ninh, Ward 9, Vung Tau",
+      "phone": "0919 949 041",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetPro Veterinary Hospital - Branch 07",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "145 Tran Quy, Ward 4, District 11, Ho Chi Minh City",
+      "phone": "0913 339 041",
+      "emergency_24h": false,
+      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": null,
+      "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Myn Pet Veterinary Hospital",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "161 Nguyen Hong Dao, Tan Binh, Ho Chi Minh City",
+      "phone": "0903 385 222",
+      "emergency_24h": true,
+      "duty": "Hospital open daily 08:30-21:00; emergency intake 24/7 including nights, weekends and holidays.",
+      "duty_i18n": null,
+      "url": "https://mynpet.vn/cap-cuu-247",
+      "source_url": "https://mynpet.vn/cap-cuu-247",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Vpet's Veterinary Hospital",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "329/2 Nguyen Tieu La, Dien Hong, Ho Chi Minh City",
+      "phone": "0911 806 869",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 7 days a week with emergency and inpatient care, including holidays.",
+      "duty_i18n": null,
+      "url": "https://vpets.vn/phong-kham/cap-cuu-24-24h/",
+      "source_url": "https://vpets.vn/phong-kham/cap-cuu-24-24h/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetCare Veterinary Hospital - Petcare 1",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "124A Xuan Thuy, An Khanh, Ho Chi Minh City",
+      "phone": "0918 271 246",
+      "emergency_24h": true,
+      "duty": "Regular hours Mon-Sat 08:00-12:00 and 14:00-19:00, Sun and holidays 08:00-12:00; emergency care advertised 24/7 including holidays; call ahead.",
+      "duty_i18n": null,
+      "url": "https://petcare.vn/",
+      "source_url": "https://petcare.vn/services/emergency-service/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetCare Veterinary Hospital - Petcare 2",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "S8-1 Street 6, Tan Hung, Ho Chi Minh City",
+      "phone": "0917 941 246",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Sat 08:00-12:00 and 14:00-19:00, Sun and holidays 08:00-12:00; call ahead for emergencies.",
+      "duty_i18n": null,
+      "url": "https://petcare.vn/",
+      "source_url": "https://petcare.vn/services/emergency-service/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "PetCare Veterinary Hospital - Petcare 4",
+      "city": "Vung Tau",
+      "region": "Ho Chi Minh City",
+      "address": "25 Nguyen Thai Hoc, Tam Thang, Vung Tau",
+      "phone": "0914 764 246",
+      "emergency_24h": true,
+      "duty": "Regular hours Mon-Sat 08:00-12:00 and 14:00-19:00, Sun and holidays 08:00-12:00; emergency care advertised 24/7 including holidays; call ahead.",
+      "duty_i18n": null,
+      "url": "https://petcare.vn/",
+      "source_url": "https://petcare.vn/services/emergency-service/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Pet Health Centre - Phu My Hung",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "009 Nguyen Van Linh, Tan Hung, Ho Chi Minh City",
+      "phone": "0899 588 808",
+      "emergency_24h": true,
+      "duty": "Veterinary emergency care advertised 24/7 at all branches; emergency hotline 0908 412 400.",
+      "duty_i18n": null,
+      "url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
+      "source_url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Pet Health Centre - Thu Duc",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "447E Le Van Viet, Tang Nhon Phu, Ho Chi Minh City",
+      "phone": "0765 859 587",
+      "emergency_24h": true,
+      "duty": "Veterinary emergency care advertised 24/7 at all branches; emergency hotline 0908 412 400.",
+      "duty_i18n": null,
+      "url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
+      "source_url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Pet Cute Veterinary Clinic",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "24 T2 Manhattan, Vinhomes Grand Park, District 9, Thu Duc, Ho Chi Minh City",
+      "phone": "077 977 2679",
+      "emergency_24h": true,
+      "duty": "Emergency support advertised 24/7; regular opening hours not published, call ahead.",
+      "duty_i18n": null,
+      "url": "https://phongkhamthuypetcute.com/chuyen-khoa/",
+      "source_url": "https://phongkhamthuypetcute.com/chuyen-khoa/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dr. Eopi Veterinary Hospital - Le Van Khuong",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "317 Le Van Khuong, Hiep Thanh, District 12, Ho Chi Minh City",
+      "phone": "028 6651 1763",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 07:00-19:00, Sun and holidays 07:00-17:00; call ahead for out-of-hours emergencies.",
+      "duty_i18n": null,
+      "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dr. Eopi Veterinary Hospital - Nguyen Thi Dang",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "84 Nguyen Thi Dang, Hiep Thanh, District 12, Ho Chi Minh City",
+      "phone": "028 6656 6386",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 07:00-19:00, Sun and holidays 07:00-17:00; call ahead for out-of-hours emergencies.",
+      "duty_i18n": null,
+      "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dr. Eopi Veterinary Hospital - Nguyen Anh Thu",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "855 Nguyen Anh Thu, Tan Chanh Hiep, District 12, Ho Chi Minh City",
+      "phone": "0979 820 386",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 07:00-19:00, Sun and holidays 07:00-17:00; call ahead for out-of-hours emergencies.",
+      "duty_i18n": null,
+      "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dr. Eopi Veterinary Hospital - Quang Trung",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "979 Quang Trung, Ward 14, Go Vap, Ho Chi Minh City",
+      "phone": "028 7302 1991",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 07:00-19:00, Sun and holidays 07:00-17:00; call ahead for out-of-hours emergencies.",
+      "duty_i18n": null,
+      "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Binh Thanh",
+      "city": "Ho Chi Minh City",
+      "region": "Ho Chi Minh City",
+      "address": "128 Chu Van An, Binh Thanh, Ho Chi Minh City",
+      "phone": "096 699 8126",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Kim Nguu",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "335 Kim Nguu, Vinh Tuy, Hanoi",
+      "phone": "024 3826 3366",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Kim Ma",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "236 Kim Ma, Ngoc Ha, Hanoi",
+      "phone": "024 3204 8585",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Ha Dong",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "8A Ba Trieu, Ha Dong, Hanoi",
+      "phone": "024 3202 0082",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Giai Phong",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "1261 Giai Phong, Hoang Mai, Hanoi",
+      "phone": "024 3636 0036",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Ocean Park",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "Bien Ho 10A SP10-08, Vinhomes Ocean Park, Gia Lam, Hanoi",
+      "phone": "086 999 8126",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "2Vet Dong Da",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "101 Duong Lang, Dong Da, Hanoi",
+      "phone": "024 3633 6655",
+      "emergency_24h": false,
+      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": null,
+      "url": "https://2vet.vn/",
+      "source_url": "https://2vet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "MIA Animal Hospital",
+      "city": "Hanoi",
+      "region": "Hanoi",
+      "address": "18 Ngo 10 Nguyen Van Huyen, Cau Giay, Hanoi",
+      "phone": "024 7308 8966",
+      "emergency_24h": true,
+      "duty": "Open 08:00-20:00 daily; emergency care advertised 24/7.",
+      "duty_i18n": null,
+      "url": "https://miapet.vn/",
+      "source_url": "https://miapet.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dogs & Cats Veterinary Group - Tam Ky",
+      "city": "Tam Ky",
+      "region": "Quang Nam",
+      "address": "31 Ton Duc Thang, An Son, Tam Ky, Quang Nam",
+      "phone": "0941 579 007",
+      "emergency_24h": false,
+      "duty": "Open daily 07:00-19:00; call ahead for emergencies.",
+      "duty_i18n": null,
+      "url": "https://bacsithucung.vn/",
+      "source_url": "https://bacsithucung.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Dogs & Cats Veterinary Group - Nui Thanh",
+      "city": "Nui Thanh",
+      "region": "Quang Nam",
+      "address": "57 Ho Xuan Huong, Nui Thanh, Quang Nam",
+      "phone": "0935 668 070",
+      "emergency_24h": false,
+      "duty": "Open daily 07:00-19:00; call ahead for emergencies.",
+      "duty_i18n": null,
+      "url": "https://bacsithucung.vn/",
+      "source_url": "https://bacsithucung.vn/",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "VN",
+      "kind": "clinic",
+      "name": "Paws International Vet Clinic",
+      "city": "Da Nang",
+      "region": "Da Nang",
+      "address": null,
+      "phone": "0339 325 563",
+      "emergency_24h": false,
+      "duty": "English-speaking clinic in Da Nang; emergency line 0339 325 563; opening hours not published, call ahead.",
+      "duty_i18n": null,
+      "url": "https://pawsclinic.vn/",
+      "source_url": "https://pawsclinic.vn/",
       "checked": "2026-11-11"
     },
     {

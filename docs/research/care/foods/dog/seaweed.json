@@ -9,7 +9,8 @@
     "fr": "Algues (nori)",
     "es": "Algas (nori)",
     "it": "Alghe (nori)",
-    "nl": "Zeewier (nori)"
+    "nl": "Zeewier (nori)",
+    "pl": "Wodorosty (nori)"
   },
   "question": {
     "en": "Can dogs eat seaweed?",
@@ -19,7 +20,8 @@
     "fr": "Les chiens peuvent-ils manger des algues ?",
     "es": "¿Pueden los perros comer algas?",
     "it": "I cani possono mangiare le alghe?",
-    "nl": "Mogen honden zeewier eten?"
+    "nl": "Mogen honden zeewier eten?",
+    "pl": "Czy psy mogą jeść wodorosty?"
   },
   "url_slug": {
     "en": "seaweed",
@@ -29,7 +31,8 @@
     "fr": "algues",
     "es": "algas",
     "it": "alghe",
-    "nl": "zeewier"
+    "nl": "zeewier",
+    "pl": "wodorosty"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "fr": "Certaines algues, avec modération. Le nori nature ou les feuilles d’algues sans sel, ail ni assaisonnement ajoutés conviennent en petite quantité. Les algues sauvages de la plage sont un tout autre cas : elles peuvent contenir trop de sel et, une fois séchées, leurs filaments peuvent gonfler dans l’estomac ; consultez donc immédiatement un vétérinaire si votre chien en mange.",
     "es": "Algunos tipos, con moderación. El nori al natural y las láminas de alga sin sal, ajo ni condimentos añadidos están bien en pequeñas cantidades. Las algas silvestres de la playa son otra cosa: pueden llevar demasiada sal y, si están secas, hincharse en el estómago. Si tu perro se las come, consulta enseguida con un veterinario.",
     "it": "Solo alcuni tipi, e con moderazione. Le alghe nori o i fogli di alghe al naturale, senza sale, aglio o condimenti aggiunti, vanno bene in piccole quantità. Le alghe selvatiche della spiaggia sono un discorso diverso: possono contenere troppo sale e, secche, possono gonfiarsi nello stomaco, quindi se il tuo cane ne mangia consulta subito il veterinario.",
-    "nl": "Sommige soorten wel, met mate. Naturel nori of zeewiervellen zonder toegevoegd zout, knoflook of kruiden zijn in kleine hoeveelheden prima. Wild zeewier op het strand is iets anders: daar kan te veel zout in zitten en gedroogde slierten kunnen in de maag opzwellen. Heeft je hond het toch gegeten, neem dan meteen contact op met een dierenarts."
+    "nl": "Sommige soorten wel, met mate. Naturel nori of zeewiervellen zonder toegevoegd zout, knoflook of kruiden zijn in kleine hoeveelheden prima. Wild zeewier op het strand is iets anders: daar kan te veel zout in zitten en gedroogde slierten kunnen in de maag opzwellen. Heeft je hond het toch gegeten, neem dan meteen contact op met een dierenarts.",
+    "pl": "Niektóre rodzaje, z umiarem. Zwykłe nori lub arkusze wodorostów bez dodatku soli, czosnku i przypraw są w małych ilościach w porządku. Dzikie wodorosty z plaży to co innego: mogą zawierać zbyt dużo soli, a suche pasma mogą pęcznieć w żołądku, więc jeśli pies je zje, od razu skonsultuj się z weterynarzem."
   },
   "why": {
     "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -50,7 +54,8 @@
     "fr": "Les algues sont nutritives et contiennent des protéines, du fer, de l’iode, du magnésium et des oméga-3. Mais une trop grande quantité d’algues peut perturber l’estomac d’un chien, et trop d’iode peut affecter la thyroïde. Les algues sauvages de la plage peuvent contenir trop de sel, ce qui expose le chien à un risque d’intoxication au sel ; leurs longs filaments peuvent se coincer dans l’intestin ou abriter de petits animaux ou des parasites cachés, et les algues sauvages séchées peuvent gonfler dans l’estomac.",
     "es": "Las algas son nutritivas y contienen proteínas, hierro, yodo, magnesio y omega-3. Pero si un perro come demasiadas, pueden sentarle mal al estómago, y un exceso de yodo puede afectar a su tiroides. Las algas silvestres de la playa pueden llevar un exceso de sal, con riesgo de intoxicación por sal; sus hebras largas pueden quedarse atascadas en el intestino o esconder animales y parásitos, y las secas pueden hincharse en el estómago.",
     "it": "Le alghe sono nutrienti e contengono proteine, ferro, iodio, magnesio e omega-3. Ma troppe alghe possono causare disturbi di stomaco al cane e troppo iodio può influire sulla tiroide. Le alghe selvatiche della spiaggia possono contenere troppo sale, con il rischio di intossicazione da sale; i filamenti lunghi possono bloccarsi nell’intestino o portare con sé piccoli animali o parassiti nascosti, e le alghe selvatiche secche possono gonfiarsi nello stomaco.",
-    "nl": "Zeewier is voedzaam en bevat eiwitten, ijzer, jodium, magnesium en omega-3-vetzuren. Maar te veel zeewier kan de maag van een hond van streek maken, en te veel jodium kan de schildklier beïnvloeden. Wild zeewier op het strand kan te veel zout bevatten, waardoor een hond het risico loopt op een zoutvergiftiging. De lange slierten kunnen vast komen te zitten in de darmen of verborgen diertjes of parasieten bevatten, en droog wild zeewier kan in de maag opzwellen."
+    "nl": "Zeewier is voedzaam en bevat eiwitten, ijzer, jodium, magnesium en omega-3-vetzuren. Maar te veel zeewier kan de maag van een hond van streek maken, en te veel jodium kan de schildklier beïnvloeden. Wild zeewier op het strand kan te veel zout bevatten, waardoor een hond het risico loopt op een zoutvergiftiging. De lange slierten kunnen vast komen te zitten in de darmen of verborgen diertjes of parasieten bevatten, en droog wild zeewier kan in de maag opzwellen.",
+    "pl": "Wodorosty są pożywne i zawierają białko, żelazo, jod, magnez i kwasy omega-3. Jednak zbyt duża ilość może rozstroić żołądek psa, a nadmiar jodu może wpływać na tarczycę. Dzikie wodorosty z plaży mogą zawierać nadmiar soli, co naraża psa na zatrucie solą; ich długie pasma mogą utknąć w jelitach lub kryć w sobie zwierzęta albo pasożyty, a suche dzikie wodorosty mogą pęcznieć w żołądku."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "fr": "Surveillez votre chien à la plage pour qu’il ne mange pas d’algues sauvages. S’il en mange, consultez immédiatement un vétérinaire : elles peuvent provoquer des vomissements, de la diarrhée, de la faiblesse et de la léthargie.",
     "es": "Vigila a tu perro en la playa para que no coma algas silvestres. Si se come algas en la playa, consulta enseguida con un veterinario: pueden causarle vómitos, diarrea, debilidad y decaimiento.",
     "it": "In spiaggia controlla che il tuo cane non mangi alghe selvatiche. Se il tuo cane mangia alghe in spiaggia, consulta subito il veterinario: possono causare vomito, diarrea, debolezza e abbattimento.",
-    "nl": "Houd je hond op het strand in de gaten, zodat hij geen wild zeewier eet. Heeft je hond toch zeewier op het strand gegeten, neem dan meteen contact op met een dierenarts; het kan braken, diarree, zwakte en lusteloosheid veroorzaken."
+    "nl": "Houd je hond op het strand in de gaten, zodat hij geen wild zeewier eet. Heeft je hond toch zeewier op het strand gegeten, neem dan meteen contact op met een dierenarts; het kan braken, diarree, zwakte en lusteloosheid veroorzaken.",
+    "pl": "Pilnuj psa na plaży, żeby nie zjadał dzikich wodorostów. Jeśli pies zje wodorosty na plaży, od razu skonsultuj się z weterynarzem; mogą wywołać wymioty, biegunkę, osłabienie i ospałość."
   },
   "serving": {
     "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -71,7 +77,8 @@
     "fr": "Uniquement des algues nature, sans assaisonnement, en petite quantité, par exemple des feuilles de nori préemballées. Lisez la liste des ingrédients pour vous assurer qu’il n’y a ni assaisonnement, ni sel, ni ail ajoutés.",
     "es": "Solo algas al natural y sin condimentar, en pequeñas cantidades, como las láminas de nori envasadas. Lee la lista de ingredientes para asegurarte de que no llevan condimentos, sal ni ajo añadidos.",
     "it": "Solo alghe al naturale e senza condimenti, in piccole quantità, per esempio fogli di nori confezionati. Leggi l’elenco degli ingredienti per assicurarti che non contenga condimenti, sale o aglio aggiunti.",
-    "nl": "Alleen naturel, ongekruid zeewier in kleine hoeveelheden, zoals voorverpakte norivellen. Lees de ingrediëntenlijst om zeker te weten dat er geen kruiden, zout of knoflook aan is toegevoegd."
+    "nl": "Alleen naturel, ongekruid zeewier in kleine hoeveelheden, zoals voorverpakte norivellen. Lees de ingrediëntenlijst om zeker te weten dat er geen kruiden, zout of knoflook aan is toegevoegd.",
+    "pl": "Tylko zwykłe, nieprzyprawione wodorosty w małych ilościach, na przykład gotowe arkusze nori. Sprawdź skład i upewnij się, że nie ma w nim przypraw, soli ani czosnku."
   },
   "child": {
     "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -81,7 +88,8 @@
     "fr": "Les chiens peuvent goûter un peu de nori nature. À la plage, aide à les tenir éloignés des algues échouées sur le sable.",
     "es": "Los perros pueden probar un poquito de nori al natural. En la playa, ayuda a que tu perro no se acerque a las algas de la arena.",
     "it": "I cani possono assaggiare un po’ di nori al naturale. In spiaggia aiuta a tenerli lontani dalle alghe sulla sabbia.",
-    "nl": "Honden mogen een klein beetje naturel nori proeven. Op het strand kun je helpen om ze bij het zeewier weg te houden."
+    "nl": "Honden mogen een klein beetje naturel nori proeven. Op het strand kun je helpen om ze bij het zeewier weg te houden.",
+    "pl": "Pies może skosztować odrobiny zwykłego nori. Na plaży dopilnuj, żeby nie zbliżał się do wodorostów leżących na piasku."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "fr": "Que faire si mon chien mange des algues à la plage ?",
         "es": "¿Qué hago si mi perro se come algas en la playa?",
         "it": "E se il mio cane mangia alghe in spiaggia?",
-        "nl": "Wat als mijn hond op het strand zeewier eet?"
+        "nl": "Wat als mijn hond op het strand zeewier eet?",
+        "pl": "Co zrobić, jeśli pies zje wodorosty na plaży?"
       },
       "a": {
         "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -103,7 +112,8 @@
         "fr": "Consultez immédiatement un vétérinaire. Les algues sauvages peuvent contenir trop de sel, les algues séchées peuvent gonfler dans l’estomac et les longs filaments peuvent se coincer dans l’intestin.",
         "es": "Consulta enseguida con un veterinario. Las algas silvestres pueden contener un exceso de sal, las algas secas pueden hincharse en el estómago y las hebras largas pueden quedarse atascadas en el intestino.",
         "it": "Consulta subito il veterinario. Le alghe selvatiche possono contenere troppo sale, quelle secche possono gonfiarsi nello stomaco e i filamenti lunghi possono bloccarsi nell’intestino.",
-        "nl": "Neem meteen contact op met een dierenarts. Wild zeewier kan te veel zout bevatten, droog zeewier kan in de maag opzwellen en lange slierten kunnen vast komen te zitten in de darmen."
+        "nl": "Neem meteen contact op met een dierenarts. Wild zeewier kan te veel zout bevatten, droog zeewier kan in de maag opzwellen en lange slierten kunnen vast komen te zitten in de darmen.",
+        "pl": "Od razu skonsultuj się z weterynarzem. Dzikie wodorosty mogą zawierać nadmiar soli, suche wodorosty mogą pęcznieć w żołądku, a długie pasma mogą utknąć w jelitach."
       }
     },
     {
@@ -115,7 +125,8 @@
         "fr": "Les chiens peuvent-ils manger des sushis ou des algues avec de la sauce soja ?",
         "es": "¿Pueden los perros comer sushi o algas con salsa de soja?",
         "it": "I cani possono mangiare il sushi o le alghe con salsa di soia?",
-        "nl": "Mogen honden sushi of zeewier met sojasaus eten?"
+        "nl": "Mogen honden sushi of zeewier met sojasaus eten?",
+        "pl": "Czy psy mogą jeść sushi lub wodorosty z sosem sojowym?"
       },
       "a": {
         "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -125,7 +136,8 @@
         "fr": "Non. Les sushis préparés avec du poisson cru peuvent rendre votre chien malade, et la sauce soja est très riche en sel.",
         "es": "No. El sushi hecho con pescado crudo puede sentarle mal a tu perro, y la salsa de soja tiene mucha sal.",
         "it": "No. Il sushi con pesce crudo può far stare male il cane e la salsa di soia è ricca di sale.",
-        "nl": "Nee. Sushi met rauwe vis kan je hond ziek maken, en in sojasaus zit veel zout."
+        "nl": "Nee. Sushi met rauwe vis kan je hond ziek maken, en in sojasaus zit veel zout.",
+        "pl": "Nie. Sushi z surową rybą może rozchorować psa, a sos sojowy zawiera dużo soli."
       }
     }
   ],
@@ -242,6 +254,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "62edc47e03960f8fa88b053918b0ac51259387c9ad556e65c440d59b41101e64"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9758a8dd17be1608b0b3c73c2aa4dee4274f5feb5015650484d602e2df6fd521"
     }
   }
 }
