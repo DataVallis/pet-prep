@@ -134,10 +134,14 @@ class BreedCatalogService
      * from config/breed_suitability.php (code, not breed_configs), so it is
      * added here and never cached.
      *
+     * `$freeBreedChallenge` (M6-U02, U4): the requesting build declared
+     * `free_breed_challenge` — the free breed is then `challenge_allowed` too (»mešanček +
+     * izziv«); old builds keep `challenge_allowed = premium`.
+     *
      * @param  list<Species>  $availableSpecies
      * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string}>}>
      */
-    public function catalogue(array $availableSpecies, ?Species $species = null): array
+    public function catalogue(array $availableSpecies, ?Species $species = null, bool $freeBreedChallenge = false): array
     {
         $allowed = array_map(fn (Species $s) => $s->value, $availableSpecies);
         $rows = [];
@@ -152,9 +156,10 @@ class BreedCatalogService
 
             $rows[] = $entry + [
                 // PairingService::breedAllowed: the free plan takes only a free breed; the
-                // 12-week challenge only a paid one (M5-F03, assertPlanAllowed).
+                // 12-week challenge only a paid one (M5-F03, assertPlanAllowed) — for new
+                // builds any breed (M6-U02, U4: PairingService::allowsFreeBreedChallenge).
                 'free_plan_allowed' => ! $entry['premium'],
-                'challenge_allowed' => $entry['premium'],
+                'challenge_allowed' => $entry['premium'] || $freeBreedChallenge,
                 'suitability' => $this->suitability->for(BreedType::from($entry['breed'])),
                 // M5-R21: the colour picker of a paid breed (labels in the request language).
                 'colours' => $entry['premium'] ? app(BreedColourCatalogue::class)->pickerFor(BreedType::from($entry['breed']), app()->getLocale()) : [],

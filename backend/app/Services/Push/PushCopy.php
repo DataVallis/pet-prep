@@ -198,6 +198,8 @@ final class PushCopy
             PushType::WishCreated => $line('wish_created.body', ['item' => $line('wish_items.'.(is_string($variant) && Lang::has("push.wish_items.{$variant}", $locale, false) ? $variant : 'other'))]),
             // M6-W03: the child's news; `variant` = the item variant → one whole sentence per item (no declension).
             PushType::ItemReady => $line('item_ready.'.(is_string($variant) && Lang::has("push.item_ready.{$variant}", $locale, false) ? $variant : 'other')),
+            // M6-U02: parents only, formal; dog / cat text, no names, no price.
+            PushType::UpgradeReminder => $line('upgrade_reminder'),
         };
     }
 
