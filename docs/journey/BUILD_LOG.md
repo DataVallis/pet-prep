@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Prvi izdelki za prodajo prek spletne strani
+
+**Kaj:** Na `main` so prvi izdelki, ki jih lahko kupite prek spletne strani. Darilni bon za 12-tedenski izziv (strežnik #1047, spletna stran pet-prep-website#372) je izklopljen, dokler aplikacija ni v trgovinah. Natisljivi komplet »Obljuba o ljubljenčku« (spletna stran pet-prep-website#371) je za stikalom, dokler David ne potrdi besedila. Stran za partnerje in sponzorje (strežnik #1049, spletna stran pet-prep-website#368) je objavljena.
+**Zakaj je pomembno:** prvič PetPrep prodaja tudi zunaj trgovin z aplikacijami; obe novi prodaji sta do potrditve skriti.
+**Kako povedati:** 👩 »Izziv lahko podarite. Kupite bon, natisnete ga in ga podarite.« (šele ko je bon vklopljen). 💼🤝 »Partnerska stran je na spletu; odgovorov na povpraševanja ne pošiljamo samodejno.«
+
+---
+
 ## 2026-11-11 — Darilni bon za 12-tedenski izziv: strežnik je pripravljen *(izklopljeno do izida v trgovinah)*
 
 **Kaj:** Strežnik zna sprejeti darilni bon s spletne strani (M6-S01). Bon se kupi prek Lemon Squeezy (49,99 €, velja 12 mesecev); koda bona je licenčni ključ Lemon Squeezy. Starš na spletu vnese kodo in e-naslov svojega računa v aplikaciji → družina dobi en kupljen 12-tedenski izziv, ki ga v aplikaciji dodeli ljubljenčku po svoji izbiri. Koda se najprej preveri pri Lemon Squeezy in porabi šele, ko je račun starša najden; vračilo v Lemon Squeezy bon razveljavi in izziv prekliče po istih pravilih kot vračilo v trgovini. Strežnik nikjer ne hrani kode (samo njen prstni odtis in zadnje 4 znake) in nobenega podatka kupca. Stikalo »Darilni boni« v administraciji je **izklopljeno**, dokler aplikacija ni v trgovinah. 64 novih testov za bon + 8 regresijskih testov, ki dokazujejo, da se nakupi v trgovini (RevenueCat) obnašajo popolnoma enako kot prej (posnetek odgovorov, posnet na `main` pred spremembo).
