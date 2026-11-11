@@ -70,7 +70,8 @@ class GeneratePinRequest extends FormRequest
             'features.*' => ['string', 'max:64'],
             // M3-11 (PAYMENTS_SPEC): plan of the new pet — `free` (mutt only,
             // 422 breed_locked for a premium breed) or `challenge` (starts with a
-            // purchase — no free trial since M3-13; paid breed only — M5-F03). Omitted (old app builds) →
+            // purchase — no free trial since M3-13; paid breed only — M5-F03, unless `features`
+            // contains `free_breed_challenge`: then any breed, M6-U02 / U4). Omitted (old app builds) →
             // `challenge` for a paid breed, `free` for the mutt (P4). Ignored when
             // joining a pet / re-login.
             'plan' => ['sometimes', 'nullable', Rule::enum(PetPlan::class)],

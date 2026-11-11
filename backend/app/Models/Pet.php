@@ -85,9 +85,12 @@ class Pet extends Model
             // the free breed of its species: mutt, domestic cat; M5-R06-01) is the
             // free plan — no creation path (admin, seeders, legacy pairing) makes a
             // lockable free-breed challenge.
+            // M6-U02 (U4 / K3): the one exception is a new parent build's explicit »free breed +
+            // challenge« (PairingService::createPet sets `free_breed_challenge`) — that pet
+            // waits for a purchase at birth like a paid-breed challenge pet.
             $pet->plan ??= PairingService::defaultPlanFor($pet->breed_type);
             if ($pet->plan === PetPlan::Challenge && $pet->challenge_paid_at === null
-                && ! $pet->breed_type->isPremium()) {
+                && ! $pet->breed_type->isPremium() && ! $pet->free_breed_challenge) {
                 $pet->plan = PetPlan::Free;
                 $pet->trial_ends_at = null;
                 $pet->payment_locked_at = null;
@@ -300,6 +303,12 @@ class Pet extends Model
         // M5-T13 bookkeeping (the apps get BirthdayPayload instead).
         'birthday_celebrated_at',
         'birthday_next_check_at',
+        // M6-U02 bookkeeping (the dashboard gets `upgrade_reminder` instead).
+        'upgrade_reminder_sent_at',
+        'upgrade_reminder_child_id',
+        // M6-U02: »mešanček + izziv« marker (the apps get `plan` instead).
+        'free_breed_challenge',
+        'upgrade_reminder_next_check_at',
         // M5-R14 – R20 follow-up: when an existing dog's care tasks start (apps get the tasks themselves).
         'care_tasks_since',
         'care_reminder_check_at',
@@ -372,6 +381,13 @@ class Pet extends Model
             'care_tasks_since' => 'datetime',
             'care_reminder_check_at' => 'datetime',
             'birthday_next_check_at' => 'datetime',
+            // M6-U02: the day-7 upgrade reminder (UpgradeReminderService).
+            'upgrade_reminder_sent_at' => 'datetime',
+            'upgrade_reminder_next_check_at' => 'datetime',
+            // M6-U02 (U4 / K3): created as »mešanček + izziv« by a new parent build — set only by
+            // PairingService::createPet before the first save; tells `creating` to keep the unpaid
+            // challenge and PetPlanPayload::displaysAsFree never to show it as free.
+            'free_breed_challenge' => 'boolean',
             'simple_activities' => 'array',
         ];
     }

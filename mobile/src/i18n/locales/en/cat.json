@@ -600,6 +600,13 @@
       "result": {
         "restoredNoCredit": "Your purchases have been restored, but there is no unused challenge. Each challenge covers one cat.",
         "refused": "This cat doesn't need a challenge (free plan or already paid)."
+      },
+      "upgradeReminder": {
+        "body": "{{child}} has been looking after {{name}} for 7 days. Time for the real test?",
+        "bodyNoName": "{{child}} has been looking after the cat for 7 days. Time for the real test?",
+        "bodyNoChild": "Your child has been looking after {{name}} for 7 days. Time for the real test?",
+        "bodyNoChildNoName": "Your child has been looking after the cat for 7 days. Time for the real test?",
+        "hint": "You can start the 12-week challenge with the same cat: a week-by-week programme, a certificate and the full history."
       }
     }
   },

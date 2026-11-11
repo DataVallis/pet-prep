@@ -86,7 +86,8 @@ class ChildPinLoginService
      * legacy-profile pet on the pre-M5 rules. `$plan` (M3-11) is the new
      * pet's plan, kept on the PIN the same way (free → mutt only).
      * `$planChosen` (M5-F03): the parent sent `plan` explicitly — then a
-     * challenge with the mutt (or no breed → mutt) is refused.
+     * challenge with the mutt (or no breed → mutt) is refused, unless the profile's
+     * features contain `free_breed_challenge` (M6-U02, U4: new parent builds only).
      *
      * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null, plan: string|null, trial_available: bool|null}
      *
@@ -124,6 +125,7 @@ class ChildPinLoginService
                 $this->pairing->assertColourAllowed($profile);
             }
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
+            // M6-U02: unless the parent's build declared `free_breed_challenge` (U4, new apps only).
             if ($mode === self::MODE_NEW_PET && $planChosen) {
                 $this->pairing->assertPlanAllowed($profile, $plan);
             }
@@ -224,12 +226,16 @@ class ChildPinLoginService
                             'parent_id' => $locked->created_by ?? $family->parents()->value('users.id'),
                         ])->saveQuietly();
                     }
+                    // M6-U02 (U4 / K3): »free breed + challenge« is the PARENT's choice — read from the
+                    // PIN's own features (the parent's build), before the child-device intersection.
+                    $storedProfile = $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options) : null;
                     ['pet' => $pet, 'joined_existing' => $joined] = $this->pairing->attachChildToPet(
                         // A PIN without options (issued before M5-R01) → legacy-profile pet.
                         // M5-R02: features = parent PIN ∩ this child device (both apps must show them).
-                        $family, $child, $locked->pet_id, $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options)->withOnlyFeatures($clientFeatures) : null,
+                        $family, $child, $locked->pet_id, $storedProfile?->withOnlyFeatures($clientFeatures),
                         // M3-11: a PIN from an old app build has no plan → challenge.
                         $locked->plan ?? PetPlan::Challenge,
+                        PairingService::allowsFreeBreedChallenge($storedProfile),
                     );
                 }
 

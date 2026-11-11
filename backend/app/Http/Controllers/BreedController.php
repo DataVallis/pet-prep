@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\ClientFeature;
 use App\Enums\Species;
 use App\Http\Requests\BreedCatalogRequest;
 use App\Http\Resources\BreedCatalogResource;
@@ -35,7 +36,9 @@ class BreedController extends Controller
      * Free / paid = `breed_configs.premium_unlock` (the same rule
      * generate-pin applies: `plan: free` → `free_plan_allowed`, `plan:
      * challenge` → `challenge_allowed`, else 422 `breed_locked` /
-     * `challenge_requires_paid_breed`).
+     * `challenge_requires_paid_breed`). M6-U02 (U4): with
+     * `features[]=free_breed_challenge` the free breed is `challenge_allowed`
+     * too (»mešanček + izziv«); without it (old builds) only paid breeds.
      *
      * GET /api/breeds
      */
@@ -47,7 +50,11 @@ class BreedController extends Controller
         return response()->json([
             /** @var list<'dog'|'cat'> */
             'species' => array_map(fn (Species $s): string => $s->value, $available),
-            'breeds' => BreedCatalogResource::collection($this->catalogue->catalogue($available, $request->species())),
+            'breeds' => BreedCatalogResource::collection($this->catalogue->catalogue(
+                $available,
+                $request->species(),
+                in_array(ClientFeature::FreeBreedChallenge->value, $request->features(), true),
+            )),
         ]);
     }
 }

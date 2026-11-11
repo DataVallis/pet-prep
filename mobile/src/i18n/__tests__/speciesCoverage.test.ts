@@ -363,7 +363,12 @@ describe('tSpecies (parent texts by the shown pet, M5-R06-08c)', () => {
 
 describe('payments for a cat (M5-R06-09: paywall, purchase entry, deletion ack)', () => {
   /** Texts about one pet: a cat variant. */
-  const PER_PET = ['paywall:entry.buyA11y', 'paywall:challenge.unborn', 'paywall:challenge.paused', 'paywall:result.refused'];
+  const PER_PET = [
+    'paywall:entry.buyA11y', 'paywall:challenge.unborn', 'paywall:challenge.paused', 'paywall:result.refused',
+    // M6-U02: the day-7 reminder card (one pet).
+    'paywall:upgradeReminder.body', 'paywall:upgradeReminder.bodyNoChild', 'paywall:upgradeReminder.bodyNoChildNoName',
+    'paywall:upgradeReminder.bodyNoName', 'paywall:upgradeReminder.hint',
+  ];
   /** Texts about a group of pets: a cat variant AND a neutral `cat:mixed.*` for dogs + cats. */
   const GROUP = [
     'paywall:banner.paymentRequired',

@@ -134,10 +134,21 @@ enum PushType: string
      */
     case ItemReady = 'item_ready';
 
+    /**
+     * M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1 / §5.7, David 2026-11-10): the day-7 reminder of a
+     * FREE pet — 7 days after the contract, with a child action on at least 5 of those 7
+     * pet-local days: »Je čas za pravi preizkus?«. Parents only (formal copy; title = the
+     * pet's name when set; the body never names the child), once per pet
+     * (UpgradeReminderService guards with `pets.upgrade_reminder_sent_at`). Normal priority;
+     * held (not dropped) over quiet hours; dropped while the pet is locked and when the pet is
+     * no longer an upgradeable free pet at delivery (bought, game over). Never a price.
+     */
+    case UpgradeReminder = 'upgrade_reminder';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady, self::UpgradeReminder], true);
     }
 
     /**
@@ -158,7 +169,8 @@ enum PushType: string
      */
     public function holdsOverQuietHours(): bool
     {
-        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated || $this === self::ItemReady;
+        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated || $this === self::ItemReady
+            || $this === self::UpgradeReminder;
     }
 
     /**
@@ -209,6 +221,8 @@ enum PushType: string
             self::WishCreated => 12 * 3600,
             // M6-W03: the new item is still news later that day.
             self::ItemReady => 12 * 3600,
+            // M6-U02: the dashboard card says the same; still useful later that day.
+            self::UpgradeReminder => 12 * 3600,
         };
     }
 }

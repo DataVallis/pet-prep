@@ -25,6 +25,8 @@ export const PUSH_TYPES = [
   'wish_created',
   // M6-W03: a bought item's content is ready (caretaker children; data `{type, pet_id}`).
   'item_ready',
+  // M6-U02: a free pet's day-7 reminder »Je čas za pravi preizkus?« (parents only, once per pet).
+  'upgrade_reminder',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
@@ -73,6 +75,7 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== 'pet_birthday' &&
     type !== 'care_reminder' &&
     type !== 'wish_created' &&
-    type !== 'item_ready'
+    type !== 'item_ready' &&
+    type !== 'upgrade_reminder'
   );
 }

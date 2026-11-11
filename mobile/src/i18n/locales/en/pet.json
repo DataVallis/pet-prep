@@ -207,6 +207,7 @@
     "colourA11y": "Colour: {{colour}}",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
     "lockedFreeOnlyA11y": "{{breed}}, not available — only on the free plan",
+    "freeBreedChallengeHint": "Start for free — you can add the challenge at any time.",
     "originTitle": "Where it comes from",
     "origins": {
       "bought": "Bought (breeder)",

@@ -3,7 +3,7 @@
 > **Odločitve:** U1–U6 in §3–§4 potrdil David 10. 11. 2026. Popravki istega dne po pregledu kode: Claudovi predlogi K1–K7 potrjeni, plus Davidove spremembe D1–D4 (§2).
 > **Tehnični del (§5) je preverjen v kodi** (`origin/main` 8f0f95de, 10. 11. 2026). Datoteke in vrstice so navedene, da jih inženir najde. Pred gradnjo jih preveri še enkrat, ker se koda vmes lahko premakne.
 > **Gradnja poteka v dveh PR-jih** (§8): PR 1 je nadgradnja obstoječega ljubljenčka, PR 2 je izziv z mešančkom ob ustvarjanju (U4) in opomnik 7. dan (U5).
-> **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). Uporabniki ga dobijo z naslednjim deployem strežnika in OTA; do takrat veljajo stara pravila. PR 2 še ni zgrajen.
+> **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). Uporabniki ga dobijo z naslednjim deployem strežnika in OTA; do takrat veljajo stara pravila. **PR 2 (M6-U02) je zgrajen 11. 11. 2026** — »mešanček + izziv« ob ustvarjanju (nove aplikacije) in opomnik 7. dan (§5.6, §5.7 »Kako je zgrajeno«); prav tako z naslednjim deployem + OTA.
 > Del načrta validacije (`VALIDATION_PLAN.md` §4.3).
 
 ## 1. Zakaj
@@ -156,6 +156,11 @@ Besedila so EN + SL, za psa in muco.
   - aplikacija: `picker.ts` (`lockedBreedsFor` / `breedLockReason`), `pin.ts`, `AddChildScreen.tsx`.
 - `isOfferablePet` (`mobile/src/modules/plan/purchaseEntry.ts`) izloča brezplačno pasmo. **Za nadgradnjo se spremeni že v PR 1.**
 - Pri U4 je izbira »mešanček + izziv« dovoljena samo novim aplikacijam (zmožnost odjemalca, kot `species_cat`). Stare aplikacije dobijo brezplačnega ljubljenčka. `defaultPlanFor` in `convertUnpaidMuttToFree` ostaneta.
+- **Kako je zgrajeno (PR 2, 11. 11. 2026):**
+  - Zmožnost odjemalca `free_breed_challenge` (`ClientFeature::FreeBreedChallenge`). Šteje samo starševa (`features` pri generate-pin, shranjene na PIN-u; `features[]` pri `GET /api/breeds` → brezplačna pasma `challenge_allowed: true`). Otrokova naprava ni pomembna.
+  - `PairingService::assertPlanAllowed` 422 samo brez zmožnosti; `createPet` in `Pet::creating` ohranita neplačan izziv brezplačne pasme samo, ko ga je izbrala nova aplikacija (`allowsFreeBreedChallenge` → stolpec `pets.free_breed_challenge`; tak ljubljenček se nikoli ne prikaže kot brezplačen, tudi če ga odklene administrator); vse druge poti (stari PIN-i, `/child/pair`, administracija, tovarne) še vedno naredijo brezplačnega.
+  - Tak ljubljenček je navaden ljubljenček na izzivu: `payment_required`, zaklep ob rojstvu, webhook / namen / aktivacija kot pri pasemskem (pravilo PR 1 iz QA #978 b ga šteje kot ljubljenčka na izzivu, ne kot brezplačnega). Vračilo → brezplačni načrt.
+  - Aplikacija: izbirnik sledi strežnikovemu `challenge_allowed` in priporoči »Začnite brezplačno, izziv lahko dodate kadarkoli.«; ob preklopu na izziv je izbrana prva plačljiva pasma, mešanček samo, če ga starš tapne (QA #983); `isOfferablePet` sprejme neplačan izziv brezplačne pasme (gumb za nakup).
 
 **5.7 Opomnik 7. dan (PR 2)**
 - Vzorec je `PetBirthdayService`: enkrat na ljubljenčka (`*_celebrated_at`), preverjanje v ticku (`*_next_check_at`), datum v `effectiveTimezone()`.
@@ -166,6 +171,7 @@ Besedila so EN + SL, za psa in muco.
   - usmerjanje ob dotiku v aplikaciji.
 - Velja samo za starše, zadržano čez tihe ure.
 - Pogoj D1 izpelji iz dejanj otroka po dnevih v pasu ljubljenčka. Logike za »N dni zapored« danes ni.
+- **Kako je zgrajeno (PR 2, 11. 11. 2026):** `UpgradeReminderService` (stopnja ticka za rojstnimi dnevi), stolpci `pets.upgrade_reminder_sent_at` / `_child_id` / `_next_check_at`, push `upgrade_reminder` (CHECK migracija `2027_03_22_120000_add_upgrade_reminder`, izjema v `DogPushTextSnapshotTest`, `PushCopy` + `push.upgrade_reminder` / `push.cat.upgrade_reminder`), `pets[].upgrade_reminder` na nadzorni plošči (kartica 7 dni), dotik obvestila odpre nadgradnjo. Privzete izbire (DECISIONS 11. 11. 2026): 7 dni = datum pogodbe + 6; en otrok mora doseči 5 dni; podpis pogodbe ne šteje; okno 24 ur, brez opomnikov za nazaj.
 
 **5.8 Mediji (PR 1, že deluje)**
 - `markPaid` ob nakupu:

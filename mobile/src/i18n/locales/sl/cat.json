@@ -608,6 +608,13 @@
       "result": {
         "restoredNoCredit": "Nakupi so obnovljeni, a ni neuporabljenega izziva. Vsak izziv velja za eno muco.",
         "refused": "Ta muca izziva ne potrebuje (brezplačni načrt ali je že plačan)."
+      },
+      "upgradeReminder": {
+        "body": "{{child}} že 7 dni skrbi za muco {{name}}. Je čas za pravi preizkus?",
+        "bodyNoName": "{{child}} že 7 dni skrbi za muco. Je čas za pravi preizkus?",
+        "bodyNoChild": "Vaš otrok že 7 dni skrbi za muco {{name}}. Je čas za pravi preizkus?",
+        "bodyNoChildNoName": "Vaš otrok že 7 dni skrbi za muco. Je čas za pravi preizkus?",
+        "hint": "Z isto muco lahko začnete 12-tedenski izziv: program po tednih, potrdilo in celotna zgodovina."
       }
     }
   },

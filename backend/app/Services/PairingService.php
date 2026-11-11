@@ -208,11 +208,17 @@ class PairingService
      * from an old app build → `challenge`); ignored when joining a pet (the
      * pet keeps its plan).
      *
+     * `$freeBreedChallenge` (M6-U02, U4 / K3): the parent's build chose »free breed +
+     * challenge« (the PIN's stored features contain `free_breed_challenge`) — then a
+     * challenge with the mutt / domestic cat stays a challenge (locked at birth until a
+     * purchase) instead of becoming the free plan. False everywhere else (old PINs, the
+     * deprecated /child/pair path) — byte for byte the M5-F03 behaviour.
+     *
      * @return array{pet: Pet, joined_existing: bool}
      *
      * @throws PairingException
      */
-    public function attachChildToPet(Family $family, User $child, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge): array
+    public function attachChildToPet(Family $family, User $child, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge, bool $freeBreedChallenge = false): array
     {
         if ($joinPetId !== null) {
             $pet = Pet::whereKey($joinPetId)->lockForUpdate()->first();
@@ -225,7 +231,7 @@ class PairingService
             return ['pet' => $pet, 'joined_existing' => true];
         }
 
-        return ['pet' => $this->createPet($family, $child, $profile, $plan), 'joined_existing' => false];
+        return ['pet' => $this->createPet($family, $child, $profile, $plan, $freeBreedChallenge), 'joined_existing' => false];
     }
 
     /**
@@ -297,14 +303,29 @@ class PairingService
      * plan's pet only. Called for a new pet when the parent explicitly chose
      * `plan: challenge` (an omitted plan keeps the old-build default).
      *
+     * M6-U02 (FREE_PET_UPGRADE_SPEC U4, David 2026-11-10): replaced for NEW builds only —
+     * a profile whose parent build declared `free_breed_challenge` may take the
+     * challenge with the free breed ({@see self::allowsFreeBreedChallenge()}). Old
+     * builds (and a request without a profile) keep the 422.
+     *
      * @throws FamilyException challenge_requires_paid_breed (422)
      */
     public function assertPlanAllowed(?PetProfileChoice $profile, PetPlan $plan): void
     {
         $breed = $profile?->breed ?? Species::Dog->freeBreed();
-        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium() && ! self::allowsFreeBreedChallenge($profile)) {
             throw new FamilyException('challenge_requires_paid_breed', 'The 12-week challenge needs a paid breed; the mixed breed is the free plan.');
         }
+    }
+
+    /**
+     * M6-U02 (U4 / K3): the parent's build can offer »free breed + challenge« — the profile
+     * (generate-pin `features`, stored on the PIN) declares `free_breed_challenge`. Read from
+     * the PARENT's features only; the child's device never matters for the plan.
+     */
+    public static function allowsFreeBreedChallenge(?PetProfileChoice $profile): bool
+    {
+        return $profile?->supports(ClientFeature::FreeBreedChallenge) === true;
     }
 
     /**
@@ -317,7 +338,7 @@ class PairingService
         return $breed->isPremium() ? PetPlan::Challenge : PetPlan::Free;
     }
 
-    private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan): Pet
+    private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan, bool $freeBreedChallenge = false): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
         // asynchronously by a queued job dispatched after this transaction
@@ -339,7 +360,10 @@ class PairingService
         }
         // PAYMENTS_SPEC P4 / M5-F03: a free breed is never a (lockable) challenge — also
         // for PINs stored before M5-F03 and the deprecated /child/pair flow.
-        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+        // M6-U02 (U4 / K3): except when a new parent build chose »free breed + challenge« —
+        // that pet waits for a purchase at birth like a paid-breed challenge pet.
+        $freeBreedChallenge = $freeBreedChallenge && $plan === PetPlan::Challenge && ! $breed->isPremium();
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium() && ! $freeBreedChallenge) {
             $plan = PetPlan::Free;
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
@@ -361,7 +385,7 @@ class PairingService
         // is unborn — born_at stays null, the game loop ignores it and
         // child actions return 423 contract_required until the child
         // signs (POST /api/child/contract births it).
-        $pet = Pet::create([
+        $pet = new Pet([
             'user_id' => $child->id, // primary caretaker (deprecated mirror)
             'family_id' => $familyId,
             'breed_type' => $breed->value,
@@ -402,6 +426,9 @@ class PairingService
             // M5-T09 / T10: version 3 = + school / game phase clips.
             'state_media_version' => $arrivalAge !== null ? MediaEntitlementService::CURRENT_MEDIA_VERSION : 1,
         ]);
+        // M6-U02: Pet::creating would turn an unpaid free-breed challenge into the free plan.
+        $pet->free_breed_challenge = $freeBreedChallenge;
+        $pet->save();
 
         if ($petDna === null && $hasAppearance) {
             // M5-R21: the parent's colour, only for the breed it was chosen for
