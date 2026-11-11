@@ -8,7 +8,8 @@
     "pt": "Beringela",
     "fr": "Aubergine",
     "es": "Berenjena",
-    "it": "Melanzane"
+    "it": "Melanzane",
+    "nl": "Aubergine"
   },
   "question": {
     "en": "Can dogs eat eggplant?",
@@ -17,7 +18,8 @@
     "pt": "Os cães podem comer beringela?",
     "fr": "Les chiens peuvent-ils manger de l’aubergine ?",
     "es": "¿Pueden los perros comer berenjena?",
-    "it": "I cani possono mangiare le melanzane?"
+    "it": "I cani possono mangiare le melanzane?",
+    "nl": "Mogen honden aubergine eten?"
   },
   "url_slug": {
     "en": "eggplant",
@@ -26,7 +28,8 @@
     "pt": "beringela",
     "fr": "aubergine",
     "es": "berenjena",
-    "it": "melanzane"
+    "it": "melanzane",
+    "nl": "aubergine"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Sim, a beringela é segura para os cães se for servida com moderação. Retira o cabo, lava, descasca e cozinha, e depois corta em pedaços pequenos, de uma só dentada. Nunca dês uma beringela inteira e não te esqueças de que demasiada pode causar mal-estar digestivo.",
     "fr": "Oui, l’aubergine est sans danger pour les chiens à condition de la donner avec modération. Retirez le pédoncule, lavez-la, pelez-la et faites-la cuire, puis coupez-la en tout petits morceaux de la taille d’une bouchée. Ne donnez jamais une aubergine entière, et n’oubliez pas qu’en trop grande quantité elle peut provoquer des troubles digestifs.",
     "es": "Sí, la berenjena es segura para los perros si se da con moderación. Quítale el rabillo, lávala, pélala, cuécela y córtala en trocitos pequeños. Nunca le des una berenjena entera, y recuerda que, si come demasiada, puede tener molestias digestivas.",
-    "it": "Sì, le melanzane sono sicure per i cani in quantità moderate. Elimina il picciolo, lavale, sbucciale e cuocile, poi tagliale in pezzetti minuscoli da un boccone. Non dare mai una melanzana intera e ricorda che mangiarne troppe può causare disturbi digestivi."
+    "it": "Sì, le melanzane sono sicure per i cani in quantità moderate. Elimina il picciolo, lavale, sbucciale e cuocile, poi tagliale in pezzetti minuscoli da un boccone. Non dare mai una melanzana intera e ricorda che mangiarne troppe può causare disturbi digestivi.",
+    "nl": "Ja, met mate is aubergine veilig voor honden. Haal de steel eraf, was en schil de aubergine, maak hem gaar en snijd hem daarna in piepkleine, hapklare stukjes. Geef nooit een hele aubergine, en onthoud dat te veel aubergine de spijsvertering van streek kan maken."
   },
   "why": {
     "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -45,7 +49,8 @@
     "pt": "O fruto comestível não é realmente tóxico em quantidades normais, mas contém solanina, uma substância química natural que a planta usa como defesa. As concentrações mais elevadas encontram-se nas partes verdes da planta, em particular nas folhas e nas flores, e não no fruto roxo. A casca não é tóxica, mas pode ser difícil de mastigar e há risco de engasgo, e comer demasiada beringela pode causar mal-estar digestivo.",
     "fr": "Le fruit comestible n’est pas réellement toxique en quantité normale, mais il contient de la solanine, une substance naturelle que la plante utilise pour se défendre. Les concentrations les plus élevées se trouvent dans les parties vertes de la plante, surtout les feuilles et les fleurs, plutôt que dans le fruit violet. La peau n’est pas toxique, mais elle peut être difficile à mâcher et présenter un risque d’étouffement, et manger trop d’aubergine peut provoquer des troubles digestifs.",
     "es": "El fruto comestible no es tóxico en cantidades normales, pero contiene solanina, una sustancia natural que la planta usa para defenderse. Las concentraciones más altas están en las partes verdes de la planta, sobre todo en las hojas y las flores, y no en el fruto morado. La piel no es tóxica, pero a los perros les cuesta masticarla y puede suponer un riesgo de atragantamiento. Y si comen demasiada berenjena, pueden tener molestias digestivas.",
-    "it": "Il frutto commestibile non è davvero tossico nelle quantità normali, ma contiene solanina, una sostanza chimica naturale che la pianta usa come difesa. Le concentrazioni più alte si trovano nelle parti verdi della pianta, in particolare foglie e fiori, più che nel frutto viola. La buccia non è tossica, ma può essere difficile da masticare e far soffocare, e mangiare troppe melanzane può causare disturbi digestivi."
+    "it": "Il frutto commestibile non è davvero tossico nelle quantità normali, ma contiene solanina, una sostanza chimica naturale che la pianta usa come difesa. Le concentrazioni più alte si trovano nelle parti verdi della pianta, in particolare foglie e fiori, più che nel frutto viola. La buccia non è tossica, ma può essere difficile da masticare e far soffocare, e mangiare troppe melanzane può causare disturbi digestivi.",
+    "nl": "De eetbare vrucht is in normale hoeveelheden niet echt giftig, maar bevat solanine, een natuurlijke stof waarmee de plant zich verdedigt. Daarvan zit het meest in de groene delen van de plant, vooral in de bladeren en bloemen, en niet in de paarse vrucht. De schil is niet giftig, maar kan moeilijk te kauwen zijn en een verstikkingsgevaar vormen, en te veel aubergine kan de spijsvertering van streek maken."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pt": "Começa com um pedaço pequeno de beringela descascada e cozinhada. Se o teu cão tiver diarreia, vómitos, mal-estar no estômago, dor abdominal, pouca energia ou precisar de sair para fazer as necessidades com mais frequência depois de comer beringela, liga ao teu veterinário.",
     "fr": "Commencez par un petit morceau d’aubergine pelée et cuite. Si votre chien a de la diarrhée, des vomissements, des maux d’estomac, des douleurs abdominales ou une baisse d’énergie, ou s’il doit sortir plus souvent après avoir mangé de l’aubergine, contactez votre vétérinaire.",
     "es": "Empieza con un trocito de berenjena pelada y cocinada. Si después de comer berenjena tu perro tiene diarrea, vómitos, molestias de estómago, dolor de barriga o está decaído, o si necesita salir a hacer sus necesidades con más frecuencia, contacta con tu veterinario.",
-    "it": "Comincia con un pezzettino di melanzana sbucciata e cotta. Se dopo aver mangiato la melanzana il tuo cane ha diarrea, vomito, disturbi di stomaco, dolore addominale, poca energia o deve fare i bisogni più spesso, contatta il veterinario."
+    "it": "Comincia con un pezzettino di melanzana sbucciata e cotta. Se dopo aver mangiato la melanzana il tuo cane ha diarrea, vomito, disturbi di stomaco, dolore addominale, poca energia o deve fare i bisogni più spesso, contatta il veterinario.",
+    "nl": "Begin met een klein stukje geschilde, gare aubergine. Krijgt je hond na het eten van aubergine diarree, moet hij braken, heeft hij maagklachten, buikpijn of weinig energie, of moet hij vaker naar buiten, neem dan contact op met je dierenarts."
   },
   "serving": {
     "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -64,7 +70,8 @@
     "pt": "Retira o cabo, lava bem para remover pesticidas, descasca, corta em pedaços pequenos, de uma só dentada, e cozinha antes de servir. Nunca uma beringela inteira.",
     "fr": "Retirez le pédoncule, lavez soigneusement l’aubergine pour éliminer les pesticides, pelez-la, coupez-la en petits morceaux de la taille d’une bouchée et faites-la cuire avant de la servir. Jamais une aubergine entière.",
     "es": "Quita el rabillo, lava bien la berenjena para eliminar los pesticidas, pélala, córtala en trocitos pequeños y cuécela antes de servirla. Nunca le des una berenjena entera.",
-    "it": "Elimina il picciolo, lava bene per rimuovere i pesticidi, sbuccia, taglia in pezzetti da un boccone e cuoci prima di servire. Mai una melanzana intera."
+    "it": "Elimina il picciolo, lava bene per rimuovere i pesticidi, sbuccia, taglia in pezzetti da un boccone e cuoci prima di servire. Mai una melanzana intera.",
+    "nl": "Haal de steel eraf, was de aubergine grondig om resten van bestrijdingsmiddelen te verwijderen, schil hem, snijd hem in kleine, hapklare stukjes en maak hem gaar voordat je hem geeft. Nooit een hele aubergine."
   },
   "child": {
     "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -73,7 +80,8 @@
     "pt": "Os cães podem comer um pouco de beringela cozinhada. Um adulto descasca-a, cozinha-a e corta-a em pedacinhos minúsculos.",
     "fr": "Les chiens peuvent manger un peu d’aubergine cuite. Un adulte la pèle, la fait cuire et la coupe en tout petits morceaux.",
     "es": "Los perros pueden comer un poco de berenjena cocinada. Un adulto la pela, la cuece y la corta en trocitos muy pequeños.",
-    "it": "I cani possono mangiare un po’ di melanzana cotta. Un adulto la sbuccia, la cuoce e la taglia in pezzetti minuscoli."
+    "it": "I cani possono mangiare un po’ di melanzana cotta. Un adulto la sbuccia, la cuoce e la taglia in pezzetti minuscoli.",
+    "nl": "Honden mogen een klein beetje gare aubergine. Een volwassene schilt hem, maakt hem gaar en snijdt hem in piepkleine stukjes."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pt": "Os cães podem comer beringela crua?",
         "fr": "Les chiens peuvent-ils manger de l’aubergine crue ?",
         "es": "¿Pueden los perros comer berenjena cruda?",
-        "it": "I cani possono mangiare le melanzane crude?"
+        "it": "I cani possono mangiare le melanzane crude?",
+        "nl": "Mogen honden rauwe aubergine eten?"
       },
       "a": {
         "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -93,7 +102,8 @@
         "pt": "Podem, mas, depois de cozinhada, a beringela fica mais mole e ainda mais fácil de comer para o teu cão.",
         "fr": "Oui, mais la cuisson ramollit le légume et le rend encore plus facile à manger pour votre chien.",
         "es": "Sí, pero si la cocinas se ablanda y a tu perro le resulta aún más fácil de comer.",
-        "it": "Possono, ma la cottura ammorbidisce la verdura e la rende ancora più facile da mangiare per il tuo cane."
+        "it": "Possono, ma la cottura ammorbidisce la verdura e la rende ancora più facile da mangiare per il tuo cane.",
+        "nl": "Dat mag, maar als je aubergine gaar maakt, wordt hij zacht en kan je hond hem nog makkelijker eten."
       }
     },
     {
@@ -104,7 +114,8 @@
         "pt": "Que parte da planta da beringela tem mais solanina?",
         "fr": "Quelle partie du plant d’aubergine contient le plus de solanine ?",
         "es": "¿Qué parte de la planta de la berenjena tiene más solanina?",
-        "it": "Quale parte della pianta di melanzana contiene più solanina?"
+        "it": "Quale parte della pianta di melanzana contiene più solanina?",
+        "nl": "Welk deel van de aubergineplant bevat de meeste solanine?"
       },
       "a": {
         "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -113,7 +124,8 @@
         "pt": "As partes verdes da planta, em particular as folhas e as flores, e não o próprio fruto roxo.",
         "fr": "Les parties vertes de la plante, surtout les feuilles et les fleurs, plutôt que le fruit violet lui-même.",
         "es": "Las partes verdes de la planta, sobre todo las hojas y las flores, y no el fruto morado.",
-        "it": "Le parti verdi della pianta, in particolare foglie e fiori, più che il frutto viola."
+        "it": "Le parti verdi della pianta, in particolare foglie e fiori, più che il frutto viola.",
+        "nl": "De groene delen van de plant, vooral de bladeren en bloemen, en niet de paarse vrucht zelf."
       }
     }
   ],
@@ -241,6 +253,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9cd6866a6132175b4c62c9674158217d99afa1f70b177f14743eeef24e787ab4"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a499ce7626d5db74319901ffccdfec505511aa97f691e67a1e2728e37a70912b"
     }
   }
 }

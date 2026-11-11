@@ -8,7 +8,8 @@
     "pt": "Erva-gateira",
     "fr": "Cataire",
     "es": "Hierba gatera",
-    "it": "Erba gatta (nepeta)"
+    "it": "Erba gatta (nepeta)",
+    "nl": "Kattenkruid"
   },
   "question": {
     "en": "Can cats eat catnip?",
@@ -17,7 +18,8 @@
     "pt": "Os gatos podem comer erva-gateira?",
     "fr": "Les chats peuvent-ils manger de la cataire ?",
     "es": "¿Pueden los gatos comer hierba gatera?",
-    "it": "I gatti possono mangiare l’erba gatta?"
+    "it": "I gatti possono mangiare l’erba gatta?",
+    "nl": "Mogen katten kattenkruid eten?"
   },
   "url_slug": {
     "en": "catnip",
@@ -26,7 +28,8 @@
     "pt": "erva-gateira",
     "fr": "cataire",
     "es": "hierba-gatera",
-    "it": "erba-gatta"
+    "it": "erba-gatta",
+    "nl": "kattenkruid"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Não é para comer. Cheirar erva-gateira é inofensivo para os gatos, mas a ASPCA classifica-a como tóxica para os gatos, porque comê-la pode causar vómitos e diarreia. Deixa o teu gato cheirá-la, em vez de a comer.",
     "fr": "Pas en guise de friandise. Renifler de la cataire est sans danger pour les chats, mais l’ASPCA la classe parmi les plantes toxiques pour les chats, car en manger peut provoquer des vomissements et de la diarrhée. Laissez votre chat profiter de l’odeur plutôt que de manger la plante.",
     "es": "No para comerla. Oler la hierba gatera es inofensivo para los gatos, pero la ASPCA la incluye entre las plantas tóxicas para ellos, porque ingerirla puede provocar vómitos y diarrea. Deja que tu gato disfrute del olor en vez de comerse la planta.",
-    "it": "Non come spuntino. Annusare l’erba gatta non fa male ai gatti, ma l’ASPCA la indica come tossica per i gatti perché mangiarla può causare vomito e diarrea. Lascia che il tuo gatto si goda il profumo, senza mangiare la pianta."
+    "it": "Non come spuntino. Annusare l’erba gatta non fa male ai gatti, ma l’ASPCA la indica come tossica per i gatti perché mangiarla può causare vomito e diarrea. Lascia che il tuo gatto si goda il profumo, senza mangiare la pianta.",
+    "nl": "Niet als traktatie. Snuffelen aan kattenkruid kan geen kwaad, maar de ASPCA noemt kattenkruid giftig voor katten, omdat het opeten ervan braken en diarree kan veroorzaken. Laat je kat dus liever van de geur genieten dan dat hij de plant opeet."
   },
   "why": {
     "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
@@ -45,7 +49,8 @@
     "pt": "As fontes divergem, por isso seguimos a opinião mais rigorosa. A International Cat Care diz que a erva-gateira atua quando o óleo é cheirado e que os efeitos nos gatos são inofensivos, não causam dependência e são de curta duração, e a Cats Protection sugere plantar erva-gateira para distrair os gatos de outras plantas. A ASPCA, porém, classifica a erva-gateira (Nepeta cataria) como tóxica para os gatos: muitos gatos adoram-na, mas pode causar vómitos e diarreia, e deixa alguns gatos sedados e outros estimulados.",
     "fr": "Les sources divergent : nous retenons donc l’avis le plus strict. International Cat Care indique que la cataire agit lorsque le chat en renifle l’huile, et que ses effets sont inoffensifs, sans risque de dépendance et de courte durée. Cats Protection suggère d’en planter pour détourner les chats des autres plantes. L’ASPCA, en revanche, classe la cataire (Nepeta cataria) parmi les plantes toxiques pour les chats : beaucoup de chats l’adorent, mais elle peut provoquer des vomissements et de la diarrhée, et elle rend certains chats somnolents et en excite d’autres.",
     "es": "Las fuentes no coinciden, así que seguimos el criterio más estricto. International Cat Care dice que la hierba gatera funciona cuando el gato huele su aceite y que sus efectos son inofensivos, no generan adicción y duran poco, y Cats Protection sugiere plantarla para distraer a los gatos de otras plantas. La ASPCA, en cambio, incluye la hierba gatera (Nepeta cataria) entre las plantas tóxicas para los gatos: a muchos les encanta, pero puede provocar vómitos y diarrea, y a algunos los adormece y a otros los estimula.",
-    "it": "Le fonti non concordano, quindi seguiamo la posizione più prudente. International Cat Care spiega che l’erba gatta agisce quando se ne annusa l’olio e che i suoi effetti sui gatti sono innocui, non danno dipendenza e durano poco, e Cats Protection suggerisce di piantare l’erba gatta per distrarre i gatti dalle altre piante. L’ASPCA, invece, indica l’erba gatta (Nepeta cataria) come tossica per i gatti: a molti gatti piace tantissimo, ma può causare vomito e diarrea, e in alcuni gatti provoca sedazione, in altri stimolazione."
+    "it": "Le fonti non concordano, quindi seguiamo la posizione più prudente. International Cat Care spiega che l’erba gatta agisce quando se ne annusa l’olio e che i suoi effetti sui gatti sono innocui, non danno dipendenza e durano poco, e Cats Protection suggerisce di piantare l’erba gatta per distrarre i gatti dalle altre piante. L’ASPCA, invece, indica l’erba gatta (Nepeta cataria) come tossica per i gatti: a molti gatti piace tantissimo, ma può causare vomito e diarrea, e in alcuni gatti provoca sedazione, in altri stimolazione.",
+    "nl": "De bronnen zijn het niet met elkaar eens, dus volgen wij het strengere advies. Volgens International Cat Care werkt kattenkruid als een kat de olie ervan opsnuift, en is het effect op katten onschadelijk, niet verslavend en van korte duur. Cats Protection raadt aan kattenkruid te planten om katten van andere planten af te leiden. De ASPCA noemt kattenkruid (Nepeta cataria) echter giftig voor katten: veel katten zijn er dol op, maar het kan braken en diarree veroorzaken, en sommige katten worden er suf van, andere juist druk."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Diarrea",
       "Sonnolenza insolita",
       "Eccitazione eccessiva"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Ongewone slaperigheid",
+      "Overmatige opwinding"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "pt": "Se o teu gato comeu erva-gateira e tem vómitos ou diarreia, liga ao teu veterinário.",
     "fr": "Si votre chat a mangé de la cataire et qu’il vomit ou a de la diarrhée, contactez votre vétérinaire.",
     "es": "Si tu gato ha comido hierba gatera y tiene vómitos o diarrea, contacta con tu veterinario.",
-    "it": "Se il tuo gatto ha mangiato erba gatta e ha vomito o diarrea, contatta il veterinario."
+    "it": "Se il tuo gatto ha mangiato erba gatta e ha vomito o diarrea, contatta il veterinario.",
+    "nl": "Heeft je kat kattenkruid gegeten en moet hij braken of heeft hij diarree, neem dan contact op met je dierenarts."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "pt": "Muitos gatos adoram o cheiro da erva-gateira. É para cheirar e brincar, não para comer.",
     "fr": "Beaucoup de chats adorent l’odeur de la cataire. Elle sert à renifler et à jouer, pas à manger.",
     "es": "A muchos gatos les encanta el olor de la hierba gatera. Es para olerla y jugar, no para comerla.",
-    "it": "A molti gatti piace tantissimo l’odore dell’erba gatta. Serve per annusare e giocare, non per mangiare."
+    "it": "A molti gatti piace tantissimo l’odore dell’erba gatta. Serve per annusare e giocare, non per mangiare.",
+    "nl": "Veel katten zijn dol op de geur van kattenkruid. Het is om aan te snuffelen en mee te spelen, niet om op te eten."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "pt": "Porque é que o meu gato não reage à erva-gateira?",
         "fr": "Pourquoi mon chat ne réagit-il pas à la cataire ?",
         "es": "¿Por qué mi gato no reacciona a la hierba gatera?",
-        "it": "Perché il mio gatto non reagisce all’erba gatta?"
+        "it": "Perché il mio gatto non reagisce all’erba gatta?",
+        "nl": "Waarom reageert mijn kat niet op kattenkruid?"
       },
       "a": {
         "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
@@ -128,7 +142,8 @@
         "pt": "A International Cat Care diz que a erva-gateira afeta cerca de 70–80 % dos gatos e que a reação é hereditária, herdada dos pais. Não faz qualquer efeito nos gatinhos até passarem os três meses de idade.",
         "fr": "International Cat Care indique que la cataire agit sur environ 70 à 80 % des chats et que cette réaction est héréditaire. Elle n’a aucun effet sur les chatons de moins de trois mois.",
         "es": "International Cat Care dice que la hierba gatera hace efecto en entre el 70 y el 80 % de los gatos y que la respuesta se hereda de los padres. No tiene ningún efecto en los gatitos hasta que superan los tres meses.",
-        "it": "Secondo International Cat Care l’erba gatta fa effetto su circa il 70–80% dei gatti e la reazione è ereditaria, cioè si trasmette dai genitori. Sui gattini non ha alcun effetto finché non hanno più di tre mesi."
+        "it": "Secondo International Cat Care l’erba gatta fa effetto su circa il 70–80% dei gatti e la reazione è ereditaria, cioè si trasmette dai genitori. Sui gattini non ha alcun effetto finché non hanno più di tre mesi.",
+        "nl": "Volgens International Cat Care reageert ongeveer 70–80% van de katten op kattenkruid, en die gevoeligheid erven ze van hun ouders. Bij kittens werkt het pas als ze ouder zijn dan drie maanden."
       }
     },
     {
@@ -139,7 +154,8 @@
         "pt": "A erva-gateira é o mesmo que a relva para gatos?",
         "fr": "La cataire est-elle la même chose que l’herbe à chat ?",
         "es": "¿Es lo mismo la hierba gatera que la hierba para gatos?",
-        "it": "L’erba gatta è la stessa cosa dell’erba per gatti?"
+        "it": "L’erba gatta è la stessa cosa dell’erba per gatti?",
+        "nl": "Is kattenkruid hetzelfde als kattengras?"
       },
       "a": {
         "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
@@ -148,7 +164,8 @@
         "pt": "Não. A VCA explica que a relva para gatos costuma referir-se a gramíneas de cereais, como a aveia ou o trigo, enquanto a erva-gateira pertence à família da hortelã.",
         "fr": "Non. Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine ou le blé, alors que la cataire appartient à la famille de la menthe.",
         "es": "No. VCA explica que la hierba para gatos suele referirse a gramíneas de cereal, como la avena o el trigo, mientras que la hierba gatera pertenece a la familia de la menta.",
-        "it": "No. VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena o frumento, mentre l’erba gatta appartiene alla famiglia della menta."
+        "it": "No. VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena o frumento, mentre l’erba gatta appartiene alla famiglia della menta.",
+        "nl": "Nee. VCA legt uit dat met kattengras meestal graansoorten zoals haver of tarwe worden bedoeld, terwijl kattenkruid tot de muntfamilie behoort."
       }
     }
   ],
@@ -251,6 +268,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bcfb0354511f3aeec4a4da2707cdbc809b27b21931d35169b128fca03b0cd8bc"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "acced95113622dbb82123d7d2a54b30ecb17ed5aef88606023cdef8150fef27c"
     }
   }
 }
