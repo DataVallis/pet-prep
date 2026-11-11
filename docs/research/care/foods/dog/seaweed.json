@@ -13,7 +13,8 @@
     "pl": "Wodorosty (nori)",
     "cs": "Mořské řasy (nori)",
     "hr": "Morske alge (nori)",
-    "sv": "Tång (nori)"
+    "sv": "Tång (nori)",
+    "da": "Tang (nori)"
   },
   "question": {
     "en": "Can dogs eat seaweed?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść wodorosty?",
     "cs": "Mohou psi jíst mořské řasy?",
     "hr": "Smiju li psi jesti morske alge?",
-    "sv": "Får hundar äta tång?"
+    "sv": "Får hundar äta tång?",
+    "da": "Må hunde spise tang?"
   },
   "url_slug": {
     "en": "seaweed",
@@ -41,7 +43,8 @@
     "pl": "wodorosty",
     "cs": "morske-rasy",
     "hr": "morske-alge",
-    "sv": "tang"
+    "sv": "tang",
+    "da": "tang"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Niektóre rodzaje, z umiarem. Zwykłe nori lub arkusze wodorostów bez dodatku soli, czosnku i przypraw są w małych ilościach w porządku. Dzikie wodorosty z plaży to co innego: mogą zawierać zbyt dużo soli, a suche pasma mogą pęcznieć w żołądku, więc jeśli pies je zje, od razu skonsultuj się z weterynarzem.",
     "cs": "Některé druhy ano, ale s mírou. Čisté nori nebo plátky mořských řas bez přidané soli, česneku a koření jsou v malém množství v pořádku. Jiné je to u divokých řas z pláže: mohou obsahovat příliš mnoho soli a usušená vlákna mohou v žaludku nabobtnat, proto se po jejich snědení okamžitě poraďte s veterinářem.",
     "hr": "Neke vrste, umjereno. Obične nori alge ili listovi morskih algi bez dodane soli, češnjaka i začina u malim su količinama u redu. Divlje morske alge s plaže drugačija su priča: mogu sadržavati previše soli, a osušene vlati mogu nabubriti u želucu, pa se odmah posavjetuj s veterinarom ako ih pas pojede.",
-    "sv": "Vissa sorters tång, med måtta. Vanlig nori eller tångblad utan tillsatt salt, vitlök eller kryddor går bra i små mängder. Vild tång från stranden är en annan sak: den kan innehålla för mycket salt, och torkade trådar kan svälla i magen. Kontakta veterinären direkt om hunden har ätit av den."
+    "sv": "Vissa sorters tång, med måtta. Vanlig nori eller tångblad utan tillsatt salt, vitlök eller kryddor går bra i små mängder. Vild tång från stranden är en annan sak: den kan innehålla för mycket salt, och torkade trådar kan svälla i magen. Kontakta veterinären direkt om hunden har ätit av den.",
+    "da": "Nogle slags, med måde. Almindelig nori eller tangplader uden tilsat salt, hvidløg eller krydderier er fine i små mængder. Vild tang fra stranden er noget helt andet: det kan indeholde for meget salt, og tørrede tråde kan svulme op i maven. Kontakt derfor straks en dyrlæge, hvis din hund spiser det."
   },
   "why": {
     "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -70,7 +74,8 @@
     "pl": "Wodorosty są pożywne i zawierają białko, żelazo, jod, magnez i kwasy omega-3. Jednak zbyt duża ilość może rozstroić żołądek psa, a nadmiar jodu może wpływać na tarczycę. Dzikie wodorosty z plaży mogą zawierać nadmiar soli, co naraża psa na zatrucie solą; ich długie pasma mogą utknąć w jelitach lub kryć w sobie zwierzęta albo pasożyty, a suche dzikie wodorosty mogą pęcznieć w żołądku.",
     "cs": "Mořské řasy jsou výživné a obsahují bílkoviny, železo, jód, hořčík a omega-3 mastné kyseliny. Příliš mnoho řas ale může psovi rozhodit žaludek a příliš mnoho jódu může ovlivnit štítnou žlázu. Divoké řasy z pláže mohou obsahovat nadměrné množství soli, takže psovi hrozí otrava solí; jejich dlouhá vlákna se mohou zaklínit ve střevech nebo v sobě ukrývat drobné živočichy či parazity a usušené divoké řasy mohou v žaludku nabobtnat.",
     "hr": "Morske alge su hranjive i sadrže bjelančevine, željezo, jod, magnezij i omega-3 masne kiseline. No previše morskih algi može poremetiti psu probavu, a previše joda može utjecati na štitnjaču. Divlje morske alge s plaže mogu sadržavati previše soli, zbog čega pas može dobiti trovanje solju; njihove duge vlati mogu se zaglaviti u crijevima ili sadržavati skrivene životinje ili parazite, a suhe divlje alge mogu nabubriti u želucu.",
-    "sv": "Tång är näringsrik och innehåller protein, järn, jod, magnesium och omega-3. Men för mycket tång kan ge hunden orolig mage, och för mycket jod kan påverka sköldkörteln. Vild tång från stranden kan innehålla alldeles för mycket salt, vilket ger risk för saltförgiftning. De långa trådarna kan fastna i tarmarna eller dölja små djur eller parasiter, och torkad vild tång kan svälla i magen."
+    "sv": "Tång är näringsrik och innehåller protein, järn, jod, magnesium och omega-3. Men för mycket tång kan ge hunden orolig mage, och för mycket jod kan påverka sköldkörteln. Vild tång från stranden kan innehålla alldeles för mycket salt, vilket ger risk för saltförgiftning. De långa trådarna kan fastna i tarmarna eller dölja små djur eller parasiter, och torkad vild tång kan svälla i magen.",
+    "da": "Tang er næringsrigt og indeholder protein, jern, jod, magnesium og omega-3. Men for meget tang kan give hunden dårlig mave, og for meget jod kan påvirke skjoldbruskkirtlen. Vild tang fra stranden kan indeholde alt for meget salt, så hunden risikerer saltforgiftning. De lange tråde kan sætte sig fast i tarmene eller skjule små dyr eller parasitter, og tørret vild tang kan svulme op i maven."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Pilnuj psa na plaży, żeby nie zjadał dzikich wodorostów. Jeśli pies zje wodorosty na plaży, od razu skonsultuj się z weterynarzem; mogą wywołać wymioty, biegunkę, osłabienie i ospałość.",
     "cs": "Na pláži psa hlídejte, aby divoké řasy nejedl. Pokud pes na pláži řasy snědl, okamžitě se poraďte s veterinářem. Řasy mohou způsobit zvracení, průjem, slabost a malátnost.",
     "hr": "Pazi na psa na plaži da ne jede divlje morske alge. Ako pas ipak pojede morske alge na plaži, odmah se posavjetuj s veterinarom; mogu izazvati povraćanje, proljev, slabost i bezvoljnost.",
-    "sv": "Ha uppsikt över hunden på stranden så att den inte äter vild tång. Om hunden ändå äter tång på stranden ska du kontakta veterinären direkt. Det kan ge kräkningar, diarré, svaghet och slöhet."
+    "sv": "Ha uppsikt över hunden på stranden så att den inte äter vild tång. Om hunden ändå äter tång på stranden ska du kontakta veterinären direkt. Det kan ge kräkningar, diarré, svaghet och slöhet.",
+    "da": "Hold øje med hunden på stranden, så den ikke spiser vild tang. Hvis din hund alligevel spiser tang på stranden, skal du straks kontakte en dyrlæge. Symptomer kan være opkast, diarré, svaghed og sløvhed."
   },
   "serving": {
     "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -99,7 +105,8 @@
     "pl": "Tylko zwykłe, nieprzyprawione wodorosty w małych ilościach, na przykład gotowe arkusze nori. Sprawdź skład i upewnij się, że nie ma w nim przypraw, soli ani czosnku.",
     "cs": "Pouze čisté, neochucené řasy v malém množství, například balené plátky nori. Přečtěte si složení a ujistěte se, že neobsahují přidané koření, sůl ani česnek.",
     "hr": "Samo obične, nezačinjene morske alge u malim količinama, poput pakiranih listova nori. Pročitaj popis sastojaka i provjeri da nema dodanih začina, soli ni češnjaka.",
-    "sv": "Bara okryddad tång i små mängder, till exempel färdigförpackade noriblad. Läs innehållsförteckningen och kontrollera att där inte finns tillsatta kryddor, salt eller vitlök."
+    "sv": "Bara okryddad tång i små mängder, till exempel färdigförpackade noriblad. Läs innehållsförteckningen och kontrollera att där inte finns tillsatta kryddor, salt eller vitlök.",
+    "da": "Kun naturel tang uden krydderier og kun i små mængder, fx færdigpakkede noriplader. Læs varedeklarationen, og tjek at der ikke er tilsat krydderier, salt eller hvidløg."
   },
   "child": {
     "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -113,7 +120,8 @@
     "pl": "Pies może skosztować odrobiny zwykłego nori. Na plaży dopilnuj, żeby nie zbliżał się do wodorostów leżących na piasku.",
     "cs": "Psi mohou ochutnat trochu čistého nori. Na pláži pomoz hlídat, aby pes nejedl řasy z písku.",
     "hr": "Psi smiju kušati malo običnih nori algi. Na plaži ih pomozi držati podalje od algi na pijesku.",
-    "sv": "Hundar kan få smaka lite okryddad nori. På stranden ska du hjälpa hunden att hålla sig borta från tången i sanden."
+    "sv": "Hundar kan få smaka lite okryddad nori. På stranden ska du hjälpa hunden att hålla sig borta från tången i sanden.",
+    "da": "Hunde må gerne smage lidt naturel nori. På stranden skal du hjælpe hunden med at holde sig væk fra tangen i sandet."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Co zrobić, jeśli pies zje wodorosty na plaży?",
         "cs": "Co když můj pes na pláži snědl řasy?",
         "hr": "Što ako moj pas na plaži pojede morske alge?",
-        "sv": "Vad gör jag om hunden äter tång på stranden?"
+        "sv": "Vad gör jag om hunden äter tång på stranden?",
+        "da": "Hvad gør jeg, hvis min hund spiser tang på stranden?"
       },
       "a": {
         "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -143,7 +152,8 @@
         "pl": "Od razu skonsultuj się z weterynarzem. Dzikie wodorosty mogą zawierać nadmiar soli, suche wodorosty mogą pęcznieć w żołądku, a długie pasma mogą utknąć w jelitach.",
         "cs": "Okamžitě se poraďte s veterinářem. Divoké řasy mohou obsahovat nadměrné množství soli, usušené řasy mohou v žaludku nabobtnat a dlouhá vlákna se mohou zaklínit ve střevech.",
         "hr": "Odmah se posavjetuj s veterinarom. Divlje morske alge mogu sadržavati previše soli, suhe alge mogu nabubriti u želucu, a duge vlati mogu se zaglaviti u crijevima.",
-        "sv": "Kontakta veterinären direkt. Vild tång kan innehålla alldeles för mycket salt, torkad tång kan svälla i magen och långa trådar kan fastna i tarmarna."
+        "sv": "Kontakta veterinären direkt. Vild tång kan innehålla alldeles för mycket salt, torkad tång kan svälla i magen och långa trådar kan fastna i tarmarna.",
+        "da": "Kontakt straks en dyrlæge. Vild tang kan indeholde alt for meget salt, tørret tang kan svulme op i maven, og lange tråde kan sætte sig fast i tarmene."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pl": "Czy psy mogą jeść sushi lub wodorosty z sosem sojowym?",
         "cs": "Mohou psi jíst sushi nebo řasy se sójovou omáčkou?",
         "hr": "Smiju li psi jesti sushi ili morske alge sa sojinim umakom?",
-        "sv": "Får hundar äta sushi eller tång med sojasås?"
+        "sv": "Får hundar äta sushi eller tång med sojasås?",
+        "da": "Må hunde spise sushi eller tang med sojasovs?"
       },
       "a": {
         "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -173,7 +184,8 @@
         "pl": "Nie. Sushi z surową rybą może rozchorować psa, a sos sojowy zawiera dużo soli.",
         "cs": "Ne. Po sushi se syrovou rybou může být psovi špatně a sójová omáčka obsahuje hodně soli.",
         "hr": "Ne. Od sushija sa sirovom ribom pas se može razboljeti, a sojin umak ima mnogo soli.",
-        "sv": "Nej. Sushi med rå fisk kan göra hunden sjuk, och sojasås innehåller mycket salt."
+        "sv": "Nej. Sushi med rå fisk kan göra hunden sjuk, och sojasås innehåller mycket salt.",
+        "da": "Nej. Sushi med rå fisk kan gøre hunden syg, og sojasovs indeholder meget salt."
       }
     }
   ],
@@ -310,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "74ef40935b2bf096153812b8c1ec360d5ef268258f47a195d00a05dddca8c12f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4182b54c8807f821ea32ab0efb2f279fd5888ec0635f723010d4e8f3aeb7ae50"
     }
   }
 }

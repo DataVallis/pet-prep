@@ -1974,7 +1974,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Basil",
@@ -1988,7 +1989,8 @@
         "pl": "Bazylia",
         "cs": "Bazalka",
         "hr": "Bosiljak",
-        "sv": "Basilika"
+        "sv": "Basilika",
+        "da": "Basilikum"
       },
       "question": {
         "en": "Can cats eat basil?",
@@ -2002,7 +2004,8 @@
         "pl": "Czy koty mogą jeść bazylię?",
         "cs": "Mohou kočky jíst bazalku?",
         "hr": "Smiju li mačke jesti bosiljak?",
-        "sv": "Får katter äta basilika?"
+        "sv": "Får katter äta basilika?",
+        "da": "Må katte spise basilikum?"
       },
       "url_slug": {
         "en": "basil",
@@ -2016,7 +2019,8 @@
         "pl": "bazylia",
         "cs": "bazalka",
         "hr": "bosiljak",
-        "sv": "basilika"
+        "sv": "basilika",
+        "da": "basilikum"
       },
       "answer": {
         "en": "Yes, a small nibble of plain basil now and then is fine. The ASPCA lists basil, including sweet and Thai basil, as non-toxic to cats. Cats don't need it, though, and any plant may cause vomiting or an upset stomach.",
@@ -2030,7 +2034,8 @@
         "pl": "Tak, od czasu do czasu odrobina zwykłej bazylii do skubnięcia jest w porządku. ASPCA uznaje bazylię, w tym bazylię pospolitą i tajską, za nietoksyczną dla kotów. Koty jednak jej nie potrzebują, a każda roślina może wywołać wymioty lub rozstrój żołądka.",
         "cs": "Ano, občas si kočka může kousek obyčejné bazalky ukousnout. ASPCA řadí bazalku, včetně bazalky pravé a thajské, mezi rostliny netoxické pro kočky. Kočky ji ale nepotřebují a jakákoli rostlina může způsobit zvracení nebo žaludeční potíže.",
         "hr": "Da, malo običnog bosiljka povremeno nije problem. ASPCA navodi bosiljak, uključujući slatki i tajlandski, kao neotrovan za mačke. Mačkama on ipak nije potreban, a svaka biljka može izazvati povraćanje ili probavne smetnje.",
-        "sv": "Ja, en liten tugga basilika då och då går bra. ASPCA anger basilika, inklusive sötbasilika och thaibasilika, som ofarlig för katter. Katter behöver den dock inte, och alla växter kan ge kräkningar eller orolig mage."
+        "sv": "Ja, en liten tugga basilika då och då går bra. ASPCA anger basilika, inklusive sötbasilika och thaibasilika, som ofarlig för katter. Katter behöver den dock inte, och alla växter kan ge kräkningar eller orolig mage.",
+        "da": "Ja, en lille smule naturel basilikum nu og da er i orden. ASPCA betragter basilikum, også sød basilikum og thaibasilikum, som ugiftig for katte. Katte har dog ikke brug for den, og alle planter kan give opkast eller dårlig mave."
       },
       "why": {
         "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
@@ -2044,7 +2049,8 @@
         "pl": "ASPCA uznaje bazylię (Ocimum basilicum, zwaną też bazylią pospolitą i bazylią tajską) za nietoksyczną dla kotów. Cats Protection wyjaśnia, że nawet nietoksyczne rośliny mogą po zjedzeniu rozstroić żołądek, a ASPCA zaznacza, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. PDSA podaje, że koty nie potrzebują niczego poza pełnowartościową karmą, choć smakołyk od czasu do czasu nie zaszkodzi.",
         "cs": "ASPCA řadí bazalku (Ocimum basilicum, též bazalka pravá a thajská) mezi rostliny netoxické pro kočky. Cats Protection vysvětluje, že i netoxické rostliny mohou po snědení způsobit zažívací potíže, a ASPCA upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. PDSA uvádí, že kočky nepotřebují nic kromě kompletní stravy, i když příležitostný pamlsek je v pořádku.",
         "hr": "ASPCA navodi bosiljak (Ocimum basilicum, poznat i kao slatki i tajlandski bosiljak) kao neotrovan za mačke. Cats Protection objašnjava da i neotrovne biljke mogu izazvati probavne smetnje ako ih mačka pojede, a ASPCA napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. PDSA navodi da mačkama osim potpune hrane ne treba ništa drugo, ali povremena poslastica nije problem.",
-        "sv": "ASPCA anger basilika (Ocimum basilicum, även kallad sötbasilika och thaibasilika) som ofarlig för katter. Cats Protection förklarar att även ofarliga växter kan ge magont om katten äter dem, och ASPCA påpekar att allt växtmaterial kan ge katter kräkningar och orolig mage. PDSA säger att katter inte behöver något annat än en komplett kost, men att en godbit då och då går bra."
+        "sv": "ASPCA anger basilika (Ocimum basilicum, även kallad sötbasilika och thaibasilika) som ofarlig för katter. Cats Protection förklarar att även ofarliga växter kan ge magont om katten äter dem, och ASPCA påpekar att allt växtmaterial kan ge katter kräkningar och orolig mage. PDSA säger att katter inte behöver något annat än en komplett kost, men att en godbit då och då går bra.",
+        "da": "ASPCA betragter basilikum (Ocimum basilicum, også kaldet sød basilikum og thaibasilikum) som ugiftig for katte. Cats Protection forklarer at selv ugiftige planter kan give ondt i maven hvis katten spiser dem, og ASPCA bemærker at alle planter kan give katte opkast og dårlig mave. PDSA skriver at katte ikke har brug for andet end komplet kattefoder, selvom en godbid af og til er i orden."
       },
       "signs": null,
       "what_to_do": {
@@ -2059,7 +2065,8 @@
         "pl": "Bazylia jest nietoksyczna dla kotów, ale jak każda roślina może wywołać wymioty lub rozstrój żołądka. Niech to będzie tylko odrobina i tylko od czasu do czasu.",
         "cs": "Bazalka není pro kočky toxická, ale jako každá rostlina může způsobit zvracení nebo žaludeční potíže. Dávejte ji jen občas a jen malý kousek.",
         "hr": "Bosiljak je neotrovan za mačke, ali kao i svaka biljka može izazvati povraćanje ili probavne smetnje. Daj ga samo povremeno i najviše jedan zalogaj.",
-        "sv": "Basilika är ofarlig för katter, men som alla växter kan den ge kräkningar eller orolig mage. Nöj dig med en liten tugga då och då."
+        "sv": "Basilika är ofarlig för katter, men som alla växter kan den ge kräkningar eller orolig mage. Nöj dig med en liten tugga då och då.",
+        "da": "Basilikum er ugiftig for katte, men som alle planter kan den give opkast eller dårlig mave. Hold dig til en lille mundfuld nu og da."
       },
       "serving": {
         "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
@@ -2073,7 +2080,8 @@
         "pl": "Tylko kawałeczek zwykłego liścia bazylii jako smakołyk od czasu do czasu.",
         "cs": "Jen malý kousek obyčejného lístku bazalky, jako příležitostný pamlsek.",
         "hr": "Samo mali zalogaj običnog lista bosiljka, kao povremena poslastica.",
-        "sv": "Bara en liten tugga av ett vanligt basilikablad, som godbit då och då."
+        "sv": "Bara en liten tugga av ett vanligt basilikablad, som godbit då och då.",
+        "da": "Kun et lille, mundret stykke af et naturelt basilikumblad som godbid af og til."
       },
       "child": {
         "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
@@ -2087,7 +2095,8 @@
         "pl": "Bazylia nie szkodzi kotom, ale one jej nie potrzebują. Wystarczy odrobinka; najlepsza jest ich własna karma.",
         "cs": "Bazalka kočkám neškodí, ale nepotřebují ji. Stačí malinký kousek, nejlepší je jejich vlastní kočičí krmivo.",
         "hr": "Bosiljak mačkama ne šteti, ali im nije potreban. Dovoljan je sasvim mali zalogaj, a najbolja im je njihova hrana za mačke.",
-        "sv": "Basilika är inte farlig för katter, men de behöver den inte. En liten tugga räcker gott. Bäst är ändå deras vanliga kattmat."
+        "sv": "Basilika är inte farlig för katter, men de behöver den inte. En liten tugga räcker gott. Bäst är ändå deras vanliga kattmat.",
+        "da": "Basilikum gør ikke katte noget, men de har ikke brug for den. En lillebitte smule er rigeligt – deres egen kattemad er bedst."
       },
       "faq": [],
       "source_ids": [
@@ -4046,7 +4055,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Cat grass",
@@ -4060,7 +4070,8 @@
         "pl": "Trawa dla kotów",
         "cs": "Kočičí tráva",
         "hr": "Mačja trava",
-        "sv": "Kattgräs"
+        "sv": "Kattgräs",
+        "da": "Kattegræs"
       },
       "question": {
         "en": "Is cat grass safe for cats?",
@@ -4074,7 +4085,8 @@
         "pl": "Czy trawa dla kotów jest bezpieczna?",
         "cs": "Je kočičí tráva pro kočky bezpečná?",
         "hr": "Je li mačja trava sigurna za mačke?",
-        "sv": "Är kattgräs säkert för katter?"
+        "sv": "Är kattgräs säkert för katter?",
+        "da": "Er kattegræs sikkert for katte?"
       },
       "url_slug": {
         "en": "cat-grass",
@@ -4088,7 +4100,8 @@
         "pl": "trawa-dla-kotow",
         "cs": "kocici-trava",
         "hr": "macja-trava",
-        "sv": "kattgras"
+        "sv": "kattgras",
+        "da": "kattegraes"
       },
       "answer": {
         "en": "Yes, cat grass is safe for cats in moderation. Cats Protection says grass is safe for cats to eat unless it is contaminated with herbicides or pesticides. Cats can't digest large amounts, though, so eating a lot may make them throw up.",
@@ -4102,7 +4115,8 @@
         "pl": "Tak, trawa dla kotów jest bezpieczna, jeśli kot zjada ją z umiarem. Cats Protection podaje, że trawa jest dla kotów bezpieczna, o ile nie została skażona herbicydami ani pestycydami. Koty nie potrafią jednak strawić dużych ilości, więc po zjedzeniu dużej ilości trawy mogą wymiotować.",
         "cs": "Ano, kočičí tráva je pro kočky v rozumném množství bezpečná. Cats Protection uvádí, že tráva je pro kočky bezpečná, pokud není kontaminovaná herbicidy nebo pesticidy. Velké množství ale kočky nestráví, takže když jí sní hodně, mohou zvracet.",
         "hr": "Da, mačja trava je za mačke sigurna ako se daje umjereno. Cats Protection navodi da mačke smiju jesti travu, osim ako je zaprskana herbicidima ili pesticidima. Mačke ipak ne mogu probaviti velike količine, pa od previše trave mogu povraćati.",
-        "sv": "Ja, kattgräs är säkert för katter i lagom mängd. Cats Protection säger att gräs är säkert för katter att äta så länge det inte är förorenat med ogräsmedel eller bekämpningsmedel. Katter kan dock inte smälta stora mängder, så om de äter mycket kan de kräkas."
+        "sv": "Ja, kattgräs är säkert för katter i lagom mängd. Cats Protection säger att gräs är säkert för katter att äta så länge det inte är förorenat med ogräsmedel eller bekämpningsmedel. Katter kan dock inte smälta stora mängder, så om de äter mycket kan de kräkas.",
+        "da": "Ja, med måde er kattegræs sikkert for katte. Cats Protection skriver at græs er sikkert for katte at spise, medmindre det er forurenet med ukrudtsmidler eller pesticider. Katte kan dog ikke fordøje store mængder, og spiser de meget, kan de kaste op."
       },
       "why": {
         "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
@@ -4116,7 +4130,8 @@
         "pl": "VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies, pszenica, jęczmień, lucerna i żyto. International Cat Care podaje, że jedzenie trawy jest u kotów normalnym zachowaniem i uważa się, że pomaga przesuwać pokarm lub kule włosowe w jelitach, często właśnie poprzez wymioty. VCA dodaje, że najważniejszy jest umiar, że koty nie muszą jeść trawy, a zjedzenie dużej ilości może powodować częste wymioty lub nagromadzenie błonnika w jelitach. Trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami.",
         "cs": "VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves, pšenice, ječmen, vojtěška a žito. International Cat Care uvádí, že jedení trávy je u koček normální chování a předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem, často zvracením. VCA dodává, že klíčem je mírnost, že kočky trávu jíst nemusejí a že snědení velkého množství může způsobit časté zvracení nebo nahromadění vlákniny ve střevech. Venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy.",
         "hr": "VCA objašnjava da se pod mačjom travom obično misli na žitarice poput zobi, pšenice, ječma, lucerne i raži. International Cat Care navodi da je jedenje trave normalno ponašanje mačaka i da se smatra kako pomaže da hrana ili klupka dlake prođu kroz crijeva, često povraćanjem. VCA dodaje da je ključna umjerenost, da mačkama trava nije potrebna te da veće količine mogu izazvati često povraćanje ili nakupljanje vlakana u crijevima. Trava koja raste vani može biti štetna ako je tretirana pesticidima.",
-        "sv": "VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre, vete, korn, alfalfa och råg. International Cat Care säger att det är normalt för katter att äta gräs och att det tros hjälpa till att föra mat eller hårbollar genom tarmen, ofta genom att katten kräks. VCA tillägger att gräset bör ges med måtta, att katter inte behöver äta gräs och att stora mängder kan ge upprepade kräkningar eller en ansamling av fibrer i tarmen. Gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel."
+        "sv": "VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre, vete, korn, alfalfa och råg. International Cat Care säger att det är normalt för katter att äta gräs och att det tros hjälpa till att föra mat eller hårbollar genom tarmen, ofta genom att katten kräks. VCA tillägger att gräset bör ges med måtta, att katter inte behöver äta gräs och att stora mängder kan ge upprepade kräkningar eller en ansamling av fibrer i tarmen. Gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel.",
+        "da": "VCA forklarer at kattegræs som regel er kornsorter som havre, hvede, byg, lucerne og rug. International Cat Care skriver at det er normal adfærd at katte spiser græs, og at det menes at hjælpe mad eller hårbolde videre gennem tarmen, ofte ved at katten kaster op. VCA understreger at det er vigtigt at holde sig til små mængder, at katte ikke behøver at spise græs, og at store mængder kan give en del opkast eller ophobning af fibre i tarmen. Græs udendørs kan være skadeligt hvis det er behandlet med pesticider."
       },
       "signs": null,
       "what_to_do": {
@@ -4131,7 +4146,8 @@
         "pl": "Zdarza się, że kot po zjedzeniu trawy zwymiotuje. Jeśli kot wymiotuje często albo wymiotuje i do tego nie chce jeść, zabierz go do weterynarza.",
         "cs": "Trochu zvracení po snědení trávy je běžné. Pokud kočka zvrací často nebo zvrací a navíc projevuje nechuť k jídlu, vezměte ji k veterináři.",
         "hr": "Povremeno povraćanje nakon jedenja trave uobičajeno je. Ako mačka često povraća ili povraća i uz to ne želi jesti, odvedi je veterinaru.",
-        "sv": "Att kräkas lite efter att ha ätit gräs är vanligt. Om katten kräks ofta, eller kräks och dessutom verkar tappa aptiten, ska du ta den till veterinären."
+        "sv": "Att kräkas lite efter att ha ätit gräs är vanligt. Om katten kräks ofta, eller kräks och dessutom verkar tappa aptiten, ska du ta den till veterinären.",
+        "da": "Det er almindeligt, at katte kaster lidt op efter at have spist græs. Hvis din kat kaster meget op, eller kaster op og samtidig ikke vil spise, skal du tage den med til dyrlægen."
       },
       "serving": {
         "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
@@ -4145,7 +4161,8 @@
         "pl": "Postaw doniczkę z trawą dla kotów w domu lub na dworze, wolną od herbicydów i pestycydów, i pozwól kotu samemu zdecydować, czy chce ją jeść. Gdy trawa zwiędnie lub zżółknie, wyrwij obumierające pędy.",
         "cs": "Nabídněte květináč s kočičí trávou v bytě nebo venku, bez herbicidů a pesticidů, a nechte na kočce, jestli ji bude jíst. Když tráva zvadne nebo zežloutne, odstraňte odumírající stébla.",
         "hr": "Ponudi lončić mačje trave, u kući ili vani, bez herbicida i pesticida, a mački prepusti da sama odluči hoće li je jesti. Kad trava uvene ili požuti, ukloni izdanke koji venu.",
-        "sv": "Erbjud en kruka med kattgräs inomhus eller utomhus, fri från ogräsmedel och bekämpningsmedel, och låt katten själv välja om den vill äta av det. När gräset vissnar eller blir gult tar du bort de vissna stråna."
+        "sv": "Erbjud en kruka med kattgräs inomhus eller utomhus, fri från ogräsmedel och bekämpningsmedel, och låt katten själv välja om den vill äta av det. När gräset vissnar eller blir gult tar du bort de vissna stråna.",
+        "da": "Sæt en potte kattegræs frem, inde eller ude, uden ukrudtsmidler og pesticider, og lad katten selv vælge om den vil spise det. Når græsset visner eller bliver gult, skal du trække de døde strå op."
       },
       "child": {
         "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
@@ -4159,7 +4176,8 @@
         "pl": "Wiele kotów uwielbia skubać trawę. Dorosły może wyhodować dla nich doniczkę trawy dla kotów, bez ogrodowych oprysków.",
         "cs": "Spousta koček ráda okusuje trávu. Dospělý jim může vypěstovat kočičí trávu v květináči, bez zahradních postřiků.",
         "hr": "Mnoge mačke vole grickati travu. Odrasla osoba može posaditi lončić mačje trave samo za njih, bez ikakvih sredstava za prskanje.",
-        "sv": "Många katter älskar att knapra på gräs. En vuxen kan odla en kruka kattgräs bara åt dem, utan besprutning."
+        "sv": "Många katter älskar att knapra på gräs. En vuxen kan odla en kruka kattgräs bara åt dem, utan besprutning.",
+        "da": "Mange katte elsker at gnaske græs. En voksen kan så en potte kattegræs til din kat, helt uden sprøjtegift."
       },
       "faq": [
         {
@@ -4175,7 +4193,8 @@
             "pl": "Dlaczego koty jedzą trawę?",
             "cs": "Proč kočky jedí trávu?",
             "hr": "Zašto mačke jedu travu?",
-            "sv": "Varför äter katter gräs?"
+            "sv": "Varför äter katter gräs?",
+            "da": "Hvorfor spiser katte græs?"
           },
           "a": {
             "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
@@ -4189,7 +4208,8 @@
             "pl": "Nie wiadomo na pewno. International Cat Care podaje, że to normalne zachowanie, które nie zostało w pełni wyjaśnione, ale uważa się, że pomaga przesuwać pokarm lub kule włosowe przez przewód pokarmowy.",
             "cs": "Přesně to nikdo neví. International Cat Care uvádí, že jde o normální chování, které není zcela objasněné, ale předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem.",
             "hr": "Nitko ne zna sa sigurnošću. International Cat Care navodi da je to normalno ponašanje koje nije do kraja razjašnjeno, ali se smatra da pomaže da hrana ili klupka dlake prođu kroz probavni sustav.",
-            "sv": "Ingen vet säkert. International Cat Care säger att det är ett normalt beteende som man inte helt förstår, men man tror att det hjälper till att föra mat eller hårbollar genom mag-tarmkanalen."
+            "sv": "Ingen vet säkert. International Cat Care säger att det är ett normalt beteende som man inte helt förstår, men man tror att det hjälper till att föra mat eller hårbollar genom mag-tarmkanalen.",
+            "da": "Det ved ingen med sikkerhed. International Cat Care skriver at det er normal adfærd, som man ikke helt forstår, men man mener at det hjælper mad eller hårbolde videre gennem fordøjelsessystemet."
           }
         },
         {
@@ -4205,7 +4225,8 @@
             "pl": "Czy mój kot może jeść trawę z ogrodu?",
             "cs": "Je zahradní tráva pro mou kočku v pořádku?",
             "hr": "Smije li moja mačka jesti travu iz vrta?",
-            "sv": "Går det bra med vanligt gräs från trädgården?"
+            "sv": "Går det bra med vanligt gräs från trädgården?",
+            "da": "Er græs fra haven i orden for min kat?"
           },
           "a": {
             "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
@@ -4219,7 +4240,8 @@
             "pl": "Tylko jeśli nie była niczym opryskana. VCA ostrzega, że trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami. PDSA proponuje trawę dla kotów, którą można uprawiać w domu lub na dworze i co do której masz pewność, że jest wolna od pestycydów.",
             "cs": "Jen pokud nebyla ošetřena. VCA upozorňuje, že venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy. PDSA doporučuje kočičí trávu, kterou lze pěstovat uvnitř i venku a o které víte, že neobsahuje pesticidy.",
             "hr": "Samo ako nije tretirana. VCA upozorava da trava koja raste vani može biti štetna ako je tretirana pesticidima. PDSA predlaže mačju travu, koja se može uzgajati u kući ili vani i za koju znaš da nema pesticida.",
-            "sv": "Bara om det inte är behandlat. VCA varnar för att gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel. PDSA föreslår kattgräs, som kan odlas inomhus eller utomhus och som du vet är obesprutat."
+            "sv": "Bara om det inte är behandlat. VCA varnar för att gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel. PDSA föreslår kattgräs, som kan odlas inomhus eller utomhus och som du vet är obesprutat.",
+            "da": "Kun hvis det ikke er behandlet. VCA advarer om at græs udendørs kan være skadeligt hvis det er behandlet med pesticider. PDSA foreslår kattegræs, som kan dyrkes indendørs eller udendørs, og som du ved er fri for pesticider."
           }
         },
         {
@@ -4235,7 +4257,8 @@
             "pl": "Mój kot nie wychodzi z domu. Czy potrzebuje trawy?",
             "cs": "Moje kočka žije v bytě. Potřebuje trávu?",
             "hr": "Moja mačka ne izlazi iz kuće. Treba li joj trava?",
-            "sv": "Min katt bor inomhus. Behöver den gräs?"
+            "sv": "Min katt bor inomhus. Behöver den gräs?",
+            "da": "Min kat bor indendørs. Har den brug for græs?"
           },
           "a": {
             "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
@@ -4249,7 +4272,8 @@
             "pl": "Według VCA kot nie potrzebuje trawy. International Cat Care zauważa jednak, że koty niewychodzące, które nie mają trawy, mogą przegryzać inne rośliny doniczkowe, dlatego warto zapewnić im w domu dostęp do trawy.",
             "cs": "Vaše kočka trávu nepotřebuje, uvádí VCA. International Cat Care ale poznamenává, že bytové kočky bez trávy mohou okusovat jiné pokojové rostliny, proto jim lze v bytě trávu nabídnout.",
             "hr": "Prema VCA-u mački trava nije potrebna. No International Cat Care napominje da mačke koje ne izlaze iz kuće, a nemaju pristup travi, mogu žvakati druge lončanice, pa im se trava može osigurati u kući.",
-            "sv": "Katten behöver inte gräs, säger VCA. Men International Cat Care påpekar att innekatter utan gräs kan tugga på andra krukväxter, så det kan vara bra att ge dem tillgång till gräs inomhus."
+            "sv": "Katten behöver inte gräs, säger VCA. Men International Cat Care påpekar att innekatter utan gräs kan tugga på andra krukväxter, så det kan vara bra att ge dem tillgång till gräs inomhus.",
+            "da": "Din kat har ikke brug for græs, skriver VCA. International Cat Care bemærker dog at indekatte uden adgang til græs kan gnaske på andre potteplanter, så man kan give dem græs indendørs."
           }
         }
       ],
@@ -4297,7 +4321,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Catnip",
@@ -4311,7 +4336,8 @@
         "pl": "Kocimiętka",
         "cs": "Šanta kočičí (catnip)",
         "hr": "Mačja metvica",
-        "sv": "Kattmynta"
+        "sv": "Kattmynta",
+        "da": "Katteurt"
       },
       "question": {
         "en": "Can cats eat catnip?",
@@ -4325,7 +4351,8 @@
         "pl": "Czy koty mogą jeść kocimiętkę?",
         "cs": "Mohou kočky jíst šantu kočičí?",
         "hr": "Smiju li mačke jesti mačju metvicu?",
-        "sv": "Får katter äta kattmynta?"
+        "sv": "Får katter äta kattmynta?",
+        "da": "Må katte spise katteurt?"
       },
       "url_slug": {
         "en": "catnip",
@@ -4339,7 +4366,8 @@
         "pl": "kocimietka",
         "cs": "santa-kocici",
         "hr": "macja-metvica",
-        "sv": "kattmynta"
+        "sv": "kattmynta",
+        "da": "katteurt"
       },
       "answer": {
         "en": "Not as a snack. Sniffing catnip is harmless for cats, but the ASPCA lists catnip as toxic to cats because eating it can cause vomiting and diarrhoea. Let your cat enjoy the smell rather than eat the plant.",
@@ -4353,7 +4381,8 @@
         "pl": "Nie jako przekąskę. Wąchanie kocimiętki jest dla kotów nieszkodliwe, ale ASPCA uznaje kocimiętkę za toksyczną dla kotów, bo jej zjedzenie może wywołać wymioty i biegunkę. Pozwól kotu cieszyć się zapachem, zamiast jeść roślinę.",
         "cs": "Ne jako pamlsek. Čichat k šantě kočičí je pro kočky neškodné, ale ASPCA ji řadí mezi rostliny toxické pro kočky, protože po jejím snědení může dojít ke zvracení a průjmu. Raději nechte kočku užívat si vůni, než aby rostlinu jedla.",
         "hr": "Ne kao užinu. Mirisanje mačje metvice mačkama ne šteti, ali ASPCA je navodi kao otrovnu za mačke jer od jedenja mogu povraćati i dobiti proljev. Neka mačka uživa u mirisu, a biljku neka ne jede.",
-        "sv": "Inte som godbit. Att nosa på kattmynta är ofarligt för katter, men ASPCA anger kattmynta som giftig för katter eftersom den kan ge kräkningar och diarré om katten äter den. Låt katten njuta av doften i stället för att äta växten."
+        "sv": "Inte som godbit. Att nosa på kattmynta är ofarligt för katter, men ASPCA anger kattmynta som giftig för katter eftersom den kan ge kräkningar och diarré om katten äter den. Låt katten njuta av doften i stället för att äta växten.",
+        "da": "Ikke som snack. Det er ufarligt for katte at snuse til katteurt, men ASPCA betragter katteurt som giftig for katte, fordi den kan give opkast og diarré hvis katten spiser den. Lad din kat nyde duften i stedet for at spise planten."
       },
       "why": {
         "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
@@ -4367,7 +4396,8 @@
         "pl": "Źródła się różnią, więc przyjmujemy ostrzejsze stanowisko. International Cat Care podaje, że kocimiętka działa, gdy kot wącha jej olejek, a jej działanie na koty jest nieszkodliwe, nie uzależnia i szybko mija, a Cats Protection radzi posadzić kocimiętkę, żeby odciągnąć koty od innych roślin. ASPCA uznaje jednak kocimiętkę (Nepeta cataria) za toksyczną dla kotów: wiele kotów ją uwielbia, ale może wywołać wymioty i biegunkę, a u jednych kotów działa uspokajająco, a u innych pobudzająco.",
         "cs": "Zdroje se liší, proto se držíme přísnějšího pohledu. International Cat Care uvádí, že šanta kočičí působí, když kočka čichá k jejímu oleji, a že její účinky na kočky jsou neškodné, nevyvolávají závislost a jsou krátkodobé; Cats Protection doporučuje šantu vysadit, aby odvedla pozornost koček od jiných rostlin. ASPCA však šantu kočičí (Nepeta cataria) řadí mezi rostliny toxické pro kočky: mnoho koček ji miluje, ale může způsobit zvracení a průjem a některé kočky utlumí, jiné naopak povzbudí.",
         "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. International Cat Care navodi da mačja metvica djeluje kad mačka pomiriše njezino ulje te da su njezini učinci na mačke bezopasni, ne izazivaju ovisnost i kratko traju, a Cats Protection predlaže sadnju mačje metvice kako bi se mačke odvratile od drugih biljaka. ASPCA, međutim, navodi mačju metvicu (Nepeta cataria) kao otrovnu za mačke: mnoge mačke je vole, ali može izazvati povraćanje i proljev, a neke mačke umiruje, dok druge uzbuđuje.",
-        "sv": "Källorna går isär, så vi följer den strängare bedömningen. International Cat Care säger att kattmynta verkar när katten nosar på oljan och att effekterna på katter är ofarliga, inte beroendeframkallande och kortvariga, och Cats Protection föreslår att du planterar kattmynta för att locka bort katter från andra växter. ASPCA anger däremot kattmynta (Nepeta cataria) som giftig för katter: många katter älskar den, men den kan ge kräkningar och diarré, och den gör vissa katter dåsiga och andra uppspelta."
+        "sv": "Källorna går isär, så vi följer den strängare bedömningen. International Cat Care säger att kattmynta verkar när katten nosar på oljan och att effekterna på katter är ofarliga, inte beroendeframkallande och kortvariga, och Cats Protection föreslår att du planterar kattmynta för att locka bort katter från andra växter. ASPCA anger däremot kattmynta (Nepeta cataria) som giftig för katter: många katter älskar den, men den kan ge kräkningar och diarré, och den gör vissa katter dåsiga och andra uppspelta.",
+        "da": "Kilderne er uenige, så vi følger den strengeste vurdering. International Cat Care skriver at katteurt virker når katten snuser til olien, og at virkningen på katte er ufarlig, ikke vanedannende og kortvarig. Cats Protection foreslår at man planter katteurt for at lokke katte væk fra andre planter. ASPCA betragter derimod katteurt (Nepeta cataria) som giftig for katte: mange katte elsker den, men den kan give opkast og diarré, og nogle katte bliver døsige, mens andre bliver opstemte."
       },
       "signs": {
         "en": [
@@ -4441,6 +4471,12 @@
           "Diarré",
           "Ovanlig sömnighet",
           "Överdriven uppspelthet"
+        ],
+        "da": [
+          "Opkast",
+          "Diarré",
+          "Usædvanlig søvnighed",
+          "Overdreven opstemthed"
         ]
       },
       "what_to_do": {
@@ -4455,7 +4491,8 @@
         "pl": "Jeśli kot zjadł kocimiętkę i ma wymioty lub biegunkę, skontaktuj się z weterynarzem.",
         "cs": "Pokud kočka snědla šantu kočičí a zvrací nebo má průjem, obraťte se na veterináře.",
         "hr": "Ako je mačka pojela mačju metvicu i povraća ili ima proljev, obrati se veterinaru.",
-        "sv": "Om katten har ätit kattmynta och kräks eller har diarré ska du kontakta veterinären."
+        "sv": "Om katten har ätit kattmynta och kräks eller har diarré ska du kontakta veterinären.",
+        "da": "Hvis din kat har spist katteurt og kaster op eller har diarré, skal du kontakte din dyrlæge."
       },
       "serving": null,
       "child": {
@@ -4470,7 +4507,8 @@
         "pl": "Wiele kotów uwielbia zapach kocimiętki. Jest do wąchania i zabawy, nie do jedzenia.",
         "cs": "Mnoho koček miluje vůni šanty kočičí. Je na čichání a hraní, ne na jedení.",
         "hr": "Mnoge mačke vole miris mačje metvice. Ona je za njuškanje i igru, ne za jelo.",
-        "sv": "Många katter älskar doften av kattmynta. Den är till för att nosa på och leka med, inte för att äta."
+        "sv": "Många katter älskar doften av kattmynta. Den är till för att nosa på och leka med, inte för att äta.",
+        "da": "Mange katte elsker duften af katteurt. Den er til at snuse til og lege med, ikke til at spise."
       },
       "faq": [
         {
@@ -4486,7 +4524,8 @@
             "pl": "Dlaczego mój kot nie reaguje na kocimiętkę?",
             "cs": "Proč moje kočka na šantu kočičí nereaguje?",
             "hr": "Zašto moja mačka ne reagira na mačju metvicu?",
-            "sv": "Varför reagerar min katt inte på kattmynta?"
+            "sv": "Varför reagerar min katt inte på kattmynta?",
+            "da": "Hvorfor reagerer min kat ikke på katteurt?"
           },
           "a": {
             "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
@@ -4500,7 +4539,8 @@
             "pl": "International Cat Care podaje, że kocimiętka działa na około 70–80% kotów, a reakcja jest dziedziczona po rodzicach. Na kocięta nie działa, dopóki nie mają ponad trzech miesięcy.",
             "cs": "International Cat Care uvádí, že šanta kočičí působí asi na 70–80 % koček a reakce se dědí po rodičích. Na koťata nemá žádný účinek, dokud nejsou starší než tři měsíce.",
             "hr": "International Cat Care navodi da mačja metvica djeluje na otprilike 70–80 % mačaka i da se reakcija nasljeđuje od roditelja. Na mačiće nema učinka dok nisu stariji od tri mjeseca.",
-            "sv": "International Cat Care säger att kattmynta påverkar ungefär 70–80 % av katterna och att reaktionen ärvs från föräldrarna. Kattmynta har ingen effekt på kattungar förrän de är över tre månader gamla."
+            "sv": "International Cat Care säger att kattmynta påverkar ungefär 70–80 % av katterna och att reaktionen ärvs från föräldrarna. Kattmynta har ingen effekt på kattungar förrän de är över tre månader gamla.",
+            "da": "International Cat Care skriver at katteurt påvirker omkring 70–80 % af alle katte, og at reaktionen er arvelig. Katteurt har ingen virkning på killinger, før de er mere end tre måneder gamle."
           }
         },
         {
@@ -4516,7 +4556,8 @@
             "pl": "Czy kocimiętka to to samo co trawa dla kotów?",
             "cs": "Je šanta kočičí totéž co kočičí tráva?",
             "hr": "Je li mačja metvica isto što i mačja trava?",
-            "sv": "Är kattmynta samma sak som kattgräs?"
+            "sv": "Är kattmynta samma sak som kattgräs?",
+            "da": "Er katteurt det samme som kattegræs?"
           },
           "a": {
             "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
@@ -4530,7 +4571,8 @@
             "pl": "Nie. VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies czy pszenica, a kocimiętka należy do rodziny miętowatych.",
             "cs": "Ne. VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves nebo pšenice, zatímco šanta kočičí patří do stejné čeledi (hluchavkovité) jako máta.",
             "hr": "Ne. VCA objašnjava da se pod mačjom travom obično misli na žitarice poput zobi ili pšenice, dok mačja metvica pripada istoj biljnoj porodici kao metvica.",
-            "sv": "Nej. VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre eller vete, medan kattmynta tillhör familjen kransblommiga växter, precis som mynta."
+            "sv": "Nej. VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre eller vete, medan kattmynta tillhör familjen kransblommiga växter, precis som mynta.",
+            "da": "Nej. VCA forklarer at kattegræs som regel er kornsorter som havre eller hvede, mens katteurt tilhører myntefamilien."
           }
         }
       ],
@@ -11012,7 +11054,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Parsley",
@@ -11026,7 +11069,8 @@
         "pl": "Pietruszka",
         "cs": "Petržel",
         "hr": "Peršin",
-        "sv": "Persilja"
+        "sv": "Persilja",
+        "da": "Persille"
       },
       "question": {
         "en": "Can cats eat parsley?",
@@ -11040,7 +11084,8 @@
         "pl": "Czy koty mogą jeść pietruszkę?",
         "cs": "Mohou kočky jíst petržel?",
         "hr": "Smiju li mačke jesti peršin?",
-        "sv": "Får katter äta persilja?"
+        "sv": "Får katter äta persilja?",
+        "da": "Må katte spise persille?"
       },
       "url_slug": {
         "en": "parsley",
@@ -11054,7 +11099,8 @@
         "pl": "pietruszka",
         "cs": "petrzel",
         "hr": "persin",
-        "sv": "persilja"
+        "sv": "persilja",
+        "da": "persille"
       },
       "answer": {
         "en": "No, don't give your cat parsley. The ASPCA lists parsley as toxic to cats: it can make the skin sensitive to sunlight and cause sunburn or skin inflammation, although large amounts are needed for this effect. If your cat has eaten some, contact your vet.",
@@ -11068,7 +11114,8 @@
         "pl": "Nie, nie dawaj kotu pietruszki. ASPCA uznaje pietruszkę za toksyczną dla kotów: może uwrażliwiać skórę na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry, choć do takiego efektu potrzebne są duże ilości. Jeśli kot zjadł trochę pietruszki, skontaktuj się z weterynarzem.",
         "cs": "Ne, kočce petržel nedávejte. ASPCA řadí petržel mezi rostliny toxické pro kočky: může zvýšit citlivost kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže, i když k tomu je potřeba velké množství. Pokud ji kočka snědla, obraťte se na veterináře.",
         "hr": "Ne, ne daj mački peršin. ASPCA ga navodi kao otrovan za mačke: može učiniti kožu osjetljivom na sunce te izazvati opekline ili upalu kože, iako je za taj učinak potrebna velika količina. Ako je mačka pojela nešto peršina, obrati se veterinaru.",
-        "sv": "Nej, ge inte katten persilja. ASPCA anger persilja som giftig för katter: den kan göra huden känslig för solljus och ge solbränna eller hudinflammation, även om det krävs stora mängder för att få den effekten. Om katten har ätit av den ska du kontakta veterinären."
+        "sv": "Nej, ge inte katten persilja. ASPCA anger persilja som giftig för katter: den kan göra huden känslig för solljus och ge solbränna eller hudinflammation, även om det krävs stora mängder för att få den effekten. Om katten har ätit av den ska du kontakta veterinären.",
+        "da": "Nej, giv ikke din kat persille. ASPCA betragter persille som giftig for katte: den kan gøre huden følsom over for sollys og give solskoldning eller hudbetændelse, selvom der skal store mængder til. Hvis din kat har spist af den, skal du kontakte din dyrlæge."
       },
       "why": {
         "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -11082,7 +11129,8 @@
         "pl": "ASPCA uznaje pietruszkę (Petroselinum crispum, w tym pietruszkę włoską i korzeniową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje furanokumaryny i podaje, że mogą one powodować fotouczulenie (oparzenia słoneczne, stan zapalny skóry), dodając, że do takiego efektu potrzebne są duże ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie.",
         "cs": "ASPCA řadí petržel (Petroselinum crispum, včetně italské a kořenové petržele) mezi rostliny toxické pro kočky. Jako toxickou látku uvádí furanokumariny a říká, že mohou způsobit fotosenzibilizaci (spálení od slunce, zánět kůže), přičemž dodává, že k tomu je potřeba velké množství. ASPCA také upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. Kočky rostliny ve stravě nepotřebují: PDSA uvádí, že kočky jsou masožravci, kteří potřebují živiny obsažené v mase.",
         "hr": "ASPCA navodi peršin (Petroselinum crispum, uključujući talijanski i korijenski peršin) kao otrovan za mačke. Kao otrovnu tvar navodi furanokumarine i kaže da mogu izazvati fotosenzibilizaciju (opekline od sunca, upalu kože), uz napomenu da je za taj učinak potrebna velika količina. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa.",
-        "sv": "ASPCA anger persilja (Petroselinum crispum, inklusive slätbladig persilja och rotpersilja) som giftig för katter. Som giftigt ämne nämns furanokumariner, som kan ge fotosensibilisering (solbränna, hudinflammation), och ASPCA tillägger att det krävs stora mängder för att få den effekten. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött."
+        "sv": "ASPCA anger persilja (Petroselinum crispum, inklusive slätbladig persilja och rotpersilja) som giftig för katter. Som giftigt ämne nämns furanokumariner, som kan ge fotosensibilisering (solbränna, hudinflammation), och ASPCA tillägger att det krävs stora mängder för att få den effekten. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött.",
+        "da": "ASPCA betragter persille (Petroselinum crispum, også kaldet italiensk persille og rodpersille) som giftig for katte. Organisationen peger på furanokumariner som det giftige stof og skriver at de kan give lysfølsomhed (solskoldning, hudbetændelse), men at der skal store mængder til. ASPCA bemærker også at alle planter kan give katte opkast og dårlig mave. Katte har ikke brug for planter i kosten: PDSA skriver at katte er kødædere og har brug for de næringsstoffer der findes i kød."
       },
       "signs": {
         "en": [
@@ -11156,6 +11204,12 @@
           "Hudinflammation (dermatit)",
           "Kräkningar",
           "Orolig mage"
+        ],
+        "da": [
+          "Solskoldning",
+          "Hudbetændelse (dermatitis)",
+          "Opkast",
+          "Dårlig mave"
         ]
       },
       "what_to_do": {
@@ -11170,7 +11224,8 @@
         "pl": "Jeśli kot zjadł pietruszkę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów.",
         "cs": "Pokud kočka snědla petržel, ihned se obraťte na veterináře. Nečekejte, až se objeví příznaky.",
         "hr": "Ako je mačka pojela peršin, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi.",
-        "sv": "Om katten har ätit persilja ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp."
+        "sv": "Om katten har ätit persilja ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp.",
+        "da": "Hvis din kat har spist persille, skal du straks kontakte din dyrlæge. Vent ikke på symptomer."
       },
       "serving": null,
       "child": {
@@ -11185,7 +11240,8 @@
         "pl": "Pietruszka nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
         "cs": "Petržel není pamlsek pro kočky. Když ji kočička okusuje, řekni to dospělému, aby mohl zavolat veterináři.",
         "hr": "Peršin nije poslastica za mačke. Ako mačkica zagrize malo peršina, reci odrasloj osobi da nazove veterinara.",
-        "sv": "Persilja är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären."
+        "sv": "Persilja är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären.",
+        "da": "Persille er ikke en snack til katte. Hvis din kat har gnasket lidt af den, så sig det til en voksen, som kan ringe til dyrlægen."
       },
       "faq": [
         {
@@ -11201,7 +11257,8 @@
             "pl": "Dlaczego pietruszka szkodzi kotom, skoro jedzą ją ludzie?",
             "cs": "Proč je petržel pro kočky problém, když ji jedí lidé?",
             "hr": "Zašto je peršin problem za mačke, a ljudi ga jedu?",
-            "sv": "Varför är persilja ett problem för katter när människor äter den?"
+            "sv": "Varför är persilja ett problem för katter när människor äter den?",
+            "da": "Hvorfor er persille et problem for katte, selvom vi mennesker spiser den?"
           },
           "a": {
             "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
@@ -11215,7 +11272,8 @@
             "pl": "ASPCA podaje, że pietruszka zawiera furanokumaryny, które mogą uwrażliwiać skórę kota na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry. Zaznacza, że do takiego efektu potrzebne są duże ilości.",
             "cs": "ASPCA uvádí, že petržel obsahuje furanokumariny, které mohou zvýšit citlivost kočičí kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže. Dodává, že k tomu je potřeba velké množství.",
             "hr": "ASPCA navodi da peršin sadrži furanokumarine, koji mogu učiniti mačju kožu osjetljivom na sunce te izazvati opekline ili upalu kože. Napominje da je za taj učinak potrebna velika količina.",
-            "sv": "ASPCA säger att persilja innehåller furanokumariner, som kan göra kattens hud känslig för solljus och ge solbränna eller hudinflammation. ASPCA påpekar samtidigt att det krävs stora mängder för att få den effekten."
+            "sv": "ASPCA säger att persilja innehåller furanokumariner, som kan göra kattens hud känslig för solljus och ge solbränna eller hudinflammation. ASPCA påpekar samtidigt att det krävs stora mängder för att få den effekten.",
+            "da": "ASPCA skriver at persille indeholder furanokumariner, som kan gøre en kats hud følsom over for sollys og give solskoldning eller hudbetændelse, men at der skal store mængder til."
           }
         }
       ],
@@ -14351,7 +14409,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Mint (garden mint)",
@@ -14365,7 +14424,8 @@
         "pl": "Mięta (mięta ogrodowa)",
         "cs": "Máta (máta zahradní)",
         "hr": "Metvica (vrtna metvica)",
-        "sv": "Mynta (kryddmynta)"
+        "sv": "Mynta (kryddmynta)",
+        "da": "Mynte (havemynte)"
       },
       "question": {
         "en": "Can cats eat mint?",
@@ -14379,7 +14439,8 @@
         "pl": "Czy koty mogą jeść miętę?",
         "cs": "Mohou kočky jíst mátu?",
         "hr": "Smiju li mačke jesti metvicu?",
-        "sv": "Får katter äta mynta?"
+        "sv": "Får katter äta mynta?",
+        "da": "Må katte spise mynte?"
       },
       "url_slug": {
         "en": "mint",
@@ -14393,7 +14454,8 @@
         "pl": "mieta",
         "cs": "mata",
         "hr": "metvica",
-        "sv": "mynta"
+        "sv": "mynta",
+        "da": "mynte"
       },
       "answer": {
         "en": "No, don't give your cat mint. The ASPCA lists garden mint as toxic to cats because of its essential oils; eating a lot of it can cause vomiting and diarrhoea. If your cat has eaten some, contact your vet.",
@@ -14407,7 +14469,8 @@
         "pl": "Nie, nie dawaj kotu mięty. ASPCA uznaje miętę ogrodową za toksyczną dla kotów z powodu olejków eterycznych; zjedzenie jej dużej ilości może wywołać wymioty i biegunkę. Jeśli kot zjadł trochę mięty, skontaktuj się z weterynarzem.",
         "cs": "Ne, kočce mátu nedávejte. ASPCA řadí mátu zahradní mezi rostliny toxické pro kočky kvůli obsahu éterických olejů; po snědení většího množství může způsobit zvracení a průjem. Pokud kočka mátu snědla, obraťte se na veterináře.",
         "hr": "Ne, ne daj mački metvicu. ASPCA vrtnu metvicu navodi kao otrovnu za mačke zbog eteričnih ulja; veća količina može izazvati povraćanje i proljev. Ako je mačka pojela nešto metvice, obrati se veterinaru.",
-        "sv": "Nej, ge inte katten mynta. ASPCA anger att kryddmynta är giftig för katter på grund av de eteriska oljorna, och om katten äter mycket kan den få kräkningar och diarré. Om katten har ätit av den ska du kontakta veterinären."
+        "sv": "Nej, ge inte katten mynta. ASPCA anger att kryddmynta är giftig för katter på grund av de eteriska oljorna, och om katten äter mycket kan den få kräkningar och diarré. Om katten har ätit av den ska du kontakta veterinären.",
+        "da": "Nej, giv ikke din kat mynte. ASPCA betragter havemynte som giftig for katte på grund af de æteriske olier. Spiser katten meget, kan det give opkast og diarré. Hvis din kat har spist af den, skal du kontakte din dyrlæge."
       },
       "why": {
         "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -14421,7 +14484,8 @@
         "pl": "ASPCA uznaje miętę (gatunki Mentha, zwane też miętą ogrodową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje olejki eteryczne i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie.",
         "cs": "ASPCA řadí mátu (rod Mentha, též máta zahradní) mezi rostliny toxické pro kočky. Jako toxickou látku uvádí éterické oleje a po snědení velkého množství zvracení a průjem. ASPCA také upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. Kočky rostliny ve stravě nepotřebují: PDSA uvádí, že kočky jsou masožravci, kteří potřebují živiny obsažené v mase.",
         "hr": "ASPCA navodi metvicu (vrste roda Mentha, poznate i kao vrtna metvica) kao otrovnu za mačke. Kao otrovnu tvar navodi eterična ulja, a uz veće pojedene količine navodi povraćanje i proljev. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa.",
-        "sv": "ASPCA anger mynta (Mentha-arter, även kallad kryddmynta) som giftig för katter. Som giftigt ämne anges eteriska oljor, och vid stora mängder nämns kräkningar och diarré. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött."
+        "sv": "ASPCA anger mynta (Mentha-arter, även kallad kryddmynta) som giftig för katter. Som giftigt ämne anges eteriska oljor, och vid stora mängder nämns kräkningar och diarré. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött.",
+        "da": "ASPCA betragter mynte (Mentha-arter, også kaldet havemynte) som giftig for katte. Organisationen peger på æteriske olier som det giftige stof og nævner opkast og diarré ved store mængder. ASPCA bemærker også at alle planter kan give katte opkast og dårlig mave. Katte har ikke brug for planter i kosten: PDSA skriver at katte er kødædere og har brug for de næringsstoffer der findes i kød."
       },
       "signs": {
         "en": [
@@ -14483,6 +14547,11 @@
           "Kräkningar",
           "Diarré",
           "Orolig mage"
+        ],
+        "da": [
+          "Opkast",
+          "Diarré",
+          "Dårlig mave"
         ]
       },
       "what_to_do": {
@@ -14497,7 +14566,8 @@
         "pl": "Jeśli kot zjadł miętę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów.",
         "cs": "Pokud kočka snědla mátu, ihned se obraťte na veterináře. Nečekejte, až se objeví příznaky.",
         "hr": "Ako je mačka pojela metvicu, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi.",
-        "sv": "Om katten har ätit mynta ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp."
+        "sv": "Om katten har ätit mynta ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp.",
+        "da": "Hvis din kat har spist mynte, skal du straks kontakte din dyrlæge. Vent ikke på symptomer."
       },
       "serving": null,
       "child": {
@@ -14512,7 +14582,8 @@
         "pl": "Mięta nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
         "cs": "Máta není pamlsek pro kočky. Když ji kočička okusuje, řekni to dospělému, aby mohl zavolat veterináři.",
         "hr": "Metvica nije poslastica za mačke. Ako mačkica zagrize malo metvice, reci odrasloj osobi da nazove veterinara.",
-        "sv": "Mynta är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären."
+        "sv": "Mynta är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären.",
+        "da": "Mynte er ikke en snack til katte. Hvis din kat har gnasket lidt af den, så sig det til en voksen, som kan ringe til dyrlægen."
       },
       "faq": [
         {
@@ -14528,7 +14599,8 @@
             "pl": "Czy kocimiętka to rodzaj mięty?",
             "cs": "Je šanta kočičí druh máty?",
             "hr": "Je li mačja metvica vrsta metvice?",
-            "sv": "Är kattmynta en sorts mynta?"
+            "sv": "Är kattmynta en sorts mynta?",
+            "da": "Er katteurt en slags mynte?"
           },
           "a": {
             "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -14542,7 +14614,8 @@
             "pl": "Kocimiętka należy do rodziny miętowatych, jak zauważa VCA, ale jest osobną rośliną. ASPCA wymienia ją osobno: wiele kotów kocimiętkę uwielbia, ale jej zjedzenie może wywołać wymioty i biegunkę.",
             "cs": "Šanta kočičí patří do stejné čeledi (hluchavkovité) jako máta, jak uvádí VCA, je to ale samostatná rostlina. ASPCA ji uvádí zvlášť: mnoho koček šantu miluje, ale po jejím snědení může zvracet a mít průjem.",
             "hr": "Mačja metvica pripada istoj biljnoj porodici kao metvica, kako napominje VCA, ali je zasebna biljka. ASPCA je navodi zasebno: mnoge je mačke vole, ali jedenje može izazvati povraćanje i proljev.",
-            "sv": "Kattmynta tillhör familjen kransblommiga växter, precis som mynta, vilket VCA påpekar, men det är en egen växt. ASPCA tar upp den för sig: många katter älskar kattmynta, men om katten äter den kan den få kräkningar och diarré."
+            "sv": "Kattmynta tillhör familjen kransblommiga växter, precis som mynta, vilket VCA påpekar, men det är en egen växt. ASPCA tar upp den för sig: många katter älskar kattmynta, men om katten äter den kan den få kräkningar och diarré.",
+            "da": "Katteurt tilhører myntefamilien, som VCA bemærker, men er en plante for sig. ASPCA omtaler den separat: mange katte elsker katteurt, men spiser de den, kan det give opkast og diarré."
           }
         }
       ],
@@ -26562,7 +26635,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Basil",
@@ -26576,7 +26650,8 @@
         "pl": "Bazylia",
         "cs": "Bazalka",
         "hr": "Bosiljak",
-        "sv": "Basilika"
+        "sv": "Basilika",
+        "da": "Basilikum"
       },
       "question": {
         "en": "Can dogs eat basil?",
@@ -26590,7 +26665,8 @@
         "pl": "Czy psy mogą jeść bazylię?",
         "cs": "Mohou psi jíst bazalku?",
         "hr": "Smiju li psi jesti bosiljak?",
-        "sv": "Får hundar äta basilika?"
+        "sv": "Får hundar äta basilika?",
+        "da": "Må hunde spise basilikum?"
       },
       "url_slug": {
         "en": "basil",
@@ -26604,7 +26680,8 @@
         "pl": "bazylia",
         "cs": "bazalka",
         "hr": "bosiljak",
-        "sv": "basilika"
+        "sv": "basilika",
+        "da": "basilikum"
       },
       "answer": {
         "en": "Yes, in small quantities. The ASPCA lists basil as non-toxic to dogs, and it is one of the herbs you can grow in a dog-friendly garden and add to your dog's meals or treats in small quantities.",
@@ -26618,7 +26695,8 @@
         "pl": "Tak, w małych ilościach. ASPCA uznaje bazylię za nietoksyczną dla psów. To jedno z ziół, które możesz uprawiać w ogrodzie bezpiecznym dla psów i w niewielkich ilościach dodawać do ich posiłków lub smakołyków.",
         "cs": "Ano, v malém množství. ASPCA řadí bazalku mezi rostliny netoxické pro psy. Je to jedna z bylinek, které můžete pěstovat na zahradě bezpečné pro psy a v malém množství přidávat do jejich jídla nebo pamlsků.",
         "hr": "Da, u malim količinama. ASPCA navodi bosiljak kao neotrovan za pse, a jedna je od začinskih biljaka koje možeš uzgajati u vrtu sigurnom za pse i u malim količinama dodavati psećim obrocima ili poslasticama.",
-        "sv": "Ja, i små mängder. ASPCA anger basilika som ofarlig för hundar. Du kan odla den i en hundvänlig trädgård och tillsätta lite av den i hundens mat eller godbitar."
+        "sv": "Ja, i små mängder. ASPCA anger basilika som ofarlig för hundar. Du kan odla den i en hundvänlig trädgård och tillsätta lite av den i hundens mat eller godbitar.",
+        "da": "Ja, i små mængder. ASPCA betragter basilikum som ugiftig for hunde. Du kan dyrke den i en hundevenlig have og tilsætte lidt af den til hundens mad eller godbidder."
       },
       "why": {
         "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
@@ -26632,7 +26710,8 @@
         "pl": "Bazylia (Ocimum basilicum, zwana też bazylią pospolitą i bazylią tajską) jest nietoksyczna dla psów. Ma właściwości antyoksydacyjne, przeciwwirusowe i przeciwdrobnoustrojowe. Jak w przypadku innych ziół dodawanych do posiłków lub smakołyków, trzymaj się niewielkich ilości.",
         "cs": "Bazalka (Ocimum basilicum, též bazalka pravá nebo thajská) není pro psy toxická. Má antioxidační, antivirové a antimikrobiální vlastnosti. Stejně jako u jiných bylinek, které se přidávají do jídla nebo pamlsků, by množství mělo být malé.",
         "hr": "Bosiljak (Ocimum basilicum, poznat i kao slatki ili tajlandski bosiljak) neotrovan je za pse. Ima antioksidativna, antivirusna i antimikrobna svojstva. Kao i kod drugog začinskog bilja koje se dodaje obrocima ili umiješa u poslastice, količine neka budu male.",
-        "sv": "Basilika (Ocimum basilicum, även kallad sötbasilika eller thaibasilika) är ofarlig för hundar. Den har antioxidativa, antivirala och antimikrobiella egenskaper. Precis som med andra örter som läggs i maten eller blandas i godbitar bör mängderna vara små."
+        "sv": "Basilika (Ocimum basilicum, även kallad sötbasilika eller thaibasilika) är ofarlig för hundar. Den har antioxidativa, antivirala och antimikrobiella egenskaper. Precis som med andra örter som läggs i maten eller blandas i godbitar bör mängderna vara små.",
+        "da": "Basilikum (Ocimum basilicum, også kaldet sød basilikum eller thaibasilikum) er ugiftig for hunde. Den har antioxidative, antivirale og antimikrobielle egenskaber. Som med andre krydderurter man tilsætter maden eller blander i godbidder, bør mængderne være små."
       },
       "signs": null,
       "what_to_do": {
@@ -26647,7 +26726,8 @@
         "pl": "Bazylia jest nietoksyczna dla psów. Pamiętaj tylko, żeby dodawać ją do posiłków lub smakołyków w niewielkich ilościach.",
         "cs": "Bazalka není pro psy toxická. Jen dbejte na to, aby množství, které přidáte do jídla nebo pamlsků, bylo malé.",
         "hr": "Bosiljak je neotrovan za pse. Samo pazi da količine koje dodaješ obrocima ili poslasticama budu male.",
-        "sv": "Basilika är ofarlig för hundar. Ge bara små mängder när du tillsätter den i mat eller godbitar."
+        "sv": "Basilika är ofarlig för hundar. Ge bara små mängder när du tillsätter den i mat eller godbitar.",
+        "da": "Basilikum er ugiftig for hunde. Hold bare mængderne små når du tilsætter den til mad eller godbidder."
       },
       "serving": {
         "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
@@ -26661,7 +26741,8 @@
         "pl": "Dodaj odrobinę do posiłku psa albo wmieszaj w smakołyki – zawsze w niewielkich ilościach.",
         "cs": "Přidejte trochu psovi do jídla nebo ji zamíchejte do pamlsků, vždy jen v malém množství.",
         "hr": "Dodaj malo u pseći obrok ili ga u malim količinama umiješaj u poslastice.",
-        "sv": "Tillsätt lite i hundens mat eller blanda i godbitar, bara i små mängder."
+        "sv": "Tillsätt lite i hundens mat eller blanda i godbitar, bara i små mängder.",
+        "da": "Tilsæt en smule til hundens mad, eller bland lidt i godbidder. Kun i små mængder."
       },
       "child": {
         "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
@@ -26675,7 +26756,8 @@
         "pl": "Bazylia to zioło, które psom nie szkodzi. Dorosły może dodać odrobinę do jedzenia psa.",
         "cs": "Bazalka je bylinka, která psům neublíží. Dospělý jim může trochu přidat do jídla.",
         "hr": "Bosiljak je biljka koja psima ne šteti. Odrasla osoba može dodati malo u hranu za psa.",
-        "sv": "Basilika är en ofarlig ört för hundar. En vuxen kan lägga lite i hundens mat."
+        "sv": "Basilika är en ofarlig ört för hundar. En vuxen kan lägga lite i hundens mat.",
+        "da": "Basilikum er en krydderurt som hunde gerne må få lidt af. En voksen kan lægge lidt i hundens mad."
       },
       "faq": [
         {
@@ -26691,7 +26773,8 @@
             "pl": "Czy bazylia jest bezpieczna w ogrodzie, w którym są psy?",
             "cs": "Je bazalka na zahradě se psy bezpečná?",
             "hr": "Je li bosiljak siguran u vrtu u kojem borave psi?",
-            "sv": "Går det bra att ha en basilikaplanta i trädgården när man har hund?"
+            "sv": "Går det bra att ha en basilikaplanta i trädgården när man har hund?",
+            "da": "Er basilikum i haven sikkert hvis man har hund?"
           },
           "a": {
             "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
@@ -26705,7 +26788,8 @@
             "pl": "Tak. Bazylia jest nietoksyczna dla psów i należy do ziół, które można uprawiać w ogrodzie, w którym są psy.",
             "cs": "Ano. Bazalka není pro psy toxická a patří mezi bylinky, které lze pěstovat na zahradě bezpečné pro psy.",
             "hr": "Da. Bosiljak je neotrovan za pse i jedna je od začinskih biljaka koje se mogu uzgajati u vrtu sigurnom za pse.",
-            "sv": "Ja. Basilika är ofarlig för hundar och en av de örter som passar i en hundvänlig trädgård."
+            "sv": "Ja. Basilika är ofarlig för hundar och en av de örter som passar i en hundvänlig trädgård.",
+            "da": "Ja. Basilikum er ugiftig for hunde og en af de krydderurter man kan dyrke i en hundevenlig have."
           }
         }
       ],
@@ -35214,7 +35298,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Edamame",
@@ -35228,7 +35313,8 @@
         "pl": "Edamame",
         "cs": "Edamame",
         "hr": "Edamame",
-        "sv": "Edamame"
+        "sv": "Edamame",
+        "da": "Edamame"
       },
       "question": {
         "en": "Can dogs eat edamame?",
@@ -35242,7 +35328,8 @@
         "pl": "Czy psy mogą jeść edamame?",
         "cs": "Mohou psi jíst edamame?",
         "hr": "Smiju li psi jesti edamame?",
-        "sv": "Får hundar äta edamame?"
+        "sv": "Får hundar äta edamame?",
+        "da": "Må hunde spise edamame?"
       },
       "url_slug": {
         "en": "edamame",
@@ -35256,7 +35343,8 @@
         "pl": "edamame",
         "cs": "edamame",
         "hr": "edamame",
-        "sv": "edamame"
+        "sv": "edamame",
+        "da": "edamame"
       },
       "answer": {
         "en": "Yes, in moderation. Plain edamame beans aren't toxic to dogs, and a few fresh beans as a treat won't harm most dogs. Leave out the tough pods, which are a choking hazard, and never share edamame cooked with salt, spices, soy sauce or oil.",
@@ -35270,7 +35358,8 @@
         "pl": "Tak, z umiarem. Zwykłe ziarna edamame nie są toksyczne dla psów, a kilka świeżych ziaren jako smakołyk nie zaszkodzi większości psów. Pomiń twarde strąki, bo grożą zadławieniem, i nigdy nie dawaj ziaren edamame ugotowanych z solą, przyprawami, sosem sojowym ani olejem.",
         "cs": "Ano, s mírou. Neochucené sójové boby edamame nejsou pro psy toxické a několik čerstvých zrnek jako pamlsek většině psů neublíží. Tuhé lusky nechte stranou, protože hrozí udušení, a edamame uvařené se solí, kořením, sójovou omáčkou nebo olejem psovi nikdy nedávejte.",
         "hr": "Da, umjereno. Obična zrna edamame nisu otrovna za pse, a nekoliko svježih zrna kao poslastica većini pasa neće naštetiti. Izostavi žilave mahune, koje mogu izazvati gušenje, i nikad ne daj edamame pripremljen sa soli, začinima, sojinim umakom ili uljem.",
-        "sv": "Ja, med måtta. Okryddade edamamebönor är inte giftiga för hundar, och några färska bönor som godbit skadar inte de flesta hundar. Ta bort de sega baljorna, de är en kvävningsrisk. Dela aldrig edamame som har tillagats med salt, kryddor, sojasås eller olja."
+        "sv": "Ja, med måtta. Okryddade edamamebönor är inte giftiga för hundar, och några färska bönor som godbit skadar inte de flesta hundar. Ta bort de sega baljorna, de är en kvävningsrisk. Dela aldrig edamame som har tillagats med salt, kryddor, sojasås eller olja.",
+        "da": "Ja, med måde. Almindelige edamamebønner er ugiftige for hunde, og nogle få friske bønner som godbid gør ikke de fleste hunde noget. Lad de seje bælge ligge, for de kan sætte sig fast i halsen, og giv aldrig edamame der er tilberedt med salt, krydderier, sojasovs eller olie."
       },
       "why": {
         "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
@@ -35284,7 +35373,8 @@
         "pl": "Edamame to nasiona soi, bogate w błonnik i otoczone twardymi strąkami. Soja często uczula psy, a reakcja alergiczna może nie pojawić się od razu. Soja może też powodować gazy, a czasem biegunkę, zaś nadmiar błonnika – problemy z żołądkiem. Włókniste, twarde strąki są ciężkostrawne i grożą zadławieniem, zwłaszcza u małych psów.",
         "cs": "Edamame jsou sójové boby s vysokým obsahem vlákniny, uzavřené v tuhých luscích. Sója je u psů častým alergenem a alergická reakce se nemusí projevit hned. Sója může také způsobit plynatost a občas průjem, příliš mnoho vlákniny zase žaludeční potíže. Vláknité, žvýkavé lusky se špatně tráví a hrozí z nich udušení, zvlášť u malých psů.",
         "hr": "Edamame su zrna soje, bogata vlaknima i u žilavim mahunama. Soja je čest alergen kod pasa, a alergijska reakcija možda se neće pojaviti odmah. Soja može izazvati nadutost i povremeno proljev, a previše vlakana može uzrokovati želučane tegobe. Vlaknaste, žilave mahune teško se probavljaju i mogu izazvati gušenje, osobito kod malih pasa.",
-        "sv": "Edamame är sojabönor, rika på fibrer och omgivna av sega baljor. Allergi mot soja är vanligt hos hundar, och en allergisk reaktion behöver inte synas direkt. Soja kan också ge gasbildning och ibland diarré, och för mycket fibrer kan ge magproblem. De fibrösa, sega baljorna är svårsmälta och en kvävningsrisk, särskilt för små hundar."
+        "sv": "Edamame är sojabönor, rika på fibrer och omgivna av sega baljor. Allergi mot soja är vanligt hos hundar, och en allergisk reaktion behöver inte synas direkt. Soja kan också ge gasbildning och ibland diarré, och för mycket fibrer kan ge magproblem. De fibrösa, sega baljorna är svårsmälta och en kvävningsrisk, särskilt för små hundar.",
+        "da": "Edamame er sojabønner med mange fibre, og de sidder i seje bælge. Soja er en almindelig allergi hos hunde, og reaktionen viser sig ikke altid med det samme. Soja kan også give luft i maven og en gang imellem diarré, og for mange fibre kan give ondt i maven. De trævlede, seje bælge er svære at fordøje og kan sætte sig fast i halsen, især hos små hunde."
       },
       "signs": null,
       "what_to_do": {
@@ -35299,7 +35389,8 @@
         "pl": "Soja często uczula, dlatego na początek daj tylko bardzo małą ilość, żeby sprawdzić, czy pies nie ma alergii. Objawy reakcji alergicznej, takie jak swędzenie, utrata sierści czy zapalenie uszu, mogą nie pojawić się od razu. Soja może też powodować gazy lub biegunkę.",
         "cs": "Protože je sója častým alergenem, nabídněte nejprve jen velmi malé množství a ověřte, zda pes alergií netrpí. Příznaky alergické reakce, například svědění, vypadávání srsti nebo záněty uší, se nemusí objevit hned. Sója může také způsobit plynatost nebo průjem.",
         "hr": "Budući da je soja čest alergen, isprva ponudi samo vrlo malu količinu da vidiš javlja li se alergija. Znakovi alergijske reakcije, poput svrbeža, gubitka dlake ili upala uha, možda se neće pojaviti odmah. Soja može izazvati i nadutost ili proljev.",
-        "sv": "Allergi mot soja är vanligt, så ge bara en mycket liten mängd först för att se om hunden är allergisk. Tecken på allergi, som klåda, pälsförlust eller öroninflammation, kan dröja. Soja kan också ge gaser eller diarré."
+        "sv": "Allergi mot soja är vanligt, så ge bara en mycket liten mängd först för att se om hunden är allergisk. Tecken på allergi, som klåda, pälsförlust eller öroninflammation, kan dröja. Soja kan också ge gaser eller diarré.",
+        "da": "Da soja er en almindelig allergi hos hunde, bør du kun give en helt lille smule første gang og se, om hunden reagerer. Tegn på allergi, fx kløe, hårtab eller ørebetændelse, kommer måske ikke med det samme. Soja kan også give luft i maven eller diarré."
       },
       "serving": {
         "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
@@ -35313,7 +35404,8 @@
         "pl": "Tylko zwykłe, świeże ziarna wyjęte ze strąków, bez soli, przypraw, sosu sojowego i oleju. Kilka ziaren jako smakołyk od czasu do czasu; najważniejszy jest umiar.",
         "cs": "Pouze neochucené čerstvé sójové boby vyloupnuté z lusků, bez soli, koření, sójové omáčky a oleje. Jen několik zrnek jako příležitostný pamlsek, vždy s mírou.",
         "hr": "Samo obična, svježa zrna, izvađena iz mahune, bez soli, začina, sojina umaka i ulja. Nekoliko zrna kao povremena poslastica; ključna je umjerenost.",
-        "sv": "Bara färska bönor som har tagits ur baljan, utan salt, kryddor, sojasås eller olja. Några bönor som godbit då och då. Lagom är bäst."
+        "sv": "Bara färska bönor som har tagits ur baljan, utan salt, kryddor, sojasås eller olja. Några bönor som godbit då och då. Lagom är bäst.",
+        "da": "Kun naturelle, friske bønner taget ud af bælgen og uden salt, krydderier, sojasovs eller olie. Et par bønner som godbid af og til – hold mængden lille."
       },
       "child": {
         "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
@@ -35327,7 +35419,8 @@
         "pl": "Pies może skubnąć kilka zwykłych ziaren edamame. Dorosły najpierw wyjmuje je ze strąka.",
         "cs": "Psi mohou ochutnat pár neochucených zrnek edamame. Dospělý je nejdřív vyloupne z lusku.",
         "hr": "Psi smiju pogristi nekoliko običnih zrna edamame. Odrasla osoba ih prvo izvadi iz mahune.",
-        "sv": "Hundar kan få mumsa på några okryddade edamamebönor. En vuxen tar först ut dem ur baljan."
+        "sv": "Hundar kan få mumsa på några okryddade edamamebönor. En vuxen tar först ut dem ur baljan.",
+        "da": "Hunde må gerne smage et par naturelle edamamebønner. En voksen tager dem først ud af bælgen."
       },
       "faq": [
         {
@@ -35343,7 +35436,8 @@
             "pl": "Czy psy mogą jeść edamame z solą lub przyprawami?",
             "cs": "Mohou psi jíst solené nebo kořeněné edamame?",
             "hr": "Smiju li psi jesti slani ili začinjeni edamame?",
-            "sv": "Får hundar äta saltad eller kryddad edamame?"
+            "sv": "Får hundar äta saltad eller kryddad edamame?",
+            "da": "Må hunde spise saltet eller krydret edamame?"
           },
           "a": {
             "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
@@ -35357,7 +35451,8 @@
             "pl": "Nie. Przyprawy, sól, sos sojowy i olej, których używa się do przygotowania edamame, mogą być dla psów wyjątkowo niezdrowe, więc nigdy nie dawaj psu edamame z takimi dodatkami.",
             "cs": "Ne. Koření, sůl, sójová omáčka a olej, se kterými se edamame připravuje, mohou být pro psy obzvlášť nezdravé, proto jim nikdy nedávejte takto upravené edamame.",
             "hr": "Ne. Začini, sol, sojin umak i ulje osobito su nezdravi za pse, zato nikad ne daj edamame koji je njima pripremljen.",
-            "sv": "Nej. Kryddor, salt, sojasås och olja som används när edamame lagas kan vara särskilt dåligt för hundar, så dela aldrig edamame som har lagats med dem."
+            "sv": "Nej. Kryddor, salt, sojasås och olja som används när edamame lagas kan vara särskilt dåligt för hundar, så dela aldrig edamame som har lagats med dem.",
+            "da": "Nej. Krydderier, salt, sojasovs og olie kan være særligt usunde for hunde, så giv aldrig din hund edamame der er tilberedt med dem."
           }
         },
         {
@@ -35373,7 +35468,8 @@
             "pl": "Czy psy mogą jeść strąki edamame?",
             "cs": "Mohou psi jíst lusky edamame?",
             "hr": "Smiju li psi jesti mahune edamame?",
-            "sv": "Får hundar äta edamamebaljor?"
+            "sv": "Får hundar äta edamamebaljor?",
+            "da": "Må hunde spise edamamebælge?"
           },
           "a": {
             "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
@@ -35387,7 +35483,8 @@
             "pl": "Lepiej nie. Strąki edamame są włókniste, twarde i trudne do przegryzienia; pies może mieć kłopot z ich strawieniem, a do tego grożą zadławieniem, zwłaszcza u małych psów.",
             "cs": "Raději ne. Lusky edamame jsou vláknité, tuhé a žvýkavé; pes je může špatně strávit a hrozí z nich udušení, zvlášť u malých psů.",
             "hr": "Bolje ne. Mahune edamame vlaknaste su i žilave pa se teško žvaču i probavljaju, a mogu izazvati gušenje, osobito kod malih pasa.",
-            "sv": "Det är bättre att låta bli. Edamamebaljorna är fibrösa, sega och svårtuggade. De kan vara svåra för hunden att smälta och är en kvävningsrisk, särskilt för små hundar."
+            "sv": "Det är bättre att låta bli. Edamamebaljorna är fibrösa, sega och svårtuggade. De kan vara svåra för hunden att smälta och är en kvävningsrisk, särskilt för små hundar.",
+            "da": "Hellere lade være. Edamamebælge er trævlede, seje og svære at tygge. De kan være svære for hunden at fordøje og kan sætte sig fast i halsen, især hos små hunde."
           }
         }
       ],
@@ -35430,7 +35527,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Eggplant (aubergine)",
@@ -35444,7 +35542,8 @@
         "pl": "Bakłażan",
         "cs": "Lilek (baklažán)",
         "hr": "Patlidžan",
-        "sv": "Aubergine"
+        "sv": "Aubergine",
+        "da": "Aubergine"
       },
       "question": {
         "en": "Can dogs eat eggplant?",
@@ -35458,7 +35557,8 @@
         "pl": "Czy psy mogą jeść bakłażana?",
         "cs": "Mohou psi jíst lilek?",
         "hr": "Smiju li psi jesti patlidžan?",
-        "sv": "Får hundar äta aubergine?"
+        "sv": "Får hundar äta aubergine?",
+        "da": "Må hunde spise aubergine?"
       },
       "url_slug": {
         "en": "eggplant",
@@ -35472,7 +35572,8 @@
         "pl": "baklazan",
         "cs": "lilek",
         "hr": "patlidzan",
-        "sv": "aubergine"
+        "sv": "aubergine",
+        "da": "aubergine"
       },
       "answer": {
         "en": "Yes, eggplant is safe for dogs when served in moderation. Remove the stem, wash, peel and cook it, then cut it into tiny, bite-sized pieces. Never give a whole eggplant, and remember that too much can cause digestive upset.",
@@ -35486,7 +35587,8 @@
         "pl": "Tak, bakłażan jest bezpieczny dla psów, jeśli podajesz go z umiarem. Usuń szypułkę, umyj, obierz i ugotuj, a potem pokrój na malutkie kawałeczki na jeden kęs. Nigdy nie dawaj całego bakłażana i pamiętaj, że zbyt duża ilość może rozstroić układ pokarmowy.",
         "cs": "Ano, lilek je pro psy bezpečný, když se podává s mírou. Odstraňte stopku, lilek omyjte, oloupejte, tepelně upravte a nakrájejte na malá sousta. Celý lilek nikdy nedávejte a mějte na paměti, že příliš velké množství může způsobit zažívací potíže.",
         "hr": "Da, patlidžan je za pse siguran ako se daje umjereno. Ukloni peteljku, operi ga, oguli i skuhaj, pa ga nareži na sitne komadiće veličine zalogaja. Nikad ne daj cijeli patlidžan i imaj na umu da prevelika količina može izazvati probavne smetnje.",
-        "sv": "Ja, aubergine är ofarlig för hundar i lagom mängd. Ta bort skaftet, tvätta, skala och koka den, och skär den sedan i riktigt små munsbitar. Ge aldrig en hel aubergine, och kom ihåg att för mycket kan ge orolig mage."
+        "sv": "Ja, aubergine är ofarlig för hundar i lagom mängd. Ta bort skaftet, tvätta, skala och koka den, och skär den sedan i riktigt små munsbitar. Ge aldrig en hel aubergine, och kom ihåg att för mycket kan ge orolig mage.",
+        "da": "Ja, aubergine er sikker for hunde, når den gives med måde. Fjern stilken, vask, skræl og kog den, og skær den derefter i helt små, mundrette stykker. Giv aldrig en hel aubergine, og husk at for meget kan give problemer med fordøjelsen."
       },
       "why": {
         "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -35500,7 +35602,8 @@
         "pl": "Jadalny owoc w normalnych ilościach nie jest tak naprawdę toksyczny, ale zawiera solaninę, naturalną substancję, którą roślina wykorzystuje do obrony. Najwięcej jest jej w zielonych częściach rośliny, czyli w liściach i kwiatach, a nie w fioletowym owocu. Skórka nie jest toksyczna, ale może być trudna do przegryzienia i grozić zadławieniem, a zjedzenie zbyt dużej ilości bakłażana może rozstroić układ pokarmowy.",
         "cs": "Jedlý plod není při běžném množství skutečně toxický, ale obsahuje solanin, přírodní látku, kterou rostlina používá jako obranu. Nejvíc ho je v zelených částech rostliny, zejména v listech a květech, ne ve fialovém plodu. Slupka toxická není, ale špatně se žvýká a hrozí z ní udušení; příliš mnoho lilku navíc může způsobit zažívací potíže.",
         "hr": "Jestivi plod u uobičajenim količinama nije zaista otrovan, ali sadrži solanin, prirodnu kemijsku tvar kojom se biljka brani. Najveće su koncentracije u zelenim dijelovima biljke, točnije u listovima i cvjetovima, a ne u ljubičastom plodu. Kora nije otrovna, ali se teško žvače i može izazvati gušenje, a prevelika količina patlidžana može izazvati probavne smetnje.",
-        "sv": "Själva frukten är inte direkt giftig i normala mängder, men den innehåller solanin, ett naturligt ämne som växten använder som försvar. Halterna är högst i de gröna delarna av växten, framför allt bladen och blommorna, snarare än i den lila frukten. Skalet är inte giftigt men kan vara segt att tugga och ge risk för kvävning, och för mycket aubergine kan ge orolig mage."
+        "sv": "Själva frukten är inte direkt giftig i normala mängder, men den innehåller solanin, ett naturligt ämne som växten använder som försvar. Halterna är högst i de gröna delarna av växten, framför allt bladen och blommorna, snarare än i den lila frukten. Skalet är inte giftigt men kan vara segt att tugga och ge risk för kvävning, och för mycket aubergine kan ge orolig mage.",
+        "da": "Selve frugten er ikke giftig i normale mængder, men den indeholder solanin, et naturligt stof som planten bruger til at forsvare sig. Indholdet er størst i plantens grønne dele, især bladene og blomsterne, og ikke i den lilla frugt. Skrællen er ikke giftig, men den kan være svær at tygge og sætte sig fast i halsen, og hvis hunden spiser for meget aubergine, kan den få problemer med fordøjelsen."
       },
       "signs": null,
       "what_to_do": {
@@ -35515,7 +35618,8 @@
         "pl": "Zacznij od małego kawałka obranego, ugotowanego bakłażana. Jeśli po zjedzeniu bakłażana pies ma biegunkę, wymioty, rozstrój żołądka, ból brzucha, mniej energii albo częściej musi się załatwiać, skontaktuj się z weterynarzem.",
         "cs": "Začněte malým kouskem oloupaného tepelně upraveného lilku. Pokud se po něm u psa objeví průjem, zvracení, žaludeční potíže, bolest břicha, malátnost nebo pokud pes potřebuje chodit ven častěji, obraťte se na veterináře.",
         "hr": "Počni s malim komadićem oguljenog, kuhanog patlidžana. Ako pas nakon jedenja patlidžana dobije proljev, povraćanje, probavne tegobe, bolove u trbuhu, bezvoljnost ili češće mora van, obrati se veterinaru.",
-        "sv": "Börja med en liten bit skalad, kokt aubergine. Får hunden diarré, kräkningar, orolig mage, ont i magen, orkeslöshet eller behöver gå ut oftare efter att ha ätit aubergine ska du kontakta veterinären."
+        "sv": "Börja med en liten bit skalad, kokt aubergine. Får hunden diarré, kräkningar, orolig mage, ont i magen, orkeslöshet eller behöver gå ut oftare efter att ha ätit aubergine ska du kontakta veterinären.",
+        "da": "Start med et lille stykke skrællet, kogt aubergine. Hvis din hund får diarré, opkast, mavebesvær, mavesmerter eller mindre energi, eller skal ud oftere end normalt efter at have spist aubergine, skal du kontakte din dyrlæge."
       },
       "serving": {
         "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -35529,7 +35633,8 @@
         "pl": "Usuń szypułkę, dokładnie umyj, żeby pozbyć się pestycydów, obierz ze skórki, pokrój na małe kawałeczki na jeden kęs i ugotuj przed podaniem. Nigdy nie dawaj całego bakłażana.",
         "cs": "Odstraňte stopku, lilek důkladně omyjte (kvůli zbytkům pesticidů), oloupejte, nakrájejte na malá sousta a před podáním tepelně upravte. Celý lilek nikdy nedávejte.",
         "hr": "Ukloni peteljku, temeljito operi da skineš pesticide, oguli, nareži na sitne komadiće veličine zalogaja i prije posluživanja skuhaj. Nikad cijeli patlidžan.",
-        "sv": "Ta bort skaftet, tvätta noga för att få bort bekämpningsmedel, skala, skär i små munsbitar och koka innan du serverar. Aldrig en hel aubergine."
+        "sv": "Ta bort skaftet, tvätta noga för att få bort bekämpningsmedel, skala, skär i små munsbitar och koka innan du serverar. Aldrig en hel aubergine.",
+        "da": "Fjern stilken, vask grundigt for at fjerne sprøjtegift, skræl, skær i små, mundrette stykker, og kog stykkerne før hunden får dem. Aldrig en hel aubergine."
       },
       "child": {
         "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -35543,7 +35648,8 @@
         "pl": "Pies może dostać odrobinę ugotowanego bakłażana. Dorosły obiera go, gotuje i kroi na malutkie kawałki.",
         "cs": "Psi mohou dostat trochu uvařeného lilku. Dospělý ho oloupe, uvaří a nakrájí na maličké kousky.",
         "hr": "Psi smiju malo kuhanog patlidžana. Odrasla osoba ga oguli, skuha i nareže na sitne komadiće.",
-        "sv": "Hundar kan få lite kokt aubergine. En vuxen skalar den, kokar den och skär den i riktigt små bitar."
+        "sv": "Hundar kan få lite kokt aubergine. En vuxen skalar den, kokar den och skär den i riktigt små bitar.",
+        "da": "Hunde må få lidt kogt aubergine. En voksen skræller den, koger den og skærer den i helt små stykker."
       },
       "faq": [
         {
@@ -35559,7 +35665,8 @@
             "pl": "Czy psy mogą jeść surowego bakłażana?",
             "cs": "Mohou psi jíst syrový lilek?",
             "hr": "Smiju li psi jesti sirov patlidžan?",
-            "sv": "Får hundar äta rå aubergine?"
+            "sv": "Får hundar äta rå aubergine?",
+            "da": "Må hunde spise rå aubergine?"
           },
           "a": {
             "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -35573,7 +35680,8 @@
             "pl": "Mogą, ale po ugotowaniu warzywo jest miększe i psu jeszcze łatwiej je zjeść.",
             "cs": "Mohou, ale po uvaření je zelenina měkčí a pes ji snáz sní.",
             "hr": "Smiju, ali kuhanjem se povrće omekša pa ga je psu još lakše jesti.",
-            "sv": "Det går, men kokt aubergine är mjukare och därmed ännu lättare för hunden att äta."
+            "sv": "Det går, men kokt aubergine är mjukare och därmed ännu lättare för hunden att äta.",
+            "da": "Det kan de godt, men kogt aubergine er blød og endnu nemmere for hunden at spise."
           }
         },
         {
@@ -35589,7 +35697,8 @@
             "pl": "Która część rośliny bakłażana zawiera najwięcej solaniny?",
             "cs": "Která část rostliny lilku obsahuje nejvíc solaninu?",
             "hr": "Koji dio biljke patlidžana ima najviše solanina?",
-            "sv": "Vilken del av auberginplantan innehåller mest solanin?"
+            "sv": "Vilken del av auberginplantan innehåller mest solanin?",
+            "da": "Hvilken del af auberginen har mest solanin?"
           },
           "a": {
             "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -35603,7 +35712,8 @@
             "pl": "Zielone części rośliny, czyli liście i kwiaty, a nie sam fioletowy owoc.",
             "cs": "Nejvíc solaninu je v zelených částech rostliny, konkrétně v listech a květech, a ne ve fialovém plodu.",
             "hr": "Zeleni dijelovi biljke, točnije listovi i cvjetovi, a ne sam ljubičasti plod.",
-            "sv": "De gröna delarna av plantan, framför allt bladen och blommorna, inte själva den lila frukten."
+            "sv": "De gröna delarna av plantan, framför allt bladen och blommorna, inte själva den lila frukten.",
+            "da": "De grønne dele af planten, især bladene og blomsterne – ikke selve den lilla frugt."
           }
         }
       ],
@@ -38803,7 +38913,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Parsley",
@@ -38817,7 +38928,8 @@
         "pl": "Pietruszka",
         "cs": "Petržel",
         "hr": "Peršin",
-        "sv": "Persilja"
+        "sv": "Persilja",
+        "da": "Persille"
       },
       "question": {
         "en": "Can dogs eat parsley?",
@@ -38831,7 +38943,8 @@
         "pl": "Czy psy mogą jeść pietruszkę?",
         "cs": "Mohou psi jíst petržel?",
         "hr": "Smiju li psi jesti peršin?",
-        "sv": "Får hundar äta persilja?"
+        "sv": "Får hundar äta persilja?",
+        "da": "Må hunde spise persille?"
       },
       "url_slug": {
         "en": "parsley",
@@ -38845,7 +38958,8 @@
         "pl": "pietruszka",
         "cs": "petrzel",
         "hr": "persin",
-        "sv": "persilja"
+        "sv": "persilja",
+        "da": "persille"
       },
       "answer": {
         "en": "Only a small sprinkle of curly parsley, occasionally. The ASPCA lists parsley as toxic to dogs, because large amounts can make the skin sensitive to sunlight. Curly parsley is the safest option; spring parsley can be toxic, and Italian parsley can be toxic in large quantities.",
@@ -38859,7 +38973,8 @@
         "pl": "Tylko odrobina pietruszki kędzierzawej, od czasu do czasu. ASPCA uznaje pietruszkę za toksyczną dla psów, ponieważ duże ilości mogą uwrażliwiać skórę na światło słoneczne. Najbezpieczniejsza jest pietruszka kędzierzawa; natomiast „spring parsley” (nazwa angielska) może być toksyczna, a pietruszka włoska – w dużych ilościach.",
         "cs": "Jen troška kadeřavé petržele, a to jen občas. ASPCA řadí petržel mezi rostliny toxické pro psy, protože ve velkém množství může zvýšit citlivost kůže na sluneční záření. Nejbezpečnější je kadeřavá petržel; druh zvaný „spring parsley“ může být toxický a italská petržel může být toxická ve velkém množství.",
         "hr": "Samo malo kovrčavog peršina za posipanje, povremeno. ASPCA navodi peršin kao otrovan za pse jer veće količine mogu kožu učiniti osjetljivom na sunce. Kovrčavi peršin najsigurniji je izbor; „spring parsley“ (engleski naziv) može biti otrovan, a talijanski peršin može biti otrovan u velikim količinama.",
-        "sv": "Bara en liten nypa krusbladig persilja, då och då. ASPCA anger persilja som giftig för hundar, eftersom stora mängder kan göra huden känslig för solljus. Krusbladig persilja är det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja kan vara giftig i stora mängder."
+        "sv": "Bara en liten nypa krusbladig persilja, då och då. ASPCA anger persilja som giftig för hundar, eftersom stora mängder kan göra huden känslig för solljus. Krusbladig persilja är det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja kan vara giftig i stora mängder.",
+        "da": "Kun et lille drys kruspersille, og kun en sjælden gang. ASPCA betragter persille som giftig for hunde, fordi store mængder kan gøre huden følsom over for sollys. Kruspersille er det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille kan være giftig i store mængder."
       },
       "why": {
         "en": "Parsley contains furanocoumarins. In large amounts they can cause sensitivity to sunlight and skin inflammation like a sunburn, although large amounts are needed for this effect. Parsley is also a diuretic; Italian parsley can lead to dehydration in dogs with sensitive stomachs. The AKC says curly parsley can be offered in small amounts, while the ASPCA lists parsley as toxic to dogs, so we take the stricter view and rate it not recommended.",
@@ -38873,7 +38988,8 @@
         "pl": "Pietruszka zawiera furanokumaryny. W dużych ilościach mogą one powodować nadwrażliwość na światło słoneczne i stan zapalny skóry przypominający oparzenie słoneczne, choć do takiego efektu potrzebne są duże ilości. Pietruszka działa też moczopędnie; pietruszka włoska może prowadzić do odwodnienia u psów z wrażliwym żołądkiem. AKC podaje, że pietruszkę kędzierzawą można dawać w małych ilościach, a ASPCA uznaje pietruszkę za toksyczną dla psów, dlatego przyjmujemy ostrzejsze stanowisko i oceniamy ją jako niezalecaną.",
         "cs": "Petržel obsahuje furanokumariny. Ve velkém množství mohou způsobit citlivost na sluneční záření a zánět kůže podobný spálenině od slunce, i když k tomu je potřeba velké množství. Petržel je také močopudná; italská petržel může u psů s citlivým žaludkem vést k dehydrataci. AKC uvádí, že kadeřavou petržel lze nabídnout v malém množství, zatímco ASPCA řadí petržel mezi rostliny toxické pro psy, proto se držíme přísnějšího pohledu a řadíme ji mezi nedoporučené.",
         "hr": "Peršin sadrži furanokumarine. U velikim količinama mogu izazvati osjetljivost na sunčevu svjetlost i upalu kože nalik opeklinama, iako je za taj učinak potrebna velika količina. Peršin je i diuretik; talijanski peršin može kod pasa s osjetljivim želucem dovesti do dehidracije. AKC navodi da se kovrčavi peršin može ponuditi u malim količinama, dok ASPCA peršin navodi kao otrovan za pse, pa se držimo strožeg stajališta i ocjenjujemo ga kao namirnicu koju ne preporučujemo.",
-        "sv": "Persilja innehåller furanokumariner. I stora mängder kan de göra huden känslig för solljus och ge hudinflammation som liknar solbränna, men effekten kräver stora mängder. Persilja är också vätskedrivande, och slätbladig persilja kan leda till uttorkning hos hundar med känslig mage. AKC skriver att krusbladig persilja kan ges i små mängder, medan ASPCA anger persilja som giftig för hundar, så vi väljer den strängare bedömningen och rekommenderar den inte."
+        "sv": "Persilja innehåller furanokumariner. I stora mängder kan de göra huden känslig för solljus och ge hudinflammation som liknar solbränna, men effekten kräver stora mängder. Persilja är också vätskedrivande, och slätbladig persilja kan leda till uttorkning hos hundar med känslig mage. AKC skriver att krusbladig persilja kan ges i små mängder, medan ASPCA anger persilja som giftig för hundar, så vi väljer den strängare bedömningen och rekommenderar den inte.",
+        "da": "Persille indeholder furanokumariner. I store mængder kan de give lysfølsomhed og hudbetændelse der ligner solskoldning, men der skal store mængder til. Persille er også vanddrivende, og glatbladet persille kan give væskemangel hos hunde med følsom mave. AKC skriver at kruspersille kan gives i små mængder, mens ASPCA betragter persille som giftig for hunde. Derfor lægger vi den strengeste vurdering til grund og anbefaler den ikke."
       },
       "signs": {
         "en": [
@@ -38923,6 +39039,10 @@
         "sv": [
           "Känslighet för solljus",
           "Hudinflammation (dermatit) som liknar solbränna"
+        ],
+        "da": [
+          "Følsomhed over for sollys",
+          "Hudbetændelse (dermatitis) der ligner solskoldning"
         ]
       },
       "what_to_do": {
@@ -38937,7 +39057,8 @@
         "pl": "Jeśli dasz psu pietruszkę, uważnie go obserwuj i zwracaj uwagę na niepokojące objawy. Jeśli się pojawią lub nasilą, od razu skontaktuj się z weterynarzem.",
         "cs": "Pokud psovi petržel dáte, pozorně ho sledujte, jestli se neobjeví nějaké neobvyklé příznaky. Pokud se objeví nebo zhorší, ihned se obraťte na veterináře.",
         "hr": "Ako psu daješ peršin, pažljivo ga prati zbog mogućih neobičnih znakova. Ako se znakovi pojave ili pogoršaju, odmah se obrati veterinaru.",
-        "sv": "Om du ger hunden persilja, håll noga koll på den och se efter ovanliga symtom. Om symtom uppstår eller blir värre ska du kontakta veterinären genast."
+        "sv": "Om du ger hunden persilja, håll noga koll på den och se efter ovanliga symtom. Om symtom uppstår eller blir värre ska du kontakta veterinären genast.",
+        "da": "Hvis du giver din hund persille, skal du holde nøje øje med, om den får usædvanlige symptomer. Opstår der symptomer, eller bliver de værre, skal du hurtigt kontakte din dyrlæge."
       },
       "serving": {
         "en": "If at all, only a small sprinkle of curly parsley as a garnish, given occasionally. Never large amounts.",
@@ -38951,7 +39072,8 @@
         "pl": "Jeśli już, to tylko odrobina pietruszki kędzierzawej do posypania posiłku, podawana od czasu do czasu. Nigdy w dużych ilościach.",
         "cs": "Pokud vůbec, tak jen troška kadeřavé petržele jako ozdoba, a to jen občas. Velké množství nikdy.",
         "hr": "Ako već, onda samo malo kovrčavog peršina za posipanje, povremeno. Nikad velike količine.",
-        "sv": "Om du alls ger det, bara en liten nypa krusbladig persilja som garnering, och bara då och då. Aldrig stora mängder."
+        "sv": "Om du alls ger det, bara en liten nypa krusbladig persilja som garnering, och bara då och då. Aldrig stora mängder.",
+        "da": "Hvis overhovedet, så kun et lille drys kruspersille som pynt, og kun en sjælden gang. Aldrig store mængder."
       },
       "child": {
         "en": "Parsley is not a dog snack. A grown-up decides if a dog gets a tiny sprinkle of curly parsley.",
@@ -38965,7 +39087,8 @@
         "pl": "Pietruszka nie jest przekąską dla psa. To dorosły decyduje, czy pies dostanie odrobinkę pietruszki kędzierzawej.",
         "cs": "Petržel není pamlsek pro psy. Dospělý rozhodne, jestli pes dostane malou trošku kadeřavé petržele.",
         "hr": "Peršin nije poslastica za pse. Odrasla osoba odlučuje hoće li pas dobiti sasvim malo kovrčavog peršina za posipanje.",
-        "sv": "Persilja är inget hundgodis. En vuxen avgör om hunden får en liten nypa krusbladig persilja."
+        "sv": "Persilja är inget hundgodis. En vuxen avgör om hunden får en liten nypa krusbladig persilja.",
+        "da": "Persille er ikke en snack til hunde. En voksen afgør, om hunden må få et lillebitte drys kruspersille."
       },
       "faq": [
         {
@@ -38981,7 +39104,8 @@
             "pl": "Czy pietruszka kędzierzawa różni się od innych rodzajów pietruszki?",
             "cs": "Liší se kadeřavá petržel od ostatních druhů petržele?",
             "hr": "Razlikuje li se kovrčavi peršin od drugih vrsta peršina?",
-            "sv": "Skiljer sig krusbladig persilja från andra sorters persilja?"
+            "sv": "Skiljer sig krusbladig persilja från andra sorters persilja?",
+            "da": "Er kruspersille noget andet end andre slags persille?"
           },
           "a": {
             "en": "Yes. Curly parsley is generally considered the safest option. Spring parsley can be toxic, and Italian parsley acts as a diuretic and can be toxic in large quantities.",
@@ -38995,7 +39119,8 @@
             "pl": "Tak. Pietruszkę kędzierzawą uważa się zwykle za najbezpieczniejszą. Natomiast „spring parsley” (nazwa angielska) może być toksyczna, a pietruszka włoska działa moczopędnie i w dużych ilościach może być toksyczna.",
             "cs": "Ano. Kadeřavá petržel se obecně považuje za nejbezpečnější. Druh zvaný „spring parsley“ může být toxický, italská petržel působí močopudně a ve velkém množství může být toxická.",
             "hr": "Da. Kovrčavi peršin općenito se smatra najsigurnijim izborom. „Spring parsley“ može biti otrovan, a talijanski peršin djeluje kao diuretik i u velikim količinama može biti otrovan.",
-            "sv": "Ja. Krusbladig persilja anses vanligtvis vara det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja är vätskedrivande och kan vara giftig i stora mängder."
+            "sv": "Ja. Krusbladig persilja anses vanligtvis vara det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja är vätskedrivande och kan vara giftig i stora mängder.",
+            "da": "Ja. Kruspersille regnes generelt for det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille er vanddrivende og kan være giftig i store mængder."
           }
         },
         {
@@ -39011,7 +39136,8 @@
             "pl": "Czy pietruszka może uwrażliwić skórę psa na słońce?",
             "cs": "Může petržel zvýšit citlivost psí kůže na slunce?",
             "hr": "Može li peršin psu učiniti kožu osjetljivom na sunce?",
-            "sv": "Kan persilja göra hundens hud känslig för solen?"
+            "sv": "Kan persilja göra hundens hud känslig för solen?",
+            "da": "Kan persille gøre en hunds hud følsom over for sollys?"
           },
           "a": {
             "en": "In large amounts, yes. The furanocoumarins in parsley can cause skin inflammation like a sunburn.",
@@ -39025,7 +39151,8 @@
             "pl": "W dużych ilościach tak. Furanokumaryny zawarte w pietruszce mogą powodować stan zapalny skóry przypominający oparzenie słoneczne.",
             "cs": "Ve velkém množství ano. Furanokumariny v petrželi mohou způsobit zánět kůže podobný spálenině od slunce.",
             "hr": "U velikim količinama može. Furanokumarini iz peršina mogu izazvati upalu kože nalik opeklinama.",
-            "sv": "I stora mängder, ja. Furanokumarinerna i persilja kan ge hudinflammation som liknar solbränna."
+            "sv": "I stora mängder, ja. Furanokumarinerna i persilja kan ge hudinflammation som liknar solbränna.",
+            "da": "I store mængder, ja. Furanokumarinerne i persille kan give hudbetændelse der ligner solskoldning."
           }
         }
       ],
@@ -42860,7 +42987,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Mint",
@@ -42874,7 +43002,8 @@
         "pl": "Mięta",
         "cs": "Máta",
         "hr": "Metvica",
-        "sv": "Mynta"
+        "sv": "Mynta",
+        "da": "Mynte"
       },
       "question": {
         "en": "Can dogs eat mint?",
@@ -42888,7 +43017,8 @@
         "pl": "Czy psy mogą jeść miętę?",
         "cs": "Mohou psi jíst mátu?",
         "hr": "Smiju li psi jesti metvicu?",
-        "sv": "Får hundar äta mynta?"
+        "sv": "Får hundar äta mynta?",
+        "da": "Må hunde spise mynte?"
       },
       "url_slug": {
         "en": "mint",
@@ -42902,7 +43032,8 @@
         "pl": "mieta",
         "cs": "mata",
         "hr": "metvica",
-        "sv": "mynta"
+        "sv": "mynta",
+        "da": "mynte"
       },
       "answer": {
         "en": "No, mint is best kept away from dogs. The ASPCA lists garden mint as toxic to dogs because of its essential oils, which can cause vomiting and diarrhoea when a lot is eaten. Mint gum, candy and toothpaste can also be dangerous, as they may contain xylitol.",
@@ -42916,7 +43047,8 @@
         "pl": "Nie, miętę lepiej trzymać z dala od psów. ASPCA uznaje miętę ogrodową za toksyczną dla psów z powodu olejków eterycznych, które po zjedzeniu dużej ilości mogą wywołać wymioty i biegunkę. Niebezpieczne mogą być też miętowa guma do żucia, miętowe cukierki i pasta do zębów, bo mogą zawierać ksylitol.",
         "cs": "Ne, psům je lepší mátu nedávat. ASPCA řadí mátu zahradní mezi rostliny toxické pro psy kvůli obsahu éterických olejů, které po snědení většího množství mohou způsobit zvracení a průjem. Nebezpečné mohou být také mátové žvýkačky, bonbony a zubní pasty, protože mohou obsahovat xylitol.",
         "hr": "Ne, metvicu je najbolje držati podalje od pasa. ASPCA navodi vrtnu metvicu kao otrovnu za pse zbog eteričnih ulja, koja pri većoj količini mogu izazvati povraćanje i proljev. Opasne mogu biti i žvakaće gume, bomboni i zubne paste s okusom metvice jer mogu sadržavati ksilitol.",
-        "sv": "Nej, det är bäst att hålla mynta borta från hundar. ASPCA anger att kryddmynta är giftig för hundar på grund av de eteriska oljorna, som kan ge kräkningar och diarré om hunden får i sig mycket. Tuggummi, godis och tandkräm med mintsmak kan också vara farliga, eftersom de kan innehålla xylitol."
+        "sv": "Nej, det är bäst att hålla mynta borta från hundar. ASPCA anger att kryddmynta är giftig för hundar på grund av de eteriska oljorna, som kan ge kräkningar och diarré om hunden får i sig mycket. Tuggummi, godis och tandkräm med mintsmak kan också vara farliga, eftersom de kan innehålla xylitol.",
+        "da": "Nej, mynte skal holdes væk fra hunde. ASPCA betragter havemynte som giftig for hunde på grund af de æteriske olier, som kan give opkast og diarré, hvis hunden spiser meget af den. Tyggegummi, slik og tandpasta med mynte kan også være farlige, fordi de kan indeholde xylitol."
       },
       "why": {
         "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
@@ -42930,7 +43062,8 @@
         "pl": "Mięta ogrodowa (Mentha) zawiera olejki eteryczne; ASPCA uznaje ją za toksyczną dla psów i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. Pet Poison Helpline również podaje, że mięta nie jest bezpieczna dla psów. Produkty zawierające miętę mogą też zawierać ksylitol, słodzik silnie toksyczny dla psów. Ponieważ sama roślina wywołuje objawy głównie po zjedzeniu dużych ilości, oceniamy ją jako niezalecaną; produkty miętowe z ksylitolem to nagły przypadek.",
         "cs": "Máta zahradní (Mentha) obsahuje éterické oleje; ASPCA ji řadí mezi rostliny toxické pro psy a po snědení velkého množství uvádí zvracení a průjem. Pet Poison Helpline také uvádí, že pro psy není máta bezpečná. Výrobky s mátou mohou navíc obsahovat xylitol, sladidlo, které je pro psy vysoce toxické. Protože samotná rostlina působí potíže hlavně ve velkém množství, řadíme ji mezi nedoporučené; výrobky s mátou a xylitolem představují naléhavý případ.",
         "hr": "Vrtna metvica (Mentha) sadrži eterična ulja; ASPCA je navodi kao otrovnu za pse, uz povraćanje i proljev nakon većih količina. Pet Poison Helpline također navodi da metvica nije sigurna za pse. Proizvodi koji sadrže metvicu mogu sadržavati i ksilitol, sladilo koje je za pse vrlo otrovno. Budući da sama biljka znakove uglavnom izaziva tek u velikim količinama, ocjenjujemo je kao namirnicu koju ne preporučujemo; proizvodi s metvicom i ksilitolom predstavljaju hitan slučaj.",
-        "sv": "Kryddmynta (Mentha) innehåller eteriska oljor. ASPCA anger den som giftig för hundar, med kräkningar och diarré när hunden har fått i sig stora mängder. Pet Poison Helpline skriver också att det inte är säkert för hundar att äta mynta. Produkter med mynta kan dessutom innehålla xylitol, ett sötningsmedel som är mycket giftigt för hundar. Eftersom själva växten framför allt ger symtom i stora mängder rekommenderar vi den inte. Produkter med mynta och xylitol är däremot ett akut fall."
+        "sv": "Kryddmynta (Mentha) innehåller eteriska oljor. ASPCA anger den som giftig för hundar, med kräkningar och diarré när hunden har fått i sig stora mängder. Pet Poison Helpline skriver också att det inte är säkert för hundar att äta mynta. Produkter med mynta kan dessutom innehålla xylitol, ett sötningsmedel som är mycket giftigt för hundar. Eftersom själva växten framför allt ger symtom i stora mängder rekommenderar vi den inte. Produkter med mynta och xylitol är däremot ett akut fall.",
+        "da": "Havemynte (Mentha) indeholder æteriske olier. ASPCA betragter den som giftig for hunde og nævner opkast og diarré efter store mængder. Pet Poison Helpline skriver også at hunde ikke trygt kan spise mynte. Produkter med mynte kan desuden indeholde xylitol, et sødemiddel som er meget giftigt for hunde. Selve planten giver hovedsageligt symptomer ved store mængder, og derfor anbefaler vi den ikke. Mynteprodukter med xylitol er derimod en nødsituation."
       },
       "signs": {
         "en": [
@@ -42980,6 +43113,10 @@
         "sv": [
           "Kräkningar",
           "Diarré"
+        ],
+        "da": [
+          "Opkast",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -42994,7 +43131,8 @@
         "pl": "Jeśli pies zjadł produkt miętowy, który może zawierać ksylitol (na przykład gumę do żucia, cukierki lub pastę do zębów), od razu zgłoś się do weterynarza. W razie zatrucia zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
         "cs": "Pokud váš pes snědl mátovou žvýkačku, bonbon nebo zubní pastu, které mohou obsahovat xylitol, okamžitě vyhledejte veterinární pomoc. V případě otravy se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
         "hr": "Ako je pas pojeo proizvod s metvicom, poput žvakaće gume, bombona ili zubne paste koji bi mogli sadržavati ksilitol, odmah potraži veterinarsku pomoć. U slučaju trovanja obrati se veterinaru ili centru za kontrolu otrovanja životinja.",
-        "sv": "Om hunden har ätit en myntaprodukt som tuggummi, godis eller tandkräm som kan innehålla xylitol ska du genast söka veterinärvård. Vid en akut förgiftning kontaktar du veterinären eller en giftrådgivning för djur."
+        "sv": "Om hunden har ätit en myntaprodukt som tuggummi, godis eller tandkräm som kan innehålla xylitol ska du genast söka veterinärvård. Vid en akut förgiftning kontaktar du veterinären eller en giftrådgivning för djur.",
+        "da": "Hvis din hund har spist et mynteprodukt som tyggegummi, slik eller tandpasta, der kan indeholde xylitol, skal du straks søge dyrlægehjælp. Ved mistanke om forgiftning skal du kontakte din dyrlæge eller giftrådgivning for dyr."
       },
       "serving": null,
       "child": {
@@ -43009,7 +43147,8 @@
         "pl": "Liście mięty i miętowe słodycze nie są dla psów. Jeśli pies znajdzie miętową gumę lub słodycze, od razu powiedz o tym dorosłemu.",
         "cs": "Lístky máty a mátové bonbony nejsou pro psy. Pokud pes najde mátovou žvýkačku nebo bonbony, hned to řekni dospělému.",
         "hr": "Listovi metvice i slatkiši s okusom metvice nisu za pse. Ako pas pronađe žvakaću gumu ili slatkiše s metvicom, odmah to reci odrasloj osobi.",
-        "sv": "Myntablad och mintgodis är inget för hundar. Om en hund hittar tuggummi eller godis med mintsmak, säg direkt till en vuxen."
+        "sv": "Myntablad och mintgodis är inget för hundar. Om en hund hittar tuggummi eller godis med mintsmak, säg direkt till en vuxen.",
+        "da": "Myntblade og slik med mynte er ikke til hunde. Hvis en hund finder tyggegummi eller slik med mynte, så sig det til en voksen med det samme."
       },
       "faq": [
         {
@@ -43025,7 +43164,8 @@
             "pl": "Czy miętowa guma do żucia lub cukierki są niebezpieczne dla psów?",
             "cs": "Jsou mátové žvýkačky nebo bonbony pro psy nebezpečné?",
             "hr": "Jesu li žvakaće gume i bomboni s okusom metvice opasni za pse?",
-            "sv": "Är tuggummi eller godis med mintsmak farligt för hundar?"
+            "sv": "Är tuggummi eller godis med mintsmak farligt för hundar?",
+            "da": "Er tyggegummi eller slik med mynte farligt for hunde?"
           },
           "a": {
             "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
@@ -43039,7 +43179,8 @@
             "pl": "Tak. Produkty miętowe, takie jak guma do żucia, cukierki i pasta do zębów, mogą być niebezpieczne dla psów, bo mogą zawierać ksylitol. Jeśli pies coś takiego zjadł, od razu zgłoś się do weterynarza.",
             "cs": "Ano. Výrobky s mátou, například žvýkačky, bonbony a zubní pasty, mohou být pro psy nebezpečné, protože mohou obsahovat xylitol. Pokud je váš pes snědl, okamžitě vyhledejte veterinární pomoc.",
             "hr": "Da. Proizvodi s metvicom, poput žvakaćih guma, bombona i zubnih pasta, mogu biti opasni za pse jer mogu sadržavati ksilitol. Ako je pas pojeo neki od njih, odmah potraži veterinarsku pomoć.",
-            "sv": "Ja. Produkter med mintsmak, som tuggummi, godis och tandkräm, kan vara farliga för hundar eftersom de kan innehålla xylitol. Om hunden har ätit något sådant ska du genast söka veterinärvård."
+            "sv": "Ja. Produkter med mintsmak, som tuggummi, godis och tandkräm, kan vara farliga för hundar eftersom de kan innehålla xylitol. Om hunden har ätit något sådant ska du genast söka veterinärvård.",
+            "da": "Ja. Mynteprodukter som tyggegummi, slik og tandpasta kan være farlige for hunde, fordi de kan indeholde xylitol. Hvis din hund har spist noget af det, skal du straks søge dyrlægehjælp."
           }
         }
       ],
@@ -48858,7 +48999,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Radishes",
@@ -48872,7 +49014,8 @@
         "pl": "Rzodkiewki",
         "cs": "Ředkvičky",
         "hr": "Rotkvice",
-        "sv": "Rädisor"
+        "sv": "Rädisor",
+        "da": "Radiser"
       },
       "question": {
         "en": "Can dogs eat radishes?",
@@ -48886,7 +49029,8 @@
         "pl": "Czy psy mogą jeść rzodkiewki?",
         "cs": "Mohou psi jíst ředkvičky?",
         "hr": "Smiju li psi jesti rotkvice?",
-        "sv": "Får hundar äta rädisor?"
+        "sv": "Får hundar äta rädisor?",
+        "da": "Må hunde spise radiser?"
       },
       "url_slug": {
         "en": "radishes",
@@ -48900,7 +49044,8 @@
         "pl": "rzodkiewki",
         "cs": "redkvicky",
         "hr": "rotkvice",
-        "sv": "radisor"
+        "sv": "radisor",
+        "da": "radiser"
       },
       "answer": {
         "en": "Yes, but only in small amounts. In moderation, radishes are safe for dogs, though some dogs find the taste off-putting. Remove the greens, wash, peel and chop the radish into small pieces, and serve it plain. Horseradish and wild radishes are not for dogs.",
@@ -48914,7 +49059,8 @@
         "pl": "Tak, ale tylko w małych ilościach. Z umiarem rzodkiewki są dla psów bezpieczne, choć niektórym psom ich smak nie odpowiada. Usuń nać, umyj, obierz i pokrój rzodkiewkę na małe kawałki, a potem podaj ją bez dodatków. Chrzan i dzika rzodkiew nie są dla psów.",
         "cs": "Ano, ale jen v malém množství. S mírou jsou ředkvičky pro psy bezpečné, i když se některým psům nemusí líbit jejich chuť. Odstraňte nať, ředkvičku omyjte, oloupejte, nakrájejte na malé kousky a podávejte ji neochucenou. Křen a divoké ředkve psům nedávejte.",
         "hr": "Da, ali samo u malim količinama. Umjereno su rotkvice za pse sigurne, iako nekim psima okus nije po volji. Ukloni lišće, operi i oguli rotkvicu, nareži je na male komadiće i daj je običnu. Hren i divlje rotkvice nisu za pse.",
-        "sv": "Ja, men bara i små mängder. Rädisor är ofarliga för hundar med måtta, men vissa hundar tycker inte om smaken. Ta bort blasten, tvätta, skala och hacka rädisan i små bitar och servera den okryddad. Pepparrot och vilda rädisor är inget för hundar."
+        "sv": "Ja, men bara i små mängder. Rädisor är ofarliga för hundar med måtta, men vissa hundar tycker inte om smaken. Ta bort blasten, tvätta, skala och hacka rädisan i små bitar och servera den okryddad. Pepparrot och vilda rädisor är inget för hundar.",
+        "da": "Ja, men kun i små mængder. Med måde er radiser sikre for hunde, selvom nogle hunde ikke bryder sig om smagen. Fjern toppen, vask og skræl radiserne, og hak dem i små stykker. Giv dem naturelle. Peberrod og agerrettik (vilde radiser) er ikke til hunde."
       },
       "why": {
         "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
@@ -48928,7 +49074,8 @@
         "pl": "Niewielkie ilości rzodkiewek nie szkodzą psom, a mogą nawet przynosić pewne korzyści zdrowotne. Nać rzodkiewki może wywołać zapalenie żołądka i jelit, więc nie należy jej podawać. Duże kawałki lub cała rzodkiewka mogą grozić zadławieniem. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom, a dzika rzodkiew to inne warzywo, które nie jest bezpieczne dla zwierząt domowych.",
         "cs": "Menší množství ředkviček psům neškodí a může mít dokonce i určitý zdravotní přínos. Nať ředkviček může způsobit zánět žaludku a střev, proto ji psům nedávejte. Velké kousky nebo celá ředkvička mohou způsobit udušení. Křen ve skutečnosti ředkvička není a psům se nemá dávat; divoké ředkve jsou jiná zelenina, která pro zvířata není bezpečná.",
         "hr": "Male količine rotkvica psima ne štete, a možda imaju i neke zdravstvene koristi. Lišće rotkvice može izazvati gastroenteritis, pa ga ne treba davati. Veliki komadi ili cijela rotkvica mogli bi izazvati gušenje. Hren zapravo nije rotkvica i ne treba ga davati psima, a divlje rotkvice drugo su povrće koje nije sigurno za kućne ljubimce.",
-        "sv": "Måttliga mängder rädisor skadar inte hundar, och de kan till och med ha vissa hälsofördelar. Rädisblasten kan ge magtarminflammation och ska därför inte ges. Stora bitar eller en hel rädisa kan bli en kvävningsrisk. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar, och vilda rädisor är en annan grönsak som inte är säker för husdjur."
+        "sv": "Måttliga mängder rädisor skadar inte hundar, och de kan till och med ha vissa hälsofördelar. Rädisblasten kan ge magtarminflammation och ska därför inte ges. Stora bitar eller en hel rädisa kan bli en kvävningsrisk. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar, och vilda rädisor är en annan grönsak som inte är säker för husdjur.",
+        "da": "Moderate mængder radiser skader ikke hunde, og de kan endda have visse sundhedsfordele. Radisetoppen kan give mavetarmbetændelse og må derfor ikke gives. Store stykker eller en hel radise kan sætte sig fast i halsen. Peberrod er egentlig ikke en radise og må ikke gives til hunde, og agerrettik (vilde radiser) er en anden grøntsag som ikke er sikker for dyr."
       },
       "signs": null,
       "what_to_do": {
@@ -48943,7 +49090,8 @@
         "pl": "Jak zawsze: zanim dodasz do diety psa nowy składnik, najlepiej skonsultuj się z weterynarzem. Niektórym psom smak rzodkiewek nie odpowiada i nie chcą ich jeść.",
         "cs": "Jako vždy je před zařazením nové potraviny do psova jídelníčku nejlepší nejdřív se poradit s veterinářem. Některým psům se chuť ředkviček nelíbí a nebudou je jíst.",
         "hr": "Kao i uvijek, prije nego što psu u prehranu uvedeš novu namirnicu, najbolje je prvo se posavjetovati s veterinarom. Nekim psima okus nije po volji pa neće htjeti jesti rotkvice.",
-        "sv": "Prata som alltid med veterinären innan du lägger till något nytt i hundens kost. Vissa hundar tycker inte om smaken och vill inte äta rädisor."
+        "sv": "Prata som alltid med veterinären innan du lägger till något nytt i hundens kost. Vissa hundar tycker inte om smaken och vill inte äta rädisor.",
+        "da": "Som altid er det bedst at tale med din dyrlæge, før du tilføjer en ny fødevare til din hunds kost. Nogle hunde bryder sig ikke om smagen og vil ikke spise radiser."
       },
       "serving": {
         "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
@@ -48957,7 +49105,8 @@
         "pl": "Wyrzuć nać, a rzodkiewkę umyj, obierz i pokrój na małe kawałki. Tylko zwykłe rzodkiewki, bez przypraw, w małych ilościach.",
         "cs": "Nať vyhoďte, ředkvičku omyjte, oloupejte a nakrájejte na malé kousky. Jen neochucené ředkvičky, bez koření, a v malém množství.",
         "hr": "Baci lišće, zatim rotkvicu operi, oguli i nareži na male komadiće. Samo obične rotkvice, bez začina, u malim količinama.",
-        "sv": "Släng blasten, tvätta och skala rädisan och hacka den i små bitar. Bara okryddade rädisor, i små mängder."
+        "sv": "Släng blasten, tvätta och skala rädisan och hacka den i små bitar. Bara okryddade rädisor, i små mängder.",
+        "da": "Smid toppen ud, vask og skræl radisen, og hak den i små stykker. Kun naturelle radiser uden krydderier og kun i små mængder."
       },
       "child": {
         "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
@@ -48971,7 +49120,8 @@
         "pl": "Pies może spróbować kilku małych kawałków rzodkiewki. Dorosły najpierw usuwa nać, obiera rzodkiewkę i kroi ją.",
         "cs": "Psi mohou zkusit pár malých kousků ředkvičky. Dospělý nejdřív odstraní nať, ředkvičku oloupe a nakrájí.",
         "hr": "Psi smiju probati nekoliko malih komadića rotkvice. Odrasla osoba prvo ukloni lišće, oguli rotkvicu i nareže je.",
-        "sv": "Hundar kan få prova några små rädisbitar. En vuxen tar först bort bladen, skalar rädisan och hackar den."
+        "sv": "Hundar kan få prova några små rädisbitar. En vuxen tar först bort bladen, skalar rädisan och hackar den.",
+        "da": "Hunde må gerne smage et par små stykker radise. En voksen fjerner først bladene, skræller radisen og hakker den."
       },
       "faq": [
         {
@@ -48987,7 +49137,8 @@
             "pl": "Czy psy mogą jeść nać rzodkiewki?",
             "cs": "Mohou psi jíst listy ředkviček?",
             "hr": "Smiju li psi jesti lišće rotkvice?",
-            "sv": "Får hundar äta rädisblast?"
+            "sv": "Får hundar äta rädisblast?",
+            "da": "Må hunde spise radisetop?"
           },
           "a": {
             "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
@@ -49001,7 +49152,8 @@
             "pl": "Nie. Nie dawaj psu naci rzodkiewki, bo może wywołać zapalenie żołądka i jelit.",
             "cs": "Ne. Nedávejte psovi nať ředkviček, protože může způsobit zánět žaludku a střev.",
             "hr": "Ne. Ne daj psu lišće rotkvice jer može izazvati gastroenteritis.",
-            "sv": "Nej. Ge inte hunden rädisblasten, eftersom den kan ge magtarminflammation."
+            "sv": "Nej. Ge inte hunden rädisblasten, eftersom den kan ge magtarminflammation.",
+            "da": "Nej. Giv ikke din hund radisetoppen, for den kan give mavetarmbetændelse."
           }
         },
         {
@@ -49017,7 +49169,8 @@
             "pl": "Czy psy mogą jeść chrzan?",
             "cs": "Mohou psi jíst křen?",
             "hr": "Smiju li psi jesti hren?",
-            "sv": "Får hundar äta pepparrot?"
+            "sv": "Får hundar äta pepparrot?",
+            "da": "Må hunde spise peberrod?"
           },
           "a": {
             "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
@@ -49031,7 +49184,8 @@
             "pl": "Nie. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom.",
             "cs": "Ne. Křen ve skutečnosti ředkvička není a psům se nemá dávat.",
             "hr": "Ne. Hren zapravo nije rotkvica i ne treba ga davati psima.",
-            "sv": "Nej. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar."
+            "sv": "Nej. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar.",
+            "da": "Nej. Peberrod er egentlig ikke en radise og skal ikke gives til hunde."
           }
         }
       ],
@@ -52806,7 +52960,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Seaweed (nori)",
@@ -52820,7 +52975,8 @@
         "pl": "Wodorosty (nori)",
         "cs": "Mořské řasy (nori)",
         "hr": "Morske alge (nori)",
-        "sv": "Tång (nori)"
+        "sv": "Tång (nori)",
+        "da": "Tang (nori)"
       },
       "question": {
         "en": "Can dogs eat seaweed?",
@@ -52834,7 +52990,8 @@
         "pl": "Czy psy mogą jeść wodorosty?",
         "cs": "Mohou psi jíst mořské řasy?",
         "hr": "Smiju li psi jesti morske alge?",
-        "sv": "Får hundar äta tång?"
+        "sv": "Får hundar äta tång?",
+        "da": "Må hunde spise tang?"
       },
       "url_slug": {
         "en": "seaweed",
@@ -52848,7 +53005,8 @@
         "pl": "wodorosty",
         "cs": "morske-rasy",
         "hr": "morske-alge",
-        "sv": "tang"
+        "sv": "tang",
+        "da": "tang"
       },
       "answer": {
         "en": "Some types, in moderation. Plain nori or seaweed sheets without added salt, garlic or seasonings are fine in small amounts. Wild beach seaweed is different: it can contain too much salt and dried strands can expand in the stomach, so consult a vet right away if your dog eats it.",
@@ -52862,7 +53020,8 @@
         "pl": "Niektóre rodzaje, z umiarem. Zwykłe nori lub arkusze wodorostów bez dodatku soli, czosnku i przypraw są w małych ilościach w porządku. Dzikie wodorosty z plaży to co innego: mogą zawierać zbyt dużo soli, a suche pasma mogą pęcznieć w żołądku, więc jeśli pies je zje, od razu skonsultuj się z weterynarzem.",
         "cs": "Některé druhy ano, ale s mírou. Čisté nori nebo plátky mořských řas bez přidané soli, česneku a koření jsou v malém množství v pořádku. Jiné je to u divokých řas z pláže: mohou obsahovat příliš mnoho soli a usušená vlákna mohou v žaludku nabobtnat, proto se po jejich snědení okamžitě poraďte s veterinářem.",
         "hr": "Neke vrste, umjereno. Obične nori alge ili listovi morskih algi bez dodane soli, češnjaka i začina u malim su količinama u redu. Divlje morske alge s plaže drugačija su priča: mogu sadržavati previše soli, a osušene vlati mogu nabubriti u želucu, pa se odmah posavjetuj s veterinarom ako ih pas pojede.",
-        "sv": "Vissa sorters tång, med måtta. Vanlig nori eller tångblad utan tillsatt salt, vitlök eller kryddor går bra i små mängder. Vild tång från stranden är en annan sak: den kan innehålla för mycket salt, och torkade trådar kan svälla i magen. Kontakta veterinären direkt om hunden har ätit av den."
+        "sv": "Vissa sorters tång, med måtta. Vanlig nori eller tångblad utan tillsatt salt, vitlök eller kryddor går bra i små mängder. Vild tång från stranden är en annan sak: den kan innehålla för mycket salt, och torkade trådar kan svälla i magen. Kontakta veterinären direkt om hunden har ätit av den.",
+        "da": "Nogle slags, med måde. Almindelig nori eller tangplader uden tilsat salt, hvidløg eller krydderier er fine i små mængder. Vild tang fra stranden er noget helt andet: det kan indeholde for meget salt, og tørrede tråde kan svulme op i maven. Kontakt derfor straks en dyrlæge, hvis din hund spiser det."
       },
       "why": {
         "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -52876,7 +53035,8 @@
         "pl": "Wodorosty są pożywne i zawierają białko, żelazo, jod, magnez i kwasy omega-3. Jednak zbyt duża ilość może rozstroić żołądek psa, a nadmiar jodu może wpływać na tarczycę. Dzikie wodorosty z plaży mogą zawierać nadmiar soli, co naraża psa na zatrucie solą; ich długie pasma mogą utknąć w jelitach lub kryć w sobie zwierzęta albo pasożyty, a suche dzikie wodorosty mogą pęcznieć w żołądku.",
         "cs": "Mořské řasy jsou výživné a obsahují bílkoviny, železo, jód, hořčík a omega-3 mastné kyseliny. Příliš mnoho řas ale může psovi rozhodit žaludek a příliš mnoho jódu může ovlivnit štítnou žlázu. Divoké řasy z pláže mohou obsahovat nadměrné množství soli, takže psovi hrozí otrava solí; jejich dlouhá vlákna se mohou zaklínit ve střevech nebo v sobě ukrývat drobné živočichy či parazity a usušené divoké řasy mohou v žaludku nabobtnat.",
         "hr": "Morske alge su hranjive i sadrže bjelančevine, željezo, jod, magnezij i omega-3 masne kiseline. No previše morskih algi može poremetiti psu probavu, a previše joda može utjecati na štitnjaču. Divlje morske alge s plaže mogu sadržavati previše soli, zbog čega pas može dobiti trovanje solju; njihove duge vlati mogu se zaglaviti u crijevima ili sadržavati skrivene životinje ili parazite, a suhe divlje alge mogu nabubriti u želucu.",
-        "sv": "Tång är näringsrik och innehåller protein, järn, jod, magnesium och omega-3. Men för mycket tång kan ge hunden orolig mage, och för mycket jod kan påverka sköldkörteln. Vild tång från stranden kan innehålla alldeles för mycket salt, vilket ger risk för saltförgiftning. De långa trådarna kan fastna i tarmarna eller dölja små djur eller parasiter, och torkad vild tång kan svälla i magen."
+        "sv": "Tång är näringsrik och innehåller protein, järn, jod, magnesium och omega-3. Men för mycket tång kan ge hunden orolig mage, och för mycket jod kan påverka sköldkörteln. Vild tång från stranden kan innehålla alldeles för mycket salt, vilket ger risk för saltförgiftning. De långa trådarna kan fastna i tarmarna eller dölja små djur eller parasiter, och torkad vild tång kan svälla i magen.",
+        "da": "Tang er næringsrigt og indeholder protein, jern, jod, magnesium og omega-3. Men for meget tang kan give hunden dårlig mave, og for meget jod kan påvirke skjoldbruskkirtlen. Vild tang fra stranden kan indeholde alt for meget salt, så hunden risikerer saltforgiftning. De lange tråde kan sætte sig fast i tarmene eller skjule små dyr eller parasitter, og tørret vild tang kan svulme op i maven."
       },
       "signs": null,
       "what_to_do": {
@@ -52891,7 +53051,8 @@
         "pl": "Pilnuj psa na plaży, żeby nie zjadał dzikich wodorostów. Jeśli pies zje wodorosty na plaży, od razu skonsultuj się z weterynarzem; mogą wywołać wymioty, biegunkę, osłabienie i ospałość.",
         "cs": "Na pláži psa hlídejte, aby divoké řasy nejedl. Pokud pes na pláži řasy snědl, okamžitě se poraďte s veterinářem. Řasy mohou způsobit zvracení, průjem, slabost a malátnost.",
         "hr": "Pazi na psa na plaži da ne jede divlje morske alge. Ako pas ipak pojede morske alge na plaži, odmah se posavjetuj s veterinarom; mogu izazvati povraćanje, proljev, slabost i bezvoljnost.",
-        "sv": "Ha uppsikt över hunden på stranden så att den inte äter vild tång. Om hunden ändå äter tång på stranden ska du kontakta veterinären direkt. Det kan ge kräkningar, diarré, svaghet och slöhet."
+        "sv": "Ha uppsikt över hunden på stranden så att den inte äter vild tång. Om hunden ändå äter tång på stranden ska du kontakta veterinären direkt. Det kan ge kräkningar, diarré, svaghet och slöhet.",
+        "da": "Hold øje med hunden på stranden, så den ikke spiser vild tang. Hvis din hund alligevel spiser tang på stranden, skal du straks kontakte en dyrlæge. Symptomer kan være opkast, diarré, svaghed og sløvhed."
       },
       "serving": {
         "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -52905,7 +53066,8 @@
         "pl": "Tylko zwykłe, nieprzyprawione wodorosty w małych ilościach, na przykład gotowe arkusze nori. Sprawdź skład i upewnij się, że nie ma w nim przypraw, soli ani czosnku.",
         "cs": "Pouze čisté, neochucené řasy v malém množství, například balené plátky nori. Přečtěte si složení a ujistěte se, že neobsahují přidané koření, sůl ani česnek.",
         "hr": "Samo obične, nezačinjene morske alge u malim količinama, poput pakiranih listova nori. Pročitaj popis sastojaka i provjeri da nema dodanih začina, soli ni češnjaka.",
-        "sv": "Bara okryddad tång i små mängder, till exempel färdigförpackade noriblad. Läs innehållsförteckningen och kontrollera att där inte finns tillsatta kryddor, salt eller vitlök."
+        "sv": "Bara okryddad tång i små mängder, till exempel färdigförpackade noriblad. Läs innehållsförteckningen och kontrollera att där inte finns tillsatta kryddor, salt eller vitlök.",
+        "da": "Kun naturel tang uden krydderier og kun i små mængder, fx færdigpakkede noriplader. Læs varedeklarationen, og tjek at der ikke er tilsat krydderier, salt eller hvidløg."
       },
       "child": {
         "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -52919,7 +53081,8 @@
         "pl": "Pies może skosztować odrobiny zwykłego nori. Na plaży dopilnuj, żeby nie zbliżał się do wodorostów leżących na piasku.",
         "cs": "Psi mohou ochutnat trochu čistého nori. Na pláži pomoz hlídat, aby pes nejedl řasy z písku.",
         "hr": "Psi smiju kušati malo običnih nori algi. Na plaži ih pomozi držati podalje od algi na pijesku.",
-        "sv": "Hundar kan få smaka lite okryddad nori. På stranden ska du hjälpa hunden att hålla sig borta från tången i sanden."
+        "sv": "Hundar kan få smaka lite okryddad nori. På stranden ska du hjälpa hunden att hålla sig borta från tången i sanden.",
+        "da": "Hunde må gerne smage lidt naturel nori. På stranden skal du hjælpe hunden med at holde sig væk fra tangen i sandet."
       },
       "faq": [
         {
@@ -52935,7 +53098,8 @@
             "pl": "Co zrobić, jeśli pies zje wodorosty na plaży?",
             "cs": "Co když můj pes na pláži snědl řasy?",
             "hr": "Što ako moj pas na plaži pojede morske alge?",
-            "sv": "Vad gör jag om hunden äter tång på stranden?"
+            "sv": "Vad gör jag om hunden äter tång på stranden?",
+            "da": "Hvad gør jeg, hvis min hund spiser tang på stranden?"
           },
           "a": {
             "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -52949,7 +53113,8 @@
             "pl": "Od razu skonsultuj się z weterynarzem. Dzikie wodorosty mogą zawierać nadmiar soli, suche wodorosty mogą pęcznieć w żołądku, a długie pasma mogą utknąć w jelitach.",
             "cs": "Okamžitě se poraďte s veterinářem. Divoké řasy mohou obsahovat nadměrné množství soli, usušené řasy mohou v žaludku nabobtnat a dlouhá vlákna se mohou zaklínit ve střevech.",
             "hr": "Odmah se posavjetuj s veterinarom. Divlje morske alge mogu sadržavati previše soli, suhe alge mogu nabubriti u želucu, a duge vlati mogu se zaglaviti u crijevima.",
-            "sv": "Kontakta veterinären direkt. Vild tång kan innehålla alldeles för mycket salt, torkad tång kan svälla i magen och långa trådar kan fastna i tarmarna."
+            "sv": "Kontakta veterinären direkt. Vild tång kan innehålla alldeles för mycket salt, torkad tång kan svälla i magen och långa trådar kan fastna i tarmarna.",
+            "da": "Kontakt straks en dyrlæge. Vild tang kan indeholde alt for meget salt, tørret tang kan svulme op i maven, og lange tråde kan sætte sig fast i tarmene."
           }
         },
         {
@@ -52965,7 +53130,8 @@
             "pl": "Czy psy mogą jeść sushi lub wodorosty z sosem sojowym?",
             "cs": "Mohou psi jíst sushi nebo řasy se sójovou omáčkou?",
             "hr": "Smiju li psi jesti sushi ili morske alge sa sojinim umakom?",
-            "sv": "Får hundar äta sushi eller tång med sojasås?"
+            "sv": "Får hundar äta sushi eller tång med sojasås?",
+            "da": "Må hunde spise sushi eller tang med sojasovs?"
           },
           "a": {
             "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -52979,7 +53145,8 @@
             "pl": "Nie. Sushi z surową rybą może rozchorować psa, a sos sojowy zawiera dużo soli.",
             "cs": "Ne. Po sushi se syrovou rybou může být psovi špatně a sójová omáčka obsahuje hodně soli.",
             "hr": "Ne. Od sushija sa sirovom ribom pas se može razboljeti, a sojin umak ima mnogo soli.",
-            "sv": "Nej. Sushi med rå fisk kan göra hunden sjuk, och sojasås innehåller mycket salt."
+            "sv": "Nej. Sushi med rå fisk kan göra hunden sjuk, och sojasås innehåller mycket salt.",
+            "da": "Nej. Sushi med rå fisk kan gøre hunden syg, og sojasovs indeholder meget salt."
           }
         }
       ],
