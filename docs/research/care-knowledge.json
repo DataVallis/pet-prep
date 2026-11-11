@@ -145113,6 +145113,21 @@
       "checked": "2026-11-11"
     },
     {
+      "country": "UY",
+      "kind": "clinic",
+      "name": "Dr Mascota Hospital Veterinario",
+      "city": "Ciudad de la Costa",
+      "region": "Canelones",
+      "address": "Ruta Interbalnearia km 23 esq. Gonchi Rodriguez, Lagomar",
+      "phone": "+598 91 808 808",
+      "emergency_24h": true,
+      "duty": "Emergency care 24 hours a day; daytime consultations until 20:00 Monday to Saturday.",
+      "duty_i18n": null,
+      "url": "https://drmascota.uy/",
+      "source_url": "https://drmascota.uy/",
+      "checked": "2026-11-11"
+    },
+    {
       "country": "VN",
       "kind": "clinic",
       "name": "NPet Veterinary Hospital - Cau Giay",

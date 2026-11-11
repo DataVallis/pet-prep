@@ -26,6 +26,16 @@
       "name": "Lead lists (leads only)",
       "url": "https://www.veterinarios.com.uy/montevideo/Urgencias-24hs/",
       "note": "Used only to find clinic names (veterinarios.com.uy, adoptagratis.com, 1122.com.uy, vetshunter, search results); no entry relies on them."
+    },
+    {
+      "name": "MGAP - Comercios habilitados Decreto 160/997 (official list, August 2026)",
+      "url": "https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/sites/ministerio-ganaderia-agricultura-pesca/files/2026-08/Comercios_Habilit_Dec_160_997_08_2026.pdf",
+      "note": "Official PDF opened; lists establishment names and street addresses by department but no phones, hours or websites. Used only to find clinic names; no entry relies on it."
+    },
+    {
+      "name": "Clinics' own sites (Lagomar / Ciudad de la Costa)",
+      "url": "https://drmascota.uy/",
+      "note": "Own page opened for Dr Mascota hospital veterinario."
     }
   ],
   "entries": [
@@ -263,7 +273,22 @@
       "source_url": "https://montevideo.gub.uy/servicio-de-emergencia-veterinaria",
       "note": "Official page: 'las 24 horas del dia'; line 1950 ext. 5000. Aimed at street accidents and families without means; the owner takes responsibility for the animal afterwards. Address is the IM head office from the page.",
       "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr Mascota Hospital Veterinario",
+      "city": "Ciudad de la Costa",
+      "region": "Canelones",
+      "address": "Ruta Interbalnearia km 23 esq. Gonchi Rodriguez, Lagomar",
+      "phone": "+598 91 808 808",
+      "emergency_24h": true,
+      "duty": "Emergency care 24 hours a day; daytime consultations until 20:00 Monday to Saturday.",
+      "small_animals": true,
+      "url": "https://drmascota.uy/",
+      "source_url": "https://drmascota.uy/",
+      "note": "Page: 'Atencion emergencias las 24 horas del dia', 'Hospital veterinario'. Page names only 'Lagomar' (a district of Ciudad de la Costa), not the city. Night/day emergency hours inside the affiliation plans are contradictory (20-9 h vs 9-20 h) so only the general 24 h sentence is used. Phone is also WhatsApp.",
+      "checked": "2026-11-11"
     }
   ],
-  "notes": "Uruguay: Montevideo, Maldonado/Punta del Este, Paysandu, Colonia and Young covered partially. No national duty rota, no SMVU/MGAP clinic directory and no animal poison line found: the SMVU (smvu.org.uy) and Facultad de Veterinaria (fvet.edu.uy) home pages could not be opened by the fetch tool (not in the allowed URL set); the faculty Memoria 2023 PDF has no hospital hours or phone; CIAT (human poison centre) was not confirmed to take animal calls. Not done / not reachable: Espacio Animal Montevideo (espacioanimal.uy, anti-bot page, only a search title says 'emergency service'), Hospital Veterinario HV (hvhospitalveterinario.com, anti-bot page), Laika branch addresses (sucursales.laika.com.uy not opened), Puntovet Clinicas page, Veterinarios en Accion (vea.com.uy, redirect loop), Centro Veterinario Salto (only Instagram, robots-blocked), Hospital de Paysandu and other veterinariasuruguay.com pages (robots-blocked), lacosta.com.uy (error), BuenVet, AsistVet, Veterinaria Cavia, Hospital Veterinario de la Costa, Vita Consultorio (Las Piedras), Veterinaria Nan, Clinica Veterinaria Uruguay (Paysandu), La Colonial, Salud Animal and Dr. Sebastian Vazquez (Colonia) - no own site opened. Not covered: Rocha / La Paloma / Punta del Diablo, Piriapolis, Rivera, Tacuarembo, Durazno, Florida, Minas, Mercedes, Carmelo, Ciudad de la Costa, Pando, Las Piedras (no own-site pages found)."
+  "notes": "Uruguay: Montevideo, Maldonado/Punta del Este, Paysandu, Colonia and Young covered partially. No national duty rota, no SMVU/MGAP clinic directory and no animal poison line found: the SMVU (smvu.org.uy) and Facultad de Veterinaria (fvet.edu.uy) home pages could not be opened by the fetch tool (not in the allowed URL set); the faculty Memoria 2023 PDF has no hospital hours or phone; CIAT (human poison centre) was not confirmed to take animal calls. Not done / not reachable: Espacio Animal Montevideo (espacioanimal.uy, anti-bot page, only a search title says 'emergency service'), Hospital Veterinario HV (hvhospitalveterinario.com, anti-bot page), Laika branch addresses (sucursales.laika.com.uy not opened), Puntovet Clinicas page, Veterinarios en Accion (vea.com.uy, redirect loop), Centro Veterinario Salto (only Instagram, robots-blocked), Hospital de Paysandu and other veterinariasuruguay.com pages (robots-blocked), lacosta.com.uy (error), BuenVet, AsistVet, Veterinaria Cavia, Hospital Veterinario de la Costa, Vita Consultorio (Las Piedras), Veterinaria Nan, Clinica Veterinaria Uruguay (Paysandu), La Colonial, Salud Animal and Dr. Sebastian Vazquez (Colonia) - no own site opened. Not covered: Rocha / La Paloma / Punta del Diablo, Piriapolis, Rivera, Tacuarembo, Durazno, Florida, Minas, Mercedes, Carmelo, Ciudad de la Costa, Pando, Las Piedras (no own-site pages found). Follow-up 2026-11-11 (interior and coast): only Dr Mascota (Lagomar) could be confirmed from its own page. Not reachable / not done: smvu.org.uy and fvet.edu.uy home pages (fetch tool refused: URL not in allowed set); faculty PDFs opened (Memoria Hospital 2024, Hoja de informacion 2026, Guia estudiantes extranjeros 2024, Toxicologia syllabus, Caracterizacion Clinicas) contain no Hospital Veterinario hours, phone or urgencias info, only the campus address Ruta 8 km 18; no animal poison line found (CIAT not confirmed; the Toxicologia syllabus names none). UCIL Hospital Veterinario (ucilhospitalvet.wixsite.com/ucil) says '24hs, 7 dias' and RapidVet urgencias 098 503 975 but the page gives no city or address, so it was not added (phones 092 410 061 / 098 503 975). hvhospitalveterinario.com is in Olivos, Argentina (not UY). The MGAP Decreto 160/997 official list (Aug 2026) names clinics but has no phones; own sites were not found by search for: Marvet (La Paloma), Clinica Veterinaria La Huella and La Lechuza (Rocha), Clinica Veterinaria Piriapolis, Animaladas, El Churrinche (Piriapolis), Argos, Cimarron, Dra. Cecilia Ojeda (Rivera), Clinica Veterinaria Avenida and Saravia (Florida), Clinica Veterinaria Sarandi and Veterinaria Minas (Minas), Clinica Veterinaria Olimar and La Veterinaria (Carmelo), Veterinaria Pando, Clinica Integral Veterinaria and La Mulita (Las Piedras), Clinica Veterinaria Parada 5 (Punta del Este), Veterinaria La Ruta and Animalia (Durazno). No candidates at all for Tacuarembo clinics (only agro stores) and none for Mercedes. Guia/veterinariasuruguay.com/guiacomercial pages were seen only as search hits (aggregators, robots-blocked) and not used."
 }
