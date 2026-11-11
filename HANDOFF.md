@@ -228,6 +228,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-11 (cloud, docs) — push-title rule corrected in docs (`docs/push-title-pet-name`)
+- Docs + comments only, no behaviour change: push title = the pet's name when the parent set one, else »PetPrep« (since 2026-10-17, `PushCopy::title()`); bodies never contain a name; the child's name never appears in any push; data `{type, pet_id}` (+ `wish_id`). Fixed PRODUCT_SPEC §6, PARENTS.md, FEATURES.md row, ARCHITECTURE.md, CAT_TEXTS_REVIEW.md, `PushCopy` / `NotificationService` docblocks, `lang/{en,sl}/push.php` headers; DECISIONS row (website legal text, pet-prep-website #363). Historical BUILD_LOG / DECISIONS rows of 2026-10-05 left as history. Next: none.
+
 ### 2026-11-11 (cloud, docs) — deployed 11. 11.: docs say »live« instead of »next update« (`docs/live-2026-11-11`)
 - Production deploys 11. 11. (run 42995623667 `39331aca` + OTA iOS / Android run 42996026538; run 43006500193 `18a22d8c`, OTA skipped — mobile unchanged) → M6-U01 (#978), M6-U02 (#983) and »learned command does not decay« (#1020) are live; family (#838) / per-pet (#891) time zone live since 10. 11. (run 42794784515 + OTA). FEATURES / audiences / BUSINESS_MODEL / specs / ROADMAP / BUILD_LOG headers updated; still ✅ (ni na napravi). Next: David's §1b 21 / 22 device tests.
 

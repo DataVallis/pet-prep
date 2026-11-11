@@ -2,8 +2,11 @@
 
 /*
  * Push texts — Slovenian (M3-02, PRODUCT_SPEC §6/§7, DECISIONS 2026-10-05;
- * moved here from PushCopy in M1-18, byte-identical). No child or pet names
- * (Expo / APNs / FCM are third parties, lock screens are public).
+ * moved here from PushCopy in M1-18, byte-identical). Bodies never contain
+ * any name; the child's name never appears in any push (Expo / APNs / FCM are
+ * third parties, lock screens are public). `title` is the fallback — the push
+ * title is the pet's name when the parent set one (PushCopy::title(), David
+ * 2026-10-17).
  * Rendered per device in `device_push_tokens.locale` (App\Services\Push\PushCopy).
  */
 

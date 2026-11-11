@@ -59,7 +59,9 @@ use Throwable;
  * notification + device), disables DeviceNotRegistered tokens.
  * checkReceipts() reads the receipts ≥ 15 min later.
  *
- * Payload data = {type, pet_id} only. Texts come from PushCopy (no names).
+ * Payload data = {type, pet_id} only (+ wish_id for wish_created). Texts come
+ * from PushCopy: title = the pet's name when set, else "PetPrep"; bodies carry
+ * no names; the child's name is never in a push.
  */
 class NotificationService
 {

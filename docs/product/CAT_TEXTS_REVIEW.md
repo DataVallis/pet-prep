@@ -6,7 +6,7 @@
 
 ## Pravila, ki veljajo za vsa besedila
 
-- Brez imen otrok in živali (zaklenjen zaslon je javen, Expo / Apple / Google so tretje osebe). Edina spremenljivka je `:time`.
+- Besedila brez imen otrok in živali (naslov je ime ljubljenčka, če ga ima, sicer »PetPrep«; ime otroka ni nikoli v obvestilu; zaklenjen zaslon je javen, Expo / Apple / Google so tretje osebe). Edina spremenljivka je `:time`.
 - Otrok: »ti«, kratko, toplo, nikoli strašljivo ali sramotilno. **Starš: vikanje** (»Vaš otrok …«, brand/README — David 9. 10. 2026, za obe vrsti).
 - Slovenščina: **»muca« je ženskega spola** (»muca je lačna«, »bo zbolela«, »jo / ji«). **En samostalnik »muca« za vse starosti** (David 9. 10. 2026; brez ločenih besedil za mucka).
 - Angleščina: *cat*, **zaimek *it*** (kot *dog … it*; David 9. 10. 2026).

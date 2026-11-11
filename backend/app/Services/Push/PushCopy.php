@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Log;
  * language (`device_push_tokens.locale`); null or unsupported → the default
  * (config/locales.php, English).
  *
- * - Title is always "PetPrep"; texts never contain a child's or pet's name
- *   (Expo / APNs / FCM are third parties, and lock screens are public).
+ * - Title = the pet's name when the parent set one, else "PetPrep" (title(),
+ *   David 2026-10-17). Bodies never contain any name, and the child's name or
+ *   nickname never appears in any push (Expo / APNs / FCM are third parties,
+ *   and lock screens are public).
  * - Phase 1 / 2 hunger texts are the spec wording; the other metrics follow
  *   the same pattern. Energy is the daily walk, not on the phase ladder: one
  *   `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
