@@ -8,7 +8,8 @@
     "network": "Ni povezave s trgovino. Preverite internet in poskusite znova.",
     "storeProblem": "Trgovina nakupa ni mogla zaključiti. Poskusite znova kasneje.",
     "notAllowed": "Nakupi na tej napravi niso dovoljeni. Preverite nastavitve nakupov na napravi.",
-    "unavailable": "Nakupi v tej različici aplikacije niso na voljo."
+    "unavailable": "Nakupi v tej različici aplikacije niso na voljo.",
+    "intentFailed": "Nakupa ni bilo mogoče pripraviti, zato trgovina ni odprta in nič ni bilo zaračunano. Preverite povezavo in poskusite znova."
   },
   "restore": {
     "restored": "Nakupi so obnovljeni.",

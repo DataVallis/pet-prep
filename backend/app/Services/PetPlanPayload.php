@@ -26,6 +26,9 @@ use Carbon\CarbonInterface;
  * running. `trial_ends_at` = the birth for every pet born since M3-13
  * (a past pre-M3-13 trial end otherwise); null before birth and for a free
  * pet. `status` is null for a free pet. Instants ISO 8601 (in `$timezone` when given).
+ * `challenge_started_at` (M6-U01, additive): the purchase that upgraded a free pet to
+ * the challenge — its 12 weeks, score and certificate count from here, days before it
+ * are »pred izzivom« in the history; null for every other pet (unchanged behaviour).
  */
 final class PetPlanPayload
 {
@@ -41,6 +44,7 @@ final class PetPlanPayload
         public readonly ?string $paidAt,
         public readonly bool $paymentsEnforced = true,
         public readonly ?string $displayType = null,
+        public readonly ?string $challengeStartedAt = null,
     ) {}
 
     /**
@@ -73,11 +77,11 @@ final class PetPlanPayload
         /** @var 'free'|'challenge' $displayType */
         $displayType = self::displaysAsFree($pet) ? PetPlan::Free->value : $type;
 
-        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(), $displayType);
+        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(), $displayType, $iso($pet->challenge_started_at));
     }
 
     /**
-     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge'}
+     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge', challenge_started_at: string|null}
      */
     public function toArray(): array
     {
@@ -93,6 +97,13 @@ final class PetPlanPayload
              * @var 'free'|'challenge'
              */
             'display_type' => $this->displayType ?? $this->type,
+            /**
+             * M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
+             * start here); null for every other pet.
+             *
+             * @var string|null
+             */
+            'challenge_started_at' => $this->challengeStartedAt,
         ];
     }
 }

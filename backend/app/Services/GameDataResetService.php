@@ -89,7 +89,8 @@ class GameDataResetService
         'push_tickets',
         'push_notifications',
         'device_push_tokens',
-        // payments
+        // payments (M6-U01: purchase intents → credits, pets, users, families)
+        'challenge_purchase_intents',
         'challenge_credits',
         // M6-W01 / W02 »Želje« (treats → items → credits → purchase_events)
         'pet_treat_events',

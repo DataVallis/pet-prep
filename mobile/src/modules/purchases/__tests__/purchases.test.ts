@@ -1,6 +1,6 @@
 import Purchases from 'react-native-purchases';
 
-import { api } from '@/api/client';
+import { ApiError, api } from '@/api/client';
 import { queryClient } from '@/api/queryClient';
 import { i18n } from '@/i18n';
 import { logout } from '@/modules/session/logout';
@@ -31,12 +31,17 @@ const { makeCustomerInfo, makePurchasesError, PURCHASES_ERROR_CODE } = jest.requ
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, logout: jest.fn(() => Promise.resolve({ message: 'ok' })), getBilling: jest.fn(), activateChallenge: jest.fn() } };
+  return { ...actual, api: { ...actual.api, logout: jest.fn(() => Promise.resolve({ message: 'ok' })), getBilling: jest.fn(), activateChallenge: jest.fn(), createChallengeIntent: jest.fn() } };
 });
 
 const sdk = Purchases as unknown as Record<string, jest.Mock>;
 const getBilling = api.getBilling as jest.Mock;
 const activateChallenge = api.activateChallenge as jest.Mock;
+const createChallengeIntent = api.createChallengeIntent as jest.Mock;
+
+beforeEach(() => {
+  createChallengeIntent.mockResolvedValue({ intent_id: 1, pet_id: 7, expires_at: '2026-10-07T10:30:00+00:00' });
+});
 
 const KEYS = { REVENUECAT_IOS_KEY: 'appl_test', REVENUECAT_ANDROID_KEY: 'goog_test' };
 const OPTS: ConfigureOptions = { platform: 'ios', keys: KEYS, executionEnvironment: 'bare' };
@@ -283,16 +288,58 @@ describe('purchasePackage', () => {
     jest.useFakeTimers();
     sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(['challenge']), transaction: {} });
     getBilling.mockResolvedValue(inactive);
+    // M6-U01: one activation is still tried (idempotent) — the webhook has not arrived: 409.
+    activateChallenge.mockRejectedValueOnce(new ApiError('no credit', 409, { reason: 'no_credit' }));
     const invalidate = jest.spyOn(queryClient, 'invalidateQueries');
 
     const result = purchasePackage(PKG, TARGET);
     await jest.advanceTimersByTimeAsync(60_000);
     await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: false });
-    expect(getBilling).toHaveBeenCalledTimes(5);
+    expect(activateChallenge).toHaveBeenCalledTimes(1);
+    // 5 polls + one refresh after the activation try.
+    expect(getBilling).toHaveBeenCalledTimes(6);
     expect(invalidate).toHaveBeenCalledWith({ queryKey: BILLING_KEY });
     // Nothing keeps polling (the only timer left is TanStack's cache GC of the written list).
     await jest.advanceTimersByTimeAsync(10 * 60_000);
-    expect(getBilling).toHaveBeenCalledTimes(5);
+    expect(getBilling).toHaveBeenCalledTimes(6);
+  });
+
+  it('M6-U01: records the purchase intent for the pet BEFORE the store sheet opens', async () => {
+    jest.useFakeTimers();
+    const order: string[] = [];
+    createChallengeIntent.mockImplementationOnce(async () => {
+      order.push('intent');
+      return { intent_id: 1 };
+    });
+    sdk.purchasePackage.mockImplementationOnce(async () => {
+      order.push('sheet');
+      return { productIdentifier: 'p', customerInfo: makeCustomerInfo(['challenge']), transaction: {} };
+    });
+    getBilling.mockResolvedValue(active());
+
+    const result = purchasePackage(PKG, TARGET);
+    await jest.advanceTimersByTimeAsync(10_000);
+    await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: true });
+    expect(createChallengeIntent).toHaveBeenCalledWith(7);
+    expect(order).toEqual(['intent', 'sheet']);
+  });
+
+  it('M6-U01: a failed intent never opens the store sheet (nothing charged)', async () => {
+    createChallengeIntent.mockRejectedValueOnce(new ApiError('legacy', 422, { reason: 'legacy_profile' }));
+    await expect(purchasePackage(PKG, TARGET)).resolves.toEqual({ status: 'intent_failed' });
+    expect(sdk.purchasePackage).not.toHaveBeenCalled();
+    expect(getBilling).not.toHaveBeenCalled();
+
+    createChallengeIntent.mockRejectedValueOnce(new TypeError('Network request failed'));
+    await expect(purchasePackage(PKG, TARGET)).resolves.toEqual({ status: 'intent_failed' });
+    expect(sdk.purchasePackage).not.toHaveBeenCalled();
+    expect(purchaseOutcomeMessage({ status: 'intent_failed' })).toMatch(/nič ni bilo zaračunano|nothing was charged/);
+  });
+
+  it('M6-U01: no target pet (restore-style purchase) → no intent', async () => {
+    sdk.purchasePackage.mockRejectedValueOnce(makePurchasesError(PURCHASES_ERROR_CODE.PURCHASE_CANCELLED_ERROR));
+    await expect(purchasePackage(PKG)).resolves.toEqual({ status: 'cancelled' });
+    expect(createChallengeIntent).not.toHaveBeenCalled();
   });
 
   it('logout stops the polling', async () => {
@@ -391,7 +438,7 @@ describe('billing', () => {
     expect(readBilling({ credits_available: -2, pets: 'x' })).toEqual({ credits_available: 0, pets: [] });
     expect(readBilling({ credits_available: 1.7, pets: [{ pet_id: 3, plan: 'free', status: 'trial', trial_available: true }, { plan: 'challenge' }] })).toEqual({
       credits_available: 1,
-      pets: [{ pet_id: 3, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false }],
+      pets: [{ pet_id: 3, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false, challenge_started_at: null, upgrade: null }],
     });
   });
 

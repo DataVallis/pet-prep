@@ -379,6 +379,8 @@ class AccountExportService
                 'pet_state' => $pet->pet_state instanceof \BackedEnum ? $pet->pet_state->value : $pet->pet_state,
                 'escalation_level' => (int) $pet->escalation_level,
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
+                // M6-U01: when a purchase upgraded this free pet to the 12-week challenge (null = never).
+                'challenge_started_at' => $this->iso($pet->challenge_started_at),
                 'metrics' => $pet->displayMetrics(),
                 'daily_step_count' => (int) $pet->daily_step_count,
                 // M5-R06-05: the Maine Coon's matted coat (null = not matted).

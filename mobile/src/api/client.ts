@@ -578,6 +578,24 @@ export interface PetPlan {
    * Missing (older server) = `type`.
    */
   display_type?: PetPlanType;
+  /**
+   * M6-U01: when a purchase upgraded this free pet to the challenge — its 12 weeks, score and
+   * certificate count from here; days before are »pred izzivom«. Null / missing for every other
+   * pet (and from an older server).
+   */
+  challenge_started_at?: string | null;
+}
+
+/** M6-U01: why a free pet can't be upgraded to the challenge (server `upgrade.reason`). */
+export type PetUpgradeBlock = 'legacy_profile' | 'pet_not_born' | 'game_over' | 'pet_not_active' | 'free_plan';
+
+/**
+ * M6-U01: can this FREE pet be upgraded to the 12-week challenge (parent dashboard pet /
+ * billing pet)? Null for a challenge pet and from an older server (= no upgrade offered).
+ */
+export interface PetUpgrade {
+  available: boolean;
+  reason: PetUpgradeBlock | null;
 }
 
 /** One pet of `GET /api/parent/billing` (cleaned shape; raw types in schema.ts, read through the readers). */
@@ -591,6 +609,10 @@ export interface BillingPet {
   trial_available: boolean | null;
   /** P5: deleting this pet loses a purchased, unfinished challenge. */
   deletion_loses_purchase: boolean;
+  /** M6-U01: the purchase that upgraded a free pet (its 12 weeks start here); null otherwise. */
+  challenge_started_at: string | null;
+  /** M6-U01: free pets only — can it be upgraded (reason when not); null for a challenge pet / older server. */
+  upgrade: PetUpgrade | null;
 }
 
 /** `GET /api/parent/billing` 200 body (cleaned shape; raw types in schema.ts, read through the readers). */
@@ -1462,6 +1484,16 @@ export const api = {
 
   activateChallenge: (petId: number) =>
     apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
+
+  /**
+   * POST /api/parent/pets/{pet}/challenge/intent (M6-U01, FREE_PET_UPGRADE_SPEC §5.3) — tell the
+   * server which pet the next store purchase is for, right BEFORE the store sheet opens (the
+   * webhook then assigns the purchase to it; a free pet is upgraded). 201 `{intent_id, pet_id,
+   * expires_at}`; 422 `already_paid` / `pet_not_active` / `game_over` / `pet_not_born` /
+   * `legacy_profile` / `free_plan`; 404 `pet_not_found`. Never open the store sheet when it fails.
+   */
+  createChallengeIntent: (petId: number) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/intent`, { method: 'POST' }),
 
   /**
    * GET /api/parent/certificates (M2-01d, parent only) — every finished child challenge of

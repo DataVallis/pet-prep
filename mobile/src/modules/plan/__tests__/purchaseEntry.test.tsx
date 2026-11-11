@@ -21,14 +21,14 @@ import { makeFamilyPet, makeScoredChild } from '@/test-utils/fixtures';
 
 type RawPlan = ReturnType<typeof makeFamilyPet>['plan'];
 
-const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
-const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
-const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge' };
+const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge', challenge_started_at: null };
+const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge', challenge_started_at: null };
+const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge', challenge_started_at: null };
 /** What the server sends for an unborn challenge dog since M3-13: `payment_required`, no end (buy first). */
-const UNBORN_WAITING: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' };
+const UNBORN_WAITING: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge', challenge_started_at: null };
 /** What a pre-M3-13 server sent for an unborn challenge dog: `trial` without an end. */
-const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' };
-const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'free' };
+const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge', challenge_started_at: null };
+const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'free', challenge_started_at: null };
 
 function pet(plan: RawPlan, overrides: Partial<ReturnType<typeof makeFamilyPet>> = {}): FamilyPet {
   return normalizePet(makeFamilyPet({ breed_type: 'border_collie', plan, ...overrides }));
@@ -169,6 +169,8 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     paid_at: null,
     trial_available: true,
     deletion_loses_purchase: false,
+    challenge_started_at: null,
+    upgrade: null,
   });
 
   it('isOfferablePet: never a mutt or a game-over pet', () => {

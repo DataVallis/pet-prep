@@ -28,6 +28,8 @@ export function purchaseOutcomeMessage(outcome: PurchaseOutcome): string {
       return PURCHASE_STRINGS.unavailable;
     case 'store_problem':
       return PURCHASE_STRINGS.storeProblem;
+    case 'intent_failed':
+      return PURCHASE_STRINGS.intentFailed;
   }
 }
 

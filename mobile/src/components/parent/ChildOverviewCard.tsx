@@ -47,6 +47,7 @@ import PlanBadge from '@/components/parent/PlanBadge';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
+import ChallengeUpgradeEntry from '@/components/parent/ChallengeUpgradeEntry';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { playTodayLine } from '@/modules/play/play';
@@ -88,6 +89,8 @@ interface ChildOverviewCardProps {
   onChildPin: (child: FamilyChild) => void;
   /** M3-09: the plan badge of an unpaid challenge opens the paywall (pay any time, QA PR #67 m6). */
   onOpenChallenge?: () => void;
+  /** M6-U01: »Začni 12-tedenski izziv z [ime]« on an upgradeable free pet — opens the paywall for it. */
+  onUpgradeChallenge?: (petId: number) => void;
   /** M5-T12: opens the child's page at »Vpiši sprehod« (the "no pushes today" hint). */
   onLogWalk?: (child: FamilyChild) => void;
 }
@@ -109,7 +112,7 @@ function WeekBars({ days }: { days: DayRow[] }) {
   );
 }
 
-export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge, onLogWalk }: ChildOverviewCardProps) {
+export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge, onUpgradeChallenge, onLogWalk }: ChildOverviewCardProps) {
   const id = child.id;
   const status = pet ? petStatus(pet) : null;
   /** Mood label (David 2026-11-05): only while no lock / payment status line is shown. */
@@ -163,6 +166,10 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
       {/* M5-F01: the badge alone was overlooked on a device — a clear entry until the challenge is paid. */}
       {onOpenChallenge && canBuyChallenge(pet) && (
         <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={species} testID={`child-buy-${id}`} />
+      )}
+      {/* M6-U01: a free pet can become the 12-week challenge with the same pet (legacy: an honest note, D3). */}
+      {onUpgradeChallenge && (
+        <ChallengeUpgradeEntry pet={pet} childName={child.name} onUpgrade={onUpgradeChallenge} testID={`child-upgrade-${id}`} />
       )}
 
       {/* M2-01d: the challenge ended — create / open the certificate, or the report. */}

@@ -36,8 +36,10 @@
         "age": "Starost",
         "origin": "Od kod je",
         "nextStage": "Naslednja faza",
-        "meals": "Obroki na dan"
-      }
+        "meals": "Obroki na dan",
+        "challenge": "Izziv"
+      },
+      "challengeWeek": "Teden {{week}} od {{total}}"
     },
     "settingsSheet": {
       "open": "Nastavitve",
@@ -67,7 +69,8 @@
       "low_energy": "Utrujen",
       "sick": "Bolan"
     },
-    "challengeWeek": "TEDEN {{week}} OD {{total}}"
+    "challengeWeek": "TEDEN {{week}} OD {{total}}",
+    "challengeStarted": "Izziv se je začel! Teden {{week}} od {{total}}"
   },
   "ws": {
     "live": "V ŽIVO",

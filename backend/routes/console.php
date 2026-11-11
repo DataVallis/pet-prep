@@ -208,6 +208,16 @@ Schedule::command('system-health:disk-check')
     ->name('disk-space-check')
     ->description('Discord alert once per day when the root disk is ≥ 80 % full');
 
+// Every 5 min (M6-U01, FREE_PET_UPGRADE_SPEC §5.3 safety net): a 12-week challenge purchase
+// still unassigned 10 min after the webhook, in a family with a pet waiting for payment or a
+// purchase intent → ONE Discord `unassigned_challenge_credit` alert per purchase (ids only).
+// A few small queries; 10 min covers any run.
+Schedule::command('billing:unassigned-credits-check')
+    ->cron('4-59/5 * * * *')
+    ->withoutOverlapping(10)
+    ->name('unassigned-credits-check')
+    ->description('Discord alert once per challenge purchase left unassigned > 10 min while the family waits for it');
+
 // Every minute (DEPLOYMENT.md D34, incident 2026-11-04: a stale overlap lock stopped the game
 // loop for ~9 h and nothing alerted): its OWN event, never part of the tick it watches. The
 // `pets:process-decay` heartbeat older than system_health.heartbeat_stale_minutes (5) → ONE

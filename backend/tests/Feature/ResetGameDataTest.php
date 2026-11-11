@@ -182,9 +182,14 @@ function rgSeed(): array
         'event_id' => 'evt-'.Str::random(8), 'type' => 'NON_RENEWING_PURCHASE', 'payload' => json_encode(['x' => 1]),
         'family_id' => $family->id,
     ]);
-    rgInsert('challenge_credits', [
+    $creditId = rgInsert('challenge_credits', [
         'family_id' => $family->id, 'purchase_event_id' => $purchaseId, 'product_id' => 'petprep_challenge_12w', 'purchased_at' => $now,
         'pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => 'parent',
+    ]);
+    // M6-U01: a consumed purchase intent goes with the game data.
+    rgInsert('challenge_purchase_intents', [
+        'family_id' => $family->id, 'parent_user_id' => $parent->id, 'pet_id' => $pet->id, 'expires_at' => $now,
+        'consumed_at' => $now, 'consumed_by' => 'webhook', 'challenge_credit_id' => $creditId,
     ]);
     // M6-W01 / W02 »Želje«: a wish, a wish credit, an item and a treat go with the game data.
     rgInsert('pet_wishes', ['pet_id' => $pet->id, 'child_user_id' => $child->id, 'item_key' => 'bed', 'status' => 'open']);

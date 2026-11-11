@@ -55,6 +55,8 @@ import { noPushesHintDue } from '@/modules/steps/adaptedPushHint';
 import CareRemindersCard, { reminderDate } from '@/components/parent/CareRemindersCard';
 import { careReminderTitle } from '@/modules/careTasks/careTasks';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
+import { challengeStartedAt } from '@/modules/plan/plan';
+import ChallengeUpgradeEntry from '@/components/parent/ChallengeUpgradeEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
 import PetNameRow from '@/components/parent/PetNameRow';
@@ -125,6 +127,8 @@ interface ChildDetailScreenProps {
   onBack: () => void;
   /** M5-F01: opens the challenge paywall; the button shows only while `canBuyChallenge(pet)`. */
   onOpenChallenge?: () => void;
+  /** M6-U01: »Začni 12-tedenski izziv z [ime]« on an upgradeable free pet (opens the paywall for it). */
+  onUpgradeChallenge?: (petId: number) => void;
   /**
    * M5-T12 (David 2026-10-26): opened from »Vpiši sprehod« (Nadzor / dashboard hint) — scroll to
    * the log-walk card once it is laid out.
@@ -149,7 +153,28 @@ export function dayPlayText(day: Pick<DayRow, 'play_sessions' | 'play_goal'>): s
   return S.playDay(day.play_sessions ?? 0, day.play_goal);
 }
 
-function Timeline({ petId, family, species, zone }: { petId: number; family: FamilyOverview; species: string | null; zone: string }) {
+/** M6-U01: an activity before the purchase that upgraded the free pet (»pred izzivom«). */
+export function isPreChallenge(createdAt: string | null, startedAt: string | null): boolean {
+  if (createdAt === null || startedAt === null) return false;
+  const at = Date.parse(createdAt);
+  const start = Date.parse(startedAt);
+  return !Number.isNaN(at) && !Number.isNaN(start) && at < start;
+}
+
+function Timeline({
+  petId,
+  family,
+  species,
+  zone,
+  startedAt = null,
+}: {
+  petId: number;
+  family: FamilyOverview;
+  species: string | null;
+  zone: string;
+  /** M6-U01: the upgrade purchase — older items read »pred izzivom«. */
+  startedAt?: string | null;
+}) {
   const activities = usePetActivities(petId);
   const items = (activities.data?.pages ?? []).flatMap((page) => readTimeline(page.data));
   // M5-F13: during a deploy wait (spinner) instead of an error; it loads once the server is back.
@@ -184,7 +209,10 @@ function Timeline({ petId, family, species, zone }: { petId: number; family: Fam
               <Text style={styles.timelineText}>
                 {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value }, species)}
               </Text>
-              <Text style={styles.muted}>{activityWhenText(item.created_at, zone, today)}</Text>
+              <Text style={styles.muted}>
+                {activityWhenText(item.created_at, zone, today)}
+                {isPreChallenge(item.created_at, startedAt) ? ` · ${t('paywall:history.preChallenge')}` : ''}
+              </Text>
             </View>
           );
         })
@@ -208,7 +236,7 @@ function Timeline({ petId, family, species, zone }: { petId: number; family: Fam
   );
 }
 
-export default function ChildDetailScreen({ child, family, onBack, onOpenChallenge, focusLogWalk = false }: ChildDetailScreenProps) {
+export default function ChildDetailScreen({ child, family, onBack, onOpenChallenge, onUpgradeChallenge, focusLogWalk = false }: ChildDetailScreenProps) {
   const [days, setDays] = useState<ReportDays>(7);
   const report = useChildReport(child.id, days);
   const data = report.data;
@@ -311,6 +339,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           {onOpenChallenge && canBuyChallenge(pet) && (
             <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={pet?.species ?? null} testID="detail-buy-challenge" />
           )}
+          {onUpgradeChallenge && <ChallengeUpgradeEntry pet={pet} childName={child.name} onUpgrade={onUpgradeChallenge} testID="detail-upgrade-challenge" />}
           {pet !== null && media !== null && (
             <PetMediaView
               media={media}
@@ -538,6 +567,12 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                 {[...data.daily].reverse().map((d) => (
                   <View key={d.date} style={styles.dayRow} testID={`report-day-${d.date}`}>
                     <Text style={styles.dayLabel}>{dayLabel(d.date)}</Text>
+                    {/* M6-U01: before the purchase that upgraded the free pet — shown, not scored. */}
+                    {d.pre_challenge === true && (
+                      <Text style={styles.muted} testID={`report-day-pre-${d.date}`}>
+                        {t('paywall:history.preChallenge')}
+                      </Text>
+                    )}
                     <Text style={[styles.strong, styles.dayCount]}>
                       {d.expected === 0 ? S.noRoutines : `${d.done}/${d.expected}`}
                     </Text>
@@ -587,7 +622,9 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             </>
           )}
 
-          {petId !== null && <Timeline petId={petId} family={family} species={species} zone={petZone} />}
+          {petId !== null && (
+            <Timeline petId={petId} family={family} species={species} zone={petZone} startedAt={pet ? challengeStartedAt(pet.plan) : null} />
+          )}
         </ScrollView>
       </View>
 

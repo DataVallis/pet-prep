@@ -2290,7 +2290,11 @@ sequenceDiagram
     API->>API: SANDBOX and not accepted → sandbox_ignored · other product → unknown_product
     API->>DB: lock families row
     API->>DB: INSERT challenge_credits (one per purchase event)
-    alt family has exactly ONE active unpaid challenge pet
+    alt M6-U01: intent of the buying parent current at purchased_at, pet eligible, and NOT (free pet while exactly one pet is payment_required)
+      API->>DB: consume intent (webhook) → lock pet → credit.pet_id, assigned_via=intent → pet paid (a free pet is upgraded first)
+    else intent for a free pet but the family's only pet waits behind the payment lock (QA #978 b)
+      API->>DB: consume intent; old rule → that pet paid (assigned_via=webhook); after commit Discord alert intent_overridden
+    else no usable intent (every older app): family has exactly ONE active unpaid challenge pet
       API->>DB: lock pet → credit.pet_id, assigned_via=webhook → pet paid (purchase), payment lock lifted
     end
     API->>DB: purchase_events.outcome = granted
@@ -2314,7 +2318,9 @@ Challenge status of a pet (M3-11; **M3-13, David 2026-10-08: no free trial** —
 ```mermaid
 stateDiagram-v2
     [*] --> UnbornUnpaid: PIN with plan challenge (status payment_required — buy first, lock reason stays contract_required)
-    UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook auto-assign · held credit at the contract when it is the only unpaid pet)
+    UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook intent / auto-assign · held credit at the contract when it is the only unpaid pet)
+    FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays
+    Paid --> FreeBorn: refund of an upgraded free pet (or a mutt) → free plan, challenge_started_at cleared
     UnbornUnpaid --> Locked: contract signed = birth, trial_ends_at = born_at, lockAtBirth (payment_locked_at = birth, status period from birth, push parents + child, one PetUpdated signed_contract)
     Locked --> Paid: credit assigned → lock lifted, applyThaw, the 12 weeks start now (lock time is not program time)
     LegacyTrial --> Paid: credit assigned
@@ -2331,12 +2337,42 @@ Credit lifecycle:
 ```mermaid
 stateDiagram-v2
     [*] --> Available: INITIAL_PURCHASE / NON_RENEWING_PURCHASE of the consumable
-    Available --> Assigned: activate (oldest first) · webhook auto-assign (exactly one unpaid pet) · at birth (M3-13, assigned_via birth: the born pet is the only unpaid one)
+    Available --> Assigned: activate (oldest first; M6-U01 also upgrades a free pet) · webhook with the parent's intent (M6-U01, assigned_via intent) · webhook auto-assign without intent (exactly one unpaid challenge pet) · at birth (M3-13, assigned_via birth: the born pet is the only unpaid one)
+    Available --> Available: still unassigned 10 min after the webhook in a family waiting for it → one Discord alert (M6-U01 safety net)
     Available --> Available: TRANSFER → moves to the receiver family
     Assigned --> Assigned: TRANSFER (recorded, stays with its pet) · pet deleted (pet_id null, still used — P5: deletion of a paid, unfinished pet needs acknowledge_paid_challenge)
     Available --> Revoked: refund (CANCELLATION without expiration / REFUND, matched by transaction_id)
     Assigned --> Revoked: refund → pet Locked (a pre-M3-13 pet inside its old trial → LegacyTrial)
     Revoked --> [*]
+```
+
+Purchase intent → store → webhook → activate (M6-U01, FREE_PET_UPGRADE_SPEC §5.3, David »da« 2026-11-10 — new app builds; older builds skip the intent and keep the old flow above):
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant P as Parent app (new build)
+    participant A as API
+    participant S as Store (RevenueCat SDK)
+    participant RC as RevenueCat
+    participant DB as PostgreSQL
+    P->>A: POST /api/parent/pets/X/challenge/intent
+    alt pet eligible (unpaid challenge pet or upgradeable free pet)
+      A->>DB: lock family → pet; supersede the parent's open intents; INSERT intent (expires +30 min)
+      A-->>P: 201 {intent_id, pet_id, expires_at}
+    else refused / offline
+      A-->>P: 422 reason / network error
+      P-->>P: intent_failed — store sheet NOT opened, nothing charged
+    end
+    P->>S: purchasePackage(petprep_challenge_12w)
+    S->>RC: purchase
+    RC->>A: POST /api/webhooks/revenuecat (app_user_id = parent id) — maybe late
+    A->>DB: credit; intent valid at purchased_at → consume, assign to pet X (free pet: upgrade, challenge_started_at = now)
+    A-)P: PetUpdated('challenge_paid')
+    P->>A: poll GET /api/parent/billing (5 × 2 s)
+    P->>A: POST …/X/challenge/activate if X not paid yet (idempotent: already_active / 409 no_credit)
+    Note over P,A: Next launch: credits_available > 0 and a pet that can take it → »Imate neporabljen nakup — izberite ljubljenčka«
+    Note over A: Every 5 min: credit unassigned > 10 min in a waiting family → one Discord alert (billing:unassigned-credits-check)
 ```
 
 ## 14. Responsibility Certificate: challenge end → push → parent generates the PDF (M2-01d, David 2026-10-12)

@@ -15,6 +15,11 @@
  * - M5-R06-09: species-aware copy. A pet's own lines ("not born yet", "paused", "doesn't need a
  *   challenge") follow its species; the screen-level copy follows the pets it is about
  *   (`petGroup`: only dogs = the dog text, only cats = "cat" / "muca", both = neutral "pet").
+ * - M6-U01 (FREE_PET_UPGRADE_SPEC §4, David 2026-11-10): opened for one FREE pet (`focusPetId`,
+ *   from »Začni 12-tedenski izziv z [ime]«) it explains the upgrade — what stays (the same pet),
+ *   what is added, that it starts at once, price + no subscription — and lists only that pet.
+ *   With an unused purchase the list also offers every upgradeable free pet (»Uporabi kupljen
+ *   izziv«). The purchase records the intent for the pet first (no intent, no store sheet).
  */
 
 import { petZoneOf } from '@/modules/familyZone/familyZone';
@@ -32,7 +37,7 @@ import { strings } from '@/i18n/strings';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { privacyUrl, termsUrl } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
-import { challengePets, isBillingPetPurchasable } from '@/modules/plan/purchaseEntry';
+import { canUpgradePet, challengePets, isBillingPetPurchasable, isBillingPetUpgradeable } from '@/modules/plan/purchaseEntry';
 import { petGroup } from '@/modules/species/species';
 import {
   BILLING_KEY,
@@ -59,22 +64,25 @@ const RESULT = strings('paywall', 'result');
 
 
 type Message =
-  | { kind: 'purchase'; outcome: PurchaseOutcome }
+  /** `upgrade` (M6-U01): the purchase was for a free pet — "the challenge has started". */
+  | { kind: 'purchase'; outcome: PurchaseOutcome; upgrade?: boolean }
   | { kind: 'restore'; outcome: RestoreOutcome; activated: boolean | null }
-  | { kind: 'activate'; result: 'unlocked' | 'noCredit' | 'refused' | 'failed'; species: string | null };
+  | { kind: 'activate'; result: 'unlocked' | 'noCredit' | 'refused' | 'failed'; species: string | null; upgrade?: boolean };
 
 /** `group` = the pets the screen is about (restore); an activation names its own pet's species. */
 function messageText(m: Message, group: PetGroup): string {
   switch (m.kind) {
     case 'purchase':
-      return m.outcome.status === 'success' && m.outcome.serverConfirmed ? RESULT.unlocked : purchaseOutcomeMessage(m.outcome);
+      return m.outcome.status === 'success' && m.outcome.serverConfirmed ? (m.upgrade ? RESULT.upgraded : RESULT.unlocked) : purchaseOutcomeMessage(m.outcome);
     case 'restore':
       if (m.outcome.status === 'restored' && m.activated === true) return RESULT.restoredUnlocked;
       if (m.outcome.status === 'restored' && m.activated === false) return tPets('paywall:result.restoredNoCredit', group);
       return restoreOutcomeMessage(m.outcome);
     case 'activate':
       return m.result === 'unlocked'
-        ? RESULT.unlocked
+        ? m.upgrade
+          ? RESULT.upgraded
+          : RESULT.unlocked
         : m.result === 'noCredit'
           ? RESULT.noCredit
           : m.result === 'refused'
@@ -113,9 +121,11 @@ export function formatTrialEnd(iso: string, timeZone: string): string {
 interface ChallengeScreenProps {
   family: FamilyOverview | null;
   onBack: () => void;
+  /** M6-U01: opened for this pet (a free pet → the upgrade copy, only this pet listed). */
+  focusPetId?: number;
 }
 
-export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps) {
+export default function ChallengeScreen({ family, onBack, focusPetId }: ChallengeScreenProps) {
   useTranslation(); // all text below is read at render
   const S = CHALLENGE_STRINGS;
   const queryClient = useQueryClient();
@@ -139,9 +149,17 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   const pkg = challengePackage(offerings.data);
   const price = pkg?.product.priceString ?? null;
   const busy = purchase.isPending || restore.isPending || activating !== null;
-  // M5-F01 QA: one shared rule with the buy buttons — a mutt / game-over pet is never listed.
-  const waiting = (billing.data?.pets ?? []).filter((p) => isBillingPetPurchasable(p, family));
   const credits = billing.data?.credits_available ?? 0;
+  // M6-U01: opened from a free pet's »Začni 12-tedenski izziv« → the upgrade of that one pet.
+  const upgradePet = focusPetId !== undefined ? (family?.pets.find((p) => p.id === focusPetId && canUpgradePet(p)) ?? null) : null;
+  // M5-F01 QA: one shared rule with the buy buttons — a game-over pet / a free pet the server
+  // does not allow to upgrade is never listed. Upgradeable free pets: the focused one, or all
+  // of them while an unused purchase waits for a pet (M6-U01).
+  const waiting = (billing.data?.pets ?? []).filter((p) =>
+    upgradePet !== null
+      ? p.pet_id === upgradePet.id && isBillingPetUpgradeable(p, family)
+      : isBillingPetPurchasable(p, family) || (credits > 0 && isBillingPetUpgradeable(p, family)),
+  );
   const timezone = family?.timezone ?? 'Europe/Ljubljana';
   // M5-R06-09: the pets this screen talks about — the waiting ones, else the family's
   // challenge pets, else every pet (no cat → exactly the dog texts).
@@ -157,9 +175,10 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   const activate = async (petId: number): Promise<Message> => {
     setActivating(petId);
     const species = family?.pets.find((p) => p.id === petId)?.species ?? null;
+    const upgrade = billing.data?.pets.find((p) => p.pet_id === petId)?.plan === 'free';
     try {
       await api.activateChallenge(petId);
-      return { kind: 'activate', result: 'unlocked', species };
+      return { kind: 'activate', result: 'unlocked', species, upgrade };
     } catch (error) {
       if (error instanceof ApiError && error.status === 409) return { kind: 'activate', result: 'noCredit', species };
       if (error instanceof ApiError && error.status === 422) return { kind: 'activate', result: 'refused', species };
@@ -173,11 +192,12 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   const buy = (petId: number) => {
     if (!pkg || busy) return;
     setMessage(null);
+    const upgrade = billing.data?.pets.find((p) => p.pet_id === petId)?.plan === 'free';
     purchase.mutate(
       { pkg, target: { petId, baselineCredits: credits } },
       {
         onSuccess: (outcome) => {
-          setMessage({ kind: 'purchase', outcome });
+          setMessage({ kind: 'purchase', outcome, upgrade });
           refresh();
         },
       },
@@ -209,19 +229,42 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.intro}>{tPets('paywall:challenge.intro', group)}</Text>
+        {upgradePet !== null ? (
+          // M6-U01 (§4): the upgrade of one free pet — same pet, what is added, starts now, price.
+          <Card testID="challenge-upgrade">
+            <Text style={styles.sectionTitle}>{t('paywall:upgrade.title')}</Text>
+            {(
+              [
+                ['stays', upgradePet.name ? t('paywall:upgrade.stays', { name: upgradePet.name }) : t('paywall:upgrade.staysNoName')],
+                ['adds', t('paywall:upgrade.adds')],
+                ['starts', t('paywall:upgrade.starts')],
+              ] as const
+            ).map(([key, text]) => (
+              <View key={key} style={styles.includeRow}>
+                <Check color={C.accent} size={16} />
+                <Text style={styles.body}>{text}</Text>
+              </View>
+            ))}
+            <Text style={styles.honest}>{price ? t('paywall:upgrade.price', { price }) : t('paywall:upgrade.priceNoPrice')}</Text>
+            <Text style={styles.muted}>{S.priceEstimate}</Text>
+          </Card>
+        ) : (
+          <Text style={styles.intro}>{tPets('paywall:challenge.intro', group)}</Text>
+        )}
 
-        <Card>
-          <Text style={styles.sectionTitle}>{S.includesTitle}</Text>
-          {(['program', 'breed', 'certificate', 'history', 'media'] as const).map((key) => (
-            <View key={key} style={styles.includeRow}>
-              <Check color={C.accent} size={16} />
-              <Text style={styles.body}>{key === 'media' ? tPets('paywall:challenge.includes.media', group) : S.includes[key]}</Text>
-            </View>
-          ))}
-          <Text style={styles.honest}>{price ? tPets('paywall:challenge.honest', group, { price }) : tPets('paywall:challenge.honestNoPrice', group)}</Text>
-          <Text style={styles.muted}>{S.priceEstimate}</Text>
-        </Card>
+        {upgradePet === null && (
+          <Card>
+            <Text style={styles.sectionTitle}>{S.includesTitle}</Text>
+            {(['program', 'breed', 'certificate', 'history', 'media'] as const).map((key) => (
+              <View key={key} style={styles.includeRow}>
+                <Check color={C.accent} size={16} />
+                <Text style={styles.body}>{key === 'media' ? tPets('paywall:challenge.includes.media', group) : S.includes[key]}</Text>
+              </View>
+            ))}
+            <Text style={styles.honest}>{price ? tPets('paywall:challenge.honest', group, { price }) : tPets('paywall:challenge.honestNoPrice', group)}</Text>
+            <Text style={styles.muted}>{S.priceEstimate}</Text>
+          </Card>
+        )}
 
         {message && (
           <View style={[styles.message, isGoodMessage(message) ? styles.messageOk : styles.messageWarn]} testID="challenge-message">
@@ -256,17 +299,21 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
               // With the server's kill switch off (status `trial`) nothing waits, so no "buy first" copy.
               const unborn = familyPet?.born_at === null && pet.status === 'payment_required';
               const paused = pet.status === 'payment_required' && familyPet?.born_at !== null;
+              // M6-U01: a free pet is upgraded — the challenge starts at the purchase.
+              const upgrade = pet.plan === 'free';
               return (
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
                   <Text style={styles.petTitle}>{S.petLine(familyPet ? petLabel(familyPet) : breedLabel('unknown', null), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
-                    {unborn
-                      ? tSpecies('paywall:challenge.unborn', familyPet?.species)
-                      : paused
-                        ? tSpecies('paywall:challenge.paused', familyPet?.species)
-                        : pet.trial_ends_at
-                          ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, petZoneOf(familyPet, timezone) ?? timezone))
-                          : S.notBought}
+                    {upgrade
+                      ? t('paywall:upgrade.petLine')
+                      : unborn
+                        ? tSpecies('paywall:challenge.unborn', familyPet?.species)
+                        : paused
+                          ? tSpecies('paywall:challenge.paused', familyPet?.species)
+                          : pet.trial_ends_at
+                            ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, petZoneOf(familyPet, timezone) ?? timezone))
+                            : S.notBought}
                   </Text>
                   {credits > 0 ? (
                     <Pressable

@@ -161,7 +161,7 @@ class RevenueCatWebhookService
                 'store' => self::stringOrNull($event['store'] ?? null),
                 'environment' => self::environment($event),
                 'transaction_id' => self::stringOrNull($event['transaction_id'] ?? null),
-            ], self::msToCarbon($event['purchased_at_ms'] ?? null) ?? now());
+            ], self::msToCarbon($event['purchased_at_ms'] ?? null) ?? now(), self::userIds($this->candidateIds($event)));
 
             return [PurchaseEventOutcome::Granted, $family->id];
         }
@@ -299,6 +299,18 @@ class RevenueCatWebhookService
         }
 
         return null;
+    }
+
+    /**
+     * M6-U01: the plain user ids among the event's ids — whose purchase intent
+     * (ChallengeCreditService::create) may name the pet. Same id rule as familyFor().
+     *
+     * @param  list<string>  $ids
+     * @return list<int>
+     */
+    private static function userIds(array $ids): array
+    {
+        return array_values(array_map('intval', array_filter($ids, fn (string $id): bool => preg_match('/^[1-9][0-9]{0,17}$/', $id) === 1)));
     }
 
     /**

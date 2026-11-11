@@ -293,6 +293,14 @@ class FamilyDashboardService
                     'pet_state' => $pet->pet_state->value,
                     // M3-11: plan + payment status (paywall per pet).
                     'plan' => PetPlanPayload::for($pet, $pet->effectiveTimezone())->toArray(),
+                    /**
+                     * M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
+                     * (`reason` when not: `legacy_profile` → the app explains, D3)? Null for a
+                     * challenge pet. Parent dashboard only (never in the child state).
+                     *
+                     * @var array{available: bool, reason: 'legacy_profile'|'pet_not_born'|'game_over'|'pet_not_active'|'free_plan'|null}|null
+                     */
+                    'upgrade' => ChallengeCreditService::upgradePayload($pet),
                     // M5-R01: origin, age, life stage and today's rules (meals by
                     // child / by parent in quiet hours, step goal).
                     'profile' => $profile->toArray(),

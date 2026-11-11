@@ -8,7 +8,8 @@
     "network": "No connection to the store. Check your internet and try again.",
     "storeProblem": "The store couldn't complete the purchase. Please try again later.",
     "notAllowed": "Purchases are not allowed on this device. Check the device's purchase settings.",
-    "unavailable": "Purchases aren't available in this version of the app."
+    "unavailable": "Purchases aren't available in this version of the app.",
+    "intentFailed": "The purchase couldn't be prepared, so the store was not opened and nothing was charged. Check your connection and try again."
   },
   "restore": {
     "restored": "Your purchases have been restored.",

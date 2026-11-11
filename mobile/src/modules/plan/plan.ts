@@ -11,12 +11,27 @@
  *   never says "trial" any more.
  * - A payload without `plan` (server before M3-11) reads as challenge / paid: nothing locked.
  * - `display_type` (M5-F02): what the parent sees — `free` for a grandfathered mutt too.
+ * - `challenge_started_at` (M6-U01): a free pet upgraded by a purchase — its 12 weeks start
+ *   there; set only when the server sends one (absent = not upgraded / older server).
  */
 
-import type { BillingPet, ChallengeStatus, PetPlan, PetPlanType } from '@/api/client';
+import type { BillingPet, ChallengeStatus, PetPlan, PetPlanType, PetUpgrade, PetUpgradeBlock } from '@/api/client';
 import { t } from '@/i18n';
 
-export type { ChallengeStatus, PetPlan, PetPlanType };
+export type { ChallengeStatus, PetPlan, PetPlanType, PetUpgrade, PetUpgradeBlock };
+
+const UPGRADE_BLOCKS: readonly PetUpgradeBlock[] = ['legacy_profile', 'pet_not_born', 'game_over', 'pet_not_active', 'free_plan'];
+
+/**
+ * M6-U01: the server's `upgrade` of a free pet (dashboard pet / billing pet) → typed. Anything
+ * else (a challenge pet, an older server, a malformed value) → null = no upgrade offered.
+ */
+export function readPetUpgrade(raw: unknown): PetUpgrade | null {
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null;
+  const o = raw as Record<string, unknown>;
+  if (typeof o.available !== 'boolean') return null;
+  return { available: o.available, reason: UPGRADE_BLOCKS.find((r) => r === o.reason) ?? null };
+}
 
 /** What an older server (no `plan`) means: a paid challenge — nobody gets locked by an old payload. */
 export const LEGACY_PLAN: PetPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: null };
@@ -49,18 +64,32 @@ export function readPetPlan(raw: unknown): PetPlan {
   if (type === 'challenge' && o.payments_enforced === false && o.status !== 'paid') {
     return { type, status: 'trial', trial_ends_at: null, paid_at: null, display_type };
   }
+  const challengeStartedAt = type === 'free' ? null : strOrNull(o.challenge_started_at);
   return {
     type,
     status: type === 'free' ? null : readStatus(o.status),
     trial_ends_at: type === 'free' ? null : strOrNull(o.trial_ends_at),
     paid_at: type === 'free' ? null : strOrNull(o.paid_at),
     display_type,
+    // M6-U01: only an upgraded pet carries the key (every other plan stays exactly as before).
+    ...(challengeStartedAt !== null ? { challenge_started_at: challengeStartedAt } : {}),
   };
+}
+
+/** M6-U01: when a purchase upgraded this (former free) pet to the challenge; null otherwise. */
+export function challengeStartedAt(plan: PetPlan): string | null {
+  return plan.type === 'challenge' ? (plan.challenge_started_at ?? null) : null;
 }
 
 /** One `GET /api/parent/billing` pet as a {@link PetPlan}. */
 export function planOfBillingPet(pet: BillingPet): PetPlan {
-  return { type: pet.plan, status: pet.status, trial_ends_at: pet.trial_ends_at, paid_at: pet.paid_at };
+  return {
+    type: pet.plan,
+    status: pet.status,
+    trial_ends_at: pet.trial_ends_at,
+    paid_at: pet.paid_at,
+    ...(pet.challenge_started_at ? { challenge_started_at: pet.challenge_started_at } : {}),
+  };
 }
 
 export function isFreePlan(plan: PetPlan): boolean {

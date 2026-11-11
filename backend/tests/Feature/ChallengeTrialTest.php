@@ -185,7 +185,7 @@ describe('status derivation and the trial clock', function () {
             ->and($locked->frozen_at)->not->toBeNull()
             ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', PetStatusPeriodKind::PaymentLock->value)->whereNull('ended_at')->exists())->toBeTrue();
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'payment_required'
-            && $e->payload['plan'] === ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T10:00:00+00:00', 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'challenge']);
+            && $e->payload['plan'] === ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T10:00:00+00:00', 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'challenge', 'challenge_started_at' => null]);
 
         // Child: state shows the lock, actions are 423 payment_required.
         app('auth')->forgetGuards();
@@ -193,7 +193,7 @@ describe('status derivation and the trial clock', function () {
         getJson('/api/child/pet')->assertOk()
             ->assertJsonPath('lock.reason', 'payment_required')
             ->assertJsonPath('lock.until', null)
-            ->assertJsonPath('pet.plan', ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'challenge']);
+            ->assertJsonPath('pet.plan', ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'challenge', 'challenge_started_at' => null]);
         postJson('/api/child/pet/water')->assertStatus(423)->assertJsonPath('reason', 'payment_required');
 
         // Parent buys + activates → paid, unlocked, period closed.
@@ -401,15 +401,15 @@ describe('credits: purchase, auto-assign, activate', function () {
             'credits_available' => 1,
             'payments_enforced' => true,
             'pets' => [
-                ['pet_id' => $a->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
-                ['pet_id' => $b->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
+                ['pet_id' => $a->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false, 'challenge_started_at' => null, 'upgrade' => null],
+                ['pet_id' => $b->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false, 'challenge_started_at' => null, 'upgrade' => null],
             ],
         ]);
 
         // Pet A paid by the parent → the next purchase auto-assigns to B.
         ctActivate($parent, $a)->assertOk()->assertExactJson([
             'status' => 'activated', 'pet_id' => $a->id, 'credits_available' => 0,
-            'plan' => ['type' => 'challenge', 'status' => 'paid', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => '2026-10-07T12:00:00+02:00', 'payments_enforced' => true, 'display_type' => 'challenge'],
+            'plan' => ['type' => 'challenge', 'status' => 'paid', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => '2026-10-07T12:00:00+02:00', 'payments_enforced' => true, 'display_type' => 'challenge', 'challenge_started_at' => null],
         ]);
         expect($credit->fresh())->pet_id->toBe($a->id)->assigned_via->toBe('parent');
 
@@ -435,7 +435,7 @@ describe('credits: purchase, auto-assign, activate', function () {
         ctActivate($parent, $c)->assertStatus(409)->assertJsonPath('reason', 'no_credit');
 
         $free = disableHygieneEvents(Pet::factory()->freePlan()->create(['user_id' => User::factory()->child()->create(['parent_id' => $parent->id])->id]));
-        ctActivate($parent, $free)->assertStatus(422)->assertJsonPath('reason', 'free_plan');
+        ctActivate($parent, $free)->assertStatus(422)->assertJsonPath('reason', 'legacy_profile'); // M6-U01: a pre-M5 free pet is never upgraded (K5)
         $old = disableHygieneEvents(Pet::factory()->create(['user_id' => User::factory()->child()->create(['parent_id' => $parent->id])->id]));
         ctActivate($parent, $old)->assertStatus(422)->assertJsonPath('reason', 'already_paid');
     });
@@ -588,7 +588,7 @@ describe('free plan rules', function () {
         getJson('/api/parent/dashboard')->assertOk()
             ->assertJsonCount(1, 'recent_activities')
             ->assertJsonCount(1, 'family.pets.0.timeline')
-            ->assertJsonPath('family.pets.0.plan', ['type' => 'free', 'status' => null, 'trial_ends_at' => null, 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'free'])
+            ->assertJsonPath('family.pets.0.plan', ['type' => 'free', 'status' => null, 'trial_ends_at' => null, 'paid_at' => null, 'payments_enforced' => true, 'display_type' => 'free', 'challenge_started_at' => null])
             ->assertJsonPath('pet.plan.type', 'free')
             // No 12-week program on the free plan.
             ->assertJsonPath('family.children.0.progress', null);

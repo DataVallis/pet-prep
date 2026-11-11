@@ -360,6 +360,8 @@ class Pet extends Model
             'payment_locked_at' => 'datetime',
             'trial_reminder_sent_at' => 'datetime',
             'converted_to_free_at' => 'datetime',
+            // M6-U01: the purchase that upgraded a free pet — the challenge clock starts here.
+            'challenge_started_at' => 'datetime',
             'happy_until' => 'datetime',
             'coat_matted_at' => 'datetime',
             'grooming_weeks_checked' => 'integer',
@@ -833,7 +835,29 @@ class Pet extends Model
             return 0;
         }
 
-        return intdiv($this->programSecondsAt(now()), 7 * 86400);
+        return intdiv($this->challengeSecondsAt(now()), 7 * 86400);
+    }
+
+    /**
+     * Program seconds of the 12-week CHALLENGE at $at (M6-U01, FREE_PET_UPGRADE_SPEC
+     * §5.1): for a free pet upgraded by a purchase (`challenge_started_at`) the
+     * challenge clock is separate from the birth — program time since the purchase
+     * (payment-lock time still excluded, M3-11b); for every other pet it is the
+     * program time since the birth (unchanged). Drives `virtual_age_months`,
+     * hasReachedSimulationEnd() (refund guard, deletion warning, `certificate_eligible`).
+     * The dog's age and life stage never use it (they stay on programBirthAt()).
+     */
+    public function challengeSecondsAt(CarbonInterface $at): int
+    {
+        $seconds = $this->programSecondsAt($at);
+        if ($this->challenge_started_at === null) {
+            return $seconds;
+        }
+        if ($at->lessThan($this->challenge_started_at)) {
+            return 0;
+        }
+
+        return max(0, $seconds - $this->programSecondsAt($this->challenge_started_at));
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -1030,6 +1054,49 @@ class Pet extends Model
     public function isFreePlan(): bool
     {
         return $this->plan === PetPlan::Free;
+    }
+
+    /** Refusal codes of a free pet that cannot be upgraded to the challenge (M6-U01). */
+    public const UPGRADE_LEGACY_PROFILE = 'legacy_profile';
+
+    public const UPGRADE_NOT_BORN = 'pet_not_born';
+
+    public const UPGRADE_GAME_OVER = 'game_over';
+
+    public const UPGRADE_NOT_ACTIVE = 'pet_not_active';
+
+    /** A free pet of a paid breed (old data) — not a free breed, nothing to upgrade. */
+    public const UPGRADE_NOT_FREE_BREED = 'free_plan';
+
+    /**
+     * M6-U01 (FREE_PET_UPGRADE_SPEC §3, David 2026-11-10): may this FREE pet be
+     * upgraded to the 12-week challenge by a purchase? Null = yes; otherwise the
+     * refusal code. Only for a free pet (a challenge pet → null, not applicable —
+     * check isFreePlan() first). Conditions: a free breed (mutt / domestic cat), born
+     * (contract signed), active, not game over (P7), not a pre-M5 legacy-profile
+     * mutt (K5 / D3). Illness and hard stop do not block (U6). Priority: game over ›
+     * not active › not born › legacy › not a free breed.
+     */
+    public function upgradeBlockReason(): ?string
+    {
+        if ($this->plan !== PetPlan::Free) {
+            return null;
+        }
+
+        return match (true) {
+            (bool) $this->is_game_over => self::UPGRADE_GAME_OVER,
+            ! $this->is_active => self::UPGRADE_NOT_ACTIVE,
+            $this->isUnborn() => self::UPGRADE_NOT_BORN,
+            $this->isLegacyProfile() => self::UPGRADE_LEGACY_PROFILE,
+            $this->breed_type->isPremium() => self::UPGRADE_NOT_FREE_BREED,
+            default => null,
+        };
+    }
+
+    /** A free pet the parent can upgrade to the challenge right now (M6-U01). */
+    public function isUpgradeableFreePet(): bool
+    {
+        return $this->plan === PetPlan::Free && $this->upgradeBlockReason() === null;
     }
 
     /**

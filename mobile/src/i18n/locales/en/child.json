@@ -36,8 +36,10 @@
         "age": "Age",
         "origin": "Where it's from",
         "nextStage": "Next stage",
-        "meals": "Meals per day"
-      }
+        "meals": "Meals per day",
+        "challenge": "Challenge"
+      },
+      "challengeWeek": "Week {{week}} of {{total}}"
     },
     "settingsSheet": {
       "open": "Settings",
@@ -67,7 +69,8 @@
       "low_energy": "Tired",
       "sick": "Not feeling well"
     },
-    "challengeWeek": "WEEK {{week}} OF {{total}}"
+    "challengeWeek": "WEEK {{week}} OF {{total}}",
+    "challengeStarted": "The challenge has started! Week {{week}} of {{total}}"
   },
   "ws": {
     "live": "LIVE",

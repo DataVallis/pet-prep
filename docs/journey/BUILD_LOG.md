@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Nadgradnja brezplačnega ljubljenčka v izziv je zgrajena (izide z naslednjo posodobitvijo)
+
+**Kaj:** starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, z gumbom »Začni 12-tedenski izziv z [ime]« nadgradi v 12-tedenski izziv z istim ljubljenčkom — 12 tednov, ocena in potrdilo štejejo od nakupa, starost ostane, dnevi prej so v zgodovini označeni »pred izzivom«; aplikacija pred nakupom strežniku pove, za katerega ljubljenčka kupuje, da se plačilo nikoli ne izgubi. *(Pri uporabnikih po naslednjem deployu in OTA.)*
+**Zakaj je pomembno:** otrok se naveže na svojega ljubljenčka; za izziv ni več treba začeti znova z drugim (načrt validacije V2).
+**Kako povedati:** 👩 »Isti kuža ali muca, zdaj s 12-tedenskim programom in potrdilom.« · 🧒 »Izziv se je začel! Teden 1 od 12.« · 💼 »Pot od brezplačnega preizkusa do plačila brez novega začetka.«
+
 ## 2026-11-10 — Lijak: prve prave številke namesto predpostavk
 
 **Kaj:** v administraciji je stran »Lijak«: koliko družin je po tednu registracije dodalo otroka, dobilo ljubljenčka, koliko otrok je bilo aktivnih 1. in 7. dan, koliko družin je plačalo, vztrajalo do 4. tedna in prišlo do certifikata. Hkrati je zapisan 8-tedenski načrt validacije (cilj: 100 plačljivih družin).

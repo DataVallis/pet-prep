@@ -74,9 +74,33 @@
     "restoredNoCredit": "Your purchases have been restored, but there is no unused challenge. Each challenge covers one dog.",
     "noCredit": "There is no purchased challenge to use.",
     "refused": "This dog doesn't need a challenge (free plan or already paid).",
-    "activateFailed": "The challenge couldn't be unlocked. Check your connection and try again."
+    "activateFailed": "The challenge couldn't be unlocked. Check your connection and try again.",
+    "upgraded": "Thank you! The 12-week challenge has started — week 1 of 12."
   },
   "history": {
-    "limited": "Free plan: the history shows the last 7 days. The 12-week challenge keeps the full history."
+    "limited": "Free plan: the history shows the last 7 days. The 12-week challenge keeps the full history.",
+    "preChallenge": "before the challenge"
+  },
+  "upgrade": {
+    "button": "Start the 12-week challenge with {{name}}",
+    "buttonS": "Start the 12-week challenge with {{name}}",
+    "buttonNoName": "Start the 12-week challenge",
+    "buttonA11y": "Start the 12-week challenge with {{child}}'s pet",
+    "buttonHint": "Opens the challenge purchase for the same pet",
+    "legacyNote": "This pet can't be upgraded to the 12-week challenge: it was created in an older version of the app, without the profile (age and origin) the programme is built on. You can start the challenge with a new pet.",
+    "title": "The same pet, now with the 12-week challenge",
+    "stays": "What stays: {{name}} stays the same — name, look, age, learned commands and the »Wishes« items.",
+    "staysNoName": "What stays: your pet stays the same — name, look, age, learned commands and the »Wishes« items.",
+    "adds": "What is added: the 12-week programme with weekly progress, a certificate when it ends well, the full history and every video.",
+    "starts": "When it starts: right at the purchase. The care score counts from the purchase; the days before stay in the history, marked »before the challenge«.",
+    "price": "One-time purchase {{price}}. No subscription and no automatic payment.",
+    "priceNoPrice": "One-time purchase. No subscription and no automatic payment.",
+    "petLine": "Free plan · the challenge starts at the purchase."
+  },
+  "unusedPurchase": {
+    "title": "You have an unused purchase — choose a pet",
+    "body": "A paid 12-week challenge is not on any pet yet. Choose which pet it is for.",
+    "action": "Choose a pet",
+    "dismiss": "Hide"
   }
 }

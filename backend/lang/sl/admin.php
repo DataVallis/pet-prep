@@ -625,6 +625,19 @@ return [
             'threshold' => 'Opozorilo po (min)',
         ],
     ],
+    'unassigned_credit' => [
+        'overridden' => [
+            'title' => 'Nakup izziva je odklenil zaklenjenega ljubljenčka družine namesto brezplačnega, izbranega za nadgradnjo',
+            'body' => 'Družina ima natanko enega ljubljenčka, ki čaka na nakup, nakup pa je prišel z namenom nadgradnje brezplačnega ljubljenčka. Da plačan ljubljenček nikoli ne ostane zaklenjen (nakup je lahko iz starejše aplikacije na drugem telefonu), je odklenil čakajočega. Če je starš želel nadgradnjo, to uredi z družino (M6-U01).',
+        ],
+        'discord' => [
+            'title' => 'Nakupov izziva brez ljubljenčka več kot :minutes min: :count',
+            'body' => 'Starš je plačal 12-tedenski izziv, nakup pa še ni na nobenem ljubljenčku, čeprav ima družina ljubljenčka, ki čaka na nakup, ali je pred nakupom izbrala ljubljenčka (namen nakupa). Nova aplikacija ob naslednjem zagonu ponudi »Izberite ljubljenčka«; sicer ga dodeli v /admin (Challenge credits) ali piši družini (M6-U01).',
+            'credits' => 'ID-ji nakupov',
+            'families' => 'ID-ji družin',
+            'environments' => 'Okolje trgovine',
+        ],
+    ],
     'disk_space' => [
         'discord' => [
             'title' => 'Disk strežnika je poln :percent',

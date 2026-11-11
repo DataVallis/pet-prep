@@ -6,7 +6,7 @@
 import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
 import { readEasyGestures } from '@/modules/gestures/easyGestures';
 import { readGameFeedback } from '@/modules/gameLayer/gameFeedback';
-import { readPetPlan, type PetPlan } from '@/modules/plan/plan';
+import { readPetPlan, readPetUpgrade, type PetPlan, type PetUpgrade } from '@/modules/plan/plan';
 import { ApiError, type ParentDashboardResponse } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
 import {
@@ -41,7 +41,9 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan' | 'play_today' | 'pet_state'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan' | 'play_today' | 'pet_state' | 'upgrade'> & {
+  /** M6-U01: a free pet — can it be upgraded to the 12-week challenge; null for a challenge pet / older server. */
+  upgrade: PetUpgrade | null;
   /** The server's pet state (mood label, 2026-11-05); null from an older server. */
   pet_state: PetState | null;
   /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
@@ -196,6 +198,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     training: readPetTraining(p.training),
     play_today: readPlayToday(p.play_today),
     plan: readPetPlan(p.plan),
+    upgrade: readPetUpgrade(p.upgrade),
     pet_state: readPetState(p.pet_state),
   };
 }

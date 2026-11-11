@@ -254,6 +254,11 @@ export type PurchaseFailure = 'cancelled' | 'pending' | 'already_owned' | 'netwo
 export type PurchaseOutcome =
   /** `serverConfirmed` false = the store charged, the webhook hasn't reached the server yet. */
   | { status: 'success'; serverConfirmed: boolean }
+  /**
+   * M6-U01: the server refused / could not record the purchase intent for the pet — the store
+   * sheet was never opened, nothing was charged.
+   */
+  | { status: 'intent_failed' }
   | { status: PurchaseFailure };
 
 export type RestoreOutcome = { status: 'restored' | 'nothing' } | { status: Exclude<PurchaseFailure, 'cancelled' | 'pending' | 'already_owned'> };
@@ -342,8 +347,24 @@ async function activateFor(petId: number): Promise<boolean> {
 }
 
 /**
- * Buy one package (parent only). On success the server billing state is polled a bounded
- * number of times, because the RevenueCat webhook reaches the server asynchronously.
+ * M6-U01 purchase intent (FREE_PET_UPGRADE_SPEC §5.3): tell the server which pet the purchase
+ * is for BEFORE the store sheet opens, so the webhook assigns it to that pet (a free pet is
+ * upgraded) however late it arrives. One call; any failure → false (the sheet must not open).
+ */
+async function createIntentFor(petId: number): Promise<boolean> {
+  try {
+    await api.createChallengeIntent(petId);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Buy one package (parent only). With a target pet (M6-U01) the purchase intent is recorded
+ * first — no intent, no store sheet. On success the server billing state is polled a bounded
+ * number of times, because the RevenueCat webhook reaches the server asynchronously; then the
+ * credit is assigned to the target pet (`activateChallenge`, idempotent) unless it is paid already.
  * A second call while one is running returns the same promise (double tap).
  */
 export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = { petId: null, baselineCredits: 0 }): Promise<PurchaseOutcome> {
@@ -352,6 +373,8 @@ export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = 
     const blocked = await blockedReason();
     if (blocked !== null) return { status: blocked };
     const gen = generation;
+    if (target.petId !== null && !(await createIntentFor(target.petId))) return { status: 'intent_failed' };
+    if (gen !== generation) return { status: 'not_allowed' };
     let customerInfo: CustomerInfo;
     try {
       ({ customerInfo } = await Purchases.purchasePackage(pkg));
@@ -365,9 +388,10 @@ export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = 
       onRead: writeBillingCache,
       shouldContinue: () => gen === generation,
     });
-    // The credit landed but the webhook did not auto-assign it (several dogs waiting):
-    // assign it to the dog the parent bought for, then refresh once.
-    if (serverConfirmed && target.petId !== null && gen === generation) {
+    // The pet is not paid yet (the webhook could not choose, or it is still on its way):
+    // assign the purchase to the pet the parent bought for — idempotent, once — then refresh.
+    // M6-U01: also after a poll that gave up (the intent makes the webhook do it later anyway).
+    if (target.petId !== null && gen === generation) {
       const cached = queryClient.getQueryData<Billing>(BILLING_KEY);
       if (billingPet(cached, target.petId)?.status !== 'paid') {
         serverConfirmed = await activateFor(target.petId);

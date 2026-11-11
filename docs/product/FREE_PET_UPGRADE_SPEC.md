@@ -3,6 +3,7 @@
 > **Odločitve:** U1–U6 in §3–§4 potrdil David 10. 11. 2026. Popravki istega dne po pregledu kode: Claudovi predlogi K1–K7 potrjeni, plus Davidove spremembe D1–D4 (§2).
 > **Tehnični del (§5) je preverjen v kodi** (`origin/main` 8f0f95de, 10. 11. 2026). Datoteke in vrstice so navedene, da jih inženir najde. Pred gradnjo jih preveri še enkrat, ker se koda vmes lahko premakne.
 > **Gradnja poteka v dveh PR-jih** (§8): PR 1 je nadgradnja obstoječega ljubljenčka, PR 2 je izziv z mešančkom ob ustvarjanju (U4) in opomnik 7. dan (U5).
+> **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). Uporabniki ga dobijo z naslednjim deployem strežnika in OTA; do takrat veljajo stara pravila. PR 2 še ni zgrajen.
 > Del načrta validacije (`VALIDATION_PLAN.md` §4.3).
 
 ## 1. Zakaj
@@ -27,7 +28,7 @@ Danes je brezplačni mešanček (in domača mačka) preizkus aplikacije, plačlj
 | K6 | **Igra in crkljanje** se odkleneta ob nakupu, kot danes v kodi (D4). |
 | K7 | **Ponoven nakup po vračilu** pomeni novih 12 tednov od novega nakupa. |
 | D1 | Opomnik 7. dan se pošlje, ko je od pogodbe minilo **7 dni** in je otrok vsaj eno dejanje naredil v **vsaj 5 od teh 7 dni** (ne vsak dan). |
-| D2 | Pred spremembo webhooka preveriti v kodi, ali **vse** različice aplikacije, ki so pri uporabnikih (trgovinske gradnje in OTA), po nakupu same pokličejo aktivacijo za izbranega ljubljenčka. Če se katera zanaša na samodejno dodelitev, se ustavimo, Davidu predlagamo rešitev in čakamo nanj. **Starš nikoli ne sme plačati in ostati z zaklenjenim ljubljenčkom.** Stanje (10. 11.): **preverjeno — ni varno, kot je bilo predlagano.** Vse različice pokličejo aktivacijo samo, če nakup vidijo v ~8 s (5 poizvedb), brez kasnejšega poskusa; ob zakasnelem webhooku, zaprti aplikaciji ali brez povezave ljubljenčka danes odklene samodejna dodelitev. Predlog »namen nakupa« (§5.3) čaka Davidovo potrditev. |
+| D2 | Pred spremembo webhooka preveriti v kodi, ali **vse** različice aplikacije, ki so pri uporabnikih (trgovinske gradnje in OTA), po nakupu same pokličejo aktivacijo za izbranega ljubljenčka. Če se katera zanaša na samodejno dodelitev, se ustavimo, Davidu predlagamo rešitev in čakamo nanj. **Starš nikoli ne sme plačati in ostati z zaklenjenim ljubljenčkom.** Stanje (10. 11.): **preverjeno — ni varno, kot je bilo predlagano.** Vse različice pokličejo aktivacijo samo, če nakup vidijo v ~8 s (5 poizvedb), brez kasnejšega poskusa; ob zakasnelem webhooku, zaprti aplikaciji ali brez povezave ljubljenčka danes odklene samodejna dodelitev. Predlog »namen nakupa« (§5.3) je David potrdil 10. 11. 2026 (»da«); zgrajen v PR 1. |
 | D3 | Staršu starega mešančka **pošteno povemo**, zakaj nadgradnja ni mogoča (kratko besedilo). Gumba ne skrijemo brez razlage. |
 | D4 | »Puppy Promoter« ni zgrajen, zato ga ta specifikacija ne vključuje. |
 
@@ -119,7 +120,18 @@ Besedila so EN + SL, za psa in muco.
 - `ChallengeCreditService::create()` (`:47-68`, kliče ga `RevenueCatWebhookService.php:159`) danes nakup samodejno dodeli, kadar ima družina **natanko enega** neplačanega ljubljenčka na izzivu (`unpaidPets`, `:286-297`). Brezplačnega ljubljenčka nikoli.
 - **Tveganje:** družina ima brezplačnega mešančka in enega neplačanega pasemskega ljubljenčka. Starš kupi za mešančka, webhook pa nakup dodeli pasemskemu, zato aktivacija mešančka vrne 409 `no_credit`.
 - **Preverjeno (D2):** vse živeče različice (trgovinske 2.0.3+ in vse OTA do `d47f94b2`) imajo enako logiko: po nakupu 5 poizvedb po 2 s (`billing.ts` `pollBilling`), aktivacija samo, če nakup vidijo; sicer »odklepanje lahko traja minuto« in nič več. Edina ročna rešitev je gumb »Uporabi kupljen izziv« na `ChallengeScreen`. Nobena različica ne more kupiti za brezplačnega ljubljenčka. Obnovitev nakupov ne dodeli nič. Zato bi preprosta sprememba K4 lahko pustila plačanega ljubljenčka zaklenjenega.
-- **Predlog (čaka Davida):** »namen nakupa« — nova aplikacija pred odprtjem plačila pove strežniku, za katerega ljubljenčka kupuje (`POST /api/parent/pets/{pet}/challenge/intent`, na starša, enkraten, 30 min); webhook z namenom dodeli temu ljubljenčku (tudi brezplačnemu → nadgradnja); webhook brez namena (vse stare aplikacije) dela kot danes; nova aplikacija ob zagonu ponudi porabo neporabljenega nakupa; opozorilo na Discord, če nakup > 10 min ostane nedodeljen pri družini z zaklenjenim ljubljenčkom. `assignAvailableBeforeBirth` ostane.
+- **Potrjeno (David »da« 10. 11. 2026) in zgrajeno v PR 1 (11. 11. 2026):** »namen nakupa« — nova aplikacija pred odprtjem plačila pove strežniku, za katerega ljubljenčka kupuje (`POST /api/parent/pets/{pet}/challenge/intent`, na starša, enkraten, 30 min); webhook z namenom dodeli temu ljubljenčku (tudi brezplačnemu → nadgradnja); webhook brez namena (vse stare aplikacije) dela kot danes; nova aplikacija ob zagonu ponudi porabo neporabljenega nakupa; opozorilo na Discord, če nakup > 10 min ostane nedodeljen pri družini z zaklenjenim ljubljenčkom. `assignAvailableBeforeBirth` ostane.
+
+- **Kako je zgrajeno (PR 1):**
+  - Tabela `challenge_purchase_intents` (družina, starš = RevenueCat `app_user_id`, ljubljenček, `expires_at` = +30 min, `consumed_at` / `consumed_by` webhook|activate|superseded, kredit). `ChallengePurchaseIntentService` (zaklep družina → ljubljenček, enaki pogoji kot aktivacija, nov namen istega starša zamenja starega), avtorizacija `PetPolicy@buyChallenge` (samo starš družine; otrok 403, druga družina 404).
+  - Webhook (`ChallengeCreditService::create`): namen enega od staršev dogodka (`app_user_id`, `original_app_user_id`, `aliases`), ki je veljal ob **času nakupa** (`expires_at` ≥ `purchased_at`, ustvarjen največ 5 min po njem) — tudi zakasneli webhook ga upošteva. Kredit gre temu ljubljenčku (`assigned_via = intent`; brezplačni ljubljenček se nadgradi po isti poti kot aktivacija), namen je porabljen. Če ljubljenček ni več primeren (plačan drugače, game over, izbrisan), se namen šteje, kot da ga ni: velja staro pravilo. Izjema (QA #978, 11. 11. 2026): namen za **brezplačnega** ljubljenčka nikoli ne vzame nakupa edinemu ljubljenčku družine, ki čaka za plačilnim zaklepom (nakup je lahko iz stare aplikacije na drugem telefonu) — ta dobi nakup po starem pravilu, administrator pa dobi opozorilo na Discord (`intent_overridden`), da nadgradnjo uredi ročno. Namen, ki je veljal ob nakupu, zmaga tudi, če ga je kasnejši namen istega starša že zamenjal (zamenjan, brez kredita).
+  - Aktivacija istega ljubljenčka zapre odprte namene tega starša (`activate`).
+  - Aplikacija: brez uspešnega namena se trgovina ne odpre (`intent_failed`, nič ni zaračunano); po nakupu enkrat pokliče aktivacijo, če ljubljenček še ni plačan (tudi ko čakanje ~8 s poteče; 409 je neškodljiv). Na nadzorni plošči: »Imate neporabljen nakup — izberite ljubljenčka«, ko je `credits_available > 0` in ga lahko kateri ljubljenček sprejme.
+  - Varovalo: `billing:unassigned-credits-check` vsakih 5 min — kredit, ki je 10 min po webhooku še nedodeljen (zadnjih 7 dni), v družini z ljubljenčkom `payment_required` ali z namenom nakupa iz ure pred nakupom → eno opozorilo na Discord (`unassigned_challenge_credit`) na kredit; ob kakršni koli napaki se ponovi.
+  - Otrok vidi »Teden N od 12« po **svojem** začetku (`pet.challenge_progress` v stanju otroka), ne po uri ljubljenčka — otrok, ki se pridruži kasneje, je v zgodnejšem tednu.
+  - Kartico »Imate neporabljen nakup« starš lahko skrije (do naslednjega nakupa); ne pokaže se, ko na nakup čaka še nerojen ljubljenček (P11).
+  - Povrnitev migracije zavrne, dokler obstajajo nadgrajeni ljubljenčki.
+  - `assignAvailableBeforeBirth` in obnova nakupov ostaneta, kot sta bila.
 
 **5.4 Rutine in ocena (PR 1)**
 - Dnevna knjiga rutin teče za vsakega rojenega ljubljenčka, ne glede na načrt (`RoutineLedgerService::closeDueDays`).
@@ -212,5 +224,5 @@ Besedila so EN + SL, za psa in muco.
 
 ## 8. Vrstni red
 
-1. **PR 1 (prednost):** nadgradnja obstoječega brezplačnega ljubljenčka (mešanček, domača mačka). §5.1–5.5, 5.8, 5.9 in §4 »Starš (PR 1)« / »Otrok«. Spremembo webhooka (5.3) vključi samo, če je D2 potrjen. En krog QA pred združitvijo.
+1. **PR 1 (prednost) — zgrajen 11. 11. 2026 (M6-U01):** nadgradnja obstoječega brezplačnega ljubljenčka (mešanček, domača mačka). §5.1–5.5, 5.8, 5.9 in §4 »Starš (PR 1)« / »Otrok«, z »namenom nakupa« (5.3, D2 potrjen). En krog QA pred združitvijo.
 2. **PR 2:** U4 (5.6) in opomnik 7. dan (5.7). En krog QA pred združitvijo.
