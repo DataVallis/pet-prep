@@ -86,7 +86,37 @@
       "source_url": "https://chinolog.md/medicina_veterinara",
       "checked": "2026-11-11",
       "note": "Page of the Registrul Chinologilor din Moldova; the note 'Doar cu programare prealabilă' sits in the contact block and may refer to the training centre rather than the clinic, so duty is cautious. No own clinic site found. diez.md (2021) gives 022 661 444 and Mon-Fri 09:00-17:00 hours, not used because it is an editorial source."
+    },
+    {
+      "kind": "clinic",
+      "name": "Esculap-Vet \"Vasile Buza\"",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "str. Florica Niță 7/2, Rîșcani, Chișinău",
+      "phone": "022 27 33 33",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 09:00-18:00, Sunday closed. Emergencies are seen first during opening hours; call before you come. Mobile/WhatsApp/Viber: +373 60 694 388.",
+      "small_animals": true,
+      "url": "https://esculapvet.md/en/",
+      "source_url": "https://esculapvet.md/en/contact",
+      "note": "Own site (esculapvet.md), contact page and /en/servicii/urgente both fetched 2026-11-11. FAQ 'Are you open 24/7?' is answered with the Mon-Sat hours, so no 24h claim. Species: services (vaccination, spay/neuter, grooming, pet hotel) imply dogs/cats but species not stated explicitly.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Family Vet",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "Șos. Muncești 94, Chișinău",
+      "phone": "+373 69 717 881",
+      "emergency_24h": false,
+      "duty": "Emergency care offered; call ahead for availability. Branches listed in Botanica, Centru, Codru, Telecentru, Durlești, Sângera and Ialoveni.",
+      "small_animals": true,
+      "url": "https://www.familyvet.md/",
+      "source_url": "https://www.familyvet.md/",
+      "note": "Own site home page fetched 2026-11-11. No opening hours published. Wording: 'Disponibilitate continuă pentru urgențe veterinare' and 'zi și noapte' - NOT an explicit 24h/non-stop/0-24 statement, so emergency_24h=false; verify by phone. Dogs and cats named explicitly. Only Muncești 94 address is given; branch addresses are not on the fetched page. Branch subpages (urgente-veterinare-centru-chisinau, stationar-...-botanica) failed to fetch.",
+      "checked": "2026-11-11"
     }
   ],
-  "notes": "Run 2026-11-11. WebSearch returned few Moldovan results, so coverage is thin. No official register was readable: ANSA (ansa.gov.md) documents found by search are .docx with no readable text via WebFetch, no Chisinau veterinary chamber page found, no UASM veterinary faculty clinic page found. No duty rota (dezurstvo) found. No animal poison line found; the only helpline found is People in Need Moldova / Vet.md '14 567' (farm animals, Fridays 9:00-18:00, moldpres.md) - not a pet poison line, not used. vet.md is a veterinary portal/online consultation service (Mircea cel Batran 34, 022011082, 08:00-17:00, not a clinic) so it was not added. Blocked/unreachable: vetgor.online (robots disallow), facebook.com pages (robots disallow), 999.md ads (fetch failed), veterinari-moldova.com (fetch failed), zoolife.md and zoomama contacts page (not in WebFetch provenance set). Aggregator-only, therefore NOT added: Bălți clinics (Clinic Vet, Felix, Lumea Animalelor, Zoo-Doctor via beltsy.info; RomaVet), Orhei Alex Vet (findglocal), Vet Life, Iurionvet, Zoo Life (zoolife.md), Esculap-Vet, Nicoleta-Lux (diez.md 2018/2021 only). Left to do: own sites of those clinics, Bălți, Cahul, Orhei, Ungheni, Comrat, Tiraspol/Transnistria (nothing reachable), ANSA territorial offices, UASM/USARB clinics, 24h home-visit services advertised only on 999.md/all.biz (Varzari Vet, Vetdoc - classifieds, not used)."
+  "notes": "Run 2026-11-11. WebSearch returned few Moldovan results, so coverage is thin. No official register was readable: ANSA (ansa.gov.md) documents found by search are .docx with no readable text via WebFetch, no Chisinau veterinary chamber page found, no UASM veterinary faculty clinic page found. No duty rota (dezurstvo) found. No animal poison line found; the only helpline found is People in Need Moldova / Vet.md '14 567' (farm animals, Fridays 9:00-18:00, moldpres.md) - not a pet poison line, not used. vet.md is a veterinary portal/online consultation service (Mircea cel Batran 34, 022011082, 08:00-17:00, not a clinic) so it was not added. Blocked/unreachable: vetgor.online (robots disallow), facebook.com pages (robots disallow), 999.md ads (fetch failed), veterinari-moldova.com (fetch failed), zoolife.md and zoomama contacts page (not in WebFetch provenance set). Aggregator-only, therefore NOT added: Bălți clinics (Clinic Vet, Felix, Lumea Animalelor, Zoo-Doctor via beltsy.info; RomaVet), Orhei Alex Vet (findglocal), Vet Life, Iurionvet, Zoo Life (zoolife.md), Esculap-Vet, Nicoleta-Lux (diez.md 2018/2021 only). Left to do: own sites of those clinics, Bălți, Cahul, Orhei, Ungheni, Comrat, Tiraspol/Transnistria (nothing reachable), ANSA territorial offices, UASM/USARB clinics, 24h home-visit services advertised only on 999.md/all.biz (Varzari Vet, Vetdoc - classifieds, not used).\n\nFollow-up 2026-11-11: Follow-up run 2026-11-11 (Bălți, Orhei, Cahul, Ungheni, Comrat, more Chișinău): only 2 entries added (Esculap-Vet, Family Vet). WebFetch only accepts URLs that appeared in search results, so own sites could not be guessed (ciavdar.md, ansa.gov.md root: provenance refused). WebSearch returned almost no Moldovan clinic sites. Failed to fetch: clinicvet.md (Bălți, client_error), familyvet.md subpages, animalmodern.md (redirect from animalmodern.com, domain then refused), nicoleta-lux.com (redirect loop http/https). Rejected: yopetclinic.com/moldova (template-like chain page listing many towns with no addresses/phones, foreign WhatsApp number, 24/7 marketing text only - not a verifiable clinic); jobber.md ZooExpert page (job portal, no clinic contacts). Not used as sole source: beltsy.info listings (Clinic Vet, Felix, Lumea Animalelor), veterinari-moldova.com, diez.md, profi.md, semia.md, yandex/waze/revieweuro. Nothing found for Cahul, Ungheni, Orhei, Comrat; no official ANSA/UASM clinic list readable (ANSA results are docx/pdf orders). Left to do: own sites of ClinicVet Bălți (clinicvet.md), Lumea Animalelor (Bălți), Vet Exotica (Chișinău), Animal Modern (animalmodern.md), Zoomama contacts, Ciavdar Grup own site; Family Vet branch addresses; Facebook page ServiciiVeterinare24 (24/24 claim, not openable)."
 }
