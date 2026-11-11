@@ -92,6 +92,9 @@ class GameDataResetService
         // payments (M6-U01: purchase intents → credits, pets, users, families)
         'challenge_purchase_intents',
         'challenge_credits',
+        // M6-S01 website gift vouchers (credits reference vouchers) + the Lemon Squeezy ledger
+        'gift_vouchers',
+        'lemonsqueezy_events',
         // M6-W01 / W02 »Želje« (treats → items → credits → purchase_events)
         'pet_treat_events',
         'pet_items',
