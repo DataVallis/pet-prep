@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Prijava staršev je zaščitena pred ugibanjem gesla
+
+**Kaj:** Prijava s e-naslovom in geslom ima zdaj omejitev: največ 10 poskusov na minuto in 30 na uro z enega naslova IP, račun pa se po 5 napačnih geslih v 15 minutah za 15 minut zaklene (z katerega koli naslova). Uspešna prijava in odgovor aplikacije se nista spremenila; stare različice aplikacije pokažejo običajno »Prijava ni uspela«. Otroška prijava s PIN-om in Google / Apple prijava sta že imeli omejitve in ostaneta takšni. Preverjeno v testih (zaklep, ponastavitev, drugi računi niso prizadeti).
+**Zakaj je pomembno:** prijava staršev je vrata do družinskih podatkov in do plačil; brez omejitve bi lahko nekdo neomejeno ugibal gesla.
+**Kako povedati:** 👩 »Račun je zaščiten pred ugibanjem gesla: po več napačnih poskusih se začasno zaklene.« 💼 »Varnostna osnova za prodajo prek spleta.« 🛠 skupen pristop z omejitvami spletne prijave (M6-S01b).
+
+---
+
 ## 2026-11-11 — Prvi izdelki za prodajo prek spletne strani
 
 **Kaj:** Na `main` so prvi izdelki, ki jih lahko kupite prek spletne strani. Darilni bon za 12-tedenski izziv (strežnik #1047, spletna stran pet-prep-website#372) je izklopljen, dokler aplikacija ni v trgovinah. Natisljivi komplet »Obljuba o ljubljenčku« (spletna stran pet-prep-website#371) je za stikalom, dokler David ne potrdi besedila. Stran za partnerje in sponzorje (strežnik #1049, spletna stran pet-prep-website#368) je objavljena.

@@ -42,6 +42,16 @@ class AppServiceProvider extends ServiceProvider
 
     public const SOCIAL_SIGN_IN_PER_HOUR = 30;
 
+    /** Brute-force guard of POST /api/login (David 2026-11-11): attempts per IP (IPv6 /64). */
+    public const LOGIN_PER_MINUTE = 10;
+
+    public const LOGIN_PER_HOUR = 30;
+
+    /** Wrong passwords per account (normalised e-mail, any IP) per LOGIN_FAILURE_WINDOW_SECONDS before the account locks (PasswordLoginGuard). */
+    public const LOGIN_PASSWORD_FAILURES = 5;
+
+    public const LOGIN_FAILURE_WINDOW_SECONDS = 900;
+
     /**
      * Data exports per user per hour (M2-08).
      */
@@ -212,6 +222,19 @@ class AppServiceProvider extends ServiceProvider
             return [
                 Limit::perMinute(self::SOCIAL_SIGN_IN_PER_MINUTE)->by($key.':minute'),
                 Limit::perHour(self::SOCIAL_SIGN_IN_PER_HOUR)->by($key.':hour'),
+            ];
+        });
+
+        // Parent / legacy password sign-in (David 2026-11-11): unauthenticated, bcrypt per call →
+        // 10 per minute and 30 per hour per IP (IPv6 /64). Standard Laravel 429 + Retry-After
+        // (old app builds show their generic "sign-in failed"). The per-account lockout lives in
+        // PasswordLoginGuard. Live in testing (like register).
+        RateLimiter::for('login', function (Request $request) {
+            $key = 'login:'.ClientIp::rateLimitKey($request->ip());
+
+            return [
+                Limit::perMinute(self::LOGIN_PER_MINUTE)->by($key.':minute'),
+                Limit::perHour(self::LOGIN_PER_HOUR)->by($key.':hour'),
             ];
         });
 
