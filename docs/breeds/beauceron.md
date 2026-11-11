@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `beauceron` (viri S787–S794; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174, S268); seznam za vzreditelja: stran RKC (S787) |
 | Izvor | FCI št. 44 »Berger de Beauce«, skupina 1, sekcija 1 (ovčarji), Francija (S789, S790) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 100. mesto »Beauceron« (S174, prebrano 2026-11-11) |
-| PR-ji | pet-prep #1004 (pasma) · portret: sledi po združitvi · spletna stran: sledi po portretu |
+| PR-ji | pet-prep #1004 (pasma, združen `f52c0f3`) · portret pet-prep PR `feat/M5-R10-104-beauceron-portrait` (zagon `breed-portraits.yml` 42976166459, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-beauceron` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-104 | 2026-11-11 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-11 |
 | Barva (izbirnik: črno-rjavkast, harlekin) | 🛠 | 💶 izziv | M5-R21 | 2026-11-11 |
-| AI portret v registru | 🗓 po združitvi (črno-rjavkast, naravna ušesa) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/beauceron`, `/sl/zivali/psi/beauceron`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črno-rjavkast, naravna ušesa, dvojni krempeljčki zadaj | — | M5-R11-04 | 2026-11-11 |
+| Stran na petprep.si (`/animals/dogs/beauceron`, `/sl/zivali/psi/beauceron`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
