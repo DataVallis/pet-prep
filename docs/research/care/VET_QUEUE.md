@@ -162,7 +162,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] PE Peru — 33 entries, 21 × 24 h, no duty rota, no animal poison line, check: 26 checked, 0 fixed, 3 downgraded to not 24 h, 0 removed, 2026-11-11 — left: Arequipa 24-h clinics, Piura, Iquitos, robots-blocked sites (see `vets/PE.json` notes)
 - [~] UY Uruguay — 16 entries, 11 × 24 h (incl. 1 duty rota: Intendencia de Montevideo street-animal emergency), no animal poison line found, check: 16 checked (+6 re-fetched), 1 fixed (Centenario: home visits only), 0 removed, 2026-11-11 — left: Rocha, La Paloma, Punta del Diablo, Piriápolis, Rivera, Tacuarembó, Durazno, Florida, Minas, Mercedes, Carmelo, Ciudad de la Costa, Pando, Las Piedras; SMVU/Facultad de Veterinaria pages not reachable (see `vets/UY.json` notes)
 - [~] UY Uruguay — follow-up: 1 entry, 1 × 24 h (Dr Mascota, Ciudad de la Costa), no animal poison line, SMVU / Facultad de Veterinaria pages not fetchable, check: 1 checked, 0 fixed, 0 removed, 2026-11-11 — left: Rocha, La Paloma, Piriápolis, Rivera, Tacuarembó, Durazno, Florida, Minas, Mercedes, Carmelo, Pando, Las Piedras (no own sites found), UCIL Hospital Veterinario 24 h (no city/address, see `vets/UY.json` notes)
-- [ ] CR Costa Rica
+- [~] CR Costa Rica — 8 entries, 4 × 24 h (PETS+ San Antonio, Petopia, La Vete Escazú and Curridabat), no duty rota, no animal poison line, check: 8 checked, 0 fixed, 0 removed, 2026-11-11 — left: Alajuela, Cartago, Guanacaste, Puntarenas/Jacó/Quepos, Limón/Puerto Viejo, La Fortuna; ~16 clinics with a 24-h claim only on the vet24cr.com directory; Colegio de Médicos Veterinarios / SENASA lists (see `vets/CR.json` notes)
+- [ ] CR Costa Rica — follow-up: clinics outside San José/Heredia on own sites (Alajuela, Cartago, Guanacaste, Puntarenas, Limón, La Fortuna), 24-h claims known only from vet24cr.com; skip what was unreachable twice
 - [ ] DO Dominican Republic
 - [ ] CU Cuba
 - [ ] JM Jamaica

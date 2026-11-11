@@ -1,0 +1,157 @@
+{
+  "country": "CR",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "Universidad Nacional - Escuela de Medicina Veterinaria, Hospital de Especies Menores y Silvestres (HEMS)",
+      "url": "https://www.medvet.una.ac.cr/index.php/servicios-publico/hospital-especies-menores-silvestres",
+      "note": "Official university hospital page opened (phones, weekday hours, weekend emergency hours). No address on the pages opened; no 24 h claim for HEMS (the 24 h service on the school home page belongs to the equine hospital HEMT)."
+    },
+    {
+      "name": "Petopia Hospital y Centro de Diagnostico - own site",
+      "url": "https://www.petopia.cr/",
+      "note": "Own page opened: address, phones, 'las 24 horas del dia' statements."
+    },
+    {
+      "name": "Hospital PETS+ San Antonio and PETS+ clinics - own site",
+      "url": "https://petsmas.com/contactanos/",
+      "note": "Own pages opened (contact, hospital home, hospital contact): hospital open 24/7; Gravilias and Expreso clinics with hours."
+    },
+    {
+      "name": "La Vete - own site",
+      "url": "https://lavete.com/pages/contact",
+      "note": "Own pages opened (contact, about): 24/7 emergency service stated for Escazu and Curridabat; no branch addresses on the pages opened."
+    },
+    {
+      "name": "Veterinaria Dr. Brenes - own site",
+      "url": "https://www.veterinariadrbrenes.com/contactenos/",
+      "note": "Own contact page opened."
+    },
+    {
+      "name": "Lead lists (leads only)",
+      "url": "https://vet24cr.com/",
+      "note": "Directory opened only to find clinic names that claim 24 h (Cavallini, Santamaria, Medical Care, Drs. Chacon, VitalVet, Clinica Veterinaria San Juan, SALVET 24, Medical Pets, Nuske Vet Center, Guanavet, IVDSA, Agromedica, Ramirez, Donde Chiza, Villa Mascotas, Gocha); no entry relies on it. Scotia Mascotas provider PDF and Costa Rican news articles were also used for leads only."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Hospital PETS+ San Antonio",
+      "city": "San Antonio de Belen",
+      "region": "Heredia",
+      "address": "75 m east and 150 m south of Pedregal, San Antonio de Belen, Heredia 40703",
+      "phone": "+506 2239 3979",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week, with a 24/7 emergency service; book appointments through its digital channels.",
+      "small_animals": true,
+      "url": "https://petsmas.com/hospital/",
+      "source_url": "https://petsmas.com/hospital/contacto-hospital/",
+      "note": "Pages: 'Estamos abiertos 24/7', 'Contamos con servicio de emergencias 24/7', 'Abierto las 24 horas del dia, 7 dias a la semana'. Address on the hospital home page reads '200 S', on the contact page '150 S'; the contact page value is used. Phone is also WhatsApp and is listed as the emergency number.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Petopia Hospital y Centro de Diagnostico",
+      "city": "Tibas",
+      "region": "San Jose",
+      "address": "100 m east and 275 m north of BAC Credomatic, San Juan, Tibas, San Jose 11301",
+      "phone": "+506 4800 1800",
+      "emergency_24h": true,
+      "duty": "Hospital care and emergencies available 24 hours; WhatsApp +506 6453 2349.",
+      "small_animals": true,
+      "url": "https://www.petopia.cr/",
+      "source_url": "https://www.petopia.cr/",
+      "note": "Page: team ready to help 'las 24 horas del dia'; surgery and hospitalisation section 'atencion las 24 horas'. No opening hours and no dedicated emergency line on the page. Second phone 6453 2349 (also WhatsApp).",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "La Vete Hospital Veterinario Escazu",
+      "city": "Escazu",
+      "region": "San Jose",
+      "phone": "+506 4080 8333",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service, no call or appointment needed; stores open Monday to Saturday 8:00-20:00 and Sunday 8:00-19:00.",
+      "small_animals": true,
+      "url": "https://lavete.com/pages/contact",
+      "source_url": "https://lavete.com/pages/contact",
+      "note": "Contact page: 'Servicio de emergencias 24/7 en Escazu y Curridabat SIN LLAMADAS NI CITAS PREVIAS'. About page: 'Hospital Veterinario 24 horas'. No branch address on either page (lavete.com/pages/tiendas not openable). Phone 4080-8333 is the general number (calls only); home delivery 8000-LAVETE.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "La Vete Curridabat",
+      "city": "Curridabat",
+      "region": "San Jose",
+      "phone": "+506 4080 8333",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service, no call or appointment needed; stores open Monday to Saturday 8:00-20:00 and Sunday 8:00-19:00.",
+      "small_animals": true,
+      "url": "https://lavete.com/pages/contact",
+      "source_url": "https://lavete.com/pages/contact",
+      "note": "Same contact page statement as Escazu (24/7 emergency in Escazu and Curridabat). No address on the page.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital de Especies Menores y Silvestres (HEMS-UNA)",
+      "city": "Heredia",
+      "region": "Heredia",
+      "address": "Campus Benjamin Nunez, Universidad Nacional, Heredia",
+      "phone": "+506 2260 9234",
+      "emergency_24h": false,
+      "duty": "University small-animal and wildlife hospital: Monday to Friday 9:00-19:00; weekends emergencies only, 10:00-17:00. Not a 24-hour service; call ahead.",
+      "small_animals": true,
+      "url": "https://www.medvet.una.ac.cr/index.php/servicios-publico/hospital-especies-menores-silvestres",
+      "source_url": "https://www.medvet.una.ac.cr/index.php/servicios-publico/hospital-especies-menores-silvestres",
+      "note": "Page lists phones 2260-9234 / 2261-1775 / 2261-1274 and email hospitalespeciesmenores@una.cr; says 'atencion medica de calidad los 365 dias del ano' (not 24 h). Address is from a 2017 news article (campus Benjamin Nunez), not from the UNA pages opened. Hours conflict: UNA home page shows 18:00-21:00 under 'Horarios de atencion'; a July 2020 UNA notice (COVID) gave Monday-Saturday 10:00-17:00. Weekday/weekend hours here are from the hospital page; confirm by phone.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria PETS+ Gravilias",
+      "city": "Desamparados",
+      "region": "San Jose",
+      "address": "175 m east of Escuela Gravilias, Desamparados, San Jose",
+      "phone": "+506 4081 6111",
+      "emergency_24h": false,
+      "duty": "Open daily 8:00-22:00.",
+      "small_animals": true,
+      "url": "https://petsmas.com/contactanos/",
+      "source_url": "https://petsmas.com/contactanos/",
+      "note": "Same phone listed for the Expreso clinic.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria PETS+ Expreso",
+      "city": "San Rafael Arriba, Desamparados",
+      "region": "San Jose",
+      "address": "Centro Comercial Expreso, San Rafael Arriba, Desamparados, San Jose",
+      "phone": "+506 4081 6111",
+      "emergency_24h": false,
+      "duty": "Open daily 9:00-21:00.",
+      "small_animals": true,
+      "url": "https://petsmas.com/contactanos/",
+      "source_url": "https://petsmas.com/contactanos/",
+      "note": "Same phone listed for the Gravilias clinic.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria Dr. Brenes",
+      "city": "Moravia",
+      "region": "San Jose",
+      "address": "Centro Comercial Los Colegios, Local 21, Moravia, San Jose 11401",
+      "phone": "+506 2240 8262",
+      "emergency_24h": false,
+      "duty": "Monday to Saturday 9:00-12:00 and 14:00-19:00, appointment only; emergency number 8301 3271 (WhatsApp), hours not stated.",
+      "small_animals": true,
+      "url": "https://www.veterinariadrbrenes.com/contactenos/",
+      "source_url": "https://www.veterinariadrbrenes.com/contactenos/",
+      "note": "Page says 'Solo atendemos con CITA PREVIA'; no 24 h claim. Page meta description shows 2240 8268 instead of 2240 8262.",
+      "checked": "2026-11-11"
+    }
+  ],
+  "notes": "Costa Rica: only 8 entries (4 x 24 h: Hospital PETS+ San Antonio, Petopia, La Vete Escazu, La Vete Curridabat; HEMS-UNA is not 24 h). Most clinics' own sites could not be opened: the fetch tool only opens URLs that surfaced in search results, and many clinic domains never did; some sites refused automated access (cavallinivet.com robots-disallowed, alltama.com robots-disallowed, medipetcr.com failed). No national or regional duty rota (guardia) found. No animal poison information line found: the Colegio de Medicos Veterinarios de Costa Rica website and any SENASA clinic directory could not be located or opened, and no official page naming an animal poison line was found (the human poison centre was not confirmed to take animal calls). Not done (24-h claims seen only in the vet24cr.com directory, not on own pages, so NOT added): Hospital Veterinario Cavallini (Tamarindo), Hospital Veterinario Santamaria (Alajuela), Hospital Veterinario Medical Care (Heredia), Hospital Veterinario Drs. Chacon (Guadalupe), VitalVet Cartago (El Tejar), Clinica Veterinaria San Juan (La Union), Veterinaria SALVET 24 (Cartago), Medical Pets (Cartago, Curridabat), Nuske Vet Center (Esparza), Guanavet (Liberia), IVDSA Santa Ana / Tres Rios, Hospital Veterinario Agromedica (Escazu), Clinica Veterinaria Ramirez (San Rafael de Heredia), Veterinaria Donde Chiza (Santa Cruz), Clinica Veterinaria Villa Mascotas (San Vito), Veterinaria Gocha (Santo Domingo de Heredia). Other leads without own page opened: Medipet Hotel y Hospital Veterinario, Veterinaria Argos, Pet Cafe, Pets Avenue, Innovavet, Exoplanet, La Vete Herradura (phone 2102 7028 on contact page, no 24 h claim), La Vete Alajuela/San Pablo/other branches (no addresses), Medismart network. Regions with no entries: Alajuela, Cartago, Guanacaste (Liberia, Tamarindo, Playas del Coco), Puntarenas/Jaco/Manuel Antonio/Quepos, Limon/Puerto Viejo, La Fortuna. Hospital Veterinario San Antonio (hospitalveterinariosanantonio.com) is in Tenerife, Spain, not Costa Rica. Rescate Wildlife Zoave (La Garita, 2433 8989) is a wildlife rescue with daytime hours only, not added."
+}
