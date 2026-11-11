@@ -12,7 +12,8 @@
     "nl": "Radijsjes",
     "pl": "Rzodkiewki",
     "cs": "Ředkvičky",
-    "hr": "Rotkvice"
+    "hr": "Rotkvice",
+    "sv": "Rädisor"
   },
   "question": {
     "en": "Can dogs eat radishes?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden radijsjes eten?",
     "pl": "Czy psy mogą jeść rzodkiewki?",
     "cs": "Mohou psi jíst ředkvičky?",
-    "hr": "Smiju li psi jesti rotkvice?"
+    "hr": "Smiju li psi jesti rotkvice?",
+    "sv": "Får hundar äta rädisor?"
   },
   "url_slug": {
     "en": "radishes",
@@ -38,7 +40,8 @@
     "nl": "radijsjes",
     "pl": "rzodkiewki",
     "cs": "redkvicky",
-    "hr": "rotkvice"
+    "hr": "rotkvice",
+    "sv": "radisor"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, maar alleen in kleine hoeveelheden. Met mate zijn radijsjes veilig voor honden, al vinden sommige honden de smaak niet lekker. Haal het loof eraf, was en schil het radijsje, snijd het in kleine stukjes en geef het naturel. Mierikswortel en wilde radijs zijn niet voor honden.",
     "pl": "Tak, ale tylko w małych ilościach. Z umiarem rzodkiewki są dla psów bezpieczne, choć niektórym psom ich smak nie odpowiada. Usuń nać, umyj, obierz i pokrój rzodkiewkę na małe kawałki, a potem podaj ją bez dodatków. Chrzan i dzika rzodkiew nie są dla psów.",
     "cs": "Ano, ale jen v malém množství. S mírou jsou ředkvičky pro psy bezpečné, i když se některým psům nemusí líbit jejich chuť. Odstraňte nať, ředkvičku omyjte, oloupejte, nakrájejte na malé kousky a podávejte ji neochucenou. Křen a divoké ředkve psům nedávejte.",
-    "hr": "Da, ali samo u malim količinama. Umjereno su rotkvice za pse sigurne, iako nekim psima okus nije po volji. Ukloni lišće, operi i oguli rotkvicu, nareži je na male komadiće i daj je običnu. Hren i divlje rotkvice nisu za pse."
+    "hr": "Da, ali samo u malim količinama. Umjereno su rotkvice za pse sigurne, iako nekim psima okus nije po volji. Ukloni lišće, operi i oguli rotkvicu, nareži je na male komadiće i daj je običnu. Hren i divlje rotkvice nisu za pse.",
+    "sv": "Ja, men bara i små mängder. Rädisor är ofarliga för hundar med måtta, men vissa hundar tycker inte om smaken. Ta bort blasten, tvätta, skala och hacka rädisan i små bitar och servera den okryddad. Pepparrot och vilda rädisor är inget för hundar."
   },
   "why": {
     "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
@@ -65,7 +69,8 @@
     "nl": "Kleine hoeveelheden radijs kunnen honden geen kwaad en zijn misschien zelfs goed voor de gezondheid. Het loof kan een maag-darmontsteking veroorzaken, dus geef dat niet. Grote stukken of een heel radijsje kunnen een verstikkingsgevaar vormen. Mierikswortel is eigenlijk geen radijs en hoort niet in de voerbak, en wilde radijs is een andere groente die niet veilig is voor huisdieren.",
     "pl": "Niewielkie ilości rzodkiewek nie szkodzą psom, a mogą nawet przynosić pewne korzyści zdrowotne. Nać rzodkiewki może wywołać zapalenie żołądka i jelit, więc nie należy jej podawać. Duże kawałki lub cała rzodkiewka mogą grozić zadławieniem. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom, a dzika rzodkiew to inne warzywo, które nie jest bezpieczne dla zwierząt domowych.",
     "cs": "Menší množství ředkviček psům neškodí a může mít dokonce i určitý zdravotní přínos. Nať ředkviček může způsobit zánět žaludku a střev, proto ji psům nedávejte. Velké kousky nebo celá ředkvička mohou způsobit udušení. Křen ve skutečnosti ředkvička není a psům se nemá dávat; divoké ředkve jsou jiná zelenina, která pro zvířata není bezpečná.",
-    "hr": "Male količine rotkvica psima ne štete, a možda imaju i neke zdravstvene koristi. Lišće rotkvice može izazvati gastroenteritis, pa ga ne treba davati. Veliki komadi ili cijela rotkvica mogli bi izazvati gušenje. Hren zapravo nije rotkvica i ne treba ga davati psima, a divlje rotkvice drugo su povrće koje nije sigurno za kućne ljubimce."
+    "hr": "Male količine rotkvica psima ne štete, a možda imaju i neke zdravstvene koristi. Lišće rotkvice može izazvati gastroenteritis, pa ga ne treba davati. Veliki komadi ili cijela rotkvica mogli bi izazvati gušenje. Hren zapravo nije rotkvica i ne treba ga davati psima, a divlje rotkvice drugo su povrće koje nije sigurno za kućne ljubimce.",
+    "sv": "Måttliga mängder rädisor skadar inte hundar, och de kan till och med ha vissa hälsofördelar. Rädisblasten kan ge magtarminflammation och ska därför inte ges. Stora bitar eller en hel rädisa kan bli en kvävningsrisk. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar, och vilda rädisor är en annan grönsak som inte är säker för husdjur."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Zoals altijd kun je het beste eerst je dierenarts raadplegen voordat je iets nieuws aan het eten van je hond toevoegt. Sommige honden vinden de smaak niet lekker en willen geen radijsjes eten.",
     "pl": "Jak zawsze: zanim dodasz do diety psa nowy składnik, najlepiej skonsultuj się z weterynarzem. Niektórym psom smak rzodkiewek nie odpowiada i nie chcą ich jeść.",
     "cs": "Jako vždy je před zařazením nové potraviny do psova jídelníčku nejlepší nejdřív se poradit s veterinářem. Některým psům se chuť ředkviček nelíbí a nebudou je jíst.",
-    "hr": "Kao i uvijek, prije nego što psu u prehranu uvedeš novu namirnicu, najbolje je prvo se posavjetovati s veterinarom. Nekim psima okus nije po volji pa neće htjeti jesti rotkvice."
+    "hr": "Kao i uvijek, prije nego što psu u prehranu uvedeš novu namirnicu, najbolje je prvo se posavjetovati s veterinarom. Nekim psima okus nije po volji pa neće htjeti jesti rotkvice.",
+    "sv": "Prata som alltid med veterinären innan du lägger till något nytt i hundens kost. Vissa hundar tycker inte om smaken och vill inte äta rädisor."
   },
   "serving": {
     "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
@@ -92,7 +98,8 @@
     "nl": "Gooi het loof weg, was en schil het radijsje en snijd het in kleine stukjes. Alleen naturel radijsjes zonder kruiden, in kleine hoeveelheden.",
     "pl": "Wyrzuć nać, a rzodkiewkę umyj, obierz i pokrój na małe kawałki. Tylko zwykłe rzodkiewki, bez przypraw, w małych ilościach.",
     "cs": "Nať vyhoďte, ředkvičku omyjte, oloupejte a nakrájejte na malé kousky. Jen neochucené ředkvičky, bez koření, a v malém množství.",
-    "hr": "Baci lišće, zatim rotkvicu operi, oguli i nareži na male komadiće. Samo obične rotkvice, bez začina, u malim količinama."
+    "hr": "Baci lišće, zatim rotkvicu operi, oguli i nareži na male komadiće. Samo obične rotkvice, bez začina, u malim količinama.",
+    "sv": "Släng blasten, tvätta och skala rädisan och hacka den i små bitar. Bara okryddade rädisor, i små mängder."
   },
   "child": {
     "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
@@ -105,7 +112,8 @@
     "nl": "Honden mogen een paar kleine stukjes radijs proberen. Een volwassene haalt eerst de blaadjes eraf, schilt het radijsje en snijdt het in stukjes.",
     "pl": "Pies może spróbować kilku małych kawałków rzodkiewki. Dorosły najpierw usuwa nać, obiera rzodkiewkę i kroi ją.",
     "cs": "Psi mohou zkusit pár malých kousků ředkvičky. Dospělý nejdřív odstraní nať, ředkvičku oloupe a nakrájí.",
-    "hr": "Psi smiju probati nekoliko malih komadića rotkvice. Odrasla osoba prvo ukloni lišće, oguli rotkvicu i nareže je."
+    "hr": "Psi smiju probati nekoliko malih komadića rotkvice. Odrasla osoba prvo ukloni lišće, oguli rotkvicu i nareže je.",
+    "sv": "Hundar kan få prova några små rädisbitar. En vuxen tar först bort bladen, skalar rädisan och hackar den."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen honden radijsblaadjes eten?",
         "pl": "Czy psy mogą jeść nać rzodkiewki?",
         "cs": "Mohou psi jíst listy ředkviček?",
-        "hr": "Smiju li psi jesti lišće rotkvice?"
+        "hr": "Smiju li psi jesti lišće rotkvice?",
+        "sv": "Får hundar äta rädisblast?"
       },
       "a": {
         "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Geef je hond geen radijsloof, want dat kan een maag-darmontsteking veroorzaken.",
         "pl": "Nie. Nie dawaj psu naci rzodkiewki, bo może wywołać zapalenie żołądka i jelit.",
         "cs": "Ne. Nedávejte psovi nať ředkviček, protože může způsobit zánět žaludku a střev.",
-        "hr": "Ne. Ne daj psu lišće rotkvice jer može izazvati gastroenteritis."
+        "hr": "Ne. Ne daj psu lišće rotkvice jer može izazvati gastroenteritis.",
+        "sv": "Nej. Ge inte hunden rädisblasten, eftersom den kan ge magtarminflammation."
       }
     },
     {
@@ -148,7 +158,8 @@
         "nl": "Mogen honden mierikswortel eten?",
         "pl": "Czy psy mogą jeść chrzan?",
         "cs": "Mohou psi jíst křen?",
-        "hr": "Smiju li psi jesti hren?"
+        "hr": "Smiju li psi jesti hren?",
+        "sv": "Får hundar äta pepparrot?"
       },
       "a": {
         "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
@@ -161,7 +172,8 @@
         "nl": "Nee. Mierikswortel is eigenlijk geen radijs. Geef het je hond niet.",
         "pl": "Nie. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom.",
         "cs": "Ne. Křen ve skutečnosti ředkvička není a psům se nemá dávat.",
-        "hr": "Ne. Hren zapravo nije rotkvica i ne treba ga davati psima."
+        "hr": "Ne. Hren zapravo nije rotkvica i ne treba ga davati psima.",
+        "sv": "Nej. Pepparrot är egentligen ingen rädisa och ska inte ges till hundar."
       }
     }
   ],
@@ -276,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "25359a4da37d3ddbbe129707d68221c0730a40c12cafce1d7839db1289e59547"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ebb12304618a0c777491e9bb4537fb73a065aac5ac53011bef69d28b96b24760"
     }
   }
 }

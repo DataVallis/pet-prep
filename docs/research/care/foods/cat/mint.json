@@ -12,7 +12,8 @@
     "nl": "Munt (tuinmunt)",
     "pl": "Mięta (mięta ogrodowa)",
     "cs": "Máta (máta zahradní)",
-    "hr": "Metvica (vrtna metvica)"
+    "hr": "Metvica (vrtna metvica)",
+    "sv": "Mynta (kryddmynta)"
   },
   "question": {
     "en": "Can cats eat mint?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten munt eten?",
     "pl": "Czy koty mogą jeść miętę?",
     "cs": "Mohou kočky jíst mátu?",
-    "hr": "Smiju li mačke jesti metvicu?"
+    "hr": "Smiju li mačke jesti metvicu?",
+    "sv": "Får katter äta mynta?"
   },
   "url_slug": {
     "en": "mint",
@@ -38,7 +40,8 @@
     "nl": "munt",
     "pl": "mieta",
     "cs": "mata",
-    "hr": "metvica"
+    "hr": "metvica",
+    "sv": "mynta"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Nee, geef je kat geen munt. De ASPCA noemt tuinmunt giftig voor katten vanwege de etherische oliën; als een kat er veel van eet, kan dat braken en diarree veroorzaken. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts.",
     "pl": "Nie, nie dawaj kotu mięty. ASPCA uznaje miętę ogrodową za toksyczną dla kotów z powodu olejków eterycznych; zjedzenie jej dużej ilości może wywołać wymioty i biegunkę. Jeśli kot zjadł trochę mięty, skontaktuj się z weterynarzem.",
     "cs": "Ne, kočce mátu nedávejte. ASPCA řadí mátu zahradní mezi rostliny toxické pro kočky kvůli obsahu éterických olejů; po snědení většího množství může způsobit zvracení a průjem. Pokud kočka mátu snědla, obraťte se na veterináře.",
-    "hr": "Ne, ne daj mački metvicu. ASPCA vrtnu metvicu navodi kao otrovnu za mačke zbog eteričnih ulja; veća količina može izazvati povraćanje i proljev. Ako je mačka pojela nešto metvice, obrati se veterinaru."
+    "hr": "Ne, ne daj mački metvicu. ASPCA vrtnu metvicu navodi kao otrovnu za mačke zbog eteričnih ulja; veća količina može izazvati povraćanje i proljev. Ako je mačka pojela nešto metvice, obrati se veterinaru.",
+    "sv": "Nej, ge inte katten mynta. ASPCA anger att kryddmynta är giftig för katter på grund av de eteriska oljorna, och om katten äter mycket kan den få kräkningar och diarré. Om katten har ätit av den ska du kontakta veterinären."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -65,7 +69,8 @@
     "nl": "De ASPCA noemt munt (Mentha-soorten, ook wel tuinmunt genoemd) giftig voor katten. Als giftige stof noemt de ASPCA etherische oliën, en als verschijnselen braken en diarree wanneer een kat er veel van heeft gegeten. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten.",
     "pl": "ASPCA uznaje miętę (gatunki Mentha, zwane też miętą ogrodową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje olejki eteryczne i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie.",
     "cs": "ASPCA řadí mátu (rod Mentha, též máta zahradní) mezi rostliny toxické pro kočky. Jako toxickou látku uvádí éterické oleje a po snědení velkého množství zvracení a průjem. ASPCA také upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. Kočky rostliny ve stravě nepotřebují: PDSA uvádí, že kočky jsou masožravci, kteří potřebují živiny obsažené v mase.",
-    "hr": "ASPCA navodi metvicu (vrste roda Mentha, poznate i kao vrtna metvica) kao otrovnu za mačke. Kao otrovnu tvar navodi eterična ulja, a uz veće pojedene količine navodi povraćanje i proljev. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa."
+    "hr": "ASPCA navodi metvicu (vrste roda Mentha, poznate i kao vrtna metvica) kao otrovnu za mačke. Kao otrovnu tvar navodi eterična ulja, a uz veće pojedene količine navodi povraćanje i proljev. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa.",
+    "sv": "ASPCA anger mynta (Mentha-arter, även kallad kryddmynta) som giftig för katter. Som giftigt ämne anges eteriska oljor, och vid stora mängder nämns kräkningar och diarré. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött."
   },
   "signs": {
     "en": [
@@ -122,6 +127,11 @@
       "Povraćanje",
       "Proljev",
       "Želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orolig mage"
     ]
   },
   "what_to_do": {
@@ -135,7 +145,8 @@
     "nl": "Heeft je kat munt gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet.",
     "pl": "Jeśli kot zjadł miętę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów.",
     "cs": "Pokud kočka snědla mátu, ihned se obraťte na veterináře. Nečekejte, až se objeví příznaky.",
-    "hr": "Ako je mačka pojela metvicu, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi."
+    "hr": "Ako je mačka pojela metvicu, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi.",
+    "sv": "Om katten har ätit mynta ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp."
   },
   "serving": null,
   "child": {
@@ -149,7 +160,8 @@
     "nl": "Munt is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
     "pl": "Mięta nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
     "cs": "Máta není pamlsek pro kočky. Když ji kočička okusuje, řekni to dospělému, aby mohl zavolat veterináři.",
-    "hr": "Metvica nije poslastica za mačke. Ako mačkica zagrize malo metvice, reci odrasloj osobi da nazove veterinara."
+    "hr": "Metvica nije poslastica za mačke. Ako mačkica zagrize malo metvice, reci odrasloj osobi da nazove veterinara.",
+    "sv": "Mynta är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären."
   },
   "faq": [
     {
@@ -164,7 +176,8 @@
         "nl": "Is kattenkruid een soort munt?",
         "pl": "Czy kocimiętka to rodzaj mięty?",
         "cs": "Je šanta kočičí druh máty?",
-        "hr": "Je li mačja metvica vrsta metvice?"
+        "hr": "Je li mačja metvica vrsta metvice?",
+        "sv": "Är kattmynta en sorts mynta?"
       },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -177,7 +190,8 @@
         "nl": "Kattenkruid hoort bij de muntfamilie, zoals VCA opmerkt, maar het is een aparte plant. De ASPCA vermeldt het apart: veel katten zijn dol op kattenkruid, maar als ze het opeten, kunnen ze ervan gaan braken en diarree krijgen.",
         "pl": "Kocimiętka należy do rodziny miętowatych, jak zauważa VCA, ale jest osobną rośliną. ASPCA wymienia ją osobno: wiele kotów kocimiętkę uwielbia, ale jej zjedzenie może wywołać wymioty i biegunkę.",
         "cs": "Šanta kočičí patří do stejné čeledi (hluchavkovité) jako máta, jak uvádí VCA, je to ale samostatná rostlina. ASPCA ji uvádí zvlášť: mnoho koček šantu miluje, ale po jejím snědení může zvracet a mít průjem.",
-        "hr": "Mačja metvica pripada istoj biljnoj porodici kao metvica, kako napominje VCA, ali je zasebna biljka. ASPCA je navodi zasebno: mnoge je mačke vole, ali jedenje može izazvati povraćanje i proljev."
+        "hr": "Mačja metvica pripada istoj biljnoj porodici kao metvica, kako napominje VCA, ali je zasebna biljka. ASPCA je navodi zasebno: mnoge je mačke vole, ali jedenje može izazvati povraćanje i proljev.",
+        "sv": "Kattmynta tillhör familjen kransblommiga växter, precis som mynta, vilket VCA påpekar, men det är en egen växt. ASPCA tar upp den för sig: många katter älskar kattmynta, men om katten äter den kan den få kräkningar och diarré."
       }
     }
   ],
@@ -288,6 +302,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "30cad82a14801c6e3fd7b96e78e42abf14076c225b4311ebdf63b92658c0734d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a1e052fd3126aa63e8c714b7a0dd54685ffd48ca899dfe0b40f0fbca02c128d4"
     }
   }
 }
