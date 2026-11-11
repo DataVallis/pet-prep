@@ -671,6 +671,13 @@ return [
         ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
         ['key' => 'blue-tan', 'value' => 'blue and tan', 'en' => 'Blue and tan', 'sl' => 'Modro-rjavkast'],
     ],
+    // M5-R10-103: FCI-Standard N° 145 (S783) lion yellow, red, reddish brown, sandy — always with a black mask; same order and values as breed_appearance.php.
+    'leonberger' => [
+        ['key' => 'lion-yellow', 'value' => 'lion yellow with a black mask', 'en' => 'Lion yellow', 'sl' => 'Levje rumen'],
+        ['key' => 'red', 'value' => 'red with a black mask', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'red-brown', 'value' => 'reddish brown with a black mask', 'en' => 'Reddish brown', 'sl' => 'Rdečkasto rjav'],
+        ['key' => 'sandy', 'value' => 'sandy cream with a black mask', 'en' => 'Sandy', 'sl' => 'Peščen'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -1240,6 +1240,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BORDER_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-102)';
 
     /**
+     * M5-R10-103 Leonberger (unattended run 2026-11-11, data.json proposed_game_parameters.leonberger.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S780 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × McMillan 2024 median 10.0 y via Dogs Trust S123 — not provisional),
+     * arrival 2 / 9 / 36 / 90, learning multiplier 1.0 (not ranked by Coren, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_LEONBERGER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-103)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1568,6 +1577,10 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'month', 'S763', 'a nail trim) every month or two will be beneficial.', 'proposed_game_parameters.flat_coated_retriever.nail_care', '"every month or two" → the lower bound, every 4 weeks'],
             'bath' => [1, 'month', 'S763', 'an occasional spa day (where your Flat-Coated Retriever gets a bath', 'proposed_game_parameters.flat_coated_retriever.bathing', '"every month or two" (same PetMD sentence) → the lower bound, every 4 weeks (no groomer, no tooth frequency → no task)'],
         ],
+        'leonberger' => [
+            'ear_cleaning' => [1, 'two_weeks', 'S785', '(such as Epi-Otic or TrizULTRA) every two to three weeks.', 'proposed_game_parameters.leonberger.ear_care', '"every two to three weeks" → the lower bound, every 2 weeks'],
+            'bath' => [1, 'two_weeks', 'S785', 'Typically, they should be bathed every two to four weeks.', 'proposed_game_parameters.leonberger.bathing', '"every two to four weeks" → the lower bound, every 2 weeks (no nail, tooth or groomer frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1689,6 +1702,7 @@ class BreedStageParamsSeeder extends Seeder
         'dogue_de_bordeaux' => [1, 'S756', 'Grooming: Once a week', 'high', false],
         'flat_coated_retriever' => [2, 'S763', 'A twice-weekly brushing routine is ideal to maintain their luxurious coat', 'high', false],
         'border_terrier' => [2, 'S770', 'They have short, coarse wiry coats and so a brush a couple of times a week should help keep on top of dead hairs', 'high', false],
+        'leonberger' => [3, 'S784', 'Brushing two to three times a week helps manage loose fur and prevent matting.', 'high', false],
     ];
 
     /**
@@ -1743,6 +1757,7 @@ class BreedStageParamsSeeder extends Seeder
         'dogue_de_bordeaux' => ['S757', 'Remember to leave a gap after eating and before exercising.'],
         'flat_coated_retriever' => ['S763', 'Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.'],
         'border_terrier' => ['S770', 'Remember to leave at a gap after eating and before exercising.'],
+        'leonberger' => ['S785', 'Avoid exercise right before and after mealtimes.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1851,13 +1866,14 @@ class BreedStageParamsSeeder extends Seeder
         'dogue_de_bordeaux' => ['S757', 'Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.'],
         'flat_coated_retriever' => ['S763', 'They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.'],
         'border_terrier' => ['S770', "It's really important that Border Terrier puppies from a breeder get the right early socialisation"],
+        'leonberger' => ['S784', 'Due to their size alone, early training and socialisation is essential.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2678,6 +2694,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::DogueDeBordeaux => self::dogueDeBordeauxProfile(),
             BreedType::FlatCoatedRetriever => self::flatCoatedRetrieverProfile(),
             BreedType::BorderTerrier => self::borderTerrierProfile(),
+            BreedType::Leonberger => self::leonbergerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9829,6 +9846,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'border_terrier.lifespan.median_uk',
                 'quote' => 'Border Terrier (x̃ = 14.2, HR 0.5, 0.5–0.6)',
                 'notes' => 'McMillan et al. 2024 median (S771, results text). RKC "Over 12 years" (S769), PetMD 12–15 years (S774). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Leonberger (M5-R10-103). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_LEONBERGER); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the McMillan 2024 median (via Dogs Trust S123) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function leonbergerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_LEONBERGER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.leonberger.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 10.0 y (Dogs Trust table S123) = 7.5 y = 90 months. Not chosen: 84 (Dogs Trust > 7 y, S14); 63 (0.75 × 7 y, Woodgreen S784 / PetMD S785 lower bound).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.leonberger.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S780', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.leonberger.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S780) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S781) "over 2 hours of exercise daily" agrees; Woodgreen (S784) 60–90 minutes — alternative.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.leonberger.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[30.0, 50.0], [
+                'unit' => 'kg', 'source_id' => 'S781', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'leonberger.adult_weight.pdsa',
+                'quote' => 'Average weight: 30-50 kg',
+                'notes' => 'PDSA key fact (S781), one range for both sexes. FCI-Standard N° 145 (S783) and AKC (S786) give no weight. Woodgreen (S784) 41–77 kg, PetMD (S785) up to 170 lb — alternatives.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'leonberger.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (Woodgreen "Giant", S784; PetMD up to 170 lb, S785; joints develop into the second year, S784).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'leonberger.trainability.coren_rank',
+                'notes' => 'Not ranked: the Leonberger is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-11; 79 ranks).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.leonberger.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (PDSA S781: patient, reward-based training). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'leonberger.lifespan.median_uk',
+                'quote' => 'Leonberger 10.0 9.5 - 10.3 676 321',
+                'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). RKC / PDSA "Under 10 years" (S780, S781), Woodgreen 7–9 years (S784) and PetMD 7 years (S785) are the basis of the shorter_lifespan chip only. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

@@ -818,6 +818,13 @@ class FalAiService
                 .'dark eyes with a keen expression, small V-shaped ears dropping forward close to the cheek, '
                 .'a moderately short natural tail, thick at the base and tapering, carried gaily but not curled over the back, '
                 .'alert, game expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-103: FCI-Standard N° 145 (S783) — a large, strong, muscular yet elegant dog, lion yellow with a black mask (first standard colour).
+            BreedType::Leonberger => 'A large, strong, muscular yet elegant Leonberger, lion yellow with a black mask, '
+                .'with a medium soft to coarse, long, close-fitting double coat, a mane on the neck and chest, feathered front legs and ample breeches, '
+                .'a head deeper than broad and elongated, a moderate stop, a rather long muzzle with a slightly arched nasal bridge and a black nose, '
+                .'medium-size oval brown eyes, medium pendant ears set high and hanging close to the head, '
+                .'a long, very well furnished natural tail hanging straight down, '
+                .'calm, friendly, confident expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1962,6 +1969,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'harsh, dense, wiry close-lying coat with a close undercoat',
                 'markings' => 'dark muzzle, at most a little white on the chest, never white feet',
+            ],
+            // M5-R10-103: standard colours only (FCI S783 lion yellow, red, reddish brown, sandy — always with a black mask); never black as the basic colour.
+            BreedType::Leonberger => [
+                'color_scheme' => 'lion yellow with a black mask',
+                'eye_color' => 'brown',
+                'fur_texture' => 'medium soft to coarse, long, close-fitting double coat with a mane and feathering',
+                'markings' => 'black mask, black hair tips allowed, at most a small white patch on the chest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -103,6 +103,7 @@ return [
     'dogue_de_bordeaux' => 'Dogue de Bordeaux',
     'flat_coated_retriever' => 'Flat-Coated Retriever',
     'border_terrier' => 'Border Terrier',
+    'leonberger' => 'Leonberger',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

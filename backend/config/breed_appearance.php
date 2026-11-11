@@ -794,6 +794,12 @@
 | feathered legs and tail, small ears close to the head, short straight tail (S761). Not a welfare breed (RKC Breed Watch
 | Category 1, S762). Black first with the highest weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Leonberger (M5-R10-103, docs/research/dog-data leonberger.appearance): "Lion yellow, red, reddish brown, also sandy
+| (pale yellow, cream coloured) and all combinations in between" "always with a black mask." (FCI-Standard N° 145, S783;
+| AKC S786 disqualifies any other coat colour); long, close-fitting double coat with a mane, pendant ears, well-furnished
+| tail (S783). Not a welfare breed (RKC Breed Watch Category 2 without points, S780). Lion yellow first with the highest
+| weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Border Terrier (M5-R10-102, docs/research/dog-data border_terrier.appearance): "Colour: Red, wheaten, grizzle and
 | tan, or blue and tan." (FCI-Standard N° 10, S768; "Any other colour or combination of colours unacceptable."); harsh,
 | dense wiry coat, short strong muzzle, small V-shaped ears dropping forward, moderately short tail (S768; AKC S776 dark
@@ -4467,6 +4473,39 @@ return [
             'muzzle' => ['short, strong, dark muzzle with a black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-103 (docs/research/dog-data/data.json leonberger.appearance; runbook rules 2026-10-10: standard colours
+    // only — lion yellow, red, reddish brown, sandy, always with a black mask (FCI-Standard N° 145, S783); natural tail).
+    'leonberger' => [
+        'display_name' => 'Leonberger',
+        // Colour frequencies are in no source (leonberger.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 145 (S783, https://dev.fci.be/Nomenclature/Standards/145g02-en.pdf), RKC breed page (S780), AKC standard (S786) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S780 "Size: Large"; S783 "Dogs 72 to 80 cm (recommended average 76 cm)."',
+            'build' => 'S783 "According to his original purpose, the Leonberger is a large, strong, muscular yet elegant dog."',
+            'coat_length' => 'S783 "Medium soft to coarse, profusely long, close fitting, never parted"; S786 "Leonbergers have a medium to long, water resistant, double coat on the body"',
+            'coat_color' => 'S783 "Lion yellow, red, reddish brown, also sandy (pale yellow, cream coloured) and all combinations in between" "always with a black mask." (weights unsourced)',
+            'ear_carriage' => 'S783 "Set on high and not far back, pendant, of medium size, hanging close to the head, fleshy."',
+            'eye_color' => 'S783 "Light brown to as dark brown as possible, medium size, oval, neither deep set, nor protruding"',
+            'tail' => 'S783 "Very well furnished; while standing, it hangs down straight; also in movement it is only slightly curved"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, strong, muscular yet elegant build with a deep, elongated head', 'weight' => 3], 'powerful, well-balanced giant body, slightly longer than tall'],
+            'coat_length' => ['medium soft to coarse, long, close-fitting double coat with a mane on the neck and chest, feathered front legs and ample breeches'],
+            // Standard colours only (S783), always with a black mask; lion yellow highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'lion yellow with a black mask', 'weight' => 40],
+                ['value' => 'red with a black mask', 'weight' => 25],
+                ['value' => 'reddish brown with a black mask', 'weight' => 20],
+                ['value' => 'sandy cream with a black mask', 'weight' => 15],
+            ],
+            'ear_carriage' => ['medium pendant ears set high, hanging close to the head'],
+            'eye_color' => ['medium-size oval brown eyes'],
+            'tail' => ['natural tail, long and very well furnished, hanging straight down'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
