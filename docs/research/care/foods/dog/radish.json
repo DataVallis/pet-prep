@@ -6,21 +6,24 @@
     "sl": "Redkvice",
     "de": "Radieschen",
     "pt": "Rabanetes",
-    "fr": "Radis"
+    "fr": "Radis",
+    "es": "Rábanos"
   },
   "question": {
     "en": "Can dogs eat radishes?",
     "sl": "Ali lahko psi jedo redkvice?",
     "de": "Dürfen Hunde Radieschen fressen?",
     "pt": "Os cães podem comer rabanetes?",
-    "fr": "Les chiens peuvent-ils manger des radis ?"
+    "fr": "Les chiens peuvent-ils manger des radis ?",
+    "es": "¿Pueden los perros comer rábanos?"
   },
   "url_slug": {
     "en": "radishes",
     "sl": "redkvice",
     "de": "radieschen",
     "pt": "rabanetes",
-    "fr": "radis"
+    "fr": "radis",
+    "es": "rabanos"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, a le v majhnih količinah. Zmerno so redkvice za pse varne, čeprav nekaterim psom okus ni všeč. Odstranite liste, redkvico operite, olupite in narežite na majhne koščke ter jo ponudite navadno. Hren in divja redkev nista za pse.",
     "de": "Ja, aber nur in kleinen Mengen. In Maßen sind Radieschen für Hunde unbedenklich, auch wenn manche Hunde den Geschmack nicht mögen. Entfernen Sie das Grün, waschen und schälen Sie das Radieschen, schneiden Sie es in kleine Stücke und geben Sie es pur. Meerrettich und wilder Rettich sind nichts für Hunde.",
     "pt": "Sim, mas só em pequenas quantidades. Com moderação, os rabanetes são seguros para os cães, embora alguns não gostem do sabor. Retira as folhas, lava, descasca e corta o rabanete em pedaços pequenos, e serve-o simples. O rábano-picante e o saramago (rabanete-bravo) não são para cães.",
-    "fr": "Oui, mais seulement en petite quantité. Avec modération, les radis sont sans danger pour les chiens, même si leur goût rebute certains d’entre eux. Retirez les fanes, lavez, pelez et coupez le radis en petits morceaux, et servez-le nature. Le raifort et les radis sauvages ne conviennent pas aux chiens."
+    "fr": "Oui, mais seulement en petite quantité. Avec modération, les radis sont sans danger pour les chiens, même si leur goût rebute certains d’entre eux. Retirez les fanes, lavez, pelez et coupez le radis en petits morceaux, et servez-le nature. Le raifort et les radis sauvages ne conviennent pas aux chiens.",
+    "es": "Sí, pero solo en pequeñas cantidades. Con moderación, los rábanos son seguros para los perros, aunque a algunos no les gusta el sabor. Quítales las hojas, lávalos, pélalos, córtalos en trozos pequeños y sírvelos al natural. El rábano picante y los rábanos silvestres no son para los perros."
   },
   "why": {
     "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
     "sl": "Zmerne količine redkvic psom ne škodujejo in morda imajo celo nekaj koristi za zdravje. Listi redkvice lahko povzročijo vnetje prebavil, zato jih ne dajajte. Veliki kosi ali cela redkvica lahko povzročijo zadušitev. Hren v resnici ni redkvica in ga psom ne dajajte, divja redkev pa je druga rastlina, ki za hišne ljubljenčke ni varna.",
     "de": "Kleine Mengen Radieschen schaden Hunden nicht und können sogar gesundheitliche Vorteile haben. Das Radieschengrün kann eine Magen-Darm-Entzündung (Gastroenteritis) auslösen und sollte deshalb nicht verfüttert werden. Große Stücke oder ein ganzes Radieschen können zur Erstickungsgefahr werden. Meerrettich ist eigentlich kein Radieschen und sollte nicht an Hunde verfüttert werden, und wilder Rettich ist ein anderes Gemüse, das für Haustiere nicht sicher ist.",
     "pt": "Quantidades moderadas de rabanetes não fazem mal aos cães, e pode até haver alguns benefícios para a saúde. As folhas do rabanete podem causar gastroenterite, por isso não devem ser dadas. Pedaços grandes ou um rabanete inteiro podem tornar-se um risco de engasgo. O rábano-picante não é, na verdade, um rabanete e não deve ser dado aos cães, e o saramago (rabanete-bravo) é outra planta que não é segura para os animais de estimação.",
-    "fr": "De petites quantités de radis ne font pas de mal aux chiens et peuvent même avoir quelques bienfaits pour la santé. Les fanes de radis peuvent provoquer une gastro-entérite : il ne faut donc pas les donner. Les gros morceaux ou un radis entier pourraient présenter un risque d’étouffement. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens, et les radis sauvages sont un autre légume, dangereux pour les animaux de compagnie."
+    "fr": "De petites quantités de radis ne font pas de mal aux chiens et peuvent même avoir quelques bienfaits pour la santé. Les fanes de radis peuvent provoquer une gastro-entérite : il ne faut donc pas les donner. Les gros morceaux ou un radis entier pourraient présenter un risque d’étouffement. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens, et les radis sauvages sont un autre légume, dangereux pour les animaux de compagnie.",
+    "es": "Las cantidades pequeñas de rábano no son perjudiciales para los perros e incluso pueden tener algún beneficio para su salud. Las hojas del rábano pueden provocar gastroenteritis, así que no se deben dar. Los trozos grandes o un rábano entero podrían suponer un riesgo de atragantamiento. El rábano picante no es en realidad un rábano y no se debe dar a los perros, y los rábanos silvestres no son la misma verdura que los rábanos comunes y no son seguros para las mascotas."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Kot vedno se je najbolje pred uvajanjem nove sestavine v pasjo prehrano najprej posvetovati z veterinarjem. Nekaterim psom okus ni všeč in redkvic ne bodo želeli jesti.",
     "de": "Wie immer gilt: Bevor Sie eine neue Zutat in die Ernährung Ihres Hundes aufnehmen, fragen Sie am besten zuerst Ihren Tierarzt. Manche Hunde mögen den Geschmack nicht und wollen keine Radieschen fressen.",
     "pt": "Como sempre, antes de juntares um novo ingrediente à alimentação do teu cão, convém falares primeiro com o veterinário. Alguns cães não gostam do sabor e não vão querer comer rabanetes.",
-    "fr": "Comme toujours, avant d’introduire un nouvel aliment dans l’alimentation de votre chien, mieux vaut d’abord demander conseil à votre vétérinaire. Le goût des radis rebute certains chiens, qui refuseront d’en manger."
+    "fr": "Comme toujours, avant d’introduire un nouvel aliment dans l’alimentation de votre chien, mieux vaut d’abord demander conseil à votre vétérinaire. Le goût des radis rebute certains chiens, qui refuseront d’en manger.",
+    "es": "Como siempre, antes de incluir un ingrediente nuevo en la dieta de tu perro, lo mejor es consultarlo con tu veterinario. Hay perros a los que no les gusta el sabor y no querrán comer rábanos."
   },
   "serving": {
     "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
     "sl": "Odstranite liste, nato redkvico operite, olupite in narežite na majhne koščke. Samo navadne redkvice brez začimb, v majhnih količinah.",
     "de": "Entfernen Sie das Grün, waschen und schälen Sie das Radieschen und schneiden Sie es in kleine Stücke. Nur pur und ungewürzt, in kleinen Mengen.",
     "pt": "Deita fora as folhas, depois lava e descasca o rabanete e corta-o em pedaços pequenos. Apenas rabanetes simples, sem temperos, em pequenas quantidades.",
-    "fr": "Jetez les fanes, puis lavez et pelez le radis et coupez-le en petits morceaux. Uniquement des radis nature, sans épices, en petite quantité."
+    "fr": "Jetez les fanes, puis lavez et pelez le radis et coupez-le en petits morceaux. Uniquement des radis nature, sans épices, en petite quantité.",
+    "es": "Quita y tira las hojas, lava y pela el rábano y córtalo en trozos pequeños. Solo rábanos al natural, sin condimentar, y en pequeñas cantidades."
   },
   "child": {
     "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
     "sl": "Psi lahko poskusijo nekaj majhnih koščkov redkvice. Odrasli najprej odstrani liste, redkvico olupi in nareže.",
     "de": "Hunde dürfen ein paar kleine Radieschenstücke probieren. Ein Erwachsener entfernt vorher das Grün, schält das Radieschen und schneidet es klein.",
     "pt": "Os cães podem provar uns pedacinhos de rabanete. Um adulto tira primeiro as folhas, descasca o rabanete e corta-o.",
-    "fr": "Les chiens peuvent goûter quelques petits morceaux de radis. Un adulte enlève d’abord les fanes, pèle le radis et le coupe en petits morceaux."
+    "fr": "Les chiens peuvent goûter quelques petits morceaux de radis. Un adulte enlève d’abord les fanes, pèle le radis et le coupe en petits morceaux.",
+    "es": "Los perros pueden probar unos trocitos pequeños de rábano. Antes, un adulto le quita las hojas, lo pela y lo corta."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo liste redkvice?",
         "de": "Dürfen Hunde Radieschenblätter fressen?",
         "pt": "Os cães podem comer folhas de rabanete?",
-        "fr": "Les chiens peuvent-ils manger les fanes de radis ?"
+        "fr": "Les chiens peuvent-ils manger les fanes de radis ?",
+        "es": "¿Pueden los perros comer hojas de rábano?"
       },
       "a": {
         "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
         "sl": "Ne. Psu ne dajajte listov redkvice, ker lahko povzročijo vnetje prebavil.",
         "de": "Nein. Geben Sie Ihrem Hund kein Radieschengrün, da es eine Magen-Darm-Entzündung auslösen kann.",
         "pt": "Não. Não dês ao teu cão as folhas do rabanete, porque podem causar gastroenterite.",
-        "fr": "Non. Ne donnez pas les fanes de radis à votre chien : elles peuvent provoquer une gastro-entérite."
+        "fr": "Non. Ne donnez pas les fanes de radis à votre chien : elles peuvent provoquer une gastro-entérite.",
+        "es": "No. No le des a tu perro las hojas del rábano, porque pueden provocar gastroenteritis."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo hren?",
         "de": "Dürfen Hunde Meerrettich fressen?",
         "pt": "Os cães podem comer rábano-picante?",
-        "fr": "Les chiens peuvent-ils manger du raifort ?"
+        "fr": "Les chiens peuvent-ils manger du raifort ?",
+        "es": "¿Pueden los perros comer rábano picante?"
       },
       "a": {
         "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
         "sl": "Ne. Hren v resnici ni redkvica in ga psom ne smemo dajati.",
         "de": "Nein. Meerrettich ist eigentlich kein Radieschen und sollte nicht an Hunde verfüttert werden.",
         "pt": "Não. O rábano-picante não é, na verdade, um rabanete e não deve ser dado aos cães.",
-        "fr": "Non. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens."
+        "fr": "Non. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens.",
+        "es": "No. El rábano picante en realidad no es un rábano y no se debe dar a los perros."
       }
     }
   ],
@@ -174,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b617037c3118ca2d04cc13f4117ccfb9c6c01cd9c4d92c8f0495404cfc0df3db"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "caf41a00f3e3ecb69df79a10d626669435a6cae50286182854c7d91e4973e549"
     }
   }
 }
