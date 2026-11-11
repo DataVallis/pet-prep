@@ -13,7 +13,8 @@
     "pl": "Bakłażan",
     "cs": "Lilek (baklažán)",
     "hr": "Patlidžan",
-    "sv": "Aubergine"
+    "sv": "Aubergine",
+    "da": "Aubergine"
   },
   "question": {
     "en": "Can dogs eat eggplant?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść bakłażana?",
     "cs": "Mohou psi jíst lilek?",
     "hr": "Smiju li psi jesti patlidžan?",
-    "sv": "Får hundar äta aubergine?"
+    "sv": "Får hundar äta aubergine?",
+    "da": "Må hunde spise aubergine?"
   },
   "url_slug": {
     "en": "eggplant",
@@ -41,7 +43,8 @@
     "pl": "baklazan",
     "cs": "lilek",
     "hr": "patlidzan",
-    "sv": "aubergine"
+    "sv": "aubergine",
+    "da": "aubergine"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, bakłażan jest bezpieczny dla psów, jeśli podajesz go z umiarem. Usuń szypułkę, umyj, obierz i ugotuj, a potem pokrój na malutkie kawałeczki na jeden kęs. Nigdy nie dawaj całego bakłażana i pamiętaj, że zbyt duża ilość może rozstroić układ pokarmowy.",
     "cs": "Ano, lilek je pro psy bezpečný, když se podává s mírou. Odstraňte stopku, lilek omyjte, oloupejte, tepelně upravte a nakrájejte na malá sousta. Celý lilek nikdy nedávejte a mějte na paměti, že příliš velké množství může způsobit zažívací potíže.",
     "hr": "Da, patlidžan je za pse siguran ako se daje umjereno. Ukloni peteljku, operi ga, oguli i skuhaj, pa ga nareži na sitne komadiće veličine zalogaja. Nikad ne daj cijeli patlidžan i imaj na umu da prevelika količina može izazvati probavne smetnje.",
-    "sv": "Ja, aubergine är ofarlig för hundar i lagom mängd. Ta bort skaftet, tvätta, skala och koka den, och skär den sedan i riktigt små munsbitar. Ge aldrig en hel aubergine, och kom ihåg att för mycket kan ge orolig mage."
+    "sv": "Ja, aubergine är ofarlig för hundar i lagom mängd. Ta bort skaftet, tvätta, skala och koka den, och skär den sedan i riktigt små munsbitar. Ge aldrig en hel aubergine, och kom ihåg att för mycket kan ge orolig mage.",
+    "da": "Ja, aubergine er sikker for hunde, når den gives med måde. Fjern stilken, vask, skræl og kog den, og skær den derefter i helt små, mundrette stykker. Giv aldrig en hel aubergine, og husk at for meget kan give problemer med fordøjelsen."
   },
   "why": {
     "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -70,7 +74,8 @@
     "pl": "Jadalny owoc w normalnych ilościach nie jest tak naprawdę toksyczny, ale zawiera solaninę, naturalną substancję, którą roślina wykorzystuje do obrony. Najwięcej jest jej w zielonych częściach rośliny, czyli w liściach i kwiatach, a nie w fioletowym owocu. Skórka nie jest toksyczna, ale może być trudna do przegryzienia i grozić zadławieniem, a zjedzenie zbyt dużej ilości bakłażana może rozstroić układ pokarmowy.",
     "cs": "Jedlý plod není při běžném množství skutečně toxický, ale obsahuje solanin, přírodní látku, kterou rostlina používá jako obranu. Nejvíc ho je v zelených částech rostliny, zejména v listech a květech, ne ve fialovém plodu. Slupka toxická není, ale špatně se žvýká a hrozí z ní udušení; příliš mnoho lilku navíc může způsobit zažívací potíže.",
     "hr": "Jestivi plod u uobičajenim količinama nije zaista otrovan, ali sadrži solanin, prirodnu kemijsku tvar kojom se biljka brani. Najveće su koncentracije u zelenim dijelovima biljke, točnije u listovima i cvjetovima, a ne u ljubičastom plodu. Kora nije otrovna, ali se teško žvače i može izazvati gušenje, a prevelika količina patlidžana može izazvati probavne smetnje.",
-    "sv": "Själva frukten är inte direkt giftig i normala mängder, men den innehåller solanin, ett naturligt ämne som växten använder som försvar. Halterna är högst i de gröna delarna av växten, framför allt bladen och blommorna, snarare än i den lila frukten. Skalet är inte giftigt men kan vara segt att tugga och ge risk för kvävning, och för mycket aubergine kan ge orolig mage."
+    "sv": "Själva frukten är inte direkt giftig i normala mängder, men den innehåller solanin, ett naturligt ämne som växten använder som försvar. Halterna är högst i de gröna delarna av växten, framför allt bladen och blommorna, snarare än i den lila frukten. Skalet är inte giftigt men kan vara segt att tugga och ge risk för kvävning, och för mycket aubergine kan ge orolig mage.",
+    "da": "Selve frugten er ikke giftig i normale mængder, men den indeholder solanin, et naturligt stof som planten bruger til at forsvare sig. Indholdet er størst i plantens grønne dele, især bladene og blomsterne, og ikke i den lilla frugt. Skrællen er ikke giftig, men den kan være svær at tygge og sætte sig fast i halsen, og hvis hunden spiser for meget aubergine, kan den få problemer med fordøjelsen."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Zacznij od małego kawałka obranego, ugotowanego bakłażana. Jeśli po zjedzeniu bakłażana pies ma biegunkę, wymioty, rozstrój żołądka, ból brzucha, mniej energii albo częściej musi się załatwiać, skontaktuj się z weterynarzem.",
     "cs": "Začněte malým kouskem oloupaného tepelně upraveného lilku. Pokud se po něm u psa objeví průjem, zvracení, žaludeční potíže, bolest břicha, malátnost nebo pokud pes potřebuje chodit ven častěji, obraťte se na veterináře.",
     "hr": "Počni s malim komadićem oguljenog, kuhanog patlidžana. Ako pas nakon jedenja patlidžana dobije proljev, povraćanje, probavne tegobe, bolove u trbuhu, bezvoljnost ili češće mora van, obrati se veterinaru.",
-    "sv": "Börja med en liten bit skalad, kokt aubergine. Får hunden diarré, kräkningar, orolig mage, ont i magen, orkeslöshet eller behöver gå ut oftare efter att ha ätit aubergine ska du kontakta veterinären."
+    "sv": "Börja med en liten bit skalad, kokt aubergine. Får hunden diarré, kräkningar, orolig mage, ont i magen, orkeslöshet eller behöver gå ut oftare efter att ha ätit aubergine ska du kontakta veterinären.",
+    "da": "Start med et lille stykke skrællet, kogt aubergine. Hvis din hund får diarré, opkast, mavebesvær, mavesmerter eller mindre energi, eller skal ud oftere end normalt efter at have spist aubergine, skal du kontakte din dyrlæge."
   },
   "serving": {
     "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -99,7 +105,8 @@
     "pl": "Usuń szypułkę, dokładnie umyj, żeby pozbyć się pestycydów, obierz ze skórki, pokrój na małe kawałeczki na jeden kęs i ugotuj przed podaniem. Nigdy nie dawaj całego bakłażana.",
     "cs": "Odstraňte stopku, lilek důkladně omyjte (kvůli zbytkům pesticidů), oloupejte, nakrájejte na malá sousta a před podáním tepelně upravte. Celý lilek nikdy nedávejte.",
     "hr": "Ukloni peteljku, temeljito operi da skineš pesticide, oguli, nareži na sitne komadiće veličine zalogaja i prije posluživanja skuhaj. Nikad cijeli patlidžan.",
-    "sv": "Ta bort skaftet, tvätta noga för att få bort bekämpningsmedel, skala, skär i små munsbitar och koka innan du serverar. Aldrig en hel aubergine."
+    "sv": "Ta bort skaftet, tvätta noga för att få bort bekämpningsmedel, skala, skär i små munsbitar och koka innan du serverar. Aldrig en hel aubergine.",
+    "da": "Fjern stilken, vask grundigt for at fjerne sprøjtegift, skræl, skær i små, mundrette stykker, og kog stykkerne før hunden får dem. Aldrig en hel aubergine."
   },
   "child": {
     "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -113,7 +120,8 @@
     "pl": "Pies może dostać odrobinę ugotowanego bakłażana. Dorosły obiera go, gotuje i kroi na malutkie kawałki.",
     "cs": "Psi mohou dostat trochu uvařeného lilku. Dospělý ho oloupe, uvaří a nakrájí na maličké kousky.",
     "hr": "Psi smiju malo kuhanog patlidžana. Odrasla osoba ga oguli, skuha i nareže na sitne komadiće.",
-    "sv": "Hundar kan få lite kokt aubergine. En vuxen skalar den, kokar den och skär den i riktigt små bitar."
+    "sv": "Hundar kan få lite kokt aubergine. En vuxen skalar den, kokar den och skär den i riktigt små bitar.",
+    "da": "Hunde må få lidt kogt aubergine. En voksen skræller den, koger den og skærer den i helt små stykker."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść surowego bakłażana?",
         "cs": "Mohou psi jíst syrový lilek?",
         "hr": "Smiju li psi jesti sirov patlidžan?",
-        "sv": "Får hundar äta rå aubergine?"
+        "sv": "Får hundar äta rå aubergine?",
+        "da": "Må hunde spise rå aubergine?"
       },
       "a": {
         "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -143,7 +152,8 @@
         "pl": "Mogą, ale po ugotowaniu warzywo jest miększe i psu jeszcze łatwiej je zjeść.",
         "cs": "Mohou, ale po uvaření je zelenina měkčí a pes ji snáz sní.",
         "hr": "Smiju, ali kuhanjem se povrće omekša pa ga je psu još lakše jesti.",
-        "sv": "Det går, men kokt aubergine är mjukare och därmed ännu lättare för hunden att äta."
+        "sv": "Det går, men kokt aubergine är mjukare och därmed ännu lättare för hunden att äta.",
+        "da": "Det kan de godt, men kogt aubergine er blød og endnu nemmere for hunden at spise."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pl": "Która część rośliny bakłażana zawiera najwięcej solaniny?",
         "cs": "Která část rostliny lilku obsahuje nejvíc solaninu?",
         "hr": "Koji dio biljke patlidžana ima najviše solanina?",
-        "sv": "Vilken del av auberginplantan innehåller mest solanin?"
+        "sv": "Vilken del av auberginplantan innehåller mest solanin?",
+        "da": "Hvilken del af auberginen har mest solanin?"
       },
       "a": {
         "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -173,7 +184,8 @@
         "pl": "Zielone części rośliny, czyli liście i kwiaty, a nie sam fioletowy owoc.",
         "cs": "Nejvíc solaninu je v zelených částech rostliny, konkrétně v listech a květech, a ne ve fialovém plodu.",
         "hr": "Zeleni dijelovi biljke, točnije listovi i cvjetovi, a ne sam ljubičasti plod.",
-        "sv": "De gröna delarna av plantan, framför allt bladen och blommorna, inte själva den lila frukten."
+        "sv": "De gröna delarna av plantan, framför allt bladen och blommorna, inte själva den lila frukten.",
+        "da": "De grønne dele af planten, især bladene og blomsterne – ikke selve den lilla frugt."
       }
     }
   ],
@@ -326,6 +338,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dc98246def1e2d4be69dd01098df82007650f37a2a82ebdf374f77f4959c4cfd"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af75727d8c0b3482b6bc50e995e409954993b2399dc67b72fb634d7c46be1432"
     }
   }
 }

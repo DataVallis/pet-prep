@@ -13,7 +13,8 @@
     "pl": "Mięta",
     "cs": "Máta",
     "hr": "Metvica",
-    "sv": "Mynta"
+    "sv": "Mynta",
+    "da": "Mynte"
   },
   "question": {
     "en": "Can dogs eat mint?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść miętę?",
     "cs": "Mohou psi jíst mátu?",
     "hr": "Smiju li psi jesti metvicu?",
-    "sv": "Får hundar äta mynta?"
+    "sv": "Får hundar äta mynta?",
+    "da": "Må hunde spise mynte?"
   },
   "url_slug": {
     "en": "mint",
@@ -41,7 +43,8 @@
     "pl": "mieta",
     "cs": "mata",
     "hr": "metvica",
-    "sv": "mynta"
+    "sv": "mynta",
+    "da": "mynte"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie, miętę lepiej trzymać z dala od psów. ASPCA uznaje miętę ogrodową za toksyczną dla psów z powodu olejków eterycznych, które po zjedzeniu dużej ilości mogą wywołać wymioty i biegunkę. Niebezpieczne mogą być też miętowa guma do żucia, miętowe cukierki i pasta do zębów, bo mogą zawierać ksylitol.",
     "cs": "Ne, psům je lepší mátu nedávat. ASPCA řadí mátu zahradní mezi rostliny toxické pro psy kvůli obsahu éterických olejů, které po snědení většího množství mohou způsobit zvracení a průjem. Nebezpečné mohou být také mátové žvýkačky, bonbony a zubní pasty, protože mohou obsahovat xylitol.",
     "hr": "Ne, metvicu je najbolje držati podalje od pasa. ASPCA navodi vrtnu metvicu kao otrovnu za pse zbog eteričnih ulja, koja pri većoj količini mogu izazvati povraćanje i proljev. Opasne mogu biti i žvakaće gume, bomboni i zubne paste s okusom metvice jer mogu sadržavati ksilitol.",
-    "sv": "Nej, det är bäst att hålla mynta borta från hundar. ASPCA anger att kryddmynta är giftig för hundar på grund av de eteriska oljorna, som kan ge kräkningar och diarré om hunden får i sig mycket. Tuggummi, godis och tandkräm med mintsmak kan också vara farliga, eftersom de kan innehålla xylitol."
+    "sv": "Nej, det är bäst att hålla mynta borta från hundar. ASPCA anger att kryddmynta är giftig för hundar på grund av de eteriska oljorna, som kan ge kräkningar och diarré om hunden får i sig mycket. Tuggummi, godis och tandkräm med mintsmak kan också vara farliga, eftersom de kan innehålla xylitol.",
+    "da": "Nej, mynte skal holdes væk fra hunde. ASPCA betragter havemynte som giftig for hunde på grund af de æteriske olier, som kan give opkast og diarré, hvis hunden spiser meget af den. Tyggegummi, slik og tandpasta med mynte kan også være farlige, fordi de kan indeholde xylitol."
   },
   "why": {
     "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
@@ -70,7 +74,8 @@
     "pl": "Mięta ogrodowa (Mentha) zawiera olejki eteryczne; ASPCA uznaje ją za toksyczną dla psów i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. Pet Poison Helpline również podaje, że mięta nie jest bezpieczna dla psów. Produkty zawierające miętę mogą też zawierać ksylitol, słodzik silnie toksyczny dla psów. Ponieważ sama roślina wywołuje objawy głównie po zjedzeniu dużych ilości, oceniamy ją jako niezalecaną; produkty miętowe z ksylitolem to nagły przypadek.",
     "cs": "Máta zahradní (Mentha) obsahuje éterické oleje; ASPCA ji řadí mezi rostliny toxické pro psy a po snědení velkého množství uvádí zvracení a průjem. Pet Poison Helpline také uvádí, že pro psy není máta bezpečná. Výrobky s mátou mohou navíc obsahovat xylitol, sladidlo, které je pro psy vysoce toxické. Protože samotná rostlina působí potíže hlavně ve velkém množství, řadíme ji mezi nedoporučené; výrobky s mátou a xylitolem představují naléhavý případ.",
     "hr": "Vrtna metvica (Mentha) sadrži eterična ulja; ASPCA je navodi kao otrovnu za pse, uz povraćanje i proljev nakon većih količina. Pet Poison Helpline također navodi da metvica nije sigurna za pse. Proizvodi koji sadrže metvicu mogu sadržavati i ksilitol, sladilo koje je za pse vrlo otrovno. Budući da sama biljka znakove uglavnom izaziva tek u velikim količinama, ocjenjujemo je kao namirnicu koju ne preporučujemo; proizvodi s metvicom i ksilitolom predstavljaju hitan slučaj.",
-    "sv": "Kryddmynta (Mentha) innehåller eteriska oljor. ASPCA anger den som giftig för hundar, med kräkningar och diarré när hunden har fått i sig stora mängder. Pet Poison Helpline skriver också att det inte är säkert för hundar att äta mynta. Produkter med mynta kan dessutom innehålla xylitol, ett sötningsmedel som är mycket giftigt för hundar. Eftersom själva växten framför allt ger symtom i stora mängder rekommenderar vi den inte. Produkter med mynta och xylitol är däremot ett akut fall."
+    "sv": "Kryddmynta (Mentha) innehåller eteriska oljor. ASPCA anger den som giftig för hundar, med kräkningar och diarré när hunden har fått i sig stora mängder. Pet Poison Helpline skriver också att det inte är säkert för hundar att äta mynta. Produkter med mynta kan dessutom innehålla xylitol, ett sötningsmedel som är mycket giftigt för hundar. Eftersom själva växten framför allt ger symtom i stora mängder rekommenderar vi den inte. Produkter med mynta och xylitol är däremot ett akut fall.",
+    "da": "Havemynte (Mentha) indeholder æteriske olier. ASPCA betragter den som giftig for hunde og nævner opkast og diarré efter store mængder. Pet Poison Helpline skriver også at hunde ikke trygt kan spise mynte. Produkter med mynte kan desuden indeholde xylitol, et sødemiddel som er meget giftigt for hunde. Selve planten giver hovedsageligt symptomer ved store mængder, og derfor anbefaler vi den ikke. Mynteprodukter med xylitol er derimod en nødsituation."
   },
   "signs": {
     "en": [
@@ -120,6 +125,10 @@
     "sv": [
       "Kräkningar",
       "Diarré"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré"
     ]
   },
   "what_to_do": {
@@ -134,7 +143,8 @@
     "pl": "Jeśli pies zjadł produkt miętowy, który może zawierać ksylitol (na przykład gumę do żucia, cukierki lub pastę do zębów), od razu zgłoś się do weterynarza. W razie zatrucia zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
     "cs": "Pokud váš pes snědl mátovou žvýkačku, bonbon nebo zubní pastu, které mohou obsahovat xylitol, okamžitě vyhledejte veterinární pomoc. V případě otravy se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
     "hr": "Ako je pas pojeo proizvod s metvicom, poput žvakaće gume, bombona ili zubne paste koji bi mogli sadržavati ksilitol, odmah potraži veterinarsku pomoć. U slučaju trovanja obrati se veterinaru ili centru za kontrolu otrovanja životinja.",
-    "sv": "Om hunden har ätit en myntaprodukt som tuggummi, godis eller tandkräm som kan innehålla xylitol ska du genast söka veterinärvård. Vid en akut förgiftning kontaktar du veterinären eller en giftrådgivning för djur."
+    "sv": "Om hunden har ätit en myntaprodukt som tuggummi, godis eller tandkräm som kan innehålla xylitol ska du genast söka veterinärvård. Vid en akut förgiftning kontaktar du veterinären eller en giftrådgivning för djur.",
+    "da": "Hvis din hund har spist et mynteprodukt som tyggegummi, slik eller tandpasta, der kan indeholde xylitol, skal du straks søge dyrlægehjælp. Ved mistanke om forgiftning skal du kontakte din dyrlæge eller giftrådgivning for dyr."
   },
   "serving": null,
   "child": {
@@ -149,7 +159,8 @@
     "pl": "Liście mięty i miętowe słodycze nie są dla psów. Jeśli pies znajdzie miętową gumę lub słodycze, od razu powiedz o tym dorosłemu.",
     "cs": "Lístky máty a mátové bonbony nejsou pro psy. Pokud pes najde mátovou žvýkačku nebo bonbony, hned to řekni dospělému.",
     "hr": "Listovi metvice i slatkiši s okusom metvice nisu za pse. Ako pas pronađe žvakaću gumu ili slatkiše s metvicom, odmah to reci odrasloj osobi.",
-    "sv": "Myntablad och mintgodis är inget för hundar. Om en hund hittar tuggummi eller godis med mintsmak, säg direkt till en vuxen."
+    "sv": "Myntablad och mintgodis är inget för hundar. Om en hund hittar tuggummi eller godis med mintsmak, säg direkt till en vuxen.",
+    "da": "Myntblade og slik med mynte er ikke til hunde. Hvis en hund finder tyggegummi eller slik med mynte, så sig det til en voksen med det samme."
   },
   "faq": [
     {
@@ -165,7 +176,8 @@
         "pl": "Czy miętowa guma do żucia lub cukierki są niebezpieczne dla psów?",
         "cs": "Jsou mátové žvýkačky nebo bonbony pro psy nebezpečné?",
         "hr": "Jesu li žvakaće gume i bomboni s okusom metvice opasni za pse?",
-        "sv": "Är tuggummi eller godis med mintsmak farligt för hundar?"
+        "sv": "Är tuggummi eller godis med mintsmak farligt för hundar?",
+        "da": "Er tyggegummi eller slik med mynte farligt for hunde?"
       },
       "a": {
         "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
@@ -179,7 +191,8 @@
         "pl": "Tak. Produkty miętowe, takie jak guma do żucia, cukierki i pasta do zębów, mogą być niebezpieczne dla psów, bo mogą zawierać ksylitol. Jeśli pies coś takiego zjadł, od razu zgłoś się do weterynarza.",
         "cs": "Ano. Výrobky s mátou, například žvýkačky, bonbony a zubní pasty, mohou být pro psy nebezpečné, protože mohou obsahovat xylitol. Pokud je váš pes snědl, okamžitě vyhledejte veterinární pomoc.",
         "hr": "Da. Proizvodi s metvicom, poput žvakaćih guma, bombona i zubnih pasta, mogu biti opasni za pse jer mogu sadržavati ksilitol. Ako je pas pojeo neki od njih, odmah potraži veterinarsku pomoć.",
-        "sv": "Ja. Produkter med mintsmak, som tuggummi, godis och tandkräm, kan vara farliga för hundar eftersom de kan innehålla xylitol. Om hunden har ätit något sådant ska du genast söka veterinärvård."
+        "sv": "Ja. Produkter med mintsmak, som tuggummi, godis och tandkräm, kan vara farliga för hundar eftersom de kan innehålla xylitol. Om hunden har ätit något sådant ska du genast söka veterinärvård.",
+        "da": "Ja. Mynteprodukter som tyggegummi, slik og tandpasta kan være farlige for hunde, fordi de kan indeholde xylitol. Hvis din hund har spist noget af det, skal du straks søge dyrlægehjælp."
       }
     }
   ],
@@ -295,6 +308,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4affb7395863e8b557da864cb9b2f83a07bf5f4c0c0a957ae4fca8b5c22ec85f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "339dbefa8b27a8493ecd24b8f79926b4f8bd207ac3badfeea4ae09285c2c2d8f"
     }
   }
 }
