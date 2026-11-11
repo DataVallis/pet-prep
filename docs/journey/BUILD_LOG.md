@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Darilni bon za 12-tedenski izziv: strežnik je pripravljen *(izklopljeno do izida v trgovinah)*
+
+**Kaj:** Strežnik zna sprejeti darilni bon s spletne strani (M6-S01). Bon se kupi prek Lemon Squeezy (49,99 €, velja 12 mesecev); koda bona je licenčni ključ Lemon Squeezy. Starš na spletu vnese kodo in e-naslov svojega računa v aplikaciji → družina dobi en kupljen 12-tedenski izziv, ki ga v aplikaciji dodeli ljubljenčku po svoji izbiri. Koda se najprej preveri pri Lemon Squeezy in porabi šele, ko je račun starša najden; vračilo v Lemon Squeezy bon razveljavi in izziv prekliče po istih pravilih kot vračilo v trgovini. Strežnik nikjer ne hrani kode (samo njen prstni odtis in zadnje 4 znake) in nobenega podatka kupca. Stikalo »Darilni boni« v administraciji je **izklopljeno**, dokler aplikacija ni v trgovinah. 64 novih testov za bon + 8 regresijskih testov, ki dokazujejo, da se nakupi v trgovini (RevenueCat) obnašajo popolnoma enako kot prej (posnetek odgovorov, posnet na `main` pred spremembo).
+**Zakaj je pomembno:** prvi način, da nekdo PetPrep **podari** — babica, boter ali prijatelj družine lahko kupi izziv, ne da bi imel aplikacijo; prvi prihodek mimo trgovin z aplikacijami.
+**Kako povedati:** 👩 »Izziv lahko podarite: kupite bon na petprep.si, natisnete ga in podarite. Starš ga unovči s svojim e-naslovom iz aplikacije.« *(načrt — ko je stran objavljena)* · 💼 »Neposredna prodaja prek spleta (Lemon Squeezy) poleg nakupa v aplikaciji; ista pravila vračil.« · 🛠 »Unovčitev: najprej preverjanje ključa brez učinka, potem račun, potem aktivacija — nikoli zunanji klic v transakciji baze; webhook s HMAC in idempotentnim dnevnikom.«
+
 ## 2026-11-11 — Naučen ukaz ne pada več (pri uporabnikih od 11. 11. 2026)
 
 **Kaj:** David je opazil, da so ukazi njegovega psa vsako jutro padli s 100 % na 98 %. Vzrok je bilo pravilo »dan brez cele vaje = −2 % vsem ukazom« (tudi vaja, končana po 1. krogu, ne šteje kot dnevna vaja). Odločil je: **naučen ukaz (100 %, »naučeno«) ne pada, tudi če en dan ni vaje.** Ukazi, ki še niso naučeni, še vedno počasi pozabljajo (−2 % na dan brez vaje). 6 novih testov.
