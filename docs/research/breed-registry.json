@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9607d0260e46f795fb3cc61a823a7cf6b106eb783b462e059f71383af937094a"
+      "sha256": "4bca3eac9df53db8916d052338e77b7a608266acacd9ab0eb9981e1a08b28852"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "294333a52f90c56e20720b3cbaf80c35cfbebe5535d906e3af7995c63d4bd6dd"
+      "sha256": "34d20ff10d35030fe683f5925752660d0fe13e6eb97ae522eeb1f76d95e9fbd6"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d135befbf1534e06523d5c620c06d5767f9d2fe0be158b39804302b1a39457e6"
+      "sha256": "1a6983f8f853ce12f19bbfba39c85d7f0fef4672d7e2ad0f8b37acad8d263e7b"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c865db93577ebe29626b9779679a3eee687315fb7dff59bcd2e5ea357099436f"
+      "sha256": "d58edd8db88a435f4829680650329319143fbeac0713527b3ea5f97d62cd4cc9"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "983d894ef45c6ae679597009e6e50fa7b5205ee52841328466c96b1d3a97a5c5"
+      "sha256": "269addaf56db4e093973d59de04e83ef4faaac1b94f5aef44bf8305cf957db05"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "bec3f0076fc3375cff0c2e305f3d4cf0deae31ca37238badaad827cd6d30dfe3"
+      "sha256": "0933a392db49cc6e1d7a0f2567e1b47cf740b7476e51b7becd6ec914cb8aa3a0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "ef1f2a042fbbc7f22f4445ea10063e28bc744283abfb31e59db910a346526de7"
+      "sha256": "3ba4d81ec6360bcd4078bd4d8b9247a9f94adb5a5d0a81d5d2b43e2a28682360"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 96,
+      "breed_count": 97,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -58250,6 +58250,542 @@
       ]
     },
     {
+      "id": "beauceron",
+      "species": "dog",
+      "order": 96,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Beauceron",
+        "sl": "Beauceron"
+      },
+      "slug": {
+        "en": "beauceron",
+        "sl": "beauceron"
+      },
+      "synonyms": {
+        "en": [
+          "Berger de Beauce",
+          "Beauce Sheepdog",
+          "Bas Rouge"
+        ],
+        "sl": [
+          "berger de beauce"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              65,
+              70
+            ],
+            "female": [
+              61,
+              68
+            ]
+          },
+          "source_ids": [
+            "S790"
+          ],
+          "ref": "beauceron.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              31.8,
+              49.9
+            ],
+            "female": [
+              31.8,
+              49.9
+            ]
+          },
+          "source_ids": [
+            "S268"
+          ],
+          "ref": "beauceron.adult_weight.akc",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "beauceron.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            12
+          ],
+          "source_ids": [
+            "S791"
+          ],
+          "ref": "beauceron.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S787"
+          ],
+          "ref": "beauceron.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 44,
+            "group": 1,
+            "section": 1,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S789"
+          ],
+          "ref": "beauceron.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S791"
+          ],
+          "ref": "beauceron.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S791"
+          ],
+          "ref": "beauceron.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S791"
+          ],
+          "ref": "beauceron.health.heart",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.exercise.adult",
+              "beauceron.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S791"
+            ],
+            "refs": [
+              "beauceron.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.suitability.rkc_size_of_home",
+              "beauceron.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.exercise.adult",
+              "beauceron.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S791"
+            ],
+            "refs": [
+              "beauceron.behaviour.time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.beauceron.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S787"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S787 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.beauceron.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.beauceron.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S787"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S787)"
+          },
+          {
+            "ref": "proposed_game_parameters.beauceron.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.beauceron.grooming",
+            "basis_source_ids": [
+              "S791"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »at least once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S787",
+          "S791"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S787"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S787"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S787"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S268",
+        "S787",
+        "S789",
+        "S790",
+        "S791",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -64163,6 +64699,34 @@
       "publisher": "PetMD — Katie Grzyb, DVM (published Mar. 14, 2023)",
       "title": "Leonberger",
       "url": "https://www.petmd.com/dog/breeds/leonberger"
+    },
+    {
+      "id": "S787",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Beauceron — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/"
+    },
+    {
+      "id": "S789",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "Breeds nomenclature — Berger de Beauce (44)",
+      "url": "https://fci.be/en/nomenclature/BEAUCERON-44.html"
+    },
+    {
+      "id": "S790",
+      "tier": "A",
+      "publisher": "Kennel Union of Southern Africa (copy of FCI Standard N° 44, effective 01/02/2017)",
+      "title": "Beauce Sheep Dog (Beauceron) — FCI standard (PDF)",
+      "url": "https://kusa.co.za/images/HERDING%20GROUP%202025/Beauce%20Sheep%20Dog%20[Beauceron]%20-%20FCI%20[02-2017].pdf"
+    },
+    {
+      "id": "S791",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (published Jul. 17, 2023)",
+      "title": "Beauceron",
+      "url": "https://www.petmd.com/dog/breeds/beauceron"
     },
     {
       "id": "C1",
