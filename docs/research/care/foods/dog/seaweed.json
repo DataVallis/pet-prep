@@ -7,7 +7,8 @@
     "de": "Algen (Nori)",
     "pt": "Algas (nori)",
     "fr": "Algues (nori)",
-    "es": "Algas (nori)"
+    "es": "Algas (nori)",
+    "it": "Alghe (nori)"
   },
   "question": {
     "en": "Can dogs eat seaweed?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Algen fressen?",
     "pt": "Os cães podem comer algas?",
     "fr": "Les chiens peuvent-ils manger des algues ?",
-    "es": "¿Pueden los perros comer algas?"
+    "es": "¿Pueden los perros comer algas?",
+    "it": "I cani possono mangiare le alghe?"
   },
   "url_slug": {
     "en": "seaweed",
@@ -23,7 +25,8 @@
     "de": "algen",
     "pt": "algas",
     "fr": "algues",
-    "es": "algas"
+    "es": "algas",
+    "it": "alghe"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Manche Sorten, in Maßen. Pure Nori oder Algenblätter ohne zugesetztes Salz, Knoblauch oder Gewürze sind in kleinen Mengen in Ordnung. Wilde Strandalgen sind etwas anderes: Sie können zu viel Salz enthalten, und getrocknete Stränge können im Magen aufquellen. Wenden Sie sich deshalb sofort an einen Tierarzt, wenn Ihr Hund sie frisst.",
     "pt": "Alguns tipos, com moderação. O nori simples ou as folhas de algas sem sal, alho ou temperos adicionados não fazem mal em pequenas quantidades. As algas selvagens da praia são diferentes: podem ter demasiado sal e as tiras secas podem expandir-se no estômago, por isso consulta imediatamente um veterinário se o teu cão as comer.",
     "fr": "Certaines algues, avec modération. Le nori nature ou les feuilles d’algues sans sel, ail ni assaisonnement ajoutés conviennent en petite quantité. Les algues sauvages de la plage sont un tout autre cas : elles peuvent contenir trop de sel et, une fois séchées, leurs filaments peuvent gonfler dans l’estomac ; consultez donc immédiatement un vétérinaire si votre chien en mange.",
-    "es": "Algunos tipos, con moderación. El nori al natural y las láminas de alga sin sal, ajo ni condimentos añadidos están bien en pequeñas cantidades. Las algas silvestres de la playa son otra cosa: pueden llevar demasiada sal y, si están secas, hincharse en el estómago. Si tu perro se las come, consulta enseguida con un veterinario."
+    "es": "Algunos tipos, con moderación. El nori al natural y las láminas de alga sin sal, ajo ni condimentos añadidos están bien en pequeñas cantidades. Las algas silvestres de la playa son otra cosa: pueden llevar demasiada sal y, si están secas, hincharse en el estómago. Si tu perro se las come, consulta enseguida con un veterinario.",
+    "it": "Solo alcuni tipi, e con moderazione. Le alghe nori o i fogli di alghe al naturale, senza sale, aglio o condimenti aggiunti, vanno bene in piccole quantità. Le alghe selvatiche della spiaggia sono un discorso diverso: possono contenere troppo sale e, secche, possono gonfiarsi nello stomaco, quindi se il tuo cane ne mangia consulta subito il veterinario."
   },
   "why": {
     "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -40,7 +44,8 @@
     "de": "Algen sind nahrhaft und enthalten Eiweiß, Eisen, Jod, Magnesium und Omega-3-Fettsäuren. Zu viele Algen können aber den Magen eines Hundes belasten, und zu viel Jod kann die Schilddrüse beeinträchtigen. Wilde Strandalgen können sehr viel Salz enthalten, sodass für den Hund die Gefahr einer Salzvergiftung besteht. Außerdem können sich ihre langen Stränge im Darm festsetzen oder versteckte Tiere und Parasiten mitbringen, und trockene wilde Algen können im Magen aufquellen.",
     "pt": "As algas são nutritivas e contêm proteína, ferro, iodo, magnésio e ómega-3. Mas demasiadas algas podem causar mal-estar no estômago do cão, e iodo a mais pode afetar a tiroide. As algas selvagens da praia podem conter sal em excesso, o que pode causar intoxicação por sal no cão; as tiras compridas podem ficar presas no intestino ou esconder pequenos animais ou parasitas, e as algas selvagens secas podem expandir-se no estômago.",
     "fr": "Les algues sont nutritives et contiennent des protéines, du fer, de l’iode, du magnésium et des oméga-3. Mais une trop grande quantité d’algues peut perturber l’estomac d’un chien, et trop d’iode peut affecter la thyroïde. Les algues sauvages de la plage peuvent contenir trop de sel, ce qui expose le chien à un risque d’intoxication au sel ; leurs longs filaments peuvent se coincer dans l’intestin ou abriter de petits animaux ou des parasites cachés, et les algues sauvages séchées peuvent gonfler dans l’estomac.",
-    "es": "Las algas son nutritivas y contienen proteínas, hierro, yodo, magnesio y omega-3. Pero si un perro come demasiadas, pueden sentarle mal al estómago, y un exceso de yodo puede afectar a su tiroides. Las algas silvestres de la playa pueden llevar un exceso de sal, con riesgo de intoxicación por sal; sus hebras largas pueden quedarse atascadas en el intestino o esconder animales y parásitos, y las secas pueden hincharse en el estómago."
+    "es": "Las algas son nutritivas y contienen proteínas, hierro, yodo, magnesio y omega-3. Pero si un perro come demasiadas, pueden sentarle mal al estómago, y un exceso de yodo puede afectar a su tiroides. Las algas silvestres de la playa pueden llevar un exceso de sal, con riesgo de intoxicación por sal; sus hebras largas pueden quedarse atascadas en el intestino o esconder animales y parásitos, y las secas pueden hincharse en el estómago.",
+    "it": "Le alghe sono nutrienti e contengono proteine, ferro, iodio, magnesio e omega-3. Ma troppe alghe possono causare disturbi di stomaco al cane e troppo iodio può influire sulla tiroide. Le alghe selvatiche della spiaggia possono contenere troppo sale, con il rischio di intossicazione da sale; i filamenti lunghi possono bloccarsi nell’intestino o portare con sé piccoli animali o parassiti nascosti, e le alghe selvatiche secche possono gonfiarsi nello stomaco."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Passen Sie am Strand auf, dass Ihr Hund keine wilden Algen frisst. Wenn er am Strand doch Algen gefressen hat, wenden Sie sich sofort an einen Tierarzt. Sie können Erbrechen, Durchfall, Schwäche und Antriebslosigkeit verursachen.",
     "pt": "Na praia, vigia o teu cão para que não coma algas selvagens. Se o teu cão comer algas na praia, consulta imediatamente um veterinário; podem causar vómitos, diarreia, fraqueza e letargia.",
     "fr": "Surveillez votre chien à la plage pour qu’il ne mange pas d’algues sauvages. S’il en mange, consultez immédiatement un vétérinaire : elles peuvent provoquer des vomissements, de la diarrhée, de la faiblesse et de la léthargie.",
-    "es": "Vigila a tu perro en la playa para que no coma algas silvestres. Si se come algas en la playa, consulta enseguida con un veterinario: pueden causarle vómitos, diarrea, debilidad y decaimiento."
+    "es": "Vigila a tu perro en la playa para que no coma algas silvestres. Si se come algas en la playa, consulta enseguida con un veterinario: pueden causarle vómitos, diarrea, debilidad y decaimiento.",
+    "it": "In spiaggia controlla che il tuo cane non mangi alghe selvatiche. Se il tuo cane mangia alghe in spiaggia, consulta subito il veterinario: possono causare vomito, diarrea, debolezza e abbattimento."
   },
   "serving": {
     "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -57,7 +63,8 @@
     "de": "Nur pure, ungewürzte Algen in kleinen Mengen, zum Beispiel abgepackte Nori-Blätter. Prüfen Sie die Zutatenliste, damit weder Gewürze noch Salz oder Knoblauch zugesetzt sind.",
     "pt": "Apenas algas simples, sem tempero, em pequenas quantidades, como as folhas de nori pré-embaladas. Lê a lista de ingredientes para teres a certeza de que não levam temperos, sal nem alho.",
     "fr": "Uniquement des algues nature, sans assaisonnement, en petite quantité, par exemple des feuilles de nori préemballées. Lisez la liste des ingrédients pour vous assurer qu’il n’y a ni assaisonnement, ni sel, ni ail ajoutés.",
-    "es": "Solo algas al natural y sin condimentar, en pequeñas cantidades, como las láminas de nori envasadas. Lee la lista de ingredientes para asegurarte de que no llevan condimentos, sal ni ajo añadidos."
+    "es": "Solo algas al natural y sin condimentar, en pequeñas cantidades, como las láminas de nori envasadas. Lee la lista de ingredientes para asegurarte de que no llevan condimentos, sal ni ajo añadidos.",
+    "it": "Solo alghe al naturale e senza condimenti, in piccole quantità, per esempio fogli di nori confezionati. Leggi l’elenco degli ingredienti per assicurarti che non contenga condimenti, sale o aglio aggiunti."
   },
   "child": {
     "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -65,7 +72,8 @@
     "de": "Hunde dürfen ein bisschen pure Nori probieren. Am Strand kannst du helfen, sie von Algen im Sand fernzuhalten.",
     "pt": "Os cães podem provar um bocadinho de nori simples. Na praia, ajuda a afastar os cães das algas que estão na areia.",
     "fr": "Les chiens peuvent goûter un peu de nori nature. À la plage, aide à les tenir éloignés des algues échouées sur le sable.",
-    "es": "Los perros pueden probar un poquito de nori al natural. En la playa, ayuda a que tu perro no se acerque a las algas de la arena."
+    "es": "Los perros pueden probar un poquito de nori al natural. En la playa, ayuda a que tu perro no se acerque a las algas de la arena.",
+    "it": "I cani possono assaggiare un po’ di nori al naturale. In spiaggia aiuta a tenerli lontani dalle alghe sulla sabbia."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Was ist, wenn mein Hund am Strand Algen frisst?",
         "pt": "E se o meu cão comer algas na praia?",
         "fr": "Que faire si mon chien mange des algues à la plage ?",
-        "es": "¿Qué hago si mi perro se come algas en la playa?"
+        "es": "¿Qué hago si mi perro se come algas en la playa?",
+        "it": "E se il mio cane mangia alghe in spiaggia?"
       },
       "a": {
         "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -83,7 +92,8 @@
         "de": "Wenden Sie sich sofort an einen Tierarzt. Wilde Algen können zu viel Salz enthalten, trockene Algen können im Magen aufquellen, und lange Stränge können sich im Darm festsetzen.",
         "pt": "Consulta imediatamente um veterinário. As algas selvagens podem conter sal em excesso, as algas secas podem expandir-se no estômago e as tiras compridas podem ficar presas no intestino.",
         "fr": "Consultez immédiatement un vétérinaire. Les algues sauvages peuvent contenir trop de sel, les algues séchées peuvent gonfler dans l’estomac et les longs filaments peuvent se coincer dans l’intestin.",
-        "es": "Consulta enseguida con un veterinario. Las algas silvestres pueden contener un exceso de sal, las algas secas pueden hincharse en el estómago y las hebras largas pueden quedarse atascadas en el intestino."
+        "es": "Consulta enseguida con un veterinario. Las algas silvestres pueden contener un exceso de sal, las algas secas pueden hincharse en el estómago y las hebras largas pueden quedarse atascadas en el intestino.",
+        "it": "Consulta subito il veterinario. Le alghe selvatiche possono contenere troppo sale, quelle secche possono gonfiarsi nello stomaco e i filamenti lunghi possono bloccarsi nell’intestino."
       }
     },
     {
@@ -93,7 +103,8 @@
         "de": "Dürfen Hunde Sushi oder Algen mit Sojasauce fressen?",
         "pt": "Os cães podem comer sushi ou algas com molho de soja?",
         "fr": "Les chiens peuvent-ils manger des sushis ou des algues avec de la sauce soja ?",
-        "es": "¿Pueden los perros comer sushi o algas con salsa de soja?"
+        "es": "¿Pueden los perros comer sushi o algas con salsa de soja?",
+        "it": "I cani possono mangiare il sushi o le alghe con salsa di soia?"
       },
       "a": {
         "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -101,7 +112,8 @@
         "de": "Nein. Sushi mit rohem Fisch kann Ihren Hund krank machen, und Sojasauce enthält viel Salz.",
         "pt": "Não. O sushi feito com peixe cru pode fazer mal ao teu cão, e o molho de soja tem muito sal.",
         "fr": "Non. Les sushis préparés avec du poisson cru peuvent rendre votre chien malade, et la sauce soja est très riche en sel.",
-        "es": "No. El sushi hecho con pescado crudo puede sentarle mal a tu perro, y la salsa de soja tiene mucha sal."
+        "es": "No. El sushi hecho con pescado crudo puede sentarle mal a tu perro, y la salsa de soja tiene mucha sal.",
+        "it": "No. Il sushi con pesce crudo può far stare male il cane e la salsa di soia è ricca di sale."
       }
     }
   ],
@@ -208,6 +220,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "44b26b73d8a43692a9aafbb9c5c55fc9d47f2e4a908365736992e5d798b7818e"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf99863e70717003f94648b70784ace08b799eb7ca6d04bac06f1ffa1f8bd4a4"
     }
   }
 }
