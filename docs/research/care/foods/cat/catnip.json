@@ -10,7 +10,8 @@
     "es": "Hierba gatera",
     "it": "Erba gatta (nepeta)",
     "nl": "Kattenkruid",
-    "pl": "Kocimiętka"
+    "pl": "Kocimiętka",
+    "cs": "Šanta kočičí (catnip)"
   },
   "question": {
     "en": "Can cats eat catnip?",
@@ -21,7 +22,8 @@
     "es": "¿Pueden los gatos comer hierba gatera?",
     "it": "I gatti possono mangiare l’erba gatta?",
     "nl": "Mogen katten kattenkruid eten?",
-    "pl": "Czy koty mogą jeść kocimiętkę?"
+    "pl": "Czy koty mogą jeść kocimiętkę?",
+    "cs": "Mohou kočky jíst šantu kočičí?"
   },
   "url_slug": {
     "en": "catnip",
@@ -32,7 +34,8 @@
     "es": "hierba-gatera",
     "it": "erba-gatta",
     "nl": "kattenkruid",
-    "pl": "kocimietka"
+    "pl": "kocimietka",
+    "cs": "santa-kocici"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "es": "No para comerla. Oler la hierba gatera es inofensivo para los gatos, pero la ASPCA la incluye entre las plantas tóxicas para ellos, porque ingerirla puede provocar vómitos y diarrea. Deja que tu gato disfrute del olor en vez de comerse la planta.",
     "it": "Non come spuntino. Annusare l’erba gatta non fa male ai gatti, ma l’ASPCA la indica come tossica per i gatti perché mangiarla può causare vomito e diarrea. Lascia che il tuo gatto si goda il profumo, senza mangiare la pianta.",
     "nl": "Niet als traktatie. Snuffelen aan kattenkruid kan geen kwaad, maar de ASPCA noemt kattenkruid giftig voor katten, omdat het opeten ervan braken en diarree kan veroorzaken. Laat je kat dus liever van de geur genieten dan dat hij de plant opeet.",
-    "pl": "Nie jako przekąskę. Wąchanie kocimiętki jest dla kotów nieszkodliwe, ale ASPCA uznaje kocimiętkę za toksyczną dla kotów, bo jej zjedzenie może wywołać wymioty i biegunkę. Pozwól kotu cieszyć się zapachem, zamiast jeść roślinę."
+    "pl": "Nie jako przekąskę. Wąchanie kocimiętki jest dla kotów nieszkodliwe, ale ASPCA uznaje kocimiętkę za toksyczną dla kotów, bo jej zjedzenie może wywołać wymioty i biegunkę. Pozwól kotu cieszyć się zapachem, zamiast jeść roślinę.",
+    "cs": "Ne jako pamlsek. Čichat k šantě kočičí je pro kočky neškodné, ale ASPCA ji řadí mezi rostliny toxické pro kočky, protože po jejím snědení může dojít ke zvracení a průjmu. Raději nechte kočku užívat si vůni, než aby rostlinu jedla."
   },
   "why": {
     "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
@@ -55,7 +59,8 @@
     "es": "Las fuentes no coinciden, así que seguimos el criterio más estricto. International Cat Care dice que la hierba gatera funciona cuando el gato huele su aceite y que sus efectos son inofensivos, no generan adicción y duran poco, y Cats Protection sugiere plantarla para distraer a los gatos de otras plantas. La ASPCA, en cambio, incluye la hierba gatera (Nepeta cataria) entre las plantas tóxicas para los gatos: a muchos les encanta, pero puede provocar vómitos y diarrea, y a algunos los adormece y a otros los estimula.",
     "it": "Le fonti non concordano, quindi seguiamo la posizione più prudente. International Cat Care spiega che l’erba gatta agisce quando se ne annusa l’olio e che i suoi effetti sui gatti sono innocui, non danno dipendenza e durano poco, e Cats Protection suggerisce di piantare l’erba gatta per distrarre i gatti dalle altre piante. L’ASPCA, invece, indica l’erba gatta (Nepeta cataria) come tossica per i gatti: a molti gatti piace tantissimo, ma può causare vomito e diarrea, e in alcuni gatti provoca sedazione, in altri stimolazione.",
     "nl": "De bronnen zijn het niet met elkaar eens, dus volgen wij het strengere advies. Volgens International Cat Care werkt kattenkruid als een kat de olie ervan opsnuift, en is het effect op katten onschadelijk, niet verslavend en van korte duur. Cats Protection raadt aan kattenkruid te planten om katten van andere planten af te leiden. De ASPCA noemt kattenkruid (Nepeta cataria) echter giftig voor katten: veel katten zijn er dol op, maar het kan braken en diarree veroorzaken, en sommige katten worden er suf van, andere juist druk.",
-    "pl": "Źródła się różnią, więc przyjmujemy ostrzejsze stanowisko. International Cat Care podaje, że kocimiętka działa, gdy kot wącha jej olejek, a jej działanie na koty jest nieszkodliwe, nie uzależnia i szybko mija, a Cats Protection radzi posadzić kocimiętkę, żeby odciągnąć koty od innych roślin. ASPCA uznaje jednak kocimiętkę (Nepeta cataria) za toksyczną dla kotów: wiele kotów ją uwielbia, ale może wywołać wymioty i biegunkę, a u jednych kotów działa uspokajająco, a u innych pobudzająco."
+    "pl": "Źródła się różnią, więc przyjmujemy ostrzejsze stanowisko. International Cat Care podaje, że kocimiętka działa, gdy kot wącha jej olejek, a jej działanie na koty jest nieszkodliwe, nie uzależnia i szybko mija, a Cats Protection radzi posadzić kocimiętkę, żeby odciągnąć koty od innych roślin. ASPCA uznaje jednak kocimiętkę (Nepeta cataria) za toksyczną dla kotów: wiele kotów ją uwielbia, ale może wywołać wymioty i biegunkę, a u jednych kotów działa uspokajająco, a u innych pobudzająco.",
+    "cs": "Zdroje se liší, proto se držíme přísnějšího pohledu. International Cat Care uvádí, že šanta kočičí působí, když kočka čichá k jejímu oleji, a že její účinky na kočky jsou neškodné, nevyvolávají závislost a jsou krátkodobé; Cats Protection doporučuje šantu vysadit, aby odvedla pozornost koček od jiných rostlin. ASPCA však šantu kočičí (Nepeta cataria) řadí mezi rostliny toxické pro kočky: mnoho koček ji miluje, ale může způsobit zvracení a průjem a některé kočky utlumí, jiné naopak povzbudí."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Biegunka",
       "Nietypowa senność",
       "Nadmierne pobudzenie"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Nezvyklá ospalost",
+      "Přílišné vzrušení"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "es": "Si tu gato ha comido hierba gatera y tiene vómitos o diarrea, contacta con tu veterinario.",
     "it": "Se il tuo gatto ha mangiato erba gatta e ha vomito o diarrea, contatta il veterinario.",
     "nl": "Heeft je kat kattenkruid gegeten en moet hij braken of heeft hij diarree, neem dan contact op met je dierenarts.",
-    "pl": "Jeśli kot zjadł kocimiętkę i ma wymioty lub biegunkę, skontaktuj się z weterynarzem."
+    "pl": "Jeśli kot zjadł kocimiętkę i ma wymioty lub biegunkę, skontaktuj się z weterynarzem.",
+    "cs": "Pokud kočka snědla šantu kočičí a zvrací nebo má průjem, obraťte se na veterináře."
   },
   "serving": null,
   "child": {
@@ -134,7 +146,8 @@
     "es": "A muchos gatos les encanta el olor de la hierba gatera. Es para olerla y jugar, no para comerla.",
     "it": "A molti gatti piace tantissimo l’odore dell’erba gatta. Serve per annusare e giocare, non per mangiare.",
     "nl": "Veel katten zijn dol op de geur van kattenkruid. Het is om aan te snuffelen en mee te spelen, niet om op te eten.",
-    "pl": "Wiele kotów uwielbia zapach kocimiętki. Jest do wąchania i zabawy, nie do jedzenia."
+    "pl": "Wiele kotów uwielbia zapach kocimiętki. Jest do wąchania i zabawy, nie do jedzenia.",
+    "cs": "Mnoho koček miluje vůni šanty kočičí. Je na čichání a hraní, ne na jedení."
   },
   "faq": [
     {
@@ -147,7 +160,8 @@
         "es": "¿Por qué mi gato no reacciona a la hierba gatera?",
         "it": "Perché il mio gatto non reagisce all’erba gatta?",
         "nl": "Waarom reageert mijn kat niet op kattenkruid?",
-        "pl": "Dlaczego mój kot nie reaguje na kocimiętkę?"
+        "pl": "Dlaczego mój kot nie reaguje na kocimiętkę?",
+        "cs": "Proč moje kočka na šantu kočičí nereaguje?"
       },
       "a": {
         "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
@@ -158,7 +172,8 @@
         "es": "International Cat Care dice que la hierba gatera hace efecto en entre el 70 y el 80 % de los gatos y que la respuesta se hereda de los padres. No tiene ningún efecto en los gatitos hasta que superan los tres meses.",
         "it": "Secondo International Cat Care l’erba gatta fa effetto su circa il 70–80% dei gatti e la reazione è ereditaria, cioè si trasmette dai genitori. Sui gattini non ha alcun effetto finché non hanno più di tre mesi.",
         "nl": "Volgens International Cat Care reageert ongeveer 70–80% van de katten op kattenkruid, en die gevoeligheid erven ze van hun ouders. Bij kittens werkt het pas als ze ouder zijn dan drie maanden.",
-        "pl": "International Cat Care podaje, że kocimiętka działa na około 70–80% kotów, a reakcja jest dziedziczona po rodzicach. Na kocięta nie działa, dopóki nie mają ponad trzech miesięcy."
+        "pl": "International Cat Care podaje, że kocimiętka działa na około 70–80% kotów, a reakcja jest dziedziczona po rodzicach. Na kocięta nie działa, dopóki nie mają ponad trzech miesięcy.",
+        "cs": "International Cat Care uvádí, že šanta kočičí působí asi na 70–80 % koček a reakce se dědí po rodičích. Na koťata nemá žádný účinek, dokud nejsou starší než tři měsíce."
       }
     },
     {
@@ -171,7 +186,8 @@
         "es": "¿Es lo mismo la hierba gatera que la hierba para gatos?",
         "it": "L’erba gatta è la stessa cosa dell’erba per gatti?",
         "nl": "Is kattenkruid hetzelfde als kattengras?",
-        "pl": "Czy kocimiętka to to samo co trawa dla kotów?"
+        "pl": "Czy kocimiętka to to samo co trawa dla kotów?",
+        "cs": "Je šanta kočičí totéž co kočičí tráva?"
       },
       "a": {
         "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
@@ -182,7 +198,8 @@
         "es": "No. VCA explica que la hierba para gatos suele referirse a gramíneas de cereal, como la avena o el trigo, mientras que la hierba gatera pertenece a la familia de la menta.",
         "it": "No. VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena o frumento, mentre l’erba gatta appartiene alla famiglia della menta.",
         "nl": "Nee. VCA legt uit dat met kattengras meestal graansoorten zoals haver of tarwe worden bedoeld, terwijl kattenkruid tot de muntfamilie behoort.",
-        "pl": "Nie. VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies czy pszenica, a kocimiętka należy do rodziny miętowatych."
+        "pl": "Nie. VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies czy pszenica, a kocimiętka należy do rodziny miętowatych.",
+        "cs": "Ne. VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves nebo pšenice, zatímco šanta kočičí patří do stejné čeledi (hluchavkovité) jako máta."
       }
     }
   ],
@@ -295,6 +312,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "12e7547e54908c8707c5fb3ea904f2b5254a9c55de88ffa4ed0e1e44834f71e5"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6a2d4487397b1af9f066ac2b33faa98e0a047757bebaf98173614c87f460df3d"
     }
   }
 }

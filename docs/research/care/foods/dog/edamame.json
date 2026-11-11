@@ -10,7 +10,8 @@
     "es": "Edamame",
     "it": "Edamame",
     "nl": "Edamame",
-    "pl": "Edamame"
+    "pl": "Edamame",
+    "cs": "Edamame"
   },
   "question": {
     "en": "Can dogs eat edamame?",
@@ -21,7 +22,8 @@
     "es": "¿Pueden los perros comer edamame?",
     "it": "I cani possono mangiare gli edamame?",
     "nl": "Mogen honden edamame eten?",
-    "pl": "Czy psy mogą jeść edamame?"
+    "pl": "Czy psy mogą jeść edamame?",
+    "cs": "Mohou psi jíst edamame?"
   },
   "url_slug": {
     "en": "edamame",
@@ -32,7 +34,8 @@
     "es": "edamame",
     "it": "edamame",
     "nl": "edamame",
-    "pl": "edamame"
+    "pl": "edamame",
+    "cs": "edamame"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "es": "Sí, con moderación. Las habas de edamame al natural no son tóxicas para los perros, y unas pocas habas frescas como premio no le harán daño a la mayoría. Quítale las vainas duras, que pueden atragantarlo, y nunca le des edamame cocinado con sal, especias, salsa de soja ni aceite.",
     "it": "Sì, con moderazione. Gli edamame al naturale non sono tossici per i cani e qualche fagiolo fresco come premio non fa male alla maggior parte di loro. Togli i baccelli duri, che possono far soffocare, e non dare mai edamame cucinati con sale, spezie, salsa di soia o olio.",
     "nl": "Ja, met mate. Naturel edamameboontjes zijn niet giftig voor honden, en een paar verse boontjes als snoepje kunnen de meeste honden geen kwaad. Geef de taaie peulen niet, want daar kan een hond in stikken, en geef nooit edamame die met zout, kruiden, sojasaus of olie is bereid.",
-    "pl": "Tak, z umiarem. Zwykłe ziarna edamame nie są toksyczne dla psów, a kilka świeżych ziaren jako smakołyk nie zaszkodzi większości psów. Pomiń twarde strąki, bo grożą zadławieniem, i nigdy nie dawaj ziaren edamame ugotowanych z solą, przyprawami, sosem sojowym ani olejem."
+    "pl": "Tak, z umiarem. Zwykłe ziarna edamame nie są toksyczne dla psów, a kilka świeżych ziaren jako smakołyk nie zaszkodzi większości psów. Pomiń twarde strąki, bo grożą zadławieniem, i nigdy nie dawaj ziaren edamame ugotowanych z solą, przyprawami, sosem sojowym ani olejem.",
+    "cs": "Ano, s mírou. Neochucené sójové boby edamame nejsou pro psy toxické a několik čerstvých zrnek jako pamlsek většině psů neublíží. Tuhé lusky nechte stranou, protože hrozí udušení, a edamame uvařené se solí, kořením, sójovou omáčkou nebo olejem psovi nikdy nedávejte."
   },
   "why": {
     "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
@@ -55,7 +59,8 @@
     "es": "El edamame son habas de soja, ricas en fibra y envueltas en vainas duras. La soja es un alérgeno frecuente en los perros, y una reacción alérgica puede tardar en aparecer. La soja también puede provocar gases y, a veces, diarrea, y el exceso de fibra puede dar problemas de estómago. Las vainas, fibrosas y duras de masticar, son difíciles de digerir y suponen un riesgo de atragantamiento, sobre todo para los perros pequeños.",
     "it": "Gli edamame sono semi di soia, ricchi di fibre e racchiusi in baccelli coriacei. La soia è una causa frequente di allergie nei cani e la reazione allergica può non manifestarsi subito. La soia può anche causare flatulenza e, a volte, diarrea, e troppe fibre possono dare problemi di stomaco. I baccelli fibrosi e gommosi sono difficili da digerire e possono far soffocare, soprattutto i cani di piccola taglia.",
     "nl": "Edamame zijn sojabonen die veel vezels bevatten en in taaie peulen zitten. Een soja-allergie komt bij honden vaak voor, en een allergische reactie is misschien niet meteen te zien. Soja kan ook winderigheid en soms diarree veroorzaken, en te veel vezels kunnen maagklachten geven. De vezelige, taaie peulen zijn moeilijk te verteren en vormen een verstikkingsgevaar, vooral voor kleine honden.",
-    "pl": "Edamame to nasiona soi, bogate w błonnik i otoczone twardymi strąkami. Soja często uczula psy, a reakcja alergiczna może nie pojawić się od razu. Soja może też powodować gazy, a czasem biegunkę, zaś nadmiar błonnika – problemy z żołądkiem. Włókniste, twarde strąki są ciężkostrawne i grożą zadławieniem, zwłaszcza u małych psów."
+    "pl": "Edamame to nasiona soi, bogate w błonnik i otoczone twardymi strąkami. Soja często uczula psy, a reakcja alergiczna może nie pojawić się od razu. Soja może też powodować gazy, a czasem biegunkę, zaś nadmiar błonnika – problemy z żołądkiem. Włókniste, twarde strąki są ciężkostrawne i grożą zadławieniem, zwłaszcza u małych psów.",
+    "cs": "Edamame jsou sójové boby s vysokým obsahem vlákniny, uzavřené v tuhých luscích. Sója je u psů častým alergenem a alergická reakce se nemusí projevit hned. Sója může také způsobit plynatost a občas průjem, příliš mnoho vlákniny zase žaludeční potíže. Vláknité, žvýkavé lusky se špatně tráví a hrozí z nich udušení, zvlášť u malých psů."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "es": "Como la soja es un alérgeno frecuente, empieza con una cantidad muy pequeña para ver si tu perro tiene alergia. Los síntomas de una reacción alérgica, como picor, caída de pelo o infecciones de oído, pueden tardar en aparecer. La soja también puede provocar gases o diarrea.",
     "it": "Poiché la soia è una causa frequente di allergie, all’inizio offrine solo una quantità minima, per vedere se il cane reagisce. I segni di una reazione allergica, come prurito, perdita di pelo o infezioni alle orecchie, possono non comparire subito. La soia può inoltre causare gas o diarrea.",
     "nl": "Omdat een soja-allergie vaak voorkomt, geef je de eerste keer maar een heel klein beetje, om te zien of je hond allergisch reageert. Verschijnselen van een allergische reactie, zoals jeuk, haaruitval of oorontstekingen, zijn misschien niet meteen te zien. Soja kan ook winderigheid of diarree veroorzaken.",
-    "pl": "Soja często uczula, dlatego na początek daj tylko bardzo małą ilość, żeby sprawdzić, czy pies nie ma alergii. Objawy reakcji alergicznej, takie jak swędzenie, utrata sierści czy zapalenie uszu, mogą nie pojawić się od razu. Soja może też powodować gazy lub biegunkę."
+    "pl": "Soja często uczula, dlatego na początek daj tylko bardzo małą ilość, żeby sprawdzić, czy pies nie ma alergii. Objawy reakcji alergicznej, takie jak swędzenie, utrata sierści czy zapalenie uszu, mogą nie pojawić się od razu. Soja może też powodować gazy lub biegunkę.",
+    "cs": "Protože je sója častým alergenem, nabídněte nejprve jen velmi malé množství a ověřte, zda pes alergií netrpí. Příznaky alergické reakce, například svědění, vypadávání srsti nebo záněty uší, se nemusí objevit hned. Sója může také způsobit plynatost nebo průjem."
   },
   "serving": {
     "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
@@ -78,7 +84,8 @@
     "es": "Solo habas frescas y al natural, sacadas de la vaina y sin sal, especias, salsa de soja ni aceite. Unas pocas como premio ocasional; la clave es la moderación.",
     "it": "Solo fagioli freschi e al naturale, tolti dal baccello, senza sale, spezie, salsa di soia né olio. Pochi fagioli come premio occasionale: la moderazione è fondamentale.",
     "nl": "Alleen naturel, verse boontjes, uit de peul gehaald en zonder zout, kruiden, sojasaus of olie. Af en toe een paar boontjes als snoepje; met mate is het devies.",
-    "pl": "Tylko zwykłe, świeże ziarna wyjęte ze strąków, bez soli, przypraw, sosu sojowego i oleju. Kilka ziaren jako smakołyk od czasu do czasu; najważniejszy jest umiar."
+    "pl": "Tylko zwykłe, świeże ziarna wyjęte ze strąków, bez soli, przypraw, sosu sojowego i oleju. Kilka ziaren jako smakołyk od czasu do czasu; najważniejszy jest umiar.",
+    "cs": "Pouze neochucené čerstvé sójové boby vyloupnuté z lusků, bez soli, koření, sójové omáčky a oleje. Jen několik zrnek jako příležitostný pamlsek, vždy s mírou."
   },
   "child": {
     "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
@@ -89,7 +96,8 @@
     "es": "Los perros pueden comer unas pocas habas de edamame al natural. Antes, un adulto las saca de la vaina.",
     "it": "I cani possono assaggiare qualche edamame al naturale. Prima un adulto li toglie dal baccello.",
     "nl": "Honden mogen een paar naturel edamameboontjes knabbelen. Een volwassene haalt ze eerst uit de peul.",
-    "pl": "Pies może skubnąć kilka zwykłych ziaren edamame. Dorosły najpierw wyjmuje je ze strąka."
+    "pl": "Pies może skubnąć kilka zwykłych ziaren edamame. Dorosły najpierw wyjmuje je ze strąka.",
+    "cs": "Psi mohou ochutnat pár neochucených zrnek edamame. Dospělý je nejdřív vyloupne z lusku."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "es": "¿Pueden los perros comer edamame salado o sazonado?",
         "it": "I cani possono mangiare edamame salati o conditi?",
         "nl": "Mogen honden gezouten of gekruide edamame eten?",
-        "pl": "Czy psy mogą jeść edamame z solą lub przyprawami?"
+        "pl": "Czy psy mogą jeść edamame z solą lub przyprawami?",
+        "cs": "Mohou psi jíst solené nebo kořeněné edamame?"
       },
       "a": {
         "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
@@ -113,7 +122,8 @@
         "es": "No. Las especias, la sal, la salsa de soja y el aceite con los que se prepara el edamame pueden ser especialmente perjudiciales para los perros, así que nunca le des a tu perro edamame cocinado con ellos.",
         "it": "No. Spezie, sale, salsa di soia e olio usati per cucinare gli edamame possono essere particolarmente dannosi per i cani, quindi non dare mai edamame cucinati con questi ingredienti.",
         "nl": "Nee. Kruiden, zout, sojasaus en olie waarmee edamame wordt bereid, kunnen extra ongezond zijn voor honden. Geef dus nooit edamame die daarmee is bereid.",
-        "pl": "Nie. Przyprawy, sól, sos sojowy i olej, których używa się do przygotowania edamame, mogą być dla psów wyjątkowo niezdrowe, więc nigdy nie dawaj psu edamame z takimi dodatkami."
+        "pl": "Nie. Przyprawy, sól, sos sojowy i olej, których używa się do przygotowania edamame, mogą być dla psów wyjątkowo niezdrowe, więc nigdy nie dawaj psu edamame z takimi dodatkami.",
+        "cs": "Ne. Koření, sůl, sójová omáčka a olej, se kterými se edamame připravuje, mohou být pro psy obzvlášť nezdravé, proto jim nikdy nedávejte takto upravené edamame."
       }
     },
     {
@@ -126,7 +136,8 @@
         "es": "¿Pueden los perros comer las vainas del edamame?",
         "it": "I cani possono mangiare i baccelli degli edamame?",
         "nl": "Mogen honden de peulen van edamame eten?",
-        "pl": "Czy psy mogą jeść strąki edamame?"
+        "pl": "Czy psy mogą jeść strąki edamame?",
+        "cs": "Mohou psi jíst lusky edamame?"
       },
       "a": {
         "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
@@ -137,7 +148,8 @@
         "es": "Mejor no. Las vainas del edamame son fibrosas, duras y difíciles de masticar; a tu perro pueden resultarle difíciles de digerir y suponen un riesgo de atragantamiento, sobre todo en los perros pequeños.",
         "it": "Meglio di no. I baccelli degli edamame sono fibrosi, coriacei e gommosi: possono essere difficili da digerire per il tuo cane e possono far soffocare, soprattutto i cani di piccola taglia.",
         "nl": "Liever niet. Edamamepeulen zijn vezelig, taai en moeilijk te kauwen; je hond kan ze slecht verteren en ze vormen een verstikkingsgevaar, vooral voor kleine honden.",
-        "pl": "Lepiej nie. Strąki edamame są włókniste, twarde i trudne do przegryzienia; pies może mieć kłopot z ich strawieniem, a do tego grożą zadławieniem, zwłaszcza u małych psów."
+        "pl": "Lepiej nie. Strąki edamame są włókniste, twarde i trudne do przegryzienia; pies może mieć kłopot z ich strawieniem, a do tego grożą zadławieniem, zwłaszcza u małych psów.",
+        "cs": "Raději ne. Lusky edamame jsou vláknité, tuhé a žvýkavé; pes je může špatně strávit a hrozí z nich udušení, zvlášť u malých psů."
       }
     }
   ],
@@ -250,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "66c538e8840887e3beceebb1fdb7089883cd1325fb9d9a1731a9a8b2d90e8f62"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8873d93e8b4f9220574259db404529f5f8d6fc7d34dd55858d71e9970f6cceb0"
     }
   }
 }
