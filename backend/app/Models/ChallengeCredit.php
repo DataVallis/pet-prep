@@ -18,7 +18,9 @@ use Illuminate\Support\Carbon;
  *
  * @property int $id
  * @property int $family_id
- * @property int $purchase_event_id
+ * @property int|null $purchase_event_id null for a website gift credit (source web_gift)
+ * @property string $source store (RevenueCat) | web_gift (M6-S01 website voucher)
+ * @property int|null $gift_voucher_id
  * @property string $product_id
  * @property string|null $store
  * @property string|null $environment
@@ -36,6 +38,12 @@ use Illuminate\Support\Carbon;
  */
 class ChallengeCredit extends Model
 {
+    /** M6-S01: a store purchase through RevenueCat (every credit before M6-S01). */
+    public const SOURCE_STORE = 'store';
+
+    /** M6-S01: a website gift voucher (Lemon Squeezy) redeemed for the family. */
+    public const SOURCE_WEB_GIFT = 'web_gift';
+
     public const VIA_PARENT = 'parent';
 
     public const VIA_WEBHOOK = 'webhook';
@@ -55,7 +63,7 @@ class ChallengeCredit extends Model
     protected $fillable = [
         'family_id', 'purchase_event_id', 'product_id', 'store', 'environment', 'transaction_id', 'purchased_at',
         'pet_id', 'assigned_at', 'assigned_via', 'revoked_at', 'revoke_reason', 'revoke_event_id',
-        'transferred_at', 'transferred_from_family_id',
+        'transferred_at', 'transferred_from_family_id', 'source', 'gift_voucher_id',
     ];
 
     /**
@@ -86,6 +94,11 @@ class ChallengeCredit extends Model
     public function purchaseEvent(): BelongsTo
     {
         return $this->belongsTo(PurchaseEvent::class);
+    }
+
+    public function giftVoucher(): BelongsTo
+    {
+        return $this->belongsTo(GiftVoucher::class);
     }
 
     /**

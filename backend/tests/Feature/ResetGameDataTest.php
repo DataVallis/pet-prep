@@ -186,6 +186,20 @@ function rgSeed(): array
         'family_id' => $family->id, 'purchase_event_id' => $purchaseId, 'product_id' => 'petprep_challenge_12w', 'purchased_at' => $now,
         'pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => 'parent',
     ]);
+    // M6-S01: a redeemed website gift voucher, its web_gift credit and an LS ledger row go too.
+    $voucherId = rgInsert('gift_vouchers', [
+        'key_hash' => hash('sha256', 'rg-gift-key'), 'key_last4' => 'ab12', 'ls_license_key_id' => 9001, 'ls_order_id' => 9002,
+        'environment' => 'PRODUCTION', 'status' => 'redeemed', 'purchased_at' => $now, 'expires_at' => $now->copy()->addYear(),
+        'redeemed_at' => $now, 'family_id' => $family->id,
+    ]);
+    rgInsert('challenge_credits', [
+        'family_id' => $family->id, 'source' => 'web_gift', 'gift_voucher_id' => $voucherId, 'product_id' => 'lemonsqueezy:1',
+        'store' => 'LEMON_SQUEEZY', 'environment' => 'PRODUCTION', 'purchased_at' => $now,
+    ]);
+    rgInsert('lemonsqueezy_events', [
+        'idempotency_key' => hash('sha256', 'rg-ls-event'), 'event_name' => 'order_created', 'object_type' => 'orders',
+        'object_id' => 9002, 'ls_order_id' => 9002, 'store_id' => 1, 'payload' => json_encode(['x' => 1]), 'outcome' => 'recorded',
+    ]);
     // M6-U01: a consumed purchase intent goes with the game data.
     rgInsert('challenge_purchase_intents', [
         'family_id' => $family->id, 'parent_user_id' => $parent->id, 'pet_id' => $pet->id, 'expires_at' => $now,

@@ -85,6 +85,31 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Lemon Squeezy — website gift voucher (M6-S01, WEBSITE_SALES_SPEC §3.4)
+    |--------------------------------------------------------------------------
+    | The voucher code = a Lemon Squeezy license key of the gift product.
+    | Redeem: POST /api/gift/redeem (License API, no key needed). Refunds:
+    | POST /api/webhooks/lemonsqueezy, HMAC-SHA256 (`X-Signature`) with the
+    | signing secret. Empty secret / store / product → the webhook answers 503
+    | and redeem 503 (fail closed). Secrets — never log or show them.
+    */
+    'lemonsqueezy' => [
+        'webhook_secret' => env('LEMONSQUEEZY_WEBHOOK_SECRET'),
+        'store_id' => env('LEMONSQUEEZY_STORE_ID'),
+        'gift_product_id' => env('LEMONSQUEEZY_GIFT_PRODUCT_ID'),
+        // Empty = any variant of the gift product.
+        'gift_variant_id' => env('LEMONSQUEEZY_GIFT_VARIANT_ID'),
+        'api_base' => rtrim((string) env('LEMONSQUEEZY_API_BASE', 'https://api.lemonsqueezy.com'), '/'),
+        // Optional: only for crash recovery (list the key's instances). Never logged.
+        'api_key' => env('LEMONSQUEEZY_API_KEY'),
+        // Accept LS test-mode keys and webhooks (staging / dry run). Default false.
+        'accept_test_mode' => (bool) env('LEMONSQUEEZY_ACCEPT_TEST_MODE', false),
+        'timeout_seconds' => 10,
+        'connect_timeout_seconds' => 5,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Parent sign-in with Google / Apple (M2-10c)
     |--------------------------------------------------------------------------
     | The apps send the provider's ID token to POST /api/auth/social; the API

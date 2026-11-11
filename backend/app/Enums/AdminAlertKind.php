@@ -37,6 +37,8 @@ enum AdminAlertKind: string
     case GameLoopStalled = 'game_loop_stalled';
     /** M6-U01 (FREE_PET_UPGRADE_SPEC §5.3 safety net): a 12-week challenge purchase stayed unassigned > 10 min in a family with a pet waiting for payment or a purchase intent (once per purchase; ids + counts only). */
     case UnassignedChallengeCredit = 'unassigned_challenge_credit';
+    /** M6-S01: a website gift voucher needs a look (activated elsewhere, instance mismatch, partial refund — voucher / order ids only). */
+    case GiftVoucherIssue = 'gift_voucher_issue';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -49,7 +51,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::GiftVoucherIssue => 'warning',
             self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::UnassignedChallengeCredit => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
@@ -74,6 +76,7 @@ enum AdminAlertKind: string
             self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
             self::UnassignedChallengeCredit => '/admin/challenge-credits',
+            self::GiftVoucherIssue => '/admin/gift-vouchers',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::Test => '/admin/system-health',
         };
     }

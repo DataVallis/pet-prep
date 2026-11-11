@@ -11,6 +11,7 @@ use App\Jobs\SendUnassignedCreditAlert;
 use App\Models\ChallengeCredit;
 use App\Models\ChallengePurchaseIntent;
 use App\Models\Family;
+use App\Models\GiftVoucher;
 use App\Models\Pet;
 use App\Models\PurchaseEvent;
 use App\Models\User;
@@ -44,6 +45,11 @@ use Illuminate\Support\Facades\Log;
  *  - revokeForRefund() (webhook): the purchase's credit is revoked; its pet
  *    goes back to payment_required (ChallengeService::markRefunded).
  *  - transferUnassigned() (webhook TRANSFER): only unassigned credits move.
+ *  - createFromGift() (M6-S01 website voucher): a `web_gift` credit, never
+ *    auto-assigned — the parent chooses the pet in the app (activate()).
+ *    revokeForRefund() / transferUnassigned() (RevenueCat) only ever touch
+ *    `source = store` credits; a gift credit is revoked by revokeGiftCredit()
+ *    (Lemon Squeezy refund / disabled key) through the same revokeCredit().
  */
 class ChallengeCreditService
 {
@@ -61,6 +67,7 @@ class ChallengeCreditService
     {
         $credit = ChallengeCredit::create([
             'family_id' => $family->id,
+            'source' => ChallengeCredit::SOURCE_STORE,
             'purchase_event_id' => $event->id,
             'product_id' => $attrs['product_id'],
             'store' => $attrs['store'],
@@ -110,6 +117,28 @@ class ChallengeCreditService
         }
 
         return $credit;
+    }
+
+    /**
+     * M6-S01 (CONTRACT §3.2): the credit of a redeemed website gift voucher.
+     * Caller holds the voucher → family row locks (GiftVoucherRedeemService).
+     * Never auto-assigned and no purchase intent is consumed (spec §3.3: the
+     * parent chooses the pet in the app). `purchased_at` = the redemption
+     * moment (the family's paid moment for the funnel and oldest-first order).
+     */
+    public function createFromGift(Family $family, GiftVoucher $voucher): ChallengeCredit
+    {
+        return ChallengeCredit::create([
+            'family_id' => $family->id,
+            'source' => ChallengeCredit::SOURCE_WEB_GIFT,
+            'gift_voucher_id' => $voucher->id,
+            'purchase_event_id' => null,
+            'product_id' => 'lemonsqueezy:'.config('services.lemonsqueezy.gift_product_id'),
+            'store' => 'LEMON_SQUEEZY',
+            'environment' => $voucher->environment,
+            'transaction_id' => null,
+            'purchased_at' => now()->startOfSecond(),
+        ]);
     }
 
     /**
@@ -274,10 +303,11 @@ class ChallengeCreditService
      * Revoke the credit of a refunded purchase (caller: webhook, family row
      * locked). Match: the purchase's transaction id; without one, the
      * family's newest unrevoked credit of the product, unassigned first.
+     * Store credits only (M6-S01): a RevenueCat refund never touches a gift credit.
      */
     public function revokeForRefund(Family $family, ?string $productId, ?string $transactionId, string $eventId, CarbonInterface $now): ?ChallengeCredit
     {
-        $query = ChallengeCredit::where('family_id', $family->id)->unrevoked();
+        $query = ChallengeCredit::where('family_id', $family->id)->where('source', ChallengeCredit::SOURCE_STORE)->unrevoked();
         if ($transactionId !== null) {
             $query->where('transaction_id', $transactionId);
         } else {
@@ -291,6 +321,46 @@ class ChallengeCreditService
             return null;
         }
 
+        $this->revokeCredit($credit, $eventId, $now);
+
+        return $credit;
+    }
+
+    /**
+     * M6-S01 (CONTRACT §4): revoke the credit of a refunded / disabled website
+     * gift voucher. Caller (LS webhook) holds the voucher row lock; the family
+     * row is locked here, then the credit and its pet (as revokeForRefund).
+     * Null when the voucher has no unrevoked credit (already revoked, or the
+     * family was deleted with its credits).
+     */
+    public function revokeGiftCredit(GiftVoucher $voucher, string $eventId, CarbonInterface $now): ?ChallengeCredit
+    {
+        $familyId = ChallengeCredit::where('gift_voucher_id', $voucher->id)->value('family_id');
+        if ($familyId === null) {
+            return null;
+        }
+        Family::whereKey($familyId)->lockForUpdate()->first();
+        $credit = ChallengeCredit::where('gift_voucher_id', $voucher->id)
+            ->where('source', ChallengeCredit::SOURCE_WEB_GIFT)
+            ->unrevoked()
+            ->lockForUpdate()
+            ->first();
+        if ($credit === null) {
+            return null;
+        }
+
+        $this->revokeCredit($credit, $eventId, $now);
+
+        return $credit;
+    }
+
+    /**
+     * The one revoke: the credit is marked refunded and its pet (if any) goes
+     * through ChallengeService::markRefunded (lock / free plan, not after the
+     * 12 weeks). Caller holds the family row lock and the credit row lock.
+     */
+    private function revokeCredit(ChallengeCredit $credit, string $eventId, CarbonInterface $now): void
+    {
         $pet = $credit->pet_id !== null ? Pet::whereKey($credit->pet_id)->lockForUpdate()->first() : null;
 
         $credit->forceFill([
@@ -302,19 +372,18 @@ class ChallengeCreditService
         if ($pet !== null) {
             $this->challenges->markRefunded($pet, $now);
         }
-
-        return $credit;
     }
 
     /**
      * TRANSFER: move every available credit of $from to $to (both family rows
-     * locked by the caller). Assigned credits stay with their pet.
+     * locked by the caller). Assigned credits stay with their pet. Store
+     * credits only (M6-S01): a gift credit stays with the redeeming family.
      *
      * @return int number of credits moved
      */
     public function transferUnassigned(Family $from, Family $to, CarbonInterface $now): int
     {
-        return ChallengeCredit::where('family_id', $from->id)->available()->update([
+        return ChallengeCredit::where('family_id', $from->id)->where('source', ChallengeCredit::SOURCE_STORE)->available()->update([
             'family_id' => $to->id,
             'transferred_from_family_id' => $from->id,
             'transferred_at' => $now,

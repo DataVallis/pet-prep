@@ -34,7 +34,7 @@ class FunnelService
     public const MAX_WEEKS = 52;
 
     public const STEPS = [
-        'registered', 'child_added', 'pet_born', 'd1', 'd7', 'paid', 'paid_test', 'week4', 'certificate',
+        'registered', 'child_added', 'pet_born', 'd1', 'd7', 'paid', 'paid_test', 'paid_voucher', 'week4', 'certificate',
     ];
 
     private const ELIGIBLE = ['d1_eligible', 'd7_eligible', 'week4_eligible'];
@@ -58,6 +58,9 @@ class FunnelService
                          WHERE c.family_id = f.id AND c.revoked_at IS NULL) AS first_paid,
                        EXISTS (SELECT 1 FROM challenge_credits c
                          WHERE c.family_id = f.id AND c.revoked_at IS NULL AND c.environment = 'PRODUCTION') AS paid_production,
+                       EXISTS (SELECT 1 FROM challenge_credits c
+                         WHERE c.family_id = f.id AND c.revoked_at IS NULL AND c.source = 'web_gift'
+                           AND c.environment = 'PRODUCTION') AS paid_voucher,
                        EXISTS (SELECT 1 FROM family_user fu
                          WHERE fu.family_id = f.id AND fu.role = 'child') AS has_child,
                        EXISTS (SELECT 1 FROM challenge_certificates cert
@@ -85,6 +88,7 @@ class FunnelService
                    COUNT(*) FILTER (WHERE first_born <= :now_d7b AND last_child_action >= first_born + interval '7 days') AS d7,
                    COUNT(*) FILTER (WHERE paid_production) AS paid,
                    COUNT(*) FILTER (WHERE first_paid IS NOT NULL AND NOT paid_production) AS paid_test,
+                   COUNT(*) FILTER (WHERE paid_voucher) AS paid_voucher,
                    COUNT(*) FILTER (WHERE first_paid <= :now_w4) AS week4_eligible,
                    COUNT(*) FILTER (WHERE first_paid <= :now_w4b AND last_child_action >= first_paid + interval '21 days') AS week4,
                    COUNT(*) FILTER (WHERE has_certificate) AS certificate

@@ -30,6 +30,8 @@ return [
         'credit_model' => 'kredit izziva',
         'wish_credits' => 'Krediti želja',
         'wish_credit_model' => 'kredit želje',
+        'gift_vouchers' => 'Darilni boni',
+        'gift_voucher_model' => 'darilni bon',
         'certificates' => 'Certifikati',
         'certificate_model' => 'certifikat',
         'breed_facts' => 'Zanimivosti o pasmah',
@@ -318,6 +320,11 @@ return [
         'video_compression_section' => 'Stiskanje videov (disk)',
         'video_compression_description' => 'Vsak shranjen AI posnetek enkrat ponovno kodira v isti ločljivosti in hitrosti sličic (H.264, CRF 21), da zasede manj diska. Posnetek se zamenja le, če je vsaj 30 % manjši in je videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic); sicer ostane izvirnik. Obstoječi posnetki: majhni paketi vsako uro ponoči (22.00–6.00); novi posnetki se stisnejo, preden se prvič pokažejo (nekaj sekund dlje). Najprej preverite `media:compress --sample=10`.',
         'video_compression' => 'Stiskaj shranjene videe',
+        // M6-S01: unovčitev darilnih bonov na spletu (privzeto izklopljeno).
+        'gift_vouchers_section' => 'Darilni boni',
+        'gift_vouchers_description' => 'Darilni boni, kupljeni na petprep.si (Lemon Squeezy) in unovčeni na spletni strani za kredit 12-tedenskega izziva.',
+        'gift_vouchers' => 'Darilni boni (unovčitev na spletu)',
+        'gift_vouchers_help' => 'Izklopljeno: petprep.si/sl/unovci odgovori »trenutno ni na voljo«. Webhooki za vračila se obdelajo v vsakem primeru.',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).
@@ -430,6 +437,7 @@ return [
             'd7' => 'Otrok aktiven 7. dan+',
             'paid' => 'Plačali',
             'paid_test' => 'Testni nakup',
+            'paid_voucher' => 'Plačali z bonom',
             'week4' => 'Aktivni 4. teden',
             'certificate' => 'Certifikat',
         ],
@@ -441,6 +449,7 @@ return [
             'd7' => 'enako vsaj 7 dni po rojstvu. Prikazano kot družine / družine, katerih ljubljenček je star vsaj 7 dni.',
             'paid' => 'družina je kupila 12-tedenski izziv s pravim denarjem (okolje trgovine PRODUCTION, brez vračila). Delež družin z rojenim ljubljenčkom.',
             'paid_test' => 'družina ima samo testne nakupe (sandbox). Delež družin z rojenim ljubljenčkom.',
+            'paid_voucher' => 'družina je unovčila darilni bon s spletne strani (PRODUCTION, brez vračila). Podmnožica stolpca »Plačali« — te družine so štete tudi tam. Delež družin z rojenim ljubljenčkom.',
             'week4' => 'otrok je bil aktiven še 21 dni ali več po prvem nakupu družine. Prikazano kot družine / družine, ki so kupile pred vsaj 21 dnevi.',
             'certificate' => 'otrok je 12 tednov končal s certifikatom. Delež registriranih.',
             'note' => 'Izbrisana družina izgine iz teh številk, zato se star teden lahko zmanjša. »—« pomeni, da v tem tednu še nobena družina ni dovolj stara za oceno.',
@@ -636,6 +645,25 @@ return [
             'credits' => 'ID-ji nakupov',
             'families' => 'ID-ji družin',
             'environments' => 'Okolje trgovine',
+        ],
+    ],
+    // M6-S01: darilni bon s spleta potrebuje pogled (samo id-ji).
+    'gift_voucher' => [
+        'discord' => [
+            'activated_elsewhere' => [
+                'title' => 'Darilni bon aktiviran zunaj PetPrepa',
+                'body' => 'Lemon Squeezy kaže kodo bona kot porabljeno, a je ni unovčila nobena družina v PetPrepu. Starš je dobil »že unovčen«. Preverite licenčni ključ v Lemon Squeezyju in bon v /admin (Darilni boni); če gre za pravi nakup, odklenite ročno (M6-S01).',
+            ],
+            'instance_mismatch' => [
+                'title' => 'Darilni bon aktiviran za eno družino, zapisan pri drugi',
+                'body' => 'Aktivacija v Lemon Squeezyju in vrstica bona v PetPrepu navajata različni družini. Preverite instance licenčnega ključa v Lemon Squeezyju in bon v /admin (Darilni boni) (M6-S01).',
+            ],
+            'partial_refund' => [
+                'title' => 'Delno vračilo naročila darilnega bona',
+                'body' => 'Lemon Squeezy je sporočil delno vračilo. Samodejno ni bilo nič preklicano. Ročno se odločite, ali bon ostane veljaven (M6-S01).',
+            ],
+            'voucher' => 'Id bona',
+            'order' => 'Id naročila LS',
         ],
     ],
     'disk_space' => [

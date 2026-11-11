@@ -105,6 +105,7 @@ describe('FunnelService', function () {
             ->and($october['d7'])->toBe(1)
             ->and($october['paid'])->toBe(1)
             ->and($october['paid_test'])->toBe(1)
+            ->and($october['paid_voucher'])->toBe(0) // M6-S01: store purchases are never »paid with voucher«
             ->and($october['week4_eligible'])->toBe(2)
             ->and($october['week4'])->toBe(1)
             ->and($october['certificate'])->toBe(0);

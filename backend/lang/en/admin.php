@@ -31,6 +31,8 @@ return [
         'credit_model' => 'challenge credit',
         'wish_credits' => 'Wish credits',
         'wish_credit_model' => 'wish credit',
+        'gift_vouchers' => 'Gift vouchers',
+        'gift_voucher_model' => 'gift voucher',
         'certificates' => 'Certificates',
         'certificate_model' => 'certificate',
         'breed_facts' => 'Breed facts',
@@ -319,6 +321,11 @@ return [
         'video_compression_section' => 'Video compression (disk)',
         'video_compression_description' => 'Re-encodes every stored AI clip once at the same resolution and frame rate (H.264, CRF 21) to take less disk. A clip is replaced only when it gets at least 30 % smaller and looks the same (SSIM ≥ 0.98, same length and frames); otherwise the original stays. Existing clips: small batches every hour at night (22:00–06:00 Ljubljana); new clips are compressed before they are first shown (a few seconds longer). Check `media:compress --sample=10` first.',
         'video_compression' => 'Compress stored videos',
+        // M6-S01: website gift voucher redemption (default off).
+        'gift_vouchers_section' => 'Gift vouchers',
+        'gift_vouchers_description' => 'Gift vouchers bought on petprep.si (Lemon Squeezy) and redeemed on the website for a 12-week challenge credit.',
+        'gift_vouchers' => 'Gift vouchers (website redemption)',
+        'gift_vouchers_help' => "Off: petprep.si/redeem answers 'not available right now'. Refund webhooks are processed either way.",
     ],
 
     // M5-R21: shared looks (PetLookResource).
@@ -431,6 +438,7 @@ return [
             'd7' => 'Child active day 7+',
             'paid' => 'Paid',
             'paid_test' => 'Test purchase',
+            'paid_voucher' => 'Paid with voucher',
             'week4' => 'Active week 4',
             'certificate' => 'Certificate',
         ],
@@ -442,6 +450,7 @@ return [
             'd7' => 'the same at least 7 days after the birth. Shown as families / families whose pet is at least 7 days old.',
             'paid' => 'the family bought the 12-week challenge with real money (store environment PRODUCTION, not refunded). Share of families with a born pet.',
             'paid_test' => 'the family only has sandbox / test purchases. Share of families with a born pet.',
+            'paid_voucher' => 'the family redeemed a website gift voucher (PRODUCTION, not refunded). A subset of »Paid« — these families are counted there too. Share of families with a born pet.',
             'week4' => 'a child was still active 21 days or more after the family\'s first purchase. Shown as families / families that bought at least 21 days ago.',
             'certificate' => 'a child finished the 12 weeks with a certificate. Share of registered.',
             'note' => 'A deleted family disappears from these numbers, so an old week can get smaller. »—« means no family in that week is old enough to be judged yet.',
@@ -637,6 +646,25 @@ return [
             'credits' => 'Purchase ids',
             'families' => 'Family ids',
             'environments' => 'Store environment',
+        ],
+    ],
+    // M6-S01: website gift voucher needs a look (ids only).
+    'gift_voucher' => [
+        'discord' => [
+            'activated_elsewhere' => [
+                'title' => 'Gift voucher activated outside PetPrep',
+                'body' => 'Lemon Squeezy shows the voucher code as used, but no PetPrep family redeemed it. The parent got »already redeemed«. Check the license key in Lemon Squeezy and the voucher in /admin (Gift vouchers); unlock by hand if it is a real purchase (M6-S01).',
+            ],
+            'instance_mismatch' => [
+                'title' => 'Gift voucher activated for one family, held by another',
+                'body' => 'The Lemon Squeezy activation and the PetPrep voucher row name different families. Check the license key instances in Lemon Squeezy and the voucher in /admin (Gift vouchers) (M6-S01).',
+            ],
+            'partial_refund' => [
+                'title' => 'Partial refund of a gift voucher order',
+                'body' => 'Lemon Squeezy reported a partial refund. Nothing was revoked automatically. Decide by hand whether the voucher stays valid (M6-S01).',
+            ],
+            'voucher' => 'Voucher id',
+            'order' => 'LS order id',
         ],
     ],
     'disk_space' => [

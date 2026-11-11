@@ -1,0 +1,205 @@
+{
+    "billing_before": {
+        "status": 200,
+        "body": {
+            "credits_available": 0,
+            "payments_enforced": true,
+            "pets": [
+                {
+                    "pet_id": "PET_LOCKED",
+                    "plan": "challenge",
+                    "status": "payment_required",
+                    "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                    "paid_at": null,
+                    "trial_available": null,
+                    "deletion_loses_purchase": false,
+                    "challenge_started_at": null,
+                    "upgrade": null
+                },
+                {
+                    "pet_id": "PET_FREE",
+                    "plan": "free",
+                    "status": null,
+                    "trial_ends_at": null,
+                    "paid_at": null,
+                    "trial_available": null,
+                    "deletion_loses_purchase": false,
+                    "challenge_started_at": null,
+                    "upgrade": {
+                        "available": true,
+                        "reason": null
+                    }
+                }
+            ]
+        }
+    },
+    "activate_no_credit": {
+        "status": 409,
+        "body": {
+            "message": "No unused challenge purchase in this family.",
+            "reason": "no_credit"
+        }
+    },
+    "intent_free": {
+        "status": 201,
+        "body": {
+            "intent_id": "INTENT",
+            "pet_id": "PET_FREE",
+            "expires_at": "2026-10-07T10:30:00+00:00"
+        }
+    },
+    "purchase_1": {
+        "status": 200,
+        "body": null
+    },
+    "billing_after_purchase": {
+        "status": 200,
+        "body": {
+            "credits_available": 0,
+            "payments_enforced": true,
+            "pets": [
+                {
+                    "pet_id": "PET_LOCKED",
+                    "plan": "challenge",
+                    "status": "paid",
+                    "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                    "paid_at": "2026-10-07T12:00:00+02:00",
+                    "trial_available": null,
+                    "deletion_loses_purchase": true,
+                    "challenge_started_at": null,
+                    "upgrade": null
+                },
+                {
+                    "pet_id": "PET_FREE",
+                    "plan": "free",
+                    "status": null,
+                    "trial_ends_at": null,
+                    "paid_at": null,
+                    "trial_available": null,
+                    "deletion_loses_purchase": false,
+                    "challenge_started_at": null,
+                    "upgrade": {
+                        "available": true,
+                        "reason": null
+                    }
+                }
+            ]
+        }
+    },
+    "activate_locked": {
+        "status": 200,
+        "body": {
+            "status": "already_active",
+            "pet_id": "PET_LOCKED",
+            "plan": {
+                "type": "challenge",
+                "status": "paid",
+                "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                "paid_at": "2026-10-07T12:00:00+02:00",
+                "payments_enforced": true,
+                "display_type": "challenge",
+                "challenge_started_at": null
+            },
+            "credits_available": 0
+        }
+    },
+    "activate_again": {
+        "status": 200,
+        "body": {
+            "status": "already_active",
+            "pet_id": "PET_LOCKED",
+            "plan": {
+                "type": "challenge",
+                "status": "paid",
+                "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                "paid_at": "2026-10-07T12:00:00+02:00",
+                "payments_enforced": true,
+                "display_type": "challenge",
+                "challenge_started_at": null
+            },
+            "credits_available": 0
+        }
+    },
+    "billing_one_held": {
+        "status": 200,
+        "body": {
+            "credits_available": 1,
+            "payments_enforced": true,
+            "pets": [
+                {
+                    "pet_id": "PET_LOCKED",
+                    "plan": "challenge",
+                    "status": "paid",
+                    "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                    "paid_at": "2026-10-07T12:00:00+02:00",
+                    "trial_available": null,
+                    "deletion_loses_purchase": true,
+                    "challenge_started_at": null,
+                    "upgrade": null
+                },
+                {
+                    "pet_id": "PET_FREE",
+                    "plan": "free",
+                    "status": null,
+                    "trial_ends_at": null,
+                    "paid_at": null,
+                    "trial_available": null,
+                    "deletion_loses_purchase": false,
+                    "challenge_started_at": null,
+                    "upgrade": {
+                        "available": true,
+                        "reason": null
+                    }
+                }
+            ]
+        }
+    },
+    "activate_free": {
+        "status": 200,
+        "body": {
+            "status": "activated",
+            "pet_id": "PET_FREE",
+            "plan": {
+                "type": "challenge",
+                "status": "paid",
+                "trial_ends_at": "2026-07-01T10:00:00+02:00",
+                "paid_at": "2026-10-07T12:00:00+02:00",
+                "payments_enforced": true,
+                "display_type": "challenge",
+                "challenge_started_at": "2026-10-07T12:00:00+02:00"
+            },
+            "credits_available": 0
+        }
+    },
+    "billing_end": {
+        "status": 200,
+        "body": {
+            "credits_available": 0,
+            "payments_enforced": true,
+            "pets": [
+                {
+                    "pet_id": "PET_LOCKED",
+                    "plan": "challenge",
+                    "status": "paid",
+                    "trial_ends_at": "2026-10-07T12:00:00+02:00",
+                    "paid_at": "2026-10-07T12:00:00+02:00",
+                    "trial_available": null,
+                    "deletion_loses_purchase": true,
+                    "challenge_started_at": null,
+                    "upgrade": null
+                },
+                {
+                    "pet_id": "PET_FREE",
+                    "plan": "challenge",
+                    "status": "paid",
+                    "trial_ends_at": "2026-07-01T10:00:00+02:00",
+                    "paid_at": "2026-10-07T12:00:00+02:00",
+                    "trial_available": null,
+                    "deletion_loses_purchase": true,
+                    "challenge_started_at": "2026-10-07T12:00:00+02:00",
+                    "upgrade": null
+                }
+            ]
+        }
+    }
+}

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\GiftVoucher;
 use App\Services\BreedCatalogService;
 use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Media\MediaEntitlementService;
@@ -45,6 +46,14 @@ class AppServiceProvider extends ServiceProvider
      * Data exports per user per hour (M2-08).
      */
     public const ACCOUNT_EXPORT_PER_HOUR = 3;
+
+    /** M6-S01: website gift voucher redemption, per IP (IPv6 /64). */
+    public const GIFT_REDEEM_PER_MINUTE = 10;
+
+    public const GIFT_REDEEM_PER_HOUR = 30;
+
+    /** M6-S01: attempts on ONE code per hour, from any IP. */
+    public const GIFT_REDEEM_PER_CODE_PER_HOUR = 10;
 
     /**
      * Minimum password length for parent accounts (M2-10a).
@@ -198,6 +207,30 @@ class AppServiceProvider extends ServiceProvider
                 Limit::perMinute(self::SOCIAL_SIGN_IN_PER_MINUTE)->by($key.':minute'),
                 Limit::perHour(self::SOCIAL_SIGN_IN_PER_HOUR)->by($key.':hour'),
             ];
+        });
+
+        // Website gift voucher redemption (M6-S01, CONTRACT §2.3): public, calls Lemon
+        // Squeezy → 10 / min + 30 / h per IP (IPv6 /64) and 10 / h per code (any IP).
+        // Live in testing (like register).
+        RateLimiter::for('gift-redeem', function (Request $request) {
+            $key = 'gift-redeem:'.ClientIp::rateLimitKey($request->ip());
+            $tooMany = fn (Request $request, array $headers) => response()->json([
+                'error' => 'rate_limited',
+                'message' => 'Too many attempts. Please try again later.',
+            ], 429, $headers);
+
+            $limits = [
+                Limit::perMinute(self::GIFT_REDEEM_PER_MINUTE)->by($key.':minute')->response($tooMany),
+                Limit::perHour(self::GIFT_REDEEM_PER_HOUR)->by($key.':hour')->response($tooMany),
+            ];
+            $code = $request->input('code');
+            if (is_string($code) && trim($code) !== '') {
+                $limits[] = Limit::perHour(self::GIFT_REDEEM_PER_CODE_PER_HOUR)
+                    ->by('gift-redeem:code:'.hash('sha256', GiftVoucher::canonical($code)))
+                    ->response($tooMany);
+            }
+
+            return $limits;
         });
 
         // Profile switching on one phone (M2-11): a parent switches a few times a

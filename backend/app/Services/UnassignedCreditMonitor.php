@@ -46,7 +46,9 @@ class UnassignedCreditMonitor
         }
         $now = CarbonImmutable::instance($now ?? now());
 
+        // M6-S01: a website gift credit waits for the parent's choice by design — never alerted.
         $candidates = ChallengeCredit::available()
+            ->where('source', ChallengeCredit::SOURCE_STORE)
             ->whereNull('unassigned_alerted_at')
             ->where('created_at', '<=', $now->subMinutes(self::AFTER_MINUTES))
             ->where('created_at', '>=', $now->subDays(self::LOOKBACK_DAYS))

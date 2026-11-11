@@ -10,6 +10,7 @@
         ['d7', 'd7_eligible', 'd7_eligible'],
         ['paid', 'pet_born', null],
         ['paid_test', 'pet_born', null],
+        ['paid_voucher', 'pet_born', null],
         ['week4', 'week4_eligible', 'week4_eligible'],
         ['certificate', 'registered', null],
     ];
@@ -54,7 +55,7 @@
                             @endforeach
                         </tr>
                     @empty
-                        <tr><td colspan="10" class="py-2 text-gray-500">{{ __('admin.funnel.empty') }}</td></tr>
+                        <tr><td colspan="11" class="py-2 text-gray-500">{{ __('admin.funnel.empty') }}</td></tr>
                     @endforelse
                 </tbody>
                 @if ($f['rows'] !== [])
