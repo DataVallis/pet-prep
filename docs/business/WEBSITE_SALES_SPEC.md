@@ -21,8 +21,11 @@ Jeziki: **slovenščina in angleščina** *(Claude)*. Ostalih 11 jezikov spletne
 ## 2. Skupna pravila
 
 - **Plačila: Lemon Squeezy** (David ima račun). Lemon Squeezy je prodajalec (obračuna DDV, izda račun, pošlje e-pošto s potrdilom in izvede vračilo). PetPrep strežnik danes ne pošilja e-pošte (`MAIL_MAILER=log`), zato kupec vse dobi v e-pošti Lemon Squeezy in na strani po nakupu.
-- **Aplikacija nikoli ne omenja spletnega nakupa** in ne vsebuje povezave nanj; v aplikaciji ni polja za vnos kode. Bon se unovči na spletni strani (§3.3). Razlog: pravila App Store in Google Play za digitalno vsebino, kupljeno zunaj aplikacije. **Pred objavo strani mora David ali pravnik preveriti trenutna pravila obeh trgovin** — če unovčitev zunaj aplikacije za otroško aplikacijo ni dovoljena, se bon ne objavi (kompleta B in strani C to ne zadeva).
-- **Spletna stran kaže samo, kar res obstaja** (pravilo 13. 10. 2026): stran bona je javna šele, ko je aplikacija v vsaj eni trgovini in unovčitev deluje na produkciji. Do takrat je za stikalom.
+- **Aplikacija nikoli ne omenja spletnega nakupa** in ne vsebuje povezave nanj; v aplikaciji ni polja za vnos kode. Bon se unovči na spletni strani (§3.3). **Pravila trgovin (Claude preveril 11. 11. 2026 v uradnih virih; ni pravno mnenje):**
+  - *Apple App Review Guidelines:* 3.1.1 — aplikacija ne sme odklepati vsebine z lastnimi mehanizmi, kot so licenčni ključi ali kode QR, in darilni boni za digitalno vsebino se **v aplikaciji** smejo prodajati samo z nakupom v aplikaciji → zato ni vnosa kode v aplikaciji in bona v aplikaciji ne prodajamo. 3.1.3(b) — aplikacija, ki deluje na več platformah, sme uporabniku dati dostop do vsebine, kupljene drugje (tudi na spletu), **če je ista vsebina na voljo tudi kot nakup v aplikaciji** → 12-tedenski izziv je. 3.1.3 — aplikacija ne sme spodbujati nakupa zunaj nje (izjeme: ZDA in posebna dovoljenja), razvijalec pa sme o drugih možnostih obveščati **zunaj aplikacije**. 1.3 (otroška kategorija) — brez povezav ven in nakupnih priložnosti zunaj starševske zapore → ne dodajamo nobene. <https://developer.apple.com/app-store/review/guidelines/> (zadnjega dela strani orodje ni prebralo).
+  - *Google Play, pravilnik o plačilih:* Googlov sistem je obvezen za nakupe **v aplikaciji**; aplikacija uporabnika ne sme voditi k drugemu načinu plačila; zunaj aplikacije (e-pošta, splet) sme razvijalec ponujati druge možnosti; uporabnik sme v aplikaciji dostopati do vsebine, plačane drugje. <https://support.google.com/googleplay/android-developer/answer/10281818>, <https://play.google.com/about/monetization-ads/payments>
+  - **Sklep:** prodaja bona na petprep.si in unovčitev na spletni strani sta s temi pravili skladna, dokler aplikacija bona ne omenja, nima povezave nanj in nima vnosa kode, izziv pa ostane na voljo tudi kot nakup v aplikaciji. Ostane tveganje presoje posameznega pregledovalca; opis v trgovinah naj bona ne omenja.
+- **Spletna stran kaže samo, kar res obstaja** (pravilo 13. 10. 2026): stran bona je javna šele, ko je aplikacija v vsaj eni trgovini in unovčitev deluje na produkciji (David 11. 11. 2026: prodaja bonov zunaj aplikacije je naša stvar; pravila trgovin zgoraj tega ne prepovedujejo). Do takrat je za stikalom.
 - **Besedila so izvirna**, v glasu znamke (`brand/README.md`), brez prepisovanja z drugih strani. Staršem v slovenščini vikamo. Nikoli ne omenjamo starosti otrok in ne kažemo otroka, prilepljenega na telefon. Curio je maskota znamke, ne ljubljenček iz aplikacije.
 - **Videz:** obstoječa CGP »Grafit in meta«, obstoječe komponente strani. Brez majhnih monospace oznak. Obstoječi logotipi partnerjev kot logotipi, ne besedilo.
 - **Brez izmišljenih številk.** Na strani za partnerje samo izmerjeni podatki z datumom; česar še ni, se ne navaja.
@@ -66,7 +69,7 @@ Varnost: kdor ima veljavno kodo, lahko izve, ali račun z nekim e-naslovom obsta
 
 ### 3.5 Kaj mora narediti David
 1. Lemon Squeezy: izdelek »PetPrep darilni bon — 12-tedenski izziv« (49,99 €, licenčni ključi vklopljeni, 1 aktivacija, veljavnost 12 mesecev, priložena datoteka kompleta B, preusmeritev po nakupu na stran »hvala«), webhook na `https://api.petprep.si/api/webhooks/lemonsqueezy` z dogodki naročil in ključev; skrivnost v `/opt/petprep/.env`.
-2. Preveriti pravila trgovin (§2) in dopolniti pogoje uporabe na petprep.si z odstavkom o darilnih bonih (veljavnost, vračilo, unovčitev).
+2. Dopolniti pogoje uporabe na petprep.si z odstavkom o darilnih bonih (veljavnost, vračilo, unovčitev).
 3. Povedati, ko je aplikacija v trgovinah — takrat se stran vklopi.
 
 ## 4. B — Natisljivi komplet »Obljuba o ljubljenčku« (M6-S02)
@@ -133,4 +136,4 @@ Vsak izdelek je svoj PR v vsakem repozitoriju. A je plačilna in varnostna sprem
 | S3 | Cena ustanovnega partnerja v imeniku | 190 € na leto |
 | S4 | Jeziki ob objavi | slovenščina in angleščina |
 | S5 | Vračilo bona | neunovčen 14 dni, unovčen ne |
-| S6 | Pravila trgovin za unovčitev zunaj aplikacije | preveri David ali pravnik pred objavo strani bona |
+| S6 | Pravila trgovin za unovčitev zunaj aplikacije | **Preverjeno 11. 11. 2026 (§2):** skladno, dokler aplikacija bona ne omenja in nima vnosa kode |
