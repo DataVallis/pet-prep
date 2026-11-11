@@ -53,7 +53,19 @@ export function upgradeNote(pet: Pick<FamilyPet, 'plan' | 'is_game_over'> & { up
 export function isOfferablePet(pet: OfferablePet | null | undefined): boolean {
   if (!pet || pet.is_game_over) return false;
   if (canUpgradePet(pet)) return true;
+  // M6-U02 (U4 / K3): »mešanček + izziv« — a free-breed pet the server keeps on an UNPAID
+  // challenge waits for the purchase like a paid breed (never strand it locked without a button).
+  if (isUnpaidFreeBreedChallenge(pet)) return true;
   return !shownAsFree(pet.plan) && !isDefaultFreeBreed(pet.breed_type);
+}
+
+/**
+ * M6-U02: a free breed (mutt / domestic cat) on the challenge that still needs the purchase —
+ * created by a new app as »mešanček + izziv«. A paid grandfathered / admin mutt shows as free
+ * (`display_type`) and stays excluded.
+ */
+export function isUnpaidFreeBreedChallenge(pet: Pick<FamilyPet, 'plan' | 'breed_type'> | null | undefined): boolean {
+  return !!pet && isDefaultFreeBreed(pet.breed_type) && !shownAsFree(pet.plan) && needsPurchase(pet.plan);
 }
 
 /** Show the "buy" button for this pet (overview card, child detail, Nadzor count) — born or not. Not for an upgrade (`canUpgradePet`). */

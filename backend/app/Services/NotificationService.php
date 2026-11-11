@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\CareRefusal;
 use App\Enums\ClientFeature;
 use App\Enums\HygieneEventKind;
+use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Enums\Species;
 use App\Enums\WishStatus;
@@ -339,6 +340,16 @@ class NotificationService
         return $this->escalation($pet, PushType::ItemReady, $itemKey);
     }
 
+    /**
+     * M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1): the day-7 reminder of a free pet — to the
+     * family's parents. Called once per pet by UpgradeReminderService::remind under the
+     * pet's row lock (queued after commit).
+     */
+    public function upgradeReminder(Pet $pet): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::UpgradeReminder);
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -508,6 +519,12 @@ class NotificationService
         // M5-R18 / R20: the parent confirmed the groomer / bath meanwhile (or the period is over).
         if ($type === PushType::CareReminder && ! app(CareReminderPushService::class)->stillDue($pet, (string) $notification->metric)) {
             $this->markSuppressed($notification, 'already_done');
+
+            return;
+        }
+        // M6-U02: the free pet was upgraded (or can no longer be) since the decision.
+        if ($type === PushType::UpgradeReminder && ! $pet->isUpgradeableFreePet()) {
+            $this->markSuppressed($notification, 'not_upgradeable');
 
             return;
         }
@@ -704,7 +721,13 @@ class NotificationService
         $list = match ($type) {
             PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder, PushType::LitterReminder, PushType::TakeOutReminder => $children(),
             PushType::ParentAlarm => $parents(),
-            PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
+            PushType::Illness, PushType::GameOver => $parents()->concat($children()),
+            // M6-U02 (QA #983 m3): a free-breed challenge pet (»mešanček + izziv«) can be bought only
+            // from a build that declared `free_breed_challenge` — prefer those parents, every parent
+            // when none did (nobody is left without the notice).
+            PushType::PaymentRequired => (self::isFreeBreedChallenge($pet)
+                ? $this->parentsSupporting($pet, ClientFeature::FreeBreedChallenge)
+                : $parents())->concat($children()),
             // M3-11: billing is the parent's business.
             PushType::TrialEnding => $parents(),
             // M2-01d: the parent generates the certificate / reads the report.
@@ -715,11 +738,14 @@ class NotificationService
             PushType::PetBirthday => $parents()->concat($children()),
             // M5-R18 / R20: the groomer / bath is the parent's errand — to the parents
             // whose app can show / confirm it (QA PR #377 m2); all parents when none can.
-            PushType::CareReminder => $this->careReminderParents($pet),
+            PushType::CareReminder => $this->parentsSupporting($pet, ClientFeature::CareTasks),
             // M6-W01: buying is the parent's business.
             PushType::WishCreated => $parents(),
             // M6-W03: the child's news — the pet's caretaker children.
             PushType::ItemReady => $children(),
+            // M6-U02: buying is the parent's business — never the child (no prices on the child side).
+            // QA #983 m4: to the parents whose app shows the reminder card (`free_breed_challenge`), all when none.
+            PushType::UpgradeReminder => $this->parentsSupporting($pet, ClientFeature::FreeBreedChallenge),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -750,6 +776,10 @@ class NotificationService
         }
         // M6-W03: once per (pet, item, design) — ItemMediaService::settle guards with item_media_notices.
         if ($type === PushType::ItemReady) {
+            return false;
+        }
+        // M6-U02: once per pet — UpgradeReminderService guards with `upgrade_reminder_sent_at`.
+        if ($type === PushType::UpgradeReminder) {
             return false;
         }
 
@@ -801,19 +831,26 @@ class NotificationService
     }
 
     /**
-     * The parents a care reminder goes to: those whose app declared `care_tasks`
-     * on its latest request (User::appSupports — per user, not per device); when
-     * none did (e.g. no request since the header shipped), every parent.
+     * The parents whose app declared `$feature` on its latest request (User::appSupports —
+     * per user, not per device); when none did (e.g. no request since the header shipped),
+     * every parent. Care reminders (`care_tasks`), the M6-U02 upgrade reminder and the lock
+     * news of a free-breed challenge pet (`free_breed_challenge`).
      *
      * @return Collection<int, array{user_id: int, audience: string}>
      */
-    private function careReminderParents(Pet $pet): Collection
+    private function parentsSupporting(Pet $pet, ClientFeature $feature): Collection
     {
         $parents = $this->families->parentRecipients($pet);
-        $ready = $parents->filter(fn (User $u): bool => $u->appSupports(ClientFeature::CareTasks));
+        $ready = $parents->filter(fn (User $u): bool => $u->appSupports($feature));
 
         return ($ready->isNotEmpty() ? $ready : $parents)->values()
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
+    }
+
+    /** M6-U02: an unpaid-or-paid challenge of the species' free breed (»mešanček + izziv«). */
+    private static function isFreeBreedChallenge(Pet $pet): bool
+    {
+        return $pet->plan === PetPlan::Challenge && ! $pet->breed_type->isPremium();
     }
 
     /**

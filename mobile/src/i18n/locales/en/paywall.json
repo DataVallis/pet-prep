@@ -102,5 +102,14 @@
     "body": "A paid 12-week challenge is not on any pet yet. Choose which pet it is for.",
     "action": "Choose a pet",
     "dismiss": "Hide"
+  },
+  "upgradeReminder": {
+    "body": "{{child}} has been looking after {{name}} for 7 days. Time for the real test?",
+    "bodyNoName": "{{child}} has been looking after the dog for 7 days. Time for the real test?",
+    "bodyNoChild": "Your child has been looking after {{name}} for 7 days. Time for the real test?",
+    "bodyNoChildNoName": "Your child has been looking after the dog for 7 days. Time for the real test?",
+    "hint": "You can start the 12-week challenge with the same dog: a week-by-week programme, a certificate and the full history.",
+    "action": "See the 12-week challenge",
+    "dismiss": "Hide"
   }
 }

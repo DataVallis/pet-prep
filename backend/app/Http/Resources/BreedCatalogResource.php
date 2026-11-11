@@ -48,7 +48,8 @@ class BreedCatalogResource extends JsonResource
              */
             'free_plan_allowed' => $entry['free_plan_allowed'],
             /**
-             * `plan: challenge` accepts this breed (a paid breed, M5-F03).
+             * `plan: challenge` accepts this breed (a paid breed, M5-F03; any breed — the free
+             * one too — when the request declared `features[]=free_breed_challenge`, M6-U02 / U4).
              *
              * @var bool
              */

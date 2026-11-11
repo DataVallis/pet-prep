@@ -54,12 +54,17 @@ describe('canBuyChallenge (M5-F01)', () => {
     expect(canBuyChallenge(pet(UNBORN_WAITING, { born_at: null }))).toBe(true);
     // An older server still sent `trial` for it: buyable as well.
     expect(canBuyChallenge(pet(UNBORN_TRIAL, { born_at: null }))).toBe(true);
-    expect(canBuyChallenge(pet(UNBORN_WAITING, { born_at: null, breed_type: 'mutt' }))).toBe(false);
+    // M6-U02 (U4 / K3): an unborn »mešanček + izziv« waits for the purchase like a paid breed.
+    expect(canBuyChallenge(pet(UNBORN_WAITING, { born_at: null, breed_type: 'mutt' }))).toBe(true);
   });
 
-  it('a mutt never gets a buy button, even with an old challenge payload', () => {
-    expect(canBuyChallenge(pet(TRIAL, { breed_type: 'mutt' }))).toBe(false);
+  it('a free mutt never gets a buy button; an unpaid mutt challenge (M6-U02 »mešanček + izziv«) does', () => {
     expect(canBuyChallenge(pet(FREE, { breed_type: 'mutt' }))).toBe(false);
+    expect(canBuyChallenge(pet(TRIAL, { breed_type: 'mutt' }))).toBe(true);
+    expect(canBuyChallenge(pet(LOCKED, { breed_type: 'mutt' }))).toBe(true);
+    // paid by purchase → nothing to buy; grandfathered / admin (shown as free) → never offered
+    expect(canBuyChallenge(pet(PAID, { breed_type: 'mutt' }))).toBe(false);
+    expect(canBuyChallenge(pet({ ...LOCKED, display_type: 'free' }, { breed_type: 'mutt' }))).toBe(false);
   });
 
   it('game over or no pet → no buy', () => {
@@ -173,9 +178,11 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     upgrade: null,
   });
 
-  it('isOfferablePet: never a mutt or a game-over pet', () => {
+  it('isOfferablePet: never a free mutt or a game-over pet; an unpaid mutt challenge is (M6-U02)', () => {
     expect(isOfferablePet(pet(TRIAL))).toBe(true);
-    expect(isOfferablePet(pet(TRIAL, { breed_type: 'mutt' }))).toBe(false);
+    expect(isOfferablePet(pet(FREE, { breed_type: 'mutt' }))).toBe(false);
+    expect(isOfferablePet(pet(TRIAL, { breed_type: 'mutt' }))).toBe(true);
+    expect(isOfferablePet(pet(LOCKED, { breed_type: 'mutt', is_game_over: true }))).toBe(false);
     expect(isOfferablePet(pet(TRIAL, { is_game_over: true }))).toBe(false);
     expect(isOfferablePet(null)).toBe(false);
   });
@@ -184,8 +191,8 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     const freeCat = pet(FREE, { breed_type: 'domestic_cat', species: 'cat' });
     expect(isOfferablePet(freeCat)).toBe(false);
     expect(canBuyChallenge(freeCat)).toBe(false);
-    // Even an inconsistent old payload: the species' free breed is never offered.
-    expect(isOfferablePet(pet(LOCKED, { breed_type: 'domestic_cat', species: 'cat' }))).toBe(false);
+    // M6-U02: a domestic cat waiting on the challenge (»mešanček + izziv« for cats) is offered.
+    expect(isOfferablePet(pet(LOCKED, { breed_type: 'domestic_cat', species: 'cat' }))).toBe(true);
     const coon = pet(LOCKED, { breed_type: 'maine_coon', species: 'cat' });
     expect(isOfferablePet(coon)).toBe(true);
     expect(canBuyChallenge(coon)).toBe(true);
@@ -197,19 +204,22 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     expect(showPurchasesRow(family([freeCat, coon]))).toBe(true);
   });
 
-  it('paywall lists a challenge dog but never a mutt, a game-over pet or one missing from the family', () => {
+  it('paywall lists a challenge pet (also an unpaid mutt challenge, M6-U02) but never a game-over pet or one missing from the family', () => {
     const f = family([pet(TRIAL, { id: 1 }), pet(LOCKED, { id: 2, breed_type: 'mutt' }), pet(LOCKED, { id: 3, is_game_over: true })]);
     expect(isBillingPetPurchasable(billing(1, 'trial'), f)).toBe(true);
     expect(isBillingPetPurchasable(billing(1, 'paid'), f)).toBe(false);
-    expect(isBillingPetPurchasable(billing(2, 'payment_required'), f)).toBe(false);
+    expect(isBillingPetPurchasable(billing(2, 'payment_required'), f)).toBe(true);
     expect(isBillingPetPurchasable(billing(3, 'payment_required'), f)).toBe(false);
     expect(isBillingPetPurchasable(billing(9, 'trial'), f)).toBe(false);
     expect(isBillingPetPurchasable(billing(1, 'trial'), null)).toBe(false);
   });
 
-  it('the banner never asks to buy for a mutt', () => {
-    const { unmount } = render(<ChallengeBanner family={family([pet(LOCKED, { breed_type: 'mutt' })])} onOpen={jest.fn()} />);
+  it('the banner never asks to buy for a free mutt; it does for an unpaid mutt challenge (M6-U02)', () => {
+    const free = render(<ChallengeBanner family={family([pet(FREE, { breed_type: 'mutt' })])} onOpen={jest.fn()} />);
     expect(screen.queryByTestId('challenge-banner-paused')).toBeNull();
+    free.unmount();
+    const { unmount } = render(<ChallengeBanner family={family([pet(LOCKED, { breed_type: 'mutt' })])} onOpen={jest.fn()} />);
+    expect(screen.getByTestId('challenge-banner-paused')).toBeTruthy();
     unmount();
     render(<ChallengeBanner family={family([pet(LOCKED)])} onOpen={jest.fn()} />);
     expect(screen.getByTestId('challenge-banner-paused')).toBeTruthy();

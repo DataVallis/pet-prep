@@ -36,6 +36,8 @@ import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/c
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
 import UnusedPurchasePrompt from '@/components/parent/UnusedPurchasePrompt';
+import UpgradeReminderCards from '@/components/parent/UpgradeReminderCards';
+import { canUpgradePet } from '@/modules/plan/purchaseEntry';
 import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import TimezoneSuggestionBanner from '@/components/parent/TimezoneSuggestionBanner';
 import { petZoneOf } from '@/modules/familyZone/familyZone';
@@ -166,13 +168,23 @@ export default function ParentDashboardScreen() {
       return;
     }
     if (dashboard.data === undefined || pushTarget.petId === null) return;
+    // M6-U02: the day-7 reminder opens the upgrade for that pet (only while the server allows it).
+    if (pushTarget.type === 'upgrade_reminder') {
+      const target = family?.pets.find((p) => p.id === pushTarget.petId);
+      if (target && canUpgradePet(target)) {
+        setActiveTab('dashboard');
+        openChallenge(undefined, target.id);
+        setPushTarget(null);
+        return;
+      }
+    }
     const child = pushTargetChild(children, pushTarget.petId, pushTarget.type ?? null);
     if (child) {
       setActiveTab('dashboard');
       setOverlay({ kind: 'child', childId: child.id });
     }
     setPushTarget(null);
-  }, [pushTarget, dashboard.data, children, setPushTarget]);
+  }, [pushTarget, dashboard.data, children, family, setPushTarget]);
 
   // One stable position for the live subscriptions, whatever tab / overlay is shown.
   return (
@@ -292,6 +304,8 @@ export default function ParentDashboardScreen() {
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
           {/* M6-U01 (§5.3): a purchase on no pet yet (late webhook, several pets waiting) → choose a pet. */}
           <UnusedPurchasePrompt family={family} onChoose={() => openChallenge()} />
+          {/* M6-U02 (U5 / D1): a free pet's first 7 days went well → »Je čas za pravi preizkus?« */}
+          <UpgradeReminderCards family={family} onUpgrade={(petId) => openChallenge(undefined, petId)} />
           {/* David 2026-11-09: per pet — only the pets cared for on this phone are suggested. */}
           <TimezoneSuggestionBanner familyZone={family?.timezone ?? null} pets={family?.pets ?? []} />
           {wishesOpenCount !== null && children.length > 0 && (

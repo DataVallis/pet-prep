@@ -51,7 +51,7 @@ Lead magnet "Pet Promise Reality Check" (free web tool → signed PDF contract) 
 
 ## Roadmap (high level)
 M1 core game end-to-end → M2 parent onboarding & real dashboard → M3 notifications, step tracking, in-app purchase → M4 AI dog videos per state → M5 production hardening & closed beta. Phase 2: real-world AI pet assistant.
-- **Built 2026-11-11, with the next app update:** free → paid upgrade of the same pet (roadmap M6-U01). **Planned:** M6-U02 — "mixed breed + challenge" at creation and the day-7 parent reminder.
+- **Built 2026-11-11, with the next app update:** free → paid upgrade of the same pet (roadmap M6-U01). **Built 2026-11-11, with the next app update:** M6-U02 — "mixed breed + challenge" at creation (new apps) and a one-time day-7 parent reminder when a child cared on at least 5 of the first 7 days. No conversion data yet.
 
 ## Phase 2 — post-adoption *(planned, spec 2026-10-04: `docs/product/PHASE2_SPEC.md`)*
 Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One tap "We got a real dog" turns the simulator into a real-time AI assistant that already knows the family's routine.

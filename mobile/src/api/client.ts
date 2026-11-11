@@ -354,7 +354,7 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming' | 'socialisation' | 'care_tasks';
+export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming' | 'socialisation' | 'care_tasks' | 'free_breed_challenge';
 
 /**
  * What a build declares: the behaviour events ("Pelji ven", luža, pregrizen copat — M5-R02,
@@ -368,9 +368,10 @@ export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly Cli
   // M5-R13: this build brushes a dog ("Počeši" chip + the stroke mini-game) → `dog_grooming`.
   // M5-R17: it shows the puppy's weekly "Nova izkušnja" card → `socialisation`.
   // M5-R14 / R15 / R18 / R19 / R20: breed care mini-games, parent reminders, heat note → `care_tasks`.
+  // M6-U02 (U4): the picker offers »mešanček + izziv« and the app can buy for such a pet → `free_breed_challenge`.
   return catUiReady
-    ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks']
-    : ['behaviour_events', 'training', 'dog_grooming', 'socialisation', 'care_tasks'];
+    ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks', 'free_breed_challenge']
+    : ['behaviour_events', 'training', 'dog_grooming', 'socialisation', 'care_tasks', 'free_breed_challenge'];
 }
 
 /** This build's features (see {@link clientFeatures}). */

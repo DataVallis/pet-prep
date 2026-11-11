@@ -233,7 +233,14 @@ return [
             'parent' => 'Brezplačni preizkus je končan. Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
             'parent_no_trial' => 'Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
         ],
+
+        // M6-U02: opomnik 7. dan (samo starši, brez imen v besedilu).
+        'upgrade_reminder' => 'Vaš otrok že 7 dni skrbi za muco. Je čas za pravi preizkus? V aplikaciji lahko z isto muco začnete 12-tedenski izziv.',
     ],
+
+    // M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1, David 10. 11. 2026): prvih 7 dni brezplačnega ljubljenčka je šlo dobro.
+    // Samo starši (»vi«); naslov je ime ljubljenčka (če ga ima), besedilo nikoli ne omenja ne ljubljenčka ne otroka. Brez cene.
+    'upgrade_reminder' => 'Vaš otrok že 7 dni skrbi za kužka. Je čas za pravi preizkus? V aplikaciji lahko z istim kužkom začnete 12-tedenski izziv.',
 
     // M5-R18 / R20 (David 24. 10. 2026): novo obdobje opomnika staršu. Samo starši (»vi«);
     // naslov je ime ljubljenčka (če ga ima), besedilo nikoli.

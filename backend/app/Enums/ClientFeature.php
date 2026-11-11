@@ -64,6 +64,18 @@ enum ClientFeature: string
     case CareTasks = 'care_tasks';
 
     /**
+     * M6-U02 (FREE_PET_UPGRADE_SPEC U4 / K3 / §5.6, David 2026-11-10): the parent's build
+     * can offer the 12-week challenge with the species' FREE breed (»mešanček + izziv«,
+     * domestic cat likewise). Like `species_cat` it GATES a choice instead of switching a
+     * game rule on: only the PARENT's generate-pin `features` (and the catalogue query
+     * `features[]`) count — the child's device is irrelevant (every build shows the payment
+     * lock). Without it (old builds) M5-F03 stays exactly as before: an explicit
+     * `plan: challenge` with a free breed → 422 `challenge_requires_paid_breed`, and a stored
+     * challenge + free breed silently becomes the free plan.
+     */
+    case FreeBreedChallenge = 'free_breed_challenge';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

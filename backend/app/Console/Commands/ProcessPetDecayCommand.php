@@ -10,6 +10,7 @@ use App\Services\PetBirthdayService;
 use App\Services\PetDecayService;
 use App\Services\RoutineLedgerService;
 use App\Services\SystemHealth\SystemHealthService;
+use App\Services\UpgradeReminderService;
 use Illuminate\Console\Command;
 use Throwable;
 
@@ -33,7 +34,7 @@ class ProcessPetDecayCommand extends Command
      * and every stage runs even when an earlier one threw as a whole (e.g. its ID query),
      * so a decay failure never skips escalation, the day close or the heartbeat.
      */
-    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges, ChallengeCertificateService $certificates, PetBirthdayService $birthdays, SystemHealthService $health, PetLoopGuard $guard): int
+    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges, ChallengeCertificateService $certificates, PetBirthdayService $birthdays, UpgradeReminderService $upgradeReminders, SystemHealthService $health, PetLoopGuard $guard): int
     {
         $guard->begin();
         $ok = true;
@@ -76,6 +77,12 @@ class ProcessPetDecayCommand extends Command
         $ok = $this->stage('birthdays', function () use ($birthdays): void {
             $r = $birthdays->processDue();
             $this->info("Birthdays: checked {$r['pets']} pets, celebrated {$r['celebrated']}.");
+        }) && $ok;
+
+        // M6-U02: a free pet's day-7 parent reminder (5 of 7 active days) — once, push held over quiet hours.
+        $ok = $this->stage('upgrade reminders', function () use ($upgradeReminders): void {
+            $r = $upgradeReminders->processDue();
+            $this->info("Upgrade reminders: checked {$r['pets']} pets, sent {$r['sent']}.");
         }) && $ok;
 
         // One System health log line + at most one Discord alert per failing pet per day.

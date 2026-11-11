@@ -231,7 +231,14 @@ return [
             'parent' => 'The free trial has ended. The cat is waiting safely until you unlock the 12-week challenge in the app.',
             'parent_no_trial' => 'The cat is waiting safely until you unlock the 12-week challenge in the app.',
         ],
+
+        // M6-U02: the day-7 upgrade reminder (parents only, no names in the body).
+        'upgrade_reminder' => 'Your child has been looking after the cat for 7 days. Time for the real test? In the app you can start the 12-week challenge with the same cat.',
     ],
+
+    // M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1, David 2026-11-10): a free pet's first 7 days went well.
+    // Parents only; title = the pet's name (when set), the body never names the pet or the child. No price.
+    'upgrade_reminder' => 'Your child has been looking after the dog for 7 days. Time for the real test? In the app you can start the 12-week challenge with the same dog.',
 
     // M5-R18 / R20 follow-up (David 2026-10-24): a new period of the parent's care reminder.
     // Parents only; title = the pet's name (when set), the body never names it.

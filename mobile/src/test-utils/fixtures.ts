@@ -648,6 +648,7 @@ export function makeFamilyPet(overrides: Partial<FamilyPetFixture> = {}): Family
     plan: { type: 'challenge', status: 'paid', trial_ends_at: '2026-10-08T10:00:00+02:00', paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge', challenge_started_at: null },
     // M6-U01 (additive): free pets only — null for a challenge pet.
     upgrade: null,
+    upgrade_reminder: null,
     profile: makePetProfile(),
     caretakers: [],
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
