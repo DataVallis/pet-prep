@@ -1,0 +1,92 @@
+{
+  "country": "MD",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "Zoomama - own website",
+      "url": "https://zoomama.md/?lang=en",
+      "note": "Own page title/description state a 24/7 clinic in Chisinau; address and phone are not in the text WebFetch could read."
+    },
+    {
+      "name": "VetAsist - own contact page",
+      "url": "https://www.vetasist.com.md/~vetasist/ro/contacte",
+      "note": "Address, phones and weekly hours as published by the clinic."
+    },
+    {
+      "name": "Registrul Chinologilor din Moldova - veterinary medicine page",
+      "url": "https://chinolog.md/medicina_veterinara",
+      "note": "Dog-handler registry page listing the Echipa Bravo clinic contacts; not an official veterinary body."
+    },
+    {
+      "name": "#diez - list of veterinary clinics in Chisinau (2021 and 2018 editions)",
+      "url": "https://diez.md/2021/09/04/best-of-lista-clinicilor-veterinare-din-chisinau-care-ii-pot-salva-viata-animalului-tau-de-companie/",
+      "note": "Editorial article, not official; says only Ciavdar Grup is open 24/24. Used only together with a second page."
+    },
+    {
+      "name": "Locus.md - Ciavdar Grup Buiucani listing",
+      "url": "https://locus.md/pets/veterinary-clinics/ciavdar-grup-buiucani/",
+      "note": "Business directory (not official); states 'Deschis 24/24'. Confirms the diez article."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Zoomama",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "emergency_24h": true,
+      "duty": "Veterinary clinic open around the clock (24/7), including intensive care.",
+      "small_animals": true,
+      "url": "https://zoomama.md/?lang=en",
+      "source_url": "https://zoomama.md/?lang=en",
+      "checked": "2026-11-11",
+      "note": "Own site title: 'ветклиника 24/7 в Кишинёве'; description: 'Круглосуточная ветеринарная клиника Zoomama в Кишинёве', 'интенсивная терапия 24/7'. Only meta text was readable: no address, phone or hours obtained (services/contacts subpages could not be fetched). Species not stated; listed as small-animal clinic on the basis of the services (ultrasound, X-ray, oncology)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Ciavdar Grup (Buiucani branch)",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "str. Nicolae Costin 61, Chișinău",
+      "phone": "079 529 342",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 7 days a week at the Buiucani branch.",
+      "small_animals": true,
+      "url": "https://locus.md/pets/veterinary-clinics/ciavdar-grup-buiucani/",
+      "source_url": "https://locus.md/pets/veterinary-clinics/ciavdar-grup-buiucani/",
+      "checked": "2026-11-11",
+      "note": "Directory page says 'Deschis 24/24'; diez.md 2021 and 2018 articles say 'Program de lucru: 24/24' and 'Doar o clinică din această listă este deschisă 24/24'. Own site/Facebook (facebook.com/ciavdargrup) not opened: Facebook blocks automated access (robots). Both sources are non-official, so re-verify by phone. Other phones: 022 518 983, 022 56 07 31. url points to the directory because no own website was found."
+    },
+    {
+      "kind": "clinic",
+      "name": "VetAsist",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "str. Vasile Lupu 59/3, Chișinău",
+      "phone": "(022) 78-03-02",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-17:00, Sat 09:00-13:00, Sun closed. Mobile: (067) 32-32-11.",
+      "small_animals": true,
+      "url": "https://www.vetasist.com.md/~vetasist/ro/contacte",
+      "source_url": "https://www.vetasist.com.md/~vetasist/ro/contacte",
+      "checked": "2026-11-11",
+      "note": "Own contact page, no 24h/emergency claim. Footer: 'Ветеринарный центр VetAsist'. Species not stated on the page. diez.md lists an older address (M. Kogălniceanu 54), not used."
+    },
+    {
+      "kind": "clinic",
+      "name": "Echipa Bravo",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "str. Cuza Vodă 18/2, Chișinău",
+      "phone": "+373 22 66 14 44",
+      "emergency_24h": false,
+      "duty": "Appointments recommended. Other phones: +373 79 588 317, +373 69 130 317.",
+      "small_animals": true,
+      "url": "https://chinolog.md/medicina_veterinara",
+      "source_url": "https://chinolog.md/medicina_veterinara",
+      "checked": "2026-11-11",
+      "note": "Page of the Registrul Chinologilor din Moldova; the note 'Doar cu programare prealabilă' sits in the contact block and may refer to the training centre rather than the clinic, so duty is cautious. No own clinic site found. diez.md (2021) gives 022 661 444 and Mon-Fri 09:00-17:00 hours, not used because it is an editorial source."
+    }
+  ],
+  "notes": "Run 2026-11-11. WebSearch returned few Moldovan results, so coverage is thin. No official register was readable: ANSA (ansa.gov.md) documents found by search are .docx with no readable text via WebFetch, no Chisinau veterinary chamber page found, no UASM veterinary faculty clinic page found. No duty rota (dezurstvo) found. No animal poison line found; the only helpline found is People in Need Moldova / Vet.md '14 567' (farm animals, Fridays 9:00-18:00, moldpres.md) - not a pet poison line, not used. vet.md is a veterinary portal/online consultation service (Mircea cel Batran 34, 022011082, 08:00-17:00, not a clinic) so it was not added. Blocked/unreachable: vetgor.online (robots disallow), facebook.com pages (robots disallow), 999.md ads (fetch failed), veterinari-moldova.com (fetch failed), zoolife.md and zoomama contacts page (not in WebFetch provenance set). Aggregator-only, therefore NOT added: Bălți clinics (Clinic Vet, Felix, Lumea Animalelor, Zoo-Doctor via beltsy.info; RomaVet), Orhei Alex Vet (findglocal), Vet Life, Iurionvet, Zoo Life (zoolife.md), Esculap-Vet, Nicoleta-Lux (diez.md 2018/2021 only). Left to do: own sites of those clinics, Bălți, Cahul, Orhei, Ungheni, Comrat, Tiraspol/Transnistria (nothing reachable), ANSA territorial offices, UASM/USARB clinics, 24h home-visit services advertised only on 999.md/all.biz (Varzari Vet, Vetdoc - classifieds, not used)."
+}
