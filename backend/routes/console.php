@@ -49,6 +49,17 @@ Schedule::command('pins:prune')
     ->name('prune-child-login-pins')
     ->description('Delete expired / used child login PINs older than 7 days');
 
+// Daily (M6-S01b, CONTRACT_WEB_SIGNIN §1.4): delete Sanctum tokens whose `expires_at`
+// passed more than 24 h ago — the 15-minute website sign-in tokens (`gift:redeem`).
+// App tokens have expires_at null (sanctum.expiration stays null) and are never touched.
+// 03:29 UTC — off the hour, between the other nightly prunes.
+Schedule::command('sanctum:prune-expired --hours=24')
+    ->dailyAt('03:29')
+    // One DELETE query; 30 min covers any run (D34: explicit expiry).
+    ->withoutOverlapping(30)
+    ->name('prune-expired-web-tokens')
+    ->description('Delete expired website sign-in tokens (expires_at older than 24 h)');
+
 // Daily (M6-S03, WEBSITE_SALES_SPEC §5.2): delete partner inquiries older than 12 months
 // (a business contact's name and e-mail). 03:43 UTC.
 Schedule::command('partner-inquiries:prune')

@@ -25,16 +25,19 @@ use App\Services\AppSettingsService;
 use App\Services\ChallengeCreditService;
 use App\Services\FamilyService;
 use App\Services\Funnel\FunnelService;
+use App\Services\Gift\GiftRedeemResult;
 use App\Services\Gift\GiftVoucherRedeemService;
 use App\Services\Gift\LemonSqueezyWebhookService;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Push\ExpoPushClient;
+use App\Support\WebsiteLocale;
 use Illuminate\Database\Events\TransactionRolledBack;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Str;
 use Livewire\Livewire;
@@ -126,55 +129,73 @@ describe('redeem', function () {
         gvParent('other@example.com');
         gvRedeem()->assertOk();
 
-        gvRedeem(email: 'other@example.com')->assertStatus(409)->assertJsonPath('error', 'already_redeemed');
-        gvRedeem(email: 'nobody@example.com')->assertStatus(409)->assertJsonPath('error', 'already_redeemed');
+        gvRedeem(as: 'other@example.com')->assertStatus(409)->assertJsonPath('error', 'already_redeemed');
+        // M6-S01b: without a web token nothing is looked up at all.
+        gvRedeem(as: null)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
         expect(ChallengeCredit::count())->toBe(1);
     });
 
-    it('S4: an unknown e-mail is no_account — no activation, no claim; the right e-mail then works', function () {
+    it('S4 (M6-S01b GR1): no token / an expired web token / app tokens are 401 unauthenticated — nothing touched; a web token then works', function () {
         $ls = gvLs();
-        gvParent();
+        [$parent, $child] = gvParent();
 
-        gvRedeem(email: 'typo@example.com')->assertStatus(422)->assertJsonPath('error', 'no_account');
-        $voucher = GiftVoucher::sole();
-        expect($ls->count('activate'))->toBe(0)
-            ->and($voucher->status)->toBe(GiftVoucher::STATUS_PURCHASED)
-            ->and($voucher->claim_family_id)->toBeNull()
-            ->and(ChallengeCredit::count())->toBe(0);
+        gvRedeem(as: null)->assertStatus(401)->assertExactJson(['error' => 'unauthenticated', 'message' => __('gift.unauthenticated', [], 'en')]);
+        gvRedeem(token: gvWebToken($parent, now()->subSecond()))->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        $expiring = gvWebToken($parent);
+        $this->travel(16)->minutes();
+        gvRedeem(token: $expiring)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        $this->travelBack();
+        Carbon::setTestNow(Carbon::parse(GV_NOW, 'UTC'));
+        // W3: app tokens never redeem (no app API for the voucher).
+        gvRedeem(token: $parent->createToken('iPhone', ['parent'])->plainTextToken)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        gvRedeem(token: $child->createToken('kid', ['child'])->plainTextToken)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        gvRedeem(token: $parent->createToken('legacy', ['*'])->plainTextToken)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        // A web token without an expiry is not one WebParentSessionService issues → 401 too.
+        gvRedeem(token: $parent->createToken('web:gift-redeem', ['gift:redeem'])->plainTextToken)->assertStatus(401);
 
-        gvRedeem()->assertOk()->assertJsonPath('already', false);
+        expect($ls->calls)->toBe([])->and(GiftVoucher::count())->toBe(0)->and(ChallengeCredit::count())->toBe(0);
+
+        gvRedeem(as: $parent)->assertOk()->assertJsonPath('already', false);
     });
 
-    it('S5: a child account or a parent without a family is no_account', function () {
+    it('S5 (M6-S01b GR2): a child, a parent without a family or a deleted parent cannot redeem', function () {
         $ls = gvLs();
-        [, $child] = gvParent();
-        $child->forceFill(['email' => 'kid@example.com'])->save();
-        gvRedeem(email: 'kid@example.com')->assertStatus(422)->assertJsonPath('error', 'no_account');
+        [$parent, $child] = gvParent();
+        gvRedeem(as: $child)->assertStatus(403)->assertJsonPath('error', 'not_parent');
 
         $loner = User::factory()->parent()->create(['email' => 'loner@example.com']);
+        $lonerToken = gvWebToken($loner);
         DB::table('family_user')->where('user_id', $loner->id)->delete();
-        gvRedeem(email: 'loner@example.com')->assertStatus(422)->assertJsonPath('error', 'no_account');
-        expect($ls->count('activate'))->toBe(0);
+        gvRedeem(token: $lonerToken)->assertStatus(403)->assertJsonPath('error', 'not_parent');
+
+        $gone = User::factory()->parent()->create(['email' => 'gone@example.com']);
+        $goneToken = gvWebToken($gone);
+        DB::table('family_user')->where('user_id', $gone->id)->delete();
+        DB::table('users')->where('id', $gone->id)->delete();
+        gvRedeem(token: $goneToken)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+
+        expect($ls->calls)->toBe([]);
     });
 
-    it('S6: the e-mail is matched case-insensitively, also for a Google-created parent', function () {
+    it('S6: a password-less (Google-created) parent redeems for their family with a web token', function () {
         gvLs();
         [$parent, , $family] = gvParent('Parent.Google@Example.com');
         $parent->forceFill(['password' => null])->save();
         UserSocialAccount::create(['user_id' => $parent->id, 'provider' => 'google', 'subject' => 'g-sub-1', 'email' => 'other-provider-mail@example.com']);
 
-        gvRedeem(email: 'parent.google@EXAMPLE.COM')->assertOk();
+        gvRedeem(as: $parent)->assertOk();
         expect(ChallengeCredit::sole()->family_id)->toBe($family->id);
     });
 
-    it('S7: an unknown key is invalid_code and the e-mail is never looked up (same answer for a real and a random e-mail)', function () {
+    it('S7: an unknown key is invalid_code — the same answer for every family, nothing stored', function () {
         $ls = gvLs();
         $ls->known = false;
         gvParent();
+        gvParent('other@example.com');
 
-        $real = gvRedeem()->assertStatus(422)->json();
-        $random = gvRedeem(email: 'random-'.Str::random(6).'@example.com')->assertStatus(422)->json();
-        expect($real)->toBe($random)->and($real['error'])->toBe('invalid_code')
+        $one = gvRedeem()->assertStatus(422)->json();
+        $other = gvRedeem(as: 'other@example.com')->assertStatus(422)->json();
+        expect($one)->toBe($other)->and($one['error'])->toBe('invalid_code')
             ->and(GiftVoucher::count())->toBe(0)->and($ls->count('activate'))->toBe(0);
     });
 
@@ -268,6 +289,7 @@ describe('redeem', function () {
         AppSetting::query()->whereKey(AppSettingsService::GIFT_VOUCHERS_KEY)->delete();
         cache()->flush();
         gvLs();
+        gvParent();
         expect(app(AppSettingsService::class)->giftVouchers(fresh: true))->toBeFalse();
         gvRedeem()->assertStatus(503)->assertJsonPath('error', 'unavailable');
     });
@@ -405,6 +427,7 @@ describe('redeem', function () {
 
     it('S21: the 11th request per minute from one IP is 429 rate_limited with Retry-After', function () {
         gvLs();
+        gvParent();
         gvSwitch(false); // cheap answers; the limiter runs first
         for ($i = 0; $i < 10; $i++) {
             gvRedeem('code-'.$i.'-abcdefgh', ip: '198.51.100.7')->assertStatus(503);
@@ -416,6 +439,7 @@ describe('redeem', function () {
 
     it('S21: the 11th request per hour on one code from varying IPs is 429', function () {
         gvLs();
+        gvParent();
         gvSwitch(false);
         for ($i = 0; $i < 10; $i++) {
             gvRedeem(GV_CODE, ip: '192.0.2.'.($i + 1))->assertStatus(503);
@@ -425,29 +449,99 @@ describe('redeem', function () {
         gvRedeem('another-code-1234', ip: '192.0.2.201')->assertStatus(503);
     });
 
-    it('S22: malformed input is 422 invalid_request without echoing fields', function (array $body) {
+    it('S22: malformed input (with a valid web token) is 422 invalid_request without echoing fields', function (array $body) {
         gvLs();
+        [$parent] = gvParent();
         app('auth')->forgetGuards();
-        $res = test()->postJson('/api/gift/redeem', $body)->assertStatus(422)->assertJsonPath('error', 'invalid_request');
+        $res = test()->withHeaders(['Authorization' => 'Bearer '.gvWebToken($parent)])
+            ->postJson('/api/gift/redeem', $body)->assertStatus(422)->assertJsonPath('error', 'invalid_request');
         expect(array_keys($res->json()))->toBe(['error', 'message']);
     })->with([
-        'no code' => [['email' => 'parent@example.com']],
-        'short code' => [['code' => 'abc', 'email' => 'parent@example.com']],
-        'bad chars' => [['code' => 'abcd<script>efgh', 'email' => 'parent@example.com']],
-        'bad email' => [['code' => GV_CODE, 'email' => 'not-an-email']],
-        'bad locale' => [['code' => GV_CODE, 'email' => 'parent@example.com', 'locale' => 'de']],
-        'array code' => [['code' => ['x'], 'email' => 'parent@example.com']],
+        'no code' => [[]],
+        'short code' => [['code' => 'abc']],
+        'bad chars' => [['code' => 'abcd<script>efgh']],
+        'unknown locale' => [['code' => GV_CODE, 'locale' => 'xx']],
+        'array code' => [['code' => ['x']]],
     ]);
 
-    it('answers `message` in Slovenian when locale = sl', function () {
+    it('answers `message` in Slovenian when locale = sl; the other website languages are accepted and answered in English', function () {
         gvLs();
+        gvParent();
         gvSwitch(false);
         gvRedeem(extra: ['locale' => 'sl'])->assertStatus(503)->assertJsonPath('message', 'Unovčitev bonov trenutno ni na voljo.');
+        foreach (WebsiteLocale::ALL as $locale) {
+            if ($locale !== 'sl') {
+                gvRedeem('locale-code-'.$locale, extra: ['locale' => $locale], ip: '203.0.113.'.(50 + array_search($locale, WebsiteLocale::ALL, true)))
+                    ->assertStatus(503)->assertJsonPath('message', 'Voucher redemption is not available right now.');
+            }
+        }
+    });
+
+    it('GR6: a body with an e-mail and no token is 401 — the e-mail is never validated or logged', function () {
+        gvLs();
+        gvParent();
+        Log::spy();
+        gvRedeem(as: null, extra: ['email' => 'parent@example.com'])->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        // With a token the e-mail field is ignored (even a malformed one).
+        gvRedeem(extra: ['email' => 'not-an-email'])->assertOk();
+        Log::shouldNotHaveReceived('info', fn (string $m, array $c = []) => str_contains(json_encode($c) ?: '', 'parent@example.com') || str_contains(json_encode($c) ?: '', 'not-an-email'));
+        Log::shouldNotHaveReceived('warning', fn (string $m, array $c = []) => str_contains(json_encode($c) ?: '', '@example.com'));
+    });
+
+    it('GR7: the no_account code is gone (result map and lang files)', function () {
+        expect(GiftRedeemResult::HTTP)->not->toHaveKey('no_account')
+            ->and(GiftRedeemResult::HTTP['unauthenticated'])->toBe(401)
+            ->and(GiftRedeemResult::HTTP['not_parent'])->toBe(403);
+        foreach (['en', 'sl'] as $lang) {
+            expect(require lang_path("{$lang}/gift.php"))->not->toHaveKey('no_account')->toHaveKeys(['unauthenticated', 'not_parent']);
+        }
+    });
+
+    it('GR3: the family deleted between claim and commit → 401 unauthenticated, no credit', function () {
+        $ls = gvLs();
+        [$parent, $child, $family] = gvParent();
+        $ls->beforeActivate = function () use ($family) {
+            // Remove the family entirely (members first — RESTRICT FKs).
+            DB::table('family_user')->where('family_id', $family->id)->delete();
+            DB::table('quiet_hours')->where('family_id', $family->id)->delete();
+            DB::table('gift_vouchers')->where('claim_family_id', $family->id)->update(['claim_family_id' => null]);
+            DB::table('families')->where('id', $family->id)->delete();
+        };
+
+        gvRedeem(as: $parent)->assertStatus(401)->assertJsonPath('error', 'unauthenticated');
+        expect(ChallengeCredit::count())->toBe(0)->and(GiftVoucher::sole()->status)->toBe(GiftVoucher::STATUS_PURCHASED);
+    });
+
+    it('GR4: idempotency follows the token\'s family — same family already:true, another family\'s token 409', function () {
+        gvLs();
+        [$parent, , $family] = gvParent();
+        $second = User::factory()->parent()->create();
+        DB::table('family_user')->where('user_id', $second->id)->delete();
+        app(FamilyService::class)->addMember($family, $second, FamilyRole::Parent);
+        [$stranger] = gvParent('stranger@example.com');
+
+        gvRedeem(as: $parent)->assertOk()->assertJsonPath('already', false);
+        gvRedeem(as: $second)->assertOk()->assertExactJson(['status' => 'redeemed', 'already' => true]);
+        gvRedeem(as: $stranger)->assertStatus(409)->assertJsonPath('error', 'already_redeemed');
+        expect(ChallengeCredit::count())->toBe(1);
+    });
+
+    it('GR5: the 21st redeem in an hour for one family (different codes and IPs) is 429', function () {
+        gvLs();
+        [$parent] = gvParent();
+        gvSwitch(false);
+        for ($i = 0; $i < 20; $i++) {
+            gvRedeem('family-code-'.$i.'-abc', as: $parent, ip: '198.18.0.'.($i + 1))->assertStatus(503);
+        }
+        gvRedeem('family-code-x-abc', as: $parent, ip: '198.18.1.1')->assertStatus(429)->assertJsonPath('error', 'rate_limited');
+        [$other] = gvParent('other@example.com');
+        gvRedeem('family-code-y-abc', as: $other, ip: '198.18.1.2')->assertStatus(503);
     });
 
     it('never calls Lemon Squeezy inside a database transaction', function () {
         gvLs();
-        expect(fn () => DB::transaction(fn () => app(GiftVoucherRedeemService::class)->redeem(GV_CODE, 'parent@example.com')))
+        [, , $family] = gvParent();
+        expect(fn () => DB::transaction(fn () => app(GiftVoucherRedeemService::class)->redeem(GV_CODE, $family)))
             ->toThrow(LogicException::class, 'must not be called inside a database transaction');
     });
 });
@@ -721,14 +815,17 @@ describe('webhook', function () {
 /* ───────────────────────────── Infra ───────────────────────────── */
 
 describe('infra', function () {
-    it('S30: CORS preflight from petprep.si on /api/gift/redeem gets Access-Control-Allow-Origin', function (string $origin) {
-        test()->call('OPTIONS', '/api/gift/redeem', [], [], [], [
+    it('S30: CORS preflight from petprep.si (Authorization header) on the redeem + web sign-in routes', function (string $origin, string $path, string $method) {
+        $res = test()->call('OPTIONS', $path, [], [], [], [
             'HTTP_ORIGIN' => $origin,
-            'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST',
-            'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type',
+            'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => $method,
+            'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'authorization, content-type',
         ])->assertHeader('Access-Control-Allow-Origin')
             ->assertHeader('Access-Control-Allow-Methods');
-    })->with(['https://petprep.si', 'https://www.petprep.si', 'http://localhost:3000']);
+        expect(strtolower((string) $res->headers->get('Access-Control-Allow-Headers')))->toContain('authorization')
+            ->and($res->headers->get('Access-Control-Allow-Credentials'))->not->toBe('true');
+    })->with(['https://petprep.si', 'https://www.petprep.si', 'http://localhost:3000'])
+        ->with([['/api/gift/redeem', 'POST'], ['/api/web/parent-session', 'POST'], ['/api/web/parent-session', 'DELETE']]);
 
     it('S32: one Expo message per active parent token, no names, never says voucher; once only; children get nothing', function () {
         config(['push.enabled' => true]);

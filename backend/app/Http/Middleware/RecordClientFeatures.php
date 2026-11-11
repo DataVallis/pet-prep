@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Enums\ClientFeature;
 use App\Models\User;
+use App\Services\Auth\WebParentSessionService;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -41,7 +42,8 @@ class RecordClientFeatures
         }
         // Resolved by the route's auth:sanctum (shouldUse) — no extra lookup for guests.
         $user = $request->user();
-        if (! $user instanceof User) {
+        // M6-S01b: a website sign-in token is not an app build — never record its header.
+        if (! $user instanceof User || WebParentSessionService::isWebToken($user->currentAccessToken())) {
             return $response;
         }
 

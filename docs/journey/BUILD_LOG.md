@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Bon se unovči s prijavo, brez vpisovanja e-naslova *(strežnik pripravljen, izklopljeno do izida v trgovinah)*
+
+**Kaj:** David se je odločil (22.20), da stran za unovčitev ne sprašuje po e-naslovu. Starš se prijavi z istim računom kot v aplikaciji — Google, Apple ali e-naslov + geslo — in vnese kodo. Strežnik (M6-S01b) izda prijavo, ki velja **15 minut** in **samo za unovčitev**: za katero koli drugo funkcijo jo strežnik zavrne (test preveri vse poti API-ja). Prijava nikoli ne ustvari računa in ga ne poveže z drugim. Za Google in Apple sta ločena spletna ID-ja; prijava v aplikaciji se ne spremeni. Omejitve: 10 poskusov na minuto na naslov, po 5 napačnih geslih je spletna prijava računa za 15 minut zaklenjena, največ 20 unovčitev na družino na uro. 26 novih testov, prilagojeni vsi testi bona.
+**Zakaj je pomembno:** starši s prijavo Apple imajo skrit e-naslov in ga ne poznajo, aplikacija pa e-naslova ne prikaže — po prejšnji poti bona ne bi mogli unovčiti. Aplikacija ostane brez polja za kodo (pravila Apple).
+**Kako povedati:** 👩 »Bon unovčite na petprep.si: prijavite se tako kot v aplikaciji in vpišite kodo.« *(načrt — ko je stran objavljena)* · 🛠 »Kratkoživ žeton z eno samo pravico, varovalka na vseh drugih poteh, OIDC preusmeritev brez skript ponudnikov na strani.«
+
+---
+
 ## 2026-11-11 — Prvi izdelki za prodajo prek spletne strani
 
 **Kaj:** Na `main` so prvi izdelki, ki jih lahko kupite prek spletne strani. Darilni bon za 12-tedenski izziv (strežnik #1047, spletna stran pet-prep-website#372) je izklopljen, dokler aplikacija ni v trgovinah. Natisljivi komplet »Obljuba o ljubljenčku« (spletna stran pet-prep-website#371) je za stikalom, dokler David ne potrdi besedila. Stran za partnerje in sponzorje (strežnik #1049, spletna stran pet-prep-website#368) je objavljena.

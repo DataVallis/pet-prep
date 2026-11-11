@@ -42,13 +42,25 @@ class SocialTokenVerifier
     public const REFRESH_INTERVAL_SECONDS = 60;
 
     /**
-     * @param  string|null  $rawNonce  Apple: the raw nonce whose SHA-256 the app passed to Apple
+     * Defaults = the app's sign-in (POST /api/auth/social), unchanged. The website
+     * sign-in (M6-S01b) passes its own `$audiences` (SocialProvider::webAudiences)
+     * and `$requireNonce: true` (a nonce for Google too).
+     *
+     * @param  string|null  $rawNonce  the raw nonce whose SHA-256 was passed to the provider (Apple; web: both)
+     * @param  list<string>|null  $audiences  accepted `aud` values; null = $provider->audiences()
+     * @param  bool  $requireNonce  require the nonce even where the provider does not (web sign-in)
      *
      * @throws SocialAuthException
      */
-    public function verify(SocialProvider $provider, string $idToken, ?string $rawNonce = null): SocialIdentity
-    {
-        if (! $provider->isEnabled()) {
+    public function verify(
+        SocialProvider $provider,
+        string $idToken,
+        ?string $rawNonce = null,
+        ?array $audiences = null,
+        bool $requireNonce = false,
+    ): SocialIdentity {
+        $audiences ??= $provider->audiences();
+        if ($audiences === []) {
             throw SocialAuthException::providerDisabled();
         }
 
@@ -66,13 +78,14 @@ class SocialTokenVerifier
             throw $this->reject($provider, 'bad signature');
         }
 
-        return $this->identityFromClaims($provider, $jwt->claims, $rawNonce);
+        return $this->identityFromClaims($provider, $jwt->claims, $rawNonce, $audiences, $requireNonce || $provider->requiresNonce());
     }
 
     /**
      * @param  array<string, mixed>  $claims
+     * @param  list<string>  $accepted
      */
-    private function identityFromClaims(SocialProvider $provider, array $claims, ?string $rawNonce): SocialIdentity
+    private function identityFromClaims(SocialProvider $provider, array $claims, ?string $rawNonce, array $accepted, bool $requireNonce): SocialIdentity
     {
         $now = now()->getTimestamp();
 
@@ -83,7 +96,7 @@ class SocialTokenVerifier
 
         $aud = $claims['aud'] ?? null;
         $audiences = is_string($aud) ? [$aud] : (is_array($aud) ? array_filter($aud, 'is_string') : []);
-        $matched = array_values(array_intersect($audiences, $provider->audiences()));
+        $matched = array_values(array_intersect($audiences, $accepted));
         if ($matched === []) {
             throw $this->reject($provider, 'aud');
         }
@@ -114,7 +127,7 @@ class SocialTokenVerifier
             throw $this->reject($provider, 'sub');
         }
 
-        if ($provider->requiresNonce()) {
+        if ($requireNonce) {
             $nonce = $claims['nonce'] ?? null;
             if ($rawNonce === null || $rawNonce === '' || ! is_string($nonce)
                 || ! hash_equals(hash('sha256', $rawNonce), strtolower($nonce))) {

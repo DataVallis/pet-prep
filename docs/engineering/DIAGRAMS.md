@@ -2618,3 +2618,42 @@ sequenceDiagram
   Note over S,DB: PUT /api/parent/settings (family zone) moves only pets with pets.timezone null<br/>and never stamps pets.timezone_changed_at
 ```
 
+
+## Website gift voucher redemption with web sign-in (M6-S01b, David 2026-11-11 22:20)
+
+The parent signs in on `petprep.si/redeem` with the same account as in the app (no e-mail field for the code), then enters the code. The app never gets a code field. Google / Apple use a full-page OIDC redirect (`id_token` in the fragment, no provider script on the site); only the WEBSITE client ids are accepted, and only by this endpoint.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant B as Browser (petprep.si/redeem)
+  participant G as Google / Apple
+  participant API as api.petprep.si
+  participant DB as PostgreSQL
+  participant LS as Lemon Squeezy
+  alt Google / Apple
+    B->>G: location.assign(authorize?client_id=<website id>&nonce=sha256(raw)&state)
+    G-->>B: petprep.si/auth/return#id_token=…&state=…
+    B->>API: POST /api/web/parent-session {method: google|apple, id_token, nonce: raw}
+    API->>G: JWKS (cached) — before any transaction
+    Note over API: aud ∈ web ids only · nonce required · replay guard (cache)
+    API->>DB: user_social_accounts (provider, sub) — READ ONLY (none → 404 account_not_found)
+  else e-mail + password
+    B->>API: POST /api/web/parent-session {method: password, email, password}
+    Note over API: account lock 5 failures / 15 min (any IP) · Hash::check · identical 401
+  end
+  Note over API: gift switch off → 503 unavailable first · not a parent / no family → 403 not_parent
+  API->>DB: tx: delete web tokens beyond the newest 2 · create token ["gift:redeem"], expires +15 min
+  API-->>B: 200 {token, abilities: ["gift:redeem"], expires_at, expires_in: 900} (no user data; kept in JS memory)
+  B->>API: POST /api/gift/redeem {code, locale} · Bearer <web token>
+  Note over API: RequireWebSession: only a web token (app tokens → 401) · family = token's parent's
+  API->>LS: validate (outside any transaction)
+  API->>DB: claim (short tx)
+  API->>LS: activate instance family:<id>
+  API->>DB: commit (voucher → family locks) · one web_gift credit
+  API-->>B: 200 {status: redeemed, already}
+  opt sign out
+    B->>API: DELETE /api/web/parent-session · Bearer <web token> → 204 (app tokens never deleted)
+  end
+  Note over API: Any other API route with a web token → 403 token_scope (RestrictWebSessionTokens)
+```
