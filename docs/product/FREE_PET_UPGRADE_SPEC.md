@@ -27,6 +27,7 @@ Danes je brezplačni mešanček (in domača mačka) preizkus aplikacije, plačlj
 | K5 | **Stari mešančki (pred M5, `legacy` profil)** nadgradnje ne dobijo (D3). |
 | K6 | **Igra in crkljanje** se odkleneta ob nakupu, kot danes v kodi (D4). |
 | K7 | **Ponoven nakup po vračilu** pomeni novih 12 tednov od novega nakupa. |
+| K8 | **Ni poti nazaj na brezplačni načrt** (David 11. 11. 2026): nadgrajen ljubljenček ali neplačan »mešanček + izziv« se ne more sam vrniti na brezplačni načrt, enako kot pasemski. Edini poti sta vračilo kupnine (→ brezplačno) in izbris. |
 | D1 | Opomnik 7. dan se pošlje, ko je od pogodbe minilo **7 dni** in je otrok vsaj eno dejanje naredil v **vsaj 5 od teh 7 dni** (ne vsak dan). |
 | D2 | Pred spremembo webhooka preveriti v kodi, ali **vse** različice aplikacije, ki so pri uporabnikih (trgovinske gradnje in OTA), po nakupu same pokličejo aktivacijo za izbranega ljubljenčka. Če se katera zanaša na samodejno dodelitev, se ustavimo, Davidu predlagamo rešitev in čakamo nanj. **Starš nikoli ne sme plačati in ostati z zaklenjenim ljubljenčkom.** Stanje (10. 11.): **preverjeno — ni varno, kot je bilo predlagano.** Vse različice pokličejo aktivacijo samo, če nakup vidijo v ~8 s (5 poizvedb), brez kasnejšega poskusa; ob zakasnelem webhooku, zaprti aplikaciji ali brez povezave ljubljenčka danes odklene samodejna dodelitev. Predlog »namen nakupa« (§5.3) je David potrdil 10. 11. 2026 (»da«); zgrajen v PR 1. |
 | D3 | Staršu starega mešančka **pošteno povemo**, zakaj nadgradnja ni mogoča (kratko besedilo). Gumba ne skrijemo brez razlage. |
