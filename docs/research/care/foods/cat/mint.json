@@ -4,27 +4,32 @@
   "name": {
     "en": "Mint (garden mint)",
     "sl": "Meta (vrtna meta)",
+    "de": "Minze (Gartenminze)",
     "pt": "Hortelã (hortelã-comum)"
   },
   "question": {
     "en": "Can cats eat mint?",
     "sl": "Ali lahko mačke jedo meto?",
+    "de": "Dürfen Katzen Minze fressen?",
     "pt": "Os gatos podem comer hortelã?"
   },
   "url_slug": {
     "en": "mint",
     "sl": "meta",
+    "de": "minze",
     "pt": "hortela"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your cat mint. The ASPCA lists garden mint as toxic to cats because of its essential oils; eating a lot of it can cause vomiting and diarrhoea. If your cat has eaten some, contact your vet.",
     "sl": "Ne, mački ne dajajte mete. ASPCA vrtno meto navaja kot strupeno za mačke zaradi njenih eteričnih olj; če je mačka poje veliko, lahko povzroči bruhanje in drisko. Če jo je mačka pojedla, se obrnite na veterinarja.",
+    "de": "Nein, geben Sie Ihrer Katze keine Minze. Die ASPCA stuft Gartenminze wegen ihrer ätherischen Öle als giftig für Katzen ein. Frisst eine Katze viel davon, kann das Erbrechen und Durchfall auslösen. Wenn Ihre Katze davon gefressen hat, wenden Sie sich an Ihren Tierarzt.",
     "pt": "Não, não dês hortelã ao teu gato. A ASPCA classifica a hortelã-comum como tóxica para os gatos, por causa dos óleos essenciais, que podem causar vómitos e diarreia se o gato comer muita. Se o teu gato comeu alguma, liga ao teu veterinário."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
     "sl": "ASPCA meto (vrste rodu Mentha, imenovane tudi vrtna meta) navaja kot strupeno za mačke. Kot strupeno snov navaja eterična olja, kot znaka pri zaužitju večjih količin pa bruhanje in drisko. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa.",
+    "de": "Die ASPCA stuft Minze (Mentha-Arten, auch Gartenminze genannt) als giftig für Katzen ein. Als giftigen Inhaltsstoff nennt sie ätherische Öle und führt Erbrechen und Durchfall nach großen Mengen an. Außerdem weist die ASPCA darauf hin, dass jedes Pflanzenmaterial bei Katzen Erbrechen und Magenbeschwerden auslösen kann. Katzen brauchen keine Pflanzen in ihrer Ernährung: Laut PDSA sind Katzen Fleischfresser, die Nährstoffe brauchen, die in Fleisch stecken.",
     "pt": "A ASPCA classifica a hortelã (espécies de Mentha, também chamada hortelã-comum) como tóxica para os gatos. Indica os óleos essenciais como a substância tóxica e refere vómitos e diarreia quando é comida em grande quantidade. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne."
   },
   "signs": {
@@ -38,6 +43,11 @@
       "Driska",
       "Prebavne težave"
     ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenbeschwerden"
+    ],
     "pt": [
       "Vómitos",
       "Diarreia",
@@ -47,12 +57,14 @@
   "what_to_do": {
     "en": "If your cat has eaten mint, contact your vet straight away. Don't wait for symptoms to appear.",
     "sl": "Če je mačka pojedla meto, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki.",
+    "de": "Wenn Ihre Katze Minze gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht ab, bis Anzeichen auftreten.",
     "pt": "Se o teu gato comeu hortelã, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais."
   },
   "serving": null,
   "child": {
     "en": "Mint is not a cat snack. If kitty nibbles some, tell a grown-up so they can call the vet.",
     "sl": "Meta ni priboljšek za muce. Če jo muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
+    "de": "Minze ist kein Snack für Katzen. Wenn deine Katze etwas davon angeknabbert hat, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
     "pt": "A hortelã não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário."
   },
   "faq": [
@@ -60,11 +72,13 @@
       "q": {
         "en": "Is catnip a kind of mint?",
         "sl": "Ali je mačja meta vrsta mete?",
+        "de": "Ist Katzenminze eine Art Minze?",
         "pt": "A erva-gateira é um tipo de hortelã?"
       },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
         "sl": "Mačja meta spada v družino metovk, kot navaja VCA, vendar je samostojna rastlina. ASPCA jo navaja posebej: veliko mačk jo ima zelo rado, vendar lahko njeno uživanje povzroči bruhanje in drisko.",
+        "de": "Wie VCA anmerkt, gehört Katzenminze zur Familie der Minzen, ist aber eine eigene Pflanze. Die ASPCA führt sie getrennt auf: Viele Katzen lieben Katzenminze, aber das Fressen kann Erbrechen und Durchfall auslösen.",
         "pt": "A erva-gateira pertence à família da hortelã, como refere a VCA, mas é uma planta diferente. A ASPCA classifica-a em separado: muitos gatos adoram erva-gateira, mas comê-la pode causar vómitos e diarreia."
       }
     }
@@ -136,6 +150,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bf77bf8a2913776a776ef27af360962dfdf38194a68053f798a1496ca4d67233"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "29626cfcf6039c18d39daabb4272459ae2c4ac532c2979a76502b0fce83bf76e"
     }
   }
 }

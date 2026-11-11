@@ -4,43 +4,51 @@
   "name": {
     "en": "Edamame",
     "sl": "Edamame",
+    "de": "Edamame",
     "pt": "Edamame"
   },
   "question": {
     "en": "Can dogs eat edamame?",
     "sl": "Ali lahko psi jedo edamame?",
+    "de": "Dürfen Hunde Edamame fressen?",
     "pt": "Os cães podem comer edamame?"
   },
   "url_slug": {
     "en": "edamame",
     "sl": "edamame",
+    "de": "edamame",
     "pt": "edamame"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Plain edamame beans aren't toxic to dogs, and a few fresh beans as a treat won't harm most dogs. Leave out the tough pods, which are a choking hazard, and never share edamame cooked with salt, spices, soy sauce or oil.",
     "sl": "Da, zmerno. Navadna zrna edamame za pse niso strupena in nekaj svežih zrn kot priboljšek večini psov ne bo škodovalo. Trdih strokov ne dajajte, ker se lahko pes z njimi zaduši, in nikoli ne delite edamame, kuhanega s soljo, začimbami, sojino omako ali oljem.",
+    "de": "Ja, in Maßen. Pure Edamame-Bohnen sind für Hunde nicht giftig, und ein paar frische Bohnen als Leckerli schaden den meisten Hunden nicht. Lassen Sie die zähen Schoten weg, denn sie sind eine Erstickungsgefahr, und geben Sie Ihrem Hund niemals Edamame, die mit Salz, Gewürzen, Sojasauce oder Öl zubereitet wurden.",
     "pt": "Sim, com moderação. Os grãos de edamame simples não são tóxicos para os cães, e alguns grãos frescos como guloseima não farão mal à maioria dos cães. Deixa de fora as vagens rijas, que são um risco de engasgo, e nunca partilhes edamame cozinhado com sal, temperos, molho de soja ou óleo."
   },
   "why": {
     "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
     "sl": "Edamame so sojina zrna, bogata z vlakninami in obdana s trdimi stroki. Soja je pri psih pogost alergen, alergijska reakcija pa se morda ne pokaže takoj. Soja lahko povzroči tudi vetrove in občasno drisko, preveč vlaknin pa prebavne težave. Vlaknati, žilavi stroki so težko prebavljivi in predstavljajo nevarnost zadušitve, zlasti pri majhnih psih.",
+    "de": "Edamame sind Sojabohnen, reich an Ballaststoffen und von zähen Schoten umgeben. Soja löst bei Hunden häufig Allergien aus, und eine allergische Reaktion zeigt sich möglicherweise nicht sofort. Außerdem kann Soja Blähungen und gelegentlich Durchfall verursachen, und zu viele Ballaststoffe können Magenprobleme auslösen. Die faserigen, zähen Schoten sind schwer verdaulich und eine Erstickungsgefahr, besonders für kleine Hunde.",
     "pt": "O edamame é feito de grãos de soja, ricos em fibra, que vêm dentro de vagens rijas. A soja é um alergénio comum nos cães, e uma reação alérgica pode não aparecer de imediato. A soja também pode causar gases e, por vezes, diarreia, e o excesso de fibra pode causar problemas de estômago. As vagens, fibrosas e duras de mastigar, são difíceis de digerir e há risco de engasgo, sobretudo para os cães pequenos."
   },
   "signs": null,
   "what_to_do": {
     "en": "Because soy is a common allergy, offer only a very small amount at first to test for an allergy. Signs of an allergic reaction, such as itching, coat loss or ear infections, might not appear straight away. Soy can also cause gas or diarrhoea.",
     "sl": "Ker je soja pogost alergen, psu sprva ponudite le zelo majhno količino, da preverite, ali je alergičen. Znaki alergijske reakcije, kot so srbenje, izpadanje dlake ali vnetja ušes, se morda ne pokažejo takoj. Soja lahko povzroči tudi vetrove ali drisko.",
+    "de": "Da Soja häufig Allergien auslöst, geben Sie zunächst nur eine sehr kleine Menge, um auf eine Allergie zu testen. Anzeichen einer allergischen Reaktion wie Juckreiz, Haarausfall oder Ohrenentzündungen zeigen sich möglicherweise nicht sofort. Soja kann außerdem Blähungen oder Durchfall verursachen.",
     "pt": "Como a soja é um alergénio comum, oferece só uma quantidade muito pequena no início, para ver se há alergia. Os sinais de uma reação alérgica, como comichão, perda de pelo ou infeções nos ouvidos, podem não aparecer logo. A soja também pode causar gases ou diarreia."
   },
   "serving": {
     "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
     "sl": "Samo navadna, sveža zrna, odstranjena iz stroka, brez soli, začimb, sojine omake ali olja. Nekaj zrn kot občasen priboljšek; ključna je zmernost.",
+    "de": "Nur pur und frisch, aus der Schote gelöst, ohne Salz, Gewürze, Sojasauce oder Öl. Ein paar Bohnen als gelegentliches Leckerli – wichtig ist, Maß zu halten.",
     "pt": "Apenas grãos simples e frescos, retirados da vagem, sem sal, temperos, molho de soja nem óleo. Alguns grãos como guloseima ocasional, com moderação."
   },
   "child": {
     "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
     "sl": "Psi lahko pogrizljajo nekaj navadnih zrn edamame. Odrasli jih najprej vzame iz stroka.",
+    "de": "Hunde dürfen ein paar pure Edamame-Bohnen knabbern. Ein Erwachsener löst sie vorher aus der Schote.",
     "pt": "Os cães podem comer alguns grãos de edamame simples. Um adulto tira-os primeiro da vagem."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Can dogs eat salted or seasoned edamame?",
         "sl": "Ali lahko psi jedo slan ali začinjen edamame?",
+        "de": "Dürfen Hunde gesalzene oder gewürzte Edamame fressen?",
         "pt": "Os cães podem comer edamame salgado ou temperado?"
       },
       "a": {
         "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
         "sl": "Ne. Začimbe, sol, sojina omaka in olje, s katerimi kuhamo edamame, so lahko za pse še posebej nezdravi, zato tako pripravljenega edamame nikoli ne delite s psom.",
+        "de": "Nein. Gewürze, Salz, Sojasauce und Öl, mit denen Edamame zubereitet werden, können für Hunde besonders ungesund sein. Geben Sie Ihrem Hund deshalb niemals Edamame, die damit zubereitet wurden.",
         "pt": "Não. Os temperos, o sal, o molho de soja e o óleo usados na preparação do edamame podem ser especialmente prejudiciais para os cães, por isso nunca lhes dês edamame preparado assim."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Can dogs eat edamame pods?",
         "sl": "Ali lahko psi jedo stroke edamame?",
+        "de": "Dürfen Hunde Edamame-Schoten fressen?",
         "pt": "Os cães podem comer as vagens de edamame?"
       },
       "a": {
         "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
         "sl": "Raje ne. Stroki edamame so vlaknati, trdi in žilavi; pes jih lahko težko prebavi in se lahko z njimi zaduši, kar velja zlasti za majhne pse.",
+        "de": "Besser nicht. Edamame-Schoten sind faserig, zäh und schwer zu kauen. Sie können für Ihren Hund schwer verdaulich sein und sind eine Erstickungsgefahr, besonders für kleine Hunde.",
         "pt": "É melhor não. As vagens de edamame são fibrosas, rijas e duras de mastigar; podem ser difíceis de digerir para o teu cão e são um risco de engasgo, sobretudo para os cães pequenos."
       }
     }
@@ -148,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d145f8ac33c395ed027c3635f7a9012deccad3ecb238d54081533cfef12739ca"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c94505ab26bef6c5669bef0e14370f65104545dbbf4f017ecc5777c756e72490"
     }
   }
 }

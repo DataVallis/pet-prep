@@ -4,27 +4,32 @@
   "name": {
     "en": "Parsley",
     "sl": "Peteršilj",
+    "de": "Petersilie",
     "pt": "Salsa"
   },
   "question": {
     "en": "Can dogs eat parsley?",
     "sl": "Ali lahko psi jedo peteršilj?",
+    "de": "Dürfen Hunde Petersilie fressen?",
     "pt": "Os cães podem comer salsa?"
   },
   "url_slug": {
     "en": "parsley",
     "sl": "petersilj",
+    "de": "petersilie",
     "pt": "salsa"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Only a small sprinkle of curly parsley, occasionally. The ASPCA lists parsley as toxic to dogs, because large amounts can make the skin sensitive to sunlight. Curly parsley is the safest option; spring parsley can be toxic, and Italian parsley can be toxic in large quantities.",
     "sl": "Le majhen ščepec kodrastega peteršilja, občasno. ASPCA peteršilj uvršča med strupene za pse, ker lahko velike količine povzročijo občutljivost kože na sonce. Kodrasti peteršilj je najvarnejša izbira; spomladanski peteršilj je lahko strupen, italijanski pa v velikih količinah.",
+    "de": "Nur eine kleine Prise krause Petersilie, und das nur gelegentlich. Die ASPCA stuft Petersilie als giftig für Hunde ein, weil große Mengen die Haut lichtempfindlich machen können. Krause Petersilie ist die sicherste Wahl. Frühlingspetersilie kann giftig sein, und glatte Petersilie kann in großen Mengen giftig sein.",
     "pt": "Só um pouquinho de salsa frisada, de vez em quando. A ASPCA classifica a salsa como tóxica para os cães, porque grandes quantidades podem tornar a pele sensível à luz solar. A salsa frisada é a opção mais segura; a variedade «spring parsley» pode ser tóxica, e a salsa italiana pode ser tóxica em grandes quantidades."
   },
   "why": {
     "en": "Parsley contains furanocoumarins. In large amounts they can cause sensitivity to sunlight and skin inflammation like a sunburn, although large amounts are needed for this effect. Parsley is also a diuretic; Italian parsley can lead to dehydration in dogs with sensitive stomachs. The AKC says curly parsley can be offered in small amounts, while the ASPCA lists parsley as toxic to dogs, so we take the stricter view and rate it not recommended.",
     "sl": "Peteršilj vsebuje furanokumarine. V velikih količinah lahko povzročijo občutljivost na sončno svetlobo in vnetje kože, podobno sončnim opeklinam, a so za to potrebne velike količine. Peteršilj tudi odvaja vodo; italijanski peteršilj lahko pri psih z občutljivim želodcem povzroči dehidracijo. AKC navaja, da lahko kodrasti peteršilj ponudimo v majhnih količinah, ASPCA pa ga uvršča med strupene za pse, zato se držimo strožje ocene in ga ne priporočamo.",
+    "de": "Petersilie enthält Furanocumarine. In großen Mengen können sie Lichtempfindlichkeit und eine sonnenbrandähnliche Hautentzündung verursachen; dafür sind allerdings große Mengen nötig. Petersilie wirkt außerdem harntreibend; glatte Petersilie kann bei Hunden mit empfindlichem Magen zu Flüssigkeitsmangel führen. Laut AKC kann krause Petersilie in kleinen Mengen gegeben werden, während die ASPCA Petersilie als giftig für Hunde einstuft. Deshalb folgen wir der strengeren Einschätzung und stufen sie als nicht empfohlen ein.",
     "pt": "A salsa contém furanocumarinas. Em grandes quantidades, podem causar sensibilidade à luz solar e inflamação da pele semelhante a uma queimadura solar, embora isso só aconteça com grandes quantidades. A salsa também é diurética; a salsa italiana pode levar à desidratação em cães com o estômago sensível. A AKC diz que se pode oferecer salsa frisada em pequenas quantidades, enquanto a ASPCA classifica a salsa como tóxica para os cães, por isso seguimos a opinião mais rigorosa e classificamo-la como não recomendada."
   },
   "signs": {
@@ -36,6 +41,10 @@
       "Občutljivost na sončno svetlobo",
       "Vnetje kože, podobno sončnim opeklinam (dermatitis)"
     ],
+    "de": [
+      "Lichtempfindlichkeit",
+      "Sonnenbrandähnliche Hautentzündung (Dermatitis)"
+    ],
     "pt": [
       "Sensibilidade à luz solar",
       "Inflamação da pele (dermatite) semelhante a uma queimadura solar"
@@ -44,16 +53,19 @@
   "what_to_do": {
     "en": "If you give your dog parsley, monitor them closely for any unusual symptoms. If symptoms appear or get worse, contact your veterinarian promptly.",
     "sl": "Če psu daste peteršilj, ga skrbno opazujte, ali se pojavijo nenavadni znaki. Če se znaki pojavijo ali poslabšajo, se nemudoma obrnite na veterinarja.",
+    "de": "Wenn Sie Ihrem Hund Petersilie geben, beobachten Sie ihn genau auf ungewöhnliche Symptome. Treten Symptome auf oder werden sie schlimmer, wenden Sie sich umgehend an Ihren Tierarzt.",
     "pt": "Se deres salsa ao teu cão, observa-o com atenção para ver se surgem sinais invulgares. Se os sinais aparecerem ou piorarem, liga logo ao teu veterinário."
   },
   "serving": {
     "en": "If at all, only a small sprinkle of curly parsley as a garnish, given occasionally. Never large amounts.",
     "sl": "Če sploh, le majhen ščepec kodrastega peteršilja kot okras, občasno. Nikoli velikih količin.",
+    "de": "Wenn überhaupt, nur eine kleine Prise krause Petersilie als Garnitur, und nur gelegentlich. Niemals große Mengen.",
     "pt": "Se for mesmo dada, apenas um pouquinho de salsa frisada, como enfeite, só de vez em quando. Nunca em grandes quantidades."
   },
   "child": {
     "en": "Parsley is not a dog snack. A grown-up decides if a dog gets a tiny sprinkle of curly parsley.",
     "sl": "Peteršilj ni pasji prigrizek. Odrasli odloči, ali pes dobi majhen ščepec kodrastega peteršilja.",
+    "de": "Petersilie ist kein Snack für Hunde. Ein Erwachsener entscheidet, ob ein Hund eine winzige Prise krause Petersilie bekommt.",
     "pt": "A salsa não é uma guloseima para cães. Cabe a um adulto decidir se o cão recebe um pouquinho de salsa frisada."
   },
   "faq": [
@@ -61,11 +73,13 @@
       "q": {
         "en": "Is curly parsley different from other parsley?",
         "sl": "Se kodrasti peteršilj razlikuje od drugih vrst?",
+        "de": "Ist krause Petersilie anders als andere Petersilie?",
         "pt": "A salsa frisada é diferente das outras salsas?"
       },
       "a": {
         "en": "Yes. Curly parsley is generally considered the safest option. Spring parsley can be toxic, and Italian parsley acts as a diuretic and can be toxic in large quantities.",
         "sl": "Da. Kodrasti peteršilj velja za najvarnejšo izbiro. Spomladanski peteršilj je lahko strupen, italijanski peteršilj pa odvaja vodo in je v velikih količinah lahko strupen.",
+        "de": "Ja. Krause Petersilie gilt allgemein als die sicherste Wahl. Frühlingspetersilie kann giftig sein, und glatte Petersilie wirkt harntreibend und kann in großen Mengen giftig sein.",
         "pt": "Sim. A salsa frisada é geralmente considerada a opção mais segura. A variedade «spring parsley» pode ser tóxica, e a salsa italiana tem efeito diurético e pode ser tóxica em grandes quantidades."
       }
     },
@@ -73,11 +87,13 @@
       "q": {
         "en": "Can parsley make a dog's skin sensitive to the sun?",
         "sl": "Ali lahko peteršilj naredi pasjo kožo občutljivo na sonce?",
+        "de": "Kann Petersilie die Haut eines Hundes sonnenempfindlich machen?",
         "pt": "A salsa pode tornar a pele do cão sensível ao sol?"
       },
       "a": {
         "en": "In large amounts, yes. The furanocoumarins in parsley can cause skin inflammation like a sunburn.",
         "sl": "V velikih količinah da. Furanokumarini v peteršilju lahko povzročijo vnetje kože, podobno sončnim opeklinam.",
+        "de": "In großen Mengen ja. Die Furanocumarine in Petersilie können Hautentzündungen wie bei einem Sonnenbrand verursachen.",
         "pt": "Em grandes quantidades, sim. As furanocumarinas da salsa podem causar inflamação da pele semelhante a uma queimadura solar."
       }
     }
@@ -157,6 +173,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5e634686f647ebb7330aeaee498b2f43e80054ae2735eed5bdca64f2b928d7a7"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "713d6724f98b5790cb1c164a56e569fbc7002158ded8049f2c5434375d0b1cea"
     }
   }
 }

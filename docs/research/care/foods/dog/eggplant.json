@@ -4,43 +4,51 @@
   "name": {
     "en": "Eggplant (aubergine)",
     "sl": "Jajčevec",
+    "de": "Aubergine",
     "pt": "Beringela"
   },
   "question": {
     "en": "Can dogs eat eggplant?",
     "sl": "Ali lahko psi jedo jajčevce?",
+    "de": "Dürfen Hunde Auberginen fressen?",
     "pt": "Os cães podem comer beringela?"
   },
   "url_slug": {
     "en": "eggplant",
     "sl": "jajcevci",
+    "de": "aubergine",
     "pt": "beringela"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, eggplant is safe for dogs when served in moderation. Remove the stem, wash, peel and cook it, then cut it into tiny, bite-sized pieces. Never give a whole eggplant, and remember that too much can cause digestive upset.",
     "sl": "Da, jajčevec je za pse varen, če ga ponudimo zmerno. Odstranite pecelj, ga operite, olupite in skuhajte, nato pa narežite na drobne koščke za en grižljaj. Celega jajčevca nikoli ne dajajte in pomnite, da lahko preveč jajčevca povzroči prebavne težave.",
+    "de": "Ja, in Maßen ist Aubergine für Hunde unbedenklich. Entfernen Sie den Stiel, waschen, schälen und garen Sie die Aubergine und schneiden Sie sie dann in winzige, mundgerechte Stücke. Geben Sie nie eine ganze Aubergine, und denken Sie daran, dass zu viel davon Verdauungsbeschwerden auslösen kann.",
     "pt": "Sim, a beringela é segura para os cães se for servida com moderação. Retira o cabo, lava, descasca e cozinha, e depois corta em pedaços pequenos, de uma só dentada. Nunca dês uma beringela inteira e não te esqueças de que demasiada pode causar mal-estar digestivo."
   },
   "why": {
     "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
     "sl": "Užitni plod v običajnih količinah ni zares strupen, vsebuje pa solanin, naravno snov, s katero se rastlina brani. Največ ga je v zelenih delih rastline, in sicer v listih in cvetovih, ne v vijoličnem plodu. Lupina ni strupena, a jo pes težko prežveči in se lahko z njo zaduši, preveč jajčevca pa lahko povzroči prebavne težave.",
+    "de": "Die essbare Frucht ist in üblichen Mengen nicht wirklich giftig, enthält aber Solanin, einen natürlichen Stoff, den die Pflanze als Abwehrmechanismus nutzt. Am meisten davon steckt in den grünen Teilen der Pflanze, vor allem in Blättern und Blüten, und nicht in der violetten Frucht. Die Schale ist nicht giftig, kann aber schwer zu kauen sein und zur Erstickungsgefahr werden, und zu viel Aubergine kann Verdauungsbeschwerden auslösen.",
     "pt": "O fruto comestível não é realmente tóxico em quantidades normais, mas contém solanina, uma substância química natural que a planta usa como defesa. As concentrações mais elevadas encontram-se nas partes verdes da planta, em particular nas folhas e nas flores, e não no fruto roxo. A casca não é tóxica, mas pode ser difícil de mastigar e há risco de engasgo, e comer demasiada beringela pode causar mal-estar digestivo."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece of peeled, cooked eggplant. If your dog develops diarrhoea, vomiting, an upset stomach, abdominal pain, low energy or needs the bathroom more often after eating eggplant, contact your veterinarian.",
     "sl": "Začnite z majhnim koščkom olupljenega, kuhanega jajčevca. Če ima pes po jajčevcu drisko, bruha, ima težave z želodcem, ga boli trebuh, je brez energije ali mora pogosteje ven na potrebo, se obrnite na veterinarja.",
+    "de": "Beginnen Sie mit einem kleinen Stück geschälter, gegarter Aubergine. Wenn Ihr Hund nach dem Fressen Durchfall, Erbrechen, Magenbeschwerden, Bauchschmerzen oder wenig Energie bekommt oder häufiger nach draußen muss, wenden Sie sich an Ihren Tierarzt.",
     "pt": "Começa com um pedaço pequeno de beringela descascada e cozinhada. Se o teu cão tiver diarreia, vómitos, mal-estar no estômago, dor abdominal, pouca energia ou precisar de sair para fazer as necessidades com mais frequência depois de comer beringela, liga ao teu veterinário."
   },
   "serving": {
     "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
     "sl": "Odstranite pecelj, jajčevec temeljito operite, da odstranite pesticide, olupite lupino, narežite na majhne koščke za en grižljaj in pred serviranjem skuhajte. Nikoli celega jajčevca.",
+    "de": "Entfernen Sie den Stiel, waschen Sie die Aubergine gründlich, um Pestizidreste zu entfernen, schälen Sie sie, schneiden Sie sie in kleine, mundgerechte Stücke und garen Sie sie, bevor Sie sie servieren. Niemals eine ganze Aubergine geben.",
     "pt": "Retira o cabo, lava bem para remover pesticidas, descasca, corta em pedaços pequenos, de uma só dentada, e cozinha antes de servir. Nunca uma beringela inteira."
   },
   "child": {
     "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
     "sl": "Psi lahko dobijo malo kuhanega jajčevca. Odrasli ga olupi, skuha in nareže na drobne koščke.",
+    "de": "Hunde dürfen ein bisschen gegarte Aubergine bekommen. Ein Erwachsener schält sie, gart sie und schneidet sie in winzige Stücke.",
     "pt": "Os cães podem comer um pouco de beringela cozinhada. Um adulto descasca-a, cozinha-a e corta-a em pedacinhos minúsculos."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Can dogs eat raw eggplant?",
         "sl": "Ali lahko psi jedo surov jajčevec?",
+        "de": "Dürfen Hunde rohe Aubergine fressen?",
         "pt": "Os cães podem comer beringela crua?"
       },
       "a": {
         "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
         "sl": "Lahko, vendar kuhanje zelenjavo zmehča, zato jo pes še lažje poje.",
+        "de": "Das dürfen sie, aber durch das Garen wird das Gemüse weich und für Ihren Hund noch leichter zu fressen.",
         "pt": "Podem, mas, depois de cozinhada, a beringela fica mais mole e ainda mais fácil de comer para o teu cão."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Which part of the eggplant plant has the most solanine?",
         "sl": "Kateri del rastline jajčevca vsebuje največ solanina?",
+        "de": "Welcher Teil der Auberginenpflanze enthält am meisten Solanin?",
         "pt": "Que parte da planta da beringela tem mais solanina?"
       },
       "a": {
         "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
         "sl": "Zeleni deli rastline, in sicer listi in cvetovi, ne pa sam vijolični plod.",
+        "de": "Die grünen Teile der Pflanze, vor allem die Blätter und Blüten – nicht die violette Frucht selbst.",
         "pt": "As partes verdes da planta, em particular as folhas e as flores, e não o próprio fruto roxo."
       }
     }
@@ -173,6 +185,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "daf35f2344297b96543d84e5053bcd810c9d495126f9da54fe968c3b20b85bc2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7c59fadda35f13f873376384a143bd46a6ea2ec15063108c8fcfc92212527725"
     }
   }
 }
