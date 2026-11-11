@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Naučen ukaz ne pada več (izide z naslednjo posodobitvijo strežnika)
+
+**Kaj:** David je opazil, da so ukazi njegovega psa vsako jutro padli s 100 % na 98 %. Vzrok je bilo pravilo »dan brez cele vaje = −2 % vsem ukazom« (tudi vaja, končana po 1. krogu, ne šteje kot dnevna vaja). Odločil je: **naučen ukaz (100 %, »naučeno«) ne pada, tudi če en dan ni vaje.** Ukazi, ki še niso naučeni, še vedno počasi pozabljajo (−2 % na dan brez vaje). 6 novih testov.
+**Zakaj je pomembno:** otrok, ki je ukaz naučil do konca, ne sme vsak dan videti, da je nekaj izgubil — to je delovalo kot napaka in kazen za uspeh.
+**Kako povedati:** 🧒 »Ko kuža ukaz zna, ga zna za vedno.« · 👩 »Kar se otrok enkrat do konca nauči s kužkom, ostane; vaja je potrebna za ukaze, ki jih še utrjuje.«
+
 ## 2026-11-11 — »Mešanček + izziv« in opomnik staršu 7. dan (izide z naslednjo posodobitvijo)
 
 **Kaj:** v novi aplikaciji lahko starš 12-tedenski izziv izbere tudi z mešančkom ali domačo mačko že ob ustvarjanju (ista cena 49,99 €; ljubljenček ob rojstvu počaka na nakup); izbirnik vseeno priporoča »Začnite brezplačno, izziv lahko dodate kadarkoli.« Ko je otrok za brezplačnega ljubljenčka v prvih 7 dneh skrbel vsaj 5 dni, dobijo starši eno obvestilo (brez imena otroka, nikoli ponoči) in kartico »Maja že 7 dni skrbi za kužka Pika. Je čas za pravi preizkus?«, ki vodi naravnost do nadgradnje. Stare aplikacije delujejo kot prej.

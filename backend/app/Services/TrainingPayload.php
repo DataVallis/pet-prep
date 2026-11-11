@@ -141,7 +141,7 @@ final class TrainingPayload
             $out[] = [
                 'command' => $command->value,
                 'progress' => $progress,
-                'learned' => $progress >= 100,
+                'learned' => PetTrainingSkill::isMasteredProgress($progress),
                 'last_practised_at' => $skill?->last_practised_at?->copy()->setTimezone($tz)->toIso8601String(),
             ];
         }

@@ -228,6 +228,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-11 (cloud, backend) — a learned command no longer decays (`feat/training-mastered-no-decay`, David »Naučen ukaz ne pada, tudi če en dan ni vaje.«)
+- `TrainingService::applyDecay` skips `PetTrainingSkill::isMastered()` (displayed 100 %, same rule as the app's »naučeno«); below that still −2 per missed day; Š3 unchanged. Checked the suspected repeat-finish double decay: not present (`PetActivityService::unchanged()` already saves the dirty pet) — now guarded by a test. Server only → live with the next production deploy; no app change (no copy promised decay).
+
 ### 2026-11-11 (cloud, backend + mobile) — »mutt + challenge« at creation + day-7 parent reminder (`feat/M6-U02-mutt-challenge-reminder`, PR 2 of FREE_PET_UPGRADE_SPEC)
 - Client feature `free_breed_challenge` (parent PIN + catalogue) → unpaid mutt / domestic-cat challenge locked at birth (K3); old builds byte for byte M5-F03. `UpgradeReminderService` (tick stage, `pets.upgrade_reminder_*`, push `upgrade_reminder` parents only, held over quiet hours; dashboard `pets[].upgrade_reminder`). App: picker hint, buy button for an unpaid mutt challenge, `UpgradeReminderCards`, push tap → upgrade paywall. QA #983 fixes: the picker never preselects the free breed on the challenge; `upgrade_reminder` and a free-breed challenge pet's `payment_required` go to parents whose app declares `free_breed_challenge` (all when none); `pets.free_breed_challenge` marker (never displayed as free, also when admin-paid); partial index for the reminder scan. Debt: a parent who still has ONLY an old app (and no other parent has a new one) gets the lock notice but sees no buy button for a mutt challenge (old paywall excludes free breeds) — the creating parent's app has it; nothing verified on a device. Next: QA round, then David's §1b item 22.
 

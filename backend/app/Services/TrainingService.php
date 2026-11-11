@@ -77,7 +77,8 @@ use Random\Randomizer;
  * = child) — the day's training routine (RoutineLedgerService). A day whose
  * training routine was MISSED (not excused) costs every command
  * training_decay_per_missed_day points (applyDecay(), at the first tick
- * after the family-local midnight).
+ * after the pet-local midnight) — except a learned command (displayed 100 %,
+ * PetTrainingSkill::isMastered), which never decays (David 2026-11-11).
  *
  * Starting progress (M5-R03b, David 2026-10-06): a dog arriving young, adult
  * or senior (bought or adopted) already knows some commands —
@@ -1095,7 +1096,9 @@ class TrainingService
      * "No practice → progress slowly decays": every finished family-local
      * day since the last run whose training routine was MISSED (the ledger:
      * not the birth day, not a day excused by hard stop / vet / game over)
-     * costs every command training_decay_per_missed_day points (min 0).
+     * costs every command training_decay_per_missed_day points (min 0) —
+     * except a learned command (displayed 100 %, PetTrainingSkill::isMastered):
+     * »Naučen ukaz ne pada, tudi če en dan ni vaje« (David 2026-11-11).
      * Advances pets.training_decayed_through to yesterday (attribute on
      * $pet; the caller saves). Returns the number of missed days applied.
      */
@@ -1127,6 +1130,9 @@ class TrainingService
 
         if ($points > 0) {
             foreach (PetTrainingSkill::where('pet_id', $pet->id)->where('progress', '>', 0)->get() as $skill) {
+                if ($skill->isMastered()) {
+                    continue;
+                }
                 $skill->forceFill(['progress' => max(0.0, (float) $skill->progress - $points)])->save();
             }
         }

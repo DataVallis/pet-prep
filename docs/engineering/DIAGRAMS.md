@@ -714,7 +714,7 @@ flowchart TD
   Q -- no --> EX{"Birth day, or hard stop / vet / game over<br/>≥ 50 % of the day's non-quiet time?"}
   EX -- yes --> NONE["not expected · no decay"]
   EX -- no --> MISS["missed at midnight → Care Score"]
-  MISS --> DEC["next tick: every command −2 points<br/>(proposal, never below 0)"]
+  MISS --> DEC["next tick: every command below learned −2 points<br/>(never below 0; learned = shown 100 % never drops — David 2026-11-11)"]
   P["potty progress"] --> ACC["puppy hold runs out:<br/>P(asks to go out) = 0.75 × progress (proposal, S47)<br/>→ no accident, clock restarts"]
   PL["place progress"] --> CHW["teething chewing chance × (1 − 0.5 × progress)<br/>(proposal, S33) · chewing after a missed walk unchanged"]
 ```
