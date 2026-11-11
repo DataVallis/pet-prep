@@ -159,7 +159,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [!] CN China — no usable source: WebFetch opened only 2 university hospitals (neither confirmed 24 h), most mainland sites refused (provenance / robots), no official register or animal poison line (see `vets/CN.json` notes); retry only with pre-approved clinic URLs, 2026-11-11
 - [~] HK Hong Kong — 25 entries, 14 × 24 h (12 clinics incl. CityU VMC, VEC, AMAH, Pets Central ×3; SPCA 24-h emergency hotline as duty rota), no animal poison line found, check: 18 checked, 0 fixed, 0 removed, 2026-11-11 — left: ~150 AFCD-list clinics without a verified phone/own page (AFCD PDF phone column misaligned), AMC Fanling/Ma On Shan/Tung Chung, Pet Space Discovery Bay/Tung Chung (conflicting phones; see `vets/HK.json` notes); hkva.org.hk / afcd.gov.hk not fetchable
 - [~] TW Taiwan — 39 entries (1 not-clinic: Taipei rescue hotline), 8 × 24 h (secondary pages only: Royal Canin, udn, Line Today; 11 holiday-period-only 24-h claims set to not 24 h), 1 rescue line (Taipei Animal Protection Office, not a vet rota), no animal poison line, check: 39 checked, 12 downgraded, 0 removed, 2026-11-11 — left: own clinic sites, official TVMA/MOA/Taipei/New Taipei lists, NTU/NCHU/NPUST teaching hospitals, Tainan/Kaohsiung/Hualien/Taitung/Kenting (WebFetch PROVENANCE_REQUIRED, see `vets/TW.json` notes)
-- [ ] PE Peru
+- [x] PE Peru — 33 entries, 21 × 24 h, no duty rota, no animal poison line, check: 26 checked, 0 fixed, 3 downgraded to not 24 h, 0 removed, 2026-11-11 — left: Arequipa 24-h clinics, Piura, Iquitos, robots-blocked sites (see `vets/PE.json` notes)
 - [ ] UY Uruguay
 - [ ] CR Costa Rica
 - [ ] DO Dominican Republic
