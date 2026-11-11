@@ -58,6 +58,7 @@ import {
   freeTrialText,
   hasSuitability,
   isBreedLocked,
+  isNonPedigreeBreed,
   lockedBreedsFor,
   originBreed,
   originsFor,
@@ -325,6 +326,12 @@ function PickerBody({
       {shown.length === 0 && (
         <Text style={styles.note} testID="breed-search-empty">
           {S.searchEmpty(query.trim())}
+        </Text>
+      )}
+      {/* M6-U02 (U4): »mešanček + izziv« is possible — recommend starting free (the upgrade comes any time). */}
+      {choice.plan === 'challenge' && isNonPedigreeBreed(choice.breed, breeds) && (
+        <Text style={styles.note} testID="free-breed-challenge-hint">
+          {S.freeBreedChallengeHint}
         </Text>
       )}
       {lockedTapped !== null && (

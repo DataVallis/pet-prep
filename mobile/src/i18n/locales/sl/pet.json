@@ -214,6 +214,7 @@
     "colourA11y": "Barva: {{colour}}",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načrtu",
+    "freeBreedChallengeHint": "Začnite brezplačno, izziv lahko dodate kadarkoli.",
     "originTitle": "Od kod prihaja",
     "origins": {
       "bought": "Kupljen (vzreditelj)",

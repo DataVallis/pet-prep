@@ -10,6 +10,8 @@
  *    `wish_created` (M6-W05) opens the parent's wish list (and refetches it).
  *  - `item_ready` (M6-W03, child): the HUD (the pet with its new item) — the pet state and the
  *    »Želje« catalogue are refetched so »Na poti …« turns into »Že ima« and the new scene shows.
+ *  - `upgrade_reminder` (M6-U02, parent): the dashboard opens the upgrade paywall for that pet
+ *    (PR 1 flow) while the server still allows the upgrade, else the child's page.
  */
 
 import type { QueryClient } from '@tanstack/react-query';

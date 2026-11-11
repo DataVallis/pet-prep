@@ -108,5 +108,14 @@
     "body": "Plačan 12-tedenski izziv še ni na nobenem ljubljenčku. Izberite, za katerega je.",
     "action": "Izberi ljubljenčka",
     "dismiss": "Skrij"
+  },
+  "upgradeReminder": {
+    "body": "{{child}} že 7 dni skrbi za kužka {{name}}. Je čas za pravi preizkus?",
+    "bodyNoName": "{{child}} že 7 dni skrbi za kužka. Je čas za pravi preizkus?",
+    "bodyNoChild": "Vaš otrok že 7 dni skrbi za kužka {{name}}. Je čas za pravi preizkus?",
+    "bodyNoChildNoName": "Vaš otrok že 7 dni skrbi za kužka. Je čas za pravi preizkus?",
+    "hint": "Z istim kužkom lahko začnete 12-tedenski izziv: program po tednih, potrdilo in celotna zgodovina.",
+    "action": "Poglej 12-tedenski izziv",
+    "dismiss": "Skrij"
   }
 }
