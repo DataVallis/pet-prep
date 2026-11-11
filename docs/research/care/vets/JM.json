@@ -1,0 +1,99 @@
+{
+  "country": "JM",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "Jamaica Veterinary Board - Register of Veterinary Surgeons 2024 (Ministry of Agriculture gazette list PDF)",
+      "url": "https://new.moa.gov.jm/sites/default/files/List%20of%20vets%202024.pdf",
+      "note": "Opened: names and practice addresses of registered vets; no phones, no websites. Used to confirm that the clinics below are registered practices."
+    },
+    {
+      "name": "Jamaica Veterinary Board page (MOA)",
+      "url": "https://moa.gov.jm/node/2492",
+      "note": "Opened: board contact only (Hope Gardens, Kingston 6); no clinic list."
+    },
+    {
+      "name": "My Island Jamaica - Kingston veterinary clinics",
+      "url": "https://www.my-island-jamaica.com/kingston_veterinary_clinics.html",
+      "note": "Opened; directory, used ONLY for phone numbers of clinics that are in the official register."
+    },
+    {
+      "name": "WorkAndJam - Phoenix VetCare / Noah's Ark / JSPCA listings; Yabsta - Animalcare Veterinary Hospital; Jamaica Classifieds - The Pet Lifeboat",
+      "url": "https://www.workandjam.com/bl/pets-livestock/phoenix-vetcare.htm",
+      "note": "Opened; directories, used only for phones/hours of register-confirmed clinics. None says 24 h."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Noah's Ark Veterinary Centre",
+      "city": "Kingston",
+      "region": "Kingston 6",
+      "address": "72A Hope Road, Kingston 6",
+      "phone": "+1 876-927-6624",
+      "emergency_24h": false,
+      "duty": "Emergencies handled during and after clinic hours; for after-hours emergencies call before 10 pm to reach the doctor on call.",
+      "small_animals": true,
+      "source_url": "https://workandjam.com/bl/pets-livestock/noah-s-ark-veterinary-centre.htm",
+      "checked": "2026-11-11",
+      "note": "Registered address confirmed in Jamaica Veterinary Board list 2024. Own site noahsarkja.com could not be opened (PROVENANCE_REQUIRED). Second phone +1 876-619-2273 on my-island-jamaica.com. Not 24 h."
+    },
+    {
+      "kind": "clinic",
+      "name": "Phoenix VetCare",
+      "city": "Kingston",
+      "region": "Kingston 10",
+      "address": "73 Westminster Road, Kingston 10",
+      "phone": "+1 876-926-5060",
+      "emergency_24h": false,
+      "duty": "Emergency care offered; emergency mobile +1 876-469-1260.",
+      "small_animals": true,
+      "source_url": "https://www.workandjam.com/bl/pets-livestock/phoenix-vetcare.htm",
+      "checked": "2026-11-11",
+      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Own site phoenixvetcareja.com could not be opened (PROVENANCE_REQUIRED). Page also lists a Mandeville branch with an incomplete phone number, not used. No 24 h statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "All Pets Veterinary Clinic",
+      "city": "Kingston",
+      "region": "Kingston 8",
+      "address": "29 Charlton Avenue, Kingston 8",
+      "phone": "+1 876-905-2218",
+      "emergency_24h": false,
+      "duty": "Open Monday to Saturday.",
+      "small_animals": true,
+      "source_url": "https://www.my-island-jamaica.com/kingston_veterinary_clinics.html",
+      "checked": "2026-11-11",
+      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Second phone +1 876-931-7434. Directory only for phone and hours."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animalcare Veterinary Hospital",
+      "city": "Kingston",
+      "region": "Kingston",
+      "address": "4 Goodwood Terrace, Kingston",
+      "phone": "+1 876-969-1356",
+      "emergency_24h": false,
+      "duty": "Monday to Friday 8 am to 7 pm, Saturday 9 am to 4 pm, Sunday 10 am to 3 pm.",
+      "small_animals": true,
+      "source_url": "https://jamaica.yabsta.com/listing/view/400652/animalcare-veterinary-hospital",
+      "checked": "2026-11-11",
+      "note": "4 Goodwood Terrace is the registered address of Drs Brown/Burnett in the Veterinary Board list 2024. my-island-jamaica.com gives a different address (110a Constant Spring Road, Kingston 8) for Animalcare Veterinary Services; unresolved. Directory only; own site not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Jamaica Society for the Prevention of Cruelty to Animals (JSPCA) veterinary clinic",
+      "city": "Kingston",
+      "region": "Kingston 10",
+      "address": "10 Winchester Road, Kingston 10",
+      "phone": "+1 876-929-0320",
+      "emergency_24h": false,
+      "duty": "Clinic open to the public; hours not published.",
+      "small_animals": true,
+      "source_url": "https://www.workandjam.com/bl/pets-livestock/jspca.htm",
+      "checked": "2026-11-11",
+      "note": "JSPCA, 10 Winchester Road, appears in Jamaica Veterinary Board list 2024 as vets' practice address. Directory only."
+    }
+  ],
+  "notes": "Thin source. No 24-hour clinic, duty rota or animal poison line found. Clinics' own sites could not be opened by WebFetch (PROVENANCE_REQUIRED) and pethavenvetja.com is robots-disallowed. Registered practices in the 2024 Veterinary Board list WITHOUT any opened phone/url (not added): Vet4Pets Medical Centre (23 Jimmy Cliff Blvd, Montego Bay), Pet Haven Veterinary Clinic (58 1/2 Mannings Hill Rd), Born Free Pet Centre (Boulevard Supercentre, Kingston 19), Denbigh Veterinary Clinic (Clarendon), Brunswick Veterinary Medical Centre and Spanish Town Veterinary Clinic (9 St John's Rd, Spanish Town), Manchester Clinic (RADA Complex, Mandeville), Brown's Town Veterinary Clinic, Windsor Road clinic (St Ann's Bay), Value Vets (Hopewell, Hanover). Individual vets in Portmore, Ocho Rios, Montego Bay, Negril area exist in the register but with no practice name."
+}

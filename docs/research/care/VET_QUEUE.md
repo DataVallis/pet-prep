@@ -167,7 +167,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] DO Dominican Republic — 5 entries, 0 × 24 h (Vet Arroyo Hondo's own page says 24 h but shows no name/phone/address, removed by the check), no duty rota, no animal poison line, check: 6 checked, 2 fixed (WellVet branch phones), 1 removed, 2026-11-11 — left: Santo Domingo clinics on own sites (Vet Mart 24 h, Pets Valley, servican, Hospital Veterinario Real, América, Animed), Punta Cana/Bávaro, Puerto Plata/Sosúa, La Romana, Samaná, UNPHU/UASD vet hospitals (see `vets/DO.json` notes)
 - [!] DO Dominican Republic — follow-up — no usable source: WebFetch refused servican, Hospital Veterinario Real, Animed, UNPHU, Faunatika (PROVENANCE_REQUIRED, tried twice), WebSearch returned only aggregators/news, dd.com.do listing gives no phones or hours; 0 entries added; retry only with pre-approved clinic / CMVD / UNPHU URLs, 2026-11-11
 - [!] CU Cuba — 0 entries, 2026-11-11: no clinic, duty rota or poison line verifiable from an opened page (ecured.cu, juventudrebelde.cu, granma.cu blocked by robots.txt; Cubadebate Mascolive article redirect loop; search found no official IMV/MINAG/CENSA/university/association site and no clinic site, only news and aggregators); leads for a manual run: Mascolive clinic, Clínica Veterinaria Carlos III Havana, wikivet.net / pamarillas.cu (not opened)
-- [ ] JM Jamaica
+- [x] JM Jamaica — 5 entries, 0 × 24 h, no duty rota, no animal poison line found; clinics' own sites refused by WebFetch, 3 register practices without contact left (see `vets/JM.json` notes), check: 5 checked, 0 fixed, 0 removed, 2026-11-11
 - [ ] UA Ukraine
 - [ ] MD Moldova
 - [ ] GE Georgia
