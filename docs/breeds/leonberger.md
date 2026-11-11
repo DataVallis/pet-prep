@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `leonberger` (viri S780–S786; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: stran RKC (S780) |
 | Izvor | FCI št. 145, skupina 2, sekcija 2.2 (molosi, gorski tip), Nemčija (S782, S783) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 99. mesto »Leonberger« (S174, prebrano 2026-11-11) |
-| PR-ji | pet-prep #990 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #990 (pasma, združen `a218e3b`) · portret pet-prep PR `feat/M5-R10-103-leonberger-portrait` (zagon `breed-portraits.yml` 42949330159, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-leonberger` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje 3× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-11 |
 | Čiščenje ušes vsaka 2 tedna (otrok), opomnik za kopanje vsaka 2 tedna (starš) | 🛠 | 💶 izziv | M5-R20 / M5-R18 | 2026-11-11 |
 | Barva (izbirnik: levje rumen, rdeč, rdečkasto rjav, peščen — vedno s črno masko) | 🛠 | 💶 izziv | M5-R21 | 2026-11-11 |
-| AI portret v registru | 🗓 sledi (`breed-portraits.yml` po združitvi) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/leonberger`, `/sl/zivali/psi/leonberger`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), levje rumen s črno masko, naraven rep | — | M5-R11-04 | 2026-11-11 |
+| Stran na petprep.si (`/animals/dogs/leonberger`, `/sl/zivali/psi/leonberger`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
