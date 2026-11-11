@@ -104,6 +104,7 @@ return [
     'flat_coated_retriever' => 'Ravnodlaki prinašalec',
     'border_terrier' => 'Borderski terier',
     'leonberger' => 'Leonberger',
+    'beauceron' => 'Beauceron',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

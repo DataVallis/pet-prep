@@ -486,6 +486,7 @@ const SPECIES = [
       { id: 'flat_coated_retriever', synonyms: { en: ['Flatcoat', 'Flattie', 'Flat-coat', 'Flat Coated Retriever'], sl: ['ravnodlaki prinasalec', 'flat coated retriever', 'flatcoat'] } },
       { id: 'border_terrier', synonyms: { en: ['Border Terrier dog'], sl: ['border terier', 'border terrier'] } },
       { id: 'leonberger', synonyms: { en: ['Leonberg', 'Leo', 'Leonberger dog'], sl: ['leonberški pes', 'leonberski pes', 'leonberg'] } },
+      { id: 'beauceron', synonyms: { en: ['Berger de Beauce', 'Beauce Sheepdog', 'Bas Rouge'], sl: ['berger de beauce'] } },
     ],
   },
   {
@@ -2695,6 +2696,28 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-104. Height = FCI Standard N° 44 by sex (KUSA copy S790), weight = AKC weight chart 70–110 lb (S268; no standard gives
+  // one), lifespan = RKC band 'Over 10 years' (S787; not in the McMillan 2024 table) + PetMD 10–12 y (S791), exercise = RKC 'More
+  // than 2 hours per day' (S787), coat / grooming / sheds = RKC key facts (S787). Not ranked by Coren (S35). FCI origin France (FR).
+  // Not exported: lifespan.hills (tier C) / mcmillan_2024 (null) / senior_from (derived), health.breed_watch (Category 1),
+  // health.liver / allergies / tricolour_mating (research only). No new health key.
+  beauceron: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35, checked 2026-11-11): no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_muscle_disease', 'health.heart'],
+    ],
+  },
 
 
 };
@@ -3550,6 +3573,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.leonberger.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.leonberger.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.leonberger.exercise_minutes_senior',
+  },
+  beauceron: {
+    adult_minutes: ['proposed_game_parameters.beauceron.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.beauceron.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.beauceron.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.beauceron.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.beauceron.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.beauceron.exercise_minutes_senior',
   },
 
 
