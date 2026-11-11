@@ -1247,6 +1247,19 @@
             "prompt_hash": "sha256:21f0674764804fb9eb0e0854cebc88a2cafe6ce0b2a05fe521e9f57c304e6ab8",
             "generated_at": "2026-11-11T01:04:50+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "leonberger",
+            "species": "dog",
+            "colour": "lion-yellow",
+            "file": "dog/leonberger.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:ceb1fed417d2a6f31a38dbc4c1af5430a98c61938c9ac46db4c6322fab50b8c2",
+            "generated_at": "2026-11-11T02:56:37+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
