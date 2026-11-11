@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "1f5ce5e7ae1414c536a628ba2e1f6bf4c328e8af4d775c2f24d7f28cb48cb42e"
+      "sha256": "a06ccc0b080bc2edd00894ffd8829dcb7f330e47c0af7cfb21e599a3bb7d3def"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -57004,7 +57004,7 @@
       "id": "border_terrier",
       "species": "dog",
       "order": 94,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Border Terrier",
         "sl": "Borderski terier"
@@ -57589,7 +57589,7 @@
       "id": "leonberger",
       "species": "dog",
       "order": 95,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Leonberger",
         "sl": "Leonberger"
@@ -58253,7 +58253,7 @@
       "id": "beauceron",
       "species": "dog",
       "order": 96,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Beauceron",
         "sl": "Beauceron"
