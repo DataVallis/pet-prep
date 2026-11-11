@@ -123345,6 +123345,36 @@
       "checked": "2026-11-11"
     },
     {
+      "country": "MD",
+      "kind": "clinic",
+      "name": "Esculap-Vet \"Vasile Buza\"",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "str. Florica Niță 7/2, Rîșcani, Chișinău",
+      "phone": "022 27 33 33",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 09:00-18:00, Sunday closed. Emergencies are seen first during opening hours; call before you come. Mobile/WhatsApp/Viber: +373 60 694 388.",
+      "duty_i18n": null,
+      "url": "https://esculapvet.md/en/",
+      "source_url": "https://esculapvet.md/en/contact",
+      "checked": "2026-11-11"
+    },
+    {
+      "country": "MD",
+      "kind": "clinic",
+      "name": "Family Vet",
+      "city": "Chișinău",
+      "region": "Chișinău",
+      "address": "Șos. Muncești 94, Chișinău",
+      "phone": "+373 69 717 881",
+      "emergency_24h": false,
+      "duty": "Emergency care offered; call ahead for availability. Branches listed in Botanica, Centru, Codru, Telecentru, Durlești, Sângera and Ialoveni.",
+      "duty_i18n": null,
+      "url": "https://www.familyvet.md/",
+      "source_url": "https://www.familyvet.md/",
+      "checked": "2026-11-11"
+    },
+    {
       "country": "ME",
       "kind": "clinic",
       "name": "Hasvet PG International Animal Hospital",
