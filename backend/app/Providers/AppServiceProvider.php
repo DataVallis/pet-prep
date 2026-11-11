@@ -185,6 +185,12 @@ class AppServiceProvider extends ServiceProvider
             ];
         });
 
+        // M6-S03 partner inquiry form (petprep.si): unauthenticated, writes a row and posts to
+        // Discord → 5 per hour per IP (IPv6 /64). Live in testing too (like register).
+        RateLimiter::for('partner-inquiries', function (Request $request) {
+            return Limit::perHour(5)->by('partner-inquiries:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         // Parent self-registration (M2-10a): unauthenticated, creates rows →
         // 5 per minute and 20 per hour per IP (IPv6 /64). Live in testing too
         // (like pin-login); tests that register more often vary the IP.

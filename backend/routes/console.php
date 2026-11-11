@@ -49,6 +49,15 @@ Schedule::command('pins:prune')
     ->name('prune-child-login-pins')
     ->description('Delete expired / used child login PINs older than 7 days');
 
+// Daily (M6-S03, WEBSITE_SALES_SPEC §5.2): delete partner inquiries older than 12 months
+// (a business contact's name and e-mail). 03:43 UTC.
+Schedule::command('partner-inquiries:prune')
+    ->dailyAt('03:43')
+    // One DELETE query; 30 min covers any run (D34: explicit expiry).
+    ->withoutOverlapping(30)
+    ->name('prune-partner-inquiries')
+    ->description('Delete partner inquiries older than 12 months');
+
 // Daily (M4, PR #22 review; videos since M4-03): re-queue reference images and
 // state videos blocked by the AI budget or an exhausted fal balance. 00:23 UTC —
 // just after the budget day rolls over (AI_BUDGET_TIMEZONE defaults to UTC).

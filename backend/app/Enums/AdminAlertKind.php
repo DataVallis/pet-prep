@@ -39,6 +39,8 @@ enum AdminAlertKind: string
     case UnassignedChallengeCredit = 'unassigned_challenge_credit';
     /** M6-S01: a website gift voucher needs a look (activated elsewhere, instance mismatch, partial refund — voucher / order ids only). */
     case GiftVoucherIssue = 'gift_voucher_issue';
+    /** M6-S03 (WEBSITE_SALES_SPEC §5.2): a partner inquiry arrived on petprep.si (informative — the type and the /admin link only, no sender data). */
+    case PartnerInquiry = 'partner_inquiry';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -54,7 +56,7 @@ enum AdminAlertKind: string
             self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::GiftVoucherIssue => 'warning',
             self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::UnassignedChallengeCredit => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
-            self::Test => 'info',
+            self::PartnerInquiry, self::Test => 'info',
         };
     }
 
@@ -77,6 +79,7 @@ enum AdminAlertKind: string
             self::ItemMediaStuck => '/admin/item-media',
             self::UnassignedChallengeCredit => '/admin/challenge-credits',
             self::GiftVoucherIssue => '/admin/gift-vouchers',
+            self::PartnerInquiry => '/admin/partner-inquiries',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::Test => '/admin/system-health',
         };
     }

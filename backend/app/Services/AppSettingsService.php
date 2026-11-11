@@ -117,6 +117,12 @@ class AppSettingsService
      */
     public const APP_ERROR_REPORTS_KEY = 'app_error_reports';
 
+    /**
+     * M6-S03: partner inquiries (POST /api/partner-inquiries) accepted on (default) or off (503).
+     * No row = on.
+     */
+    public const PARTNER_INQUIRIES_KEY = 'partner_inquiries';
+
     public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
 
     /**
@@ -420,6 +426,27 @@ class AppSettingsService
                 fn (): array => AppSetting::find(self::APP_ERROR_REPORTS_KEY)?->value ?? []);
 
         return (bool) ($value['enabled'] ?? false);
+    }
+
+    /**
+     * M6-S03: does the server accept partner inquiries? Default ON (no row = on); off → 503.
+     * `$fresh` reads the row itself (no cache).
+     */
+    public function partnerInquiries(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::PARTNER_INQUIRIES_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::PARTNER_INQUIRIES_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::PARTNER_INQUIRIES_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? true);
+    }
+
+    /** Save the partner inquiries switch (superadmin), audit it and bust the cache. */
+    public function updatePartnerInquiries(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::PARTNER_INQUIRIES_KEY, ['enabled' => $enabled], ['enabled' => true]);
     }
 
     /** Save the app error reports switch (superadmin), audit it and bust the cache. */

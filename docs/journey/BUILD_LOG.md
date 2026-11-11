@@ -14,6 +14,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** prvi način, da nekdo PetPrep **podari** — babica, boter ali prijatelj družine lahko kupi izziv, ne da bi imel aplikacijo; prvi prihodek mimo trgovin z aplikacijami.
 **Po neodvisnem pregledu (QA) še isti dan:** 7 popravkov, vsak z novim testom, ki je pred popravkom padel (10 testov) — najpomembnejši: vračilo bona se ne more več izgubiti, če Lemon Squeezy ne pošlje številke naročila; koda gre v Lemon Squeezy z ohranjenimi velikimi in malimi črkami; veljavnost 12 mesecev vedno teče od nakupa.
 **Kako povedati:** 👩 »Izziv lahko podarite: kupite bon na petprep.si, natisnete ga in podarite. Starš ga unovči s svojim e-naslovom iz aplikacije.« *(načrt — ko je stran objavljena)* · 💼 »Neposredna prodaja prek spleta (Lemon Squeezy) poleg nakupa v aplikaciji; ista pravila vračil.« · 🛠 »Unovčitev: najprej preverjanje ključa brez učinka, potem račun, potem aktivacija — nikoli zunanji klic v transakciji baze; webhook s HMAC in idempotentnim dnevnikom.«
+## 2026-11-11 — Povpraševanja partnerjev: strežnik je pripravljen (spletni obrazec sledi)
+
+**Kaj:** strežnik zna sprejeti povpraševanje podjetja za sodelovanje (sponzorstvo serije, sponzorirane vsebine, zavarovalnica, imenik, zavetišče): shrani ga, Davidu pošlje kratko opozorilo v Discord (samo vrsta in povezava, brez imen in e-naslovov) in ga pokaže na seznamu v administraciji, ki ga vidi samo superadmin. Zaščita pred neželenimi vnosi: omejitev 5 povpraševanj na uro in skrito polje; stikalo v administraciji obrazec izklopi. Povpraševanja se po 12 mesecih izbrišejo, IP-ja ne hranimo. Samodejne e-pošte ni — David odgovori sam.
+**Zakaj je pomembno:** partnerji lahko pišejo, ne da bi PetPrep zbiral več osebnih podatkov, kot jih potrebuje za odgovor. Obrazec na strani partnerjev je še *načrt* (spletni del M6-S03).
+**Kako povedati:** 🤝 »Napišite nam, odgovorimo osebno.« · 💼 »Partnerski stik brez avtomatizacije, ki bi zbirala podatke.« (obrazec na strani še ni objavljen)
 
 ## 2026-11-11 — Naučen ukaz ne pada več (pri uporabnikih od 11. 11. 2026)
 

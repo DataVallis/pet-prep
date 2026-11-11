@@ -91,6 +91,7 @@ class FeatureSwitches extends Page implements HasForms
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
             'gift_vouchers' => $settings->giftVouchers(fresh: true),
+            'partner_inquiries' => $settings->partnerInquiries(fresh: true),
         ]);
     }
 
@@ -225,6 +226,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->helperText(__('admin.features.gift_vouchers_help'))
                             ->default(false),
                     ]),
+                // M6-S03: the partner inquiry form of petprep.si, default ON.
+                Section::make(__('admin.features.partner_inquiries_section'))
+                    ->description(__('admin.features.partner_inquiries_description'))
+                    ->schema([
+                        Toggle::make('partner_inquiries')
+                            ->label(__('admin.features.partner_inquiries'))
+                            ->default(true),
+                    ]),
             ]);
     }
 
@@ -251,6 +260,7 @@ class FeatureSwitches extends Page implements HasForms
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
         $giftVouchers = (bool) ($data['gift_vouchers'] ?? false);
+        $partnerInquiries = (bool) ($data['partner_inquiries'] ?? true);
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -283,6 +293,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($giftVouchers !== $settings->giftVouchers(fresh: true)) {
                 $settings->updateGiftVouchers($this->admin(), $giftVouchers);
             }
+            if ($partnerInquiries !== $settings->partnerInquiries(fresh: true)) {
+                $settings->updatePartnerInquiries($this->admin(), $partnerInquiries);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -301,7 +314,8 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_quality_pet_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityPetStillsMode())])
             .' · '.__('admin.features.saved_body_quality_clip_ai', ['state' => $settings->qualityClipAi() ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
-            .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
+            .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
+            .' · '.__('admin.features.saved_body_partner_inquiries', ['state' => $settings->partnerInquiries(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
     }
 
     /**
@@ -310,7 +324,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY, AppSettingsService::GIFT_VOUCHERS_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY, AppSettingsService::GIFT_VOUCHERS_KEY, AppSettingsService::PARTNER_INQUIRIES_KEY])
             ->latest('id')->limit(20)->get();
     }
 
