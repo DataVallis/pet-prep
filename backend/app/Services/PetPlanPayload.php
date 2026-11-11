@@ -59,7 +59,10 @@ final class PetPlanPayload
             return true;
         }
 
+        // M6-U02 (QA #983 m8): a »mešanček + izziv« pet is a challenge pet however it was paid
+        // (purchase or admin); the M5-F02 grandfathered / admin mutts (flag false) are unchanged.
         return ! $pet->breed_type->isPremium()
+            && ! $pet->free_breed_challenge
             && $pet->challenge_paid_at !== null
             && $pet->challenge_paid_source !== ChallengePaidSource::Purchase;
     }

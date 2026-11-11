@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\ActivityType;
+use App\Enums\FamilyRole;
 use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Enums\Species;
@@ -10,6 +11,7 @@ use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PushNotification;
 use App\Models\User;
+use App\Services\FamilyService;
 use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
@@ -19,6 +21,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
 use function Pest\Laravel\getJson;
@@ -354,5 +357,33 @@ describe('push and card', function () {
 
         test()->artisan('pets:process-decay')->assertSuccessful();
         expect(urPushes($pet))->toHaveCount(1);
+    });
+
+    it('goes to the parents whose app shows the card (free_breed_challenge); every parent when none (QA #983)', function () {
+        [$parent, $child, $pet] = urFamily();
+        $other = User::factory()->parent()->create();
+        DB::table('family_user')->where('user_id', $other->id)->delete();
+        app(FamilyService::class)->addMember(app(FamilyService::class)->familyOf($parent), $other, FamilyRole::Parent);
+        DB::table('users')->where('id', $other->id)->update(['client_features' => json_encode(['care_tasks', 'free_breed_challenge'])]);
+        urActiveDays($pet, $child, 5);
+
+        urTick(UR_DUE);
+        expect(collect(urPushes($pet)->sole()->recipients)->pluck('user_id')->all())->toBe([$other->id]);
+    });
+});
+
+describe('migration', function () {
+    it('down() removes the columns, the index and the push type; up() restores them', function () {
+        $migration = require database_path('migrations/2027_03_22_120000_add_upgrade_reminder.php');
+        $index = fn () => DB::selectOne("SELECT 1 AS ok FROM pg_indexes WHERE indexname = 'pets_upgrade_reminder_due_idx'");
+        expect($index())->not->toBeNull();
+
+        $migration->down();
+        expect(Schema::hasColumns('pets', ['upgrade_reminder_sent_at', 'free_breed_challenge']))->toBeFalse()
+            ->and($index())->toBeNull();
+
+        $migration->up();
+        expect(Schema::hasColumns('pets', ['upgrade_reminder_sent_at', 'upgrade_reminder_child_id', 'upgrade_reminder_next_check_at', 'free_breed_challenge']))->toBeTrue()
+            ->and($index())->not->toBeNull();
     });
 });

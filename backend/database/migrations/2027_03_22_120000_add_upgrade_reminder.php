@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Schema;
  *  - `pets.upgrade_reminder_next_check_at`: when the tick looks at the pet again (7 days after
  *    the contract, a few minutes later while it is locked, or "never" once decided / not
  *    applicable) — so the minutely tick never recomputes every pet.
+ *  - `pets.free_breed_challenge` (bool, default false): the pet was created as »mešanček + izziv«
+ *    by a new parent build (U4 / K3) — set only by PairingService::createPet; keeps the unpaid
+ *    challenge at creation and never displays the pet as free (PetPlanPayload::displaysAsFree).
+ *  - partial index on `upgrade_reminder_next_check_at` for the pets the tick still looks at.
  *  - push type `upgrade_reminder` (read from the live constraint, so the list of earlier
  *    migrations is never repeated here).
  *
@@ -33,7 +37,10 @@ return new class extends Migration
             $table->timestamp('upgrade_reminder_sent_at')->nullable();
             $table->foreignId('upgrade_reminder_child_id')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamp('upgrade_reminder_next_check_at')->nullable();
+            $table->boolean('free_breed_challenge')->default(false);
         });
+        // The tick's candidate scan (UpgradeReminderService::processDue): undecided free pets only.
+        DB::statement("CREATE INDEX pets_upgrade_reminder_due_idx ON pets (upgrade_reminder_next_check_at NULLS FIRST, id) WHERE upgrade_reminder_sent_at IS NULL AND plan = 'free'");
 
         $types = $this->allowedPushTypes();
         if (! in_array(self::TYPE, $types, true)) {
@@ -43,12 +50,13 @@ return new class extends Migration
 
     public function down(): void
     {
+        DB::statement('DROP INDEX IF EXISTS pets_upgrade_reminder_due_idx');
         DB::table('push_notifications')->where('type', self::TYPE)->delete();
         $this->replacePushTypes(array_values(array_filter($this->allowedPushTypes(), fn (string $t) => $t !== self::TYPE)));
 
         Schema::table('pets', function (Blueprint $table) {
             $table->dropConstrainedForeignId('upgrade_reminder_child_id');
-            $table->dropColumn(['upgrade_reminder_sent_at', 'upgrade_reminder_next_check_at']);
+            $table->dropColumn(['upgrade_reminder_sent_at', 'upgrade_reminder_next_check_at', 'free_breed_challenge']);
         });
     }
 

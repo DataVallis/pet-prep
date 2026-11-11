@@ -427,7 +427,7 @@ class PairingService
             'state_media_version' => $arrivalAge !== null ? MediaEntitlementService::CURRENT_MEDIA_VERSION : 1,
         ]);
         // M6-U02: Pet::creating would turn an unpaid free-breed challenge into the free plan.
-        $pet->allowsFreeBreedChallenge = $freeBreedChallenge;
+        $pet->free_breed_challenge = $freeBreedChallenge;
         $pet->save();
 
         if ($petDna === null && $hasAppearance) {

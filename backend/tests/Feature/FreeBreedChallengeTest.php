@@ -2,14 +2,19 @@
 
 use App\Enums\ChallengePaidSource;
 use App\Enums\ChallengeStatus;
+use App\Enums\FamilyRole;
 use App\Enums\PetPlan;
+use App\Enums\PushType;
 use App\Models\ChallengeCredit;
 use App\Models\Pet;
+use App\Models\PushNotification;
 use App\Models\User;
 use App\Services\ChildProfileService;
+use App\Services\FamilyService;
 use App\Services\PetPlanPayload;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
 
@@ -75,7 +80,8 @@ function fbcSign(Pet $pet): TestResponse
     return postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20']);
 }
 
-function fbcPurchase(User $parent): TestResponse
+/** @param array<string, mixed> $overrides */
+function fbcPurchase(User $parent, array $overrides = []): TestResponse
 {
     app('auth')->forgetGuards();
 
@@ -91,6 +97,7 @@ function fbcPurchase(User $parent): TestResponse
             'transaction_id' => 'tx-'.Str::random(8),
             'purchased_at_ms' => now()->getTimestampMs(),
             'expiration_at_ms' => null,
+            ...$overrides,
         ],
     ]);
 }
@@ -232,5 +239,90 @@ describe('old apps keep M5-F03 exactly', function () {
         $pet = Pet::factory()->create(['user_id' => $child->id, 'breed_type' => 'mutt', 'plan' => PetPlan::Challenge, 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
 
         expect($pet->fresh()->plan)->toBe(PetPlan::Free);
+    });
+});
+
+/** A born, payment-locked »mešanček + izziv« pet of a new child of $parent's family. */
+function fbcLockedMutt(User $parent): Pet
+{
+    $pet = fbcLogin(fbcPin($parent, FBC_MUTT_CHALLENGE)->assertOk()->json('pin'));
+    fbcSign($pet)->assertSuccessful();
+
+    return $pet->fresh();
+}
+
+describe('QA #983', function () {
+    it('a refund of a bought mutt challenge sends it to the free plan (never re-locked)', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $pet = fbcLockedMutt($parent);
+        fbcPurchase($parent, ['transaction_id' => 'tx-mutt-1'])->assertOk();
+        expect($pet->fresh()->challengeStatus())->toBe(ChallengeStatus::Paid);
+
+        fbcPurchase($parent, ['type' => 'CANCELLATION', 'transaction_id' => 'tx-mutt-1', 'cancel_reason' => 'CUSTOMER_SUPPORT'])->assertOk();
+        $pet = $pet->fresh();
+        expect($pet->plan)->toBe(PetPlan::Free)
+            ->and($pet->isPaymentLocked())->toBeFalse()
+            ->and($pet->challenge_paid_at)->toBeNull();
+    });
+
+    it('an intent for a free pet never takes the purchase from the only payment-locked pet — also a mutt challenge (QA #978 b)', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $locked = fbcLockedMutt($parent);
+        $sibling = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $free = disableHygieneEvents(Pet::factory()->freePlan()->create([
+            'user_id' => $sibling->id, 'born_at' => now()->subDays(10), 'arrival_age_months' => 2,
+        ]));
+        expect($free->isUpgradeableFreePet())->toBeTrue();
+
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$free->id}/challenge/intent")->assertSuccessful();
+        fbcPurchase($parent)->assertOk();
+
+        expect($locked->fresh()->challengeStatus())->toBe(ChallengeStatus::Paid)
+            ->and($free->fresh()->plan)->toBe(PetPlan::Free);
+    });
+
+    it('displays as a challenge however it was paid (admin) — the M5-F02 admin / grandfathered mutt stays free', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $pet = fbcLockedMutt($parent);
+        expect($pet->free_breed_challenge)->toBeTrue();
+        DB::table('pets')->where('id', $pet->id)->update(['challenge_paid_at' => now(), 'challenge_paid_source' => ChallengePaidSource::Admin->value, 'payment_locked_at' => null]);
+        expect(PetPlanPayload::displaysAsFree($pet->fresh()))->toBeFalse();
+
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $old = Pet::factory()->create(['user_id' => $child->id, 'breed_type' => 'mutt']); // grandfathered (M3-11 backfill shape)
+        DB::table('pets')->where('id', $old->id)->update(['plan' => 'challenge', 'challenge_paid_at' => now(), 'challenge_paid_source' => ChallengePaidSource::Admin->value]);
+        expect($old->fresh()->free_breed_challenge)->toBeFalse()
+            ->and(PetPlanPayload::displaysAsFree($old->fresh()))->toBeTrue();
+    });
+
+    it('the lock push of a mutt challenge goes to the parents whose app can buy it; all parents when none can', function () {
+        config(['push.enabled' => true]);
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $other = User::factory()->parent()->create();
+        $pin = fbcPin($parent, FBC_MUTT_CHALLENGE)->assertOk()->json('pin');
+        DB::table('family_user')->where('user_id', $other->id)->delete(); // the factory gave $other a family of its own
+        app(FamilyService::class)->addMember(app(FamilyService::class)->familyOf($parent), $other, FamilyRole::Parent);
+        $pet = fbcLogin($pin);
+
+        // Nobody declared the feature yet → every parent.
+        fbcSign($pet)->assertSuccessful();
+        $push = PushNotification::where('pet_id', $pet->id)->where('type', PushType::PaymentRequired->value)->sole();
+        $parents = collect($push->recipients)->where('audience', PushNotification::AUDIENCE_PARENT)->pluck('user_id')->sort()->values()->all();
+        expect($parents)->toBe(collect([$parent->id, $other->id])->sort()->values()->all())
+            ->and(collect($push->recipients)->where('audience', PushNotification::AUDIENCE_CHILD)->pluck('user_id')->all())->toBe([$pet->user_id]);
+
+        // Only $other's app can buy a mutt challenge → only $other (children unchanged).
+        DB::table('users')->where('id', $other->id)->update(['client_features' => json_encode(['free_breed_challenge'])]);
+        $second = fbcLockedMutt($parent);
+        $push = PushNotification::where('pet_id', $second->id)->where('type', PushType::PaymentRequired->value)->sole();
+        expect(collect($push->recipients)->where('audience', PushNotification::AUDIENCE_PARENT)->pluck('user_id')->all())->toBe([$other->id]);
+
+        // A paid-breed challenge pet is unchanged: every parent.
+        $collie = fbcLogin(fbcPin($parent, ['plan' => 'challenge', 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->json('pin'));
+        fbcSign($collie)->assertSuccessful();
+        $push = PushNotification::where('pet_id', $collie->id)->where('type', PushType::PaymentRequired->value)->sole();
+        expect(collect($push->recipients)->where('audience', PushNotification::AUDIENCE_PARENT)->count())->toBe(2);
     });
 });
