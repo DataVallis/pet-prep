@@ -22,8 +22,11 @@ import {
   showUnusedPurchasePrompt,
   upgradeNote,
 } from '@/modules/plan/purchaseEntry';
+import { readChallengeWeek } from '@/modules/childPet/childPetView';
+import { lowerDismissal, setUnusedPurchaseStoreForTests } from '@/modules/plan/unusedPurchasePrefs';
 import {
   challengeStartedMessage,
+  childChallengeWeek,
   markChallengeStartAnnounced,
   setChallengeStartedStoreForTests,
   shouldAnnounceChallengeStart,
@@ -264,19 +267,75 @@ describe('child: »Izziv se je začel!« (no price)', () => {
     expect(await wasChallengeStartAnnounced(7, '2026-11-02T10:00:00+01:00')).toBe(false);
     setChallengeStartedStoreForTests(null);
 
-    expect(challengeStartedMessage(0)).toBe('Izziv se je začel! Teden 1 od 12');
-    expect(challengeStartedMessage(0)).not.toMatch(/€|kup|nakup/i);
+    expect(challengeStartedMessage(1)).toBe('Izziv se je začel! Teden 1 od 12');
+    expect(challengeStartedMessage(1)).not.toMatch(/€|kup|nakup/i);
     await act(async () => {
       await i18n.changeLanguage('en');
     });
-    expect(challengeStartedMessage(2)).toBe('The challenge has started! Week 3 of 12');
+    expect(challengeStartedMessage(3)).toBe('The challenge has started! Week 3 of 12');
   });
 
   it('»O tvojem kužku« gets »Izziv: Teden N od 12« only for an upgraded pet', () => {
     const profile = readPetProfile({ origin: 'bought', age_months: 5, arrival_age_months: 2, life_stage: 'puppy', legacy: false });
     if (profile === null) throw new Error('profile');
     expect(profileSheetRows('Mešanček', profile).map((r) => r.key)).not.toContain('challenge');
-    const rows = profileSheetRows('Mešanček', profile, 0);
+    const rows = profileSheetRows('Mešanček', profile, 1);
     expect(rows.find((r) => r.key === 'challenge')).toEqual({ key: 'challenge', label: 'Izziv', value: 'Teden 1 od 12' });
+  });
+});
+
+describe('QA #978 — the child\'s own week and a quiet prompt', () => {
+  it('uses the child\'s own server progress (a later joiner is in an earlier week than the pet)', () => {
+    expect(readChallengeWeek({ week: 2, weeks_total: 12 })).toBe(2);
+    expect(readChallengeWeek(null)).toBeNull();
+    expect(readChallengeWeek({ week: 'x' })).toBeNull();
+    // Pet is 5 weeks into the upgrade, this child joined last week → week 1, not 6.
+    expect(childChallengeWeek({ challenge_week: 1, virtual_age_months: 5 })).toBe(1);
+    // Older server without challenge_progress → the pet clock.
+    expect(childChallengeWeek({ challenge_week: null, virtual_age_months: 5 })).toBe(6);
+  });
+
+  it('is not shown while an unborn pet waits for the purchase (P11) and not again once dismissed', () => {
+    const f = familyWith({ upgrade: UPGRADEABLE });
+    const unborn = familyFromDashboard(
+      makeScoredDashboard(
+        [makeScoredChild()],
+        [
+          makeFamilyPet({ id: 7, breed_type: 'mutt', name: 'Luna', plan: FREE_PLAN, upgrade: UPGRADEABLE } as never),
+          makeFamilyPet({ id: 8, breed_type: 'border_collie', born_at: null, plan: { ...FREE_PLAN, type: 'challenge', status: 'payment_required', display_type: 'challenge' } } as never),
+        ],
+      ) as unknown as ParentDashboardResponse,
+    );
+    const both = readBilling({
+      credits_available: 1,
+      pets: [
+        { pet_id: 7, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false, challenge_started_at: null, upgrade: UPGRADEABLE },
+        { pet_id: 8, plan: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false, challenge_started_at: null, upgrade: null },
+      ],
+    });
+    expect(showUnusedPurchasePrompt(both, unborn)).toBe(false);
+    expect(showUnusedPurchasePrompt(billingFree(UPGRADEABLE, 1), f, 1)).toBe(false); // dismissed for 1
+    expect(showUnusedPurchasePrompt(billingFree(UPGRADEABLE, 2), f, 1)).toBe(true); // a new one
+    expect(lowerDismissal(2, 0)).toBe(0);
+  });
+
+  it('»×« hides the prompt on this phone', async () => {
+    let saved: string | null = null;
+    setUnusedPurchaseStoreForTests({ getItemAsync: async () => saved, setItemAsync: async (_k, v) => void (saved = v) });
+    getBilling.mockResolvedValue({
+      credits_available: 1,
+      pets: [{ pet_id: 7, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false, challenge_started_at: null, upgrade: UPGRADEABLE }],
+    });
+    renderWithQuery(<UnusedPurchasePrompt family={familyWith({ upgrade: UPGRADEABLE })} onChoose={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('unused-purchase-dismiss'));
+    await flush();
+    expect(screen.queryByTestId('unused-purchase-prompt')).toBeNull();
+    expect(saved).toBe(JSON.stringify({ '1': 1 }));
+    screen.unmount();
+    renderWithQuery(<UnusedPurchasePrompt family={familyWith({ upgrade: UPGRADEABLE })} onChoose={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('unused-purchase-prompt')).toBeNull();
+    setUnusedPurchaseStoreForTests(null);
   });
 });

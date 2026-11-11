@@ -106,6 +106,7 @@
   "unusedPurchase": {
     "title": "Imate neporabljen nakup — izberite ljubljenčka",
     "body": "Plačan 12-tedenski izziv še ni na nobenem ljubljenčku. Izberite, za katerega je.",
-    "action": "Izberi ljubljenčka"
+    "action": "Izberi ljubljenčka",
+    "dismiss": "Skrij"
   }
 }

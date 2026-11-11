@@ -182,6 +182,8 @@ export function makeChildState(
       awaiting_contract: false,
       caretakers_count: 1,
       virtual_age_months: 0,
+      // M6-U01 (additive): this child's challenge progress (null: free / not started).
+      challenge_progress: null,
       age_months: 2,
       origin: 'bought',
       life_stage: 'puppy',

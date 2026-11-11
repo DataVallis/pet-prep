@@ -58,6 +58,11 @@ return new class extends Migration
 
     public function down(): void
     {
+        // QA #978 d: dropping the column would silently move upgraded pets back to the birth
+        // clock (a mutt born months ago would be "finished" at once). Refuse while any exists.
+        if (DB::table('pets')->whereNotNull('challenge_started_at')->exists()) {
+            throw new RuntimeException('Refusing to roll back M6-U01: pets upgraded to the challenge exist (pets.challenge_started_at). Decide with David first.');
+        }
         // Never rewrite purchase history: the wider CHECK stays while a row uses 'intent'.
         if (! DB::table('challenge_credits')->where('assigned_via', 'intent')->exists()) {
             DB::statement('ALTER TABLE challenge_credits DROP CONSTRAINT IF EXISTS challenge_credits_assigned_check');

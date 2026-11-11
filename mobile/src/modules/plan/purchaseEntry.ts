@@ -87,10 +87,18 @@ export function isBillingPetUpgradeable(pet: BillingPet, family: FamilyOverview 
  * M6-U01 (§5.3): the family holds a purchase that is on no pet yet AND a pet it could go to (a
  * pet waiting for the purchase or an upgradeable free pet) — the dashboard shows »Imate
  * neporabljen nakup — izberite ljubljenčka« (the purchase may have landed after the app gave up
- * waiting, or the webhook could not choose).
+ * waiting, or the webhook could not choose). Not while a pet that is not born yet waits for a
+ * purchase (P11: it gets the held one at its contract), and not again once dismissed for the
+ * same number of unused purchases (`dismissedCount`, per phone — QA #978 f).
  */
-export function showUnusedPurchasePrompt(billing: Billing | undefined, family: FamilyOverview | null): boolean {
+export function showUnusedPurchasePrompt(billing: Billing | undefined, family: FamilyOverview | null, dismissedCount = 0): boolean {
   if (!billing || billing.credits_available <= 0) return false;
+  // QA #978 f: dismissed for this many unused purchases → only a NEW one asks again.
+  if (billing.credits_available <= dismissedCount) return false;
+  // P11: a purchase held for a pet that is not born yet is assigned at its contract by itself —
+  // not an "unused" purchase to nag about.
+  const unbornWaiting = billing.pets.some((p) => p.status === 'payment_required' && family?.pets.find((f) => f.id === p.pet_id)?.born_at === null);
+  if (unbornWaiting) return false;
   return billing.pets.some((p) => isBillingPetPurchasable(p, family) || isBillingPetUpgradeable(p, family));
 }
 

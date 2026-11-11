@@ -12,6 +12,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\PetStatusPeriod;
+use App\Models\User;
 use App\Services\Results\Routine;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -563,6 +564,30 @@ class CareScoreService
             'weeks_total' => self::CHALLENGE_WEEKS,
             'completed' => $days >= self::CHALLENGE_WEEKS * 7,
         ];
+    }
+
+    /**
+     * M6-U01 (QA #978 e): the 12-week progress of ONE child on a challenge pet without the
+     * routine ledger (child state): the child's challenge start = their start (stored /
+     * contract / birth, never before the birth) but never before an upgrade purchase —
+     * the same rule as `challenge_starts` on the board — then progress(). Null for a free
+     * pet, an unborn pet or a child who is not (yet) a started caretaker.
+     *
+     * @return array<string, mixed>|null
+     */
+    public function progressForChild(Pet $pet, User $child, ?CarbonInterface $now = null): ?array
+    {
+        if ($pet->isFreePlan() || $pet->isUnborn()) {
+            return null;
+        }
+        $caretaker = PetCaretaker::where('pet_id', $pet->id)->where('user_id', $child->id)->whereNull('ended_at')->first();
+        if ($caretaker === null) {
+            return null;
+        }
+        $contracts = PetContract::where('pet_id', $pet->id)->where('user_id', $child->id)->get(['pet_id', 'user_id', 'signed_at']);
+        $start = app(ChallengeCertificateService::class)->startOf($pet, $caretaker, $contracts);
+
+        return $this->progress(['now' => CarbonImmutable::instance($now ?? now())->utc()], $start, $pet);
     }
 
     /**

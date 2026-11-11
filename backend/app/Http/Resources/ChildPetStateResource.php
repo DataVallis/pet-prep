@@ -10,6 +10,7 @@ use App\Services\BehaviourPayload;
 use App\Services\BirthdayPayload;
 use App\Services\CareGuidePayload;
 use App\Services\CareScheduleService;
+use App\Services\CareScoreService;
 use App\Services\CareTasksPayload;
 use App\Services\ChallengeCertificateService;
 use App\Services\ChildCertificatePayload;
@@ -172,6 +173,14 @@ class ChildPetStateResource extends JsonResource
                 'caretakers_count' => $pet->caretakerRows()->count(),
                 // Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b).
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
+                /**
+                 * M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                 * contract, birth or an upgrade purchase, whichever is later); null for a free /
+                 * unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                 *
+                 * @var array{started_at: string, days_elapsed: int, week: int, weeks_total: int, completed: bool}|null
+                 */
+                'challenge_progress' => $actor !== null ? app(CareScoreService::class)->progressForChild($pet, $actor, $now) : null,
                 // M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                 // null for a legacy pet (pre-M5 rules, `profile.legacy`).
                 'age_months' => $profile->ageMonths,

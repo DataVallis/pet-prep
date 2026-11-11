@@ -2290,8 +2290,10 @@ sequenceDiagram
     API->>API: SANDBOX and not accepted → sandbox_ignored · other product → unknown_product
     API->>DB: lock families row
     API->>DB: INSERT challenge_credits (one per purchase event)
-    alt M6-U01: open purchase intent of the buying parent, valid at purchased_at, pet still eligible
+    alt M6-U01: intent of the buying parent current at purchased_at, pet eligible, and NOT (free pet while exactly one pet is payment_required)
       API->>DB: consume intent (webhook) → lock pet → credit.pet_id, assigned_via=intent → pet paid (a free pet is upgraded first)
+    else intent for a free pet but the family's only pet waits behind the payment lock (QA #978 b)
+      API->>DB: consume intent; old rule → that pet paid (assigned_via=webhook); after commit Discord alert intent_overridden
     else no usable intent (every older app): family has exactly ONE active unpaid challenge pet
       API->>DB: lock pet → credit.pet_id, assigned_via=webhook → pet paid (purchase), payment lock lifted
     end

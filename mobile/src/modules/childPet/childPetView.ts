@@ -45,6 +45,14 @@ import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/pla
 import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
 
 /** M5-T02 `sleep` of the child state / `PetUpdated`. */
+
+/** M6-U01: the child's own challenge week from the server's `challenge_progress` (null when absent / malformed). */
+export function readChallengeWeek(raw: unknown): number | null {
+  if (typeof raw !== 'object' || raw === null) return null;
+  const week = (raw as { week?: unknown }).week;
+  return typeof week === 'number' && Number.isFinite(week) ? Math.min(12, Math.max(1, Math.floor(week))) : null;
+}
+
 export interface PetSleep {
   asleep: boolean;
   until: string | null;
@@ -98,6 +106,12 @@ export interface ChildPetView {
     awaiting_contract: boolean;
     caretakers_count: number;
     virtual_age_months: number;
+    /**
+     * M6-U01 (QA #978 e): THIS child's week of the 12-week challenge (1–12, from the server's
+     * `challenge_progress` — their own start: contract, birth or an upgrade purchase); null for
+     * a free / unborn pet or an older server (then the pet-level `virtual_age_months`).
+     */
+    challenge_week: number | null;
     hunger_level: number;
     thirst_level: number;
     energy_level: number;
@@ -354,6 +368,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       awaiting_contract: bool(p.awaiting_contract),
       caretakers_count: num(p.caretakers_count),
       virtual_age_months: num(p.virtual_age_months),
+      challenge_week: readChallengeWeek((p as { challenge_progress?: unknown }).challenge_progress),
       hunger_level: num(p.hunger_level),
       thirst_level: num(p.thirst_level),
       energy_level: num(p.energy_level),

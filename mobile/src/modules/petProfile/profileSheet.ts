@@ -29,11 +29,11 @@ export interface ProfileSheetRow {
 
 /**
  * Rows in display order; a row whose value is unknown is left out (never "—" or a guess).
- * `challengeWeeks` (M6-U01): whole weeks of the 12-week challenge of a pet a parent upgraded
- * from the free plan (server `virtual_age_months`, counted from the purchase) → »Izziv: Teden N
+ * `challengeWeek` (M6-U01): the child's week (1–12) of the 12-week challenge of a pet a parent
+ * upgraded from the free plan (the child's own server progress — QA #978 e) → »Izziv: Teden N
  * od 12«; null = no such row (every other pet: the sheet is unchanged).
  */
-export function profileSheetRows(breedLabel: string, profile: PetProfileInfo, challengeWeeks: number | null = null): ProfileSheetRow[] {
+export function profileSheetRows(breedLabel: string, profile: PetProfileInfo, challengeWeek: number | null = null): ProfileSheetRow[] {
   const values: Record<ProfileSheetRowKey, string | null> = {
     breed: breedLabel.trim() === '' ? null : breedLabel,
     stage: profile.stage ? PET_PROFILE_STRINGS.stages[profile.stage] : null,
@@ -42,9 +42,9 @@ export function profileSheetRows(breedLabel: string, profile: PetProfileInfo, ch
     nextStage: nextStageLine(profile, 'child'),
     meals: mealsLine(profile),
     challenge:
-      challengeWeeks === null
+      challengeWeek === null
         ? null
-        : t('child:hud.profileSheet.challengeWeek', { week: Math.min(CHALLENGE_WEEKS, Math.max(0, Math.floor(challengeWeeks)) + 1), total: CHALLENGE_WEEKS }),
+        : t('child:hud.profileSheet.challengeWeek', { week: Math.min(CHALLENGE_WEEKS, Math.max(1, Math.floor(challengeWeek))), total: CHALLENGE_WEEKS }),
   };
   const order: readonly ProfileSheetRowKey[] = ['breed', 'stage', 'age', 'origin', 'nextStage', 'meals', 'challenge'];
   return order.flatMap((key) => {

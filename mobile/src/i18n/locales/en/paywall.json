@@ -100,6 +100,7 @@
   "unusedPurchase": {
     "title": "You have an unused purchase — choose a pet",
     "body": "A paid 12-week challenge is not on any pet yet. Choose which pet it is for.",
-    "action": "Choose a pet"
+    "action": "Choose a pet",
+    "dismiss": "Hide"
   }
 }

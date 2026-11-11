@@ -7,6 +7,7 @@ use App\Enums\ChallengePaidSource;
 use App\Enums\ChallengeStatus;
 use App\Enums\PetPlan;
 use App\Exceptions\ChallengeException;
+use App\Jobs\SendUnassignedCreditAlert;
 use App\Models\ChallengeCredit;
 use App\Models\ChallengePurchaseIntent;
 use App\Models\Family;
@@ -70,6 +71,7 @@ class ChallengeCreditService
 
         // M6-U01 (§5.3): the new app named the pet before opening the store sheet.
         $intent = $this->intentFor($family, $buyerIds, $purchasedAt);
+        $unpaid = $this->unpaidPets($family);
         if ($intent !== null) {
             $intent->forceFill([
                 'consumed_at' => now(),
@@ -78,17 +80,28 @@ class ChallengeCreditService
             ])->save();
 
             $pet = Pet::whereKey($intent->pet_id)->where('family_id', $family->id)->lockForUpdate()->first();
-            if ($pet !== null && self::intentTargetAllowed($pet)) {
+            // QA #978 b (»starš ne sme plačati in ostati z zaklenjenim ljubljenčkom«): an
+            // intent for a FREE pet never takes a purchase away from the family's only pet
+            // that waits behind the payment lock — that purchase may come from an older app
+            // on another phone, which relies on the old rule. The old rule wins; an admin is
+            // told (the upgrade the intent asked for did not happen — sort it out by hand).
+            $lockedOne = $unpaid->count() === 1 && $unpaid->first()->challengeStatus() === ChallengeStatus::PaymentRequired
+                ? $unpaid->first() : null;
+            if ($pet !== null && $pet->plan === PetPlan::Free && $lockedOne !== null) {
+                [$creditId, $familyId, $environment] = [$credit->id, (int) $credit->family_id, $credit->environment ?? 'unknown'];
+                DB::afterCommit(fn () => SendUnassignedCreditAlert::dispatch([$creditId], [$familyId], [$environment], SendUnassignedCreditAlert::REASON_INTENT_OVERRIDDEN));
+                Log::warning('Challenge: upgrade intent overridden by the only payment-locked pet', ['intent_id' => $intent->id, 'pet_id' => $intent->pet_id, 'assigned_pet_id' => $lockedOne->id]);
+            } elseif ($pet !== null && self::intentTargetAllowed($pet)) {
                 $this->assignOrUpgrade($credit, $pet, ChallengeCredit::VIA_INTENT);
 
                 return $credit;
+            } else {
+                // The pet is no longer eligible (paid another way, game over, deleted …):
+                // an unusable intent counts as none — the rule every older app relies on below.
+                Log::info('Challenge: purchase intent not usable, falling back to auto-assignment', ['intent_id' => $intent->id, 'pet_id' => $intent->pet_id]);
             }
-            // The pet is no longer eligible (paid another way, game over, deleted …):
-            // an unusable intent counts as none — the rule every older app relies on below.
-            Log::info('Challenge: purchase intent not usable, falling back to auto-assignment', ['intent_id' => $intent->id, 'pet_id' => $intent->pet_id]);
         }
 
-        $unpaid = $this->unpaidPets($family);
         if ($unpaid->count() === 1) {
             $pet = Pet::whereKey($unpaid->first()->id)->lockForUpdate()->first();
             if ($pet !== null && $pet->challenge_paid_at === null) {
@@ -321,8 +334,9 @@ class ChallengeCreditService
             return ['credits_available' => 0, 'payments_enforced' => Pet::paymentsEnforced(), 'pets' => []];
         }
 
-        $tz = $family->timezone;
-        $pets = Pet::where('family_id', $family->id)->where('is_active', true)->orderBy('id')->get();
+        // The pet's own clock (David 2026-11-09): `effectiveTimezone()` = its zone, else the family's.
+        $pets = Pet::where('family_id', $family->id)->where('is_active', true)->orderBy('id')->get()
+            ->each(fn (Pet $pet) => $pet->setRelation('family', $family));
 
         return [
             'credits_available' => ChallengeCredit::where('family_id', $family->id)->available()->count(),
@@ -333,15 +347,15 @@ class ChallengeCreditService
                 'plan' => $pet->plan->value,
                 'status' => $pet->challengeStatus()?->value,
                 // The pet's own clock (David 2026-11-09): its zone, else the family's.
-                'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($pet->timezone ?? $tz)->toIso8601String(),
-                'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($pet->timezone ?? $tz)->toIso8601String(),
+                'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($pet->effectiveTimezone())->toIso8601String(),
+                'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($pet->effectiveTimezone())->toIso8601String(),
                 // M3-13: no free trial any more — true only for a pre-M3-13 pet whose
                 // 7-day trial ran (null for a free pet). Kept for old app builds.
                 'trial_available' => $this->trialAvailable($pet),
                 // P5: deleting the pet (or its only child) throws the purchase away.
                 'deletion_loses_purchase' => $pet->deletionLosesPurchase(),
                 // M6-U01: the purchase that upgraded a free pet (its 12 weeks start here); null otherwise.
-                'challenge_started_at' => $pet->challenge_started_at?->copy()->setTimezone($pet->timezone ?? $tz)->toIso8601String(),
+                'challenge_started_at' => $pet->challenge_started_at?->copy()->setTimezone($pet->effectiveTimezone())->toIso8601String(),
                 // M6-U01: a free pet — can it be upgraded to the challenge (reason when not, e.g.
                 // `legacy_profile` → the app explains instead of a button)? null for a challenge pet.
                 'upgrade' => self::upgradePayload($pet),
@@ -424,10 +438,17 @@ class ChallengeCreditService
         Log::info('Challenge: free pet upgraded to the 12-week challenge', ['pet_id' => $pet->id, 'via' => $via]);
     }
 
+    /** Clock skew between the store's purchase time and our intent timestamps. */
+    public const INTENT_SKEW_MINUTES = 5;
+
     /**
-     * The newest open intent of one of the buying parents in this family that was
-     * valid when the store charged (`expires_at` ≥ purchase time; created no later
-     * than the purchase + a 5-minute clock skew). A delayed webhook still honours it.
+     * The intent of one of the buying parents in this family that was current when
+     * the store charged: valid then (`expires_at` ≥ purchase time) and not used by
+     * another purchase (open, or superseded later without a credit — QA #978 a: a
+     * newer intent created after this purchase must not steal it). The newest one
+     * created at / before the purchase wins; only without such one, an intent created
+     * within INTENT_SKEW_MINUTES after it (clock skew). A delayed webhook still
+     * honours it.
      *
      * @param  list<int>  $buyerIds
      */
@@ -437,15 +458,17 @@ class ChallengeCreditService
             return null;
         }
 
-        return ChallengePurchaseIntent::where('family_id', $family->id)
+        $candidates = fn () => ChallengePurchaseIntent::where('family_id', $family->id)
             ->whereIn('parent_user_id', $buyerIds)
-            ->open()
+            ->whereNull('challenge_credit_id')
+            ->where(fn ($q) => $q->whereNull('consumed_at')->orWhere('consumed_by', ChallengePurchaseIntent::CONSUMED_BY_SUPERSEDED))
             ->where('expires_at', '>=', $purchasedAt)
-            ->where('created_at', '<=', $purchasedAt->copy()->addMinutes(5))
             ->orderByDesc('created_at')
             ->orderByDesc('id')
-            ->lockForUpdate()
-            ->first();
+            ->lockForUpdate();
+
+        return $candidates()->where('created_at', '<=', $purchasedAt)->first()
+            ?? $candidates()->where('created_at', '<=', $purchasedAt->copy()->addMinutes(self::INTENT_SKEW_MINUTES))->first();
     }
 
     /**

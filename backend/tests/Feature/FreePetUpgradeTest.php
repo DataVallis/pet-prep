@@ -14,6 +14,7 @@ use App\Models\PetContract;
 use App\Models\PetDailyRoutine;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
+use App\Services\Alerts\AdminAlert;
 use App\Services\Alerts\DiscordWebhook;
 use App\Services\CareScoreService;
 use App\Services\ChallengeCertificateService;
@@ -512,10 +513,10 @@ describe('purchase intent', function () {
         fuIntent($p3, fuUnpaidChallengePet($p3))->assertCreated();
     });
 
-    it('assigns the purchase to the intent\'s free pet even when another unpaid challenge pet waits (K4)', function () {
+    it('assigns the purchase to the intent\'s free pet when the old rule would not choose (K4: two unpaid pets)', function () {
         [$parent, , $mutt] = fuFamily();
         $collie = fuUnpaidChallengePet($parent);
-        expect($collie->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
+        $collie2 = fuUnpaidChallengePet($parent);
 
         fuIntent($parent, $mutt)->assertCreated();
         fuAt('2026-10-07 10:05:00');
@@ -525,7 +526,8 @@ describe('purchase intent', function () {
         expect($mutt->plan)->toBe(PetPlan::Challenge)
             ->and($mutt->challenge_paid_source)->toBe(ChallengePaidSource::Purchase)
             ->and($mutt->challenge_started_at->utc()->toDateTimeString())->toBe('2026-10-07 10:05:00')
-            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
+            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($collie2->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
         $credit = ChallengeCredit::first();
         $intent = ChallengePurchaseIntent::first();
         expect($credit->pet_id)->toBe($mutt->id)
@@ -535,7 +537,63 @@ describe('purchase intent', function () {
 
         // The new app still calls activate afterwards: idempotent.
         fuActivate($parent, $mutt)->assertOk()->assertJsonPath('status', 'already_active');
-        expect($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
+    });
+
+    it('QA #978 b: an upgrade intent never takes a purchase from the family\'s only payment-locked pet (old app on another phone) — that pet is unlocked and an admin is told', function () {
+        Queue::fake([SendUnassignedCreditAlert::class]);
+        [$parent, , $mutt] = fuFamily();
+        $collie = fuUnpaidChallengePet($parent);
+
+        // New app: intent for the mutt, the store sheet is cancelled …
+        fuIntent($parent, $mutt)->assertCreated();
+        // … then an OLD app (no intent) buys for the waiting collie within 30 min.
+        fuAt('2026-10-07 10:10:00');
+        fuPurchase($parent)->assertOk();
+
+        expect($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::Paid)
+            ->and($mutt->fresh()->plan)->toBe(PetPlan::Free)
+            ->and(ChallengeCredit::first()->assigned_via)->toBe(ChallengeCredit::VIA_WEBHOOK)
+            ->and(ChallengePurchaseIntent::first()->consumed_by)->toBe('webhook');
+        Queue::assertPushed(SendUnassignedCreditAlert::class, fn (SendUnassignedCreditAlert $j) => $j->reason === SendUnassignedCreditAlert::REASON_INTENT_OVERRIDDEN
+            && $j->creditIds === [ChallengeCredit::first()->id]);
+    });
+
+    it('QA #978 a: a newer intent made after the purchase never steals it (the superseded one that was current wins)', function () {
+        [$parent, , $mutt] = fuFamily();
+        $collie = fuUnpaidChallengePet($parent);
+        $collie2 = fuUnpaidChallengePet($parent);
+
+        fuIntent($parent, $mutt)->assertCreated();       // 10:00 — for the mutt
+        $purchasedAt = now()->addMinute()->getTimestampMs(); // the store charged at 10:01
+        fuAt('2026-10-07 10:03:00');
+        fuIntent($parent, $collie)->assertCreated();     // 10:03 — the parent starts the next purchase
+        fuPurchase($parent, ['purchased_at_ms' => $purchasedAt])->assertOk(); // the 10:01 webhook arrives late
+
+        expect($mutt->fresh()->plan)->toBe(PetPlan::Challenge)
+            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
+        // The collie's (newer) intent is still open for its own purchase.
+        fuPurchase($parent)->assertOk();
+        expect($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::Paid)
+            ->and($collie2->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
+    });
+
+    it('QA #978 e: the child state carries THIS child\'s challenge progress (a later joiner is in an earlier week)', function () {
+        [$parent, $maja, $pet] = fuFamily();
+        fuUpgrade($parent, $pet);
+        fuAt('2026-10-28 10:00:00'); // 3 weeks after the purchase
+        $luka = User::factory()->child()->create(['parent_id' => $parent->id]);
+        app(FamilyService::class)->addCaretaker($pet->fresh(), $luka, true);
+        PetContract::create(['pet_id' => $pet->id, 'user_id' => $luka->id, 'signature_format' => 'svg_path', 'signature' => 'M1 1 L2 2',
+            'signed_at' => now()]);
+        fuAt('2026-10-30 10:00:00');
+
+        app('auth')->forgetGuards();
+        actingAsRole($maja);
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('pet.challenge_progress.week', 4)
+            ->assertJsonPath('pet.virtual_age_months', 3);
+        app('auth')->forgetGuards();
+        actingAsRole($luka);
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('pet.challenge_progress.week', 1);
     });
 
     it('is single use and expires after 30 minutes — then the webhook works exactly as today', function () {
@@ -674,5 +732,63 @@ describe('safety net — unassigned purchase alert', function () {
         // The post fails → the claim is released → the next run tries again.
         (new SendUnassignedCreditAlert([ChallengeCredit::first()->id], [1], ['PRODUCTION']))->handle(app(DiscordWebhook::class));
         expect(ChallengeCredit::first()->unassigned_alerted_at)->toBeNull();
+    });
+
+    it('QA #978 c: any failure (not only a Discord error) or a worker giving up releases the claim', function () {
+        config(['services.discord.alerts_webhook_url' => FU_DISCORD]);
+        [$parent, , $mutt] = fuFamily();
+        fuUnpaidChallengePet($parent);
+        fuUnpaidChallengePet($parent);
+        fuPurchase($parent)->assertOk();
+        fuAt('2026-10-07 10:15:00');
+        Queue::fake([SendUnassignedCreditAlert::class]);
+        $ids = app(UnassignedCreditMonitor::class)->check();
+        expect(ChallengeCredit::whereNotNull('unassigned_alerted_at')->count())->toBe(1);
+
+        $broken = new class extends DiscordWebhook
+        {
+            public function __construct() {}
+
+            public function configured(): bool
+            {
+                return true;
+            }
+
+            public function send(AdminAlert $alert): void
+            {
+                throw new RuntimeException('boom');
+            }
+        };
+        (new SendUnassignedCreditAlert($ids, [1], ['PRODUCTION']))->handle($broken);
+        expect(ChallengeCredit::whereNotNull('unassigned_alerted_at')->count())->toBe(0);
+
+        app(UnassignedCreditMonitor::class)->check();
+        (new SendUnassignedCreditAlert($ids, [1], ['PRODUCTION']))->failed(new RuntimeException('timeout'));
+        expect(ChallengeCredit::whereNotNull('unassigned_alerted_at')->count())->toBe(0);
+    });
+
+    it('QA #978 c: an intent made AFTER the purchase (or more than an hour before) does not count as "the family chose a pet"', function () {
+        config(['services.discord.alerts_webhook_url' => FU_DISCORD]);
+        Queue::fake([SendUnassignedCreditAlert::class]);
+        [$parent, , $mutt] = fuFamily();
+        fuPurchase($parent)->assertOk(); // a free pet only, no intent → held, no alert
+        fuAt('2026-10-07 10:30:00');
+        fuIntent($parent, $mutt)->assertCreated(); // later, for a NEW purchase
+        expect(app(UnassignedCreditMonitor::class)->check())->toBe([]);
+
+        [$p2, , $m2] = fuFamily();
+        fuIntent($p2, $m2)->assertCreated();       // 10:30
+        fuAt('2026-10-07 11:40:00');
+        Pet::whereKey($m2->id)->update(['is_game_over' => true]);
+        fuPurchase($p2)->assertOk();               // bought 70 min later (intent expired anyway)
+        fuAt('2026-10-07 11:55:00');
+        expect(app(UnassignedCreditMonitor::class)->check())->toBe([]);
+    });
+
+    it('QA #978 d: the migration refuses to roll back while upgraded pets exist', function () {
+        [$parent, , $pet] = fuFamily();
+        fuUpgrade($parent, $pet);
+        $migration = require database_path('migrations/2027_03_21_120000_free_pet_challenge_upgrade.php');
+        expect(fn () => $migration->down())->toThrow(RuntimeException::class, 'pets upgraded to the challenge exist');
     });
 });

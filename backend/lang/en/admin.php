@@ -627,6 +627,10 @@ return [
         ],
     ],
     'unassigned_credit' => [
+        'overridden' => [
+            'title' => "A challenge purchase went to the family's payment-locked pet instead of the free pet chosen for the upgrade",
+            'body' => 'The family has exactly one pet waiting behind the payment lock, and a purchase arrived with an upgrade intent for a free pet. To never leave a paid-for pet locked (the purchase may come from an older app on another phone), it unlocked the waiting pet. If the parent wanted the upgrade, sort it out with the family (M6-U01).',
+        ],
         'discord' => [
             'title' => ':count challenge purchase(s) not assigned to a pet for over :minutes min',
             'body' => 'A parent paid for the 12-week challenge, but the purchase is not on any pet yet, although the family has a pet waiting for payment or chose a pet before buying (purchase intent). The new app offers »Choose a pet« on its next start; otherwise assign it in /admin (Challenge credits) or contact the family (M6-U01).',

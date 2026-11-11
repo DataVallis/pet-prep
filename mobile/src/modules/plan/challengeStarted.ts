@@ -68,10 +68,17 @@ export function shouldAnnounceChallengeStart(startedAt: string | null, said: boo
   return nowMs - at <= ANNOUNCE_WITHIN_DAYS * 86_400_000;
 }
 
-/** »Izziv se je začel! Teden N od 12« — N from the server's challenge clock (`virtual_age_months` = whole weeks). */
-export function challengeStartedMessage(weeksElapsed: number): string {
-  const week = Math.min(CHALLENGE_WEEKS, Math.max(0, Math.floor(weeksElapsed)) + 1);
-  return t('child:hud.challengeStarted', { week, total: CHALLENGE_WEEKS });
+/** »Izziv se je začel! Teden N od 12« — N = the child's own week (1–12). */
+export function challengeStartedMessage(week: number): string {
+  return t('child:hud.challengeStarted', { week: Math.min(CHALLENGE_WEEKS, Math.max(1, Math.floor(week))), total: CHALLENGE_WEEKS });
+}
+
+/**
+ * The child's week: their own server progress (`challenge_week`, QA #978 e — a child who joined
+ * later is in an earlier week than the pet), else the pet-level clock (older server).
+ */
+export function childChallengeWeek(pet: { challenge_week: number | null; virtual_age_months: number }): number {
+  return pet.challenge_week ?? Math.min(CHALLENGE_WEEKS, Math.max(0, Math.floor(pet.virtual_age_months)) + 1);
 }
 
 /**

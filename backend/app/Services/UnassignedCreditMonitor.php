@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\DB;
  * M6-U01 safety net (FREE_PET_UPGRADE_SPEC §5.3, David 2026-11-10 — »a parent
  * must never pay and stay with a locked pet«): a challenge credit that is still
  * unassigned AFTER_MINUTES after the webhook wrote it, in a family that has a
- * pet waiting for payment (`payment_required`) or chose a pet before buying
- * (a purchase intent), gets ONE Discord `unassigned_challenge_credit` alert —
+ * pet waiting for payment (`payment_required`) or chose a pet in the hour before
+ * buying (a purchase intent created ≤ 60 min before the purchase, + 5 min skew), gets ONE Discord `unassigned_challenge_credit` alert —
  * claimed per credit on `challenge_credits.unassigned_alerted_at` (conditional
  * UPDATE; released again when the post fails, so the next run retries). Only
  * credits written in the last LOOKBACK_DAYS (a credit a family holds for a
@@ -87,8 +87,12 @@ class UnassignedCreditMonitor
 
     private function familyWaits(ChallengeCredit $credit): bool
     {
+        // An intent of the hour BEFORE the purchase (DECISIONS 2026-11-11 e; + the clock skew
+        // of ChallengeCreditService) — never one made later for another purchase.
+        $purchasedAt = CarbonImmutable::instance($credit->purchased_at);
         $intent = ChallengePurchaseIntent::where('family_id', $credit->family_id)
-            ->where('created_at', '>=', CarbonImmutable::instance($credit->purchased_at)->subMinutes(self::INTENT_WINDOW_MINUTES))
+            ->where('created_at', '>=', $purchasedAt->subMinutes(self::INTENT_WINDOW_MINUTES))
+            ->where('created_at', '<=', $purchasedAt->addMinutes(ChallengeCreditService::INTENT_SKEW_MINUTES))
             ->exists();
         if ($intent) {
             return true;

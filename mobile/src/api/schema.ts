@@ -4500,6 +4500,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -5527,6 +5539,18 @@ export interface operations {
                             caretakers_count: number;
                             /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                             virtual_age_months: number;
+                            /**
+                             * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                             *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                             *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                             */
+                            challenge_progress: {
+                                started_at: string;
+                                days_elapsed: number;
+                                week: number;
+                                weeks_total: number;
+                                completed: boolean;
+                            } | null;
                             /**
                              * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                              *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -6576,6 +6600,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -7621,6 +7657,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -8668,6 +8716,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -9714,6 +9774,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -10759,6 +10831,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -11810,6 +11894,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -12859,6 +12955,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -13910,6 +14018,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -14959,6 +15079,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -16010,6 +16142,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -17056,6 +17200,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -18101,6 +18257,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -19152,6 +19320,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -20197,6 +20377,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -21248,6 +21440,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -22293,6 +22497,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -23344,6 +23560,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -24393,6 +24621,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -25444,6 +25684,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -26494,6 +26746,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -27543,6 +27807,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
@@ -31615,6 +31891,18 @@ export interface operations {
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
+                                /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
                                  */
@@ -32642,6 +32930,18 @@ export interface operations {
                                 caretakers_count: number;
                                 /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
+                                /**
+                                 * @description M6-U01 (QA #978 e): THIS child's 12-week progress (from their own start —
+                                 *     contract, birth or an upgrade purchase, whichever is later); null for a free /
+                                 *     unborn pet or a parent's view. The app shows »Teden N od 12« from it.
+                                 */
+                                challenge_progress: {
+                                    started_at: string;
+                                    days_elapsed: number;
+                                    week: number;
+                                    weeks_total: number;
+                                    completed: boolean;
+                                } | null;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                                  *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
