@@ -5,51 +5,59 @@
     "en": "Basil",
     "sl": "Bazilika",
     "de": "Basilikum",
-    "pt": "Manjericão"
+    "pt": "Manjericão",
+    "fr": "Basilic"
   },
   "question": {
     "en": "Can cats eat basil?",
     "sl": "Ali lahko mačke jedo baziliko?",
     "de": "Dürfen Katzen Basilikum fressen?",
-    "pt": "Os gatos podem comer manjericão?"
+    "pt": "Os gatos podem comer manjericão?",
+    "fr": "Les chats peuvent-ils manger du basilic ?"
   },
   "url_slug": {
     "en": "basil",
     "sl": "bazilika",
     "de": "basilikum",
-    "pt": "manjericao"
+    "pt": "manjericao",
+    "fr": "basilic"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small nibble of plain basil now and then is fine. The ASPCA lists basil, including sweet and Thai basil, as non-toxic to cats. Cats don't need it, though, and any plant may cause vomiting or an upset stomach.",
     "sl": "Da, majhen grižljaj navadne bazilike je občasno v redu. ASPCA baziliko, tudi sladko in tajsko, navaja kot nestrupeno za mačke. Mačke je sicer ne potrebujejo, vsaka rastlina pa lahko povzroči bruhanje ali prebavne težave.",
     "de": "Ja, ab und zu ein kleines Stück reines Basilikum ist in Ordnung. Die ASPCA stuft Basilikum, auch Süßes Basilikum und Thai-Basilikum, als ungiftig für Katzen ein. Notwendig ist es für Katzen aber nicht, und wie jede Pflanze kann es Erbrechen oder Magenbeschwerden auslösen.",
-    "pt": "Sim, um pequeno pedaço de manjericão simples, de vez em quando, não faz mal. A ASPCA inclui o manjericão, nomeadamente o manjericão-doce e o manjericão-tailandês, entre as plantas não tóxicas para os gatos. Mesmo assim, os gatos não precisam dele, e qualquer planta pode causar vómitos ou mal-estar no estômago."
+    "pt": "Sim, um pequeno pedaço de manjericão simples, de vez em quando, não faz mal. A ASPCA inclui o manjericão, nomeadamente o manjericão-doce e o manjericão-tailandês, entre as plantas não tóxicas para os gatos. Mesmo assim, os gatos não precisam dele, e qualquer planta pode causar vómitos ou mal-estar no estômago.",
+    "fr": "Oui, une petite bouchée de basilic nature de temps en temps ne pose pas de problème. L’ASPCA classe le basilic, y compris le basilic doux et le basilic thaï, parmi les plantes non toxiques pour les chats. Les chats n’en ont toutefois pas besoin, et n’importe quelle plante peut provoquer des vomissements ou des maux d’estomac."
   },
   "why": {
     "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
     "sl": "ASPCA baziliko (Ocimum basilicum, imenovano tudi sladka in tajska bazilika) navaja kot nestrupeno za mačke. Cats Protection pojasnjuje, da lahko tudi nestrupene rastline ob zaužitju povzročijo prebavne težave, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega, občasen priboljšek pa je v redu.",
     "de": "Die ASPCA stuft Basilikum (Ocimum basilicum, auch Süßes Basilikum und Thai-Basilikum genannt) als ungiftig für Katzen ein. Laut Cats Protection können selbst ungiftige Pflanzen Magenbeschwerden verursachen, wenn eine Katze sie frisst, und nach Angaben der ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenbeschwerden auslösen. PDSA betont, dass Katzen außer vollwertigem Futter nichts brauchen; ein gelegentliches Leckerli ist aber in Ordnung.",
-    "pt": "A ASPCA inclui o manjericão (Ocimum basilicum, também chamado manjericão-doce e manjericão-tailandês) entre as plantas não tóxicas para os gatos. A Cats Protection explica que mesmo as plantas não tóxicas podem causar mal-estar no estômago se forem comidas, e a ASPCA refere que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. A PDSA diz que os gatos não precisam de mais nada além de uma alimentação completa, embora uma guloseima ocasional não faça mal."
+    "pt": "A ASPCA inclui o manjericão (Ocimum basilicum, também chamado manjericão-doce e manjericão-tailandês) entre as plantas não tóxicas para os gatos. A Cats Protection explica que mesmo as plantas não tóxicas podem causar mal-estar no estômago se forem comidas, e a ASPCA refere que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. A PDSA diz que os gatos não precisam de mais nada além de uma alimentação completa, embora uma guloseima ocasional não faça mal.",
+    "fr": "L’ASPCA classe le basilic (Ocimum basilicum, aussi appelé basilic doux et basilic thaï) parmi les plantes non toxiques pour les chats. Cats Protection explique que même une plante non toxique peut malgré tout causer des maux de ventre si le chat la mange, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Selon la PDSA, les chats n’ont besoin de rien d’autre qu’une alimentation complète, même si une friandise de temps en temps ne pose pas de problème."
   },
   "signs": null,
   "what_to_do": {
     "en": "Basil is non-toxic to cats, but like any plant it may cause vomiting or an upset stomach. Keep it to an occasional, bite-sized nibble.",
     "sl": "Bazilika za mačke ni strupena, vendar lahko kot vsaka rastlina povzroči bruhanje ali prebavne težave. Naj ostane pri občasnem majhnem grižljaju.",
     "de": "Basilikum ist für Katzen ungiftig, kann aber wie jede Pflanze Erbrechen oder Magenbeschwerden auslösen. Geben Sie nur gelegentlich ein mundgerechtes Stück.",
-    "pt": "O manjericão não é tóxico para os gatos, mas, como qualquer planta, pode causar vómitos ou mal-estar no estômago. Fica-te por uma dentada pequena, só de vez em quando."
+    "pt": "O manjericão não é tóxico para os gatos, mas, como qualquer planta, pode causar vómitos ou mal-estar no estômago. Fica-te por uma dentada pequena, só de vez em quando.",
+    "fr": "Le basilic n’est pas toxique pour les chats, mais comme toute plante, il peut provoquer des vomissements ou des maux d’estomac. Limitez-vous à une petite bouchée occasionnelle."
   },
   "serving": {
     "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
     "sl": "Le majhen grižljaj navadnega lista bazilike, kot občasen priboljšek.",
     "de": "Nur ein kleines, mundgerechtes Stück von einem reinen Basilikumblatt, als gelegentliches Leckerli.",
-    "pt": "Apenas um pedacinho de uma folha de manjericão simples, como guloseima ocasional."
+    "pt": "Apenas um pedacinho de uma folha de manjericão simples, como guloseima ocasional.",
+    "fr": "Seulement une petite bouchée d’une feuille de basilic nature, en friandise occasionnelle."
   },
   "child": {
     "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
     "sl": "Bazilika mucam ne škoduje, a je ne potrebujejo. Majhen grižljaj je čisto dovolj; najboljša je njihova mačja hrana.",
     "de": "Basilikum schadet Katzen nicht, aber sie brauchen es nicht. Ein winziges Stück reicht völlig. Am besten ist und bleibt ihr eigenes Katzenfutter.",
-    "pt": "O manjericão não faz mal aos gatos, mas eles não precisam dele. Um pedacinho minúsculo chega; o melhor é a comida própria de gatos."
+    "pt": "O manjericão não faz mal aos gatos, mas eles não precisam dele. Um pedacinho minúsculo chega; o melhor é a comida própria de gatos.",
+    "fr": "Le basilic n’est pas dangereux pour les chats, mais ils n’en ont pas besoin. Une toute petite bouchée suffit ; leur nourriture habituelle reste ce qu’il y a de mieux."
   },
   "faq": [],
   "sources": [
@@ -113,6 +121,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "73866281197941cec7ce472b7a93997b290c9ccf656c3aef539f8c0b7b7e6ab9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d315ff9632475967f821e113a80234683f1b63600685c29c5b97cc7f0758f3e8"
     }
   }
 }
