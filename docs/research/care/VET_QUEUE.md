@@ -150,7 +150,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [!] TN Tunisia — no usable source: no official register/rota/poison line found, WebFetch refused clinic sites (PROVENANCE_REQUIRED) or robots blocked, only aggregator leads (see `vets/TN.json` notes); retry only with pre-approved clinic URLs, 2026-11-10
 - [x] IN India — 49 entries, 29 × 24 h (several chain branches, e.g. Crown Vet, Zigly), no official duty rota, no animal poison line (AIIMS/CMC Vellore lines serve humans), check: 33 checked, 0 fixed, 0 removed, 2026-11-10 — thin: Goa, Surat, Nagpur, Lucknow, Bhopal, Patna, Guwahati, Bhubaneswar (see `vets/IN.json` notes)
 - [~] ID Indonesia — 40 entries, 9 × 24 h (Bali: Sunset Vet Kuta, BVC Sanur, BVC Tabanan, Kedonganan; Jakarta: Andista Tomang; Unair RSH Surabaya, Klinik Hewan Jogja, KHJ Semarang, Mam's Medan), no duty rota, no animal poison line found, check: 19 checked, 0 fixed, 4 downgraded to not 24 h (BVC Pererenan, Sehati Kembangan/Cipulir, K and P), 0 removed, 2026-11-10 — left: Nusa Dua, Lombok, Bandung, Batam, Bekasi/Depok/BSD, UGM/UB hospitals (blocked), Jakarta PDHB Cucu Sajuthi and Groovy Vet Care (no own site reachable), Bali directory-only clinics (see `vets/ID.json` notes)
-- [ ] MY Malaysia
+- [~] MY Malaysia — 56 entries, 3 × 24 h (Animal Medical Centre KL, STARLiGHT Ampang Jaya, Gill's George Town), no duty rota, no animal poison line (USM National Poison Centre serves humans), 36 entries name/phone only from MSAVA member list, check: 14 checked, 0 fixed, 0 removed, 2026-11-11 — left: Putrajaya, Negeri Sembilan, Pahang, most of Perak, thin Kedah/Kelantan/Terengganu, St Angel, Pets City JB, Langkawi AMC, UPM UVH (see `vets/MY.json` notes)
+- [ ] MY Malaysia — follow-up: Putrajaya, Negeri Sembilan, Pahang, Perak, Kedah, Kelantan, Terengganu, Langkawi, 24-h confirmation on own sites; skip what was unreachable twice
 - [ ] PH Philippines
 - [ ] VN Vietnam
 - [ ] CN China
