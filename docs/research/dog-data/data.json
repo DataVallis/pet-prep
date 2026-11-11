@@ -53158,6 +53158,542 @@
       }
     }
   },
+  "leonberger": {
+    "_note": "Added 2026-11-11 (M5-R10-103, unattended run — appended after the Border Terrier: AKC 2024 No. 99 'Leonberger', S174 full-list table fetched 2026-11-11 '98 Border Terrier', '99 Leonberger', '100 Beauceron'). Quotes as returned by the web-fetch tool on 2026-11-11 (FCI, PetMD and Woodgreen partly in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S780–S786 (reused S10, S11, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S782, 'LEONBERGER (145)', Group 2, Germany); heights, colours and appearance from FCI-Standard N° 145 (S783) and the AKC standard (S786). RKC Breeds A–Z page (S780): key facts, Breed Watch Category 2 (no point returned) and the health tests; the RKC breed standard page was refused at its site. PDSA (S781), Woodgreen (S784), PetMD (S785). Weight for the game: PDSA range (S781) — FCI and AKC give no weight. Lifespan: McMillan et al. 2024 median 10.0 y as tabled by Dogs Trust (S123) → senior 90 (runbook first choice, not provisional); RKC / PDSA 'Under 10 years' → shorter_lifespan. Names: RKC / AKC / FCI 'Leonberger'; Slovenian »leonberger« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 145, Group 2 Section 2 (Molossian type, Mountain type), Germany",
+      "unit": "—",
+      "source_id": "S782",
+      "quote": "LEONBERGER (145)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S782, as returned): 'Group : n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs', section 'Molossian type', subsection 'Mountain type', country of origin 'GERMANY', definitive acceptance 2/17/1955, official valid standard 1/4/1996 (English version 9/20/2002), not subject to a working trial. Germany is already in FCI_ORIGINS (DE)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S780",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S780) 'Large'; PDSA (S781) 'Size: Large' (its page sits under 'large-dogs'); Woodgreen (S784) 'Giant'. Weight up to 50 kg (PDSA) / 77 kg (Woodgreen) → the 'Giant' class of S10 for growth (Newfoundland / Bernese precedent: RKC 'Large', growth 18–24 months)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            72,
+            80
+          ],
+          "female": [
+            65,
+            75
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S783",
+        "quote": "Dogs 72 to 80 cm (recommended average 76 cm).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 145 (S783): 'Bitches 65 to 75 cm (recommended average 70 cm).' AKC standard (S786): 'An adult male is 28 to 31½ inches in height (30 inches preferred).' / 'An adult female is 25½ inches to 29½ inches, (27½ inches preferred).' — agreement; PDSA (S781) 'Average height: 65-80 cm'; PetMD (S785) 25–32 inches."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            30,
+            50
+          ],
+          "female": [
+            30,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S781",
+        "quote": "Average weight: 30-50 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S781), one range for both sexes (stored per sex) — the game range (adult_weight_kg). FCI-Standard N° 145 (S783) has no weight statement (height only); AKC (S786) 'Weight is in proportion to the overall size and structure.' (no number). Alternatives: Woodgreen (S784) 'Weight: 41-77 kg'; PetMD (S785) 'can weigh as much as 170 pounds' (≈ 77 kg)."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 30–50 kg straddles the bands; the upper part and Woodgreen's 41–77 kg sit in '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. Woodgreen (S784) 'Giant'; PetMD (S785) up to 170 pounds → 'Giant'. Woodgreen: 'This breed's joints keep developing well into their second year, so exercise should be gradually worked up in puppyhood.' PDSA (S781): 'shouldn't be over-exercised as puppies when their bones and joints are still developing.' — the game's puppy walk cap (10 min × age in months) already keeps puppy walks short. Same 18–24 months as the Newfoundland and the Bernese Mountain Dog."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Leonberger growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 10.0,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Leonberger 10.0 9.5 - 10.3 676 321",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 data as tabled by Dogs Trust (S123, re-read 2026-11-11; columns 'Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI* | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals'). Runbook first choice → senior boundary. The Nature PDF names the breed only in the Fig. 5 tree (S54/S771 not re-read for a value). Never shown as a statistic in the app."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S780",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S780). PDSA (S781) 'Average lifespan: Under 10 years' agrees; Woodgreen (S784) 'Life expectancy: 7-9 years'; PetMD (S785) 'only 7 years'. Basis of the consider tag shorter_lifespan (no number in the chip)."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S781",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S781). Same band as the RKC."
+      },
+      "woodgreen": {
+        "value": "7–9",
+        "unit": "years",
+        "source_id": "S784",
+        "quote": "Leonbergers average lifespan is shorter than smaller dogs, typically around seven to nine years.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S784), key fact 'Life expectancy: 7-9 years'. Alternative only (0.75 × 7 y lower bound = 63 months)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × McMillan 2024 median 10.0 y (Dogs Trust table S123) = 7.5 y = 90 months. Alternatives: Woodgreen lower bound 7 y (S784) → 63; PetMD 7 y (S785) → 63.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S780",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S780), runbook first choice → 120 min. PDSA (S781) 'Minimum exercise (per day): 2 hours' and 'As adult dogs, Leonbergers need over 2 hours of exercise daily' agree. Woodgreen (S784) 'Exercise needs: 60-90 minutes' / 'at least one hour' — alternative (60); PetMD (S785) 'at least once every day, such as a long walk or hike' (no number)."
+      },
+      "daily_text": {
+        "value": "over 2 hours a day as an adult; not over-exercised as a puppy",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "As adult dogs, Leonbergers need over 2 hours of exercise daily, but shouldn't be over-exercised as puppies when their bones and joints are still developing.",
+        "confidence": "high",
+        "notes": "PDSA (S781). Woodgreen (S784): exercise 'should be gradually worked up in puppyhood' (joints develop into the second year)."
+      },
+      "after_meals": {
+        "value": "no exercise right before or after mealtimes (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S785",
+        "quote": "Avoid exercise right before and after mealtimes.",
+        "confidence": "high",
+        "notes": "PetMD (S785), feeding precautions 'Because Leonbergers are susceptible to bloat and GDV, pet parents need to take precautions when feeding their dog:' — also 'Do not feed your Leonberger their entire daily allotment of food at once.' and 'Do not use elevated food bowls.' Woodgreen (S784): 'Leonbergers are also at high risk of bloat, a life-threatening emergency that needs immediate vet care.' → proposed_game_parameters.leonberger.meal_exercise_gap (built, M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, calm, good-natured; neither shy nor aggressive",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "Leonbergers are gentle giants – calm, good-natured dogs that get on well with everyone, making them excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S781). FCI (S783, fragment): 'He is neither shy nor aggressive.' AKC (S786): 'The gentle character and even temperament of the Leonberger is of utmost importance' and 'The Leonberger is confident, with a steady, playful demeanor.' RKC (S780) subtitle 'Gentle and affectionate German giant'."
+      },
+      "family": {
+        "value": "excellent family pets",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "Leonbergers are gentle giants – calm, good-natured dogs that get on well with everyone, making them excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S781). Woodgreen (S784): 'Leonbergers make excellent family dogs and many form close bonds with children in their household.' Basis of family_pet."
+      },
+      "children": {
+        "value": "marked friendliness towards children — supervise interactions (size)",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "distinguished by his marked friendliness towards children.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 145 (S783, fragment of the behaviour / temperament section). PetMD (S785): 'They are loyal to their family, gentle with children, patient, calm, and confident pups.' Caveat kept: Woodgreen (S784) 'Interactions between this breed and children should be closely supervised.' Basis of children (explicit statement, supervision caveat in notes); no small_children (no rating without caveat)."
+      },
+      "time_alone": {
+        "value": "strong attachment to the family — struggles when alone for long periods",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "Leonbergers form strong attachments to their family and struggle being on their own for long periods.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784); also 'Leonbergers are not well suited to small flats or homes that are often empty.' and 'Time-alone training from puppyhood helps this breed cope when left by themselves.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "generally good with other pets when properly socialised (Woodgreen rating moderate)",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "They are generally good with children and other pets when properly socialised.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S784); key fact 'Sociable with pets: Moderate'. PetMD (S785): 'they're also generally good with children and other pets.' No high-prey-drive statement → no chases_small_pets; the moderate rating → no other_pets chip."
+      },
+      "socialisation": {
+        "value": "early training and socialisation is essential (size)",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "Due to their size alone, early training and socialisation is essential.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784), temperament section; also 'Early and ongoing socialisation and habituation helps Leonbergers cope with new people, other dogs, and busy places.' PDSA (S781): 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.' A need (runbook M5-R17) → proposed_game_parameters.leonberger.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "patient, consistent, positive reward-based training",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "Training will require patience, but can be achieved using reward-based techniques.",
+        "confidence": "high",
+        "notes": "PDSA (S781). PetMD (S785): 'They respond well to training that's consistent, repetitive, and positive.' Woodgreen (S784): 'Leonbergers are generally easy to train with positive, reward-based methods.'; AKC (S786): 'The breed is willing to please and possesses a good capacity for learning.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement on weight gain found → no food_motivated_weight tag (PetMD S785 lists obesity among health issues — no tag rule)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S780, 'This breed can be affected by conformational concerns.' — the points of concern were not returned) → no welfare chip (Irish Wolfhound precedent, open for David). Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', elbow, eye (with gonioscopy) and hip schemes; Best Practice LPPN3, LPN1, LPN2 and LEMP DNA tests (S780).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern not returned",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Category 2",
+        "confidence": "medium",
+        "notes": "RKC breed page (S780): 'This breed can be affected by conformational concerns.' The Breed Watch points were not returned → no welfare chip; open for David."
+      },
+      "hips": {
+        "value": "hip dysplasia (and elbow dysplasia)",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S781) health list, hip dysplasia. Woodgreen (S784): '• Hip and elbow dysplasia – the joints do not form properly. This can lead to arthritis and discomfort.' PetMD (S785): 'Leonbergers are also prone to joint issues, including hip dysplasia.' RKC (S780) hip and elbow schemes. Register health key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "This is an emergency and requires urgent veterinary attention.",
+        "confidence": "high",
+        "notes": "PDSA (S781): 'often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.' and 'It's often seen in large, deep-chested breeds.' Woodgreen (S784) and PetMD (S785) agree. Register health key bloat_gdv; basis of the meal / exercise gap."
+      },
+      "heart": {
+        "value": "dilated cardiomyopathy (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "• Dilated cardiomyopathy – a heart condition that weakens the heart muscle. Regular cardiac checks usually pick this up.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784) health list. PetMD (S785): 'Dilated cardiomyopathy is another common cause of death in Leonbergers.' Register health key heart_muscle_disease."
+      },
+      "polyneuropathy": {
+        "value": "Leonberger polyneuropathy — an inherited nerve disease; DNA tests exist",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "• Leonberger polyneuropathy – an inherited condition affecting the nerves and muscles. It can cause weakness or trouble walking.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784) health list. RKC (S780) Best Practice DNA tests 'Leonberger polyneuropathy (LPN1)', 'Leonberger polyneuropathy (LPN2)', 'Laryngeal paralysis and polyneuropathy (LPPN3)'. Register health key polyneuropathy."
+      },
+      "cancer": {
+        "value": "certain cancers, including bone cancer (osteosarcoma) and hemangiosarcoma",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "• Cancer, including bone cancer – giant breeds have a higher risk of certain cancers than smaller dogs.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784) health list. PetMD (S785): 'These dogs are susceptible to osteosarcoma (bone cancer) and hemangiosarcoma (a cancer that develops in the blood vessels).' Register health key certain_cancers."
+      },
+      "cataracts": {
+        "value": "cataracts in older dogs",
+        "unit": "—",
+        "source_id": "S785",
+        "quote": "Older Leonbergers can develop cataracts, a condition where the eye lens becomes cloudy and hinders vision.",
+        "confidence": "medium",
+        "notes": "PetMD (S785). RKC (S780) eye scheme with gonioscopy. Research only (no register key)."
+      },
+      "lemp": {
+        "value": "leukoencephalomyelopathy (LEMP) — DNA test",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Leukoencephalomyelopathy (LEMP)",
+        "confidence": "medium",
+        "notes": "RKC (S780) Best Practice test name only. Research only (no register key) — breeder checklist dna_lemp."
+      },
+      "shorter_lifespan": {
+        "value": "shorter than average lifespan",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S780), PDSA (S781) 'Under 10 years'. Basis of the consider tag shorter_lifespan (no number in the chip)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-11; 79 ranks) does not list 'Leonberger'. Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "willing to please, good capacity for learning; positive, consistent training",
+        "unit": "—",
+        "source_id": "S786",
+        "quote": "The breed is willing to please and possesses a good capacity for learning.",
+        "confidence": "medium",
+        "notes": "AKC standard (S786). PetMD (S785) 'highly trainable with experienced pet parents or professional trainers' (fragment)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.leonberger.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "a large, strong, muscular yet elegant dog",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "According to his original purpose, the Leonberger is a large, strong, muscular yet elegant dog.",
+        "confidence": "high",
+        "notes": "FCI (S783); 'Males, in particular, are powerful and strong.' (fragment). PetMD (S785): males with 'a lion mane-like scruff around their neck', females more slender (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "lion_yellow",
+          "red",
+          "reddish_brown",
+          "sandy"
+        ],
+        "unit": "list",
+        "source_id": "S783",
+        "quote": "Lion yellow, red, reddish brown, also sandy (pale yellow, cream coloured) and all combinations in between",
+        "confidence": "high",
+        "notes": "FCI (S783, fragment): '… always with a black mask.'; 'Black hair tips are permitted; however, black must not determine the dog's basic colour.' (fragment); disqualifying fault 'Complete lack of mask.' AKC (S786): 'Coat colors are lion-yellow, golden to red and red-brown, sand colored (cream, pale yellow)' / 'and all combinations thereof, always with a black mask.'; 'A small, unobtrusive stripe or white patch on the chest and some white hairs on toes is tolerated.'; disqualification 'Any coat color other than those listed.' Never black as the basic colour, never without a mask, never merle or parti-colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Lion yellow with a black mask first with the highest weight (the portrait default — the first colour of the FCI list, S783), then red, reddish brown, sandy."
+      },
+      "coat": {
+        "value": "medium soft to coarse, profusely long, close-fitting double coat with a mane, feathered front legs and breeches",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "Medium soft to coarse, profusely long, close fitting, never parted",
+        "confidence": "high",
+        "notes": "FCI (S783, fragment); 'distinct feathering on front legs and ample breeches on hind legs.' AKC (S786): 'Leonbergers have a medium to long, water resistant, double coat on the body'. RKC key fact 'Coat length: Medium' (S780)."
+      },
+      "head": {
+        "value": "deeper than broad, elongated; moderate stop; rather long muzzle with a slightly arched nasal bridge; black nose",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "On the whole deeper than broad and elongated rather than stocky.",
+        "confidence": "high",
+        "notes": "FCI (S783): stop 'Clearly recognisable but moderately defined.'; nose 'Black.'; muzzle 'Rather long, never running to a point; nasal bridge of even breadth, never dipped, rather slightly arched (roman nose).' Not a short-faced breed."
+      },
+      "eyes": {
+        "value": "light brown to dark brown, medium size, oval",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "Light brown to as dark brown as possible, medium size, oval, neither deep set, nor protruding",
+        "confidence": "high",
+        "notes": "FCI (S783, fragment). AKC (S786): 'Dark brown is preferred over light brown.'"
+      },
+      "ears": {
+        "value": "pendant ears of medium size, set high, hanging close to the head",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "Set on high and not far back, pendant, of medium size, hanging close to the head, fleshy.",
+        "confidence": "high",
+        "notes": "FCI (S783). AKC (S786): 'They are of medium size, triangular, fleshy, hanging flat and close to the head.'"
+      },
+      "tail": {
+        "value": "very well furnished, hanging straight down when standing, only slightly curved in movement",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "Very well furnished; while standing, it hangs down straight; also in movement it is only slightly curved",
+        "confidence": "high",
+        "notes": "FCI (S783, fragment). AKC (S786): 'In movement, tail is carried no higher than the level of the back, with a curve up at the end permitted.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S780), PDSA (S781), Woodgreen (S784) and PetMD (S785). RKC key facts reached on 2026-11-11.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S780) → large."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S780) → 120 min. Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). Basis of large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S780) — one number (1); Woodgreen 'two to three times a week' (suitability.woodgreen_grooming) is a range → its upper bound 3 wins (runbook »Dog grooming«: the lower single number goes to alternatives)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S780)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). Woodgreen (S784) 'Shedding: High' agrees. Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). Basis of shorter_lifespan."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S780). No apartment chip."
+      },
+      "pdsa_grooming": {
+        "value": "grooming a couple of times a week",
+        "unit": "—",
+        "source_id": "S781",
+        "quote": "They will need grooming a couple of times a week to remove any dead hair and keep their coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S781) — 'a couple' (2) → alternative to the brushing goal. Basis of frequent_grooming."
+      },
+      "woodgreen_grooming": {
+        "value": "brushing two to three times a week",
+        "unit": "—",
+        "source_id": "S784",
+        "quote": "Brushing two to three times a week helps manage loose fur and prevent matting.",
+        "confidence": "high",
+        "notes": "Woodgreen (S784); key fact 'Grooming needs: High'. Range → upper bound 3 (runbook »Dog grooming«). Basis of the brushing goal 3× a week (M5-R13) and of frequent_grooming."
+      },
+      "petmd_grooming": {
+        "value": "brushed every day",
+        "unit": "—",
+        "source_id": "S785",
+        "quote": "Leonbergers should be brushed every day—without this rigorous grooming, they are prone to matted fur",
+        "confidence": "medium",
+        "notes": "PetMD (S785, US). Alternative (7) — the UK sources (RKC weekly, PDSA a couple of times, Woodgreen two to three times) give fewer; open for David."
+      },
+      "petmd_bathing": {
+        "value": "bath every two to four weeks",
+        "unit": "—",
+        "source_id": "S785",
+        "quote": "Typically, they should be bathed every two to four weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S785). → bath reminder every 2 weeks (range → the lower bound, runbook »Breed care tasks«, M5-R18). PDSA / RKC / Woodgreen give no bathing frequency."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two to three weeks",
+        "unit": "—",
+        "source_id": "S785",
+        "quote": "(such as Epi-Otic or TrizULTRA) every two to three weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S785, fragment; the sentence starts 'Ear cleaning with a veterinarian-approved product that contains a drying agent should be used'; 'Routine ear cleaning is important for this breed because of their propensity for allergies and their floppy ears.'). → ear-cleaning task every 2 weeks (range → the lower bound, M5-R20)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -79539,6 +80075,323 @@
         "confidence": "high",
         "notes": "FCI-Standard N° 10 (S768) + AKC standard (S776, dark muzzle). Four standard colours; grizzle and tan first with the highest unsourced weight → portrait default.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grizzle and tan (FCI S768) is the portrait default; natural tail; only the four standard colours"
+      }
+    },
+    "leonberger": {
+      "_note": "Unattended run M5-R10-103 (2026-11-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key, no new register health key; four new breeder-checklist test keys (dna_lpn1, dna_lpn2, dna_lppn3, dna_lemp). Sourced needs built from day one: brushing 3× a week (Woodgreen S784 'two to three times a week' → upper bound; RKC 'Once a week', PDSA 'a couple of times', PetMD 'every day' as alternatives — open for David, M5-R13); puppy socialisation (Woodgreen S784 quote, M5-R17); the 'wait with the walk' digestion warning (PetMD S785 quote, M5-R16); ear cleaning every 2 weeks and a bath reminder every 2 weeks (PetMD S785 ranges → lower bounds, M5-R18 / M5-R20). Nails / teeth / groomer have no number → no task. Exercise from RKC (S780, more than 2 hours; PDSA agrees). Senior 90 from the McMillan 2024 median 10.0 y (Dogs Trust S123).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S780",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S780). Rule: one number N ('more than N') → N = 120. PDSA (S781) '2 hours' / 'over 2 hours of exercise daily' agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S784",
+            "notes": "Woodgreen 'Exercise needs: 60-90 minutes' → range lower bound 60; RKC preferred."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S780 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S780",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months (a puppy walks at most 80 min at 8 months; the young dog 90–110 min at 9–11 months). PDSA (S781): not over-exercised as puppies; Woodgreen (S784): exercise gradually worked up in puppyhood.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10.0 y × 12) = 90 (S11 + McMillan et al. 2024 median 10.0 y via the Dogs Trust table S123 — runbook first choice).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_woodgreen_lower_bound_7_y": 63,
+          "senior_petmd_7_y": 63
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × McMillan 2024 median 10.0 y, S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. PDSA / PetMD / Woodgreen: patient, positive, reward-based training — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S785): three or four smaller meals until 5–6 months; never the whole daily food at once (general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S784",
+        "quote": "Brushing two to three times a week helps manage loose fur and prevent matting.",
+        "confidence": "high",
+        "notes": "leonberger.suitability.woodgreen_grooming. Woodgreen 'two to three times a week' is a range → its upper bound 3 (runbook »Dog grooming«: a range → B, also when another source gives a single lower number — RKC S780 'Once a week' (1) and PDSA S781 'a couple of times a week' (2) go to alternatives; German Shorthaired Pointer precedent, David 2026-10-12). PetMD (S785) 'every day' (7) — alternative, open for David. Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S780",
+            "quote": "Grooming: Once a week"
+          },
+          {
+            "value": 2,
+            "source_id": "S781",
+            "quote": "They will need grooming a couple of times a week to remove any dead hair and keep their coat in good condition."
+          },
+          {
+            "value": 7,
+            "source_id": "S785",
+            "quote": "Leonbergers should be brushed every day—without this rigorous grooming, they are prone to matted fur"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): razpon Woodgreen »two to three times a week« → zgornja meja 3 (RKC 1, PDSA 2, PetMD 7 v alternativah — za Davida); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S785",
+        "quote": "Avoid exercise right before and after mealtimes.",
+        "confidence": "high",
+        "notes": "PetMD (S785), leonberger.exercise.after_meals; GDV in the PDSA / Woodgreen / PetMD health lists (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S784",
+        "quote": "Due to their size alone, early training and socialisation is essential.",
+        "confidence": "high",
+        "notes": "leonberger.behaviour.socialisation (Woodgreen S784, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat Woodgreen S784)"
+      },
+      "ear_care": {
+        "value": "ears cleaned every two to three weeks → every 2 weeks",
+        "unit": "care routine (sourced need)",
+        "source_id": "S785",
+        "quote": "(such as Epi-Otic or TrizULTRA) every two to three weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S785), leonberger.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every 2 program weeks (range → the lower bound; BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to three weeks« → spodnja meja, 1× na 2 tedna"
+      },
+      "bathing": {
+        "value": "bath every two to four weeks → every 2 weeks",
+        "unit": "parent reminder (sourced need, never scored)",
+        "source_id": "S785",
+        "quote": "Typically, they should be bathed every two to four weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S785), leonberger.suitability.petmd_bathing. Built: the parent's bath reminder once every 2 program weeks (range → the lower bound; DOG_CARE_TASKS, M5-R18). No other source gives a bathing frequency.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every two to four weeks« → spodnja meja, 1× na 2 tedna"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-103); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.exercise.adult",
+              "leonberger.suitability.rkc_exercise"
+            ],
+            "quote": "S780 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S781"
+            ],
+            "refs": [
+              "leonberger.behaviour.family"
+            ],
+            "quote": "S781 '… making them excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S783"
+            ],
+            "refs": [
+              "leonberger.behaviour.children"
+            ],
+            "quote": "S783 'distinguished by his marked friendliness towards children.'",
+            "note": "Supervision caveat kept in notes (Woodgreen S784 'Interactions between this breed and children should be closely supervised.')."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.suitability.rkc_size_of_home",
+              "leonberger.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S780 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.lifespan.rkc",
+              "leonberger.suitability.rkc_lifespan"
+            ],
+            "quote": "S780 'Lifespan: Under 10 years'"
+          },
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.exercise.adult",
+              "leonberger.suitability.rkc_exercise"
+            ],
+            "quote": "S780 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.suitability.rkc_shedding"
+            ],
+            "quote": "S780 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S781",
+              "S784"
+            ],
+            "refs": [
+              "leonberger.suitability.pdsa_grooming",
+              "leonberger.suitability.woodgreen_grooming"
+            ],
+            "quote": "S781 'They will need grooming a couple of times a week …'; S784 'Brushing two to three times a week helps manage loose fur and prevent matting.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S784"
+            ],
+            "refs": [
+              "leonberger.behaviour.time_alone"
+            ],
+            "quote": "S784 'Leonbergers form strong attachments to their family and struggle being on their own for long periods.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating without a caveat (Woodgreen S784 supervise interactions).",
+          "first_time_owner": "No statement on the pages read (PetMD: 'highly trainable with experienced pet parents or professional trainers' — not an experienced-owner warning).",
+          "experienced_owner": "No A/B 'needs an experienced owner' statement.",
+          "apartment": "RKC 'Large house' (S780); Woodgreen 'not well suited to small flats'.",
+          "other_pets": "Woodgreen 'Sociable with pets: Moderate' (S784) — a moderate rating, no chip.",
+          "often_alone": "Woodgreen struggles alone (S784) → needs_company.",
+          "chases_small_pets": "No high-prey-drive statement.",
+          "not_for_small_children": "No A/B advice against small children (only a supervision caveat).",
+          "drools": "No A/B drooling statement on the pages read.",
+          "heat_sensitive": "No A/B heat statement on the pages read.",
+          "welfare": "RKC Breed Watch Category 2 (S780) — the points of concern were not returned → no welfare chip (open for David)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, large_home; consider shorter_lifespan, long_daily_exercise, sheds, frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S780",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 (S780, points not returned); not a flat-faced breed — the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never shows a child alone with the dog (size — Woodgreen supervise, S784).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Leonberger, lion yellow with a black mask (default); a large, strong, muscular yet elegant dog; medium soft to coarse, long, close-fitting double coat with a mane, feathered front legs and breeches; head deeper than broad and elongated, moderate stop, rather long muzzle, black nose; light to dark brown oval eyes; medium pendant ears set high, close to the head; long, well-furnished tail hanging straight down; always a black mask; never black as the basic colour, never merle or parti-colour",
+        "unit": "—",
+        "source_id": "S783",
+        "quote": "Lion yellow, red, reddish brown, also sandy (pale yellow, cream coloured) and all combinations in between",
+        "confidence": "high",
+        "notes": "Colours of the FCI (S783) and AKC (S786) standards. Weights unsourced in prompts. Lion yellow with a black mask as the portrait default — the first colour of the FCI list (S783).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): lion yellow with a black mask is the portrait default; standard colours only (lion yellow / red / reddish brown / sandy, always with a black mask)"
       }
     }
   }

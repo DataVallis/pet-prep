@@ -3668,6 +3668,72 @@
         }
       ],
       "notes": "RKC breed page (dog-data S769, 2026-11-11): section 'Pre-breeding Health Screening' with the headings 'Good Practice schemes and tests' (= minimum, Dobermann precedent: SLEM DNA test) and 'Best Practice schemes and tests' (no test listed); 'We don't currently offer a breed-specific DNA testing package for this breed,'. PDSA (S770) 'There is currently DNA testing for this.' (SLEM). New test key dna_slem needs website words."
+    },
+    "leonberger": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S780",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S780",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S780",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S780",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S780",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_lppn3",
+          "level": "best_practice",
+          "name": "Laryngeal paralysis and polyneuropathy (LPPN3)",
+          "source_id": "S780",
+          "quote": "Laryngeal paralysis and polyneuropathy (LPPN3)"
+        },
+        {
+          "key": "dna_lpn1",
+          "level": "best_practice",
+          "name": "Leonberger polyneuropathy (LPN1)",
+          "source_id": "S780",
+          "quote": "Leonberger polyneuropathy (LPN1)"
+        },
+        {
+          "key": "dna_lpn2",
+          "level": "best_practice",
+          "name": "Leonberger polyneuropathy (LPN2)",
+          "source_id": "S780",
+          "quote": "Leonberger polyneuropathy (LPN2)"
+        },
+        {
+          "key": "dna_lemp",
+          "level": "best_practice",
+          "name": "Leukoencephalomyelopathy (LEMP)",
+          "source_id": "S780",
+          "quote": "Leukoencephalomyelopathy (LEMP)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S780, 2026-11-11): genetic diversity, elbow, eye (with gonioscopy) and hip schemes under the minimum recommendation; LPPN3, LPN1, LPN2 and LEMP DNA tests under 'Best Practice'. Four new test keys (dna_lppn3, dna_lpn1, dna_lpn2, dna_lemp — LEMP is not the Rottweiler's LEMP-2 key dna_lemp2). Woodgreen (S784): regular cardiac checks pick up dilated cardiomyopathy (not an RKC test — not listed)."
     }
   }
 }
