@@ -91,7 +91,7 @@ Varnost: kdor ima veljavno kodo, lahko izve, ali račun z nekim e-naslovom obsta
 - Okolje (`.env.example`, `docs/PRODUCTION_ENV.md`):
   - obvezno: `LEMONSQUEEZY_WEBHOOK_SECRET`, `LEMONSQUEEZY_STORE_ID`, `LEMONSQUEEZY_GIFT_PRODUCT_ID`;
   - neobvezno: `LEMONSQUEEZY_GIFT_VARIANT_ID`, `LEMONSQUEEZY_API_BASE`, `LEMONSQUEEZY_API_KEY` (samo za obnovo po sesutju), `LEMONSQUEEZY_ACCEPT_TEST_MODE` (privzeto `false`).
-  - Spletna stran: `NEXT_PUBLIC_FEATURE_GIFT`, `NEXT_PUBLIC_LS_GIFT_URL`, `NEXT_PUBLIC_API_BASE` (privzeto `https://api.petprep.si`).
+  - Spletna stran: `NEXT_PUBLIC_FEATURE_GIFT`, `NEXT_PUBLIC_LS_GIFT_URL`, `NEXT_PUBLIC_PETPREP_API_URL` (privzeto `https://api.petprep.si`).
 - Testi (najmanj; popoln seznam v `CONTRACT.md` §9):
   - veljavna koda + račun → en kredit; ponovitev → brez drugega kredita;
   - neznan račun → koda ostane in se ne aktivira;
@@ -154,7 +154,7 @@ Stran »partnerji« na petprep.si že obstaja; ta naloga jo razširi. Agent najp
 ### 5.2 Strežnik
 Nič od tega še ne obstaja (pregled kode 11. 11. 2026). Gradi se po obstoječih vzorcih:
 - `POST /api/partner-inquiries` (javno): nova imenovana omejitev `partner-inquiries` v `AppServiceProvider` (vzorec `register`: na IP na minuto in na uro, deluje tudi v testih). Telo je omejeno z `LimitRequestBody` (vzorec `app-errors`). Skrito polje (honeypot): izpolnjeno → 200 brez zapisa.
-- Tabela `partner_inquiries` (podjetje, kontaktna oseba, e-naslov, vrsta sodelovanja iz zaprtega seznama, sporočilo, `created_at`) in uvrstitev v `GameDataResetService` (`DELETE_ORDER`). Spletna stran pošlje obrazec neposredno na `api.petprep.si` (`NEXT_PUBLIC_API_BASE`, enako kot unovčitev bona).
+- Tabela `partner_inquiries` (podjetje, kontaktna oseba, e-naslov, vrsta sodelovanja iz zaprtega seznama, sporočilo, `created_at`) in uvrstitev v `GameDataResetService` (`DELETE_ORDER`). Spletna stran pošlje obrazec neposredno na `api.petprep.si` (`NEXT_PUBLIC_PETPREP_API_URL`, enako kot unovčitev bona).
 - Seznam v administraciji: samo branje, samo superadmin (vzorec `WishCreditResource`; vrata `User::canAccessPanel`).
 - Opozorilo v Discord: nov primer `AdminAlertKind` (pot v administracijo), poslan iz čakalne vrste (`DiscordWebhook::send` ne sme teči v transakciji). Besedilo brez osebnih podatkov: samo »novo povpraševanje, vrsta: …« in povezava.
 - Povpraševanja se izbrišejo po 12 mesecih *(Claude)*: dnevni ukaz v `routes/console.php`.
