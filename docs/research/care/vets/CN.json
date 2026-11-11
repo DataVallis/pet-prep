@@ -1,0 +1,18 @@
+{
+  "country": "CN",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "Nanjing Agricultural University Veterinary Teaching Hospital",
+      "url": "https://dwyy.njau.edu.cn/jyzn/fwsj.htm",
+      "note": "Opened (also /info/1020/1201.htm, /English_ry.htm, /tszk/jzyzzyx.htm): address, phone, service hours; pages disagree on 24 h emergency."
+    },
+    {
+      "name": "Huazhong Agricultural University Animal Hospital",
+      "url": "https://vth.hzau.edu.cn/",
+      "note": "Opened: address, phone, hours 8:30-20:30, no 24 h wording."
+    }
+  ],
+  "entries": [],
+  "notes": "Zero publishable entries from this run (no independent check run). WebFetch opened only 2 university teaching hospitals, neither confirmed 24 h: Nanjing Agricultural University (dwyy.njau.edu.cn, pages conflict: emergency 9:00-20:30 vs 24 h) and Huazhong Agricultural University Wuhan (vth.hzau.edu.cn, 8:30-20:30). Most mainland sites refused (provenance/robots/client error), no official register or animal poison line reachable. Retry only with pre-approved clinic URLs. Previous notes: Very limited run. WebFetch only opens URLs that were returned by a search, and most mainland sites are unreachable. PROVENANCE_REQUIRED (dropped): cau.edu.cn, cvma.org.cn, ruichong.com.cn, ruipetvet.com, www.cauvet.com (China Agricultural University animal hospital's own site; its official page cvm.cau.edu.cn only says 24 h care for hospitalised animals, no address/phone/hours). Client error (dropped): ananpet.com, shanghaivet.com, ruichen.com. robots disallowed (dropped): kcpet120.com, dwyxxy.neau.edu.cn, neau.edu.cn. ringpai.com opened but carried only the name. english.shanghai.gov.cn page opened but lists human rabies post-exposure clinics, not vets (not used). No MARA / China Veterinary Association directory or official animal poison line was reachable. Aggregator, blog and news pages (sohu, jianshu, zhihu, cnblogs, bendibao) were not opened and not used. Left: all 24 h small-animal hospitals in Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu, Hangzhou (Ruipai/Ruipeng/Ruichen chains, Zhihe Chengdu, Wujia Shanghai), CAU, SCAU, SICAU, NWAFU, ZJU teaching hospitals; needs a run with direct URL access."
+}
