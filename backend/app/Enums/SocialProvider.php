@@ -42,11 +42,31 @@ enum SocialProvider: string
      */
     public function audiences(): array
     {
-        $configured = match ($this) {
+        return self::cleanAudiences(match ($this) {
             self::Google => config('services.google.client_ids', []),
             self::Apple => config('services.apple.audiences', []),
-        };
+        });
+    }
 
+    /**
+     * Accepted `aud` claims of the WEBSITE sign-in (M6-S01b, gift redeem page):
+     * the Google "PetPrep website" client and the Apple Services ID. Never the
+     * app ids, and the app's /api/auth/social never accepts these. Empty → 503
+     * `provider_disabled` at POST /api/web/parent-session.
+     *
+     * @return list<string>
+     */
+    public function webAudiences(): array
+    {
+        return self::cleanAudiences(match ($this) {
+            self::Google => config('services.google.web_client_ids', []),
+            self::Apple => config('services.apple.web_audiences', []),
+        });
+    }
+
+    /** @return list<string> */
+    private static function cleanAudiences(mixed $configured): array
+    {
         return array_values(array_filter(
             is_array($configured) ? $configured : [],
             fn ($aud): bool => is_string($aud) && trim($aud) !== '',

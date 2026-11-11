@@ -3,7 +3,10 @@
 namespace App\Providers;
 
 use App\Models\GiftVoucher;
+use App\Models\User;
+use App\Services\Auth\WebParentSessionService;
 use App\Services\BreedCatalogService;
+use App\Services\FamilyService;
 use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\SystemHealth\ErrorRecorder;
@@ -15,6 +18,7 @@ use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\Events\Looping;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
@@ -64,6 +68,17 @@ class AppServiceProvider extends ServiceProvider
 
     /** M6-S01: attempts on ONE code per hour, from any IP. */
     public const GIFT_REDEEM_PER_CODE_PER_HOUR = 10;
+
+    /** M6-S01b: redeem attempts of ONE family (website sign-in token) per hour. */
+    public const GIFT_REDEEM_PER_FAMILY_PER_HOUR = 20;
+
+    /** M6-S01b: POST / DELETE /api/web/parent-session per IP (IPv6 /64). */
+    public const WEB_SESSION_PER_MINUTE = 10;
+
+    public const WEB_SESSION_PER_HOUR = 30;
+
+    /** M6-S01b: wrong passwords per account (any IP) per 15 min before the web sign-in locks (WebParentSessionService). */
+    public const WEB_SESSION_PASSWORD_FAILURES = 5;
 
     /**
      * Minimum password length for parent accounts (M2-10a).
@@ -258,8 +273,35 @@ class AppServiceProvider extends ServiceProvider
                     ->by('gift-redeem:code:'.hash('sha256', GiftVoucher::canonical($code)))
                     ->response($tooMany);
             }
+            // M6-S01b: per family — only for a website sign-in token whose user has a family
+            // (anything else gets 401 / 403 from RequireWebSession next anyway).
+            $user = $request->bearerToken() !== null ? Auth::guard('sanctum')->user() : null;
+            if ($user instanceof User && WebParentSessionService::isWebToken($user->currentAccessToken())) {
+                $family = app(FamilyService::class)->familyOf($user);
+                if ($family !== null) {
+                    $limits[] = Limit::perHour(self::GIFT_REDEEM_PER_FAMILY_PER_HOUR)
+                        ->by('gift-redeem:family:'.$family->id)
+                        ->response($tooMany);
+                }
+            }
 
             return $limits;
+        });
+
+        // Website sign-in on the gift redeem page (M6-S01b, CONTRACT_WEB_SIGNIN §1.5): both
+        // routes, 10 / min + 30 / h per IP (IPv6 /64). The per-account password lock lives in
+        // WebParentSessionService. Live in testing (like register).
+        RateLimiter::for('web-session', function (Request $request) {
+            $key = 'web-session:'.ClientIp::rateLimitKey($request->ip());
+            $tooMany = fn (Request $request, array $headers) => response()->json([
+                'error' => 'rate_limited',
+                'message' => 'Too many attempts. Please try again later.',
+            ], 429, $headers);
+
+            return [
+                Limit::perMinute(self::WEB_SESSION_PER_MINUTE)->by($key.':minute')->response($tooMany),
+                Limit::perHour(self::WEB_SESSION_PER_HOUR)->by($key.':hour')->response($tooMany),
+            ];
         });
 
         // Profile switching on one phone (M2-11): a parent switches a few times a

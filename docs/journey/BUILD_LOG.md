@@ -14,6 +14,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** prijava staršev je vrata do družinskih podatkov in do plačil; brez omejitve bi lahko nekdo neomejeno ugibal gesla.
 **Kako povedati:** 👩 »Račun je zaščiten pred ugibanjem gesla: po več napačnih poskusih se začasno zaklene.« 💼 »Varnostna osnova za prodajo prek spleta.« 🛠 skupen pristop z omejitvami spletne prijave (M6-S01b).
 
+## 2026-11-11 — Bon se unovči s prijavo, brez vpisovanja e-naslova *(strežnik pripravljen, izklopljeno do izida v trgovinah)*
+
+**Kaj:** David se je odločil (22.20), da stran za unovčitev ne sprašuje po e-naslovu. Starš se prijavi z istim računom kot v aplikaciji — Google, Apple ali e-naslov + geslo — in vnese kodo. Strežnik (M6-S01b) izda prijavo, ki velja **15 minut** in **samo za unovčitev**: za katero koli drugo funkcijo jo strežnik zavrne (test preveri vse poti API-ja). Prijava nikoli ne ustvari računa in ga ne poveže z drugim. Za Google in Apple sta ločena spletna ID-ja; prijava v aplikaciji se ne spremeni. Omejitve: 10 poskusov na minuto na naslov, po 5 napačnih geslih je spletna prijava računa za 15 minut zaklenjena, največ 20 unovčitev na družino na uro. 26 novih testov, prilagojeni vsi testi bona.
+**Zakaj je pomembno:** starši s prijavo Apple imajo skrit e-naslov in ga ne poznajo, aplikacija pa e-naslova ne prikaže — po prejšnji poti bona ne bi mogli unovčiti. Aplikacija ostane brez polja za kodo (pravila Apple).
+**Kako povedati:** 👩 »Bon unovčite na petprep.si: prijavite se tako kot v aplikaciji in vpišite kodo.« *(načrt — ko je stran objavljena)* · 🛠 »Kratkoživ žeton z eno samo pravico, varovalka na vseh drugih poteh, OIDC preusmeritev brez skript ponudnikov na strani.«
+
 ---
 
 ## 2026-11-11 — Prvi izdelki za prodajo prek spletne strani

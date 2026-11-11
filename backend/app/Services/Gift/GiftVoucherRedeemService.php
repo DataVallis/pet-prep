@@ -7,10 +7,8 @@ use App\Jobs\SendGiftVoucherAlert;
 use App\Models\Family;
 use App\Models\GiftVoucher;
 use App\Models\LemonSqueezyEvent;
-use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\ChallengeCreditService;
-use App\Services\FamilyService;
 use App\Services\LemonSqueezy\LemonSqueezyLicenseClient;
 use App\Services\LemonSqueezy\LemonSqueezyUpstreamException;
 use App\Services\LemonSqueezy\LicenseResponse;
@@ -22,22 +20,23 @@ use Illuminate\Support\Facades\Log;
  * POST /api/gift/redeem (M6-S01, CONTRACT §2.4): a website gift voucher (a Lemon
  * Squeezy license key) → one `web_gift` challenge credit for the parent's family.
  *
+ * The family comes from the website sign-in token (M6-S01b, RequireWebSession) —
+ * there is no e-mail lookup any more.
+ *
  * Order: switch → local row → LS validate (no side effect) → lazy row upsert +
- * refunded-order check → parent lookup by e-mail (only now: the code is proven
- * real — no e-mail enumeration) → claim (short transaction) → LS activate
+ * refunded-order check → claim (short transaction) → LS activate
  * (outside any transaction) → commit (voucher → family locks, credit) → push
  * after commit. Same code + same family → always 200 (`already` after the
  * first); one credit per voucher (UNIQUE challenge_credits.gift_voucher_id).
  *
  * Logs carry voucher / LS key / family ids and the outcome — never the code,
- * the e-mail or LS customer fields.
+ * the token or LS customer fields.
  */
 class GiftVoucherRedeemService
 {
     public function __construct(
         private readonly AppSettingsService $settings,
         private readonly LemonSqueezyLicenseClient $ls,
-        private readonly FamilyService $families,
         private readonly ChallengeCreditService $credits,
         private readonly GiftVoucherRows $rows,
     ) {}
@@ -50,7 +49,7 @@ class GiftVoucherRedeemService
             && (string) config('services.lemonsqueezy.gift_product_id') !== '';
     }
 
-    public function redeem(string $code, string $email): GiftRedeemResult
+    public function redeem(string $code, Family $family): GiftRedeemResult
     {
         // 2. Switch / configuration.
         if (! $this->available()) {
@@ -65,7 +64,7 @@ class GiftVoucherRedeemService
         // 3. Local lookup.
         $voucher = GiftVoucher::where('key_hash', GiftVoucher::hashOf($canonical))->first();
         if ($voucher !== null && $voucher->status !== GiftVoucher::STATUS_PURCHASED) {
-            return $this->settled($voucher, $email);
+            return $this->settled($voucher, $family);
         }
         if ($voucher !== null && $voucher->expires_at->lt(now())) {
             $this->rows->move($voucher, [GiftVoucher::STATUS_PURCHASED], GiftVoucher::STATUS_EXPIRED);
@@ -110,7 +109,7 @@ class GiftVoucherRedeemService
 
             return $voucher->status === GiftVoucher::STATUS_EXPIRED
                 ? $this->finish($voucher, GiftRedeemResult::EXPIRED)
-                : $this->settled($voucher, $email);
+                : $this->settled($voucher, $family);
         }
 
         // 5. Lazy row + a refund that arrived before any key row existed.
@@ -119,14 +118,10 @@ class GiftVoucherRedeemService
             $this->rows->move($voucher, [GiftVoucher::STATUS_PURCHASED, GiftVoucher::STATUS_EXPIRED], GiftVoucher::STATUS_REFUNDED);
         }
         if ($voucher->status !== GiftVoucher::STATUS_PURCHASED) {
-            return $this->settled($voucher, $email);
+            return $this->settled($voucher, $family);
         }
 
-        // 6. Parent lookup (the code is proven real now).
-        $family = $this->familyFor($email);
-        if ($family === null) {
-            return $this->finish($voucher, GiftRedeemResult::NO_ACCOUNT);
-        }
+        // 6. (M6-S01 e-mail lookup removed in M6-S01b: the family is the token's.)
 
         // 7. LS already shows the activation → recovery.
         if ($license->usedUp()) {
@@ -210,38 +205,27 @@ class GiftVoucherRedeemService
     }
 
     /** A voucher that is not `purchased` any more answers from its own state. */
-    private function settled(GiftVoucher $voucher, string $email): GiftRedeemResult
+    private function settled(GiftVoucher $voucher, Family $family): GiftRedeemResult
     {
         return match ($voucher->status) {
             GiftVoucher::STATUS_REFUNDED, GiftVoucher::STATUS_DISABLED => $this->finish($voucher, GiftRedeemResult::REFUNDED),
             GiftVoucher::STATUS_EXPIRED => $this->finish($voucher, GiftRedeemResult::EXPIRED),
-            GiftVoucher::STATUS_REDEEMED => $this->redeemedFor($voucher, $this->familyFor($email)),
+            GiftVoucher::STATUS_REDEEMED => $this->redeemedFor($voucher, $family),
             default => $voucher->expires_at->lt(now())
                 ? $this->finish($voucher, GiftRedeemResult::EXPIRED)
                 : GiftRedeemResult::error(GiftRedeemResult::UPSTREAM_ERROR),
         };
     }
 
-    private function redeemedFor(GiftVoucher $voucher, ?Family $family): GiftRedeemResult
+    private function redeemedFor(GiftVoucher $voucher, Family $family): GiftRedeemResult
     {
-        if ($family !== null && $voucher->family_id === $family->id) {
+        if ($voucher->family_id === $family->id) {
             Log::info('GiftRedeem: replay of a redeemed voucher', ['voucher_id' => $voucher->id, 'family_id' => $family->id]);
 
             return GiftRedeemResult::redeemed(already: true);
         }
 
         return $this->finish($voucher, GiftRedeemResult::ALREADY_REDEEMED);
-    }
-
-    /** The parent's family by account e-mail (`users.email`, case-insensitive), or null. */
-    private function familyFor(string $email): ?Family
-    {
-        $user = User::findByEmail($email);
-        if ($user === null || ! $user->isParent()) {
-            return null;
-        }
-
-        return $this->families->familyOf($user);
     }
 
     /** created_at of the order from the webhook ledger (m4), or null. */
@@ -373,7 +357,8 @@ class GiftVoucherRedeemService
                 return [GiftRedeemResult::error(GiftRedeemResult::EXPIRED), false];
             }
             if ($lockedFamily === null) {
-                return [GiftRedeemResult::error(GiftRedeemResult::NO_ACCOUNT), false];
+                // The token's family is gone (deleted between claim and commit) → sign in again.
+                return [GiftRedeemResult::error(GiftRedeemResult::UNAUTHENTICATED), false];
             }
 
             $locked->forceFill([

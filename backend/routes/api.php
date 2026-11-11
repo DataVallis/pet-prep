@@ -29,8 +29,10 @@ use App\Http\Controllers\PetNameController;
 use App\Http\Controllers\PetTimezoneController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Controllers\WebParentSessionController;
 use App\Http\Controllers\WishController;
 use App\Http\Middleware\LimitRequestBody;
+use App\Http\Middleware\RequireWebSession;
 use App\Http\Middleware\VerifyLemonSqueezyWebhook;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
@@ -61,10 +63,20 @@ Route::post('auth/social', [AuthController::class, 'social'])
 Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
     ->middleware('throttle:pin-login');
 
-// Website gift voucher redemption (M6-S01): public, called by petprep.si from the
-// browser (CORS framework default), rate limited per IP and per code.
+// M6-S01b: website sign-in of a parent on petprep.si's gift redeem page (password /
+// Google / Apple, existing parents only, never creates or links an account) → a
+// 15-minute token with the single ability `gift:redeem`. Per-IP throttle (10 / min,
+// 30 / h) + per-account password lockout in WebParentSessionService.
+Route::post('web/parent-session', [WebParentSessionController::class, 'store'])
+    ->middleware('throttle:web-session')->name('web.parent-session.store');
+Route::delete('web/parent-session', [WebParentSessionController::class, 'destroy'])
+    ->middleware('throttle:web-session')->name('web.parent-session.destroy');
+
+// Website gift voucher redemption (M6-S01 / S01b): called by petprep.si from the browser
+// (CORS framework default) with the website sign-in token ONLY (RequireWebSession — app
+// tokens get 401); rate limited per IP, per code and per family.
 Route::post('gift/redeem', [GiftVoucherController::class, 'redeem'])
-    ->middleware('throttle:gift-redeem');
+    ->middleware(['throttle:gift-redeem', RequireWebSession::class])->name('gift.redeem');
 
 // M6-S03: partner inquiry form of petprep.si/partners. Public; per-IP throttle (5 / hour);
 // 503 while the superadmin switch »Partner inquiries« is off.
@@ -83,7 +95,9 @@ Route::post('app-errors', [AppErrorController::class, 'store'])
 | Authenticated Endpoints
 |--------------------------------------------------------------------------
 */
-Route::middleware('auth:sanctum')->group(function () {
+// M6-S01b (W2): `ability:parent,child` — app tokens (parent, child, legacy ['*']) pass
+// unchanged; a website `gift:redeem` token never does.
+Route::middleware(['auth:sanctum', 'ability:parent,child'])->group(function () {
     Route::get('user', [AuthController::class, 'user']);
     Route::post('logout', [AuthController::class, 'logout']);
 
