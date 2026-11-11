@@ -14,7 +14,8 @@
     "cs": "Bazalka",
     "hr": "Bosiljak",
     "sv": "Basilika",
-    "da": "Basilikum"
+    "da": "Basilikum",
+    "fi": "Basilika"
   },
   "question": {
     "en": "Can dogs eat basil?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst bazalku?",
     "hr": "Smiju li psi jesti bosiljak?",
     "sv": "Får hundar äta basilika?",
-    "da": "Må hunde spise basilikum?"
+    "da": "Må hunde spise basilikum?",
+    "fi": "Saako koira syödä basilikaa?"
   },
   "url_slug": {
     "en": "basil",
@@ -44,7 +46,8 @@
     "cs": "bazalka",
     "hr": "bosiljak",
     "sv": "basilika",
-    "da": "basilikum"
+    "da": "basilikum",
+    "fi": "basilika"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, v malém množství. ASPCA řadí bazalku mezi rostliny netoxické pro psy. Je to jedna z bylinek, které můžete pěstovat na zahradě bezpečné pro psy a v malém množství přidávat do jejich jídla nebo pamlsků.",
     "hr": "Da, u malim količinama. ASPCA navodi bosiljak kao neotrovan za pse, a jedna je od začinskih biljaka koje možeš uzgajati u vrtu sigurnom za pse i u malim količinama dodavati psećim obrocima ili poslasticama.",
     "sv": "Ja, i små mängder. ASPCA anger basilika som ofarlig för hundar. Du kan odla den i en hundvänlig trädgård och tillsätta lite av den i hundens mat eller godbitar.",
-    "da": "Ja, i små mængder. ASPCA betragter basilikum som ugiftig for hunde. Du kan dyrke den i en hundevenlig have og tilsætte lidt af den til hundens mad eller godbidder."
+    "da": "Ja, i små mængder. ASPCA betragter basilikum som ugiftig for hunde. Du kan dyrke den i en hundevenlig have og tilsætte lidt af den til hundens mad eller godbidder.",
+    "fi": "Saa, pieninä määrinä. ASPCA luokittelee basilikan koirille myrkyttömäksi. Voit kasvattaa sitä koiraystävällisessä puutarhassa ja lisätä pieniä määriä koirasi ruokaan tai herkkuihin."
   },
   "why": {
     "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
@@ -75,7 +79,8 @@
     "cs": "Bazalka (Ocimum basilicum, též bazalka pravá nebo thajská) není pro psy toxická. Má antioxidační, antivirové a antimikrobiální vlastnosti. Stejně jako u jiných bylinek, které se přidávají do jídla nebo pamlsků, by množství mělo být malé.",
     "hr": "Bosiljak (Ocimum basilicum, poznat i kao slatki ili tajlandski bosiljak) neotrovan je za pse. Ima antioksidativna, antivirusna i antimikrobna svojstva. Kao i kod drugog začinskog bilja koje se dodaje obrocima ili umiješa u poslastice, količine neka budu male.",
     "sv": "Basilika (Ocimum basilicum, även kallad sötbasilika eller thaibasilika) är ofarlig för hundar. Den har antioxidativa, antivirala och antimikrobiella egenskaper. Precis som med andra örter som läggs i maten eller blandas i godbitar bör mängderna vara små.",
-    "da": "Basilikum (Ocimum basilicum, også kaldet sød basilikum eller thaibasilikum) er ugiftig for hunde. Den har antioxidative, antivirale og antimikrobielle egenskaber. Som med andre krydderurter man tilsætter maden eller blander i godbidder, bør mængderne være små."
+    "da": "Basilikum (Ocimum basilicum, også kaldet sød basilikum eller thaibasilikum) er ugiftig for hunde. Den har antioxidative, antivirale og antimikrobielle egenskaber. Som med andre krydderurter man tilsætter maden eller blander i godbidder, bør mængderne være små.",
+    "fi": "Basilika (Ocimum basilicum, myös ruokabasilika tai thaibasilika) ei ole koirille myrkyllistä. Sillä on antioksidanttisia, antiviraalisia ja antimikrobisia ominaisuuksia. Kuten muidenkin ruokaan lisättävien tai herkkuihin sekoitettavien yrttien kohdalla, määrien pitää olla pieniä."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Bazalka není pro psy toxická. Jen dbejte na to, aby množství, které přidáte do jídla nebo pamlsků, bylo malé.",
     "hr": "Bosiljak je neotrovan za pse. Samo pazi da količine koje dodaješ obrocima ili poslasticama budu male.",
     "sv": "Basilika är ofarlig för hundar. Ge bara små mängder när du tillsätter den i mat eller godbitar.",
-    "da": "Basilikum er ugiftig for hunde. Hold bare mængderne små når du tilsætter den til mad eller godbidder."
+    "da": "Basilikum er ugiftig for hunde. Hold bare mængderne små når du tilsætter den til mad eller godbidder.",
+    "fi": "Basilika ei ole koirille myrkyllistä. Pidä vain ruokaan tai herkkuihin lisäämäsi määrät pieninä."
   },
   "serving": {
     "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
@@ -106,7 +112,8 @@
     "cs": "Přidejte trochu psovi do jídla nebo ji zamíchejte do pamlsků, vždy jen v malém množství.",
     "hr": "Dodaj malo u pseći obrok ili ga u malim količinama umiješaj u poslastice.",
     "sv": "Tillsätt lite i hundens mat eller blanda i godbitar, bara i små mängder.",
-    "da": "Tilsæt en smule til hundens mad, eller bland lidt i godbidder. Kun i små mængder."
+    "da": "Tilsæt en smule til hundens mad, eller bland lidt i godbidder. Kun i små mængder.",
+    "fi": "Lisää hiukan koirasi ruokaan tai sekoita pieni määrä herkkuihin."
   },
   "child": {
     "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
@@ -121,7 +128,8 @@
     "cs": "Bazalka je bylinka, která psům neublíží. Dospělý jim může trochu přidat do jídla.",
     "hr": "Bosiljak je biljka koja psima ne šteti. Odrasla osoba može dodati malo u hranu za psa.",
     "sv": "Basilika är en ofarlig ört för hundar. En vuxen kan lägga lite i hundens mat.",
-    "da": "Basilikum er en krydderurt som hunde gerne må få lidt af. En voksen kan lægge lidt i hundens mad."
+    "da": "Basilikum er en krydderurt som hunde gerne må få lidt af. En voksen kan lægge lidt i hundens mad.",
+    "fi": "Basilika on koirille turvallinen yrtti. Aikuinen voi lisätä vähän koiran ruokaan."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Je bazalka na zahradě se psy bezpečná?",
         "hr": "Je li bosiljak siguran u vrtu u kojem borave psi?",
         "sv": "Går det bra att ha en basilikaplanta i trädgården när man har hund?",
-        "da": "Er basilikum i haven sikkert hvis man har hund?"
+        "da": "Er basilikum i haven sikkert hvis man har hund?",
+        "fi": "Onko basilikakasvi turvallinen puutarhassa, jossa on koiria?"
       },
       "a": {
         "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
@@ -153,7 +162,8 @@
         "cs": "Ano. Bazalka není pro psy toxická a patří mezi bylinky, které lze pěstovat na zahradě bezpečné pro psy.",
         "hr": "Da. Bosiljak je neotrovan za pse i jedna je od začinskih biljaka koje se mogu uzgajati u vrtu sigurnom za pse.",
         "sv": "Ja. Basilika är ofarlig för hundar och en av de örter som passar i en hundvänlig trädgård.",
-        "da": "Ja. Basilikum er ugiftig for hunde og en af de krydderurter man kan dyrke i en hundevenlig have."
+        "da": "Ja. Basilikum er ugiftig for hunde og en af de krydderurter man kan dyrke i en hundevenlig have.",
+        "fi": "Kyllä. Basilika ei ole koirille myrkyllistä, ja se kuuluu yrtteihin, joita voi kasvattaa koiraystävällisessä puutarhassa."
       }
     }
   ],
@@ -249,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "19e60756c142d1610d8944da62f39393713708b658eebddd02abddbc18819498"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "87e9400a81e4ad388d5fc804d6d65b5e79403c9358c4d1346d7da3fb474f55a9"
     }
   }
 }

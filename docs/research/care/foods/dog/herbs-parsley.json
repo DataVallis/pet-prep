@@ -14,7 +14,8 @@
     "cs": "Petržel",
     "hr": "Peršin",
     "sv": "Persilja",
-    "da": "Persille"
+    "da": "Persille",
+    "fi": "Persilja"
   },
   "question": {
     "en": "Can dogs eat parsley?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst petržel?",
     "hr": "Smiju li psi jesti peršin?",
     "sv": "Får hundar äta persilja?",
-    "da": "Må hunde spise persille?"
+    "da": "Må hunde spise persille?",
+    "fi": "Saako koira syödä persiljaa?"
   },
   "url_slug": {
     "en": "parsley",
@@ -44,7 +46,8 @@
     "cs": "petrzel",
     "hr": "persin",
     "sv": "persilja",
-    "da": "persille"
+    "da": "persille",
+    "fi": "persilja"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Jen troška kadeřavé petržele, a to jen občas. ASPCA řadí petržel mezi rostliny toxické pro psy, protože ve velkém množství může zvýšit citlivost kůže na sluneční záření. Nejbezpečnější je kadeřavá petržel; druh zvaný „spring parsley“ může být toxický a italská petržel může být toxická ve velkém množství.",
     "hr": "Samo malo kovrčavog peršina za posipanje, povremeno. ASPCA navodi peršin kao otrovan za pse jer veće količine mogu kožu učiniti osjetljivom na sunce. Kovrčavi peršin najsigurniji je izbor; „spring parsley“ (engleski naziv) može biti otrovan, a talijanski peršin može biti otrovan u velikim količinama.",
     "sv": "Bara en liten nypa krusbladig persilja, då och då. ASPCA anger persilja som giftig för hundar, eftersom stora mängder kan göra huden känslig för solljus. Krusbladig persilja är det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja kan vara giftig i stora mängder.",
-    "da": "Kun et lille drys kruspersille, og kun en sjælden gang. ASPCA betragter persille som giftig for hunde, fordi store mængder kan gøre huden følsom over for sollys. Kruspersille er det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille kan være giftig i store mængder."
+    "da": "Kun et lille drys kruspersille, og kun en sjælden gang. ASPCA betragter persille som giftig for hunde, fordi store mængder kan gøre huden følsom over for sollys. Kruspersille er det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille kan være giftig i store mængder.",
+    "fi": "Vain pieni ripaus kiharapersiljaa silloin tällöin. ASPCA luokittelee persiljan koirille myrkylliseksi, koska suuret määrät voivat tehdä ihon herkäksi auringonvalolle. Kiharapersilja on turvallisin vaihtoehto; ”spring parsley” -niminen persilja voi olla myrkyllinen, ja lehtipersilja voi olla myrkyllistä suurina määrinä."
   },
   "why": {
     "en": "Parsley contains furanocoumarins. In large amounts they can cause sensitivity to sunlight and skin inflammation like a sunburn, although large amounts are needed for this effect. Parsley is also a diuretic; Italian parsley can lead to dehydration in dogs with sensitive stomachs. The AKC says curly parsley can be offered in small amounts, while the ASPCA lists parsley as toxic to dogs, so we take the stricter view and rate it not recommended.",
@@ -75,7 +79,8 @@
     "cs": "Petržel obsahuje furanokumariny. Ve velkém množství mohou způsobit citlivost na sluneční záření a zánět kůže podobný spálenině od slunce, i když k tomu je potřeba velké množství. Petržel je také močopudná; italská petržel může u psů s citlivým žaludkem vést k dehydrataci. AKC uvádí, že kadeřavou petržel lze nabídnout v malém množství, zatímco ASPCA řadí petržel mezi rostliny toxické pro psy, proto se držíme přísnějšího pohledu a řadíme ji mezi nedoporučené.",
     "hr": "Peršin sadrži furanokumarine. U velikim količinama mogu izazvati osjetljivost na sunčevu svjetlost i upalu kože nalik opeklinama, iako je za taj učinak potrebna velika količina. Peršin je i diuretik; talijanski peršin može kod pasa s osjetljivim želucem dovesti do dehidracije. AKC navodi da se kovrčavi peršin može ponuditi u malim količinama, dok ASPCA peršin navodi kao otrovan za pse, pa se držimo strožeg stajališta i ocjenjujemo ga kao namirnicu koju ne preporučujemo.",
     "sv": "Persilja innehåller furanokumariner. I stora mängder kan de göra huden känslig för solljus och ge hudinflammation som liknar solbränna, men effekten kräver stora mängder. Persilja är också vätskedrivande, och slätbladig persilja kan leda till uttorkning hos hundar med känslig mage. AKC skriver att krusbladig persilja kan ges i små mängder, medan ASPCA anger persilja som giftig för hundar, så vi väljer den strängare bedömningen och rekommenderar den inte.",
-    "da": "Persille indeholder furanokumariner. I store mængder kan de give lysfølsomhed og hudbetændelse der ligner solskoldning, men der skal store mængder til. Persille er også vanddrivende, og glatbladet persille kan give væskemangel hos hunde med følsom mave. AKC skriver at kruspersille kan gives i små mængder, mens ASPCA betragter persille som giftig for hunde. Derfor lægger vi den strengeste vurdering til grund og anbefaler den ikke."
+    "da": "Persille indeholder furanokumariner. I store mængder kan de give lysfølsomhed og hudbetændelse der ligner solskoldning, men der skal store mængder til. Persille er også vanddrivende, og glatbladet persille kan give væskemangel hos hunde med følsom mave. AKC skriver at kruspersille kan gives i små mængder, mens ASPCA betragter persille som giftig for hunde. Derfor lægger vi den strengeste vurdering til grund og anbefaler den ikke.",
+    "fi": "Persiljassa on furanokumariineja. Suurina määrinä ne voivat aiheuttaa herkkyyttä auringonvalolle ja auringonpolttamaa muistuttavan ihotulehduksen, vaikka vaikutus vaatii suuria määriä. Persilja on myös virtsaneritystä lisäävä, ja lehtipersilja voi johtaa nestehukkaan koirilla, joilla on herkkä vatsa. AKC:n mukaan kiharapersiljaa voi tarjota pieniä määriä, mutta ASPCA luokittelee persiljan koirille myrkylliseksi, joten noudatamme tiukempaa linjaa ja luokitus on ”ei suositella”."
   },
   "signs": {
     "en": [
@@ -129,6 +134,10 @@
     "da": [
       "Følsomhed over for sollys",
       "Hudbetændelse (dermatitis) der ligner solskoldning"
+    ],
+    "fi": [
+      "Herkkyys auringonvalolle",
+      "Auringonpolttamaa muistuttava ihotulehdus (dermatiitti)"
     ]
   },
   "what_to_do": {
@@ -144,7 +153,8 @@
     "cs": "Pokud psovi petržel dáte, pozorně ho sledujte, jestli se neobjeví nějaké neobvyklé příznaky. Pokud se objeví nebo zhorší, ihned se obraťte na veterináře.",
     "hr": "Ako psu daješ peršin, pažljivo ga prati zbog mogućih neobičnih znakova. Ako se znakovi pojave ili pogoršaju, odmah se obrati veterinaru.",
     "sv": "Om du ger hunden persilja, håll noga koll på den och se efter ovanliga symtom. Om symtom uppstår eller blir värre ska du kontakta veterinären genast.",
-    "da": "Hvis du giver din hund persille, skal du holde nøje øje med, om den får usædvanlige symptomer. Opstår der symptomer, eller bliver de værre, skal du hurtigt kontakte din dyrlæge."
+    "da": "Hvis du giver din hund persille, skal du holde nøje øje med, om den får usædvanlige symptomer. Opstår der symptomer, eller bliver de værre, skal du hurtigt kontakte din dyrlæge.",
+    "fi": "Jos annat koirallesi persiljaa, seuraa sitä tarkasti epätavallisten oireiden varalta. Jos oireita ilmaantuu tai ne pahenevat, ota pian yhteyttä eläinlääkäriin."
   },
   "serving": {
     "en": "If at all, only a small sprinkle of curly parsley as a garnish, given occasionally. Never large amounts.",
@@ -159,7 +169,8 @@
     "cs": "Pokud vůbec, tak jen troška kadeřavé petržele jako ozdoba, a to jen občas. Velké množství nikdy.",
     "hr": "Ako već, onda samo malo kovrčavog peršina za posipanje, povremeno. Nikad velike količine.",
     "sv": "Om du alls ger det, bara en liten nypa krusbladig persilja som garnering, och bara då och då. Aldrig stora mängder.",
-    "da": "Hvis overhovedet, så kun et lille drys kruspersille som pynt, og kun en sjælden gang. Aldrig store mængder."
+    "da": "Hvis overhovedet, så kun et lille drys kruspersille som pynt, og kun en sjælden gang. Aldrig store mængder.",
+    "fi": "Jos ollenkaan, vain pieni ripaus kiharapersiljaa koristeeksi, satunnaisesti. Ei koskaan suuria määriä."
   },
   "child": {
     "en": "Parsley is not a dog snack. A grown-up decides if a dog gets a tiny sprinkle of curly parsley.",
@@ -174,7 +185,8 @@
     "cs": "Petržel není pamlsek pro psy. Dospělý rozhodne, jestli pes dostane malou trošku kadeřavé petržele.",
     "hr": "Peršin nije poslastica za pse. Odrasla osoba odlučuje hoće li pas dobiti sasvim malo kovrčavog peršina za posipanje.",
     "sv": "Persilja är inget hundgodis. En vuxen avgör om hunden får en liten nypa krusbladig persilja.",
-    "da": "Persille er ikke en snack til hunde. En voksen afgør, om hunden må få et lillebitte drys kruspersille."
+    "da": "Persille er ikke en snack til hunde. En voksen afgør, om hunden må få et lillebitte drys kruspersille.",
+    "fi": "Persilja ei ole koiran välipala. Aikuinen päättää, saako koira pienen ripauksen kiharapersiljaa."
   },
   "faq": [
     {
@@ -191,7 +203,8 @@
         "cs": "Liší se kadeřavá petržel od ostatních druhů petržele?",
         "hr": "Razlikuje li se kovrčavi peršin od drugih vrsta peršina?",
         "sv": "Skiljer sig krusbladig persilja från andra sorters persilja?",
-        "da": "Er kruspersille noget andet end andre slags persille?"
+        "da": "Er kruspersille noget andet end andre slags persille?",
+        "fi": "Onko kiharapersilja erilaista kuin muut persiljalajit?"
       },
       "a": {
         "en": "Yes. Curly parsley is generally considered the safest option. Spring parsley can be toxic, and Italian parsley acts as a diuretic and can be toxic in large quantities.",
@@ -206,7 +219,8 @@
         "cs": "Ano. Kadeřavá petržel se obecně považuje za nejbezpečnější. Druh zvaný „spring parsley“ může být toxický, italská petržel působí močopudně a ve velkém množství může být toxická.",
         "hr": "Da. Kovrčavi peršin općenito se smatra najsigurnijim izborom. „Spring parsley“ može biti otrovan, a talijanski peršin djeluje kao diuretik i u velikim količinama može biti otrovan.",
         "sv": "Ja. Krusbladig persilja anses vanligtvis vara det säkraste valet. En art som på engelska heter ”spring parsley” kan vara giftig, och slätbladig persilja är vätskedrivande och kan vara giftig i stora mängder.",
-        "da": "Ja. Kruspersille regnes generelt for det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille er vanddrivende og kan være giftig i store mængder."
+        "da": "Ja. Kruspersille regnes generelt for det sikreste valg. En art som på engelsk hedder »spring parsley« kan være giftig, og glatbladet persille er vanddrivende og kan være giftig i store mængder.",
+        "fi": "Kyllä. Kiharapersiljaa pidetään yleensä turvallisimpana vaihtoehtona. Englanniksi ”spring parsley” -nimellä kulkeva laji voi olla myrkyllinen, ja lehtipersilja lisää virtsaneritystä ja voi olla myrkyllistä suurina määrinä."
       }
     },
     {
@@ -223,7 +237,8 @@
         "cs": "Může petržel zvýšit citlivost psí kůže na slunce?",
         "hr": "Može li peršin psu učiniti kožu osjetljivom na sunce?",
         "sv": "Kan persilja göra hundens hud känslig för solen?",
-        "da": "Kan persille gøre en hunds hud følsom over for sollys?"
+        "da": "Kan persille gøre en hunds hud følsom over for sollys?",
+        "fi": "Voiko persilja tehdä koiran ihon herkäksi auringolle?"
       },
       "a": {
         "en": "In large amounts, yes. The furanocoumarins in parsley can cause skin inflammation like a sunburn.",
@@ -238,7 +253,8 @@
         "cs": "Ve velkém množství ano. Furanokumariny v petrželi mohou způsobit zánět kůže podobný spálenině od slunce.",
         "hr": "U velikim količinama može. Furanokumarini iz peršina mogu izazvati upalu kože nalik opeklinama.",
         "sv": "I stora mängder, ja. Furanokumarinerna i persilja kan ge hudinflammation som liknar solbränna.",
-        "da": "I store mængder, ja. Furanokumarinerne i persille kan give hudbetændelse der ligner solskoldning."
+        "da": "I store mængder, ja. Furanokumarinerne i persille kan give hudbetændelse der ligner solskoldning.",
+        "fi": "Suurina määrinä voi. Persiljan furanokumariinit voivat aiheuttaa auringonpolttamaa muistuttavan ihotulehduksen."
       }
     }
   ],
@@ -367,6 +383,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "87056b7c5b2b6250cbea86ec863860031370223e8b8093e4bf0c50078a41f7e5"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "afff8812c1041864f55f77ce5cee4dbb583ba93b3997fdd27594e7267fb7300d"
     }
   }
 }
