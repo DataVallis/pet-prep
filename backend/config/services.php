@@ -129,8 +129,12 @@ return [
         // M6-S01b: the "PetPrep website" OAuth client (gift redeem page sign-in on
         // petprep.si), comma-separated. Accepted ONLY by POST /api/web/parent-session —
         // never by /api/auth/social; the app ids above are never accepted there.
-        // Public identifier; empty → the website's Google button answers 503 provider_disabled.
-        'web_client_ids' => array_values(array_filter(array_map('trim', explode(',', (string) env('GOOGLE_WEB_SIGNIN_CLIENT_IDS', ''))))),
+        // Public identifier (default = PetPrep's website client, David 2026-11-11); an
+        // explicitly empty GOOGLE_WEB_SIGNIN_CLIENT_IDS= → the website's Google button answers 503 provider_disabled.
+        'web_client_ids' => array_values(array_filter(array_map('trim', explode(',', (string) env(
+            'GOOGLE_WEB_SIGNIN_CLIENT_IDS',
+            '1029107925972-6kanm5f1u2bha65ua73e4m09fbjn4cp7.apps.googleusercontent.com',
+        ))))),
         'jwks_url' => 'https://www.googleapis.com/oauth2/v3/certs',
     ],
 
@@ -139,10 +143,10 @@ return [
         // later, a Services ID for Android / web. Comma-separated. Empty → disabled.
         'audiences' => array_values(array_filter(array_map('trim', explode(',', (string) env('APPLE_AUDIENCES', 'com.datavallis.petprep'))))),
         // M6-S01b: the Apple Services ID of the website sign-in (gift redeem page,
-        // com.datavallis.petprep.web once registered), comma-separated. Accepted ONLY by
-        // POST /api/web/parent-session (never by /api/auth/social). Public identifier;
-        // empty → the website's Apple button answers 503 provider_disabled.
-        'web_audiences' => array_values(array_filter(array_map('trim', explode(',', (string) env('APPLE_WEB_SERVICES_IDS', ''))))),
+        // com.datavallis.petprep.web), comma-separated. Accepted ONLY by
+        // POST /api/web/parent-session (never by /api/auth/social). Public identifier (default =
+        // the registered Services ID, David 2026-11-11); explicitly empty → 503 provider_disabled.
+        'web_audiences' => array_values(array_filter(array_map('trim', explode(',', (string) env('APPLE_WEB_SERVICES_IDS', 'com.datavallis.petprep.web'))))),
         'jwks_url' => 'https://appleid.apple.com/auth/keys',
 
         // Token revocation when a parent deletes the account (M2-10c, App Store

@@ -11,6 +11,7 @@ use App\Models\UserSocialAccount;
 use App\Providers\AppServiceProvider;
 use App\Services\FamilyService;
 use App\Services\Gift\GiftVoucherRedeemService;
+use App\Support\DummyPasswordHash;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -46,8 +47,6 @@ class WebParentSessionService
     /** Password failures per account (any IP) in FAILURE_WINDOW_SECONDS → 429 (AppServiceProvider::WEB_SESSION_PASSWORD_FAILURES). */
     public const FAILURE_WINDOW_SECONDS = 900;
 
-    private static ?string $dummyHash = null;
-
     public function __construct(
         private readonly GiftVoucherRedeemService $gifts,
         private readonly SocialTokenVerifier $verifier,
@@ -67,11 +66,11 @@ class WebParentSessionService
         }
 
         // As AuthController::login: no hash / '' counts as wrong. An unknown e-mail still
-        // runs Hash::check (on a dummy hash) so all three failures take the same time.
+        // runs ONE Hash::check (on a constant precomputed hash) so all three failures cost the same.
         $user = User::findByEmail($email);
         $hash = $user?->getAuthPassword();
         $usable = $user !== null && is_string($hash) && $hash !== '';
-        $ok = Hash::check($password, $usable ? $hash : self::dummyHash()) && $usable;
+        $ok = Hash::check($password, $usable ? $hash : DummyPasswordHash::VALUE) && $usable;
 
         if (! $ok) {
             // Counted on every failure, unknown e-mails included (no enumeration). A success
@@ -178,6 +177,8 @@ class WebParentSessionService
 
         $expiresAt = CarbonImmutable::now()->addMinutes(self::TTL_MINUTES);
         $plain = DB::transaction(function () use ($user, $expiresAt): string {
+            // QA m4: parallel sign-ins of one user queue here, so the cap holds.
+            User::whereKey($user->id)->lockForUpdate()->first();
             $webTokens = $user->tokens()
                 ->where('name', self::TOKEN_NAME)
                 ->where('abilities', json_encode([TokenAbility::GiftRedeem->value]));
@@ -204,10 +205,5 @@ class WebParentSessionService
         }
 
         return is_int($exp) || is_float($exp) ? (int) $exp : now()->getTimestamp() + 3600;
-    }
-
-    private static function dummyHash(): string
-    {
-        return self::$dummyHash ??= Hash::make('petprep-web-session-timing-dummy');
     }
 }

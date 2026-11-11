@@ -5,6 +5,7 @@ use App\Models\Pet;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Auth\RsaJwt;
+use App\Support\DummyPasswordHash;
 use Illuminate\Broadcasting\BroadcastManager;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Client\Factory as HttpFactory;
@@ -186,6 +187,36 @@ describe('password', function () {
         wsPassword('legacy-kid@example.com', ip: '198.51.100.4')->assertStatus(403)->assertExactJson(['error' => 'not_parent', 'message' => 'Only a parent account can sign in here.']);
         wsPassword('loner@example.com', ip: '198.51.100.5')->assertStatus(403)->assertJsonPath('error', 'not_parent');
         expect(PersonalAccessToken::count())->toBe($before);
+    });
+
+    it('M1 (QA): an unknown e-mail and a password-less account cost exactly ONE Hash::check against the constant hash — never a Hash::make', function () {
+        wsParent('nopass@example.com', null);
+        Hash::spy();
+
+        wsPassword('nobody@example.com', ip: '198.51.100.6')->assertStatus(401);
+        wsPassword('nopass@example.com', ip: '198.51.100.7')->assertStatus(401);
+
+        Hash::shouldHaveReceived('check')->twice()->withArgs(fn ($plain, $hash) => $hash === DummyPasswordHash::VALUE);
+        Hash::shouldNotHaveReceived('make');
+        expect(DummyPasswordHash::VALUE)->toStartWith('$2y$12$')->and(password_get_info(DummyPasswordHash::VALUE)['algoName'])->toBe('bcrypt');
+    });
+
+    it('M1 (QA): a known account also costs exactly one Hash::check (its own hash)', function () {
+        $parent = wsParent();
+        Hash::spy();
+
+        wsPassword(password: 'Wrong-Horse-42', ip: '198.51.100.8')->assertStatus(401);
+
+        Hash::shouldHaveReceived('check')->once()->withArgs(fn ($plain, $hash) => $hash === $parent->getAuthPassword());
+        Hash::shouldNotHaveReceived('make');
+    });
+
+    it('M2 (QA): the website ids default to PetPrep\'s real ids (env unset) and never include the app ids', function () {
+        $services = require config_path('services.php');
+        expect($services['google']['web_client_ids'])->toBe(['1029107925972-6kanm5f1u2bha65ua73e4m09fbjn4cp7.apps.googleusercontent.com'])
+            ->and($services['apple']['web_audiences'])->toBe(['com.datavallis.petprep.web'])
+            ->and(array_intersect($services['google']['web_client_ids'], $services['google']['client_ids']))->toBe([])
+            ->and(array_intersect($services['apple']['web_audiences'], $services['apple']['audiences']))->toBe([]);
     });
 
     it('WS9b: a superadmin parent may use the password method (parity with /api/login)', function () {
