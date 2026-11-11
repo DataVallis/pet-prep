@@ -8,21 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
-## 2026-11-11 — Naučen ukaz ne pada več (izide z naslednjo posodobitvijo strežnika)
+## 2026-11-11 — Naučen ukaz ne pada več (pri uporabnikih od 11. 11. 2026)
 
 **Kaj:** David je opazil, da so ukazi njegovega psa vsako jutro padli s 100 % na 98 %. Vzrok je bilo pravilo »dan brez cele vaje = −2 % vsem ukazom« (tudi vaja, končana po 1. krogu, ne šteje kot dnevna vaja). Odločil je: **naučen ukaz (100 %, »naučeno«) ne pada, tudi če en dan ni vaje.** Ukazi, ki še niso naučeni, še vedno počasi pozabljajo (−2 % na dan brez vaje). 6 novih testov.
 **Zakaj je pomembno:** otrok, ki je ukaz naučil do konca, ne sme vsak dan videti, da je nekaj izgubil — to je delovalo kot napaka in kazen za uspeh.
 **Kako povedati:** 🧒 »Ko kuža ukaz zna, ga zna za vedno.« · 👩 »Kar se otrok enkrat do konca nauči s kužkom, ostane; vaja je potrebna za ukaze, ki jih še utrjuje.«
 
-## 2026-11-11 — »Mešanček + izziv« in opomnik staršu 7. dan (izide z naslednjo posodobitvijo)
+## 2026-11-11 — »Mešanček + izziv« in opomnik staršu 7. dan (pri uporabnikih od 11. 11. 2026)
 
 **Kaj:** v novi aplikaciji lahko starš 12-tedenski izziv izbere tudi z mešančkom ali domačo mačko že ob ustvarjanju (ista cena 49,99 €; ljubljenček ob rojstvu počaka na nakup); izbirnik vseeno priporoča »Začnite brezplačno, izziv lahko dodate kadarkoli.« Ko je otrok za brezplačnega ljubljenčka v prvih 7 dneh skrbel vsaj 5 dni, dobijo starši eno obvestilo (brez imena otroka, nikoli ponoči) in kartico »Maja že 7 dni skrbi za kužka Pika. Je čas za pravi preizkus?«, ki vodi naravnost do nadgradnje. Stare aplikacije delujejo kot prej.
 **Zakaj je pomembno:** opomnik pride takrat, ko otrok pokaže, da mu je mar — to je trenutek za ponudbo pravega preizkusa (načrt validacije §4.3). Koliko staršev se odzove, še ni izmerjeno.
 **Kako povedati:** 👩 »Ko otrok res skrbi, vas opomnimo — enkrat, brez pritiska.« · 🧒 (otrok ne vidi nič, nobenih cen) · 💼 »Ponudba ob pravem trenutku: po 5 od 7 dni skrbi, ne po koledarju.«
 
-## 2026-11-11 — Nadgradnja brezplačnega ljubljenčka v izziv je zgrajena (izide z naslednjo posodobitvijo)
+## 2026-11-11 — Nadgradnja brezplačnega ljubljenčka v izziv je zgrajena (pri uporabnikih od 11. 11. 2026)
 
-**Kaj:** starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, z gumbom »Začni 12-tedenski izziv z [ime]« nadgradi v 12-tedenski izziv z istim ljubljenčkom — 12 tednov, ocena in potrdilo štejejo od nakupa, starost ostane, dnevi prej so v zgodovini označeni »pred izzivom«; aplikacija pred nakupom strežniku pove, za katerega ljubljenčka kupuje, da se plačilo nikoli ne izgubi. *(Pri uporabnikih po naslednjem deployu in OTA.)*
+**Kaj:** starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, z gumbom »Začni 12-tedenski izziv z [ime]« nadgradi v 12-tedenski izziv z istim ljubljenčkom — 12 tednov, ocena in potrdilo štejejo od nakupa, starost ostane, dnevi prej so v zgodovini označeni »pred izzivom«; aplikacija pred nakupom strežniku pove, za katerega ljubljenčka kupuje, da se plačilo nikoli ne izgubi. *(Pri uporabnikih od 11. 11. 2026, deploy + OTA.)*
 **Zakaj je pomembno:** otrok se naveže na svojega ljubljenčka; za izziv ni več treba začeti znova z drugim (načrt validacije V2).
 **Kako povedati:** 👩 »Isti kuža ali muca, zdaj s 12-tedenskim programom in potrdilom.« · 🧒 »Izziv se je začel! Teden 1 od 12.« · 💼 »Pot od brezplačnega preizkusa do plačila brez novega začetka.«
 

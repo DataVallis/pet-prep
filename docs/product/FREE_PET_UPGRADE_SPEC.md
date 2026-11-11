@@ -3,7 +3,7 @@
 > **Odločitve:** U1–U6 in §3–§4 potrdil David 10. 11. 2026. Popravki istega dne po pregledu kode: Claudovi predlogi K1–K7 potrjeni, plus Davidove spremembe D1–D4 (§2).
 > **Tehnični del (§5) je preverjen v kodi** (`origin/main` 8f0f95de, 10. 11. 2026). Datoteke in vrstice so navedene, da jih inženir najde. Pred gradnjo jih preveri še enkrat, ker se koda vmes lahko premakne.
 > **Gradnja poteka v dveh PR-jih** (§8): PR 1 je nadgradnja obstoječega ljubljenčka, PR 2 je izziv z mešančkom ob ustvarjanju (U4) in opomnik 7. dan (U5).
-> **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). Uporabniki ga dobijo z naslednjim deployem strežnika in OTA; do takrat veljajo stara pravila. **PR 2 (M6-U02) je zgrajen 11. 11. 2026** — »mešanček + izziv« ob ustvarjanju (nove aplikacije) in opomnik 7. dan (§5.6, §5.7 »Kako je zgrajeno«); prav tako z naslednjim deployem + OTA.
+> **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). **Pri uporabnikih od 11. 11. 2026** (produkcijski deploy + OTA za iOS in Android); na napravi še ni preverjeno. **PR 2 (M6-U02) je zgrajen 11. 11. 2026** — »mešanček + izziv« ob ustvarjanju (nove aplikacije) in opomnik 7. dan (§5.6, §5.7 »Kako je zgrajeno«); prav tako pri uporabnikih od 11. 11. 2026, na napravi še ni preverjeno.
 > Del načrta validacije (`VALIDATION_PLAN.md` §4.3).
 
 ## 1. Zakaj
