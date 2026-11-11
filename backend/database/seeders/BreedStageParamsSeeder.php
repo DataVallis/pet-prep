@@ -1231,6 +1231,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_FLAT_COATED_RETRIEVER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-101)';
 
     /**
+     * M5-R10-102 Border Terrier (unattended run 2026-11-11, data.json proposed_game_parameters.border_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S769 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 128 (0.75 × McMillan 2024 median 14.2 y, S771 — not provisional),
+     * arrival 2 / 9 / 36 / 128, learning multiplier 1.2 (Coren rank 30, Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_BORDER_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-102)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1679,6 +1688,7 @@ class BreedStageParamsSeeder extends Seeder
         'lhasa_apso' => [7, 'S740', 'Grooming: Every day', 'high', false],
         'dogue_de_bordeaux' => [1, 'S756', 'Grooming: Once a week', 'high', false],
         'flat_coated_retriever' => [2, 'S763', 'A twice-weekly brushing routine is ideal to maintain their luxurious coat', 'high', false],
+        'border_terrier' => [2, 'S770', 'They have short, coarse wiry coats and so a brush a couple of times a week should help keep on top of dead hairs', 'high', false],
     ];
 
     /**
@@ -1732,6 +1742,7 @@ class BreedStageParamsSeeder extends Seeder
         'old_english_sheepdog' => ['S705', 'Remember to leave a gap after eating and before exercising.'],
         'dogue_de_bordeaux' => ['S757', 'Remember to leave a gap after eating and before exercising.'],
         'flat_coated_retriever' => ['S763', 'Avoiding elevated bowls and exercise right before or after eating will also help stave off the life-threatening condition.'],
+        'border_terrier' => ['S770', 'Remember to leave at a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1839,13 +1850,14 @@ class BreedStageParamsSeeder extends Seeder
         'lhasa_apso' => ['S741', 'Lhasa Apsos get along well with children and other pets in the household, given the right socialisation as puppies.'],
         'dogue_de_bordeaux' => ['S757', 'Given the right socialisation from a young age, Dogues should generally get along fine with other dogs.'],
         'flat_coated_retriever' => ['S763', 'They generally mesh well with kids and other furry friends, especially with proper introductions and socialization.'],
+        'border_terrier' => ['S770', "It's really important that Border Terrier puppies from a breeder get the right early socialisation"],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2665,6 +2677,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::LhasaApso => self::lhasaApsoProfile(),
             BreedType::DogueDeBordeaux => self::dogueDeBordeauxProfile(),
             BreedType::FlatCoatedRetriever => self::flatCoatedRetrieverProfile(),
+            BreedType::BorderTerrier => self::borderTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9742,6 +9755,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'flat_coated_retriever.lifespan.median_uk',
                 'quote' => 'Flat Coated Retriever 11.7 11.5 - 11.9 2148 784',
                 'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). RKC "Under 10 years" (S762) and PetMD 8–10 years (S763) are the basis of the shorter_lifespan chip only. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Border Terrier (M5-R10-102). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_BORDER_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the McMillan 2024 median (S771) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function borderTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BORDER_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S771', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.border_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [128, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 14.2 y (S771) = 10.65 y = 127.8 → 128 months. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 128],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.border_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S769', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.border_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S769) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S770) "a minimum of an hour" and Woodgreen (S773) "60-90 mins" agree.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.border_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[5.1, 7.1], [
+                'unit' => 'kg', 'source_id' => 'S768', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'border_terrier.adult_weight.fci',
+                'quote' => 'WEIGHT: Males: 5,9-7,1 kg; females 5,1-6,4 kg.',
+                'notes' => 'FCI-Standard N° 10 (S768): males 5.9–7.1 kg, females 5.1–6.4 kg → 5.1–7.1 kg for both sexes. AKC (S776) 13–15½ lb / 11½–14 lb and PDSA (S770) 5–7 kg agree.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'border_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Small", S769; FCI 5.1–7.1 kg, S768).',
+            ]],
+            'coren_rank' => [30, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'border_terrier.trainability.coren_rank',
+                'quote' => '| 30 | Border Terrier | Above Average Working Dogs',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, checked 2026-11-11), rank 30 shared with the Briard, tier "Above Average Working Dogs" (ranks 27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.border_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 30 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [14.2, [
+                'unit' => 'years', 'source_id' => 'S771', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'border_terrier.lifespan.median_uk',
+                'quote' => 'Border Terrier (x̃ = 14.2, HR 0.5, 0.5–0.6)',
+                'notes' => 'McMillan et al. 2024 median (S771, results text). RKC "Over 12 years" (S769), PetMD 12–15 years (S774). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

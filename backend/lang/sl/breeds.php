@@ -102,6 +102,7 @@ return [
     'lhasa_apso' => 'Lhasa apso',
     'dogue_de_bordeaux' => 'Bordojska doga',
     'flat_coated_retriever' => 'Ravnodlaki prinašalec',
+    'border_terrier' => 'Borderski terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

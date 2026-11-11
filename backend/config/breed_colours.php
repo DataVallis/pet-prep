@@ -664,6 +664,13 @@ return [
         ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
         ['key' => 'liver', 'value' => 'solid liver', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
     ],
+    // M5-R10-102: FCI-Standard N° 10 (S768) "Red, wheaten, grizzle and tan, or blue and tan." — same order and values as breed_appearance.php.
+    'border_terrier' => [
+        ['key' => 'grizzle-tan', 'value' => 'grizzle and tan', 'en' => 'Grizzle and tan', 'sl' => 'Sivkasto-rjavkast'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+        ['key' => 'blue-tan', 'value' => 'blue and tan', 'en' => 'Blue and tan', 'sl' => 'Modro-rjavkast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

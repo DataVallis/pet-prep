@@ -811,6 +811,13 @@ class FalAiService
                 .'medium-size dark brown eyes with an intelligent expression, small ears set close to the side of the head, '
                 .'a short, straight natural tail carried gaily but never much above the back, '
                 .'friendly, optimistic expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-102: FCI-Standard N° 10 (S768) — a small, active working terrier, grizzle and tan (first standard colour).
+            BreedType::BorderTerrier => 'A small, narrow-bodied, active Border Terrier, grizzle and tan, '
+                .'with a harsh, dense, wiry and somewhat broken close-lying coat with a close undercoat, '
+                .'an otter-like head with a moderately broad skull, a short, strong, dark muzzle and a black nose, '
+                .'dark eyes with a keen expression, small V-shaped ears dropping forward close to the cheek, '
+                .'a moderately short natural tail, thick at the base and tapering, carried gaily but not curled over the back, '
+                .'alert, game expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1948,6 +1955,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'dense, flat, glossy coat of fine to medium texture with feathered legs and tail',
                 'markings' => 'solid colour, never yellow or cream',
+            ],
+            // M5-R10-102: standard colours only (FCI S768 "Red, wheaten, grizzle and tan, or blue and tan."); never black, never white feet.
+            BreedType::BorderTerrier => [
+                'color_scheme' => 'grizzle and tan',
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, dense, wiry close-lying coat with a close undercoat',
+                'markings' => 'dark muzzle, at most a little white on the chest, never white feet',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
