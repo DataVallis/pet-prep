@@ -6,21 +6,24 @@
     "sl": "Meta",
     "de": "Minze",
     "pt": "Hortelã",
-    "fr": "Menthe"
+    "fr": "Menthe",
+    "es": "Menta"
   },
   "question": {
     "en": "Can dogs eat mint?",
     "sl": "Ali lahko psi jedo meto?",
     "de": "Dürfen Hunde Minze fressen?",
     "pt": "Os cães podem comer hortelã?",
-    "fr": "Les chiens peuvent-ils manger de la menthe ?"
+    "fr": "Les chiens peuvent-ils manger de la menthe ?",
+    "es": "¿Pueden los perros comer menta?"
   },
   "url_slug": {
     "en": "mint",
     "sl": "meta",
     "de": "minze",
     "pt": "hortela",
-    "fr": "menthe"
+    "fr": "menthe",
+    "es": "menta"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, meto je bolje držati stran od psov. ASPCA vrtno meto uvršča med strupene za pse zaradi eteričnih olj, ki lahko ob zaužitju večje količine povzročijo bruhanje in drisko. Nevarni so lahko tudi mentolni žvečilni gumiji, bonboni in zobne paste, ker lahko vsebujejo ksilitol.",
     "de": "Nein, Minze sollte man besser von Hunden fernhalten. Die ASPCA stuft Gartenminze wegen ihrer ätherischen Öle als giftig für Hunde ein; frisst ein Hund viel davon, können Erbrechen und Durchfall die Folge sein. Auch Kaugummi, Bonbons und Zahnpasta mit Minze können gefährlich sein, da sie Xylit enthalten können.",
     "pt": "Não, é melhor manter a hortelã longe dos cães. A ASPCA classifica a hortelã-comum como tóxica para os cães, por causa dos óleos essenciais, que podem causar vómitos e diarreia quando se come muita. As pastilhas elásticas, os doces e a pasta de dentes de hortelã também podem ser perigosos, porque podem conter xilitol.",
-    "fr": "Non, mieux vaut tenir la menthe à l’écart des chiens. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour eux, à cause de ses huiles essentielles : en grande quantité, elle peut provoquer vomissements et diarrhée. Chewing-gums, bonbons et dentifrices à la menthe peuvent aussi être dangereux, car ils peuvent contenir du xylitol."
+    "fr": "Non, mieux vaut tenir la menthe à l’écart des chiens. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour eux, à cause de ses huiles essentielles : en grande quantité, elle peut provoquer vomissements et diarrhée. Chewing-gums, bonbons et dentifrices à la menthe peuvent aussi être dangereux, car ils peuvent contenir du xylitol.",
+    "es": "No, es mejor mantener la menta lejos de los perros. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los perros por sus aceites esenciales, que pueden provocar vómitos y diarrea si se come mucha. Los chicles, los caramelos y la pasta de dientes de menta también pueden ser peligrosos, porque pueden contener xilitol."
   },
   "why": {
     "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
     "sl": "Vrtna meta (Mentha) vsebuje eterična olja; ASPCA jo uvršča med strupene za pse, ob zaužitju večjih količin pa povzroči bruhanje in drisko. Tudi Pet Poison Helpline navaja, da meta za pse ni varna. Izdelki z meto lahko vsebujejo tudi ksilitol, sladilo, ki je za pse zelo strupeno. Ker rastlina sama povzroča znake predvsem v večjih količinah, jo uvrščamo med nepriporočljive; izdelki z meto, ki vsebujejo ksilitol, pa so nujen primer.",
     "de": "Gartenminze (Mentha) enthält ätherische Öle. Die ASPCA stuft sie als giftig für Hunde ein und nennt Erbrechen und Durchfall nach großen Mengen. Auch Pet Poison Helpline sagt, Minze sei für Hunde nicht sicher. Produkte mit Minze können außerdem Xylit enthalten, einen Süßstoff, der für Hunde stark giftig ist. Weil die Pflanze selbst vor allem bei großen Mengen Beschwerden auslöst, stufen wir sie als nicht empfohlen ein. Minzprodukte mit Xylit sind dagegen ein Notfall.",
     "pt": "A hortelã-comum (Mentha) contém óleos essenciais; a ASPCA classifica-a como tóxica para os cães, com vómitos e diarreia depois de ingestões grandes. A Pet Poison Helpline também diz que a hortelã não é segura para os cães. Os produtos que contêm hortelã podem conter também xilitol, um adoçante gravemente tóxico para os cães. Como a planta em si causa sinais sobretudo em grandes quantidades, classificamo-la como não recomendada; os produtos de hortelã com xilitol são uma emergência.",
-    "fr": "La menthe des jardins (Mentha) contient des huiles essentielles ; l’ASPCA la classe parmi les plantes toxiques pour les chiens, avec des vomissements et de la diarrhée après l’ingestion de grandes quantités. Le Pet Poison Helpline indique lui aussi que la menthe n’est pas sans danger pour les chiens. Les produits à la menthe peuvent en outre contenir du xylitol, un édulcorant extrêmement toxique pour les chiens. Comme la plante elle-même provoque surtout des signes lorsque le chien en mange beaucoup, nous la classons comme déconseillée ; les produits à la menthe contenant du xylitol constituent une urgence."
+    "fr": "La menthe des jardins (Mentha) contient des huiles essentielles ; l’ASPCA la classe parmi les plantes toxiques pour les chiens, avec des vomissements et de la diarrhée après l’ingestion de grandes quantités. Le Pet Poison Helpline indique lui aussi que la menthe n’est pas sans danger pour les chiens. Les produits à la menthe peuvent en outre contenir du xylitol, un édulcorant extrêmement toxique pour les chiens. Comme la plante elle-même provoque surtout des signes lorsque le chien en mange beaucoup, nous la classons comme déconseillée ; les produits à la menthe contenant du xylitol constituent une urgence.",
+    "es": "La menta de jardín (Mentha) contiene aceites esenciales; la ASPCA la incluye entre las plantas tóxicas para los perros, con vómitos y diarrea tras ingerir grandes cantidades. Pet Poison Helpline también advierte de que la menta no es segura para los perros. Además, los productos con menta pueden contener xilitol, un edulcorante muy tóxico para los perros. Como la propia planta provoca síntomas sobre todo en cantidades grandes, la clasificamos como no recomendada; en cambio, los productos de menta con xilitol son una urgencia."
   },
   "signs": {
     "en": [
@@ -57,6 +62,10 @@
     "fr": [
       "Vomissements",
       "Diarrhée"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea"
     ]
   },
   "what_to_do": {
@@ -64,7 +73,8 @@
     "sl": "Če je pes pojedel izdelek z meto, na primer žvečilni gumi, bonbon ali zobno pasto, ki lahko vsebuje ksilitol, takoj poiščite veterinarsko pomoč. V primeru zastrupitve pokličite veterinarja ali center za zastrupitve živali.",
     "de": "Wenn Ihr Hund ein Minzprodukt wie Kaugummi, Bonbons oder Zahnpasta gefressen hat, das Xylit enthalten könnte, suchen Sie sofort tierärztliche Hilfe auf. Bei Verdacht auf eine Vergiftung wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
     "pt": "Se o teu cão comeu um produto de hortelã, como pastilha elástica, doce ou pasta de dentes, que possa conter xilitol, procura de imediato cuidados veterinários. Numa emergência de intoxicação, contacta o teu veterinário ou uma linha de apoio toxicológico para animais.",
-    "fr": "Si votre chien a mangé un produit à la menthe, comme un chewing-gum, un bonbon ou un dentifrice pouvant contenir du xylitol, consultez immédiatement un vétérinaire. En cas d’intoxication, contactez sans attendre votre vétérinaire ou un centre antipoison vétérinaire."
+    "fr": "Si votre chien a mangé un produit à la menthe, comme un chewing-gum, un bonbon ou un dentifrice pouvant contenir du xylitol, consultez immédiatement un vétérinaire. En cas d’intoxication, contactez sans attendre votre vétérinaire ou un centre antipoison vétérinaire.",
+    "es": "Si tu perro ha comido un producto de menta que pueda contener xilitol, como un chicle, un caramelo o pasta de dientes, acude enseguida a un veterinario. En caso de intoxicación, contacta con tu veterinario o con una línea de información toxicológica para animales."
   },
   "serving": null,
   "child": {
@@ -72,7 +82,8 @@
     "sl": "Metini listi in mentolni bonboni niso za pse. Če pes najde mentolni žvečilni gumi ali bonbone, takoj povej odraslemu.",
     "de": "Minzblätter und Minzbonbons sind nichts für Hunde. Wenn ein Hund Kaugummi oder Bonbons mit Minze findet, sag sofort einem Erwachsenen Bescheid.",
     "pt": "As folhas de hortelã e os doces de hortelã não são para cães. Se um cão encontrar pastilhas elásticas ou doces de hortelã, avisa logo um adulto.",
-    "fr": "Les feuilles et les bonbons à la menthe ne sont pas pour les chiens. Si un chien trouve un chewing-gum ou des bonbons à la menthe, préviens vite un adulte."
+    "fr": "Les feuilles et les bonbons à la menthe ne sont pas pour les chiens. Si un chien trouve un chewing-gum ou des bonbons à la menthe, préviens vite un adulte.",
+    "es": "Las hojas de menta y los caramelos de menta no son para los perros. Si un perro encuentra chicles o caramelos de menta, avisa enseguida a un adulto."
   },
   "faq": [
     {
@@ -81,14 +92,16 @@
         "sl": "Ali so mentolni žvečilni gumiji ali bonboni nevarni za pse?",
         "de": "Sind Kaugummi oder Bonbons mit Minze für Hunde gefährlich?",
         "pt": "As pastilhas elásticas ou os doces de hortelã são perigosos para os cães?",
-        "fr": "Les chewing-gums et bonbons à la menthe sont-ils dangereux pour les chiens ?"
+        "fr": "Les chewing-gums et bonbons à la menthe sont-ils dangereux pour les chiens ?",
+        "es": "¿Son peligrosos para los perros los chicles o caramelos de menta?"
       },
       "a": {
         "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
         "sl": "Da. Izdelki z meto, kot so žvečilni gumiji, bonboni in zobne paste, so lahko za pse nevarni, ker lahko vsebujejo ksilitol. Če je pes kaj takega pojedel, takoj poiščite veterinarsko pomoč.",
         "de": "Ja. Minzprodukte wie Kaugummi, Bonbons und Zahnpasta können für Hunde gefährlich sein, weil sie Xylit enthalten können. Wenn Ihr Hund etwas davon gefressen hat, suchen Sie sofort tierärztliche Hilfe auf.",
         "pt": "Sim. Os produtos de hortelã, como pastilhas elásticas, doces e pasta de dentes, podem ser perigosos para os cães porque podem conter xilitol. Se o teu cão comeu algum, procura de imediato cuidados veterinários.",
-        "fr": "Oui. Les produits à la menthe comme les chewing-gums, les bonbons et les dentifrices peuvent être dangereux pour les chiens, car ils peuvent contenir du xylitol. Si votre chien en a mangé, consultez immédiatement un vétérinaire."
+        "fr": "Oui. Les produits à la menthe comme les chewing-gums, les bonbons et les dentifrices peuvent être dangereux pour les chiens, car ils peuvent contenir du xylitol. Si votre chien en a mangé, consultez immédiatement un vétérinaire.",
+        "es": "Sí. Los productos de menta, como los chicles, los caramelos y la pasta de dientes, pueden ser peligrosos para los perros, porque pueden contener xilitol. Si tu perro ha comido alguno, acude enseguida a un veterinario."
       }
     }
   ],
@@ -169,6 +182,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "236e8622dc1cbffd337ea7bf78938c4810255876402990f8d63454b46103c362"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6776f5a0296ee608a482a6cb509a4b7f49a43170de3f41523a9215f83132284a"
     }
   }
 }

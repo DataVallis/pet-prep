@@ -6,21 +6,24 @@
     "sl": "Mačja trava",
     "de": "Katzengras",
     "pt": "Relva para gatos",
-    "fr": "Herbe à chat (graminées)"
+    "fr": "Herbe à chat (graminées)",
+    "es": "Hierba para gatos"
   },
   "question": {
     "en": "Is cat grass safe for cats?",
     "sl": "Ali je mačja trava varna za mačke?",
     "de": "Ist Katzengras für Katzen unbedenklich?",
     "pt": "A relva para gatos é segura para os gatos?",
-    "fr": "L’herbe à chat est-elle sans danger pour les chats ?"
+    "fr": "L’herbe à chat est-elle sans danger pour les chats ?",
+    "es": "¿Es segura la hierba para gatos?"
   },
   "url_slug": {
     "en": "cat-grass",
     "sl": "macja-trava",
     "de": "katzengras",
     "pt": "relva-para-gatos",
-    "fr": "herbe-a-chat"
+    "fr": "herbe-a-chat",
+    "es": "hierba-para-gatos"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, mačja trava je za mačke varna, če je ne pojedo preveč. Cats Protection navaja, da je trava za mačke varna, razen če je onesnažena s herbicidi ali pesticidi. Mačke pa velikih količin trave ne morejo prebaviti, zato lahko ob večji količini bruhajo.",
     "de": "Ja, in Maßen ist Katzengras für Katzen unbedenklich. Laut Cats Protection dürfen Katzen Gras fressen, solange es nicht mit Herbiziden oder Pestiziden belastet ist. Große Mengen können Katzen allerdings nicht verdauen, deshalb kann es sein, dass sie sich übergeben, wenn sie viel davon fressen.",
     "pt": "Sim, a relva para gatos é segura com moderação. A Cats Protection diz que é seguro os gatos comerem erva, desde que não esteja contaminada com herbicidas ou pesticidas. No entanto, os gatos não conseguem digerir grandes quantidades, por isso comer muita pode fazê-los vomitar.",
-    "fr": "Oui, l’herbe à chat est sans danger pour les chats, à condition de ne pas en abuser. Selon Cats Protection, l’herbe est sans risque sauf si elle contient des herbicides ou des pesticides. Les chats n’en digèrent pas de grandes quantités : s’ils en mangent beaucoup, ils risquent de vomir."
+    "fr": "Oui, l’herbe à chat est sans danger pour les chats, à condition de ne pas en abuser. Selon Cats Protection, l’herbe est sans risque sauf si elle contient des herbicides ou des pesticides. Les chats n’en digèrent pas de grandes quantités : s’ils en mangent beaucoup, ils risquent de vomir.",
+    "es": "Sí, la hierba para gatos es segura con moderación. Cats Protection dice que comer hierba es seguro para los gatos, siempre que no esté contaminada con herbicidas ni pesticidas. Eso sí, los gatos no digieren bien las grandes cantidades, así que, si comen mucha, pueden vomitar."
   },
   "why": {
     "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
     "sl": "VCA pojasnjuje, da mačja trava običajno pomeni žitne trave, kot so oves, pšenica, ječmen, lucerna in rž. International Cat Care navaja, da je uživanje trave pri mačkah normalno vedenje in naj bi pomagalo pri potovanju hrane ali kepic dlake skozi prebavila, pogosto z bruhanjem. VCA dodaja, da je ključna zmernost, da mačke trave ne potrebujejo in da lahko velike količine povzročijo močno bruhanje ali kopičenje vlaknin v črevesju. Trava na prostem je lahko škodljiva, če je bila tretirana s pesticidi.",
     "de": "VCA erklärt, dass mit Katzengras meist Getreidegräser wie Hafer, Weizen, Gerste, Luzerne und Roggen gemeint sind. Laut International Cat Care ist Grasfressen bei Katzen ein normales Verhalten. Es soll dabei helfen, Futter oder Haarballen durch den Darm zu befördern, oft durch Erbrechen. VCA ergänzt, dass es auf das richtige Maß ankommt, dass Katzen kein Gras fressen müssen und dass große Mengen starkes Erbrechen oder Faseransammlungen im Darm verursachen können. Gras aus dem Freien kann schädlich sein, wenn es mit Pestiziden behandelt wurde.",
     "pt": "A VCA explica que a relva para gatos costuma referir-se a gramíneas de cereais, como a aveia, o trigo, a cevada, a luzerna e o centeio. A International Cat Care diz que comer erva é um comportamento normal nos gatos e pensa-se que ajuda a fazer a comida ou as bolas de pelo avançarem pelo intestino, muitas vezes com vómito. A VCA acrescenta que a moderação é essencial, que os gatos não precisam de comer erva e que comer grandes quantidades pode causar muitos vómitos ou uma acumulação de fibra no intestino. A erva do exterior pode ser prejudicial se tiver sido tratada com pesticidas.",
-    "fr": "Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine, le blé, l’orge, la luzerne et le seigle. International Cat Care explique que manger de l’herbe est un comportement normal chez le chat et qu’elle aiderait à faire avancer les aliments ou les boules de poils dans l’intestin, souvent grâce aux vomissements. VCA ajoute que la modération est essentielle, que les chats n’ont pas besoin de manger de l’herbe et qu’en manger de grandes quantités peut provoquer de nombreux vomissements ou une accumulation de fibres dans l’intestin. L’herbe que l’on trouve dehors peut être dangereuse si elle a été traitée avec des pesticides."
+    "fr": "Selon VCA, l’herbe à chat désigne généralement des graminées céréalières comme l’avoine, le blé, l’orge, la luzerne et le seigle. International Cat Care explique que manger de l’herbe est un comportement normal chez le chat et qu’elle aiderait à faire avancer les aliments ou les boules de poils dans l’intestin, souvent grâce aux vomissements. VCA ajoute que la modération est essentielle, que les chats n’ont pas besoin de manger de l’herbe et qu’en manger de grandes quantités peut provoquer de nombreux vomissements ou une accumulation de fibres dans l’intestin. L’herbe que l’on trouve dehors peut être dangereuse si elle a été traitée avec des pesticides.",
+    "es": "VCA explica que la hierba para gatos suele referirse a gramíneas de cereal como la avena, el trigo, la cebada, la alfalfa y el centeno. International Cat Care dice que comer hierba es un comportamiento normal en los gatos y se cree que ayuda a mover la comida o las bolas de pelo por el intestino, a menudo mediante el vómito. VCA añade que la moderación es la clave, que los gatos no necesitan comer hierba y que comerla en grandes cantidades puede provocar vómitos en exceso o que la fibra se acumule en el intestino. La hierba del exterior puede ser dañina si se ha tratado con pesticidas."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Nekaj bruhanja po uživanju trave je pogosto. Če mačka pogosto bruha ali bruha in hkrati noče jesti, jo peljite k veterinarju.",
     "de": "Etwas Erbrechen nach dem Grasfressen kommt häufig vor. Wenn Ihre Katze oft erbricht oder zusätzlich ihr Futter verweigert, gehen Sie mit ihr zum Tierarzt.",
     "pt": "É comum os gatos vomitarem depois de comer erva. Se o teu gato vomitar com frequência, ou se, além de vomitar, parecer sem apetite, leva-o ao veterinário.",
-    "fr": "Il est fréquent qu’un chat vomisse un peu après avoir mangé de l’herbe. S’il vomit souvent, ou s’il vomit et semble aussi se désintéresser de sa nourriture, emmenez-le chez le vétérinaire."
+    "fr": "Il est fréquent qu’un chat vomisse un peu après avoir mangé de l’herbe. S’il vomit souvent, ou s’il vomit et semble aussi se désintéresser de sa nourriture, emmenez-le chez le vétérinaire.",
+    "es": "Vomitar un poco después de comer hierba es habitual. Si tu gato vomita con frecuencia, o si vomita y, además, no tiene ganas de comer, llévalo al veterinario."
   },
   "serving": {
     "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
     "sl": "Mački ponudite lonček mačje trave v stanovanju ali zunaj, brez herbicidov in pesticidov, in ji pustite, da se sama odloči, ali jo bo jedla. Ko trava oveni ali porumeni, odstranite odmirajoče poganjke.",
     "de": "Bieten Sie einen Topf Katzengras an, drinnen oder draußen, frei von Herbiziden und Pestiziden, und lassen Sie Ihre Katze selbst entscheiden, ob sie davon frisst. Wenn das Gras welkt oder gelb wird, zupfen Sie die abgestorbenen Halme heraus.",
     "pt": "Oferece um vaso de relva para gatos, dentro ou fora de casa, sem herbicidas nem pesticidas, e deixa o teu gato escolher se a quer comer. Quando a relva murchar ou amarelecer, tira os rebentos que estão a secar.",
-    "fr": "Proposez un pot d’herbe à chat, à l’intérieur ou à l’extérieur, sans herbicides ni pesticides, et laissez votre chat choisir d’en manger ou non. Quand l’herbe se flétrit ou jaunit, retirez les pousses qui dépérissent."
+    "fr": "Proposez un pot d’herbe à chat, à l’intérieur ou à l’extérieur, sans herbicides ni pesticides, et laissez votre chat choisir d’en manger ou non. Quand l’herbe se flétrit ou jaunit, retirez les pousses qui dépérissent.",
+    "es": "Ofrece a tu gato una maceta de hierba para gatos, dentro o fuera de casa y sin herbicidas ni pesticidas, y deja que decida él si quiere comerla. Cuando la hierba se marchite o amarillee, arranca los brotes secos."
   },
   "child": {
     "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
     "sl": "Veliko muc rado grizlja travo. Odrasli lahko zanje vzgoji lonček mačje trave, brez vrtnih škropiv.",
     "de": "Viele Katzen knabbern gern an Gras. Ein Erwachsener kann einen Topf Katzengras für sie ziehen – ganz ohne Spritzmittel aus dem Garten.",
     "pt": "Muitos gatos adoram trincar erva. Um adulto pode plantar um vaso de relva para gatos só para eles, longe dos produtos pulverizados no jardim.",
-    "fr": "Beaucoup de chats adorent grignoter de l’herbe. Un adulte peut faire pousser un pot d’herbe à chat rien que pour eux, sans produits de traitement du jardin."
+    "fr": "Beaucoup de chats adorent grignoter de l’herbe. Un adulte peut faire pousser un pot d’herbe à chat rien que pour eux, sans produits de traitement du jardin.",
+    "es": "A muchos gatos les encanta mordisquear hierba. Un adulto puede cultivar una maceta de hierba para gatos solo para ellos, sin productos de jardín."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Zakaj mačke jedo travo?",
         "de": "Warum fressen Katzen Gras?",
         "pt": "Porque é que os gatos comem erva?",
-        "fr": "Pourquoi les chats mangent-ils de l’herbe ?"
+        "fr": "Pourquoi les chats mangent-ils de l’herbe ?",
+        "es": "¿Por qué comen hierba los gatos?"
       },
       "a": {
         "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
         "sl": "Tega nihče ne ve zagotovo. International Cat Care navaja, da gre za normalno vedenje, ki ni povsem pojasnjeno, vendar naj bi pomagalo pri potovanju hrane ali kepic dlake skozi prebavila.",
         "de": "Das weiß niemand genau. Laut International Cat Care ist es ein normales Verhalten, das noch nicht vollständig erforscht ist. Man nimmt aber an, dass es hilft, Futter oder Haarballen durch den Verdauungstrakt zu befördern.",
         "pt": "Ninguém sabe ao certo. A International Cat Care diz que é um comportamento normal que não é totalmente compreendido, mas pensa-se que ajuda a fazer a comida ou as bolas de pelo avançarem pelo aparelho digestivo.",
-        "fr": "On ne sait pas vraiment. International Cat Care indique qu’il s’agit d’un comportement normal, qui n’est pas entièrement compris, mais qui aiderait à faire avancer les aliments ou les boules de poils dans le tube digestif."
+        "fr": "On ne sait pas vraiment. International Cat Care indique qu’il s’agit d’un comportement normal, qui n’est pas entièrement compris, mais qui aiderait à faire avancer les aliments ou les boules de poils dans le tube digestif.",
+        "es": "Nadie lo sabe con certeza. International Cat Care dice que es un comportamiento normal que aún no se entiende del todo, aunque se cree que ayuda a mover la comida o las bolas de pelo por el aparato digestivo."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali je trava z vrta primerna za mojo mačko?",
         "de": "Ist Gras aus dem Garten für meine Katze in Ordnung?",
         "pt": "Posso dar ao meu gato erva do jardim?",
-        "fr": "L’herbe du jardin convient-elle à mon chat ?"
+        "fr": "L’herbe du jardin convient-elle à mon chat ?",
+        "es": "¿Está bien la hierba del jardín para mi gato?"
       },
       "a": {
         "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
         "sl": "Le če ni bila tretirana. VCA opozarja, da je trava na prostem lahko škodljiva, če je bila tretirana s pesticidi. PDSA svetuje mačjo travo, ki jo lahko gojite v stanovanju ali zunaj in za katero veste, da je brez pesticidov.",
         "de": "Nur wenn es unbehandelt ist. VCA warnt, dass Gras im Freien schädlich sein kann, wenn es mit Pestiziden behandelt wurde. PDSA empfiehlt Katzengras, das drinnen oder draußen gezogen werden kann, solange Sie sicher sind, dass es pestizidfrei ist.",
         "pt": "Só se não tiver sido tratada. A VCA avisa que a erva do exterior pode ser prejudicial se tiver sido tratada com pesticidas. A PDSA sugere relva para gatos, que pode ser cultivada dentro ou fora de casa e que sabes estar livre de pesticidas.",
-        "fr": "Seulement si elle n’a pas été traitée. VCA prévient que l’herbe d’extérieur peut être dangereuse si elle a été traitée avec des pesticides. La PDSA suggère plutôt l’herbe à chat, que l’on peut faire pousser à l’intérieur comme à l’extérieur et dont on est sûr qu’elle ne contient pas de pesticides."
+        "fr": "Seulement si elle n’a pas été traitée. VCA prévient que l’herbe d’extérieur peut être dangereuse si elle a été traitée avec des pesticides. La PDSA suggère plutôt l’herbe à chat, que l’on peut faire pousser à l’intérieur comme à l’extérieur et dont on est sûr qu’elle ne contient pas de pesticides.",
+        "es": "Solo si no se ha tratado. VCA advierte de que la hierba del exterior puede ser dañina si se ha tratado con pesticidas. PDSA sugiere cultivar hierba para gatos, dentro o fuera de casa, porque así sabes que no lleva pesticidas."
       }
     },
     {
@@ -98,14 +110,16 @@
         "sl": "Moja mačka živi v stanovanju. Ali potrebuje travo?",
         "de": "Meine Katze lebt nur in der Wohnung. Braucht sie Gras?",
         "pt": "O meu gato vive dentro de casa. Precisa de erva?",
-        "fr": "Mon chat vit en intérieur. A-t-il besoin d’herbe ?"
+        "fr": "Mon chat vit en intérieur. A-t-il besoin d’herbe ?",
+        "es": "Mi gato vive en casa. ¿Necesita hierba?"
       },
       "a": {
         "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
         "sl": "VCA navaja, da mačka trave ne potrebuje. International Cat Care pa opozarja, da lahko mačke v stanovanju brez trave grizljajo druge lončnice, zato jim lahko travo ponudimo tudi v stanovanju.",
         "de": "Laut VCA braucht Ihre Katze kein Gras. International Cat Care weist aber darauf hin, dass Wohnungskatzen ohne Gras an anderen Topfpflanzen knabbern können. Deshalb kann man ihnen drinnen eine Grasquelle anbieten.",
         "pt": "O teu gato não precisa de erva, diz a VCA. Mas a International Cat Care refere que os gatos que vivem dentro de casa e não têm erva podem mastigar outras plantas em vaso, por isso podes dar-lhes uma fonte de erva dentro de casa.",
-        "fr": "Selon VCA, votre chat n’a pas besoin d’herbe. Mais International Cat Care note que les chats d’intérieur privés d’herbe peuvent mâchonner d’autres plantes en pot : on peut donc leur proposer de l’herbe à l’intérieur."
+        "fr": "Selon VCA, votre chat n’a pas besoin d’herbe. Mais International Cat Care note que les chats d’intérieur privés d’herbe peuvent mâchonner d’autres plantes en pot : on peut donc leur proposer de l’herbe à l’intérieur.",
+        "es": "Según VCA, tu gato no necesita comer hierba. Pero International Cat Care señala que los gatos de interior sin acceso a hierba pueden mordisquear otras plantas de maceta, así que se les puede ofrecer hierba dentro de casa."
       }
     }
   ],
@@ -221,6 +235,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a2b8765962b4fd64d80be103dc5c493655d73b2bba586f88677c182dfd41fd7c"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bd0b9a55ac6c20d710de891cc13ef28451e3c49a2dd6ad2cd743e130d829de1f"
     }
   }
 }

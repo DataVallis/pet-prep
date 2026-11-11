@@ -6,21 +6,24 @@
     "sl": "Bazilika",
     "de": "Basilikum",
     "pt": "Manjericão",
-    "fr": "Basilic"
+    "fr": "Basilic",
+    "es": "Albahaca"
   },
   "question": {
     "en": "Can dogs eat basil?",
     "sl": "Ali lahko psi jedo baziliko?",
     "de": "Dürfen Hunde Basilikum fressen?",
     "pt": "Os cães podem comer manjericão?",
-    "fr": "Les chiens peuvent-ils manger du basilic ?"
+    "fr": "Les chiens peuvent-ils manger du basilic ?",
+    "es": "¿Pueden los perros comer albahaca?"
   },
   "url_slug": {
     "en": "basil",
     "sl": "bazilika",
     "de": "basilikum",
     "pt": "manjericao",
-    "fr": "basilic"
+    "fr": "basilic",
+    "es": "albahaca"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah. ASPCA baziliko uvršča med rastline, ki za pse niso strupene, in je eno od zelišč, ki jih lahko gojite na psu prijaznem vrtu ter jih v majhnih količinah dodate pasjim obrokom ali priboljškom.",
     "de": "Ja, in kleinen Mengen. Die ASPCA stuft Basilikum als ungiftig für Hunde ein. Es gehört zu den Kräutern, die Sie in einem hundefreundlichen Garten anbauen und in kleinen Mengen unter das Futter oder die Leckerlis Ihres Hundes mischen können.",
     "pt": "Sim, em pequenas quantidades. A ASPCA inclui o manjericão entre as plantas não tóxicas para os cães. É uma das ervas que podes cultivar num jardim seguro para cães e juntar, em pequenas quantidades, às refeições ou às guloseimas do teu cão.",
-    "fr": "Oui, en petite quantité. Pour l’ASPCA, le basilic n’est pas toxique pour les chiens : c’est l’une des herbes aromatiques que l’on peut cultiver dans un jardin sans danger pour eux et glisser en petite quantité dans leurs repas ou leurs friandises."
+    "fr": "Oui, en petite quantité. Pour l’ASPCA, le basilic n’est pas toxique pour les chiens : c’est l’une des herbes aromatiques que l’on peut cultiver dans un jardin sans danger pour eux et glisser en petite quantité dans leurs repas ou leurs friandises.",
+    "es": "Sí, en pequeñas cantidades. La ASPCA incluye la albahaca entre las plantas no tóxicas para los perros, y es una de las hierbas que puedes cultivar en un jardín apto para perros y añadir, en pequeñas cantidades, a su comida o a sus premios."
   },
   "why": {
     "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
     "sl": "Bazilika (Ocimum basilicum, tudi sladka ali tajska bazilika) za pse ni strupena. Ima antioksidativne, protivirusne in protimikrobne lastnosti. Kot pri drugih zeliščih, ki jih dodamo obrokom ali vmešamo v priboljške, naj bodo količine majhne.",
     "de": "Basilikum (Ocimum basilicum, auch Süßes Basilikum oder Thai-Basilikum) ist für Hunde ungiftig. Es wirkt antioxidativ, antiviral und antimikrobiell. Wie bei anderen Kräutern, die unter das Futter oder in Leckerlis gemischt werden, sollten die Mengen klein bleiben.",
     "pt": "O manjericão (Ocimum basilicum, também chamado manjericão-doce ou manjericão-tailandês) não é tóxico para os cães. Tem propriedades antioxidantes, antivirais e antimicrobianas. Como acontece com qualquer erva aromática que se junte às refeições ou se misture nas guloseimas, mantém as quantidades pequenas.",
-    "fr": "Le basilic (Ocimum basilicum, aussi appelé basilic doux ou basilic thaï) n’est pas toxique pour les chiens. Il possède des propriétés antioxydantes, antivirales et antimicrobiennes. Comme pour les autres herbes aromatiques ajoutées aux repas ou mélangées aux friandises, mieux vaut s’en tenir à de petites quantités."
+    "fr": "Le basilic (Ocimum basilicum, aussi appelé basilic doux ou basilic thaï) n’est pas toxique pour les chiens. Il possède des propriétés antioxydantes, antivirales et antimicrobiennes. Comme pour les autres herbes aromatiques ajoutées aux repas ou mélangées aux friandises, mieux vaut s’en tenir à de petites quantités.",
+    "es": "La albahaca (Ocimum basilicum, también albahaca dulce o albahaca tailandesa) no es tóxica para los perros. Tiene propiedades antioxidantes, antivirales y antimicrobianas. Como con otras hierbas que se añaden a la comida o se mezclan con los premios, mantén las cantidades pequeñas."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Bazilika za pse ni strupena. Baziliko, ki jo dodate obrokom ali priboljškom, le ohranite v majhnih količinah.",
     "de": "Basilikum ist für Hunde ungiftig. Achten Sie nur darauf, dass die Menge, die Sie unter das Futter oder in Leckerlis mischen, klein bleibt.",
     "pt": "O manjericão não é tóxico para os cães. Basta usares pouco manjericão nas refeições ou nas guloseimas.",
-    "fr": "Le basilic n’est pas toxique pour les chiens. Veillez simplement à n’en ajouter que de petites quantités aux repas ou aux friandises."
+    "fr": "Le basilic n’est pas toxique pour les chiens. Veillez simplement à n’en ajouter que de petites quantités aux repas ou aux friandises.",
+    "es": "La albahaca no es tóxica para los perros. Basta con añadirla en pequeñas cantidades a su comida o a sus premios."
   },
   "serving": {
     "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
     "sl": "Malo je dodajte pasjim obrokom ali jo v majhnih količinah vmešajte v priboljške.",
     "de": "Mischen Sie ein wenig davon unter das Futter Ihres Hundes oder in Leckerlis – nur in kleinen Mengen.",
     "pt": "Junta um pouco às refeições do teu cão ou mistura-o, em pequenas quantidades, nas guloseimas.",
-    "fr": "Ajoutez-en un peu aux repas de votre chien ou mélangez-en une petite quantité à ses friandises."
+    "fr": "Ajoutez-en un peu aux repas de votre chien ou mélangez-en une petite quantité à ses friandises.",
+    "es": "Añade un poco a la comida de tu perro o mézclala con sus premios, siempre en pequeñas cantidades."
   },
   "child": {
     "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
     "sl": "Bazilika je psom prijazno zelišče. Odrasli lahko malo bazilike doda pasji hrani.",
     "de": "Basilikum ist ein harmloses Kraut für Hunde. Ein Erwachsener kann ein bisschen davon ins Futter mischen.",
     "pt": "O manjericão é uma erva amiga dos cães. Um adulto pode juntar um pouco à comida do cão.",
-    "fr": "Le basilic est une herbe inoffensive pour les chiens. Un adulte peut en ajouter un peu dans la gamelle."
+    "fr": "Le basilic est une herbe inoffensive pour les chiens. Un adulte peut en ajouter un peu dans la gamelle.",
+    "es": "La albahaca es una hierba amiga de los perros. Un adulto puede añadir un poquito a su comida."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Je bazilika na vrtu varna, če imamo psa?",
         "de": "Ist eine Basilikumpflanze in einem Garten mit Hund unbedenklich?",
         "pt": "O manjericão é seguro num jardim com cães?",
-        "fr": "Peut-on cultiver du basilic dans un jardin où vit un chien ?"
+        "fr": "Peut-on cultiver du basilic dans un jardin où vit un chien ?",
+        "es": "¿Es segura una planta de albahaca en un jardín con perros?"
       },
       "a": {
         "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
         "sl": "Da. Bazilika za pse ni strupena in je eno od zelišč, ki jih lahko gojimo na psu prijaznem vrtu.",
         "de": "Ja. Basilikum ist für Hunde ungiftig und gehört zu den Kräutern, die in einem hundefreundlichen Garten wachsen dürfen.",
         "pt": "Sim. O manjericão não é tóxico para os cães e é uma das ervas que se podem cultivar num jardim seguro para cães.",
-        "fr": "Oui. Le basilic n’est pas toxique pour les chiens et fait partie des herbes que l’on peut cultiver dans un jardin sans danger pour eux."
+        "fr": "Oui. Le basilic n’est pas toxique pour les chiens et fait partie des herbes que l’on peut cultiver dans un jardin sans danger pour eux.",
+        "es": "Sí. La albahaca no es tóxica para los perros y es una de las hierbas que se pueden cultivar en un jardín apto para perros."
       }
     }
   ],
@@ -129,6 +139,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bf9a6809514d664bfe37f2688465bafd6908d6bd7937d835e3450d38ac4b916b"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3dd762375ebf996b9a876301ce7f1361b80649885ea1f0fdba831ecaf3fe604"
     }
   }
 }
