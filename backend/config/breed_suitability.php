@@ -2541,5 +2541,30 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S770'], 'refs' => ['border_terrier.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-103 Leonberger — RKC Breed Watch Category 2 without points (S780) → no welfare chip (Irish Wolfhound precedent).
+        // shorter_lifespan from the RKC key fact "Lifespan: Under 10 years" (S780; McMillan 2024 10.0 y, S123). No new vocabulary key.
+        'leonberger' => [
+            'suits' => [
+                // S780 "Exercise: More than 2 hours per day".
+                ['tag' => 'active_family', 'source_ids' => ['S780'], 'refs' => ['leonberger.exercise.adult', 'leonberger.suitability.rkc_exercise']],
+                // S781 "… making them excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S781'], 'refs' => ['leonberger.behaviour.family']],
+                // S783 "distinguished by his marked friendliness towards children." — supervision caveat (Woodgreen S784) in notes.
+                ['tag' => 'children', 'source_ids' => ['S783'], 'refs' => ['leonberger.behaviour.children']],
+                // S780 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S780'], 'refs' => ['leonberger.suitability.rkc_size_of_home', 'leonberger.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S780 "Lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S780'], 'refs' => ['leonberger.lifespan.rkc', 'leonberger.suitability.rkc_lifespan']],
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S780'], 'refs' => ['leonberger.exercise.adult', 'leonberger.suitability.rkc_exercise']],
+                // S780 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S780'], 'refs' => ['leonberger.suitability.rkc_shedding']],
+                // S781 "… grooming a couple of times a week …"; S784 "Brushing two to three times a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S781', 'S784'], 'refs' => ['leonberger.suitability.pdsa_grooming', 'leonberger.suitability.woodgreen_grooming']],
+                // S784 "Leonbergers form strong attachments to their family and struggle being on their own for long periods."
+                ['tag' => 'needs_company', 'source_ids' => ['S784'], 'refs' => ['leonberger.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];
