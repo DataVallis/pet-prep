@@ -1,0 +1,158 @@
+{
+  "country": "GE",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "G-Vet (Kutaisi) - own website",
+      "url": "https://g-vet.ge/",
+      "note": "Own page meta description: 'სასწრაფო დახმარება 24/7' (emergency help 24/7); clinic is in Kutaisi. No address, phone or hours readable."
+    },
+    {
+      "name": "Vet House - own website (hospital page and contact data)",
+      "url": "https://vethouse.ge/vet_hospital_en",
+      "note": "Own page: 70 Mickiewicz St, Tbilisi, +995 322 470005, hours 10:00-20:00 daily; also says 'round-the-clock hospital' and 'emergency medical care 24/7' (conflicts with the hours)."
+    },
+    {
+      "name": "Vetlife - own website",
+      "url": "https://vetlife.ge/en_us/",
+      "note": "Address, phones, hours Mon-Sun 10:00-19:00; no 24 h statement."
+    },
+    {
+      "name": "Bionika Vet Clinic - own website",
+      "url": "https://bionika.ge/index.html",
+      "note": "Address, phone, daily 11:00-20:00; the '24/7' on the page refers to an AI chat assistant only."
+    },
+    {
+      "name": "Golden Vet Batumi - own website",
+      "url": "https://goldenvetbatumi.site/eng",
+      "note": "Address, phone, hours (by appointment, house calls); no 24 h statement."
+    },
+    {
+      "name": "yell.ge - Zooplaza listing",
+      "url": "https://www.yell.ge/company.php?lan=eng&id=106824",
+      "note": "Business directory (not official). Title '24-HOUR VETERINARY CLINIC', 67 Kostava St, phones; contains a user note that the clinic closed and phones do not answer."
+    },
+    {
+      "name": "Madloba - Vetmedi and Balto listings",
+      "url": "https://madloba.info/en/tbilisi/veterinarnye-kliniki/vetmedi/",
+      "note": "Aggregator (not official). Vetmedi 'open 24 hours' Mon-Sun; Balto (https://madloba.info/en/tbilisi/veterinarnye-kliniki/balto/) also 24 h but flagged 'Temporarily Closed'. Used only as leads, not as the sole basis for emergency_24h."
+    },
+    {
+      "name": "Georgia Today - National Food Agency inspections",
+      "url": "https://georgiatoday.ge/national-food-agency-inspects-nearly-700-veterinary-facilities-in-georgia/",
+      "note": "Press article; only mentions the Ministry/NFA complaints hotline 1501. No official clinic register found."
+    },
+    {
+      "name": "eMia - vet clinic lists (Georgia, Batumi)",
+      "url": "https://emia.ge/en/vet-clinics",
+      "note": "Aggregator, lists names/addresses and an 'Emergency' badge without phones or hours; used only as leads (see notes)."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "G-Vet",
+      "city": "Kutaisi",
+      "region": "Imereti",
+      "emergency_24h": true,
+      "duty": "Emergency help advertised as available 24/7 (Georgian-language site). Call ahead.",
+      "small_animals": true,
+      "url": "https://g-vet.ge/",
+      "source_url": "https://g-vet.ge/",
+      "checked": "2026-11-11",
+      "quote": "სასწრაფო დახმარება 24/7",
+      "note": "Only the og:description was readable; no address, phone, hours or species obtained. Phone-less, listed on url. Species unknown; small_animals assumed from a general vet clinic, verify."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet House (Veterinary Hospital)",
+      "city": "Tbilisi",
+      "region": "Tbilisi",
+      "address": "70 Adam Mickiewicz St, Tbilisi",
+      "phone": "+995 322 470005",
+      "emergency_24h": false,
+      "duty": "Published hours 10:00-20:00 daily; call ahead for emergencies. Dog and cat hospital with a cat department.",
+      "small_animals": true,
+      "url": "https://vethouse.ge/vet_hospital_en",
+      "source_url": "https://vethouse.ge/vet_hospital_en",
+      "checked": "2026-11-11",
+      "note": "Own page says 'round-the-clock hospital for animals' and 'emergency medical care 24/7' but also lists working hours 10:00-20:00 and reception 10:00-19:30 daily - contradictory, so emergency_24h left false. Madloba lists a second phone +995 596 11 00 05."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vetlife Animal Hospital",
+      "city": "Tbilisi",
+      "region": "Tbilisi",
+      "address": "41 Simon Kandelaki St, Tbilisi",
+      "phone": "032 230 50 59",
+      "emergency_24h": false,
+      "duty": "Open daily 10:00-19:00 (as published by the clinic).",
+      "small_animals": true,
+      "url": "https://vetlife.ge/en_us/",
+      "source_url": "https://vetlife.ge/en_us/",
+      "checked": "2026-11-11",
+      "note": "Own site: Mon-Sun 10:00-19:00, no 24 h statement. A Vet Times article calls Vetlife a 24-hour small animal hospital - conflicting, not used. Second phone +995 322 305 950."
+    },
+    {
+      "kind": "clinic",
+      "name": "Bionika Vet Clinic",
+      "city": "Tbilisi",
+      "region": "Tbilisi",
+      "address": "63 Beri Gabriel Salosi St, Isani, Tbilisi",
+      "phone": "+995 511 25 24 70",
+      "emergency_24h": false,
+      "duty": "Open daily 11:00-20:00 (as published by the clinic). Dogs and cats.",
+      "small_animals": true,
+      "url": "https://bionika.ge/index.html",
+      "source_url": "https://bionika.ge/index.html",
+      "checked": "2026-11-11",
+      "note": "'24/7' on the page is the AI chat assistant, not in-person care."
+    },
+    {
+      "kind": "clinic",
+      "name": "Zooplaza 24-hour veterinary clinic",
+      "city": "Tbilisi",
+      "region": "Tbilisi",
+      "address": "67 Kostava St, Saburtalo, Tbilisi",
+      "phone": "233 43 01",
+      "emergency_24h": false,
+      "duty": "Listed as a 24-hour clinic by directories; confirm by phone before travelling.",
+      "small_animals": true,
+      "url": "https://www.zooplaza.ge",
+      "source_url": "https://www.yell.ge/company.php?lan=eng&id=106824",
+      "checked": "2026-11-11",
+      "note": "Own site zooplaza.ge could not be fetched (provenance block). Only directories (yell.ge, petstory.ge) say '24-hour clinic'; yell.ge page re-checked 2026-11-11: name, address and phones match, no closure comment seen on the fetched page (earlier note of a user closure comment not reproduced). Other phones: 236 32 04, 599 520 558. Not marked 24 h per rules (aggregator only)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vetmedi",
+      "city": "Tbilisi",
+      "region": "Tbilisi",
+      "address": "18 Zhiuli Shartava St, Tbilisi",
+      "phone": "+995 511 20 66 40",
+      "emergency_24h": false,
+      "duty": "Listed by directories as open 24 hours daily; confirm by phone before travelling.",
+      "small_animals": true,
+      "url": "https://www.facebook.com/vetmedicalclinic/",
+      "source_url": "https://madloba.info/en/tbilisi/veterinarnye-kliniki/vetmedi/",
+      "checked": "2026-11-11",
+      "note": "Only aggregator (Madloba) says 'open 24 hours Mon-Sun'; no own website found, Facebook cannot be fetched. Candidate 24 h clinic - verify."
+    },
+    {
+      "kind": "clinic",
+      "name": "Golden Vet Batumi",
+      "city": "Batumi",
+      "region": "Adjara",
+      "address": "8 Giorgi Leonidze St, Batumi (confirm address before a visit; house calls offered)",
+      "phone": "+995 595 09 02 35",
+      "emergency_24h": false,
+      "duty": "By appointment: Mon-Fri 10:00-18:00, Sun 11:00-16:00, Sat closed. House calls. Dogs, cats, rabbits, guinea pigs, rodents.",
+      "small_animals": true,
+      "url": "https://goldenvetbatumi.site/eng",
+      "source_url": "https://goldenvetbatumi.site/eng",
+      "checked": "2026-11-11",
+      "note": "Own site; no 24 h statement."
+    }
+  ],
+  "notes": "Georgia: only 7 entries, because most pages could not be used. No official national register of clinics, duty rota or animal poison line was found (NFA, nfa.gov.ge, could not be opened: WebFetch provenance block; the only official contact seen, via Georgia Today, is the Ministry of Environmental Protection and Agriculture complaints hotline 1501, not a vet line). No duty_rota or poison_line entries. Only one own-site 24/7 claim (G-Vet Kutaisi, emergency help 24/7, and Vet House's contradictory 'round-the-clock' wording). Leads not yet verified from own pages (aggregator-only, names/addresses from eMia and Madloba): Tbilisi - Aibo (45 Sulkhan Tsintsadze St, Saburtalo); Batumi - GAF Batumi (49 Tbel Abuseridze St, emergency badge), Chuki (23 Kaczynski St and 16A Inasaridze St, emergency badge), Stark (107 Chavchavadze St), 4paws (22 Melikishvili St), Vet Help (8 Griboedov St), Ventura, IM-PULS, EuroVetServis, Kalandadze clinic; Kutaisi - NEOVET (Queen Tamar St, emergency badge), Geo-Vet (43 Chavchavadze Ave, emergency badge), Pet Med (45 Chavchavadze Ave), Kalandadze (21 Akaki Tsereteli St); Rustavi - Doctor Aibolit (34 M. Kostava Ave, emergency badge), Vet City; Telavi - Medoni (41D Agmashenebeli Ave); Zugdidi - VetHealth (15 Ioane Lazi St); Poti - 911-VET; Khashuri - GAF. Not found at all: Gori, Kazbegi/Stepantsminda, Borjomi, Mestia. Unreachable: nfa.gov.ge, zooplaza.ge, facebook pages (robots), yell.ge Agrarian University vet clinic page, batumiguide.ge (robots), vethouse.ge about/home (redirect loop http/https). Independent check 2026-11-11: all 8 entry source pages re-opened; names and phones confirmed for all 7 remaining entries, no phone fixes; G-Vet 24/7 claim confirmed on its own page (meta description only, no phone); Vet House, Vetlife, Bionika, Golden Vet, Zooplaza, Vetmedi stay emergency_24h false (own-page contradiction or aggregator-only); Balto removed (Madloba marks it Temporarily Closed, comments say it is not functioning and the building is for rent)."
+}
