@@ -10,7 +10,8 @@
     "es": "Menta",
     "it": "Menta",
     "nl": "Munt",
-    "pl": "Mięta"
+    "pl": "Mięta",
+    "cs": "Máta"
   },
   "question": {
     "en": "Can dogs eat mint?",
@@ -21,7 +22,8 @@
     "es": "¿Pueden los perros comer menta?",
     "it": "I cani possono mangiare la menta?",
     "nl": "Mogen honden munt eten?",
-    "pl": "Czy psy mogą jeść miętę?"
+    "pl": "Czy psy mogą jeść miętę?",
+    "cs": "Mohou psi jíst mátu?"
   },
   "url_slug": {
     "en": "mint",
@@ -32,7 +34,8 @@
     "es": "menta",
     "it": "menta",
     "nl": "munt",
-    "pl": "mieta"
+    "pl": "mieta",
+    "cs": "mata"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "es": "No, es mejor mantener la menta lejos de los perros. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los perros por sus aceites esenciales, que pueden provocar vómitos y diarrea si se come mucha. Los chicles, los caramelos y la pasta de dientes de menta también pueden ser peligrosos, porque pueden contener xilitol.",
     "it": "No, meglio tenere la menta lontana dai cani. L’ASPCA indica la menta da giardino come tossica per i cani a causa degli oli essenziali, che in grandi quantità possono causare vomito e diarrea. Anche chewing gum, caramelle e dentifrici alla menta possono essere pericolosi, perché possono contenere xilitolo.",
     "nl": "Nee, houd munt liever uit de buurt van je hond. De ASPCA noemt tuinmunt giftig voor honden vanwege de etherische oliën, die braken en diarree kunnen veroorzaken als een hond er veel van eet. Ook kauwgom, snoep en tandpasta met munt kunnen gevaarlijk zijn, omdat er xylitol in kan zitten.",
-    "pl": "Nie, miętę lepiej trzymać z dala od psów. ASPCA uznaje miętę ogrodową za toksyczną dla psów z powodu olejków eterycznych, które po zjedzeniu dużej ilości mogą wywołać wymioty i biegunkę. Niebezpieczne mogą być też miętowa guma do żucia, miętowe cukierki i pasta do zębów, bo mogą zawierać ksylitol."
+    "pl": "Nie, miętę lepiej trzymać z dala od psów. ASPCA uznaje miętę ogrodową za toksyczną dla psów z powodu olejków eterycznych, które po zjedzeniu dużej ilości mogą wywołać wymioty i biegunkę. Niebezpieczne mogą być też miętowa guma do żucia, miętowe cukierki i pasta do zębów, bo mogą zawierać ksylitol.",
+    "cs": "Ne, psům je lepší mátu nedávat. ASPCA řadí mátu zahradní mezi rostliny toxické pro psy kvůli obsahu éterických olejů, které po snědení většího množství mohou způsobit zvracení a průjem. Nebezpečné mohou být také mátové žvýkačky, bonbony a zubní pasty, protože mohou obsahovat xylitol."
   },
   "why": {
     "en": "Garden mint (Mentha) contains essential oils; the ASPCA lists it as toxic to dogs, with vomiting and diarrhoea after large ingestions. Pet Poison Helpline also says mint is not safe for dogs to consume. Products that contain mint may also contain xylitol, a sweetener that is severely toxic to dogs. Because the plant itself causes signs mainly in large amounts, we rate it not recommended; mint products with xylitol are an emergency.",
@@ -55,7 +59,8 @@
     "es": "La menta de jardín (Mentha) contiene aceites esenciales; la ASPCA la incluye entre las plantas tóxicas para los perros, con vómitos y diarrea tras ingerir grandes cantidades. Pet Poison Helpline también advierte de que la menta no es segura para los perros. Además, los productos con menta pueden contener xilitol, un edulcorante muy tóxico para los perros. Como la propia planta provoca síntomas sobre todo en cantidades grandes, la clasificamos como no recomendada; en cambio, los productos de menta con xilitol son una urgencia.",
     "it": "La menta da giardino (Mentha) contiene oli essenziali; l’ASPCA la indica come tossica per i cani, con vomito e diarrea dopo l’ingestione di grandi quantità. Anche Pet Poison Helpline afferma che la menta non è sicura per i cani. I prodotti che contengono menta possono contenere anche xilitolo, un dolcificante estremamente tossico per i cani. Poiché la pianta in sé causa sintomi soprattutto in grandi quantità, la classifichiamo come sconsigliata; i prodotti alla menta con xilitolo sono un’emergenza.",
     "nl": "Tuinmunt (Mentha) bevat etherische oliën; de ASPCA noemt de plant giftig voor honden, met braken en diarree nadat een hond er veel van heeft gegeten. Ook Pet Poison Helpline zegt dat munt niet veilig is voor honden. In producten met munt kan bovendien xylitol zitten, een zoetstof die zeer giftig is voor honden. Omdat de plant zelf vooral in grote hoeveelheden verschijnselen geeft, beoordelen we munt als niet aan te raden; producten met munt waarin xylitol zit, zijn een noodgeval.",
-    "pl": "Mięta ogrodowa (Mentha) zawiera olejki eteryczne; ASPCA uznaje ją za toksyczną dla psów i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. Pet Poison Helpline również podaje, że mięta nie jest bezpieczna dla psów. Produkty zawierające miętę mogą też zawierać ksylitol, słodzik silnie toksyczny dla psów. Ponieważ sama roślina wywołuje objawy głównie po zjedzeniu dużych ilości, oceniamy ją jako niezalecaną; produkty miętowe z ksylitolem to nagły przypadek."
+    "pl": "Mięta ogrodowa (Mentha) zawiera olejki eteryczne; ASPCA uznaje ją za toksyczną dla psów i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. Pet Poison Helpline również podaje, że mięta nie jest bezpieczna dla psów. Produkty zawierające miętę mogą też zawierać ksylitol, słodzik silnie toksyczny dla psów. Ponieważ sama roślina wywołuje objawy głównie po zjedzeniu dużych ilości, oceniamy ją jako niezalecaną; produkty miętowe z ksylitolem to nagły przypadek.",
+    "cs": "Máta zahradní (Mentha) obsahuje éterické oleje; ASPCA ji řadí mezi rostliny toxické pro psy a po snědení velkého množství uvádí zvracení a průjem. Pet Poison Helpline také uvádí, že pro psy není máta bezpečná. Výrobky s mátou mohou navíc obsahovat xylitol, sladidlo, které je pro psy vysoce toxické. Protože samotná rostlina působí potíže hlavně ve velkém množství, řadíme ji mezi nedoporučené; výrobky s mátou a xylitolem představují naléhavý případ."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "pl": [
       "Wymioty",
       "Biegunka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "es": "Si tu perro ha comido un producto de menta que pueda contener xilitol, como un chicle, un caramelo o pasta de dientes, acude enseguida a un veterinario. En caso de intoxicación, contacta con tu veterinario o con una línea de información toxicológica para animales.",
     "it": "Se il tuo cane ha mangiato un prodotto alla menta, come chewing gum, caramelle o dentifricio, che potrebbe contenere xilitolo, rivolgiti subito a un veterinario. In caso di emergenza da avvelenamento, contatta il veterinario o un centro antiveleni veterinario.",
     "nl": "Heeft je hond een product met munt gegeten waarin xylitol kan zitten, zoals kauwgom, snoep of tandpasta, ga dan meteen naar de dierenarts. Bij een vergiftiging neem je contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
-    "pl": "Jeśli pies zjadł produkt miętowy, który może zawierać ksylitol (na przykład gumę do żucia, cukierki lub pastę do zębów), od razu zgłoś się do weterynarza. W razie zatrucia zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt."
+    "pl": "Jeśli pies zjadł produkt miętowy, który może zawierać ksylitol (na przykład gumę do żucia, cukierki lub pastę do zębów), od razu zgłoś się do weterynarza. W razie zatrucia zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
+    "cs": "Pokud váš pes snědl mátovou žvýkačku, bonbon nebo zubní pastu, které mohou obsahovat xylitol, okamžitě vyhledejte veterinární pomoc. V případě otravy se obraťte na veterináře nebo na toxikologickou linku pro zvířata."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "es": "Las hojas de menta y los caramelos de menta no son para los perros. Si un perro encuentra chicles o caramelos de menta, avisa enseguida a un adulto.",
     "it": "Le foglie di menta e le caramelle alla menta non sono per i cani. Se un cane trova chewing gum o caramelle alla menta, dillo subito a un adulto.",
     "nl": "Muntblaadjes en muntsnoepjes zijn niet voor honden. Vindt een hond kauwgom of snoepjes met munt? Vertel het dan meteen aan een volwassene.",
-    "pl": "Liście mięty i miętowe słodycze nie są dla psów. Jeśli pies znajdzie miętową gumę lub słodycze, od razu powiedz o tym dorosłemu."
+    "pl": "Liście mięty i miętowe słodycze nie są dla psów. Jeśli pies znajdzie miętową gumę lub słodycze, od razu powiedz o tym dorosłemu.",
+    "cs": "Lístky máty a mátové bonbony nejsou pro psy. Pokud pes najde mátovou žvýkačku nebo bonbony, hned to řekni dospělému."
   },
   "faq": [
     {
@@ -129,7 +140,8 @@
         "es": "¿Son peligrosos para los perros los chicles o caramelos de menta?",
         "it": "I chewing gum o le caramelle alla menta sono pericolosi per i cani?",
         "nl": "Zijn kauwgom en snoep met munt gevaarlijk voor honden?",
-        "pl": "Czy miętowa guma do żucia lub cukierki są niebezpieczne dla psów?"
+        "pl": "Czy miętowa guma do żucia lub cukierki są niebezpieczne dla psów?",
+        "cs": "Jsou mátové žvýkačky nebo bonbony pro psy nebezpečné?"
       },
       "a": {
         "en": "Yes. Mint products such as gum, candy and toothpaste can be dangerous for dogs because they may contain xylitol. If your dog ate one, seek veterinary care right away.",
@@ -140,7 +152,8 @@
         "es": "Sí. Los productos de menta, como los chicles, los caramelos y la pasta de dientes, pueden ser peligrosos para los perros, porque pueden contener xilitol. Si tu perro ha comido alguno, acude enseguida a un veterinario.",
         "it": "Sì. I prodotti alla menta come chewing gum, caramelle e dentifrici possono essere pericolosi per i cani perché possono contenere xilitolo. Se il tuo cane ne ha mangiato uno, rivolgiti subito a un veterinario.",
         "nl": "Ja. Producten met munt, zoals kauwgom, snoep en tandpasta, kunnen gevaarlijk zijn voor honden, omdat er xylitol in kan zitten. Heeft je hond er iets van gegeten, ga dan meteen naar de dierenarts.",
-        "pl": "Tak. Produkty miętowe, takie jak guma do żucia, cukierki i pasta do zębów, mogą być niebezpieczne dla psów, bo mogą zawierać ksylitol. Jeśli pies coś takiego zjadł, od razu zgłoś się do weterynarza."
+        "pl": "Tak. Produkty miętowe, takie jak guma do żucia, cukierki i pasta do zębów, mogą być niebezpieczne dla psów, bo mogą zawierać ksylitol. Jeśli pies coś takiego zjadł, od razu zgłoś się do weterynarza.",
+        "cs": "Ano. Výrobky s mátou, například žvýkačky, bonbony a zubní pasty, mohou být pro psy nebezpečné, protože mohou obsahovat xylitol. Pokud je váš pes snědl, okamžitě vyhledejte veterinární pomoc."
       }
     }
   ],
@@ -241,6 +254,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fca4d1506e6250c706ecbb56462c789f83d7a368dbfe3da0391abca1e77ee808"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc613b131e742eddde47a72e1eb78a44f2f9ce469a4ab29d554f38ba3bb6910b"
     }
   }
 }

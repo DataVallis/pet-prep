@@ -10,7 +10,8 @@
     "es": "Albahaca",
     "it": "Basilico",
     "nl": "Basilicum",
-    "pl": "Bazylia"
+    "pl": "Bazylia",
+    "cs": "Bazalka"
   },
   "question": {
     "en": "Can cats eat basil?",
@@ -21,7 +22,8 @@
     "es": "¿Pueden los gatos comer albahaca?",
     "it": "I gatti possono mangiare il basilico?",
     "nl": "Mogen katten basilicum eten?",
-    "pl": "Czy koty mogą jeść bazylię?"
+    "pl": "Czy koty mogą jeść bazylię?",
+    "cs": "Mohou kočky jíst bazalku?"
   },
   "url_slug": {
     "en": "basil",
@@ -32,7 +34,8 @@
     "es": "albahaca",
     "it": "basilico",
     "nl": "basilicum",
-    "pl": "bazylia"
+    "pl": "bazylia",
+    "cs": "bazalka"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "es": "Sí, un mordisquito de albahaca al natural de vez en cuando no pasa nada. La ASPCA incluye la albahaca, también la dulce y la tailandesa, entre las plantas no tóxicas para los gatos. Aun así, los gatos no la necesitan, y cualquier planta puede provocar vómitos o malestar de estómago.",
     "it": "Sì, ogni tanto un piccolo assaggio di basilico al naturale va bene. L’ASPCA indica il basilico, compreso quello dolce e quello thai, come non tossico per i gatti. Ai gatti però non serve, e qualsiasi pianta può provocare vomito o disturbi di stomaco.",
     "nl": "Ja, af en toe een klein hapje basilicum, zonder iets erop of eraan, kan prima. De ASPCA noemt basilicum, ook zoete en Thaise basilicum, niet giftig voor katten. Katten hebben het alleen niet nodig, en van elke plant kan een kat gaan braken of maagklachten krijgen.",
-    "pl": "Tak, od czasu do czasu odrobina zwykłej bazylii do skubnięcia jest w porządku. ASPCA uznaje bazylię, w tym bazylię pospolitą i tajską, za nietoksyczną dla kotów. Koty jednak jej nie potrzebują, a każda roślina może wywołać wymioty lub rozstrój żołądka."
+    "pl": "Tak, od czasu do czasu odrobina zwykłej bazylii do skubnięcia jest w porządku. ASPCA uznaje bazylię, w tym bazylię pospolitą i tajską, za nietoksyczną dla kotów. Koty jednak jej nie potrzebują, a każda roślina może wywołać wymioty lub rozstrój żołądka.",
+    "cs": "Ano, občas si kočka může kousek obyčejné bazalky ukousnout. ASPCA řadí bazalku, včetně bazalky pravé a thajské, mezi rostliny netoxické pro kočky. Kočky ji ale nepotřebují a jakákoli rostlina může způsobit zvracení nebo žaludeční potíže."
   },
   "why": {
     "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
@@ -55,7 +59,8 @@
     "es": "La ASPCA incluye la albahaca (Ocimum basilicum, también llamada albahaca dulce y albahaca tailandesa) entre las plantas no tóxicas para los gatos. Cats Protection explica que incluso las plantas no tóxicas pueden provocar malestar de barriga si se comen, y la ASPCA indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. PDSA dice que los gatos no necesitan nada más que una alimentación completa, aunque un premio ocasional no hace daño.",
     "it": "L’ASPCA indica il basilico (Ocimum basilicum, detto anche basilico dolce e basilico thai) come non tossico per i gatti. Cats Protection spiega che anche le piante non tossiche, se mangiate, possono comunque causare disturbi di pancia, e l’ASPCA segnala che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Secondo PDSA ai gatti non serve altro che un’alimentazione completa, anche se ogni tanto un premio va bene.",
     "nl": "De ASPCA noemt basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) niet giftig voor katten. Cats Protection legt uit dat ook niet-giftige planten de maag van streek kunnen maken als een kat ze eet, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Volgens PDSA hebben katten niets nodig behalve een compleet kattenvoer, al kan af en toe een traktatie prima.",
-    "pl": "ASPCA uznaje bazylię (Ocimum basilicum, zwaną też bazylią pospolitą i bazylią tajską) za nietoksyczną dla kotów. Cats Protection wyjaśnia, że nawet nietoksyczne rośliny mogą po zjedzeniu rozstroić żołądek, a ASPCA zaznacza, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. PDSA podaje, że koty nie potrzebują niczego poza pełnowartościową karmą, choć smakołyk od czasu do czasu nie zaszkodzi."
+    "pl": "ASPCA uznaje bazylię (Ocimum basilicum, zwaną też bazylią pospolitą i bazylią tajską) za nietoksyczną dla kotów. Cats Protection wyjaśnia, że nawet nietoksyczne rośliny mogą po zjedzeniu rozstroić żołądek, a ASPCA zaznacza, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. PDSA podaje, że koty nie potrzebują niczego poza pełnowartościową karmą, choć smakołyk od czasu do czasu nie zaszkodzi.",
+    "cs": "ASPCA řadí bazalku (Ocimum basilicum, též bazalka pravá a thajská) mezi rostliny netoxické pro kočky. Cats Protection vysvětluje, že i netoxické rostliny mohou po snědení způsobit zažívací potíže, a ASPCA upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. PDSA uvádí, že kočky nepotřebují nic kromě kompletní stravy, i když příležitostný pamlsek je v pořádku."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "es": "La albahaca no es tóxica para los gatos, pero, como cualquier planta, puede provocar vómitos o malestar de estómago. Dale solo un trocito pequeño de vez en cuando.",
     "it": "Il basilico non è tossico per i gatti, ma come qualsiasi pianta può causare vomito o disturbi di stomaco. Limitati a un assaggio occasionale, di un solo boccone.",
     "nl": "Basilicum is niet giftig voor katten, maar net als elke plant kan het braken of maagklachten veroorzaken. Houd het bij af en toe een klein hapje.",
-    "pl": "Bazylia jest nietoksyczna dla kotów, ale jak każda roślina może wywołać wymioty lub rozstrój żołądka. Niech to będzie tylko odrobina i tylko od czasu do czasu."
+    "pl": "Bazylia jest nietoksyczna dla kotów, ale jak każda roślina może wywołać wymioty lub rozstrój żołądka. Niech to będzie tylko odrobina i tylko od czasu do czasu.",
+    "cs": "Bazalka není pro kočky toxická, ale jako každá rostlina může způsobit zvracení nebo žaludeční potíže. Dávejte ji jen občas a jen malý kousek."
   },
   "serving": {
     "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
@@ -78,7 +84,8 @@
     "es": "Solo un trocito pequeño de hoja de albahaca al natural, como premio ocasional.",
     "it": "Solo un assaggio di una foglia di basilico al naturale, grande quanto un boccone, come premio occasionale.",
     "nl": "Alleen af en toe, als traktatie, een klein hapje van een basilicumblaadje zonder iets erop of eraan.",
-    "pl": "Tylko kawałeczek zwykłego liścia bazylii jako smakołyk od czasu do czasu."
+    "pl": "Tylko kawałeczek zwykłego liścia bazylii jako smakołyk od czasu do czasu.",
+    "cs": "Jen malý kousek obyčejného lístku bazalky, jako příležitostný pamlsek."
   },
   "child": {
     "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
@@ -89,7 +96,8 @@
     "es": "La albahaca no es dañina para los gatos, pero no la necesitan. Con un mordisquito basta; lo mejor es su propia comida para gatos.",
     "it": "Il basilico non fa male ai gatti, ma a loro non serve. Un assaggino basta e avanza: per loro è meglio il cibo per gatti.",
     "nl": "Basilicum doet katten geen kwaad, maar ze hebben het niet nodig. Een piepklein hapje is meer dan genoeg. Hun eigen kattenvoer is het allerbeste.",
-    "pl": "Bazylia nie szkodzi kotom, ale one jej nie potrzebują. Wystarczy odrobinka; najlepsza jest ich własna karma."
+    "pl": "Bazylia nie szkodzi kotom, ale one jej nie potrzebują. Wystarczy odrobinka; najlepsza jest ich własna karma.",
+    "cs": "Bazalka kočkám neškodí, ale nepotřebují ji. Stačí malinký kousek, nejlepší je jejich vlastní kočičí krmivo."
   },
   "faq": [],
   "sources": [
@@ -178,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "29d66d7c69b4a47d1dedddd9a2e598fc521a226e907845ab7f6405da74c5cb8b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2a941ef4b04fcc670fed32123f1938183f3c0bc3b1f2e64d15f52e10e299e1e"
     }
   }
 }
