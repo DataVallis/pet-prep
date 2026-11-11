@@ -169,7 +169,7 @@ Potrjeno v kodi:
 **Predčasen konec:**
 > **SPREMEMBA PRAVILA — potrdil David 30. 10. (Š3):** otrok lahko po **1. krogu** konča (»Končaj«). Pravočasne pohvale 1. kroga štejejo v napredek (× 8/6 kot doslej); porabljen čas = dejanska dolžina; **rutina »Šolanje« šteje samo dokončana vaja (oba kroga)**. Danes se nedokončana vaja ne šteje nič (`training_session_not_over`).
 
-**Dnevne omejitve in merilniki (nespremenjeni):** 7 min / pes / dan, pošten delež, ena vaja hkrati, rutina = ena dokončana vaja, −2 % za dan brez vaje, učinki potty / place. Trajanje vaje: ukaz, ki ga uboga, ≈ 0,3–1,5 + 5 + 1,5 + 1,2 + 0,7 = **8,7–9,9 s**, prezrt 4,5 s → krog **~14–30 s**, vaja **~35–64 s** (danes 33–70 s) → v 7 min še vedno ~6–8 vaj.
+**Dnevne omejitve in merilniki (nespremenjeni):** 7 min / pes / dan, pošten delež, ena vaja hkrati, rutina = ena dokončana vaja, −2 % za dan brez vaje (od 11. 11. 2026 samo ukazom, ki še niso naučeni — naučen ukaz pri 100 % ne pada, David), učinki potty / place. Trajanje vaje: ukaz, ki ga uboga, ≈ 0,3–1,5 + 5 + 1,5 + 1,2 + 0,7 = **8,7–9,9 s**, prezrt 4,5 s → krog **~14–30 s**, vaja **~35–64 s** (danes 33–70 s) → v 7 min še vedno ~6–8 vaj.
 
 **Besedila (vse ostalo so ikone):**
 
@@ -489,7 +489,7 @@ Merilo za izbirne posnetke A–C: po fazi 3 David pogleda posnetke zaslona na en
 | **P2** | šteje samo, če velja vse (8 stran, 4 četrtine, ≥ 50 % stran, vsak skok v 2 s, ne enakomerno) | ~~zvezdice: 3 izmiki + ulov, šteje pri ≥ 2; izmik samo z mirovanjem pred skokom (👀 1,5 s prej, zadnjo 1 s brez premika — David 31. 10.), v 150–1500 ms, v polju, pod hitrostno mejo~~ → **od 8. 11. 2026 (David »naredi bolj preprosto igro«):** ★ za vsak izpust peresa med znakom 👀 (2 s); prezgodaj / nikoli = nič; šteje pri 3 ulovih (§5.3) |
 | ~~**P0**~~ | odpade s fazo 0 (David 30. 10.) | — |
 
-Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole, 7 min / dan in pošten delež, rutine, Care Score, cilj in razmik iger muce, merilnik »Igra«, opraskan kavč, žoga (3 meti, mood only), vsa pravila nereda.
+Nespremenjeno: okno pohvale, verjetnost ubogljivosti, napredek in upadanje šole (od 11. 11. 2026 naučen ukaz pri 100 % ne pada — PRODUCT_SPEC §5), 7 min / dan in pošten delež, rutine, Care Score, cilj in razmik iger muce, merilnik »Igra«, opraskan kavč, žoga (3 meti, mood only), vsa pravila nereda.
 
 ---
 

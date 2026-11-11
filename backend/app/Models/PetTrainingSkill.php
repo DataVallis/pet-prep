@@ -38,6 +38,22 @@ class PetTrainingSkill extends Model
         ];
     }
 
+    /**
+     * Learned (»naučeno«): the DISPLAYED progress is 100 (PRODUCT_SPEC §6 —
+     * thresholds follow the displayed value, half up: 99.5 counts). The one
+     * definition for the payload's `learned` and the decay exemption
+     * (David 2026-11-11: a learned command does not decay).
+     */
+    public static function isMasteredProgress(float|int|string|null $progress): bool
+    {
+        return Pet::displayValue($progress) >= 100;
+    }
+
+    public function isMastered(): bool
+    {
+        return self::isMasteredProgress($this->progress);
+    }
+
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);
