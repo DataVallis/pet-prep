@@ -95,6 +95,9 @@
       "phone": "0361 934 8915",
       "emergency_24h": true,
       "duty": "Vets on site 24 hours a day, 7 days a week, including public holidays. WhatsApp 0812 3208 1334.",
+      "duty_i18n": {
+        "fr": "Vétérinaires sur place 24 h/24, 7 j/7, jours fériés compris. WhatsApp : 0812 3208 1334."
+      },
       "url": "https://www.sunsetvetbali.com/",
       "source_url": "https://www.sunsetvetbali.com/contact-us",
       "note": "Contact page: \"Kuta (24-hour)\"; emergency-treatment page: \"staff on-site 24 hours a day, 7 days a week\", covers Nyepi. Same facts on about-us page."
@@ -110,6 +113,9 @@
       "phone": "0361 975 296",
       "emergency_24h": false,
       "duty": "Open 08:00-22:00. For out-of-hours emergencies use the Kuta 24-hour hospital (0361 934 8915).",
+      "duty_i18n": {
+        "fr": "Ouvert 8 h–22 h. Pour les urgences en dehors des heures d’ouverture, s’adresser à l’hôpital ouvert 24 h/24 de Kuta (0361 934 8915)."
+      },
       "url": "https://www.sunsetvetbali.com/",
       "source_url": "https://www.sunsetvetbali.com/contact-us",
       "note": "Contact page \"Ubud (8am-10pm)\". Emergency-treatment page meta description says \"24hr vet clinic in Kuta and Ubud\" but contact/about pages only call Kuta 24-hour, so false."
@@ -125,6 +131,9 @@
       "phone": "+62 811 389 3171",
       "emergency_24h": false,
       "duty": "Call ahead to confirm opening hours and emergency cover.",
+      "duty_i18n": {
+        "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences."
+      },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
       "note": "BVC states 24-hour critical care for Sanur, Canggu and Tabanan; the page does not clearly tie this to the Pererenan branch (home page header \"24 hour Emergency\" with 3171 is not branch-specific). Downgraded by checker 2026-11-10."
@@ -140,6 +149,9 @@
       "phone": "+62 811 389 3170",
       "emergency_24h": true,
       "duty": "24-hour emergency care; emergency line +62 811 389 3171.",
+      "duty_i18n": {
+        "fr": "Urgences 24 h/24 ; ligne d’urgence : +62 811 389 3171."
+      },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
       "note": "Ambulance page: \"24-hour critical care at our Sanur, Canggu, and Tabanan clinics\"."
@@ -155,6 +167,9 @@
       "phone": "+62 819 9332 8888",
       "emergency_24h": true,
       "duty": "24-hour critical care; emergency line +62 811 389 3171.",
+      "duty_i18n": {
+        "fr": "Soins intensifs 24 h/24 ; ligne d’urgence : +62 811 389 3171."
+      },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
       "note": "Ambulance page names Tabanan among the 24-hour critical care clinics; contact page lists no hours."
@@ -170,6 +185,9 @@
       "phone": "+62 813 911 911 29",
       "emergency_24h": false,
       "duty": "Open daily 09:00-21:00.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 9 h–21 h."
+      },
       "url": "https://www.islandvetbali.com/",
       "source_url": "https://www.islandvetbali.com/contact-us",
       "note": "No 24-hour or emergency wording."
@@ -184,6 +202,9 @@
       "phone": "+62 361 701408",
       "emergency_24h": true,
       "duty": "Advertises a 24-hour emergency vet service. WhatsApp 0811 3993630.",
+      "duty_i18n": {
+        "fr": "Annonce un service vétérinaire d’urgence 24 h/24. WhatsApp : 0811 3993630."
+      },
       "url": "https://www.kedongananveterinary.com/",
       "source_url": "https://www.kedongananveterinary.com/",
       "note": "Home page header \"Bali 24 Hours Emergency Vet Service\"; no street address in text (map link only), no regular hours."
@@ -199,6 +220,9 @@
       "phone": "0811-3890-030",
       "emergency_24h": false,
       "duty": "Reported to be open around the clock; call to confirm.",
+      "duty_i18n": {
+        "fr": "Ouvert en continu d’après les informations disponibles ; appelez pour confirmer."
+      },
       "source_url": "https://www.balipetcrusaders.org/recommended-vets",
       "note": "Only NGO lists (Bali Pet Crusaders recommended vets; The B.A.R.N. vet directory) say 24 hours; no own website opened, so emergency_24h left false. Address from a search result title only (voofla), not a page opened."
     },
@@ -212,6 +236,9 @@
       "phone": "0851-0044-9306",
       "emergency_24h": false,
       "duty": "Reported to be open around the clock; call to confirm.",
+      "duty_i18n": {
+        "fr": "Ouvert en continu d’après les informations disponibles ; appelez pour confirmer."
+      },
       "source_url": "https://www.balipetcrusaders.org/recommended-vets",
       "note": "Bali Pet Crusaders list says 24 hours; no own site; no address. Left false."
     },
@@ -226,6 +253,9 @@
       "phone": "0822 2010 5100",
       "emergency_24h": true,
       "duty": "Emergency unit (IGD) open 24 hours; 24-hour WhatsApp admin 0822 2010 5100.",
+      "duty_i18n": {
+        "fr": "Service des urgences (IGD) ouvert 24 h/24 ; accueil joignable sur WhatsApp 24 h/24 : 0822 2010 5100."
+      },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
       "note": "Home page labels the Tomang branch 24 jam; title \"Klinik Dokter Hewan IGD 24 Jam di Jakarta Barat\". Services page repeats IGD 24 Jam."
@@ -241,6 +271,9 @@
       "phone": "0852 8222 0744",
       "emergency_24h": false,
       "duty": "Regular hours; for 24-hour emergencies use the Tomang branch (0822 2010 5100).",
+      "duty_i18n": {
+        "fr": "Horaires habituels ; pour les urgences 24 h/24, s’adresser à la clinique de Tomang (0822 2010 5100)."
+      },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
       "note": "Only Tomang is labelled 24 jam; no hours given for Meruya."
@@ -256,6 +289,9 @@
       "phone": "0838 9034 1313",
       "emergency_24h": false,
       "duty": "Regular hours; for 24-hour emergencies use the Tomang branch (0822 2010 5100).",
+      "duty_i18n": {
+        "fr": "Horaires habituels ; pour les urgences 24 h/24, s’adresser à la clinique de Tomang (0822 2010 5100)."
+      },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
       "note": "Only Tomang is labelled 24 jam; no hours given for Cengkareng."
@@ -271,6 +307,9 @@
       "phone": "085819977797",
       "emergency_24h": false,
       "duty": "Call ahead to confirm opening hours and emergency cover.",
+      "duty_i18n": {
+        "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences."
+      },
       "url": "https://sehatianimalcare.com/",
       "source_url": "https://sehatianimalcare.com/",
       "note": "Home page \"buka 24 jam\" is company-wide and not assigned to this branch; no hours listed. Downgraded by checker 2026-11-10."
@@ -286,6 +325,9 @@
       "phone": "089688859977",
       "emergency_24h": false,
       "duty": "Call ahead to confirm opening hours and emergency cover.",
+      "duty_i18n": {
+        "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences."
+      },
       "url": "https://sehatianimalcare.com/",
       "source_url": "https://sehatianimalcare.com/",
       "note": "Home page \"buka 24 jam\" is company-wide and not assigned to this branch; Cipulir section has no 24-hour wording. Downgraded by checker 2026-11-10."
@@ -301,6 +343,9 @@
       "phone": "+62 813-9888-6500",
       "emergency_24h": false,
       "duty": "Open 08:00-20:00. Urgent care offered during opening hours.",
+      "duty_i18n": {
+        "fr": "Ouvert 8 h–20 h. Soins urgents assurés pendant les heures d’ouverture."
+      },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/kuningan-branch",
       "note": "No 24-hour wording on any modernvet page (urgent-care page opened too)."
@@ -316,6 +361,9 @@
       "phone": "+62 813-9888-6500",
       "emergency_24h": false,
       "duty": "Open 08:00-20:00.",
+      "duty_i18n": {
+        "fr": "Ouvert 8 h–20 h."
+      },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/pik-branch",
       "note": "Shared WhatsApp/phone for all branches."
@@ -331,6 +379,9 @@
       "phone": "+62 813-9888-6500",
       "emergency_24h": false,
       "duty": "Open every day 08:00-22:00.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 8 h–22 h."
+      },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/radio-dalam-branch",
       "note": "Page map pin points to the Kuningan address; confirm location."
@@ -346,6 +397,9 @@
       "phone": "+62 813-9888-6500",
       "emergency_24h": false,
       "duty": "Open daily 08:00-20:00.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 8 h–20 h."
+      },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/kemang",
       "note": "Page map link shows a different (Guntur) address; address taken from page text and whatsnewindonesia article. BSD City branch (Tangerang) listed on locations page without address."
@@ -361,6 +415,9 @@
       "phone": "+62 811 1998 5100",
       "emergency_24h": false,
       "duty": "Emergency care offered; call ahead for hours.",
+      "duty_i18n": {
+        "fr": "Soins d’urgence assurés ; appelez pour connaître les horaires."
+      },
       "url": "https://medivet.pet/",
       "source_url": "https://medivet.pet/",
       "note": "Home page lists \"Emergency Care\" but no hours or 24-hour wording."
@@ -404,6 +461,9 @@
       "phone": "081282053578",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h."
+      },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
     },
@@ -418,6 +478,9 @@
       "phone": "021 4523136 / 021 4534658",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h."
+      },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
     },
@@ -432,6 +495,9 @@
       "phone": "021 4241880",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h."
+      },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
     },
@@ -445,6 +511,9 @@
       "phone": "081219486598",
       "emergency_24h": false,
       "duty": "Advertises a 24-hour emergency service; call first to confirm a vet is available.",
+      "duty_i18n": {
+        "fr": "Annonce un service d’urgences 24 h/24 ; appelez d’abord pour vous assurer qu’un vétérinaire est disponible."
+      },
       "url": "https://rnpetcare.com/",
       "source_url": "https://rnpetcare.com/layanan-kesehatan-hewan-24-jam/",
       "note": "Pages say \"Siaga 24 Jam Nonstop\" / \"Layanan Penanganan Darurat Medis Anabul 24 Jam\" but footer says Mon-Fri 09:00-18:00, weekends closed, placeholder emails, no street address: contradictory, so emergency_24h false. Branches named: Cipayung, Ciracas, Bintara, Depok, Tangerang Selatan, Jakarta Pusat."
@@ -460,6 +529,9 @@
       "phone": "0251-8471431",
       "emergency_24h": false,
       "duty": "Mon-Wed 10:00-16:00, Fri 08:00-16:30 (Thu and weekend not listed); call ahead.",
+      "duty_i18n": {
+        "fr": "Lun.–mer. 10 h–16 h, ven. 8 h–16 h 30 (jeudi et week-end non indiqués) ; appelez avant de venir."
+      },
       "url": "https://skhb.ipb.ac.id/rshp/",
       "source_url": "https://skhb.ipb.ac.id/rshp/",
       "note": "Official SKHB page; no 24-hour or emergency wording (also svmbs.ipb.ac.id/?p=17967)."
@@ -475,6 +547,9 @@
       "phone": "+62 822-2909-4131 / +62 858-0633-6433 (WhatsApp)",
       "emergency_24h": true,
       "duty": "Emergency unit (IGD) open 24 hours; contact via WhatsApp admin.",
+      "duty_i18n": {
+        "fr": "Service des urgences (IGD) ouvert 24 h/24 ; contact via l’accueil sur WhatsApp."
+      },
       "url": "https://rsh.unair.ac.id/",
       "source_url": "https://rsh.unair.ac.id/",
       "note": "Home page shows \"IGD 24 Jam\" and the two WhatsApp admins. unair.ac.id news \"Pet Festival 2023 ... Peresmian Layanan 24 Jam\" says \"RSHP UNAIR buka selama 24 jam penuh\"; Lebaran 2026 article says emergency unit keeps running. Doctor shift list (jadwal-dokter) includes 23:00-07:00. unair.ac.id/rsh/ is a different hospital (Banyuwangi). rshp.unair.ac.id blocked by robots."
@@ -489,6 +564,9 @@
       "phone": "+62816509222",
       "emergency_24h": false,
       "duty": "Call ahead to confirm opening hours and emergency cover.",
+      "duty_i18n": {
+        "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences."
+      },
       "url": "https://kandpclinic.com/",
       "source_url": "https://kandpclinic.com/",
       "note": "Footer \"from 0:00hs a 24:00hs\" and visitor testimonials only; clinic gives no explicit 24-hour claim of its own. Street address not on page. Downgraded by checker 2026-11-10."
@@ -503,6 +581,9 @@
       "address": "Jl. Ikan Dorang No. 15, Perak Barat, Surabaya",
       "emergency_24h": false,
       "duty": "Mon-Fri 07:30-15:00; Sat 08:00-14:00 (online registration).",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 7 h 30–15 h ; sam. 8 h–14 h (inscription en ligne)."
+      },
       "url": "https://surabaya.go.id/id/berita/76481/pemkot-surabaya-sediakan-layanan-klinik-hewan-secara-gratis",
       "source_url": "https://surabaya.go.id/id/berita/76481/pemkot-surabaya-sediakan-layanan-klinik-hewan-secara-gratis",
       "note": "City news article from Oct 2023; no phone; registration site dkpp.surabaya.go.id could not be opened (client error)."
@@ -515,6 +596,9 @@
       "region": "East Java",
       "emergency_24h": false,
       "duty": "Mon-Thu 07:00-15:30, Fri 07:00-14:30, Sat by appointment.",
+      "duty_i18n": {
+        "fr": "Lun.–jeu. 7 h–15 h 30, ven. 7 h–14 h 30, sam. sur rendez-vous."
+      },
       "url": "https://disnak.jatimprov.go.id/web/pages/33-rumah-sakit-hewan-dinas-peternakan-jawa-timur",
       "source_url": "https://disnak.jatimprov.go.id/web/pages/33-rumah-sakit-hewan-dinas-peternakan-jawa-timur",
       "note": "Provincial page: no address, phone or city; serves pets, livestock and conservation animals. No 24 h."
@@ -530,6 +614,9 @@
       "phone": "0274-4463259",
       "emergency_24h": true,
       "duty": "Open every day, 24 hours non-stop, including an emergency unit. 24-hour mobile 0857-0111-1228.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours, 24 h/24 sans interruption, avec un service d’urgences. Mobile 24 h/24 : 0857-0111-1228."
+      },
       "url": "https://klinikhewanjogja.com/",
       "source_url": "https://klinikhewanjogja.com/",
       "note": "Home page: \"24 jam nonstop\", emergency unit 24 jam. Announcement page on klinikhewankhjsemarang.com gives 0857-0111-1228 as 24-hour contact and 0811-2656-224 for working hours."
@@ -545,6 +632,9 @@
       "phone": "088806800745",
       "emergency_24h": false,
       "duty": "Open Monday to Sunday; call for hours.",
+      "duty_i18n": {
+        "fr": "Ouvert du lundi au dimanche ; appelez pour connaître les horaires."
+      },
       "url": "https://animalovavetclinic.wordpress.com/",
       "source_url": "https://animalovavetclinic.wordpress.com/"
     },
@@ -559,6 +649,9 @@
       "phone": "0815-4277-8888",
       "emergency_24h": true,
       "duty": "Open every day, 24 hours non-stop, including an emergency unit.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours, 24 h/24 sans interruption, avec un service d’urgences."
+      },
       "url": "https://klinikhewankhjsemarang.com/",
       "source_url": "https://klinikhewankhjsemarang.com/",
       "note": "Home page \"24 Jam Nonstop\", UGD 24 jam; landline 0247-0044013."
@@ -574,6 +667,9 @@
       "phone": "+62 821-8703-5969",
       "emergency_24h": false,
       "duty": "Open 08:00-21:00; inpatients monitored around the clock, night staff 22:00-07:00.",
+      "duty_i18n": {
+        "fr": "Ouvert 8 h–21 h ; patients hospitalisés surveillés en permanence, personnel de nuit 22 h–7 h."
+      },
       "url": "https://satwasehatindonesia.com/",
       "source_url": "https://satwasehatindonesia.com/",
       "note": "Page also advertises an animal ambulance \"Satse-Go\" 24 h (article URL satwasehatindonesia.com/ambulance-hewan-malang-satsego/ not opened). Walk-in hours end 21:00, so false."
@@ -589,6 +685,9 @@
       "phone": "(022) 54418156",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-18:00.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–18 h."
+      },
       "url": "https://highlandvetbandung.wixsite.com/website",
       "source_url": "https://highlandvetbandung.wixsite.com/website"
     },
@@ -603,6 +702,9 @@
       "phone": "(022) 6020611 / 0811226152",
       "emergency_24h": false,
       "duty": "Call ahead for appointments, including Sundays and public holidays.",
+      "duty_i18n": {
+        "fr": "Appelez pour prendre rendez-vous, y compris le dimanche et les jours fériés."
+      },
       "url": "https://dokterhewanbandung.com/",
       "source_url": "https://dokterhewanbandung.com/contact-us",
       "note": "Page lists hours \"during the COVID-19 pandemic\" (Mon-Sat 08:00-13:00 and 16:00-18:00): outdated, not published."
@@ -618,6 +720,9 @@
       "phone": "082363151970",
       "emergency_24h": true,
       "duty": "Advertised as a 24-hour clinic with 24-hour emergency service; call ahead.",
+      "duty_i18n": {
+        "fr": "Annoncée comme clinique ouverte 24 h/24 avec service d’urgences 24 h/24 ; appelez avant de venir."
+      },
       "url": "https://mamsprivatepetville.com/",
       "source_url": "https://mamsprivatepetville.com/",
       "note": "Page: \"klinik hewan 24 Jam di Medan\", \"Emergency 24 Jam\"; no hours table."
@@ -633,6 +738,9 @@
       "phone": "(0411) 861087",
       "emergency_24h": false,
       "duty": "Operating 07:00-02:00 (WITA); doctor consultations until 02:00; emergency service for critical cases advertised. WhatsApp 0823-3292-2222.",
+      "duty_i18n": {
+        "fr": "Ouvert 7 h–2 h (WITA) ; consultations jusqu’à 2 h ; service d’urgences annoncé pour les cas critiques. WhatsApp : 0823-3292-2222."
+      },
       "url": "https://makassarpetclinic.com/",
       "source_url": "https://makassarpetclinic.com/",
       "note": "Contact section headed \"BUKA 24 JAM\" and a 24-hour emergency service is described, but the stated hours are 07:00-02:00, so false. FAQ says to call to confirm after-hours."
@@ -648,6 +756,9 @@
       "phone": "+62 811-776-6222",
       "emergency_24h": false,
       "duty": "Open daily 09:00-19:00; cats, emergencies handled when called.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 9 h–19 h ; clinique pour chats, urgences prises en charge sur appel."
+      },
       "url": "https://duniakucing.id/",
       "source_url": "https://duniakucing.id/kontak-kami/",
       "note": "Cat specialist clinic; says ready for emergencies \"kapan saja\" but hours 09:00-19:00."
@@ -663,6 +774,9 @@
       "phone": "081312388992",
       "emergency_24h": false,
       "duty": "Vets on rota roughly 08:00-21:00 on most days; call to book.",
+      "duty_i18n": {
+        "fr": "Vétérinaires présents environ 8 h–21 h la plupart des jours ; appelez pour prendre rendez-vous."
+      },
       "url": "https://zeroanimalclinic.co.id/",
       "source_url": "https://zeroanimalclinic.co.id/",
       "note": "Outside the focus cities; no 24-hour wording."

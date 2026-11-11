@@ -50,7 +50,8 @@
       "duty": "Open 24 hours, every day; phone at any time of day on +371 67288539. Pharmacy on site.",
       "duty_i18n": {
         "hr": "Otvoreno 24 sata, svaki dan; telefon u bilo koje doba dana na +371 67288539. Ljekarna u sklopu klinike.",
-        "de": "Täglich rund um die Uhr geöffnet; jederzeit telefonisch erreichbar unter +371 67288539. Apotheke im Haus."
+        "de": "Täglich rund um die Uhr geöffnet; jederzeit telefonisch erreichbar unter +371 67288539. Apotheke im Haus.",
+        "fr": "Ouvert 24 h/24, tous les jours ; téléphone à toute heure au +371 67288539. Pharmacie sur place."
       },
       "small_animals": true,
       "url": "https://vet.lv/diennakts-veterinara-klinika/",
@@ -70,7 +71,8 @@
       "duty": "24-hour emergency veterinary care; call +371 67500494 before arriving so staff can prepare (or be directed to another clinic if overloaded). Regular appointments: +371 28805353, Mon-Fri 9-20, Sat-Sun 9-19.",
       "duty_i18n": {
         "hr": "Hitna veterinarska skrb 24 h; nazovi +371 67500494 prije dolaska kako bi se osoblje moglo pripremiti (ili te uputiti u drugu kliniku ako je preopterećena). Redoviti termini: +371 28805353, pon–pet 9–20, sub–ned 9–19.",
-        "de": "Notdienst rund um die Uhr; bitte vor dem Besuch +371 67500494 anrufen, damit das Team sich vorbereiten kann (oder bei Überlastung an eine andere Klinik verwiesen wird). Reguläre Termine: +371 28805353, Mo–Fr 9–20 Uhr, Sa–So 9–19 Uhr."
+        "de": "Notdienst rund um die Uhr; bitte vor dem Besuch +371 67500494 anrufen, damit das Team sich vorbereiten kann (oder bei Überlastung an eine andere Klinik verwiesen wird). Reguläre Termine: +371 28805353, Mo–Fr 9–20 Uhr, Sa–So 9–19 Uhr.",
+        "fr": "Urgences vétérinaires 24 h/24 ; appelez le +371 67500494 avant de venir afin que l’équipe se prépare (ou vous oriente vers une autre clinique en cas de surcharge). Rendez-vous habituels : +371 28805353, lun.–ven. 9 h–20 h, sam.–dim. 9 h–19 h."
       },
       "small_animals": true,
       "url": "https://www.petcity.lv/candera-klinika",
@@ -90,7 +92,8 @@
       "duty": "Emergency veterinary clinic open 24 hours a day, 7 days a week. Phone +371 61112345.",
       "duty_i18n": {
         "hr": "Hitna veterinarska klinika otvorena 24 sata dnevno, 7 dana u tjednu. Telefon +371 61112345.",
-        "de": "Notfallklinik, rund um die Uhr, 7 Tage die Woche geöffnet. Tel. +371 61112345."
+        "de": "Notfallklinik, rund um die Uhr, 7 Tage die Woche geöffnet. Tel. +371 61112345.",
+        "fr": "Clinique vétérinaire d’urgence ouverte 24 h/24, 7 j/7. Téléphone +371 61112345."
       },
       "small_animals": true,
       "url": "https://evidensia.lv/kliniku/vetklinika24/",
@@ -110,7 +113,8 @@
       "duty": "Mon-Sat 10:00-19:00, closed Sundays. For 24-hour care use the Dr. Beinerts clinic at Ģertrūdes iela 101.",
       "duty_i18n": {
         "hr": "pon–sub 10:00–19:00, nedjeljom zatvoreno. Za skrb 24 h obrati se klinici Dr. Beinerts, Ģertrūdes iela 101.",
-        "de": "Mo–Sa 10–19 Uhr, sonntags geschlossen. Für die Versorgung rund um die Uhr bitte die Klinik Dr. Beinerts in der Ģertrūdes iela 101 aufsuchen."
+        "de": "Mo–Sa 10–19 Uhr, sonntags geschlossen. Für die Versorgung rund um die Uhr bitte die Klinik Dr. Beinerts in der Ģertrūdes iela 101 aufsuchen.",
+        "fr": "Lun.–sam. 10 h–19 h, fermé le dimanche. Pour les soins 24 h/24, s’adresser à la clinique Dr. Beinerts, Ģertrūdes iela 101."
       },
       "small_animals": true,
       "url": "https://vet.lv/klinikas/",
@@ -129,7 +133,8 @@
       "duty": "Open every day 8:00-24:00 (check by phone). Phones +371 67543421, +371 29475105.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 8:00–24:00 (provjeri telefonom). Telefoni +371 67543421, +371 29475105.",
-        "de": "Täglich 8–24 Uhr geöffnet (bitte telefonisch nachfragen). Telefon +371 67543421, +371 29475105."
+        "de": "Täglich 8–24 Uhr geöffnet (bitte telefonisch nachfragen). Telefon +371 67543421, +371 29475105.",
+        "fr": "Ouvert tous les jours 8 h–24 h (à vérifier par téléphone). Téléphones +371 67543421, +371 29475105."
       },
       "small_animals": true,
       "url": "https://kavet.org/en/",
@@ -148,7 +153,8 @@
       "duty": "Mon-Fri 9:00-20:00, Sat-Sun 10:00-15:00, by appointment; emergency care among services.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–20:00, sub–ned 10:00–15:00, uz prethodnu najavu; hitna skrb dio je ponude.",
-        "de": "Mo–Fr 9–20 Uhr, Sa–So 10–15 Uhr, nach Terminvereinbarung; Notfallversorgung gehört zum Angebot."
+        "de": "Mo–Fr 9–20 Uhr, Sa–So 10–15 Uhr, nach Terminvereinbarung; Notfallversorgung gehört zum Angebot.",
+        "fr": "Lun.–ven. 9 h–20 h, sam.–dim. 10 h–15 h, sur rendez-vous ; urgences parmi les services proposés."
       },
       "small_animals": true,
       "url": "https://mbh.lv/lv/par-kliniku",
@@ -167,7 +173,8 @@
       "duty": "Mon-Fri 9:00-20:00, Sat 9:00-18:00, closed Sunday. In emergencies call first (mobile +371 27654646).",
       "duty_i18n": {
         "hr": "pon–pet 9:00–20:00, sub 9:00–18:00, nedjeljom zatvoreno. U hitnim slučajevima nazovi unaprijed (mobitel +371 27654646).",
-        "de": "Mo–Fr 9–20 Uhr, Sa 9–18 Uhr, So geschlossen. Im Notfall bitte vorher anrufen (Mobil +371 27654646)."
+        "de": "Mo–Fr 9–20 Uhr, Sa 9–18 Uhr, So geschlossen. Im Notfall bitte vorher anrufen (Mobil +371 27654646).",
+        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–18 h, fermé le dimanche. En cas d’urgence, appelez d’abord (mobile +371 27654646)."
       },
       "small_animals": true,
       "url": "https://www.anivet.lv/",
@@ -186,7 +193,8 @@
       "duty": "Mon-Fri 9:00-20:00, Sat 9:00-17:00, closed Sunday. In emergencies call first (mobile +371 27654645).",
       "duty_i18n": {
         "hr": "pon–pet 9:00–20:00, sub 9:00–17:00, nedjeljom zatvoreno. U hitnim slučajevima nazovi unaprijed (mobitel +371 27654645).",
-        "de": "Mo–Fr 9–20 Uhr, Sa 9–17 Uhr, So geschlossen. Im Notfall bitte vorher anrufen (Mobil +371 27654645)."
+        "de": "Mo–Fr 9–20 Uhr, Sa 9–17 Uhr, So geschlossen. Im Notfall bitte vorher anrufen (Mobil +371 27654645).",
+        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–17 h, fermé le dimanche. En cas d’urgence, appelez d’abord (mobile +371 27654645)."
       },
       "small_animals": true,
       "url": "https://www.anivet.lv/",
@@ -205,7 +213,8 @@
       "duty": "Mon-Fri 9:00-20:00 (19:00 in winter), Sat 9:00-18:00, Sun 10:00-15:00.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–20:00 (zimi do 19:00), sub 9:00–18:00, ned 10:00–15:00.",
-        "de": "Mo–Fr 9–20 Uhr (im Winter bis 19 Uhr), Sa 9–18 Uhr, So 10–15 Uhr."
+        "de": "Mo–Fr 9–20 Uhr (im Winter bis 19 Uhr), Sa 9–18 Uhr, So 10–15 Uhr.",
+        "fr": "Lun.–ven. 9 h–20 h (19 h en hiver), sam. 9 h–18 h, dim. 10 h–15 h."
       },
       "small_animals": true,
       "url": "https://www.klivet.lv/",
@@ -224,7 +233,8 @@
       "duty": "Open every day 9:00-20:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 9:00–20:00.",
-        "de": "Täglich 9–20 Uhr geöffnet."
+        "de": "Täglich 9–20 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 9 h–20 h."
       },
       "small_animals": true,
       "url": "https://dinozoopasaule.lv/lv/klinikas-un-aptiekas/kontakti",
@@ -243,7 +253,8 @@
       "duty": "Open every day 9:00-20:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 9:00–20:00.",
-        "de": "Täglich 9–20 Uhr geöffnet."
+        "de": "Täglich 9–20 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 9 h–20 h."
       },
       "small_animals": true,
       "url": "https://dinozoopasaule.lv/lv/klinikas-un-aptiekas/kontakti",
@@ -262,7 +273,8 @@
       "duty": "Mon-Fri 9:00-19:00.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–19:00.",
-        "de": "Mo–Fr 9–19 Uhr."
+        "de": "Mo–Fr 9–19 Uhr.",
+        "fr": "Lun.–ven. 9 h–19 h."
       },
       "small_animals": true,
       "url": "https://vet.lv/klinikas/",
@@ -281,7 +293,8 @@
       "duty": "Mon-Fri 9:00-19:00, Sat 9:00-15:00, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–19:00, sub 9:00–15:00, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 9–19 Uhr, Sa 9–15 Uhr, So geschlossen."
+        "de": "Mo–Fr 9–19 Uhr, Sa 9–15 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–15 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://www.slokavet.lv/",
@@ -300,7 +313,8 @@
       "duty": "Mon-Fri 9:00-17:00, Sat 9:00-14:00, Sunday by prior arrangement. Mobile +371 26164807.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–17:00, sub 9:00–14:00, nedjeljom po dogovoru. Mobitel +371 26164807.",
-        "de": "Mo–Fr 9–17 Uhr, Sa 9–14 Uhr, So nach Vereinbarung. Mobil +371 26164807."
+        "de": "Mo–Fr 9–17 Uhr, Sa 9–14 Uhr, So nach Vereinbarung. Mobil +371 26164807.",
+        "fr": "Lun.–ven. 9 h–17 h, sam. 9 h–14 h, dimanche sur accord préalable. Mobile +371 26164807."
       },
       "small_animals": true,
       "url": "https://dekstra.mozello.lv/",
@@ -319,7 +333,8 @@
       "duty": "University veterinary clinic, Mon-Fri 9:00-19:00; outside these hours emergency care 24/7. Small animals +371 29484198.",
       "duty_i18n": {
         "hr": "Sveučilišna veterinarska klinika, pon–pet 9:00–19:00; izvan tog vremena hitna skrb 24/7. Male životinje +371 29484198.",
-        "de": "Universitäre Tierklinik, Mo–Fr 9–19 Uhr; außerhalb dieser Zeiten Notdienst rund um die Uhr. Kleintiere: +371 29484198."
+        "de": "Universitäre Tierklinik, Mo–Fr 9–19 Uhr; außerhalb dieser Zeiten Notdienst rund um die Uhr. Kleintiere: +371 29484198.",
+        "fr": "Clinique vétérinaire universitaire, lun.–ven. 9 h–19 h ; en dehors de ces horaires, urgences 24 h/24, 7 j/7. Petits animaux +371 29484198."
       },
       "small_animals": true,
       "url": "https://www.vk.lbtu.lv/en/",
@@ -339,7 +354,8 @@
       "duty": "Mon-Fri 9:00-19:00, weekends by prior appointment. Phones +371 28448418, +371 63082133.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–19:00, vikendom uz prethodnu najavu. Telefoni +371 28448418, +371 63082133.",
-        "de": "Mo–Fr 9–19 Uhr, am Wochenende nach vorheriger Terminvereinbarung. Telefon: +371 28448418, +371 63082133."
+        "de": "Mo–Fr 9–19 Uhr, am Wochenende nach vorheriger Terminvereinbarung. Telefon: +371 28448418, +371 63082133.",
+        "fr": "Lun.–ven. 9 h–19 h, week-end sur rendez-vous préalable. Téléphones +371 28448418, +371 63082133."
       },
       "small_animals": true,
       "url": "https://www.vetcentrs.lv/",
@@ -358,7 +374,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 10:00-14:00, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–18:00, sub 10:00–14:00, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 9–18 Uhr, Sa 10–14 Uhr, So geschlossen."
+        "de": "Mo–Fr 9–18 Uhr, Sa 10–14 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 10 h–14 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://www.liepajavet.lv/",
@@ -377,7 +394,8 @@
       "duty": "Mon-Fri 11:00-18:00 by appointment; urgent cases call +371 28802332.",
       "duty_i18n": {
         "hr": "pon–pet 11:00–18:00 uz prethodnu najavu; hitni slučajevi: nazovi +371 28802332.",
-        "de": "Mo–Fr 11–18 Uhr nach Terminvereinbarung; in dringenden Fällen unter +371 28802332 anrufen."
+        "de": "Mo–Fr 11–18 Uhr nach Terminvereinbarung; in dringenden Fällen unter +371 28802332 anrufen.",
+        "fr": "Lun.–ven. 11 h–18 h sur rendez-vous ; cas urgents : appelez le +371 28802332."
       },
       "small_animals": true,
       "url": "https://www.endijavet.lv/",
@@ -395,7 +413,8 @@
       "duty": "Mon-Fri 9:00-19:00, Sat-Sun 9:00-18:00; call ahead.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–19:00, sub–ned 9:00–18:00; nazovi unaprijed.",
-        "de": "Mo–Fr 9–19 Uhr, Sa–So 9–18 Uhr; bitte vorher anrufen."
+        "de": "Mo–Fr 9–19 Uhr, Sa–So 9–18 Uhr; bitte vorher anrufen.",
+        "fr": "Lun.–ven. 9 h–19 h, sam.–dim. 9 h–18 h ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.vetdaugavpils.lv/",
@@ -414,7 +433,8 @@
       "duty": "Mon-Fri 10:00-18:00 (break 14:00-15:00), Sat 10:00-13:00 by appointment, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 10:00–18:00 (stanka 14:00–15:00), sub 10:00–13:00 uz prethodnu najavu, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 10–18 Uhr (Pause 14–15 Uhr), Sa 10–13 Uhr nach Terminvereinbarung, So geschlossen."
+        "de": "Mo–Fr 10–18 Uhr (Pause 14–15 Uhr), Sa 10–13 Uhr nach Terminvereinbarung, So geschlossen.",
+        "fr": "Lun.–ven. 10 h–18 h (pause 14 h–15 h), sam. 10 h–13 h sur rendez-vous, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://www.cheirons.lv/",
@@ -433,7 +453,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-15:00, closed Sunday. Mobile +371 29479596.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–18:00, sub 9:00–15:00, nedjeljom zatvoreno. Mobitel +371 29479596.",
-        "de": "Mo–Fr 9–18 Uhr, Sa 9–15 Uhr, So geschlossen. Mobil +371 29479596."
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–15 Uhr, So geschlossen. Mobil +371 29479596.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–15 h, fermé le dimanche. Mobile +371 29479596."
       },
       "small_animals": true,
       "url": "https://www.vetambulance.lv/",
@@ -452,7 +473,8 @@
       "duty": "Call for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://vetoria.mozello.lv/",
@@ -471,7 +493,8 @@
       "duty": "Mon-Fri 8:00-18:00, Sat 9:00-14:00, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 8:00–18:00, sub 9:00–14:00, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So geschlossen."
+        "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–14 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://www.vet-serviss.lv/veterinara-klinika/valmiera",
@@ -490,7 +513,8 @@
       "duty": "Call for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.vet-serviss.lv/veterinara-klinika/valmiera",
@@ -509,7 +533,8 @@
       "duty": "Coastal clinic; call for opening hours.",
       "duty_i18n": {
         "hr": "Klinika na obali; radno vrijeme provjeri telefonom.",
-        "de": "Klinik an der Küste; Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Klinik an der Küste; Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Clinique côtière ; appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.vet-serviss.lv/veterinara-klinika/valmiera",
@@ -528,7 +553,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-15:00. Phones +371 64281544, +371 29299201.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–18:00, sub 9:00–15:00. Telefoni +371 64281544, +371 29299201.",
-        "de": "Mo–Fr 9–18 Uhr, Sa 9–15 Uhr. Telefon +371 64281544, +371 29299201."
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–15 Uhr. Telefon +371 64281544, +371 29299201.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–15 h. Téléphones +371 64281544, +371 29299201."
       },
       "small_animals": true,
       "url": "https://capsvet.lv/",
@@ -547,7 +573,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–18:00, sub 9:00–14:00, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 9–18 Uhr, Sa 9–14 Uhr, So geschlossen."
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–14 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–14 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://www.pargaujasvet.lv/",
@@ -566,7 +593,8 @@
       "duty": "Mon-Fri 9:00-17:30, Sat 9:00-14:00, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–17:30, sub 9:00–14:00, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 9–17.30 Uhr, Sa 9–14 Uhr, So geschlossen."
+        "de": "Mo–Fr 9–17.30 Uhr, Sa 9–14 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 9 h–17 h 30, sam. 9 h–14 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://tedijs.lv/",
@@ -585,7 +613,8 @@
       "duty": "Mon-Fri 10:00-19:00, Sat 10:00-17:00, closed Sunday; by appointment. Not a 24-hour clinic; visits outside hours possible by prior arrangement for 70 EUR.",
       "duty_i18n": {
         "hr": "pon–pet 10:00–19:00, sub 10:00–17:00, nedjeljom zatvoreno; uz prethodnu najavu. Ne radi 24 h; posjeti izvan radnog vremena mogući su po prethodnom dogovoru uz doplatak od 70 EUR.",
-        "de": "Mo–Fr 10–19 Uhr, Sa 10–17 Uhr, So geschlossen; nach Terminvereinbarung. Kein 24-Stunden-Notdienst; Besuche außerhalb der Öffnungszeiten sind nach vorheriger Absprache gegen 70 € möglich."
+        "de": "Mo–Fr 10–19 Uhr, Sa 10–17 Uhr, So geschlossen; nach Terminvereinbarung. Kein 24-Stunden-Notdienst; Besuche außerhalb der Öffnungszeiten sind nach vorheriger Absprache gegen 70 € möglich.",
+        "fr": "Lun.–ven. 10 h–19 h, sam. 10 h–17 h, fermé le dimanche ; sur rendez-vous. Pas de 24 h/24 ; consultations hors horaires possibles sur accord préalable pour 70 EUR."
       },
       "small_animals": true,
       "url": "https://www.nartivet.lv/",
@@ -604,7 +633,8 @@
       "duty": "Mon-Fri 9:00-19:00, Sat 9:00-17:00, Sun 9:00-15:00.",
       "duty_i18n": {
         "hr": "pon–pet 9:00–19:00, sub 9:00–17:00, ned 9:00–15:00.",
-        "de": "Mo–Fr 9–19 Uhr, Sa 9–17 Uhr, So 9–15 Uhr."
+        "de": "Mo–Fr 9–19 Uhr, Sa 9–17 Uhr, So 9–15 Uhr.",
+        "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–17 h, dim. 9 h–15 h."
       },
       "small_animals": true,
       "url": "https://www.ogresvetklinika.lv/",
@@ -623,7 +653,8 @@
       "duty": "Mon-Fri 10:00-14:00, Sat by appointment, closed Sunday.",
       "duty_i18n": {
         "hr": "pon–pet 10:00–14:00, sub uz prethodnu najavu, nedjeljom zatvoreno.",
-        "de": "Mo–Fr 10–14 Uhr, Sa nach Terminvereinbarung, So geschlossen."
+        "de": "Mo–Fr 10–14 Uhr, Sa nach Terminvereinbarung, So geschlossen.",
+        "fr": "Lun.–ven. 10 h–14 h, sam. sur rendez-vous, fermé le dimanche."
       },
       "small_animals": true,
       "url": "http://www.tukumavetklinika.lv/",

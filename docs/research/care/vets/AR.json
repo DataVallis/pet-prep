@@ -34,7 +34,8 @@
       "checked": "2026-11-09",
       "note": "Page opened 2026-11-09. Says 'Guardia Quirurgica' exists among services but gives no hours; equine hospital has no on-call. fvet.uba.ar itself could not be fetched (PROVENANCE_REQUIRED).",
       "duty_i18n": {
-        "de": "Kleintierklinik, geöffnet Mo–Fr 9–19 Uhr. Ein chirurgischer Bereitschaftsdienst wird erwähnt, seine Zeiten sind nicht veröffentlicht. Kein Notdienst rund um die Uhr."
+        "de": "Kleintierklinik, geöffnet Mo–Fr 9–19 Uhr. Ein chirurgischer Bereitschaftsdienst wird erwähnt, seine Zeiten sind nicht veröffentlicht. Kein Notdienst rund um die Uhr.",
+        "fr": "Hôpital pour petits animaux ouvert du lundi au vendredi, 9 h–19 h. Un service de chirurgie de garde est mentionné, mais ses horaires ne sont pas publiés. Pas d’urgences 24 h/24."
       }
     },
     {
@@ -52,7 +53,8 @@
       "checked": "2026-11-09",
       "note": "Source is a university news article dated 2015 (possibly outdated). Article: phones 420639 / 421037 int. 111-357 (8-17 h); emergencies int. 111-362; emergencies Mon-Fri 12-14 and 17-8, weekends and holidays; 'las 24 horas solo se atienden urgencias'. Not a plain '24 h' claim, so emergency_24h left false. Verify before relying.",
       "duty_i18n": {
-        "de": "Sprechzeiten Mo–Fr 10–12 und 14–17 Uhr. Notfälle werden außerhalb dieser Zeiten versorgt, auch nachts, am Wochenende und an Feiertagen; bitte vorher anrufen."
+        "de": "Sprechzeiten Mo–Fr 10–12 und 14–17 Uhr. Notfälle werden außerhalb dieser Zeiten versorgt, auch nachts, am Wochenende und an Feiertagen; bitte vorher anrufen.",
+        "fr": "Horaires habituels : lundi–vendredi 10 h–12 h et 14 h–17 h. Urgences prises en charge en dehors de ces horaires, y compris la nuit, le week-end et les jours fériés ; appelez avant de venir."
       }
     },
     {
@@ -69,7 +71,8 @@
       "checked": "2026-11-09",
       "note": "From the 2015 national RedArTox directory (opened 2026-11-09); SNITV's own page was not found via search. Phone and hours need re-verification.",
       "duty_i18n": {
-        "de": "Giftinformationsdienst für Tiere, werktags 8–18 Uhr. Nicht rund um die Uhr erreichbar."
+        "de": "Giftinformationsdienst für Tiere, werktags 8–18 Uhr. Nicht rund um die Uhr erreichbar.",
+        "fr": "Service d’information toxicologique vétérinaire, en semaine 8 h–18 h. Pas de ligne 24 h/24."
       }
     }
   ],

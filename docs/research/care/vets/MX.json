@@ -64,7 +64,8 @@
       "checked": "2026-11-09",
       "note": "Page opened; explicitly no 24 h statement. Also phones 5622 5865/5866. Page says urgencias service may be suspended in a contingency.",
       "duty_i18n": {
-        "de": "Kleintier-Lehrklinik der Universität. Notfälle Mo–Fr 8–17 Uhr und Sa 8–14 Uhr (kein 24-Stunden-Dienst); Termine Mo–Fr 10–17 Uhr, Sa 10–14 Uhr. Der Betrieb kann ohne Vorankündigung ausgesetzt werden."
+        "de": "Kleintier-Lehrklinik der Universität. Notfälle Mo–Fr 8–17 Uhr und Sa 8–14 Uhr (kein 24-Stunden-Dienst); Termine Mo–Fr 10–17 Uhr, Sa 10–14 Uhr. Der Betrieb kann ohne Vorankündigung ausgesetzt werden.",
+        "fr": "Hôpital universitaire pour petits animaux. Urgences lun.–ven. 8 h–17 h et sam. 8 h–14 h (pas de 24 h/24) ; rendez-vous lun.–ven. 10 h–17 h, sam. 10 h–14 h. Service pouvant être suspendu sans préavis."
       }
     },
     {
@@ -81,7 +82,8 @@
       "source_url": "https://www.vetalia.com.mx/sucursales/sucursal-polanco",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert du lundi au dimanche, 24 h/24."
       }
     },
     {
@@ -98,7 +100,8 @@
       "source_url": "https://www.vetalia.com.mx/sucursales/sucursal-condesa",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert du lundi au dimanche, 24 h/24."
       }
     },
     {
@@ -116,7 +119,8 @@
       "checked": "2026-11-09",
       "note": "Branch page says 'Lunes a Domingo / 24 horas' and the site FAQ lists Del Valle among 24 h branches, but its Urgencias card says 'Muy pronto en Del Valle'. Flagged for re-check. Moved from duty (2026-11-10): Hours listed as Monday to Sunday, 24 hours (as stated on source).",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet. Notdienst bitte vorher telefonisch bestätigen."
+        "de": "Täglich rund um die Uhr geöffnet. Notdienst bitte vorher telefonisch bestätigen.",
+        "fr": "Ouvert du lundi au dimanche, 24 h/24. Appelez pour confirmer le service d’urgence."
       }
     },
     {
@@ -133,7 +137,8 @@
       "source_url": "https://www.vetalia.com.mx/sucursales/vetalia-coapa",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
+        "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24."
       }
     },
     {
@@ -150,7 +155,8 @@
       "source_url": "https://www.vetalia.com.mx/sucursales/veterinaria-las-aguilas",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
+        "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24."
       }
     },
     {
@@ -167,7 +173,8 @@
       "source_url": "https://www.vetalia.com.mx/sucursales/veterinaria-pedregal",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+        "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
+        "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24."
       }
     },
     {
@@ -185,7 +192,8 @@
       "checked": "2026-11-09",
       "note": "Page: 'Las 24 Horas 7 Días de la semana, atendemos cualquier urgencia clínica'. FAQ lists 5243 7982 vs 5243 7482 elsewhere; 7482 used.",
       "duty_i18n": {
-        "de": "Notfälle und Labor täglich rund um die Uhr. Reguläre Öffnungszeiten Mo–Sa 11–21 Uhr."
+        "de": "Notfälle und Labor täglich rund um die Uhr. Reguläre Öffnungszeiten Mo–Sa 11–21 Uhr.",
+        "fr": "Urgences et laboratoire 24 h/24, 7 j/7. Horaires habituels lun.–sam. 11 h–21 h."
       }
     },
     {
@@ -202,7 +210,8 @@
       "source_url": "https://hospitalveterinariodelta.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer; WhatsApp nur für Nachrichten."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer; WhatsApp nur für Nachrichten.",
+        "fr": "Ouvert tous les jours, 24 h/24, 365 jours par an. Ligne d’urgence ; WhatsApp réservé aux messages."
       }
     },
     {
@@ -220,7 +229,8 @@
       "checked": "2026-11-09",
       "note": "Page gives no separate phone for Delta Gatos; the main Urgencias number is used.",
       "duty_i18n": {
-        "de": "Katzenklinik; täglich rund um die Uhr geöffnet."
+        "de": "Katzenklinik; täglich rund um die Uhr geöffnet.",
+        "fr": "Hôpital pour chats ; ouvert tous les jours, 24 h/24."
       }
     },
     {
@@ -238,7 +248,8 @@
       "checked": "2026-11-09",
       "note": "Phone is the main DELTA number; page gives no separate one.",
       "duty_i18n": {
-        "de": "Vorsorge, täglich 7.30–21 Uhr geöffnet. Kein 24-Stunden-Betrieb."
+        "de": "Vorsorge, täglich 7.30–21 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
+        "fr": "Soins préventifs, ouvert tous les jours 7 h 30–21 h. Site non ouvert 24 h/24."
       }
     },
     {
@@ -256,7 +267,8 @@
       "checked": "2026-11-09",
       "note": "Page banner lists a different emergency number (557095-1044 / 7095-2453); 55 4555 6302 used.",
       "duty_i18n": {
-        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Klinik Mo–Sa 10–18 Uhr, So 10–15 Uhr."
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Klinik Mo–Sa 10–18 Uhr, So 10–15 Uhr.",
+        "fr": "Urgences 24 h/24, 365 jours par an. Clinique lun.–sam. 10 h–18 h, dim. 10 h–15 h."
       }
     },
     {
@@ -273,7 +285,8 @@
       "source_url": "https://hospitalcarson.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet (Tagdienst 9–19.30 Uhr, Nachtdienst 19.31–8.59 Uhr)."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet (Tagdienst 9–19.30 Uhr, Nachtdienst 19.31–8.59 Uhr).",
+        "fr": "Ouvert 24 h/24, 365 jours par an (jour 9 h–19 h 30, nuit 19 h 31–8 h 59)."
       }
     },
     {
@@ -290,7 +303,8 @@
       "source_url": "https://www.aztekan.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr."
+        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr.",
+        "fr": "Service 24 h/24 ; urgences 24 h/24, 365 jours par an."
       }
     },
     {
@@ -307,7 +321,8 @@
       "source_url": "https://www.aztekan.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr."
+        "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr.",
+        "fr": "Service 24 h/24 ; urgences 24 h/24, 365 jours par an."
       }
     },
     {
@@ -325,7 +340,8 @@
       "checked": "2026-11-09",
       "note": "Branch text gives no hours; footer lists 'Hospital 24 horas' for all three addresses.",
       "duty_i18n": {
-        "de": "Tierklinik rund um die Uhr geöffnet."
+        "de": "Tierklinik rund um die Uhr geöffnet.",
+        "fr": "Hôpital ouvert 24 h/24."
       }
     },
     {
@@ -342,7 +358,8 @@
       "checked": "2026-11-09",
       "note": "Page gives no street address; WhatsApp scheduling staffed Mon-Sat 10:00-19:00 only.",
       "duty_i18n": {
-        "de": "Täglich und an Feiertagen rund um die Uhr geöffnet. Notfälle der Inneren Medizin rund um die Uhr."
+        "de": "Täglich und an Feiertagen rund um die Uhr geöffnet. Notfälle der Inneren Medizin rund um die Uhr.",
+        "fr": "Ouvert du lundi au dimanche et jours fériés, 24 h/24. Urgences de médecine interne 24 h/24."
       }
     },
     {
@@ -359,7 +376,8 @@
       "source_url": "https://animalhome.com.mx/hospital-veterinario-coapa-cdmx-animal-home/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Sprechstunde 9–19 Uhr, Nachtsprechstunde 19–9 Uhr."
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Sprechstunde 9–19 Uhr, Nachtsprechstunde 19–9 Uhr.",
+        "fr": "Urgences 24 h/24, 365 jours par an. Consultations 9 h–19 h, consultations de nuit 19 h–9 h."
       }
     },
     {
@@ -391,7 +409,8 @@
       "checked": "2026-11-09",
       "note": "Branch list says 'Servicio 24 hrs' / 'Urgencias 24 hrs'.",
       "duty_i18n": {
-        "de": "Notaufnahme rund um die Uhr geöffnet."
+        "de": "Notaufnahme rund um die Uhr geöffnet.",
+        "fr": "Urgences ouvertes 24 h/24."
       }
     },
     {
@@ -408,7 +427,8 @@
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
+        "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco)."
       }
     },
     {
@@ -425,7 +445,8 @@
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
+        "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco)."
       }
     },
     {
@@ -442,7 +463,8 @@
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
+        "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco)."
       }
     },
     {
@@ -459,7 +481,8 @@
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
+        "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco)."
       }
     },
     {
@@ -476,7 +499,8 @@
       "source_url": "https://www.petandvet.mx/sucursales",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale)."
+        "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
+        "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco)."
       }
     },
     {
@@ -494,7 +518,8 @@
       "checked": "2026-11-09",
       "note": "hospitalveterinarioroma.com redirects to this page.",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags."
+        "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags.",
+        "fr": "Ouvert 24 h/24, 7 j/7, dimanches et jours fériés compris."
       }
     },
     {
@@ -511,7 +536,8 @@
       "checked": "2026-11-09",
       "note": "Page gives no street address. Other branches (Oasis, Universidad, Pedregal) open daily 8:00-21:00, not checked individually.",
       "duty_i18n": {
-        "de": "Tierklinik in Condesa 365 Tage im Jahr rund um die Uhr geöffnet."
+        "de": "Tierklinik in Condesa 365 Tage im Jahr rund um die Uhr geöffnet.",
+        "fr": "Hôpital Condesa ouvert 24 h/24, 365 j/an."
       }
     },
     {
@@ -529,7 +555,8 @@
       "checked": "2026-11-09",
       "note": "Footer lists 55 7588 6159. A Condesa branch (55 5553 5818) has no address on the page; not added.",
       "duty_i18n": {
-        "de": "Das ganze Jahr über täglich rund um die Uhr geöffnet, für Vorsorge und Notfälle."
+        "de": "Das ganze Jahr über täglich rund um die Uhr geöffnet, für Vorsorge und Notfälle.",
+        "fr": "Ouvert 24 h/24, tous les jours de l’année, pour les soins préventifs et les urgences."
       }
     },
     {
@@ -547,7 +574,8 @@
       "checked": "2026-11-09",
       "note": "24-h claim only in the page meta description, not in visible text (downgraded by independent check 2026-11-09). Phone is the WhatsApp number given on the page. Moved from duty (2026-11-10): Hours not confirmed on the clinic page.",
       "duty_i18n": {
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires."
       }
     },
     {
@@ -564,7 +592,8 @@
       "checked": "2026-11-09",
       "note": "Page gives only 'Coyoacán, CDMX' (map link); read first 100000 of 118526 characters. Number also given as 'Emergencias'.",
       "duty_i18n": {
-        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Fachärzte für Orthopädie und Neurologie Mo–Fr."
+        "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Fachärzte für Orthopädie und Neurologie Mo–Fr.",
+        "fr": "Urgences 24 h/24, 365 j/an. Spécialistes en orthopédie et en neurologie du lun. au ven."
       }
     },
     {
@@ -582,7 +611,8 @@
       "checked": "2026-11-09",
       "note": "Both pages opened; page says 'Atención las 24 horas del día, los 7 días de la semana, los 365 días del año' and 'Urgencias 24/7'. The urgencias page also links to +52 998 354 4140 (differs from displayed 998 361 1641). Same group has a clinic in Estado de México (not listed).",
       "duty_i18n": {
-        "de": "Notfallversorgung täglich rund um die Uhr. Sprechstunde Mo–Sa 9–20 Uhr; sonntags nur Notfälle."
+        "de": "Notfallversorgung täglich rund um die Uhr. Sprechstunde Mo–Sa 9–20 Uhr; sonntags nur Notfälle.",
+        "fr": "Urgences 24 h/24, 7 j/7. Consultations lun.–sam. 9 h–20 h ; le dimanche, urgences uniquement."
       }
     },
     {
@@ -598,7 +628,8 @@
       "checked": "2026-11-09",
       "note": "Page opened but only title/meta rendered: 'Clínica Veterinaria 24 Horas' and 'Atención 24 horas, urgencias, vacunas y más. Clínicas en Zona Hotelera, Downtown y Puerto Cancún'. No phone/address/hours on the fetched page; /contacto could not be opened (not retrievable). Needs a follow-up for branch addresses and phones. Moved from duty (2026-11-10): Opening hours not published on the page.",
       "duty_i18n": {
-        "de": "Tierkliniken in der Hotelzone, in der Innenstadt und in Puerto Cancún. Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Tierkliniken in der Hotelzone, in der Innenstadt und in Puerto Cancún. Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Cliniques vétérinaires dans la Zone hôtelière, le centre-ville et Puerto Cancún. Appelez pour connaître les horaires d’ouverture."
       }
     },
     {
@@ -616,7 +647,8 @@
       "checked": "2026-11-09",
       "note": "Home page opened. Visible text does not state 24 h; only an image alt text reads 'Urgencias veterinarias 24 horas Cancún', so emergency_24h left false. Email info@kolitas.net. Moved from duty (2026-11-10): Opening hours not published.",
       "duty_i18n": {
-        "de": "Kleintierklinik in Jardines del Sur. Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Kleintierklinik in Jardines del Sur. Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Clinique pour petits animaux à Jardines del Sur. Appelez pour connaître les horaires d’ouverture."
       }
     },
     {
@@ -634,7 +666,8 @@
       "checked": "2026-11-09",
       "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
       "duty_i18n": {
-        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
+        "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24."
       }
     },
     {
@@ -652,7 +685,8 @@
       "checked": "2026-11-09",
       "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
       "duty_i18n": {
-        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
+        "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24."
       }
     },
     {
@@ -670,7 +704,8 @@
       "checked": "2026-11-09",
       "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
       "duty_i18n": {
-        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
+        "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–21 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24."
       }
     },
     {
@@ -688,7 +723,8 @@
       "checked": "2026-11-09",
       "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
       "duty_i18n": {
-        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
+        "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24."
       }
     },
     {
@@ -706,7 +742,8 @@
       "checked": "2026-11-09",
       "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page.",
       "duty_i18n": {
-        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb."
+        "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
+        "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–21 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24."
       }
     },
     {
@@ -724,7 +761,8 @@
       "checked": "2026-11-09",
       "note": "Contact page and home page opened. Contact page says Mon-Fri 9-19 on home, 9-19 on contact; no 24 h. Phone is also WhatsApp. Home page says urgencias only within regular hours for non-critical cases. Moved from duty (2026-11-10): Weekday hours taken from the contact page.",
       "duty_i18n": {
-        "de": "Mo–Fr 9–19 Uhr und Sa 9–16 Uhr; So geschlossen. Notfälle außerhalb der Öffnungszeiten: bitte zuerst anrufen, Sie werden telefonisch beraten. Englisch und Spanisch."
+        "de": "Mo–Fr 9–19 Uhr und Sa 9–16 Uhr; So geschlossen. Notfälle außerhalb der Öffnungszeiten: bitte zuerst anrufen, Sie werden telefonisch beraten. Englisch und Spanisch.",
+        "fr": "Lun.–ven. 9 h–19 h et sam. 9 h–16 h ; fermé le dimanche. Urgences hors horaires : appelez d’abord pour être guidé. Anglais et espagnol."
       }
     },
     {
@@ -742,7 +780,8 @@
       "checked": "2026-11-09",
       "note": "Page opened; no street address published.",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer und WhatsApp +52 33 2162 6445; Termine +52 33 2316 2714."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer und WhatsApp +52 33 2162 6445; Termine +52 33 2316 2714.",
+        "fr": "Ouvert 24 h/24, 365 j/an. Ligne d’urgence et WhatsApp +52 33 2162 6445 ; rendez-vous +52 33 2316 2714."
       }
     },
     {
@@ -759,7 +798,8 @@
       "source_url": "https://lomont.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
+        "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous."
       }
     },
     {
@@ -776,7 +816,8 @@
       "source_url": "https://lomont.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
+        "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous."
       }
     },
     {
@@ -793,7 +834,8 @@
       "source_url": "https://lomont.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
+        "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous."
       }
     },
     {
@@ -810,7 +852,8 @@
       "source_url": "https://lomont.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Rund um die Uhr geöffnet. Dringende Fälle ohne Termin."
+        "de": "Rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
+        "fr": "Ouvert 24 h/24. Urgences sans rendez-vous."
       }
     },
     {
@@ -827,7 +870,8 @@
       "source_url": "https://dactary.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Tierklinik 365 Tage im Jahr rund um die Uhr geöffnet. WhatsApp +52 33 3849 4603."
+        "de": "Tierklinik 365 Tage im Jahr rund um die Uhr geöffnet. WhatsApp +52 33 3849 4603.",
+        "fr": "Hôpital ouvert 24 h/24, 365 j/an. WhatsApp +52 33 3849 4603."
       }
     },
     {
@@ -845,7 +889,8 @@
       "checked": "2026-11-09",
       "note": "Page gives no separate hours for this branch; the 24 h statement applies to the main hospital.",
       "duty_i18n": {
-        "de": "Zweigstelle; Öffnungszeiten bitte telefonisch erfragen. Die Hauptklinik an der Av. Patria ist rund um die Uhr geöffnet."
+        "de": "Zweigstelle; Öffnungszeiten bitte telefonisch erfragen. Die Hauptklinik an der Av. Patria ist rund um die Uhr geöffnet.",
+        "fr": "Clinique annexe ; appelez pour connaître les horaires. L’hôpital principal, Av. Patria, est ouvert 24 h/24."
       }
     },
     {
@@ -862,7 +907,8 @@
       "source_url": "https://animalcarecentergdl.com/contacto/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Notfälle täglich rund um die Uhr; Sprechstunde täglich 9–20 Uhr."
+        "de": "Notfälle täglich rund um die Uhr; Sprechstunde täglich 9–20 Uhr.",
+        "fr": "Urgences 24 h/24, tous les jours ; consultations tous les jours 9 h–20 h."
       }
     },
     {
@@ -879,7 +925,8 @@
       "source_url": "https://animalcarecentergdl.com/contacto/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Sprechstunde täglich 9–21 Uhr. Notfälle rund um die Uhr in der Tierklinik an der Av. La Calma 4471."
+        "de": "Sprechstunde täglich 9–21 Uhr. Notfälle rund um die Uhr in der Tierklinik an der Av. La Calma 4471.",
+        "fr": "Consultations tous les jours 9 h–21 h. Urgences 24 h/24 à l’hôpital, Av. La Calma 4471."
       }
     },
     {
@@ -897,7 +944,8 @@
       "checked": "2026-11-09",
       "note": "Page also mentions consultations in San Pedro Garza García; address vs. text mismatch, confirm by phone.",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle. Termine +52 81 1871 0654."
+        "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle. Termine +52 81 1871 0654.",
+        "fr": "Ouvert 24 h/24, 7 j/7, urgences comprises. Rendez-vous +52 81 1871 0654."
       }
     },
     {
@@ -915,7 +963,8 @@
       "checked": "2026-11-09",
       "note": "Page also lists Petco in-store clinics (9-21 h, not 24 h); not added.",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet. Zweite Nummer: +52 81 8348 0492."
+        "de": "Täglich rund um die Uhr geöffnet. Zweite Nummer: +52 81 8348 0492.",
+        "fr": "Ouvert 24 h/24, 7 j/7. Deuxième ligne +52 81 8348 0492."
       }
     },
     {
@@ -931,7 +980,8 @@
       "checked": "2026-11-09",
       "note": "Independent check 2026-11-09: page body only shows a JavaScript notice; 24 h appears only in meta description, so not explicit. No phone readable. Downgraded. Moved from duty (2026-11-10): Check the website for opening hours.",
       "duty_i18n": {
-        "de": "Tierklinik mit Notfallversorgung; Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Tierklinik mit Notfallversorgung; Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Hôpital vétérinaire avec service d’urgences ; appelez pour connaître les horaires."
       }
     },
     {
@@ -948,7 +998,8 @@
       "source_url": "https://www.cvp.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet. Weitere Nummern: +52 222 169 6687 und +52 221 195 3312."
+        "de": "Täglich rund um die Uhr geöffnet. Weitere Nummern: +52 222 169 6687 und +52 221 195 3312.",
+        "fr": "Ouvert 24 h/24, tous les jours. Autres lignes +52 222 169 6687 et +52 221 195 3312."
       }
     },
     {
@@ -965,7 +1016,8 @@
       "source_url": "https://www.hveterinario.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, 7 j/7."
       }
     },
     {
@@ -983,7 +1035,8 @@
       "checked": "2026-11-09",
       "note": "Page labels only the Recta a Cholula unit as 24 h.",
       "duty_i18n": {
-        "de": "Öffnungszeiten bitte telefonisch erfragen. Die Tierklinik an der Recta a Cholula ist rund um die Uhr geöffnet."
+        "de": "Öffnungszeiten bitte telefonisch erfragen. Die Tierklinik an der Recta a Cholula ist rund um die Uhr geöffnet.",
+        "fr": "Appelez pour connaître les horaires. L’hôpital Recta a Cholula est ouvert 24 h/24."
       }
     },
     {
@@ -1000,7 +1053,8 @@
       "source_url": "https://hospitalveterinarioqueretaro24.com/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen. Telefon und WhatsApp."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen. Telefon und WhatsApp.",
+        "fr": "Ouvert 24 h/24, 365 j/an, week-ends et jours fériés compris. Téléphone et WhatsApp."
       }
     },
     {
@@ -1018,7 +1072,8 @@
       "checked": "2026-11-09",
       "note": "Page says 'Urgencias 24h previa llamada' but hours section limits to after-8pm by call; not treated as 24 h.",
       "duty_i18n": {
-        "de": "Täglich 10–20 Uhr geöffnet; nach 20 Uhr Notfälle nach vorherigem Anruf. WhatsApp +52 442 269 8977."
+        "de": "Täglich 10–20 Uhr geöffnet; nach 20 Uhr Notfälle nach vorherigem Anruf. WhatsApp +52 442 269 8977.",
+        "fr": "Ouvert tous les jours 10 h–20 h ; après 20 h, urgences sur appel préalable. WhatsApp +52 442 269 8977."
       }
     },
     {
@@ -1036,7 +1091,8 @@
       "checked": "2026-11-09",
       "note": "Only Sunday is explicitly 24 h, so emergency_24h false.",
       "duty_i18n": {
-        "de": "Nacht-Notfallklinik: Mo–Fr 18–8 Uhr, Sa von 13 bis 8 Uhr, So rund um die Uhr."
+        "de": "Nacht-Notfallklinik: Mo–Fr 18–8 Uhr, Sa von 13 bis 8 Uhr, So rund um die Uhr.",
+        "fr": "Hôpital d’urgences de nuit : lun.–ven. 18 h–8 h, sam. de 13 h à 8 h, dimanche 24 h/24."
       }
     },
     {
@@ -1053,7 +1109,8 @@
       "source_url": "https://www.profauna.com.mx/en",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr erreichbar. Telefon und WhatsApp."
+        "de": "Täglich rund um die Uhr erreichbar. Telefon und WhatsApp.",
+        "fr": "Service disponible 24 h/24, tous les jours. Téléphone et WhatsApp."
       }
     },
     {
@@ -1070,7 +1127,8 @@
       "source_url": "https://www.drzoo.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet. WhatsApp +52 619 507 7283."
+        "de": "Täglich rund um die Uhr geöffnet. WhatsApp +52 619 507 7283.",
+        "fr": "Ouvert 24 h/24, du lundi au dimanche. WhatsApp +52 619 507 7283."
       }
     },
     {
@@ -1087,7 +1145,8 @@
       "source_url": "https://www.emevet.com.mx/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Notfälle rund um die Uhr (Notfallnummer +52 664 356 3990). Reguläre Öffnungszeiten Mo–Sa 7–24 Uhr, So 9–24 Uhr."
+        "de": "Notfälle rund um die Uhr (Notfallnummer +52 664 356 3990). Reguläre Öffnungszeiten Mo–Sa 7–24 Uhr, So 9–24 Uhr.",
+        "fr": "Urgences 24 h/24 (ligne d’urgence +52 664 356 3990). Horaires habituels : lun.–sam. 7 h–24 h, dim. 9 h–24 h."
       }
     },
     {
@@ -1104,7 +1163,8 @@
       "source_url": "https://alivet.mx/toluca/hospital-veterinario-monarca",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet; Notfälle ohne Termin."
+        "de": "Täglich rund um die Uhr geöffnet; Notfälle ohne Termin.",
+        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences sans rendez-vous."
       }
     },
     {
@@ -1122,7 +1182,8 @@
       "checked": "2026-11-09",
       "note": "Page lists two different sets of emergency numbers; confirm.",
       "duty_i18n": {
-        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Weitere Nummer: +52 55 5373 4573; WhatsApp +52 56 1995 0824."
+        "de": "365 Tage im Jahr rund um die Uhr geöffnet. Weitere Nummer: +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
+        "fr": "Ouvert 24 h/24, 365 j/an. Aussi +52 55 5373 4573 ; WhatsApp +52 56 1995 0824."
       }
     },
     {
@@ -1139,7 +1200,8 @@
       "source_url": "https://puntovet.mx/urgencias-veterinarias-24-horas/",
       "checked": "2026-11-09",
       "duty_i18n": {
-        "de": "Notdienst täglich rund um die Uhr. Zweite Nummer: +52 612 171 9708."
+        "de": "Notdienst täglich rund um die Uhr. Zweite Nummer: +52 612 171 9708.",
+        "fr": "Service d’urgences disponible 24 h/24, 7 j/7. Deuxième ligne +52 612 171 9708."
       }
     },
     {
@@ -1157,7 +1219,8 @@
       "checked": "2026-11-09",
       "note": "Independent check 2026-11-09: page says 24 h emergencies Mon-Sat only, Sunday 9:00-19:00, so not round-the-clock every day. Downgraded.",
       "duty_i18n": {
-        "de": "Notfälle Mo–Sa rund um die Uhr; So 9–19 Uhr. Telefon und WhatsApp."
+        "de": "Notfälle Mo–Sa rund um die Uhr; So 9–19 Uhr. Telefon und WhatsApp.",
+        "fr": "Urgences 24 h/24 du lundi au samedi ; dimanche 9 h–19 h. Téléphone et WhatsApp."
       }
     },
     {
@@ -1174,7 +1237,8 @@
       "checked": "2026-11-09",
       "note": "No street address on page.",
       "duty_i18n": {
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, 7 j/7."
       }
     }
   ],

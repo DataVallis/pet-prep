@@ -46,7 +46,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–12 in 13–15.15; ob delavnikih 15.30–20 sprejem +421 915 991 474; ob delavnikih 20–8 nujna pomoč +421 905 579 559; sob–ned nepretrgana nujna pomoč. Veterinar je vedno prisoten; velja doplačilo za nujne primere.",
         "hr": "pon–pet 8:30–12:00 i 13:00–15:15; radnim danom 15:30–20:00 recepcija +421 915 991 474; radnim danom 20:00–8:00 hitna služba +421 905 579 559; sub–ned hitna služba bez prekida. Veterinar je uvijek u ambulanti; naplaćuje se doplatak za hitne slučajeve.",
-        "de": "Mo–Fr 8.30–12 und 13–15.15 Uhr; werktags 15.30–20 Uhr Empfang +421 915 991 474; werktags 20–8 Uhr Notdienst +421 905 579 559; Sa–So durchgehend Notdienst. Ein Tierarzt ist immer vor Ort; Notdienstzuschlag."
+        "de": "Mo–Fr 8.30–12 und 13–15.15 Uhr; werktags 15.30–20 Uhr Empfang +421 915 991 474; werktags 20–8 Uhr Notdienst +421 905 579 559; Sa–So durchgehend Notdienst. Ein Tierarzt ist immer vor Ort; Notdienstzuschlag.",
+        "fr": "Lun.–ven. 8 h 30–12 h et 13 h–15 h 15 ; en semaine 15 h 30–20 h accueil +421 915 991 474 ; en semaine 20 h–8 h urgences +421 905 579 559 ; sam.–dim. urgences en continu. Un vétérinaire est toujours présent sur place ; un supplément d’urgence s’applique."
       },
       "small_animals": true,
       "url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat",
@@ -67,7 +68,8 @@
       "duty_i18n": {
         "sl": "Nujna služba za male živali 20–8 (+421 905 579 559); 15.30–20 sprejem +421 915 991 474. Konjska klinika 24 ur na dan ob nedelavnih dneh.",
         "hr": "Hitna služba za male životinje 20:00–8:00 (+421 905 579 559); 15:30–20:00 recepcija +421 915 991 474. Klinika za konje 24 h u neradne dane.",
-        "de": "Notdienst für Kleintiere 20–8 Uhr (+421 905 579 559); 15.30–20 Uhr Empfang +421 915 991 474. Pferdeklinik an arbeitsfreien Tagen rund um die Uhr geöffnet."
+        "de": "Notdienst für Kleintiere 20–8 Uhr (+421 905 579 559); 15.30–20 Uhr Empfang +421 915 991 474. Pferdeklinik an arbeitsfreien Tagen rund um die Uhr geöffnet.",
+        "fr": "Urgences pour petits animaux 20 h–8 h (+421 905 579 559) ; 15 h 30–20 h accueil +421 915 991 474. Clinique équine 24 h/24 les jours non ouvrés."
       },
       "small_animals": true,
       "url": "https://www.uvlf.sk/kliniky-sluzby/pohotovost",
@@ -88,7 +90,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24/7, tudi ponoči.",
         "hr": "Hitna služba 24/7, uključujući noćne smjene.",
-        "de": "Notdienst rund um die Uhr, auch nachts."
+        "de": "Notdienst rund um die Uhr, auch nachts.",
+        "fr": "Urgences 24 h/24, 7 j/7, y compris la nuit."
       },
       "small_animals": true,
       "url": "https://vetline.sk/",
@@ -109,7 +112,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–20; ob delavnikih zvečer in ponoči 20–9 v pripravljenosti; sob, ned in prazniki neprekinjena pripravljenost (doplačilo).",
         "hr": "pon–pet 9:00–20:00; radnim danom 20:00–9:00 pripravnost; sub, ned i blagdani pripravnost 24 sata (uz doplatak).",
-        "de": "Mo–Fr 9–20 Uhr; werktags 20–9 Uhr Bereitschaftsdienst; Sa, So und feiertags rund um die Uhr Bereitschaftsdienst (mit Zuschlag)."
+        "de": "Mo–Fr 9–20 Uhr; werktags 20–9 Uhr Bereitschaftsdienst; Sa, So und feiertags rund um die Uhr Bereitschaftsdienst (mit Zuschlag).",
+        "fr": "Lun.–ven. 9 h–20 h ; soirs et nuits en semaine (20 h–9 h) : astreinte ; sam., dim. et jours fériés : astreinte 24 h/24 (supplément)."
       },
       "small_animals": true,
       "url": "https://www.smallvet.sk/",
@@ -129,7 +133,8 @@
       "duty": "Mon–Sun 8:00–20:00; non-stop operation. Call ahead.",
       "duty_i18n": {
         "hr": "pon–ned 8:00–20:00; rad bez prekida. Najavi se telefonom.",
-        "de": "Mo–So 8–20 Uhr; durchgehender Betrieb. Bitte vorher anrufen."
+        "de": "Mo–So 8–20 Uhr; durchgehender Betrieb. Bitte vorher anrufen.",
+        "fr": "Lun.–dim. 8 h–20 h, sans interruption. Appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://marfilvet.sk/",
@@ -150,7 +155,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–19, sob 9–14, ned 9–12; nujna pomoč po telefonskem dogovoru vsak dan do 24, nato samo hospitalizirane živali.",
         "hr": "pon–pet 8:00–19:00, sub 9:00–14:00, ned 9:00–12:00; hitni slučajevi uz telefonski dogovor svaki dan do 24:00, nakon toga samo hospitalizirane životinje.",
-        "de": "Mo–Fr 8–19 Uhr, Sa 9–14 Uhr, So 9–12 Uhr; Notfälle nach telefonischer Absprache täglich bis 24 Uhr, danach nur stationäre Patienten."
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–14 Uhr, So 9–12 Uhr; Notfälle nach telefonischer Absprache täglich bis 24 Uhr, danach nur stationäre Patienten.",
+        "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–14 h, dim. 9 h–12 h ; urgences sur appel tous les jours jusqu'à minuit, ensuite uniquement les animaux hospitalisés."
       },
       "small_animals": true,
       "url": "https://www.primavet.sk/",
@@ -170,7 +176,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–24, sob–ned 8–24; nujna pomoč vsak dan, najprej pokličite.",
         "hr": "pon–pet 10:00–24:00, sub–ned 8:00–24:00; hitni slučajevi svaki dan, prvo nazovi.",
-        "de": "Mo–Fr 10–24 Uhr, Sa–So 8–24 Uhr; Notdienst täglich, bitte vorher anrufen."
+        "de": "Mo–Fr 10–24 Uhr, Sa–So 8–24 Uhr; Notdienst täglich, bitte vorher anrufen.",
+        "fr": "Lun.–ven. 10 h–minuit, sam.–dim. 8 h–minuit ; urgences tous les jours, appelez d'abord."
       },
       "small_animals": true,
       "url": "https://www.mypet.sk/",
@@ -190,7 +197,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–12 in 14–18.",
         "hr": "pon–pet 8:00–12:00 i 14:00–18:00.",
-        "de": "Mo–Fr 8–12 und 14–18 Uhr."
+        "de": "Mo–Fr 8–12 und 14–18 Uhr.",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h."
       },
       "small_animals": true,
       "url": "https://x-vet.sk/",
@@ -210,7 +218,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–19, sob–ned 9–17; nujna linija nepretrgano; veterinar prisoten 24 ur na dan.",
         "hr": "pon–pet 8:00–19:00, sub–ned 9:00–17:00; hitna linija bez prekida; veterinar u ambulanti 24 h.",
-        "de": "Mo–Fr 8–19 Uhr, Sa–So 9–17 Uhr; Notfallnummer durchgehend erreichbar; Tierarzt rund um die Uhr vor Ort."
+        "de": "Mo–Fr 8–19 Uhr, Sa–So 9–17 Uhr; Notfallnummer durchgehend erreichbar; Tierarzt rund um die Uhr vor Ort.",
+        "fr": "Lun.–ven. 8 h–19 h, sam.–dim. 9 h–17 h ; ligne d'urgence en continu ; vétérinaire sur place 24 h/24."
       },
       "small_animals": true,
       "url": "https://www.vetklinikazilina.sk/",
@@ -231,7 +240,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–15.30, sob 10–12; zunaj tega časa dežurna nujna linija.",
         "hr": "pon–pet 10:00–15:30, sub 10:00–12:00; izvan tog vremena hitna linija u pripravnosti.",
-        "de": "Mo–Fr 10–15.30 Uhr, Sa 10–12 Uhr; außerhalb dieser Zeiten Notfalltelefon (Rufbereitschaft)."
+        "de": "Mo–Fr 10–15.30 Uhr, Sa 10–12 Uhr; außerhalb dieser Zeiten Notfalltelefon (Rufbereitschaft).",
+        "fr": "Lun.–ven. 10 h–15 h 30, sam. 10 h–12 h ; en dehors de ces horaires, ligne d'urgence de garde."
       },
       "small_animals": true,
       "url": "https://www.klinikafenix.sk/",
@@ -252,7 +262,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–19, sob–ned 9–12; nujna pomoč 24/7 zunaj delovnega časa.",
         "hr": "pon–pet 9:00–19:00, sub–ned 9:00–12:00; hitna pomoć 24/7 izvan radnog vremena.",
-        "de": "Mo–Fr 9–19 Uhr, Sa–So 9–12 Uhr; außerhalb der Sprechzeiten Notdienst rund um die Uhr."
+        "de": "Mo–Fr 9–19 Uhr, Sa–So 9–12 Uhr; außerhalb der Sprechzeiten Notdienst rund um die Uhr.",
+        "fr": "Lun.–ven. 9 h–19 h, sam.–dim. 9 h–12 h ; urgences 24 h/24, 7 j/7 en dehors de ces horaires."
       },
       "small_animals": true,
       "url": "https://www.petclinic.sk/",
@@ -273,7 +284,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–12 in 14–17; sob–ned 8–10; nujna linija nepretrgano za akutne, življenjsko nevarne primere.",
         "hr": "pon–pet 9:00–12:00 i 14:00–17:00; sub–ned 8:00–10:00; hitna linija bez prekida za akutne slučajeve opasne po život.",
-        "de": "Mo–Fr 9–12 und 14–17 Uhr; Sa–So 8–10 Uhr; Notfallnummer durchgehend erreichbar für akute, lebensbedrohliche Fälle."
+        "de": "Mo–Fr 9–12 und 14–17 Uhr; Sa–So 8–10 Uhr; Notfallnummer durchgehend erreichbar für akute, lebensbedrohliche Fälle.",
+        "fr": "Lun.–ven. 9 h–12 h et 14 h–17 h ; sam.–dim. 8 h–10 h ; ligne d'urgence en continu pour les cas aigus mettant la vie en danger."
       },
       "small_animals": true,
       "url": "https://veterinanz.sk/",
@@ -294,7 +306,8 @@
       "duty_i18n": {
         "sl": "Delovni čas ambulante pon–pet 9–12 in 13–18; nepretrgana nujna linija.",
         "hr": "Radno vrijeme ambulante pon–pet 9:00–12:00 i 13:00–18:00; hitna linija bez prekida.",
-        "de": "Sprechzeiten Mo–Fr 9–12 und 13–18 Uhr; Notfallnummer durchgehend erreichbar."
+        "de": "Sprechzeiten Mo–Fr 9–12 und 13–18 Uhr; Notfallnummer durchgehend erreichbar.",
+        "fr": "Horaires de la clinique : lun.–ven. 9 h–12 h et 13 h–18 h ; ligne d’urgence en continu."
       },
       "small_animals": true,
       "url": "https://www.trivet.sk/",
@@ -315,7 +328,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–17; nepretrgana nujna linija pon–ned.",
         "hr": "pon–pet 9:00–17:00; hitna linija bez prekida pon–ned.",
-        "de": "Mo–Fr 9–17 Uhr; Notfallnummer Mo–So durchgehend erreichbar."
+        "de": "Mo–Fr 9–17 Uhr; Notfallnummer Mo–So durchgehend erreichbar.",
+        "fr": "Lun.–ven. 9 h–17 h ; ligne d'urgence en continu, 7 j/7."
       },
       "small_animals": true,
       "url": "https://scarvet.sk/",
@@ -335,7 +349,8 @@
       "duty_i18n": {
         "sl": "Nujna služba 24 ur na dan; pokriva okraje Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
         "hr": "Hitna služba 24 sata dnevno; pokriva okruge Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
-        "de": "Notdienst rund um die Uhr für die Bezirke Poprad, Kežmarok, Levoča, Spišská Nová Ves."
+        "de": "Notdienst rund um die Uhr für die Bezirke Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
+        "fr": "Urgences 24 h/24 ; couvre les districts de Poprad, Kežmarok, Levoča, Spišská Nová Ves."
       },
       "small_animals": true,
       "url": "https://www.veterinar-pohotovost.sk/",
@@ -356,7 +371,8 @@
       "duty_i18n": {
         "sl": "pon–pet dnevne ordinacijske ure; nujna pomoč 24 ur na dan za redne stranke, velja doplačilo.",
         "hr": "pon–pet dnevno radno vrijeme ordinacije; hitna pomoć 24 h za stalne klijente, uz doplatak.",
-        "de": "Mo–Fr tagsüber Sprechzeiten; Notdienst rund um die Uhr für Stammkunden, mit Zuschlag."
+        "de": "Mo–Fr tagsüber Sprechzeiten; Notdienst rund um die Uhr für Stammkunden, mit Zuschlag.",
+        "fr": "Consultations en journée du lundi au vendredi ; urgences 24 h/24 pour les clients habituels, avec supplément."
       },
       "small_animals": true,
       "url": "https://www.veterinamartin.sk/",
@@ -377,7 +393,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–20, ob koncih tedna in praznikih 9–15.",
         "hr": "pon–pet 8:00–20:00, vikendom i blagdanima 9:00–15:00.",
-        "de": "Mo–Fr 8–20 Uhr, am Wochenende und feiertags 9–15 Uhr."
+        "de": "Mo–Fr 8–20 Uhr, am Wochenende und feiertags 9–15 Uhr.",
+        "fr": "Lun.–ven. 8 h–20 h, week-ends et jours fériés 9 h–15 h."
       },
       "small_animals": true,
       "url": "https://tatryvet.sk/",
@@ -397,7 +414,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–18, sob–ned 9–16; nujna pomoč do 24.",
         "hr": "pon–pet 8:00–18:00, sub–ned 9:00–16:00; hitni slučajevi do 24:00.",
-        "de": "Mo–Fr 8–18 Uhr, Sa–So 9–16 Uhr; Notdienst bis 24 Uhr."
+        "de": "Mo–Fr 8–18 Uhr, Sa–So 9–16 Uhr; Notdienst bis 24 Uhr.",
+        "fr": "Lun.–ven. 8 h–18 h, sam.–dim. 9 h–16 h ; urgences jusqu'à minuit."
       },
       "small_animals": true,
       "url": "http://www.cassovet.sk/kontakty/",
@@ -417,7 +435,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–19, sob 9–12; nujna pomoč sob 12–19, ned 9–12.",
         "hr": "pon–pet 8:00–19:00, sub 9:00–12:00; hitna služba sub 12:00–19:00, ned 9:00–12:00.",
-        "de": "Mo–Fr 8–19 Uhr, Sa 9–12 Uhr; Notdienst Sa 12–19 Uhr, So 9–12 Uhr."
+        "de": "Mo–Fr 8–19 Uhr, Sa 9–12 Uhr; Notdienst Sa 12–19 Uhr, So 9–12 Uhr.",
+        "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–12 h ; service d’urgence sam. 12 h–19 h, dim. 9 h–12 h."
       },
       "small_animals": true,
       "url": "https://www.petstar.sk/",
@@ -467,7 +486,8 @@
       "duty_i18n": {
         "sl": "Ob delavnikih 8–18; nujna pomoč po telefonskem dogovoru ob delavnikih do 22, sob–ned 8–22; od 22 do 8 je ni (doplačilo).",
         "hr": "Radnim danom 8:00–18:00; hitni slučajevi uz telefonski dogovor radnim danom do 22:00, sub–ned 8:00–22:00; od 22:00 do 8:00 nema hitne službe (uz doplatak).",
-        "de": "Werktags 8–18 Uhr; Notfälle nach telefonischer Absprache werktags bis 22 Uhr, Sa–So 8–22 Uhr; von 22 bis 8 Uhr kein Notdienst (mit Zuschlag)."
+        "de": "Werktags 8–18 Uhr; Notfälle nach telefonischer Absprache werktags bis 22 Uhr, Sa–So 8–22 Uhr; von 22 bis 8 Uhr kein Notdienst (mit Zuschlag).",
+        "fr": "En semaine 8 h–18 h ; urgences sur rendez-vous téléphonique en semaine jusqu'à 22 h, sam.–dim. 8 h–22 h ; aucune de 22 h à 8 h (supplément)."
       },
       "small_animals": true,
       "url": "https://veterinapresov.sk/",
@@ -487,7 +507,8 @@
       "duty_i18n": {
         "sl": "pon–pet čez dan, sob 9–12, ned zaprto.",
         "hr": "pon–pet tijekom dana, sub 9:00–12:00, ned zatvoreno.",
-        "de": "Mo–Fr tagsüber, Sa 9–12 Uhr, So geschlossen."
+        "de": "Mo–Fr tagsüber, Sa 9–12 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. en journée, sam. 9 h–12 h, dim. fermé."
       },
       "small_animals": true,
       "url": "https://vetklinikapkb.sk/",
@@ -506,7 +527,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč pon–pet 16–22, sob–ned 8–22 (0905 184 429); ambulanta Radvaň ob delavnikih 8–16.",
         "hr": "Hitna služba pon–pet 16:00–22:00, sub–ned 8:00–22:00 (0905 184 429); ambulanta Radvaň radnim danom 8:00–16:00.",
-        "de": "Notdienst Mo–Fr 16–22 Uhr, Sa–So 8–22 Uhr (0905 184 429); Klinik Radvaň werktags 8–16 Uhr."
+        "de": "Notdienst Mo–Fr 16–22 Uhr, Sa–So 8–22 Uhr (0905 184 429); Klinik Radvaň werktags 8–16 Uhr.",
+        "fr": "Urgences lun.–ven. 16 h–22 h, sam.–dim. 8 h–22 h (0905 184 429) ; clinique de Radvaň : jours ouvrables 8 h–16 h."
       },
       "small_animals": true,
       "url": "https://petservis.sk/",
@@ -525,7 +547,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–18, sob 8.30–11; nujna pomoč za registrirane stranke po telefonskem klicu.",
         "hr": "pon–pet 8:30–18:00, sub 8:30–11:00; hitni slučajevi za registrirane klijente nakon telefonskog poziva.",
-        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–11 Uhr; Notdienst für registrierte Kunden nach telefonischer Anmeldung."
+        "de": "Mo–Fr 8.30–18 Uhr, Sa 8.30–11 Uhr; Notdienst für registrierte Kunden nach telefonischer Anmeldung.",
+        "fr": "Lun.–ven. 8 h 30–18 h, sam. 8 h 30–11 h ; urgences pour les clients enregistrés après appel téléphonique."
       },
       "small_animals": true,
       "url": "https://banby-vet.sk/",
@@ -558,7 +581,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–19; nujna pomoč sob 12–19, ned 9–19; doplačilo za nujne primere zunaj delovnega časa.",
         "hr": "pon–pet 8:00–19:00; hitna služba sub 12:00–19:00, ned 9:00–19:00; doplatak za hitne slučajeve izvan radnog vremena.",
-        "de": "Mo–Fr 8–19 Uhr; Notdienst Sa 12–19 Uhr, So 9–19 Uhr; Notfälle außerhalb der Sprechzeiten mit Zuschlag."
+        "de": "Mo–Fr 8–19 Uhr; Notdienst Sa 12–19 Uhr, So 9–19 Uhr; Notfälle außerhalb der Sprechzeiten mit Zuschlag.",
+        "fr": "Lun.–ven. 8 h–19 h ; urgences sam. 12 h–19 h, dim. 9 h–19 h ; supplément pour les urgences hors horaires."
       },
       "small_animals": true,
       "url": "https://elpa-tn.sk/",
@@ -578,7 +602,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–18, sob 9–12; nujna pomoč pon–pet do 22 po telefonskem dogovoru.",
         "hr": "pon–pet 9:00–18:00, sub 9:00–12:00; hitni slučajevi pon–pet do 22:00 uz telefonski dogovor.",
-        "de": "Mo–Fr 9–18 Uhr, Sa 9–12 Uhr; Notdienst Mo–Fr bis 22 Uhr nach telefonischer Absprache."
+        "de": "Mo–Fr 9–18 Uhr, Sa 9–12 Uhr; Notdienst Mo–Fr bis 22 Uhr nach telefonischer Absprache.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–12 h ; urgences lun.–ven. jusqu'à 22 h sur rendez-vous téléphonique."
       },
       "small_animals": true,
       "url": "https://www.veterinarnaklinikanitra.sk/",
@@ -598,7 +623,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–19, sob 8.30–11.30, ned zaprto.",
         "hr": "pon–pet 8:30–19:00, sub 8:30–11:30, ned zatvoreno.",
-        "de": "Mo–Fr 8.30–19 Uhr, Sa 8.30–11.30 Uhr, So geschlossen."
+        "de": "Mo–Fr 8.30–19 Uhr, Sa 8.30–11.30 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 8 h 30–19 h, sam. 8 h 30–11 h 30, dim. fermé."
       },
       "small_animals": true,
       "url": "https://fazivet.sk/",
@@ -617,7 +643,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–19, sob–ned in prazniki 9–16 (doplačilo ob koncih tedna).",
         "hr": "pon–pet 8:30–19:00, sub–ned i blagdani 9:00–16:00 (vikendom uz doplatak).",
-        "de": "Mo–Fr 8.30–19 Uhr, Sa–So und feiertags 9–16 Uhr (Wochenendzuschlag)."
+        "de": "Mo–Fr 8.30–19 Uhr, Sa–So und feiertags 9–16 Uhr (Wochenendzuschlag).",
+        "fr": "Lun.–ven. 8 h 30–19 h, sam.–dim. et jours fériés 9 h–16 h (supplément week-end)."
       },
       "small_animals": true,
       "url": "https://www.zkp.sk/",
@@ -636,7 +663,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–12 in 16–19; ob koncih tedna zaprto.",
         "hr": "pon–pet 9:00–12:00 i 16:00–19:00; vikendom zatvoreno.",
-        "de": "Mo–Fr 9–12 und 16–19 Uhr; am Wochenende geschlossen."
+        "de": "Mo–Fr 9–12 und 16–19 Uhr; am Wochenende geschlossen.",
+        "fr": "Lun.–ven. 9 h–12 h et 16 h–19 h ; fermé le week-end."
       },
       "small_animals": true,
       "url": "https://www.vetpo.sk/",

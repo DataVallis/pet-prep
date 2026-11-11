@@ -208,6 +208,9 @@
       "phone": "+81 3-3378-3366",
       "emergency_24h": true,
       "duty": "Emergency care 24 hours, 365 days a year. Regular hours 9:00-20:00 (closed Wednesdays, emergencies still accepted). Call before coming; after-hours surcharges may apply.",
+      "duty_i18n": {
+        "fr": "Urgences 24 h/24, 365 jours par an. Horaires habituels 9 h–20 h (fermé le mercredi, urgences toujours acceptées). Appelez avant de venir ; un supplément peut s’appliquer en dehors des horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://jamc.co.jp/english/",
       "source_url": "https://jamc.co.jp/guide/",
@@ -223,6 +226,9 @@
       "phone": "+81 3-5420-0012",
       "emergency_24h": true,
       "duty": "Emergency reception 24 hours, 365 days a year. Regular hours 10:00-12:30 and 14:30-19:00; out-of-hours fee applies. Call before coming.",
+      "duty_i18n": {
+        "fr": "Accueil des urgences 24 h/24, 365 jours par an. Horaires habituels 10 h–12 h 30 et 14 h 30–19 h ; supplément en dehors des horaires d’ouverture. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.daktari.gr.jp/",
       "source_url": "https://www.daktari.gr.jp/emergency-medicine/",
@@ -238,6 +244,9 @@
       "phone": "+81 3-6260-2997",
       "emergency_24h": true,
       "duty": "Emergency and critical care 24 hours, 365 days a year (emergency line +81 3-6260-2997; backup +81 3-6706-7170). Specialty care by referral and appointment 9:00-19:00. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences et soins intensifs 24 h/24, 365 jours par an (ligne d’urgences : +81 3-6260-2997 ; second numéro : +81 3-6706-7170). Soins spécialisés sur orientation et sur rendez-vous 9 h–19 h. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://jarvis.anicom-med.co.jp/",
       "source_url": "https://jarvis.anicom-med.co.jp/",
@@ -253,6 +262,9 @@
       "phone": "+81 3-5617-7555",
       "emergency_24h": true,
       "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, tous les jours. Horaires de jour 9 h–18 h 59, horaires de nuit 19 h–8 h 59. Supplément de nuit et acompte ; téléphonez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/koto",
       "source_url": "https://www.kariya-ah.co.jp/access/koto",
@@ -268,6 +280,9 @@
       "phone": "+81 3-3858-8150",
       "emergency_24h": true,
       "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, tous les jours. Horaires de jour 9 h–18 h 59, horaires de nuit 19 h–8 h 59. Supplément de nuit et acompte ; téléphonez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/adachi",
       "source_url": "https://www.kariya-ah.co.jp/access/adachi",
@@ -283,6 +298,9 @@
       "phone": "+81 3-5702-0012",
       "emergency_24h": true,
       "duty": "Presents itself as a 24-hour animal hospital open on holidays and at night. Call ahead to confirm, as it may temporarily be treating patients at another site.",
+      "duty_i18n": {
+        "fr": "Se présente comme un hôpital vétérinaire ouvert 24 h/24, de nuit et les jours fériés. Appelez pour confirmer, car l’équipe peut temporairement soigner des patients sur un autre site."
+      },
       "small_animals": true,
       "url": "https://animal24.tokyo/",
       "source_url": "https://animal24.tokyo/hospi.html",
@@ -298,6 +316,9 @@
       "phone": "+81 3-5760-1212",
       "emergency_24h": false,
       "duty": "Night emergency service every day of the year, starting at 20:00 (call +81 3-5760-1212 first). Secondary-care line +81 3-5760-1211.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit tous les jours de l’année, à partir de 20 h (appelez d’abord le +81 3-5760-1212). Ligne de soins secondaires : +81 3-5760-1211."
+      },
       "small_animals": true,
       "url": "https://trva.jp/",
       "source_url": "https://trva.jp/emergencysupport/",
@@ -313,6 +334,9 @@
       "phone": "+81 3-5720-1299",
       "emergency_24h": false,
       "duty": "Night emergency hospital open every day of the year from 20:00 until early morning. Call first; opening hours were temporarily shortened, so confirm by phone.",
+      "duty_i18n": {
+        "fr": "Hôpital d’urgences de nuit ouvert tous les jours de l’année, de 20 h jusqu’au petit matin. Appelez d’abord ; les horaires ont été temporairement raccourcis, confirmez par téléphone."
+      },
       "small_animals": true,
       "url": "https://www.yakan-99.com/",
       "source_url": "https://www.yakan-99.com/",
@@ -328,6 +352,9 @@
       "phone": "+81 3-5858-9969",
       "emergency_24h": false,
       "duty": "Night emergency care every day of the year, 19:00 to 7:00 the next morning (phone reception 19:00-6:00).",
+      "duty_i18n": {
+        "fr": "Urgences de nuit tous les jours de l’année, de 19 h à 7 h le lendemain matin (accueil téléphonique 19 h–6 h)."
+      },
       "small_animals": true,
       "url": "https://www.doubutsu-yakan99.com/",
       "source_url": "https://www.doubutsu-yakan99.com/access.html",
@@ -342,6 +369,9 @@
       "phone": "+81 50-5491-7200",
       "emergency_24h": false,
       "duty": "Night emergency clinic and home visits. Night emergency hours 20:00-5:00 (check the clinic calendar for closed days); phone reception 9:00-18:00.",
+      "duty_i18n": {
+        "fr": "Clinique d’urgences de nuit et visites à domicile. Urgences de nuit 20 h–5 h (consultez le calendrier de la clinique pour les jours de fermeture) ; accueil téléphonique 9 h–18 h."
+      },
       "small_animals": true,
       "url": "https://azabupet.jp/en/",
       "source_url": "https://azabupet.jp/en/",
@@ -357,6 +387,9 @@
       "phone": "+81 3-5841-8004",
       "emergency_24h": false,
       "duty": "University teaching hospital, weekdays only (reception 9:00-11:30 and 13:30-15:30). First visits need a referral from your current vet; no emergency service.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire d’enseignement, en semaine uniquement (accueil 9 h–11 h 30 et 13 h 30–15 h 30). Première consultation sur orientation de votre vétérinaire actuel ; pas de service d’urgences."
+      },
       "small_animals": true,
       "url": "https://www.vm.a.u-tokyo.ac.jp/vmc/",
       "source_url": "https://www.vm.a.u-tokyo.ac.jp/vmc/",
@@ -372,6 +405,9 @@
       "phone": "+81 422-90-4000",
       "emergency_24h": false,
       "duty": "University teaching hospital. Weekdays 9:00-16:00; book first on the reservation line. No after-hours emergency service stated.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire d’enseignement. En semaine 9 h–16 h ; prenez d’abord rendez-vous via la ligne de réservation. Aucun service d’urgences en dehors des horaires n’est indiqué."
+      },
       "small_animals": true,
       "url": "https://www.nvlu.ac.jp/amedical/",
       "source_url": "https://www.nvlu.ac.jp/amedical/medical-guidance/001-001.html/",
@@ -387,6 +423,9 @@
       "phone": "+81 3-3583-5852",
       "emergency_24h": false,
       "duty": "Reception 9:30-18:00 on weekdays, until 17:00 on weekends and holidays. English-language website available.",
+      "duty_i18n": {
+        "fr": "Accueil 9 h 30–18 h en semaine, jusqu’à 17 h les week-ends et jours fériés. Site web disponible en anglais."
+      },
       "small_animals": true,
       "url": "https://akasaka-ah-en.com/",
       "source_url": "https://akasaka-ah.com/access",
@@ -402,6 +441,9 @@
       "phone": "+81 3-6416-9533",
       "emergency_24h": false,
       "duty": "Mornings 10:00-13:00 and afternoons 16:00-19:00; closed Wednesdays; Sundays and holidays mornings only. Call if the case may be urgent.",
+      "duty_i18n": {
+        "fr": "Le matin 10 h–13 h et l’après-midi 16 h–19 h ; fermé le mercredi ; dimanches et jours fériés : matin uniquement. Appelez si le cas peut être urgent."
+      },
       "small_animals": true,
       "url": "https://www.westcross.jp/English.html",
       "source_url": "https://westcross.jp/access.html",
@@ -417,6 +459,9 @@
       "phone": "+81 3-6384-5351",
       "emergency_24h": false,
       "duty": "Open daily 9:00-12:00 and 16:00-19:00; English phone support available. Check by phone for emergencies and night care.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 9 h–12 h et 16 h–19 h ; assistance téléphonique en anglais. Renseignez-vous par téléphone pour les urgences et les soins de nuit."
+      },
       "small_animals": true,
       "url": "https://amc-motoazabu.com/english.php",
       "source_url": "https://amc-motoazabu.com/english_medicalguide.php",
@@ -432,6 +477,9 @@
       "phone": "+81 3-6807-4058",
       "emergency_24h": false,
       "duty": "English-speaking veterinary clinic; call for opening hours.",
+      "duty_i18n": {
+        "fr": "Clinique vétérinaire anglophone ; appelez pour connaître les horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://petlife.co.jp/en/",
       "source_url": "https://petlife.co.jp/en/contact/",
@@ -447,6 +495,9 @@
       "phone": "+81 3-6433-5433",
       "emergency_24h": false,
       "duty": "Dogs and cats, by appointment; English-speaking vet and nurse. Roughly 10:00-13:00 and 16:00-19:00, closed Thursdays - confirm by phone.",
+      "duty_i18n": {
+        "fr": "Chiens et chats, sur rendez-vous ; vétérinaire et auxiliaire anglophones. Environ 10 h–13 h et 16 h–19 h, fermé le jeudi ; confirmez par téléphone."
+      },
       "small_animals": true,
       "url": "https://www.mitsubachi-ah.com/",
       "source_url": "https://www.mitsubachi-ah.com/access/",
@@ -462,6 +513,9 @@
       "phone": "+81 3-5728-9012",
       "emergency_24h": false,
       "duty": "Appointment-only (phone or online). Not an emergency hospital; refers night emergencies to a night emergency hospital.",
+      "duty_i18n": {
+        "fr": "Sur rendez-vous uniquement (téléphone ou en ligne). Pas un hôpital d’urgences ; les urgences de nuit sont orientées vers un hôpital d’urgences de nuit."
+      },
       "small_animals": true,
       "url": "https://crown-ah.tokyo/",
       "source_url": "https://crown-ah.tokyo/access/",
@@ -477,6 +531,9 @@
       "phone": "+81 3-3457-8612",
       "emergency_24h": false,
       "duty": "10:00-13:00 and 14:30-18:30; closed Wednesday afternoons and at New Year. Dental and dermatology; emergencies go to the Japan Animal Medical Center (+81 3-3378-3366).",
+      "duty_i18n": {
+        "fr": "10 h–13 h et 14 h 30–18 h 30 ; fermé le mercredi après-midi et au Nouvel An. Dentisterie et dermatologie ; urgences : Japan Animal Medical Center (+81 3-3378-3366)."
+      },
       "small_animals": true,
       "url": "https://azabu.jamc.co.jp/about/",
       "source_url": "https://azabu.jamc.co.jp/about/",
@@ -492,6 +549,9 @@
       "phone": "+81 72-463-5939",
       "emergency_24h": false,
       "duty": "Night emergency only, not 24 hours: 21:00-04:30 on weekdays and public holidays, phone reception 20:00-04:00, closed Saturdays. Dogs and cats mainly. Call before coming; no phone-only consultation; credit card payment only.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit uniquement, pas 24 h/24 : 21 h–4 h 30 en semaine et les jours fériés, accueil téléphonique 20 h–4 h, fermé le samedi. Principalement chiens et chats. Appelez avant de venir ; pas de consultation uniquement par téléphone ; paiement par carte bancaire uniquement."
+      },
       "small_animals": true,
       "url": "https://www.raema.or.jp/",
       "source_url": "https://www.raema.or.jp/",
@@ -507,6 +567,9 @@
       "phone": "+81 6-4259-1212",
       "emergency_24h": false,
       "duty": "Night emergency only, not 24 hours: 21:00 to 05:00 every day of the year; reception until 04:30. Call first with symptoms and expected arrival time. Dogs and cats; ask about other animals.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 21 h–5 h, tous les jours de l’année ; accueil jusqu’à 4 h 30. Appelez d’abord en indiquant les symptômes et l’heure d’arrivée prévue. Chiens et chats ; pour les autres animaux, renseignez-vous."
+      },
       "small_animals": true,
       "url": "https://doubutsuyakan.jp/",
       "source_url": "https://doubutsuyakan.jp/",
@@ -522,6 +585,9 @@
       "phone": "+81 6-4306-4390",
       "emergency_24h": false,
       "duty": "Night emergency only, not 24 hours: 20:00 to 03:00 (last reception 03:00), open every day. Call first if unsure. Dogs and cats.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 20 h–3 h (dernière admission à 3 h), ouvert tous les jours. En cas de doute, appelez d’abord. Chiens et chats."
+      },
       "small_animals": true,
       "url": "https://osaka-pet911.com/",
       "source_url": "https://osaka-pet911.com/",
@@ -537,6 +603,9 @@
       "phone": "+81 72-730-2199",
       "emergency_24h": false,
       "duty": "Night emergency only, not 24 hours: 21:00 to 06:00 the next morning, every day of the year. Call before coming. Dogs and cats; other animals only after phone confirmation.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 21 h–6 h le lendemain matin, tous les jours de l’année. Appelez avant de venir. Chiens et chats ; autres animaux uniquement après confirmation par téléphone."
+      },
       "small_animals": true,
       "url": "https://heah.jp/",
       "source_url": "https://heah.jp/",
@@ -550,6 +619,9 @@
       "region": "Osaka",
       "emergency_24h": false,
       "duty": "Night clinic, not 24 hours: 19:00 to 24:00. Emergency and general night consultations. Call ahead to confirm.",
+      "duty_i18n": {
+        "fr": "Clinique de nuit, pas de 24 h/24 : 19 h–24 h. Urgences et consultations générales de nuit. Appelez pour confirmer avant de venir."
+      },
       "small_animals": true,
       "url": "https://osaka-moriguchi-yakan-ah.jp/",
       "source_url": "https://osaka-moriguchi-yakan-ah.jp/",
@@ -565,6 +637,9 @@
       "phone": "+81 72-239-3697",
       "emergency_24h": false,
       "duty": "Night emergency only, not 24 hours: reception 21:00 to 02:00, phone enquiries 20:30 to 01:30. Closed Thursdays; may close at short notice. Call before coming - patients without a call cannot be accepted.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit uniquement, pas de 24 h/24 : accueil 21 h–2 h, renseignements par téléphone 20 h 30–1 h 30. Fermé le jeudi ; fermeture possible au dernier moment. Appelez avant de venir : aucun patient n’est reçu sans appel préalable."
+      },
       "small_animals": true,
       "url": "https://ah.aeonpet.com/sakai-yakan-emergency/",
       "source_url": "https://ah.aeonpet.com/sakai-yakan-emergency/",
@@ -580,6 +655,9 @@
       "phone": "+81 72-239-1120",
       "emergency_24h": false,
       "duty": "Regular hours 10:00-13:00 and 16:00-19:00 (last reception 18:40). Night emergencies handled by the Sakai Animal Night Emergency Clinic, 21:00-02:00 - not 24 hours; call before coming.",
+      "duty_i18n": {
+        "fr": "Horaires habituels 10 h–13 h et 16 h–19 h (dernière admission à 18 h 40). Urgences de nuit assurées par la Sakai Animal Night Emergency Clinic, 21 h–2 h ; pas de 24 h/24, appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/daktari/",
       "source_url": "https://mc.aeonpet.com/daktari/",
@@ -595,6 +673,9 @@
       "phone": "+81 72-247-5922",
       "emergency_24h": false,
       "duty": "Open 9:00-12:00 and 16:00-19:00, closed Tuesdays (Sundays 10:00-13:00). Limited evening emergency 21:00-23:00 for dogs and cats on set days only; call ahead. Not 24 hours.",
+      "duty_i18n": {
+        "fr": "Ouvert 9 h–12 h et 16 h–19 h, fermé le mardi (dimanche 10 h–13 h). Urgences limitées en soirée, 21 h–23 h, pour chiens et chats, certains jours seulement ; appelez avant. Pas de 24 h/24."
+      },
       "small_animals": true,
       "url": "https://www.higashi-ah.jp/",
       "source_url": "https://www.higashi-ah.jp/",
@@ -609,6 +690,9 @@
       "address": "1-58 Rinku Orai Kita, Izumisano, Osaka",
       "emergency_24h": false,
       "duty": "University teaching hospital. Daytime care by appointment only, weekdays 9:00-12:00 and 13:00-17:00 (closed weekends, holidays, year-end). Night emergency care is run with the Rinku Animal Emergency Medical Association - see that entry.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire. Consultations de jour sur rendez-vous uniquement, lun.–ven. 9 h–12 h et 13 h–17 h (fermé les week-ends, jours fériés et en fin d’année). Les urgences de nuit sont assurées avec la Rinku Animal Emergency Medical Association : voir sa fiche."
+      },
       "small_animals": true,
       "url": "https://www.omu.ac.jp/vet/vmc/",
       "source_url": "https://www.omu.ac.jp/vet/vmc/guide/schedule/",
@@ -623,6 +707,9 @@
       "phone": "+81 88-885-7002",
       "emergency_24h": false,
       "duty": "Rota of small-animal clinics giving first-line night care for dogs and cats, 20:00-23:00 (phone booking until 22:30). Call the association to learn which clinic is on duty; booking required; basic care only, no surgery or hospitalisation.",
+      "duty_i18n": {
+        "fr": "Tour de garde de cliniques pour petits animaux assurant les premiers soins de nuit pour chiens et chats, 20 h–23 h (réservation par téléphone jusqu’à 22 h 30). Appelez l’association pour connaître la clinique de garde ; réservation obligatoire ; soins de base uniquement, ni chirurgie ni hospitalisation."
+      },
       "small_animals": true,
       "url": "https://www.kochikenjuishikai.or.jp/article/archives/8",
       "source_url": "https://www.kochikenjuishikai.or.jp/article/archives/8",
@@ -638,6 +725,9 @@
       "phone": "+81 75-693-9912",
       "emergency_24h": false,
       "duty": "Night emergency care 21:30-02:00, every day of the year. Call before visiting.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h 30–2 h, tous les jours de l’année. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://kyoto99.net/",
       "source_url": "https://kyoto99.net/",
@@ -653,6 +743,9 @@
       "phone": "+81 99-285-8671",
       "emergency_24h": false,
       "duty": "University hospital night clinic, weekdays only (not weekends, holidays or university closures): 19:00-06:00 by same-day phone appointment; dogs and cats only; separate night entrance.",
+      "duty_i18n": {
+        "fr": "Clinique de nuit de l’hôpital universitaire, en semaine uniquement (pas les week-ends, jours fériés ni fermetures de l’université) : 19 h–6 h, sur rendez-vous téléphonique le jour même ; chiens et chats uniquement ; entrée de nuit séparée."
+      },
       "small_animals": true,
       "url": "https://www.vet.kagoshima-u.ac.jp/KUVTH/",
       "source_url": "https://www.vet.kagoshima-u.ac.jp/KUVTH/service/night-visit/",
@@ -668,6 +761,9 @@
       "phone": "+81 11-706-9592",
       "emergency_24h": false,
       "duty": "University hospital: weekday evenings 17:00-24:00 on a dedicated line; nights, weekends and holidays are handled by the Anicom24 phone service. Dogs and cats only; call before coming; night fee applies; no CT/MRI.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire : en semaine, soirées 17 h–24 h sur une ligne dédiée ; nuits, week-ends et jours fériés assurés par le service téléphonique Anicom24. Chiens et chats uniquement ; appelez avant de venir ; supplément de nuit ; ni scanner ni IRM."
+      },
       "small_animals": true,
       "url": "https://www.vetmed.hokudai.ac.jp/VMTH/",
       "source_url": "https://www.vetmed.hokudai.ac.jp/VMTH/owner/nightandweekendandholidayservice/",
@@ -683,6 +779,9 @@
       "phone": "+81 43-298-1124",
       "emergency_24h": false,
       "duty": "Night emergency reception 20:00-08:00 every day (call first; insurance claims at night via Anicom only). Regular hours by appointment 9:00-13:00 and 17:00-19:00.",
+      "duty_i18n": {
+        "fr": "Accueil des urgences de nuit 20 h–8 h tous les jours (appelez d’abord ; remboursement d’assurance la nuit via Anicom uniquement). Consultations habituelles sur rendez-vous 9 h–13 h et 17 h–19 h."
+      },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/makuharishin/",
       "source_url": "https://mc.aeonpet.com/makuharishin/",
@@ -698,6 +797,9 @@
       "phone": "+81 11-598-9913",
       "emergency_24h": false,
       "duty": "Emergency reception 21:00-24:00 and 05:00-09:00 (night emergency line 011-598-9936); regular hours 10:00-13:00 and 17:00-20:00. Call before coming.",
+      "duty_i18n": {
+        "fr": "Accueil des urgences 21 h–24 h et 5 h–9 h (ligne d’urgence de nuit 011-598-9936) ; horaires habituels 10 h–13 h et 17 h–20 h. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sapporotsukisamu/",
       "source_url": "https://mc.aeonpet.com/sapporotsukisamu/",
@@ -713,6 +815,9 @@
       "phone": "+81 42-757-2230",
       "emergency_24h": false,
       "duty": "Night emergency reception 21:00-08:00 (emergency line 042-757-3166); regular hours 9:00-13:00 and 16:00-19:00 by appointment. Call before coming.",
+      "duty_i18n": {
+        "fr": "Accueil des urgences de nuit 21 h–8 h (ligne d’urgence 042-757-3166) ; horaires habituels 9 h–13 h et 16 h–19 h sur rendez-vous. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sagamihara/",
       "source_url": "https://mc.aeonpet.com/sagamihara/",
@@ -728,6 +833,9 @@
       "phone": "+81 52-509-5020",
       "emergency_24h": false,
       "duty": "Regular hours 9:30-12:00, 13:00-15:00 (appointment) and 16:00-20:00; 24-hour inpatient nursing. Night emergency details are on a separate page - call first.",
+      "duty_i18n": {
+        "fr": "Horaires habituels 9 h 30–12 h, 13 h–15 h (sur rendez-vous) et 16 h–20 h ; hospitalisation avec surveillance 24 h/24. Détails des urgences de nuit sur une page distincte : appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/nagoya/",
       "source_url": "https://mc.aeonpet.com/nagoya/",
@@ -743,6 +851,9 @@
       "phone": "+81 48-229-7299",
       "emergency_24h": false,
       "duty": "Emergency reception 09:00-01:00 every day of the year, with 24-hour ICU care for inpatients. Call before coming.",
+      "duty_i18n": {
+        "fr": "Accueil des urgences 9 h–1 h tous les jours de l’année, avec soins intensifs 24 h/24 pour les patients hospitalisés. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://vsec.jp/",
       "source_url": "https://vsec.jp/owner/emergency-care/",
@@ -758,6 +869,9 @@
       "phone": "+81 480-26-1299",
       "emergency_24h": false,
       "duty": "Night emergency 19:30-02:00 every day (phone reception 19:00-01:30). Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 19 h 30–2 h tous les jours (accueil téléphonique 19 h–1 h 30). Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://kuki-er-ah.com/",
       "source_url": "https://kuki-er-ah.com/information/",
@@ -773,6 +887,9 @@
       "phone": "+81 43-204-8181",
       "emergency_24h": false,
       "duty": "Day hospital 9:00-12:00 and 15:00-18:00, closed Thursdays (continuing patients only). Urgent cases seen on request during hours; night emergencies are referred to AEON Petemo Makuhari Shin-toshin.",
+      "duty_i18n": {
+        "fr": "Clinique de jour 9 h–12 h et 15 h–18 h, fermée le jeudi (patients déjà suivis uniquement). Cas urgents reçus sur demande pendant les heures d’ouverture ; urgences de nuit orientées vers AEON Petemo Makuhari Shin-toshin."
+      },
       "small_animals": true,
       "url": "https://kaihin-amc.com/",
       "source_url": "https://kaihin-amc.com/treatment/",
@@ -788,6 +905,9 @@
       "phone": "+81 92-471-7748",
       "emergency_24h": false,
       "duty": "Day clinic 9:00-12:00 and 13:30-18:00; closed Wednesday, Sunday and public holidays. No emergency service stated; new patients currently not accepted.",
+      "duty_i18n": {
+        "fr": "Clinique de jour 9 h–12 h et 13 h 30–18 h ; fermée le mercredi, le dimanche et les jours fériés. Aucun service d’urgence indiqué ; nouveaux patients actuellement non acceptés."
+      },
       "small_animals": true,
       "url": "https://f-dic.com/",
       "source_url": "https://f-dic.com/",
@@ -803,6 +923,9 @@
       "phone": "+81 45-341-0856",
       "emergency_24h": true,
       "duty": "Emergency centre open 24 hours, every day of the year (dogs and cats mainly). Call before coming.",
+      "duty_i18n": {
+        "fr": "Centre d’urgences ouvert 24 h/24, tous les jours de l’année (principalement chiens et chats). Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://veccs-yokohama.jp/",
       "source_url": "https://veccs-yokohama.jp/hospital",
@@ -818,6 +941,9 @@
       "phone": "+81 44-411-9999",
       "emergency_24h": true,
       "duty": "Emergency care and full nursing 24 hours, 365 days a year. Non-emergency hospital line 044-433-5155.",
+      "duty_i18n": {
+        "fr": "Urgences et soins continus 24 h/24, 365 jours par an. Ligne hors urgence de l’hôpital : 044-433-5155."
+      },
       "small_animals": true,
       "url": "https://amc-japan.com/",
       "source_url": "https://99-amc.com/med-info/",
@@ -833,6 +959,9 @@
       "phone": "+81 45-320-9099",
       "emergency_24h": false,
       "duty": "Night emergency centre 20:00-03:00. Call before coming.",
+      "duty_i18n": {
+        "fr": "Centre d’urgences de nuit 20 h–3 h. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://yokohama-dvms.com/",
       "source_url": "https://yokohama-dvms.com/",
@@ -848,6 +977,9 @@
       "phone": "+81 52-739-1299",
       "emergency_24h": true,
       "duty": "States it provides emergency care 24 hours, every day of the year. Call before coming; visits without a call may not be accepted.",
+      "duty_i18n": {
+        "fr": "Indique assurer les urgences 24 h/24, tous les jours de l’année. Appelez avant de venir ; les visites sans appel peuvent être refusées."
+      },
       "small_animals": true,
       "url": "https://moriyama1299.com/",
       "source_url": "https://moriyama1299.com/night/",
@@ -863,6 +995,9 @@
       "phone": "+81 52-733-3565",
       "emergency_24h": false,
       "duty": "Night emergency 20:00-09:00 every day, by appointment - call first.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 20 h–9 h tous les jours, sur rendez-vous : appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://www.anicare.net/",
       "source_url": "https://www.anicare.net/urgent/",
@@ -878,6 +1013,9 @@
       "phone": "+81 92-504-8999",
       "emergency_24h": false,
       "duty": "Night emergency 20:00-05:00, every day of the year.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 20 h–5 h, tous les jours de l’année."
+      },
       "small_animals": true,
       "url": "https://pet99.net/",
       "source_url": "https://pet99.net/",
@@ -893,6 +1031,9 @@
       "phone": "+81 11-688-9960",
       "emergency_24h": false,
       "duty": "Night emergency weekdays 19:00-06:00; Sundays and holidays 14:00-06:00; open every day of the year.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit en semaine 19 h–6 h ; dimanches et jours fériés 14 h–6 h ; ouvert tous les jours de l’année."
+      },
       "small_animals": true,
       "url": "https://www.sapporo1299.net/",
       "source_url": "https://www.sapporo1299.net/hospital-info",
@@ -908,6 +1049,9 @@
       "phone": "+81 11-522-7630",
       "emergency_24h": false,
       "duty": "Night medical centre Mon-Fri 20:00-02:00; phone Mon-Fri 9:00-02:00, Sat-Sun 9:00-19:00; 24-hour inpatient and intensive care.",
+      "duty_i18n": {
+        "fr": "Centre médical de nuit lun.–ven. 20 h–2 h ; téléphone lun.–ven. 9 h–2 h, sam.–dim. 9 h–19 h ; hospitalisation et soins intensifs 24 h/24."
+      },
       "small_animals": true,
       "url": "https://anes-amc.com/",
       "source_url": "https://anes-amc.com/",
@@ -923,6 +1067,9 @@
       "phone": "+81 78-939-5931",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-09:00, every day of the year. Call before coming; no phone-only consultations.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–9 h, tous les jours de l’année. Appelez avant de venir ; pas de consultation par téléphone seul."
+      },
       "small_animals": true,
       "url": "https://www.kobe-naec.com/",
       "source_url": "https://www.kobe-naec.com/",
@@ -938,6 +1085,9 @@
       "phone": "+81 438-60-9900",
       "emergency_24h": true,
       "duty": "States it treats animals 24 hours a day, including holidays, with night emergency care. Call before coming.",
+      "duty_i18n": {
+        "fr": "Indique soigner les animaux 24 h/24, jours fériés compris, avec urgences de nuit. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://99chiba.com/",
       "source_url": "https://99chiba.com/",
@@ -953,6 +1103,9 @@
       "phone": "+81 4-7157-8618",
       "emergency_24h": true,
       "duty": "Emergency care on a 24-hour basis; emergency hours weekdays 19:00-09:00, weekends and holidays 17:00-09:00, all year. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences assurées 24 h/24 ; horaires d’urgence en semaine 19 h–9 h, week-ends et jours fériés 17 h–9 h, toute l’année. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.chiba-ah.com/",
       "source_url": "https://www.chiba-ah.com/emergency-services.php",
@@ -968,6 +1121,9 @@
       "phone": "+81 22-794-9985",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-05:00, every day of the year. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–5 h, tous les jours de l’année. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.svet.jp/yakan/",
       "source_url": "https://www.svet.jp/yakan/",
@@ -983,6 +1139,9 @@
       "phone": "+81 43-497-6339",
       "emergency_24h": false,
       "duty": "Day hours 8:30-12:00 and 15:00-18:30, open all year except New Year; night emergency care handled via a separate page (from 19:00) - call first.",
+      "duty_i18n": {
+        "fr": "Horaires de jour 8 h 30–12 h et 15 h–18 h 30, ouvert toute l’année sauf au Nouvel An ; urgences de nuit via une page distincte (à partir de 19 h) : appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://jpbvet.com/",
       "source_url": "https://jpbvet.com/",
@@ -998,6 +1157,9 @@
       "phone": "+81 98-851-3939",
       "emergency_24h": false,
       "duty": "Night emergency 20:00-03:00 (last reception 02:30); closed Thursday and Friday; hours may change with vet availability - call first.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 20 h–3 h (dernière admission à 2 h 30) ; fermé le jeudi et le vendredi ; horaires susceptibles de changer selon la disponibilité des vétérinaires : appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://naha-ah.com/night/",
       "source_url": "https://naha-ah.com/night/",
@@ -1013,6 +1175,9 @@
       "phone": "+81 98-851-3700",
       "emergency_24h": false,
       "duty": "After-hours emergency 19:00-03:00, Monday to Friday; closed Saturday and Sunday. Call before visiting.",
+      "duty_i18n": {
+        "fr": "Urgences en dehors des heures d’ouverture 19 h–3 h, lun.–ven. ; fermé le samedi et le dimanche. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.okinawa-yakan-ah.com/en/",
       "source_url": "https://www.okinawa-yakan-ah.com/en/",
@@ -1028,6 +1193,9 @@
       "phone": "+81 53-522-9071",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-02:00; closed Mondays. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–2 h ; fermé le lundi. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://www.shizujyu.com/publics/index/438/",
       "source_url": "https://www.shizujyu.com/publics/index/438/",
@@ -1043,6 +1211,9 @@
       "phone": "+81 742-48-4111",
       "emergency_24h": true,
       "duty": "States it treats sick animals 24 hours a day: regular hours 9:00-11:30 and 17:00-19:00, emergency reception 19:00-09:00 and 11:30-17:00 (emergencies only Tue/Thu afternoons). Call first.",
+      "duty_i18n": {
+        "fr": "Indique soigner les animaux malades 24 h/24 : horaires habituels 9 h–11 h 30 et 17 h–19 h, accueil des urgences 19 h–9 h et 11 h 30–17 h (urgences uniquement les mardis et jeudis après-midi). Appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://nara-amc.com/",
       "source_url": "https://nara-amc.com/medical/emergency/",
@@ -1056,12 +1227,15 @@
       "region": "Saitama",
       "address": "1-10-4 Higashitokorozawa-Wada, Tokorozawa, Saitama 359-0023",
       "emergency_24h": false,
-      "duty": "Provides night and holiday emergency care for animals that become unwell; no hours are published on the page - call before visiting.",
+      "duty": "Provides night and holiday emergency care for animals that become unwell; opening hours are not published - call before visiting.",
+      "duty_i18n": {
+        "fr": "Assure les urgences de nuit et des jours fériés pour les animaux qui tombent malades ; horaires non publiés : appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://jsamc.or.jp/",
       "source_url": "https://jsamc.or.jp/",
       "checked": "2026-11-10",
-      "note": "Page says 24時間体制の連携 (partner cooperation) but no explicit 24 h reception; no phone on the page (04-2946-7313 night line appears only on another clinic's page, not used). Not flagged 24 h."
+      "note": "Page says 24時間体制の連携 (partner cooperation) but no explicit 24 h reception; no phone on the page (04-2946-7313 night line appears only on another clinic's page, not used). Not flagged 24 h. | Moved from duty: Provides night and holiday emergency care for animals that become unwell; no hours are published on the page - call before visiting."
     },
     {
       "kind": "clinic",
@@ -1072,6 +1246,9 @@
       "phone": "+81 82-508-6850",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-01:00 (appointment line 20:30-00:30).",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–1 h (ligne de rendez-vous 20 h 30–0 h 30)."
+      },
       "small_animals": true,
       "url": "https://hiroshimayakan.com/",
       "source_url": "https://hiroshimayakan.com/about/",
@@ -1087,6 +1264,9 @@
       "phone": "+81 93-661-8822",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-24:00, every day of the year except in snow or typhoon conditions. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–24 h, tous les jours de l’année sauf en cas de neige ou de typhon. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://kitakyu-vet.com/night/",
       "source_url": "https://kitakyu-vet.com/night/",
@@ -1102,6 +1282,9 @@
       "phone": "+81 70-3258-1122",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-01:00 (phone reception 20:30-00:30), no closed days. Reservation by phone required.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–1 h (accueil téléphonique 20 h 30–0 h 30), sans jour de fermeture. Réservation par téléphone obligatoire."
+      },
       "small_animals": true,
       "url": "https://anecniigata.com/",
       "source_url": "https://anecniigata.com/overview",
@@ -1117,6 +1300,9 @@
       "phone": "+81 50-1721-8729",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-01:00, every day of the year. Call before visiting; no phone-only consultations.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–1 h, tous les jours de l’année. Appelez avant de venir ; pas de consultation par téléphone seul."
+      },
       "small_animals": true,
       "url": "https://www.gifuyakan.jp/",
       "source_url": "https://www.gifuyakan.jp/",
@@ -1132,6 +1318,9 @@
       "phone": "+81 566-98-3758",
       "emergency_24h": true,
       "duty": "States emergency care is available 24 hours, every day of the year; evening-night consultations 20:00-08:00. Call first.",
+      "duty_i18n": {
+        "fr": "Indique assurer les urgences 24 h/24, tous les jours de l’année ; consultations en soirée et de nuit 20 h–8 h. Appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://www.sugiuravet.com/",
       "source_url": "https://www.sugiuravet.com/ems/",
@@ -1145,6 +1334,9 @@
       "region": "Aichi",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-02:00 (phone reception until 01:30), every day of the year. Call before visiting.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–2 h (accueil téléphonique jusqu’à 1 h 30), tous les jours de l’année. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://nagoyavet.jp/hospital_yakan.php",
       "source_url": "https://nagoyavet.jp/hospital_yakan.php",
@@ -1160,6 +1352,9 @@
       "phone": "+81 550-83-5115",
       "emergency_24h": false,
       "duty": "Emergency (night) care is offered and the hospital describes a 24-hour full-nursing (inpatient) system, but emergency reception hours are not published. Call before coming.",
+      "duty_i18n": {
+        "fr": "Urgences (de nuit) assurées et hospitalisation avec soins continus 24 h/24 annoncée, mais horaires d’accueil des urgences non publiés. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://vcj-sulga.com/",
       "source_url": "https://vcj-sulga.com/",
@@ -1175,6 +1370,9 @@
       "phone": "+81 48-714-0311",
       "emergency_24h": false,
       "duty": "Night emergency Tuesday-Friday 21:00-24:00; closed Monday, Saturday, Sunday and holidays. Call first.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit du mardi au vendredi 21 h–24 h ; fermé le lundi, le samedi, le dimanche et les jours fériés. Appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://www.saidaidori-ah.jp/",
       "source_url": "https://www.saidaidori-ah.jp/nighttime/",
@@ -1190,6 +1388,9 @@
       "phone": "+81 480-25-1100",
       "emergency_24h": false,
       "duty": "Night emergency on weekdays 20:00-22:00 (last reception 21:00); closed Saturday, Sunday and holidays; after 22:00 patients are referred to a night emergency hospital. Call first.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit en semaine 20 h–22 h (dernière admission à 21 h) ; fermé le samedi, le dimanche et les jours fériés ; après 22 h, orientation vers un hôpital d’urgences de nuit. Appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://musashinokuni-amc.com/",
       "source_url": "https://musashinokuni-amc.com/service/night_visit/",
@@ -1205,6 +1406,9 @@
       "phone": "+81 75-406-5211",
       "emergency_24h": false,
       "duty": "Night care on weekdays 19:00-22:00 at the main branch only; a 24-hour consultation line exists for existing patients only.",
+      "duty_i18n": {
+        "fr": "Soins de nuit en semaine 19 h–22 h, au siège principal uniquement ; ligne de consultation 24 h/24 réservée aux patients déjà suivis."
+      },
       "small_animals": true,
       "url": "https://www.ukyo-ah.com/",
       "source_url": "https://www.ukyo-ah.com/service/night/",
@@ -1220,6 +1424,9 @@
       "phone": "+81 86-246-8100",
       "emergency_24h": false,
       "duty": "Open 365 days by appointment: 9:00-12:00 and 16:00-19:00 (Tue 9:00-12:00 and 14:00-17:00). Urgent problems on holidays and New Year are handled; call first.",
+      "duty_i18n": {
+        "fr": "Ouvert 365 jours par an sur rendez-vous : 9 h–12 h et 16 h–19 h (mardi 9 h–12 h et 14 h–17 h). Urgences prises en charge les jours fériés et au Nouvel An ; appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://www.okayama-amc.com/",
       "source_url": "https://www.okayama-amc.com/contents/category/okayama-amc/",
@@ -1235,6 +1442,9 @@
       "phone": "+81 466-84-3900",
       "emergency_24h": false,
       "duty": "University teaching hospital, Monday-Friday daytime, appointment only (web booking since April 2026); no emergency or night service stated.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire, du lundi au vendredi en journée, sur rendez-vous uniquement (réservation en ligne depuis avril 2026) ; aucun service d’urgence ou de nuit indiqué."
+      },
       "small_animals": true,
       "url": "https://hp.brs.nihon-u.ac.jp/~nuanmec/",
       "source_url": "https://hp.brs.nihon-u.ac.jp/~nuanmec/",
@@ -1250,6 +1460,9 @@
       "phone": "+81 96-206-1765",
       "emergency_24h": false,
       "duty": "Regular hours 9:00-11:30 and 15:00-18:30, closed Mondays. Night care until midnight (not on Mondays); call first - after 19:00 calls go to voicemail and the clinic calls back. Surcharge +5,000 yen until 0:00, +8,000 yen after 0:00. Night care may be unavailable depending on workload.",
+      "duty_i18n": {
+        "fr": "Horaires habituels 9 h–11 h 30 et 15 h–18 h 30, fermé le lundi. Soins de nuit jusqu’à minuit (pas le lundi) ; appelez d’abord : après 19 h, les appels sont renvoyés sur répondeur et la clinique rappelle. Supplément de 5 000 yens jusqu’à minuit, 8 000 yens après minuit. Soins de nuit parfois indisponibles selon la charge de travail."
+      },
       "small_animals": true,
       "url": "https://hifumi-petclinic.com/",
       "source_url": "https://hifumi-petclinic.com/fukushi/",
@@ -1265,6 +1478,9 @@
       "phone": "+81 96-227-9339",
       "emergency_24h": false,
       "duty": "Night and after-hours treatment offered: do not walk in at night, call first and give your expected arrival time. If there is no call back within 15 minutes, try another hospital. No phone advice. After-hours examination fee applies. Mainly dogs and cats.",
+      "duty_i18n": {
+        "fr": "Soins de nuit et hors horaires proposés : ne vous présentez pas sans appel la nuit, appelez d’abord en indiquant votre heure d’arrivée prévue. Sans rappel sous 15 minutes, contactez un autre hôpital. Pas de conseil par téléphone. Frais de consultation hors horaires. Principalement chiens et chats."
+      },
       "small_animals": true,
       "url": "https://k1r4t3t0animalhospital.jp/",
       "source_url": "https://k1r4t3t0animalhospital.jp/how-to-visit/",
@@ -1280,6 +1496,9 @@
       "phone": "+81 985-48-0808",
       "emergency_24h": false,
       "duty": "After-hours treatment is offered for dogs and cats; call 0985-48-0808 before coming. No 24-hour service.",
+      "duty_i18n": {
+        "fr": "Soins hors horaires proposés pour chiens et chats ; appelez le 0985-48-0808 avant de venir. Pas de service 24 h/24."
+      },
       "small_animals": true,
       "url": "https://o-vet.com/guidance",
       "source_url": "https://o-vet.com/guidance",
@@ -1294,6 +1513,9 @@
       "address": "6-5 Nakaichiman-cho, Matsuyama, Ehime 790-0804",
       "emergency_24h": false,
       "duty": "Rotating night emergency clinic for dogs and cats: treatment 20:00-23:00, phone reception until 22:30. Closed Thursdays and Sundays. Check the online calendar for tonight's duty hospital and call it first. Cash mainly; extra after-hours fee (about 5,000 yen).",
+      "duty_i18n": {
+        "fr": "Clinique d’urgences de nuit en tour de garde pour chiens et chats : soins 20 h–23 h, accueil téléphonique jusqu’à 22 h 30. Fermé le jeudi et le dimanche. Consultez le calendrier en ligne pour connaître l’établissement de garde ce soir et appelez-le d’abord. Paiement surtout en espèces ; supplément hors horaires (environ 5 000 yens)."
+      },
       "small_animals": true,
       "url": "https://ehime-vets.jp/",
       "source_url": "https://ehime-vets.jp/requests-and-precautions/",
@@ -1309,6 +1531,9 @@
       "phone": "+81 89-975-3969",
       "emergency_24h": false,
       "duty": "Mon-Wed, Fri, Sat 9:00-12:00 and 16:00-19:30; Sun and holidays morning only; closed Thursdays. Night and emergency care as far as possible - phone ahead.",
+      "duty_i18n": {
+        "fr": "Lun.–mer., ven., sam. 9 h–12 h et 16 h–19 h 30 ; dim. et jours fériés le matin uniquement ; fermé le jeudi. Soins de nuit et d’urgence dans la mesure du possible : appelez avant."
+      },
       "small_animals": true,
       "url": "https://koushindo.com/",
       "source_url": "https://koushindo.com/",
@@ -1324,6 +1549,9 @@
       "phone": "+81 89-993-3411",
       "emergency_24h": false,
       "duty": "Open 365 days: 10:00-11:30 and 13:30-18:30 (closed on the afternoons of the 2nd and 3rd Thursday). Night emergencies are handled through the Ehime veterinary association's night rota.",
+      "duty_i18n": {
+        "fr": "Ouvert 365 jours par an : 10 h–11 h 30 et 13 h 30–18 h 30 (fermé les après-midi des 2e et 3e jeudis du mois). Urgences de nuit assurées via le tour de garde de nuit de l’association vétérinaire d’Ehime."
+      },
       "small_animals": true,
       "url": "https://mhvc.jp/",
       "source_url": "https://mhvc.jp/",
@@ -1339,6 +1567,9 @@
       "phone": "+81 89-977-9912",
       "emergency_24h": false,
       "duty": "Mon, Wed, Fri, Sat 9:00-11:30 and 15:30-19:00; Tue morning only; Sun morning by appointment; closed Thursdays. Takes part in the Ehime night rota (20:00-23:00); dogs and cats only.",
+      "duty_i18n": {
+        "fr": "Lun., mer., ven., sam. 9 h–11 h 30 et 15 h 30–19 h ; mardi le matin uniquement ; dimanche matin sur rendez-vous ; fermé le jeudi. Participe au tour de garde de nuit d’Ehime (20 h–23 h) ; chiens et chats uniquement."
+      },
       "small_animals": true,
       "url": "https://murakami-dogcat.com/",
       "source_url": "https://murakami-dogcat.com/",
@@ -1354,6 +1585,9 @@
       "phone": "+81 70-3258-1122",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-1:00 (last check-in 0:30), every day; phone reception 20:30-0:30 and booking by phone required. Dogs and cats; credit card only. First-visit fee 10,000 yen.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–1 h (dernière admission à 0 h 30), tous les jours ; accueil téléphonique 20 h 30–0 h 30 et réservation par téléphone obligatoire. Chiens et chats ; carte bancaire uniquement. Frais de première visite : 10 000 yens."
+      },
       "small_animals": true,
       "url": "https://anecniigata.com/",
       "source_url": "https://anecniigata.com/overview",
@@ -1369,6 +1603,9 @@
       "phone": "+81 50-8889-5612",
       "emergency_24h": false,
       "duty": "Night emergency 21:00-2:00, irregular closing days - check the calendar and call first.",
+      "duty_i18n": {
+        "fr": "Urgences de nuit 21 h–2 h, jours de fermeture irréguliers : consultez le calendrier et appelez d’abord."
+      },
       "small_animals": true,
       "url": "https://kanazawa-yakan.com/",
       "source_url": "https://kanazawa-yakan.com/about/",
@@ -1384,6 +1621,9 @@
       "phone": "+81 778-53-1772",
       "emergency_24h": false,
       "duty": "Mon-Sat 9:00-12:00 and 16:00-18:00. Night treatment 20:00-23:00 and closed-day treatment 8:00-23:00 as far as possible (reception ends 30 min before). First-time patients receive first-line emergency care only. No phone-only consultations.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–12 h et 16 h–18 h. Soins de nuit 20 h–23 h et les jours de fermeture 8 h–23 h dans la mesure du possible (fin de l’accueil 30 min avant). Nouveaux patients : premiers soins d’urgence uniquement. Pas de consultation par téléphone seul."
+      },
       "small_animals": true,
       "url": "https://asa-vet.com/",
       "source_url": "https://asa-vet.com/examination/off_hours",
@@ -1399,6 +1639,9 @@
       "phone": "+81 749-50-5536",
       "emergency_24h": false,
       "duty": "9:00-12:00 and 16:30-19:30, closed Thursdays and Sunday/holiday afternoons. Night emergency until midnight - call first; existing patients have priority. After-hours fee 3,000-7,000 yen. If no callback, the clinic refers to Kyoto Night Animal Clinic.",
+      "duty_i18n": {
+        "fr": "9 h–12 h et 16 h 30–19 h 30, fermé le jeudi et les dimanches et jours fériés après-midi. Urgences de nuit jusqu’à minuit : appelez d’abord ; patients déjà suivis prioritaires. Supplément hors horaires de 3 000 à 7 000 yens. Sans rappel, la clinique oriente vers la Kyoto Night Animal Clinic."
+      },
       "small_animals": true,
       "url": "https://nagahama-ah.com/",
       "source_url": "https://nagahama-ah.com/guidance.html",
@@ -1414,6 +1657,9 @@
       "phone": "+81 77-516-7510",
       "emergency_24h": false,
       "duty": "Night first-aid care: call first and leave a voicemail; if the clinic can respond it calls back within 15 minutes. Separate night fees; credit card and PayPay. Dogs, cats, rabbits, hamsters. Bring photo ID.",
+      "duty_i18n": {
+        "fr": "Soins d’urgence de nuit : appelez d’abord et laissez un message vocal ; si la clinique peut intervenir, elle rappelle sous 15 minutes. Tarifs de nuit distincts ; carte bancaire et PayPay. Chiens, chats, lapins, hamsters. Apportez une pièce d’identité avec photo."
+      },
       "small_animals": true,
       "url": "https://ukulele-vets.com/",
       "source_url": "https://ukulele-vets.com/night-medical-care/",
@@ -1429,6 +1675,9 @@
       "phone": "+81 77-528-0001",
       "emergency_24h": false,
       "duty": "9:00-12:00 and 16:00-19:30, closed Thursdays and Sunday/holiday afternoons. After-hours care mainly for registered patients; call first (voicemail - a callback within 5 minutes is not guaranteed). Extra after-hours fee applies.",
+      "duty_i18n": {
+        "fr": "9 h–12 h et 16 h–19 h 30, fermé le jeudi et les dimanches et jours fériés après-midi. Soins hors horaires surtout pour les patients inscrits ; appelez d’abord (répondeur : un rappel sous 5 minutes n’est pas garanti). Supplément hors horaires."
+      },
       "small_animals": true,
       "url": "https://www.mirai-ac.info/",
       "source_url": "https://www.mirai-ac.info/guide",
@@ -1444,6 +1693,9 @@
       "phone": "+81 59-384-1299",
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu, Fri 9:00-12:00 and 17:00-20:00; Sat 9:00-15:00; closed Wednesdays. Not a 24-hour hospital, but emergencies can call 059-384-1299 outside hours (answerphone if unavailable); after-hours fee applies. Dogs, cats, hamsters, ferrets.",
+      "duty_i18n": {
+        "fr": "Lun., mar., jeu., ven. 9 h–12 h et 17 h–20 h ; sam. 9 h–15 h ; fermé le mercredi. Pas d’ouverture 24 h/24, mais en cas d’urgence, appelez le 059-384-1299 hors horaires (répondeur si indisponible) ; supplément hors horaires. Chiens, chats, hamsters, furets."
+      },
       "small_animals": true,
       "url": "https://kitagawa-ac.com/",
       "source_url": "https://kitagawa-ac.com/medical",
@@ -1459,6 +1711,9 @@
       "phone": "+81 17-761-6363",
       "emergency_24h": false,
       "duty": "Mon-Sat 9:30-12:00 and 15:00-18:00 (Sun 10:00-12:00; holidays 10:30-12:00, 15:00-17:00); closed Thursdays. Night emergency window suspended; after-hours help only for regular and partner-hospital patients via answerphone. No walk-ins at night.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h 30–12 h et 15 h–18 h (dim. 10 h–12 h ; jours fériés 10 h 30–12 h et 15 h–17 h) ; fermé le jeudi. Accueil des urgences de nuit suspendu ; aide hors horaires uniquement pour les patients de la clinique et des hôpitaux partenaires, via répondeur. Aucune admission sans appel la nuit."
+      },
       "small_animals": true,
       "url": "https://aamc.aomori.jp/",
       "source_url": "https://aamc.aomori.jp/%E8%A8%BA%E7%99%82%E6%A1%88%E5%86%85/",
@@ -1474,6 +1729,9 @@
       "phone": "+81 178-45-0672",
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu-Sat 9:00-12:00 and 16:00-18:00; Sun morning only; closed Wednesdays and holidays. After-hours care is not routine but emergencies are handled as far as possible: leave a voicemail or use the contact form; after-hours fee applies.",
+      "duty_i18n": {
+        "fr": "Lun., mar., jeu.–sam. 9 h–12 h et 16 h–18 h ; dim. le matin uniquement ; fermé le mercredi et les jours fériés. Soins hors horaires non systématiques, mais urgences prises en charge dans la mesure du possible : laissez un message vocal ou utilisez le formulaire de contact ; supplément hors horaires."
+      },
       "small_animals": true,
       "url": "https://www.yasuda-animal-hospital.com/",
       "source_url": "https://www.yasuda-animal-hospital.com/reception/emergency/",
@@ -1489,6 +1747,9 @@
       "phone": "+81 19-661-0500",
       "emergency_24h": false,
       "duty": "Closed Wednesdays; Sunday and holiday afternoons closed. Urgent cases handled promptly; call ahead.",
+      "duty_i18n": {
+        "fr": "Fermé le mercredi ; fermé les dimanches et jours fériés après-midi. Cas urgents pris en charge rapidement ; appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://matuzono.com/",
       "source_url": "https://matuzono.com/menu/",
@@ -1504,6 +1765,9 @@
       "phone": "+81 237-42-1112",
       "emergency_24h": false,
       "duty": "Weekdays 9:00-12:00 and 16:00-19:00; Sat and Sun 9:00-12:00 and 15:00-16:00; closed Wednesdays and holidays. No after-hours service stated on its site.",
+      "duty_i18n": {
+        "fr": "En semaine 9 h–12 h et 16 h–19 h ; sam. et dim. 9 h–12 h et 15 h–16 h ; fermé le mercredi et les jours fériés. Aucun service hors horaires indiqué sur son site."
+      },
       "small_animals": true,
       "url": "https://sakuranboahp.com/",
       "source_url": "https://sakuranboahp.com/consultation",
@@ -1519,6 +1783,9 @@
       "phone": "+81 19-621-6238",
       "emergency_24h": false,
       "duty": "Weekdays 9:00-17:00 by appointment; mainly referrals from other vets. No emergency or 24-hour service.",
+      "duty_i18n": {
+        "fr": "En semaine 9 h–17 h sur rendez-vous ; principalement sur orientation d’autres vétérinaires. Pas de service d’urgence ni de 24 h/24."
+      },
       "small_animals": true,
       "url": "https://vmth.vet.iwate-u.ac.jp/",
       "source_url": "https://vmth.vet.iwate-u.ac.jp/contact.html",
@@ -1533,6 +1800,9 @@
       "address": "582 Bunkyodai Midoricho, Ebetsu, Hokkaido 069-8501",
       "emergency_24h": false,
       "duty": "University secondary-care hospital, fully by appointment through your own vet (exotic animals excepted). Closed weekends and public holidays. No emergency or night service stated.",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire de recours, entièrement sur rendez-vous via votre vétérinaire habituel (sauf animaux exotiques). Fermé les week-ends et jours fériés. Aucun service d’urgence ou de nuit indiqué."
+      },
       "small_animals": true,
       "url": "https://amc.rakuno.ac.jp/",
       "source_url": "https://amc.rakuno.ac.jp/owners.html",
@@ -1548,6 +1818,9 @@
       "phone": "+81 42-769-2363",
       "emergency_24h": false,
       "duty": "Weekdays 9:00-17:00 (reception closes 16:00), closed weekends and holidays. Appointment only, through your own vet. No emergency service stated.",
+      "duty_i18n": {
+        "fr": "En semaine 9 h–17 h (fin de l’accueil à 16 h), fermé les week-ends et jours fériés. Sur rendez-vous uniquement, via votre vétérinaire habituel. Aucun service d’urgence indiqué."
+      },
       "small_animals": true,
       "url": "https://avth.azabu-u.ac.jp/",
       "source_url": "https://avth.azabu-u.ac.jp/service/schedule.html",
@@ -1563,6 +1836,9 @@
       "phone": "+81 42-388-7474",
       "emergency_24h": false,
       "duty": "Exams 9:30-16:00, phone 9:00-16:30, closed Fridays; weekend and holiday exams carry an extra fee. Emergencies accepted during exam hours - call first. No night emergency care; after-hours calls go to a separate 24-hour phone advice line (no treatment).",
+      "duty_i18n": {
+        "fr": "Consultations 9 h 30–16 h, téléphone 9 h–16 h 30, fermé le vendredi ; supplément pour les consultations les week-ends et jours fériés. Urgences acceptées pendant les heures de consultation : appelez d’abord. Pas d’urgences de nuit ; hors horaires, les appels sont dirigés vers une ligne de conseil téléphonique 24 h/24 distincte (sans soins)."
+      },
       "small_animals": true,
       "url": "https://tuat-kamec.org/",
       "source_url": "https://tuat-kamec.org/owner/",
@@ -1578,6 +1854,9 @@
       "phone": "+81 42-367-5785",
       "emergency_24h": false,
       "duty": "Appointments by phone on weekdays 9:00-17:00. Treats small animals and pets. No emergency service stated.",
+      "duty_i18n": {
+        "fr": "Rendez-vous par téléphone en semaine 9 h–17 h. Soigne les petits animaux et les animaux de compagnie. Aucun service d’urgence indiqué."
+      },
       "small_animals": true,
       "url": "https://www.tuat-amc.org/",
       "source_url": "https://www.tuat-amc.org/contents/uketuke.php",
@@ -1593,6 +1872,9 @@
       "phone": "+81 58-293-2962",
       "emergency_24h": false,
       "duty": "Mornings Mon-Fri (check-in by 11:30), by appointment and vet referral only. No emergency or 24-hour service; urgent cases via your own referring vet.",
+      "duty_i18n": {
+        "fr": "Le matin du lundi au vendredi (admission avant 11 h 30), sur rendez-vous et orientation vétérinaire uniquement. Pas de service d’urgence ni de 24 h/24 ; cas urgents via votre vétérinaire référent."
+      },
       "small_animals": true,
       "url": "https://www.animalhospital.gifu-u.ac.jp/",
       "source_url": "https://www.animalhospital.gifu-u.ac.jp/patient/how.html",
@@ -1607,6 +1889,9 @@
       "address": "House calls only, no fixed clinic (Oita City and about 50 km around)",
       "emergency_24h": false,
       "duty": "Night and emergency house-call service, roughly 19:00-6:00 (may end early). Mainly rabbits, ferrets and hamsters; dogs and cats case by case. Cash only. One vet - may be unreachable during other emergencies.",
+      "duty_i18n": {
+        "fr": "Service de visites à domicile de nuit et d’urgence, environ 19 h–6 h (peut s’arrêter plus tôt). Principalement lapins, furets et hamsters ; chiens et chats selon les cas. Paiement en espèces uniquement. Un seul vétérinaire : peut être injoignable pendant d’autres urgences."
+      },
       "small_animals": true,
       "url": "https://animal.oita.jp/",
       "source_url": "https://animal.oita.jp/able",
