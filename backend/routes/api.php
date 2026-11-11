@@ -17,6 +17,8 @@ use App\Http\Controllers\ChildSettingsController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
+use App\Http\Controllers\GiftVoucherController;
+use App\Http\Controllers\LemonSqueezyWebhookController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
@@ -28,6 +30,7 @@ use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
 use App\Http\Controllers\WishController;
 use App\Http\Middleware\LimitRequestBody;
+use App\Http\Middleware\VerifyLemonSqueezyWebhook;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +56,11 @@ Route::post('auth/social', [AuthController::class, 'social'])
 // failed-attempt lockouts (per IP and global) in ChildPinLoginService.
 Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
     ->middleware('throttle:pin-login');
+
+// Website gift voucher redemption (M6-S01): public, called by petprep.si from the
+// browser (CORS framework default), rate limited per IP and per code.
+Route::post('gift/redeem', [GiftVoucherController::class, 'redeem'])
+    ->middleware('throttle:gift-redeem');
 
 // M5-05: crash / render-error reports from the app, with or without a token
 // (a token only gives the role; an invalid one is ignored, never a 401).
@@ -93,6 +101,11 @@ Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])
 // M3-08: fails closed (no REVENUECAT_WEBHOOK_SECRET → 503), auth before validation.
 Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'])
     ->middleware(['throttle:api', VerifyRevenueCatWebhook::class]);
+
+// Lemon Squeezy webhook (M6-S01 website gift vouchers): X-Signature HMAC-SHA256 of
+// the raw body; fails closed without the secret / store / product (503).
+Route::post('webhooks/lemonsqueezy', [LemonSqueezyWebhookController::class, 'handle'])
+    ->middleware(['throttle:api', VerifyLemonSqueezyWebhook::class]);
 
 /*
 |--------------------------------------------------------------------------

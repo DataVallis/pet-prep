@@ -125,6 +125,13 @@ class AppSettingsService
      */
     public const VIDEO_COMPRESSION_KEY = 'video_compression';
 
+    /**
+     * M6-S01 (WEBSITE_SALES_SPEC §3.4): `{enabled: bool}` — website gift voucher
+     * redemption (POST /api/gift/redeem) — DEFAULT OFF until the app is in the stores.
+     * The Lemon Squeezy webhook (refunds) is processed whatever this says.
+     */
+    public const GIFT_VOUCHERS_KEY = 'gift_vouchers';
+
     /** M5-T15 default low-balance threshold (no row / empty), USD. */
     public const FAL_BALANCE_ALERT_DEFAULT_USD = 20.0;
 
@@ -419,6 +426,27 @@ class AppSettingsService
     public function updateAppErrorReports(User $actor, bool $enabled): void
     {
         $this->store($actor, self::APP_ERROR_REPORTS_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /**
+     * M6-S01: may the website redeem gift vouchers? Default off (no row = off).
+     * `$fresh` reads the row itself (no cache).
+     */
+    public function giftVouchers(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::GIFT_VOUCHERS_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::GIFT_VOUCHERS_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::GIFT_VOUCHERS_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? false);
+    }
+
+    /** Save the gift vouchers switch (superadmin), audit it and bust the cache. */
+    public function updateGiftVouchers(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::GIFT_VOUCHERS_KEY, ['enabled' => $enabled], ['enabled' => false]);
     }
 
     /**
