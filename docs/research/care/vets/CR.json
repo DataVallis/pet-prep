@@ -31,6 +31,46 @@
       "name": "Lead lists (leads only)",
       "url": "https://vet24cr.com/",
       "note": "Directory opened only to find clinic names that claim 24 h (Cavallini, Santamaria, Medical Care, Drs. Chacon, VitalVet, Clinica Veterinaria San Juan, SALVET 24, Medical Pets, Nuske Vet Center, Guanavet, IVDSA, Agromedica, Ramirez, Donde Chiza, Villa Mascotas, Gocha); no entry relies on it. Scotia Mascotas provider PDF and Costa Rican news articles were also used for leads only."
+    },
+    {
+      "name": "Hospital Veterinario Agromedica - own site",
+      "url": "https://hospitalveterinario.cr/contactenos/",
+      "note": "Own contact page opened: Escazu hospital (24 h emergencies for dogs and cats) and San Rafael de Alajuela clinic."
+    },
+    {
+      "name": "Medical Pets - own site",
+      "url": "https://medicalpetscr.com/",
+      "note": "Own pages opened (home, nosotros): Cartago and Curridabat hospitals, 24/7 statements."
+    },
+    {
+      "name": "IVDSA - own site",
+      "url": "https://ivdsa.com/emergencias-2/",
+      "note": "Own emergency and contact pages opened: 'Emergencias 24/7', Santa Ana and Tres Rios."
+    },
+    {
+      "name": "VitalVet Cartago - own site",
+      "url": "https://www.hospitalvitalvet.com/emergencias-veterinaria-24-horas/",
+      "note": "Own pages opened: 24/7 emergency statements."
+    },
+    {
+      "name": "Clinica Veterinaria San Juan - own site",
+      "url": "https://www.sanjuanvete.com/",
+      "note": "Own page opened: emergency service 24/7."
+    },
+    {
+      "name": "Hospital Veterinario Ganagro - own site",
+      "url": "https://veterinariaganagro.com/contacto/",
+      "note": "Own contact page opened."
+    },
+    {
+      "name": "Clinica Veterinaria San Rafael (Heredia) - own site",
+      "url": "https://www.clinicaveterinariasanrafael.com/",
+      "note": "Own page opened (WhatsApp only)."
+    },
+    {
+      "name": "Nuske Vet Center - own site",
+      "url": "https://veterinarianuskecr.com/",
+      "note": "Own page opened: hours and night emergencies."
     }
   ],
   "entries": [
@@ -151,7 +191,169 @@
       "source_url": "https://www.veterinariadrbrenes.com/contactenos/",
       "note": "Page says 'Solo atendemos con CITA PREVIA'; no 24 h claim. Page meta description shows 2240 8268 instead of 2240 8262.",
       "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Agromedica Escazu",
+      "city": "Escazu",
+      "region": "San Jose",
+      "address": "Del Novillo Alegre, 100 m south and 50 m west, Escazu",
+      "phone": "+506 2289 4101",
+      "emergency_24h": true,
+      "duty": "Hospital open daily 8:00-20:00 including holidays, with 24-hour emergency care for dogs and cats; second phone +506 4700 1898.",
+      "small_animals": true,
+      "url": "https://hospitalveterinario.cr/contactenos/",
+      "source_url": "https://hospitalveterinario.cr/contactenos/",
+      "note": "Contact page: heading '(EMERGENCIAS 24 HORAS)', 'Emergencias 24 horas para perros y gatos', 'para perros y gatos las 24 horas'. WhatsApp 7131 2343 is for information only (page says not to use it when an immediate answer is needed). Email info@hospitalveterinario.cr.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria Agromedica San Rafael de Alajuela (Concasa)",
+      "city": "San Rafael de Alajuela",
+      "region": "Alajuela",
+      "address": "Centro Comercial Campo Real (Concasa), Locales 15 y 16, 150 m north and 750 m south of the Ruta 27 toll, San Rafael de Alajuela",
+      "phone": "+506 2101 9191",
+      "emergency_24h": false,
+      "duty": "Monday to Friday 8:00-21:00, Saturday 9:00-19:00, Sunday and holidays 9:00-17:00. Not stated as a 24-hour service; second phone +506 4700 0518.",
+      "small_animals": true,
+      "url": "https://hospitalveterinario.cr/contactenos/",
+      "source_url": "https://hospitalveterinario.cr/contactenos/",
+      "note": "Same contact page as the Escazu hospital; this branch has no 24 h or emergency statement. WhatsApp 7097 8690 (information only). Email SAVC@hospitalveterinario.cr. Species not stated on the page.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Ganagro",
+      "city": "Ciudad Quesada (San Carlos)",
+      "region": "Alajuela",
+      "address": "Costado norte del Pali, in front of Casa Cural, Ciudad Quesada, San Carlos, Alajuela 21001",
+      "phone": "+506 2460 1776",
+      "emergency_24h": false,
+      "duty": "Monday to Saturday 7:30-19:00, Sunday 8:00-14:00; emergency line +506 8817 0000 (hours not stated); WhatsApp +506 8661 1717.",
+      "small_animals": true,
+      "url": "https://veterinariaganagro.com/contacto/",
+      "source_url": "https://veterinariaganagro.com/contacto/",
+      "note": "Contact page lists an 'Emergencias' number but no 24 h claim. Page mentions pets, puppies and canine grooming; cats not mentioned.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Medical Pets Hospital Veterinario Cartago",
+      "city": "Cartago",
+      "region": "Cartago",
+      "address": "350 m south of Funeraria La Ultima Joya, Cartago",
+      "phone": "+506 4070 8383",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week, with 24/7 veterinary emergencies; WhatsApp on the same number.",
+      "small_animals": true,
+      "url": "https://medicalpetscr.com/",
+      "source_url": "https://medicalpetscr.com/",
+      "note": "Home page: 'Dos hospitales abiertos las 24 horas, todos los dias del ano', 'Abierto 24 horas, 7 dias a la semana', 'Emergencias veterinarias 24/7'. Single shared number for both hospitals (also written 4070-VETE).",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Medical Pets Hospital Veterinario Curridabat",
+      "city": "Curridabat",
+      "region": "San Jose",
+      "address": "100 m north and 50 m west of Plaza Cristal, Curridabat, San Jose",
+      "phone": "+506 4070 8383",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week, with 24/7 veterinary emergencies; WhatsApp on the same number.",
+      "small_animals": true,
+      "url": "https://medicalpetscr.com/",
+      "source_url": "https://medicalpetscr.com/",
+      "note": "Same home page statements as the Cartago hospital ('Abierto 24 horas, 7 dias a la semana'). Shared number 4070-8383 (4070-VETE).",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "IVDSA Instituto Veterinario Docente - Santa Ana",
+      "city": "Santa Ana",
+      "region": "San Jose",
+      "address": "400 m east of Cebiche del Rey, old Santa Ana-Escazu road, Santa Ana",
+      "phone": "+506 2203 1943",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service; second phone +506 2203 1944.",
+      "small_animals": true,
+      "url": "https://ivdsa.com/",
+      "source_url": "https://ivdsa.com/emergencias-2/",
+      "note": "Emergencias page heading 'Emergencias 24/7' (no separate hours listed); address and phones from https://ivdsa.com/contacto/, which itself lists no hours.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "IVDSA Instituto Veterinario Docente - Tres Rios",
+      "city": "Tres Rios",
+      "region": "Cartago",
+      "address": "2.5 km east of the Walmart in Pinares de Tres Rios",
+      "phone": "+506 2278 2680",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service; second phone +506 2278 2681.",
+      "small_animals": true,
+      "url": "https://ivdsa.com/",
+      "source_url": "https://ivdsa.com/emergencias-2/",
+      "note": "Emergencias page heading 'Emergencias 24/7' lists both branches' phones; address from https://ivdsa.com/contacto/ (no hours there).",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "VitalVet Hospital Veterinario Cartago",
+      "city": "El Tejar, Cartago",
+      "region": "Cartago",
+      "phone": "+506 2552 7274",
+      "emergency_24h": true,
+      "duty": "24/7 emergency care for dogs and cats, including holidays; WhatsApp +506 8780 5273.",
+      "small_animals": true,
+      "url": "https://www.hospitalvitalvet.com/veterinaria-cartago/",
+      "source_url": "https://www.hospitalvitalvet.com/emergencias-veterinaria-24-horas/",
+      "note": "Pages: 'Servicio 24/7', 'atencion veterinaria las 24 horas', 'Atencion de emergencias las 24 horas, los 7 dias de la semana, incluidos dias feriados'. Only 'El Tejar Cartago' as address; no regular hours listed. 'Solicitar Ayuda' button dials 2100 7466.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria San Juan",
+      "city": "Tres Rios",
+      "region": "Cartago",
+      "phone": "+506 2278 0543",
+      "emergency_24h": true,
+      "duty": "Monday to Saturday 8:00-20:30; emergency service 24/7 outside regular hours; WhatsApp and second phone +506 4070 0543.",
+      "small_animals": true,
+      "url": "https://www.sanjuanvete.com/",
+      "source_url": "https://www.sanjuanvete.com/",
+      "note": "Page: 'Servicio de emergencias 24/7', 'atencion critica y de emergencia las 24 horas, los 7 dias de la semana'. Street address not on the page (Tres Rios, Cartago only); Sunday hours not stated. Earlier queue listed it under La Union.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria San Rafael",
+      "city": "San Rafael de Heredia",
+      "region": "Heredia",
+      "address": "100 m north and 50 m east of the NW corner of the Catholic church, San Rafael de Heredia",
+      "emergency_24h": false,
+      "duty": "No hours published on the page; contact via WhatsApp link only.",
+      "small_animals": true,
+      "url": "https://www.clinicaveterinariasanrafael.com/",
+      "source_url": "https://www.clinicaveterinariasanrafael.com/",
+      "note": "Page gives only a WhatsApp link, no phone number or hours; no 24 h claim.",
+      "checked": "2026-11-11"
+    },
+    {
+      "kind": "clinic",
+      "name": "Nuske Vet Center",
+      "city": "Esparza",
+      "region": "Puntarenas",
+      "address": "25 m west and 25 m south of Empresarios Unidos, Calle 2, Esparza 60201",
+      "phone": "+506 2635 9002",
+      "emergency_24h": false,
+      "duty": "Opening hours inconsistent on the site (Monday-Saturday 8:00-18:00, or Monday-Friday 9:00-18:00 and weekends 9:00-16:00); night emergencies 18:00-06:00 daily and Sunday emergencies only, as published; WhatsApp +506 8764 0777.",
+      "small_animals": true,
+      "url": "https://veterinarianuskecr.com/",
+      "source_url": "https://veterinarianuskecr.com/",
+      "note": "Footer: 'Urgencias Nocturnas de 6 pm a 6 am todos los dias'; no explicit '24 horas' wording, so emergency_24h is false. Site hours contradict each other; confirm by phone. Dogs and cats appear on the page; exotics mentioned.",
+      "checked": "2026-11-11"
     }
   ],
-  "notes": "Costa Rica: only 8 entries (4 x 24 h: Hospital PETS+ San Antonio, Petopia, La Vete Escazu, La Vete Curridabat; HEMS-UNA is not 24 h). Most clinics' own sites could not be opened: the fetch tool only opens URLs that surfaced in search results, and many clinic domains never did; some sites refused automated access (cavallinivet.com robots-disallowed, alltama.com robots-disallowed, medipetcr.com failed). No national or regional duty rota (guardia) found. No animal poison information line found: the Colegio de Medicos Veterinarios de Costa Rica website and any SENASA clinic directory could not be located or opened, and no official page naming an animal poison line was found (the human poison centre was not confirmed to take animal calls). Not done (24-h claims seen only in the vet24cr.com directory, not on own pages, so NOT added): Hospital Veterinario Cavallini (Tamarindo), Hospital Veterinario Santamaria (Alajuela), Hospital Veterinario Medical Care (Heredia), Hospital Veterinario Drs. Chacon (Guadalupe), VitalVet Cartago (El Tejar), Clinica Veterinaria San Juan (La Union), Veterinaria SALVET 24 (Cartago), Medical Pets (Cartago, Curridabat), Nuske Vet Center (Esparza), Guanavet (Liberia), IVDSA Santa Ana / Tres Rios, Hospital Veterinario Agromedica (Escazu), Clinica Veterinaria Ramirez (San Rafael de Heredia), Veterinaria Donde Chiza (Santa Cruz), Clinica Veterinaria Villa Mascotas (San Vito), Veterinaria Gocha (Santo Domingo de Heredia). Other leads without own page opened: Medipet Hotel y Hospital Veterinario, Veterinaria Argos, Pet Cafe, Pets Avenue, Innovavet, Exoplanet, La Vete Herradura (phone 2102 7028 on contact page, no 24 h claim), La Vete Alajuela/San Pablo/other branches (no addresses), Medismart network. Regions with no entries: Alajuela, Cartago, Guanacaste (Liberia, Tamarindo, Playas del Coco), Puntarenas/Jaco/Manuel Antonio/Quepos, Limon/Puerto Viejo, La Fortuna. Hospital Veterinario San Antonio (hospitalveterinariosanantonio.com) is in Tenerife, Spain, not Costa Rica. Rescate Wildlife Zoave (La Garita, 2433 8989) is a wildlife rescue with daytime hours only, not added."
+  "notes": "Costa Rica: only 8 entries (4 x 24 h: Hospital PETS+ San Antonio, Petopia, La Vete Escazu, La Vete Curridabat; HEMS-UNA is not 24 h). Most clinics' own sites could not be opened: the fetch tool only opens URLs that surfaced in search results, and many clinic domains never did; some sites refused automated access (cavallinivet.com robots-disallowed, alltama.com robots-disallowed, medipetcr.com failed). No national or regional duty rota (guardia) found. No animal poison information line found: the Colegio de Medicos Veterinarios de Costa Rica website and any SENASA clinic directory could not be located or opened, and no official page naming an animal poison line was found (the human poison centre was not confirmed to take animal calls). Not done (24-h claims seen only in the vet24cr.com directory, not on own pages, so NOT added): Hospital Veterinario Cavallini (Tamarindo), Hospital Veterinario Santamaria (Alajuela), Hospital Veterinario Medical Care (Heredia), Hospital Veterinario Drs. Chacon (Guadalupe), VitalVet Cartago (El Tejar), Clinica Veterinaria San Juan (La Union), Veterinaria SALVET 24 (Cartago), Medical Pets (Cartago, Curridabat), Nuske Vet Center (Esparza), Guanavet (Liberia), IVDSA Santa Ana / Tres Rios, Hospital Veterinario Agromedica (Escazu), Clinica Veterinaria Ramirez (San Rafael de Heredia), Veterinaria Donde Chiza (Santa Cruz), Clinica Veterinaria Villa Mascotas (San Vito), Veterinaria Gocha (Santo Domingo de Heredia). Other leads without own page opened: Medipet Hotel y Hospital Veterinario, Veterinaria Argos, Pet Cafe, Pets Avenue, Innovavet, Exoplanet, La Vete Herradura (phone 2102 7028 on contact page, no 24 h claim), La Vete Alajuela/San Pablo/other branches (no addresses), Medismart network. Regions with no entries: Alajuela, Cartago, Guanacaste (Liberia, Tamarindo, Playas del Coco), Puntarenas/Jaco/Manuel Antonio/Quepos, Limon/Puerto Viejo, La Fortuna. Hospital Veterinario San Antonio (hospitalveterinariosanantonio.com) is in Tenerife, Spain, not Costa Rica. Rescate Wildlife Zoave (La Garita, 2433 8989) is a wildlife rescue with daytime hours only, not added. Follow-up 2026-11-11 added 11 entries (Agromedica Escazu, Agromedica San Rafael de Alajuela, Ganagro, Medical Pets Cartago and Curridabat, IVDSA Santa Ana and Tres Rios, VitalVet Cartago, Clinica San Juan Tres Rios, Clinica San Rafael Heredia, Nuske Esparza); 24 h entries are now 10 in total (Medical Pets, IVDSA, VitalVet, San Juan, Agromedica Escazu added). Still unreachable or not done: robots-blocked (skipped, not retried): Hospital Veterinario Santamaria Alajuela, Hospital Veterinario Medical Care Heredia, Cavallini Tamarindo, All Tama (alltama.com), Cavaj Vet (cavajvet.com), Clinica Monte de la Cruz (montedelacruz.com); no own site surfaced in search (Facebook/directory listings only, not used): Guanavet and other Liberia clinics (Solera Animal Center, Amigos por los Animales), SALVET 24 / SALVET CVA Cartago, Drs. Chacon Guadalupe (24 h claim only on directories), Medical Care, Medical Pets Paraiso, Donde Chiza, Villa Mascotas San Vito, Gocha, Jaco clinics (Jaco Vetcenter, Jaco Pets), Quepos clinics (Dr. Alfaro, Dr. Delgado), Puerto Viejo/Cahuita (Coral Vet has only Facebook/Instagram, Green Vet, Centro de Mascotas), Nosara (Safari Vet, Nosaravet), Santa Cruz, Guapiles/Siquirres/Limon centre, La Fortuna (no clinic with an own site found; search hits were in Spain), Tamarindo (no clinics registered locally besides Cavallini). La Vete nosotros page lists Alajuela, Escazu, San Francisco, San Pablo and Curridabat branches without addresses; its 24 h text ties only to Escazu (Curridabat per contact page). Jaguar Rescue Center (Puerto Viejo) hospital is wildlife-focused, not added. Official body: Colegio de Medicos Veterinarios and SENASA sites still not found or opened by search; no duty rota and no animal poison line found."
 }
