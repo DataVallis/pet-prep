@@ -104,6 +104,7 @@ return [
     'flat_coated_retriever' => 'Flat-Coated Retriever',
     'border_terrier' => 'Border Terrier',
     'leonberger' => 'Leonberger',
+    'beauceron' => 'Beauceron',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

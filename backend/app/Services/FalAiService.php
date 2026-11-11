@@ -825,6 +825,13 @@ class FalAiService
                 .'medium-size oval brown eyes, medium pendant ears set high and hanging close to the head, '
                 .'a long, very well furnished natural tail hanging straight down, '
                 .'calm, friendly, confident expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-104: RKC standard (S788) / FCI Standard N° 44 (S790) — large and solid, unexaggerated, black and tan (first standard colour), natural ears.
+            BreedType::Beauceron => 'A large, solid, unexaggerated, powerful and muscular Beauceron without heaviness, black and tan, '
+                .'pure black with rich squirrel-red tan markings over the eyes, on the muzzle, chest and lower legs, '
+                .'a short, rough, thick coat lying close to the body, a well-chiselled head with a slight stop and a black nose, '
+                .'dark brown oval eyes, natural dropped ears, never cropped, '
+                .'a long natural tail carried low with a slight J-shaped hook at the end, double dewclaws on the hind legs, '
+                .'calm, confident, frank expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1976,6 +1983,13 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'medium soft to coarse, long, close-fitting double coat with a mane and feathering',
                 'markings' => 'black mask, black hair tips allowed, at most a small white patch on the chest',
+            ],
+            // M5-R10-104: standard colours only (FCI S790 / RKC S788 / AKC S792: black and tan, harlequin); never white, solid black or fawn.
+            BreedType::Beauceron => [
+                'color_scheme' => 'black and tan',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, rough, thick, coarse coat lying close to the body with a dense undercoat',
+                'markings' => 'squirrel-red tan spots over the eyes, on the muzzle, chest and lower legs, at most a faint white spot on the chest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

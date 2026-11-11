@@ -800,6 +800,12 @@
 | tail (S783). Not a welfare breed (RKC Breed Watch Category 2 without points, S780). Lion yellow first with the highest
 | weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Beauceron (M5-R10-104, docs/research/dog-data beauceron.appearance): black and tan or harlequin — "Any color other than
+| Black and Tan or Harlequin." (AKC S792); "Any other colour or combination of colours unacceptable." (RKC standard S788;
+| FCI Standard N° 44 via KUSA, S790); short, rough coat, dropped ears (natural only), J-hook tail, double dewclaws. Not a
+| welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
+| weights unsourced → `verified => false`.
+|
 | Border Terrier (M5-R10-102, docs/research/dog-data border_terrier.appearance): "Colour: Red, wheaten, grizzle and
 | tan, or blue and tan." (FCI-Standard N° 10, S768; "Any other colour or combination of colours unacceptable."); harsh,
 | dense wiry coat, short strong muzzle, small V-shaped ears dropping forward, moderately short tail (S768; AKC S776 dark
@@ -4506,6 +4512,39 @@ return [
             'tail' => ['natural tail, long and very well furnished, hanging straight down'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-104 (docs/research/dog-data/data.json beauceron.appearance; runbook rules 2026-10-10: standard colours
+    // only — black and tan, harlequin (RKC standard S788, FCI Standard N° 44 S790, AKC S792); natural ears, natural tail).
+    'beauceron' => [
+        'display_name' => 'Beauceron',
+        // Colour frequencies are in no source (beauceron.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S788, https://www.royalkennelclub.com/breed-standards/pastoral/beauceron/), FCI Standard N° 44 via KUSA (S790), RKC breed page (S787), AKC standard (S792) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S787 "Size: Large"; S790 "Males: 65cm – 70cm (approx. 25½” – 27½”)"',
+            'build' => 'S788 "Large and solid. Unexaggerated, powerful, muscular build, without heaviness."',
+            'coat_length' => 'S788 "Short on head. Short, rough, thick and coarse laying close to body."',
+            'coat_color' => 'S792 "Any color other than Black and Tan or Harlequin." (disqualification); S790 "The black is pure black and the tan, red squirrelcoloured." (weights unsourced)',
+            'ear_carriage' => 'S788 "Dropped, flat, not set close to head. Length equal to half that of head."',
+            'eye_color' => 'S788 "Dark, oval, medium sized, with well-pigmented rims. Horizontally placed."',
+            'tail' => 'S790 "Whole, carried low, it reaches at least to the hock, without deviating, forming a slight hook in the form of a \'J\'."',
+            'dewclaws' => 'S788 "Double dewclaws set close to foot. Lack of double dewclaws unacceptable."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, solid, unexaggerated, powerful and muscular build without heaviness', 'weight' => 3], 'strong, well-balanced herding dog, slightly longer than tall'],
+            'coat_length' => ['short, rough, thick, coarse coat lying close to the body, short on the head'],
+            // Standard colours only (S788 / S790 / S792); black and tan highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'black and tan', 'weight' => 75],
+                ['value' => 'harlequin (black and grey patches with tan markings)', 'weight' => 25],
+            ],
+            'ear_carriage' => ['natural dropped ears, flat, half the length of the head, never cropped'],
+            'eye_color' => ['dark brown oval eyes'],
+            'tail' => ['natural long tail carried low with a slight J-shaped hook at the end'],
+            'dewclaws' => ['double dewclaws on the hind legs'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'dewclaws'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

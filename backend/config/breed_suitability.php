@@ -2566,5 +2566,24 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S784'], 'refs' => ['leonberger.behaviour.time_alone']],
             ],
         ],
+        // M5-R10-104 Beauceron — RKC Breed Watch Category 1 (S787) → no welfare chip. No family_pet (no A/B "family pet" statement).
+        // No new vocabulary key.
+        'beauceron' => [
+            'suits' => [
+                // S787 "Exercise: More than 2 hours per day".
+                ['tag' => 'active_family', 'source_ids' => ['S787'], 'refs' => ['beauceron.exercise.adult', 'beauceron.suitability.rkc_exercise']],
+                // S791 "They can be good with young children and other dogs when introductions are supervised and done properly." — caveat in notes.
+                ['tag' => 'children', 'source_ids' => ['S791'], 'refs' => ['beauceron.behaviour.children']],
+                // S787 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S787'], 'refs' => ['beauceron.suitability.rkc_size_of_home', 'beauceron.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S787'], 'refs' => ['beauceron.exercise.adult', 'beauceron.suitability.rkc_exercise']],
+                // S787 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S787'], 'refs' => ['beauceron.suitability.rkc_shedding']],
+                // S791 "Beaucerons enjoy being around their family as much as possible, so they’ll do best with people who work from home …"
+                ['tag' => 'needs_company', 'source_ids' => ['S791'], 'refs' => ['beauceron.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

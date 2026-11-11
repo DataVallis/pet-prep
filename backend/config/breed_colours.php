@@ -678,6 +678,11 @@ return [
         ['key' => 'red-brown', 'value' => 'reddish brown with a black mask', 'en' => 'Reddish brown', 'sl' => 'Rdečkasto rjav'],
         ['key' => 'sandy', 'value' => 'sandy cream with a black mask', 'en' => 'Sandy', 'sl' => 'Peščen'],
     ],
+    // M5-R10-104: RKC standard (S788) / FCI Standard N° 44 (S790) / AKC (S792) black and tan, harlequin; same order and values as breed_appearance.php.
+    'beauceron' => [
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjavkast'],
+        ['key' => 'harlequin', 'value' => 'harlequin (black and grey patches with tan markings)', 'en' => 'Harlequin', 'sl' => 'Harlekin'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
