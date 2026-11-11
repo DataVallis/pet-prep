@@ -2318,6 +2318,7 @@ Challenge status of a pet (M3-11; **M3-13, David 2026-10-08: no free trial** —
 ```mermaid
 stateDiagram-v2
     [*] --> UnbornUnpaid: PIN with plan challenge (status payment_required — buy first, lock reason stays contract_required)
+    note right of UnbornUnpaid: M6-U02 (U4 / K3) — also the mutt / domestic cat when the parent build declared free_breed_challenge; old builds: free plan (M5-F03)
     UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook intent / auto-assign · held credit at the contract when it is the only unpaid pet)
     FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays
     Paid --> FreeBorn: refund of an upgraded free pet (or a mutt) → free plan, challenge_started_at cleared
@@ -2330,6 +2331,24 @@ stateDiagram-v2
     LegacyTrial --> GameOver: 24 h neglect (game over is never unlocked by a purchase, P7)
     Paid --> GameOver: 24 h neglect
     GameOver --> [*]
+```
+
+Day-7 upgrade reminder of a free pet (M6-U02, FREE_PET_UPGRADE_SPEC U5 / D1 — `UpgradeReminderService`, a stage of `pets:process-decay`):
+
+```mermaid
+flowchart TD
+    T[tick: free, born, active, not game over, profiled pet; sent_at null; next_check_at due] --> U{still an upgradeable free pet?}
+    U -- no --> N[next_check_at = never]
+    U -- yes --> D{now vs due = contract + 7 pet-local days}
+    D -- before --> W[next_check_at = due]
+    D -- "≥ due + 24 h" --> N
+    D -- inside the 24 h window --> L{hard stop / ill?}
+    L -- yes --> R[look again in 5 min]
+    L -- no --> C{one child acted on ≥ 5 of the 7 pet-local dates? signed_contract does not count}
+    C -- no --> N
+    C -- yes --> S[row lock: sent_at = now, child_id, next_check_at = never]
+    S --> P[one push upgrade_reminder to the parents — held over quiet hours, suppressed at delivery if bought / locked]
+    S --> K[dashboard pets.upgrade_reminder for 7 days → card opens the upgrade paywall]
 ```
 
 Credit lifecycle:

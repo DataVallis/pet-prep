@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — »Mešanček + izziv« in opomnik staršu 7. dan (izide z naslednjo posodobitvijo)
+
+**Kaj:** v novi aplikaciji lahko starš 12-tedenski izziv izbere tudi z mešančkom ali domačo mačko že ob ustvarjanju (ista cena 49,99 €; ljubljenček ob rojstvu počaka na nakup); izbirnik vseeno priporoča »Začnite brezplačno, izziv lahko dodate kadarkoli.« Ko je otrok za brezplačnega ljubljenčka v prvih 7 dneh skrbel vsaj 5 dni, dobijo starši eno obvestilo (brez imena otroka, nikoli ponoči) in kartico »Maja že 7 dni skrbi za kužka Pika. Je čas za pravi preizkus?«, ki vodi naravnost do nadgradnje. Stare aplikacije delujejo kot prej.
+**Zakaj je pomembno:** opomnik pride takrat, ko otrok pokaže, da mu je mar — to je trenutek za ponudbo pravega preizkusa (načrt validacije §4.3). Koliko staršev se odzove, še ni izmerjeno.
+**Kako povedati:** 👩 »Ko otrok res skrbi, vas opomnimo — enkrat, brez pritiska.« · 🧒 (otrok ne vidi nič, nobenih cen) · 💼 »Ponudba ob pravem trenutku: po 5 od 7 dni skrbi, ne po koledarju.«
+
 ## 2026-11-11 — Nadgradnja brezplačnega ljubljenčka v izziv je zgrajena (izide z naslednjo posodobitvijo)
 
 **Kaj:** starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, z gumbom »Začni 12-tedenski izziv z [ime]« nadgradi v 12-tedenski izziv z istim ljubljenčkom — 12 tednov, ocena in potrdilo štejejo od nakupa, starost ostane, dnevi prej so v zgodovini označeni »pred izzivom«; aplikacija pred nakupom strežniku pove, za katerega ljubljenčka kupuje, da se plačilo nikoli ne izgubi. *(Pri uporabnikih po naslednjem deployu in OTA.)*

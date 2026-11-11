@@ -96,12 +96,12 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 |---|---|
 | P11 | **7-dnevnega brezplačnega preizkusa izziva ni več.** Brezplačni mešanček je brezplačni preizkus PetPrepa; **12-tedenski izziv se začne z nakupom** (49,99 € na psa, enkratno, brez naročnine). Pes na izzivu čaka zaklenjen od rojstva (podpis pogodbe), dokler starš ne kupi; kupi lahko tudi prej. 12 tednov začne teči ob nakupu. V produkciji velja od 8. 10. 2026 (beta, ~20 testerjev plačuje v sandboxu). **Posledica za trženje:** spletna stran, opisi v trgovinah in vsi materiali, ki obljubljajo »7 dni brezplačno«, se morajo popraviti (seznam v `HANDOFF.md`). |
 
-### Sprejete (David, 10. 11. 2026 — U1–U3 zgrajeno 11. 11. 2026, pri uporabnikih z naslednjo posodobitvijo; U4 / U5 *načrt*; podrobno [`FREE_PET_UPGRADE_SPEC.md`](../product/FREE_PET_UPGRADE_SPEC.md))
+### Sprejete (David, 10. 11. 2026 — U1–U5 zgrajeno 11. 11. 2026, pri uporabnikih z naslednjo posodobitvijo; podrobno [`FREE_PET_UPGRADE_SPEC.md`](../product/FREE_PET_UPGRADE_SPEC.md))
 
 | # | Odločitev |
 |---|---|
 | U1–U3 | **Nadgradnja brezplačnega ljubljenčka v izziv** *(zgrajeno 11. 11. 2026, PR 1 / ROADMAP M6-U01 — pri uporabnikih z naslednjo posodobitvijo)*: starš bo lahko mešančka ali domačo mačko, za katerega otrok že skrbi, nadgradil v 12-tedenski izziv **z istim ljubljenčkom** (ime, videz, starost, naučeni ukazi ostanejo). **49,99 €, isti izdelek** `petprep_challenge_12w` — v trgovinah ni novega izdelka. 12 tednov teče od nakupa; dnevi pred nakupom ne štejejo v oceno in certifikat. |
-| U4–U5 | *(načrt, PR 2 / M6-U02)* Izbira »mešanček + izziv« že ob ustvarjanju (samo nove aplikacije; nadomesti pravilo M5-F03 »izziv samo s plačljivo pasmo«) in en opomnik staršu 7. dan. |
+| U4–U5 | *(zgrajeno 11. 11. 2026, PR 2 / ROADMAP M6-U02 — pri uporabnikih z naslednjo posodobitvijo)* Izbira »mešanček + izziv« že ob ustvarjanju (samo nove aplikacije; nadomesti pravilo M5-F03 »izziv samo s plačljivo pasmo«; ista cena 49,99 €, ob rojstvu čaka na nakup) in en opomnik staršu 7. dan, ko je otrok skrbel vsaj 5 od prvih 7 dni. Učinek na konverzijo še ni izmerjen. |
 
 ### Razmejitev brezplačno / plačljivo (potrdil David 7. 10. 2026, P4)
 
