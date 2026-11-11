@@ -43,6 +43,8 @@ return [
         'activity_model' => 'activity',
         'ai_lab' => 'AI Lab',
         'system' => 'System',
+        'partner_inquiries' => 'Partner inquiries',
+        'partner_inquiry_model' => 'partner inquiry',
     ],
 
     'dashboard' => [
@@ -326,6 +328,10 @@ return [
         'gift_vouchers_description' => 'Gift vouchers bought on petprep.si (Lemon Squeezy) and redeemed on the website for a 12-week challenge credit.',
         'gift_vouchers' => 'Gift vouchers (website redemption)',
         'gift_vouchers_help' => "Off: petprep.si/redeem answers 'not available right now'. Refund webhooks are processed either way.",
+        'saved_body_partner_inquiries' => 'Partner inquiries: :state',
+        'partner_inquiries_section' => 'Partner inquiries',
+        'partner_inquiries_description' => 'The inquiry form on petprep.si/partners. Off: the server answers 503 and stores nothing (the website shows that the form is unavailable). On by default.',
+        'partner_inquiries' => 'Accept partner inquiries',
     ],
 
     // M5-R21: shared looks (PetLookResource).
@@ -689,6 +695,27 @@ return [
             'title' => 'Still check: :count key image(s) rejected after every automatic retry',
             'body' => 'A state key image failed the AI still check (extra / ghost paws, a second animal, people, text …) also after its automatic regenerations with new seeds. It was not used — the pet keeps what it shows, that state gets no new loop yet. Optional: Pets → AI media → open the candidate → »Approve anyway« or Regenerate. Pose images (activities: simple mode) and item pictures (shown without content) are reported by their own alerts.',
         ],
+    ],
+    'partner_inquiries' => [
+        'discord' => [
+            'title' => 'New partner inquiry, type: :type',
+        ],
+        'company' => 'Company',
+        'contact_name' => 'Contact person',
+        'email' => 'E-mail',
+        'type' => 'Type',
+        'message' => 'Message',
+        'locale' => 'Language',
+        'received' => 'Received',
+        'types' => [
+            'series' => 'Series sponsorship',
+            'sponsored_content' => 'Sponsored content',
+            'insurer' => 'Insurer',
+            'directory' => 'Directory founding partner',
+            'shelter' => 'Shelter / society',
+            'other' => 'Other',
+        ],
+        'retention_note' => 'Inquiries are deleted automatically 12 months after they were sent. No IP address is stored. Reply by e-mail yourself — the server sends nothing.',
     ],
     'item_media' => [
         'discord' => [

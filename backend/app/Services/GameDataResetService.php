@@ -71,6 +71,9 @@ class GameDataResetService
         'app_error_fingerprints',
         'app_error_reports',
         'app_error_hours',
+        // M6-S03 partner inquiries from petprep.si: business leads, not game data (no
+        // user/family FK; pruned after 12 months by its own command).
+        'partner_inquiries',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */
