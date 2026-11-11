@@ -71,7 +71,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč za male hišne ljubljenčke 24 ur na dan; vnaprej pokličite. Velja doplačilo za nujno pomoč.",
         "hr": "Hitna služba za male životinje 24/7; nazovi unaprijed. Naplaćuje se doplatak za hitni slučaj.",
-        "de": "Kleintier-Notdienst rund um die Uhr; bitte vorher anrufen. Es fällt eine Notfallgebühr an."
+        "de": "Kleintier-Notdienst rund um die Uhr; bitte vorher anrufen. Es fällt eine Notfallgebühr an.",
+        "fr": "Urgences pour petits animaux 24 h/24, 7 j/7 ; appelez avant de venir. Frais d’urgence applicables."
       },
       "small_animals": true,
       "url": "https://www.tierspital.uzh.ch/en/small-animal-clinics",
@@ -91,7 +92,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč pon–pet 8–17 na +41 31 684 23 15; zvečer, ob koncih tedna in praznikih prek linije 0900 900 960 (plačljiva številka s povečano tarifo). Vnaprej pokličite.",
         "hr": "Hitni slučajevi pon–pet 8–17 na +41 31 684 23 15; navečer, vikendom i blagdanima na liniji 0900 900 960 (linija s posebnom tarifom). Nazovi unaprijed.",
-        "de": "Notfälle Mo–Fr 8–17 Uhr unter +41 31 684 23 15; abends, am Wochenende und an Feiertagen über die Nummer 0900 900 960 (kostenpflichtig). Bitte vorher anrufen."
+        "de": "Notfälle Mo–Fr 8–17 Uhr unter +41 31 684 23 15; abends, am Wochenende und an Feiertagen über die Nummer 0900 900 960 (kostenpflichtig). Bitte vorher anrufen.",
+        "fr": "Urgences lun.–ven. 8 h–17 h au +41 31 684 23 15 ; soirs, week-ends et jours fériés via la ligne 0900 900 960 (numéro surtaxé). Appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik.unibe.ch/",
@@ -111,7 +113,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč vsak dan 0–24; izven delovnega časa številka za nujne primere 0900 224 477 (plačljiva številka s povečano tarifo). Redni delovni čas pon–pet 7.30–17.30/19.",
         "hr": "Hitni slučajevi svaki dan 00:00–23:59; izvan radnog vremena hitna linija 0900 224 477 (linija s posebnom tarifom). Redovno radno vrijeme pon–pet 7:30–17:30/19:00.",
-        "de": "Notfälle täglich rund um die Uhr; Notfallnummer außerhalb der Sprechzeiten 0900 224 477 (kostenpflichtig). Reguläre Sprechzeiten Mo–Fr 7:30–17:30/19:00 Uhr."
+        "de": "Notfälle täglich rund um die Uhr; Notfallnummer außerhalb der Sprechzeiten 0900 224 477 (kostenpflichtig). Reguläre Sprechzeiten Mo–Fr 7:30–17:30/19:00 Uhr.",
+        "fr": "Urgences tous les jours 0 h–23 h 59 ; ligne d’urgence en dehors des heures d’ouverture : 0900 224 477 (numéro surtaxé). Heures habituelles : lun.–ven. 7 h 30–17 h 30/19 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.ch/thun",
@@ -131,7 +134,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa nujna pomoč 24 ur na dan; najprej pokličite. Redni delovni čas pon–pet 8–12 in 14–18, sob 8–12.",
         "hr": "Izvan radnog vremena hitna služba radi non-stop; nazovi prije dolaska. Redovno radno vrijeme pon–pet 8–12 i 14–18, sub 8–12.",
-        "de": "Notdienst außerhalb der Öffnungszeiten rund um die Uhr; bitte zuerst anrufen. Reguläre Öffnungszeiten Mo–Fr 8–12 und 14–18 Uhr, Sa 8–12 Uhr."
+        "de": "Notdienst außerhalb der Öffnungszeiten rund um die Uhr; bitte zuerst anrufen. Reguläre Öffnungszeiten Mo–Fr 8–12 und 14–18 Uhr, Sa 8–12 Uhr.",
+        "fr": "Service d’urgences 24 h/24 en dehors des heures d’ouverture ; appelez d’abord. Heures habituelles : lun.–ven. 8 h–12 h et 14 h–18 h, sam. 8 h–12 h."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-interlaken.ch",
@@ -151,7 +155,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 365 dni v letu, 24 ur na dan, po telefonu; pregledi po naročilu.",
         "hr": "Hitni slučajevi telefonom 24 sata, 365 dana u godini; pregledi po dogovoru.",
-        "de": "Notfälle an 365 Tagen im Jahr rund um die Uhr telefonisch erreichbar; Sprechstunde nach Terminvereinbarung."
+        "de": "Notfälle an 365 Tagen im Jahr rund um die Uhr telefonisch erreichbar; Sprechstunde nach Terminvereinbarung.",
+        "fr": "Urgences par téléphone 24 h/24, 365 jours par an ; consultations sur rendez-vous."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-brienz.ch",
@@ -171,7 +176,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere dosegljivi kadar koli na glavni številki.",
         "hr": "Za hitne slučajeve dostupni su u svako doba na glavnom broju.",
-        "de": "Für Notfälle jederzeit unter der Hauptnummer erreichbar."
+        "de": "Für Notfälle jederzeit unter der Hauptnummer erreichbar.",
+        "fr": "Joignable à tout moment pour les urgences au numéro principal."
       },
       "small_animals": true,
       "url": "https://bergpraxis-animal.ch",
@@ -191,7 +197,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18, sob 8–11. Izven delovnega časa (ponoči 18–7.30, ob koncih tedna od sobote 11) številka za nujne primere pri malih hišnih ljubljenčkih 0900 88 11 11 (plačljiva številka s povečano tarifo).",
         "hr": "pon–pet 8–12 i 14–18, sub 8–11. Izvan radnog vremena (noću 18:00–07:30, vikendom od sub 11:00) hitna linija za male životinje 0900 88 11 11 (linija s posebnom tarifom).",
-        "de": "Mo–Fr 8–12 und 14–18 Uhr, Sa 8–11 Uhr. Außerhalb der Sprechzeiten (nachts 18:00–07:30 Uhr, am Wochenende ab Sa 11:00 Uhr) Kleintier-Notfallnummer 0900 88 11 11 (kostenpflichtig)."
+        "de": "Mo–Fr 8–12 und 14–18 Uhr, Sa 8–11 Uhr. Außerhalb der Sprechzeiten (nachts 18:00–07:30 Uhr, am Wochenende ab Sa 11:00 Uhr) Kleintier-Notfallnummer 0900 88 11 11 (kostenpflichtig).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h, sam. 8 h–11 h. En dehors des heures d’ouverture (nuits 18 h–7 h 30, week-ends dès le sam. 11 h), ligne d’urgence pour petits animaux 0900 88 11 11 (numéro surtaxé)."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-roesslimatte.ch",
@@ -210,7 +217,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere pri malih hišnih ljubljenčkih 24 ur na dan 0900 00 25 25 (plačljiva številka s povečano tarifo) za mesto Bern in okolico; dežurna ordinacija lahko zaračuna doplačilo za nujno pomoč.",
         "hr": "24-satni hitni broj za male životinje 0900 00 25 25 (linija s posebnom tarifom) za grad Bern i okolicu; dežurna ambulanta može naplatiti doplatak za hitni slučaj.",
-        "de": "Kleintier-Notfallnummer rund um die Uhr 0900 00 25 25 (kostenpflichtig) für die Stadt Bern und Umgebung; die diensthabende Praxis kann eine Notfallgebühr erheben."
+        "de": "Kleintier-Notfallnummer rund um die Uhr 0900 00 25 25 (kostenpflichtig) für die Stadt Bern und Umgebung; die diensthabende Praxis kann eine Notfallgebühr erheben.",
+        "fr": "Numéro d’urgence pour petits animaux 24 h/24 : 0900 00 25 25 (numéro surtaxé) pour la ville de Berne et ses environs ; le cabinet de garde peut facturer des frais d’urgence."
       },
       "small_animals": true,
       "source_url": "https://www.citytiernotfall.ch/",
@@ -230,7 +238,8 @@
       "duty_i18n": {
         "sl": "Akutni nujni primeri vsak dan 8–22, 365 dni v letu; po možnosti najprej pokličite.",
         "hr": "Akutni hitni slučajevi svaki dan 8–22, 365 dana u godini; ako je moguće, prvo nazovi.",
-        "de": "Akute Notfälle täglich 8–22 Uhr, 365 Tage im Jahr; wenn möglich vorher anrufen."
+        "de": "Akute Notfälle täglich 8–22 Uhr, 365 Tage im Jahr; wenn möglich vorher anrufen.",
+        "fr": "Urgences tous les jours 8 h–22 h, 365 jours par an ; appelez d’abord si possible."
       },
       "small_animals": true,
       "url": "https://vetzentrum-bern.ch",
@@ -250,7 +259,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan z bolnišničnim zdravljenjem; številka za nujne primere 0900 900 500 (plačljiva številka s povečano tarifo). Redni delovni čas pon–pet 8–12 in 14–17.",
         "hr": "Hitna služba 24/7 uz stacionarno liječenje; hitna linija 0900 900 500 (linija s posebnom tarifom). Redovno radno vrijeme pon–pet 8–12 i 14–17.",
-        "de": "Notdienst rund um die Uhr mit stationärer Betreuung; Notfallnummer 0900 900 500 (kostenpflichtig). Reguläre Sprechzeiten Mo–Fr 8–12 und 14–17 Uhr."
+        "de": "Notdienst rund um die Uhr mit stationärer Betreuung; Notfallnummer 0900 900 500 (kostenpflichtig). Reguläre Sprechzeiten Mo–Fr 8–12 und 14–17 Uhr.",
+        "fr": "Urgences 24 h/24, 7 j/7 avec hospitalisation ; ligne d’urgence 0900 900 500 (numéro surtaxé). Heures habituelles : lun.–ven. 8 h–12 h et 14 h–17 h."
       },
       "small_animals": true,
       "url": "https://www.marigin.ch",
@@ -269,7 +279,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan; pred vsakim nujnim obiskom vnaprej pokličite. Samo za življenjsko ogrožene primere; velja doplačilo za nujno pomoč.",
         "hr": "Hitna služba 24 sata dnevno; prije dolaska obavezno nazovi. Samo za slučajeve opasne po život; naplaćuje se doplatak za hitni slučaj.",
-        "de": "Notdienst rund um die Uhr; bitte vor jedem Notfallbesuch anrufen. Nur lebensbedrohliche Fälle; es fällt eine Notfallgebühr an."
+        "de": "Notdienst rund um die Uhr; bitte vor jedem Notfallbesuch anrufen. Nur lebensbedrohliche Fälle; es fällt eine Notfallgebühr an.",
+        "fr": "Urgences 24 h/24 ; appelez avant toute visite d’urgence. Cas mettant la vie en danger uniquement ; frais d’urgence applicables."
       },
       "small_animals": true,
       "source_url": "https://www.ennetseeklinik.ch/notfalldienst",
@@ -289,7 +300,8 @@
       "duty_i18n": {
         "sl": "Na številki za nujne primere 0900 527 575 (plačljiva številka s povečano tarifo) se vsak dan od 7 do polnoči oglasi osebje; med polnočjo in 7 se nujni primeri napotijo v Hünenberg, Feusisberg ali v Tierspital Zürich.",
         "hr": "Hitna linija 0900 527 575 (linija s posebnom tarifom) javlja se svaki dan od 7:00 do ponoći; od ponoći do 7:00 hitni slučajevi upućuju se u Hünenberg, Feusisberg ili Tierspital Zürich.",
-        "de": "Notfallnummer 0900 527 575 (kostenpflichtig), täglich von 7:00 Uhr bis Mitternacht besetzt; zwischen Mitternacht und 7:00 Uhr werden dringende Fälle nach Hünenberg, Feusisberg oder an das Tierspital Zürich verwiesen."
+        "de": "Notfallnummer 0900 527 575 (kostenpflichtig), täglich von 7:00 Uhr bis Mitternacht besetzt; zwischen Mitternacht und 7:00 Uhr werden dringende Fälle nach Hünenberg, Feusisberg oder an das Tierspital Zürich verwiesen.",
+        "fr": "Ligne d’urgence 0900 527 575 (numéro surtaxé) joignable tous les jours de 7 h à minuit ; de minuit à 7 h, les cas urgents sont orientés vers Hünenberg, Feusisberg ou le Tierspital Zürich."
       },
       "small_animals": true,
       "url": "http://www.tierklinik-obergrund.ch",
@@ -308,7 +320,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč za male hišne ljubljenčke za Basel in okolico, 24 ur na dan, 365 dni v letu; plačljiva številka 0900 99 33 99. Od 18 se klici preusmerijo v VetTrust Tierklinik Basel.",
         "hr": "Hitna služba za male životinje za Basel i okolicu, 24 sata, 365 dana; linija s posebnom tarifom 0900 99 33 99. Od 18:00 pozivi se preusmjeravaju na VetTrust Tierklinik Basel.",
-        "de": "Kleintier-Notdienst für Basel und Umgebung, rund um die Uhr, 365 Tage im Jahr; kostenpflichtige Nummer 0900 99 33 99. Ab 18:00 Uhr werden Anrufe an die VetTrust Tierklinik Basel weitergeleitet."
+        "de": "Kleintier-Notdienst für Basel und Umgebung, rund um die Uhr, 365 Tage im Jahr; kostenpflichtige Nummer 0900 99 33 99. Ab 18:00 Uhr werden Anrufe an die VetTrust Tierklinik Basel weitergeleitet.",
+        "fr": "Service d’urgences pour petits animaux de Bâle et environs, 24 h/24, 365 jours par an ; ligne surtaxée 0900 99 33 99. Dès 18 h, les appels sont transférés à VetTrust Tierklinik Basel."
       },
       "small_animals": true,
       "url": "https://www.notfalltierarzt.ch",
@@ -328,7 +341,8 @@
       "duty_i18n": {
         "sl": "Odprto 24 ur na dan, tudi ob praznikih. Ob delavnikih 8–17 na +41 61 515 66 66; zvečer, ob koncih tedna in praznikih na liniji 0900 515 114 (plačljiva številka s povečano tarifo).",
         "hr": "Radi 24/7, uključujući blagdane. Radnim danom 8–17 na +41 61 515 66 66; navečer, vikendom i blagdanima na liniji 0900 515 114 (linija s posebnom tarifom).",
-        "de": "Rund um die Uhr geöffnet, auch an Feiertagen. Werktags 8–17 Uhr unter +41 61 515 66 66; abends, am Wochenende und an Feiertagen unter der Nummer 0900 515 114 (kostenpflichtig)."
+        "de": "Rund um die Uhr geöffnet, auch an Feiertagen. Werktags 8–17 Uhr unter +41 61 515 66 66; abends, am Wochenende und an Feiertagen unter der Nummer 0900 515 114 (kostenpflichtig).",
+        "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris. En semaine 8 h–17 h au +41 61 515 66 66 ; soirs, week-ends et jours fériés au 0900 515 114 (numéro surtaxé)."
       },
       "small_animals": true,
       "url": "https://www.vettrust.ch/standorte/tierklinik-basel",
@@ -348,7 +362,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 7–18, sob 7–12; izven delovnega časa glejte baselsko nujno pomoč za male hišne ljubljenčke 0900 99 33 99.",
         "hr": "pon–pet 7–18, sub 7–12; izvan radnog vremena hitna služba za male životinje u Baselu 0900 99 33 99.",
-        "de": "Mo–Fr 7–18 Uhr, Sa 7–12 Uhr; außerhalb der Sprechzeiten siehe Kleintier-Notdienst Basel 0900 99 33 99."
+        "de": "Mo–Fr 7–18 Uhr, Sa 7–12 Uhr; außerhalb der Sprechzeiten siehe Kleintier-Notdienst Basel 0900 99 33 99.",
+        "fr": "Lun.–ven. 7 h–18 h, sam. 7 h–12 h ; en dehors des heures d’ouverture, service d’urgences pour petits animaux de Bâle : 0900 99 33 99."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-leimental.ch",
@@ -368,7 +383,8 @@
       "duty_i18n": {
         "sl": "Delovni čas ambulante pon–pet 8–12 in 13.30–18, sob 8–12; izven delovnega časa številka za nujne primere 071 354 65 60 (doplačilo za nujno pomoč).",
         "hr": "Radno vrijeme ambulante pon–pet 8–12 i 13:30–18, sub 8–12; izvan radnog vremena hitna linija 071 354 65 60 (uz doplatak za hitni slučaj).",
-        "de": "Sprechzeiten Mo–Fr 8–12 und 13:30–18 Uhr, Sa 8–12 Uhr; Notfallnummer außerhalb der Öffnungszeiten 071 354 65 60 (Notfallgebühr)."
+        "de": "Sprechzeiten Mo–Fr 8–12 und 13:30–18 Uhr, Sa 8–12 Uhr; Notfallnummer außerhalb der Öffnungszeiten 071 354 65 60 (Notfallgebühr).",
+        "fr": "Heures d’ouverture : lun.–ven. 8 h–12 h et 13 h 30–18 h, sam. 8 h–12 h ; ligne d’urgence en dehors des heures d’ouverture : 071 354 65 60 (frais d’urgence)."
       },
       "small_animals": true,
       "url": "https://www.arc-o.ch",
@@ -388,7 +404,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa je organizirana nujna pomoč; pokličite ambulanto. Pon–pet 8–12 in 14–18, sob 8–11.",
         "hr": "Izvan radnog vremena organizirana hitna služba; nazovi ambulantu. pon–pet 8–12 i 14–18, sub 8–11.",
-        "de": "Organisierter Notdienst außerhalb der Öffnungszeiten; bitte in der Klinik anrufen. Mo–Fr 8–12 und 14–18 Uhr, Sa 8–11 Uhr."
+        "de": "Organisierter Notdienst außerhalb der Öffnungszeiten; bitte in der Klinik anrufen. Mo–Fr 8–12 und 14–18 Uhr, Sa 8–11 Uhr.",
+        "fr": "Service d’urgences organisé en dehors des heures d’ouverture ; appelez la clinique. Lun.–ven. 8 h–12 h et 14 h–18 h, sam. 8 h–11 h."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-glattfeld.ch",
@@ -408,7 +425,8 @@
       "duty_i18n": {
         "sl": "Telefonska številka za nujne primere 24 ur na dan; pon–pet 8–12 in 13.30–18 (čet le dopoldne, tor do 20), ob koncih tedna zaprto.",
         "hr": "24-satna hitna telefonska linija; pon–pet 8–12 i 13:30–18 (čet samo ujutro, uto do 20), vikendom zatvoreno.",
-        "de": "Telefonischer Notdienst rund um die Uhr; Mo–Fr 8–12 und 13:30–18 Uhr (Do nur vormittags, Di bis 20 Uhr), am Wochenende geschlossen."
+        "de": "Telefonischer Notdienst rund um die Uhr; Mo–Fr 8–12 und 13:30–18 Uhr (Do nur vormittags, Di bis 20 Uhr), am Wochenende geschlossen.",
+        "fr": "Ligne d’urgence 24 h/24 ; lun.–ven. 8 h–12 h et 13 h 30–18 h (jeu. matin uniquement, mar. jusqu’à 20 h), fermé le week-end."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-am-see.ch",
@@ -428,7 +446,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; vnaprej pokličite.",
         "hr": "Hitna služba 24 sata, 365 dana u godini; nazovi unaprijed.",
-        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; bitte vorher anrufen."
+        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; bitte vorher anrufen.",
+        "fr": "Service d’urgences 24 h/24, 365 jours par an ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-niederteufenag.ch/",
@@ -448,7 +467,8 @@
       "duty_i18n": {
         "sl": "Lastna nujna pomoč 24 ur na dan; izven delovnega časa doplačilo za nujno pomoč. Naročanje po telefonu.",
         "hr": "Vlastita 24-satna hitna služba; izvan radnog vremena doplatak za hitni slučaj. Naručivanje telefonom.",
-        "de": "Hauseigener Notdienst rund um die Uhr; außerhalb der Öffnungszeiten fällt eine Notfallgebühr an. Termine nach telefonischer Vereinbarung."
+        "de": "Hauseigener Notdienst rund um die Uhr; außerhalb der Öffnungszeiten fällt eine Notfallgebühr an. Termine nach telefonischer Vereinbarung.",
+        "fr": "Service d’urgences interne 24 h/24 ; frais d’urgence en dehors des heures d’ouverture. Rendez-vous par téléphone."
       },
       "small_animals": true,
       "url": "https://www.silvretta-tieraerzte.ch",
@@ -468,7 +488,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan na glavni številki.",
         "hr": "24-satna hitna linija na glavnom broju.",
-        "de": "Notfallnummer rund um die Uhr unter der Hauptnummer."
+        "de": "Notfallnummer rund um die Uhr unter der Hauptnummer.",
+        "fr": "Ligne d’urgence 24 h/24 au numéro principal."
       },
       "small_animals": true,
       "source_url": "https://tierklinikmasans.ch/",
@@ -488,7 +509,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18; ob koncih tedna zaprto. Za nujne primere pokličite glavno številko.",
         "hr": "pon–pet 8–12 i 14–18; vikendom zatvoreno. Za hitne slučajeve nazovi glavni broj.",
-        "de": "Mo–Fr 8–12 und 14–18 Uhr; am Wochenende geschlossen. Für Notfälle bitte die Hauptnummer anrufen."
+        "de": "Mo–Fr 8–12 und 14–18 Uhr; am Wochenende geschlossen. Für Notfälle bitte die Hauptnummer anrufen.",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h ; fermé le week-end. Pour les urgences, appelez le numéro principal."
       },
       "small_animals": true,
       "source_url": "https://www.gstsvs.ch/de/tierarzt-finder/praxis/praxis/Gross-%20und%20Kleintierpraxis%20Lai%20GmbH",
@@ -507,7 +529,8 @@
       "duty_i18n": {
         "sl": "Naročanje po telefonu; izven delovnega časa številka za nujne primere +41 77 457 00 01.",
         "hr": "Naručivanje telefonom; izvan radnog vremena hitni broj +41 77 457 00 01.",
-        "de": "Termine nach telefonischer Vereinbarung; Notfallnummer außerhalb der Öffnungszeiten +41 77 457 00 01."
+        "de": "Termine nach telefonischer Vereinbarung; Notfallnummer außerhalb der Öffnungszeiten +41 77 457 00 01.",
+        "fr": "Rendez-vous par téléphone ; numéro d’urgence en dehors des heures d’ouverture : +41 77 457 00 01."
       },
       "small_animals": true,
       "url": "https://www.ktpamsee-murten.ch",
@@ -527,7 +550,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri: pokličite ordinacijo, klic se preusmeri k dežurnemu veterinarju; izven ordinacijskih ur mobilna številka +41 76 681 12 41.",
         "hr": "Hitni slučajevi: nazovi ambulantu, poziv se prosljeđuje dežurnom veterinaru; izvan radnog vremena mobitel +41 76 681 12 41.",
-        "de": "Notfälle: bitte in der Praxis anrufen, der Anruf wird an den diensthabenden Tierarzt weitergeleitet; außerhalb der Bürozeiten Mobilnummer +41 76 681 12 41."
+        "de": "Notfälle: bitte in der Praxis anrufen, der Anruf wird an den diensthabenden Tierarzt weitergeleitet; außerhalb der Bürozeiten Mobilnummer +41 76 681 12 41.",
+        "fr": "Urgences : appelez le cabinet, l’appel est transféré au vétérinaire de garde ; en dehors des heures de bureau, portable +41 76 681 12 41."
       },
       "small_animals": true,
       "url": "https://www.pyanavet.com",
@@ -547,7 +571,8 @@
       "duty_i18n": {
         "sl": "Veterinar za nujne primere vsak dan 7–23, 365 dni v letu.",
         "hr": "Hitni veterinar svaki dan 7–23, 365 dana u godini.",
-        "de": "Notfall-Tierarzt täglich 7–23 Uhr, 365 Tage im Jahr."
+        "de": "Notfall-Tierarzt täglich 7–23 Uhr, 365 Tage im Jahr.",
+        "fr": "Vétérinaire d’urgence tous les jours 7 h–23 h, 365 jours par an."
       },
       "small_animals": true,
       "url": "https://vetzentrum-zurich.ch",
@@ -567,7 +592,8 @@
       "duty_i18n": {
         "sl": "Po telefonu dosegljivi 24 ur na dan; redni delovni čas pon–pet 8–19, sob 8–16.",
         "hr": "Dostupni telefonom 24/7; redovno radno vrijeme pon–pet 8–19, sub 8–16.",
-        "de": "Rund um die Uhr telefonisch erreichbar; reguläre Sprechzeiten Mo–Fr 8–19 Uhr, Sa 8–16 Uhr."
+        "de": "Rund um die Uhr telefonisch erreichbar; reguläre Sprechzeiten Mo–Fr 8–19 Uhr, Sa 8–16 Uhr.",
+        "fr": "Joignable 24 h/24, 7 j/7 par téléphone ; heures habituelles : lun.–ven. 8 h–19 h, sam. 8 h–16 h."
       },
       "small_animals": true,
       "url": "https://www.doc4petcentroveterinarioagno.ch",
@@ -587,7 +613,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 15–19 (čet do 18); za nujne primere pokličite ambulanto.",
         "hr": "pon–pet 8–12 i 15–19 (čet do 18); za hitne slučajeve nazovi ambulantu.",
-        "de": "Mo–Fr 8–12 und 15–19 Uhr (Do bis 18 Uhr); für Notfälle bitte in der Klinik anrufen."
+        "de": "Mo–Fr 8–12 und 15–19 Uhr (Do bis 18 Uhr); für Notfälle bitte in der Klinik anrufen.",
+        "fr": "Lun.–ven. 8 h–12 h et 15 h–19 h (jeu. jusqu’à 18 h) ; pour les urgences, appelez la clinique."
       },
       "small_animals": true,
       "url": "https://mazzivet.ch",
@@ -607,7 +634,8 @@
       "duty_i18n": {
         "sl": "Pon–sre in pet 8–12 in 14–18, čet 8–12 in 15.30–19.30; za nujne primere pokličite glavno številko.",
         "hr": "pon–sri i pet 8–12 i 14–18, čet 8–12 i 15:30–19:30; za hitne slučajeve nazovi glavni broj.",
-        "de": "Mo–Mi und Fr 8–12 und 14–18 Uhr, Do 8–12 und 15:30–19:30 Uhr; für Notfälle bitte die Hauptnummer anrufen."
+        "de": "Mo–Mi und Fr 8–12 und 14–18 Uhr, Do 8–12 und 15:30–19:30 Uhr; für Notfälle bitte die Hauptnummer anrufen.",
+        "fr": "Lun.–mer. et ven. 8 h–12 h et 14 h–18 h, jeu. 8 h–12 h et 15 h 30–19 h 30 ; pour les urgences, appelez le numéro principal."
       },
       "small_animals": true,
       "url": "https://www.balli-veterinario.ch",
@@ -627,7 +655,8 @@
       "duty_i18n": {
         "sl": "Nujna veterinarska pomoč na domu 24 ur na dan, 7 dni v tednu, v Ženevi, kantonu Vaud in delu kantona Fribourg; številka za nujne primere 022 552 55 05.",
         "hr": "Hitni veterinarski kućni posjeti 24 h, 7 dana u tjednu, u Ženevi, kantonu Vaud i dijelu Fribourga; hitna linija 022 552 55 05.",
-        "de": "Tierärztlicher Notdienst mit Hausbesuchen rund um die Uhr, 7 Tage die Woche, in Genf, im Waadtland und in Teilen des Kantons Freiburg; Notfallnummer 022 552 55 05."
+        "de": "Tierärztlicher Notdienst mit Hausbesuchen rund um die Uhr, 7 Tage die Woche, in Genf, im Waadtland und in Teilen des Kantons Freiburg; Notfallnummer 022 552 55 05.",
+        "fr": "Urgences vétérinaires à domicile 24 h/24, 7 j/7, à Genève, dans le canton de Vaud et une partie de Fribourg ; ligne d’urgence 022 552 55 05."
       },
       "small_animals": true,
       "url": "https://www.vetoadom.ch/",
@@ -647,7 +676,8 @@
       "duty_i18n": {
         "sl": "Pon–sob 8–18 po naročilu; izven delovnega časa se klici preusmerijo na partnersko dežurno službo za nujne primere.",
         "hr": "pon–sub 8–18 po dogovoru; izvan radnog vremena pozivi se preusmjeravaju partnerskoj dežurnoj hitnoj službi.",
-        "de": "Mo–Sa 8–18 Uhr nach Terminvereinbarung; außerhalb der Öffnungszeiten werden Anrufe an den Partner-Notdienst weitergeleitet."
+        "de": "Mo–Sa 8–18 Uhr nach Terminvereinbarung; außerhalb der Öffnungszeiten werden Anrufe an den Partner-Notdienst weitergeleitet.",
+        "fr": "Lun.–sam. 8 h–18 h sur rendez-vous ; en dehors des heures d’ouverture, les appels sont redirigés vers le service d’urgences partenaire de garde."
       },
       "small_animals": true,
       "url": "https://vetcity.ch/",
@@ -666,7 +696,8 @@
       "duty_i18n": {
         "sl": "Dežurna veterinarska nujna pomoč za Ticino, 24 ur na dan, 7 dni v tednu; plačljiva številka s povečano tarifo 0900 140 150 (CHF 3/min). Najprej pokličite svojega veterinarja. Vsak dan je v vsakem od treh območij ena dežurna ordinacija: Bellinzona in doline, Locarno in doline, Sottoceneri (vključno z Mendrisiem); dnevni seznam je na strani OVT.",
         "hr": "Dežurna veterinarska hitna služba za Ticino, 24 sata, 7 dana u tjednu; linija s posebnom tarifom 0900 140 150 (CHF 3/min). Prvo nazovi svog veterinara. Svaki dan jedna dežurna ambulanta u svakom od tri područja: Bellinzona i doline, Locarno i doline, Sottoceneri (uklj. Mendrisio); dnevni popis je na stranici OVT-a.",
-        "de": "Tierärztlicher Notdienst für das Tessin, rund um die Uhr, 7 Tage die Woche; kostenpflichtige Nummer 0900 140 150 (CHF 3/Min.). Bitte zuerst den eigenen Tierarzt anrufen. Pro Tag ist in jeder von drei Regionen eine Praxis im Dienst: Bellinzona und Täler, Locarno und Täler, Sottoceneri (einschl. Mendrisio); die Tagesliste steht auf der Website der OVT."
+        "de": "Tierärztlicher Notdienst für das Tessin, rund um die Uhr, 7 Tage die Woche; kostenpflichtige Nummer 0900 140 150 (CHF 3/Min.). Bitte zuerst den eigenen Tierarzt anrufen. Pro Tag ist in jeder von drei Regionen eine Praxis im Dienst: Bellinzona und Täler, Locarno und Täler, Sottoceneri (einschl. Mendrisio); die Tagesliste steht auf der Website der OVT.",
+        "fr": "Service de vétérinaire de garde pour le Tessin, 24 h/24, 7 j/7 ; ligne surtaxée 0900 140 150 (CHF 3/min). Appelez d’abord votre vétérinaire habituel. Un cabinet de garde par jour dans chacune des trois zones : Bellinzone et vallées, Locarno et vallées, Sottoceneri (Mendrisio compris) ; la liste du jour figure sur la page de l’OVT."
       },
       "small_animals": true,
       "url": "https://www.veterinariticino.ch/urgenze/",
@@ -685,7 +716,8 @@
       "duty_i18n": {
         "sl": "Dežurna veterinarska nujna pomoč za regijo Lausanne, 7 dni v tednu; čez dan 8–20 ordinacije SVGL, ponoči 20–8 Maison des Urgences Vétérinaires Nord (Epalinges).",
         "hr": "Dežurna veterinarska hitna služba za regiju Lausanne, 7 dana u tjednu; danju 8–20 ambulante SVGL, noću 20–8 Maison des Urgences Vétérinaires Nord (Epalinges).",
-        "de": "Tierärztlicher Notdienst für die Region Lausanne, 7 Tage die Woche; tagsüber 8–20 Uhr durch die Praxen der SVGL, nachts 20–8 Uhr in der Maison des Urgences Vétérinaires Nord (Epalinges)."
+        "de": "Tierärztlicher Notdienst für die Region Lausanne, 7 Tage die Woche; tagsüber 8–20 Uhr durch die Praxen der SVGL, nachts 20–8 Uhr in der Maison des Urgences Vétérinaires Nord (Epalinges).",
+        "fr": "Service de garde vétérinaire pour la région lausannoise, 7 j/7 ; de jour 8 h–20 h par les cabinets du SVGL, la nuit 20 h–8 h à la Maison des Urgences Vétérinaires Nord (Epalinges)."
       },
       "small_animals": true,
       "url": "https://veterinaire-urgence.ch/",
@@ -705,7 +737,8 @@
       "duty_i18n": {
         "sl": "Dežurstvo 24 ur na dan. Redni delovni čas pon–pet 7–20, sob (okence) 7.30–12. Številka za nujne primere 0900 800 007 (plačljiva številka s povečano tarifo). Ob koncih tedna velja doplačilo za nujno pomoč; vnaprej pokličite.",
         "hr": "Dežuraju non-stop. Redovno radno vrijeme pon–pet 07:00–20:00, sub šalter 07:30–12:00. Hitna linija 0900 800 007 (linija s posebnom tarifom). Vikendom doplatak za hitni slučaj; nazovi unaprijed.",
-        "de": "Rund um die Uhr im Dienst. Reguläre Sprechzeiten Mo–Fr 07:00–20:00 Uhr, Sa Empfang 07:30–12:00 Uhr. Notfallnummer 0900 800 007 (kostenpflichtig). Am Wochenende fällt ein Notfallzuschlag an; bitte vorher anrufen."
+        "de": "Rund um die Uhr im Dienst. Reguläre Sprechzeiten Mo–Fr 07:00–20:00 Uhr, Sa Empfang 07:30–12:00 Uhr. Notfallnummer 0900 800 007 (kostenpflichtig). Am Wochenende fällt ein Notfallzuschlag an; bitte vorher anrufen.",
+        "fr": "De garde 24 h/24. Heures habituelles : lun.–ven. 7 h–20 h, guichet le sam. 7 h 30–12 h. Ligne d’urgence 0900 800 007 (numéro surtaxé). Supplément d’urgence le week-end ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://tierklinikaw.ch/",
@@ -724,7 +757,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa plačljiva številka za nujne primere (povečana tarifa); klicatelj je samodejno povezan z dežurno ordinacijo. Nočna služba Tierklinik Aarau West 22–8.",
         "hr": "Plaćena hitna linija (posebna tarifa) izvan radnog vremena; poziv se automatski povezuje s dežurnom ambulantom. Noćna služba Tierklinik Aarau West 22:00–08:00.",
-        "de": "Kostenpflichtige Notfallnummer außerhalb der Praxiszeiten; Sie werden automatisch mit der diensthabenden Praxis verbunden. Nachtdienst der Tierklinik Aarau West 22:00–08:00 Uhr."
+        "de": "Kostenpflichtige Notfallnummer außerhalb der Praxiszeiten; Sie werden automatisch mit der diensthabenden Praxis verbunden. Nachtdienst der Tierklinik Aarau West 22:00–08:00 Uhr.",
+        "fr": "Ligne d’urgence payante (numéro surtaxé) en dehors des heures d’ouverture ; l’appelant est mis automatiquement en relation avec le cabinet de garde. Service de nuit de Tierklinik Aarau West 22 h–8 h."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-brugg.ch/notfalldienst",
@@ -744,7 +778,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 13.30–18, po naročilu. Izven delovnega časa pokličite plačljivo številko za nujne primere 0900 00 54 00 (poveže vas z dežurno ordinacijo).",
         "hr": "pon–pet 08:00–12:00 i 13:30–18:00, po dogovoru. Izvan radnog vremena nazovi plaćenu hitnu liniju 0900 00 54 00 (povezuje s dežurnom ambulantom).",
-        "de": "Mo–Fr 08:00–12:00 und 13:30–18:00 Uhr, nach Terminvereinbarung. Außerhalb der Sprechzeiten bitte die kostenpflichtige Notfallnummer 0900 00 54 00 anrufen (Verbindung zur diensthabenden Praxis)."
+        "de": "Mo–Fr 08:00–12:00 und 13:30–18:00 Uhr, nach Terminvereinbarung. Außerhalb der Sprechzeiten bitte die kostenpflichtige Notfallnummer 0900 00 54 00 anrufen (Verbindung zur diensthabenden Praxis).",
+        "fr": "Lun.–ven. 8 h–12 h et 13 h 30–18 h, sur rendez-vous. En dehors des heures d’ouverture, appelez la ligne d’urgence payante 0900 00 54 00 (mise en relation avec le cabinet de garde)."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-brugg.ch/",
@@ -764,7 +799,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, pet 8–12 in 14–18; sre 8–12 in 14–19.30; čet 9–12 in 14–18; sob 8–12. Ordinacija ima nujno pomoč na isti številki.",
         "hr": "pon, uto, pet 08:00–12:00 i 14:00–18:00; sri 08:00–12:00 i 14:00–19:30; čet 09:00–12:00 i 14:00–18:00; sub 08:00–12:00. Hitna služba na istom broju.",
-        "de": "Mo, Di, Fr 08:00–12:00 und 14:00–18:00 Uhr; Mi 08:00–12:00 und 14:00–19:30 Uhr; Do 09:00–12:00 und 14:00–18:00 Uhr; Sa 08:00–12:00 Uhr. Die Praxis bietet unter derselben Nummer einen Notdienst an."
+        "de": "Mo, Di, Fr 08:00–12:00 und 14:00–18:00 Uhr; Mi 08:00–12:00 und 14:00–19:30 Uhr; Do 09:00–12:00 und 14:00–18:00 Uhr; Sa 08:00–12:00 Uhr. Die Praxis bietet unter derselben Nummer einen Notdienst an.",
+        "fr": "Lun., mar., ven. 8 h–12 h et 14 h–18 h ; mer. 8 h–12 h et 14 h–19 h 30 ; jeu. 9 h–12 h et 14 h–18 h ; sam. 8 h–12 h. Le cabinet assure un service d’urgences au même numéro."
       },
       "small_animals": true,
       "url": "https://meikovet.ch/tierklinik/lenzburg/",
@@ -784,7 +820,8 @@
       "duty_i18n": {
         "sl": "Pon, pet 8–12 in 14–18.30; tor 8–12 in 16–20; sre, čet 8–12 in 13.30–17; sob 8–11. Izven delovnega časa številka dežurnega veterinarja prek številke ordinacije.",
         "hr": "pon, pet 08:00–12:00 i 14:00–18:30; uto 08:00–12:00 i 16:00–20:00; sri, čet 08:00–12:00 i 13:30–17:00; sub 08:00–11:00. Izvan radnog vremena hitni veterinar preko broja ambulante.",
-        "de": "Mo, Fr 08:00–12:00 und 14:00–18:30 Uhr; Di 08:00–12:00 und 16:00–20:00 Uhr; Mi, Do 08:00–12:00 und 13:30–17:00 Uhr; Sa 08:00–11:00 Uhr. Notfall-Tierarzt außerhalb der Sprechzeiten über die Praxisnummer."
+        "de": "Mo, Fr 08:00–12:00 und 14:00–18:30 Uhr; Di 08:00–12:00 und 16:00–20:00 Uhr; Mi, Do 08:00–12:00 und 13:30–17:00 Uhr; Sa 08:00–11:00 Uhr. Notfall-Tierarzt außerhalb der Sprechzeiten über die Praxisnummer.",
+        "fr": "Lun., ven. 8 h–12 h et 14 h–18 h 30 ; mar. 8 h–12 h et 16 h–20 h ; mer., jeu. 8 h–12 h et 13 h 30–17 h ; sam. 8 h–11 h. En dehors des heures d’ouverture, vétérinaire d’urgence joignable via le numéro du cabinet."
       },
       "small_animals": true,
       "url": "https://meikovet.ch/en/tierklinik/wohlen/",
@@ -804,7 +841,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 9–13 in 15–19, sob 9.30–13. Nujna pomoč 24 ur na dan za svoje paciente na isti številki.",
         "hr": "pon–pet 09:00–13:00 i 15:00–19:00, sub 09:30–13:00. Hitna služba 24/7 za svoje pacijente na istom broju.",
-        "de": "Mo–Fr 09:00–13:00 und 15:00–19:00 Uhr, Sa 09:30–13:00 Uhr. Notdienst rund um die Uhr für die eigenen Patienten unter derselben Nummer."
+        "de": "Mo–Fr 09:00–13:00 und 15:00–19:00 Uhr, Sa 09:30–13:00 Uhr. Notdienst rund um die Uhr für die eigenen Patienten unter derselben Nummer.",
+        "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h, sam. 9 h 30–13 h. Service d’urgences 24 h/24, 7 j/7 pour ses patients au même numéro."
       },
       "small_animals": true,
       "url": "https://clinica-alpina.ch/en/locations/tierklinik-clinica-alpina-celerina",
@@ -824,7 +862,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 9–13 in 15–19, sob 9.30–13. Nujna pomoč 24 ur na dan za svoje paciente; številka za nujne primere +41 81 861 00 88.",
         "hr": "pon–pet 09:00–13:00 i 15:00–19:00, sub 09:30–13:00. Hitna služba 24/7 za svoje pacijente; hitni broj +41 81 861 00 88.",
-        "de": "Mo–Fr 09:00–13:00 und 15:00–19:00 Uhr, Sa 09:30–13:00 Uhr. Notdienst rund um die Uhr für die eigenen Patienten; Notfallnummer +41 81 861 00 88."
+        "de": "Mo–Fr 09:00–13:00 und 15:00–19:00 Uhr, Sa 09:30–13:00 Uhr. Notdienst rund um die Uhr für die eigenen Patienten; Notfallnummer +41 81 861 00 88.",
+        "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h, sam. 9 h 30–13 h. Service d’urgences 24 h/24, 7 j/7 pour ses patients ; numéro d’urgence +41 81 861 00 88."
       },
       "small_animals": true,
       "url": "https://clinica-alpina.ch/en/locations/tierklinik-clinica-alpina-scuol",
@@ -844,7 +883,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, sre, pet 8–12 in 14–18; čet 8–12. Telefon za nujne primere 24 ur na dan +41 81 410 15 55.",
         "hr": "pon, uto, sri, pet 08:00–12:00 i 14:00–18:00; čet 08:00–12:00. Hitni telefon 24/7 +41 81 410 15 55.",
-        "de": "Mo, Di, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Do 08:00–12:00 Uhr. Notfalltelefon rund um die Uhr +41 81 410 15 55."
+        "de": "Mo, Di, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Do 08:00–12:00 Uhr. Notfalltelefon rund um die Uhr +41 81 410 15 55.",
+        "fr": "Lun., mar., mer., ven. 8 h–12 h et 14 h–18 h ; jeu. 8 h–12 h. Téléphone d’urgence 24 h/24, 7 j/7 : +41 81 410 15 55."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-davos.ch/",
@@ -864,7 +904,8 @@
       "duty_i18n": {
         "sl": "Odprto 24 ur na dan; veterinarska nujna pomoč 24 ur na dan, 365 dni v letu.",
         "hr": "Radi 24/7; 24-satna veterinarska hitna služba, 365 dana u godini.",
-        "de": "Rund um die Uhr geöffnet; tierärztlicher Notdienst an 365 Tagen im Jahr."
+        "de": "Rund um die Uhr geöffnet; tierärztlicher Notdienst an 365 Tagen im Jahr.",
+        "fr": "Ouvert 24 h/24, 7 j/7 ; service d’urgences vétérinaires 24 h/24, 365 jours par an."
       },
       "small_animals": true,
       "url": "https://clinicaveterinariatah.ch/en",
@@ -884,7 +925,8 @@
       "duty_i18n": {
         "sl": "Odprto 24 ur na dan, vsak dan v letu. Pristojbina za nujni obisk od CHF 90 (čez dan) in CHF 150 (ponoči, ob nedeljah in praznikih).",
         "hr": "Radi 24 sata dnevno, svaki dan u godini. Naknada za hitni pregled od CHF 90 (danju) i CHF 150 (noću, nedjeljom, blagdanima).",
-        "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres. Notfallgebühr ab CHF 90 (tagsüber) und CHF 150 (nachts, sonntags und an Feiertagen)."
+        "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres. Notfallgebühr ab CHF 90 (tagsüber) und CHF 150 (nachts, sonntags und an Feiertagen).",
+        "fr": "Ouvert 24 h/24, tous les jours de l’année. Consultation d’urgence à partir de CHF 90 (de jour) et CHF 150 (nuit, dimanche, jours fériés)."
       },
       "small_animals": true,
       "url": "https://latrinita.ch/en/",
@@ -904,7 +946,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–18, sob 8–12. Nujne primere izven delovnega časa obravnavajo skupaj s Clinica Veterinaria TAH (24 ur na dan).",
         "hr": "pon–pet 08:00–18:00, sub 08:00–12:00. Hitne slučajeve izvan radnog vremena zbrinjava zajedno s Clinica Veterinaria TAH (24/7).",
-        "de": "Mo–Fr 08:00–18:00 Uhr, Sa 08:00–12:00 Uhr. Notfälle außerhalb der Öffnungszeiten werden gemeinsam mit der Clinica Veterinaria TAH (rund um die Uhr geöffnet) versorgt."
+        "de": "Mo–Fr 08:00–18:00 Uhr, Sa 08:00–12:00 Uhr. Notfälle außerhalb der Öffnungszeiten werden gemeinsam mit der Clinica Veterinaria TAH (rund um die Uhr geöffnet) versorgt.",
+        "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h. Urgences en dehors des heures d’ouverture assurées avec Clinica Veterinaria TAH (24 h/24, 7 j/7)."
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria-acacia.ch/",
@@ -924,7 +967,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18. Izven delovnega časa številka za nujne primere 0900 00 03 03 (poveže vas z dežurnim veterinarjem).",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00. Izvan radnog vremena hitna linija 0900 00 03 03 (povezuje s dežurnim veterinarom).",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt)."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h. Ligne d’urgence en dehors des heures d’ouverture 0900 00 03 03 (mise en relation avec le vétérinaire de garde)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -944,7 +988,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18. Izven delovnega časa številka za nujne primere 0900 00 03 03 (poveže vas z dežurnim veterinarjem).",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00. Izvan radnog vremena hitna linija 0900 00 03 03 (povezuje s dežurnim veterinarom).",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt)."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h. Ligne d’urgence en dehors des heures d’ouverture 0900 00 03 03 (mise en relation avec le vétérinaire de garde)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -964,7 +1009,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18; sob 9–17. Izven delovnega časa številka za nujne primere 0900 00 03 03 (poveže vas z dežurnim veterinarjem).",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00; sub 09:00–17:00. Izvan radnog vremena hitna linija 0900 00 03 03 (povezuje s dežurnim veterinarom).",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr; Sa 09:00–17:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt)."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr; Sa 09:00–17:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 00 03 03 (Verbindung zum diensthabenden Tierarzt).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h ; sam. 9 h–17 h. Ligne d’urgence en dehors des heures d’ouverture 0900 00 03 03 (mise en relation avec le vétérinaire de garde)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -984,7 +1030,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/emergency-vet-aigle/",
@@ -1004,7 +1051,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-etoy-and-its-region/",
@@ -1024,7 +1072,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsak vikend in praznik. Ob delavnikih ponoči nujno pomoč nudi EVC Etoy.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svakog vikenda i blagdana. Radnim danom noću hitne slučajeve zbrinjava EVC Etoy.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; an Wochenenden und Feiertagen Behandlung ohne Termin. Nachts unter der Woche übernimmt das EVC Etoy."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; an Wochenenden und Feiertagen Behandlung ohne Termin. Nachts unter der Woche übernimmt das EVC Etoy.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous tous les week-ends et jours fériés. Les nuits en semaine sont assurées par EVC Etoy."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-lausanne-and-its-region/",
@@ -1044,7 +1093,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-chatel-and-its-region/",
@@ -1064,7 +1114,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-estavayer-and-its-region/",
@@ -1084,7 +1135,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-geneva-and-its-region/",
@@ -1104,7 +1156,8 @@
       "duty_i18n": {
         "sl": "Center za nujno veterinarsko pomoč: telefonska linija 058 122 22 22 (brezplačna) je dosegljiva 24 ur na dan; brez naročila lahko pridete vsako noč ter ob koncih tedna in praznikih 24 ur na dan. Čez dan ob delavnikih nujno pomoč nudi partnerska ambulanta.",
         "hr": "Centar za hitne veterinarske slučajeve: telefonska linija 058 122 22 22 (besplatna) javlja se 24/7; dolazak bez najave svake noći te 24 sata dnevno vikendom i blagdanima. Radnim danom danju hitne slučajeve preuzima partnerska ambulanta.",
-        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis."
+        "de": "Tierärztliches Notfallzentrum: Telefon 058 122 22 22 (gebührenfrei), rund um die Uhr erreichbar; Behandlung ohne Termin jede Nacht sowie an Wochenenden und Feiertagen rund um die Uhr. Werktags tagsüber übernimmt eine Partnerpraxis.",
+        "fr": "Centre d’urgences vétérinaires : ligne téléphonique 058 122 22 22 (gratuite) joignable 24 h/24, 7 j/7 ; sans rendez-vous toutes les nuits et 24 h/24 les week-ends et jours fériés. Un cabinet partenaire assure la journée en semaine."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/emergency-vet-evc-bern/",
@@ -1123,7 +1176,8 @@
       "duty_i18n": {
         "sl": "Plačljivi regionalni liniji dežurnega veterinarja izven delovnega časa: 0900 502 502 (Sierre, Sion, Conthey) in 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 na minuto; ob delavnikih od 21 in ob koncih tedna od 17 se klici preusmerijo v EVC Aigle (058 122 22 22).",
         "hr": "Plaćene regionalne dežurne veterinarske linije izvan radnog vremena: 0900 502 502 (Sierre, Sion, Conthey) i 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 po minuti; radnim danom od 21:00 i vikendom od 17:00 pozivi idu na EVC Aigle (058 122 22 22).",
-        "de": "Kostenpflichtige regionale Notfallnummern des Tierarzt-Notdiensts außerhalb der Praxiszeiten: 0900 502 502 (Sierre, Sion, Conthey) und 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 pro Minute; werktags ab 21:00 Uhr und am Wochenende ab 17:00 Uhr werden Anrufe an das EVC Aigle (058 122 22 22) weitergeleitet."
+        "de": "Kostenpflichtige regionale Notfallnummern des Tierarzt-Notdiensts außerhalb der Praxiszeiten: 0900 502 502 (Sierre, Sion, Conthey) und 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 pro Minute; werktags ab 21:00 Uhr und am Wochenende ab 17:00 Uhr werden Anrufe an das EVC Aigle (058 122 22 22) weitergeleitet.",
+        "fr": "Lignes régionales payantes du vétérinaire de garde en dehors des heures d’ouverture : 0900 502 502 (Sierre, Sion, Conthey) et 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 par minute ; dès 21 h en semaine et 17 h le week-end, les appels sont redirigés vers EVC Aigle (058 122 22 22)."
       },
       "small_animals": true,
       "url": "https://www.vet-daves.ch/urgences/",
@@ -1143,7 +1197,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa pokličite regionalno linijo dežurnega veterinarja 0900 506 506 (CHF 2/min); ob delavnikih od 21 in ob koncih tedna od 17 se klici preusmerijo v center za nujno pomoč EVC v Aiglu.",
         "hr": "Izvan radnog vremena nazovi regionalnu dežurnu veterinarsku liniju 0900 506 506 (CHF 2/min); radnim danom od 21:00 i vikendom od 17:00 pozivi idu u centar za hitne slučajeve EVC u Aigleu.",
-        "de": "Außerhalb der Öffnungszeiten bitte die regionale Notdienstnummer 0900 506 506 anrufen (CHF 2/Min.); werktags ab 21:00 Uhr und am Wochenende ab 17:00 Uhr werden Anrufe an das Notfallzentrum EVC in Aigle weitergeleitet."
+        "de": "Außerhalb der Öffnungszeiten bitte die regionale Notdienstnummer 0900 506 506 anrufen (CHF 2/Min.); werktags ab 21:00 Uhr und am Wochenende ab 17:00 Uhr werden Anrufe an das Notfallzentrum EVC in Aigle weitergeleitet.",
+        "fr": "En dehors des heures d’ouverture, appelez la ligne régionale du vétérinaire de garde 0900 506 506 (CHF 2/min) ; dès 21 h en semaine et 17 h le week-end, les appels sont redirigés vers le centre d’urgences EVC d’Aigle."
       },
       "small_animals": true,
       "url": "https://www.vet-daves.ch/",
@@ -1162,7 +1217,8 @@
       "duty": "Mon-Fri 08:00-12:00 and 13:30-18:30, Sat 08:00-12:00. Emergency hours: weekdays 12:00-13:30 and 18:00-21:00, Saturdays 12:00-17:00, Sundays and holidays 08:00-17:00.",
       "duty_i18n": {
         "hr": "pon–pet 08:00–12:00 i 13:30–18:30, sub 08:00–12:00. Hitni slučajevi: radnim danom 12:00–13:30 i 18:00–21:00, subotom 12:00–17:00, nedjeljom i blagdanima 08:00–17:00.",
-        "de": "Mo–Fr 08:00–12:00 und 13:30–18:30 Uhr, Sa 08:00–12:00 Uhr. Notfallzeiten: werktags 12:00–13:30 und 18:00–21:00 Uhr, samstags 12:00–17:00 Uhr, sonntags und an Feiertagen 08:00–17:00 Uhr."
+        "de": "Mo–Fr 08:00–12:00 und 13:30–18:30 Uhr, Sa 08:00–12:00 Uhr. Notfallzeiten: werktags 12:00–13:30 und 18:00–21:00 Uhr, samstags 12:00–17:00 Uhr, sonntags und an Feiertagen 08:00–17:00 Uhr.",
+        "fr": "Lun.–ven. 8 h–12 h et 13 h 30–18 h 30, sam. 8 h–12 h. Horaires des urgences : en semaine 12 h–13 h 30 et 18 h–21 h, samedi 12 h–17 h, dimanche et jours fériés 8 h–17 h."
       },
       "small_animals": true,
       "url": "https://www.vetvissigen.ch/",
@@ -1182,7 +1238,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 13–18, sob 9–12. Opoldanski nujni primeri 12–14 na 079 120 68 41; izven delovnega časa prek regionalnih linij dežurnega veterinarja 0900 502 502 / 0900 506 506 (CHF 2/min).",
         "hr": "pon–pet 08:00–12:00 i 13:00–18:00, sub 09:00–12:00. Hitni slučajevi u podne 12:00–14:00 na 079 120 68 41; izvan radnog vremena preko regionalnih dežurnih veterinarskih linija 0900 502 502 / 0900 506 506 (CHF 2/min).",
-        "de": "Mo–Fr 08:00–12:00 und 13:00–18:00 Uhr, Sa 09:00–12:00 Uhr. Notfälle über Mittag 12:00–14:00 Uhr unter 079 120 68 41; außerhalb der Sprechzeiten über die regionalen Notdienstnummern 0900 502 502 / 0900 506 506 (CHF 2/Min.)."
+        "de": "Mo–Fr 08:00–12:00 und 13:00–18:00 Uhr, Sa 09:00–12:00 Uhr. Notfälle über Mittag 12:00–14:00 Uhr unter 079 120 68 41; außerhalb der Sprechzeiten über die regionalen Notdienstnummern 0900 502 502 / 0900 506 506 (CHF 2/Min.).",
+        "fr": "Lun.–ven. 8 h–12 h et 13 h–18 h, sam. 9 h–12 h. Urgences à midi 12 h–14 h au 079 120 68 41 ; en dehors des heures d’ouverture, via les lignes régionales du vétérinaire de garde 0900 502 502 / 0900 506 506 (CHF 2/min)."
       },
       "small_animals": true,
       "url": "https://www.catpattes.ch/",
@@ -1201,7 +1258,8 @@
       "duty_i18n": {
         "sl": "Osrednja dežurna številka za območje Neuchâtel Littoral in Val-de-Ruz izven ordinacijskih ur; pokriva noči, konce tedna in praznike. Med delovnim časom najprej pokličite svojo ordinacijo.",
         "hr": "Središnji dežurni broj za Neuchâtel Littoral i Val-de-Ruz izvan radnog vremena ambulanta; pokriva noći, vikende i blagdane. Tijekom radnog vremena prvo nazovi svoju ambulantu.",
-        "de": "Zentrale Notrufnummer für die Region Neuchâtel Littoral und Val-de-Ruz außerhalb der Praxiszeiten; gilt nachts, am Wochenende und an Feiertagen. Während der Öffnungszeiten bitte zuerst die gewohnte Praxis anrufen."
+        "de": "Zentrale Notrufnummer für die Region Neuchâtel Littoral und Val-de-Ruz außerhalb der Praxiszeiten; gilt nachts, am Wochenende und an Feiertagen. Während der Öffnungszeiten bitte zuerst die gewohnte Praxis anrufen.",
+        "fr": "Numéro central de garde pour le Littoral neuchâtelois et le Val-de-Ruz en dehors des heures d’ouverture ; couvre nuits, week-ends et jours fériés. Pendant les heures d’ouverture, appelez d’abord votre cabinet habituel."
       },
       "small_animals": true,
       "url": "https://urgences-veterinaires-ne.ch/",
@@ -1220,7 +1278,8 @@
       "duty_i18n": {
         "sl": "Dežurna veterinarska služba izven delovnega časa za nižji del kantona Neuchâtel in Val-de-Ruz, vsak dan v letu. Plačljiva številka, CHF 2 do 5 na minuto glede na čas; nekateri mobilni operaterji jo lahko blokirajo.",
         "hr": "Dežurna veterinarska služba izvan radnog vremena za donji dio kantona Neuchâtel i Val-de-Ruz, svaki dan u godini. Plaćena linija, CHF 2 do 5 po minuti ovisno o dobu dana; neki mobilni operateri mogu je blokirati.",
-        "de": "Tierärztlicher Notdienst außerhalb der Öffnungszeiten für den unteren Kantonsteil Neuchâtel und das Val-de-Ruz, an jedem Tag des Jahres. Kostenpflichtige Nummer, CHF 2 bis 5 pro Minute je nach Tageszeit; kann bei manchen Mobilfunkanbietern gesperrt sein."
+        "de": "Tierärztlicher Notdienst außerhalb der Öffnungszeiten für den unteren Kantonsteil Neuchâtel und das Val-de-Ruz, an jedem Tag des Jahres. Kostenpflichtige Nummer, CHF 2 bis 5 pro Minute je nach Tageszeit; kann bei manchen Mobilfunkanbietern gesperrt sein.",
+        "fr": "Service de vétérinaire de garde en dehors des heures d’ouverture pour le Bas du canton de Neuchâtel et le Val-de-Ruz, tous les jours de l’année. Ligne payante, CHF 2 à 5 par minute selon l’heure ; peut être bloquée par certains opérateurs mobiles."
       },
       "small_animals": true,
       "url": "https://vetplusneuchatel.ch/",
@@ -1240,7 +1299,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18. Izven delovnega časa pokličite dežurno veterinarsko službo nižjega dela kantona 0900 80 70 60 (plačljiva številka).",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00. Izvan radnog vremena nazovi dežurnu veterinarsku službu donjeg kantona 0900 80 70 60 (plaćena linija).",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Außerhalb der Sprechzeiten bitte den Tierarzt-Notdienst des unteren Kantonsteils unter 0900 80 70 60 anrufen (kostenpflichtig)."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr. Außerhalb der Sprechzeiten bitte den Tierarzt-Notdienst des unteren Kantonsteils unter 0900 80 70 60 anrufen (kostenpflichtig).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h. En dehors des heures d’ouverture, appelez le service de garde du Bas du canton 0900 80 70 60 (ligne payante)."
       },
       "small_animals": true,
       "url": "https://vetplusneuchatel.ch/",
@@ -1260,7 +1320,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18.30. Izven delovnega časa dežurni veterinar prek 0840 10 10 10.",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:30. Izvan radnog vremena dežurni veterinar na 0840 10 10 10.",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:30 Uhr. Außerhalb der Sprechzeiten: diensthabender Tierarzt unter 0840 10 10 10."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:30 Uhr. Außerhalb der Sprechzeiten: diensthabender Tierarzt unter 0840 10 10 10.",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h 30. En dehors des heures d’ouverture : vétérinaire de garde au 0840 10 10 10."
       },
       "small_animals": true,
       "url": "https://cabinetdubreuil.ch/",
@@ -1280,7 +1341,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, pet 8–12 in 13.30–18.30; sre, čet 8–12 in 14–18.30. Izven delovnega časa samo za resnično nujne primere: 0900 901 902 (CHF 3/min), skupna številka regionalnih ordinacij za male hišne ljubljenčke.",
         "hr": "pon, uto, pet 08:00–12:00 i 13:30–18:30; sri, čet 08:00–12:00 i 14:00–18:30. Samo za stvarne hitne slučajeve izvan radnog vremena: 0900 901 902 (CHF 3/min), zajednička linija regionalnih ambulanti za male životinje.",
-        "de": "Mo, Di, Fr 08:00–12:00 und 13:30–18:30 Uhr; Mi, Do 08:00–12:00 und 14:00–18:30 Uhr. Echte Notfälle außerhalb der Sprechzeiten: 0900 901 902 (CHF 3/Min.), gemeinsam betrieben von regionalen Kleintierpraxen."
+        "de": "Mo, Di, Fr 08:00–12:00 und 13:30–18:30 Uhr; Mi, Do 08:00–12:00 und 14:00–18:30 Uhr. Echte Notfälle außerhalb der Sprechzeiten: 0900 901 902 (CHF 3/Min.), gemeinsam betrieben von regionalen Kleintierpraxen.",
+        "fr": "Lun., mar., ven. 8 h–12 h et 13 h 30–18 h 30 ; mer., jeu. 8 h–12 h et 14 h–18 h 30. Véritables urgences en dehors des heures d’ouverture : 0900 901 902 (CHF 3/min), service partagé par les cabinets régionaux pour petits animaux."
       },
       "small_animals": true,
       "url": "https://chauxdefonds.vetmint.ch/",
@@ -1300,7 +1362,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–18; izven tega časa deluje dežurna služba (številka za nujne primere 076 842 68 28).",
         "hr": "pon–pet 08:00–18:00; izvan tog vremena radi dežurna služba (hitni broj 076 842 68 28).",
-        "de": "Mo–Fr 08:00–18:00 Uhr; außerhalb dieser Zeiten besteht ein Notdienst (Notfallnummer 076 842 68 28)."
+        "de": "Mo–Fr 08:00–18:00 Uhr; außerhalb dieser Zeiten besteht ein Notdienst (Notfallnummer 076 842 68 28).",
+        "fr": "Lun.–ven. 8 h–18 h ; un service de garde fonctionne en dehors de ces heures (numéro d’urgence 076 842 68 28)."
       },
       "small_animals": true,
       "url": "https://cabinetveterinairedesmontagnes.ch/",
@@ -1319,7 +1382,8 @@
       "duty_i18n": {
         "sl": "Številka dežurnega veterinarja za primere izven delovnega časa, ki jo objavlja mesto Delémont.",
         "hr": "Broj dežurnog veterinara koji grad Delémont objavljuje za slučajeve izvan radnog vremena.",
-        "de": "Die Stadt Delémont veröffentlicht die Nummer des diensthabenden Tierarztes für Fälle außerhalb der Öffnungszeiten."
+        "de": "Die Stadt Delémont veröffentlicht die Nummer des diensthabenden Tierarztes für Fälle außerhalb der Öffnungszeiten.",
+        "fr": "Numéro du vétérinaire de garde publié par la ville de Delémont pour les cas hors heures d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.delemont.ch/fr/Vivre-a-Delemont/Urgences/Urgences.html",
@@ -1339,7 +1403,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet, pet 9–12 in 16–18; sre 7.30–10. Pregledi in nujni primeri po naročilu; izven delovnega časa upoštevajte navodila na odzivniku.",
         "hr": "pon, uto, čet, pet 09:00–12:00 i 16:00–18:00; sri 07:30–10:00. Pregledi i hitni slučajevi po dogovoru; izvan radnog vremena slijedi upute na telefonskoj sekretarici.",
-        "de": "Mo, Di, Do, Fr 09:00–12:00 und 16:00–18:00 Uhr; Mi 07:30–10:00 Uhr. Sprechstunde und Notfälle nach Terminvereinbarung; außerhalb der Öffnungszeiten bitte die Hinweise auf dem Anrufbeantworter beachten."
+        "de": "Mo, Di, Do, Fr 09:00–12:00 und 16:00–18:00 Uhr; Mi 07:30–10:00 Uhr. Sprechstunde und Notfälle nach Terminvereinbarung; außerhalb der Öffnungszeiten bitte die Hinweise auf dem Anrufbeantworter beachten.",
+        "fr": "Lun., mar., jeu., ven. 9 h–12 h et 16 h–18 h ; mer. 7 h 30–10 h. Consultations et urgences sur rendez-vous ; en dehors des heures d’ouverture, suivez les instructions du répondeur."
       },
       "small_animals": true,
       "url": "https://veterinaire-berger.ch/",
@@ -1358,7 +1423,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč za male hišne ljubljenčke za Schaffhausen in okolico zvečer, ponoči in ob koncih tedna. Plačljiva številka, CHF 2.80 na minuto; številke 0900 so lahko pri mobilnih naročninah blokirane, zato jih vnaprej odklenite.",
         "hr": "Hitna služba za male životinje za Schaffhausen i okolicu navečer, noću i vikendom. Plaćena linija, CHF 2,80 po minuti; brojevi 0900 mogu biti blokirani na mobilnim ugovorima pa ih unaprijed otključaj.",
-        "de": "Kleintier-Notfallring für Schaffhausen und Umgebung abends, nachts und am Wochenende. Kostenpflichtige Nummer, CHF 2.80 pro Minute; 0900-Nummern sind bei manchen Mobilfunkverträgen gesperrt, bitte vorab freischalten."
+        "de": "Kleintier-Notfallring für Schaffhausen und Umgebung abends, nachts und am Wochenende. Kostenpflichtige Nummer, CHF 2.80 pro Minute; 0900-Nummern sind bei manchen Mobilfunkverträgen gesperrt, bitte vorab freischalten.",
+        "fr": "Service d’urgences pour petits animaux de Schaffhouse et environs le soir, la nuit et le week-end. Ligne payante, CHF 2.80 par minute ; les numéros 0900 peuvent être bloqués sur certains abonnements mobiles, à débloquer à l’avance."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/notfall",
@@ -1378,7 +1444,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 7.45–12 in 13.30–18.30, sob 8–12. Članica schaffhauške nujne službe (0900 900 109); izven delovnega časa na številki za nujne primere neprekinjeno odgovarja veterinar za nujne primere.",
         "hr": "pon–pet 07:45–12:00 i 13:30–18:30, sub 08:00–12:00. Član hitne službe Schaffhausen (0900 900 109); izvan radnog vremena na hitnoj liniji neprekidno je dostupan dežurni veterinar.",
-        "de": "Mo–Fr 07:45–12:00 und 13:30–18:30 Uhr, Sa 08:00–12:00 Uhr. Mitglied im Notfallring Schaffhausen (0900 900 109); außerhalb der Öffnungszeiten ist die Notfallnummer durchgehend von einem Notfall-Tierarzt besetzt."
+        "de": "Mo–Fr 07:45–12:00 und 13:30–18:30 Uhr, Sa 08:00–12:00 Uhr. Mitglied im Notfallring Schaffhausen (0900 900 109); außerhalb der Öffnungszeiten ist die Notfallnummer durchgehend von einem Notfall-Tierarzt besetzt.",
+        "fr": "Lun.–ven. 7 h 45–12 h et 13 h 30–18 h 30, sam. 8 h–12 h. Membre du réseau d’urgences de Schaffhouse (0900 900 109) ; en dehors des heures d’ouverture, la ligne d’urgence est tenue en permanence par un vétérinaire d’urgence."
       },
       "small_animals": true,
       "url": "https://schaeublis-tierklinik.ch/",
@@ -1398,7 +1465,8 @@
       "duty_i18n": {
         "sl": "Specialistična klinika za pse, mačke in male hišne ljubljenčke. Izven telefonskih ur klicatelje napotijo na schaffhausensko nujno službo na 0900 900 109 (plačljiva številka).",
         "hr": "Specijalistička klinika za pse, mačke i male ljubimce. Izvan telefonskog radnog vremena pozivi se preusmjeravaju na hitnu službu Schaffhausen, 0900 900 109 (plaćena linija).",
-        "de": "Spezialklinik für Hunde, Katzen und Kleintiere. Außerhalb der telefonischen Erreichbarkeit werden Anrufer an den Notfallring Schaffhausen unter 0900 900 109 verwiesen (kostenpflichtig)."
+        "de": "Spezialklinik für Hunde, Katzen und Kleintiere. Außerhalb der telefonischen Erreichbarkeit werden Anrufer an den Notfallring Schaffhausen unter 0900 900 109 verwiesen (kostenpflichtig).",
+        "fr": "Clinique spécialisée pour chiens, chats et petits animaux. En dehors des heures de permanence téléphonique, les appelants sont orientés vers le réseau d’urgences de Schaffhouse au 0900 900 109 (ligne payante)."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-rhenus.ch/",
@@ -1418,7 +1486,8 @@
       "duty_i18n": {
         "sl": "Članica schaffhauške nujne službe: zvečer in ob koncih tedna 0900 900 109 (plačljiva številka, CHF 2.80/min). Druga lokacija v Thayngnu (052 649 11 60).",
         "hr": "Član hitne službe Schaffhausen: navečer i vikendom 0900 900 109 (plaćena linija, CHF 2,80/min). Druga lokacija u Thayngenu (052 649 11 60).",
-        "de": "Mitglied im Notfallring Schaffhausen: abends und am Wochenende 0900 900 109 (kostenpflichtig, CHF 2.80/Min.). Zweiter Standort in Thayngen (052 649 11 60)."
+        "de": "Mitglied im Notfallring Schaffhausen: abends und am Wochenende 0900 900 109 (kostenpflichtig, CHF 2.80/Min.). Zweiter Standort in Thayngen (052 649 11 60).",
+        "fr": "Membre du réseau d’urgences de Schaffhouse : soirs et week-ends 0900 900 109 (ligne payante, CHF 2.80/min). Second site à Thayngen (052 649 11 60)."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/",
@@ -1437,7 +1506,8 @@
       "duty_i18n": {
         "sl": "Nujna služba winterthurskih veterinarjev za male hišne ljubljenčke izven ordinacijskih ur; plačljiva številka, CHF 3.50 na minuto. Dežurna ordinacija je na voljo do 22; nujni primeri po 22 gredo na nujni oddelek Tierspital Zürich (+41 44 635 81 12).",
         "hr": "Hitna služba veterinara za male životinje u Winterthuru izvan radnog vremena; plaćena linija, CHF 3,50 po minuti. Dežurna ambulanta dostupna je do 22:00; hitni slučajevi nakon 22:00 idu na hitni odjel Tierspital Zürich (+41 44 635 81 12).",
-        "de": "Notfallring der Winterthurer Kleintierärzte außerhalb der Praxiszeiten; kostenpflichtige Nummer, CHF 3.50 pro Minute. Bis 22:00 Uhr steht eine Praxis im Dienst; dringende Fälle nach 22:00 Uhr gehen an die Notfallstation des Tierspitals Zürich (+41 44 635 81 12)."
+        "de": "Notfallring der Winterthurer Kleintierärzte außerhalb der Praxiszeiten; kostenpflichtige Nummer, CHF 3.50 pro Minute. Bis 22:00 Uhr steht eine Praxis im Dienst; dringende Fälle nach 22:00 Uhr gehen an die Notfallstation des Tierspitals Zürich (+41 44 635 81 12).",
+        "fr": "Réseau d’urgences des vétérinaires pour petits animaux de Winterthour en dehors des heures d’ouverture ; ligne payante, CHF 3.50 par minute. Un cabinet de garde est disponible jusqu’à 22 h ; après 22 h, les cas urgents sont dirigés vers le service des urgences du Tierspital Zürich (+41 44 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-seuzach.ch/",
@@ -1457,7 +1527,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 7.30–19.30, sob 8–13.30. Članica winterthurske nujne službe; nujni primeri samo po telefonskem dogovoru. Številka za primere izven delovnega časa 0900 908 908 (CHF 3.50/min).",
         "hr": "pon–pet 07:30–19:30, sub 08:00–13:30. Član hitne službe Winterthur; hitni slučajevi samo uz telefonski dogovor. Hitna linija izvan radnog vremena 0900 908 908 (CHF 3,50/min).",
-        "de": "Mo–Fr 07:30–19:30 Uhr, Sa 08:00–13:30 Uhr. Mitglied im Notfallring Winterthur; Notfälle nur nach telefonischer Anmeldung. Notfall-Hotline außerhalb der Sprechzeiten 0900 908 908 (CHF 3.50/Min.)."
+        "de": "Mo–Fr 07:30–19:30 Uhr, Sa 08:00–13:30 Uhr. Mitglied im Notfallring Winterthur; Notfälle nur nach telefonischer Anmeldung. Notfall-Hotline außerhalb der Sprechzeiten 0900 908 908 (CHF 3.50/Min.).",
+        "fr": "Lun.–ven. 7 h 30–19 h 30, sam. 8 h–13 h 30. Membre du réseau d’urgences de Winterthour ; urgences sur rendez-vous téléphonique uniquement. Hotline en dehors des heures d’ouverture : 0900 908 908 (CHF 3.50/min)."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-acr.ch/",
@@ -1477,7 +1548,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, sre, pet 8–12 in 14–18; čet 8–12; sob 9–11. Izven delovnega časa uporabite winterthursko nujno službo 0900 908 908 (CHF 3.50/min); po 22 Tierspital Zürich.",
         "hr": "pon, uto, sri, pet 08:00–12:00 i 14:00–18:00; čet 08:00–12:00; sub 09:00–11:00. Izvan radnog vremena hitna služba Winterthur 0900 908 908 (CHF 3,50/min); nakon 22:00 Tierspital Zürich.",
-        "de": "Mo, Di, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Do 08:00–12:00 Uhr; Sa 09:00–11:00 Uhr. Außerhalb der Sprechzeiten Notfallring Winterthur 0900 908 908 (CHF 3.50/Min.); nach 22:00 Uhr das Tierspital Zürich."
+        "de": "Mo, Di, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Do 08:00–12:00 Uhr; Sa 09:00–11:00 Uhr. Außerhalb der Sprechzeiten Notfallring Winterthur 0900 908 908 (CHF 3.50/Min.); nach 22:00 Uhr das Tierspital Zürich.",
+        "fr": "Lun., mar., mer., ven. 8 h–12 h et 14 h–18 h ; jeu. 8 h–12 h ; sam. 9 h–11 h. En dehors des heures d’ouverture, réseau d’urgences de Winterthour 0900 908 908 (CHF 3.50/min) ; après 22 h, Tierspital Zürich."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-seuzach.ch/",
@@ -1497,7 +1569,8 @@
       "duty_i18n": {
         "sl": "Napotitvena klinika za pse in mačke; pon–sob 8–12 in 13–17.30. Telefonska številka za nujne primere je pon–pet dosegljiva 24 ur na dan (ne ob praznikih).",
         "hr": "Referentna klinika za pse i mačke; pon–sub 08:00–12:00 i 13:00–17:30. Hitna telefonska linija javlja se 24 sata pon–pet (ne i blagdanima).",
-        "de": "Überweisungsklinik für Hunde und Katzen; Mo–Sa 08:00–12:00 und 13:00–17:30 Uhr. Notfalltelefon Mo–Fr rund um die Uhr besetzt (nicht an Feiertagen)."
+        "de": "Überweisungsklinik für Hunde und Katzen; Mo–Sa 08:00–12:00 und 13:00–17:30 Uhr. Notfalltelefon Mo–Fr rund um die Uhr besetzt (nicht an Feiertagen).",
+        "fr": "Clinique de référence pour chiens et chats ; lun.–sam. 8 h–12 h et 13 h–17 h 30. Ligne d’urgence joignable 24 h/24 du lun. au ven. (hors jours fériés)."
       },
       "small_animals": true,
       "url": "https://www.vetzentrum.ch/",
@@ -1517,7 +1590,8 @@
       "duty_i18n": {
         "sl": "Nujno zdravljenje 24 ur na dan, 365 dni v letu, po predhodnem klicu. Izven delovnega časa ob delavnikih je številka za nujne primere 0900 237 797 (CHF 2.50/min).",
         "hr": "Hitno liječenje 24 sata, 365 dana u godini, nakon prethodnog poziva. Izvan radnog vremena radnim danom hitni broj 0900 237 797 (CHF 2,50/min).",
-        "de": "Notfallbehandlung rund um die Uhr, 365 Tage im Jahr, nach vorheriger telefonischer Anmeldung. Außerhalb der Sprechzeiten an Werktagen lautet die Notfallnummer 0900 237 797 (CHF 2.50/Min.)."
+        "de": "Notfallbehandlung rund um die Uhr, 365 Tage im Jahr, nach vorheriger telefonischer Anmeldung. Außerhalb der Sprechzeiten an Werktagen lautet die Notfallnummer 0900 237 797 (CHF 2.50/Min.).",
+        "fr": "Urgences 24 h/24, 365 jours par an, après appel préalable. En dehors des heures d’ouverture en semaine, numéro d’urgence 0900 237 797 (CHF 2.50/min)."
       },
       "small_animals": true,
       "url": "https://www.bessys.ch/",
@@ -1536,7 +1610,8 @@
       "duty_i18n": {
         "sl": "Regionalna nujna služba veterinarjev Zürcher Oberland (območje Wetzikon, Uster); dežurni veterinar je dosegljiv na plačljivi številki 0900 144 141 (9–21 pri posamezni ordinaciji članici; ponoči prek Marigin 0900 900 500 ali Tierspital Zürich 044 635 81 12).",
         "hr": "Regionalna hitna služba veterinara Zürcher Oberland (Wetzikon, područje Ustera); dežurni veterinar dostupan je na plaćenoj liniji 0900 144 141 (09:00–21:00 po ambulanti članici; noću preko klinike Marigin 0900 900 500 ili Tierspital Zürich 044 635 81 12).",
-        "de": "Regionaler Notfallring der Tierärzte im Zürcher Oberland (Raum Wetzikon, Uster); ein diensthabender Tierarzt ist unter der kostenpflichtigen Nummer 0900 144 141 erreichbar (09:00–21:00 Uhr je Mitgliedspraxis; nachts über Marigin 0900 900 500 oder das Tierspital Zürich 044 635 81 12)."
+        "de": "Regionaler Notfallring der Tierärzte im Zürcher Oberland (Raum Wetzikon, Uster); ein diensthabender Tierarzt ist unter der kostenpflichtigen Nummer 0900 144 141 erreichbar (09:00–21:00 Uhr je Mitgliedspraxis; nachts über Marigin 0900 900 500 oder das Tierspital Zürich 044 635 81 12).",
+        "fr": "Réseau régional d’urgences des vétérinaires de l’Oberland zurichois (Wetzikon, région d’Uster) ; un vétérinaire de garde est joignable sur la ligne payante 0900 144 141 (9 h–21 h selon le cabinet membre ; la nuit via Marigin 0900 900 500 ou Tierspital Zürich 044 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.kleintierarzt-wetzikon.ch/blog/88-notfall",
@@ -1556,7 +1631,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere v delovnem času vnaprej pokličite. Izven delovnega časa: Notfallring Zürcher Oberland 0900 144 141 (9–21), ponoči Marigin (0900 900 500, 24 ur na dan) ali Tierspital Zürich (044 635 81 12).",
         "hr": "Za hitne slučajeve tijekom radnog vremena nazovi unaprijed. Izvan radnog vremena: Notfallring Zürcher Oberland 0900 144 141 (09:00–21:00), noću Marigin (0900 900 500, 24/7) ili Tierspital Zürich (044 635 81 12).",
-        "de": "Für Notfälle während der Öffnungszeiten bitte vorher anrufen. Außerhalb der Öffnungszeiten: Notfallring Zürcher Oberland 0900 144 141 (09:00–21:00 Uhr), nachts Marigin (0900 900 500, rund um die Uhr) oder Tierspital Zürich (044 635 81 12)."
+        "de": "Für Notfälle während der Öffnungszeiten bitte vorher anrufen. Außerhalb der Öffnungszeiten: Notfallring Zürcher Oberland 0900 144 141 (09:00–21:00 Uhr), nachts Marigin (0900 900 500, rund um die Uhr) oder Tierspital Zürich (044 635 81 12).",
+        "fr": "Appelez avant de venir pour les urgences pendant les heures d’ouverture. En dehors : Notfallring Zürcher Oberland 0900 144 141 (9 h–21 h), la nuit Marigin (0900 900 500, 24 h/24, 7 j/7) ou Tierspital Zürich (044 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.kleintierarzt-wetzikon.ch/",
@@ -1576,7 +1652,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet 8–12 in 14–17; sre 8–12; pet 8–12 in 14–16. Izven delovnega časa številka za nujne primere 0900 144 141 (plačljiva številka).",
         "hr": "pon, uto, čet 08:00–12:00 i 14:00–17:00; sri 08:00–12:00; pet 08:00–12:00 i 14:00–16:00. Hitni broj izvan radnog vremena 0900 144 141 (plaćena linija).",
-        "de": "Mo, Di, Do 08:00–12:00 und 14:00–17:00 Uhr; Mi 08:00–12:00 Uhr; Fr 08:00–12:00 und 14:00–16:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 144 141 (kostenpflichtig)."
+        "de": "Mo, Di, Do 08:00–12:00 und 14:00–17:00 Uhr; Mi 08:00–12:00 Uhr; Fr 08:00–12:00 und 14:00–16:00 Uhr. Notfallnummer außerhalb der Sprechzeiten 0900 144 141 (kostenpflichtig).",
+        "fr": "Lun., mar., jeu. 8 h–12 h et 14 h–17 h ; mer. 8 h–12 h ; ven. 8 h–12 h et 14 h–16 h. Numéro d’urgence en dehors des heures d’ouverture 0900 144 141 (ligne payante)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxiskamber.ch/",
@@ -1596,7 +1673,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8.45–22, sob 8.45–18, ob nedeljah zaprto. Številka za nujne primere izven delovnega časa je navedena na spletni strani ordinacije.",
         "hr": "pon–pet 08:45–22:00, sub 08:45–18:00, nedjeljom zatvoreno. Hitni broj izvan radnog vremena naveden je na web-stranici ambulante.",
-        "de": "Mo–Fr 08:45–22:00 Uhr, Sa 08:45–18:00 Uhr, sonntags geschlossen. Die Notfallnummer für Zeiten außerhalb der Öffnungszeiten finden Sie auf der Website der Praxis."
+        "de": "Mo–Fr 08:45–22:00 Uhr, Sa 08:45–18:00 Uhr, sonntags geschlossen. Die Notfallnummer für Zeiten außerhalb der Öffnungszeiten finden Sie auf der Website der Praxis.",
+        "fr": "Lun.–ven. 8 h 45–22 h, sam. 8 h 45–18 h, fermé le dimanche. Numéro d’urgence hors heures d’ouverture indiqué sur le site du cabinet."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/locations/tierklinik-zuerich-ost",
@@ -1616,7 +1694,8 @@
       "duty_i18n": {
         "sl": "Pon 8–12 in 14–18; tor 8–12 in 14–21; sre–pet 8–12 in 14–18; sob 8–12. Opoldanski nujni primeri 12–13.30 na +41 79 780 28 28; zvečer, ponoči in ob koncih tedna v ENNETSeeKLINIK Hünenberg (041 780 80 80) ali Marigin Feusisberg (055 536 44 44).",
         "hr": "pon 08:00–12:00 i 14:00–18:00; uto 08:00–12:00 i 14:00–21:00; sri–pet 08:00–12:00 i 14:00–18:00; sub 08:00–12:00. Hitni slučajevi u podne 12:00–13:30 na +41 79 780 28 28; navečer, noću i vikendom u ENNETSeeKLINIK Hünenberg (041 780 80 80) ili Marigin Feusisberg (055 536 44 44).",
-        "de": "Mo 08:00–12:00 und 14:00–18:00 Uhr; Di 08:00–12:00 und 14:00–21:00 Uhr; Mi–Fr 08:00–12:00 und 14:00–18:00 Uhr; Sa 08:00–12:00 Uhr. Notfälle über Mittag 12:00–13:30 Uhr unter +41 79 780 28 28; abends, nachts und am Wochenende in der ENNETSeeKLINIK Hünenberg (041 780 80 80) oder bei Marigin Feusisberg (055 536 44 44)."
+        "de": "Mo 08:00–12:00 und 14:00–18:00 Uhr; Di 08:00–12:00 und 14:00–21:00 Uhr; Mi–Fr 08:00–12:00 und 14:00–18:00 Uhr; Sa 08:00–12:00 Uhr. Notfälle über Mittag 12:00–13:30 Uhr unter +41 79 780 28 28; abends, nachts und am Wochenende in der ENNETSeeKLINIK Hünenberg (041 780 80 80) oder bei Marigin Feusisberg (055 536 44 44).",
+        "fr": "Lun. 8 h–12 h et 14 h–18 h ; mar. 8 h–12 h et 14 h–21 h ; mer.–ven. 8 h–12 h et 14 h–18 h ; sam. 8 h–12 h. Urgences à midi 12 h–13 h 30 au +41 79 780 28 28 ; soirs, nuits et week-ends à ENNETSeeKLINIK Hünenberg (041 780 80 80) ou Marigin Feusisberg (055 536 44 44)."
       },
       "small_animals": true,
       "url": "https://www.myvets.ch/",
@@ -1636,7 +1715,8 @@
       "duty_i18n": {
         "sl": "Pon, sre, pet 8–12 in 14–18; tor 8–12; čet 8–12 in 14–20; sob 8–12 (1. in 3. v mesecu). Nujni primeri izven delovnega časa: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 ali Tierklinik Aarau West 062 737 80 00.",
         "hr": "pon, sri, pet 08:00–12:00 i 14:00–18:00; uto 08:00–12:00; čet 08:00–12:00 i 14:00–20:00; sub 08:00–12:00 (1. i 3. u mjesecu). Hitni slučajevi izvan radnog vremena: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 ili Tierklinik Aarau West 062 737 80 00.",
-        "de": "Mo, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Di 08:00–12:00 Uhr; Do 08:00–12:00 und 14:00–20:00 Uhr; Sa 08:00–12:00 Uhr (am 1. und 3. des Monats). Notfälle außerhalb der Sprechzeiten: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 oder Tierklinik Aarau West 062 737 80 00."
+        "de": "Mo, Mi, Fr 08:00–12:00 und 14:00–18:00 Uhr; Di 08:00–12:00 Uhr; Do 08:00–12:00 und 14:00–20:00 Uhr; Sa 08:00–12:00 Uhr (am 1. und 3. des Monats). Notfälle außerhalb der Sprechzeiten: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 oder Tierklinik Aarau West 062 737 80 00.",
+        "fr": "Lun., mer., ven. 8 h–12 h et 14 h–18 h ; mar. 8 h–12 h ; jeu. 8 h–12 h et 14 h–20 h ; sam. 8 h–12 h (1er et 3e du mois). Urgences en dehors des heures d’ouverture : ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 ou Tierklinik Aarau West 062 737 80 00."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxissteinhausen.ch/",
@@ -1656,7 +1736,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18, sob 9–12. Izven delovnega časa nujna pomoč 24 ur na dan v sodelovanju z ENNETSeeKLINIK Hünenberg (041 780 80 80); vnaprej pokličite.",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00, sub 09:00–12:00. Izvan radnog vremena hitna skrb 24/7 u suradnji s ENNETSeeKLINIK Hünenberg (041 780 80 80); nazovi unaprijed.",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr, Sa 09:00–12:00 Uhr. Außerhalb der Sprechzeiten Notfallversorgung rund um die Uhr in Zusammenarbeit mit der ENNETSeeKLINIK Hünenberg (041 780 80 80); bitte vorher anrufen."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr, Sa 09:00–12:00 Uhr. Außerhalb der Sprechzeiten Notfallversorgung rund um die Uhr in Zusammenarbeit mit der ENNETSeeKLINIK Hünenberg (041 780 80 80); bitte vorher anrufen.",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h, sam. 9 h–12 h. En dehors des heures d’ouverture, urgences 24 h/24, 7 j/7 en collaboration avec ENNETSeeKLINIK Hünenberg (041 780 80 80) ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://vets4pets.swiss/de",
@@ -1676,7 +1757,8 @@
       "duty_i18n": {
         "sl": "Ob delavnikih 8–12 in 13–17. Čas nujne pomoči pon–pet 7–22, sob 12–22, ned 7–22; od 22 do 7.30 nujne primere sprejema Marigin Feusisberg (0900 900 500). Del skupne kantonalne nujne službe za male hišne ljubljenčke.",
         "hr": "Radnim danom 08:00–12:00 i 13:00–17:00. Hitni slučajevi pon–pet 07:00–22:00, sub 12:00–22:00, ned 07:00–22:00; od 22:00 do 07:30 hitni slučajevi idu u Marigin Feusisberg (0900 900 500). Dio zajedničke kantonalne hitne službe za male životinje.",
-        "de": "Werktags 08:00–12:00 und 13:00–17:00 Uhr. Notfallzeiten Mo–Fr 07:00–22:00 Uhr, Sa 12:00–22:00 Uhr, So 07:00–22:00 Uhr; von 22:00 bis 07:30 Uhr gehen Notfälle an Marigin Feusisberg (0900 900 500). Teil des gemeinsamen kantonalen Kleintier-Notdiensts."
+        "de": "Werktags 08:00–12:00 und 13:00–17:00 Uhr. Notfallzeiten Mo–Fr 07:00–22:00 Uhr, Sa 12:00–22:00 Uhr, So 07:00–22:00 Uhr; von 22:00 bis 07:30 Uhr gehen Notfälle an Marigin Feusisberg (0900 900 500). Teil des gemeinsamen kantonalen Kleintier-Notdiensts.",
+        "fr": "En semaine 8 h–12 h et 13 h–17 h. Horaires des urgences : lun.–ven. 7 h–22 h, sam. 12 h–22 h, dim. 7 h–22 h ; de 22 h à 7 h 30, les urgences sont orientées vers Marigin Feusisberg (0900 900 500). Fait partie du service cantonal partagé d’urgences pour petits animaux."
       },
       "small_animals": true,
       "url": "https://www.anicura.ch/standorte/tierklinik-am-kreis-netstal/",
@@ -1696,7 +1778,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa je na voljo dežurna služba med ordinacijami na Côte; pokličite običajno številko in sledite navodilom.",
         "hr": "Izvan radnog vremena postoji dežurna služba među ambulantama na Côteu; nazovi uobičajeni broj i slijedi upute.",
-        "de": "Außerhalb der Öffnungszeiten besteht ein Notdienst der Praxen an der Côte; bitte die gewohnte Nummer anrufen und den Hinweisen folgen."
+        "de": "Außerhalb der Öffnungszeiten besteht ein Notdienst der Praxen an der Côte; bitte die gewohnte Nummer anrufen und den Hinweisen folgen.",
+        "fr": "En dehors des heures d’ouverture, un service de garde réunit les cabinets de la Côte ; appelez le numéro habituel et suivez les instructions."
       },
       "small_animals": true,
       "url": "https://www.cabinetveterinairesorby.ch/",
@@ -1716,7 +1799,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–18.30, sob 8–13, po naročilu. Zvečer, ponoči, ob koncih tedna in praznikih nujni primeri prek dežurne službe Riviera vaudoise (številka je na odzivniku).",
         "hr": "pon–pet 08:00–18:30, sub 08:00–13:00, po dogovoru. Navečer, noću, vikendom i blagdanima hitni slučajevi preko dežurne službe Riviera vaudoise (broj je na telefonskoj sekretarici).",
-        "de": "Mo–Fr 08:00–18:30 Uhr, Sa 08:00–13:00 Uhr, nach Terminvereinbarung. Abends, nachts, am Wochenende und an Feiertagen: Notfälle über den Notdienst der Riviera vaudoise (Nummer auf dem Anrufbeantworter)."
+        "de": "Mo–Fr 08:00–18:30 Uhr, Sa 08:00–13:00 Uhr, nach Terminvereinbarung. Abends, nachts, am Wochenende und an Feiertagen: Notfälle über den Notdienst der Riviera vaudoise (Nummer auf dem Anrufbeantworter).",
+        "fr": "Lun.–ven. 8 h–18 h 30, sam. 8 h–13 h, sur rendez-vous. Soirs, nuits, week-ends et jours fériés : urgences via le service de garde de la Riviera vaudoise (numéro sur le répondeur)."
       },
       "small_animals": true,
       "url": "https://veterinairevevey.ch/",
@@ -1736,7 +1820,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri izven delovnega časa na 0900 001 400 (CHF 2/min), preusmeritev glede na uro: do 22 lokalna dežurna služba Nord vaudois, nato od 22 do 8 centri za nujno pomoč (Medivet ali EVC).",
         "hr": "Hitni slučajevi izvan radnog vremena na 0900 001 400 (CHF 2/min), preusmjeravanje prema dobu dana: lokalna dežurna služba Nord vaudois do 22:00, zatim centri za hitne slučajeve (Medivet ili EVC) od 22:00 do 08:00.",
-        "de": "Notfälle außerhalb der Öffnungszeiten unter 0900 001 400 (CHF 2/Min.), Weiterleitung je nach Tageszeit: örtlicher Bereitschaftsdienst des Nord vaudois bis 22:00 Uhr, danach Notfallzentren (Medivet oder EVC) von 22:00 bis 08:00 Uhr."
+        "de": "Notfälle außerhalb der Öffnungszeiten unter 0900 001 400 (CHF 2/Min.), Weiterleitung je nach Tageszeit: örtlicher Bereitschaftsdienst des Nord vaudois bis 22:00 Uhr, danach Notfallzentren (Medivet oder EVC) von 22:00 bis 08:00 Uhr.",
+        "fr": "Urgences en dehors des heures d’ouverture au 0900 001 400 (CHF 2/min), redirigées selon l’heure : permanence locale du Nord vaudois jusqu’à 22 h, puis centres d’urgences (Medivet ou EVC) de 22 h à 8 h."
       },
       "small_animals": true,
       "url": "https://www.casavet.ch/",
@@ -1755,7 +1840,8 @@
       "duty_i18n": {
         "sl": "Plačljiva številka za nujne primere (CHF 2/min) za male hišne ljubljenčke v severnem Vaudu, preusmeritev glede na dan in uro: lokalna dežurna služba ob delavnikih od 18 ter ob koncih tedna do 22, nato centri za nujno pomoč (Medivet ali EVC) 22–8.",
         "hr": "Plaćena hitna linija (CHF 2/min) za male životinje u sjevernom Vaudu, preusmjeravanje prema danu i dobu: lokalna dežurna služba radnim danom od 18:00 i vikendom do 22:00, zatim centri za hitne slučajeve (Medivet ili EVC) 22:00–08:00.",
-        "de": "Kostenpflichtige Notfallnummer (CHF 2/Min.) für Kleintiere im nördlichen Waadtland, Weiterleitung je nach Tag und Uhrzeit: örtlicher Bereitschaftsdienst werktags ab 18:00 Uhr und am Wochenende bis 22:00 Uhr, danach Notfallzentren (Medivet oder EVC) 22:00–08:00 Uhr."
+        "de": "Kostenpflichtige Notfallnummer (CHF 2/Min.) für Kleintiere im nördlichen Waadtland, Weiterleitung je nach Tag und Uhrzeit: örtlicher Bereitschaftsdienst werktags ab 18:00 Uhr und am Wochenende bis 22:00 Uhr, danach Notfallzentren (Medivet oder EVC) 22:00–08:00 Uhr.",
+        "fr": "Ligne d’urgence payante (CHF 2/min) pour petits animaux du Nord vaudois, redirigée selon le jour et l’heure : permanence locale dès 18 h en semaine et le week-end jusqu’à 22 h, puis centres d’urgences (Medivet ou EVC) 22 h–8 h."
       },
       "small_animals": true,
       "url": "https://www.casavet.ch/casavet-urgences-yvonand",
@@ -1775,7 +1861,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18, sob 9–12, samo po naročilu.",
         "hr": "pon–pet 08:00–12:00 i 14:00–18:00, sub 09:00–12:00, samo po dogovoru.",
-        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr, Sa 09:00–12:00 Uhr, nur nach Terminvereinbarung."
+        "de": "Mo–Fr 08:00–12:00 und 14:00–18:00 Uhr, Sa 09:00–12:00 Uhr, nur nach Terminvereinbarung.",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h, sam. 9 h–12 h, sur rendez-vous uniquement."
       },
       "small_animals": true,
       "url": "https://vets.ch/",
@@ -1795,7 +1882,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18, sob 9–12. Izven delovnega časa velja številka za nujne primere 0900 811 818 (plačljiva številka s povečano tarifo, samo v švicarskem omrežju).",
         "hr": "pon–pet 8–12 i 14–18, sub 9–12. Izvan radnog vremena vrijedi hitna linija 0900 811 818 (linija s posebnom tarifom, samo iz švicarske mreže).",
-        "de": "Mo–Fr 8–12 und 14–18 Uhr, Sa 9–12 Uhr. Außerhalb der Öffnungszeiten gilt die Notfallnummer 0900 811 818 (kostenpflichtig, nur im Schweizer Netz)."
+        "de": "Mo–Fr 8–12 und 14–18 Uhr, Sa 9–12 Uhr. Außerhalb der Öffnungszeiten gilt die Notfallnummer 0900 811 818 (kostenpflichtig, nur im Schweizer Netz).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h, sam. 9 h–12 h. En dehors des heures d’ouverture, ligne d’urgence 0900 811 818 (numéro surtaxé, réseau suisse uniquement)."
       },
       "small_animals": true,
       "url": "https://animal-kleintierpraxis.ch/",
@@ -1815,7 +1903,8 @@
       "duty_i18n": {
         "sl": "Pon–pet z opoldanskim odmorom, sob 8–12. Izven delovnega časa je za nujne primere dežurna ordinacija iz regije Baden prek plačljive številke 0900 00 54 00; 22–8 se klici preusmerijo v Tierklinik Aarau West.",
         "hr": "pon–pet s podnevnom stankom, sub 8–12. Izvan radnog vremena dežura ambulanta iz regije Baden na plaćenoj liniji 0900 00 54 00; od 22:00 do 08:00 pozivi idu na Tierklinik Aarau West.",
-        "de": "Mo–Fr mit Mittagspause, Sa 8–12 Uhr. Außerhalb der Öffnungszeiten ist eine Praxis der Region Baden im Notdienst, erreichbar über die kostenpflichtige Nummer 0900 00 54 00; von 22:00 bis 08:00 Uhr gehen Anrufe an die Tierklinik Aarau West."
+        "de": "Mo–Fr mit Mittagspause, Sa 8–12 Uhr. Außerhalb der Öffnungszeiten ist eine Praxis der Region Baden im Notdienst, erreichbar über die kostenpflichtige Nummer 0900 00 54 00; von 22:00 bis 08:00 Uhr gehen Anrufe an die Tierklinik Aarau West.",
+        "fr": "Lun.–ven. avec pause de midi, sam. 8 h–12 h. En dehors des heures d’ouverture, un cabinet de la région de Baden assure les urgences via la ligne payante 0900 00 54 00 ; de 22 h à 8 h, les appels sont dirigés vers Tierklinik Aarau West."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-baden.ch/",
@@ -1835,7 +1924,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan vse leto, tudi ponoči, ob nedeljah in praznikih; vnaprej pokličite. Številka za nujne primere 0900 70 70 70 (plačljiva številka s povečano tarifo).",
         "hr": "24-satna hitna služba cijele godine, uključujući noći, nedjelje i blagdane; nazovi unaprijed. Hitna linija 0900 70 70 70 (linija s posebnom tarifom).",
-        "de": "Notdienst rund um die Uhr und ganzjährig, auch nachts, sonntags und an Feiertagen; bitte vorher anrufen. Notfallnummer 0900 70 70 70 (kostenpflichtig)."
+        "de": "Notdienst rund um die Uhr und ganzjährig, auch nachts, sonntags und an Feiertagen; bitte vorher anrufen. Notfallnummer 0900 70 70 70 (kostenpflichtig).",
+        "fr": "Service d’urgences 24 h/24 toute l’année, nuits, dimanches et jours fériés compris ; appelez avant de venir. Ligne d’urgence 0900 70 70 70 (numéro surtaxé)."
       },
       "small_animals": true,
       "url": "https://tierklinik-mittelland.ch/",
@@ -1855,7 +1945,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri izven delovnega časa: pokličite 0900 837 837 (plačljiva številka s povečano tarifo); klicatelje običajno usmerijo v to kliniko, ki je opremljena za nujne primere.",
         "hr": "Hitni slučajevi izvan radnog vremena: nazovi 0900 837 837 (linija s posebnom tarifom); pozivi se obično preusmjeravaju u ovu kliniku, koja je opremljena za hitne slučajeve.",
-        "de": "Notfall außerhalb der Öffnungszeiten: bitte 0900 837 837 anrufen (kostenpflichtig); Anrufer werden in der Regel an diese auf Notfälle eingerichtete Klinik verwiesen."
+        "de": "Notfall außerhalb der Öffnungszeiten: bitte 0900 837 837 anrufen (kostenpflichtig); Anrufer werden in der Regel an diese auf Notfälle eingerichtete Klinik verwiesen.",
+        "fr": "Urgences en dehors des heures d’ouverture : appelez le 0900 837 837 (numéro surtaxé) ; les appelants sont normalement dirigés vers cette clinique, équipée pour les urgences."
       },
       "small_animals": true,
       "url": "https://www.vetstation.ch/en",
@@ -1875,7 +1966,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa pokličite številko za nujne primere 0900 837 837 (plačljiva številka s povečano tarifo).",
         "hr": "Izvan radnog vremena nazovi hitni broj 0900 837 837 (linija s posebnom tarifom).",
-        "de": "Außerhalb der Öffnungszeiten bitte die Notfallnummer 0900 837 837 anrufen (kostenpflichtig)."
+        "de": "Außerhalb der Öffnungszeiten bitte die Notfallnummer 0900 837 837 anrufen (kostenpflichtig).",
+        "fr": "Appelez le numéro d’urgence 0900 837 837 (numéro surtaxé) en dehors des heures d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.vetstation.ch/en",
@@ -1895,7 +1987,8 @@
       "duty_i18n": {
         "sl": "Za nujen termin pokličite; zvečer, ponoči, ob nedeljah in praznikih prek nujne službe Riviera 0900 906 906 (plačljiva številka s povečano tarifo).",
         "hr": "Za hitan termin nazovi; navečer, noću, nedjeljom i blagdanima hitna služba Riviera 0900 906 906 (linija s posebnom tarifom).",
-        "de": "Für einen dringenden Termin bitte anrufen; abends, nachts, sonntags und an Feiertagen über den Notdienst der Riviera 0900 906 906 (kostenpflichtig)."
+        "de": "Für einen dringenden Termin bitte anrufen; abends, nachts, sonntags und an Feiertagen über den Notdienst der Riviera 0900 906 906 (kostenpflichtig).",
+        "fr": "Appelez pour un rendez-vous urgent ; soirs, nuits, dimanches et jours fériés via le service d’urgences de la Riviera 0900 906 906 (numéro surtaxé)."
       },
       "small_animals": true,
       "url": "https://my-vet.ch/",
@@ -1914,7 +2007,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere zvečer, ponoči, ob nedeljah in praznikih, 24 ur na dan, 7 dni v tednu; odgovori veterinar in napoti v dežurno kliniko. Plačljiva številka s povečano tarifo (CHF 2/min 8–20, CHF 5/min 20–8).",
         "hr": "Hitna linija navečer, noću, nedjeljom i blagdanima, 24 h dnevno, 7 dana u tjednu; javlja se veterinar i upućuje na dežurnu kliniku. Linija s posebnom tarifom (CHF 2/min 8–20 h, CHF 5/min 20–8 h).",
-        "de": "Notfallnummer für abends, nachts, sonntags und an Feiertagen, rund um die Uhr an 7 Tagen die Woche; ein Tierarzt nimmt den Anruf entgegen und verweist an die diensthabende Klinik. Kostenpflichtig (CHF 2/Min. 8–20 Uhr, CHF 5/Min. 20–8 Uhr)."
+        "de": "Notfallnummer für abends, nachts, sonntags und an Feiertagen, rund um die Uhr an 7 Tagen die Woche; ein Tierarzt nimmt den Anruf entgegen und verweist an die diensthabende Klinik. Kostenpflichtig (CHF 2/Min. 8–20 Uhr, CHF 5/Min. 20–8 Uhr).",
+        "fr": "Ligne d’urgence pour les soirs, nuits, dimanches et jours fériés, 24 h/24 et 7 j/7 ; un vétérinaire répond et oriente vers la clinique de garde. Numéro surtaxé (CHF 2/min de 8 h à 20 h, CHF 5/min de 20 h à 8 h)."
       },
       "small_animals": true,
       "url": "https://my-vet.ch/urgenceveterinaire/",
@@ -1934,7 +2028,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12.30 in 13.15–17.30; obiski na domu po naročilu. Nujna pomoč je na voljo v delovnem času.",
         "hr": "pon–pet 8:00–12:30 i 13:15–17:30; kućni posjeti po dogovoru. Hitna služba dostupna tijekom radnog vremena.",
-        "de": "Mo–Fr 8:00–12:30 und 13:15–17:30 Uhr; Hausbesuche nach Terminvereinbarung. Notdienst während der Öffnungszeiten."
+        "de": "Mo–Fr 8:00–12:30 und 13:15–17:30 Uhr; Hausbesuche nach Terminvereinbarung. Notdienst während der Öffnungszeiten.",
+        "fr": "Lun.–ven. 8 h–12 h 30 et 13 h 15–17 h 30 ; visites à domicile sur rendez-vous. Service d’urgences pendant les heures d’ouverture."
       },
       "small_animals": true,
       "url": "https://veteovet.ch/",
@@ -1953,7 +2048,8 @@
       "duty_i18n": {
         "sl": "Ordinacija za male hišne ljubljenčke severno od Nyona (četrt Petite Prairie). Za delovni čas pokličite.",
         "hr": "Ambulanta za male životinje sjeverno od Nyona (četvrt Petite Prairie). Za radno vrijeme nazovi.",
-        "de": "Kleintierpraxis nördlich von Nyon (Quartier Petite Prairie). Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Kleintierpraxis nördlich von Nyon (Quartier Petite Prairie). Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Cabinet pour petits animaux au nord de Nyon (quartier de la Petite Prairie). Appelez pour connaître les horaires."
       },
       "small_animals": true,
       "url": "https://veterinaire-letrefle.ch/",
@@ -1973,7 +2069,8 @@
       "duty_i18n": {
         "sl": "Center za nujno pomoč je odprt 24 ur na dan, 7 dni v tednu, tudi ob koncih tedna in praznikih.",
         "hr": "Centar za hitne slučajeve radi 24 sata dnevno, 7 dana u tjednu, uključujući vikende i blagdane.",
-        "de": "Notfallzentrum rund um die Uhr geöffnet, 7 Tage die Woche, auch an Wochenenden und Feiertagen."
+        "de": "Notfallzentrum rund um die Uhr geöffnet, 7 Tage die Woche, auch an Wochenenden und Feiertagen.",
+        "fr": "Centre d’urgences ouvert 24 h/24, 7 j/7, week-ends et jours fériés compris."
       },
       "small_animals": true,
       "url": "https://www.veturgences.ch/",
@@ -1993,7 +2090,8 @@
       "duty_i18n": {
         "sl": "Zvečer in ob koncih tedna: schaffhausenska nujna služba 0900 900 109 (plačljiva številka s povečano tarifo) za male hišne ljubljenčke.",
         "hr": "Navečer i vikendom: hitna služba Schaffhausen 0900 900 109 (linija s posebnom tarifom) za male životinje.",
-        "de": "Abends und am Wochenende: Notfallring Schaffhausen 0900 900 109 (kostenpflichtig) für Kleintiere."
+        "de": "Abends und am Wochenende: Notfallring Schaffhausen 0900 900 109 (kostenpflichtig) für Kleintiere.",
+        "fr": "Soirs et week-ends : réseau d’urgences de Schaffhouse 0900 900 109 (numéro surtaxé) pour les petits animaux."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/",
@@ -2013,7 +2111,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8.30–13 in 14.30–19, sob 9–13, ned zaprto. Članica schaffhauške nujne službe (0900 900 109).",
         "hr": "pon–pet 8:30–13:00 i 14:30–19:00, sub 9:00–13:00, ned zatvoreno. Član hitne službe Schaffhausen (0900 900 109).",
-        "de": "Mo–Fr 8:30–13:00 und 14:30–19:00 Uhr, Sa 9:00–13:00 Uhr, So geschlossen. Mitglied im Notfallring Schaffhausen (0900 900 109)."
+        "de": "Mo–Fr 8:30–13:00 und 14:30–19:00 Uhr, Sa 9:00–13:00 Uhr, So geschlossen. Mitglied im Notfallring Schaffhausen (0900 900 109).",
+        "fr": "Lun.–ven. 8 h 30–13 h et 14 h 30–19 h, sam. 9 h–13 h, fermé le dimanche. Membre du réseau d’urgences de Schaffhouse (0900 900 109)."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/locations/zentrum-tiermedizin-klettgau",
@@ -2032,7 +2131,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere VetTrust, 24 ur na dan, 7 dni v tednu; klicatelje glede na poštno številko preusmerijo na najbližjo dežurno lokacijo VetTrust.",
         "hr": "Hitna linija VetTrust, non-stop, 7 dana u tjednu; pozivi se prema poštanskom broju usmjeravaju na najbližu dežurnu lokaciju VetTrust.",
-        "de": "Notfallnummer von VetTrust, rund um die Uhr, 7 Tage die Woche; Anrufe werden nach Postleitzahl an den nächstgelegenen diensthabenden VetTrust-Standort weitergeleitet."
+        "de": "Notfallnummer von VetTrust, rund um die Uhr, 7 Tage die Woche; Anrufe werden nach Postleitzahl an den nächstgelegenen diensthabenden VetTrust-Standort weitergeleitet.",
+        "fr": "Ligne d’urgence VetTrust, 24 h/24, 7 j/7 ; les appels sont dirigés selon le code postal vers le site VetTrust de garde le plus proche."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/health/emergency",
@@ -2052,7 +2152,8 @@
       "duty_i18n": {
         "sl": "Za delovni čas in nujne primere pokličite ordinacijo.",
         "hr": "Za radno vrijeme i hitne slučajeve nazovi ambulantu.",
-        "de": "Für Öffnungszeiten und Notfälle bitte in der Praxis anrufen."
+        "de": "Für Öffnungszeiten und Notfälle bitte in der Praxis anrufen.",
+        "fr": "Appelez le cabinet pour connaître les horaires et les urgences."
       },
       "small_animals": true,
       "source_url": "https://www.svpm-asme.ch/fr/recherche-veterinaire/recherche-cabinets/recherche-cabinets/cabinet/Clinique%20V%C3%A9t%C3%A9rinaire%20La%20Condem%C3%A8ne%20S%C3%A0rl",
@@ -2068,7 +2169,8 @@
       "duty": "Several vets share weekend duty from Saturday 10:00 to Monday 07:00; the current on-duty list is updated every Saturday.",
       "duty_i18n": {
         "hr": "Više veterinara dijeli dežurstvo vikendom od subote u 10:00 do ponedjeljka u 07:00; trenutačni popis dežurnih ažurira se svake subote.",
-        "de": "Mehrere Tierärzte teilen sich den Wochenenddienst von Samstag 10:00 Uhr bis Montag 07:00 Uhr; die aktuelle Dienstliste wird jeden Samstag aktualisiert."
+        "de": "Mehrere Tierärzte teilen sich den Wochenenddienst von Samstag 10:00 Uhr bis Montag 07:00 Uhr; die aktuelle Dienstliste wird jeden Samstag aktualisiert.",
+        "fr": "Plusieurs vétérinaires se partagent la garde du week-end, du samedi 10 h au lundi 7 h ; la liste des vétérinaires de garde est mise à jour chaque samedi."
       },
       "small_animals": true,
       "url": "https://www.vetj.ch/de-de/19-service-de-garde/41-veterinaire-garde-intro-fr.html",
@@ -2088,7 +2190,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 14–18 po naročilu. Nujni primeri: pokličite ordinacijo ali regionalno nujno službo 0900 140 150 (plačljiva številka s povečano tarifo).",
         "hr": "pon–pet 8:00–12:00 i 14:00–18:00 po dogovoru. Hitni slučajevi: nazovi ambulantu ili regionalnu hitnu službu 0900 140 150 (linija s posebnom tarifom).",
-        "de": "Mo–Fr 8:00–12:00 und 14:00–18:00 Uhr nach Terminvereinbarung. Dringende Fälle: bitte in der Praxis oder beim regionalen Notdienst 0900 140 150 anrufen (kostenpflichtig)."
+        "de": "Mo–Fr 8:00–12:00 und 14:00–18:00 Uhr nach Terminvereinbarung. Dringende Fälle: bitte in der Praxis oder beim regionalen Notdienst 0900 140 150 anrufen (kostenpflichtig).",
+        "fr": "Lun.–ven. 8 h–12 h et 14 h–18 h sur rendez-vous. Cas urgents : appelez le cabinet ou le service d’urgences régional 0900 140 150 (numéro surtaxé)."
       },
       "small_animals": true,
       "url": "https://www.veterinariogozzoli.ch/",
@@ -2108,7 +2211,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–12 in 13.30–18, sob 9–12. Nujna pomoč za stranke tudi izven delovnega časa.",
         "hr": "pon–pet 8:00–12:00 i 13:30–18:00, sub 9:00–12:00. Hitna služba za klijente i izvan radnog vremena.",
-        "de": "Mo–Fr 8:00–12:00 und 13:30–18:00 Uhr, Sa 9:00–12:00 Uhr. Notdienst für Kunden auch außerhalb der Öffnungszeiten."
+        "de": "Mo–Fr 8:00–12:00 und 13:30–18:00 Uhr, Sa 9:00–12:00 Uhr. Notdienst für Kunden auch außerhalb der Öffnungszeiten.",
+        "fr": "Lun.–ven. 8 h–12 h et 13 h 30–18 h, sam. 9 h–12 h. Service d’urgences pour les clients également en dehors des heures d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.centroveterinario.ch/",

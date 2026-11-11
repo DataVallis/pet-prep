@@ -187,7 +187,8 @@
       "url": "https://tieraerztekammer-berlin.de/notdienst/",
       "duty": "Berlin clinics with 24-h small-animal emergency service and practices with evening, weekend and holiday emergency hours; search 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; use clinics only for life-threatening cases.",
       "duty_i18n": {
-        "de": "Berliner Kliniken mit Kleintier-Notdienst rund um die Uhr sowie Praxen mit Notdienstzeiten abends, am Wochenende und an Feiertagen; Suche auf der Seite nach „Notdienst, Tierarzt, Berlin, Stadtbezirk“; Kliniken bitte nur bei lebensbedrohlichen Fällen aufsuchen."
+        "de": "Berliner Kliniken mit Kleintier-Notdienst rund um die Uhr sowie Praxen mit Notdienstzeiten abends, am Wochenende und an Feiertagen; Suche auf der Seite nach „Notdienst, Tierarzt, Berlin, Stadtbezirk“; Kliniken bitte nur bei lebensbedrohlichen Fällen aufsuchen.",
+        "fr": "Cliniques de Berlin avec service d’urgence petits animaux 24 h/24 et cabinets avec urgences en soirée, le week-end et les jours fériés ; recherche : « Notdienst, Tierarzt, Berlin, Stadtbezirk » ; cliniques réservées aux cas mettant la vie en danger."
       },
       "note": "No central emergency phone; chamber office number is administrative only. Clinics report severe capacity shortages. Source: Tierärztekammer Berlin page listing these clinics/practices.",
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
@@ -206,7 +207,8 @@
       "duty_i18n": {
         "sl": "Razpored dežurne ordinacije: pon–pet 20–8, ob koncih tedna in praznikih 8–8 naslednji dan; informacijska linija 040 434379; vedno najprej pokličite ordinacijo",
         "hr": "Raspored dežurne ambulante: pon–pet 20:00–08:00, vikendom i blagdanima 08:00–08:00 sljedećeg dana; informativna linija 040 434379; uvijek prvo nazovi ambulantu.",
-        "de": "Notdienstplan der diensthabenden Praxis: Mo–Fr 20.00–08.00 Uhr, Wochenende und feiertags 08.00–08.00 Uhr des Folgetags; Infotelefon 040 434379; bitte immer zuerst in der Praxis anrufen"
+        "de": "Notdienstplan der diensthabenden Praxis: Mo–Fr 20.00–08.00 Uhr, Wochenende und feiertags 08.00–08.00 Uhr des Folgetags; Infotelefon 040 434379; bitte immer zuerst in der Praxis anrufen",
+        "fr": "Planning du cabinet de garde : lun.–ven. 20 h–8 h, week-ends et jours fériés 8 h–8 h le lendemain ; ligne d’information 040 434379 ; appelez toujours le cabinet au préalable."
       },
       "note": "Emergency surcharge 50 EUR + VAT under GOT.",
       "source_url": "https://tieraerztekammer-hamburg.de/aktueller-notdienstplan",
@@ -225,7 +227,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 18–22; sob, ned in prazniki 8–22; obvezna telefonska prijava. Izven tega časa: okoliške klinike (Posthausen, Sottrum, TiHo Hannover)",
         "hr": "pon–pet 18:00–22:00; sub, ned i blagdani 08:00–22:00; obvezna telefonska prijava. Izvan tog vremena okolne klinike (Posthausen, Sottrum, TiHo Hannover).",
-        "de": "Mo–Fr 18.00–22.00 Uhr; Sa, So und feiertags 08.00–22.00 Uhr; telefonische Anmeldung erforderlich. Außerhalb dieser Zeiten: Kliniken in der Umgebung (Posthausen, Sottrum, TiHo Hannover)"
+        "de": "Mo–Fr 18.00–22.00 Uhr; Sa, So und feiertags 08.00–22.00 Uhr; telefonische Anmeldung erforderlich. Außerhalb dieser Zeiten: Kliniken in der Umgebung (Posthausen, Sottrum, TiHo Hannover)",
+        "fr": "Lun.–ven. 18 h–22 h ; sam., dim. et jours fériés 8 h–22 h ; appel préalable obligatoire. En dehors de ces horaires : cliniques des environs (Posthausen, Sottrum, TiHo Hannover)."
       },
       "source_url": "https://tieraerztekammer-bremen.org/notdienst/",
       "checked": "2026-11-02",
@@ -243,7 +246,8 @@
       "duty_i18n": {
         "sl": "Od 1. 1. 2025: pon–pet 18–8 ter ves dan ob koncih tedna in praznikih; klicatelja povežejo neposredno z najbližjo dežurno ordinacijo (glede na lokacijo klicatelja). Samo mali hišni ljubljenčki, običajno brez obiskov na domu",
         "hr": "Od 1. 1. 2025.: pon–pet 18:00–08:00 te cijeli dan vikendom i blagdanima; poziv se izravno povezuje s najbližom dežurnom ambulantom (prema lokaciji pozivatelja). Samo male životinje, obično bez kućnih posjeta.",
-        "de": "Seit 1. Januar 2025: Mo–Fr 18.00–08.00 Uhr sowie Wochenende und feiertags ganztägig; der Anruf wird direkt an die nächstgelegene diensthabende Praxis weitergeleitet (nach Standort des Anrufers). Nur Kleintiere, in der Regel keine Hausbesuche"
+        "de": "Seit 1. Januar 2025: Mo–Fr 18.00–08.00 Uhr sowie Wochenende und feiertags ganztägig; der Anruf wird direkt an die nächstgelegene diensthabende Praxis weitergeleitet (nach Standort des Anrufers). Nur Kleintiere, in der Regel keine Hausbesuche",
+        "fr": "Depuis le 1er janvier 2025 : lun.–ven. 18 h–8 h et toute la journée les week-ends et jours fériés ; l’appelant est mis en relation directement avec le cabinet de garde le plus proche (selon sa position). Petits animaux uniquement, généralement pas de visites à domicile."
       },
       "quote": "Montag – Freitag 18:00 – 08:00 Uhr und ganztägig am Wochenende und an den Feiertagen",
       "note": "Sächsische Landestierärztekammer announcement. 01805 is a charged service number. vetnotdienst.de could not be fetched (not reachable from this tool).",
@@ -263,7 +267,8 @@
       "duty_i18n": {
         "sl": "Pon–čet 18–8, od pet 18 do pon 8, prazniki 0–24; vnaprej pokličite",
         "hr": "pon–čet 18:00–08:00, pet 18:00 do pon 08:00, blagdani 0–24; nazovi unaprijed.",
-        "de": "Mo–Do 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr, an Feiertagen 0–24 Uhr; bitte vorher anrufen"
+        "de": "Mo–Do 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr, an Feiertagen 0–24 Uhr; bitte vorher anrufen",
+        "fr": "Lun.–jeu. 18 h–8 h, du ven. 18 h au lun. 8 h, jours fériés 0 h–24 h ; appelez avant de venir."
       },
       "quote": "Die Brandenburg-weite Notdienstnummer ist die 01805843736.",
       "note": "Stated on a participating practice's page; AniCura Potsdam's page also names 'Tierärztlicher Notdienstring Berlin-Brandenburg' 01805 84 37 36. LTK Brandenburg page on the new emergency model could not be fetched (2 tries).",
@@ -282,7 +287,8 @@
       "duty_i18n": {
         "sl": "Deželna številka, ki povezuje z najbližjo dežurno ordinacijo v Mecklenburg-Vorpommernu",
         "hr": "Broj za cijelu pokrajinu koji povezuje s najbližom dežurnom ambulantom u Mecklenburg-Vorpommernu.",
-        "de": "Landesweite Nummer, die zur nächstgelegenen diensthabenden Praxis in Mecklenburg-Vorpommern verbindet"
+        "de": "Landesweite Nummer, die zur nächstgelegenen diensthabenden Praxis in Mecklenburg-Vorpommern verbindet",
+        "fr": "Numéro régional unique qui met en relation avec le cabinet de garde le plus proche en Mecklembourg-Poméranie-Occidentale."
       },
       "note": "Stated on Tierklinik Rostock's emergency page; Tierarztpraxis Puvogel (Rügen) and Tierarztpraxis Maack (Usedom) also refer small-animal emergencies to 01805 84 37 36. No chamber page found.",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -302,7 +308,8 @@
       "duty_i18n": {
         "sl": "Osrednja številka povezuje z najbližjim dežurnim veterinarjem; nujni primer napovejte pred prihodom",
         "hr": "Središnji broj povezuje s najbližim dežurnim veterinarom; hitni slučaj najavi prije dolaska.",
-        "de": "Die zentrale Nummer verbindet mit der nächsten diensthabenden Tierarztpraxis; Notfall bitte vor der Ankunft telefonisch anmelden"
+        "de": "Die zentrale Nummer verbindet mit der nächsten diensthabenden Tierarztpraxis; Notfall bitte vor der Ankunft telefonisch anmelden",
+        "fr": "Numéro central qui met en relation avec le vétérinaire de garde le plus proche ; annoncez l’urgence avant de venir."
       },
       "quote": "Seit 2022 wird der 24-stündige tierärztliche Notdienst zentral von der Tierärztekammer Schleswig-Holstein organisiert.",
       "note": "Same number on Tiermedizin am Kurpark (heading '24-Stunden-Notdienst Schleswig-Holstein:'), Tierklinik Neustädter Bucht and fehmarn.de. Chamber's own Kleintiernotdienst page redirected to a login area and could not be read.",
@@ -320,7 +327,8 @@
       "duty_i18n": {
         "sl": "Spletno iskanje dežurnega veterinarja; ob delavnikih ponoči 18–8, od pet 18 do pon 8, ob praznikih ves dan; nujni primer dežurnemu veterinarju napovejte po telefonu",
         "hr": "Online pretraga dežurnog veterinara; radnim danima 18:00–08:00, pet 18:00 do pon 08:00, blagdanima cijeli dan; hitni slučaj najavi dežurnom veterinaru telefonom.",
-        "de": "Online-Suche nach der diensthabenden Tierarztpraxis; werktags 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr, feiertags ganztägig; Notfall bitte telefonisch bei der diensthabenden Praxis anmelden"
+        "de": "Online-Suche nach der diensthabenden Tierarztpraxis; werktags 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr, feiertags ganztägig; Notfall bitte telefonisch bei der diensthabenden Praxis anmelden",
+        "fr": "Recherche en ligne du vétérinaire de garde ; en semaine 18 h–8 h, du ven. 18 h au lun. 8 h, jours fériés toute la journée ; annoncez l’urgence par téléphone au vétérinaire de garde."
       },
       "quote": "Der Notfall ist dem diensthabenden Tierarzt/ der diensthabenden Tierärztin vorab telefonisch anzukündigen.",
       "note": "Tierärztekammer Sachsen-Anhalt flyer and homepage link to tieraerztliche-notdienste.de ('Notdienstsuche für Tierhalter in Sachsen-Anhalt'). No central phone.",
@@ -340,7 +348,8 @@
       "duty_i18n": {
         "sl": "Linija z dežurnimi veterinarji v Turingiji izven ordinacijskega časa",
         "hr": "Linija s popisom dežurnih veterinara u Tiringiji izvan radnog vremena ambulanta.",
-        "de": "Rufnummer für den tierärztlichen Notdienst in Thüringen außerhalb der Sprechzeiten"
+        "de": "Rufnummer für den tierärztlichen Notdienst in Thüringen außerhalb der Sprechzeiten",
+        "fr": "Ligne indiquant les vétérinaires de garde en Thuringe en dehors des heures d’ouverture."
       },
       "quote": "diensthabenden Tierärzte in Thüringen 24 h",
       "note": "Number as printed on Tierärztliche Klinik Erfurt's contact page. Thüringer Landtag answer (Drs. 'Tierärztlicher Notdienst in Thüringen erneut nachgefragt') describes regional Notdienstringe with central call handling at the Kassenärztliche Vereinigung Thüringen. Landestierärztekammer site (ltkt.de) could not be fetched.",
@@ -358,7 +367,8 @@
       "duty_i18n": {
         "sl": "Razpored nujne pomoči hannovrskih ordinacij; TiHo nekritične primere napoti sem, drugje pa na lokalne Ringnotdienste",
         "hr": "Raspored hitne službe hannoverskih ambulanti; TiHo upućuje nekritične slučajeve ovdje, a drugdje lokalnim Ringnotdienstima.",
-        "de": "Notdienstplan der Hannoveraner Praxen; die TiHo verweist nicht kritische Fälle hierher und andernorts an die örtlichen Ringnotdienste"
+        "de": "Notdienstplan der Hannoveraner Praxen; die TiHo verweist nicht kritische Fälle hierher und andernorts an die örtlichen Ringnotdienste",
+        "fr": "Tour de garde des cabinets de Hanovre ; la TiHo y oriente les cas non critiques, et ailleurs vers les services de garde locaux."
       },
       "note": "URL taken from TiHo's emergency page; the rota site itself redirected in a loop and could not be read. Langenhagen practice page names an answering machine for the Hannover emergency service: 0511 65 51 18 21.",
       "source_url": "https://www.tiho-hannover.de/kliniken-institute/kliniken/klinik-fuer-kleintiere/notdienst-information",
@@ -374,7 +384,8 @@
       "url": "https://kleintierpraxis-langenhagen.com/notdienstplan/",
       "duty": "Dated rota Jan 2026–Jan 2027: weekdays 07:00 to 07:00 next morning, weekends Sat 12:00 to Mon 07:00; call first",
       "duty_i18n": {
-        "de": "Notdienstplan nach Datum, Januar 2026–Januar 2027: werktags 07.00 Uhr bis 07.00 Uhr am Folgemorgen, am Wochenende Sa 12.00 Uhr bis Mo 07.00 Uhr; bitte vorher anrufen"
+        "de": "Notdienstplan nach Datum, Januar 2026–Januar 2027: werktags 07.00 Uhr bis 07.00 Uhr am Folgemorgen, am Wochenende Sa 12.00 Uhr bis Mo 07.00 Uhr; bitte vorher anrufen",
+        "fr": "Planning de garde janvier 2026–janvier 2027 : en semaine de 7 h à 7 h le lendemain, week-ends du sam. 12 h au lun. 7 h ; appelez d’abord."
       },
       "note": "Hosted by a participating practice. Moved from duty (2026-11-10): no guarantee of accuracy",
       "source_url": "https://kleintierpraxis-langenhagen.com/notdienstplan/",
@@ -390,7 +401,8 @@
       "url": "https://tierarztnotdienst-stadtol.de/",
       "duty": "Joint rota of Oldenburg city practices for nights, weekends and holidays; call the duty practice before going; no house visits",
       "duty_i18n": {
-        "de": "Gemeinsamer Notdienstplan der Oldenburger Stadtpraxen für Nächte, Wochenenden und Feiertage; vor dem Besuch die diensthabende Praxis anrufen; keine Hausbesuche"
+        "de": "Gemeinsamer Notdienstplan der Oldenburger Stadtpraxen für Nächte, Wochenenden und Feiertage; vor dem Besuch die diensthabende Praxis anrufen; keine Hausbesuche",
+        "fr": "Tour de garde commun des cabinets de la ville d’Oldenburg pour les nuits, week-ends et jours fériés ; appelez le cabinet de garde avant de vous déplacer ; pas de visites à domicile."
       },
       "note": "Life-threatening emergencies only; emergency fee 50 EUR + VAT. Moved from duty (2026-11-10): see 'Dienstplan'",
       "source_url": "https://tierarztnotdienst-stadtol.de/",
@@ -410,7 +422,8 @@
       "duty_i18n": {
         "sl": "Mobilna ordinacija za nujno pomoč za mesto Osnabrück in okoliške občine (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) ter Tecklenburger Land; potrebna telefonska prijava",
         "hr": "Mobilna hitna ambulanta za grad Osnabrück i okolne općine (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) i Tecklenburger Land; potrebna telefonska prijava.",
-        "de": "Mobile Notfallpraxis für die Stadt Osnabrück und umliegende Gemeinden (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) sowie das Tecklenburger Land; telefonische Anmeldung erforderlich"
+        "de": "Mobile Notfallpraxis für die Stadt Osnabrück und umliegende Gemeinden (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) sowie das Tecklenburger Land; telefonische Anmeldung erforderlich",
+        "fr": "Cabinet d’urgence mobile pour la ville d’Osnabrück et les communes voisines (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) ainsi que le Tecklenburger Land ; appel préalable requis."
       },
       "quote": "365 Tage im Jahr - 24 Stunden am Tag",
       "note": "Tecklenburger Land part lies in NRW. Operator not named on the page.",
@@ -428,7 +441,8 @@
       "duty_i18n": {
         "sl": "Landkreis Cuxhaven in Bremerhaven, dežurstvo 24 ur na dan; obrnite se na Notdienstgruppe svojega veterinarja (skupina 1: 04744 4563999; skupina 2: 09001 144244, plačljivo; skupina 3: spletni razpored; skupina 4: odzivnik vašega veterinarja). Brez obiskov na domu",
         "hr": "Landkreis Cuxhaven i Bremerhaven, dežurni non-stop; obrati se Notdienstgruppe svog veterinara (grupa 1: 04744 4563999; grupa 2: 09001 144244, naplaćuje se; grupa 3: online raspored; grupa 4: telefonska sekretarica vlastitog veterinara). Bez kućnih posjeta.",
-        "de": "Landkreis Cuxhaven und Bremerhaven, rund um die Uhr Bereitschaftsdienst; bitte die Notdienstgruppe der eigenen Tierarztpraxis kontaktieren (Gruppe 1: 04744 4563999; Gruppe 2: 09001 144244, kostenpflichtig; Gruppe 3: Notdienstplan online; Gruppe 4: Anrufbeantworter der eigenen Tierarztpraxis). Keine Hausbesuche"
+        "de": "Landkreis Cuxhaven und Bremerhaven, rund um die Uhr Bereitschaftsdienst; bitte die Notdienstgruppe der eigenen Tierarztpraxis kontaktieren (Gruppe 1: 04744 4563999; Gruppe 2: 09001 144244, kostenpflichtig; Gruppe 3: Notdienstplan online; Gruppe 4: Anrufbeantworter der eigenen Tierarztpraxis). Keine Hausbesuche",
+        "fr": "Landkreis Cuxhaven et Bremerhaven, garde 24 h/24 sur appel ; contactez le groupe de garde de votre propre vétérinaire (groupe 1 : 04744 4563999 ; groupe 2 : 09001 144244, payant ; groupe 3 : planning en ligne ; groupe 4 : répondeur de votre vétérinaire). Pas de visites à domicile."
       },
       "note": "Backup named on the page: Tierklinik Posthausen and Klinik für Kleintiere Sottrum. Bremerhaven belongs to the Land Bremen.",
       "source_url": "https://kleintiernotdienst-cuxland-bremerhaven.de/",
@@ -446,7 +460,8 @@
       "duty_i18n": {
         "sl": "Razpored dežurne ordinacije z datumi: ob delavnikih 20–8, od sobote ob 12 do ponedeljka ob 8, ob praznikih 8–8; vedno vnaprej pokličite",
         "hr": "Raspored dežurne ambulante s datumima: radnim danom 20:00–08:00, sub 12:00 do pon 08:00, blagdanima 08:00–08:00; uvijek nazovi unaprijed.",
-        "de": "Notdienstplan nach Datum der diensthabenden Praxis: werktags 20.00–08.00 Uhr, Sa 12.00 Uhr bis Mo 08.00 Uhr, feiertags 08.00–08.00 Uhr; bitte immer vorher anrufen"
+        "de": "Notdienstplan nach Datum der diensthabenden Praxis: werktags 20.00–08.00 Uhr, Sa 12.00 Uhr bis Mo 08.00 Uhr, feiertags 08.00–08.00 Uhr; bitte immer vorher anrufen",
+        "fr": "Planning daté du cabinet de garde : en semaine 20 h–8 h, du sam. 12 h au lun. 8 h, jours fériés 8 h–8 h ; téléphonez toujours au préalable."
       },
       "quote": "Melden Sie Ihren Besuch immer telefonisch an, die Praxen sind nicht dauerhaft besetzt.",
       "note": "Page also lists TiHo Hannover small-animal clinic (24 h) and Tierklinik Kaufungen (Hessen, 24 h) as fallbacks.",
@@ -468,7 +483,8 @@
       "duty_i18n": {
         "sl": "Kritični in akutno življenjsko nevarni primeri kadar koli; najprej triaža, nenujne primere lahko napotijo na Ringnotdienst",
         "hr": "Kritični i akutni slučajevi opasni po život u svako doba; prvo trijaža, nehitni slučajevi mogu se uputiti Ringnotdienstu.",
-        "de": "Kritische und akut lebensbedrohliche Notfälle jederzeit; zuerst Triage, nicht dringende Fälle werden ggf. an einen Ringnotdienst verwiesen"
+        "de": "Kritische und akut lebensbedrohliche Notfälle jederzeit; zuerst Triage, nicht dringende Fälle werden ggf. an einen Ringnotdienst verwiesen",
+        "fr": "Urgences critiques et mettant la vie en danger à toute heure ; tri préalable, les cas non urgents peuvent être orientés vers un service de garde local."
       },
       "quote": "Kritische und akut lebensbedrohliche Notfälle versorgen wir jederzeit – rund um die Uhr",
       "note": "University small-animal hospital. Phone from tiho-hannover.de/kontakt (Klinik für Kleintiere, Notdienst); exotic pets: Klinik für Heimtiere, Reptilien, Zier- und Wildvögel +49 511 953-6800 (hannover.de).",
@@ -488,7 +504,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri pon–pet 8–18, ob koncih tedna in praznikih 10–18; izven tega časa samo po telefonski prijavi (+49 160 37 58 447)",
         "hr": "Hitni slučajevi pon–pet 8–18, vikendom i blagdanima 10–18; izvan tog vremena samo nakon telefonske prijave (+49 160 37 58 447).",
-        "de": "Notfälle Mo–Fr 8–18 Uhr, Wochenende und feiertags 10–18 Uhr; außerhalb dieser Zeiten nur nach telefonischer Anmeldung (+49 160 37 58 447)"
+        "de": "Notfälle Mo–Fr 8–18 Uhr, Wochenende und feiertags 10–18 Uhr; außerhalb dieser Zeiten nur nach telefonischer Anmeldung (+49 160 37 58 447)",
+        "fr": "Urgences lun.–ven. 8 h–18 h, week-ends et jours fériés 10 h–18 h ; en dehors de ces horaires, uniquement après appel préalable (+49 160 37 58 447)."
       },
       "note": "University hospital; ended its 24-h small-animal emergency care 'bis auf Weiteres' in May 2022 (FU press release). 24-h service exists only for Berlin wildlife.",
       "source_url": "https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html",
@@ -579,7 +596,8 @@
       "duty_i18n": {
         "sl": "Mobilni nujni veterinarji, samo obiski na domu",
         "hr": "Mobilni hitni veterinari, samo kućni posjeti.",
-        "de": "Mobile Notdienst-Tierärzte, nur Hausbesuche"
+        "de": "Mobile Notdienst-Tierärzte, nur Hausbesuche",
+        "fr": "Vétérinaires d’urgence mobiles, visites à domicile uniquement."
       },
       "quote": "täglich 24 Stunden Hausbesuche",
       "note": "Listed on the Tierärztekammer Berlin emergency page; mobile service, no clinic.",
@@ -598,7 +616,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč vsak dan 9–24",
         "hr": "Hitna služba svaki dan 9–24.",
-        "de": "Notfallsprechstunde täglich 9–24 Uhr"
+        "de": "Notfallsprechstunde täglich 9–24 Uhr",
+        "fr": "Urgences tous les jours 9 h–24 h."
       },
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
       "checked": "2026-11-02",
@@ -618,7 +637,8 @@
       "duty": "Emergency ('Notdienst') phone; appointment consultations Mon–Fri 8–20, Sat 9–12.",
       "duty_i18n": {
         "hr": "Hitni telefon („Notdienst“); termini pon–pet 8–20, sub 9–12.",
-        "de": "Notdienst-Telefon; Terminsprechstunde Mo–Fr 8–20 Uhr, Sa 9–12 Uhr."
+        "de": "Notdienst-Telefon; Terminsprechstunde Mo–Fr 8–20 Uhr, Sa 9–12 Uhr.",
+        "fr": "Téléphone d’urgence (« Notdienst ») ; consultations sur rendez-vous lun.–ven. 8 h–20 h, sam. 9 h–12 h."
       },
       "quote": "24h Notdienst",
       "note": "Named as fallback by Tierärztekammer Bremen and the Cuxland/Bremerhaven rota. 24-h wording is the site banner only. Original: 'phone listed'.",
@@ -639,7 +659,8 @@
       "duty_i18n": {
         "sl": "Redni urnik pon–pet 8.30–20",
         "hr": "Redovno radno vrijeme pon–pet 8:30–20:00.",
-        "de": "Reguläre Sprechzeiten Mo–Fr 8.30–20.00 Uhr"
+        "de": "Reguläre Sprechzeiten Mo–Fr 8.30–20.00 Uhr",
+        "fr": "Horaires habituels lun.–ven. 8 h 30–20 h."
       },
       "quote": "24/7 NOTDIENST",
       "note": "About 25 km east of Bremen; named as fallback by Tierärztekammer Bremen. Site posted a temporary suspension of the night service on some dates – phone ahead.",
@@ -660,7 +681,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč vsak dan 24 ur na dan; pred prevozom pokličite",
         "hr": "Hitna služba svaki dan non-stop; nazovi prije prijevoza.",
-        "de": "Notdienst täglich rund um die Uhr; bitte vor der Anfahrt anrufen"
+        "de": "Notdienst täglich rund um die Uhr; bitte vor der Anfahrt anrufen",
+        "fr": "Urgences tous les jours, 24 h/24 ; appelez avant le transport."
       },
       "quote": "rund um die Uhr (24/7)",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -680,7 +702,8 @@
       "duty_i18n": {
         "sl": "Ob nujnem primeru pozvonite pri vhodu",
         "hr": "Za hitne slučajeve zvoni na ulazu.",
-        "de": "Bei Notfällen am Eingang klingeln"
+        "de": "Bei Notfällen am Eingang klingeln",
+        "fr": "Sonnez à l’entrée en cas d’urgence."
       },
       "quote": "24-Stunden-Notfall-Bereitschaft - 365 Tage im Jahr",
       "note": "Just north of Hamburg. Clinic now treats only on referral by the own vet or after pre-examination by the regional emergency service, except acutely life-threatening cases.",
@@ -701,7 +724,8 @@
       "duty_i18n": {
         "sl": "Pred prihodom pokličite",
         "hr": "Nazovi prije dolaska.",
-        "de": "Bitte vor dem Besuch anrufen"
+        "de": "Bitte vor dem Besuch anrufen",
+        "fr": "Appelez avant de venir."
       },
       "quote": "Unser Rundum-Notdienst gewährleistet zudem schnelle Hilfe auch im Notfall - 24 Stunden am Tag - 365 Tage im Jahr.",
       "note": "North-west of Hamburg.",
@@ -722,7 +746,8 @@
       "duty_i18n": {
         "sl": "Ob delavnikih naročanje 9–19; linija za nujne primere 24 ur na dan",
         "hr": "Radnim danom termini 9–19; hitna linija non-stop.",
-        "de": "Werktags Termine 9–19 Uhr; Notfalltelefon rund um die Uhr"
+        "de": "Werktags Termine 9–19 Uhr; Notfalltelefon rund um die Uhr",
+        "fr": "Rendez-vous en semaine 9 h–19 h ; ligne d’urgence 24 h/24."
       },
       "quote": "24 Stunden am Tag an 365 Tagen",
       "source_url": "https://www.tierklinik-lueneburg.de/",
@@ -742,7 +767,8 @@
       "duty_i18n": {
         "sl": "Notfallambulanz pon–pet 8–18; 24-urna nujna pomoč; preverite trenutno zasedenost",
         "hr": "Hitna ambulanta pon–pet 8–18; 24-satna hitna služba; provjeri trenutačne kapacitete.",
-        "de": "Notfallambulanz Mo–Fr 8–18 Uhr; 24-Stunden-Notdienst; aktuelle Auslastung bitte vorab erfragen"
+        "de": "Notfallambulanz Mo–Fr 8–18 Uhr; 24-Stunden-Notdienst; aktuelle Auslastung bitte vorab erfragen",
+        "fr": "Urgences lun.–ven. 8 h–18 h ; service d’urgence 24 h/24 ; vérifiez la capacité d’accueil actuelle."
       },
       "quote": "rund um die Uhr an 365 Tagen im Jahr",
       "note": "Page gives postcode 24637 in one place and 24647 in the footer. Posted occasional closures (no emergency service) – phone ahead.",
@@ -763,7 +789,8 @@
       "duty_i18n": {
         "sl": "24-urna nujna pomoč za akutno življenjsko nevarne primere pri malih hišnih ljubljenčkih; ponoči in ob koncih tedna ni odprta klinika brez naročila – vnaprej pokličite",
         "hr": "24-satna hitna služba za akutne slučajeve opasne po život kod malih životinja; noću i vikendom ne prima bez najave – nazovi unaprijed.",
-        "de": "24-Stunden-Notdienst für akut lebensbedrohliche Kleintierfälle; nachts und am Wochenende kein Betrieb ohne Voranmeldung – bitte vorher anrufen"
+        "de": "24-Stunden-Notdienst für akut lebensbedrohliche Kleintierfälle; nachts und am Wochenende kein Betrieb ohne Voranmeldung – bitte vorher anrufen",
+        "fr": "Urgences 24 h/24 pour les cas de petits animaux mettant la vie en danger ; pas de consultation libre la nuit et le week-end, appelez avant de venir."
       },
       "quote": "Für akut lebensbedrohlich erkrankte Kleintiere hält unsere Tierklinik einen 24stündigen Notdienst bereit.",
       "note": "Eastern edge of Leipzig.",
@@ -783,7 +810,8 @@
       "duty_i18n": {
         "sl": "Lastna številka za nujne primere 0431 668866; partnerska televeterinarska linija 24 ur na dan, 7 dni v tednu",
         "hr": "Vlastita hitna linija 0431 668866; partnerska tele-veterinarska linija oglašava se kao dostupna 24/7.",
-        "de": "Eigene Notfallnummer 0431 668866; Tele-Tierarzt-Hotline eines Partners, laut Anbieter rund um die Uhr erreichbar"
+        "de": "Eigene Notfallnummer 0431 668866; Tele-Tierarzt-Hotline eines Partners, laut Anbieter rund um die Uhr erreichbar",
+        "fr": "Ligne d’urgence propre 0431 668866 ; service partenaire de téléconsultation vétérinaire annoncé 24 h/24, 7 j/7."
       },
       "note": "'24H Tierarzthotline' refers to the partner hotline (Pfotendoctor), not the clinic, so not marked 24 h. Out of hours use the Schleswig-Holstein central number.",
       "source_url": "https://kielvet.de/notdienst/",
@@ -803,7 +831,8 @@
       "duty_i18n": {
         "sl": "Lastna nujna pomoč pon–pet 8–20, sob 12–18, ned/prazniki 9–18 (mobilna številka za nujne primere 0151 16906850, če se oglasi odzivnik); sicer osrednja številka SH 0481 85823998",
         "hr": "Vlastita hitna služba pon–pet 8–20, sub 12–18, ned/blagdani 9–18 (hitni mobitel 0151 16906850 ako se javi sekretarica); inače središnji broj SH 0481 85823998.",
-        "de": "Eigener Notdienst Mo–Fr 8–20 Uhr, Sa 12–18 Uhr, So/feiertags 9–18 Uhr (Notfallhandy 0151 16906850, falls der Anrufbeantworter läuft); ansonsten zentrale Nummer Schleswig-Holstein 0481 85823998"
+        "de": "Eigener Notdienst Mo–Fr 8–20 Uhr, Sa 12–18 Uhr, So/feiertags 9–18 Uhr (Notfallhandy 0151 16906850, falls der Anrufbeantworter läuft); ansonsten zentrale Nummer Schleswig-Holstein 0481 85823998",
+        "fr": "Service d’urgence propre lun.–ven. 8 h–20 h, sam. 12 h–18 h, dim./jours fériés 9 h–18 h (mobile urgences 0151 16906850 en cas de répondeur) ; sinon numéro central du Schleswig-Holstein 0481 85823998."
       },
       "source_url": "https://kleintierklinik-am-stadtpark.de/notdienst.html",
       "checked": "2026-11-02",
@@ -822,7 +851,8 @@
       "duty_i18n": {
         "sl": "Nujni posveti pon 20–21, tor/čet 20–22, sob 12–14; ob nedeljah/praznikih zaprto; sicer linija veterinarske zbornice Hamburg 040 434379",
         "hr": "Hitni pregledi pon 20–21, uto/čet 20–22, sub 12–14; ned/blagdanima zatvoreno; inače linija Tierärztekammer Hamburg 040 434379.",
-        "de": "Notfallsprechstunden Mo 20–21 Uhr, Di/Do 20–22 Uhr, Sa 12–14 Uhr; So/feiertags geschlossen; ansonsten Notdienst-Rufnummer der Tierärztekammer Hamburg 040 434379"
+        "de": "Notfallsprechstunden Mo 20–21 Uhr, Di/Do 20–22 Uhr, Sa 12–14 Uhr; So/feiertags geschlossen; ansonsten Notdienst-Rufnummer der Tierärztekammer Hamburg 040 434379",
+        "fr": "Consultations d’urgence lun. 20 h–21 h, mar./jeu. 20 h–22 h, sam. 12 h–14 h ; fermé dim./jours fériés ; sinon ligne de la Tierärztekammer Hamburg 040 434379."
       },
       "source_url": "https://www.tierarztfuhlsbuettel.de/notdienst-notfall/",
       "checked": "2026-11-02",
@@ -841,7 +871,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri pon–pet 8–12 in 16–19, sob 10–12, ned 10–11; nujna pomoč za življenjsko nevarne primere tudi ponoči in ob koncih tedna",
         "hr": "pon–pet 8–12 i 16–19, sub 10–12, ned 10–11 hitni slučajevi; hitna služba za slučajeve opasne po život i noću te vikendom.",
-        "de": "Notfälle Mo–Fr 8–12 und 16–19 Uhr, Sa 10–12 Uhr, So 10–11 Uhr; Notdienst für lebensbedrohliche Fälle auch nachts und am Wochenende"
+        "de": "Notfälle Mo–Fr 8–12 und 16–19 Uhr, Sa 10–12 Uhr, So 10–11 Uhr; Notdienst für lebensbedrohliche Fälle auch nachts und am Wochenende",
+        "fr": "Urgences : lun.–ven. 8 h–12 h et 16 h–19 h, sam. 10 h–12 h, dim. 10 h–11 h ; service d’urgence pour les cas mettant la vie en danger aussi la nuit et le week-end."
       },
       "quote": "Notdienst bei lebensbedrohlichen Notfällen auch nachts und an Wochenenden",
       "note": "Not stated as 24 h. Weekend/emergency surcharges, cash only.",
@@ -862,7 +893,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč po telefonski prijavi pon–pet 8–22, sob/ned/prazniki 10–16; sicer osrednja številka Saške 01805 84 37 36",
         "hr": "Hitna služba nakon telefonske prijave pon–pet 8–22, sub/ned/blagdani 10–16; inače središnji broj Saske 01805 84 37 36.",
-        "de": "Notdienst nach telefonischer Anmeldung Mo–Fr 8–22 Uhr, Sa/So/feiertags 10–16 Uhr; ansonsten zentrale Nummer Sachsen 01805 84 37 36"
+        "de": "Notdienst nach telefonischer Anmeldung Mo–Fr 8–22 Uhr, Sa/So/feiertags 10–16 Uhr; ansonsten zentrale Nummer Sachsen 01805 84 37 36",
+        "fr": "Urgences sur appel préalable lun.–ven. 8 h–22 h, sam./dim./jours fériés 10 h–16 h ; sinon numéro central de Sachsen 01805 84 37 36."
       },
       "note": "Dogs and cats.",
       "source_url": "https://avetia-dresden.de/",
@@ -882,7 +914,8 @@
       "duty_i18n": {
         "sl": "Življenjsko nevarni primeri neposredno ob delavnikih 7.30–19; ob drugih urah prek turinške dežurne linije 0361 644 788 08",
         "hr": "Slučajevi opasni po život izravno radnim danom 7:30–19:00; u ostalo vrijeme na tiringijskoj dežurnoj veterinarskoj liniji 0361 644 788 08.",
-        "de": "Lebensbedrohliche Notfälle werden werktags 7.30–19.00 Uhr direkt angenommen; zu anderen Zeiten über die Notdienst-Rufnummer Thüringen 0361 644 788 08"
+        "de": "Lebensbedrohliche Notfälle werden werktags 7.30–19.00 Uhr direkt angenommen; zu anderen Zeiten über die Notdienst-Rufnummer Thüringen 0361 644 788 08",
+        "fr": "Urgences vitales directement en semaine 7 h 30–19 h ; le reste du temps via la ligne des vétérinaires de garde de Thuringe 0361 644 788 08."
       },
       "source_url": "https://www.tierklinik-erfurt.de/kontakt",
       "checked": "2026-11-02",
@@ -901,7 +934,8 @@
       "duty_i18n": {
         "sl": "Od 19. 10. 2026 odprto pon–ned 8–20; izven tega časa Notdienstring Berlin-Brandenburg 01805 84 37 36; kirurške nujne primere napovejte po telefonu",
         "hr": "Od 19. 10. 2026. otvoreno pon–ned 8–20; izvan tog vremena Notdienstring Berlin-Brandenburg 01805 84 37 36; kirurške hitne slučajeve najavi telefonom.",
-        "de": "Ab 19.10.2026 geöffnet Mo–So 8–20 Uhr; außerhalb dieser Zeiten Notdienstring Berlin-Brandenburg 01805 84 37 36; chirurgische Notfälle bitte telefonisch ankündigen"
+        "de": "Ab 19.10.2026 geöffnet Mo–So 8–20 Uhr; außerhalb dieser Zeiten Notdienstring Berlin-Brandenburg 01805 84 37 36; chirurgische Notfälle bitte telefonisch ankündigen",
+        "fr": "Ouvert lun.–dim. 8 h–20 h à partir du 19 octobre 2026 ; en dehors de ces horaires, Notdienstring Berlin-Brandenburg 01805 84 37 36 ; annoncez par téléphone les urgences chirurgicales."
       },
       "note": "Former 24-h Tierklinik Potsdam site; page now states 8–20 only.",
       "source_url": "https://www.anicura.de/standorte/potsdam/infosundevents/notdienst/",
@@ -921,7 +955,8 @@
       "duty_i18n": {
         "sl": "Notdienst pon–pet 7–24, sob/ned/prazniki 11–13 in 19–21; prijava po telefonu",
         "hr": "Hitna služba pon–pet 7–24, sub/ned/blagdani 11–13 i 19–21; prijavi se telefonom.",
-        "de": "Notdienst Mo–Fr 7–24 Uhr, Sa/So/feiertags 11–13 und 19–21 Uhr; telefonische Anmeldung erforderlich"
+        "de": "Notdienst Mo–Fr 7–24 Uhr, Sa/So/feiertags 11–13 und 19–21 Uhr; telefonische Anmeldung erforderlich",
+        "fr": "Urgences lun.–ven. 7 h–24 h, sam./dim./jours fériés 11 h–13 h et 19 h–21 h ; annoncez-vous par téléphone."
       },
       "quote": "NOTDIENST: Mo-Fr 7-24 Uhr, Sa 11-13 und 19-21 Uhr, So 11-13 und 19-21 Uhr und an Feiertagen 11-13 und 19-21 Uhr.",
       "source_url": "https://www.tierklinik-tholen.de/",
@@ -941,7 +976,8 @@
       "duty_i18n": {
         "sl": "Pon/tor/čet 8–12 in 14–16, sre/pet 8–12; mobilna številka 0151 46341056",
         "hr": "pon/uto/čet 8–12 i 14–16, sri/pet 8–12; mobitel 0151 46341056.",
-        "de": "Mo/Di/Do 8–12 und 14–16 Uhr, Mi/Fr 8–12 Uhr; Handy 0151 46341056"
+        "de": "Mo/Di/Do 8–12 und 14–16 Uhr, Mi/Fr 8–12 Uhr; Handy 0151 46341056",
+        "fr": "Lun./mar./jeu. 8 h–12 h et 14 h–16 h, mer./ven. 8 h–12 h ; mobile 0151 46341056."
       },
       "note": "Small animals and pets ('Klein- und Heimtiere'). Island practice.",
       "source_url": "https://sylter-tierarztpraxis.de/",
@@ -975,7 +1011,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 9–12.30 po naročilu; popoldne in nujni primeri po dogovoru; telefon za nujne primere 0171 5254095",
         "hr": "pon–pet 9:00–12:30 po dogovoru; poslijepodne i hitni slučajevi po dogovoru; hitni telefon 0171 5254095.",
-        "de": "Mo–Fr 9.00–12.30 Uhr nach Terminvereinbarung; nachmittags und Notfälle nach Absprache; Notfalltelefon 0171 5254095"
+        "de": "Mo–Fr 9.00–12.30 Uhr nach Terminvereinbarung; nachmittags und Notfälle nach Absprache; Notfalltelefon 0171 5254095",
+        "fr": "Lun.–ven. 9 h–12 h 30 sur rendez-vous ; après-midi et urgences sur accord ; téléphone urgences 0171 5254095."
       },
       "quote": "in dringenden Fällen erreichen Sie uns über das Notfalltelefon unter 0171 / 5254095",
       "note": "East Frisian island; dogs, cats, small pets.",
@@ -996,7 +1033,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet, pet 9–11, čet tudi 16–18.30; sre, sob, ned zaprto",
         "hr": "pon, uto, čet, pet 9–11, čet i 16–18:30; sri, sub, ned zatvoreno.",
-        "de": "Mo, Di, Do, Fr 9–11 Uhr, Do auch 16–18.30 Uhr; Mi, Sa, So geschlossen"
+        "de": "Mo, Di, Do, Fr 9–11 Uhr, Do auch 16–18.30 Uhr; Mi, Sa, So geschlossen",
+        "fr": "Lun., mar., jeu., ven. 9 h–11 h, jeu. aussi 16 h–18 h 30 ; fermé mer., sam., dim."
       },
       "note": "East Frisian island branch of the Norderney practice.",
       "source_url": "https://www.tierarztpraxis-solaro.de/",
@@ -1016,7 +1054,8 @@
       "duty_i18n": {
         "sl": "Naročanje pon–pet 8.30–18, sob 9–13; nujna pomoč za male hišne ljubljenčke pon–pet 18–22 na 03838 23323; po 22. uri in ob koncih tedna 01805 84 37 36",
         "hr": "Termini pon–pet 8:30–18, sub 9–13; hitna služba za male životinje pon–pet 18–22 na 03838 23323; nakon 22:00 i vikendom 01805 84 37 36.",
-        "de": "Termine Mo–Fr 8.30–18 Uhr, Sa 9–13 Uhr; Kleintier-Notdienst Mo–Fr 18–22 Uhr unter 03838 23323; nach 22.00 Uhr und am Wochenende 01805 84 37 36"
+        "de": "Termine Mo–Fr 8.30–18 Uhr, Sa 9–13 Uhr; Kleintier-Notdienst Mo–Fr 18–22 Uhr unter 03838 23323; nach 22.00 Uhr und am Wochenende 01805 84 37 36",
+        "fr": "Rendez-vous lun.–ven. 8 h 30–18 h, sam. 9 h–13 h ; urgences petits animaux lun.–ven. 18 h–22 h au 03838 23323 ; après 22 h et le week-end 01805 84 37 36."
       },
       "note": "Second site in Schaprode (Streu 6, 18569 Schaprode, 038309 22836); 24-h readiness there is for horses and farm animals only.",
       "source_url": "https://www.tierarztpraxis-puvogel.de/",
@@ -1036,7 +1075,8 @@
       "duty_i18n": {
         "sl": "Zimski urnik (1. 10. 2026–28. 3. 2027): tor/čet 9–12 in 16–18, pet 16–18",
         "hr": "Zimsko radno vrijeme (1. 10. 2026.–28. 3. 2027.): uto/čet 9–12 i 16–18, pet 16–18",
-        "de": "Winterzeiten (01.10.2026–28.03.2027): Di/Do 9–12 und 16–18 Uhr, Fr 16–18 Uhr"
+        "de": "Winterzeiten (01.10.2026–28.03.2027): Di/Do 9–12 und 16–18 Uhr, Fr 16–18 Uhr",
+        "fr": "Horaires d’hiver (1er octobre 2026–28 mars 2027) : mar./jeu. 9 h–12 h et 16 h–18 h, ven. 16 h–18 h."
       },
       "quote": "Unser praxiseigener Notdienst ist ein zusätzlicher Service und nicht täglich oder rund um die Uhr verfügbar.",
       "note": "Dogs, cats, small pets. Company holiday Oct–6 Nov 2026 with only a few open days.",
@@ -1057,7 +1097,8 @@
       "duty_i18n": {
         "sl": "Naročanje pon–čet 8–12 (sre tudi 13–15), pet 8–10; nujni primeri pri malih hišnih ljubljenčkih prek 01805 84 37 36",
         "hr": "Termini pon–čet 8–12 (sri i 13–15), pet 8–10; hitni slučajevi za male životinje na 01805 84 37 36.",
-        "de": "Termine Mo–Do 8–12 Uhr (Mi auch 13–15 Uhr), Fr 8–10 Uhr; Kleintiernotfälle über 01805 84 37 36"
+        "de": "Termine Mo–Do 8–12 Uhr (Mi auch 13–15 Uhr), Fr 8–10 Uhr; Kleintiernotfälle über 01805 84 37 36",
+        "fr": "Rendez-vous lun.–jeu. 8 h–12 h (mer. aussi 13 h–15 h), ven. 8 h–10 h ; urgences petits animaux via le 01805 84 37 36."
       },
       "note": "Page currently shows the practice as closed and names a substitute in Heringsdorf (see next entry).",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1076,7 +1117,8 @@
       "duty_i18n": {
         "sl": "Odprte ordinacijske ure pon 10–12 in 16–18, tor 16–18, sre 10–12, čet 10–12 in 16–18, pet 10–12",
         "hr": "Pregledi bez naručivanja pon 10–12 i 16–18, uto 16–18, sri 10–12, čet 10–12 i 16–18, pet 10–12",
-        "de": "Offene Sprechstunde Mo 10–12 und 16–18 Uhr, Di 16–18 Uhr, Mi 10–12 Uhr, Do 10–12 und 16–18 Uhr, Fr 10–12 Uhr"
+        "de": "Offene Sprechstunde Mo 10–12 und 16–18 Uhr, Di 16–18 Uhr, Mi 10–12 Uhr, Do 10–12 und 16–18 Uhr, Fr 10–12 Uhr",
+        "fr": "Consultations libres lun. 10 h–12 h et 16 h–18 h, mar. 16 h–18 h, mer. 10 h–12 h, jeu. 10 h–12 h et 16 h–18 h, ven. 10 h–12 h."
       },
       "note": "Listed as substitute practice on Tierarztpraxis Maack's page; own website not found.",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1109,7 +1151,8 @@
       "duty_i18n": {
         "sl": "Velike živali in mali hišni ljubljenčki, rentgen, možni obiski na domu",
         "hr": "Velike i male životinje, rendgen, mogući kućni posjeti.",
-        "de": "Groß- und Kleintiere, Röntgen, Hausbesuche möglich"
+        "de": "Groß- und Kleintiere, Röntgen, Hausbesuche möglich",
+        "fr": "Grands et petits animaux, radiographie, visites à domicile possibles."
       },
       "quote": "24 Stunden Notdienst nach telefonischer Absprache",
       "note": "From the municipality of St. Peter-Ording's page; no phone or address given there (practice website not opened).",
@@ -1129,7 +1172,8 @@
       "duty_i18n": {
         "sl": "Ambulanta za male živali, naročanje pon/tor/čet/pet 9–13 in 15–18, sre 9–12; nujni primeri: 24-urna linija SH 0481 85823998",
         "hr": "Ambulanta za male životinje, termini pon/uto/čet/pet 9–13 i 15–18, sri 9–12; hitni slučajevi: 24-satna linija SH 0481 85823998.",
-        "de": "Kleintierpraxis, Termine Mo/Di/Do/Fr 9–13 und 15–18 Uhr, Mi 9–12 Uhr; Notfälle: 24-Stunden-Nummer Schleswig-Holstein 0481 85823998"
+        "de": "Kleintierpraxis, Termine Mo/Di/Do/Fr 9–13 und 15–18 Uhr, Mi 9–12 Uhr; Notfälle: 24-Stunden-Nummer Schleswig-Holstein 0481 85823998",
+        "fr": "Cabinet pour petits animaux, rendez-vous lun./mar./jeu./ven. 9 h–13 h et 15 h–18 h, mer. 9 h–12 h ; urgences : ligne 24 h/24 du Schleswig-Holstein 0481 85823998."
       },
       "source_url": "https://tiermedizin-kurpark.de/",
       "checked": "2026-11-02",
@@ -1148,7 +1192,8 @@
       "duty_i18n": {
         "sl": "Center za informacije o zastrupitvah za Niedersachsen, Bremen, Hamburg in Schleswig-Holstein; telefonsko svetovanje 24 ur na dan",
         "hr": "Centar za informacije o trovanjima za Niedersachsen, Bremen, Hamburg i Schleswig-Holstein; 24-satni telefonski savjet.",
-        "de": "Giftinformationszentrum für Niedersachsen, Bremen, Hamburg und Schleswig-Holstein; telefonische Beratung rund um die Uhr"
+        "de": "Giftinformationszentrum für Niedersachsen, Bremen, Hamburg und Schleswig-Holstein; telefonische Beratung rund um die Uhr",
+        "fr": "Centre antipoison pour la Basse-Saxe, Brême, Hambourg et le Schleswig-Holstein ; conseils téléphoniques 24 h/24."
       },
       "quote": "Besondere Erfahrungen bei der Beratung von Tiervergiftungen hat das GIZ Nord in Göttingen",
       "note": "Animal coverage per Deutsches Tierärzteblatt 3/2015 (BfR article): all eight German GIZ advise 'aber auch bei Tiervergiftungen', 'sieben Tage in der Woche rund um die Uhr'. Phone, 24-h wording ('täglich rund um die Uhr') and states served from UMG press release on the 2020 annual report. GIZ-Nord's own site could not be fetched (robots/client error).",
@@ -1182,7 +1227,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč ob delavnikih 18–8, od pet 18 do pon 8 in ob vseh praznikih; pridite neposredno, ekipa za nujne primere po telefonu ni dosegljiva. Samo psi in mačke; trenutno ne sprejemajo nujnih zobnih in očesnih primerov.",
         "hr": "Hitna služba radnim danom 18:00–08:00, pet 18:00 do pon 08:00 i tijekom svih blagdana; dolazi se izravno, hitni tim nije dostupan telefonom. Samo psi i mačke; trenutačno bez hitnih stomatoloških i očnih slučajeva.",
-        "de": "Notdienst werktags 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr und an allen Feiertagen; bitte direkt vorbeikommen, das Notdienstteam ist telefonisch nicht erreichbar. Nur Hunde und Katzen; derzeit keine Zahn- und Augennotfälle."
+        "de": "Notdienst werktags 18.00–08.00 Uhr, Fr 18.00 Uhr bis Mo 08.00 Uhr und an allen Feiertagen; bitte direkt vorbeikommen, das Notdienstteam ist telefonisch nicht erreichbar. Nur Hunde und Katzen; derzeit keine Zahn- und Augennotfälle.",
+        "fr": "Urgences en semaine 18 h–8 h, du ven. 18 h au lun. 8 h et tous les jours fériés ; présentez-vous directement, l’équipe d’urgence n’est pas joignable par téléphone. Chiens et chats uniquement ; actuellement pas d’urgences dentaires ni oculaires."
       },
       "small_animals": true,
       "url": "https://www.vetmed.lmu.de/kleintierklinik/de/fuer-tierhalterinnen-und-tierhalter/notfaelle/",
@@ -1203,7 +1249,8 @@
       "duty_i18n": {
         "sl": "Nujni in življenjsko nevarni primeri podnevi in ponoči; vnaprej pokličite. Linije izven delovnega časa: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
         "hr": "Hitni i životno ugrožavajući slučajevi u svako doba dana i noći; nazovi unaprijed. Hitne linije izvan radnog vremena: interna medicina +49 151 55027008, kirurgija +49 175 2973717.",
-        "de": "Dringende und lebensbedrohliche Notfälle zu jeder Tages- und Nachtzeit; bitte vorher anrufen. Notfallnummern außerhalb der Sprechzeiten: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717."
+        "de": "Dringende und lebensbedrohliche Notfälle zu jeder Tages- und Nachtzeit; bitte vorher anrufen. Notfallnummern außerhalb der Sprechzeiten: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
+        "fr": "Urgences graves et vitales à toute heure du jour et de la nuit ; appelez avant de venir. Lignes hors horaires : médecine interne +49 151 55027008, chirurgie +49 175 2973717."
       },
       "small_animals": true,
       "url": "https://www.uni-giessen.de/de/fbz/fb10/institute_klinikum/klinikum/kleintierklinik/Info/sprechstunde/notdienst",
@@ -1224,7 +1271,8 @@
       "duty_i18n": {
         "sl": "Notdienst od 20. ure pon–pet ter ves dan ob sobotah, nedeljah in praznikih; ista številka velja za 24-urno nujno pomoč.",
         "hr": "Hitna služba od 20:00 pon–pet te cijeli dan sub, ned i blagdanima; isti broj za 24-satnu hitnu službu.",
-        "de": "Notdienst Mo–Fr ab 20.00 Uhr sowie Sa, So und feiertags ganztägig; für den 24-Stunden-Notdienst gilt dieselbe Nummer."
+        "de": "Notdienst Mo–Fr ab 20.00 Uhr sowie Sa, So und feiertags ganztägig; für den 24-Stunden-Notdienst gilt dieselbe Nummer.",
+        "fr": "Urgences à partir de 20 h lun.–ven. et toute la journée sam., dim. et jours fériés ; même numéro pour le service d’urgence 24 h/24."
       },
       "small_animals": true,
       "url": "https://tierklinik-oberhaching.de/",
@@ -1245,7 +1293,8 @@
       "duty_i18n": {
         "sl": "24-urna dežurna ekipa in pripravljenost za operacije, tudi ob koncih tedna; redni urnik pon–pet 8–20 po naročilu.",
         "hr": "24-satna hitna služba i spremnost za operaciju, uključujući vikende; redovno radno vrijeme pon–pet 8–20 po dogovoru.",
-        "de": "24-Stunden-Notdienst mit Personal- und OP-Bereitschaft, auch am Wochenende; reguläre Sprechzeiten Mo–Fr 8–20 Uhr nach Terminvereinbarung."
+        "de": "24-Stunden-Notdienst mit Personal- und OP-Bereitschaft, auch am Wochenende; reguläre Sprechzeiten Mo–Fr 8–20 Uhr nach Terminvereinbarung.",
+        "fr": "Équipe d’urgence 24 h/24 et bloc opératoire opérationnel, week-ends compris ; horaires habituels lun.–ven. 8 h–20 h sur rendez-vous."
       },
       "small_animals": true,
       "url": "https://tierklinik-ismaning.de/",
@@ -1263,7 +1312,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency service for life-threatening emergencies; emergency hours every day 00–24",
       "duty_i18n": {
-        "de": "Notdienst rund um die Uhr für lebensbedrohliche Notfälle; Notdienstzeiten täglich 0–24 Uhr."
+        "de": "Notdienst rund um die Uhr für lebensbedrohliche Notfälle; Notdienstzeiten täglich 0–24 Uhr.",
+        "fr": "Urgences 24 h/24, 7 j/7 pour les cas mettant la vie en danger ; urgences tous les jours 0 h–24 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-haar/",
@@ -1283,7 +1333,8 @@
       "duty_i18n": {
         "sl": "Najprej pokličite",
         "hr": "Prvo nazovi.",
-        "de": "Bitte vorher anrufen"
+        "de": "Bitte vorher anrufen",
+        "fr": "Appelez d’abord."
       },
       "small_animals": true,
       "source_url": "https://www.kleintierklinik-lutz.vet/",
@@ -1305,7 +1356,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 365 dni v letu, 24 ur na dan; telefon samo v ordinacijskem času (7–19, ne ob koncih tedna). Pred prihodom preverite trenutno zasedenost klinike; primeri, ki niso življenjsko nevarni, lahko čakajo 4–6 ur.",
         "hr": "Hitna služba 365 dana, 24 h; telefon se javlja samo tijekom radnog vremena pregleda (7–19, ne vikendom). Prije dolaska provjeri trenutačnu popunjenost; slučajevi koji nisu opasni po život mogu čekati 4–6 h.",
-        "de": "Notdienst 24 Stunden an 365 Tagen im Jahr; telefonisch nur während der Sprechzeiten erreichbar (7–19 Uhr, nicht am Wochenende). Bitte vorab die aktuelle Auslastung der Klinik erfragen; nicht lebensbedrohliche Fälle müssen unter Umständen 4–6 Stunden warten."
+        "de": "Notdienst 24 Stunden an 365 Tagen im Jahr; telefonisch nur während der Sprechzeiten erreichbar (7–19 Uhr, nicht am Wochenende). Bitte vorab die aktuelle Auslastung der Klinik erfragen; nicht lebensbedrohliche Fälle müssen unter Umständen 4–6 Stunden warten.",
+        "fr": "Urgences 365 jours par an, 24 h/24 ; téléphone uniquement pendant les heures de consultation (7 h–19 h, pas le week-end). Vérifiez l’affluence avant de venir ; les cas non vitaux peuvent attendre 4 à 6 h."
       },
       "small_animals": true,
       "url": "https://www.vetzentrum-koeln.de/",
@@ -1326,7 +1378,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu; po možnosti vnaprej pokličite, v akutnih primerih pridite neposredno. Redni urnik: pon/sre/pet 7–21, tor/čet 7–19. Splošna številka +49 221 4745430.",
         "hr": "Hitna služba 24/7; po mogućnosti nazovi unaprijed, u akutnim slučajevima dođi izravno. Redovno: pon/sri/pet 7–21, uto/čet 7–19. Opća linija +49 221 4745430.",
-        "de": "Notdienst rund um die Uhr; wenn möglich vorher anrufen, in akuten Fällen direkt kommen. Reguläre Sprechzeiten: Mo/Mi/Fr 7–21 Uhr, Di/Do 7–19 Uhr. Allgemeine Rufnummer +49 221 4745430."
+        "de": "Notdienst rund um die Uhr; wenn möglich vorher anrufen, in akuten Fällen direkt kommen. Reguläre Sprechzeiten: Mo/Mi/Fr 7–21 Uhr, Di/Do 7–19 Uhr. Allgemeine Rufnummer +49 221 4745430.",
+        "fr": "Urgences 24 h/24, 7 j/7 ; appelez avant si possible, en cas d’urgence aiguë présentez-vous directement. Horaires habituels : lun./mer./ven. 7 h–21 h, mar./jeu. 7 h–19 h. Standard : +49 221 4745430."
       },
       "small_animals": true,
       "url": "https://koelner-tierklinik.de/",
@@ -1347,7 +1400,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu, za življenjsko nevarne primere; med nujno pomočjo na telefon NE odgovarjajo; bolnike razvrščajo po nujnosti. Naročanje po telefonu pon–pet 8–19.",
         "hr": "Hitna služba 24/7 za slučajeve opasne po život; telefon se NE javlja tijekom hitne službe; pacijenti se trijažiraju prema hitnosti. Termini telefonom pon–pet 8–19.",
-        "de": "Notdienst rund um die Uhr für lebensbedrohliche Notfälle; das Telefon ist während des Notdienstes NICHT besetzt; Behandlung der Patienten nach Dringlichkeit. Termine telefonisch Mo–Fr 8–19 Uhr."
+        "de": "Notdienst rund um die Uhr für lebensbedrohliche Notfälle; das Telefon ist während des Notdienstes NICHT besetzt; Behandlung der Patienten nach Dringlichkeit. Termine telefonisch Mo–Fr 8–19 Uhr.",
+        "fr": "Urgences 24 h/24, 7 j/7 pour les cas mettant la vie en danger ; le téléphone ne répond PAS pendant le service d’urgence ; patients triés selon l’urgence. Rendez-vous par téléphone lun.–ven. 8 h–19 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-neandertal/",
@@ -1366,7 +1420,8 @@
       "emergency_24h": true,
       "duty": "24-h emergency service; vet and veterinary nurse on site 365 days a year; emergency hours every day 00–24",
       "duty_i18n": {
-        "de": "24-Stunden-Notdienst; Tierarzt/Tierärztin und Tiermedizinische Fachangestellte 365 Tage im Jahr vor Ort; Notdienstzeiten täglich 00–24 Uhr."
+        "de": "24-Stunden-Notdienst; Tierarzt/Tierärztin und Tiermedizinische Fachangestellte 365 Tage im Jahr vor Ort; Notdienstzeiten täglich 00–24 Uhr.",
+        "fr": "Urgences 24 h/24 ; vétérinaire et auxiliaire sur place 365 jours par an ; urgences tous les jours 0 h–24 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierarztliche-klinik-vom-bokelberg/",
@@ -1387,7 +1442,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan; redni urnik pon–pet 8–18; izven delovnega časa se zaračuna doplačilo za nujno pomoč.",
         "hr": "Hitna služba non-stop; redovno radno vrijeme pon–pet 8–18; izvan radnog vremena doplatak za hitni slučaj.",
-        "de": "Notdienst rund um die Uhr; reguläre Sprechzeiten Mo–Fr 8–18 Uhr; außerhalb der Öffnungszeiten fallen Notdienstgebühren an."
+        "de": "Notdienst rund um die Uhr; reguläre Sprechzeiten Mo–Fr 8–18 Uhr; außerhalb der Öffnungszeiten fallen Notdienstgebühren an.",
+        "fr": "Urgences 24 h/24 ; horaires habituels lun.–ven. 8 h–18 h ; frais d’urgence en dehors des heures d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/recklinghausen-tieraerztliche-klinik-fuer-kleintiere/",
@@ -1407,7 +1463,8 @@
       "duty_i18n": {
         "sl": "24-urna nujna pomoč 365 dni v letu; od 27. 7. do 31. 10. omejeno (pon–čet 7–22, ob koncih tedna 24 ur). Redni pregledi po naročilu.",
         "hr": "24-satna hitna služba 365 dana; od 27. 7. do 31. 10. ograničeno (pon–čet 7–22, vikendom 24 h). Redovni pregledi po dogovoru.",
-        "de": "24-Stunden-Notdienst an 365 Tagen; vom 27.07. bis 31.10. eingeschränkt (Mo–Do 7–22 Uhr, am Wochenende rund um die Uhr). Reguläre Termine nach Vereinbarung."
+        "de": "24-Stunden-Notdienst an 365 Tagen; vom 27.07. bis 31.10. eingeschränkt (Mo–Do 7–22 Uhr, am Wochenende rund um die Uhr). Reguläre Termine nach Vereinbarung.",
+        "fr": "Urgences 24 h/24, 365 jours par an ; du 27 juillet au 31 octobre service réduit (lun.–jeu. 7 h–22 h, week-ends 24 h/24). Consultations habituelles sur rendez-vous."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierklinik-babenhausen/",
@@ -1428,7 +1485,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri kadar koli, pridite kar brez najave; med nujno pomočjo po telefonu niso dosegljivi. Redni urnik pon–pet 8–18.",
         "hr": "Hitni slučajevi u svako doba, dođi bez najave; tijekom hitne službe nije dostupna telefonom. Redovno pon–pet 8–18.",
-        "de": "Notfälle jederzeit, einfach vorbeikommen; während der Notdienstzeiten telefonisch nicht erreichbar. Reguläre Zeiten Mo–Fr 8–18 Uhr."
+        "de": "Notfälle jederzeit, einfach vorbeikommen; während der Notdienstzeiten telefonisch nicht erreichbar. Reguläre Zeiten Mo–Fr 8–18 Uhr.",
+        "fr": "Urgences à toute heure, sans rendez-vous ; non joignable par téléphone pendant les heures d’urgence. Horaires habituels lun.–ven. 8 h–18 h."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-hofheim.de/",
@@ -1448,7 +1506,8 @@
       "duty_i18n": {
         "sl": "24-urna nujna pomoč za življenjsko nevarne primere, 365 dni v letu; ordinacijske ure pon–pet 8–19.",
         "hr": "24-satna hitna služba za slučajeve opasne po život, 365 dana; radno vrijeme pon–pet 8–19.",
-        "de": "24-Stunden-Notdienst für lebensbedrohliche Notfälle, 365 Tage im Jahr; Bürozeiten Mo–Fr 8–19 Uhr."
+        "de": "24-Stunden-Notdienst für lebensbedrohliche Notfälle, 365 Tage im Jahr; Bürozeiten Mo–Fr 8–19 Uhr.",
+        "fr": "Urgences 24 h/24 pour les cas mettant la vie en danger, 365 jours par an ; secrétariat lun.–ven. 8 h–19 h."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-kalbach.de/",
@@ -1469,7 +1528,8 @@
       "duty_i18n": {
         "sl": "Najprej pokličite",
         "hr": "Prvo nazovi.",
-        "de": "Bitte vorher anrufen"
+        "de": "Bitte vorher anrufen",
+        "fr": "Appelez d’abord."
       },
       "small_animals": true,
       "source_url": "https://www.anicura.de/standorte/tierklinik-frankfurt/kontakt/",
@@ -1489,7 +1549,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 0–24",
         "hr": "Hitna služba 0–24.",
-        "de": "Notdienstzeiten 0–24 Uhr"
+        "de": "Notdienstzeiten 0–24 Uhr",
+        "fr": "Urgences 0 h–24 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-stuttgart/",
@@ -1510,7 +1571,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri 24 ur na dan, 365 dni v letu; ure nujne pomoči 0–24.",
         "hr": "Hitni slučajevi 24 h, 365 dana; hitna služba 00–24.",
-        "de": "Notfälle rund um die Uhr, 365 Tage im Jahr; Notdienstzeiten 00–24 Uhr."
+        "de": "Notfälle rund um die Uhr, 365 Tage im Jahr; Notdienstzeiten 00–24 Uhr.",
+        "fr": "Urgences 24 h/24, 365 jours par an ; urgences 0 h–24 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/ludwigsburg-ossweil/",
@@ -1530,7 +1592,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri 0–24, vse dni v tednu. Najbližja 24-urna klinika za območje Bodenskega jezera in Konstanza",
         "hr": "Hitni slučajevi 0–24, sedam dana u tjednu. Najbliža 24-satna klinika za područje Bodenskog jezera / Konstanza.",
-        "de": "Notfälle 0–24 Uhr, sieben Tage die Woche. Nächstgelegene 24-Stunden-Klinik für die Bodenseeregion und den Raum Konstanz"
+        "de": "Notfälle 0–24 Uhr, sieben Tage die Woche. Nächstgelegene 24-Stunden-Klinik für die Bodenseeregion und den Raum Konstanz",
+        "fr": "Urgences 0 h–24 h, 7 j/7. Clinique ouverte 24 h/24 la plus proche pour la région du lac de Constance / Konstanz."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/en/our-clinics/kleintierspezialisten-ravensburg/",
@@ -1550,7 +1613,8 @@
       "duty": "24-h emergency service; Saarland's out-of-hours emergency clinic outside the weekend central-number hours. Phone and e-mail Mon-Fri.",
       "duty_i18n": {
         "hr": "24-satna hitna služba; hitna klinika Saarlanda izvan vremena rada središnjeg broja vikendom. Telefon i e-pošta pon–pet.",
-        "de": "24-Stunden-Notdienst; Notfallklinik des Saarlandes außerhalb der Zeiten der zentralen Wochenend-Notdienstnummer. Telefon und E-Mail Mo–Fr."
+        "de": "24-Stunden-Notdienst; Notfallklinik des Saarlandes außerhalb der Zeiten der zentralen Wochenend-Notdienstnummer. Telefon und E-Mail Mo–Fr.",
+        "fr": "Urgences 24 h/24 ; clinique d’urgence de la Sarre en dehors des horaires du numéro central du week-end. Téléphone et e-mail lun.–ven."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-elversberg.de/",
@@ -1571,7 +1635,8 @@
       "duty_i18n": {
         "sl": "Dežurstvo za nujne primere, vendar zaradi pomanjkanja osebja klinika ne more več pokrivati vseh nočnih in nujnih dežurstev; glejte notdienst-rheinland-pfalz.de; pred prihodom pokličite",
         "hr": "Dežura za hitne slučajeve, no zbog nedostatka osoblja klinika više ne može pokriti sve noćne i hitne službe; vidi notdienst-rheinland-pfalz.de; nazovi prije dolaska.",
-        "de": "Notdienstbereitschaft, wegen Personalmangels kann die Klinik jedoch nicht mehr alle Nacht- und Notdienste abdecken; siehe notdienst-rheinland-pfalz.de; bitte vor dem Besuch anrufen"
+        "de": "Notdienstbereitschaft, wegen Personalmangels kann die Klinik jedoch nicht mehr alle Nacht- und Notdienste abdecken; siehe notdienst-rheinland-pfalz.de; bitte vor dem Besuch anrufen",
+        "fr": "De garde pour les urgences, mais faute de personnel la clinique ne peut plus assurer toutes les gardes de nuit et d’urgence ; voir notdienst-rheinland-pfalz.de ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-trier.de/",
@@ -1592,7 +1657,8 @@
       "duty_i18n": {
         "sl": "24-urna nujna pomoč samo od pon 19.30 do pet 8; ob koncih tedna nujni posveti ob plačilu nujne pristojbine (59,50 €) – potrdite po telefonu.",
         "hr": "24-satna hitna služba samo od pon 19:30 do pet 08:00; vikendom hitni pregledi uz doplatak za hitni slučaj (59,50 EUR) – potvrdi telefonom.",
-        "de": "24-Stunden-Notdienst nur von Mo 19.30 Uhr bis Fr 08.00 Uhr; am Wochenende Notfallsprechstunden gegen Notdienstgebühr (59,50 EUR) – bitte telefonisch bestätigen."
+        "de": "24-Stunden-Notdienst nur von Mo 19.30 Uhr bis Fr 08.00 Uhr; am Wochenende Notfallsprechstunden gegen Notdienstgebühr (59,50 EUR) – bitte telefonisch bestätigen.",
+        "fr": "Urgences 24 h/24 uniquement du lun. 19 h 30 au ven. 8 h ; le week-end, consultations d’urgence moyennant des frais d’urgence (59.50 EUR) — à confirmer par téléphone."
       },
       "small_animals": true,
       "url": "https://tierklinik-zw.de/",
@@ -1613,7 +1679,8 @@
       "duty_i18n": {
         "sl": "Ure za nujne primere („Notfall“) 8–20.",
         "hr": "Hitno („Notfall“) radno vrijeme 08:00–20:00.",
-        "de": "Notfallsprechstunde 08.00–20.00 Uhr."
+        "de": "Notfallsprechstunde 08.00–20.00 Uhr.",
+        "fr": "Heures d’urgence (« Notfall ») 8 h–20 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/anicura-kassel/",
@@ -1632,7 +1699,8 @@
       "duty_i18n": {
         "sl": "Pripravljenost ponoči in ob koncih tedna za hudo bolne hišne ljubljenčke in nujne primere; za dogovor o obisku pokličite linijo za nujne primere. Splošna številka +49 821 4559000.",
         "hr": "Noću i vikendom pripravnost za teško bolesne životinje i hitne slučajeve; nazovi hitnu liniju radi dogovora o posjetu. Opća linija +49 821 4559000.",
-        "de": "Bereitschaft nachts und am Wochenende für schwer kranke Haustiere und dringende Notfälle; Termin über die Notfallnummer vereinbaren. Allgemeine Rufnummer +49 821 4559000."
+        "de": "Bereitschaft nachts und am Wochenende für schwer kranke Haustiere und dringende Notfälle; Termin über die Notfallnummer vereinbaren. Allgemeine Rufnummer +49 821 4559000.",
+        "fr": "Permanence la nuit et le week-end pour les animaux gravement malades et les urgences ; appelez la ligne d’urgence pour convenir d’une visite. Standard : +49 821 4559000."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-augsburg/",
@@ -1653,7 +1721,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč vsak dan 8–24. Pokriva območje Chiemsee / doline Inn.",
         "hr": "Hitna služba svaki dan 8:00–24:00. Pokriva područje Chiemseea / doline Inna.",
-        "de": "Notdienst täglich 8.00–24.00 Uhr. Für die Region Chiemsee und Inntal."
+        "de": "Notdienst täglich 8.00–24.00 Uhr. Für die Region Chiemsee und Inntal.",
+        "fr": "Urgences tous les jours 8 h–24 h. Couvre la région du Chiemsee / vallée de l’Inn."
       },
       "small_animals": true,
       "url": "https://tierklinik-rosenheim.de/",
@@ -1673,7 +1742,8 @@
       "duty_i18n": {
         "sl": "Ure za nujne primere sob 15–18.30, ned 10–16; pon–čet 20–8 prek +49 931 69017; ob praznikih/koncih tedna izven teh ur prek +49 180 5009682.",
         "hr": "Hitna služba sub 15:00–18:30, ned 10:00–16:00; pon–čet 20:00–08:00 na +49 931 69017; vikendom/blagdanima izvan tog vremena na +49 180 5009682.",
-        "de": "Notfallsprechstunden Sa 15.00–18.30 Uhr, So 10.00–16.00 Uhr; Mo–Do 20.00–08.00 Uhr unter +49 931 69017; feiertags/am Wochenende außerhalb dieser Zeiten unter +49 180 5009682."
+        "de": "Notfallsprechstunden Sa 15.00–18.30 Uhr, So 10.00–16.00 Uhr; Mo–Do 20.00–08.00 Uhr unter +49 931 69017; feiertags/am Wochenende außerhalb dieser Zeiten unter +49 180 5009682.",
+        "fr": "Urgences sam. 15 h–18 h 30, dim. 10 h–16 h ; lun.–jeu. 20 h–8 h au +49 931 69017 ; jours fériés/week-ends en dehors de ces horaires au +49 180 5009682."
       },
       "small_animals": true,
       "url": "https://ktz-mainfranken.de/",
@@ -1692,7 +1762,8 @@
       "duty_i18n": {
         "sl": "Nujne primere sprejmejo brez naročila med ordinacijskim časom.",
         "hr": "Hitni slučajevi primaju se bez najave tijekom radnog vremena.",
-        "de": "Notfälle werden während der Sprechzeiten ohne Termin behandelt."
+        "de": "Notfälle werden während der Sprechzeiten ohne Termin behandelt.",
+        "fr": "Urgences reçues sans rendez-vous pendant les heures de consultation."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-kempten/",
@@ -1712,7 +1783,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri: pokličite med delovnim časom; izven njega uporabite spletni zemljevid nujne pomoči",
         "hr": "Hitni slučajevi: nazovi tijekom radnog vremena; izvan njega koristi online kartu hitne službe.",
-        "de": "Notfälle: während der Öffnungszeiten anrufen; außerhalb davon die Online-Notfallkarte nutzen"
+        "de": "Notfälle: während der Öffnungszeiten anrufen; außerhalb davon die Online-Notfallkarte nutzen",
+        "fr": "Urgences : appelez pendant les heures d’ouverture ; en dehors, utilisez la carte en ligne des urgences."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-garmisch.com/",
@@ -1732,7 +1804,8 @@
       "duty_i18n": {
         "sl": "Osredotočenost na male hišne ljubljenčke; pon–pet 8–12, pon/čet/pet tudi 16–18. Nujne primere med delovnim časom obravnavajo prednostno – vnaprej pokličite. Izven delovnega časa ordinacija ni kontaktna točka za nujno pomoč.",
         "hr": "Prvenstveno male životinje; pon–pet 8–12, pon/čet/pet i 16–18. Hitni slučajevi tijekom radnog vremena zbrinjavaju se prioritetno – nazovi unaprijed. Izvan radnog vremena ambulanta nije kontakt za hitne slučajeve.",
-        "de": "Schwerpunkt Kleintiere; Mo–Fr 8–12 Uhr, Mo/Do/Fr auch 16–18 Uhr. Notfälle werden während der Öffnungszeiten vorrangig behandelt – bitte vorher anrufen. Außerhalb der Öffnungszeiten ist die Praxis nicht die Notfallanlaufstelle."
+        "de": "Schwerpunkt Kleintiere; Mo–Fr 8–12 Uhr, Mo/Do/Fr auch 16–18 Uhr. Notfälle werden während der Öffnungszeiten vorrangig behandelt – bitte vorher anrufen. Außerhalb der Öffnungszeiten ist die Praxis nicht die Notfallanlaufstelle.",
+        "fr": "Surtout petits animaux ; lun.–ven. 8 h–12 h, lun./jeu./ven. aussi 16 h–18 h. Urgences prises en charge en priorité pendant les heures d’ouverture, téléphonez avant. Hors horaires, le cabinet n’est pas le contact d’urgence."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-werdenfels.de/",
@@ -1751,7 +1824,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–13 in 14.30–18 po naročilu; izven delovnega časa ter ob nedeljah/praznikih je nujna pomoč dosegljiva prek številke ordinacije.",
         "hr": "pon–pet 8–13 i 14:30–18 po dogovoru; izvan radnog vremena te nedjeljom/blagdanima hitna služba dostupna na broju ambulante.",
-        "de": "Mo–Fr 8–13 und 14.30–18 Uhr nach Terminvereinbarung; außerhalb der Sprechzeiten sowie an Sonn- und Feiertagen ist ein Notdienst über die Praxisnummer erreichbar."
+        "de": "Mo–Fr 8–13 und 14.30–18 Uhr nach Terminvereinbarung; außerhalb der Sprechzeiten sowie an Sonn- und Feiertagen ist ein Notdienst über die Praxisnummer erreichbar.",
+        "fr": "Lun.–ven. 8 h–13 h et 14 h 30–18 h sur rendez-vous ; hors horaires, dimanches et jours fériés, un service d’urgence est joignable via le numéro du cabinet."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-thiele.de/",
@@ -1771,7 +1845,8 @@
       "duty_i18n": {
         "sl": "Male živali in hišni ljubljenčki; pon–pet 9–13, pon/tor/čet/pet 15–18; ambulantna in bolnišnična nujna obravnava.",
         "hr": "Male životinje i ljubimci; pon–pet 9–13, pon/uto/čet/pet 15–18; ambulantno i stacionarno hitno liječenje.",
-        "de": "Klein- und Heimtiere; Mo–Fr 9–13 Uhr, Mo/Di/Do/Fr 15–18 Uhr; ambulante und stationäre Notfallbehandlung."
+        "de": "Klein- und Heimtiere; Mo–Fr 9–13 Uhr, Mo/Di/Do/Fr 15–18 Uhr; ambulante und stationäre Notfallbehandlung.",
+        "fr": "Petits animaux et NAC ; lun.–ven. 9 h–13 h, lun./mar./jeu./ven. 15 h–18 h ; soins d’urgence en ambulatoire et avec hospitalisation."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-konstanz.de/",
@@ -1791,7 +1866,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri vsak dan 7–22, 365 dni v letu; izven tega časa linija za nujne primere okrožja Karlsruhe +49 721 495566.",
         "hr": "Hitni slučajevi svaki dan 7:00–22:00, 365 dana; izvan tog vremena hitna linija okruga Karlsruhe +49 721 495566.",
-        "de": "Notfälle täglich 7.00–22.00 Uhr, 365 Tage im Jahr; außerhalb dieser Zeiten Notdienst-Rufnummer des Landkreises Karlsruhe +49 721 495566."
+        "de": "Notfälle täglich 7.00–22.00 Uhr, 365 Tage im Jahr; außerhalb dieser Zeiten Notdienst-Rufnummer des Landkreises Karlsruhe +49 721 495566.",
+        "fr": "Urgences tous les jours 7 h–22 h, 365 jours par an ; en dehors de ces horaires, ligne d’urgence du district de Karlsruhe +49 721 495566."
       },
       "small_animals": true,
       "url": "https://tierarzt-karlsruhe-durlach.de/en/",
@@ -1809,7 +1885,8 @@
       "duty_i18n": {
         "sl": "Osrednje številke ni: obrnite se na svojega veterinarja ali na navedene 24-urne klinike (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
         "hr": "Nema središnjeg broja: obrati se svom veterinaru ili navedenim 24-satnim klinikama (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
-        "de": "Keine zentrale Nummer: die eigene Tierarztpraxis kontaktieren oder die aufgeführten 24-Stunden-Kliniken (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22 Uhr)."
+        "de": "Keine zentrale Nummer: die eigene Tierarztpraxis kontaktieren oder die aufgeführten 24-Stunden-Kliniken (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22 Uhr).",
+        "fr": "Pas de numéro central : contactez votre vétérinaire ou les cliniques ouvertes 24 h/24 listées (Riem, Haar, Ismaning, Oberhaching, LMU ; Germering 8 h–22 h)."
       },
       "small_animals": true,
       "url": "https://www.tbv-oberbayern.de/notdienst/muenchen-und-landkreis-muenchen",
@@ -1827,7 +1904,8 @@
       "duty_i18n": {
         "sl": "Spletno iskanje dežurne ordinacije po kraju in polmeru; samo ob koncih tedna in praznikih. Ob delavnikih pokličite najbližjo kliniko. Dežurnega veterinarja najprej pokličite.",
         "hr": "Online pretraga dežurne ambulante prema mjestu i radijusu; samo vikendom i blagdanima. Radnim danom nazovi najbližu kliniku. Prvo nazovi dežurnog veterinara.",
-        "de": "Online-Suche der diensthabenden Praxis nach Ort und Umkreis; nur an Wochenenden und Feiertagen. Werktags die nächstgelegene Klinik anrufen. Die diensthabende Praxis bitte vorher anrufen."
+        "de": "Online-Suche der diensthabenden Praxis nach Ort und Umkreis; nur an Wochenenden und Feiertagen. Werktags die nächstgelegene Klinik anrufen. Die diensthabende Praxis bitte vorher anrufen.",
+        "fr": "Recherche en ligne du cabinet de garde par lieu et rayon ; uniquement les week-ends et jours fériés. En semaine, appelez la clinique la plus proche. Téléphonez d’abord au vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://tierarztnotdienst-mittelfranken.de/",
@@ -1847,7 +1925,8 @@
       "duty_i18n": {
         "sl": "Osrednja številka za nujne primere v Stuttgartu; po telefonu vprašajte, kdo je dežuren. Tudi www.tierärzte-stuttgart.de.",
         "hr": "Središnji hitni broj za Stuttgart; telefonom saznaj tko je dežuran. Vidi i www.tierärzte-stuttgart.de.",
-        "de": "Zentrale Notdienstnummer für Stuttgart; telefonisch erfragen, wer Dienst hat. Auch unter www.tierärzte-stuttgart.de."
+        "de": "Zentrale Notdienstnummer für Stuttgart; telefonisch erfragen, wer Dienst hat. Auch unter www.tierärzte-stuttgart.de.",
+        "fr": "Numéro d’urgence central pour Stuttgart ; demandez par téléphone qui est de garde. Voir aussi www.tierärzte-stuttgart.de."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/stuttgart",
@@ -1866,7 +1945,8 @@
       "duty_i18n": {
         "sl": "Osrednja številka Notdienstringa, dosegljiva do 22. ure; odzivnik sporoči dežurno ordinacijo.",
         "hr": "Središnji broj Notdienstringa, dostupan do 22:00; sekretarica navodi dežurnu ambulantu.",
-        "de": "Zentrale Nummer des Notdienstrings, bis 22.00 Uhr erreichbar; der Anrufbeantworter nennt die diensthabende Praxis."
+        "de": "Zentrale Nummer des Notdienstrings, bis 22.00 Uhr erreichbar; der Anrufbeantworter nennt die diensthabende Praxis.",
+        "fr": "Numéro central du Notdienstring, joignable jusqu’à 22 h ; le répondeur indique le cabinet de garde."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/mannheim",
@@ -1884,7 +1964,8 @@
       "duty_i18n": {
         "sl": "Ob koncih tedna in praznikih vas 24 ur na dan povežejo z dežurno ordinacijo za male hišne ljubljenčke; ob drugih urah posnetek navede dežurne klinike. Številka s posebno tarifo, 2,99 €/min.",
         "hr": "Vikendom i blagdanima non-stop povezuju te s dežurnom ambulantom za male životinje; u ostalo vrijeme snimka navodi dežurne klinike. Linija s posebnom tarifom, 2,99 EUR/min.",
-        "de": "Am Wochenende und an Feiertagen rund um die Uhr Verbindung zu einer diensthabenden Kleintierpraxis; zu anderen Zeiten nennt eine Ansage die diensthabenden Kliniken. Kostenpflichtige Nummer, 2,99 EUR/Min."
+        "de": "Am Wochenende und an Feiertagen rund um die Uhr Verbindung zu einer diensthabenden Kleintierpraxis; zu anderen Zeiten nennt eine Ansage die diensthabenden Kliniken. Kostenpflichtige Nummer, 2,99 EUR/Min.",
+        "fr": "Week-ends et jours fériés 24 h/24, vous êtes mis en relation avec un cabinet de garde pour petits animaux ; le reste du temps, un message enregistré indique les cliniques de garde. Numéro surtaxé, 2.99 EUR/min."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/heidelberg",
@@ -1904,7 +1985,8 @@
       "duty_i18n": {
         "sl": "Izmenična nujna pomoč veterinarjev iz Ulma in Neu-Ulma, številka dosegljiva vsak dan do 23. ure.",
         "hr": "Hitna služba veterinara iz Ulma i Neu-Ulma po turnusu, broj dostupan svaki dan do 23:00.",
-        "de": "Notdienstring der Tierärzte aus Ulm und Neu-Ulm im Wechsel, Nummer täglich bis 23.00 Uhr erreichbar."
+        "de": "Notdienstring der Tierärzte aus Ulm und Neu-Ulm im Wechsel, Nummer täglich bis 23.00 Uhr erreichbar.",
+        "fr": "Service d’urgence tournant des vétérinaires d’Ulm et Neu-Ulm, numéro joignable tous les jours jusqu’à 23 h."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/alb-donau-kreis",
@@ -1923,7 +2005,8 @@
       "duty_i18n": {
         "sl": "Posnetek sporoči dežurnega veterinarja; številka na voljo 24 ur na dan, 365 dni v letu",
         "hr": "Snimljena poruka navodi dežurnog veterinara; broj dostupan 24 h / 365 dana.",
-        "de": "Eine Ansage nennt den diensthabenden Tierarzt; Nummer rund um die Uhr, 365 Tage im Jahr erreichbar"
+        "de": "Eine Ansage nennt den diensthabenden Tierarzt; Nummer rund um die Uhr, 365 Tage im Jahr erreichbar",
+        "fr": "Un message enregistré indique le vétérinaire de garde ; numéro disponible 24 h/24, 365 jours par an."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-karlsruhe.de/",
@@ -1943,7 +2026,8 @@
       "duty_i18n": {
         "sl": "Regionalni krog nujne pomoči; dežurnega veterinarja vnaprej pokličite.",
         "hr": "Regionalni Notdienstring; unaprijed nazovi dežurnog veterinara.",
-        "de": "Regionaler Notdienstring; den diensthabenden Tierarzt bitte vorher anrufen."
+        "de": "Regionaler Notdienstring; den diensthabenden Tierarzt bitte vorher anrufen.",
+        "fr": "Numéro régional d’urgence ; téléphonez d’abord au vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://koelner-tieraerztenotdienst.de/",
@@ -1962,7 +2046,8 @@
       "duty_i18n": {
         "sl": "Številka regionalnega kroga nujne pomoči; vnaprej pokličite.",
         "hr": "Broj regionalnog Notdienstringa; nazovi unaprijed.",
-        "de": "Regionale Notdienstnummer; bitte vorher anrufen."
+        "de": "Regionale Notdienstnummer; bitte vorher anrufen.",
+        "fr": "Numéro régional d’urgence ; appelez avant de venir."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -1980,7 +2065,8 @@
       "duty_i18n": {
         "sl": "Številka regionalnega kroga nujne pomoči; vnaprej pokličite.",
         "hr": "Broj regionalnog Notdienstringa; nazovi unaprijed.",
-        "de": "Regionale Notdienstnummer; bitte vorher anrufen."
+        "de": "Regionale Notdienstnummer; bitte vorher anrufen.",
+        "fr": "Numéro régional d’urgence ; appelez avant de venir."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -1998,7 +2084,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 18–22, ob koncih tedna in praznikih 10–22; 20 centov na klic",
         "hr": "pon–pet 18–22, vikendom i blagdanima 10–22; 20 centi po pozivu.",
-        "de": "Mo–Fr 18–22 Uhr, Wochenende und feiertags 10–22 Uhr; 20 Cent pro Anruf"
+        "de": "Mo–Fr 18–22 Uhr, Wochenende und feiertags 10–22 Uhr; 20 Cent pro Anruf",
+        "fr": "Lun.–ven. 18 h–22 h, week-ends et jours fériés 10 h–22 h ; 20 centimes par appel."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2015,7 +2102,8 @@
       "duty_i18n": {
         "sl": "Sre in pet od 12 do 8 naslednje jutro; sob, ned in prazniki 8–8; pon/tor/čet vaš veterinar. Vedno najprej pokličite. Samo za bolnike članic ordinacij.",
         "hr": "sri i pet 12:00 do 08:00 sljedećeg jutra; sub, ned i blagdani 08:00–08:00; pon/uto/čet obrati se svom veterinaru. Uvijek prvo nazovi. Samo za pacijente ambulanti članica.",
-        "de": "Mi und Fr 12.00 Uhr bis 08.00 Uhr am Folgemorgen; Sa, So und feiertags 08.00–08.00 Uhr; Mo/Di/Do die eigene Tierarztpraxis. Immer zuerst anrufen. Nur für Patienten der Mitgliedspraxen."
+        "de": "Mi und Fr 12.00 Uhr bis 08.00 Uhr am Folgemorgen; Sa, So und feiertags 08.00–08.00 Uhr; Mo/Di/Do die eigene Tierarztpraxis. Immer zuerst anrufen. Nur für Patienten der Mitgliedspraxen.",
+        "fr": "Mer. et ven. 12 h–8 h le lendemain matin ; sam., dim. et jours fériés 8 h–8 h ; lun./mar./jeu., votre propre vétérinaire. Appelez toujours avant de venir. Uniquement pour les patients des cabinets membres."
       },
       "small_animals": true,
       "url": "https://www.bonner-tieraerzte.de/",
@@ -2033,7 +2121,8 @@
       "duty_i18n": {
         "sl": "Regionalna stran z dežurno nujno pomočjo",
         "hr": "Stranica regionalne hitne službe.",
-        "de": "Seite zum regionalen Notdienst"
+        "de": "Seite zum regionalen Notdienst",
+        "fr": "Page du service de garde régional."
       },
       "small_animals": true,
       "url": "http://www.tierärzte-duisburg-mülheim.de/de/notdienst",
@@ -2051,7 +2140,8 @@
       "duty_i18n": {
         "sl": "Spletna stran nujne pomoči Kreisstelle Dortmund.",
         "hr": "Stranica hitne službe Kreisstelle Dortmund.",
-        "de": "Notdienst-Seite der Kreisstelle Dortmund."
+        "de": "Notdienst-Seite der Kreisstelle Dortmund.",
+        "fr": "Site du service d’urgence de la Kreisstelle Dortmund."
       },
       "small_animals": true,
       "url": "https://tiernotdienst-dortmund.de",
@@ -2069,7 +2159,8 @@
       "duty_i18n": {
         "sl": "Letni dežurni razpored (PDF), ki ga objavlja zbornica.",
         "hr": "Godišnji plan dežurstava (PDF) koji objavljuje komora.",
-        "de": "Jahres-Notdienstplan (PDF), veröffentlicht von der Kammer."
+        "de": "Jahres-Notdienstplan (PDF), veröffentlicht von der Kammer.",
+        "fr": "Planning annuel de garde (PDF) publié par la chambre vétérinaire."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/NotdienstMuenster2026_240926.pdf",
@@ -2087,7 +2178,8 @@
       "duty_i18n": {
         "sl": "Spletna stran nujne pomoči Kreisstelle Bielefeld/Herford.",
         "hr": "Stranica hitne službe Kreisstelle Bielefeld/Herford.",
-        "de": "Notdienst-Seite der Kreisstelle Bielefeld/Herford."
+        "de": "Notdienst-Seite der Kreisstelle Bielefeld/Herford.",
+        "fr": "Site du service d’urgence de la Kreisstelle Bielefeld/Herford."
       },
       "small_animals": true,
       "url": "https://tier-not-dienst.de/",
@@ -2105,7 +2197,8 @@
       "duty_i18n": {
         "sl": "Razpored po dnevih jan.–dec. 2026 z imenom dežurne ordinacije in njeno telefonsko številko (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
         "hr": "Plan po danima siječanj–prosinac 2026. s dežurnom ambulantom i njezinim telefonom (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
-        "de": "Tagesgenauer Plan Januar–Dezember 2026 mit diensthabender Praxis und Telefonnummer (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
+        "de": "Tagesgenauer Plan Januar–Dezember 2026 mit diensthabender Praxis und Telefonnummer (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
+        "fr": "Planning jour par jour de janvier à décembre 2026 indiquant le cabinet de garde et son téléphone (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/Notdienste-Kreis-Recklinghausen-2026.pdf",
@@ -2124,7 +2217,8 @@
       "duty_i18n": {
         "sl": "Ob koncih tedna in praznikih 8–22, organizirano prek vetnotdienst.de (stacionarni telefon se preusmeri samodejno; mobilni: vnesite poštno številko); 0,14 €/min. Izven teh ur: Tierklinik Elversberg.",
         "hr": "Vikendom i blagdanima 8–22, organizirano preko vetnotdienst.de (fiksni telefon se usmjerava automatski; s mobitela upiši poštanski broj); 0,14 EUR/min. Izvan tog vremena: Tierklinik Elversberg.",
-        "de": "Wochenende und feiertags 8–22 Uhr, organisiert über vetnotdienst.de (Festnetz wird automatisch weitergeleitet; Mobilfunk: Postleitzahl eingeben); 0,14 EUR/Min. Außerhalb dieser Zeiten: Tierklinik Elversberg."
+        "de": "Wochenende und feiertags 8–22 Uhr, organisiert über vetnotdienst.de (Festnetz wird automatisch weitergeleitet; Mobilfunk: Postleitzahl eingeben); 0,14 EUR/Min. Außerhalb dieser Zeiten: Tierklinik Elversberg.",
+        "fr": "Week-ends et jours fériés 8 h–22 h, organisés via vetnotdienst.de (depuis un fixe, renvoi automatique ; mobile : saisir le code postal) ; 0.14 EUR/min. En dehors de ces horaires : Tierklinik Elversberg."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-saar.de/",
@@ -2143,7 +2237,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč ob koncih tedna in praznikih 8–22 pri lokalnih veterinarjih; razpored se lahko spremeni v zadnjem trenutku; vnaprej pokličite.",
         "hr": "Hitna služba vikendom i blagdanima 08:00–22:00 kod lokalnih veterinara; raspored se može naglo promijeniti; nazovi unaprijed.",
-        "de": "Notdienst an Wochenenden und Feiertagen 08.00–22.00 Uhr durch örtliche Tierarztpraxen; der Plan kann sich kurzfristig ändern; bitte vorher anrufen."
+        "de": "Notdienst an Wochenenden und Feiertagen 08.00–22.00 Uhr durch örtliche Tierarztpraxen; der Plan kann sich kurzfristig ändern; bitte vorher anrufen.",
+        "fr": "Service d’urgence week-ends et jours fériés 8 h–22 h assuré par les vétérinaires locaux ; planning modifiable à court terme ; appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.kleintiernotdienst-regensburg.de/",
@@ -2162,7 +2257,8 @@
       "duty_i18n": {
         "sl": "Prostovoljni krog veterinarjev v Landkreisu; ob sobotah in nedeljah 10–18 je dežurna ena ordinacija; pokličite osrednjo številko ali navedeno ordinacijo. Velja pavšalna pristojbina za nujno pomoč.",
         "hr": "Dobrovoljni krug veterinara u okrugu; subotom i nedjeljom 10–18 dežura jedna ambulanta; nazovi središnji broj ili navedenu ambulantu. Naplaćuje se paušalna naknada za hitne slučajeve.",
-        "de": "Freiwilliger Notdienstring der Tierärzte im Landkreis; Sa und So 10–18 Uhr hat eine Praxis Dienst; zentrale Nummer oder die aufgeführte Praxis anrufen. Es fällt eine Notdienstpauschale an."
+        "de": "Freiwilliger Notdienstring der Tierärzte im Landkreis; Sa und So 10–18 Uhr hat eine Praxis Dienst; zentrale Nummer oder die aufgeführte Praxis anrufen. Es fällt eine Notdienstpauschale an.",
+        "fr": "Réseau de garde volontaire des vétérinaires du Landkreis ; samedis et dimanches 10 h–18 h, un cabinet de garde ; numéro central ou appel du cabinet indiqué. Forfait d’urgence applicable."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-bgd.de/wir-sind-f%C3%BCr-sie-da-notdienst/",
@@ -2183,7 +2279,8 @@
       "duty_i18n": {
         "sl": "Pon–čet 19–6; od pet 19 do pon 6 neprekinjeno (ob delavnikih podnevi ni osebja); najprej pokličite",
         "hr": "pon–čet 19:00–06:00; pet 19:00 do pon 06:00 neprekidno (radnim danom danju nema osoblja); prvo nazovi",
-        "de": "Mo–Do 19.00–06.00 Uhr; Fr 19.00 Uhr bis Mo 06.00 Uhr durchgehend (werktags tagsüber nicht besetzt); bitte vorher anrufen"
+        "de": "Mo–Do 19.00–06.00 Uhr; Fr 19.00 Uhr bis Mo 06.00 Uhr durchgehend (werktags tagsüber nicht besetzt); bitte vorher anrufen",
+        "fr": "Lun.–jeu. 19 h–6 h ; du ven. 19 h au lun. 6 h en continu (pas de permanence en journée en semaine) ; appelez d’abord."
       },
       "small_animals": true,
       "url": "https://notfalltierarzt-leipzig.de/",
@@ -2203,7 +2300,8 @@
       "duty_i18n": {
         "sl": "Telefon za nujne primere +49 341 9738781; naročanje vsak dan +49 341 9738711",
         "hr": "Hitni telefon +49 341 9738781; naručivanje svaki dan na +49 341 9738711",
-        "de": "Notfalltelefon +49 341 9738781; Termine täglich unter +49 341 9738711"
+        "de": "Notfalltelefon +49 341 9738781; Termine täglich unter +49 341 9738711",
+        "fr": "Téléphone urgences +49 341 9738781 ; rendez-vous tous les jours +49 341 9738711."
       },
       "small_animals": true,
       "url": "https://kleintierklinik.uni-leipzig.de/",
@@ -2224,7 +2322,8 @@
       "duty_i18n": {
         "sl": "Ure nujnih posvetov ob posameznih koncih tedna (npr. sob 8–18); po 18. uri napotitev na univerzitetno kliniko za male hišne ljubljenčke ali Notfallambulanz Stötteritz",
         "hr": "Hitni pregledi pojedinim vikendima (npr. sub 08:00–18:00); nakon 18:00 upućivanje u sveučilišnu kliniku za male životinje ili u Notfallambulanz Stötteritz",
-        "de": "Notfallsprechstunden an einzelnen Wochenenden (z. B. Sa 08.00–18.00 Uhr); nach 18.00 Uhr wird an die Universitäts-Kleintierklinik oder die Notfallambulanz Stötteritz verwiesen"
+        "de": "Notfallsprechstunden an einzelnen Wochenenden (z. B. Sa 08.00–18.00 Uhr); nach 18.00 Uhr wird an die Universitäts-Kleintierklinik oder die Notfallambulanz Stötteritz verwiesen",
+        "fr": "Consultations d’urgence certains week-ends (p. ex. sam. 8 h–18 h) ; après 18 h, orientation vers la clinique universitaire pour petits animaux ou la Notfallambulanz Stötteritz."
       },
       "small_animals": true,
       "url": "https://tierpraxis-leipzig.de/",
@@ -2244,7 +2343,8 @@
       "duty_i18n": {
         "sl": "Lastna dežurna služba pet–ned in ob praznikih, po telefonu do 21.30 (mobilna številka za nujne primere +49 171 7514405); nujni posvet ob nedeljah/praznikih 10–12",
         "hr": "Vlastita dežurna služba pet–ned i blagdanima, telefonski do 21:30 (hitni mobitel +49 171 7514405); hitni pregled nedjeljom i blagdanima 10–12",
-        "de": "Eigener Bereitschaftsdienst Fr–So und feiertags, telefonisch bis 21.30 Uhr (Notfallhandy +49 171 7514405); So/feiertags Notfallsprechstunde 10–12 Uhr"
+        "de": "Eigener Bereitschaftsdienst Fr–So und feiertags, telefonisch bis 21.30 Uhr (Notfallhandy +49 171 7514405); So/feiertags Notfallsprechstunde 10–12 Uhr",
+        "fr": "Garde propre du ven. au dim. et jours fériés, par téléphone jusqu’à 21 h 30 (mobile urgences +49 171 7514405) ; consultation d’urgence dim./jours fériés 10 h–12 h."
       },
       "small_animals": true,
       "url": "https://www.tierarztleipzig.de/",
@@ -2263,7 +2363,8 @@
       "duty_i18n": {
         "sl": "Veterinarska nujna pomoč sob 12–14, ned 10–14; mobilna številka za nujne primere +49 176 45777675",
         "hr": "Veterinarska hitna služba sub 12:00–14:00, ned 10:00–14:00; hitni mobitel +49 176 45777675",
-        "de": "Tierärztlicher Notdienst Sa 12.00–14.00 Uhr, So 10.00–14.00 Uhr; Notfallhandy +49 176 45777675"
+        "de": "Tierärztlicher Notdienst Sa 12.00–14.00 Uhr, So 10.00–14.00 Uhr; Notfallhandy +49 176 45777675",
+        "fr": "Service vétérinaire d’urgence sam. 12 h–14 h, dim. 10 h–14 h ; mobile urgences +49 176 45777675."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sascha-weinlein.de/",
@@ -2282,7 +2383,8 @@
       "duty_i18n": {
         "sl": "Nujni posveti ob nedeljah/praznikih 8–12 in 16–20; ponoči samo akutno življenjsko nevarni primeri",
         "hr": "Hitni pregledi nedjeljom i blagdanima 08–12 i 16–20; noću samo akutni slučajevi opasni po život",
-        "de": "So/feiertags Notfallsprechstunden 08–12 und 16–20 Uhr; nachts nur akut lebensbedrohliche Fälle"
+        "de": "So/feiertags Notfallsprechstunden 08–12 und 16–20 Uhr; nachts nur akut lebensbedrohliche Fälle",
+        "fr": "Consultations d’urgence dim./jours fériés 8 h–12 h et 16 h–20 h ; la nuit, uniquement cas aigus mettant la vie en danger."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-meisinger.de/",
@@ -2303,7 +2405,8 @@
       "duty_i18n": {
         "sl": "Pon–čet 8–12 in 14–17, pet 8–13; nujni primeri samo po telefonski prijavi, v okviru zmogljivosti",
         "hr": "pon–čet 8–12 i 14–17, pet 8–13; hitni slučajevi samo uz telefonsku najavu, ovisno o kapacitetu",
-        "de": "Mo–Do 8–12 und 14–17 Uhr, Fr 8–13 Uhr; Notfälle nur nach telefonischer Anmeldung und im Rahmen der Kapazitäten"
+        "de": "Mo–Do 8–12 und 14–17 Uhr, Fr 8–13 Uhr; Notfälle nur nach telefonischer Anmeldung und im Rahmen der Kapazitäten",
+        "fr": "Lun.–jeu. 8 h–12 h et 14 h–17 h, ven. 8 h–13 h ; urgences uniquement après appel préalable, selon les capacités."
       },
       "small_animals": true,
       "url": "https://www.vet-chemnitz.de/",
@@ -2323,7 +2426,8 @@
       "duty_i18n": {
         "sl": "Pon–pet, naročanje po telefonskem dogovoru; nujna pomoč prek nottierarzt-chemnitz.de",
         "hr": "pon–pet, termini po telefonskom dogovoru; hitna služba preko nottierarzt-chemnitz.de",
-        "de": "Mo–Fr, Termine nach telefonischer Vereinbarung; Notdienst über nottierarzt-chemnitz.de"
+        "de": "Mo–Fr, Termine nach telefonischer Vereinbarung; Notdienst über nottierarzt-chemnitz.de",
+        "fr": "Lun.–ven., rendez-vous sur accord téléphonique ; service d’urgence via nottierarzt-chemnitz.de."
       },
       "small_animals": true,
       "url": "https://tiertagesklinik.de/",
@@ -2342,7 +2446,8 @@
       "duty_i18n": {
         "sl": "Ordinacijske ure ob delavnikih; izven njih glejte razpored nujne pomoči mesta Magdeburg",
         "hr": "Radnim danom u radno vrijeme; izvan njega pogledaj raspored hitne službe grada Magdeburga",
-        "de": "Sprechzeiten werktags; außerhalb davon siehe Notdienstplan der Stadt Magdeburg"
+        "de": "Sprechzeiten werktags; außerhalb davon siehe Notdienstplan der Stadt Magdeburg",
+        "fr": "Consultations en semaine ; en dehors, voir le tour de garde d’urgence de la ville de Magdebourg."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-zentrum-magdeburg.de/",
@@ -2361,7 +2466,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri po telefonski prijavi pon–pet 7–22, sob 7–13 (mobilna številka +49 170 7777365); akutno življenjsko nevarni primeri tudi brez prijave",
         "hr": "Hitni slučajevi uz telefonsku najavu pon–pet 07–22, sub 07–13 (mobitel +49 170 7777365); akutni slučajevi opasni po život i bez najave",
-        "de": "Notfälle nach telefonischer Anmeldung Mo–Fr 07–22 Uhr, Sa 07–13 Uhr (Handy +49 170 7777365); akut lebensbedrohliche Notfälle auch ohne Anmeldung"
+        "de": "Notfälle nach telefonischer Anmeldung Mo–Fr 07–22 Uhr, Sa 07–13 Uhr (Handy +49 170 7777365); akut lebensbedrohliche Notfälle auch ohne Anmeldung",
+        "fr": "Urgences sur appel préalable lun.–ven. 7 h–22 h, sam. 7 h–13 h (mobile +49 170 7777365) ; urgences vitales aussi sans inscription."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-mensing.de/",
@@ -2393,7 +2499,8 @@
       "duty_i18n": {
         "sl": "Dežurna ordinacija se menja tedensko po okrajih, razpored s telefonskimi številkami je na strani okraja; po možnosti ne kličite med 23. in 6. uro",
         "hr": "Dežurna ambulanta mijenja se tjedno po okruzima, raspored s telefonskim brojevima je na stranici okruga; ako je moguće, ne zovi između 23 i 06",
-        "de": "Die diensthabende Praxis wechselt wöchentlich je Landkreis, Notdienstplan mit Telefonnummern auf der Seite des Landkreises; wenn möglich zwischen 23 und 06 Uhr nicht anrufen"
+        "de": "Die diensthabende Praxis wechselt wöchentlich je Landkreis, Notdienstplan mit Telefonnummern auf der Seite des Landkreises; wenn möglich zwischen 23 und 06 Uhr nicht anrufen",
+        "fr": "Le cabinet de garde change chaque semaine par district, planning avec numéros sur la page du district ; si possible, n’appelez pas entre 23 h et 6 h."
       },
       "small_animals": true,
       "url": "https://www.landkreis-boerde.de/menschen/natur-und-umwelt/notfalldienste-tieraerzte",
@@ -2411,7 +2518,8 @@
       "duty_i18n": {
         "sl": "Dežurna služba se menja dnevno; mesečni razporedi v PDF in seznam sodelujočih ordinacij s telefonom na strani",
         "hr": "Dežurstvo se mijenja svaki dan; mjesečni rasporedi u PDF-u i popis ambulanti koje sudjeluju, s telefonskim brojevima, nalaze se na stranici",
-        "de": "Der Notdienst wechselt täglich; Monatspläne als PDF und Liste der teilnehmenden Praxen mit Telefonnummer auf der Seite"
+        "de": "Der Notdienst wechselt täglich; Monatspläne als PDF und Liste der teilnehmenden Praxen mit Telefonnummer auf der Seite",
+        "fr": "Service de garde changeant chaque jour ; plannings mensuels en PDF et liste des cabinets participants avec téléphone sur la page."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sturm.de/informationen/notdienste/",
@@ -2431,7 +2539,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet 9–12 in 14–18; sre 9–12; pet 9–12 in 14–16 (po dogovoru)",
         "hr": "pon, uto, čet 09–12 i 14–18; sri 09–12; pet 09–12 i 14–16 (po dogovoru)",
-        "de": "Mo, Di, Do 09–12 und 14–18 Uhr; Mi 09–12 Uhr; Fr 09–12 und 14–16 Uhr (nach Vereinbarung)"
+        "de": "Mo, Di, Do 09–12 und 14–18 Uhr; Mi 09–12 Uhr; Fr 09–12 und 14–16 Uhr (nach Vereinbarung)",
+        "fr": "Lun., mar., jeu. 9 h–12 h et 14 h–18 h ; mer. 9 h–12 h ; ven. 9 h–12 h et 14 h–16 h (sur rendez-vous)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-zipper.de/",
@@ -2450,7 +2559,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet 10–11.30 in 15–18.30; sre 15–18.30; pet 10–11.30 in 14–15.30; izven teh ur: dežurni veterinar za nujne primere",
         "hr": "pon, uto, čet 10–11:30 i 15–18:30; sri 15–18:30; pet 10–11:30 i 14–15:30; izvan tog vremena: dežurni veterinar za hitne slučajeve",
-        "de": "Mo, Di, Do 10–11.30 und 15–18.30 Uhr; Mi 15–18.30 Uhr; Fr 10–11.30 und 14–15.30 Uhr; außerhalb dieser Zeiten: diensthabender Notdienst-Tierarzt"
+        "de": "Mo, Di, Do 10–11.30 und 15–18.30 Uhr; Mi 15–18.30 Uhr; Fr 10–11.30 und 14–15.30 Uhr; außerhalb dieser Zeiten: diensthabender Notdienst-Tierarzt",
+        "fr": "Lun., mar., jeu. 10 h–11 h 30 et 15 h–18 h 30 ; mer. 15 h–18 h 30 ; ven. 10 h–11 h 30 et 14 h–15 h 30 ; en dehors : vétérinaire d’urgence de garde."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-suedstadt.de/",
@@ -2469,7 +2579,8 @@
       "duty_i18n": {
         "sl": "Pon–čet 9–18, pet 9–15; samo po telefonskem naročilu",
         "hr": "pon–čet 09–18, pet 09–15; samo po telefonskom dogovoru",
-        "de": "Mo–Do 09–18 Uhr, Fr 09–15 Uhr; nur nach telefonischer Terminvereinbarung"
+        "de": "Mo–Do 09–18 Uhr, Fr 09–15 Uhr; nur nach telefonischer Terminvereinbarung",
+        "fr": "Lun.–jeu. 9 h–18 h, ven. 9 h–15 h ; uniquement sur rendez-vous téléphonique."
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-strauss.de/halle/",
@@ -2515,7 +2626,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 10–12, pon/tor/čet 16–17; nujni primeri izven teh ur: turinška številka za nujne primere +49 361 64478808",
         "hr": "pon–pet 10–12, pon/uto/čet 16–17; hitni slučajevi izvan tog vremena: hitni broj Tiringije +49 361 64478808",
-        "de": "Mo–Fr 10–12 Uhr, Mo/Di/Do 16–17 Uhr; Notfälle außerhalb dieser Zeiten: Notdienstnummer Thüringen +49 361 64478808"
+        "de": "Mo–Fr 10–12 Uhr, Mo/Di/Do 16–17 Uhr; Notfälle außerhalb dieser Zeiten: Notdienstnummer Thüringen +49 361 64478808",
+        "fr": "Lun.–ven. 10 h–12 h, lun./mar./jeu. 16 h–17 h ; urgences hors de ces horaires : numéro d’urgence de Thuringe +49 361 64478808."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-jena-nord.de/",
@@ -2534,7 +2646,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 8–18; izven tega časa: nujna pomoč za male živali in hišne ljubljenčke v Mecklenburg-Vorpommernu +49 1805 843736",
         "hr": "pon–pet 08–18; izvan tog vremena: hitna služba za male životinje i kućne ljubimce u Mecklenburg-Vorpommernu +49 1805 843736",
-        "de": "Mo–Fr 08–18 Uhr; außerhalb dieser Zeiten: Klein- und Heimtier-Notdienst Mecklenburg-Vorpommern +49 1805 843736"
+        "de": "Mo–Fr 08–18 Uhr; außerhalb dieser Zeiten: Klein- und Heimtier-Notdienst Mecklenburg-Vorpommern +49 1805 843736",
+        "fr": "Lun.–ven. 8 h–18 h ; en dehors : service d’urgence petits animaux et NAC du Mecklembourg-Poméranie-Occidentale +49 1805 843736."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-schwerin.de/",
@@ -2553,7 +2666,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri pon–pet 8–19 po telefonskem dogovoru; ko je ordinacija dežurna: +49 172 3925086; sicer +49 1805 843736",
         "hr": "Hitni slučajevi pon–pet 08–19 po telefonskom dogovoru; kad ambulanta dežura: +49 172 3925086; inače +49 1805 843736",
-        "de": "Notfälle Mo–Fr 08–19 Uhr nach telefonischer Absprache; wenn die Praxis Notdienst hat: +49 172 3925086; sonst +49 1805 843736"
+        "de": "Notfälle Mo–Fr 08–19 Uhr nach telefonischer Absprache; wenn die Praxis Notdienst hat: +49 172 3925086; sonst +49 1805 843736",
+        "fr": "Urgences lun.–ven. 8 h–19 h après accord téléphonique ; quand le cabinet est de garde : +49 172 3925086 ; sinon +49 1805 843736."
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-schwerin.de/",
@@ -2573,7 +2687,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet 8.30–13.30 in 14–16; sre 8.30–14; pet 8.30–12; akutni posvet brez naročila pon–pet 8–8.30",
         "hr": "pon, uto, čet 8:30–13:30 i 14–16; sri 8:30–14; pet 8:30–12; akutni pregled bez termina pon–pet 08:00–08:30",
-        "de": "Mo, Di, Do 8.30–13.30 und 14–16 Uhr; Mi 8.30–14 Uhr; Fr 8.30–12 Uhr; akute Sprechstunde ohne Termin Mo–Fr 08.00–08.30 Uhr"
+        "de": "Mo, Di, Do 8.30–13.30 und 14–16 Uhr; Mi 8.30–14 Uhr; Fr 8.30–12 Uhr; akute Sprechstunde ohne Termin Mo–Fr 08.00–08.30 Uhr",
+        "fr": "Lun., mar., jeu. 8 h 30–13 h 30 et 14 h–16 h ; mer. 8 h 30–14 h ; ven. 8 h 30–12 h ; consultation en urgence sans rendez-vous lun.–ven. 8 h–8 h 30."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-albrecht.de/",
@@ -2591,7 +2706,8 @@
       "duty_i18n": {
         "sl": "Izmenična nujna pomoč osnabrückih veterinarjev izven ordinacijskega časa; preusmeritev na dežurno ordinacijo (0,14 €/min stacionarni telefon, največ 0,42 €/min mobilni)",
         "hr": "Rotirajuća hitna služba veterinara iz Osnabrücka izvan radnog vremena; poziv se prosljeđuje dežurnoj ambulanti (0,14 €/min iz fiksne mreže, najviše 0,42 €/min iz mobilne)",
-        "de": "Notdienstring der Osnabrücker Tierärzte außerhalb der Sprechzeiten; Weiterleitung an die diensthabende Praxis (0,14 €/Min. Festnetz, max. 0,42 €/Min. Mobilfunk)"
+        "de": "Notdienstring der Osnabrücker Tierärzte außerhalb der Sprechzeiten; Weiterleitung an die diensthabende Praxis (0,14 €/Min. Festnetz, max. 0,42 €/Min. Mobilfunk)",
+        "fr": "Service d’urgence tournant des vétérinaires d’Osnabrück en dehors des heures de consultation ; appel transféré au cabinet de garde (0.14 €/min depuis un fixe, max. 0.42 €/min depuis un mobile)."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/notdienst.html",
@@ -2626,7 +2742,8 @@
       "duty_i18n": {
         "sl": "Izven ordinacijskega časa: linija za nujne primere osnabrückih veterinarjev +49 1805 000241",
         "hr": "Izvan radnog vremena: hitna linija veterinara iz Osnabrücka +49 1805 000241",
-        "de": "Außerhalb der Sprechzeiten: Notdienstnummer der Osnabrücker Tierärzte +49 1805 000241"
+        "de": "Außerhalb der Sprechzeiten: Notdienstnummer der Osnabrücker Tierärzte +49 1805 000241",
+        "fr": "En dehors des heures de consultation : ligne d’urgence des vétérinaires d’Osnabrück +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-os.de/",
@@ -2645,7 +2762,8 @@
       "duty_i18n": {
         "sl": "Izven ordinacijskega časa: osrednja številka za nujne primere +49 1805 000241",
         "hr": "Izvan radnog vremena: središnji hitni broj +49 1805 000241",
-        "de": "Außerhalb der Sprechzeiten: zentrale Notdienstnummer +49 1805 000241"
+        "de": "Außerhalb der Sprechzeiten: zentrale Notdienstnummer +49 1805 000241",
+        "fr": "En dehors des heures de consultation : numéro d’urgence central +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.com/",
@@ -2664,7 +2782,8 @@
       "duty_i18n": {
         "sl": "Izven ordinacijskega časa: linija za nujne primere osnabrückih veterinarjev +49 1805 000241",
         "hr": "Izvan radnog vremena: hitna linija veterinara iz Osnabrücka +49 1805 000241",
-        "de": "Außerhalb der Sprechzeiten: Notdienstnummer der Osnabrücker Tierärzte +49 1805 000241"
+        "de": "Außerhalb der Sprechzeiten: Notdienstnummer der Osnabrücker Tierärzte +49 1805 000241",
+        "fr": "En dehors des heures de consultation : ligne d’urgence des vétérinaires d’Osnabrück +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/",
@@ -2683,7 +2802,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri pon–pet 19–20 po telefonski prijavi; nato in ob koncih tedna: göttingenska veterinarska nujna pomoč",
         "hr": "Hitni slučajevi pon–pet 19–20 uz telefonsku najavu; poslije toga i vikendom: hitna veterinarska služba u Göttingenu",
-        "de": "Notfälle Mo–Fr 19–20 Uhr nach telefonischer Anmeldung; danach und am Wochenende: tierärztlicher Notdienst Göttingen"
+        "de": "Notfälle Mo–Fr 19–20 Uhr nach telefonischer Anmeldung; danach und am Wochenende: tierärztlicher Notdienst Göttingen",
+        "fr": "Urgences lun.–ven. 19 h–20 h après appel préalable ; ensuite et le week-end : service d’urgence vétérinaire de Göttingen."
       },
       "small_animals": true,
       "url": "https://www.uni-goettingen.de/de/tierklinik/571084.html",
@@ -2703,7 +2823,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč pon/tor/čet/pet 19–22, sre 19–8 (naslednji dan), sob/ned 8–22, prazniki 8–17; samo po telefonski prijavi",
         "hr": "Hitna služba pon/uto/čet/pet 19–22, sri 19–08 (idućeg dana), sub/ned 08–22, blagdanima 08–17; samo uz telefonsku najavu",
-        "de": "Notdienst Mo/Di/Do/Fr 19–22 Uhr, Mi 19–08 Uhr (Folgetag), Sa/So 08–22 Uhr, feiertags 08–17 Uhr; nur nach telefonischer Anmeldung"
+        "de": "Notdienst Mo/Di/Do/Fr 19–22 Uhr, Mi 19–08 Uhr (Folgetag), Sa/So 08–22 Uhr, feiertags 08–17 Uhr; nur nach telefonischer Anmeldung",
+        "fr": "Service d’urgence lun./mar./jeu./ven. 19 h–22 h, mer. 19 h–8 h (lendemain), sam./dim. 8 h–22 h, jours fériés 8 h–17 h ; uniquement sur appel préalable."
       },
       "small_animals": true,
       "url": "https://tgz-suedharz.de/",
@@ -2720,7 +2841,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč ob koncih tedna in praznikih od sob 6 do pon 6, izmenjujoče se ordinacije za male hišne ljubljenčke s telefonsko številko v razporedu; najprej pokličite",
         "hr": "Hitna služba vikendom i blagdanima od sub 06:00 do pon 06:00; rotiraju ambulante za male životinje, telefonski broj je u rasporedu; nazovi unaprijed",
-        "de": "Notdienst an Wochenenden und Feiertagen Sa 06.00 Uhr bis Mo 06.00 Uhr, wechselnde Kleintierpraxen mit Telefonnummer im Notdienstplan; bitte zuerst anrufen"
+        "de": "Notdienst an Wochenenden und Feiertagen Sa 06.00 Uhr bis Mo 06.00 Uhr, wechselnde Kleintierpraxen mit Telefonnummer im Notdienstplan; bitte zuerst anrufen",
+        "fr": "Service d’urgence week-ends et jours fériés du sam. 6 h au lun. 6 h, cabinets pour petits animaux en rotation, téléphone indiqué dans le planning ; appelez d’abord."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-landkreis-northeim.de/",
@@ -2740,7 +2862,8 @@
       "duty_i18n": {
         "sl": "Ordinacijske ure ob delavnikih; za dežurnega veterinarja se obrnite na center za nujne primere +49 3941 69999; mobilna številka ordinacije +49 171 2433497",
         "hr": "Radnim danom u radno vrijeme; dežurnog veterinara zatraži preko hitnog dispečerskog centra +49 3941 69999; mobitel ambulante +49 171 2433497",
-        "de": "Sprechzeiten werktags; den diensthabenden Tierarzt über die Notdienstzentrale +49 3941 69999 erfragen; Praxishandy +49 171 2433497"
+        "de": "Sprechzeiten werktags; den diensthabenden Tierarzt über die Notdienstzentrale +49 3941 69999 erfragen; Praxishandy +49 171 2433497",
+        "fr": "Consultations en semaine ; demandez le vétérinaire de garde via la centrale d’urgence +49 3941 69999 ; mobile du cabinet +49 171 2433497."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-wernigerode.de/",
@@ -2759,7 +2882,8 @@
       "duty_i18n": {
         "sl": "Izmenično dežurstvo z drugimi ordinacijami v okrožju; dežurna ordinacija na tieraerztliche-notdienste.de",
         "hr": "Rotirajuće dežurstvo s drugim ambulantama u okrugu; dežurna ambulanta na tieraerztliche-notdienste.de",
-        "de": "Wechselnder Bereitschaftsdienst mit anderen Praxen im Landkreis; diensthabende Praxis auf tieraerztliche-notdienste.de"
+        "de": "Wechselnder Bereitschaftsdienst mit anderen Praxen im Landkreis; diensthabende Praxis auf tieraerztliche-notdienste.de",
+        "fr": "Garde tournante avec d’autres cabinets du district ; cabinet de garde sur tieraerztliche-notdienste.de."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-wernigerode.de/",
@@ -2778,7 +2902,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa okrožna nujna pomoč (zvečer, ob koncih tedna, praznikih); dežurni razpored na goslar-tierarzt.de",
         "hr": "Izvan radnog vremena hitna služba za cijeli okrug (navečer, vikendom, blagdanima); raspored dežurstava na goslar-tierarzt.de",
-        "de": "Außerhalb der Öffnungszeiten kreisweiter Notdienst (abends, am Wochenende, feiertags); Notdienstplan auf goslar-tierarzt.de"
+        "de": "Außerhalb der Öffnungszeiten kreisweiter Notdienst (abends, am Wochenende, feiertags); Notdienstplan auf goslar-tierarzt.de",
+        "fr": "Hors horaires d’ouverture, service d’urgence pour tout le district (soirs, week-ends, jours fériés) ; planning de garde sur goslar-tierarzt.de."
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-goslar.de/",
@@ -2811,7 +2936,8 @@
       "duty_i18n": {
         "sl": "Pon, tor, čet, pet 9.30–10.30 in 18.30–19 ter po dogovoru",
         "hr": "pon, uto, čet, pet 09:30–10:30 i 18:30–19:00 te po dogovoru",
-        "de": "Mo, Di, Do, Fr 09.30–10.30 und 18.30–19.00 Uhr sowie nach Vereinbarung"
+        "de": "Mo, Di, Do, Fr 09.30–10.30 und 18.30–19.00 Uhr sowie nach Vereinbarung",
+        "fr": "Lun., mar., jeu., ven. 9 h 30–10 h 30 et 18 h 30–19 h, et sur rendez-vous."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-fehmarn.de/",
@@ -2942,7 +3068,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 18–23, sob/ned/prazniki 8–23; po 23. uri Tierklinik Hofheim (+49 6192 290290)",
         "hr": "pon–pet 18:00–23:00, sub/ned/blagdani 08:00–23:00; nakon 23:00 Tierklinik Hofheim (+49 6192 290290)",
-        "de": "Mo–Fr 18.00–23.00 Uhr, Sa/So/feiertags 08.00–23.00 Uhr; nach 23.00 Uhr Tierklinik Hofheim (+49 6192 290290)"
+        "de": "Mo–Fr 18.00–23.00 Uhr, Sa/So/feiertags 08.00–23.00 Uhr; nach 23.00 Uhr Tierklinik Hofheim (+49 6192 290290)",
+        "fr": "Lun.–ven. 18 h–23 h, sam./dim./jours fériés 8 h–23 h ; après 23 h, Tierklinik Hofheim (+49 6192 290290)."
       },
       "small_animals": true,
       "url": "https://tierarzt-notdienst-rtk.de/",
@@ -2961,7 +3088,8 @@
       "duty_i18n": {
         "sl": "Ob delavnikih 19–23, ob koncih tedna 8–23; po 23. uri Tierklinik Hofheim",
         "hr": "Radnim danom 19:00–23:00, vikendom 08:00–23:00; nakon 23:00 Tierklinik Hofheim",
-        "de": "Werktags 19.00–23.00 Uhr, Wochenende 08.00–23.00 Uhr; nach 23.00 Uhr Tierklinik Hofheim"
+        "de": "Werktags 19.00–23.00 Uhr, Wochenende 08.00–23.00 Uhr; nach 23.00 Uhr Tierklinik Hofheim",
+        "fr": "En semaine 19 h–23 h, week-ends 8 h–23 h ; après 23 h, Tierklinik Hofheim."
       },
       "small_animals": true,
       "url": "https://die-tierarztpraxis.eu/notdienstring/",
@@ -3004,7 +3132,8 @@
       "duty_i18n": {
         "sl": "Sob 8 – pon 8 in ob praznikih",
         "hr": "sub 08:00 – pon 08:00 i blagdani",
-        "de": "Sa 08.00 Uhr bis Mo 08.00 Uhr und feiertags"
+        "de": "Sa 08.00 Uhr bis Mo 08.00 Uhr und feiertags",
+        "fr": "Du sam. 8 h au lun. 8 h et jours fériés."
       },
       "small_animals": true,
       "url": "https://tiernotdienst-kassel.de/",
@@ -3022,7 +3151,8 @@
       "duty_i18n": {
         "sl": "Podnevi ob koncih tedna in praznikih",
         "hr": "Danju vikendom i blagdanima",
-        "de": "Tagsüber am Wochenende und an Feiertagen"
+        "de": "Tagsüber am Wochenende und an Feiertagen",
+        "fr": "En journée les week-ends et jours fériés."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-storck.de/willkommen-in-der-praxis/notdienst/",
@@ -3041,7 +3171,8 @@
       "duty_i18n": {
         "sl": "8–0; 0–8 prek Pfotendoctor.de +49 800 7777444",
         "hr": "08:00–00:00; 00:00–08:00 preko Pfotendoctor.de +49 800 7777444",
-        "de": "08.00–00.00 Uhr; 00.00–08.00 Uhr über Pfotendoctor.de +49 800 7777444"
+        "de": "08.00–00.00 Uhr; 00.00–08.00 Uhr über Pfotendoctor.de +49 800 7777444",
+        "fr": "8 h–0 h ; 0 h–8 h via Pfotendoctor.de +49 800 7777444."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-pfennigsweg.de/notdienst",
@@ -3060,7 +3191,8 @@
       "duty_i18n": {
         "sl": "Pon–čet 19–8, ob koncih tedna/praznikih 8–8",
         "hr": "pon–čet 19:00–08:00, vikendom/blagdanima 08:00–08:00",
-        "de": "Mo–Do 19.00–08.00 Uhr, Wochenende/feiertags 08.00–08.00 Uhr"
+        "de": "Mo–Do 19.00–08.00 Uhr, Wochenende/feiertags 08.00–08.00 Uhr",
+        "fr": "Lun.–jeu. 19 h–8 h, week-ends/jours fériés 8 h–8 h."
       },
       "small_animals": true,
       "url": "https://www.tieraerztlicherverbund-notdienst-in-der-ortenau.de/wer-hat-notdienst/",
@@ -3212,7 +3344,8 @@
       "duty_i18n": {
         "sl": "Linija za nujne primere pon–pet 8–22, ob koncih tedna/praznikih 8–20",
         "hr": "Hitna linija pon–pet 08:00–22:00, vikendom/blagdanima 08:00–20:00",
-        "de": "Notfalltelefon Mo–Fr 08.00–22.00 Uhr, Wochenende/feiertags 08.00–20.00 Uhr"
+        "de": "Notfalltelefon Mo–Fr 08.00–22.00 Uhr, Wochenende/feiertags 08.00–20.00 Uhr",
+        "fr": "Ligne d’urgence lun.–ven. 8 h–22 h, week-ends/jours fériés 8 h–20 h."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-landwasser.de/",
@@ -3245,7 +3378,8 @@
       "duty_i18n": {
         "sl": "Pon–pet 10–18",
         "hr": "pon–pet 10:00–18:00",
-        "de": "Mo–Fr 10.00–18.00 Uhr"
+        "de": "Mo–Fr 10.00–18.00 Uhr",
+        "fr": "Lun.–ven. 10 h–18 h."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-baden-baden.de/",
@@ -3265,7 +3399,8 @@
       "duty_i18n": {
         "sl": "Notfall-Hotline +49 160 8007070, 8–20 (za stranke ordinacije)",
         "hr": "Hitna linija +49 160 8007070, 08:00–20:00 (za klijente ambulante)",
-        "de": "Notfall-Hotline +49 160 8007070, 08.00–20.00 Uhr (für Praxiskunden)"
+        "de": "Notfall-Hotline +49 160 8007070, 08.00–20.00 Uhr (für Praxiskunden)",
+        "fr": "Ligne d’urgence +49 160 8007070, 8 h–20 h (pour les clients du cabinet)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-itkina.de/",
@@ -3299,7 +3434,8 @@
       "duty_i18n": {
         "sl": "V soboto 10–12 nujni posvet",
         "hr": "Subotom 10:00–12:00 hitni pregled",
-        "de": "Samstag 10.00–12.00 Uhr Notfallsprechstunde"
+        "de": "Samstag 10.00–12.00 Uhr Notfallsprechstunde",
+        "fr": "Consultation d’urgence le samedi 10 h–12 h."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-dr-gruebl.de/",
@@ -3318,7 +3454,8 @@
       "duty_i18n": {
         "sl": "20–8 se klici preusmerijo k dežurnemu veterinarju iz Notfallverbund Wiesbadener Tierärzte",
         "hr": "20:00–08:00 pozivi se preusmjeravaju dežurnom veterinaru udruge Notfallverbund Wiesbadener Tierärzte",
-        "de": "20.00–08.00 Uhr Weiterleitung der Anrufe an den diensthabenden Tierarzt des Notfallverbunds Wiesbadener Tierärzte"
+        "de": "20.00–08.00 Uhr Weiterleitung der Anrufe an den diensthabenden Tierarzt des Notfallverbunds Wiesbadener Tierärzte",
+        "fr": "20 h–8 h, appels transférés au vétérinaire de garde du Notfallverbund Wiesbadener Tierärzte."
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-wiesbaden.de/",
@@ -3379,7 +3516,8 @@
       "duty_i18n": {
         "sl": "Skupna nujna pomoč ob koncih tedna in praznikih s Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonska prijava",
         "hr": "Zajednička hitna služba vikendom i blagdanima s ambulantom Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), uz telefonsku najavu",
-        "de": "Gemeinsamer Notdienst an Wochenenden und Feiertagen mit der Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonische Anmeldung"
+        "de": "Gemeinsamer Notdienst an Wochenenden und Feiertagen mit der Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonische Anmeldung",
+        "fr": "Service d’urgence commun le week-end et les jours fériés avec Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), appel préalable obligatoire."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-oberstdorf.de/",
@@ -3412,7 +3550,8 @@
       "duty_i18n": {
         "sl": "Izven delovnega časa in v nujnih primerih: +49 171 7942360",
         "hr": "Izvan radnog vremena i u hitnim slučajevima: +49 171 7942360",
-        "de": "Außerhalb der Sprechzeiten und bei Notfällen: +49 171 7942360"
+        "de": "Außerhalb der Sprechzeiten und bei Notfällen: +49 171 7942360",
+        "fr": "Hors horaires et urgences : +49 171 7942360."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-kamuf.de/",

@@ -38,6 +38,9 @@
       "phone": "+972 3 968 8588",
       "emergency_24h": true,
       "duty": "Emergency and critical care 24 hours a day, 365 days a year. Emergency line also *8818; emergency department +972 3 968 8533.",
+      "duty_i18n": {
+        "fr": "Urgences et soins intensifs 24 h/24, 365 jours par an. Ligne d’urgences également au *8818 ; service des urgences : +972 3 968 8533."
+      },
       "small_animals": true,
       "url": "https://vethospital.huji.ac.il/english",
       "source_url": "https://vethospital.huji.ac.il/english",
@@ -53,6 +56,9 @@
       "phone": "+972 9 966 8133",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week including Shabbat and holidays; on-duty veterinarian. Emergency and referral hospital, no routine general care.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7, y compris le shabbat et les jours fériés ; vétérinaire de garde. Hôpital d’urgences et de référence, sans soins courants."
+      },
       "small_animals": true,
       "url": "https://www.vetcenter.co.il/",
       "source_url": "https://www.vetcenter.co.il/emergency/",
@@ -68,6 +74,9 @@
       "phone": "+972 4 834 2887",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year; the main number is also the 24/7 emergency line.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 365 jours par an ; le numéro principal est aussi la ligne d’urgences 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/haifa/",
       "source_url": "https://chavatdaat.co.il/haifa/",
@@ -83,6 +92,9 @@
       "phone": "+972 8 939 0738",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year; the main number is also the 24/7 emergency line.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 365 jours par an ; le numéro principal est aussi la ligne d’urgences 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/rehovot",
       "source_url": "https://chavatdaat.co.il/rehovot",
@@ -98,6 +110,9 @@
       "phone": "+972 9 743 1117",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year; 24/7 emergency line on the same number.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 365 jours par an ; ligne d’urgences 24 h/24, 7 j/7 sur le même numéro."
+      },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/kefar-sava",
       "source_url": "https://chavatdaat.co.il/kefar-sava",
@@ -113,6 +128,9 @@
       "phone": "+972 8 642 1848",
       "emergency_24h": false,
       "duty": "Call for opening hours.",
+      "duty_i18n": {
+        "fr": "Appelez pour connaître les horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/beer-sheva",
       "source_url": "https://chavatdaat.co.il/beer-sheva",
@@ -128,6 +146,9 @@
       "phone": "+972 77 992 6870",
       "emergency_24h": false,
       "duty": "Call for opening hours.",
+      "duty_i18n": {
+        "fr": "Appelez pour connaître les horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/kiryat-motzkin",
       "source_url": "https://chavatdaat.co.il/kiryat-motzkin",
@@ -143,6 +164,9 @@
       "phone": "+972 4 824 2669",
       "emergency_24h": true,
       "duty": "Sun-Wed 9:00-19:00; Thu, Fri and Sat open 24 hours. Emergency line with on-duty vet: +972 52 978 7882.",
+      "duty_i18n": {
+        "fr": "Dim.–mer. 9 h–19 h ; jeu., ven. et sam. ouvert 24 h/24. Ligne d’urgences avec vétérinaire de garde : +972 52 978 7882."
+      },
       "small_animals": true,
       "url": "https://www.moriahvc.co.il/",
       "source_url": "https://www.moriahvc.co.il/emergency-vet/",
@@ -158,6 +182,9 @@
       "phone": "+972 4 822 9561",
       "emergency_24h": true,
       "duty": "Animal hospital open 24 hours, including weekends and holidays. Emergency line +972 52 473 9482.",
+      "duty_i18n": {
+        "fr": "Hôpital vétérinaire ouvert 24 h/24, week-ends et jours fériés compris. Ligne d’urgences : +972 52 473 9482."
+      },
       "small_animals": true,
       "url": "https://www.drlevanon.com/24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%9C%D7%97%D7%99%D7%95%D7%AA/",
       "source_url": "https://www.drlevanon.com/24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%9C%D7%97%D7%99%D7%95%D7%AA/",
@@ -173,6 +200,9 @@
       "phone": "+972 72 371 8663",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week, including Friday, Saturday and holidays; no appointment needed for emergencies.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7, vendredi, samedi et jours fériés compris ; urgences sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.doctorvet.co.il/services/veterinarian-on-call/",
       "source_url": "https://www.doctorvet.co.il/services/veterinarian-on-call/",
@@ -188,6 +218,9 @@
       "phone": "+972 72 279 1607",
       "emergency_24h": true,
       "duty": "Emergency veterinarian available 24 hours a day including Shabbat and holidays: +972 72 279 1610. Other branches: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609.",
+      "duty_i18n": {
+        "fr": "Vétérinaire d’urgence disponible 24 h/24, shabbat et jours fériés compris : +972 72 279 1610. Autres sites : Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609."
+      },
       "small_animals": true,
       "url": "https://petholim.co.il/",
       "source_url": "https://petholim.co.il/%D7%97%D7%95%D7%95%D7%AA-%D7%93%D7%A2%D7%AA-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8/",
@@ -203,6 +236,9 @@
       "phone": "+972 8 641 7025",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-13:00 and 16:00-20:00, Fri 9:00-13:00. Emergency service in Be'er Sheva and area 24 hours a day including Saturdays and holidays: +972 50 754 5907.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 16 h–20 h, ven. 9 h–13 h. Urgences à Be’er Sheva et alentours 24 h/24, samedis et jours fériés compris : +972 50 754 5907."
+      },
       "small_animals": true,
       "url": "https://www.sherman-vet.co.il/",
       "source_url": "https://www.sherman-vet.co.il/sherman/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D/",
@@ -218,6 +254,9 @@
       "phone": "+972 3 966 5615",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-13:00 and 16:00-20:00, Fri 9:00-14:00; outside these hours the emergency line (same number) answers; Shabbat and holidays by phone arrangement.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 16 h–20 h, ven. 9 h–14 h ; en dehors de ces horaires, la ligne d’urgences (même numéro) répond ; shabbat et jours fériés sur rendez-vous téléphonique."
+      },
       "small_animals": true,
       "url": "https://www.vet4pet.org.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%91%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
       "source_url": "https://www.vet4pet.org.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%91%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
@@ -233,6 +272,9 @@
       "phone": "+972 77 408 0503",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-20:30, Fri and holidays 9:00-14:00; medical team stated as available 24/7. Emergency: +972 52 464 6869.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–20 h 30, ven. et jours fériés 9 h–14 h ; équipe médicale disponible 24 h/24, 7 j/7. Urgences : +972 52 464 6869."
+      },
       "small_animals": true,
       "url": "https://ahavat-hai.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F-%D7%90%D7%94%D7%91%D7%AA-%D7%94%D7%97%D7%99-%D7%9E%D7%A2%D7%A0/",
       "source_url": "https://ahavat-hai.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F-%D7%90%D7%94%D7%91%D7%AA-%D7%94%D7%97%D7%99-%D7%9E%D7%A2%D7%A0/",
@@ -248,6 +290,9 @@
       "phone": "+972 77 410 5110",
       "emergency_24h": true,
       "duty": "Emergency phone line and on-call vet available 24/7, including nights and weekends; call ahead. Mobile +972 52 450 4856.",
+      "duty_i18n": {
+        "fr": "Ligne d’urgences et vétérinaire de garde disponibles 24 h/24, 7 j/7, nuits et week-ends compris ; appelez avant de venir. Portable : +972 52 450 4856."
+      },
       "small_animals": true,
       "url": "https://www.dr-uri.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
       "source_url": "https://www.dr-uri.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
@@ -263,6 +308,9 @@
       "phone": "+972 8 946 4747",
       "emergency_24h": true,
       "duty": "Sun-Thu 10:00-12:00 and 16:30-19:30, Fri and holiday eves 9:00-13:00. Telephone available 24 hours a day; emergency line +972 54 472 8711.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 10 h–12 h et 16 h 30–19 h 30, ven. et veilles de jours fériés 9 h–13 h. Téléphone joignable 24 h/24 ; ligne d’urgences : +972 54 472 8711."
+      },
       "small_animals": true,
       "url": "https://vetericar.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%AA%D7%95%D7%A8%D7%9F/",
       "source_url": "https://vetericar.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%AA%D7%95%D7%A8%D7%9F/",
@@ -278,6 +326,9 @@
       "phone": "+972 8 867 9595",
       "emergency_24h": true,
       "duty": "Available for emergencies 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Urgences 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://www.ashdodvet.co.il/contact.asp",
       "source_url": "https://www.ashdodvet.co.il/contact.asp",
@@ -293,6 +344,9 @@
       "phone": "+972 77 729 9925",
       "emergency_24h": false,
       "duty": "Sun-Thu 9:00-13:00 and 16:00-21:00, Fri and holiday eves 9:30-15:00. Emergency service until midnight: +972 53 680 8788.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 16 h–21 h, ven. et veilles de jours fériés 9 h 30–15 h. Urgences jusqu’à minuit : +972 53 680 8788."
+      },
       "small_animals": true,
       "url": "https://www.animalcenter.co.il/",
       "source_url": "https://www.animalcenter.co.il/",
@@ -308,6 +362,9 @@
       "phone": "+972 8 633 3035",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-13:00 and 17:00-20:00, Fri 9:00-13:00. Emergency response 24 hours a day.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 17 h–20 h, ven. 9 h–13 h. Urgences 24 h/24."
+      },
       "small_animals": true,
       "url": "https://veteilatclinic.wixsite.com/elad-ravid",
       "source_url": "https://eilat.city/en/dr-elad-ravid",
@@ -323,6 +380,9 @@
       "phone": "+972 9 742 2888",
       "emergency_24h": false,
       "duty": "Sun-Thu 9:00-13:00 and 16:00-20:00, Fri 9:00-14:00. Emergency line: +972 52 823 5947.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 16 h–20 h, ven. 9 h–14 h. Ligne d’urgences : +972 52 823 5947."
+      },
       "small_animals": true,
       "url": "https://polegvet.co.il/%D7%9E%D7%A8%D7%A4%D7%90%D7%AA-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA/",
       "source_url": "https://polegvet.co.il/%D7%9E%D7%A8%D7%A4%D7%90%D7%AA-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA/",
@@ -338,6 +398,9 @@
       "phone": "+972 3 674 2829",
       "emergency_24h": true,
       "duty": "Sun-Thu 10:00-12:30 and 16:30-20:00, Fri 10:00-15:00, Sat closed. Vets reachable 24 hours a day for urgent cases outside opening hours (the clinic is not open 24/7).",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 10 h–12 h 30 et 16 h 30–20 h, ven. 10 h–15 h, sam. fermé. Vétérinaires joignables 24 h/24 pour les urgences en dehors des horaires d’ouverture (la clinique n’est pas ouverte 24 h/24, 7 j/7)."
+      },
       "small_animals": true,
       "url": "https://www.vet-center.co.il/",
       "source_url": "https://www.vet-center.co.il/",
@@ -353,6 +416,9 @@
       "phone": "+972 9 774 5445",
       "emergency_24h": false,
       "duty": "Sun-Thu 9:00-19:00, Fri 9:00-14:00. Emergency line for clients: +972 52 340 3020; 24-hour hospitalization for monitored patients.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–19 h, ven. 9 h–14 h. Ligne d’urgences réservée aux clients : +972 52 340 3020 ; hospitalisation 24 h/24 avec surveillance des patients."
+      },
       "small_animals": true,
       "url": "https://www.iritvet.co.il/english/",
       "source_url": "https://www.iritvet.co.il/english/",
@@ -368,6 +434,9 @@
       "phone": "+972 2 652 7292",
       "emergency_24h": false,
       "duty": "Sun-Thu 8:30-20:00, Fri and holiday eves 8:30-14:00; Sat and holidays emergencies for clinic patients: +972 54 220 9447.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 8 h 30–20 h, ven. et veilles de jours fériés 8 h 30–14 h ; sam. et jours fériés, urgences pour les patients de la clinique : +972 54 220 9447."
+      },
       "small_animals": true,
       "url": "https://www.haiviva.co.il/english",
       "source_url": "https://www.haiviva.co.il/english",
@@ -383,6 +452,9 @@
       "phone": "+972 50 648 9642",
       "emergency_24h": false,
       "duty": "Saturday-Thursday 10:00-19:00; on-call emergencies outside working hours.",
+      "duty_i18n": {
+        "fr": "Samedi–jeudi 10 h–19 h ; service de garde pour les urgences en dehors des horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://vetdogtor.com/",
       "source_url": "https://vetdogtor.com/",
@@ -398,6 +470,9 @@
       "phone": "+972 9 957 2267",
       "emergency_24h": false,
       "duty": "Sun-Thu 8:00-20:00, Fri 8:00-14:00.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 8 h–20 h, ven. 8 h–14 h."
+      },
       "small_animals": true,
       "url": "https://vets4life.co.il/poison/",
       "source_url": "https://vets4life.co.il/poison/",
@@ -413,6 +488,9 @@
       "phone": "+972 3 931 1349",
       "emergency_24h": false,
       "duty": "Call for opening hours.",
+      "duty_i18n": {
+        "fr": "Appelez pour connaître les horaires d’ouverture."
+      },
       "small_animals": true,
       "url": "https://www.animalhospital.co.il/vet-tlv",
       "source_url": "https://www.animalhospital.co.il/vet-tlv",
@@ -428,6 +506,9 @@
       "phone": "+972 77 957 9799",
       "emergency_24h": true,
       "duty": "Emergency vet service stated as open 24 hours a day, 7 days a week including Shabbat and holidays; covers Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya and the Sharon. WhatsApp +972 50 385 8100.",
+      "duty_i18n": {
+        "fr": "Vétérinaire d’urgence ouvert 24 h/24, 7 j/7, shabbat et jours fériés compris ; couvre Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya et le Sharon. WhatsApp +972 50 385 8100."
+      },
       "small_animals": true,
       "url": "https://vetadom.co.il/",
       "source_url": "https://vetadom.co.il/blog/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-24-7/",
@@ -443,6 +524,9 @@
       "phone": "+972 3 544 3342",
       "emergency_24h": true,
       "duty": "Emergency phone line stated as available 24/7. Second branch Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352. Regular opening hours not published.",
+      "duty_i18n": {
+        "fr": "Ligne d’urgences disponible 24 h/24, 7 j/7. Second site Kikar HaMedina (5 Iyar St. 64) : +972 3 544 3352. Horaires d’ouverture habituels non communiqués."
+      },
       "small_animals": true,
       "url": "https://www.gevavet.co.il/",
       "source_url": "https://www.gevavet.co.il/",
@@ -458,6 +542,9 @@
       "phone": "+972 77 507 7157",
       "emergency_24h": false,
       "duty": "Sun 12:00-14:00, Mon and Tue 16:00-21:30, Wed closed, Thu 16:00-21:30, Fri 10:00-13:00.",
+      "duty_i18n": {
+        "fr": "Dim. 12 h–14 h, lun. et mar. 16 h–21 h 30, mer. fermé, jeu. 16 h–21 h 30, ven. 10 h–13 h."
+      },
       "small_animals": true,
       "url": "https://24-7vet.co.il/?lang=en",
       "source_url": "https://24-7vet.co.il/?lang=en",
@@ -473,6 +560,9 @@
       "phone": "+972 3 513 6500",
       "emergency_24h": false,
       "duty": "Open to the public seven days a week, no appointment needed during opening hours. Appointments for surgeries: *4553 or +972 3 513 6500.",
+      "duty_i18n": {
+        "fr": "Ouvert au public 7 jours sur 7, sans rendez-vous pendant les heures d’ouverture. Rendez-vous pour les interventions chirurgicales : *4553 ou +972 3 513 6500."
+      },
       "small_animals": true,
       "url": "https://spca.co.il/clinic/",
       "source_url": "https://spca.co.il/clinic/",
@@ -488,6 +578,9 @@
       "phone": "+972 54 524 0815",
       "emergency_24h": true,
       "duty": "Sun-Thu 7:00-21:00, Fri 7:00-16:00; Saturday 24 hours for emergencies only. Urgent veterinary service 24 hours a day across the central region.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 7 h–21 h, ven. 7 h–16 h ; samedi 24 h/24 pour les urgences uniquement. Service vétérinaire d’urgence 24 h/24 dans toute la région centre."
+      },
       "small_animals": true,
       "url": "https://xn--4dbcanpgcv9a8ecy.com/",
       "source_url": "https://xn--4dbcanpgcv9a8ecy.com/",
@@ -503,6 +596,9 @@
       "phone": "+972 3 932 7707",
       "emergency_24h": true,
       "duty": "Sun-Thu 8:30-20:30, Fri 8:30-14:00. Available 24 hours a day for emergencies; urgent calls outside business hours: +972 3 932 6261.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 8 h 30–20 h 30, ven. 8 h 30–14 h. Disponible 24 h/24 pour les urgences ; appels urgents en dehors des horaires d’ouverture : +972 3 932 6261."
+      },
       "small_animals": true,
       "url": "https://www.dr-avi-sarfati.biz/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99-%D7%94%D7%9E%D7%A8%D7%A4%D7%90%D7%94/",
       "source_url": "https://www.dr-avi-sarfati.biz/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99-%D7%94%D7%9E%D7%A8%D7%A4%D7%90%D7%94/",
@@ -518,6 +614,9 @@
       "phone": "+972 9 766 2822",
       "emergency_24h": true,
       "duty": "Emergency number answering 24 hours a day: +972 55 884 6840. Regular opening hours not published as text.",
+      "duty_i18n": {
+        "fr": "Numéro d’urgences joignable 24 h/24 : +972 55 884 6840. Horaires d’ouverture habituels non communiqués."
+      },
       "small_animals": true,
       "url": "https://greenclinic.co.il/",
       "source_url": "https://greenclinic.co.il/",
@@ -533,6 +632,9 @@
       "phone": "+972 9 880 2323",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-20:00, Fri 9:00-14:00; emergencies stated as available 24 hours.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–20 h, ven. 9 h–14 h ; urgences assurées 24 h/24."
+      },
       "small_animals": true,
       "url": "https://www.vethadarim.co.il/",
       "source_url": "https://www.vethadarim.co.il/",
@@ -548,6 +650,9 @@
       "phone": "+972 9 834 9503",
       "emergency_24h": false,
       "duty": "Sun-Thu 9:00-12:00 and 17:00-19:00, Fri and holiday eves 9:00-12:00. Branches in Avihayil and Kfar Yedidya by appointment.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–12 h et 17 h–19 h, ven. et veilles de jours fériés 9 h–12 h. Sites d’Avihayil et de Kfar Yedidya sur rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.hostpetall.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA",
       "source_url": "https://www.hostpetall.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA",
@@ -563,6 +668,9 @@
       "phone": "+972 9 832 2216",
       "emergency_24h": false,
       "duty": "Sun, Tue-Thu 9:00-19:30, Mon 9:00-20:00, Fri and holiday eves 9:00-14:00. Emergency phone: +972 52 392 8243.",
+      "duty_i18n": {
+        "fr": "Dim., mar.–jeu. 9 h–19 h 30, lun. 9 h–20 h, ven. et veilles de jours fériés 9 h–14 h. Téléphone d’urgence : +972 52 392 8243."
+      },
       "small_animals": true,
       "url": "https://www.pinathachay.co.il/",
       "source_url": "https://www.pinathachay.co.il/",
@@ -578,6 +686,9 @@
       "phone": "+972 1700 500 509",
       "emergency_24h": false,
       "duty": "Opening hours not published. WhatsApp +972 50 912 8363.",
+      "duty_i18n": {
+        "fr": "Horaires d’ouverture non communiqués. WhatsApp +972 50 912 8363."
+      },
       "small_animals": true,
       "url": "https://veterinar.org.il/",
       "source_url": "https://veterinar.org.il/",
@@ -593,6 +704,9 @@
       "phone": "+972 9 894 4471",
       "emergency_24h": true,
       "duty": "Emergency treatment 24/7 including holidays and weekends; emergency phone +972 54 302 3036. Regular hours not published.",
+      "duty_i18n": {
+        "fr": "Soins d’urgence 24 h/24, 7 j/7, jours fériés et week-ends compris ; téléphone d’urgence : +972 54 302 3036. Horaires habituels non communiqués."
+      },
       "small_animals": true,
       "url": "https://www.drdoyev.com/blank-52",
       "source_url": "https://www.drdoyev.com/blank-52",
@@ -608,6 +722,9 @@
       "phone": "+972 52 329 9097",
       "emergency_24h": false,
       "duty": "Sun 10:00-12:00 and 17:00-19:00, Mon 17:00-19:00, Tue 10:00-12:00, Wed 17:00-19:00, Thu 10:00-12:00 and 17:00-19:00, Fri 10:00-13:30.",
+      "duty_i18n": {
+        "fr": "Dim. 10 h–12 h et 17 h–19 h, lun. 17 h–19 h, mar. 10 h–12 h, mer. 17 h–19 h, jeu. 10 h–12 h et 17 h–19 h, ven. 10 h–13 h 30."
+      },
       "small_animals": true,
       "url": "https://www.vetmarket.co.il/clinics/%D7%97%D7%A0%D7%94-%D7%94%D7%A8%D7%A9%D7%A7%D7%95-%D7%9E%D7%A8%D7%A4%D7%90%D7%94-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA",
       "source_url": "https://www.vetmarket.co.il/clinics/%D7%97%D7%A0%D7%94-%D7%94%D7%A8%D7%A9%D7%A7%D7%95-%D7%9E%D7%A8%D7%A4%D7%90%D7%94-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA",
@@ -622,12 +739,15 @@
       "address": "HaPasifas 2, Be'er Ganim",
       "phone": "+972 50 998 8066",
       "emergency_24h": false,
-      "duty": "Trial opening hours: Sun-Thu 9:00-24:00, Fri 8:00-14:00, Sat by appointment only. Page announces 24/7 availability as coming soon. Serves Ashkelon, Ashdod, Kiryat Malachi and the Gaza envelope.",
+      "duty": "Trial opening hours: Sun-Thu 9:00-24:00, Fri 8:00-14:00, Sat by appointment only. Serves Ashkelon, Ashdod, Kiryat Malachi and the Gaza envelope. Call first.",
+      "duty_i18n": {
+        "fr": "Horaires d’essai : dim.–jeu. 9 h–24 h, ven. 8 h–14 h, sam. sur rendez-vous uniquement. Dessert Ashkelon, Ashdod, Kiryat Malachi et les localités proches de la bande de Gaza. Appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://bgvet.co.il/",
       "source_url": "https://bgvet.co.il/",
       "checked": "2026-11-10",
-      "note": "Hebrew: מרכז חירום וטרינרי באר גנים. Page says partial trial mode 'ולא 24/7', official opening 8.10.26, and 'בקרוב: זמינות 24 שעות'; another section says ready for urgent cases 24/7 (conflict). Re-check later; may become 24 h. Landline on page is garbled."
+      "note": "Hebrew: מרכז חירום וטרינרי באר גנים. Page says partial trial mode 'ולא 24/7', official opening 8.10.26, and 'בקרוב: זמינות 24 שעות'; another section says ready for urgent cases 24/7 (conflict). Re-check later; may become 24 h. Landline on page is garbled. | Moved from duty: Trial opening hours: Sun-Thu 9:00-24:00, Fri 8:00-14:00, Sat by appointment only. Page announces 24/7 availability as coming soon. Serves Ashkelon, Ashdod, Kiryat Malachi and the Gaza envelope."
     },
     {
       "kind": "clinic",
@@ -638,6 +758,9 @@
       "phone": "+972 8 675 0368",
       "emergency_24h": false,
       "duty": "Emergency line: 1-700-722-200 ext. 0. Opening hours not published.",
+      "duty_i18n": {
+        "fr": "Ligne d’urgences : 1-700-722-200 poste 0. Horaires d’ouverture non communiqués."
+      },
       "small_animals": true,
       "url": "https://best-friends.co.il/%D7%9E%D7%A8%D7%A4%D7%90%D7%94-%D7%90%D7%A9%D7%A7%D7%9C%D7%95%D7%9F/",
       "source_url": "https://best-friends.co.il/%D7%9E%D7%A8%D7%A4%D7%90%D7%94-%D7%90%D7%A9%D7%A7%D7%9C%D7%95%D7%9F/",
@@ -653,6 +776,9 @@
       "phone": "+972 77 757 1300",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-20:00, Fri 9:00-14:00; book ahead. Doctors reachable by phone for emergencies at any hour of the day.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–20 h, ven. 9 h–14 h ; prenez rendez-vous. Médecins joignables par téléphone pour les urgences à toute heure."
+      },
       "small_animals": true,
       "url": "https://www.vethanasi.co.il/",
       "source_url": "https://www.vethanasi.co.il/",
@@ -668,6 +794,9 @@
       "phone": "+972 4 870 3773",
       "emergency_24h": true,
       "duty": "Sun-Thu 10:00-12:00 and 17:00-20:00, Fri and holiday eves 10:00-13:00; stated as available 24/7 for emergencies.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 10 h–12 h et 17 h–20 h, ven. et veilles de jours fériés 10 h–13 h ; urgences assurées 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://www.alef-vet.com/",
       "source_url": "https://www.alef-vet.com/",
@@ -683,6 +812,9 @@
       "phone": "+972 4 876 2535",
       "emergency_24h": false,
       "duty": "Sun-Thu 10:00-19:00, Fri and holiday eves 10:00-14:00. Mobile +972 50 761 9364.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 10 h–19 h, ven. et veilles de jours fériés 10 h–14 h. Portable : +972 50 761 9364."
+      },
       "small_animals": true,
       "url": "https://www.nikivet.com/",
       "source_url": "https://www.nikivet.com/",
@@ -698,6 +830,9 @@
       "phone": "+972 4 873 8045",
       "emergency_24h": false,
       "duty": "Sun-Thu 10:00-19:00, Fri 10:00-14:00. Mobile +972 52 261 2445.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 10 h–19 h, ven. 10 h–14 h. Portable : +972 52 261 2445."
+      },
       "small_animals": true,
       "url": "https://zdvet.co.il/",
       "source_url": "https://zdvet.co.il/",
@@ -713,6 +848,9 @@
       "phone": "+972 2 561 0075",
       "emergency_24h": true,
       "duty": "Reception 9:00-22:00; 24-hour emergency service, emergency phone +972 54 806 4848.",
+      "duty_i18n": {
+        "fr": "Accueil 9 h–22 h ; urgences 24 h/24, téléphone d’urgence : +972 54 806 4848."
+      },
       "small_animals": true,
       "url": "https://www.zaarbh.info/",
       "source_url": "https://www.zaarbh.info/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%9E%D7%A8%D7%A4%D7%90%D7%94/",
@@ -728,6 +866,9 @@
       "phone": "+972 2 563 1711",
       "emergency_24h": true,
       "duty": "Sun-Thu 9:00-13:00 and 16:00-19:00; emergency line 24/7: +972 52 370 0076.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h–13 h et 16 h–19 h ; ligne d’urgences 24 h/24, 7 j/7 : +972 52 370 0076."
+      },
       "small_animals": true,
       "url": "https://allher2.wixsite.com/vetsapir",
       "source_url": "https://allher2.wixsite.com/vetsapir",
@@ -743,6 +884,9 @@
       "phone": "+972 2 652 2653",
       "emergency_24h": false,
       "duty": "Sun-Thu 8:30-12:00 and 16:00-19:00, Fri 8:30-12:00. Emergency line: +972 50 639 3578.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 8 h 30–12 h et 16 h–19 h, ven. 8 h 30–12 h. Ligne d’urgences : +972 50 639 3578."
+      },
       "small_animals": true,
       "url": "https://vethakerem.com/",
       "source_url": "https://vethakerem.com/",
@@ -758,6 +902,9 @@
       "phone": "+972 2 645 2425",
       "emergency_24h": false,
       "duty": "Available for emergencies throughout the day and evening, with phone answering at night and on Saturdays. Mobile +972 55 925 2033.",
+      "duty_i18n": {
+        "fr": "Disponible pour les urgences en journée et en soirée ; permanence téléphonique la nuit et le samedi. Portable : +972 55 925 2033."
+      },
       "small_animals": true,
       "url": "https://www.jerusalemveterinaryclinic.com/",
       "source_url": "https://www.jerusalemveterinaryclinic.com/",
@@ -773,6 +920,9 @@
       "phone": "+972 74 709 4082",
       "emergency_24h": false,
       "duty": "Sun-Thu 9:30-20:00, Fri 9:00-14:00. Emergency phone: +972 54 893 9193.",
+      "duty_i18n": {
+        "fr": "Dim.–jeu. 9 h 30–20 h, ven. 9 h–14 h. Téléphone d’urgence : +972 54 893 9193."
+      },
       "small_animals": true,
       "url": "https://www.vetpsagotclinic.co.il/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
       "source_url": "https://www.vetpsagotclinic.co.il/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",

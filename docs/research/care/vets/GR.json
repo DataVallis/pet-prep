@@ -81,7 +81,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu, brez naročanja; redni delovni čas pon–pet 8.30–20.30, sob–ned 9.30–15.30",
         "hr": "Hitni slučajevi 24 sata, 365 dana, bez najave; redovno radno vrijeme pon–pet 8:30–20:30, sub–ned 9:30–15:30",
-        "de": "Notfälle rund um die Uhr an 365 Tagen im Jahr, ohne Termin; reguläre Sprechzeiten Mo–Fr 8:30–20:30 Uhr, Sa–So 9:30–15:30 Uhr"
+        "de": "Notfälle rund um die Uhr an 365 Tagen im Jahr, ohne Termin; reguläre Sprechzeiten Mo–Fr 8:30–20:30 Uhr, Sa–So 9:30–15:30 Uhr",
+        "fr": "Urgences 24 h/24, 365 jours par an, sans rendez-vous ; horaires habituels : lun.–ven. 8 h 30–20 h 30, sam.–dim. 9 h 30–15 h 30"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/en/",
@@ -102,7 +103,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–20.30, sob–ned 8.30–16",
         "hr": "pon–pet 8:30–20:30, sub–ned 8:30–16",
-        "de": "Mo–Fr 08:30–20:30 Uhr, Sa–So 08:30–16:00 Uhr"
+        "de": "Mo–Fr 08:30–20:30 Uhr, Sa–So 08:30–16:00 Uhr",
+        "fr": "Lun.–ven. 8 h 30–20 h 30, sam.–dim. 8 h 30–16 h"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/24%cf%89%cf%81%ce%b7-%ce%ba%cf%84%ce%b7%ce%bd%ce%b9%ce%b1%cf%84%cf%81%ce%b9%ce%ba%ce%ae-%ce%ba%ce%bb%ce%b9%ce%bd%ce%b9%ce%ba%ce%ae/%ce%b1%ce%b8%ce%ae%ce%bd%ce%b1-%ce%ac%ce%bb%ce%b9%ce%bc%ce%bf%cf%82/",
@@ -122,7 +124,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč in hospitalizacija 24 ur na dan, 7 dni v tednu; ambulantni pregledi po dogovoru pon–sob 11–20; druga številka +30 210 664 0553",
         "hr": "Hitni slučajevi i hospitalizacija 24 sata / 7 dana; ambulantni pregledi uz prethodnu najavu pon–sub 11–20; druga linija +30 210 664 0553",
-        "de": "Notfälle und stationäre Aufnahme täglich rund um die Uhr; ambulante Sprechstunde nach Terminvereinbarung Mo–Sa 11:00–20:00 Uhr; zweite Nummer +30 210 664 0553"
+        "de": "Notfälle und stationäre Aufnahme täglich rund um die Uhr; ambulante Sprechstunde nach Terminvereinbarung Mo–Sa 11:00–20:00 Uhr; zweite Nummer +30 210 664 0553",
+        "fr": "Urgences et hospitalisation 24 h/24, 7 j/7 ; consultations sur rendez-vous lun.–sam. 11 h–20 h ; deuxième ligne : +30 210 664 0553"
       },
       "small_animals": true,
       "url": "https://www.attikovet.gr/portal/",
@@ -143,7 +146,8 @@
       "duty_i18n": {
         "sl": "Dežurna služba 24 ur na dan, pon–ned, 365 dni v letu; ambulantni pregledi po dogovoru vsak dan 10–22; nujna pomoč v dežurstvu 22–10, tudi ob praznikih (priporočamo, da vnaprej pokličete); mobilni telefon +30 693 479 1016",
         "hr": "Usluga 24 sata pon–ned, 365 dana; ambulantni pregledi uz prethodnu najavu svaki dan 10–22; hitno dežurstvo 22–10, i blagdanima (poželjno je javiti se unaprijed); mobitel +30 693 479 1016",
-        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr; ambulante Sprechstunde nach Terminvereinbarung täglich 10:00–22:00 Uhr; Notfallbereitschaft 22:00–10:00 Uhr auch feiertags (am besten vorher anrufen); Mobil +30 693 479 1016"
+        "de": "Rund um die Uhr geöffnet, an 365 Tagen im Jahr; ambulante Sprechstunde nach Terminvereinbarung täglich 10:00–22:00 Uhr; Notfallbereitschaft 22:00–10:00 Uhr auch feiertags (am besten vorher anrufen); Mobil +30 693 479 1016",
+        "fr": "Service 24 h/24, 7 j/7, 365 jours par an ; consultations sur rendez-vous tous les jours 10 h–22 h ; permanence d’urgence 22 h–10 h, jours fériés compris (de préférence, appelez avant de venir) ; mobile : +30 693 479 1016"
       },
       "small_animals": true,
       "url": "http://www.vetnet.gr/",
@@ -164,7 +168,8 @@
       "duty_i18n": {
         "sl": "Dežurna služba 24 ur na dan, 365 dni v letu (ista številka tudi za nujne primere); naročanje med tednom 9.30–21, sob 10–14; ob nedeljah in praznikih samo nujna pomoč",
         "hr": "Dežurna služba 24 sata, 365 dana (isti broj za hitne slučajeve); termini radnim danom 9:30–21, sub 10–14; nedjeljom i blagdanima samo hitni slučajevi",
-        "de": "Rund um die Uhr im Dienst, an 365 Tagen im Jahr (dieselbe Nummer für Notfälle); Termine Mo–Fr 9:30–21:00 Uhr, Sa 10:00–14:00 Uhr; sonn- und feiertags nur Notfälle"
+        "de": "Rund um die Uhr im Dienst, an 365 Tagen im Jahr (dieselbe Nummer für Notfälle); Termine Mo–Fr 9:30–21:00 Uhr, Sa 10:00–14:00 Uhr; sonn- und feiertags nur Notfälle",
+        "fr": "De garde 24 h/24, 365 jours par an (même numéro pour les urgences) ; rendez-vous en semaine 9 h 30–21 h, sam. 10 h–14 h ; dim. et jours fériés : urgences uniquement"
       },
       "small_animals": true,
       "url": "https://hospetal.gr/",
@@ -185,7 +190,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč ves dan in noč po telefonskem klicu; redni delovni čas pon–pet 9–13 in 17–20.30, sob 9–17, ned zaprto; druga številka +30 210 813 3574",
         "hr": "Hitni slučajevi danonoćno nakon telefonskog poziva; redovno radno vrijeme pon–pet 9–13 i 17–20:30, sub 9–17, ned zatvoreno; druga linija +30 210 813 3574",
-        "de": "Notfälle rund um die Uhr nach telefonischer Anmeldung; reguläre Sprechzeiten Mo–Fr 09:00–13:00 Uhr und 17:00–20:30 Uhr, Sa 09:00–17:00 Uhr, So geschlossen; zweite Nummer +30 210 813 3574"
+        "de": "Notfälle rund um die Uhr nach telefonischer Anmeldung; reguläre Sprechzeiten Mo–Fr 09:00–13:00 Uhr und 17:00–20:30 Uhr, Sa 09:00–17:00 Uhr, So geschlossen; zweite Nummer +30 210 813 3574",
+        "fr": "Urgences 24 h/24 après appel téléphonique ; horaires habituels : lun.–ven. 9 h–13 h et 17 h–20 h 30, sam. 9 h–17 h, fermé le dimanche ; deuxième ligne : +30 210 813 3574"
       },
       "small_animals": true,
       "url": "https://klinikizoon-modestos.gr/",
@@ -206,7 +212,8 @@
       "duty_i18n": {
         "sl": "Odprto vsak dan 24 ur na dan; obiski hospitaliziranih ljubljenčkov pon–pet 13–15; druga številka +30 210 811 1122",
         "hr": "Otvoreno svaki dan 24/7; posjeti hospitaliziranim ljubimcima pon–pet 13–15; druga linija +30 210 811 1122",
-        "de": "Täglich rund um die Uhr geöffnet; Besuchszeiten für stationär aufgenommene Haustiere Mo–Fr 13:00–15:00 Uhr; zweite Nummer +30 210 811 1122"
+        "de": "Täglich rund um die Uhr geöffnet; Besuchszeiten für stationär aufgenommene Haustiere Mo–Fr 13:00–15:00 Uhr; zweite Nummer +30 210 811 1122",
+        "fr": "Ouvert tous les jours 24 h/24 ; visites aux animaux hospitalisés lun.–ven. 13 h–15 h ; deuxième ligne : +30 210 811 1122"
       },
       "small_animals": true,
       "url": "https://pawsitivevetcare.gr/en/",
@@ -226,7 +233,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–22, sob 9–21, ned 10–19; nujna pomoč 24 ur na dan po telefonu",
         "hr": "pon–pet 9–22, sub 9–21, ned 10–19; hitni slučajevi 24/7 telefonom",
-        "de": "Mo–Fr 09:00–22:00 Uhr, Sa 09:00–21:00 Uhr, So 10:00–19:00 Uhr; Notfälle rund um die Uhr telefonisch"
+        "de": "Mo–Fr 09:00–22:00 Uhr, Sa 09:00–21:00 Uhr, So 10:00–19:00 Uhr; Notfälle rund um die Uhr telefonisch",
+        "fr": "Lun.–ven. 9 h–22 h, sam. 9 h–21 h, dim. 10 h–19 h ; urgences 24 h/24, 7 j/7 par téléphone"
       },
       "small_animals": true,
       "url": "https://athensvetclinic.gr/",
@@ -247,7 +255,8 @@
       "duty_i18n": {
         "sl": "Po dogovoru pon, tor, čet, pet 11–14 in 18–21; telefonski stik za nujne primere 24 ur na dan; mobilni telefon +30 697 399 0134",
         "hr": "Uz prethodnu najavu pon, uto, čet, pet 11–14 i 18–21; telefonski kontakt za hitne slučajeve 24 sata; mobitel +30 697 399 0134",
-        "de": "Nach Terminvereinbarung Mo, Di, Do, Fr 11:00–14:00 Uhr und 18:00–21:00 Uhr; telefonisch rund um die Uhr für Notfälle erreichbar; Mobil +30 697 399 0134"
+        "de": "Nach Terminvereinbarung Mo, Di, Do, Fr 11:00–14:00 Uhr und 18:00–21:00 Uhr; telefonisch rund um die Uhr für Notfälle erreichbar; Mobil +30 697 399 0134",
+        "fr": "Sur rendez-vous lun., mar., jeu., ven. 11 h–14 h et 18 h–21 h ; urgences joignables par téléphone 24 h/24 ; mobile : +30 697 399 0134"
       },
       "small_animals": true,
       "url": "https://www.medicanimal.gr/",
@@ -267,7 +276,8 @@
       "duty": "7 days a week",
       "duty_i18n": {
         "hr": "7 dana u tjednu",
-        "de": "Täglich geöffnet"
+        "de": "Täglich geöffnet",
+        "fr": "Ouvert 7 j/7"
       },
       "small_animals": true,
       "url": "https://vetproject.gr/",
@@ -287,7 +297,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–13 in 17–20, sob 10–13, ned zaprto",
         "hr": "pon–pet 10–13 i 17–20, sub 10–13, ned zatvoreno",
-        "de": "Mo–Fr 10:00–13:00 Uhr und 17:00–20:00 Uhr, Sa 10:00–13:00 Uhr, So geschlossen"
+        "de": "Mo–Fr 10:00–13:00 Uhr und 17:00–20:00 Uhr, Sa 10:00–13:00 Uhr, So geschlossen",
+        "fr": "Lun.–ven. 10 h–13 h et 17 h–20 h, sam. 10 h–13 h, fermé le dimanche"
       },
       "small_animals": true,
       "url": "https://vetid.gr/",
@@ -307,7 +318,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–14 in 17.30–20, sob 10–13, ned zaprto",
         "hr": "pon–pet 10–14 i 17:30–20, sub 10–13, ned zatvoreno",
-        "de": "Mo–Fr 10:00–14:00 Uhr und 17:30–20:00 Uhr, Sa 10:00–13:00 Uhr, So geschlossen"
+        "de": "Mo–Fr 10:00–14:00 Uhr und 17:30–20:00 Uhr, Sa 10:00–13:00 Uhr, So geschlossen",
+        "fr": "Lun.–ven. 10 h–14 h et 17 h 30–20 h, sam. 10 h–13 h, fermé le dimanche"
       },
       "small_animals": true,
       "url": "https://www.thepetclinic.gr/",
@@ -326,7 +338,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri brez naročanja: med tednom 14–9 naslednji dan, ob vikendih in praznikih 24 ur na dan; ambulantni pregledi pon–pet 9–12 (cepljenja ob petkih); telefon za naročanje 9.30–14.30",
         "hr": "Hitni slučajevi bez najave: radnim danom 14–9 sljedećeg dana, vikendom i blagdanima 24 sata; ambulantni pregledi pon–pet 9–12 (cijepljenje petkom); telefon za termine 9:30–14:30",
-        "de": "Notfälle ohne Termin: Mo–Fr 14:00 bis 9:00 Uhr am Folgetag, an Wochenenden und Feiertagen rund um die Uhr; ambulante Sprechstunde Mo–Fr 9:00–12:00 Uhr (Impfungen am Fr); telefonische Terminvergabe 9:30–14:30 Uhr"
+        "de": "Notfälle ohne Termin: Mo–Fr 14:00 bis 9:00 Uhr am Folgetag, an Wochenenden und Feiertagen rund um die Uhr; ambulante Sprechstunde Mo–Fr 9:00–12:00 Uhr (Impfungen am Fr); telefonische Terminvergabe 9:30–14:30 Uhr",
+        "fr": "Urgences sans rendez-vous : en semaine de 14 h à 9 h le lendemain, 24 h/24 le week-end et les jours fériés ; consultations lun.–ven. 9 h–12 h (vaccinations le vendredi) ; prise de rendez-vous par téléphone 9 h 30–14 h 30"
       },
       "small_animals": true,
       "url": "https://vet.auth.gr/en/information/instructions-for-the-public/",
@@ -346,7 +359,8 @@
       "duty_i18n": {
         "sl": "Deluje 24 ur na dan; nujni primeri ob vsaki uri po predhodnem klicu; naročanje 9–21",
         "hr": "Radi 24 sata; hitni slučajevi u bilo koje doba nakon prethodnog poziva; termini 9–21",
-        "de": "Rund um die Uhr in Betrieb; Notfälle jederzeit nach vorherigem Anruf; Termine 9:00–21:00 Uhr"
+        "de": "Rund um die Uhr in Betrieb; Notfälle jederzeit nach vorherigem Anruf; Termine 9:00–21:00 Uhr",
+        "fr": "Ouvert 24 h/24 ; urgences à toute heure après appel préalable ; rendez-vous 9 h–21 h"
       },
       "small_animals": true,
       "url": "https://agiosmodestos.gr/",
@@ -366,7 +380,8 @@
       "duty_i18n": {
         "sl": "pon–ned 24 ur na dan, 365 dni v letu",
         "hr": "pon–ned 24 sata, 365 dana",
-        "de": "Täglich rund um die Uhr, 365 Tage im Jahr"
+        "de": "Täglich rund um die Uhr, 365 Tage im Jahr",
+        "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an"
       },
       "small_animals": true,
       "url": "https://www.vet-hospital.net/",
@@ -386,7 +401,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere 24 ur na dan +30 2392 073 751; glavna številka +30 23924 40080 (pon–pet 8.30–20.30)",
         "hr": "Linija za hitne slučajeve 24 sata +30 2392 073 751; glavna linija +30 23924 40080 (pon–pet 8:30–20:30)",
-        "de": "24-Stunden-Notfalltelefon +30 2392 073 751; Hauptnummer +30 23924 40080 (Mo–Fr 8.30–20.30 Uhr)"
+        "de": "24-Stunden-Notfalltelefon +30 2392 073 751; Hauptnummer +30 23924 40080 (Mo–Fr 8.30–20.30 Uhr)",
+        "fr": "Ligne d’urgence 24 h/24 : +30 2392 073 751 ; ligne principale : +30 23924 40080 (lun.–ven. 8 h 30–20 h 30)"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/24%cf%89%cf%81%ce%b7-%ce%ba%cf%84%ce%b7%ce%bd%ce%b9%ce%b1%cf%84%cf%81%ce%b9%ce%ba%ce%ae-%ce%ba%ce%bb%ce%b9%ce%bd%ce%b9%ce%ba%ce%ae/%ce%b8%ce%b5%cf%83%cf%83%ce%b1%ce%bb%ce%bf%ce%bd%ce%af%ce%ba%ce%b7/",
@@ -407,7 +423,8 @@
       "duty_i18n": {
         "sl": "Med tednom 8–21 naročanje in nujni primeri, 21–8 samo nujni primeri; ob vikendih samo nujni primeri; mobilni telefon +30 693 611 9192",
         "hr": "Radnim danom 8–21 termini i hitni slučajevi, 21–8 samo hitni slučajevi; vikendom samo hitni slučajevi; mobitel +30 693 611 9192",
-        "de": "Mo–Fr 8–21 Uhr Termine und Notfälle, 21–8 Uhr nur Notfälle; am Wochenende nur Notfälle; Mobil +30 693 611 9192"
+        "de": "Mo–Fr 8–21 Uhr Termine und Notfälle, 21–8 Uhr nur Notfälle; am Wochenende nur Notfälle; Mobil +30 693 611 9192",
+        "fr": "En semaine 8 h–21 h rendez-vous et urgences, 21 h–8 h urgences uniquement ; week-end urgences uniquement ; mobile : +30 693 611 9192"
       },
       "small_animals": true,
       "url": "https://www.agathangelidis.gr/",
@@ -427,7 +444,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan; mobilni telefon za nujne primere +30 695 550 8522 (tudi +30 694 289 8065); dežurni veterinar vas pričaka ob prihodu",
         "hr": "Hitni slučajevi 24 sata; mobitel za hitne slučajeve +30 695 550 8522 (i +30 694 289 8065); dežurni veterinar dočekat će te po dolasku",
-        "de": "Notdienst rund um die Uhr; Notfall-Mobilnummer +30 695 550 8522 (auch +30 694 289 8065); der diensthabende Tierarzt empfängt Sie bei Ihrer Ankunft"
+        "de": "Notdienst rund um die Uhr; Notfall-Mobilnummer +30 695 550 8522 (auch +30 694 289 8065); der diensthabende Tierarzt empfängt Sie bei Ihrer Ankunft",
+        "fr": "Urgences 24 h/24 ; mobile d’urgence : +30 695 550 8522 (ou +30 694 289 8065) ; le vétérinaire de garde vous accueille à votre arrivée"
       },
       "small_animals": true,
       "url": "https://ktiniatreio.net/",
@@ -447,7 +465,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan na +30 698 129 0095; splošne informacije +30 24210 57811 (pon–pet 8–21, sob 10–14)",
         "hr": "Hitni slučajevi 24 sata na +30 698 129 0095; opće informacije +30 24210 57811 (pon–pet 8–21, sub 10–14)",
-        "de": "Notdienst rund um die Uhr unter +30 698 129 0095; allgemeine Auskünfte +30 24210 57811 (Mo–Fr 8–21 Uhr, Sa 10–14 Uhr)"
+        "de": "Notdienst rund um die Uhr unter +30 698 129 0095; allgemeine Auskünfte +30 24210 57811 (Mo–Fr 8–21 Uhr, Sa 10–14 Uhr)",
+        "fr": "Urgences 24 h/24 au +30 698 129 0095 ; renseignements : +30 24210 57811 (lun.–ven. 8 h–21 h, sam. 10 h–14 h)"
       },
       "small_animals": true,
       "url": "https://volosvetspecialists.gr/en/",
@@ -467,7 +486,8 @@
       "duty": "Mobile +30 697 933 9460",
       "duty_i18n": {
         "hr": "Mobitel +30 697 933 9460",
-        "de": "Mobil +30 697 933 9460"
+        "de": "Mobil +30 697 933 9460",
+        "fr": "Mobile : +30 697 933 9460"
       },
       "small_animals": true,
       "url": "https://www.animalshealth.gr/",
@@ -487,7 +507,8 @@
       "duty_i18n": {
         "sl": "pon, sre, pet 9–14 in 17.30–21; tor, čet 9–14; sob–ned po dogovoru",
         "hr": "pon, sri, pet 9–14 i 17:30–21; uto, čet 9–14; sub–ned uz prethodnu najavu",
-        "de": "Mo, Mi, Fr 9–14 und 17.30–21 Uhr; Di, Do 9–14 Uhr; Sa–So nach Terminvereinbarung"
+        "de": "Mo, Mi, Fr 9–14 und 17.30–21 Uhr; Di, Do 9–14 Uhr; Sa–So nach Terminvereinbarung",
+        "fr": "Lun., mer., ven. 9 h–14 h et 17 h 30–21 h ; mar., jeu. 9 h–14 h ; sam.–dim. sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://kogiannisvet.gr/el/ktiniatriko-kentro-larisa-ktiniatros",
@@ -507,7 +528,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–14 in 18–21, sob 10–13, ned zaprto",
         "hr": "pon–pet 10–14 i 18–21, sub 10–13, ned zatvoreno",
-        "de": "Mo–Fr 10–14 und 18–21 Uhr, Sa 10–13 Uhr, So geschlossen"
+        "de": "Mo–Fr 10–14 und 18–21 Uhr, Sa 10–13 Uhr, So geschlossen",
+        "fr": "Lun.–ven. 10 h–14 h et 18 h–21 h, sam. 10 h–13 h, fermé le dimanche"
       },
       "small_animals": true,
       "url": "https://www.larissavet.gr/",
@@ -526,7 +548,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9.30–13.30 (popoldne še tor, čet, pet 17.30–20.30), sob 9.30–13.30; nujna pomoč 24 ur na dan po telefonskem klicu (klici se preusmerijo na dežurnega veterinarja)",
         "hr": "pon–pet 9:30–13:30 (uto, čet i pet i poslijepodne 17:30–20:30), sub 9:30–13:30; hitni slučajevi 24/7 nakon telefonskog poziva (pozivi se preusmjeravaju dežurnom veterinaru)",
-        "de": "Mo–Fr 9.30–13.30 Uhr (zusätzlich Di, Do, Fr nachmittags 17.30–20.30 Uhr), Sa 9.30–13.30 Uhr; Notfälle rund um die Uhr nach telefonischer Anmeldung (Anrufe werden an den diensthabenden Tierarzt weitergeleitet)"
+        "de": "Mo–Fr 9.30–13.30 Uhr (zusätzlich Di, Do, Fr nachmittags 17.30–20.30 Uhr), Sa 9.30–13.30 Uhr; Notfälle rund um die Uhr nach telefonischer Anmeldung (Anrufe werden an den diensthabenden Tierarzt weitergeleitet)",
+        "fr": "Lun.–ven. 9 h 30–13 h 30 (et l’après-midi mar., jeu., ven. 17 h 30–20 h 30), sam. 9 h 30–13 h 30 ; urgences 24 h/24, 7 j/7 après appel téléphonique (les appels sont transférés au vétérinaire de garde)"
       },
       "small_animals": true,
       "url": "https://animalmedpatras.gr/",
@@ -546,7 +569,8 @@
       "duty": "Mobile +30 698 589 8242",
       "duty_i18n": {
         "hr": "Mobitel +30 698 589 8242",
-        "de": "Mobil +30 698 589 8242"
+        "de": "Mobil +30 698 589 8242",
+        "fr": "Mobile : +30 698 589 8242"
       },
       "small_animals": true,
       "url": "https://giotopoulosvet.gr/",
@@ -566,7 +590,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–20, sob 10–14, ned zaprto; telefonska triaža nujnih primerov 24 ur na dan (brez posebne številke)",
         "hr": "pon–pet 9–20, sub 10–14, ned zatvoreno; telefonska trijaža za hitne slučajeve 24/7 (bez zasebnog broja)",
-        "de": "Mo–Fr 9–20 Uhr, Sa 10–14 Uhr, So geschlossen; telefonische Notfall-Ersteinschätzung rund um die Uhr (keine eigene Rufnummer)"
+        "de": "Mo–Fr 9–20 Uhr, Sa 10–14 Uhr, So geschlossen; telefonische Notfall-Ersteinschätzung rund um die Uhr (keine eigene Rufnummer)",
+        "fr": "Lun.–ven. 9 h–20 h, sam. 10 h–14 h, fermé le dimanche ; tri téléphonique des urgences 24 h/24, 7 j/7 (sans numéro dédié)"
       },
       "small_animals": true,
       "url": "https://www.siriusvetschania.gr/",
@@ -586,7 +611,8 @@
       "duty_i18n": {
         "sl": "pon, sre, čet 9–13 in 18–20; tor, pet 9–16; po dogovoru, razen v nujnih primerih",
         "hr": "pon, sri, čet 9–13 i 18–20; uto, pet 9–16; uz prethodnu najavu, osim hitnih slučajeva",
-        "de": "Mo, Mi, Do 9–13 und 18–20 Uhr; Di, Fr 9–16 Uhr; nur nach Terminvereinbarung, außer bei Notfällen"
+        "de": "Mo, Mi, Do 9–13 und 18–20 Uhr; Di, Fr 9–16 Uhr; nur nach Terminvereinbarung, außer bei Notfällen",
+        "fr": "Lun., mer., jeu. 9 h–13 h et 18 h–20 h ; mar., ven. 9 h–16 h ; sur rendez-vous, sauf urgences"
       },
       "small_animals": true,
       "url": "https://www.chaniavet.gr/?lang=en",
@@ -604,7 +630,8 @@
       "duty_i18n": {
         "sl": "Ob vikendih: sob 17.30–20.30, ned 10.30–13.30 in 17.30–20.30 (izmenično dežurstvo zasebnih veterinarjev zunaj rednega delovnega časa)",
         "hr": "Vikendom: sub 17:30–20:30, ned 10:30–13:30 i 17:30–20:30 (privatni veterinari dežuraju po rotaciji izvan redovnog radnog vremena)",
-        "de": "Am Wochenende: Sa 17.30–20.30 Uhr, So 10.30–13.30 und 17.30–20.30 Uhr (Bereitschaft privater Tierärzte außerhalb der regulären Zeiten)"
+        "de": "Am Wochenende: Sa 17.30–20.30 Uhr, So 10.30–13.30 und 17.30–20.30 Uhr (Bereitschaft privater Tierärzte außerhalb der regulären Zeiten)",
+        "fr": "Week-end : sam. 17 h 30–20 h 30, dim. 10 h 30–13 h 30 et 17 h 30–20 h 30 (tour de garde des vétérinaires libéraux en dehors des heures d’ouverture)"
       },
       "small_animals": true,
       "url": "https://www.catspyjamas.org/organisations-vets/",
@@ -623,7 +650,8 @@
       "duty": "Emergencies via a special number given by the secretariat; mobile unit for home care",
       "duty_i18n": {
         "hr": "Hitni slučajevi preko posebnog broja koji daje tajništvo; mobilna jedinica za skrb kod kuće",
-        "de": "Notfälle über eine besondere Nummer, die das Sekretariat mitteilt; mobiler Dienst für Hausbesuche"
+        "de": "Notfälle über eine besondere Nummer, die das Sekretariat mitteilt; mobiler Dienst für Hausbesuche",
+        "fr": "Urgences via un numéro spécial communiqué par le secrétariat ; unité mobile pour les soins à domicile"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -644,7 +672,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9.30–14.30; pon, sre, pet tudi 17.30–20.30",
         "hr": "pon–pet 9:30–14:30; pon, sri, pet još i 17:30–20:30",
-        "de": "Mo–Fr 9.30–14.30 Uhr; Mo, Mi, Fr auch 17.30–20.30 Uhr"
+        "de": "Mo–Fr 9.30–14.30 Uhr; Mo, Mi, Fr auch 17.30–20.30 Uhr",
+        "fr": "Lun.–ven. 9 h 30–14 h 30 ; lun., mer., ven. également 17 h 30–20 h 30"
       },
       "small_animals": true,
       "url": "https://www.markakivet.gr/en/",
@@ -661,7 +690,8 @@
       "duty": "Mobile +30 698 239 2556",
       "duty_i18n": {
         "hr": "Mobitel +30 698 239 2556",
-        "de": "Mobil +30 698 239 2556"
+        "de": "Mobil +30 698 239 2556",
+        "fr": "Mobile : +30 698 239 2556"
       },
       "small_animals": true,
       "url": "https://pet-med.gr/en/",
@@ -680,7 +710,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa in nujni primeri",
         "hr": "Izvan radnog vremena i hitni slučajevi",
-        "de": "Außerhalb der Sprechzeiten und für Notfälle"
+        "de": "Außerhalb der Sprechzeiten und für Notfälle",
+        "fr": "En dehors des heures d’ouverture et pour les urgences"
       },
       "small_animals": true,
       "url": "http://www.crete4animals.gr/?page_id=799",
@@ -700,7 +731,8 @@
       "duty_i18n": {
         "sl": "Klinika pon–pet 8–21, sob 9–17, ned 10–18; nujna pomoč 24 ur na dan; mobilni telefon +30 693 725 2802",
         "hr": "Klinika pon–pet 8–21, sub 9–17, ned 10–18; hitni slučajevi 24 sata; mobitel +30 693 725 2802",
-        "de": "Klinik Mo–Fr 8–21 Uhr, Sa 9–17 Uhr, So 10–18 Uhr; Notdienst rund um die Uhr; Mobil +30 693 725 2802"
+        "de": "Klinik Mo–Fr 8–21 Uhr, Sa 9–17 Uhr, So 10–18 Uhr; Notdienst rund um die Uhr; Mobil +30 693 725 2802",
+        "fr": "Clinique lun.–ven. 8 h–21 h, sam. 9 h–17 h, dim. 10 h–18 h ; urgences 24 h/24 ; mobile : +30 693 725 2802"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/%CE%B5%CF%80%CE%B9%CE%BA%CE%BF%CE%B9%CE%BD%CF%89%CE%BD%CE%AF%CE%B1/",
@@ -721,7 +753,8 @@
       "duty_i18n": {
         "sl": "Vsak dan 8.30–14 in 17–20 (poleti 17.30–20.30); ob sredah in sobotah popoldne zaprto; ned zaprto; mobilni telefon +30 694 585 3577",
         "hr": "Svaki dan 8:30–14 i 17–20 (ljeti 17:30–20:30); srijedom i subotom poslijepodne zatvoreno; ned zatvoreno; mobitel +30 694 585 3577",
-        "de": "Täglich 8.30–14 und 17–20 Uhr (im Sommer 17.30–20.30 Uhr); Mi- und Sa-Nachmittag geschlossen; So geschlossen; Mobil +30 694 585 3577"
+        "de": "Täglich 8.30–14 und 17–20 Uhr (im Sommer 17.30–20.30 Uhr); Mi- und Sa-Nachmittag geschlossen; So geschlossen; Mobil +30 694 585 3577",
+        "fr": "Tous les jours 8 h 30–14 h et 17 h–20 h (en été 17 h 30–20 h 30) ; fermé le mercredi et le samedi après-midi ; fermé le dimanche ; mobile : +30 694 585 3577"
       },
       "small_animals": true,
       "url": "https://www.vet-center.gr/",
@@ -739,7 +772,8 @@
       "duty": "'Emergency Call' +30 694 825 8149; branches Koskinou (5th km Rhodes–Lindos road, +30 2241 181349) and Kiotari (+30 2244 042191); visiting vet on Symi, Nisyros, Tilos, Chalki, Kastellorizo",
       "duty_i18n": {
         "hr": "„Emergency Call“ +30 694 825 8149; podružnice Koskinou (5. km ceste Rodos–Lindos, +30 2241 181349) i Kiotari (+30 2244 042191); veterinar posjećuje Symi, Nisyros, Tilos, Chalki i Kastellorizo",
-        "de": "„Emergency Call“ +30 694 825 8149; Filialen Koskinou (km 5 der Straße Rhodos–Lindos, +30 2241 181349) und Kiotari (+30 2244 042191); Tierarztbesuche auf Symi, Nisyros, Tilos, Chalki und Kastellorizo"
+        "de": "„Emergency Call“ +30 694 825 8149; Filialen Koskinou (km 5 der Straße Rhodos–Lindos, +30 2241 181349) und Kiotari (+30 2244 042191); Tierarztbesuche auf Symi, Nisyros, Tilos, Chalki und Kastellorizo",
+        "fr": "Ligne d’urgence « Emergency Call » : +30 694 825 8149 ; cliniques de Koskinou (5e km de la route Rhodes–Lindos, +30 2241 181349) et de Kiotari (+30 2244 042191) ; vétérinaire itinérant à Symi, Nisyros, Tilos, Chalki et Kastellorizo"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -759,7 +793,8 @@
       "duty_i18n": {
         "sl": "pon, tor, čet, pet 10–13.30 in 17–20; sre 10–15; sob zaprto",
         "hr": "pon, uto, čet, pet 10–13:30 i 17–20; sri 10–15; sub zatvoreno",
-        "de": "Mo, Di, Do, Fr 10–13.30 und 17–20 Uhr; Mi 10–15 Uhr; Sa geschlossen"
+        "de": "Mo, Di, Do, Fr 10–13.30 und 17–20 Uhr; Mi 10–15 Uhr; Sa geschlossen",
+        "fr": "Lun., mar., jeu., ven. 10 h–13 h 30 et 17 h–20 h ; mer. 10 h–15 h ; fermé le samedi"
       },
       "small_animals": true,
       "url": "https://santorinivet.com/?lang=en",
@@ -777,7 +812,8 @@
       "duty": "Walk-ins accepted; emergencies +30 694 437 2535",
       "duty_i18n": {
         "hr": "Prima i bez najave; hitni slučajevi +30 694 437 2535",
-        "de": "Ohne Termin möglich; Notfälle +30 694 437 2535"
+        "de": "Ohne Termin möglich; Notfälle +30 694 437 2535",
+        "fr": "Accueil sans rendez-vous ; urgences : +30 694 437 2535"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -798,7 +834,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–14 in 18–20, sob 9–14; mobilni telefon veterinarja +30 698 744 4691",
         "hr": "pon–pet 9–14 i 18–20, sub 9–14; mobitel veterinara +30 698 744 4691",
-        "de": "Mo–Fr 9–14 und 18–20 Uhr, Sa 9–14 Uhr; Mobiltelefon des Tierarztes +30 698 744 4691"
+        "de": "Mo–Fr 9–14 und 18–20 Uhr, Sa 9–14 Uhr; Mobiltelefon des Tierarztes +30 698 744 4691",
+        "fr": "Lun.–ven. 9 h–14 h et 18 h–20 h, sam. 9 h–14 h ; mobile du vétérinaire : +30 698 744 4691"
       },
       "small_animals": true,
       "url": "https://www.vetandgroomer.com/en",
@@ -817,7 +854,8 @@
       "duty_i18n": {
         "sl": "Vsak dan 9–15, poleg tega tor, čet, pet 18–21; ned zaprto; nujni primeri: mobilni telefon veterinarja +30 694 427 8947",
         "hr": "Svaki dan 9–15, uz to uto, čet, pet 18–21; ned zatvoreno; hitni slučajevi: mobitel veterinara +30 694 427 8947",
-        "de": "Täglich 9–15 Uhr, zusätzlich Di, Do, Fr 18–21 Uhr; So geschlossen; Notfälle: Mobiltelefon des Tierarztes +30 694 427 8947"
+        "de": "Täglich 9–15 Uhr, zusätzlich Di, Do, Fr 18–21 Uhr; So geschlossen; Notfälle: Mobiltelefon des Tierarztes +30 694 427 8947",
+        "fr": "Tous les jours 9 h–15 h, ainsi que mar., jeu., ven. 18 h–21 h ; fermé le dimanche ; urgences : mobile du vétérinaire +30 694 427 8947"
       },
       "small_animals": true,
       "url": "https://www.vet-naxos-vassalakis.gr/en",
@@ -835,7 +873,8 @@
       "duty": "Flexible schedule",
       "duty_i18n": {
         "hr": "Fleksibilno radno vrijeme",
-        "de": "Flexible Öffnungszeiten"
+        "de": "Flexible Öffnungszeiten",
+        "fr": "Horaires flexibles"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -855,7 +894,8 @@
       "duty_i18n": {
         "sl": "Po dogovoru: pon, sre, pet 9.30–14; tor, čet 9.30–13.30 in 16.30–18; sob 10–13",
         "hr": "Uz prethodnu najavu: pon, sri, pet 9:30–14; uto, čet 9:30–13:30 i 16:30–18; sub 10–13",
-        "de": "Nach Terminvereinbarung: Mo, Mi, Fr 9.30–14 Uhr; Di, Do 9.30–13.30 und 16.30–18 Uhr; Sa 10–13 Uhr"
+        "de": "Nach Terminvereinbarung: Mo, Mi, Fr 9.30–14 Uhr; Di, Do 9.30–13.30 und 16.30–18 Uhr; Sa 10–13 Uhr",
+        "fr": "Sur rendez-vous : lun., mer., ven. 9 h 30–14 h ; mar., jeu. 9 h 30–13 h 30 et 16 h 30–18 h ; sam. 10 h–13 h"
       },
       "small_animals": true,
       "url": "https://www.corfuanimalclinic.com/",
@@ -888,7 +928,8 @@
       "duty": "Also +30 26950 45155, mobile +30 694 492 0878",
       "duty_i18n": {
         "hr": "Također +30 26950 45155, mobitel +30 694 492 0878",
-        "de": "Außerdem +30 26950 45155, Mobil +30 694 492 0878"
+        "de": "Außerdem +30 26950 45155, Mobil +30 694 492 0878",
+        "fr": "Autre numéro : +30 26950 45155, mobile : +30 694 492 0878"
       },
       "small_animals": true,
       "url": "https://animalzante.gr/en_veterinary.php",
@@ -908,7 +949,8 @@
       "duty": "For emergencies call the landline and press 8 after the recorded message; mobile +30 697 673 4239",
       "duty_i18n": {
         "hr": "Za hitne slučajeve nazovi fiksni broj i nakon snimljene poruke pritisni 8; mobitel +30 697 673 4239",
-        "de": "Bei Notfällen die Festnetznummer anrufen und nach der Ansage die 8 drücken; Mobil +30 697 673 4239"
+        "de": "Bei Notfällen die Festnetznummer anrufen und nach der Ansage die 8 drücken; Mobil +30 697 673 4239",
+        "fr": "Pour les urgences, appelez le fixe et tapez 8 après le message enregistré ; mobile : +30 697 673 4239"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -929,7 +971,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–21; nujni primeri se po telefonskem klicu sprejmejo prednostno",
         "hr": "pon–pet 9–21; hitni slučajevi primaju se prioritetno nakon telefonskog poziva",
-        "de": "Mo–Fr 9–21 Uhr; dringende Fälle werden nach telefonischer Anmeldung bevorzugt behandelt"
+        "de": "Mo–Fr 9–21 Uhr; dringende Fälle werden nach telefonischer Anmeldung bevorzugt behandelt",
+        "fr": "Lun.–ven. 9 h–21 h ; cas urgents pris en charge en priorité après appel téléphonique"
       },
       "small_animals": true,
       "url": "https://www.ktiniatros-alexandroupoli.gr/",
@@ -948,7 +991,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–14 in 18–21, sob 9–13; mobilni telefon +30 697 931 3388",
         "hr": "pon–pet 9–14 i 18–21, sub 9–13; mobitel +30 697 931 3388",
-        "de": "Mo–Fr 9–14 und 18–21 Uhr, Sa 9–13 Uhr; Mobil +30 697 931 3388"
+        "de": "Mo–Fr 9–14 und 18–21 Uhr, Sa 9–13 Uhr; Mobil +30 697 931 3388",
+        "fr": "Lun.–ven. 9 h–14 h et 18 h–21 h, sam. 9 h–13 h ; mobile : +30 697 931 3388"
       },
       "small_animals": true,
       "url": "https://www.kalamatavet.gr/",
@@ -968,7 +1012,8 @@
       "duty_i18n": {
         "sl": "pon–sre, pet 10–18; čet, sob 10–14; ned zaprto; večinoma po dogovoru",
         "hr": "pon–sri i pet 10–18; čet, sub 10–14; ned zatvoreno; uglavnom uz prethodnu najavu",
-        "de": "Mo–Mi, Fr 10–18 Uhr; Do, Sa 10–14 Uhr; So geschlossen; überwiegend nach Terminvereinbarung"
+        "de": "Mo–Mi, Fr 10–18 Uhr; Do, Sa 10–14 Uhr; So geschlossen; überwiegend nach Terminvereinbarung",
+        "fr": "Lun.–mer., ven. 10 h–18 h ; jeu., sam. 10 h–14 h ; fermé le dimanche ; principalement sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://veterinary.gr/en/home-english/",
@@ -988,7 +1033,8 @@
       "duty_i18n": {
         "sl": "pon, tor, čet, pet 9.30–14.30 in 18–21; sre 9.30–15.30; sob 10–14; ned zaprto; mobilni telefon +30 693 856 0601",
         "hr": "pon, uto, čet, pet 9:30–14:30 i 18–21; sri 9:30–15:30; sub 10–14; ned zatvoreno; mobitel +30 693 856 0601",
-        "de": "Mo, Di, Do, Fr 9.30–14.30 und 18–21 Uhr; Mi 9.30–15.30 Uhr; Sa 10–14 Uhr; So geschlossen; Mobil +30 693 856 0601"
+        "de": "Mo, Di, Do, Fr 9.30–14.30 und 18–21 Uhr; Mi 9.30–15.30 Uhr; Sa 10–14 Uhr; So geschlossen; Mobil +30 693 856 0601",
+        "fr": "Lun., mar., jeu., ven. 9 h 30–14 h 30 et 18 h–21 h ; mer. 9 h 30–15 h 30 ; sam. 10 h–14 h ; fermé le dimanche ; mobile : +30 693 856 0601"
       },
       "small_animals": true,
       "url": "https://petiatrico.gr/",
@@ -1006,7 +1052,8 @@
       "duty": "Weekdays roughly 9:00–18:00, Sat partly; call to confirm hours",
       "duty_i18n": {
         "hr": "Radnim danom otprilike 9–18, subotom djelomično; nazovi i provjeri radno vrijeme",
-        "de": "Mo–Fr etwa 9–18 Uhr, Sa teilweise; Öffnungszeiten bitte telefonisch bestätigen"
+        "de": "Mo–Fr etwa 9–18 Uhr, Sa teilweise; Öffnungszeiten bitte telefonisch bestätigen",
+        "fr": "En semaine environ 9 h–18 h, le samedi en partie ; appelez pour confirmer les horaires"
       },
       "small_animals": true,
       "url": "https://ygeiavet.gr/",
@@ -1026,7 +1073,8 @@
       "duty_i18n": {
         "sl": "Vsak dan 8–21, po dogovoru",
         "hr": "Svaki dan 8–21, uz prethodnu najavu",
-        "de": "Täglich 8–21 Uhr, nach Terminvereinbarung"
+        "de": "Täglich 8–21 Uhr, nach Terminvereinbarung",
+        "fr": "Tous les jours 8 h–21 h, sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://aegeanvetcare.com/",
@@ -1045,7 +1093,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; od 0 do 9 pred prihodom pokličite",
         "hr": "Hitni slučajevi 24 sata, 365 dana; od 00:00 do 9:00 nazovi prije dolaska",
-        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; 0–9 Uhr bitte vor dem Kommen anrufen"
+        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; 0–9 Uhr bitte vor dem Kommen anrufen",
+        "fr": "Urgences 24 h/24, 365 jours par an ; de 0 h à 9 h, appelez avant de venir"
       },
       "small_animals": true,
       "url": "https://kkg.gr/",
@@ -1066,7 +1115,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, tudi ob nedeljah in praznikih; pregledi pon, sre, sob 10–13, tor, čet, pet 17.30–20",
         "hr": "Hitni slučajevi 24 sata, uključujući nedjelje i blagdane; pregledi pon/sri/sub 10–13, uto/čet/pet 17:30–20",
-        "de": "Notdienst rund um die Uhr, auch sonn- und feiertags; Sprechstunden Mo/Mi/Sa 10–13 Uhr, Di/Do/Fr 17.30–20 Uhr"
+        "de": "Notdienst rund um die Uhr, auch sonn- und feiertags; Sprechstunden Mo/Mi/Sa 10–13 Uhr, Di/Do/Fr 17.30–20 Uhr",
+        "fr": "Urgences 24 h/24, dimanches et jours fériés compris ; consultations lun./mer./sam. 10 h–13 h, mar./jeu./ven. 17 h 30–20 h"
       },
       "small_animals": true,
       "url": "https://www.mantakas.gr/",
@@ -1086,7 +1136,8 @@
       "duty_i18n": {
         "sl": "24 ur na dan",
         "hr": "24 sata",
-        "de": "Rund um die Uhr"
+        "de": "Rund um die Uhr",
+        "fr": "24 h/24"
       },
       "small_animals": true,
       "url": "https://pet-clinic.gr/",
@@ -1107,7 +1158,8 @@
       "duty_i18n": {
         "sl": "Vsak dan 9–22; ob drugih urah dežurni veterinar",
         "hr": "Svaki dan 9–22; ostatak dana dežurni veterinar",
-        "de": "Täglich 9–22 Uhr; in der übrigen Zeit Bereitschaftsdienst"
+        "de": "Täglich 9–22 Uhr; in der übrigen Zeit Bereitschaftsdienst",
+        "fr": "Tous les jours 9 h–22 h ; vétérinaire d’astreinte le reste du temps"
       },
       "small_animals": true,
       "url": "https://pet-clinic.gr/",
@@ -1141,7 +1193,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–21, sob 10–18; zunaj delovnega časa dežurna številka +30 694 799 3873",
         "hr": "pon–pet 9–21, sub 10–18; izvan radnog vremena dežurni telefon +30 694 799 3873",
-        "de": "Mo–Fr 9–21 Uhr, Sa 10–18 Uhr; außerhalb der Sprechzeiten Bereitschaftsdienst +30 694 799 3873"
+        "de": "Mo–Fr 9–21 Uhr, Sa 10–18 Uhr; außerhalb der Sprechzeiten Bereitschaftsdienst +30 694 799 3873",
+        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h–18 h ; astreinte en dehors des heures d’ouverture : +30 694 799 3873"
       },
       "small_animals": true,
       "url": "https://www.kontostolivet.gr/",
@@ -1162,7 +1215,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–18, sob 10–14; mobilni telefon +30 694 710 0924",
         "hr": "pon–pet 10–18, sub 10–14; mobitel +30 694 710 0924",
-        "de": "Mo–Fr 10–18 Uhr, Sa 10–14 Uhr; Mobil +30 694 710 0924"
+        "de": "Mo–Fr 10–18 Uhr, Sa 10–14 Uhr; Mobil +30 694 710 0924",
+        "fr": "Lun.–ven. 10 h–18 h, sam. 10 h–14 h ; mobile : +30 694 710 0924"
       },
       "small_animals": true,
       "url": "https://vet-med.gr/",
@@ -1183,7 +1237,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8.30–14 in 18–20, sob 8.30–13.30 (po dogovoru); nujna pomoč 24 ur na dan na +30 698 101 0706",
         "hr": "pon–pet 8:30–14 i 18–20, sub 8:30–13:30 (uz prethodnu najavu); hitni slučajevi 24/7 na +30 698 101 0706",
-        "de": "Mo–Fr 8.30–14 und 18–20 Uhr, Sa 8.30–13.30 Uhr (nach Terminvereinbarung); Notfälle rund um die Uhr unter +30 698 101 0706"
+        "de": "Mo–Fr 8.30–14 und 18–20 Uhr, Sa 8.30–13.30 Uhr (nach Terminvereinbarung); Notfälle rund um die Uhr unter +30 698 101 0706",
+        "fr": "Lun.–ven. 8 h 30–14 h et 18 h–20 h, sam. 8 h 30–13 h 30 (sur rendez-vous) ; urgences 24 h/24, 7 j/7 au +30 698 101 0706"
       },
       "small_animals": true,
       "url": "https://vetclinic-pirgos.gr/en",
@@ -1204,7 +1259,8 @@
       "duty_i18n": {
         "sl": "Tudi +30 22310 44463, mobilni telefon +30 697 885 5533",
         "hr": "Također +30 22310 44463, mobitel +30 697 885 5533",
-        "de": "Außerdem +30 22310 44463, Mobil +30 697 885 5533"
+        "de": "Außerdem +30 22310 44463, Mobil +30 697 885 5533",
+        "fr": "Autre numéro : +30 22310 44463, mobile : +30 697 885 5533"
       },
       "small_animals": true,
       "url": "https://ktiniatrikiepe.4ty.gr/",
@@ -1225,7 +1281,8 @@
       "duty_i18n": {
         "sl": "Tudi +30 210 496 0145, mobilni telefon +30 693 248 6039",
         "hr": "Također +30 210 496 0145, mobitel +30 693 248 6039",
-        "de": "Außerdem +30 210 496 0145, Mobil +30 693 248 6039"
+        "de": "Außerdem +30 210 496 0145, Mobil +30 693 248 6039",
+        "fr": "Autre numéro : +30 210 496 0145, mobile : +30 693 248 6039"
       },
       "small_animals": true,
       "url": "https://pet-vet.gr/",
@@ -1271,7 +1328,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–19.30 po dogovoru; nujni primeri +30 697 735 5767",
         "hr": "pon–pet 10–19:30 uz prethodnu najavu; hitni slučajevi +30 697 735 5767",
-        "de": "Mo–Fr 10–19.30 Uhr nach Terminvereinbarung; Notfälle +30 697 735 5767"
+        "de": "Mo–Fr 10–19.30 Uhr nach Terminvereinbarung; Notfälle +30 697 735 5767",
+        "fr": "Lun.–ven. 10 h–19 h 30 sur rendez-vous ; urgences : +30 697 735 5767"
       },
       "small_animals": true,
       "url": "https://2vets4pets.gr/",
@@ -1291,7 +1349,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–19, sob 10–14, po dogovoru",
         "hr": "pon–pet 10–19, sub 10–14, uz prethodnu najavu",
-        "de": "Mo–Fr 10–19 Uhr, Sa 10–14 Uhr, nach Terminvereinbarung"
+        "de": "Mo–Fr 10–19 Uhr, Sa 10–14 Uhr, nach Terminvereinbarung",
+        "fr": "Lun.–ven. 10 h–19 h, sam. 10 h–14 h, sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://www.animalmedicalcenter.gr/",
@@ -1310,7 +1369,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 694 079 9744",
         "hr": "Mobitel +30 694 079 9744",
-        "de": "Mobil +30 694 079 9744"
+        "de": "Mobil +30 694 079 9744",
+        "fr": "Mobile : +30 694 079 9744"
       },
       "small_animals": true,
       "url": "https://www.vetpaws.gr/",
@@ -1342,7 +1402,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–13 in 17–20",
         "hr": "pon–pet 10–13 i 17–20",
-        "de": "Mo–Fr 10–13 und 17–20 Uhr"
+        "de": "Mo–Fr 10–13 und 17–20 Uhr",
+        "fr": "Lun.–ven. 10 h–13 h et 17 h–20 h"
       },
       "small_animals": true,
       "url": "https://www.medicalzoo.gr/",
@@ -1361,7 +1422,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–13 in 17–20, sob 10–13",
         "hr": "pon–pet 10–13 i 17–20, sub 10–13",
-        "de": "Mo–Fr 10–13 und 17–20 Uhr, Sa 10–13 Uhr"
+        "de": "Mo–Fr 10–13 und 17–20 Uhr, Sa 10–13 Uhr",
+        "fr": "Lun.–ven. 10 h–13 h et 17 h–20 h, sam. 10 h–13 h"
       },
       "small_animals": true,
       "url": "https://www.medicalzoo.gr/",
@@ -1380,7 +1442,8 @@
       "duty_i18n": {
         "sl": "pon, tor, čet, pet 10–13 in 17–20; sre 10–18; sob 11–13; po dogovoru; mobilni telefon +30 694 457 1156",
         "hr": "pon, uto, čet, pet 10–13 i 17–20; sri 10–18; sub 11–13; uz prethodnu najavu; mobitel +30 694 457 1156",
-        "de": "Mo, Di, Do, Fr 10–13 und 17–20 Uhr; Mi 10–18 Uhr; Sa 11–13 Uhr; nach Terminvereinbarung; Mobil +30 694 457 1156"
+        "de": "Mo, Di, Do, Fr 10–13 und 17–20 Uhr; Mi 10–18 Uhr; Sa 11–13 Uhr; nach Terminvereinbarung; Mobil +30 694 457 1156",
+        "fr": "Lun., mar., jeu., ven. 10 h–13 h et 17 h–20 h ; mer. 10 h–18 h ; sam. 11 h–13 h ; sur rendez-vous ; mobile : +30 694 457 1156"
       },
       "small_animals": true,
       "url": "https://vetlinou.gr/",
@@ -1399,7 +1462,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–13.30 in 17–20, sob 10–13; telefon za nujne primere +30 697 755 8945",
         "hr": "pon–pet 9–13:30 i 17–20, sub 10–13; telefon za hitne slučajeve +30 697 755 8945",
-        "de": "Mo–Fr 9–13.30 und 17–20 Uhr, Sa 10–13 Uhr; Notfalltelefon +30 697 755 8945"
+        "de": "Mo–Fr 9–13.30 und 17–20 Uhr, Sa 10–13 Uhr; Notfalltelefon +30 697 755 8945",
+        "fr": "Lun.–ven. 9 h–13 h 30 et 17 h–20 h, sam. 10 h–13 h ; téléphone d’urgence : +30 697 755 8945"
       },
       "small_animals": true,
       "url": "https://www.petvets.gr/",
@@ -1418,7 +1482,8 @@
       "duty_i18n": {
         "sl": "Klicni center 10–24; med tednom po dogovoru; podružnica Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
         "hr": "Pozivni centar 10–24; radnim danom uz prethodnu najavu; podružnica Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
-        "de": "Callcenter 10–24 Uhr; Mo–Fr nach Terminvereinbarung; Filiale Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273"
+        "de": "Callcenter 10–24 Uhr; Mo–Fr nach Terminvereinbarung; Filiale Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
+        "fr": "Centre d’appels 10 h–24 h ; en semaine sur rendez-vous ; clinique de Kastella (Παναγίας Μυρτιδιωτίσσης 8) : +30 211 184 7273"
       },
       "small_animals": true,
       "url": "https://kmy.gr/",
@@ -1438,7 +1503,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–20, sob 10–13; mobilni telefon +30 698 087 3838",
         "hr": "pon–pet 10–20, sub 10–13; mobitel +30 698 087 3838",
-        "de": "Mo–Fr 10–20 Uhr, Sa 10–13 Uhr; Mobil +30 698 087 3838"
+        "de": "Mo–Fr 10–20 Uhr, Sa 10–13 Uhr; Mobil +30 698 087 3838",
+        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h ; mobile : +30 698 087 3838"
       },
       "small_animals": true,
       "url": "https://vets4life.gr/en/",
@@ -1457,7 +1523,8 @@
       "duty_i18n": {
         "sl": "pon–pet po dogovoru",
         "hr": "pon–pet uz prethodnu najavu",
-        "de": "Mo–Fr nach Terminvereinbarung"
+        "de": "Mo–Fr nach Terminvereinbarung",
+        "fr": "Lun.–ven. sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://vetsurgery.gr/",
@@ -1477,7 +1544,8 @@
       "duty_i18n": {
         "sl": "Tudi +30 2810 341690",
         "hr": "Također +30 2810 341690",
-        "de": "Außerdem +30 2810 341690"
+        "de": "Außerdem +30 2810 341690",
+        "fr": "Autre numéro : +30 2810 341690"
       },
       "small_animals": true,
       "url": "https://www.cretavetclinic.gr/",
@@ -1496,7 +1564,8 @@
       "duty_i18n": {
         "sl": "Po dogovoru; mobilni telefon +30 694 086 6215",
         "hr": "Uz prethodnu najavu; mobitel +30 694 086 6215",
-        "de": "Nach Terminvereinbarung; Mobil +30 694 086 6215"
+        "de": "Nach Terminvereinbarung; Mobil +30 694 086 6215",
+        "fr": "Sur rendez-vous ; mobile : +30 694 086 6215"
       },
       "small_animals": true,
       "url": "https://www.fepvet.gr/en/",
@@ -1515,7 +1584,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa: +30 690 753 9910",
         "hr": "Izvan radnog vremena: +30 690 753 9910",
-        "de": "Außerhalb der Sprechzeiten: +30 690 753 9910"
+        "de": "Außerhalb der Sprechzeiten: +30 690 753 9910",
+        "fr": "En dehors des heures d’ouverture : +30 690 753 9910"
       },
       "small_animals": true,
       "url": "https://symviosis.vet/en/",
@@ -1534,7 +1604,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa: +30 697 005 5012",
         "hr": "Izvan radnog vremena: +30 697 005 5012",
-        "de": "Außerhalb der Sprechzeiten: +30 697 005 5012"
+        "de": "Außerhalb der Sprechzeiten: +30 697 005 5012",
+        "fr": "En dehors des heures d’ouverture : +30 697 005 5012"
       },
       "small_animals": true,
       "url": "https://symviosis.vet/en/",
@@ -1569,7 +1640,8 @@
       "duty_i18n": {
         "sl": "pon–sob 9–14, tor in čet tudi 17.30–20.30; veterinarska linija +30 698 182 5728",
         "hr": "pon–sub 9–14, uto i čet još i 17:30–20:30; telefon veterinara +30 698 182 5728",
-        "de": "Mo–Sa 9–14 Uhr, Di und Do auch 17.30–20.30 Uhr; Tierarzt-Telefon +30 698 182 5728"
+        "de": "Mo–Sa 9–14 Uhr, Di und Do auch 17.30–20.30 Uhr; Tierarzt-Telefon +30 698 182 5728",
+        "fr": "Lun.–sam. 9 h–14 h, mar. et jeu. également 17 h 30–20 h 30 ; ligne du vétérinaire : +30 698 182 5728"
       },
       "small_animals": true,
       "url": "https://agrozo.com/",
@@ -1589,7 +1661,8 @@
       "duty_i18n": {
         "sl": "Telefon za nujne primere +30 694 715 1585",
         "hr": "Telefon za hitne slučajeve +30 694 715 1585",
-        "de": "Notfalltelefon +30 694 715 1585"
+        "de": "Notfalltelefon +30 694 715 1585",
+        "fr": "Téléphone d’urgence : +30 694 715 1585"
       },
       "small_animals": true,
       "url": "https://lefkasvetclinic.gr/",
@@ -1608,7 +1681,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 694 722 0097",
         "hr": "Mobitel +30 694 722 0097",
-        "de": "Mobil +30 694 722 0097"
+        "de": "Mobil +30 694 722 0097",
+        "fr": "Mobile : +30 694 722 0097"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -1627,7 +1701,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 690 900 0459",
         "hr": "Mobitel +30 690 900 0459",
-        "de": "Mobil +30 690 900 0459"
+        "de": "Mobil +30 690 900 0459",
+        "fr": "Mobile : +30 690 900 0459"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -1646,7 +1721,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 694 494 9722",
         "hr": "Mobitel +30 694 494 9722",
-        "de": "Mobil +30 694 494 9722"
+        "de": "Mobil +30 694 494 9722",
+        "fr": "Mobile : +30 694 494 9722"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -1665,7 +1741,8 @@
       "duty_i18n": {
         "sl": "pon, sre, sob 10–14; tor, čet, pet 10–14 in 18–20.30; nujni primeri +30 694 481 8484",
         "hr": "pon, sri, sub 10–14; uto, čet, pet 10–14 i 18–20:30; hitni slučajevi +30 694 481 8484",
-        "de": "Mo, Mi, Sa 10–14 Uhr; Di, Do, Fr 10–14 und 18–20.30 Uhr; Notfälle +30 694 481 8484"
+        "de": "Mo, Mi, Sa 10–14 Uhr; Di, Do, Fr 10–14 und 18–20.30 Uhr; Notfälle +30 694 481 8484",
+        "fr": "Lun., mer., sam. 10 h–14 h ; mar., jeu., ven. 10 h–14 h et 18 h–20 h 30 ; urgences : +30 694 481 8484"
       },
       "small_animals": true,
       "url": "https://vetcenterpreveza.gr/",
@@ -1684,7 +1761,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–17",
         "hr": "pon–pet 10–17",
-        "de": "Mo–Fr 10–17 Uhr"
+        "de": "Mo–Fr 10–17 Uhr",
+        "fr": "Lun.–ven. 10 h–17 h"
       },
       "small_animals": true,
       "url": "https://www.vetcare-preveza.gr/",
@@ -1703,7 +1781,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 695 056 2353",
         "hr": "Mobitel +30 695 056 2353",
-        "de": "Mobil +30 695 056 2353"
+        "de": "Mobil +30 695 056 2353",
+        "fr": "Mobile : +30 695 056 2353"
       },
       "small_animals": true,
       "url": "https://ktiniatros-ioannina.gr/",
@@ -1722,7 +1801,8 @@
       "duty_i18n": {
         "sl": "pon–sob 10–14 in 18–21, ob sredah zaprto; po dogovoru",
         "hr": "pon–sub 10:00–14:00 i 18:00–21:00, srijedom zatvoreno; uz prethodnu najavu",
-        "de": "Mo–Sa 10–14 und 18–21 Uhr, mittwochs geschlossen; nach Terminvereinbarung"
+        "de": "Mo–Sa 10–14 und 18–21 Uhr, mittwochs geschlossen; nach Terminvereinbarung",
+        "fr": "Lun.–sam. 10 h–14 h et 18 h–21 h, fermé le mercredi ; sur rendez-vous"
       },
       "small_animals": true,
       "url": "https://slafioniatis.gr/",
@@ -1741,7 +1821,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9.30–18; mobilni telefon +30 694 468 8020",
         "hr": "pon–pet 09:30–18:00; mobitel +30 694 468 8020",
-        "de": "Mo–Fr 9.30–18 Uhr; Mobil +30 694 468 8020"
+        "de": "Mo–Fr 9.30–18 Uhr; Mobil +30 694 468 8020",
+        "fr": "Lun.–ven. 9 h 30–18 h ; mobile : +30 694 468 8020"
       },
       "small_animals": true,
       "url": "https://symeonidisvet.gr/",
@@ -1772,7 +1853,8 @@
       "duty": "Mon–Fri morning (08:00–14:00 or 09:00–14:30), Tue & Thu 18:00–20:00, Sat 09:30–13:30; mobile +30 693 203 6426",
       "duty_i18n": {
         "hr": "pon–pet ujutro (08:00–14:00 ili 09:00–14:30), uto i čet 18:00–20:00, sub 09:30–13:30; mobitel +30 693 203 6426",
-        "de": "Mo–Fr vormittags (8–14 oder 9–14.30 Uhr), Di und Do 18–20 Uhr, Sa 9.30–13.30 Uhr; Mobil +30 693 203 6426"
+        "de": "Mo–Fr vormittags (8–14 oder 9–14.30 Uhr), Di und Do 18–20 Uhr, Sa 9.30–13.30 Uhr; Mobil +30 693 203 6426",
+        "fr": "Lun.–ven. le matin (8 h–14 h ou 9 h–14 h 30), mar. et jeu. 18 h–20 h, sam. 9 h 30–13 h 30 ; mobile : +30 693 203 6426"
       },
       "note": "Source page gives two different morning hour ranges.",
       "small_animals": true,
@@ -1792,7 +1874,8 @@
       "duty_i18n": {
         "sl": "pon–sob 8–14.30; tor in čet tudi 17.30–20.30; tudi +30 694 427 1776",
         "hr": "pon–sub 08:00–14:30; uto i čet još i 17:30–20:30; drugi broj +30 694 427 1776",
-        "de": "Mo–Sa 8–14.30 Uhr; Di und Do auch 17.30–20.30 Uhr; außerdem +30 694 427 1776"
+        "de": "Mo–Sa 8–14.30 Uhr; Di und Do auch 17.30–20.30 Uhr; außerdem +30 694 427 1776",
+        "fr": "Lun.–sam. 8 h–14 h 30 ; mar. et jeu. également 17 h 30–20 h 30 ; autre numéro : +30 694 427 1776"
       },
       "small_animals": true,
       "url": "https://ktiniatreiotsatsakoulias.wordpress.com/",
@@ -1812,7 +1895,8 @@
       "duty_i18n": {
         "sl": "pon, tor, čet, pet 9–14.30 in 18–21; sre 9–14.30; sob 9–15; mobilni telefon +30 694 691 7073",
         "hr": "pon, uto, čet, pet 09:00–14:30 i 18:00–21:00; sri 09:00–14:30; sub 09:00–15:00; mobitel +30 694 691 7073",
-        "de": "Mo, Di, Do, Fr 9–14.30 und 18–21 Uhr; Mi 9–14.30 Uhr; Sa 9–15 Uhr; Mobil +30 694 691 7073"
+        "de": "Mo, Di, Do, Fr 9–14.30 und 18–21 Uhr; Mi 9–14.30 Uhr; Sa 9–15 Uhr; Mobil +30 694 691 7073",
+        "fr": "Lun., mar., jeu., ven. 9 h–14 h 30 et 18 h–21 h ; mer. 9 h–14 h 30 ; sam. 9 h–15 h ; mobile : +30 694 691 7073"
       },
       "small_animals": true,
       "url": "https://ktiniatreiovetlife.webnode.gr/",
@@ -1831,7 +1915,8 @@
       "duty_i18n": {
         "sl": "pon, sre, pet, sob 9.30–13.30; tor in čet 9.30–13.30 in 18–20",
         "hr": "pon, sri, pet, sub 09:30–13:30; uto i čet 09:30–13:30 i 18:00–20:00",
-        "de": "Mo, Mi, Fr, Sa 9.30–13.30 Uhr; Di und Do 9.30–13.30 und 18–20 Uhr"
+        "de": "Mo, Mi, Fr, Sa 9.30–13.30 Uhr; Di und Do 9.30–13.30 und 18–20 Uhr",
+        "fr": "Lun., mer., ven., sam. 9 h 30–13 h 30 ; mar. et jeu. 9 h 30–13 h 30 et 18 h–20 h"
       },
       "small_animals": true,
       "url": "https://pavlouelenivet.gr/",
@@ -1850,7 +1935,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 698 199 4466",
         "hr": "Mobitel +30 698 199 4466",
-        "de": "Mobil +30 698 199 4466"
+        "de": "Mobil +30 698 199 4466",
+        "fr": "Mobile : +30 698 199 4466"
       },
       "small_animals": true,
       "url": "https://www.ktiniatreio-alikisland.gr/",
@@ -1869,7 +1955,8 @@
       "duty_i18n": {
         "sl": "Mobilni telefon +30 693 700 3780",
         "hr": "Mobitel +30 693 700 3780",
-        "de": "Mobil +30 693 700 3780"
+        "de": "Mobil +30 693 700 3780",
+        "fr": "Mobile : +30 693 700 3780"
       },
       "small_animals": true,
       "url": "https://pharmavet.gr/",
@@ -1889,7 +1976,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–13 in 17–20; sob 9–13",
         "hr": "pon–pet 09:00–13:00 i 17:00–20:00; sub 09:00–13:00",
-        "de": "Mo–Fr 9–13 und 17–20 Uhr; Sa 9–13 Uhr"
+        "de": "Mo–Fr 9–13 und 17–20 Uhr; Sa 9–13 Uhr",
+        "fr": "Lun.–ven. 9 h–13 h et 17 h–20 h ; sam. 9 h–13 h"
       },
       "small_animals": true,
       "source_url": "https://animalrescuekos.weebly.com/sheltervet-contactgeneral-inquiry-form.html",
@@ -1907,7 +1995,8 @@
       "duty_i18n": {
         "sl": "pon–pet 10–18, po dogovoru; zunaj ordinacijskega časa samo nujni primeri",
         "hr": "pon–pet 10:00–18:00, uz prethodnu najavu; izvan radnog vremena samo hitni slučajevi",
-        "de": "Mo–Fr 10–18 Uhr, nach Terminvereinbarung; außerhalb der Sprechzeiten nur Notfälle"
+        "de": "Mo–Fr 10–18 Uhr, nach Terminvereinbarung; außerhalb der Sprechzeiten nur Notfälle",
+        "fr": "Lun.–ven. 10 h–18 h, sur rendez-vous ; en dehors des heures d’ouverture, urgences uniquement"
       },
       "small_animals": true,
       "source_url": "https://forthecatsofmilos.org/",
@@ -1926,7 +2015,8 @@
       "duty_i18n": {
         "sl": "pon, sre 8.30–14.30; tor, čet, pet 8.30–14.30 in 18–20; sob 9–14",
         "hr": "pon, sri 08:30–14:30; uto, čet, pet 08:30–14:30 i 18:00–20:00; sub 09:00–14:00",
-        "de": "Mo, Mi 8.30–14.30 Uhr; Di, Do, Fr 8.30–14.30 und 18–20 Uhr; Sa 9–14 Uhr"
+        "de": "Mo, Mi 8.30–14.30 Uhr; Di, Do, Fr 8.30–14.30 und 18–20 Uhr; Sa 9–14 Uhr",
+        "fr": "Lun., mer. 8 h 30–14 h 30 ; mar., jeu., ven. 8 h 30–14 h 30 et 18 h–20 h ; sam. 9 h–14 h"
       },
       "small_animals": true,
       "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
@@ -1945,7 +2035,8 @@
       "duty_i18n": {
         "sl": "pon, sre 8.30–15; tor, čet, pet 8.30–15 in 17.30–20",
         "hr": "pon, sri 08:30–15:00; uto, čet, pet 08:30–15:00 i 17:30–20:00",
-        "de": "Mo, Mi 8.30–15 Uhr; Di, Do, Fr 8.30–15 und 17.30–20 Uhr"
+        "de": "Mo, Mi 8.30–15 Uhr; Di, Do, Fr 8.30–15 und 17.30–20 Uhr",
+        "fr": "Lun., mer. 8 h 30–15 h ; mar., jeu., ven. 8 h 30–15 h et 17 h 30–20 h"
       },
       "small_animals": true,
       "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
@@ -1964,7 +2055,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–13 (samo dopoldne)",
         "hr": "pon–pet 09:00–13:00 (samo ujutro)",
-        "de": "Mo–Fr 9–13 Uhr (nur vormittags)"
+        "de": "Mo–Fr 9–13 Uhr (nur vormittags)",
+        "fr": "Lun.–ven. 9 h–13 h (le matin uniquement)"
       },
       "small_animals": true,
       "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
@@ -1983,7 +2075,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9.30–14 in 18.15–20; sob 9.30–13",
         "hr": "pon–pet 09:30–14:00 i 18:15–20:00; sub 09:30–13:00",
-        "de": "Mo–Fr 9.30–14 und 18.15–20 Uhr; Sa 9.30–13 Uhr"
+        "de": "Mo–Fr 9.30–14 und 18.15–20 Uhr; Sa 9.30–13 Uhr",
+        "fr": "Lun.–ven. 9 h 30–14 h et 18 h 15–20 h ; sam. 9 h 30–13 h"
       },
       "small_animals": true,
       "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
@@ -2016,7 +2109,8 @@
       "duty_i18n": {
         "sl": "pon in sre 9–14 in 18–20.45; tor, čet 9–14; pet 9–14 in zvečer; sob zaprto",
         "hr": "pon i sri 09:00–14:00 i 18:00–20:45; uto, čet 09:00–14:00; pet 09:00–14:00 i navečer; sub zatvoreno",
-        "de": "Mo und Mi 9–14 und 18–20.45 Uhr; Di, Do 9–14 Uhr; Fr 9–14 Uhr und abends; Sa geschlossen"
+        "de": "Mo und Mi 9–14 und 18–20.45 Uhr; Di, Do 9–14 Uhr; Fr 9–14 Uhr und abends; Sa geschlossen",
+        "fr": "Lun. et mer. 9 h–14 h et 18 h–20 h 45 ; mar., jeu. 9 h–14 h ; ven. 9 h–14 h et en soirée ; fermé le samedi"
       },
       "small_animals": true,
       "url": "https://65f30c8884419.site123.me/",
@@ -2056,7 +2150,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan (številki za nujne primere +30 698 234 0617, +30 698 234 0618); pregledi v ambulanti po dogovoru",
         "hr": "Hitni slučajevi 24/7 (brojevi za hitne slučajeve +30 698 234 0617, +30 698 234 0618); pregledi uz prethodnu najavu",
-        "de": "Notdienst rund um die Uhr (Notfalltelefone +30 698 234 0617, +30 698 234 0618); Klinikbesuche nach Terminvereinbarung"
+        "de": "Notdienst rund um die Uhr (Notfalltelefone +30 698 234 0617, +30 698 234 0618); Klinikbesuche nach Terminvereinbarung",
+        "fr": "Urgences 24 h/24, 7 j/7 (lignes d’urgence : +30 698 234 0617, +30 698 234 0618) ; consultations sur rendez-vous"
       }
     },
     {

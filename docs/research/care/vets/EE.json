@@ -80,7 +80,8 @@
       "duty": "Emergency care 24/7. Phone 09:00-20:00 +372 731 3224, night 20:00-09:00 +372 503 3878 (on-duty vet). Call before coming; critical patients are seen first and you may be referred elsewhere if the clinic is full.",
       "duty_i18n": {
         "hr": "Hitna pomoć 24/7. Telefon 09:00–20:00 +372 731 3224, noću 20:00–09:00 +372 503 3878 (dežurni veterinar). Nazovi unaprijed; najteži slučajevi imaju prednost, a ako je klinika puna, mogu te uputiti drugamo.",
-        "de": "Notdienst rund um die Uhr. Telefon 09.00–20.00 Uhr +372 731 3224, nachts 20.00–09.00 Uhr +372 503 3878 (diensthabender Tierarzt). Bitte vor dem Besuch anrufen; kritische Patienten werden zuerst behandelt, bei voller Klinik kann an eine andere Klinik verwiesen werden."
+        "de": "Notdienst rund um die Uhr. Telefon 09.00–20.00 Uhr +372 731 3224, nachts 20.00–09.00 Uhr +372 503 3878 (diensthabender Tierarzt). Bitte vor dem Besuch anrufen; kritische Patienten werden zuerst behandelt, bei voller Klinik kann an eine andere Klinik verwiesen werden.",
+        "fr": "Urgences 24 h/24, 7 j/7. Téléphone 9 h–20 h : +372 731 3224, nuit 20 h–9 h : +372 503 3878 (vétérinaire de garde). Appelez avant de venir ; les patients critiques sont reçus en priorité et vous pouvez être orienté ailleurs si la clinique est pleine."
       },
       "small_animals": true,
       "url": "https://loomakliinik.emu.ee/en",
@@ -100,7 +101,8 @@
       "duty": "Pet emergency clinic, open 24 hours every day including public holidays, with a vet and assistant on site. Phone +372 602 0888 or short number 15222. Call ahead because doors are locked after regular hours; a 50% surcharge applies to out-of-hours emergency visits.",
       "duty_i18n": {
         "hr": "Hitna klinika za ljubimce, otvorena 24 sata svaki dan, uključujući blagdane, s veterinarom i asistentom u klinici. Telefon +372 602 0888 ili kratki broj 15222. Nazovi unaprijed jer su vrata nakon redovnog radnog vremena zaključana; za hitne posjete izvan radnog vremena naplaćuje se doplatak od 50 %.",
-        "de": "Notfallklinik für Haustiere, täglich 24 Stunden geöffnet, auch an Feiertagen, mit Tierarzt und Assistenz vor Ort. Telefon +372 602 0888 oder Kurznummer 15222. Bitte vorher anrufen, da die Türen nach den regulären Zeiten verschlossen sind; für Notfallbesuche außerhalb der Öffnungszeiten gilt ein Zuschlag von 50 %."
+        "de": "Notfallklinik für Haustiere, täglich 24 Stunden geöffnet, auch an Feiertagen, mit Tierarzt und Assistenz vor Ort. Telefon +372 602 0888 oder Kurznummer 15222. Bitte vorher anrufen, da die Türen nach den regulären Zeiten verschlossen sind; für Notfallbesuche außerhalb der Öffnungszeiten gilt ein Zuschlag von 50 %.",
+        "fr": "Clinique d’urgences vétérinaires ouverte 24 h/24, 7 j/7, jours fériés compris, avec un vétérinaire et un assistant sur place. Tél. : +372 602 0888 ou numéro court 15222. Appelez avant de venir : les portes sont verrouillées en dehors des heures d’ouverture ; majoration de 50 % pour les urgences hors horaires."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rannamoisa",
@@ -120,7 +122,8 @@
       "duty": "Animal emergency clinic open 24 hours, 7 days a week; call ahead on +372 502 3191. Out-of-hours visits carry a surcharge.",
       "duty_i18n": {
         "hr": "Hitna veterinarska klinika otvorena 24 sata, 7 dana u tjednu; nazovi unaprijed na +372 502 3191. Za posjete izvan radnog vremena naplaćuje se doplatak.",
-        "de": "Notfallklinik für Tiere, täglich rund um die Uhr geöffnet; bitte vorher unter +372 502 3191 anrufen. Für Besuche außerhalb der Öffnungszeiten wird ein Zuschlag berechnet."
+        "de": "Notfallklinik für Tiere, täglich rund um die Uhr geöffnet; bitte vorher unter +372 502 3191 anrufen. Für Besuche außerhalb der Öffnungszeiten wird ein Zuschlag berechnet.",
+        "fr": "Clinique d’urgences vétérinaires ouverte 24 h/24, 7 j/7 ; appelez avant de venir au +372 502 3191. Majoration pour les consultations hors horaires."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
@@ -140,7 +143,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Nazovi unaprijed za radno vrijeme.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "http://www.vastriku.ee",
@@ -159,7 +163,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Nazovi unaprijed za radno vrijeme.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "http://www.toometikliinik.ee",
@@ -178,7 +183,8 @@
       "duty": "Open 24 hours, 7 days a week for emergencies (appointments Mon-Fri 09:00-19:00). Phone ahead before arriving at the emergency department so the team can prepare.",
       "duty_i18n": {
         "hr": "Hitni prijem otvoren 24 h, 7 dana u tjednu (termini pon–pet 09:00–19:00). Nazovi prije dolaska na hitni odjel kako bi se tim mogao pripremiti.",
-        "de": "Für Notfälle täglich rund um die Uhr geöffnet (Termine Mo–Fr 09.00–19.00 Uhr). Bitte vor der Ankunft in der Notaufnahme anrufen, damit sich das Team vorbereiten kann."
+        "de": "Für Notfälle täglich rund um die Uhr geöffnet (Termine Mo–Fr 09.00–19.00 Uhr). Bitte vor der Ankunft in der Notaufnahme anrufen, damit sich das Team vorbereiten kann.",
+        "fr": "Urgences ouvertes 24 h/24, 7 j/7 (rendez-vous lun.–ven. 9 h–19 h). Téléphonez avant de vous présenter aux urgences afin que l’équipe puisse se préparer."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
@@ -198,7 +204,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen.",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; pour les urgences de nuit et de week-end, adressez-vous à une clinique ouverte 24 h/24."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
@@ -217,7 +224,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen.",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; pour les urgences de nuit et de week-end, adressez-vous à une clinique ouverte 24 h/24."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
@@ -236,7 +244,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen.",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; pour les urgences de nuit et de week-end, adressez-vous à une clinique ouverte 24 h/24."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
@@ -255,7 +264,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen.",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; pour les urgences de nuit et de week-end, adressez-vous à une clinique ouverte 24 h/24."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
@@ -274,7 +284,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom obrati se klinici koja radi 24 sata.",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; bei Notfällen nachts und am Wochenende eine 24-Stunden-Klinik aufsuchen.",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; pour les urgences de nuit et de week-end, adressez-vous à une clinique ouverte 24 h/24."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
@@ -293,7 +304,8 @@
       "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; night and weekend emergencies need a 24-hour clinic (Tallinn).",
       "duty_i18n": {
         "hr": "Redovno radno vrijeme pon–pet 09:00–19:00, vikendom zatvoreno. Nazovi unaprijed; za hitne slučajeve noću i vikendom potrebna je klinika koja radi 24 sata (Tallinn).",
-        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; für Notfälle nachts und am Wochenende ist eine 24-Stunden-Klinik nötig (Tallinn)."
+        "de": "Reguläre Zeiten Mo–Fr 09.00–19.00 Uhr, Sa–So geschlossen. Bitte vorher anrufen; für Notfälle nachts und am Wochenende ist eine 24-Stunden-Klinik nötig (Tallinn).",
+        "fr": "Ouvert lun.–ven. 9 h–19 h, fermé sam.–dim. Appelez avant de venir ; les urgences de nuit et de week-end sont prises en charge par une clinique ouverte 24 h/24 (Tallinn)."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
@@ -312,7 +324,8 @@
       "duty": "Mon-Sat 10:00-18:00 by pre-registration only. For night and weekend emergencies the nearest 24-hour PetCity clinic is Rannamõisa in Tallinn, +372 602 0888.",
       "duty_i18n": {
         "hr": "pon–sub 10:00–18:00 samo uz prethodnu najavu. Za hitne slučajeve noću i vikendom najbliža klinika PetCity koja radi 24 h je Rannamõisa u Tallinnu, +372 602 0888.",
-        "de": "Mo–Sa 10.00–18.00 Uhr nur mit Voranmeldung. Bei Notfällen nachts und am Wochenende ist die nächste 24-Stunden-Klinik von PetCity Rannamõisa in Tallinn, +372 602 0888."
+        "de": "Mo–Sa 10.00–18.00 Uhr nur mit Voranmeldung. Bei Notfällen nachts und am Wochenende ist die nächste 24-Stunden-Klinik von PetCity Rannamõisa in Tallinn, +372 602 0888.",
+        "fr": "Lun.–sam. 10 h–18 h, uniquement sur rendez-vous. Pour les urgences de nuit et de week-end, la clinique PetCity ouverte 24 h/24 la plus proche est celle de Rannamõisa, à Tallinn : +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/narva-loomakliinik",
@@ -331,7 +344,8 @@
       "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. In emergencies call the clinic first; 24-hour care is at PetCity Rannamõisa, +372 602 0888.",
       "duty_i18n": {
         "hr": "pon–sub 10:00–20:00, ned 10:00–19:00. U hitnom slučaju prvo nazovi kliniku; skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888.",
-        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Bei Notfällen zuerst die Klinik anrufen; 24-Stunden-Versorgung bei PetCity Rannamõisa, +372 602 0888."
+        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Bei Notfällen zuerst die Klinik anrufen; 24-Stunden-Versorgung bei PetCity Rannamõisa, +372 602 0888.",
+        "fr": "Lun.–sam. 10 h–20 h, dim. 10 h–19 h. En cas d’urgence, appelez d’abord la clinique ; soins 24 h/24 à PetCity Rannamõisa : +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/tahesaju-loomakliinik",
@@ -350,7 +364,8 @@
       "duty": "Mon-Sat 10:00-21:00, Sun 10:00-19:00. 24-hour emergency care is at PetCity Rannamõisa, +372 602 0888.",
       "duty_i18n": {
         "hr": "pon–sub 10:00–21:00, ned 10:00–19:00. Hitna skrb 24 sata dostupna je u PetCity Rannamõisa, +372 602 0888.",
-        "de": "Mo–Sa 10.00–21.00 Uhr, So 10.00–19.00 Uhr. 24-Stunden-Notfallversorgung bei PetCity Rannamõisa, +372 602 0888."
+        "de": "Mo–Sa 10.00–21.00 Uhr, So 10.00–19.00 Uhr. 24-Stunden-Notfallversorgung bei PetCity Rannamõisa, +372 602 0888.",
+        "fr": "Lun.–sam. 10 h–21 h, dim. 10 h–19 h. Urgences 24 h/24 à PetCity Rannamõisa : +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
@@ -369,7 +384,8 @@
       "duty": "Mon-Fri 09:00-19:00. In life-threatening cases call the clinic directly.",
       "duty_i18n": {
         "hr": "pon–pet 09:00–19:00. U slučajevima opasnim po život nazovi kliniku izravno.",
-        "de": "Mo–Fr 09.00–19.00 Uhr. In lebensbedrohlichen Fällen die Klinik direkt anrufen."
+        "de": "Mo–Fr 09.00–19.00 Uhr. In lebensbedrohlichen Fällen die Klinik direkt anrufen.",
+        "fr": "Lun.–ven. 9 h–19 h. En cas de danger vital, appelez directement la clinique."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
@@ -388,7 +404,8 @@
       "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. Currently no vet at this clinic; for night and public-holiday emergencies call 15222 (24-hour clinic in Tallinn).",
       "duty_i18n": {
         "hr": "pon–sub 10:00–20:00, ned 10:00–19:00. Trenutačno u klinici nema veterinara; za hitne slučajeve noću i blagdanima nazovi 15222 (klinika u Tallinnu koja radi 24 sata).",
-        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Derzeit kein Tierarzt in dieser Klinik; bei Notfällen nachts und an Feiertagen 15222 anrufen (24-Stunden-Klinik in Tallinn)."
+        "de": "Mo–Sa 10.00–20.00 Uhr, So 10.00–19.00 Uhr. Derzeit kein Tierarzt in dieser Klinik; bei Notfällen nachts und an Feiertagen 15222 anrufen (24-Stunden-Klinik in Tallinn).",
+        "fr": "Lun.–sam. 10 h–20 h, dim. 10 h–19 h. Pas de vétérinaire dans cette clinique pour le moment ; pour les urgences de nuit et les jours fériés, appelez le 15222 (clinique ouverte 24 h/24 à Tallinn)."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
@@ -407,7 +424,8 @@
       "duty": "Mon-Fri 09:00-20:00, Sat 10:00-20:00, Sun 10:00-18:00 (Pärnu Centre).",
       "duty_i18n": {
         "hr": "pon–pet 09:00–20:00, sub 10:00–20:00, ned 10:00–18:00 (Pärnu Centre).",
-        "de": "Mo–Fr 09.00–20.00 Uhr, Sa 10.00–20.00 Uhr, So 10.00–18.00 Uhr (Pärnu Centre)."
+        "de": "Mo–Fr 09.00–20.00 Uhr, Sa 10.00–20.00 Uhr, So 10.00–18.00 Uhr (Pärnu Centre).",
+        "fr": "Lun.–ven. 9 h–20 h, sam. 10 h–20 h, dim. 10 h–18 h (centre de Pärnu)."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-parnu-keskuse-loomakliinik",
@@ -426,7 +444,8 @@
       "duty": "Mon-Sat 08:00-18:00 (may vary; call ahead). Alternative phone +372 447 0023.",
       "duty_i18n": {
         "hr": "pon–sub 08:00–18:00 (može se razlikovati; nazovi unaprijed). Drugi telefon +372 447 0023.",
-        "de": "Mo–Sa 08.00–18.00 Uhr (kann abweichen; bitte vorher anrufen). Alternative Rufnummer +372 447 0023."
+        "de": "Mo–Sa 08.00–18.00 Uhr (kann abweichen; bitte vorher anrufen). Alternative Rufnummer +372 447 0023.",
+        "fr": "Lun.–sam. 8 h–18 h (horaires variables ; appelez avant de venir). Autre numéro : +372 447 0023."
       },
       "small_animals": true,
       "url": "https://terveks.ee/",
@@ -445,7 +464,8 @@
       "duty": "Sep-May Mon-Fri 10:00-18:00, Sat 10:00-13:00; Jun-Aug Mon-Fri 10:00-17:00. Out of hours, message by WhatsApp/Telegram/Viber; help is not guaranteed.",
       "duty_i18n": {
         "hr": "Rujan–svibanj pon–pet 10:00–18:00, sub 10:00–13:00; lipanj–kolovoz pon–pet 10:00–17:00. Izvan radnog vremena pošalji poruku putem WhatsAppa/Telegrama/Vibera; pomoć nije zajamčena.",
-        "de": "Sep–Mai Mo–Fr 10.00–18.00 Uhr, Sa 10.00–13.00 Uhr; Jun–Aug Mo–Fr 10.00–17.00 Uhr. Außerhalb der Öffnungszeiten per WhatsApp/Telegram/Viber schreiben; Hilfe ist nicht garantiert."
+        "de": "Sep–Mai Mo–Fr 10.00–18.00 Uhr, Sa 10.00–13.00 Uhr; Jun–Aug Mo–Fr 10.00–17.00 Uhr. Außerhalb der Öffnungszeiten per WhatsApp/Telegram/Viber schreiben; Hilfe ist nicht garantiert.",
+        "fr": "De sept. à mai : lun.–ven. 10 h–18 h, sam. 10 h–13 h ; de juin à août : lun.–ven. 10 h–17 h. Hors horaires, écrivez par WhatsApp/Telegram/Viber ; aucune aide n’est garantie."
       },
       "small_animals": true,
       "url": "https://www.kuldbis.eu/ru/",
@@ -464,7 +484,8 @@
       "duty": "Mon-Fri 09:00-18:00, Sat 09:00-14:00, closed Sun.",
       "duty_i18n": {
         "hr": "pon–pet 09:00–18:00, sub 09:00–14:00, ned zatvoreno.",
-        "de": "Mo–Fr 09.00–18.00 Uhr, Sa 09.00–14.00 Uhr, So geschlossen."
+        "de": "Mo–Fr 09.00–18.00 Uhr, Sa 09.00–14.00 Uhr, So geschlossen.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–14 h, fermé le dimanche."
       },
       "small_animals": true,
       "url": "https://vetdok.eu/en/index.php?route=information/contact",

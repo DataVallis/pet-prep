@@ -48,6 +48,9 @@
       "phone": "+212 648-596650",
       "emergency_24h": true,
       "duty": "Emergency service advertised 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Service d’urgence annoncé 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://veterinairecasablanca.ma/",
       "source_url": "https://veterinairecasablanca.ma/",
@@ -63,6 +66,9 @@
       "phone": "06 69 53 02 42",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week, public holidays included.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris."
+      },
       "small_animals": true,
       "url": "https://cliniqueveterinairesoleil.com/",
       "source_url": "https://cliniqueveterinairesoleil.com/",
@@ -78,6 +84,9 @@
       "phone": "06 65 22 28 54",
       "emergency_24h": true,
       "duty": "Consultations Mon-Fri 9:00-19:00, Sat 9:00-16:00; emergencies 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Consultations lun.–ven. 9 h–19 h, sam. 9 h–16 h ; urgences 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://www.hermitagevets.com/",
       "source_url": "https://www.hermitagevets.com/",
@@ -93,6 +102,9 @@
       "phone": "06 69 11 05 04",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://www.veterinaireideal.com/",
       "source_url": "https://www.veterinaireideal.com/",
@@ -108,6 +120,9 @@
       "phone": "05 22 23 30 95",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-19:00, Sat 9:00-14:00; separate emergency number 06 61 49 26 18.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–14 h ; numéro d’urgence distinct 06 61 49 26 18."
+      },
       "small_animals": true,
       "url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
       "source_url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
@@ -123,6 +138,9 @@
       "phone": "06 51 20 35 56",
       "emergency_24h": false,
       "duty": "Open daily 9:00-21:00; reachable by phone or WhatsApp for critical situations during these hours.",
+      "duty_i18n": {
+        "fr": "Ouvert tous les jours 9 h–21 h ; joignable par téléphone ou WhatsApp pour les situations critiques pendant ces horaires."
+      },
       "small_animals": true,
       "url": "https://www.vetsocrate.ma/",
       "source_url": "https://www.vetsocrate.ma/",
@@ -137,6 +155,9 @@
       "address": "Next to Quick Targa, Marrakech",
       "emergency_24h": true,
       "duty": "Emergency care advertised 24/7.",
+      "duty_i18n": {
+        "fr": "Urgences annoncées 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://cvt.ma/",
       "source_url": "https://cvt.ma/",
@@ -152,6 +173,9 @@
       "phone": "05 24 45 86 96",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-13:00 and 15:00-19:00; emergencies outside opening hours 24 hours a day, 7 days a week by phone (also 06 61 72 99 28).",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h ; urgences en dehors des heures d’ouverture 24 h/24, 7 j/7 par téléphone (également au 06 61 72 99 28)."
+      },
       "small_animals": true,
       "url": "https://cvy.ma/",
       "source_url": "https://cvy.ma/",
@@ -167,6 +191,9 @@
       "phone": "+212 654 052 904",
       "emergency_24h": true,
       "duty": "Mon-Fri about 9:00-19:00, Sat morning; emergencies advertised 24/7.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. environ 9 h–19 h, sam. le matin ; urgences annoncées 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://agafayvetpractice.wixsite.com/anix",
       "source_url": "https://agafayvetpractice.wixsite.com/anix",
@@ -182,6 +209,9 @@
       "phone": "+212 662-048417",
       "emergency_24h": false,
       "duty": "Mon-Sat 9:00-20:00; emergencies handled until 3:00 a.m.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h–20 h ; urgences prises en charge jusqu’à 3 h du matin."
+      },
       "small_animals": true,
       "url": "https://vetezzaytoune.com/",
       "source_url": "https://vetezzaytoune.com/",
@@ -196,6 +226,9 @@
       "phone": "+212 663-813802",
       "emergency_24h": true,
       "duty": "Emergency service advertised 24/7, every day of the week.",
+      "duty_i18n": {
+        "fr": "Service d’urgence annoncé 24 h/24, tous les jours de la semaine."
+      },
       "small_animals": true,
       "url": "https://veterinairegibraltar.com/",
       "source_url": "https://veterinairegibraltar.com/",
@@ -211,6 +244,9 @@
       "phone": "+212 5 28 82 48 40",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:30-12:30 and 15:30-18:30, Sat 9:30-13:00; home visits by phone.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h 30–12 h 30 et 15 h 30–18 h 30, sam. 9 h 30–13 h ; visites à domicile sur appel."
+      },
       "small_animals": true,
       "url": "https://www.veterinaireagadir.com/",
       "source_url": "https://www.veterinaireagadir.com/",
@@ -226,6 +262,9 @@
       "phone": "+212 5 29 87 20 61",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-13:00 and 15:00-19:00, Sat 9:00-14:00.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h, sam. 9 h–14 h."
+      },
       "small_animals": true,
       "url": "https://vetcareagadir.lovable.app/",
       "source_url": "https://vetcareagadir.lovable.app/",
@@ -241,6 +280,9 @@
       "phone": "+212 6 61 47 82 83",
       "emergency_24h": true,
       "duty": "Consultations daily 9:00-18:00; emergency service 18:00-09:00; open 24 hours, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Consultations tous les jours 9 h–18 h ; urgences 18 h–9 h ; ouvert 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://vetchampsdecourse.com/",
       "source_url": "https://vetchampsdecourse.com/",
@@ -256,6 +298,9 @@
       "phone": "05 37 66 61 33",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–14 h."
+      },
       "small_animals": true,
       "url": "https://veterinaire-rabat.com/",
       "source_url": "https://veterinaire-rabat.com/",
@@ -270,6 +315,9 @@
       "phone": "05 37 74 10 86",
       "emergency_24h": false,
       "duty": "Urgent care for life-threatening cases; call ahead.",
+      "duty_i18n": {
+        "fr": "Soins urgents pour les cas mettant la vie en danger ; appelez avant de venir."
+      },
       "small_animals": true,
       "url": "https://mimosa.ma/",
       "source_url": "https://mimosa.ma/",
@@ -299,6 +347,9 @@
       "phone": "+212 76 635-7160",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-17:00, Sat 10:00-17:00; emergency care advertised 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "fr": "Lun.–ven. 9 h–17 h, sam. 10 h–17 h ; urgences annoncées 24 h/24, 7 j/7."
+      },
       "small_animals": true,
       "url": "https://veterinaire-villehaute.com/",
       "source_url": "https://veterinaire-villehaute.com/",
@@ -314,6 +365,9 @@
       "phone": "06 66 92 82 69",
       "emergency_24h": false,
       "duty": "Mon-Sat 9:30-19:00.",
+      "duty_i18n": {
+        "fr": "Lun.–sam. 9 h 30–19 h."
+      },
       "small_animals": true,
       "url": "https://petcare.ma/",
       "source_url": "https://petcare.ma/",
@@ -341,6 +395,9 @@
       "phone": "0524 47 43 59",
       "emergency_24h": false,
       "duty": "Separate emergency number 06 61 56 16 10; opening hours not stated.",
+      "duty_i18n": {
+        "fr": "Numéro d’urgence distinct 06 61 56 16 10 ; horaires d’ouverture non indiqués."
+      },
       "small_animals": true,
       "url": "https://www.adnanvet.com/en/about",
       "source_url": "https://www.adnanvet.com/en/about",

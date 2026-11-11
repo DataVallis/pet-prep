@@ -43,6 +43,9 @@
       "phone": "+20 111 080 1801",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
       "source_url": "https://www.americanvetcenter.com/",
@@ -59,6 +62,9 @@
       "phone": "+20 111 080 3803",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
       "source_url": "https://www.americanvetcenter.com/",
@@ -75,6 +81,9 @@
       "phone": "+20 111 080 2802",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
       "source_url": "https://www.americanvetcenter.com/",
@@ -91,6 +100,9 @@
       "phone": "+20 106 030 0853",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
       "source_url": "https://www.americanvetcenter.com/",
@@ -107,6 +119,9 @@
       "phone": "+20 111 884 8190",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+      },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
       "source_url": "https://www.americanvetcenter.com/",
@@ -123,6 +138,9 @@
       "phone": "+20 111 787 3666",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week; WhatsApp available",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 ; joignable sur WhatsApp."
+      },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
       "source_url": "https://drpaws.com.eg/en/branches/",
@@ -138,6 +156,9 @@
       "phone": "+20 103 079 5778",
       "emergency_24h": true,
       "duty": "Open 24 hours; emergency support by phone",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24 ; assistance téléphonique en cas d’urgence."
+      },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
       "source_url": "https://drpaws.com.eg/en/branches/",
@@ -154,6 +175,9 @@
       "phone": "+20 106 050 4468",
       "emergency_24h": false,
       "duty": "Call to confirm opening hours; emergency availability by phone",
+      "duty_i18n": {
+        "fr": "Appelez pour confirmer les horaires ; urgences joignables par téléphone."
+      },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
       "source_url": "https://drpaws.com.eg/en/branches/",
@@ -169,6 +193,9 @@
       "phone": "+20 108 000 0657",
       "emergency_24h": true,
       "duty": "Open 24/7; phone and WhatsApp",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7 ; téléphone et WhatsApp."
+      },
       "small_animals": true,
       "url": "https://vennvet.com/",
       "source_url": "https://vennvet.com/",
@@ -185,6 +212,9 @@
       "phone": "+20 100 345 4200",
       "emergency_24h": true,
       "duty": "Open 24/7, 365 days a year; phone and WhatsApp; home visits in Maadi and nearby areas",
+      "duty_i18n": {
+        "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an ; téléphone et WhatsApp ; visites à domicile à Maadi et dans les environs."
+      },
       "small_animals": true,
       "url": "https://www.mojovetcare.com/",
       "source_url": "https://www.mojovetcare.com/",
@@ -201,6 +231,9 @@
       "phone": "+20 112 522 5662",
       "emergency_24h": true,
       "duty": "Emergency veterinarian at the Maadi clinic around the clock; home visits in Cairo and Giza",
+      "duty_i18n": {
+        "fr": "Vétérinaire d’urgence à la clinique de Maadi 24 h/24 ; visites à domicile au Caire et à Gizeh."
+      },
       "small_animals": true,
       "url": "https://the30vetcenter.com/",
       "source_url": "https://the30vetcenter.com/",
@@ -217,6 +250,9 @@
       "phone": "+20 100 520 0319",
       "emergency_24h": true,
       "duty": "Emergency department open 24 hours a day for treatment and urgent surgery",
+      "duty_i18n": {
+        "fr": "Service d’urgences ouvert 24 h/24 pour les soins et la chirurgie urgente."
+      },
       "small_animals": true,
       "url": "https://familyvetcenter.com/",
       "source_url": "https://en.familyvetcenter.com/emergency-vet/",
@@ -232,6 +268,9 @@
       "phone": "+20 109 810 8604",
       "emergency_24h": true,
       "duty": "Mobile home-visit clinic working around the clock; covers Cairo, Giza and (seasonally) the North Coast",
+      "duty_i18n": {
+        "fr": "Clinique mobile à domicile, disponible 24 h/24 ; couvre Le Caire, Gizeh et, selon la saison, la côte nord."
+      },
       "small_animals": true,
       "url": "https://petlivery.net/",
       "source_url": "https://petlivery.net/",
@@ -247,6 +286,9 @@
       "phone": "+20 102 539 3033",
       "emergency_24h": true,
       "duty": "Mobile home-visit clinic, 24 h emergency line; covers Cairo and Giza",
+      "duty_i18n": {
+        "fr": "Clinique mobile à domicile, ligne d’urgence 24 h/24 ; couvre Le Caire et Gizeh."
+      },
       "small_animals": true,
       "url": "https://www.vetongo.net/",
       "source_url": "https://www.vetongo.net/",
@@ -262,6 +304,9 @@
       "phone": "+20 102 434 3862",
       "emergency_24h": true,
       "duty": "All veterinary services available 24/7, including emergencies",
+      "duty_i18n": {
+        "fr": "Tous les services vétérinaires 24 h/24, 7 j/7, urgences comprises."
+      },
       "small_animals": true,
       "url": "https://sites.google.com/view/pets-society-vet/vet-clinic",
       "source_url": "https://sites.google.com/view/pets-society-vet/vet-clinic",
@@ -278,6 +323,9 @@
       "phone": "+20 109 500 0162",
       "emergency_24h": false,
       "duty": "Hospital, plus a pet hotel and academy; call for opening hours",
+      "duty_i18n": {
+        "fr": "Hôpital vétérinaire, avec pension pour animaux et centre de formation ; appelez pour connaître les horaires."
+      },
       "small_animals": true,
       "url": "https://www.petcareeg.com/",
       "source_url": "https://www.petcareeg.com/",
@@ -293,6 +341,9 @@
       "phone": "+20 106 469 3169",
       "emergency_24h": false,
       "duty": "Saturday to Thursday 10:00-19:30, closed Friday; surgery including emergencies and neutering; inpatient admission subject to space",
+      "duty_i18n": {
+        "fr": "Du samedi au jeudi 10 h–19 h 30, fermé le vendredi ; chirurgie, y compris urgences et stérilisations ; hospitalisation selon les places disponibles."
+      },
       "small_animals": true,
       "url": "https://the-ark-clinic-hurghada.com/",
       "source_url": "https://the-ark-clinic-hurghada.com/",
@@ -307,6 +358,9 @@
       "phone": "+20 107 076 3685",
       "emergency_24h": false,
       "duty": "Treats pets and stray animals; contact by phone or WhatsApp to arrange a visit",
+      "duty_i18n": {
+        "fr": "Soigne les animaux de compagnie et les animaux errants ; contactez la clinique par téléphone ou WhatsApp pour convenir d’une visite."
+      },
       "small_animals": true,
       "url": "https://www.fourgive.org/vetclinic/",
       "source_url": "https://www.fourgive.org/vetclinic/",
@@ -321,6 +375,9 @@
       "address": "El Habil Road (off the road to Cairo and Aswan), Luxor",
       "emergency_24h": false,
       "duty": "Open Saturday to Thursday 9:00-17:00; Friday emergencies only; free neutering and treatment for cats and dogs in the small animal clinic",
+      "duty_i18n": {
+        "fr": "Ouvert du samedi au jeudi 9 h–17 h ; urgences uniquement le vendredi ; stérilisation et soins gratuits pour chats et chiens à la clinique pour petits animaux."
+      },
       "small_animals": true,
       "url": "https://www.ace-egypt.org.uk/visit-us-in-luxor",
       "source_url": "https://www.ace-egypt.org.uk/our-clinics",
@@ -336,6 +393,9 @@
       "phone": "+20 88 2340058",
       "emergency_24h": false,
       "duty": "University teaching hospital with a pet (companion animal) clinic and small-animal surgery",
+      "duty_i18n": {
+        "fr": "Hôpital universitaire vétérinaire avec clinique pour animaux de compagnie et chirurgie des petits animaux."
+      },
       "small_animals": true,
       "url": "https://www.aun.edu.eg/veterinary_medicine/hospital/",
       "source_url": "https://www.aun.edu.eg/veterinary_medicine/sites/default/files/%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%8A%20.pdf",
@@ -349,6 +409,9 @@
       "region": "Red Sea",
       "emergency_24h": false,
       "duty": "Charity hospital: free treatment of sick and injured stray dogs and cats; daily neutering; help for owners who cannot afford care",
+      "duty_i18n": {
+        "fr": "Hôpital associatif : soins gratuits pour les chiens et chats errants malades ou blessés ; stérilisations tous les jours ; aide aux propriétaires qui n’ont pas les moyens de payer les soins."
+      },
       "small_animals": true,
       "url": "https://susyutzinger.ch/en/Activities/SUSTOrphanAnimalHospitals/SUST-OAHHurghadaEG/ArtMID/1605/ArticleID/7001",
       "source_url": "https://susyutzinger.ch/en/Activities/SUSTOrphanAnimalHospitals/SUST-OAHHurghadaEG/ArtMID/1605/ArticleID/7001",
