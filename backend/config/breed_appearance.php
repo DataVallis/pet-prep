@@ -794,6 +794,12 @@
 | feathered legs and tail, small ears close to the head, short straight tail (S761). Not a welfare breed (RKC Breed Watch
 | Category 1, S762). Black first with the highest weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Border Terrier (M5-R10-102, docs/research/dog-data border_terrier.appearance): "Colour: Red, wheaten, grizzle and
+| tan, or blue and tan." (FCI-Standard N° 10, S768; "Any other colour or combination of colours unacceptable."); harsh,
+| dense wiry coat, short strong muzzle, small V-shaped ears dropping forward, moderately short tail (S768; AKC S776 dark
+| muzzle). Not a welfare breed (RKC Breed Watch Category 1, S769). Grizzle and tan first with the highest weight (the
+| portrait default); weights unsourced → `verified => false`.
+|
 | English Setter (M5-R10-97, docs/research/dog-data english_setter.appearance):
 | "Of medium height, clean in outline, elegant in appearance and movement." (FCI-Standard N° 2, S730); colours blue,
 | orange, lemon and liver belton or tricolour (blue / liver belton and tan), "Any other colour or combination of colours
@@ -4426,6 +4432,41 @@ return [
             'tail' => ['natural tail, short and straight, carried gaily but never much above the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-102 (docs/research/dog-data/data.json border_terrier.appearance; runbook rules 2026-10-10: standard colours
+    // only — red, wheaten, grizzle and tan, blue and tan (FCI-Standard N° 10, S768); natural tail; never white feet).
+    'border_terrier' => [
+        'display_name' => 'Border Terrier',
+        // Colour frequencies are in no source (border_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 10 (S768, https://www.fci.be/Nomenclature/Standards/010g03-en.pdf), RKC breed page (S769), AKC standard (S776) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S769 "Size: Small"; S768 "WEIGHT: Males: 5,9-7,1 kg; females 5,1-6,4 kg."',
+            'build' => 'S768 "GENERAL APPEARANCE: Essentially a working terrier. Capable of following a horse."; S769 "Active, game and adaptable working terrier"',
+            'coat_length' => 'S768 "Hair: Harsh and dense; with close undercoat."; S769 "Coat length: Short"',
+            'coat_color' => 'S768 "Colour: Red, wheaten, grizzle and tan, or blue and tan." (weights unsourced)',
+            'ear_carriage' => 'S768 "EARS: Small, V-shaped, of moderate thickness, and dropping forward close to the cheek."',
+            'eye_color' => 'S768 "EYES: dark with keen expression."',
+            'tail' => 'S768 "TAIL: Moderately short; fairly thick at base, then tapering."',
+            'muzzle' => 'S768 "Muzzle: Short, strong."; S776 "A dark muzzle is characteristic and desirable."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, narrow-bodied, active working terrier with an otter-like head', 'weight' => 3], 'compact, agile terrier body with long legs for its size'],
+            'coat_length' => ['harsh, dense, wiry and somewhat broken short coat lying close, with a close undercoat'],
+            // Standard colours only (S768); grizzle and tan highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'grizzle and tan', 'weight' => 45],
+                ['value' => 'red', 'weight' => 30],
+                ['value' => 'wheaten', 'weight' => 15],
+                ['value' => 'blue and tan', 'weight' => 10],
+            ],
+            'ear_carriage' => ['small V-shaped ears dropping forward close to the cheek'],
+            'eye_color' => ['dark eyes with a keen expression'],
+            'tail' => ['natural tail, moderately short, thick at the base then tapering, carried gaily but not curled over the back'],
+            'muzzle' => ['short, strong, dark muzzle with a black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
