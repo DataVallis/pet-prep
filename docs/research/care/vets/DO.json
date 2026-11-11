@@ -1,0 +1,99 @@
+{
+  "country": "DO",
+  "checked": "2026-11-11",
+  "sources": [
+    {
+      "name": "ASVET - own site",
+      "url": "https://asvet.do/",
+      "note": "Own page opened: address and phone; no opening hours; only hospitalised patients are monitored 24 h."
+    },
+    {
+      "name": "WellVet - own site",
+      "url": "https://mywellvet.com/",
+      "note": "Own page opened: three branches with hours and phone; after-hours phone line for symptom guidance."
+    },
+    {
+      "name": "Hospital Veterinario Central (Santiago) - own site",
+      "url": "https://hvcsantiago.com/",
+      "note": "Own page opened: address, phones, hours; 24/7 phone emergency line for registered patients only."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "ASVET Clinica Veterinaria",
+      "city": "Santo Domingo Este",
+      "region": "Santo Domingo",
+      "address": "Calle Marginal Norte No. 45, Santo Domingo Este 11506",
+      "phone": "+1 809 595 2585",
+      "emergency_24h": false,
+      "duty": "Hospitalised pets are monitored 24 hours; opening hours are not published.",
+      "small_animals": true,
+      "url": "https://asvet.do/",
+      "source_url": "https://asvet.do/",
+      "checked": "2026-11-11",
+      "note": "No emergency/opening-hours statement; the 24 h wording refers to intensive care of hospitalised patients only."
+    },
+    {
+      "kind": "clinic",
+      "name": "WellVet Santiago",
+      "city": "Santiago",
+      "region": "Santiago",
+      "address": "Calle Dr. Lorenzo Pellerano 8, Cerros de Gurabo III",
+      "phone": "+1 809 626 6666",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 7:00-18:00, Sat 9:00-15:00. After-hours phone line for urgent symptom guidance.",
+      "small_animals": true,
+      "url": "https://mywellvet.com/",
+      "source_url": "https://mywellvet.com/",
+      "checked": "2026-11-11",
+      "note": "After-hours number on the page is shown as +1 809 626 666 (one digit short); not published."
+    },
+    {
+      "kind": "clinic",
+      "name": "WellVet Santo Domingo",
+      "city": "Santo Domingo",
+      "region": "Distrito Nacional",
+      "address": "Calle Paseo de los Locutores 41A",
+      "phone": "+1 809 692 9903",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 7:00-18:00, Sat 9:00-15:00. After-hours phone line for urgent symptom guidance.",
+      "small_animals": true,
+      "url": "https://mywellvet.com/",
+      "source_url": "https://mywellvet.com/",
+      "checked": "2026-11-11",
+      "note": "Branch number is the WhatsApp line shown for this branch on the page; main line +1 809 626 6666."
+    },
+    {
+      "kind": "clinic",
+      "name": "WellVet Jarabacoa",
+      "city": "Jarabacoa",
+      "region": "La Vega",
+      "address": "Carretera Federico Basilis 800, Buena Vista",
+      "phone": "+1 809 747 5332",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-17:00. After-hours phone line for urgent symptom guidance.",
+      "small_animals": true,
+      "url": "https://mywellvet.com/",
+      "source_url": "https://mywellvet.com/",
+      "checked": "2026-11-11",
+      "note": "Branch number is the WhatsApp line shown for this branch on the page; main line +1 809 626 6666."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Central (HVC)",
+      "city": "Santiago de los Caballeros",
+      "region": "Santiago",
+      "address": "Calle 13 (Av. José M. Fadul) 29, El Embrujo I",
+      "phone": "+1 829 581 4674",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00, closed Sundays and holidays. 24/7 phone emergency line for registered patients only.",
+      "small_animals": true,
+      "url": "https://hvcsantiago.com/",
+      "source_url": "https://hvcsantiago.com/",
+      "checked": "2026-11-11",
+      "note": "Second phone +1 809 806 0991; WhatsApp appointments +1 829 868 2588. Clinic itself not open 24 h."
+    }
+  ],
+  "notes": "Thin run: no official body page (CMVD, Ministerio de Agricultura, university hospitals) yielded a usable clinic list; no animal poison line or duty rota found (none known to exist). Blocked by the fetch tool (URL not allowed / robots / client error), not opened: hospitalveterinariocentral.com (robots), veterinariadrdelacruz.com (Puerto Plata/Sosua), eldinero.com.do, facebook (Vet Mart 24h, VetPlaza 24hrs), instagram. Not opened for provenance reasons (leads only from the dd.com.do listing): servican.com.do, hospitalveterinarioreal.com, faunatikapetshop.com (Punta Cana, emergency services), clinicaveterinariaamerica.com, vetmord.com, pilisvet.com, zoolandiard.com (Santiago), unphu.edu.do/clinica-veterinaria/, animed.do, veterinariaflaquer (La Romana), petcare.com.do, petland.com.do. Leads from aggregators only (not used as entries): Vet Mart Clinica Veterinaria 24 horas, Santo Domingo Este, +1 809 788 0361 (claims 24 h); Pets Valley (Naco, emergency 809 398 0005); Open Doors Veterinary Wellness (Bavaro). Not covered: Puerto Plata/Sosua, La Romana, Samana. Removed Vet Arroyo Hondo (vetarroyohondo.com.do): page says \"Emergencia abierta las 24 horas\" but shows no clinic name, address or phone, so the entry could not be confirmed or contacted."
+}
