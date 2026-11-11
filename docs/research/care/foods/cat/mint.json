@@ -9,7 +9,8 @@
     "fr": "Menthe (menthe des jardins)",
     "es": "Menta (de jardín)",
     "it": "Menta (menta da giardino)",
-    "nl": "Munt (tuinmunt)"
+    "nl": "Munt (tuinmunt)",
+    "pl": "Mięta (mięta ogrodowa)"
   },
   "question": {
     "en": "Can cats eat mint?",
@@ -19,7 +20,8 @@
     "fr": "Les chats peuvent-ils manger de la menthe ?",
     "es": "¿Pueden los gatos comer menta?",
     "it": "I gatti possono mangiare la menta?",
-    "nl": "Mogen katten munt eten?"
+    "nl": "Mogen katten munt eten?",
+    "pl": "Czy koty mogą jeść miętę?"
   },
   "url_slug": {
     "en": "mint",
@@ -29,7 +31,8 @@
     "fr": "menthe",
     "es": "menta",
     "it": "menta",
-    "nl": "munt"
+    "nl": "munt",
+    "pl": "mieta"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "fr": "Non, ne donnez pas de menthe à votre chat. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour les chats, à cause de ses huiles essentielles ; en manger beaucoup peut provoquer des vomissements et de la diarrhée. Si votre chat en a mangé, contactez votre vétérinaire.",
     "es": "No, no le des menta a tu gato. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los gatos por sus aceites esenciales: si come mucha, puede tener vómitos y diarrea. Si tu gato ha comido un poco, contacta con tu veterinario.",
     "it": "No, non dare menta al tuo gatto. L’ASPCA indica la menta da giardino come tossica per i gatti a causa degli oli essenziali: mangiarne molta può causare vomito e diarrea. Se il tuo gatto ne ha mangiato un po’, contatta il veterinario.",
-    "nl": "Nee, geef je kat geen munt. De ASPCA noemt tuinmunt giftig voor katten vanwege de etherische oliën; als een kat er veel van eet, kan dat braken en diarree veroorzaken. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts."
+    "nl": "Nee, geef je kat geen munt. De ASPCA noemt tuinmunt giftig voor katten vanwege de etherische oliën; als een kat er veel van eet, kan dat braken en diarree veroorzaken. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts.",
+    "pl": "Nie, nie dawaj kotu mięty. ASPCA uznaje miętę ogrodową za toksyczną dla kotów z powodu olejków eterycznych; zjedzenie jej dużej ilości może wywołać wymioty i biegunkę. Jeśli kot zjadł trochę mięty, skontaktuj się z weterynarzem."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -50,7 +54,8 @@
     "fr": "L’ASPCA classe la menthe (espèces du genre Mentha, aussi appelée menthe des jardins) parmi les plantes toxiques pour les chats. Elle identifie les huiles essentielles comme la substance toxique et cite des vomissements et de la diarrhée en cas d’ingestion de grandes quantités. L’ASPCA rappelle aussi que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Les chats n’ont pas besoin de plantes dans leur alimentation : selon la PDSA, ce sont des carnivores qui ont besoin des nutriments présents dans la viande.",
     "es": "La ASPCA incluye la menta (especies de Mentha, también llamada menta de jardín) entre las plantas tóxicas para los gatos. Señala los aceites esenciales como principio tóxico y recoge vómitos y diarrea cuando se ingiere en grandes cantidades. La ASPCA también indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. Los gatos no necesitan plantas en su dieta: según PDSA, son carnívoros y necesitan nutrientes presentes en la carne.",
     "it": "L’ASPCA indica la menta (specie Mentha, detta anche menta da giardino) come tossica per i gatti. Cita gli oli essenziali come sostanza tossica ed elenca vomito e diarrea in caso di ingestione di grandi quantità. L’ASPCA segnala inoltre che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Nella dieta dei gatti non servono piante: secondo PDSA i gatti sono carnivori e hanno bisogno dei nutrienti presenti nella carne.",
-    "nl": "De ASPCA noemt munt (Mentha-soorten, ook wel tuinmunt genoemd) giftig voor katten. Als giftige stof noemt de ASPCA etherische oliën, en als verschijnselen braken en diarree wanneer een kat er veel van heeft gegeten. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten."
+    "nl": "De ASPCA noemt munt (Mentha-soorten, ook wel tuinmunt genoemd) giftig voor katten. Als giftige stof noemt de ASPCA etherische oliën, en als verschijnselen braken en diarree wanneer een kat er veel van heeft gegeten. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten.",
+    "pl": "ASPCA uznaje miętę (gatunki Mentha, zwane też miętą ogrodową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje olejki eteryczne i podaje wymioty oraz biegunkę po zjedzeniu dużych ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Braken",
       "Diarree",
       "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "fr": "Si votre chat a mangé de la menthe, contactez immédiatement votre vétérinaire. N’attendez pas que des symptômes apparaissent.",
     "es": "Si tu gato ha comido menta, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
     "it": "Se il tuo gatto ha mangiato menta, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
-    "nl": "Heeft je kat munt gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet."
+    "nl": "Heeft je kat munt gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet.",
+    "pl": "Jeśli kot zjadł miętę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "fr": "La menthe n’est pas une friandise pour chat. Si ton chat en grignote, préviens un adulte pour qu’il appelle le vétérinaire.",
     "es": "La menta no es un premio para gatos. Si tu gatito mordisquea un poco, avisa a un adulto para que llame al veterinario.",
     "it": "La menta non è uno spuntino per gatti. Se il micio ne mordicchia un po’, dillo a un adulto, così può chiamare il veterinario.",
-    "nl": "Munt is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen."
+    "nl": "Munt is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
+    "pl": "Mięta nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "fr": "La cataire est-elle une sorte de menthe ?",
         "es": "¿Es la hierba gatera un tipo de menta?",
         "it": "L’erba gatta è un tipo di menta?",
-        "nl": "Is kattenkruid een soort munt?"
+        "nl": "Is kattenkruid een soort munt?",
+        "pl": "Czy kocimiętka to rodzaj mięty?"
       },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -135,7 +148,8 @@
         "fr": "La cataire appartient à la famille de la menthe, comme le note VCA, mais c’est une plante à part. L’ASPCA la classe séparément : beaucoup de chats l’adorent, mais en manger peut provoquer des vomissements et de la diarrhée.",
         "es": "La hierba gatera pertenece a la familia de la menta, como señala VCA, pero es una planta distinta. La ASPCA la incluye por separado: a muchos gatos les encanta, pero comerla puede provocar vómitos y diarrea.",
         "it": "L’erba gatta appartiene alla famiglia della menta, come osserva VCA, ma è una pianta a sé. L’ASPCA la elenca separatamente: a molti gatti piace tantissimo, ma mangiarla può causare vomito e diarrea.",
-        "nl": "Kattenkruid hoort bij de muntfamilie, zoals VCA opmerkt, maar het is een aparte plant. De ASPCA vermeldt het apart: veel katten zijn dol op kattenkruid, maar als ze het opeten, kunnen ze ervan gaan braken en diarree krijgen."
+        "nl": "Kattenkruid hoort bij de muntfamilie, zoals VCA opmerkt, maar het is een aparte plant. De ASPCA vermeldt het apart: veel katten zijn dol op kattenkruid, maar als ze het opeten, kunnen ze ervan gaan braken en diarree krijgen.",
+        "pl": "Kocimiętka należy do rodziny miętowatych, jak zauważa VCA, ale jest osobną rośliną. ASPCA wymienia ją osobno: wiele kotów kocimiętkę uwielbia, ale jej zjedzenie może wywołać wymioty i biegunkę."
       }
     }
   ],
@@ -231,6 +245,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "74b7bdbb24a67f76a494d6a26d72e9fd98e61e0192582bca753d4a4d62d1940b"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e5f4ae992fffce42a0e9e1043f230cb8adc013dad228b46f2c8d60d8a2c1a4cf"
     }
   }
 }
