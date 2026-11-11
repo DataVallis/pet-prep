@@ -7,7 +7,8 @@
     "de": "Minze (Gartenminze)",
     "pt": "Hortelã (hortelã-comum)",
     "fr": "Menthe (menthe des jardins)",
-    "es": "Menta (de jardín)"
+    "es": "Menta (de jardín)",
+    "it": "Menta (menta da giardino)"
   },
   "question": {
     "en": "Can cats eat mint?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Minze fressen?",
     "pt": "Os gatos podem comer hortelã?",
     "fr": "Les chats peuvent-ils manger de la menthe ?",
-    "es": "¿Pueden los gatos comer menta?"
+    "es": "¿Pueden los gatos comer menta?",
+    "it": "I gatti possono mangiare la menta?"
   },
   "url_slug": {
     "en": "mint",
@@ -23,7 +25,8 @@
     "de": "minze",
     "pt": "hortela",
     "fr": "menthe",
-    "es": "menta"
+    "es": "menta",
+    "it": "menta"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein, geben Sie Ihrer Katze keine Minze. Die ASPCA stuft Gartenminze wegen ihrer ätherischen Öle als giftig für Katzen ein. Frisst eine Katze viel davon, kann das Erbrechen und Durchfall auslösen. Wenn Ihre Katze davon gefressen hat, wenden Sie sich an Ihren Tierarzt.",
     "pt": "Não, não dês hortelã ao teu gato. A ASPCA classifica a hortelã-comum como tóxica para os gatos, por causa dos óleos essenciais, que podem causar vómitos e diarreia se o gato comer muita. Se o teu gato comeu alguma, liga ao teu veterinário.",
     "fr": "Non, ne donnez pas de menthe à votre chat. L’ASPCA classe la menthe des jardins parmi les plantes toxiques pour les chats, à cause de ses huiles essentielles ; en manger beaucoup peut provoquer des vomissements et de la diarrhée. Si votre chat en a mangé, contactez votre vétérinaire.",
-    "es": "No, no le des menta a tu gato. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los gatos por sus aceites esenciales: si come mucha, puede tener vómitos y diarrea. Si tu gato ha comido un poco, contacta con tu veterinario."
+    "es": "No, no le des menta a tu gato. La ASPCA incluye la menta de jardín entre las plantas tóxicas para los gatos por sus aceites esenciales: si come mucha, puede tener vómitos y diarrea. Si tu gato ha comido un poco, contacta con tu veterinario.",
+    "it": "No, non dare menta al tuo gatto. L’ASPCA indica la menta da giardino come tossica per i gatti a causa degli oli essenziali: mangiarne molta può causare vomito e diarrea. Se il tuo gatto ne ha mangiato un po’, contatta il veterinario."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -40,7 +44,8 @@
     "de": "Die ASPCA stuft Minze (Mentha-Arten, auch Gartenminze genannt) als giftig für Katzen ein. Als giftigen Inhaltsstoff nennt sie ätherische Öle und führt Erbrechen und Durchfall nach großen Mengen an. Außerdem weist die ASPCA darauf hin, dass jedes Pflanzenmaterial bei Katzen Erbrechen und Magenbeschwerden auslösen kann. Katzen brauchen keine Pflanzen in ihrer Ernährung: Laut PDSA sind Katzen Fleischfresser, die Nährstoffe brauchen, die in Fleisch stecken.",
     "pt": "A ASPCA classifica a hortelã (espécies de Mentha, também chamada hortelã-comum) como tóxica para os gatos. Indica os óleos essenciais como a substância tóxica e refere vómitos e diarreia quando é comida em grande quantidade. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne.",
     "fr": "L’ASPCA classe la menthe (espèces du genre Mentha, aussi appelée menthe des jardins) parmi les plantes toxiques pour les chats. Elle identifie les huiles essentielles comme la substance toxique et cite des vomissements et de la diarrhée en cas d’ingestion de grandes quantités. L’ASPCA rappelle aussi que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Les chats n’ont pas besoin de plantes dans leur alimentation : selon la PDSA, ce sont des carnivores qui ont besoin des nutriments présents dans la viande.",
-    "es": "La ASPCA incluye la menta (especies de Mentha, también llamada menta de jardín) entre las plantas tóxicas para los gatos. Señala los aceites esenciales como principio tóxico y recoge vómitos y diarrea cuando se ingiere en grandes cantidades. La ASPCA también indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. Los gatos no necesitan plantas en su dieta: según PDSA, son carnívoros y necesitan nutrientes presentes en la carne."
+    "es": "La ASPCA incluye la menta (especies de Mentha, también llamada menta de jardín) entre las plantas tóxicas para los gatos. Señala los aceites esenciales como principio tóxico y recoge vómitos y diarrea cuando se ingiere en grandes cantidades. La ASPCA también indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. Los gatos no necesitan plantas en su dieta: según PDSA, son carnívoros y necesitan nutrientes presentes en la carne.",
+    "it": "L’ASPCA indica la menta (specie Mentha, detta anche menta da giardino) come tossica per i gatti. Cita gli oli essenziali come sostanza tossica ed elenca vomito e diarrea in caso di ingestione di grandi quantità. L’ASPCA segnala inoltre che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Nella dieta dei gatti non servono piante: secondo PDSA i gatti sono carnivori e hanno bisogno dei nutrienti presenti nella carne."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vómitos",
       "Diarrea",
       "Malestar de estómago"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Disturbi di stomaco"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "de": "Wenn Ihre Katze Minze gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht ab, bis Anzeichen auftreten.",
     "pt": "Se o teu gato comeu hortelã, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais.",
     "fr": "Si votre chat a mangé de la menthe, contactez immédiatement votre vétérinaire. N’attendez pas que des symptômes apparaissent.",
-    "es": "Si tu gato ha comido menta, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas."
+    "es": "Si tu gato ha comido menta, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
+    "it": "Se il tuo gatto ha mangiato menta, contatta subito il veterinario. Non aspettare che compaiano i sintomi."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "de": "Minze ist kein Snack für Katzen. Wenn deine Katze etwas davon angeknabbert hat, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
     "pt": "A hortelã não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário.",
     "fr": "La menthe n’est pas une friandise pour chat. Si ton chat en grignote, préviens un adulte pour qu’il appelle le vétérinaire.",
-    "es": "La menta no es un premio para gatos. Si tu gatito mordisquea un poco, avisa a un adulto para que llame al veterinario."
+    "es": "La menta no es un premio para gatos. Si tu gatito mordisquea un poco, avisa a un adulto para que llame al veterinario.",
+    "it": "La menta non è uno spuntino per gatti. Se il micio ne mordicchia un po’, dillo a un adulto, così può chiamare il veterinario."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "de": "Ist Katzenminze eine Art Minze?",
         "pt": "A erva-gateira é um tipo de hortelã?",
         "fr": "La cataire est-elle une sorte de menthe ?",
-        "es": "¿Es la hierba gatera un tipo de menta?"
+        "es": "¿Es la hierba gatera un tipo de menta?",
+        "it": "L’erba gatta è un tipo di menta?"
       },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -107,7 +120,8 @@
         "de": "Wie VCA anmerkt, gehört Katzenminze zur Familie der Minzen, ist aber eine eigene Pflanze. Die ASPCA führt sie getrennt auf: Viele Katzen lieben Katzenminze, aber das Fressen kann Erbrechen und Durchfall auslösen.",
         "pt": "A erva-gateira pertence à família da hortelã, como refere a VCA, mas é uma planta diferente. A ASPCA classifica-a em separado: muitos gatos adoram erva-gateira, mas comê-la pode causar vómitos e diarreia.",
         "fr": "La cataire appartient à la famille de la menthe, comme le note VCA, mais c’est une plante à part. L’ASPCA la classe séparément : beaucoup de chats l’adorent, mais en manger peut provoquer des vomissements et de la diarrhée.",
-        "es": "La hierba gatera pertenece a la familia de la menta, como señala VCA, pero es una planta distinta. La ASPCA la incluye por separado: a muchos gatos les encanta, pero comerla puede provocar vómitos y diarrea."
+        "es": "La hierba gatera pertenece a la familia de la menta, como señala VCA, pero es una planta distinta. La ASPCA la incluye por separado: a muchos gatos les encanta, pero comerla puede provocar vómitos y diarrea.",
+        "it": "L’erba gatta appartiene alla famiglia della menta, come osserva VCA, ma è una pianta a sé. L’ASPCA la elenca separatamente: a molti gatti piace tantissimo, ma mangiarla può causare vomito e diarrea."
       }
     }
   ],
@@ -193,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "769207cc139c1f067a39710187f439c4e736400400898855b0a59efad07d86e9"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8fa3c8d91f5286734ff21f3eda3946aff30c4f68798ad8c30916ff3e80840a28"
     }
   }
 }
