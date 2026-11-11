@@ -53161,7 +53161,7 @@
   "leonberger": {
     "_note": "Added 2026-11-11 (M5-R10-103, unattended run — appended after the Border Terrier: AKC 2024 No. 99 'Leonberger', S174 full-list table fetched 2026-11-11 '98 Border Terrier', '99 Leonberger', '100 Beauceron'). Quotes as returned by the web-fetch tool on 2026-11-11 (FCI, PetMD and Woodgreen partly in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S780–S786 (reused S10, S11, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S782, 'LEONBERGER (145)', Group 2, Germany); heights, colours and appearance from FCI-Standard N° 145 (S783) and the AKC standard (S786). RKC Breeds A–Z page (S780): key facts, Breed Watch Category 2 (no point returned) and the health tests; the RKC breed standard page was refused at its site. PDSA (S781), Woodgreen (S784), PetMD (S785). Weight for the game: PDSA range (S781) — FCI and AKC give no weight. Lifespan: McMillan et al. 2024 median 10.0 y as tabled by Dogs Trust (S123) → senior 90 (runbook first choice, not provisional); RKC / PDSA 'Under 10 years' → shorter_lifespan. Names: RKC / AKC / FCI 'Leonberger'; Slovenian »leonberger« — no KZS page read, open for David.",
     "identity": {
-      "value": "FCI No. 145, Group 2 Section 2 (Molossian type, Mountain type), Germany",
+      "value": "FCI No. 145, Group 2 Section 2.2 (Molossoid breeds, Mountain type), Germany",
       "unit": "—",
       "source_id": "S782",
       "quote": "LEONBERGER (145)",
@@ -53292,7 +53292,7 @@
         "value": "> 120",
         "unit": "minutes/day",
         "source_id": "S780",
-        "quote": "Exercise: More than 2 hours per day",
+        "quote": "More than 2 hours per day",
         "confidence": "high",
         "notes": "RKC breed page key fact (S780), runbook first choice → 120 min. PDSA (S781) 'Minimum exercise (per day): 2 hours' and 'As adult dogs, Leonbergers need over 2 hours of exercise daily' agree. Woodgreen (S784) 'Exercise needs: 60-90 minutes' / 'at least one hour' — alternative (60); PetMD (S785) 'at least once every day, such as a long walk or hike' (no number)."
       },
@@ -80083,7 +80083,7 @@
         "value": 120,
         "unit": "minutes/day",
         "source_id": "S780",
-        "quote": null,
+        "quote": "More than 2 hours per day",
         "confidence": "high",
         "notes": "RKC 'More than 2 hours per day' (S780). Rule: one number N ('more than N') → N = 120. PDSA (S781) '2 hours' / 'over 2 hours of exercise daily' agrees.",
         "alternatives": [
