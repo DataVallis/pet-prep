@@ -15,7 +15,8 @@
     "hr": "Metvica (vrtna metvica)",
     "sv": "Mynta (kryddmynta)",
     "da": "Mynte (havemynte)",
-    "fi": "Minttu (puutarhaminttu)"
+    "fi": "Minttu (puutarhaminttu)",
+    "nb": "Mynte (hagemynte)"
   },
   "question": {
     "en": "Can cats eat mint?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti metvicu?",
     "sv": "Får katter äta mynta?",
     "da": "Må katte spise mynte?",
-    "fi": "Saako kissa syödä minttua?"
+    "fi": "Saako kissa syödä minttua?",
+    "nb": "Kan katter spise mynte?"
   },
   "url_slug": {
     "en": "mint",
@@ -47,7 +49,8 @@
     "hr": "metvica",
     "sv": "mynta",
     "da": "mynte",
-    "fi": "minttu"
+    "fi": "minttu",
+    "nb": "mynte"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, ne daj mački metvicu. ASPCA vrtnu metvicu navodi kao otrovnu za mačke zbog eteričnih ulja; veća količina može izazvati povraćanje i proljev. Ako je mačka pojela nešto metvice, obrati se veterinaru.",
     "sv": "Nej, ge inte katten mynta. ASPCA anger att kryddmynta är giftig för katter på grund av de eteriska oljorna, och om katten äter mycket kan den få kräkningar och diarré. Om katten har ätit av den ska du kontakta veterinären.",
     "da": "Nej, giv ikke din kat mynte. ASPCA betragter havemynte som giftig for katte på grund af de æteriske olier. Spiser katten meget, kan det give opkast og diarré. Hvis din kat har spist af den, skal du kontakte din dyrlæge.",
-    "fi": "Ei saa, älä anna kissallesi minttua. ASPCA luokittelee puutarhamintun kissoille myrkylliseksi sen eteeristen öljyjen vuoksi; suuren määrän syöminen voi aiheuttaa oksentelua ja ripulia. Jos kissasi on syönyt sitä, ota yhteyttä eläinlääkäriin."
+    "fi": "Ei saa, älä anna kissallesi minttua. ASPCA luokittelee puutarhamintun kissoille myrkylliseksi sen eteeristen öljyjen vuoksi; suuren määrän syöminen voi aiheuttaa oksentelua ja ripulia. Jos kissasi on syönyt sitä, ota yhteyttä eläinlääkäriin.",
+    "nb": "Nei, ikke gi katten mynte. ASPCA oppgir hagemynte som giftig for katter på grunn av de eteriske oljene, og store mengder kan gi oppkast og diaré. Har katten spist av den, må du kontakte dyrlegen."
   },
   "why": {
     "en": "The ASPCA lists mint (Mentha species, also called garden mint) as toxic to cats. It names essential oils as the toxic substance and lists vomiting and diarrhoea with large amounts eaten. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -80,7 +84,8 @@
     "hr": "ASPCA navodi metvicu (vrste roda Mentha, poznate i kao vrtna metvica) kao otrovnu za mačke. Kao otrovnu tvar navodi eterična ulja, a uz veće pojedene količine navodi povraćanje i proljev. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa.",
     "sv": "ASPCA anger mynta (Mentha-arter, även kallad kryddmynta) som giftig för katter. Som giftigt ämne anges eteriska oljor, och vid stora mängder nämns kräkningar och diarré. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött.",
     "da": "ASPCA betragter mynte (Mentha-arter, også kaldet havemynte) som giftig for katte. Organisationen peger på æteriske olier som det giftige stof og nævner opkast og diarré ved store mængder. ASPCA bemærker også at alle planter kan give katte opkast og dårlig mave. Katte har ikke brug for planter i kosten: PDSA skriver at katte er kødædere og har brug for de næringsstoffer der findes i kød.",
-    "fi": "ASPCA luokittelee mintun (Mentha-lajit, myös puutarhaminttu) kissoille myrkylliseksi. Se mainitsee myrkyllisenä aineena eteeriset öljyt ja kertoo suurten määrien syömisen aiheuttavan oksentelua ja ripulia. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja. Kissat eivät tarvitse kasveja ruokavaliossaan: PDSA toteaa, että kissat ovat lihansyöjiä, jotka tarvitsevat lihasta saatavia ravintoaineita."
+    "fi": "ASPCA luokittelee mintun (Mentha-lajit, myös puutarhaminttu) kissoille myrkylliseksi. Se mainitsee myrkyllisenä aineena eteeriset öljyt ja kertoo suurten määrien syömisen aiheuttavan oksentelua ja ripulia. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja. Kissat eivät tarvitse kasveja ruokavaliossaan: PDSA toteaa, että kissat ovat lihansyöjiä, jotka tarvitsevat lihasta saatavia ravintoaineita.",
+    "nb": "ASPCA oppgir mynte (Mentha-arter, også kalt hagemynte) som giftig for katter. Den nevner eteriske oljer som det giftige stoffet og oppgir oppkast og diaré ved store mengder. ASPCA påpeker også at alle plantedeler kan gi katter oppkast og urolig mage. Katter trenger ikke planter i kosten: PDSA sier at katter er kjøttetere som trenger næringsstoffer som finnes i kjøtt."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Oksentelu",
       "Ripuli",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "hr": "Ako je mačka pojela metvicu, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi.",
     "sv": "Om katten har ätit mynta ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp.",
     "da": "Hvis din kat har spist mynte, skal du straks kontakte din dyrlæge. Vent ikke på symptomer.",
-    "fi": "Jos kissasi on syönyt minttua, ota heti yhteyttä eläinlääkäriin. Älä odota oireita."
+    "fi": "Jos kissasi on syönyt minttua, ota heti yhteyttä eläinlääkäriin. Älä odota oireita.",
+    "nb": "Hvis katten har spist mynte, må du kontakte dyrlegen med en gang. Ikke vent på symptomer."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "hr": "Metvica nije poslastica za mačke. Ako mačkica zagrize malo metvice, reci odrasloj osobi da nazove veterinara.",
     "sv": "Mynta är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären.",
     "da": "Mynte er ikke en snack til katte. Hvis din kat har gnasket lidt af den, så sig det til en voksen, som kan ringe til dyrlægen.",
-    "fi": "Minttu ei ole kissan välipala. Jos kisu nakertaa sitä, kerro aikuiselle, jotta hän voi soittaa eläinlääkärille."
+    "fi": "Minttu ei ole kissan välipala. Jos kisu nakertaa sitä, kerro aikuiselle, jotta hän voi soittaa eläinlääkärille.",
+    "nb": "Mynte er ikke en godbit for katter. Hvis pusen har knasket på den, si fra til en voksen som kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "hr": "Je li mačja metvica vrsta metvice?",
         "sv": "Är kattmynta en sorts mynta?",
         "da": "Er katteurt en slags mynte?",
-        "fi": "Onko kissanminttu mintun laji?"
+        "fi": "Onko kissanminttu mintun laji?",
+        "nb": "Er katteurt en type mynte?"
       },
       "a": {
         "en": "Catnip belongs to the mint family, as VCA notes, but it is its own plant. The ASPCA lists it separately: many cats love catnip, but eating it can cause vomiting and diarrhoea.",
@@ -219,7 +232,8 @@
         "hr": "Mačja metvica pripada istoj biljnoj porodici kao metvica, kako napominje VCA, ali je zasebna biljka. ASPCA je navodi zasebno: mnoge je mačke vole, ali jedenje može izazvati povraćanje i proljev.",
         "sv": "Kattmynta tillhör familjen kransblommiga växter, precis som mynta, vilket VCA påpekar, men det är en egen växt. ASPCA tar upp den för sig: många katter älskar kattmynta, men om katten äter den kan den få kräkningar och diarré.",
         "da": "Katteurt tilhører myntefamilien, som VCA bemærker, men er en plante for sig. ASPCA omtaler den separat: mange katte elsker katteurt, men spiser de den, kan det give opkast og diarré.",
-        "fi": "VCA:n mukaan kissanminttu kuuluu minttukasvien heimoon (huulikukkaiskasvit), mutta se on oma kasvinsa. ASPCA luokittelee sen erikseen: monet kissat rakastavat kissanminttua, mutta sen syöminen voi aiheuttaa oksentelua ja ripulia."
+        "fi": "VCA:n mukaan kissanminttu kuuluu minttukasvien heimoon (huulikukkaiskasvit), mutta se on oma kasvinsa. ASPCA luokittelee sen erikseen: monet kissat rakastavat kissanminttua, mutta sen syöminen voi aiheuttaa oksentelua ja ripulia.",
+        "nb": "Katteurt tilhører myntefamilien, som VCA påpeker, men er en egen plante. ASPCA omtaler den for seg: mange katter elsker katteurt, men å spise den kan gi oppkast og diaré."
       }
     }
   ],
@@ -345,6 +359,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "56df0f48edfd149633a18ac7cc3b63bb030aa41a67ced89c65cb515e73a53e53"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b300ef3390560f09752f13727d71c23b0c10dcd25a6c416e35256e2c1cda702d"
     }
   }
 }

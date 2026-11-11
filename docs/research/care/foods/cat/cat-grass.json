@@ -15,7 +15,8 @@
     "hr": "Mačja trava",
     "sv": "Kattgräs",
     "da": "Kattegræs",
-    "fi": "Kissanheinä"
+    "fi": "Kissanheinä",
+    "nb": "Kattegress"
   },
   "question": {
     "en": "Is cat grass safe for cats?",
@@ -31,7 +32,8 @@
     "hr": "Je li mačja trava sigurna za mačke?",
     "sv": "Är kattgräs säkert för katter?",
     "da": "Er kattegræs sikkert for katte?",
-    "fi": "Onko kissanheinä turvallista kissoille?"
+    "fi": "Onko kissanheinä turvallista kissoille?",
+    "nb": "Er kattegress trygt for katter?"
   },
   "url_slug": {
     "en": "cat-grass",
@@ -47,7 +49,8 @@
     "hr": "macja-trava",
     "sv": "kattgras",
     "da": "kattegraes",
-    "fi": "kissanheina"
+    "fi": "kissanheina",
+    "nb": "kattegress"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, mačja trava je za mačke sigurna ako se daje umjereno. Cats Protection navodi da mačke smiju jesti travu, osim ako je zaprskana herbicidima ili pesticidima. Mačke ipak ne mogu probaviti velike količine, pa od previše trave mogu povraćati.",
     "sv": "Ja, kattgräs är säkert för katter i lagom mängd. Cats Protection säger att gräs är säkert för katter att äta så länge det inte är förorenat med ogräsmedel eller bekämpningsmedel. Katter kan dock inte smälta stora mängder, så om de äter mycket kan de kräkas.",
     "da": "Ja, med måde er kattegræs sikkert for katte. Cats Protection skriver at græs er sikkert for katte at spise, medmindre det er forurenet med ukrudtsmidler eller pesticider. Katte kan dog ikke fordøje store mængder, og spiser de meget, kan de kaste op.",
-    "fi": "Kyllä, kissanheinä on kissoille turvallista kohtuudella. Cats Protectionin mukaan ruoho on kissoille turvallista syödä, ellei se ole saastunut rikkakasvi- tai tuholaismyrkyillä. Kissat eivät kuitenkaan pysty sulattamaan suuria määriä, joten paljon syöminen voi saada ne oksentamaan."
+    "fi": "Kyllä, kissanheinä on kissoille turvallista kohtuudella. Cats Protectionin mukaan ruoho on kissoille turvallista syödä, ellei se ole saastunut rikkakasvi- tai tuholaismyrkyillä. Kissat eivät kuitenkaan pysty sulattamaan suuria määriä, joten paljon syöminen voi saada ne oksentamaan.",
+    "nb": "Ja, kattegress er trygt for katter med måte. Cats Protection sier at gress er trygt for katter å spise så lenge det ikke er forurenset med ugressmidler eller plantevernmidler. Katter kan likevel ikke fordøye store mengder, så hvis de spiser mye, kan de kaste opp."
   },
   "why": {
     "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
@@ -80,7 +84,8 @@
     "hr": "VCA objašnjava da se pod mačjom travom obično misli na žitarice poput zobi, pšenice, ječma, lucerne i raži. International Cat Care navodi da je jedenje trave normalno ponašanje mačaka i da se smatra kako pomaže da hrana ili klupka dlake prođu kroz crijeva, često povraćanjem. VCA dodaje da je ključna umjerenost, da mačkama trava nije potrebna te da veće količine mogu izazvati često povraćanje ili nakupljanje vlakana u crijevima. Trava koja raste vani može biti štetna ako je tretirana pesticidima.",
     "sv": "VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre, vete, korn, alfalfa och råg. International Cat Care säger att det är normalt för katter att äta gräs och att det tros hjälpa till att föra mat eller hårbollar genom tarmen, ofta genom att katten kräks. VCA tillägger att gräset bör ges med måtta, att katter inte behöver äta gräs och att stora mängder kan ge upprepade kräkningar eller en ansamling av fibrer i tarmen. Gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel.",
     "da": "VCA forklarer at kattegræs som regel er kornsorter som havre, hvede, byg, lucerne og rug. International Cat Care skriver at det er normal adfærd at katte spiser græs, og at det menes at hjælpe mad eller hårbolde videre gennem tarmen, ofte ved at katten kaster op. VCA understreger at det er vigtigt at holde sig til små mængder, at katte ikke behøver at spise græs, og at store mængder kan give en del opkast eller ophobning af fibre i tarmen. Græs udendørs kan være skadeligt hvis det er behandlet med pesticider.",
-    "fi": "VCA:n mukaan kissanheinällä tarkoitetaan yleensä viljaruohoja, kuten kauraa, vehnää, ohraa, sinimailasta ja ruista. International Cat Care kertoo, että ruohon syöminen on kissoille normaalia käyttäytymistä, ja sen uskotaan auttavan ruoan tai karvapallojen kulkua suolistossa, usein oksentamisen kautta. VCA lisää, että kohtuus on tärkeintä, ettei kissojen tarvitse syödä ruohoa ja että suurten määrien syöminen voi aiheuttaa runsasta oksentelua tai kuidun kertymistä suolistoon. Ulkona kasvava ruoho voi olla haitallista, jos sitä on käsitelty torjunta-aineilla."
+    "fi": "VCA:n mukaan kissanheinällä tarkoitetaan yleensä viljaruohoja, kuten kauraa, vehnää, ohraa, sinimailasta ja ruista. International Cat Care kertoo, että ruohon syöminen on kissoille normaalia käyttäytymistä, ja sen uskotaan auttavan ruoan tai karvapallojen kulkua suolistossa, usein oksentamisen kautta. VCA lisää, että kohtuus on tärkeintä, ettei kissojen tarvitse syödä ruohoa ja että suurten määrien syöminen voi aiheuttaa runsasta oksentelua tai kuidun kertymistä suolistoon. Ulkona kasvava ruoho voi olla haitallista, jos sitä on käsitelty torjunta-aineilla.",
+    "nb": "VCA forklarer at kattegress vanligvis betyr kornslag som havre, hvete, bygg, alfalfa og rug. International Cat Care sier at det er normal atferd at katter spiser gress, og at det antas å hjelpe mat eller hårballer gjennom tarmen, ofte ved at katten kaster opp. VCA legger til at måtehold er viktig, at katter ikke trenger å spise gress, og at store mengder kan gi mye oppkast eller føre til at det hoper seg opp fiber i tarmen. Gress utendørs kan være skadelig hvis det er behandlet med plantevernmidler."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Povremeno povraćanje nakon jedenja trave uobičajeno je. Ako mačka često povraća ili povraća i uz to ne želi jesti, odvedi je veterinaru.",
     "sv": "Att kräkas lite efter att ha ätit gräs är vanligt. Om katten kräks ofta, eller kräks och dessutom verkar tappa aptiten, ska du ta den till veterinären.",
     "da": "Det er almindeligt, at katte kaster lidt op efter at have spist græs. Hvis din kat kaster meget op, eller kaster op og samtidig ikke vil spise, skal du tage den med til dyrlægen.",
-    "fi": "Jonkin verran oksentelua ruohon syömisen jälkeen on tavallista. Jos kissasi oksentaa usein tai oksentaa ja lisäksi ruoka ei maistu, vie se eläinlääkäriin."
+    "fi": "Jonkin verran oksentelua ruohon syömisen jälkeen on tavallista. Jos kissasi oksentaa usein tai oksentaa ja lisäksi ruoka ei maistu, vie se eläinlääkäriin.",
+    "nb": "Litt oppkast etter at katten har spist gress, er vanlig. Hvis katten kaster opp ofte, eller kaster opp og dessuten ikke vil spise, må du ta den med til dyrlegen."
   },
   "serving": {
     "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
@@ -113,7 +119,8 @@
     "hr": "Ponudi lončić mačje trave, u kući ili vani, bez herbicida i pesticida, a mački prepusti da sama odluči hoće li je jesti. Kad trava uvene ili požuti, ukloni izdanke koji venu.",
     "sv": "Erbjud en kruka med kattgräs inomhus eller utomhus, fri från ogräsmedel och bekämpningsmedel, och låt katten själv välja om den vill äta av det. När gräset vissnar eller blir gult tar du bort de vissna stråna.",
     "da": "Sæt en potte kattegræs frem, inde eller ude, uden ukrudtsmidler og pesticider, og lad katten selv vælge om den vil spise det. Når græsset visner eller bliver gult, skal du trække de døde strå op.",
-    "fi": "Tarjoa ruukullinen kissanheinää sisällä tai ulkona, ilman rikkakasvi- ja tuholaismyrkkyjä, ja anna kissasi itse päättää, syökö sitä. Kun ruoho lakastuu tai kellastuu, poista kuolevat versot."
+    "fi": "Tarjoa ruukullinen kissanheinää sisällä tai ulkona, ilman rikkakasvi- ja tuholaismyrkkyjä, ja anna kissasi itse päättää, syökö sitä. Kun ruoho lakastuu tai kellastuu, poista kuolevat versot.",
+    "nb": "Sett frem en potte med kattegress, inne eller ute, uten ugressmidler og plantevernmidler, og la katten selv velge om den vil spise det. Når gresset begynner å visne eller gulne, plukker du bort de visne skuddene."
   },
   "child": {
     "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
@@ -129,7 +136,8 @@
     "hr": "Mnoge mačke vole grickati travu. Odrasla osoba može posaditi lončić mačje trave samo za njih, bez ikakvih sredstava za prskanje.",
     "sv": "Många katter älskar att knapra på gräs. En vuxen kan odla en kruka kattgräs bara åt dem, utan besprutning.",
     "da": "Mange katte elsker at gnaske græs. En voksen kan så en potte kattegræs til din kat, helt uden sprøjtegift.",
-    "fi": "Monet kissat tykkäävät nakertaa ruohoa. Aikuinen voi kasvattaa ruukullisen kissanheinää juuri niitä varten, ilman puutarhamyrkkyjä."
+    "fi": "Monet kissat tykkäävät nakertaa ruohoa. Aikuinen voi kasvattaa ruukullisen kissanheinää juuri niitä varten, ilman puutarhamyrkkyjä.",
+    "nb": "Mange katter liker å knaske på gress. En voksen kan dyrke en potte kattegress bare til pusen, uten sprøytemidler."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Zašto mačke jedu travu?",
         "sv": "Varför äter katter gräs?",
         "da": "Hvorfor spiser katte græs?",
-        "fi": "Miksi kissat syövät ruohoa?"
+        "fi": "Miksi kissat syövät ruohoa?",
+        "nb": "Hvorfor spiser katter gress?"
       },
       "a": {
         "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
@@ -163,7 +172,8 @@
         "hr": "Nitko ne zna sa sigurnošću. International Cat Care navodi da je to normalno ponašanje koje nije do kraja razjašnjeno, ali se smatra da pomaže da hrana ili klupka dlake prođu kroz probavni sustav.",
         "sv": "Ingen vet säkert. International Cat Care säger att det är ett normalt beteende som man inte helt förstår, men man tror att det hjälper till att föra mat eller hårbollar genom mag-tarmkanalen.",
         "da": "Det ved ingen med sikkerhed. International Cat Care skriver at det er normal adfærd, som man ikke helt forstår, men man mener at det hjælper mad eller hårbolde videre gennem fordøjelsessystemet.",
-        "fi": "Kukaan ei tiedä varmasti. International Cat Caren mukaan se on normaalia käyttäytymistä, jota ei täysin ymmärretä, mutta sen uskotaan auttavan ruoan tai karvapallojen kulkua ruoansulatuskanavassa."
+        "fi": "Kukaan ei tiedä varmasti. International Cat Caren mukaan se on normaalia käyttäytymistä, jota ei täysin ymmärretä, mutta sen uskotaan auttavan ruoan tai karvapallojen kulkua ruoansulatuskanavassa.",
+        "nb": "Det vet ingen sikkert. International Cat Care sier at det er normal atferd som man ikke forstår helt, men at det antas å hjelpe mat eller hårballer gjennom fordøyelseskanalen."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Smije li moja mačka jesti travu iz vrta?",
         "sv": "Går det bra med vanligt gräs från trädgården?",
         "da": "Er græs fra haven i orden for min kat?",
-        "fi": "Kelpaako puutarhan ruoho kissalleni?"
+        "fi": "Kelpaako puutarhan ruoho kissalleni?",
+        "nb": "Er gress fra hagen greit for katten min?"
       },
       "a": {
         "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
@@ -197,7 +208,8 @@
         "hr": "Samo ako nije tretirana. VCA upozorava da trava koja raste vani može biti štetna ako je tretirana pesticidima. PDSA predlaže mačju travu, koja se može uzgajati u kući ili vani i za koju znaš da nema pesticida.",
         "sv": "Bara om det inte är behandlat. VCA varnar för att gräs utomhus kan vara skadligt om det har behandlats med bekämpningsmedel. PDSA föreslår kattgräs, som kan odlas inomhus eller utomhus och som du vet är obesprutat.",
         "da": "Kun hvis det ikke er behandlet. VCA advarer om at græs udendørs kan være skadeligt hvis det er behandlet med pesticider. PDSA foreslår kattegræs, som kan dyrkes indendørs eller udendørs, og som du ved er fri for pesticider.",
-        "fi": "Vain jos sitä ei ole käsitelty. VCA varoittaa, että ulkona kasvava ruoho voi olla haitallista, jos sitä on käsitelty torjunta-aineilla. PDSA ehdottaa kissanheinää, jota voi kasvattaa sisällä tai ulkona ja jonka tietää olevan vapaa torjunta-aineista."
+        "fi": "Vain jos sitä ei ole käsitelty. VCA varoittaa, että ulkona kasvava ruoho voi olla haitallista, jos sitä on käsitelty torjunta-aineilla. PDSA ehdottaa kissanheinää, jota voi kasvattaa sisällä tai ulkona ja jonka tietää olevan vapaa torjunta-aineista.",
+        "nb": "Bare hvis det ikke er behandlet. VCA advarer om at gress utendørs kan være skadelig hvis det er behandlet med plantevernmidler. PDSA foreslår kattegress, som kan dyrkes inne eller ute, og som du vet er fritt for plantevernmidler."
       }
     },
     {
@@ -215,7 +227,8 @@
         "hr": "Moja mačka ne izlazi iz kuće. Treba li joj trava?",
         "sv": "Min katt bor inomhus. Behöver den gräs?",
         "da": "Min kat bor indendørs. Har den brug for græs?",
-        "fi": "Kissani asuu sisällä. Tarvitseeko se ruohoa?"
+        "fi": "Kissani asuu sisällä. Tarvitseeko se ruohoa?",
+        "nb": "Katten min bor inne. Trenger den gress?"
       },
       "a": {
         "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
@@ -231,7 +244,8 @@
         "hr": "Prema VCA-u mački trava nije potrebna. No International Cat Care napominje da mačke koje ne izlaze iz kuće, a nemaju pristup travi, mogu žvakati druge lončanice, pa im se trava može osigurati u kući.",
         "sv": "Katten behöver inte gräs, säger VCA. Men International Cat Care påpekar att innekatter utan gräs kan tugga på andra krukväxter, så det kan vara bra att ge dem tillgång till gräs inomhus.",
         "da": "Din kat har ikke brug for græs, skriver VCA. International Cat Care bemærker dog at indekatte uden adgang til græs kan gnaske på andre potteplanter, så man kan give dem græs indendørs.",
-        "fi": "Kissasi ei tarvitse ruohoa, VCA toteaa. International Cat Care kuitenkin huomauttaa, että sisäkissat, joilla ei ole ruohoa, saattavat pureskella muita ruukkukasveja, joten niille voi tarjota ruohoa sisälle."
+        "fi": "Kissasi ei tarvitse ruohoa, VCA toteaa. International Cat Care kuitenkin huomauttaa, että sisäkissat, joilla ei ole ruohoa, saattavat pureskella muita ruukkukasveja, joten niille voi tarjota ruohoa sisälle.",
+        "nb": "Katten din trenger ikke gress, sier VCA. International Cat Care påpeker likevel at innekatter uten tilgang til gress kan tygge på andre potteplanter, så det kan være lurt å gi dem gress inne."
       }
     }
   ],
@@ -392,6 +406,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cd56b2ace421d491b453dfc514f7cd1f899358710e7983d4348f162f3f8b0dd0"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6198ca703507beb0d144504b1b84af70668fa73bc53cacecb92d58ddad9bf6e5"
     }
   }
 }

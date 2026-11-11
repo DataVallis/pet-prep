@@ -15,7 +15,8 @@
     "hr": "Patlidžan",
     "sv": "Aubergine",
     "da": "Aubergine",
-    "fi": "Munakoiso"
+    "fi": "Munakoiso",
+    "nb": "Aubergine"
   },
   "question": {
     "en": "Can dogs eat eggplant?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti patlidžan?",
     "sv": "Får hundar äta aubergine?",
     "da": "Må hunde spise aubergine?",
-    "fi": "Saako koira syödä munakoisoa?"
+    "fi": "Saako koira syödä munakoisoa?",
+    "nb": "Kan hunder spise aubergine?"
   },
   "url_slug": {
     "en": "eggplant",
@@ -47,7 +49,8 @@
     "hr": "patlidzan",
     "sv": "aubergine",
     "da": "aubergine",
-    "fi": "munakoiso"
+    "fi": "munakoiso",
+    "nb": "aubergine"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, patlidžan je za pse siguran ako se daje umjereno. Ukloni peteljku, operi ga, oguli i skuhaj, pa ga nareži na sitne komadiće veličine zalogaja. Nikad ne daj cijeli patlidžan i imaj na umu da prevelika količina može izazvati probavne smetnje.",
     "sv": "Ja, aubergine är ofarlig för hundar i lagom mängd. Ta bort skaftet, tvätta, skala och koka den, och skär den sedan i riktigt små munsbitar. Ge aldrig en hel aubergine, och kom ihåg att för mycket kan ge orolig mage.",
     "da": "Ja, aubergine er sikker for hunde, når den gives med måde. Fjern stilken, vask, skræl og kog den, og skær den derefter i helt små, mundrette stykker. Giv aldrig en hel aubergine, og husk at for meget kan give problemer med fordøjelsen.",
-    "fi": "Saa, munakoiso on koirille turvallista kohtuullisina määrinä. Poista kanta, pese, kuori ja kypsennä se ja leikkaa sitten pieniksi, suupalan kokoisiksi paloiksi. Älä koskaan anna kokonaista munakoisoa, ja muista, että liika voi aiheuttaa vatsavaivoja."
+    "fi": "Saa, munakoiso on koirille turvallista kohtuullisina määrinä. Poista kanta, pese, kuori ja kypsennä se ja leikkaa sitten pieniksi, suupalan kokoisiksi paloiksi. Älä koskaan anna kokonaista munakoisoa, ja muista, että liika voi aiheuttaa vatsavaivoja.",
+    "nb": "Ja, aubergine er trygg for hunder når den gis med måte. Fjern stilken, vask, skrell og kok den, og skjær den i bittesmå biter. Gi aldri en hel aubergine, og husk at for mye kan gi fordøyelsesproblemer."
   },
   "why": {
     "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -80,7 +84,8 @@
     "hr": "Jestivi plod u uobičajenim količinama nije zaista otrovan, ali sadrži solanin, prirodnu kemijsku tvar kojom se biljka brani. Najveće su koncentracije u zelenim dijelovima biljke, točnije u listovima i cvjetovima, a ne u ljubičastom plodu. Kora nije otrovna, ali se teško žvače i može izazvati gušenje, a prevelika količina patlidžana može izazvati probavne smetnje.",
     "sv": "Själva frukten är inte direkt giftig i normala mängder, men den innehåller solanin, ett naturligt ämne som växten använder som försvar. Halterna är högst i de gröna delarna av växten, framför allt bladen och blommorna, snarare än i den lila frukten. Skalet är inte giftigt men kan vara segt att tugga och ge risk för kvävning, och för mycket aubergine kan ge orolig mage.",
     "da": "Selve frugten er ikke giftig i normale mængder, men den indeholder solanin, et naturligt stof som planten bruger til at forsvare sig. Indholdet er størst i plantens grønne dele, især bladene og blomsterne, og ikke i den lilla frugt. Skrællen er ikke giftig, men den kan være svær at tygge og sætte sig fast i halsen, og hvis hunden spiser for meget aubergine, kan den få problemer med fordøjelsen.",
-    "fi": "Syötävä hedelmä ei ole normaaleina määrinä varsinaisesti myrkyllistä, mutta siinä on solaniinia, luonnollista ainetta, jota kasvi käyttää puolustukseen. Pitoisuudet ovat suurimmat kasvin vihreissä osissa, erityisesti lehdissä ja kukissa, ei violetissa hedelmässä. Kuori ei ole myrkyllistä, mutta se voi olla vaikea pureskella ja tukehtumisvaara, ja liian suuri määrä munakoisoa voi aiheuttaa vatsavaivoja."
+    "fi": "Syötävä hedelmä ei ole normaaleina määrinä varsinaisesti myrkyllistä, mutta siinä on solaniinia, luonnollista ainetta, jota kasvi käyttää puolustukseen. Pitoisuudet ovat suurimmat kasvin vihreissä osissa, erityisesti lehdissä ja kukissa, ei violetissa hedelmässä. Kuori ei ole myrkyllistä, mutta se voi olla vaikea pureskella ja tukehtumisvaara, ja liian suuri määrä munakoisoa voi aiheuttaa vatsavaivoja.",
+    "nb": "Selve frukten er ikke egentlig giftig i vanlige mengder, men den inneholder solanin, et naturlig stoff som planten bruker som forsvar. De høyeste konsentrasjonene finnes i de grønne delene av planten, særlig bladene og blomstene, og ikke i den lilla frukten. Skallet er ikke giftig, men kan være vanskelig å tygge og en kvelningsfare, og hvis hunden spiser for mye aubergine, kan det gi fordøyelsesproblemer."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Počni s malim komadićem oguljenog, kuhanog patlidžana. Ako pas nakon jedenja patlidžana dobije proljev, povraćanje, probavne tegobe, bolove u trbuhu, bezvoljnost ili češće mora van, obrati se veterinaru.",
     "sv": "Börja med en liten bit skalad, kokt aubergine. Får hunden diarré, kräkningar, orolig mage, ont i magen, orkeslöshet eller behöver gå ut oftare efter att ha ätit aubergine ska du kontakta veterinären.",
     "da": "Start med et lille stykke skrællet, kogt aubergine. Hvis din hund får diarré, opkast, mavebesvær, mavesmerter eller mindre energi, eller skal ud oftere end normalt efter at have spist aubergine, skal du kontakte din dyrlæge.",
-    "fi": "Aloita pienellä palalla kuorittua, kypsennettyä munakoisoa. Jos koirallesi tulee munakoison syömisen jälkeen ripulia, oksentelua, vatsavaivoja, vatsakipua tai väsymystä tai se tarvitsee ulos tavallista useammin, ota yhteyttä eläinlääkäriin."
+    "fi": "Aloita pienellä palalla kuorittua, kypsennettyä munakoisoa. Jos koirallesi tulee munakoison syömisen jälkeen ripulia, oksentelua, vatsavaivoja, vatsakipua tai väsymystä tai se tarvitsee ulos tavallista useammin, ota yhteyttä eläinlääkäriin.",
+    "nb": "Begynn med en liten bit skrellet, kokt aubergine. Hvis hunden får diaré, oppkast, urolig mage, magesmerter eller lite energi, eller må ut oftere enn vanlig etter at den har spist aubergine, må du kontakte dyrlegen."
   },
   "serving": {
     "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -113,7 +119,8 @@
     "hr": "Ukloni peteljku, temeljito operi da skineš pesticide, oguli, nareži na sitne komadiće veličine zalogaja i prije posluživanja skuhaj. Nikad cijeli patlidžan.",
     "sv": "Ta bort skaftet, tvätta noga för att få bort bekämpningsmedel, skala, skär i små munsbitar och koka innan du serverar. Aldrig en hel aubergine.",
     "da": "Fjern stilken, vask grundigt for at fjerne sprøjtegift, skræl, skær i små, mundrette stykker, og kog stykkerne før hunden får dem. Aldrig en hel aubergine.",
-    "fi": "Poista kanta, pese huolellisesti torjunta-aineiden poistamiseksi, kuori, leikkaa pieniksi, suupalan kokoisiksi paloiksi ja kypsennä ennen tarjoamista. Ei koskaan kokonaista munakoisoa."
+    "fi": "Poista kanta, pese huolellisesti torjunta-aineiden poistamiseksi, kuori, leikkaa pieniksi, suupalan kokoisiksi paloiksi ja kypsennä ennen tarjoamista. Ei koskaan kokonaista munakoisoa.",
+    "nb": "Fjern stilken, vask grundig for å fjerne plantevernmidler, skrell, skjær i små biter og kok før servering. Aldri en hel aubergine."
   },
   "child": {
     "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -129,7 +136,8 @@
     "hr": "Psi smiju malo kuhanog patlidžana. Odrasla osoba ga oguli, skuha i nareže na sitne komadiće.",
     "sv": "Hundar kan få lite kokt aubergine. En vuxen skalar den, kokar den och skär den i riktigt små bitar.",
     "da": "Hunde må få lidt kogt aubergine. En voksen skræller den, koger den og skærer den i helt små stykker.",
-    "fi": "Koira voi saada vähän kypsennettyä munakoisoa. Aikuinen kuorii sen, kypsentää sen ja leikkaa pieniksi paloiksi."
+    "fi": "Koira voi saada vähän kypsennettyä munakoisoa. Aikuinen kuorii sen, kypsentää sen ja leikkaa pieniksi paloiksi.",
+    "nb": "Hunder kan få litt kokt aubergine. En voksen skreller den, koker den og skjærer den i bittesmå biter."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti sirov patlidžan?",
         "sv": "Får hundar äta rå aubergine?",
         "da": "Må hunde spise rå aubergine?",
-        "fi": "Saako koira syödä raakaa munakoisoa?"
+        "fi": "Saako koira syödä raakaa munakoisoa?",
+        "nb": "Kan hunder spise rå aubergine?"
       },
       "a": {
         "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -163,7 +172,8 @@
         "hr": "Smiju, ali kuhanjem se povrće omekša pa ga je psu još lakše jesti.",
         "sv": "Det går, men kokt aubergine är mjukare och därmed ännu lättare för hunden att äta.",
         "da": "Det kan de godt, men kogt aubergine er blød og endnu nemmere for hunden at spise.",
-        "fi": "Saa, mutta kypsennys pehmentää munakoisoa, jolloin koiran on helpompi syödä sitä."
+        "fi": "Saa, mutta kypsennys pehmentää munakoisoa, jolloin koiran on helpompi syödä sitä.",
+        "nb": "Det kan de, men koking gjør grønnsaken mykere, så den blir enda lettere for hunden å spise."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Koji dio biljke patlidžana ima najviše solanina?",
         "sv": "Vilken del av auberginplantan innehåller mest solanin?",
         "da": "Hvilken del af auberginen har mest solanin?",
-        "fi": "Missä munakoison osassa on eniten solaniinia?"
+        "fi": "Missä munakoison osassa on eniten solaniinia?",
+        "nb": "Hvilken del av auberginplanten har mest solanin?"
       },
       "a": {
         "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -197,7 +208,8 @@
         "hr": "Zeleni dijelovi biljke, točnije listovi i cvjetovi, a ne sam ljubičasti plod.",
         "sv": "De gröna delarna av plantan, framför allt bladen och blommorna, inte själva den lila frukten.",
         "da": "De grønne dele af planten, især bladene og blomsterne – ikke selve den lilla frugt.",
-        "fi": "Kasvin vihreissä osissa, erityisesti lehdissä ja kukissa, ei itse violetissa hedelmässä."
+        "fi": "Kasvin vihreissä osissa, erityisesti lehdissä ja kukissa, ei itse violetissa hedelmässä.",
+        "nb": "De grønne delene av planten, særlig bladene og blomstene, og ikke selve den lilla frukten."
       }
     }
   ],
@@ -360,6 +372,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1ed72a4089793c45805c225aadd8a28f44be73e991a237b349ca0c236288d50d"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed9e6623001f29aeb6a5f3bed155e0a47be049d9b4cee3dafa1a17b076df8d7b"
     }
   }
 }
