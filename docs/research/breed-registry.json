@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "1d3b09e9d4f310674d30d4e7216aa26b5826ea4065e3dca531d025ba9d10dc20"
+      "sha256": "a43ea17715075024d6b3403cb153e971e467eb1ecc48ec98c78ac6eebf9a3e66"
     }
   },
   "suitability_vocabulary": {
@@ -58149,7 +58149,12 @@
           "S785"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "leonberger.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
