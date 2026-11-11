@@ -11,7 +11,8 @@
     "it": "Erba per gatti",
     "nl": "Kattengras",
     "pl": "Trawa dla kotów",
-    "cs": "Kočičí tráva"
+    "cs": "Kočičí tráva",
+    "hr": "Mačja trava"
   },
   "question": {
     "en": "Is cat grass safe for cats?",
@@ -23,7 +24,8 @@
     "it": "L’erba per gatti è sicura per i gatti?",
     "nl": "Is kattengras veilig voor katten?",
     "pl": "Czy trawa dla kotów jest bezpieczna?",
-    "cs": "Je kočičí tráva pro kočky bezpečná?"
+    "cs": "Je kočičí tráva pro kočky bezpečná?",
+    "hr": "Je li mačja trava sigurna za mačke?"
   },
   "url_slug": {
     "en": "cat-grass",
@@ -35,7 +37,8 @@
     "it": "erba-per-gatti",
     "nl": "kattengras",
     "pl": "trawa-dla-kotow",
-    "cs": "kocici-trava"
+    "cs": "kocici-trava",
+    "hr": "macja-trava"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "it": "Sì, l’erba per gatti è sicura per i gatti se data in quantità moderate. Cats Protection spiega che per i gatti mangiare erba è sicuro, a meno che non sia contaminata da erbicidi o pesticidi. I gatti però non riescono a digerirne grandi quantità, quindi se ne mangiano tanta possono vomitare.",
     "nl": "Ja, met mate is kattengras veilig voor katten. Volgens Cats Protection mogen katten gras eten, zolang er geen onkruidverdelgers of bestrijdingsmiddelen op zitten. Grote hoeveelheden kunnen katten alleen niet verteren, dus als ze er veel van eten, kunnen ze gaan braken.",
     "pl": "Tak, trawa dla kotów jest bezpieczna, jeśli kot zjada ją z umiarem. Cats Protection podaje, że trawa jest dla kotów bezpieczna, o ile nie została skażona herbicydami ani pestycydami. Koty nie potrafią jednak strawić dużych ilości, więc po zjedzeniu dużej ilości trawy mogą wymiotować.",
-    "cs": "Ano, kočičí tráva je pro kočky v rozumném množství bezpečná. Cats Protection uvádí, že tráva je pro kočky bezpečná, pokud není kontaminovaná herbicidy nebo pesticidy. Velké množství ale kočky nestráví, takže když jí sní hodně, mohou zvracet."
+    "cs": "Ano, kočičí tráva je pro kočky v rozumném množství bezpečná. Cats Protection uvádí, že tráva je pro kočky bezpečná, pokud není kontaminovaná herbicidy nebo pesticidy. Velké množství ale kočky nestráví, takže když jí sní hodně, mohou zvracet.",
+    "hr": "Da, mačja trava je za mačke sigurna ako se daje umjereno. Cats Protection navodi da mačke smiju jesti travu, osim ako je zaprskana herbicidima ili pesticidima. Mačke ipak ne mogu probaviti velike količine, pa od previše trave mogu povraćati."
   },
   "why": {
     "en": "VCA explains that cat grass usually means cereal grasses such as oat, wheat, barley, alfalfa and rye. International Cat Care says eating grass is normal behaviour in cats and is thought to help move food or hairballs through the gut, often by vomiting. VCA adds that moderation is key, that cats don't need to eat grass, and that eating large amounts may cause a lot of vomiting or a build-up of fibre in the gut. Outdoor grass can be harmful if treated with pesticides.",
@@ -60,7 +64,8 @@
     "it": "VCA spiega che per erba per gatti si intendono di solito le graminacee da cereali, come avena, frumento, orzo, erba medica e segale. International Cat Care spiega che mangiare erba è un comportamento normale nei gatti e che si ritiene aiuti a far avanzare cibo o boli di pelo lungo l’intestino, spesso attraverso il vomito. VCA aggiunge che la moderazione è fondamentale, che ai gatti non serve mangiare erba e che mangiarne tanta può causare vomito frequente o un accumulo di fibre nell’intestino. L’erba all’aperto può essere dannosa se è stata trattata con pesticidi.",
     "nl": "VCA legt uit dat met kattengras meestal graansoorten worden bedoeld, zoals haver, tarwe, gerst, luzerne en rogge. Volgens International Cat Care is gras eten normaal gedrag bij katten en zou het helpen om voedsel of haarballen door het maag-darmkanaal te laten bewegen, vaak doordat de kat gaat braken. VCA voegt eraan toe dat het vooral met mate moet, dat katten geen gras hoeven te eten en dat veel gras eten kan leiden tot flink braken of een ophoping van vezels in de darmen. Gras buiten kan schadelijk zijn als het met bestrijdingsmiddelen is behandeld.",
     "pl": "VCA wyjaśnia, że trawa dla kotów to zwykle trawy zbożowe, takie jak owies, pszenica, jęczmień, lucerna i żyto. International Cat Care podaje, że jedzenie trawy jest u kotów normalnym zachowaniem i uważa się, że pomaga przesuwać pokarm lub kule włosowe w jelitach, często właśnie poprzez wymioty. VCA dodaje, że najważniejszy jest umiar, że koty nie muszą jeść trawy, a zjedzenie dużej ilości może powodować częste wymioty lub nagromadzenie błonnika w jelitach. Trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami.",
-    "cs": "VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves, pšenice, ječmen, vojtěška a žito. International Cat Care uvádí, že jedení trávy je u koček normální chování a předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem, často zvracením. VCA dodává, že klíčem je mírnost, že kočky trávu jíst nemusejí a že snědení velkého množství může způsobit časté zvracení nebo nahromadění vlákniny ve střevech. Venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy."
+    "cs": "VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves, pšenice, ječmen, vojtěška a žito. International Cat Care uvádí, že jedení trávy je u koček normální chování a předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem, často zvracením. VCA dodává, že klíčem je mírnost, že kočky trávu jíst nemusejí a že snědení velkého množství může způsobit časté zvracení nebo nahromadění vlákniny ve střevech. Venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy.",
+    "hr": "VCA objašnjava da se pod mačjom travom obično misli na žitarice poput zobi, pšenice, ječma, lucerne i raži. International Cat Care navodi da je jedenje trave normalno ponašanje mačaka i da se smatra kako pomaže da hrana ili klupka dlake prođu kroz crijeva, često povraćanjem. VCA dodaje da je ključna umjerenost, da mačkama trava nije potrebna te da veće količine mogu izazvati često povraćanje ili nakupljanje vlakana u crijevima. Trava koja raste vani može biti štetna ako je tretirana pesticidima."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "it": "Un po’ di vomito dopo aver mangiato erba è comune. Se il tuo gatto vomita spesso, oppure vomita e in più non mangia, portalo dal veterinario.",
     "nl": "Een beetje braken na het eten van gras komt vaak voor. Braakt je kat vaak, of braakt hij en heeft hij ook minder trek in zijn eten, ga dan met hem naar de dierenarts.",
     "pl": "Zdarza się, że kot po zjedzeniu trawy zwymiotuje. Jeśli kot wymiotuje często albo wymiotuje i do tego nie chce jeść, zabierz go do weterynarza.",
-    "cs": "Trochu zvracení po snědení trávy je běžné. Pokud kočka zvrací často nebo zvrací a navíc projevuje nechuť k jídlu, vezměte ji k veterináři."
+    "cs": "Trochu zvracení po snědení trávy je běžné. Pokud kočka zvrací často nebo zvrací a navíc projevuje nechuť k jídlu, vezměte ji k veterináři.",
+    "hr": "Povremeno povraćanje nakon jedenja trave uobičajeno je. Ako mačka često povraća ili povraća i uz to ne želi jesti, odvedi je veterinaru."
   },
   "serving": {
     "en": "Offer a pot of cat grass indoors or outdoors, free of herbicides and pesticides, and let your cat choose whether to eat it. When the grass wilts or turns yellow, pull out the dying shoots.",
@@ -85,7 +91,8 @@
     "it": "Metti a disposizione un vasetto di erba per gatti, in casa o all’aperto, senza erbicidi né pesticidi, e lascia che sia il tuo gatto a scegliere se mangiarla. Quando l’erba appassisce o ingiallisce, togli i germogli che stanno morendo.",
     "nl": "Zet binnen of buiten een pot kattengras neer, zonder onkruidverdelgers of bestrijdingsmiddelen, en laat je kat zelf kiezen of hij ervan eet. Verwelkt het gras of wordt het geel? Trek de afstervende sprietjes er dan uit.",
     "pl": "Postaw doniczkę z trawą dla kotów w domu lub na dworze, wolną od herbicydów i pestycydów, i pozwól kotu samemu zdecydować, czy chce ją jeść. Gdy trawa zwiędnie lub zżółknie, wyrwij obumierające pędy.",
-    "cs": "Nabídněte květináč s kočičí trávou v bytě nebo venku, bez herbicidů a pesticidů, a nechte na kočce, jestli ji bude jíst. Když tráva zvadne nebo zežloutne, odstraňte odumírající stébla."
+    "cs": "Nabídněte květináč s kočičí trávou v bytě nebo venku, bez herbicidů a pesticidů, a nechte na kočce, jestli ji bude jíst. Když tráva zvadne nebo zežloutne, odstraňte odumírající stébla.",
+    "hr": "Ponudi lončić mačje trave, u kući ili vani, bez herbicida i pesticida, a mački prepusti da sama odluči hoće li je jesti. Kad trava uvene ili požuti, ukloni izdanke koji venu."
   },
   "child": {
     "en": "Lots of cats love nibbling grass. A grown-up can grow a pot of cat grass just for them, with no garden sprays.",
@@ -97,7 +104,8 @@
     "it": "A tanti gatti piace mordicchiare l’erba. Un adulto può far crescere un vasetto di erba per gatti solo per loro, senza spray da giardino.",
     "nl": "Veel katten knabbelen graag aan gras. Een volwassene kan een pot kattengras speciaal voor ze kweken, zonder spuitmiddel erop.",
     "pl": "Wiele kotów uwielbia skubać trawę. Dorosły może wyhodować dla nich doniczkę trawy dla kotów, bez ogrodowych oprysków.",
-    "cs": "Spousta koček ráda okusuje trávu. Dospělý jim může vypěstovat kočičí trávu v květináči, bez zahradních postřiků."
+    "cs": "Spousta koček ráda okusuje trávu. Dospělý jim může vypěstovat kočičí trávu v květináči, bez zahradních postřiků.",
+    "hr": "Mnoge mačke vole grickati travu. Odrasla osoba može posaditi lončić mačje trave samo za njih, bez ikakvih sredstava za prskanje."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "it": "Perché i gatti mangiano l’erba?",
         "nl": "Waarom eten katten gras?",
         "pl": "Dlaczego koty jedzą trawę?",
-        "cs": "Proč kočky jedí trávu?"
+        "cs": "Proč kočky jedí trávu?",
+        "hr": "Zašto mačke jedu travu?"
       },
       "a": {
         "en": "Nobody knows for sure. International Cat Care says it is normal behaviour that is not fully understood, but it is thought to help move food or hairballs through the digestive tract.",
@@ -123,7 +132,8 @@
         "it": "Nessuno lo sa con certezza. Secondo International Cat Care è un comportamento normale, non del tutto compreso, ma si ritiene che aiuti a far avanzare cibo o boli di pelo lungo l’apparato digerente.",
         "nl": "Dat weet niemand precies. Volgens International Cat Care is het normaal gedrag dat nog niet helemaal begrepen wordt, maar vermoedelijk helpt het om voedsel of haarballen door het spijsverteringskanaal te laten bewegen.",
         "pl": "Nie wiadomo na pewno. International Cat Care podaje, że to normalne zachowanie, które nie zostało w pełni wyjaśnione, ale uważa się, że pomaga przesuwać pokarm lub kule włosowe przez przewód pokarmowy.",
-        "cs": "Přesně to nikdo neví. International Cat Care uvádí, že jde o normální chování, které není zcela objasněné, ale předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem."
+        "cs": "Přesně to nikdo neví. International Cat Care uvádí, že jde o normální chování, které není zcela objasněné, ale předpokládá se, že pomáhá posouvat potravu nebo chuchvalce srsti trávicím traktem.",
+        "hr": "Nitko ne zna sa sigurnošću. International Cat Care navodi da je to normalno ponašanje koje nije do kraja razjašnjeno, ali se smatra da pomaže da hrana ili klupka dlake prođu kroz probavni sustav."
       }
     },
     {
@@ -137,7 +147,8 @@
         "it": "L’erba del giardino va bene per il mio gatto?",
         "nl": "Is gras uit de tuin goed voor mijn kat?",
         "pl": "Czy mój kot może jeść trawę z ogrodu?",
-        "cs": "Je zahradní tráva pro mou kočku v pořádku?"
+        "cs": "Je zahradní tráva pro mou kočku v pořádku?",
+        "hr": "Smije li moja mačka jesti travu iz vrta?"
       },
       "a": {
         "en": "Only if it hasn't been treated. VCA warns that outdoor grass can be harmful if treated with pesticides. PDSA suggests cat grass, which can be grown inside or outside and you know is free from pesticides.",
@@ -149,7 +160,8 @@
         "it": "Solo se non è stata trattata. VCA avverte che l’erba all’aperto può essere dannosa se trattata con pesticidi. PDSA consiglia l’erba per gatti, che si può coltivare in casa o all’aperto e di cui sai che è priva di pesticidi.",
         "nl": "Alleen als het niet behandeld is. VCA waarschuwt dat gras buiten schadelijk kan zijn als het met bestrijdingsmiddelen is behandeld. PDSA raadt kattengras aan: dat kun je binnen of buiten kweken, en dan weet je zeker dat er geen bestrijdingsmiddelen op zitten.",
         "pl": "Tylko jeśli nie była niczym opryskana. VCA ostrzega, że trawa rosnąca na dworze może być szkodliwa, jeśli była opryskana pestycydami. PDSA proponuje trawę dla kotów, którą można uprawiać w domu lub na dworze i co do której masz pewność, że jest wolna od pestycydów.",
-        "cs": "Jen pokud nebyla ošetřena. VCA upozorňuje, že venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy. PDSA doporučuje kočičí trávu, kterou lze pěstovat uvnitř i venku a o které víte, že neobsahuje pesticidy."
+        "cs": "Jen pokud nebyla ošetřena. VCA upozorňuje, že venkovní tráva může být škodlivá, pokud byla ošetřena pesticidy. PDSA doporučuje kočičí trávu, kterou lze pěstovat uvnitř i venku a o které víte, že neobsahuje pesticidy.",
+        "hr": "Samo ako nije tretirana. VCA upozorava da trava koja raste vani može biti štetna ako je tretirana pesticidima. PDSA predlaže mačju travu, koja se može uzgajati u kući ili vani i za koju znaš da nema pesticida."
       }
     },
     {
@@ -163,7 +175,8 @@
         "it": "Il mio gatto vive in casa. Ha bisogno di erba?",
         "nl": "Mijn kat is een binnenkat. Heeft hij gras nodig?",
         "pl": "Mój kot nie wychodzi z domu. Czy potrzebuje trawy?",
-        "cs": "Moje kočka žije v bytě. Potřebuje trávu?"
+        "cs": "Moje kočka žije v bytě. Potřebuje trávu?",
+        "hr": "Moja mačka ne izlazi iz kuće. Treba li joj trava?"
       },
       "a": {
         "en": "Your cat does not need grass, says VCA. But International Cat Care notes that indoor cats without grass may chew other potted plants, so they can be given a source of grass indoors.",
@@ -175,7 +188,8 @@
         "it": "Il tuo gatto non ha bisogno di erba, spiega VCA. International Cat Care però osserva che i gatti che vivono in casa e non hanno erba a disposizione possono mordicchiare altre piante in vaso, quindi si può offrire loro dell’erba in casa.",
         "nl": "Volgens VCA heeft je kat geen gras nodig. International Cat Care wijst er wel op dat binnenkatten zonder gras op andere potplanten kunnen gaan kauwen, daarom kun je ze binnen ook gras geven.",
         "pl": "Według VCA kot nie potrzebuje trawy. International Cat Care zauważa jednak, że koty niewychodzące, które nie mają trawy, mogą przegryzać inne rośliny doniczkowe, dlatego warto zapewnić im w domu dostęp do trawy.",
-        "cs": "Vaše kočka trávu nepotřebuje, uvádí VCA. International Cat Care ale poznamenává, že bytové kočky bez trávy mohou okusovat jiné pokojové rostliny, proto jim lze v bytě trávu nabídnout."
+        "cs": "Vaše kočka trávu nepotřebuje, uvádí VCA. International Cat Care ale poznamenává, že bytové kočky bez trávy mohou okusovat jiné pokojové rostliny, proto jim lze v bytě trávu nabídnout.",
+        "hr": "Prema VCA-u mački trava nije potrebna. No International Cat Care napominje da mačke koje ne izlaze iz kuće, a nemaju pristup travi, mogu žvakati druge lončanice, pa im se trava može osigurati u kući."
       }
     }
   ],
@@ -316,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8923e47b530f80d68616db752f8b544648c3459a0260272e47b0f0df6696bec4"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3518b0284b2c9392c079db6064a6ebd3356ee5e977cb57f130384fe6e677ff48"
     }
   }
 }
