@@ -5,32 +5,37 @@
     "en": "Parsley",
     "sl": "Peteršilj",
     "de": "Petersilie",
-    "pt": "Salsa"
+    "pt": "Salsa",
+    "fr": "Persil"
   },
   "question": {
     "en": "Can cats eat parsley?",
     "sl": "Ali lahko mačke jedo peteršilj?",
     "de": "Dürfen Katzen Petersilie fressen?",
-    "pt": "Os gatos podem comer salsa?"
+    "pt": "Os gatos podem comer salsa?",
+    "fr": "Les chats peuvent-ils manger du persil ?"
   },
   "url_slug": {
     "en": "parsley",
     "sl": "petersilj",
     "de": "petersilie",
-    "pt": "salsa"
+    "pt": "salsa",
+    "fr": "persil"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your cat parsley. The ASPCA lists parsley as toxic to cats: it can make the skin sensitive to sunlight and cause sunburn or skin inflammation, although large amounts are needed for this effect. If your cat has eaten some, contact your vet.",
     "sl": "Ne, mački ne dajajte peteršilja. ASPCA peteršilj navaja kot strupen za mačke: koža lahko postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože, čeprav so za to potrebne velike količine. Če ga je mačka pojedla, se obrnite na veterinarja.",
     "de": "Nein, geben Sie Ihrer Katze keine Petersilie. Die ASPCA stuft Petersilie als giftig für Katzen ein: Sie kann die Haut lichtempfindlich machen und Sonnenbrand oder Hautentzündungen verursachen, wofür allerdings große Mengen nötig sind. Wenn Ihre Katze davon gefressen hat, wenden Sie sich an Ihren Tierarzt.",
-    "pt": "Não, não dês salsa ao teu gato. A ASPCA classifica a salsa como tóxica para os gatos: pode tornar a pele sensível à luz solar e causar queimaduras solares ou inflamação da pele, embora isso só aconteça com grandes quantidades. Se o teu gato comeu alguma, liga ao teu veterinário."
+    "pt": "Não, não dês salsa ao teu gato. A ASPCA classifica a salsa como tóxica para os gatos: pode tornar a pele sensível à luz solar e causar queimaduras solares ou inflamação da pele, embora isso só aconteça com grandes quantidades. Se o teu gato comeu alguma, liga ao teu veterinário.",
+    "fr": "Non, ne donnez pas de persil à votre chat. L’ASPCA classe le persil parmi les plantes toxiques pour les chats : il peut rendre la peau sensible au soleil et provoquer des coups de soleil ou une inflammation de la peau, même s’il en faut beaucoup pour que cet effet apparaisse. Si votre chat en a mangé, contactez votre vétérinaire."
   },
   "why": {
     "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
     "sl": "ASPCA peteršilj (Petroselinum crispum, tudi italijanski in korenasti peteršilj) navaja kot strupen za mačke. Kot strupeno snov navaja furanokumarine, ki lahko povzročijo preobčutljivost za svetlobo (sončne opekline, vnetje kože), in dodaja, da so za to potrebne velike količine. ASPCA opozarja tudi, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave. Mačke rastlin v prehrani ne potrebujejo: PDSA navaja, da so mačke mesojede in potrebujejo hranila iz mesa.",
     "de": "Die ASPCA stuft Petersilie (Petroselinum crispum, einschließlich glatter Petersilie und Wurzelpetersilie) als giftig für Katzen ein. Als giftigen Inhaltsstoff nennt sie Furanocumarine, die eine Photosensibilisierung (Sonnenbrand, Hautentzündung) auslösen können; dafür seien allerdings große Mengen nötig. Außerdem weist die ASPCA darauf hin, dass jedes Pflanzenmaterial bei Katzen Erbrechen und Magenbeschwerden auslösen kann. Katzen brauchen keine Pflanzen in ihrer Ernährung: Laut PDSA sind Katzen Fleischfresser, die Nährstoffe brauchen, die in Fleisch stecken.",
-    "pt": "A ASPCA classifica a salsa (Petroselinum crispum, incluindo a salsa italiana e a salsa-de-hamburgo) como tóxica para os gatos. Aponta as furanocumarinas como substância tóxica e diz que podem causar fotossensibilização (queimaduras solares, inflamação da pele), acrescentando que isso só acontece com grandes quantidades. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne."
+    "pt": "A ASPCA classifica a salsa (Petroselinum crispum, incluindo a salsa italiana e a salsa-de-hamburgo) como tóxica para os gatos. Aponta as furanocumarinas como substância tóxica e diz que podem causar fotossensibilização (queimaduras solares, inflamação da pele), acrescentando que isso só acontece com grandes quantidades. A ASPCA refere ainda que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. Os gatos não precisam de plantas na alimentação: a PDSA diz que os gatos são carnívoros e precisam de nutrientes que se encontram na carne.",
+    "fr": "L’ASPCA classe le persil (Petroselinum crispum, y compris le persil plat et le persil à grosse racine, dit de Hambourg) parmi les plantes toxiques pour les chats. Elle identifie les furanocoumarines comme la substance toxique et indique qu’elles peuvent provoquer une photosensibilisation (coups de soleil, inflammation de la peau), mais qu’il en faut de grandes quantités pour cet effet. L’ASPCA rappelle aussi que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Les chats n’ont pas besoin de plantes dans leur alimentation : selon la PDSA, ce sont des carnivores qui ont besoin des nutriments présents dans la viande."
   },
   "signs": {
     "en": [
@@ -56,20 +61,28 @@
       "Inflamação da pele (dermatite)",
       "Vómitos",
       "Mal-estar no estômago"
+    ],
+    "fr": [
+      "Coups de soleil",
+      "Inflammation de la peau (dermatite)",
+      "Vomissements",
+      "Maux d’estomac"
     ]
   },
   "what_to_do": {
     "en": "If your cat has eaten parsley, contact your vet straight away. Don't wait for symptoms to appear.",
     "sl": "Če je mačka pojedla peteršilj, se takoj obrnite na veterinarja. Ne čakajte, da se pojavijo znaki.",
     "de": "Wenn Ihre Katze Petersilie gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht ab, bis Anzeichen auftreten.",
-    "pt": "Se o teu gato comeu salsa, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais."
+    "pt": "Se o teu gato comeu salsa, contacta imediatamente o teu veterinário. Não esperes que apareçam sinais.",
+    "fr": "Si votre chat a mangé du persil, contactez immédiatement votre vétérinaire. N’attendez pas que des symptômes apparaissent."
   },
   "serving": null,
   "child": {
     "en": "Parsley is not a cat snack. If kitty nibbles some, tell a grown-up so they can call the vet.",
     "sl": "Peteršilj ni priboljšek za muce. Če ga muca pogrizlja, povej odraslemu, da lahko pokliče veterinarja.",
     "de": "Petersilie ist kein Snack für Katzen. Wenn deine Katze etwas davon angeknabbert hat, sag einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
-    "pt": "A salsa não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário."
+    "pt": "A salsa não é uma guloseima para gatos. Se o gatinho trincar um bocadinho, avisa um adulto para ligar ao veterinário.",
+    "fr": "Le persil n’est pas une friandise pour chat. Si ton chat en grignote, préviens un adulte pour qu’il appelle le vétérinaire."
   },
   "faq": [
     {
@@ -77,13 +90,15 @@
         "en": "Why is parsley a problem for cats when people eat it?",
         "sl": "Zakaj je peteršilj težava za mačke, če ga ljudje jemo?",
         "de": "Warum ist Petersilie für Katzen ein Problem, obwohl wir Menschen sie essen?",
-        "pt": "Porque é que a salsa é um problema para os gatos, se as pessoas a comem?"
+        "pt": "Porque é que a salsa é um problema para os gatos, se as pessoas a comem?",
+        "fr": "Pourquoi le persil pose-t-il problème aux chats alors que nous en mangeons ?"
       },
       "a": {
         "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
         "sl": "ASPCA navaja, da peteršilj vsebuje furanokumarine, zaradi katerih lahko mačja koža postane občutljiva na sonce, kar povzroči sončne opekline ali vnetje kože. Dodaja, da so za to potrebne velike količine.",
         "de": "Laut ASPCA enthält Petersilie Furanocumarine, die die Haut einer Katze lichtempfindlich machen und Sonnenbrand oder Hautentzündungen verursachen können. Sie weist aber darauf hin, dass dafür große Mengen nötig sind.",
-        "pt": "A ASPCA diz que a salsa contém furanocumarinas, que podem tornar a pele do gato sensível à luz solar e causar queimaduras solares ou inflamação da pele. Refere que são necessárias grandes quantidades para este efeito."
+        "pt": "A ASPCA diz que a salsa contém furanocumarinas, que podem tornar a pele do gato sensível à luz solar e causar queimaduras solares ou inflamação da pele. Refere que são necessárias grandes quantidades para este efeito.",
+        "fr": "Selon l’ASPCA, le persil contient des furanocoumarines, qui peuvent rendre la peau d’un chat sensible au soleil et provoquer des coups de soleil ou une inflammation de la peau. Elle précise qu’il en faut de grandes quantités pour cet effet."
       }
     }
   ],
@@ -151,6 +166,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "acc9f77d8efbf5862e6f8f011ad6be7c4a6478045c94c1bf07ab6aa9d59f863c"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e29e3bfd9ad94b9282ee234d00d5ff05099cd55e6a286fd5ca57916196cbf08a"
     }
   }
 }
