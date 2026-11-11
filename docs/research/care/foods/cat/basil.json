@@ -12,7 +12,8 @@
     "nl": "Basilicum",
     "pl": "Bazylia",
     "cs": "Bazalka",
-    "hr": "Bosiljak"
+    "hr": "Bosiljak",
+    "sv": "Basilika"
   },
   "question": {
     "en": "Can cats eat basil?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten basilicum eten?",
     "pl": "Czy koty mogą jeść bazylię?",
     "cs": "Mohou kočky jíst bazalku?",
-    "hr": "Smiju li mačke jesti bosiljak?"
+    "hr": "Smiju li mačke jesti bosiljak?",
+    "sv": "Får katter äta basilika?"
   },
   "url_slug": {
     "en": "basil",
@@ -38,7 +40,8 @@
     "nl": "basilicum",
     "pl": "bazylia",
     "cs": "bazalka",
-    "hr": "bosiljak"
+    "hr": "bosiljak",
+    "sv": "basilika"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, af en toe een klein hapje basilicum, zonder iets erop of eraan, kan prima. De ASPCA noemt basilicum, ook zoete en Thaise basilicum, niet giftig voor katten. Katten hebben het alleen niet nodig, en van elke plant kan een kat gaan braken of maagklachten krijgen.",
     "pl": "Tak, od czasu do czasu odrobina zwykłej bazylii do skubnięcia jest w porządku. ASPCA uznaje bazylię, w tym bazylię pospolitą i tajską, za nietoksyczną dla kotów. Koty jednak jej nie potrzebują, a każda roślina może wywołać wymioty lub rozstrój żołądka.",
     "cs": "Ano, občas si kočka může kousek obyčejné bazalky ukousnout. ASPCA řadí bazalku, včetně bazalky pravé a thajské, mezi rostliny netoxické pro kočky. Kočky ji ale nepotřebují a jakákoli rostlina může způsobit zvracení nebo žaludeční potíže.",
-    "hr": "Da, malo običnog bosiljka povremeno nije problem. ASPCA navodi bosiljak, uključujući slatki i tajlandski, kao neotrovan za mačke. Mačkama on ipak nije potreban, a svaka biljka može izazvati povraćanje ili probavne smetnje."
+    "hr": "Da, malo običnog bosiljka povremeno nije problem. ASPCA navodi bosiljak, uključujući slatki i tajlandski, kao neotrovan za mačke. Mačkama on ipak nije potreban, a svaka biljka može izazvati povraćanje ili probavne smetnje.",
+    "sv": "Ja, en liten tugga basilika då och då går bra. ASPCA anger basilika, inklusive sötbasilika och thaibasilika, som ofarlig för katter. Katter behöver den dock inte, och alla växter kan ge kräkningar eller orolig mage."
   },
   "why": {
     "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
@@ -65,7 +69,8 @@
     "nl": "De ASPCA noemt basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) niet giftig voor katten. Cats Protection legt uit dat ook niet-giftige planten de maag van streek kunnen maken als een kat ze eet, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Volgens PDSA hebben katten niets nodig behalve een compleet kattenvoer, al kan af en toe een traktatie prima.",
     "pl": "ASPCA uznaje bazylię (Ocimum basilicum, zwaną też bazylią pospolitą i bazylią tajską) za nietoksyczną dla kotów. Cats Protection wyjaśnia, że nawet nietoksyczne rośliny mogą po zjedzeniu rozstroić żołądek, a ASPCA zaznacza, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. PDSA podaje, że koty nie potrzebują niczego poza pełnowartościową karmą, choć smakołyk od czasu do czasu nie zaszkodzi.",
     "cs": "ASPCA řadí bazalku (Ocimum basilicum, též bazalka pravá a thajská) mezi rostliny netoxické pro kočky. Cats Protection vysvětluje, že i netoxické rostliny mohou po snědení způsobit zažívací potíže, a ASPCA upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. PDSA uvádí, že kočky nepotřebují nic kromě kompletní stravy, i když příležitostný pamlsek je v pořádku.",
-    "hr": "ASPCA navodi bosiljak (Ocimum basilicum, poznat i kao slatki i tajlandski bosiljak) kao neotrovan za mačke. Cats Protection objašnjava da i neotrovne biljke mogu izazvati probavne smetnje ako ih mačka pojede, a ASPCA napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. PDSA navodi da mačkama osim potpune hrane ne treba ništa drugo, ali povremena poslastica nije problem."
+    "hr": "ASPCA navodi bosiljak (Ocimum basilicum, poznat i kao slatki i tajlandski bosiljak) kao neotrovan za mačke. Cats Protection objašnjava da i neotrovne biljke mogu izazvati probavne smetnje ako ih mačka pojede, a ASPCA napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. PDSA navodi da mačkama osim potpune hrane ne treba ništa drugo, ali povremena poslastica nije problem.",
+    "sv": "ASPCA anger basilika (Ocimum basilicum, även kallad sötbasilika och thaibasilika) som ofarlig för katter. Cats Protection förklarar att även ofarliga växter kan ge magont om katten äter dem, och ASPCA påpekar att allt växtmaterial kan ge katter kräkningar och orolig mage. PDSA säger att katter inte behöver något annat än en komplett kost, men att en godbit då och då går bra."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Basilicum is niet giftig voor katten, maar net als elke plant kan het braken of maagklachten veroorzaken. Houd het bij af en toe een klein hapje.",
     "pl": "Bazylia jest nietoksyczna dla kotów, ale jak każda roślina może wywołać wymioty lub rozstrój żołądka. Niech to będzie tylko odrobina i tylko od czasu do czasu.",
     "cs": "Bazalka není pro kočky toxická, ale jako každá rostlina může způsobit zvracení nebo žaludeční potíže. Dávejte ji jen občas a jen malý kousek.",
-    "hr": "Bosiljak je neotrovan za mačke, ali kao i svaka biljka može izazvati povraćanje ili probavne smetnje. Daj ga samo povremeno i najviše jedan zalogaj."
+    "hr": "Bosiljak je neotrovan za mačke, ali kao i svaka biljka može izazvati povraćanje ili probavne smetnje. Daj ga samo povremeno i najviše jedan zalogaj.",
+    "sv": "Basilika är ofarlig för katter, men som alla växter kan den ge kräkningar eller orolig mage. Nöj dig med en liten tugga då och då."
   },
   "serving": {
     "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
@@ -92,7 +98,8 @@
     "nl": "Alleen af en toe, als traktatie, een klein hapje van een basilicumblaadje zonder iets erop of eraan.",
     "pl": "Tylko kawałeczek zwykłego liścia bazylii jako smakołyk od czasu do czasu.",
     "cs": "Jen malý kousek obyčejného lístku bazalky, jako příležitostný pamlsek.",
-    "hr": "Samo mali zalogaj običnog lista bosiljka, kao povremena poslastica."
+    "hr": "Samo mali zalogaj običnog lista bosiljka, kao povremena poslastica.",
+    "sv": "Bara en liten tugga av ett vanligt basilikablad, som godbit då och då."
   },
   "child": {
     "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
@@ -105,7 +112,8 @@
     "nl": "Basilicum doet katten geen kwaad, maar ze hebben het niet nodig. Een piepklein hapje is meer dan genoeg. Hun eigen kattenvoer is het allerbeste.",
     "pl": "Bazylia nie szkodzi kotom, ale one jej nie potrzebują. Wystarczy odrobinka; najlepsza jest ich własna karma.",
     "cs": "Bazalka kočkám neškodí, ale nepotřebují ji. Stačí malinký kousek, nejlepší je jejich vlastní kočičí krmivo.",
-    "hr": "Bosiljak mačkama ne šteti, ali im nije potreban. Dovoljan je sasvim mali zalogaj, a najbolja im je njihova hrana za mačke."
+    "hr": "Bosiljak mačkama ne šteti, ali im nije potreban. Dovoljan je sasvim mali zalogaj, a najbolja im je njihova hrana za mačke.",
+    "sv": "Basilika är inte farlig för katter, men de behöver den inte. En liten tugga räcker gott. Bäst är ändå deras vanliga kattmat."
   },
   "faq": [],
   "sources": [
@@ -204,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aa17941020275883290fb661d3bbaa24158d09d52834d553ba922ed5b05ae10b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0f8033e62956c810e96ee4535e5aae504cc65d30988f6c20a9c166eab8c2915e"
     }
   }
 }
