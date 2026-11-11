@@ -485,6 +485,7 @@ const SPECIES = [
       { id: 'dogue_de_bordeaux', synonyms: { en: ['Bordeaux Mastiff', 'French Mastiff', 'Bordeauxdogge', 'DDB'], sl: ['bordoška doga', 'bordoska doga', 'francoski mastif', 'dogue de bordeaux'] } },
       { id: 'flat_coated_retriever', synonyms: { en: ['Flatcoat', 'Flattie', 'Flat-coat', 'Flat Coated Retriever'], sl: ['ravnodlaki prinasalec', 'flat coated retriever', 'flatcoat'] } },
       { id: 'border_terrier', synonyms: { en: ['Border Terrier dog'], sl: ['border terier', 'border terrier'] } },
+      { id: 'leonberger', synonyms: { en: ['Leonberg', 'Leo', 'Leonberger dog'], sl: ['leonberški pes', 'leonberski pes', 'leonberg'] } },
     ],
   },
   {
@@ -2670,6 +2671,30 @@ const DOG_FACTS = {
       ['ear_infections_prone', 'health.ears'],
     ],
   },
+  // M5-R10-103. Height = FCI-Standard N° 145 by sex (S783), weight = PDSA average 30–50 kg (S781; FCI / AKC give none), lifespan =
+  // the McMillan 2024 median 10.0 y (Dogs Trust table S123) + the RKC band 'Under 10 years' (S780; Newfoundland precedent — both
+  // shown), exercise = RKC 'More than 2 hours per day' (S780), coat / grooming / sheds = RKC key facts (S780). Not ranked by
+  // Coren (S35). FCI origin Germany (DE). Not exported: lifespan.pdsa / woodgreen (alternatives) / senior_from (derived),
+  // health.breed_watch (Category 2 without points), health.cataracts / lemp (research only). No new health key.
+  leonberger: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35, checked 2026-11-11): no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_muscle_disease', 'health.heart'],
+      ['polyneuropathy', 'health.polyneuropathy'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 
 };
@@ -2733,6 +2758,7 @@ export const DOG_CARE_TASKS = {
   english_setter: [['bath', 1, 42, 'proposed_game_parameters.english_setter.bathing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.english_setter.professional_grooming']],
   lhasa_apso: [['tooth_brushing', 7, 7, 'proposed_game_parameters.lhasa_apso.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.lhasa_apso.nail_trimming'], ['bath', 1, 14, 'proposed_game_parameters.lhasa_apso.bathing']],
   flat_coated_retriever: [['ear_cleaning', 1, 7, 'proposed_game_parameters.flat_coated_retriever.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.flat_coated_retriever.nail_care'], ['bath', 1, 28, 'proposed_game_parameters.flat_coated_retriever.bathing']],
+  leonberger: [['ear_cleaning', 1, 14, 'proposed_game_parameters.leonberger.ear_care'], ['bath', 1, 14, 'proposed_game_parameters.leonberger.bathing']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3516,6 +3542,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.border_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.border_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.border_terrier.exercise_minutes_senior',
+  },
+  leonberger: {
+    adult_minutes: ['proposed_game_parameters.leonberger.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.leonberger.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.leonberger.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.leonberger.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.leonberger.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.leonberger.exercise_minutes_senior',
   },
 
 

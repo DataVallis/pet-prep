@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "01c52d8505b63e30d940c2ce2e22cea640f700f2a46a1ea88a4de0f2f91485e8"
+      "sha256": "9607d0260e46f795fb3cc61a823a7cf6b106eb783b462e059f71383af937094a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "53838cec621f0a722055286ae7d1a61d8c14a967dec03bd4acd8b2c99bc10725"
+      "sha256": "294333a52f90c56e20720b3cbaf80c35cfbebe5535d906e3af7995c63d4bd6dd"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "fc1515c49f03f11fb815a2f2ab4c5739cdc1e1995dc8b3d9ca75e08335beed61"
+      "sha256": "d135befbf1534e06523d5c620c06d5767f9d2fe0be158b39804302b1a39457e6"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d8b758742f98e8ee1b2646a1f4bb3e7e1df70686681634aba5f385a8a9e60b62"
+      "sha256": "c865db93577ebe29626b9779679a3eee687315fb7dff59bcd2e5ea357099436f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "be04a745c882bbdf0f2a9884410cde9b583233d270b3ed392bee5c2df2fec82f"
+      "sha256": "983d894ef45c6ae679597009e6e50fa7b5205ee52841328466c96b1d3a97a5c5"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "69b4c2310d69f72ea430c101fb0295e94f2f02d3087e3d86074845373449e795"
+      "sha256": "bec3f0076fc3375cff0c2e305f3d4cf0deae31ca37238badaad827cd6d30dfe3"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "2fd5a1ca7d7a02d145b1d3fb938030e1be9783d1c0ad8104fd4592d054bbfda1"
+      "sha256": "ef1f2a042fbbc7f22f4445ea10063e28bc744283abfb31e59db910a346526de7"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 95,
+      "breed_count": 96,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -57586,6 +57586,665 @@
       ]
     },
     {
+      "id": "leonberger",
+      "species": "dog",
+      "order": 95,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Leonberger",
+        "sl": "Leonberger"
+      },
+      "slug": {
+        "en": "leonberger",
+        "sl": "leonberger"
+      },
+      "synonyms": {
+        "en": [
+          "Leonberg",
+          "Leo",
+          "Leonberger dog"
+        ],
+        "sl": [
+          "leonberški pes",
+          "leonberski pes",
+          "leonberg"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              72,
+              80
+            ],
+            "female": [
+              65,
+              75
+            ]
+          },
+          "source_ids": [
+            "S783"
+          ],
+          "ref": "leonberger.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              30,
+              50
+            ],
+            "female": [
+              30,
+              50
+            ]
+          },
+          "source_ids": [
+            "S781"
+          ],
+          "ref": "leonberger.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "leonberger.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 10,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "leonberger.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S780"
+          ],
+          "ref": "leonberger.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 145,
+            "group": 2,
+            "section": 2,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S782"
+          ],
+          "ref": "leonberger.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S781"
+          ],
+          "ref": "leonberger.health.hips",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S781"
+          ],
+          "ref": "leonberger.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S784"
+          ],
+          "ref": "leonberger.health.heart",
+          "confidence": "high"
+        },
+        {
+          "key": "polyneuropathy",
+          "source_ids": [
+            "S784"
+          ],
+          "ref": "leonberger.health.polyneuropathy",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S784"
+          ],
+          "ref": "leonberger.health.cancer",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.exercise.adult",
+              "leonberger.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S781"
+            ],
+            "refs": [
+              "leonberger.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S783"
+            ],
+            "refs": [
+              "leonberger.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.suitability.rkc_size_of_home",
+              "leonberger.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.lifespan.rkc",
+              "leonberger.suitability.rkc_lifespan"
+            ]
+          },
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.exercise.adult",
+              "leonberger.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S780"
+            ],
+            "refs": [
+              "leonberger.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S781",
+              "S784"
+            ],
+            "refs": [
+              "leonberger.suitability.pdsa_grooming",
+              "leonberger.suitability.woodgreen_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S784"
+            ],
+            "refs": [
+              "leonberger.behaviour.time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 14
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S780"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S780 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × McMillan 2024 median 10.0 y, S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.grooming",
+            "basis_source_ids": [
+              "S784"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): razpon Woodgreen »two to three times a week« → zgornja meja 3 (RKC 1, PDSA 2, PetMD 7 v alternativah — za Davida); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.ear_care",
+            "basis_source_ids": [
+              "S785"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every two to three weeks« → spodnja meja, 1× na 2 tedna"
+          },
+          {
+            "ref": "proposed_game_parameters.leonberger.bathing",
+            "basis_source_ids": [
+              "S785"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every two to four weeks« → spodnja meja, 1× na 2 tedna"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S780",
+          "S784",
+          "S785"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "dna_lppn3",
+            "level": "best_practice",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "dna_lpn1",
+            "level": "best_practice",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "dna_lpn2",
+            "level": "best_practice",
+            "source_ids": [
+              "S780"
+            ]
+          },
+          {
+            "key": "dna_lemp",
+            "level": "best_practice",
+            "source_ids": [
+              "S780"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S780"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S780",
+        "S781",
+        "S782",
+        "S783",
+        "S784",
+        "S785",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -63457,6 +64116,48 @@
       "publisher": "American Kennel Club — Arliss Paddock (updated April 20, 2021)",
       "title": "Meet the Border Terrier",
       "url": "https://www.akc.org/expert-advice/lifestyle/meet-border-terrier/"
+    },
+    {
+      "id": "S780",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Leonberger — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/leonberger/"
+    },
+    {
+      "id": "S781",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Leonberger breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/leonberger"
+    },
+    {
+      "id": "S782",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "Breeds nomenclature — Leonberger (145)",
+      "url": "https://fci.be/en/nomenclature/LEONBERGER-145.html"
+    },
+    {
+      "id": "S783",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 145 Leonberger (20.09.2002/EN) (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/145g02-en.pdf"
+    },
+    {
+      "id": "S784",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity",
+      "title": "Pet Explorer — Leonberger",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/leonberger"
+    },
+    {
+      "id": "S785",
+      "tier": "B",
+      "publisher": "PetMD — Katie Grzyb, DVM (published Mar. 14, 2023)",
+      "title": "Leonberger",
+      "url": "https://www.petmd.com/dog/breeds/leonberger"
     },
     {
       "id": "C1",
