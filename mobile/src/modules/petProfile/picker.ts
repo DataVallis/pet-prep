@@ -1752,9 +1752,13 @@ export function isBreedLocked(breed: PetBreed | null, locked: readonly PetBreed[
 
 /**
  * The choice after the parent picks `plan`: the free plan is always the species' free
- * breed; the challenge never keeps a breed it locks — it moves to the first pickable one,
- * so switching plans never leaves an invalid selection behind. When no breed is pickable
- * the breed stays and {@link completeChoice} stays null.
+ * breed; the challenge never keeps a breed it locks — it moves to the first pickable PAID
+ * breed, so switching plans never leaves an invalid selection behind. M6-U02 (QA #983): a
+ * free breed the server allows on the challenge (»mešanček + izziv«) is never preselected —
+ * switching to the challenge moves from it to the first paid breed too; the parent gets the
+ * mutt / domestic cat on the challenge only by tapping it (a breed tapped while the challenge
+ * is already chosen is kept). No pickable paid breed: a locked breed stays (and
+ * {@link completeChoice} stays null), a pickable free breed is cleared (no silent choice).
  */
 export function choiceWithPlan(
   choice: PickerChoice,
@@ -1764,15 +1768,17 @@ export function choiceWithPlan(
 ): PickerChoice {
   if (plan === 'free') return { ...choice, plan, breed: freeBreedOf(breeds) ?? choice.breed };
   const locked = lockedBreedsFor(plan, serverLocked, breeds);
-  if (!isBreedLocked(choice.breed, locked)) return { ...choice, plan };
-  const firstOpen = breeds.find((b) => !isBreedLocked(b.breed, locked));
-  return { ...choice, plan, breed: firstOpen?.breed ?? choice.breed };
+  const isPaid = (breed: PetBreed | null) => breed !== null && breeds.some((b) => b.breed === breed && b.premium);
+  const open = !isBreedLocked(choice.breed, locked);
+  if (open && (isPaid(choice.breed) || choice.plan === 'challenge')) return { ...choice, plan };
+  const firstPaid = breeds.find((b) => b.premium && !isBreedLocked(b.breed, locked));
+  return { ...choice, plan, breed: firstPaid?.breed ?? (open ? null : choice.breed) };
 }
 
 /**
  * The choice after the parent picks a species: plan, origin and age stay; the breed is
- * re-chosen inside the new species (its free breed, or the first paid one on the challenge;
- * none while no plan is chosen).
+ * re-chosen inside the new species — its free breed on the free plan, the first paid one on
+ * the challenge (never the free breed, M6-U02), none while no plan is chosen.
  */
 export function choiceWithSpecies(
   choice: PickerChoice,
@@ -1783,7 +1789,8 @@ export function choiceWithSpecies(
   if (choice.species === species && choice.breed !== null && breeds.some((b) => b.breed === choice.breed)) return choice;
   // No plan yet → no breed either (never a ticked free breed next to an empty plan choice).
   if (choice.plan === null) return { ...choice, species, breed: null };
-  return choiceWithPlan({ ...choice, species, breed: freeBreedOf(breeds) }, choice.plan, serverLocked, breeds);
+  // The plan stays; `plan: null` here so the challenge picks a paid breed, never the free one.
+  return choiceWithPlan({ ...choice, species, plan: null, breed: choice.plan === 'free' ? freeBreedOf(breeds) : null }, choice.plan, serverLocked, breeds);
 }
 
 /**

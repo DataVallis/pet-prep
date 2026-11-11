@@ -37,7 +37,8 @@ export interface UpgradeReminderCard {
 export function upgradeReminderCards(family: FamilyOverview | null, dismissedPetIds: readonly number[]): UpgradeReminderCard[] {
   if (!family) return [];
   return family.pets.flatMap((pet) => {
-    const reminder = readUpgradeReminder((pet as unknown as Record<string, unknown>).upgrade_reminder);
+    // Typed by schema.ts (`FamilyPet['upgrade_reminder']`); an older server sends nothing → undefined → no card.
+    const reminder = readUpgradeReminder(pet.upgrade_reminder);
     if (reminder === null || dismissedPetIds.includes(pet.id) || !canUpgradePet(pet)) return [];
     const name = pet.name?.trim() ?? '';
     const child = reminder.childId === null ? undefined : family.children.find((c) => c.id === reminder.childId);

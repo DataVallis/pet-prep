@@ -9,7 +9,14 @@ import PetPickerStep from '@/components/parent/PetPickerStep';
 import UpgradeReminderCards, { upgradeReminderText } from '@/components/parent/UpgradeReminderCards';
 import { i18n } from '@/i18n';
 import { normalizePet, type FamilyOverview, type FamilyPet } from '@/modules/family/family';
-import { INITIAL_PICKER_CHOICE, PICKER_STRINGS as PICKER, readBreedCatalogue, type BreedCatalogue } from '@/modules/petProfile/picker';
+import {
+  choiceWithPlan,
+  choiceWithSpecies,
+  INITIAL_PICKER_CHOICE,
+  PICKER_STRINGS as PICKER,
+  readBreedCatalogue,
+  type BreedCatalogue,
+} from '@/modules/petProfile/picker';
 import { canBuyChallenge, isUnpaidFreeBreedChallenge } from '@/modules/plan/purchaseEntry';
 import {
   dismissedReminderPets,
@@ -74,17 +81,39 @@ describe('U4: »mešanček + izziv«', () => {
     render(<PetPickerStep childName="Maja" catalogue={c} initial={INITIAL_PICKER_CHOICE} onConfirm={jest.fn()} onBack={jest.fn()} previewCount={Number.MAX_SAFE_INTEGER} />);
   }
 
-  it('new server: the mutt stays pickable with the challenge and the picker recommends starting free', () => {
+  it('new server: the mutt is pickable on the challenge but never preselected (QA #983) — a tap chooses it, then the hint', () => {
     renderPicker(catalogue(true));
     fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    // Switching to the challenge preselects the first PAID breed, never the mutt (no accidental 49,99 € mutt).
+    expect(screen.getByTestId('breed-option-border_collie').props.accessibilityState).toMatchObject({ checked: true });
+    expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toMatchObject({ checked: false, disabled: false });
+    expect(screen.queryByTestId('free-breed-challenge-hint')).toBeNull();
+
+    // Only an explicit tap picks the mutt on the challenge.
+    fireEvent.press(screen.getByTestId('breed-option-mutt'));
     expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toMatchObject({ checked: true, disabled: false });
     expect(screen.getByTestId('free-breed-challenge-hint')).toBeTruthy();
     expect(screen.getByText('Začnite brezplačno, izziv lahko dodate kadarkoli.')).toBeTruthy();
     expect(PICKER.freeBreedChallengeHint).toBe('Začnite brezplačno, izziv lahko dodate kadarkoli.');
 
-    // A paid breed: no hint.
+    // Back to a paid breed: no hint.
     fireEvent.press(screen.getByTestId('breed-option-border_collie'));
     expect(screen.queryByTestId('free-breed-challenge-hint')).toBeNull();
+  });
+
+  it('choiceWithPlan / choiceWithSpecies never preselect the free breed on the challenge', () => {
+    const c = catalogue(true).breeds;
+    // free plan (mutt) → challenge: the first paid breed
+    const free = choiceWithPlan({ ...INITIAL_PICKER_CHOICE, species: 'dog' }, 'free', [], c);
+    expect(free.breed).toBe('mutt');
+    expect(choiceWithPlan(free, 'challenge', [], c).breed).toBe('border_collie');
+    // the mutt tapped while the challenge is chosen stays (also when the challenge is tapped again)
+    const tapped = { ...choiceWithPlan(free, 'challenge', [], c), breed: 'mutt' as const };
+    expect(choiceWithPlan(tapped, 'challenge', [], c).breed).toBe('mutt');
+    // the only paid breed refused by the server: the mutt is not chosen silently
+    expect(choiceWithPlan(free, 'challenge', ['border_collie'], c).breed).toBeNull();
+    // species change on the challenge → the first paid breed of that species
+    expect(choiceWithSpecies({ ...tapped, species: 'cat' }, 'dog', [], c).breed).toBe('border_collie');
   });
 
   it('older server (challenge_allowed false for the mutt): unchanged — the mutt is locked on the challenge', () => {
