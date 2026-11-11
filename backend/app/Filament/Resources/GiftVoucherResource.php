@@ -59,7 +59,7 @@ class GiftVoucherResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn (Builder $q) => $q->with('credit'))
+            ->modifyQueryUsing(fn (Builder $query) => $query->with('credit'))
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('key_last4')->label('Code')
