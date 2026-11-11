@@ -4,43 +4,51 @@
   "name": {
     "en": "Basil",
     "sl": "Bazilika",
+    "de": "Basilikum",
     "pt": "Manjericão"
   },
   "question": {
     "en": "Can dogs eat basil?",
     "sl": "Ali lahko psi jedo baziliko?",
+    "de": "Dürfen Hunde Basilikum fressen?",
     "pt": "Os cães podem comer manjericão?"
   },
   "url_slug": {
     "en": "basil",
     "sl": "bazilika",
+    "de": "basilikum",
     "pt": "manjericao"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small quantities. The ASPCA lists basil as non-toxic to dogs, and it is one of the herbs you can grow in a dog-friendly garden and add to your dog's meals or treats in small quantities.",
     "sl": "Da, v majhnih količinah. ASPCA baziliko uvršča med rastline, ki za pse niso strupene, in je eno od zelišč, ki jih lahko gojite na psu prijaznem vrtu ter jih v majhnih količinah dodate pasjim obrokom ali priboljškom.",
+    "de": "Ja, in kleinen Mengen. Die ASPCA stuft Basilikum als ungiftig für Hunde ein. Es gehört zu den Kräutern, die Sie in einem hundefreundlichen Garten anbauen und in kleinen Mengen unter das Futter oder die Leckerlis Ihres Hundes mischen können.",
     "pt": "Sim, em pequenas quantidades. A ASPCA inclui o manjericão entre as plantas não tóxicas para os cães. É uma das ervas que podes cultivar num jardim seguro para cães e juntar, em pequenas quantidades, às refeições ou às guloseimas do teu cão."
   },
   "why": {
     "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
     "sl": "Bazilika (Ocimum basilicum, tudi sladka ali tajska bazilika) za pse ni strupena. Ima antioksidativne, protivirusne in protimikrobne lastnosti. Kot pri drugih zeliščih, ki jih dodamo obrokom ali vmešamo v priboljške, naj bodo količine majhne.",
+    "de": "Basilikum (Ocimum basilicum, auch Süßes Basilikum oder Thai-Basilikum) ist für Hunde ungiftig. Es wirkt antioxidativ, antiviral und antimikrobiell. Wie bei anderen Kräutern, die unter das Futter oder in Leckerlis gemischt werden, sollten die Mengen klein bleiben.",
     "pt": "O manjericão (Ocimum basilicum, também chamado manjericão-doce ou manjericão-tailandês) não é tóxico para os cães. Tem propriedades antioxidantes, antivirais e antimicrobianas. Como acontece com qualquer erva aromática que se junte às refeições ou se misture nas guloseimas, mantém as quantidades pequenas."
   },
   "signs": null,
   "what_to_do": {
     "en": "Basil is non-toxic to dogs. Just keep any basil you add to meals or treats to small quantities.",
     "sl": "Bazilika za pse ni strupena. Baziliko, ki jo dodate obrokom ali priboljškom, le ohranite v majhnih količinah.",
+    "de": "Basilikum ist für Hunde ungiftig. Achten Sie nur darauf, dass die Menge, die Sie unter das Futter oder in Leckerlis mischen, klein bleibt.",
     "pt": "O manjericão não é tóxico para os cães. Basta usares pouco manjericão nas refeições ou nas guloseimas."
   },
   "serving": {
     "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
     "sl": "Malo je dodajte pasjim obrokom ali jo v majhnih količinah vmešajte v priboljške.",
+    "de": "Mischen Sie ein wenig davon unter das Futter Ihres Hundes oder in Leckerlis – nur in kleinen Mengen.",
     "pt": "Junta um pouco às refeições do teu cão ou mistura-o, em pequenas quantidades, nas guloseimas."
   },
   "child": {
     "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
     "sl": "Bazilika je psom prijazno zelišče. Odrasli lahko malo bazilike doda pasji hrani.",
+    "de": "Basilikum ist ein harmloses Kraut für Hunde. Ein Erwachsener kann ein bisschen davon ins Futter mischen.",
     "pt": "O manjericão é uma erva amiga dos cães. Um adulto pode juntar um pouco à comida do cão."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Is a basil plant safe in a garden with dogs?",
         "sl": "Je bazilika na vrtu varna, če imamo psa?",
+        "de": "Ist eine Basilikumpflanze in einem Garten mit Hund unbedenklich?",
         "pt": "O manjericão é seguro num jardim com cães?"
       },
       "a": {
         "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
         "sl": "Da. Bazilika za pse ni strupena in je eno od zelišč, ki jih lahko gojimo na psu prijaznem vrtu.",
+        "de": "Ja. Basilikum ist für Hunde ungiftig und gehört zu den Kräutern, die in einem hundefreundlichen Garten wachsen dürfen.",
         "pt": "Sim. O manjericão não é tóxico para os cães e é uma das ervas que se podem cultivar num jardim seguro para cães."
       }
     }
@@ -99,6 +109,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "de009f96f12bf4dae36f3dd1588006cda067c0b5fce5d428f00f53b377746f20"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bbb806f1f9e45998c0486266f2f4093ed3f873fa633fd09e779a267a9c13c00c"
     }
   }
 }

@@ -4,43 +4,51 @@
   "name": {
     "en": "Seaweed (nori)",
     "sl": "Morske alge (nori)",
+    "de": "Algen (Nori)",
     "pt": "Algas (nori)"
   },
   "question": {
     "en": "Can dogs eat seaweed?",
     "sl": "Ali lahko psi jedo morske alge?",
+    "de": "Dürfen Hunde Algen fressen?",
     "pt": "Os cães podem comer algas?"
   },
   "url_slug": {
     "en": "seaweed",
     "sl": "morske-alge",
+    "de": "algen",
     "pt": "algas"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Some types, in moderation. Plain nori or seaweed sheets without added salt, garlic or seasonings are fine in small amounts. Wild beach seaweed is different: it can contain too much salt and dried strands can expand in the stomach, so consult a vet right away if your dog eats it.",
     "sl": "Nekatere vrste, zmerno. Navaden nori ali listi alg brez dodane soli, česna ali začimb so v majhnih količinah v redu. Divje alge s plaže so nekaj drugega: lahko vsebujejo preveč soli, suhi prameni pa lahko v želodcu nabreknejo, zato se takoj posvetujte z veterinarjem, če jih pes poje.",
+    "de": "Manche Sorten, in Maßen. Pure Nori oder Algenblätter ohne zugesetztes Salz, Knoblauch oder Gewürze sind in kleinen Mengen in Ordnung. Wilde Strandalgen sind etwas anderes: Sie können zu viel Salz enthalten, und getrocknete Stränge können im Magen aufquellen. Wenden Sie sich deshalb sofort an einen Tierarzt, wenn Ihr Hund sie frisst.",
     "pt": "Alguns tipos, com moderação. O nori simples ou as folhas de algas sem sal, alho ou temperos adicionados não fazem mal em pequenas quantidades. As algas selvagens da praia são diferentes: podem ter demasiado sal e as tiras secas podem expandir-se no estômago, por isso consulta imediatamente um veterinário se o teu cão as comer."
   },
   "why": {
     "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
     "sl": "Morske alge so hranljive in vsebujejo beljakovine, železo, jod, magnezij in omega-3 maščobne kisline. Toda preveč alg lahko psu povzroči prebavne težave, preveč joda pa lahko vpliva na ščitnico. Divje alge s plaže lahko vsebujejo zelo veliko soli, zato je pes izpostavljen zastrupitvi s soljo; njihovi dolgi prameni se lahko zagozdijo v črevesju ali v sebi skrivajo drobne živali ali zajedavce, suhe divje alge pa lahko v želodcu nabreknejo.",
+    "de": "Algen sind nahrhaft und enthalten Eiweiß, Eisen, Jod, Magnesium und Omega-3-Fettsäuren. Zu viele Algen können aber den Magen eines Hundes belasten, und zu viel Jod kann die Schilddrüse beeinträchtigen. Wilde Strandalgen können sehr viel Salz enthalten, sodass für den Hund die Gefahr einer Salzvergiftung besteht. Außerdem können sich ihre langen Stränge im Darm festsetzen oder versteckte Tiere und Parasiten mitbringen, und trockene wilde Algen können im Magen aufquellen.",
     "pt": "As algas são nutritivas e contêm proteína, ferro, iodo, magnésio e ómega-3. Mas demasiadas algas podem causar mal-estar no estômago do cão, e iodo a mais pode afetar a tiroide. As algas selvagens da praia podem conter sal em excesso, o que pode causar intoxicação por sal no cão; as tiras compridas podem ficar presas no intestino ou esconder pequenos animais ou parasitas, e as algas selvagens secas podem expandir-se no estômago."
   },
   "signs": null,
   "what_to_do": {
     "en": "Keep an eye on your dog at the beach so they don't eat wild seaweed. If your dog does eat seaweed on the beach, consult a veterinarian right away; it can cause vomiting, diarrhoea, weakness and lethargy.",
     "sl": "Na plaži psa pazljivo spremljajte, da ne poje divjih alg. Če jih pes vseeno poje, se takoj posvetujte z veterinarjem; alge lahko povzročijo bruhanje, drisko, šibkost in zaspanost.",
+    "de": "Passen Sie am Strand auf, dass Ihr Hund keine wilden Algen frisst. Wenn er am Strand doch Algen gefressen hat, wenden Sie sich sofort an einen Tierarzt. Sie können Erbrechen, Durchfall, Schwäche und Antriebslosigkeit verursachen.",
     "pt": "Na praia, vigia o teu cão para que não coma algas selvagens. Se o teu cão comer algas na praia, consulta imediatamente um veterinário; podem causar vómitos, diarreia, fraqueza e letargia."
   },
   "serving": {
     "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
     "sl": "Samo navadne, nezačinjene alge v majhnih količinah, na primer pakirani listi nori. Preberite seznam sestavin in se prepričajte, da ni dodanih začimb, soli ali česna.",
+    "de": "Nur pure, ungewürzte Algen in kleinen Mengen, zum Beispiel abgepackte Nori-Blätter. Prüfen Sie die Zutatenliste, damit weder Gewürze noch Salz oder Knoblauch zugesetzt sind.",
     "pt": "Apenas algas simples, sem tempero, em pequenas quantidades, como as folhas de nori pré-embaladas. Lê a lista de ingredientes para teres a certeza de que não levam temperos, sal nem alho."
   },
   "child": {
     "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
     "sl": "Psi lahko poskusijo malo navadnega norija. Na plaži pomagaj, da se ne približajo algam na pesku.",
+    "de": "Hunde dürfen ein bisschen pure Nori probieren. Am Strand kannst du helfen, sie von Algen im Sand fernzuhalten.",
     "pt": "Os cães podem provar um bocadinho de nori simples. Na praia, ajuda a afastar os cães das algas que estão na areia."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "What if my dog eats seaweed at the beach?",
         "sl": "Kaj, če pes na plaži poje alge?",
+        "de": "Was ist, wenn mein Hund am Strand Algen frisst?",
         "pt": "E se o meu cão comer algas na praia?"
       },
       "a": {
         "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
         "sl": "Takoj se posvetujte z veterinarjem. Divje alge lahko vsebujejo preveč soli, suhe alge lahko v želodcu nabreknejo, dolgi prameni pa se lahko zagozdijo v črevesju.",
+        "de": "Wenden Sie sich sofort an einen Tierarzt. Wilde Algen können zu viel Salz enthalten, trockene Algen können im Magen aufquellen, und lange Stränge können sich im Darm festsetzen.",
         "pt": "Consulta imediatamente um veterinário. As algas selvagens podem conter sal em excesso, as algas secas podem expandir-se no estômago e as tiras compridas podem ficar presas no intestino."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Can dogs eat sushi or seaweed with soy sauce?",
         "sl": "Ali lahko psi jedo suši ali alge s sojino omako?",
+        "de": "Dürfen Hunde Sushi oder Algen mit Sojasauce fressen?",
         "pt": "Os cães podem comer sushi ou algas com molho de soja?"
       },
       "a": {
         "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
         "sl": "Ne. Suši s surovo ribo lahko psu škoduje, sojina omaka pa vsebuje veliko soli.",
+        "de": "Nein. Sushi mit rohem Fisch kann Ihren Hund krank machen, und Sojasauce enthält viel Salz.",
         "pt": "Não. O sushi feito com peixe cru pode fazer mal ao teu cão, e o molho de soja tem muito sal."
       }
     }
@@ -157,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e2b4850468e757a1eec2cfa23f2257ffa353947fafdc2f6489c7ccfad0fbfb0c"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5598ba49c40cc09cca82b580b0684883c6de57c2eb082d081af1edd0c3a0a6f2"
     }
   }
 }
