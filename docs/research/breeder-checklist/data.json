@@ -3734,6 +3734,33 @@
         }
       ],
       "notes": "RKC breed page (dog-data S780, 2026-11-11): genetic diversity, elbow, eye (with gonioscopy) and hip schemes under the minimum recommendation; LPPN3, LPN1, LPN2 and LEMP DNA tests under 'Best Practice'. Four new test keys (dna_lppn3, dna_lpn1, dna_lpn2, dna_lemp — LEMP is not the Rottweiler's LEMP-2 key dna_lemp2). Woodgreen (S784): regular cardiac checks pick up dilated cardiomyopathy (not an RKC test — not listed)."
+    },
+    "beauceron": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S787",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S787",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S787",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S787, 2026-11-11): 'Pre-breeding health screening' — under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC hip scheme; 'We don't currently offer a breed-specific DNA testing package for this breed'. No new test key."
     }
   }
 }

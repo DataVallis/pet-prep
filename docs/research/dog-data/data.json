@@ -53694,6 +53694,524 @@
       }
     }
   },
+  "beauceron": {
+    "_note": "Added 2026-11-11 (M5-R10-104, unattended run — appended after the Leonberger: AKC 2024 No. 100 'Beauceron', S174 full-list table fetched 2026-11-11 '99 Leonberger', '100 Beauceron'). Quotes as returned by the web-fetch tool on 2026-11-11 (RKC, KUSA and PetMD pages under a 125-character quote limit — fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S787–S794 (reused S10, S11, S35, S45, S123, S174, S268). No health percentages anywhere. Identity from the FCI nomenclature (S789, 'BERGER DE BEAUCE (44)', Group 1, France; the current 2023 English standard PDF was refused by the fetch tool → standard wording from the KUSA copy of FCI Standard N° 44 (S790, effective 01/02/2017), the RKC breed standard (S788, last updated 1 August 2025) and the AKC standard (S792, effective 2006). RKC Breeds A–Z page (S787): key facts, Breed Watch Category 1, health tests. No PDSA / Woodgreen / Dogs Trust breed page exists for the breed (searched 2026-11-11). Weight: AKC breed weight chart (S268) — no standard gives a weight. Lifespan: not in the Dogs Trust McMillan 2024 table (S123, re-read 2026-11-11: no 'Beauceron' row) → RKC lower bound 'Over 10 years' → senior 90 (Standard Schnauzer precedent). Names: RKC / AKC 'Beauceron', FCI 'Berger de Beauce' / 'Beauce Sheepdog'; Slovenian »beauceron« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 44, Group 1 Section 1 (Sheepdogs), France",
+      "unit": "—",
+      "source_id": "S789",
+      "quote": "BERGER DE BEAUCE (44)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S789, as returned): group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country of origin 'FRANCE', English name 'BEAUCE SHEEPDOG', definitive acceptance '11/25/1963', official valid standard '8/1/2023', 'Subject to a working trial according to the FCI Breeds Nomenclature'. France is already in FCI_ORIGINS (FR)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S787",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S787) 'Large'. AKC chart (S268) 70–110 lb (32–50 kg)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            65,
+            70
+          ],
+          "female": [
+            61,
+            68
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S790",
+        "quote": "Males: 65cm – 70cm (approx. 25½” – 27½”)",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard N° 44 (S790): 'Females: 61cm – 68cm (approx. 24” – 26½”)'. RKC standard (S788) dogs 65–70 cm, bitches 61–68 cm (paraphrase); AKC standard (S792) 'Size - males 25½ to 27½ inches; bitches 24 to 26½ inches at the withers.' — agreement; PetMD (S791) 'stand as tall as 27.5 inches at the shoulder'."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            31.8,
+            49.9
+          ],
+          "female": [
+            31.8,
+            49.9
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S268",
+        "quote": "Beauceron | 70-110 pounds | 70-110 pounds",
+        "confidence": "medium",
+        "notes": "AKC breed weight chart (S268, re-read 2026-11-11), row as returned (male | female): 70–110 lb for both sexes = 31.75–49.90 kg → stored as 31.8–49.9 kg — the game range (adult_weight_kg). No standard gives a weight (FCI copy S790, RKC S788 and AKC S792 heights only). PetMD (S791) 'they can weigh up to 110 pounds' agrees with the upper end. Alternatives: Hill's UK (S794, tier C) 'Male 30-39 kg' / 'Female 30-39 kg'; VCA (S793) 65–85 lb (paraphrase)."
+      },
+      "salt_category": {
+        "value": "V–VI (30–40 / >40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 31.8–49.9 kg straddles the 30–40 band and '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC chart 70–110 lb (S268) → 'Large (59–99 pounds)' (the upper end touches 'Giant'). Same as the Dobermann and the German Shepherd."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Beauceron growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S787",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S787). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value exists). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S791",
+        "quote": "healthy dogs that live for 10–12 years",
+        "confidence": "medium",
+        "notes": "PetMD (S791, fragment). Its lower bound gives the same senior boundary (0.75 × 10 × 12 = 90)."
+      },
+      "hills": {
+        "value": "11–13",
+        "unit": "years",
+        "source_id": "S794",
+        "quote": "11-13 yrs",
+        "confidence": "low",
+        "notes": "Hill's UK (S794, tier C, 'Longevity' attribute). Alternative only (0.75 × 11 × 12 = 99). VCA (S793): 10 to 12 years (paraphrase)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the Dogs Trust table of McMillan et al. 2024 data (S123, re-read 2026-11-11) has no 'Beauceron' row (neighbours 'Bearded Collie 13.9 13.7 - 14.0 1165 570', 'Bedlington Terrier 13.7 13.4 - 14.0 1294 549'); the Nature PDF text (S771) does not name the breed. No VetCompass median found."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S787) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (breed not in the table) → VetCompass median (none found) → RKC lower bound. PetMD 10–12 y (S791) gives the same 90; alternative 99 (Hill's 11 y, S794, tier C).",
+        "derived_from": [
+          "S11",
+          "S787"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S787",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S787), runbook first choice → 120 min. PetMD (S791) 'An adult Beauceron should receive *at least* two hours of exercise daily.' agrees. Alternative: Hill's UK (S794, tier C) '>40 minutes/day'."
+      },
+      "daily_text": {
+        "value": "at least two hours a day as an adult; a long walk or hike every day",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "An adult Beauceron should receive *at least* two hours of exercise daily.",
+        "confidence": "high",
+        "notes": "PetMD (S791); also 'Beaucerons also need a long walk or hike for exercise every day.'"
+      },
+      "after_meals": {
+        "value": "no exercise one hour before and one hour after eating (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Prevent any exercise one hour before and one hour after eating",
+        "confidence": "high",
+        "notes": "PetMD (S791), bloat prevention list after 'Dogs with deep chests, such as Beaucerons, are prone to bloat'; also 'Feed your Beauceron two to three meals a day instead of one' and, in the feeding list, 'Avoid exercise one hour before and after a meal.' → proposed_game_parameters.beauceron.meal_exercise_gap (built, M5-R16; the game's gap is 60 min after a meal — David's decision)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "quiet, confident, gentle and fearless; affectionate and loyal to the family, wary of strangers",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Quiet and confident, a loyal companion and guard dog",
+        "confidence": "high",
+        "notes": "RKC breed page subtitle (S787). RKC standard (S788): 'Bold, fearless, intelligent.' FCI copy (S790): 'The character of the Beauceron should be gentle and fearless.' AKC standard (S792): 'Frank approach and self-assured; never mean, timid, or worried.' PetMD (S791): 'very affectionate and loyal toward their family members.' and 'Around new people, Beaucerons can be wary and suspicious.'"
+      },
+      "family": {
+        "value": "very affectionate and loyal toward the family",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "very affectionate and loyal toward their family members.",
+        "confidence": "medium",
+        "notes": "PetMD (S791, fragment). No 'family pet' statement on the pages read → no family_pet chip. VCA calls him an ideal family guardian (paraphrase, S793)."
+      },
+      "children": {
+        "value": "can be good with young children when introductions are supervised",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "They can be good with young children and other dogs when introductions are supervised and done properly.",
+        "confidence": "medium",
+        "notes": "PetMD (S791). Explicit statement with a supervision caveat (kept here) → children; no small_children (no rating without a caveat). Hill's UK (S794, tier C): 'Early socialisation is best for them to be accepting of other pets and of children in the house.'"
+      },
+      "time_alone": {
+        "value": "enjoys being with the family as much as possible — best with someone at home; can be destructive when left to entertain themselves",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Beaucerons enjoy being around their family as much as possible, so they’ll do best with people who work from home or those who bring their dog along on adventures.",
+        "confidence": "medium",
+        "notes": "PetMD (S791); continues 'Otherwise, they can be destructive if left to entertain themselves.' Basis of needs_company (Boxer precedent: best with someone around)."
+      },
+      "other_pets": {
+        "value": "can be good with other dogs with supervised introductions; may be territorial around other pets",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "They can be good with young children and other dogs when introductions are supervised and done properly.",
+        "confidence": "medium",
+        "notes": "PetMD (S791). Hill's UK (S794, tier C): 'They can be territorial around other pets and should be introduced to other dogs early in their training.' No high-prey-drive statement → no chases_small_pets; no other_pets chip (caveats)."
+      },
+      "socialisation": {
+        "value": "socialise puppies with new people early",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "It’s important to socialize Beauceron puppies with new people early so they learn that strangers aren’t scary.",
+        "confidence": "high",
+        "notes": "PetMD (S791). A need (runbook M5-R17) → proposed_game_parameters.beauceron.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "intelligent and loyal — puppies usually easy to train",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Due to their high intelligence and loyalty to their pet parents, Beauceron puppies are usually easy to train.",
+        "confidence": "high",
+        "notes": "PetMD (S791). Hill's UK (S794, tier C) 'require a firm hand in training' — tier C alone, no experienced-owner chip; VCA lists experience as definitely preferred (paraphrase, S793 — not verbatim, no chip)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag (PetMD 'destructive if left to entertain themselves' is about being alone → needs_company)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement on weight gain found (PetMD S791 'Do not overfeed your Beauceron.' is general feeding advice) → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S787, 'Currently no points of concern specific to this breed have been identified for special attention by judges') → no welfare chip. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity'; Best Practice the BVA/KC hip scheme (S787).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S787). Not a welfare breed."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Hip dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S791) health list heading. RKC (S787) Best Practice 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme'. VCA (S793): hip dysplasia and bloat reported (paraphrase). Register health key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus — an emergency",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "GDV is an extremely painful condition that is fatal if emergency surgery is not performed immediately.",
+        "confidence": "high",
+        "notes": "PetMD (S791): 'Dogs with deep chests, such as Beaucerons, are prone to bloat'. Register health key bloat_gdv; basis of the meal / exercise gap."
+      },
+      "heart": {
+        "value": "dilated cardiomyopathy (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Dilated cardiomyopathy (DCM)",
+        "confidence": "medium",
+        "notes": "PetMD (S791) health list heading. Register health key heart_muscle_disease."
+      },
+      "liver": {
+        "value": "canine copper-associated hepatitis",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Canine copper-associated hepatitis",
+        "confidence": "medium",
+        "notes": "PetMD (S791) health list heading. Research only (no register key)."
+      },
+      "allergies": {
+        "value": "environmental or food allergies — prone to ear infections",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Some Beaucerons have environmental or food allergies, which makes them prone to ear infections.",
+        "confidence": "medium",
+        "notes": "PetMD (S791). Research only (no register key)."
+      },
+      "tricolour_mating": {
+        "value": "the RKC no longer registers puppies of a tricolour × tricolour (harlequin) mating",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "The Kennel Club will no longer register puppies whelped from a tricolour to tricolour mating",
+        "confidence": "medium",
+        "notes": "RKC breed page (S787), effective 6 July 2010 (impaired vision and hearing — paraphrase). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-11; ranks 1–79) does not list 'Beauceron'. Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "high intelligence; puppies usually easy to train",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Due to their high intelligence and loyalty to their pet parents, Beauceron puppies are usually easy to train.",
+        "confidence": "medium",
+        "notes": "PetMD (S791). RKC standard (S788) 'Bold, fearless, intelligent.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.beauceron.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large and solid, unexaggerated, powerful and muscular without heaviness",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Large and solid. Unexaggerated, powerful, muscular build, without heaviness.",
+        "confidence": "high",
+        "notes": "RKC standard (S788). FCI copy (S790): 'big, solid, hardy, powerful, well-built and muscular, but without lumber.'"
+      },
+      "colours": {
+        "value": [
+          "black_and_tan",
+          "harlequin"
+        ],
+        "unit": "list",
+        "source_id": "S792",
+        "quote": "Any color other than Black and Tan or Harlequin.",
+        "confidence": "high",
+        "notes": "AKC standard (S792) disqualification; 'The black is very pure; the tan markings are squirrel red'; harlequin 'Black and Tan base color with a pattern of blue-gray patches'. FCI copy (S790): 'The black is pure black and the tan, red squirrelcoloured.' / harlequin 'grey, black and tan, the coat being black and grey in equal parts'; tan 'spots over the eyes'; 'A faint while spot on the chest is tolerated.' (sic); disqualifying 'Complete absence of tan markings.' RKC standard (S788): 'Any other colour or combination of colours unacceptable.' RKC Colour Watch Category 0. Never merle-only, white, solid black or fawn."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black and tan first with the highest weight (the portrait default — the first colour of every standard), then harlequin."
+      },
+      "coat": {
+        "value": "short, rough, thick and coarse, lying close to the body (3–4 cm), with a dense, soft undercoat; short on the head",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Short on head. Short, rough, thick and coarse laying close to body.",
+        "confidence": "high",
+        "notes": "RKC standard (S788); FCI copy (S790) 'Smooth on the head, short, thick, firm, and lying close to the body, 3cm to 4 cm in length.' RKC key fact 'Coat length: Medium' (S787)."
+      },
+      "head": {
+        "value": "well-chiselled, flat or slightly rounded skull, slight stop, muzzle neither narrow nor pointed, black nose",
+        "unit": "—",
+        "source_id": "S790",
+        "quote": "The head is well-chiselled with harmonious lines.",
+        "confidence": "high",
+        "notes": "FCI copy (S790): 'The stop is only slightly pronounced and is equidistant from the occiput and the end of the muzzle.'; muzzle 'Neither narrow nor pointed.'; nose '… never split, and always black.' Not a short-faced breed."
+      },
+      "eyes": {
+        "value": "dark brown, horizontal, slightly oval",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Dark, oval, medium sized, with well-pigmented rims. Horizontally placed.",
+        "confidence": "high",
+        "notes": "RKC standard (S788). FCI copy (S790): 'The iris should be dark brown, and in any case never lighter than dark hazel' (harlequins may have wall eyes)."
+      },
+      "ears": {
+        "value": "natural dropped ears, flat, half the length of the head (never cropped in the game)",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Dropped, flat, not set close to head. Length equal to half that of head.",
+        "confidence": "high",
+        "notes": "RKC standard (S788). FCI copy (S790): 'Set high. Ears are half-pricked or drop-eared.'; AKC (S792) 'may be cropped or natural' — cropping is not shown (natural ears only, UK / EU practice)."
+      },
+      "tail": {
+        "value": "whole, carried low, reaching at least to the hock with a slight J-shaped hook",
+        "unit": "—",
+        "source_id": "S790",
+        "quote": "Whole, carried low, it reaches at least to the hock, without deviating, forming a slight hook in the form of a 'J'.",
+        "confidence": "high",
+        "notes": "FCI copy (S790). RKC standard (S788): 'Carried low and hanging straight, reaching at least to hock and with a loose hook at end.'"
+      },
+      "dewclaws": {
+        "value": "double dewclaws on the hind legs (a breed requirement)",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Double dewclaws set close to foot. Lack of double dewclaws unacceptable.",
+        "confidence": "high",
+        "notes": "RKC standard (S788). FCI copy (S790): 'By tradition, shepherds are much attached to the conservation of double dewclaws.'; AKC (S792) disqualification 'Anything less than double dewclaws on each rear leg.' PetMD (S791): '… don’t miss these during nail trimming sessions.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S787) and PetMD (S791). RKC key facts reached on 2026-11-11. No PDSA / Woodgreen page for the breed.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S787) → large."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S787) → 120 min. Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). Basis of large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S787) — no number → the most specific number of another A/B source: PetMD 'at least once a week' (suitability.petmd_grooming) → 1 (runbook »Dog grooming«; Anatolian Shepherd / Wirehaired Pointing Griffon precedent). Not frequent_grooming (no source says more than weekly with a number)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S787)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). Basis of sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). Basis of the senior boundary."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S787). No apartment chip."
+      },
+      "petmd_grooming": {
+        "value": "brushing at least once a week",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Brush them at least once a week to minimize the fur on your floor and furniture.",
+        "confidence": "high",
+        "notes": "PetMD (S791) — 'at least once a week' → 1 (the brushing goal, M5-R13). Hill's UK (S794, tier C) 'weekly brushing is usually enough'; VCA (S793) weekly, more when shedding (paraphrase)."
+      },
+      "petmd_bathing": {
+        "value": "bath only when dirty — frequent bathing not necessary",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "But frequent bathing isn’t necessary.",
+        "confidence": "medium",
+        "notes": "PetMD (S791); 'If your Beauceron is dirty or stinky, give them a bath.' No frequency → no bath reminder (runbook »Breed care tasks«)."
+      },
+      "petmd_nails": {
+        "value": "nails trimmed frequently, including the double hind dewclaws",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "Nails should be trimmed frequently so they don’t overgrow, split, or break.",
+        "confidence": "medium",
+        "notes": "PetMD (S791). 'frequently' is no frequency → no nail task (runbook »Breed care tasks«); fact kept in the breed text."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two or three weeks — only for dogs with allergies",
+        "unit": "—",
+        "source_id": "S791",
+        "quote": "clean their ears with a routine ear cleaner every two or three weeks",
+        "confidence": "medium",
+        "notes": "PetMD (S791, fragment of 'For those that have allergies, clean their ears with a routine ear cleaner every two or three weeks, and after baths or other water activities'). Conditional ('if allergic') → no ear task (runbook »Breed care tasks«)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -80392,6 +80910,252 @@
         "confidence": "high",
         "notes": "Colours of the FCI (S783) and AKC (S786) standards. Weights unsourced in prompts. Lion yellow with a black mask as the portrait default — the first colour of the FCI list (S783).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): lion yellow with a black mask is the portrait default; standard colours only (lion yellow / red / reddish brown / sandy, always with a black mask)"
+      }
+    },
+    "beauceron": {
+      "_note": "Unattended run M5-R10-104 (2026-11-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key, no new register health key, no new breeder-checklist test key. Sourced needs built from day one: brushing 1× a week (RKC S787 'More than once a week' without a number → PetMD S791 'at least once a week', M5-R13); puppy socialisation (PetMD S791 quote, M5-R17); the 'wait with the walk' digestion warning (PetMD S791 quote, M5-R16). Nails ('frequently'), ears (only with allergies), bathing (only when dirty), teeth / groomer — no frequency → no care task. Exercise from RKC (S787, more than 2 hours; PetMD agrees). Senior 90 from the RKC lower bound 'Over 10 years' (not in the McMillan 2024 table).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S787",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S787). Rule: one number N ('more than N') → N = 120. PetMD (S791) 'at least two hours of exercise daily' agrees.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S794",
+            "notes": "Hill's UK (tier C) '>40 minutes/day' — tier C, never alone; RKC preferred."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S787 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S787",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months (a puppy walks at most 80 min at 8 months; the young dog 90–110 min at 9–11 months).",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S787; PetMD 10–12 y, S791, gives the same). The breed is not in the Dogs Trust McMillan 2024 table (S123) and no VetCompass median was found. Alternative: 99 (Hill's 11 y, S794, tier C).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S787"
+        ],
+        "alternatives": {
+          "senior_hills_11_y": 99
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S787)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. PetMD: high intelligence, puppies usually easy to train — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S791): two to three meals a day instead of one (bloat prevention, general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S791",
+        "quote": "Brush them at least once a week to minimize the fur on your floor and furniture.",
+        "confidence": "high",
+        "notes": "beauceron.suitability.petmd_grooming. RKC (S787) 'More than once a week' has no number → the most specific number of another A/B source: PetMD 'at least once a week' → 1 (runbook »Dog grooming«; Anatolian Shepherd / Wirehaired Pointing Griffon precedent). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »at least once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number for the game; 60 = David's decision)",
+        "source_id": "S791",
+        "quote": "Prevent any exercise one hour before and one hour after eating",
+        "confidence": "high",
+        "notes": "PetMD (S791), beauceron.exercise.after_meals; GDV in the PetMD health list (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S791",
+        "quote": "It’s important to socialize Beauceron puppies with new people early so they learn that strangers aren’t scary.",
+        "confidence": "high",
+        "notes": "beauceron.behaviour.socialisation (PetMD S791, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S791)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-104); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.exercise.adult",
+              "beauceron.suitability.rkc_exercise"
+            ],
+            "quote": "S787 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S791"
+            ],
+            "refs": [
+              "beauceron.behaviour.children"
+            ],
+            "quote": "S791 'They can be good with young children and other dogs when introductions are supervised and done properly.'",
+            "note": "Supervision caveat kept in notes (introductions supervised)."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.suitability.rkc_size_of_home",
+              "beauceron.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S787 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.exercise.adult",
+              "beauceron.suitability.rkc_exercise"
+            ],
+            "quote": "S787 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S787"
+            ],
+            "refs": [
+              "beauceron.suitability.rkc_shedding"
+            ],
+            "quote": "S787 'Sheds: Yes'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S791"
+            ],
+            "refs": [
+              "beauceron.behaviour.time_alone"
+            ],
+            "quote": "S791 'Beaucerons enjoy being around their family as much as possible, so they’ll do best with people who work from home or those who bring their dog along on adventures.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement on the A/B pages read (PetMD: affectionate and loyal toward the family).",
+          "small_children": "No rating without a caveat (PetMD: supervised introductions).",
+          "experienced_owner": "Only Hill's UK (tier C, 'firm hand') and a VCA paraphrase — no verbatim A/B statement.",
+          "apartment": "RKC 'Large house' (S787).",
+          "other_pets": "PetMD supervised introductions; Hill's (tier C) territorial around other pets — no chip.",
+          "chases_small_pets": "No high-prey-drive statement.",
+          "frequent_grooming": "Brushing goal 1× a week (PetMD); RKC 'More than once a week' without a number.",
+          "chews_when_bored": "PetMD 'destructive if left to entertain themselves' is about being alone → needs_company.",
+          "welfare": "RKC Breed Watch Category 1 (S787) — no points of concern."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, children, large_home; consider long_daily_exercise, sheds, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": "S787",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S787), no BVA / UFAW / VetCompass conformation concern found; not flat-faced (BVA S92 does not apply). Never promise the breed's health; natural (uncropped) ears only.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Beauceron, black and tan (default): pure black with rich squirrel-red tan markings over the eyes, on the muzzle, chest and lower legs; large and solid, unexaggerated, powerful and muscular without heaviness; short, rough, thick coat lying close to the body; well-chiselled head, slight stop, black nose; dark brown oval eyes; natural dropped ears (never cropped); long tail carried low with a slight J-hook; double dewclaws on the hind legs; never white, merle-only, solid black or fawn",
+        "unit": "—",
+        "source_id": "S788",
+        "quote": "Large and solid. Unexaggerated, powerful, muscular build, without heaviness.",
+        "confidence": "high",
+        "notes": "Colours of the FCI (S790), RKC (S788) and AKC (S792) standards: black and tan, harlequin. Weights unsourced in prompts. Black and tan as the portrait default — the first colour of every standard.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default; standard colours only (black and tan / harlequin); natural ears"
       }
     }
   }
