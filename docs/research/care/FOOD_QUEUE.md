@@ -142,7 +142,16 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] cat-grass (cat)
 
 ## W4 — grains, kitchen, sweets
-- [ ] bread · rice · pasta · oatmeal · quinoa · popcorn · cereal · crackers · pizza · french-fries
+- [x] bread
+- [x] rice
+- [d] pasta — no source cat 2026-11-11
+- [d] oatmeal — no source cat 2026-11-11
+- [d] quinoa — no source cat 2026-11-11
+- [x] popcorn
+- [d] cereal — no source cat 2026-11-11
+- [-] crackers — no source dog 2026-11-11 — no source cat 2026-11-11
+- [x] pizza
+- [d] french-fries — no source cat 2026-11-11 (only potato chips / fatty foods named)
 - [ ] sugar · candy · honey · jam · cookies · cake · marshmallows · gum · nutmeg · cinnamon · ginger
 - [ ] turmeric · black-pepper · vanilla · cocoa-powder · baking-soda · vinegar · soy-sauce · ketchup
 - [ ] mayonnaise · mustard · gravy · broth · hot-dogs · sausages · deli-meat · fish-sticks · sushi

@@ -1,0 +1,142 @@
+{
+  "slug": "quinoa",
+  "species": "dog",
+  "name": {
+    "en": "Quinoa",
+    "sl": "Kvinoja"
+  },
+  "question": {
+    "en": "Can dogs eat quinoa?",
+    "sl": "Ali lahko psi jedo kvinojo?"
+  },
+  "url_slug": {
+    "en": "quinoa",
+    "sl": "kvinoja"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Generally yes. Plain cooked quinoa is safe for dogs in small amounts. Don't share quinoa from your own plate, because it is often cooked with salt, garlic or onion, which can be harmful to dogs.",
+    "sl": "Na splošno da. Navadna kuhana kvinoja je za pse v majhnih količinah varna. Psu ne dajajte kvinoje s svojega krožnika, saj je pogosto kuhana s soljo, česnom ali čebulo, ki so lahko za pse škodljivi."
+  },
+  "why": {
+    "en": "Quinoa makes saponin to protect itself from insects. The amount is usually too small to cause problems, but dogs may be more sensitive to saponin than people, and it may irritate the intestines. Rinsing quinoa before cooking helps, and cooking makes it easier to digest. Quinoa recipes often add salt, garlic and onions, which could be toxic to dogs.",
+    "sl": "Kvinoja tvori saponin, s katerim se brani pred žuželkami. Količina je običajno premajhna, da bi povzročala težave, a psi so na saponin morda bolj občutljivi kot ljudje, saponin pa lahko draži črevesje. Pomaga, če kvinojo pred kuhanjem operete, kuhanje pa jo naredi lažje prebavljivo. V receptih s kvinojo so pogosto sol, česen in čebula, ki so lahko za pse strupeni."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog has never had quinoa, start with a small amount. If it causes vomiting, diarrhoea or constipation, don't give it again. Check with your vet before adding any new food.",
+    "sl": "Če pes kvinoje še ni jedel, začnite z majhno količino. Če po njej bruha, ima drisko ali zaprtje, mu je ne dajajte več. Pred uvedbo nove hrane se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Rinsed, then cooked plain, without salt, garlic, onion or other seasoning; a small amount at first.",
+    "sl": "Oprana in nato navadno kuhana, brez soli, česna, čebule ali drugih začimb; na začetku le malo."
+  },
+  "child": {
+    "en": "Dogs can try a little plain quinoa cooked just for them. Quinoa from our plates often has onion or garlic.",
+    "sl": "Psi lahko poskusijo malo navadne kvinoje, kuhane posebej zanje. Kvinoja z naših krožnikov ima pogosto čebulo ali česen."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Should I rinse quinoa for my dog?",
+        "sl": "Ali naj kvinojo za psa operem?"
+      },
+      "a": {
+        "en": "Yes, if you're concerned about saponin, wash the quinoa before cooking it.",
+        "sl": "Da, če vas skrbi saponin, kvinojo pred kuhanjem operite."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat quinoa salad?",
+        "sl": "Ali lahko psi jedo solato s kvinojo?"
+      },
+      "a": {
+        "en": "It's best not to. Never give your dog quinoa straight from your plate, as dishes often contain salt, garlic or onions.",
+        "sl": "Bolje ne. Psu nikoli ne dajajte kvinoje naravnost s krožnika, saj jedi pogosto vsebujejo sol, česen ali čebulo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD177",
+      "quote": "The answer is generally yes."
+    },
+    {
+      "id": "KD177",
+      "quote": "The quinoa plant produces saponin to protect itself from insects,"
+    },
+    {
+      "id": "KD177",
+      "quote": "However, the amount of saponin found in quinoa is typically too small to create any health problems."
+    },
+    {
+      "id": "KD177",
+      "quote": "It is possible that dog digestive systems are more sensitive to saponin than human digestive systems."
+    },
+    {
+      "id": "KD177",
+      "quote": "it's been suggested that saponin can cause irritation in the intestines of both humans and canines."
+    },
+    {
+      "id": "KD177",
+      "quote": "If you're concerned about saponin, wash the quinoa before cooking it."
+    },
+    {
+      "id": "KD177",
+      "quote": "If you do decide to offer quinoa to your dog, cook it to make digestion easier."
+    },
+    {
+      "id": "KD177",
+      "quote": "Salt, garlic, and onions are often added to quinoa recipes,"
+    },
+    {
+      "id": "KD177",
+      "quote": "these ingredients could prove toxic to your canine companion."
+    },
+    {
+      "id": "KD177",
+      "quote": "You should never give your dog quinoa directly off your plate."
+    },
+    {
+      "id": "KD177",
+      "quote": "If your dog has never eaten quinoa before, start by giving your pup a small amount."
+    },
+    {
+      "id": "KD177",
+      "quote": "If your dog experiences vomiting, diarrhea, or constipation after consumption, refrain from feeding it to them again."
+    },
+    {
+      "id": "KD177",
+      "quote": "you should always consult a veterinarian before introducing any new food into your dog's diet."
+    },
+    {
+      "id": "KD5",
+      "quote": "Quinoa is safe for dogs, but if you’re sharing a bite from your own plate, just ensure it isn’t cooked with salt"
+    },
+    {
+      "id": "KD51",
+      "quote": "Quinoa"
+    }
+  ],
+  "related": [
+    "rice",
+    "oatmeal",
+    "garlic",
+    "onion",
+    "salt"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "847fd3aafedeeac3633963a2674f35e2d94862d02fd23a79ddfffa5a220fc9ab"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e742b44e777b48c93eba276bd044d9fe3ad61729c2bcab36c468a4c347993732"
+    }
+  }
+}

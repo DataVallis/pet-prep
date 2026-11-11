@@ -1,0 +1,150 @@
+{
+  "slug": "french-fries",
+  "species": "dog",
+  "name": {
+    "en": "French fries",
+    "sl": "Pomfrit"
+  },
+  "question": {
+    "en": "Can dogs eat french fries?",
+    "sl": "Ali lahko psi jedo pomfrit?"
+  },
+  "url_slug": {
+    "en": "french-fries",
+    "sl": "pomfrit"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. French fries are far too high in calories for dogs and can lead to obesity, and too much salty food is not good for them. A dropped fry is unlikely to cause salt poisoning, and plain cooked potato is fine in small amounts instead.",
+    "sl": "Ni priporočljivo. Pomfrit ima za pse veliko preveč kalorij in lahko vodi v debelost, preveč slane hrane pa jim ne koristi. Padel krompirček verjetno ne bo povzročil zastrupitve s soljo, namesto pomfrita pa je v majhnih količinah v redu navaden kuhan krompir."
+  },
+  "why": {
+    "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
+    "sl": "AKC opozarja, da je pri hrani, kot je pomfrit, lahko preveč dobrega, veterinarski nutricionist s Cornella pa pravi, da ima pomfrit veliko preveč kalorij in lahko vodi v debelost ter slab vnos hranil. Zmerna količina slane hrane ne bi smela povzročiti zastrupitve s soljo, preveč slane hrane pa psom ne koristi, zlasti tistim z boleznijo srca, ker lahko povzroči zastajanje tekočine."
+  },
+  "signs": {
+    "en": [
+      "Strong thirst and peeing a lot",
+      "Vomiting or diarrhoea",
+      "Poor appetite or lethargy",
+      "Wobbliness, tremors or seizures (too much salt)"
+    ],
+    "sl": [
+      "Močna žeja in pogosto uriniranje",
+      "Bruhanje ali driska",
+      "Slab apetit ali utrujenost",
+      "Opotekanje, tresenje ali krči (preveč soli)"
+    ]
+  },
+  "what_to_do": {
+    "en": "A fry or two usually needs nothing more than fresh drinking water. If you think your dog has eaten too much salty food, contact your vet straight away.",
+    "sl": "Pri enem ali dveh krompirčkih običajno zadošča, da ima pes na voljo svežo vodo. Če mislite, da je pes pojedel preveč slane hrane, takoj pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "French fries are a salty people snack. Dogs do better with their own treats, so keep the fries for people.",
+    "sl": "Pomfrit je slan prigrizek za ljudi. Psom bolj ustrezajo njihovi priboljški, zato naj pomfrit ostane ljudem."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is plain potato better than fries?",
+        "sl": "Je navaden krompir boljši od pomfrita?"
+      },
+      "a": {
+        "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
+        "sl": "Da. Navaden pire ali mehak kuhan krompir je v majhnih količinah v redu, brez masla in začimb."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD151",
+      "quote": "It's possible to have too much of a good thing, and that certainly applies to foods like French fries,"
+    },
+    {
+      "id": "KD151",
+      "quote": "Just plain mashed or soft, cooked potatoes are fine in small amounts without the butter and spices,"
+    },
+    {
+      "id": "KD175",
+      "quote": "the pizza crust, burger bites and fries are just way too high in calories,"
+    },
+    {
+      "id": "KD175",
+      "quote": "and can really lead to obesity and subpar nutrient intake."
+    },
+    {
+      "id": "KD40",
+      "quote": "The feeding of salty foods in moderation should not cause salt toxicity."
+    },
+    {
+      "id": "KD40",
+      "quote": "Generally, the feeding of excessive salty foods is not good for dogs,"
+    },
+    {
+      "id": "KD40",
+      "quote": "especially for those that have certain medical issues such as heart disease"
+    },
+    {
+      "id": "KD40",
+      "quote": "because it can cause fluid retention."
+    },
+    {
+      "id": "KD40",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD40",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD40",
+      "quote": "Decreased appetite"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lack of coordination or being wobbly on their feet"
+    },
+    {
+      "id": "KD40",
+      "quote": "Excessive thirst or urination"
+    },
+    {
+      "id": "KD40",
+      "quote": "Tremors or seizures"
+    },
+    {
+      "id": "KD40",
+      "quote": "If you suspect your dog has consumed too much salt, contact a veterinarian or the Pet Poison Helpline immediately."
+    },
+    {
+      "id": "KD42",
+      "quote": "Salt toxicosis is unlikely to occur as long as sodium-regulating mechanisms are intact and fresh drinking water is available."
+    }
+  ],
+  "related": [
+    "potatoes-cooked",
+    "potatoes-raw",
+    "chips",
+    "salty-snacks",
+    "salt"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bd18407770fe6d37309c2ce166ad25d59e4d703b9562c957cd2ba77983f9a4cd"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4367187f4e863dcb4d144ef256585bbe62044cd86bd3bd54aad1aa6553bb24cb"
+    }
+  }
+}

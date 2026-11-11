@@ -1,0 +1,201 @@
+{
+  "slug": "bread",
+  "species": "dog",
+  "name": {
+    "en": "Bread",
+    "sl": "Kruh"
+  },
+  "question": {
+    "en": "Can dogs eat bread?",
+    "sl": "Ali lahko psi jedo kruh?"
+  },
+  "url_slug": {
+    "en": "bread",
+    "sl": "kruh"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts. Plain, fully baked white or wheat bread is generally safe for dogs without a wheat allergy, but it offers no real benefit and is high in calories. Never give raisin bread, garlic bread or raw dough.",
+    "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa."
+  },
+  "why": {
+    "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
+    "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Plain bread usually doesn't upset a dog's stomach. If you give bread or baked goods regularly, check the ingredients. If your dog eats raw bread dough, call your vet straight away; the same goes for bread with raisins or garlic.",
+    "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom."
+  },
+  "serving": {
+    "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
+    "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse."
+  },
+  "child": {
+    "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
+    "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat garlic bread?",
+        "sl": "Ali lahko psi jedo česnov kruh?"
+      },
+      "a": {
+        "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
+        "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps."
+      }
+    },
+    {
+      "q": {
+        "en": "Is bread good for a dog's upset stomach?",
+        "sl": "Ali kruh pomaga psu pri razdraženem želodcu?"
+      },
+      "a": {
+        "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
+        "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja."
+      }
+    },
+    {
+      "q": {
+        "en": "What if my dog eats raw bread dough?",
+        "sl": "Kaj, če pes poje surovo testo za kruh?"
+      },
+      "a": {
+        "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
+        "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD173",
+      "quote": "The short answer to the question “can dogs eat bread?” is yes."
+    },
+    {
+      "id": "KD173",
+      "quote": "Plain white and wheat bread are generally safe for dogs to eat, provided they don't have any allergies,"
+    },
+    {
+      "id": "KD173",
+      "quote": "and it usually doesn't cause any stomach upset."
+    },
+    {
+      "id": "KD173",
+      "quote": "Unless your dog has an allergy to wheat, plain white or wheat bread probably won't hurt them."
+    },
+    {
+      "id": "KD173",
+      "quote": "Bread is essentially a filler food and doesn't contain any nutrients not already supplied by your dog's food."
+    },
+    {
+      "id": "KD173",
+      "quote": "Bread packs a high glycemic punch and is high in calories,"
+    },
+    {
+      "id": "KD173",
+      "quote": "so be sure to feed your dog only very small pieces of bread at a time."
+    },
+    {
+      "id": "KD173",
+      "quote": "As anyone who has ever considered going on a diet knows, bread is full of carbs,"
+    },
+    {
+      "id": "KD173",
+      "quote": "which can put your dog on the path to obesity if you're not careful."
+    },
+    {
+      "id": "KD173",
+      "quote": "Raisins (and grapes) are highly toxic and are often found in breads and baked goods."
+    },
+    {
+      "id": "KD173",
+      "quote": "Raisin breads should be kept out of reach of dogs at all times and shouldn't be fed as a treat,"
+    },
+    {
+      "id": "KD173",
+      "quote": "Garlic bread might tempt your dog's nose, but can cause serious side effects,"
+    },
+    {
+      "id": "KD173",
+      "quote": "like abdominal pain, vomiting, diarrhea, weakness, and collapse."
+    },
+    {
+      "id": "KD173",
+      "quote": "While harmless to humans, xylitol is toxic to dogs."
+    },
+    {
+      "id": "KD173",
+      "quote": "If you feed your dog bread or baked goods on a regular basis, be sure to check the ingredients."
+    },
+    {
+      "id": "KD173",
+      "quote": "When a dog eats bread dough, the yeast continues to make the dough rise, distending your dog's stomach"
+    },
+    {
+      "id": "KD173",
+      "quote": "and releasing toxic levels of ethanol into the bloodstream."
+    },
+    {
+      "id": "KD173",
+      "quote": "If your dog is fed bread dough or you suspect they have stolen bread dough, call your veterinarian immediately"
+    },
+    {
+      "id": "KD173",
+      "quote": "a better option is to feed your dog a bland diet of rice and boiled chicken for dogs with upset stomachs,"
+    },
+    {
+      "id": "KD173",
+      "quote": "or better yet, calling your veterinarian for advice."
+    },
+    {
+      "id": "KD5",
+      "quote": "Dogs can eat small amounts of plain, fully baked bread as long as it doesn’t contain ingredients that are toxic to dogs"
+    },
+    {
+      "id": "KD5",
+      "quote": "Bread doesn’t offer dogs any particular benefit, and has lots of carbohydrates and calories"
+    },
+    {
+      "id": "KD5",
+      "quote": "Xylitol is a sweetener found in some sugar-free candy, chewing gum, toothpaste, baked goods, medications"
+    },
+    {
+      "id": "KD5",
+      "quote": "Raw dough made with yeast can expand in the stomach and produce alcohol, potentially causing dangerous stomach distention"
+    },
+    {
+      "id": "KD51",
+      "quote": "Plain white or brown bread (no additives)"
+    },
+    {
+      "id": "KD51",
+      "quote": "Speak to your vet right away if you think they've eaten anything containing grapes, raisins, or other dried fruit."
+    },
+    {
+      "id": "KD51",
+      "quote": "If you think your dog has eaten something containing any of these, don't wait to see."
+    }
+  ],
+  "related": [
+    "raw-yeast-dough",
+    "raisins",
+    "garlic",
+    "xylitol",
+    "rice",
+    "pasta"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d36f3423ed46d50da3e1a6450e549894d7b923ed4e69d6b4ad6dec0e7d37b32"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "10cd36a76aa0194957d0a7857de5d945afe24bff1bf25978826c6111f94d2d12"
+    }
+  }
+}

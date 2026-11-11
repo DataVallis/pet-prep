@@ -1,0 +1,119 @@
+{
+  "slug": "cereal",
+  "species": "dog",
+  "name": {
+    "en": "Breakfast cereal",
+    "sl": "Žitni kosmiči"
+  },
+  "question": {
+    "en": "Can dogs eat cereal?",
+    "sl": "Ali lahko psi jedo žitne kosmiče?"
+  },
+  "url_slug": {
+    "en": "cereal",
+    "sl": "zitni-kosmici"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Some, in moderation. Dogs Trust lists Weetabix Original (not its chocolate varieties) among foods dogs can usually have in moderation. Avoid chocolate cereals and any cereal or granola with raisins, which put dogs at risk of kidney failure.",
+    "sl": "Nekatere, zmerno. Dogs Trust kosmiče Weetabix Original (ne pa njihovih čokoladnih različic) uvršča med hrano, ki jo psi običajno lahko jedo zmerno. Izogibajte se čokoladnim kosmičem ter kosmičem ali granoli z rozinami, ki pri psih ogrožajo ledvice."
+  },
+  "why": {
+    "en": "Dogs Trust includes Weetabix Original, but not its chocolate varieties, in its list of human foods dogs can usually eat in moderation. Raisins can be hidden in cereals and granola, and grapes and raisins can put dogs at risk of kidney failure, even in small amounts. Chocolate can be toxic to dogs even in quite small amounts. Even foods that are usually non-toxic can upset an individual dog because of intolerance, fat content or portion size.",
+    "sl": "Dogs Trust kosmiče Weetabix Original, ne pa njihovih čokoladnih različic, uvršča na seznam človeške hrane, ki jo psi običajno lahko jedo zmerno. Rozine se lahko skrivajo v kosmičih in granoli, grozdje in rozine pa lahko pri psih ogrozijo ledvice že v majhnih količinah. Čokolada je za pse lahko strupena že v precej majhnih količinah. Tudi hrana, ki običajno ni strupena, lahko posameznega psa razdraži zaradi nestrpnosti, vsebnosti maščob ali velikosti porcije."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Check the ingredients for raisins, other dried fruit and chocolate. If you think your dog ate cereal with raisins or chocolate, contact your vet right away, even if it was only a small amount. Ask your vet before offering a food your dog hasn't tried.",
+    "sl": "Med sestavinami preverite, ali so rozine, drugo suho sadje ali čokolada. Če mislite, da je pes pojedel kosmiče z rozinami ali čokolado, takoj pokličite veterinarja, tudi če je šlo le za majhno količino. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Only in moderation, for example Weetabix Original. No chocolate, raisins or other dried fruit.",
+    "sl": "Le zmerno, na primer Weetabix Original. Brez čokolade, rozin in drugega suhega sadja."
+  },
+  "child": {
+    "en": "Some cereals are okay for a dog in small amounts. Chocolate or raisin cereal is not for dogs, so ask a grown-up.",
+    "sl": "Nekateri kosmiči so za psa v majhnih količinah v redu. Čokoladni kosmiči ali kosmiči z rozinami niso za pse, zato vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat granola?",
+        "sl": "Ali lahko psi jedo granolo?"
+      },
+      "a": {
+        "en": "It's best not to. Raisins can be hidden in granola and cereals, and they can put dogs at risk of kidney failure.",
+        "sl": "Bolje ne. V granoli in kosmičih se lahko skrivajo rozine, ki lahko pri psih ogrozijo ledvice."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat chocolate cereal?",
+        "sl": "Ali lahko psi jedo čokoladne kosmiče?"
+      },
+      "a": {
+        "en": "No. Chocolate can be toxic to dogs even in quite small amounts; Dogs Trust excludes chocolate varieties.",
+        "sl": "Ne. Čokolada je za pse lahko strupena že v precej majhnih količinah; Dogs Trust čokoladne različice izrecno izključuje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD51",
+      "quote": "Human foods you can usually feed your dog (in moderation)*"
+    },
+    {
+      "id": "KD51",
+      "quote": "Weetabix Original (no chocolate varieties)"
+    },
+    {
+      "id": "KD51",
+      "quote": "Speak to your vet right away if you think they've eaten anything containing grapes, raisins, or other dried fruit."
+    },
+    {
+      "id": "KD51",
+      "quote": "Things like intolerance, food fat content or portion size can play a part in this."
+    },
+    {
+      "id": "KD51",
+      "quote": "That’s why it’s always a good idea to speak to your vet before serving up something your dog hasn’t tried before."
+    },
+    {
+      "id": "KD5",
+      "quote": "Raisins can be ingredients hidden in breads, muffins, trail mix, granola, cookies, cereals"
+    },
+    {
+      "id": "KD4",
+      "quote": "Grapes and raisins can put dogs at risk of kidney failure – even a small amount can make your dog seriously ill."
+    },
+    {
+      "id": "KD4",
+      "quote": "Chocolate can be toxic for dogs, even in quite small amounts."
+    },
+    {
+      "id": "KD4",
+      "quote": "If you suspect your dog has eaten a toxic food, even if it's only a small amount, contact your vet immediately."
+    }
+  ],
+  "related": [
+    "oatmeal",
+    "raisins",
+    "dried-fruit",
+    "chocolate",
+    "milk",
+    "bread"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e04fd59f69cc418288ef432418d92e7cce0e0be5bf65522d064fe4d1f0cc29f0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a9680da218c4e3f0d2639ba02c56ddd35b8a132f118d892b8e6be200ca69e818"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "slug": "popcorn",
+  "species": "dog",
+  "name": {
+    "en": "Popcorn",
+    "sl": "Pokovka"
+  },
+  "question": {
+    "en": "Can dogs eat popcorn?",
+    "sl": "Ali lahko psi jedo pokovko?"
+  },
+  "url_slug": {
+    "en": "popcorn",
+    "sl": "pokovka"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, plain air-popped popcorn is generally safe for dogs in small amounts as an occasional treat. Skip butter, salt, oil and flavourings, and keep unpopped kernels away from your dog.",
+    "sl": "Da, navadna pokovka, pripravljena na vročem zraku, je za pse v majhnih količinah kot občasen priboljšek na splošno varna. Brez masla, soli, olja in arom, nepopokana zrna pa naj bodo zunaj pasjega dosega."
+  },
+  "why": {
+    "en": "Popcorn itself isn't bad for dogs, though it isn't a nutritional necessity. Many kinds are loaded with butter, oil, salt and flavourings, which can upset some dogs' digestion, and the fats can add to obesity over time. Unpopped and partly popped kernels can get stuck between teeth, damage teeth and pose a choking hazard, especially for smaller dogs.",
+    "sl": "Pokovka sama po sebi psom ne škodi, čeprav je ne potrebujejo za prehrano. Številne vrste so polne masla, olja, soli in arom, ki lahko nekaterim psom razdražijo prebavo, maščobe pa sčasoma prispevajo k debelosti. Nepopokana in napol popokana zrna se lahko zataknejo med zobe, poškodujejo zobe in pomenijo nevarnost zadušitve, zlasti za manjše pse."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "A few dropped pieces of buttered popcorn probably won't cause harm. Call your vet if your dog eats a large amount or shows vomiting, diarrhoea or lethargy afterwards.",
+    "sl": "Nekaj padlih koščkov pokovke z maslom psu verjetno ne bo škodilo. Pokličite veterinarja, če je pes pojedel veliko pokovke ali če potem bruha, ima drisko ali je brez energije."
+  },
+  "serving": {
+    "en": "Plain, air-popped pieces only, now and then. No butter, salt, oil, caramel or candy coating, cheese or seasoning, and no unpopped kernels.",
+    "sl": "Le navadni koščki, pripravljeni na vročem zraku, in to občasno. Brez masla, soli, olja, karamele ali sladkorne obloge, sira in začimb ter brez nepopokanih zrn."
+  },
+  "child": {
+    "en": "Dogs can have a few pieces of plain popcorn. Buttery or salty popcorn and hard kernels are not for dogs.",
+    "sl": "Psi lahko dobijo nekaj koščkov navadne pokovke. Pokovka z maslom ali soljo in trda zrna niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog ate some buttered popcorn. Is that a problem?",
+        "sl": "Pes je pojedel malo pokovke z maslom. Je to težava?"
+      },
+      "a": {
+        "en": "A few pieces probably won't cause harm. Call your vet if your dog ate a lot or develops vomiting, diarrhoea or lethargy.",
+        "sl": "Nekaj koščkov verjetno ne bo škodilo. Pokličite veterinarja, če je pojedel veliko ali če začne bruhati, dobi drisko ali je brez energije."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat caramel or cheese popcorn?",
+        "sl": "Ali lahko psi jedo karamelno ali sirno pokovko?"
+      },
+      "a": {
+        "en": "No. Skip popcorn with candy or caramel coatings, cheese or seasoning.",
+        "sl": "Ne. Pokovke s sladkorno ali karamelno oblogo, sirom ali začimbami psu ne dajajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD178",
+      "quote": "Popcorn itself isn’t bad for dogs."
+    },
+    {
+      "id": "KD178",
+      "quote": "The good news is that plain, air-popped popcorn is generally safe for dogs in small amounts."
+    },
+    {
+      "id": "KD178",
+      "quote": "While popcorn isn’t a nutritional necessity for dogs, plain air-popped popcorn can serve as an occasional treat."
+    },
+    {
+      "id": "KD178",
+      "quote": "If you want to share popcorn with your dog, stick to plain, air-popped pieces and offer them only occasionally."
+    },
+    {
+      "id": "KD178",
+      "quote": "Many varieties are loaded with butter, oil, salt, and flavorings."
+    },
+    {
+      "id": "KD178",
+      "quote": "These additions can cause digestive upset in some dogs."
+    },
+    {
+      "id": "KD178",
+      "quote": "The fats found in butter and oils can also contribute to obesity and related health issues over time."
+    },
+    {
+      "id": "KD178",
+      "quote": "That said, if your dog eats a few pieces of dropped buttered popcorn, it probably won’t cause harm."
+    },
+    {
+      "id": "KD178",
+      "quote": "Unpopped and partially popped kernels may become lodged between a dog’s teeth, causing discomfort."
+    },
+    {
+      "id": "KD178",
+      "quote": "They can also present a choking hazard, particularly for smaller dogs."
+    },
+    {
+      "id": "KD178",
+      "quote": "To reduce the risk, keep leftover kernels out of reach and avoid offering them to your dog."
+    },
+    {
+      "id": "KD178",
+      "quote": "Call your veterinarian if your dog eats a large amount or develops symptoms like vomiting, diarrhea, or lethargy afterward."
+    },
+    {
+      "id": "KD5",
+      "quote": "Unsalted, unbuttered, air-popped popcorn is OK for your dog to share with you in moderation"
+    },
+    {
+      "id": "KD5",
+      "quote": "Skip sharing any popcorn with candy or caramel coatings"
+    },
+    {
+      "id": "KD5",
+      "quote": "cheese or seasoned popcorn"
+    },
+    {
+      "id": "KD5",
+      "quote": "Those hard kernels can damage a dog’s teeth or become a choking hazard."
+    },
+    {
+      "id": "KD51",
+      "quote": "Plain popcorn"
+    }
+  ],
+  "related": [
+    "corn",
+    "corn-cob",
+    "butter",
+    "salt",
+    "salty-snacks",
+    "chips"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0711f5bf66bb8937053d6fb520d0653eb740f0540c1913c294c57cbaa26b26d7"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5da4cd74f929ad9a515160330a69fe02d9be7ff3b9254f82f53e23edefcd6f61"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "bread",
+  "species": "cat",
+  "name": {
+    "en": "Bread (baked)",
+    "sl": "Kruh (pečen)"
+  },
+  "question": {
+    "en": "Can cats eat bread?",
+    "sl": "Ali lahko mačke jedo kruh?"
+  },
+  "url_slug": {
+    "en": "bread",
+    "sl": "kruh"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain, fully baked bread is fine as an occasional treat. The ASPCA says baked bread is safe as an occasional treat as long as it is not raisin bread. Raw, rising dough is different and must be kept away from cats.",
+    "sl": "Da, majhen košček navadnega, dobro pečenega kruha je v redu kot občasen priboljšek. ASPCA navaja, da je pečen kruh varen kot občasen priboljšek, če ni kruh z rozinami. Surovo, vzhajajoče testo pa je nekaj drugega in mora biti zunaj mačjega dosega."
+  },
+  "why": {
+    "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
+    "sl": "ASPCA na strani o psih in mačkah navaja, da je dobro pečen kruh za hišne živali varen kot občasen priboljšek, če ni kruh z rozinami. Agriculture Victoria pojasnjuje, da se tveganje pri kvašenem testu zmanjša, ko je testo pečeno in je kvas povsem vzhajal. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Blue Cross pa, da mačke potrebujejo prehrano na osnovi mesa. Cats Protection svetuje, da se raje držimo priboljškov za mačke kot človeške hrane."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer only a small piece now and then. If your cat has eaten raw or rising dough rather than baked bread, contact your vet straight away and don't wait for symptoms to appear.",
+    "sl": "Ponudite le majhen košček, in to le občasno. Če je mačka pojedla surovo ali vzhajajoče testo in ne pečenega kruha, takoj pokličite veterinarja in ne čakajte, da se pokažejo znaki."
+  },
+  "serving": {
+    "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
+    "sl": "Majhen košček navadnega, dobro pečenega kruha. Nikoli kruha z rozinami in nikoli surovega testa."
+  },
+  "child": {
+    "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
+    "sl": "Košček navadnega kruha je lahko občasno priboljšek. Muce potrebujejo predvsem meso, surovo testo pa je samo za peko."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is raw bread dough safe for cats?",
+        "sl": "Ali je surovo testo za kruh varno za mačke?"
+      },
+      "a": {
+        "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
+        "sl": "Ne. ASPCA navaja, da psi in mačke nikoli ne smejo jesti surovega kvašenega testa, Agriculture Victoria pa, da lahko kvašeno testo vzhaja in povzroči nabiranje plinov v mačjih prebavilih."
+      }
+    },
+    {
+      "q": {
+        "en": "Can cats eat raisin bread?",
+        "sl": "Ali lahko mačke jedo kruh z rozinami?"
+      },
+      "a": {
+        "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
+        "sl": "Ne. Nasvet ASPCA, da je pečen kruh v redu kot občasen priboljšek, kruha z rozinami ne vključuje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC99",
+      "quote": "Learn why bread dough consumption is so dangerous for both dogs and cats, and what to do if dough is ingested."
+    },
+    {
+      "id": "KC99",
+      "quote": "Fully-baked bread is safe for pets as an occasional treat, so long as it's not raisin bread"
+    },
+    {
+      "id": "KC99",
+      "quote": "dogs and cats should never be allowed to eat uncooked, yeasted bread dough."
+    },
+    {
+      "id": "KC38",
+      "quote": "Yeast dough can rise and cause gas to accumulate in your cat's digestive system."
+    },
+    {
+      "id": "KC38",
+      "quote": "The risk diminishes after the dough is cooked and the yeast has fully risen."
+    },
+    {
+      "id": "KC103",
+      "quote": "As obligate carnivores, cats are less able to digest and use carbohydrates."
+    },
+    {
+      "id": "KC57",
+      "quote": "Cats need a meat based diet so do not need carbohydrate in their bland diet."
+    },
+    {
+      "id": "KC48",
+      "quote": "It’s best to stick to cat food treats rather than giving your cat any human foods."
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn't have."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    }
+  ],
+  "related": [
+    "raw-yeast-dough",
+    "raisins",
+    "rice"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "183aec5d6fdfe03c6fdc94b06e912a3abbca1be20f5172ab2c4ef9d464e507e3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ac685e9ab4d6813fd79a2dc14d434e19646eddc7a14b8b9969d5749dfa23015d"
+    }
+  }
+}
