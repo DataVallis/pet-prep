@@ -4,6 +4,7 @@
 |---|---|---|
 | `product/PRODUCT_SPEC.md` | **Kanonska** produktna specifikacija in pravila igre | SL |
 | `business/BUSINESS_MODEL.md` | Ponudba, cene, lijak, unit economics, GTM, odprte poslovne odločitve | SL |
+| `business/REVENUE_MODELS.md` | Modeli prihodka — ideje in smer (naročnina za pravega ljubljenčka, zavarovalnice, prodaja prek spletne strani); vse *načrt* (David 11. 11. 2026) | SL |
 | `business/VALIDATION_PLAN.md` | 8-tedenski načrt validacije: 100 plačljivih družin, hipoteze s pragovi, kaj je zamrznjeno, odločitve V1–V4 (David 10. 11. 2026) | SL |
 | `engineering/ARCHITECTURE.md` | Arhitektura *kot je zgrajena* (tabele, API, game loop, real-time) | EN |
 | `engineering/AUDIT-2026-10-02.md` | Analiza stanja ob prevzemu: kaj dela, kaj ne, kaj manjka | SL |
