@@ -10,11 +10,12 @@ use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PushNotification;
 use App\Models\User;
-use App\Services\Push\ExpoPushClient;
 use App\Services\NotificationService;
+use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
 use App\Services\UpgradeReminderService;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
@@ -113,7 +114,7 @@ function urTick(?string $utc = null): array
     return app(UpgradeReminderService::class)->processDue();
 }
 
-function urPushes(Pet $pet): \Illuminate\Support\Collection
+function urPushes(Pet $pet): Collection
 {
     return PushNotification::where('pet_id', $pet->id)->where('type', PushType::UpgradeReminder->value)->get();
 }

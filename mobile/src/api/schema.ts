@@ -364,7 +364,9 @@ export interface paths {
          *     Free / paid = `breed_configs.premium_unlock` (the same rule
          *     generate-pin applies: `plan: free` → `free_plan_allowed`, `plan:
          *     challenge` → `challenge_allowed`, else 422 `breed_locked` /
-         *     `challenge_requires_paid_breed`).
+         *     `challenge_requires_paid_breed`). M6-U02 (U4): with
+         *     `features[]=free_breed_challenge` the free breed is `challenge_allowed`
+         *     too (»mešanček + izziv«); without it (old builds) only paid breeds.
          *
          *     GET /api/breeds
          */
@@ -2128,7 +2130,10 @@ export interface components {
             premium: boolean;
             /** @description `plan: free` accepts this breed (a free breed). */
             free_plan_allowed: boolean;
-            /** @description `plan: challenge` accepts this breed (a paid breed, M5-F03). */
+            /**
+             * @description `plan: challenge` accepts this breed (a paid breed, M5-F03; any breed — the free
+             *     one too — when the request declared `features[]=free_breed_challenge`, M6-U02 / U4).
+             */
             challenge_allowed: boolean;
             /** @description i18n key of the breed name, e.g. `breeds.maine_coon`. */
             label_key: string;
@@ -29885,6 +29890,16 @@ export interface operations {
                                     reason: "legacy_profile" | "pet_not_born" | "game_over" | "pet_not_active" | "free_plan" | null;
                                 } | null;
                                 /**
+                                 * @description M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1): the day-7 reminder card »[Vzdevek] že 7
+                                 *     dni skrbi za [ime]. Je čas za pravi preizkus?« — set once the reminder went out,
+                                 *     while the free pet can still be upgraded, for 7 days. `child_id` = the child whose
+                                 *     5 of 7 days qualified (null when that profile was deleted). Parent dashboard only.
+                                 */
+                                upgrade_reminder: {
+                                    sent_at: string;
+                                    child_id: number | null;
+                                } | null;
+                                /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by
                                  *     child / by parent in quiet hours, step goal).
                                  */
@@ -30477,6 +30492,16 @@ export interface operations {
                                     available: boolean;
                                     /** @enum {string|null} */
                                     reason: "legacy_profile" | "pet_not_born" | "game_over" | "pet_not_active" | "free_plan" | null;
+                                } | null;
+                                /**
+                                 * @description M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1): the day-7 reminder card »[Vzdevek] že 7
+                                 *     dni skrbi za [ime]. Je čas za pravi preizkus?« — set once the reminder went out,
+                                 *     while the free pet can still be upgraded, for 7 days. `child_id` = the child whose
+                                 *     5 of 7 days qualified (null when that profile was deleted). Parent dashboard only.
+                                 */
+                                upgrade_reminder: {
+                                    sent_at: string;
+                                    child_id: number | null;
                                 } | null;
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by

@@ -7,10 +7,10 @@ use App\Services\ChallengeService;
 use App\Services\EscalationService;
 use App\Services\GameLoop\PetLoopGuard;
 use App\Services\PetBirthdayService;
-use App\Services\UpgradeReminderService;
 use App\Services\PetDecayService;
 use App\Services\RoutineLedgerService;
 use App\Services\SystemHealth\SystemHealthService;
+use App\Services\UpgradeReminderService;
 use Illuminate\Console\Command;
 use Throwable;
 
