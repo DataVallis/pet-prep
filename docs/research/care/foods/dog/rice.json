@@ -1,0 +1,134 @@
+{
+  "slug": "rice",
+  "species": "dog",
+  "name": {
+    "en": "Rice",
+    "sl": "Riž"
+  },
+  "question": {
+    "en": "Can dogs eat rice?",
+    "sl": "Ali lahko psi jedo riž?"
+  },
+  "url_slug": {
+    "en": "rice",
+    "sl": "riz"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Plain cooked rice is fine for most dogs in small amounts, and vets use it in a bland diet after a tummy upset. Boil it in water without seasonings or spices, and keep portions modest, because too many carbs can lead to weight gain.",
+    "sl": "Da. Navaden kuhan riž je za večino psov v majhnih količinah v redu, veterinarji pa ga uporabljajo v blagi dieti po prebavnih težavah. Skuhajte ga v vodi brez začimb in naj bodo porcije zmerne, saj lahko preveč ogljikovih hidratov povzroči pridobivanje teže."
+  },
+  "why": {
+    "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
+    "sl": "Riž je sestavina nekaterih komercialnih pasjih hran, veterinarji pa ga uporabljajo kot vir ogljikovih hidratov v blagi dieti po prebavnih težavah. Začimbe lahko razdražijo želodec ali so celo strupene. Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj ga pes s sladkorno boleznijo dobi le malo in ne redno. Piščanec z rižem je mišljen kot začasna dieta pri prebavnih težavah, ne kot uravnotežena dolgoročna prehrana."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "As with any new food, ask your vet first and start slowly. If your dog is diabetic, give only a little white rice, and not on a regular basis.",
+    "sl": "Kot pri vsaki novi hrani se najprej posvetujte z veterinarjem in začnite počasi. Če ima pes sladkorno bolezen, mu dajte le malo belega riža in ne redno."
+  },
+  "serving": {
+    "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
+    "sl": "Navaden riž, kuhan v vodi, brez začimb, kot majhen del obroka."
+  },
+  "child": {
+    "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
+    "sl": "Psi lahko dobijo malo navadnega kuhanega riža. Odrasli ga skuha v vodi brez začimb, posebej za psa."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "White or brown rice — which is better?",
+        "sl": "Beli ali rjavi riž – kateri je boljši?"
+      },
+      "a": {
+        "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
+        "sl": "Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj psi s sladkorno boleznijo belega riža dobijo le malo in ne redno."
+      }
+    },
+    {
+      "q": {
+        "en": "Can rice help when my dog has diarrhoea?",
+        "sl": "Ali riž pomaga, ko ima pes drisko?"
+      },
+      "a": {
+        "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
+        "sl": "Navaden kuhan piščanec z rižem lahko pomaga, ko ima pes drisko, vendar je to začasna dieta, ki za dolgoročno hranjenje ni uravnotežena."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD174",
+      "quote": "Rice is an ingredient sometimes found in commercial dog foods."
+    },
+    {
+      "id": "KD174",
+      "quote": "We use rice as a carb source when dogs are on a bland diet after a GI upset,"
+    },
+    {
+      "id": "KD174",
+      "quote": "When preparing rice for your pup, boil it in water and do not add any seasonings or spices,"
+    },
+    {
+      "id": "KD174",
+      "quote": "which can upset stomachs or even be toxic."
+    },
+    {
+      "id": "KD174",
+      "quote": "However, white rice has a higher glycemic index than brown rice and can cause blood sugar levels to rise."
+    },
+    {
+      "id": "KD174",
+      "quote": "If your dog is diabetic, you can still feed them a little white rice, if needed, but not on a consistent basis."
+    },
+    {
+      "id": "KD174",
+      "quote": "Just as with humans, eating too many carbs can lead to weight gain in a dog."
+    },
+    {
+      "id": "KD174",
+      "quote": "As long as your dog is maintaining a healthy weight, adding some rice to your dog's meals is perfectly fine."
+    },
+    {
+      "id": "KD174",
+      "quote": "consult your veterinarian first and then start off slowly."
+    },
+    {
+      "id": "KD175",
+      "quote": "Plain, boiled chicken and rice can save the day when your dog has diarrhea."
+    },
+    {
+      "id": "KD175",
+      "quote": "which is supposed to be a temporary diet for upset digestive tracts"
+    },
+    {
+      "id": "KD175",
+      "quote": "neither of these diets are balanced, and they are not safe to feed long-term"
+    },
+    {
+      "id": "KD173",
+      "quote": "a better option is to feed your dog a bland diet of rice and boiled chicken for dogs with upset stomachs,"
+    }
+  ],
+  "related": [
+    "cooked-chicken",
+    "bread",
+    "pasta",
+    "oatmeal",
+    "quinoa"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf5bed18057ebeb5825e58f0caf764f9522c5775f4c3bb6d80a718aba6ff294c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b504a950da8699a28ef45bbb71722e2199d88c0110da292ad4c22cf726fc5b9"
+    }
+  }
+}

@@ -2710,6 +2710,88 @@
       "updated": "2026-11-01"
     },
     {
+      "slug": "bread",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Bread (baked)",
+        "sl": "Kruh (pečen)"
+      },
+      "question": {
+        "en": "Can cats eat bread?",
+        "sl": "Ali lahko mačke jedo kruh?"
+      },
+      "url_slug": {
+        "en": "bread",
+        "sl": "kruh"
+      },
+      "answer": {
+        "en": "Yes, a small piece of plain, fully baked bread is fine as an occasional treat. The ASPCA says baked bread is safe as an occasional treat as long as it is not raisin bread. Raw, rising dough is different and must be kept away from cats.",
+        "sl": "Da, majhen košček navadnega, dobro pečenega kruha je v redu kot občasen priboljšek. ASPCA navaja, da je pečen kruh varen kot občasen priboljšek, če ni kruh z rozinami. Surovo, vzhajajoče testo pa je nekaj drugega in mora biti zunaj mačjega dosega."
+      },
+      "why": {
+        "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
+        "sl": "ASPCA na strani o psih in mačkah navaja, da je dobro pečen kruh za hišne živali varen kot občasen priboljšek, če ni kruh z rozinami. Agriculture Victoria pojasnjuje, da se tveganje pri kvašenem testu zmanjša, ko je testo pečeno in je kvas povsem vzhajal. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Blue Cross pa, da mačke potrebujejo prehrano na osnovi mesa. Cats Protection svetuje, da se raje držimo priboljškov za mačke kot človeške hrane."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer only a small piece now and then. If your cat has eaten raw or rising dough rather than baked bread, contact your vet straight away and don't wait for symptoms to appear.",
+        "sl": "Ponudite le majhen košček, in to le občasno. Če je mačka pojedla surovo ali vzhajajoče testo in ne pečenega kruha, takoj pokličite veterinarja in ne čakajte, da se pokažejo znaki."
+      },
+      "serving": {
+        "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
+        "sl": "Majhen košček navadnega, dobro pečenega kruha. Nikoli kruha z rozinami in nikoli surovega testa."
+      },
+      "child": {
+        "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
+        "sl": "Košček navadnega kruha je lahko občasno priboljšek. Muce potrebujejo predvsem meso, surovo testo pa je samo za peko."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is raw bread dough safe for cats?",
+            "sl": "Ali je surovo testo za kruh varno za mačke?"
+          },
+          "a": {
+            "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
+            "sl": "Ne. ASPCA navaja, da psi in mačke nikoli ne smejo jesti surovega kvašenega testa, Agriculture Victoria pa, da lahko kvašeno testo vzhaja in povzroči nabiranje plinov v mačjih prebavilih."
+          }
+        },
+        {
+          "q": {
+            "en": "Can cats eat raisin bread?",
+            "sl": "Ali lahko mačke jedo kruh z rozinami?"
+          },
+          "a": {
+            "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
+            "sl": "Ne. Nasvet ASPCA, da je pečen kruh v redu kot občasen priboljšek, kruha z rozinami ne vključuje."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC99",
+        "KC99",
+        "KC99",
+        "KC38",
+        "KC38",
+        "KC103",
+        "KC57",
+        "KC48",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "raw-yeast-dough",
+        "raisins",
+        "rice"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "broccoli",
       "species": "cat",
       "level": "small_amounts",
@@ -16619,6 +16701,78 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "pizza",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pizza",
+        "sl": "Pica"
+      },
+      "question": {
+        "en": "Can cats eat pizza?",
+        "sl": "Ali lahko mačke jedo pico?"
+      },
+      "url_slug": {
+        "en": "pizza",
+        "sl": "pica"
+      },
+      "answer": {
+        "en": "No, pizza is not a good idea for cats. VCA vets warn that leftovers such as pizza can cause stomach upset in cats and advise against sharing fatty foods with your cat. Offer a cat treat instead.",
+        "sl": "Ne, pica za mačke ni dobra izbira. Veterinarji VCA opozarjajo, da lahko ostanki hrane, kot je pica, mačkam povzročijo prebavne težave, in svetujejo, da mastne hrane z mačko ne delimo. Raje ji ponudite priboljšek za mačke."
+      },
+      "why": {
+        "en": "VCA Animal Hospitals' advice for cats lists pizza among plate leftovers that can cause stomach upset, says not to share spicy or fatty foods with your cat, and notes that many fan-favourite snacks can cause stomach upset and even pancreatitis in cats. Cats Protection says it generally wouldn't recommend feeding your cat food meant for humans unless your vet has advised it.",
+        "sl": "VCA Animal Hospitals v nasvetih za mačke pico navaja med ostanki s krožnika, ki lahko povzročijo prebavne težave, svetuje, da pikantne ali mastne hrane z mačko ne delimo, in opozarja, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke. Cats Protection navaja, da na splošno ne priporoča hranjenja mačk s hrano za ljudi, razen če to svetuje veterinar."
+      },
+      "signs": {
+        "en": [
+          "Upset stomach"
+        ],
+        "sl": [
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat has eaten pizza, contact your vet for advice. Don't wait for symptoms to appear.",
+        "sl": "Če je mačka pojedla pico, se za nasvet obrnite na veterinarja. Ne čakajte, da se pokažejo znaki."
+      },
+      "serving": null,
+      "child": {
+        "en": "Pizza is people food. It can give a cat a sore tummy, so offer kitty her own cat treat instead.",
+        "sl": "Pica je hrana za ljudi. Muco lahko boli trebušček, zato ji raje ponudi njen priboljšek za mačke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Why shouldn't cats share snacks from the party table?",
+            "sl": "Zakaj mačke ne smejo jesti prigrizkov z zabave?"
+          },
+          "a": {
+            "en": "VCA vets say many fan-favourite snacks can cause stomach upset and even pancreatitis in cats, and that leftovers such as creamy dips, potato chips and pizza can cause stomach upset.",
+            "sl": "Veterinarji VCA navajajo, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke ter da lahko prebavne težave povzročijo tudi ostanki, kot so kremasti namazi, čips in pica."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC44",
+        "KC44",
+        "KC44",
+        "KC48",
+        "KC48",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "bread",
+        "popcorn"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "plums",
       "species": "cat",
       "level": "dangerous",
@@ -16920,6 +17074,82 @@
         "avocado"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "popcorn",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Popcorn (plain)",
+        "sl": "Pokovka (navadna)"
+      },
+      "question": {
+        "en": "Can cats eat popcorn?",
+        "sl": "Ali lahko mačke jedo pokovko?"
+      },
+      "url_slug": {
+        "en": "popcorn",
+        "sl": "pokovka"
+      },
+      "answer": {
+        "en": "Yes, a few pieces of plain popcorn are fine as an occasional treat. Pet Poison Helpline lists popcorn among foods safe for cats and dogs, as long as you hold the butter and salt. Buttered or salted popcorn is not for cats.",
+        "sl": "Da, nekaj kosov navadne pokovke je v redu kot občasen priboljšek. Pet Poison Helpline pokovko navaja med živili, ki so varna za mačke in pse, če je brez masla in soli. Pokovka z maslom ali soljo ni za mačke."
+      },
+      "why": {
+        "en": "Pet Poison Helpline lists popcorn, without butter and salt, among foods that are safe for cats and dogs, and the ASPCA includes popcorn among easy treats in its snack ideas for cats and dogs. Salt is the catch: Pet Poison Helpline says excessive salt should not be in a cat's diet. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Cats Protection says it's best to stick to cat food treats rather than human foods.",
+        "sl": "Pet Poison Helpline pokovko brez masla in soli navaja med živili, ki so varna za mačke in pse, ASPCA pa jo v svojih idejah za prigrizke za mačke in pse navaja med preprostimi priboljški. Težava je sol: Pet Poison Helpline navaja, da preveč soli ne sodi v mačjo prehrano. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Cats Protection pa, da se je najbolje držati priboljškov za mačke in ne človeške hrane."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer just a few plain pieces. If your cat has eaten a lot of salty popcorn and is vomiting, has diarrhoea, seems very thirsty or unusually tired, contact your vet.",
+        "sl": "Ponudite le nekaj kosov navadne pokovke. Če je mačka pojedla veliko slane pokovke in bruha, ima drisko, je zelo žejna ali nenavadno utrujena, pokličite veterinarja."
+      },
+      "serving": {
+        "en": "A few pieces of plain popcorn with no butter or salt.",
+        "sl": "Nekaj kosov navadne pokovke brez masla in soli."
+      },
+      "child": {
+        "en": "A piece of plain popcorn can be a cat treat sometimes. Buttery, salty popcorn is just for people.",
+        "sl": "Košček navadne pokovke je lahko včasih priboljšek za muco. Pokovka z maslom in soljo pa je samo za ljudi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can cats eat salted or buttered popcorn?",
+            "sl": "Ali lahko mačke jedo slano pokovko ali pokovko z maslom?"
+          },
+          "a": {
+            "en": "No. Pet Poison Helpline says to hold the butter and salt, and that excessive salt should not be in a cat's diet. Agriculture Victoria says large amounts of salt can cause excessive thirst and urination.",
+            "sl": "Ne. Pet Poison Helpline svetuje pokovko brez masla in soli ter navaja, da preveč soli ne sodi v mačjo prehrano. Agriculture Victoria navaja, da lahko velike količine soli povzročijo močno žejo in pogosto uriniranje."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC104",
+        "KC104",
+        "KC105",
+        "KC105",
+        "KC20",
+        "KC20",
+        "KC20",
+        "KC20",
+        "KC38",
+        "KC38",
+        "KC103",
+        "KC48",
+        "KC20",
+        "KC20"
+      ],
+      "related": [
+        "corn",
+        "salt",
+        "butter"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "pork",
@@ -19936,6 +20166,79 @@
         "grapes"
       ],
       "updated": "2026-11-04"
+    },
+    {
+      "slug": "rice",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Rice (cooked)",
+        "sl": "Riž (kuhan)"
+      },
+      "question": {
+        "en": "Can cats eat rice?",
+        "sl": "Ali lahko mačke jedo riž?"
+      },
+      "url_slug": {
+        "en": "rice",
+        "sl": "riz"
+      },
+      "answer": {
+        "en": "Yes, a little plain cooked rice is fine for cats now and then. Blue Cross even suggests bulking out a short supply of cat food with cooked rice. But rice can't replace cat food: cats need meat every day.",
+        "sl": "Da, malo navadnega kuhanega riža je za mačke občasno v redu. Blue Cross celo predlaga, da kratkotrajno pomanjkanje mačje hrane zapolnimo s kuhanim rižem. Riž pa ne more nadomestiti mačje hrane: mačke vsak dan potrebujejo meso."
+      },
+      "why": {
+        "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
+        "sl": "Blue Cross navaja, da lahko mačjo hrano, ki mora zdržati nekaj dni, zapolnimo s kuhano zelenjavo ali rižem, a mačke vseeno vsak dan potrebujejo živalske beljakovine, na primer kuhano meso ali ribe. Veterinarji VCA navajajo, da so žita, kot je riž, v hrani za živali za pse in mačke lahko prebavljiv vir energije, International Cat Care pa, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo. Blue Cross dodaja, da mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo, VCA pa, da kuhanim piščančjim prsim z belim rižem za pse in mačke manjka veliko nujnih hranil."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Keep rice a small extra next to cat food. Ask your vet before giving rice to a cat with an upset stomach, as cats don't need carbohydrate in a bland diet.",
+        "sl": "Riž naj bo le majhen dodatek k mačji hrani. Preden ga ponudite mački s prebavnimi težavami, se posvetujte z veterinarjem, saj mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo."
+      },
+      "serving": {
+        "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
+        "sl": "Malo navadnega kuhanega riža brez dodane soli, kot majhen dodatek k mačji hrani."
+      },
+      "child": {
+        "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
+        "sl": "Malo navadnega kuhanega riža je za muco včasih v redu. Najbolj pa potrebuje svojo mesno mačjo hrano."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is chicken and rice good for a cat with an upset tummy?",
+            "sl": "Ali sta piščanec in riž dobra za mačko s prebavnimi težavami?"
+          },
+          "a": {
+            "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
+            "sl": "Najprej vprašajte veterinarja. Blue Cross navaja, da mačke potrebujejo prehrano na osnovi mesa in v dieti za občutljiv želodec ne potrebujejo ogljikovih hidratov, VCA pa, da kuhanim piščančjim prsim z belim rižem za mačke manjka veliko nujnih hranil."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC100",
+        "KC100",
+        "KC100",
+        "KC57",
+        "KC101",
+        "KC101",
+        "KC102",
+        "KC103",
+        "KC20",
+        "KC57"
+      ],
+      "related": [
+        "cooked-chicken",
+        "corn",
+        "potatoes-cooked",
+        "bread"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "salmon",
@@ -27885,6 +28188,118 @@
       "updated": "2026-11-01"
     },
     {
+      "slug": "bread",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Bread",
+        "sl": "Kruh"
+      },
+      "question": {
+        "en": "Can dogs eat bread?",
+        "sl": "Ali lahko psi jedo kruh?"
+      },
+      "url_slug": {
+        "en": "bread",
+        "sl": "kruh"
+      },
+      "answer": {
+        "en": "Yes, in small amounts. Plain, fully baked white or wheat bread is generally safe for dogs without a wheat allergy, but it offers no real benefit and is high in calories. Never give raisin bread, garlic bread or raw dough.",
+        "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa."
+      },
+      "why": {
+        "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
+        "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Plain bread usually doesn't upset a dog's stomach. If you give bread or baked goods regularly, check the ingredients. If your dog eats raw bread dough, call your vet straight away; the same goes for bread with raisins or garlic.",
+        "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom."
+      },
+      "serving": {
+        "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
+        "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse."
+      },
+      "child": {
+        "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
+        "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat garlic bread?",
+            "sl": "Ali lahko psi jedo česnov kruh?"
+          },
+          "a": {
+            "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
+            "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps."
+          }
+        },
+        {
+          "q": {
+            "en": "Is bread good for a dog's upset stomach?",
+            "sl": "Ali kruh pomaga psu pri razdraženem želodcu?"
+          },
+          "a": {
+            "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
+            "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja."
+          }
+        },
+        {
+          "q": {
+            "en": "What if my dog eats raw bread dough?",
+            "sl": "Kaj, če pes poje surovo testo za kruh?"
+          },
+          "a": {
+            "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
+            "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD173",
+        "KD5",
+        "KD5",
+        "KD5",
+        "KD5",
+        "KD51",
+        "KD51",
+        "KD51"
+      ],
+      "related": [
+        "raw-yeast-dough",
+        "raisins",
+        "garlic",
+        "xylitol",
+        "rice",
+        "pasta"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "broccoli",
       "species": "dog",
       "level": "small_amounts",
@@ -29916,6 +30331,90 @@
         "green-beans"
       ],
       "updated": "2026-11-08"
+    },
+    {
+      "slug": "cereal",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Breakfast cereal",
+        "sl": "Žitni kosmiči"
+      },
+      "question": {
+        "en": "Can dogs eat cereal?",
+        "sl": "Ali lahko psi jedo žitne kosmiče?"
+      },
+      "url_slug": {
+        "en": "cereal",
+        "sl": "zitni-kosmici"
+      },
+      "answer": {
+        "en": "Some, in moderation. Dogs Trust lists Weetabix Original (not its chocolate varieties) among foods dogs can usually have in moderation. Avoid chocolate cereals and any cereal or granola with raisins, which put dogs at risk of kidney failure.",
+        "sl": "Nekatere, zmerno. Dogs Trust kosmiče Weetabix Original (ne pa njihovih čokoladnih različic) uvršča med hrano, ki jo psi običajno lahko jedo zmerno. Izogibajte se čokoladnim kosmičem ter kosmičem ali granoli z rozinami, ki pri psih ogrožajo ledvice."
+      },
+      "why": {
+        "en": "Dogs Trust includes Weetabix Original, but not its chocolate varieties, in its list of human foods dogs can usually eat in moderation. Raisins can be hidden in cereals and granola, and grapes and raisins can put dogs at risk of kidney failure, even in small amounts. Chocolate can be toxic to dogs even in quite small amounts. Even foods that are usually non-toxic can upset an individual dog because of intolerance, fat content or portion size.",
+        "sl": "Dogs Trust kosmiče Weetabix Original, ne pa njihovih čokoladnih različic, uvršča na seznam človeške hrane, ki jo psi običajno lahko jedo zmerno. Rozine se lahko skrivajo v kosmičih in granoli, grozdje in rozine pa lahko pri psih ogrozijo ledvice že v majhnih količinah. Čokolada je za pse lahko strupena že v precej majhnih količinah. Tudi hrana, ki običajno ni strupena, lahko posameznega psa razdraži zaradi nestrpnosti, vsebnosti maščob ali velikosti porcije."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Check the ingredients for raisins, other dried fruit and chocolate. If you think your dog ate cereal with raisins or chocolate, contact your vet right away, even if it was only a small amount. Ask your vet before offering a food your dog hasn't tried.",
+        "sl": "Med sestavinami preverite, ali so rozine, drugo suho sadje ali čokolada. Če mislite, da je pes pojedel kosmiče z rozinami ali čokolado, takoj pokličite veterinarja, tudi če je šlo le za majhno količino. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Only in moderation, for example Weetabix Original. No chocolate, raisins or other dried fruit.",
+        "sl": "Le zmerno, na primer Weetabix Original. Brez čokolade, rozin in drugega suhega sadja."
+      },
+      "child": {
+        "en": "Some cereals are okay for a dog in small amounts. Chocolate or raisin cereal is not for dogs, so ask a grown-up.",
+        "sl": "Nekateri kosmiči so za psa v majhnih količinah v redu. Čokoladni kosmiči ali kosmiči z rozinami niso za pse, zato vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat granola?",
+            "sl": "Ali lahko psi jedo granolo?"
+          },
+          "a": {
+            "en": "It's best not to. Raisins can be hidden in granola and cereals, and they can put dogs at risk of kidney failure.",
+            "sl": "Bolje ne. V granoli in kosmičih se lahko skrivajo rozine, ki lahko pri psih ogrozijo ledvice."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat chocolate cereal?",
+            "sl": "Ali lahko psi jedo čokoladne kosmiče?"
+          },
+          "a": {
+            "en": "No. Chocolate can be toxic to dogs even in quite small amounts; Dogs Trust excludes chocolate varieties.",
+            "sl": "Ne. Čokolada je za pse lahko strupena že v precej majhnih količinah; Dogs Trust čokoladne različice izrecno izključuje."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD5",
+        "KD4",
+        "KD4",
+        "KD4"
+      ],
+      "related": [
+        "oatmeal",
+        "raisins",
+        "dried-fruit",
+        "chocolate",
+        "milk",
+        "bread"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "cheese",
@@ -36914,6 +37413,97 @@
       "updated": "2026-11-03"
     },
     {
+      "slug": "french-fries",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "French fries",
+        "sl": "Pomfrit"
+      },
+      "question": {
+        "en": "Can dogs eat french fries?",
+        "sl": "Ali lahko psi jedo pomfrit?"
+      },
+      "url_slug": {
+        "en": "french-fries",
+        "sl": "pomfrit"
+      },
+      "answer": {
+        "en": "Not recommended. French fries are far too high in calories for dogs and can lead to obesity, and too much salty food is not good for them. A dropped fry is unlikely to cause salt poisoning, and plain cooked potato is fine in small amounts instead.",
+        "sl": "Ni priporočljivo. Pomfrit ima za pse veliko preveč kalorij in lahko vodi v debelost, preveč slane hrane pa jim ne koristi. Padel krompirček verjetno ne bo povzročil zastrupitve s soljo, namesto pomfrita pa je v majhnih količinah v redu navaden kuhan krompir."
+      },
+      "why": {
+        "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
+        "sl": "AKC opozarja, da je pri hrani, kot je pomfrit, lahko preveč dobrega, veterinarski nutricionist s Cornella pa pravi, da ima pomfrit veliko preveč kalorij in lahko vodi v debelost ter slab vnos hranil. Zmerna količina slane hrane ne bi smela povzročiti zastrupitve s soljo, preveč slane hrane pa psom ne koristi, zlasti tistim z boleznijo srca, ker lahko povzroči zastajanje tekočine."
+      },
+      "signs": {
+        "en": [
+          "Strong thirst and peeing a lot",
+          "Vomiting or diarrhoea",
+          "Poor appetite or lethargy",
+          "Wobbliness, tremors or seizures (too much salt)"
+        ],
+        "sl": [
+          "Močna žeja in pogosto uriniranje",
+          "Bruhanje ali driska",
+          "Slab apetit ali utrujenost",
+          "Opotekanje, tresenje ali krči (preveč soli)"
+        ]
+      },
+      "what_to_do": {
+        "en": "A fry or two usually needs nothing more than fresh drinking water. If you think your dog has eaten too much salty food, contact your vet straight away.",
+        "sl": "Pri enem ali dveh krompirčkih običajno zadošča, da ima pes na voljo svežo vodo. Če mislite, da je pes pojedel preveč slane hrane, takoj pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "French fries are a salty people snack. Dogs do better with their own treats, so keep the fries for people.",
+        "sl": "Pomfrit je slan prigrizek za ljudi. Psom bolj ustrezajo njihovi priboljški, zato naj pomfrit ostane ljudem."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is plain potato better than fries?",
+            "sl": "Je navaden krompir boljši od pomfrita?"
+          },
+          "a": {
+            "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
+            "sl": "Da. Navaden pire ali mehak kuhan krompir je v majhnih količinah v redu, brez masla in začimb."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD151",
+        "KD151",
+        "KD175",
+        "KD175",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD42"
+      ],
+      "related": [
+        "potatoes-cooked",
+        "potatoes-raw",
+        "chips",
+        "salty-snacks",
+        "salt"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "fruit-pits",
       "species": "dog",
       "level": "dangerous",
@@ -43740,6 +44330,102 @@
       "updated": "2026-11-09"
     },
     {
+      "slug": "oatmeal",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Oatmeal",
+        "sl": "Ovseni kosmiči"
+      },
+      "question": {
+        "en": "Can dogs eat oatmeal?",
+        "sl": "Ali lahko psi jedo ovsene kosmiče?"
+      },
+      "url_slug": {
+        "en": "oatmeal",
+        "sl": "ovseni-kosmici"
+      },
+      "answer": {
+        "en": "Yes, in small amounts. Plain oatmeal, cooked with water rather than milk, is fine for dogs. Never give flavoured or instant oatmeal, and leave out salt, butter, chocolate and raisins.",
+        "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin."
+      },
+      "why": {
+        "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
+        "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Introduce it gradually and watch how your dog handles it. If your dog seems to react badly, contact your vet straight away.",
+        "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja."
+      },
+      "serving": {
+        "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
+        "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom."
+      },
+      "child": {
+        "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
+        "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat raw oats?",
+            "sl": "Ali lahko psi jedo surove ovsene kosmiče?"
+          },
+          "a": {
+            "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
+            "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi."
+          }
+        },
+        {
+          "q": {
+            "en": "Is flavoured instant oatmeal safe for dogs?",
+            "sl": "Je aromatizirana instant kaša za pse varna?"
+          },
+          "a": {
+            "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
+            "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176",
+        "KD176"
+      ],
+      "related": [
+        "rice",
+        "quinoa",
+        "cereal",
+        "milk",
+        "raisins",
+        "xylitol"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "olives",
       "species": "dog",
       "level": "small_amounts",
@@ -44812,6 +45498,94 @@
         "bananas"
       ],
       "updated": "2026-11-02"
+    },
+    {
+      "slug": "pasta",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pasta",
+        "sl": "Testenine"
+      },
+      "question": {
+        "en": "Can dogs eat pasta?",
+        "sl": "Ali lahko psi jedo testenine?"
+      },
+      "url_slug": {
+        "en": "pasta",
+        "sl": "testenine"
+      },
+      "answer": {
+        "en": "Yes, plain cooked pasta is fine in small amounts, and vets even use it in a bland diet when a dog is sick. Skip the sauce: onion and garlic are common in cooking and are toxic to dogs, even cooked.",
+        "sl": "Da, navadne kuhane testenine so v majhnih količinah v redu, veterinarji jih celo uporabljajo v blagi dieti, ko je pes bolan. Brez omake: čebula in česen sta pogosta v kuhinji in sta za pse strupena, tudi kuhana."
+      },
+      "why": {
+        "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
+        "sl": "Dogs Trust testenine in navadne rezance uvršča med človeško hrano, ki jo psi običajno lahko jedo zmerno. Cornell kuhane testenine navaja kot možnost, ko pes potrebuje blago dieto za pomiritev prebavil, vendar taka dieta za dolgoročno hranjenje ni uravnotežena. Čebula, česen, por in drobnjak lahko pri psih povzročijo slabokrvnost, strupeni pa so lahko že sledovi v kuhani hrani. Posameznega psa lahko kljub temu razdražijo nestrpnost, vsebnost maščob ali velikost porcije."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Plain pasta usually needs nothing more. If your dog ate pasta with a sauce that may contain onion or garlic, don't wait to see — contact your vet. Ask your vet before offering a food your dog hasn't tried.",
+        "sl": "Pri navadnih testeninah običajno ni treba storiti ničesar. Če je pes pojedel testenine z omako, ki morda vsebuje čebulo ali česen, ne čakajte – pokličite veterinarja. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
+        "sl": "Navadne kuhane testenine ali rezanci, zmerno, brez omake, čebule, česna in začimb."
+      },
+      "child": {
+        "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
+        "sl": "Malo navadnih kuhanih testenin je za pse v redu. V omakah se lahko skrivata čebula ali česen, zato najprej vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat spaghetti with sauce?",
+            "sl": "Ali lahko psi jedo špagete z omako?"
+          },
+          "a": {
+            "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
+            "sl": "Bolje ne. Omake pogosto vsebujejo čebulo ali česen, ti pa so za pse lahko strupeni že v sledovih v kuhani hrani."
+          }
+        },
+        {
+          "q": {
+            "en": "Can pasta help a dog with an upset stomach?",
+            "sl": "Ali testenine pomagajo psu pri prebavnih težavah?"
+          },
+          "a": {
+            "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
+            "sl": "Kuhane testenine so ena od možnosti, ko bolan pes potrebuje blago dieto, vendar taka dieta ni uravnotežena in je ni varno dajati dolgoročno."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD175",
+        "KD175",
+        "KD175",
+        "KD175",
+        "KD4"
+      ],
+      "related": [
+        "rice",
+        "bread",
+        "garlic",
+        "onion",
+        "cheese",
+        "tomatoes"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "peaches",
@@ -47481,6 +48255,116 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "pizza",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pizza",
+        "sl": "Pica"
+      },
+      "question": {
+        "en": "Can dogs eat pizza?",
+        "sl": "Ali lahko psi jedo pico?"
+      },
+      "url_slug": {
+        "en": "pizza",
+        "sl": "pica"
+      },
+      "answer": {
+        "en": "No, it's best not to share pizza. It can upset a dog's stomach and even lead to pancreatitis, toppings can contain garlic or onion, which damage red blood cells, and the crust is far too high in calories. Raw pizza dough is risky too.",
+        "sl": "Ne, pice raje ne delite s psom. Lahko mu razdraži želodec in celo povzroči vnetje trebušne slinavke, nadevi lahko vsebujejo česen ali čebulo, ki poškodujeta rdeče krvničke, skorja pa ima veliko preveč kalorij. Tvegano je tudi surovo testo za pico."
+      },
+      "why": {
+        "en": "AKC lists pizza among party foods to keep away from dogs, and VCA and the ASPCA say leftovers and party food like pizza can cause stomach upset and even pancreatitis. Cheese is high in fat, and pepperoni is too fatty and spicy and risks salt poisoning. Garlic and onion, which can be in toppings and seasonings, damage red blood cells and kidneys. Pizza crust is way too high in calories and can lead to obesity. Uncooked pizza dough produces ethanol inside a dog's body.",
+        "sl": "AKC pico uvršča med hrano z zabav, ki naj bo zunaj pasjega dosega, VCA in ASPCA pa navajata, da lahko ostanki in hrana z zabav, kot je pica, lahko razdražijo želodec in celo povzročijo vnetje trebušne slinavke. Sir je zelo masten, salama pepperoni pa je premastna in prepikantna ter prinaša tveganje zastrupitve s soljo. Česen in čebula, ki sta lahko v nadevih in začimbah, poškodujeta rdeče krvničke in ledvice. Skorja ima veliko preveč kalorij in lahko vodi v debelost. Surovo testo za pico v pasjem telesu tvori etanol."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset, vomiting or diarrhoea",
+          "Belly pain, nausea, fever, low energy or poor appetite (possible pancreatitis)",
+          "Loss of appetite or low mood after onion or garlic toppings"
+        ],
+        "sl": [
+          "Prebavne težave, bruhanje ali driska",
+          "Bolečine v trebuhu, slabost, vročina, utrujenost ali slab apetit (morda vnetje trebušne slinavke)",
+          "Izguba apetita ali potrtost po nadevih s čebulo ali česnom"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog got into pizza, contact your vet. If the toppings may have contained garlic or onion, don't wait to see. If your dog ate raw pizza dough, contact your vet too.",
+        "sl": "Če je pes pojedel pico, pokličite veterinarja. Če sta bila v nadevu morda česen ali čebula, ne čakajte. Tudi če je pes pojedel surovo testo za pico, pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Pizza is a people food. Its cheese and toppings can upset a dog's tummy, so give your dog its own treat instead.",
+        "sl": "Pica je hrana za ljudi. Sir in nadevi lahko psu razdražijo trebušček, zato mu raje daj njegov priboljšek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat pizza crust?",
+            "sl": "Ali lahko psi jedo skorjo pice?"
+          },
+          "a": {
+            "en": "It's best not to. A vet nutritionist at Cornell says pizza crust is way too high in calories and can lead to obesity.",
+            "sl": "Bolje ne. Veterinarski nutricionist s Cornella pravi, da ima skorja pice veliko preveč kalorij in lahko vodi v debelost."
+          }
+        },
+        {
+          "q": {
+            "en": "Is raw pizza dough dangerous?",
+            "sl": "Je surovo testo za pico nevarno?"
+          },
+          "a": {
+            "en": "Yes. Uncooked bread and pizza dough produce ethanol inside a dog's body, and raw yeast dough can expand in the stomach. Contact your vet.",
+            "sl": "Da. Surovo testo za kruh in pico v pasjem telesu tvori etanol, kvašeno testo pa se lahko v želodcu razširi. Pokličite veterinarja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD179",
+        "KD179",
+        "KD179",
+        "KD179",
+        "KD180",
+        "KD180",
+        "KD180",
+        "KD180",
+        "KD181",
+        "KD181",
+        "KD181",
+        "KD181",
+        "KD181",
+        "KD182",
+        "KD182",
+        "KD182",
+        "KD182",
+        "KD46",
+        "KD175",
+        "KD175",
+        "KD51",
+        "KD51",
+        "KD51",
+        "KD5",
+        "KD5",
+        "KD50"
+      ],
+      "related": [
+        "garlic",
+        "onion",
+        "cheese",
+        "raw-yeast-dough",
+        "tomatoes",
+        "fatty-meat",
+        "salt"
+      ],
+      "updated": "2026-11-11"
+    },
+    {
       "slug": "plums",
       "species": "dog",
       "level": "not_recommended",
@@ -48074,6 +48958,98 @@
         "watermelon"
       ],
       "updated": "2026-11-03"
+    },
+    {
+      "slug": "popcorn",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Popcorn",
+        "sl": "Pokovka"
+      },
+      "question": {
+        "en": "Can dogs eat popcorn?",
+        "sl": "Ali lahko psi jedo pokovko?"
+      },
+      "url_slug": {
+        "en": "popcorn",
+        "sl": "pokovka"
+      },
+      "answer": {
+        "en": "Yes, plain air-popped popcorn is generally safe for dogs in small amounts as an occasional treat. Skip butter, salt, oil and flavourings, and keep unpopped kernels away from your dog.",
+        "sl": "Da, navadna pokovka, pripravljena na vročem zraku, je za pse v majhnih količinah kot občasen priboljšek na splošno varna. Brez masla, soli, olja in arom, nepopokana zrna pa naj bodo zunaj pasjega dosega."
+      },
+      "why": {
+        "en": "Popcorn itself isn't bad for dogs, though it isn't a nutritional necessity. Many kinds are loaded with butter, oil, salt and flavourings, which can upset some dogs' digestion, and the fats can add to obesity over time. Unpopped and partly popped kernels can get stuck between teeth, damage teeth and pose a choking hazard, especially for smaller dogs.",
+        "sl": "Pokovka sama po sebi psom ne škodi, čeprav je ne potrebujejo za prehrano. Številne vrste so polne masla, olja, soli in arom, ki lahko nekaterim psom razdražijo prebavo, maščobe pa sčasoma prispevajo k debelosti. Nepopokana in napol popokana zrna se lahko zataknejo med zobe, poškodujejo zobe in pomenijo nevarnost zadušitve, zlasti za manjše pse."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "A few dropped pieces of buttered popcorn probably won't cause harm. Call your vet if your dog eats a large amount or shows vomiting, diarrhoea or lethargy afterwards.",
+        "sl": "Nekaj padlih koščkov pokovke z maslom psu verjetno ne bo škodilo. Pokličite veterinarja, če je pes pojedel veliko pokovke ali če potem bruha, ima drisko ali je brez energije."
+      },
+      "serving": {
+        "en": "Plain, air-popped pieces only, now and then. No butter, salt, oil, caramel or candy coating, cheese or seasoning, and no unpopped kernels.",
+        "sl": "Le navadni koščki, pripravljeni na vročem zraku, in to občasno. Brez masla, soli, olja, karamele ali sladkorne obloge, sira in začimb ter brez nepopokanih zrn."
+      },
+      "child": {
+        "en": "Dogs can have a few pieces of plain popcorn. Buttery or salty popcorn and hard kernels are not for dogs.",
+        "sl": "Psi lahko dobijo nekaj koščkov navadne pokovke. Pokovka z maslom ali soljo in trda zrna niso za pse."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My dog ate some buttered popcorn. Is that a problem?",
+            "sl": "Pes je pojedel malo pokovke z maslom. Je to težava?"
+          },
+          "a": {
+            "en": "A few pieces probably won't cause harm. Call your vet if your dog ate a lot or develops vomiting, diarrhoea or lethargy.",
+            "sl": "Nekaj koščkov verjetno ne bo škodilo. Pokličite veterinarja, če je pojedel veliko ali če začne bruhati, dobi drisko ali je brez energije."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat caramel or cheese popcorn?",
+            "sl": "Ali lahko psi jedo karamelno ali sirno pokovko?"
+          },
+          "a": {
+            "en": "No. Skip popcorn with candy or caramel coatings, cheese or seasoning.",
+            "sl": "Ne. Pokovke s sladkorno ali karamelno oblogo, sirom ali začimbami psu ne dajajte."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD178",
+        "KD5",
+        "KD5",
+        "KD5",
+        "KD5",
+        "KD51"
+      ],
+      "related": [
+        "corn",
+        "corn-cob",
+        "butter",
+        "salt",
+        "salty-snacks",
+        "chips"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "pork",
@@ -49264,6 +50240,95 @@
         "xylitol"
       ],
       "updated": "2026-11-08"
+    },
+    {
+      "slug": "quinoa",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Quinoa",
+        "sl": "Kvinoja"
+      },
+      "question": {
+        "en": "Can dogs eat quinoa?",
+        "sl": "Ali lahko psi jedo kvinojo?"
+      },
+      "url_slug": {
+        "en": "quinoa",
+        "sl": "kvinoja"
+      },
+      "answer": {
+        "en": "Generally yes. Plain cooked quinoa is safe for dogs in small amounts. Don't share quinoa from your own plate, because it is often cooked with salt, garlic or onion, which can be harmful to dogs.",
+        "sl": "Na splošno da. Navadna kuhana kvinoja je za pse v majhnih količinah varna. Psu ne dajajte kvinoje s svojega krožnika, saj je pogosto kuhana s soljo, česnom ali čebulo, ki so lahko za pse škodljivi."
+      },
+      "why": {
+        "en": "Quinoa makes saponin to protect itself from insects. The amount is usually too small to cause problems, but dogs may be more sensitive to saponin than people, and it may irritate the intestines. Rinsing quinoa before cooking helps, and cooking makes it easier to digest. Quinoa recipes often add salt, garlic and onions, which could be toxic to dogs.",
+        "sl": "Kvinoja tvori saponin, s katerim se brani pred žuželkami. Količina je običajno premajhna, da bi povzročala težave, a psi so na saponin morda bolj občutljivi kot ljudje, saponin pa lahko draži črevesje. Pomaga, če kvinojo pred kuhanjem operete, kuhanje pa jo naredi lažje prebavljivo. V receptih s kvinojo so pogosto sol, česen in čebula, ki so lahko za pse strupeni."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog has never had quinoa, start with a small amount. If it causes vomiting, diarrhoea or constipation, don't give it again. Check with your vet before adding any new food.",
+        "sl": "Če pes kvinoje še ni jedel, začnite z majhno količino. Če po njej bruha, ima drisko ali zaprtje, mu je ne dajajte več. Pred uvedbo nove hrane se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Rinsed, then cooked plain, without salt, garlic, onion or other seasoning; a small amount at first.",
+        "sl": "Oprana in nato navadno kuhana, brez soli, česna, čebule ali drugih začimb; na začetku le malo."
+      },
+      "child": {
+        "en": "Dogs can try a little plain quinoa cooked just for them. Quinoa from our plates often has onion or garlic.",
+        "sl": "Psi lahko poskusijo malo navadne kvinoje, kuhane posebej zanje. Kvinoja z naših krožnikov ima pogosto čebulo ali česen."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Should I rinse quinoa for my dog?",
+            "sl": "Ali naj kvinojo za psa operem?"
+          },
+          "a": {
+            "en": "Yes, if you're concerned about saponin, wash the quinoa before cooking it.",
+            "sl": "Da, če vas skrbi saponin, kvinojo pred kuhanjem operite."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat quinoa salad?",
+            "sl": "Ali lahko psi jedo solato s kvinojo?"
+          },
+          "a": {
+            "en": "It's best not to. Never give your dog quinoa straight from your plate, as dishes often contain salt, garlic or onions.",
+            "sl": "Bolje ne. Psu nikoli ne dajajte kvinoje naravnost s krožnika, saj jedi pogosto vsebujejo sol, česen ali čebulo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD177",
+        "KD5",
+        "KD51"
+      ],
+      "related": [
+        "rice",
+        "oatmeal",
+        "garlic",
+        "onion",
+        "salt"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "radish",
@@ -52103,6 +53168,93 @@
         "raisins"
       ],
       "updated": "2026-11-04"
+    },
+    {
+      "slug": "rice",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Rice",
+        "sl": "Riž"
+      },
+      "question": {
+        "en": "Can dogs eat rice?",
+        "sl": "Ali lahko psi jedo riž?"
+      },
+      "url_slug": {
+        "en": "rice",
+        "sl": "riz"
+      },
+      "answer": {
+        "en": "Yes. Plain cooked rice is fine for most dogs in small amounts, and vets use it in a bland diet after a tummy upset. Boil it in water without seasonings or spices, and keep portions modest, because too many carbs can lead to weight gain.",
+        "sl": "Da. Navaden kuhan riž je za večino psov v majhnih količinah v redu, veterinarji pa ga uporabljajo v blagi dieti po prebavnih težavah. Skuhajte ga v vodi brez začimb in naj bodo porcije zmerne, saj lahko preveč ogljikovih hidratov povzroči pridobivanje teže."
+      },
+      "why": {
+        "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
+        "sl": "Riž je sestavina nekaterih komercialnih pasjih hran, veterinarji pa ga uporabljajo kot vir ogljikovih hidratov v blagi dieti po prebavnih težavah. Začimbe lahko razdražijo želodec ali so celo strupene. Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj ga pes s sladkorno boleznijo dobi le malo in ne redno. Piščanec z rižem je mišljen kot začasna dieta pri prebavnih težavah, ne kot uravnotežena dolgoročna prehrana."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "As with any new food, ask your vet first and start slowly. If your dog is diabetic, give only a little white rice, and not on a regular basis.",
+        "sl": "Kot pri vsaki novi hrani se najprej posvetujte z veterinarjem in začnite počasi. Če ima pes sladkorno bolezen, mu dajte le malo belega riža in ne redno."
+      },
+      "serving": {
+        "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
+        "sl": "Navaden riž, kuhan v vodi, brez začimb, kot majhen del obroka."
+      },
+      "child": {
+        "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
+        "sl": "Psi lahko dobijo malo navadnega kuhanega riža. Odrasli ga skuha v vodi brez začimb, posebej za psa."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "White or brown rice — which is better?",
+            "sl": "Beli ali rjavi riž – kateri je boljši?"
+          },
+          "a": {
+            "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
+            "sl": "Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj psi s sladkorno boleznijo belega riža dobijo le malo in ne redno."
+          }
+        },
+        {
+          "q": {
+            "en": "Can rice help when my dog has diarrhoea?",
+            "sl": "Ali riž pomaga, ko ima pes drisko?"
+          },
+          "a": {
+            "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
+            "sl": "Navaden kuhan piščanec z rižem lahko pomaga, ko ima pes drisko, vendar je to začasna dieta, ki za dolgoročno hranjenje ni uravnotežena."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD174",
+        "KD175",
+        "KD175",
+        "KD175",
+        "KD173"
+      ],
+      "related": [
+        "cooked-chicken",
+        "bread",
+        "pasta",
+        "oatmeal",
+        "quinoa"
+      ],
+      "updated": "2026-11-11"
     },
     {
       "slug": "salmon",
@@ -58272,6 +59424,54 @@
     },
     {
       "species": "cat",
+      "id": "KC100",
+      "tier": "B",
+      "publisher": "Blue Cross (no date shown)",
+      "title": "Cat care on a budget",
+      "url": "https://www.bluecross.org.uk/advice/cat/wellbeing-and-care/cat-care-on-a-budget"
+    },
+    {
+      "species": "cat",
+      "id": "KC101",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals / CAVN (S. K. Abood DVM PhD, A. Wara DVM DACVIM (Nutrition); updated 2026-05-22)",
+      "title": "Nutritional Benefits of Corn and Grains for Dogs and Cats",
+      "url": "https://vcahospitals.com/know-your-pet/nutritional-benefits-of-corn-and-grains-for-dogs-and-cats"
+    },
+    {
+      "species": "cat",
+      "id": "KC102",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals / CAVN (C. Grant DVM DVSc Dip ECVCN, L. Buzhardt DVM; updated 2024-07-12)",
+      "title": "Bland Diet Instructions for Dogs and Cats",
+      "url": "https://vcahospitals.com/know-your-pet/bland-diet-instructions-for-dogs-and-cats"
+    },
+    {
+      "species": "cat",
+      "id": "KC103",
+      "tier": "B",
+      "publisher": "International Cat Care (first published 2024-05-28, updated 2025-09-26)",
+      "title": "Feeding your cat or kitten",
+      "url": "https://icatcare.org/articles/feeding-your-cat-or-kitten"
+    },
+    {
+      "species": "cat",
+      "id": "KC104",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (no individual author; published 2011-09-23, modified 2026-05-27)",
+      "title": "What are some foods safe to feed pets?",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/what-are-some-foods-safe-to-feed-pets/"
+    },
+    {
+      "species": "cat",
+      "id": "KC105",
+      "tier": "B",
+      "publisher": "ASPCA (no author shown; 2019-02-01)",
+      "title": "Game Day Snacks for Your Furry Friends",
+      "url": "https://www.aspca.org/news/game-day-snacks-your-furry-friends"
+    },
+    {
+      "species": "cat",
       "id": "KC11",
       "tier": "B",
       "publisher": "VCA Animal Hospitals (R. Schmid, A. Brutlag; updated May 2026)",
@@ -58999,6 +60199,14 @@
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/weird-cat-behaviours"
     },
     {
+      "species": "cat",
+      "id": "KC99",
+      "tier": "B",
+      "publisher": "ASPCApro (ASPCA; no author shown; published 2020-06-01, modified 2024-02-15)",
+      "title": "Bread Ingestion in Pets on the Rise",
+      "url": "https://www.aspcapro.org/resource/bread-ingestion-pets"
+    },
+    {
       "species": "dog",
       "id": "KD1",
       "tier": "B",
@@ -59656,11 +60864,91 @@
     },
     {
       "species": "dog",
+      "id": "KD173",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2025-05-29)",
+      "title": "Can Dogs Eat Bread?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-bread/"
+    },
+    {
+      "species": "dog",
+      "id": "KD174",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2025-02-14)",
+      "title": "Can Dogs Eat Rice?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-rice/"
+    },
+    {
+      "species": "dog",
+      "id": "KD175",
+      "tier": "B",
+      "publisher": "Cornell University College of Veterinary Medicine, Riney Canine Health Center (no date; ©2026)",
+      "title": "Re-evaluating your dog's diet",
+      "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/re-evaluating-your-dogs-diet"
+    },
+    {
+      "species": "dog",
+      "id": "KD176",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2025-08-22)",
+      "title": "Can Dogs Eat Oatmeal? Is Oatmeal Good for Dogs?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-oatmeal/"
+    },
+    {
+      "species": "dog",
+      "id": "KD177",
+      "tier": "B",
+      "publisher": "American Kennel Club, Katherine Ripley (2022-08-19)",
+      "title": "Can Dogs Eat Quinoa?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-quinoa/"
+    },
+    {
+      "species": "dog",
+      "id": "KD178",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-22)",
+      "title": "Can Dogs Eat Popcorn? Risks, Benefits, and Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-popcorn/"
+    },
+    {
+      "species": "dog",
+      "id": "KD179",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no date; ©2026)",
+      "title": "Dos and don'ts for a dog-safe game day!",
+      "url": "https://vcahospitals.com/resources/lifestyle-dog/hazards-safety/dos-and-donts-for-a-dog-safe-game-day"
+    },
+    {
+      "species": "dog",
       "id": "KD18",
       "tier": "B",
       "publisher": "VCA Animal Hospitals",
       "title": "Xylitol Poisoning in Dogs",
       "url": "https://www.vcahospitals.com/know-your-pet/xylitol-toxicity-in-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD180",
+      "tier": "B",
+      "publisher": "ASPCA (2018-02-01)",
+      "title": "Pet Safety on Super Bowl® Sunday: What You Need to Know",
+      "url": "https://www.aspca.org/news/pet-safety-super-bowl-sunday-what-you-need-know"
+    },
+    {
+      "species": "dog",
+      "id": "KD181",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (2023-01-27)",
+      "title": "Big Game Safety Tips for Dog Owners",
+      "url": "https://www.akc.org/expert-advice/health/big-game-safety-tips-for-dog-owners/"
+    },
+    {
+      "species": "dog",
+      "id": "KD182",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-05-08)",
+      "title": "Can Dogs Eat Pepperoni?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pepperoni/"
     },
     {
       "species": "dog",

@@ -1,0 +1,111 @@
+{
+  "slug": "rice",
+  "species": "cat",
+  "name": {
+    "en": "Rice (cooked)",
+    "sl": "Riž (kuhan)"
+  },
+  "question": {
+    "en": "Can cats eat rice?",
+    "sl": "Ali lahko mačke jedo riž?"
+  },
+  "url_slug": {
+    "en": "rice",
+    "sl": "riz"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked rice is fine for cats now and then. Blue Cross even suggests bulking out a short supply of cat food with cooked rice. But rice can't replace cat food: cats need meat every day.",
+    "sl": "Da, malo navadnega kuhanega riža je za mačke občasno v redu. Blue Cross celo predlaga, da kratkotrajno pomanjkanje mačje hrane zapolnimo s kuhanim rižem. Riž pa ne more nadomestiti mačje hrane: mačke vsak dan potrebujejo meso."
+  },
+  "why": {
+    "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
+    "sl": "Blue Cross navaja, da lahko mačjo hrano, ki mora zdržati nekaj dni, zapolnimo s kuhano zelenjavo ali rižem, a mačke vseeno vsak dan potrebujejo živalske beljakovine, na primer kuhano meso ali ribe. Veterinarji VCA navajajo, da so žita, kot je riž, v hrani za živali za pse in mačke lahko prebavljiv vir energije, International Cat Care pa, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo. Blue Cross dodaja, da mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo, VCA pa, da kuhanim piščančjim prsim z belim rižem za pse in mačke manjka veliko nujnih hranil."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Keep rice a small extra next to cat food. Ask your vet before giving rice to a cat with an upset stomach, as cats don't need carbohydrate in a bland diet.",
+    "sl": "Riž naj bo le majhen dodatek k mačji hrani. Preden ga ponudite mački s prebavnimi težavami, se posvetujte z veterinarjem, saj mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo."
+  },
+  "serving": {
+    "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
+    "sl": "Malo navadnega kuhanega riža brez dodane soli, kot majhen dodatek k mačji hrani."
+  },
+  "child": {
+    "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
+    "sl": "Malo navadnega kuhanega riža je za muco včasih v redu. Najbolj pa potrebuje svojo mesno mačjo hrano."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is chicken and rice good for a cat with an upset tummy?",
+        "sl": "Ali sta piščanec in riž dobra za mačko s prebavnimi težavami?"
+      },
+      "a": {
+        "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
+        "sl": "Najprej vprašajte veterinarja. Blue Cross navaja, da mačke potrebujejo prehrano na osnovi mesa in v dieti za občutljiv želodec ne potrebujejo ogljikovih hidratov, VCA pa, da kuhanim piščančjim prsim z belim rižem za mačke manjka veliko nujnih hranil."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC100",
+      "quote": "If you only have a small amount of cat food to last a few days, spread the cat food out across the whole period"
+    },
+    {
+      "id": "KC100",
+      "quote": "and bulk it out with cooked veg or rice."
+    },
+    {
+      "id": "KC100",
+      "quote": "Cats need to eat meat, so make sure they have some animal protein such as cooked meat or fish every day."
+    },
+    {
+      "id": "KC57",
+      "quote": "Cats need a meat based diet so do not need carbohydrate in their bland diet."
+    },
+    {
+      "id": "KC101",
+      "quote": "Grains provide an easily digestible source of carbohydrates (energy) for dogs and cats."
+    },
+    {
+      "id": "KC101",
+      "quote": "Grains like wheat, oats, rice, corn, and barley provide protein, fiber, and essential vitamins and minerals."
+    },
+    {
+      "id": "KC102",
+      "quote": "Cooked chicken breast and white rice is deficient in more than 10 essential nutrients for dogs and cats."
+    },
+    {
+      "id": "KC103",
+      "quote": "As obligate carnivores, cats are less able to digest and use carbohydrates."
+    },
+    {
+      "id": "KC20",
+      "quote": "Excessive salt should not be in a cat's diet because it can cause a wide range of symptoms."
+    },
+    {
+      "id": "KC57",
+      "quote": "When this happens, speak to your vet who may recommend monitoring your pet and putting them on a bland diet."
+    }
+  ],
+  "related": [
+    "cooked-chicken",
+    "corn",
+    "potatoes-cooked",
+    "bread"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e2ea672d1a21e73ccbfbfdfa4cd6ac2628e425a6de9fdf6663b5f8022116249"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eab7ac795c8e22667a026da9a4dbc954cbe9230206e01bb04c3594da3cfbf513"
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "pasta",
+  "species": "dog",
+  "name": {
+    "en": "Pasta",
+    "sl": "Testenine"
+  },
+  "question": {
+    "en": "Can dogs eat pasta?",
+    "sl": "Ali lahko psi jedo testenine?"
+  },
+  "url_slug": {
+    "en": "pasta",
+    "sl": "testenine"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, plain cooked pasta is fine in small amounts, and vets even use it in a bland diet when a dog is sick. Skip the sauce: onion and garlic are common in cooking and are toxic to dogs, even cooked.",
+    "sl": "Da, navadne kuhane testenine so v majhnih količinah v redu, veterinarji jih celo uporabljajo v blagi dieti, ko je pes bolan. Brez omake: čebula in česen sta pogosta v kuhinji in sta za pse strupena, tudi kuhana."
+  },
+  "why": {
+    "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
+    "sl": "Dogs Trust testenine in navadne rezance uvršča med človeško hrano, ki jo psi običajno lahko jedo zmerno. Cornell kuhane testenine navaja kot možnost, ko pes potrebuje blago dieto za pomiritev prebavil, vendar taka dieta za dolgoročno hranjenje ni uravnotežena. Čebula, česen, por in drobnjak lahko pri psih povzročijo slabokrvnost, strupeni pa so lahko že sledovi v kuhani hrani. Posameznega psa lahko kljub temu razdražijo nestrpnost, vsebnost maščob ali velikost porcije."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Plain pasta usually needs nothing more. If your dog ate pasta with a sauce that may contain onion or garlic, don't wait to see — contact your vet. Ask your vet before offering a food your dog hasn't tried.",
+    "sl": "Pri navadnih testeninah običajno ni treba storiti ničesar. Če je pes pojedel testenine z omako, ki morda vsebuje čebulo ali česen, ne čakajte – pokličite veterinarja. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
+    "sl": "Navadne kuhane testenine ali rezanci, zmerno, brez omake, čebule, česna in začimb."
+  },
+  "child": {
+    "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
+    "sl": "Malo navadnih kuhanih testenin je za pse v redu. V omakah se lahko skrivata čebula ali česen, zato najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat spaghetti with sauce?",
+        "sl": "Ali lahko psi jedo špagete z omako?"
+      },
+      "a": {
+        "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
+        "sl": "Bolje ne. Omake pogosto vsebujejo čebulo ali česen, ti pa so za pse lahko strupeni že v sledovih v kuhani hrani."
+      }
+    },
+    {
+      "q": {
+        "en": "Can pasta help a dog with an upset stomach?",
+        "sl": "Ali testenine pomagajo psu pri prebavnih težavah?"
+      },
+      "a": {
+        "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
+        "sl": "Kuhane testenine so ena od možnosti, ko bolan pes potrebuje blago dieto, vendar taka dieta ni uravnotežena in je ni varno dajati dolgoročno."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD51",
+      "quote": "Human foods you can usually feed your dog (in moderation)*"
+    },
+    {
+      "id": "KD51",
+      "quote": "Pasta"
+    },
+    {
+      "id": "KD51",
+      "quote": "Plain noodles"
+    },
+    {
+      "id": "KD51",
+      "quote": "Onions, garlic, leeks and chives can cause anaemia when eaten by dogs."
+    },
+    {
+      "id": "KD51",
+      "quote": "Even if cooked thoroughly, any traces of these ingredients in food can be toxic."
+    },
+    {
+      "id": "KD51",
+      "quote": "If you think your dog has eaten something containing any of these, don't wait to see."
+    },
+    {
+      "id": "KD51",
+      "quote": "Things like intolerance, food fat content or portion size can play a part in this."
+    },
+    {
+      "id": "KD51",
+      "quote": "That’s why it’s always a good idea to speak to your vet before serving up something your dog hasn’t tried before."
+    },
+    {
+      "id": "KD175",
+      "quote": "Lean, cooked hamburger and cooked pasta are two other great options when your dog is sick"
+    },
+    {
+      "id": "KD175",
+      "quote": "and needs a bland diet to soothe their GI tract."
+    },
+    {
+      "id": "KD175",
+      "quote": "neither of these diets are balanced, and they are not safe to feed long-term"
+    },
+    {
+      "id": "KD175",
+      "quote": "because they have an incomplete nutritional profile."
+    },
+    {
+      "id": "KD4",
+      "quote": "Since these vegetables are often used in cooking, it's important to not share your meals with your dog just in case."
+    }
+  ],
+  "related": [
+    "rice",
+    "bread",
+    "garlic",
+    "onion",
+    "cheese",
+    "tomatoes"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "36475f08acfe501a593d50f0c0522ce56745de4e3b3331fc67ad65a586fa0a62"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b0b963350389499f2163af1c23d777873d6e5f9cce929d28005f060f419053b7"
+    }
+  }
+}

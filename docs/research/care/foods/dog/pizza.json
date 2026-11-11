@@ -1,0 +1,196 @@
+{
+  "slug": "pizza",
+  "species": "dog",
+  "name": {
+    "en": "Pizza",
+    "sl": "Pica"
+  },
+  "question": {
+    "en": "Can dogs eat pizza?",
+    "sl": "Ali lahko psi jedo pico?"
+  },
+  "url_slug": {
+    "en": "pizza",
+    "sl": "pica"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it's best not to share pizza. It can upset a dog's stomach and even lead to pancreatitis, toppings can contain garlic or onion, which damage red blood cells, and the crust is far too high in calories. Raw pizza dough is risky too.",
+    "sl": "Ne, pice raje ne delite s psom. Lahko mu razdraži želodec in celo povzroči vnetje trebušne slinavke, nadevi lahko vsebujejo česen ali čebulo, ki poškodujeta rdeče krvničke, skorja pa ima veliko preveč kalorij. Tvegano je tudi surovo testo za pico."
+  },
+  "why": {
+    "en": "AKC lists pizza among party foods to keep away from dogs, and VCA and the ASPCA say leftovers and party food like pizza can cause stomach upset and even pancreatitis. Cheese is high in fat, and pepperoni is too fatty and spicy and risks salt poisoning. Garlic and onion, which can be in toppings and seasonings, damage red blood cells and kidneys. Pizza crust is way too high in calories and can lead to obesity. Uncooked pizza dough produces ethanol inside a dog's body.",
+    "sl": "AKC pico uvršča med hrano z zabav, ki naj bo zunaj pasjega dosega, VCA in ASPCA pa navajata, da lahko ostanki in hrana z zabav, kot je pica, lahko razdražijo želodec in celo povzročijo vnetje trebušne slinavke. Sir je zelo masten, salama pepperoni pa je premastna in prepikantna ter prinaša tveganje zastrupitve s soljo. Česen in čebula, ki sta lahko v nadevih in začimbah, poškodujeta rdeče krvničke in ledvice. Skorja ima veliko preveč kalorij in lahko vodi v debelost. Surovo testo za pico v pasjem telesu tvori etanol."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset, vomiting or diarrhoea",
+      "Belly pain, nausea, fever, low energy or poor appetite (possible pancreatitis)",
+      "Loss of appetite or low mood after onion or garlic toppings"
+    ],
+    "sl": [
+      "Prebavne težave, bruhanje ali driska",
+      "Bolečine v trebuhu, slabost, vročina, utrujenost ali slab apetit (morda vnetje trebušne slinavke)",
+      "Izguba apetita ali potrtost po nadevih s čebulo ali česnom"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog got into pizza, contact your vet. If the toppings may have contained garlic or onion, don't wait to see. If your dog ate raw pizza dough, contact your vet too.",
+    "sl": "Če je pes pojedel pico, pokličite veterinarja. Če sta bila v nadevu morda česen ali čebula, ne čakajte. Tudi če je pes pojedel surovo testo za pico, pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Pizza is a people food. Its cheese and toppings can upset a dog's tummy, so give your dog its own treat instead.",
+    "sl": "Pica je hrana za ljudi. Sir in nadevi lahko psu razdražijo trebušček, zato mu raje daj njegov priboljšek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat pizza crust?",
+        "sl": "Ali lahko psi jedo skorjo pice?"
+      },
+      "a": {
+        "en": "It's best not to. A vet nutritionist at Cornell says pizza crust is way too high in calories and can lead to obesity.",
+        "sl": "Bolje ne. Veterinarski nutricionist s Cornella pravi, da ima skorja pice veliko preveč kalorij in lahko vodi v debelost."
+      }
+    },
+    {
+      "q": {
+        "en": "Is raw pizza dough dangerous?",
+        "sl": "Je surovo testo za pico nevarno?"
+      },
+      "a": {
+        "en": "Yes. Uncooked bread and pizza dough produce ethanol inside a dog's body, and raw yeast dough can expand in the stomach. Contact your vet.",
+        "sl": "Da. Surovo testo za kruh in pico v pasjem telesu tvori etanol, kvašeno testo pa se lahko v želodcu razširi. Pokličite veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD179",
+      "quote": "Other leftovers on plates, such as creamy dips, potato chips and pizza, can cause stomach upset."
+    },
+    {
+      "id": "KD179",
+      "quote": "Many fan-favorite snacks can cause stomach upset and even pancreatitis in dogs."
+    },
+    {
+      "id": "KD179",
+      "quote": "Foods with garlic or onion in them can cause red blood cell and kidney damage."
+    },
+    {
+      "id": "KD179",
+      "quote": "Don't share spicy or fatty foods with your dog."
+    },
+    {
+      "id": "KD180",
+      "quote": "Feed or let your pet get into chicken wings, creamy dip, pizza, chocolate desserts and potato chips."
+    },
+    {
+      "id": "KD180",
+      "quote": "The spread for the big game can cause stomach upset and potentially pancreatitis."
+    },
+    {
+      "id": "KD180",
+      "quote": "Be especially careful about any foods that might have garlic and/or onion in them"
+    },
+    {
+      "id": "KD180",
+      "quote": "they can cause damage to the red blood cells and kidneys."
+    },
+    {
+      "id": "KD181",
+      "quote": "Unfortunately, most of the foods that we enjoy eating during Big Game parties are dangerous for our dogs."
+    },
+    {
+      "id": "KD181",
+      "quote": "Others are dangerous because they contain ingredients like xylitol, garlic, or onions which are toxic to dogs"
+    },
+    {
+      "id": "KD181",
+      "quote": "Popular party foods to keep away from your dog include:"
+    },
+    {
+      "id": "KD181",
+      "quote": "Pizza"
+    },
+    {
+      "id": "KD181",
+      "quote": "If your dog gets into your big game party snacks, contact your veterinarian or an emergency veterinarian"
+    },
+    {
+      "id": "KD182",
+      "quote": "For many people, pepperoni is a favorite pizza topping and a delicious addition to a charcuterie board."
+    },
+    {
+      "id": "KD182",
+      "quote": "Dr. Jerry Klein, Chief Veterinarian for the AKC, explains that pepperoni is too spicy and too fatty for dogs."
+    },
+    {
+      "id": "KD182",
+      "quote": "it's also dangerous for dogs due to possible salt poisoning"
+    },
+    {
+      "id": "KD182",
+      "quote": "Some of these ingredients, such as garlic and onion, are toxic to dogs."
+    },
+    {
+      "id": "KD46",
+      "quote": "Cheese is high in fat, and feeding too much to your dog regularly can cause weight gain and lead to obesity."
+    },
+    {
+      "id": "KD175",
+      "quote": "the pizza crust, burger bites and fries are just way too high in calories,"
+    },
+    {
+      "id": "KD175",
+      "quote": "and can really lead to obesity and subpar nutrient intake."
+    },
+    {
+      "id": "KD51",
+      "quote": "It can also be caused by eating uncooked bread and pizza dough, which produce ethanol inside a dog’s body."
+    },
+    {
+      "id": "KD51",
+      "quote": "Signs of poisoning from these ingredients include vomiting, diarrhoea, abdominal pain, loss of appetite, and depression."
+    },
+    {
+      "id": "KD51",
+      "quote": "If you think your dog has eaten something containing any of these, don't wait to see."
+    },
+    {
+      "id": "KD5",
+      "quote": "Raw dough made with yeast can expand in the stomach and produce alcohol, potentially causing dangerous stomach distention"
+    },
+    {
+      "id": "KD5",
+      "quote": "if your dog eats raw, uncooked bread dough, contact your veterinarian."
+    },
+    {
+      "id": "KD50",
+      "quote": "The most common clinical signs include nausea, vomiting, fever, lethargy, abdominal pain, diarrhea, and decreased appetite."
+    }
+  ],
+  "related": [
+    "garlic",
+    "onion",
+    "cheese",
+    "raw-yeast-dough",
+    "tomatoes",
+    "fatty-meat",
+    "salt"
+  ],
+  "updated": "2026-11-11",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a32e575f6bc973110e0ef5ee73c0df34dec78896b5eceb4b8669c7fc41a38208"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "45973f8a7bfe68f2aa976fff63b6e61f7999c2c1be7477e114ece0fcf9d4a759"
+    }
+  }
+}
