@@ -14,7 +14,8 @@
     "cs": "Šanta kočičí (catnip)",
     "hr": "Mačja metvica",
     "sv": "Kattmynta",
-    "da": "Katteurt"
+    "da": "Katteurt",
+    "fi": "Kissanminttu"
   },
   "question": {
     "en": "Can cats eat catnip?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst šantu kočičí?",
     "hr": "Smiju li mačke jesti mačju metvicu?",
     "sv": "Får katter äta kattmynta?",
-    "da": "Må katte spise katteurt?"
+    "da": "Må katte spise katteurt?",
+    "fi": "Saako kissa syödä kissanminttua?"
   },
   "url_slug": {
     "en": "catnip",
@@ -44,7 +46,8 @@
     "cs": "santa-kocici",
     "hr": "macja-metvica",
     "sv": "kattmynta",
-    "da": "katteurt"
+    "da": "katteurt",
+    "fi": "kissanminttu"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne jako pamlsek. Čichat k šantě kočičí je pro kočky neškodné, ale ASPCA ji řadí mezi rostliny toxické pro kočky, protože po jejím snědení může dojít ke zvracení a průjmu. Raději nechte kočku užívat si vůni, než aby rostlinu jedla.",
     "hr": "Ne kao užinu. Mirisanje mačje metvice mačkama ne šteti, ali ASPCA je navodi kao otrovnu za mačke jer od jedenja mogu povraćati i dobiti proljev. Neka mačka uživa u mirisu, a biljku neka ne jede.",
     "sv": "Inte som godbit. Att nosa på kattmynta är ofarligt för katter, men ASPCA anger kattmynta som giftig för katter eftersom den kan ge kräkningar och diarré om katten äter den. Låt katten njuta av doften i stället för att äta växten.",
-    "da": "Ikke som snack. Det er ufarligt for katte at snuse til katteurt, men ASPCA betragter katteurt som giftig for katte, fordi den kan give opkast og diarré hvis katten spiser den. Lad din kat nyde duften i stedet for at spise planten."
+    "da": "Ikke som snack. Det er ufarligt for katte at snuse til katteurt, men ASPCA betragter katteurt som giftig for katte, fordi den kan give opkast og diarré hvis katten spiser den. Lad din kat nyde duften i stedet for at spise planten.",
+    "fi": "Ei välipalaksi. Kissanminttua on kissojen vaaratonta haistella, mutta ASPCA luokittelee kissanmintun kissoille myrkylliseksi, koska sen syöminen voi aiheuttaa oksentelua ja ripulia. Anna kissasi nauttia tuoksusta mieluummin kuin syödä kasvia."
   },
   "why": {
     "en": "Sources differ, so we follow the stricter view. International Cat Care says catnip works when its oil is sniffed and that its effects on cats are harmless, nonaddictive and short-lived, and Cats Protection suggests planting catnip to distract cats from other plants. The ASPCA, however, lists catnip (Nepeta cataria) as toxic to cats: many cats love it, but it can cause vomiting and diarrhoea, and it makes some cats sedated and others stimulated.",
@@ -75,7 +79,8 @@
     "cs": "Zdroje se liší, proto se držíme přísnějšího pohledu. International Cat Care uvádí, že šanta kočičí působí, když kočka čichá k jejímu oleji, a že její účinky na kočky jsou neškodné, nevyvolávají závislost a jsou krátkodobé; Cats Protection doporučuje šantu vysadit, aby odvedla pozornost koček od jiných rostlin. ASPCA však šantu kočičí (Nepeta cataria) řadí mezi rostliny toxické pro kočky: mnoho koček ji miluje, ale může způsobit zvracení a průjem a některé kočky utlumí, jiné naopak povzbudí.",
     "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. International Cat Care navodi da mačja metvica djeluje kad mačka pomiriše njezino ulje te da su njezini učinci na mačke bezopasni, ne izazivaju ovisnost i kratko traju, a Cats Protection predlaže sadnju mačje metvice kako bi se mačke odvratile od drugih biljaka. ASPCA, međutim, navodi mačju metvicu (Nepeta cataria) kao otrovnu za mačke: mnoge mačke je vole, ali može izazvati povraćanje i proljev, a neke mačke umiruje, dok druge uzbuđuje.",
     "sv": "Källorna går isär, så vi följer den strängare bedömningen. International Cat Care säger att kattmynta verkar när katten nosar på oljan och att effekterna på katter är ofarliga, inte beroendeframkallande och kortvariga, och Cats Protection föreslår att du planterar kattmynta för att locka bort katter från andra växter. ASPCA anger däremot kattmynta (Nepeta cataria) som giftig för katter: många katter älskar den, men den kan ge kräkningar och diarré, och den gör vissa katter dåsiga och andra uppspelta.",
-    "da": "Kilderne er uenige, så vi følger den strengeste vurdering. International Cat Care skriver at katteurt virker når katten snuser til olien, og at virkningen på katte er ufarlig, ikke vanedannende og kortvarig. Cats Protection foreslår at man planter katteurt for at lokke katte væk fra andre planter. ASPCA betragter derimod katteurt (Nepeta cataria) som giftig for katte: mange katte elsker den, men den kan give opkast og diarré, og nogle katte bliver døsige, mens andre bliver opstemte."
+    "da": "Kilderne er uenige, så vi følger den strengeste vurdering. International Cat Care skriver at katteurt virker når katten snuser til olien, og at virkningen på katte er ufarlig, ikke vanedannende og kortvarig. Cats Protection foreslår at man planter katteurt for at lokke katte væk fra andre planter. ASPCA betragter derimod katteurt (Nepeta cataria) som giftig for katte: mange katte elsker den, men den kan give opkast og diarré, og nogle katte bliver døsige, mens andre bliver opstemte.",
+    "fi": "Lähteet ovat eri mieltä, joten noudatamme tiukempaa linjaa. International Cat Caren mukaan kissanminttu vaikuttaa, kun sen öljyä haistellaan, ja sen vaikutukset kissoihin ovat vaarattomia, eivät aiheuta riippuvuutta ja ovat lyhytaikaisia, ja Cats Protection ehdottaa kissanmintun istuttamista, jotta kissat eivät kiinnostuisi muista kasveista. ASPCA kuitenkin luokittelee kissanmintun (Nepeta cataria) kissoille myrkylliseksi: monet kissat rakastavat sitä, mutta se voi aiheuttaa oksentelua ja ripulia, ja se rauhoittaa joitakin kissoja ja kiihdyttää toisia."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Diarré",
       "Usædvanlig søvnighed",
       "Overdreven opstemthed"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Epätavallinen uneliaisuus",
+      "Ylikiihtyneisyys"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud kočka snědla šantu kočičí a zvrací nebo má průjem, obraťte se na veterináře.",
     "hr": "Ako je mačka pojela mačju metvicu i povraća ili ima proljev, obrati se veterinaru.",
     "sv": "Om katten har ätit kattmynta och kräks eller har diarré ska du kontakta veterinären.",
-    "da": "Hvis din kat har spist katteurt og kaster op eller har diarré, skal du kontakte din dyrlæge."
+    "da": "Hvis din kat har spist katteurt og kaster op eller har diarré, skal du kontakte din dyrlæge.",
+    "fi": "Jos kissasi on syönyt kissanminttua ja oksentaa tai sillä on ripulia, ota yhteyttä eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Mnoho koček miluje vůni šanty kočičí. Je na čichání a hraní, ne na jedení.",
     "hr": "Mnoge mačke vole miris mačje metvice. Ona je za njuškanje i igru, ne za jelo.",
     "sv": "Många katter älskar doften av kattmynta. Den är till för att nosa på och leka med, inte för att äta.",
-    "da": "Mange katte elsker duften af katteurt. Den er til at snuse til og lege med, ikke til at spise."
+    "da": "Mange katte elsker duften af katteurt. Den er til at snuse til og lege med, ikke til at spise.",
+    "fi": "Monet kissat rakastavat kissanmintun tuoksua. Se on haistelua ja leikkimistä varten, ei syömistä varten."
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "Proč moje kočka na šantu kočičí nereaguje?",
         "hr": "Zašto moja mačka ne reagira na mačju metvicu?",
         "sv": "Varför reagerar min katt inte på kattmynta?",
-        "da": "Hvorfor reagerer min kat ikke på katteurt?"
+        "da": "Hvorfor reagerer min kat ikke på katteurt?",
+        "fi": "Miksi kissani ei reagoi kissanminttuun?"
       },
       "a": {
         "en": "International Cat Care says catnip affects around 70–80% of cats and the response is inherited from their parents. It has no effect on kittens until they are over three months old.",
@@ -218,7 +232,8 @@
         "cs": "International Cat Care uvádí, že šanta kočičí působí asi na 70–80 % koček a reakce se dědí po rodičích. Na koťata nemá žádný účinek, dokud nejsou starší než tři měsíce.",
         "hr": "International Cat Care navodi da mačja metvica djeluje na otprilike 70–80 % mačaka i da se reakcija nasljeđuje od roditelja. Na mačiće nema učinka dok nisu stariji od tri mjeseca.",
         "sv": "International Cat Care säger att kattmynta påverkar ungefär 70–80 % av katterna och att reaktionen ärvs från föräldrarna. Kattmynta har ingen effekt på kattungar förrän de är över tre månader gamla.",
-        "da": "International Cat Care skriver at katteurt påvirker omkring 70–80 % af alle katte, og at reaktionen er arvelig. Katteurt har ingen virkning på killinger, før de er mere end tre måneder gamle."
+        "da": "International Cat Care skriver at katteurt påvirker omkring 70–80 % af alle katte, og at reaktionen er arvelig. Katteurt har ingen virkning på killinger, før de er mere end tre måneder gamle.",
+        "fi": "International Cat Caren mukaan kissanminttu vaikuttaa noin 70–80 prosenttiin kissoista, ja reaktio periytyy vanhemmilta. Se ei vaikuta pentuihin, ennen kuin ne ovat yli kolmen kuukauden ikäisiä."
       }
     },
     {
@@ -235,7 +250,8 @@
         "cs": "Je šanta kočičí totéž co kočičí tráva?",
         "hr": "Je li mačja metvica isto što i mačja trava?",
         "sv": "Är kattmynta samma sak som kattgräs?",
-        "da": "Er katteurt det samme som kattegræs?"
+        "da": "Er katteurt det samme som kattegræs?",
+        "fi": "Onko kissanminttu sama asia kuin kissanheinä?"
       },
       "a": {
         "en": "No. VCA explains that cat grass usually means cereal grasses such as oat or wheat, while catnip is a member of the mint family.",
@@ -250,7 +266,8 @@
         "cs": "Ne. VCA vysvětluje, že kočičí trávou se obvykle myslí obilné trávy, například oves nebo pšenice, zatímco šanta kočičí patří do stejné čeledi (hluchavkovité) jako máta.",
         "hr": "Ne. VCA objašnjava da se pod mačjom travom obično misli na žitarice poput zobi ili pšenice, dok mačja metvica pripada istoj biljnoj porodici kao metvica.",
         "sv": "Nej. VCA förklarar att kattgräs oftast betyder spannmålsgräs som havre eller vete, medan kattmynta tillhör familjen kransblommiga växter, precis som mynta.",
-        "da": "Nej. VCA forklarer at kattegræs som regel er kornsorter som havre eller hvede, mens katteurt tilhører myntefamilien."
+        "da": "Nej. VCA forklarer at kattegræs som regel er kornsorter som havre eller hvede, mens katteurt tilhører myntefamilien.",
+        "fi": "Ei. VCA selittää, että kissanheinällä tarkoitetaan yleensä viljaruohoja, kuten kauraa tai vehnää, kun taas kissanminttu kuuluu minttukasvien heimoon (huulikukkaiskasvit)."
       }
     }
   ],
@@ -383,6 +400,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "eabfbd09f79611d4e83359d504570d35fc71680da39e7534bf58c23d5a0b9ea1"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c13b910812bf5c78a5e6c93f08543d4a3b420610e0fe4667cf5f8f241c0d233b"
     }
   }
 }

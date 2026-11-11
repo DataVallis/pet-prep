@@ -14,7 +14,8 @@
     "cs": "Edamame",
     "hr": "Edamame",
     "sv": "Edamame",
-    "da": "Edamame"
+    "da": "Edamame",
+    "fi": "Edamame"
   },
   "question": {
     "en": "Can dogs eat edamame?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst edamame?",
     "hr": "Smiju li psi jesti edamame?",
     "sv": "Får hundar äta edamame?",
-    "da": "Må hunde spise edamame?"
+    "da": "Må hunde spise edamame?",
+    "fi": "Saako koira syödä edamamea?"
   },
   "url_slug": {
     "en": "edamame",
@@ -44,7 +46,8 @@
     "cs": "edamame",
     "hr": "edamame",
     "sv": "edamame",
-    "da": "edamame"
+    "da": "edamame",
+    "fi": "edamame"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, s mírou. Neochucené sójové boby edamame nejsou pro psy toxické a několik čerstvých zrnek jako pamlsek většině psů neublíží. Tuhé lusky nechte stranou, protože hrozí udušení, a edamame uvařené se solí, kořením, sójovou omáčkou nebo olejem psovi nikdy nedávejte.",
     "hr": "Da, umjereno. Obična zrna edamame nisu otrovna za pse, a nekoliko svježih zrna kao poslastica većini pasa neće naštetiti. Izostavi žilave mahune, koje mogu izazvati gušenje, i nikad ne daj edamame pripremljen sa soli, začinima, sojinim umakom ili uljem.",
     "sv": "Ja, med måtta. Okryddade edamamebönor är inte giftiga för hundar, och några färska bönor som godbit skadar inte de flesta hundar. Ta bort de sega baljorna, de är en kvävningsrisk. Dela aldrig edamame som har tillagats med salt, kryddor, sojasås eller olja.",
-    "da": "Ja, med måde. Almindelige edamamebønner er ugiftige for hunde, og nogle få friske bønner som godbid gør ikke de fleste hunde noget. Lad de seje bælge ligge, for de kan sætte sig fast i halsen, og giv aldrig edamame der er tilberedt med salt, krydderier, sojasovs eller olie."
+    "da": "Ja, med måde. Almindelige edamamebønner er ugiftige for hunde, og nogle få friske bønner som godbid gør ikke de fleste hunde noget. Lad de seje bælge ligge, for de kan sætte sig fast i halsen, og giv aldrig edamame der er tilberedt med salt, krydderier, sojasovs eller olie.",
+    "fi": "Saa kohtuudella. Maustamattomat edamamepavut eivät ole koirille myrkyllisiä, eikä muutama tuore papu herkkuna haittaa useimpia koiria. Jätä sitkeät palot pois, sillä ne voivat aiheuttaa tukehtumisvaaran, äläkä koskaan anna edamamea, joka on valmistettu suolalla, mausteilla, soijakastikkeella tai öljyllä."
   },
   "why": {
     "en": "Edamame are soy beans, high in fibre and surrounded by tough pods. Soy is a common allergy in dogs, and an allergic reaction might not show up immediately. Soy can also cause flatulence and occasionally diarrhoea, and too much fibre can cause stomach problems. The fibrous, chewy pods are hard to digest and a choking hazard, especially for small dogs.",
@@ -75,7 +79,8 @@
     "cs": "Edamame jsou sójové boby s vysokým obsahem vlákniny, uzavřené v tuhých luscích. Sója je u psů častým alergenem a alergická reakce se nemusí projevit hned. Sója může také způsobit plynatost a občas průjem, příliš mnoho vlákniny zase žaludeční potíže. Vláknité, žvýkavé lusky se špatně tráví a hrozí z nich udušení, zvlášť u malých psů.",
     "hr": "Edamame su zrna soje, bogata vlaknima i u žilavim mahunama. Soja je čest alergen kod pasa, a alergijska reakcija možda se neće pojaviti odmah. Soja može izazvati nadutost i povremeno proljev, a previše vlakana može uzrokovati želučane tegobe. Vlaknaste, žilave mahune teško se probavljaju i mogu izazvati gušenje, osobito kod malih pasa.",
     "sv": "Edamame är sojabönor, rika på fibrer och omgivna av sega baljor. Allergi mot soja är vanligt hos hundar, och en allergisk reaktion behöver inte synas direkt. Soja kan också ge gasbildning och ibland diarré, och för mycket fibrer kan ge magproblem. De fibrösa, sega baljorna är svårsmälta och en kvävningsrisk, särskilt för små hundar.",
-    "da": "Edamame er sojabønner med mange fibre, og de sidder i seje bælge. Soja er en almindelig allergi hos hunde, og reaktionen viser sig ikke altid med det samme. Soja kan også give luft i maven og en gang imellem diarré, og for mange fibre kan give ondt i maven. De trævlede, seje bælge er svære at fordøje og kan sætte sig fast i halsen, især hos små hunde."
+    "da": "Edamame er sojabønner med mange fibre, og de sidder i seje bælge. Soja er en almindelig allergi hos hunde, og reaktionen viser sig ikke altid med det samme. Soja kan også give luft i maven og en gang imellem diarré, og for mange fibre kan give ondt i maven. De trævlede, seje bælge er svære at fordøje og kan sætte sig fast i halsen, især hos små hunde.",
+    "fi": "Edamame on soijapapua, jossa on paljon kuitua ja jota ympäröi sitkeä palko. Soija on koirilla yleinen allergeeni, eikä allerginen reaktio välttämättä näy heti. Soija voi myös aiheuttaa ilmavaivoja ja toisinaan ripulia, ja liika kuitu voi aiheuttaa vatsavaivoja. Kuituiset, sitkeät palot ovat vaikeasti sulavia ja tukehtumisvaara etenkin pienille koirille."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Protože je sója častým alergenem, nabídněte nejprve jen velmi malé množství a ověřte, zda pes alergií netrpí. Příznaky alergické reakce, například svědění, vypadávání srsti nebo záněty uší, se nemusí objevit hned. Sója může také způsobit plynatost nebo průjem.",
     "hr": "Budući da je soja čest alergen, isprva ponudi samo vrlo malu količinu da vidiš javlja li se alergija. Znakovi alergijske reakcije, poput svrbeža, gubitka dlake ili upala uha, možda se neće pojaviti odmah. Soja može izazvati i nadutost ili proljev.",
     "sv": "Allergi mot soja är vanligt, så ge bara en mycket liten mängd först för att se om hunden är allergisk. Tecken på allergi, som klåda, pälsförlust eller öroninflammation, kan dröja. Soja kan också ge gaser eller diarré.",
-    "da": "Da soja er en almindelig allergi hos hunde, bør du kun give en helt lille smule første gang og se, om hunden reagerer. Tegn på allergi, fx kløe, hårtab eller ørebetændelse, kommer måske ikke med det samme. Soja kan også give luft i maven eller diarré."
+    "da": "Da soja er en almindelig allergi hos hunde, bør du kun give en helt lille smule første gang og se, om hunden reagerer. Tegn på allergi, fx kløe, hårtab eller ørebetændelse, kommer måske ikke med det samme. Soja kan også give luft i maven eller diarré.",
+    "fi": "Koska soija on yleinen allergeeni, tarjoa aluksi vain aivan pieni määrä ja seuraa, ilmaantuuko allergisia oireita. Allergisen reaktion oireet, kuten kutina, karvanlähtö tai korvatulehdukset, eivät välttämättä ilmaannu heti. Soija voi aiheuttaa myös ilmavaivoja tai ripulia."
   },
   "serving": {
     "en": "Plain and fresh beans only, taken out of the pod, with no salt, spices, soy sauce or oil. A few beans as an occasional treat; moderation is key.",
@@ -106,7 +112,8 @@
     "cs": "Pouze neochucené čerstvé sójové boby vyloupnuté z lusků, bez soli, koření, sójové omáčky a oleje. Jen několik zrnek jako příležitostný pamlsek, vždy s mírou.",
     "hr": "Samo obična, svježa zrna, izvađena iz mahune, bez soli, začina, sojina umaka i ulja. Nekoliko zrna kao povremena poslastica; ključna je umjerenost.",
     "sv": "Bara färska bönor som har tagits ur baljan, utan salt, kryddor, sojasås eller olja. Några bönor som godbit då och då. Lagom är bäst.",
-    "da": "Kun naturelle, friske bønner taget ud af bælgen og uden salt, krydderier, sojasovs eller olie. Et par bønner som godbid af og til – hold mængden lille."
+    "da": "Kun naturelle, friske bønner taget ud af bælgen og uden salt, krydderier, sojasovs eller olie. Et par bønner som godbid af og til – hold mængden lille.",
+    "fi": "Vain maustamattomia ja tuoreita papuja palosta irrotettuina, ilman suolaa, mausteita, soijakastiketta tai öljyä. Muutama papu satunnaisena herkkuna; kohtuus on tärkeintä."
   },
   "child": {
     "en": "Dogs may nibble a few plain edamame beans. A grown-up takes them out of the pod first.",
@@ -121,7 +128,8 @@
     "cs": "Psi mohou ochutnat pár neochucených zrnek edamame. Dospělý je nejdřív vyloupne z lusku.",
     "hr": "Psi smiju pogristi nekoliko običnih zrna edamame. Odrasla osoba ih prvo izvadi iz mahune.",
     "sv": "Hundar kan få mumsa på några okryddade edamamebönor. En vuxen tar först ut dem ur baljan.",
-    "da": "Hunde må gerne smage et par naturelle edamamebønner. En voksen tager dem først ud af bælgen."
+    "da": "Hunde må gerne smage et par naturelle edamamebønner. En voksen tager dem først ud af bælgen.",
+    "fi": "Koira voi maistaa muutamaa maustamatonta edamamepapua. Aikuinen ottaa ne ensin pois palosta."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou psi jíst solené nebo kořeněné edamame?",
         "hr": "Smiju li psi jesti slani ili začinjeni edamame?",
         "sv": "Får hundar äta saltad eller kryddad edamame?",
-        "da": "Må hunde spise saltet eller krydret edamame?"
+        "da": "Må hunde spise saltet eller krydret edamame?",
+        "fi": "Saako koira syödä suolattua tai maustettua edamamea?"
       },
       "a": {
         "en": "No. Spices, salt, soy sauce and oil used to cook edamame can be especially unhealthy for dogs, so never share edamame cooked with them.",
@@ -153,7 +162,8 @@
         "cs": "Ne. Koření, sůl, sójová omáčka a olej, se kterými se edamame připravuje, mohou být pro psy obzvlášť nezdravé, proto jim nikdy nedávejte takto upravené edamame.",
         "hr": "Ne. Začini, sol, sojin umak i ulje osobito su nezdravi za pse, zato nikad ne daj edamame koji je njima pripremljen.",
         "sv": "Nej. Kryddor, salt, sojasås och olja som används när edamame lagas kan vara särskilt dåligt för hundar, så dela aldrig edamame som har lagats med dem.",
-        "da": "Nej. Krydderier, salt, sojasovs og olie kan være særligt usunde for hunde, så giv aldrig din hund edamame der er tilberedt med dem."
+        "da": "Nej. Krydderier, salt, sojasovs og olie kan være særligt usunde for hunde, så giv aldrig din hund edamame der er tilberedt med dem.",
+        "fi": "Ei saa. Mausteet, suola, soijakastike ja öljy voivat olla koirille erityisen epäterveellisiä, joten älä koskaan anna edamamea, jota on valmistettu niillä."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Mohou psi jíst lusky edamame?",
         "hr": "Smiju li psi jesti mahune edamame?",
         "sv": "Får hundar äta edamamebaljor?",
-        "da": "Må hunde spise edamamebælge?"
+        "da": "Må hunde spise edamamebælge?",
+        "fi": "Saako koira syödä edamamen paloja?"
       },
       "a": {
         "en": "Better not. Edamame pods are fibrous, tough and chewy; they can be hard for your dog to digest and are a choking hazard, especially for small dogs.",
@@ -185,7 +196,8 @@
         "cs": "Raději ne. Lusky edamame jsou vláknité, tuhé a žvýkavé; pes je může špatně strávit a hrozí z nich udušení, zvlášť u malých psů.",
         "hr": "Bolje ne. Mahune edamame vlaknaste su i žilave pa se teško žvaču i probavljaju, a mogu izazvati gušenje, osobito kod malih pasa.",
         "sv": "Det är bättre att låta bli. Edamamebaljorna är fibrösa, sega och svårtuggade. De kan vara svåra för hunden att smälta och är en kvävningsrisk, särskilt för små hundar.",
-        "da": "Hellere lade være. Edamamebælge er trævlede, seje og svære at tygge. De kan være svære for hunden at fordøje og kan sætte sig fast i halsen, især hos små hunde."
+        "da": "Hellere lade være. Edamamebælge er trævlede, seje og svære at tygge. De kan være svære for hunden at fordøje og kan sætte sig fast i halsen, især hos små hunde.",
+        "fi": "Parempi olla antamatta. Edamamen palot ovat kuituisia, sitkeitä ja vaikeasti pureskeltavia. Koiran voi olla vaikea sulattaa niitä, ja ne ovat tukehtumisvaara etenkin pienille koirille."
       }
     }
   ],
@@ -318,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "13184b2adf34d42f95baa911a4fb4a4e4b66f54f02318167dc7ff2738e8cbf41"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "682c7dc8b4862b2981483be8958bfd91d9c7a1bb06d87032e0f9a0f8c5cacfd0"
     }
   }
 }
