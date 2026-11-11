@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7ce5c99083622033cc7859988c0ce08ec98da583ee5f753a4918ab47df431d04"
+      "sha256": "1d3b09e9d4f310674d30d4e7216aa26b5826ea4065e3dca531d025ba9d10dc20"
     }
   },
   "suitability_vocabulary": {
@@ -57533,7 +57533,12 @@
           "S771"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "border-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

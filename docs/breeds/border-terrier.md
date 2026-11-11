@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `border_terrier` (viri S767–S779; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S769) |
 | Izvor | FCI št. 10, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S767, S768) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 98. mesto »Border Terrier« (S174, prebrano 2026-11-10) |
-| PR-ji | pet-prep #981 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #981 (pasma, združen `2c97187`) · portret pet-prep PR `feat/M5-R10-102-border-terrier-portrait` (zagon `breed-portraits.yml` 42936175766, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-border-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 128. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-102 | 2026-11-11 |
 | Česanje 2× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-11 |
 | Barva (izbirnik: sivkasto-rjavkast, rdeč, pšenično rumen, modro-rjavkast) | 🛠 | 💶 izziv | M5-R21 | 2026-11-11 |
-| AI portret v registru | 🗓 sledi v tem zagonu (`breed-portraits.yml`) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/border-terrier`, `/sl/zivali/psi/borderski-terier`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), sivkasto-rjavkast (grizzle and tan), naraven rep | — | M5-R11-04 | 2026-11-11 |
+| Stran na petprep.si (`/animals/dogs/border-terrier`, `/sl/zivali/psi/borderski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
