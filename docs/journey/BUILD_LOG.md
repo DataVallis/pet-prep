@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Povpraševanja partnerjev: strežnik je pripravljen (spletni obrazec sledi)
+
+**Kaj:** strežnik zna sprejeti povpraševanje podjetja za sodelovanje (sponzorstvo serije, sponzorirane vsebine, zavarovalnica, imenik, zavetišče): shrani ga, Davidu pošlje kratko opozorilo v Discord (samo vrsta in povezava, brez imen in e-naslovov) in ga pokaže na seznamu v administraciji, ki ga vidi samo superadmin. Zaščita pred neželenimi vnosi: omejitev 5 povpraševanj na uro in skrito polje; stikalo v administraciji obrazec izklopi. Povpraševanja se po 12 mesecih izbrišejo, IP-ja ne hranimo. Samodejne e-pošte ni — David odgovori sam.
+**Zakaj je pomembno:** partnerji lahko pišejo, ne da bi PetPrep zbiral več osebnih podatkov, kot jih potrebuje za odgovor. Obrazec na strani partnerjev je še *načrt* (spletni del M6-S03).
+**Kako povedati:** 🤝 »Napišite nam, odgovorimo osebno.« · 💼 »Partnerski stik brez avtomatizacije, ki bi zbirala podatke.« (obrazec na strani še ni objavljen)
+
 ## 2026-11-11 — Naučen ukaz ne pada več (pri uporabnikih od 11. 11. 2026)
 
 **Kaj:** David je opazil, da so ukazi njegovega psa vsako jutro padli s 100 % na 98 %. Vzrok je bilo pravilo »dan brez cele vaje = −2 % vsem ukazom« (tudi vaja, končana po 1. krogu, ne šteje kot dnevna vaja). Odločil je: **naučen ukaz (100 %, »naučeno«) ne pada, tudi če en dan ni vaje.** Ukazi, ki še niso naučeni, še vedno počasi pozabljajo (−2 % na dan brez vaje). 6 novih testov.

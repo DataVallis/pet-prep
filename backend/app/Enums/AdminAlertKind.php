@@ -37,6 +37,8 @@ enum AdminAlertKind: string
     case GameLoopStalled = 'game_loop_stalled';
     /** M6-U01 (FREE_PET_UPGRADE_SPEC §5.3 safety net): a 12-week challenge purchase stayed unassigned > 10 min in a family with a pet waiting for payment or a purchase intent (once per purchase; ids + counts only). */
     case UnassignedChallengeCredit = 'unassigned_challenge_credit';
+    /** M6-S03 (WEBSITE_SALES_SPEC §5.2): a partner inquiry arrived on petprep.si (informative — the type and the /admin link only, no sender data). */
+    case PartnerInquiry = 'partner_inquiry';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -52,7 +54,7 @@ enum AdminAlertKind: string
             self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected => 'warning',
             self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::UnassignedChallengeCredit => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
-            self::Test => 'info',
+            self::PartnerInquiry, self::Test => 'info',
         };
     }
 
@@ -74,6 +76,7 @@ enum AdminAlertKind: string
             self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
             self::UnassignedChallengeCredit => '/admin/challenge-credits',
+            self::PartnerInquiry => '/admin/partner-inquiries',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::Test => '/admin/system-health',
         };
     }

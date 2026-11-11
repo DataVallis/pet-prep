@@ -20,6 +20,7 @@ use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
+use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\PetNameController;
@@ -53,6 +54,11 @@ Route::post('auth/social', [AuthController::class, 'social'])
 // failed-attempt lockouts (per IP and global) in ChildPinLoginService.
 Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
     ->middleware('throttle:pin-login');
+
+// M6-S03: partner inquiry form of petprep.si/partners. Public; per-IP throttle (5 / hour);
+// 503 while the superadmin switch »Partner inquiries« is off.
+Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
+    ->middleware('throttle:partner-inquiries');
 
 // M5-05: crash / render-error reports from the app, with or without a token
 // (a token only gives the role; an invalid one is ignored, never a 401).

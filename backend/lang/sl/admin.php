@@ -40,6 +40,8 @@ return [
         'activity_model' => 'aktivnost',
         'ai_lab' => 'AI Lab',
         'system' => 'Sistem',
+        'partner_inquiries' => 'Povpraševanja partnerjev',
+        'partner_inquiry_model' => 'povpraševanje partnerja',
     ],
 
     'dashboard' => [
@@ -318,6 +320,10 @@ return [
         'video_compression_section' => 'Stiskanje videov (disk)',
         'video_compression_description' => 'Vsak shranjen AI posnetek enkrat ponovno kodira v isti ločljivosti in hitrosti sličic (H.264, CRF 21), da zasede manj diska. Posnetek se zamenja le, če je vsaj 30 % manjši in je videti enako (SSIM ≥ 0,98, enaka dolžina in število sličic); sicer ostane izvirnik. Obstoječi posnetki: majhni paketi vsako uro ponoči (22.00–6.00); novi posnetki se stisnejo, preden se prvič pokažejo (nekaj sekund dlje). Najprej preverite `media:compress --sample=10`.',
         'video_compression' => 'Stiskaj shranjene videe',
+        'saved_body_partner_inquiries' => 'Povpraševanja partnerjev: :state',
+        'partner_inquiries_section' => 'Povpraševanja partnerjev',
+        'partner_inquiries_description' => 'Obrazec za povpraševanje na petprep.si/partnerji. Izklopljeno: strežnik odgovori 503 in ne shrani ničesar (spletna stran pokaže, da obrazec ni na voljo). Privzeto vklopljeno.',
+        'partner_inquiries' => 'Sprejemaj povpraševanja partnerjev',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).
@@ -660,6 +666,27 @@ return [
             'title' => 'Preverjanje slik: :count ključnih slik zavrnjenih po vseh samodejnih poskusih',
             'body' => 'Ključna slika stanja ni prestala AI preverjanja (odvečne / prosojne tačke, druga žival, ljudje, besedilo …) niti po samodejnih ponovitvah z novimi semeni. Ni bila uporabljena — ljubljenček obdrži, kar prikazuje, to stanje še nima nove zanke. Po želji: Ljubljenčki → AI media → odpri kandidata → »Approve anyway« ali Regenerate. Slike poz (aktivnosti: preprost način) in slike stvari (prikazane brez vsebine) javljajo svoja opozorila.',
         ],
+    ],
+    'partner_inquiries' => [
+        'discord' => [
+            'title' => 'New partner inquiry, type: :type',
+        ],
+        'company' => 'Podjetje',
+        'contact_name' => 'Kontaktna oseba',
+        'email' => 'E-naslov',
+        'type' => 'Vrsta',
+        'message' => 'Sporočilo',
+        'locale' => 'Jezik',
+        'received' => 'Prejeto',
+        'types' => [
+            'series' => 'Sponzorstvo serije',
+            'sponsored_content' => 'Sponzorirane vsebine',
+            'insurer' => 'Zavarovalnica',
+            'directory' => 'Ustanovni partner v imeniku',
+            'shelter' => 'Zavetišče / društvo',
+            'other' => 'Drugo',
+        ],
+        'retention_note' => 'Povpraševanja se samodejno izbrišejo 12 mesecev po prejemu. IP-naslov se ne shranjuje. Odgovorite sami po e-pošti — strežnik ne pošlje ničesar.',
     ],
     'item_media' => [
         'discord' => [
