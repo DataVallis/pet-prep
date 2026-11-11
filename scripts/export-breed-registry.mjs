@@ -484,6 +484,7 @@ const SPECIES = [
       { id: 'lhasa_apso', synonyms: { en: ['Lhasa', 'Apso', 'Lhasa Apso dog'], sl: ['lhasa', 'lasa apso', 'tibetanski pes lhasa apso'] } },
       { id: 'dogue_de_bordeaux', synonyms: { en: ['Bordeaux Mastiff', 'French Mastiff', 'Bordeauxdogge', 'DDB'], sl: ['bordoška doga', 'bordoska doga', 'francoski mastif', 'dogue de bordeaux'] } },
       { id: 'flat_coated_retriever', synonyms: { en: ['Flatcoat', 'Flattie', 'Flat-coat', 'Flat Coated Retriever'], sl: ['ravnodlaki prinasalec', 'flat coated retriever', 'flatcoat'] } },
+      { id: 'border_terrier', synonyms: { en: ['Border Terrier dog'], sl: ['border terier', 'border terrier'] } },
     ],
   },
   {
@@ -2646,6 +2647,29 @@ const DOG_FACTS = {
       ['hip_elbow_dysplasia', 'health.hips'],
     ],
   },
+  // M5-R10-102. Height = PDSA average 25–28 cm (S770; the FCI standard S768 gives none), weight = FCI by sex (S768), lifespan =
+  // the McMillan 2024 median 14.2 y (S771) + the RKC band 'Over 12 years' (S769), exercise = RKC 'Up to 1 hour per day' (S769),
+  // coat / grooming / sheds = RKC key facts (S769). Coren rank 30 (S35). FCI origin Great Britain (GB). Not exported:
+  // lifespan.petmd (US alternative) / senior_from (derived), health.breed_watch (Category 1). New health keys:
+  // slem_shaking_puppy, cecs_cramping, gallbladder_mucocele (website words).
+  border_terrier: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['slem_shaking_puppy', 'health.slem'],
+      ['cecs_cramping', 'health.cecs'],
+      ['gallbladder_mucocele', 'health.gallbladder'],
+      ['cataracts', 'health.eyes'],
+      ['ear_infections_prone', 'health.ears'],
+    ],
+  },
 
 
 };
@@ -3484,6 +3508,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.flat_coated_retriever.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.flat_coated_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.flat_coated_retriever.exercise_minutes_senior',
+  },
+  border_terrier: {
+    adult_minutes: ['proposed_game_parameters.border_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.border_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.border_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.border_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.border_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.border_terrier.exercise_minutes_senior',
   },
 
 

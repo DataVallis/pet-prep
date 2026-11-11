@@ -52611,6 +52611,553 @@
       }
     }
   },
+  "border_terrier": {
+    "_note": "Added 2026-11-11 (M5-R10-102, unattended run — appended after the Flat-Coated Retriever: AKC 2024 No. 98 'Border Terrier', S174 full-list table re-read 2026-11-10). Quotes as returned by the web-fetch tool on 2026-11-11 (through its summarising model; fragments marked as such; a human should spot-check before showing any quote to users); paraphrase only in notes. Sources S767–S779 (+ S10 growth, S11 AAHA, S14 Dogs Trust, S24 puppy rule, S35 Coren, S45 steps). No health percentages anywhere. A small working terrier (FCI Group 3), RKC Breed Watch Category 1.",
+    "identity": {
+      "value": "FCI No. 10, Group 3 Section 1 (Large and medium sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S767",
+      "quote": "BORDER TERRIER (10)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S767): 'Group : n°3 - Terriers', section 'Large and medium sized Terriers', country of origin 'GREAT BRITAIN', 'Recognized on a definitive basis' 6/26/1963, official valid standard 9/8/2026; 'Subject to a working trial for some countries' (the standard S768 says 'Without working trial'). FCI-Standard N° 10 (S768) dated 06.10.2026/ EN."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S769",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S769, value as returned). PDSA (S770) 'Size: Small'; Dogs Trust (S772) and Woodgreen (S773) 'Small'. FCI 5.9–7.1 kg / 5.1–6.4 kg (S768) ≈ 11–16 lb → 'Small (12–24 pounds)' class of S10 for growth (females partly in 'Toy')."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            25,
+            28
+          ],
+          "female": [
+            25,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S770",
+        "quote": "Average height: 25-28 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact (S770, one range for both sexes, stored per sex). The FCI standard (S768) and the AKC standard (S776) give no height. VCA (S775) 'Height: 12 to 15 inches' (US) — alternative; Wikipedia (S778, tier C) 33–41 cm / 28–36 cm — not used."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            5.9,
+            7.1
+          ],
+          "female": [
+            5.1,
+            6.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S768",
+        "quote": "WEIGHT: Males: 5,9-7,1 kg; females 5,1-6,4 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 10 (S768) 'WEIGHT' (as returned) — the game range (adult_weight_kg). AKC standard (S776) 'Weight - Dogs, 13 to 15½ pounds, bitches, 11½ to 14 pounds' (≈ 5.9–7.0 / 5.2–6.4 kg) and PDSA (S770) 'Average weight: 5-7 kg', Woodgreen (S773) '5-7 kg' — agree."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: RKC 'Small' (S769), FCI 5.9–7.1 / 5.1–6.4 kg (S768). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Border Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.2,
+        "unit": "years",
+        "source_id": "S771",
+        "quote": "Border Terrier (x̃ = 14.2, HR 0.5, 0.5–0.6)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep, S771) results text as returned; Fig. 3 legend 'Border Terrier (light blue, x̃ = 14.2)'. Runbook first choice (McMillan 2024) → not provisional. The Dogs Trust table (S123) was not reachable (fetch provenance / proxy), so no CI / n here. Wikipedia (S778, tier C): 'A 2024 UK study found a life expectancy of 14.2 years for the breed' (cites McMillan 2024) — agrees."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S769",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S769, value as returned). PDSA (S770) 'Over 12 years'; Dogs Trust (S772) 'typically 12+ years'."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S774",
+        "quote": "long lifespans of 12–15 years",
+        "confidence": "medium",
+        "notes": "PetMD (S774, tier B, US), fragment as returned. VCA (S775) 'Lifespan: 12 to 15 years'; Woodgreen (S773) '12-15 years'."
+      },
+      "senior_from": {
+        "value": 10.65,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 14.2 y (McMillan 2024, S771) → 0.75 × 14.2 = 10.65 y = 127.8 → 128 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S771"
+        ],
+        "months": 128,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S769",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S769, value as returned) — the runbook's preferred source → 60. PDSA (S770) 'Minimum exercise (per day): 1 hour' and 'Your Border Terrier will need a minimum of an hour exercise every day.'; Woodgreen (S773) '60-90 mins' — agree on 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S770",
+            "quote": "Your Border Terrier will need a minimum of an hour exercise every day."
+          },
+          {
+            "value": "60–90",
+            "source_id": "S773",
+            "quote": "60-90 mins"
+          }
+        ]
+      },
+      "pdsa": {
+        "value": "a minimum of an hour a day, split into a couple of walks with off-lead time in a secure area",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Your Border Terrier will need a minimum of an hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S770); 'This should be split into a couple of walks with some off-lead time in a secure area.'; 'On top of this, your Border Terrier will also need lots of playtime, training sessions and free time.'"
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Remember to leave at a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S770), wording as on the page ('leave at a gap'; same sentence as the Dobermann PDSA page S211). No length given. Built: proposed_game_parameters.border_terrier.meal_exercise_gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "activity combined with gameness; energetic with a big personality",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "BEHAVIOUR / TEMPERAMENT: Combining activity with gameness.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 10 (S768). RKC tagline (S769) 'Active, game and adaptable working terrier'; PDSA (S770) 'Despite their small size, Border Terriers are energetic dogs with big personalities to match.'; AKC standard (S776) 'By nature he is good-tempered, affectionate, obedient, and easily trained.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No verbatim breed-specific family-pet sentence (the PDSA 'suit most families' passage came back only as a summary) → no family_pet chip."
+      },
+      "children": {
+        "value": "will love spending time with children of all ages given the right socialisation; supervise",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "will love spending time with children of all ages.",
+        "confidence": "high",
+        "notes": "PDSA (S770) fragment as returned: 'Border Terriers are not known for being aggressive dogs and given the right socialisation' 'will love spending time with children of all ages.' Caveats: 'Border Terriers are energetic and can sometimes get a little over excited,' and 'Always supervise your Border Terrier with children and vulnerable adults to avoid any accidents.' Basis of the children chip (statement with a supervision caveat) → never small_children. Woodgreen (S773) prefers slightly older children (see suitability.woodgreen_children)."
+      },
+      "other_pets": {
+        "value": "high prey drive — not with rabbits, guinea pigs or rats; well-socialised gets on with other dogs",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "as they have such a high prey drive they might see them as something to chase rather than part of the family!",
+        "confidence": "high",
+        "notes": "PDSA (S770) fragment as returned: 'We wouldn't recommend keeping a Border Terrier with other, smaller pets such as rabbits, guinea pigs and rats' + the quote. Basis of chases_small_pets. PDSA: 'As long as your Border Terrier is well-socialised with other dogs from a young age,' 'they should get along well with them.' VCA (S775) 'They retain a strong instinct to chase small animals.'"
+      },
+      "time_alone": {
+        "value": "prone to separation anxiety; best with someone at home all day",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Border Terriers are known for developing separation anxiety if they are left alone",
+        "confidence": "high",
+        "notes": "PDSA (S770) fragment as returned; continues 'because they form such strong bonds with their owners.'; 'It's better if there is someone with your dog all day and they are not left on their own.'; 'A worried and lonely Border Terrier can be very destructive around the house.' Basis of needs_company; never often_alone."
+      },
+      "socialisation": {
+        "value": "early socialisation is really important for puppies",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "It's really important that Border Terrier puppies from a breeder get the right early socialisation",
+        "confidence": "high",
+        "notes": "PDSA (S770) fragment as returned; 'with lots of different places, experiences, people and dogs from a young age'; 'This will help them to be confident dogs and stop them getting worried when you're out and about.' Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "learn best with positive reinforcement; wilful personality needs patient guidance",
+        "unit": "—",
+        "source_id": "S774",
+        "quote": "learn best when trained with positive reinforcement.",
+        "confidence": "medium",
+        "notes": "PetMD (S774) fragment as returned; 'their willful personality requires patient guidance.' VCA (S775) 'They respond best to consistent, positive reinforcement methods.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement; PDSA (S770): a lonely dog 'can be very destructive around the house' (see time_alone)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      },
+      "containment": {
+        "value": "cannot be trusted off-lead or in an unfenced area",
+        "unit": "—",
+        "source_id": "S777",
+        "quote": "cannot be trusted off-leash or in an unfenced area AT ANY TIME!!",
+        "confidence": "high",
+        "notes": "AKC 'Meet the Border Terrier' (S777, attributed to the Border Terrier Club of America), fragment as returned. PDSA (S770) off-lead time 'in a secure area' and 'As they love to dig' (fragment). Basis of secure_fencing."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S769).",
+      "breed_watch": {
+        "value": "Category 1 — no breed-specific points of concern",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC (S769): 'Currently no points of concern specific to this breed have been identified for special attention by judges,'. Not a welfare breed."
+      },
+      "patella": {
+        "value": "luxating patellas",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Luxating patellas – where the kneecaps slip temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S770). VCA (S775) table: patellar luxation."
+      },
+      "slem": {
+        "value": "spongiform leucoencephalomyelopathy (SLEM, shaking puppy syndrome) — DNA test",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "SLEM (Spongiform LeucoEncephaloMyelopathy) or shaking puppy syndrome.",
+        "confidence": "high",
+        "notes": "PDSA (S770); 'There is currently DNA testing for this.' RKC Good Practice test (S769) 'DNA test for spongiform leucoencephalomyelopathy (SLEM).' — breeder checklist."
+      },
+      "cecs": {
+        "value": "canine epileptoid cramping syndrome (CECS)",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Canine Epileptoid Cramping Syndrome (CECS) – tremors, muscle spasms, seizures, affecting whole or part of body.",
+        "confidence": "high",
+        "notes": "PDSA (S770). PetMD (S774) 'is a genetic disease that can cause cramps in a range of durations and frequencies' (fragment)."
+      },
+      "gallbladder": {
+        "value": "gallbladder mucocoele",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "Canine Gallbladder Mucocoele – this is where the gall bladder has difficulty emptying and may require surgical removal.",
+        "confidence": "high",
+        "notes": "PDSA (S770). PetMD (S774) 'Gallbladder mucocele is when the gallbladder becomes distended due to excessive mucus accumulation.'"
+      },
+      "eyes": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S774",
+        "quote": "Border Terriers can develop cataracts, a condition that clouds the eye lenses.",
+        "confidence": "medium",
+        "notes": "PetMD (S774). VCA (S775) table: juvenile cataracts, progressive retinal atrophy, cataracts (senior)."
+      },
+      "ears": {
+        "value": "ear problems; floppy ears are more prone to infections",
+        "unit": "—",
+        "source_id": "S774",
+        "quote": "The Border Terrier's floppy ears mean they can develop ear infections more easily than dogs with pricked (upright) ears.",
+        "confidence": "medium",
+        "notes": "PetMD (S774); 'Talk with your veterinarian about how often you should clean your dog's ears' — no frequency → no ear task. PDSA (S770) lists ear problems (link only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 30,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 30 | Border Terrier | Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "Wikipedia table (S35, read 2026-11-11; tier C) — rank 30, shared with the Briard. Coren's rank may come from Wikipedia (runbook §2.1). Rank 30 → tier 'Above average' (ranks 27–39). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 category 'Above Average Working Dogs': 'Understanding of new commands: 15 to 25 repetitions.' 'Obey first command: 70% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "quick to learn with reward-based training; easily trained",
+        "unit": "—",
+        "source_id": "S776",
+        "quote": "By nature he is good-tempered, affectionate, obedient, and easily trained.",
+        "confidence": "medium",
+        "notes": "AKC standard (S776). PetMD (S774) positive reinforcement, patient guidance."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.border_terrier.learning_multiplier (1.2, runbook rule: Above average tier, rank 30).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, narrow-bodied working terrier with an otter-like head",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "GENERAL APPEARANCE: Essentially a working terrier. Capable of following a horse.",
+        "confidence": "high",
+        "notes": "FCI (S768). RKC tagline (S769) 'Active, game and adaptable working terrier'. AKC standard (S776) 'a look of fearless and implacable determination characteristic of the breed.'"
+      },
+      "colours": {
+        "value": [
+          "grizzle and tan",
+          "red",
+          "wheaten",
+          "blue and tan"
+        ],
+        "unit": "list",
+        "source_id": "S768",
+        "quote": "Colour: Red, wheaten, grizzle and tan, or blue and tan.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 10 (S768); 'Any other colour or combination of colours unacceptable.'. AKC standard (S776) 'Red, grizzle and tan, blue and tan, or wheaten. A small amount of white may be allowed on the chest but white on the feet should be penalized. A dark muzzle is characteristic and desirable.' RKC Colour Watch 'Category 0: Breeds with no NBS colour registration options.' (S769). Never black, never merle, never white feet."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): grizzle and tan 0.45, red 0.3, wheaten 0.15, blue and tan 0.1 (Wikipedia S778 'Common coat colours are grizzle-and-tan, blue-and-tan, red, or wheaten.' — paraphrase order only). Portrait default = grizzle and tan."
+      },
+      "coat": {
+        "value": "harsh and dense with a close undercoat; wiry, somewhat broken topcoat lying closely",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "Hair: Harsh and dense; with close undercoat.",
+        "confidence": "high",
+        "notes": "FCI (S768). AKC (S776) 'A short and dense undercoat covered with a very wiry and somewhat broken topcoat which should lie closely, but it must not show any tendency to curl or wave.' RKC 'Coat length: Short' (S769)."
+      },
+      "muzzle": {
+        "value": "short, strong muzzle, black nose preferable; dark muzzle",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "Muzzle: Short, strong.",
+        "confidence": "high",
+        "notes": "FCI (S768): 'Skull: Moderately broad.', 'Nose: Black nose preferable, but liver or flesh-coloured one not a serious fault and tolerated.'. AKC (S776) 'A dark muzzle is characteristic and desirable.'"
+      },
+      "eyes": {
+        "value": "dark with a keen expression",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "EYES: dark with keen expression.",
+        "confidence": "high",
+        "notes": "FCI (S768)."
+      },
+      "ears": {
+        "value": "small, V-shaped, moderately thick, dropping forward close to the cheek",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "EARS: Small, V-shaped, of moderate thickness, and dropping forward close to the cheek.",
+        "confidence": "high",
+        "notes": "FCI (S768)."
+      },
+      "tail": {
+        "value": "moderately short, thick at the base then tapering, set high, carried gaily but not curled over the back (natural)",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "TAIL: Moderately short; fairly thick at base, then tapering.",
+        "confidence": "high",
+        "notes": "FCI (S768); 'Set high, carried gaily, but not curled over back.'. Never docked."
+      }
+    },
+    "suitability": {
+      "_note": "Key facts and statements as returned on 2026-11-11 (RKC S769, PDSA S770, Dogs Trust S772, Woodgreen S773, PetMD S774, VCA S775).",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' → 60 min."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home'. Basis of the apartment chip."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden'."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' — no number (see pdsa_grooming)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds'. PDSA (S770) 'Like any dog, your Border Terrier is likely to shed throughout the year.'; Dogs Trust (S772) 'they do shed'. Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan'."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country'."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed'."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S769",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch."
+      },
+      "pdsa_grooming": {
+        "value": "a brush a couple of times a week; may need professional grooming in spring and autumn",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "They have short, coarse wiry coats and so a brush a couple of times a week should help keep on top of dead hairs",
+        "confidence": "high",
+        "notes": "PDSA (S770) as returned; continues 'but they may require professional grooming in spring and autumn to keep them looking smart.' (twice a year, conditional — no program period → no groomer task). Dogs Trust (S772) 'they do shed so you'll typically need to brush them a couple of times a week.' Basis of the brushing value 2 and frequent_grooming."
+      },
+      "pdsa_bath": {
+        "value": "a bath from time to time when muddy",
+        "unit": "—",
+        "source_id": "S770",
+        "quote": "and needs a bath from time to time.",
+        "confidence": "medium",
+        "notes": "PDSA (S770) fragment — no frequency → no bath reminder."
+      },
+      "petmd_stripping": {
+        "value": "hand-stripped twice a year",
+        "unit": "—",
+        "source_id": "S774",
+        "quote": "Border Terriers need to be handstripped twice a year",
+        "confidence": "medium",
+        "notes": "PetMD (S774); 'If the fur is clipped, the Border Terrier will lose that characteristic hard coat'. Twice a year has no program period (12-week challenge) → no groomer task (German Wirehaired Pointer precedent); fact in the register text."
+      },
+      "vca_grooming": {
+        "value": "brush weekly; hand-stripping may be needed; bathe occasionally; regular nails and ears",
+        "unit": "—",
+        "source_id": "S775",
+        "quote": "Brush weekly to remove loose hair and prevent buildup.",
+        "confidence": "medium",
+        "notes": "VCA (S775); 'Bathe occasionally, as over bathing can affect coat quality.'; 'Maintain regular nail trimming and ear cleaning.' — no frequency for nails / ears → no task."
+      },
+      "woodgreen_children": {
+        "value": "slightly older children — can be mouthy and too busy for young children",
+        "unit": "—",
+        "source_id": "S773",
+        "quote": "would suit a home with slightly older children as they can be quite mouthy and too busy for young children.",
+        "confidence": "medium",
+        "notes": "Woodgreen Pet Explorer (S773). Basis of lively_older_children."
+      },
+      "woodgreen_exercise": {
+        "value": "60-90 mins",
+        "unit": "—",
+        "source_id": "S773",
+        "quote": "60-90 mins",
+        "confidence": "medium",
+        "notes": "Woodgreen (S773) — alternative; RKC decides."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -78731,6 +79278,267 @@
         "confidence": "high",
         "notes": "FCI-Standard N° 121 (S761). Two standard colours; black first with the highest unsourced weight → portrait default.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black (FCI S761) is the portrait default; natural tail; only the two standard colours"
+      }
+    },
+    "border_terrier": {
+      "_note": "Unattended run M5-R10-102 (2026-11-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S769 'Up to 1 hour per day' → 60). Senior 128 from the McMillan 2024 median 14.2 y (S771) → not provisional. Coren rank 30 (Above average) → 1.2. Built: brushing 2× a week (RKC 'More than once a week' → PDSA S770 'a couple of times a week', M5-R13), meal gap (PDSA S770, M5-R16), puppy socialisation with the PDSA quote (S770, M5-R17). No care task: no source gives a program-period frequency (hand-stripping / professional grooming twice a year, bath 'from time to time', nails / ears 'regular'). No new vocabulary key. Not a welfare breed (RKC Breed Watch Category 1) → in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S769",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S769) → rule 'up to N' → 60. PDSA (S770) '1 hour' and Woodgreen (S773) '60-90 mins' (lower bound 60) agree.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S769 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S769",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 128
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 128 = round(0.75 × 14.2 y × 12) = round(127.8) = 128 (S11 + McMillan 2024 median 14.2 y, S771). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S771"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 128 (0.75 × 14.2 y, McMillan 2024 S771)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 128
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 128)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 30 'Border Terrier' (S35, checked 2026-11-11) → tier Above average (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 30, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S770",
+        "quote": "They have short, coarse wiry coats and so a brush a couple of times a week should help keep on top of dead hairs",
+        "confidence": "high",
+        "notes": "border_terrier.suitability.pdsa_grooming. RKC 'Grooming: More than once a week' (S769) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PDSA (S770) 'a brush a couple of times a week' (Dogs Trust S772 'a couple of times a week' agrees) → 2. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S769",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 1,
+            "source_id": "S775",
+            "quote": "Brush weekly to remove loose hair and prevent buildup.",
+            "notes": "VCA — a single lower number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PDSA »a couple of times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S770",
+        "quote": "Remember to leave at a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S770); border_terrier.exercise.after_meals. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S770",
+        "quote": "It's really important that Border Terrier puppies from a breeder get the right early socialisation",
+        "confidence": "high",
+        "notes": "border_terrier.behaviour.socialisation (PDSA S770). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S770)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-102); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.children"
+            ],
+            "quote": "S770 'will love spending time with children of all ages.'",
+            "note": "Given the right socialisation; supervision caveat kept in notes → never small_children."
+          },
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S769"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_size_of_home"
+            ],
+            "quote": "S769 'Flat/ Apartment'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "lively_older_children",
+            "source_ids": [
+              "S773"
+            ],
+            "refs": [
+              "border_terrier.suitability.woodgreen_children"
+            ],
+            "quote": "S773 'would suit a home with slightly older children as they can be quite mouthy and too busy for young children.'",
+            "note": "Bull Terrier precedent: a children statement (PDSA) next to an older-children advice (Woodgreen)."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.time_alone"
+            ],
+            "quote": "S770 'Border Terriers are known for developing separation anxiety if they are left alone'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S777"
+            ],
+            "refs": [
+              "border_terrier.behaviour.containment"
+            ],
+            "quote": "S777 'cannot be trusted off-leash or in an unfenced area AT ANY TIME!!'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S769"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S769 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S769",
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_grooming",
+              "border_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S769 'More than once a week'; S770 'They have short, coarse wiry coats and so a brush a couple of times a week should help keep on top of dead hairs'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.other_pets"
+            ],
+            "quote": "S770 'as they have such a high prey drive they might see them as something to chase rather than part of the family!'"
+          }
+        ]
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S769), no BVA / UFAW / VetCompass conformation concern found. Never promise the breed's health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Border Terrier, grizzle and tan: small, narrow-bodied, active working terrier with an otter-like head; moderately broad skull with a short, strong, dark muzzle and black nose; dark eyes with a keen expression; small V-shaped ears dropping forward close to the cheek; harsh, dense, wiry and somewhat broken close-lying coat with a close undercoat; moderately short natural tail, thick at the base then tapering, carried gaily but not curled over the back — never black, never merle, never white feet, never docked",
+        "unit": "—",
+        "source_id": "S768",
+        "quote": "Colour: Red, wheaten, grizzle and tan, or blue and tan.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 10 (S768) + AKC standard (S776, dark muzzle). Four standard colours; grizzle and tan first with the highest unsourced weight → portrait default.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grizzle and tan (FCI S768) is the portrait default; natural tail; only the four standard colours"
       }
     }
   }

@@ -3648,6 +3648,26 @@
         }
       ],
       "notes": "RKC breed page (dog-data S762, 2026-11-10): eye testing with gonioscopy under the minimum recommendation (heading 'Good Practice schemes and tests'), elbow and hip schemes under 'Best Practice schemes and tests'; no breed-specific DNA package. PetMD (S763) names no breeder test. No new test key."
+    },
+    "border_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S769",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_slem",
+          "level": "minimum",
+          "name": "DNA test for spongiform leucoencephalomyelopathy (SLEM)",
+          "source_id": "S769",
+          "quote": "DNA test for spongiform leucoencephalomyelopathy (SLEM)."
+        }
+      ],
+      "notes": "RKC breed page (dog-data S769, 2026-11-11): section 'Pre-breeding Health Screening' with the headings 'Good Practice schemes and tests' (= minimum, Dobermann precedent: SLEM DNA test) and 'Best Practice schemes and tests' (no test listed); 'We don't currently offer a breed-specific DNA testing package for this breed,'. PDSA (S770) 'There is currently DNA testing for this.' (SLEM). New test key dna_slem needs website words."
     }
   }
 }

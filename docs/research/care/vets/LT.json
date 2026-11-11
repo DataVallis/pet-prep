@@ -60,7 +60,8 @@
       "duty": "University small animal clinic, open 24 h: emergency and planned outpatient and inpatient care. Call ahead on +370 620 78353.",
       "duty_i18n": {
         "hr": "Sveučilišna klinika za male životinje, 24 h: hitna skrb te planirana ambulantna i bolnička skrb. Nazovi unaprijed na +370 620 78353.",
-        "de": "Universitäre Kleintierklinik, rund um die Uhr geöffnet: Notfälle sowie geplante ambulante und stationäre Behandlung. Bitte vorher anrufen: +370 620 78353."
+        "de": "Universitäre Kleintierklinik, rund um die Uhr geöffnet: Notfälle sowie geplante ambulante und stationäre Behandlung. Bitte vorher anrufen: +370 620 78353.",
+        "fr": "Clinique universitaire pour petits animaux, ouverte 24 h/24 : urgences, consultations programmées et hospitalisation. Appelez avant de venir au +370 620 78353."
       },
       "small_animals": true,
       "url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
@@ -80,7 +81,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
@@ -99,7 +101,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
@@ -118,7 +121,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://druskininkai.lt/en/pet-friendly",
@@ -137,7 +141,8 @@
       "duty": "Referral veterinary hospital open 24 hours a day, 7 days a week. Call ahead on +370 612 88788.",
       "duty_i18n": {
         "hr": "Referentna veterinarska bolnica otvorena 24 sata dnevno, 7 dana u tjednu. Nazovi unaprijed na +370 612 88788.",
-        "de": "Überweisungsklinik, rund um die Uhr, 7 Tage die Woche geöffnet. Bitte vorher anrufen: +370 612 88788."
+        "de": "Überweisungsklinik, rund um die Uhr, 7 Tage die Woche geöffnet. Bitte vorher anrufen: +370 612 88788.",
+        "fr": "Hôpital vétérinaire de référence ouvert 24 h/24, 7 j/7. Appelez avant de venir au +370 612 88788."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
@@ -157,7 +162,8 @@
       "duty": "Referral veterinary hospital open 24/7. Call ahead on +370 612 88788.",
       "duty_i18n": {
         "hr": "Referentna veterinarska bolnica otvorena 24/7. Nazovi unaprijed na +370 612 88788.",
-        "de": "Überweisungsklinik, rund um die Uhr geöffnet. Bitte vorher anrufen: +370 612 88788."
+        "de": "Überweisungsklinik, rund um die Uhr geöffnet. Bitte vorher anrufen: +370 612 88788.",
+        "fr": "Hôpital vétérinaire de référence ouvert 24 h/24, 7 j/7. Appelez avant de venir au +370 612 88788."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/klaipeda-referral-veterinary-hospital",
@@ -177,7 +183,8 @@
       "duty": "Open daily 08:00-24:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 08:00–24:00.",
-        "de": "Täglich 8–24 Uhr geöffnet."
+        "de": "Täglich 8–24 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 8 h–24 h."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/antakalnis-clinic",
@@ -196,7 +203,8 @@
       "duty": "Open daily 07:00-23:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 07:00–23:00.",
-        "de": "Täglich 7–23 Uhr geöffnet."
+        "de": "Täglich 7–23 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 7 h–23 h."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
@@ -215,7 +223,8 @@
       "duty": "Open daily 08:00-21:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 08:00–21:00.",
-        "de": "Täglich 8–21 Uhr geöffnet."
+        "de": "Täglich 8–21 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 8 h–21 h."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
@@ -234,7 +243,8 @@
       "duty": "Open daily 08:00-21:00.",
       "duty_i18n": {
         "hr": "Otvoreno svaki dan 08:00–21:00.",
-        "de": "Täglich 8–21 Uhr geöffnet."
+        "de": "Täglich 8–21 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 8 h–21 h."
       },
       "small_animals": true,
       "url": "https://www.8drambliai.lt/contacts",
@@ -253,7 +263,8 @@
       "duty": "Animal hospital, open every day 00:00-23:59. Inpatient ward +370 604 77433. Call ahead.",
       "duty_i18n": {
         "hr": "Bolnica za životinje, otvorena svaki dan 00:00–23:59. Bolnički odjel +370 604 77433. Nazovi unaprijed.",
-        "de": "Tierklinik, täglich rund um die Uhr (0.00–23.59 Uhr) geöffnet. Stationsnummer +370 604 77433. Bitte vorher anrufen."
+        "de": "Tierklinik, täglich rund um die Uhr (0.00–23.59 Uhr) geöffnet. Stationsnummer +370 604 77433. Bitte vorher anrufen.",
+        "fr": "Hôpital vétérinaire, ouvert tous les jours 0 h–23 h 59. Service d’hospitalisation : +370 604 77433. Appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
@@ -272,7 +283,8 @@
       "duty": "Open Mon-Sat 09:00-22:00, Sun 09:00-21:00. Not 24 h; after hours it refers to the Lazdynai animal hospital (+370 677 05503).",
       "duty_i18n": {
         "hr": "Otvoreno pon–sub 09:00–22:00, ned 09:00–21:00. Ne radi 24 h; izvan radnog vremena upućuju u bolnicu za životinje Lazdynai (+370 677 05503).",
-        "de": "Mo–Sa 9–22 Uhr, So 9–21 Uhr geöffnet. Kein 24-Stunden-Dienst; außerhalb der Öffnungszeiten Verweis an die Tierklinik Lazdynai (+370 677 05503)."
+        "de": "Mo–Sa 9–22 Uhr, So 9–21 Uhr geöffnet. Kein 24-Stunden-Dienst; außerhalb der Öffnungszeiten Verweis an die Tierklinik Lazdynai (+370 677 05503).",
+        "fr": "Ouvert lun.–sam. 9 h–22 h, dim. 9 h–21 h. Pas de 24 h/24 ; hors horaires, oriente vers l’hôpital vétérinaire de Lazdynai (+370 677 05503)."
       },
       "small_animals": true,
       "url": "https://vetmed.lt/kontaktai/",
@@ -291,7 +303,8 @@
       "duty": "Mon-Fri 08:00-22:00, Sat-Sun 08:00-19:00.",
       "duty_i18n": {
         "hr": "pon–pet 08:00–22:00, sub–ned 08:00–19:00.",
-        "de": "Mo–Fr 8–22 Uhr, Sa–So 8–19 Uhr."
+        "de": "Mo–Fr 8–22 Uhr, Sa–So 8–19 Uhr.",
+        "fr": "Lun.–ven. 8 h–22 h, sam.–dim. 8 h–19 h."
       },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
@@ -310,7 +323,8 @@
       "duty": "Mon-Fri 07:00-22:00, Sat-Sun 09:00-20:00.",
       "duty_i18n": {
         "hr": "pon–pet 07:00–22:00, sub–ned 09:00–20:00.",
-        "de": "Mo–Fr 7–22 Uhr, Sa–So 9–20 Uhr."
+        "de": "Mo–Fr 7–22 Uhr, Sa–So 9–20 Uhr.",
+        "fr": "Lun.–ven. 7 h–22 h, sam.–dim. 9 h–20 h."
       },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
@@ -329,7 +343,8 @@
       "duty": "On-call veterinarian 24/7 for urgent cases at Technikos g. 39; regular hours Mon-Fri 09:00-20:00, Sat-Sun 09:00-17:00. Call ahead.",
       "duty_i18n": {
         "hr": "Dežurni veterinar 24/7 za hitne slučajeve na adresi Technikos g. 39; redovno radno vrijeme pon–pet 09:00–20:00, sub–ned 09:00–17:00. Nazovi unaprijed.",
-        "de": "Diensthabender Tierarzt rund um die Uhr für dringende Fälle in der Technikos g. 39; reguläre Sprechzeiten Mo–Fr 9–20 Uhr, Sa–So 9–17 Uhr. Bitte vorher anrufen."
+        "de": "Diensthabender Tierarzt rund um die Uhr für dringende Fälle in der Technikos g. 39; reguläre Sprechzeiten Mo–Fr 9–20 Uhr, Sa–So 9–17 Uhr. Bitte vorher anrufen.",
+        "fr": "Vétérinaire de garde 24 h/24, 7 j/7 pour les cas urgents au Technikos g. 39 ; horaires habituels lun.–ven. 9 h–20 h, sam.–dim. 9 h–17 h. Appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.snaucerisvet.lt/veterinarijos-klinika-kaune/",
@@ -349,7 +364,8 @@
       "duty": "On-call clinic 24/7. Regular hours Mon-Fri 09:00-18:00, Sat 10:00-14:00; outside them call for on-call service.",
       "duty_i18n": {
         "hr": "Dežurna klinika 24/7. Redovno radno vrijeme pon–pet 09:00–18:00, sub 10:00–14:00; izvan njega nazovi za dežurnu službu.",
-        "de": "Bereitschaftsklinik rund um die Uhr. Reguläre Sprechzeiten Mo–Fr 9–18 Uhr, Sa 10–14 Uhr; außerhalb dieser Zeiten bitte für den Bereitschaftsdienst anrufen."
+        "de": "Bereitschaftsklinik rund um die Uhr. Reguläre Sprechzeiten Mo–Fr 9–18 Uhr, Sa 10–14 Uhr; außerhalb dieser Zeiten bitte für den Bereitschaftsdienst anrufen.",
+        "fr": "Clinique de garde 24 h/24, 7 j/7. Horaires habituels lun.–ven. 9 h–18 h, sam. 10 h–14 h ; en dehors, appelez pour le service de garde."
       },
       "small_animals": true,
       "url": "https://mambaveterinaras.lt/",
@@ -369,7 +385,8 @@
       "duty": "Mon-Fri 09:00-21:00, Sat-Sun 09:00-17:00.",
       "duty_i18n": {
         "hr": "pon–pet 09:00–21:00, sub–ned 09:00–17:00.",
-        "de": "Mo–Fr 9–21 Uhr, Sa–So 9–17 Uhr."
+        "de": "Mo–Fr 9–21 Uhr, Sa–So 9–17 Uhr.",
+        "fr": "Lun.–ven. 9 h–21 h, sam.–dim. 9 h–17 h."
       },
       "small_animals": true,
       "url": "https://drvet.lt/kontaktai/",
@@ -388,7 +405,8 @@
       "duty": "Urgent help line 24/7 on +370 617 02490; regular hours Mon-Fri 09:00-22:00, Sat-Sun 10:00-18:00. Registration +370 615 75519.",
       "duty_i18n": {
         "hr": "Hitna telefonska linija 24/7 na +370 617 02490; redovno radno vrijeme pon–pet 09:00–22:00, sub–ned 10:00–18:00. Recepcija +370 615 75519.",
-        "de": "Notfalltelefon rund um die Uhr unter +370 617 02490; reguläre Sprechzeiten Mo–Fr 9–22 Uhr, Sa–So 10–18 Uhr. Anmeldung +370 615 75519."
+        "de": "Notfalltelefon rund um die Uhr unter +370 617 02490; reguläre Sprechzeiten Mo–Fr 9–22 Uhr, Sa–So 10–18 Uhr. Anmeldung +370 615 75519.",
+        "fr": "Ligne d’aide urgente 24 h/24, 7 j/7 au +370 617 02490 ; horaires habituels lun.–ven. 9 h–22 h, sam.–dim. 10 h–18 h. Accueil : +370 615 75519."
       },
       "small_animals": true,
       "url": "https://siauliuveterinarijoscentras.lt/",
@@ -408,7 +426,8 @@
       "duty": "Call ahead for opening hours.",
       "duty_i18n": {
         "hr": "Radno vrijeme provjeri telefonom.",
-        "de": "Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       },
       "small_animals": true,
       "url": "https://www.veterinaraspalanga.lt/kontaktai/",
@@ -426,7 +445,8 @@
       "emergency_24h": false,
       "duty": "Call ahead before coming in an emergency.",
       "duty_i18n": {
-        "de": "Im Notfall bitte vor dem Besuch anrufen."
+        "de": "Im Notfall bitte vor dem Besuch anrufen.",
+        "fr": "Appelez avant de venir en cas d’urgence."
       },
       "small_animals": true,
       "url": "https://vetaminas.lt/",

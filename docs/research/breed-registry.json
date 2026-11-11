@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a600affb1c406438ba9ed959e2ec7e222e2b0c0f270229e5c6c5783b06693946"
+      "sha256": "01c52d8505b63e30d940c2ce2e22cea640f700f2a46a1ea88a4de0f2f91485e8"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2bd15217c76b0ae60a675cda7610525083a1a393bf50db36cea544788fb3bef9"
+      "sha256": "53838cec621f0a722055286ae7d1a61d8c14a967dec03bd4acd8b2c99bc10725"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "216768685b9e1817a7ac9643bc573fb463d540e3c5cd005c6ba9d656f315a04c"
+      "sha256": "fc1515c49f03f11fb815a2f2ab4c5739cdc1e1995dc8b3d9ca75e08335beed61"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4324ba27e3ad13269b53aa4520949a16b491ddab817d9c3b23d60b0feba87cc2"
+      "sha256": "d8b758742f98e8ee1b2646a1f4bb3e7e1df70686681634aba5f385a8a9e60b62"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a514e807eeefce5d8e7819358dbf1d1fa1bc01f513ba2655f0117b1c7518f2a3"
+      "sha256": "be04a745c882bbdf0f2a9884410cde9b583233d270b3ed392bee5c2df2fec82f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "318eed53c426db850f8170b33d20fce6aef1c14a7003b446973114892f8aeda9"
+      "sha256": "69b4c2310d69f72ea430c101fb0295e94f2f02d3087e3d86074845373449e795"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,11 +61,11 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "e4352a89ede1e21ad91114bfbf7af9c0305b23243333d083910caef88a8d02a7"
+      "sha256": "2fd5a1ca7d7a02d145b1d3fb938030e1be9783d1c0ad8104fd4592d054bbfda1"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7ce5c99083622033cc7859988c0ce08ec98da583ee5f753a4918ab47df431d04"
+      "sha256": "1d3b09e9d4f310674d30d4e7216aa26b5826ea4065e3dca531d025ba9d10dc20"
     }
   },
   "suitability_vocabulary": {
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 94,
+      "breed_count": 95,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -57001,6 +57001,591 @@
       ]
     },
     {
+      "id": "border_terrier",
+      "species": "dog",
+      "order": 94,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Border Terrier",
+        "sl": "Borderski terier"
+      },
+      "slug": {
+        "en": "border-terrier",
+        "sl": "borderski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Border Terrier dog"
+        ],
+        "sl": [
+          "border terier",
+          "border terrier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              28
+            ],
+            "female": [
+              25,
+              28
+            ]
+          },
+          "source_ids": [
+            "S770"
+          ],
+          "ref": "border_terrier.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.9,
+              7.1
+            ],
+            "female": [
+              5.1,
+              6.4
+            ]
+          },
+          "source_ids": [
+            "S768"
+          ],
+          "ref": "border_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "border_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 14.2,
+          "source_ids": [
+            "S771"
+          ],
+          "ref": "border_terrier.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S769"
+          ],
+          "ref": "border_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 30,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "border_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 10,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S767"
+          ],
+          "ref": "border_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S770"
+          ],
+          "ref": "border_terrier.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "slem_shaking_puppy",
+          "source_ids": [
+            "S770"
+          ],
+          "ref": "border_terrier.health.slem",
+          "confidence": "high"
+        },
+        {
+          "key": "cecs_cramping",
+          "source_ids": [
+            "S770"
+          ],
+          "ref": "border_terrier.health.cecs",
+          "confidence": "high"
+        },
+        {
+          "key": "gallbladder_mucocele",
+          "source_ids": [
+            "S770"
+          ],
+          "ref": "border_terrier.health.gallbladder",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S774"
+          ],
+          "ref": "border_terrier.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "ear_infections_prone",
+          "source_ids": [
+            "S774"
+          ],
+          "ref": "border_terrier.health.ears",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.children"
+            ]
+          },
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S769"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "lively_older_children",
+            "source_ids": [
+              "S773"
+            ],
+            "refs": [
+              "border_terrier.suitability.woodgreen_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S777"
+            ],
+            "refs": [
+              "border_terrier.behaviour.containment"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S769"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S769",
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.suitability.rkc_grooming",
+              "border_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S770"
+            ],
+            "refs": [
+              "border_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 128
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 128
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.border_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S769"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S769 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.border_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.border_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S771"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 128 (0.75 × 14.2 y, McMillan 2024 S771)"
+          },
+          {
+            "ref": "proposed_game_parameters.border_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 30, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.border_terrier.grooming",
+            "basis_source_ids": [
+              "S770"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PDSA »a couple of times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S769",
+          "S770",
+          "S771"
+        ]
+      },
+      "portrait": {
+        "file": "border-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_slem",
+            "level": "minimum",
+            "source_ids": [
+              "S769"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S769"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S767",
+        "S768",
+        "S769",
+        "S770",
+        "S771",
+        "S773",
+        "S774",
+        "S777",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -62816,6 +63401,62 @@
       "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Sep. 13, 2023)",
       "title": "Flat-Coated Retriever Dog Breed Health and Care",
       "url": "https://www.petmd.com/dog/breeds/flat-coated-retriever"
+    },
+    {
+      "id": "S767",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "Breeds nomenclature — Border Terrier (10)",
+      "url": "https://fci.be/en/nomenclature/BORDER-TERRIER-10.html"
+    },
+    {
+      "id": "S768",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 10 Border Terrier (06.10.2026/ EN) (PDF)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/010g03-en.pdf"
+    },
+    {
+      "id": "S769",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Border Terrier — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/border-terrier/"
+    },
+    {
+      "id": "S770",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Border Terrier",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/border-terrier"
+    },
+    {
+      "id": "S771",
+      "tier": "A",
+      "publisher": "Scientific Reports (nature.com)",
+      "title": "Longevity of companion dog breeds: those at risk from early death (McMillan et al. 2024, doi:10.1038/s41598-023-50458-w) (PDF)",
+      "url": "https://www.nature.com/articles/s41598-023-50458-w.pdf"
+    },
+    {
+      "id": "S773",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity",
+      "title": "Pet Explorer — Border Terrier",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/border-terrier"
+    },
+    {
+      "id": "S774",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Sep. 19, 2023)",
+      "title": "Border Terrier",
+      "url": "https://www.petmd.com/dog/breeds/border-terrier"
+    },
+    {
+      "id": "S777",
+      "tier": "B",
+      "publisher": "American Kennel Club — Arliss Paddock (updated April 20, 2021)",
+      "title": "Meet the Border Terrier",
+      "url": "https://www.akc.org/expert-advice/lifestyle/meet-border-terrier/"
     },
     {
       "id": "C1",

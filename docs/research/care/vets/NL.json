@@ -141,7 +141,8 @@
       "duty_i18n": {
         "sl": "pon–pet 17–9 naslednje jutro; ob vikendih in praznikih 24 ur na dan. Najprej pokličite. Med tednom podnevi dežura univerzitetna klinika (UKG, 030-253 9411).",
         "hr": "pon–pet 17:00–09:00 sljedećeg jutra; vikendom i na blagdane 24/7. Nazovi unaprijed. Radnim danima tijekom dana dežura sveučilišna klinika (UKG, 030-253 9411).",
-        "de": "Mo–Fr 17–9 Uhr (bis zum nächsten Morgen); am Wochenende und an Feiertagen rund um die Uhr. Bitte zuerst anrufen. Werktags tagsüber übernimmt die Universitätsklinik (UKG, 030-253 9411)."
+        "de": "Mo–Fr 17–9 Uhr (bis zum nächsten Morgen); am Wochenende und an Feiertagen rund um die Uhr. Bitte zuerst anrufen. Werktags tagsüber übernimmt die Universitätsklinik (UKG, 030-253 9411).",
+        "fr": "Lun.–ven. 17 h–9 h le lendemain matin ; week-ends et jours fériés 24 h/24, 7 j/7. Appelez d’abord. En journée en semaine, relais assuré par la clinique universitaire (UKG, 030-253 9411)."
       },
       "small_animals": true,
       "url": "https://diergeneeskunde.nl/klinieken/spoedkliniek/",
@@ -162,7 +163,8 @@
       "duty_i18n": {
         "sl": "Nujne primere sprejemajo 24 ur na dan; veterinarji in veterinarski tehniki so vedno prisotni. Najprej se dogovorite po telefonu. Specialistična ekipa ni zagotovljena 24 ur na dan.",
         "hr": "Hitni pacijenti primaju se 0–24; veterinari i veterinarski pomoćnici stalno su prisutni. Najava telefonom unaprijed. Specijalistički tim nije zajamčen 24/7.",
-        "de": "Notfallpatienten werden rund um die Uhr behandelt; Tierärzte und tiermedizinisches Fachpersonal sind jederzeit vor Ort. Bitte vorher telefonisch anmelden. Die Verfügbarkeit des Fachärzteteams rund um die Uhr ist nicht garantiert."
+        "de": "Notfallpatienten werden rund um die Uhr behandelt; Tierärzte und tiermedizinisches Fachpersonal sind jederzeit vor Ort. Bitte vorher telefonisch anmelden. Die Verfügbarkeit des Fachärzteteams rund um die Uhr ist nicht garantiert.",
+        "fr": "Urgences prises en charge 24 h/24 ; vétérinaires et auxiliaires vétérinaires sur place en permanence. Prenez rendez-vous ou appelez d’abord. Équipe de spécialistes non garantie 24 h/24, 7 j/7."
       },
       "small_animals": true,
       "url": "https://mcvoordieren.nl/",
@@ -183,7 +185,8 @@
       "duty_i18n": {
         "sl": "Nujna klinika (Spoedkliniek) odprta 365 dni v letu, 24 ur na dan; napotitvena klinika 8–17. Za naročanje pokličite.",
         "hr": "Hitna klinika otvorena 365 dana u godini, 24 h; referentna klinika 08:00–17:00. Za termin nazovi.",
-        "de": "Notfallklinik (Spoedkliniek) 365 Tage im Jahr rund um die Uhr geöffnet; Überweisungsklinik 8–17 Uhr. Bitte telefonisch einen Termin vereinbaren."
+        "de": "Notfallklinik (Spoedkliniek) 365 Tage im Jahr rund um die Uhr geöffnet; Überweisungsklinik 8–17 Uhr. Bitte telefonisch einen Termin vereinbaren.",
+        "fr": "Clinique d’urgences ouverte 365 j/an, 24 h/24 ; clinique spécialisée sur adressage 8 h–17 h. Appelez pour prendre rendez-vous."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zuid-holland/haaglanden/",
@@ -204,7 +207,8 @@
       "duty_i18n": {
         "sl": "Nujna klinika (Spoedkliniek) vsak dan 0–24; napotitvena klinika med tednom 8–18. Zaprto 25. in 26. dec, 1. jan, 27. apr (delovni čas klinike; preverite po telefonu).",
         "hr": "Hitna klinika svaki dan 0–24; referentna klinika radnim danima 08:00–18:00. Zatvoreno 25. i 26. 12., 1. 1. i 27. 4. (radno vrijeme klinike; provjeri telefonom).",
-        "de": "Notfallklinik (Spoedkliniek) täglich rund um die Uhr; Überweisungsklinik werktags 8–18 Uhr. Geschlossen am 25./26. Dez., 1. Jan. und 27. Apr. (Klinikzeiten; bitte telefonisch nachfragen)."
+        "de": "Notfallklinik (Spoedkliniek) täglich rund um die Uhr; Überweisungsklinik werktags 8–18 Uhr. Geschlossen am 25./26. Dez., 1. Jan. und 27. Apr. (Klinikzeiten; bitte telefonisch nachfragen).",
+        "fr": "Clinique d’urgences tous les jours 24 h/24 ; clinique spécialisée sur adressage en semaine 8 h–18 h. Fermé les 25 et 26 déc., le 1er janv., le 27 avr. (horaires de la clinique ; vérifiez par téléphone)."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zuid-holland/verwijscentrum-dordrecht/",
@@ -225,7 +229,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu (območje Rotterdama; po 22. uri sem napoti Dierenziekenhuis Rotterdam).",
         "hr": "Hitna skrb 24 h, 7 dana (regija Rotterdam; Dierenziekenhuis Rotterdam nakon 22:00 upućuje ovamo).",
-        "de": "Notfallversorgung täglich rund um die Uhr (Region Rotterdam; das Dierenziekenhuis Rotterdam verweist ab 22 Uhr hierher)."
+        "de": "Notfallversorgung täglich rund um die Uhr (Region Rotterdam; das Dierenziekenhuis Rotterdam verweist ab 22 Uhr hierher).",
+        "fr": "Urgences 24 h/24, 7 j/7 (région de Rotterdam ; le Dierenziekenhuis Rotterdam y oriente après 22 h)."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/barendrecht/",
@@ -246,7 +251,8 @@
       "duty_i18n": {
         "sl": "Odprto vsak dan, 24 ur na dan za nujne primere in napotitveno oskrbo (območje Eindhovna).",
         "hr": "Otvoreno svaki dan, 24 h dnevno za hitnu i specijalističku skrb (regija Eindhoven).",
-        "de": "Täglich rund um die Uhr geöffnet für Notfälle und Überweisungsfälle (Region Eindhoven)."
+        "de": "Täglich rund um die Uhr geöffnet für Notfälle und Überweisungsfälle (Region Eindhoven).",
+        "fr": "Ouvert tous les jours, 24 h/24, pour les urgences et les soins de second recours (région d’Eindhoven)."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/zuidoost-brabant/",
@@ -266,7 +272,8 @@
       "duty_i18n": {
         "sl": "Odprto ves dan, vsak dan; nujna pomoč (spoed) 24 ur na dan (območje Tilburga / Den Boscha).",
         "hr": "Otvoreno cijeli dan, svaki dan; hitna služba 24/7 (regija Tilburg / Den Bosch).",
-        "de": "Täglich ganztägig geöffnet; Notdienst (Spoed) rund um die Uhr (Region Tilburg / Den Bosch)."
+        "de": "Täglich ganztägig geöffnet; Notdienst (Spoed) rund um die Uhr (Region Tilburg / Den Bosch).",
+        "fr": "Ouvert toute la journée, tous les jours ; urgences 24 h/24, 7 j/7 (région de Tilburg / Den Bosch)."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/hart-van-brabant/",
@@ -286,7 +293,8 @@
       "duty_i18n": {
         "sl": "Odprto ves dan, vsak dan; veterinarji so za nujne primere na voljo 24 ur na dan, 7 dni v tednu.",
         "hr": "Otvoreno cijeli dan, svaki dan; veterinari za hitne pacijente dostupni 24 h, 7 dana.",
-        "de": "Täglich ganztägig geöffnet; Tierärzte für Notfallpatienten täglich rund um die Uhr."
+        "de": "Täglich ganztägig geöffnet; Tierärzte für Notfallpatienten täglich rund um die Uhr.",
+        "fr": "Ouvert toute la journée, tous les jours ; vétérinaires disponibles pour les urgences 24 h/24, 7 j/7."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/arnhem/",
@@ -306,7 +314,8 @@
       "duty": "Open all day every day; emergency patients 24 h, 7 days.",
       "duty_i18n": {
         "hr": "Otvoreno cijeli dan, svaki dan; hitni pacijenti 24 h, 7 dana.",
-        "de": "Täglich ganztägig geöffnet; Notfallpatienten täglich rund um die Uhr."
+        "de": "Täglich ganztägig geöffnet; Notfallpatienten täglich rund um die Uhr.",
+        "fr": "Ouvert toute la journée, tous les jours ; urgences 24 h/24, 7 j/7."
       },
       "note": "Located in Amstelveen, named Amsterdam.",
       "small_animals": true,
@@ -327,7 +336,8 @@
       "duty_i18n": {
         "sl": "Odprto ves dan, 7 dni v tednu; ekipe za nujne primere 24 ur na dan.",
         "hr": "Otvoreno cijeli dan, 7 dana u tjednu; timovi za hitne pacijente 24/7.",
-        "de": "Täglich ganztägig geöffnet; Teams für Notfallpatienten rund um die Uhr."
+        "de": "Täglich ganztägig geöffnet; Teams für Notfallpatienten rund um die Uhr.",
+        "fr": "Ouvert toute la journée, 7 j/7 ; équipes présentes 24 h/24, 7 j/7 pour les urgences."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/nieuwegein/",
@@ -347,7 +357,8 @@
       "duty_i18n": {
         "sl": "Odprto ves dan, vsak dan; nujna klinika 24 ur na dan.",
         "hr": "Otvoreno cijeli dan, svaki dan; hitna klinika 24/7.",
-        "de": "Täglich ganztägig geöffnet; Notfallklinik rund um die Uhr."
+        "de": "Täglich ganztägig geöffnet; Notfallklinik rund um die Uhr.",
+        "fr": "Ouvert toute la journée, tous les jours ; clinique d’urgences 24 h/24, 7 j/7."
       },
       "small_animals": true,
       "url": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/het-noorden/",
@@ -368,7 +379,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč odprta 0–24 vsak dan; ambulanta pon–čet 8.30–19, pet 8.30–18, sob 9.30–12.30. Za nočno oskrbo najprej pokličite in potrdite.",
         "hr": "Hitna služba 0–24 svaki dan; radno vrijeme klinike pon–čet 8:30–19:00, pet 8:30–18:00, sub 9:30–12:30. Noćnu skrb prethodno potvrdi telefonom.",
-        "de": "Notdienst täglich rund um die Uhr; Klinikzeiten Mo–Do 8.30–19 Uhr, Fr 8.30–18 Uhr, Sa 9.30–12.30 Uhr. Bitte vorher anrufen, um die Nachtversorgung zu bestätigen."
+        "de": "Notdienst täglich rund um die Uhr; Klinikzeiten Mo–Do 8.30–19 Uhr, Fr 8.30–18 Uhr, Sa 9.30–12.30 Uhr. Bitte vorher anrufen, um die Nachtversorgung zu bestätigen.",
+        "fr": "Urgences ouvertes 24 h/24 tous les jours ; horaires de la clinique : lun.–jeu. 8 h 30–19 h, ven. 8 h 30–18 h, sam. 9 h 30–12 h 30. Appelez d’abord pour confirmer les soins de nuit."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-brabant/tilburg/",
@@ -389,7 +401,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč odprta 0–24 vsak dan; ambulanta pon–čet 8.30–19, pet 8.30–18. V dvomu pokličite.",
         "hr": "Hitna služba 0–24 svaki dan; radno vrijeme klinike pon–čet 8:30–19:00, pet 8:30–18:00. Nazovi ako si u nedoumici.",
-        "de": "Notdienst täglich rund um die Uhr; Klinikzeiten Mo–Do 8.30–19 Uhr, Fr 8.30–18 Uhr. Im Zweifel bitte anrufen."
+        "de": "Notdienst täglich rund um die Uhr; Klinikzeiten Mo–Do 8.30–19 Uhr, Fr 8.30–18 Uhr. Im Zweifel bitte anrufen.",
+        "fr": "Urgences ouvertes 24 h/24 tous les jours ; horaires de la clinique : lun.–jeu. 8 h 30–19 h, ven. 8 h 30–18 h. Appelez en cas de doute."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/overijssel/oldenzaal/",
@@ -410,7 +423,8 @@
       "duty_i18n": {
         "sl": "Nujna klinika (dierenartsenpost): pon–pet 18–8; vikend od sobote 8 do ponedeljka 8 (24 ur na dan); prazniki 8–8. Napotitvena klinika 9–17. Skupaj 24 ur na dan.",
         "hr": "Hitna klinika (dierenartsenpost): pon–pet 18:00–08:00; vikendom od sub 08:00 do pon 08:00 (24/7); na blagdane 08:00–08:00. Referentna klinika 09:00–17:00. Zajedno rade 0–24.",
-        "de": "Notfallklinik (Dierenartsenpost): Mo–Fr 18–8 Uhr; am Wochenende von Sa 8 Uhr bis Mo 8 Uhr (durchgehend); an Feiertagen 8–8 Uhr. Überweisungsklinik 9–17 Uhr. Zusammen rund um die Uhr."
+        "de": "Notfallklinik (Dierenartsenpost): Mo–Fr 18–8 Uhr; am Wochenende von Sa 8 Uhr bis Mo 8 Uhr (durchgehend); an Feiertagen 8–8 Uhr. Überweisungsklinik 9–17 Uhr. Zusammen rund um die Uhr.",
+        "fr": "Clinique d’urgences (poste de vétérinaires de garde) : lun.–ven. 18 h–8 h ; week-ends du sam. 8 h au lun. 8 h (24 h/24, 7 j/7) ; jours fériés 8 h–8 h. Clinique spécialisée sur adressage 9 h–17 h. Ensemble, elles assurent une couverture 24 h/24."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/overijssel/zwolle/",
@@ -431,7 +445,8 @@
       "duty_i18n": {
         "sl": "24-urna TELEFONSKA številka za nujne primere dežurnega veterinarja (pritisnite 1). Ambulanta med tednom odprta do 20.30, sob 8–12. Od 22.30 ponoči, ob sobotah popoldne in ob nedeljah napotijo na AniCura Dordrecht ali Rijswijk (osebje prisotno podnevi in ponoči).",
         "hr": "Telefonska hitna linija 24 h s dežurnim veterinarom (opcija 1). Klinika radi radnim danima do 20:30, sub 08:00–12:00. Od 22:30 noću, subotom popodne i nedjeljom pacijente upućuju u AniCura Dordrecht ili Rijswijk (osoblje je prisutno danju i noću).",
-        "de": "Telefonische Notfall-Hotline zum diensthabenden Tierarzt rund um die Uhr (Option 1). Klinik werktags bis 20.30 Uhr, Sa 8–12 Uhr. Ab 22.30 Uhr, samstagnachmittags und sonntags werden Patienten an AniCura Dordrecht oder Rijswijk verwiesen (rund um die Uhr besetzt)."
+        "de": "Telefonische Notfall-Hotline zum diensthabenden Tierarzt rund um die Uhr (Option 1). Klinik werktags bis 20.30 Uhr, Sa 8–12 Uhr. Ab 22.30 Uhr, samstagnachmittags und sonntags werden Patienten an AniCura Dordrecht oder Rijswijk verwiesen (rund um die Uhr besetzt).",
+        "fr": "Ligne téléphonique d’urgence 24 h/24 vers le vétérinaire de garde (option 1). Clinique ouverte en semaine jusqu’à 20 h 30, sam. 8 h–12 h. À partir de 22 h 30 la nuit, le samedi après-midi et le dimanche, les patients sont orientés vers AniCura Dordrecht ou Rijswijk (présence jour et nuit)."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/breda/dierenziekenhuisbreda/",
@@ -452,7 +467,8 @@
       "duty_i18n": {
         "sl": "24-urna TELEFONSKA številka za nujne primere: klicatelje preusmerijo k dežurnemu veterinarju; dežurstvo ob vikendih si delijo s partnerskimi ambulantami. Ambulanta pon–čet 9–19.30, pet do 17.30, sob 10–12. Vnaprej pokličite.",
         "hr": "Telefonska hitna linija 24 h: poziv se prebacuje dežurnom veterinaru; vikendom dežurstvo dijele s partnerskim klinikama. Radno vrijeme klinike pon–čet 09:00–19:30, pet do 17:30, sub 10:00–12:00. Nazovi unaprijed.",
-        "de": "Telefonische Notfall-Hotline rund um die Uhr: Anrufer werden zum diensthabenden Tierarzt weitergeleitet; der Wochenenddienst wird mit Partnerkliniken geteilt. Klinikzeiten Mo–Do 9–19.30 Uhr, Fr bis 17.30 Uhr, Sa 10–12 Uhr. Bitte vorher anrufen."
+        "de": "Telefonische Notfall-Hotline rund um die Uhr: Anrufer werden zum diensthabenden Tierarzt weitergeleitet; der Wochenenddienst wird mit Partnerkliniken geteilt. Klinikzeiten Mo–Do 9–19.30 Uhr, Fr bis 17.30 Uhr, Sa 10–12 Uhr. Bitte vorher anrufen.",
+        "fr": "Ligne téléphonique d’urgence 24 h/24 : les appels sont transférés au vétérinaire de garde ; gardes de week-end partagées avec des cliniques partenaires. Clinique lun.–jeu. 9 h–19 h 30, ven. jusqu’à 17 h 30, sam. 10 h–12 h. Appelez avant de venir."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zeeland/zeeuws-vlaanderen/",
@@ -472,7 +488,8 @@
       "duty_i18n": {
         "sl": "Štiri ambulante se izmenjujejo pri dežurstvu ob vikendih; dežurni veterinar je dosegljiv 24 ur na dan na 0115 - 61 96 28. Partnerji: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88).",
         "hr": "Četiri klinike izmjenjuju se u vikend dežurstvu za hitne slučajeve; dežurni veterinar dostupan je 24/7 na 0115 - 61 96 28. Partneri: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88).",
-        "de": "Vier Kliniken wechseln sich beim Wochenend-Notdienst ab; der diensthabende Tierarzt ist rund um die Uhr unter 0115 - 61 96 28 erreichbar. Partner: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88)."
+        "de": "Vier Kliniken wechseln sich beim Wochenend-Notdienst ab; der diensthabende Tierarzt ist rund um die Uhr unter 0115 - 61 96 28 erreichbar. Partner: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88).",
+        "fr": "Quatre cliniques se relaient pour les urgences du week-end ; vétérinaire de garde joignable 24 h/24, 7 j/7 au 0115 - 61 96 28. Partenaires : Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88)."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zeeland/zeeuws-vlaanderen/contact/weekend-dienstrooster/",
@@ -492,7 +509,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa (17–8) glavno številko preusmerijo na MCD Amsterdam (020 740 06 00); ob torkih in četrtkih tudi Dierenkliniek 't Ossehoofd, Heerhugowaard (072 574 49 59); vsak vikend od petka 17 do ponedeljka 8 MCD Amsterdam (Ossehoofd samo nekatere vikende).",
         "hr": "Izvan radnog vremena (17:00–08:00) glavni broj preusmjerava na MCD Amsterdam (020 740 06 00); utorkom i četvrtkom i na Dierenkliniek 't Ossehoofd, Heerhugowaard (072 574 49 59); svaki vikend od pet 17:00 do pon 08:00 MCD Amsterdam (Ossehoofd samo neke vikende).",
-        "de": "Außerhalb der Öffnungszeiten (17–8 Uhr) wird die Hauptnummer zu MCD Amsterdam (020 740 06 00) weitergeleitet; dienstags und donnerstags auch zur Dierenkliniek 't Ossehoofd, Heerhugowaard (072 574 49 59); an jedem Wochenende Fr 17 bis Mo 8 Uhr MCD Amsterdam (Ossehoofd nur an einigen Wochenenden)."
+        "de": "Außerhalb der Öffnungszeiten (17–8 Uhr) wird die Hauptnummer zu MCD Amsterdam (020 740 06 00) weitergeleitet; dienstags und donnerstags auch zur Dierenkliniek 't Ossehoofd, Heerhugowaard (072 574 49 59); an jedem Wochenende Fr 17 bis Mo 8 Uhr MCD Amsterdam (Ossehoofd nur an einigen Wochenenden).",
+        "fr": "En dehors des heures d’ouverture (17 h–8 h), le numéro principal renvoie vers MCD Amsterdam (020 740 06 00) ; le mardi et le jeudi aussi vers Dierenkliniek 't Ossehoofd, Heerhugowaard (072 574 49 59) ; chaque week-end du ven. 17 h au lun. 8 h, MCD Amsterdam (Ossehoofd seulement certains week-ends)."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-holland/den-helder/",
@@ -512,7 +530,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa pokličite ambulanto; preusmerijo vas k dežurni ambulanti. Partnerji v dežurnem krogu (od 1. jan. 2025): Dierenkliniek Camminghaburen, Kingmastate 32, Leeuwarden, 058-2669590; Dierenarts praktijk Tusken Waed & Ie, Popelierstrjitte 1, Stiens, 058-2571224; Dierenartspraktijk Noord-West Friesland, Het Want 4, Franeker, 0517-392100.",
         "hr": "Izvan radnog vremena nazovi kliniku; prebacit će te u dežurnu kliniku. Klinike u rotaciji (od 1. 1. 2025.): Dierenkliniek Camminghaburen, Kingmastate 32, Leeuwarden, 058-2669590; Dierenarts praktijk Tusken Waed & Ie, Popelierstrjitte 1, Stiens, 058-2571224; Dierenartspraktijk Noord-West Friesland, Het Want 4, Franeker, 0517-392100.",
-        "de": "Außerhalb der Öffnungszeiten bitte die Klinik anrufen; Sie werden zur diensthabenden Klinik weitergeleitet. Partner im Dienstplan (ab 1. Jan. 2025): Dierenkliniek Camminghaburen, Kingmastate 32, Leeuwarden, 058-2669590; Dierenarts praktijk Tusken Waed & Ie, Popelierstrjitte 1, Stiens, 058-2571224; Dierenartspraktijk Noord-West Friesland, Het Want 4, Franeker, 0517-392100."
+        "de": "Außerhalb der Öffnungszeiten bitte die Klinik anrufen; Sie werden zur diensthabenden Klinik weitergeleitet. Partner im Dienstplan (ab 1. Jan. 2025): Dierenkliniek Camminghaburen, Kingmastate 32, Leeuwarden, 058-2669590; Dierenarts praktijk Tusken Waed & Ie, Popelierstrjitte 1, Stiens, 058-2571224; Dierenartspraktijk Noord-West Friesland, Het Want 4, Franeker, 0517-392100.",
+        "fr": "En dehors des heures d’ouverture, appelez la clinique ; vous serez transféré à la clinique de garde. Cliniques partenaires du roulement (depuis le 1er janv. 2025) : Dierenkliniek Camminghaburen, Kingmastate 32, Leeuwarden, 058-2669590 ; Dierenarts praktijk Tusken Waed & Ie, Popelierstrjitte 1, Stiens, 058-2571224 ; Dierenartspraktijk Noord-West Friesland, Het Want 4, Franeker, 0517-392100."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/friesland/leeuwarden/",
@@ -532,7 +551,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč pon–pet do 22 in ob vikendih do 22; po 22. uri vsak dan napotijo na EDZ Barendrecht (24 ur na dan). Ambulanta pon–pet 8.30–20, sob 9.30–15.30.",
         "hr": "Hitna skrb pon–pet do 22:00 i vikendom do 22:00; nakon 22:00 svaki dan upućuju u EDZ Barendrecht (24 h). Klinika pon–pet 08:30–20:00, sub 09:30–15:30.",
-        "de": "Notfallversorgung täglich bis 22 Uhr; ab 22 Uhr täglich Verweis an EDZ Barendrecht (rund um die Uhr geöffnet). Klinik Mo–Fr 8.30–20 Uhr, Sa 9.30–15.30 Uhr."
+        "de": "Notfallversorgung täglich bis 22 Uhr; ab 22 Uhr täglich Verweis an EDZ Barendrecht (rund um die Uhr geöffnet). Klinik Mo–Fr 8.30–20 Uhr, Sa 9.30–15.30 Uhr.",
+        "fr": "Urgences lun.–ven. jusqu’à 22 h et week-ends jusqu’à 22 h ; après 22 h, tous les jours, orientation vers EDZ Barendrecht (24 h/24). Clinique lun.–ven. 8 h 30–20 h, sam. 9 h 30–15 h 30."
       },
       "small_animals": true,
       "url": "https://www.dierenziekenhuis.nl/",
@@ -552,7 +572,8 @@
       "duty_i18n": {
         "sl": "Telefon 8.30–20.30. Za nujne primere se obrnite na glavno enoto v Rotterdamu Ommoord-Hillegersberg. Pred obiskom stopite v stik z ambulanto.",
         "hr": "Telefon 08:30–20:30. Za hitne slučajeve obrati se glavnoj lokaciji u Rotterdamu Ommoord-Hillegersberg. Javi se prije dolaska.",
-        "de": "Telefonisch erreichbar 8.30–20.30 Uhr. Für Notfälle bitte den Hauptstandort in Rotterdam Ommoord-Hillegersberg kontaktieren. Vor dem Besuch bitte Kontakt aufnehmen."
+        "de": "Telefonisch erreichbar 8.30–20.30 Uhr. Für Notfälle bitte den Hauptstandort in Rotterdam Ommoord-Hillegersberg kontaktieren. Vor dem Besuch bitte Kontakt aufnehmen.",
+        "fr": "Standard téléphonique 8 h 30–20 h 30. Pour les urgences, contactez le site principal de Rotterdam Ommoord-Hillegersberg. Contactez la clinique avant de venir."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/rotterdam/veterinary-clinic/",
@@ -572,7 +593,8 @@
       "duty_i18n": {
         "sl": "pon 9–17, tor–pet 9–18, po dogovoru. Zunaj delovnega časa napotijo na Emergency Clinic Amsterdam, 020-7400600.",
         "hr": "pon 09:00–17:00, uto–pet 09:00–18:00, uz prethodnu najavu. Izvan radnog vremena upućuju u Emergency Clinic Amsterdam, 020-7400600.",
-        "de": "Mo 9–17 Uhr, Di–Fr 9–18 Uhr, nach Terminvereinbarung. Außerhalb der Öffnungszeiten Verweis an die Emergency Clinic Amsterdam, 020-7400600."
+        "de": "Mo 9–17 Uhr, Di–Fr 9–18 Uhr, nach Terminvereinbarung. Außerhalb der Öffnungszeiten Verweis an die Emergency Clinic Amsterdam, 020-7400600.",
+        "fr": "Lun. 9 h–17 h, mar.–ven. 9 h–18 h, sur rendez-vous. En dehors de ces horaires, orientation vers l’Emergency Clinic Amsterdam, 020-7400600."
       },
       "small_animals": true,
       "url": "https://www.dierendokters.com/dierenarts-dierenkliniek/amsterdam",
@@ -591,7 +613,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–19, po dogovoru. Zunaj delovnega časa: Spoedkliniek voor Gezelschapsdieren Midden Nederland, 0900-2223000.",
         "hr": "pon–pet 09:00–19:00, uz prethodnu najavu. Izvan radnog vremena: Spoedkliniek voor Gezelschapsdieren Midden Nederland, 0900-2223000.",
-        "de": "Mo–Fr 9–19 Uhr, nach Terminvereinbarung. Außerhalb der Öffnungszeiten: Spoedkliniek voor Gezelschapsdieren Midden Nederland, 0900-2223000."
+        "de": "Mo–Fr 9–19 Uhr, nach Terminvereinbarung. Außerhalb der Öffnungszeiten: Spoedkliniek voor Gezelschapsdieren Midden Nederland, 0900-2223000.",
+        "fr": "Lun.–ven. 9 h–19 h, sur rendez-vous. En dehors de ces horaires : Spoedkliniek voor Gezelschapsdieren Midden Nederland, 0900-2223000."
       },
       "small_animals": true,
       "url": "https://www.dierendokters.com/dierenarts-dierenkliniek/utrecht",
@@ -610,7 +633,8 @@
       "duty_i18n": {
         "sl": "pon–čet 9–19, pet 9–17, po dogovoru. Za nujne primere sodelujejo z Medisch Centrum voor Dieren Amsterdam.",
         "hr": "pon–čet 09:00–19:00, pet 09:00–17:00, uz prethodnu najavu. Za hitne slučajeve koriste Medisch Centrum voor Dieren Amsterdam.",
-        "de": "Mo–Do 9–19 Uhr, Fr 9–17 Uhr, nach Terminvereinbarung. Notfälle über das Medisch Centrum voor Dieren Amsterdam."
+        "de": "Mo–Do 9–19 Uhr, Fr 9–17 Uhr, nach Terminvereinbarung. Notfälle über das Medisch Centrum voor Dieren Amsterdam.",
+        "fr": "Lun.–jeu. 9 h–19 h, ven. 9 h–17 h, sur rendez-vous. Urgences prises en charge par Medisch Centrum voor Dieren Amsterdam."
       },
       "small_animals": true,
       "url": "https://www.dierendokters.com/dierenarts-dierenkliniek/haarlem",
@@ -629,7 +653,8 @@
       "duty_i18n": {
         "sl": "Samo napotitve, pon–čet 9–17.30, pet 9–17; vedno najprej pokličite. Samo za veterinarje dosegljivo 24 ur na dan.",
         "hr": "Samo uz uputnicu, pon–čet 09:00–17:30, pet 09:00–17:00; uvijek nazovi unaprijed. Dostupni 24/7 samo veterinarima.",
-        "de": "Nur auf Überweisung, Mo–Do 9–17.30 Uhr, Fr 9–17 Uhr; bitte immer zuerst anrufen. Rund um die Uhr nur für Tierärzte erreichbar."
+        "de": "Nur auf Überweisung, Mo–Do 9–17.30 Uhr, Fr 9–17 Uhr; bitte immer zuerst anrufen. Rund um die Uhr nur für Tierärzte erreichbar.",
+        "fr": "Sur adressage uniquement, lun.–jeu. 9 h–17 h 30, ven. 9 h–17 h ; appelez toujours d’abord. Joignable 24 h/24, 7 j/7 pour les vétérinaires uniquement."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/utrecht/sdu/",
@@ -648,7 +673,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 08:30-18:00, Sat 10:00-14:00 (closed one Saturday in four). Outside hours refer to Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600.",
       "duty_i18n": {
-        "de": "Werktags 8.30–18 Uhr, Sa 10–14 Uhr (jeden vierten Samstag geschlossen). Außerhalb der Öffnungszeiten Verweis an das Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600."
+        "de": "Werktags 8.30–18 Uhr, Sa 10–14 Uhr (jeden vierten Samstag geschlossen). Außerhalb der Öffnungszeiten Verweis an das Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600.",
+        "fr": "En semaine 8 h 30–18 h, sam. 10 h–14 h (fermé un samedi sur quatre). En dehors de ces horaires, orientation vers Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/flevoland/almere/",
@@ -668,7 +694,8 @@
       "duty_i18n": {
         "sl": "Ambulanta 8–17. Za nujne primere glejte stran nujnih klinik AniCura.",
         "hr": "Radno vrijeme klinike 08:00–17:00. Za hitne slučajeve pogledaj stranicu AniCurinih hitnih klinika.",
-        "de": "Klinikzeiten 8–17 Uhr. Für Notfälle siehe die Seite der AniCura-Notfallkliniken."
+        "de": "Klinikzeiten 8–17 Uhr. Für Notfälle siehe die Seite der AniCura-Notfallkliniken.",
+        "fr": "Horaires de la clinique 8 h–17 h. Pour les urgences, consultez la page des cliniques d’urgences AniCura."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-brabant/t-heike-eindhoven/",
@@ -688,7 +715,8 @@
       "duty_i18n": {
         "sl": "Ambulanta med tednom 8.30–18; številka za nujne primere zunaj delovnega časa 050-5015500.",
         "hr": "Klinika radnim danima 08:30–18:00; hitni broj izvan radnog vremena 050-5015500.",
-        "de": "Klinik werktags 8.30–18 Uhr; Notdienstnummer außerhalb der Öffnungszeiten 050-5015500."
+        "de": "Klinik werktags 8.30–18 Uhr; Notdienstnummer außerhalb der Öffnungszeiten 050-5015500.",
+        "fr": "Clinique en semaine 8 h 30–18 h ; numéro d’urgence hors horaires 050-5015500."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/groningen/groningen/",
@@ -708,7 +736,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–18/19; zunaj delovnega časa posneto sporočilo navede številko dežurnega veterinarja.",
         "hr": "pon–pet 08:00–18:00/19:00; izvan radnog vremena snimljena poruka daje broj dežurnog veterinara.",
-        "de": "Mo–Fr 8–18/19 Uhr; außerhalb der Öffnungszeiten nennt eine Ansage die Nummer des diensthabenden Tierarztes."
+        "de": "Mo–Fr 8–18/19 Uhr; außerhalb der Öffnungszeiten nennt eine Ansage die Nummer des diensthabenden Tierarztes.",
+        "fr": "Lun.–ven. 8 h–18 h/19 h ; en dehors de ces horaires, un message enregistré indique le numéro du vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-brabant/maaspoort/",
@@ -729,7 +758,8 @@
       "duty_i18n": {
         "sl": "pon, tor, čet, pet 8–20, sre 8–17, sob 9–17 (nujni posegi). Zunaj delovnega časa številka sporoči, katera nujna klinika (spoedkliniek) dežura; MCD Amsterdam 020 - 740 06 00 ali AniCura Rijswijk 085 - 483 13 00.",
         "hr": "pon, uto, čet, pet 08:00–20:00, sri 08:00–17:00, sub 09:00–17:00 (hitni zahvati). Izvan radnog vremena broj javlja koja je hitna klinika dežurna; MCD Amsterdam 020 - 740 06 00 ili AniCura Rijswijk 085 - 483 13 00.",
-        "de": "Mo, Di, Do, Fr 8–20 Uhr, Mi 8–17 Uhr, Sa 9–17 Uhr (dringende Behandlungen). Außerhalb der Öffnungszeiten nennt eine Ansage, welche Spoedkliniek Dienst hat; MCD Amsterdam 020 - 740 06 00 oder AniCura Rijswijk 085 - 483 13 00."
+        "de": "Mo, Di, Do, Fr 8–20 Uhr, Mi 8–17 Uhr, Sa 9–17 Uhr (dringende Behandlungen). Außerhalb der Öffnungszeiten nennt eine Ansage, welche Spoedkliniek Dienst hat; MCD Amsterdam 020 - 740 06 00 oder AniCura Rijswijk 085 - 483 13 00.",
+        "fr": "Lun., mar., jeu., ven. 8 h–20 h, mer. 8 h–17 h, sam. 9 h–17 h (soins urgents). En dehors de ces horaires, le numéro indique quelle clinique d’urgences est de garde ; MCD Amsterdam 020 - 740 06 00 ou AniCura Rijswijk 085 - 483 13 00."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-holland/kennemerland-velserbroek/",
@@ -749,7 +779,8 @@
       "duty_i18n": {
         "sl": "pon–čet 8.30–17. Nujni primeri podnevi prek ambulante; zunaj delovnega časa za dežurnega veterinarja pokličite 020-740 06 00. Nujna oskrba ob sobotah v AniCura Kennemerland, Velserbroek.",
         "hr": "pon–čet 08:30–17:00. Hitni slučajevi tijekom dana putem ambulante; izvan radnog vremena nazovi 020-740 06 00 za dežurnog veterinara. Subotom hitna skrb u AniCura Kennemerland, Velserbroek.",
-        "de": "Mo–Do 8.30–17 Uhr. Notfälle tagsüber über die Praxis; außerhalb der Öffnungszeiten für den diensthabenden Tierarzt 020-740 06 00 anrufen. Dringende Fälle am Samstag bei AniCura Kennemerland, Velserbroek."
+        "de": "Mo–Do 8.30–17 Uhr. Notfälle tagsüber über die Praxis; außerhalb der Öffnungszeiten für den diensthabenden Tierarzt 020-740 06 00 anrufen. Dringende Fälle am Samstag bei AniCura Kennemerland, Velserbroek.",
+        "fr": "Lun.–jeu. 8 h 30–17 h. Urgences en journée via le cabinet ; en dehors de ces horaires, appelez le 020-740 06 00 pour joindre le vétérinaire de garde. Soins urgents le samedi à AniCura Kennemerland, Velserbroek."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-holland/bloemendaal/",
@@ -769,7 +800,8 @@
       "duty_i18n": {
         "sl": "pon–pet 9–12.45 in 13.15–19.30. V dvomu pokličite.",
         "hr": "pon–pet 09:00–12:45 i 13:15–19:30. Nazovi ako si u nedoumici.",
-        "de": "Mo–Fr 9–12.45 und 13.15–19.30 Uhr. Im Zweifel bitte anrufen."
+        "de": "Mo–Fr 9–12.45 und 13.15–19.30 Uhr. Im Zweifel bitte anrufen.",
+        "fr": "Lun.–ven. 9 h–12 h 45 et 13 h 15–19 h 30. Appelez en cas de doute."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/hoofddorp/hoofddorp-hoofdvaart/",
@@ -789,7 +821,8 @@
       "duty_i18n": {
         "sl": "pon–tor 8–17, sre–pet 9–17 (zaprto 12.30–13.30). Za dežurnega veterinarja pokličite 071 51 56 161 kadar koli; med 23. in 8. uro posneto sporočilo napoti na AniCura MCD Amsterdam.",
         "hr": "pon–uto 08:00–17:00, sri–pet 09:00–17:00 (zatvoreno 12:30–13:30). Nazovi 071 51 56 161 u bilo koje doba za dežurnog veterinara; između 23:00 i 08:00 snimljena poruka upućuje na AniCura MCD Amsterdam.",
-        "de": "Mo–Di 8–17 Uhr, Mi–Fr 9–17 Uhr (geschlossen 12.30–13.30 Uhr). Den diensthabenden Tierarzt erreichen Sie jederzeit unter 071 51 56 161; zwischen 23 und 8 Uhr verweist eine Ansage an AniCura MCD Amsterdam."
+        "de": "Mo–Di 8–17 Uhr, Mi–Fr 9–17 Uhr (geschlossen 12.30–13.30 Uhr). Den diensthabenden Tierarzt erreichen Sie jederzeit unter 071 51 56 161; zwischen 23 und 8 Uhr verweist eine Ansage an AniCura MCD Amsterdam.",
+        "fr": "Lun.–mar. 8 h–17 h, mer.–ven. 9 h–17 h (fermé 12 h 30–13 h 30). Appelez le 071 51 56 161 à toute heure pour joindre le vétérinaire de garde ; entre 23 h et 8 h, un message enregistré renvoie vers AniCura MCD Amsterdam."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zuid-holland/noordwijk/",
@@ -810,7 +843,8 @@
       "duty_i18n": {
         "sl": "pon, sre–pet 8–19, tor 8–17.30, sob 9.30–13.30. Nujne primere zunaj delovnega časa obravnavajo skupaj z drugimi ambulantami v regiji.",
         "hr": "pon, sri–pet 08:00–19:00, uto 08:00–17:30, sub 09:30–13:30. Hitne slučajeve izvan radnog vremena rješavaju zajedno s drugim klinikama u regiji.",
-        "de": "Mo, Mi–Fr 8–19 Uhr, Di 8–17.30 Uhr, Sa 9.30–13.30 Uhr. Notfälle außerhalb der Öffnungszeiten werden gemeinsam mit anderen Kliniken der Region versorgt."
+        "de": "Mo, Mi–Fr 8–19 Uhr, Di 8–17.30 Uhr, Sa 9.30–13.30 Uhr. Notfälle außerhalb der Öffnungszeiten werden gemeinsam mit anderen Kliniken der Region versorgt.",
+        "fr": "Lun., mer.–ven. 8 h–19 h, mar. 8 h–17 h 30, sam. 9 h 30–13 h 30. Urgences hors horaires prises en charge avec d’autres cliniques de la région."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zeeland/zierikzee/",
@@ -830,7 +864,8 @@
       "duty_i18n": {
         "sl": "Omejen delovni čas (pon, sre, pet 13–16; tor, čet 10–16; čet zvečer 17.30–19). Nujne primere zunaj delovnega časa obravnavajo z drugimi regijskimi ambulantami; lahko vas napotijo v Zierikzee.",
         "hr": "Ograničeno radno vrijeme (pon, sri, pet 13:00–16:00; uto, čet 10:00–16:00; čet navečer 17:30–19:00). Hitne slučajeve izvan radnog vremena rješavaju s drugim klinikama u regiji; mogu te uputiti u Zierikzee.",
-        "de": "Eingeschränkte Öffnungszeiten (Mo, Mi, Fr 13–16 Uhr; Di, Do 10–16 Uhr; Do abends 17.30–19 Uhr). Notfälle außerhalb der Öffnungszeiten werden mit anderen Kliniken der Region versorgt; unter Umständen Verweis nach Zierikzee."
+        "de": "Eingeschränkte Öffnungszeiten (Mo, Mi, Fr 13–16 Uhr; Di, Do 10–16 Uhr; Do abends 17.30–19 Uhr). Notfälle außerhalb der Öffnungszeiten werden mit anderen Kliniken der Region versorgt; unter Umständen Verweis nach Zierikzee.",
+        "fr": "Horaires limités (lun., mer., ven. 13 h–16 h ; mar., jeu. 10 h–16 h ; jeu. soir 17 h 30–19 h). Urgences hors horaires prises en charge avec d’autres cliniques de la région ; orientation possible vers Zierikzee."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zeeland/burgh-haamstede/",
@@ -850,7 +885,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere dosegljivo 24 ur na dan na isti telefonski številki (telefonsko dežurstvo); naročanje po možnosti po telefonu 8–9.30.",
         "hr": "Za hitne slučajeve dostupni 24/7 na istom telefonskom broju (telefonsko dežurstvo); termine najbolje dogovori telefonom 08:00–09:30.",
-        "de": "Für Notfälle rund um die Uhr unter derselben Telefonnummer erreichbar (telefonische Bereitschaft); Termine am besten telefonisch 8–9.30 Uhr."
+        "de": "Für Notfälle rund um die Uhr unter derselben Telefonnummer erreichbar (telefonische Bereitschaft); Termine am besten telefonisch 8–9.30 Uhr.",
+        "fr": "Joignable 24 h/24, 7 j/7 pour les urgences au même numéro (astreinte téléphonique) ; rendez-vous de préférence par téléphone de 8 h à 9 h 30."
       },
       "small_animals": true,
       "url": "https://dierenartsterschelling.nl/",
@@ -871,7 +907,8 @@
       "duty_i18n": {
         "sl": "pon–pet 8–18; za nujne primere po telefonu dosegljivo 24 ur na dan.",
         "hr": "pon–pet 08:00–18:00; za hitne slučajeve dostupni telefonom 24 sata dnevno.",
-        "de": "Mo–Fr 8–18 Uhr; für Notfälle telefonisch rund um die Uhr erreichbar."
+        "de": "Mo–Fr 8–18 Uhr; für Notfälle telefonisch rund um die Uhr erreichbar.",
+        "fr": "Lun.–ven. 8 h–18 h ; joignable 24 h/24 par téléphone pour les urgences."
       },
       "small_animals": true,
       "url": "http://www.dierenartsentexel.nl/",
@@ -892,7 +929,8 @@
       "duty_i18n": {
         "sl": "Na Schiermonnikoogu samem ni veterinarja ali nujne pomoči (ambulanta približno enkrat na 6 tednov, po dogovoru). Dierenartsen Dokkum na celini je za nujne primere po telefonu dosegljiv 24 ur na dan, vse dni v tednu.",
         "hr": "Na otoku Schiermonnikoog nema veterinara ni hitne službe (klinika dolazi otprilike jednom u 6 tjedana, uz prethodnu najavu). Dierenartsen Dokkum na kopnu dostupni su telefonom 24 h, 7 dana za hitne slučajeve.",
-        "de": "Auf Schiermonnikoog selbst gibt es keinen Tierarzt und keinen Notdienst (Sprechstunde etwa alle 6 Wochen, nach Terminvereinbarung). Die Dierenartsen Dokkum auf dem Festland sind für Notfälle rund um die Uhr telefonisch erreichbar."
+        "de": "Auf Schiermonnikoog selbst gibt es keinen Tierarzt und keinen Notdienst (Sprechstunde etwa alle 6 Wochen, nach Terminvereinbarung). Die Dierenartsen Dokkum auf dem Festland sind für Notfälle rund um die Uhr telefonisch erreichbar.",
+        "fr": "Pas de vétérinaire ni de service d’urgences sur Schiermonnikoog même (clinique environ toutes les 6 semaines, sur rendez-vous). Dierenartsen Dokkum, sur le continent, est joignable par téléphone 24 h/24, 7 j/7 pour les urgences."
       },
       "small_animals": true,
       "url": "https://www.vvvschiermonnikoog.nl/bedrijven/hulpdiensten/dierenarts",
@@ -928,7 +966,8 @@
       "duty_i18n": {
         "sl": "Telefon 024-3031101 24 ur na dan za stranke; ob vikendih samo nujni primeri.",
         "hr": "Telefon 024-3031101 24/7 za klijente; vikendom samo hitni slučajevi.",
-        "de": "Telefon 024-3031101 für Kunden rund um die Uhr; am Wochenende nur Notfälle."
+        "de": "Telefon 024-3031101 für Kunden rund um die Uhr; am Wochenende nur Notfälle.",
+        "fr": "Téléphone 024-3031101 24 h/24, 7 j/7 pour les clients ; le week-end, urgences uniquement."
       },
       "small_animals": true,
       "url": "https://dierenkliniekdewaalsprong.nl/",
@@ -949,7 +988,8 @@
       "duty_i18n": {
         "sl": "Med tednom 18–21 dežura ambulanta v Nijmegnu; po 21. uri in ob vikendih Evidensia Dierenziekenhuis Arnhem.",
         "hr": "Radnim danima 18–21 h dežura ordinacija u Nijmegenu; nakon 21 h i vikendom Evidensia Dierenziekenhuis Arnhem.",
-        "de": "Werktags 18–21 Uhr hat eine Praxis in Nijmegen Dienst; nach 21 Uhr und am Wochenende das Evidensia Dierenziekenhuis Arnhem."
+        "de": "Werktags 18–21 Uhr hat eine Praxis in Nijmegen Dienst; nach 21 Uhr und am Wochenende das Evidensia Dierenziekenhuis Arnhem.",
+        "fr": "En semaine, de 18 h à 21 h, un cabinet de Nimègue est de garde ; après 21 h et le week-end, Evidensia Dierenziekenhuis Arnhem."
       },
       "small_animals": true,
       "url": "https://dierenkliniekbroerdijk.nl/",
@@ -968,7 +1008,8 @@
       "duty_i18n": {
         "sl": "pon–pet 18–21 dežura ambulanta v Nijmegnu; pozneje in ob vikendih Evidensia Arnhem.",
         "hr": "pon–pet 18–21 h dežura ordinacija u Nijmegenu; kasnije i vikendom Evidensia Arnhem.",
-        "de": "Mo–Fr 18–21 Uhr hat eine Praxis in Nijmegen Dienst; später und am Wochenende Evidensia Arnhem."
+        "de": "Mo–Fr 18–21 Uhr hat eine Praxis in Nijmegen Dienst; später und am Wochenende Evidensia Arnhem.",
+        "fr": "Lun.–ven. 18 h–21 h, cabinet de garde de Nimègue ; ensuite et le week-end, Evidensia Arnhem."
       },
       "small_animals": true,
       "url": "https://dierenkliniekbroerdijk.nl/nieuws/dienstdoende-dierenarts-in-nijmegen/",
@@ -1004,7 +1045,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa: običajna številka ali 046-4512417, pritisnite 1 za dežurnega veterinarja.",
         "hr": "Izvan radnog vremena: uobičajeni broj ili 046-4512417, pritisni 1 za dežurnog veterinara.",
-        "de": "Außerhalb der Öffnungszeiten: übliche Nummer oder 046-4512417 (Taste 1 drücken), um den diensthabenden Tierarzt zu erreichen."
+        "de": "Außerhalb der Öffnungszeiten: übliche Nummer oder 046-4512417 (Taste 1 drücken), um den diensthabenden Tierarzt zu erreichen.",
+        "fr": "Hors horaires : numéro habituel ou 046-4512417, tapez 1 pour joindre le vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekmaastricht.nl/",
@@ -1025,7 +1067,8 @@
       "duty_i18n": {
         "sl": "Skupni dežurni krog Enschede/Hengelo/Lonneker; odzivnik sporoči dežurnega veterinarja.",
         "hr": "Zajednički krug dežurstva Enschede/Hengelo/Lonneker; telefonska sekretarica navodi dežurnog veterinara.",
-        "de": "Gemeinsamer Notdienstverbund Enschede/Hengelo/Lonneker; der Anrufbeantworter nennt den diensthabenden Tierarzt."
+        "de": "Gemeinsamer Notdienstverbund Enschede/Hengelo/Lonneker; der Anrufbeantworter nennt den diensthabenden Tierarzt.",
+        "fr": "Cercle de garde commun Enschede/Hengelo/Lonneker ; le répondeur indique le vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekenschede.nl/",
@@ -1045,7 +1088,8 @@
       "duty_i18n": {
         "sl": "Odzivnik sporoči dežurnega veterinarja; nujna ordinacija (spoed) ves teden.",
         "hr": "Telefonska sekretarica navodi dežurnog veterinara; hitna ambulanta cijeli tjedan.",
-        "de": "Der Anrufbeantworter nennt den diensthabenden Tierarzt; Notdienst-Sprechstunde die ganze Woche über."
+        "de": "Der Anrufbeantworter nennt den diensthabenden Tierarzt; Notdienst-Sprechstunde die ganze Woche über.",
+        "fr": "Le répondeur indique le vétérinaire de garde ; consultations d’urgence toute la semaine."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekenschede.nl/praktische-informatie",
@@ -1066,7 +1110,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč (spoed) 7 dni v tednu, podnevi in ponoči, po telefonu.",
         "hr": "Hitna služba 7 dana u tjednu, danju i noću, telefonom.",
-        "de": "Notdienst (Spoed) telefonisch, täglich Tag und Nacht."
+        "de": "Notdienst (Spoed) telefonisch, täglich Tag und Nacht.",
+        "fr": "Urgences 7 j/7, jour et nuit, par téléphone."
       },
       "small_animals": true,
       "url": "https://www.dapboekelo.nl/nl/spoedgevallen",
@@ -1162,7 +1207,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa klice preusmerijo na Evidensia Dierenziekenhuis Arnhem.",
         "hr": "Izvan radnog vremena pozivi se preusmjeravaju na Evidensia Dierenziekenhuis Arnhem.",
-        "de": "Außerhalb der Öffnungszeiten werden Anrufe an das Evidensia Dierenziekenhuis Arnhem weitergeleitet."
+        "de": "Außerhalb der Öffnungszeiten werden Anrufe an das Evidensia Dierenziekenhuis Arnhem weitergeleitet.",
+        "fr": "En dehors des heures d’ouverture, les appels sont transférés à Evidensia Dierenziekenhuis Arnhem."
       },
       "small_animals": true,
       "url": "https://dierenartsede.nl/",
@@ -1183,7 +1229,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa prek odzivnika; sodelovanje z Dierenziekenhuis Arnhem.",
         "hr": "Izvan radnog vremena preko telefonske sekretarice; surađuju s Dierenziekenhuis Arnhem.",
-        "de": "Außerhalb der Öffnungszeiten über Anrufbeantworter; Zusammenarbeit mit dem Dierenziekenhuis Arnhem."
+        "de": "Außerhalb der Öffnungszeiten über Anrufbeantworter; Zusammenarbeit mit dem Dierenziekenhuis Arnhem.",
+        "fr": "Après les heures d’ouverture, via le répondeur ; en collaboration avec Dierenziekenhuis Arnhem."
       },
       "small_animals": true,
       "url": "https://dierenkliniekkruizinga.nl/",
@@ -1204,7 +1251,8 @@
       "duty_i18n": {
         "sl": "Dežurni veterinar do 23, nato Evidensia Arnhem.",
         "hr": "Dežurni veterinar do 23:00, zatim Evidensia Arnhem.",
-        "de": "Diensthabender Tierarzt bis 23 Uhr, danach Evidensia Arnhem."
+        "de": "Diensthabender Tierarzt bis 23 Uhr, danach Evidensia Arnhem.",
+        "fr": "Vétérinaire de garde jusqu’à 23 h, puis Evidensia Arnhem."
       },
       "small_animals": true,
       "url": "https://www.deklompdierenartsen.nl/",
@@ -1314,7 +1362,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere pokličite podnevi in ponoči na 0517-392100.",
         "hr": "Telefon 0517-392100 danju i noću za hitne slučajeve.",
-        "de": "Für Notfälle Tag und Nacht unter 0517-392100 erreichbar."
+        "de": "Für Notfälle Tag und Nacht unter 0517-392100 erreichbar.",
+        "fr": "Téléphone 0517-392100 jour et nuit pour les urgences."
       },
       "small_animals": true,
       "url": "https://dapnoordwestfriesland.nl/",
@@ -1348,7 +1397,8 @@
       "duty_i18n": {
         "sl": "Skupni dežurni krog; številka za nujne primere 0512-301444.",
         "hr": "Zajednički krug dežurstva; hitni broj 0512-301444.",
-        "de": "Gemeinsamer Notdienstverbund; Notfallnummer 0512-301444."
+        "de": "Gemeinsamer Notdienstverbund; Notfallnummer 0512-301444.",
+        "fr": "Cercle de garde commun ; numéro d’urgence 0512-301444."
       },
       "small_animals": true,
       "url": "https://www.a7noorddierenartsen.nl/",
@@ -1368,7 +1418,8 @@
       "duty_i18n": {
         "sl": "Tedenski razpored dežurnih ambulant po 17.30 in po 22.",
         "hr": "Tjedni raspored dežurnih klinika nakon 17:30 i nakon 22:00.",
-        "de": "Wöchentlicher Dienstplan der Kliniken, die nach 17.30 Uhr und nach 22 Uhr Dienst haben."
+        "de": "Wöchentlicher Dienstplan der Kliniken, die nach 17.30 Uhr und nach 22 Uhr Dienst haben.",
+        "fr": "Planning hebdomadaire des cliniques de garde après 17 h 30 et après 22 h."
       },
       "small_animals": true,
       "url": "https://www.a7noorddierenartsen.nl/spoedgevallen/wie-heeft-er-dienst/",
@@ -1478,7 +1529,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa se običajna številka samodejno preusmeri k dežurnemu veterinarju; ob sobotah 9–13 klici gredo na Dierenkliniek Kortenoord, Wageningen (0317-412432).",
         "hr": "Izvan radnog vremena uobičajeni broj automatski se preusmjerava dežurnom veterinaru; pozivi subotom 09–13 h idu u Dierenkliniek Kortenoord, Wageningen (0317-412432).",
-        "de": "Außerhalb der Öffnungszeiten wird die normale Nummer automatisch zum diensthabenden Tierarzt weitergeleitet; Anrufe am Samstag 9–13 Uhr gehen an die Dierenkliniek Kortenoord, Wageningen (0317-412432)."
+        "de": "Außerhalb der Öffnungszeiten wird die normale Nummer automatisch zum diensthabenden Tierarzt weitergeleitet; Anrufe am Samstag 9–13 Uhr gehen an die Dierenkliniek Kortenoord, Wageningen (0317-412432).",
+        "fr": "En dehors des heures d’ouverture, le numéro habituel est renvoyé automatiquement vers le vétérinaire de garde ; le samedi 9 h–13 h, les appels sont dirigés vers Dierenkliniek Kortenoord, Wageningen (0317-412432)."
       },
       "small_animals": true,
       "url": "https://www.bosweidedierenartsen.nl/",
@@ -1543,7 +1595,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere 085-4000124 za vse lokacije.",
         "hr": "Hitni broj 085-4000124 za sve lokacije.",
-        "de": "Notdienstnummer 085-4000124 für alle Standorte."
+        "de": "Notdienstnummer 085-4000124 für alle Standorte.",
+        "fr": "Numéro d’urgences 085-4000124 pour tous les sites."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekdeaam.nl/",
@@ -1578,7 +1631,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč in vikend dežurstvo na 0546-631260 in 0546-769139.",
         "hr": "Hitna služba i dežurstvo vikendom na 0546-631260 i 0546-769139.",
-        "de": "Notdienst und Wochenenddienst unter 0546-631260 und 0546-769139."
+        "de": "Notdienst und Wochenenddienst unter 0546-631260 und 0546-769139.",
+        "fr": "Urgences et garde de week-end au 0546-631260 et 0546-769139."
       },
       "small_animals": true,
       "url": "https://www.dierenartspraktijkgeesteren.nl/",
@@ -1641,7 +1695,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa pokličite številko za nujne primere 0900 776 33 32 (0,60 €/min), da vas povežejo z dežurnim veterinarjem; med odmorom za kosilo 12.30–13 nujni primeri 06-14664189. Stran z razporedom dežurstev: /dienstregeling/.",
         "hr": "Izvan radnog vremena nazovi hitni broj 0900 776 33 32 (EUR 0,60/min) za vezu s dežurnim veterinarom; tijekom stanke za ručak 12:30–13:00 hitni slučajevi 06-14664189. Raspored dežurstava: /dienstregeling/.",
-        "de": "Außerhalb der Öffnungszeiten die Notdienstnummer 0900 776 33 32 (0,60 €/Min.) anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden; in der Mittagspause 12.30–13 Uhr Notfälle unter 06-14664189. Dienstplan: /dienstregeling/."
+        "de": "Außerhalb der Öffnungszeiten die Notdienstnummer 0900 776 33 32 (0,60 €/Min.) anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden; in der Mittagspause 12.30–13 Uhr Notfälle unter 06-14664189. Dienstplan: /dienstregeling/.",
+        "fr": "En dehors des heures d’ouverture, appelez le numéro d’urgences 0900 776 33 32 (0,60 €/min) pour être mis en relation avec le vétérinaire de garde ; pause déjeuner 12 h 30–13 h, urgences au 06-14664189. Planning des gardes : /dienstregeling/."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekittersum.nl/",
@@ -1676,7 +1731,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč 18–8.30 in ves vikend; telefonska linija se samodejno preusmeri na Evidensia Dierenziekenhuis Arnhem (026-3333730).",
         "hr": "Hitna služba 18:00–08:30 i cijeli vikend; telefonska linija automatski se preusmjerava na Evidensia Dierenziekenhuis Arnhem (026-3333730).",
-        "de": "Notdienst 18–8.30 Uhr und am ganzen Wochenende; Anrufe werden automatisch an das Evidensia Dierenziekenhuis Arnhem (026-3333730) weitergeleitet."
+        "de": "Notdienst 18–8.30 Uhr und am ganzen Wochenende; Anrufe werden automatisch an das Evidensia Dierenziekenhuis Arnhem (026-3333730) weitergeleitet.",
+        "fr": "Service d’urgences 18 h–8 h 30 et tout le week-end ; la ligne est renvoyée automatiquement vers Evidensia Dierenziekenhuis Arnhem (026-3333730)."
       },
       "small_animals": true,
       "url": "https://www.groepspraktijkdierenartsenapeldoorn.nl/nl-nl",
@@ -1725,7 +1781,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa vas lahko ambulanta napoti na Kring Dierenartsen Eindhoven e.o. (0900-4455555).",
         "hr": "Izvan radnog vremena klinika može uputiti na Kring Dierenartsen Eindhoven e.o. (0900-4455555).",
-        "de": "Außerhalb der Öffnungszeiten kann die Klinik an den Kring Dierenartsen Eindhoven e.o. (0900-4455555) verweisen."
+        "de": "Außerhalb der Öffnungszeiten kann die Klinik an den Kring Dierenartsen Eindhoven e.o. (0900-4455555) verweisen.",
+        "fr": "En dehors des heures d’ouverture, la clinique peut vous orienter vers Kring Dierenartsen Eindhoven e.o. (0900-4455555)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekeindhoven.nl/",
@@ -1746,7 +1803,8 @@
       "duty_i18n": {
         "sl": "Klicateljem povedo, kam naj se obrnejo po dežurnega veterinarja.",
         "hr": "Pozivatelju se kaže kamo se obratiti za dežurnog veterinara.",
-        "de": "Anrufer erfahren, wohin sie sich für den diensthabenden Tierarzt wenden können."
+        "de": "Anrufer erfahren, wohin sie sich für den diensthabenden Tierarzt wenden können.",
+        "fr": "Les appelants sont informés de l’adresse du vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://www.dedierenartsdeurnehelmond.nl/",
@@ -1782,7 +1840,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa pokličite 077-3516231, klic se preusmeri k dežurnemu veterinarju; rezerva: Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop.",
         "hr": "Izvan radnog vremena nazovi 077-3516231, preusmjerava se dežurnom veterinaru; rezervna opcija Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop.",
-        "de": "Außerhalb der Öffnungszeiten 077-3516231 anrufen, Weiterleitung zum diensthabenden Tierarzt; Ausweichklinik: Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop."
+        "de": "Außerhalb der Öffnungszeiten 077-3516231 anrufen, Weiterleitung zum diensthabenden Tierarzt; Ausweichklinik: Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop.",
+        "fr": "Hors horaires, appelez le 077-3516231, renvoyé vers le vétérinaire de garde ; en renfort : Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop."
       },
       "small_animals": true,
       "url": "https://www.depostwagen.nl/",
@@ -1801,7 +1860,8 @@
       "emergency_24h": true,
       "duty": "Emergencies and outside opening hours: call 077-3541643, referred to the vet or the on-duty vet.",
       "duty_i18n": {
-        "de": "Notfälle und außerhalb der Öffnungszeiten: 077-3541643 anrufen; Weiterleitung an den Tierarzt oder den diensthabenden Tierarzt."
+        "de": "Notfälle und außerhalb der Öffnungszeiten: 077-3541643 anrufen; Weiterleitung an den Tierarzt oder den diensthabenden Tierarzt.",
+        "fr": "Urgences et hors horaires d’ouverture : appelez le 077-3541643, orientation vers le vétérinaire ou le vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://dierenkliniek-venlo.com/",
@@ -1822,7 +1882,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa nujne primere sprejemajo na redni številki; posneto sporočilo navede dežurno ambulanto in njeno številko.",
         "hr": "Hitni slučajevi izvan radnog vremena idu na uobičajeni broj; snimljena poruka navodi dežurnu ordinaciju i njezin broj.",
-        "de": "Notfälle außerhalb der Öffnungszeiten über die reguläre Nummer; eine Ansage nennt die diensthabende Praxis und ihre Nummer."
+        "de": "Notfälle außerhalb der Öffnungszeiten über die reguläre Nummer; eine Ansage nennt die diensthabende Praxis und ihre Nummer.",
+        "fr": "En dehors des heures d’ouverture, les urgences passent par le numéro habituel ; un message enregistré indique le cabinet de garde et son numéro."
       },
       "small_animals": true,
       "url": "https://www.dierenartsencentrum-heerlen.nl/",
@@ -1841,7 +1902,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere pokličite 046-2021734, da vas povežejo z dežurnim veterinarjem.",
         "hr": "Za hitne slučajeve nazovi 046-2021734 za vezu s dežurnim veterinarom.",
-        "de": "Für Notfälle 046-2021734 anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden."
+        "de": "Für Notfälle 046-2021734 anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden.",
+        "fr": "Pour les urgences, appelez le 046-2021734 pour joindre le vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://dierenklinieksittard.nl/",
@@ -1876,7 +1938,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa se linija preusmeri na EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde.",
         "hr": "Izvan radnog vremena linija se preusmjerava na EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde.",
-        "de": "Außerhalb der Öffnungszeiten wird die Leitung zum EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde, weitergeleitet."
+        "de": "Außerhalb der Öffnungszeiten wird die Leitung zum EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde, weitergeleitet.",
+        "fr": "En dehors des heures d’ouverture, la ligne est renvoyée vers EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde."
       },
       "small_animals": true,
       "url": "https://www.dierenartsassen.nl/nl-nl",
@@ -1897,7 +1960,8 @@
       "duty_i18n": {
         "sl": "Nujna pomoč do 20 na 0591-686666; po 20 pokličite 050-2050160 (Dierenziekenhuis EDZ Het Noorden, Eelderwolde).",
         "hr": "Hitna služba do 20:00 na 0591-686666; nakon 20:00 nazovi 050-2050160 (Dierenziekenhuis EDZ Het Noorden, Eelderwolde).",
-        "de": "Notdienst (Spoed) bis 20 Uhr unter 0591-686666; nach 20 Uhr 050-2050160 anrufen (Dierenziekenhuis EDZ Het Noorden, Eelderwolde)."
+        "de": "Notdienst (Spoed) bis 20 Uhr unter 0591-686666; nach 20 Uhr 050-2050160 anrufen (Dierenziekenhuis EDZ Het Noorden, Eelderwolde).",
+        "fr": "Urgences jusqu’à 20 h au 0591-686666 ; après 20 h, appelez le 050-2050160 (Dierenziekenhuis EDZ Het Noorden, Eelderwolde)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekemmen.nl/",
@@ -1917,7 +1981,8 @@
       "duty_i18n": {
         "sl": "Nujni klici zunaj delovnega časa se samodejno preusmerijo na Dierenartsenpost v Zwolleju; neposredno 038-3035333.",
         "hr": "Hitni pozivi izvan radnog vremena automatski se preusmjeravaju na Dierenartsenpost u Zwolleu; izravno 038-3035333.",
-        "de": "Notfallanrufe außerhalb der Öffnungszeiten werden automatisch zur Dierenartsenpost in Zwolle weitergeleitet; Direktnummer 038-3035333."
+        "de": "Notfallanrufe außerhalb der Öffnungszeiten werden automatisch zur Dierenartsenpost in Zwolle weitergeleitet; Direktnummer 038-3035333.",
+        "fr": "Les appels d’urgence hors horaires sont automatiquement transférés à la Dierenartsenpost de Zwolle ; ligne directe 038-3035333."
       },
       "small_animals": true,
       "url": "https://dkmeppel.nl/",
@@ -1937,7 +2002,8 @@
       "duty_i18n": {
         "sl": "Za nujne primere zunaj delovnega časa je dosegljiv dežurni veterinar.",
         "hr": "Za hitne slučajeve izvan radnog vremena možeš doći do dežurnog veterinara.",
-        "de": "Für Notfälle außerhalb der Öffnungszeiten ist der diensthabende Tierarzt erreichbar."
+        "de": "Für Notfälle außerhalb der Öffnungszeiten ist der diensthabende Tierarzt erreichbar.",
+        "fr": "Pour les urgences en dehors des heures d’ouverture, vous pouvez joindre le vétérinaire de garde."
       },
       "small_animals": true,
       "url": "https://dierenartsenpraktijkmeppel.nl/",
@@ -1972,7 +2038,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa vas preusmerijo k dežurnemu veterinarju; večerno, nočno in vikend dežurstvo skupaj z dierenartsenpost (AniCura Zwolle) 038-3035333.",
         "hr": "Izvan radnog vremena prebacuju te dežurnom veterinaru; večernje, noćno i vikend dežurstvo s dierenartsenpostom (AniCura Zwolle) 038-3035333.",
-        "de": "Außerhalb der Öffnungszeiten Weiterleitung zum diensthabenden Tierarzt; Abend-, Nacht- und Wochenenddienst gemeinsam mit der Dierenartsenpost (AniCura Zwolle) 038-3035333."
+        "de": "Außerhalb der Öffnungszeiten Weiterleitung zum diensthabenden Tierarzt; Abend-, Nacht- und Wochenenddienst gemeinsam mit der Dierenartsenpost (AniCura Zwolle) 038-3035333.",
+        "fr": "Après les heures d’ouverture, transfert vers le vétérinaire de garde ; gardes de soirée, de nuit et de week-end assurées avec la Dierenartsenpost (AniCura Zwolle) 038-3035333."
       },
       "small_animals": true,
       "url": "https://www.dedierenkliniekhoogeveen.nl/",
@@ -2006,7 +2073,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri zunaj delovnega časa: 050-2050160 (EDZ Het Noorden).",
         "hr": "Hitni slučajevi izvan radnog vremena: 050-2050160 (EDZ Het Noorden).",
-        "de": "Notfälle außerhalb der Öffnungszeiten: 050-2050160 (EDZ Het Noorden)."
+        "de": "Notfälle außerhalb der Öffnungszeiten: 050-2050160 (EDZ Het Noorden).",
+        "fr": "Urgences hors horaires : 050-2050160 (EDZ Het Noorden)."
       },
       "small_animals": true,
       "url": "https://www.dierenartsenheerenveen.nl/",
@@ -2071,7 +2139,8 @@
       "duty_i18n": {
         "sl": "Skupno nujno dežurstvo z Dierenartsenpraktijk Midden Brabant in Dierenziekenhuis Tilburg.",
         "hr": "Zajednički raspored hitnih dežurstava s Dierenartsenpraktijk Midden Brabant i Dierenziekenhuis Tilburg.",
-        "de": "Gemeinsamer Notdienstplan mit der Dierenartsenpraktijk Midden Brabant und dem Dierenziekenhuis Tilburg."
+        "de": "Gemeinsamer Notdienstplan mit der Dierenartsenpraktijk Midden Brabant und dem Dierenziekenhuis Tilburg.",
+        "fr": "Tableau d’urgences commun avec Dierenartsenpraktijk Midden Brabant et Dierenziekenhuis Tilburg."
       },
       "small_animals": true,
       "url": "https://dierenartstilburg.nl/",
@@ -2092,7 +2161,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa pokličite glavno številko, da vas povežejo z dežurnim veterinarjem (dienstenkring); ponoči 23–8 deluje 24-urna nujna služba s sprejemom.",
         "hr": "Izvan radnog vremena nazovi glavni broj za vezu s dežurnim veterinarom (dienstenkring); noću 23:00–08:00 pokriva ih hitna služba 24 h s mogućnošću prijema.",
-        "de": "Außerhalb der Öffnungszeiten die Hauptnummer anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden (Notdienstverbund); nachts 23–8 Uhr übernimmt ein rund um die Uhr besetzter Notdienst mit stationärer Aufnahme."
+        "de": "Außerhalb der Öffnungszeiten die Hauptnummer anrufen, um mit dem diensthabenden Tierarzt verbunden zu werden (Notdienstverbund); nachts 23–8 Uhr übernimmt ein rund um die Uhr besetzter Notdienst mit stationärer Aufnahme.",
+        "fr": "Hors horaires, appelez le numéro principal pour joindre le vétérinaire de garde (dienstenkring) ; la nuit de 23 h à 8 h, service d’urgences 24 h/24 avec hospitalisation."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekbreda.nl/",
@@ -2155,7 +2225,8 @@
       "duty_i18n": {
         "sl": "Nujne primere zunaj delovnega časa napotijo na Evidensia Dierenziekenhuis Hart van Brabant, Waalwijk (vnaprej pokličite).",
         "hr": "Hitni slučajevi izvan radnog vremena upućuju se u Evidensia Dierenziekenhuis Hart van Brabant, Waalwijk (nazovi unaprijed).",
-        "de": "Notfälle außerhalb der Öffnungszeiten werden an das Evidensia Dierenziekenhuis Hart van Brabant, Waalwijk, verwiesen (bitte vorher anrufen)."
+        "de": "Notfälle außerhalb der Öffnungszeiten werden an das Evidensia Dierenziekenhuis Hart van Brabant, Waalwijk, verwiesen (bitte vorher anrufen).",
+        "fr": "Urgences hors horaires orientées vers Evidensia Dierenziekenhuis Hart van Brabant, Waalwijk (appelez d’abord)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekdenbosch.nl/",
@@ -2175,7 +2246,8 @@
       "duty_i18n": {
         "sl": "8–20 lastno osebje; 20–8 se klici preusmerijo na Spoedkliniek Evidensia Dierenziekenhuis Arnhem, Meander 10, Arnhem.",
         "hr": "08:00–20:00 vlastito osoblje; 20:00–08:00 pozivi se preusmjeravaju na hitnu kliniku Evidensia Dierenziekenhuis Arnhem, Meander 10, Arnhem.",
-        "de": "8–20 Uhr eigenes Personal; 20–8 Uhr werden Anrufe an die Spoedkliniek des Evidensia Dierenziekenhuis Arnhem, Meander 10, Arnhem, weitergeleitet."
+        "de": "8–20 Uhr eigenes Personal; 20–8 Uhr werden Anrufe an die Spoedkliniek des Evidensia Dierenziekenhuis Arnhem, Meander 10, Arnhem, weitergeleitet.",
+        "fr": "8 h–20 h : personnel du cabinet ; 20 h–8 h : appels transférés à la clinique d’urgences d’Evidensia Dierenziekenhuis Arnhem, Meander 10, Arnhem."
       },
       "small_animals": true,
       "url": "https://www.degraafschapdierenartsen.nl/",
@@ -2210,7 +2282,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa se klici usmerijo k dežurnemu veterinarju, ki si ga ambulanta deli s sosednjo ambulanto, podnevi, ponoči in ob vikendih.",
         "hr": "Nakon radnog vremena pozivi idu dežurnom veterinaru, kojeg dijele sa susjednom ordinacijom, danju, noću i vikendom.",
-        "de": "Außerhalb der Öffnungszeiten werden Anrufe an den diensthabenden Tierarzt weitergeleitet (Dienst gemeinsam mit einer Nachbarpraxis, Tag, Nacht und am Wochenende)."
+        "de": "Außerhalb der Öffnungszeiten werden Anrufe an den diensthabenden Tierarzt weitergeleitet (Dienst gemeinsam mit einer Nachbarpraxis, Tag, Nacht und am Wochenende).",
+        "fr": "Après les heures d’ouverture, les appels sont dirigés vers le vétérinaire de garde, partagé avec un cabinet voisin, jour, nuit et week-end."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekslangenbeek.nl/",
@@ -2276,7 +2349,8 @@
       "duty_i18n": {
         "sl": "Dežurni krog: De Wijher Roermond 0475-793500, Roerdalen Melick 0475-600641, Heythuysen 0475-469262, Reuver 077-4746000.",
         "hr": "Krug dežurstva: De Wijher Roermond 0475-793500, Roerdalen Melick 0475-600641, Heythuysen 0475-469262, Reuver 077-4746000.",
-        "de": "Notdienstverbund: De Wijher Roermond 0475-793500, Roerdalen Melick 0475-600641, Heythuysen 0475-469262, Reuver 077-4746000."
+        "de": "Notdienstverbund: De Wijher Roermond 0475-793500, Roerdalen Melick 0475-600641, Heythuysen 0475-469262, Reuver 077-4746000.",
+        "fr": "Cercle de garde : De Wijher Roermond 0475-793500, Roerdalen Melick 0475-600641, Heythuysen 0475-469262, Reuver 077-4746000."
       },
       "small_animals": true,
       "url": "https://www.dierenklinieknederweert.nl/",
@@ -2297,7 +2371,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa pokličite Evidensia Dierenziekenhuis Arnhem 026-3333730; 12.30–13.30 lastna nujna linija prek telefonskega menija.",
         "hr": "Izvan radnog vremena nazovi Evidensia Dierenziekenhuis Arnhem 026-3333730; 12:30–13:30 vlastita hitna linija preko telefonskog izbornika.",
-        "de": "Außerhalb der Öffnungszeiten das Evidensia Dierenziekenhuis Arnhem 026-3333730 anrufen; 12.30–13.30 Uhr eigene Notfallnummer über das Telefonmenü."
+        "de": "Außerhalb der Öffnungszeiten das Evidensia Dierenziekenhuis Arnhem 026-3333730 anrufen; 12.30–13.30 Uhr eigene Notfallnummer über das Telefonmenü.",
+        "fr": "Hors horaires, appelez Evidensia Dierenziekenhuis Arnhem 026-3333730 ; 12 h 30–13 h 30, ligne d’urgence du cabinet via le menu vocal."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekzevenaar.nl/",
@@ -2317,7 +2392,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa na 0344-612976 izberite možnost dežurnega veterinarja; rezerva: De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900.",
         "hr": "Izvan radnog vremena odaberi opciju dežurnog veterinara na 0344-612976; rezervna opcija De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900.",
-        "de": "Außerhalb der Öffnungszeiten unter 0344-612976 die Option für den diensthabenden Tierarzt wählen; Ersatz: De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900."
+        "de": "Außerhalb der Öffnungszeiten unter 0344-612976 die Option für den diensthabenden Tierarzt wählen; Ersatz: De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900.",
+        "fr": "Hors horaires, choisissez l’option vétérinaire de garde au 0344-612976 ; en secours : De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniektiel.nl/",
@@ -2336,7 +2412,8 @@
       "emergency_24h": true,
       "duty": "Out of hours calls are forwarded automatically to the on-duty vet (Vorden, then EDZ Arnhem at night). Emergency/after-hours line 0543-512124 (main line 0543-512385).",
       "duty_i18n": {
-        "de": "Außerhalb der Öffnungszeiten werden Anrufe automatisch zum diensthabenden Tierarzt weitergeleitet (Vorden, nachts dann EDZ Arnhem). Notfall-/Nachtnummer 0543-512124 (Hauptnummer 0543-512385)."
+        "de": "Außerhalb der Öffnungszeiten werden Anrufe automatisch zum diensthabenden Tierarzt weitergeleitet (Vorden, nachts dann EDZ Arnhem). Notfall-/Nachtnummer 0543-512124 (Hauptnummer 0543-512385).",
+        "fr": "Hors horaires, les appels sont transférés automatiquement au vétérinaire de garde (Vorden, puis EDZ Arnhem la nuit). Ligne d’urgence/hors horaires 0543-512124 (ligne principale 0543-512385)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekwinterswijk.nl/",
@@ -2398,7 +2475,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri: pokličite 0318-590868 kadar koli.",
         "hr": "Hitni slučajevi: nazovi 0318-590868 u bilo koje doba.",
-        "de": "Notfälle: jederzeit 0318-590868 anrufen."
+        "de": "Notfälle: jederzeit 0318-590868 anrufen.",
+        "fr": "Urgences : appelez le 0318-590868 à toute heure."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekdevijfsprong.nl/",
@@ -2434,7 +2512,8 @@
       "duty_i18n": {
         "sl": "Številka za nujne primere 0314-363198. Ob delavnikih 17–8.30, ob vikendih in praznikih se klici samodejno preusmerijo na Spoedkliniek Evidensia Dierenziekenhuis Arnhem.",
         "hr": "Hitni broj 0314-363198. Radnim danima 17:00–08:30, vikendom i na blagdane pozivi se automatski prebacuju na hitnu kliniku Evidensia Dierenziekenhuis Arnhem.",
-        "de": "Notfallnummer 0314-363198. Werktags 17–8.30 Uhr sowie am Wochenende und an Feiertagen werden Anrufe automatisch zur Spoedkliniek des Evidensia Dierenziekenhuis Arnhem weitergeleitet."
+        "de": "Notfallnummer 0314-363198. Werktags 17–8.30 Uhr sowie am Wochenende und an Feiertagen werden Anrufe automatisch zur Spoedkliniek des Evidensia Dierenziekenhuis Arnhem weitergeleitet.",
+        "fr": "Numéro d’urgence 0314-363198. En semaine 17 h–8 h 30, week-ends et jours fériés, les appels sont transférés automatiquement à la clinique d’urgences d’Evidensia Dierenziekenhuis Arnhem."
       },
       "small_animals": true,
       "url": "https://www.dapzelhem.nl/",
@@ -2470,7 +2549,8 @@
       "duty_i18n": {
         "sl": "Nujno pomoč nudijo skupaj z Dierenartsenpost Zwolle.",
         "hr": "Hitnu skrb pružaju zajedno s Dierenartsenpost Zwolle.",
-        "de": "Notfallversorgung gemeinsam mit der Dierenartsenpost Zwolle."
+        "de": "Notfallversorgung gemeinsam mit der Dierenartsenpost Zwolle.",
+        "fr": "Urgences assurées conjointement avec Dierenartsenpost Zwolle."
       },
       "small_animals": true,
       "url": "https://www.middensalland.nl/",
@@ -2491,7 +2571,8 @@
       "duty_i18n": {
         "sl": "Vikend nujno pomoč za hišne ljubljenčke izvajajo skupaj z Diergeneeskundig Centrum Zuid-Oost Drenthe; ambulanta ostaja dosegljiva na 0523-266066.",
         "hr": "Vikendom hitnu skrb za kućne ljubimce provode zajedno s Diergeneeskundig Centrum Zuid-Oost Drenthe; klinika ostaje dostupna na 0523-266066.",
-        "de": "Der Wochenend-Notdienst für Haustiere wird gemeinsam mit dem Diergeneeskundig Centrum Zuid-Oost Drenthe betrieben; die Klinik bleibt unter 0523-266066 erreichbar."
+        "de": "Der Wochenend-Notdienst für Haustiere wird gemeinsam mit dem Diergeneeskundig Centrum Zuid-Oost Drenthe betrieben; die Klinik bleibt unter 0523-266066 erreichbar.",
+        "fr": "Urgences de week-end pour animaux de compagnie assurées avec Diergeneeskundig Centrum Zuid-Oost Drenthe ; la clinique reste joignable au 0523-266066."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekvechtdal.nl/",
@@ -2557,7 +2638,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri zunaj delovnega časa gredo na urgentno točko Evidensia Dierenziekenhuis Het Noorden (Eelderwolde), zvečer, ponoči in ob vikendih; pokličite glavno številko, da vas preusmerijo.",
         "hr": "Izvan radnog vremena hitni slučajevi idu u hitnu službu Evidensia Dierenziekenhuis Het Noorden (Eelderwolde), navečer, noću i vikendom; nazovi glavni broj za preusmjeravanje.",
-        "de": "Notfälle außerhalb der Öffnungszeiten gehen abends, nachts und am Wochenende an den Notdienst des Evidensia Dierenziekenhuis Het Noorden (Eelderwolde); bitte die Hauptnummer anrufen, um weitergeleitet zu werden."
+        "de": "Notfälle außerhalb der Öffnungszeiten gehen abends, nachts und am Wochenende an den Notdienst des Evidensia Dierenziekenhuis Het Noorden (Eelderwolde); bitte die Hauptnummer anrufen, um weitergeleitet zu werden.",
+        "fr": "En dehors des heures d’ouverture, les urgences sont dirigées vers le poste d’urgences d’Evidensia Dierenziekenhuis Het Noorden (Eelderwolde), le soir, la nuit et le week-end ; appelez le numéro principal pour être orienté."
       },
       "small_animals": true,
       "url": "https://www.elkedierenarts.nl/arts/tolhuis-leeuwarden",
@@ -2577,7 +2659,8 @@
       "duty_i18n": {
         "sl": "Če ambulanta ni dežurna, klicatelj dobi številko nujnega veterinarja.",
         "hr": "Ako klinika nije dežurna, pozivatelj dobiva broj dežurnog veterinara.",
-        "de": "Wenn die Klinik keinen Dienst hat, erhalten Anrufer die Nummer des Notdienst-Tierarztes."
+        "de": "Wenn die Klinik keinen Dienst hat, erhalten Anrufer die Nummer des Notdienst-Tierarztes.",
+        "fr": "Si la clinique n’est pas de garde, l’appelant reçoit le numéro du vétérinaire d’urgence."
       },
       "small_animals": true,
       "url": "https://dierenkliniekchiara.nl/",
@@ -2682,7 +2765,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa nujni primeri gredo na Dierenartsenpost Zwolle, Schrevenweg 13-15, 038-3035333.",
         "hr": "Hitni slučajevi izvan radnog vremena idu u Dierenartsenpost Zwolle, Schrevenweg 13-15, 038-3035333.",
-        "de": "Notfälle außerhalb der Öffnungszeiten gehen an die Dierenartsenpost Zwolle, Schrevenweg 13-15, 038-3035333."
+        "de": "Notfälle außerhalb der Öffnungszeiten gehen an die Dierenartsenpost Zwolle, Schrevenweg 13-15, 038-3035333.",
+        "fr": "En dehors des heures d’ouverture, les urgences sont dirigées vers la Dierenartsenpost Zwolle, Schrevenweg 13-15, 038-3035333."
       },
       "small_animals": true,
       "url": "https://www.mobidierenarts.nl/",
@@ -2703,7 +2787,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa: 038-3035333.",
         "hr": "Izvan radnog vremena: 038-3035333.",
-        "de": "Außerhalb der Öffnungszeiten: 038-3035333."
+        "de": "Außerhalb der Öffnungszeiten: 038-3035333.",
+        "fr": "En dehors des heures d’ouverture : 038-3035333."
       },
       "small_animals": true,
       "url": "https://www.dierenklinieknunspeet.nl/nl-nl",
@@ -2724,7 +2809,8 @@
       "duty_i18n": {
         "sl": "Nujni primeri: 0341-353451, izbira 1 (samo za stranke; drugi naj se obrnejo na svojega veterinarja).",
         "hr": "Hitni slučajevi: 0341-353451, opcija 1 (samo za klijente; ostali se obraćaju svom veterinaru).",
-        "de": "Notfall: 0341-353451, Option 1 (nur für Kunden; andere wenden sich an ihren eigenen Tierarzt)."
+        "de": "Notfall: 0341-353451, Option 1 (nur für Kunden; andere wenden sich an ihren eigenen Tierarzt).",
+        "fr": "Urgences : 0341-353451, option 1 (clients uniquement ; les autres contactent leur propre vétérinaire)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekputten.nl/",
@@ -2759,7 +2845,8 @@
       "duty_i18n": {
         "sl": "Zunaj delovnega časa (nočna in vikend služba) pokličite 0900-4455555.",
         "hr": "Izvan radnog vremena (noćna služba i služba vikendom) nazovi 0900-4455555.",
-        "de": "Außerhalb der Öffnungszeiten (Nacht- und Wochenenddienst) 0900-4455555 anrufen."
+        "de": "Außerhalb der Öffnungszeiten (Nacht- und Wochenenddienst) 0900-4455555 anrufen.",
+        "fr": "En dehors des heures d’ouverture (service de nuit et de week-end), appelez le 0900-4455555."
       },
       "small_animals": true,
       "url": "https://dierenkliniekgestel.nl/",
@@ -2780,7 +2867,8 @@
       "duty_i18n": {
         "sl": "Linija za nujne primere 040-2061682; če ni dosegljiva, 040-7200862. Dežurni veterinar vas lahko napoti na Dierenkliniek Coppelmans ali Dierenkliniek Veldhoven (skupna nujna služba).",
         "hr": "Hitna linija 040-2061682; ako nije dostupna, 040-7200862. Dežurni veterinar može uputiti u Dierenkliniek Coppelmans ili Dierenkliniek Veldhoven (zajednička hitna služba).",
-        "de": "Notfallnummer 040-2061682; falls nicht erreichbar 040-7200862. Der diensthabende Tierarzt kann an die Dierenkliniek Coppelmans oder die Dierenkliniek Veldhoven verweisen (gemeinsamer Notdienst)."
+        "de": "Notfallnummer 040-2061682; falls nicht erreichbar 040-7200862. Der diensthabende Tierarzt kann an die Dierenkliniek Coppelmans oder die Dierenkliniek Veldhoven verweisen (gemeinsamer Notdienst).",
+        "fr": "Ligne d’urgence 040-2061682 ; en cas d’indisponibilité 040-7200862. Le vétérinaire de garde peut vous orienter vers Dierenkliniek Coppelmans ou Dierenkliniek Veldhoven (service d’urgences commun)."
       },
       "small_animals": true,
       "url": "https://www.dierenartsboschhoven.nl/",
@@ -2829,7 +2917,8 @@
       "duty_i18n": {
         "sl": "Nočno in vikend dežurstvo: klicatelji na številki izbirajo med dvema ambulantama.",
         "hr": "Dežurstvo noću i vikendom: na tom broju biraš jednu od dviju ordinacija.",
-        "de": "Nacht- und Wochenenddienst: Unter der Nummer können Anrufer zwischen zwei Praxen wählen."
+        "de": "Nacht- und Wochenenddienst: Unter der Nummer können Anrufer zwischen zwei Praxen wählen.",
+        "fr": "Garde de nuit et de week-end : au numéro, l’appelant choisit entre deux cabinets."
       },
       "small_animals": true,
       "url": "https://www.kringdierenarts.nl/",

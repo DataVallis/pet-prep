@@ -2516,5 +2516,30 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S762', 'S763'], 'refs' => ['flat_coated_retriever.suitability.rkc_grooming', 'flat_coated_retriever.suitability.petmd_grooming']],
             ],
         ],
+        // M5-R10-102 Border Terrier — not a welfare breed (RKC Breed Watch Category 1, S769). 1 hour a day → no active_family /
+        // long_daily_exercise. No family_pet (the PDSA family passage came back only as a summary). children (PDSA, with the supervision
+        // caveat) next to lively_older_children (Woodgreen) — Bull Terrier precedent. No new vocabulary key. Never hypoallergenic.
+        'border_terrier' => [
+            'suits' => [
+                // S770 "… given the right socialisation" "will love spending time with children of all ages." — supervise; never small_children.
+                ['tag' => 'children', 'source_ids' => ['S770'], 'refs' => ['border_terrier.behaviour.children']],
+                // S769 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S769'], 'refs' => ['border_terrier.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S773 "would suit a home with slightly older children as they can be quite mouthy and too busy for young children."
+                ['tag' => 'lively_older_children', 'source_ids' => ['S773'], 'refs' => ['border_terrier.suitability.woodgreen_children']],
+                // S770 "Border Terriers are known for developing separation anxiety if they are left alone"
+                ['tag' => 'needs_company', 'source_ids' => ['S770'], 'refs' => ['border_terrier.behaviour.time_alone']],
+                // S777 "cannot be trusted off-leash or in an unfenced area AT ANY TIME!!"
+                ['tag' => 'secure_fencing', 'source_ids' => ['S777'], 'refs' => ['border_terrier.behaviour.containment']],
+                // S769 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S769'], 'refs' => ['border_terrier.suitability.rkc_shedding']],
+                // S769 "Grooming: More than once a week"; S770 "… a brush a couple of times a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S769', 'S770'], 'refs' => ['border_terrier.suitability.rkc_grooming', 'border_terrier.suitability.pdsa_grooming']],
+                // S770 "… as they have such a high prey drive they might see them as something to chase …"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S770'], 'refs' => ['border_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
