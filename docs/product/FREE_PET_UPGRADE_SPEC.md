@@ -158,9 +158,9 @@ Besedila so EN + SL, za psa in muco.
 - Pri U4 je izbira »mešanček + izziv« dovoljena samo novim aplikacijam (zmožnost odjemalca, kot `species_cat`). Stare aplikacije dobijo brezplačnega ljubljenčka. `defaultPlanFor` in `convertUnpaidMuttToFree` ostaneta.
 - **Kako je zgrajeno (PR 2, 11. 11. 2026):**
   - Zmožnost odjemalca `free_breed_challenge` (`ClientFeature::FreeBreedChallenge`). Šteje samo starševa (`features` pri generate-pin, shranjene na PIN-u; `features[]` pri `GET /api/breeds` → brezplačna pasma `challenge_allowed: true`). Otrokova naprava ni pomembna.
-  - `PairingService::assertPlanAllowed` 422 samo brez zmožnosti; `createPet` in `Pet::creating` ohranita neplačan izziv brezplačne pasme samo, ko ga je izbrala nova aplikacija (`allowsFreeBreedChallenge`); vse druge poti (stari PIN-i, `/child/pair`, administracija, tovarne) še vedno naredijo brezplačnega.
+  - `PairingService::assertPlanAllowed` 422 samo brez zmožnosti; `createPet` in `Pet::creating` ohranita neplačan izziv brezplačne pasme samo, ko ga je izbrala nova aplikacija (`allowsFreeBreedChallenge` → stolpec `pets.free_breed_challenge`; tak ljubljenček se nikoli ne prikaže kot brezplačen, tudi če ga odklene administrator); vse druge poti (stari PIN-i, `/child/pair`, administracija, tovarne) še vedno naredijo brezplačnega.
   - Tak ljubljenček je navaden ljubljenček na izzivu: `payment_required`, zaklep ob rojstvu, webhook / namen / aktivacija kot pri pasemskem (pravilo PR 1 iz QA #978 b ga šteje kot ljubljenčka na izzivu, ne kot brezplačnega). Vračilo → brezplačni načrt.
-  - Aplikacija: izbirnik sledi strežnikovemu `challenge_allowed` in priporoči »Začnite brezplačno, izziv lahko dodate kadarkoli.«; `isOfferablePet` sprejme neplačan izziv brezplačne pasme (gumb za nakup).
+  - Aplikacija: izbirnik sledi strežnikovemu `challenge_allowed` in priporoči »Začnite brezplačno, izziv lahko dodate kadarkoli.«; ob preklopu na izziv je izbrana prva plačljiva pasma, mešanček samo, če ga starš tapne (QA #983); `isOfferablePet` sprejme neplačan izziv brezplačne pasme (gumb za nakup).
 
 **5.7 Opomnik 7. dan (PR 2)**
 - Vzorec je `PetBirthdayService`: enkrat na ljubljenčka (`*_celebrated_at`), preverjanje v ticku (`*_next_check_at`), datum v `effectiveTimezone()`.
