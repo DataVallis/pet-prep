@@ -3,12 +3,16 @@
 namespace App\Http\Requests;
 
 use App\Services\Gift\GiftRedeemResult;
+use App\Support\WebsiteLocale;
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\Rule;
 
 /**
- * POST /api/gift/redeem (M6-S01, CONTRACT §2.4 step 1). Public (no auth). A failure
+ * POST /api/gift/redeem (M6-S01, CONTRACT §2.4 step 1; M6-S01b). Authenticated by the
+ * website sign-in token (RequireWebSession) — the family comes from the token, never
+ * from the body: a sent `email` is ignored (never validated, never logged). A failure
  * answers 422 `invalid_request` without echoing field names or values.
  */
 class RedeemGiftRequest extends FormRequest
@@ -20,11 +24,9 @@ class RedeemGiftRequest extends FormRequest
 
     protected function prepareForValidation(): void
     {
-        foreach (['code', 'email'] as $field) {
-            $value = $this->input($field);
-            if (is_string($value)) {
-                $this->merge([$field => trim($value)]);
-            }
+        $code = $this->input('code');
+        if (is_string($code)) {
+            $this->merge(['code' => trim($code)]);
         }
     }
 
@@ -36,18 +38,15 @@ class RedeemGiftRequest extends FormRequest
         return [
             // The voucher code (a Lemon Squeezy license key) as printed: letters, digits, dashes, spaces.
             'code' => ['required', 'string', 'min:8', 'max:64', 'regex:/^[A-Za-z0-9\- ]+$/'],
-            // The parent's account e-mail in the app.
-            'email' => ['required', 'string', 'max:254', 'email:rfc'],
-            // Language of the `message` text only (the website maps `error`).
-            'locale' => ['sometimes', 'nullable', 'string', 'in:sl,en'],
+            // Language of the `message` text only (one of the 15 website languages; the
+            // server answers sl / en, the rest en — the website maps `error`).
+            'locale' => ['sometimes', 'nullable', 'string', Rule::in(WebsiteLocale::ALL)],
         ];
     }
 
     protected function failedValidation(ValidatorContract $validator): void
     {
-        if (in_array($this->input('locale'), ['sl', 'en'], true)) {
-            app()->setLocale((string) $this->input('locale'));
-        }
+        WebsiteLocale::apply($this->input('locale'));
 
         throw new HttpResponseException(response()->json([
             'error' => GiftRedeemResult::INVALID_REQUEST,
@@ -58,10 +57,5 @@ class RedeemGiftRequest extends FormRequest
     public function code(): string
     {
         return (string) $this->validated('code');
-    }
-
-    public function email(): string
-    {
-        return (string) $this->validated('email');
     }
 }

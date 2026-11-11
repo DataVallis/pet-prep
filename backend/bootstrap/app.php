@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\RecordClientFeatures;
+use App\Http\Middleware\RestrictWebSessionTokens;
 use App\Http\Middleware\SetRequestLocale;
 use App\Http\Middleware\TrustProxies;
 use App\Services\SystemHealth\ErrorRecorder;
@@ -21,9 +22,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     // M1-08: channel auth for the mobile apps with the Sanctum bearer token —
     // POST /api/broadcasting/auth (no session / CSRF). Only private channels.
+    // M6-S01b (W2): app abilities only — a website `gift:redeem` token never passes.
     ->withBroadcasting(
         __DIR__.'/../routes/channels.php',
-        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum', 'throttle:api']],
+        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum', 'ability:parent,child', 'throttle:api']],
     )
     ->withMiddleware(function (Middleware $middleware) {
         // M2-03: Sanctum token abilities. `ability:parent` / `ability:child`
@@ -41,6 +43,12 @@ return Application::configure(basePath: dirname(__DIR__))
         // M1-18: Accept-Language → App::setLocale() for every API request
         // (also /api/broadcasting/auth, which uses the `api` group).
         $middleware->api(prepend: [SetRequestLocale::class]);
+
+        // M6-S01b (W1): a website sign-in token (abilities exactly ["gift:redeem"]) may
+        // call only POST /api/gift/redeem and DELETE /api/web/parent-session; every
+        // other API route (broadcasting auth included) → 403 `token_scope`. Prepended so
+        // it runs before route-model binding (no 404 / model lookups for such a token).
+        $middleware->api(prepend: [RestrictWebSessionTokens::class]);
 
         // M5-R14 – R20 follow-up: `X-PetPrep-Features` → users.client_features
         // (what the app on that phone can show now; existing dogs' care tasks).

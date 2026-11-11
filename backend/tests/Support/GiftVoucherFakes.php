@@ -227,14 +227,31 @@ function gvFreeMutt(User $child): Pet
 }
 
 /**
+ * M6-S01b: a website sign-in token (`gift:redeem`, 15 min) as WebParentSessionService
+ * issues it — minted directly so gift tests need no sign-in round trip (the endpoint
+ * itself is WebParentSessionTest's).
+ */
+function gvWebToken(User $user, ?Carbon $expiresAt = null): string
+{
+    return $user->createToken('web:gift-redeem', ['gift:redeem'], $expiresAt ?? now()->addMinutes(15))->plainTextToken;
+}
+
+/**
+ * POST /api/gift/redeem as $as: a User or an account e-mail (test-side lookup only —
+ * the API never sees an e-mail) → a fresh web token; a raw token string via
+ * `token:`; null / an unknown e-mail → no Authorization header.
+ *
  * @param  array<string, mixed>  $extra
  */
-function gvRedeem(string $code = GV_CODE, string $email = 'parent@example.com', string $ip = '203.0.113.10', array $extra = []): TestResponse
+function gvRedeem(string $code = GV_CODE, User|string|null $as = 'parent@example.com', string $ip = '203.0.113.10', array $extra = [], ?string $token = null): TestResponse
 {
+    $user = is_string($as) ? User::findByEmail($as) : $as;
+    $token ??= $user !== null ? gvWebToken($user) : null;
     app('auth')->forgetGuards();
 
-    return test()->withServerVariables(['REMOTE_ADDR' => $ip])
-        ->postJson('/api/gift/redeem', array_merge(['code' => $code, 'email' => $email, 'locale' => 'en'], $extra));
+    $test = test()->withServerVariables(['REMOTE_ADDR' => $ip])->withHeaders(['Authorization' => $token !== null ? 'Bearer '.$token : '']);
+
+    return $test->postJson('/api/gift/redeem', array_merge(['code' => $code, 'locale' => 'en'], $extra));
 }
 
 function gvActivate(User $parent, Pet $pet): TestResponse

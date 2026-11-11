@@ -3,7 +3,9 @@
 namespace App\Services\Gift;
 
 /**
- * Outcome of POST /api/gift/redeem (CONTRACT §5.1). `error` null = redeemed.
+ * Outcome of POST /api/gift/redeem (CONTRACT §5.1, amended by CONTRACT_WEB_SIGNIN §3.3).
+ * `error` null = redeemed. `unauthenticated` / `not_parent` come from RequireWebSession
+ * (and `unauthenticated` from the commit when the family is gone).
  */
 final class GiftRedeemResult
 {
@@ -15,7 +17,9 @@ final class GiftRedeemResult
 
     public const REFUNDED = 'refunded';
 
-    public const NO_ACCOUNT = 'no_account';
+    public const UNAUTHENTICATED = 'unauthenticated';
+
+    public const NOT_PARENT = 'not_parent';
 
     public const ALREADY_REDEEMED = 'already_redeemed';
 
@@ -31,7 +35,8 @@ final class GiftRedeemResult
         self::INVALID_CODE => 422,
         self::EXPIRED => 422,
         self::REFUNDED => 422,
-        self::NO_ACCOUNT => 422,
+        self::UNAUTHENTICATED => 401,
+        self::NOT_PARENT => 403,
         self::ALREADY_REDEEMED => 409,
         self::RATE_LIMITED => 429,
         self::UPSTREAM_ERROR => 502,

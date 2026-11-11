@@ -50,18 +50,18 @@ it('MA1: an LS answer without meta.order_id is refused and nothing is stored (ne
 it('m1: a concurrent redeem by the same family (no API key) answers already:true — no 409, no alert', function () {
     Queue::fake();
     $ls = gvLs();
-    gvParent();
+    [, , $family] = gvParent();
     $inner = null;
-    $ls->beforeActivate = function () use (&$inner) {
+    $ls->beforeActivate = function () use (&$inner, $family) {
         if ($inner !== null) {
             return;
         }
         $inner = false;
         // The family's other tab finishes the whole redemption while this request waits on LS.
-        $inner = app(GiftVoucherRedeemService::class)->redeem(GV_CODE, 'parent@example.com');
+        $inner = app(GiftVoucherRedeemService::class)->redeem(GV_CODE, $family);
     };
 
-    $outer = app(GiftVoucherRedeemService::class)->redeem(GV_CODE, 'parent@example.com');
+    $outer = app(GiftVoucherRedeemService::class)->redeem(GV_CODE, $family);
 
     expect($inner->error)->toBeNull()->and($inner->already)->toBeFalse()
         ->and($outer->error)->toBeNull()->and($outer->already)->toBeTrue()
@@ -98,7 +98,8 @@ it('m3: the webhook fills the purchase date of a row created by the redeem path'
     gvParent();
     gvWebhook(gvOrderEvent('order_created', ['created_at' => '2026-10-20T08:00:00Z', 'updated_at' => '2026-10-20T08:00:00Z']));
     $ls->createdAt = null; // LS validate without created_at → the order's date is used (m4)
-    gvRedeem(email: 'nobody@example.com')->assertStatus(422); // lazy row, no account
+    $ls->activateFails = 500; // M6-S01b: lazy row + claim, then LS refuses → nothing redeemed
+    gvRedeem()->assertStatus(502);
     expect(GiftVoucher::sole()->purchased_at->toIso8601String())->toBe('2026-10-20T08:00:00+00:00');
 
     gvWebhook(gvLicenseKeyEvent('license_key_created', ['created_at' => '2026-10-20T08:00:05Z', 'updated_at' => '2026-10-20T08:00:05Z']));
