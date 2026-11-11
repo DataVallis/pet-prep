@@ -8,7 +8,8 @@
     "pt": "Manjericão",
     "fr": "Basilic",
     "es": "Albahaca",
-    "it": "Basilico"
+    "it": "Basilico",
+    "nl": "Basilicum"
   },
   "question": {
     "en": "Can cats eat basil?",
@@ -17,7 +18,8 @@
     "pt": "Os gatos podem comer manjericão?",
     "fr": "Les chats peuvent-ils manger du basilic ?",
     "es": "¿Pueden los gatos comer albahaca?",
-    "it": "I gatti possono mangiare il basilico?"
+    "it": "I gatti possono mangiare il basilico?",
+    "nl": "Mogen katten basilicum eten?"
   },
   "url_slug": {
     "en": "basil",
@@ -26,7 +28,8 @@
     "pt": "manjericao",
     "fr": "basilic",
     "es": "albahaca",
-    "it": "basilico"
+    "it": "basilico",
+    "nl": "basilicum"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Sim, um pequeno pedaço de manjericão simples, de vez em quando, não faz mal. A ASPCA inclui o manjericão, nomeadamente o manjericão-doce e o manjericão-tailandês, entre as plantas não tóxicas para os gatos. Mesmo assim, os gatos não precisam dele, e qualquer planta pode causar vómitos ou mal-estar no estômago.",
     "fr": "Oui, une petite bouchée de basilic nature de temps en temps ne pose pas de problème. L’ASPCA classe le basilic, y compris le basilic doux et le basilic thaï, parmi les plantes non toxiques pour les chats. Les chats n’en ont toutefois pas besoin, et n’importe quelle plante peut provoquer des vomissements ou des maux d’estomac.",
     "es": "Sí, un mordisquito de albahaca al natural de vez en cuando no pasa nada. La ASPCA incluye la albahaca, también la dulce y la tailandesa, entre las plantas no tóxicas para los gatos. Aun así, los gatos no la necesitan, y cualquier planta puede provocar vómitos o malestar de estómago.",
-    "it": "Sì, ogni tanto un piccolo assaggio di basilico al naturale va bene. L’ASPCA indica il basilico, compreso quello dolce e quello thai, come non tossico per i gatti. Ai gatti però non serve, e qualsiasi pianta può provocare vomito o disturbi di stomaco."
+    "it": "Sì, ogni tanto un piccolo assaggio di basilico al naturale va bene. L’ASPCA indica il basilico, compreso quello dolce e quello thai, come non tossico per i gatti. Ai gatti però non serve, e qualsiasi pianta può provocare vomito o disturbi di stomaco.",
+    "nl": "Ja, af en toe een klein hapje basilicum, zonder iets erop of eraan, kan prima. De ASPCA noemt basilicum, ook zoete en Thaise basilicum, niet giftig voor katten. Katten hebben het alleen niet nodig, en van elke plant kan een kat gaan braken of maagklachten krijgen."
   },
   "why": {
     "en": "The ASPCA lists basil (Ocimum basilicum, also called sweet basil and Thai basil) as non-toxic to cats. Cats Protection explains that even non-toxic plants may still cause a tummy upset if eaten, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats. PDSA says cats don't need anything other than a complete diet, though an occasional treat is fine.",
@@ -45,7 +49,8 @@
     "pt": "A ASPCA inclui o manjericão (Ocimum basilicum, também chamado manjericão-doce e manjericão-tailandês) entre as plantas não tóxicas para os gatos. A Cats Protection explica que mesmo as plantas não tóxicas podem causar mal-estar no estômago se forem comidas, e a ASPCA refere que qualquer material vegetal pode causar vómitos e mal-estar no estômago nos gatos. A PDSA diz que os gatos não precisam de mais nada além de uma alimentação completa, embora uma guloseima ocasional não faça mal.",
     "fr": "L’ASPCA classe le basilic (Ocimum basilicum, aussi appelé basilic doux et basilic thaï) parmi les plantes non toxiques pour les chats. Cats Protection explique que même une plante non toxique peut malgré tout causer des maux de ventre si le chat la mange, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des maux d’estomac chez le chat. Selon la PDSA, les chats n’ont besoin de rien d’autre qu’une alimentation complète, même si une friandise de temps en temps ne pose pas de problème.",
     "es": "La ASPCA incluye la albahaca (Ocimum basilicum, también llamada albahaca dulce y albahaca tailandesa) entre las plantas no tóxicas para los gatos. Cats Protection explica que incluso las plantas no tóxicas pueden provocar malestar de barriga si se comen, y la ASPCA indica que cualquier material vegetal puede provocar vómitos y malestar de estómago en los gatos. PDSA dice que los gatos no necesitan nada más que una alimentación completa, aunque un premio ocasional no hace daño.",
-    "it": "L’ASPCA indica il basilico (Ocimum basilicum, detto anche basilico dolce e basilico thai) come non tossico per i gatti. Cats Protection spiega che anche le piante non tossiche, se mangiate, possono comunque causare disturbi di pancia, e l’ASPCA segnala che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Secondo PDSA ai gatti non serve altro che un’alimentazione completa, anche se ogni tanto un premio va bene."
+    "it": "L’ASPCA indica il basilico (Ocimum basilicum, detto anche basilico dolce e basilico thai) come non tossico per i gatti. Cats Protection spiega che anche le piante non tossiche, se mangiate, possono comunque causare disturbi di pancia, e l’ASPCA segnala che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Secondo PDSA ai gatti non serve altro che un’alimentazione completa, anche se ogni tanto un premio va bene.",
+    "nl": "De ASPCA noemt basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) niet giftig voor katten. Cats Protection legt uit dat ook niet-giftige planten de maag van streek kunnen maken als een kat ze eet, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Volgens PDSA hebben katten niets nodig behalve een compleet kattenvoer, al kan af en toe een traktatie prima."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pt": "O manjericão não é tóxico para os gatos, mas, como qualquer planta, pode causar vómitos ou mal-estar no estômago. Fica-te por uma dentada pequena, só de vez em quando.",
     "fr": "Le basilic n’est pas toxique pour les chats, mais comme toute plante, il peut provoquer des vomissements ou des maux d’estomac. Limitez-vous à une petite bouchée occasionnelle.",
     "es": "La albahaca no es tóxica para los gatos, pero, como cualquier planta, puede provocar vómitos o malestar de estómago. Dale solo un trocito pequeño de vez en cuando.",
-    "it": "Il basilico non è tossico per i gatti, ma come qualsiasi pianta può causare vomito o disturbi di stomaco. Limitati a un assaggio occasionale, di un solo boccone."
+    "it": "Il basilico non è tossico per i gatti, ma come qualsiasi pianta può causare vomito o disturbi di stomaco. Limitati a un assaggio occasionale, di un solo boccone.",
+    "nl": "Basilicum is niet giftig voor katten, maar net als elke plant kan het braken of maagklachten veroorzaken. Houd het bij af en toe een klein hapje."
   },
   "serving": {
     "en": "Only a small, bite-sized nibble of a plain basil leaf, as an occasional treat.",
@@ -64,7 +70,8 @@
     "pt": "Apenas um pedacinho de uma folha de manjericão simples, como guloseima ocasional.",
     "fr": "Seulement une petite bouchée d’une feuille de basilic nature, en friandise occasionnelle.",
     "es": "Solo un trocito pequeño de hoja de albahaca al natural, como premio ocasional.",
-    "it": "Solo un assaggio di una foglia di basilico al naturale, grande quanto un boccone, come premio occasionale."
+    "it": "Solo un assaggio di una foglia di basilico al naturale, grande quanto un boccone, come premio occasionale.",
+    "nl": "Alleen af en toe, als traktatie, een klein hapje van een basilicumblaadje zonder iets erop of eraan."
   },
   "child": {
     "en": "Basil is not harmful to cats, but they don't need it. A tiny nibble is plenty; their own cat food is best.",
@@ -73,7 +80,8 @@
     "pt": "O manjericão não faz mal aos gatos, mas eles não precisam dele. Um pedacinho minúsculo chega; o melhor é a comida própria de gatos.",
     "fr": "Le basilic n’est pas dangereux pour les chats, mais ils n’en ont pas besoin. Une toute petite bouchée suffit ; leur nourriture habituelle reste ce qu’il y a de mieux.",
     "es": "La albahaca no es dañina para los gatos, pero no la necesitan. Con un mordisquito basta; lo mejor es su propia comida para gatos.",
-    "it": "Il basilico non fa male ai gatti, ma a loro non serve. Un assaggino basta e avanza: per loro è meglio il cibo per gatti."
+    "it": "Il basilico non fa male ai gatti, ma a loro non serve. Un assaggino basta e avanza: per loro è meglio il cibo per gatti.",
+    "nl": "Basilicum doet katten geen kwaad, maar ze hebben het niet nodig. Een piepklein hapje is meer dan genoeg. Hun eigen kattenvoer is het allerbeste."
   },
   "faq": [],
   "sources": [
@@ -152,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3a5c6abe2ed2e0c1397d0c5c8d7835e5de13e6223b774eeebfa7984deafae072"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "586cbf82df0dbf983b64c03eb51c7efb67646df3a44d09078941d9ed5f669e11"
     }
   }
 }

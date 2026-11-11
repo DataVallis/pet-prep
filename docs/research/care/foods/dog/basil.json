@@ -8,7 +8,8 @@
     "pt": "Manjericão",
     "fr": "Basilic",
     "es": "Albahaca",
-    "it": "Basilico"
+    "it": "Basilico",
+    "nl": "Basilicum"
   },
   "question": {
     "en": "Can dogs eat basil?",
@@ -17,7 +18,8 @@
     "pt": "Os cães podem comer manjericão?",
     "fr": "Les chiens peuvent-ils manger du basilic ?",
     "es": "¿Pueden los perros comer albahaca?",
-    "it": "I cani possono mangiare il basilico?"
+    "it": "I cani possono mangiare il basilico?",
+    "nl": "Mogen honden basilicum eten?"
   },
   "url_slug": {
     "en": "basil",
@@ -26,7 +28,8 @@
     "pt": "manjericao",
     "fr": "basilic",
     "es": "albahaca",
-    "it": "basilico"
+    "it": "basilico",
+    "nl": "basilicum"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Sim, em pequenas quantidades. A ASPCA inclui o manjericão entre as plantas não tóxicas para os cães. É uma das ervas que podes cultivar num jardim seguro para cães e juntar, em pequenas quantidades, às refeições ou às guloseimas do teu cão.",
     "fr": "Oui, en petite quantité. Pour l’ASPCA, le basilic n’est pas toxique pour les chiens : c’est l’une des herbes aromatiques que l’on peut cultiver dans un jardin sans danger pour eux et glisser en petite quantité dans leurs repas ou leurs friandises.",
     "es": "Sí, en pequeñas cantidades. La ASPCA incluye la albahaca entre las plantas no tóxicas para los perros, y es una de las hierbas que puedes cultivar en un jardín apto para perros y añadir, en pequeñas cantidades, a su comida o a sus premios.",
-    "it": "Sì, in piccole quantità. Secondo l’ASPCA il basilico non è tossico per i cani: è una delle erbe aromatiche che si possono coltivare in un giardino a misura di cane e aggiungere, in piccole quantità, ai pasti o ai premi."
+    "it": "Sì, in piccole quantità. Secondo l’ASPCA il basilico non è tossico per i cani: è una delle erbe aromatiche che si possono coltivare in un giardino a misura di cane e aggiungere, in piccole quantità, ai pasti o ai premi.",
+    "nl": "Ja, in kleine hoeveelheden. De ASPCA noemt basilicum niet giftig voor honden. Het is een van de kruiden die je in een hondvriendelijke tuin kunt kweken en in kleine hoeveelheden door het eten of de snoepjes van je hond kunt doen."
   },
   "why": {
     "en": "Basil (Ocimum basilicum, also sweet basil or Thai basil) is non-toxic to dogs. It has antioxidant, antiviral and antimicrobial properties. As with other herbs added to meals or mixed into treats, keep the amounts small.",
@@ -45,7 +49,8 @@
     "pt": "O manjericão (Ocimum basilicum, também chamado manjericão-doce ou manjericão-tailandês) não é tóxico para os cães. Tem propriedades antioxidantes, antivirais e antimicrobianas. Como acontece com qualquer erva aromática que se junte às refeições ou se misture nas guloseimas, mantém as quantidades pequenas.",
     "fr": "Le basilic (Ocimum basilicum, aussi appelé basilic doux ou basilic thaï) n’est pas toxique pour les chiens. Il possède des propriétés antioxydantes, antivirales et antimicrobiennes. Comme pour les autres herbes aromatiques ajoutées aux repas ou mélangées aux friandises, mieux vaut s’en tenir à de petites quantités.",
     "es": "La albahaca (Ocimum basilicum, también albahaca dulce o albahaca tailandesa) no es tóxica para los perros. Tiene propiedades antioxidantes, antivirales y antimicrobianas. Como con otras hierbas que se añaden a la comida o se mezclan con los premios, mantén las cantidades pequeñas.",
-    "it": "Il basilico (Ocimum basilicum, detto anche basilico dolce o basilico thai) non è tossico per i cani. Ha proprietà antiossidanti, antivirali e antimicrobiche. Come per le altre erbe aromatiche aggiunte ai pasti o mescolate ai premi, le quantità devono restare piccole."
+    "it": "Il basilico (Ocimum basilicum, detto anche basilico dolce o basilico thai) non è tossico per i cani. Ha proprietà antiossidanti, antivirali e antimicrobiche. Come per le altre erbe aromatiche aggiunte ai pasti o mescolate ai premi, le quantità devono restare piccole.",
+    "nl": "Basilicum (Ocimum basilicum, ook wel zoete basilicum of Thaise basilicum) is niet giftig voor honden. Het heeft antioxiderende, antivirale en antimicrobiële eigenschappen. Net als bij andere kruiden die je door het eten of door snoepjes mengt, houd je de hoeveelheden klein."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pt": "O manjericão não é tóxico para os cães. Basta usares pouco manjericão nas refeições ou nas guloseimas.",
     "fr": "Le basilic n’est pas toxique pour les chiens. Veillez simplement à n’en ajouter que de petites quantités aux repas ou aux friandises.",
     "es": "La albahaca no es tóxica para los perros. Basta con añadirla en pequeñas cantidades a su comida o a sus premios.",
-    "it": "Il basilico non è tossico per i cani. Basta limitare la quantità che aggiungi ai pasti o ai premi."
+    "it": "Il basilico non è tossico per i cani. Basta limitare la quantità che aggiungi ai pasti o ai premi.",
+    "nl": "Basilicum is niet giftig voor honden. Let er alleen op dat je maar een klein beetje door het eten of de snoepjes doet."
   },
   "serving": {
     "en": "Add a little to your dog's meals or mix it into treats in small quantities.",
@@ -64,7 +70,8 @@
     "pt": "Junta um pouco às refeições do teu cão ou mistura-o, em pequenas quantidades, nas guloseimas.",
     "fr": "Ajoutez-en un peu aux repas de votre chien ou mélangez-en une petite quantité à ses friandises.",
     "es": "Añade un poco a la comida de tu perro o mézclala con sus premios, siempre en pequeñas cantidades.",
-    "it": "Aggiungine un po’ ai pasti del tuo cane o mescolalo ai premi, sempre in piccole quantità."
+    "it": "Aggiungine un po’ ai pasti del tuo cane o mescolalo ai premi, sempre in piccole quantità.",
+    "nl": "Doe een klein beetje door het eten van je hond of meng het in kleine hoeveelheden door snoepjes."
   },
   "child": {
     "en": "Basil is a friendly herb for dogs. A grown-up can add a little to a dog's food.",
@@ -73,7 +80,8 @@
     "pt": "O manjericão é uma erva amiga dos cães. Um adulto pode juntar um pouco à comida do cão.",
     "fr": "Le basilic est une herbe inoffensive pour les chiens. Un adulte peut en ajouter un peu dans la gamelle.",
     "es": "La albahaca es una hierba amiga de los perros. Un adulto puede añadir un poquito a su comida.",
-    "it": "Il basilico è un’erba amica dei cani. Un adulto può aggiungerne un pochino al cibo del cane."
+    "it": "Il basilico è un’erba amica dei cani. Un adulto può aggiungerne un pochino al cibo del cane.",
+    "nl": "Basilicum is een kruid dat honden geen kwaad doet. Een volwassene kan een klein beetje door het eten van een hond doen."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pt": "O manjericão é seguro num jardim com cães?",
         "fr": "Peut-on cultiver du basilic dans un jardin où vit un chien ?",
         "es": "¿Es segura una planta de albahaca en un jardín con perros?",
-        "it": "Una pianta di basilico è sicura in un giardino con cani?"
+        "it": "Una pianta di basilico è sicura in un giardino con cani?",
+        "nl": "Is een basilicumplant veilig in een tuin met een hond?"
       },
       "a": {
         "en": "Yes. Basil is non-toxic to dogs and is one of the herbs that can be grown in a dog-friendly garden.",
@@ -93,7 +102,8 @@
         "pt": "Sim. O manjericão não é tóxico para os cães e é uma das ervas que se podem cultivar num jardim seguro para cães.",
         "fr": "Oui. Le basilic n’est pas toxique pour les chiens et fait partie des herbes que l’on peut cultiver dans un jardin sans danger pour eux.",
         "es": "Sí. La albahaca no es tóxica para los perros y es una de las hierbas que se pueden cultivar en un jardín apto para perros.",
-        "it": "Sì. Il basilico non è tossico per i cani ed è una delle erbe che si possono coltivare in un giardino a misura di cane."
+        "it": "Sì. Il basilico non è tossico per i cani ed è una delle erbe che si possono coltivare in un giardino a misura di cane.",
+        "nl": "Ja. Basilicum is niet giftig voor honden en is een van de kruiden die je in een hondvriendelijke tuin kunt kweken."
       }
     }
   ],
@@ -159,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5dfd7a7dde22e609e28655857c5f1689d1eaba14222e4884ac8fd2b30d2e13d3"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b5ceab4e19373aa372c3159cd1e616572b4bbe8c4252d1e9b4730bb7662cdfe"
     }
   }
 }

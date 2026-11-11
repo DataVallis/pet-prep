@@ -8,7 +8,8 @@
     "pt": "Rabanetes",
     "fr": "Radis",
     "es": "Rábanos",
-    "it": "Ravanelli"
+    "it": "Ravanelli",
+    "nl": "Radijsjes"
   },
   "question": {
     "en": "Can dogs eat radishes?",
@@ -17,7 +18,8 @@
     "pt": "Os cães podem comer rabanetes?",
     "fr": "Les chiens peuvent-ils manger des radis ?",
     "es": "¿Pueden los perros comer rábanos?",
-    "it": "I cani possono mangiare i ravanelli?"
+    "it": "I cani possono mangiare i ravanelli?",
+    "nl": "Mogen honden radijsjes eten?"
   },
   "url_slug": {
     "en": "radishes",
@@ -26,7 +28,8 @@
     "pt": "rabanetes",
     "fr": "radis",
     "es": "rabanos",
-    "it": "ravanelli"
+    "it": "ravanelli",
+    "nl": "radijsjes"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Sim, mas só em pequenas quantidades. Com moderação, os rabanetes são seguros para os cães, embora alguns não gostem do sabor. Retira as folhas, lava, descasca e corta o rabanete em pedaços pequenos, e serve-o simples. O rábano-picante e o saramago (rabanete-bravo) não são para cães.",
     "fr": "Oui, mais seulement en petite quantité. Avec modération, les radis sont sans danger pour les chiens, même si leur goût rebute certains d’entre eux. Retirez les fanes, lavez, pelez et coupez le radis en petits morceaux, et servez-le nature. Le raifort et les radis sauvages ne conviennent pas aux chiens.",
     "es": "Sí, pero solo en pequeñas cantidades. Con moderación, los rábanos son seguros para los perros, aunque a algunos no les gusta el sabor. Quítales las hojas, lávalos, pélalos, córtalos en trozos pequeños y sírvelos al natural. El rábano picante y los rábanos silvestres no son para los perros.",
-    "it": "Sì, ma solo in piccole quantità. Con moderazione i ravanelli sono sicuri per i cani, anche se ad alcuni il sapore non piace. Togli le foglie, lava e sbuccia il ravanello, taglialo a pezzetti e dallo al naturale. Il rafano e i ravanelli selvatici non vanno dati ai cani."
+    "it": "Sì, ma solo in piccole quantità. Con moderazione i ravanelli sono sicuri per i cani, anche se ad alcuni il sapore non piace. Togli le foglie, lava e sbuccia il ravanello, taglialo a pezzetti e dallo al naturale. Il rafano e i ravanelli selvatici non vanno dati ai cani.",
+    "nl": "Ja, maar alleen in kleine hoeveelheden. Met mate zijn radijsjes veilig voor honden, al vinden sommige honden de smaak niet lekker. Haal het loof eraf, was en schil het radijsje, snijd het in kleine stukjes en geef het naturel. Mierikswortel en wilde radijs zijn niet voor honden."
   },
   "why": {
     "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
@@ -45,7 +49,8 @@
     "pt": "Quantidades moderadas de rabanetes não fazem mal aos cães, e pode até haver alguns benefícios para a saúde. As folhas do rabanete podem causar gastroenterite, por isso não devem ser dadas. Pedaços grandes ou um rabanete inteiro podem tornar-se um risco de engasgo. O rábano-picante não é, na verdade, um rabanete e não deve ser dado aos cães, e o saramago (rabanete-bravo) é outra planta que não é segura para os animais de estimação.",
     "fr": "De petites quantités de radis ne font pas de mal aux chiens et peuvent même avoir quelques bienfaits pour la santé. Les fanes de radis peuvent provoquer une gastro-entérite : il ne faut donc pas les donner. Les gros morceaux ou un radis entier pourraient présenter un risque d’étouffement. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens, et les radis sauvages sont un autre légume, dangereux pour les animaux de compagnie.",
     "es": "Las cantidades pequeñas de rábano no son perjudiciales para los perros e incluso pueden tener algún beneficio para su salud. Las hojas del rábano pueden provocar gastroenteritis, así que no se deben dar. Los trozos grandes o un rábano entero podrían suponer un riesgo de atragantamiento. El rábano picante no es en realidad un rábano y no se debe dar a los perros, y los rábanos silvestres no son la misma verdura que los rábanos comunes y no son seguros para las mascotas.",
-    "it": "Piccole quantità di ravanelli non fanno male ai cani e possono perfino avere qualche beneficio per la salute. Le foglie dei ravanelli possono causare gastroenterite, quindi non vanno date. I pezzi grandi o un ravanello intero possono far soffocare. Il rafano in realtà non è un ravanello e non va dato ai cani, mentre i ravanelli selvatici sono un’altra verdura e non sono sicuri per gli animali domestici."
+    "it": "Piccole quantità di ravanelli non fanno male ai cani e possono perfino avere qualche beneficio per la salute. Le foglie dei ravanelli possono causare gastroenterite, quindi non vanno date. I pezzi grandi o un ravanello intero possono far soffocare. Il rafano in realtà non è un ravanello e non va dato ai cani, mentre i ravanelli selvatici sono un’altra verdura e non sono sicuri per gli animali domestici.",
+    "nl": "Kleine hoeveelheden radijs kunnen honden geen kwaad en zijn misschien zelfs goed voor de gezondheid. Het loof kan een maag-darmontsteking veroorzaken, dus geef dat niet. Grote stukken of een heel radijsje kunnen een verstikkingsgevaar vormen. Mierikswortel is eigenlijk geen radijs en hoort niet in de voerbak, en wilde radijs is een andere groente die niet veilig is voor huisdieren."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pt": "Como sempre, antes de juntares um novo ingrediente à alimentação do teu cão, convém falares primeiro com o veterinário. Alguns cães não gostam do sabor e não vão querer comer rabanetes.",
     "fr": "Comme toujours, avant d’introduire un nouvel aliment dans l’alimentation de votre chien, mieux vaut d’abord demander conseil à votre vétérinaire. Le goût des radis rebute certains chiens, qui refuseront d’en manger.",
     "es": "Como siempre, antes de incluir un ingrediente nuevo en la dieta de tu perro, lo mejor es consultarlo con tu veterinario. Hay perros a los que no les gusta el sabor y no querrán comer rábanos.",
-    "it": "Come sempre, prima di introdurre un nuovo alimento nella dieta del tuo cane è meglio sentire il veterinario. Ad alcuni cani il sapore non piace e rifiutano i ravanelli."
+    "it": "Come sempre, prima di introdurre un nuovo alimento nella dieta del tuo cane è meglio sentire il veterinario. Ad alcuni cani il sapore non piace e rifiutano i ravanelli.",
+    "nl": "Zoals altijd kun je het beste eerst je dierenarts raadplegen voordat je iets nieuws aan het eten van je hond toevoegt. Sommige honden vinden de smaak niet lekker en willen geen radijsjes eten."
   },
   "serving": {
     "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
@@ -64,7 +70,8 @@
     "pt": "Deita fora as folhas, depois lava e descasca o rabanete e corta-o em pedaços pequenos. Apenas rabanetes simples, sem temperos, em pequenas quantidades.",
     "fr": "Jetez les fanes, puis lavez et pelez le radis et coupez-le en petits morceaux. Uniquement des radis nature, sans épices, en petite quantité.",
     "es": "Quita y tira las hojas, lava y pela el rábano y córtalo en trozos pequeños. Solo rábanos al natural, sin condimentar, y en pequeñas cantidades.",
-    "it": "Elimina le foglie, poi lava e sbuccia il ravanello e taglialo a pezzetti. Solo ravanelli al naturale, non conditi con spezie, in piccole quantità."
+    "it": "Elimina le foglie, poi lava e sbuccia il ravanello e taglialo a pezzetti. Solo ravanelli al naturale, non conditi con spezie, in piccole quantità.",
+    "nl": "Gooi het loof weg, was en schil het radijsje en snijd het in kleine stukjes. Alleen naturel radijsjes zonder kruiden, in kleine hoeveelheden."
   },
   "child": {
     "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
@@ -73,7 +80,8 @@
     "pt": "Os cães podem provar uns pedacinhos de rabanete. Um adulto tira primeiro as folhas, descasca o rabanete e corta-o.",
     "fr": "Les chiens peuvent goûter quelques petits morceaux de radis. Un adulte enlève d’abord les fanes, pèle le radis et le coupe en petits morceaux.",
     "es": "Los perros pueden probar unos trocitos pequeños de rábano. Antes, un adulto le quita las hojas, lo pela y lo corta.",
-    "it": "I cani possono assaggiare qualche pezzettino di ravanello. Prima un adulto toglie le foglie, sbuccia il ravanello e lo taglia a pezzetti."
+    "it": "I cani possono assaggiare qualche pezzettino di ravanello. Prima un adulto toglie le foglie, sbuccia il ravanello e lo taglia a pezzetti.",
+    "nl": "Honden mogen een paar kleine stukjes radijs proberen. Een volwassene haalt eerst de blaadjes eraf, schilt het radijsje en snijdt het in stukjes."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pt": "Os cães podem comer folhas de rabanete?",
         "fr": "Les chiens peuvent-ils manger les fanes de radis ?",
         "es": "¿Pueden los perros comer hojas de rábano?",
-        "it": "I cani possono mangiare le foglie dei ravanelli?"
+        "it": "I cani possono mangiare le foglie dei ravanelli?",
+        "nl": "Mogen honden radijsblaadjes eten?"
       },
       "a": {
         "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
@@ -93,7 +102,8 @@
         "pt": "Não. Não dês ao teu cão as folhas do rabanete, porque podem causar gastroenterite.",
         "fr": "Non. Ne donnez pas les fanes de radis à votre chien : elles peuvent provoquer une gastro-entérite.",
         "es": "No. No le des a tu perro las hojas del rábano, porque pueden provocar gastroenteritis.",
-        "it": "No. Non dare al tuo cane le foglie dei ravanelli, perché possono causare gastroenterite."
+        "it": "No. Non dare al tuo cane le foglie dei ravanelli, perché possono causare gastroenterite.",
+        "nl": "Nee. Geef je hond geen radijsloof, want dat kan een maag-darmontsteking veroorzaken."
       }
     },
     {
@@ -104,7 +114,8 @@
         "pt": "Os cães podem comer rábano-picante?",
         "fr": "Les chiens peuvent-ils manger du raifort ?",
         "es": "¿Pueden los perros comer rábano picante?",
-        "it": "I cani possono mangiare il rafano?"
+        "it": "I cani possono mangiare il rafano?",
+        "nl": "Mogen honden mierikswortel eten?"
       },
       "a": {
         "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
@@ -113,7 +124,8 @@
         "pt": "Não. O rábano-picante não é, na verdade, um rabanete e não deve ser dado aos cães.",
         "fr": "Non. Le raifort n’est pas vraiment un radis et ne doit pas être donné aux chiens.",
         "es": "No. El rábano picante en realidad no es un rábano y no se debe dar a los perros.",
-        "it": "No. Il rafano in realtà non è un ravanello e non va dato ai cani."
+        "it": "No. Il rafano in realtà non è un ravanello e non va dato ai cani.",
+        "nl": "Nee. Mierikswortel is eigenlijk geen radijs. Geef het je hond niet."
       }
     }
   ],
@@ -208,6 +220,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8c838c2c24c5c67a2b34dec0e158f0b7f2301607ea43008b1fed97e46ea3caa3"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0caaa0628bce13a738e376af7baa21a44874d95da2924a7f352fa01b92186efa"
     }
   }
 }

@@ -8,7 +8,8 @@
     "pt": "Salsa",
     "fr": "Persil",
     "es": "Perejil",
-    "it": "Prezzemolo"
+    "it": "Prezzemolo",
+    "nl": "Peterselie"
   },
   "question": {
     "en": "Can dogs eat parsley?",
@@ -17,7 +18,8 @@
     "pt": "Os cães podem comer salsa?",
     "fr": "Les chiens peuvent-ils manger du persil ?",
     "es": "¿Pueden los perros comer perejil?",
-    "it": "I cani possono mangiare il prezzemolo?"
+    "it": "I cani possono mangiare il prezzemolo?",
+    "nl": "Mogen honden peterselie eten?"
   },
   "url_slug": {
     "en": "parsley",
@@ -26,7 +28,8 @@
     "pt": "salsa",
     "fr": "persil",
     "es": "perejil",
-    "it": "prezzemolo"
+    "it": "prezzemolo",
+    "nl": "peterselie"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Só um pouquinho de salsa frisada, de vez em quando. A ASPCA classifica a salsa como tóxica para os cães, porque grandes quantidades podem tornar a pele sensível à luz solar. A salsa frisada é a opção mais segura; a variedade «spring parsley» pode ser tóxica, e a salsa italiana pode ser tóxica em grandes quantidades.",
     "fr": "Seulement une petite pincée de persil frisé, de temps en temps. L’ASPCA le classe parmi les plantes toxiques pour les chiens : en grande quantité, il peut rendre la peau sensible au soleil. Le persil frisé est le plus sûr ; le « persil de printemps » peut être toxique, le persil plat aussi en grande quantité.",
     "es": "Solo una pizca de perejil rizado, de vez en cuando. La ASPCA incluye el perejil entre las plantas tóxicas para los perros, porque en cantidades grandes puede hacer que la piel se vuelva sensible al sol. El perejil rizado es la opción más segura; el perejil de primavera puede ser tóxico, y el de hoja plana también, en cantidades grandes.",
-    "it": "Solo una piccola spolverata di prezzemolo riccio, ogni tanto. L’ASPCA indica il prezzemolo come tossico per i cani, perché grandi quantità possono rendere la pelle sensibile alla luce del sole. Il prezzemolo riccio è l’opzione più sicura; lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico e il prezzemolo a foglia liscia può esserlo in grandi quantità."
+    "it": "Solo una piccola spolverata di prezzemolo riccio, ogni tanto. L’ASPCA indica il prezzemolo come tossico per i cani, perché grandi quantità possono rendere la pelle sensibile alla luce del sole. Il prezzemolo riccio è l’opzione più sicura; lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico e il prezzemolo a foglia liscia può esserlo in grandi quantità.",
+    "nl": "Alleen af en toe een klein snufje krulpeterselie. De ASPCA noemt peterselie giftig voor honden, omdat grote hoeveelheden de huid gevoelig kunnen maken voor zonlicht. Krulpeterselie is de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie in grote hoeveelheden ook."
   },
   "why": {
     "en": "Parsley contains furanocoumarins. In large amounts they can cause sensitivity to sunlight and skin inflammation like a sunburn, although large amounts are needed for this effect. Parsley is also a diuretic; Italian parsley can lead to dehydration in dogs with sensitive stomachs. The AKC says curly parsley can be offered in small amounts, while the ASPCA lists parsley as toxic to dogs, so we take the stricter view and rate it not recommended.",
@@ -45,7 +49,8 @@
     "pt": "A salsa contém furanocumarinas. Em grandes quantidades, podem causar sensibilidade à luz solar e inflamação da pele semelhante a uma queimadura solar, embora isso só aconteça com grandes quantidades. A salsa também é diurética; a salsa italiana pode levar à desidratação em cães com o estômago sensível. A AKC diz que se pode oferecer salsa frisada em pequenas quantidades, enquanto a ASPCA classifica a salsa como tóxica para os cães, por isso seguimos a opinião mais rigorosa e classificamo-la como não recomendada.",
     "fr": "Le persil contient des furanocoumarines. En grande quantité, elles peuvent rendre la peau sensible au soleil et provoquer une inflammation semblable à un coup de soleil, même s’il en faut beaucoup pour que cet effet apparaisse. Le persil est aussi diurétique ; le persil plat peut entraîner une déshydratation chez les chiens à l’estomac sensible. L’AKC indique que le persil frisé peut être proposé en petite quantité, alors que l’ASPCA classe le persil parmi les plantes toxiques pour les chiens : nous retenons l’avis le plus strict et le classons comme déconseillé.",
     "es": "El perejil contiene furanocumarinas, que en cantidades grandes pueden provocar sensibilidad al sol e inflamación de la piel parecida a una quemadura solar. El perejil también es diurético; el de hoja plana puede provocar deshidratación en perros con el estómago sensible. La AKC dice que el perejil rizado se puede ofrecer en pequeñas cantidades, mientras que la ASPCA lo incluye entre las plantas tóxicas para los perros, así que adoptamos el criterio más estricto y lo clasificamos como no recomendado.",
-    "it": "Il prezzemolo contiene furanocumarine. Possono causare sensibilità alla luce del sole e un’infiammazione della pelle simile a una scottatura, anche se per questo effetto servono grandi quantità. Il prezzemolo è anche un diuretico; il prezzemolo a foglia liscia può portare a disidratazione nei cani con lo stomaco delicato. Secondo l’AKC il prezzemolo riccio si può offrire in piccole quantità, mentre l’ASPCA indica il prezzemolo come tossico per i cani: noi adottiamo la posizione più prudente e lo classifichiamo come sconsigliato."
+    "it": "Il prezzemolo contiene furanocumarine. Possono causare sensibilità alla luce del sole e un’infiammazione della pelle simile a una scottatura, anche se per questo effetto servono grandi quantità. Il prezzemolo è anche un diuretico; il prezzemolo a foglia liscia può portare a disidratazione nei cani con lo stomaco delicato. Secondo l’AKC il prezzemolo riccio si può offrire in piccole quantità, mentre l’ASPCA indica il prezzemolo come tossico per i cani: noi adottiamo la posizione più prudente e lo classifichiamo come sconsigliato.",
+    "nl": "Peterselie bevat furanocumarinen. In grote hoeveelheden kunnen die overgevoeligheid voor zonlicht en een huidontsteking zoals bij zonnebrand veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Peterselie werkt ook vochtafdrijvend; platte peterselie kan bij honden met een gevoelige maag tot uitdroging leiden. Volgens de AKC kun je krulpeterselie in kleine hoeveelheden geven, terwijl de ASPCA peterselie giftig noemt voor honden. Wij volgen daarom het strengere advies en beoordelen peterselie als niet aan te raden."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "it": [
       "Sensibilità alla luce del sole",
       "Infiammazione della pelle (dermatite) simile a una scottatura"
+    ],
+    "nl": [
+      "Overgevoeligheid voor zonlicht",
+      "Huidontsteking die op zonnebrand lijkt (dermatitis)"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "pt": "Se deres salsa ao teu cão, observa-o com atenção para ver se surgem sinais invulgares. Se os sinais aparecerem ou piorarem, liga logo ao teu veterinário.",
     "fr": "Si vous donnez du persil à votre chien, surveillez-le de près pour repérer tout symptôme inhabituel. Si des symptômes apparaissent ou s’aggravent, contactez rapidement votre vétérinaire.",
     "es": "Si le das perejil a tu perro, obsérvalo con atención por si notas algo raro. Si aparecen síntomas o empeoran, contacta enseguida con tu veterinario.",
-    "it": "Se dai prezzemolo al tuo cane, tienilo d’occhio con attenzione per eventuali sintomi insoliti. Se i sintomi compaiono o peggiorano, contatta subito il veterinario."
+    "it": "Se dai prezzemolo al tuo cane, tienilo d’occhio con attenzione per eventuali sintomi insoliti. Se i sintomi compaiono o peggiorano, contatta subito il veterinario.",
+    "nl": "Geef je je hond peterselie, let dan goed op ongewone verschijnselen. Ontstaan er verschijnselen of worden ze erger, neem dan meteen contact op met je dierenarts."
   },
   "serving": {
     "en": "If at all, only a small sprinkle of curly parsley as a garnish, given occasionally. Never large amounts.",
@@ -93,7 +103,8 @@
     "pt": "Se for mesmo dada, apenas um pouquinho de salsa frisada, como enfeite, só de vez em quando. Nunca em grandes quantidades.",
     "fr": "Si vous en donnez, seulement une petite pincée de persil frisé en garniture, de temps en temps. Jamais de grandes quantités.",
     "es": "Como mucho, una pizca de perejil rizado a modo de adorno, de vez en cuando. Nunca en cantidades grandes.",
-    "it": "Se proprio vuoi, solo una piccola spolverata di prezzemolo riccio come guarnizione, data ogni tanto. Mai in grandi quantità."
+    "it": "Se proprio vuoi, solo una piccola spolverata di prezzemolo riccio come guarnizione, data ogni tanto. Mai in grandi quantità.",
+    "nl": "Als je het al geeft, dan alleen af en toe een klein snufje krulpeterselie als garnering. Nooit grote hoeveelheden."
   },
   "child": {
     "en": "Parsley is not a dog snack. A grown-up decides if a dog gets a tiny sprinkle of curly parsley.",
@@ -102,7 +113,8 @@
     "pt": "A salsa não é uma guloseima para cães. Cabe a um adulto decidir se o cão recebe um pouquinho de salsa frisada.",
     "fr": "Le persil n’est pas une friandise pour chien. C’est à un adulte de décider si le chien peut avoir une toute petite pincée de persil frisé.",
     "es": "El perejil no es un premio para perros. Un adulto decide si el perro puede probar una pizca de perejil rizado.",
-    "it": "Il prezzemolo non è uno spuntino per cani. Spetta a un adulto decidere se dare al cane una spolverata minuscola di prezzemolo riccio."
+    "it": "Il prezzemolo non è uno spuntino per cani. Spetta a un adulto decidere se dare al cane una spolverata minuscola di prezzemolo riccio.",
+    "nl": "Peterselie is geen hondensnoepje. Een volwassene beslist of een hond een piepklein snufje krulpeterselie krijgt."
   },
   "faq": [
     {
@@ -113,7 +125,8 @@
         "pt": "A salsa frisada é diferente das outras salsas?",
         "fr": "Le persil frisé est-il différent des autres variétés de persil ?",
         "es": "¿Hay diferencias entre el perejil rizado y otros tipos de perejil?",
-        "it": "Il prezzemolo riccio è diverso dagli altri tipi di prezzemolo?"
+        "it": "Il prezzemolo riccio è diverso dagli altri tipi di prezzemolo?",
+        "nl": "Is krulpeterselie anders dan andere peterselie?"
       },
       "a": {
         "en": "Yes. Curly parsley is generally considered the safest option. Spring parsley can be toxic, and Italian parsley acts as a diuretic and can be toxic in large quantities.",
@@ -122,7 +135,8 @@
         "pt": "Sim. A salsa frisada é geralmente considerada a opção mais segura. A variedade «spring parsley» pode ser tóxica, e a salsa italiana tem efeito diurético e pode ser tóxica em grandes quantidades.",
         "fr": "Oui. Le persil frisé est généralement considéré comme le plus sûr. Le « persil de printemps » (« spring parsley » en anglais, sans équivalent courant en français) peut être toxique, et le persil plat est diurétique et peut être toxique en grande quantité.",
         "es": "Sí. El perejil rizado se considera en general la opción más segura. El perejil de primavera puede ser tóxico, y el de hoja plana es diurético y puede ser tóxico en cantidades grandes.",
-        "it": "Sì. Il prezzemolo riccio è considerato in genere l’opzione più sicura. Lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico, mentre il prezzemolo a foglia liscia agisce come diuretico e può essere tossico in grandi quantità."
+        "it": "Sì. Il prezzemolo riccio è considerato in genere l’opzione più sicura. Lo «spring parsley» (nome inglese di un’altra varietà) può essere tossico, mentre il prezzemolo a foglia liscia agisce come diuretico e può essere tossico in grandi quantità.",
+        "nl": "Ja. Krulpeterselie geldt meestal als de veiligste keuze. De plant die in het Engels “spring parsley” heet, kan giftig zijn, en platte peterselie werkt vochtafdrijvend en kan in grote hoeveelheden giftig zijn."
       }
     },
     {
@@ -133,7 +147,8 @@
         "pt": "A salsa pode tornar a pele do cão sensível ao sol?",
         "fr": "Le persil peut-il rendre la peau d’un chien sensible au soleil ?",
         "es": "¿Puede el perejil hacer que la piel de un perro sea sensible al sol?",
-        "it": "Il prezzemolo può rendere la pelle del cane sensibile al sole?"
+        "it": "Il prezzemolo può rendere la pelle del cane sensibile al sole?",
+        "nl": "Kan peterselie de huid van een hond gevoelig maken voor de zon?"
       },
       "a": {
         "en": "In large amounts, yes. The furanocoumarins in parsley can cause skin inflammation like a sunburn.",
@@ -142,7 +157,8 @@
         "pt": "Em grandes quantidades, sim. As furanocumarinas da salsa podem causar inflamação da pele semelhante a uma queimadura solar.",
         "fr": "En grande quantité, oui. Les furanocoumarines du persil peuvent provoquer une inflammation de la peau semblable à un coup de soleil.",
         "es": "En cantidades grandes, sí. Las furanocumarinas del perejil pueden provocar una inflamación de la piel parecida a una quemadura solar.",
-        "it": "In grandi quantità, sì. Le furanocumarine del prezzemolo possono causare un’infiammazione della pelle simile a una scottatura."
+        "it": "In grandi quantità, sì. Le furanocumarine del prezzemolo possono causare un’infiammazione della pelle simile a una scottatura.",
+        "nl": "In grote hoeveelheden wel. De furanocumarinen in peterselie kunnen een huidontsteking veroorzaken die op zonnebrand lijkt."
       }
     }
   ],
@@ -241,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8148d877be4518970694a688068f74f06dfb4f52de87d269569b17756c427ad2"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fbd0dfca0582d7a8c294e844b5c5ce67bf8b842420b44b8ebf49a77a23562920"
     }
   }
 }
