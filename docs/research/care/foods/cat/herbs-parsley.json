@@ -11,7 +11,8 @@
     "it": "Prezzemolo",
     "nl": "Peterselie",
     "pl": "Pietruszka",
-    "cs": "Petržel"
+    "cs": "Petržel",
+    "hr": "Peršin"
   },
   "question": {
     "en": "Can cats eat parsley?",
@@ -23,7 +24,8 @@
     "it": "I gatti possono mangiare il prezzemolo?",
     "nl": "Mogen katten peterselie eten?",
     "pl": "Czy koty mogą jeść pietruszkę?",
-    "cs": "Mohou kočky jíst petržel?"
+    "cs": "Mohou kočky jíst petržel?",
+    "hr": "Smiju li mačke jesti peršin?"
   },
   "url_slug": {
     "en": "parsley",
@@ -35,7 +37,8 @@
     "it": "prezzemolo",
     "nl": "peterselie",
     "pl": "pietruszka",
-    "cs": "petrzel"
+    "cs": "petrzel",
+    "hr": "persin"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "it": "No, non dare prezzemolo al tuo gatto. L’ASPCA lo indica come tossico per i gatti: può rendere la pelle sensibile alla luce del sole e causare scottature o infiammazione della pelle, anche se per questo effetto servono grandi quantità. Se il tuo gatto ne ha mangiato un po’, contatta il veterinario.",
     "nl": "Nee, geef je kat geen peterselie. De ASPCA noemt peterselie giftig voor katten: het kan de huid gevoelig maken voor zonlicht en zonnebrand of een huidontsteking veroorzaken, al is daar wel een grote hoeveelheid voor nodig. Heeft je kat er iets van gegeten, neem dan contact op met je dierenarts.",
     "pl": "Nie, nie dawaj kotu pietruszki. ASPCA uznaje pietruszkę za toksyczną dla kotów: może uwrażliwiać skórę na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry, choć do takiego efektu potrzebne są duże ilości. Jeśli kot zjadł trochę pietruszki, skontaktuj się z weterynarzem.",
-    "cs": "Ne, kočce petržel nedávejte. ASPCA řadí petržel mezi rostliny toxické pro kočky: může zvýšit citlivost kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže, i když k tomu je potřeba velké množství. Pokud ji kočka snědla, obraťte se na veterináře."
+    "cs": "Ne, kočce petržel nedávejte. ASPCA řadí petržel mezi rostliny toxické pro kočky: může zvýšit citlivost kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže, i když k tomu je potřeba velké množství. Pokud ji kočka snědla, obraťte se na veterináře.",
+    "hr": "Ne, ne daj mački peršin. ASPCA ga navodi kao otrovan za mačke: može učiniti kožu osjetljivom na sunce te izazvati opekline ili upalu kože, iako je za taj učinak potrebna velika količina. Ako je mačka pojela nešto peršina, obrati se veterinaru."
   },
   "why": {
     "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -60,7 +64,8 @@
     "it": "L’ASPCA indica il prezzemolo (Petroselinum crispum, compreso il prezzemolo italiano e quello di Amburgo) come tossico per i gatti. Cita le furanocumarine come sostanza tossica e spiega che possono causare fotosensibilizzazione (scottature, infiammazione della pelle), precisando che per questo effetto servono grandi quantità. L’ASPCA segnala inoltre che qualsiasi materiale vegetale può provocare vomito e disturbi di stomaco nei gatti. Nella dieta dei gatti non servono piante: secondo PDSA i gatti sono carnivori e hanno bisogno dei nutrienti presenti nella carne.",
     "nl": "De ASPCA noemt peterselie (Petroselinum crispum, waaronder platte peterselie en wortelpeterselie) giftig voor katten. Als giftige stof noemt de ASPCA furanocumarinen, die fotosensibilisatie (zonnebrand, huidontsteking) kunnen veroorzaken, en daarvoor zijn volgens de organisatie grote hoeveelheden nodig. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken. Katten hebben geen planten nodig in hun voeding: volgens PDSA zijn katten vleeseters die voedingsstoffen nodig hebben die in vlees zitten.",
     "pl": "ASPCA uznaje pietruszkę (Petroselinum crispum, w tym pietruszkę włoską i korzeniową) za toksyczną dla kotów. Jako substancję toksyczną wskazuje furanokumaryny i podaje, że mogą one powodować fotouczulenie (oparzenia słoneczne, stan zapalny skóry), dodając, że do takiego efektu potrzebne są duże ilości. ASPCA zaznacza też, że każda zjedzona roślina może wywołać u kotów wymioty i rozstrój żołądka. Koty nie potrzebują roślin w diecie: PDSA podaje, że koty są zwierzętami mięsożernymi i potrzebują składników odżywczych zawartych w mięsie.",
-    "cs": "ASPCA řadí petržel (Petroselinum crispum, včetně italské a kořenové petržele) mezi rostliny toxické pro kočky. Jako toxickou látku uvádí furanokumariny a říká, že mohou způsobit fotosenzibilizaci (spálení od slunce, zánět kůže), přičemž dodává, že k tomu je potřeba velké množství. ASPCA také upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. Kočky rostliny ve stravě nepotřebují: PDSA uvádí, že kočky jsou masožravci, kteří potřebují živiny obsažené v mase."
+    "cs": "ASPCA řadí petržel (Petroselinum crispum, včetně italské a kořenové petržele) mezi rostliny toxické pro kočky. Jako toxickou látku uvádí furanokumariny a říká, že mohou způsobit fotosenzibilizaci (spálení od slunce, zánět kůže), přičemž dodává, že k tomu je potřeba velké množství. ASPCA také upozorňuje, že jakýkoli rostlinný materiál může u koček způsobit zvracení a žaludeční potíže. Kočky rostliny ve stravě nepotřebují: PDSA uvádí, že kočky jsou masožravci, kteří potřebují živiny obsažené v mase.",
+    "hr": "ASPCA navodi peršin (Petroselinum crispum, uključujući talijanski i korijenski peršin) kao otrovan za mačke. Kao otrovnu tvar navodi furanokumarine i kaže da mogu izazvati fotosenzibilizaciju (opekline od sunca, upalu kože), uz napomenu da je za taj učinak potrebna velika količina. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Zánět kůže (dermatitida)",
       "Zvracení",
       "Žaludeční potíže"
+    ],
+    "hr": [
+      "Opekline od sunca",
+      "Upala kože (dermatitis)",
+      "Povraćanje",
+      "Želučane tegobe"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "it": "Se il tuo gatto ha mangiato prezzemolo, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
     "nl": "Heeft je kat peterselie gegeten, neem dan meteen contact op met je dierenarts. Wacht niet tot je verschijnselen ziet.",
     "pl": "Jeśli kot zjadł pietruszkę, od razu skontaktuj się z weterynarzem. Nie czekaj na pojawienie się objawów.",
-    "cs": "Pokud kočka snědla petržel, ihned se obraťte na veterináře. Nečekejte, až se objeví příznaky."
+    "cs": "Pokud kočka snědla petržel, ihned se obraťte na veterináře. Nečekejte, až se objeví příznaky.",
+    "hr": "Ako je mačka pojela peršin, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "it": "Il prezzemolo non è uno spuntino per gatti. Se il micio ne mordicchia un po’, dillo a un adulto, così può chiamare il veterinario.",
     "nl": "Peterselie is geen kattensnoepje. Knabbelt je kat er toch aan? Vertel het dan aan een volwassene, zodat die de dierenarts kan bellen.",
     "pl": "Pietruszka nie jest przekąską dla kotów. Jeśli kotek skubnie trochę, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
-    "cs": "Petržel není pamlsek pro kočky. Když ji kočička okusuje, řekni to dospělému, aby mohl zavolat veterináři."
+    "cs": "Petržel není pamlsek pro kočky. Když ji kočička okusuje, řekni to dospělému, aby mohl zavolat veterináři.",
+    "hr": "Peršin nije poslastica za mačke. Ako mačkica zagrize malo peršina, reci odrasloj osobi da nazove veterinara."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "it": "Perché il prezzemolo è un problema per i gatti, se le persone lo mangiano?",
         "nl": "Waarom is peterselie een probleem voor katten, terwijl mensen het gewoon eten?",
         "pl": "Dlaczego pietruszka szkodzi kotom, skoro jedzą ją ludzie?",
-        "cs": "Proč je petržel pro kočky problém, když ji jedí lidé?"
+        "cs": "Proč je petržel pro kočky problém, když ji jedí lidé?",
+        "hr": "Zašto je peršin problem za mačke, a ljudi ga jedu?"
       },
       "a": {
         "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
@@ -173,7 +187,8 @@
         "it": "L’ASPCA spiega che il prezzemolo contiene furanocumarine, che possono rendere la pelle del gatto sensibile alla luce del sole e causare scottature o infiammazione della pelle. Precisa che per questo effetto servono grandi quantità.",
         "nl": "Volgens de ASPCA bevat peterselie furanocumarinen, die de huid van een kat gevoelig kunnen maken voor zonlicht en zonnebrand of een huidontsteking kunnen veroorzaken. Wel is daar volgens de ASPCA een grote hoeveelheid voor nodig.",
         "pl": "ASPCA podaje, że pietruszka zawiera furanokumaryny, które mogą uwrażliwiać skórę kota na światło słoneczne i powodować oparzenia słoneczne lub stan zapalny skóry. Zaznacza, że do takiego efektu potrzebne są duże ilości.",
-        "cs": "ASPCA uvádí, že petržel obsahuje furanokumariny, které mohou zvýšit citlivost kočičí kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže. Dodává, že k tomu je potřeba velké množství."
+        "cs": "ASPCA uvádí, že petržel obsahuje furanokumariny, které mohou zvýšit citlivost kočičí kůže na sluneční záření a způsobit spálení od slunce nebo zánět kůže. Dodává, že k tomu je potřeba velké množství.",
+        "hr": "ASPCA navodi da peršin sadrži furanokumarine, koji mogu učiniti mačju kožu osjetljivom na sunce te izazvati opekline ili upalu kože. Napominje da je za taj učinak potrebna velika količina."
       }
     }
   ],
@@ -271,6 +286,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "555ef6e7761b89ad59658c464fe35ab089054168fe8657c64ae771e26fe015ad"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "daa063ba2eb71595380032f43d1b9ab1f6fae673e4665fb296c2d757d56107e9"
     }
   }
 }

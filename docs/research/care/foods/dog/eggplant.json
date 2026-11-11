@@ -11,7 +11,8 @@
     "it": "Melanzane",
     "nl": "Aubergine",
     "pl": "Bakłażan",
-    "cs": "Lilek (baklažán)"
+    "cs": "Lilek (baklažán)",
+    "hr": "Patlidžan"
   },
   "question": {
     "en": "Can dogs eat eggplant?",
@@ -23,7 +24,8 @@
     "it": "I cani possono mangiare le melanzane?",
     "nl": "Mogen honden aubergine eten?",
     "pl": "Czy psy mogą jeść bakłażana?",
-    "cs": "Mohou psi jíst lilek?"
+    "cs": "Mohou psi jíst lilek?",
+    "hr": "Smiju li psi jesti patlidžan?"
   },
   "url_slug": {
     "en": "eggplant",
@@ -35,7 +37,8 @@
     "it": "melanzane",
     "nl": "aubergine",
     "pl": "baklazan",
-    "cs": "lilek"
+    "cs": "lilek",
+    "hr": "patlidzan"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "it": "Sì, le melanzane sono sicure per i cani in quantità moderate. Elimina il picciolo, lavale, sbucciale e cuocile, poi tagliale in pezzetti minuscoli da un boccone. Non dare mai una melanzana intera e ricorda che mangiarne troppe può causare disturbi digestivi.",
     "nl": "Ja, met mate is aubergine veilig voor honden. Haal de steel eraf, was en schil de aubergine, maak hem gaar en snijd hem daarna in piepkleine, hapklare stukjes. Geef nooit een hele aubergine, en onthoud dat te veel aubergine de spijsvertering van streek kan maken.",
     "pl": "Tak, bakłażan jest bezpieczny dla psów, jeśli podajesz go z umiarem. Usuń szypułkę, umyj, obierz i ugotuj, a potem pokrój na malutkie kawałeczki na jeden kęs. Nigdy nie dawaj całego bakłażana i pamiętaj, że zbyt duża ilość może rozstroić układ pokarmowy.",
-    "cs": "Ano, lilek je pro psy bezpečný, když se podává s mírou. Odstraňte stopku, lilek omyjte, oloupejte, tepelně upravte a nakrájejte na malá sousta. Celý lilek nikdy nedávejte a mějte na paměti, že příliš velké množství může způsobit zažívací potíže."
+    "cs": "Ano, lilek je pro psy bezpečný, když se podává s mírou. Odstraňte stopku, lilek omyjte, oloupejte, tepelně upravte a nakrájejte na malá sousta. Celý lilek nikdy nedávejte a mějte na paměti, že příliš velké množství může způsobit zažívací potíže.",
+    "hr": "Da, patlidžan je za pse siguran ako se daje umjereno. Ukloni peteljku, operi ga, oguli i skuhaj, pa ga nareži na sitne komadiće veličine zalogaja. Nikad ne daj cijeli patlidžan i imaj na umu da prevelika količina može izazvati probavne smetnje."
   },
   "why": {
     "en": "The edible fruit isn't truly toxic in normal amounts, but it contains solanine, a natural chemical the plant uses as a defence. The highest concentrations are in the green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit. The skin isn't toxic but can be hard to chew and a choking hazard, and eating too much eggplant may cause digestive upset.",
@@ -60,7 +64,8 @@
     "it": "Il frutto commestibile non è davvero tossico nelle quantità normali, ma contiene solanina, una sostanza chimica naturale che la pianta usa come difesa. Le concentrazioni più alte si trovano nelle parti verdi della pianta, in particolare foglie e fiori, più che nel frutto viola. La buccia non è tossica, ma può essere difficile da masticare e far soffocare, e mangiare troppe melanzane può causare disturbi digestivi.",
     "nl": "De eetbare vrucht is in normale hoeveelheden niet echt giftig, maar bevat solanine, een natuurlijke stof waarmee de plant zich verdedigt. Daarvan zit het meest in de groene delen van de plant, vooral in de bladeren en bloemen, en niet in de paarse vrucht. De schil is niet giftig, maar kan moeilijk te kauwen zijn en een verstikkingsgevaar vormen, en te veel aubergine kan de spijsvertering van streek maken.",
     "pl": "Jadalny owoc w normalnych ilościach nie jest tak naprawdę toksyczny, ale zawiera solaninę, naturalną substancję, którą roślina wykorzystuje do obrony. Najwięcej jest jej w zielonych częściach rośliny, czyli w liściach i kwiatach, a nie w fioletowym owocu. Skórka nie jest toksyczna, ale może być trudna do przegryzienia i grozić zadławieniem, a zjedzenie zbyt dużej ilości bakłażana może rozstroić układ pokarmowy.",
-    "cs": "Jedlý plod není při běžném množství skutečně toxický, ale obsahuje solanin, přírodní látku, kterou rostlina používá jako obranu. Nejvíc ho je v zelených částech rostliny, zejména v listech a květech, ne ve fialovém plodu. Slupka toxická není, ale špatně se žvýká a hrozí z ní udušení; příliš mnoho lilku navíc může způsobit zažívací potíže."
+    "cs": "Jedlý plod není při běžném množství skutečně toxický, ale obsahuje solanin, přírodní látku, kterou rostlina používá jako obranu. Nejvíc ho je v zelených částech rostliny, zejména v listech a květech, ne ve fialovém plodu. Slupka toxická není, ale špatně se žvýká a hrozí z ní udušení; příliš mnoho lilku navíc může způsobit zažívací potíže.",
+    "hr": "Jestivi plod u uobičajenim količinama nije zaista otrovan, ali sadrži solanin, prirodnu kemijsku tvar kojom se biljka brani. Najveće su koncentracije u zelenim dijelovima biljke, točnije u listovima i cvjetovima, a ne u ljubičastom plodu. Kora nije otrovna, ali se teško žvače i može izazvati gušenje, a prevelika količina patlidžana može izazvati probavne smetnje."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "it": "Comincia con un pezzettino di melanzana sbucciata e cotta. Se dopo aver mangiato la melanzana il tuo cane ha diarrea, vomito, disturbi di stomaco, dolore addominale, poca energia o deve fare i bisogni più spesso, contatta il veterinario.",
     "nl": "Begin met een klein stukje geschilde, gare aubergine. Krijgt je hond na het eten van aubergine diarree, moet hij braken, heeft hij maagklachten, buikpijn of weinig energie, of moet hij vaker naar buiten, neem dan contact op met je dierenarts.",
     "pl": "Zacznij od małego kawałka obranego, ugotowanego bakłażana. Jeśli po zjedzeniu bakłażana pies ma biegunkę, wymioty, rozstrój żołądka, ból brzucha, mniej energii albo częściej musi się załatwiać, skontaktuj się z weterynarzem.",
-    "cs": "Začněte malým kouskem oloupaného tepelně upraveného lilku. Pokud se po něm u psa objeví průjem, zvracení, žaludeční potíže, bolest břicha, malátnost nebo pokud pes potřebuje chodit ven častěji, obraťte se na veterináře."
+    "cs": "Začněte malým kouskem oloupaného tepelně upraveného lilku. Pokud se po něm u psa objeví průjem, zvracení, žaludeční potíže, bolest břicha, malátnost nebo pokud pes potřebuje chodit ven častěji, obraťte se na veterináře.",
+    "hr": "Počni s malim komadićem oguljenog, kuhanog patlidžana. Ako pas nakon jedenja patlidžana dobije proljev, povraćanje, probavne tegobe, bolove u trbuhu, bezvoljnost ili češće mora van, obrati se veterinaru."
   },
   "serving": {
     "en": "Remove the stem, wash thoroughly to remove pesticides, peel the skin, cut into small, bite-sized pieces and cook before serving. Never an entire eggplant.",
@@ -85,7 +91,8 @@
     "it": "Elimina il picciolo, lava bene per rimuovere i pesticidi, sbuccia, taglia in pezzetti da un boccone e cuoci prima di servire. Mai una melanzana intera.",
     "nl": "Haal de steel eraf, was de aubergine grondig om resten van bestrijdingsmiddelen te verwijderen, schil hem, snijd hem in kleine, hapklare stukjes en maak hem gaar voordat je hem geeft. Nooit een hele aubergine.",
     "pl": "Usuń szypułkę, dokładnie umyj, żeby pozbyć się pestycydów, obierz ze skórki, pokrój na małe kawałeczki na jeden kęs i ugotuj przed podaniem. Nigdy nie dawaj całego bakłażana.",
-    "cs": "Odstraňte stopku, lilek důkladně omyjte (kvůli zbytkům pesticidů), oloupejte, nakrájejte na malá sousta a před podáním tepelně upravte. Celý lilek nikdy nedávejte."
+    "cs": "Odstraňte stopku, lilek důkladně omyjte (kvůli zbytkům pesticidů), oloupejte, nakrájejte na malá sousta a před podáním tepelně upravte. Celý lilek nikdy nedávejte.",
+    "hr": "Ukloni peteljku, temeljito operi da skineš pesticide, oguli, nareži na sitne komadiće veličine zalogaja i prije posluživanja skuhaj. Nikad cijeli patlidžan."
   },
   "child": {
     "en": "Dogs can have a little cooked eggplant. A grown-up peels it, cooks it and cuts it into tiny pieces.",
@@ -97,7 +104,8 @@
     "it": "I cani possono mangiare un po’ di melanzana cotta. Un adulto la sbuccia, la cuoce e la taglia in pezzetti minuscoli.",
     "nl": "Honden mogen een klein beetje gare aubergine. Een volwassene schilt hem, maakt hem gaar en snijdt hem in piepkleine stukjes.",
     "pl": "Pies może dostać odrobinę ugotowanego bakłażana. Dorosły obiera go, gotuje i kroi na malutkie kawałki.",
-    "cs": "Psi mohou dostat trochu uvařeného lilku. Dospělý ho oloupe, uvaří a nakrájí na maličké kousky."
+    "cs": "Psi mohou dostat trochu uvařeného lilku. Dospělý ho oloupe, uvaří a nakrájí na maličké kousky.",
+    "hr": "Psi smiju malo kuhanog patlidžana. Odrasla osoba ga oguli, skuha i nareže na sitne komadiće."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "it": "I cani possono mangiare le melanzane crude?",
         "nl": "Mogen honden rauwe aubergine eten?",
         "pl": "Czy psy mogą jeść surowego bakłażana?",
-        "cs": "Mohou psi jíst syrový lilek?"
+        "cs": "Mohou psi jíst syrový lilek?",
+        "hr": "Smiju li psi jesti sirov patlidžan?"
       },
       "a": {
         "en": "They can, but cooking softens the vegetable so it's even easier for your dog to eat.",
@@ -123,7 +132,8 @@
         "it": "Possono, ma la cottura ammorbidisce la verdura e la rende ancora più facile da mangiare per il tuo cane.",
         "nl": "Dat mag, maar als je aubergine gaar maakt, wordt hij zacht en kan je hond hem nog makkelijker eten.",
         "pl": "Mogą, ale po ugotowaniu warzywo jest miększe i psu jeszcze łatwiej je zjeść.",
-        "cs": "Mohou, ale po uvaření je zelenina měkčí a pes ji snáz sní."
+        "cs": "Mohou, ale po uvaření je zelenina měkčí a pes ji snáz sní.",
+        "hr": "Smiju, ali kuhanjem se povrće omekša pa ga je psu još lakše jesti."
       }
     },
     {
@@ -137,7 +147,8 @@
         "it": "Quale parte della pianta di melanzana contiene più solanina?",
         "nl": "Welk deel van de aubergineplant bevat de meeste solanine?",
         "pl": "Która część rośliny bakłażana zawiera najwięcej solaniny?",
-        "cs": "Která část rostliny lilku obsahuje nejvíc solaninu?"
+        "cs": "Která část rostliny lilku obsahuje nejvíc solaninu?",
+        "hr": "Koji dio biljke patlidžana ima najviše solanina?"
       },
       "a": {
         "en": "The green parts of the plant, specifically the leaves and blossoms, rather than the purple fruit itself.",
@@ -149,7 +160,8 @@
         "it": "Le parti verdi della pianta, in particolare foglie e fiori, più che il frutto viola.",
         "nl": "De groene delen van de plant, vooral de bladeren en bloemen, en niet de paarse vrucht zelf.",
         "pl": "Zielone części rośliny, czyli liście i kwiaty, a nie sam fioletowy owoc.",
-        "cs": "Nejvíc solaninu je v zelených částech rostliny, konkrétně v listech a květech, a ne ve fialovém plodu."
+        "cs": "Nejvíc solaninu je v zelených částech rostliny, konkrétně v listech a květech, a ne ve fialovém plodu.",
+        "hr": "Zeleni dijelovi biljke, točnije listovi i cvjetovi, a ne sam ljubičasti plod."
       }
     }
   ],
@@ -292,6 +304,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5e10b4e17ab200ae7a37f1cefb6393a52872441ec523bf578a239103bc3a7337"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8385a4e8ddcdfa869596841befdc3491d7879fad3a18d2b9249fab5d732aa37f"
     }
   }
 }

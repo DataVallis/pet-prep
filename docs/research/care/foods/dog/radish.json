@@ -11,7 +11,8 @@
     "it": "Ravanelli",
     "nl": "Radijsjes",
     "pl": "Rzodkiewki",
-    "cs": "Ředkvičky"
+    "cs": "Ředkvičky",
+    "hr": "Rotkvice"
   },
   "question": {
     "en": "Can dogs eat radishes?",
@@ -23,7 +24,8 @@
     "it": "I cani possono mangiare i ravanelli?",
     "nl": "Mogen honden radijsjes eten?",
     "pl": "Czy psy mogą jeść rzodkiewki?",
-    "cs": "Mohou psi jíst ředkvičky?"
+    "cs": "Mohou psi jíst ředkvičky?",
+    "hr": "Smiju li psi jesti rotkvice?"
   },
   "url_slug": {
     "en": "radishes",
@@ -35,7 +37,8 @@
     "it": "ravanelli",
     "nl": "radijsjes",
     "pl": "rzodkiewki",
-    "cs": "redkvicky"
+    "cs": "redkvicky",
+    "hr": "rotkvice"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "it": "Sì, ma solo in piccole quantità. Con moderazione i ravanelli sono sicuri per i cani, anche se ad alcuni il sapore non piace. Togli le foglie, lava e sbuccia il ravanello, taglialo a pezzetti e dallo al naturale. Il rafano e i ravanelli selvatici non vanno dati ai cani.",
     "nl": "Ja, maar alleen in kleine hoeveelheden. Met mate zijn radijsjes veilig voor honden, al vinden sommige honden de smaak niet lekker. Haal het loof eraf, was en schil het radijsje, snijd het in kleine stukjes en geef het naturel. Mierikswortel en wilde radijs zijn niet voor honden.",
     "pl": "Tak, ale tylko w małych ilościach. Z umiarem rzodkiewki są dla psów bezpieczne, choć niektórym psom ich smak nie odpowiada. Usuń nać, umyj, obierz i pokrój rzodkiewkę na małe kawałki, a potem podaj ją bez dodatków. Chrzan i dzika rzodkiew nie są dla psów.",
-    "cs": "Ano, ale jen v malém množství. S mírou jsou ředkvičky pro psy bezpečné, i když se některým psům nemusí líbit jejich chuť. Odstraňte nať, ředkvičku omyjte, oloupejte, nakrájejte na malé kousky a podávejte ji neochucenou. Křen a divoké ředkve psům nedávejte."
+    "cs": "Ano, ale jen v malém množství. S mírou jsou ředkvičky pro psy bezpečné, i když se některým psům nemusí líbit jejich chuť. Odstraňte nať, ředkvičku omyjte, oloupejte, nakrájejte na malé kousky a podávejte ji neochucenou. Křen a divoké ředkve psům nedávejte.",
+    "hr": "Da, ali samo u malim količinama. Umjereno su rotkvice za pse sigurne, iako nekim psima okus nije po volji. Ukloni lišće, operi i oguli rotkvicu, nareži je na male komadiće i daj je običnu. Hren i divlje rotkvice nisu za pse."
   },
   "why": {
     "en": "Modest amounts of radishes aren't harmful to dogs, and there may even be some health benefits. The radish greens may cause gastroenteritis, so they should not be fed. Large pieces or a whole radish could become a choking hazard. Horseradish isn't actually a radish and should not be fed to dogs, and wild radishes are a different vegetable that is unsafe for pets.",
@@ -60,7 +64,8 @@
     "it": "Piccole quantità di ravanelli non fanno male ai cani e possono perfino avere qualche beneficio per la salute. Le foglie dei ravanelli possono causare gastroenterite, quindi non vanno date. I pezzi grandi o un ravanello intero possono far soffocare. Il rafano in realtà non è un ravanello e non va dato ai cani, mentre i ravanelli selvatici sono un’altra verdura e non sono sicuri per gli animali domestici.",
     "nl": "Kleine hoeveelheden radijs kunnen honden geen kwaad en zijn misschien zelfs goed voor de gezondheid. Het loof kan een maag-darmontsteking veroorzaken, dus geef dat niet. Grote stukken of een heel radijsje kunnen een verstikkingsgevaar vormen. Mierikswortel is eigenlijk geen radijs en hoort niet in de voerbak, en wilde radijs is een andere groente die niet veilig is voor huisdieren.",
     "pl": "Niewielkie ilości rzodkiewek nie szkodzą psom, a mogą nawet przynosić pewne korzyści zdrowotne. Nać rzodkiewki może wywołać zapalenie żołądka i jelit, więc nie należy jej podawać. Duże kawałki lub cała rzodkiewka mogą grozić zadławieniem. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom, a dzika rzodkiew to inne warzywo, które nie jest bezpieczne dla zwierząt domowych.",
-    "cs": "Menší množství ředkviček psům neškodí a může mít dokonce i určitý zdravotní přínos. Nať ředkviček může způsobit zánět žaludku a střev, proto ji psům nedávejte. Velké kousky nebo celá ředkvička mohou způsobit udušení. Křen ve skutečnosti ředkvička není a psům se nemá dávat; divoké ředkve jsou jiná zelenina, která pro zvířata není bezpečná."
+    "cs": "Menší množství ředkviček psům neškodí a může mít dokonce i určitý zdravotní přínos. Nať ředkviček může způsobit zánět žaludku a střev, proto ji psům nedávejte. Velké kousky nebo celá ředkvička mohou způsobit udušení. Křen ve skutečnosti ředkvička není a psům se nemá dávat; divoké ředkve jsou jiná zelenina, která pro zvířata není bezpečná.",
+    "hr": "Male količine rotkvica psima ne štete, a možda imaju i neke zdravstvene koristi. Lišće rotkvice može izazvati gastroenteritis, pa ga ne treba davati. Veliki komadi ili cijela rotkvica mogli bi izazvati gušenje. Hren zapravo nije rotkvica i ne treba ga davati psima, a divlje rotkvice drugo su povrće koje nije sigurno za kućne ljubimce."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "it": "Come sempre, prima di introdurre un nuovo alimento nella dieta del tuo cane è meglio sentire il veterinario. Ad alcuni cani il sapore non piace e rifiutano i ravanelli.",
     "nl": "Zoals altijd kun je het beste eerst je dierenarts raadplegen voordat je iets nieuws aan het eten van je hond toevoegt. Sommige honden vinden de smaak niet lekker en willen geen radijsjes eten.",
     "pl": "Jak zawsze: zanim dodasz do diety psa nowy składnik, najlepiej skonsultuj się z weterynarzem. Niektórym psom smak rzodkiewek nie odpowiada i nie chcą ich jeść.",
-    "cs": "Jako vždy je před zařazením nové potraviny do psova jídelníčku nejlepší nejdřív se poradit s veterinářem. Některým psům se chuť ředkviček nelíbí a nebudou je jíst."
+    "cs": "Jako vždy je před zařazením nové potraviny do psova jídelníčku nejlepší nejdřív se poradit s veterinářem. Některým psům se chuť ředkviček nelíbí a nebudou je jíst.",
+    "hr": "Kao i uvijek, prije nego što psu u prehranu uvedeš novu namirnicu, najbolje je prvo se posavjetovati s veterinarom. Nekim psima okus nije po volji pa neće htjeti jesti rotkvice."
   },
   "serving": {
     "en": "Discard the greens, then wash and peel the radish and chop it into small pieces. Only plain radishes that have not been seasoned with spices, in small amounts.",
@@ -85,7 +91,8 @@
     "it": "Elimina le foglie, poi lava e sbuccia il ravanello e taglialo a pezzetti. Solo ravanelli al naturale, non conditi con spezie, in piccole quantità.",
     "nl": "Gooi het loof weg, was en schil het radijsje en snijd het in kleine stukjes. Alleen naturel radijsjes zonder kruiden, in kleine hoeveelheden.",
     "pl": "Wyrzuć nać, a rzodkiewkę umyj, obierz i pokrój na małe kawałki. Tylko zwykłe rzodkiewki, bez przypraw, w małych ilościach.",
-    "cs": "Nať vyhoďte, ředkvičku omyjte, oloupejte a nakrájejte na malé kousky. Jen neochucené ředkvičky, bez koření, a v malém množství."
+    "cs": "Nať vyhoďte, ředkvičku omyjte, oloupejte a nakrájejte na malé kousky. Jen neochucené ředkvičky, bez koření, a v malém množství.",
+    "hr": "Baci lišće, zatim rotkvicu operi, oguli i nareži na male komadiće. Samo obične rotkvice, bez začina, u malim količinama."
   },
   "child": {
     "en": "Dogs can try a few small radish pieces. A grown-up removes the leaves, peels the radish and chops it first.",
@@ -97,7 +104,8 @@
     "it": "I cani possono assaggiare qualche pezzettino di ravanello. Prima un adulto toglie le foglie, sbuccia il ravanello e lo taglia a pezzetti.",
     "nl": "Honden mogen een paar kleine stukjes radijs proberen. Een volwassene haalt eerst de blaadjes eraf, schilt het radijsje en snijdt het in stukjes.",
     "pl": "Pies może spróbować kilku małych kawałków rzodkiewki. Dorosły najpierw usuwa nać, obiera rzodkiewkę i kroi ją.",
-    "cs": "Psi mohou zkusit pár malých kousků ředkvičky. Dospělý nejdřív odstraní nať, ředkvičku oloupe a nakrájí."
+    "cs": "Psi mohou zkusit pár malých kousků ředkvičky. Dospělý nejdřív odstraní nať, ředkvičku oloupe a nakrájí.",
+    "hr": "Psi smiju probati nekoliko malih komadića rotkvice. Odrasla osoba prvo ukloni lišće, oguli rotkvicu i nareže je."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "it": "I cani possono mangiare le foglie dei ravanelli?",
         "nl": "Mogen honden radijsblaadjes eten?",
         "pl": "Czy psy mogą jeść nać rzodkiewki?",
-        "cs": "Mohou psi jíst listy ředkviček?"
+        "cs": "Mohou psi jíst listy ředkviček?",
+        "hr": "Smiju li psi jesti lišće rotkvice?"
       },
       "a": {
         "en": "No. Do not feed your dog the radish greens, as they may cause gastroenteritis.",
@@ -123,7 +132,8 @@
         "it": "No. Non dare al tuo cane le foglie dei ravanelli, perché possono causare gastroenterite.",
         "nl": "Nee. Geef je hond geen radijsloof, want dat kan een maag-darmontsteking veroorzaken.",
         "pl": "Nie. Nie dawaj psu naci rzodkiewki, bo może wywołać zapalenie żołądka i jelit.",
-        "cs": "Ne. Nedávejte psovi nať ředkviček, protože může způsobit zánět žaludku a střev."
+        "cs": "Ne. Nedávejte psovi nať ředkviček, protože může způsobit zánět žaludku a střev.",
+        "hr": "Ne. Ne daj psu lišće rotkvice jer može izazvati gastroenteritis."
       }
     },
     {
@@ -137,7 +147,8 @@
         "it": "I cani possono mangiare il rafano?",
         "nl": "Mogen honden mierikswortel eten?",
         "pl": "Czy psy mogą jeść chrzan?",
-        "cs": "Mohou psi jíst křen?"
+        "cs": "Mohou psi jíst křen?",
+        "hr": "Smiju li psi jesti hren?"
       },
       "a": {
         "en": "No. Horseradish isn't actually a radish and should not be fed to dogs.",
@@ -149,7 +160,8 @@
         "it": "No. Il rafano in realtà non è un ravanello e non va dato ai cani.",
         "nl": "Nee. Mierikswortel is eigenlijk geen radijs. Geef het je hond niet.",
         "pl": "Nie. Chrzan tak naprawdę nie jest rzodkiewką i nie należy go dawać psom.",
-        "cs": "Ne. Křen ve skutečnosti ředkvička není a psům se nemá dávat."
+        "cs": "Ne. Křen ve skutečnosti ředkvička není a psům se nemá dávat.",
+        "hr": "Ne. Hren zapravo nije rotkvica i ne treba ga davati psima."
       }
     }
   ],
@@ -259,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3c48b536678d32a286c72636e01a2078c2c2a06d1de10e5f642d41ea79a9e3d2"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25359a4da37d3ddbbe129707d68221c0730a40c12cafce1d7839db1289e59547"
     }
   }
 }
