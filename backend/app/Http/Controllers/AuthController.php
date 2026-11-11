@@ -11,6 +11,7 @@ use App\Http\Requests\SocialSignInRequest;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\AppSettingsService;
+use App\Services\Auth\PasswordLoginGuard;
 use App\Services\Auth\SocialSignInService;
 use App\Services\Auth\SocialTokenVerifier;
 use App\Services\ChildProfileService;
@@ -156,20 +157,35 @@ class AuthController extends Controller
      * `POST /api/child/pin-login`; this endpoint answers them like any wrong
      * credentials (401).
      *
+     * Brute-force guard (David 2026-11-11): 429 (`{message}` + `Retry-After`)
+     * after 10 requests / min or 30 / h per IP (IPv6 /64), and for an account
+     * (normalised e-mail, any IP) after 5 wrong passwords in 15 min — while it
+     * lasts even the right password gets 429; a success before that resets
+     * the counter. Successful responses are unchanged.
+     *
      * POST /api/login
      */
-    public function login(LoginRequest $request): JsonResponse
+    public function login(LoginRequest $request, PasswordLoginGuard $guard): JsonResponse
     {
-        // Case-insensitive (M2-10a stores lower case; legacy rows may not be).
-        $user = User::findByEmail((string) $request->input('email'));
-        $hash = $user?->getAuthPassword();
+        $email = (string) $request->input('email');
+        $guard->assertNotLocked($email);
 
-        if ($user === null || ! is_string($hash) || $hash === ''
-            || ! Hash::check($request->input('password'), $hash)) {
+        // Case-insensitive (M2-10a stores lower case; legacy rows may not be).
+        $user = User::findByEmail($email);
+        $hash = $user?->getAuthPassword();
+        $usable = $user !== null && is_string($hash) && $hash !== '';
+        // An unknown e-mail still runs Hash::check (dummy hash): same timing for every failure.
+        $ok = Hash::check((string) $request->input('password'), $usable ? $hash : $guard->dummyHash()) && $usable;
+
+        if (! $ok) {
+            // Counted for unknown e-mails too (no account enumeration).
+            $guard->recordFailure($email);
+
             return response()->json([
                 'message' => 'Invalid credentials.',
             ], 401);
         }
+        $guard->clear($email);
 
         $deviceName = (string) $request->input('device_name', 'mobile-app');
         if ($user->isChild()) {

@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-11 — Prijava staršev je zaščitena pred ugibanjem gesla
+
+**Kaj:** Prijava s e-naslovom in geslom ima zdaj omejitev: največ 10 poskusov na minuto in 30 na uro z enega naslova IP, račun pa se po 5 napačnih geslih v 15 minutah za 15 minut zaklene (z katerega koli naslova). Uspešna prijava in odgovor aplikacije se nista spremenila; stare različice aplikacije pokažejo običajno »Prijava ni uspela«. Otroška prijava s PIN-om in Google / Apple prijava sta že imeli omejitve in ostaneta takšni. Preverjeno v testih (zaklep, ponastavitev, drugi računi niso prizadeti).
+**Zakaj je pomembno:** prijava staršev je vrata do družinskih podatkov in do plačil; brez omejitve bi lahko nekdo neomejeno ugibal gesla.
+**Kako povedati:** 👩 »Račun je zaščiten pred ugibanjem gesla: po več napačnih poskusih se začasno zaklene.« 💼 »Varnostna osnova za prodajo prek spleta.« 🛠 skupen pristop z omejitvami spletne prijave (M6-S01b).
+
 ## 2026-11-11 — Bon se unovči s prijavo, brez vpisovanja e-naslova *(strežnik pripravljen, izklopljeno do izida v trgovinah)*
 
 **Kaj:** David se je odločil (22.20), da stran za unovčitev ne sprašuje po e-naslovu. Starš se prijavi z istim računom kot v aplikaciji — Google, Apple ali e-naslov + geslo — in vnese kodo. Strežnik (M6-S01b) izda prijavo, ki velja **15 minut** in **samo za unovčitev**: za katero koli drugo funkcijo jo strežnik zavrne (test preveri vse poti API-ja). Prijava nikoli ne ustvari računa in ga ne poveže z drugim. Za Google in Apple sta ločena spletna ID-ja; prijava v aplikaciji se ne spremeni. Omejitve: 10 poskusov na minuto na naslov, po 5 napačnih geslih je spletna prijava računa za 15 minut zaklenjena, največ 20 unovčitev na družino na uro. 26 novih testov, prilagojeni vsi testi bona.

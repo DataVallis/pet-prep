@@ -42,7 +42,10 @@ use Illuminate\Support\Facades\Route;
 | Authentication Endpoints (public — no Sanctum token required)
 |--------------------------------------------------------------------------
 */
-Route::post('login', [AuthController::class, 'login']);
+// Brute-force guard (David 2026-11-11): per-IP throttle (10/min, 30/h) + per-account
+// lockout (5 wrong passwords / 15 min) in PasswordLoginGuard → 429.
+Route::post('login', [AuthController::class, 'login'])
+    ->middleware('throttle:login');
 
 // M2-10a: parent self-registration (e-mail + password) → parent + own family
 // + parent token. Per-IP throttle (5/min, 20/h).
