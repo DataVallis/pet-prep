@@ -15,7 +15,8 @@
     "hr": "Morske alge (nori)",
     "sv": "Tång (nori)",
     "da": "Tang (nori)",
-    "fi": "Merilevä (nori)"
+    "fi": "Merilevä (nori)",
+    "nb": "Tang (nori)"
   },
   "question": {
     "en": "Can dogs eat seaweed?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti morske alge?",
     "sv": "Får hundar äta tång?",
     "da": "Må hunde spise tang?",
-    "fi": "Saako koira syödä merilevää?"
+    "fi": "Saako koira syödä merilevää?",
+    "nb": "Kan hunder spise tang?"
   },
   "url_slug": {
     "en": "seaweed",
@@ -47,7 +49,8 @@
     "hr": "morske-alge",
     "sv": "tang",
     "da": "tang",
-    "fi": "merileva"
+    "fi": "merileva",
+    "nb": "tang"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Neke vrste, umjereno. Obične nori alge ili listovi morskih algi bez dodane soli, češnjaka i začina u malim su količinama u redu. Divlje morske alge s plaže drugačija su priča: mogu sadržavati previše soli, a osušene vlati mogu nabubriti u želucu, pa se odmah posavjetuj s veterinarom ako ih pas pojede.",
     "sv": "Vissa sorters tång, med måtta. Vanlig nori eller tångblad utan tillsatt salt, vitlök eller kryddor går bra i små mängder. Vild tång från stranden är en annan sak: den kan innehålla för mycket salt, och torkade trådar kan svälla i magen. Kontakta veterinären direkt om hunden har ätit av den.",
     "da": "Nogle slags, med måde. Almindelig nori eller tangplader uden tilsat salt, hvidløg eller krydderier er fine i små mængder. Vild tang fra stranden er noget helt andet: det kan indeholde for meget salt, og tørrede tråde kan svulme op i maven. Kontakt derfor straks en dyrlæge, hvis din hund spiser det.",
-    "fi": "Joitakin lajeja kohtuudella. Maustamaton nori tai merilevälehdet ilman lisättyä suolaa, valkosipulia tai mausteita sopivat pieninä määrinä. Rannalta kerätty villi merilevä on eri asia: siinä voi olla liikaa suolaa, ja kuivuneet suikaleet voivat turvota vatsassa, joten hakeudu heti eläinlääkäriin, jos koirasi syö sitä."
+    "fi": "Joitakin lajeja kohtuudella. Maustamaton nori tai merilevälehdet ilman lisättyä suolaa, valkosipulia tai mausteita sopivat pieninä määrinä. Rannalta kerätty villi merilevä on eri asia: siinä voi olla liikaa suolaa, ja kuivuneet suikaleet voivat turvota vatsassa, joten hakeudu heti eläinlääkäriin, jos koirasi syö sitä.",
+    "nb": "Noen typer, med måte. Naturell nori eller tangark uten tilsatt salt, hvitløk eller krydder går bra i små mengder. Tang fra stranden er noe annet: den kan inneholde for mye salt, og tørkede tråder kan utvide seg i magen, så kontakt dyrlegen med en gang hvis hunden spiser den."
   },
   "why": {
     "en": "Seaweed is nutritious and contains protein, iron, iodine, magnesium and omega-3s. But too much seaweed can upset a dog's stomach, and too much iodine can affect the thyroid. Wild beach seaweed can contain excessive salt, putting a dog at risk of salt toxicosis; its long strands can become lodged in the intestines or carry hidden animals or parasites, and dry wild seaweed can expand in the stomach.",
@@ -80,7 +84,8 @@
     "hr": "Morske alge su hranjive i sadrže bjelančevine, željezo, jod, magnezij i omega-3 masne kiseline. No previše morskih algi može poremetiti psu probavu, a previše joda može utjecati na štitnjaču. Divlje morske alge s plaže mogu sadržavati previše soli, zbog čega pas može dobiti trovanje solju; njihove duge vlati mogu se zaglaviti u crijevima ili sadržavati skrivene životinje ili parazite, a suhe divlje alge mogu nabubriti u želucu.",
     "sv": "Tång är näringsrik och innehåller protein, järn, jod, magnesium och omega-3. Men för mycket tång kan ge hunden orolig mage, och för mycket jod kan påverka sköldkörteln. Vild tång från stranden kan innehålla alldeles för mycket salt, vilket ger risk för saltförgiftning. De långa trådarna kan fastna i tarmarna eller dölja små djur eller parasiter, och torkad vild tång kan svälla i magen.",
     "da": "Tang er næringsrigt og indeholder protein, jern, jod, magnesium og omega-3. Men for meget tang kan give hunden dårlig mave, og for meget jod kan påvirke skjoldbruskkirtlen. Vild tang fra stranden kan indeholde alt for meget salt, så hunden risikerer saltforgiftning. De lange tråde kan sætte sig fast i tarmene eller skjule små dyr eller parasitter, og tørret vild tang kan svulme op i maven.",
-    "fi": "Merilevä on ravitsevaa, ja siinä on proteiinia, rautaa, jodia, magnesiumia ja omega-3-rasvahappoja. Liika merilevä voi kuitenkin sekoittaa koiran vatsan, ja liika jodi voi vaikuttaa kilpirauhaseen. Rannan villi merilevä voi sisältää liikaa suolaa, mikä altistaa koiran suolamyrkytykselle; sen pitkät suikaleet voivat juuttua suolistoon tai kuljettaa mukanaan piiloutuneita pieneläimiä tai loisia, ja kuiva villi merilevä voi turvota vatsassa."
+    "fi": "Merilevä on ravitsevaa, ja siinä on proteiinia, rautaa, jodia, magnesiumia ja omega-3-rasvahappoja. Liika merilevä voi kuitenkin sekoittaa koiran vatsan, ja liika jodi voi vaikuttaa kilpirauhaseen. Rannan villi merilevä voi sisältää liikaa suolaa, mikä altistaa koiran suolamyrkytykselle; sen pitkät suikaleet voivat juuttua suolistoon tai kuljettaa mukanaan piiloutuneita pieneläimiä tai loisia, ja kuiva villi merilevä voi turvota vatsassa.",
+    "nb": "Tang er næringsrik og inneholder protein, jern, jod, magnesium og omega-3. Men for mye tang kan gi hunden urolig mage, og for mye jod kan påvirke skjoldbruskkjertelen. Tang fra stranden kan inneholde altfor mye salt, så hunden risikerer saltforgiftning. De lange trådene kan sette seg fast i tarmene eller skjule små dyr eller parasitter, og tørr tang fra stranden kan utvide seg i magen."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Pazi na psa na plaži da ne jede divlje morske alge. Ako pas ipak pojede morske alge na plaži, odmah se posavjetuj s veterinarom; mogu izazvati povraćanje, proljev, slabost i bezvoljnost.",
     "sv": "Ha uppsikt över hunden på stranden så att den inte äter vild tång. Om hunden ändå äter tång på stranden ska du kontakta veterinären direkt. Det kan ge kräkningar, diarré, svaghet och slöhet.",
     "da": "Hold øje med hunden på stranden, så den ikke spiser vild tang. Hvis din hund alligevel spiser tang på stranden, skal du straks kontakte en dyrlæge. Symptomer kan være opkast, diarré, svaghed og sløvhed.",
-    "fi": "Pidä koirasi silmällä rannalla, ettei se syö villiä merilevää. Jos koirasi syö merilevää rannalla, hakeudu heti eläinlääkäriin; se voi aiheuttaa oksentelua, ripulia, heikkoutta ja väsymystä."
+    "fi": "Pidä koirasi silmällä rannalla, ettei se syö villiä merilevää. Jos koirasi syö merilevää rannalla, hakeudu heti eläinlääkäriin; se voi aiheuttaa oksentelua, ripulia, heikkoutta ja väsymystä.",
+    "nb": "Pass på at hunden ikke spiser tang på stranden. Hvis den likevel gjør det, må du kontakte dyrlegen med en gang. Det kan gi oppkast, diaré, svakhet og sløvhet."
   },
   "serving": {
     "en": "Only plain, unseasoned seaweed in small amounts, such as prepackaged nori sheets. Read the ingredients list to make sure there are no added seasonings, salt or garlic.",
@@ -113,7 +119,8 @@
     "hr": "Samo obične, nezačinjene morske alge u malim količinama, poput pakiranih listova nori. Pročitaj popis sastojaka i provjeri da nema dodanih začina, soli ni češnjaka.",
     "sv": "Bara okryddad tång i små mängder, till exempel färdigförpackade noriblad. Läs innehållsförteckningen och kontrollera att där inte finns tillsatta kryddor, salt eller vitlök.",
     "da": "Kun naturel tang uden krydderier og kun i små mængder, fx færdigpakkede noriplader. Læs varedeklarationen, og tjek at der ikke er tilsat krydderier, salt eller hvidløg.",
-    "fi": "Vain maustamatonta merilevää pieninä määrinä, esimerkiksi valmiiksi pakattuja norilehtiä. Lue ainesosaluettelo varmistaaksesi, ettei mukana ole lisättyjä mausteita, suolaa tai valkosipulia."
+    "fi": "Vain maustamatonta merilevää pieninä määrinä, esimerkiksi valmiiksi pakattuja norilehtiä. Lue ainesosaluettelo varmistaaksesi, ettei mukana ole lisättyjä mausteita, suolaa tai valkosipulia.",
+    "nb": "Bare naturell tang uten krydder, i små mengder, for eksempel ferdigpakkede noriark. Les ingredienslisten, så du er sikker på at det ikke er tilsatt krydder, salt eller hvitløk."
   },
   "child": {
     "en": "Dogs may taste a little plain nori. At the beach, help keep them away from seaweed on the sand.",
@@ -129,7 +136,8 @@
     "hr": "Psi smiju kušati malo običnih nori algi. Na plaži ih pomozi držati podalje od algi na pijesku.",
     "sv": "Hundar kan få smaka lite okryddad nori. På stranden ska du hjälpa hunden att hålla sig borta från tången i sanden.",
     "da": "Hunde må gerne smage lidt naturel nori. På stranden skal du hjælpe hunden med at holde sig væk fra tangen i sandet.",
-    "fi": "Koira voi maistaa vähän maustamatonta noria. Auta rannalla pitämään koira kaukana rannalle ajautuneesta merilevästä."
+    "fi": "Koira voi maistaa vähän maustamatonta noria. Auta rannalla pitämään koira kaukana rannalle ajautuneesta merilevästä.",
+    "nb": "Hunder kan få smake litt naturell nori. På stranden bør du passe på at hunden holder seg unna tangen i sanden."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Što ako moj pas na plaži pojede morske alge?",
         "sv": "Vad gör jag om hunden äter tång på stranden?",
         "da": "Hvad gør jeg, hvis min hund spiser tang på stranden?",
-        "fi": "Mitä jos koirani syö merilevää rannalla?"
+        "fi": "Mitä jos koirani syö merilevää rannalla?",
+        "nb": "Hva gjør jeg hvis hunden min spiser tang på stranden?"
       },
       "a": {
         "en": "Consult a veterinarian right away. Wild seaweed can contain excessive salt, dry seaweed can expand in the stomach, and long strands can become lodged in the intestines.",
@@ -163,7 +172,8 @@
         "hr": "Odmah se posavjetuj s veterinarom. Divlje morske alge mogu sadržavati previše soli, suhe alge mogu nabubriti u želucu, a duge vlati mogu se zaglaviti u crijevima.",
         "sv": "Kontakta veterinären direkt. Vild tång kan innehålla alldeles för mycket salt, torkad tång kan svälla i magen och långa trådar kan fastna i tarmarna.",
         "da": "Kontakt straks en dyrlæge. Vild tang kan indeholde alt for meget salt, tørret tang kan svulme op i maven, og lange tråde kan sætte sig fast i tarmene.",
-        "fi": "Hakeudu heti eläinlääkäriin. Villi merilevä voi sisältää liikaa suolaa, kuiva merilevä voi turvota vatsassa, ja pitkät suikaleet voivat juuttua suolistoon."
+        "fi": "Hakeudu heti eläinlääkäriin. Villi merilevä voi sisältää liikaa suolaa, kuiva merilevä voi turvota vatsassa, ja pitkät suikaleet voivat juuttua suolistoon.",
+        "nb": "Kontakt dyrlegen med en gang. Tang fra stranden kan inneholde altfor mye salt, tørr tang kan utvide seg i magen, og lange tråder kan sette seg fast i tarmene."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Smiju li psi jesti sushi ili morske alge sa sojinim umakom?",
         "sv": "Får hundar äta sushi eller tång med sojasås?",
         "da": "Må hunde spise sushi eller tang med sojasovs?",
-        "fi": "Saako koira syödä sushia tai soijakastikkeella maustettua merilevää?"
+        "fi": "Saako koira syödä sushia tai soijakastikkeella maustettua merilevää?",
+        "nb": "Kan hunder spise sushi eller tang med soyasaus?"
       },
       "a": {
         "en": "No. Sushi made with raw fish can make your dog sick, and soy sauce is high in salt.",
@@ -197,7 +208,8 @@
         "hr": "Ne. Od sushija sa sirovom ribom pas se može razboljeti, a sojin umak ima mnogo soli.",
         "sv": "Nej. Sushi med rå fisk kan göra hunden sjuk, och sojasås innehåller mycket salt.",
         "da": "Nej. Sushi med rå fisk kan gøre hunden syg, og sojasovs indeholder meget salt.",
-        "fi": "Ei saa. Raa’asta kalasta tehty sushi voi tehdä koirasi sairaaksi, ja soijakastikkeessa on paljon suolaa."
+        "fi": "Ei saa. Raa’asta kalasta tehty sushi voi tehdä koirasi sairaaksi, ja soijakastikkeessa on paljon suolaa.",
+        "nb": "Nei. Sushi med rå fisk kan gjøre hunden syk, og soyasaus inneholder mye salt."
       }
     }
   ],
@@ -344,6 +356,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c5c5bc36412e047ae9acb247ca125e760e92049f69303c8d99c8288ff406c6d0"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bfcb4798f7925648acfa03cc5ba006ad560237fbbdbc355a5bfa05a9ffe94e5e"
     }
   }
 }

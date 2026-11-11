@@ -15,7 +15,8 @@
     "hr": "Peršin",
     "sv": "Persilja",
     "da": "Persille",
-    "fi": "Persilja"
+    "fi": "Persilja",
+    "nb": "Persille"
   },
   "question": {
     "en": "Can cats eat parsley?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti peršin?",
     "sv": "Får katter äta persilja?",
     "da": "Må katte spise persille?",
-    "fi": "Saako kissa syödä persiljaa?"
+    "fi": "Saako kissa syödä persiljaa?",
+    "nb": "Kan katter spise persille?"
   },
   "url_slug": {
     "en": "parsley",
@@ -47,7 +49,8 @@
     "hr": "persin",
     "sv": "persilja",
     "da": "persille",
-    "fi": "persilja"
+    "fi": "persilja",
+    "nb": "persille"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Ne, ne daj mački peršin. ASPCA ga navodi kao otrovan za mačke: može učiniti kožu osjetljivom na sunce te izazvati opekline ili upalu kože, iako je za taj učinak potrebna velika količina. Ako je mačka pojela nešto peršina, obrati se veterinaru.",
     "sv": "Nej, ge inte katten persilja. ASPCA anger persilja som giftig för katter: den kan göra huden känslig för solljus och ge solbränna eller hudinflammation, även om det krävs stora mängder för att få den effekten. Om katten har ätit av den ska du kontakta veterinären.",
     "da": "Nej, giv ikke din kat persille. ASPCA betragter persille som giftig for katte: den kan gøre huden følsom over for sollys og give solskoldning eller hudbetændelse, selvom der skal store mængder til. Hvis din kat har spist af den, skal du kontakte din dyrlæge.",
-    "fi": "Ei saa, älä anna kissallesi persiljaa. ASPCA luokittelee persiljan kissoille myrkylliseksi: se voi tehdä ihon herkäksi auringonvalolle ja aiheuttaa auringonpolttamaa muistuttavan ihotulehduksen, vaikka vaikutus vaatii suuria määriä. Jos kissasi on syönyt sitä, ota yhteyttä eläinlääkäriin."
+    "fi": "Ei saa, älä anna kissallesi persiljaa. ASPCA luokittelee persiljan kissoille myrkylliseksi: se voi tehdä ihon herkäksi auringonvalolle ja aiheuttaa auringonpolttamaa muistuttavan ihotulehduksen, vaikka vaikutus vaatii suuria määriä. Jos kissasi on syönyt sitä, ota yhteyttä eläinlääkäriin.",
+    "nb": "Nei, ikke gi katten persille. ASPCA oppgir persille som giftig for katter: den kan gjøre huden følsom for sollys og gi solbrenthet eller hudbetennelse, selv om det kreves store mengder for å få den effekten. Hvis katten har spist av den, må du kontakte dyrlegen."
   },
   "why": {
     "en": "The ASPCA lists parsley (Petroselinum crispum, including Italian and Hamburg parsley) as toxic to cats. It names furanocoumarins as the toxic substance and says they can cause photosensitization (sunburn, skin inflammation), adding that large amounts are needed to cause this effect. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats. Cats don't need plants in their diet: PDSA says cats are carnivores that need nutrients found in meat.",
@@ -80,7 +84,8 @@
     "hr": "ASPCA navodi peršin (Petroselinum crispum, uključujući talijanski i korijenski peršin) kao otrovan za mačke. Kao otrovnu tvar navodi furanokumarine i kaže da mogu izazvati fotosenzibilizaciju (opekline od sunca, upalu kože), uz napomenu da je za taj učinak potrebna velika količina. ASPCA također napominje da bilo koji biljni materijal kod mačaka može izazvati povraćanje i želučane tegobe. Mačkama biljke u prehrani nisu potrebne: PDSA navodi da su mačke mesojedi kojima trebaju hranjive tvari iz mesa.",
     "sv": "ASPCA anger persilja (Petroselinum crispum, inklusive slätbladig persilja och rotpersilja) som giftig för katter. Som giftigt ämne nämns furanokumariner, som kan ge fotosensibilisering (solbränna, hudinflammation), och ASPCA tillägger att det krävs stora mängder för att få den effekten. ASPCA påpekar också att allt växtmaterial kan ge katter kräkningar och orolig mage. Katter behöver inga växter i kosten: enligt PDSA är katter köttätare som behöver näringsämnen som finns i kött.",
     "da": "ASPCA betragter persille (Petroselinum crispum, også kaldet italiensk persille og rodpersille) som giftig for katte. Organisationen peger på furanokumariner som det giftige stof og skriver at de kan give lysfølsomhed (solskoldning, hudbetændelse), men at der skal store mængder til. ASPCA bemærker også at alle planter kan give katte opkast og dårlig mave. Katte har ikke brug for planter i kosten: PDSA skriver at katte er kødædere og har brug for de næringsstoffer der findes i kød.",
-    "fi": "ASPCA luokittelee persiljan (Petroselinum crispum, myös lehti- ja juuripersilja) kissoille myrkylliseksi. Se mainitsee myrkyllisenä aineena furanokumariinit ja toteaa, että ne voivat aiheuttaa valoherkistymistä (auringonpolttamaa muistuttavaa ihotulehdusta) ja että vaikutus vaatii suuria määriä. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja. Kissat eivät tarvitse kasveja ruokavaliossaan: PDSA toteaa, että kissat ovat lihansyöjiä, jotka tarvitsevat lihasta saatavia ravintoaineita."
+    "fi": "ASPCA luokittelee persiljan (Petroselinum crispum, myös lehti- ja juuripersilja) kissoille myrkylliseksi. Se mainitsee myrkyllisenä aineena furanokumariinit ja toteaa, että ne voivat aiheuttaa valoherkistymistä (auringonpolttamaa muistuttavaa ihotulehdusta) ja että vaikutus vaatii suuria määriä. ASPCA huomauttaa myös, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja. Kissat eivät tarvitse kasveja ruokavaliossaan: PDSA toteaa, että kissat ovat lihansyöjiä, jotka tarvitsevat lihasta saatavia ravintoaineita.",
+    "nb": "ASPCA oppgir persille (Petroselinum crispum, også italiensk persille og rotpersille) som giftig for katter. Den nevner furanokumariner som det giftige stoffet og sier at de kan gi lysfølsomhet (solbrenthet, hudbetennelse), og legger til at det kreves store mengder for å få den effekten. ASPCA påpeker også at alle plantedeler kan gi katter oppkast og urolig mage. Katter trenger ikke planter i kosten: PDSA sier at katter er kjøttetere som trenger næringsstoffer som finnes i kjøtt."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Ihotulehdus (dermatiitti)",
       "Oksentelu",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Solbrenthet",
+      "Hudbetennelse (dermatitt)",
+      "Oppkast",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "hr": "Ako je mačka pojela peršin, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi.",
     "sv": "Om katten har ätit persilja ska du kontakta veterinären direkt. Vänta inte tills symtom dyker upp.",
     "da": "Hvis din kat har spist persille, skal du straks kontakte din dyrlæge. Vent ikke på symptomer.",
-    "fi": "Jos kissasi on syönyt persiljaa, ota heti yhteyttä eläinlääkäriin. Älä odota oireita."
+    "fi": "Jos kissasi on syönyt persiljaa, ota heti yhteyttä eläinlääkäriin. Älä odota oireita.",
+    "nb": "Hvis katten har spist persille, må du kontakte dyrlegen med en gang. Ikke vent på symptomer."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "hr": "Peršin nije poslastica za mačke. Ako mačkica zagrize malo peršina, reci odrasloj osobi da nazove veterinara.",
     "sv": "Persilja är inget kattgodis. Om katten har knaprat på den, berätta direkt för en vuxen som kan ringa veterinären.",
     "da": "Persille er ikke en snack til katte. Hvis din kat har gnasket lidt af den, så sig det til en voksen, som kan ringe til dyrlægen.",
-    "fi": "Persilja ei ole kissan välipala. Jos kisu nakertaa sitä, kerro aikuiselle, jotta hän voi soittaa eläinlääkärille."
+    "fi": "Persilja ei ole kissan välipala. Jos kisu nakertaa sitä, kerro aikuiselle, jotta hän voi soittaa eläinlääkärille.",
+    "nb": "Persille er ikke en godbit for katter. Hvis pusen har knasket på den, si fra til en voksen som kan ringe dyrlegen."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "hr": "Zašto je peršin problem za mačke, a ljudi ga jedu?",
         "sv": "Varför är persilja ett problem för katter när människor äter den?",
         "da": "Hvorfor er persille et problem for katte, selvom vi mennesker spiser den?",
-        "fi": "Miksi persilja on ongelma kissoille, vaikka ihmiset syövät sitä?"
+        "fi": "Miksi persilja on ongelma kissoille, vaikka ihmiset syövät sitä?",
+        "nb": "Hvorfor er persille et problem for katter, selv om vi mennesker spiser den?"
       },
       "a": {
         "en": "The ASPCA says parsley contains furanocoumarins, which can make a cat's skin sensitive to sunlight and cause sunburn or skin inflammation. It notes that large amounts are needed for this effect.",
@@ -233,7 +247,8 @@
         "hr": "ASPCA navodi da peršin sadrži furanokumarine, koji mogu učiniti mačju kožu osjetljivom na sunce te izazvati opekline ili upalu kože. Napominje da je za taj učinak potrebna velika količina.",
         "sv": "ASPCA säger att persilja innehåller furanokumariner, som kan göra kattens hud känslig för solljus och ge solbränna eller hudinflammation. ASPCA påpekar samtidigt att det krävs stora mängder för att få den effekten.",
         "da": "ASPCA skriver at persille indeholder furanokumariner, som kan gøre en kats hud følsom over for sollys og give solskoldning eller hudbetændelse, men at der skal store mængder til.",
-        "fi": "ASPCA:n mukaan persiljassa on furanokumariineja, jotka voivat tehdä kissan ihon herkäksi auringonvalolle ja aiheuttaa auringonpolttamaa muistuttavan ihotulehduksen. Se huomauttaa, että vaikutus vaatii suuria määriä."
+        "fi": "ASPCA:n mukaan persiljassa on furanokumariineja, jotka voivat tehdä kissan ihon herkäksi auringonvalolle ja aiheuttaa auringonpolttamaa muistuttavan ihotulehduksen. Se huomauttaa, että vaikutus vaatii suuria määriä.",
+        "nb": "ASPCA sier at persille inneholder furanokumariner, som kan gjøre huden til en katt følsom for sollys og gi solbrenthet eller hudbetennelse. Den påpeker at det kreves store mengder for å få denne effekten."
       }
     }
   ],
@@ -351,6 +366,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "214c314f8b93fb83d09b844c9cd7ca61ff7a888bfc7073d80500d5aab166f939"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "55e1a2adac238deea153481bfd9f4dd13ebaf067a90225f9f6362c905510291d"
     }
   }
 }
