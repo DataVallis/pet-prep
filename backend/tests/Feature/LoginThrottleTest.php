@@ -2,7 +2,8 @@
 
 use App\Models\User;
 use App\Providers\AppServiceProvider;
-use Illuminate\Http\Middleware\ThrottleRequests;
+use App\Support\DummyPasswordHash;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\RateLimiter;
 
@@ -91,6 +92,15 @@ it('normal use is not blocked: a few typos then success', function () {
     ltAttempt('lt@example.com', 'typo')->assertStatus(401);
     ltAttempt('lt@example.com', 'typo2')->assertStatus(401);
     ltAttempt('lt@example.com', 'Correct-Pass-1')->assertOk();
+});
+
+it('uses the fixed cost-12 dummy hash: no Hash::make on the failure path', function () {
+    expect(DummyPasswordHash::VALUE)->toStartWith('$2y$12$')->and(strlen(DummyPasswordHash::VALUE))->toBe(60);
+    Hash::spy();
+    Hash::shouldReceive('check')->andReturn(false);
+    Hash::shouldNotReceive('make');
+
+    ltAttempt('ghost@example.com', 'x')->assertStatus(401);
 });
 
 it('keeps the successful response shape unchanged', function () {

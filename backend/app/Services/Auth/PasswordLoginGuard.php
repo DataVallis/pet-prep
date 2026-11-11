@@ -3,8 +3,8 @@
 namespace App\Services\Auth;
 
 use App\Providers\AppServiceProvider;
+use App\Support\DummyPasswordHash;
 use Illuminate\Http\Exceptions\ThrottleRequestsException;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\RateLimiter;
 
 /**
@@ -23,8 +23,6 @@ use Illuminate\Support\Facades\RateLimiter;
  */
 class PasswordLoginGuard
 {
-    private static ?string $dummyHash = null;
-
     /**
      * @throws ThrottleRequestsException
      */
@@ -52,10 +50,10 @@ class PasswordLoginGuard
         RateLimiter::clear(self::key($email));
     }
 
-    /** Bcrypt hash of a random value, for the constant-time path of unknown e-mails. */
+    /** Fixed cost-12 bcrypt hash for the constant-time path of unknown e-mails (no Hash::make per request). */
     public function dummyHash(): string
     {
-        return self::$dummyHash ??= Hash::make(bin2hex(random_bytes(16)));
+        return DummyPasswordHash::VALUE;
     }
 
     public static function key(string $email): string
