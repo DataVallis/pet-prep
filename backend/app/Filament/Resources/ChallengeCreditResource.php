@@ -63,6 +63,8 @@ class ChallengeCreditResource extends Resource
                 Tables\Columns\TextColumn::make('family_id')->label('Family')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('pet_id')->label('Pet')->placeholder('—')->sortable(),
                 Tables\Columns\TextColumn::make('assigned_via')->badge()->placeholder('unassigned'),
+                // M6-S01: store (RevenueCat) or web_gift (website voucher).
+                Tables\Columns\TextColumn::make('source')->badge(),
                 Tables\Columns\TextColumn::make('product_id')->label('Product'),
                 Tables\Columns\TextColumn::make('store')->placeholder('—'),
                 Tables\Columns\TextColumn::make('environment')->badge()->placeholder('—'),
@@ -77,6 +79,8 @@ class ChallengeCreditResource extends Resource
             ->defaultSort('purchased_at', 'desc')
             ->defaultKeySort()
             ->filters([
+                Tables\Filters\SelectFilter::make('source')
+                    ->options(['store' => 'store', 'web_gift' => 'web_gift']),
                 Tables\Filters\TernaryFilter::make('revoked')
                     ->nullable()
                     ->attribute('revoked_at')

@@ -90,6 +90,7 @@ class FeatureSwitches extends Page implements HasForms
             'quality_clip_ai' => $settings->qualityClipAi(),
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
+            'gift_vouchers' => $settings->giftVouchers(fresh: true),
         ]);
     }
 
@@ -215,6 +216,15 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.video_compression'))
                             ->default(false),
                     ]),
+                // M6-S01: website gift voucher redemption, default off (refund webhooks run either way).
+                Section::make(__('admin.features.gift_vouchers_section'))
+                    ->description(__('admin.features.gift_vouchers_description'))
+                    ->schema([
+                        Toggle::make('gift_vouchers')
+                            ->label(__('admin.features.gift_vouchers'))
+                            ->helperText(__('admin.features.gift_vouchers_help'))
+                            ->default(false),
+                    ]),
             ]);
     }
 
@@ -240,6 +250,7 @@ class FeatureSwitches extends Page implements HasForms
         $qualityClipAi = (bool) ($data['quality_clip_ai'] ?? AppSettingsService::qualityClipAiDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
+        $giftVouchers = (bool) ($data['gift_vouchers'] ?? false);
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -269,6 +280,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($compression !== $settings->videoCompression(fresh: true)) {
                 $settings->updateVideoCompression($this->admin(), $compression);
             }
+            if ($giftVouchers !== $settings->giftVouchers(fresh: true)) {
+                $settings->updateGiftVouchers($this->admin(), $giftVouchers);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -296,7 +310,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY, AppSettingsService::GIFT_VOUCHERS_KEY])
             ->latest('id')->limit(20)->get();
     }
 
