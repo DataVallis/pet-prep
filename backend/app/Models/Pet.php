@@ -313,6 +313,7 @@ class Pet extends Model
         'birthday_next_check_at',
         // M6-U02 bookkeeping (the dashboard gets `upgrade_reminder` instead).
         'upgrade_reminder_sent_at',
+        'upgrade_reminder_child_id',
         'upgrade_reminder_next_check_at',
         // M5-R14 – R20 follow-up: when an existing dog's care tasks start (apps get the tasks themselves).
         'care_tasks_since',

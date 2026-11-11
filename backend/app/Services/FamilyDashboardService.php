@@ -301,6 +301,15 @@ class FamilyDashboardService
                      * @var array{available: bool, reason: 'legacy_profile'|'pet_not_born'|'game_over'|'pet_not_active'|'free_plan'|null}|null
                      */
                     'upgrade' => ChallengeCreditService::upgradePayload($pet),
+                    /**
+                     * M6-U02 (FREE_PET_UPGRADE_SPEC U5 / D1): the day-7 reminder card »[Vzdevek] že 7
+                     * dni skrbi za [ime]. Je čas za pravi preizkus?« — set once the reminder went out,
+                     * while the free pet can still be upgraded, for 7 days. `child_id` = the child whose
+                     * 5 of 7 days qualified (null when that profile was deleted). Parent dashboard only.
+                     *
+                     * @var array{sent_at: string, child_id: int|null}|null
+                     */
+                    'upgrade_reminder' => UpgradeReminderService::cardFor($pet),
                     // M5-R01: origin, age, life stage and today's rules (meals by
                     // child / by parent in quiet hours, step goal).
                     'profile' => $profile->toArray(),

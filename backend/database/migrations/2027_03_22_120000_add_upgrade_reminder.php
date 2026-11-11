@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Schema;
  *  - `pets.upgrade_reminder_sent_at`: when the tick decided the one reminder of this free pet
  *    (written once, UpgradeReminderService::remind — one push to the parents, the dashboard
  *    card from then on).
+ *  - `pets.upgrade_reminder_child_id`: the child whose 5 of 7 days qualified (the card names
+ *    them in the app; null when that child account is deleted — the card then says "your child").
  *  - `pets.upgrade_reminder_next_check_at`: when the tick looks at the pet again (7 days after
  *    the contract, a few minutes later while it is locked, or "never" once decided / not
  *    applicable) — so the minutely tick never recomputes every pet.
@@ -29,6 +31,7 @@ return new class extends Migration
     {
         Schema::table('pets', function (Blueprint $table) {
             $table->timestamp('upgrade_reminder_sent_at')->nullable();
+            $table->foreignId('upgrade_reminder_child_id')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamp('upgrade_reminder_next_check_at')->nullable();
         });
 
@@ -44,6 +47,7 @@ return new class extends Migration
         $this->replacePushTypes(array_values(array_filter($this->allowedPushTypes(), fn (string $t) => $t !== self::TYPE)));
 
         Schema::table('pets', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('upgrade_reminder_child_id');
             $table->dropColumn(['upgrade_reminder_sent_at', 'upgrade_reminder_next_check_at']);
         });
     }
