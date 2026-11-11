@@ -59,6 +59,8 @@ To so majhni zneski. Njihov namen je prvi prihodek in dokaz, da starši za PetPr
 
 ## 7. Kaj je naslednje
 
+> **11. 11. 2026 (David):** iz §5 gradimo 1 (darilni bon), 2 (natisljivi komplet) in 5 (stran za partnerje z ustanovnimi partnerji) — specifikacija [`WEBSITE_SALES_SPEC.md`](WEBSITE_SALES_SPEC.md).
+
 1. Pristajalna stran in oglasni test za R1.
 2. Natisljivi komplet (§5.2) v prodajo.
 3. Odločitev o darilnem bonu glede na datum objave v trgovinah.
