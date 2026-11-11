@@ -142,7 +142,7 @@ class LemonSqueezyWebhookService
         if ($record->store_id === null || $record->store_id !== LicenseResponse::int((string) config('services.lemonsqueezy.store_id'))) {
             return LemonSqueezyEvent::OUTCOME_FOREIGN_STORE;
         }
-        if (! $this->isGiftProduct($type, $attrs)) {
+        if (! $this->isGiftProduct($type, $attrs) && ! $this->orderHasVoucher($type, $objectId)) {
             return LemonSqueezyEvent::OUTCOME_UNKNOWN_PRODUCT;
         }
         if ($record->test_mode && ! config('services.lemonsqueezy.accept_test_mode')) {
@@ -158,20 +158,50 @@ class LemonSqueezyWebhookService
     }
 
     /**
+     * Is this event about the gift product? A license key carries its product; an order
+     * (m7, QA) counts when ANY of its items is the gift — `first_order_item` and, when LS
+     * sends them, `order_items` (a cart with another product first is still a gift order).
+     *
      * @param  array<string, mixed>  $attrs
      */
     private function isGiftProduct(?string $type, array $attrs): bool
     {
-        $item = is_array($attrs['first_order_item'] ?? null) ? $attrs['first_order_item'] : [];
-        $product = $type === 'orders' ? LicenseResponse::int($item['product_id'] ?? null) : LicenseResponse::int($attrs['product_id'] ?? null);
+        if ($type !== 'orders') {
+            return self::isGiftItem($attrs);
+        }
+        $items = [];
+        if (is_array($attrs['first_order_item'] ?? null)) {
+            $items[] = $attrs['first_order_item'];
+        }
+        foreach ((array) ($attrs['order_items'] ?? []) as $item) {
+            if (is_array($item)) {
+                $items[] = is_array($item['attributes'] ?? null) ? $item['attributes'] : $item;
+            }
+        }
+
+        return collect($items)->contains(fn (array $item): bool => self::isGiftItem($item));
+    }
+
+    /**
+     * @param  array<string, mixed>  $item
+     */
+    private static function isGiftItem(array $item): bool
+    {
+        $product = LicenseResponse::int($item['product_id'] ?? null);
         if ($product === null || $product !== LicenseResponse::int((string) config('services.lemonsqueezy.gift_product_id'))) {
             return false;
         }
         // The variant only where LS sends it (orders; license keys carry none — L12).
         $wanted = LicenseResponse::int((string) config('services.lemonsqueezy.gift_variant_id'));
-        $variant = LicenseResponse::int($type === 'orders' ? ($item['variant_id'] ?? null) : ($attrs['variant_id'] ?? null));
+        $variant = LicenseResponse::int($item['variant_id'] ?? null);
 
         return $wanted === null || $variant === null || $variant === $wanted;
+    }
+
+    /** m7 (QA): an order of our store that already has a gift voucher row is a gift order. */
+    private function orderHasVoucher(?string $type, ?int $orderId): bool
+    {
+        return $type === 'orders' && $orderId !== null && GiftVoucher::where('ls_order_id', $orderId)->exists();
     }
 
     /**
@@ -187,11 +217,12 @@ class LemonSqueezyWebhookService
         }
         $purchasedAt = LicenseResponse::date($attrs['created_at'] ?? null) ?? now();
         $voucher = $this->rows->upsert($key, $licenseKeyId, $record->ls_order_id, $record->test_mode, $purchasedAt);
+        $voucher = GiftVoucher::whereKey($voucher->id)->lockForUpdate()->firstOrFail();
+        $this->fillMissing($voucher, $record, $attrs);
         if ($created) {
             return LemonSqueezyEvent::OUTCOME_VOUCHER_CREATED;
         }
 
-        $voucher = GiftVoucher::whereKey($voucher->id)->lockForUpdate()->firstOrFail();
         if (($attrs['status'] ?? null) === 'disabled' || ($attrs['disabled'] ?? false) === true) {
             $changed = $this->terminate($voucher, GiftVoucher::STATUS_DISABLED, $record);
 
@@ -204,6 +235,39 @@ class LemonSqueezyWebhookService
         }
 
         return LemonSqueezyEvent::OUTCOME_VOUCHER_UPDATED;
+    }
+
+    /**
+     * m3 (QA, CONTRACT §2.2): the webhook completes an existing row — the order id when it
+     * is missing, the purchase date from the license key's own created_at while the voucher
+     * is not redeemed yet, and a full refund already in the ledger (it arrived before the
+     * key row). Never a downgrade: refunded / disabled stay; status is never set back to
+     * purchased. Caller holds the voucher row lock.
+     *
+     * @param  array<string, mixed>  $attrs
+     */
+    private function fillMissing(GiftVoucher $voucher, LemonSqueezyEvent $record, array $attrs): void
+    {
+        $fill = [];
+        if (($voucher->ls_order_id === null || $voucher->ls_order_id === 0) && $record->ls_order_id !== null) {
+            $fill['ls_order_id'] = $record->ls_order_id;
+        }
+        $created = LicenseResponse::date($attrs['created_at'] ?? null)?->startOfSecond();
+        if ($created !== null && in_array($voucher->status, [GiftVoucher::STATUS_PURCHASED, GiftVoucher::STATUS_EXPIRED], true)
+            && ! $voucher->purchased_at->equalTo($created)) {
+            $fill['purchased_at'] = $created;
+            $fill['expires_at'] = GiftVoucher::expiryFor($created);
+        }
+        if ($fill !== []) {
+            $voucher->forceFill($fill)->save();
+        }
+
+        $orderId = $voucher->ls_order_id;
+        if (in_array($voucher->status, [GiftVoucher::STATUS_PURCHASED, GiftVoucher::STATUS_EXPIRED], true)
+            && LemonSqueezyEvent::where('event_name', 'order_refunded')->where('ls_order_id', $orderId)
+                ->whereIn('outcome', [LemonSqueezyEvent::OUTCOME_REFUNDED, LemonSqueezyEvent::OUTCOME_REVOKED])->exists()) {
+            $voucher->forceFill(['status' => GiftVoucher::STATUS_REFUNDED, 'refunded_at' => now()])->save();
+        }
     }
 
     /**

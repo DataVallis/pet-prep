@@ -82,6 +82,31 @@ it('m2: the code goes to LS exactly as entered (trimmed, case kept); our hash is
     gvRedeem(GV_CODE)->assertOk()->assertJsonPath('already', true);
 });
 
+it('m3: a refund recorded before license_key_created makes the new row refunded, never purchased', function () {
+    gvLs();
+    gvRefund()->assertJsonPath('outcome', 'refunded');
+    gvWebhook(gvLicenseKeyEvent('license_key_created'))->assertOk();
+    expect(GiftVoucher::sole()->status)->toBe(GiftVoucher::STATUS_REFUNDED);
+
+    // A later update never downgrades it.
+    gvWebhook(gvLicenseKeyEvent('license_key_updated', ['status' => 'active', 'updated_at' => '2026-11-14T00:00:00Z']))->assertOk();
+    expect(GiftVoucher::sole()->status)->toBe(GiftVoucher::STATUS_REFUNDED);
+});
+
+it('m3: the webhook fills the purchase date of a row created by the redeem path', function () {
+    $ls = gvLs();
+    gvParent();
+    gvWebhook(gvOrderEvent('order_created', ['created_at' => '2026-10-20T08:00:00Z', 'updated_at' => '2026-10-20T08:00:00Z']));
+    $ls->createdAt = null; // LS validate without created_at → the order's date is used (m4)
+    gvRedeem(email: 'nobody@example.com')->assertStatus(422); // lazy row, no account
+    expect(GiftVoucher::sole()->purchased_at->toIso8601String())->toBe('2026-10-20T08:00:00+00:00');
+
+    gvWebhook(gvLicenseKeyEvent('license_key_created', ['created_at' => '2026-10-20T08:00:05Z', 'updated_at' => '2026-10-20T08:00:05Z']));
+    $v = GiftVoucher::sole();
+    expect($v->purchased_at->toIso8601String())->toBe('2026-10-20T08:00:05+00:00')
+        ->and($v->expires_at->toIso8601String())->toBe('2027-10-20T08:00:05+00:00');
+});
+
 it('m4: no created_at from LS and no order in the ledger → upstream_error, nothing stored', function () {
     $ls = gvLs();
     $ls->createdAt = null;
@@ -111,4 +136,28 @@ it('m5: accepting a test-mode key in production logs an error (System health)', 
     gvRedeem()->assertOk();
     Log::shouldHaveReceived('error')->withArgs(fn (string $msg) => str_contains($msg, 'test-mode'))->once();
     app()->detectEnvironment(fn () => 'testing');
+});
+
+it('m7: a refund of an order whose first item is another product still revokes the gift voucher of that order', function () {
+    gvLs();
+    gvParent();
+    gvRedeem()->assertOk();
+
+    gvWebhook(gvOrderEvent('order_refunded', [
+        'status' => 'refunded', 'refunded' => true, 'refunded_amount' => 5689, 'updated_at' => '2026-11-12T09:00:00Z',
+        'first_order_item' => ['order_id' => 8001, 'product_id' => 999, 'variant_id' => 1],
+    ]))->assertJsonPath('outcome', 'revoked');
+    expect(ChallengeCredit::sole()->revoked_at)->not->toBeNull()->and(GiftVoucher::sole()->status)->toBe('refunded');
+});
+
+it('m7: an order listing the gift among its items counts as a gift order', function () {
+    gvLs();
+    gvWebhook(gvOrderEvent('order_created', [
+        'first_order_item' => ['order_id' => 8001, 'product_id' => 999, 'variant_id' => 1],
+        'order_items' => [['product_id' => 999, 'variant_id' => 1], ['product_id' => GV_PRODUCT, 'variant_id' => GV_VARIANT]],
+    ]))->assertJsonPath('outcome', 'recorded');
+    // Another store's order with no voucher row stays unknown_product.
+    gvWebhook(gvOrderEvent('order_created', [
+        'first_order_item' => ['order_id' => 8002, 'product_id' => 999, 'variant_id' => 1], 'updated_at' => '2026-11-02T00:00:00Z',
+    ], 8002))->assertJsonPath('outcome', 'unknown_product');
 });
