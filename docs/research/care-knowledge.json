@@ -134704,6 +134704,36 @@
       "checked": "2026-11-09"
     },
     {
+      "country": "OM",
+      "kind": "clinic",
+      "name": "Al Qurum Veterinary Clinic (Madinat Qaboos main branch)",
+      "city": "Muscat",
+      "region": "Muscat",
+      "address": "Villa 351-353, Al Inshirah Street, Madinat Sultan Qaboos, Muscat",
+      "phone": "+968 2460 7735",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service available: call +968 9270 3273. Opening hours Sat-Thu 8 am-8 pm, Fri 10 am-7 pm.",
+      "duty_i18n": null,
+      "url": "https://www.muscatvets.com/",
+      "source_url": "https://www.muscatvets.com/aboutus1.html",
+      "checked": "2026-11-12"
+    },
+    {
+      "country": "OM",
+      "kind": "clinic",
+      "name": "Al Qurum Veterinary Clinic (Azaiba branch)",
+      "city": "Muscat",
+      "region": "Muscat",
+      "address": "Azaiba, Muscat",
+      "phone": "+968 2412 1171",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 8 am-7 pm, closed Friday. Emergency line of the clinic: +968 9270 3273.",
+      "duty_i18n": null,
+      "url": "https://www.muscatvets.com/",
+      "source_url": "https://www.muscatvets.com/aboutus1.html",
+      "checked": "2026-11-12"
+    },
+    {
       "country": "PE",
       "kind": "clinic",
       "name": "Clínica Veterinaria Groomers Miraflores (Jorge Chávez)",

@@ -1,0 +1,54 @@
+{
+  "country": "OM",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Al Qurum Veterinary Clinic (own site: muscatvets.com)",
+      "url": "https://www.muscatvets.com/aboutus1.html",
+      "note": "Opened 2026-11-12: main branch (MSQ) and Azaiba branch phones, hours, '24hr emergency service available', emergency number 92703273. Contact page https://www.muscatvets.com/contact-us.html also opened (Madinat Qaboos branch address, phone, emergency line, hours)."
+    },
+    {
+      "name": "Expat Focus - Oman veterinary care guide",
+      "url": "https://www.expatfocus.com/oman/guide/oman-veterinary-care",
+      "note": "Opened for leads only: Muscat Vet Clinic (muscatvet.com), Barka Veterinary Clinic (barkavet.com), Oman Veterinary Association (ovaoman.com, info@ovaoman.com, Al Khuwair). Says only generically that most private clinics offer 24/7 service; no clinic named."
+    },
+    {
+      "name": "Times of Oman / Oman Observer on Al Bashayer Veterinary Hospital, Adam",
+      "url": "https://www.timesofoman.com/article/168436-omr2-million-worth-al-bashayer-veterinary-hospital-opened-in-adam",
+      "note": "Opened: hospital opened in Adam (Al Dakhiliyah), operator Al-Khairat Veterinary Medical Services Company. No phone, address, hours or 24 h wording; not added."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Al Qurum Veterinary Clinic (Madinat Qaboos main branch)",
+      "city": "Muscat",
+      "region": "Muscat",
+      "address": "Villa 351-353, Al Inshirah Street, Madinat Sultan Qaboos, Muscat",
+      "phone": "+968 2460 7735",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service available: call +968 9270 3273. Opening hours Sat-Thu 8 am-8 pm, Fri 10 am-7 pm.",
+      "small_animals": true,
+      "url": "https://www.muscatvets.com/",
+      "source_url": "https://www.muscatvets.com/aboutus1.html",
+      "checked": "2026-11-12",
+      "note": "about-us page says '24hr emergency service available' with call button 92703273; contact page labels 92703273 'Emergency line' but gives no 24 h wording. Expat Focus/ExpatWoman list other (older) numbers for a Qurum clinic; the site's numbers used."
+    },
+    {
+      "kind": "clinic",
+      "name": "Al Qurum Veterinary Clinic (Azaiba branch)",
+      "city": "Muscat",
+      "region": "Muscat",
+      "address": "Azaiba, Muscat",
+      "phone": "+968 2412 1171",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 8 am-7 pm, closed Friday. Emergency line of the clinic: +968 9270 3273.",
+      "small_animals": true,
+      "url": "https://www.muscatvets.com/",
+      "source_url": "https://www.muscatvets.com/aboutus1.html",
+      "checked": "2026-11-12",
+      "note": "Street address of the Azaiba branch not on the opened pages. The 24 h emergency claim on the page is clinic-wide, not stated per branch, so not flagged for this branch."
+    }
+  ],
+  "notes": "Very limited run. WebFetch only accepts URLs that appeared in search results or earlier page content; own sites of most clinics were refused (PROVENANCE_REQUIRED) and not worked around: muscatvet.com (Muscat Vet Clinic, Mawaleh South, Seeb, +968 2459 4777 per Expat Focus), barkavet.com (Barka Veterinary Clinic, +968 2688 8888), alqurumvet.com, mvc-oman.com, petcareoman.com (Petcare Veterinary Center, 2204 3965 per ExpatWoman 2017), ovaoman.com, and any Ministry of Agriculture, Fisheries and Water Resources pages (no official page listing vets, duty rota or poison line could be reached via search). Leads only from aggregators (not added): Muscat Veterinary Center (48 Al Barakat St, Seeb, +968 2428 1914, hopsa.io), Pet Care Veterinary Clinic (Al Khuwair), Creatures Veterinary Clinic, Capital Veterinary Centre, Sama Veterinary Clinic (Sohar, no contact data), Al Bashayer Veterinary Hospital (Adam, no contact data), government Directorate General of Animal Health clinics. Salalah veterinary hospital is only an announced investment project (Muscat Daily 2026-05-04). Not covered at all: Sohar, Salalah, Nizwa, Sur, Duqm, Khasab, Bawshar, Muttrah, Al Khoud. No duty rota and no animal poison line found."
+}
