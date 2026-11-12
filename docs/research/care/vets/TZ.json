@@ -31,6 +31,16 @@
       "name": "Unreachable / skipped",
       "url": "https://anivet.co.tz/",
       "note": "anivet.co.tz, zoomtanzania.com and tz.linkedin.com blocked by robots (skipped); deltavets.co.tz/contact-us.html loops on an http/https redirect and could not be opened; goafricaonline.com directory listed only an Arusha rescue/kennel (no clinic); no clinics found for Zanzibar, Dodoma, Mwanza or Moshi."
+    },
+    {
+      "name": "Meru Animal Welfare Organization (MAWO), Arusha - OSU electives page",
+      "url": "https://electives.vet.osu.edu/offsite-electives/meru-animal-welfare-organization-mawo-tanzania",
+      "note": "Opened; mobile clinics for donkeys, dogs and cats, PO Box 12677 Momella Road Arusha, e-mail only, no phone/website, third-party page. Not a clinic entry; not added."
+    },
+    {
+      "name": "SUA animal referral hospital news (retry)",
+      "url": "https://www.sua.ac.tz/news/major-improvements-made-sua-animal-referral-hospital",
+      "note": "Retried 2026-11-12: suanet.ac.tz 302-redirects to sua.ac.tz, which WebFetch refused (provenance). Still not read; no SUA entry."
     }
   ],
   "entries": [
@@ -78,5 +88,5 @@
       "note": "ELT page lists name, Mikocheni and 0713 325 000 only; no street address, hours or 24 h claim. Own site not found. Needs re-check on the clinic's own page."
     }
   ],
-  "notes": "Independent check 2026-11-12 (WebFetch of all 3 source_urls): 3 checked, 1 fixed, 0 removed, 0 downgraded. Fix: Vet Care Ltd street address (Plot 246 Ali Hassan Mwinyi Road) came only from an aggregator and is not on the ELT source page, so address reduced to 'Mikocheni, Dar es Salaam' and duty text no longer borrows ELT's appointment sentence. Vetzcapes and Pet Care House confirmed as on page (phones, location, no 24 h claim). Thin run: Tanzania has few clinic websites that WebFetch could open. No duty rotas, no animal poison line, no 24 h clinic found. Official bodies (Tanzania Veterinary Council, Ministry of Livestock and Fisheries, SUA teaching hospital) yielded no readable clinic data. Left: Delta Vets (deltavets.co.tz, redirect loop), Anivet (robots), Merlino Vet Clinic Arusha (named on an expat forum only, no site), Zanzibar, Moshi, Mwanza, Dodoma clinics not found."
+  "notes": "Independent check 2026-11-12 (WebFetch of all 3 source_urls): 3 checked, 1 fixed, 0 removed, 0 downgraded. Fix: Vet Care Ltd street address (Plot 246 Ali Hassan Mwinyi Road) came only from an aggregator and is not on the ELT source page, so address reduced to 'Mikocheni, Dar es Salaam' and duty text no longer borrows ELT's appointment sentence. Vetzcapes and Pet Care House confirmed as on page (phones, location, no 24 h claim). Thin run: Tanzania has few clinic websites that WebFetch could open. No duty rotas, no animal poison line, no 24 h clinic found. Official bodies (Tanzania Veterinary Council, Ministry of Livestock and Fisheries, SUA teaching hospital) yielded no readable clinic data. Left: Delta Vets (deltavets.co.tz, redirect loop), Anivet (robots), Merlino Vet Clinic Arusha (named on an expat forum only, no site), Zanzibar, Moshi, Mwanza, Dodoma clinics not found. Follow-up 2026-11-12: searched Zanzibar, Dar es Salaam, Arusha/Moshi/Mwanza, SUA; opened expat.com (failed), expat.com business directory (no clinic data), Workaway Arusha vet host (paused profile, nothing), MAWO OSU page (mobile NGO, e-mail only). No new clinic with own opened page, no duty rota, no poison line, no 24 h clinic. Delta Vets and Anivet skipped as instructed. No entries added."
 }
