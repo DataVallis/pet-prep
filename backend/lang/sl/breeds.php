@@ -105,6 +105,7 @@ return [
     'border_terrier' => 'Borderski terier',
     'leonberger' => 'Leonberger',
     'beauceron' => 'Beauceron',
+    'bouvier_des_flandres' => 'Flandrijski govedar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

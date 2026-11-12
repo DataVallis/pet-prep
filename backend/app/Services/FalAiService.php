@@ -832,6 +832,12 @@ class FalAiService
                 .'dark brown oval eyes, natural dropped ears, never cropped, '
                 .'a long natural tail carried low with a slight J-shaped hook at the end, double dewclaws on the hind legs, '
                 .'calm, confident, frank expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-105: FCI Standard No 191 via KUSA (S797) — short compact body, dark grey brindle (grey and brindle = the first standard colours), natural ears and tail.
+            BreedType::BouvierDesFlandres => 'A powerful, short-bodied and compact Bouvier des Flandres with strong, well-muscled limbs, without clumsiness, dark grey brindle, '
+                .'a coarse, dry, matt, slightly tousled coat about 6 cm long with a dense undercoat, a moustache, a full beard and upstanding eyebrows, '
+                .'a flat skull, a broad, powerful muzzle and a black nose, dark eyes, '
+                .'natural ears set high with the flaps falling flat against the cheeks, never cropped, a natural whole tail, never docked, '
+                .'calm, thoughtful, fearless expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1990,6 +1996,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, rough, thick, coarse coat lying close to the body with a dense undercoat',
                 'markings' => 'squirrel-red tan spots over the eyes, on the muzzle, chest and lower legs, at most a faint white spot on the chest',
+            ],
+            // M5-R10-105: standard colours only (FCI S797: grey, brindle, overlaid with black, uniform black); never fawn, white, chocolate or pepper and salt.
+            BreedType::BouvierDesFlandres => [
+                'color_scheme' => 'dark grey brindle',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'coarse, dry, matt, slightly tousled coat about 6 cm long with a dense undercoat, moustache, full beard and eyebrows',
+                'markings' => 'no markings, at most a small white star on the chest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

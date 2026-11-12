@@ -54347,7 +54347,7 @@
         "value": "≤ 60",
         "unit": "minutes/day",
         "source_id": "S795",
-        "quote": "Exercise: Up to 1 hour per day",
+        "quote": "Up to 1 hour per day",
         "confidence": "high",
         "notes": "RKC breed page key fact (S795), runbook first choice → 60 min ('up to N' → N). Conflicts with PetMD (S798) 'They need at least two hours of exercise every day' (120 min) — runbook: sources conflict → the RKC value; PetMD in alternatives (open for David)."
       },
