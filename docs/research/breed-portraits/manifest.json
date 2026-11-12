@@ -1286,6 +1286,19 @@
             "prompt_hash": "sha256:94601ec046637ecf8257c9af4f6b1385e53f9e04237fd1ad461c7221620fa519",
             "generated_at": "2026-11-12T00:51:14+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "borzoi",
+            "species": "dog",
+            "colour": "white-red",
+            "file": "dog/borzoi.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:bd439e018a3cedf157db4b1a247b47f1054cb7a1e4953c7804da931f385ed063",
+            "generated_at": "2026-11-12T02:47:53+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

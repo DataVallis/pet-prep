@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f09a240a14993745290e5b933a9cc49e0f14675b589937e4d0e93c791ae18f6e"
+      "sha256": "91e2d7781435dce0535a8c7ba3393b33a6b58401cadabd9fe4ea42379f4ebb83"
     }
   },
   "suitability_vocabulary": {
@@ -59888,7 +59888,12 @@
           "S803"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "borzoi.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

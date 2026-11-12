@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `borzoi` (viri S800–S804; ponovno S8, S10, S11, S14, S24, S35, S45, S174, S268); seznam za vzreditelja: PDSA (S800) |
 | Izvor | FCI št. 193 »Russkaya Psovaya Borzaya« (»Borzoi – Russian Hunting Sighthound«), skupina 10, sekcija 1 (dolgodlaki hrti), Rusija (S801, S802) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 102. mesto »Borzoi« (S174, zapisano 2026-11-12) |
-| PR-ji | pet-prep #1070 (pasma) · portret pet-prep PR `feat/M5-R10-106-borzoi-portrait` · spletna stran: pet-prep-website `feat/register-borzoi` |
+| PR-ji | pet-prep #1070 (pasma, združen `1f2494a`) · portret pet-prep PR `feat/M5-R10-106-borzoi-portrait` (zagon `breed-portraits.yml` 43143770168, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-borzoi` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca — predlog; 4 → 3 → 2 obroka; učenje 0,5×) | 🛠 | 💶 izziv | M5-R10-106 | 2026-11-12 |
 | Česanje 3× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-12 |
 | Barva (izbirnik: bel z rdečimi lisami, bel, rdeč, rdeče sobolji, tigrast, črno-rjavkast, črn) | 🛠 | 💶 izziv | M5-R21 | 2026-11-12 |
-| AI portret v registru | 🗓 po združitvi (breed-portraits.yml) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/borzoi`, `/sl/zivali/psi/ruski-hrt`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), bel z rdečimi lisami, naraven pernat rep, črn nos | — | M5-R11-04 | 2026-11-12 |
+| Stran na petprep.si (`/animals/dogs/borzoi`, `/sl/zivali/psi/ruski-hrt`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
