@@ -71,6 +71,31 @@
       "name": "Almaty Region Veterinary Department - gov.kz",
       "url": "https://www.gov.kz/memleket/entities/almobl-veterinaria?lang=ru",
       "note": "Official body; reception phone only, no animal duty or poison line."
+    },
+    {
+      "name": "Aktobe Region Veterinary Department - gov.kz",
+      "url": "https://www.gov.kz/memleket/entities/aktobe-veterinariya?lang=ru",
+      "note": "Official body; reception phone 8 7132 74-75-31 only, no clinics, duty rota or poison line."
+    },
+    {
+      "name": "Aibolit Kostanay - own website",
+      "url": "https://aibolitkst.kz/",
+      "note": "Borodina 176a, Kostanay; daily 9:00-21:00; no 24 h wording."
+    },
+    {
+      "name": "ZooDoctor Oral - own website",
+      "url": "https://zoodoctor.kz/adresa-i-kontakty-veterinarnoj-kliniki-zoodoctor",
+      "note": "Syryma Datova 58, Oral; phone and WhatsApp; no hours, no 24 h wording."
+    },
+    {
+      "name": "ZooPomoshch Almaty - own website",
+      "url": "https://zoohelp.kz/kontakty/",
+      "note": "Almaty, daily 9:00-21:00, phone only; no 24 h wording."
+    },
+    {
+      "name": "CVM Mamyr-4 branch page - own website",
+      "url": "https://vetklinika.kz/locations/cvm-na-abaja/",
+      "note": "Branch page says 'Режим работы: круглосуточно' at Mamyr-4 111d (same address as the existing CVM Mamyr-4 entry) while the FAQ says reception 9:30-20:00 and emergencies only after 20:00."
     }
   ],
   "entries": [
@@ -293,7 +318,50 @@
       "source_url": "https://veterinarnaya-sluzhba-1.kz/",
       "checked": "2026-11-12",
       "note": "Own page: 'Мы работаем круглосуточно' (self-description, no hours detail). No street address. Also serves farm animals."
+    },
+    {
+      "kind": "clinic",
+      "name": "Aibolit Veterinary Clinic (Kostanay)",
+      "city": "Kostanay",
+      "region": "Kostanay Region",
+      "address": "Borodina St 176a (basement floor), Kostanay",
+      "phone": "+7 776 286 41 41",
+      "emergency_24h": false,
+      "duty": "Open daily 9:00-21:00. Inpatient ward and mobile service offered.",
+      "small_animals": true,
+      "url": "https://aibolitkst.kz/",
+      "source_url": "https://aibolitkst.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Ежедневно с 9:00 до 21:00'; no 24 h wording; lists 'Выездная служба' and 'Стационар' without after-hours details."
+    },
+    {
+      "kind": "clinic",
+      "name": "ZooDoctor Veterinary Pharmacy + Clinic",
+      "city": "Oral",
+      "region": "West Kazakhstan Region",
+      "address": "Syryma Datova St 58, Oral (Uralsk)",
+      "phone": "+7 7112 27 14 12",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://zoodoctor.kz/",
+      "source_url": "https://zoodoctor.kz/adresa-i-kontakty-veterinarnoj-kliniki-zoodoctor",
+      "checked": "2026-11-12",
+      "note": "Own contact page lists clinic address and phone, WhatsApp +7 707 796 24 98; no hours, no 24 h wording. Pharmacies at Kurmangazy 208 and 76/1 not entered."
+    },
+    {
+      "kind": "clinic",
+      "name": "ZooPomoshch Veterinary Clinic",
+      "city": "Almaty",
+      "region": "Almaty",
+      "phone": "+7 707 048 48 20",
+      "emergency_24h": false,
+      "duty": "Open daily 9:00-21:00.",
+      "small_animals": true,
+      "url": "https://zoohelp.kz/",
+      "source_url": "https://zoohelp.kz/kontakty/",
+      "checked": "2026-11-12",
+      "note": "Own contact page: 'Ежедневно с 09:00 до 21:00', phone also WhatsApp; only the city is given, no street address; no 24 h wording."
     }
   ],
-  "notes": "Kazakhstan: first run, 15 entries (8 marked 24 h). Official bodies (gov.kz regional veterinary departments for Almaty region and Karaganda) list only reception contacts - no animal duty rota or poison line found. The Almaty municipal ambulance (+7 708 595 64 04, 109) is round-the-clock but for stray animals only and is documented only in sources, not as an entry. Most clinic sites are not found by the search tool; 24 h lists on weproject.media, zoon.kz, 2gis, 103.kz are aggregators and were used only as leads. Could not open: veravet.kz (redirect loop; Vera clinics in Almaty listed 24 h only by aggregators), dogmavetclinic.kz (Astana/Kostanay, client error), zoovita.kz (robots), vetklinika-ashurkova.kz (robots; Astana Keregetas 48 listed 24 h only by a media article), simba.vet (is an Irkutsk clinic, unrelated), medvet.kz / Dog Premium / U Lukomorya / Shans Almaty / VetStar / Zoovita Almaty (no own page reachable; MedVet, VetStar and others only on 2gis/directories). Still to do: Shymkent, Aktobe, Taraz, Oskemen, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan (no own clinic site found yet), Aqtaban Astana, Nika Astana, Almaty clinics above, KazNAU university clinic, Karaganda Medical/agrarian clinics."
+  "notes": "Kazakhstan: first run, 15 entries (8 marked 24 h). Official bodies (gov.kz regional veterinary departments for Almaty region and Karaganda) list only reception contacts - no animal duty rota or poison line found. The Almaty municipal ambulance (+7 708 595 64 04, 109) is round-the-clock but for stray animals only and is documented only in sources, not as an entry. Most clinic sites are not found by the search tool; 24 h lists on weproject.media, zoon.kz, 2gis, 103.kz are aggregators and were used only as leads. Could not open: veravet.kz (redirect loop; Vera clinics in Almaty listed 24 h only by aggregators), dogmavetclinic.kz (Astana/Kostanay, client error), zoovita.kz (robots), vetklinika-ashurkova.kz (robots; Astana Keregetas 48 listed 24 h only by a media article), simba.vet (is an Irkutsk clinic, unrelated), medvet.kz / Dog Premium / U Lukomorya / Shans Almaty / VetStar / Zoovita Almaty (no own page reachable; MedVet, VetStar and others only on 2gis/directories). Still to do: Shymkent, Aktobe, Taraz, Oskemen, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan (no own clinic site found yet), Aqtaban Astana, Nika Astana, Almaty clinics above, KazNAU university clinic, Karaganda Medical/agrarian clinics. Follow-up run 2026-11-12: 3 entries added (Aibolit Kostanay, ZooDoctor Oral, ZooPomoshch Almaty; none 24 h; 18 entries in total, 8 x 24 h). The search tool returned almost only aggregators (2gis, zoon, 103.kz, spravker, mestam), so own sites were not found for Shymkent (about 30 clinics only on directories, e.g. Hatiko, ZooVetService, VetaClinic, Kot i Pes), Aktobe (only an aktobe.city directory card), Taraz, Semey (only the regional veterinary lab on Facebook), Kokshetau, Aktau (Doctor-Vet only on directories/Instagram), Kyzylorda, Turkestan. Unreachable: tanba.kezekte.kz official registry of veterinary organisations (robots_disallowed), zoovita.kz (Oskemen/East Kazakhstan centre, robots_disallowed), lahd.b2b.ivest.kz (Druzhok Aktobe, client error), kaznaru.edu.kz department page (client error; KazNAU university clinic not confirmed), astana-online.kz, vet-apteka.satu.kz (redirect), gov.kz Shymkent (client error), petfinder.kz, spr.kz, inshymkent.kz, city04.kz, inaktau.kz (client errors). faunavko.kz and rvl.kz (Oskemen) were only seen in a directory summary and could not be fetched (not in provenance set). Aqtaban Astana: no own website found, only directories. Nika: nika.vet is a Barnaul (Russia) clinic, unrelated; Nika Astana (Zheltoksan 24/1) has no own page found. VetLab Oskemen: only an Abay-region lab Facebook page (not used). Left: all of the above cities, KazNAU clinic, Aqtaban, Nika Astana, Oskemen (Fauna, Zoovita) - skipped as unreachable twice. Note: the CVM branch page https://vetklinika.kz/locations/cvm-na-abaja/ states 'Режим работы: круглосуточно' at Mamyr-4 111d (same as existing CVM Mamyr-4 entry)."
 }
