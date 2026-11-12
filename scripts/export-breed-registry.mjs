@@ -487,6 +487,7 @@ const SPECIES = [
       { id: 'border_terrier', synonyms: { en: ['Border Terrier dog'], sl: ['border terier', 'border terrier'] } },
       { id: 'leonberger', synonyms: { en: ['Leonberg', 'Leo', 'Leonberger dog'], sl: ['leonberški pes', 'leonberski pes', 'leonberg'] } },
       { id: 'beauceron', synonyms: { en: ['Berger de Beauce', 'Beauce Sheepdog', 'Bas Rouge'], sl: ['berger de beauce'] } },
+      { id: 'bouvier_des_flandres', synonyms: { en: ['Bouvier', 'Flanders Cattle Dog', 'Vlaamse Koehond'], sl: ['bouvier des flandres', 'bouvier', 'flandrijski govedar'] } },
     ],
   },
   {
@@ -2718,6 +2719,29 @@ const DOG_FACTS = {
       ['heart_muscle_disease', 'health.heart'],
     ],
   },
+  // M5-R10-105. Height = FCI Standard No 191 by sex (KUSA copy S797), weight = FCI by sex (S797; AKC chart S268 not exported),
+  // lifespan = the McMillan 2024 median 11.3 y (Dogs Trust table S123) + the RKC band 'Over 10 years' (S795), exercise = RKC
+  // 'Up to 1 hour per day' (S795; PetMD 'at least two hours' not exported), coat / grooming / sheds = RKC key facts (S795).
+  // Coren rank 29 (S35). FCI origin Belgium / France (BE-FR). Not exported: adult_weight.akc (alternative), senior_from
+  // (derived), health.breed_watch (Category 1), health.other (research only). No new health key.
+  bouvier_des_flandres: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips_elbows'],
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_sas', 'health.heart'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['eye_conditions', 'health.eyes'],
+      ['exercise_induced_collapse', 'health.exercise_collapse'],
+    ],
+  },
 
 
 };
@@ -2782,6 +2806,7 @@ export const DOG_CARE_TASKS = {
   lhasa_apso: [['tooth_brushing', 7, 7, 'proposed_game_parameters.lhasa_apso.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.lhasa_apso.nail_trimming'], ['bath', 1, 14, 'proposed_game_parameters.lhasa_apso.bathing']],
   flat_coated_retriever: [['ear_cleaning', 1, 7, 'proposed_game_parameters.flat_coated_retriever.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.flat_coated_retriever.nail_care'], ['bath', 1, 28, 'proposed_game_parameters.flat_coated_retriever.bathing']],
   leonberger: [['ear_cleaning', 1, 14, 'proposed_game_parameters.leonberger.ear_care'], ['bath', 1, 14, 'proposed_game_parameters.leonberger.bathing']],
+  bouvier_des_flandres: [['ear_cleaning', 1, 14, 'proposed_game_parameters.bouvier_des_flandres.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.bouvier_des_flandres.nail_trimming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3581,6 +3606,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.beauceron.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.beauceron.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.beauceron.exercise_minutes_senior',
+  },
+  bouvier_des_flandres: {
+    adult_minutes: ['proposed_game_parameters.bouvier_des_flandres.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bouvier_des_flandres.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bouvier_des_flandres.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bouvier_des_flandres.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bouvier_des_flandres.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bouvier_des_flandres.exercise_minutes_senior',
   },
 
 

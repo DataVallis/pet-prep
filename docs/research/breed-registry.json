@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "4bca3eac9df53db8916d052338e77b7a608266acacd9ab0eb9981e1a08b28852"
+      "sha256": "5ec8d38bcd0e3c6ccde4512138247cf3d73be34a42ed925a444349184f215d35"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "34d20ff10d35030fe683f5925752660d0fe13e6eb97ae522eeb1f76d95e9fbd6"
+      "sha256": "e367aa04d15e0fd76e5cbd83fb544d6250b57c75bf0fbe7512cb181d33774ec8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "1a6983f8f853ce12f19bbfba39c85d7f0fef4672d7e2ad0f8b37acad8d263e7b"
+      "sha256": "19c3e97e148877704a30383d6e5ed8a1d577972155b732217f864ab11de12b7d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d58edd8db88a435f4829680650329319143fbeac0713527b3ea5f97d62cd4cc9"
+      "sha256": "1caf14e8dd2504bc21f4a41f4086b40079651a8e31272f13228ca49d623d7b76"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "269addaf56db4e093973d59de04e83ef4faaac1b94f5aef44bf8305cf957db05"
+      "sha256": "3bb962a4bf5f55e93decb786223c5b60852ab7c72aa2c9d0e025e1be190560d0"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "0933a392db49cc6e1d7a0f2567e1b47cf740b7476e51b7becd6ec914cb8aa3a0"
+      "sha256": "7e62593b0dd21a913623e952fd401819da012f46363644c2d9b3dffabf43c89a"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "3ba4d81ec6360bcd4078bd4d8b9247a9f94adb5a5d0a81d5d2b43e2a28682360"
+      "sha256": "bae27751db05d1f943678e8a1c78f537997d35d19a272e16e5ddc56e8fa69146"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 97,
+      "breed_count": 98,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -58791,6 +58791,633 @@
       ]
     },
     {
+      "id": "bouvier_des_flandres",
+      "species": "dog",
+      "order": 97,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bouvier des Flandres",
+        "sl": "Flandrijski govedar"
+      },
+      "slug": {
+        "en": "bouvier-des-flandres",
+        "sl": "flandrijski-govedar"
+      },
+      "synonyms": {
+        "en": [
+          "Bouvier",
+          "Flanders Cattle Dog",
+          "Vlaamse Koehond"
+        ],
+        "sl": [
+          "bouvier des flandres",
+          "bouvier",
+          "flandrijski govedar"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              62,
+              68
+            ],
+            "female": [
+              59,
+              65
+            ]
+          },
+          "source_ids": [
+            "S797"
+          ],
+          "ref": "bouvier_des_flandres.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              35,
+              40
+            ],
+            "female": [
+              27,
+              35
+            ]
+          },
+          "source_ids": [
+            "S797"
+          ],
+          "ref": "bouvier_des_flandres.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bouvier_des_flandres.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.3,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "bouvier_des_flandres.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S795"
+          ],
+          "ref": "bouvier_des_flandres.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.behaviour.food_motivation",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 29,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bouvier_des_flandres.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 191,
+            "group": 1,
+            "section": 2,
+            "origin": "BE-FR"
+          },
+          "source_ids": [
+            "S796"
+          ],
+          "ref": "bouvier_des_flandres.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.hips_elbows",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_sas",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.thyroid",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_conditions",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "exercise_induced_collapse",
+          "source_ids": [
+            "S798"
+          ],
+          "ref": "bouvier_des_flandres.health.exercise_collapse",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S795"
+            ],
+            "refs": [
+              "bouvier_des_flandres.suitability.rkc_size_of_home",
+              "bouvier_des_flandres.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S795",
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.suitability.rkc_grooming",
+              "bouvier_des_flandres.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.food_motivation"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 102
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 102
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S795"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S795 'Up to 1 hour per day'; PetMD S798 120 min in alternatives)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.3 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 29, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.grooming",
+            "basis_source_ids": [
+              "S795"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan = 7× na teden (RKC »Grooming: Every day«; PetMD »once or twice a week« → 2 v alternativah, odprto za Davida); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.ear_care",
+            "basis_source_ids": [
+              "S798"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to three weeks« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.bouvier_des_flandres.nail_trimming",
+            "basis_source_ids": [
+              "S798"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (PetMD »every three to four weeks«; 3 tedni niso programsko obdobje — odprto za Davida)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S795",
+          "S798"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S795"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S795"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S795"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S795"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S795"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S795",
+        "S796",
+        "S797",
+        "S798",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -64732,6 +65359,34 @@
       "publisher": "PetMD — Michelle Diener, DVM (published Jul. 17, 2023)",
       "title": "Beauceron",
       "url": "https://www.petmd.com/dog/breeds/beauceron"
+    },
+    {
+      "id": "S795",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Bouvier Des Flandres — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bouvier-des-flandres/"
+    },
+    {
+      "id": "S796",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Bouvier des Flandres-Vlaamse Koehond (191)",
+      "url": "https://www.fci.be/EN/nomenclature/BOUVIER-DES-FLANDRES-191.html"
+    },
+    {
+      "id": "S797",
+      "tier": "A",
+      "publisher": "KUSA (Kennel Union of Southern Africa) — copy of FCI Standard No 191",
+      "title": "FCI Standard No 191: Bouvier des Flandres (effective 01/02/2017) (PDF)",
+      "url": "https://kusa.co.za/images/HERDING%20GROUP%202025/Bouvier%20des%20Flandres%20-%20FCI%20[02-2017].pdf"
+    },
+    {
+      "id": "S798",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (published Dec. 21, 2023)",
+      "title": "Bouvier des Flandres",
+      "url": "https://www.petmd.com/dog/breeds/bouvier-des-flandres"
     },
     {
       "id": "C1",
