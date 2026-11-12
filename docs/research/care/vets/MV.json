@@ -1,0 +1,53 @@
+{
+  "country": "MV",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Ministry of Economic Development and Trade - Business Portal, OASES MALDIVES Pvt Ltd",
+      "url": "https://business.egov.mv/BusinessRegistry/ViewDetails/186160?key=358558711",
+      "note": "Opened; official registry. Company registered with activity 7500 Veterinary activities; trading names Oases Vets, OASES VET HOSPITAL, OASES VET PHARMACY; vet hospital address H. Love Side, Abadhahfehi Magu, K. Male'; Oases Vets also listed at H14-G-02, Hiya Flats, Hulhumale'. No phone on the page."
+    },
+    {
+      "name": "Oases online (Oases Maldives) - own web shop",
+      "url": "https://oasesmaldives.com/",
+      "note": "Opened; pet-products web shop with tagline 'Vet-Backed Trust'. Shops: Male' (H.Noo Ali, Hithigas Magu, +960 7256868) and Hulhumale' (Oases Park, Hiya Tower 5, Phase 2, +960 7356868), info@oasesmaldives.com. No vet hospital page, no hours, no 24 h wording; the phones are the shop phones, not confirmed as the vet line."
+    },
+    {
+      "name": "MMTV - Olhu Hiyaa clinic at the Hulhumale' animal shelter (21 Aug 2025)",
+      "url": "https://en.mmtv.mv/5606",
+      "note": "Opened; Ministry of Agriculture and Animal Welfare says the clinic at the Olhu Hiyaa shelter, Hulhumale', is registered and ready to start (treatment, vaccination); staff recruitment under way. No phone, hours or address. Shelter/stray-cat facility run by the ministry, not a public pet clinic, so not an entry."
+    },
+    {
+      "name": "Maldives Independent - First veterinary clinic opens in Maldives (Jan 2019)",
+      "url": "https://maldivesindependent.com/society/first-veterinary-clinic-opens-in-maldives-143440",
+      "note": "Opened; Villimale' ministry clinic, Mon and Thu. Historical only."
+    },
+    {
+      "name": "Times of Addu - Fisheries Ministry closes Villimale vet clinic effective Jan 2022",
+      "url": "https://timesofaddu.com/2021/11/30/fisheries-ministry-closes-villimale-vet-clinic-effective-jan-2022",
+      "note": "Opened; the ministry clinic closed 1 Jan 2022 because of building damage and the arrival of private vet services. No alternative clinic named."
+    },
+    {
+      "name": "Expat.com - Travelling to the Maldives with your pet",
+      "url": "https://www.expat.com/en/guide/asia/maldives/19419-travelling-to-the-maldives-with-your-pet.html",
+      "note": "Opened; says there is no established veterinary service and local vets mostly treat farm animals. No clinic contacts."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Oases Vet Hospital",
+      "city": "Male'",
+      "region": "Kaafu Atoll",
+      "address": "H. Love Side, Abadhahfehi Magu, Male'",
+      "emergency_24h": false,
+      "duty": "Small-animal vet hospital and pharmacy in Male' (also Oases Vets in Hulhumale'). Call ahead for opening hours and emergencies.",
+      "small_animals": true,
+      "url": "https://oasesmaldives.com/",
+      "source_url": "https://business.egov.mv/BusinessRegistry/ViewDetails/186160?key=358558711",
+      "checked": "2026-11-12",
+      "note": "Weak entry: the government business registry confirms veterinary activities (code 7500) and the trading name OASES VET HOSPITAL at the Male' address; the own site is a pet shop and shows no vet page, hours or 24 h wording. No vet phone verified (shop phones +960 7256868 Male', +960 7356868 Hulhumale' are not stated to be the vet line). Instagram (@oasesvets) and the Facebook page of Erika Veterinary Clinic were blocked by robots, not opened. Pets-only claim (small_animals) inferred from the pet-shop context and Hulhumale' 'Oases Vets' flat; confirm before publishing."
+    }
+  ],
+  "notes": "Research 2026-11-12, all source_urls opened with WebFetch. The Maldives has almost no veterinary infrastructure: the first (ministry) clinic opened in Villimale' in January 2019 and closed on 1 January 2022 when private services appeared; the ministry now runs the Olhu Hiyaa shelter clinic in Hulhumale' (no public contact found). No veterinary association, duty rota or animal poison line found. Not added for lack of an openable first-hand page: Erika Veterinary Clinic (facebook.com/erikaveterinarymv, only seen in a search result, robots_disallowed on fetch), Oases Vets Instagram (robots_disallowed). Pet clinics in Sri Lanka (Suwana Pet Care) are mentioned by Expat.com for travellers, out of scope. The oasesmaldives.com sub-pages could not be fetched (not in provenance set). Resort-island vets and Addu/other atolls not found."
+}
