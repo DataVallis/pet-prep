@@ -187,7 +187,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] KE Kenya — 6 entries, 1 × 24 h (Andy's Kiambu Road), no duty rota, no animal poison line, check: 5 checked, 0 fixed, 1 removed (Pets Society — Egypt, not Kenya), 2026-11-12 — left: most clinic sites refused by WebFetch (Crystal Vets, Ducknet, Noble Veterinary, Petville, KSPCA), Diani, Naivasha, Nakuru, Eldoret, Malindi (see `vets/KE.json` notes)
 - [~] TZ Tanzania — 3 entries (Arusha 1, Dar es Salaam 2), 0 × 24 h, no duty rota, no animal poison line, thin: official bodies (TVC, ministry, SUA hospital) not fetchable, Dar clinics only on an NGO referral page, check: 3 checked, 1 fixed (Vet Care address not on page), 0 removed, 2026-11-12 — left: Zanzibar, Dodoma, Mwanza, Moshi, Dar es Salaam/Arusha clinics on own sites (Delta Vets, Anivet blocked; see `vets/TZ.json` notes)
 - [x] TZ Tanzania — follow-up: clinics left in `vets/TZ.json` notes on their own sites; skip what was unreachable twice — 0 new entries (thin: no clinic with an openable own page, no 24 h, no duty rota, no poison line; SUA hospital page blocked), check: nothing new to check, 2026-11-12 — left: Merlino Arusha, Zanzibar, Moshi, Mwanza, Dodoma (see `vets/TZ.json` notes)
-- [ ] MU Mauritius
+- [x] MU Mauritius — 8 entries, 1 × 24 h (Veterinaire.mu Albion), no duty rota, no animal poison line, official bodies not readable, check: 8 checked, 2 fixed (Vetmania Grand Baie downgraded to not 24 h, unsourced phone/address removed; Vetocare hours), 0 removed, 2026-11-12 — left: ~10 clinics with only directory/forum sources (see `vets/MU.json` notes)
 - [ ] SC Seychelles
 - [ ] MV Maldives
 - [ ] LK Sri Lanka
