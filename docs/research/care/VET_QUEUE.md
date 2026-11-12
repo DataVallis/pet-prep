@@ -188,7 +188,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] TZ Tanzania — 3 entries (Arusha 1, Dar es Salaam 2), 0 × 24 h, no duty rota, no animal poison line, thin: official bodies (TVC, ministry, SUA hospital) not fetchable, Dar clinics only on an NGO referral page, check: 3 checked, 1 fixed (Vet Care address not on page), 0 removed, 2026-11-12 — left: Zanzibar, Dodoma, Mwanza, Moshi, Dar es Salaam/Arusha clinics on own sites (Delta Vets, Anivet blocked; see `vets/TZ.json` notes)
 - [x] TZ Tanzania — follow-up: clinics left in `vets/TZ.json` notes on their own sites; skip what was unreachable twice — 0 new entries (thin: no clinic with an openable own page, no 24 h, no duty rota, no poison line; SUA hospital page blocked), check: nothing new to check, 2026-11-12 — left: Merlino Arusha, Zanzibar, Moshi, Mwanza, Dodoma (see `vets/TZ.json` notes)
 - [x] MU Mauritius — 8 entries, 1 × 24 h (Veterinaire.mu Albion), no duty rota, no animal poison line, official bodies not readable, check: 8 checked, 2 fixed (Vetmania Grand Baie downgraded to not 24 h, unsourced phone/address removed; Vetocare hours), 0 removed, 2026-11-12 — left: ~10 clinics with only directory/forum sources (see `vets/MU.json` notes)
-- [ ] SC Seychelles
+- [x] SC Seychelles — 1 entry, 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12
 - [ ] MV Maldives
 - [ ] LK Sri Lanka
 - [ ] NP Nepal

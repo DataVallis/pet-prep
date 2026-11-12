@@ -141518,6 +141518,21 @@
       "checked": "2026-11-12"
     },
     {
+      "country": "SC",
+      "kind": "clinic",
+      "name": "Paw Links Veterinary Care",
+      "city": "Anse Boileau",
+      "region": "Mahe",
+      "address": null,
+      "phone": "+248 281 8971",
+      "emergency_24h": false,
+      "duty": "Small-animal care on Mahe. Call ahead for opening hours and emergencies.",
+      "duty_i18n": null,
+      "url": "https://paw-links-veterinary-care.koek.sc",
+      "source_url": "https://paw-links-veterinary-care.koek.sc",
+      "checked": "2026-11-12"
+    },
+    {
       "country": "SE",
       "kind": "clinic",
       "name": "AniCura Regiondjursjukhuset Bagarmossen",

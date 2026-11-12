@@ -1,0 +1,43 @@
+{
+  "country": "SC",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Seychelles Agricultural Agency, Veterinary Services - import conditions for cats and dogs (PDF, hosted by anivetvoyage.com)",
+      "url": "https://www.anivetvoyage.com/images/PDF/Veterinary-Import-Conditions-for-Cats-and-Dogs1.pdf",
+      "note": "Opened; official agency letterhead: Veterinary Services, Union Vale, Mahe, phone +248 4285 950, seyvet@seychelles.net, only quarantine station on Mahe. Regulatory/import office, not a pet clinic (pet care was handed to the private sector in 2019), so not an entry."
+    },
+    {
+      "name": "SBC - Veterinary services for pets in Seychelles handed over to private sector (2019)",
+      "url": "https://www.sbc.sc/?p=5692",
+      "note": "Opened; Paw Links Veterinary Care started pet care 20 May 2019 at the Union Vale Veterinary Clinic near Victoria. No phone or hours on the page (the phone shown is SBC's)."
+    },
+    {
+      "name": "Paw Links Veterinary Care (Paw Links Supplies) own listing page on koek.sc",
+      "url": "https://paw-links-veterinary-care.koek.sc",
+      "note": "Opened; Anse Boileau, Mahe, phone +248 2818971; no hours, no 24 h wording. The /en version was blocked by provenance, not opened."
+    },
+    {
+      "name": "Inside Seychelles - Stray Animals in Seychelles (2023 blog)",
+      "url": "https://www.insideseychelles.com/?p=7854",
+      "note": "Opened; lists emergency vet contacts on Mahe (Medi Vet Clinic and individual vets) and says Praslin and La Digue have no real vet. Tourist blog only, so used as a lead, no entries taken from it."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Paw Links Veterinary Care",
+      "city": "Anse Boileau",
+      "region": "Mahe",
+      "phone": "+248 281 8971",
+      "emergency_24h": false,
+      "duty": "Small-animal care on Mahe. Call ahead for opening hours and emergencies.",
+      "small_animals": true,
+      "url": "https://paw-links-veterinary-care.koek.sc",
+      "source_url": "https://paw-links-veterinary-care.koek.sc",
+      "checked": "2026-11-12",
+      "note": "Listing page says Anse Boileau, no street address, no hours, no 24 h claim. SBC 2019 article says Paw Links runs the Union Vale Veterinary Clinic near Victoria (no phone/hours found), so the service may operate from Union Vale; confirm."
+    }
+  ],
+  "notes": "Research 2026-11-12, all source_urls opened with WebFetch. Seychelles has very few vets. No animal poison line and no duty rota found (no Seychelles veterinary association site found; Agency for Agriculture has no public clinic list). Not added for lack of a first-hand business page: Medi Vet Clinic (Mahe, +248 260 4291 / 271 0088, only from the Inside Seychelles blog, 2023), Union Vale Veterinary Clinic (no phone or site), named individual vets (private persons, skipped). Praslin and La Digue: blog says no real vet; SAWS held a temporary 8-day La Digue clinic in 2018 (SBC) and sterilisation camps, no permanent clinic found. Seychelles Agricultural Agency Veterinary Services (Union Vale, +248 4285 950) is the import/quarantine authority, not published as a clinic."
+}
