@@ -47,7 +47,10 @@
       "url": "https://www.veterinariagroomers.pe/",
       "source_url": "https://www.veterinariagroomers.pe/emergencia",
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://www.veterinariagroomers.pe/",
       "source_url": "https://www.veterinariagroomers.pe/emergencia",
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+      }
     },
     {
       "kind": "clinic",
@@ -77,7 +83,10 @@
       "url": "https://www.veterinariagroomers.pe/",
       "source_url": "https://www.veterinariagroomers.pe/emergencia",
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+      }
     },
     {
       "kind": "clinic",
@@ -92,7 +101,10 @@
       "url": "https://www.veterinariagroomers.pe/",
       "source_url": "https://www.veterinariagroomers.pe/emergencia",
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+      }
     },
     {
       "kind": "clinic",
@@ -107,7 +119,10 @@
       "url": "https://www.veterinariagroomers.pe/",
       "source_url": "https://www.veterinariagroomers.pe/emergencia",
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+      }
     },
     {
       "kind": "clinic",
@@ -122,7 +137,10 @@
       "url": "https://www.heyvet.pe/",
       "source_url": "https://www.heyvet.pe/",
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006).",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -137,7 +155,10 @@
       "url": "https://www.heyvet.pe/veterinaria-surco",
       "source_url": "https://www.heyvet.pe/veterinaria-surco",
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006).",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -152,7 +173,10 @@
       "url": "https://www.heyvet.pe/veterinaria-la-molina-la-planicie",
       "source_url": "https://www.heyvet.pe/veterinaria-la-molina-la-planicie",
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006). Home page main section omits 24 h for La Planicie but its tab and the branch page say 'Emergencias 24 horas'.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -167,7 +191,10 @@
       "url": "https://mardecolas.pe/",
       "source_url": "https://mardecolas.pe/",
       "note": "Home page: 'Lunes a Domingo las 24 Horas'; page does not say whether both branches share the hours (plan text says 24 h in both sedes). Page shows conflicting WhatsApp numbers; landline used.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto de lunes a domingo, las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -182,7 +209,10 @@
       "url": "https://mardecolas.pe/",
       "source_url": "https://mardecolas.pe/",
       "note": "Home page: 'Lunes a Domingo las 24 Horas'; page does not say whether both branches share the hours (plan text says 24 h in both sedes). Page shows conflicting WhatsApp numbers; landline used.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto de lunes a domingo, las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -197,7 +227,10 @@
       "url": "https://veterinariarondon.com/",
       "source_url": "https://veterinariarondon.com/",
       "note": "Home page: 'Emergencias veterinarias las 24 horas'. Admission WhatsApp 924 679 664.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias las 24 horas; hospitalización las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -212,7 +245,10 @@
       "url": "https://veterinariacavero.com/",
       "source_url": "https://veterinariacavero.com/",
       "note": "Page heading 'Emergencias 24 Horas'. Other phones (01) 435 5218, mobile 987 847 761.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias veterinarias las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -227,7 +263,10 @@
       "url": "https://www.vetivet.pe/",
       "source_url": "https://www.vetivet.pe/",
       "note": "WhatsApp 949 116 773. General consultation hours not listed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias y hospitalización las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -242,7 +281,10 @@
       "url": "https://medvet.pe/",
       "source_url": "https://medvet.pe/nuestros-servicios/emergencias-24-horas-sede-lince/",
       "note": "Same phone is WhatsApp.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención veterinaria las 24 horas del día, los 7 días de la semana."
+      }
     },
     {
       "kind": "clinic",
@@ -257,7 +299,10 @@
       "url": "https://www.sosveterinaria.com/",
       "source_url": "https://www.sosveterinaria.com/",
       "note": "Home page: 'Atención 24 horas'. Other phones (01) 422 5110, WhatsApp 977 687 815.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Atención las 24 horas; línea de urgencias 993 737 420."
+      }
     },
     {
       "kind": "clinic",
@@ -272,7 +317,10 @@
       "url": "https://veterinariagavetperu.com/",
       "source_url": "https://veterinariagavetperu.com/",
       "note": "Page labels this branch 'Veterinaria 24 horas'. Phone is WhatsApp/general contact.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+      }
     },
     {
       "kind": "clinic",
@@ -287,7 +335,10 @@
       "url": "https://veterinariagavetperu.com/",
       "source_url": "https://veterinariagavetperu.com/",
       "note": "Page labels this branch 'Veterinaria 24 horas'.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+      }
     },
     {
       "kind": "clinic",
@@ -302,7 +353,10 @@
       "url": "https://veterinariagavetperu.com/",
       "source_url": "https://veterinariagavetperu.com/",
       "note": "Page labels this branch 'Veterinaria 24 horas'; page shows two different Carabayllo phones (913 728 054 and 902 261 988) - if relevant.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+      }
     },
     {
       "kind": "clinic",
@@ -317,7 +371,10 @@
       "url": "https://veterinariapetcenter.wordpress.com/servicio-las-24-horas-petcenter/",
       "source_url": "https://veterinariapetcenter.wordpress.com/servicio-las-24-horas-petcenter/",
       "note": "Checker 2026-11-11: page says 'Mantener la Clínica ABIERTA 24 horas' but its own Atención table says Mon-Sat 8:00-20:30 (conflict, not clarified) -> not marked 24 h. Mobile 983 457 661. Mentions 24 h branches in Surco and La Molina without address.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Horario lun–sáb 8:00–20:30 h; la clínica también anuncia servicio 24 horas, así que llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -332,7 +389,10 @@
       "url": "https://veterinaria-ciro.webnode.es/",
       "source_url": "https://veterinaria-ciro.webnode.es/",
       "note": "Page: 'EMERGENCIAS - LAS 24 HORAS' with 999 913 680. Landline (01) 744 8394.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h, dom 10:00–18:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -347,7 +407,10 @@
       "url": "https://clinipetstrujillo.com/",
       "source_url": "https://clinipetstrujillo.com/",
       "note": "Phone is the emergency/WhatsApp line; branch phone 996 658 011.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -362,7 +425,10 @@
       "url": "https://clinipetstrujillo.com/",
       "source_url": "https://clinipetstrujillo.com/",
       "note": "Phone is the emergency/WhatsApp line; branch phone 969 404 147.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -372,12 +438,15 @@
       "address": "San Martín de Porres 386, Trujillo",
       "phone": "+51 44 366588",
       "emergency_24h": false,
-      "duty": "Hours not published; the clinic presents itself as a 24-hour clinic, call ahead.",
+      "duty": "Presents itself as a 24-hour clinic; call ahead.",
       "small_animals": true,
       "url": "https://vetclinic.com.pe/",
       "source_url": "https://vetclinic.com.pe/",
-      "note": "Checker 2026-11-11: page has no formal business name and no hours; 24 h only in heading 'Veterinaria las 24 horas' and a mission sentence, no explicit emergency/hours statement -> not marked 24 h. Facebook handle janavetveterinarios hints at real name (unconfirmed).",
-      "checked": "2026-11-11"
+      "note": "Checker 2026-11-11: page has no formal business name and no hours; 24 h only in heading 'Veterinaria las 24 horas' and a mission sentence, no explicit emergency/hours statement -> not marked 24 h. Facebook handle janavetveterinarios hints at real name (unconfirmed). Removed from duty: Hours not published; the clinic presents itself as a 24-hour clinic, call ahead.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Se presenta como clínica 24 horas; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -387,12 +456,15 @@
       "address": "Av. Manco Capac 50, San Jerónimo, Cusco",
       "phone": "+51 84 608411",
       "emergency_24h": false,
-      "duty": "Emergency contact line advertised 24 hours; opening hours listed as Monday to Friday 9:00-18:00; call ahead.",
+      "duty": "Emergency contact line advertised 24 hours; opening hours Monday to Friday 9:00-18:00; call ahead.",
       "small_animals": true,
       "url": "https://clinicaveterinaria.cusco.pro/",
       "source_url": "https://clinicaveterinaria.cusco.pro/",
-      "note": "Checker 2026-11-11: page says 'ponte en contacto con nosotros las 24 horas' and 'Atención las 24 Horas' but hours table is inconsistent (09.00-06.00 vs footer Mon-Fri 9am-6pm) -> conflict, not marked 24 h. Mobile/WhatsApp +51 901 181 116.",
-      "checked": "2026-11-11"
+      "note": "Checker 2026-11-11: page says 'ponte en contacto con nosotros las 24 horas' and 'Atención las 24 Horas' but hours table is inconsistent (09.00-06.00 vs footer Mon-Fri 9am-6pm) -> conflict, not marked 24 h. Mobile/WhatsApp +51 901 181 116. Removed from duty: Emergency contact line advertised 24 hours; opening hours listed as Monday to Friday 9:00-18:00; call ahead.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Línea de contacto de urgencias anunciada las 24 horas; horario lun–vie 9:00–18:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -402,12 +474,15 @@
       "address": "Av. Circunvalación 2800, San Borja",
       "phone": "+51 1 619 7000",
       "emergency_24h": false,
-      "duty": "University small-animal clinic. Monday to Friday 7:00-19:00. Clinical emergency line (01) 435 3348; no 24-hour service stated.",
+      "duty": "University small-animal clinic. Monday to Friday 7:00-19:00. Clinical emergency line (01) 435 3348.",
       "small_animals": true,
       "url": "https://veterinaria.unmsm.edu.pe/clinica-veterinaria-de-animales-menores/",
       "source_url": "https://veterinaria.unmsm.edu.pe/clinica-veterinaria-de-animales-menores/",
-      "note": "Central extensions 5001/5002.",
-      "checked": "2026-11-11"
+      "note": "Central extensions 5001/5002. Removed from duty: University small-animal clinic. Monday to Friday 7:00-19:00. Clinical emergency line (01) 435 3348; no 24-hour service stated.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Clínica universitaria de pequeños animales. Lun–vie 7:00–19:00 h. Línea de urgencias clínicas (01) 435 3348."
+      }
     },
     {
       "kind": "clinic",
@@ -422,7 +497,10 @@
       "url": "https://veterinaria.cayetano.edu.pe/centro-veterinario-docente-cayetano/",
       "source_url": "https://veterinaria.cayetano.edu.pe/centro-veterinario-docente-cayetano/",
       "note": "Extension 239254; WhatsApp for appointments 982 560 004. No emergency/24 h mention.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Clínica universitaria docente. Lun–vie 8:00–17:30 h, sáb 9:00–16:30 h; cerrado dom y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -437,7 +515,10 @@
       "url": "https://veterinaria.posicionarlima.pe/",
       "source_url": "https://veterinaria.posicionarlima.pe/",
       "note": "Page metadata says 'atención 24 horas para emergencias' but visible hours say emergencies Mon-Fri 8-17 only; set false. Domain is a third-party hosting domain (posicionarlima.pe) - confirm it is the university's site.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Clínica universitaria docente. Lun–vie 8:00–17:00 h, cerrado fines de semana; urgencias en el mismo horario."
+      }
     },
     {
       "kind": "clinic",
@@ -451,7 +532,10 @@
       "url": "https://www.miraflores.gob.pe/mascotas-2/miravet-2/",
       "source_url": "https://www.miraflores.gob.pe/mascotas-2/miravet-2/",
       "note": "Extension 7108. Address conflicts: Miravet page says Av. El Ejército 1300, services page says Malecón de la Marina 2540 (Manuel Bonilla complex); address omitted. 2019 news article claimed 24 h for municipal vet but body only confirms it for a rescue vehicle; not used.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Clínica municipal de bajo coste. Lun–vie 8:00–13:00 y 14:00–17:00 h; con cita previa."
+      }
     },
     {
       "kind": "clinic",
@@ -461,12 +545,15 @@
       "address": "Av. Pedro Miotta 620, San Juan de Miraflores",
       "phone": "+51 932 008 081",
       "emergency_24h": false,
-      "duty": "Hours not published; call ahead.",
+      "duty": "Call ahead.",
       "small_animals": true,
       "url": "https://medvet.pe/",
       "source_url": "https://medvet.pe/",
-      "note": "24 h only stated for the Lince branch. Address from the Lince emergency page.",
-      "checked": "2026-11-11"
+      "note": "24 h only stated for the Lince branch. Address from the Lince emergency page. Removed from duty: Hours not published; call ahead.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -481,7 +568,10 @@
       "url": "https://vet-mundo.com/",
       "source_url": "https://vet-mundo.com/",
       "note": "Second site (surgical centre): Garci Carbajal Casa 32, Barrio Obrero.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–sáb 8:00–20:00 h, dom 8:00–15:00 h; menciona urgencias, sin indicar servicio 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -496,7 +586,10 @@
       "url": "https://www.avantgrandveterinaria.com/",
       "source_url": "https://www.avantgrandveterinaria.com/",
       "note": "Page lists 'urgencias' only as keyword; no 24 h claim. Aggregator article claimed 24 h, not confirmed on own site.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–sáb 9:00–19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -510,7 +603,10 @@
       "url": "https://araoz-vet.ueniweb.com/",
       "source_url": "https://araoz-vet.ueniweb.com/",
       "note": "Page says 'Todo el día' for every day but never '24 horas'; no phone (contact form). Not marked 24 h.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Horario indicado: todo el día, todos los días; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -525,7 +621,10 @@
       "url": "https://lmpinedomori.wixsite.com/amazonveteirl",
       "source_url": "https://lmpinedomori.wixsite.com/amazonveteirl",
       "note": "Conflict: older page veterinaria-amazon-vet.webnode.es (phone 966 642 856) says 'atender las 24 horas del día a su mascota'; newer wixsite page lists 9-21h and no 24 h. Set false.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–sáb 9:00–21:00 h, dom 9:00–12:00 h."
+      }
     }
   ],
   "notes": "Peru: Lima (Miraflores, San Isidro-adjacent, Surco, La Molina, San Borja, Lince, Callao, north Lima), Trujillo, Cusco, Arequipa, Iquitos covered partially. No national duty rota or animal poison line found on official pages (CMVP and SENASA pages have none). Not done / not reachable: Pancho Cavero (panchocavero.com contact pages errored, clinicaveterinariapanchocavero.com robots-blocked), Veterinaria San Diego Miraflores (robots-blocked; 24 h only in a 2022 CCL article), CUVET (robots-blocked), Pharmavet, Veterinaria Consentidos, Veterinaria Orbegoso, Cusco Can (robots-blocked), UNALM consultorio, UPCH favez site (robots-blocked); Lazzy Vet Cusco (site content did not render); Vetsalud Arequipa (24 h only on aggregator feelingperu.com); Repets, CIMVET, Alpha Vet, AQP Vet Arequipa (no own site reachable); Gala Pets, El Hurón Azul, Cedivet, Animal World (no own site found); Piura and San Isidro/Callao 24-h clinics (no own site found); Pets and Love Lince (24 h label ambiguous). HeyVet San Miguel not yet open (waitlist)."

@@ -51,7 +51,10 @@
       "url": "https://servicios.laika.com.uy/",
       "source_url": "https://servicios.laika.com.uy/",
       "note": "Page: 'Urgencias 24hs', 'Llamanos las 24 horas', FAQ 'urgencias 24 horas en Montevideo'. No branch address on the page (links to sucursales.laika.com.uy, not opened). General WhatsApp 095 909 955.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias las 24 horas; llama a la línea de urgencias."
+      }
     },
     {
       "kind": "clinic",
@@ -66,7 +69,10 @@
       "url": "https://veterinariacentenario.com.uy/",
       "source_url": "https://veterinariacentenario.com.uy/",
       "note": "Page: 'Servicio de Urgencias a domicilio y Atencion en Clinica las 24 hs'. Landlines 2622 8012 / 2628 2697. Re-check 2026-11-11: the page confirms only the 24 h home emergency service; in-clinic 24 h not reconfirmed.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Visitas de urgencia a domicilio las 24 horas; horario habitual mar–dom 9:00–16:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -81,7 +87,10 @@
       "url": "https://veterinariacapurro.com/",
       "source_url": "https://veterinariacapurro.com/",
       "note": "Page: 'Contamos con servicio de urgencias 24 horas'; does not say which branch. Second branch Villa del Cerro: Grecia 4002 esq. Belgica, phone 098 104 002.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -96,7 +105,10 @@
       "url": "https://veterinariapocitos.com.uy/consultas-veterinarias",
       "source_url": "https://veterinariapocitos.com.uy/consultas-veterinarias",
       "note": "Page lists 'Urgencias 24 horas' 091 40 41 41. Clinic phones 2709 68 05 and 099 26 86 20. Same 091 404 141 number is used by the MIVET page for its member emergency service.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Línea de urgencias las 24 horas; horario de la clínica lun–vie 10:00–20:00 h, sáb 10:00–15:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -111,7 +123,10 @@
       "url": "https://mivet.uy/producto/urgencias-las-24-hrs/",
       "source_url": "https://mivet.uy/producto/urgencias-las-24-hrs/",
       "note": "Page: 'Lo atenderan las 24 horas a domicilio'; visit $1,200 UYU plus medication. Mobile 092 354 651. Only the product page was opened, not the home page.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–21:00 h; visitas de urgencia a domicilio las 24 horas (con tarifa, llama al 091 404 141 y di que eres socio de Veterinaria Lacucha)."
+      }
     },
     {
       "kind": "clinic",
@@ -126,7 +141,10 @@
       "url": "https://www.puntovet.com.uy/urgencias",
       "source_url": "https://www.puntovet.com.uy/urgencias",
       "note": "Page: 'Contamos con servicio de emergencia las 24 horas, los 365 dias de ano'; the site presents as a pet store/pharmacy and links to a Clinicas page (not opened), so the clinic nature is unverified. Emergency number is the Montevideo line; general 092 975 774.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año; horario de la tienda lun–vie 9:00–20:00 h, sáb 10:00–20:00 h, dom 12:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -140,7 +158,10 @@
       "url": "https://www.puntovet.com.uy/urgencias",
       "source_url": "https://www.puntovet.com.uy/urgencias",
       "note": "Salto emergency number from the same Puntovet emergency page; no Salto address on that page.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias)."
+      }
     },
     {
       "kind": "clinic",
@@ -154,7 +175,10 @@
       "url": "https://www.puntovet.com.uy/urgencias",
       "source_url": "https://www.puntovet.com.uy/urgencias",
       "note": "Canelones emergency number from the same Puntovet emergency page; no address on that page.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias)."
+      }
     },
     {
       "kind": "clinic",
@@ -169,7 +193,10 @@
       "url": "https://lopezquintana.com/",
       "source_url": "https://lopezquintana.com/contacto/",
       "note": "Phone is the 'Urgencias (24 horas)' line; consultations WhatsApp 091 929 271, administration 092 426 638.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias y hospitalización las 24 horas, los 7 días de la semana; consultas lun–vie 9:30–19:00 h, sáb 9:00–14:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -184,7 +211,10 @@
       "url": "https://veterinarialapastora.com.uy/contactanos/",
       "source_url": "https://veterinarialapastora.com.uy/contactanos/",
       "note": "Page never says 24 h. Clinic landline 42 49 5599; consultations WhatsApp 098 924 066.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–sáb 10:00–19:00 h; domingos solo urgencias. Línea de urgencias (solo llamadas), llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -199,7 +229,10 @@
       "url": "https://fabianmas14.wixsite.com/perroverde",
       "source_url": "https://fabianmas14.wixsite.com/perroverde",
       "note": "Page: 'Disponibilidad las veinticuatro horas del dia, los 7 dias de la semana' with emergency mobile 091 510 101. General contact 091 221 368.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas, los 7 días de la semana; horario habitual lun–vie 8:30–12:30 y 15:00–18:00 h, sáb 16:00–18:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -214,7 +247,10 @@
       "url": "https://veterinariafraschini.com.uy/contacto/",
       "source_url": "https://veterinariafraschini.com.uy/contacto/",
       "note": "Page lists 'Clinica y Urgencias: 091 070 439' but no 24 h claim. Other phone 099 56 08 90.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Clínica de animales pequeños con línea de urgencias; lun–vie 7:00–12:00 y 14:00–18:00 h, sáb 7:00–12:00 h; llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -228,7 +264,10 @@
       "url": "https://veterinariafraschini.com.uy/contacto/",
       "source_url": "https://veterinariafraschini.com.uy/contacto/",
       "note": "Casa Central; page does not say whether it treats small animals (general veterinaria). Mobile 099 71 95 26.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–vie 7:00–12:00 y 14:00–18:30 h, sáb 7:00–12:00 h (el horario de tarde en verano cambia ligeramente)."
+      }
     },
     {
       "kind": "clinic",
@@ -238,12 +277,15 @@
       "address": "Uruguay 1189, Paysandu",
       "phone": "+598 4722 5709",
       "emergency_24h": false,
-      "duty": "Hours not published; call ahead.",
+      "duty": "Call ahead.",
       "small_animals": true,
       "url": "https://centromedicoveterinariopaysandu.com/contactenos/",
       "source_url": "https://centromedicoveterinariopaysandu.com/contactenos/",
-      "note": "Contact page has no hours and no emergency/24 h mention. WhatsApp +598 98 306 294.",
-      "checked": "2026-11-11"
+      "note": "Contact page has no hours and no emergency/24 h mention. WhatsApp +598 98 306 294. Removed from duty: Hours not published; call ahead.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -253,12 +295,15 @@
       "address": "Av. Franklin D. Roosevelt 461, Colonia del Sacramento",
       "phone": "+598 99 128 818",
       "emergency_24h": false,
-      "duty": "Monday to Friday 9:00-13:00 and 15:00-19:00, Saturday 9:00-13:00; no emergency service stated, call ahead.",
+      "duty": "Monday to Friday 9:00-13:00 and 15:00-19:00, Saturday 9:00-13:00; call ahead.",
       "small_animals": true,
       "url": "https://www.itapebivet.com/",
       "source_url": "https://www.itapebivet.com/",
-      "note": "Page has no emergency/24 h mention.",
-      "checked": "2026-11-11"
+      "note": "Page has no emergency/24 h mention. Removed from duty: Monday to Friday 9:00-13:00 and 15:00-19:00, Saturday 9:00-13:00; no emergency service stated, call ahead.",
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–13:00 h; llama antes de ir."
+      }
     },
     {
       "kind": "duty_rota",
@@ -272,7 +317,10 @@
       "url": "https://montevideo.gub.uy/servicio-de-emergencia-veterinaria",
       "source_url": "https://montevideo.gub.uy/servicio-de-emergencia-veterinaria",
       "note": "Official page: 'las 24 horas del dia'; line 1950 ext. 5000. Aimed at street accidents and families without means; the owner takes responsibility for the animal afterwards. Address is the IM head office from the page.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio municipal de urgencias las 24 horas para animales heridos en la vía pública y para animales salvajes o exóticos; no es una clínica general. WhatsApp 099 019 500 todos los días 6:00–24:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -287,7 +335,10 @@
       "url": "https://drmascota.uy/",
       "source_url": "https://drmascota.uy/",
       "note": "Page: 'Atencion emergencias las 24 horas del dia', 'Hospital veterinario'. Page names only 'Lagomar' (a district of Ciudad de la Costa), not the city. Night/day emergency hours inside the affiliation plans are contradictory (20-9 h vs 9-20 h) so only the general 24 h sentence is used. Phone is also WhatsApp.",
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas; consultas de día hasta las 20:00, de lunes a sábado."
+      }
     }
   ],
   "notes": "Uruguay: Montevideo, Maldonado/Punta del Este, Paysandu, Colonia and Young covered partially. No national duty rota, no SMVU/MGAP clinic directory and no animal poison line found: the SMVU (smvu.org.uy) and Facultad de Veterinaria (fvet.edu.uy) home pages could not be opened by the fetch tool (not in the allowed URL set); the faculty Memoria 2023 PDF has no hospital hours or phone; CIAT (human poison centre) was not confirmed to take animal calls. Not done / not reachable: Espacio Animal Montevideo (espacioanimal.uy, anti-bot page, only a search title says 'emergency service'), Hospital Veterinario HV (hvhospitalveterinario.com, anti-bot page), Laika branch addresses (sucursales.laika.com.uy not opened), Puntovet Clinicas page, Veterinarios en Accion (vea.com.uy, redirect loop), Centro Veterinario Salto (only Instagram, robots-blocked), Hospital de Paysandu and other veterinariasuruguay.com pages (robots-blocked), lacosta.com.uy (error), BuenVet, AsistVet, Veterinaria Cavia, Hospital Veterinario de la Costa, Vita Consultorio (Las Piedras), Veterinaria Nan, Clinica Veterinaria Uruguay (Paysandu), La Colonial, Salud Animal and Dr. Sebastian Vazquez (Colonia) - no own site opened. Not covered: Rocha / La Paloma / Punta del Diablo, Piriapolis, Rivera, Tacuarembo, Durazno, Florida, Minas, Mercedes, Carmelo, Ciudad de la Costa, Pando, Las Piedras (no own-site pages found). Follow-up 2026-11-11 (interior and coast): only Dr Mascota (Lagomar) could be confirmed from its own page. Not reachable / not done: smvu.org.uy and fvet.edu.uy home pages (fetch tool refused: URL not in allowed set); faculty PDFs opened (Memoria Hospital 2024, Hoja de informacion 2026, Guia estudiantes extranjeros 2024, Toxicologia syllabus, Caracterizacion Clinicas) contain no Hospital Veterinario hours, phone or urgencias info, only the campus address Ruta 8 km 18; no animal poison line found (CIAT not confirmed; the Toxicologia syllabus names none). UCIL Hospital Veterinario (ucilhospitalvet.wixsite.com/ucil) says '24hs, 7 dias' and RapidVet urgencias 098 503 975 but the page gives no city or address, so it was not added (phones 092 410 061 / 098 503 975). hvhospitalveterinario.com is in Olivos, Argentina (not UY). The MGAP Decreto 160/997 official list (Aug 2026) names clinics but has no phones; own sites were not found by search for: Marvet (La Paloma), Clinica Veterinaria La Huella and La Lechuza (Rocha), Clinica Veterinaria Piriapolis, Animaladas, El Churrinche (Piriapolis), Argos, Cimarron, Dra. Cecilia Ojeda (Rivera), Clinica Veterinaria Avenida and Saravia (Florida), Clinica Veterinaria Sarandi and Veterinaria Minas (Minas), Clinica Veterinaria Olimar and La Veterinaria (Carmelo), Veterinaria Pando, Clinica Integral Veterinaria and La Mulita (Las Piedras), Clinica Veterinaria Parada 5 (Punta del Este), Veterinaria La Ruta and Animalia (Durazno). No candidates at all for Tacuarembo clinics (only agro stores) and none for Mercedes. Guia/veterinariasuruguay.com/guiacomercial pages were seen only as search hits (aggregators, robots-blocked) and not used."

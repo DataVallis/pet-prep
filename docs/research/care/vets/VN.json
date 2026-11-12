@@ -162,7 +162,10 @@
       "url": "https://npet.com.vn/cap-cuu-thu-y/",
       "source_url": "https://npet.com.vn/cap-cuu-thu-y/",
       "checked": "2026-11-11",
-      "note": "Page footer swaps addresses of branches 1 and 2; body text used."
+      "note": "Page footer swaps addresses of branches 1 and 2; body text used.",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -177,7 +180,10 @@
       "url": "https://npet.com.vn/cap-cuu-thu-y/",
       "source_url": "https://npet.com.vn/cap-cuu-thu-y/",
       "checked": "2026-11-11",
-      "note": "Page footer swaps addresses of branches 1 and 2; body text used."
+      "note": "Page footer swaps addresses of branches 1 and 2; body text used.",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -191,7 +197,10 @@
       "url": "https://npet.com.vn/cap-cuu-thu-y/",
       "source_url": "https://npet.com.vn/cap-cuu-thu-y/",
       "checked": "2026-11-11",
-      "note": "Branch 3 hotline inconsistent on page (081.628.488 / 081.628.4888 / link differs), so no phone published."
+      "note": "Branch 3 hotline inconsistent on page (081.628.488 / 081.628.4888 / link differs), so no phone published.",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias las 24 horas; abierto fines de semana y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -206,7 +215,10 @@
       "url": "https://vetcenter.vn/",
       "source_url": "https://vetcenter.vn/",
       "checked": "2026-11-11",
-      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead."
+      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
+      "duty_i18n": {
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -221,7 +233,10 @@
       "url": "https://vetcenter.vn/",
       "source_url": "https://vetcenter.vn/",
       "checked": "2026-11-11",
-      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead."
+      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
+      "duty_i18n": {
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -236,7 +251,10 @@
       "url": "https://vetcenter.vn/",
       "source_url": "https://vetcenter.vn/",
       "checked": "2026-11-11",
-      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead. Homepage also shows Ha Long emergency number 0328.553.886."
+      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead. Homepage also shows Ha Long emergency number 0328.553.886.",
+      "duty_i18n": {
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -251,7 +269,10 @@
       "url": "https://vetcenter.vn/",
       "source_url": "https://vetcenter.vn/",
       "checked": "2026-11-11",
-      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead."
+      "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
+      "duty_i18n": {
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -266,7 +287,10 @@
       "url": "https://pethealth.vn/pages/cap-cuu-24-7",
       "source_url": "https://pethealth.vn/pages/cap-cuu-24-7",
       "checked": "2026-11-11",
-      "note": "Page says 26 branches but branch list pages (he-thong-benh-vien..., address list) were empty; only hotline and head-office address verified. Individual branches not listed."
+      "note": "Page says 26 branches but branch list pages (he-thong-benh-vien..., address list) were empty; only hotline and head-office address verified. Individual branches not listed.",
+      "duty_i18n": {
+        "es": "La cadena anuncia urgencias 24/7 con veterinarios en sus sucursales las 24 horas; llama a la línea de atención para saber cuál es la más cercana."
+      }
     },
     {
       "kind": "clinic",
@@ -281,7 +305,10 @@
       "url": "https://petjoyhospital.com/",
       "source_url": "https://petjoyhospital.com/",
       "checked": "2026-11-11",
-      "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460."
+      "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460.",
+      "duty_i18n": {
+        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -296,7 +323,10 @@
       "url": "https://petjoyhospital.com/",
       "source_url": "https://petjoyhospital.com/",
       "checked": "2026-11-11",
-      "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460."
+      "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460.",
+      "duty_i18n": {
+        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -311,7 +341,10 @@
       "url": "https://petjoyhospital.com/",
       "source_url": "https://petjoyhospital.com/",
       "checked": "2026-11-11",
-      "note": "No 24/7 emergency listed for this branch."
+      "note": "No 24/7 emergency listed for this branch.",
+      "duty_i18n": {
+        "es": "Abierto 8:00–19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -326,7 +359,10 @@
       "url": "https://benhvienthuyanipet.com/",
       "source_url": "https://benhvienthuyanipet.com/",
       "checked": "2026-11-11",
-      "note": "Page: 'Cap cuu 24/7' (menu 24/24) while general hours 8-19; second hotline 0772 005 686."
+      "note": "Page: 'Cap cuu 24/7' (menu 24/24) while general hours 8-19; second hotline 0772 005 686.",
+      "duty_i18n": {
+        "es": "Horario habitual 8:00–19:00 h; anuncia urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -341,7 +377,10 @@
       "url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "source_url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "checked": "2026-11-11",
-      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered."
+      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+      }
     },
     {
       "kind": "clinic",
@@ -356,7 +395,10 @@
       "url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "source_url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "checked": "2026-11-11",
-      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered."
+      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+      }
     },
     {
       "kind": "clinic",
@@ -371,7 +413,10 @@
       "url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "source_url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "checked": "2026-11-11",
-      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered."
+      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+      }
     },
     {
       "kind": "clinic",
@@ -386,7 +431,10 @@
       "url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "source_url": "https://thuythithi.com/phong-kham-thu-y-mo-cua-24-24-tai-tp-hcm/",
       "checked": "2026-11-11",
-      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered."
+      "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+      }
     },
     {
       "kind": "clinic",
@@ -401,7 +449,10 @@
       "url": "https://mypetclinic.vn/",
       "source_url": "https://mypetclinic.vn/",
       "checked": "2026-11-11",
-      "note": "Home page says staff on duty for emergencies 24/7; about page lists inconsistent consultation hours, so call ahead."
+      "note": "Home page says staff on duty for emergencies 24/7; about page lists inconsistent consultation hours, so call ahead.",
+      "duty_i18n": {
+        "es": "Abierto todos los días del año; personal de guardia para urgencias de perros y gatos 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -416,7 +467,10 @@
       "url": "https://funpet.vn/thu-y-cap-cuu-24-24-tphcm/",
       "source_url": "https://funpet.vn/thu-y-cap-cuu-24-24-tphcm/",
       "checked": "2026-11-11",
-      "note": "Page says 'luon co bac si truc cap cuu 24/24' while listed hours are 07-19; call ahead. Branch 1: 234 Nguyen Trai, Thanh Xuan, Hanoi (no hours on page)."
+      "note": "Page says 'luon co bac si truc cap cuu 24/24' while listed hours are 07-19; call ahead. Branch 1: 234 Nguyen Trai, Thanh Xuan, Hanoi (no hours on page).",
+      "duty_i18n": {
+        "es": "Horario habitual 7:00–19:00 h todos los días; veterinario de guardia para urgencias las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -431,7 +485,10 @@
       "url": "https://www.theanimaldoctors.org/",
       "source_url": "https://www.theanimaldoctors.org/",
       "checked": "2026-11-11",
-      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144."
+      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
+      "duty_i18n": {
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -446,7 +503,10 @@
       "url": "https://www.theanimaldoctors.org/",
       "source_url": "https://www.theanimaldoctors.org/",
       "checked": "2026-11-11",
-      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144."
+      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
+      "duty_i18n": {
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -461,7 +521,10 @@
       "url": "https://www.theanimaldoctors.org/",
       "source_url": "https://www.theanimaldoctors.org/",
       "checked": "2026-11-11",
-      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144."
+      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
+      "duty_i18n": {
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -476,7 +539,10 @@
       "url": "https://www.theanimaldoctors.org/",
       "source_url": "https://www.theanimaldoctors.org/",
       "checked": "2026-11-11",
-      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144."
+      "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
+      "duty_i18n": {
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -491,7 +557,10 @@
       "url": "https://saigonpet.com/",
       "source_url": "https://saigonpet.com/",
       "checked": "2026-11-11",
-      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours."
+      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
+      "duty_i18n": {
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+      }
     },
     {
       "kind": "clinic",
@@ -506,7 +575,10 @@
       "url": "https://saigonpet.com/",
       "source_url": "https://saigonpet.com/",
       "checked": "2026-11-11",
-      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours."
+      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
+      "duty_i18n": {
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+      }
     },
     {
       "kind": "clinic",
@@ -521,7 +593,10 @@
       "url": "https://saigonpet.com/",
       "source_url": "https://saigonpet.com/",
       "checked": "2026-11-11",
-      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours."
+      "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
+      "duty_i18n": {
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+      }
     },
     {
       "kind": "clinic",
@@ -536,7 +611,10 @@
       "url": "https://dalatpet.com/",
       "source_url": "https://dalatpet.com/",
       "checked": "2026-11-11",
-      "note": "Page: 'cung cap dich vu cap cuu 24/7, ke ca thu 7, chu nhat va ngay le'; asks to call ahead after 19:00."
+      "note": "Page: 'cung cap dich vu cap cuu 24/7, ke ca thu 7, chu nhat va ngay le'; asks to call ahead after 19:00.",
+      "duty_i18n": {
+        "es": "Abierto 8:00–17:00 h; anuncia servicio de urgencias 24/7, fines de semana y festivos incluidos; para urgencias después de las 19:00 h, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -551,7 +629,10 @@
       "url": "https://thuynasapetphuquoc.com/",
       "source_url": "https://thuynasapetphuquoc.com/",
       "checked": "2026-11-11",
-      "note": "Page: 'Cap cuu: 24/24'. Facebook listing shown on the page gives a different address (13 Hung Vuong, Duong Dong)."
+      "note": "Page: 'Cap cuu: 24/24'. Facebook listing shown on the page gives a different address (13 Hung Vuong, Duong Dong).",
+      "duty_i18n": {
+        "es": "Abierto 8:00–19:00 h; anuncia urgencias las 24 horas; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -561,12 +642,15 @@
       "address": "65 Phan Van Truong, Vy Da, Hue",
       "phone": "039 55 85 115",
       "emergency_24h": false,
-      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234; call ahead.",
       "small_animals": true,
       "url": "https://www.mbvet.vn/",
       "source_url": "https://www.mbvet.vn/tin-tuc/bang-gia-kham-thu-y-gan-day-tai-thanh-pho-hue-49",
       "checked": "2026-11-11",
-      "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11."
+      "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11. Removed from duty: Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -576,12 +660,15 @@
       "address": "47 Thai Phien, Phu Xuan, Hue",
       "phone": "070 55 85 115",
       "emergency_24h": false,
-      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty": "Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234; call ahead.",
       "small_animals": true,
       "url": "https://www.mbvet.vn/",
       "source_url": "https://www.mbvet.vn/tin-tuc/bang-gia-kham-thu-y-gan-day-tai-thanh-pho-hue-49",
       "checked": "2026-11-11",
-      "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11."
+      "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11. Removed from duty: Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -596,7 +683,10 @@
       "url": "https://petnhatrang.com/",
       "source_url": "https://petnhatrang.com/",
       "checked": "2026-11-11",
-      "note": "Pet shop/hotel with a 'Pet Clinic' service; page also lists a second address 36 Go Cay Sung, Vinh Ngoc, unclear which houses the clinic. No 24h wording."
+      "note": "Pet shop/hotel with a 'Pet Clinic' service; page also lists a second address 36 Go Cay Sung, Vinh Ngoc, unclear which houses the clinic. No 24h wording.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 7:30–21:30 h (sábados hasta las 22:00 h)."
+      }
     },
     {
       "kind": "clinic",
@@ -611,7 +701,10 @@
       "url": "https://vethospital.vnua.edu.vn/",
       "source_url": "https://vethospital.vnua.edu.vn/",
       "checked": "2026-11-11",
-      "note": "Page header 'Cap cuu 24/24: 02435 145 145 - 0399 065 115'; page also shows a not-found title but content loads. Hours Mon-Fri only."
+      "note": "Page header 'Cap cuu 24/24: 02435 145 145 - 0399 065 115'; page also shows a not-found title but content loads. Hours Mon-Fri only.",
+      "duty_i18n": {
+        "es": "Hospital universitario docente; abierto lun–vie 7:30–11:30 h y 13:30–17:30 h; anuncia línea de urgencias las 24 horas en el 0399 065 115."
+      }
     },
     {
       "kind": "clinic",
@@ -620,12 +713,15 @@
       "region": "Ho Chi Minh City",
       "address": "Experimental Area, Quarter 5, Linh Trung, Thu Duc, Ho Chi Minh City",
       "emergency_24h": false,
-      "duty": "University veterinary hospital; no opening hours published, contact by email vethospital@hcmuaf.edu.vn.",
+      "duty": "University veterinary hospital; contact by email vethospital@hcmuaf.edu.vn.",
       "small_animals": true,
       "url": "https://vethospital.hcmuaf.edu.vn/vn/",
       "source_url": "https://vethospital.hcmuaf.edu.vn/vn/",
       "checked": "2026-11-11",
-      "note": "Page lists only a fax (+84-28) 38967596, no phone or hours, no 24h wording; news items 2013-2017 so details may be outdated."
+      "note": "Page lists only a fax (+84-28) 38967596, no phone or hours, no 24h wording; news items 2013-2017 so details may be outdated. Removed from duty: University veterinary hospital; no opening hours published, contact by email vethospital@hcmuaf.edu.vn.",
+      "duty_i18n": {
+        "es": "Hospital veterinario universitario; contacto por correo electrónico: vethospital@hcmuaf.edu.vn."
+      }
     },
     {
       "kind": "clinic",
@@ -635,12 +731,15 @@
       "address": "Gate C, Area II, Can Tho University, 3/2 Street, Xuan Khanh, Ninh Kieu, Can Tho",
       "phone": "0292 373 0362",
       "emergency_24h": false,
-      "duty": "University veterinary clinic; opening hours not published, call ahead.",
+      "duty": "University veterinary clinic; call ahead.",
       "small_animals": true,
       "url": "https://coa.ctu.edu.vn/bx-thu-y/122-benh-xa-thu-y.html",
       "source_url": "https://coa.ctu.edu.vn/bx-thu-y/122-benh-xa-thu-y.html",
       "checked": "2026-11-11",
-      "note": "Mobile 0987 774 878 also listed. No hours or 24h wording."
+      "note": "Mobile 0987 774 878 also listed. No hours or 24h wording. Removed from duty: University veterinary clinic; opening hours not published, call ahead.",
+      "duty_i18n": {
+        "es": "Clínica veterinaria universitaria; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -655,7 +754,10 @@
       "url": "http://newpethospital.com.vn/cap-cuu-2424/",
       "source_url": "http://newpethospital.com.vn/cap-cuu-2424/",
       "checked": "2026-11-11",
-      "note": "Page uses 'luon san long 24/7' and 'Phuc vu 365 ngay/nam'; chi-nhanh page lists only this branch. Zalo 0394 693 939."
+      "note": "Page uses 'luon san long 24/7' and 'Phuc vu 365 ngay/nam'; chi-nhanh page lists only this branch. Zalo 0394 693 939.",
+      "duty_i18n": {
+        "es": "Abierto 8:00–19:00 h; urgencias fuera de horario 19:00–8:00 h con recargo; anuncia atención 24/7, los 365 días del año."
+      }
     },
     {
       "kind": "clinic",
@@ -665,12 +767,15 @@
       "address": "550 Luy Ban Bich, Hoa Thanh, Tan Phu, Ho Chi Minh City",
       "phone": "(028) 38 612 977",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -680,12 +785,15 @@
       "address": "387-389 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City",
       "phone": "(028) 62 972 290",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -695,12 +803,15 @@
       "address": "111 Truong Chinh, Ward 12, Tan Binh, Ho Chi Minh City",
       "phone": "0916 219 211",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -710,12 +821,15 @@
       "address": "155 Nguyen Thi Tu, Binh Hung Hoa, Binh Tan, Ho Chi Minh City",
       "phone": "0912 219 211",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -725,12 +839,15 @@
       "address": "277 Kinh Duong Vuong, An Lac, Binh Tan, Ho Chi Minh City",
       "phone": "0911 368 041",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -740,12 +857,15 @@
       "address": "383 Nguyen An Ninh, Ward 9, Vung Tau",
       "phone": "0919 949 041",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -755,12 +875,15 @@
       "address": "145 Tran Quy, Ward 4, District 11, Ho Chi Minh City",
       "phone": "0913 339 041",
       "emergency_24h": false,
-      "duty": "Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty": "Hospital group advertises doctors on duty 24/24; call ahead to confirm for this branch; hotline 1800 599 941.",
       "small_animals": true,
       "url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "source_url": "https://petpro.com.vn/kien-thuc-thu-cung/chi-tiet-bai-viet/noi-cham-soc-cho-thu-cung-2424-%7C-benh-vien-thu-y-petpro",
       "checked": "2026-11-11",
-      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11."
+      "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
+      "duty_i18n": {
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+      }
     },
     {
       "kind": "clinic",
@@ -775,7 +898,10 @@
       "url": "https://mynpet.vn/cap-cuu-247",
       "source_url": "https://mynpet.vn/cap-cuu-247",
       "checked": "2026-11-11",
-      "note": "Footer: 'Cap cuu 24h 24/7'."
+      "note": "Footer: 'Cap cuu 24h 24/7'.",
+      "duty_i18n": {
+        "es": "Hospital abierto todos los días 8:30–21:00 h; ingreso de urgencias 24/7, también de noche, fines de semana y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -790,7 +916,10 @@
       "url": "https://vpets.vn/phong-kham/cap-cuu-24-24h/",
       "source_url": "https://vpets.vn/phong-kham/cap-cuu-24-24h/",
       "checked": "2026-11-11",
-      "note": "Page: 'mo lien tuc 24 gio trong ngay va 7 ngay trong tuan'; home page also 'CAP CUU 24H'."
+      "note": "Page: 'mo lien tuc 24 gio trong ngay va 7 ngay trong tuan'; home page also 'CAP CUU 24H'.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, los 7 días de la semana, con urgencias e ingreso hospitalario, festivos incluidos."
+      }
     },
     {
       "kind": "clinic",
@@ -805,7 +934,10 @@
       "url": "https://petcare.vn/",
       "source_url": "https://petcare.vn/services/emergency-service/",
       "checked": "2026-11-11",
-      "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Emergency line; page asks owners to use this number for emergencies after 19:00."
+      "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Emergency line; page asks owners to use this number for emergencies after 19:00.",
+      "duty_i18n": {
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -820,7 +952,10 @@
       "url": "https://petcare.vn/",
       "source_url": "https://petcare.vn/services/emergency-service/",
       "checked": "2026-11-11",
-      "note": "Not listed under the 24/7 emergency heading on the source page; downgraded by independent check 2026-11-11."
+      "note": "Not listed under the 24/7 emergency heading on the source page; downgraded by independent check 2026-11-11.",
+      "duty_i18n": {
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; para urgencias, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -835,7 +970,10 @@
       "url": "https://petcare.vn/",
       "source_url": "https://petcare.vn/services/emergency-service/",
       "checked": "2026-11-11",
-      "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Also an emergency line."
+      "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Also an emergency line.",
+      "duty_i18n": {
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -850,7 +988,10 @@
       "url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
       "source_url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
       "checked": "2026-11-11",
-      "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn)."
+      "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn).",
+      "duty_i18n": {
+        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400."
+      }
     },
     {
       "kind": "clinic",
@@ -865,7 +1006,10 @@
       "url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
       "source_url": "https://pethealthcentre.vn/cap-cuu-thu-y-247",
       "checked": "2026-11-11",
-      "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn)."
+      "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn).",
+      "duty_i18n": {
+        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400."
+      }
     },
     {
       "kind": "clinic",
@@ -875,12 +1019,15 @@
       "address": "24 T2 Manhattan, Vinhomes Grand Park, District 9, Thu Duc, Ho Chi Minh City",
       "phone": "077 977 2679",
       "emergency_24h": true,
-      "duty": "Emergency support advertised 24/7; regular opening hours not published, call ahead.",
+      "duty": "Emergency support advertised 24/7; call ahead.",
       "small_animals": true,
       "url": "https://phongkhamthuypetcute.com/chuyen-khoa/",
       "source_url": "https://phongkhamthuypetcute.com/chuyen-khoa/",
       "checked": "2026-11-11",
-      "note": "Page: 'Ho tro cap cuu thu y 24/7'; second hotline 0868 518 021; no regular hours listed."
+      "note": "Page: 'Ho tro cap cuu thu y 24/7'; second hotline 0868 518 021; no regular hours listed. Removed from duty: Emergency support advertised 24/7; regular opening hours not published, call ahead.",
+      "duty_i18n": {
+        "es": "Anuncia atención de urgencias 24/7; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -895,7 +1042,10 @@
       "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "checked": "2026-11-11",
-      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386."
+      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -910,7 +1060,10 @@
       "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "checked": "2026-11-11",
-      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386."
+      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -925,7 +1078,10 @@
       "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "checked": "2026-11-11",
-      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386."
+      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -940,7 +1096,10 @@
       "url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "source_url": "https://benhvienthuyquan12.com/gioi-thieu.html",
       "checked": "2026-11-11",
-      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386."
+      "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -950,12 +1109,15 @@
       "address": "128 Chu Van An, Binh Thanh, Ho Chi Minh City",
       "phone": "096 699 8126",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -965,12 +1127,15 @@
       "address": "335 Kim Nguu, Vinh Tuy, Hanoi",
       "phone": "024 3826 3366",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -980,12 +1145,15 @@
       "address": "236 Kim Ma, Ngoc Ha, Hanoi",
       "phone": "024 3204 8585",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -995,12 +1163,15 @@
       "address": "8A Ba Trieu, Ha Dong, Hanoi",
       "phone": "024 3202 0082",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -1010,12 +1181,15 @@
       "address": "1261 Giai Phong, Hoang Mai, Hanoi",
       "phone": "024 3636 0036",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -1025,12 +1199,15 @@
       "address": "Bien Ho 10A SP10-08, Vinhomes Ocean Park, Gia Lam, Hanoi",
       "phone": "086 999 8126",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -1040,12 +1217,15 @@
       "address": "101 Duong Lang, Dong Da, Hanoi",
       "phone": "024 3633 6655",
       "emergency_24h": false,
-      "duty": "Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty": "Branch name says emergency 24/7; call ahead to confirm.",
       "small_animals": true,
       "url": "https://2vet.vn/",
       "source_url": "https://2vet.vn/",
       "checked": "2026-11-11",
-      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11."
+      "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
+      "duty_i18n": {
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -1060,7 +1240,10 @@
       "url": "https://miapet.vn/",
       "source_url": "https://miapet.vn/",
       "checked": "2026-11-11",
-      "note": "Page: 'CAP CUU 24/7' and 'Truong hop khan cap 24/7'; Zalo 0354 588 966."
+      "note": "Page: 'CAP CUU 24/7' and 'Truong hop khan cap 24/7'; Zalo 0354 588 966.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 8:00–20:00 h; anuncia urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -1075,7 +1258,10 @@
       "url": "https://bacsithucung.vn/",
       "source_url": "https://bacsithucung.vn/",
       "checked": "2026-11-11",
-      "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115."
+      "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -1090,7 +1276,10 @@
       "url": "https://bacsithucung.vn/",
       "source_url": "https://bacsithucung.vn/",
       "checked": "2026-11-11",
-      "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115."
+      "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -1099,12 +1288,15 @@
       "region": "Da Nang",
       "phone": "0339 325 563",
       "emergency_24h": false,
-      "duty": "English-speaking clinic in Da Nang; emergency line 0339 325 563; opening hours not published, call ahead.",
+      "duty": "English-speaking clinic in Da Nang; emergency line 0339 325 563; call ahead.",
       "small_animals": true,
       "url": "https://pawsclinic.vn/",
       "source_url": "https://pawsclinic.vn/",
       "checked": "2026-11-11",
-      "note": "Home page gives only emergency phone ('Emergency? We're available at 0339325563'), no address, hours or 24h wording."
+      "note": "Home page gives only emergency phone ('Emergency? We're available at 0339325563'), no address, hours or 24h wording. Removed from duty: English-speaking clinic in Da Nang; emergency line 0339 325 563; opening hours not published, call ahead.",
+      "duty_i18n": {
+        "es": "Clínica con atención en inglés en Da Nang; línea de urgencias 0339 325 563; llama antes."
+      }
     }
   ],
   "notes": "No official register (Cuc Thu y / DAH, city vet associations) or poison line was reachable: dah.gov.vn and nonglam.edu.vn were refused by WebFetch (PROVENANCE_REQUIRED); VNUA vet hospital page (khoathuy.vnua.edu.vn) redirected http<->https without loading. Nha Trang, Da Lat, Hoi An, Phu Quoc clinics only appeared on aggregator/blog pages (olympiamedic.com, phongkhamthuy.net) and were not published; their own sites not yet opened (dalatpet.com refused). Left: Hanoi/HCMC university hospitals, Nha Trang, Da Lat (Da Lat Pet, Doctor Hi), Hoi An, Phu Quoc, Hue, Can Tho, other HCMC clinics (New Pet Hospital, Pet Pro, Petzone). No animal poison line found. Independent check 2026-11-11: all 10 source pages opened and confirmed (names, phones, 24-h wording); Animal Doctors International states 24/7 emergency for Vietnam as a whole, not per branch. Follow-up run 2026-11-11 (Nha Trang, Da Lat, Hoi An, Phu Quoc, Hue, Can Tho, universities, more HCMC): added 39 entries from clinic/university own sites. Unreachable: thuypetpro.com.vn (PROVENANCE_REQUIRED / robots disallowed; PetPro covered via petpro.com.vn), toplist.vn (robots), saigonpethospital.com (redirects to unrelated site), thuygovap.vn (redirect loop), vietnamtourism.com. Not added because only an aggregator or Facebook page exists: Home Vet Nha Trang (iigo.vn listing says 24/24, address 402 Duong 2/4, phone 0343 750 832), Pet Friends Nha Trang, Nha Trang Veterinary Hospital, Kokan Pet, Hoi An clinics (Tuoi Pet, Trinh Nguyen, Dr Quang), Hue Vet is in Hanoi, Doctor Hi Da Lat, Can Tho private clinics, Phu Quoc Dr Trang, Petzone, Belwee, Alpha Pets, Saigon Veterinary Clinic. Pet Pro (HCMC) address/phone details come from petpro.com.vn page. petclinic.vn (Can Tho) is a clinic-software page, skipped. Dong Nai branches of Pet Health Centre not added."

@@ -44,7 +44,8 @@
         "sl": "Nujni primeri in dežurni veterinar 24 ur na dan. Redni delovni čas pon–pet 10–14 in 17–19, sob 10–14, ob nedeljah zaprto.",
         "hr": "Hitni slučajevi i dežurni veterinar dostupni 24/7. Redovno radno vrijeme pon–pet 10:00–14:00 i 17:00–19:00, sub 10:00–14:00, ned zatvoreno.",
         "de": "Notfälle und diensthabender Tierarzt rund um die Uhr erreichbar. Reguläre Öffnungszeiten Mo–Fr 10–14 und 17–19 Uhr, Sa 10–14 Uhr, So geschlossen.",
-        "fr": "Cas urgents et vétérinaire de garde 24 h/24, 7 j/7. Horaires habituels lun.–ven. 10 h–14 h et 17 h–19 h, sam. 10 h–14 h, fermé le dimanche."
+        "fr": "Cas urgents et vétérinaire de garde 24 h/24, 7 j/7. Horaires habituels lun.–ven. 10 h–14 h et 17 h–19 h, sam. 10 h–14 h, fermé le dimanche.",
+        "es": "Casos urgentes y veterinario de guardia abiertos 24/7. Horario habitual lun–vie 10:00–14:00 y 17:00–19:00 h, sáb 10:00–14:00 h, cerrado dom."
       },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
@@ -65,7 +66,8 @@
         "sl": "pon–pet 8–20, sob 9–14, ned 10–14.",
         "hr": "pon–pet 08:00–20:00, sub 09:00–14:00, ned 10:00–14:00.",
         "de": "Mo–Fr 8–20 Uhr, Sa 9–14 Uhr, So 10–14 Uhr.",
-        "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h, dim. 10 h–14 h."
+        "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h, dim. 10 h–14 h.",
+        "es": "Lun–vie 8:00–20:00 h, sáb 9:00–14:00 h, dom 10:00–14:00 h."
       },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
@@ -86,7 +88,8 @@
         "sl": "pon–pet 8–19, sob 8–15. Na telefon 070 722 967 se oglasijo 9–19.",
         "hr": "pon–pet 8:00–19:00, sub 8:00–15:00. Na telefon 070 722 967 javljaju se 9:00–19:00.",
         "de": "Mo–Fr 8–19 Uhr, Sa 8–15 Uhr. Telefon 070 722 967, besetzt 9–19 Uhr.",
-        "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–15 h. Téléphone 070 722 967, joignable 9 h–19 h."
+        "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–15 h. Téléphone 070 722 967, joignable 9 h–19 h.",
+        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–15:00 h. Teléfono 070 722 967, atendido 9:00–19:00 h."
       },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
@@ -107,7 +110,8 @@
         "sl": "pon–pet 8–18, sob 9–16, ob nedeljah zaprto.",
         "hr": "pon–pet 08:00–18:00, sub 09:00–16:00, ned zatvoreno.",
         "de": "Mo–Fr 8–18 Uhr, Sa 9–16 Uhr, So geschlossen.",
-        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h, fermé le dimanche."
+        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h, fermé le dimanche.",
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–16:00 h, cerrado dom."
       },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
@@ -128,7 +132,8 @@
         "sl": "Druga telefonska številka +389 70 265 872.",
         "hr": "Drugi telefon +389 70 265 872.",
         "de": "Zweite Telefonnummer: +389 70 265 872.",
-        "fr": "Second numéro +389 70 265 872."
+        "fr": "Second numéro +389 70 265 872.",
+        "es": "Segundo teléfono +389 70 265 872."
       },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
@@ -163,7 +168,8 @@
         "sl": "Morda obstaja ločena dežurna številka; vnaprej pokličite.",
         "hr": "Možda postoji zasebna dežurna linija; nazovi unaprijed.",
         "de": "Eventuell separate Notdienstnummer; bitte vorher anrufen.",
-        "fr": "Une ligne de garde distincte existe peut-être ; appelez avant de venir."
+        "fr": "Une ligne de garde distincte existe peut-être ; appelez avant de venir.",
+        "es": "Puede haber una línea de guardia aparte; llama antes."
       },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",

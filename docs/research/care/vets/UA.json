@@ -52,7 +52,10 @@
       "duty": "Inpatient department with an on-duty doctor around the clock, no days off. Outpatient department (Ivasyuk Ave. 4, +380 50 537 10 00) 9:00-21:00 daily.",
       "url": "https://avet.kiev.ua/",
       "source_url": "https://avet.kiev.ua/",
-      "quote": "цілодобово, без вихідних"
+      "quote": "цілодобово, без вихідних",
+      "duty_i18n": {
+        "es": "Hospitalización con médico de guardia las 24 horas, sin días libres. Consulta ambulatoria (Ivasyuk Ave. 4, +380 50 537 10 00) todos los días 9:00–21:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -68,7 +71,10 @@
       "url": "https://zoolux.clinic/en/",
       "source_url": "https://zoolux.clinic/en/pages/neotloznaia-veterinarnaia-pomoshh-247-v-zooliuks-kiev-brovary",
       "note": "Mobile +380 97 344 88 88. Another Zoolux page says the clinic works 24/7 without holiday breaks. Which of the three Kyiv addresses is staffed at night is not stated; call ahead.",
-      "quote": "emergency care for cats and dogs is available 24 hours a day in Kyiv and Brovary"
+      "quote": "emergency care for cats and dogs is available 24 hours a day in Kyiv and Brovary",
+      "duty_i18n": {
+        "es": "Urgencias para gatos y perros las 24 horas; en Dmytrivska 39, entrada de urgencias n.º 3: 8:00–20:00 h; entrada n.º 2: 20:00–8:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -84,7 +90,10 @@
       "url": "https://zoolux.clinic/en/",
       "source_url": "https://zoolux.clinic/en/pages/neotloznaia-veterinarnaia-pomoshh-247-v-zooliuks-kiev-brovary",
       "note": "Same network page covers Kyiv and Brovary; mobile +380 97 344 88 88.",
-      "quote": "emergency care for cats and dogs is available 24 hours a day in Kyiv and Brovary"
+      "quote": "emergency care for cats and dogs is available 24 hours a day in Kyiv and Brovary",
+      "duty_i18n": {
+        "es": "Urgencias para gatos y perros las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -100,7 +109,10 @@
       "url": "https://vetnova.ua/",
       "source_url": "https://vetnova.ua/",
       "note": "Page meta description gives a different address (Teremky 2, vul. Yuriya Smolycha 2) and +380 44 338 33 68; second mobile +380 50 338 33 67. The site is also listed for other cities in search results but only the Kyiv address was seen on the page.",
-      "quote": "Ми працюємо цілодобово за попереднім записом."
+      "quote": "Ми працюємо цілодобово за попереднім записом.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas con cita previa; durante el toque de queda solo se atiende a pacientes urgentes."
+      }
     },
     {
       "kind": "clinic",
@@ -115,7 +127,10 @@
       "duty": "Published hours 9:00-21:00, 364 days a year; call ahead for urgent cases.",
       "url": "https://lessy.kiev.ua/uk/",
       "source_url": "https://lessy.kiev.ua/uk/",
-      "note": "Page also says 'Ми пропонуємо свої послуги 24/7' and 'на місці завжди черговий лікар' but its own hours are 9:00-21:00 (conflict) so 24 h not set. Second number +380 50 604 07 82; second branch at Bereznyaky, address not on page."
+      "note": "Page also says 'Ми пропонуємо свої послуги 24/7' and 'на місці завжди черговий лікар' but its own hours are 9:00-21:00 (conflict) so 24 h not set. Second number +380 50 604 07 82; second branch at Bereznyaky, address not on page.",
+      "duty_i18n": {
+        "es": "Horario publicado 9:00–21:00 h, 364 días al año; llama antes en casos urgentes."
+      }
     },
     {
       "kind": "clinic",
@@ -130,7 +145,10 @@
       "duty": "Clinics 9:00-19:00 (Darnytsia) and 9:00-20:00 (Troyeshchyna, Pechersk); inpatient ward runs around the clock.",
       "url": "https://artvet.ua/",
       "source_url": "https://artvet.ua/",
-      "note": "'24/7 - Працює стаціонар' refers to the inpatient ward only, not walk-in hours. Branch phones: Darnytsia +380 44 221 13 39; Troyeshchyna +380 44 331 19 31; Pechersk +380 44 331 54 81."
+      "note": "'24/7 - Працює стаціонар' refers to the inpatient ward only, not walk-in hours. Branch phones: Darnytsia +380 44 221 13 39; Troyeshchyna +380 44 331 19 31; Pechersk +380 44 331 54 81.",
+      "duty_i18n": {
+        "es": "Clínicas 9:00–19:00 h (Darnytsia) y 9:00–20:00 h (Troyeshchyna, Pechersk); la sala de hospitalización funciona las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -158,7 +176,10 @@
       "duty": "Open 24/7, every day of the week.",
       "url": "https://vetclinic-markevych.lviv.ua/",
       "source_url": "https://vetclinic-markevych.lviv.ua/",
-      "quote": "Ми працюємо 24/7, щоб ви та ваші улюбленці отримали якісну допомогу незалежно від часу доби та дня тижня."
+      "quote": "Ми працюємо 24/7, щоб ви та ваші улюбленці отримали якісну допомогу незалежно від часу доби та дня тижня.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, los 7 días de la semana."
+      }
     },
     {
       "kind": "clinic",
@@ -174,7 +195,10 @@
       "url": "https://eurovet.lviv.ua/",
       "source_url": "https://eurovet.lviv.ua/",
       "note": "Second number +380 67 559 69 02.",
-      "quote": "Працюємо 24/7"
+      "quote": "Працюємо 24/7",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, los 7 días, sin días libres ni festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -190,7 +214,10 @@
       "url": "https://eurovet.lviv.ua/",
       "source_url": "https://eurovet.lviv.ua/",
       "note": "Second number +380 67 559 69 08.",
-      "quote": "Цілодобова ветеринарна допомога"
+      "quote": "Цілодобова ветеринарна допомога",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, los 7 días, sin días libres ni festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -206,7 +233,10 @@
       "url": "https://merlion.com.ua/",
       "source_url": "https://merlion.com.ua/",
       "note": "Toll-free 0800 600 588. Banner says 24/7 only by prior appointment; urgent section says round the clock.",
-      "quote": "В ургентних випадках працюємо цілодобово"
+      "quote": "В ургентних випадках працюємо цілодобово",
+      "duty_i18n": {
+        "es": "Citas programadas 10:00–20:00 h; hospitalización urgente y casos urgentes las 24 horas; las 24 horas, los 7 días, solo con cita previa."
+      }
     },
     {
       "kind": "clinic",
@@ -221,7 +251,10 @@
       "duty": "9:00-21:00; several branches in Lviv, Vynnyky and Busk.",
       "url": "https://vetmedcomplex.com.ua/",
       "source_url": "https://vetmedcomplex.com.ua/",
-      "note": "Page text calls it 'цілодобова ветеринарна клініка' but posted hours are 9:00-21:00 (conflict), so 24 h not set. Other numbers +380 97 23 39 817, +380 66 73 88 495. Branches: Naukova 112, Hrinchenka 11B, Lychakivska 46, Halytska 51V Vynnyky, Petrushevycha 26 Busk."
+      "note": "Page text calls it 'цілодобова ветеринарна клініка' but posted hours are 9:00-21:00 (conflict), so 24 h not set. Other numbers +380 97 23 39 817, +380 66 73 88 495. Branches: Naukova 112, Hrinchenka 11B, Lychakivska 46, Halytska 51V Vynnyky, Petrushevycha 26 Busk.",
+      "duty_i18n": {
+        "es": "9:00–21:00 h; varias sucursales en Lviv, Vynnyky y Busk."
+      }
     },
     {
       "kind": "clinic",
@@ -237,7 +270,10 @@
       "url": "https://animalsclinic.od.ua/",
       "source_url": "https://animalsclinic.od.ua/",
       "note": "Second number +380 66 232 16 72. Page lists no regular hours. Odesa is subject to air alerts; call ahead.",
-      "quote": "Ургентний прийом – цілодобово"
+      "quote": "Ургентний прийом – цілодобово",
+      "duty_i18n": {
+        "es": "Clínica veterinaria las 24 horas; recepción de urgencias las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -252,7 +288,10 @@
       "duty": "Patients seen 9:00-21:00 daily; night home visits 19:00-9:00; inpatients cared for around the clock.",
       "url": "https://veterinar.org.ua/",
       "source_url": "https://veterinar.org.ua/",
-      "note": "Page says 'цілодобова ветеринарна клініка' and 'працюємо цілодобово без перерв на обід' but client hours are 9:00-21:00 (conflict), so 24 h not set. Other numbers +380 66 410 61 83, +380 68 813 51 95, +380 73 021 90 77."
+      "note": "Page says 'цілодобова ветеринарна клініка' and 'працюємо цілодобово без перерв на обід' but client hours are 9:00-21:00 (conflict), so 24 h not set. Other numbers +380 66 410 61 83, +380 68 813 51 95, +380 73 021 90 77.",
+      "duty_i18n": {
+        "es": "Consultas todos los días 9:00–21:00 h; visitas a domicilio nocturnas 19:00–9:00 h; los pacientes ingresados se atienden las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -267,7 +306,10 @@
       "duty": "Posted hours 9:00-20:00 daily, no days off; call ahead for urgent cases.",
       "url": "https://zoovet.od.ua/uk/",
       "source_url": "https://zoovet.od.ua/uk/",
-      "note": "Page says 'Ми працюємо цілодобово, без вихідних!' but lists 9:00-20:00 (conflict), so 24 h not set. Second number +380 48 788 98 51."
+      "note": "Page says 'Ми працюємо цілодобово, без вихідних!' but lists 9:00-20:00 (conflict), so 24 h not set. Second number +380 48 788 98 51.",
+      "duty_i18n": {
+        "es": "Horario publicado 9:00–20:00 h todos los días, sin días libres; llama antes en casos urgentes."
+      }
     },
     {
       "kind": "clinic",
@@ -282,7 +324,10 @@
       "duty": "Mon-Sat 9:00-19:00, Sunday closed; urgent help offered, call ahead.",
       "url": "https://ivet.com.ua/",
       "source_url": "https://ivet.com.ua/",
-      "note": "Second number +380 96 222 71 85. No 24-h wording."
+      "note": "Second number +380 96 222 71 85. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Lun–sáb 9:00–19:00 h, cerrado dom; atención urgente, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -298,7 +343,10 @@
       "url": "https://puls-vet.dp.ua/",
       "source_url": "https://puls-vet.dp.ua/kontakty",
       "note": "Second number +380 96 043 45 05 (Viber/Telegram). Dnipro is subject to air alerts; call ahead.",
-      "quote": "Працюємо 24/7"
+      "quote": "Працюємо 24/7",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, los 7 días."
+      }
     },
     {
       "kind": "clinic",
@@ -314,7 +362,10 @@
       "url": "https://dovira.vet/",
       "source_url": "https://dovira.vet/",
       "note": "Other numbers +380 66 692 79 23, +380 63 394 29 08. Kharkiv is a frontline-adjacent city with frequent air alerts; call ahead.",
-      "quote": "Ветклініка цілодобово"
+      "quote": "Ветклініка цілодобово",
+      "duty_i18n": {
+        "es": "Clínica veterinaria abierta las 24 horas (tienda y laboratorio 9:00–20:00 h)."
+      }
     },
     {
       "kind": "clinic",
@@ -330,7 +381,10 @@
       "url": "https://www.vethospital.kh.ua/",
       "source_url": "https://www.vethospital.kh.ua/uslugi/veterinarnaya-apteka",
       "note": "Page lists hours 'Цілодобово' for the Saltivka branch and describes a 24-hour veterinary pharmacy; it does not say explicitly whether the walk-in clinic is 24 h or only the pharmacy, so emergency_24h set false after independent check (24-h claim only explicit for the pharmacy). Other numbers +380 66 037 12 84, +380 67 106 85 37. Oleksiivska 14: +380 57 773 26 59. Kholodna Hora branch marked temporarily closed. The url field is the site root, which was not itself opened.",
-      "quote": "Цілодобово"
+      "quote": "Цілодобово",
+      "duty_i18n": {
+        "es": "Sucursal de Oleksiivska 14 abierta 9:00–21:00 h; la sucursal de Saltivka tiene farmacia veterinaria las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -345,7 +399,10 @@
       "duty": "Open daily 9:00-22:00; night appointments by prior booking; inpatient ward.",
       "url": "https://centrvet.com.ua/",
       "source_url": "https://centrvet.com.ua/",
-      "note": "FAQ says 'Ми працюємо ЦІЛОДОБОВО, за попереднім записом' but footer hours are 9:00-22:00 (conflict), so 24 h not set. Other numbers +380 95 621 04 84, +380 96 344 52 76."
+      "note": "FAQ says 'Ми працюємо ЦІЛОДОБОВО, за попереднім записом' but footer hours are 9:00-22:00 (conflict), so 24 h not set. Other numbers +380 95 621 04 84, +380 96 344 52 76.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–22:00 h; citas nocturnas con reserva previa; sala de hospitalización."
+      }
     },
     {
       "kind": "clinic",
@@ -360,7 +417,10 @@
       "duty": "Mon-Thu, Sat-Sun 9:00-19:00, Fri 11:00-19:00; inpatient care around the clock.",
       "url": "https://vetexpert.com.ua/uk",
       "source_url": "https://vetexpert.com.ua/uk",
-      "note": "'Стаціонарне утримання 24/7' is an inpatient service only. Second number +380 93 393 99 93."
+      "note": "'Стаціонарне утримання 24/7' is an inpatient service only. Second number +380 93 393 99 93.",
+      "duty_i18n": {
+        "es": "Lun–jue, sáb–dom 9:00–19:00 h, vie 11:00–19:00 h; hospitalización las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -375,7 +435,10 @@
       "duty": "Mon-Sat 9:00-16:00.",
       "url": "https://www.invet.zp.ua/",
       "source_url": "https://www.invet.zp.ua/",
-      "note": "Second number +380 67 724 43 67. No 24-h wording."
+      "note": "Second number +380 67 724 43 67. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Lun–sáb 9:00–16:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -389,7 +452,10 @@
       "duty": "Daily 9:00-17:00.",
       "url": "https://enot.zp.ua/",
       "source_url": "https://enot.zp.ua/",
-      "note": "Address not on the page. No 24-h wording."
+      "note": "Address not on the page. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Todos los días 9:00–17:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -419,7 +485,10 @@
       "url": "https://vetlik.clinic/",
       "source_url": "https://vetlik.clinic/",
       "note": "Page meta says Poltava but the inpatient address is labelled Rozsoshentsi (settlement near Poltava); Reshetylivka is a separate town. Other numbers +380 99 485 51 93, +380 66 711 13 35. Online booking marked unavailable on the page. City corrected after check: inpatient address is in Rozsoshentsi.",
-      "quote": "Пн-Нд - цілодобово, без вихідних"
+      "quote": "Пн-Нд - цілодобово, без вихідних",
+      "duty_i18n": {
+        "es": "Hospital con ingreso abierto las 24 horas, los casos urgentes se atienden sin cita previa; consulta ambulatoria de Reshetylivka todos los días 9:00–15:00 h con cita previa."
+      }
     },
     {
       "kind": "clinic",
@@ -434,7 +503,10 @@
       "duty": "Daily 9:00-19:00.",
       "url": "https://vetdomik.com/",
       "source_url": "https://vetdomik.com/",
-      "note": "Second number +380 96 407 55 20. No 24-h wording."
+      "note": "Second number +380 96 407 55 20. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Todos los días 9:00–19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -449,7 +521,10 @@
       "duty": "Daily 9:00-19:00 by prior booking; round-the-clock inpatient care.",
       "url": "https://olvet.if.ua/",
       "source_url": "https://olvet.if.ua/",
-      "note": "Other branches: Molodizhna 55 (+380 67 460 42 52), Belvederska 14 (+380 50 519 81 18), Mon-Sat 9:00-19:00/18:00. 24-h wording only for inpatient care."
+      "note": "Other branches: Molodizhna 55 (+380 67 460 42 52), Belvederska 14 (+380 50 519 81 18), Mon-Sat 9:00-19:00/18:00. 24-h wording only for inpatient care.",
+      "duty_i18n": {
+        "es": "Todos los días 9:00–19:00 h con reserva previa; hospitalización las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -464,7 +539,10 @@
       "duty": "Mon-Fri 9:00-18:30, Sat 10:00-15:00, Sunday closed; urgent surgery possible, call ahead.",
       "url": "https://vetrum.com.ua/",
       "source_url": "https://vetrum.com.ua/",
-      "note": "Page is inconsistent on Saturday hours (10:00 vs 9:00-15:00). Round-the-clock wording only for inpatient supervision."
+      "note": "Page is inconsistent on Saturday hours (10:00 vs 9:00-15:00). Round-the-clock wording only for inpatient supervision.",
+      "duty_i18n": {
+        "es": "Lun–vie 9:00–18:30 h, sáb 10:00–15:00 h, cerrado dom; posible cirugía de urgencia, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -479,7 +557,10 @@
       "duty": "Daily 9:00-20:00.",
       "url": "https://vetdobrodiy.com.ua/",
       "source_url": "https://vetdobrodiy.com.ua/",
-      "note": "Page does not tie each phone to an address. Other numbers +380 50 765 45 80, +380 63 407 83 66, +380 98 276 96 86, +380 63 404 42 91."
+      "note": "Page does not tie each phone to an address. Other numbers +380 50 765 45 80, +380 63 407 83 66, +380 98 276 96 86, +380 63 404 42 91.",
+      "duty_i18n": {
+        "es": "Todos los días 9:00–20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -494,7 +575,10 @@
       "duty": "Mon-Fri 9:00-18:00, Sat-Sun 10:00-14:00.",
       "url": "https://vetservis.com/",
       "source_url": "https://vetservis.com/",
-      "note": "Other numbers +380 50 542 27 20, +380 95 585 73 07. No 24-h wording."
+      "note": "Other numbers +380 50 542 27 20, +380 95 585 73 07. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Lun–vie 9:00–18:00 h, sáb–dom 10:00–14:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -509,7 +593,10 @@
       "duty": "By appointment: Mon-Sat 9:00-20:00, Sun 10:00-18:00.",
       "url": "https://lico.vet/",
       "source_url": "https://lico.vet/",
-      "note": "Second number +380 96 509 80 05. No 24-h wording."
+      "note": "Second number +380 96 509 80 05. No 24-h wording.",
+      "duty_i18n": {
+        "es": "Con cita previa: lun–sáb 9:00–20:00 h, dom 10:00–18:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -524,7 +611,10 @@
       "duty": "Daily 9:00-19:00.",
       "url": "https://oltan-vet.com/contacts/",
       "source_url": "https://oltan-vet.com/contacts/",
-      "note": "No 24-h wording."
+      "note": "No 24-h wording.",
+      "duty_i18n": {
+        "es": "Todos los días 9:00–19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -539,7 +629,10 @@
       "duty": "Mon-Fri 9:00-19:00, Sat-Sun 9:00-16:00.",
       "url": "https://oltan-vet.com/contacts/",
       "source_url": "https://oltan-vet.com/contacts/",
-      "note": "No 24-h wording."
+      "note": "No 24-h wording.",
+      "duty_i18n": {
+        "es": "Lun–vie 9:00–19:00 h, sáb–dom 9:00–16:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -554,7 +647,10 @@
       "duty": "Branch 1 daily 8:00-20:00; branch 2 (Zluky Ave. 18/178, +380 96 05 52 200) Thu-Mon 9:00-18:00.",
       "url": "https://vetmedico.te.ua/",
       "source_url": "https://vetmedico.te.ua/",
-      "note": "No 24-h wording."
+      "note": "No 24-h wording.",
+      "duty_i18n": {
+        "es": "Sucursal 1 todos los días 8:00–20:00 h; sucursal 2 (Zluky Ave. 18/178, +380 96 05 52 200) jue–lun 9:00–18:00 h."
+      }
     }
   ],
   "notes": "Researched 2026-11-11 with WebFetch only. Official sources: the State Service of Ukraine on Food Safety (dpss.gov.ua) lists state hospitals without phones/hours; the Ivano-Frankivsk regional state hospital contact list (vetif.gov.ua) has no hours/species and was not used for entries. No national or regional duty rota (чергові ветлікарні) and no animal poison information line were found; the State Service 24-hour hotline (050 230 04 28, 044 244 82 02) is a general consumer/food-safety call centre, not an animal poison line. Conflict rule: where a clinic page says 'цілодобово' but its own posted hours are shorter (Lessy, Vetmedcomplex, Grand Plus, Zoovet Odesa, CentrVet) emergency_24h is false and the claim is in notes; inpatient-only 24/7 (ArtVet, VetExpert, OlVet, Vetrum) is also false. Unreachable after two tries (client_error or robots.txt): aldenvet.ua, petwealth.kiev.ua, zoopatrul-clinic.com.ua, supervet.ua, 103vet.com.ua, zpolis.com.ua (Kyiv); vetmed.com.ua (Lviv); vivavet.odesa.ua, vetklinika-oficerskaya.com.ua, vetserviceodessa.com, exvet.com.ua, vetekspert.odessa.ua, aybolit.od.ua (Odesa); vet-clinica.dp.ua, kotofey.dp.ua (Dnipro); vetlider.057.ua (Kharkiv); vetcenter.zp.ua, kotopes.org.ua (Zaporizhzhia); vethouse.com.ua, vet-expert.vn.ua (Vinnytsia); pankotskyj.com (Chernivtsi); petfriendlyclinic.com, vetmyr.com.ua (Ivano-Frankivsk/Poltava); veteurolab.0352.ua (Ternopil); kyivcity.gov.ua communal-clinic notice; ua-region.com.ua. Not found with a reachable own page: Chernivtsi (no entry), Mykolaiv, Cherkasy, Khmelnytskyi, Zhytomyr, Chernihiv, Kropyvnytskyi, Sumy; Rivne emergency clinic Dobrovet 24 only seen on aggregators. Lviv communal clinic (2016 article) and the Lviv university Animal Clinic (under reconstruction) were not added. War context: regions under occupation or active fighting (Crimea, Donetsk, Luhansk, Kherson, parts of Zaporizhzhia/Kharkiv/Sumy) were not researched; opening hours in Kharkiv, Dnipro, Odesa, Zaporizhzhia, Kyiv may change with air alerts and curfew, so each 24-h entry should be confirmed by phone."

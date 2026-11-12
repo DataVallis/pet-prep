@@ -68,7 +68,8 @@
         "sl": "Odprto vsak dan 9–20 (ne 24 ur na dan).",
         "hr": "Otvoreno svaki dan 09:00–20:00 (nije 24 h).",
         "de": "Täglich 9–20 Uhr geöffnet (nicht 24 Stunden).",
-        "fr": "Ouvert tous les jours, 9 h–20 h (pas 24 h/24)."
+        "fr": "Ouvert tous les jours, 9 h–20 h (pas 24 h/24).",
+        "es": "Abierto todos los días 9:00–20:00 h (no 24 h)."
       },
       "small_animals": true,
       "url": "https://vssarajevo.ba/",
@@ -113,7 +114,8 @@
         "sl": "Redni delovni čas 9–19; številki za nujne primere 065 378 810 in 057 340 620.",
         "hr": "Redovno radno vrijeme 09:00–19:00; telefoni za hitne slučajeve 065 378 810 i 057 340 620.",
         "de": "Reguläre Öffnungszeiten 9–19 Uhr; Notfalltelefone 065 378 810 und 057 340 620.",
-        "fr": "Horaires habituels : 9 h–19 h ; urgences : 065 378 810 et 057 340 620."
+        "fr": "Horaires habituels : 9 h–19 h ; urgences : 065 378 810 et 057 340 620.",
+        "es": "Horario habitual 9:00–19:00 h; teléfonos de urgencias 065 378 810 y 057 340 620."
       },
       "source_url": "https://n1info.ba/vijesti/a154376-Sarajevo-ima-dezurnu-ambulantu-kod-andquotomiljenog-veterinaraandquot/",
       "checked": "2026-11-04",
@@ -132,7 +134,8 @@
         "sl": "Pon–pet 8–20, sob 9–14; izven delovnega časa in ob nedeljah je za nujne primere na voljo dežurni veterinar: 066/484-373.",
         "hr": "Pon–pet 08:00–20:00, sub 09:00–14:00; dežurni veterinar za hitne slučajeve izvan radnog vremena i nedjeljom: 066/484-373.",
         "de": "Mo–Fr 8–20 Uhr, Sa 9–14 Uhr; Bereitschaftstierarzt außerhalb der Öffnungszeiten und sonntags für Notfälle: 066/484-373.",
-        "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h ; vétérinaire de garde hors horaires et le dimanche pour les urgences : 066/484-373."
+        "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h ; vétérinaire de garde hors horaires et le dimanche pour les urgences : 066/484-373.",
+        "es": "Lun–vie 8:00–20:00 h, sáb 9:00–14:00 h; veterinario de guardia fuera de horario y los domingos para urgencias: 066/484-373."
       },
       "url": "https://www.blvet.ba/",
       "source_url": "https://www.blvet.ba/",
@@ -152,7 +155,8 @@
         "sl": "Pon–pet 8–19, sob 8–13, ned v pripravljenosti; dežurna številka 066 321 132.",
         "hr": "Pon–pet 08:00–19:00, sub 08:00–13:00, ned dežurstvo; dežurni telefon 066 321 132.",
         "de": "Mo–Fr 8–19 Uhr, Sa 8–13 Uhr, So Bereitschaftsdienst; Notdienst-Telefon 066 321 132.",
-        "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–13 h, dim. astreinte ; téléphone de garde : 066 321 132."
+        "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–13 h, dim. astreinte ; téléphone de garde : 066 321 132.",
+        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–13:00 h, dom de guardia; teléfono de guardia 066 321 132."
       },
       "url": "https://veterinarskaambulanta.ba/en/",
       "source_url": "https://veterinarskaambulanta.ba/en/contact-us/",
@@ -172,7 +176,8 @@
         "sl": "Pon–pet 9–20, sob 9–14, ned zaprto.",
         "hr": "Pon–pet 09:00–20:00, sub 09:00–14:00, ned zatvoreno.",
         "de": "Mo–Fr 9–20 Uhr, Sa 9–14 Uhr, So geschlossen.",
-        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h, fermé le dimanche."
+        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h, fermé le dimanche.",
+        "es": "Lun–vie 9:00–20:00 h, sáb 9:00–14:00 h, domingo cerrado."
       },
       "url": "https://www.vethealth.ba/",
       "source_url": "https://vethealth.ba/dezurni-veterinar.html",
@@ -252,7 +257,8 @@
         "sl": "Pon–pet 8–18, sob 9–15, ned 10–14; dežurni veterinar za nujne primere na 063 900 100.",
         "hr": "Pon–pet 08:00–18:00, sub 09:00–15:00, ned 10:00–14:00; dežurni veterinar za hitne slučajeve na 063 900 100.",
         "de": "Mo–Fr 8–18 Uhr, Sa 9–15 Uhr, So 10–14 Uhr; Bereitschaftstierarzt für Notfälle unter 063 900 100.",
-        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–15 h, dim. 10 h–14 h ; vétérinaire de garde pour les urgences au 063 900 100."
+        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–15 h, dim. 10 h–14 h ; vétérinaire de garde pour les urgences au 063 900 100.",
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–15:00 h, dom 10:00–14:00 h; veterinario de guardia para urgencias en el 063 900 100."
       },
       "source_url": "https://www.klix.ba/biznis/u-mostaru-otvorena-najsavremenija-veterinarska-stanica-u-bih-uskoro-krece-i-centar-veterinarske-izvrsnosti/250403131",
       "checked": "2026-11-04",
@@ -367,7 +373,8 @@
         "sl": "Pon–sob 7–18, ned 7–11; dežurna številka 035/207-211.",
         "hr": "Pon–sub 07:00–18:00, ned 07:00–11:00; dežurni telefon 035/207-211.",
         "de": "Mo–Sa 7–18 Uhr, So 7–11 Uhr; Notdienst-Telefon 035/207-211.",
-        "fr": "Lun.–sam. 7 h–18 h, dim. 7 h–11 h ; téléphone de garde : 035/207-211."
+        "fr": "Lun.–sam. 7 h–18 h, dim. 7 h–11 h ; téléphone de garde : 035/207-211.",
+        "es": "Lun–sáb 7:00–18:00 h, dom 7:00–11:00 h; teléfono de guardia 035/207-211."
       },
       "url": "https://vstuzla.ba/",
       "source_url": "https://vstuzla.ba/kontakt/",
@@ -485,7 +492,8 @@
         "sl": "Številka za nujne primere 24 ur na dan +387 65 968 642; redni delovni čas pon–pet 8–18, sob 8–16.",
         "hr": "Hitna linija 24 h na +387 65 968 642; redovno radno vrijeme pon–pet 08:00–18:00, sub 08:00–16:00.",
         "de": "Notfalltelefon rund um die Uhr unter +387 65 968 642; reguläre Öffnungszeiten Mo–Fr 8–18 Uhr, Sa 8–16 Uhr.",
-        "fr": "Ligne d’urgence 24 h/24 au +387 65 968 642 ; horaires habituels : lun.–ven. 8 h–18 h, sam. 8 h–16 h."
+        "fr": "Ligne d’urgence 24 h/24 au +387 65 968 642 ; horaires habituels : lun.–ven. 8 h–18 h, sam. 8 h–16 h.",
+        "es": "Línea de urgencias 24 h en el +387 65 968 642; horario habitual lun–vie 8:00–18:00 h, sáb 8:00–16:00 h."
       },
       "url": "https://novavet.ba/",
       "source_url": "https://novavet.ba/pet-shop/",
@@ -505,7 +513,8 @@
         "sl": "Pon–pet 8–16.",
         "hr": "Pon–pet 08:00–16:00.",
         "de": "Mo–Fr 8–16 Uhr.",
-        "fr": "Lun.–ven. 8 h–16 h."
+        "fr": "Lun.–ven. 8 h–16 h.",
+        "es": "Lun–vie 8:00–16:00 h."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -525,7 +534,8 @@
         "sl": "Odprto 24 ur na dan.",
         "hr": "Otvoreno 24 h.",
         "de": "Rund um die Uhr geöffnet.",
-        "fr": "Ouvert 24 h/24."
+        "fr": "Ouvert 24 h/24.",
+        "es": "Abierto 24 h."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -544,7 +554,8 @@
         "sl": "Odprto 24 ur na dan.",
         "hr": "Otvoreno 24 h.",
         "de": "Rund um die Uhr geöffnet.",
-        "fr": "Ouvert 24 h/24."
+        "fr": "Ouvert 24 h/24.",
+        "es": "Abierto 24 h."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",

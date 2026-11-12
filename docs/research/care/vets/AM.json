@@ -67,7 +67,10 @@
       "url": "https://vetexpert.am/",
       "source_url": "https://vetexpert.am/",
       "checked": "2026-11-12",
-      "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h."
+      "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–24:00 h; línea telefónica disponible las 24 horas. Llama antes por la noche."
+      }
     },
     {
       "kind": "clinic",
@@ -81,7 +84,10 @@
       "url": "https://imvet.am/en/",
       "source_url": "https://imvet.am/en/",
       "checked": "2026-11-12",
-      "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim."
+      "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim.",
+      "duty_i18n": {
+        "es": "Veterinario a domicilio en Yerevan y hasta 30 km a la redonda; anuncia atención las 24 horas con veterinario de urgencias."
+      }
     },
     {
       "kind": "clinic",
@@ -96,7 +102,10 @@
       "url": "https://joli.am/clinics/",
       "source_url": "https://joli.am/clinics/",
       "checked": "2026-11-12",
-      "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404."
+      "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404.",
+      "duty_i18n": {
+        "es": "Anuncia atención veterinaria las 24 horas y ambulancia para mascotas en el +374 99 404070. Llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -111,7 +120,10 @@
       "url": "https://joli.am/en/locations",
       "source_url": "https://joli.am/en/locations",
       "checked": "2026-11-12",
-      "note": "Locations page lists services Shop, Clinic; hours 10:00-22:00."
+      "note": "Locations page lists services Shop, Clinic; hours 10:00-22:00.",
+      "duty_i18n": {
+        "es": "Abierto todos los días 10:00–22:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -126,7 +138,10 @@
       "url": "https://vetexpress.am/en/contact/",
       "source_url": "https://vetexpress.am/en/contact/",
       "checked": "2026-11-12",
-      "note": "Second phone +374 33 209966. Footer says 'Sunday 9AM-12AM', probably 12 PM."
+      "note": "Second phone +374 33 209966. Footer says 'Sunday 9AM-12AM', probably 12 PM.",
+      "duty_i18n": {
+        "es": "Lun–sáb 10:00–20:00 h, dom 9:00–12:00 h."
+      }
     },
     {
       "kind": "clinic",

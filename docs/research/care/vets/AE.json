@@ -29,7 +29,8 @@
       "emergency_24h": true,
       "duty": "Hospital branch open 24 hours; other branches have set hours (JLT, JVC, Downtown, Palm 7 am-10 pm).",
       "duty_i18n": {
-        "fr": "Site hospitalier ouvert 24 h/24 ; les autres sites ont des horaires fixes (JLT, JVC, Downtown, Palm : 7 h–22 h)."
+        "fr": "Site hospitalier ouvert 24 h/24 ; les autres sites ont des horaires fixes (JLT, JVC, Downtown, Palm : 7 h–22 h).",
+        "es": "Hospital abierto las 24 horas; el resto de sedes tienen horario fijo (JLT, JVC, Downtown, Palm: 7:00–22:00 h)."
       },
       "small_animals": true,
       "url": "https://modernvet.com/",
@@ -47,7 +48,8 @@
       "emergency_24h": true,
       "duty": "Open daily 8 am-11 pm. 24/7 emergency line: 056 282 9496.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 8 h–23 h. Ligne d’urgence 24 h/24, 7 j/7 : 056 282 9496."
+        "fr": "Ouvert tous les jours, 8 h–23 h. Ligne d’urgence 24 h/24, 7 j/7 : 056 282 9496.",
+        "es": "Abierto todos los días 8:00–23:00 h. Línea de urgencias 24 h: 056 282 9496."
       },
       "small_animals": true,
       "url": "https://pawsitive.ae/",
@@ -65,7 +67,8 @@
       "emergency_24h": true,
       "duty": "Open daily 9 am-9 pm. 24/7 emergency line: 050 321 3969.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 9 h–21 h. Ligne d’urgence 24 h/24, 7 j/7 : 050 321 3969."
+        "fr": "Ouvert tous les jours, 9 h–21 h. Ligne d’urgence 24 h/24, 7 j/7 : 050 321 3969.",
+        "es": "Abierto todos los días 9:00–21:00 h. Línea de urgencias 24 h: 050 321 3969."
       },
       "small_animals": true,
       "url": "https://pawsitive.ae/",
@@ -83,7 +86,8 @@
       "emergency_24h": true,
       "duty": "Open daily 9 am-10 pm. 24/7 emergency line: 056 261 0140.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 9 h–22 h. Ligne d’urgence 24 h/24, 7 j/7 : 056 261 0140."
+        "fr": "Ouvert tous les jours, 9 h–22 h. Ligne d’urgence 24 h/24, 7 j/7 : 056 261 0140.",
+        "es": "Abierto todos los días 9:00–22:00 h. Línea de urgencias 24 h: 056 261 0140."
       },
       "small_animals": true,
       "url": "https://pawsitive.ae/",
@@ -100,7 +104,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency care, every day of the year. General line +971 600 566 253.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24, 7 j/7, tous les jours de l’année. Standard : +971 600 566 253."
+        "fr": "Urgences 24 h/24, 7 j/7, tous les jours de l’année. Standard : +971 600 566 253.",
+        "es": "Urgencias las 24 horas, todos los días del año. Línea general +971 600 566 253."
       },
       "small_animals": true,
       "url": "https://noblevetclinic.com/",
@@ -118,7 +123,8 @@
       "emergency_24h": true,
       "duty": "Open daily 9 am-9 pm; 24/7 emergency line +971 54 211 7635. Main line 04 570 0430.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 9 h–21 h ; ligne d’urgence 24 h/24, 7 j/7 : +971 54 211 7635. Standard : 04 570 0430."
+        "fr": "Ouvert tous les jours, 9 h–21 h ; ligne d’urgence 24 h/24, 7 j/7 : +971 54 211 7635. Standard : 04 570 0430.",
+        "es": "Abierto todos los días 9:00–21:00 h; línea de urgencias 24 h +971 54 211 7635. Teléfono principal 04 570 0430."
       },
       "small_animals": true,
       "url": "https://creeksidevet.ae/",
@@ -136,7 +142,8 @@
       "emergency_24h": false,
       "duty": "Cats. Clinic hours daily (8 am-9 pm weekdays, 8 am-8 pm weekend). Emergency line +971 54 306 5423. Call ahead.",
       "duty_i18n": {
-        "fr": "Chats. Clinique ouverte tous les jours (8 h–21 h en semaine, 8 h–20 h le week-end). Ligne d’urgence : +971 54 306 5423. Appelez avant de venir."
+        "fr": "Chats. Clinique ouverte tous les jours (8 h–21 h en semaine, 8 h–20 h le week-end). Ligne d’urgence : +971 54 306 5423. Appelez avant de venir.",
+        "es": "Gatos. Horario de la clínica todos los días (8:00–21:00 h entre semana, 8:00–20:00 h el fin de semana). Línea de urgencias +971 54 306 5423. Llama antes."
       },
       "small_animals": true,
       "url": "https://www.thecatvet.ae/",
@@ -154,7 +161,8 @@
       "emergency_24h": false,
       "duty": "Al Wasl branch 7 am-9 pm. Emergency line +971 50 366 5985. Call ahead.",
       "duty_i18n": {
-        "fr": "Site d’Al Wasl ouvert 7 h–21 h. Ligne d’urgence : +971 50 366 5985. Appelez avant de venir."
+        "fr": "Site d’Al Wasl ouvert 7 h–21 h. Ligne d’urgence : +971 50 366 5985. Appelez avant de venir.",
+        "es": "Sede de Al Wasl 7:00–21:00 h. Línea de urgencias +971 50 366 5985. Llama antes."
       },
       "small_animals": true,
       "url": "https://www.thecityvetclinic.com/",
@@ -172,7 +180,8 @@
       "emergency_24h": true,
       "duty": "Open for 24/7 emergencies. Call ahead.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Appelez avant de venir."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Appelez avant de venir.",
+        "es": "Abierto para urgencias las 24 horas. Llama antes."
       },
       "small_animals": true,
       "url": "https://www.supervetdubai.com/",
@@ -190,7 +199,8 @@
       "emergency_24h": false,
       "duty": "Pets: Sun-Thu 7:30 am-2:30 pm, Fri 8-11:30 am. Book an appointment online.",
       "duty_i18n": {
-        "fr": "Animaux de compagnie : dim.–jeu. 7 h 30–14 h 30, ven. 8 h–11 h 30. Rendez-vous en ligne."
+        "fr": "Animaux de compagnie : dim.–jeu. 7 h 30–14 h 30, ven. 8 h–11 h 30. Rendez-vous en ligne.",
+        "es": "Mascotas: dom–jue 7:30–14:30 h, vie 8:00–11:30 h. Pide cita previa en línea."
       },
       "small_animals": true,
       "url": "https://www.dm.gov.ae/municipality-business/veterinary-services-section/",
@@ -208,7 +218,8 @@
       "emergency_24h": false,
       "duty": "Posted hours Mon-Sat 9 am-9 pm. Call ahead for emergencies.",
       "duty_i18n": {
-        "fr": "Horaires affichés : lun.–sam. 9 h–21 h. Urgences : appelez avant de venir."
+        "fr": "Horaires affichés : lun.–sam. 9 h–21 h. Urgences : appelez avant de venir.",
+        "es": "Horario publicado: lun–sáb 9:00–21:00 h. Llama antes en caso de urgencia."
       },
       "small_animals": true,
       "url": "https://capitalvet.ae/",
@@ -226,7 +237,8 @@
       "emergency_24h": true,
       "duty": "Open for 24/7 emergencies.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences.",
+        "es": "Abierto para urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.supervetdubai.com/vet-in-abu-dhabi",
@@ -244,7 +256,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, los 7 días de la semana."
       },
       "small_animals": true,
       "url": "https://cutecatvet.com/abu-dhabi/",
@@ -262,7 +275,8 @@
       "emergency_24h": false,
       "duty": "Sat-Thu 10 am-6 pm, closed Friday. Emergency line 050 641 1007 answered 24/7; after hours emergencies are handled as a call-out.",
       "duty_i18n": {
-        "fr": "Sam.–jeu. 10 h–18 h, fermé le vendredi. Ligne d’urgence 050 641 1007 joignable 24 h/24, 7 j/7 ; en dehors des heures d’ouverture, les urgences sont prises en charge sur déplacement."
+        "fr": "Sam.–jeu. 10 h–18 h, fermé le vendredi. Ligne d’urgence 050 641 1007 joignable 24 h/24, 7 j/7 ; en dehors des heures d’ouverture, les urgences sont prises en charge sur déplacement.",
+        "es": "Sáb–jue 10:00–18:00 h, cerrado los viernes. Línea de urgencias 050 641 1007 atendida las 24 horas; fuera de horario las urgencias se atienden con servicio a domicilio."
       },
       "small_animals": true,
       "url": "https://www.newvetclinic.com/",
@@ -280,7 +294,8 @@
       "emergency_24h": false,
       "duty": "Open daily 8 am-8 pm. Emergency line +971 56 917 7147 answered 24/7.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 8 h–20 h. Ligne d’urgence +971 56 917 7147 joignable 24 h/24, 7 j/7."
+        "fr": "Ouvert tous les jours, 8 h–20 h. Ligne d’urgence +971 56 917 7147 joignable 24 h/24, 7 j/7.",
+        "es": "Abierto todos los días 8:00–20:00 h. Línea de urgencias +971 56 917 7147 atendida las 24 horas."
       },
       "small_animals": true,
       "url": "https://petpavilion.ae/",
@@ -298,7 +313,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, los 7 días de la semana."
       },
       "small_animals": true,
       "url": "https://cutecatvet.com/sharjah/",
@@ -316,7 +332,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 with a 24/7 emergency line.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, avec ligne d’urgence 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7, avec ligne d’urgence 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, con línea de urgencias 24 h."
       },
       "small_animals": true,
       "url": "https://sharjah.hub-clinics.com/",
@@ -333,7 +350,8 @@
       "emergency_24h": true,
       "duty": "Jubail branch always open 24/7; Alhoshy branch Sat-Thu 10 am-midnight, Fri 2 pm-midnight.",
       "duty_i18n": {
-        "fr": "Site de Jubail toujours ouvert, 24 h/24, 7 j/7 ; site d’Alhoshy : sam.–jeu. 10 h–minuit, ven. 14 h–minuit."
+        "fr": "Site de Jubail toujours ouvert, 24 h/24, 7 j/7 ; site d’Alhoshy : sam.–jeu. 10 h–minuit, ven. 14 h–minuit.",
+        "es": "Sede de Jubail siempre abierta las 24 horas; sede de Alhoshy sáb–jue 10:00–24:00 h, vie 14:00–24:00 h."
       },
       "small_animals": true,
       "url": "https://turkishvetclinic.com/home/",
@@ -351,7 +369,8 @@
       "emergency_24h": false,
       "duty": "Sat-Thu 12 pm-10 pm, Fri 1 pm-10 pm. Call ahead for urgent cases.",
       "duty_i18n": {
-        "fr": "Sam.–jeu. 12 h–22 h, ven. 13 h–22 h. Cas urgents : appelez avant de venir."
+        "fr": "Sam.–jeu. 12 h–22 h, ven. 13 h–22 h. Cas urgents : appelez avant de venir.",
+        "es": "Sáb–jue 12:00–22:00 h, vie 13:00–22:00 h. Llama antes en casos urgentes."
       },
       "small_animals": true,
       "url": "https://www.alrafeeqvet.com/",
@@ -369,7 +388,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 with emergency service.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, avec service d’urgence."
+        "fr": "Ouvert 24 h/24, 7 j/7, avec service d’urgence.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "small_animals": true,
       "url": "https://petparadisevetclinic.com/",
@@ -387,7 +407,8 @@
       "emergency_24h": false,
       "duty": "Daily 10 am-1 pm and 4 pm-10 pm. Phone line advertised 24/7.",
       "duty_i18n": {
-        "fr": "Tous les jours 10 h–13 h et 16 h–22 h. Ligne téléphonique annoncée 24 h/24, 7 j/7."
+        "fr": "Tous les jours 10 h–13 h et 16 h–22 h. Ligne téléphonique annoncée 24 h/24, 7 j/7.",
+        "es": "Todos los días 10:00–13:00 h y 16:00–22:00 h. Línea telefónica disponible las 24 horas."
       },
       "small_animals": true,
       "url": "https://baytvet.com/",
@@ -405,7 +426,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario."
       },
       "small_animals": true,
       "url": "https://shahadvetclinic.com/",
@@ -423,7 +445,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario."
       },
       "small_animals": true,
       "url": "https://rvc.ae/",
@@ -441,7 +464,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency vet services.",
       "duty_i18n": {
-        "fr": "Urgences vétérinaires 24 h/24, 7 j/7."
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7.",
+        "es": "Veterinario de urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://vets24.ae/",
@@ -459,7 +483,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency vet services.",
       "duty_i18n": {
-        "fr": "Urgences vétérinaires 24 h/24, 7 j/7."
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7.",
+        "es": "Veterinario de urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://vets24.ae/",

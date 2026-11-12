@@ -39,7 +39,8 @@
         "sl": "Nujni sprejem je odprt vsak dan, 24 ur na dan, vse leto",
         "hr": "Hitni prijem otvoren svaki dan, 0–24, cijele godine.",
         "de": "Notaufnahme das ganze Jahr täglich rund um die Uhr geöffnet.",
-        "fr": "Accueil des urgences ouvert tous les jours, 24 h/24, toute l’année."
+        "fr": "Accueil des urgences ouvert tous les jours, 24 h/24, toute l’année.",
+        "es": "Recepción de urgencias abierta todos los días, las 24 horas, todo el año"
       },
       "url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
@@ -60,7 +61,8 @@
         "sl": "Odprto 24 ur na dan, vsak dan; redni delovni čas pon–pet 8–18, sob 9–15",
         "hr": "Otvoreno 24 h svaki dan; redovno radno vrijeme pon–pet 8–18, sub 9–15.",
         "de": "Täglich rund um die Uhr geöffnet; reguläre Öffnungszeiten Mo–Fr 8–18 Uhr, Sa 9–15 Uhr.",
-        "fr": "Ouvert 24 h/24 tous les jours ; horaires habituels lun.–ven. 8 h–18 h, sam. 9 h–15 h."
+        "fr": "Ouvert 24 h/24 tous les jours ; horaires habituels lun.–ven. 8 h–18 h, sam. 9 h–15 h.",
+        "es": "Abierto 24 h todos los días; horario habitual lun–vie 8:00–18:00 h, sáb 9:00–15:00 h"
       },
       "url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
@@ -81,7 +83,8 @@
         "sl": "24-urno dežurstvo za male živali vsak dan vse leto; redni delovni čas pon–pet 7.30–20, sob 9–16",
         "hr": "Dežurstvo za male životinje 24 h svaki dan, cijele godine; redovno radno vrijeme pon–pet 7:30–20, sub 9–16.",
         "de": "Kleintier-Notdienst das ganze Jahr täglich rund um die Uhr; reguläre Öffnungszeiten Mo–Fr 7.30–20 Uhr, Sa 9–16 Uhr.",
-        "fr": "Garde petits animaux 24 h/24 tous les jours, toute l’année ; horaires habituels lun.–ven. 7 h 30–20 h, sam. 9 h–16 h."
+        "fr": "Garde petits animaux 24 h/24 tous les jours, toute l’année ; horaires habituels lun.–ven. 7 h 30–20 h, sam. 9 h–16 h.",
+        "es": "Guardia de pequeños animales 24 h todos los días del año; horario habitual lun–vie 7:30–20:00 h, sáb 9:00–16:00 h"
       },
       "url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
@@ -101,7 +104,8 @@
         "sl": "Nujna služba 0–24",
         "hr": "Hitno dežurstvo 0–24.",
         "de": "Notdienst rund um die Uhr.",
-        "fr": "Service d’urgences 24 h/24."
+        "fr": "Service d’urgences 24 h/24.",
+        "es": "Urgencias 0:00–24:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -123,7 +127,8 @@
         "sl": "Nujna služba 0–24; delovni čas ambulante 8–18",
         "hr": "Hitno dežurstvo 0–24; radno vrijeme klinike 8–18.",
         "de": "Notdienst rund um die Uhr; Klinikzeiten 8–18 Uhr.",
-        "fr": "Service d’urgences 24 h/24 ; horaires de la clinique 8 h–18 h."
+        "fr": "Service d’urgences 24 h/24 ; horaires de la clinique 8 h–18 h.",
+        "es": "Urgencias 0:00–24:00 h; horario de la clínica 8:00–18:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/?clinic-id=21683",
@@ -144,7 +149,8 @@
         "sl": "24-urna nujna in telefonska dežurna služba",
         "hr": "Hitna i telefonska služba 24 h.",
         "de": "Notdienst und telefonische Bereitschaft rund um die Uhr.",
-        "fr": "Urgences et permanence téléphonique 24 h/24."
+        "fr": "Urgences et permanence téléphonique 24 h/24.",
+        "es": "Urgencias y guardia telefónica 24 h"
       },
       "url": "https://www.nmbu.no/aktuelt/tema/veterinaerhogskolen/dyresykehuset-smadyr?page=2",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikk-osteras/akuttvakt/",
@@ -165,7 +171,8 @@
         "sl": "Tedenski razpored od pet 16 do naslednjega petka 8, izmenjuje se med ambulantami (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); veliko tednov je BREZ dežurstva (okt–dec 2026). Pred potjo vedno pokličite dežurno številko.",
         "hr": "Tjedni raspored od petka 16:00 do sljedećeg petka 08:00, izmjenjuju se klinike (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); mnogo tjedana nema dežurstvo (listopad–prosinac 2026.). Prije dolaska uvijek nazovi dežurni broj.",
         "de": "Wöchentlicher Dienstplan von Fr 16 Uhr bis Fr 8 Uhr der Folgewoche, im Wechsel zwischen den Kliniken (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); in vielen Wochen gibt es KEINEN Dienst (Okt.–Dez. 2026). Bitte vor der Anfahrt immer die Notdienstnummer anrufen.",
-        "fr": "Garde hebdomadaire du ven. 16 h au ven. suivant 8 h, en alternance entre cliniques (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården) ; de nombreuses semaines sont SANS garde (oct.–déc. 2026). Appelez toujours le numéro de garde avant de vous déplacer."
+        "fr": "Garde hebdomadaire du ven. 16 h au ven. suivant 8 h, en alternance entre cliniques (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården) ; de nombreuses semaines sont SANS garde (oct.–déc. 2026). Appelez toujours le numéro de garde avant de vous déplacer.",
+        "es": "Turno semanal del viernes a las 16:00 al viernes siguiente a las 8:00, rotando entre clínicas (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); muchas semanas NO hay guardia (oct–dic 2026). Llama siempre al número de guardia antes de ir."
       },
       "note": "No small-animal vakt phone published on the page. No night emergency service when no vakt. Bergen kommune news (updated 2026-10-09): long periods without small-animal vakt 9 Oct-19 Dec 2026; new tender answer deadline 10 Nov 2026. Do not use the horse/production-animal numbers for pets."
     },
@@ -184,7 +191,8 @@
         "sl": "Dežurstvo za male živali za Haugaland",
         "hr": "Dežurstvo za male životinje za Haugaland.",
         "de": "Kleintier-Bereitschaftsdienst für Haugaland.",
-        "fr": "Garde petits animaux pour Haugaland."
+        "fr": "Garde petits animaux pour Haugaland.",
+        "es": "Guardia de pequeños animales para Haugaland"
       },
       "quote": "Ring smådyrvakta på Haugalandet på 820 90 020",
       "note": "Hours not given."
@@ -204,7 +212,8 @@
         "sl": "Dežurstvo 24 ur na dan prek Mjøsvakta; partnerji Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
         "hr": "Dežurstvo 0–24 preko Mjøsvakta; partneri Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik.",
         "de": "Bereitschaftsdienst rund um die Uhr über Mjøsvakta; Partner Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik.",
-        "fr": "Astreinte 24 h/24 via Mjøsvakta ; partenaires : Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik."
+        "fr": "Astreinte 24 h/24 via Mjøsvakta ; partenaires : Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik.",
+        "es": "Guardia las 24 horas a través de Mjøsvakta; clínicas asociadas Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik"
       }
     },
     {
@@ -223,7 +232,8 @@
         "sl": "Telefon je dosegljiv do 23 vsak dan; kasnejše nujne primere napotijo na AniCura Dyresykehus Oslo 21 52 53 00",
         "hr": "Na telefon se javljaju svaki dan do 23:00; kasnije hitne slučajeve upućuju u AniCura Dyresykehus Oslo 21 52 53 00.",
         "de": "Telefon täglich bis 23 Uhr besetzt; danach werden dringende Fälle an AniCura Dyresykehus Oslo 21 52 53 00 verwiesen.",
-        "fr": "Téléphone assuré jusqu’à 23 h tous les jours ; ensuite, cas urgents orientés vers AniCura Dyresykehus Oslo 21 52 53 00."
+        "fr": "Téléphone assuré jusqu’à 23 h tous les jours ; ensuite, cas urgents orientés vers AniCura Dyresykehus Oslo 21 52 53 00.",
+        "es": "Teléfono atendido hasta las 23:00 todos los días; más tarde los casos urgentes se remiten a AniCura Dyresykehus Oslo 21 52 53 00"
       },
       "quote": "Telefonen er bemannet frem til klokken 23:00 alle dager."
     },
@@ -242,7 +252,8 @@
         "sl": "Občinska dežurna služba za male in velike živali; ob delavnikih AniCura Dyresykehus Oslo 8–23; zunaj delovnega časa/ob vikendih dežurstvo NMBU 820 90 102",
         "hr": "Općinska dežurna služba za male i velike životinje; radnim danima AniCura Dyresykehus Oslo 08:00–23:00; izvan radnog vremena i vikendom dežurstvo NMBU 820 90 102.",
         "de": "Kommunaler Notdienst für kleine und große Tiere; werktags AniCura Dyresykehus Oslo 8–23 Uhr; außerhalb dieser Zeiten und am Wochenende Notdienst der NMBU 820 90 102.",
-        "fr": "Service de garde municipal pour petits et grands animaux ; en semaine AniCura Dyresykehus Oslo 8 h–23 h ; hors horaires et week-ends, garde NMBU 820 90 102."
+        "fr": "Service de garde municipal pour petits et grands animaux ; en semaine AniCura Dyresykehus Oslo 8 h–23 h ; hors horaires et week-ends, garde NMBU 820 90 102.",
+        "es": "Servicio municipal de guardia para animales pequeños y grandes; entre semana AniCura Dyresykehus Oslo 8:00–23:00 h; fuera de horario y fines de semana, guardia NMBU 820 90 102"
       }
     },
     {
@@ -260,7 +271,8 @@
         "sl": "Evidensia Alltid 22 12 00 00 pokriva Oslo, Trondheim in Kristiansand 24 ur na dan; navedene so dežurne številke po ambulantah",
         "hr": "Evidensia Alltid 22 12 00 00 pokriva Oslo, Trondheim i Kristiansand 0–24; navedeni su dežurni brojevi po klinikama.",
         "de": "Evidensia Alltid 22 12 00 00 deckt Oslo, Trondheim und Kristiansand rund um die Uhr ab; Notdienstnummern der einzelnen Kliniken sind aufgeführt.",
-        "fr": "Evidensia Alltid 22 12 00 00 couvre Oslo, Trondheim et Kristiansand 24 h/24 ; numéros de garde de chaque clinique indiqués."
+        "fr": "Evidensia Alltid 22 12 00 00 couvre Oslo, Trondheim et Kristiansand 24 h/24 ; numéros de garde de chaque clinique indiqués.",
+        "es": "Evidensia Alltid 22 12 00 00 cubre Oslo, Trondheim y Kristiansand las 24 horas; números de guardia de cada clínica en la lista"
       },
       "note": "Page says the Alltid number is for Oslo, Trondheim and Kristiansand and not tied to one clinic."
     },
@@ -279,7 +291,8 @@
         "sl": "Del dežurne službe za male živali v Tromsøju; 24-urno dežurstvo vsak četrtek in vsak četrti vikend; pon–sre, pet 8–16, čet 8–18.30, sob 10–13",
         "hr": "Dio dežurstva za male životinje u Tromsøu; dežurstvo 24 h svakog četvrtka i svaki četvrti vikend; pon–sri i pet 8–16, čet 8–18:30, sub 10–13.",
         "de": "Teil des Kleintier-Notdienstes von Tromsø; Dienst jeden Donnerstag und jedes vierte Wochenende rund um die Uhr; Mo–Mi, Fr 8–16 Uhr, Do 8–18.30 Uhr, Sa 10–13 Uhr.",
-        "fr": "Fait partie de la garde petits animaux de Tromsø ; garde 24 h/24 chaque jeudi et un week-end sur quatre ; lun.–mer., ven. 8 h–16 h, jeu. 8 h–18 h 30, sam. 10 h–13 h."
+        "fr": "Fait partie de la garde petits animaux de Tromsø ; garde 24 h/24 chaque jeudi et un week-end sur quatre ; lun.–mer., ven. 8 h–16 h, jeu. 8 h–18 h 30, sam. 10 h–13 h.",
+        "es": "Parte de la guardia de pequeños animales de Tromsø; guardia 24 h todos los jueves y un fin de semana de cada cuatro; lun–mié y vie 8:00–16:00 h, jue 8:00–18:30 h, sáb 10:00–13:00 h"
       },
       "url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
       "source_url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
@@ -300,7 +313,8 @@
         "sl": "pon–pet 8–15.30; zunaj delovnega časa se klici preusmerijo k dežurnemu veterinarju",
         "hr": "pon–pet 8:00–15:30; izvan radnog vremena pozivi se preusmjeravaju dežurnom veterinaru.",
         "de": "Mo–Fr 8–15.30 Uhr; außerhalb der Öffnungszeiten werden Anrufe zum diensthabenden Tierarzt weitergeleitet.",
-        "fr": "Lun.–ven. 8 h–15 h 30 ; hors horaires, appels transférés au vétérinaire de garde."
+        "fr": "Lun.–ven. 8 h–15 h 30 ; hors horaires, appels transférés au vétérinaire de garde.",
+        "es": "Lun–vie 8:00–15:30 h; fuera de horario las llamadas se desvían al veterinario de guardia"
       },
       "url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/"
@@ -320,7 +334,8 @@
         "sl": "pon, čet 8–18; tor, sre, pet 8–15.30",
         "hr": "pon, čet 08:00–18:00; uto, sri, pet 08:00–15:30.",
         "de": "Mo, Do 8–18 Uhr; Di, Mi, Fr 8–15.30 Uhr",
-        "fr": "Lun., jeu. 8 h–18 h ; mar., mer., ven. 8 h–15 h 30."
+        "fr": "Lun., jeu. 8 h–18 h ; mar., mer., ven. 8 h–15 h 30.",
+        "es": "Lun y jue 8:00–18:00 h; mar, mié y vie 8:00–15:30 h"
       },
       "url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/"
@@ -339,7 +354,8 @@
         "sl": "Nujna služba vsak večer in vikend do 22",
         "hr": "Hitno dežurstvo svake večeri i vikendom do 22:00.",
         "de": "Notdienst jeden Abend und am Wochenende bis 22 Uhr",
-        "fr": "Service d’urgences tous les soirs et week-ends jusqu’à 22 h."
+        "fr": "Service d’urgences tous les soirs et week-ends jusqu’à 22 h.",
+        "es": "Urgencias todas las tardes y fines de semana hasta las 22:00"
       },
       "url": "https://evidensia.no/dyreklinikk/fana/",
       "source_url": "https://evidensia.no/dyreklinikk/fana/akuttvakt",
@@ -360,7 +376,8 @@
         "sl": "pon–sre, pet 8–16, čet 8–18; zunaj delovnega časa del bergenske dežurne službe za male živali",
         "hr": "pon–sri i pet 8–16, čet 8–18; izvan radnog vremena dio dežurstva za male životinje u Bergenu.",
         "de": "Mo–Mi und Fr 8–16 Uhr, Do 8–18 Uhr; außerhalb der Sprechzeiten Teil des Kleintier-Notdienstes in Bergen",
-        "fr": "Lun.–mer., ven. 8 h–16 h, jeu. 8 h–18 h ; participe à la garde petits animaux de Bergen hors horaires."
+        "fr": "Lun.–mer., ven. 8 h–16 h, jeu. 8 h–18 h ; participe à la garde petits animaux de Bergen hors horaires.",
+        "es": "Lun–mié y vie 8:00–16:00 h, jue 8:00–18:00 h; forma parte de la guardia de pequeños animales de Bergen fuera de horario"
       },
       "url": "https://evidensia.no/dyreklinikk/sandviken/",
       "source_url": "https://evidensia.no/dyreklinikk/sandviken/"
@@ -380,7 +397,8 @@
         "sl": "pon, sre–pet 8.30–16, tor 8.30–21; dežurstvo za male živali 820 90 020",
         "hr": "pon, sri–pet 8:30–16, uto 8:30–21; dežurstvo za male životinje 820 90 020.",
         "de": "Mo, Mi–Fr 8.30–16 Uhr, Di 8.30–21 Uhr; Kleintier-Notdienst 820 90 020",
-        "fr": "Lun., mer.–ven. 8 h 30–16 h, mar. 8 h 30–21 h ; garde petits animaux 820 90 020."
+        "fr": "Lun., mer.–ven. 8 h 30–16 h, mar. 8 h 30–21 h ; garde petits animaux 820 90 020.",
+        "es": "Lun y mié–vie 8:30–16:00 h, mar 8:30–21:00 h; guardia de pequeños animales 820 90 020"
       },
       "url": "https://evidensia.no/dyreklinikk/haugaland/",
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/"
@@ -400,7 +418,8 @@
         "sl": "pon–pet 8–18, sob 9–16",
         "hr": "pon–pet 8–18, sub 9–16.",
         "de": "Mo–Fr 8–18 Uhr, Sa 9–16 Uhr",
-        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h."
+        "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h.",
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–16:00 h"
       },
       "url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
@@ -506,7 +525,8 @@
         "sl": "Nujna služba 8–21 (vnaprej pokličite)",
         "hr": "Hitno dežurstvo 8–21 (nazovi unaprijed).",
         "de": "Notdienst 8–21 Uhr (vorher anrufen)",
-        "fr": "Service d’urgences 8 h–21 h (appelez avant de venir)."
+        "fr": "Service d’urgences 8 h–21 h (appelez avant de venir).",
+        "es": "Urgencias 8:00–21:00 h (llama antes)"
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
@@ -525,7 +545,8 @@
         "sl": "Nujna služba 8–19",
         "hr": "Hitno dežurstvo 8–19.",
         "de": "Notdienst 8–19 Uhr",
-        "fr": "Service d’urgences 8 h–19 h."
+        "fr": "Service d’urgences 8 h–19 h.",
+        "es": "Urgencias 8:00–19:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -543,7 +564,8 @@
         "sl": "Nujna služba 8–15.30",
         "hr": "Hitno dežurstvo 8–15:30.",
         "de": "Notdienst 8–15.30 Uhr",
-        "fr": "Service d’urgences 8 h–15 h 30."
+        "fr": "Service d’urgences 8 h–15 h 30.",
+        "es": "Urgencias 8:00–15:30 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -563,7 +585,8 @@
         "sl": "Nujni primeri pon–čet 8.15–18, pet 8.15–15.30",
         "hr": "Hitni slučajevi pon–čet 08:15–18:00, pet 08:15–15:30.",
         "de": "Notdienst Mo–Do 8.15–18 Uhr, Fr 8.15–15.30 Uhr",
-        "fr": "Urgences lun.–jeu. 8 h 15–18 h, ven. 8 h 15–15 h 30."
+        "fr": "Urgences lun.–jeu. 8 h 15–18 h, ven. 8 h 15–15 h 30.",
+        "es": "Urgencias lun–jue 8:15–18:00 h, vie 8:15–15:30 h"
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/kontakt/"
@@ -581,7 +604,8 @@
         "sl": "Nujna služba 8–19",
         "hr": "Hitno dežurstvo 8–19.",
         "de": "Notdienst 8–19 Uhr",
-        "fr": "Service d’urgences 8 h–19 h."
+        "fr": "Service d’urgences 8 h–19 h.",
+        "es": "Urgencias 8:00–19:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -600,7 +624,8 @@
         "sl": "Nujna služba 8–17",
         "hr": "Hitno dežurstvo 8–17.",
         "de": "Notdienst 8–17 Uhr",
-        "fr": "Service d’urgences 8 h–17 h."
+        "fr": "Service d’urgences 8 h–17 h.",
+        "es": "Urgencias 8:00–17:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -618,7 +643,8 @@
         "sl": "Nujna služba 8–16; sodeluje v bergenskem dežurnem razporedu",
         "hr": "Hitno dežurstvo 8–16; sudjeluje u dežurstvu u Bergenu.",
         "de": "Notdienst 8–16 Uhr; beteiligt sich am Notdienstplan in Bergen",
-        "fr": "Service d’urgences 8 h–16 h ; participe au tour de garde de Bergen."
+        "fr": "Service d’urgences 8 h–16 h ; participe au tour de garde de Bergen.",
+        "es": "Urgencias 8:00–16:00 h; participa en el turno de guardia de Bergen"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -636,7 +662,8 @@
         "sl": "Nujna služba 8–16",
         "hr": "Hitno dežurstvo 8–16.",
         "de": "Notdienst 8–16 Uhr",
-        "fr": "Service d’urgences 8 h–16 h."
+        "fr": "Service d’urgences 8 h–16 h.",
+        "es": "Urgencias 8:00–16:00 h"
       },
       "url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/kontakt/veterinarvakt-bergen/"
@@ -654,7 +681,8 @@
         "sl": "Nujna služba 8–18",
         "hr": "Hitno dežurstvo 8–18.",
         "de": "Notdienst 8–18 Uhr",
-        "fr": "Service d’urgences 8 h–18 h."
+        "fr": "Service d’urgences 8 h–18 h.",
+        "es": "Urgencias 8:00–18:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -672,7 +700,8 @@
         "sl": "Nujna služba 8–19",
         "hr": "Hitno dežurstvo 8–19.",
         "de": "Notdienst 8–19 Uhr",
-        "fr": "Service d’urgences 8 h–19 h."
+        "fr": "Service d’urgences 8 h–19 h.",
+        "es": "Urgencias 8:00–19:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -690,7 +719,8 @@
         "sl": "Nujna služba 8–18",
         "hr": "Hitno dežurstvo 8–18.",
         "de": "Notdienst 8–18 Uhr",
-        "fr": "Service d’urgences 8 h–18 h."
+        "fr": "Service d’urgences 8 h–18 h.",
+        "es": "Urgencias 8:00–18:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -708,7 +738,8 @@
         "sl": "Nujna služba 8–19",
         "hr": "Hitno dežurstvo 8–19.",
         "de": "Notdienst 8–19 Uhr",
-        "fr": "Service d’urgences 8 h–19 h."
+        "fr": "Service d’urgences 8 h–19 h.",
+        "es": "Urgencias 8:00–19:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -726,7 +757,8 @@
         "sl": "Nujna služba 8–16",
         "hr": "Hitno dežurstvo 8–16.",
         "de": "Notdienst 8–16 Uhr",
-        "fr": "Service d’urgences 8 h–16 h."
+        "fr": "Service d’urgences 8 h–16 h.",
+        "es": "Urgencias 8:00–16:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -744,7 +776,8 @@
         "sl": "Nujna služba 8–16",
         "hr": "Hitno dežurstvo 8–16.",
         "de": "Notdienst 8–16 Uhr",
-        "fr": "Service d’urgences 8 h–16 h."
+        "fr": "Service d’urgences 8 h–16 h.",
+        "es": "Urgencias 8:00–16:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -762,7 +795,8 @@
         "sl": "Nujna služba 8–18",
         "hr": "Hitno dežurstvo 8–18.",
         "de": "Notdienst 8–18 Uhr",
-        "fr": "Service d’urgences 8 h–18 h."
+        "fr": "Service d’urgences 8 h–18 h.",
+        "es": "Urgencias 8:00–18:00 h"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
