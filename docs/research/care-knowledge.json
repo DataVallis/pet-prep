@@ -126692,6 +126692,21 @@
       "checked": "2026-11-12"
     },
     {
+      "country": "LB",
+      "kind": "clinic",
+      "name": "Animal House Hospital",
+      "city": "Zalka",
+      "region": "Mount Lebanon (Metn)",
+      "address": "Nicolas Bldg., Ground Floor, Zalka Highway",
+      "phone": "+961 1 890 001",
+      "emergency_24h": true,
+      "duty": "Open Mon-Fri 9:00-13:00 and 15:00-19:00, Sat-Sun 9:00-12:00. 24-hour emergency service on +961 3 664 969; call ahead when possible.",
+      "duty_i18n": null,
+      "url": "https://animalhousehospital.com/",
+      "source_url": "https://animalhousehospital.com/",
+      "checked": "2026-11-12"
+    },
+    {
       "country": "LK",
       "kind": "clinic",
       "name": "Veterinary Teaching Hospital, University of Peradeniya",

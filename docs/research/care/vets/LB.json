@@ -1,0 +1,54 @@
+{
+  "country": "LB",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Animal House Hospital - home page",
+      "url": "https://animalhousehospital.com/",
+      "note": "Opened; clinic own site. Nicolas Bldg., Ground Floor, Zalka Highway; general +961 1 890 001; 24/7 emergency +961 3 664 969; Mon-Fri 9-13 and 15-19, Sat-Sun 9-12; \"24-hour emergency service\" with a full-time veterinarian, call ahead when possible; info@animalhousehospital.com."
+    },
+    {
+      "name": "Animal House Hospital - about us",
+      "url": "https://animalhousehospital.com/about-us/",
+      "note": "Opened; own site. History (Antelias 1974, Zalka Highway since 1984), 24 hours emergency service since 2005. No phone or hours on this page."
+    },
+    {
+      "name": "Sidelick - 24/7 emergency vets in Lebanon list",
+      "url": "https://sidelick.com/emergency-veterinarians-lebanon/",
+      "note": "Opened; aggregator, used only to discover clinic names (Animalife Hazmieh, Les Acacias Verdun, Mamalia Ashrafieh, Healthy Pet Amchit, CVC 24/7 Batroun, etc.). No phones or own sites; nothing used as a source for entries."
+    },
+    {
+      "name": "Paw Pots - Vet network",
+      "url": "https://www.pawpots.com/vet-network",
+      "note": "Opened; NGO/aggregator list of 16 clinics with phones (Animal Planet Jbeil, Anipharm Tripoli, Animal Zone Batroun, Healthy Pet Jbeil, Vetplus Jbeil, Animal Hub Kesrouane ...). No addresses, hours or 24 h statements and no clinic own sites, so not used for entries."
+    },
+    {
+      "name": "Animals Lebanon - Contact",
+      "url": "https://animalslebanon.org/contact",
+      "note": "Opened; NGO office (Hamra, +961 1 751 678, Mon-Fri 9-17). Not a vet clinic and no emergency line; not used."
+    },
+    {
+      "name": "Modern Vet - Al Wasl branch",
+      "url": "https://modernvet.com/all-locations/alwasl-hospital/",
+      "note": "Opened; this is Dubai (UAE), no Lebanon location. Not used."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Animal House Hospital",
+      "city": "Zalka",
+      "region": "Mount Lebanon (Metn)",
+      "address": "Nicolas Bldg., Ground Floor, Zalka Highway",
+      "phone": "+961 1 890 001",
+      "emergency_24h": true,
+      "duty": "Open Mon-Fri 9:00-13:00 and 15:00-19:00, Sat-Sun 9:00-12:00. 24-hour emergency service on +961 3 664 969; call ahead when possible.",
+      "small_animals": true,
+      "url": "https://animalhousehospital.com/",
+      "source_url": "https://animalhousehospital.com/",
+      "checked": "2026-11-12",
+      "note": "Own site home page explicitly says 24/7 emergency and 24-hour emergency service. Sidelick lists it under Jal El Dib; own site says Zalka Highway, used as is."
+    }
+  ],
+  "notes": "LB research 2026-11-12. Very thin: only one clinic with a usable own-site page. No official source found/reachable: Order/Syndicate of Veterinarians (no own site surfaced in search; only news items), Ministry of Agriculture (agriculture.gov.lb not fetchable: URL not in provenance set, skipped), WOAH PDFs only. No duty rota, no animal poison line found. Other clinics (Animalife Hazmieh, Les Acacias Verdun, Mamalia Ashrafieh, Healthy Pet Amchit, CVC 24/7 Batroun, Animal Planet Jbeil, Anipharm Tripoli, Animal Zone Batroun, Vetplus Jbeil, Animal Hub Kesrouane, Vet Care Matn, Vet Point Beirut, Vet 101 Beirut, Mont Liban Vet, Amivet) only appear on aggregators (sidelick.com, pawpots.com, yelleb, telooa, petownerapp) without own pages, so not added. Left: no coverage of Tripoli, Sidon, Tyre, Zahle, Aley. Not opened: AUB/LU/USEK/Balamand vet pages (none surfaced)."
+}
