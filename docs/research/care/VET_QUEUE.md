@@ -174,7 +174,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] GE Georgia — 7 entries, 1 × 24 h (G-Vet Kutaisi, 24/7 claim on own page, no phone), no duty rota, no animal poison line (1501 is a ministry complaints line), thin: nfa.gov.ge/zooplaza.ge not fetchable, Facebook blocked, check: 8 checked, 0 fixed, 1 removed (Balto, closed), 2026-11-11 — left: Zooplaza Tbilisi 24 h (own site), GAF Batumi, Chuki, NEOVET, Geo-Vet, Aibolit, Medoni Telavi, VetHealth Zugdidi, Gori/Kazbegi/Borjomi/Mestia (see `vets/GE.json` notes)
 - [~] AM Armenia — 6 entries, 2 × 24 h (IM VET, Joli Avetisyan; VetExpert downgraded: 9:00–24:00), no duty rota, no animal poison line, check: 6 checked, 0 fixed, 1 downgraded, 0 removed, 2026-11-12 — left: VetLife, VetLine, AmiryanVet (24 h only on aggregators), Gyumri/Vanadzor/Dilijan/Tsaghkadzor clinics (see `vets/AM.json` notes)
 - [x] AM Armenia — follow-up: VetLife, VetLine, AmiryanVet on their own sites, Gyumri, Vanadzor, Dilijan, Tsaghkadzor, Sevan; skip what was unreachable twice — 1 entry (Shunn u Katun, Vanadzor), 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12 — not reachable (Facebook robots-blocked / aggregators only, see `vets/AM.json` notes): VetLife, VetLine, AmiryanVet, Gyumri, Dilijan, Tsaghkadzor, Sevan
-- [ ] KZ Kazakhstan
+- [~] KZ Kazakhstan — 15 entries, 8 × 24 h, no duty rota, no poison line, check: 11 checked, 1 fixed (source_url), 0 downgraded, 0 removed, 2026-11-12
+- [ ] KZ Kazakhstan — follow-up: Shymkent, Aktobe, Taraz, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan, Oskemen (VetLab), KazNAU clinic, Aqtaban, Nika (Astana); skip what is unreachable twice
 - [ ] SA Saudi Arabia
 - [ ] QA Qatar
 - [ ] OM Oman
