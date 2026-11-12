@@ -21,6 +21,16 @@
       "name": "Lead-finding only (never sole source): destinationksa.com, soulofsaudi.com, timeoutriyadh.com, eyeofriyadh.com",
       "url": "https://destinationksa.com/en/vet-clinics-in-riyadh/",
       "note": "Opened for leads only."
+    },
+    {
+      "name": "Follow-up run: miskvetclinic.com, adpetclinic.com (branches), pets-houses.com, savc.sa",
+      "url": "https://miskvetclinic.com/",
+      "note": "Opened with WebFetch; own sites used for name, address, phone, hours and 24 h wording."
+    },
+    {
+      "name": "Lead-finding only (never sole source): madinahcats.com, raei.app, blogofsaudi.com, yandex.com/maps",
+      "url": "https://madinahcats.com/vet-clinics/",
+      "note": "Opened for leads only."
     }
   ],
   "entries": [
@@ -196,7 +206,94 @@
       "source_url": "https://art8vet.pages.dev/",
       "checked": "2026-11-12",
       "note": "art8vetclinics.com contact page lists Al Khobar and WhatsApp +966 596 519 845; address conflict Dammam vs Al Khobar."
+    },
+    {
+      "name": "Misk Al-Tabee'a Veterinary Clinic (Misk Vet Clinic)",
+      "city": "Medina",
+      "region": "Al Madinah",
+      "phone": "+966 59 009 6900",
+      "emergency_24h": true,
+      "duty": "Sat-Thu 9 am-10 pm; emergency service advertised 24/7, call ahead.",
+      "url": "https://miskvetclinic.com/",
+      "source_url": "https://miskvetclinic.com/",
+      "note": "Own site (Arabic) says 'متاحون 24/7' for emergencies but lists 09:00-22:00 Sat-Thu; no street address on page (Al Khalidiyyah only in aggregator madinahcats.com). 24 h claim not reconciled with posted hours.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "name": "Advanced Pet Clinic (Riyadh branch)",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Exit 6, Abi Baker Al Sadiq Road, Panda Supermarket Building, Riyadh 11492",
+      "phone": "920007144",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 8:30 am-10 pm; Fri 4 pm-10 pm. Emergency line: 0500521717.",
+      "url": "https://www.adpetclinic.com/en/branches/riyadh/",
+      "source_url": "https://www.adpetclinic.com/en/branches/riyadh/",
+      "note": "No 24 h wording; emergency number only.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "name": "Advanced Pet Clinic (Al Khobar branch)",
+      "city": "Al Khobar",
+      "region": "Eastern Province",
+      "address": "Intersection of 27th St. and Prince Talal St., Al Khobar Al Shamalia",
+      "phone": "0138931515",
+      "emergency_24h": false,
+      "duty": "Sun-Thu and Sat 8:30 am-11 pm; Fri 4 pm-9 pm. Emergency line: 0559171818.",
+      "url": "https://www.adpetclinic.com/en/branches/al-khobar/",
+      "source_url": "https://www.adpetclinic.com/en/branches/al-khobar/",
+      "note": "No 24 h wording; emergency number only.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "name": "Advanced Pet Clinic (Al Ahsa branch)",
+      "city": "Hofuf",
+      "region": "Eastern Province",
+      "address": "Al-Firdous Mall, Al-Firdaws District, Hofuf, Al-Ahsa",
+      "phone": "0135990358",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 8:30 am-10 pm; Fri 4 pm-10 pm. Emergency line: 0559825550.",
+      "url": "https://www.adpetclinic.com/en/branches/al-ahsa/",
+      "source_url": "https://www.adpetclinic.com/en/branches/al-ahsa/",
+      "note": "No 24 h wording; emergency number only.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "name": "Pets Houses Veterinary Clinic",
+      "city": "Al Khobar",
+      "region": "Eastern Province",
+      "address": "Al Rakah Al Janoubia, Al Khobar",
+      "phone": "0559608071",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 9 am-10 pm; Fri 2 pm-10 pm.",
+      "url": "https://pets-houses.com/en/blogs/vet",
+      "source_url": "https://pets-houses.com/en/blogs/vet",
+      "note": "Own store/clinic page; footer phone +966501239936. No 24 h wording.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "name": "Sekka Al Ilaj Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Al Nasim Al Sharqi district, Hassan bin Thabit Road 14241, Riyadh",
+      "emergency_24h": false,
+      "url": "https://savc.sa/",
+      "source_url": "https://savc.sa/redirect/pages/1664202802",
+      "note": "Own site lists address only; no phone or hours.",
+      "kind": "clinic",
+      "checked": "2026-11-12",
+      "small_animals": true
     }
   ],
-  "notes": "No MEWA/SVA clinic directory, duty rota or animal poison line found (MEWA only general line 939). Not covered: Mecca, Medina, Tabuk, Abha (no clinic site surfaced), Khobar/Jubail beyond Art 8. Blocked: Oka Vet (robots), Petpaws Dammam (fetch error), iacare.sa (no contact data; Setmore listing shows Jeddah +966 56 644 6670 but conflicting hours), Al Mokhtassa and Elite alt sites not surfaced. Al Mokhtassa (An Narjis, Riyadh, reportedly 24/7 emergencies) and Dr Tom phone only from aggregators - verify next run."
+  "notes": "No MEWA/SVA clinic directory, duty rota or animal poison line found (MEWA only general line 939). Still unreachable/unverified after follow-up: Mecca (Althaqafi only on Instagram/aggregators, no own site opened), Tabuk, Abha/Khamis Mushait, Jubail (only social/TikTok leads, no own site), Medina other clinics (Samaya Taiba, Atebba: aggregator only). Blocked: Oka Vet (robots), Petpaws Dammam (fetch error), Four Pets Khobar (redirect loop), iacare.sa, Dr Tom contact page (robots). Al Mokhtassa (An Narjis, Riyadh): no own site; only Yandex listing (+966 50 050 5154), not used. Dr Tom's phone remains unverified from an own page. Advanced Pet Clinic Jeddah/Dammam branches not listed on its branches page."
 }

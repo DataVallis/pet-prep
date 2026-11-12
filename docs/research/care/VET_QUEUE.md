@@ -177,7 +177,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] KZ Kazakhstan — 15 entries, 8 × 24 h, no duty rota, no poison line, check: 11 checked, 1 fixed (source_url), 0 downgraded, 0 removed, 2026-11-12
 - [x] KZ Kazakhstan — follow-up: Shymkent, Aktobe, Taraz, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan, Oskemen, KazNAU, Aqtaban, Nika — 3 entries (Kostanay, Oral, Almaty), 0 × 24 h, no duty rota, no animal poison line, check: 14 checked, 0 fixed, 0 removed, 2 24-h pages (Talisman, Atyrau) not re-openable today, 2026-11-12 — not reachable (no own sites / robots / aggregators only, see `vets/KZ.json` notes): Shymkent, Aktobe, Taraz, Semey, Kokshetau, Aktau, Kyzylorda, Turkestan, Oskemen, KazNAU, Aqtaban, Nika
 - [~] SA Saudi Arabia — 12 entries (Riyadh 8, Jeddah 3, Dammam 1), 5 × 24 h, no duty rota, no animal poison line (MEWA 939 is general), check: 8 checked, 0 fixed, 0 removed, 2026-11-12 — left: Mecca, Medina, Tabuk, Abha, Khobar/Jubail, Al Mokhtassa Riyadh (site unreachable), Dr. Tom's phone
-- [ ] SA Saudi Arabia — follow-up: Mecca, Medina, Tabuk, Abha, Khobar/Jubail, Al Mokhtassa Riyadh, Dr. Tom's phone; skip what was unreachable twice
+- [x] SA Saudi Arabia — follow-up: Mecca, Medina, Tabuk, Abha, Khobar/Jubail, Al Mokhtassa Riyadh, Dr. Tom's phone — 6 entries (Medina, Riyadh, Al Khobar, Hofuf), 1 × 24 h (Misk Al-Tabee'a Medina, emergency 24/7 on own page), no duty rota, no animal poison line, check: 6 checked, 0 fixed, 0 removed, 5 earlier 24-h pages not re-openable today, 2026-11-12 — not reachable (no own sites / robots / aggregators only, see `vets/SA.json` notes): Mecca, Tabuk, Abha, Jubail, Al Mokhtassa, Dr. Tom's phone
 - [ ] QA Qatar
 - [ ] OM Oman
 - [ ] JO Jordan
