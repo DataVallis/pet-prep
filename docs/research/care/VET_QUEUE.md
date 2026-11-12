@@ -190,6 +190,6 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] MU Mauritius — 8 entries, 1 × 24 h (Veterinaire.mu Albion), no duty rota, no animal poison line, official bodies not readable, check: 8 checked, 2 fixed (Vetmania Grand Baie downgraded to not 24 h, unsourced phone/address removed; Vetocare hours), 0 removed, 2026-11-12 — left: ~10 clinics with only directory/forum sources (see `vets/MU.json` notes)
 - [x] SC Seychelles — 1 entry, 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12
 - [x] MV Maldives — 1 entry (Oases Vet Hospital, Malé; no phone confirmed), 0 × 24 h, no duty rota, no animal poison line (almost no veterinary infrastructure), check: 1 checked, 0 fixed, 0 removed, 2026-11-12
-- [ ] LK Sri Lanka
+- [x] LK Sri Lanka — 3 entries (Peradeniya university hospital 24 h, Rover Battaramulla 24 h per 2018 article, Sky Pet Borella), 2 × 24 h, no duty rota, no animal poison line, check: 3 checked, 1 fixed (phone), 0 removed, 2026-11-12 — not reachable: rovervet.lk, daph.gov.lk (WebFetch refused); no private clinic site found for Kandy/Galle/Negombo/Jaffna/Nuwara Eliya/Ella; no VCSL/SLVA site found
 - [ ] NP Nepal
 - [ ] Rest of the world: append the next country by pet-owner population / tourism when the list above is done
