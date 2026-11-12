@@ -1,0 +1,100 @@
+{
+  "country": "LK",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Faculty of Veterinary Medicine & Animal Science, University of Peradeniya - home page",
+      "url": "https://vet.pdn.ac.lk/",
+      "note": "Opened; Veterinary Teaching Hospital address, phones +94 81 2388664 / +94 81 2395662, hotline 0815638017."
+    },
+    {
+      "name": "Veterinary Teaching Hospital, Peradeniya - Services",
+      "url": "https://vet.pdn.ac.lk/vth/services.php",
+      "note": "Opened; OPD hours (notice effective 1 Sep 2018), 'Emergency & critical care: 24 hours', clinicians on call 7:30 pm - 8:00 am, admission by referral/appointment. Page copyright 2012, notice 2018, may be dated; the page also says 24-hour cover for lab/theatre, which conflicts with its own hours table."
+    },
+    {
+      "name": "Daily FT - Rover Veterinary Hospital inaugurated to serve pets (30 Mar 2018)",
+      "url": "https://ft.lk/healthcare/Rover-Veterinary-Hospital-inaugurated-to-serve-pets/45-652391",
+      "note": "Opened; news article (not the clinic's own site): address 123/4 Pannipitiya Road, Battaramulla, main 0112076070, emergency 0770853870, OPD 6 am - 10 pm by appointment, emergency and critical care 24 h / 7 days. Website rovervet.lk named in article."
+    },
+    {
+      "name": "Daily FT - Rover Veterinary Hospital, Battaramulla celebrates second anniversary",
+      "url": "https://www.ft.lk/Business/Rover-Veterinary-Hospital-Battaramulla-celebrates-second-anniversary/34-688362",
+      "note": "Opened; says 'comprehensive 24/7 emergency service'. No contacts."
+    },
+    {
+      "name": "Sunday Times - Air Force opens pet hospital (11 Jul 2021)",
+      "url": "https://www.sundaytimes.lk/210711/news/air-force-opens-pet-hospital-448983.html",
+      "note": "Opened; Sky Pet Animal Hospital (Sri Lanka Air Force), Guwanpura, Borella; phones 0113144447, 0112495800; no hours."
+    },
+    {
+      "name": "Sunday Times - Air Force shapes animal care culture (26 Jul 2015)",
+      "url": "https://www.sundaytimes.lk/150726/plus/air-force-shapes-animal-care-culture-158240.html",
+      "note": "Opened; Sky Pet vets 'work round the clock', night emergencies handled (snakebite arriving 2-3 am). 2015, no phone."
+    },
+    {
+      "name": "Department of Animal Production and Health - About us",
+      "url": "https://daph.gov.lk/about-us",
+      "note": "Opened; hotline 081-2388462, dgdaph@sltnet.lk, Peradeniya. Administrative office; no emergency vet service, duty rota or poison line stated."
+    },
+    {
+      "name": "Dialog - Doc990 and MyDoctor partner with SLVA (2021)",
+      "url": "https://www.dialog.lk/news/doc990-and-mydoctor-partner-slva-to-extend-accessible-veterinary-services-island-wide",
+      "note": "Opened; online video vet consultations via Doc990 app with the Sri Lanka Veterinary Association. No hotline or hours; not an emergency service, not an entry."
+    },
+    {
+      "name": "Daily FT - Pet Vet Clinic celebrates 27 years",
+      "url": "https://ft.lk/news/Pet-Vet-Clinic-celebrates-27-years-of-excellence-in-Companion-Animal-Medicine/56-755761",
+      "note": "Opened; says Pet Vet offers '24/7 emergency services' but gives no address, phone or website, so no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, University of Peradeniya",
+      "city": "Peradeniya",
+      "region": "Central Province",
+      "address": "Veterinary Teaching Hospital, Faculty of Veterinary Medicine & Animal Science, Peradeniya 20400",
+      "phone": "081 5638017 / 081 2395662",
+      "emergency_24h": true,
+      "duty": "University teaching hospital for companion, wild and zoo animals. Emergency and critical care 24 hours; outpatient Mon-Sat 8:00-20:00, Sun and public holidays 8:00-12:00. Resident clinicians on call for emergencies 19:30-08:00. Admission by appointment, booked by a referring veterinarian.",
+      "small_animals": true,
+      "url": "https://vet.pdn.ac.lk/vth/services.php",
+      "source_url": "https://vet.pdn.ac.lk/vth/services.php",
+      "checked": "2026-11-12",
+      "note": "Hours from a notice effective 1 Sep 2018; page copyright 2012. Page also claims 24-hour cover for lab/theatre which conflicts with its own table (lab/theatre weekday daytime). Re-checked 2026-11-12 against source_url: phones 081-5638017 / 081-2395662 are on the page (for booking by referring vets, not specifically an emergency line); +94 81 2388664 removed because it is not on the source page (only on the home page). Address from home page. Confirm before publishing.",
+      "quote": "Emergency & critical care: 24 hours"
+    },
+    {
+      "kind": "clinic",
+      "name": "Rover Veterinary Hospital",
+      "city": "Battaramulla",
+      "region": "Western Province (Colombo)",
+      "address": "123/4, Pannipitiya Road, Battaramulla",
+      "phone": "0112076070 (emergency 0770853870)",
+      "emergency_24h": true,
+      "duty": "Outpatient 6:00-22:00 by appointment; emergency and critical care open 24 hours, seven days a week.",
+      "small_animals": true,
+      "url": "http://www.rovervet.lk/",
+      "source_url": "https://ft.lk/healthcare/Rover-Veterinary-Hospital-inaugurated-to-serve-pets/45-652391",
+      "checked": "2026-11-12",
+      "note": "Weak source: 2018 launch article in Daily FT (future tense), not the clinic's own site; rovervet.lk could not be fetched (not in provenance set). A 2020 Daily FT anniversary article repeats '24/7 emergency service' without contacts. Verify phones/hours on the clinic's site before publishing.",
+      "quote": "Their Emergency and Critical care services will be open 24hrs, seven days a week."
+    },
+    {
+      "kind": "clinic",
+      "name": "Sky Pet Animal Hospital (Sri Lanka Air Force)",
+      "city": "Colombo",
+      "region": "Western Province (Colombo)",
+      "address": "Guwanpura, Borella, Colombo",
+      "phone": "0113144447 / 0112495800",
+      "emergency_24h": false,
+      "duty": "Small-animal hospital run by the Sri Lanka Air Force in Borella. Call ahead for opening hours and emergencies.",
+      "small_animals": true,
+      "source_url": "https://www.sundaytimes.lk/210711/news/air-force-opens-pet-hospital-448983.html",
+      "checked": "2026-11-12",
+      "note": "Phones from a 2021 Sunday Times article, no hours. A 2015 Sunday Times article says vets 'work round the clock' and handle night emergencies, but this is not an explicit published 24 h service line and is old, so emergency_24h left false. No own website found. Verify before publishing."
+    }
+  ],
+  "notes": "Research 2026-11-12. Sri Lanka has many private small-animal clinics, but WebFetch only allowed URLs surfaced by search results or earlier fetches, and clinic own sites (rovervet.lk) and daph.gov.lk home were blocked as 'URL not in provenance set'. Only 3 entries could be verified: the Peradeniya teaching hospital (official page, explicit 24 h emergency), Rover Veterinary Hospital (news article only, explicit 24 h) and Sky Pet (news, no explicit 24 h). Pet Vet Clinic (Colombo) claims 24/7 emergency but no contact was found on an opened page. Search results for aggregators/directories (ikman, vymaps, magicpin, findit.lk, casite directory) were not used. No duty rota, no animal poison line found. DAPH (daph.gov.lk/about-us) only gives a hotline 081-2388462 for the administrative office. Veterinary Council of Sri Lanka and SLVA own websites were not found/opened. Not covered: Kandy private clinics (e.g. Best Care), Galle, Negombo, Jaffna, Nuwara Eliya, Ella."
+}
