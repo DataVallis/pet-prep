@@ -128468,6 +128468,21 @@
       "checked": "2026-11-12"
     },
     {
+      "country": "MV",
+      "kind": "clinic",
+      "name": "Oases Vet Hospital",
+      "city": "Male'",
+      "region": "Kaafu Atoll",
+      "address": "H. Love Side, Abadhahfehi Magu, Male'",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Small-animal vet hospital and pharmacy in Male' (also Oases Vets in Hulhumale'). Call ahead for opening hours and emergencies.",
+      "duty_i18n": null,
+      "url": "https://oasesmaldives.com/",
+      "source_url": "https://business.egov.mv/BusinessRegistry/ViewDetails/186160?key=358558711",
+      "checked": "2026-11-12"
+    },
+    {
       "country": "MX",
       "kind": "clinic",
       "name": "Hospital Veterinario de Especialidades UNAM (FMVZ)",

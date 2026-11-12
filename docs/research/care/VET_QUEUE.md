@@ -189,7 +189,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] TZ Tanzania — follow-up: clinics left in `vets/TZ.json` notes on their own sites; skip what was unreachable twice — 0 new entries (thin: no clinic with an openable own page, no 24 h, no duty rota, no poison line; SUA hospital page blocked), check: nothing new to check, 2026-11-12 — left: Merlino Arusha, Zanzibar, Moshi, Mwanza, Dodoma (see `vets/TZ.json` notes)
 - [x] MU Mauritius — 8 entries, 1 × 24 h (Veterinaire.mu Albion), no duty rota, no animal poison line, official bodies not readable, check: 8 checked, 2 fixed (Vetmania Grand Baie downgraded to not 24 h, unsourced phone/address removed; Vetocare hours), 0 removed, 2026-11-12 — left: ~10 clinics with only directory/forum sources (see `vets/MU.json` notes)
 - [x] SC Seychelles — 1 entry, 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12
-- [ ] MV Maldives
+- [x] MV Maldives — 1 entry (Oases Vet Hospital, Malé; no phone confirmed), 0 × 24 h, no duty rota, no animal poison line (almost no veterinary infrastructure), check: 1 checked, 0 fixed, 0 removed, 2026-11-12
 - [ ] LK Sri Lanka
 - [ ] NP Nepal
 - [ ] Rest of the world: append the next country by pet-owner population / tourism when the list above is done
