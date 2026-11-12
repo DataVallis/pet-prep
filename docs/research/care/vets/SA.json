@@ -1,0 +1,202 @@
+{
+  "country": "SA",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "MEWA - Veterinary Health and Control Department",
+      "url": "https://www.mewa.gov.sa/en/Ministry/Agencies/AgencyLivestock/Departments/Pages/Veterinary Health and Control Department.aspx",
+      "note": "Opened: no clinic directory, no duty rota, no animal poison line; only general ministry line 939 (not stated to handle animal emergencies). MEWA PetVet2024 event page also opened: no directory."
+    },
+    {
+      "name": "King Faisal University Veterinary Teaching Hospital (Hofuf)",
+      "url": "https://www.kfu.edu.sa/en/Colleges/VeterinaryMedicine/ResearchCenters/Veterinaryhospital/Pages/About.aspx",
+      "note": "Opened: phone 5816640 but no hours, no 24 h wording, small animals not mentioned (poultry, falcons, camels named). Not listed."
+    },
+    {
+      "name": "Clinic own sites: petopiaking.vetpms.com, thevetclinic.vetpms.com, drtom-clinic.com/en/home, elitevetksa.com, pawfectclinic.sa, topvetclinics.com, primevetclinic.com, snapcat.vetpms.com, animalpulsehospital.com, karamanvet.sa, petnvet.vetpms.com, art8vet.pages.dev, art8vetclinics.com",
+      "url": "https://petopiaking.vetpms.com/",
+      "note": "All opened with WebFetch; used for name, address, phone, hours and 24 h wording."
+    },
+    {
+      "name": "Lead-finding only (never sole source): destinationksa.com, soulofsaudi.com, timeoutriyadh.com, eyeofriyadh.com",
+      "url": "https://destinationksa.com/en/vet-clinics-in-riyadh/",
+      "note": "Opened for leads only."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Petopia Veterinary Clinic (King Branch)",
+      "city": "Jeddah",
+      "region": "Makkah",
+      "address": "Building 7108, King Abdulaziz Branch Road, Ash Shati district, Jeddah 23513",
+      "phone": "920033654",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day.",
+      "small_animals": true,
+      "url": "https://petopiaking.vetpms.com/",
+      "source_url": "https://petopiaking.vetpms.com/",
+      "checked": "2026-11-12",
+      "note": "Own booking page lists every day '24 Hours'."
+    },
+    {
+      "kind": "clinic",
+      "name": "The Vet Clinic",
+      "city": "Jeddah",
+      "region": "Makkah",
+      "address": "Sari Road, Jeddah",
+      "phone": "+966 56 090 8904",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day.",
+      "small_animals": true,
+      "url": "https://thevetclinic.vetpms.com/",
+      "source_url": "https://thevetclinic.vetpms.com/",
+      "checked": "2026-11-12",
+      "note": "Page lists every day '24 Hours'; country not named, +966 phone."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr. Tom's Advanced Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "emergency_24h": true,
+      "duty": "Open 24 hours Saturday to Thursday; Friday 4 am-4 pm, emergencies only.",
+      "small_animals": true,
+      "url": "https://drtom-clinic.com/en/home/",
+      "source_url": "https://drtom-clinic.com/en/home/",
+      "checked": "2026-11-12",
+      "note": "Home page says 'Work time : 24 hours daily', Friday 4:00-16:00 emergencies only. No address or phone on opened page; contact page blocked by robots.txt. Phone +966 533399462 and Al Aqiq district appear only in aggregator articles (not used)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Elite Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Qurtubah district, Al Thumamah Road",
+      "phone": "920011626",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service; call ahead.",
+      "small_animals": true,
+      "url": "https://www.elitevetksa.com/",
+      "source_url": "https://www.elitevetksa.com/",
+      "checked": "2026-11-12",
+      "note": "Own site (Arabic): 'طوارئ 24/7'. Regular hours ambiguous on page and differ in Eye of Riyadh listing; omitted. Jeddah branch listed as coming soon."
+    },
+    {
+      "kind": "clinic",
+      "name": "Pawfect Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Taif Street, Riyadh",
+      "phone": "+966 50 229 6622",
+      "emergency_24h": true,
+      "duty": "Sat-Wed 8 am-10 pm; Thu-Fri 4 pm-10 pm. 24/7 emergency line: +966 50 229 6655.",
+      "small_animals": true,
+      "url": "https://www.pawfectclinic.sa/en",
+      "source_url": "https://www.pawfectclinic.sa/en",
+      "checked": "2026-11-12",
+      "note": "Page: 'Please contact this number in case of emergency, 24/7.' 24 h applies to the emergency phone line."
+    },
+    {
+      "kind": "clinic",
+      "name": "Snap Cat Specialized Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Abi Bakr Al Siddiq Branch Road, Al Wadi district, Riyadh",
+      "phone": "+966 11 405 5562",
+      "emergency_24h": false,
+      "duty": "Sun-Thu and Sat 10 am-11 pm; Fri 3 pm-11 pm. House visits available.",
+      "small_animals": true,
+      "url": "https://snapcat.vetpms.com/",
+      "source_url": "https://snapcat.vetpms.com/",
+      "checked": "2026-11-12",
+      "note": "'24/7 Support Ready' wording unclear; not treated as 24 h clinic."
+    },
+    {
+      "kind": "clinic",
+      "name": "Top Vet Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Makkah Road, Al Rabwa, Riyadh",
+      "phone": "+966 11 445 4433",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 9 am-midnight; Fri 4 pm-midnight. No after-midnight emergency care; call before coming.",
+      "small_animals": true,
+      "url": "https://topvetclinics.com/en/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-english/",
+      "source_url": "https://topvetclinics.com/en/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-english/",
+      "checked": "2026-11-12"
+    },
+    {
+      "kind": "clinic",
+      "name": "Prime Vet Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Othman bin Affan Road, Al Waha district, Riyadh",
+      "phone": "+966 50 242 2728",
+      "emergency_24h": false,
+      "duty": "Open daily 3:30 pm-11:30 pm.",
+      "small_animals": true,
+      "url": "https://primevetclinic.com/en/contact/",
+      "source_url": "https://primevetclinic.com/en/contact/",
+      "checked": "2026-11-12"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Pulse Hospital",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Street 7127 Anas Ibn Malik Road, Al Yasmin, Riyadh 13322",
+      "phone": "+966 54 465 1224",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://animalpulsehospital.com/",
+      "source_url": "https://animalpulsehospital.com/",
+      "checked": "2026-11-12",
+      "note": "No hours on own page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Karaman Veterinary Clinic",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "address": "Aziziyah, Riyadh",
+      "phone": "0507020017",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://karamanvet.sa/en/contact.html",
+      "source_url": "https://karamanvet.sa/en/contact.html",
+      "checked": "2026-11-12",
+      "note": "Second number 0112141441. No hours on page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Pet&Vet Clinic",
+      "city": "Jeddah",
+      "region": "Makkah",
+      "address": "Sari Street, Al Khalidiyyah, Jeddah",
+      "phone": "0583636763",
+      "emergency_24h": false,
+      "duty": "Mon-Thu and Sat 2 pm-10 pm; Fri 4 pm-10 pm; closed Sunday.",
+      "small_animals": true,
+      "url": "https://petnvet.vetpms.com/index.php",
+      "source_url": "https://petnvet.vetpms.com/index.php",
+      "checked": "2026-11-12"
+    },
+    {
+      "kind": "clinic",
+      "name": "Art 8 Vet",
+      "city": "Dammam",
+      "region": "Eastern Province",
+      "address": "King Fahd Road, Dammam 32236",
+      "phone": "+966 596 519 842",
+      "emergency_24h": false,
+      "duty": "Sat-Thu 9 am-11 pm; Fri 2 pm-11 pm.",
+      "small_animals": true,
+      "url": "https://art8vet.pages.dev/",
+      "source_url": "https://art8vet.pages.dev/",
+      "checked": "2026-11-12",
+      "note": "art8vetclinics.com contact page lists Al Khobar and WhatsApp +966 596 519 845; address conflict Dammam vs Al Khobar."
+    }
+  ],
+  "notes": "No MEWA/SVA clinic directory, duty rota or animal poison line found (MEWA only general line 939). Not covered: Mecca, Medina, Tabuk, Abha (no clinic site surfaced), Khobar/Jubail beyond Art 8. Blocked: Oka Vet (robots), Petpaws Dammam (fetch error), iacare.sa (no contact data; Setmore listing shows Jeddah +966 56 644 6670 but conflicting hours), Al Mokhtassa and Elite alt sites not surfaced. Al Mokhtassa (An Narjis, Riyadh, reportedly 24/7 emergencies) and Dr Tom phone only from aggregators - verify next run."
+}
