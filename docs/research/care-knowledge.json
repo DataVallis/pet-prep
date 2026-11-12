@@ -62251,6 +62251,21 @@
       "checked": "2026-11-12"
     },
     {
+      "country": "AM",
+      "kind": "clinic",
+      "name": "Shunn u Katun Veterinary Clinic",
+      "city": "Vanadzor",
+      "region": "Lori",
+      "address": "7 Tumanyan St, Vanadzor (opposite Milagro Restaurant)",
+      "phone": "+374 55 895495",
+      "emergency_24h": false,
+      "duty": "Tue-Sat 11:00-19:00; closed Sunday and Monday.",
+      "duty_i18n": null,
+      "url": "https://shunnukatun.am/en",
+      "source_url": "https://shunnukatun.am/en",
+      "checked": "2026-11-12"
+    },
+    {
       "country": "AR",
       "kind": "clinic",
       "name": "Hospital Escuela de Veterinaria, Facultad de Ciencias Veterinarias UBA (Hospital de Pequeños Animales)",

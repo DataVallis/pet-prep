@@ -51,6 +51,11 @@
       "name": "Business directories (areg.am, yell.am, pages.am, yerevanguide.am)",
       "url": "https://areg.am/vetlife",
       "note": "Aggregators, leads only. VetLife (Bagratunyats 10/7, +374 10 427070) and VetLine (Komitas 6, +374 10 279999) are listed there as 24-hour; their own sites/Facebook could not be opened, so they are not entered."
+    },
+    {
+      "name": "Shunn u Katun - own website",
+      "url": "https://shunnukatun.am/en",
+      "note": "Vanadzor clinic: Tumanyan 7 (opposite Milagro Restaurant), +374 55 895495, Tue-Sat 11:00-19:00, closed Sun/Mon; no 24 h or emergency claim."
     }
   ],
   "entries": [
@@ -155,7 +160,22 @@
       "source_url": "https://yanvet.am/en",
       "checked": "2026-11-12",
       "note": "Own site gives only phones (+374 93 720088, +374 41 720080) and e-mail; no address or hours. Directories place it at Azatutyan Ave 9A / Tigran Mets 52 (not used)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Shunn u Katun Veterinary Clinic",
+      "city": "Vanadzor",
+      "region": "Lori",
+      "address": "7 Tumanyan St, Vanadzor (opposite Milagro Restaurant)",
+      "phone": "+374 55 895495",
+      "emergency_24h": false,
+      "duty": "Tue-Sat 11:00-19:00; closed Sunday and Monday.",
+      "small_animals": true,
+      "url": "https://shunnukatun.am/en",
+      "source_url": "https://shunnukatun.am/en",
+      "checked": "2026-11-12",
+      "note": "Own page lists first-aid supplies, no emergency or 24 h service."
     }
   ],
-  "notes": "Armenia has no official register of small-animal clinics: the Food Safety Inspection Body (snund.am) pages describe state veterinary control only, its 118 hotline is not an emergency vet line, and the agrarian university's public clinic is only announced (no address or hours). No animal poison line and no duty rota were found. Leads NOT entered because only aggregators/directories could be opened (own sites/Facebook not reachable via the fetch tool, or not found): VetLife (Bagratunyats 10/7, Yerevan, +374 10 427070, listed as 24 h on areg.am and yell.am), VetLine (Komitas Ave 6, +374 10 279999, listed 24 h on yell.am, site vetline.am), AmiryanVet (Amiryan 10, +374 95 560119, 'round the clock by prior call' per HayWiki), Vahe Mkrtchyan Vet Clinic, AlphaVet, Oscar Vet, Quercus, DoctorVet, New Vet, Vetpoint (vetpoint.am), Maltese City, Paws; outside Yerevan: Vet Vat and MyVet (Gyumri), Shunn u Katun (Vanadzor, shunnukatun.am not fetchable), and a municipal stray-dog clinic opened in Dilijan in 2022 (no contact data). turn.am lists a 24/7 home-visit service 'Abamyan vet' (+374 93 315580) but it is a marketplace page, not entered. janvelyan.com forbids automated access (robots); skipped. yerevanzoo clinic site redirect-looped; skipped. Follow-up run should open vetline.am, vetlife Facebook, joli/other own sites and regional clinics' own pages."
+  "notes": "Armenia has no official register of small-animal clinics: the Food Safety Inspection Body (snund.am) pages describe state veterinary control only, its 118 hotline is not an emergency vet line, and the agrarian university's public clinic is only announced (no address or hours). No animal poison line and no duty rota were found. Follow-up 2026-11-12: Shunn u Katun (Vanadzor) entered from its own site. Still NOT entered: VetLife (Facebook vetlifearmenia blocked by robots; no own site found; areg/yell/spyur list it as 24 h but only aggregators), VetLine (vetline.am not fetchable: not returned by search, only aggregators 2gis/yell/pages/yerevanguide found), AmiryanVet (Amiryan 10; Facebook blocked by robots, only profibank.am listing which has no hours/24 h claim), Vet Vat and Best Clinic (Gyumri; Facebook only, robots-blocked), Van Veterinary Clinic (Facebook, robots-blocked), Paws Pet Medical Center (Dilijan, Getapnya 6/1, +374 44 994299; only a Yandex Maps listing, no own page), Dilijan municipal stray-dog clinic (news article only), nothing found for Tsaghkadzor and Sevan. Other Yerevan leads from the first run (Vahe Mkrtchyan, AlphaVet, Oscar Vet, Quercus, DoctorVet, New Vet, Vetpoint, Maltese City) not retried. turn.am 'Abamyan vet' marketplace page, janvelyan.com (robots) and yerevanzoo clinic (redirect loop) skipped as before."
 }
