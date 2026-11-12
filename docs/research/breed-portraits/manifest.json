@@ -1299,6 +1299,19 @@
             "prompt_hash": "sha256:bd439e018a3cedf157db4b1a247b47f1054cb7a1e4953c7804da931f385ed063",
             "generated_at": "2026-11-12T02:47:53+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "japanese_chin",
+            "species": "dog",
+            "colour": "black-white",
+            "file": "dog/japanese-chin.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:e69875079ca0164dd2aa945a43dce380a678c71cc877262e3bfe023d01c56c4a",
+            "generated_at": "2026-11-12T07:07:34+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
