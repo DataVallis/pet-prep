@@ -1,0 +1,146 @@
+{
+  "country": "AM",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "VetExpert - own website",
+      "url": "https://vetexpert.am/",
+      "note": "Address Azatutyan Av. 14, phones, hours 9:00-24:00 daily; also says 'Clinic provides 24-hour admission of patients' and lists a '24/7 phone number'."
+    },
+    {
+      "name": "IM VET - own website",
+      "url": "https://imvet.am/en/",
+      "note": "Mobile/house-call vet in Yerevan (up to 30 km around); says 'Open 24/7 - Emergency Vet Available'; two phones; no street address. Russian page makes no 24/7 claim, only 'works every day'."
+    },
+    {
+      "name": "Joli Veterinary Center - own website",
+      "url": "https://joli.am/clinics/",
+      "note": "Clinic section: '24/7 veterinary help. Call our animal ambulance any time.'; emergency line +374 99 404070. Branch table (https://joli.am/en/locations) lists Avetisyan as both 24/7 and 10:00-22:00, Azatutyan 8/63 as clinic 10:00-22:00."
+    },
+    {
+      "name": "Joli - contact page",
+      "url": "https://joli.am/contact/",
+      "note": "'24/7 - Emergency & ambulance' with +374 99 404070; main address 112/2 Avet Avetisyan St."
+    },
+    {
+      "name": "Vet Express - own website",
+      "url": "https://vetexpress.am/en/contact/",
+      "note": "Davit Anhaght 7, Mon-Sat 10:00-20:00, Sun 9:00-12:00; no 24 h claim."
+    },
+    {
+      "name": "Yanvet - own website",
+      "url": "https://yanvet.am/en",
+      "note": "Phones and e-mail; no street address, no hours, no 24 h claim."
+    },
+    {
+      "name": "Food Safety Inspection Body of Armenia (SNUND) - veterinary page",
+      "url": "https://snund.am/en/page/veterinary/160",
+      "note": "Official body; page describes state veterinary control only, no clinic register. Hotline 118 is the inspection body's line, not an emergency vet line."
+    },
+    {
+      "name": "Armenian National Agrarian University - Veterinary Excellence Center",
+      "url": "https://anau.am/?p=50951",
+      "note": "Says a university veterinary clinic will also serve the public; no clinic address, hours or 24 h statement. Centre contact: Teryan 74, +374 12 585808."
+    },
+    {
+      "name": "HayWiki - vet clinics in Armenia",
+      "url": "https://haywiki.org/animals/vetclinics.html",
+      "note": "Community wiki (not official). Used only as leads: names VetLine, VetExpert, AmiryanVet as round-the-clock with only basic night care; also Gyumri (Vet Vat, MyVet) and Vanadzor (Shunn u Katun) clinics. Not used as a source for any entry."
+    },
+    {
+      "name": "Business directories (areg.am, yell.am, pages.am, yerevanguide.am)",
+      "url": "https://areg.am/vetlife",
+      "note": "Aggregators, leads only. VetLife (Bagratunyats 10/7, +374 10 427070) and VetLine (Komitas 6, +374 10 279999) are listed there as 24-hour; their own sites/Facebook could not be opened, so they are not entered."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "VetExpert Veterinary Group",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "address": "14 Azatutyan Ave, Yerevan 0014",
+      "phone": "+374 10 209966",
+      "emergency_24h": false,
+      "duty": "Open 9:00-24:00 daily; phone line advertised as 24/7. Call ahead at night.",
+      "small_animals": true,
+      "url": "https://vetexpert.am/",
+      "source_url": "https://vetexpert.am/",
+      "checked": "2026-11-12",
+      "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h."
+    },
+    {
+      "kind": "clinic",
+      "name": "IM VET (mobile veterinary clinic and house calls)",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "phone": "+374 55 561254",
+      "emergency_24h": true,
+      "duty": "Mobile vet with house calls in Yerevan and up to 30 km around; advertised as open 24/7 with an emergency vet available.",
+      "small_animals": true,
+      "url": "https://imvet.am/en/",
+      "source_url": "https://imvet.am/en/",
+      "checked": "2026-11-12",
+      "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Joli Veterinary Center (Avetisyan branch)",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "address": "112/2 Avet Avetisyan St, Yerevan",
+      "phone": "+374 99 404070",
+      "emergency_24h": true,
+      "duty": "Advertises 24/7 veterinary help and an animal ambulance on +374 99 404070. Call ahead.",
+      "small_animals": true,
+      "url": "https://joli.am/clinics/",
+      "source_url": "https://joli.am/clinics/",
+      "checked": "2026-11-12",
+      "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404."
+    },
+    {
+      "kind": "clinic",
+      "name": "Joli Veterinary Center (Azatutyan branch)",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "address": "8/63 Azatutyan Ave, Yerevan",
+      "phone": "+374 44 200505",
+      "emergency_24h": false,
+      "duty": "Open 10:00-22:00 daily.",
+      "small_animals": true,
+      "url": "https://joli.am/en/locations",
+      "source_url": "https://joli.am/en/locations",
+      "checked": "2026-11-12",
+      "note": "Locations page lists services Shop, Clinic; hours 10:00-22:00."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet Express (Veterinary Diagnostic Laboratory & Clinic)",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "address": "7 Davit Anhaght St, Yerevan",
+      "phone": "+374 43 209966",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-20:00, Sun 9:00-12:00.",
+      "small_animals": true,
+      "url": "https://vetexpress.am/en/contact/",
+      "source_url": "https://vetexpress.am/en/contact/",
+      "checked": "2026-11-12",
+      "note": "Second phone +374 33 209966. Footer says 'Sunday 9AM-12AM', probably 12 PM."
+    },
+    {
+      "kind": "clinic",
+      "name": "Yanvet Veterinary Clinic",
+      "city": "Yerevan",
+      "region": "Yerevan",
+      "phone": "+374 93 720088",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://yanvet.am/en",
+      "source_url": "https://yanvet.am/en",
+      "checked": "2026-11-12",
+      "note": "Own site gives only phones (+374 93 720088, +374 41 720080) and e-mail; no address or hours. Directories place it at Azatutyan Ave 9A / Tigran Mets 52 (not used)."
+    }
+  ],
+  "notes": "Armenia has no official register of small-animal clinics: the Food Safety Inspection Body (snund.am) pages describe state veterinary control only, its 118 hotline is not an emergency vet line, and the agrarian university's public clinic is only announced (no address or hours). No animal poison line and no duty rota were found. Leads NOT entered because only aggregators/directories could be opened (own sites/Facebook not reachable via the fetch tool, or not found): VetLife (Bagratunyats 10/7, Yerevan, +374 10 427070, listed as 24 h on areg.am and yell.am), VetLine (Komitas Ave 6, +374 10 279999, listed 24 h on yell.am, site vetline.am), AmiryanVet (Amiryan 10, +374 95 560119, 'round the clock by prior call' per HayWiki), Vahe Mkrtchyan Vet Clinic, AlphaVet, Oscar Vet, Quercus, DoctorVet, New Vet, Vetpoint (vetpoint.am), Maltese City, Paws; outside Yerevan: Vet Vat and MyVet (Gyumri), Shunn u Katun (Vanadzor, shunnukatun.am not fetchable), and a municipal stray-dog clinic opened in Dilijan in 2022 (no contact data). turn.am lists a 24/7 home-visit service 'Abamyan vet' (+374 93 315580) but it is a marketplace page, not entered. janvelyan.com forbids automated access (robots); skipped. yerevanzoo clinic site redirect-looped; skipped. Follow-up run should open vetline.am, vetlife Facebook, joli/other own sites and regional clinics' own pages."
+}

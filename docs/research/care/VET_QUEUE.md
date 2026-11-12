@@ -172,7 +172,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] MD Moldova — 4 entries, 2 × 24 h (Zoomama, Ciavdar Grup Buiucani), no duty rota, no animal poison line (14 567 is a farm-animal line), check: 4 checked, 1 fixed, 0 removed, 2026-11-11 — left: Bălți, Orhei, Cahul, Ungheni, Comrat, Tiraspol and more Chișinău clinics (own sites unreachable / aggregators only, see `vets/MD.json` notes)
 - [~] MD Moldova — follow-up: Bălți, Orhei, Cahul, Ungheni, Comrat, more Chișinău clinics — 2 entries (Esculap-Vet, Family Vet), 0 × 24 h (Family Vet "zi și noapte" is marketing, not explicit), no duty rota, no animal poison line, check: 2 checked, 0 fixed, 0 removed, 2026-11-11 — not reachable (WebFetch refuses non-search URLs, own sites redirect/fail, aggregators only, see `vets/MD.json` notes): Bălți, Orhei, Cahul, Ungheni, Comrat, ANSA/UASM clinic lists; no further MD follow-up — returns diminishing
 - [~] GE Georgia — 7 entries, 1 × 24 h (G-Vet Kutaisi, 24/7 claim on own page, no phone), no duty rota, no animal poison line (1501 is a ministry complaints line), thin: nfa.gov.ge/zooplaza.ge not fetchable, Facebook blocked, check: 8 checked, 0 fixed, 1 removed (Balto, closed), 2026-11-11 — left: Zooplaza Tbilisi 24 h (own site), GAF Batumi, Chuki, NEOVET, Geo-Vet, Aibolit, Medoni Telavi, VetHealth Zugdidi, Gori/Kazbegi/Borjomi/Mestia (see `vets/GE.json` notes)
-- [ ] AM Armenia
+- [~] AM Armenia — 6 entries, 2 × 24 h (IM VET, Joli Avetisyan; VetExpert downgraded: 9:00–24:00), no duty rota, no animal poison line, check: 6 checked, 0 fixed, 1 downgraded, 0 removed, 2026-11-12 — left: VetLife, VetLine, AmiryanVet (24 h only on aggregators), Gyumri/Vanadzor/Dilijan/Tsaghkadzor clinics (see `vets/AM.json` notes)
+- [ ] AM Armenia — follow-up: VetLife, VetLine, AmiryanVet on their own sites, Gyumri, Vanadzor, Dilijan, Tsaghkadzor, Sevan; skip what was unreachable twice
 - [ ] KZ Kazakhstan
 - [ ] SA Saudi Arabia
 - [ ] QA Qatar
