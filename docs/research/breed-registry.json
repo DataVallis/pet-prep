@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a7239838eecd7e433fd758b247d06dae056855e5c573ecc7e30b805e13470cad"
+      "sha256": "e7a12f3891702f31d36d752618476894e98ea96ab7d13b34270aa1e2584141ee"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "79f79637638715361f252023a7f54d269e75ac4da280be591ebe5eeec3456789"
+      "sha256": "7f7abeea4853252538e10ef5728e6ef852385f39559c4ca55057a24266273ef0"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e43b5d7fb4398075ed9cfaa78c39b2dbc2b02eee98d6793ba38a2b91b18c2563"
+      "sha256": "bfff3e6fb96a2ad2b97ac0f884849579c64aa2cb39e0de573ecece6e04bf5eb3"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ab31d7d4c8fd852fbc76d147b0432d729c03610bea0b827d4409f8c6a8097fed"
+      "sha256": "5c128ce0b691e366ba55950ef3e8974c99e8b6dde8331f46279a2165aff286a1"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4f40b343782e6fb4c5dc716cddc4fa08d8c0ac7c3f8d230e4cb33c99ef5ffaa1"
+      "sha256": "5b43a34d6273849c3c9978a8723f0c0f441249f654ba3cd547964075e667533f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e3b62355d421c860dedd58a18a6fde5ceb7108be70b1a980b7f71d2f19edd031"
+      "sha256": "c55f127fe94f8a23d0a617474d14bbec7cb953d4a47093e9246e41c44574c041"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "7dc01e615fd27479b96c5338f1f7afb7f0f2efe7395874ea4aa171ffab08e503"
+      "sha256": "84db27ac9ce60ea8bca0bb75d95de39ad742f4ead30d473bc0bf89f105bac6b6"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 99,
+      "breed_count": 100,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -59937,6 +59937,643 @@
       ]
     },
     {
+      "id": "japanese_chin",
+      "species": "dog",
+      "order": 99,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Japanese Chin",
+        "sl": "Japonski čin"
+      },
+      "slug": {
+        "en": "japanese-chin",
+        "sl": "japonski-cin"
+      },
+      "synonyms": {
+        "en": [
+          "Japanese Spaniel",
+          "Japan Chin",
+          "Chin"
+        ],
+        "sl": [
+          "japonski cin",
+          "čin"
+        ]
+      },
+      "facets": {
+        "size": "toy",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "toy",
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              20,
+              28
+            ],
+            "female": [
+              20,
+              28
+            ]
+          },
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.height.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              1.8,
+              3.2
+            ],
+            "female": [
+              1.8,
+              3.2
+            ]
+          },
+          "source_ids": [
+            "S806"
+          ],
+          "ref": "japanese_chin.adult_weight.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "japanese_chin.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 12.5,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "japanese_chin.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            12
+          ],
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S805"
+          ],
+          "ref": "japanese_chin.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 62,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "japanese_chin.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 206,
+            "group": 9,
+            "section": 8,
+            "origin": "JP"
+          },
+          "source_ids": [
+            "S807"
+          ],
+          "ref": "japanese_chin.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 7,
+        "grooming_frequency": 9,
+        "shedding": 10,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.brachycephaly",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.heat",
+          "confidence": "high"
+        },
+        {
+          "key": "gm2_gangliosidosis",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.gm2_gangliosidosis",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "mitral_valve_disease",
+          "source_ids": [
+            "S809"
+          ],
+          "ref": "japanese_chin.health.heart",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S805"
+            ],
+            "refs": [
+              "japanese_chin.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S809"
+            ],
+            "refs": [
+              "japanese_chin.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S809"
+            ],
+            "refs": [
+              "japanese_chin.health.brachycephaly",
+              "japanese_chin.exercise.heat_and_walk_timing"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S809"
+            ],
+            "refs": [
+              "japanese_chin.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S805"
+            ],
+            "refs": [
+              "japanese_chin.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 113
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 113
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S805"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S805 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 113 (0.75 × 12.5 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 62, Fair, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.grooming",
+            "basis_source_ids": [
+              "S809"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PetMD »once or twice a week« → zgornja meja 2); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.ear_care",
+            "basis_source_ids": [
+              "S809"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to three weeks« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.bathing",
+            "basis_source_ids": [
+              "S809"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »a bath may be needed monthly«)"
+          },
+          {
+            "ref": "proposed_game_parameters.japanese_chin.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S809"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S805",
+          "S809"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S805"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S805"
+            ]
+          },
+          {
+            "key": "boas_grading",
+            "level": "best_practice",
+            "source_ids": [
+              "S805"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S805"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S805",
+        "S806",
+        "S807",
+        "S809",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -65934,6 +66571,34 @@
       "publisher": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Mar. 27, 2023)",
       "title": "Borzoi",
       "url": "https://www.petmd.com/dog/breeds/borzoi"
+    },
+    {
+      "id": "S805",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Japanese Chin — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/japanese-chin/"
+    },
+    {
+      "id": "S806",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Japanese Chin — breed standard (last updated April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/toy/japanese-chin/"
+    },
+    {
+      "id": "S807",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Japanese Chin (206)",
+      "url": "https://fci.be/en/nomenclature/JAPAN-CHIN-206.html"
+    },
+    {
+      "id": "S809",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (published Nov. 8, 2023)",
+      "title": "Japanese Chin",
+      "url": "https://www.petmd.com/dog/breeds/japanese-chin"
     },
     {
       "id": "C1",
