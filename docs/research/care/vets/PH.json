@@ -117,7 +117,10 @@
       "source_url": "https://cadhinc.com/",
       "note": "Own site opened: Banilad Hospital listed '24 hours, daily' for emergency and confinement, 24/7 line 09563086855, 425-9197; FAQ 'emergencies, surgery and confinement every hour of every day'. Site says four branches but lists three; V. Rama-Guadalupe branch has no data.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Urgencias, cirugía e ingreso las 24 horas todos los días; línea 24/7 +63 956 308 6855, también +63 32 425 9197."
+      }
     },
     {
       "kind": "clinic",
@@ -132,7 +135,10 @@
       "source_url": "https://cadhinc.com/",
       "note": "Own site: daytime hours, 24 h only at Banilad. Landline 509-0223.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad."
+      }
     },
     {
       "kind": "clinic",
@@ -147,7 +153,10 @@
       "source_url": "https://cadhinc.com/",
       "note": "Own site: daytime hours. Landline 407-8115. Third-party Facebook title 'Lapu Lapu Branch 24/7 Emergency' not opened (Facebook not used), so not marked 24 h.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad."
+      }
     },
     {
       "kind": "clinic",
@@ -162,7 +171,10 @@
       "source_url": "https://www.cebuvetdoctors.com/BRANCHES.htm",
       "note": "Branches page and contact page agree on main branch hours. No 24 h wording on any page of the site.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–dom 8:00–17:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -177,7 +189,10 @@
       "source_url": "https://www.cebuvetdoctors.com/BRANCHES.htm",
       "note": "Branches page says Sunday closed, contact page says Mon-Sun; Sunday left open.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos."
+      }
     },
     {
       "kind": "clinic",
@@ -192,7 +207,10 @@
       "source_url": "https://www.cebuvetdoctors.com/BRANCHES.htm",
       "note": "Sunday conflict between branches and contact pages.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos."
+      }
     },
     {
       "kind": "clinic",
@@ -206,7 +224,10 @@
       "url": "https://www.cebuvetdoctors.com/",
       "source_url": "https://www.cebuvetdoctors.com/BRANCHES.htm",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 9:00–18:00 h; cerrado dom."
+      }
     },
     {
       "kind": "clinic",
@@ -220,7 +241,10 @@
       "source_url": "https://www.cebuvetdoctors.com/BRANCHES.htm",
       "note": "Phone omitted: branches page lists 0905 285 3082 / 414 04 88, contact page lists 0939 523 1941 / 509 6857.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 8:00–17:00 h; cerrado dom; consulta el teléfono en la web."
+      }
     },
     {
       "kind": "clinic",
@@ -234,7 +258,10 @@
       "source_url": "https://www.pendragonvet.com/about.html",
       "note": "Own page: 'We provide 24 hour on-call emergency services to owners', visiting hours 9:30AM-8:30PM; no address or phone on the page. Address from Manila Bulletin Animal Scene (animalscene.mb.com.ph/?p=3591) and Inquirer list (2020), secondary. No phone found on an opened page. 24 h is on-call, not necessarily staffed walk-in.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Servicio de urgencias de guardia 24 horas para clientes; horario de visitas 9:30–20:30 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -247,7 +274,10 @@
       "source_url": "https://pethubcorp.com/",
       "note": "Own site: '24/7 emergency care', 'Open 24/7', emergencies 'Always open'; says 11 branches across Luzon and Metro Manila but branch addresses/phones were empty on every opened page (home, contact, Las Pinas and Paranaque branch pages), and it is not stated which branches are 24 h. Needs a branch-level check.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Anuncia urgencias 24/7; horario general lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; datos de las sedes por formulario de consulta o por correo a pethubvetclinic@gmail.com."
+      }
     },
     {
       "kind": "clinic",
@@ -260,7 +290,10 @@
       "source_url": "https://www.serbisyobeterinaryo.com/",
       "note": "Own site opened (home, about, about-us, branches): only the meta description '24/7 emergency services available'; no branch, address, phone or hours in page text, so not marked 24 h. Branch Facebook pages (Pasig, Marikina, Mandaluyong, Lipa, QC, Makati...) are robots-disallowed; branches known by search only.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "El grupo anuncia servicio de urgencias; contacta con tu sede más cercana para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -275,7 +308,10 @@
       "source_url": "https://vetsinpractice.ph/branches/",
       "note": "Branches page: after-hours emergency 7:01 PM-8:59 AM; home page says 6:01 PM in one place and says Mandaluyong, QC and Fort branches accept after-hours emergencies in another. Not 24 h wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; acepta urgencias fuera de horario por la noche; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -289,7 +325,10 @@
       "url": "https://vetsinpractice.ph/",
       "source_url": "https://vetsinpractice.ph/branches/",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -303,7 +342,10 @@
       "url": "https://vetsinpractice.ph/",
       "source_url": "https://vetsinpractice.ph/branches/",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -317,7 +359,10 @@
       "url": "https://vetsinpractice.ph/",
       "source_url": "https://vetsinpractice.ph/branches/",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -331,7 +376,10 @@
       "url": "https://vetsinpractice.ph/",
       "source_url": "https://vetsinpractice.ph/branches/",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -346,7 +394,10 @@
       "source_url": "https://vetsinpractice.ph/branches/",
       "note": "Listed on the Vets in Practice branches page (same group).",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 10:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -361,7 +412,10 @@
       "source_url": "https://vetsinpractice.ph/branches/",
       "note": "Listed on the Vets in Practice branches page (same group).",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -371,12 +425,15 @@
       "address": "Lope M. Yutuc Hall, E. Jacinto St., UP Diliman, Quezon City",
       "phone": "+63 2 928 5436",
       "emergency_24h": false,
-      "duty": "Appointments by phone or the hospital's Facebook page; no 24-hour service stated.",
+      "duty": "Appointments by phone or the hospital's Facebook page.",
       "url": "https://cvm.uplb.edu.ph/?p=54",
       "source_url": "https://cvm.uplb.edu.ph/?p=54",
-      "note": "Address from CVM page; phone (02) 928-5436 from UPLB OVCRE page (radiology service contact, 2017 price list), whether it is the hospital switchboard is not stated. No hours, no emergency wording on any opened page.",
+      "note": "Address from CVM page; phone (02) 928-5436 from UPLB OVCRE page (radiology service contact, 2017 price list), whether it is the hospital switchboard is not stated. No hours, no emergency wording on any opened page. Removed from duty: Appointments by phone or the hospital's Facebook page; no 24-hour service stated.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Citas por teléfono o por la página de Facebook del hospital."
+      }
     },
     {
       "kind": "clinic",
@@ -390,7 +447,10 @@
       "source_url": "https://cvm.uplb.edu.ph/?p=54",
       "note": "CVM page: Small Animal Section 'regular, office hour-operations'; no phone, hours or emergency wording. Padayon UP public service page (publicservice.up.edu.ph/?p=289) confirms two stations, gives no hospital contact.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Horario de oficina habitual; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -405,7 +465,10 @@
       "source_url": "https://www.dlsau.edu.ph/veterinary-teaching-hospital/",
       "note": "Second phone (02) 8361-8875. No emergency wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto lun–sáb 8:00–17:00 h, festivos incluidos; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -420,7 +483,10 @@
       "source_url": "https://quezoncity.gov.ph/departments/city-veterinary-department/",
       "note": "Official LGU page: no dedicated hotline (general QC:122 line only). Walk-in registration/vaccination at 6th Floor, Civic A Building; Animal Care and Adoption Center in Payatas.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Oficina pública abierta lun–vie 8:00–17:00 h; registro, vacunación y programas de esterilización, no es un hospital de urgencias."
+      }
     },
     {
       "kind": "clinic",
@@ -435,7 +501,10 @@
       "source_url": "https://davaocity.gov.ph/departments/economic-development/city-verterinarians-office/",
       "note": "Official page also lists (082) 225-0530 and (082) 241-1000 (city general number). No separate hotline.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Oficina pública abierta 8:00–17:00 h; no es un hospital de urgencias."
+      }
     },
     {
       "kind": "clinic",
@@ -450,7 +519,10 @@
       "source_url": "https://pethouse.ph/",
       "note": "Own site opened: addresses and phones only; no hours and no 24 h wording ('for current hours or after-hours emergency arrangements, contact the branch'). Also 8562-8582, 7587-3092, mobile 0939 902 5701, 0917 652 2589. Grooming centre on the page not listed.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+      }
     },
     {
       "kind": "clinic",
@@ -465,7 +537,10 @@
       "source_url": "https://pethouse.ph/",
       "note": "Own site opened: addresses and phones only; no hours and no 24 h wording ('for current hours or after-hours emergency arrangements, contact the branch'). Mobile 0917 629 2067, 0917 631 8466. Grooming centre on the page not listed.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+      }
     },
     {
       "kind": "clinic",
@@ -480,7 +555,10 @@
       "source_url": "https://pethouse.ph/",
       "note": "Own site opened: addresses and phones only; no hours and no 24 h wording ('for current hours or after-hours emergency arrangements, contact the branch'). Also 8283-1833, mobile 0939 902 5702, 0917 623 7628. Grooming centre on the page not listed.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+      }
     },
     {
       "kind": "clinic",
@@ -495,7 +573,10 @@
       "source_url": "https://pethouse.ph/",
       "note": "Own site opened: addresses and phones only; no hours and no 24 h wording ('for current hours or after-hours emergency arrangements, contact the branch'). Mobile 0947 899 6403, 0917 620 5803. Grooming centre on the page not listed.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+      }
     },
     {
       "kind": "clinic",
@@ -510,7 +591,10 @@
       "source_url": "https://pethouse.ph/",
       "note": "Own site opened: addresses and phones only; no hours and no 24 h wording ('for current hours or after-hours emergency arrangements, contact the branch'). Also 8534-8273, mobile 0908 888 1569, 0917 620 1709. Grooming centre on the page not listed.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+      }
     },
     {
       "kind": "clinic",
@@ -525,7 +609,10 @@
       "source_url": "https://www.catclinic.ph/",
       "note": "Own site opened: feline-exclusive hospital; branch hours and emergency cut-off as published; no 24 h wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Solo gatos. Abierto todos los días 8:00–20:00 h; urgencias hasta las 23:00."
+      }
     },
     {
       "kind": "clinic",
@@ -540,7 +627,10 @@
       "source_url": "https://www.catclinic.ph/",
       "note": "Own site opened: feline-exclusive hospital; branch hours and emergency cut-off as published; no 24 h wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Solo gatos. Abierto dom–vie 9:00–20:00 h, sáb 8:00–20:00 h; urgencias hasta las 21:00."
+      }
     },
     {
       "kind": "clinic",
@@ -555,7 +645,10 @@
       "source_url": "https://www.catclinic.ph/",
       "note": "Own site opened: feline-exclusive hospital; branch hours and emergency cut-off as published; no 24 h wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Solo gatos. Abierto todos los días 9:00–19:00 h; 18:00–19:00 h reservado para urgencias."
+      }
     },
     {
       "kind": "clinic",
@@ -570,7 +663,10 @@
       "source_url": "https://docferdsanimalwellness.com/",
       "note": "Own site opened: no 24 h or emergency wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -585,7 +681,10 @@
       "source_url": "https://docferdsanimalwellness.com/",
       "note": "Own site opened: no 24 h or emergency wording. UP Town Center follows mall hours.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -600,7 +699,10 @@
       "source_url": "https://docferdsanimalwellness.com/",
       "note": "Own site opened: no 24 h or emergency wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -615,7 +717,10 @@
       "source_url": "https://docferdsanimalwellness.com/",
       "note": "Own site (Doc Ferds Animal Wellness) lists it as a branch; no hours or emergency wording for this clinic.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Llama antes para consultar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -630,7 +735,10 @@
       "source_url": "https://beterinaryo.com/",
       "note": "Own site opened: 9 AM to midnight, not 24 h. Appointments 0917 144 1598, clinic mobile 0917 144 0303.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Abierto todos los días 9:00–24:00 h; se atiende sin cita y urgencias en horario de apertura, con recargo fuera de horario 21:00–24:00 h; línea de urgencias +63 2 8459 7100."
+      }
     },
     {
       "kind": "clinic",
@@ -645,7 +753,10 @@
       "source_url": "https://bacolodcity.gov.ph/wp-content/uploads/2024/05/CITY-VET.pdf",
       "note": "Official LGU PDF (2024): telefax only, no office hours (only slaughterhouse schedules), no emergency wording.",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Oficina pública; no es un hospital de urgencias; llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -660,7 +771,10 @@
       "source_url": "https://puertoprincesa.ph/?p=461",
       "note": "Official LGU page: email cityveterinary@puertoprincesa.ph; two further numbers on page look incomplete; no hours; links to a City Emergency Contacts page (not opened).",
       "small_animals": true,
-      "checked": "2026-11-11"
+      "checked": "2026-11-11",
+      "duty_i18n": {
+        "es": "Oficina pública; no es un hospital de urgencias; llama antes."
+      }
     }
   ],
   "notes": "No official register of clinics with public contact data was found: PVMA site has no clinic directory, and the Bureau of Animal Industry and PRC were not usable for this (BAI pages found concern disease reporting and permits). No Philippines animal poison line was found. The National Poison Management and Control Center (UP-PGH, +63 2 8524 1078 per upm.edu.ph) serves people; the page opened does not say it takes animal cases, so it is not listed. PAWS' FAQ states it has no 24-hour hotline. No duty rotas found. Refused or unreachable: davaoemergencyvethospital.com (fetch failed twice, client_error; Davao 24/7 claim only seen in search results, not used), animalwellness.ph (robots), Facebook pages of Serbisyo Beterinaryo branches and Cebu clinics (robots), spot.ph 24-hour list (fetch failed), petsunitedvet.com (Boracay/Palawan; redirect loop), pendragonvet.com home and makatidogandcathospital.com (not permitted by fetch provenance). Needs follow-up: Makati Dog and Cat Hospital (press says open 24 hours for emergencies, no own page opened, no phone from an opened page), Petlink Wellness Center Caloocan ('24 hours' only in a 2020 Inquirer list), Serbisyo Beterinaryo and Pet Hub branch-level addresses/phones and which branches are 24 h, Davao Emergency Veterinary Hospital, UP VTH hours and phones, Cebu Veterinary Doctors conflicting Sunday hours and Mactan phone. Not covered: Baguio, Boracay, Palawan, Siargao and most of Mindanao and the Visayas outside Cebu. Follow-up run 2026-11-11 (feat/M6-K-vets-ph-2): added 15 entries (Pet House QC x5, The Cat Clinic x3, Doc Ferds x4, Beterinaryo sa Fort, Bacolod and Puerto Princesa city vet offices); none 24 h. Still no duty rota or animal poison line found. Unreachable twice or not permitted: makatidogandcathospital.com (client_error on two pages), davaoemergencyvethospital.com, spot.ph 24-hour list, govserv.org, docjolo.setmore.com (robots), baguio.gov.ph (not permitted by fetch provenance); animalwellness.ph, petsunitedvet.com and Facebook skipped as per queue. No own-site pages found for clinics in Baguio, Iloilo, Bacolod, Davao, Boracay, Siargao (only aggregators: clinicfinderph, vetphilippines, boracaydirectory, which are not used as sole source); Baguio, Iloilo and Davao city vet offices from PAWS list not added without an official page (Davao already present). Pet Express (hotline 8650 4693, vets in SM stores) has no branch data. Left: Baguio, Iloilo, Bacolod private clinics, Boracay (Rebadulla), Siargao, Pet Express vet branches, Makati Dog and Cat Hospital (press says open 24 h for emergencies, no opened own page), Cebu 24 h clinics named only on cebu247.com (Doc John's, Happy Tails, AKKADIA, Vet for Pets, CAD V. Rama)."

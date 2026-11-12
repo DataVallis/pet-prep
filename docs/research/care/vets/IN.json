@@ -58,7 +58,8 @@
       "emergency_24h": true,
       "duty": "OPD 8:00-13:00 on working days (8:00-11:30 on holidays). Emergency and Critical Care unit for large and small animals runs round the clock.",
       "duty_i18n": {
-        "fr": "Consultations externes 8 h–13 h les jours ouvrables (8 h–11 h 30 les jours fériés). Unité d’urgences et de soins intensifs pour grands et petits animaux ouverte en continu."
+        "fr": "Consultations externes 8 h–13 h les jours ouvrables (8 h–11 h 30 les jours fériés). Unité d’urgences et de soins intensifs pour grands et petits animaux ouverte en continu.",
+        "es": "Consultas externas (OPD) de 8:00 a 13:00 h en días laborables (de 8:00 a 11:30 h en festivos). Unidad de urgencias y cuidados críticos para animales grandes y pequeños las 24 horas."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/",
@@ -76,7 +77,8 @@
       "emergency_24h": false,
       "duty": "OPD Mon-Fri 8:00-13:00; Saturday, Sunday and government holidays 8:00-11:30.",
       "duty_i18n": {
-        "fr": "Consultations externes lun.–ven. 8 h–13 h ; samedi, dimanche et jours fériés 8 h–11 h 30."
+        "fr": "Consultations externes lun.–ven. 8 h–13 h ; samedi, dimanche et jours fériés 8 h–11 h 30.",
+        "es": "OPD de lunes a viernes de 8:00 a 13:00 h; sábado, domingo y festivos oficiales de 8:00 a 11:30 h."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/dc_vuph_mmc.php",
@@ -93,7 +95,8 @@
       "emergency_24h": false,
       "duty": "OPD 9:00-12:00 and 14:00-16:00; evening clinic 16:00-22:00 on working days (13:00-21:00 on holidays), phone +91 94470 30801.",
       "duty_i18n": {
-        "fr": "Consultations externes 9 h–12 h et 14 h–16 h ; consultations du soir 16 h–22 h les jours ouvrables (13 h–21 h les jours fériés), téléphone +91 94470 30801."
+        "fr": "Consultations externes 9 h–12 h et 14 h–16 h ; consultations du soir 16 h–22 h les jours ouvrables (13 h–21 h les jours fériés), téléphone +91 94470 30801.",
+        "es": "OPD de 9:00 a 12:00 y de 14:00 a 16:00 h; consulta de tarde 16:00 a 22:00 h en días laborables (de 13:00 a 21:00 h en festivos), teléfono +91 94470 30801."
       },
       "small_animals": true,
       "url": "https://www.kvasu.ac.in/uvh-tvcc-mannuthy",
@@ -111,7 +114,8 @@
       "emergency_24h": false,
       "duty": "Small animal clinic OPD 9:30-12:30 on all days including holidays.",
       "duty_i18n": {
-        "fr": "Clinique pour petits animaux, consultations externes 9 h 30–12 h 30 tous les jours, jours fériés compris."
+        "fr": "Clinique pour petits animaux, consultations externes 9 h 30–12 h 30 tous les jours, jours fériés compris.",
+        "es": "Consulta de mascotas (OPD) de 9:30 a 12:30 h todos los días, festivos incluidos."
       },
       "small_animals": true,
       "url": "https://new.gadvasu.in/en/department/401023321/teaching-veterinary-clinical-complex",
@@ -128,7 +132,8 @@
       "emergency_24h": false,
       "duty": "Outpatient 9:00-12:00; emergency treatment available until 16:00.",
       "duty_i18n": {
-        "fr": "Consultations externes 9 h–12 h ; urgences prises en charge jusqu’à 16 h."
+        "fr": "Consultations externes 9 h–12 h ; urgences prises en charge jusqu’à 16 h.",
+        "es": "Consultas externas de 9:00 a 12:00 h; urgencias hasta las 16:00."
       },
       "small_animals": true,
       "url": "https://pvnrtvu.ac.in/?p=2124",
@@ -144,7 +149,8 @@
       "emergency_24h": true,
       "duty": "Provides 24/7 emergency animal health services; Referral Veterinary Polyclinic has 24/7 emergency service for critically ill patients.",
       "duty_i18n": {
-        "fr": "Urgences vétérinaires 24 h/24, 7 j/7 ; la polyclinique vétérinaire de référence assure les urgences 24 h/24, 7 j/7 pour les patients en état critique."
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7 ; la polyclinique vétérinaire de référence assure les urgences 24 h/24, 7 j/7 pour les patients en état critique.",
+        "es": "Ofrece urgencias veterinarias 24/7; el Referral Veterinary Polyclinic tiene urgencias 24/7 para pacientes críticos."
       },
       "small_animals": true,
       "url": "https://ivri.nic.in/academics/TVCC.aspx",
@@ -162,7 +168,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week; emergency and critical care around the clock. Call ahead on the way.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences et soins intensifs en continu. Appelez en route."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences et soins intensifs en continu. Appelez en route.",
+        "es": "Abierto las 24 horas, 7 días a la semana; urgencias y cuidados críticos las 24 horas. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://sahmumbai.com/",
@@ -180,7 +187,8 @@
       "emergency_24h": true,
       "duty": "Open 24x7 for emergencies and critical care.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences et les soins intensifs."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences et les soins intensifs.",
+        "es": "Abierto 24/7 para urgencias y cuidados críticos."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -198,7 +206,8 @@
       "emergency_24h": true,
       "duty": "Open 24x7 multi-speciality pet hospital.",
       "duty_i18n": {
-        "fr": "Hôpital vétérinaire pluridisciplinaire ouvert 24 h/24, 7 j/7."
+        "fr": "Hôpital vétérinaire pluridisciplinaire ouvert 24 h/24, 7 j/7.",
+        "es": "Hospital de mascotas multiespecialidad abierto 24/7."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -216,7 +225,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -234,7 +244,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -252,7 +263,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -270,7 +282,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -288,7 +301,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -306,7 +320,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -324,7 +339,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 for pet emergencies. Emergency helpline +91 80627 44111.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgences : +91 80627 44111.",
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -342,7 +358,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, every day, for emergencies and hospitalisation.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, tous les jours, pour les urgences et l’hospitalisation."
+        "fr": "Ouvert 24 h/24, tous les jours, pour les urgences et l’hospitalisation.",
+        "es": "Abierto las 24 horas, todos los días, para urgencias y hospitalización."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -360,7 +377,8 @@
       "emergency_24h": false,
       "duty": "Call to confirm timings; emergencies are seen first. Outside clinic hours the Domlur hospital in Bengaluru is open 24 hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24."
+        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24.",
+        "es": "Llama para confirmar el horario; las urgencias se atienden primero. Fuera del horario de la clínica, el hospital de Domlur en Bengaluru abre las 24 horas."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -378,7 +396,8 @@
       "emergency_24h": false,
       "duty": "Call to confirm timings; emergencies are seen first. Outside clinic hours the Domlur hospital in Bengaluru is open 24 hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24."
+        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24.",
+        "es": "Llama para confirmar el horario; las urgencias se atienden primero. Fuera del horario de la clínica, el hospital de Domlur en Bengaluru abre las 24 horas."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -396,7 +415,8 @@
       "emergency_24h": false,
       "duty": "Call to confirm timings; emergencies are seen first. Outside clinic hours the Domlur hospital in Bengaluru is open 24 hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24."
+        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24.",
+        "es": "Llama para confirmar el horario; las urgencias se atienden primero. Fuera del horario de la clínica, el hospital de Domlur en Bengaluru abre las 24 horas."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -414,7 +434,8 @@
       "emergency_24h": false,
       "duty": "Call to confirm timings; emergencies are seen first. Outside clinic hours the Domlur hospital in Bengaluru is open 24 hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24."
+        "fr": "Appelez pour confirmer les horaires ; les urgences sont prises en charge en priorité. En dehors des horaires de la clinique, l’hôpital de Domlur à Bengaluru est ouvert 24 h/24.",
+        "es": "Llama para confirmar el horario; las urgencias se atienden primero. Fuera del horario de la clínica, el hospital de Domlur en Bengaluru abre las 24 horas."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -432,7 +453,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 including weekends and holidays; emergency and critical care unit.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, week-ends et jours fériés compris ; service d’urgences et de soins intensifs."
+        "fr": "Ouvert 24 h/24, 7 j/7, week-ends et jours fériés compris ; service d’urgences et de soins intensifs.",
+        "es": "Abierto 24/7, fines de semana y festivos incluidos; unidad de urgencias y cuidados críticos."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -450,7 +472,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7 including weekends and holidays.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, week-ends et jours fériés compris."
+        "fr": "Ouvert 24 h/24, 7 j/7, week-ends et jours fériés compris.",
+        "es": "Abierto 24/7, fines de semana y festivos incluidos."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -468,7 +491,8 @@
       "emergency_24h": false,
       "duty": "Open 9:00-21:00.",
       "duty_i18n": {
-        "fr": "Ouvert 9 h–21 h."
+        "fr": "Ouvert 9 h–21 h.",
+        "es": "Abierto de 9:00 a 21:00 h."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -486,7 +510,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7, all days including holidays.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris."
+        "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris.",
+        "es": "Abierto 24/7, todos los días, festivos incluidos."
       },
       "small_animals": true,
       "url": "https://www.littleangelspetclinic.com/",
@@ -504,7 +529,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency care; call the branch.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24, 7 j/7 ; appelez la clinique."
+        "fr": "Urgences 24 h/24, 7 j/7 ; appelez la clinique.",
+        "es": "Urgencias 24/7; llama a la sucursal."
       },
       "small_animals": true,
       "url": "https://drpet.co.in/",
@@ -522,7 +548,8 @@
       "emergency_24h": false,
       "duty": "Open daily 9:00-21:00; emergency care during opening hours, call ahead for urgent cases.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 9 h–21 h ; urgences prises en charge pendant les heures d’ouverture, appelez avant de venir pour les cas urgents."
+        "fr": "Ouvert tous les jours 9 h–21 h ; urgences prises en charge pendant les heures d’ouverture, appelez avant de venir pour les cas urgents.",
+        "es": "Abierto todos los días de 9:00 a 21:00 h; urgencias en horario de apertura, llama antes para casos urgentes."
       },
       "small_animals": true,
       "url": "https://www.skspethospital.com/",
@@ -540,7 +567,8 @@
       "emergency_24h": false,
       "duty": "Open daily 9:00-22:00; emergency services and ambulance advertised around the clock, call ahead.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 9 h–22 h ; services d’urgences et ambulance annoncés 24 h/24, appelez avant de venir."
+        "fr": "Ouvert tous les jours 9 h–22 h ; services d’urgences et ambulance annoncés 24 h/24, appelez avant de venir.",
+        "es": "Abierto todos los días de 9:00 a 22:00 h; anuncia urgencias y ambulancia las 24 horas, llama antes."
       },
       "small_animals": true,
       "url": "https://www.lifecarevet.com/",
@@ -558,7 +586,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week; 24x7 emergency and critical care.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences et soins intensifs 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences et soins intensifs 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, 7 días a la semana; urgencias y cuidados críticos 24/7."
       },
       "small_animals": true,
       "url": "https://pupsnkitspethospital.com/",
@@ -576,7 +605,8 @@
       "emergency_24h": true,
       "duty": "Open 9:30-20:30 daily; emergency service 24x7. Second line +91 99984 72105.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 9 h 30–20 h 30 ; urgences 24 h/24, 7 j/7. Seconde ligne : +91 99984 72105."
+        "fr": "Ouvert tous les jours 9 h 30–20 h 30 ; urgences 24 h/24, 7 j/7. Seconde ligne : +91 99984 72105.",
+        "es": "Abierto todos los días de 9:30 a 20:30 h; urgencias 24/7. Segunda línea +91 99984 72105."
       },
       "small_animals": true,
       "url": "https://imperialvethospital.com/",
@@ -594,7 +624,8 @@
       "emergency_24h": false,
       "duty": "Open 9:00-20:00 (Sunday 9:00-13:00). Emergency services advertised 365 days; call ahead.",
       "duty_i18n": {
-        "fr": "Ouvert 9 h–20 h (dimanche 9 h–13 h). Urgences annoncées 365 jours par an ; appelez avant de venir."
+        "fr": "Ouvert 9 h–20 h (dimanche 9 h–13 h). Urgences annoncées 365 jours par an ; appelez avant de venir.",
+        "es": "Abierto de 9:00 a 20:00 h (domingo de 9:00 a 13:00 h). Anuncia urgencias los 365 días; llama antes."
       },
       "small_animals": true,
       "url": "https://www.petsandpawsindia.com/",
@@ -612,7 +643,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7; emergency line answered by a person around the clock.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 ; une personne répond à la ligne d’urgences à toute heure."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; une personne répond à la ligne d’urgences à toute heure.",
+        "es": "Abierto 24/7; la línea de urgencias la atiende una persona las 24 horas."
       },
       "small_animals": true,
       "url": "https://supervetz.in/",
@@ -630,7 +662,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, 7 días a la semana."
       },
       "small_animals": true,
       "url": "https://cochinpetspecialities.com/",
@@ -646,15 +679,15 @@
       "address": "Eroor Road, Sharipady, Tripunithura, Kochi 682306",
       "phone": "+91 99619 33999",
       "emergency_24h": false,
-      "duty": "Hours listed 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead.",
-      "duty_i18n": {
-        "fr": "Horaires indiqués : 9 h–21 h ; ligne d’urgences et ambulance annoncées 24 h/24, 7 j/7, appelez avant de venir."
-      },
+      "duty": "Hours 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead.",
       "small_animals": true,
       "url": "https://www.felican.in/",
       "source_url": "https://www.felican.in/contact",
       "checked": "2026-11-10",
-      "note": "Contact page labels Tripunithura '24/7' and also '09 AM - 09 PM' plus '24X7 Emergency Care & Ambulance'; conflicting, so false until confirmed by phone. Other branches: Muvattupuzha, Thoppumpady."
+      "note": "Contact page labels Tripunithura '24/7' and also '09 AM - 09 PM' plus '24X7 Emergency Care & Ambulance'; conflicting, so false until confirmed by phone. Other branches: Muvattupuzha, Thoppumpady. Removed from duty: Hours listed 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead.",
+      "duty_i18n": {
+        "es": "Horario de 9:00 a 21:00 h; anuncia línea de urgencias 24/7 y ambulancia, llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -666,7 +699,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency service and pet ambulance.",
       "duty_i18n": {
-        "fr": "Urgences et ambulance pour animaux 24 h/24, 7 j/7."
+        "fr": "Urgences et ambulance pour animaux 24 h/24, 7 j/7.",
+        "es": "Urgencias 24/7 y ambulancia para mascotas."
       },
       "small_animals": true,
       "url": "https://vetbrospethospital.com/",
@@ -684,7 +718,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 24x7.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24, 7 j/7."
+        "fr": "Urgences 24 h/24, 7 j/7.",
+        "es": "Urgencias 24/7."
       },
       "small_animals": true,
       "url": "https://www.sukhdapethospital.com/",
@@ -701,7 +736,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency care including nights, weekends and holidays.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24, nuits, week-ends et jours fériés compris."
+        "fr": "Urgences 24 h/24, nuits, week-ends et jours fériés compris.",
+        "es": "Urgencias las 24 horas, noches, fines de semana y festivos incluidos."
       },
       "small_animals": true,
       "url": "https://www.vet24animalhospital.com/",
@@ -719,7 +755,8 @@
       "emergency_24h": true,
       "duty": "OPD 9:00-21:00; emergency 24x7.",
       "duty_i18n": {
-        "fr": "Consultations externes 9 h–21 h ; urgences 24 h/24, 7 j/7."
+        "fr": "Consultations externes 9 h–21 h ; urgences 24 h/24, 7 j/7.",
+        "es": "OPD de 9:00 a 21:00 h; urgencias 24/7."
       },
       "small_animals": true,
       "url": "https://primevets.in/",
@@ -737,7 +774,8 @@
       "emergency_24h": false,
       "duty": "Open daily 9:30-20:00; emergency support line advertised, call ahead.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 9 h 30–20 h ; ligne d’assistance d’urgence annoncée, appelez avant de venir."
+        "fr": "Ouvert tous les jours 9 h 30–20 h ; ligne d’assistance d’urgence annoncée, appelez avant de venir.",
+        "es": "Abierto todos los días de 9:30 a 20:00 h; anuncia línea de ayuda de urgencias, llama antes."
       },
       "small_animals": true,
       "url": "https://thesmallanimalmohali.com/",
@@ -755,7 +793,8 @@
       "emergency_24h": true,
       "duty": "Advertised open 24/7. Emergency helplines 9317711155, 9780527267, 8288818220.",
       "duty_i18n": {
-        "fr": "Annoncé ouvert 24 h/24, 7 j/7. Lignes d’urgences : 9317711155, 9780527267, 8288818220."
+        "fr": "Annoncé ouvert 24 h/24, 7 j/7. Lignes d’urgences : 9317711155, 9780527267, 8288818220.",
+        "es": "Se anuncia abierto 24/7. Líneas de urgencias 9317711155, 9780527267, 8288818220."
       },
       "small_animals": true,
       "url": "https://www.petsmarthospitals.com/",
@@ -773,7 +812,8 @@
       "emergency_24h": true,
       "duty": "Non-stop service 24/7.",
       "duty_i18n": {
-        "fr": "Service continu 24 h/24, 7 j/7."
+        "fr": "Service continu 24 h/24, 7 j/7.",
+        "es": "Servicio ininterrumpido 24/7."
       },
       "small_animals": true,
       "url": "https://animalveterinaryhospital.in/",
@@ -791,7 +831,8 @@
       "emergency_24h": false,
       "duty": "Open Monday to Saturday 9:00-18:00.",
       "duty_i18n": {
-        "fr": "Ouvert du lundi au samedi 9 h–18 h."
+        "fr": "Ouvert du lundi au samedi 9 h–18 h.",
+        "es": "Abierto de lunes a sábado de 9:00 a 18:00 h."
       },
       "small_animals": true,
       "url": "https://papaslifeline.com/",
@@ -809,7 +850,8 @@
       "emergency_24h": false,
       "duty": "Open daily 9:00-23:00.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 9 h–23 h."
+        "fr": "Ouvert tous les jours 9 h–23 h.",
+        "es": "Abierto todos los días de 9:00 a 23:00 h."
       },
       "small_animals": true,
       "url": "https://cupabangalore.org/",
@@ -827,7 +869,8 @@
       "emergency_24h": false,
       "duty": "Hours Monday to Friday 9:00-18:00; says it is available for emergencies 24/7, call ahead.",
       "duty_i18n": {
-        "fr": "Horaires : du lundi au vendredi 9 h–18 h ; indique être disponible pour les urgences 24 h/24, 7 j/7, appelez avant de venir."
+        "fr": "Horaires : du lundi au vendredi 9 h–18 h ; indique être disponible pour les urgences 24 h/24, 7 j/7, appelez avant de venir.",
+        "es": "Horario de lunes a viernes de 9:00 a 18:00 h; dice estar disponible para urgencias 24/7, llama antes."
       },
       "small_animals": true,
       "url": "https://mypetclinicvizag.com/",
@@ -845,7 +888,8 @@
       "emergency_24h": true,
       "duty": "Open 9:00-20:00 for general visits; open 24x7 for emergencies. Emergency helpline +91 91931 00911.",
       "duty_i18n": {
-        "fr": "Ouvert 9 h–20 h pour les consultations courantes ; urgences 24 h/24, 7 j/7. Ligne d’urgences : +91 91931 00911."
+        "fr": "Ouvert 9 h–20 h pour les consultations courantes ; urgences 24 h/24, 7 j/7. Ligne d’urgences : +91 91931 00911.",
+        "es": "Abierto de 9:00 a 20:00 h para consultas generales; abierto 24/7 para urgencias. Línea de urgencias +91 91931 00911."
       },
       "small_animals": true,
       "url": "https://evavets.com/",
@@ -863,7 +907,8 @@
       "emergency_24h": false,
       "duty": "OPD 11:00-17:00; IPD admission 10:00-18:00. Call or WhatsApp for emergencies.",
       "duty_i18n": {
-        "fr": "Consultations externes 11 h–17 h ; admissions en hospitalisation 10 h–18 h. Urgences : appelez ou écrivez sur WhatsApp."
+        "fr": "Consultations externes 11 h–17 h ; admissions en hospitalisation 10 h–18 h. Urgences : appelez ou écrivez sur WhatsApp.",
+        "es": "OPD de 11:00 a 17:00 h; ingreso (IPD) de 10:00 a 18:00 h. Llama o escribe por WhatsApp para urgencias."
       },
       "small_animals": true,
       "url": "https://raahatanimalhospital.org/",
@@ -881,7 +926,8 @@
       "emergency_24h": true,
       "duty": "24x7 emergency pet treatment, day or night.",
       "duty_i18n": {
-        "fr": "Soins d’urgence pour animaux 24 h/24, 7 j/7, de jour comme de nuit."
+        "fr": "Soins d’urgence pour animaux 24 h/24, 7 j/7, de jour comme de nuit.",
+        "es": "Urgencias de mascotas 24/7, de día y de noche."
       },
       "small_animals": true,
       "url": "https://www.sspetcare.com/",
@@ -899,7 +945,8 @@
       "emergency_24h": false,
       "duty": "Open daily 10:00-20:00; 24/7 emergency services advertised, call ahead.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 10 h–20 h ; urgences annoncées 24 h/24, 7 j/7, appelez avant de venir."
+        "fr": "Ouvert tous les jours 10 h–20 h ; urgences annoncées 24 h/24, 7 j/7, appelez avant de venir.",
+        "es": "Abierto todos los días de 10:00 a 20:00 h; anuncia urgencias 24/7, llama antes."
       },
       "small_animals": true,
       "url": "https://drsinghpetcaremaxpet.com/",
@@ -917,7 +964,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:30-20:30, Sat-Sun 10:00-21:00; emergency help advertised 24x7, call ahead.",
       "duty_i18n": {
-        "fr": "Lun.–ven. 10 h 30–20 h 30, sam.–dim. 10 h–21 h ; aide d’urgence annoncée 24 h/24, 7 j/7, appelez avant de venir."
+        "fr": "Lun.–ven. 10 h 30–20 h 30, sam.–dim. 10 h–21 h ; aide d’urgence annoncée 24 h/24, 7 j/7, appelez avant de venir.",
+        "es": "De lunes a viernes de 10:30 a 20:30 h, sábado y domingo de 10:00 a 21:00 h; anuncia ayuda de urgencias 24/7, llama antes."
       },
       "small_animals": true,
       "url": "https://pawcentric.in/",

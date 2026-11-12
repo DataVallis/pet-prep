@@ -174,7 +174,8 @@
       "emergency_24h": true,
       "duty": "Emergency center open 24 hours; walk-in emergency patients accepted without referral. Regular hours 9:00-18:00 by appointment. A 30% surcharge applies to emergency care outside regular hours. Call before coming.",
       "duty_i18n": {
-        "fr": "Centre d’urgences ouvert 24 h/24 ; urgences acceptées sans rendez-vous ni orientation. Horaires habituels 9 h–18 h sur rendez-vous. Supplément de 30 % pour les soins d’urgence hors horaires habituels. Appelez avant de venir."
+        "fr": "Centre d’urgences ouvert 24 h/24 ; urgences acceptées sans rendez-vous ni orientation. Horaires habituels 9 h–18 h sur rendez-vous. Supplément de 30 % pour les soins d’urgence hors horaires habituels. Appelez avant de venir.",
+        "es": "Centro de urgencias abierto las 24 horas; se atienden urgencias sin cita ni derivación. Horario habitual de 9:00 a 18:00 h con cita previa. Recargo del 30 % en urgencias fuera del horario habitual. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://vmth.snu.ac.kr/",
@@ -192,7 +193,8 @@
       "emergency_24h": false,
       "duty": "Regular hours weekdays 9:00-17:30 by appointment; emergency and night care available at the Emergency and Critical Care department. Call before coming.",
       "duty_i18n": {
-        "fr": "Horaires habituels en semaine 9 h–17 h 30 sur rendez-vous ; urgences et soins de nuit au service d’urgences et de soins intensifs. Appelez avant de venir."
+        "fr": "Horaires habituels en semaine 9 h–17 h 30 sur rendez-vous ; urgences et soins de nuit au service d’urgences et de soins intensifs. Appelez avant de venir.",
+        "es": "Horario habitual en días laborables de 9:00 a 17:30 h con cita previa; urgencias y atención nocturna en el departamento de Urgencias y Cuidados Críticos. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://vmth.konkuk.ac.kr/vmth/index.do",
@@ -210,7 +212,8 @@
       "emergency_24h": true,
       "duty": "Emergency room open 24 hours: weekdays 18:00-09:00 next morning, weekends and public holidays around the clock. Regular hours weekdays 9:00-12:00 and 13:00-18:00.",
       "duty_i18n": {
-        "fr": "Urgences ouvertes 24 h/24 : en semaine 18 h–9 h le lendemain matin, week-ends et jours fériés jour et nuit. Horaires habituels en semaine 9 h–12 h et 13 h–18 h."
+        "fr": "Urgences ouvertes 24 h/24 : en semaine 18 h–9 h le lendemain matin, week-ends et jours fériés jour et nuit. Horaires habituels en semaine 9 h–12 h et 13 h–18 h.",
+        "es": "Urgencias abiertas las 24 horas: días laborables de 18:00 a 9:00 h de la mañana siguiente, fines de semana y festivos todo el día. Horario habitual en días laborables de 9:00 a 12:00 y de 13:00 a 18:00 h."
       },
       "small_animals": true,
       "url": "https://cnuvmth.jnu.ac.kr/",
@@ -228,7 +231,8 @@
       "emergency_24h": false,
       "duty": "Regular hours weekdays 9:00-12:00 and 13:30-18:00. Emergency care weekdays 18:00-09:00 and around the clock on weekends and public holidays.",
       "duty_i18n": {
-        "fr": "Horaires habituels en semaine 9 h–12 h et 13 h 30–18 h. Urgences en semaine 18 h–9 h et 24 h/24 les week-ends et jours fériés."
+        "fr": "Horaires habituels en semaine 9 h–12 h et 13 h 30–18 h. Urgences en semaine 18 h–9 h et 24 h/24 les week-ends et jours fériés.",
+        "es": "Horario habitual en días laborables de 9:00 a 12:00 y de 13:30 a 18:00 h. Urgencias en días laborables de 18:00 a 9:00 h y todo el día en fines de semana y festivos."
       },
       "small_animals": true,
       "url": "https://jamc.jbnu.ac.kr/jamc/index.do",
@@ -244,15 +248,15 @@
       "address": "109 Jiphyeonbuk-ro, Sejong",
       "phone": "+82 44-589-1122",
       "emergency_24h": false,
-      "duty": "Open weekdays 9:00-18:00; closed weekends and public holidays. No emergency service stated.",
-      "duty_i18n": {
-        "fr": "Ouvert en semaine 9 h–18 h ; fermé les week-ends et jours fériés. Aucun service d’urgence indiqué."
-      },
+      "duty": "Open weekdays 9:00-18:00; closed weekends and public holidays.",
       "small_animals": true,
       "url": "https://sjcbuanimal.kr/",
       "source_url": "https://sjcbuanimal.kr/",
       "checked": "2026-11-10",
-      "note": "Also 044-589-1123. No 24h/emergency statement."
+      "note": "Also 044-589-1123. No 24h/emergency statement. Removed from duty: Open weekdays 9:00-18:00; closed weekends and public holidays. No emergency service stated.",
+      "duty_i18n": {
+        "es": "Abierto en días laborables de 9:00 a 18:00 h; cerrado los fines de semana y festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -264,7 +268,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year with veterinarians on site. Regular care 9:30-21:00, night care 21:00-9:30.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an, vétérinaires sur place. Soins habituels 9 h 30–21 h, soins de nuit 21 h–9 h 30."
+        "fr": "Ouvert 24 h/24, 365 jours par an, vétérinaires sur place. Soins habituels 9 h 30–21 h, soins de nuit 21 h–9 h 30.",
+        "es": "Abierto las 24 horas, 365 días al año, con veterinarios presentes. Atención habitual de 9:30 a 21:00 h, atención nocturna de 21:00 a 9:30 h."
       },
       "small_animals": true,
       "url": "https://youramc.co.kr/",
@@ -282,7 +287,8 @@
       "emergency_24h": true,
       "duty": "Trauma and emergency surgery centre open 24 hours, 365 days a year. Call before coming.",
       "duty_i18n": {
-        "fr": "Centre de traumatologie et de chirurgie d’urgence ouvert 24 h/24, 365 jours par an. Appelez avant de venir."
+        "fr": "Centre de traumatologie et de chirurgie d’urgence ouvert 24 h/24, 365 jours par an. Appelez avant de venir.",
+        "es": "Centro de traumatología y cirugía de urgencia abierto las 24 horas, 365 días al año. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://www.sncamc.co.kr/",
@@ -300,7 +306,8 @@
       "emergency_24h": true,
       "duty": "Emergency care 24 hours, 365 days a year (24-hour emergency hotline, staff on standby at night, dawn and public holidays). Day 9:30-19:00, evening 19:00-22:00, emergency 22:00-8:00. Call before coming.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24, 365 jours par an (ligne d’urgence 24 h/24, équipe d’astreinte la nuit, à l’aube et les jours fériés). Journée 9 h 30–19 h, soirée 19 h–22 h, urgences 22 h–8 h. Appelez avant de venir."
+        "fr": "Urgences 24 h/24, 365 jours par an (ligne d’urgence 24 h/24, équipe d’astreinte la nuit, à l’aube et les jours fériés). Journée 9 h 30–19 h, soirée 19 h–22 h, urgences 22 h–8 h. Appelez avant de venir.",
+        "es": "Urgencias las 24 horas, 365 días al año (línea de urgencias 24 horas, personal de guardia de noche, madrugada y festivos). Día de 9:30 a 19:00 h, tarde 19:00 a 22:00 h, urgencias de 22:00 a 8:00 h. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://www.thecare24.com/",
@@ -318,7 +325,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 365 days a year.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an."
+        "fr": "Ouvert 24 h/24, 365 jours par an.",
+        "es": "Abierto las 24 horas del día, 365 días al año."
       },
       "small_animals": true,
       "url": "https://24ftma.com/",
@@ -336,7 +344,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year with staff on site. Regular care 9:00-20:00, evening 20:00-24:00, late night 24:00-9:00.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an, personnel sur place. Soins habituels 9 h–20 h, soirée 20 h–24 h, nuit 0 h–9 h."
+        "fr": "Ouvert 24 h/24, 365 jours par an, personnel sur place. Soins habituels 9 h–20 h, soirée 20 h–24 h, nuit 0 h–9 h.",
+        "es": "Abierto las 24 horas, 365 días al año, con personal presente. Atención habitual de 9:00 a 20:00 h, tarde 20:00 a 24:00 h, madrugada de 24:00 a 9:00 h."
       },
       "small_animals": true,
       "url": "https://bamc365.kr/",
@@ -354,7 +363,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. Day 9:00-20:00, evening 20:00-24:00, emergency care 0:00-9:00.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 9 h–20 h, soirée 20 h–24 h, urgences 0 h–9 h."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 9 h–20 h, soirée 20 h–24 h, urgences 0 h–9 h.",
+        "es": "Abierto las 24 horas, 365 días al año. Día de 9:00 a 20:00 h, tarde 20:00 a 24:00 h, urgencias de 0:00 a 9:00 h."
       },
       "small_animals": true,
       "url": "https://www.24leadamc.com/",
@@ -372,7 +382,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. Day 10:00-19:00, evening 21:00-24:00, emergency 24:00-8:00; lunch break 12:30-14:00 (emergencies still handled). Phone advice 24 hours.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 10 h–19 h, soirée 21 h–24 h, urgences 0 h–8 h ; pause déjeuner 12 h 30–14 h (urgences toujours prises en charge). Conseil téléphonique 24 h/24."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 10 h–19 h, soirée 21 h–24 h, urgences 0 h–8 h ; pause déjeuner 12 h 30–14 h (urgences toujours prises en charge). Conseil téléphonique 24 h/24.",
+        "es": "Abierto las 24 horas, 365 días al año. Día de 10:00 a 19:00 h, tarde 21:00 a 24:00 h, urgencias de 24:00 a 8:00 h; pausa del mediodía de 12:30 a 14:00 h (las urgencias se atienden igualmente). Consejo telefónico 24 horas."
       },
       "small_animals": true,
       "url": "https://unamc24.com/",
@@ -390,7 +401,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, every day of the year. Day 10:00-21:30, night 21:30-10:00 with extra fees for emergency and night visits.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, tous les jours de l’année. Journée 10 h–21 h 30, nuit 21 h 30–10 h, avec supplément pour les urgences et les visites de nuit."
+        "fr": "Ouvert 24 h/24, tous les jours de l’année. Journée 10 h–21 h 30, nuit 21 h 30–10 h, avec supplément pour les urgences et les visites de nuit.",
+        "es": "Abierto las 24 horas, todos los días del año. Día de 10:00 a 21:30 h, noche de 21:30 a 10:00 h con tarifas adicionales por urgencias y visitas nocturnas."
       },
       "small_animals": true,
       "url": "http://ysamc24.co.kr/",
@@ -408,7 +420,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year. Day 9:00-22:00, night 22:00-9:00.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 9 h–22 h, nuit 22 h–9 h."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Journée 9 h–22 h, nuit 22 h–9 h.",
+        "es": "Abierto las 24 horas, 365 días al año. Día de 9:00 a 22:00 h, noche de 22:00 a 9:00 h."
       },
       "small_animals": true,
       "url": "https://amc24in.com/",
@@ -426,7 +439,8 @@
       "emergency_24h": false,
       "duty": "General care 9:00-22:00; night emergency care 22:00-9:00. Call before coming.",
       "duty_i18n": {
-        "fr": "Soins généraux 9 h–22 h ; urgences de nuit 22 h–9 h. Appelez avant de venir."
+        "fr": "Soins généraux 9 h–22 h ; urgences de nuit 22 h–9 h. Appelez avant de venir.",
+        "es": "Atención general 9:00–22:00 h; urgencias nocturnas 22:00–9:00 h. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://www.sooamc.com/",
@@ -444,7 +458,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year; call any time for emergencies.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an ; appelez à toute heure en cas d’urgence."
+        "fr": "Ouvert 24 h/24, 365 jours par an ; appelez à toute heure en cas d’urgence.",
+        "es": "Abierto las 24 horas, 365 días al año; llama a cualquier hora en caso de urgencia."
       },
       "small_animals": true,
       "url": "https://lieumamc.co.kr/",
@@ -462,7 +477,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours every day including weekends and public holidays. Day 9:00-21:00, night 21:00-9:00 with an additional fee.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24 tous les jours, week-ends et jours fériés compris. Journée 9 h–21 h, nuit 21 h–9 h avec supplément."
+        "fr": "Ouvert 24 h/24 tous les jours, week-ends et jours fériés compris. Journée 9 h–21 h, nuit 21 h–9 h avec supplément.",
+        "es": "Abierto las 24 horas todos los días, incluidos fines de semana y festivos. Día 9:00–21:00 h, noche 21:00–9:00 h con recargo."
       },
       "small_animals": true,
       "url": "https://hueanimal.com/",
@@ -480,7 +496,8 @@
       "emergency_24h": true,
       "duty": "Day care 10:00-22:00; night care and emergency surgery 22:00-10:00; consultation 24 hours.",
       "duty_i18n": {
-        "fr": "Soins de jour 10 h–22 h ; soins de nuit et chirurgie d’urgence 22 h–10 h ; consultation 24 h/24."
+        "fr": "Soins de jour 10 h–22 h ; soins de nuit et chirurgie d’urgence 22 h–10 h ; consultation 24 h/24.",
+        "es": "Atención diurna 10:00–22:00 h; atención nocturna y cirugía de urgencia 22:00–10:00 h; consultas las 24 horas."
       },
       "small_animals": true,
       "url": "https://dogsclub24.wixsite.com/24dogsclub",
@@ -497,7 +514,8 @@
       "emergency_24h": true,
       "duty": "Open 365 days, inpatient care 24 hours. Cheongdam branch: day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00 (extra fee). Some branches have no late-night service. Call the branch first.",
       "duty_i18n": {
-        "fr": "Ouvert 365 jours par an, hospitalisation 24 h/24. Succursale de Cheongdam : journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h (supplément). Certaines succursales n’ont pas de service de nuit. Appelez d’abord la succursale."
+        "fr": "Ouvert 365 jours par an, hospitalisation 24 h/24. Succursale de Cheongdam : journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h (supplément). Certaines succursales n’ont pas de service de nuit. Appelez d’abord la succursale.",
+        "es": "Abierto 365 días, hospitalización las 24 horas. Sede de Cheongdam: día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h (con recargo). Algunas sedes no atienden de madrugada. Llama antes a la sede."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/",
@@ -515,7 +533,8 @@
       "emergency_24h": true,
       "duty": "Open every day, 24 hours. Day 10:00-21:00 (lunch 13:00-14:30), emergency care 21:00-10:00.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 24 h/24. Journée 10 h–21 h (pause déjeuner 13 h–14 h 30), urgences 21 h–10 h."
+        "fr": "Ouvert tous les jours, 24 h/24. Journée 10 h–21 h (pause déjeuner 13 h–14 h 30), urgences 21 h–10 h.",
+        "es": "Abierto todos los días, las 24 horas. Día 10:00–21:00 h (descanso para comer 13:00–14:30 h), urgencias 21:00–10:00 h."
       },
       "small_animals": true,
       "url": "https://jejusamc.com/",
@@ -531,7 +550,8 @@
       "emergency_24h": true,
       "duty": "Open 365 days a year, 24 hours. Day 10:30-19:00, night 19:00-22:00 (night fee), late night 22:00-10:00.",
       "duty_i18n": {
-        "fr": "Ouvert 365 jours par an, 24 h/24. Journée 10 h 30–19 h, soirée 19 h–22 h (tarif de nuit), nuit 22 h–10 h."
+        "fr": "Ouvert 365 jours par an, 24 h/24. Journée 10 h 30–19 h, soirée 19 h–22 h (tarif de nuit), nuit 22 h–10 h.",
+        "es": "Abierto 365 días al año, las 24 horas. Día 10:30–19:00 h, noche 19:00–22:00 h (con tarifa nocturna), madrugada 22:00–10:00 h."
       },
       "small_animals": true,
       "url": "https://blog.24samc.co.kr/",
@@ -548,7 +568,8 @@
       "phone": "+82 63-275-7979",
       "duty": "Call to confirm opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires d’ouverture."
+        "fr": "Appelez pour confirmer les horaires d’ouverture.",
+        "es": "Llama para consultar el horario."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -565,7 +586,8 @@
       "phone": "+82 63-902-7975",
       "duty": "Call to confirm opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires d’ouverture."
+        "fr": "Appelez pour confirmer les horaires d’ouverture.",
+        "es": "Llama para consultar el horario."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -582,7 +604,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days. Outpatient 09:30-18:30, emergency care 18:30-09:30 (emergency surcharge applies).",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Consultations 9 h 30–18 h 30, urgences 18 h 30–9 h 30 (supplément d’urgence)."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Consultations 9 h 30–18 h 30, urgences 18 h 30–9 h 30 (supplément d’urgence).",
+        "es": "Abierto las 24 horas, 365 días. Consultas 9:30–18:30 h, urgencias 18:30–9:30 h (con recargo de urgencias)."
       },
       "small_animals": true,
       "url": "https://noahamc.co.kr/",
@@ -600,7 +623,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days. General care 10:00-20:00, emergency care 20:00-10:00.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Soins généraux 10 h–20 h, urgences 20 h–10 h."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Soins généraux 10 h–20 h, urgences 20 h–10 h.",
+        "es": "Abierto las 24 horas, 365 días. Atención general 10:00–20:00 h, urgencias 20:00–10:00 h."
       },
       "small_animals": true,
       "url": "https://www.namc.co.kr/",
@@ -616,15 +640,15 @@
       "address": "Dongjak-daero 36, Daekwang Bldg 1F-2F, Seocho-gu, Seoul",
       "phone": "02-525-3102",
       "emergency_24h": true,
-      "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
-      "duty_i18n": {
-        "fr": "Journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Indiqué comme fermé le dimanche (à confirmer). Appelez d’abord."
-      },
+      "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Not operating on Sundays (scope unclear). Call first.",
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/seocho",
       "source_url": "https://www.vipah.co.kr/kr/medical/branches/seocho",
       "checked": "2026-11-10",
-      "note": "Page: '24시 동물병원'; late night not operated Sundays."
+      "note": "Page: '24시 동물병원'; late night not operated Sundays. Removed from duty: Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "duty_i18n": {
+        "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -636,7 +660,8 @@
       "emergency_24h": true,
       "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Call first to confirm.",
       "duty_i18n": {
-        "fr": "Journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Appelez d’abord pour confirmer."
+        "fr": "Journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Appelez d’abord pour confirmer.",
+        "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. Llama antes para confirmar."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/cheongdam",
@@ -654,7 +679,8 @@
       "emergency_24h": true,
       "duty": "Day 10:00-19:00, evening 19:00-22:00, late night 22:00-10:00. Call first to confirm.",
       "duty_i18n": {
-        "fr": "Journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Appelez d’abord pour confirmer."
+        "fr": "Journée 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Appelez d’abord pour confirmer.",
+        "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. Llama antes para confirmar."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/nowon",
@@ -670,15 +696,15 @@
       "address": "Dongsomun-ro 73, Cityplace 1F/L/B1, Seongbuk-gu, Seoul",
       "phone": "02-953-0075",
       "emergency_24h": true,
-      "duty": "Day 10:00-18:00, evening 18:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
-      "duty_i18n": {
-        "fr": "Journée 10 h–18 h, soirée 18 h–22 h, nuit 22 h–10 h. Indiqué comme fermé le dimanche (à confirmer). Appelez d’abord."
-      },
+      "duty": "Day 10:00-18:00, evening 18:00-22:00, late night 22:00-10:00. Not operating on Sundays (scope unclear). Call first.",
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/seongbuk",
       "source_url": "https://www.vipah.co.kr/kr/medical/branches/seongbuk",
       "checked": "2026-11-10",
-      "note": "Page: '24시 응급·수술...', '24시 진료'; Sunday closure scope unclear."
+      "note": "Page: '24시 응급·수술...', '24시 진료'; Sunday closure scope unclear. Removed from duty: Day 10:00-18:00, evening 18:00-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "duty_i18n": {
+        "es": "Día 10:00–18:00 h, tarde 18:00–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -688,15 +714,15 @@
       "address": "Hancheon-ro 14-gil 87, Dongdaemun-gu, Seoul",
       "phone": "02-2215-7522",
       "emergency_24h": true,
-      "duty": "Day 10:00-18:30, evening 18:30-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
-      "duty_i18n": {
-        "fr": "Journée 10 h–18 h 30, soirée 18 h 30–22 h, nuit 22 h–10 h. Indiqué comme fermé le dimanche (à confirmer). Appelez d’abord."
-      },
+      "duty": "Day 10:00-18:30, evening 18:30-22:00, late night 22:00-10:00. Not operating on Sundays (scope unclear). Call first.",
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/dongdaemun",
       "source_url": "https://www.vipah.co.kr/kr/medical/branches/dongdaemun",
       "checked": "2026-11-10",
-      "note": "Page: '24시 동물병원'; Sunday closure noted."
+      "note": "Page: '24시 동물병원'; Sunday closure noted. Removed from duty: Day 10:00-18:30, evening 18:30-22:00, late night 22:00-10:00. Listed as not operating on Sundays (scope unclear). Call first.",
+      "duty_i18n": {
+        "es": "Día 10:00–18:30 h, tarde 18:30–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes."
+      }
     },
     {
       "kind": "clinic",
@@ -708,7 +734,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, every day. Night emergency care 21:00-10:00.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, tous les jours. Urgences de nuit 21 h–10 h."
+        "fr": "Ouvert 24 h/24, tous les jours. Urgences de nuit 21 h–10 h.",
+        "es": "Abierto las 24 horas, todos los días. Urgencias nocturnas 21:00–10:00 h."
       },
       "small_animals": true,
       "url": "https://24worldpet.com/",
@@ -726,7 +753,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, year-round. Appointments 09:30-21:30, overnight emergency care 21:30-09:30.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, toute l’année. Rendez-vous 9 h 30–21 h 30, urgences de nuit 21 h 30–9 h 30."
+        "fr": "Ouvert 24 h/24, toute l’année. Rendez-vous 9 h 30–21 h 30, urgences de nuit 21 h 30–9 h 30.",
+        "es": "Abierto las 24 horas, todo el año. Citas 9:30–21:30 h, urgencias nocturnas 21:30–9:30 h."
       },
       "small_animals": true,
       "url": "https://www.seoulyes24.com/28",
@@ -744,7 +772,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, year-round. Day 10:00-19:00, evening 19:00-22:00, emergency 22:00-10:00 (night fees apply).",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, toute l’année. Journée 10 h–19 h, soirée 19 h–22 h, urgences 22 h–10 h (tarifs de nuit)."
+        "fr": "Ouvert 24 h/24, toute l’année. Journée 10 h–19 h, soirée 19 h–22 h, urgences 22 h–10 h (tarifs de nuit).",
+        "es": "Abierto las 24 horas, todo el año. Día 10:00–19:00 h, tarde 19:00–22:00 h, urgencias 22:00–10:00 h (con tarifa nocturna)."
       },
       "small_animals": true,
       "url": "https://24myamc.com/",
@@ -762,7 +791,8 @@
       "emergency_24h": true,
       "duty": "Emergency care 24 hours. Day care 9:30-21:30, night care 21:30-9:30.",
       "duty_i18n": {
-        "fr": "Urgences 24 h/24. Soins de jour 9 h 30–21 h 30, soins de nuit 21 h 30–9 h 30."
+        "fr": "Urgences 24 h/24. Soins de jour 9 h 30–21 h 30, soins de nuit 21 h 30–9 h 30.",
+        "es": "Urgencias las 24 horas. Atención diurna 9:30–21:30 h, nocturna 21:30–9:30 h."
       },
       "small_animals": true,
       "url": "https://okayamc.com/",
@@ -780,7 +810,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days. Day care 9:30-22:00, overnight care 22:00-9:00 with a 30% surcharge. Cat clinic by appointment only.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 365 jours par an. Soins de jour 9 h 30–22 h, soins de nuit 22 h–9 h avec supplément de 30 %. Consultations pour chats sur rendez-vous uniquement."
+        "fr": "Ouvert 24 h/24, 365 jours par an. Soins de jour 9 h 30–22 h, soins de nuit 22 h–9 h avec supplément de 30 %. Consultations pour chats sur rendez-vous uniquement.",
+        "es": "Abierto las 24 horas, 365 días. Atención diurna 9:30–22:00 h, nocturna 22:00–9:00 h con un 30 % de recargo. Clínica felina solo con cita previa."
       },
       "small_animals": true,
       "url": "https://ysamc.co.kr/",
@@ -798,7 +829,8 @@
       "emergency_24h": false,
       "duty": "Open every day 10:00-20:00, lunch break 13:00-14:00.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 10 h–20 h, pause déjeuner 13 h–14 h."
+        "fr": "Ouvert tous les jours 10 h–20 h, pause déjeuner 13 h–14 h.",
+        "es": "Abierto todos los días 10:00–20:00 h, descanso 13:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://www.dodamamc.com/",
@@ -816,7 +848,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 9:30-21:00, weekends and public holidays 9:30-20:00, lunch break 13:00-14:30. 24-hour inpatient monitoring for hospitalised patients only.",
       "duty_i18n": {
-        "fr": "En semaine 9 h 30–21 h, week-ends et jours fériés 9 h 30–20 h, pause déjeuner 13 h–14 h 30. Surveillance 24 h/24 pour les patients hospitalisés uniquement."
+        "fr": "En semaine 9 h 30–21 h, week-ends et jours fériés 9 h 30–20 h, pause déjeuner 13 h–14 h 30. Surveillance 24 h/24 pour les patients hospitalisés uniquement.",
+        "es": "Laborables 9:30–21:00 h, fines de semana y festivos 9:30–20:00 h, descanso 13:00–14:30 h. Vigilancia hospitalaria 24 horas solo para pacientes ingresados."
       },
       "small_animals": true,
       "url": "https://africaamc.com/",
@@ -834,7 +867,8 @@
       "emergency_24h": false,
       "duty": "Open every day 10:00-20:00, 365 days; emergency-focused evening care.",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours 10 h–20 h, 365 jours par an ; soins du soir axés sur les urgences."
+        "fr": "Ouvert tous les jours 10 h–20 h, 365 jours par an ; soins du soir axés sur les urgences.",
+        "es": "Abierto todos los días, 365 días, 10:00–20:00 h; atención de tarde centrada en urgencias."
       },
       "small_animals": true,
       "url": "https://juohospital.imweb.me/",
@@ -852,7 +886,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 10:00-19:00 (Wednesday from 14:00), Saturday 10:00-18:00, closed Sundays and public holidays. Lunch break 12:00-14:00.",
       "duty_i18n": {
-        "fr": "En semaine 10 h–19 h (mercredi à partir de 14 h), samedi 10 h–18 h, fermé le dimanche et les jours fériés. Pause déjeuner 12 h–14 h."
+        "fr": "En semaine 10 h–19 h (mercredi à partir de 14 h), samedi 10 h–18 h, fermé le dimanche et les jours fériés. Pause déjeuner 12 h–14 h.",
+        "es": "Laborables 10:00–19:00 h (miércoles desde las 14:00), sáb 10:00–18:00 h, cerrado dom y festivos. Descanso 12:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://imvet96.wixsite.com/joeunac",
@@ -870,7 +905,8 @@
       "emergency_24h": false,
       "duty": "Open every day, 365 days, 9:30-23:00 (lunch break 13:00-14:00).",
       "duty_i18n": {
-        "fr": "Ouvert tous les jours, 365 jours par an, 9 h 30–23 h (pause déjeuner 13 h–14 h)."
+        "fr": "Ouvert tous les jours, 365 jours par an, 9 h 30–23 h (pause déjeuner 13 h–14 h).",
+        "es": "Abierto todos los días, 365 días, 9:30–23:00 h (descanso 13:00–14:00 h)."
       },
       "small_animals": true,
       "url": "https://laonamc.com/",
@@ -888,7 +924,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 9:30-19:00, Saturdays and public holidays 9:30-17:00, closed Sundays. Lunch break 13:00-14:00. Call ahead for public holidays and emergencies (extra fee).",
       "duty_i18n": {
-        "fr": "En semaine 9 h 30–19 h, samedi et jours fériés 9 h 30–17 h, fermé le dimanche. Pause déjeuner 13 h–14 h. Appelez avant pour les jours fériés et les urgences (supplément)."
+        "fr": "En semaine 9 h 30–19 h, samedi et jours fériés 9 h 30–17 h, fermé le dimanche. Pause déjeuner 13 h–14 h. Appelez avant pour les jours fériés et les urgences (supplément).",
+        "es": "Laborables 9:30–19:00 h, sáb y festivos 9:30–17:00 h, cerrado dom. Descanso 13:00–14:00 h. Llama antes en festivos y para urgencias (con recargo)."
       },
       "small_animals": true,
       "url": "https://sonagikr.wixsite.com/smallpethospital/blank-82",
@@ -906,7 +943,8 @@
       "emergency_24h": false,
       "duty": "Day care 10:00-19:00 (lunch 12:30-14:00). Emergency night care 19:00-10:00, 365 days a year, with night surcharges. Call ahead.",
       "duty_i18n": {
-        "fr": "Soins de jour 10 h–19 h (pause déjeuner 12 h 30–14 h). Urgences de nuit 19 h–10 h, 365 jours par an, avec suppléments de nuit. Appelez avant de venir."
+        "fr": "Soins de jour 10 h–19 h (pause déjeuner 12 h 30–14 h). Urgences de nuit 19 h–10 h, 365 jours par an, avec suppléments de nuit. Appelez avant de venir.",
+        "es": "Atención diurna 10:00–19:00 h (descanso 12:30–14:00 h). Urgencias nocturnas 19:00–10:00 h, 365 días al año, con recargo nocturno. Llama antes."
       },
       "small_animals": true,
       "url": "https://vamc.co.kr/",
@@ -924,7 +962,8 @@
       "emergency_24h": false,
       "duty": "Open Wednesday to Sunday 10:00-19:00, lunch 12:00-13:00. Closed Monday and Tuesday.",
       "duty_i18n": {
-        "fr": "Ouvert du mercredi au dimanche 10 h–19 h, pause déjeuner 12 h–13 h. Fermé le lundi et le mardi."
+        "fr": "Ouvert du mercredi au dimanche 10 h–19 h, pause déjeuner 12 h–13 h. Fermé le lundi et le mardi.",
+        "es": "Abierto mié–dom 10:00–19:00 h, descanso 12:00–13:00 h. Cerrado lunes y martes."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012742",
@@ -942,7 +981,8 @@
       "emergency_24h": false,
       "duty": "Closed Sundays and during Seollal and Chuseok holidays. Lunch break 13:00-14:00. Call for opening hours.",
       "duty_i18n": {
-        "fr": "Fermé le dimanche et pendant les fêtes de Seollal et de Chuseok. Pause déjeuner 13 h–14 h. Appelez pour connaître les horaires."
+        "fr": "Fermé le dimanche et pendant les fêtes de Seollal et de Chuseok. Pause déjeuner 13 h–14 h. Appelez pour connaître les horaires.",
+        "es": "Cerrado domingos y durante las fiestas de Seollal y Chuseok. Descanso 13:00–14:00 h. Llama para consultar el horario."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012747",
@@ -960,7 +1000,8 @@
       "emergency_24h": false,
       "duty": "Wednesday 9:30-13:00, closed Sundays, break 13:00-14:30. No night or emergency care.",
       "duty_i18n": {
-        "fr": "Mercredi 9 h 30–13 h, fermé le dimanche, pause 13 h–14 h 30. Pas de soins de nuit ni d’urgence."
+        "fr": "Mercredi 9 h 30–13 h, fermé le dimanche, pause 13 h–14 h 30. Pas de soins de nuit ni d’urgence.",
+        "es": "Miércoles 9:30–13:00 h, cerrado dom, descanso 13:00–14:30 h. Sin atención nocturna ni de urgencias."
       },
       "small_animals": true,
       "url": "https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012748",
@@ -978,7 +1019,8 @@
       "emergency_24h": false,
       "duty": "Closed Sundays. Lunch break 12:00-13:30. No night or emergency care.",
       "duty_i18n": {
-        "fr": "Fermé le dimanche. Pause déjeuner 12 h–13 h 30. Pas de soins de nuit ni d’urgence."
+        "fr": "Fermé le dimanche. Pause déjeuner 12 h–13 h 30. Pas de soins de nuit ni d’urgence.",
+        "es": "Cerrado domingos. Descanso 12:00–13:30 h. Sin atención nocturna ni de urgencias."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012749",

@@ -44,7 +44,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous.",
+        "es": "Abierto las 24 horas, los 7 días de la semana, para atención preventiva y de urgencias; sin cita"
       },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
@@ -63,7 +64,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous.",
+        "es": "Abierto las 24 horas, los 7 días de la semana, para atención preventiva y de urgencias; sin cita"
       },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
@@ -82,7 +84,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous.",
+        "es": "Abierto las 24 horas, los 7 días de la semana, para atención preventiva y de urgencias; sin cita"
       },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
@@ -101,7 +104,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous.",
+        "es": "Abierto las 24 horas, los 7 días de la semana, para atención preventiva y de urgencias; sin cita"
       },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
@@ -120,7 +124,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week for wellness and emergency care; walk-ins welcome",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous."
+        "fr": "Ouvert 24 h/24, 7 j/7 pour les soins courants et les urgences ; sans rendez-vous.",
+        "es": "Abierto las 24 horas, los 7 días de la semana, para atención preventiva y de urgencias; sin cita"
       },
       "small_animals": true,
       "url": "https://www.americanvetcenter.com/",
@@ -139,7 +144,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week; WhatsApp available",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 ; joignable sur WhatsApp."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; joignable sur WhatsApp.",
+        "es": "Abierto las 24 horas, los 7 días de la semana; disponible por WhatsApp"
       },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
@@ -157,7 +163,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours; emergency support by phone",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24 ; assistance téléphonique en cas d’urgence."
+        "fr": "Ouvert 24 h/24 ; assistance téléphonique en cas d’urgence.",
+        "es": "Abierto las 24 horas; atención de urgencias por teléfono"
       },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
@@ -176,7 +183,8 @@
       "emergency_24h": false,
       "duty": "Call to confirm opening hours; emergency availability by phone",
       "duty_i18n": {
-        "fr": "Appelez pour confirmer les horaires ; urgences joignables par téléphone."
+        "fr": "Appelez pour confirmer les horaires ; urgences joignables par téléphone.",
+        "es": "Llama para confirmar el horario; urgencias disponibles por teléfono"
       },
       "small_animals": true,
       "url": "https://drpaws.com.eg/en/",
@@ -194,7 +202,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7; phone and WhatsApp",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7 ; téléphone et WhatsApp."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; téléphone et WhatsApp.",
+        "es": "Abierto las 24 horas, todos los días; teléfono y WhatsApp"
       },
       "small_animals": true,
       "url": "https://vennvet.com/",
@@ -213,7 +222,8 @@
       "emergency_24h": true,
       "duty": "Open 24/7, 365 days a year; phone and WhatsApp; home visits in Maadi and nearby areas",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an ; téléphone et WhatsApp ; visites à domicile à Maadi et dans les environs."
+        "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an ; téléphone et WhatsApp ; visites à domicile à Maadi et dans les environs.",
+        "es": "Abierto las 24 horas, los 365 días del año; teléfono y WhatsApp; visitas a domicilio en Maadi y alrededores"
       },
       "small_animals": true,
       "url": "https://www.mojovetcare.com/",
@@ -232,7 +242,8 @@
       "emergency_24h": true,
       "duty": "Emergency veterinarian at the Maadi clinic around the clock; home visits in Cairo and Giza",
       "duty_i18n": {
-        "fr": "Vétérinaire d’urgence à la clinique de Maadi 24 h/24 ; visites à domicile au Caire et à Gizeh."
+        "fr": "Vétérinaire d’urgence à la clinique de Maadi 24 h/24 ; visites à domicile au Caire et à Gizeh.",
+        "es": "Veterinario de urgencias en la clínica de Maadi las 24 horas; visitas a domicilio en El Cairo y Guiza"
       },
       "small_animals": true,
       "url": "https://the30vetcenter.com/",
@@ -251,7 +262,8 @@
       "emergency_24h": true,
       "duty": "Emergency department open 24 hours a day for treatment and urgent surgery",
       "duty_i18n": {
-        "fr": "Service d’urgences ouvert 24 h/24 pour les soins et la chirurgie urgente."
+        "fr": "Service d’urgences ouvert 24 h/24 pour les soins et la chirurgie urgente.",
+        "es": "Servicio de urgencias abierto las 24 horas para tratamiento y cirugía urgente"
       },
       "small_animals": true,
       "url": "https://familyvetcenter.com/",
@@ -269,7 +281,8 @@
       "emergency_24h": true,
       "duty": "Mobile home-visit clinic working around the clock; covers Cairo, Giza and (seasonally) the North Coast",
       "duty_i18n": {
-        "fr": "Clinique mobile à domicile, disponible 24 h/24 ; couvre Le Caire, Gizeh et, selon la saison, la côte nord."
+        "fr": "Clinique mobile à domicile, disponible 24 h/24 ; couvre Le Caire, Gizeh et, selon la saison, la côte nord.",
+        "es": "Clínica móvil a domicilio las 24 horas; cubre El Cairo, Guiza y (según la temporada) la Costa Norte"
       },
       "small_animals": true,
       "url": "https://petlivery.net/",
@@ -287,7 +300,8 @@
       "emergency_24h": true,
       "duty": "Mobile home-visit clinic, 24 h emergency line; covers Cairo and Giza",
       "duty_i18n": {
-        "fr": "Clinique mobile à domicile, ligne d’urgence 24 h/24 ; couvre Le Caire et Gizeh."
+        "fr": "Clinique mobile à domicile, ligne d’urgence 24 h/24 ; couvre Le Caire et Gizeh.",
+        "es": "Clínica móvil a domicilio, línea de urgencias las 24 horas; cubre El Cairo y Guiza"
       },
       "small_animals": true,
       "url": "https://www.vetongo.net/",
@@ -305,7 +319,8 @@
       "emergency_24h": true,
       "duty": "All veterinary services available 24/7, including emergencies",
       "duty_i18n": {
-        "fr": "Tous les services vétérinaires 24 h/24, 7 j/7, urgences comprises."
+        "fr": "Tous les services vétérinaires 24 h/24, 7 j/7, urgences comprises.",
+        "es": "Todos los servicios veterinarios disponibles las 24 horas, todos los días, incluidas las urgencias"
       },
       "small_animals": true,
       "url": "https://sites.google.com/view/pets-society-vet/vet-clinic",
@@ -324,7 +339,8 @@
       "emergency_24h": false,
       "duty": "Hospital, plus a pet hotel and academy; call for opening hours",
       "duty_i18n": {
-        "fr": "Hôpital vétérinaire, avec pension pour animaux et centre de formation ; appelez pour connaître les horaires."
+        "fr": "Hôpital vétérinaire, avec pension pour animaux et centre de formation ; appelez pour connaître les horaires.",
+        "es": "Hospital, además de hotel y academia para mascotas; llama para conocer el horario"
       },
       "small_animals": true,
       "url": "https://www.petcareeg.com/",
@@ -342,7 +358,8 @@
       "emergency_24h": false,
       "duty": "Saturday to Thursday 10:00-19:30, closed Friday; surgery including emergencies and neutering; inpatient admission subject to space",
       "duty_i18n": {
-        "fr": "Du samedi au jeudi 10 h–19 h 30, fermé le vendredi ; chirurgie, y compris urgences et stérilisations ; hospitalisation selon les places disponibles."
+        "fr": "Du samedi au jeudi 10 h–19 h 30, fermé le vendredi ; chirurgie, y compris urgences et stérilisations ; hospitalisation selon les places disponibles.",
+        "es": "Sáb–jue 10:00–19:30 h, vie cerrado; cirugía, incluidas urgencias, y esterilización; ingreso según disponibilidad de plazas"
       },
       "small_animals": true,
       "url": "https://the-ark-clinic-hurghada.com/",
@@ -359,7 +376,8 @@
       "emergency_24h": false,
       "duty": "Treats pets and stray animals; contact by phone or WhatsApp to arrange a visit",
       "duty_i18n": {
-        "fr": "Soigne les animaux de compagnie et les animaux errants ; contactez la clinique par téléphone ou WhatsApp pour convenir d’une visite."
+        "fr": "Soigne les animaux de compagnie et les animaux errants ; contactez la clinique par téléphone ou WhatsApp pour convenir d’une visite.",
+        "es": "Atiende mascotas y animales callejeros; contacta por teléfono o WhatsApp para concertar una visita"
       },
       "small_animals": true,
       "url": "https://www.fourgive.org/vetclinic/",
@@ -376,7 +394,8 @@
       "emergency_24h": false,
       "duty": "Open Saturday to Thursday 9:00-17:00; Friday emergencies only; free neutering and treatment for cats and dogs in the small animal clinic",
       "duty_i18n": {
-        "fr": "Ouvert du samedi au jeudi 9 h–17 h ; urgences uniquement le vendredi ; stérilisation et soins gratuits pour chats et chiens à la clinique pour petits animaux."
+        "fr": "Ouvert du samedi au jeudi 9 h–17 h ; urgences uniquement le vendredi ; stérilisation et soins gratuits pour chats et chiens à la clinique pour petits animaux.",
+        "es": "Abierto sáb–jue 9:00–17:00 h; los viernes, solo urgencias; esterilización y tratamiento gratuitos para gatos y perros en la clínica de pequeños animales"
       },
       "small_animals": true,
       "url": "https://www.ace-egypt.org.uk/visit-us-in-luxor",
@@ -394,7 +413,8 @@
       "emergency_24h": false,
       "duty": "University teaching hospital with a pet (companion animal) clinic and small-animal surgery",
       "duty_i18n": {
-        "fr": "Hôpital universitaire vétérinaire avec clinique pour animaux de compagnie et chirurgie des petits animaux."
+        "fr": "Hôpital universitaire vétérinaire avec clinique pour animaux de compagnie et chirurgie des petits animaux.",
+        "es": "Hospital docente universitario con clínica de mascotas (animales de compañía) y cirugía de pequeños animales"
       },
       "small_animals": true,
       "url": "https://www.aun.edu.eg/veterinary_medicine/hospital/",
@@ -410,7 +430,8 @@
       "emergency_24h": false,
       "duty": "Charity hospital: free treatment of sick and injured stray dogs and cats; daily neutering; help for owners who cannot afford care",
       "duty_i18n": {
-        "fr": "Hôpital associatif : soins gratuits pour les chiens et chats errants malades ou blessés ; stérilisations tous les jours ; aide aux propriétaires qui n’ont pas les moyens de payer les soins."
+        "fr": "Hôpital associatif : soins gratuits pour les chiens et chats errants malades ou blessés ; stérilisations tous les jours ; aide aux propriétaires qui n’ont pas les moyens de payer les soins.",
+        "es": "Hospital benéfico: tratamiento gratuito de perros y gatos callejeros enfermos o heridos; esterilización diaria; ayuda para dueños que no pueden costear la atención"
       },
       "small_animals": true,
       "url": "https://susyutzinger.ch/en/Activities/SUSTOrphanAnimalHospitals/SUST-OAHHurghadaEG/ArtMID/1605/ArticleID/7001",

@@ -60,7 +60,8 @@
       "note": "uchile.cl page says 'abierto las 24 horas del día', Monday to Sunday. veterinaria.uchile.cl itself could not be fetched (provenance restriction); url is the one printed on the uchile.cl page.",
       "duty_i18n": {
         "de": "Täglich rund um die Uhr geöffnet.",
-        "fr": "Ouvert 24 h/24, tous les jours de la semaine."
+        "fr": "Ouvert 24 h/24, tous les jours de la semaine.",
+        "es": "Abierto las 24 horas, todos los días de la semana."
       }
     },
     {
@@ -79,7 +80,8 @@
       "note": "No hours on the uchile.cl page. Moved from duty (2026-11-10): Opening hours are not published.",
       "duty_i18n": {
         "de": "Universitäre Lehrklinik. Nur der Standort Bilbao (Providencia) ist rund um die Uhr geöffnet.",
-        "fr": "Hôpital universitaire d’enseignement. Le site de Bilbao (Providencia) est celui qui est ouvert 24 h/24."
+        "fr": "Hôpital universitaire d’enseignement. Le site de Bilbao (Providencia) est celui qui est ouvert 24 h/24.",
+        "es": "Hospital docente universitario. La sede de Bilbao (Providencia) es la que abre las 24 horas."
       }
     },
     {
@@ -98,7 +100,8 @@
       "note": "UNAB news article (English version, dated May 2023) lists 'Emergencies 24 hrs.' for Colina; email hcv@unab.cl. Article may be outdated; the UNAB faculty page redirected and could not be opened. Checked: page still lists Emergencies 24 hrs for Colina.",
       "duty_i18n": {
         "de": "Täglich 10:00–20:00 Uhr geöffnet; Notfälle werden rund um die Uhr behandelt.",
-        "fr": "Ouvert tous les jours 10 h–20 h ; urgences prises en charge 24 h/24."
+        "fr": "Ouvert tous les jours 10 h–20 h ; urgences prises en charge 24 h/24.",
+        "es": "Abierto todos los días 10:00–20:00 h; urgencias atendidas las 24 horas."
       }
     },
     {
@@ -117,7 +120,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Werktags 08:30–18:30 Uhr (erweiterte Öffnungszeiten angekündigt). Stationäre Patienten werden rund um die Uhr überwacht; keine 24-Stunden-Notfallklinik.",
-        "fr": "En semaine 8 h 30–18 h 30 (horaires étendus annoncés). Patients hospitalisés surveillés en permanence ; pas une clinique d’urgences 24 h/24."
+        "fr": "En semaine 8 h 30–18 h 30 (horaires étendus annoncés). Patients hospitalisés surveillés en permanence ; pas une clinique d’urgences 24 h/24.",
+        "es": "Entre semana 8:30–18:30 h (ampliación de horario anunciada). Los pacientes hospitalizados están vigilados las 24 horas; no es una clínica de urgencias 24 horas."
       }
     },
     {
@@ -136,7 +140,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Werktags 09:00–19:00 Uhr. Keine 24-Stunden-Notfallklinik.",
-        "fr": "En semaine 9 h–19 h. Pas une clinique d’urgences 24 h/24."
+        "fr": "En semaine 9 h–19 h. Pas une clinique d’urgences 24 h/24.",
+        "es": "Entre semana 9:00–19:00 h. No es una clínica de urgencias 24 horas."
       }
     },
     {
@@ -155,7 +160,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Täglich 10:00–20:00 Uhr geöffnet. Keine 24-Stunden-Notfallklinik.",
-        "fr": "Ouvert tous les jours 10 h–20 h. Pas une clinique d’urgences 24 h/24."
+        "fr": "Ouvert tous les jours 10 h–20 h. Pas une clinique d’urgences 24 h/24.",
+        "es": "Abierto todos los días 10:00–20:00 h. No es una clínica de urgencias 24 horas."
       }
     },
     {
@@ -174,7 +180,8 @@
       "note": "Page says 'Abiertos las 24 horas' / 'Atención 24 horas · 365 días'. Published emergency number has a 51 (La Serena) area code although the address is in Ñuñoa; WhatsApp +56 9 9305 3823 also published. Phone should be double-checked. Checked: +56 51 emergency line is the number published on the page for the Ñuñoa address; kept.",
       "duty_i18n": {
         "de": "Notfälle ohne Termin rund um die Uhr, 365 Tage im Jahr. Termine täglich 09:30–20:00 Uhr.",
-        "fr": "Urgences prises en charge 24 h/24, 365 jours par an, sans rendez-vous. Rendez-vous programmés tous les jours 9 h 30–20 h."
+        "fr": "Urgences prises en charge 24 h/24, 365 jours par an, sans rendez-vous. Rendez-vous programmés tous les jours 9 h 30–20 h.",
+        "es": "Urgencias atendidas las 24 horas, los 365 días del año, sin cita previa. Citas programadas todos los días 9:30–20:00 h."
       }
     },
     {
@@ -193,7 +200,8 @@
       "note": "Page: 'Atención las 24 horas', 'Estamos Disponibles 24/7'. WhatsApp +56 9 4074 5783.",
       "duty_i18n": {
         "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche.",
-        "fr": "Soins urgents 24 h/24, 7 j/7."
+        "fr": "Soins urgents 24 h/24, 7 j/7.",
+        "es": "Atención urgente las 24 horas, los 7 días de la semana."
       }
     },
     {
@@ -212,7 +220,8 @@
       "note": "Home page: 'Abierto 24 horas, todos los días' for the Providencia branch only. WhatsApp +56 9 8929 7552. Santiago Centro branch Mon-Fri 10:30-18:30, Sat 10:30-16:00.",
       "duty_i18n": {
         "de": "Die Filiale Providencia ist täglich rund um die Uhr für Notfälle geöffnet. Die Filiale Santiago Centro (Huérfanos 1951) ist nicht rund um die Uhr geöffnet.",
-        "fr": "Succursale de Providencia ouverte 24 h/24, tous les jours, pour les urgences. La succursale de Santiago Centro (Huérfanos 1951) n’est pas ouverte 24 h/24."
+        "fr": "Succursale de Providencia ouverte 24 h/24, tous les jours, pour les urgences. La succursale de Santiago Centro (Huérfanos 1951) n’est pas ouverte 24 h/24.",
+        "es": "Sucursal de Providencia abierta las 24 horas, todos los días, para urgencias. La sucursal de Santiago Centro (Huérfanos 1951) no abre las 24 horas."
       }
     },
     {
@@ -231,7 +240,8 @@
       "note": "Page: 'Hospital 24 horas', 'Urgencias Médicas 24/7'. Second number +56 9 6352 6082.",
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnete Klinik mit Notfallversorgung.",
-        "fr": "Hôpital ouvert 24 h/24 avec urgences 24 h/24, 7 j/7."
+        "fr": "Hôpital ouvert 24 h/24 avec urgences 24 h/24, 7 j/7.",
+        "es": "Hospital 24 horas con urgencias las 24 horas."
       }
     },
     {
@@ -250,7 +260,8 @@
       "note": "Page: 'Urgencia las 24 Horas'; one address listed. WhatsApp +56 9 7649 2962.",
       "duty_i18n": {
         "de": "Notdienst rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–18:30 Uhr.",
-        "fr": "Service d’urgences 24 h/24. Consultations médicales lun.–ven. 9 h–18 h 30."
+        "fr": "Service d’urgences 24 h/24. Consultations médicales lun.–ven. 9 h–18 h 30.",
+        "es": "Servicio de urgencias las 24 horas. Consultas médicas lun–vie 9:00–18:30 h."
       }
     },
     {
@@ -269,7 +280,8 @@
       "note": "Page says 'Urgencia 24 horas!'; number appears in a WhatsApp link only.",
       "duty_i18n": {
         "de": "Täglich 09:00–20:00 Uhr geöffnet; Notdienst rund um die Uhr.",
-        "fr": "Ouvert tous les jours 9 h–20 h ; service d’urgences 24 h/24."
+        "fr": "Ouvert tous les jours 9 h–20 h ; service d’urgences 24 h/24.",
+        "es": "Abierto todos los días 9:00–20:00 h; servicio de urgencias las 24 horas."
       }
     },
     {
@@ -288,7 +300,8 @@
       "note": "Page: 'Atención veterinaria de urgencia las 24 horas, los 7 días de la semana, en clínica Asunción.' Phone shown as 224 016 854. Other sites: CLIVEMA Esquina Blanca 913 (233 776 378), Guau & Miau Las Torres, Av. Las Torres 461 (22 904 9319) - no 24 h claim.",
       "duty_i18n": {
         "de": "Tierärztliche Notfallversorgung rund um die Uhr, 7 Tage die Woche, in der Klinik Asunción.",
-        "fr": "Urgences vétérinaires 24 h/24, 7 j/7 à la clinique d’Asunción."
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7 à la clinique d’Asunción.",
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana, en la clínica de Asunción."
       }
     },
     {
@@ -307,7 +320,8 @@
       "note": "Page: 'Abierto las 24 horas, los 7 días de la semana' in the contact section; urgencias 'las 24 horas, los 365 días del año'. WhatsApp +56 9 9626 2341.",
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnet, 7 Tage die Woche; Notfälle an jedem Tag des Jahres.",
-        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences tous les jours de l’année."
+        "fr": "Ouvert 24 h/24, 7 j/7 ; urgences tous les jours de l’année.",
+        "es": "Abierto las 24 horas, los 7 días de la semana; urgencias todos los días del año."
       }
     },
     {
@@ -326,7 +340,8 @@
       "note": "Independent check: page FAQ says both branches (Viña del Mar and Quilpué) take emergencies 24/7; upgraded to true.",
       "duty_i18n": {
         "de": "Notfälle werden rund um die Uhr an jedem Tag des Jahres behandelt (beide Filialen Los Castaños).",
-        "fr": "Urgences prises en charge 24 h/24, tous les jours de l’année (dans les deux succursales Los Castaños)."
+        "fr": "Urgences prises en charge 24 h/24, tous les jours de l’année (dans les deux succursales Los Castaños).",
+        "es": "Urgencias atendidas las 24 horas, todos los días del año (en las dos sucursales de Los Castaños)."
       }
     },
     {
@@ -345,7 +360,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Montag bis Samstag 08:00–20:00 Uhr; Notdienst täglich bis 01:00 Uhr. Nicht rund um die Uhr geöffnet.",
-        "fr": "Lun.–sam. 8 h–20 h ; service d’urgences tous les jours jusqu’à 1 h. Pas ouvert 24 h/24."
+        "fr": "Lun.–sam. 8 h–20 h ; service d’urgences tous les jours jusqu’à 1 h. Pas ouvert 24 h/24.",
+        "es": "Lun–sáb 8:00–20:00 h; servicio de urgencias todos los días hasta la 1:00 h. No abre las 24 horas."
       }
     },
     {
@@ -364,7 +380,8 @@
       "note": "Page: 'Abierto 24 Horas' / 'Urgencia Veterinaria Temuco 24 Horas'. Same details on veterinariotemuco.cl.",
       "duty_i18n": {
         "de": "Notaufnahme täglich rund um die Uhr geöffnet, auch an Feiertagen. Terminsprechstunde Montag bis Freitag 09:00–21:00 Uhr.",
-        "fr": "Urgences ouvertes 24 h/24 tous les jours, jours fériés compris. Rendez-vous programmés lun.–ven. 9 h–21 h."
+        "fr": "Urgences ouvertes 24 h/24 tous les jours, jours fériés compris. Rendez-vous programmés lun.–ven. 9 h–21 h.",
+        "es": "Urgencias abiertas las 24 horas todos los días, también festivos. Citas programadas lun–vie 9:00–21:00 h."
       }
     },
     {
@@ -383,7 +400,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Notdienst täglich 11:00–23:00 Uhr. Nicht rund um die Uhr geöffnet.",
-        "fr": "Service d’urgences tous les jours 11 h–23 h. Pas ouvert 24 h/24."
+        "fr": "Service d’urgences tous les jours 11 h–23 h. Pas ouvert 24 h/24.",
+        "es": "Servicio de urgencias todos los días 11:00–23:00 h. No abre las 24 horas."
       }
     },
     {
@@ -402,7 +420,8 @@
       "note": "Page: 'ATENCIÓN DE URGENCIAS LAS 24 HORAS LOS 7 DÍAS DE LA SEMANA'. Phone 63-2-201298 (reservations and emergencies); inpatients 63-2-577757; WhatsApp +56 9 5760 9000. Two different opening-hour blocks on the page.",
       "duty_i18n": {
         "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche. Termine täglich etwa 09:30/10:30–19:30 Uhr.",
-        "fr": "Urgences 24 h/24, 7 j/7. Rendez-vous tous les jours environ 9 h 30/10 h 30–19 h 30."
+        "fr": "Urgences 24 h/24, 7 j/7. Rendez-vous tous les jours environ 9 h 30/10 h 30–19 h 30.",
+        "es": "Urgencias las 24 horas, los 7 días de la semana. Citas todos los días, de unas 9:30/10:30 a 19:30 h."
       }
     },
     {
@@ -421,7 +440,8 @@
       "note": "Page has a service description 'Atención médica las 24 horas del día' without saying which area, and gives no out-of-hours emergency arrangement, so emergency_24h left false. Email hospitalveterinario@uach.cl.",
       "duty_i18n": {
         "de": "Universitätsklinik: Montag bis Donnerstag 09:00–12:00 und 14:00–17:00 Uhr, Freitag 09:00–12:00 Uhr. Kleintier-Notfallnummer +56 9 3775 8382.",
-        "fr": "Hôpital universitaire : lun.–jeu. 9 h–12 h et 14 h–17 h, ven. 9 h–12 h. Numéro d’urgence pour petits animaux : +56 9 3775 8382."
+        "fr": "Hôpital universitaire : lun.–jeu. 9 h–12 h et 14 h–17 h, ven. 9 h–12 h. Numéro d’urgence pour petits animaux : +56 9 3775 8382.",
+        "es": "Hospital universitario: lun–jue 9:00–12:00 y 14:00–17:00 h, vie 9:00–12:00 h. Número de urgencias de pequeños animales +56 9 3775 8382."
       }
     },
     {
@@ -440,7 +460,8 @@
       "note": "Page header says 'Abierto 24 Horas'; weekday hours and 'Urgencias 24/7' suggest the 24 h applies to emergencies.",
       "duty_i18n": {
         "de": "Notfälle rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–19:00 Uhr, Samstag 10:00–18:00 Uhr.",
-        "fr": "Urgences 24 h/24, 7 j/7. Consultations lun.–ven. 9 h–19 h, sam. 10 h–18 h."
+        "fr": "Urgences 24 h/24, 7 j/7. Consultations lun.–ven. 9 h–19 h, sam. 10 h–18 h.",
+        "es": "Urgencias las 24 horas. Consultas lun–vie 9:00–19:00 h, sáb 10:00–18:00 h."
       }
     },
     {
@@ -459,7 +480,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Notfälle Montag bis Samstag 09:30–24:00 Uhr; sonntags nach Verfügbarkeit. Stationäre Patienten werden rund um die Uhr überwacht. Für Sprechstunden ist eine Terminvereinbarung nötig.",
-        "fr": "Urgences lun.–sam. 9 h 30–minuit ; dimanche selon disponibilité. Patients hospitalisés surveillés 24 h/24. Consultations sur rendez-vous."
+        "fr": "Urgences lun.–sam. 9 h 30–minuit ; dimanche selon disponibilité. Patients hospitalisés surveillés 24 h/24. Consultations sur rendez-vous.",
+        "es": "Urgencias lun–sáb 9:30–24:00 h; domingos según disponibilidad. Pacientes hospitalizados vigilados las 24 horas. Las consultas requieren cita previa."
       }
     },
     {
@@ -478,7 +500,8 @@
       "note": "Page: 'Abierto las 24 horas del día, 24/7'; listed hours leave short gaps (20:00-20:30, 08:30-09:00). WhatsApp +56 9 9913 3278.",
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnet, 7 Tage die Woche: Sprechstunde 09:00–20:00 Uhr, Notfälle 20:30–08:30 Uhr.",
-        "fr": "Ouvert 24 h/24, 7 j/7 : consultations 9 h–20 h, urgences 20 h 30–8 h 30."
+        "fr": "Ouvert 24 h/24, 7 j/7 : consultations 9 h–20 h, urgences 20 h 30–8 h 30.",
+        "es": "Abierto las 24 horas, los 7 días de la semana: consultas de 9:00 a 20:00 h, urgencias de 20:30 a 8:30 h."
       }
     },
     {
@@ -497,7 +520,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Stationäre Patienten werden rund um die Uhr von einem Tierarzt betreut; für Notfälle bitte vorab anrufen.",
-        "fr": "Patients hospitalisés pris en charge en permanence par un vétérinaire ; appelez pour connaître les modalités d’urgence."
+        "fr": "Patients hospitalisés pris en charge en permanence par un vétérinaire ; appelez pour connaître les modalités d’urgence.",
+        "es": "Los pacientes hospitalizados están atendidos las 24 horas por un veterinario; llama para consultar cómo se gestionan las urgencias."
       }
     },
     {
@@ -516,7 +540,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Notdienst bis 02:00 Uhr.",
-        "fr": "Service d’urgences jusqu’à 2 h."
+        "fr": "Service d’urgences jusqu’à 2 h.",
+        "es": "Servicio de urgencias hasta las 2:00 h."
       }
     },
     {
@@ -535,7 +560,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Notdienst bis 02:00 Uhr; stationäre Aufnahme rund um die Uhr.",
-        "fr": "Service d’urgences jusqu’à 2 h ; hospitalisation 24 h/24."
+        "fr": "Service d’urgences jusqu’à 2 h ; hospitalisation 24 h/24.",
+        "es": "Servicio de urgencias hasta las 2:00 h; hospitalización las 24 horas."
       }
     },
     {
@@ -554,7 +580,8 @@
       "note": "Number is WhatsApp for bookings; emergency lines +56 9 9817 8630 and +56 9 4552 2002. Hours on the page are inconsistent.",
       "duty_i18n": {
         "de": "Notfallversorgung bis 22:00 Uhr. Werktags 09:00–18:00 Uhr, Samstag 10:00–14:00 Uhr.",
-        "fr": "Urgences jusqu’à 22 h. En semaine 9 h–18 h, samedi 10 h–14 h."
+        "fr": "Urgences jusqu’à 22 h. En semaine 9 h–18 h, samedi 10 h–14 h.",
+        "es": "Urgencias hasta las 22:00 h. Entre semana 9:00–18:00 h, sáb 10:00–14:00 h."
       }
     },
     {
@@ -573,7 +600,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Stationäre Betreuung von Haustieren rund um die Uhr.",
-        "fr": "Service d’hospitalisation 24 h/24 pour les animaux hospitalisés."
+        "fr": "Service d’hospitalisation 24 h/24 pour les animaux hospitalisés.",
+        "es": "Servicio hospitalario las 24 horas para mascotas hospitalizadas."
       }
     },
     {
@@ -592,7 +620,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Montag bis Samstag 09:00–19:00 Uhr. Notfälle nach Verfügbarkeit; bitte vor dem Besuch Kontakt aufnehmen.",
-        "fr": "Lun.–sam. 9 h–19 h. Urgences selon disponibilité ; contactez la clinique avant de venir."
+        "fr": "Lun.–sam. 9 h–19 h. Urgences selon disponibilité ; contactez la clinique avant de venir.",
+        "es": "Lun–sáb 9:00–19:00 h. Urgencias según disponibilidad; contacta antes de ir."
       }
     },
     {
@@ -603,15 +632,14 @@
       "address": "Calle Victoria 495, Barrio Universitario, Concepción",
       "phone": "+56 41 220 7347",
       "emergency_24h": false,
-      "duty": "Monday to Friday 09:00-17:00. No emergency service listed.",
+      "duty": "Monday to Friday 09:00-17:00.",
       "small_animals": true,
       "url": "https://clinicaveterinaria.udec.cl/home/",
       "source_url": "https://clinicaveterinaria.udec.cl/home/",
-      "note": "Email clinicavet@udec.cl.",
+      "note": "Email clinicavet@udec.cl. Removed from duty: Monday to Friday 09:00-17:00. No emergency service listed.",
       "checked": "2026-11-10",
       "duty_i18n": {
-        "de": "Montag bis Freitag 09:00–17:00 Uhr. Kein Notdienst angegeben.",
-        "fr": "Lun.–ven. 9 h–17 h. Aucun service d’urgences indiqué."
+        "es": "Lun–vie 9:00–17:00 h."
       }
     },
     {
@@ -630,7 +658,8 @@
       "note": "Faculty news (2026-01-07) announced reopening in March 2026; patients seen in temporary containers meanwhile. Saturday hours inconsistent on page. Mobile +56 9 6198 0749.",
       "duty_i18n": {
         "de": "Montag bis Freitag 09:00–19:00 Uhr; samstags vormittags. 2026 nach Renovierung wiedereröffnet oder kurz vor der Wiedereröffnung; Öffnungszeiten bitte telefonisch bestätigen.",
-        "fr": "Lun.–ven. 9 h–19 h ; samedi matin. Rouvert ou en cours de réouverture en 2026 après rénovation ; appelez pour confirmer."
+        "fr": "Lun.–ven. 9 h–19 h ; samedi matin. Rouvert ou en cours de réouverture en 2026 après rénovation ; appelez pour confirmer.",
+        "es": "Lun–vie 9:00–19:00 h; sábados por la mañana. Reabierta o a punto de reabrir en 2026 tras una reforma; llama para confirmar."
       }
     },
     {
@@ -649,7 +678,8 @@
       "checked": "2026-11-10",
       "duty_i18n": {
         "de": "Städtische Klinik; Termine telefonisch Dienstag bis Donnerstag ab 09:00 Uhr. Kein Notdienst und keine stationäre Aufnahme.",
-        "fr": "Clinique municipale ; rendez-vous par téléphone du mardi au jeudi dès 9 h. Pas de service d’urgences ni d’hospitalisation."
+        "fr": "Clinique municipale ; rendez-vous par téléphone du mardi au jeudi dès 9 h. Pas de service d’urgences ni d’hospitalisation.",
+        "es": "Clínica municipal; citas por teléfono mar–jue desde las 9:00 h. Sin servicio de urgencias ni de hospitalización."
       }
     }
   ],

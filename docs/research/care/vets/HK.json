@@ -37,7 +37,10 @@
       "duty": "24-hour emergency hotline 3650 3200, 7 days a week. Appointments and general enquiries 3650 3000, daily 9:00-19:00.",
       "url": "https://cityuvmc.com.hk/en/",
       "source_url": "https://cityuvmc.com.hk/en/contact/",
-      "note": "Contact page: \"24-Hour Emergency Hotline\" (7 days a week & 24 hours a day); enquiries Mon-Sun 9-19. AFCD list (pets.gov.hk Vet_Clinics_List_20251221.pdf) confirms the clinic and address but its phone column is misaligned, not used."
+      "note": "Contact page: \"24-Hour Emergency Hotline\" (7 days a week & 24 hours a day); enquiries Mon-Sun 9-19. AFCD list (pets.gov.hk Vet_Clinics_List_20251221.pdf) confirms the clinic and address but its phone column is misaligned, not used.",
+      "duty_i18n": {
+        "es": "Línea de urgencias 24 horas 3650 3200, 7 días a la semana. Citas e información general 3650 3000, todos los días de 9:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -52,7 +55,10 @@
       "duty": "Open 24 hours a day, 7 days a week. 24-hour emergency line 6828 6620; general line 2334 2334.",
       "url": "https://www.vec.com.hk/en",
       "source_url": "https://www.vec.com.hk/en/service/24-hour-emergency-and-critical-care",
-      "note": "Page: \"24 hours a day\", emergency line 24/7."
+      "note": "Page: \"24 hours a day\", emergency line 24/7.",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, 7 días a la semana. Línea de urgencias 24 horas 6828 6620; línea general 2334 2334."
+      }
     },
     {
       "kind": "clinic",
@@ -67,7 +73,10 @@
       "duty": "24-hour emergency, 7 days a week. Regular hours 9:00-19:00 daily.",
       "url": "https://amahvet.com.hk/en/",
       "source_url": "https://amahvet.com.hk/en/primary_care/24-hour-emergency-service/",
-      "note": "Page: \"24-Hour Emergency: 7 days a week & 24 hours a day\"."
+      "note": "Page: \"24-Hour Emergency: 7 days a week & 24 hours a day\".",
+      "duty_i18n": {
+        "es": "Urgencias 24 horas, 7 días a la semana. Horario habitual de 9:00 a 19:00 h todos los días."
+      }
     },
     {
       "kind": "clinic",
@@ -82,7 +91,10 @@
       "duty": "24-hour veterinary emergency care, 365 days a year, vets on site around the clock. Exotic animals: call before travelling.",
       "url": "https://en.concordiapetcare.com/",
       "source_url": "https://en.concordiapetcare.com/service/fw/24-hour-vet/",
-      "note": "Page: \"24-hour veterinary emergency care ... 365 days a year\"."
+      "note": "Page: \"24-hour veterinary emergency care ... 365 days a year\".",
+      "duty_i18n": {
+        "es": "Urgencias veterinarias 24 horas, 365 días al año, con veterinarios en el centro las 24 horas. Mascotas exóticas: llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -97,7 +109,10 @@
       "duty": "Emergency care 24 hours a day, 365 days a year; walk-ins accepted via triage.",
       "url": "https://www.vsh.com.hk/en-tw",
       "source_url": "https://www.vsh.com.hk/en-tw",
-      "note": "Page text: \"available 24 hours a day, 365 days a year\"; says VSH Wan Chai closed, services moved to Kowloon from 1 July 2025. Only first 100k chars of page read."
+      "note": "Page text: \"available 24 hours a day, 365 days a year\"; says VSH Wan Chai closed, services moved to Kowloon from 1 July 2025. Only first 100k chars of page read.",
+      "duty_i18n": {
+        "es": "Atención de urgencias las 24 horas, 365 días al año; se atiende sin cita mediante triaje."
+      }
     },
     {
       "kind": "clinic",
@@ -112,7 +127,10 @@
       "duty": "24-hour care and hospitalisation; call for a consultation.",
       "url": "https://www.northpointvets.com.hk/",
       "source_url": "https://www.northpointvets.com.hk/",
-      "note": "Page banner \"24 HOUR CARE\", heading \"24 Hour Care\", \"24 hour hospitalisation\"; no opening hours listed. Phone from page (AFCD PDF phone column misaligned)."
+      "note": "Page banner \"24 HOUR CARE\", heading \"24 Hour Care\", \"24 hour hospitalisation\"; no opening hours listed. Phone from page (AFCD PDF phone column misaligned).",
+      "duty_i18n": {
+        "es": "Atención e ingreso 24 horas; llama para pedir consulta."
+      }
     },
     {
       "kind": "clinic",
@@ -127,7 +145,10 @@
       "duty": "Open daily 24 hours.",
       "url": "https://amcvet.com.hk/en/",
       "source_url": "https://amcvet.com.hk/en/contact-us/",
-      "note": "Page: \"Open Daily 24 Hours\", \"24-Hour Hotline\" 2713 4155. AFCD PDF lists 2713 4155 beside another clinic (misaligned columns); own page used."
+      "note": "Page: \"Open Daily 24 Hours\", \"24-Hour Hotline\" 2713 4155. AFCD PDF lists 2713 4155 beside another clinic (misaligned columns); own page used.",
+      "duty_i18n": {
+        "es": "Abierto todos los días las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -142,7 +163,10 @@
       "duty": "24-hour emergency room, daily. Emergency hotline 3102 8528; main line 3426 3500.",
       "url": "https://hvoc.com.hk/en/",
       "source_url": "https://hvoc.com.hk/en/contact-us/",
-      "note": "Contact page: Emergency Room hours Mon-Sun \"24-hour\"; \"24-hour Emergency Service Hotline: 3102 8528\"."
+      "note": "Contact page: Emergency Room hours Mon-Sun \"24-hour\"; \"24-hour Emergency Service Hotline: 3102 8528\".",
+      "duty_i18n": {
+        "es": "Sala de urgencias 24 horas, todos los días. Línea de urgencias 3102 8528; línea principal 3426 3500."
+      }
     },
     {
       "kind": "clinic",
@@ -156,7 +180,10 @@
       "duty": "24/7 emergency hospital.",
       "url": "https://pets-central.com/",
       "source_url": "https://pets-central.com/en/ContactHeadquarter",
-      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page. Wording is 24/7."
+      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page. Wording is 24/7.",
+      "duty_i18n": {
+        "es": "Hospital de urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -170,7 +197,10 @@
       "duty": "24/7 emergency hospital.",
       "url": "https://pets-central.com/",
       "source_url": "https://pets-central.com/en/ContactHeadquarter",
-      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page."
+      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page.",
+      "duty_i18n": {
+        "es": "Hospital de urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -184,7 +214,10 @@
       "duty": "24/7 emergency hospital.",
       "url": "https://pets-central.com/",
       "source_url": "https://pets-central.com/en/ContactHeadquarter",
-      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page."
+      "note": "Contact page lists \"24/7 Emergency Hospital\" with phone; no addresses on page.",
+      "duty_i18n": {
+        "es": "Hospital de urgencias 24/7."
+      }
     },
     {
       "kind": "clinic",
@@ -199,7 +232,10 @@
       "duty": "Operates 24/7/365 with vets on site around the clock.",
       "url": "https://petspace.group/en_hk/",
       "source_url": "https://petspace.group/en_hk/our-services/24-hour-pet-hospital/",
-      "note": "Page: \"operates 24/7/365\"."
+      "note": "Page: \"operates 24/7/365\".",
+      "duty_i18n": {
+        "es": "Abierto las 24 horas, 365 días al año, con veterinarios en el centro las 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -214,7 +250,10 @@
       "duty": "24/7 emergency veterinary services year-round.",
       "url": "https://petspace.group/en_hk/",
       "source_url": "https://petspace.group/en_hk/our-services/24-hour-pet-hospital/",
-      "note": "Page: \"24/7 emergency veterinary services year-round\". Phone shown as text on clinic-locations page; that page has some mislinked phones."
+      "note": "Page: \"24/7 emergency veterinary services year-round\". Phone shown as text on clinic-locations page; that page has some mislinked phones.",
+      "duty_i18n": {
+        "es": "Servicios veterinarios de urgencias 24/7 todo el año."
+      }
     },
     {
       "kind": "duty_rota",
@@ -228,7 +267,10 @@
       "url": "https://www.spca.org.hk/",
       "source_url": "https://www.spca.org.hk/contact/animal-welfare-emergencies/",
       "checked": "2026-11-11",
-      "note": "Page also says all private vets provide a 24-hour emergency service. Page lists poisoning among conditions needing immediate treatment but offers no poison-advice line."
+      "note": "Page also says all private vets provide a 24-hour emergency service. Page lists poisoning among conditions needing immediate treatment but offers no poison-advice line.",
+      "duty_i18n": {
+        "es": "Línea de atención disponible las 24 horas, todos los días. Llama antes; no vayas a un centro esperando encontrar un veterinario de guardia. Solo para urgencias reales; la atención veterinaria fuera de horario suele ser en el Hong Kong Centre."
+      }
     },
     {
       "kind": "clinic",
@@ -243,7 +285,10 @@
       "duty": "Open daily 7:00-21:00. Call to confirm hours.",
       "url": "https://victoriavetshk.com/",
       "source_url": "https://victoriavetshk.com/",
-      "note": "Name says 24hr but own page lists Mon-Sun 7:00-21:00 and never states 24 h operation. AFCD PDF lists it as 24-hour in name only."
+      "note": "Name says 24hr but own page lists Mon-Sun 7:00-21:00 and never states 24 h operation. AFCD PDF lists it as 24-hour in name only.",
+      "duty_i18n": {
+        "es": "Abierto todos los días de 7:00 a 21:00 h. Llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -258,7 +303,10 @@
       "duty": "Vet service 8:00-20:00; nurse service 24 hours.",
       "url": "https://www.creaturecomforts.com.hk/en-tw",
       "source_url": "https://www.creaturecomforts.com.hk/en-tw/contact-us",
-      "note": "Creature Comforts group page: only nurse service listed as 24 h, so not flagged 24 h."
+      "note": "Creature Comforts group page: only nurse service listed as 24 h, so not flagged 24 h.",
+      "duty_i18n": {
+        "es": "Servicio veterinario de 8:00 a 20:00 h; servicio de enfermería 24 horas."
+      }
     },
     {
       "kind": "clinic",
@@ -272,7 +320,10 @@
       "emergency_24h": false,
       "duty": "Daily 8:00-20:00.",
       "url": "https://www.creaturecomforts.com.hk/en-tw",
-      "source_url": "https://www.creaturecomforts.com.hk/en-tw/contact-us"
+      "source_url": "https://www.creaturecomforts.com.hk/en-tw/contact-us",
+      "duty_i18n": {
+        "es": "Todos los días de 8:00 a 20:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -286,7 +337,10 @@
       "emergency_24h": false,
       "duty": "Daily 10:30-13:30 and 16:00-19:00; closed public holidays.",
       "url": "https://www.dreric.com.hk/",
-      "source_url": "https://www.dreric.com.hk/contact-3"
+      "source_url": "https://www.dreric.com.hk/contact-3",
+      "duty_i18n": {
+        "es": "Todos los días de 10:30 a 13:30 y de 16:00 a 19:00 h; cerrado en festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -301,7 +355,10 @@
       "duty": "Daily 10:30-13:30 and 16:00-19:00; closed public holidays.",
       "url": "https://www.dreric.com.hk/",
       "source_url": "https://www.dreric.com.hk/contact-3",
-      "note": "Phone from own page; other lists differ."
+      "note": "Phone from own page; other lists differ.",
+      "duty_i18n": {
+        "es": "Todos los días de 10:30 a 13:30 y de 16:00 a 19:00 h; cerrado en festivos."
+      }
     },
     {
       "kind": "clinic",
@@ -315,7 +372,10 @@
       "emergency_24h": false,
       "duty": "Mon-Sat 9:00-21:00; Sun and holidays 10:00-19:00.",
       "url": "https://amcvet.com.hk/en/",
-      "source_url": "https://amcvet.com.hk/en/contact-us/"
+      "source_url": "https://amcvet.com.hk/en/contact-us/",
+      "duty_i18n": {
+        "es": "De lunes a sábado de 9:00 a 21:00 h; domingos y festivos de 10:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -330,7 +390,10 @@
       "duty": "Daily 9:00-20:00; Sun and public holidays 10:00-19:00.",
       "url": "https://amcvet.com.hk/en/",
       "source_url": "https://amcvet.com.hk/en/contact-us/",
-      "note": "Page hours as published (daily and Sunday lines overlap)."
+      "note": "Page hours as published (daily and Sunday lines overlap).",
+      "duty_i18n": {
+        "es": "Todos los días de 9:00 a 20:00 h; domingos y festivos de 10:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -344,7 +407,10 @@
       "emergency_24h": false,
       "duty": "Daily 9:00-19:00.",
       "url": "https://petspace.group/en_hk/",
-      "source_url": "https://petspace.group/en_hk/clinic-locations/"
+      "source_url": "https://petspace.group/en_hk/clinic-locations/",
+      "duty_i18n": {
+        "es": "Todos los días de 9:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -358,7 +424,10 @@
       "emergency_24h": false,
       "duty": "Daily 9:00-19:00.",
       "url": "https://petspace.group/en_hk/",
-      "source_url": "https://petspace.group/en_hk/clinic-locations/"
+      "source_url": "https://petspace.group/en_hk/clinic-locations/",
+      "duty_i18n": {
+        "es": "Todos los días de 9:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -372,7 +441,10 @@
       "emergency_24h": false,
       "duty": "Daily 9:00-19:00.",
       "url": "https://petspace.group/en_hk/",
-      "source_url": "https://petspace.group/en_hk/clinic-locations/"
+      "source_url": "https://petspace.group/en_hk/clinic-locations/",
+      "duty_i18n": {
+        "es": "Todos los días de 9:00 a 19:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -386,7 +458,10 @@
       "duty": "Mon-Tue 9:00-21:00, Wed-Fri 9:00-19:00, Sat 9:00-18:00, Sun 10:00-17:00. Bookings via WhatsApp +852 5935 6970.",
       "url": "https://ohanavethk.com/emergency",
       "source_url": "https://ohanavethk.com/emergency",
-      "note": "No phone on page, WhatsApp only. Page lists other 24/7 emergency clinics; does not claim 24 h for itself."
+      "note": "No phone on page, WhatsApp only. Page lists other 24/7 emergency clinics; does not claim 24 h for itself.",
+      "duty_i18n": {
+        "es": "Lunes y martes de 9:00 a 21:00 h, de miércoles a viernes de 9:00 a 19:00 h, sábado de 9:00 a 18:00 h, domingo de 10:00 a 17:00 h. Reservas por WhatsApp +852 5935 6970."
+      }
     }
   ],
   "notes": "Run 2026-11-11. WebFetch only worked for URLs surfaced by web search results (provenance); official sites hkva.org.hk, afcd.gov.hk and cityu.edu.hk could not be fetched directly (provenance block); hkva.org homepage and AFCD/pets.gov.hk PDF were opened. HK Veterinary Council (vsbhk.org.hk) register only lists names, not opened. No animal poison information line found (SPCA hotline page gives no poisoning-specific service); none listed. Phone numbers in the AFCD PDF and some aggregator/group pages are misaligned, so only phones from clinics' own pages were used. Not covered: ~150 further small-animal clinics in AFCD list (names/addresses only, no verified phone/url); Pets Central addresses missing; AMC Fanling/Ma On Shan/Tung Chung and Pet Space Discovery Bay/Tung Chung skipped because their page phone numbers conflicted with other sources. Right-to-private: no reviews included."

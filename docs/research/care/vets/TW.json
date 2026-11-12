@@ -40,7 +40,10 @@
       "small_animals": true,
       "source_url": "https://www.taiwannews.com.tw/zh/news/3633392",
       "checked": "2026-11-11",
-      "note": "Taiwan News article (CNY holiday notice) quotes the office: 24小時動物救援專線 02-87913064~5 or 1999. Office's own site not opened. Rescue line, not an on-duty vet rota."
+      "note": "Taiwan News article (CNY holiday notice) quotes the office: 24小時動物救援專線 02-87913064~5 or 1999. Office's own site not opened. Rescue line, not an on-duty vet rota.",
+      "duty_i18n": {
+        "es": "Línea de rescate las 24 horas para animales heridos o callejeros (también a través de la línea ciudadana de Taipéi 1999). No es una clínica veterinaria."
+      }
     },
     {
       "kind": "clinic",
@@ -54,7 +57,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '24hr急診重症中心' (phone 02-2579-5722); Royal Canin: 24-hour emergency care, year-round. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "udn: '24hr急診重症中心' (phone 02-2579-5722); Royal Canin: 24-hour emergency care, year-round. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Centro de urgencias y cuidados críticos las 24 horas; atención de urgencias todo el año (aviso en festivos). Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -68,7 +74,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin page: 24-hour cat and dog emergency care; also in Line Today 24-hour roundup (02-8509-2579). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "Royal Canin page: 24-hour cat and dog emergency care; also in Line Today 24-hour roundup (02-8509-2579). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas para gatos y perros. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -82,7 +91,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin lists a 24-hour statement for the CNY period; Line Today lists it as 展望急診動物醫院 in its 24-hour roundup (02-2388-0122). Year-round 24 h not confirmed on own page. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin lists a 24-hour statement for the CNY period; Line Today lists it as 展望急診動物醫院 in its 24-hour roundup (02-2388-0122). Year-round 24 h not confirmed on own page. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -96,7 +108,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2756-2005). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2756-2005). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -110,7 +125,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2556-3320). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2556-3320). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -124,7 +142,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period only confirmed). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period only confirmed). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -138,7 +159,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2834-1119). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2834-1119). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -148,11 +172,14 @@
       "address": "台北市中正區羅斯福路四段162號1樓",
       "phone": "02-23632020",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "Independent check 2026-11-11: udn page has no 24H label for this clinic; Royal Canin (different phone 02-23581199, CNY list) says all-day emergency. Conflict, so 24 h not confirmed: downgraded. Phone 02-2363-2020 matches udn and Line Today."
+      "note": "Independent check 2026-11-11: udn page has no 24H label for this clinic; Royal Canin (different phone 02-23581199, CNY list) says all-day emergency. Conflict, so 24 h not confirmed: downgraded. Phone 02-2363-2020 matches udn and Line Today. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -166,7 +193,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '夜間急診/24小時住院照護' - night emergency, not stated as full 24 h emergency, so false. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn: '夜間急診/24小時住院照護' - night emergency, not stated as full 24 h emergency, so false. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Servicio de urgencias nocturno y hospitalización las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -180,7 +210,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour staff for hospitalised pets only. CONFLICT: Line Today gives 02-2882-7381. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Royal Canin: 24-hour staff for hospitalised pets only. CONFLICT: Line Today gives 02-2882-7381. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Hospital de urgencias para gatos y perros; personal en el centro las 24 horas para mascotas hospitalizadas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -190,11 +223,14 @@
       "address": "台北市內湖區舊宗路一段30巷13號1、2樓",
       "phone": "02-87918706",
       "emergency_24h": false,
-      "duty": "Listed in 24-hour roundup articles; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup lists it; Royal Canin shows 24-hour only from 2/1 (holiday); no explicit year-round 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Line Today roundup lists it; Royal Canin shows 24-hour only from 2/1 (holiday); no explicit year-round 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in 24-hour roundup articles; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -204,11 +240,14 @@
       "address": "台北市北投區懷德街6-3號",
       "phone": "02-28939752",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -218,11 +257,14 @@
       "address": "台北市松山區民生東路五段212巷1號",
       "phone": "02-27607639",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -236,7 +278,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "CONFLICT: Royal Canin 羅斯福路6段136號 02-77505028; Line Today 羅斯福路六段206號 02-2930-5557 (24-hour roundup). 24 h not confirmed. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "CONFLICT: Royal Canin 羅斯福路6段136號 02-77505028; Line Today 羅斯福路六段206號 02-2930-5557 (24-hour roundup). 24 h not confirmed. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -250,7 +295,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -260,11 +308,14 @@
       "address": "新北市中和區中山路三段2號",
       "phone": "02-22263639",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup; Royal Canin 24 h only from 2/2 (holiday). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Line Today roundup; Royal Canin 24 h only from 2/2 (holiday). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -274,11 +325,14 @@
       "address": "新北市新店區安康路二段115-1號",
       "phone": "02-22118890",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -288,11 +342,14 @@
       "address": "新北市中和區中正路639號",
       "phone": "02-22218515",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -302,11 +359,14 @@
       "address": "新北市三重區中正北路23號",
       "phone": "02-89829291",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -316,11 +376,14 @@
       "address": "新北市新莊區幸福路795號",
       "phone": "02-29975827",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -334,7 +397,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today and udn list it (03-333-3816). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today and udn list it (03-333-3816). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -348,7 +414,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '24hr Emergency & Critical Care Center' (phone 03-355-3911). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "udn: '24hr Emergency & Critical Care Center' (phone 03-355-3911). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Centro de urgencias y cuidados críticos las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -362,7 +431,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -376,7 +448,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -390,7 +465,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24 h statement with an exception for New Year's Eve before 21:00. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24 h statement with an exception for New Year's Eve before 21:00. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -400,11 +478,14 @@
       "address": "桃園市中壢區延平路18號",
       "phone": "03-4535740",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup (address no. 20 there vs 18 on Royal Canin). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Line Today roundup (address no. 20 there vs 18 on Royal Canin). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -418,7 +499,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '24H急診'; Royal Canin also lists a 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "udn: '24H急診'; Royal Canin also lists a 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -432,7 +516,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '24H Emergency'; Royal Canin: 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "udn: '24H Emergency'; Royal Canin: 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -446,7 +533,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -460,7 +550,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h."
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo."
+      }
     },
     {
       "kind": "clinic",
@@ -474,7 +567,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '夜間急診' (night emergency), not stated as 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn: '夜間急診' (night emergency), not stated as 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Servicio de urgencias nocturno. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -484,11 +580,14 @@
       "address": "台中市西區五權八街100號",
       "phone": "04-23710496",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn/Line Today roundups list it with no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn/Line Today roundups list it with no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -502,7 +601,10 @@
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn: '24H Emergency' (phone 06-220-3166). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page."
+      "note": "udn: '24H Emergency' (phone 06-220-3166). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
+      "duty_i18n": {
+        "es": "Urgencias las 24 horas. Llama antes de ir."
+      }
     },
     {
       "kind": "clinic",
@@ -512,11 +614,14 @@
       "address": "高雄市仁武區鳳仁路231號",
       "phone": "07-3740964",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -526,11 +631,14 @@
       "address": "高雄市鼓山區大順一路935號",
       "phone": "07-5503532",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -540,11 +648,14 @@
       "address": "花蓮縣花蓮市上海街63號",
       "phone": "03-8341853",
       "emergency_24h": false,
-      "duty": "Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "duty_i18n": {
+        "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -558,7 +669,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Llama para confirmar el horario."
+      }
     },
     {
       "kind": "clinic",
@@ -572,7 +686,10 @@
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page."
+      "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
+      "duty_i18n": {
+        "es": "Llama para confirmar el horario."
+      }
     }
   ],
   "notes": "Run 2026-11-11. WebFetch only worked for URLs that surfaced in web search results (PROVENANCE_REQUIRED for others): NTU Veterinary Hospital (vh.ntu.edu.tw homepage), TVMA, MOA animal.moa.gov.tw, Taipei and New Taipei animal protection office pages and their clinic lists, and every clinic's own website could not be opened. NTU hospital PDFs opened were cancer-centre referral forms with no emergency/24 h statement, so NTU, NCHU and NPUST teaching hospitals are not listed. All entries therefore rest on secondary pages (Royal Canin holiday list, udn, Line Today); emergency_24h is true only where such a page explicitly says 24 h (holiday-period statements are noted) and these need confirmation on the clinics' own pages by the independent check. No animal poison information line found (the only poison centre page opened, Taipei Veterans General Hospital, is for humans); none listed. Kenting/Hengchun: nothing found that could be opened. Left: official Taipei/New Taipei holiday clinic lists, Tainan/Kaohsiung/Hualien/Taitung own-site data, university teaching hospitals, Kenting. Independent check 2026-11-11: all source pages reopened; 24-h claims confirmed on the source_url page except 大安 (downgraded). Own clinic sites and Taipei 24h registry PDF blocked by robots.txt; not used. Orchestrator 2026-11-11: 11 entries with only holiday-period 24-h statements downgraded to not 24 h; remaining 24-h flags rest on secondary pages (no own site opened)."

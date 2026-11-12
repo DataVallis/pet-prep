@@ -36,7 +36,10 @@
       "small_animals": true,
       "source_url": "https://workandjam.com/bl/pets-livestock/noah-s-ark-veterinary-centre.htm",
       "checked": "2026-11-11",
-      "note": "Registered address confirmed in Jamaica Veterinary Board list 2024. Own site noahsarkja.com could not be opened (PROVENANCE_REQUIRED). Second phone +1 876-619-2273 on my-island-jamaica.com. Not 24 h."
+      "note": "Registered address confirmed in Jamaica Veterinary Board list 2024. Own site noahsarkja.com could not be opened (PROVENANCE_REQUIRED). Second phone +1 876-619-2273 on my-island-jamaica.com. Not 24 h.",
+      "duty_i18n": {
+        "es": "Urgencias atendidas dentro y fuera del horario de la clínica; para urgencias fuera de horario, llama antes de las 22:00 para localizar al médico de guardia."
+      }
     },
     {
       "kind": "clinic",
@@ -50,7 +53,10 @@
       "small_animals": true,
       "source_url": "https://www.workandjam.com/bl/pets-livestock/phoenix-vetcare.htm",
       "checked": "2026-11-11",
-      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Own site phoenixvetcareja.com could not be opened (PROVENANCE_REQUIRED). Page also lists a Mandeville branch with an incomplete phone number, not used. No 24 h statement."
+      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Own site phoenixvetcareja.com could not be opened (PROVENANCE_REQUIRED). Page also lists a Mandeville branch with an incomplete phone number, not used. No 24 h statement.",
+      "duty_i18n": {
+        "es": "Atiende urgencias; móvil de urgencias +1 876-469-1260."
+      }
     },
     {
       "kind": "clinic",
@@ -64,7 +70,10 @@
       "small_animals": true,
       "source_url": "https://www.my-island-jamaica.com/kingston_veterinary_clinics.html",
       "checked": "2026-11-11",
-      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Second phone +1 876-931-7434. Directory only for phone and hours."
+      "note": "Address confirmed in Jamaica Veterinary Board list 2024. Second phone +1 876-931-7434. Directory only for phone and hours.",
+      "duty_i18n": {
+        "es": "Abierto de lunes a sábado."
+      }
     },
     {
       "kind": "clinic",
@@ -78,7 +87,10 @@
       "small_animals": true,
       "source_url": "https://jamaica.yabsta.com/listing/view/400652/animalcare-veterinary-hospital",
       "checked": "2026-11-11",
-      "note": "4 Goodwood Terrace is the registered address of Drs Brown/Burnett in the Veterinary Board list 2024. my-island-jamaica.com gives a different address (110a Constant Spring Road, Kingston 8) for Animalcare Veterinary Services; unresolved. Directory only; own site not opened."
+      "note": "4 Goodwood Terrace is the registered address of Drs Brown/Burnett in the Veterinary Board list 2024. my-island-jamaica.com gives a different address (110a Constant Spring Road, Kingston 8) for Animalcare Veterinary Services; unresolved. Directory only; own site not opened.",
+      "duty_i18n": {
+        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 16:00 h, domingo de 10:00 a 15:00 h."
+      }
     },
     {
       "kind": "clinic",
@@ -88,11 +100,14 @@
       "address": "10 Winchester Road, Kingston 10",
       "phone": "+1 876-929-0320",
       "emergency_24h": false,
-      "duty": "Clinic open to the public; hours not published.",
+      "duty": "Clinic open to the public.",
       "small_animals": true,
       "source_url": "https://www.workandjam.com/bl/pets-livestock/jspca.htm",
       "checked": "2026-11-11",
-      "note": "JSPCA, 10 Winchester Road, appears in Jamaica Veterinary Board list 2024 as vets' practice address. Directory only."
+      "note": "JSPCA, 10 Winchester Road, appears in Jamaica Veterinary Board list 2024 as vets' practice address. Directory only. Removed from duty: Clinic open to the public; hours not published.",
+      "duty_i18n": {
+        "es": "Clínica abierta al público."
+      }
     }
   ],
   "notes": "Thin source. No 24-hour clinic, duty rota or animal poison line found. Clinics' own sites could not be opened by WebFetch (PROVENANCE_REQUIRED) and pethavenvetja.com is robots-disallowed. Registered practices in the 2024 Veterinary Board list WITHOUT any opened phone/url (not added): Vet4Pets Medical Centre (23 Jimmy Cliff Blvd, Montego Bay), Pet Haven Veterinary Clinic (58 1/2 Mannings Hill Rd), Born Free Pet Centre (Boulevard Supercentre, Kingston 19), Denbigh Veterinary Clinic (Clarendon), Brunswick Veterinary Medical Centre and Spanish Town Veterinary Clinic (9 St John's Rd, Spanish Town), Manchester Clinic (RADA Complex, Mandeville), Brown's Town Veterinary Clinic, Windsor Road clinic (St Ann's Bay), Value Vets (Hopewell, Hanover). Individual vets in Portmore, Ocho Rios, Montego Bay, Negril area exist in the register but with no practice name."

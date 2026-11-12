@@ -47,7 +47,8 @@
         "sl": "pon–pet 9–19, sob 9–16; nujna pomoč 24 ur na dan",
         "hr": "pon–pet 9:00–19:00, sub 9:00–16:00; hitna služba 24/7.",
         "de": "Mo–Fr 9–19 Uhr, Sa 9–16 Uhr; Notdienst rund um die Uhr",
-        "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–16 h ; urgences 24 h/24, 7 j/7"
+        "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–16 h ; urgences 24 h/24, 7 j/7",
+        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–16:00 h; urgencias 24/7"
       },
       "small_animals": true,
       "url": "https://www.deiereklinik.lu/",
@@ -69,7 +70,8 @@
         "sl": "pon–pet 8–20, sob 8–17; nujna pomoč 24 ur na dan. Zunaj delovnega časa in ob vikendih najprej pokličite: partner za nujne primere EVC Luxembourg +352 27 83 93 00 (v isti stavbi)",
         "hr": "pon–pet 8:00–20:00, sub 8:00–17:00; hitna služba 24/7. Izvan radnog vremena i vikendom nazovi unaprijed: hitni partner EVC Luxembourg +352 27 83 93 00 (u istoj zgradi).",
         "de": "Mo–Fr 8–20 Uhr, Sa 8–17 Uhr; Notdienst rund um die Uhr. Außerhalb der Sprechzeiten und am Wochenende bitte zuerst anrufen: Notdienstpartner EVC Luxembourg +352 27 83 93 00 (im selben Gebäude)",
-        "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–17 h ; urgences 24 h/24, 7 j/7. En dehors de ces horaires et le week-end, appelez d’abord : partenaire d’urgence EVC Luxembourg +352 27 83 93 00 (même bâtiment)"
+        "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–17 h ; urgences 24 h/24, 7 j/7. En dehors de ces horaires et le week-end, appelez d’abord : partenaire d’urgence EVC Luxembourg +352 27 83 93 00 (même bâtiment)",
+        "es": "Lun–vie 8:00–20:00 h, sáb 8:00–17:00 h; urgencias 24/7. Fuera de horario y en fin de semana llama antes: socio de urgencias EVC Luxembourg +352 27 83 93 00 (mismo edificio)"
       },
       "small_animals": true,
       "url": "https://vet.lu/",
@@ -90,7 +92,8 @@
         "sl": "Veterinarji za nujne primere, ki pridejo na vaš dom kjer koli v Luksemburgu, vsak dan v letu, 24 ur na dan",
         "hr": "Hitni veterinari koji dolaze k tebi kući bilo gdje u Luksemburgu, svaki dan u godini, 24 sata.",
         "de": "Notdienst-Tierärzte mit Hausbesuch in ganz Luxemburg, an jedem Tag des Jahres rund um die Uhr",
-        "fr": "Vétérinaires d’urgence se déplaçant à domicile partout au Luxembourg, tous les jours de l’année, 24 h/24"
+        "fr": "Vétérinaires d’urgence se déplaçant à domicile partout au Luxembourg, tous les jours de l’année, 24 h/24",
+        "es": "Veterinarios de urgencias a domicilio en todo Luxemburgo, todos los días del año, las 24 horas"
       },
       "small_animals": true,
       "url": "https://www.sosvet.lu/",
@@ -107,18 +110,15 @@
       "address": "2, rue Thomas Edison, L-1445 Strassen",
       "phone": "+352 247 83526",
       "emergency_24h": false,
-      "duty": "Official page of the veterinary chamber listing the vets on call, split by small animals, livestock and equines. The phone is the chamber's office, not an emergency line",
-      "duty_i18n": {
-        "sl": "Uradna stran veterinarske zbornice s seznamom dežurnih veterinarjev za male živali, kmetijske živali in konje. Telefon je številka pisarne zbornice, ne številka za nujne primere",
-        "hr": "Službena stranica veterinarske komore s popisom dežurnih veterinara, podijeljenim na male životinje, stoku i konje. Telefon je ured komore, a ne hitna linija.",
-        "de": "Offizielle Seite der Tierärztekammer mit den diensthabenden Tierärzten, gegliedert nach Kleintieren, Nutztieren und Pferden. Die Telefonnummer ist die des Kammerbüros, keine Notrufnummer",
-        "fr": "Page officielle du Collège vétérinaire listant les vétérinaires de garde, par petits animaux, animaux de rente et équidés. Le numéro est celui du secrétariat du Collège, pas une ligne d’urgence"
-      },
+      "duty": "Veterinary chamber's list of vets on call, split by small animals, livestock and equines. The phone is the chamber's office, not an emergency line",
       "small_animals": true,
       "url": "https://www.collegeveterinaire.lu/urgences",
       "source_url": "https://www.collegeveterinaire.lu/urgences",
       "checked": "2026-11-04",
-      "note": "Page opened. It listed two on-call vets with mobile numbers dated July 2025 (stale; individuals' numbers deliberately not copied). Rota is dynamic; /fr/gardes could not be fetched. Garde obligation for every established vet is stated on the page."
+      "note": "Page opened. It listed two on-call vets with mobile numbers dated July 2025 (stale; individuals' numbers deliberately not copied). Rota is dynamic; /fr/gardes could not be fetched. Garde obligation for every established vet is stated on the page. Removed from duty: Official page of the veterinary chamber listing the vets on call, split by small animals, livestock and equines. The phone is the chamber's office, not an emergency line",
+      "duty_i18n": {
+        "es": "Lista del colegio veterinario con los veterinarios de guardia, por pequeños animales, ganado y équidos. El teléfono es el de la oficina del colegio, no una línea de urgencias"
+      }
     },
     {
       "kind": "clinic",
@@ -133,7 +133,8 @@
         "sl": "Po dogovoru: pon, tor, čet 8.30–18.30, pet 8.30–18, ob sredah in koncih tedna zaprto. Nujni primeri: klinika Krakelshaff +352 52 13 13",
         "hr": "Uz prethodnu najavu: pon, uto, čet 8:30–18:30, pet 8:30–18:00, sri i vikendom zatvoreno. Hitni slučajevi: klinika Krakelshaff +352 52 13 13.",
         "de": "Nach Terminvereinbarung: Mo, Di, Do 8.30–18.30 Uhr, Fr 8.30–18 Uhr, mittwochs und am Wochenende geschlossen. Notfälle: Klinik Krakelshaff +352 52 13 13",
-        "fr": "Sur rendez-vous : lun., mar., jeu. 8 h 30–18 h 30, ven. 8 h 30–18 h, fermé le mercredi et le week-end. Urgences : clinique Krakelshaff +352 52 13 13"
+        "fr": "Sur rendez-vous : lun., mar., jeu. 8 h 30–18 h 30, ven. 8 h 30–18 h, fermé le mercredi et le week-end. Urgences : clinique Krakelshaff +352 52 13 13",
+        "es": "Con cita previa: lun, mar y jue 8:30–18:30 h, vie 8:30–18:00 h, cerrado miércoles y fines de semana. Urgencias: clínica Krakelshaff +352 52 13 13"
       },
       "small_animals": true,
       "url": "https://www.veterinaire-jaeger.lu/",
@@ -153,7 +154,8 @@
         "sl": "Za delovni čas pokličite",
         "hr": "Radno vrijeme provjeri telefonom.",
         "de": "Öffnungszeiten bitte telefonisch erfragen",
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario"
       },
       "small_animals": true,
       "url": "https://colvet.lu/",
@@ -174,7 +176,8 @@
         "sl": "Po dogovoru pon–sob, ob torkih in četrtkih popoldne zaprto; obiski na domu na zahtevo. Zunaj delovnega časa: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
         "hr": "Uz prethodnu najavu pon–sub, utorkom i četvrtkom popodne zatvoreno; kućni posjeti na zahtjev. Izvan radnog vremena: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33.",
         "de": "Nach Terminvereinbarung Mo–Sa, dienstags und donnerstags nachmittags geschlossen; Hausbesuche auf Anfrage. Außerhalb der Sprechzeiten: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
-        "fr": "Sur rendez-vous du lundi au samedi, fermé les mardis et jeudis après-midi ; visites à domicile sur demande. Hors horaires : SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33"
+        "fr": "Sur rendez-vous du lundi au samedi, fermé les mardis et jeudis après-midi ; visites à domicile sur demande. Hors horaires : SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
+        "es": "Con cita previa de lunes a sábado, cerrado martes y jueves por la tarde; visitas a domicilio si se solicitan. Fuera de horario: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33"
       },
       "small_animals": true,
       "url": "https://www.vethowald.lu/en",
@@ -195,7 +198,8 @@
         "sl": "Po dogovoru pon–sob; ob nedeljah zaprto, razen za nujne primere (upoštevajte navodila na odzivniku)",
         "hr": "Uz prethodnu najavu pon–sub; nedjeljom zatvoreno osim za hitne slučajeve (slijedi upute na telefonskoj sekretarici).",
         "de": "Nach Terminvereinbarung Mo–Sa; sonntags geschlossen, außer bei Notfällen (bitte den Anweisungen auf dem Anrufbeantworter folgen)",
-        "fr": "Sur rendez-vous du lundi au samedi ; fermé le dimanche sauf urgences (suivre les instructions du répondeur)"
+        "fr": "Sur rendez-vous du lundi au samedi ; fermé le dimanche sauf urgences (suivre les instructions du répondeur)",
+        "es": "Con cita previa de lunes a sábado; domingo cerrado salvo urgencias (sigue las instrucciones del contestador)"
       },
       "small_animals": true,
       "url": "https://www.veterinaire.eu/",
@@ -216,7 +220,8 @@
         "sl": "Tajništvo pon–čet 8–12.30 in 13.30–17, pet do 16.30, ob vikendih zaprto",
         "hr": "Tajništvo pon–čet 8:00–12:30 i 13:30–17:00, pet do 16:30, vikendom zatvoreno.",
         "de": "Sekretariat Mo–Do 8–12.30 und 13.30–17 Uhr, Fr bis 16.30 Uhr, am Wochenende geschlossen",
-        "fr": "Secrétariat lun.–jeu. 8 h–12 h 30 et 13 h 30–17 h, ven. jusqu’à 16 h 30, fermé le week-end"
+        "fr": "Secrétariat lun.–jeu. 8 h–12 h 30 et 13 h 30–17 h, ven. jusqu’à 16 h 30, fermé le week-end",
+        "es": "Secretaría lun–jue 8:00–12:30 y 13:30–17:00 h, vie hasta las 16:30, cerrado fines de semana"
       },
       "small_animals": true,
       "url": "https://www.pallevet.lu/en",
@@ -237,7 +242,8 @@
         "sl": "Po dogovoru pon–pet 9–13 in 14–18",
         "hr": "Uz prethodnu najavu pon–pet 9:00–13:00 i 14:00–18:00.",
         "de": "Nach Terminvereinbarung Mo–Fr 9–13 und 14–18 Uhr",
-        "fr": "Sur rendez-vous lun.–ven. 9 h–13 h et 14 h–18 h"
+        "fr": "Sur rendez-vous lun.–ven. 9 h–13 h et 14 h–18 h",
+        "es": "Con cita previa lun–vie 9:00–13:00 y 14:00–18:00 h"
       },
       "small_animals": true,
       "url": "https://pawsandpals.lu/en/",
@@ -258,7 +264,8 @@
         "sl": "pon–pet 9–13 in 14–18, sob 9–12, ob nedeljah in praznikih zaprto",
         "hr": "pon–pet 9:00–13:00 i 14:00–18:00, sub 9:00–12:00, nedjeljom i blagdanima zatvoreno.",
         "de": "Mo–Fr 9–13 und 14–18 Uhr, Sa 9–12 Uhr, sonn- und feiertags geschlossen",
-        "fr": "Lun.–ven. 9 h–13 h et 14 h–18 h, sam. 9 h–12 h, fermé les dimanches et jours fériés"
+        "fr": "Lun.–ven. 9 h–13 h et 14 h–18 h, sam. 9 h–12 h, fermé les dimanches et jours fériés",
+        "es": "Lun–vie 9:00–13:00 y 14:00–18:00 h, sáb 9:00–12:00 h, cerrado dom y festivos"
       },
       "small_animals": true,
       "url": "https://www.sudvet.lu/",
@@ -279,7 +286,8 @@
         "sl": "pon–pet 8.30–12 in 14–19, sob 8.30–12",
         "hr": "pon–pet 8:30–12:00 i 14:00–19:00, sub 8:30–12:00.",
         "de": "Mo–Fr 8.30–12 und 14–19 Uhr, Sa 8.30–12 Uhr",
-        "fr": "Lun.–ven. 8 h 30–12 h et 14 h–19 h, sam. 8 h 30–12 h"
+        "fr": "Lun.–ven. 8 h 30–12 h et 14 h–19 h, sam. 8 h 30–12 h",
+        "es": "Lun–vie 8:30–12:00 y 14:00–19:00 h, sáb 8:30–12:00 h"
       },
       "small_animals": true,
       "url": "https://vtr.lu/cabinet/",
@@ -300,7 +308,8 @@
         "sl": "Po dogovoru pon–pet 8–12 in 14–19, sob 9–12; številka za nujne primere ob vikendih 621 173 884; če ni dosegljiva, pokličite 112",
         "hr": "Uz prethodnu najavu pon–pet 8:00–12:00 i 14:00–19:00, sub 9:00–12:00; vikendom hitna linija 621 173 884; ako je ne možeš dobiti, nazovi 112.",
         "de": "Nach Terminvereinbarung Mo–Fr 8–12 und 14–19 Uhr, Sa 9–12 Uhr; Notfallnummer am Wochenende 621 173 884; falls nicht erreichbar, bitte 112 anrufen",
-        "fr": "Sur rendez-vous lun.–ven. 8 h–12 h et 14 h–19 h, sam. 9 h–12 h ; ligne d’urgence week-end 621 173 884 ; si injoignable, appelez le 112"
+        "fr": "Sur rendez-vous lun.–ven. 8 h–12 h et 14 h–19 h, sam. 9 h–12 h ; ligne d’urgence week-end 621 173 884 ; si injoignable, appelez le 112",
+        "es": "Con cita previa lun–vie 8:00–12:00 y 14:00–19:00 h, sáb 9:00–12:00 h; línea de urgencias de fin de semana 621 173 884; si no contestan, llama al 112"
       },
       "small_animals": true,
       "url": "http://www.cvi.lu/",
@@ -321,7 +330,8 @@
         "sl": "pon, tor, čet, pet 8.30–12 in 14–18.30, sre 8.30–12, sob 9–12 po dogovoru; številka za nujne primere +352 621 411 847",
         "hr": "pon, uto i čet–pet 8:30–12:00 i 14:00–18:30, sri 8:30–12:00, sub 9:00–12:00 uz prethodnu najavu; hitna linija +352 621 411 847.",
         "de": "Mo–Di und Do–Fr 8.30–12 und 14–18.30 Uhr, Mi 8.30–12 Uhr, Sa 9–12 Uhr nach Terminvereinbarung; Notfallnummer +352 621 411 847",
-        "fr": "Lun.–mar. et jeu.–ven. 8 h 30–12 h et 14 h–18 h 30, mer. 8 h 30–12 h, sam. 9 h–12 h sur rendez-vous ; ligne d’urgence +352 621 411 847"
+        "fr": "Lun.–mar. et jeu.–ven. 8 h 30–12 h et 14 h–18 h 30, mer. 8 h 30–12 h, sam. 9 h–12 h sur rendez-vous ; ligne d’urgence +352 621 411 847",
+        "es": "Lun–mar y jue–vie 8:30–12:00 y 14:00–18:30 h, mié 8:30–12:00 h, sáb 9:00–12:00 h con cita previa; línea de urgencias +352 621 411 847"
       },
       "small_animals": true,
       "url": "https://www.veterinaire-scaloni.lu/",
@@ -342,7 +352,8 @@
         "sl": "Telefon pon–pet 7.45–19, sob 8–16 (od 1. avgusta sob 8–12); zunaj delovnega časa glejte stran veterinarske zbornice za nujne primere",
         "hr": "Telefon pon–pet 7:45–19:00, sub 8:00–16:00 (od 1. kolovoza sub 8:00–12:00); izvan radnog vremena pogledaj stranicu hitne službe veterinarske komore.",
         "de": "Telefonisch Mo–Fr 7.45–19 Uhr, Sa 8–16 Uhr (ab 1. August Sa 8–12 Uhr); außerhalb der Sprechzeiten siehe die Notdienstseite der Tierärztekammer",
-        "fr": "Téléphone lun.–ven. 7 h 45–19 h, sam. 8 h–16 h (sam. 8 h–12 h à partir du 1er août) ; en dehors de ces horaires, voir la page d’urgence du Collège vétérinaire"
+        "fr": "Téléphone lun.–ven. 7 h 45–19 h, sam. 8 h–16 h (sam. 8 h–12 h à partir du 1er août) ; en dehors de ces horaires, voir la page d’urgence du Collège vétérinaire",
+        "es": "Teléfono lun–vie 7:45–19:00 h, sáb 8:00–16:00 h (sáb 8:00–12:00 h desde el 1 de agosto); fuera de horario consulta la página de urgencias del colegio veterinario"
       },
       "small_animals": true,
       "url": "https://www.cabinet-veterinaire.lu/en/",
@@ -363,7 +374,8 @@
         "sl": "Za delovni čas pokličite",
         "hr": "Radno vrijeme provjeri telefonom.",
         "de": "Öffnungszeiten bitte telefonisch erfragen",
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -383,7 +395,8 @@
         "sl": "Za delovni čas pokličite",
         "hr": "Radno vrijeme provjeri telefonom.",
         "de": "Öffnungszeiten bitte telefonisch erfragen",
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -403,7 +416,8 @@
         "sl": "Za delovni čas pokličite",
         "hr": "Radno vrijeme provjeri telefonom.",
         "de": "Öffnungszeiten bitte telefonisch erfragen",
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -423,7 +437,8 @@
         "sl": "Za delovni čas pokličite",
         "hr": "Radno vrijeme provjeri telefonom.",
         "de": "Öffnungszeiten bitte telefonisch erfragen",
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para consultar el horario"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -442,7 +457,8 @@
         "sl": "Mobilni veterinar za konje, ponije in osle; obiskuje konjušnice",
         "hr": "Mobilni veterinar za konje, ponije i magarce; dolazi u staje.",
         "de": "Mobile Tierärztin für Pferde, Ponys und Esel; kommt in die Ställe",
-        "fr": "Vétérinaire équin mobile (chevaux, poneys et ânes) ; se déplace dans les écuries"
+        "fr": "Vétérinaire équin mobile (chevaux, poneys et ânes) ; se déplace dans les écuries",
+        "es": "Veterinario móvil de caballos, ponis y burros; visita las cuadras"
       },
       "small_animals": false,
       "url": "https://www.equinevet.lu",

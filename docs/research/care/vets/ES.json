@@ -252,7 +252,8 @@
         "sl": "24-urna linija za nujne primere +34 648 814 864 (samo za nujne primere); naročanje +34 913 943 755, 9.30–14.",
         "hr": "Hitna linija 24 h +34 648 814 864 (samo za hitne slučajeve); naručivanje +34 913 943 755, 9:30–14:00.",
         "de": "24-Stunden-Notfalltelefon +34 648 814 864 (nur für Notfälle); Termine unter +34 913 943 755, 9.30–14.00 Uhr.",
-        "fr": "Ligne d’urgences 24 h/24 : +34 648 814 864 (urgences uniquement) ; rendez-vous : +34 913 943 755, 9 h 30–14 h."
+        "fr": "Ligne d’urgences 24 h/24 : +34 648 814 864 (urgences uniquement) ; rendez-vous : +34 913 943 755, 9 h 30–14 h.",
+        "es": "Línea de urgencias las 24 horas +34 648 814 864 (solo urgencias); citas en el +34 913 943 755, de 9:30 a 14:00 h."
       },
       "small_animals": true,
       "url": "https://ucm.es/hcv/contacto-y-peticion-de-cita",
@@ -448,7 +449,8 @@
         "sl": "Psi, mačke, eksotične živali: pon–pet 9–20 +34 935 811 894; ponoči (20–9) in ob koncih tedna +34 660 681 894. Konji +34 649 191 206.",
         "hr": "Psi, mačke, egzotične životinje: pon–pet 9:00–20:00 +34 935 811 894; noću (20:00–9:00) i vikendom +34 660 681 894. Konji +34 649 191 206.",
         "de": "Hunde, Katzen, Exoten: Mo–Fr 9.00–20.00 Uhr +34 935 811 894; nachts (20.00–9.00 Uhr) und am Wochenende +34 660 681 894. Pferde +34 649 191 206.",
-        "fr": "Chiens, chats, NAC : lun.–ven. 9 h–20 h, +34 935 811 894 ; nuits (20 h–9 h) et week-ends : +34 660 681 894. Chevaux : +34 649 191 206."
+        "fr": "Chiens, chats, NAC : lun.–ven. 9 h–20 h, +34 935 811 894 ; nuits (20 h–9 h) et week-ends : +34 660 681 894. Chevaux : +34 649 191 206.",
+        "es": "Perros, gatos y exóticos: lun–vie 9:00–20:00 h +34 935 811 894; noches (de 20:00 a 9:00 h) y fines de semana +34 660 681 894. Caballos +34 649 191 206."
       },
       "small_animals": true,
       "url": "https://www.uab.cat/web/servicios-clinicos/urgencias-1345893640793.html",
@@ -570,7 +572,8 @@
         "sl": "Telefon za nujne primere +34 629 356 404.",
         "hr": "Hitni telefon +34 629 356 404.",
         "de": "Notfalltelefon +34 629 356 404.",
-        "fr": "Téléphone des urgences : +34 629 356 404."
+        "fr": "Téléphone des urgences : +34 629 356 404.",
+        "es": "Teléfono de urgencias +34 629 356 404."
       },
       "small_animals": true,
       "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
@@ -605,7 +608,8 @@
         "sl": "Telefonska podpora za nujne primere 24 ur na dan, 7 dni v tednu; druga številka +34 607 704 351.",
         "hr": "Hitna telefonska podrška 24/7; drugi broj +34 607 704 351.",
         "de": "Telefonische Notfallberatung rund um die Uhr; zweite Nummer +34 607 704 351.",
-        "fr": "Assistance téléphonique d’urgence 24 h/24, 7 j/7 ; second numéro : +34 607 704 351."
+        "fr": "Assistance téléphonique d’urgence 24 h/24, 7 j/7 ; second numéro : +34 607 704 351.",
+        "es": "Atención telefónica de urgencias las 24 horas; segundo número +34 607 704 351."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/diagnostic/",
@@ -627,7 +631,8 @@
         "sl": "Nujna pomoč 24 ur na dan, telefon +34 689 526 816.",
         "hr": "Hitni telefon 24 h +34 689 526 816.",
         "de": "24-Stunden-Notfalltelefon +34 689 526 816.",
-        "fr": "Urgences 24 h/24 par téléphone : +34 689 526 816."
+        "fr": "Urgences 24 h/24 par téléphone : +34 689 526 816.",
+        "es": "Teléfono de urgencias 24 horas +34 689 526 816."
       },
       "small_animals": true,
       "url": "https://centreveterinarisalou.com/es/",
@@ -649,7 +654,8 @@
         "sl": "Nujni primeri pri malih hišnih ljubljenčkih +34 637 380 620; konji +34 607 888 416.",
         "hr": "Hitni slučajevi kod malih životinja +34 637 380 620; konji +34 607 888 416.",
         "de": "Kleintiernotfälle +34 637 380 620; Pferde +34 607 888 416.",
-        "fr": "Urgences petits animaux : +34 637 380 620 ; chevaux : +34 607 888 416."
+        "fr": "Urgences petits animaux : +34 637 380 620 ; chevaux : +34 607 888 416.",
+        "es": "Urgencias de pequeños animales +34 637 380 620; caballos +34 607 888 416."
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.uchceu.es/",
@@ -821,7 +827,8 @@
         "sl": "Nujna pomoč na naslovu Carretera Denia-Ondara km. 1, Denia; klinika na Partida Madrigueres Nord 17.",
         "hr": "Hitna služba na adresi Carretera Denia-Ondara km. 1, Denia; ambulanta na adresi Partida Madrigueres Nord 17.",
         "de": "Notdienst an der Carretera Denia-Ondara km. 1, Denia; Klinik in der Partida Madrigueres Nord 17.",
-        "fr": "Service d’urgences : Carretera Denia-Ondara km. 1, Denia ; clinique : Partida Madrigueres Nord 17."
+        "fr": "Service d’urgences : Carretera Denia-Ondara km. 1, Denia ; clinique : Partida Madrigueres Nord 17.",
+        "es": "Servicio de urgencias en Carretera Denia-Ondara km. 1, Denia; clínica en Partida Madrigueres Nord 17."
       }
     },
     {
@@ -851,7 +858,8 @@
         "sl": "Telefon za nujne primere +34 699 017 914.",
         "hr": "Hitni telefon +34 699 017 914.",
         "de": "Notfalltelefon +34 699 017 914.",
-        "fr": "Téléphone des urgences : +34 699 017 914."
+        "fr": "Téléphone des urgences : +34 699 017 914.",
+        "es": "Teléfono de urgencias +34 699 017 914."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinariocostaazahar.com/",
@@ -917,7 +925,8 @@
         "sl": "Telefon za nujne primere 24 ur na dan +34 607 296 977 (skupni s Hospital Canis).",
         "hr": "Hitni telefon 24 h +34 607 296 977 (zajednički s Hospital Canis).",
         "de": "24-Stunden-Notfalltelefon +34 607 296 977 (gemeinsam mit dem Hospital Canis).",
-        "fr": "Urgences 24 h/24 : +34 607 296 977 (numéro commun avec l’Hospital Canis)."
+        "fr": "Urgences 24 h/24 : +34 607 296 977 (numéro commun avec l’Hospital Canis).",
+        "es": "Teléfono de urgencias 24 horas +34 607 296 977 (compartido con Hospital Canis)."
       },
       "small_animals": true,
       "url": "https://www.clinicacasmenescal.es/",
@@ -983,7 +992,8 @@
         "sl": "Telefon za nujne primere 24 ur na dan +34 608 534 110; klinika pon–pet 9–19.30, sob 10–12 (po naročilu).",
         "hr": "Hitni telefon 24 h +34 608 534 110; ambulanta pon–pet 9:00–19:30, sub 10:00–12:00 (po dogovoru).",
         "de": "24-Stunden-Notfalltelefon +34 608 534 110; Klinik Mo–Fr 9.00–19.30 Uhr, Sa 10.00–12.00 Uhr (nach Vereinbarung).",
-        "fr": "Urgences 24 h/24 : +34 608 534 110 ; clinique lun.–ven. 9 h–19 h 30, sam. 10 h–12 h (sur rendez-vous)."
+        "fr": "Urgences 24 h/24 : +34 608 534 110 ; clinique lun.–ven. 9 h–19 h 30, sam. 10 h–12 h (sur rendez-vous).",
+        "es": "Teléfono de urgencias 24 horas +34 608 534 110; clínica lun–vie 9:00–19:30 h, sáb 10:00–12:00 h (con cita previa)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariarafaelcoll.es/",
@@ -1005,7 +1015,8 @@
         "sl": "Telefon za nujne primere +34 613 547 693.",
         "hr": "Hitni telefon +34 613 547 693.",
         "de": "Notfalltelefon +34 613 547 693.",
-        "fr": "Téléphone des urgences : +34 613 547 693."
+        "fr": "Téléphone des urgences : +34 613 547 693.",
+        "es": "Teléfono de urgencias +34 613 547 693."
       },
       "small_animals": true,
       "url": "https://salutanimal.es/es",
@@ -1026,7 +1037,8 @@
         "sl": "Nujni primeri pri malih hišnih ljubljenčkih +34 659 930 301; velike živali +34 683 305 499; recepcija +34 976 761 633 (pon–pet 8.30–20.30 med študijskim letom).",
         "hr": "Hitni slučajevi kod malih životinja +34 659 930 301; velike životinje +34 683 305 499; recepcija +34 976 761 633 (pon–pet 8:30–20:30 tijekom nastave).",
         "de": "Kleintiernotfälle +34 659 930 301; Großtiere +34 683 305 499; Rezeption +34 976 761 633 (Mo–Fr 8.30–20.30 Uhr während des Semesters).",
-        "fr": "Urgences petits animaux : +34 659 930 301 ; grands animaux : +34 683 305 499 ; accueil : +34 976 761 633 (lun.–ven. 8 h 30–20 h 30 en période de cours)."
+        "fr": "Urgences petits animaux : +34 659 930 301 ; grands animaux : +34 683 305 499 ; accueil : +34 976 761 633 (lun.–ven. 8 h 30–20 h 30 en période de cours).",
+        "es": "Urgencias de pequeños animales +34 659 930 301; animales grandes +34 683 305 499; recepción +34 976 761 633 (lun–vie 8:30–20:30 h en periodo lectivo)."
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.unizar.es/",
@@ -1077,7 +1089,8 @@
         "sl": "Telefon za nujne primere 24 ur na dan +34 670 021 355.",
         "hr": "Hitni telefon 24 h +34 670 021 355.",
         "de": "24-Stunden-Notfalltelefon +34 670 021 355.",
-        "fr": "Urgences 24 h/24 : +34 670 021 355."
+        "fr": "Urgences 24 h/24 : +34 670 021 355.",
+        "es": "Teléfono de urgencias 24 horas +34 670 021 355."
       },
       "small_animals": true,
       "url": "https://www.veterinariacondearanda.es/",
@@ -1141,7 +1154,8 @@
         "sl": "Linija za nujne primere +34 688 699 987.",
         "hr": "Hitna linija +34 688 699 987.",
         "de": "Notfallnummer +34 688 699 987.",
-        "fr": "Ligne d’urgences : +34 688 699 987."
+        "fr": "Ligne d’urgences : +34 688 699 987.",
+        "es": "Línea de urgencias +34 688 699 987."
       },
       "small_animals": true,
       "url": "https://hospitaltucan.com",
@@ -1177,7 +1191,8 @@
         "sl": "Nujni primeri vsak dan 9–21, telefon +34 626 614 106.",
         "hr": "Hitni slučajevi svaki dan 9–21, telefon +34 626 614 106.",
         "de": "Notfälle täglich 9–21 Uhr, Telefon +34 626 614 106.",
-        "fr": "Urgences tous les jours 9 h–21 h, tél. : +34 626 614 106."
+        "fr": "Urgences tous les jours 9 h–21 h, tél. : +34 626 614 106.",
+        "es": "Urgencias todos los días 9:00–21:00 h, teléfono +34 626 614 106."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/san-fermin-hospital-veterinario/",
@@ -1213,7 +1228,8 @@
         "sl": "Telefon za nujne primere 24 ur na dan +34 636 203 574 – samo po telefonu.",
         "hr": "Hitni telefon 24 h +34 636 203 574 – samo telefonski.",
         "de": "24-Stunden-Notfalltelefon +34 636 203 574 – nur telefonisch.",
-        "fr": "Urgences 24 h/24 : +34 636 203 574, par téléphone uniquement."
+        "fr": "Urgences 24 h/24 : +34 636 203 574, par téléphone uniquement.",
+        "es": "Teléfono de urgencias 24 horas +34 636 203 574; solo por teléfono."
       },
       "small_animals": true,
       "url": "https://clinicaveterinariaalegria.es/",
@@ -1248,7 +1264,8 @@
         "sl": "Pregledi pon–pet 9–15 (po naročilu); nujni primeri vsak dan 24 ur na dan. Naročanje in nujni primeri: +34 987 293 063 / +34 630 502 382.",
         "hr": "Pregledi pon–pet 9–15 (po dogovoru); hitni slučajevi 24 h svaki dan. Termini i hitni slučajevi: +34 987 293 063 / +34 630 502 382.",
         "de": "Sprechstunden Mo–Fr 9–15 Uhr (nach Vereinbarung); Notfälle täglich rund um die Uhr. Termine und Notfälle: +34 987 293 063 / +34 630 502 382.",
-        "fr": "Consultations lun.–ven. 9 h–15 h (sur rendez-vous) ; urgences 24 h/24, tous les jours. Rendez-vous et urgences : +34 987 293 063 / +34 630 502 382."
+        "fr": "Consultations lun.–ven. 9 h–15 h (sur rendez-vous) ; urgences 24 h/24, tous les jours. Rendez-vous et urgences : +34 987 293 063 / +34 630 502 382.",
+        "es": "Consultas lun–vie 9:00–15:00 h (con cita previa); urgencias las 24 horas, todos los días. Citas y urgencias: +34 987 293 063 / +34 630 502 382."
       },
       "small_animals": true,
       "url": "https://servicios.unileon.es/hospital-veterinario/",
@@ -1270,7 +1287,8 @@
         "sl": "Nujna pomoč in hospitalizacija 24 ur na dan, 365 dni v letu. Telefona +34 868 887 502 / +34 609 625 853.",
         "hr": "Hitni slučajevi i hospitalizacija 24 h, 365 dana. Telefoni +34 868 887 502 / +34 609 625 853.",
         "de": "Notfälle und stationäre Aufnahme rund um die Uhr, 365 Tage im Jahr. Telefon +34 868 887 502 / +34 609 625 853.",
-        "fr": "Urgences et hospitalisation 24 h/24, 365 jours par an. Tél. : +34 868 887 502 / +34 609 625 853."
+        "fr": "Urgences et hospitalisation 24 h/24, 365 jours par an. Tél. : +34 868 887 502 / +34 609 625 853.",
+        "es": "Urgencias y hospitalización las 24 horas, los 365 días del año. Teléfonos +34 868 887 502 / +34 609 625 853."
       },
       "small_animals": true,
       "url": "https://www.um.es/web/hcv/",
@@ -1292,7 +1310,8 @@
         "sl": "Odprto vsak dan 24 ur na dan; nujne primere sprejmejo brez najave.",
         "hr": "Otvoreno 24 h svaki dan; u hitnim slučajevima možeš doći izravno.",
         "de": "Täglich rund um die Uhr geöffnet; Notfälle können direkt vorbeikommen.",
-        "fr": "Ouvert 24 h/24, tous les jours ; urgences accueillies sans rendez-vous."
+        "fr": "Ouvert 24 h/24, tous les jours ; urgences accueillies sans rendez-vous.",
+        "es": "Abierto las 24 horas todos los días; las urgencias se atienden sin cita previa."
       },
       "small_animals": true,
       "url": "https://hcv.ulpgc.es/",
@@ -1314,7 +1333,8 @@
         "sl": "Nujni primeri pri malih hišnih ljubljenčkih +34 661 317 588 (velike živali +34 661 316 698), 24 ur na dan vse leto. Centrala/naročanje +34 927 257 102, pon–pet 8.30–18.",
         "hr": "Hitni slučajevi kod malih životinja +34 661 317 588 (velike životinje +34 661 316 698), 24 h cijele godine. Centrala/termini +34 927 257 102, pon–pet 8:30–18:00.",
         "de": "Kleintiernotfälle +34 661 317 588 (Großtiere +34 661 316 698), ganzjährig rund um die Uhr. Zentrale/Termine +34 927 257 102, Mo–Fr 8.30–18.00 Uhr.",
-        "fr": "Urgences petits animaux : +34 661 317 588 (grands animaux : +34 661 316 698), 24 h/24 toute l’année. Standard et rendez-vous : +34 927 257 102, lun.–ven. 8 h 30–18 h."
+        "fr": "Urgences petits animaux : +34 661 317 588 (grands animaux : +34 661 316 698), 24 h/24 toute l’année. Standard et rendez-vous : +34 927 257 102, lun.–ven. 8 h 30–18 h.",
+        "es": "Urgencias de pequeños animales +34 661 317 588 (animales grandes +34 661 316 698), las 24 horas todo el año. Centralita y citas +34 927 257 102, lun–vie 8:30–18:00 h."
       },
       "small_animals": true,
       "url": "https://www.uexfundacion.es/actividad/hcv/",
@@ -1350,7 +1370,8 @@
         "sl": "Odprto 24 ur na dan, 7 dni v tednu.",
         "hr": "Otvoreno 24 h, 7 dana u tjednu.",
         "de": "Täglich rund um die Uhr geöffnet.",
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, los 7 días de la semana."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/animal24/about-us/",
@@ -1371,7 +1392,8 @@
         "sl": "Nujni primeri +34 608 953 937; klinika +34 952 595 354.",
         "hr": "Hitni slučajevi +34 608 953 937; ambulanta +34 952 595 354.",
         "de": "Notfälle +34 608 953 937; Klinik +34 952 595 354.",
-        "fr": "Urgences : +34 608 953 937 ; clinique : +34 952 595 354."
+        "fr": "Urgences : +34 608 953 937 ; clinique : +34 952 595 354.",
+        "es": "Urgencias +34 608 953 937; clínica +34 952 595 354."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/alhaurin-el-grande-hospital-veterinario/",
@@ -1392,7 +1414,8 @@
         "sl": "Nujni primeri brez naročila prek glavnega vhoda na C/ Spengler.",
         "hr": "Hitni slučajevi bez termina kroz glavni ulaz na C/ Spengler.",
         "de": "Notfälle ohne Termin über den Haupteingang in der C/ Spengler.",
-        "fr": "Urgences sans rendez-vous par l’entrée principale, C/ Spengler."
+        "fr": "Urgences sans rendez-vous par l’entrée principale, C/ Spengler.",
+        "es": "Urgencias sin cita por la entrada principal de la C/ Spengler."
       },
       "small_animals": true,
       "url": "https://hospitalveterinariomalaga.es/",
@@ -1456,7 +1479,8 @@
         "sl": "Nujni primeri +34 613 131 373; splošna številka +34 951 690 724.",
         "hr": "Hitni slučajevi +34 613 131 373; opći broj +34 951 690 724.",
         "de": "Notfälle +34 613 131 373; allgemeine Nummer +34 951 690 724.",
-        "fr": "Urgences : +34 613 131 373 ; numéro général : +34 951 690 724."
+        "fr": "Urgences : +34 613 131 373 ; numéro général : +34 951 690 724.",
+        "es": "Urgencias +34 613 131 373; línea general +34 951 690 724."
       },
       "small_animals": true,
       "url": "https://vetmamut.es/",
@@ -1492,7 +1516,8 @@
         "sl": "Pregledi pon–pet 8–21, sob 9–13. Nujni primeri +34 650 176 854: sob 17–20; ned/prazniki 10–13 in 17–20. Ponoči nujne pomoči ni (klicatelje napotijo v dežurno bolnišnico).",
         "hr": "Pregledi pon–pet 8–21, sub 9–13. Hitni slučajevi +34 650 176 854: sub 17–20; ned/blagdani 10–13 i 17–20. Noćne službe nema (pozivatelji se upućuju u dežurnu bolnicu).",
         "de": "Sprechstunden Mo–Fr 8–21 Uhr, Sa 9–13 Uhr. Notfälle +34 650 176 854: Sa 17–20 Uhr; So/feiertags 10–13 und 17–20 Uhr. Kein Nachtdienst (Anrufer werden an eine diensthabende Tierklinik verwiesen).",
-        "fr": "Consultations lun.–ven. 8 h–21 h, sam. 9 h–13 h. Urgences au +34 650 176 854 : sam. 17 h–20 h ; dim. et jours fériés 10 h–13 h et 17 h–20 h. Pas de service de nuit (les appels sont renvoyés vers un hôpital de garde)."
+        "fr": "Consultations lun.–ven. 8 h–21 h, sam. 9 h–13 h. Urgences au +34 650 176 854 : sam. 17 h–20 h ; dim. et jours fériés 10 h–13 h et 17 h–20 h. Pas de service de nuit (les appels sont renvoyés vers un hôpital de garde).",
+        "es": "Consultas lun–vie 8:00–21:00 h, sáb 9:00–13:00 h. Urgencias +34 650 176 854: sáb 17:00–20:00 h; dom y festivos 10:00–13:00 y 17:00–20:00 h. Sin servicio nocturno (se deriva a un hospital de guardia)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavetsur.com/",
@@ -1513,7 +1538,8 @@
         "sl": "Pon–pet 10–20, sob 10–13.30. Linija 24 ur na dan +34 608 953 106, samo za lastne bolnike klinike.",
         "hr": "pon–pet 10–20, sub 10–13:30. Linija 24 h +34 608 953 106, samo za pacijente ambulante.",
         "de": "Mo–Fr 10–20 Uhr, Sa 10–13.30 Uhr. 24-Stunden-Nummer +34 608 953 106, nur für Patienten der Klinik.",
-        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30. Ligne 24 h/24 : +34 608 953 106, réservée aux patients de la clinique."
+        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30. Ligne 24 h/24 : +34 608 953 106, réservée aux patients de la clinique.",
+        "es": "Lun–vie 10:00–20:00 h, sáb 10:00–13:30 h. Línea 24 horas +34 608 953 106, solo para pacientes de la clínica."
       },
       "small_animals": true,
       "url": "https://www.doctorgorriti.com/",
@@ -1535,7 +1561,8 @@
         "sl": "Nujni primeri +34 616 403 350, 365 dni v letu, 24 ur na dan (po telefonu; oskrba v klinikah ali na domu glede na razpoložljivost). Centro Veterinario 365: +34 634 467 333, pon–pet 9.30–20, sob/ned/prazniki 10–18.",
         "hr": "Hitni slučajevi +34 616 403 350, 365 dana × 24 h (telefonski; skrb u ambulantama ili kod kuće, ovisno o dostupnosti). Centro Veterinario 365: +34 634 467 333, pon–pet 9:30–20:00, sub/ned/blagdani 10:00–18:00.",
         "de": "Notfälle +34 616 403 350, 365 Tage im Jahr rund um die Uhr (telefonisch; Versorgung in den Kliniken oder zu Hause je nach Verfügbarkeit). Centro Veterinario 365: +34 634 467 333, Mo–Fr 9.30–20.00 Uhr, Sa/So/feiertags 10.00–18.00 Uhr.",
-        "fr": "Urgences : +34 616 403 350, 365 j/an, 24 h/24 (par téléphone ; soins en clinique ou à domicile selon disponibilité). Centro Veterinario 365 : +34 634 467 333, lun.–ven. 9 h 30–20 h, sam., dim. et jours fériés 10 h–18 h."
+        "fr": "Urgences : +34 616 403 350, 365 j/an, 24 h/24 (par téléphone ; soins en clinique ou à domicile selon disponibilité). Centro Veterinario 365 : +34 634 467 333, lun.–ven. 9 h 30–20 h, sam., dim. et jours fériés 10 h–18 h.",
+        "es": "Urgencias +34 616 403 350, las 24 horas, los 365 días del año (por teléfono; atención en las clínicas o a domicilio según disponibilidad). Centro Veterinario 365: +34 634 467 333, lun–vie 9:30–20:00 h, sáb, dom y festivos 10:00–18:00 h."
       },
       "small_animals": true,
       "url": "https://centroveterinariovelez.com/",
@@ -1557,7 +1584,8 @@
         "sl": "Telefon za nujne primere +34 656 825 319.",
         "hr": "Hitni telefon +34 656 825 319.",
         "de": "Notfalltelefon +34 656 825 319.",
-        "fr": "Téléphone des urgences : +34 656 825 319."
+        "fr": "Téléphone des urgences : +34 656 825 319.",
+        "es": "Teléfono de urgencias +34 656 825 319."
       },
       "small_animals": true,
       "url": "https://almijaravet.com/",
@@ -1607,7 +1635,8 @@
         "sl": "Skupna številka za nujne primere: +34 650 822 777.",
         "hr": "Zajednički hitni telefon grupe: +34 650 822 777.",
         "de": "Gemeinsames Notfalltelefon: +34 650 822 777.",
-        "fr": "Numéro d’urgences du groupe : +34 650 822 777."
+        "fr": "Numéro d’urgences du groupe : +34 650 822 777.",
+        "es": "Teléfono de urgencias del grupo: +34 650 822 777."
       },
       "small_animals": true,
       "url": "https://somosvet.com/",
@@ -1629,7 +1658,8 @@
         "sl": "Nujni primeri +34 679 100 130 (tudi ob koncih tedna in praznikih); klinika +34 958 977 185, pon–pet 9–21, sob 10–13.30.",
         "hr": "Hitni slučajevi +34 679 100 130 (uključujući vikende i blagdane); ambulanta +34 958 977 185, pon–pet 9–21, sub 10–13:30.",
         "de": "Notfälle +34 679 100 130 (auch am Wochenende und an Feiertagen); Klinik +34 958 977 185, Mo–Fr 9–21 Uhr, Sa 10–13.30 Uhr.",
-        "fr": "Urgences : +34 679 100 130 (week-ends et jours fériés compris) ; clinique : +34 958 977 185, lun.–ven. 9 h–21 h, sam. 10 h–13 h 30."
+        "fr": "Urgences : +34 679 100 130 (week-ends et jours fériés compris) ; clinique : +34 958 977 185, lun.–ven. 9 h–21 h, sam. 10 h–13 h 30.",
+        "es": "Urgencias +34 679 100 130 (también fines de semana y festivos); clínica +34 958 977 185, lun–vie 9:00–21:00 h, sáb 10:00–13:30 h."
       },
       "small_animals": true,
       "url": "https://ispevet.es/",
@@ -1678,7 +1708,8 @@
         "sl": "Nujni primeri in hospitalizacija na kraju samem 24 ur na dan; tudi telefon za nujne primere +34 662 305 968. Naročanje pon–pet 9–21, sob 9–14.",
         "hr": "Hitni slučajevi i hospitalizacija 24 h, osobno; također hitni telefon +34 662 305 968. Termini pon–pet 9–21, sub 9–14.",
         "de": "Notfälle und stationäre Aufnahme vor Ort rund um die Uhr; außerdem Notfalltelefon +34 662 305 968. Termine Mo–Fr 9–21 Uhr, Sa 9–14 Uhr.",
-        "fr": "Urgences sur place et hospitalisation 24 h/24 ; téléphone des urgences également : +34 662 305 968. Rendez-vous lun.–ven. 9 h–21 h, sam. 9 h–14 h."
+        "fr": "Urgences sur place et hospitalisation 24 h/24 ; téléphone des urgences également : +34 662 305 968. Rendez-vous lun.–ven. 9 h–21 h, sam. 9 h–14 h.",
+        "es": "Urgencias presenciales y hospitalización las 24 horas; también teléfono de urgencias +34 662 305 968. Citas lun–vie 9:00–21:00 h, sáb 9:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -1714,7 +1745,8 @@
         "sl": "Nujni primeri +34 634 997 806 (24 ur na dan, 365 dni v letu); naročanje +34 959 730 929, recepcija 9–21.",
         "hr": "Hitni slučajevi +34 634 997 806 (24 h / 365 dana); termini +34 959 730 929, recepcija 9–21.",
         "de": "Notfälle +34 634 997 806 (rund um die Uhr, 365 Tage im Jahr); Termine +34 959 730 929, Rezeption 9–21 Uhr.",
-        "fr": "Urgences : +34 634 997 806 (24 h/24, 365 j/an) ; rendez-vous : +34 959 730 929, accueil 9 h–21 h."
+        "fr": "Urgences : +34 634 997 806 (24 h/24, 365 j/an) ; rendez-vous : +34 959 730 929, accueil 9 h–21 h.",
+        "es": "Urgencias +34 634 997 806 (24 horas / 365 días); citas +34 959 730 929, recepción de 9:00 a 21:00 h."
       },
       "small_animals": true,
       "url": "https://animalvetxelsaladillo.com/",
@@ -1792,7 +1824,8 @@
         "sl": "Pregledi pon–pet 9.30–14.30 in 15.30–20.30, sob 9.30–13; nujni primeri 24 ur na dan.",
         "hr": "Pregledi pon–pet 9:30–14:30 i 15:30–20:30, sub 9:30–13:00; hitni slučajevi 24 h.",
         "de": "Sprechstunden Mo–Fr 9.30–14.30 und 15.30–20.30 Uhr, Sa 9.30–13.00 Uhr; Notfälle rund um die Uhr.",
-        "fr": "Consultations lun.–ven. 9 h 30–14 h 30 et 15 h 30–20 h 30, sam. 9 h 30–13 h ; urgences 24 h/24."
+        "fr": "Consultations lun.–ven. 9 h 30–14 h 30 et 15 h 30–20 h 30, sam. 9 h 30–13 h ; urgences 24 h/24.",
+        "es": "Consultas lun–vie 9:30–14:30 y 15:30–20:30 h, sáb 9:30–13:00 h; urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/es-es/veterinario-urgencia-24-horas/24-horas-benartemi/",
@@ -1814,7 +1847,8 @@
         "sl": "Linija za nujne primere ponoči/ob praznikih: 20–8; sob 15–24; prazniki 24 ur na dan.",
         "hr": "Noćna linija za hitne slučajeve i blagdane: 20–8; sub 15–24; blagdanima 24 h.",
         "de": "Notfallnummer nachts/feiertags: 20–8 Uhr; Sa 15–24 Uhr; feiertags ganztägig.",
-        "fr": "Ligne d’urgences de nuit et jours fériés : 20 h–8 h ; sam. 15 h–24 h ; jours fériés 24 h/24."
+        "fr": "Ligne d’urgences de nuit et jours fériés : 20 h–8 h ; sam. 15 h–24 h ; jours fériés 24 h/24.",
+        "es": "Línea de urgencias nocturna y en festivos: de 20:00 a 8:00 h; sáb 15:00–24:00 h; festivos las 24 horas."
       },
       "small_animals": true,
       "source_url": "https://www.loscharcosvet.com/urgencias",
@@ -1834,7 +1868,8 @@
         "sl": "Telefon za nujne primere +34 607 687 299.",
         "hr": "Hitni telefon +34 607 687 299.",
         "de": "Notfalltelefon +34 607 687 299.",
-        "fr": "Téléphone des urgences : +34 607 687 299."
+        "fr": "Téléphone des urgences : +34 607 687 299.",
+        "es": "Teléfono de urgencias +34 607 687 299."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariajameos.es/",
@@ -1855,7 +1890,8 @@
         "sl": "Pon–pet 10–13.30 in 17–20.30, sob 10–13.30. Telefon za nujne primere +34 608 642 016.",
         "hr": "pon–pet 10:00–13:30 i 17:00–20:30, sub 10:00–13:30. Hitni telefon +34 608 642 016.",
         "de": "Mo–Fr 10.00–13.30 und 17.00–20.30 Uhr, Sa 10.00–13.30 Uhr. Notfalltelefon +34 608 642 016.",
-        "fr": "Lun.–ven. 10 h–13 h 30 et 17 h–20 h 30, sam. 10 h–13 h 30. Téléphone des urgences : +34 608 642 016."
+        "fr": "Lun.–ven. 10 h–13 h 30 et 17 h–20 h 30, sam. 10 h–13 h 30. Téléphone des urgences : +34 608 642 016.",
+        "es": "Lun–vie 10:00–13:30 y 17:00–20:30 h, sáb 10:00–13:30 h. Teléfono de urgencias +34 608 642 016."
       },
       "small_animals": true,
       "source_url": "https://www.corralejo.info/en/activity/clinica-veterinaria-fuerteventura/",
@@ -1904,7 +1940,8 @@
         "sl": "Pon–pet 9.30–13.30 in popoldne 16.30–19.30 (poleti) / 16–19 (pozimi). Telefon za nujne primere +34 647 100 061, ne osebno, do 23. ure.",
         "hr": "pon–pet 9:30–13:30 te poslijepodne 16:30–19:30 (ljeti) / 16:00–19:00 (zimi). Hitni telefon +34 647 100 061, ne osobno, do 23:00.",
         "de": "Mo–Fr 9.30–13.30 Uhr und nachmittags 16.30–19.30 Uhr (Sommer) / 16.00–19.00 Uhr (Winter). Notfalltelefon +34 647 100 061 (nur telefonisch, nicht vor Ort), bis 23.00 Uhr.",
-        "fr": "Lun.–ven. 9 h 30–13 h 30 et l’après-midi 16 h 30–19 h 30 (été) / 16 h–19 h (hiver). Urgences par téléphone au +34 647 100 061, sans accueil sur place, jusqu’à 23 h."
+        "fr": "Lun.–ven. 9 h 30–13 h 30 et l’après-midi 16 h 30–19 h 30 (été) / 16 h–19 h (hiver). Urgences par téléphone au +34 647 100 061, sans accueil sur place, jusqu’à 23 h.",
+        "es": "Lun–vie 9:30–13:30 h y por la tarde de 16:30 a 19:30 h (verano) / de 16:00 a 19:00 h (invierno). Teléfono de urgencias +34 647 100 061, sin atención presencial, hasta las 23:00 h."
       },
       "small_animals": true,
       "url": "https://www.veterinarianatura.com/",
@@ -1925,7 +1962,8 @@
         "sl": "Pregledi pon–pet 10.30–20, sob 10.30–14; nujni primeri 24 ur na dan.",
         "hr": "Pregledi pon–pet 10:30–20:00, sub 10:30–14:00; hitni slučajevi 24 h.",
         "de": "Sprechstunde Mo–Fr 10:30–20:00 Uhr, Sa 10:30–14:00 Uhr; Notdienst rund um die Uhr.",
-        "fr": "Consultations lun.–ven. 10 h 30–20 h, sam. 10 h 30–14 h ; urgences 24 h/24."
+        "fr": "Consultations lun.–ven. 10 h 30–20 h, sam. 10 h 30–14 h ; urgences 24 h/24.",
+        "es": "Consultas lun–vie 10:30–20:00 h, sáb 10:30–14:00 h; urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioabeiro.com/",
@@ -1976,7 +2014,8 @@
         "sl": "Klinika 9.30–21.30; nujni primeri 24 ur na dan.",
         "hr": "Ambulanta 9:30–21:30; hitni slučajevi 24 h.",
         "de": "Klinik 9:30–21:30 Uhr; Notdienst rund um die Uhr",
-        "fr": "Clinique 9 h 30–21 h 30 ; urgences 24 h/24."
+        "fr": "Clinique 9 h 30–21 h 30 ; urgences 24 h/24.",
+        "es": "Clínica de 9:30 a 21:30 h; urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/anicura-navia-clinica-veterinaria/",
@@ -1997,7 +2036,8 @@
         "sl": "Nujni primeri 24 ur na dan +34 667 416 750; storitve za stranke pon–pet 9.30–20.30, sob 9.30–13.30.",
         "hr": "Hitni slučajevi 24 h +34 667 416 750; korisnička služba pon–pet 9:30–20:30, sub 9:30–13:30.",
         "de": "Notdienst rund um die Uhr: +34 667 416 750; Kundenservice Mo–Fr 9:30–20:30 Uhr, Sa 9:30–13:30 Uhr.",
-        "fr": "Urgences 24 h/24 : +34 667 416 750 ; service client lun.–ven. 9 h 30–20 h 30, sam. 9 h 30–13 h 30."
+        "fr": "Urgences 24 h/24 : +34 667 416 750 ; service client lun.–ven. 9 h 30–20 h 30, sam. 9 h 30–13 h 30.",
+        "es": "Urgencias las 24 horas +34 667 416 750; atención al cliente lun–vie 9:30–20:30 h, sáb 9:30–13:30 h."
       },
       "small_animals": true,
       "url": "https://guvetveterinaria.es/",
@@ -2034,7 +2074,8 @@
         "sl": "Nujna pomoč 24 ur na dan: +34 608 472 984 (tudi +34 985 131 545).",
         "hr": "Hitna služba 24 h: +34 608 472 984 (također +34 985 131 545).",
         "de": "Notdienst rund um die Uhr: +34 608 472 984 (auch +34 985 131 545).",
-        "fr": "Service d’urgences 24 h/24 : +34 608 472 984 (ou +34 985 131 545)."
+        "fr": "Service d’urgences 24 h/24 : +34 608 472 984 (ou +34 985 131 545).",
+        "es": "Servicio de urgencias las 24 horas: +34 608 472 984 (también +34 985 131 545)."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioasturias.com/",
@@ -2055,7 +2096,8 @@
         "sl": "Klinika 9–21; nujni primeri 24 ur na dan.",
         "hr": "Ambulanta 9–21; hitni slučajevi 24 h.",
         "de": "Klinik 9–21 Uhr; Notdienst rund um die Uhr",
-        "fr": "Clinique 9 h–21 h ; urgences 24 h/24."
+        "fr": "Clinique 9 h–21 h ; urgences 24 h/24.",
+        "es": "Clínica de 9:00 a 21:00 h; urgencias las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/buenavista-hospital-veterinario/",
@@ -2076,7 +2118,8 @@
         "sl": "Nujni primeri +34 608 483 821, 24 ur na dan, 365 dni v letu; pregledi pon–pet 9.30–17.30, naročanje +34 942 558 862.",
         "hr": "Hitni slučajevi +34 608 483 821, 24 h / 365 dana; pregledi pon–pet 9:30–17:30, termini +34 942 558 862.",
         "de": "Notdienst +34 608 483 821, rund um die Uhr an 365 Tagen; Sprechstunde Mo–Fr 9:30–17:30 Uhr, Termine unter +34 942 558 862.",
-        "fr": "Urgences : +34 608 483 821, 24 h/24, 365 j/an ; consultations lun.–ven. 9 h 30–17 h 30, rendez-vous : +34 942 558 862."
+        "fr": "Urgences : +34 608 483 821, 24 h/24, 365 j/an ; consultations lun.–ven. 9 h 30–17 h 30, rendez-vous : +34 942 558 862.",
+        "es": "Urgencias +34 608 483 821, 24 horas / 365 días; consultas lun–vie 9:30–17:30 h, citas +34 942 558 862."
       },
       "small_animals": true,
       "url": "https://hospitalveterinariocantabria.es/",
@@ -2112,7 +2155,8 @@
         "sl": "Nujni primeri +34 634 965 353; splošna številka +34 923 120 462, pon–pet 9–21, sob 10–14.",
         "hr": "Hitni slučajevi +34 634 965 353; opći broj +34 923 120 462, pon–pet 9–21, sub 10–14.",
         "de": "Notdienst +34 634 965 353; allgemeine Nummer +34 923 120 462, Mo–Fr 9–21 Uhr, Sa 10–14 Uhr.",
-        "fr": "Urgences : +34 634 965 353 ; numéro général : +34 923 120 462, lun.–ven. 9 h–21 h, sam. 10 h–14 h."
+        "fr": "Urgences : +34 634 965 353 ; numéro général : +34 923 120 462, lun.–ven. 9 h–21 h, sam. 10 h–14 h.",
+        "es": "Urgencias +34 634 965 353; línea general +34 923 120 462, lun–vie 9:00–21:00 h, sáb 10:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://veterinariasalinero.com/",
@@ -2133,7 +2177,8 @@
         "sl": "Pon–pet 9.30–14 in 16–20; sob 10–14 in nujni primeri; ned samo nujni primeri.",
         "hr": "pon–pet 9:30–14:00 i 16:00–20:00; sub 10–14 i hitni slučajevi; ned samo hitni slučajevi.",
         "de": "Mo–Fr 9:30–14:00 und 16:00–20:00 Uhr; Sa 10–14 Uhr und Notdienst; So nur Notdienst.",
-        "fr": "Lun.–ven. 9 h 30–14 h et 16 h–20 h ; sam. 10 h–14 h et urgences ; dim. urgences uniquement."
+        "fr": "Lun.–ven. 9 h 30–14 h et 16 h–20 h ; sam. 10 h–14 h et urgences ; dim. urgences uniquement.",
+        "es": "Lun–vie 9:30–14:00 y 16:00–20:00 h; sáb 10:00–14:00 h y urgencias; domingos solo urgencias."
       },
       "small_animals": true,
       "url": "https://www.cvlavega.com/",
@@ -2154,7 +2199,8 @@
         "sl": "Klinika +34 987 228 801, pon–pet 9.30–19.30, sob 10–14. Izven delovnega časa najprej pokličite 24-urno linijo za nujne primere.",
         "hr": "Ambulanta +34 987 228 801, pon–pet 9:30–19:30, sub 10–14. Izvan radnog vremena prvo nazovi hitnu liniju 24 h.",
         "de": "Klinik +34 987 228 801, Mo–Fr 9:30–19:30 Uhr, Sa 10–14 Uhr. Außerhalb der Öffnungszeiten bitte zuerst die rund um die Uhr erreichbare Notrufnummer anrufen.",
-        "fr": "Clinique : +34 987 228 801, lun.–ven. 9 h 30–19 h 30, sam. 10 h–14 h. En dehors des horaires, appelez d’abord la ligne d’urgences 24 h/24."
+        "fr": "Clinique : +34 987 228 801, lun.–ven. 9 h 30–19 h 30, sam. 10 h–14 h. En dehors des horaires, appelez d’abord la ligne d’urgences 24 h/24.",
+        "es": "Clínica +34 987 228 801, lun–vie 9:30–19:30 h, sáb 10:00–14:00 h. Fuera de horario, llama primero a la línea de urgencias 24 horas."
       },
       "small_animals": true,
       "url": "https://leonveterinaria.com/",
@@ -2176,7 +2222,8 @@
         "sl": "Pon–pet 9–20, sob 10–14; nujni primeri 24 ur na dan vse dni v tednu.",
         "hr": "pon–pet 9–20, sub 10–14; hitni slučajevi 24 h cijeli tjedan.",
         "de": "Mo–Fr 9–20 Uhr, Sa 10–14 Uhr; Notdienst täglich rund um die Uhr.",
-        "fr": "Lun.–ven. 9 h–20 h, sam. 10 h–14 h ; urgences 24 h/24, toute la semaine."
+        "fr": "Lun.–ven. 9 h–20 h, sam. 10 h–14 h ; urgences 24 h/24, toute la semaine.",
+        "es": "Lun–vie 9:00–20:00 h, sáb 10:00–14:00 h; urgencias las 24 horas toda la semana."
       },
       "small_animals": true,
       "url": "https://www.hv-ciudadreal.com/",
@@ -2197,7 +2244,8 @@
         "sl": "Dežurstvo za nujne primere po telefonu +34 680 905 575; naročanje +34 925 671 993.",
         "hr": "Hitni slučajevi preko telefonskog dežurstva +34 680 905 575; termini +34 925 671 993.",
         "de": "Notdienst per Rufbereitschaft unter +34 680 905 575; Termine +34 925 671 993.",
-        "fr": "Urgences de garde par téléphone : +34 680 905 575 ; rendez-vous : +34 925 671 993."
+        "fr": "Urgences de garde par téléphone : +34 680 905 575 ; rendez-vous : +34 925 671 993.",
+        "es": "Urgencias de guardia por teléfono +34 680 905 575; citas +34 925 671 993."
       },
       "small_animals": true,
       "url": "https://www.cvelparque.net/",
@@ -2219,7 +2267,8 @@
         "sl": "Pon–pet 10–14 in 17–20.30, sob 11–14. Nujni primeri +34 616 678 964, glede na razpoložljivost.",
         "hr": "pon–pet 10–14 i 17–20:30, sub 11–14. Hitni slučajevi +34 616 678 964, ovisno o dostupnosti.",
         "de": "Mo–Fr 10–14 und 17–20:30 Uhr, Sa 11–14 Uhr. Notdienst +34 616 678 964, je nach Verfügbarkeit.",
-        "fr": "Lun.–ven. 10 h–14 h et 17 h–20 h 30, sam. 11 h–14 h. Urgences : +34 616 678 964, selon disponibilité."
+        "fr": "Lun.–ven. 10 h–14 h et 17 h–20 h 30, sam. 11 h–14 h. Urgences : +34 616 678 964, selon disponibilité.",
+        "es": "Lun–vie 10:00–14:00 y 17:00–20:30 h, sáb 11:00–14:00 h. Urgencias +34 616 678 964, según disponibilidad."
       },
       "small_animals": true,
       "url": "https://www.tuveterinarioencuenca.com/",
@@ -2240,7 +2289,8 @@
         "sl": "Odprto 24 ur na dan, 7 dni v tednu.",
         "hr": "Otvoreno 24 h, 7 dana u tjednu.",
         "de": "Täglich rund um die Uhr geöffnet.",
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, los 7 días de la semana."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/bodionzafra/",
@@ -2261,7 +2311,8 @@
         "sl": "Nujni primeri +34 639 969 170; klinika +34 927 180 733, pon–pet 10–14 in 17–20, sob 11–14.",
         "hr": "Hitni slučajevi +34 639 969 170; ambulanta +34 927 180 733, pon–pet 10–14 i 17–20, sub 11–14.",
         "de": "Notdienst +34 639 969 170; Klinik +34 927 180 733, Mo–Fr 10–14 und 17–20 Uhr, Sa 11–14 Uhr.",
-        "fr": "Urgences : +34 639 969 170 ; clinique : +34 927 180 733, lun.–ven. 10 h–14 h et 17 h–20 h, sam. 11 h–14 h."
+        "fr": "Urgences : +34 639 969 170 ; clinique : +34 927 180 733, lun.–ven. 10 h–14 h et 17 h–20 h, sam. 11 h–14 h.",
+        "es": "Urgencias +34 639 969 170; clínica +34 927 180 733, lun–vie 10:00–14:00 y 17:00–20:00 h, sáb 11:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://veterinariasanfranciscodeasis.es/",
@@ -2283,7 +2334,8 @@
         "sl": "Pon–pet 9.30–14 in 17.30–20.30, sob 10–13. Dežurna nujna pomoč izven delovnega časa klinike +34 606 343 940.",
         "hr": "pon–pet 9:30–14:00 i 17:30–20:30, sub 10–13. Pozivna hitna služba izvan radnog vremena ambulante +34 606 343 940.",
         "de": "Mo–Fr 9:30–14:00 und 17:30–20:30 Uhr, Sa 10–13 Uhr. Außerhalb der Sprechzeiten Notdienst in Rufbereitschaft unter +34 606 343 940.",
-        "fr": "Lun.–ven. 9 h 30–14 h et 17 h 30–20 h 30, sam. 10 h–13 h. Urgences de garde en dehors des horaires de la clinique : +34 606 343 940."
+        "fr": "Lun.–ven. 9 h 30–14 h et 17 h 30–20 h 30, sam. 10 h–13 h. Urgences de garde en dehors des horaires de la clinique : +34 606 343 940.",
+        "es": "Lun–vie 9:30–14:00 y 17:30–20:30 h, sáb 10:00–13:00 h. Urgencias de guardia fuera del horario de la clínica +34 606 343 940."
       },
       "small_animals": true,
       "url": "https://dovet.es/",
@@ -2305,7 +2357,8 @@
         "sl": "Nujna pomoč 24 ur na dan",
         "hr": "Hitni slučajevi 24 h",
         "de": "Notdienst rund um die Uhr",
-        "fr": "Urgences 24 h/24"
+        "fr": "Urgences 24 h/24",
+        "es": "Urgencias las 24 horas"
       },
       "url": "https://www.mascotiti.es/",
       "source_url": "https://www.colvema.org/centro-veterinario/26996-mascotiti-hospital-veterinario",
@@ -2327,7 +2380,8 @@
         "sl": "Nujna pomoč 24 ur na dan",
         "hr": "Hitni slučajevi 24 h",
         "de": "Notdienst rund um die Uhr",
-        "fr": "Urgences 24 h/24"
+        "fr": "Urgences 24 h/24",
+        "es": "Urgencias las 24 horas"
       },
       "url": "https://www.mascotiti.es/",
       "source_url": "https://www.mascotiti.es/",
@@ -2349,7 +2403,8 @@
         "sl": "Nujna pomoč, odprto 24 ur na dan",
         "hr": "Hitna služba, otvoreno 24 h",
         "de": "Notdienst, rund um die Uhr geöffnet",
-        "fr": "Service d’urgences, ouvert 24 h/24"
+        "fr": "Service d’urgences, ouvert 24 h/24",
+        "es": "Servicio de urgencias, abierto las 24 horas"
       },
       "url": "https://www.ervet.es",
       "source_url": "https://www.colvema.org/centro-veterinario/3950-ervet-urgencias-veterinarias",
@@ -2370,7 +2425,8 @@
         "sl": "Nujna pomoč, odprto 24 ur na dan",
         "hr": "Hitna služba, otvoreno 24 h",
         "de": "Notdienst, rund um die Uhr geöffnet",
-        "fr": "Service d’urgences, ouvert 24 h/24"
+        "fr": "Service d’urgences, ouvert 24 h/24",
+        "es": "Servicio de urgencias, abierto las 24 horas"
       },
       "url": "https://www.gattos.net",
       "source_url": "https://www.colvema.org/centro-veterinario/1252-gattos-centro-clinico-felino",
@@ -2392,7 +2448,8 @@
         "sl": "Nujna pomoč 24 ur na dan",
         "hr": "Hitni slučajevi 24 h",
         "de": "Notdienst rund um die Uhr",
-        "fr": "Urgences 24 h/24"
+        "fr": "Urgences 24 h/24",
+        "es": "Urgencias las 24 horas"
       },
       "url": "https://www.veterios.com",
       "source_url": "https://www.colvema.org/centro-veterinario/26430-hospital-veterios",
@@ -2413,7 +2470,8 @@
         "sl": "Nujna pomoč, odprto 24 ur na dan",
         "hr": "Hitna služba, otvoreno 24 h",
         "de": "Notdienst, rund um die Uhr geöffnet",
-        "fr": "Service d’urgences, ouvert 24 h/24"
+        "fr": "Service d’urgences, ouvert 24 h/24",
+        "es": "Servicio de urgencias, abierto las 24 horas"
       },
       "source_url": "https://www.colvema.org/centro-veterinario/27473-hospital-veterinario-privet-aluche",
       "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2434,7 +2492,8 @@
         "sl": "Nujna pomoč 24 ur na dan",
         "hr": "Hitni slučajevi 24 h",
         "de": "Notdienst rund um die Uhr",
-        "fr": "Urgences 24 h/24"
+        "fr": "Urgences 24 h/24",
+        "es": "Urgencias las 24 horas"
       },
       "url": "https://www.anicura.es",
       "source_url": "https://www.colvema.org/centro-veterinario/5934-anicura-estoril-hospital-veterinario",
@@ -2455,7 +2514,8 @@
         "sl": "Nujna pomoč 24 ur na dan (enoprsti kopitarji)",
         "hr": "Hitni slučajevi 24 h (konji)",
         "de": "Notdienst rund um die Uhr (Pferde)",
-        "fr": "Urgences 24 h/24 (équidés)"
+        "fr": "Urgences 24 h/24 (équidés)",
+        "es": "Urgencias las 24 horas (équidos)"
       },
       "url": "https://hvsmveterinario.com/",
       "source_url": "https://www.colvema.org/centro-veterinario/4463-hospital-veterinario-sierra-de-madrid-s-l",
@@ -2477,7 +2537,8 @@
         "sl": "Nujna pomoč; telefonska linija 24 ur na dan",
         "hr": "Hitna služba; telefonska linija 24 h",
         "de": "Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Servicio de urgencias; línea telefónica 24 horas"
       },
       "source_url": "https://www.colvema.org/centro-veterinario/6052-hospital-felino-madrid",
       "note": "COLVEMA states only 'Atención telefónica 24 horas' (24 h phone line), not open 24 h — set false. Cats only.",
@@ -2497,7 +2558,8 @@
         "sl": "Nujna pomoč; telefonska linija 24 ur na dan",
         "hr": "Hitni slučajevi; telefonska linija 24 h",
         "de": "Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Urgences ; ligne téléphonique 24 h/24"
+        "fr": "Urgences ; ligne téléphonique 24 h/24",
+        "es": "Urgencias; línea telefónica 24 horas"
       },
       "url": "https://www.centroveterinarioaldavet.es",
       "source_url": "https://www.colvema.org/centro-veterinario/26156-hospital-veterinario-aldavet",
@@ -2518,7 +2580,8 @@
         "sl": "Telefonska linija 24 ur na dan",
         "hr": "Telefonska linija 24 h",
         "de": "Rund um die Uhr telefonisch erreichbar",
-        "fr": "Ligne téléphonique 24 h/24"
+        "fr": "Ligne téléphonique 24 h/24",
+        "es": "Línea telefónica 24 horas"
       },
       "url": "https://www.centroveterinariosananton.es",
       "source_url": "https://www.colvema.org/centro-veterinario/6658-hospital-veterinario-san-anton",
@@ -2539,7 +2602,8 @@
         "sl": "Nujna pomoč; telefonska linija 24 ur na dan",
         "hr": "Hitni slučajevi; telefonska linija 24 h",
         "de": "Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Urgences ; ligne téléphonique 24 h/24"
+        "fr": "Urgences ; ligne téléphonique 24 h/24",
+        "es": "Urgencias; línea telefónica 24 horas"
       },
       "url": "https://www.lider-veterinaria.es",
       "source_url": "https://www.colvema.org/centro-veterinario/2233-liderveterinaria-clinica-veterinaria",
@@ -2560,7 +2624,8 @@
         "sl": "Nujni primeri na kraju samem 24 ur na dan; pregledi pon–pet 9–21, sob 9–15",
         "hr": "Hitni slučajevi 24 h (osobno); pregledi pon–pet 9–21, sub 9–15",
         "de": "Notdienst vor Ort rund um die Uhr; Sprechstunde Mo–Fr 9–21 Uhr, Sa 9–15 Uhr",
-        "fr": "Urgences sur place 24 h/24 ; consultations lun.–ven. 9 h–21 h, sam. 9 h–15 h"
+        "fr": "Urgences sur place 24 h/24 ; consultations lun.–ven. 9 h–21 h, sam. 9 h–15 h",
+        "es": "Urgencias presenciales las 24 horas; consultas lun–vie 9:00–21:00 h, sáb 9:00–15:00 h"
       },
       "url": "https://www.unavets.com/tartanga/es/servicios/",
       "source_url": "https://www.unavets.com/tartanga/es/servicios/",
@@ -2582,7 +2647,8 @@
         "sl": "Pregledi pon–pet 9–20, sob 10.30–13.30; nujni primeri 24 ur na dan; telefon za nujne primere +34 689 391 119",
         "hr": "Pregledi pon–pet 9–20, sub 10:30–13:30; hitni slučajevi 24 h; hitni telefon +34 689 391 119",
         "de": "Sprechstunde Mo–Fr 9–20 Uhr, Sa 10:30–13:30 Uhr; Notdienst rund um die Uhr; Notfalltelefon +34 689 391 119",
-        "fr": "Consultations lun.–ven. 9 h–20 h, sam. 10 h 30–13 h 30 ; urgences 24 h/24 ; téléphone des urgences : +34 689 391 119"
+        "fr": "Consultations lun.–ven. 9 h–20 h, sam. 10 h 30–13 h 30 ; urgences 24 h/24 ; téléphone des urgences : +34 689 391 119",
+        "es": "Consultas lun–vie 9:00–20:00 h, sáb 10:30–13:30 h; urgencias las 24 horas; teléfono de urgencias +34 689 391 119"
       },
       "url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
       "source_url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
@@ -2604,7 +2670,8 @@
         "sl": "Pon–pet 10–13.30 in 16–19.30, sob 10–13; ned samo nujni primeri; telefon za nujne primere +34 606 122 091",
         "hr": "pon–pet 10–13:30 i 16–19:30, sub 10–13; ned samo hitni slučajevi; hitni telefon +34 606 122 091",
         "de": "Mo–Fr 10–13:30 und 16–19:30 Uhr, Sa 10–13 Uhr; So nur Notdienst; Notfalltelefon +34 606 122 091",
-        "fr": "Lun.–ven. 10 h–13 h 30 et 16 h–19 h 30, sam. 10 h–13 h ; dim. urgences uniquement ; téléphone des urgences : +34 606 122 091"
+        "fr": "Lun.–ven. 10 h–13 h 30 et 16 h–19 h 30, sam. 10 h–13 h ; dim. urgences uniquement ; téléphone des urgences : +34 606 122 091",
+        "es": "Lun–vie 10:00–13:30 y 16:00–19:30 h, sáb 10:00–13:00 h; domingos solo urgencias; teléfono de urgencias +34 606 122 091"
       },
       "url": "https://www.irunvet.es/",
       "source_url": "https://www.irunvet.es/",
@@ -2626,7 +2693,8 @@
         "sl": "Linija za nujne primere +34 618 893 420",
         "hr": "Hitna linija +34 618 893 420",
         "de": "Notrufnummer +34 618 893 420",
-        "fr": "Ligne d’urgences : +34 618 893 420"
+        "fr": "Ligne d’urgences : +34 618 893 420",
+        "es": "Línea de urgencias +34 618 893 420"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Listed by Basque Government as clinic with emergency services; 24 h not stated on an opened page (own site amaita.com could not be fetched).",
@@ -2646,7 +2714,8 @@
         "sl": "Linija za nujne primere +34 687 409 777",
         "hr": "Hitna linija +34 687 409 777",
         "de": "Notrufnummer +34 687 409 777",
-        "fr": "Ligne d’urgences : +34 687 409 777"
+        "fr": "Ligne d’urgences : +34 687 409 777",
+        "es": "Línea de urgencias +34 687 409 777"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Basque Government list; own site not fetched.",
@@ -2666,7 +2735,8 @@
         "sl": "Linija za nujne primere +34 608 576 505",
         "hr": "Hitna linija +34 608 576 505",
         "de": "Notrufnummer +34 608 576 505",
-        "fr": "Ligne d’urgences : +34 608 576 505"
+        "fr": "Ligne d’urgences : +34 608 576 505",
+        "es": "Línea de urgencias +34 608 576 505"
       },
       "url": "https://txingudivet.com/",
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
@@ -2687,7 +2757,8 @@
         "sl": "Linija za nujne primere +34 675 673 610",
         "hr": "Hitna linija +34 675 673 610",
         "de": "Notrufnummer +34 675 673 610",
-        "fr": "Ligne d’urgences : +34 675 673 610"
+        "fr": "Ligne d’urgences : +34 675 673 610",
+        "es": "Línea de urgencias +34 675 673 610"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Basque Government list; 24 h not stated.",
@@ -2707,7 +2778,8 @@
         "sl": "Linija za nujne primere +34 607 323 006",
         "hr": "Hitna linija +34 607 323 006",
         "de": "Notrufnummer +34 607 323 006",
-        "fr": "Ligne d’urgences : +34 607 323 006"
+        "fr": "Ligne d’urgences : +34 607 323 006",
+        "es": "Línea de urgencias +34 607 323 006"
       },
       "url": "https://zaunka.es/",
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
@@ -2728,7 +2800,8 @@
         "sl": "Linija za nujne primere +34 655 881 422",
         "hr": "Hitna linija +34 655 881 422",
         "de": "Notrufnummer +34 655 881 422",
-        "fr": "Ligne d’urgences : +34 655 881 422"
+        "fr": "Ligne d’urgences : +34 655 881 422",
+        "es": "Línea de urgencias +34 655 881 422"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2747,7 +2820,8 @@
         "sl": "Linija za nujne primere +34 656 788 800",
         "hr": "Hitna linija +34 656 788 800",
         "de": "Notrufnummer +34 656 788 800",
-        "fr": "Ligne d’urgences : +34 656 788 800"
+        "fr": "Ligne d’urgences : +34 656 788 800",
+        "es": "Línea de urgencias +34 656 788 800"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2766,7 +2840,8 @@
         "sl": "Pon–čet 9.30–13.30 in 16–19, pet 9–13 in 15–18; nujni primeri samo po telefonu +34 688 629 509",
         "hr": "pon–čet 9:30–13:30 i 16–19, pet 9–13 i 15–18; hitni slučajevi samo telefonom +34 688 629 509",
         "de": "Mo–Do 9:30–13:30 und 16–19 Uhr, Fr 9–13 und 15–18 Uhr; Notdienst nur telefonisch unter +34 688 629 509",
-        "fr": "Lun.–jeu. 9 h 30–13 h 30 et 16 h–19 h, ven. 9 h–13 h et 15 h–18 h ; urgences par téléphone uniquement : +34 688 629 509"
+        "fr": "Lun.–jeu. 9 h 30–13 h 30 et 16 h–19 h, ven. 9 h–13 h et 15 h–18 h ; urgences par téléphone uniquement : +34 688 629 509",
+        "es": "Lun–jue 9:30–13:30 y 16:00–19:00 h, vie 9:00–13:00 y 15:00–18:00 h; urgencias solo por teléfono +34 688 629 509"
       },
       "url": "https://clinicaveterinariaariznabarra.com/",
       "source_url": "https://icova.es/centros/clinica-veterinaria-ariznabarra/",
@@ -2787,7 +2862,8 @@
         "sl": "Linija za nujne primere +34 688 639 855",
         "hr": "Hitna linija +34 688 639 855",
         "de": "Notrufnummer +34 688 639 855",
-        "fr": "Ligne d’urgences : +34 688 639 855"
+        "fr": "Ligne d’urgences : +34 688 639 855",
+        "es": "Línea de urgencias +34 688 639 855"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2806,7 +2882,8 @@
         "sl": "Linija za nujne primere +34 607 323 006",
         "hr": "Hitna linija +34 607 323 006",
         "de": "Notrufnummer +34 607 323 006",
-        "fr": "Ligne d’urgences : +34 607 323 006"
+        "fr": "Ligne d’urgences : +34 607 323 006",
+        "es": "Línea de urgencias +34 607 323 006"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2825,7 +2902,8 @@
         "sl": "Linija za nujne primere +34 677 502 775",
         "hr": "Hitna linija +34 677 502 775",
         "de": "Notrufnummer +34 677 502 775",
-        "fr": "Ligne d’urgences : +34 677 502 775"
+        "fr": "Ligne d’urgences : +34 677 502 775",
+        "es": "Línea de urgencias +34 677 502 775"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2844,7 +2922,8 @@
         "sl": "Linija za nujne primere +34 688 818 525",
         "hr": "Hitna linija +34 688 818 525",
         "de": "Notrufnummer +34 688 818 525",
-        "fr": "Ligne d’urgences : +34 688 818 525"
+        "fr": "Ligne d’urgences : +34 688 818 525",
+        "es": "Línea de urgencias +34 688 818 525"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -2982,7 +3061,8 @@
         "sl": "Pon–pet 10–13.30 in 17–20, sob 11–13; nujne primere sprejmejo čim prej",
         "hr": "pon–pet 10–13:30 i 17–20, sub 11–13; hitni slučajevi primaju se što prije",
         "de": "Mo–Fr 10–13:30 und 17–20 Uhr, Sa 11–13 Uhr; dringende Fälle werden schnellstmöglich behandelt",
-        "fr": "Lun.–ven. 10 h–13 h 30 et 17 h–20 h, sam. 11 h–13 h ; cas urgents reçus dès que possible"
+        "fr": "Lun.–ven. 10 h–13 h 30 et 17 h–20 h, sam. 11 h–13 h ; cas urgents reçus dès que possible",
+        "es": "Lun–vie 10:00–13:30 y 17:00–20:00 h, sáb 11:00–13:00 h; los casos urgentes se atienden lo antes posible"
       },
       "url": "https://www.cvesmercadal.com/",
       "source_url": "https://www.cvesmercadal.com/contacto",
@@ -3001,7 +3081,8 @@
         "sl": "Nujni primeri med delovnim časom",
         "hr": "Hitni slučajevi u radno vrijeme",
         "de": "Notdienst während der Öffnungszeiten",
-        "fr": "Urgences pendant les heures d’ouverture"
+        "fr": "Urgences pendant les heures d’ouverture",
+        "es": "Urgencias en horario de apertura"
       },
       "url": "https://www.centroveterinariopitiuso.com/",
       "source_url": "https://www.centroveterinariopitiuso.com/servicios-veterinarios/",
@@ -3021,7 +3102,8 @@
         "sl": "Veterinar z obiski na domu za nujne, a stabilne primere; ni 24-urna služba",
         "hr": "Veterinar s kućnim posjetima za hitne, ali stabilne slučajeve; nije služba koja radi 24 h",
         "de": "Tierärztlicher Hausbesuchsdienst für dringende, aber stabile Fälle; kein Notdienst rund um die Uhr",
-        "fr": "Vétérinaire à domicile pour les cas urgents mais stables ; pas un service 24 h/24"
+        "fr": "Vétérinaire à domicile pour les cas urgents mais stables ; pas un service 24 h/24",
+        "es": "Veterinario a domicilio para casos urgentes pero estables; no es un servicio 24 horas"
       },
       "url": "https://www.vetathomeibiza.com/",
       "source_url": "https://www.vetathomeibiza.com/es/emergencies",
@@ -3041,7 +3123,8 @@
         "sl": "Odprto 24 ur na dan, 7 dni v tednu; nenujni pregledi po naročilu 10–22",
         "hr": "Otvoreno 24 h, 7 dana u tjednu; nehitni pregledi po dogovoru 10:00–22:00",
         "de": "Täglich rund um die Uhr geöffnet; nicht dringende Sprechstunde nach Terminvereinbarung 10:00–22:00 Uhr",
-        "fr": "Ouvert 24 h/24, 7 j/7 ; consultations non urgentes sur rendez-vous 10 h–22 h"
+        "fr": "Ouvert 24 h/24, 7 j/7 ; consultations non urgentes sur rendez-vous 10 h–22 h",
+        "es": "Abierto las 24 horas, los 7 días de la semana; consultas no urgentes con cita previa de 10:00 a 22:00 h"
       },
       "small_animals": true,
       "url": "https://www.unavets.com/veterinariolugo/",
@@ -3063,7 +3146,8 @@
         "sl": "Odprto 24 ur na dan, 365 dni v letu",
         "hr": "Otvoreno 24 h, 365 dana",
         "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr",
-        "fr": "Ouvert 24 h/24, 365 j/an"
+        "fr": "Ouvert 24 h/24, 365 j/an",
+        "es": "Abierto las 24 horas, los 365 días del año"
       },
       "small_animals": true,
       "url": "https://mivet.com/en/faucan-veterinary-hospital/",
@@ -3084,7 +3168,8 @@
         "sl": "Nujna pomoč 24 ur na dan",
         "hr": "Hitni slučajevi 24 h",
         "de": "Notdienst rund um die Uhr",
-        "fr": "Urgences 24 h/24"
+        "fr": "Urgences 24 h/24",
+        "es": "Urgencias las 24 horas"
       },
       "small_animals": true,
       "url": "https://www.vetterhospital.com/",
@@ -3105,7 +3190,8 @@
         "sl": "24 ur na dan, 365 dni v letu; linija za nujne primere +34 648 119 512",
         "hr": "24 h, 365 dana; hitna linija +34 648 119 512",
         "de": "Rund um die Uhr, 365 Tage im Jahr; Notrufnummer +34 648 119 512",
-        "fr": "24 h/24, 365 j/an ; ligne d’urgences : +34 648 119 512"
+        "fr": "24 h/24, 365 j/an ; ligne d’urgences : +34 648 119 512",
+        "es": "Las 24 horas, los 365 días del año; línea de urgencias +34 648 119 512"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioalba.es/",
@@ -3126,7 +3212,8 @@
         "sl": "Klinika odprta neprekinjeno 9–20.30; telefon za nujne primere 24 ur na dan +34 722 200 044",
         "hr": "Ambulanta radi 9:00–20:30 bez prekida; hitni telefon 24 h +34 722 200 044",
         "de": "Klinik durchgehend 9:00–20:30 Uhr geöffnet; Notfalltelefon rund um die Uhr: +34 722 200 044",
-        "fr": "Clinique ouverte 9 h–20 h 30 en continu ; urgences 24 h/24 par téléphone : +34 722 200 044"
+        "fr": "Clinique ouverte 9 h–20 h 30 en continu ; urgences 24 h/24 par téléphone : +34 722 200 044",
+        "es": "Clínica abierta de 9:00 a 20:30 h sin interrupción; teléfono de urgencias 24 horas +34 722 200 044"
       },
       "small_animals": true,
       "url": "https://centroveterinarioanimalia.es/",
@@ -3148,7 +3235,8 @@
         "sl": "Pon–pet 9–21, sob 10–14; nujni primeri 24 ur na dan na isti številki",
         "hr": "pon–pet 9:00–21:00, sub 10:00–14:00; hitni slučajevi 24 h na istom broju",
         "de": "Mo–Fr 9:00–21:00 Uhr, Sa 10:00–14:00 Uhr; Notdienst rund um die Uhr unter derselben Nummer",
-        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h–14 h ; urgences 24 h/24 au même numéro"
+        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h–14 h ; urgences 24 h/24 au même numéro",
+        "es": "Lun–vie 9:00–21:00 h, sáb 10:00–14:00 h; urgencias las 24 horas en el mismo número"
       },
       "small_animals": true,
       "url": "https://veterinariavistalegre.com/",
@@ -3170,7 +3258,8 @@
         "sl": "Pon–pet 10–19, sob 10–13; nujni primeri 24 ur na dan; tudi +34 625 539 474 (WhatsApp)",
         "hr": "pon–pet 10:00–19:00, sub 10:00–13:00; hitni slučajevi 24 h; također +34 625 539 474 (WhatsApp)",
         "de": "Mo–Fr 10:00–19:00 Uhr, Sa 10:00–13:00 Uhr; Notdienst rund um die Uhr; auch +34 625 539 474 (WhatsApp)",
-        "fr": "Lun.–ven. 10 h–19 h, sam. 10 h–13 h ; urgences 24 h/24 ; également au +34 625 539 474 (WhatsApp)"
+        "fr": "Lun.–ven. 10 h–19 h, sam. 10 h–13 h ; urgences 24 h/24 ; également au +34 625 539 474 (WhatsApp)",
+        "es": "Lun–vie 10:00–19:00 h, sáb 10:00–13:00 h; urgencias las 24 horas; también +34 625 539 474 (WhatsApp)"
       },
       "small_animals": true,
       "url": "https://hospitalveterinarioburgos.com/",
@@ -3191,7 +3280,8 @@
         "sl": "Linija za nujne primere +34 656 304 866, 24 ur na dan, 365 dni v letu",
         "hr": "Hitna linija +34 656 304 866, 24 h / 365 dana",
         "de": "Notrufnummer +34 656 304 866, rund um die Uhr an 365 Tagen",
-        "fr": "Ligne d’urgences : +34 656 304 866, 24 h/24, 365 j/an"
+        "fr": "Ligne d’urgences : +34 656 304 866, 24 h/24, 365 j/an",
+        "es": "Línea de urgencias +34 656 304 866, 24 horas / 365 días"
       },
       "small_animals": true,
       "url": "https://cqvet-tucan.com/",
@@ -3212,7 +3302,8 @@
         "sl": "Nujna pomoč 24 ur na dan; tudi +34 652 993 742",
         "hr": "Hitna služba 24 h; također +34 652 993 742",
         "de": "Notdienst rund um die Uhr; auch +34 652 993 742",
-        "fr": "Service d’urgences 24 h/24 ; également au +34 652 993 742"
+        "fr": "Service d’urgences 24 h/24 ; également au +34 652 993 742",
+        "es": "Servicio de urgencias las 24 horas; también +34 652 993 742"
       },
       "small_animals": true,
       "url": "https://wecansegovia.es/hospital-veterinario.php",
@@ -3233,7 +3324,8 @@
         "sl": "Grijota pon–pet 10–14 / 17–20, sob 10–14; nujni primeri +34 655 945 381; 24-urna služba z obiski na domu",
         "hr": "Grijota pon–pet 10:00–14:00 / 17:00–20:00, sub 10:00–14:00; hitni slučajevi +34 655 945 381; služba 24 h, uključujući kućne posjete",
         "de": "Grijota Mo–Fr 10:00–14:00 / 17:00–20:00 Uhr, Sa 10:00–14:00 Uhr; Notdienst +34 655 945 381; Dienst rund um die Uhr, auch mit Hausbesuchen",
-        "fr": "Grijota lun.–ven. 10 h–14 h / 17 h–20 h, sam. 10 h–14 h ; urgences : +34 655 945 381 ; service 24 h/24, visites à domicile comprises"
+        "fr": "Grijota lun.–ven. 10 h–14 h / 17 h–20 h, sam. 10 h–14 h ; urgences : +34 655 945 381 ; service 24 h/24, visites à domicile comprises",
+        "es": "Grijota: lun–vie 10:00–14:00 / 17:00–20:00 h, sáb 10:00–14:00 h; urgencias +34 655 945 381; servicio 24 horas con visitas a domicilio"
       },
       "small_animals": true,
       "url": "https://centroruralvet.com/",
@@ -3255,7 +3347,8 @@
         "sl": "Nujna številka 24 ur na dan +34 616 919 360 samo za obstoječe stranke",
         "hr": "Hitna linija 24 h +34 616 919 360 samo za postojeće klijente",
         "de": "Notrufnummer rund um die Uhr: +34 616 919 360, nur für Bestandskunden",
-        "fr": "Ligne d’urgences 24 h/24 : +34 616 919 360, réservée aux clients existants"
+        "fr": "Ligne d’urgences 24 h/24 : +34 616 919 360, réservée aux clients existants",
+        "es": "Línea de urgencias 24 horas +34 616 919 360 solo para clientes habituales"
       },
       "small_animals": true,
       "url": "https://www.dobican.com/",
@@ -3276,7 +3369,8 @@
         "sl": "pon–pet 10–14 / 16–19; nujna pomoč po telefonu",
         "hr": "Radnim danom 10:00–14:00 / 16:00–19:00; hitna služba telefonom",
         "de": "Mo–Fr 10:00–14:00 / 16:00–19:00 Uhr; Notdienst telefonisch",
-        "fr": "En semaine 10 h–14 h / 16 h–19 h ; service d’urgences par téléphone"
+        "fr": "En semaine 10 h–14 h / 16 h–19 h ; service d’urgences par téléphone",
+        "es": "Entre semana 10:00–14:00 / 16:00–19:00 h; servicio de urgencias por teléfono"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialc.es/",
@@ -3297,7 +3391,8 @@
         "sl": "pon–pet 10–20, sob 10–13.30",
         "hr": "pon–pet 10:00–20:00, sub 10:00–13:30",
         "de": "Mo–Fr 10:00–20:00 Uhr, Sa 10:00–13:30 Uhr",
-        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30"
+        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30",
+        "es": "Lun–vie 10:00–20:00 h, sáb 10:00–13:30 h"
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria.io/",
@@ -3318,7 +3413,8 @@
         "sl": "pon–pet 9–21, sob 10–13.30",
         "hr": "pon–pet 9:00–21:00, sub 10:00–13:30",
         "de": "Mo–Fr 9:00–21:00 Uhr, Sa 10:00–13:30 Uhr",
-        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h–13 h 30"
+        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h–13 h 30",
+        "es": "Lun–vie 9:00–21:00 h, sáb 10:00–13:30 h"
       },
       "small_animals": true,
       "url": "https://www.veterinariaargosalbacete.com/",
@@ -3337,7 +3433,8 @@
       "duty_i18n": {
         "hr": "pon–pet 10:00–13:30 / 17:00–20:00, sub 10:00–14:00; hitna linija +34 967 240 275 (pon–pet 9–10, 14–17, 20:30–24; sub 9–10, 17–24; ned 9–14, 17–24); najbliža bolnica koja radi 24 h: Medivet La Flota, Murcia (+34 968 246 122)",
         "de": "Mo–Fr 10:00–13:30 / 17:00–20:00 Uhr, Sa 10:00–14:00 Uhr; Notrufnummer +34 967 240 275 (Mo–Fr 9–10, 14–17, 20:30–24 Uhr; Sa 9–10, 17–24 Uhr; So 9–14, 17–24 Uhr); nächstgelegene 24-Stunden-Klinik: Medivet La Flota, Murcia (+34 968 246 122)",
-        "fr": "Lun.–ven. 10 h–13 h 30 / 17 h–20 h, sam. 10 h–14 h ; ligne d’urgences : +34 967 240 275 (lun.–ven. 9 h–10 h, 14 h–17 h, 20 h 30–24 h ; sam. 9 h–10 h, 17 h–24 h ; dim. 9 h–14 h, 17 h–24 h) ; hôpital ouvert 24 h/24 le plus proche : Medivet La Flota, Murcie (+34 968 246 122)"
+        "fr": "Lun.–ven. 10 h–13 h 30 / 17 h–20 h, sam. 10 h–14 h ; ligne d’urgences : +34 967 240 275 (lun.–ven. 9 h–10 h, 14 h–17 h, 20 h 30–24 h ; sam. 9 h–10 h, 17 h–24 h ; dim. 9 h–14 h, 17 h–24 h) ; hôpital ouvert 24 h/24 le plus proche : Medivet La Flota, Murcie (+34 968 246 122)",
+        "es": "Lun–vie 10:00–13:30 / 17:00–20:00 h, sáb 10:00–14:00 h; línea de urgencias +34 967 240 275 (lun–vie 9:00–10:00, 14:00–17:00 y 20:30–24:00 h; sáb 9:00–10:00 y 17:00–24:00 h; dom 9:00–14:00 y 17:00–24:00 h); hospital 24 horas más cercano: Medivet La Flota, Murcia (+34 968 246 122)"
       },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/es-es/clinicas-veterinarias/los-llanos/",
@@ -3358,7 +3455,8 @@
         "sl": "pon–čet 10–13.30 / 17–20, pet 10–18; številka za nujne primere +34 666 557 182",
         "hr": "pon–čet 10:00–13:30 / 17:00–20:00, pet 10:00–18:00; hitni kontakt +34 666 557 182",
         "de": "Mo–Do 10:00–13:30 / 17:00–20:00 Uhr, Fr 10:00–18:00 Uhr; Notfallkontakt +34 666 557 182",
-        "fr": "Lun.–jeu. 10 h–13 h 30 / 17 h–20 h, ven. 10 h–18 h ; contact urgences : +34 666 557 182"
+        "fr": "Lun.–jeu. 10 h–13 h 30 / 17 h–20 h, ven. 10 h–18 h ; contact urgences : +34 666 557 182",
+        "es": "Lun–jue 10:00–13:30 / 17:00–20:00 h, vie 10:00–18:00 h; contacto de urgencias +34 666 557 182"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaal-beitar.es/",
@@ -3379,7 +3477,8 @@
         "sl": "pon–pet 10–13.30 / 17–20",
         "hr": "pon–pet 10:00–13:30 / 17:00–20:00",
         "de": "Mo–Fr 10:00–13:30 / 17:00–20:00 Uhr",
-        "fr": "Lun.–ven. 10 h–13 h 30 / 17 h–20 h"
+        "fr": "Lun.–ven. 10 h–13 h 30 / 17 h–20 h",
+        "es": "Lun–vie 10:00–13:30 / 17:00–20:00 h"
       },
       "small_animals": true,
       "url": "https://www.nexoveterinarios.es/es/clinica-veterinaria/albacete-cabot",
@@ -3399,7 +3498,8 @@
         "sl": "pon–tor 8–15 / 17–20, sre–pet 8–20.30, sob 9–13.30; nujni primeri v ordinacijskem času; v soboto popoldne, ob nedeljah in praznikih pri VetSur Fuengirola",
         "hr": "pon–uto 8:00–15:00 / 17:00–20:00, sri–pet 8:00–20:30, sub 9:00–13:30; hitni slučajevi u radno vrijeme; subotom poslijepodne, nedjeljom i blagdanima u VetSur Fuengirola",
         "de": "Mo–Di 8:00–15:00 / 17:00–20:00 Uhr, Mi–Fr 8:00–20:30 Uhr, Sa 9:00–13:30 Uhr; Notdienst während der Öffnungszeiten; Sa nachmittags, So und feiertags bei VetSur Fuengirola",
-        "fr": "Lun.–mar. 8 h–15 h / 17 h–20 h, mer.–ven. 8 h–20 h 30, sam. 9 h–13 h 30 ; urgences pendant les heures d’ouverture ; le samedi après-midi, le dimanche et les jours fériés à VetSur Fuengirola"
+        "fr": "Lun.–mar. 8 h–15 h / 17 h–20 h, mer.–ven. 8 h–20 h 30, sam. 9 h–13 h 30 ; urgences pendant les heures d’ouverture ; le samedi après-midi, le dimanche et les jours fériés à VetSur Fuengirola",
+        "es": "Lun y mar 8:00–15:00 / 17:00–20:00 h, mié–vie 8:00–20:30 h, sáb 9:00–13:30 h; urgencias en horario de apertura; sábados por la tarde, domingos y festivos en VetSur Fuengirola"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavetsur.com/torremolinos",
@@ -3420,7 +3520,8 @@
         "sl": "pon–pet 10.30–13.30 / 17–20, sob 10.30–13.30; tudi +34 607 085 171",
         "hr": "pon–pet 10:30–13:30 / 17:00–20:00, sub 10:30–13:30; također +34 607 085 171",
         "de": "Mo–Fr 10:30–13:30 / 17:00–20:00 Uhr, Sa 10:30–13:30 Uhr; auch +34 607 085 171",
-        "fr": "Lun.–ven. 10 h 30–13 h 30 / 17 h–20 h, sam. 10 h 30–13 h 30 ; également au +34 607 085 171"
+        "fr": "Lun.–ven. 10 h 30–13 h 30 / 17 h–20 h, sam. 10 h 30–13 h 30 ; également au +34 607 085 171",
+        "es": "Lun–vie 10:30–13:30 / 17:00–20:00 h, sáb 10:30–13:30 h; también +34 607 085 171"
       },
       "small_animals": true,
       "url": "https://veterinariaislacristina.com/",
@@ -3440,7 +3541,8 @@
         "sl": "pon in sre 9.30–14 / 17–20.30, tor in čet 10–18, pet 10–15; nujni primeri brez najave v ordinacijskem času",
         "hr": "pon i sri 9:30–14:00 / 17:00–20:30, uto i čet 10:00–18:00, pet 10:00–15:00; hitni slučajevi bez najave u radno vrijeme",
         "de": "Mo und Mi 9:30–14:00 / 17:00–20:30 Uhr, Di und Do 10:00–18:00 Uhr, Fr 10:00–15:00 Uhr; Notfälle ohne Termin während der Öffnungszeiten",
-        "fr": "Lun. et mer. 9 h 30–14 h / 17 h–20 h 30, mar. et jeu. 10 h–18 h, ven. 10 h–15 h ; urgences sans rendez-vous pendant les heures d’ouverture"
+        "fr": "Lun. et mer. 9 h 30–14 h / 17 h–20 h 30, mar. et jeu. 10 h–18 h, ven. 10 h–15 h ; urgences sans rendez-vous pendant les heures d’ouverture",
+        "es": "Lun y mié 9:30–14:00 / 17:00–20:30 h, mar y jue 10:00–18:00 h, vie 10:00–15:00 h; urgencias sin cita en horario de apertura"
       },
       "small_animals": true,
       "url": "https://clinicavarela.com/",
@@ -3460,7 +3562,8 @@
         "sl": "Nujna pomoč v Hospital Veterinario Ávila El Puerto de Santa María (24 ur na dan), +34 956 870 717",
         "hr": "Hitni slučajevi u Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
         "de": "Notdienst im Hospital Veterinario Ávila El Puerto de Santa María (rund um die Uhr), +34 956 870 717",
-        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717"
+        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717",
+        "es": "Urgencias en el Hospital Veterinario Ávila El Puerto de Santa María (24 horas), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -3480,7 +3583,8 @@
         "sl": "pon–pet 9–20, sob 9–14; nujni primeri osebno v bolnišnici v El Puerto de Santa María (24 ur na dan)",
         "hr": "pon–pet 9:00–20:00, sub 9:00–14:00; hitni slučajevi osobno u bolnici u El Puerto de Santa María (24 h)",
         "de": "Mo–Fr 9:00–20:00 Uhr, Sa 9:00–14:00 Uhr; Notdienst vor Ort im Hospital El Puerto de Santa María (rund um die Uhr)",
-        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h ; urgences sur place à l’hôpital d’El Puerto de Santa María (24 h/24)"
+        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h ; urgences sur place à l’hôpital d’El Puerto de Santa María (24 h/24)",
+        "es": "Lun–vie 9:00–20:00 h, sáb 9:00–14:00 h; urgencias presenciales en el hospital de El Puerto de Santa María (24 horas)"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -3501,7 +3605,8 @@
         "sl": "Nujna pomoč v Hospital Veterinario Ávila El Puerto de Santa María (24 ur na dan), +34 956 870 717",
         "hr": "Hitni slučajevi u Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
         "de": "Notdienst im Hospital Veterinario Ávila El Puerto de Santa María (rund um die Uhr), +34 956 870 717",
-        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717"
+        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717",
+        "es": "Urgencias en el Hospital Veterinario Ávila El Puerto de Santa María (24 horas), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -3521,7 +3626,8 @@
         "sl": "Nujna pomoč v Hospital Veterinario Ávila El Puerto de Santa María (24 ur na dan), +34 956 870 717",
         "hr": "Hitni slučajevi u Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
         "de": "Notdienst im Hospital Veterinario Ávila El Puerto de Santa María (rund um die Uhr), +34 956 870 717",
-        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717"
+        "fr": "Urgences à l’Hospital Veterinario Ávila El Puerto de Santa María (24 h/24), tél. : +34 956 870 717",
+        "es": "Urgencias en el Hospital Veterinario Ávila El Puerto de Santa María (24 horas), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -3541,7 +3647,8 @@
         "sl": "pon–pet 9.30–19.30, sob 10–13.30",
         "hr": "pon–pet 9:30–19:30, sub 10:00–13:30",
         "de": "Mo–Fr 9:30–19:30 Uhr, Sa 10:00–13:30 Uhr",
-        "fr": "Lun.–ven. 9 h 30–19 h 30, sam. 10 h–13 h 30"
+        "fr": "Lun.–ven. 9 h 30–19 h 30, sam. 10 h–13 h 30",
+        "es": "Lun–vie 9:30–19:30 h, sáb 10:00–13:30 h"
       },
       "small_animals": true,
       "url": "https://atlanticocentroveterinario.es/",
@@ -3562,7 +3669,8 @@
         "sl": "pon–sre in pet 10–14 / 17.30–20, čet 9.30–16, sob 10–13.30; nujna pomoč +34 669 479 972 (ko nas potrebujete)",
         "hr": "pon–sri i pet 10:00–14:00 / 17:30–20:00, čet 9:30–16:00, sub 10:00–13:30; hitni slučajevi +34 669 479 972 (kad god nas trebaš)",
         "de": "Mo–Mi und Fr 10:00–14:00 / 17:30–20:00 Uhr, Do 9:30–16:00 Uhr, Sa 10:00–13:30 Uhr; Notdienst +34 669 479 972 (wenn Sie uns brauchen)",
-        "fr": "Lun.–mer. et ven. 10 h–14 h / 17 h 30–20 h, jeu. 9 h 30–16 h, sam. 10 h–13 h 30 ; urgences : +34 669 479 972 (à votre disposition en cas de besoin)"
+        "fr": "Lun.–mer. et ven. 10 h–14 h / 17 h 30–20 h, jeu. 9 h 30–16 h, sam. 10 h–13 h 30 ; urgences : +34 669 479 972 (à votre disposition en cas de besoin)",
+        "es": "Lun–mié y vie 10:00–14:00 / 17:30–20:00 h, jue 9:30–16:00 h, sáb 10:00–13:30 h; urgencias +34 669 479 972 (cuando nos necesites)"
       },
       "small_animals": true,
       "url": "https://anubisrota.es/",
@@ -3583,7 +3691,8 @@
         "sl": "pon in pet 9–18, tor–čet 10–17.30; nujna pomoč +34 699 280 334",
         "hr": "pon i pet 9:00–18:00, uto–čet 10:00–17:30; hitni slučajevi +34 699 280 334",
         "de": "Mo und Fr 9:00–18:00 Uhr, Di–Do 10:00–17:30 Uhr; Notdienst +34 699 280 334",
-        "fr": "Lun. et ven. 9 h–18 h, mar.–jeu. 10 h–17 h 30 ; urgences : +34 699 280 334"
+        "fr": "Lun. et ven. 9 h–18 h, mar.–jeu. 10 h–17 h 30 ; urgences : +34 699 280 334",
+        "es": "Lun y vie 9:00–18:00 h, mar–jue 10:00–17:30 h; urgencias +34 699 280 334"
       },
       "small_animals": true,
       "url": "https://veterinario-tarifa.com/",
@@ -3604,7 +3713,8 @@
         "sl": "pon–pet 9–21, sob 10.30–13.30; nujna pomoč +34 673 761 007",
         "hr": "pon–pet 9:00–21:00, sub 10:30–13:30; hitna služba +34 673 761 007",
         "de": "Mo–Fr 9:00–21:00 Uhr, Sa 10:30–13:30 Uhr; Notdienst +34 673 761 007",
-        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h 30–13 h 30 ; service d’urgences : +34 673 761 007"
+        "fr": "Lun.–ven. 9 h–21 h, sam. 10 h 30–13 h 30 ; service d’urgences : +34 673 761 007",
+        "es": "Lun–vie 9:00–21:00 h, sáb 10:30–13:30 h; servicio de urgencias +34 673 761 007"
       },
       "small_animals": true,
       "url": "https://veterinariosurbion.com/",
@@ -3625,7 +3735,8 @@
         "sl": "Nujne primere sprejemajo; tudi +34 616 757 225",
         "hr": "Primaju se hitni slučajevi; također +34 616 757 225",
         "de": "Notfälle werden behandelt; auch +34 616 757 225",
-        "fr": "Urgences prises en charge ; également au +34 616 757 225"
+        "fr": "Urgences prises en charge ; également au +34 616 757 225",
+        "es": "Se atienden urgencias; también +34 616 757 225"
       },
       "small_animals": true,
       "url": "https://www.asivet.es/",
@@ -3660,7 +3771,8 @@
         "sl": "pon–pet 9.15–19, sob 11–14; nujna pomoč samo po telefonu +34 665 100 954",
         "hr": "pon–pet 9:15–19:00, sub 11:00–14:00; hitna služba samo telefonom +34 665 100 954",
         "de": "Mo–Fr 9:15–19:00 Uhr, Sa 11:00–14:00 Uhr; Notdienst nur telefonisch +34 665 100 954",
-        "fr": "Lun.–ven. 9 h 15–19 h, sam. 11 h–14 h ; urgences par téléphone uniquement : +34 665 100 954"
+        "fr": "Lun.–ven. 9 h 15–19 h, sam. 11 h–14 h ; urgences par téléphone uniquement : +34 665 100 954",
+        "es": "Lun–vie 9:15–19:00 h, sáb 11:00–14:00 h; servicio de urgencias solo por teléfono +34 665 100 954"
       },
       "small_animals": true,
       "url": "https://clinicavetsanantonio.com/",
@@ -3681,7 +3793,8 @@
         "sl": "pon–pet 9–19.30, sob 10–14; stalna nujna oskrba +34 608 421 993. Druga lokacija: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
         "hr": "pon–pet 9:00–19:30, sub 10:00–14:00; neprekidna hitna skrb +34 608 421 993. Druga lokacija: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
         "de": "Mo–Fr 9:00–19:30 Uhr, Sa 10:00–14:00 Uhr; durchgehende Notfallversorgung +34 608 421 993. Zweiter Standort: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
-        "fr": "Lun.–ven. 9 h–19 h 30, sam. 10 h–14 h ; soins d’urgence en continu : +34 608 421 993. Second site : Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988"
+        "fr": "Lun.–ven. 9 h–19 h 30, sam. 10 h–14 h ; soins d’urgence en continu : +34 608 421 993. Second site : Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
+        "es": "Lun–vie 9:00–19:30 h, sáb 10:00–14:00 h; atención de urgencias continua +34 608 421 993. Segunda sede: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988"
       },
       "small_animals": true,
       "url": "https://www.clinicaalbeitar.es/",
@@ -3702,7 +3815,8 @@
         "sl": "Mobilni telefon +34 696 649 550",
         "hr": "Mobitel +34 696 649 550",
         "de": "Mobil +34 696 649 550",
-        "fr": "Portable : +34 696 649 550"
+        "fr": "Portable : +34 696 649 550",
+        "es": "Móvil +34 696 649 550"
       },
       "small_animals": true,
       "url": "https://veterinarianuevasegovia.com/",
@@ -3728,7 +3842,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3750,7 +3865,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Exotic-animal clinic. Hours per COLVEMA listing."
     },
@@ -3772,7 +3888,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3794,7 +3911,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3816,7 +3934,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3837,7 +3956,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3859,7 +3979,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Mobile +34 654 916 566. Hours per COLVEMA listing."
     },
@@ -3880,7 +4001,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3902,7 +4024,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3923,7 +4046,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Mobile +34 608 112 251. Hours per COLVEMA listing."
     },
@@ -3945,7 +4069,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3967,7 +4092,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -3988,7 +4114,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo.",
         "hr": "Otvoreno 24 h, s hitnom službom.",
         "de": "Rund um die Uhr geöffnet, mit Notdienst.",
-        "fr": "Ouvert 24 h/24 avec service d’urgences."
+        "fr": "Ouvert 24 h/24 avec service d’urgences.",
+        "es": "Abierto las 24 horas, con servicio de urgencias."
       },
       "note": "COLVEMA listing gives no phone and no website (url = COLVEMA listing); contact by e-mail only on the listing. Hours per COLVEMA listing."
     },
@@ -4010,7 +4137,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4031,7 +4159,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4053,7 +4182,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4075,7 +4205,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4097,7 +4228,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4118,7 +4250,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4139,7 +4272,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4161,7 +4295,8 @@
         "sl": "Samo 24-urna telefonska linija; vnaprej pokličite.",
         "hr": "Samo telefonska linija 24 h; nazovi unaprijed.",
         "de": "Nur telefonisch rund um die Uhr erreichbar; bitte zuerst anrufen.",
-        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord."
+        "fr": "Ligne téléphonique 24 h/24 uniquement ; appelez d’abord.",
+        "es": "Solo línea telefónica las 24 horas; llama antes."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -4511,7 +4646,8 @@
         "sl": "pon–pet 9–21, sob 9–14; nujni primeri zunaj ordinacijskega časa +34 619 288 298.",
         "hr": "pon–pet 09:00–21:00, sub 09:00–14:00; hitni slučajevi izvan radnog vremena +34 619 288 298.",
         "de": "Mo–Fr 09:00–21:00 Uhr, Sa 09:00–14:00 Uhr; Notdienst außerhalb der Öffnungszeiten +34 619 288 298.",
-        "fr": "Lun.–ven. 9 h–21 h, sam. 9 h–14 h ; urgences en dehors des heures d’ouverture : +34 619 288 298."
+        "fr": "Lun.–ven. 9 h–21 h, sam. 9 h–14 h ; urgences en dehors des heures d’ouverture : +34 619 288 298.",
+        "es": "Lun–vie 9:00–21:00 h, sáb 9:00–14:00 h; urgencias fuera del horario de apertura +34 619 288 298."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariakans.es/",
@@ -4533,7 +4669,8 @@
         "sl": "pon–pet 10–20, sob 10–13.30, ned zaprto.",
         "hr": "pon–pet 10:00–20:00, sub 10:00–13:30, ned zatvoreno.",
         "de": "Mo–Fr 10:00–20:00 Uhr, Sa 10:00–13:30 Uhr, So geschlossen.",
-        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30, fermé le dimanche."
+        "fr": "Lun.–ven. 10 h–20 h, sam. 10 h–13 h 30, fermé le dimanche.",
+        "es": "Lun–vie 10:00–20:00 h, sáb 10:00–13:30 h, dom cerrado."
       },
       "small_animals": true,
       "url": "https://www.eivivet.es/",
@@ -4553,7 +4690,8 @@
         "sl": "pon–pet 9–20, sob 9–14; brez ločene številke za nujne primere.",
         "hr": "pon–pet 9:00–20:00, sub 9:00–14:00; nema posebnog hitnog broja.",
         "de": "Mo–Fr 9:00–20:00 Uhr, Sa 9:00–14:00 Uhr; keine separate Notrufnummer.",
-        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h ; pas de numéro d’urgences distinct."
+        "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–14 h ; pas de numéro d’urgences distinct.",
+        "es": "Lun–vie 9:00–20:00 h, sáb 9:00–14:00 h; sin número de urgencias aparte."
       },
       "small_animals": true,
       "url": "https://www.vilaveterinaris.es/",
@@ -4587,7 +4725,8 @@
         "sl": "pon–pet 9.30–13.30 in 17–20, sob 11–13.",
         "hr": "pon–pet 09:30–13:30 i 17:00–20:00, sub 11:00–13:00.",
         "de": "Mo–Fr 09:30–13:30 und 17:00–20:00 Uhr, Sa 11:00–13:00 Uhr.",
-        "fr": "Lun.–ven. 9 h 30–13 h 30 et 17 h–20 h, sam. 11 h–13 h."
+        "fr": "Lun.–ven. 9 h 30–13 h 30 et 17 h–20 h, sam. 11 h–13 h.",
+        "es": "Lun–vie 9:30–13:30 y 17:00–20:00 h, sáb 11:00–13:00 h."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaperezsintes.com/",
@@ -4608,7 +4747,8 @@
         "sl": "pon, tor, čet, pet 9.30–14.30; sre 16–20.",
         "hr": "pon, uto, čet, pet 09:30–14:30; sri 16:00–20:00.",
         "de": "Mo, Di, Do, Fr 09:30–14:30 Uhr; Mi 16:00–20:00 Uhr.",
-        "fr": "Lun., mar., jeu., ven. 9 h 30–14 h 30 ; mer. 16 h–20 h."
+        "fr": "Lun., mar., jeu., ven. 9 h 30–14 h 30 ; mer. 16 h–20 h.",
+        "es": "Lun, mar, jue y vie 9:30–14:30 h; mié 16:00–20:00 h."
       },
       "small_animals": true,
       "url": "https://www.vetmenorca.com/",
@@ -4628,7 +4768,8 @@
         "sl": "pon, sre, pet 9–15; tor, čet 9–19; sob 10–14.",
         "hr": "pon/sri/pet 9:00–15:00, uto/čet 9:00–19:00, sub 10:00–14:00.",
         "de": "Mo/Mi/Fr 9:00–15:00 Uhr, Di/Do 9:00–19:00 Uhr, Sa 10:00–14:00 Uhr.",
-        "fr": "Lun., mer. et ven. 9 h–15 h ; mar. et jeu. 9 h–19 h ; sam. 10 h–14 h."
+        "fr": "Lun., mer. et ven. 9 h–15 h ; mar. et jeu. 9 h–19 h ; sam. 10 h–14 h.",
+        "es": "Lun, mié y vie 9:00–15:00 h, mar y jue 9:00–19:00 h, sáb 10:00–14:00 h."
       },
       "small_animals": true,
       "url": "https://atlanticoveterinarios.com/",
@@ -4649,7 +4790,8 @@
         "sl": "Nujna služba 24 ur na dan; druga lokacija Tomares, Av. Blas Infante 1, +34 954 152 208; vnaprej pokličite.",
         "hr": "Hitna služba 24 h; druga lokacija Tomares, Av. Blas Infante 1, +34 954 152 208; nazovi unaprijed.",
         "de": "Notdienst rund um die Uhr; zweiter Standort Tomares, Av. Blas Infante 1, +34 954 152 208; bitte zuerst anrufen.",
-        "fr": "Service d’urgences 24 h/24 ; second site à Tomares, Av. Blas Infante 1, +34 954 152 208 ; appelez d’abord."
+        "fr": "Service d’urgences 24 h/24 ; second site à Tomares, Av. Blas Infante 1, +34 954 152 208 ; appelez d’abord.",
+        "es": "Servicio de urgencias las 24 horas; segunda sede en Tomares, Av. Blas Infante 1, +34 954 152 208; llama antes."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/catdog/es/servicios/",
@@ -4671,7 +4813,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/3279-hospital-veterinario-alcor-i",
@@ -4692,7 +4835,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/27912-hospital-veterinario-alcor-3",
@@ -4713,7 +4857,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://cvlaestacion.com",
@@ -4734,7 +4879,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.suveterinario.es",
@@ -4755,7 +4901,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://canitasveterinaria.com/",
@@ -4777,7 +4924,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.simbiosisveterinaria.com",
@@ -4798,7 +4946,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.hvchopera.com",
@@ -4819,7 +4968,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28600-hospital-veterinario-madrid-norte",
@@ -4840,7 +4990,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28530-liberavet-hospital-24h",
@@ -4861,7 +5012,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28021-canitas-cc-sambil",
@@ -4883,7 +5035,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/1050-ciudad-de-los-angeles-centro-veterinario",
@@ -4904,7 +5057,8 @@
         "sl": "Odprto 24 ur na dan z nujno službo; 24-urna telefonska linija",
         "hr": "Otvoreno 24 h, s hitnom službom; telefonska linija 24 h",
         "de": "Rund um die Uhr geöffnet, mit Notdienst; rund um die Uhr telefonisch erreichbar",
-        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24"
+        "fr": "Ouvert 24 h/24 avec service d’urgences ; ligne téléphonique 24 h/24",
+        "es": "Abierto las 24 horas con servicio de urgencias; línea telefónica 24 horas"
       },
       "small_animals": true,
       "url": "https://veterinarioexoticosmadrid.com",
@@ -4926,7 +5080,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.veterinariaparlaeste.com",
@@ -4948,7 +5103,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadobermann.es",
@@ -4970,7 +5126,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaoporto.com",
@@ -4992,7 +5149,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://petandhealth.es/",
@@ -5014,7 +5172,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.sanacanclinicaveterinaria.com",
@@ -5036,7 +5195,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/27922-bluevet-noroeste",
@@ -5058,7 +5218,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.alegrapet.es",
@@ -5080,7 +5241,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.centrosveterinariosmascoteros.com",
@@ -5102,7 +5264,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/1318-la-serna-clinica-veterinaria",
@@ -5124,7 +5287,8 @@
         "sl": "Nujna služba; samo 24-urna telefonska linija (ni odprto 24 ur na dan)",
         "hr": "Hitna služba; samo telefonska linija 24 h (nije otvoreno 24 h)",
         "de": "Notdienst; nur telefonisch rund um die Uhr erreichbar (nicht rund um die Uhr geöffnet)",
-        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)"
+        "fr": "Service d’urgences ; ligne téléphonique 24 h/24 uniquement (pas d’ouverture 24 h/24)",
+        "es": "Servicio de urgencias; solo línea telefónica 24 horas (no abre las 24 horas)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaparquedelosestados.es",
@@ -5146,7 +5310,8 @@
         "sl": "Nujni primeri 24 ur na dan po telefonu 971 56 74 74; klinika pon–pet 9–20, sob, ned in prazniki 9–13",
         "hr": "Hitni slučajevi 24 h telefonom 971 56 74 74; ambulanta pon–pet 9–20, sub/ned/blagdani 9–13",
         "de": "Notdienst rund um die Uhr telefonisch unter 971 56 74 74; Klinik Mo–Fr 9–20 Uhr, Sa, So und feiertags 9–13 Uhr",
-        "fr": "Urgences 24 h/24 par téléphone : 971 56 74 74 ; clinique lun.–ven. 9 h–20 h, sam., dim. et jours fériés 9 h–13 h"
+        "fr": "Urgences 24 h/24 par téléphone : 971 56 74 74 ; clinique lun.–ven. 9 h–20 h, sam., dim. et jours fériés 9 h–13 h",
+        "es": "Urgencias las 24 horas por teléfono 971 56 74 74; clínica lun–vie 9:00–20:00 h, sáb, dom y festivos 9:00–13:00 h"
       },
       "small_animals": true,
       "url": "https://www.veterclinic.es/",
@@ -5167,7 +5332,8 @@
         "sl": "pon, sre, pet 9–14; tor, čet 16–19.30; ob koncih tedna in praznikih zaprto (nujni primeri prek Veterclínic Son Servera 971 56 74 74)",
         "hr": "pon/sri/pet 9–14, uto/čet 16–19:30; vikendom i blagdanima zatvoreno (hitni slučajevi preko Veterclínic Son Servera 971 56 74 74)",
         "de": "Mo/Mi/Fr 9–14 Uhr, Di/Do 16–19:30 Uhr; am Wochenende und feiertags geschlossen (Notdienst über Veterclínic Son Servera 971 56 74 74)",
-        "fr": "Lun., mer. et ven. 9 h–14 h, mar. et jeu. 16 h–19 h 30 ; fermé les week-ends et jours fériés (urgences via Veterclínic Son Servera : 971 56 74 74)"
+        "fr": "Lun., mer. et ven. 9 h–14 h, mar. et jeu. 16 h–19 h 30 ; fermé les week-ends et jours fériés (urgences via Veterclínic Son Servera : 971 56 74 74)",
+        "es": "Lun, mié y vie 9:00–14:00 h, mar y jue 16:00–19:30 h; cerrado en fines de semana y festivos (urgencias a través de Veterclínic Son Servera 971 56 74 74)"
       },
       "small_animals": true,
       "url": "https://www.veterclinic.es/",

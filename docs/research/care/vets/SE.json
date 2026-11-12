@@ -62,7 +62,8 @@
         "sl": "Nujni oddelek je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite (nočno napotitveno središče za AniCura Albano).",
         "hr": "Hitni odjel otvoren danonoćno svaki dan; nazovi prije dolaska (noćno središte za pacijente koje upućuje AniCura Albano).",
         "de": "Notaufnahme täglich rund um die Uhr geöffnet; bitte vor dem Kommen anrufen (nächtliche Überweisungsstelle für AniCura Albano).",
-        "fr": "Service d’urgences ouvert 24 h/24, tous les jours ; appelez avant de venir (centre de référence de nuit pour AniCura Albano)."
+        "fr": "Service d’urgences ouvert 24 h/24, tous les jours ; appelez avant de venir (centre de référence de nuit pour AniCura Albano).",
+        "es": "Urgencias abiertas las 24 horas todos los días; llama antes de ir (centro de derivación nocturna de AniCura Albano)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/regiondjursjukhuset-bagarmossen/",
@@ -84,7 +85,8 @@
         "sl": "Nujni oddelek pon–ned 24 ur na dan; za prvo oceno pokličite. Psi, mačke, zajci, glodavci.",
         "hr": "Hitni odjel pon–ned 24 h; nazovi za prvu procjenu. Psi, mačke, kunići, glodavci.",
         "de": "Notaufnahme täglich rund um die Uhr; für eine Ersteinschätzung bitte anrufen. Hunde, Katzen, Kaninchen, Nagetiere.",
-        "fr": "Service d’urgences 24 h/24, 7 j/7 ; appelez pour une première évaluation. Chiens, chats, lapins, rongeurs."
+        "fr": "Service d’urgences 24 h/24, 7 j/7 ; appelez pour une première évaluation. Chiens, chats, lapins, rongeurs.",
+        "es": "Urgencias de lunes a domingo las 24 horas; llama para una primera valoración. Perros, gatos, conejos y roedores."
       },
       "small_animals": true,
       "url": "https://www.slu.se/universitetsdjursjukhuset/",
@@ -106,7 +108,8 @@
         "sl": "Nujni sprejem je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite.",
         "hr": "Hitni prijem otvoren danonoćno, svaki dan; nazovi prije dolaska.",
         "de": "Notaufnahme täglich rund um die Uhr geöffnet; bitte vor dem Kommen anrufen.",
-        "fr": "Accueil des urgences ouvert 24 h/24, tous les jours ; appelez avant de venir."
+        "fr": "Accueil des urgences ouvert 24 h/24, tous les jours ; appelez avant de venir.",
+        "es": "Recepción de urgencias abierta las 24 horas, todos los días; llama antes de ir."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-malmo/",
@@ -127,7 +130,8 @@
         "sl": "Odprto 24 ur na dan, vse leto (male živali; konjska bolnišnica ima isto številko).",
         "hr": "Otvoreno danonoćno, cijele godine (male životinje; konjska bolnica dijeli isti broj).",
         "de": "Ganzjährig rund um die Uhr geöffnet (Kleintiere; die Pferdeklinik nutzt dieselbe Nummer).",
-        "fr": "Ouvert 24 h/24, toute l’année (petits animaux ; l’hôpital équin partage le même numéro)."
+        "fr": "Ouvert 24 h/24, toute l’année (petits animaux ; l’hôpital équin partage le même numéro).",
+        "es": "Abierto las 24 horas, todo el año (animales pequeños; el hospital de caballos comparte el número)."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-helsingborg/",
@@ -148,7 +152,8 @@
         "sl": "Nujni sprejem je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite. Psi in mačke.",
         "hr": "Hitni prijem otvoren danonoćno, svaki dan; nazovi prije dolaska. Psi i mačke.",
         "de": "Notaufnahme täglich rund um die Uhr geöffnet; bitte vor dem Kommen anrufen. Hunde und Katzen.",
-        "fr": "Accueil des urgences ouvert 24 h/24, tous les jours ; appelez avant de venir. Chiens et chats."
+        "fr": "Accueil des urgences ouvert 24 h/24, tous les jours ; appelez avant de venir. Chiens et chats.",
+        "es": "Recepción de urgencias abierta las 24 horas, todos los días; llama antes de ir. Perros y gatos."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-stromsholm/",
@@ -169,7 +174,8 @@
         "sl": "Nujni oddelek je odprt 24 ur na dan, vse dni v tednu; številka nujne linije je ista, pred prihodom pokličite.",
         "hr": "Hitni odjel otvoren danonoćno, svaki dan; broj za hitne slučajeve isti je kao glavni, nazovi prije dolaska.",
         "de": "Notaufnahme täglich rund um die Uhr geöffnet; Notfalltelefon unter derselben Nummer, bitte vor dem Kommen anrufen.",
-        "fr": "Service d’urgences ouvert 24 h/24, tous les jours ; la ligne d’urgence est le même numéro, appelez avant de venir."
+        "fr": "Service d’urgences ouvert 24 h/24, tous les jours ; la ligne d’urgence est le même numéro, appelez avant de venir.",
+        "es": "Urgencias abiertas las 24 horas, todos los días; la línea de urgencias es el mismo número, llama antes de ir."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-gammelstad/",
@@ -190,7 +196,8 @@
         "sl": "Odprto 24 ur na dan, vse dni v letu.",
         "hr": "Otvoreno 24 sata, svaki dan u godini.",
         "de": "Rund um die Uhr geöffnet, an allen Tagen des Jahres.",
-        "fr": "Ouvert 24 h/24, tous les jours de l’année."
+        "fr": "Ouvert 24 h/24, tous les jours de l’année.",
+        "es": "Abierto las 24 horas, todos los días del año."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djursjukhuset-sundsvall/",
@@ -211,7 +218,8 @@
         "sl": "Nujni sprejem vsak dan 24 ur na dan; številka sprejema je hkrati nujna linija.",
         "hr": "Hitni prijem svaki dan danonoćno; broj prijema ujedno je i linija za hitne slučajeve.",
         "de": "Notaufnahme täglich rund um die Uhr; die Nummer der Anmeldung ist zugleich die Notfallnummer.",
-        "fr": "Accueil des urgences 24 h/24, tous les jours ; le numéro de l’accueil est aussi la ligne d’urgence."
+        "fr": "Accueil des urgences 24 h/24, tous les jours ; le numéro de l’accueil est aussi la ligne d’urgence.",
+        "es": "Recepción de urgencias todos los días las 24 horas; el número de recepción es también la línea de urgencias."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/ostersunds-djursjukhus/",
@@ -232,7 +240,8 @@
         "sl": "Veterinar je v pripravljenosti (dežurstvo) 24 ur na dan, vse leto, za male in velike živali; ambulanta sama je odprta pon–pet 8–18.",
         "hr": "Veterinar je u pripravnosti (dežurstvo) danonoćno, cijele godine, za male i velike životinje; sama klinika radi pon–pet 08–18.",
         "de": "Tierarzt im Bereitschaftsdienst rund um die Uhr, ganzjährig, für Klein- und Großtiere; die Praxis selbst ist Mo–Fr 08–18 Uhr geöffnet.",
-        "fr": "Vétérinaire d’astreinte 24 h/24, toute l’année, pour les petits et grands animaux ; clinique ouverte lun.–ven. 8 h–18 h."
+        "fr": "Vétérinaire d’astreinte 24 h/24, toute l’année, pour les petits et grands animaux ; clinique ouverte lun.–ven. 8 h–18 h.",
+        "es": "Veterinario de guardia localizable las 24 horas, todo el año, para animales pequeños y grandes; la clínica abre lun–vie 8:00–18:00 h."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/gotlands-lan/gotland",
@@ -254,7 +263,8 @@
         "sl": "Veterinarja lahko pokličete 24 ur na dan za akutno bolne živali (psi, mačke, konji, gospodarske živali); nujne primere glede na zmogljivosti lahko napotijo naprej.",
         "hr": "Veterinar je dostupan danonoćno za akutno bolesne životinje (psi, mačke, konji, gospodarske životinje); hitni slučajevi mogu se, ovisno o kapacitetima, uputiti dalje.",
         "de": "Tierarzt rund um die Uhr erreichbar für akut kranke Tiere (Hunde, Katzen, Pferde, Nutztiere); dringende Fälle werden je nach Kapazität gegebenenfalls weiterverwiesen.",
-        "fr": "Vétérinaire joignable 24 h/24 pour les animaux gravement malades (chiens, chats, chevaux, animaux d’élevage) ; les cas urgents peuvent être réorientés selon les disponibilités."
+        "fr": "Vétérinaire joignable 24 h/24 pour les animaux gravement malades (chiens, chats, chevaux, animaux d’élevage) ; les cas urgents peuvent être réorientés selon les disponibilités.",
+        "es": "Veterinario localizable las 24 horas para animales con enfermedad aguda (perros, gatos, caballos, animales de granja); según los recursos, los casos urgentes pueden derivarse a otro centro."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vimmerby",
@@ -276,7 +286,8 @@
         "sl": "Veterinar v pripravljenosti je dosegljiv 24 ur na dan za akutne primere (psi, mačke); nujne primere lahko napotijo naprej.",
         "hr": "Veterinar u pripravnosti dostupan danonoćno za akutne slučajeve (psi, mačke); hitni slučajevi mogu se uputiti dalje.",
         "de": "Tierarzt im Bereitschaftsdienst rund um die Uhr erreichbar für akute Fälle (Hunde, Katzen); dringende Fälle werden gegebenenfalls weiterverwiesen.",
-        "fr": "Vétérinaire d’astreinte joignable 24 h/24 pour les cas aigus (chiens, chats) ; les cas urgents peuvent être réorientés."
+        "fr": "Vétérinaire d’astreinte joignable 24 h/24 pour les cas aigus (chiens, chats) ; les cas urgents peuvent être réorientés.",
+        "es": "Veterinario de guardia localizable las 24 horas para casos agudos (perros, gatos); los casos urgentes pueden derivarse a otro centro."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vastervik",
@@ -297,7 +308,8 @@
       "duty_i18n": {
         "hr": "Veterinar dostupan telefonom danonoćno na 010-122 94 20; nazovi i provjeri pokriva li linija male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar unter 010-122 94 20; bitte anrufen und nachfragen, ob die Nummer auch für Kleintiere gilt.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 au 010-122 94 20 ; appelez pour confirmer que la ligne couvre les petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 au 010-122 94 20 ; appelez pour confirmer que la ligne couvre les petits animaux.",
+        "es": "Veterinario localizable por teléfono las 24 horas en el 010-122 94 20; llama para confirmar que la línea atiende a animales pequeños."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
@@ -318,7 +330,8 @@
         "sl": "Odprto vsak dan 7.30–23.",
         "hr": "Otvoreno svaki dan 07:30–23:00.",
         "de": "Täglich 07:30–23:00 Uhr geöffnet.",
-        "fr": "Ouvert tous les jours 7 h 30–23 h."
+        "fr": "Ouvert tous les jours 7 h 30–23 h.",
+        "es": "Abierto todos los días 7:30–23:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
@@ -339,7 +352,8 @@
         "sl": "Nujna ambulanta ob delavnikih 7–22, ob koncih tedna 9–22.",
         "hr": "Hitna klinika radnim danom 07–22, vikendom 09–22.",
         "de": "Notfallklinik werktags 07–22 Uhr, am Wochenende 09–22 Uhr.",
-        "fr": "Urgences en semaine 7 h–22 h, week-end 9 h–22 h."
+        "fr": "Urgences en semaine 7 h–22 h, week-end 9 h–22 h.",
+        "es": "Clínica de urgencias entre semana 7:00–22:00 h, fines de semana 9:00–22:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-sodra-djursjukhuset-kungens-kurva/oppettider-tjanster/",
@@ -359,7 +373,8 @@
         "sl": "pon–pet 7–22, sob–ned 9–20; nujna linija ob istih urah.",
         "hr": "pon–pet 7–22, sub–ned 9–20; linija za hitne slučajeve u istom radnom vremenu.",
         "de": "Mo–Fr 7–22 Uhr, Sa–So 9–20 Uhr; Notfalltelefon zu denselben Zeiten.",
-        "fr": "Lun.–ven. 7 h–22 h, sam.–dim. 9 h–20 h ; ligne d’urgence aux mêmes horaires."
+        "fr": "Lun.–ven. 7 h–22 h, sam.–dim. 9 h–20 h ; ligne d’urgence aux mêmes horaires.",
+        "es": "Lun–vie 7:00–22:00 h, sáb–dom 9:00–20:00 h; línea de urgencias en el mismo horario."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
@@ -379,7 +394,8 @@
         "sl": "Nujna pomoč pon–pet približno 8–19/20, sob–ned 9–16.",
         "hr": "Hitna skrb pon–pet oko 8–19/20, sub–ned 9–16.",
         "de": "Notdienst Mo–Fr etwa 8–19/20 Uhr, Sa–So 9–16 Uhr.",
-        "fr": "Urgences lun.–ven. environ 8 h–19 h/20 h, sam.–dim. 9 h–16 h."
+        "fr": "Urgences lun.–ven. environ 8 h–19 h/20 h, sam.–dim. 9 h–16 h.",
+        "es": "Urgencias lun–vie 8:00–19:00/20:00 h aprox., sáb–dom 9:00–16:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
@@ -400,7 +416,8 @@
         "sl": "Nujni sprejem ob delavnikih 8–17, ob sobotah in praznikih 10–16.",
         "hr": "Hitni prijem radnim danom 08–17, subotom i blagdanima 10–16.",
         "de": "Notaufnahme werktags 08–17 Uhr, samstags und an Feiertagen 10–16 Uhr.",
-        "fr": "Accueil des urgences en semaine 8 h–17 h, samedi et jours fériés 10 h–16 h."
+        "fr": "Accueil des urgences en semaine 8 h–17 h, samedi et jours fériés 10 h–16 h.",
+        "es": "Recepción de urgencias entre semana 8:00–17:00 h, sáb y festivos 10:00–16:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vasterort/",
@@ -419,7 +436,8 @@
         "sl": "pon–pet 7–24, sob/ned/prazniki 9–24.",
         "hr": "pon–pet 7–24, sub, ned i blagdanima 9–24.",
         "de": "Mo–Fr 7–24 Uhr, Sa, So und feiertags 9–24 Uhr.",
-        "fr": "Lun.–ven. 7 h–24 h, sam., dim. et jours fériés 9 h–24 h."
+        "fr": "Lun.–ven. 7 h–24 h, sam., dim. et jours fériés 9 h–24 h.",
+        "es": "Lun–vie 7:00–24:00 h, sáb, dom y festivos 9:00–24:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
@@ -439,7 +457,8 @@
         "sl": "Odprto vsak dan 8–24.",
         "hr": "Otvoreno svaki dan 8–24.",
         "de": "Täglich 8–24 Uhr geöffnet.",
-        "fr": "Ouvert tous les jours 8 h–24 h."
+        "fr": "Ouvert tous les jours 8 h–24 h.",
+        "es": "Abierto todos los días 8:00–24:00 h."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -459,7 +478,8 @@
         "sl": "Odprto približno 8–20 ob delavnikih, 9–20 ob koncih tedna.",
         "hr": "Otvoreno oko 8–20 radnim danom, 9–20 vikendom.",
         "de": "Werktags etwa 8–20 Uhr, am Wochenende 9–20 Uhr geöffnet.",
-        "fr": "Ouvert environ 8 h–20 h en semaine, 9 h–20 h le week-end."
+        "fr": "Ouvert environ 8 h–20 h en semaine, 9 h–20 h le week-end.",
+        "es": "Abierto 8:00–20:00 h aprox. entre semana, 9:00–20:00 h los fines de semana."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -479,7 +499,8 @@
         "sl": "Ob delavnikih 7–20, sob 10–16, ned zaprto.",
         "hr": "Radnim danom 07–20, subotom 10–16, nedjeljom zatvoreno.",
         "de": "Werktags 07–20 Uhr, Samstag 10–16 Uhr, Sonntag geschlossen.",
-        "fr": "En semaine 7 h–20 h, samedi 10 h–16 h, fermé dimanche."
+        "fr": "En semaine 7 h–20 h, samedi 10 h–16 h, fermé dimanche.",
+        "es": "Entre semana 7:00–20:00 h, sáb 10:00–16:00 h, cerrado dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -498,7 +519,8 @@
         "sl": "pon–pet 8–17; zunaj delovnega časa ambulanta napoti na 24-urne bolnišnice Evidensia.",
         "hr": "pon–pet 8–17; izvan radnog vremena klinika upućuje na 24-satne bolnice Evidensia.",
         "de": "Mo–Fr 8–17 Uhr; außerhalb der Sprechzeiten wird auf die rund um die Uhr geöffneten Tierkliniken von Evidensia verwiesen.",
-        "fr": "Lun.–ven. 8 h–17 h ; hors horaires, la clinique oriente vers les hôpitaux Evidensia ouverts 24 h/24."
+        "fr": "Lun.–ven. 8 h–17 h ; hors horaires, la clinique oriente vers les hôpitaux Evidensia ouverts 24 h/24.",
+        "es": "Lun–vie 8:00–17:00 h; fuera de horario la clínica remite a los hospitales 24 h de Evidensia."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
@@ -518,7 +540,8 @@
         "sl": "pon 7.30–20, tor–pet 7.30–17; ob koncih tedna zaprto.",
         "hr": "pon 07:30–20, uto–pet 07:30–17; vikendom zatvoreno.",
         "de": "Mo 07:30–20:00 Uhr, Di–Fr 07:30–17:00 Uhr; am Wochenende geschlossen.",
-        "fr": "Lun. 7 h 30–20 h, mar.–ven. 7 h 30–17 h ; fermé le week-end."
+        "fr": "Lun. 7 h 30–20 h, mar.–ven. 7 h 30–17 h ; fermé le week-end.",
+        "es": "Lun 7:30–20:00 h, mar–vie 7:30–17:00 h; cerrado fines de semana."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-vasteras/akutvard/",
@@ -537,7 +560,8 @@
         "sl": "pon–čet 7.30–20, pet 7.30–17; ob koncih tedna zaprto.",
         "hr": "pon–čet 07:30–20, pet 07:30–17; vikendom zatvoreno.",
         "de": "Mo–Do 07:30–20:00 Uhr, Fr 07:30–17:00 Uhr; am Wochenende geschlossen.",
-        "fr": "Lun.–jeu. 7 h 30–20 h, ven. 7 h 30–17 h ; fermé le week-end."
+        "fr": "Lun.–jeu. 7 h 30–20 h, ven. 7 h 30–17 h ; fermé le week-end.",
+        "es": "Lun–jue 7:30–20:00 h, vie 7:30–17:00 h; cerrado fines de semana."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-gefle/akutvard/",
@@ -555,7 +579,8 @@
         "sl": "pon–pet 8–17; ko je zaprto, napoti na Evidensia Valla Djursjukhus Linköping ali Specialistdjursjukhuset Strömsholm.",
         "hr": "pon–pet 08–17; izvan radnog vremena upućuje na Evidensia Valla Djursjukhus Linköping ili Specialistdjursjukhuset Strömsholm.",
         "de": "Mo–Fr 08–17 Uhr; außerhalb der Öffnungszeiten wird auf Evidensia Valla Djursjukhus Linköping oder Specialistdjursjukhuset Strömsholm verwiesen.",
-        "fr": "Lun.–ven. 8 h–17 h ; en dehors des horaires, la clinique oriente vers Evidensia Valla Djursjukhus Linköping ou Specialistdjursjukhuset Strömsholm."
+        "fr": "Lun.–ven. 8 h–17 h ; en dehors des horaires, la clinique oriente vers Evidensia Valla Djursjukhus Linköping ou Specialistdjursjukhuset Strömsholm.",
+        "es": "Lun–vie 8:00–17:00 h; cuando está cerrado, remite a Evidensia Valla Djursjukhus Linköping o a Specialistdjursjukhuset Strömsholm."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-norrkoping/vara-oppettider/",
@@ -576,7 +601,8 @@
         "sl": "pon–pet 8–17; zunaj delovnega časa glejte dežurno službo Distriktsveterinärerna Gotland.",
         "hr": "pon–pet 8–17; izvan radnog vremena pogledaj dežurnu službu Distriktsveterinärerna Gotland.",
         "de": "Mo–Fr 8–17 Uhr; außerhalb der Sprechzeiten siehe Bereitschaftsdienst der Distriktsveterinärerna Gotland.",
-        "fr": "Lun.–ven. 8 h–17 h ; hors horaires, voir la garde de Distriktsveterinärerna Gotland."
+        "fr": "Lun.–ven. 8 h–17 h ; hors horaires, voir la garde de Distriktsveterinärerna Gotland.",
+        "es": "Lun–vie 8:00–17:00 h; fuera de horario, consulta la guardia de Distriktsveterinärerna Gotland."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djurkliniken-visby/",
@@ -596,7 +622,8 @@
         "sl": "Nujni sprejem 8–21, ponoči zaprto (hospitalizirane živali nadzirajo 24 ur na dan).",
         "hr": "Hitni prijem 8–21, noću zatvoreno (hospitalizirani pacijenti nadziru se danonoćno).",
         "de": "Notaufnahme 8–21 Uhr, nachts geschlossen (stationäre Patienten werden rund um die Uhr überwacht).",
-        "fr": "Accueil des urgences 8 h–21 h, fermé la nuit (patients hospitalisés surveillés 24 h/24)."
+        "fr": "Accueil des urgences 8 h–21 h, fermé la nuit (patients hospitalisés surveillés 24 h/24).",
+        "es": "Recepción de urgencias 8:00–21:00 h, cerrado por la noche (los animales ingresados se vigilan las 24 horas)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/goteborg/vastra-djursjukhuset/mottagningar/akutmottagningen/",
@@ -618,7 +645,8 @@
         "sl": "Nujna pomoč 8–21; ponoči napoti na AniCura Regiondjursjukhuset Bagarmossen (24 ur).",
         "hr": "Hitni slučajevi 8–21; noću upućuje na AniCura Regiondjursjukhuset Bagarmossen (24 h).",
         "de": "Notdienst 8–21 Uhr; nachts wird an AniCura Regiondjursjukhuset Bagarmossen (rund um die Uhr geöffnet) verwiesen.",
-        "fr": "Urgences 8 h–21 h ; la nuit, orientation vers AniCura Regiondjursjukhuset Bagarmossen (24 h/24)."
+        "fr": "Urgences 8 h–21 h ; la nuit, orientation vers AniCura Regiondjursjukhuset Bagarmossen (24 h/24).",
+        "es": "Urgencias 8:00–21:00 h; por la noche remite a AniCura Regiondjursjukhuset Bagarmossen (24 h)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
@@ -639,7 +667,8 @@
         "sl": "Nujna pomoč 8.15–20; na oddelku je osebje 24 ur na dan.",
         "hr": "Hitna skrb 8:15–20:00; odjel je danonoćno pod nadzorom osoblja.",
         "de": "Notdienst 8:15–20:00 Uhr; Station rund um die Uhr besetzt.",
-        "fr": "Soins d’urgence 8 h 15–20 h ; service d’hospitalisation assuré 24 h/24."
+        "fr": "Soins d’urgence 8 h 15–20 h ; service d’hospitalisation assuré 24 h/24.",
+        "es": "Urgencias 8:15–20:00 h; planta con personal las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/ostergotland/jagarvallens-djursjukhus/",
@@ -660,7 +689,8 @@
         "sl": "Nujna pomoč 7–21.",
         "hr": "Hitno radno vrijeme 07–21.",
         "de": "Notdienstzeiten 07–21 Uhr.",
-        "fr": "Urgences 7 h–21 h."
+        "fr": "Urgences 7 h–21 h.",
+        "es": "Horario de urgencias 7:00–21:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -679,7 +709,8 @@
         "sl": "Nujna pomoč 8–22.",
         "hr": "Hitno radno vrijeme 08–22.",
         "de": "Notdienstzeiten 08–22 Uhr.",
-        "fr": "Urgences 8 h–22 h."
+        "fr": "Urgences 8 h–22 h.",
+        "es": "Horario de urgencias 8:00–22:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -698,7 +729,8 @@
         "sl": "Nujna pomoč 8–24.",
         "hr": "Hitno radno vrijeme 8–24.",
         "de": "Notdienstzeiten 8–24 Uhr.",
-        "fr": "Urgences 8 h–24 h."
+        "fr": "Urgences 8 h–24 h.",
+        "es": "Horario de urgencias 8:00–24:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -718,7 +750,8 @@
         "sl": "Nujna pomoč 8–20.",
         "hr": "Hitno radno vrijeme 08–20.",
         "de": "Notdienstzeiten 08–20 Uhr.",
-        "fr": "Urgences 8 h–20 h."
+        "fr": "Urgences 8 h–20 h.",
+        "es": "Horario de urgencias 8:00–20:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -737,7 +770,8 @@
         "sl": "Nujna pomoč 8–20.",
         "hr": "Hitno radno vrijeme 08–20.",
         "de": "Notdienstzeiten 08–20 Uhr.",
-        "fr": "Urgences 8 h–20 h."
+        "fr": "Urgences 8 h–20 h.",
+        "es": "Horario de urgencias 8:00–20:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -756,7 +790,8 @@
         "sl": "Nujna pomoč 8–15.30.",
         "hr": "Hitno radno vrijeme 08–15:30.",
         "de": "Notdienstzeiten 08–15:30 Uhr.",
-        "fr": "Urgences 8 h–15 h 30."
+        "fr": "Urgences 8 h–15 h 30.",
+        "es": "Horario de urgencias 8:00–15:30 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -775,7 +810,8 @@
         "sl": "Odprto 8–16.",
         "hr": "Otvoreno 08–16.",
         "de": "Geöffnet 08–16 Uhr.",
-        "fr": "Ouvert 8 h–16 h."
+        "fr": "Ouvert 8 h–16 h.",
+        "es": "Abierto 8:00–16:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -794,7 +830,8 @@
         "sl": "Odprto 8–17.",
         "hr": "Otvoreno 08–17.",
         "de": "Geöffnet 08–17 Uhr.",
-        "fr": "Ouvert 8 h–17 h."
+        "fr": "Ouvert 8 h–17 h.",
+        "es": "Abierto 8:00–17:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -813,7 +850,8 @@
         "sl": "Odprto 8–17.",
         "hr": "Otvoreno 08–17.",
         "de": "Geöffnet 08–17 Uhr.",
-        "fr": "Ouvert 8 h–17 h."
+        "fr": "Ouvert 8 h–17 h.",
+        "es": "Abierto 8:00–17:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -833,7 +871,8 @@
         "sl": "Klinika za nujno pomoč in oskrbo; ko je zaprto, napoti v druge veterinarske bolnišnice.",
         "hr": "Klinika za hitne slučajeve i njegu; izvan radnog vremena upućuje na druge veterinarske bolnice.",
         "de": "Notfall- und Behandlungsklinik; außerhalb der Öffnungszeiten Verweis auf andere Tierkliniken.",
-        "fr": "Clinique d’urgences et de soins ; oriente vers d’autres hôpitaux vétérinaires lorsqu’elle est fermée."
+        "fr": "Clinique d’urgences et de soins ; oriente vers d’autres hôpitaux vétérinaires lorsqu’elle est fermée.",
+        "es": "Clínica de urgencias y cuidados; cuando está cerrada, remite a otros hospitales veterinarios."
       },
       "small_animals": true,
       "url": "https://www.djurakuten.se/",
@@ -854,7 +893,8 @@
         "sl": "Akutni pacienti ob delavnikih približno 9–17, brez naročanja sob 10–14, ned 12–16; telefon za nujne primere 018-781 41 60.",
         "hr": "Akutni pacijenti radnim danom oko 9–17, bez najave sub 10–14, ned 12–16; telefon za hitne slučajeve 018-781 41 60.",
         "de": "Akutpatienten werktags etwa 9–17 Uhr, ohne Termin Sa 10–14 Uhr, So 12–16 Uhr; Notfalltelefon 018-781 41 60.",
-        "fr": "Patients urgents en semaine environ 9 h–17 h, sans rendez-vous sam. 10 h–14 h, dim. 12 h–16 h ; téléphone d’urgence 018-781 41 60."
+        "fr": "Patients urgents en semaine environ 9 h–17 h, sans rendez-vous sam. 10 h–14 h, dim. 12 h–16 h ; téléphone d’urgence 018-781 41 60.",
+        "es": "Pacientes urgentes entre semana 9:00–17:00 h aprox., sin cita los sábados 10:00–14:00 h y los domingos 12:00–16:00 h; teléfono de urgencias 018-781 41 60."
       },
       "small_animals": true,
       "url": "https://www.rembacken.se/",
@@ -874,7 +914,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/skelleftea",
@@ -895,7 +936,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/vannas",
@@ -916,7 +958,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -937,7 +980,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -959,7 +1003,8 @@
         "sl": "Ambulanta ob delavnikih 8–16; akutno bolne živali napotijo na kliniko v Vännäsu.",
         "hr": "Klinika radnim danom 8–16; akutno bolesne životinje upućuju se na kliniku u Vännäsu.",
         "de": "Praxis werktags 8–16 Uhr; akut kranke Tiere werden an die Klinik in Vännäs verwiesen.",
-        "fr": "Clinique en semaine 8 h–16 h ; les animaux gravement malades sont orientés vers la clinique de Vännäs."
+        "fr": "Clinique en semaine 8 h–16 h ; les animaux gravement malades sont orientés vers la clinique de Vännäs.",
+        "es": "Clínica entre semana 8:00–16:00 h; los animales con enfermedad aguda se remiten a la clínica de Vännäs."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
@@ -978,7 +1023,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/pitea",
@@ -999,7 +1045,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1020,7 +1067,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/alvsbyn",
@@ -1041,7 +1089,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1062,7 +1111,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/jamtlands-lan/hede",
@@ -1083,7 +1133,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/mora",
@@ -1104,7 +1155,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1125,7 +1177,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/nykoping",
@@ -1146,7 +1199,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1167,7 +1221,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1188,7 +1243,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1209,7 +1265,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/fjardhundra",
@@ -1230,7 +1287,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1251,7 +1309,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1272,7 +1331,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1293,7 +1353,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/sjobo-osterlen",
@@ -1314,7 +1375,8 @@
       "duty_i18n": {
         "hr": "Veterinar je telefonom dostupan danonoćno za akutno bolesne životinje (dežurstvo u pripravnosti, nije 24-satna bolnica s osobljem); sama klinika radi samo radnim danom. Psi, mačke i druge male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar für akut kranke Haustiere (Bereitschaftsdienst, keine rund um die Uhr besetzte Tierklinik); die Praxis selbst ist nur werktags geöffnet. Hunde, Katzen und andere Kleintiere.",
-        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux."
+        "fr": "Vétérinaire joignable par téléphone 24 h/24 pour les animaux gravement malades (astreinte, et non hôpital ouvert 24 h/24) ; la clinique elle-même n’est ouverte qu’en semaine. Chiens, chats et autres petits animaux.",
+        "es": "Veterinario localizable las 24 horas por teléfono para mascotas con enfermedad aguda (guardia localizada, no es un hospital con personal las 24 horas); la clínica solo abre en días laborables. Perros, gatos y otras mascotas pequeñas."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1335,7 +1397,8 @@
       "duty_i18n": {
         "hr": "pon–pet 07:30–12:00 i 13:00–16:30; nema broja za hitne slučajeve izvan radnog vremena.",
         "de": "Mo–Fr 07:30–12:00 Uhr und 13:00–16:30 Uhr; keine Notfallnummer außerhalb der Sprechzeiten.",
-        "fr": "Lun.–ven. 7 h 30–12 h et 13 h–16 h 30 ; pas de numéro d’urgence hors horaires."
+        "fr": "Lun.–ven. 7 h 30–12 h et 13 h–16 h 30 ; pas de numéro d’urgence hors horaires.",
+        "es": "Lun–vie 7:30–12:00 y 13:00–16:30 h; sin número de urgencias fuera de horario."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,
@@ -1356,7 +1419,8 @@
         "sl": "pon 10–13.30 in 14.30–19, tor–pet 8–12 in 13–16.45; sob–ned zaprto; nujne linije zunaj delovnega časa ni (smučarsko/turistično območje; najbližja 24-urna: Östersunds Djursjukhus).",
         "hr": "pon 10:00–13:30 i 14:30–19:00; uto–pet 08:00–12:00 i 13:00–16:45; sub–ned zatvoreno; nema linije za hitne slučajeve izvan radnog vremena (skijaško/turističko područje; najbliža 24-satna: Östersunds Djursjukhus).",
         "de": "Mo 10:00–13:30 Uhr und 14:30–19:00 Uhr; Di–Fr 08:00–12:00 Uhr und 13:00–16:45 Uhr; Sa–So geschlossen; keine Notfallnummer außerhalb der Sprechzeiten (Ski- und Urlaubsregion; nächste rund um die Uhr geöffnete Klinik: Östersunds Djursjukhus).",
-        "fr": "Lun. 10 h–13 h 30 et 14 h 30–19 h ; mar.–ven. 8 h–12 h et 13 h–16 h 45 ; fermé sam.–dim. ; pas de ligne d’urgence hors horaires (zone de ski et de tourisme ; service 24 h/24 le plus proche : Östersunds Djursjukhus)."
+        "fr": "Lun. 10 h–13 h 30 et 14 h 30–19 h ; mar.–ven. 8 h–12 h et 13 h–16 h 45 ; fermé sam.–dim. ; pas de ligne d’urgence hors horaires (zone de ski et de tourisme ; service 24 h/24 le plus proche : Östersunds Djursjukhus).",
+        "es": "Lun 10:00–13:30 y 14:30–19:00 h; mar–vie 8:00–12:00 y 13:00–16:45 h; cerrado sáb–dom; sin línea de urgencias fuera de horario (zona de esquí y turismo; el centro 24 h más cercano: Östersunds Djursjukhus)."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/are-djurklinik/",
@@ -1376,7 +1440,8 @@
         "sl": "pon–pet 8–17; sob–ned zaprto; nasveti samo v delovnem času.",
         "hr": "pon–pet 08:00–17:00; sub–ned zatvoreno; savjeti samo tijekom radnog vremena.",
         "de": "Mo–Fr 08:00–17:00 Uhr; Sa–So geschlossen; Beratung nur während der Öffnungszeiten.",
-        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim. ; conseils uniquement pendant les horaires d’ouverture."
+        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim. ; conseils uniquement pendant les horaires d’ouverture.",
+        "es": "Lun–vie 8:00–17:00 h; cerrado sáb–dom; solo asesoramiento en horario de apertura."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-kristianstad/",
@@ -1396,7 +1461,8 @@
         "sl": "pon–pet 8–17; sob–ned zaprto.",
         "hr": "pon–pet 08:00–17:00; sub–ned zatvoreno.",
         "de": "Mo–Fr 08:00–17:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim."
+        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim.",
+        "es": "Lun–vie 8:00–17:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-eskilstuna/",
@@ -1416,7 +1482,8 @@
         "sl": "pon–pet 8–17; sob–ned zaprto; akutno bolne živali v delovnem času sprejmejo glede na razpoložljivost.",
         "hr": "pon–pet 8:00–17:00; sub–ned zatvoreno; akutno bolesne životinje primaju se prema raspoloživosti tijekom radnog vremena.",
         "de": "Mo–Fr 8:00–17:00 Uhr; Sa–So geschlossen; akut kranke Tiere werden während der Öffnungszeiten je nach Verfügbarkeit behandelt.",
-        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim. ; animaux gravement malades pris en charge selon les disponibilités pendant les horaires d’ouverture."
+        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim. ; animaux gravement malades pris en charge selon les disponibilités pendant les horaires d’ouverture.",
+        "es": "Lun–vie 8:00–17:00 h; cerrado sáb–dom; los animales con enfermedad aguda se atienden según disponibilidad en horario de apertura."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
@@ -1436,7 +1503,8 @@
         "sl": "pon, sre, pet 8–16.30; tor, čet 8–20; sob–ned zaprto.",
         "hr": "pon, sri, pet 08:00–16:30; uto, čet 08:00–20:00; sub–ned zatvoreno.",
         "de": "Mo, Mi, Fr 08:00–16:30 Uhr; Di, Do 08:00–20:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun., mer., ven. 8 h–16 h 30 ; mar., jeu. 8 h–20 h ; fermé sam.–dim."
+        "fr": "Lun., mer., ven. 8 h–16 h 30 ; mar., jeu. 8 h–20 h ; fermé sam.–dim.",
+        "es": "Lun, mié y vie 8:00–16:30 h; mar y jue 8:00–20:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/trestad-djurklinik-evidensia/",
@@ -1456,7 +1524,8 @@
         "sl": "pon–sre 8–21; čet–pet 8–17; sob–ned zaprto.",
         "hr": "pon–sri 08:00–21:00; čet–pet 08:00–17:00; sub–ned zatvoreno.",
         "de": "Mo–Mi 08:00–21:00 Uhr; Do–Fr 08:00–17:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun.–mer. 8 h–21 h ; jeu.–ven. 8 h–17 h ; fermé sam.–dim."
+        "fr": "Lun.–mer. 8 h–21 h ; jeu.–ven. 8 h–17 h ; fermé sam.–dim.",
+        "es": "Lun–mié 8:00–21:00 h; jue y vie 8:00–17:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/alviks-veterinarklinik/",
@@ -1475,7 +1544,8 @@
       "duty_i18n": {
         "hr": "Hitni prijem pon–čet 07:30–21:00, pet 07:30–18:00; vikendom nema hitnog radnog vremena.",
         "de": "Notaufnahme Mo–Do 07:30–21:00 Uhr, Fr 07:30–18:00 Uhr; kein Notdienst am Wochenende.",
-        "fr": "Accueil des urgences lun.–jeu. 7 h 30–21 h, ven. 7 h 30–18 h ; pas d’urgences le week-end."
+        "fr": "Accueil des urgences lun.–jeu. 7 h 30–21 h, ven. 7 h 30–18 h ; pas d’urgences le week-end.",
+        "es": "Recepción de urgencias lun–jue 7:30–21:00 h, vie 7:30–18:00 h; sin urgencias los fines de semana."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,
@@ -1496,7 +1566,8 @@
         "sl": "pon, sre 7–19; tor, čet, pet 7–17; sob–ned zaprto.",
         "hr": "pon, sri 07:00–19:00; uto, čet, pet 07:00–17:00; sub–ned zatvoreno.",
         "de": "Mo, Mi 07:00–19:00 Uhr; Di, Do, Fr 07:00–17:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun., mer. 7 h–19 h ; mar., jeu., ven. 7 h–17 h ; fermé sam.–dim."
+        "fr": "Lun., mer. 7 h–19 h ; mar., jeu., ven. 7 h–17 h ; fermé sam.–dim.",
+        "es": "Lun y mié 7:00–19:00 h; mar, jue y vie 7:00–17:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/kungsholmen-veterinarklinik-evidensia/",
@@ -1516,7 +1587,8 @@
         "sl": "Ambulanta pon–pet 7–20; nujna pomoč pon–pet 7–20 in sob 10–17; pred prihodom pokličite.",
         "hr": "Klinika pon–pet 07:00–20:00; hitna skrb pon–pet 07:00–20:00 i sub 10:00–17:00; nazovi prije dolaska.",
         "de": "Klinik Mo–Fr 07:00–20:00 Uhr; Notdienst Mo–Fr 07:00–20:00 Uhr und Sa 10:00–17:00 Uhr; bitte vor dem Kommen anrufen.",
-        "fr": "Clinique lun.–ven. 7 h–20 h ; urgences lun.–ven. 7 h–20 h et sam. 10 h–17 h ; appelez avant de venir."
+        "fr": "Clinique lun.–ven. 7 h–20 h ; urgences lun.–ven. 7 h–20 h et sam. 10 h–17 h ; appelez avant de venir.",
+        "es": "Clínica lun–vie 7:00–20:00 h; urgencias lun–vie 7:00–20:00 h y sáb 10:00–17:00 h; llama antes de ir."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nacka/",
@@ -1536,7 +1608,8 @@
         "sl": "pon–čet 8–19; pet 8–17; sob–ned zaprto.",
         "hr": "pon–čet 08:00–19:00; pet 08:00–17:00; sub–ned zatvoreno.",
         "de": "Mo–Do 08:00–19:00 Uhr; Fr 08:00–17:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun.–jeu. 8 h–19 h ; ven. 8 h–17 h ; fermé sam.–dim."
+        "fr": "Lun.–jeu. 8 h–19 h ; ven. 8 h–17 h ; fermé sam.–dim.",
+        "es": "Lun–jue 8:00–19:00 h; vie 8:00–17:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/lidingo-veterinarklinik/",
@@ -1556,7 +1629,8 @@
         "sl": "pon–čet 7–19; pet 7–17.45; sob–ned zaprto.",
         "hr": "pon–čet 07:00–19:00; pet 07:00–17:45; sub–ned zatvoreno.",
         "de": "Mo–Do 07:00–19:00 Uhr; Fr 07:00–17:45 Uhr; Sa–So geschlossen.",
-        "fr": "Lun.–jeu. 7 h–19 h ; ven. 7 h–17 h 45 ; fermé sam.–dim."
+        "fr": "Lun.–jeu. 7 h–19 h ; ven. 7 h–17 h 45 ; fermé sam.–dim.",
+        "es": "Lun–jue 7:00–19:00 h; vie 7:00–17:45 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/vasastans-veterinarklinik/",
@@ -1576,7 +1650,8 @@
         "sl": "pon–pet 8–17; sob–ned zaprto.",
         "hr": "pon–pet 08:00–17:00; sub–ned zatvoreno.",
         "de": "Mo–Fr 08:00–17:00 Uhr; Sa–So geschlossen.",
-        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim."
+        "fr": "Lun.–ven. 8 h–17 h ; fermé sam.–dim.",
+        "es": "Lun–vie 8:00–17:00 h; cerrado sáb–dom."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/saltsjobadens-djurklinik/",
@@ -1596,7 +1671,8 @@
         "sl": "pon–čet 7.30–20; pet 7.30–17; sob–ned 10–16 samo ob lihih tednih. Nujne primere zunaj delovnega časa napotijo na Alingsås Djursjukhus (0322-632 000, vsak dan 8–21).",
         "hr": "pon–čet 07:30–20, pet 07:30–17; sub–ned 10:00–16:00 samo neparnim tjednima. Hitni slučajevi izvan radnog vremena upućuju se u Alingsås Djursjukhus (0322-632 000, svaki dan 08–21).",
         "de": "Mo–Do 07:30–20:00 Uhr; Fr 07:30–17:00 Uhr; Sa–So 10:00–16:00 Uhr nur in ungeraden Wochen. Notfälle außerhalb der Sprechzeiten werden an Alingsås Djursjukhus verwiesen (0322-632 000, täglich 08–21 Uhr).",
-        "fr": "Lun.–jeu. 7 h 30–20 h ; ven. 7 h 30–17 h ; sam.–dim. 10 h–16 h les semaines impaires uniquement. Urgences hors horaires : Alingsås Djursjukhus (0322-632 000, tous les jours 8 h–21 h)."
+        "fr": "Lun.–jeu. 7 h 30–20 h ; ven. 7 h 30–17 h ; sam.–dim. 10 h–16 h les semaines impaires uniquement. Urgences hors horaires : Alingsås Djursjukhus (0322-632 000, tous les jours 8 h–21 h).",
+        "es": "Lun–jue 7:30–20:00 h; vie 7:30–17:00 h; sáb–dom 10:00–16:00 h solo en semanas impares. Urgencias fuera de horario: Alingsås Djursjukhus (0322-632 000, todos los días 8:00–21:00 h)."
       },
       "small_animals": true,
       "url": "https://www.skovdedjurklinik.se/",
@@ -1616,7 +1692,8 @@
         "sl": "pon 8–18, tor/čet/pet 8–17, sre 8–16 (odmor za kosilo 12–13); zunaj delovnega časa glejte seznam nujnih klinik.",
         "hr": "pon 8–18, uto/čet/pet 8–17, sri 8–16 (stanka za ručak 12–13); izvan radnog vremena pogledaj popis hitnih klinika.",
         "de": "Mo 8–18 Uhr, Di/Do/Fr 8–17 Uhr, Mi 8–16 Uhr (Mittagspause 12–13 Uhr); außerhalb der Sprechzeiten siehe Liste der Notfallkliniken.",
-        "fr": "Lun. 8 h–18 h, mar./jeu./ven. 8 h–17 h, mer. 8 h–16 h (pause déjeuner 12 h–13 h) ; hors horaires, voir la liste des cliniques d’urgences."
+        "fr": "Lun. 8 h–18 h, mar./jeu./ven. 8 h–17 h, mer. 8 h–16 h (pause déjeuner 12 h–13 h) ; hors horaires, voir la liste des cliniques d’urgences.",
+        "es": "Lun 8:00–18:00 h, mar, jue y vie 8:00–17:00 h, mié 8:00–16:00 h (pausa 12:00–13:00 h); fuera de horario, consulta la lista de clínicas de urgencias."
       },
       "small_animals": true,
       "url": "https://halmstadsdjurklinik.se/",
@@ -1636,7 +1713,8 @@
         "sl": "Ambulanta pon–pet 8–16.30; telefon je ob delavnikih dosegljiv 7–22 (vse ambulante Lapplands). Posebnih ur za nujne primere ni.",
         "hr": "Klinika pon–pet 8:00–16:30; telefon se javlja radnim danom 7:00–22:00 (sve klinike Lapplands). Nema posebnog hitnog radnog vremena.",
         "de": "Klinik Mo–Fr 8:00–16:30 Uhr; telefonisch erreichbar werktags 7:00–22:00 Uhr (alle Lapplands-Kliniken). Keine gesonderten Notdienstzeiten.",
-        "fr": "Clinique lun.–ven. 8 h–16 h 30 ; standard téléphonique joignable 7 h–22 h en semaine (toutes les cliniques Lapplands). Pas d’horaires d’urgence distincts."
+        "fr": "Clinique lun.–ven. 8 h–16 h 30 ; standard téléphonique joignable 7 h–22 h en semaine (toutes les cliniques Lapplands). Pas d’horaires d’urgence distincts.",
+        "es": "Clínica lun–vie 8:00–16:30 h; atención telefónica 7:00–22:00 h en días laborables (todas las clínicas de Lapplands). Sin horario de urgencias aparte."
       },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
@@ -1657,7 +1735,8 @@
         "sl": "Ambulanta pon–pet 8–16.30; telefon je ob delavnikih dosegljiv 7–22 (vse ambulante Lapplands). Posebnih ur za nujne primere ni.",
         "hr": "Klinika pon–pet 8:00–16:30; telefon se javlja radnim danom 7:00–22:00 (sve klinike Lapplands). Nema posebnog hitnog radnog vremena.",
         "de": "Klinik Mo–Fr 8:00–16:30 Uhr; telefonisch erreichbar werktags 7:00–22:00 Uhr (alle Lapplands-Kliniken). Keine gesonderten Notdienstzeiten.",
-        "fr": "Clinique lun.–ven. 8 h–16 h 30 ; standard téléphonique joignable 7 h–22 h en semaine (toutes les cliniques Lapplands). Pas d’horaires d’urgence distincts."
+        "fr": "Clinique lun.–ven. 8 h–16 h 30 ; standard téléphonique joignable 7 h–22 h en semaine (toutes les cliniques Lapplands). Pas d’horaires d’urgence distincts.",
+        "es": "Clínica lun–vie 8:00–16:30 h; atención telefónica 7:00–22:00 h en días laborables (todas las clínicas de Lapplands). Sin horario de urgencias aparte."
       },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
@@ -1678,7 +1757,8 @@
         "sl": "Ambulanta 8–12 in 13–17; telefon 8–9.",
         "hr": "Klinika 8:00–12:00 i 13:00–17:00; telefon 8:00–9:00.",
         "de": "Klinik 8:00–12:00 Uhr und 13:00–17:00 Uhr; telefonisch 8:00–9:00 Uhr.",
-        "fr": "Clinique 8 h–12 h et 13 h–17 h ; téléphone 8 h–9 h."
+        "fr": "Clinique 8 h–12 h et 13 h–17 h ; téléphone 8 h–9 h.",
+        "es": "Clínica 8:00–12:00 y 13:00–17:00 h; teléfono 8:00–9:00 h."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",

@@ -49,7 +49,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours daily for emergencies and critical care. Call ahead on the way.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24, tous les jours, pour les urgences et les soins intensifs. Appelez en route."
+        "fr": "Ouvert 24 h/24, tous les jours, pour les urgences et les soins intensifs. Appelez en route.",
+        "es": "Abierto las 24 horas todos los días para urgencias y cuidados críticos. Llama de camino, antes de llegar."
       },
       "small_animals": true,
       "url": "https://www.veshospital.com.sg/",
@@ -67,7 +68,8 @@
       "emergency_24h": true,
       "duty": "24-hour emergency veterinary clinic. Call ahead.",
       "duty_i18n": {
-        "fr": "Clinique vétérinaire d’urgences 24 h/24. Appelez avant de venir."
+        "fr": "Clinique vétérinaire d’urgences 24 h/24. Appelez avant de venir.",
+        "es": "Clínica veterinaria de urgencias las 24 horas. Llama antes de ir."
       },
       "small_animals": true,
       "url": "https://www.westsideemergency.com.sg/",
@@ -85,7 +87,8 @@
       "emergency_24h": true,
       "duty": "Emergency and critical care department open 24 hours a day.",
       "duty_i18n": {
-        "fr": "Service d’urgences et de soins intensifs ouvert 24 h/24."
+        "fr": "Service d’urgences et de soins intensifs ouvert 24 h/24.",
+        "es": "Servicio de urgencias y cuidados críticos abierto las 24 horas."
       },
       "small_animals": true,
       "url": "https://www.beecroft.com.sg/",
@@ -103,7 +106,8 @@
       "emergency_24h": true,
       "duty": "Offers care 24 hours a day, including emergency and critical care.",
       "duty_i18n": {
-        "fr": "Soins assurés 24 h/24, y compris urgences et soins intensifs."
+        "fr": "Soins assurés 24 h/24, y compris urgences et soins intensifs.",
+        "es": "Atención las 24 horas, incluidas urgencias y cuidados críticos."
       },
       "small_animals": true,
       "url": "https://www.advancedvetcare.sg/",
@@ -121,7 +125,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours; day clinic plus night clinic.",
       "duty_i18n": {
-        "fr": "Ouvert 24 h/24 ; clinique de jour et clinique de nuit."
+        "fr": "Ouvert 24 h/24 ; clinique de jour et clinique de nuit.",
+        "es": "Abierto las 24 horas; clínica de día y clínica nocturna."
       },
       "small_animals": true,
       "url": "http://www.comvet.com/",
@@ -139,7 +144,8 @@
       "emergency_24h": false,
       "duty": "Emergency service (Pet A&E); call ahead for current hours.",
       "duty_i18n": {
-        "fr": "Service d’urgences (Pet A&E) ; appelez pour connaître les horaires actuels."
+        "fr": "Service d’urgences (Pet A&E) ; appelez pour connaître les horaires actuels.",
+        "es": "Servicio de urgencias (Pet A&E); llama antes para conocer el horario actual."
       },
       "small_animals": true,
       "url": "http://www.lvs.com.sg/",
@@ -157,7 +163,8 @@
       "emergency_24h": false,
       "duty": "Referral and specialist hospital; call ahead.",
       "duty_i18n": {
-        "fr": "Hôpital de référence spécialisé ; appelez avant de venir."
+        "fr": "Hôpital de référence spécialisé ; appelez avant de venir.",
+        "es": "Hospital de referencia y especialidades; llama antes de ir."
       },
       "small_animals": true,
       "url": "https://www.awrc.sg/",
@@ -175,7 +182,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours and emergency arrangements.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture et l’organisation des urgences."
+        "fr": "Appelez pour connaître les horaires d’ouverture et l’organisation des urgences.",
+        "es": "Llama para conocer el horario y la atención de urgencias."
       },
       "small_animals": true,
       "url": "http://www.mountpleasant.com.sg/",
@@ -193,7 +201,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "http://jtvet.com",
@@ -211,7 +220,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "https://www.unitedvetclinic.com/",
@@ -229,7 +239,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "http://ambervet.com",
@@ -247,7 +258,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -265,7 +277,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -283,7 +296,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture."
+        "fr": "Appelez pour connaître les horaires d’ouverture.",
+        "es": "Llama para conocer el horario."
       },
       "small_animals": true,
       "url": "http://vetclinic.sg",
@@ -301,7 +315,8 @@
       "emergency_24h": false,
       "duty": "Call for opening hours. After-hours emergency help is for existing patients only.",
       "duty_i18n": {
-        "fr": "Appelez pour connaître les horaires d’ouverture. L’aide d’urgence hors horaires est réservée aux patients déjà suivis."
+        "fr": "Appelez pour connaître les horaires d’ouverture. L’aide d’urgence hors horaires est réservée aux patients déjà suivis.",
+        "es": "Llama para conocer el horario. La ayuda de urgencias fuera de horario es solo para pacientes habituales."
       },
       "small_animals": true,
       "url": "http://thevisitingvets.com.sg",
@@ -318,7 +333,8 @@
       "emergency_24h": false,
       "duty": "Call or check the website for opening hours.",
       "duty_i18n": {
-        "fr": "Appelez ou consultez le site web pour connaître les horaires d’ouverture."
+        "fr": "Appelez ou consultez le site web pour connaître les horaires d’ouverture.",
+        "es": "Llama o consulta la web para conocer el horario."
       },
       "small_animals": true,
       "url": "https://www.apexvetclinic.com/",
@@ -335,7 +351,8 @@
       "emergency_24h": false,
       "duty": "Check the website for opening hours.",
       "duty_i18n": {
-        "fr": "Consultez le site web pour connaître les horaires d’ouverture."
+        "fr": "Consultez le site web pour connaître les horaires d’ouverture.",
+        "es": "Consulta la web para conocer el horario."
       },
       "small_animals": true,
       "url": "https://petsavenue.com.sg/",
@@ -352,7 +369,8 @@
       "emergency_24h": false,
       "duty": "Check the website for opening hours.",
       "duty_i18n": {
-        "fr": "Consultez le site web pour connaître les horaires d’ouverture."
+        "fr": "Consultez le site web pour connaître les horaires d’ouverture.",
+        "es": "Consulta la web para conocer el horario."
       },
       "small_animals": true,
       "url": "http://starsveterinaryclinic.com/our-facilities/",
@@ -370,7 +388,8 @@
       "emergency_24h": false,
       "duty": "Daily 10:00-14:00 and 15:00-19:00, by appointment only. Closed on public holidays.",
       "duty_i18n": {
-        "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés."
+        "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés.",
+        "es": "Todos los días 10:00–14:00 y 15:00–19:00 h, solo con cita previa. Cerrado en festivos."
       },
       "small_animals": true,
       "url": "https://brightonvetcare.com/pages/serangoon-gardens",
@@ -388,7 +407,8 @@
       "emergency_24h": false,
       "duty": "Daily 10:00-14:00 and 15:00-19:00, by appointment only. Closed on public holidays.",
       "duty_i18n": {
-        "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés."
+        "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés.",
+        "es": "Todos los días 10:00–14:00 y 15:00–19:00 h, solo con cita previa. Cerrado en festivos."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",
@@ -406,7 +426,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-15:00 and 16:00-21:00; Sat-Sun 10:00-15:00; by appointment only. Closed on public holidays.",
       "duty_i18n": {
-        "fr": "Lun.–ven. 10 h–15 h et 16 h–21 h ; sam.–dim. 10 h–15 h ; sur rendez-vous uniquement. Fermé les jours fériés."
+        "fr": "Lun.–ven. 10 h–15 h et 16 h–21 h ; sam.–dim. 10 h–15 h ; sur rendez-vous uniquement. Fermé les jours fériés.",
+        "es": "Lun–vie 10:00–15:00 y 16:00–21:00 h; sáb–dom 10:00–15:00 h; solo con cita previa. Cerrado en festivos."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",
