@@ -1,0 +1,164 @@
+{
+  "slug": "candy",
+  "species": "cat",
+  "name": {
+    "en": "Candy and sweets",
+    "sl": "Bonboni in sladkarije"
+  },
+  "question": {
+    "en": "Can cats eat candy?",
+    "sl": "Ali lahko mačke jedo sladkarije?"
+  },
+  "url_slug": {
+    "en": "candy",
+    "sl": "sladkarije"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, candy is not for cats and is not safe for them. Many sweets contain chocolate or raisins, which are harmful to cats, and swallowed wrappers can upset or block the gut. Cats can't taste sweetness anyway, so sweets give them nothing good.",
+    "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega."
+  },
+  "why": {
+    "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
+    "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea or stomach upset",
+      "Intestinal upset after swallowing a wrapper"
+    ],
+    "sl": [
+      "Driska ali želodčne težave",
+      "Črevesne težave po zaužitem ovitku"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat got into candy or a wrapper, contact your vet or a pet poison helpline for guidance. Call about any chocolate, even a little. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sweets are for people, not cats. Some can make kitty poorly, so keep your sweets and wrappers tidied away.",
+    "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is a lick of a sweet an emergency?",
+        "sl": "Ali je oblizek sladkarije nujen primer?"
+      },
+      "a": {
+        "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
+        "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is my cat interested in peppermint candy?",
+        "sl": "Zakaj mačko zanimajo mentolovi bonboni?"
+      },
+      "a": {
+        "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
+        "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC106",
+      "quote": "Cats should not eat candy."
+    },
+    {
+      "id": "KC106",
+      "quote": "Even so, candy is not safe for cats."
+    },
+    {
+      "id": "KC106",
+      "quote": "Chocolate is toxic to cats as well."
+    },
+    {
+      "id": "KC106",
+      "quote": "Raisins may also cause kidney failure in cats."
+    },
+    {
+      "id": "KC106",
+      "quote": "Cats are typically smaller than dogs, so we recommend calling about any chocolate exposure in a cat."
+    },
+    {
+      "id": "KC106",
+      "quote": "Candy wrappers can also cause problems if a curious cat chews and swallows a wrapper."
+    },
+    {
+      "id": "KC106",
+      "quote": "If your cat got into candy or a wrapper, contact Pet Poison Helpline at 855-764-7661 or your veterinarian for guidance."
+    },
+    {
+      "id": "KC107",
+      "quote": "Candy is not for cats."
+    },
+    {
+      "id": "KC107",
+      "quote": "candy wrappers can cause intestinal upset and gastrointestinal blockage,"
+    },
+    {
+      "id": "KC108",
+      "quote": "but remember that many sweet treats are poisonous to cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "Cats can't taste sweetness at all."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn’t toxic to cats, it’s still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "digestive issues like diarrhoea or stomach upset"
+    },
+    {
+      "id": "KC53",
+      "quote": "If your cat accidentally licks a sweet treat, there’s no need to rush them to the vet."
+    },
+    {
+      "id": "KC53",
+      "quote": "If your cat is oddly obsessed with things like peppermint candy, that’s not about the sugar either."
+    },
+    {
+      "id": "KC53",
+      "quote": "The smell of mint contains compounds like those found in catnip, which can attract cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "But mint essential oils are toxic to cats, so keep your sweets safely out of your cat’s reach."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t try to make your cat sick at home unless your vet tells you to do so."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "raisins",
+    "sugar",
+    "marshmallows",
+    "mint"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c696edc4727dba08d4b89f2575ec475972f4e1c52e6784df25f3d76933f35af1"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "746c6fb79d3d9141bc73ca90fd71ee053807d63999d83babe9b7dc8a188d78a3"
+    }
+  }
+}

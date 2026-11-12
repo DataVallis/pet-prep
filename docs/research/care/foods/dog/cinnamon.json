@@ -1,0 +1,156 @@
+{
+  "slug": "cinnamon",
+  "species": "dog",
+  "name": {
+    "en": "Cinnamon",
+    "sl": "Cimet"
+  },
+  "question": {
+    "en": "Can dogs eat cinnamon?",
+    "sl": "Ali lahko psi jedo cimet?"
+  },
+  "url_slug": {
+    "en": "cinnamon",
+    "sl": "cimet"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Cinnamon is not toxic to dogs, but it isn't recommended as a regular treat. A little in baked goods won't hurt, but cinnamon sticks, powder and large amounts can irritate the mouth and stomach, and cinnamon essential oil is riskier.",
+    "sl": "Cimet za pse ni strupen, vendar ga ne priporočamo kot reden priboljšek. Malo cimeta v pecivu ne škodi, cimetove palčke, cimet v prahu in večje količine pa lahko razdražijo usta in prebavila, eterično olje cimeta pa je še bolj tvegano."
+  },
+  "why": {
+    "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
+    "sl": "Žvečenje cimetovih palčk ali uživanje mletega cimeta lahko psu razdraži usta, vdihavanje cimeta v prahu pa lahko povzroči kašelj, dušenje in težko dihanje. Zaužitje zelo velike količine cimeta lahko povzroči bruhanje, drisko, spremembe srčnega utripa, nizek krvni sladkor in bolezen jeter. Majhni psi so lahko občutljivi že na manjše količine, eterično olje cimeta pa je lahko za pse strupeno. Pecivo s cimetom lahko vsebuje tudi ksilitol."
+  },
+  "signs": {
+    "en": [
+      "Mouth irritation",
+      "Coughing, choking or difficulty breathing (inhaled powder)",
+      "Vomiting",
+      "Diarrhoea",
+      "Changes in heart rate"
+    ],
+    "sl": [
+      "Razdražena usta",
+      "Kašelj, dušenje ali težko dihanje (vdihan prah)",
+      "Bruhanje",
+      "Driska",
+      "Spremembe srčnega utripa"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog eats a large amount of cinnamon, you don't need to panic, but do call your vet.",
+    "sl": "Če pes poje veliko cimeta, ni razloga za paniko, vseeno pa pokličite veterinarja."
+  },
+  "serving": {
+    "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
+    "sl": "Če psu daste pecivo s cimetom: le majhen košček, redko in nikoli pecivo, sladkano s ksilitolom."
+  },
+  "child": {
+    "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
+    "sl": "Cimet je začimba za ljudi. Psu ne dovoli lizati cimeta v prahu ali žvečiti cimetovih palčk, ker ga lahko zaboli v gobčku."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can my dog have a cinnamon cookie?",
+        "sl": "Ali lahko pes poje piškot s cimetom?"
+      },
+      "a": {
+        "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
+        "sl": "Malo cimeta, kot ga je v večini peciva, psu ne bo škodilo, vendar mu pecivo dajte le v majhnih količinah in redko. Nekatero pecivo vsebuje ksilitol, ki je zelo strupen."
+      }
+    },
+    {
+      "q": {
+        "en": "Is cinnamon essential oil dangerous for dogs?",
+        "sl": "Ali je eterično olje cimeta za pse nevarno?"
+      },
+      "a": {
+        "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
+        "sl": "Da. Eterično olje cimeta je lahko za pse strupeno in je bolj tvegano kot mleti cimet ali palčke."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD185",
+      "quote": "The good news is that cinnamon is not toxic to dogs, though cinnamon essential oil can be toxic for dogs."
+    },
+    {
+      "id": "KD185",
+      "quote": "Cinnamon is not toxic to dogs, but it isn’t recommended as a regular treat."
+    },
+    {
+      "id": "KD185",
+      "quote": "A little bit of cinnamon, like the amount used in most baked goods, isn’t going to hurt your dog."
+    },
+    {
+      "id": "KD185",
+      "quote": "Cinnamon can cause skin and digestive irritation and sensitization in both pets and people"
+    },
+    {
+      "id": "KD185",
+      "quote": "Chewing on cinnamon sticks and consuming ground cinnamon or essential oil can cause irritation in your dog’s mouth"
+    },
+    {
+      "id": "KD185",
+      "quote": "inhaling cinnamon powder can cause your dog to cough, choke, and have difficulty breathing."
+    },
+    {
+      "id": "KD185",
+      "quote": "a large cinnamon overdose can lead to vomiting, diarrhea, changes in heart rate, low blood sugar, and liver disease."
+    },
+    {
+      "id": "KD185",
+      "quote": "small-breed dogs may be sensitive to smaller amounts of cinnamon than larger breeds."
+    },
+    {
+      "id": "KD185",
+      "quote": "Cinnamon essential oil poses a higher risk than ground cinnamon or sticks."
+    },
+    {
+      "id": "KD185",
+      "quote": "Some baked goods also may contain xylitol as a sweetener, which is very toxic."
+    },
+    {
+      "id": "KD185",
+      "quote": "only feed small quantities on a very irregular basis."
+    },
+    {
+      "id": "KD185",
+      "quote": "If your dog eats a large amount of cinnamon, you don’t need to panic."
+    },
+    {
+      "id": "KD185",
+      "quote": "You should, however, call your veterinarian."
+    },
+    {
+      "id": "KD186",
+      "quote": "Cinnamon is generally well tolerated"
+    },
+    {
+      "id": "KD186",
+      "quote": "Large overdoses of the powder or exposure to the essential oil can lead to low blood sugar, liver disease"
+    }
+  ],
+  "related": [
+    "nutmeg",
+    "cookies",
+    "cake",
+    "xylitol"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b17a853a2b884960c12e1af4e8f0d7ad068295db79e0f4931ca65df7db22bbe"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3beaeb32c1f58a4edb27c308d62d26004b080165bff37196442dbfb62b9e88a"
+    }
+  }
+}

@@ -152,7 +152,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [-] crackers — no source dog 2026-11-11 — no source cat 2026-11-11
 - [x] pizza
 - [d] french-fries — no source cat 2026-11-11 (only potato chips / fatty foods named)
-- [ ] sugar · candy · honey · jam · cookies · cake · marshmallows · gum · nutmeg · cinnamon · ginger
+- [x] sugar
+- [x] candy
+- [d] honey — no source cat 2026-11-12
+- [-] jam — no source dog 2026-11-12 — no source cat 2026-11-12
+- [d] cookies — no source cat 2026-11-12
+- [x] cake
+- [x] marshmallows
+- [d] gum — no source cat 2026-11-12 (cat sources conflict on xylitol; no cat signs)
+- [x] nutmeg
+- [x] cinnamon
+- [ ] ginger
 - [ ] turmeric · black-pepper · vanilla · cocoa-powder · baking-soda · vinegar · soy-sauce · ketchup
 - [ ] mayonnaise · mustard · gravy · broth · hot-dogs · sausages · deli-meat · fish-sticks · sushi
 - [ ] tofu · beans · lentils · chickpeas · hummus · nut-butters · seeds-sunflower · chia-seeds · flaxseed

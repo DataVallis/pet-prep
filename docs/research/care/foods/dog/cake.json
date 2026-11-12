@@ -1,0 +1,147 @@
+{
+  "slug": "cake",
+  "species": "dog",
+  "name": {
+    "en": "Cake",
+    "sl": "Torta"
+  },
+  "question": {
+    "en": "Can dogs eat cake?",
+    "sl": "Ali lahko psi jedo torto?"
+  },
+  "url_slug": {
+    "en": "cake",
+    "sl": "torta"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to share cake with your dog. Its high sugar and fat are bad for a dog's health, and chocolate cake, cakes with raisins and cakes sweetened with xylitol are toxic to dogs.",
+    "sl": "Ne, torte raje ne delite s psom. Veliko sladkorja in maščobe psu škodi, torte s čokolado, rozinami ali ksilitolom pa so za pse strupene."
+  },
+  "why": {
+    "en": "Chocolate cake can poison a dog, with signs ranging from vomiting and diarrhoea to an irregular heartbeat and seizures. Christmas cake contains raisins, sultanas and currants, and xylitol can be used in cakes, muffins and pies. Even without these, cake brings a lot of sugar and fat, and sugary, high-fat foods can lead to pancreatitis. Because the risk depends on the ingredients, we rate cake not recommended; cake with chocolate, raisins or xylitol needs a vet at once.",
+    "sl": "Čokoladna torta lahko psa zastrupi; znaki segajo od bruhanja in driske do nerednega srčnega utripa in krčev. Božični kolač vsebuje rozine, sultanine in korintke, ksilitol pa je lahko v tortah, mafinih in pitah. Tudi brez teh sestavin ima torta veliko sladkorja in maščobe, sladka in mastna hrana pa lahko povzroči pankreatitis. Ker je tveganje odvisno od sestavin, torto uvrščamo med nepriporočljive; torta s čokolado, rozinami ali ksilitolom pomeni takojšen obisk veterinarja."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Restlessness, tremors, a fast or irregular heartbeat (chocolate)",
+      "Seizures"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Nemir, tresenje, hiter ali nereden srčni utrip (čokolada)",
+      "Krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "If the cake contained chocolate, raisins or xylitol, contact your vet or a pet poison helpline and seek veterinary care at once. If your dog shows signs of poisoning, get veterinary care immediately.",
+    "sl": "Če je torta vsebovala čokolado, rozine ali ksilitol, pokličite veterinarja ali telefonsko linijo za zastrupitve živali in nemudoma poiščite veterinarsko pomoč. Če ima pes znake zastrupitve, ga takoj odpeljite k veterinarju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cake is a treat for people. Some cakes have chocolate or raisins that are bad for dogs, so keep your slice to yourself.",
+    "sl": "Torta je priboljšek za ljudi. Nekatere torte vsebujejo čokolado ali rozine, ki so za pse slabe, zato svoj kos obdrži zase."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about Christmas cake or mince pies?",
+        "sl": "Kaj pa božični kolač ali pitice s suhim sadjem?"
+      },
+      "a": {
+        "en": "No. Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to dogs.",
+        "sl": "Ne. Pitice s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintke, ki so za pse zelo strupeni."
+      }
+    },
+    {
+      "q": {
+        "en": "Is a sugar-free cake safer?",
+        "sl": "Ali je torta brez sladkorja varnejša?"
+      },
+      "a": {
+        "en": "Not necessarily. Xylitol can be used in baked goods such as cakes, muffins and pies, and it is toxic to dogs. Check the label, especially on products sold as sugar-free or low sugar.",
+        "sl": "Ne nujno. Ksilitol se lahko uporablja v pecivu, kot so torte, mafini in pite, in je za pse strupen. Preberite deklaracijo, zlasti pri izdelkih brez sladkorja ali z malo sladkorja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD193",
+      "quote": "Dogs cannot eat chocolate cake or any other chocolate containing product, because they may experience poisoning."
+    },
+    {
+      "id": "KD193",
+      "quote": "Symptoms range from vomiting and diarrhea to more severe symptoms such as an irregular heartbeat and seizures."
+    },
+    {
+      "id": "KD193",
+      "quote": "The high sugar and fat contents are also detrimental to a dog’s health."
+    },
+    {
+      "id": "KD193",
+      "quote": "Contact Pet Poison Helpline® at (855) 764-7661 and seek medical care at once."
+    },
+    {
+      "id": "KD194",
+      "quote": "Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets."
+    },
+    {
+      "id": "KD53",
+      "quote": "Xylitol can be used in baked goods, too, such as cakes, muffins, and pies"
+    },
+    {
+      "id": "KD53",
+      "quote": "Check the label for xylitol in the ingredients of products, especially ones that advertise as sugar-free or low sugar."
+    },
+    {
+      "id": "KD191",
+      "quote": "Xylitol is a sugar alcohol commonly used as an artificial sweetener that is toxic to pets."
+    },
+    {
+      "id": "KD195",
+      "quote": "Sugary, high-fat foods can also potentially lead to pancreatitis, a painful inflammation of the pancreas."
+    },
+    {
+      "id": "KD192",
+      "quote": "Tremors in the muscles and limbs"
+    },
+    {
+      "id": "KD192",
+      "quote": "Irregular heartbeats"
+    },
+    {
+      "id": "KD192",
+      "quote": "Agitation/restlessness"
+    },
+    {
+      "id": "KD192",
+      "quote": "Increased heart rate"
+    },
+    {
+      "id": "KD192",
+      "quote": "You should take your dog to the vet clinic or animal hospital so a vet can assess your dog and properly treat them."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "raisins",
+    "xylitol",
+    "cookies",
+    "sugar",
+    "ice-cream"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2919fad2ab00159773e614b124922b8f60e4b4941caf16384fad6f690322c68"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8042921a065421accc824a4e33bae09be6df0f52fbf8a4b978e23594795295d7"
+    }
+  }
+}
