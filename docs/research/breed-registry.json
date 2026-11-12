@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "a06ccc0b080bc2edd00894ffd8829dcb7f330e47c0af7cfb21e599a3bb7d3def"
+      "sha256": "62fe938ead435200c6443894fc8357b059276955088049b536b11ab4f5904aca"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -58794,7 +58794,7 @@
       "id": "bouvier_des_flandres",
       "species": "dog",
       "order": 97,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bouvier des Flandres",
         "sl": "Flandrijski govedar"
@@ -59426,7 +59426,7 @@
       "id": "borzoi",
       "species": "dog",
       "order": 98,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Borzoi",
         "sl": "Ruski hrt"
@@ -59940,7 +59940,7 @@
       "id": "japanese_chin",
       "species": "dog",
       "order": 99,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Japanese Chin",
         "sl": "Japonski čin"
