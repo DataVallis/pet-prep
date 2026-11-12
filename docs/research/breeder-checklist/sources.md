@@ -77,3 +77,4 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 - **Pekingese parents' tests** (2026-11-04) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) → the RKC Respiratory Function Grading breed list via Dogs NSW (K40) used (other_scheme; no new key).
 - **Chow Chow parents' tests** (2026-11-04) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) and no A/B breed-club or scheme page found → `not_found` (general checklist only).
 - **Old English Sheepdog parents' tests** (2026-11-04) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) → the AKC Herding Group page (K41) used (other_scheme; no new key).
+- **Borzoi parents' tests** (2026-11-12) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) → PDSA (dog-data S800) degenerative myelopathy DNA test (other_scheme; existing key `dna_dm`).

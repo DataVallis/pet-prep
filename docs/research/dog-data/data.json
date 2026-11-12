@@ -54741,6 +54741,517 @@
       }
     }
   },
+  "borzoi": {
+    "_note": "Added 2026-11-12 (M5-R10-106, unattended run — appended after the Bouvier des Flandres: AKC 2024 No. 102 'Borzoi', S174 full-list table recorded 2026-11-12 '101 Bouvier des Flandres', '102 Borzoi'). Quotes as returned by the web-fetch tool on 2026-11-12 (PDSA, PetMD, FCI and Wikipedia pages under a 125-character quote limit — fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S800–S804 (reused S10, S11, S35, S45, S123, S174, S268). No health percentages anywhere. Identity from the FCI nomenclature (S801, 'RUSSKAYA PSOVAYA BORZAYA (193)', Group 10 Section 1, Russian Federation); standard wording from FCI Standard No 193 (S802, original valid standard 04.09.2019). The RKC Breeds A–Z page and breed-standard page were refused by the fetch tool (redirect to royalkennelclub.com not in provenance) → exercise, size, lifespan band and chips from the PDSA breed page (S800, Bull Terrier / Keeshond precedent). Lifespan: the Dogs Trust table of McMillan et al. 2024 (S123) was refused by the fetch tool and the Nature PDF (S771) names the breed only as a Fig. 5 label → senior boundary 90 from the PDSA lower bound 'Over 10 years' = Claude's proposal, verified=false. Names: FCI 'BORZOI - RUSSIAN HUNTING SIGHTHOUND', AKC / RKC 'Borzoi', also 'Russian Wolfhound' (S804); Slovenian »ruski hrt« (borzoj) — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 193, Group 10 Section 1 (Long-haired or fringed Sighthounds), Russia",
+      "unit": "—",
+      "source_id": "S801",
+      "quote": "BORZOI - RUSSIAN HUNTING SIGHTHOUND",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S801, as returned): heading 'RUSSKAYA PSOVAYA BORZAYA (193)', group 'n°10 - Sighthounds', section 'Long-haired or fringed Sighthounds', country 'RUSSIAN FEDERATION', definitive acceptance 1/13/1956, official valid standard 9/4/2019, 'Not subject to a working trial according to the FCI breeds nomenclature'. FCI Standard No 193 (S802): 'ORIGIN: Russia.' Russia is already in FCI_ORIGINS (RU; Samoyed precedent)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S800",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA key facts table (S800, label and value as returned) 'Large'. FCI (S802) desirable height males 75–85 cm (paraphrase)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            75,
+            85
+          ],
+          "female": [
+            68,
+            78
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S802",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802): desirable height at withers males 75–85 cm, females 68–78 cm (paraphrase — the tool returned the size section only as a summary); fault 'Over- or undersize by 2 cm against indicated in the Standard.' PDSA (S800) 'Average height: 68-74 cm'; PetMD (S803) males about 28 inches, females 26 inches (paraphrase)."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            27,
+            47
+          ],
+          "female": [
+            27,
+            47
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S800",
+        "quote": "Average weight: 27-47 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S800, label and value as returned), one range for both sexes (stored per sex) — the game range. The FCI standard gives no weight (S802). Alternatives: AKC breed weight chart (S268) 'Borzoi | 60-105 pounds | 60-105 pounds' (27.2–47.6 kg); PetMD (S803) males 75–105 lb, females 60–85 lb.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                27.2,
+                47.6
+              ],
+              "female": [
+                27.2,
+                47.6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S268",
+            "quote": "Borzoi | 60-105 pounds | 60-105 pounds",
+            "notes": "AKC breed weight chart (S268, re-read 2026-11-12), row as returned (male | female); 60–105 lb = 27.2–47.6 kg (our conversion)."
+          },
+          {
+            "value": {
+              "male": [
+                34.0,
+                47.6
+              ],
+              "female": [
+                27.2,
+                38.6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S803",
+            "quote": "males stand about 28 inches tall at the shoulder and weigh between 75–105 pounds, while females are a bit smaller at 26 inches tall and 60–85 pounds.",
+            "notes": "PetMD (S803); our conversion, rounded."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "V (30–40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 27–47 kg spans the 30–40 band and above. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA 27–47 kg (S800) = 60–104 lb → mostly 'Large (59–99 pounds)'. PDSA: the head keeps changing for about three years (paraphrase)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Borzoi growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S800",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S800, label and value as returned). Lower bound 10 y → the senior boundary (runbook: no McMillan 2024 / VetCompass median reachable, no RKC page; Bull Terrier / Keeshond precedent). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "petmd": {
+        "value": "9–14",
+        "unit": "years",
+        "source_id": "S803",
+        "quote": "The Borzoi lifespan is typically 9–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S803, US). Exported as the span next to the PDSA band."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED value — the Dogs Trust table of McMillan et al. 2024 data (S123) was refused by the fetch tool this run (not in provenance); the Nature PDF (S771) shows 'Borzoi' only as a tip label of Fig. 5 (no value), Supplementary Table 3 not reached. Wikipedia (S804, tier C): 'A 2024 UK study found an average life expectancy of 12 years for Borzois, with a sample size of 43' — not verified; 0.75 × 12 × 12 = 108 would be the senior month → open for David."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 10 y (S800) → 0.75 × 10 = 7.5 y = 90 months. Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked (12 y via Wikipedia S804 would give 108). Not chosen: 81 (PetMD lower bound 9 y, S803).",
+        "derived_from": [
+          "S11",
+          "S800"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S800",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts table (S800, label and value as returned) → 60 min (runbook: 'minimum N' → N; the RKC breed page was not reachable → PDSA). PetMD (S803) 'they like a moderate amount of activity' gives no number."
+      },
+      "daily_text": {
+        "value": "about an hour a day split into a couple of walks, plus off-lead running in a secure area",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "They’ll also need time to run around off-lead in a secure area.",
+        "confidence": "high",
+        "notes": "PDSA (S800); also 'This should be split into a couple of walks somewhere interesting with lots to sniff and explore.' PetMD (S803): long walks and runs in a fenced-in area (paraphrase)."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S800, feeding section). PetMD (S803): 'The most common health issue for Borzoi is bloat,' (health.gdv). → proposed_game_parameters.borzoi.meal_exercise_gap (built, M5-R16; 60 min = David's decision)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "calm; neutral to friendly towards people; placid and affectionate once they know you",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Temperament is calm; visual response is well evident.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); 'The attitude towards people is neutral to friendly.' Utilization: 'Borzoi is a hunting sighthound to be used mostly for chasing hare and fox, less for wolf hunting.' PDSA (S800): placid and affectionate once they know you, can be nervous of strangers (paraphrase)."
+      },
+      "family": {
+        "value": "gentle around children but prefer calmer households",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Borzois can be gentle dogs around children, but they prefer calmer households.",
+        "confidence": "medium",
+        "notes": "PDSA (S800). No 'family pet' statement → no family_pet chip."
+      },
+      "children": {
+        "value": "not recommended with younger children (PDSA); PetMD: great with people of all ages",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "we wouldn’t recommend a Borzoi if you have younger children",
+        "confidence": "high",
+        "notes": "PDSA (S800, fragment) → not_for_small_children. PetMD (S803) 'making them great with people of all ages, including children.' — conflicting sources → no children / small_children chip. PDSA: suited to adult-only homes or homes with older children who treat them with kindness (paraphrase)."
+      },
+      "other_pets": {
+        "value": "very high prey drive — not with smaller pets; love to chase",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Borzois do have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S800) — names a high prey drive (runbook §3) → chases_small_pets. PetMD (S803) 'Borzoi have an instinct to chase!'. PDSA: can be wary of other dogs (paraphrase). No other_pets chip."
+      },
+      "time_alone": {
+        "value": "strong bonds and known separation anxiety — ideally someone at home all the time",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Ideally they need to be in a home where someone is around all the time",
+        "confidence": "medium",
+        "notes": "PDSA (S800, fragment); otherwise they may chew household items (paraphrase). PetMD (S803) 'they don't like to be left alone for too long.' → needs_company."
+      },
+      "experienced_owner": {
+        "value": "strong-willed and independent in training — suits experienced owners",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "For this reason, Borzois suit experienced owners familiar with their needs.",
+        "confidence": "high",
+        "notes": "PDSA (S800) → experienced_owner (Weimaraner precedent: owners familiar with the breed)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with many people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "socialise your Borzoi from a young age with lots of different people, dogs and experiences",
+        "confidence": "high",
+        "notes": "PDSA (S800, fragment). A need (runbook M5-R17) → proposed_game_parameters.borzoi.socialisation (DOG_SOCIALISATION row). PetMD (S803) 'it's important to socialize your Borzoi puppy early so to be comfortable around strangers and in new situations.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Only as a consequence of being left alone (PDSA, paraphrase) → covered by needs_company; no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No weight-gain statement found; PetMD (S803) 'Free-feeding Borzoi isn't the best idea.' (bloat) → no food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 per PDSA (S800, 'Borzois are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.'); the points of concern (mouth / jaw shape → dental problems) only as a PDSA paraphrase, the RKC page was not reachable → no welfare chip (open for David, Pomeranian / Boston Terrier precedent).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 (per PDSA) — points of concern about mouth and jaw shape",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Borzois are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.",
+        "confidence": "medium",
+        "notes": "PDSA (S800); 'These are breeds of dog that have been highlighted as having ‘points of concern’' (fragment); mouth and jaw shape that can cause painful dental problems (paraphrase). Not verified on the RKC page (unreachable)."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "The most common health issue for Borzoi is bloat,",
+        "confidence": "high",
+        "notes": "PetMD (S803) heading 'Bloat and Gastric Dilatation-Volvulus'. Register health key bloat_gdv."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy — parents can be DNA tested",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Parents can be DNA tested prior to breeding.",
+        "confidence": "medium",
+        "notes": "PDSA (S800): a disease of the spinal cord that worsens and affects mobility (paraphrase). Breeder checklist dna_dm (other_scheme)."
+      },
+      "hips_elbows": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "Hip and Elbow Dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S803) health heading. Register health key hip_elbow_dysplasia."
+      },
+      "anaesthesia": {
+        "value": "sensitivity to anaesthesia",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "Sensitivity to Anesthesia",
+        "confidence": "medium",
+        "notes": "PetMD (S803) health heading. Research only."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "Progressive Retinal Atrophy (PRA)",
+        "confidence": "medium",
+        "notes": "PetMD (S803) health heading. Register health key eye_conditions."
+      },
+      "other": {
+        "value": "osteochondritis dissecans",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "Osteochondritis Dissecans (OCD)",
+        "confidence": "low",
+        "notes": "PetMD (S803) health heading. Research only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 75,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Borzoi",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-12): rank 75 'Borzoi' under 'Lowest Degree of Working/Obedience Intelligence' ('Understanding of new commands: 80 to 100 repetitions or more.'). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest degree of working/obedience intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 70–79 (S35)."
+      },
+      "training_notes": {
+        "value": "strong-willed and independent; sensitive to knocks and pulls on the lead",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S800) (paraphrase)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.borzoi.learning_multiplier (0.5, runbook rule: Lowest).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "aristocratic, tall, lean and strong, harmoniously built, rather high-legged, fairly narrow in body",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Dog of aristocratic appearance, tall, lean and strong, harmoniously built, rather high-legged, fairly narrow in body.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); slightly elongated, thin elastic skin without folds, strong but not massive bone (paraphrase). Long narrow head, not a flat-faced breed."
+      },
+      "colours": {
+        "value": [
+          "white",
+          "pale_fawn",
+          "red",
+          "grey",
+          "brindle",
+          "black",
+          "sable",
+          "pied",
+          "tan_markings"
+        ],
+        "unit": "list",
+        "source_id": "S802",
+        "quote": "Any colours from white to black in any combination are acceptable,",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); continues 'except of brown, blue, isabella (lilac) and their shadings, i.e. dilute colours with not black nose.' (fragment); solid, pied and tan patterns possible (paraphrase). Never brown / chocolate, blue, lilac or a non-black nose in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White with red patches first with the highest weight (the portrait default), then solid white, red, sable, brindle, black and tan, black."
+      },
+      "coat": {
+        "value": "long, supple, silky, light, wavy or forming large curls; feathering on neck, chest, belly, legs and tail",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Long, supple, silky, light, wavy or forming large curls. Small curls are permitted.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); feathering (muff) on neck, chest, belly, backs of forelegs and thighs (paraphrase)."
+      },
+      "nose": {
+        "value": "large, always black, prominent",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Large, always black in any coat colour, considerably prominent in relation to the lower jaw.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802)."
+      },
+      "eyes": {
+        "value": "large, almond-shaped, dark brown to brown, black-rimmed",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Large, almond-shaped, dark brown to brown; eyelids are with black edging, tight-fitting.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802)."
+      },
+      "ears": {
+        "value": "small, thin, pointed, folded back along the neck at rest",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Small, thin, mobile, pointed-tipped, covered with short hair.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); folded back along the neck at rest, carried higher when alert (paraphrase)."
+      },
+      "tail": {
+        "value": "long, thin, sickle- or sabre-shaped with abundant feather, carried low",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Sickle- or sabre-shaped, thin, long, with dense and abundant feather.",
+        "confidence": "high",
+        "notes": "FCI Standard No 193 (S802); hangs down at rest, not above the back in movement; docked tail disqualifying (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA breed page (S800) and PetMD (S803). RKC key facts not reachable on 2026-11-12 (fetch provenance).",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA key fact (S800) → large. No large_home / apartment chip (RKC 'Size of home' not reachable)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact (S800) → 60 min. No exercise chip (not more than 1 hour)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact (S800)."
+      },
+      "pdsa_grooming": {
+        "value": "brushing a few times a week",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "need brushing a few times a week",
+        "confidence": "high",
+        "notes": "PDSA (S800, fragment; continues 'possibly even more to make sure it doesn't get matted'). No number → the PetMD number (runbook »Dog grooming«). Basis of frequent_grooming."
+      },
+      "pdsa_groomer": {
+        "value": "ask a professional groomer how often",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Speak to a professional groomer who can advise you about how often this should be.",
+        "confidence": "medium",
+        "notes": "PDSA (S800). No frequency → no groomer reminder (runbook »Breed care tasks«)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds, more in spring and autumn",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "They do shed, as with any dog, but you can expect a lot more fur around the home during spring and autumn.",
+        "confidence": "high",
+        "notes": "PDSA (S800). No conflicting A/B source → sheds."
+      },
+      "pdsa_children": {
+        "value": "not with younger children",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "we wouldn’t recommend a Borzoi if you have younger children",
+        "confidence": "high",
+        "notes": "PDSA (S800, fragment) → not_for_small_children."
+      },
+      "petmd_grooming": {
+        "value": "brushing at least two to three times a week; daily is best",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "needs to be brushed at least two to three times a week with a firm bristle brush",
+        "confidence": "high",
+        "notes": "PetMD (S803, fragment) → 3 (runbook: range A–B → B); 'daily brushing is best.' → alternative 7 (open for David)."
+      },
+      "petmd_nails": {
+        "value": "nails trimmed regularly",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "trim their dog's nails regularly.",
+        "confidence": "medium",
+        "notes": "PetMD (S803, fragment). No frequency → no nail task."
+      },
+      "petmd_bathing": {
+        "value": "occasional baths",
+        "unit": "—",
+        "source_id": "S803",
+        "quote": "occasional baths are all that's needed to keep them healthy.",
+        "confidence": "medium",
+        "notes": "PetMD (S803, fragment). No frequency → no bath reminder. Ears: check during grooming, no cleaning frequency (paraphrase); teeth: no frequency."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -81964,6 +82475,271 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S797): grey, brindle, overlaid with black, uniform black (accepted, not favoured). Weights unsourced in prompts. Dark grey brindle as the portrait default — grey and brindle are the first colours of the standard.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): dark grey brindle is the portrait default; standard colours only (grey / brindle / overlaid with black / black); natural ears and tail"
+      }
+    },
+    "borzoi": {
+      "_note": "Unattended run M5-R10-106 (2026-11-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (90, Claude's proposal from the PDSA lower bound, verified=false). No new vocabulary key, no new register health key; one breeder-checklist key reused. Sourced needs built from day one: brushing 3× a week (PetMD S803 'two to three times a week'; PDSA S800 'a few times a week' has no number, M5-R13), puppy socialisation (PDSA S800 quote, M5-R17), the 'wait with the walk' digestion warning (PDSA S800 quote, M5-R16). Nails ('regularly'), baths ('occasional'), groomer ('ask a groomer'), ears and teeth — no frequency → no care task. Exercise from PDSA (S800, minimum 1 hour; RKC page not reachable).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S800",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "high",
+        "notes": "PDSA 'Minimum exercise (per day): 1 hour' (S800). Rule: one number N ('minimum N') → N = 60; RKC page not reachable → PDSA.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S800 'Minimum exercise (per day): 1 hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S800",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S800 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S800"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_12_y": 108,
+          "senior_petmd_9_y": 81
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × PDSA lower bound 'Over 10 years', S800). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper names the breed only in Fig. 5 / Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Bull Terrier / Keeshond precedent) = the PDSA band of the same form as the RKC band. Alternatives: McMillan 2024 12 y via Wikipedia (S804, tier C) → 108; PetMD lower bound 9 y (S803) → 81. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S800"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_12_y": 108,
+          "senior_petmd_9_y": 81
+        },
+        "decision": "predlog Claude 2026-11-12 (najbližja vrstica pravila runbooka, M5-R10-106) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 75 (S35) → 'Lowest degree' (ranks 70–79) → 0.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 75, Lowest, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S800): usually split into two meals (paraphrase); PetMD (S803) no free-feeding (bloat) — general advice; the game keeps its meal windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S803",
+        "quote": "needs to be brushed at least two to three times a week with a firm bristle brush",
+        "confidence": "high",
+        "notes": "borzoi.suitability.petmd_grooming. Runbook »Dog grooming«: PDSA 'a few times a week' (borzoi.suitability.pdsa_grooming) has no number → the most specific number of another A/B source: PetMD 'two to three times a week' → range A–B → B = 3. Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S803",
+            "notes": "PetMD 'daily brushing is best.' — a recommendation, not the stated need (open for David)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PetMD »two to three times a week« → zgornja meja; PDSA »a few times a week« brez števila); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S800",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S800), borzoi.exercise.after_meals; bloat in the PetMD health list (health.gdv). Built in M5-R16: 60 minutes of the warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S800",
+        "quote": "socialise your Borzoi from a young age with lots of different people, dogs and experiences",
+        "confidence": "high",
+        "notes": "borzoi.behaviour.socialisation (PDSA S800, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S800)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-106); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S800",
+              "S803"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_grooming",
+              "borzoi.suitability.petmd_grooming"
+            ],
+            "quote": "S800 'need brushing a few times a week'; S803 'needs to be brushed at least two to three times a week with a firm bristle brush'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_children",
+              "borzoi.behaviour.children"
+            ],
+            "quote": "S800 'we wouldn’t recommend a Borzoi if you have younger children'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.experienced_owner"
+            ],
+            "quote": "S800 'For this reason, Borzois suit experienced owners familiar with their needs.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.time_alone"
+            ],
+            "quote": "S800 'Ideally they need to be in a home where someone is around all the time'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_shedding"
+            ],
+            "quote": "S800 'They do shed, as with any dog, but you can expect a lot more fur around the home during spring and autumn.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.other_pets"
+            ],
+            "quote": "S800 'Borzois do have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement (PDSA: prefer calmer households).",
+          "children": "PDSA 'we wouldn’t recommend a Borzoi if you have younger children' vs PetMD 'great with people of all ages, including children' — conflicting → no children chip.",
+          "small_children": "PDSA advises against younger children.",
+          "large_home": "RKC 'Size of home' not reachable (runbook: large_home only from RKC).",
+          "apartment": "RKC 'Flat/ Apartment' not reachable.",
+          "active_family": "PDSA minimum 1 hour — no 'more than' statement.",
+          "long_daily_exercise": "Same (1 hour).",
+          "other_pets": "High prey drive → chases_small_pets instead.",
+          "low_shedding": "PDSA 'They do shed'; never hypoallergenic.",
+          "secure_fencing": "No escaping statement (off-lead only in a secure area — PDSA advice).",
+          "welfare": "RKC Breed Watch Category 2 per PDSA, but the points of concern were not returned verbatim (RKC page unreachable) → no welfare chip, open for David; not flat-faced."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): consider frequent_grooming, not_for_small_children, experienced_owner, needs_company, sheds, chases_small_pets (no sourced suits tag)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": "S800",
+        "quote": "Borzois are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.",
+        "confidence": "medium",
+        "notes": "Not flat-faced (BVA S92 does not apply); no veterinary association advises against showing the breed in advertising. RKC Breed Watch Category 2 per PDSA (mouth / jaw points of concern — paraphrase) → open for David whether a welfare chip is wanted. Never promise the breed's health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Borzoi, white with red patches (default): aristocratic, tall, lean and strong, rather high-legged, fairly narrow body; long, silky, wavy coat with feathering on neck, chest, legs and tail; long narrow head, large black nose; large almond-shaped dark eyes with black rims; small thin ears folded back; long sabre-shaped feathered tail carried low; never brown / chocolate, blue, lilac or a non-black nose",
+        "unit": "—",
+        "source_id": "S802",
+        "quote": "Dog of aristocratic appearance, tall, lean and strong, harmoniously built, rather high-legged, fairly narrow in body.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S802): any colour from white to black in any combination except brown, blue, isabella and dilutes. Weights unsourced in prompts. White with red patches as the portrait default (the most typical pattern — Claude's choice, colour weights unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with red patches is the portrait default; standard colours only; natural tail"
       }
     }
   }
