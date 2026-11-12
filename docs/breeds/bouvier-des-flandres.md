@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bouvier_des_flandres` (viri S795–S799; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174, S268); seznam za vzreditelja: stran RKC (S795) |
 | Izvor | FCI št. 191 »Bouvier des Flandres-Vlaamse Koehond«, skupina 1, sekcija 2 (goniči goveda), Belgija / Francija (S796, S797) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 101. mesto »Bouvier des Flandres« (S174, prebrano 2026-11-12) |
-| PR-ji | pet-prep #1065 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-bouvier-des-flandres` (sledi) |
+| PR-ji | pet-prep #1065 (pasma, združen `c7932f7`) · portret pet-prep PR `feat/M5-R10-105-bouvier-des-flandres-portrait` (zagon `breed-portraits.yml` 43130234203, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-bouvier-des-flandres` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 102. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-105 | 2026-11-12 |
 | Česanje vsak dan, čiščenje ušes vsaka 2 tedna, striženje krempljev vsake 4 tedne, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R18 / M5-R19 / M5-R17 / M5-R16 | 2026-11-12 |
 | Barva (izbirnik: temno siv tigrast, tigrast, tigrast s črnim nadihom, črn) | 🛠 | 💶 izziv | M5-R21 | 2026-11-12 |
-| AI portret v registru | 🗓 sledi po združitvi (`breed-portraits.yml`) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/bouvier-des-flandres`, `/sl/zivali/psi/flandrijski-govedar`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), temno siv tigrast, brki in brada, naravna ušesa in rep | — | M5-R11-04 | 2026-11-12 |
+| Stran na petprep.si (`/animals/dogs/bouvier-des-flandres`, `/sl/zivali/psi/flandrijski-govedar`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "3ff85696d2dbbbc6a97421cf9f15b3339354d5615f4323e94c22a4974d8d73cf"
+      "sha256": "f09a240a14993745290e5b933a9cc49e0f14675b589937e4d0e93c791ae18f6e"
     }
   },
   "suitability_vocabulary": {
@@ -59352,7 +59352,12 @@
           "S798"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bouvier-des-flandres.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
