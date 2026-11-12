@@ -806,6 +806,12 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Borzoi (M5-R10-106, docs/research/dog-data borzoi.appearance): "Any colours from white to black in any combination
+| are acceptable," except brown, blue, isabella and dilutes with a non-black nose (FCI Standard No 193, S802); long silky
+| coat, long narrow head, black nose, natural sabre tail. Not flat-faced; RKC Breed Watch Category 2 per PDSA (S800, no
+| welfare chip). White with red patches first with the highest weight (the portrait default); weights unsourced →
+| `verified => false`.
+|
 | Bouvier des Flandres (M5-R10-105, docs/research/dog-data bouvier_des_flandres.appearance): "The Bouvier des
 | Flandres’ coat is usually grey, brindle, or overlaid with black." / "A completely uniform black is also accepted,
 | without being favoured." (FCI Standard No 191 via KUSA, S797); coarse tousled coat with moustache and beard, natural
@@ -4586,6 +4592,44 @@ return [
             'tail' => ['natural whole tail continuing the line of the back, never docked'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'beard', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-106 (docs/research/dog-data/data.json borzoi.appearance; runbook rules 2026-10-10: standard colours only —
+    // any colour from white to black except brown, blue, isabella and dilutes (FCI Standard No 193, S802); natural tail).
+    'borzoi' => [
+        'display_name' => 'Borzoi',
+        // Colour frequencies are in no source (borzoi.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI Standard No 193 (S802, https://fci.be/Nomenclature/Standards/193g10-en.pdf), PDSA breed page (S800) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S800 "Size: Large"; S802 desirable height males 75–85 cm, females 68–78 cm (summary)',
+            'build' => 'S802 "Dog of aristocratic appearance, tall, lean and strong, harmoniously built, rather high-legged, fairly narrow in body."',
+            'coat_length' => 'S802 "Long, supple, silky, light, wavy or forming large curls. Small curls are permitted."',
+            'coat_color' => 'S802 "Any colours from white to black in any combination are acceptable," (except brown, blue, isabella and dilutes; weights unsourced)',
+            'nose' => 'S802 "Large, always black in any coat colour, considerably prominent in relation to the lower jaw."',
+            'ear_carriage' => 'S802 "Small, thin, mobile, pointed-tipped, covered with short hair."',
+            'eye_color' => 'S802 "Large, almond-shaped, dark brown to brown; eyelids are with black edging, tight-fitting."',
+            'tail' => 'S802 "Sickle- or sabre-shaped, thin, long, with dense and abundant feather."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'tall, lean, strong and elegant sighthound, rather high-legged with a fairly narrow body and a deep chest', 'weight' => 3], 'aristocratic, harmoniously built sighthound with strong but not massive bone'],
+            'coat_length' => ['long, silky, light, wavy coat with feathering on the neck, chest, belly, backs of the legs and tail'],
+            // Standard colours only (S802); white with red patches highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'white with red patches', 'weight' => 30],
+                ['value' => 'solid white', 'weight' => 15],
+                ['value' => 'red', 'weight' => 15],
+                ['value' => 'red sable', 'weight' => 10],
+                ['value' => 'brindle', 'weight' => 10],
+                ['value' => 'black and tan', 'weight' => 10],
+                ['value' => 'solid black', 'weight' => 10],
+            ],
+            'nose' => ['long, narrow head with a large black nose'],
+            'ear_carriage' => ['small, thin, pointed ears folded back along the neck'],
+            'eye_color' => ['large, almond-shaped dark brown eyes with black rims'],
+            'tail' => ['long, thin, sabre-shaped natural tail with abundant feathering, carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'nose', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

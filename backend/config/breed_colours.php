@@ -690,6 +690,16 @@ return [
         ['key' => 'black-brindle', 'value' => 'brindle overlaid with black', 'en' => 'Black-overlaid brindle', 'sl' => 'Tigrast s črnim nadihom'],
         ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-106: FCI Standard No 193 (S802) any colour from white to black except brown, blue, isabella and dilutes; same order and values as breed_appearance.php.
+    'borzoi' => [
+        ['key' => 'white-red', 'value' => 'white with red patches', 'en' => 'White with red patches', 'sl' => 'Bel z rdečimi lisami'],
+        ['key' => 'white', 'value' => 'solid white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'sable', 'value' => 'red sable', 'en' => 'Red sable', 'sl' => 'Rdeče sobolji'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjavkast'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -2606,5 +2606,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S798'], 'refs' => ['bouvier_des_flandres.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-106: borzoi.* (S800–S804), runbook rules (data.json proposed_game_parameters.borzoi.suitability_tags). PDSA
+        // (S800) + PetMD (S803); RKC key facts not reachable. RKC Breed Watch Category 2 per PDSA, points not returned
+        // verbatim → no welfare chip (open for David). Never children (PDSA vs PetMD conflict), large_home / apartment (no RKC).
+        'borzoi' => [
+            'suits' => [],
+            'consider' => [
+                // S800 "need brushing a few times a week"; S803 "needs to be brushed at least two to three times a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S800', 'S803'], 'refs' => ['borzoi.suitability.pdsa_grooming', 'borzoi.suitability.petmd_grooming']],
+                // S800 "we wouldn’t recommend a Borzoi if you have younger children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S800'], 'refs' => ['borzoi.suitability.pdsa_children', 'borzoi.behaviour.children']],
+                // S800 "For this reason, Borzois suit experienced owners familiar with their needs."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S800'], 'refs' => ['borzoi.behaviour.experienced_owner']],
+                // S800 "Ideally they need to be in a home where someone is around all the time".
+                ['tag' => 'needs_company', 'source_ids' => ['S800'], 'refs' => ['borzoi.behaviour.time_alone']],
+                // S800 "They do shed, as with any dog, but you can expect a lot more fur around the home during spring and autumn."
+                ['tag' => 'sheds', 'source_ids' => ['S800'], 'refs' => ['borzoi.suitability.pdsa_shedding']],
+                // S800 "Borzois do have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S800'], 'refs' => ['borzoi.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

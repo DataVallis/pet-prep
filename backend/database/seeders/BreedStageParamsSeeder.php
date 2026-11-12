@@ -1267,6 +1267,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BOUVIER_DES_FLANDRES = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-105)';
 
     /**
+     * M5-R10-106 Borzoi (unattended run 2026-11-12, data.json proposed_game_parameters.borzoi.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PDSA S800 "Minimum exercise (per day): 1 hour"; RKC page not reachable), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.5 (Coren rank 75, Lowest, S35);
+     * care rates the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound "Over 10 years",
+     * S800) and is NOT covered by the confirmation: see PROPOSED_R10_BORZOI_SENIOR.
+     */
+    public const CONFIRMED_R10_BORZOI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-106)';
+
+    /**
+     * M5-R10-106 Borzoi senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × PDSA lower bound 10 y, S800) — no runbook rule produced a value (the Dogs Trust McMillan 2024 table S123 and
+     * the RKC page were not reachable, no VetCompass median), so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.borzoi.senior_boundary_months).
+     */
+    public const PROPOSED_R10_BORZOI_SENIOR = 'predlog Claude 2026-11-12 (najbližja vrstica pravila runbooka, M5-R10-106) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1727,6 +1745,7 @@ class BreedStageParamsSeeder extends Seeder
         'leonberger' => [3, 'S784', 'Brushing two to three times a week helps manage loose fur and prevent matting.', 'high', false],
         'beauceron' => [1, 'S791', 'Brush them at least once a week to minimize the fur on your floor and furniture.', 'high', false],
         'bouvier_des_flandres' => [7, 'S795', 'Grooming: Every day', 'high', false],
+        'borzoi' => [3, 'S803', 'needs to be brushed at least two to three times a week with a firm bristle brush', 'high', false],
     ];
 
     /**
@@ -1784,6 +1803,7 @@ class BreedStageParamsSeeder extends Seeder
         'leonberger' => ['S785', 'Avoid exercise right before and after mealtimes.'],
         'beauceron' => ['S791', 'Prevent any exercise one hour before and one hour after eating'],
         'bouvier_des_flandres' => ['S798', 'Prevent exercise one hour before and one hour after eating'],
+        'borzoi' => ['S800', 'Remember to leave a gap between eating and exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1895,13 +1915,14 @@ class BreedStageParamsSeeder extends Seeder
         'leonberger' => ['S784', 'Due to their size alone, early training and socialisation is essential.'],
         'beauceron' => ['S791', 'It’s important to socialize Beauceron puppies with new people early so they learn that strangers aren’t scary.'],
         'bouvier_des_flandres' => ['S798', 'Bouvier des Flandres puppies need early socialization that stays consistent throughout life,'],
+        'borzoi' => ['S800', 'socialise your Borzoi from a young age with lots of different people, dogs and experiences'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2725,6 +2746,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::Leonberger => self::leonbergerProfile(),
             BreedType::Beauceron => self::beauceronProfile(),
             BreedType::BouvierDesFlandres => self::bouvierDesFlandresProfile(),
+            BreedType::Borzoi => self::borzoiProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10096,6 +10118,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bouvier_des_flandres.lifespan.median_uk',
                 'quote' => 'Bouvier des Flandres 11.3 10.4 - 11.9 151 79',
                 'notes' => 'McMillan et al. 2024 median via the Dogs Trust table (S123); RKC "Over 10 years" (S795) is consistent. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Borzoi (M5-R10-106). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_BORZOI); weight, growth, Coren rank and lifespan are sourced. The
+     * senior boundary is Claude's suggestion (PROPOSED_R10_BORZOI_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function borzoiProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BORZOI;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S800', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.borzoi.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog is full-grown at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S800', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.borzoi.senior_boundary_months', 'decision' => self::PROPOSED_R10_BORZOI_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 10 years" (S800) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC breed page could not be fetched; no VetCompass median. Alternatives: McMillan 2024 12 y via Wikipedia (tier C, S804) → 108; PetMD lower bound 9 y (S803) → 81.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.borzoi.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.borzoi.senior_boundary_months', 'decision' => self::PROPOSED_R10_BORZOI_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S800).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S800', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.borzoi.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day): 1 hour',
+                'notes' => 'PDSA "Minimum exercise (per day): 1 hour" (S800) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC breed page was not reachable). PetMD (S803) "they like a moderate amount of activity" gives no number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.borzoi.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[27, 47], [
+                'unit' => 'kg', 'source_id' => 'S800', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'borzoi.adult_weight.pdsa',
+                'quote' => 'Average weight: 27-47 kg',
+                'notes' => 'PDSA "Average weight" (S800), one range for both sexes — the FCI standard gives no weight (S802). AKC weight chart 60–105 lb (S268) and PetMD (S803) agree.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'borzoi.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 27–47 kg, S800 = mostly the Large class of S10).',
+            ]],
+            'coren_rank' => [75, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'borzoi.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, read 2026-11-12): rank 75, tier "Lowest Degree of Working/Obedience Intelligence" (70–79). Verify in The Intelligence of Dogs.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.borzoi.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 75, tier Lowest (70–79, S35) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S800', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'borzoi.lifespan.pdsa',
+                'quote' => 'Average lifespan: Over 10 years',
+                'notes' => 'PDSA band (S800); no McMillan 2024 / VetCompass median reachable. PetMD 9–14 y (S803). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

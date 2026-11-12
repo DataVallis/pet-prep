@@ -106,6 +106,7 @@ return [
     'leonberger' => 'Leonberger',
     'beauceron' => 'Beauceron',
     'bouvier_des_flandres' => 'Flandrijski govedar',
+    'borzoi' => 'Ruski hrt',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

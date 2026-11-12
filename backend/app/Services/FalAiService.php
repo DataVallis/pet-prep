@@ -838,6 +838,12 @@ class FalAiService
                 .'a flat skull, a broad, powerful muzzle and a black nose, dark eyes, '
                 .'natural ears set high with the flaps falling flat against the cheeks, never cropped, a natural whole tail, never docked, '
                 .'calm, thoughtful, fearless expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-106: FCI Standard No 193 (S802) — tall, lean sighthound, white with red patches (the portrait default), natural tail.
+            BreedType::Borzoi => 'A tall, lean and strong, aristocratic Borzoi, rather high-legged with a fairly narrow body and a deep chest, white with red patches, '
+                .'a long, silky, light, wavy coat with feathering on the neck, chest, legs and tail, '
+                .'a long, narrow head with a large black nose, large almond-shaped dark brown eyes with black rims, '
+                .'small, thin ears folded back along the neck, a long sabre-shaped feathered natural tail carried low, '
+                .'calm, gentle, alert expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2003,6 +2009,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'coarse, dry, matt, slightly tousled coat about 6 cm long with a dense undercoat, moustache, full beard and eyebrows',
                 'markings' => 'no markings, at most a small white star on the chest',
+            ],
+            // M5-R10-106: standard colours only (FCI S802: white to black in any combination); never brown, blue, lilac or a non-black nose.
+            BreedType::Borzoi => [
+                'color_scheme' => 'white with red patches',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, silky, light, wavy coat with feathering on the neck, chest, legs and tail',
+                'markings' => 'large red patches on a white coat, black nose and black eye rims',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
