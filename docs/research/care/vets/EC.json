@@ -1,0 +1,135 @@
+{
+  "country": "EC",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "USFQ - Veterinary Medical Teaching Hospital (HDEV)",
+      "url": "https://www.usfq.edu.ec/en/veterinary-medical-teaching-hospital-hdev",
+      "note": "Opened (university page); has a '24 hour emergencies' heading and says '24-hour care, 365 days a year' in the Cumbaya area. No address, phone or email in the text (contact section is an image). node/47 shows the same."
+    },
+    {
+      "name": "USFQ - TUERI Wildlife Hospital",
+      "url": "https://www.usfq.edu.ec/en/node/5153",
+      "note": "Opened; wildlife hospital next to the HDEV (Diego de Robles and Pampite, Cumbaya), open 24 h / 365 days for receiving animals and emergencies, free; phones (+593) 990 537 004 (emergencies) and 099 053 7004; tueri@usfq.edu.ec. Wildlife only, not pets."
+    },
+    {
+      "name": "El Yex - Clinica Veterinaria Municipal Urbanimal Quito",
+      "url": "https://elyex.com/clinica-veterinaria-municipal-urbanimal-quito-gratis-las-24-horas/",
+      "note": "Opened; news article (dated 27 Feb 2023 / 27 Jul 2026 on two copies): Francisco Fuertes y Gaspar Cujias, San Bartolo, south Quito; phone (02) 395 2300; consultations Mon-Fri 08:00-16:30; says animals are received 24 hours a day; all services free. Hours and 24 h claim are inconsistent, so not marked 24 h."
+    },
+    {
+      "name": "El Comercio - Clinica Veterinaria de la Universidad Central",
+      "url": "https://www.elcomercio.com/narices-frias/servicios-costos-clinicaveterinaria-universidadcentral-quito/",
+      "note": "Opened; Mon-Fri 08:00-16:00, walk-ins until about 15:00, has an emergency area; no address, phone or 24 h statement."
+    },
+    {
+      "name": "Diario El Mercurio - Hospital Municipal de la Mascota (Cuenca, Feb 2024)",
+      "url": "https://elmercurio.com.ec/?p=1073173",
+      "note": "Opened; Mon-Fri 08:00-17:00, six vets, no weekends/holidays, inside the complejo bolivariano near the Jefferson Perez coliseum; no phone. Emergencies (run-over/abandoned pets) are covered by an agreement between the municipal environmental commission and Fundacion ARCA."
+    },
+    {
+      "name": "Primicias - Hospital municipal de la mascota Cuenca (Aug 2023)",
+      "url": "https://primicias.ec/noticias/sociedad/servicios-hospital-mascota-cuenca",
+      "note": "Opened; location Av. 12 de Abril and Unidad Nacional (Jefferson Perez coliseum complex), services for dogs and cats; no phone, hours or 24 h."
+    },
+    {
+      "name": "Diario El Mercurio - Patrulla Canina Cuenca (June 2025)",
+      "url": "https://elmercurio.com.ec/?p=1195223",
+      "note": "Opened; municipal animal-emergency/abuse patrol, phone 0987050437, Mon-Fri 08:00-17:00 (run-over, poisoning, abandonment). Rescue patrol, not a clinic; not listed as an entry."
+    },
+    {
+      "name": "Diario El Mercurio - emergencia medica animal (Cuenca, Nov 2025)",
+      "url": "https://elmercurio.com.ec/?p=1226275",
+      "note": "Opened; mentions Villa Club Animal (Misicata) and D'Pelo Medic (Paseo de los Canaris y Modesto Larrea); no phone, hours or 24 h. Not used for entries."
+    },
+    {
+      "name": "Primicias - Guayaquil animal rescue unit of the fire brigade (2022)",
+      "url": "https://primicias.ec/noticias/patrocinado/guayaquil-cuenta-con-una-unidad-de-rescate-animal-del-cuerpo-de-bomberos",
+      "note": "Opened; says call 9-1-1 for animal emergencies; no hours or 24 h statement. Rescue unit, not a clinic; not an entry."
+    },
+    {
+      "name": "Diario Expreso - Quito registry of vets (Apr 2026)",
+      "url": "https://www.expreso.ec/quito/municipio-quito-implementa-registro-obligatorio-veterinarios-clinicas-279643.html",
+      "note": "Opened; Quito Unidad de Bienestar Animal 'Registra tu Huella' registration of vets/clinics via servicios.quito.gob.ec. No public list of clinics found."
+    },
+    {
+      "name": "Cuenca Doctor blog - pet emergency Cuenca",
+      "url": "https://cuencadoctor.pages.dev/cuencadoctor/blog/acute-illness-emergency-care/pet-emergency-cuenca-speak-english-get-fast-vet-care",
+      "note": "Opened; blog naming Hospital Veterinario San Francisco, Clinica La Herradura, Mascotas & Co.; no phones, hours or 24 h claims. Not used for entries."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "USFQ Veterinary Specialty Teaching Hospital (HDEV)",
+      "city": "Quito (Cumbaya)",
+      "region": "Pichincha",
+      "address": "Cumbaya, Quito (USFQ campus area)",
+      "emergency_24h": true,
+      "duty": "24-hour emergency care, 365 days a year. Call ahead.",
+      "small_animals": true,
+      "url": "https://www.usfq.edu.ec/en/veterinary-medical-teaching-hospital-hdev",
+      "source_url": "https://www.usfq.edu.ec/en/veterinary-medical-teaching-hospital-hdev",
+      "checked": "2026-11-12",
+      "note": "University page says '24 hour emergencies' and '24-hour care, 365 days a year'; no street address or phone in the fetched text (contact is an image). TUERI wildlife hospital is next door at Diego de Robles and Pampite. Needs a phone from a later run."
+    },
+    {
+      "kind": "clinic",
+      "name": "TUERI Wildlife Hospital (USFQ)",
+      "city": "Quito (Cumbaya)",
+      "region": "Pichincha",
+      "address": "Diego de Robles and Pampite, diagonally across from the USFQ main entrance, Cumbaya, Quito",
+      "phone": "+593 990 537 004",
+      "emergency_24h": true,
+      "duty": "Wild animals only: open 24 hours, 365 days a year for emergencies, free of charge.",
+      "small_animals": false,
+      "url": "https://www.usfq.edu.ec/en/node/5153",
+      "source_url": "https://www.usfq.edu.ec/en/node/5153",
+      "checked": "2026-11-12",
+      "note": "Wildlife hospital, does not treat pets (kept in research, not published). Page lists 990 537 004 (emergencies) and 099 053 7004; tueri@usfq.edu.ec."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria Municipal Urbanimal",
+      "city": "Quito",
+      "region": "Pichincha",
+      "address": "Francisco Fuertes and Gaspar Cujias, San Bartolo, south Quito",
+      "phone": "(02) 395 2300",
+      "emergency_24h": false,
+      "duty": "Free municipal clinic. Consultations Monday to Friday 08:00-16:30. Call ahead for emergencies.",
+      "small_animals": true,
+      "url": "https://elyex.com/clinica-veterinaria-municipal-urbanimal-quito-gratis-las-24-horas/",
+      "source_url": "https://elyex.com/clinica-veterinaria-municipal-urbanimal-quito-gratis-las-24-horas/",
+      "checked": "2026-11-12",
+      "note": "News article (2023, republished 2026) says animals are received 24 hours a day but consultations are Mon-Fri 08:00-16:30; inconsistent, so emergency_24h left false. Street 'Fuertes' also spelled 'Fuentes'. Official Quito Bienestar Animal page not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinica Veterinaria de la Universidad Central del Ecuador",
+      "city": "Quito",
+      "region": "Pichincha",
+      "emergency_24h": false,
+      "duty": "Open Monday to Friday 08:00-16:00; patients accepted until about 15:00, no appointment needed. Has an emergency area; no night service stated.",
+      "small_animals": true,
+      "url": "https://www.elcomercio.com/narices-frias/servicios-costos-clinicaveterinaria-universidadcentral-quito/",
+      "source_url": "https://www.elcomercio.com/narices-frias/servicios-costos-clinicaveterinaria-universidadcentral-quito/",
+      "checked": "2026-11-12",
+      "note": "Only a news article; no address or phone. University site not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Municipal de la Mascota",
+      "city": "Cuenca",
+      "region": "Azuay",
+      "address": "Complejo bolivariano, near the Jefferson Perez coliseum, Cuenca",
+      "emergency_24h": false,
+      "duty": "Municipal hospital for dogs and cats. Monday to Friday 08:00-17:00, closed weekends and holidays.",
+      "small_animals": true,
+      "url": "https://elmercurio.com.ec/?p=1073173",
+      "source_url": "https://elmercurio.com.ec/?p=1073173",
+      "checked": "2026-11-12",
+      "note": "Feb 2024 article (hours may have changed); no phone. Address from Primicias Aug 2023 article. Emergencies for run-over/abandoned pets are covered by an agreement with Fundacion ARCA; no number found. Cuenca Patrulla Canina line 0987050437 (Mon-Fri 08:00-17:00) is a municipal rescue patrol, not listed."
+    }
+  ],
+  "notes": "Research 2026-11-12. Few verifiable sources: WebSearch returned mostly news articles and directories; clinics' own websites, Agrocalidad, the Colegio de Medicos Veterinarios and Quito's Unidad de Bienestar Animal did not surface as openable pages with clinic contact data (Quito's registry 'Registra tu Huella' has no public list found). No 24 h private clinic with its own page was found in Quito, Guayaquil or Cuenca; none in Galapagos (Puerto Ayora / San Cristobal), Manta/Salinas/Montanita, Banos, Loja, Ambato (only NGO/charity articles about Galapagos pets, no clinic contact data). No animal poison line found (CIATOX 1800-VENENO is for humans, not listed). No duty rota found. Not entries: Cuenca Patrulla Canina 0987050437, Guayaquil fire-brigade animal rescue via 911, Cuenca clinics named only in blogs/news without phone (Villa Club Animal, D'Pelo Medic, Hospital Veterinario San Francisco, Clinica La Herradura). Guayaquil: no clinic with contact data found (Isla Puna municipal vet unit mentioned without contact)."
+}
