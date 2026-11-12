@@ -2627,5 +2627,24 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S800'], 'refs' => ['borzoi.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-107: japanese_chin.* (S805–S810), runbook rules (data.json proposed_game_parameters.japanese_chin.suitability_tags).
+        // RKC key facts (S805) + PetMD (S809). Flat-faced welfare breed (PetMD S809) → brachycephalic_breathing; not in marketing (BVA S92).
+        'japanese_chin' => [
+            'suits' => [
+                // S805 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S805'], 'refs' => ['japanese_chin.suitability.rkc_size_of_home']],
+                // S809 "Though they’re generally good with children, interactions between kids and Japanese Chin should always be supervised." — caveat in notes.
+                ['tag' => 'children', 'source_ids' => ['S809'], 'refs' => ['japanese_chin.behaviour.children']],
+            ],
+            'consider' => [
+                // S809 "Japanese Chin are flat-faced (brachycephalic) dogs."; "Take special care in humid or hot weather, …".
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S809'], 'refs' => ['japanese_chin.health.brachycephaly', 'japanese_chin.exercise.heat_and_walk_timing']],
+                // S809 "Japanese Chin can display separation anxiety, as these people-oriented pups prefer to be around their family members."
+                ['tag' => 'needs_company', 'source_ids' => ['S809'], 'refs' => ['japanese_chin.behaviour.time_alone']],
+                // S805 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S805'], 'refs' => ['japanese_chin.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];

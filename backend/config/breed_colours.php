@@ -700,6 +700,11 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjavkast'],
         ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-107: RKC breed standard (S806) "Black and white or red and white. Never tricolour."; same order and values as breed_appearance.php.
+    'japanese_chin' => [
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'red-white', 'value' => 'red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

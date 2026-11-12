@@ -489,6 +489,7 @@ const SPECIES = [
       { id: 'beauceron', synonyms: { en: ['Berger de Beauce', 'Beauce Sheepdog', 'Bas Rouge'], sl: ['berger de beauce'] } },
       { id: 'bouvier_des_flandres', synonyms: { en: ['Bouvier', 'Flanders Cattle Dog', 'Vlaamse Koehond'], sl: ['bouvier des flandres', 'bouvier', 'flandrijski govedar'] } },
       { id: 'borzoi', synonyms: { en: ['Russian Wolfhound', 'Russian Hunting Sighthound', 'Russkaya Psovaya Borzaya'], sl: ['borzoj', 'borzoi', 'ruski chrt'] } },
+      { id: 'japanese_chin', synonyms: { en: ['Japanese Spaniel', 'Japan Chin', 'Chin'], sl: ['japonski cin', 'čin'] } },
     ],
   },
   {
@@ -2766,6 +2767,30 @@ const DOG_FACTS = {
       ['eye_conditions', 'health.eyes'],
     ],
   },
+  // M5-R10-107. Height = PetMD 8–11 in (S809; FCI S808 'approximately 25 cm' for males only), weight = RKC breed standard
+  // 'Ideal weight 1.8-3.2 kgs' (S806; the FCI standard gives none), lifespan = McMillan 2024 median 12.5 y (S123) + RKC
+  // 'Over 10 years' (S805) + PetMD 10–12 y (S809), exercise = RKC 'Up to 30 minutes per day' (S805), coat / grooming /
+  // shedding = RKC key facts (S805). Coren rank 62 (S35). FCI origin Japan (JP). Not exported: senior_from (derived),
+  // health.breed_watch (Category 1), the PetMD care texts (care tasks / grooming rule come from the game). New health key:
+  // gm2_gangliosidosis.
+  japanese_chin: {
+    height: ['height.petmd'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly'],
+      ['heat_stroke_risk', 'health.heat'],
+      ['gm2_gangliosidosis', 'health.gm2_gangliosidosis'],
+      ['kneecap_luxation', 'health.patella'],
+      ['cataracts', 'health.cataracts'],
+      ['mitral_valve_disease', 'health.heart'],
+    ],
+  },
 
 
 };
@@ -2832,6 +2857,7 @@ export const DOG_CARE_TASKS = {
   leonberger: [['ear_cleaning', 1, 14, 'proposed_game_parameters.leonberger.ear_care'], ['bath', 1, 14, 'proposed_game_parameters.leonberger.bathing']],
   bouvier_des_flandres: [['ear_cleaning', 1, 14, 'proposed_game_parameters.bouvier_des_flandres.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.bouvier_des_flandres.nail_trimming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
+  japanese_chin: [['ear_cleaning', 1, 14, 'proposed_game_parameters.japanese_chin.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.japanese_chin.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2843,6 +2869,7 @@ export const DOG_NO_WALK_IN_HEAT = {
   brussels_griffon: 'proposed_game_parameters.brussels_griffon.no_exercise_in_heat',
   pekingese: 'proposed_game_parameters.pekingese.no_exercise_in_heat',
   dogue_de_bordeaux: 'proposed_game_parameters.dogue_de_bordeaux.no_exercise_in_heat',
+  japanese_chin: 'proposed_game_parameters.japanese_chin.no_exercise_in_heat',
 };
 
 /** M5-R14: the summer midday window of the heat warning (config/care_tasks.php heat; no weather data). */
@@ -3646,6 +3673,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.borzoi.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.borzoi.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.borzoi.exercise_minutes_senior',
+  },
+  japanese_chin: {
+    adult_minutes: ['proposed_game_parameters.japanese_chin.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.japanese_chin.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.japanese_chin.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.japanese_chin.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.japanese_chin.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.japanese_chin.exercise_minutes_senior',
   },
 
 

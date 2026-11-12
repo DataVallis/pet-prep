@@ -107,6 +107,7 @@ return [
     'beauceron' => 'Beauceron',
     'bouvier_des_flandres' => 'Flandrijski govedar',
     'borzoi' => 'Ruski hrt',
+    'japanese_chin' => 'Japonski čin',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

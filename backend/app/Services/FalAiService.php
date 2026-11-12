@@ -844,6 +844,13 @@ class FalAiService
                 .'a long, narrow head with a large black nose, large almond-shaped dark brown eyes with black rims, '
                 .'small, thin ears folded back along the neck, a long sabre-shaped feathered natural tail carried low, '
                 .'calm, gentle, alert expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-107: RKC standard (S806) / FCI-Standard N° 206 (S808) — a small, elegant, square toy dog with a profuse silky coat;
+            // flat-faced welfare breed (PetMD S809) → a moderate short face with a visible muzzle and open nostrils.
+            BreedType::JapaneseChin => 'A small, elegant, compact and square Japanese Chin toy dog, a profuse, long, straight, silky coat '
+                .'with feathering on the ears, neck, thighs and tail and short hair on the face, black and white, a fairly large rounded head (never domed) '
+                .'with a moderate short, wide face and a visible muzzle (not extreme), a black nose with clearly open nostrils, '
+                .'large round dark eyes set wide apart that do not bulge, small V-shaped feathered ears set high, a feathered tail plumed over the back, '
+                .'gentle, lively, astonished expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2016,6 +2023,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, silky, light, wavy coat with feathering on the neck, chest, legs and tail',
                 'markings' => 'large red patches on a white coat, black nose and black eye rims',
+            ],
+            // M5-R10-107: standard colours only (RKC S806: black and white or red and white) — never tricolour or solid white.
+            BreedType::JapaneseChin => [
+                'color_scheme' => 'black and white',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse, long, straight, silky coat with feathering on the ears, neck, thighs and tail',
+                'markings' => 'white coat with symmetrical black markings around the eyes and over the ears, a white blaze, moderate short face with a visible muzzle and open nostrils',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

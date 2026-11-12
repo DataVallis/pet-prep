@@ -3819,6 +3819,40 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (thekennelclub.org.uk …/hound/borzoi → royalkennelclub.com) could not be fetched on 2026-11-12 (redirect refused by the fetch tool) → no minimum / best_practice level. PDSA (dog-data S800) names degenerative myelopathy for the breed — a disease of the spinal cord (paraphrase) — and says the parents can be DNA tested before breeding → other_scheme with the existing key dna_dm. PetMD (S803) health headings (hip and elbow dysplasia, PRA) name no scheme → no test."
+    },
+    "japanese_chin": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S805",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S805",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S805",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "boas_grading",
+          "level": "best_practice",
+          "name": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme",
+          "source_id": "S805",
+          "quote": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme."
+        }
+      ],
+      "notes": "RKC breed page (dog-data S805, 2026-11-12): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC/ISDS eye scheme and BOAS breathing testing under the KC Respiratory Function Grading scheme (marked 'NEW test recognised Aug 2026'; to be added formally to the Health Standard from Jan 2027 — paraphrase); no breed-specific DNA testing package (paraphrase); 'There are not currently any additional breed specific restrictions in place for this breed.' No new test key."
     }
   }
 }
