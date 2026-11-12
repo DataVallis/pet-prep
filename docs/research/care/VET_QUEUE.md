@@ -176,7 +176,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] AM Armenia — follow-up: VetLife, VetLine, AmiryanVet on their own sites, Gyumri, Vanadzor, Dilijan, Tsaghkadzor, Sevan; skip what was unreachable twice — 1 entry (Shunn u Katun, Vanadzor), 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12 — not reachable (Facebook robots-blocked / aggregators only, see `vets/AM.json` notes): VetLife, VetLine, AmiryanVet, Gyumri, Dilijan, Tsaghkadzor, Sevan
 - [~] KZ Kazakhstan — 15 entries, 8 × 24 h, no duty rota, no poison line, check: 11 checked, 1 fixed (source_url), 0 downgraded, 0 removed, 2026-11-12
 - [x] KZ Kazakhstan — follow-up: Shymkent, Aktobe, Taraz, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan, Oskemen, KazNAU, Aqtaban, Nika — 3 entries (Kostanay, Oral, Almaty), 0 × 24 h, no duty rota, no animal poison line, check: 14 checked, 0 fixed, 0 removed, 2 24-h pages (Talisman, Atyrau) not re-openable today, 2026-11-12 — not reachable (no own sites / robots / aggregators only, see `vets/KZ.json` notes): Shymkent, Aktobe, Taraz, Semey, Kokshetau, Aktau, Kyzylorda, Turkestan, Oskemen, KazNAU, Aqtaban, Nika
-- [ ] SA Saudi Arabia
+- [~] SA Saudi Arabia — 12 entries (Riyadh 8, Jeddah 3, Dammam 1), 5 × 24 h, no duty rota, no animal poison line (MEWA 939 is general), check: 8 checked, 0 fixed, 0 removed, 2026-11-12 — left: Mecca, Medina, Tabuk, Abha, Khobar/Jubail, Al Mokhtassa Riyadh (site unreachable), Dr. Tom's phone
+- [ ] SA Saudi Arabia — follow-up: Mecca, Medina, Tabuk, Abha, Khobar/Jubail, Al Mokhtassa Riyadh, Dr. Tom's phone; skip what was unreachable twice
 - [ ] QA Qatar
 - [ ] OM Oman
 - [ ] JO Jordan
