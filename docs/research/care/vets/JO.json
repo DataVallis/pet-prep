@@ -1,0 +1,163 @@
+{
+  "country": "JO",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "JUST Faculty of Veterinary Medicine - Veterinary Teaching Hospital (Irbid)",
+      "url": "https://www.just.edu.jo/FacultiesandDepartments/FacultyOfVeterinaryMedicine/VTH/Pages/small-animal-section.aspx",
+      "note": "Opened: small-animal section and address pages (phone, services incl. emergency and critical care, ICU); no hours. The Emergency Contact Information page, FAQs, default and price-list pages returned 'Request Rejected' (site firewall) and could not be read."
+    },
+    {
+      "name": "Jordan Veterinary Association (jordanvet.com)",
+      "url": "https://www.expatfocus.com/jordan/guide/jordan-veterinary-care",
+      "note": "jordanvet.com itself could not be fetched (not in provenance set); only the contact details quoted by Expat Focus are known (+962 6 464 8246). No opened official directory, duty rota or poison line."
+    },
+    {
+      "name": "Petly Center own site",
+      "url": "https://www.petlycenter.com/",
+      "note": "Opened; states Open 24 hours."
+    },
+    {
+      "name": "Royal Paws Vet Clinic own site",
+      "url": "https://royalpawsjo.com/",
+      "note": "Opened (Arabic); states open 24 hours, 7 days."
+    },
+    {
+      "name": "Amazon Vet Center, TrueVet, First Pet, Dr Paw own sites",
+      "url": "https://firstpetclinic.com/branches",
+      "note": "All opened with WebFetch; none states 24 h (TrueVet claims '24/7 vet access' but lists 11-19 hours)."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Petly Center",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Complex No 202, Abu Nuseir St, Amman",
+      "phone": "+962 79 190 6060",
+      "emergency_24h": true,
+      "duty": "Open 24 hours; 24-hour emergency line on the same number.",
+      "url": "https://www.petlycenter.com/",
+      "source_url": "https://www.petlycenter.com/",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "Royal Paws Vet Clinic",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Tarek Street, Tabarbour, Amman",
+      "phone": "+962 79 740 4873",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week; emergency doctors on site overnight.",
+      "url": "https://royalpawsjo.com/",
+      "source_url": "https://royalpawsjo.com/",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, Jordan University of Science and Technology",
+      "city": "Irbid",
+      "region": "Irbid",
+      "address": "Jordan University of Science and Technology, P.O. Box 3030, Irbid 22110",
+      "phone": "+962 2 720 1000 ext. 22037",
+      "emergency_24h": false,
+      "duty": "Small animal section with emergency and critical care; call ahead for hours.",
+      "url": "https://www.just.edu.jo/FacultiesandDepartments/FacultyOfVeterinaryMedicine/VTH/Pages/small-animal-section.aspx",
+      "source_url": "https://www.just.edu.jo/FacultiesandDepartments/FacultyOfVeterinaryMedicine/VTH/Pages/small-animal-section.aspx",
+      "note": "Hours and the separate Emergency Contact Information page unreadable (Request Rejected).",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "Amazon Veterinary Center",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Ismail Hejazi St., Al-Ruwwad Complex 8, Al-Madina Al-Monawara, Amman",
+      "phone": "+962 79 206 2032",
+      "emergency_24h": false,
+      "duty": "Daily 10:00-22:00; Friday 14:00-22:00.",
+      "url": "https://www.amazonvetcenter.com/",
+      "source_url": "https://www.amazonvetcenter.com/",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "TrueVet Veterinary Clinic",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Amir Ben Malek St. 72-74, Khalda, Amman",
+      "phone": "+962 77 836 4463",
+      "emergency_24h": false,
+      "duty": "Daily 11:00-19:00; call ahead for emergencies.",
+      "url": "https://true-vet.com/",
+      "source_url": "https://true-vet.com/",
+      "note": "Site also says '24/7 vet access' (boarding/imaging) which conflicts with the listed 11-19 hours; not treated as 24 h.",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "First Pet Veterinary Clinic - Sweifieh",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Abed Al-Raheem Al-Hajj Mohammad St. 11, Sweifieh, Amman",
+      "phone": "+962 79 717 7835",
+      "emergency_24h": false,
+      "duty": "Sat-Wed 08:00-20:00 (Tue until 19:30).",
+      "url": "https://firstpetclinic.com/",
+      "source_url": "https://firstpetclinic.com/branches",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "First Pet Veterinary Clinic - Abdoun",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Cairo St 24, Abdoun, Amman",
+      "phone": "+962 79 717 7835",
+      "emergency_24h": false,
+      "duty": "Sat-Wed 09:00-18:00.",
+      "url": "https://firstpetclinic.com/",
+      "source_url": "https://firstpetclinic.com/branches",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "First Pet Veterinary Clinic - Dabouq",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Abdulkareem Mo'ath St, Dabouq, Amman",
+      "phone": "+962 79 717 7835",
+      "emergency_24h": false,
+      "duty": "Sat-Wed 09:30-18:00.",
+      "url": "https://firstpetclinic.com/",
+      "source_url": "https://firstpetclinic.com/branches",
+      "checked": "2026-11-12",
+      "small_animals": true
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr Paw Veterinary Clinic",
+      "city": "Amman",
+      "region": "Amman",
+      "address": "Al-Sharif Abdul Hamid Sharaf St., Amman",
+      "phone": "+962 77 003 0004",
+      "emergency_24h": false,
+      "duty": "Same-day urgent care; call ahead for hours.",
+      "url": "https://drpawjo.com/",
+      "source_url": "https://drpawjo.com/",
+      "note": "Site has an Emergency page that was not readable; no hours published on the opened page.",
+      "checked": "2026-11-12",
+      "small_animals": true
+    }
+  ],
+  "notes": "Run 2026-11-12. No opened official Jordan Veterinary Association / Syndicate, Ministry of Agriculture or University of Jordan page with a clinic directory, duty rota or animal poison line; no duty rota and no poison line found (searches returned only foreign services). JUST teaching hospital pages partly firewalled. Robots-blocked/unfetchable: jvc.jo, petmedjo.com, Facebook pages (Lifeline, Amity, PetCharm, Royal Pets, Amman Vet Clinic, Vet Yasmeine Alatoom), jordanvet.com. Leads not added (no own-site data opened): Jordan Veterinary Center (jvc.jo), Lifeline vet clinic, Amity Veterinary Clinic, Royal Pets Veterinary Health Center, Amman Vet Clinic, PetCharm, Pet Care/Pet Zone/Amman Veterinary Clinic/Jordan Mobile Veterinary Clinic (named by Expat Focus without contact data), Abdoun Veterinary Clinic and Alfaqeeh Vet Clinic (aggregators only). Jerash: a clinic reported by Jordan News (2022) as working around the clock, Facebook page Vet Yasmeine Alatoom, no phone and page unreadable - not listed. Petra: PETA/Brooke clinics treat working animals (donkeys, horses), no contact data opened - not listed. Aqaba, Zarqa, Madaba: no clinic found. Total only 9 entries."
+}
