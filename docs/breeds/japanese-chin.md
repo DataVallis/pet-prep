@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `japanese_chin` (viri S805–S810; ponovno S10, S11, S14, S24, S35, S45, S92, S123, S174); seznam za vzreditelja: RKC (S805) |
 | Izvor | FCI št. 206 »Japanese Chin« (»Japan Chin«), skupina 9, sekcija 8 (japonski čin in pekinezer), Japonska (S807, S808) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 103. mesto »Japanese Chin« (S174, prebrano 2026-11-12) |
-| PR-ji | pet-prep #1076 (pasma) · portret pet-prep PR `feat/M5-R10-107-japanese-chin-portrait` · spletna stran: pet-prep-website `feat/register-japanese-chin` |
+| PR-ji | pet-prep #1076 (pasma, združen `4f8b823`) · portret pet-prep PR `feat/M5-R10-107-japanese-chin-portrait` (zagon `breed-portraits.yml` 43172866273, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-japanese-chin` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Pravila po starosti (2.000 → 3.000 korakov pri 3 mesecih, odrasel 3.000, starejši 2.300 od 113. meseca; 4 → 3 → 2 obroka; učenje 0,7×) | 🛠 | 💶 izziv | M5-R10-107 | 2026-11-12 |
 | Česanje 2× na teden, čiščenje ušes vsaka 2 tedna, opomnik za kopanje vsake 4 tedne, poletno opozorilo za sprehod, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R18 / M5-R14 / M5-R17 | 2026-11-12 |
 | Barva (izbirnik: črno-bel, rdeče-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-12 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/japanese-chin`, `/sl/zivali/psi/japonski-cin`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črno-bel, zmeren kratek obraz z vidnim nosom, pernat rep čez hrbet | — | M5-R11-04 | 2026-11-12 |
+| Stran na petprep.si (`/animals/dogs/japanese-chin`, `/sl/zivali/psi/japonski-cin`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
