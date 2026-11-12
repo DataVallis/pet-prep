@@ -806,6 +806,13 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Japanese Chin (M5-R10-107, docs/research/dog-data japanese_chin.appearance): "Black and white or red and white. Never
+| tricolour." (RKC breed standard, S806; FCI-Standard N° 206, S808: "White with markings of black or red.", tricolour
+| disqualifying); profuse, long, straight, silky coat; "Muzzle short, wide, well cushioned" (S806); eyes "Large, without
+| exaggeration" (S808). Flat-faced welfare breed (PetMD S809): a moderate short face with a visible muzzle and open
+| nostrils — the dog trait `muzzle` (Pekingese precedent). Black and white first with the highest weight (the portrait
+| default); weights unsourced → `verified => false`.
+|
 | Borzoi (M5-R10-106, docs/research/dog-data borzoi.appearance): "Any colours from white to black in any combination
 | are acceptable," except brown, blue, isabella and dilutes with a non-black nose (FCI Standard No 193, S802); long silky
 | coat, long narrow head, black nose, natural sabre tail. Not flat-faced; RKC Breed Watch Category 2 per PDSA (S800, no
@@ -4630,6 +4637,41 @@ return [
             'tail' => ['long, thin, sabre-shaped natural tail with abundant feathering, carried low'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'nose', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-107 (docs/research/dog-data/data.json japanese_chin.appearance; runbook rules 2026-10-10: standard colours only —
+    // black and white or red and white, never tricolour or solid white (RKC S806, FCI S808); moderate `muzzle`, open nostrils).
+    'japanese_chin' => [
+        'display_name' => 'Japanese Chin',
+        // Colour frequencies are in no source (japanese_chin.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard Japanese Chin (S806, https://www.royalkennelclub.com/breed-standards/toy/japanese-chin/) and FCI-Standard N° 206 (S808) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S805 "Size: Small"; S806 "Ideal weight 1.8-3.2 kgs (4-7 lbs)."',
+            'build' => 'S806 "Elegant and aristocratic, smart, compact with profuse coat."; S808 "The ratio of height at withers to length of the body is equal."',
+            'coat_length' => 'S806 "Profuse, long, soft, straight, of silky texture."; S808 "Whole body except face covered with profuse hair."',
+            'coat_color' => 'S806 "Black and white or red and white. Never tricolour." (weights unsourced)',
+            'head' => 'S806 "Fairly large in proportion to size of dog, moderately broad skull, rounded in front, and between ears, but never domed."',
+            'muzzle' => 'Welfare rule (PetMD S809 "Japanese Chin are flat-faced (brachycephalic) dogs."): S806 "Muzzle short, wide, well cushioned" — a moderate short face, visible muzzle, nostrils clearly open',
+            'ear_carriage' => 'S806 "Small, set wide apart, high on head, carried slightly forward, V-shaped, well feathered."',
+            'eye_color' => 'S808 "Large, without exaggeration, rounded, set wide apart and lustrous black in colour."',
+            'tail' => 'S806 "Set high on level back, profusely feathered, closely curved or plumed over back."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, elegant, compact and square toy dog', 'weight' => 3], 'dainty, graceful little toy dog with a profuse coat'],
+            'coat_length' => ['profuse, long, straight, silky coat with feathering on the ears, neck, thighs and tail, short hair on the face'],
+            // Standard colours only (S806); black and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'black and white', 'weight' => 60],
+                ['value' => 'red and white', 'weight' => 40],
+            ],
+            'head' => ['fairly large, rounded head, never domed'],
+            'muzzle' => ['moderate short, wide face with a visible muzzle (not extreme), a black nose with clearly open nostrils'],
+            'ear_carriage' => ['small V-shaped ears set high and wide apart, well feathered'],
+            'eye_color' => ['large, round, dark eyes set wide apart that do not bulge, a little white in the inner corners'],
+            'tail' => ['profusely feathered tail plumed over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
