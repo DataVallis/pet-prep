@@ -1273,6 +1273,19 @@
             "prompt_hash": "sha256:8ad0bb314aea8dff635ef33c167e2ae9ce01f2b95faf1ae0e869189e54f02b68",
             "generated_at": "2026-11-11T06:59:30+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bouvier_des_flandres",
+            "species": "dog",
+            "colour": "grey-brindle",
+            "file": "dog/bouvier-des-flandres.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:94601ec046637ecf8257c9af4f6b1385e53f9e04237fd1ad461c7221620fa519",
+            "generated_at": "2026-11-12T00:51:14+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
