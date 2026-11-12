@@ -1,0 +1,172 @@
+{
+  "slug": "sugar",
+  "species": "cat",
+  "name": {
+    "en": "Sugar",
+    "sl": "Sladkor"
+  },
+  "question": {
+    "en": "Can cats eat sugar?",
+    "sl": "Ali lahko mačke jedo sladkor?"
+  },
+  "url_slug": {
+    "en": "sugar",
+    "sl": "sladkor"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Sugar isn't toxic to cats, but it's unhealthy for them and offers no nutritional value. Cats can't even taste sweetness. A lick of something sweet is no emergency, but regular sugary treats can lead to weight gain, diabetes and dental disease.",
+    "sl": "Raje ne. Sladkor za mačke ni strupen, je pa nezdrav in nima nobene hranilne vrednosti. Mačke sladkega okusa sploh ne zaznajo. Oblizek nečesa sladkega ni nujen primer, redni sladki priboljški pa lahko vodijo v debelost, sladkorno bolezen in bolezni zob."
+  },
+  "why": {
+    "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
+    "sl": "Mačke so mesojedke: njihovo telo je ustvarjeno za meso, ne za ogljikove hidrate ali sladkor, in nobena njihova okušalna brbončica ne zazna sladkega okusa. Sladkor prinaša nepotrebne kalorije, ki hitro vodijo v pridobivanje teže; sčasoma lahko preveč sladkorja povzroči inzulinsko rezistenco in nazadnje sladkorno bolezen, prispeva pa tudi h kariesu in boleznim dlesni. Rjavi sladkor ni nič drugačen. VCA navaja, da malo sladkorja večini mačk ne škodi, Cats Protection pa opozarja, da lahko redno dajanje sladke hrane vodi v zdravstvene težave, zato uporabljamo strožjo raven."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Driska",
+      "Želodčne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat just licked something sweet, there's no need to rush to the vet. If she ate a lot of a sugary food, or the food contained chocolate, contact your vet straight away.",
+    "sl": "Če je mačka le oblizala nekaj sladkega, ni treba hiteti k veterinarju. Če je pojedla veliko sladke hrane ali je bila v hrani čokolada, takoj pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cats can't even taste sweet things, and sugar isn't good for them. Sweets are for people, not for kitty.",
+    "sl": "Muce sladkega okusa sploh ne zaznajo, sladkor pa jim ne koristi. Sladkarije so za ljudi, ne za muco."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can cats taste sugar?",
+        "sl": "Ali mačke okusijo sladkor?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
+        "sl": "Ne. Mačke so mesojedke in nobena njihova okušalna brbončica ne zazna sladkega okusa. Če mačko zanima sladka hrana, se odziva na druge sestavine, na primer maščobo ali okus umami."
+      }
+    },
+    {
+      "q": {
+        "en": "Is brown sugar better for cats?",
+        "sl": "Ali je rjavi sladkor boljši za mačke?"
+      },
+      "a": {
+        "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
+        "sl": "Ne. Rjavi sladkor je še vedno sladkor; za mačje telo se ne razlikuje od belega."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn’t toxic to cats, it’s still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar offers no nutritional value for cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "Cats can't taste sweetness at all."
+    },
+    {
+      "id": "KC53",
+      "quote": "But cats only have about 500 and none of them can detect sweet flavours."
+    },
+    {
+      "id": "KC53",
+      "quote": "This is because cats are carnivores."
+    },
+    {
+      "id": "KC53",
+      "quote": "Their bodies are built to eat meat, not carbohydrates or sugar."
+    },
+    {
+      "id": "KC53",
+      "quote": "Feeding your cat sugary treats can lead to several health problems, including:"
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar adds unnecessary calories, which can quickly lead to weight gain"
+    },
+    {
+      "id": "KC53",
+      "quote": "Over time, too much sugar can cause insulin resistance and eventually diabetes."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar contributes to cavities and gum disease"
+    },
+    {
+      "id": "KC53",
+      "quote": "digestive issues like diarrhoea or stomach upset"
+    },
+    {
+      "id": "KC53",
+      "quote": "If your cat accidentally licks a sweet treat, there’s no need to rush them to the vet."
+    },
+    {
+      "id": "KC53",
+      "quote": "But regularly giving your cat sugary foods could lead to health problems."
+    },
+    {
+      "id": "KC53",
+      "quote": "Chocolate contains a chemical compound called theobromine which is toxic to cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though cats can’t taste sugar, they sometimes show an interest in sweet treats."
+    },
+    {
+      "id": "KC53",
+      "quote": "This is because they’re reacting to other ingredients in the food."
+    },
+    {
+      "id": "KC53",
+      "quote": "Many sweet foods also contain fat, amino acids or umami flavours."
+    },
+    {
+      "id": "KC53",
+      "quote": "Brown sugar is still sugar."
+    },
+    {
+      "id": "KC53",
+      "quote": "It may sound healthier, but to a cat’s body, it’s no different than white sugar"
+    },
+    {
+      "id": "KC47",
+      "quote": "A little sugar isn’t bad for most cats,"
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    }
+  ],
+  "related": [
+    "candy",
+    "cake",
+    "marshmallows",
+    "ice-cream",
+    "chocolate"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0086ae876127893b4c3753bdd13c0587008bd5c4430007187190f8ebf403c75e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "089f4835bf57580991a89e580d8722d277e988e817bf8e106f968d2148102df9"
+    }
+  }
+}

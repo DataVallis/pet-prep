@@ -1,0 +1,139 @@
+{
+  "slug": "nutmeg",
+  "species": "dog",
+  "name": {
+    "en": "Nutmeg",
+    "sl": "Muškatni orešček"
+  },
+  "question": {
+    "en": "Can dogs eat nutmeg?",
+    "sl": "Ali lahko psi jedo muškatni orešček?"
+  },
+  "url_slug": {
+    "en": "nutmeg",
+    "sl": "muskatni-orescek"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, keep nutmeg away from your dog. It contains a toxin called myristicin. The small amount used in baked goods is generally safe, but a large amount of nutmeg can cause hallucinations, disorientation and a fast heart rate.",
+    "sl": "Ne, muškatni orešček naj bo zunaj pasjega dosega. Vsebuje strup miristicin. Majhna količina v pecivu je na splošno varna, velika količina muškatnega oreščka pa lahko povzroči halucinacije, zmedenost in hiter srčni utrip."
+  },
+  "why": {
+    "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
+    "sl": "Miristicin lahko v velikih količinah povzroči halucinacije, zmedenost, hitrejši srčni utrip, visok krvni tlak, suha usta, bolečine v trebuhu in morda krče, znaki pa lahko trajajo do 48 ur. Za to bi moral pes pojesti zelo veliko muškatnega oreščka; majhna količina v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Ker začimba sama vsebuje strup, jo uvrščamo med nevarne."
+  },
+  "signs": {
+    "en": [
+      "Mild stomach upset (small amounts)",
+      "Hallucinations and disorientation",
+      "Fast heartbeat",
+      "High blood pressure and dry mouth",
+      "Belly pain",
+      "Possibly seizures",
+      "Signs can last up to 48 hours"
+    ],
+    "sl": [
+      "Blage prebavne težave (majhne količine)",
+      "Halucinacije in zmedenost",
+      "Hiter srčni utrip",
+      "Visok krvni tlak in suha usta",
+      "Bolečine v trebuhu",
+      "Morda krči",
+      "Znaki lahko trajajo do 48 ur"
+    ]
+  },
+  "what_to_do": {
+    "en": "A little nutmeg in a baked treat is very unlikely to cause serious problems. If your dog ate a large amount of nutmeg by accident, call your vet for advice.",
+    "sl": "Malo muškatnega oreščka v pecivu le redko povzroči resne težave. Če je pes po nesreči pojedel veliko muškatnega oreščka, pokličite veterinarja za nasvet."
+  },
+  "serving": null,
+  "child": {
+    "en": "Nutmeg is a spice for people's cooking. It is not for dogs, so keep spice jars where your dog can't reach them.",
+    "sl": "Muškatni orešček je začimba za kuhanje. Ni za pse, zato kozarčke z začimbami pospravi tja, kamor pes ne seže."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog ate a cookie with a little nutmeg. Is that dangerous?",
+        "sl": "Pes je pojedel piškot z malo muškatnega oreščka. Je to nevarno?"
+      },
+      "a": {
+        "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
+        "sl": "Majhna količina muškatnega oreščka v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Preverite tudi, ali piškot vsebuje ksilitol; nekatero pecivo ga vsebuje, za pse pa je zelo strupen."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD186",
+      "quote": "Nutmeg contains a toxin called myristicin."
+    },
+    {
+      "id": "KD186",
+      "quote": "The small amount of nutmeg used in recipes is very unlikely to cause serious toxicity"
+    },
+    {
+      "id": "KD186",
+      "quote": "mild stomach upset could occur if a small amount is ingested."
+    },
+    {
+      "id": "KD186",
+      "quote": "symptoms including hallucinations, disorientation, increased heart rate"
+    },
+    {
+      "id": "KD186",
+      "quote": "high blood pressure, dry mouth, abdominal pain, and possibly seizures."
+    },
+    {
+      "id": "KD186",
+      "quote": "Symptoms can last up to 48 hours."
+    },
+    {
+      "id": "KD186",
+      "quote": "A pet would need to ingest a very large amount of nutmeg"
+    },
+    {
+      "id": "KD185",
+      "quote": "But nutmeg, another common baking spice often used with cinnamon in recipes, can have toxic effects."
+    },
+    {
+      "id": "KD185",
+      "quote": "If your dog consumes a large amount of nutmeg by accident, call your veterinarian for advice."
+    },
+    {
+      "id": "KD185",
+      "quote": "Nutmeg contains the toxin myristicin, which can cause hallucinations, increased heart rate, disorientation,"
+    },
+    {
+      "id": "KD185",
+      "quote": "These symptoms can last up to 48 hours."
+    },
+    {
+      "id": "KD185",
+      "quote": "The small amount used in baked goods is generally safe."
+    },
+    {
+      "id": "KD185",
+      "quote": "Some baked goods also may contain xylitol as a sweetener, which is very toxic."
+    }
+  ],
+  "related": [
+    "cinnamon",
+    "cookies",
+    "cake",
+    "xylitol"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b84473fc8ddadd6d837c4c81d4b8d1f64e470f6048b534240640dd0d589b1f8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "86f12959d9874272fddbc7f90aa46bb5cc05e909d29a9402310a7f90f59b82fb"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "slug": "marshmallows",
+  "species": "cat",
+  "name": {
+    "en": "Marshmallows",
+    "sl": "Penasti bonboni (marshmallow)"
+  },
+  "question": {
+    "en": "Can cats eat marshmallows?",
+    "sl": "Ali lahko mačke jedo penaste bonbone (marshmallow)?"
+  },
+  "url_slug": {
+    "en": "marshmallows",
+    "sl": "penasti-bonboni"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, cats shouldn't eat marshmallows. They offer cats no nutritional benefit, excess sugar can be a concern for cats, and marshmallow treats may contain chocolate, which is toxic to cats.",
+    "sl": "Ne, mačke ne smejo jesti penastih bonbonov. Mačkam ne koristijo, preveč sladkorja je zanje lahko težava, penasti priboljški pa lahko vsebujejo čokolado, ki je za mačke strupena."
+  },
+  "why": {
+    "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
+    "sl": "Pet Poison Helpline navaja, da penasti bonboni za mačke niso dobra izbira: mačke slabše zaznajo sladek okus, penasti bonboni jim ne koristijo, preveč sladkorja pa je lahko težava. Cats Protection pojasnjuje, da sladkor za mačke ni strupen, je pa vseeno nezdrav, saj prinaša nepotrebne kalorije, ki lahko vodijo v pridobivanje teže. Penasti priboljški lahko vsebujejo tudi čokolado, ki je za mačke strupena."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Driska",
+      "Želodčne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat got into marshmallows or a marshmallow treat, contact your vet or a pet poison helpline for guidance. If the treat contained chocolate, contact your vet straight away.",
+    "sl": "Če je mačka prišla do penastih bonbonov ali penastega priboljška, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Če je bila v priboljšku čokolada, takoj pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Marshmallows are a sweet treat for people. Cats can hardly taste sweet things, so they're not for kitty.",
+    "sl": "Penasti bonboni so sladek priboljšek za ljudi. Muce sladkega skoraj ne okusijo, zato niso za muco."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are sugar-free marshmallows dangerous for cats?",
+        "sl": "Ali so penasti bonboni brez sladkorja nevarni za mačke?"
+      },
+      "a": {
+        "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
+        "sl": "Nekateri penasti bonboni brez sladkorja vsebujejo ksilitol, ki je strupen za pse. Pet Poison Helpline navaja, da ksilitol na mačke očitno ne vpliva tako kot na pse, a penasti bonboni za mačke še vedno niso dobra izbira."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC109",
+      "quote": "No, cats shouldn’t eat marshmallows either."
+    },
+    {
+      "id": "KC109",
+      "quote": "Cats have a decreased ability to taste sweetness, so most cats aren’t drawn to sugary treats."
+    },
+    {
+      "id": "KC109",
+      "quote": "Marshmallows offer cats no nutritional benefit, and excess sugar can be a concern for cats."
+    },
+    {
+      "id": "KC109",
+      "quote": "Even so, marshmallows aren’t a good choice for cats."
+    },
+    {
+      "id": "KC109",
+      "quote": "Marshmallow treats may also contain chocolate, which is toxic to cats."
+    },
+    {
+      "id": "KC109",
+      "quote": "Cats don’t appear to be affected by xylitol the way dogs are."
+    },
+    {
+      "id": "KC109",
+      "quote": "Some sugar-free, keto, or low-sugar marshmallows are sweetened with xylitol, a sugar substitute that is toxic to dogs."
+    },
+    {
+      "id": "KC109",
+      "quote": "If your cat got into marshmallows or a marshmallow treat, contact Pet Poison Helpline or your veterinarian"
+    },
+    {
+      "id": "KC109",
+      "quote": "for guidance specific to your cat and their exposure."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn’t toxic to cats, it’s still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar adds unnecessary calories, which can quickly lead to weight gain"
+    },
+    {
+      "id": "KC53",
+      "quote": "digestive issues like diarrhoea or stomach upset"
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    }
+  ],
+  "related": [
+    "sugar",
+    "candy",
+    "chocolate",
+    "cake"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2927f9792e1f3e0d9773e3e39140ad6ddfd6e954b4954e8cae865ba191e9560e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e84c34f887042d91bb4368d78da39935d041dcd06904a6f974ebcfcda3cdcafc"
+    }
+  }
+}

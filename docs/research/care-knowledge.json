@@ -3673,6 +3673,193 @@
       "updated": "2026-11-08"
     },
     {
+      "slug": "cake",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cake",
+        "sl": "Torte in kolači"
+      },
+      "question": {
+        "en": "Can cats eat cake?",
+        "sl": "Ali lahko mačke jedo torto?"
+      },
+      "url_slug": {
+        "en": "cake",
+        "sl": "torta"
+      },
+      "answer": {
+        "en": "No, cake is not for cats. It is sugary, which is unhealthy for cats, and many cakes, especially Christmas and fruit cakes, contain dried fruit or chocolate, which are harmful to cats. The RSPCA warns that Christmas cakes are dangerous for cats.",
+        "sl": "Ne, torta ni za mačke. Je sladka, kar je za mačke nezdravo, veliko tort, zlasti božičnih in sadnih, pa vsebuje suho sadje ali čokolado, ki mačkam škodita. RSPCA opozarja, da so božične torte za mačke nevarne."
+      },
+      "why": {
+        "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
+        "sl": "RSPCA navaja, da so božične torte za mačke nevarne. Takšne torte pogosto vsebujejo sultanine, rozine in korinte, ki jih RSPCA označuje kot strupene, in svetuje, naj mačke ne pojedo nič grozdja. Čokolada je za mačke strogo prepovedana. Navaden biskvit teh sestavin nima, a njegov sladkor je za mačke nezdrav in nima hranilne vrednosti, zato za vse torte uporabljamo strožjo raven."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea or stomach upset"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska ali želodčne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate cake with dried fruit or chocolate in it, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home. After a lick of plain sponge, watch for an upset stomach.",
+        "sl": "Če je mačka pojedla torto s suhim sadjem ali čokolado, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja. Če je le oblizala navaden biskvit, bodite pozorni na želodčne težave."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cake is a people treat. Some cakes have raisins or chocolate that can make cats poorly, so keep your slice for yourself.",
+        "sl": "Torta je posladek za ljudi. Nekatere torte imajo rozine ali čokolado, ki muci škodijo, zato svoj kos obdrži zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is Christmas cake dangerous for cats?",
+            "sl": "Ali je božična torta nevarna za mačke?"
+          },
+          "a": {
+            "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
+            "sl": "Da. RSPCA opozarja, da so božične torte za mačke nevarne, saj pogosto vsebujejo suho sadje. Blue Cross opisuje mačka, ki je bruhal, potem ko je pojedel bogato božično torto, in je moral čez noč ostati pri veterinarju na infuziji."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC76",
+        "KC76",
+        "KC76",
+        "KC76",
+        "KC76",
+        "KC76",
+        "KC76",
+        "KC5",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC113",
+        "KC113",
+        "KC113",
+        "KC87",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "raisins",
+        "dried-fruit",
+        "chocolate",
+        "sugar",
+        "alcohol"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
+      "slug": "candy",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Candy and sweets",
+        "sl": "Bonboni in sladkarije"
+      },
+      "question": {
+        "en": "Can cats eat candy?",
+        "sl": "Ali lahko mačke jedo sladkarije?"
+      },
+      "url_slug": {
+        "en": "candy",
+        "sl": "sladkarije"
+      },
+      "answer": {
+        "en": "No, candy is not for cats and is not safe for them. Many sweets contain chocolate or raisins, which are harmful to cats, and swallowed wrappers can upset or block the gut. Cats can't taste sweetness anyway, so sweets give them nothing good.",
+        "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega."
+      },
+      "why": {
+        "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
+        "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven."
+      },
+      "signs": {
+        "en": [
+          "Diarrhoea or stomach upset",
+          "Intestinal upset after swallowing a wrapper"
+        ],
+        "sl": [
+          "Driska ali želodčne težave",
+          "Črevesne težave po zaužitem ovitku"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat got into candy or a wrapper, contact your vet or a pet poison helpline for guidance. Call about any chocolate, even a little. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+        "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sweets are for people, not cats. Some can make kitty poorly, so keep your sweets and wrappers tidied away.",
+        "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is a lick of a sweet an emergency?",
+            "sl": "Ali je oblizek sladkarije nujen primer?"
+          },
+          "a": {
+            "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
+            "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje."
+          }
+        },
+        {
+          "q": {
+            "en": "Why is my cat interested in peppermint candy?",
+            "sl": "Zakaj mačko zanimajo mentolovi bonboni?"
+          },
+          "a": {
+            "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
+            "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC106",
+        "KC106",
+        "KC106",
+        "KC106",
+        "KC106",
+        "KC106",
+        "KC106",
+        "KC107",
+        "KC107",
+        "KC108",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "chocolate",
+        "raisins",
+        "sugar",
+        "marshmallows",
+        "mint"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "cantaloupe",
       "species": "cat",
       "level": "small_amounts",
@@ -6854,6 +7041,83 @@
         "grapes"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cinnamon",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cinnamon",
+        "sl": "Cimet"
+      },
+      "question": {
+        "en": "Can cats eat cinnamon?",
+        "sl": "Ali lahko mačke jedo cimet?"
+      },
+      "url_slug": {
+        "en": "cinnamon",
+        "sl": "cimet"
+      },
+      "answer": {
+        "en": "It's best not to. The ASPCA lists cinnamon as non-toxic to cats, but any plant material may cause vomiting and stomach upset, and cats don't need it. Cinnamon oil is different: it is toxic to cats.",
+        "sl": "Raje ne. ASPCA cimet navaja kot nestrupen za mačke, vendar lahko vsaka rastlinska snov povzroči bruhanje in želodčne težave, mačke pa ga ne potrebujejo. Cimetovo olje je nekaj drugega: za mačke je strupeno."
+      },
+      "why": {
+        "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
+        "sl": "ASPCA cimet (Cinnamomum zeylanicum) navaja kot nestrupen za mačke in opozarja, da lahko uživanje katere koli rastlinske snovi pri mačkah povzroči bruhanje in prebavne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega. Cats Protection cimetovo olje navaja med eteričnimi olji, ki so za mačke strupena. Ker cimet ni mačja hrana, njegovo olje pa škodi, ga ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Stomach upset"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Želodčne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate a little cinnamon, watch for vomiting or an upset stomach. If your cat licked or ate cinnamon oil, contact your vet straight away; don't wait for signs to appear.",
+        "sl": "Če je mačka pojedla malo cimeta, bodite pozorni na bruhanje ali želodčne težave. Če je mačka oblizala ali zaužila cimetovo olje, takoj pokličite veterinarja; ne čakajte, da se pokažejo znaki."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cinnamon is a spice for people's cooking. Cats don't need it, so keep spices and scented oils away from kitty.",
+        "sl": "Cimet je začimba za kuhanje za ljudi. Muce ga ne potrebujejo, zato naj bodo začimbe in dišeča olja daleč od muce."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is cinnamon oil safe for cats?",
+            "sl": "Ali je cimetovo olje varno za mačke?"
+          },
+          "a": {
+            "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
+            "sl": "Ne. Cats Protection navaja, da je večina eteričnih olj za mačke strupena, in med njimi navaja tudi cimetovo olje. Cimetovo olje in druga eterična olja hranite zunaj mačjega dosega."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC111",
+        "KC111",
+        "KC62",
+        "KC49",
+        "KC112",
+        "KC112",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "nutmeg",
+        "mint",
+        "basil",
+        "herbs-parsley"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "coffee",
@@ -14225,6 +14489,88 @@
       "updated": "2026-11-02"
     },
     {
+      "slug": "marshmallows",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Marshmallows",
+        "sl": "Penasti bonboni (marshmallow)"
+      },
+      "question": {
+        "en": "Can cats eat marshmallows?",
+        "sl": "Ali lahko mačke jedo penaste bonbone (marshmallow)?"
+      },
+      "url_slug": {
+        "en": "marshmallows",
+        "sl": "penasti-bonboni"
+      },
+      "answer": {
+        "en": "No, cats shouldn't eat marshmallows. They offer cats no nutritional benefit, excess sugar can be a concern for cats, and marshmallow treats may contain chocolate, which is toxic to cats.",
+        "sl": "Ne, mačke ne smejo jesti penastih bonbonov. Mačkam ne koristijo, preveč sladkorja je zanje lahko težava, penasti priboljški pa lahko vsebujejo čokolado, ki je za mačke strupena."
+      },
+      "why": {
+        "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
+        "sl": "Pet Poison Helpline navaja, da penasti bonboni za mačke niso dobra izbira: mačke slabše zaznajo sladek okus, penasti bonboni jim ne koristijo, preveč sladkorja pa je lahko težava. Cats Protection pojasnjuje, da sladkor za mačke ni strupen, je pa vseeno nezdrav, saj prinaša nepotrebne kalorije, ki lahko vodijo v pridobivanje teže. Penasti priboljški lahko vsebujejo tudi čokolado, ki je za mačke strupena."
+      },
+      "signs": {
+        "en": [
+          "Diarrhoea",
+          "Stomach upset"
+        ],
+        "sl": [
+          "Driska",
+          "Želodčne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat got into marshmallows or a marshmallow treat, contact your vet or a pet poison helpline for guidance. If the treat contained chocolate, contact your vet straight away.",
+        "sl": "Če je mačka prišla do penastih bonbonov ali penastega priboljška, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Če je bila v priboljšku čokolada, takoj pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Marshmallows are a sweet treat for people. Cats can hardly taste sweet things, so they're not for kitty.",
+        "sl": "Penasti bonboni so sladek priboljšek za ljudi. Muce sladkega skoraj ne okusijo, zato niso za muco."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are sugar-free marshmallows dangerous for cats?",
+            "sl": "Ali so penasti bonboni brez sladkorja nevarni za mačke?"
+          },
+          "a": {
+            "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
+            "sl": "Nekateri penasti bonboni brez sladkorja vsebujejo ksilitol, ki je strupen za pse. Pet Poison Helpline navaja, da ksilitol na mačke očitno ne vpliva tako kot na pse, a penasti bonboni za mačke še vedno niso dobra izbira."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC109",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC87"
+      ],
+      "related": [
+        "sugar",
+        "candy",
+        "chocolate",
+        "cake"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "milk",
       "species": "cat",
       "level": "not_recommended",
@@ -15126,6 +15472,88 @@
         "butter"
       ],
       "updated": "2026-11-09"
+    },
+    {
+      "slug": "nutmeg",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Nutmeg",
+        "sl": "Muškatni orešček"
+      },
+      "question": {
+        "en": "Can cats eat nutmeg?",
+        "sl": "Ali lahko mačke jedo muškatni orešček?"
+      },
+      "url_slug": {
+        "en": "nutmeg",
+        "sl": "muskatni-orescek"
+      },
+      "answer": {
+        "en": "It's best not to give cats nutmeg. The small amount used in recipes is very unlikely to cause serious harm, though it may cause a mild stomach upset. A very large amount of nutmeg can be toxic.",
+        "sl": "Mački muškatnega oreščka raje ne dajajte. Majhna količina, ki jo uporabimo v receptih, zelo verjetno ne bo resno škodovala, lahko pa povzroči blage želodčne težave. Zelo velika količina muškatnega oreščka je lahko strupena."
+      },
+      "why": {
+        "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
+        "sl": "Muškatni orešček vsebuje strup miristicin. Pet Poison Helpline navaja, da majhna količina, uporabljena v receptih, zelo verjetno ne povzroči resne zastrupitve in da so težave zelo malo verjetne, če mačka poje hrano z muškatnim oreščkom. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+      },
+      "signs": {
+        "en": [
+          "Mild stomach upset",
+          "After a very large amount: hallucinations, disorientation, fast heart rate, dry mouth, tummy pain or seizures"
+        ],
+        "sl": [
+          "Blage želodčne težave",
+          "Po zelo veliki količini: halucinacije, zmedenost, pospešen srčni utrip, suha usta, bolečine v trebuhu ali krči"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate food with a little nutmeg, watch for a mild stomach upset. If she ate a large amount of nutmeg, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+        "sl": "Če je mačka pojedla hrano z malo muškatnega oreščka, bodite pozorni na blage želodčne težave. Če je pojedla veliko muškatnega oreščka, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Nutmeg is a spice for people's cooking. Cats don't need spices, so keep the spice jar away from kitty.",
+        "sl": "Muškatni orešček je začimba za kuhanje za ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček z začimbo daleč od muce."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is eggnog with nutmeg safe for cats?",
+            "sl": "Ali je jajčni liker z muškatnim oreščkom varen za mačke?"
+          },
+          "a": {
+            "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
+            "sl": "Ne. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke, in svetuje, da pokličete veterinarja, če mislite, da je mačka pila jajčni liker."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC110",
+        "KC110",
+        "KC110",
+        "KC110",
+        "KC110",
+        "KC110",
+        "KC110",
+        "KC47",
+        "KC47",
+        "KC49",
+        "KC87",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "cinnamon",
+        "milk",
+        "raw-eggs",
+        "alcohol"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "onion",
@@ -21397,6 +21825,107 @@
         "watermelon"
       ],
       "updated": "2026-11-01"
+    },
+    {
+      "slug": "sugar",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sugar",
+        "sl": "Sladkor"
+      },
+      "question": {
+        "en": "Can cats eat sugar?",
+        "sl": "Ali lahko mačke jedo sladkor?"
+      },
+      "url_slug": {
+        "en": "sugar",
+        "sl": "sladkor"
+      },
+      "answer": {
+        "en": "It's best not to. Sugar isn't toxic to cats, but it's unhealthy for them and offers no nutritional value. Cats can't even taste sweetness. A lick of something sweet is no emergency, but regular sugary treats can lead to weight gain, diabetes and dental disease.",
+        "sl": "Raje ne. Sladkor za mačke ni strupen, je pa nezdrav in nima nobene hranilne vrednosti. Mačke sladkega okusa sploh ne zaznajo. Oblizek nečesa sladkega ni nujen primer, redni sladki priboljški pa lahko vodijo v debelost, sladkorno bolezen in bolezni zob."
+      },
+      "why": {
+        "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
+        "sl": "Mačke so mesojedke: njihovo telo je ustvarjeno za meso, ne za ogljikove hidrate ali sladkor, in nobena njihova okušalna brbončica ne zazna sladkega okusa. Sladkor prinaša nepotrebne kalorije, ki hitro vodijo v pridobivanje teže; sčasoma lahko preveč sladkorja povzroči inzulinsko rezistenco in nazadnje sladkorno bolezen, prispeva pa tudi h kariesu in boleznim dlesni. Rjavi sladkor ni nič drugačen. VCA navaja, da malo sladkorja večini mačk ne škodi, Cats Protection pa opozarja, da lahko redno dajanje sladke hrane vodi v zdravstvene težave, zato uporabljamo strožjo raven."
+      },
+      "signs": {
+        "en": [
+          "Diarrhoea",
+          "Stomach upset"
+        ],
+        "sl": [
+          "Driska",
+          "Želodčne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat just licked something sweet, there's no need to rush to the vet. If she ate a lot of a sugary food, or the food contained chocolate, contact your vet straight away.",
+        "sl": "Če je mačka le oblizala nekaj sladkega, ni treba hiteti k veterinarju. Če je pojedla veliko sladke hrane ali je bila v hrani čokolada, takoj pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cats can't even taste sweet things, and sugar isn't good for them. Sweets are for people, not for kitty.",
+        "sl": "Muce sladkega okusa sploh ne zaznajo, sladkor pa jim ne koristi. Sladkarije so za ljudi, ne za muco."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can cats taste sugar?",
+            "sl": "Ali mačke okusijo sladkor?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
+            "sl": "Ne. Mačke so mesojedke in nobena njihova okušalna brbončica ne zazna sladkega okusa. Če mačko zanima sladka hrana, se odziva na druge sestavine, na primer maščobo ali okus umami."
+          }
+        },
+        {
+          "q": {
+            "en": "Is brown sugar better for cats?",
+            "sl": "Ali je rjavi sladkor boljši za mačke?"
+          },
+          "a": {
+            "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
+            "sl": "Ne. Rjavi sladkor je še vedno sladkor; za mačje telo se ne razlikuje od belega."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC47",
+        "KC87"
+      ],
+      "related": [
+        "candy",
+        "cake",
+        "marshmallows",
+        "ice-cream",
+        "chocolate"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "sweet-potato",
@@ -29242,6 +29771,212 @@
       "updated": "2026-11-08"
     },
     {
+      "slug": "cake",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cake",
+        "sl": "Torta"
+      },
+      "question": {
+        "en": "Can dogs eat cake?",
+        "sl": "Ali lahko psi jedo torto?"
+      },
+      "url_slug": {
+        "en": "cake",
+        "sl": "torta"
+      },
+      "answer": {
+        "en": "No, it is best not to share cake with your dog. Its high sugar and fat are bad for a dog's health, and chocolate cake, cakes with raisins and cakes sweetened with xylitol are toxic to dogs.",
+        "sl": "Ne, torte raje ne delite s psom. Veliko sladkorja in maščobe psu škodi, torte s čokolado, rozinami ali ksilitolom pa so za pse strupene."
+      },
+      "why": {
+        "en": "Chocolate cake can poison a dog, with signs ranging from vomiting and diarrhoea to an irregular heartbeat and seizures. Christmas cake contains raisins, sultanas and currants, and xylitol can be used in cakes, muffins and pies. Even without these, cake brings a lot of sugar and fat, and sugary, high-fat foods can lead to pancreatitis. Because the risk depends on the ingredients, we rate cake not recommended; cake with chocolate, raisins or xylitol needs a vet at once.",
+        "sl": "Čokoladna torta lahko psa zastrupi; znaki segajo od bruhanja in driske do nerednega srčnega utripa in krčev. Božični kolač vsebuje rozine, sultanine in korintke, ksilitol pa je lahko v tortah, mafinih in pitah. Tudi brez teh sestavin ima torta veliko sladkorja in maščobe, sladka in mastna hrana pa lahko povzroči pankreatitis. Ker je tveganje odvisno od sestavin, torto uvrščamo med nepriporočljive; torta s čokolado, rozinami ali ksilitolom pomeni takojšen obisk veterinarja."
+      },
+      "signs": {
+        "en": [
+          "Vomiting and diarrhoea",
+          "Restlessness, tremors, a fast or irregular heartbeat (chocolate)",
+          "Seizures"
+        ],
+        "sl": [
+          "Bruhanje in driska",
+          "Nemir, tresenje, hiter ali nereden srčni utrip (čokolada)",
+          "Krči"
+        ]
+      },
+      "what_to_do": {
+        "en": "If the cake contained chocolate, raisins or xylitol, contact your vet or a pet poison helpline and seek veterinary care at once. If your dog shows signs of poisoning, get veterinary care immediately.",
+        "sl": "Če je torta vsebovala čokolado, rozine ali ksilitol, pokličite veterinarja ali telefonsko linijo za zastrupitve živali in nemudoma poiščite veterinarsko pomoč. Če ima pes znake zastrupitve, ga takoj odpeljite k veterinarju."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cake is a treat for people. Some cakes have chocolate or raisins that are bad for dogs, so keep your slice to yourself.",
+        "sl": "Torta je priboljšek za ljudi. Nekatere torte vsebujejo čokolado ali rozine, ki so za pse slabe, zato svoj kos obdrži zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about Christmas cake or mince pies?",
+            "sl": "Kaj pa božični kolač ali pitice s suhim sadjem?"
+          },
+          "a": {
+            "en": "No. Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to dogs.",
+            "sl": "Ne. Pitice s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintke, ki so za pse zelo strupeni."
+          }
+        },
+        {
+          "q": {
+            "en": "Is a sugar-free cake safer?",
+            "sl": "Ali je torta brez sladkorja varnejša?"
+          },
+          "a": {
+            "en": "Not necessarily. Xylitol can be used in baked goods such as cakes, muffins and pies, and it is toxic to dogs. Check the label, especially on products sold as sugar-free or low sugar.",
+            "sl": "Ne nujno. Ksilitol se lahko uporablja v pecivu, kot so torte, mafini in pite, in je za pse strupen. Preberite deklaracijo, zlasti pri izdelkih brez sladkorja ali z malo sladkorja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD193",
+        "KD193",
+        "KD193",
+        "KD193",
+        "KD194",
+        "KD53",
+        "KD53",
+        "KD191",
+        "KD195",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192"
+      ],
+      "related": [
+        "chocolate",
+        "raisins",
+        "xylitol",
+        "cookies",
+        "sugar",
+        "ice-cream"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
+      "slug": "candy",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Candy",
+        "sl": "Sladkarije"
+      },
+      "question": {
+        "en": "Can dogs eat candy?",
+        "sl": "Ali lahko psi jedo sladkarije?"
+      },
+      "url_slug": {
+        "en": "candy",
+        "sl": "sladkarije"
+      },
+      "answer": {
+        "en": "No. Candy is not safe for dogs. Its sugar can upset a dog's stomach, and some candy contains chocolate, xylitol or raisins, which are toxic to dogs. Swallowed wrappers can also cause blockages.",
+        "sl": "Ne. Sladkarije za pse niso varne. Sladkor psu lahko razdraži želodec, nekatere sladkarije pa vsebujejo čokolado, ksilitol ali rozine, ki so za pse strupeni. Pogoltnjeni ovitki lahko povzročijo tudi zaporo."
+      },
+      "why": {
+        "en": "Candy offers dogs no nutritional value, and sugary, high-fat candy can lead to pancreatitis, a painful inflammation of the pancreas. Chocolate, xylitol (in sugar-free candy and gum) and raisins are toxic. Wrappers can be a choking risk, foil and cellophane wrappers can block the intestines, and large amounts of hard candy can clump in the stomach. Plain sugary candy often causes only mild stomach upset, but because candy can hide toxic ingredients and wrappers, we rate it dangerous.",
+        "sl": "Sladkarije psu ne dajo nobene hranilne vrednosti, sladke in mastne sladkarije pa lahko povzročijo pankreatitis, boleče vnetje trebušne slinavke. Čokolada, ksilitol (v sladkarijah in žvečilnih gumijih brez sladkorja) in rozine so strupeni. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana lahko zamašijo črevesje, večja količina trdih bonbonov pa se lahko v želodcu zlepi v kepo. Navadne sladkarije pogosto povzročijo le blage prebavne težave, a ker lahko skrivajo strupene sestavine in ovitke, jih uvrščamo med nevarne."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Poor appetite, low energy or belly pain (pancreatitis signs can take a few days to appear)",
+          "Weakness, stumbling or seizures (xylitol)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slabši apetit, utrujenost ali bolečine v trebuhu (znaki pankreatitisa se lahko pokažejo šele po nekaj dneh)",
+          "Šibkost, opotekanje ali krči (ksilitol)"
+        ]
+      },
+      "what_to_do": {
+        "en": "Move the remaining candy out of reach and gather the wrappers: they help you work out what your dog ate and roughly how much. Check the labels for chocolate, xylitol (also listed as birch sugar) and raisins, then call your vet or a pet poison helpline right away, even if your dog seems fine.",
+        "sl": "Preostale sladkarije pospravite iz pasjega dosega in zberite ovitke: pomagajo vam ugotoviti, kaj in približno koliko je pes pojedel. Na deklaracijah preverite, ali vsebujejo čokolado, ksilitol (naveden je lahko tudi kot brezov sladkor) ali rozine, nato takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sweets are for people, not dogs. Keep candy and wrappers out of reach, and tell a grown-up if your dog eats some.",
+        "sl": "Sladkarije so za ljudi, ne za pse. Sladkarije in ovitke pospravi, da jih pes ne doseže, in povej odraslemu, če jih pes poje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My dog swallowed a candy wrapper. Is that dangerous?",
+            "sl": "Pes je pogoltnil ovitek bonbona. Je to nevarno?"
+          },
+          "a": {
+            "en": "It can be. Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines. Contact your vet or a pet poison helpline for guidance.",
+            "sl": "Lahko je. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana pa lahko zamašijo črevesje. Za nasvet pokličite veterinarja ali telefonsko linijo za zastrupitve živali."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat lollipops or jelly beans?",
+            "sl": "Ali lahko psi jedo lizike ali želejeve bonbone?"
+          },
+          "a": {
+            "en": "No. Jelly beans are mostly sugar, which can cause stomach upset. Sugar-free lollipops may contain xylitol, and dogs may chew and swallow the lollipop stick.",
+            "sl": "Ne. Želejevi bonboni so večinoma sladkor, ki lahko povzroči prebavne težave. Lizike brez sladkorja lahko vsebujejo ksilitol, pes pa lahko palčko lizike pregrizne in pogoltne."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD190",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD190",
+        "KD191",
+        "KD191"
+      ],
+      "related": [
+        "chocolate",
+        "xylitol",
+        "raisins",
+        "gum",
+        "sugar",
+        "marshmallows"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "cantaloupe",
       "species": "dog",
       "level": "small_amounts",
@@ -32448,6 +33183,109 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "cinnamon",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cinnamon",
+        "sl": "Cimet"
+      },
+      "question": {
+        "en": "Can dogs eat cinnamon?",
+        "sl": "Ali lahko psi jedo cimet?"
+      },
+      "url_slug": {
+        "en": "cinnamon",
+        "sl": "cimet"
+      },
+      "answer": {
+        "en": "Cinnamon is not toxic to dogs, but it isn't recommended as a regular treat. A little in baked goods won't hurt, but cinnamon sticks, powder and large amounts can irritate the mouth and stomach, and cinnamon essential oil is riskier.",
+        "sl": "Cimet za pse ni strupen, vendar ga ne priporočamo kot reden priboljšek. Malo cimeta v pecivu ne škodi, cimetove palčke, cimet v prahu in večje količine pa lahko razdražijo usta in prebavila, eterično olje cimeta pa je še bolj tvegano."
+      },
+      "why": {
+        "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
+        "sl": "Žvečenje cimetovih palčk ali uživanje mletega cimeta lahko psu razdraži usta, vdihavanje cimeta v prahu pa lahko povzroči kašelj, dušenje in težko dihanje. Zaužitje zelo velike količine cimeta lahko povzroči bruhanje, drisko, spremembe srčnega utripa, nizek krvni sladkor in bolezen jeter. Majhni psi so lahko občutljivi že na manjše količine, eterično olje cimeta pa je lahko za pse strupeno. Pecivo s cimetom lahko vsebuje tudi ksilitol."
+      },
+      "signs": {
+        "en": [
+          "Mouth irritation",
+          "Coughing, choking or difficulty breathing (inhaled powder)",
+          "Vomiting",
+          "Diarrhoea",
+          "Changes in heart rate"
+        ],
+        "sl": [
+          "Razdražena usta",
+          "Kašelj, dušenje ali težko dihanje (vdihan prah)",
+          "Bruhanje",
+          "Driska",
+          "Spremembe srčnega utripa"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog eats a large amount of cinnamon, you don't need to panic, but do call your vet.",
+        "sl": "Če pes poje veliko cimeta, ni razloga za paniko, vseeno pa pokličite veterinarja."
+      },
+      "serving": {
+        "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
+        "sl": "Če psu daste pecivo s cimetom: le majhen košček, redko in nikoli pecivo, sladkano s ksilitolom."
+      },
+      "child": {
+        "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
+        "sl": "Cimet je začimba za ljudi. Psu ne dovoli lizati cimeta v prahu ali žvečiti cimetovih palčk, ker ga lahko zaboli v gobčku."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can my dog have a cinnamon cookie?",
+            "sl": "Ali lahko pes poje piškot s cimetom?"
+          },
+          "a": {
+            "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
+            "sl": "Malo cimeta, kot ga je v večini peciva, psu ne bo škodilo, vendar mu pecivo dajte le v majhnih količinah in redko. Nekatero pecivo vsebuje ksilitol, ki je zelo strupen."
+          }
+        },
+        {
+          "q": {
+            "en": "Is cinnamon essential oil dangerous for dogs?",
+            "sl": "Ali je eterično olje cimeta za pse nevarno?"
+          },
+          "a": {
+            "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
+            "sl": "Da. Eterično olje cimeta je lahko za pse strupeno in je bolj tvegano kot mleti cimet ali palčke."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD186",
+        "KD186"
+      ],
+      "related": [
+        "nutmeg",
+        "cookies",
+        "cake",
+        "xylitol"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "coconut-oil",
       "species": "dog",
       "level": "not_recommended",
@@ -34207,6 +35045,115 @@
         "salt"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "cookies",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cookies",
+        "sl": "Piškoti"
+      },
+      "question": {
+        "en": "Can dogs eat cookies?",
+        "sl": "Ali lahko psi jedo piškote?"
+      },
+      "url_slug": {
+        "en": "cookies",
+        "sl": "piskoti"
+      },
+      "answer": {
+        "en": "No, it is best not to. Cookies can contain a lot of sugar, which can upset a dog's stomach, and some contain chocolate, raisins or xylitol, which are toxic to dogs. Give treats made for dogs instead.",
+        "sl": "Ne, raje ne. Piškoti lahko vsebujejo veliko sladkorja, ki lahko psu razdraži prebavo, nekateri pa vsebujejo čokolado, rozine ali ksilitol, ki so za pse strupeni. Namesto tega psu dajte priboljške, narejene za pse."
+      },
+      "why": {
+        "en": "A sugar-free cookie is no safer: sugar-free cookies commonly contain xylitol, which causes a dangerous drop in blood sugar. All types of chocolate contain theobromine and caffeine, which are toxic to dogs, and raisins can be hidden in cookies. Cookies without these ingredients mainly cause stomach upset from sugar, so we rate cookies not recommended; cookies with chocolate, raisins or xylitol need a vet right away.",
+        "sl": "Piškot brez sladkorja ni nič varnejši: piškoti brez sladkorja pogosto vsebujejo ksilitol, ki povzroči nevaren padec krvnega sladkorja. Vse vrste čokolade vsebujejo teobromin in kofein, ki sta za pse strupena, rozine pa so lahko skrite v piškotih. Piškoti brez teh sestavin zaradi sladkorja povzročajo predvsem prebavne težave, zato jih uvrščamo med nepriporočljive; če piškoti vsebujejo čokolado, rozine ali ksilitol, takoj k veterinarju."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset",
+          "Vomiting, wobbliness, weakness, tremors or seizures (xylitol)",
+          "Restlessness, tremors, a fast or irregular heartbeat or seizures (chocolate)"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Bruhanje, opotekanje, šibkost, tresenje ali krči (ksilitol)",
+          "Nemir, tresenje, hiter ali nereden srčni utrip ali krči (čokolada)"
+        ]
+      },
+      "what_to_do": {
+        "en": "If the cookie contained chocolate, raisins or xylitol, or your dog shows signs of poisoning, get help right away and take your dog to a vet so they can assess and treat it.",
+        "sl": "Če je piškot vseboval čokolado, rozine ali ksilitol ali če ima pes znake zastrupitve, takoj poiščite pomoč in psa odpeljite k veterinarju, da ga pregleda in zdravi."
+      },
+      "serving": {
+        "en": "Instead of people cookies: treats and cookies made especially for dogs, after checking with your vet.",
+        "sl": "Namesto piškotov za ljudi: priboljški in piškoti, narejeni posebej za pse, po posvetu z veterinarjem."
+      },
+      "child": {
+        "en": "Cookies are a people treat. Some have chocolate or raisins that are bad for dogs, so give your dog a dog treat instead.",
+        "sl": "Piškoti so priboljšek za ljudi. Nekateri vsebujejo čokolado ali rozine, ki so za pse slabe, zato psu raje daj pasji priboljšek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is a sugar-free cookie safer for my dog?",
+            "sl": "Ali je piškot brez sladkorja za psa varnejši?"
+          },
+          "a": {
+            "en": "No. Sugar-free cookies commonly contain xylitol, a sugar alternative that is poisonous to dogs.",
+            "sl": "Ne. Piškoti brez sladkorja pogosto vsebujejo ksilitol, nadomestek za sladkor, ki je za pse strupen."
+          }
+        },
+        {
+          "q": {
+            "en": "What about oatmeal raisin cookies?",
+            "sl": "Kaj pa ovseni piškoti z rozinami?"
+          },
+          "a": {
+            "en": "They are not safe. Raisins can be hidden in cookies, and just a small number of raisins can cause kidney failure in dogs.",
+            "sl": "Niso varni. Rozine so lahko skrite v piškotih, že nekaj rozin pa lahko pri psu povzroči odpoved ledvic."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD192",
+        "KD5",
+        "KD190",
+        "KD190",
+        "KD191"
+      ],
+      "related": [
+        "chocolate",
+        "raisins",
+        "xylitol",
+        "sugar",
+        "cake",
+        "candy"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "corn-cob",
@@ -39124,6 +40071,114 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "gum",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Chewing gum",
+        "sl": "Žvečilni gumi"
+      },
+      "question": {
+        "en": "Can dogs eat chewing gum?",
+        "sl": "Ali lahko psi jedo žvečilni gumi?"
+      },
+      "url_slug": {
+        "en": "chewing-gum",
+        "sl": "zvecilni-gumi"
+      },
+      "answer": {
+        "en": "No. Chewing gum is not for dogs. Sugar-free gum almost always contains xylitol, which is as dangerous to dogs as chocolate: it can cause a rapid drop in blood sugar, seizures and liver failure. If your dog eats gum, take it to the vet immediately.",
+        "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju."
+      },
+      "why": {
+        "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
+        "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Staggering or difficulty walking",
+          "Tremors",
+          "Seizures",
+          "Lethargy",
+          "Signs can start within minutes"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Opotekanje ali težave pri hoji",
+          "Tresenje",
+          "Krči",
+          "Utrujenost in brezvoljnost",
+          "Znaki se lahko začnejo že v nekaj minutah"
+        ]
+      },
+      "what_to_do": {
+        "en": "Take your dog to the vet immediately and call a pet poison helpline for advice. Don't give your dog anything by mouth unless your vet tells you to.",
+        "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar."
+      },
+      "serving": null,
+      "child": {
+        "en": "Chewing gum is not for dogs. Keep gum away from your dog, and tell a grown-up right away if your dog eats some.",
+        "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is regular gum with sugar safe for dogs?",
+            "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?"
+          },
+          "a": {
+            "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
+            "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja."
+          }
+        },
+        {
+          "q": {
+            "en": "Which other products contain xylitol?",
+            "sl": "Kateri drugi izdelki vsebujejo ksilitol?"
+          },
+          "a": {
+            "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
+            "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD187",
+        "KD187",
+        "KD187",
+        "KD187",
+        "KD187",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD188",
+        "KD191",
+        "KD53",
+        "KD5",
+        "KD5"
+      ],
+      "related": [
+        "xylitol",
+        "candy",
+        "mint",
+        "chocolate",
+        "sugar"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "ham",
       "species": "dog",
       "level": "not_recommended",
@@ -40021,6 +41076,93 @@
         "chives"
       ],
       "updated": "2026-11-10"
+    },
+    {
+      "slug": "honey",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Honey",
+        "sl": "Med"
+      },
+      "question": {
+        "en": "Can dogs eat honey?",
+        "sl": "Ali lahko psi jedo med?"
+      },
+      "url_slug": {
+        "en": "honey",
+        "sl": "med"
+      },
+      "answer": {
+        "en": "Yes, in small amounts. Honey is generally fine for healthy adult dogs in small quantities, but it is mostly sugar, so there is little reason to give it regularly. Don't give raw honey to puppies or dogs with weak immune systems, or any honey to diabetic dogs.",
+        "sl": "Da, v majhnih količinah. Med je za zdrave odrasle pse v majhnih količinah na splošno v redu, vendar je večinoma sladkor, zato ga ni smiselno dajati redno. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, psom s sladkorno boleznijo pa nobenega medu."
+      },
+      "why": {
+        "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
+        "sl": "Med vsebuje naravne sladkorje ter majhne količine vitaminov in mineralov. Med ima veliko sladkorja, zato lahko pri prevelikih količinah vodi v debelost, sladkorji pa lahko povzročijo zobno gnilobo. Surov med lahko vsebuje botulizem, zato ni primeren za mladiče in pse s šibkim imunskim sistemom."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Small amounts of honey are generally fine for a healthy adult dog. If your dog has a health condition such as diabetes, or you are unsure how much is okay, talk to your vet.",
+        "sl": "Majhne količine medu so za zdravega odraslega psa na splošno v redu. Če ima pes kakšno bolezen, na primer sladkorno, ali če niste prepričani, koliko je v redu, se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
+        "sl": "Le malo in občasno, samo za zdrave odrasle pse; manj je več, zlasti pri majhnih pasmah. Veterinarja vprašajte, koliko je v redu, in psu po medu morda umijte zobe."
+      },
+      "child": {
+        "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
+        "sl": "Psi lahko včasih dobijo čisto malo medu. Je zelo sladek, zato najprej vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can honey help my dog's allergies?",
+            "sl": "Ali med pomaga pri pasjih alergijah?"
+          },
+          "a": {
+            "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
+            "sl": "Pogosto slišimo, da med pomaga pri sezonskih alergijah, vendar to ni zagotovljeno in niti ni verjetno."
+          }
+        },
+        {
+          "q": {
+            "en": "Can I give honey to my puppy?",
+            "sl": "Ali lahko mladiču dam med?"
+          },
+          "a": {
+            "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
+            "sl": "Surovega ne. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, ker lahko vsebuje botulizem."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD183",
+        "KD5",
+        "KD5",
+        "KD5"
+      ],
+      "related": [
+        "sugar",
+        "peanut-butter",
+        "xylitol"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "honeydew",
@@ -43599,6 +44741,102 @@
       "updated": "2026-11-02"
     },
     {
+      "slug": "marshmallows",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Marshmallows",
+        "sl": "Penasti bonboni (marshmallow)"
+      },
+      "question": {
+        "en": "Can dogs eat marshmallows?",
+        "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?"
+      },
+      "url_slug": {
+        "en": "marshmallows",
+        "sl": "penasti-bonboni"
+      },
+      "answer": {
+        "en": "No. Not all marshmallows are toxic to dogs, but they are not good for them: they are made from sugar, corn syrup and gelatin and have little or no nutritional value. Some contain xylitol, which is toxic to dogs.",
+        "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen."
+      },
+      "why": {
+        "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
+        "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Poor appetite",
+          "Diarrhoea",
+          "Wobbly walking or seizures (xylitol)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Slabši apetit",
+          "Driska",
+          "Opotekanje ali krči (ksilitol)"
+        ]
+      },
+      "what_to_do": {
+        "en": "Call your vet right away if your dog ate several marshmallows, or any marshmallow that may contain xylitol.",
+        "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol."
+      },
+      "serving": {
+        "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
+        "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice."
+      },
+      "child": {
+        "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
+        "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are sugar-free marshmallows safer?",
+            "sl": "Ali so penasti bonboni brez sladkorja varnejši?"
+          },
+          "a": {
+            "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
+            "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD184",
+        "KD191"
+      ],
+      "related": [
+        "sugar",
+        "candy",
+        "xylitol",
+        "carrots",
+        "blueberries"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "milk",
       "species": "dog",
       "level": "small_amounts",
@@ -44328,6 +45566,98 @@
         "apples"
       ],
       "updated": "2026-11-09"
+    },
+    {
+      "slug": "nutmeg",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Nutmeg",
+        "sl": "Muškatni orešček"
+      },
+      "question": {
+        "en": "Can dogs eat nutmeg?",
+        "sl": "Ali lahko psi jedo muškatni orešček?"
+      },
+      "url_slug": {
+        "en": "nutmeg",
+        "sl": "muskatni-orescek"
+      },
+      "answer": {
+        "en": "No, keep nutmeg away from your dog. It contains a toxin called myristicin. The small amount used in baked goods is generally safe, but a large amount of nutmeg can cause hallucinations, disorientation and a fast heart rate.",
+        "sl": "Ne, muškatni orešček naj bo zunaj pasjega dosega. Vsebuje strup miristicin. Majhna količina v pecivu je na splošno varna, velika količina muškatnega oreščka pa lahko povzroči halucinacije, zmedenost in hiter srčni utrip."
+      },
+      "why": {
+        "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
+        "sl": "Miristicin lahko v velikih količinah povzroči halucinacije, zmedenost, hitrejši srčni utrip, visok krvni tlak, suha usta, bolečine v trebuhu in morda krče, znaki pa lahko trajajo do 48 ur. Za to bi moral pes pojesti zelo veliko muškatnega oreščka; majhna količina v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Ker začimba sama vsebuje strup, jo uvrščamo med nevarne."
+      },
+      "signs": {
+        "en": [
+          "Mild stomach upset (small amounts)",
+          "Hallucinations and disorientation",
+          "Fast heartbeat",
+          "High blood pressure and dry mouth",
+          "Belly pain",
+          "Possibly seizures",
+          "Signs can last up to 48 hours"
+        ],
+        "sl": [
+          "Blage prebavne težave (majhne količine)",
+          "Halucinacije in zmedenost",
+          "Hiter srčni utrip",
+          "Visok krvni tlak in suha usta",
+          "Bolečine v trebuhu",
+          "Morda krči",
+          "Znaki lahko trajajo do 48 ur"
+        ]
+      },
+      "what_to_do": {
+        "en": "A little nutmeg in a baked treat is very unlikely to cause serious problems. If your dog ate a large amount of nutmeg by accident, call your vet for advice.",
+        "sl": "Malo muškatnega oreščka v pecivu le redko povzroči resne težave. Če je pes po nesreči pojedel veliko muškatnega oreščka, pokličite veterinarja za nasvet."
+      },
+      "serving": null,
+      "child": {
+        "en": "Nutmeg is a spice for people's cooking. It is not for dogs, so keep spice jars where your dog can't reach them.",
+        "sl": "Muškatni orešček je začimba za kuhanje. Ni za pse, zato kozarčke z začimbami pospravi tja, kamor pes ne seže."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My dog ate a cookie with a little nutmeg. Is that dangerous?",
+            "sl": "Pes je pojedel piškot z malo muškatnega oreščka. Je to nevarno?"
+          },
+          "a": {
+            "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
+            "sl": "Majhna količina muškatnega oreščka v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Preverite tudi, ali piškot vsebuje ksilitol; nekatero pecivo ga vsebuje, za pse pa je zelo strupen."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD186",
+        "KD186",
+        "KD186",
+        "KD186",
+        "KD186",
+        "KD186",
+        "KD186",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185",
+        "KD185"
+      ],
+      "related": [
+        "cinnamon",
+        "cookies",
+        "cake",
+        "xylitol"
+      ],
+      "updated": "2026-11-12"
     },
     {
       "slug": "oatmeal",
@@ -55736,6 +57066,104 @@
       "updated": "2026-11-01"
     },
     {
+      "slug": "sugar",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sugar",
+        "sl": "Sladkor"
+      },
+      "question": {
+        "en": "Can dogs eat sugar?",
+        "sl": "Ali lahko psi jedo sladkor?"
+      },
+      "url_slug": {
+        "en": "sugar",
+        "sl": "sladkor"
+      },
+      "answer": {
+        "en": "No, it is best not to give your dog sugar. A little sugar isn't toxic to dogs, but it offers no nutritional benefit and can cause stomach upset. Sugar-free products are no safer: they may contain xylitol, which is toxic to dogs.",
+        "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen."
+      },
+      "why": {
+        "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
+        "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Poor appetite, low energy or belly pain (possible pancreatitis; signs can take a few days to appear)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slabši apetit, utrujenost ali bolečine v trebuhu (možen pankreatitis; znaki se lahko pokažejo šele po nekaj dneh)"
+        ]
+      },
+      "what_to_do": {
+        "en": "Plain sugary sweets often cause mild stomach upset or no signs at all. If your dog ate a lot of sugary food, call your vet or a pet poison helpline right away, even if your dog seems fine. If it ate something sugar-free that may contain xylitol, call your vet immediately.",
+        "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sugar is a people treat. It can give dogs a tummy ache, so keep sweets for yourself and give your dog a dog treat.",
+        "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Will a little bit of sugar hurt my dog?",
+            "sl": "Ali bo malo sladkorja psu škodilo?"
+          },
+          "a": {
+            "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
+            "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi."
+          }
+        },
+        {
+          "q": {
+            "en": "Are sugar-free sweets safer for dogs?",
+            "sl": "Ali so sladkarije brez sladkorja za pse varnejše?"
+          },
+          "a": {
+            "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
+            "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD189",
+        "KD195",
+        "KD195",
+        "KD190",
+        "KD184",
+        "KD183",
+        "KD191",
+        "KD191",
+        "KD191",
+        "KD192"
+      ],
+      "related": [
+        "xylitol",
+        "candy",
+        "honey",
+        "marshmallows",
+        "cookies",
+        "cake",
+        "ice-cream"
+      ],
+      "updated": "2026-11-12"
+    },
+    {
       "slug": "sweet-potato",
       "species": "dog",
       "level": "small_amounts",
@@ -59472,11 +60900,75 @@
     },
     {
       "species": "cat",
+      "id": "KC106",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (A. Benzow; reviewed by R. Schmid DVM DABT DABVT; published 2023-05-01, modified 2026-10-19)",
+      "title": "Can Dogs Eat Candy? Which Halloween Candy Is Dangerous (and What To Do)",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/i-caught-my-dog-eating-candy/"
+    },
+    {
+      "species": "cat",
+      "id": "KC107",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no author or date shown)",
+      "title": "Halloween safety tips for cats",
+      "url": "https://vcahospitals.com/resources/lifestyle-cat/hazards-safety/halloween-safety-tips-for-cats"
+    },
+    {
+      "species": "cat",
+      "id": "KC108",
+      "tier": "B",
+      "publisher": "Blue Cross (2023-10-20)",
+      "title": "How to keep your cat safe during Halloween",
+      "url": "https://www.bluecross.org.uk/advice/cat/wellbeing-and-care/how-to-keep-your-cat-safe-during-halloween"
+    },
+    {
+      "species": "cat",
+      "id": "KC109",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (R. Kelly; reviewed by R. Schmid DVM DABT DABVT; published 2026-10-19)",
+      "title": "Can Dogs Eat Marshmallows? Risks, Xylitol & What To Do",
+      "url": "https://www.petpoisonhelpline.com/blog/can-dogs-eat-marshmallows/"
+    },
+    {
+      "species": "cat",
       "id": "KC11",
       "tier": "B",
       "publisher": "VCA Animal Hospitals (R. Schmid, A. Brutlag; updated May 2026)",
       "title": "Alcohol Poisoning",
       "url": "https://vcahospitals.com/know-your-pet/alcohol-poisoning"
+    },
+    {
+      "species": "cat",
+      "id": "KC110",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline (nutmeg: C. Flint DVM; cinnamon: C. Angle DVM; published 2013-11-27, modified 2026-05-27)",
+      "title": "Nutmeg and Cinnamon Toxicity",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/nutmeg-cinnamon-toxicity/"
+    },
+    {
+      "species": "cat",
+      "id": "KC111",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Cinnamon",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/cinnamon"
+    },
+    {
+      "species": "cat",
+      "id": "KC112",
+      "tier": "B",
+      "publisher": "Cats Protection blog (2021-04-14)",
+      "title": "Are essential oils dangerous to cats?",
+      "url": "https://www.cats.org.uk/cats-blog/cats-and-essential-oils"
+    },
+    {
+      "species": "cat",
+      "id": "KC113",
+      "tier": "B",
+      "publisher": "Blue Cross news story (2016-12-23)",
+      "title": "'Drunk' cat treated after eating boozy Christmas cake for breakfast",
+      "url": "https://www.bluecross.org.uk/story/drunk-cat-treated-after-eating-boozy-christmas-cake-breakfast"
     },
     {
       "species": "cat",
@@ -60952,11 +62444,115 @@
     },
     {
       "species": "dog",
+      "id": "KD183",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-21)",
+      "title": "Can Dogs Eat Honey?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-honey/"
+    },
+    {
+      "species": "dog",
+      "id": "KD184",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2026-03-12)",
+      "title": "Can Dogs Eat Marshmallows?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-marshmallows/"
+    },
+    {
+      "species": "dog",
+      "id": "KD185",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-04-30)",
+      "title": "Can Dogs Eat Cinnamon?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cinnamon/"
+    },
+    {
+      "species": "dog",
+      "id": "KD186",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Charlotte Flint DVM / Catherine Angle DVM (published 2013-11-27; modified 2026-05-27)",
+      "title": "Nutmeg And Cinnamon Toxicity",
+      "url": "https://www.petpoisonhelpline.com/poisons/nutmeg/"
+    },
+    {
+      "species": "dog",
+      "id": "KD187",
+      "tier": "B",
+      "publisher": "American Kennel Club, Harriet Meyers (updated 2026-03-23)",
+      "title": "What to Do if Your Dog Accidentally Eats Gum",
+      "url": "https://www.akc.org/expert-advice/health/dog-accidentally-eats-gum-can-gum-make-my-dog-sick/"
+    },
+    {
+      "species": "dog",
+      "id": "KD188",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2023-02-13; modified 2026-05-27)",
+      "title": "My Dog Ate Chewing Gum",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/my-dog-ate-chewing-gum/"
+    },
+    {
+      "species": "dog",
+      "id": "KD189",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow, reviewed by Renee Schmid DVM (published 2023-05-01; modified 2026-10-19)",
+      "title": "Can Dogs Eat Candy? Which Halloween Candy Is Dangerous (and What To Do)",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/i-caught-my-dog-eating-candy/"
+    },
+    {
+      "species": "dog",
       "id": "KD19",
       "tier": "B",
       "publisher": "Pet Poison Helpline",
       "title": "Caffeine Are Toxic To Pets",
       "url": "https://petpoisonhelpline.com/poison/caffeine/"
+    },
+    {
+      "species": "dog",
+      "id": "KD190",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2023-02-24; modified 2026-05-27)",
+      "title": "My Dog Ate Candy Will They Be Okay",
+      "url": "https://www.petpoisonhelpline.com/pet-tips/my-dog-ate-candy-will-they-be-okay/"
+    },
+    {
+      "species": "dog",
+      "id": "KD191",
+      "tier": "B",
+      "publisher": "American Kennel Club, AKC Staff (updated 2024-11-15)",
+      "title": "What to Do if Your Dog Ate Candy",
+      "url": "https://www.akc.org/expert-advice/health/dog-ate-candy-what-to-do/"
+    },
+    {
+      "species": "dog",
+      "id": "KD192",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2023-01-06; modified 2026-05-27)",
+      "title": "What If My Dog Ate a Cookie",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/what-if-my-dog-ate-a-cookie/"
+    },
+    {
+      "species": "dog",
+      "id": "KD193",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Adam Benzow (published 2023-04-17; modified 2026-05-27)",
+      "title": "What Happens If a Dog Eats Chocolate Cake",
+      "url": "https://www.petpoisonhelpline.com/uncategorized/what-happens-if-a-dog-eats-chocolate-cake/"
+    },
+    {
+      "species": "dog",
+      "id": "KD194",
+      "tier": "B",
+      "publisher": "PDSA (2021-12-16)",
+      "title": "Vet charity warns of fatal foods for furry friends this Christmas",
+      "url": "https://pdsa.org.uk/press-office/latest-news/vet-charity-warns-of-fatal-foods-for-furry-friends-this-christmas"
+    },
+    {
+      "species": "dog",
+      "id": "KD195",
+      "tier": "B",
+      "publisher": "Pet Poison Helpline, Rachel Kelly, reviewed by Renee Schmid DVM (published 2026-10-19)",
+      "title": "Can Dogs Eat Caramel? Caramel Popcorn, Apples & What To Do",
+      "url": "https://www.petpoisonhelpline.com/blog/can-dogs-eat-caramel/"
     },
     {
       "species": "dog",

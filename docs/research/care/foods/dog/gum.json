@@ -1,0 +1,176 @@
+{
+  "slug": "gum",
+  "species": "dog",
+  "name": {
+    "en": "Chewing gum",
+    "sl": "Žvečilni gumi"
+  },
+  "question": {
+    "en": "Can dogs eat chewing gum?",
+    "sl": "Ali lahko psi jedo žvečilni gumi?"
+  },
+  "url_slug": {
+    "en": "chewing-gum",
+    "sl": "zvecilni-gumi"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Chewing gum is not for dogs. Sugar-free gum almost always contains xylitol, which is as dangerous to dogs as chocolate: it can cause a rapid drop in blood sugar, seizures and liver failure. If your dog eats gum, take it to the vet immediately.",
+    "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju."
+  },
+  "why": {
+    "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
+    "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Staggering or difficulty walking",
+      "Tremors",
+      "Seizures",
+      "Lethargy",
+      "Signs can start within minutes"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Opotekanje ali težave pri hoji",
+      "Tresenje",
+      "Krči",
+      "Utrujenost in brezvoljnost",
+      "Znaki se lahko začnejo že v nekaj minutah"
+    ]
+  },
+  "what_to_do": {
+    "en": "Take your dog to the vet immediately and call a pet poison helpline for advice. Don't give your dog anything by mouth unless your vet tells you to.",
+    "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar."
+  },
+  "serving": null,
+  "child": {
+    "en": "Chewing gum is not for dogs. Keep gum away from your dog, and tell a grown-up right away if your dog eats some.",
+    "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is regular gum with sugar safe for dogs?",
+        "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?"
+      },
+      "a": {
+        "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
+        "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja."
+      }
+    },
+    {
+      "q": {
+        "en": "Which other products contain xylitol?",
+        "sl": "Kateri drugi izdelki vsebujejo ksilitol?"
+      },
+      "a": {
+        "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
+        "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD187",
+      "quote": "Sugar-free gum almost always contains xylitol."
+    },
+    {
+      "id": "KD187",
+      "quote": "Most dog owners are aware of how dangerous chocolate can be for dogs."
+    },
+    {
+      "id": "KD187",
+      "quote": "But you may not know that sugar-free gum, which contains xylitol, is just as dangerous."
+    },
+    {
+      "id": "KD187",
+      "quote": "Some dogs have developed severe liver damage after xylitol ingestion."
+    },
+    {
+      "id": "KD187",
+      "quote": "give anything orally to your dog unless specifically directed to do so by your veterinarian."
+    },
+    {
+      "id": "KD188",
+      "quote": "The most common and dangerous ingredient found in gum is xylitol, an artificial sweetener"
+    },
+    {
+      "id": "KD188",
+      "quote": "can cause a rapid drop in blood sugar, seizures, liver failure, and even death"
+    },
+    {
+      "id": "KD188",
+      "quote": "Gum often contains sugar, artificial sweeteners, and other ingredients that can be toxic to dogs."
+    },
+    {
+      "id": "KD188",
+      "quote": "Within minutes, a dog will start to feel nauseous and dizzy, vomiting and staggering as they walk."
+    },
+    {
+      "id": "KD188",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD188",
+      "quote": "Difficulty walking"
+    },
+    {
+      "id": "KD188",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KD188",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KD188",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD188",
+      "quote": "These symptoms come on quickly and can worsen if your dog does not receive prompt medical care."
+    },
+    {
+      "id": "KD188",
+      "quote": "it is important to take them to the vet immediately and call Pet Poison Helpline® for prompt medical advice."
+    },
+    {
+      "id": "KD191",
+      "quote": "Large quantities of hard candies and gum can clump up in their stomach and cause a risk of stomach obstruction."
+    },
+    {
+      "id": "KD53",
+      "quote": "Sugarless gum may contain xylitol, a class of sweetener known as sugar alcohol."
+    },
+    {
+      "id": "KD5",
+      "quote": "Xylitol is a sweetener found in some sugar-free candy, chewing gum, toothpaste, baked goods, medications, drink mixes,"
+    },
+    {
+      "id": "KD5",
+      "quote": "It may also appear on ingredient labels as “birch sugar,” “wood sugar,” or “birch bark extract.”"
+    }
+  ],
+  "related": [
+    "xylitol",
+    "candy",
+    "mint",
+    "chocolate",
+    "sugar"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "becb61f9c0517d881fce3a168ce7fa768e3fa48acf7f7513e3201a80316bd9da"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5665313aa60313c173e987a842f074cc38a94e7ded62c356b3eb228d3fe15b22"
+    }
+  }
+}

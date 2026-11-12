@@ -1,0 +1,150 @@
+{
+  "slug": "cake",
+  "species": "cat",
+  "name": {
+    "en": "Cake",
+    "sl": "Torte in kolači"
+  },
+  "question": {
+    "en": "Can cats eat cake?",
+    "sl": "Ali lahko mačke jedo torto?"
+  },
+  "url_slug": {
+    "en": "cake",
+    "sl": "torta"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, cake is not for cats. It is sugary, which is unhealthy for cats, and many cakes, especially Christmas and fruit cakes, contain dried fruit or chocolate, which are harmful to cats. The RSPCA warns that Christmas cakes are dangerous for cats.",
+    "sl": "Ne, torta ni za mačke. Je sladka, kar je za mačke nezdravo, veliko tort, zlasti božičnih in sadnih, pa vsebuje suho sadje ali čokolado, ki mačkam škodita. RSPCA opozarja, da so božične torte za mačke nevarne."
+  },
+  "why": {
+    "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
+    "sl": "RSPCA navaja, da so božične torte za mačke nevarne. Takšne torte pogosto vsebujejo sultanine, rozine in korinte, ki jih RSPCA označuje kot strupene, in svetuje, naj mačke ne pojedo nič grozdja. Čokolada je za mačke strogo prepovedana. Navaden biskvit teh sestavin nima, a njegov sladkor je za mačke nezdrav in nima hranilne vrednosti, zato za vse torte uporabljamo strožjo raven."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea or stomach upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska ali želodčne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate cake with dried fruit or chocolate in it, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home. After a lick of plain sponge, watch for an upset stomach.",
+    "sl": "Če je mačka pojedla torto s suhim sadjem ali čokolado, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja. Če je le oblizala navaden biskvit, bodite pozorni na želodčne težave."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cake is a people treat. Some cakes have raisins or chocolate that can make cats poorly, so keep your slice for yourself.",
+    "sl": "Torta je posladek za ljudi. Nekatere torte imajo rozine ali čokolado, ki muci škodijo, zato svoj kos obdrži zase."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is Christmas cake dangerous for cats?",
+        "sl": "Ali je božična torta nevarna za mačke?"
+      },
+      "a": {
+        "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
+        "sl": "Da. RSPCA opozarja, da so božične torte za mačke nevarne, saj pogosto vsebujejo suho sadje. Blue Cross opisuje mačka, ki je bruhal, potem ko je pojedel bogato božično torto, in je moral čez noč ostati pri veterinarju na infuziji."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC76",
+      "quote": "Christmas cakes, mince pies, unsalted nuts, savoury snacks and grated cheese,"
+    },
+    {
+      "id": "KC76",
+      "quote": "as these are dangerous for cats, dogs and small animals."
+    },
+    {
+      "id": "KC76",
+      "quote": "Dried fruit like sultanas, raisins and currants, and also grapes, are toxic."
+    },
+    {
+      "id": "KC76",
+      "quote": "These ingredients are often found in Christmas pudding, Christmas cake, mince pies"
+    },
+    {
+      "id": "KC76",
+      "quote": "Rabbits and guinea pigs can eat very small quantities of grapes, but don’t let cats and dogs eat any"
+    },
+    {
+      "id": "KC76",
+      "quote": "as they’re poisonous."
+    },
+    {
+      "id": "KC76",
+      "quote": "If your pet eats any dried fruit, take them to the vet immediately."
+    },
+    {
+      "id": "KC5",
+      "quote": "While most human treats should be avoided, chocolate is a complete no-no for cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "Chocolate contains a chemical compound called theobromine which is toxic to cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn’t toxic to cats, it’s still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar offers no nutritional value for cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "digestive issues like diarrhoea or stomach upset"
+    },
+    {
+      "id": "KC113",
+      "quote": "Emma Faunch returned home to find a very poorly Monty, who had been sick on the hallway rug"
+    },
+    {
+      "id": "KC113",
+      "quote": "after devouring the rich cake full of sherry-soaked sultanas, nuts, cherries and brandy."
+    },
+    {
+      "id": "KC113",
+      "quote": "The vet was a little concerned about Monty’s kidneys at first so they kept him in overnight on a drip"
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t try to make your cat sick at home unless your vet tells you to do so."
+    }
+  ],
+  "related": [
+    "raisins",
+    "dried-fruit",
+    "chocolate",
+    "sugar",
+    "alcohol"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b710adb4ddddfdf16ae66832b423c8d16cfe68b25cd91c9714ede6aee2e89ef2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d25e3022102519e3061ab8b643fc024b014ca8e34ae7c331ae9ebc0cc56facfb"
+    }
+  }
+}

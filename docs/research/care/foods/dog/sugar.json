@@ -1,0 +1,148 @@
+{
+  "slug": "sugar",
+  "species": "dog",
+  "name": {
+    "en": "Sugar",
+    "sl": "Sladkor"
+  },
+  "question": {
+    "en": "Can dogs eat sugar?",
+    "sl": "Ali lahko psi jedo sladkor?"
+  },
+  "url_slug": {
+    "en": "sugar",
+    "sl": "sladkor"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it is best not to give your dog sugar. A little sugar isn't toxic to dogs, but it offers no nutritional benefit and can cause stomach upset. Sugar-free products are no safer: they may contain xylitol, which is toxic to dogs.",
+    "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen."
+  },
+  "why": {
+    "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
+    "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Poor appetite, low energy or belly pain (possible pancreatitis; signs can take a few days to appear)"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit, utrujenost ali bolečine v trebuhu (možen pankreatitis; znaki se lahko pokažejo šele po nekaj dneh)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Plain sugary sweets often cause mild stomach upset or no signs at all. If your dog ate a lot of sugary food, call your vet or a pet poison helpline right away, even if your dog seems fine. If it ate something sugar-free that may contain xylitol, call your vet immediately.",
+    "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sugar is a people treat. It can give dogs a tummy ache, so keep sweets for yourself and give your dog a dog treat.",
+    "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Will a little bit of sugar hurt my dog?",
+        "sl": "Ali bo malo sladkorja psu škodilo?"
+      },
+      "a": {
+        "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
+        "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi."
+      }
+    },
+    {
+      "q": {
+        "en": "Are sugar-free sweets safer for dogs?",
+        "sl": "Ali so sladkarije brez sladkorja za pse varnejše?"
+      },
+      "a": {
+        "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
+        "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD189",
+      "quote": "A little bit of sugar isn’t toxic to dogs, but sugar can cause stomach upset and offers no nutritional benefit."
+    },
+    {
+      "id": "KD189",
+      "quote": "Plain sugary candy often causes mild stomach upset or no signs at all."
+    },
+    {
+      "id": "KD189",
+      "quote": "Then call Pet Poison Helpline or your veterinarian right away, even if your dog seems fine."
+    },
+    {
+      "id": "KD189",
+      "quote": "Check the labels for chocolate, xylitol (also listed as birch sugar), and raisins."
+    },
+    {
+      "id": "KD189",
+      "quote": "Pancreatitis signs can take a few days to appear."
+    },
+    {
+      "id": "KD195",
+      "quote": "The sugar can cause stomach upset, including vomiting and diarrhea."
+    },
+    {
+      "id": "KD195",
+      "quote": "Sugary, high-fat foods can also potentially lead to pancreatitis, a painful inflammation of the pancreas."
+    },
+    {
+      "id": "KD190",
+      "quote": "can include decreased appetite, vomiting, diarrhea, lethargy, abdominal pain"
+    },
+    {
+      "id": "KD184",
+      "quote": "Even if your dog is healthy, feeding them sugary treats can contribute to obesity"
+    },
+    {
+      "id": "KD183",
+      "quote": "Sugars can also cause tooth decay, so it might be a good idea to brush your dog’s teeth after feeding them honey."
+    },
+    {
+      "id": "KD191",
+      "quote": "Xylitol is a sugar alcohol commonly used as an artificial sweetener that is toxic to pets."
+    },
+    {
+      "id": "KD191",
+      "quote": "This ingredient is often found in sugar-free items, such as sugar-free gum, candy, and baked goods."
+    },
+    {
+      "id": "KD191",
+      "quote": "Call your vet or emergency vet immediately if you believe your dog consumed xylitol."
+    },
+    {
+      "id": "KD192",
+      "quote": "It is best to give dogs treats and cookies that are made exclusively for dogs."
+    }
+  ],
+  "related": [
+    "xylitol",
+    "candy",
+    "honey",
+    "marshmallows",
+    "cookies",
+    "cake",
+    "ice-cream"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6fd304d724a23e95a211ee40e82a7b984799d89da3e99287e77307912b5d5e6"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "376a349ee76d7ebd0d2c2824d99d9614c95d88122d3b750e81924b992e389b45"
+    }
+  }
+}

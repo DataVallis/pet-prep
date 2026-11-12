@@ -1,0 +1,140 @@
+{
+  "slug": "honey",
+  "species": "dog",
+  "name": {
+    "en": "Honey",
+    "sl": "Med"
+  },
+  "question": {
+    "en": "Can dogs eat honey?",
+    "sl": "Ali lahko psi jedo med?"
+  },
+  "url_slug": {
+    "en": "honey",
+    "sl": "med"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts. Honey is generally fine for healthy adult dogs in small quantities, but it is mostly sugar, so there is little reason to give it regularly. Don't give raw honey to puppies or dogs with weak immune systems, or any honey to diabetic dogs.",
+    "sl": "Da, v majhnih količinah. Med je za zdrave odrasle pse v majhnih količinah na splošno v redu, vendar je večinoma sladkor, zato ga ni smiselno dajati redno. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, psom s sladkorno boleznijo pa nobenega medu."
+  },
+  "why": {
+    "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
+    "sl": "Med vsebuje naravne sladkorje ter majhne količine vitaminov in mineralov. Med ima veliko sladkorja, zato lahko pri prevelikih količinah vodi v debelost, sladkorji pa lahko povzročijo zobno gnilobo. Surov med lahko vsebuje botulizem, zato ni primeren za mladiče in pse s šibkim imunskim sistemom."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Small amounts of honey are generally fine for a healthy adult dog. If your dog has a health condition such as diabetes, or you are unsure how much is okay, talk to your vet.",
+    "sl": "Majhne količine medu so za zdravega odraslega psa na splošno v redu. Če ima pes kakšno bolezen, na primer sladkorno, ali če niste prepričani, koliko je v redu, se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
+    "sl": "Le malo in občasno, samo za zdrave odrasle pse; manj je več, zlasti pri majhnih pasmah. Veterinarja vprašajte, koliko je v redu, in psu po medu morda umijte zobe."
+  },
+  "child": {
+    "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
+    "sl": "Psi lahko včasih dobijo čisto malo medu. Je zelo sladek, zato najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can honey help my dog's allergies?",
+        "sl": "Ali med pomaga pri pasjih alergijah?"
+      },
+      "a": {
+        "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
+        "sl": "Pogosto slišimo, da med pomaga pri sezonskih alergijah, vendar to ni zagotovljeno in niti ni verjetno."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I give honey to my puppy?",
+        "sl": "Ali lahko mladiču dam med?"
+      },
+      "a": {
+        "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
+        "sl": "Surovega ne. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, ker lahko vsebuje botulizem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD183",
+      "quote": "Honey is safe for dogs to eat in small quantities."
+    },
+    {
+      "id": "KD183",
+      "quote": "It contains natural sugars and small amounts of vitamins and minerals."
+    },
+    {
+      "id": "KD183",
+      "quote": "The high sugar content of honey can lead to obesity in dogs if owners feed them too much honey"
+    },
+    {
+      "id": "KD183",
+      "quote": "Sugars can also cause tooth decay, so it might be a good idea to brush your dog’s teeth after feeding them honey."
+    },
+    {
+      "id": "KD183",
+      "quote": "Raw honey shouldn’t be fed to puppies or dogs with compromised immune systems"
+    },
+    {
+      "id": "KD183",
+      "quote": "as it may contain the presence of botulism"
+    },
+    {
+      "id": "KD183",
+      "quote": "Honey also shouldn’t be given to diabetic dogs."
+    },
+    {
+      "id": "KD183",
+      "quote": "If you want to feed your dog honey, talk to your veterinarian about how much is okay to feed them."
+    },
+    {
+      "id": "KD183",
+      "quote": "In general, less is usually more when it comes to dog treats, especially for smaller breeds."
+    },
+    {
+      "id": "KD183",
+      "quote": "If your dog has a health condition, such as diabetes, talk to your veterinarian"
+    },
+    {
+      "id": "KD183",
+      "quote": "One of the most common claims made about honey is that it can cure seasonal allergies."
+    },
+    {
+      "id": "KD183",
+      "quote": "However, it isn’t guaranteed or even likely to help with allergies."
+    },
+    {
+      "id": "KD5",
+      "quote": "Honey contains micronutrients and antioxidants, but it’s mostly sugars."
+    },
+    {
+      "id": "KD5",
+      "quote": "Small amounts of honey are generally fine for healthy adult dogs,"
+    },
+    {
+      "id": "KD5",
+      "quote": "but that high sugar and calorie content means there is little reason to regularly add it to any dog’s diet."
+    }
+  ],
+  "related": [
+    "sugar",
+    "peanut-butter",
+    "xylitol"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fec6346738bd5bbc99c95c69534044ee6a80626d47dbeeccee4ff82085870650"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9bf59eaa528bbdb753a149cdd9cd50e6e0f385caff5e820426f38c95f00b8254"
+    }
+  }
+}

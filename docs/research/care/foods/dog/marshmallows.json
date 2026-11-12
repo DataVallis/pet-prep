@@ -1,0 +1,161 @@
+{
+  "slug": "marshmallows",
+  "species": "dog",
+  "name": {
+    "en": "Marshmallows",
+    "sl": "Penasti bonboni (marshmallow)"
+  },
+  "question": {
+    "en": "Can dogs eat marshmallows?",
+    "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?"
+  },
+  "url_slug": {
+    "en": "marshmallows",
+    "sl": "penasti-bonboni"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No. Not all marshmallows are toxic to dogs, but they are not good for them: they are made from sugar, corn syrup and gelatin and have little or no nutritional value. Some contain xylitol, which is toxic to dogs.",
+    "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen."
+  },
+  "why": {
+    "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
+    "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Poor appetite",
+      "Diarrhoea",
+      "Wobbly walking or seizures (xylitol)"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Slabši apetit",
+      "Driska",
+      "Opotekanje ali krči (ksilitol)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Call your vet right away if your dog ate several marshmallows, or any marshmallow that may contain xylitol.",
+    "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol."
+  },
+  "serving": {
+    "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
+    "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice."
+  },
+  "child": {
+    "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
+    "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are sugar-free marshmallows safer?",
+        "sl": "Ali so penasti bonboni brez sladkorja varnejši?"
+      },
+      "a": {
+        "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
+        "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD184",
+      "quote": "The answer is no."
+    },
+    {
+      "id": "KD184",
+      "quote": "Though not all marshmallows are toxic to dogs, they certainly aren’t good for your dog."
+    },
+    {
+      "id": "KD184",
+      "quote": "Made from sugar, corn syrup, gelatin, and vanilla extract"
+    },
+    {
+      "id": "KD184",
+      "quote": "contain very little if any, nutritional value or health benefits."
+    },
+    {
+      "id": "KD184",
+      "quote": "if the marshmallow has xylitol (an artificial sugar) as an ingredient, it’s toxic to your dog"
+    },
+    {
+      "id": "KD184",
+      "quote": "it’s toxic to your dog and can be extremely harmful, even if ingested in small quantities"
+    },
+    {
+      "id": "KD184",
+      "quote": "Xylitol can cause dangerously low blood sugar"
+    },
+    {
+      "id": "KD184",
+      "quote": "Marshmallows contain an incredibly high amount of sugar and calories."
+    },
+    {
+      "id": "KD184",
+      "quote": "they’re especially dangerous for any dog with diabetes or weight problems."
+    },
+    {
+      "id": "KD184",
+      "quote": "Even if your dog is healthy, feeding them sugary treats can contribute to obesity"
+    },
+    {
+      "id": "KD184",
+      "quote": "eating too many can lead to gastrointestinal upset"
+    },
+    {
+      "id": "KD184",
+      "quote": "your dog could also be at risk for pancreatitis."
+    },
+    {
+      "id": "KD184",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD184",
+      "quote": "Lack of appetite"
+    },
+    {
+      "id": "KD184",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD184",
+      "quote": "as well as ataxia (uncoordinated gait) or seizures."
+    },
+    {
+      "id": "KD184",
+      "quote": "Call your veterinarian immediately if your dog consumes multiple marshmallows."
+    },
+    {
+      "id": "KD184",
+      "quote": "opt for high-quality dog treats or healthier snacks like carrots, green veggies, or blueberries"
+    },
+    {
+      "id": "KD191",
+      "quote": "Call your vet or emergency vet immediately if you believe your dog consumed xylitol."
+    }
+  ],
+  "related": [
+    "sugar",
+    "candy",
+    "xylitol",
+    "carrots",
+    "blueberries"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "86fdad5fb200d3fd19ef546ccd36256e22da4b59cd70f428637a5f16574da9e0"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "52cdaf5972c72e4907456a01e062b04165ea21cd4ad197d0b2c9f1398df44383"
+    }
+  }
+}

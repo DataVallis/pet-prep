@@ -1,0 +1,189 @@
+{
+  "slug": "candy",
+  "species": "dog",
+  "name": {
+    "en": "Candy",
+    "sl": "Sladkarije"
+  },
+  "question": {
+    "en": "Can dogs eat candy?",
+    "sl": "Ali lahko psi jedo sladkarije?"
+  },
+  "url_slug": {
+    "en": "candy",
+    "sl": "sladkarije"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Candy is not safe for dogs. Its sugar can upset a dog's stomach, and some candy contains chocolate, xylitol or raisins, which are toxic to dogs. Swallowed wrappers can also cause blockages.",
+    "sl": "Ne. Sladkarije za pse niso varne. Sladkor psu lahko razdraži želodec, nekatere sladkarije pa vsebujejo čokolado, ksilitol ali rozine, ki so za pse strupeni. Pogoltnjeni ovitki lahko povzročijo tudi zaporo."
+  },
+  "why": {
+    "en": "Candy offers dogs no nutritional value, and sugary, high-fat candy can lead to pancreatitis, a painful inflammation of the pancreas. Chocolate, xylitol (in sugar-free candy and gum) and raisins are toxic. Wrappers can be a choking risk, foil and cellophane wrappers can block the intestines, and large amounts of hard candy can clump in the stomach. Plain sugary candy often causes only mild stomach upset, but because candy can hide toxic ingredients and wrappers, we rate it dangerous.",
+    "sl": "Sladkarije psu ne dajo nobene hranilne vrednosti, sladke in mastne sladkarije pa lahko povzročijo pankreatitis, boleče vnetje trebušne slinavke. Čokolada, ksilitol (v sladkarijah in žvečilnih gumijih brez sladkorja) in rozine so strupeni. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana lahko zamašijo črevesje, večja količina trdih bonbonov pa se lahko v želodcu zlepi v kepo. Navadne sladkarije pogosto povzročijo le blage prebavne težave, a ker lahko skrivajo strupene sestavine in ovitke, jih uvrščamo med nevarne."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Poor appetite, low energy or belly pain (pancreatitis signs can take a few days to appear)",
+      "Weakness, stumbling or seizures (xylitol)"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit, utrujenost ali bolečine v trebuhu (znaki pankreatitisa se lahko pokažejo šele po nekaj dneh)",
+      "Šibkost, opotekanje ali krči (ksilitol)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Move the remaining candy out of reach and gather the wrappers: they help you work out what your dog ate and roughly how much. Check the labels for chocolate, xylitol (also listed as birch sugar) and raisins, then call your vet or a pet poison helpline right away, even if your dog seems fine.",
+    "sl": "Preostale sladkarije pospravite iz pasjega dosega in zberite ovitke: pomagajo vam ugotoviti, kaj in približno koliko je pes pojedel. Na deklaracijah preverite, ali vsebujejo čokolado, ksilitol (naveden je lahko tudi kot brezov sladkor) ali rozine, nato takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sweets are for people, not dogs. Keep candy and wrappers out of reach, and tell a grown-up if your dog eats some.",
+    "sl": "Sladkarije so za ljudi, ne za pse. Sladkarije in ovitke pospravi, da jih pes ne doseže, in povej odraslemu, če jih pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog swallowed a candy wrapper. Is that dangerous?",
+        "sl": "Pes je pogoltnil ovitek bonbona. Je to nevarno?"
+      },
+      "a": {
+        "en": "It can be. Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines. Contact your vet or a pet poison helpline for guidance.",
+        "sl": "Lahko je. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana pa lahko zamašijo črevesje. Za nasvet pokličite veterinarja ali telefonsko linijo za zastrupitve živali."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat lollipops or jelly beans?",
+        "sl": "Ali lahko psi jedo lizike ali želejeve bonbone?"
+      },
+      "a": {
+        "en": "No. Jelly beans are mostly sugar, which can cause stomach upset. Sugar-free lollipops may contain xylitol, and dogs may chew and swallow the lollipop stick.",
+        "sl": "Ne. Želejevi bonboni so večinoma sladkor, ki lahko povzroči prebavne težave. Lizike brez sladkorja lahko vsebujejo ksilitol, pes pa lahko palčko lizike pregrizne in pogoltne."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD190",
+      "quote": "Absolutely not, it is dangerous for dogs to eat candy."
+    },
+    {
+      "id": "KD189",
+      "quote": "The sugar in candy can upset a dog’s stomach."
+    },
+    {
+      "id": "KD189",
+      "quote": "Some candy ingredients are toxic to dogs, including chocolate, xylitol (found in sugar-free candy and gum), and raisins."
+    },
+    {
+      "id": "KD189",
+      "quote": "Swallowed wrappers can also cause blockages."
+    },
+    {
+      "id": "KD189",
+      "quote": "Candy offers dogs no nutritional value, and the sugar can cause stomach upset."
+    },
+    {
+      "id": "KD189",
+      "quote": "Sugary, high-fat candy can also potentially lead to pancreatitis, a painful inflammation of the pancreas."
+    },
+    {
+      "id": "KD189",
+      "quote": "Candy wrappers can be a choking risk."
+    },
+    {
+      "id": "KD189",
+      "quote": "Foil and cellophane wrappers can also cause a serious blockage in the intestines."
+    },
+    {
+      "id": "KD189",
+      "quote": "Plain sugary candy often causes mild stomach upset or no signs at all."
+    },
+    {
+      "id": "KD189",
+      "quote": "Pancreatitis signs can take a few days to appear."
+    },
+    {
+      "id": "KD189",
+      "quote": "Move the remaining candy out of reach."
+    },
+    {
+      "id": "KD189",
+      "quote": "The wrappers help you identify what your dog ate and roughly how much."
+    },
+    {
+      "id": "KD189",
+      "quote": "Check the labels for chocolate, xylitol (also listed as birch sugar), and raisins."
+    },
+    {
+      "id": "KD189",
+      "quote": "Then call Pet Poison Helpline or your veterinarian right away, even if your dog seems fine."
+    },
+    {
+      "id": "KD189",
+      "quote": "A swallowed candy wrapper can be dangerous for dogs."
+    },
+    {
+      "id": "KD189",
+      "quote": "Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines."
+    },
+    {
+      "id": "KD189",
+      "quote": "We recommend contacting Pet Poison Helpline or your veterinarian for guidance."
+    },
+    {
+      "id": "KD189",
+      "quote": "Dogs should not eat Smarties, Nerds, Tootsie Rolls, lollipops, or jelly beans."
+    },
+    {
+      "id": "KD189",
+      "quote": "Jelly beans are mostly sugar, which can cause stomach upset."
+    },
+    {
+      "id": "KD189",
+      "quote": "Sugar-free lollipops may contain xylitol, so check the label right away."
+    },
+    {
+      "id": "KD189",
+      "quote": "The lollipop stick is a separate concern, since dogs may chew and swallow the stick along with the candy."
+    },
+    {
+      "id": "KD190",
+      "quote": "can include decreased appetite, vomiting, diarrhea, lethargy, abdominal pain"
+    },
+    {
+      "id": "KD191",
+      "quote": "Large quantities of hard candies and gum can clump up in their stomach and cause a risk of stomach obstruction."
+    },
+    {
+      "id": "KD191",
+      "quote": "The blood-sugar drop (hypoglycemia) that results can cause weakness, stumbling, collapse, and even seizures."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "xylitol",
+    "raisins",
+    "gum",
+    "sugar",
+    "marshmallows"
+  ],
+  "updated": "2026-11-12",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "62b7325bb59e5e7745a96e4d37162b3ff34e2938b44aeb68bec52402aa2a3b56"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fba87fcfd9a2d18212a26eccab24e0e479c807d3b46bd6d8fc3741b1212cf6df"
+    }
+  }
+}
