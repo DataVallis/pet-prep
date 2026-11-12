@@ -1,0 +1,82 @@
+{
+  "country": "TZ",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Vetzcapes Veterinary Services own site",
+      "url": "https://www.vetzcapes.com/",
+      "note": "Opened; Arusha, phone, e-mail, hours Mon-Fri 08:30-16:00, Thursdays home visits; 'Please call us for emergencies', no 24 h claim; pets and wildlife."
+    },
+    {
+      "name": "Every Living Thing (ELT) Dar es Salaam animal rescue - our services page",
+      "url": "https://www.everylivingthing.or.tz/our-services",
+      "note": "Opened; an NGO page that names Pet Care House Veterinary Clinic (Masaki, 0753 643 835, after-hours 0753 520 244) and Vet Care Veterinary Clinic (Mikocheni, 0713 325 000) as vet referrals. Phone numbers only; no address, hours or 24 h statement. Not the clinics' own pages."
+    },
+    {
+      "name": "myguidetanzania.com listing for Vet Care Ltd (aggregator, cross-check only)",
+      "url": "https://www.myguidetanzania.com/services/vet-care-ltd",
+      "note": "Opened; address Plot 246 Ali Hassan Mwinyi Road and phones 0713 325 000 / 0784 325 000 match the ELT page phone; hours contradict themselves inside the page, so no hours published. Not used as sole source."
+    },
+    {
+      "name": "Sokoine University of Agriculture animal referral hospital news page (sua.ac.tz)",
+      "url": "https://www.suanet.ac.tz/news/major-improvements-made-sua-animal-referral-hospital",
+      "note": "Not read: the page redirects to www.sua.ac.tz and WebFetch refused the redirected URL (provenance). No SUA entry added."
+    },
+    {
+      "name": "Tanzania Veterinary Council (vct.go.tz)",
+      "url": "https://brandfetch.com/vct.go.tz",
+      "note": "Council site not found/opened (only a brand-aggregator page, which failed to load). No official clinic directory, duty rota or poison line found."
+    },
+    {
+      "name": "Unreachable / skipped",
+      "url": "https://anivet.co.tz/",
+      "note": "anivet.co.tz, zoomtanzania.com and tz.linkedin.com blocked by robots (skipped); deltavets.co.tz/contact-us.html loops on an http/https redirect and could not be opened; goafricaonline.com directory listed only an Arusha rescue/kennel (no clinic); no clinics found for Zanzibar, Dodoma, Mwanza or Moshi."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Vetzcapes Veterinary Services",
+      "city": "Arusha",
+      "region": "Arusha",
+      "address": "Dolly Estate, Arusha",
+      "phone": "+255 769 577 782",
+      "emergency_24h": false,
+      "duty": "Open Monday to Friday 08:30-16:00 (Thursdays are home visits). For emergencies call the clinic.",
+      "small_animals": true,
+      "url": "https://www.vetzcapes.com/",
+      "source_url": "https://www.vetzcapes.com/",
+      "checked": "2026-11-12",
+      "note": "Page quote: 'Please call us for emergencies.' Page title/metadata says Usa River while body says Dolly Estate - location inconsistent. Serves domestic animals and wildlife, 'not just dogs and cats'. E-mail milou.vetzcapes@gmail.com."
+    },
+    {
+      "kind": "clinic",
+      "name": "Pet Care House Veterinary Clinic",
+      "city": "Dar es Salaam",
+      "region": "Dar es Salaam",
+      "address": "Masaki, Dar es Salaam",
+      "phone": "+255 753 643 835",
+      "emergency_24h": false,
+      "duty": "After-hours line: +255 753 520 244.",
+      "small_animals": true,
+      "source_url": "https://www.everylivingthing.or.tz/our-services",
+      "checked": "2026-11-12",
+      "note": "Only source opened is the ELT rescue NGO referral list (Masaki, 0753 643 835, after-hours 0753 520 244); clinic's own site not found (Facebook/LinkedIn not fetchable). Street address and hours unverified; no 24 h claim. Needs a re-check on the clinic's own page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet Care Veterinary Clinic (Vet Care Ltd)",
+      "city": "Dar es Salaam",
+      "region": "Dar es Salaam",
+      "address": "Mikocheni, Dar es Salaam",
+      "phone": "+255 713 325 000",
+      "emergency_24h": false,
+      "duty": "Call the clinic for hours and appointments.",
+      "small_animals": true,
+      "source_url": "https://www.everylivingthing.or.tz/our-services",
+      "checked": "2026-11-12",
+      "note": "ELT page lists name, Mikocheni and 0713 325 000 only; no street address, hours or 24 h claim. Own site not found. Needs re-check on the clinic's own page."
+    }
+  ],
+  "notes": "Independent check 2026-11-12 (WebFetch of all 3 source_urls): 3 checked, 1 fixed, 0 removed, 0 downgraded. Fix: Vet Care Ltd street address (Plot 246 Ali Hassan Mwinyi Road) came only from an aggregator and is not on the ELT source page, so address reduced to 'Mikocheni, Dar es Salaam' and duty text no longer borrows ELT's appointment sentence. Vetzcapes and Pet Care House confirmed as on page (phones, location, no 24 h claim). Thin run: Tanzania has few clinic websites that WebFetch could open. No duty rotas, no animal poison line, no 24 h clinic found. Official bodies (Tanzania Veterinary Council, Ministry of Livestock and Fisheries, SUA teaching hospital) yielded no readable clinic data. Left: Delta Vets (deltavets.co.tz, redirect loop), Anivet (robots), Merlino Vet Clinic Arusha (named on an expat forum only, no site), Zanzibar, Moshi, Mwanza, Dodoma clinics not found."
+}

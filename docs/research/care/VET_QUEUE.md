@@ -185,7 +185,8 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [~] JO Jordan — 9 entries, 2 × 24 h (Petly Center, Royal Paws), no duty rota, no animal poison line, check: 8 checked, 0 fixed, 0 removed, 2026-11-12 — left: Aqaba, Zarqa, Madaba, Jerash, Petra; jordanvet.com / jvc.jo / petmedjo.com unreachable, JUST hospital emergency page rejected (see `vets/JO.json` notes)
 - [!] JO Jordan — follow-up: Aqaba, Zarqa, Madaba, Jerash, Petra and other Amman clinics on own sites (Jordan Veterinary Center, Lifeline, Amity, Royal Pets, PetCharm); skip what was unreachable twice — 0 entries, 2026-11-12: WebFetch refused jvc.jo, jordanvet.com and petlycenter.com (PROVENANCE_REQUIRED); Lifeline, Amity, Royal Pets, PetCharm only on Facebook (robots-blocked); no Aqaba/Zarqa/Madaba/Jerash/Petra clinic page reachable; nothing invented; retry only with pre-approved clinic URLs
 - [~] KE Kenya — 6 entries, 1 × 24 h (Andy's Kiambu Road), no duty rota, no animal poison line, check: 5 checked, 0 fixed, 1 removed (Pets Society — Egypt, not Kenya), 2026-11-12 — left: most clinic sites refused by WebFetch (Crystal Vets, Ducknet, Noble Veterinary, Petville, KSPCA), Diani, Naivasha, Nakuru, Eldoret, Malindi (see `vets/KE.json` notes)
-- [ ] TZ Tanzania
+- [~] TZ Tanzania — 3 entries (Arusha 1, Dar es Salaam 2), 0 × 24 h, no duty rota, no animal poison line, thin: official bodies (TVC, ministry, SUA hospital) not fetchable, Dar clinics only on an NGO referral page, check: 3 checked, 1 fixed (Vet Care address not on page), 0 removed, 2026-11-12 — left: Zanzibar, Dodoma, Mwanza, Moshi, Dar es Salaam/Arusha clinics on own sites (Delta Vets, Anivet blocked; see `vets/TZ.json` notes)
+- [ ] TZ Tanzania — follow-up: clinics left in `vets/TZ.json` notes on their own sites; skip what was unreachable twice
 - [ ] MU Mauritius
 - [ ] SC Seychelles
 - [ ] MV Maldives
