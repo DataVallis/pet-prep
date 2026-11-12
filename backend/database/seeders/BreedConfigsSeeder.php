@@ -2134,6 +2134,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.bouvier_des_flandres',
                 'search_keywords' => ['bouvier des flandres', 'bouvier', 'flanders cattle dog', 'vlaamse koehond', 'flandrijski govedar'],
             ],
+            // M5-R10-106 Borzoi (docs/research/dog-data/data.json borzoi, sources S800–S804; runbook rules confirmed by
+            // David 2026-10-10: paid). daily_steps_required = the adult step goal (proposed_game_parameters.borzoi.step_goal_adult:
+            // 60 min × 100 steps/min — PDSA S800 "Minimum exercise (per day): 1 hour") — only the legacy-profile fallback.
+            // Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::Borzoi->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 990,
+                'label_key' => 'breeds.borzoi',
+                'search_keywords' => ['borzoi', 'russian hunting sighthound', 'ruski hrt', 'borzoj', 'ruski chrt'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

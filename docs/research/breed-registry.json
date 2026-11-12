@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "5ec8d38bcd0e3c6ccde4512138247cf3d73be34a42ed925a444349184f215d35"
+      "sha256": "a7239838eecd7e433fd758b247d06dae056855e5c573ecc7e30b805e13470cad"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "e367aa04d15e0fd76e5cbd83fb544d6250b57c75bf0fbe7512cb181d33774ec8"
+      "sha256": "79f79637638715361f252023a7f54d269e75ac4da280be591ebe5eeec3456789"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "19c3e97e148877704a30383d6e5ed8a1d577972155b732217f864ab11de12b7d"
+      "sha256": "e43b5d7fb4398075ed9cfaa78c39b2dbc2b02eee98d6793ba38a2b91b18c2563"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1caf14e8dd2504bc21f4a41f4086b40079651a8e31272f13228ca49d623d7b76"
+      "sha256": "ab31d7d4c8fd852fbc76d147b0432d729c03610bea0b827d4409f8c6a8097fed"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3bb962a4bf5f55e93decb786223c5b60852ab7c72aa2c9d0e025e1be190560d0"
+      "sha256": "4f40b343782e6fb4c5dc716cddc4fa08d8c0ac7c3f8d230e4cb33c99ef5ffaa1"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "7e62593b0dd21a913623e952fd401819da012f46363644c2d9b3dffabf43c89a"
+      "sha256": "e3b62355d421c860dedd58a18a6fde5ceb7108be70b1a980b7f71d2f19edd031"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "f9f817d19052b561166c6c5fa24b94aba410ad64a3ec3c9edc5c559042b71c77"
+      "sha256": "fc59cfff6c5af880bf6424aa849e5dc76011cb701901d0102b83f0b74e7e1da0"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "bae27751db05d1f943678e8a1c78f537997d35d19a272e16e5ddc56e8fa69146"
+      "sha256": "7dc01e615fd27479b96c5338f1f7afb7f0f2efe7395874ea4aa171ffab08e503"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 98,
+      "breed_count": 99,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -59423,6 +59423,515 @@
       ]
     },
     {
+      "id": "borzoi",
+      "species": "dog",
+      "order": 98,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Borzoi",
+        "sl": "Ruski hrt"
+      },
+      "slug": {
+        "en": "borzoi",
+        "sl": "ruski-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "Russian Wolfhound",
+          "Russian Hunting Sighthound",
+          "Russkaya Psovaya Borzaya"
+        ],
+        "sl": [
+          "borzoj",
+          "borzoi",
+          "ruski chrt"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S800"
+          ],
+          "ref": "borzoi.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              75,
+              85
+            ],
+            "female": [
+              68,
+              78
+            ]
+          },
+          "source_ids": [
+            "S802"
+          ],
+          "ref": "borzoi.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              27,
+              47
+            ],
+            "female": [
+              27,
+              47
+            ]
+          },
+          "source_ids": [
+            "S800"
+          ],
+          "ref": "borzoi.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "borzoi.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S800"
+          ],
+          "ref": "borzoi.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            9,
+            14
+          ],
+          "source_ids": [
+            "S803"
+          ],
+          "ref": "borzoi.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S800"
+          ],
+          "ref": "proposed_game_parameters.borzoi.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 75,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "borzoi.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 193,
+            "group": 10,
+            "section": 1,
+            "origin": "RU"
+          },
+          "source_ids": [
+            "S801"
+          ],
+          "ref": "borzoi.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S803"
+          ],
+          "ref": "borzoi.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "degenerative_myelopathy",
+          "source_ids": [
+            "S800"
+          ],
+          "ref": "borzoi.health.degenerative_myelopathy",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S803"
+          ],
+          "ref": "borzoi.health.hips_elbows",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_conditions",
+          "source_ids": [
+            "S803"
+          ],
+          "ref": "borzoi.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S800",
+              "S803"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_grooming",
+              "borzoi.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_children",
+              "borzoi.behaviour.children"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S800"
+            ],
+            "refs": [
+              "borzoi.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.borzoi.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S800"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S800 'Minimum exercise (per day): 1 hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.borzoi.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.borzoi.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S800"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.borzoi.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 75, Lowest, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.borzoi.grooming",
+            "basis_source_ids": [
+              "S803"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PetMD »two to three times a week« → zgornja meja; PDSA »a few times a week« brez števila); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S800",
+          "S803"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_dm",
+            "level": "other_scheme",
+            "source_ids": [
+              "S800"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S800"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S800",
+        "S801",
+        "S802",
+        "S803",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -65392,6 +65901,34 @@
       "publisher": "PetMD — Michelle Diener, DVM (published Dec. 21, 2023)",
       "title": "Bouvier des Flandres",
       "url": "https://www.petmd.com/dog/breeds/bouvier-des-flandres"
+    },
+    {
+      "id": "S800",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Borzoi Breed Information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/borzoi"
+    },
+    {
+      "id": "S801",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Russkaya Psovaya Borzaya (193)",
+      "url": "https://www.fci.be/en/nomenclature/RUSSKAYA-PSOVAYA-BORZAYA-193.html"
+    },
+    {
+      "id": "S802",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 193: Russian Hunting Sighthound (Borzoi) (original valid standard 04.09.2019) (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/193g10-en.pdf"
+    },
+    {
+      "id": "S803",
+      "tier": "B",
+      "publisher": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Mar. 27, 2023)",
+      "title": "Borzoi",
+      "url": "https://www.petmd.com/dog/breeds/borzoi"
     },
     {
       "id": "C1",

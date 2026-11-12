@@ -3802,6 +3802,23 @@
         }
       ],
       "notes": "RKC breed page (dog-data S795, 2026-11-12): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC elbow, BVA/KC/ISDS eye and BVA/KC hip schemes; 'There are not currently any additional breed specific restrictions in place for this breed.' No new test key."
+    },
+    "borzoi": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S800",
+        "quote": "Parents can be DNA tested prior to breeding."
+      },
+      "tests": [
+        {
+          "key": "dna_dm",
+          "level": "other_scheme",
+          "name": "DNA test for degenerative myelopathy (DM)",
+          "source_id": "S800",
+          "quote": "Parents can be DNA tested prior to breeding."
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (thekennelclub.org.uk …/hound/borzoi → royalkennelclub.com) could not be fetched on 2026-11-12 (redirect refused by the fetch tool) → no minimum / best_practice level. PDSA (dog-data S800) names degenerative myelopathy for the breed — a disease of the spinal cord (paraphrase) — and says the parents can be DNA tested before breeding → other_scheme with the existing key dna_dm. PetMD (S803) health headings (hip and elbow dysplasia, PRA) name no scheme → no test."
     }
   }
 }

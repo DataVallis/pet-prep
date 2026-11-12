@@ -106,6 +106,7 @@ return [
     'leonberger' => 'Leonberger',
     'beauceron' => 'Beauceron',
     'bouvier_des_flandres' => 'Bouvier des Flandres',
+    'borzoi' => 'Borzoi',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -212,6 +212,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.leonberger.slug, { en: 'leonberger', sl: 'leonberger' });
   assert.deepEqual(byId.beauceron.slug, { en: 'beauceron', sl: 'beauceron' });
   assert.deepEqual(byId.bouvier_des_flandres.slug, { en: 'bouvier-des-flandres', sl: 'flandrijski-govedar' });
+  assert.deepEqual(byId.borzoi.slug, { en: 'borzoi', sl: 'ruski-hrt' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -406,6 +407,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     leonberger: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.0 },
     beauceron: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.0 },
     bouvier_des_flandres: { adult: 6000, senior: 4500, seniorFrom: 102, learning: 1.2 },
+    borzoi: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 0.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -3312,4 +3314,31 @@ test('Bouvier des Flandres (M5-R10-105): RKC up to 1 hour, FCI height / weight b
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, never merle / fawn.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|fawn/i);
+});
+
+test('Borzoi (M5-R10-106): PDSA minimum 1 hour, FCI height by sex / PDSA weight, group 10 section 1 Russia, PDSA "over 10" + PetMD 9–14 y, senior 90 (proposal), Coren 75 → 0.5, brushing 3× a week, no care task, DM DNA test (other_scheme)', () => {
+  const d = registry.breeds.find((b) => b.id === 'borzoi');
+  assert.deepEqual(d.name, { en: 'Borzoi', sl: 'Ruski hrt' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.ok(d.synonyms.en.includes('Russian Wolfhound'));
+  assert.ok(d.synonyms.sl.includes('borzoj'));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S800']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 193, group: 10, section: 1, origin: 'RU' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [27, 47], female: [27, 47] }, ['S800']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [75, 85], female: [68, 78] }, ['S802']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 10, ['S800']], ['span', [9, 14], ['S803']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 75);
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 90 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 0.5 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 3 });
+  assert.ok(!d.game.rules.some((r) => r.key === 'care_task'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.deepEqual(d.suitability.suits, []);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'not_for_small_children', 'experienced_owner', 'needs_company', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.health.map((h) => h.key), ['bloat_gdv', 'degenerative_myelopathy', 'hip_elbow_dysplasia', 'eye_conditions']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_dm', 'other_scheme']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage, never merle / chocolate / lilac.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|chocolate|lilac/i);
 });

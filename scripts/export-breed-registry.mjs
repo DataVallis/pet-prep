@@ -488,6 +488,7 @@ const SPECIES = [
       { id: 'leonberger', synonyms: { en: ['Leonberg', 'Leo', 'Leonberger dog'], sl: ['leonberški pes', 'leonberski pes', 'leonberg'] } },
       { id: 'beauceron', synonyms: { en: ['Berger de Beauce', 'Beauce Sheepdog', 'Bas Rouge'], sl: ['berger de beauce'] } },
       { id: 'bouvier_des_flandres', synonyms: { en: ['Bouvier', 'Flanders Cattle Dog', 'Vlaamse Koehond'], sl: ['bouvier des flandres', 'bouvier', 'flandrijski govedar'] } },
+      { id: 'borzoi', synonyms: { en: ['Russian Wolfhound', 'Russian Hunting Sighthound', 'Russkaya Psovaya Borzaya'], sl: ['borzoj', 'borzoi', 'ruski chrt'] } },
     ],
   },
   {
@@ -2742,6 +2743,29 @@ const DOG_FACTS = {
       ['exercise_induced_collapse', 'health.exercise_collapse'],
     ],
   },
+  // M5-R10-106. Height = FCI Standard No 193 by sex (S802), weight = PDSA key facts 27–47 kg (S800; the FCI standard gives
+  // no weight; AKC chart S268 / PetMD S803 not exported), lifespan = the PDSA band 'Over 10 years' (S800; the McMillan 2024
+  // table S123 and the RKC page could not be fetched) + the PetMD span 9–14 y (S803), exercise = PDSA 'Minimum exercise (per
+  // day): 1 hour' (S800). Coren rank 75 (S35). FCI origin Russia (RU). Not exported: lifespan.mcmillan_2024 (unsourced,
+  // Wikipedia only) / senior_from (derived), adult_weight alternatives / salt_category, health.breed_watch (Category 2 per
+  // PDSA, points not verbatim), health.anaesthesia / health.other (research only), the PDSA / PetMD care texts (no RKC key
+  // facts → no coat / grooming / shedding fact; the brushing rule comes from the game). No new health key.
+  borzoi: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.borzoi.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+      ['hip_elbow_dysplasia', 'health.hips_elbows'],
+      ['eye_conditions', 'health.eyes'],
+    ],
+  },
 
 
 };
@@ -3614,6 +3638,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bouvier_des_flandres.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bouvier_des_flandres.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bouvier_des_flandres.exercise_minutes_senior',
+  },
+  borzoi: {
+    adult_minutes: ['proposed_game_parameters.borzoi.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.borzoi.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.borzoi.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.borzoi.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.borzoi.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.borzoi.exercise_minutes_senior',
   },
 
 
