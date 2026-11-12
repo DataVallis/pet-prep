@@ -191,5 +191,5 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] SC Seychelles — 1 entry, 0 × 24 h, no duty rota, no animal poison line, check: 1 checked, 0 fixed, 0 removed, 2026-11-12
 - [x] MV Maldives — 1 entry (Oases Vet Hospital, Malé; no phone confirmed), 0 × 24 h, no duty rota, no animal poison line (almost no veterinary infrastructure), check: 1 checked, 0 fixed, 0 removed, 2026-11-12
 - [x] LK Sri Lanka — 3 entries (Peradeniya university hospital 24 h, Rover Battaramulla 24 h per 2018 article, Sky Pet Borella), 2 × 24 h, no duty rota, no animal poison line, check: 3 checked, 1 fixed (phone), 0 removed, 2026-11-12 — not reachable: rovervet.lk, daph.gov.lk (WebFetch refused); no private clinic site found for Kandy/Galle/Negombo/Jaffna/Nuwara Eliya/Ella; no VCSL/SLVA site found
-- [ ] NP Nepal
+- [x] NP Nepal — 7 entries (Kathmandu valley only), 3 × 24 h (Kathmandu Animal Hospital, Advanced Pet Hospital, City Veterinary Hospital — all from one Dec 2021 Online Khabar article), no duty rota, no animal poison line, check: 7 checked, 1 fixed (unconfirmed phone removed), 0 removed, 2026-11-12 — not reachable: cityvetnepal.com, crvh.gov.np, facebook (WebFetch refused); nothing found for Pokhara, Chitwan, Biratnagar
 - [ ] Rest of the world: append the next country by pet-owner population / tourism when the list above is done

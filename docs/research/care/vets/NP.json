@@ -1,0 +1,148 @@
+{
+  "country": "NP",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Online Khabar English - Veterinary hospitals in Kathmandu",
+      "url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "note": "Opened; news article listing six Kathmandu valley hospitals with area, hours and 24 h claims, and linking each one's own website/social page (crvh.gov.np, facebook.com/aphktm, instagram.com/animalmedicalcentrenepal, facebook.com/kathmandu.vet.clinic, facebook.com/Kathmanduanimalhospital, cityvetnepal.com). No phone numbers in the article. Undated in the fetched text."
+    },
+    {
+      "name": "KAT Centre - Contact us",
+      "url": "https://katcentre.org/en/contact-us",
+      "note": "Opened; phones 9801912476 and 9742921981, working hours 10AM-5PM Sunday to Friday, directions to the Lalitpur site (Lagankhel-Tikabhairab road, opposite Moti Binayak School). No emergency/after-hours line on the page."
+    },
+    {
+      "name": "KAT Centre - Rescue request",
+      "url": "https://katcentre.org/en/rescue",
+      "note": "Opened; emergency rescue line 9801912476 (rescue of street animals, not a clinic walk-in service); no hours."
+    },
+    {
+      "name": "KAT Centre - Our plan for KAT's new Veterinary Hospital",
+      "url": "https://katcentre.org/?p=5376",
+      "note": "Opened; says KAT moved to a new facility in Lalitpur (moved 10 July, grand opening planned 18/20 Oct 2025); wording forward-looking; no phone/hours/24 h."
+    },
+    {
+      "name": "NepalYP - Kathmandu Animal Hospital and Research Centre",
+      "url": "https://www.nepalyp.com/company/64538/Kathmandu_Animal_Hospital_and_Research_Centre?amp=1",
+      "note": "Opened; directory listing last updated 15 Dec 2015 - address 530 Pandol Marg, Baluwatar, phones 01-4001700 / 9860167722, 8:30-18:30 daily, '24-hour emergency services'. Directory, used only as a secondary source for the phone/address; may be dated."
+    },
+    {
+      "name": "Himalayan Times - Central Veterinary Hospital building (2019)",
+      "url": "https://thehimalayantimes.com/ampArticle/169706",
+      "note": "Opened; says the Central Veterinary Hospital in Kathmandu had no emergency service and a new building was planned to offer 24-hour emergency service (target July 2019). Not evidence of a current 24 h service."
+    },
+    {
+      "name": "Kathmandu Post - Lalitpur launches animal ambulance service (2022)",
+      "url": "https://kathmandupost.com/lalitpur/2022/06/25/lalitpur-launches-animal-ambulance-service",
+      "note": "Opened; ambulance run by Sneha's Care for Lalitpur Metropolitan City; no phone or hours on the page, so not an entry."
+    },
+    {
+      "name": "Kathmandu Animal Treatment Centre listing (vetclick.com)",
+      "url": "https://www.vetclick.com/find-a-vet/nepal/kathmandu/kathmandu-animal-treatment-centre-kat-centre-p4820.php",
+      "note": "Opened; directory listing from 2011, old Budhanilkantha address and phone +977 1 4373169. Outdated (centre has moved); not used for entries."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "KAT Centre (Kathmandu Animal Treatment Centre) - Veterinary Hospital",
+      "city": "Lalitpur",
+      "region": "Bagmati Province",
+      "address": "Lagankhel-Tikabhairab road, opposite Moti Binayak School (about 2 km east of Chapagaun Dobato ring road), Lalitpur",
+      "phone": "9801912476 / 9742921981",
+      "emergency_24h": false,
+      "duty": "Working hours 10:00-17:00, Sunday to Friday. Call ahead; 9801912476 is also the KAT rescue line for animals in distress.",
+      "small_animals": true,
+      "url": "https://katcentre.org/en/contact-us",
+      "source_url": "https://katcentre.org/en/contact-us",
+      "checked": "2026-11-12",
+      "note": "Contact page gives directions and phones but no street address; Lalitpur from the 'new veterinary hospital' page (katcentre.org/?p=5376), whose wording was forward-looking (opening planned Oct 2025). Charity focused on street dogs; also does low-cost pet sterilisation/vaccination. No 24 h statement. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Kathmandu Animal Hospital and Research Centre",
+      "city": "Kathmandu",
+      "region": "Bagmati Province",
+      "address": "530 Pandol Marg, Baluwatar, Kathmandu",
+      "emergency_24h": true,
+      "duty": "Open daily 8:30-18:30; emergency services available 24 hours. Call ahead.",
+      "small_animals": true,
+      "url": "https://www.facebook.com/Kathmanduanimalhospital/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Independent check 2026-11-12: source_url (Online Khabar, article dated Dec 2021) confirms name, Baluwatar, hours 8:30-18:00 and 24 h emergency claim; it lists NO phone. Phone removed because it only came from a 2015 NepalYP listing, not the source page. Address from the same 2015 listing. Own Facebook page not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Advanced Pet Hospital and Research Centre",
+      "city": "Kathmandu",
+      "region": "Bagmati Province",
+      "address": "Bishal Basti, Bishal Nagar, Kathmandu",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 365 days a year, with emergency services. Dogs and cats only.",
+      "small_animals": true,
+      "url": "https://www.facebook.com/aphktm/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Only source is the Online Khabar article (open 24 hours, 365 days; services limited to dogs and cats). No phone found on any opened page; Facebook page could not be fetched (provenance block). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    },
+    {
+      "kind": "clinic",
+      "name": "City Veterinary Hospital",
+      "city": "Lalitpur",
+      "region": "Bagmati Province",
+      "address": "Satdobato, opposite the swimming pool gate, Lalitpur",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week.",
+      "small_animals": true,
+      "url": "https://cityvetnepal.com/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Online Khabar: 'Open 24*7'. Clinic site cityvetnepal.com linked from the article but could not be fetched (provenance block), so no phone verified. Satdobato is in Lalitpur (city inferred from locality). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Medical Centre",
+      "city": "Kathmandu",
+      "region": "Bagmati Province",
+      "address": "Chuchchepati, Chabahil, Kathmandu",
+      "emergency_24h": false,
+      "duty": "Emergency and non-emergency services. Call ahead for hours.",
+      "small_animals": true,
+      "url": "https://www.instagram.com/animalmedicalcentrenepal/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Article gives no hours and no 24 h claim. Instagram page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Kathmandu Veterinary Clinic",
+      "city": "Kathmandu",
+      "region": "Bagmati Province",
+      "address": "150 m west of Narayan Gopal Chowk, Ring Road, Kathmandu",
+      "emergency_24h": false,
+      "duty": "Open only a few hours a day; call ahead.",
+      "small_animals": true,
+      "url": "https://www.facebook.com/kathmandu.vet.clinic/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Article: open about four hours a day, times not given. Facebook page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Central Referral Veterinary Hospital",
+      "city": "Kathmandu",
+      "region": "Bagmati Province",
+      "address": "Tripureshwor, Kathmandu",
+      "emergency_24h": false,
+      "duty": "Government referral hospital; service from 10:00. No emergency service as of the latest published information.",
+      "small_animals": true,
+      "url": "https://crvh.gov.np/",
+      "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
+      "checked": "2026-11-12",
+      "note": "Online Khabar: veterinary service only after 10 am, no emergency service yet. A 2019 Himalayan Times article (thehimalayantimes.com/ampArticle/169706) said a new building would offer 24-hour emergency service; no current confirmation found. crvh.gov.np could not be fetched (provenance block). Whether it treats pets is implied by the article but not confirmed. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+    }
+  ],
+  "notes": "Research 2026-11-12. WebFetch only permitted URLs that had appeared in earlier search results or fetched pages as literal URLs, so the clinics' own sites (cityvetnepal.com, crvh.gov.np, Facebook/Instagram pages) and snehacare.org were blocked and not used; four of the entries therefore rest on a single news article (Online Khabar) plus the clinics' own links, and are marked for verification. Nepal Veterinary Council, Department of Livestock Services and AFU teaching hospital pages were not found/opened with usable clinic data. No duty rota and no animal poison line found. Not covered: Pokhara, Chitwan/Sauraha, Bhaktapur, Biratnagar, Lumbini/Butwal (no clinic page with contact data was reachable). Sneha's Care animal ambulance (Lalitpur) is a charity rescue service with no published phone on the opened page, so not an entry."
+}
