@@ -683,6 +683,13 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjavkast'],
         ['key' => 'harlequin', 'value' => 'harlequin (black and grey patches with tan markings)', 'en' => 'Harlequin', 'sl' => 'Harlekin'],
     ],
+    // M5-R10-105: FCI Standard No 191 via KUSA (S797) grey, brindle, overlaid with black, uniform black; same order and values as breed_appearance.php.
+    'bouvier_des_flandres' => [
+        ['key' => 'grey-brindle', 'value' => 'dark grey brindle', 'en' => 'Dark grey brindle', 'sl' => 'Temno siv tigrast'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black-brindle', 'value' => 'brindle overlaid with black', 'en' => 'Black-overlaid brindle', 'sl' => 'Tigrast s črnim nadihom'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

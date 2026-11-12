@@ -118,6 +118,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   border_terrier: 'dog',
   leonberger: 'dog',
   beauceron: 'dog',
+  bouvier_des_flandres: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -240,6 +241,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'border_terrier',
   'leonberger',
   'beauceron',
+  'bouvier_des_flandres',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

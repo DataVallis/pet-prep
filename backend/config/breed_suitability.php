@@ -2585,5 +2585,26 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S791'], 'refs' => ['beauceron.behaviour.time_alone']],
             ],
         ],
+        // M5-R10-105 Bouvier des Flandres — RKC Breed Watch Category 1 (S795) → no welfare chip. RKC "Up to 1 hour per day"
+        // vs PetMD "at least two hours" → no exercise chip; RKC "Sheds: No" vs PetMD "to reduce shedding" → no shedding chip.
+        // No new vocabulary key.
+        'bouvier_des_flandres' => [
+            'suits' => [
+                // S798 "They can be good with young children and other large dogs when introductions are supervised …" — caveat in notes.
+                ['tag' => 'children', 'source_ids' => ['S798'], 'refs' => ['bouvier_des_flandres.behaviour.children']],
+                // S795 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S795'], 'refs' => ['bouvier_des_flandres.suitability.rkc_size_of_home', 'bouvier_des_flandres.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S795 "Grooming: Every day"; S798 "Brush your Bouvier at least once or twice a week …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S795', 'S798'], 'refs' => ['bouvier_des_flandres.suitability.rkc_grooming', 'bouvier_des_flandres.suitability.petmd_grooming']],
+                // S798 "Bouviers enjoy being around their family as much as possible, so they’ll do best with people who work from home".
+                ['tag' => 'needs_company', 'source_ids' => ['S798'], 'refs' => ['bouvier_des_flandres.behaviour.time_alone']],
+                // S798 "Bouviers des Flandres are prone to being overweight, so measure out their food to avoid overfeeding,".
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S798'], 'refs' => ['bouvier_des_flandres.behaviour.food_motivation']],
+                // S798 "Bouviers also have a strong prey drive, so it’s best not to have this breed around cats, small dogs, or pocket pets".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S798'], 'refs' => ['bouvier_des_flandres.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

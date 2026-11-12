@@ -54212,6 +54212,535 @@
       }
     }
   },
+  "bouvier_des_flandres": {
+    "_note": "Added 2026-11-12 (M5-R10-105, unattended run — appended after the Beauceron: AKC 2024 No. 101 'Bouvier des Flandres', S174 full-list table fetched 2026-11-12 '100 Beauceron', '101 Bouvier des Flandres', '102 Borzoi'). Quotes as returned by the web-fetch tool on 2026-11-12 (RKC, KUSA and PetMD pages under a 125-character quote limit — fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S795–S799 (reused S10, S11, S35, S45, S123, S174, S268). No health percentages anywhere. Identity from the FCI nomenclature (S796, 'BOUVIER DES FLANDRES-VLAAMSE KOEHOND (191)', Group 1 Section 2, Belgium / France); standard wording from the KUSA copy of FCI Standard No 191 (S797, effective 01/02/2017) — the RKC breed-standard page returned a client error. RKC Breeds A–Z page (S795): key facts, Breed Watch Category 1, health tests. Lifespan: Dogs Trust table of McMillan et al. 2024 data (S123, re-read 2026-11-12) 'Bouvier des Flandres 11.3 10.4 - 11.9 151 79' → senior 102. No PDSA / Woodgreen / Dogs Trust breed page found (searched 2026-11-12). Names: RKC 'Bouvier Des Flandres', AKC / FCI 'Bouvier des Flandres', FCI also 'Vlaamse Koehond' / 'Flanders Cattle Dog'; Slovenian »flandrijski govedar« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 191, Group 1 Section 2 (Cattledogs), Belgium / France",
+      "unit": "—",
+      "source_id": "S796",
+      "quote": "BOUVIER DES FLANDRES-VLAAMSE KOEHOND (191)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S796, as returned): group 'n°1 - Chiens de berger et de bouvier (sauf chiens de bouvier suisses)', section 'Chiens de bouvier (sauf chiens de bouvier suisses)', country of origin 'BELGIQUE, FRANCE', English name 'BOUVIER DES FLANDRES', definitive acceptance 01/11/1955, official valid standard 25/10/2000, subject to a working trial (paraphrase of 'Soumise à épreuve de travail selon la Nomenclature des races de la FCI'). KUSA copy of FCI Standard No 191 (S797): 'Section 2: Cattledogs (except Swiss Cattledogs)'. Belgium / France is already in FCI_ORIGINS (BE-FR; Papillon, Bichon Frise precedent)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S795",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S795) 'Large'. FCI (S797) males 62–68 cm, 35–40 kg."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            62,
+            68
+          ],
+          "female": [
+            59,
+            65
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S797",
+        "quote": "Males: 62cm – 68cm (approx. 24½” – 26½”).",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797): 'Females: 59cm – 65cm (approx. 23” – 25½”).'; ideal 65 cm (males) / 62 cm (females), tolerance ± 1 cm (paraphrase). PetMD (S798) 23.5–27.5 inches at the shoulder (paraphrase) — consistent."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            35,
+            40
+          ],
+          "female": [
+            27,
+            35
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S797",
+        "quote": "Males: approximately 35kg – 40kg.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797): 'Females: approximately 27kg – 35kg.' — the game range (adult_weight_kg 27–40). Alternatives: AKC breed weight chart (S268, re-read 2026-11-12) 'Bouvier des Flandres | 70-110 pounds | 70-110 pounds' (31.8–49.9 kg, both sexes); PetMD (S798) 70–110 pounds (paraphrase)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            31.8,
+            49.9
+          ],
+          "female": [
+            31.8,
+            49.9
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S268",
+        "quote": "Bouvier des Flandres | 70-110 pounds | 70-110 pounds",
+        "confidence": "medium",
+        "notes": "AKC breed weight chart (S268), row as returned (male | female): 70–110 lb = 31.75–49.90 kg. Alternative only — the FCI standard (S797) gives a weight by sex."
+      },
+      "salt_category": {
+        "value": "V (30–40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 27–40 kg sits mostly in the 30–40 band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 27–40 kg (S797) = 60–88 lb → 'Large (59–99 pounds)'."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bouvier des Flandres growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.3,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Bouvier des Flandres 11.3 10.4 - 11.9 151 79",
+        "confidence": "high",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123, re-read 2026-11-12): median 11.3 years, 95 % CI 10.4–11.9, 151 dogs, 79 deceased (columns as returned). The basis of the senior boundary (runbook: McMillan 2024 first). Neighbours 'American Eskimo Dog 11.3 10.0 - 12.0 36 22', 'Boxer 11.3 11.3 - 11.5 11294 5925'. Wikipedia (S799, tier C): 'A 2024 UK study found a life expectancy of 11.3 years for the breed' — agrees. Never shown as a statistic in the app."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S795",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S795). Consistent with the McMillan median; not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "senior_from": {
+        "value": 8.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × McMillan 2024 median 11.3 y (S123) → 0.75 × 11.3 = 8.475 y = 101.7 → 102 months (half up). Alternative: 90 from the RKC lower bound 'Over 10 years' (S795).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 102
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S795",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S795), runbook first choice → 60 min ('up to N' → N). Conflicts with PetMD (S798) 'They need at least two hours of exercise every day' (120 min) — runbook: sources conflict → the RKC value; PetMD in alternatives (open for David)."
+      },
+      "daily_text": {
+        "value": "at least two hours of exercise every day (PetMD); a large fenced yard or a farm",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "They need at least two hours of exercise every day",
+        "confidence": "high",
+        "notes": "PetMD (S798, fragment — the sentence continues with a dash / comma on the page). Background and the conflicting alternative to the RKC value."
+      },
+      "after_meals": {
+        "value": "no exercise one hour before and one hour after eating (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Prevent exercise one hour before and one hour after eating",
+        "confidence": "high",
+        "notes": "PetMD (S798), bloat prevention list (also 'Feed your dog two to three meals a day, instead of one' and 'Avoid using elevated food bowls' — paraphrase of the list) → proposed_game_parameters.bouvier_des_flandres.meal_exercise_gap (built, M5-R16; the game's gap is 60 min after a meal — David's decision)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "calm, thoughtful, sensible but fearless; affectionate and loyal toward the family; intelligent and energetic",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "The Bouvier des Flandres has the calm, thoughtful character of a sensible, but fearless dog.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797). RKC breed page subtitle (S795) 'Strong and versatile, originally a cattle herder'. PetMD (S798): affectionate, loyal toward their family members, highly intelligent with a lot of energy (paraphrase)."
+      },
+      "family": {
+        "value": "affectionate and loyal toward the family",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S798) 'affectionate, loyal toward their family members' (fragment as returned, kept in notes). No 'family pet' statement on the A/B pages read → no family_pet chip."
+      },
+      "children": {
+        "value": "can be good with young children when introductions are supervised",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "They can be good with young children and other large dogs when introductions are supervised and done properly.",
+        "confidence": "medium",
+        "notes": "PetMD (S798). Explicit statement with a supervision caveat (kept here) → children; no small_children (no rating without a caveat). PetMD also 'often patient with young children' (paraphrase)."
+      },
+      "time_alone": {
+        "value": "enjoys being with the family as much as possible — best with someone at home; can be destructive when under-exercised or left to entertain themselves",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Bouviers enjoy being around their family as much as possible, so they’ll do best with people who work from home",
+        "confidence": "medium",
+        "notes": "PetMD (S798). Basis of needs_company (Beauceron / Boxer precedent: best with someone around). PetMD also: can become destructive without enough mental stimulation (paraphrase)."
+      },
+      "other_pets": {
+        "value": "strong prey drive — best not around cats, small dogs or pocket pets unless introduced properly; good with other large dogs with supervised introductions",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Bouviers also have a strong prey drive, so it’s best not to have this breed around cats, small dogs, or pocket pets",
+        "confidence": "high",
+        "notes": "PetMD (S798) — names a strong (= high, runbook §3) prey drive → chases_small_pets. No other_pets chip."
+      },
+      "strangers": {
+        "value": "may be suspicious around new people and bark",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "as they may be suspicious around new people and bark.",
+        "confidence": "medium",
+        "notes": "PetMD (S798, fragment). RKC (S795): shown versatility in tracking, carting and as a guard dog (paraphrase)."
+      },
+      "socialisation": {
+        "value": "puppies need early socialisation that stays consistent throughout life",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Bouvier des Flandres puppies need early socialization that stays consistent throughout life,",
+        "confidence": "high",
+        "notes": "PetMD (S798, fragment ending at a comma). A need (runbook M5-R17) → proposed_game_parameters.bouvier_des_flandres.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "puppies are easy to train; socialisation, puppy and obedience classes when young",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S798): 'Bouvier des Flandres puppies are easy to train.' (as returned in a list of fragments, kept in notes); should take socialisation, puppy training and obedience classes when young (paraphrase). No experienced-owner statement → no chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag (PetMD 'destructive' statements are about exercise / being left alone → needs_company)."
+      },
+      "food_motivation": {
+        "value": "prone to being overweight — measure the food",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Bouviers des Flandres are prone to being overweight, so measure out their food to avoid overfeeding,",
+        "confidence": "high",
+        "notes": "PetMD (S798, fragment ending at a comma). Basis of food_motivated_weight (a breed-specific weight-gain statement)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S795, 'Currently no points of concern specific to this breed have been identified for special attention by judges') → no welfare chip. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity'; Best Practice the BVA/KC elbow, eye and hip schemes (S795).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S795). Not a welfare breed."
+      },
+      "hips_elbows": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Hip and Elbow Dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S798) health heading. RKC (S795) Best Practice BVA/KC hip and elbow schemes. Register health key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus — an emergency",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Prevent exercise one hour before and one hour after eating",
+        "confidence": "high",
+        "notes": "PetMD (S798) heading 'Bloat and Gastric Dilatation-Volvulus' (paraphrase of the heading as returned); GDV can be fatal without immediate emergency surgery (paraphrase). Register health key bloat_gdv; basis of the meal / exercise gap."
+      },
+      "heart": {
+        "value": "subaortic valvular stenosis (SAS)",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Subaortic Valvular Stenosis (SAS)",
+        "confidence": "medium",
+        "notes": "PetMD (S798) health heading. Register health key heart_sas."
+      },
+      "thyroid": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Hypothyroidism",
+        "confidence": "medium",
+        "notes": "PetMD (S798) health heading (unexplained weight gain as a symptom — paraphrase). Register health key hypothyroidism."
+      },
+      "eyes": {
+        "value": "eye conditions",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S798) heading 'Eye Conditions' (as returned in the heading list, kept in notes). RKC (S795) Best Practice BVA/KC/ISDS eye scheme. Register health key eye_conditions."
+      },
+      "exercise_collapse": {
+        "value": "exercise-induced collapse (EIC)",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S798) heading 'Exercise-Induced Collapse (EIC)' (as returned in the heading list, kept in notes). Register health key exercise_induced_collapse."
+      },
+      "other": {
+        "value": "degenerative myopathy, laryngeal paralysis",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S798) headings 'Degenerative Myopathy', 'Laryngeal Paralysis' (as returned in the heading list). Research only (no register key)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 29,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Bouvier des Flandres",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-12): rank 29 'Bouvier des Flandres' (tied with 'Airedale Terrier'; 28 'Giant Schnauzer', 30 'Border Terrier' / 'Briard') under 'Above Average Working Dogs'."
+      },
+      "coren_tier": {
+        "value": "Above average working dogs",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 27–39 (S35)."
+      },
+      "training_notes": {
+        "value": "highly intelligent with a lot of energy; puppies easy to train",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S798) (paraphrase / fragments — see behaviour.training)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bouvier_des_flandres.learning_multiplier (1.2, runbook rule: Above average).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "short and compact body, strong and well-muscled limbs; powerful without clumsiness",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "Sub-brachymorphic (short and compact body), strong, and well-muscled limbs.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); gives the impression of power, but without clumsiness (paraphrase). 'Sub-brachymorphic' describes the body, not the face — not a flat-faced breed (broad, powerful muzzle)."
+      },
+      "colours": {
+        "value": [
+          "grey",
+          "brindle",
+          "overlaid_with_black",
+          "black"
+        ],
+        "unit": "list",
+        "source_id": "S797",
+        "quote": "The Bouvier des Flandres’ coat is usually grey, brindle, or overlaid with black.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); 'A completely uniform black is also accepted, without being favoured.'; a white star on the chest tolerated (paraphrase); not acceptable: light-coloured, washed-out coats; disqualifying: chocolate brown, white, pepper and salt, washed-out colour, any pale fawn (paraphrase). Never fawn, white, chocolate or pepper and salt in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Dark grey brindle first with the highest weight (grey and brindle are the first colours of the standard — the portrait default), then brindle, brindle overlaid with black, solid black ('accepted, without being favoured')."
+      },
+      "coat": {
+        "value": "coarse, dry and matt outer coat about 6 cm, slightly tousled, never woolly or curly, with a dense undercoat; moustache, full beard and eyebrows",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "The hair must be coarse to the touch, dry and matt, neither too long nor too short (about 6cm),",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); undercoat of fine, dense hair (paraphrase). RKC (S795) 'The Bouvier is a strong dog with a dense matt coat.'; key fact 'Coat length: Medium'."
+      },
+      "head": {
+        "value": "well-developed flat skull, slight stop, broad powerful muzzle, black nose, moustache and full beard",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "The upper lip carries a moustache and the chin a full beard, giving the forbidding expression so typical of this breed.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); nose 'It must be well-developed, rounded at the sides, and always black in colour.'; skull well-developed and flat, slightly less broad than long; muzzle broad, powerful, never pointed (paraphrase)."
+      },
+      "eyes": {
+        "value": "dark, frank and energetic expression",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "Colour should be as dark as possible in relation to coat.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); light and wild-looking eyes strongly penalised (paraphrase)."
+      },
+      "ears": {
+        "value": "natural ears set high, flaps falling vertically, triangular and lying flat against the cheeks (never cropped in the game)",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "Set high, above eye-level, flaps falling vertically. The fold must not stand higher than the top of the skull.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797), natural ears; the standard also describes cropped ears (paraphrase) — cropping is not shown (natural ears only, UK / EU practice)."
+      },
+      "tail": {
+        "value": "natural whole tail continuing the line of the back (never docked in the game)",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "In countries where docking is banned, the whole tail is admitted.",
+        "confidence": "high",
+        "notes": "KUSA copy of FCI Standard No 191 (S797); set relatively high, continuing the line of the backbone; may be docked in some countries; 'Some dogs are born tailless and must not be penalised for this.' (paraphrase except the quote). Docking is not shown (natural tail only, UK / EU practice)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S795) and PetMD (S798). RKC key facts reached on 2026-11-12. No PDSA / Woodgreen page for the breed.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S795) → large."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S795) → 60 min. PetMD (S798) 'at least two hours' conflicts → no exercise chip either way (no active_family, no long_daily_exercise)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). Basis of large_home. PetMD (S798): 'This breed would not do well in an apartment, a small home, or a home without a large fenced yard.'"
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S795) → 7 brushing sessions a week (runbook »Dog grooming«: 'Every day' → 7). PetMD (S798) 'at least once or twice a week' → alternative 2 (open for David). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S795)."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). PetMD (S798) brush 'to reduce shedding' → conflicting sources → neither sheds nor low_shedding (runbook)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). The senior boundary uses the McMillan 2024 median (S123)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S795). No apartment chip (RKC 'Large house'; PetMD not in an apartment)."
+      },
+      "petmd_grooming": {
+        "value": "brushing at least once or twice a week",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "Brush your Bouvier at least once or twice a week to reduce shedding and prevent matting.",
+        "confidence": "high",
+        "notes": "PetMD (S798) — 'once or twice a week' → 2 (alternative to the RKC 'Every day' → 7). No professional grooming interval ('as needed' — paraphrase) → no groomer reminder."
+      },
+      "petmd_bathing": {
+        "value": "bath only when the coat is dirty; beards need more frequent cleaning",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "They only need a bath when their coats are dirty",
+        "confidence": "medium",
+        "notes": "PetMD (S798, fragment). No frequency → no bath reminder (runbook »Breed care tasks«)."
+      },
+      "petmd_nails": {
+        "value": "nails trimmed every three to four weeks",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "A Bouvier’s nails should be trimmed every three to four weeks to keep them at a good length",
+        "confidence": "high",
+        "notes": "PetMD (S798, fragment) → nail trimming every 4 weeks (proposed_game_parameters.bouvier_des_flandres.nail_trimming; 3 weeks is no program period — Lhasa Apso precedent, open for David)."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two to three weeks and after every bath or swim",
+        "unit": "—",
+        "source_id": "S798",
+        "quote": "clean a Bouvier des Flandres’ ears with a routine ear cleaner every two to three weeks,",
+        "confidence": "high",
+        "notes": "PetMD (S798, fragment) → ear cleaning every 2 weeks (lower bound; proposed_game_parameters.bouvier_des_flandres.ear_care; Saint Bernard / Leonberger precedent)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -81156,6 +81685,285 @@
         "confidence": "high",
         "notes": "Colours of the FCI (S790), RKC (S788) and AKC (S792) standards: black and tan, harlequin. Weights unsourced in prompts. Black and tan as the portrait default — the first colour of every standard.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default; standard colours only (black and tan / harlequin); natural ears"
+      }
+    },
+    "bouvier_des_flandres": {
+      "_note": "Unattended run M5-R10-105 (2026-11-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key, no new register health key, no new breeder-checklist test key. Sourced needs built from day one: brushing every day (RKC S795 'Every day', M5-R13; PetMD S798 'once or twice a week' as the alternative, open for David); nail trimming every 4 weeks and ear cleaning every 2 weeks (PetMD S798, M5-R19 / R18); puppy socialisation (PetMD S798 quote, M5-R17); the 'wait with the walk' digestion warning (PetMD S798 quote, M5-R16). Bathing (only when dirty), professional grooming (as needed), teeth — no frequency → no care task. Exercise from RKC (S795, up to 1 hour; PetMD 'at least two hours' conflicts — RKC by rule, open for David). Senior 102 from the McMillan 2024 median 11.3 y (S123).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S795",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S795). Rule: one number N ('up to N') → N = 60. If sources conflict, take the RKC value.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S798",
+            "notes": "PetMD 'They need at least two hours of exercise every day' — conflicts with the RKC key fact; RKC preferred by rule (open for David)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S795 'Up to 1 hour per day'; PetMD S798 120 min in alternatives)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S795",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 102 = round(0.75 × 11.3 y × 12) = round(101.7) (S11 + McMillan 2024 median 11.3 y via Dogs Trust S123). Alternative: 90 (RKC lower bound 'Over 10 years', S795).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound_10_y": 90
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.3 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 102)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 29 (S35) → 'Above average working dogs' (ranks 27–39) → 1.2 (same as the Airedale Terrier, also rank 29). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 29, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S798): two to three meals a day instead of one (bloat prevention) and twice-daily feedings (paraphrase) — general advice; the game keeps its meal windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S795",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "bouvier_des_flandres.suitability.rkc_grooming. Runbook »Dog grooming«: 'Every day' → 7 (RKC breed page, the first-choice source). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S798",
+            "notes": "PetMD 'Brush your Bouvier at least once or twice a week to reduce shedding and prevent matting.' → 2 (open for David — he chose 4 for the Cavalier on 2026-10-12)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan = 7× na teden (RKC »Grooming: Every day«; PetMD »once or twice a week« → 2 v alternativah, odprto za Davida); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R19)",
+        "source_id": "S798",
+        "quote": "A Bouvier’s nails should be trimmed every three to four weeks to keep them at a good length",
+        "confidence": "high",
+        "notes": "bouvier_des_flandres.suitability.petmd_nails. 'every three to four weeks' → every 4 weeks (3 weeks is no program period — Lhasa Apso precedent; open for David).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (PetMD »every three to four weeks«; 3 tedni niso programsko obdobje — odprto za Davida)"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          14
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S798",
+        "quote": "clean a Bouvier des Flandres’ ears with a routine ear cleaner every two to three weeks,",
+        "confidence": "high",
+        "notes": "bouvier_des_flandres.suitability.petmd_ears. 'every two to three weeks' → the lower bound, every 2 weeks (Saint Bernard / Leonberger precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to three weeks« → spodnja meja)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number for the game; 60 = David's decision)",
+        "source_id": "S798",
+        "quote": "Prevent exercise one hour before and one hour after eating",
+        "confidence": "high",
+        "notes": "PetMD (S798), bouvier_des_flandres.exercise.after_meals; GDV in the PetMD health list (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S798",
+        "quote": "Bouvier des Flandres puppies need early socialization that stays consistent throughout life,",
+        "confidence": "high",
+        "notes": "bouvier_des_flandres.behaviour.socialisation (PetMD S798, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S798)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-105); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.children"
+            ],
+            "quote": "S798 'They can be good with young children and other large dogs when introductions are supervised and done properly.'",
+            "note": "Supervision caveat kept in notes (introductions supervised)."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S795"
+            ],
+            "refs": [
+              "bouvier_des_flandres.suitability.rkc_size_of_home",
+              "bouvier_des_flandres.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S795 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S795",
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.suitability.rkc_grooming",
+              "bouvier_des_flandres.suitability.petmd_grooming"
+            ],
+            "quote": "S795 'Grooming: Every day'; S798 'Brush your Bouvier at least once or twice a week to reduce shedding and prevent matting.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.time_alone"
+            ],
+            "quote": "S798 'Bouviers enjoy being around their family as much as possible, so they’ll do best with people who work from home'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.food_motivation"
+            ],
+            "quote": "S798 'Bouviers des Flandres are prone to being overweight, so measure out their food to avoid overfeeding,'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S798"
+            ],
+            "refs": [
+              "bouvier_des_flandres.behaviour.other_pets"
+            ],
+            "quote": "S798 'Bouviers also have a strong prey drive, so it’s best not to have this breed around cats, small dogs, or pocket pets'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement on the A/B pages read (PetMD: affectionate and loyal toward the family).",
+          "small_children": "No rating without a caveat (PetMD: supervised introductions).",
+          "active_family": "RKC 'Up to 1 hour per day' vs PetMD 'at least two hours' — conflicting sources → no exercise chip.",
+          "long_daily_exercise": "Same conflict (RKC up to 1 hour).",
+          "apartment": "RKC 'Large house' (S795); PetMD not in an apartment.",
+          "other_pets": "PetMD strong prey drive → chases_small_pets instead.",
+          "sheds": "RKC 'Sheds: No' vs PetMD brushing 'to reduce shedding' → neither sheds nor low_shedding.",
+          "low_shedding": "Same conflict; never hypoallergenic.",
+          "experienced_owner": "No A/B statement.",
+          "chews_when_bored": "No chewing statement.",
+          "welfare": "RKC Breed Watch Category 1 (S795) — no points of concern; not flat-faced."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children, large_home; consider frequent_grooming, needs_company, food_motivated_weight, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": "S795",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S795), no BVA / UFAW / VetCompass conformation concern found; not flat-faced (BVA S92 does not apply). Never promise the breed's health; natural (uncropped) ears and a natural (undocked) tail only.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Bouvier des Flandres, dark grey brindle (default): short and compact body, strong well-muscled limbs, powerful without clumsiness; coarse, dry, matt, slightly tousled coat about 6 cm with moustache, full beard and upstanding eyebrows; flat skull, broad powerful muzzle, black nose; dark eyes; natural ears set high with flaps falling flat against the cheeks (never cropped); natural whole tail (never docked); never fawn, white, chocolate, pepper and salt or washed-out",
+        "unit": "—",
+        "source_id": "S797",
+        "quote": "Sub-brachymorphic (short and compact body), strong, and well-muscled limbs.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S797): grey, brindle, overlaid with black, uniform black (accepted, not favoured). Weights unsourced in prompts. Dark grey brindle as the portrait default — grey and brindle are the first colours of the standard.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): dark grey brindle is the portrait default; standard colours only (grey / brindle / overlaid with black / black); natural ears and tail"
       }
     }
   }

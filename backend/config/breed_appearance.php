@@ -806,6 +806,12 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Bouvier des Flandres (M5-R10-105, docs/research/dog-data bouvier_des_flandres.appearance): "The Bouvier des
+| Flandres’ coat is usually grey, brindle, or overlaid with black." / "A completely uniform black is also accepted,
+| without being favoured." (FCI Standard No 191 via KUSA, S797); coarse tousled coat with moustache and beard, natural
+| ears and tail only. Not a welfare breed (RKC Breed Watch Category 1, S795). Dark grey brindle first with the highest
+| weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Border Terrier (M5-R10-102, docs/research/dog-data border_terrier.appearance): "Colour: Red, wheaten, grizzle and
 | tan, or blue and tan." (FCI-Standard N° 10, S768; "Any other colour or combination of colours unacceptable."); harsh,
 | dense wiry coat, short strong muzzle, small V-shaped ears dropping forward, moderately short tail (S768; AKC S776 dark
@@ -4545,6 +4551,41 @@ return [
             'dewclaws' => ['double dewclaws on the hind legs'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'dewclaws'],
+    ],
+    // M5-R10-105 (docs/research/dog-data/data.json bouvier_des_flandres.appearance; runbook rules 2026-10-10: standard
+    // colours only — grey, brindle, overlaid with black, uniform black (FCI Standard No 191 via KUSA, S797); natural ears and tail).
+    'bouvier_des_flandres' => [
+        'display_name' => 'Bouvier des Flandres',
+        // Colour frequencies are in no source (bouvier_des_flandres.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI Standard No 191 via KUSA (S797, https://kusa.co.za/images/HERDING%20GROUP%202025/Bouvier%20des%20Flandres%20-%20FCI%20[02-2017].pdf), RKC breed page (S795) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S795 "Size: Large"; S797 "Males: 62cm – 68cm (approx. 24½” – 26½”)."',
+            'build' => 'S797 "Sub-brachymorphic (short and compact body), strong, and well-muscled limbs."',
+            'coat_length' => 'S797 "The hair must be coarse to the touch, dry and matt, neither too long nor too short (about 6cm),"',
+            'coat_color' => 'S797 "The Bouvier des Flandres’ coat is usually grey, brindle, or overlaid with black." / "A completely uniform black is also accepted, without being favoured." (weights unsourced)',
+            'beard' => 'S797 "The upper lip carries a moustache and the chin a full beard, giving the forbidding expression so typical of this breed."',
+            'ear_carriage' => 'S797 "Set high, above eye-level, flaps falling vertically. The fold must not stand higher than the top of the skull."',
+            'eye_color' => 'S797 "Colour should be as dark as possible in relation to coat."',
+            'tail' => 'S797 "In countries where docking is banned, the whole tail is admitted."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'short, compact, powerful body with strong, well-muscled limbs, without clumsiness', 'weight' => 3], 'strong, well-boned working dog, about as long as tall'],
+            'coat_length' => ['coarse, dry, matt, slightly tousled coat about 6 cm long with a dense undercoat, never woolly or curly'],
+            // Standard colours only (S797); dark grey brindle highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'dark grey brindle', 'weight' => 40],
+                ['value' => 'brindle', 'weight' => 25],
+                ['value' => 'brindle overlaid with black', 'weight' => 20],
+                ['value' => 'solid black', 'weight' => 15],
+            ],
+            'beard' => ['moustache, full beard and upstanding eyebrows'],
+            'ear_carriage' => ['natural ears set high, triangular flaps falling flat against the cheeks, never cropped'],
+            'eye_color' => ['dark brown eyes'],
+            'tail' => ['natural whole tail continuing the line of the back, never docked'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'beard', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
