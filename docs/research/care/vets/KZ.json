@@ -1,0 +1,299 @@
+{
+  "country": "KZ",
+  "checked": "2026-11-12",
+  "sources": [
+    {
+      "name": "Bioritm - own website",
+      "url": "https://bio-ritm.kz/",
+      "note": "Bokeikhanova 54, Almaty; phone +7 727 297 44 57; page says twice 'Мы работаем круглосуточно и без выходных'."
+    },
+    {
+      "name": "Veterinary Medicine Center (CVM) - own website",
+      "url": "https://vetklinika.kz/",
+      "note": "Page title 'Круглосуточная ветеринарная клиника ЦВМ в Алматы' and 'Круглосуточная помощь'. Contact page (https://vetklinika.kz/contact/) lists addresses and phones, regular reception 9:30-20:00, only emergency patients after 20:00, 50% night surcharge 21:00-09:00."
+    },
+    {
+      "name": "Hit veterinary hospital - own website",
+      "url": "https://www.klinika-hit.kz/",
+      "note": "Bokeikhanova 388, Almaty; 'Экстренная хирургия 24/7', 'Выезд на дом 24/7', 'два круглосуточных стационара'. Page shows two numbers (8 747 701 19 19 and 8 707 701 19 19)."
+    },
+    {
+      "name": "Talisman veterinary clinic - own website",
+      "url": "https://vetclinic.kz/",
+      "note": "Auezova 145/8, Almaty; +7 777 733 15 15; says vets 'принимают круглосуточно', X-ray 'круглосуточно', open every day."
+    },
+    {
+      "name": "Zoosfera - own website",
+      "url": "https://zoosfera.kz/",
+      "note": "Astana: Shalkode 8/1 'Круглосуточно' (technical breaks 08:30-09:00 and 19:30-20:00), homepage banner '24/7'; Petrova 1/1 daily 9:00-18:00."
+    },
+    {
+      "name": "Vitavet Karaganda - own website",
+      "url": "https://vitavet.kz/",
+      "note": "Gapeeva 1a, Karaganda; hours '24/7 без выходных', 'Круглосуточный стационар'. Page links point to slightly different phone numbers than displayed (911 006 vs 911 008)."
+    },
+    {
+      "name": "Veterinary service Atyrau - own website",
+      "url": "https://veterinarnaya-sluzhba-1.kz/",
+      "note": "Home-visit service in Atyrau and Atyrau Region, +7 701 419 88 22, 'Мы работаем круглосуточно'. No street address."
+    },
+    {
+      "name": "Clinic Shans Pavlodar - own website",
+      "url": "https://klinikashans.kz/",
+      "note": "Bokeikhana 324, Pavlodar; 'Работаем без перерыва и выходных' (no 24 h wording); emergency appointment offered."
+    },
+    {
+      "name": "VetSpectr Astana - own website",
+      "url": "https://vetspectr.kz/",
+      "note": "Two branches in Astana, 10:00-18:00 daily; no 24 h claim."
+    },
+    {
+      "name": "Aibolit Pavlodar - own website",
+      "url": "https://aibolitkz.ru/",
+      "note": "Estaya 106A, Pavlodar; hours Mon-Fri 9-18, Sat 9-15, Sun 10-14."
+    },
+    {
+      "name": "Veterinary Clinic Karaganda (vet-clinic.kz) - own website",
+      "url": "https://vet-clinic.kz/",
+      "note": "Tyulenina 31, Karaganda; phones; no hours, no 24 h claim."
+    },
+    {
+      "name": "Lucky Dog Karaganda - own website",
+      "url": "https://www.lucky-dog.kz/veterinarnaya-klinika",
+      "note": "Page names Karaganda only; contact section not readable; no address or phone obtained."
+    },
+    {
+      "name": "Almaty city veterinary service - stray animal ambulance (news)",
+      "url": "https://informburo.kz/stati/sobacia-neotlozka-dlia-bezdomnyx-zivotnyx-v-almaty-o-pacientax-i-ix-dalneisei-sudbe",
+      "note": "Municipal emergency crews, +7 708 595 64 04 and 109, round the clock - but only for stray/homeless animals, no house calls for owners. News article, no own page found; NOT entered as duty_rota."
+    },
+    {
+      "name": "Almaty Region Veterinary Department - gov.kz",
+      "url": "https://www.gov.kz/memleket/entities/almobl-veterinaria?lang=ru",
+      "note": "Official body; reception phone only, no animal duty or poison line."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Bioritm",
+      "city": "Almaty",
+      "region": "Almaty",
+      "address": "Bokeikhanova St 54, Almaty",
+      "phone": "+7 727 297 44 57",
+      "emergency_24h": true,
+      "duty": "Advertises round-the-clock operation with no days off. Call ahead.",
+      "small_animals": true,
+      "url": "https://bio-ritm.kz/",
+      "source_url": "https://bio-ritm.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Мы работаем круглосуточно и без выходных'. WhatsApp +7 777 723 0121."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hit Veterinary Hospital (Surgery and Intensive Care)",
+      "city": "Almaty",
+      "region": "Almaty",
+      "address": "Bokeikhanova St 388, Almaty",
+      "phone": "+7 747 701 19 19",
+      "emergency_24h": true,
+      "duty": "Advertises 24/7 emergency surgery, 24/7 house calls and round-the-clock inpatient wards. Call ahead.",
+      "small_animals": true,
+      "url": "https://www.klinika-hit.kz/",
+      "source_url": "https://www.klinika-hit.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Экстренная хирургия 24/7', 'Выезд на дом 24/7', 'два круглосуточных стационара'. Page also links 8 707 701 19 19 (conflict). Opening hours not stated."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Medicine Center (CVM) - Mamyr-4",
+      "city": "Almaty",
+      "region": "Almaty",
+      "address": "Mamyr-4 microdistrict, building 111D, Almaty",
+      "phone": "+7 747 313 13 22",
+      "emergency_24h": true,
+      "duty": "Advertised as a round-the-clock clinic. Regular reception 9:30-20:00; after 20:00 emergency patients only; 50% night surcharge 21:00-09:00.",
+      "small_animals": true,
+      "url": "https://vetklinika.kz/",
+      "source_url": "https://vetklinika.kz/",
+      "checked": "2026-11-12",
+      "note": "Home page title 'Круглосуточная ветеринарная клиника ЦВМ' and 'Круглосуточная помощь'; contact page says nothing explicit about 24 h but describes night emergency tariff. Second phone +7 727 313 13 21. Site meta mentions Abaya/Saina, contact page says Mamyr-4 111D."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Medicine Center (CVM) - Gornyi Gigant",
+      "city": "Almaty",
+      "region": "Almaty",
+      "address": "Zhamakaeva St 32, Almaty",
+      "phone": "+7 771 414 00 10",
+      "emergency_24h": true,
+      "duty": "Advertised as a round-the-clock clinic. Regular reception 9:30-20:00; after 20:00 emergency patients only; 50% night surcharge 21:00-09:00.",
+      "small_animals": true,
+      "url": "https://vetklinika.kz/",
+      "source_url": "https://vetklinika.kz/",
+      "checked": "2026-11-12",
+      "note": "Same network claim as Mamyr-4 branch (site-wide). Second phone +7 727 313 13 28. DOM CVM (hotel/rehab) at Zhamakaeva 198 not entered."
+    },
+    {
+      "kind": "clinic",
+      "name": "Talisman Veterinary Clinic",
+      "city": "Almaty",
+      "region": "Almaty",
+      "address": "Auezova St 145/8, Almaty",
+      "phone": "+7 777 733 15 15",
+      "emergency_24h": true,
+      "duty": "Advertises round-the-clock vets, X-ray, pharmacy and shop; open every day. Call ahead.",
+      "small_animals": true,
+      "url": "https://vetclinic.kz/",
+      "source_url": "https://vetclinic.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Профессиональные ветеринарные врачи принимают круглосуточно', 'Ветеринарный рентген круглосуточно', 'Без выходных'. No hours table."
+    },
+    {
+      "kind": "clinic",
+      "name": "Zoosfera (Shalkode branch)",
+      "city": "Astana",
+      "region": "Astana",
+      "address": "Shalkode St 8/1, Astana",
+      "phone": "+7 707 996 29 40",
+      "emergency_24h": true,
+      "duty": "Advertised as round-the-clock, no days off; short technical breaks 08:30-09:00 and 19:30-20:00. Call ahead.",
+      "small_animals": true,
+      "url": "https://zoosfera.kz/",
+      "source_url": "https://zoosfera.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Круглосуточно' under working time, banner 'Лечение и профилактическая помощь 24/7'. Second phone +7 700 129 60 61. Technical breaks sit awkwardly with a strict 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Zoosfera (Petrova branch)",
+      "city": "Astana",
+      "region": "Astana",
+      "address": "Petrova St 1/1, Astana",
+      "phone": "+7 707 434 45 85",
+      "emergency_24h": false,
+      "duty": "Open daily 9:00-18:00.",
+      "small_animals": true,
+      "url": "https://zoosfera.kz/",
+      "source_url": "https://zoosfera.kz/",
+      "checked": "2026-11-12",
+      "note": "Second phone +7 717 234 45 85."
+    },
+    {
+      "kind": "clinic",
+      "name": "VetSpectr (Right bank)",
+      "city": "Astana",
+      "region": "Astana",
+      "address": "Alexey Petrov St 18/1, Astana",
+      "phone": "+7 777 015 31 31",
+      "emergency_24h": false,
+      "duty": "Open daily 10:00-18:00.",
+      "small_animals": true,
+      "url": "https://vetspectr.kz/",
+      "source_url": "https://vetspectr.kz/",
+      "checked": "2026-11-12",
+      "note": "Call centre +7 777 223 10 49."
+    },
+    {
+      "kind": "clinic",
+      "name": "VetSpectr (Left bank)",
+      "city": "Astana",
+      "region": "Astana",
+      "address": "Manshuk Mametova St 2/1, Astana",
+      "phone": "+7 776 882 87 33",
+      "emergency_24h": false,
+      "duty": "Open daily 10:00-18:00.",
+      "small_animals": true,
+      "url": "https://vetspectr.kz/",
+      "source_url": "https://vetspectr.kz/",
+      "checked": "2026-11-12",
+      "note": "Call centre +7 777 223 10 49."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vitavet Veterinary Clinic",
+      "city": "Karaganda",
+      "region": "Karaganda Region",
+      "address": "Gapeeva St 1a, Karaganda",
+      "phone": "+7 778 676 08 03",
+      "emergency_24h": true,
+      "duty": "Advertises 24/7 operation without days off and a round-the-clock inpatient ward. Call ahead.",
+      "small_animals": true,
+      "url": "https://vitavet.kz/",
+      "source_url": "https://vitavet.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: '24/7 без выходных', 'Круглосуточный стационар'. Second phone +7 7212 911 006 (link points to 911 008)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Clinic (vet-clinic.kz)",
+      "city": "Karaganda",
+      "region": "Karaganda Region",
+      "address": "S. Tyulenina St 31, Karaganda",
+      "phone": "+7 7212 41 18 97",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://vet-clinic.kz/",
+      "source_url": "https://vet-clinic.kz/",
+      "checked": "2026-11-12",
+      "note": "Second phone +7 701 528 55 70. No hours or 24 h wording on page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Lucky Dog Veterinary Clinic",
+      "city": "Karaganda",
+      "region": "Karaganda Region",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.lucky-dog.kz/veterinarnaya-klinika",
+      "source_url": "https://www.lucky-dog.kz/veterinarnaya-klinika",
+      "checked": "2026-11-12",
+      "note": "Page gives no address, phone or hours (contact section not readable). Entered with url only."
+    },
+    {
+      "kind": "clinic",
+      "name": "Shans Veterinary Clinic",
+      "city": "Pavlodar",
+      "region": "Pavlodar Region",
+      "address": "Alikhan Bokeikhan St, building 324, Pavlodar",
+      "phone": "+7 7182 22 33 34",
+      "emergency_24h": false,
+      "duty": "Open seven days a week without break; emergency appointments offered. Call ahead at night.",
+      "small_animals": true,
+      "url": "https://klinikashans.kz/",
+      "source_url": "https://klinikashans.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Работаем без перерыва и выходных', 'Экстренный приём'; no 24 h wording. Mobile +7 705 386 41 99. Also serves Ekibastuz."
+    },
+    {
+      "kind": "clinic",
+      "name": "Aibolit Veterinary Clinic",
+      "city": "Pavlodar",
+      "region": "Pavlodar Region",
+      "address": "Estaya St 106A, Pavlodar",
+      "phone": "+7 702 638 60 32",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-18:00, Sat 9:00-15:00, Sun 10:00-14:00.",
+      "small_animals": true,
+      "url": "https://aibolitkz.ru/",
+      "source_url": "https://aibolitkz.ru/",
+      "checked": "2026-11-12",
+      "note": "Lunch break 12:00-12:30. No 24 h wording."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Service Atyrau (home visits)",
+      "city": "Atyrau",
+      "region": "Atyrau Region",
+      "phone": "+7 701 419 88 22",
+      "emergency_24h": true,
+      "duty": "Mobile vet with home visits in Atyrau and the region; advertises round-the-clock emergency help. Call ahead.",
+      "small_animals": true,
+      "url": "https://veterinarnaya-sluzhba-1.kz/",
+      "source_url": "https://veterinarnaya-sluzhba-1.kz/",
+      "checked": "2026-11-12",
+      "note": "Own page: 'Мы работаем круглосуточно' (self-description, no hours detail). No street address. Also serves farm animals."
+    }
+  ],
+  "notes": "Kazakhstan: first run, 15 entries (8 marked 24 h). Official bodies (gov.kz regional veterinary departments for Almaty region and Karaganda) list only reception contacts - no animal duty rota or poison line found. The Almaty municipal ambulance (+7 708 595 64 04, 109) is round-the-clock but for stray animals only and is documented only in sources, not as an entry. Most clinic sites are not found by the search tool; 24 h lists on weproject.media, zoon.kz, 2gis, 103.kz are aggregators and were used only as leads. Could not open: veravet.kz (redirect loop; Vera clinics in Almaty listed 24 h only by aggregators), dogmavetclinic.kz (Astana/Kostanay, client error), zoovita.kz (robots), vetklinika-ashurkova.kz (robots; Astana Keregetas 48 listed 24 h only by a media article), simba.vet (is an Irkutsk clinic, unrelated), medvet.kz / Dog Premium / U Lukomorya / Shans Almaty / VetStar / Zoovita Almaty (no own page reachable; MedVet, VetStar and others only on 2gis/directories). Still to do: Shymkent, Aktobe, Taraz, Oskemen, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan (no own clinic site found yet), Aqtaban Astana, Nika Astana, Almaty clinics above, KazNAU university clinic, Karaganda Medical/agrarian clinics."
+}
