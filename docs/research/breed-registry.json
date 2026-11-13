@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c3b43548fc7cdb5c3e68b744e70cce917fc34a6bd5c6cfef31c17e0d1ca09ff3"
+      "sha256": "9157f3209fd021a7c80e33c076b37e4503adb865e457c60fce93d54fd2600473"
     }
   },
   "suitability_vocabulary": {
@@ -61127,7 +61127,12 @@
           "S814"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "norwich-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
