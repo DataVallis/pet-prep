@@ -1,0 +1,125 @@
+{
+  "country": "VE",
+  "checked": "2026-11-13",
+  "sources": [
+    {
+      "name": "Somos UVET - own website",
+      "url": "https://www.somosuvet.com/emergenciasyurgencias/",
+      "note": "Opened; address, phones, 24H wording."
+    },
+    {
+      "name": "Veterinaria Los Chorros - own website",
+      "url": "https://www.veterinarialoschorros.com/",
+      "note": "Opened; 24 h emergency wording, hours."
+    },
+    {
+      "name": "CaracasVet - own website",
+      "url": "https://caracasvet.com/",
+      "note": "Opened; 24/7 hours."
+    },
+    {
+      "name": "Grupo Centro Veterinario (emergenciasveterinarias.pet) - own website",
+      "url": "https://emergenciasveterinarias.pet/emergencias-veterinarias-24-horas/",
+      "note": "Opened; 24 h at three Caracas sedes."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Urgencias Veterinarias Las Acacias (UVET)",
+      "city": "Caracas",
+      "region": "Distrito Capital",
+      "address": "Avenida María Teresa Toro, Quinta María Auxiliadora, Las Acacias, Caracas",
+      "phone": "+58 212 634 4330",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week, 365 days a year. Also +58 212 634 4335, +58 212 634 4314; WhatsApp +58 424 266 3088.",
+      "small_animals": true,
+      "url": "https://www.somosuvet.com/",
+      "source_url": "https://www.somosuvet.com/emergenciasyurgencias/",
+      "checked": "2026-11-13",
+      "note": "Opened own site; 'Lunes a domingo 24H'.",
+      "quote": "Lunes a domingo 24H"
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria Los Chorros",
+      "city": "Caracas",
+      "region": "Distrito Capital",
+      "address": "2da. Av. con 5ta. Transversal de Montecristo N°45, Caracas",
+      "phone": "+58 212 234 0626",
+      "emergency_24h": true,
+      "duty": "Emergencies 24 hours: +58 414 223 8214 or +58 424 119 7723. Regular hours Mon-Fri 8:00-18:00, Sat 8:00-13:00.",
+      "small_animals": true,
+      "url": "https://www.veterinarialoschorros.com/",
+      "source_url": "https://www.veterinarialoschorros.com/",
+      "checked": "2026-11-13",
+      "note": "Opened own site; additional lines 237-9569, 235-1465.",
+      "quote": "Emergencias disponibles las 24 horas."
+    },
+    {
+      "kind": "clinic",
+      "name": "CaracasVet",
+      "city": "Caracas",
+      "region": "Distrito Capital",
+      "address": "San Felipe a Pueblo Nuevo, Casa 13, La Candelaria Norte, Caracas 1020",
+      "phone": "+58 424 218 2302",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week (emergency and hospitalisation). WhatsApp available.",
+      "small_animals": true,
+      "url": "https://caracasvet.com/",
+      "source_url": "https://caracasvet.com/",
+      "checked": "2026-11-13",
+      "note": "Opened own site; every day listed 24/7. Second WhatsApp number 58 422 740 4077 in header.",
+      "quote": "Emergencia 24/7"
+    },
+    {
+      "kind": "clinic",
+      "name": "Centro Veterinario La Trinidad",
+      "city": "Caracas",
+      "region": "Miranda",
+      "address": "Av. González Rincones, Caracas 1080",
+      "phone": "+58 414 292 1506",
+      "emergency_24h": true,
+      "duty": "24-hour veterinary care for emergency patients. Consultations Mon-Fri 8:00-17:00, Sat 8:00-14:00. Contact via WhatsApp.",
+      "small_animals": true,
+      "url": "https://emergenciasveterinarias.pet/",
+      "source_url": "https://emergenciasveterinarias.pet/emergencias-veterinarias-24-horas/",
+      "checked": "2026-11-13",
+      "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
+      "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes"
+    },
+    {
+      "kind": "clinic",
+      "name": "Centro Veterinario San Román",
+      "city": "Caracas",
+      "region": "Miranda",
+      "address": "Calle Chivacoa, Caracas 1061",
+      "phone": "+58 414 292 1506",
+      "emergency_24h": true,
+      "duty": "24-hour veterinary care for emergency patients. Consultations Mon-Fri 8:00-17:00, Sat 8:00-14:00. Contact via WhatsApp.",
+      "small_animals": true,
+      "url": "https://emergenciasveterinarias.pet/",
+      "source_url": "https://emergenciasveterinarias.pet/emergencias-veterinarias-24-horas/",
+      "checked": "2026-11-13",
+      "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
+      "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes"
+    },
+    {
+      "kind": "clinic",
+      "name": "Centro Veterinario Chuao",
+      "city": "Caracas",
+      "region": "Miranda",
+      "address": "Av. Araure, Caracas 1061",
+      "phone": "+58 414 292 1506",
+      "emergency_24h": true,
+      "duty": "24-hour veterinary care for emergency patients. Consultations Mon-Fri 8:00-17:00, Sat 8:00-14:00. Contact via WhatsApp.",
+      "small_animals": true,
+      "url": "https://emergenciasveterinarias.pet/",
+      "source_url": "https://emergenciasveterinarias.pet/emergencias-veterinarias-24-horas/",
+      "checked": "2026-11-13",
+      "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
+      "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes"
+    }
+  ],
+  "notes": "No official source found: Colegio de Médicos Veterinarios, UCV Maracay, ULA, LUZ pages not located via search (not fetched). No duty rota, no animal poison line found. Only Caracas covered; no own-site pages found for Valencia, Maracaibo, Maracay, Barquisimeto, Margarita, Puerto La Cruz, Mérida, Ciudad Guayana. Leads (only seen in huellavital.com directory, not usable as source): Perro Amor 24H, Tu Veterinario 24 (Tuvet 24), Hospital Veterinario El Paraiso, Vuurman group, Vida Pets, Furpets/Veterinarios 24Horas 7Dias (Valencia), Famivet (Barquisimeto), Nehru 24hrs (Ciudad Guayana), Animal House 24 hrs (Maracay), Consultorio Veterinario 24 horas (Porlamar), Clinica El Rancho 24 Horas (San Cristobal). Earthquake relief (July 2026) news lists free vet services; may be temporary."
+}
