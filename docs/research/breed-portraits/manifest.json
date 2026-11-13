@@ -1338,6 +1338,19 @@
             "prompt_hash": "sha256:14bea6496a3a8cc0274281c7a0ee3f824e55ff04759f76a987ccfe3cefba6c22",
             "generated_at": "2026-11-13T02:44:56+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "schipperke",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/schipperke.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:480318b03cde01d5dde446416126c360f1f16aeefdeba2601c7621a0f367ba83",
+            "generated_at": "2026-11-13T06:50:40+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

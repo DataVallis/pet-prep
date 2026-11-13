@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `schipperke` (viri S824–S829; ponovno S10, S11, S14, S24, S35, S45, S174, S771); seznam za vzreditelja: RKC (S826) |
 | Izvor | FCI št. 83 »Schipperke«, skupina 1, sekcija 1 (ovčarski psi), Belgija (S824, S825) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 106. mesto »Schipperke« (S174, zapisano 2026-11-13) |
-| PR-ji | pet-prep #1109 (pasma) · portret: pet-prep PR `feat/M5-R10-110-schipperke-portrait` · spletna stran: pet-prep-website `feat/register-schipperke` |
+| PR-ji | pet-prep #1109 (pasma, združen `bbf1489`) · portret pet-prep PR `feat/M5-R10-110-schipperke-portrait` (zagon `breed-portraits.yml` 43381433975, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-schipperke` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 128. meseca; 4 → 3 → 2 obroka; učenje 1,5×) | 🛠 | 💶 izziv | M5-R10-110 | 2026-11-13 |
 | Česanje 2× na teden, ščetkanje zob vsak dan, ušesa vsaka 2 tedna, opomnik za kopanje vsake 4 tedne, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R17 | 2026-11-13 |
 | Barva (izbirnik: črn) | 🛠 | 💶 izziv | M5-R21 | 2026-11-13 |
-| AI portret v registru | 🗓 po združitvi (zagon `breed-portraits.yml`) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/schipperke`, `/sl/zivali/psi/schipperke`) | 🗓 samo s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, pokonci stoječa ušesa, ovratnik in griva, naraven rep | — | M5-R11-04 | 2026-11-13 |
+| Stran na petprep.si (`/animals/dogs/schipperke`, `/sl/zivali/psi/schipperke`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
