@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Oatmeal",
-    "sl": "Ovseni kosmiči"
+    "sl": "Ovseni kosmiči",
+    "cs": "Ovesná kaše"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
-    "sl": "Ali lahko psi jedo ovsene kosmiče?"
+    "sl": "Ali lahko psi jedo ovsene kosmiče?",
+    "cs": "Mohou psi jíst ovesnou kaši?"
   },
   "url_slug": {
     "en": "oatmeal",
-    "sl": "ovseni-kosmici"
+    "sl": "ovseni-kosmici",
+    "cs": "ovesna-kase"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Plain oatmeal, cooked with water rather than milk, is fine for dogs. Never give flavoured or instant oatmeal, and leave out salt, butter, chocolate and raisins.",
-    "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin."
+    "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin.",
+    "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
-    "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana."
+    "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
+    "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce it gradually and watch how your dog handles it. If your dog seems to react badly, contact your vet straight away.",
-    "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja."
+    "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja.",
+    "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
-    "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom."
+    "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom.",
+    "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
-    "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse."
+    "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse.",
+    "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw oats?",
-        "sl": "Ali lahko psi jedo surove ovsene kosmiče?"
+        "sl": "Ali lahko psi jedo surove ovsene kosmiče?",
+        "cs": "Mohou psi jíst syrové ovesné vločky?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
-        "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi."
+        "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi.",
+        "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví."
       }
     },
     {
       "q": {
         "en": "Is flavoured instant oatmeal safe for dogs?",
-        "sl": "Je aromatizirana instant kaša za pse varna?"
+        "sl": "Je aromatizirana instant kaša za pse varna?",
+        "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
-        "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana."
+        "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
+        "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
       }
     }
   ],
@@ -162,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "036f99655217204298a4211d1ec5a4ad3389db77899bdeecfb190cb4517a064c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6fde4f2b640312f1b72030d6249f08f5865168bca44574e010559c9a69026238"
     }
   }
 }

@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Popcorn",
-    "sl": "Pokovka"
+    "sl": "Pokovka",
+    "cs": "Popcorn"
   },
   "question": {
     "en": "Can dogs eat popcorn?",
-    "sl": "Ali lahko psi jedo pokovko?"
+    "sl": "Ali lahko psi jedo pokovko?",
+    "cs": "Mohou psi jíst popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
-    "sl": "pokovka"
+    "sl": "pokovka",
+    "cs": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain air-popped popcorn is generally safe for dogs in small amounts as an occasional treat. Skip butter, salt, oil and flavourings, and keep unpopped kernels away from your dog.",
-    "sl": "Da, navadna pokovka, pripravljena na vročem zraku, je za pse v majhnih količinah kot občasen priboljšek na splošno varna. Brez masla, soli, olja in arom, nepopokana zrna pa naj bodo zunaj pasjega dosega."
+    "sl": "Da, navadna pokovka, pripravljena na vročem zraku, je za pse v majhnih količinah kot občasen priboljšek na splošno varna. Brez masla, soli, olja in arom, nepopokana zrna pa naj bodo zunaj pasjega dosega.",
+    "cs": "Ano, obyčejný popcorn připravený horkým vzduchem je pro psy v malém množství jako občasný pamlsek obvykle bezpečný. Vynechte máslo, sůl, olej a ochucovadla a nenechte psa dostat se k nerozpukaným zrnkům."
   },
   "why": {
     "en": "Popcorn itself isn't bad for dogs, though it isn't a nutritional necessity. Many kinds are loaded with butter, oil, salt and flavourings, which can upset some dogs' digestion, and the fats can add to obesity over time. Unpopped and partly popped kernels can get stuck between teeth, damage teeth and pose a choking hazard, especially for smaller dogs.",
-    "sl": "Pokovka sama po sebi psom ne škodi, čeprav je ne potrebujejo za prehrano. Številne vrste so polne masla, olja, soli in arom, ki lahko nekaterim psom razdražijo prebavo, maščobe pa sčasoma prispevajo k debelosti. Nepopokana in napol popokana zrna se lahko zataknejo med zobe, poškodujejo zobe in pomenijo nevarnost zadušitve, zlasti za manjše pse."
+    "sl": "Pokovka sama po sebi psom ne škodi, čeprav je ne potrebujejo za prehrano. Številne vrste so polne masla, olja, soli in arom, ki lahko nekaterim psom razdražijo prebavo, maščobe pa sčasoma prispevajo k debelosti. Nepopokana in napol popokana zrna se lahko zataknejo med zobe, poškodujejo zobe in pomenijo nevarnost zadušitve, zlasti za manjše pse.",
+    "cs": "Samotný popcorn psům neškodí, i když ho nepotřebují k výživě. Mnoho druhů popcornu je plných másla, oleje, soli a ochucovadel, která mohou některým psům podráždit zažívání, a tuky časem přispívají k obezitě. Nerozpukaná a částečně rozpukaná zrnka se mohou zaseknout mezi zuby, poškodit je a představují riziko udušení, zejména u menších psů."
   },
   "signs": null,
   "what_to_do": {
     "en": "A few dropped pieces of buttered popcorn probably won't cause harm. Call your vet if your dog eats a large amount or shows vomiting, diarrhoea or lethargy afterwards.",
-    "sl": "Nekaj padlih koščkov pokovke z maslom psu verjetno ne bo škodilo. Pokličite veterinarja, če je pes pojedel veliko pokovke ali če potem bruha, ima drisko ali je brez energije."
+    "sl": "Nekaj padlih koščkov pokovke z maslom psu verjetno ne bo škodilo. Pokličite veterinarja, če je pes pojedel veliko pokovke ali če potem bruha, ima drisko ali je brez energije.",
+    "cs": "Pár upuštěných kousků popcornu s máslem pravděpodobně neuškodí. Zavolejte veterináři, pokud pes snědl velké množství nebo se po něm objeví zvracení, průjem nebo malátnost."
   },
   "serving": {
     "en": "Plain, air-popped pieces only, now and then. No butter, salt, oil, caramel or candy coating, cheese or seasoning, and no unpopped kernels.",
-    "sl": "Le navadni koščki, pripravljeni na vročem zraku, in to občasno. Brez masla, soli, olja, karamele ali sladkorne obloge, sira in začimb ter brez nepopokanih zrn."
+    "sl": "Le navadni koščki, pripravljeni na vročem zraku, in to občasno. Brez masla, soli, olja, karamele ali sladkorne obloge, sira in začimb ter brez nepopokanih zrn.",
+    "cs": "Jen obyčejné kousky připravené horkým vzduchem, a to jen občas. Žádné máslo, sůl, olej, karamel ani cukrová poleva, sýr či koření a žádná nerozpukaná zrnka."
   },
   "child": {
     "en": "Dogs can have a few pieces of plain popcorn. Buttery or salty popcorn and hard kernels are not for dogs.",
-    "sl": "Psi lahko dobijo nekaj koščkov navadne pokovke. Pokovka z maslom ali soljo in trda zrna niso za pse."
+    "sl": "Psi lahko dobijo nekaj koščkov navadne pokovke. Pokovka z maslom ali soljo in trda zrna niso za pse.",
+    "cs": "Psi mohou dostat pár kousků obyčejného popcornu. Popcorn s máslem nebo solí a tvrdá zrnka pro psy nejsou."
   },
   "faq": [
     {
       "q": {
         "en": "My dog ate some buttered popcorn. Is that a problem?",
-        "sl": "Pes je pojedel malo pokovke z maslom. Je to težava?"
+        "sl": "Pes je pojedel malo pokovke z maslom. Je to težava?",
+        "cs": "Můj pes snědl trochu popcornu s máslem. Je to problém?"
       },
       "a": {
         "en": "A few pieces probably won't cause harm. Call your vet if your dog ate a lot or develops vomiting, diarrhoea or lethargy.",
-        "sl": "Nekaj koščkov verjetno ne bo škodilo. Pokličite veterinarja, če je pojedel veliko ali če začne bruhati, dobi drisko ali je brez energije."
+        "sl": "Nekaj koščkov verjetno ne bo škodilo. Pokličite veterinarja, če je pojedel veliko ali če začne bruhati, dobi drisko ali je brez energije.",
+        "cs": "Pár kousků pravděpodobně neuškodí. Zavolejte veterináři, pokud pes snědl hodně nebo se u něj objeví zvracení, průjem či malátnost."
       }
     },
     {
       "q": {
         "en": "Can dogs eat caramel or cheese popcorn?",
-        "sl": "Ali lahko psi jedo karamelno ali sirno pokovko?"
+        "sl": "Ali lahko psi jedo karamelno ali sirno pokovko?",
+        "cs": "Mohou psi jíst karamelový nebo sýrový popcorn?"
       },
       "a": {
         "en": "No. Skip popcorn with candy or caramel coatings, cheese or seasoning.",
-        "sl": "Ne. Pokovke s sladkorno ali karamelno oblogo, sirom ali začimbami psu ne dajajte."
+        "sl": "Ne. Pokovke s sladkorno ali karamelno oblogo, sirom ali začimbami psu ne dajajte.",
+        "cs": "Ne. Vynechte popcorn s cukrovou nebo karamelovou polevou, se sýrem nebo s kořením."
       }
     }
   ],
@@ -146,6 +158,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5da4cd74f929ad9a515160330a69fe02d9be7ff3b9254f82f53e23edefcd6f61"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "38f05a21346db982150322d3f962004c44ac91519428f1dc2ac3aad70d382701"
     }
   }
 }

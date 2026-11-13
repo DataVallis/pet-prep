@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Sugar",
-    "sl": "Sladkor"
+    "sl": "Sladkor",
+    "cs": "Cukr"
   },
   "question": {
     "en": "Can dogs eat sugar?",
-    "sl": "Ali lahko psi jedo sladkor?"
+    "sl": "Ali lahko psi jedo sladkor?",
+    "cs": "Mohou psi jíst cukr?"
   },
   "url_slug": {
     "en": "sugar",
-    "sl": "sladkor"
+    "sl": "sladkor",
+    "cs": "cukr"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to give your dog sugar. A little sugar isn't toxic to dogs, but it offers no nutritional benefit and can cause stomach upset. Sugar-free products are no safer: they may contain xylitol, which is toxic to dogs.",
-    "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen."
+    "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen.",
+    "cs": "Ne, psovi cukr raději nedávejte. Trocha cukru pro psy není jedovatá, ale nemá žádnou výživovou hodnotu a může způsobit podráždění žaludku. Výrobky bez cukru nejsou o nic bezpečnější: mohou obsahovat xylitol, který je pro psy jedovatý."
   },
   "why": {
     "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
-    "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo."
+    "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo.",
+    "cs": "Cukr může způsobit podráždění žaludku, včetně zvracení a průjmu. Sladká a tučná jídla mohou také vést k zánětu slinivky břišní, bolestivému zánětu této žlázy. Sladké pamlsky časem přispívají k obezitě a cukry mohou způsobit zubní kaz."
   },
   "signs": {
     "en": [
@@ -32,36 +37,47 @@
       "Bruhanje",
       "Driska",
       "Slabši apetit, utrujenost ali bolečine v trebuhu (možen pankreatitis; znaki se lahko pokažejo šele po nekaj dneh)"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Snížená chuť k jídlu, nízká energie nebo bolest břicha (možný zánět slinivky břišní; příznaky se mohou objevit až za několik dní)"
     ]
   },
   "what_to_do": {
     "en": "Plain sugary sweets often cause mild stomach upset or no signs at all. If your dog ate a lot of sugary food, call your vet or a pet poison helpline right away, even if your dog seems fine. If it ate something sugar-free that may contain xylitol, call your vet immediately.",
-    "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja."
+    "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja.",
+    "cs": "Obyčejné sladkosti často způsobí jen mírné podráždění žaludku, nebo žádné příznaky. Pokud pes snědl hodně sladkého jídla, ihned zavolejte veterináři nebo na toxikologickou linku pro zvířata, i když se zdá být v pořádku. Pokud snědl něco bez cukru, co může obsahovat xylitol, okamžitě zavolejte veterináři."
   },
   "serving": null,
   "child": {
     "en": "Sugar is a people treat. It can give dogs a tummy ache, so keep sweets for yourself and give your dog a dog treat.",
-    "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek."
+    "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek.",
+    "cs": "Cukr je pamlsek pro lidi. Psovi může rozbolet bříško, a tak sladkosti nech pro sebe a psovi dej psí pamlsek."
   },
   "faq": [
     {
       "q": {
         "en": "Will a little bit of sugar hurt my dog?",
-        "sl": "Ali bo malo sladkorja psu škodilo?"
+        "sl": "Ali bo malo sladkorja psu škodilo?",
+        "cs": "Uškodí mému psovi trocha cukru?"
       },
       "a": {
         "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
-        "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi."
+        "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi.",
+        "cs": "Trocha cukru pro psy není jedovatá, ale může způsobit podráždění žaludku a nemá žádnou výživovou hodnotu."
       }
     },
     {
       "q": {
         "en": "Are sugar-free sweets safer for dogs?",
-        "sl": "Ali so sladkarije brez sladkorja za pse varnejše?"
+        "sl": "Ali so sladkarije brez sladkorja za pse varnejše?",
+        "cs": "Jsou sladkosti bez cukru pro psy bezpečnější?"
       },
       "a": {
         "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
-        "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor."
+        "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor.",
+        "cs": "Ne. Výrobky bez cukru často obsahují xylitol, který je pro psy jedovatý. Zkontrolujte složení; xylitol může být uveden také jako březový cukr."
       }
     }
   ],
@@ -143,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "376a349ee76d7ebd0d2c2824d99d9614c95d88122d3b750e81924b992e389b45"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e22db65945c40591adc50d8e0d6fa870a16c7feb1193ab071e03b51e0efdbad0"
     }
   }
 }

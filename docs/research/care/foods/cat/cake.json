@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Cake",
-    "sl": "Torte in kolači"
+    "sl": "Torte in kolači",
+    "cs": "Dort"
   },
   "question": {
     "en": "Can cats eat cake?",
-    "sl": "Ali lahko mačke jedo torto?"
+    "sl": "Ali lahko mačke jedo torto?",
+    "cs": "Mohou kočky jíst dort?"
   },
   "url_slug": {
     "en": "cake",
-    "sl": "torta"
+    "sl": "torta",
+    "cs": "dort"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, cake is not for cats. It is sugary, which is unhealthy for cats, and many cakes, especially Christmas and fruit cakes, contain dried fruit or chocolate, which are harmful to cats. The RSPCA warns that Christmas cakes are dangerous for cats.",
-    "sl": "Ne, torta ni za mačke. Je sladka, kar je za mačke nezdravo, veliko tort, zlasti božičnih in sadnih, pa vsebuje suho sadje ali čokolado, ki mačkam škodita. RSPCA opozarja, da so božične torte za mačke nevarne."
+    "sl": "Ne, torta ni za mačke. Je sladka, kar je za mačke nezdravo, veliko tort, zlasti božičnih in sadnih, pa vsebuje suho sadje ali čokolado, ki mačkam škodita. RSPCA opozarja, da so božične torte za mačke nevarne.",
+    "cs": "Ne, dort není pro kočky. Je sladký, což kočkám škodí, a mnoho dortů, zejména vánoční a ovocné, obsahuje sušené ovoce nebo čokoládu, které jsou pro kočky škodlivé. RSPCA upozorňuje, že vánoční ovocné dorty jsou pro kočky nebezpečné."
   },
   "why": {
     "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
-    "sl": "RSPCA navaja, da so božične torte za mačke nevarne. Takšne torte pogosto vsebujejo sultanine, rozine in korinte, ki jih RSPCA označuje kot strupene, in svetuje, naj mačke ne pojedo nič grozdja. Čokolada je za mačke strogo prepovedana. Navaden biskvit teh sestavin nima, a njegov sladkor je za mačke nezdrav in nima hranilne vrednosti, zato za vse torte uporabljamo strožjo raven."
+    "sl": "RSPCA navaja, da so božične torte za mačke nevarne. Takšne torte pogosto vsebujejo sultanine, rozine in korinte, ki jih RSPCA označuje kot strupene, in svetuje, naj mačke ne pojedo nič grozdja. Čokolada je za mačke strogo prepovedana. Navaden biskvit teh sestavin nima, a njegov sladkor je za mačke nezdrav in nima hranilne vrednosti, zato za vse torte uporabljamo strožjo raven.",
+    "cs": "RSPCA uvádí, že vánoční ovocné dorty jsou pro kočky nebezpečné. Takové dorty často obsahují sultánky, rozinky a korintky, které RSPCA označuje za toxické, a radí kočkám žádné hrozny nedopřávat. Čokoláda je pro kočky naprosto nevhodná. Obyčejný piškot nic z toho neobsahuje, ale jeho cukr kočkám škodí a nemá pro ně žádnou nutriční hodnotu, proto u všech dortů používáme přísnější úroveň."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Bruhanje",
       "Driska ali želodčne težave"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem nebo podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate cake with dried fruit or chocolate in it, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home. After a lick of plain sponge, watch for an upset stomach.",
-    "sl": "Če je mačka pojedla torto s suhim sadjem ali čokolado, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja. Če je le oblizala navaden biskvit, bodite pozorni na želodčne težave."
+    "sl": "Če je mačka pojedla torto s suhim sadjem ali čokolado, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja. Če je le oblizala navaden biskvit, bodite pozorni na želodčne težave.",
+    "cs": "Pokud kočka snědla dort se sušeným ovocem nebo čokoládou, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení. Po olíznutí obyčejného piškotu sledujte, zda nemá podrážděný žaludek."
   },
   "serving": null,
   "child": {
     "en": "Cake is a people treat. Some cakes have raisins or chocolate that can make cats poorly, so keep your slice for yourself.",
-    "sl": "Torta je posladek za ljudi. Nekatere torte imajo rozine ali čokolado, ki muci škodijo, zato svoj kos obdrži zase."
+    "sl": "Torta je posladek za ljudi. Nekatere torte imajo rozine ali čokolado, ki muci škodijo, zato svoj kos obdrži zase.",
+    "cs": "Dort je mlsání pro lidi. Některé dorty obsahují rozinky nebo čokoládu, po kterých může být kočičce špatně, takže svůj kousek si nech pro sebe."
   },
   "faq": [
     {
       "q": {
         "en": "Is Christmas cake dangerous for cats?",
-        "sl": "Ali je božična torta nevarna za mačke?"
+        "sl": "Ali je božična torta nevarna za mačke?",
+        "cs": "Je vánoční ovocný dort pro kočky nebezpečný?"
       },
       "a": {
         "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
-        "sl": "Da. RSPCA opozarja, da so božične torte za mačke nevarne, saj pogosto vsebujejo suho sadje. Blue Cross opisuje mačka, ki je bruhal, potem ko je pojedel bogato božično torto, in je moral čez noč ostati pri veterinarju na infuziji."
+        "sl": "Da. RSPCA opozarja, da so božične torte za mačke nevarne, saj pogosto vsebujejo suho sadje. Blue Cross opisuje mačka, ki je bruhal, potem ko je pojedel bogato božično torto, in je moral čez noč ostati pri veterinarju na infuziji.",
+        "cs": "Ano. RSPCA upozorňuje, že vánoční ovocné dorty jsou pro kočky nebezpečné, protože často obsahují sušené ovoce. Blue Cross popisuje kočku, které bylo po snědení tučného vánočního dortu špatně a která musela zůstat přes noc u veterináře na kapačce."
       }
     }
   ],
@@ -145,6 +158,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d25e3022102519e3061ab8b643fc024b014ca8e34ae7c331ae9ebc0cc56facfb"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16ef00f667a9707a7c28c542f456c4495602f980a237fc7c57c5cbb0b855ae7f"
     }
   }
 }

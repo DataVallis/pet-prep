@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "French fries",
-    "sl": "Pomfrit"
+    "sl": "Pomfrit",
+    "cs": "Hranolky"
   },
   "question": {
     "en": "Can dogs eat french fries?",
-    "sl": "Ali lahko psi jedo pomfrit?"
+    "sl": "Ali lahko psi jedo pomfrit?",
+    "cs": "Mohou psi jíst hranolky?"
   },
   "url_slug": {
     "en": "french-fries",
-    "sl": "pomfrit"
+    "sl": "pomfrit",
+    "cs": "hranolky"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. French fries are far too high in calories for dogs and can lead to obesity, and too much salty food is not good for them. A dropped fry is unlikely to cause salt poisoning, and plain cooked potato is fine in small amounts instead.",
-    "sl": "Ni priporočljivo. Pomfrit ima za pse veliko preveč kalorij in lahko vodi v debelost, preveč slane hrane pa jim ne koristi. Padel krompirček verjetno ne bo povzročil zastrupitve s soljo, namesto pomfrita pa je v majhnih količinah v redu navaden kuhan krompir."
+    "sl": "Ni priporočljivo. Pomfrit ima za pse veliko preveč kalorij in lahko vodi v debelost, preveč slane hrane pa jim ne koristi. Padel krompirček verjetno ne bo povzročil zastrupitve s soljo, namesto pomfrita pa je v majhnih količinah v redu navaden kuhan krompir.",
+    "cs": "Nedoporučuje se. Hranolky mají pro psy příliš mnoho kalorií a mohou vést k obezitě a příliš slané jídlo jim neprospívá. Jeden spadlý hranolek sotva způsobí otravu solí a obyčejný tepelně upravený brambor je v malém množství v pořádku."
   },
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
-    "sl": "AKC opozarja, da je pri hrani, kot je pomfrit, lahko preveč dobrega, veterinarski nutricionist s Cornella pa pravi, da ima pomfrit veliko preveč kalorij in lahko vodi v debelost ter slab vnos hranil. Zmerna količina slane hrane ne bi smela povzročiti zastrupitve s soljo, preveč slane hrane pa psom ne koristi, zlasti tistim z boleznijo srca, ker lahko povzroči zastajanje tekočine."
+    "sl": "AKC opozarja, da je pri hrani, kot je pomfrit, lahko preveč dobrega, veterinarski nutricionist s Cornella pa pravi, da ima pomfrit veliko preveč kalorij in lahko vodi v debelost ter slab vnos hranil. Zmerna količina slane hrane ne bi smela povzročiti zastrupitve s soljo, preveč slane hrane pa psom ne koristi, zlasti tistim z boleznijo srca, ker lahko povzroči zastajanje tekočine.",
+    "cs": "AKC upozorňuje, že u jídel jako hranolky se dá snadno přehnat, a veterinární nutriční specialistka z Cornellovy univerzity říká, že hranolky mají příliš mnoho kalorií a mohou vést k obezitě a nedostatečnému příjmu živin. Slané jídlo s mírou by otravu solí způsobit nemělo, ale nadměrné množství slaného jídla psům neprospívá, zvlášť těm se srdečním onemocněním, protože může způsobit zadržování tekutin."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Bruhanje ali driska",
       "Slab apetit ali utrujenost",
       "Opotekanje, tresenje ali krči (preveč soli)"
+    ],
+    "cs": [
+      "Silná žízeň a časté močení",
+      "Zvracení nebo průjem",
+      "Špatná chuť k jídlu nebo malátnost",
+      "Vrávorání, třes nebo záchvaty (příliš mnoho soli)"
     ]
   },
   "what_to_do": {
     "en": "A fry or two usually needs nothing more than fresh drinking water. If you think your dog has eaten too much salty food, contact your vet straight away.",
-    "sl": "Pri enem ali dveh krompirčkih običajno zadošča, da ima pes na voljo svežo vodo. Če mislite, da je pes pojedel preveč slane hrane, takoj pokličite veterinarja."
+    "sl": "Pri enem ali dveh krompirčkih običajno zadošča, da ima pes na voljo svežo vodo. Če mislite, da je pes pojedel preveč slane hrane, takoj pokličite veterinarja.",
+    "cs": "Po jednom či dvou hranolcích obvykle stačí čerstvá pitná voda. Pokud si myslíte, že pes snědl příliš mnoho slaného jídla, obraťte se ihned na veterináře."
   },
   "serving": null,
   "child": {
     "en": "French fries are a salty people snack. Dogs do better with their own treats, so keep the fries for people.",
-    "sl": "Pomfrit je slan prigrizek za ljudi. Psom bolj ustrezajo njihovi priboljški, zato naj pomfrit ostane ljudem."
+    "sl": "Pomfrit je slan prigrizek za ljudi. Psom bolj ustrezajo njihovi priboljški, zato naj pomfrit ostane ljudem.",
+    "cs": "Hranolky jsou slaná svačina pro lidi. Psům víc prospějí jejich vlastní pamlsky, takže hranolky nech lidem."
   },
   "faq": [
     {
       "q": {
         "en": "Is plain potato better than fries?",
-        "sl": "Je navaden krompir boljši od pomfrita?"
+        "sl": "Je navaden krompir boljši od pomfrita?",
+        "cs": "Je obyčejný brambor lepší než hranolky?"
       },
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
-        "sl": "Da. Navaden pire ali mehak kuhan krompir je v majhnih količinah v redu, brez masla in začimb."
+        "sl": "Da. Navaden pire ali mehak kuhan krompir je v majhnih količinah v redu, brez masla in začimb.",
+        "cs": "Ano. Obyčejná bramborová kaše nebo měkce uvařené brambory jsou v malém množství v pořádku, bez másla a koření."
       }
     }
   ],
@@ -145,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4367187f4e863dcb4d144ef256585bbe62044cd86bd3bd54aad1aa6553bb24cb"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9afa3d8bde1ec879ffeeb893a20b42a0575a4c5f37fada59a7d24e0d445e9d1a"
     }
   }
 }

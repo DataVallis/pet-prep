@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Ginger",
-    "sl": "Ingver"
+    "sl": "Ingver",
+    "cs": "Zázvor"
   },
   "question": {
     "en": "Can dogs eat ginger?",
-    "sl": "Ali lahko psi jedo ingver?"
+    "sl": "Ali lahko psi jedo ingver?",
+    "cs": "Mohou psi jíst zázvor?"
   },
   "url_slug": {
     "en": "ginger",
-    "sl": "ingver"
+    "sl": "ingver",
+    "cs": "zazvor"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts ginger is safe for dogs. Give it only in moderation, because large amounts can cause gas and nausea. Skip ginger biscuits and pickled ginger.",
-    "sl": "Da, v majhnih količinah je ingver za pse varen. Dajte ga le zmerno, ker lahko velike količine povzročijo vetrove in slabost. Piškotov z ingverjem in vloženega ingverja psu ne dajajte."
+    "sl": "Da, v majhnih količinah je ingver za pse varen. Dajte ga le zmerno, ker lahko velike količine povzročijo vetrove in slabost. Piškotov z ingverjem in vloženega ingverja psu ne dajajte.",
+    "cs": "Ano, v malém množství je zázvor pro psy bezpečný. Dávejte ho jen s mírou, protože velké množství může způsobit plynatost a nevolnost. Vyhněte se zázvorkám a nakládanému zázvoru."
   },
   "why": {
     "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
-    "sl": "Ingver lahko v velikih količinah povzroči vetrove in slabost, kot vsaka hrana, ki je ne dajemo zmerno, pa lahko vodi v prebavne težave. Ingver redči kri ter lahko zniža krvni tlak in krvni sladkor, zato ga ne dajajte psom z motnjami strjevanja krvi ali psom, ki jih kmalu čaka operacija; če ima pes sladkorno bolezen ali bolezen srca, se najprej posvetujte z veterinarjem. Nekateri veterinarji odsvetujejo ingver tudi brejim psicam in psicam, ki dojijo. Psi so lahko na ingver tudi alergični."
+    "sl": "Ingver lahko v velikih količinah povzroči vetrove in slabost, kot vsaka hrana, ki je ne dajemo zmerno, pa lahko vodi v prebavne težave. Ingver redči kri ter lahko zniža krvni tlak in krvni sladkor, zato ga ne dajajte psom z motnjami strjevanja krvi ali psom, ki jih kmalu čaka operacija; če ima pes sladkorno bolezen ali bolezen srca, se najprej posvetujte z veterinarjem. Nekateri veterinarji odsvetujejo ingver tudi brejim psicam in psicam, ki dojijo. Psi so lahko na ingver tudi alergični.",
+    "cs": "Zázvor ve velkém množství může způsobit plynatost a nevolnost a jako každé jídlo, které se nedává s mírou, může vést k potížím se žaludkem. Zázvor ředí krev a může snižovat krevní tlak a hladinu cukru v krvi, proto se mu u psů s poruchami krvácivosti nebo před operací vyhněte a u psů s cukrovkou nebo srdečním onemocněním se nejdřív zeptejte veterináře. Někteří veterináři také radí vyhnout se mu u březích a kojících fen. Psi mohou být na zázvor také alergičtí."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you want to add ginger to your dog's diet as a health measure, talk to your vet first, especially if your dog takes medication.",
-    "sl": "Če želite ingver dodati pasji prehrani zaradi zdravja, se najprej posvetujte z veterinarjem, še posebej, če pes jemlje zdravila."
+    "sl": "Če želite ingver dodati pasji prehrani zaradi zdravja, se najprej posvetujte z veterinarjem, še posebej, če pes jemlje zdravila.",
+    "cs": "Pokud chcete psovi zázvor přidat do jídelníčku jako podporu zdraví, nejdřív se poraďte s veterinářem, zvlášť pokud pes bere léky."
   },
   "serving": {
     "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
-    "sl": "Svež ingver, ingver v prahu in ingverjev sok so v majhnih količinah primerni. Svež ingver temeljito olupite in drobno sesekljajte. Ne dajajte piškotov z ingverjem (veliko sladkorja, včasih makadamijini oreščki) ali vloženega ingverja (sol, včasih ksilitol)."
+    "sl": "Svež ingver, ingver v prahu in ingverjev sok so v majhnih količinah primerni. Svež ingver temeljito olupite in drobno sesekljajte. Ne dajajte piškotov z ingverjem (veliko sladkorja, včasih makadamijini oreščki) ali vloženega ingverja (sol, včasih ksilitol).",
+    "cs": "Čerstvý zázvor, zázvorový prášek i zázvorová šťáva jsou v malém množství v pořádku. Čerstvý zázvor důkladně oloupejte a jemně nasekejte. Nedávejte zázvorky (hodně cukru, někdy makadamové ořechy) ani nakládaný zázvor (sůl, někdy xylitol)."
   },
   "child": {
     "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
-    "sl": "Čisto malo ingverja je za pse v redu. Koliko, odločijo odrasli, ingverjevi piškoti pa niso pasja poslastica."
+    "sl": "Čisto malo ingverja je za pse v redu. Koliko, odločijo odrasli, ingverjevi piškoti pa niso pasja poslastica.",
+    "cs": "Malinká špetka zázvoru psovi nevadí. O množství rozhodují dospělí a zázvorky nejsou pamlsky pro psy."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog have a ginger biscuit?",
-        "sl": "Ali lahko pes poje piškot z ingverjem?"
+        "sl": "Ali lahko pes poje piškot z ingverjem?",
+        "cs": "Může pes dostat zázvorku?"
       },
       "a": {
         "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
-        "sl": "Piškotom z ingverjem se je bolje izogniti. Kot večina sladkih priboljškov vsebujejo veliko sladkorja in lahko vsebujejo sestavine, ki so za pse škodljive, na primer makadamijine oreščke."
+        "sl": "Piškotom z ingverjem se je bolje izogniti. Kot večina sladkih priboljškov vsebujejo veliko sladkorja in lahko vsebujejo sestavine, ki so za pse škodljive, na primer makadamijine oreščke.",
+        "cs": "Zázvorkám je lepší se vyhnout. Jako většina sladkostí obsahují hodně cukru a mohou obsahovat přísady, které psům škodí, například makadamové ořechy."
       }
     },
     {
       "q": {
         "en": "Is pickled ginger safe for dogs?",
-        "sl": "Ali je vloženi ingver varen za pse?"
+        "sl": "Ali je vloženi ingver varen za pse?",
+        "cs": "Je nakládaný zázvor pro psy bezpečný?"
       },
       "a": {
         "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
-        "sl": "Vloženi ingver je bolje obdržati zase. Večini psov okus kisa ni všeč, vsebuje sol, ki je pes ne potrebuje, lahko pa vsebuje tudi ksilitol, ki je za pse strupen."
+        "sl": "Vloženi ingver je bolje obdržati zase. Večini psov okus kisa ni všeč, vsebuje sol, ki je pes ne potrebuje, lahko pa vsebuje tudi ksilitol, ki je za pse strupen.",
+        "cs": "Nakládaný zázvor je lepší nechat si pro sebe. Většině psů octová chuť nechutná, obsahuje sůl, kterou pes nepotřebuje, a může obsahovat xylitol, který je pro psy jedovatý."
       }
     }
   ],
@@ -161,6 +173,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "14324352d2bb0ef79ae0f115eb6d6d366777fc029e16434d80406c1c8f54b4d1"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c3d4839be5aaee1b4d9f304c7da63efe7cb6a45491d20ec26584e807916ef583"
     }
   }
 }

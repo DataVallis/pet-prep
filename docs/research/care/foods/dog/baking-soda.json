@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Baking soda",
-    "sl": "Soda bikarbona"
+    "sl": "Soda bikarbona",
+    "cs": "Jedlá soda"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
-    "sl": "Ali lahko psi jedo sodo bikarbono?"
+    "sl": "Ali lahko psi jedo sodo bikarbono?",
+    "cs": "Mohou psi jíst jedlou sodu?"
   },
   "url_slug": {
     "en": "baking-soda",
-    "sl": "soda-bikarbona"
+    "sl": "soda-bikarbona",
+    "cs": "jedla-soda"
   },
   "level": "toxic",
   "answer": {
     "en": "No, baking soda is bad for dogs because of its high sodium content. Even small amounts can be harmful, especially to smaller dogs. If your dog ate baking soda, call a vet right away, even if the signs seem mild.",
-    "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi."
+    "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi.",
+    "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
-    "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam."
+    "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam.",
+    "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů."
   },
   "signs": {
     "en": [
@@ -38,26 +43,38 @@
       "Tresenje mišic ali težave pri hoji",
       "Hitro ali naporno dihanje",
       "V hudih primerih krči ali kolaps"
+    ],
+    "cs": [
+      "Potíže se žaludkem, občasné zvracení nebo průjem",
+      "Větší žízeň, menší energie",
+      "Neustávající zvracení, výrazná malátnost",
+      "Třes svalů nebo potíže při chůzi",
+      "Rychlé nebo namáhavé dýchání",
+      "V těžkých případech záchvaty nebo zhroucení"
     ]
   },
   "what_to_do": {
     "en": "Call a vet right away, even if the signs seem mild. Don't give your dog any medicine unless your vet tells you to.",
-    "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil."
+    "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil.",
+    "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář."
   },
   "serving": null,
   "child": {
     "en": "Baking soda is for cooking and cleaning, not for dogs. Keep the box in a cupboard and tell a grown-up if your dog finds it.",
-    "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde."
+    "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde.",
+    "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému."
   },
   "faq": [
     {
       "q": {
         "en": "Where else can my dog find baking soda?",
-        "sl": "Kje še lahko pes najde sodo bikarbono?"
+        "sl": "Kje še lahko pes najde sodo bikarbono?",
+        "cs": "Kde jinde může pes jedlou sodu najít?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
-        "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more."
+        "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more.",
+        "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane."
       }
     }
   ],
@@ -131,6 +148,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ade61b38db0bca85a0552d480699355f514e4349292c68013e9c7ca4c53186c6"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0f080cd8f4ee2158e7ee96deb0df9cc367f642c8e56db202c5d4353a7cd1a301"
     }
   }
 }
