@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `miniature_bull_terrier` (viri S818–S823; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S820) |
 | Izvor | FCI št. 359 »Miniature Bull Terrier«, skupina 3, sekcija 3 (bulterierji), Velika Britanija (S818, S819) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 105. mesto »Miniature Bull Terrier« (S174, prebrano 2026-11-13) |
-| PR-ji | pet-prep #1103 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-miniature-bull-terrier` |
+| PR-ji | pet-prep #1103 (pasma, združen `1dd9938`) · portret pet-prep PR `feat/M5-R10-109-miniature-bull-terrier-portrait` (zagon `breed-portraits.yml` 43354227455, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-miniature-bull-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-109 | 2026-11-13 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-13 |
 | Barva (izbirnik: bel, tigrast, črno tigrast, rdeč, plav, tribarven) | 🛠 | 💶 izziv | M5-R21 | 2026-11-13 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/miniature-bull-terrier`, `/sl/zivali/psi/miniaturni-bulterier`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), bel, jajčasta glava, pokonci stoječa ušesa, siva studijska podlaga | — | M5-R11-04 | 2026-11-13 |
+| Stran na petprep.si (`/animals/dogs/miniature-bull-terrier`, `/sl/zivali/psi/miniaturni-bulterier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
