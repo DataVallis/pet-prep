@@ -2174,6 +2174,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.japanese_chin',
                 'search_keywords' => ['japanese chin', 'japanese spaniel', 'japonski čin', 'japonski cin'],
             ],
+            // M5-R10-108 Norwich Terrier (docs/research/dog-data/data.json norwich_terrier, sources S811–S817; runbook rules confirmed by
+            // David 2026-10-10: paid). daily_steps_required = the adult step goal (proposed_game_parameters.norwich_terrier.step_goal_adult:
+            // 60 min × 100 steps/min — RKC S813 "Up to 1 hour per day") — only the legacy-profile fallback.
+            // Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::NorwichTerrier->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1010,
+                'label_key' => 'breeds.norwich_terrier',
+                'search_keywords' => ['norwich terrier', 'norwich terier', 'norwiški terier', 'norwich'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

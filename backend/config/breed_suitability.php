@@ -2646,5 +2646,28 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S805'], 'refs' => ['japanese_chin.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-108: norwich_terrier.* (S811–S817), runbook rules (data.json proposed_game_parameters.norwich_terrier.suitability_tags).
+        // RKC key facts (S813) + PetMD (S814). RKC Breed Watch Category 2 without points (S813) → no welfare chip; in marketing.
+        'norwich_terrier' => [
+            'suits' => [
+                // S813 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S813'], 'refs' => ['norwich_terrier.suitability.rkc_size_of_home']],
+                // S814 "They also bond closely with their pet parents, making them excellent companions for families and individuals alike".
+                ['tag' => 'family_pet', 'source_ids' => ['S814'], 'refs' => ['norwich_terrier.behaviour.family']],
+                // S814 "Norwich Terriers are social dogs that typically get along well with children and other pets." — never small_children.
+                ['tag' => 'children', 'source_ids' => ['S814'], 'refs' => ['norwich_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S814 "They're also high-energy and require daily exercise and mental stimulation to be happy."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S814'], 'refs' => ['norwich_terrier.exercise.daily_text']],
+                // S814 "A secure leash and a well-fenced yard are a must."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S814'], 'refs' => ['norwich_terrier.behaviour.containment']],
+                // S813 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S813'], 'refs' => ['norwich_terrier.suitability.rkc_shedding']],
+                // S813 "Grooming: More than once a week"; S814 "… regular brushing (at least twice a week)".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S813', 'S814'], 'refs' => ['norwich_terrier.suitability.rkc_grooming', 'norwich_terrier.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

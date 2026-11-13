@@ -851,6 +851,11 @@ class FalAiService
                 .'with a moderate short, wide face and a visible muzzle (not extreme), a black nose with clearly open nostrils, '
                 .'large round dark eyes set wide apart that do not bulge, small V-shaped feathered ears set high, a feathered tail plumed over the back, '
                 .'gentle, lively, astonished expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-108: FCI-Standard N° 72 (S812) — one of the smallest terriers, wiry coat with a ruff, erect ears; red (first standard colour).
+            BreedType::NorwichTerrier => 'A small, low, keen, compact and sturdy Norwich Terrier, a hard, wiry, straight close-lying red coat '
+                .'with a thick undercoat, longer and rougher on the neck forming a ruff that frames the face, a slightly rounded wide skull, '
+                .'a wedge-shaped strong muzzle with a black nose, small oval dark keen eyes, erect medium-sized ears with pointed tips, '
+                .'a natural tail of moderate length carried erect, alert, fearless, lovable expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2030,6 +2035,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'profuse, long, straight, silky coat with feathering on the ears, neck, thighs and tail',
                 'markings' => 'white coat with symmetrical black markings around the eyes and over the ears, a white blaze, moderate short face with a visible muzzle and open nostrils',
+            ],
+            // M5-R10-108: standard colours only (FCI S812: red, wheaten, black and tan or grizzle) — no white patches.
+            BreedType::NorwichTerrier => [
+                'color_scheme' => 'red',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'hard, wiry, straight close-lying coat with a ruff around the face',
+                'markings' => 'solid red coat without white patches, black nose, erect pointed ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

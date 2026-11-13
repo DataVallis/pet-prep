@@ -705,6 +705,13 @@ return [
         ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
         ['key' => 'red-white', 'value' => 'red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
     ],
+    // M5-R10-108: FCI-Standard N° 72 (S812) "All shades of red, wheaten, black and tan or grizzle."; same order and values as breed_appearance.php.
+    'norwich_terrier' => [
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'grizzle', 'value' => 'grizzle', 'en' => 'Grizzle', 'sl' => 'Sivkast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

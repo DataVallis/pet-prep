@@ -108,6 +108,7 @@ return [
     'bouvier_des_flandres' => 'Flandrijski govedar',
     'borzoi' => 'Ruski hrt',
     'japanese_chin' => 'Japonski čin',
+    'norwich_terrier' => 'Norwich terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
