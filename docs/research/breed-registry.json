@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e7a12f3891702f31d36d752618476894e98ea96ab7d13b34270aa1e2584141ee"
+      "sha256": "cb95b11469069003fe66933749bff6d921fd0f8a178c321f7727f79baadb0e8b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "7f7abeea4853252538e10ef5728e6ef852385f39559c4ca55057a24266273ef0"
+      "sha256": "b0047afdc42d4363da39cfcd37314c9401ecba74d43b4f11b8446fcfd20301dd"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "bfff3e6fb96a2ad2b97ac0f884849579c64aa2cb39e0de573ecece6e04bf5eb3"
+      "sha256": "df037fbe262f35cf3cf59495ff8b9ff1eacf178a31bda7f5d49ef4420e1a75ad"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5c128ce0b691e366ba55950ef3e8974c99e8b6dde8331f46279a2165aff286a1"
+      "sha256": "4878d593a12fb2c580c512a3886e62d7fe15290a249bfe9a0ae82f76c3b4c598"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5b43a34d6273849c3c9978a8723f0c0f441249f654ba3cd547964075e667533f"
+      "sha256": "3df686dee82661f472275256b24108b4c512e46a68cd7952733d2ddc50570045"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c55f127fe94f8a23d0a617474d14bbec7cb953d4a47093e9246e41c44574c041"
+      "sha256": "782cda0ea7b407b7b89603968831dc3839062df4ea86e85c068febc905925a63"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "84db27ac9ce60ea8bca0bb75d95de39ad742f4ead30d473bc0bf89f105bac6b6"
+      "sha256": "678c3dd1f7d666beab73f81e34a1a33a84e147d08f2d402ed5897cff197522cc"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 100,
+      "breed_count": 101,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -60579,6 +60579,599 @@
       ]
     },
     {
+      "id": "norwich_terrier",
+      "species": "dog",
+      "order": 100,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Norwich Terrier",
+        "sl": "Norwich terier"
+      },
+      "slug": {
+        "en": "norwich-terrier",
+        "sl": "norwich-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Norwich"
+        ],
+        "sl": [
+          "norwiški terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              25
+            ],
+            "female": [
+              25,
+              25
+            ]
+          },
+          "source_ids": [
+            "S812"
+          ],
+          "ref": "norwich_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.4,
+              5.4
+            ],
+            "female": [
+              5.4,
+              5.4
+            ]
+          },
+          "source_ids": [
+            "S815"
+          ],
+          "ref": "norwich_terrier.adult_weight.ukc",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "norwich_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S814"
+          ],
+          "ref": "norwich_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S813"
+          ],
+          "ref": "norwich_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 38,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "norwich_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 72,
+            "group": 3,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S811"
+          ],
+          "ref": "norwich_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S814"
+          ],
+          "ref": "norwich_terrier.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "dental_disease_home_brushing",
+          "source_ids": [
+            "S814"
+          ],
+          "ref": "norwich_terrier.health.dental",
+          "confidence": "medium"
+        },
+        {
+          "key": "collapsing_trachea",
+          "source_ids": [
+            "S814"
+          ],
+          "ref": "norwich_terrier.health.trachea",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S813"
+            ],
+            "refs": [
+              "norwich_terrier.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S814"
+            ],
+            "refs": [
+              "norwich_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S814"
+            ],
+            "refs": [
+              "norwich_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S814"
+            ],
+            "refs": [
+              "norwich_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S814"
+            ],
+            "refs": [
+              "norwich_terrier.behaviour.containment"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S813"
+            ],
+            "refs": [
+              "norwich_terrier.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S813",
+              "S814"
+            ],
+            "refs": [
+              "norwich_terrier.suitability.rkc_grooming",
+              "norwich_terrier.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S813"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S813 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S813"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S813; provisional until McMillan 2024 is checked)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 38, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.grooming",
+            "basis_source_ids": [
+              "S814"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PetMD »at least twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S814"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob 1× na teden (PetMD »at least once a week«)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.nail_trimming",
+            "basis_source_ids": [
+              "S814"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (PetMD »about once a month«)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwich_terrier.bathing",
+            "basis_source_ids": [
+              "S814"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 3 mesece (PetMD »once every three months«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S813",
+          "S814"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S813"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S813"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S811",
+        "S812",
+        "S813",
+        "S814",
+        "S815",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -66604,6 +67197,41 @@
       "publisher": "PetMD — Michelle Diener, DVM (published Nov. 8, 2023)",
       "title": "Japanese Chin",
       "url": "https://www.petmd.com/dog/breeds/japanese-chin"
+    },
+    {
+      "id": "S811",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Norwich Terrier (72)",
+      "url": "https://fci.be/EN/nomenclature/NORWICH-TERRIER-72.html"
+    },
+    {
+      "id": "S812",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 72: Norwich Terrier (06.10.2026, English) (PDF)",
+      "url": "https://www.fci.be/Nomenclature/Standards/072g03-en.pdf"
+    },
+    {
+      "id": "S813",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Norwich Terrier — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norwich-terrier/"
+    },
+    {
+      "id": "S814",
+      "tier": "B",
+      "publisher": "PetMD — Georgina Ushi, DVM (published Jan. 12, 2024)",
+      "title": "Norwich Terrier",
+      "url": "https://www.petmd.com/dog/breeds/norwich-terrier"
+    },
+    {
+      "id": "S815",
+      "tier": "A",
+      "publisher": "United Kennel Club (US)",
+      "title": "Official UKC Breed Standard — Norwich Terrier (revised April 15, 2007) (PDF)",
+      "url": "https://www.ukcdogs.com/docs/breeds/norwich-terrier.pdf"
     },
     {
       "id": "C1",

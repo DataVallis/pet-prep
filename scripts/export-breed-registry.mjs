@@ -490,6 +490,7 @@ const SPECIES = [
       { id: 'bouvier_des_flandres', synonyms: { en: ['Bouvier', 'Flanders Cattle Dog', 'Vlaamse Koehond'], sl: ['bouvier des flandres', 'bouvier', 'flandrijski govedar'] } },
       { id: 'borzoi', synonyms: { en: ['Russian Wolfhound', 'Russian Hunting Sighthound', 'Russkaya Psovaya Borzaya'], sl: ['borzoj', 'borzoi', 'ruski chrt'] } },
       { id: 'japanese_chin', synonyms: { en: ['Japanese Spaniel', 'Japan Chin', 'Chin'], sl: ['japonski cin', 'čin'] } },
+      { id: 'norwich_terrier', synonyms: { en: ['Norwich'], sl: ['norwiški terier'] } },
     ],
   },
   {
@@ -2790,7 +2791,28 @@ const DOG_FACTS = {
       ['cataracts', 'health.cataracts'],
       ['mitral_valve_disease', 'health.heart'],
     ],
+  },  // M5-R10-108. Height = FCI 'Ideal height at the withers: 25 cm.' (S812), weight = UKC standard 'Ideal weight is approximately
+  // 12 pounds' (S815; FCI / RKC give none), lifespan = RKC 'Over 10 years' (S813) + PetMD 12–15 y (S814) — no McMillan
+  // value reachable (median_uk is null, not exported), exercise = RKC 'Up to 1 hour per day' (S813), coat / grooming /
+  // shedding = RKC key facts (S813). Coren rank 38 (S35). FCI origin Great Britain (GB). Not exported: senior_from (derived),
+  // health.breed_watch (Category 2 without points), the PetMD care texts (care tasks / grooming rule come from the game).
+  // No new health key.
+  norwich_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.ukc', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['dental_disease_home_brushing', 'health.dental'],
+      ['collapsing_trachea', 'health.trachea'],
+    ],
   },
+
 
 
 };
@@ -2858,6 +2880,7 @@ export const DOG_CARE_TASKS = {
   bouvier_des_flandres: [['ear_cleaning', 1, 14, 'proposed_game_parameters.bouvier_des_flandres.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.bouvier_des_flandres.nail_trimming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
   japanese_chin: [['ear_cleaning', 1, 14, 'proposed_game_parameters.japanese_chin.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.japanese_chin.bathing']],
+  norwich_terrier: [['tooth_brushing', 1, 7, 'proposed_game_parameters.norwich_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.norwich_terrier.nail_trimming'], ['bath', 1, 84, 'proposed_game_parameters.norwich_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3681,7 +3704,15 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.japanese_chin.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.japanese_chin.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.japanese_chin.exercise_minutes_senior',
+  },  norwich_terrier: {
+    adult_minutes: ['proposed_game_parameters.norwich_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.norwich_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.norwich_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.norwich_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.norwich_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.norwich_terrier.exercise_minutes_senior',
   },
+
 
 
 };

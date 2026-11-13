@@ -806,6 +806,12 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Norwich Terrier (M5-R10-108, docs/research/dog-data norwich_terrier.appearance): "All shades of red, wheaten, black and
+| tan or grizzle." (FCI-Standard N° 72, S812; any other colour unacceptable, no white patches in the game); hard, wiry,
+| straight coat with a ruff framing the face, erect ears with pointed tips, wedge-shaped muzzle, natural tail of moderate
+| length (docking "previously optional"). Not flat-faced; RKC Breed Watch Category 2 without points (S813). Red first with
+| the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Japanese Chin (M5-R10-107, docs/research/dog-data japanese_chin.appearance): "Black and white or red and white. Never
 | tricolour." (RKC breed standard, S806; FCI-Standard N° 206, S808: "White with markings of black or red.", tricolour
 | disqualifying); profuse, long, straight, silky coat; "Muzzle short, wide, well cushioned" (S806); eyes "Large, without
@@ -4672,6 +4678,41 @@ return [
             'tail' => ['profusely feathered tail plumed over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-108 (docs/research/dog-data/data.json norwich_terrier.appearance; runbook rules 2026-10-10: standard colours only —
+    // red, wheaten, black and tan or grizzle (FCI S812), no white patches; erect ears, natural tail).
+    'norwich_terrier' => [
+        'display_name' => 'Norwich Terrier',
+        // Colour frequencies are in no source (norwich_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 72 Norwich Terrier (S812, https://www.fci.be/Nomenclature/Standards/072g03-en.pdf), RKC Breeds A–Z (S813) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S813 "Size: Small"; S812 "Ideal height at the withers: 25 cm."',
+            'build' => 'S812 "One of the smallest of the terriers." "Low, keen dog, compact and strong with good substance and bone."',
+            'coat_length' => 'S812 "Hard, wiry, straight, lying close to body, thick undercoat. Longer and rougher on neck forming a ruff to frame face."',
+            'coat_color' => 'S812 "All shades of red, wheaten, black and tan or grizzle. White marks or patches are tolerated." (weights unsourced; no white patches in the game)',
+            'head' => 'S812 skull "Slightly rounded, wide, good width between ears."; muzzle "Wedge-shaped and strong."',
+            'ear_carriage' => 'S812 "Erect, set well apart on top of skull." "Medium size with pointed tips."',
+            'eye_color' => 'S812 "Relatively small, oval-shaped, dark, full of expression, bright and keen."',
+            'tail' => 'S812 "Docking previously optional." — the natural tail of moderate length, carried erect',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'low, keen, compact and strong small terrier with good bone', 'weight' => 3], 'one of the smallest terriers, sturdy and active'],
+            'coat_length' => ['hard, wiry, straight close-lying coat with a thick undercoat, longer and rougher on the neck forming a ruff that frames the face'],
+            // Standard colours only (S812); red highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red', 'weight' => 50],
+                ['value' => 'wheaten', 'weight' => 20],
+                ['value' => 'black and tan', 'weight' => 15],
+                ['value' => 'grizzle', 'weight' => 15],
+            ],
+            'head' => ['slightly rounded, wide skull with a well-defined stop, a wedge-shaped strong muzzle and a black nose'],
+            'ear_carriage' => ['erect, medium-sized ears with pointed tips, set well apart'],
+            'eye_color' => ['relatively small, oval, dark, bright and keen eyes'],
+            'tail' => ['natural tail of moderate length, set on high and carried erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
