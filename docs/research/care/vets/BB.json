@@ -1,0 +1,87 @@
+{
+  "country": "BB",
+  "checked": "2026-11-13",
+  "sources": [
+    {
+      "name": "Caribbean Veterinary Medical Association (CbVMA) - Barbados Veterinary Association page",
+      "url": "https://cbvma.org/",
+      "note": "Opened; lists the Barbados Veterinary Association executive and e-mail only. No clinic list, no phone, so no entry."
+    },
+    {
+      "name": "WellVet Inc., Barbados - own website",
+      "url": "https://www.wellvetbarbados.com/",
+      "note": "Opened home, contact and how-to-find-us pages; phone, location, wording 24 Hour Emergency."
+    },
+    {
+      "name": "Trinity Animal Clinic, Woodbourne St Philip - own website",
+      "url": "https://www.trinityclinic.bb/",
+      "note": "Opened home and contact pages; phone, emergency number, no hours."
+    },
+    {
+      "name": "Central Veterinary Clinic, Barbados - own website",
+      "url": "https://www.centralvetbim.com/",
+      "note": "Opened; two locations with phones and hours, no emergency wording."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "WellVet Clinic",
+      "city": "St Michael",
+      "region": "St Michael",
+      "address": "Neils development, St Michael",
+      "phone": "+1 246 429 9355",
+      "emergency_24h": true,
+      "duty": "24-hour emergency line: +1 246 429 9355. Veterinary emergencies island-wide.",
+      "small_animals": true,
+      "url": "https://www.wellvetbarbados.com/",
+      "source_url": "https://www.wellvetbarbados.com/",
+      "checked": "2026-11-13",
+      "note": "Home page footer: '24 Hour Emergency' with (246) 429-9355. How-to-find-us page: 'ready to respond quickly to any veterinary emergencies island-wide'; address given only as Neils development, St Michael (no street number). Business hours not published on opened pages.",
+      "quote": "24 Hour Emergency"
+    },
+    {
+      "kind": "clinic",
+      "name": "Trinity Animal Clinic",
+      "phone": "+1 246 420 7894",
+      "emergency_24h": false,
+      "duty": "Emergency line: +1 246 231 0450.",
+      "small_animals": true,
+      "url": "https://www.trinityclinic.bb/",
+      "source_url": "https://www.trinityclinic.bb/contact/",
+      "checked": "2026-11-13",
+      "note": "Contact page lists general (246) 420-7894 and an emergency number (246) 231-0450 (labelled 'Emerency Call'); no hours and no 24 h wording. Street address not published. Town/parish not on the opened page, so removed after the independent check."
+    },
+    {
+      "kind": "clinic",
+      "name": "Central Veterinary Clinic - Lower Estate",
+      "city": "Lower Estate",
+      "region": "St George",
+      "address": "Lower Estate Complex, St George",
+      "phone": "+1 246 538 3530",
+      "emergency_24h": false,
+      "duty": "By appointment. Mon-Fri 8:30-17:00, Sat-Sun 9:00-11:00.",
+      "small_animals": true,
+      "url": "https://www.centralvetbim.com/",
+      "source_url": "https://www.centralvetbim.com/",
+      "checked": "2026-11-13",
+      "note": "No emergency or 24 h wording on the page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Central Veterinary Clinic - Graeme Hall",
+      "city": "Graeme Hall",
+      "region": "Christ Church",
+      "address": "1 Graeme Hall Park, Christ Church",
+      "phone": "+1 246 538 0478",
+      "emergency_24h": false,
+      "duty": "By appointment. Mon-Fri 9:00-18:00, Sat-Sun 9:00-11:00.",
+      "small_animals": true,
+      "url": "https://www.centralvetbim.com/",
+      "source_url": "https://www.centralvetbim.com/",
+      "checked": "2026-11-13",
+      "note": "No emergency or 24 h wording on the page."
+    }
+  ],
+  "notes": "Research 2026-11-13; every source_url opened with WebFetch. No Barbados Veterinary Association clinic directory reachable (cbvma.org gives only the association e-mail; association site not found). Ministry of Agriculture Veterinary Services: no clinic list or duty rota page found. No duty rota, no animal poison line found. Unreachable: centralvetbarbados.com (robots disallowed); arkanimalwelfarebarbados.com vets-in-barbados page (http/https redirect loop, WebFetch refused twice). Clinics named only in news/expat articles with no own page found and not added: Barbados RSPCA Animal Clinic, Sandy Lane Clinic (barbadostoday/expatfocus articles, no website/phone), Eastern Veterinary Clinic, Golden Pride Veterinary Clinic (directory listings only). WellVet address page gives no street number and no phone/hours."
+}
