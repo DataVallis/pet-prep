@@ -2669,5 +2669,26 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S813', 'S814'], 'refs' => ['norwich_terrier.suitability.rkc_grooming', 'norwich_terrier.suitability.petmd_grooming']],
             ],
         ],
+
+        // M5-R10-109: miniature_bull_terrier.* (S818–S823), runbook rules (data.json
+        // proposed_game_parameters.miniature_bull_terrier.suitability_tags). RKC key facts (S820) + PetMD (S821). RKC Breed Watch
+        // Category 2 without points (S820) → no welfare chip; in marketing. RKC "Small house" → no apartment / large_home. No
+        // other_pets (PetMD "if properly socialized"), no chases_small_pets (no prey-drive statement for this breed).
+        'miniature_bull_terrier' => [
+            'suits' => [
+                // S821 "they are generally an affectionate breed and good with children, making them a friendly family companion."
+                ['tag' => 'family_pet', 'source_ids' => ['S821'], 'refs' => ['miniature_bull_terrier.behaviour.family']],
+                // S821 the same sentence — never small_children ("they can be willful").
+                ['tag' => 'children', 'source_ids' => ['S821'], 'refs' => ['miniature_bull_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S821 "Like all dogs, they require regular exercise and mental stimulation to prevent boredom."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S821'], 'refs' => ['miniature_bull_terrier.exercise.daily_text']],
+                // S821 "This breed will not thrive in a home where they will be left alone for long periods of time"
+                ['tag' => 'needs_company', 'source_ids' => ['S821'], 'refs' => ['miniature_bull_terrier.behaviour.time_alone']],
+                // S820 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S820'], 'refs' => ['miniature_bull_terrier.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];
