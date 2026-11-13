@@ -121,6 +121,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   bouvier_des_flandres: 'dog',
   borzoi: 'dog',
   japanese_chin: 'dog',
+  norwich_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -246,6 +247,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'bouvier_des_flandres',
   'borzoi',
   'japanese_chin',
+  'norwich_terrier',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
