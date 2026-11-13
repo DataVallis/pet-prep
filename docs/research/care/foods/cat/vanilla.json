@@ -1,0 +1,147 @@
+{
+  "slug": "vanilla",
+  "species": "cat",
+  "name": {
+    "en": "Vanilla extract",
+    "sl": "Vanilijev ekstrakt"
+  },
+  "question": {
+    "en": "Can cats have vanilla extract?",
+    "sl": "Ali lahko mačke zaužijejo vanilijev ekstrakt?"
+  },
+  "url_slug": {
+    "en": "vanilla",
+    "sl": "vanilija"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, keep vanilla extract away from your cat. Vanilla extract is mostly made from alcohol, and cats are especially sensitive to alcohol. It can cause vomiting, diarrhoea, a drunken gait and even coma or death. Call your vet right away if your cat drinks any.",
+    "sl": "Ne, vanilijev ekstrakt hranite zunaj mačjega dosega. Vanilijev ekstrakt je večinoma iz alkohola, mačke pa so za alkohol še posebej občutljive. Ta lahko povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Če mačka popije kaj ekstrakta, takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "VCA Animal Hospitals says vanilla extract is mostly made from alcohol, and that alcohol can cause vomiting, diarrhoea, a drunken gait and even coma or death. All animals are at risk of alcohol poisoning, but cats are especially sensitive.",
+    "sl": "VCA Animal Hospitals navaja, da je vanilijev ekstrakt večinoma iz alkohola in da lahko alkohol povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Zastrupitev z alkoholom ogroža vse živali, mačke pa so še posebej občutljive."
+  },
+  "signs": {
+    "en": [
+      "Vomiting or diarrhoea",
+      "Wobbly, drunken walking",
+      "Unusual drowsiness or dullness",
+      "Slow breathing",
+      "In severe cases: tremors, seizures or coma"
+    ],
+    "sl": [
+      "Bruhanje ali driska",
+      "Opotekanje, pijana hoja",
+      "Nenavadna zaspanost ali otopelost",
+      "Počasno dihanje",
+      "V hudih primerih: tresenje, krči ali koma"
+    ]
+  },
+  "what_to_do": {
+    "en": "Call your vet or a pet poison helpline immediately. Don't wait for signs to appear, and don't try to make your cat sick at home unless your vet tells you to.",
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje, razen če vam tako naroči veterinar."
+  },
+  "serving": null,
+  "child": {
+    "en": "Vanilla extract smells sweet, but it isn't for cats. Keep the little bottle away from kitty and tell a grown-up if she licks some.",
+    "sl": "Vanilijev ekstrakt diši sladko, a ni za muce. Stekleničko drži daleč od muce in povej odraslemu, če ga muca poliže."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is eggnog with vanilla safe for cats?",
+        "sl": "Ali je jajčni liker z vanilijo varen za mačke?"
+      },
+      "a": {
+        "en": "No. VCA lists vanilla extract among eggnog's risks because it is mostly alcohol, and advises contacting your vet right away if you think your cat drank eggnog.",
+        "sl": "Ne. VCA vanilijev ekstrakt navaja med nevarnostmi jajčnega likerja, ker je večinoma iz alkohola, in svetuje, da takoj pokličete veterinarja, če mislite, da je mačka pila jajčni liker."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC47",
+      "quote": "Vanilla extract is mostly made from alcohol."
+    },
+    {
+      "id": "KC47",
+      "quote": "Remember that your cat is a lightweight!"
+    },
+    {
+      "id": "KC47",
+      "quote": "Alcohol can cause vomiting, diarrhea, a drunken gait and even coma or death."
+    },
+    {
+      "id": "KC47",
+      "quote": "If you think your cat drank eggnog, you should contact your veterinarian or the ASPCA Animal Poison Control Center"
+    },
+    {
+      "id": "KC47",
+      "quote": "at 1-888-426-4435 right away!"
+    },
+    {
+      "id": "KC11",
+      "quote": "All animals are at risk of alcohol poisoning, but cats are especially sensitive."
+    },
+    {
+      "id": "KC11",
+      "quote": "Neurologic depression"
+    },
+    {
+      "id": "KC11",
+      "quote": "Difficulty walking"
+    },
+    {
+      "id": "KC11",
+      "quote": "Nausea or vomiting"
+    },
+    {
+      "id": "KC11",
+      "quote": "Slow respiratory rate"
+    },
+    {
+      "id": "KC11",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KC11",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KC11",
+      "quote": "Coma"
+    },
+    {
+      "id": "KC11",
+      "quote": "If your pet has been exposed to any form of alcohol, immediately call your veterinarian or Pet Poison Helpline"
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t try to make your cat sick at home unless your vet tells you to do so."
+    }
+  ],
+  "related": [
+    "alcohol",
+    "cocoa-powder",
+    "ice-cream",
+    "cake"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85900e763c3a18ac214ce062c17dd46068ba576f531a624941b91799a205bdbf"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d86287fdc81732db141bf2394f1e8d9dfddb73df8a5bc5c8b0b24728070390cc"
+    }
+  }
+}

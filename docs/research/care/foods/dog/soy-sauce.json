@@ -1,0 +1,167 @@
+{
+  "slug": "soy-sauce",
+  "species": "dog",
+  "name": {
+    "en": "Soy sauce",
+    "sl": "Sojina omaka"
+  },
+  "question": {
+    "en": "Can dogs have soy sauce?",
+    "sl": "Ali lahko psi zaužijejo sojino omako?"
+  },
+  "url_slug": {
+    "en": "soy-sauce",
+    "sl": "sojina-omaka"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, don't give your dog soy sauce. Dogs can get salt poisoning from eating too much table salt or soy sauce, and edamame seasoned with soy sauce isn't good for dogs either.",
+    "sl": "Ne, psu ne dajajte sojine omake. Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake, tudi edamame, začinjen s sojino omako, pa za pse ni dober."
+  },
+  "why": {
+    "en": "Dogs can suffer from salt poisoning if they eat excess amounts of table salt or soy sauce. Dogs cope with salt better when they can drink plenty of fresh water; without it the risk is higher. Too many salty foods are especially bad for dogs with medical issues such as heart disease, because salt can cause fluid retention.",
+    "sl": "Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake. S soljo se psi lažje spopadejo, če lahko pijejo veliko sveže vode; brez nje je tveganje večje. Preveč slane hrane še posebej škodi psom z zdravstvenimi težavami, kot je bolezen srca, ker sol lahko povzroči zastajanje tekočine."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Decreased appetite",
+      "Lethargy",
+      "Being wobbly on their feet",
+      "Excessive thirst or urination",
+      "Tremors or seizures"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši apetit",
+      "Zaspanost",
+      "Opotekanje",
+      "Izrazita žeja ali pogosto uriniranje",
+      "Tresenje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "If you think your dog has had too much soy sauce, contact your vet or a pet poison line immediately. Make sure your dog has fresh water to drink.",
+    "sl": "Če sumite, da je pes zaužil preveč sojine omake, takoj pokličite veterinarja ali center za zastrupitve živali. Poskrbite, da ima pes na voljo svežo vodo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Soy sauce is not for dogs. Too much of it can make a dog sick, so give your dog dog food and fresh water instead.",
+    "sl": "Sojina omaka ni za pse. Če je pes poje preveč, mu lahko slabo dene, zato mu raje daj pasjo hrano in svežo vodo."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can my dog eat edamame with soy sauce?",
+        "sl": "Ali lahko pes je edamame s sojino omako?"
+      },
+      "a": {
+        "en": "No. Stay away from edamame with added seasonings such as sea salt and soy sauce, as these aren't good for dogs. Stick to plain, fresh beans.",
+        "sl": "Ne. Izogibajte se edamamu z dodanimi začimbami, kot sta morska sol in sojina omaka, saj za pse nista dobri. Dajajte le navaden, svež edamame."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD40",
+      "quote": "Dogs can also suffer from salt poisoning if they get into enema solutions, which contain sodium,"
+    },
+    {
+      "id": "KD40",
+      "quote": "or eat excess quantities of table salt or soy sauce."
+    },
+    {
+      "id": "KD40",
+      "quote": "Dogs can tolerate fairly high salt levels if they’re able to drink a lot"
+    },
+    {
+      "id": "KD40",
+      "quote": "But if there is no fresh water available or dogs can’t access their fresh water supply,"
+    },
+    {
+      "id": "KD40",
+      "quote": "then the pet will be at higher risk."
+    },
+    {
+      "id": "KD40",
+      "quote": "and instead provide lots of opportunities to drink fresh water."
+    },
+    {
+      "id": "KD40",
+      "quote": "Generally, the feeding of excessive salty foods is not good for dogs,"
+    },
+    {
+      "id": "KD40",
+      "quote": "especially for those that have certain medical issues such as heart disease"
+    },
+    {
+      "id": "KD40",
+      "quote": "because it can cause fluid retention."
+    },
+    {
+      "id": "KD40",
+      "quote": "Be aware of the following signs your dog may have consumed too much salt:"
+    },
+    {
+      "id": "KD40",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD40",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD40",
+      "quote": "Decreased appetite"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD40",
+      "quote": "Lack of coordination or being wobbly on their feet"
+    },
+    {
+      "id": "KD40",
+      "quote": "Excessive thirst or urination"
+    },
+    {
+      "id": "KD40",
+      "quote": "Tremors or seizures"
+    },
+    {
+      "id": "KD40",
+      "quote": "If you suspect your dog has consumed too much salt, contact a veterinarian or the Pet Poison Helpline immediately."
+    },
+    {
+      "id": "KD205",
+      "quote": "Always stay away from edamame beans with added seasonings, such as sea salt and soy sauce as these aren't good for dogs."
+    },
+    {
+      "id": "KD205",
+      "quote": "Stick to plain, fresh edamame beans and avoid processed ones as these tend to have added salt and other additives."
+    }
+  ],
+  "related": [
+    "salt",
+    "salty-snacks",
+    "edamame",
+    "ketchup"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94471a7fe8462d19d1e12b4ef28ed97398ca9d1ed6a04cc34bc58e4eebc9b3b3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a215972fd0e81c45440ac459eba9cf006b58424d82e210bf64e03a9b90bc9d30"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "slug": "ginger",
+  "species": "cat",
+  "name": {
+    "en": "Ginger",
+    "sl": "Ingver"
+  },
+  "question": {
+    "en": "Can cats eat ginger?",
+    "sl": "Ali lahko mačke jedo ingver?"
+  },
+  "url_slug": {
+    "en": "ginger",
+    "sl": "ingver"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to give your cat ginger unless your vet suggests it. Ginger root is used as an herbal supplement in cats, mainly against nausea and vomiting, but natural does not mean safe: it can cause a mild stomach upset.",
+    "sl": "Mački ingverja raje ne dajajte, razen če vam to svetuje veterinar. Ingverjeva korenina se pri mačkah uporablja kot zeliščni dodatek, predvsem proti slabosti in bruhanju, vendar naravno ne pomeni varno: lahko povzroči blage prebavne težave."
+  },
+  "why": {
+    "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
+    "sl": "VCA Animal Hospitals navaja, da se ingverjeva korenina v tradicionalni kitajski in zahodni zeliščni medicini uporablja pri mačkah, psih in drugih živalih, najpogosteje kot dodatek proti slabosti in bruhanju. Ista stran opozarja, da izdelek ni varen samo zato, ker je naraven, da so vse zdravilne rastline lahko strupene, če jih uporabljamo nepravilno ali v velikih odmerkih, in da ingverja ne smemo dajati živalim z znanimi motnjami strjevanja krvi. Najboljši vir informacij o takih izdelkih je veterinar. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+  },
+  "signs": {
+    "en": [
+      "Mild stomach upset",
+      "Vomiting",
+      "Mild skin irritation",
+      "Signs of an allergic reaction: irregular breathing, rash, fever, or swelling around the face"
+    ],
+    "sl": [
+      "Blage prebavne težave",
+      "Bruhanje",
+      "Blago draženje kože",
+      "Znaki alergijske reakcije: nepravilno dihanje, izpuščaj, vročina ali oteklina okoli obraza"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat nibbled a little ginger, watch for vomiting or an upset stomach. If you see signs of an allergic reaction, such as irregular breathing, a rash or a swollen face, contact your vet immediately. Don't give ginger as a remedy without asking your vet first.",
+    "sl": "Če je mačka pogrizla malo ingverja, bodite pozorni na bruhanje ali prebavne težave. Če opazite znake alergijske reakcije, na primer nepravilno dihanje, izpuščaj ali otekel obraz, takoj pokličite veterinarja. Ingverja ne dajajte kot zdravilo, ne da bi se prej posvetovali z veterinarjem."
+  },
+  "serving": null,
+  "child": {
+    "en": "Ginger is a root for people's cooking. Cats don't need it, so leave it for the grown-ups and the vet to decide.",
+    "sl": "Ingver je korenina, s katero kuhajo ljudje. Muce ga ne potrebujejo, zato naj o njem odločajo odrasli in veterinar."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can ginger help my cat with nausea?",
+        "sl": "Ali lahko ingver mački pomaga pri slabosti?"
+      },
+      "a": {
+        "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
+        "sl": "Ingver se pri živalih uporablja kot dodatek proti slabosti in bruhanju, vendar vam le veterinar lahko pove, ali je varen za vašo mačko. Zdravilne rastline so lahko strupene, če jih uporabljamo nepravilno."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC114",
+      "quote": "root is used in both Traditional Chinese Medicine and Western herbal medicine in cats, dogs, and other animals"
+    },
+    {
+      "id": "KC114",
+      "quote": "It is used most as an anti-nausea and anti-vomiting supplement"
+    },
+    {
+      "id": "KC114",
+      "quote": "Just because a product is natural does not mean it is safe."
+    },
+    {
+      "id": "KC114",
+      "quote": "All medicines and medicinal plants are potentially toxic if used inappropriately or given at high doses."
+    },
+    {
+      "id": "KC114",
+      "quote": "Your veterinarian is the best source of information about the safety of non-drug health products in pets."
+    },
+    {
+      "id": "KC114",
+      "quote": "Pets with known bleeding disorders"
+    },
+    {
+      "id": "KC114",
+      "quote": "Mild skin irritation"
+    },
+    {
+      "id": "KC114",
+      "quote": "Mild gastrointestinal upset"
+    },
+    {
+      "id": "KC114",
+      "quote": "An allergic reaction such as irregular breathing, rash, fever, puffiness and swelling around the face"
+    },
+    {
+      "id": "KC114",
+      "quote": "stop giving ginger and contact your veterinarian immediately"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Although cats don’t need anything other than a complete diet to meet their nutritional needs,"
+    }
+  ],
+  "related": [
+    "turmeric",
+    "cinnamon",
+    "nutmeg",
+    "chili-peppers"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7bd0c9e5a7126e0bfc184f7fa510ba1f9687f2f58d9135793fe362246a4ac505"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53c5fbfdfadd7df0f08d191be6b99a7847f3453147212b2367be8a40842be6c5"
+    }
+  }
+}

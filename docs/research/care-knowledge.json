@@ -7120,6 +7120,106 @@
       "updated": "2026-11-12"
     },
     {
+      "slug": "cocoa-powder",
+      "species": "cat",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cocoa powder",
+        "sl": "Kakav v prahu"
+      },
+      "question": {
+        "en": "Can cats eat cocoa powder?",
+        "sl": "Ali lahko mačke jedo kakav v prahu?"
+      },
+      "url_slug": {
+        "en": "cocoa-powder",
+        "sl": "kakav-v-prahu"
+      },
+      "answer": {
+        "en": "No. Cocoa powder is especially toxic to cats because it contains an extremely high concentration of cocoa solids, which carry theobromine. If your cat eats any, keep the packaging and call your vet immediately.",
+        "sl": "Ne. Kakav v prahu je za mačke še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi, ki vsebuje teobromin. Če ga mačka poje, shranite embalažo in takoj pokličite veterinarja."
+      },
+      "why": {
+        "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
+        "sl": "PDSA pojasnjuje, da čokolada vsebuje teobromin, ki je za ljudi popolnoma varen, za mačke pa strupen. Temnejša kot je čokolada, več suhe kakavove snovi in teobromina vsebuje in bolj je strupena. Kakav v prahu je še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi."
+      },
+      "signs": {
+        "en": [
+          "Excitement, restlessness or hyperactivity",
+          "Vomiting or diarrhoea",
+          "Drinking and weeing more than usual",
+          "Tummy pain",
+          "Fast breathing or panting",
+          "Shaking or tremors",
+          "Fever",
+          "A fast heart rate",
+          "Seizures"
+        ],
+        "sl": [
+          "Vznemirjenost, nemir ali hiperaktivnost",
+          "Bruhanje ali driska",
+          "Pije in lula več kot običajno",
+          "Bolečine v trebuhu",
+          "Hitro dihanje ali sopenje",
+          "Tresenje",
+          "Vročina",
+          "Pospešen srčni utrip",
+          "Krči"
+        ]
+      },
+      "what_to_do": {
+        "en": "Keep the packaging and call your vet immediately. Don't wait for symptoms to appear, and don't try to make your cat sick at home.",
+        "sl": "Shranite embalažo in takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cocoa powder is for people's baking, not for cats. If kitty gets into it, tell a grown-up right away so they can call the vet.",
+        "sl": "Kakav v prahu je za peko, ne za muce. Če muca seže po njem, takoj povej odraslemu, da lahko pokliče veterinarja."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is cocoa shell garden mulch a risk for cats?",
+            "sl": "Ali je zastirka iz kakavovih lupin na vrtu nevarna za mačke?"
+          },
+          "a": {
+            "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
+            "sl": "PDSA svetuje, da se izogibate vrtnim zastirkam, ki vsebujejo kakavove lupine."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116",
+        "KC116"
+      ],
+      "related": [
+        "chocolate",
+        "coffee",
+        "cake",
+        "candy"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "coffee",
       "species": "cat",
       "level": "toxic",
@@ -10344,6 +10444,91 @@
         "chives"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "ginger",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Ginger",
+        "sl": "Ingver"
+      },
+      "question": {
+        "en": "Can cats eat ginger?",
+        "sl": "Ali lahko mačke jedo ingver?"
+      },
+      "url_slug": {
+        "en": "ginger",
+        "sl": "ingver"
+      },
+      "answer": {
+        "en": "It's best not to give your cat ginger unless your vet suggests it. Ginger root is used as an herbal supplement in cats, mainly against nausea and vomiting, but natural does not mean safe: it can cause a mild stomach upset.",
+        "sl": "Mački ingverja raje ne dajajte, razen če vam to svetuje veterinar. Ingverjeva korenina se pri mačkah uporablja kot zeliščni dodatek, predvsem proti slabosti in bruhanju, vendar naravno ne pomeni varno: lahko povzroči blage prebavne težave."
+      },
+      "why": {
+        "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
+        "sl": "VCA Animal Hospitals navaja, da se ingverjeva korenina v tradicionalni kitajski in zahodni zeliščni medicini uporablja pri mačkah, psih in drugih živalih, najpogosteje kot dodatek proti slabosti in bruhanju. Ista stran opozarja, da izdelek ni varen samo zato, ker je naraven, da so vse zdravilne rastline lahko strupene, če jih uporabljamo nepravilno ali v velikih odmerkih, in da ingverja ne smemo dajati živalim z znanimi motnjami strjevanja krvi. Najboljši vir informacij o takih izdelkih je veterinar. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+      },
+      "signs": {
+        "en": [
+          "Mild stomach upset",
+          "Vomiting",
+          "Mild skin irritation",
+          "Signs of an allergic reaction: irregular breathing, rash, fever, or swelling around the face"
+        ],
+        "sl": [
+          "Blage prebavne težave",
+          "Bruhanje",
+          "Blago draženje kože",
+          "Znaki alergijske reakcije: nepravilno dihanje, izpuščaj, vročina ali oteklina okoli obraza"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat nibbled a little ginger, watch for vomiting or an upset stomach. If you see signs of an allergic reaction, such as irregular breathing, a rash or a swollen face, contact your vet immediately. Don't give ginger as a remedy without asking your vet first.",
+        "sl": "Če je mačka pogrizla malo ingverja, bodite pozorni na bruhanje ali prebavne težave. Če opazite znake alergijske reakcije, na primer nepravilno dihanje, izpuščaj ali otekel obraz, takoj pokličite veterinarja. Ingverja ne dajajte kot zdravilo, ne da bi se prej posvetovali z veterinarjem."
+      },
+      "serving": null,
+      "child": {
+        "en": "Ginger is a root for people's cooking. Cats don't need it, so leave it for the grown-ups and the vet to decide.",
+        "sl": "Ingver je korenina, s katero kuhajo ljudje. Muce ga ne potrebujejo, zato naj o njem odločajo odrasli in veterinar."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can ginger help my cat with nausea?",
+            "sl": "Ali lahko ingver mački pomaga pri slabosti?"
+          },
+          "a": {
+            "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
+            "sl": "Ingver se pri živalih uporablja kot dodatek proti slabosti in bruhanju, vendar vam le veterinar lahko pove, ali je varen za vašo mačko. Zdravilne rastline so lahko strupene, če jih uporabljamo nepravilno."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC114",
+        "KC62",
+        "KC49"
+      ],
+      "related": [
+        "turmeric",
+        "cinnamon",
+        "nutmeg",
+        "chili-peppers"
+      ],
+      "updated": "2026-11-13"
     },
     {
       "slug": "grapefruit",
@@ -23556,6 +23741,179 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "turmeric",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Turmeric",
+        "sl": "Kurkuma"
+      },
+      "question": {
+        "en": "Can cats eat turmeric?",
+        "sl": "Ali lahko mačke jedo kurkumo?"
+      },
+      "url_slug": {
+        "en": "turmeric",
+        "sl": "kurkuma"
+      },
+      "answer": {
+        "en": "It's best not to give your cat turmeric. Studies on feeding turmeric to cats are scarce, and cats have an unusually low capacity for glucuronidation, which researchers say increases the risk of turmeric toxicity in cats.",
+        "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah."
+      },
+      "why": {
+        "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
+        "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Stomach upset"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat licked a little turmeric, watch for vomiting or an upset stomach. If your cat has eaten something she shouldn't have, contact your vet straight away; don't wait for signs, and don't try to make her sick at home.",
+        "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje."
+      },
+      "serving": null,
+      "child": {
+        "en": "Turmeric is a yellow spice for people's food. Cats don't need spices, so keep the jar away from kitty.",
+        "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is turmeric in cat food safe?",
+            "sl": "Ali je kurkuma v mačji hrani varna?"
+          },
+          "a": {
+            "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
+            "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC115",
+        "KC62",
+        "KC49",
+        "KC87",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "ginger",
+        "cinnamon",
+        "nutmeg"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "slug": "vanilla",
+      "species": "cat",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Vanilla extract",
+        "sl": "Vanilijev ekstrakt"
+      },
+      "question": {
+        "en": "Can cats have vanilla extract?",
+        "sl": "Ali lahko mačke zaužijejo vanilijev ekstrakt?"
+      },
+      "url_slug": {
+        "en": "vanilla",
+        "sl": "vanilija"
+      },
+      "answer": {
+        "en": "No, keep vanilla extract away from your cat. Vanilla extract is mostly made from alcohol, and cats are especially sensitive to alcohol. It can cause vomiting, diarrhoea, a drunken gait and even coma or death. Call your vet right away if your cat drinks any.",
+        "sl": "Ne, vanilijev ekstrakt hranite zunaj mačjega dosega. Vanilijev ekstrakt je večinoma iz alkohola, mačke pa so za alkohol še posebej občutljive. Ta lahko povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Če mačka popije kaj ekstrakta, takoj pokličite veterinarja."
+      },
+      "why": {
+        "en": "VCA Animal Hospitals says vanilla extract is mostly made from alcohol, and that alcohol can cause vomiting, diarrhoea, a drunken gait and even coma or death. All animals are at risk of alcohol poisoning, but cats are especially sensitive.",
+        "sl": "VCA Animal Hospitals navaja, da je vanilijev ekstrakt večinoma iz alkohola in da lahko alkohol povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Zastrupitev z alkoholom ogroža vse živali, mačke pa so še posebej občutljive."
+      },
+      "signs": {
+        "en": [
+          "Vomiting or diarrhoea",
+          "Wobbly, drunken walking",
+          "Unusual drowsiness or dullness",
+          "Slow breathing",
+          "In severe cases: tremors, seizures or coma"
+        ],
+        "sl": [
+          "Bruhanje ali driska",
+          "Opotekanje, pijana hoja",
+          "Nenavadna zaspanost ali otopelost",
+          "Počasno dihanje",
+          "V hudih primerih: tresenje, krči ali koma"
+        ]
+      },
+      "what_to_do": {
+        "en": "Call your vet or a pet poison helpline immediately. Don't wait for signs to appear, and don't try to make your cat sick at home unless your vet tells you to.",
+        "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje, razen če vam tako naroči veterinar."
+      },
+      "serving": null,
+      "child": {
+        "en": "Vanilla extract smells sweet, but it isn't for cats. Keep the little bottle away from kitty and tell a grown-up if she licks some.",
+        "sl": "Vanilijev ekstrakt diši sladko, a ni za muce. Stekleničko drži daleč od muce in povej odraslemu, če ga muca poliže."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is eggnog with vanilla safe for cats?",
+            "sl": "Ali je jajčni liker z vanilijo varen za mačke?"
+          },
+          "a": {
+            "en": "No. VCA lists vanilla extract among eggnog's risks because it is mostly alcohol, and advises contacting your vet right away if you think your cat drank eggnog.",
+            "sl": "Ne. VCA vanilijev ekstrakt navaja med nevarnostmi jajčnega likerja, ker je večinoma iz alkohola, in svetuje, da takoj pokličete veterinarja, če mislite, da je mačka pila jajčni liker."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC47",
+        "KC47",
+        "KC47",
+        "KC47",
+        "KC47",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC11",
+        "KC87",
+        "KC87"
+      ],
+      "related": [
+        "alcohol",
+        "cocoa-powder",
+        "ice-cream",
+        "cake"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "walnuts",
       "species": "cat",
       "level": "not_recommended",
@@ -27380,6 +27738,95 @@
         "pork"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "baking-soda",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Baking soda",
+        "sl": "Soda bikarbona"
+      },
+      "question": {
+        "en": "Can dogs eat baking soda?",
+        "sl": "Ali lahko psi jedo sodo bikarbono?"
+      },
+      "url_slug": {
+        "en": "baking-soda",
+        "sl": "soda-bikarbona"
+      },
+      "answer": {
+        "en": "No, baking soda is bad for dogs because of its high sodium content. Even small amounts can be harmful, especially to smaller dogs. If your dog ate baking soda, call a vet right away, even if the signs seem mild.",
+        "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi."
+      },
+      "why": {
+        "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
+        "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset with occasional vomiting or diarrhoea",
+          "Drinking more water, low energy",
+          "Persistent vomiting, severe low energy",
+          "Muscle tremors or difficulty walking",
+          "Fast or laboured breathing",
+          "Seizures or collapse in severe cases"
+        ],
+        "sl": [
+          "Prebavne težave z občasnim bruhanjem ali drisko",
+          "Več pitja vode, manj energije",
+          "Vztrajno bruhanje, huda utrujenost",
+          "Tresenje mišic ali težave pri hoji",
+          "Hitro ali naporno dihanje",
+          "V hudih primerih krči ali kolaps"
+        ]
+      },
+      "what_to_do": {
+        "en": "Call a vet right away, even if the signs seem mild. Don't give your dog any medicine unless your vet tells you to.",
+        "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil."
+      },
+      "serving": null,
+      "child": {
+        "en": "Baking soda is for cooking and cleaning, not for dogs. Keep the box in a cupboard and tell a grown-up if your dog finds it.",
+        "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Where else can my dog find baking soda?",
+            "sl": "Kje še lahko pes najde sodo bikarbono?"
+          },
+          "a": {
+            "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
+            "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204",
+        "KD204"
+      ],
+      "related": [
+        "salt",
+        "salty-snacks",
+        "soy-sauce"
+      ],
+      "updated": "2026-11-13"
     },
     {
       "slug": "bananas",
@@ -33286,6 +33733,98 @@
       "updated": "2026-11-12"
     },
     {
+      "slug": "cocoa-powder",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cocoa powder",
+        "sl": "Kakav v prahu"
+      },
+      "question": {
+        "en": "Can dogs eat cocoa powder?",
+        "sl": "Ali lahko psi jedo kakav v prahu?"
+      },
+      "url_slug": {
+        "en": "cocoa-powder",
+        "sl": "kakav-v-prahu"
+      },
+      "answer": {
+        "en": "No, cocoa powder is toxic to dogs. It is even more dangerous than dark chocolate, because baking chocolate and cocoa powder have the highest amounts of the harmful substances. If your dog ate cocoa powder, speak to your vet straight away.",
+        "sl": "Ne, kakav v prahu je za pse strupen. Je še nevarnejši od temne čokolade, saj imata čokolada za peko in kakav v prahu največ škodljivih snovi. Če je pes pojedel kakav v prahu, takoj pokličite veterinarja."
+      },
+      "why": {
+        "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
+        "sl": "Čokolada vsebuje teobromin, ki je za pse strupen. Več kot je kakava, več je teobromina: bela čokolada ga ima najmanj, čokolada za peko in kakav v prahu pa največ, zato je kakav v prahu še nevarnejši od temne čokolade. Psi so najpogosteje prizadeti, ker pojedo skoraj vse in čokolado zlahka dosežejo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting and diarrhoea",
+          "Panting, extra thirst and urination",
+          "Restlessness, agitation, hyperactivity",
+          "Raised body temperature",
+          "Fast or abnormal heartbeat",
+          "Tremors and, in severe cases, seizures",
+          "Signs usually start within 6–12 hours"
+        ],
+        "sl": [
+          "Bruhanje in driska",
+          "Sopihanje, povečana žeja in pogostejše uriniranje",
+          "Nemir, vznemirjenost, hiperaktivnost",
+          "Povišana telesna temperatura",
+          "Hiter ali nepravilen srčni utrip",
+          "Tresenje in v hudih primerih krči",
+          "Znaki se običajno pojavijo v 6–12 urah"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate cocoa powder, note how much and speak to your vet or a pet poison line straight away.",
+        "sl": "Če je pes pojedel kakav v prahu, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali."
+      },
+      "serving": null,
+      "child": {
+        "en": "Cocoa powder is for people's baking, not for dogs. Keep the tin closed and tell a grown-up right away if your dog gets into it.",
+        "sl": "Kakav v prahu je za peko, ne za pse. Škatlo imej zaprto in takoj povej odraslemu, če pes pride do nje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is cocoa powder worse than a chocolate bar?",
+            "sl": "Ali je kakav v prahu slabši od čokoladne tablice?"
+          },
+          "a": {
+            "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
+            "sl": "Da. Kakav v prahu je še nevarnejši od temne čokolade, bela čokolada pa ima škodljivih snovi najmanj."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD203",
+        "KD203",
+        "KD203",
+        "KD203",
+        "KD203",
+        "KD1",
+        "KD1",
+        "KD1",
+        "KD1",
+        "KD1",
+        "KD3",
+        "KD3",
+        "KD3"
+      ],
+      "related": [
+        "chocolate",
+        "cake",
+        "cookies",
+        "coffee"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "coconut-oil",
       "species": "dog",
       "level": "not_recommended",
@@ -39185,6 +39724,101 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "ginger",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Ginger",
+        "sl": "Ingver"
+      },
+      "question": {
+        "en": "Can dogs eat ginger?",
+        "sl": "Ali lahko psi jedo ingver?"
+      },
+      "url_slug": {
+        "en": "ginger",
+        "sl": "ingver"
+      },
+      "answer": {
+        "en": "Yes, in small amounts ginger is safe for dogs. Give it only in moderation, because large amounts can cause gas and nausea. Skip ginger biscuits and pickled ginger.",
+        "sl": "Da, v majhnih količinah je ingver za pse varen. Dajte ga le zmerno, ker lahko velike količine povzročijo vetrove in slabost. Piškotov z ingverjem in vloženega ingverja psu ne dajajte."
+      },
+      "why": {
+        "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
+        "sl": "Ingver lahko v velikih količinah povzroči vetrove in slabost, kot vsaka hrana, ki je ne dajemo zmerno, pa lahko vodi v prebavne težave. Ingver redči kri ter lahko zniža krvni tlak in krvni sladkor, zato ga ne dajajte psom z motnjami strjevanja krvi ali psom, ki jih kmalu čaka operacija; če ima pes sladkorno bolezen ali bolezen srca, se najprej posvetujte z veterinarjem. Nekateri veterinarji odsvetujejo ingver tudi brejim psicam in psicam, ki dojijo. Psi so lahko na ingver tudi alergični."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you want to add ginger to your dog's diet as a health measure, talk to your vet first, especially if your dog takes medication.",
+        "sl": "Če želite ingver dodati pasji prehrani zaradi zdravja, se najprej posvetujte z veterinarjem, še posebej, če pes jemlje zdravila."
+      },
+      "serving": {
+        "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
+        "sl": "Svež ingver, ingver v prahu in ingverjev sok so v majhnih količinah primerni. Svež ingver temeljito olupite in drobno sesekljajte. Ne dajajte piškotov z ingverjem (veliko sladkorja, včasih makadamijini oreščki) ali vloženega ingverja (sol, včasih ksilitol)."
+      },
+      "child": {
+        "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
+        "sl": "Čisto malo ingverja je za pse v redu. Koliko, odločijo odrasli, ingverjevi piškoti pa niso pasja poslastica."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can my dog have a ginger biscuit?",
+            "sl": "Ali lahko pes poje piškot z ingverjem?"
+          },
+          "a": {
+            "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
+            "sl": "Piškotom z ingverjem se je bolje izogniti. Kot večina sladkih priboljškov vsebujejo veliko sladkorja in lahko vsebujejo sestavine, ki so za pse škodljive, na primer makadamijine oreščke."
+          }
+        },
+        {
+          "q": {
+            "en": "Is pickled ginger safe for dogs?",
+            "sl": "Ali je vloženi ingver varen za pse?"
+          },
+          "a": {
+            "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
+            "sl": "Vloženi ingver je bolje obdržati zase. Večini psov okus kisa ni všeč, vsebuje sol, ki je pes ne potrebuje, lahko pa vsebuje tudi ksilitol, ki je za pse strupen."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD196",
+        "KD197",
+        "KD197",
+        "KD197",
+        "KD197",
+        "KD197",
+        "KD197",
+        "KD197"
+      ],
+      "related": [
+        "turmeric",
+        "cinnamon",
+        "cookies",
+        "macadamia-nuts",
+        "xylitol"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "grapefruit",
       "species": "dog",
       "level": "not_recommended",
@@ -42036,6 +42670,80 @@
         "cucumber"
       ],
       "updated": "2026-11-08"
+    },
+    {
+      "slug": "ketchup",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Ketchup",
+        "sl": "Kečap"
+      },
+      "question": {
+        "en": "Can dogs eat ketchup?",
+        "sl": "Ali lahko psi jedo kečap?"
+      },
+      "url_slug": {
+        "en": "ketchup",
+        "sl": "kecap"
+      },
+      "answer": {
+        "en": "No, it's best not to share ketchup with your dog. Ketchup itself is not toxic, but it usually contains garlic and onions, sugar and salt, and sometimes xylitol, which is toxic to dogs.",
+        "sl": "Ne, kečapa raje ne delite s psom. Kečap sam po sebi ni strupen, a običajno vsebuje česen in čebulo, sladkor in sol, včasih pa tudi ksilitol, ki je za pse strupen."
+      },
+      "why": {
+        "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
+        "sl": "Kupljeni kečap običajno vsebuje česen in čebulo, cimet, sladkor in sol, konzervanse in kemikalije, mnoge od teh sestavin pa lahko psom škodijo. Česen in čebula lahko psu povzročita prebavne težave, včasih pa tudi resnejše posledice. Nekateri kečapi vsebujejo tudi ksilitol, ki je za pse strupen. Viri se razlikujejo v strogosti (eden pravi, da kečap ni strupen, drugi preprosto odsvetuje), zato ga psu ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset"
+        ],
+        "sl": [
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "Some ketchup contains xylitol, which is toxic to dogs. If your dog ate ketchup with xylitol, follow the advice on our xylitol page.",
+        "sl": "Nekateri kečapi vsebujejo ksilitol, ki je za pse strupen. Če je pes pojedel kečap s ksilitolom, ravnajte po nasvetih na naši strani o ksilitolu."
+      },
+      "serving": null,
+      "child": {
+        "en": "Ketchup is a people sauce. It has things inside that are not good for dogs, so keep it on your own plate.",
+        "sl": "Kečap je omaka za ljudi. V njem so sestavine, ki niso dobre za pse, zato naj ostane na tvojem krožniku."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about tomato sauce?",
+            "sl": "Kaj pa paradižnikova omaka?"
+          },
+          "a": {
+            "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
+            "sl": "Ne. Paradižnikova omaka pogosto vsebuje škodljive sestavine, kot so česen, čebula ali neprimerna zelišča."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD80",
+        "KD80",
+        "KD80",
+        "KD80",
+        "KD206",
+        "KD206"
+      ],
+      "related": [
+        "tomatoes",
+        "onion",
+        "garlic",
+        "xylitol",
+        "soy-sauce"
+      ],
+      "updated": "2026-11-13"
     },
     {
       "slug": "kiwi",
@@ -56208,6 +56916,105 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "soy-sauce",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Soy sauce",
+        "sl": "Sojina omaka"
+      },
+      "question": {
+        "en": "Can dogs have soy sauce?",
+        "sl": "Ali lahko psi zaužijejo sojino omako?"
+      },
+      "url_slug": {
+        "en": "soy-sauce",
+        "sl": "sojina-omaka"
+      },
+      "answer": {
+        "en": "No, don't give your dog soy sauce. Dogs can get salt poisoning from eating too much table salt or soy sauce, and edamame seasoned with soy sauce isn't good for dogs either.",
+        "sl": "Ne, psu ne dajajte sojine omake. Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake, tudi edamame, začinjen s sojino omako, pa za pse ni dober."
+      },
+      "why": {
+        "en": "Dogs can suffer from salt poisoning if they eat excess amounts of table salt or soy sauce. Dogs cope with salt better when they can drink plenty of fresh water; without it the risk is higher. Too many salty foods are especially bad for dogs with medical issues such as heart disease, because salt can cause fluid retention.",
+        "sl": "Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake. S soljo se psi lažje spopadejo, če lahko pijejo veliko sveže vode; brez nje je tveganje večje. Preveč slane hrane še posebej škodi psom z zdravstvenimi težavami, kot je bolezen srca, ker sol lahko povzroči zastajanje tekočine."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Decreased appetite",
+          "Lethargy",
+          "Being wobbly on their feet",
+          "Excessive thirst or urination",
+          "Tremors or seizures"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slabši apetit",
+          "Zaspanost",
+          "Opotekanje",
+          "Izrazita žeja ali pogosto uriniranje",
+          "Tresenje ali krči"
+        ]
+      },
+      "what_to_do": {
+        "en": "If you think your dog has had too much soy sauce, contact your vet or a pet poison line immediately. Make sure your dog has fresh water to drink.",
+        "sl": "Če sumite, da je pes zaužil preveč sojine omake, takoj pokličite veterinarja ali center za zastrupitve živali. Poskrbite, da ima pes na voljo svežo vodo."
+      },
+      "serving": null,
+      "child": {
+        "en": "Soy sauce is not for dogs. Too much of it can make a dog sick, so give your dog dog food and fresh water instead.",
+        "sl": "Sojina omaka ni za pse. Če je pes poje preveč, mu lahko slabo dene, zato mu raje daj pasjo hrano in svežo vodo."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can my dog eat edamame with soy sauce?",
+            "sl": "Ali lahko pes je edamame s sojino omako?"
+          },
+          "a": {
+            "en": "No. Stay away from edamame with added seasonings such as sea salt and soy sauce, as these aren't good for dogs. Stick to plain, fresh beans.",
+            "sl": "Ne. Izogibajte se edamamu z dodanimi začimbami, kot sta morska sol in sojina omaka, saj za pse nista dobri. Dajajte le navaden, svež edamame."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD40",
+        "KD205",
+        "KD205"
+      ],
+      "related": [
+        "salt",
+        "salty-snacks",
+        "edamame",
+        "ketchup"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "spinach",
       "species": "dog",
       "level": "not_recommended",
@@ -58988,6 +59795,171 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "turmeric",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Turmeric",
+        "sl": "Kurkuma"
+      },
+      "question": {
+        "en": "Can dogs eat turmeric?",
+        "sl": "Ali lahko psi jedo kurkumo?"
+      },
+      "url_slug": {
+        "en": "turmeric",
+        "sl": "kurkuma"
+      },
+      "answer": {
+        "en": "It's best not to give your dog turmeric without asking your vet. Small amounts are considered safe, but in high amounts turmeric can act as a blood thinner and cause stomach upset, and there is little research on its risks.",
+        "sl": "Psu kurkume raje ne dajajte brez posveta z veterinarjem. Majhne količine veljajo za varne, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave, raziskav o njenih tveganjih pa je malo."
+      },
+      "why": {
+        "en": "Sources differ: one pet food expert article calls turmeric safe for dogs in small amounts, while another advises caution, notes that there is little research on its risks and that turmeric taken by mouth is poorly absorbed. Serious side effects are fairly uncommon, but in high amounts turmeric can act as a blood thinner and cause stomach upset. Because the sources disagree, we use the stricter rating. The small amounts used to colour or flavour dog food are not likely to bring any noticeable health benefits.",
+        "sl": "Viri se razlikujejo: eden od strokovnih člankov proizvajalca pasje hrane pravi, da je kurkuma v majhnih količinah za pse varna, drugi pa svetuje previdnost ter opozarja, da je raziskav o tveganjih malo in da se kurkuma, zaužita skozi usta, slabo vsrka. Resni neželeni učinki so dokaj redki, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave. Ker se viri ne ujemajo, izberemo strožjo oceno. Majhne količine, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset (high amounts)"
+        ],
+        "sl": [
+          "Prebavne težave (velike količine)"
+        ]
+      },
+      "what_to_do": {
+        "en": "Talk to your vet before giving your dog turmeric or any other supplement, especially if your dog takes medication. Turmeric should not be used as a routine treatment for any health condition.",
+        "sl": "Preden psu daste kurkumo ali kakršen koli drug dodatek, se posvetujte z veterinarjem, še posebej, če pes jemlje zdravila. Kurkume ne uporabljajte kot rutinsko zdravljenje kakršne koli bolezni."
+      },
+      "serving": null,
+      "child": {
+        "en": "Turmeric is a yellow spice for people's cooking. Only a vet can say if a dog should have it, so leave it to grown-ups.",
+        "sl": "Kurkuma je rumena začimba za kuhanje. Ali jo pes sme dobiti, lahko pove le veterinar, zato to prepusti odraslim."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Does the turmeric in dog food have health benefits?",
+            "sl": "Ali ima kurkuma v pasji hrani koristi za zdravje?"
+          },
+          "a": {
+            "en": "The levels of turmeric used to colour or flavour dog food are not likely to have any noticeable health benefits.",
+            "sl": "Količine kurkume, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD198",
+        "KD198",
+        "KD198",
+        "KD199",
+        "KD199",
+        "KD199",
+        "KD199",
+        "KD199",
+        "KD199",
+        "KD200",
+        "KD200"
+      ],
+      "related": [
+        "ginger",
+        "cinnamon",
+        "nutmeg"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "slug": "vanilla",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Vanilla extract",
+        "sl": "Vanilijev ekstrakt"
+      },
+      "question": {
+        "en": "Can dogs have vanilla extract?",
+        "sl": "Ali lahko psi zaužijejo vanilijev ekstrakt?"
+      },
+      "url_slug": {
+        "en": "vanilla",
+        "sl": "vanilija"
+      },
+      "answer": {
+        "en": "No, keep vanilla extract away from your dog. Vanilla extract is mostly made from alcohol, and alcohol can easily cause vomiting, diarrhoea and a drunken walk in dogs. If your dog drank some, contact your vet straight away.",
+        "sl": "Ne, vanilijev ekstrakt naj bo zunaj pasjega dosega. Vanilijev ekstrakt je večinoma narejen iz alkohola, alkohol pa pri psih zlahka povzroči bruhanje, drisko in opotekanje. Če ga je pes popil, takoj pokličite veterinarja."
+      },
+      "why": {
+        "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
+        "sl": "Vanilijev ekstrakt je večinoma narejen iz alkohola, psi pa ga prenesejo zelo malo: alkohol zlahka povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Alkohol se po zaužitju hitro vsrka, zato je pomembno, da hitro poiščete veterinarsko pomoč. Živila, ki vsebujejo alkohol, lahko povzročijo enake težave kot alkoholne pijače."
+      },
+      "signs": {
+        "en": [
+          "Vomiting or retching",
+          "Diarrhoea",
+          "Lack of coordination, a drunken walk",
+          "Drooling",
+          "Depression or lethargy, weakness",
+          "Slower breathing",
+          "Low blood sugar, low blood pressure, low body temperature",
+          "Collapse"
+        ],
+        "sl": [
+          "Bruhanje ali siljenje na bruhanje",
+          "Driska",
+          "Slaba koordinacija, opotekanje",
+          "Slinjenje",
+          "Potrtost ali zaspanost, šibkost",
+          "Počasnejše dihanje",
+          "Nizek krvni sladkor, nizek krvni tlak, nizka telesna temperatura",
+          "Kolaps"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog drank vanilla extract, note how much and contact your vet or a pet poison line right away. A dog showing signs should be seen by a vet as soon as possible.",
+        "sl": "Če je pes popil vanilijev ekstrakt, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali. Psa z znaki zastrupitve naj čim prej pregleda veterinar."
+      },
+      "serving": null,
+      "child": {
+        "en": "Vanilla extract is for baking, not for dogs. Keep the little bottle closed and put away, and tell a grown-up if your dog finds it.",
+        "sl": "Vanilijev ekstrakt je za peko, ne za pse. Stekleničko imej zaprto in pospravljeno ter povej odraslemu, če jo pes najde."
+      },
+      "faq": [],
+      "source_ids": [
+        "KD201",
+        "KD201",
+        "KD201",
+        "KD1",
+        "KD1",
+        "KD1",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202",
+        "KD202"
+      ],
+      "related": [
+        "alcohol",
+        "raw-yeast-dough",
+        "cake",
+        "cookies"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
       "slug": "walnuts",
       "species": "dog",
       "level": "not_recommended",
@@ -60972,6 +61944,30 @@
     },
     {
       "species": "cat",
+      "id": "KC114",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (K. Hyland DVM, R. Gollakner DVM; updated 2025-10-31)",
+      "title": "Ginger",
+      "url": "https://vcahospitals.com/know-your-pet/ginger"
+    },
+    {
+      "species": "cat",
+      "id": "KC115",
+      "tier": "A",
+      "publisher": "Animals (MDPI) 16(9):1355 — Raynaud E. et al. (Mars Petcare / Royal Canin authors and funding; published 2026-04-28)",
+      "title": "A Tolerance Study of Turmeric Extract in Healthy Adult Cats",
+      "url": "https://www.mdpi.com/2076-2615/16/9/1355"
+    },
+    {
+      "species": "cat",
+      "id": "KC116",
+      "tier": "B",
+      "publisher": "PDSA (vets and vet nurses; January 2023)",
+      "title": "Chocolate Poisoning in Cats",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/conditions/chocolate-poisoning-in-cats"
+    },
+    {
+      "species": "cat",
       "id": "KC12",
       "tier": "B",
       "publisher": "PDSA",
@@ -62556,6 +63552,38 @@
     },
     {
       "species": "dog",
+      "id": "KD196",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2025-03-21)",
+      "title": "Can Dogs Eat Ginger?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-ginger/"
+    },
+    {
+      "species": "dog",
+      "id": "KD197",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-20)",
+      "title": "Can Dogs Eat Ginger? How Safe is it for Pets?",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/what-dogs-eat/can-dogs-eat-ginger"
+    },
+    {
+      "species": "dog",
+      "id": "KD198",
+      "tier": "B",
+      "publisher": "Purina (US), Purina Pet Expert Team (updated 2026-11-11)",
+      "title": "Benefits of Turmeric for Dogs",
+      "url": "https://www.purina.com/articles/dog/health/nutrition/turmeric-for-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD199",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-20)",
+      "title": "Turmeric for Dogs",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/guides/turmeric-for-dogs"
+    },
+    {
+      "species": "dog",
       "id": "KD2",
       "tier": "B",
       "publisher": "Pet Poison Helpline",
@@ -62569,6 +63597,62 @@
       "publisher": "VCA Animal Hospitals",
       "title": "Caffeine Toxicity in Pets",
       "url": "https://vcahospitals.com/know-your-pet/caffeine-toxicity"
+    },
+    {
+      "species": "dog",
+      "id": "KD200",
+      "tier": "C",
+      "publisher": "PetMD, Diana Bocco, reviewed by Jennifer Coates DVM (updated 2019-10-03)",
+      "title": "4 Botanicals That Are Natural Anti-Inflammatories for Dogs",
+      "url": "https://www.petmd.com/dog/wellness/4-herbs-joint-pain-and-inflammation-pets"
+    },
+    {
+      "species": "dog",
+      "id": "KD201",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no date)",
+      "title": "Oops! My dog drank the eggnog. What do I do?",
+      "url": "https://vcahospitals.com/resources/lifestyle-dog/hazards-safety/oops-my-dog-drank-the-eggnog-what-do-i-do"
+    },
+    {
+      "species": "dog",
+      "id": "KD202",
+      "tier": "B",
+      "publisher": "American Kennel Club, Dr. Jerry Klein (updated 2023-07-26)",
+      "title": "Can Dogs Drink Alcohol?",
+      "url": "https://www.akc.org/expert-advice/vets-corner/is-alcohol-dangerous-for-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD203",
+      "tier": "B",
+      "publisher": "Blue Cross (reviewed 2023-03-03)",
+      "title": "Can dogs eat chocolate?",
+      "url": "https://www.bluecross.org.uk/advice/dog/can-dogs-eat-chocolate"
+    },
+    {
+      "species": "dog",
+      "id": "KD204",
+      "tier": "B",
+      "publisher": "Greater Staten Island Veterinary Services (vet hospital; 2025-06-19)",
+      "title": "Baking Soda Toxicity in Dogs: Urgent Symptoms and Immediate Steps",
+      "url": "https://www.gsvs.org/staten-island-ny/blog/baking-soda-toxicity-dogs-urgent-steps/"
+    },
+    {
+      "species": "dog",
+      "id": "KD205",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-20)",
+      "title": "Can Dogs Eat Edamame?",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/what-dogs-eat/can-dogs-eat-edamame"
+    },
+    {
+      "species": "dog",
+      "id": "KD206",
+      "tier": "C",
+      "publisher": "PetMD, April Saylor, reviewed by Sandra C. Mitchell DVM, DABVP (updated 2025-09-26)",
+      "title": "Can Dogs Eat Tomatoes?",
+      "url": "https://www.petmd.com/dog/nutrition/can-dogs-eat-tomatoes"
     },
     {
       "species": "dog",

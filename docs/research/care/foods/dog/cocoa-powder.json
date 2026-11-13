@@ -1,0 +1,139 @@
+{
+  "slug": "cocoa-powder",
+  "species": "dog",
+  "name": {
+    "en": "Cocoa powder",
+    "sl": "Kakav v prahu"
+  },
+  "question": {
+    "en": "Can dogs eat cocoa powder?",
+    "sl": "Ali lahko psi jedo kakav v prahu?"
+  },
+  "url_slug": {
+    "en": "cocoa-powder",
+    "sl": "kakav-v-prahu"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, cocoa powder is toxic to dogs. It is even more dangerous than dark chocolate, because baking chocolate and cocoa powder have the highest amounts of the harmful substances. If your dog ate cocoa powder, speak to your vet straight away.",
+    "sl": "Ne, kakav v prahu je za pse strupen. Je še nevarnejši od temne čokolade, saj imata čokolada za peko in kakav v prahu največ škodljivih snovi. Če je pes pojedel kakav v prahu, takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
+    "sl": "Čokolada vsebuje teobromin, ki je za pse strupen. Več kot je kakava, več je teobromina: bela čokolada ga ima najmanj, čokolada za peko in kakav v prahu pa največ, zato je kakav v prahu še nevarnejši od temne čokolade. Psi so najpogosteje prizadeti, ker pojedo skoraj vse in čokolado zlahka dosežejo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting and diarrhoea",
+      "Panting, extra thirst and urination",
+      "Restlessness, agitation, hyperactivity",
+      "Raised body temperature",
+      "Fast or abnormal heartbeat",
+      "Tremors and, in severe cases, seizures",
+      "Signs usually start within 6–12 hours"
+    ],
+    "sl": [
+      "Bruhanje in driska",
+      "Sopihanje, povečana žeja in pogostejše uriniranje",
+      "Nemir, vznemirjenost, hiperaktivnost",
+      "Povišana telesna temperatura",
+      "Hiter ali nepravilen srčni utrip",
+      "Tresenje in v hudih primerih krči",
+      "Znaki se običajno pojavijo v 6–12 urah"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate cocoa powder, note how much and speak to your vet or a pet poison line straight away.",
+    "sl": "Če je pes pojedel kakav v prahu, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cocoa powder is for people's baking, not for dogs. Keep the tin closed and tell a grown-up right away if your dog gets into it.",
+    "sl": "Kakav v prahu je za peko, ne za pse. Škatlo imej zaprto in takoj povej odraslemu, če pes pride do nje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cocoa powder worse than a chocolate bar?",
+        "sl": "Ali je kakav v prahu slabši od čokoladne tablice?"
+      },
+      "a": {
+        "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
+        "sl": "Da. Kakav v prahu je še nevarnejši od temne čokolade, bela čokolada pa ima škodljivih snovi najmanj."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD203",
+      "quote": "Chocolate contains a chemical called 'theobromine', which is toxic to dogs."
+    },
+    {
+      "id": "KD203",
+      "quote": "The darker the chocolate, the higher the level of theobromine, and therefore the more toxic it is."
+    },
+    {
+      "id": "KD203",
+      "quote": "Dark chocolate is the most dangerous because it contains a higher percentage of cocoa and therefore theobromine"
+    },
+    {
+      "id": "KD203",
+      "quote": "Cocoa powder is even more dangerous to your pet than dark chocolate."
+    },
+    {
+      "id": "KD203",
+      "quote": "So, if your dog has consumed this, then you'll need to speak to your vet straight away."
+    },
+    {
+      "id": "KD1",
+      "quote": "White chocolate has the lowest methylxanthine content while baking chocolate and cocoa powder have the highest concentrations"
+    },
+    {
+      "id": "KD1",
+      "quote": "The darker (higher cacao percentage) the chocolate, or the higher the caffeine content, the greater the risk for toxicity."
+    },
+    {
+      "id": "KD1",
+      "quote": "When ingested by pets, methylxanthines can cause vomiting and diarrhea, panting, excessive thirst and urination,"
+    },
+    {
+      "id": "KD1",
+      "quote": "hyperactivity, abnormal heart rhythm, tremors, seizures and even death."
+    },
+    {
+      "id": "KD1",
+      "quote": "please note the amount ingested and contact your veterinarian or poison control"
+    },
+    {
+      "id": "KD3",
+      "quote": "Dogs are most often affected because of their indiscriminate eating habits and easy access to sources of chocolate."
+    },
+    {
+      "id": "KD3",
+      "quote": "Clinical effects include vomiting, restlessness, agitation, hyperthermia, tachycardia, and, in severe cases, seizures."
+    },
+    {
+      "id": "KD3",
+      "quote": "Clinical signs of chocolate toxicosis usually occur within 6–12 hours after ingestion."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "cake",
+    "cookies",
+    "coffee"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "824be4c73a03881b32b9a1732306bafe2c2559cd66d75b8cc1760c04f087e15d"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf87c67acbfb89422f62c408f4dbe75656f9b496aea28d2b8ec9bea8b8ecda5d"
+    }
+  }
+}

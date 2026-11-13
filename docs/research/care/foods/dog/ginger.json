@@ -1,0 +1,166 @@
+{
+  "slug": "ginger",
+  "species": "dog",
+  "name": {
+    "en": "Ginger",
+    "sl": "Ingver"
+  },
+  "question": {
+    "en": "Can dogs eat ginger?",
+    "sl": "Ali lahko psi jedo ingver?"
+  },
+  "url_slug": {
+    "en": "ginger",
+    "sl": "ingver"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts ginger is safe for dogs. Give it only in moderation, because large amounts can cause gas and nausea. Skip ginger biscuits and pickled ginger.",
+    "sl": "Da, v majhnih količinah je ingver za pse varen. Dajte ga le zmerno, ker lahko velike količine povzročijo vetrove in slabost. Piškotov z ingverjem in vloženega ingverja psu ne dajajte."
+  },
+  "why": {
+    "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
+    "sl": "Ingver lahko v velikih količinah povzroči vetrove in slabost, kot vsaka hrana, ki je ne dajemo zmerno, pa lahko vodi v prebavne težave. Ingver redči kri ter lahko zniža krvni tlak in krvni sladkor, zato ga ne dajajte psom z motnjami strjevanja krvi ali psom, ki jih kmalu čaka operacija; če ima pes sladkorno bolezen ali bolezen srca, se najprej posvetujte z veterinarjem. Nekateri veterinarji odsvetujejo ingver tudi brejim psicam in psicam, ki dojijo. Psi so lahko na ingver tudi alergični."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you want to add ginger to your dog's diet as a health measure, talk to your vet first, especially if your dog takes medication.",
+    "sl": "Če želite ingver dodati pasji prehrani zaradi zdravja, se najprej posvetujte z veterinarjem, še posebej, če pes jemlje zdravila."
+  },
+  "serving": {
+    "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
+    "sl": "Svež ingver, ingver v prahu in ingverjev sok so v majhnih količinah primerni. Svež ingver temeljito olupite in drobno sesekljajte. Ne dajajte piškotov z ingverjem (veliko sladkorja, včasih makadamijini oreščki) ali vloženega ingverja (sol, včasih ksilitol)."
+  },
+  "child": {
+    "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
+    "sl": "Čisto malo ingverja je za pse v redu. Koliko, odločijo odrasli, ingverjevi piškoti pa niso pasja poslastica."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can my dog have a ginger biscuit?",
+        "sl": "Ali lahko pes poje piškot z ingverjem?"
+      },
+      "a": {
+        "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
+        "sl": "Piškotom z ingverjem se je bolje izogniti. Kot večina sladkih priboljškov vsebujejo veliko sladkorja in lahko vsebujejo sestavine, ki so za pse škodljive, na primer makadamijine oreščke."
+      }
+    },
+    {
+      "q": {
+        "en": "Is pickled ginger safe for dogs?",
+        "sl": "Ali je vloženi ingver varen za pse?"
+      },
+      "a": {
+        "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
+        "sl": "Vloženi ingver je bolje obdržati zase. Večini psov okus kisa ni všeč, vsebuje sol, ki je pes ne potrebuje, lahko pa vsebuje tudi ksilitol, ki je za pse strupen."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD196",
+      "quote": "yes, ginger, in small amounts, is safe for dogs and might even be good for them."
+    },
+    {
+      "id": "KD196",
+      "quote": "All forms of ginger are safe for dogs, including fresh, powdered, and even ginger juice."
+    },
+    {
+      "id": "KD196",
+      "quote": "If you're using fresh ginger, peel it thoroughly and finely mince it."
+    },
+    {
+      "id": "KD196",
+      "quote": "As with any human food, ginger should only be given to dogs in moderation."
+    },
+    {
+      "id": "KD196",
+      "quote": "Ginger in large amounts can cause gas and nausea."
+    },
+    {
+      "id": "KD196",
+      "quote": "Avoid giving ginger to dogs with bleeding disorders, dogs having surgery soon"
+    },
+    {
+      "id": "KD196",
+      "quote": "because ginger acts as a blood thinner."
+    },
+    {
+      "id": "KD196",
+      "quote": "Ginger can also lower blood pressure and blood sugar, so consult your veterinarian if your dog has diabetes or heart disease."
+    },
+    {
+      "id": "KD196",
+      "quote": "Some vets also advise avoiding ginger in pregnant and nursing dogs, because its safety has not been established."
+    },
+    {
+      "id": "KD196",
+      "quote": "If you're considering adding ginger to your dog's diet as a health measure, talk to your veterinarian first."
+    },
+    {
+      "id": "KD196",
+      "quote": "It’s probably best to keep the pickled ginger to yourself."
+    },
+    {
+      "id": "KD196",
+      "quote": "First, most dogs don’t like the taste of vinegar or the citric acid used to pickle the ginger."
+    },
+    {
+      "id": "KD196",
+      "quote": "It may also contain salt that your dog doesn’t need"
+    },
+    {
+      "id": "KD196",
+      "quote": "may even contain an artificial sweetener like xylitol, which is toxic to dogs."
+    },
+    {
+      "id": "KD197",
+      "quote": "Yes, dogs can eat ginger in small quantities."
+    },
+    {
+      "id": "KD197",
+      "quote": "As with any food that’s not offered in moderation, dogs eating ginger can end up suffering from stomach problems."
+    },
+    {
+      "id": "KD197",
+      "quote": "Dogs can be allergic to ginger, especially when it comes in contact with their skin."
+    },
+    {
+      "id": "KD197",
+      "quote": "Ginger may interact with certain medication as well, which is why asking your vet for advice is so important."
+    },
+    {
+      "id": "KD197",
+      "quote": "It's best to avoid giving your dog ginger biscuits."
+    },
+    {
+      "id": "KD197",
+      "quote": "Like most sweet treats, ginger biscuits come with a high sugar content."
+    },
+    {
+      "id": "KD197",
+      "quote": "They might even contain ingredients that are potentially harmful to dogs such as macadamia nuts."
+    }
+  ],
+  "related": [
+    "turmeric",
+    "cinnamon",
+    "cookies",
+    "macadamia-nuts",
+    "xylitol"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c57cb563e454895191b7d79622061d0c60580e3912dffb3c72594358886c01c8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "14324352d2bb0ef79ae0f115eb6d6d366777fc029e16434d80406c1c8f54b4d1"
+    }
+  }
+}

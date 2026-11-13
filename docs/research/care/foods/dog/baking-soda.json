@@ -1,0 +1,136 @@
+{
+  "slug": "baking-soda",
+  "species": "dog",
+  "name": {
+    "en": "Baking soda",
+    "sl": "Soda bikarbona"
+  },
+  "question": {
+    "en": "Can dogs eat baking soda?",
+    "sl": "Ali lahko psi jedo sodo bikarbono?"
+  },
+  "url_slug": {
+    "en": "baking-soda",
+    "sl": "soda-bikarbona"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, baking soda is bad for dogs because of its high sodium content. Even small amounts can be harmful, especially to smaller dogs. If your dog ate baking soda, call a vet right away, even if the signs seem mild.",
+    "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi."
+  },
+  "why": {
+    "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
+    "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset with occasional vomiting or diarrhoea",
+      "Drinking more water, low energy",
+      "Persistent vomiting, severe low energy",
+      "Muscle tremors or difficulty walking",
+      "Fast or laboured breathing",
+      "Seizures or collapse in severe cases"
+    ],
+    "sl": [
+      "Prebavne težave z občasnim bruhanjem ali drisko",
+      "Več pitja vode, manj energije",
+      "Vztrajno bruhanje, huda utrujenost",
+      "Tresenje mišic ali težave pri hoji",
+      "Hitro ali naporno dihanje",
+      "V hudih primerih krči ali kolaps"
+    ]
+  },
+  "what_to_do": {
+    "en": "Call a vet right away, even if the signs seem mild. Don't give your dog any medicine unless your vet tells you to.",
+    "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil."
+  },
+  "serving": null,
+  "child": {
+    "en": "Baking soda is for cooking and cleaning, not for dogs. Keep the box in a cupboard and tell a grown-up if your dog finds it.",
+    "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Where else can my dog find baking soda?",
+        "sl": "Kje še lahko pes najde sodo bikarbono?"
+      },
+      "a": {
+        "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
+        "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD204",
+      "quote": "Baking soda (sodium bicarbonate) is bad for dogs because of its high sodium content."
+    },
+    {
+      "id": "KD204",
+      "quote": "When dogs eat baking soda, it disrupts their body's delicate salt balance, potentially leading to dangerous sodium toxicity."
+    },
+    {
+      "id": "KD204",
+      "quote": "The dog's body tries to correct this imbalance by pulling water from cells"
+    },
+    {
+      "id": "KD204",
+      "quote": "As sodium levels rise in the blood, water is drawn from brain cells"
+    },
+    {
+      "id": "KD204",
+      "quote": "Even small amounts can be harmful, especially to smaller dogs."
+    },
+    {
+      "id": "KD204",
+      "quote": "Mild baking soda toxicity may first appear as stomach upset with occasional vomiting or diarrhea."
+    },
+    {
+      "id": "KD204",
+      "quote": "Your dog might drink more water or show mild low energy within 30 minutes to 4 hours after eating baking soda."
+    },
+    {
+      "id": "KD204",
+      "quote": "Serious baking soda toxicity shows up as persistent vomiting, severe low energy, muscle tremors, or difficulty walking."
+    },
+    {
+      "id": "KD204",
+      "quote": "Dogs may breathe rapidly or with effort, have seizures, or collapse in severe cases."
+    },
+    {
+      "id": "KD204",
+      "quote": "Call a veterinary hospital right away, even if symptoms seem mild."
+    },
+    {
+      "id": "KD204",
+      "quote": "Do not try to make your dog vomit or give any medications without specific veterinary direction."
+    },
+    {
+      "id": "KD204",
+      "quote": "Remember that baking soda is found in many household items including toothpaste, deodorizers"
+    },
+    {
+      "id": "KD204",
+      "quote": "Store baking soda and all cleaning products in cabinets with secure latches or in areas completely inaccessible to pets."
+    }
+  ],
+  "related": [
+    "salt",
+    "salty-snacks",
+    "soy-sauce"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eef60826aa22448f662f5c9a2a4932037e292bec8e15109306f1adb9770b69cf"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ade61b38db0bca85a0552d480699355f514e4349292c68013e9c7ca4c53186c6"
+    }
+  }
+}
