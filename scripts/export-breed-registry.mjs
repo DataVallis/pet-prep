@@ -491,6 +491,7 @@ const SPECIES = [
       { id: 'borzoi', synonyms: { en: ['Russian Wolfhound', 'Russian Hunting Sighthound', 'Russkaya Psovaya Borzaya'], sl: ['borzoj', 'borzoi', 'ruski chrt'] } },
       { id: 'japanese_chin', synonyms: { en: ['Japanese Spaniel', 'Japan Chin', 'Chin'], sl: ['japonski cin', 'čin'] } },
       { id: 'norwich_terrier', synonyms: { en: ['Norwich'], sl: ['norwiški terier'] } },
+      { id: 'miniature_bull_terrier', synonyms: { en: ['Bull Terrier (Miniature)', 'Mini Bull Terrier', 'Mini Bull'], sl: ['mini bulterier', 'miniaturni bul terier'] } },
     ],
   },
   {
@@ -2812,6 +2813,30 @@ const DOG_FACTS = {
       ['collapsing_trachea', 'health.trachea'],
     ],
   },
+  // M5-R10-109. Height = PetMD 10–14 in (S821; FCI only 'Height should not exceed 35,5 cm.'), weight = PetMD 18–28 lb (S821;
+  // FCI 'There is no weight limit.'), lifespan = RKC 'Over 10 years' (S820) + PetMD 11–13 y (S821) — no McMillan value
+  // reachable (median_uk is null, not exported), exercise = RKC 'Up to 1 hour per day' (S820), coat / grooming / shedding =
+  // RKC key facts (S820). Not ranked by Coren. FCI origin Great Britain (GB). Not exported: senior_from (derived),
+  // health.breed_watch (Category 2 without points), the PetMD care texts. New health key: hereditary_nephritis_pkd.
+  miniature_bull_terrier: {
+    height: ['height.petmd'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['primary_lens_luxation', 'health.lens_luxation'],
+      ['deafness', 'health.deafness'],
+      ['mitral_valve_disease', 'health.heart'],
+      ['kneecap_luxation', 'health.patella'],
+      ['hereditary_nephritis_pkd', 'health.kidney'],
+    ],
+  },
 
 
 
@@ -3711,6 +3736,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.norwich_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.norwich_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.norwich_terrier.exercise_minutes_senior',
+  },
+  miniature_bull_terrier: {
+    adult_minutes: ['proposed_game_parameters.miniature_bull_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.miniature_bull_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.miniature_bull_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.miniature_bull_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.miniature_bull_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.miniature_bull_terrier.exercise_minutes_senior',
   },
 
 

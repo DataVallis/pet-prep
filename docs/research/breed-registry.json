@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "cb95b11469069003fe66933749bff6d921fd0f8a178c321f7727f79baadb0e8b"
+      "sha256": "5664c762c8d9d089770eca12521cb8b3830278e5c026547d474ea1c9839eddf0"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "b0047afdc42d4363da39cfcd37314c9401ecba74d43b4f11b8446fcfd20301dd"
+      "sha256": "38c7bf6ce763b237e68fa83652339b7004d9c4963a56f0c6566952a2cec46864"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "df037fbe262f35cf3cf59495ff8b9ff1eacf178a31bda7f5d49ef4420e1a75ad"
+      "sha256": "0d5a93f434aaf33cbfb6767553b5d9cfbca10605d9810949a92b03ebb4fb7497"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4878d593a12fb2c580c512a3886e62d7fe15290a249bfe9a0ae82f76c3b4c598"
+      "sha256": "cdf438dd25f69d6e9f0e3374c1dfa425976f136da6244f8ce9a31fa27b2bbf49"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3df686dee82661f472275256b24108b4c512e46a68cd7952733d2ddc50570045"
+      "sha256": "e71960751a498e390c007b8d8dd2997a982787c501246e8cf6e4679951699de5"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "782cda0ea7b407b7b89603968831dc3839062df4ea86e85c068febc905925a63"
+      "sha256": "b8fddf802c4df6587c64625ab887ac727a71425b571d35b5d54b0a2f1e1eb4c7"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "678c3dd1f7d666beab73f81e34a1a33a84e147d08f2d402ed5897cff197522cc"
+      "sha256": "8eb3c83b6d4b8f8903ac2d22b401c293603f9ca22c2ca8229ebac20b6cdd4db5"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 101,
+      "breed_count": 102,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -61177,6 +61177,550 @@
       ]
     },
     {
+      "id": "miniature_bull_terrier",
+      "species": "dog",
+      "order": 101,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Miniature Bull Terrier",
+        "sl": "Miniaturni bulterier"
+      },
+      "slug": {
+        "en": "miniature-bull-terrier",
+        "sl": "miniaturni-bulterier"
+      },
+      "synonyms": {
+        "en": [
+          "Bull Terrier (Miniature)",
+          "Mini Bull Terrier",
+          "Mini Bull"
+        ],
+        "sl": [
+          "mini bulterier",
+          "miniaturni bul terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              36
+            ],
+            "female": [
+              25,
+              36
+            ]
+          },
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.height.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              8.2,
+              12.7
+            ],
+            "female": [
+              8.2,
+              12.7
+            ]
+          },
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "miniature_bull_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            11,
+            13
+          ],
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S820"
+          ],
+          "ref": "miniature_bull_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 359,
+            "group": 3,
+            "section": 3,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S818"
+          ],
+          "ref": "miniature_bull_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.health.lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "mitral_valve_disease",
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "hereditary_nephritis_pkd",
+          "source_ids": [
+            "S821"
+          ],
+          "ref": "miniature_bull_terrier.health.kidney",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S820"
+            ],
+            "refs": [
+              "miniature_bull_terrier.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_bull_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S820"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S820 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_bull_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_bull_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S820"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S820; provisional until McMillan 2024 is checked)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_bull_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_bull_terrier.grooming",
+            "basis_source_ids": [
+              "S820"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«, PetMD »about once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S820"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S820"
+            ]
+          },
+          {
+            "key": "dna_pll",
+            "level": "best_practice",
+            "source_ids": [
+              "S820"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S820"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S820"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S818",
+        "S820",
+        "S821",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -67237,6 +67781,27 @@
       "publisher": "United Kennel Club (US)",
       "title": "Official UKC Breed Standard — Norwich Terrier (revised April 15, 2007) (PDF)",
       "url": "https://www.ukcdogs.com/docs/breeds/norwich-terrier.pdf"
+    },
+    {
+      "id": "S818",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Miniature Bull Terrier (359)",
+      "url": "https://fci.be/en/nomenclature/MINIATURE-BULL-TERRIER-359.html"
+    },
+    {
+      "id": "S820",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Bull Terrier (Miniature) — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/"
+    },
+    {
+      "id": "S821",
+      "tier": "B",
+      "publisher": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated Sep. 20, 2024)",
+      "title": "Miniature Bull Terrier",
+      "url": "https://www.petmd.com/dog/breeds/miniature-bull-terrier"
     },
     {
       "id": "C1",
