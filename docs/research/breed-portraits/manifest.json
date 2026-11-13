@@ -1325,6 +1325,19 @@
             "prompt_hash": "sha256:6364fd7f87a0e164f0f985ff5a883b8d07161cb0850940c127ea79d811507c8b",
             "generated_at": "2026-11-13T01:02:09+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "miniature_bull_terrier",
+            "species": "dog",
+            "colour": "white",
+            "file": "dog/miniature-bull-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:14bea6496a3a8cc0274281c7a0ee3f824e55ff04759f76a987ccfe3cefba6c22",
+            "generated_at": "2026-11-13T02:44:56+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
