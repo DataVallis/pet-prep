@@ -63,7 +63,8 @@
         "hr": "Potpuna hitna služba s vlastitim osobljem 24 sata dnevno, 365 dana u godini. Hitni telefon +357 99 371508.",
         "de": "Vollständiger Notdienst mit hauseigenem Personal rund um die Uhr, 365 Tage im Jahr. Notfalltelefon +357 99 371508.",
         "fr": "Service d’urgences complet avec personnel sur place 24 h/24, 365 jours par an. Téléphone urgences : +357 99 371508.",
-        "es": "Servicio de urgencias completo con personal propio las 24 horas, los 365 días del año. Teléfono de urgencias +357 99 371508."
+        "es": "Servicio de urgencias completo con personal propio las 24 horas, los 365 días del año. Teléfono de urgencias +357 99 371508.",
+        "it": "Pronto soccorso completo con personale interno 24 ore su 24, 365 giorni all'anno. Telefono urgenze +357 99 371508."
       },
       "note": "24/7/365 claim is from a promotional magazine feature (Cyprus Lifestyle), not the clinic's own site (dnvet.com could not be opened: not surfaced by search so WebFetch refused it). Emergency phone 99371508. Hours in article: Mon-Fri 08-21, Sat 08-17, Sun 09-12. 2026-11-05: topodigos listing quotes \"24 hours a day, 7 days a week, 365 days a year\" (3rd confirmation); dnvet.com not openable (provenance).",
       "small_animals": true,
@@ -83,7 +84,8 @@
         "hr": "24-satna hitna služba. Redovno radno vrijeme pon–pet 08:00–13:00 i 15:00–18:00, sub 08:00–13:00.",
         "de": "Notdienst rund um die Uhr. Reguläre Sprechzeiten Mo–Fr 08:00–13:00 und 15:00–18:00 Uhr, Sa 08:00–13:00 Uhr.",
         "fr": "Urgences 24 h/24. Horaires habituels : lun.–ven. 8 h–13 h et 15 h–18 h, sam. 8 h–13 h.",
-        "es": "Servicio de urgencias las 24 horas. Horario habitual lun–vie 8:00–13:00 y 15:00–18:00 h, sáb 8:00–13:00 h."
+        "es": "Servicio de urgencias las 24 horas. Horario habitual lun–vie 8:00–13:00 y 15:00–18:00 h, sáb 8:00–13:00 h.",
+        "it": "Pronto soccorso 24 ore su 24. Orari ordinari lun–ven 08:00–13:00 e 15:00–18:00, sab 08:00–13:00."
       },
       "note": "Phone hidden on the Cyprus Inform page; number from Cyprus Mail / cyprus-faq fire-aid lists (99725411; Fastforward/avant-garde list 99735411 - conflict). 24h claim: 'The clinic has a 24h emergency service' on a directory listing. Facebook: veterinaryclinickolossi.",
       "small_animals": true,
@@ -103,7 +105,8 @@
         "hr": "Hitna veterinarska skrb 24/7. Mobitel +357 99 253372.",
         "de": "Tierärztliche Notfallversorgung rund um die Uhr. Mobilnummer +357 99 253372.",
         "fr": "Urgences vétérinaires 24 h/24, 7 j/7. Mobile : +357 99 253372.",
-        "es": "Urgencias veterinarias las 24 horas. Línea móvil +357 99 253372."
+        "es": "Urgencias veterinarias las 24 horas. Línea móvil +357 99 253372.",
+        "it": "Pronto soccorso veterinario 24 ore su 24, 7 giorni su 7. Cellulare +357 99 253372."
       },
       "note": "24/7 claim from University of Nicosia partner-clinics page, which links v3tshospital.com.cy (that site was refused by WebFetch - not in provenance). Phones 99253372 / 24253373 from the Cyprus Mail fire-aid list. Town Larnaca from that list, unverified on clinic site.",
       "small_animals": true,
@@ -122,7 +125,8 @@
         "hr": "Hitna veterinarska pomoć na poziv; nazovi unaprijed.",
         "de": "Notdienst auf Abruf; bitte vorher anrufen.",
         "fr": "Astreinte pour les urgences ; appelez avant de venir.",
-        "es": "Servicio de urgencias de guardia; llama antes."
+        "es": "Servicio de urgencias de guardia; llama antes.",
+        "it": "Assistenza urgente su chiamata; telefonare in anticipo."
       },
       "note": "DOM blog says 24/7 on-call emergency support (not walk-in), so emergency_24h false. Phone from Cyprus Mail list; website from carierista.com partner page (limassolvet.com itself not opened). Founded 2009 by Dr Markos Ktori.",
       "emergency_24h": false,
@@ -143,7 +147,8 @@
         "hr": "pon–pet 09:00–19:00, sub 09:00–14:00",
         "de": "Mo–Fr 09:00–19:00 Uhr, Sa 09:00–14:00 Uhr",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–14 h.",
-        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h."
+        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h.",
+        "it": "Lun–ven 09:00–19:00, sab 09:00–14:00"
       },
       "note": "Cyprus Inform promo claims '24/7' and a 99 386 999 consultation line but lists 09-20 hours and a reader says it refused a night emergency; no explicit own-site claim, so false. animalhealth.com.cy not opened. 2026-11-05: address/hours from cyprus-faq listing (no 24-h claim there); own site not openable.",
       "emergency_24h": false,
@@ -163,7 +168,8 @@
         "hr": "pon–pet 09:00–14:00 i 15:00–19:00, sub 09:00–14:00; dostupni su i dežurni kućni posjeti",
         "de": "Mo–Fr 09:00–14:00 und 15:00–19:00 Uhr, Sa 09:00–14:00 Uhr; Hausbesuche im Bereitschaftsdienst möglich",
         "fr": "Lun.–ven. 9 h–14 h et 15 h–19 h, sam. 9 h–14 h ; visites à domicile assurées en garde.",
-        "es": "Lun–vie 9:00–14:00 y 15:00–19:00 h, sáb 9:00–14:00 h; ofrece visitas a domicilio de guardia."
+        "es": "Lun–vie 9:00–14:00 y 15:00–19:00 h, sáb 9:00–14:00 h; ofrece visitas a domicilio de guardia.",
+        "it": "Lun–ven 09:00–14:00 e 15:00–19:00, sab 09:00–14:00; visite a domicilio su chiamata"
       },
       "note": "Phone hidden on the page; url from page, site not opened. 2026-11-05: address/hours from kiprinform page (clinic own site still not openable); phone hidden on page; 993 992 28 is a pet-food delivery line, not used.",
       "emergency_24h": false,
@@ -182,7 +188,8 @@
         "hr": "pon–pet 09:00–13:30 i 15:30–18:30, sub 09:00–13:30.",
         "de": "Mo–Fr 09:00–13:30 und 15:30–18:30 Uhr, Sa 09:00–13:30 Uhr.",
         "fr": "Lun.–ven. 9 h–13 h 30 et 15 h 30–18 h 30, sam. 9 h–13 h 30.",
-        "es": "Lun–vie 9:00–13:30 y 15:30–18:30 h, sáb 9:00–13:30 h."
+        "es": "Lun–vie 9:00–13:30 y 15:30–18:30 h, sáb 9:00–13:30 h.",
+        "it": "Lun–ven 09:00–13:30 e 15:30–18:30, sab 09:00–13:30."
       },
       "url": "https://www.kiprinform.com/en/services/zookosmos-veterinary-clinic-in-larnaca/",
       "note": "No phone and no own site on the page (url is the directory listing; replace when own site found). Mentions '24 hour post-operative rehabilitation' - not opening hours.",
@@ -204,7 +211,8 @@
         "hr": "pon–pet 08:00–17:00, sub 09:00–13:00, ned zatvoreno.",
         "de": "Mo–Fr 08:00–17:00 Uhr, Sa 09:00–13:00 Uhr, So geschlossen.",
         "fr": "Lun.–ven. 8 h–17 h, sam. 9 h–13 h, fermé le dimanche.",
-        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–13:00 h, dom cerrado."
+        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–13:00 h, dom cerrado.",
+        "it": "Lun–ven 08:00–17:00, sab 09:00–13:00, chiuso la domenica."
       },
       "note": "Other phones on page: +357 99 573 301, +357 26 343 800. Domain from email address / Angloinfo; site not opened. Angloinfo lists shorter weekday hours (08-14, Wed 08-18) - conflicting.",
       "emergency_24h": false,
@@ -224,7 +232,8 @@
         "hr": "pon–pet 09:00–19:00, sub 09:00–14:00, ned zatvoreno",
         "de": "Mo–Fr 09:00–19:00 Uhr, Sa 09:00–14:00 Uhr, So geschlossen",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–14 h, fermé le dimanche.",
-        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h, dom cerrado."
+        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h, dom cerrado.",
+        "it": "Lun–ven 09:00–19:00, sab 09:00–14:00, chiuso la domenica"
       },
       "note": "Email domain pawcarevet.com.cy; site not opened. 2026-11-05: address/hours from cyprusnet listing.",
       "emergency_24h": false,
@@ -244,7 +253,8 @@
         "hr": "pon–pet 09:00–19:00, sub 09:00–13:00. Kućni i hitni posjeti; hitni telefon +357 99 477775.",
         "de": "Mo–Fr 09:00–19:00 Uhr, Sa 09:00–13:00 Uhr. Haus- und Notfallbesuche möglich; Notfalltelefon +357 99 477775.",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–13 h. Visites à domicile et urgences possibles ; téléphone urgences : +357 99 477775.",
-        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–13:00 h. Visitas a domicilio y de urgencia disponibles; teléfono de urgencias +357 99 477775."
+        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–13:00 h. Visitas a domicilio y de urgencia disponibles; teléfono de urgencias +357 99 477775.",
+        "it": "Lun–ven 09:00–19:00, sab 09:00–13:00. Visite a domicilio e di urgenza disponibili; telefono urgenze +357 99 477775."
       },
       "note": "Article dated 2023-12; no 24h claim. Emergency number only, no general number.",
       "emergency_24h": false,
@@ -614,7 +624,8 @@
         "hr": "Svaki dan 07:00–19:00",
         "de": "Täglich 07:00–19:00 Uhr",
         "fr": "Tous les jours 7 h–19 h.",
-        "es": "Todos los días 7:00–19:00 h."
+        "es": "Todos los días 7:00–19:00 h.",
+        "it": "Tutti i giorni 07:00–19:00"
       },
       "small_animals": true,
       "source_url": "https://hopsa.io/en/attractions/cypr,swiat-zwierzat,paphiakos-animal-clinic-8ef9ce30aa",

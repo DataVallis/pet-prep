@@ -112,7 +112,10 @@
       "url": "https://bio-ritm.kz/",
       "source_url": "https://bio-ritm.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Мы работаем круглосуточно и без выходных'. WhatsApp +7 777 723 0121."
+      "note": "Own page: 'Мы работаем круглосуточно и без выходных'. WhatsApp +7 777 723 0121.",
+      "duty_i18n": {
+        "it": "Dichiara di essere aperto 24 ore su 24, senza giorni di chiusura. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -127,7 +130,10 @@
       "url": "https://www.klinika-hit.kz/",
       "source_url": "https://www.klinika-hit.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Экстренная хирургия 24/7', 'Выезд на дом 24/7', 'два круглосуточных стационара'. Page also links 8 707 701 19 19 (conflict). Opening hours not stated."
+      "note": "Own page: 'Экстренная хирургия 24/7', 'Выезд на дом 24/7', 'два круглосуточных стационара'. Page also links 8 707 701 19 19 (conflict). Opening hours not stated.",
+      "duty_i18n": {
+        "it": "Dichiara chirurgia d'urgenza 24 ore su 24, 7 giorni su 7, visite a domicilio 24 ore su 24, 7 giorni su 7 e reparti di degenza sempre attivi. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -142,7 +148,10 @@
       "url": "https://vetklinika.kz/",
       "source_url": "https://vetklinika.kz/",
       "checked": "2026-11-12",
-      "note": "Home page title 'Круглосуточная ветеринарная клиника ЦВМ' and 'Круглосуточная помощь'; contact page says nothing explicit about 24 h but describes night emergency tariff. Second phone +7 727 313 13 21. Site meta mentions Abaya/Saina, contact page says Mamyr-4 111D."
+      "note": "Home page title 'Круглосуточная ветеринарная клиника ЦВМ' and 'Круглосуточная помощь'; contact page says nothing explicit about 24 h but describes night emergency tariff. Second phone +7 727 313 13 21. Site meta mentions Abaya/Saina, contact page says Mamyr-4 111D.",
+      "duty_i18n": {
+        "it": "Presentata come clinica aperta 24 ore su 24. Accettazione ordinaria 9:30–20:00; dopo le 20:00 solo urgenze; supplemento notturno del 50% dalle 21:00 alle 09:00."
+      }
     },
     {
       "kind": "clinic",
@@ -157,7 +166,10 @@
       "url": "https://vetklinika.kz/",
       "source_url": "https://vetklinika.kz/",
       "checked": "2026-11-12",
-      "note": "Same network claim as Mamyr-4 branch (site-wide). Second phone +7 727 313 13 28. DOM CVM (hotel/rehab) at Zhamakaeva 198 not entered."
+      "note": "Same network claim as Mamyr-4 branch (site-wide). Second phone +7 727 313 13 28. DOM CVM (hotel/rehab) at Zhamakaeva 198 not entered.",
+      "duty_i18n": {
+        "it": "Presentata come clinica aperta 24 ore su 24. Accettazione ordinaria 9:30–20:00; dopo le 20:00 solo urgenze; supplemento notturno del 50% dalle 21:00 alle 09:00."
+      }
     },
     {
       "kind": "clinic",
@@ -172,7 +184,10 @@
       "url": "https://vetclinic.kz/",
       "source_url": "https://vetclinic.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Профессиональные ветеринарные врачи принимают круглосуточно', 'Ветеринарный рентген круглосуточно', 'Без выходных'. No hours table."
+      "note": "Own page: 'Профессиональные ветеринарные врачи принимают круглосуточно', 'Ветеринарный рентген круглосуточно', 'Без выходных'. No hours table.",
+      "duty_i18n": {
+        "it": "Dichiara veterinari, radiografia, farmacia e negozio attivi 24 ore su 24; aperto tutti i giorni. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -187,7 +202,10 @@
       "url": "https://zoosfera.kz/",
       "source_url": "https://zoosfera.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Круглосуточно' under working time, banner 'Лечение и профилактическая помощь 24/7'. Second phone +7 700 129 60 61. Technical breaks sit awkwardly with a strict 24 h claim."
+      "note": "Own page: 'Круглосуточно' under working time, banner 'Лечение и профилактическая помощь 24/7'. Second phone +7 700 129 60 61. Technical breaks sit awkwardly with a strict 24 h claim.",
+      "duty_i18n": {
+        "it": "Presentata come aperta 24 ore su 24, senza giorni di chiusura; brevi pause tecniche 08:30–09:00 e 19:30–20:00. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -202,7 +220,10 @@
       "url": "https://zoosfera.kz/",
       "source_url": "https://zoosfera.kz/",
       "checked": "2026-11-12",
-      "note": "Second phone +7 717 234 45 85."
+      "note": "Second phone +7 717 234 45 85.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 9:00–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -217,7 +238,10 @@
       "url": "https://vetspectr.kz/",
       "source_url": "https://vetspectr.kz/",
       "checked": "2026-11-12",
-      "note": "Call centre +7 777 223 10 49."
+      "note": "Call centre +7 777 223 10 49.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 10:00–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -232,7 +256,10 @@
       "url": "https://vetspectr.kz/",
       "source_url": "https://vetspectr.kz/",
       "checked": "2026-11-12",
-      "note": "Call centre +7 777 223 10 49."
+      "note": "Call centre +7 777 223 10 49.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 10:00–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -247,7 +274,10 @@
       "url": "https://vitavet.kz/",
       "source_url": "https://vitavet.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: '24/7 без выходных', 'Круглосуточный стационар'. Second phone +7 7212 911 006 (link points to 911 008)."
+      "note": "Own page: '24/7 без выходных', 'Круглосуточный стационар'. Second phone +7 7212 911 006 (link points to 911 008).",
+      "duty_i18n": {
+        "it": "Dichiara di essere operativo 24 ore su 24, 7 giorni su 7, senza giorni di chiusura, con un reparto di degenza sempre attivo. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -288,7 +318,10 @@
       "url": "https://klinikashans.kz/",
       "source_url": "https://klinikashans.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Работаем без перерыва и выходных', 'Экстренный приём'; no 24 h wording. Mobile +7 705 386 41 99. Also serves Ekibastuz."
+      "note": "Own page: 'Работаем без перерыва и выходных', 'Экстренный приём'; no 24 h wording. Mobile +7 705 386 41 99. Also serves Ekibastuz.",
+      "duty_i18n": {
+        "it": "Aperto sette giorni su sette senza pause; visite d'urgenza disponibili. Di notte telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -303,7 +336,10 @@
       "url": "https://aibolitkz.ru/",
       "source_url": "https://aibolitkz.ru/",
       "checked": "2026-11-12",
-      "note": "Lunch break 12:00-12:30. No 24 h wording."
+      "note": "Lunch break 12:00-12:30. No 24 h wording.",
+      "duty_i18n": {
+        "it": "Lun–ven 9:00–18:00, sab 9:00–15:00, dom 10:00–14:00."
+      }
     },
     {
       "kind": "clinic",
@@ -317,7 +353,10 @@
       "url": "https://veterinarnaya-sluzhba-1.kz/",
       "source_url": "https://veterinarnaya-sluzhba-1.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Мы работаем круглосуточно' (self-description, no hours detail). No street address. Also serves farm animals."
+      "note": "Own page: 'Мы работаем круглосуточно' (self-description, no hours detail). No street address. Also serves farm animals.",
+      "duty_i18n": {
+        "it": "Veterinario mobile con visite a domicilio ad Atyrau e dintorni; dichiara assistenza d'urgenza 24 ore su 24. Telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -332,7 +371,10 @@
       "url": "https://aibolitkst.kz/",
       "source_url": "https://aibolitkst.kz/",
       "checked": "2026-11-12",
-      "note": "Own page: 'Ежедневно с 9:00 до 21:00'; no 24 h wording; lists 'Выездная служба' and 'Стационар' without after-hours details."
+      "note": "Own page: 'Ежедневно с 9:00 до 21:00'; no 24 h wording; lists 'Выездная служба' and 'Стационар' without after-hours details.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 9:00–21:00. Reparto di degenza e servizio mobile disponibili."
+      }
     },
     {
       "kind": "clinic",
@@ -360,7 +402,10 @@
       "url": "https://zoohelp.kz/",
       "source_url": "https://zoohelp.kz/kontakty/",
       "checked": "2026-11-12",
-      "note": "Own contact page: 'Ежедневно с 09:00 до 21:00', phone also WhatsApp; only the city is given, no street address; no 24 h wording."
+      "note": "Own contact page: 'Ежедневно с 09:00 до 21:00', phone also WhatsApp; only the city is given, no street address; no 24 h wording.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 9:00–21:00."
+      }
     }
   ],
   "notes": "Kazakhstan: first run, 15 entries (8 marked 24 h). Official bodies (gov.kz regional veterinary departments for Almaty region and Karaganda) list only reception contacts - no animal duty rota or poison line found. The Almaty municipal ambulance (+7 708 595 64 04, 109) is round-the-clock but for stray animals only and is documented only in sources, not as an entry. Most clinic sites are not found by the search tool; 24 h lists on weproject.media, zoon.kz, 2gis, 103.kz are aggregators and were used only as leads. Could not open: veravet.kz (redirect loop; Vera clinics in Almaty listed 24 h only by aggregators), dogmavetclinic.kz (Astana/Kostanay, client error), zoovita.kz (robots), vetklinika-ashurkova.kz (robots; Astana Keregetas 48 listed 24 h only by a media article), simba.vet (is an Irkutsk clinic, unrelated), medvet.kz / Dog Premium / U Lukomorya / Shans Almaty / VetStar / Zoovita Almaty (no own page reachable; MedVet, VetStar and others only on 2gis/directories). Still to do: Shymkent, Aktobe, Taraz, Oskemen, Kostanay, Semey, Kokshetau, Aktau, Oral, Kyzylorda, Turkestan (no own clinic site found yet), Aqtaban Astana, Nika Astana, Almaty clinics above, KazNAU university clinic, Karaganda Medical/agrarian clinics. Follow-up run 2026-11-12: 3 entries added (Aibolit Kostanay, ZooDoctor Oral, ZooPomoshch Almaty; none 24 h; 18 entries in total, 8 x 24 h). The search tool returned almost only aggregators (2gis, zoon, 103.kz, spravker, mestam), so own sites were not found for Shymkent (about 30 clinics only on directories, e.g. Hatiko, ZooVetService, VetaClinic, Kot i Pes), Aktobe (only an aktobe.city directory card), Taraz, Semey (only the regional veterinary lab on Facebook), Kokshetau, Aktau (Doctor-Vet only on directories/Instagram), Kyzylorda, Turkestan. Unreachable: tanba.kezekte.kz official registry of veterinary organisations (robots_disallowed), zoovita.kz (Oskemen/East Kazakhstan centre, robots_disallowed), lahd.b2b.ivest.kz (Druzhok Aktobe, client error), kaznaru.edu.kz department page (client error; KazNAU university clinic not confirmed), astana-online.kz, vet-apteka.satu.kz (redirect), gov.kz Shymkent (client error), petfinder.kz, spr.kz, inshymkent.kz, city04.kz, inaktau.kz (client errors). faunavko.kz and rvl.kz (Oskemen) were only seen in a directory summary and could not be fetched (not in provenance set). Aqtaban Astana: no own website found, only directories. Nika: nika.vet is a Barnaul (Russia) clinic, unrelated; Nika Astana (Zheltoksan 24/1) has no own page found. VetLab Oskemen: only an Abay-region lab Facebook page (not used). Left: all of the above cities, KazNAU clinic, Aqtaban, Nika Astana, Oskemen (Fauna, Zoovita) - skipped as unreachable twice. Note: the CVM branch page https://vetklinika.kz/locations/cvm-na-abaja/ states 'Режим работы: круглосуточно' at Mamyr-4 111d (same as existing CVM Mamyr-4 entry)."

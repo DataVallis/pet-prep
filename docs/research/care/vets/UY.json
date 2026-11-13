@@ -53,7 +53,8 @@
       "note": "Page: 'Urgencias 24hs', 'Llamanos las 24 horas', FAQ 'urgencias 24 horas en Montevideo'. No branch address on the page (links to sucursales.laika.com.uy, not opened). General WhatsApp 095 909 955.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias las 24 horas; llama a la línea de urgencias."
+        "es": "Servicio de urgencias las 24 horas; llama a la línea de urgencias.",
+        "it": "Pronto soccorso disponibile 24 ore su 24; chiamare la linea d'emergenza."
       }
     },
     {
@@ -71,7 +72,8 @@
       "note": "Page: 'Servicio de Urgencias a domicilio y Atencion en Clinica las 24 hs'. Landlines 2622 8012 / 2628 2697. Re-check 2026-11-11: the page confirms only the 24 h home emergency service; in-clinic 24 h not reconfirmed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Visitas de urgencia a domicilio las 24 horas; horario habitual mar–dom 9:00–16:00 h."
+        "es": "Visitas de urgencia a domicilio las 24 horas; horario habitual mar–dom 9:00–16:00 h.",
+        "it": "Visite d'urgenza a domicilio 24 ore su 24; orario regolare martedì–domenica 9:00–16:00."
       }
     },
     {
@@ -89,7 +91,8 @@
       "note": "Page: 'Contamos con servicio de urgencias 24 horas'; does not say which branch. Second branch Villa del Cerro: Grecia 4002 esq. Belgica, phone 098 104 002.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h."
+        "es": "Servicio de urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h.",
+        "it": "Pronto soccorso 24 ore su 24; orario regolare lun–sab 9:00–20:00."
       }
     },
     {
@@ -107,7 +110,8 @@
       "note": "Page lists 'Urgencias 24 horas' 091 40 41 41. Clinic phones 2709 68 05 and 099 26 86 20. Same 091 404 141 number is used by the MIVET page for its member emergency service.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Línea de urgencias las 24 horas; horario de la clínica lun–vie 10:00–20:00 h, sáb 10:00–15:00 h."
+        "es": "Línea de urgencias las 24 horas; horario de la clínica lun–vie 10:00–20:00 h, sáb 10:00–15:00 h.",
+        "it": "Linea d'emergenza 24 ore su 24; orario della clinica lun–ven 10:00–20:00, sab 10:00–15:00."
       }
     },
     {
@@ -125,7 +129,8 @@
       "note": "Page: 'Lo atenderan las 24 horas a domicilio'; visit $1,200 UYU plus medication. Mobile 092 354 651. Only the product page was opened, not the home page.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–21:00 h; visitas de urgencia a domicilio las 24 horas (con tarifa, llama al 091 404 141 y di que eres socio de Veterinaria Lacucha)."
+        "es": "Abierto todos los días 9:00–21:00 h; visitas de urgencia a domicilio las 24 horas (con tarifa, llama al 091 404 141 y di que eres socio de Veterinaria Lacucha).",
+        "it": "Aperto tutti i giorni 9:00–21:00; visite d'urgenza a domicilio 24 ore su 24 (a pagamento, chiamare il 091 404 141 e dire di essere socio di Veterinaria Lacucha)."
       }
     },
     {
@@ -143,7 +148,8 @@
       "note": "Page: 'Contamos con servicio de emergencia las 24 horas, los 365 dias de ano'; the site presents as a pet store/pharmacy and links to a Clinicas page (not opened), so the clinic nature is unverified. Emergency number is the Montevideo line; general 092 975 774.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias las 24 horas, los 365 días del año; horario de la tienda lun–vie 9:00–20:00 h, sáb 10:00–20:00 h, dom 12:00–20:00 h."
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año; horario de la tienda lun–vie 9:00–20:00 h, sáb 10:00–20:00 h, dom 12:00–20:00 h.",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; orario del negozio lun–ven 9:00–20:00, sab 10:00–20:00, dom 12:00–20:00."
       }
     },
     {
@@ -160,7 +166,8 @@
       "note": "Salto emergency number from the same Puntovet emergency page; no Salto address on that page.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias)."
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias).",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza)."
       }
     },
     {
@@ -177,7 +184,8 @@
       "note": "Canelones emergency number from the same Puntovet emergency page; no address on that page.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias)."
+        "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias).",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza)."
       }
     },
     {
@@ -195,7 +203,8 @@
       "note": "Phone is the 'Urgencias (24 horas)' line; consultations WhatsApp 091 929 271, administration 092 426 638.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias y hospitalización las 24 horas, los 7 días de la semana; consultas lun–vie 9:30–19:00 h, sáb 9:00–14:00 h."
+        "es": "Urgencias y hospitalización las 24 horas, los 7 días de la semana; consultas lun–vie 9:30–19:00 h, sáb 9:00–14:00 h.",
+        "it": "Urgenze e ricoveri 24 ore su 24, 7 giorni su 7; visite lun–ven 9:30–19:00, sab 9:00–14:00."
       }
     },
     {
@@ -213,7 +222,8 @@
       "note": "Page never says 24 h. Clinic landline 42 49 5599; consultations WhatsApp 098 924 066.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–sáb 10:00–19:00 h; domingos solo urgencias. Línea de urgencias (solo llamadas), llama antes de ir."
+        "es": "Lun–sáb 10:00–19:00 h; domingos solo urgencias. Línea de urgencias (solo llamadas), llama antes de ir.",
+        "it": "Lun–sab 10:00–19:00; domenica solo urgenze. Linea d'emergenza (solo chiamate), telefonare in anticipo."
       }
     },
     {
@@ -231,7 +241,8 @@
       "note": "Page: 'Disponibilidad las veinticuatro horas del dia, los 7 dias de la semana' with emergency mobile 091 510 101. General contact 091 221 368.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas, los 7 días de la semana; horario habitual lun–vie 8:30–12:30 y 15:00–18:00 h, sáb 16:00–18:00 h."
+        "es": "Urgencias las 24 horas, los 7 días de la semana; horario habitual lun–vie 8:30–12:30 y 15:00–18:00 h, sáb 16:00–18:00 h.",
+        "it": "Urgenze 24 ore su 24, 7 giorni su 7; orario regolare lun–ven 8:30–12:30 e 15:00–18:00, sab 16:00–18:00."
       }
     },
     {
@@ -249,7 +260,8 @@
       "note": "Page lists 'Clinica y Urgencias: 091 070 439' but no 24 h claim. Other phone 099 56 08 90.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Clínica de animales pequeños con línea de urgencias; lun–vie 7:00–12:00 y 14:00–18:00 h, sáb 7:00–12:00 h; llama antes de ir."
+        "es": "Clínica de animales pequeños con línea de urgencias; lun–vie 7:00–12:00 y 14:00–18:00 h, sáb 7:00–12:00 h; llama antes de ir.",
+        "it": "Clinica per piccoli animali con linea d'emergenza; lun–ven 7:00–12:00 e 14:00–18:00, sab 7:00–12:00; telefonare in anticipo."
       }
     },
     {
@@ -266,7 +278,8 @@
       "note": "Casa Central; page does not say whether it treats small animals (general veterinaria). Mobile 099 71 95 26.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–vie 7:00–12:00 y 14:00–18:30 h, sáb 7:00–12:00 h (el horario de tarde en verano cambia ligeramente)."
+        "es": "Lun–vie 7:00–12:00 y 14:00–18:30 h, sáb 7:00–12:00 h (el horario de tarde en verano cambia ligeramente).",
+        "it": "Lun–ven 7:00–12:00 e 14:00–18:30, sab 7:00–12:00 (gli orari pomeridiani estivi variano leggermente)."
       }
     },
     {
@@ -284,7 +297,8 @@
       "note": "Contact page has no hours and no emergency/24 h mention. WhatsApp +598 98 306 294. Removed from duty: Hours not published; call ahead.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama antes de ir."
+        "es": "Llama antes de ir.",
+        "it": "Telefonare in anticipo."
       }
     },
     {
@@ -302,7 +316,8 @@
       "note": "Page has no emergency/24 h mention. Removed from duty: Monday to Friday 9:00-13:00 and 15:00-19:00, Saturday 9:00-13:00; no emergency service stated, call ahead.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–13:00 h; llama antes de ir."
+        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–13:00 h; llama antes de ir.",
+        "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–13:00; telefonare in anticipo."
       }
     },
     {
@@ -319,7 +334,8 @@
       "note": "Official page: 'las 24 horas del dia'; line 1950 ext. 5000. Aimed at street accidents and families without means; the owner takes responsibility for the animal afterwards. Address is the IM head office from the page.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio municipal de urgencias las 24 horas para animales heridos en la vía pública y para animales salvajes o exóticos; no es una clínica general. WhatsApp 099 019 500 todos los días 6:00–24:00 h."
+        "es": "Servicio municipal de urgencias las 24 horas para animales heridos en la vía pública y para animales salvajes o exóticos; no es una clínica general. WhatsApp 099 019 500 todos los días 6:00–24:00 h.",
+        "it": "Servizio comunale di pronto soccorso 24 ore su 24 per animali feriti su strada pubblica e per animali selvatici o esotici; non è una clinica generica. WhatsApp 099 019 500 tutti i giorni 6:00–24:00."
       }
     },
     {
@@ -337,7 +353,8 @@
       "note": "Page: 'Atencion emergencias las 24 horas del dia', 'Hospital veterinario'. Page names only 'Lagomar' (a district of Ciudad de la Costa), not the city. Night/day emergency hours inside the affiliation plans are contradictory (20-9 h vs 9-20 h) so only the general 24 h sentence is used. Phone is also WhatsApp.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas; consultas de día hasta las 20:00, de lunes a sábado."
+        "es": "Urgencias las 24 horas; consultas de día hasta las 20:00, de lunes a sábado.",
+        "it": "Pronto soccorso 24 ore su 24; visite diurne fino alle 20:00 da lunedì a sabato."
       }
     }
   ],

@@ -178,7 +178,8 @@
         "hr": "Hitni slučajevi primaju se 0–24 bez prethodne najave; osoblje hitne službe ne može se javljati na telefon",
         "de": "Notfallpatienten werden rund um die Uhr ohne vorherigen Anruf aufgenommen; das Notfallpersonal kann keine Anrufe entgegennehmen",
         "fr": "Urgences accueillies 24 h/24 sans appel préalable ; l’équipe d’urgence ne peut pas répondre au téléphone",
-        "es": "Urgencias atendidas de 0 a 24 h sin llamar antes; el personal de urgencias no puede atender llamadas"
+        "es": "Urgencias atendidas de 0 a 24 h sin llamar antes; el personal de urgencias no puede atender llamadas",
+        "it": "Pazienti d'urgenza accettati 24 ore su 24 senza telefonare prima; il personale del pronto soccorso non può rispondere al telefono"
       },
       "small_animals": true,
       "url": "https://www.vef.unizg.hr/en/services/university-veterinary-hospital/",
@@ -201,7 +202,8 @@
         "hr": "Hitna/dežurna linija 060 600 100 (radnim danima 20:00–08:00, subotom od 13:30, nedjeljom i blagdanima); redovno radno vrijeme pon–pet 8–20, sub 8:30–13:30",
         "de": "Notfall-/Bereitschaftsnummer 060 600 100 (Mo–Fr 20–8 Uhr, Sa ab 13.30 Uhr, So und feiertags); reguläre Sprechzeiten Mo–Fr 8–20 Uhr, Sa 8.30–13.30 Uhr",
         "fr": "Ligne d’urgence et de garde : 060 600 100 (en semaine 20 h–8 h, sam. à partir de 13 h 30, dim. et jours fériés) ; horaires habituels : lun.–ven. 8 h–20 h, sam. 8 h 30–13 h 30",
-        "es": "Línea de urgencias/guardia 060 600 100 (de lunes a viernes de 20:00 a 8:00 h, sábado desde las 13:30, domingos y festivos); horario habitual de lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 13:30 h"
+        "es": "Línea de urgencias/guardia 060 600 100 (de lunes a viernes de 20:00 a 8:00 h, sábado desde las 13:30, domingos y festivos); horario habitual de lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 13:30 h",
+        "it": "Linea urgenze/guardia 060 600 100 (giorni feriali 20:00–8:00, sab dalle 13:30, dom e festivi); orario ordinario lun–ven 8–20, sab 8:30–13:30"
       },
       "small_animals": true,
       "url": "https://vetti-buba.hr/en/",
@@ -224,7 +226,8 @@
         "hr": "pon–pet 8–20, sub 9–14, ned zatvoreno; hitni slučajevi: klinika Buba 060 600 100",
         "de": "Mo–Fr 8–20 Uhr, Sa 9–14 Uhr, So geschlossen; Notfälle: Klinik Buba 060 600 100",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h, fermé le dimanche ; urgences : clinique Buba, 060 600 100",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 14:00 h, domingo cerrado; urgencias: clínica Buba 060 600 100"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 14:00 h, domingo cerrado; urgencias: clínica Buba 060 600 100",
+        "it": "Lun–ven 8–20, sab 9–14, dom chiuso; urgenze: clinica Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://vetti-buba.hr/en/",
@@ -245,7 +248,8 @@
         "hr": "Hitni prijem 0–24 uz prethodni poziv na 098 214 099; pon–pet 9–12 i 16–20, sub 9–12",
         "de": "Notaufnahme rund um die Uhr nach vorherigem Anruf unter 098 214 099; Mo–Fr 9–12 und 16–20 Uhr, Sa 9–12 Uhr",
         "fr": "Admission des urgences 24 h/24 après appel au 098 214 099 ; lun.–ven. 9 h–12 h et 16 h–20 h, sam. 9 h–12 h",
-        "es": "Ingreso de urgencias de 0 a 24 h llamando antes al 098 214 099; de lunes a viernes de 9:00 a 12:00 y de 16:00 a 20:00 h, sábado de 9:00 a 12:00 h"
+        "es": "Ingreso de urgencias de 0 a 24 h llamando antes al 098 214 099; de lunes a viernes de 9:00 a 12:00 y de 16:00 a 20:00 h, sábado de 9:00 a 12:00 h",
+        "it": "Ricovero d'urgenza 24 ore su 24 previa telefonata al 098 214 099; lun–ven 9–12 e 16–20, sab 9–12"
       },
       "small_animals": true,
       "url": "https://veterinarska-bolnica.hr/",
@@ -268,7 +272,8 @@
         "hr": "Hitne intervencije 0–24 (mobitel na web-stranici ambulante); pon–pet 9–19:30, sub 9–12",
         "de": "Notfalleinsätze rund um die Uhr (Mobilnummer auf der Website der Klinik); Mo–Fr 9–19.30 Uhr, Sa 9–12 Uhr",
         "fr": "Interventions d’urgence 24 h/24 (numéro de portable sur le site de la clinique) ; lun.–ven. 9 h–19 h 30, sam. 9 h–12 h",
-        "es": "Intervenciones de urgencia de 0 a 24 h (móvil en la web de la clínica); de lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 12:00 h"
+        "es": "Intervenciones de urgencia de 0 a 24 h (móvil en la web de la clínica); de lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 12:00 h",
+        "it": "Interventi d'urgenza 24 ore su 24 (numero di cellulare sul sito della clinica); lun–ven 9–19:30, sab 9–12"
       },
       "small_animals": true,
       "url": "https://morna.hr/",
@@ -291,7 +296,8 @@
         "hr": "Dežurstvo 0–24 na +385 1 3095 340; pon–pet 9–19:30, sub 9–11:30",
         "de": "Bereitschaftsdienst rund um die Uhr unter +385 1 3095 340; Mo–Fr 9–19.30 Uhr, Sa 9–11.30 Uhr",
         "fr": "Garde 24 h/24 au +385 1 3095 340 ; lun.–ven. 9 h–19 h 30, sam. 9 h–11 h 30",
-        "es": "Guardia de 0 a 24 h en el +385 1 3095 340; de lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 11:30 h"
+        "es": "Guardia de 0 a 24 h en el +385 1 3095 340; de lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 11:30 h",
+        "it": "Servizio di guardia 24 ore su 24 al +385 1 3095 340; lun–ven 9–19:30, sab 9–11:30"
       },
       "small_animals": true,
       "url": "https://www.fabela.hr/",
@@ -313,7 +319,8 @@
         "hr": "pon–pet 8–20, sub 9–13; hitni slučajevi 0–24 preko Veterinarske klinike Buba 060 600 100",
         "de": "Mo–Fr 8–20 Uhr, Sa 9–13 Uhr; Notfälle rund um die Uhr über die Veterinarska klinika Buba 060 600 100",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–13 h ; urgences 24 h/24 via la clinique Buba, 060 600 100",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 13:00 h; urgencias de 0 a 24 h a través de Veterinarska klinika Buba 060 600 100"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 13:00 h; urgencias de 0 a 24 h a través de Veterinarska klinika Buba 060 600 100",
+        "it": "Lun–ven 8–20, sab 9–13; urgenze 24 ore su 24 tramite Veterinarska klinika Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.markovic.hr/",
@@ -335,7 +342,8 @@
         "hr": "pon–pet 7–20, sub 8–14, ned/blagdani 8–12; izvan radnog vremena: Veterinarska klinika Buba 060 600 100; veterinar u pripravnosti 098 339 671",
         "de": "Mo–Fr 7–20 Uhr, Sa 8–14 Uhr, So und feiertags 8–12 Uhr; außerhalb der Sprechzeiten: Veterinarska klinika Buba 060 600 100; Tierarzt in Bereitschaft 098 339 671",
         "fr": "Lun.–ven. 7 h–20 h, sam. 8 h–14 h, dim. et jours fériés 8 h–12 h ; en dehors des heures d’ouverture : clinique Buba, 060 600 100 ; vétérinaire d’astreinte : 098 339 671",
-        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 14:00 h, domingos y festivos de 8:00 a 12:00 h; fuera de horario: Veterinarska klinika Buba 060 600 100; veterinario de guardia localizable en el 098 339 671"
+        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 14:00 h, domingos y festivos de 8:00 a 12:00 h; fuera de horario: Veterinarska klinika Buba 060 600 100; veterinario de guardia localizable en el 098 339 671",
+        "it": "Lun–ven 7–20, sab 8–14, dom/festivi 8–12; fuori orario: Veterinarska klinika Buba 060 600 100; veterinario reperibile 098 339 671"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -356,7 +364,8 @@
         "hr": "pon–pet 7–20, sub 8–14, ned/blagdani zatvoreno; izvan radnog vremena: Buba 060 600 100",
         "de": "Mo–Fr 7–20 Uhr, Sa 8–14 Uhr, So und feiertags geschlossen; außerhalb der Sprechzeiten: Buba 060 600 100",
         "fr": "Lun.–ven. 7 h–20 h, sam. 8 h–14 h, fermé dim. et jours fériés ; en dehors des heures d’ouverture : Buba, 060 600 100",
-        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 14:00 h, domingos y festivos cerrado; fuera de horario: Buba 060 600 100"
+        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 14:00 h, domingos y festivos cerrado; fuera de horario: Buba 060 600 100",
+        "it": "Lun–ven 7–20, sab 8–14, dom/festivi chiuso; fuori orario: Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -377,7 +386,8 @@
         "hr": "pon–pet 7–20, sub 8–13, ned/blagdani zatvoreno; izvan radnog vremena: Buba 060 600 100",
         "de": "Mo–Fr 7–20 Uhr, Sa 8–13 Uhr, So und feiertags geschlossen; außerhalb der Sprechzeiten: Buba 060 600 100",
         "fr": "Lun.–ven. 7 h–20 h, sam. 8 h–13 h, fermé dim. et jours fériés ; en dehors des heures d’ouverture : Buba, 060 600 100",
-        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 13:00 h, domingos y festivos cerrado; fuera de horario: Buba 060 600 100"
+        "es": "De lunes a viernes de 7:00 a 20:00 h, sábado de 8:00 a 13:00 h, domingos y festivos cerrado; fuera de horario: Buba 060 600 100",
+        "it": "Lun–ven 7–20, sab 8–13, dom/festivi chiuso; fuori orario: Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -398,7 +408,8 @@
         "hr": "pon–pet 8–20, sub 9–13; broj za hitne slučajeve 099 250 3208",
         "de": "Mo–Fr 8–20 Uhr, Sa 9–13 Uhr; Notfallnummer 099 250 3208",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–13 h ; numéro d’urgence : 099 250 3208",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 13:00 h; número de urgencias 099 250 3208"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 9:00 a 13:00 h; número de urgencias 099 250 3208",
+        "it": "Lun–ven 8–20, sab 9–13; numero urgenze 099 250 3208"
       },
       "small_animals": true,
       "url": "https://vetiva.hr/",
@@ -420,7 +431,8 @@
         "hr": "Pregledi samo uz prethodnu najavu, osim u hitnim slučajevima; hitni slučajevi/dežurstvo 091 633 8896",
         "de": "Nur nach Terminvereinbarung, außer bei Notfällen; Notfall-/Bereitschaftsnummer 091 633 8896",
         "fr": "Sur rendez-vous, sauf urgences ; urgences et astreinte : 091 633 8896",
-        "es": "Solo con cita previa salvo urgencias; urgencias/guardia 091 633 8896"
+        "es": "Solo con cita previa salvo urgencias; urgencias/guardia 091 633 8896",
+        "it": "Appuntamento obbligatorio tranne per le urgenze; urgenze/reperibilità 091 633 8896"
       },
       "small_animals": true,
       "url": "https://vetpoint.hr/",
@@ -441,7 +453,8 @@
         "hr": "pon–pet 9–12 i 16–20, sub 8–13; hitni pozivi 098 411 042",
         "de": "Mo–Fr 9–12 und 16–20 Uhr, Sa 8–13 Uhr; Notrufe 098 411 042",
         "fr": "Lun.–ven. 9 h–12 h et 16 h–20 h, sam. 8 h–13 h ; appels d’urgence : 098 411 042",
-        "es": "De lunes a viernes de 9:00 a 12:00 y de 16:00 a 20:00 h, sábado de 8:00 a 13:00 h; llamadas de urgencias 098 411 042"
+        "es": "De lunes a viernes de 9:00 a 12:00 y de 16:00 a 20:00 h, sábado de 8:00 a 13:00 h; llamadas de urgencias 098 411 042",
+        "it": "Lun–ven 9–12 e 16–20, sab 8–13; chiamate urgenti 098 411 042"
       },
       "small_animals": true,
       "url": "https://www.vet-makar.com/",
@@ -463,7 +476,8 @@
         "hr": "pon–pet 9–20, sub 9–11:30, ned/blagdani zatvoreno",
         "de": "Mo–Fr 9–20 Uhr, Sa 9–11.30 Uhr, So und feiertags geschlossen",
         "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–11 h 30, fermé dim. et jours fériés",
-        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 11:30 h, domingos y festivos cerrado"
+        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 11:30 h, domingos y festivos cerrado",
+        "it": "Lun–ven 9–20, sab 9–11:30, dom/festivi chiuso"
       },
       "small_animals": true,
       "url": "https://macjikasalj.hr/",
@@ -484,7 +498,8 @@
         "hr": "Hitne intervencije 0–24 h preko dežurnih mobitela objavljenih na web-stranici ambulante; ljetno radno vrijeme pon–pet 8–13 i 17–20, sub 9–13, ned 9–11",
         "de": "Notfalleinsätze rund um die Uhr über die auf der Website der Klinik veröffentlichten Bereitschaftsnummern; Sommerzeiten Mo–Fr 8–13 und 17–20 Uhr, Sa 9–13 Uhr, So 9–11 Uhr",
         "fr": "Interventions d’urgence 24 h/24 via les portables de garde indiqués sur le site de la clinique ; horaires d’été : lun.–ven. 8 h–13 h et 17 h–20 h, sam. 9 h–13 h, dim. 9 h–11 h",
-        "es": "Intervenciones de urgencia de 0 a 24 h a través de los móviles de guardia publicados en la web de la clínica; horario de verano de lunes a viernes de 8:00 a 13:00 y de 17:00 a 20:00 h, sábado de 9:00 a 13:00 h, domingo de 9:00 a 11:00 h"
+        "es": "Intervenciones de urgencia de 0 a 24 h a través de los móviles de guardia publicados en la web de la clínica; horario de verano de lunes a viernes de 8:00 a 13:00 y de 17:00 a 20:00 h, sábado de 9:00 a 13:00 h, domingo de 9:00 a 11:00 h",
+        "it": "Interventi d'urgenza 24 ore su 24 tramite i cellulari di reperibilità pubblicati sul sito della clinica; orario estivo lun–ven 8–13 e 17–20, sab 9–13, dom 9–11"
       },
       "small_animals": true,
       "url": "https://www.ava-vet.hr/",
@@ -507,7 +522,8 @@
         "hr": "pon–pet 13–20, sub 10–13, ned 0–24; kontakt za hitne slučajeve +385 91 789 7777",
         "de": "Mo–Fr 13–20 Uhr, Sa 10–13 Uhr, So rund um die Uhr; Notfallkontakt +385 91 789 7777",
         "fr": "Lun.–ven. 13 h–20 h, sam. 10 h–13 h, dim. 24 h/24 ; contact d’urgence : +385 91 789 7777",
-        "es": "De lunes a viernes de 13:00 a 20:00 h, sábado de 10:00 a 13:00 h, domingo de 0 a 24 h; contacto de urgencias +385 91 789 7777"
+        "es": "De lunes a viernes de 13:00 a 20:00 h, sábado de 10:00 a 13:00 h, domingo de 0 a 24 h; contacto de urgencias +385 91 789 7777",
+        "it": "Lun–ven 13–20, sab 10–13, dom 24 ore su 24; contatto per urgenze +385 91 789 7777"
       },
       "small_animals": true,
       "url": "https://pet-it.com.hr/",
@@ -529,7 +545,8 @@
         "hr": "pon–pet 8:30–12 i 16–20, sub 8:30–12; hitni slučajevi 091 733 8896",
         "de": "Mo–Fr 8.30–12 und 16–20 Uhr, Sa 8.30–12 Uhr; Notfälle 091 733 8896",
         "fr": "Lun.–ven. 8 h 30–12 h et 16 h–20 h, sam. 8 h 30–12 h ; urgences : 091 733 8896",
-        "es": "De lunes a viernes de 8:30 a 12:00 y de 16:00 a 20:00 h, sábado de 8:30 a 12:00 h; urgencias 091 733 8896"
+        "es": "De lunes a viernes de 8:30 a 12:00 y de 16:00 a 20:00 h, sábado de 8:30 a 12:00 h; urgencias 091 733 8896",
+        "it": "Lun–ven 8:30–12 e 16–20, sab 8:30–12; urgenze 091 733 8896"
       },
       "small_animals": true,
       "url": "https://www.vetpoint40.hr/",
@@ -550,7 +567,8 @@
         "hr": "Dežurstvo 0–24 uz prethodni poziv na 060 600 900; pon–pet 8–20, sub 8–13",
         "de": "Bereitschaftsdienst rund um die Uhr nach vorherigem Anruf unter 060 600 900; Mo–Fr 8–20 Uhr, Sa 8–13 Uhr",
         "fr": "Garde 24 h/24 après appel préalable au 060 600 900 ; lun.–ven. 8 h–20 h, sam. 8 h–13 h",
-        "es": "Guardia de 0 a 24 h llamando antes al 060 600 900; de lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h"
+        "es": "Guardia de 0 a 24 h llamando antes al 060 600 900; de lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h",
+        "it": "Reperibilità 24 ore su 24 previa telefonata al 060 600 900; lun–ven 8–20, sab 8–13"
       },
       "small_animals": true,
       "url": "https://vetti-split.hr/",
@@ -573,7 +591,8 @@
         "hr": "pon–pet 8–20, sub 8–12",
         "de": "Mo–Fr 8–20 Uhr, Sa 8–12 Uhr",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–12 h",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 12:00 h"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 12:00 h",
+        "it": "Lun–ven 8–20, sab 8–12"
       },
       "small_animals": true,
       "url": "https://www.ambulantabosnjak.hr/",
@@ -594,7 +613,8 @@
         "hr": "pon–pet 8–19, sub 8–13",
         "de": "Mo–Fr 8–19 Uhr, Sa 8–13 Uhr",
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–13 h",
-        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 13:00 h"
+        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 13:00 h",
+        "it": "Lun–ven 8–19, sab 8–13"
       },
       "url": "https://likomed.hr/",
       "source_url": "https://likomed.hr/",
@@ -627,7 +647,8 @@
         "hr": "pon–pet 7–21, sub 8–14, ned/blagdani zatvoreno; mobitel 091 214 8822",
         "de": "Mo–Fr 7–21 Uhr, Sa 8–14 Uhr, So und feiertags geschlossen; Mobil 091 214 8822",
         "fr": "Lun.–ven. 7 h–21 h, sam. 8 h–14 h, fermé dim. et jours fériés ; mobile : 091 214 8822",
-        "es": "De lunes a viernes de 7:00 a 21:00 h, sábado de 8:00 a 14:00 h, domingos y festivos cerrado; móvil 091 214 8822"
+        "es": "De lunes a viernes de 7:00 a 21:00 h, sábado de 8:00 a 14:00 h, domingos y festivos cerrado; móvil 091 214 8822",
+        "it": "Lun–ven 7–21, sab 8–14, dom/festivi chiuso; cellulare 091 214 8822"
       },
       "small_animals": true,
       "url": "https://veterinarska.hr/klinika-rijeka/",
@@ -712,7 +733,8 @@
         "hr": "Hitni slučajevi +385 91 567 1918",
         "de": "Notfälle +385 91 567 1918",
         "fr": "Urgences : +385 91 567 1918",
-        "es": "Urgencias +385 91 567 1918"
+        "es": "Urgencias +385 91 567 1918",
+        "it": "Urgenze +385 91 567 1918"
       },
       "small_animals": true,
       "url": "https://veterinar-polic.com/",
@@ -733,7 +755,8 @@
         "hr": "Hitni slučajevi 091 762 6462",
         "de": "Notfälle 091 762 6462",
         "fr": "Urgences : 091 762 6462",
-        "es": "Urgencias 091 762 6462"
+        "es": "Urgencias 091 762 6462",
+        "it": "Urgenze 091 762 6462"
       },
       "url": "https://www.ferarica.com/",
       "source_url": "https://www.ferarica.com/",
@@ -753,7 +776,8 @@
         "hr": "Hitni slučajevi 0–24 na +385 98 334 092 (i 098 334 091 / 093); pon–pet 8–15 i 17–19, sub 8–13, ned 8–9",
         "de": "Notfälle rund um die Uhr unter +385 98 334 092 (auch 098 334 091 / 093); Mo–Fr 8–15 und 17–19 Uhr, Sa 8–13 Uhr, So 8–9 Uhr",
         "fr": "Urgences 24 h/24 au +385 98 334 092 (ou 098 334 091 / 093) ; lun.–ven. 8 h–15 h et 17 h–19 h, sam. 8 h–13 h, dim. 8 h–9 h",
-        "es": "Urgencias de 0 a 24 h en el +385 98 334 092 (también 098 334 091 / 093); de lunes a viernes de 8:00 a 15:00 y de 17:00 a 19:00 h, sábado de 8:00 a 13:00 h, domingo de 8:00 a 9:00 h"
+        "es": "Urgencias de 0 a 24 h en el +385 98 334 092 (también 098 334 091 / 093); de lunes a viernes de 8:00 a 15:00 y de 17:00 a 19:00 h, sábado de 8:00 a 13:00 h, domingo de 8:00 a 9:00 h",
+        "it": "Urgenze 24 ore su 24 al +385 98 334 092 (anche 098 334 091 / 093); lun–ven 8–15 e 17–19, sab 8–13, dom 8–9"
       },
       "small_animals": true,
       "url": "https://www.vet-rovinj.com/",
@@ -775,7 +799,8 @@
         "hr": "Hitni slučajevi 0–24 preko mobitela u Rovinju; pon–pet 9–15, sub 11–13, ned 11–12",
         "de": "Notfälle rund um die Uhr über die Mobilnummern in Rovinj; Mo–Fr 9–15 Uhr, Sa 11–13 Uhr, So 11–12 Uhr",
         "fr": "Urgences 24 h/24 via les portables de Rovinj ; lun.–ven. 9 h–15 h, sam. 11 h–13 h, dim. 11 h–12 h",
-        "es": "Urgencias de 0 a 24 h a través de los móviles de Rovinj; de lunes a viernes de 9:00 a 15:00 h, sábado de 11:00 a 13:00 h, domingo de 11:00 a 12:00 h"
+        "es": "Urgencias de 0 a 24 h a través de los móviles de Rovinj; de lunes a viernes de 9:00 a 15:00 h, sábado de 11:00 a 13:00 h, domingo de 11:00 a 12:00 h",
+        "it": "Urgenze 24 ore su 24 tramite i cellulari di Rovinj; lun–ven 9–15, sab 11–13, dom 11–12"
       },
       "small_animals": true,
       "url": "https://www.vet-rovinj.com/",
@@ -797,7 +822,8 @@
         "hr": "Hitne intervencije 0–24 h (mobiteli 098 398 003 / 098 334 403 / 099 814 5105); pon–pet 8–12 i 17–19, sub 8–12",
         "de": "Notfalleinsätze rund um die Uhr (Mobil 098 398 003 / 098 334 403 / 099 814 5105); Mo–Fr 8–12 und 17–19 Uhr, Sa 8–12 Uhr",
         "fr": "Interventions d’urgence 24 h/24 (portables : 098 398 003 / 098 334 403 / 099 814 5105) ; lun.–ven. 8 h–12 h et 17 h–19 h, sam. 8 h–12 h",
-        "es": "Intervenciones de urgencia de 0 a 24 h (móviles 098 398 003 / 098 334 403 / 099 814 5105); de lunes a viernes de 8:00 a 12:00 y de 17:00 a 19:00 h, sábado de 8:00 a 12:00 h"
+        "es": "Intervenciones de urgencia de 0 a 24 h (móviles 098 398 003 / 098 334 403 / 099 814 5105); de lunes a viernes de 8:00 a 12:00 y de 17:00 a 19:00 h, sábado de 8:00 a 12:00 h",
+        "it": "Interventi d'urgenza 24 ore su 24 (cellulari 098 398 003 / 098 334 403 / 099 814 5105); lun–ven 8–12 e 17–19, sab 8–12"
       },
       "url": "https://vetkk.hr/",
       "source_url": "https://vetkk.hr/",
@@ -831,7 +857,8 @@
         "hr": "Telefon za hitne slučajeve +385 91 521 6783 izvan radnog vremena; pon–pet 8–20, sub 8–13 i 17–20, ned/blagdani 8–10",
         "de": "Notfalltelefon +385 91 521 6783 außerhalb der Sprechzeiten; Mo–Fr 8–20 Uhr, Sa 8–13 und 17–20 Uhr, So und feiertags 8–10 Uhr",
         "fr": "Téléphone d’urgence en dehors des heures d’ouverture : +385 91 521 6783 ; lun.–ven. 8 h–20 h, sam. 8 h–13 h et 17 h–20 h, dim. et jours fériés 8 h–10 h",
-        "es": "Teléfono de urgencias +385 91 521 6783 fuera del horario laboral; de lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 y de 17:00 a 20:00 h, domingos y festivos de 8:00 a 10:00 h"
+        "es": "Teléfono de urgencias +385 91 521 6783 fuera del horario laboral; de lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 y de 17:00 a 20:00 h, domingos y festivos de 8:00 a 10:00 h",
+        "it": "Telefono urgenze +385 91 521 6783 fuori orario di lavoro; lun–ven 8–20, sab 8–13 e 17–20, dom/festivi 8–10"
       },
       "small_animals": true,
       "url": "https://veterinarska-bolnica-porec.com/en/",
@@ -889,7 +916,8 @@
         "hr": "pon–pet 7–19, sub 8–18; dežurstvo 099 2000 250 (nedjeljom/blagdanima)",
         "de": "Mo–Fr 7–19 Uhr, Sa 8–18 Uhr; Bereitschaft 099 2000 250 (sonn- und feiertags)",
         "fr": "Lun.–ven. 7 h–19 h, sam. 8 h–18 h ; astreinte : 099 2000 250 (dimanches et jours fériés)",
-        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 8:00 a 18:00 h; guardia 099 2000 250 (domingos y festivos)"
+        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 8:00 a 18:00 h; guardia 099 2000 250 (domingos y festivos)",
+        "it": "Lun–ven 7–19, sab 8–18; reperibilità 099 2000 250 (domeniche/festivi)"
       },
       "small_animals": true,
       "url": "https://vetos.hr/",
@@ -910,7 +938,8 @@
         "hr": "Hitni slučajevi 24/7 na +385 31 272 230 (izvan radnog vremena nazovi prije dolaska)",
         "de": "Notdienst rund um die Uhr unter +385 31 272 230 (außerhalb der Sprechzeiten bitte vor dem Kommen anrufen)",
         "fr": "Urgences 24 h/24, 7 j/7 au +385 31 272 230 (appelez avant de venir en dehors des heures d’ouverture)",
-        "es": "Urgencias 24/7 en el +385 31 272 230 (llama antes de ir fuera de horario)"
+        "es": "Urgencias 24/7 en el +385 31 272 230 (llama antes de ir fuera de horario)",
+        "it": "Urgenze 24 ore su 24, 7 giorni su 7 al +385 31 272 230 (fuori orario telefonare prima di venire)"
       },
       "small_animals": true,
       "url": "https://www.dr-doolitle.com.hr/",
@@ -933,7 +962,8 @@
         "hr": "Dežurni mobitel 098 411 888 (za vlastite pacijente; izvan radnog vremena samo za slučajeve opasne po život); pon/sri/pet 8–16, uto/čet 12–20",
         "de": "Bereitschaftsmobiltelefon 098 411 888 (für eigene Patienten; außerhalb der Sprechzeiten nur lebensbedrohliche Fälle); Mo/Mi/Fr 8–16 Uhr, Di/Do 12–20 Uhr",
         "fr": "Portable de garde : 098 411 888 (patients de la clinique ; en dehors des heures d’ouverture, urgences vitales uniquement) ; lun., mer., ven. 8 h–16 h, mar., jeu. 12 h–20 h",
-        "es": "Móvil de guardia 098 411 888 (pacientes propios; fuera de horario solo casos de riesgo vital); lunes, miércoles y viernes de 8:00 a 16:00 h, martes y jueves de 12:00 a 20:00 h"
+        "es": "Móvil de guardia 098 411 888 (pacientes propios; fuera de horario solo casos de riesgo vital); lunes, miércoles y viernes de 8:00 a 16:00 h, martes y jueves de 12:00 a 20:00 h",
+        "it": "Cellulare di guardia 098 411 888 (per i propri pazienti; fuori orario solo casi con pericolo di vita); lun/mer/ven 8–16, mar/gio 12–20"
       },
       "small_animals": true,
       "url": "https://vetosan.com.hr/",
@@ -954,7 +984,8 @@
         "hr": "Dežurni mobitel +385 98 33 94 00 izvan radnog vremena i vikendom; pon–pet 7:30–20, sub 7:30–12:30",
         "de": "Bereitschaftsmobiltelefon +385 98 33 94 00 außerhalb der Sprechzeiten und am Wochenende; Mo–Fr 7.30–20 Uhr, Sa 7.30–12.30 Uhr",
         "fr": "Portable d’astreinte : +385 98 33 94 00 en dehors des heures d’ouverture et le week-end ; lun.–ven. 7 h 30–20 h, sam. 7 h 30–12 h 30",
-        "es": "Móvil de guardia +385 98 33 94 00 fuera de horario y fines de semana; de lunes a viernes de 7:30 a 20:00 h, sábado de 7:30 a 12:30 h"
+        "es": "Móvil de guardia +385 98 33 94 00 fuera de horario y fines de semana; de lunes a viernes de 7:30 a 20:00 h, sábado de 7:30 a 12:30 h",
+        "it": "Cellulare di reperibilità +385 98 33 94 00 fuori orario e nei weekend; lun–ven 7:30–20, sab 7:30–12:30"
       },
       "url": "https://veterinarskastanicazadar.hr/",
       "source_url": "https://veterinarskastanicazadar.hr/",
@@ -1002,7 +1033,8 @@
         "hr": "Neprekidno dežurstvo na 099 6240 123 (20–7 h izvan radnog vremena ambulante)",
         "de": "Bereitschaftsdienst durchgehend unter 099 6240 123 (20–7 Uhr, außerhalb der Sprechzeiten)",
         "fr": "Astreinte en continu au 099 6240 123 (20 h–7 h en dehors des heures d’ouverture)",
-        "es": "Guardia sin interrupción en el 099 6240 123 (de 20 a 7 h fuera del horario de la clínica)"
+        "es": "Guardia sin interrupción en el 099 6240 123 (de 20 a 7 h fuera del horario de la clínica)",
+        "it": "Reperibilità continua al 099 6240 123 (20:00–7:00 fuori dall'orario della clinica)"
       },
       "small_animals": true,
       "url": "https://www.vsv.hr/",
@@ -1025,7 +1057,8 @@
         "hr": "pon–pet 8–20, sub 8–13; nedjeljom i blagdanima dežurstvo 0–24 h",
         "de": "Mo–Fr 8–20 Uhr, Sa 8–13 Uhr; sonn- und feiertags Bereitschaftsdienst rund um die Uhr",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–13 h ; dimanches et jours fériés : garde 24 h/24",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h; domingos y festivos guardia de 0 a 24 h"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h; domingos y festivos guardia de 0 a 24 h",
+        "it": "Lun–ven 8–20, sab 8–13; domeniche e festivi servizio di guardia 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.vsklc.hr/",
@@ -1047,7 +1080,8 @@
         "hr": "pon–pet 8–19, sub 8–12",
         "de": "Mo–Fr 8–19 Uhr, Sa 8–12 Uhr",
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–12 h",
-        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 12:00 h"
+        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 12:00 h",
+        "it": "Lun–ven 8–19, sab 8–12"
       },
       "small_animals": true,
       "url": "https://veterina-petplus.hr/",
@@ -1081,7 +1115,8 @@
         "hr": "Hitni slučajevi 0–24; pon–pet 8–19, sub 8–12, ned 9–11",
         "de": "Notfälle rund um die Uhr; Mo–Fr 8–19 Uhr, Sa 8–12 Uhr, So 9–11 Uhr",
         "fr": "Urgences 24 h/24 ; lun.–ven. 8 h–19 h, sam. 8 h–12 h, dim. 9 h–11 h",
-        "es": "Urgencias de 0 a 24 h; de lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 12:00 h, domingo de 9:00 a 11:00 h"
+        "es": "Urgencias de 0 a 24 h; de lunes a viernes de 8:00 a 19:00 h, sábado de 8:00 a 12:00 h, domingo de 9:00 a 11:00 h",
+        "it": "Urgenze 24 ore su 24; lun–ven 8–19, sab 8–12, dom 9–11"
       },
       "small_animals": true,
       "url": "https://veterinarska-koprivnica.hr/",
@@ -1116,7 +1151,8 @@
         "hr": "pon–pet 7–19, sub 7–17, ned 8–12",
         "de": "Mo–Fr 7–19 Uhr, Sa 7–17 Uhr, So 8–12 Uhr",
         "fr": "Lun.–ven. 7 h–19 h, sam. 7 h–17 h, dim. 8 h–12 h",
-        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 7:00 a 17:00 h, domingo de 8:00 a 12:00 h"
+        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 7:00 a 17:00 h, domingo de 8:00 a 12:00 h",
+        "it": "Lun–ven 7–19, sab 7–17, dom 8–12"
       },
       "small_animals": true,
       "url": "https://veterinarskastanicavk.hr/",
@@ -1138,7 +1174,8 @@
         "hr": "Hitni slučajevi 24 h, 7 dana u tjednu (mobitel 099 441 0061)",
         "de": "Notdienst täglich rund um die Uhr (Mobil 099 441 0061)",
         "fr": "Urgences 24 h/24, 7 j/7 (portable : 099 441 0061)",
-        "es": "Urgencias 24 h, 7 días (móvil 099 441 0061)"
+        "es": "Urgencias 24 h, 7 días (móvil 099 441 0061)",
+        "it": "Urgenze 24 ore su 24, 7 giorni su 7 (cellulare 099 441 0061)"
       },
       "small_animals": true,
       "url": "https://vsvu.hr/",
@@ -1160,7 +1197,8 @@
         "hr": "Dežurni telefon +385 91 363 8080; pon–pet 8–12 i 16–19, sub 8–12, ned 8–9",
         "de": "Bereitschaftstelefon +385 91 363 8080; Mo–Fr 8–12 und 16–19 Uhr, Sa 8–12 Uhr, So 8–9 Uhr",
         "fr": "Téléphone de garde : +385 91 363 8080 ; lun.–ven. 8 h–12 h et 16 h–19 h, sam. 8 h–12 h, dim. 8 h–9 h",
-        "es": "Teléfono de guardia +385 91 363 8080; de lunes a viernes de 8:00 a 12:00 y de 16:00 a 19:00 h, sábado de 8:00 a 12:00 h, domingo de 8:00 a 9:00 h"
+        "es": "Teléfono de guardia +385 91 363 8080; de lunes a viernes de 8:00 a 12:00 y de 16:00 a 19:00 h, sábado de 8:00 a 12:00 h, domingo de 8:00 a 9:00 h",
+        "it": "Telefono di guardia +385 91 363 8080; lun–ven 8–12 e 16–19, sab 8–12, dom 8–9"
       },
       "small_animals": true,
       "url": "https://www.vet-ambulanta-jug.hr/",
@@ -1182,7 +1220,8 @@
         "hr": "pon–pet 7–14, sub 7–12",
         "de": "Mo–Fr 7–14 Uhr, Sa 7–12 Uhr",
         "fr": "Lun.–ven. 7 h–14 h, sam. 7 h–12 h",
-        "es": "De lunes a viernes de 7:00 a 14:00 h, sábado de 7:00 a 12:00 h"
+        "es": "De lunes a viernes de 7:00 a 14:00 h, sábado de 7:00 a 12:00 h",
+        "it": "Lun–ven 7–14, sab 7–12"
       },
       "small_animals": true,
       "url": "https://www.va-gospic.hr/",
@@ -1203,7 +1242,8 @@
         "hr": "pon–pet 7–19, sub 7–12, ned/blagdani 7–9; ljubimci se liječe samo u ambulanti u radno vrijeme",
         "de": "Mo–Fr 7–19 Uhr, Sa 7–12 Uhr, So und feiertags 7–9 Uhr; Haustiere werden nur in der Klinik und während der Sprechzeiten behandelt",
         "fr": "Lun.–ven. 7 h–19 h, sam. 7 h–12 h, dim. et jours fériés 7 h–9 h ; les animaux ne sont soignés qu’à la clinique, pendant les heures d’ouverture",
-        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 7:00 a 12:00 h, domingos y festivos de 7:00 a 9:00 h; las mascotas se atienden solo en la clínica en horario laboral"
+        "es": "De lunes a viernes de 7:00 a 19:00 h, sábado de 7:00 a 12:00 h, domingos y festivos de 7:00 a 9:00 h; las mascotas se atienden solo en la clínica en horario laboral",
+        "it": "Lun–ven 7–19, sab 7–12, dom/festivi 7–9; animali curati solo in clinica durante l'orario di lavoro"
       },
       "small_animals": true,
       "url": "https://www.anima-vet.hr/",
@@ -1224,7 +1264,8 @@
         "hr": "pon–pet 08–20, sub 08–12, ned zatvoreno",
         "de": "Mo–Fr 8–20 Uhr, Sa 8–12 Uhr, So geschlossen.",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–12 h, fermé le dimanche.",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 12:00 h, domingo cerrado."
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 12:00 h, domingo cerrado.",
+        "it": "Lun–ven 8–20, sab 8–12, dom chiuso."
       },
       "small_animals": true,
       "url": "https://vet-svijet.hr/",
@@ -1245,7 +1286,8 @@
         "hr": "pon–pet 09–20, sub 09–13; dežurna linija 099 3887542 svaki dan 0–24",
         "de": "Mo–Fr 9–20 Uhr, Sa 9–13 Uhr; Bereitschaftstelefon 099 3887542 täglich rund um die Uhr",
         "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–13 h ; ligne de garde 099 3887542 tous les jours 24 h/24",
-        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 13:00 h; línea de guardia 099 3887542 todos los días de 0 a 24 h"
+        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 13:00 h; línea de guardia 099 3887542 todos los días de 0 a 24 h",
+        "it": "Lun–ven 9–20, sab 9–13; linea di guardia 099 3887542 tutti i giorni 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.veterinabranimir.hr/",
@@ -1268,7 +1310,8 @@
         "hr": "pon–pet 09–20, sub 09–13; zajednička dežurna linija 099 3887542 svaki dan 0–24",
         "de": "Mo–Fr 9–20 Uhr, Sa 9–13 Uhr; gemeinsames Bereitschaftstelefon 099 3887542 täglich rund um die Uhr",
         "fr": "Lun.–ven. 9 h–20 h, sam. 9 h–13 h ; ligne de garde commune 099 3887542 tous les jours 24 h/24",
-        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 13:00 h; línea de guardia compartida 099 3887542 todos los días de 0 a 24 h"
+        "es": "De lunes a viernes de 9:00 a 20:00 h, sábado de 9:00 a 13:00 h; línea de guardia compartida 099 3887542 todos los días de 0 a 24 h",
+        "it": "Lun–ven 9–20, sab 9–13; linea di guardia condivisa 099 3887542 tutti i giorni 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.veterinabranimir.hr/",
@@ -1289,7 +1332,8 @@
       "duty_i18n": {
         "de": "Bitte Öffnungszeiten telefonisch bestätigen.",
         "fr": "Appelez pour confirmer les horaires.",
-        "es": "Llama para confirmar el horario."
+        "es": "Llama para confirmar el horario.",
+        "it": "Chiamare per confermare gli orari."
       },
       "small_animals": true,
       "url": "https://ljubimac.net/",
@@ -1311,7 +1355,8 @@
         "hr": "Samo uz prethodnu najavu: pon–pet 08:30–11:30 i 16:00–19:30, sub 09–12; ned/blagdani hitni slučajevi samo po prethodnom dogovoru",
         "de": "Nur nach Terminvereinbarung: Mo–Fr 8.30–11.30 und 16–19.30 Uhr, Sa 9–12 Uhr; So und feiertags nur Notfälle nach vorheriger Absprache",
         "fr": "Uniquement sur rendez-vous : lun.–ven. 8 h 30–11 h 30 et 16 h–19 h 30, sam. 9 h–12 h ; dim. et jours fériés : urgences uniquement, sur accord préalable",
-        "es": "Solo con cita previa: de lunes a viernes de 8:30 a 11:30 y de 16:00 a 19:30 h, sábado de 9:00 a 12:00 h; domingos y festivos solo urgencias previo acuerdo"
+        "es": "Solo con cita previa: de lunes a viernes de 8:30 a 11:30 y de 16:00 a 19:30 h, sábado de 9:00 a 12:00 h; domingos y festivos solo urgencias previo acuerdo",
+        "it": "Solo su appuntamento: lun–ven 8:30–11:30 e 16:00–19:30, sab 9–12; dom/festivi solo urgenze previo accordo"
       },
       "url": "https://www.galavet.hr/",
       "source_url": "https://www.galavet.hr/",
@@ -1331,7 +1376,8 @@
         "hr": "pon–pet 09–19, sub 09–13; izvan radnog vremena nazovi Veterinarsku kliniku Buba 060 600 100",
         "de": "Mo–Fr 9–19 Uhr, Sa 9–13 Uhr; außerhalb der Sprechzeiten bitte die Veterinarska klinika Buba anrufen: 060 600 100",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–13 h ; en dehors des heures d’ouverture : appelez la clinique Buba, 060 600 100",
-        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 13:00 h; fuera de horario: llama a Veterinarska klinika Buba 060 600 100"
+        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 13:00 h; fuera de horario: llama a Veterinarska klinika Buba 060 600 100",
+        "it": "Lun–ven 9–19, sab 9–13; dopo l'orario: chiamare Veterinarska klinika Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://klinika-kreszinger.com/",
@@ -1353,7 +1399,8 @@
         "hr": "pon–pet 08–12 i 15–19, sub 8–14; dežurstvo za male životinje 19:30–08:00 na 091 2753 102; dežurstvo za velike životinje 0–24 na 091 2753 103",
         "de": "Mo–Fr 8–12 und 15–19 Uhr, Sa 8–14 Uhr; Bereitschaft für Kleintiere 19.30–8 Uhr unter 091 2753 102; Bereitschaft für Großtiere rund um die Uhr unter 091 2753 103",
         "fr": "Lun.–ven. 8 h–12 h et 15 h–19 h, sam. 8 h–14 h ; astreinte petits animaux 19 h 30–8 h au 091 2753 102 ; garde grands animaux 24 h/24 au 091 2753 103",
-        "es": "De lunes a viernes de 8:00 a 12:00 y de 15:00 a 19:00 h, sábado de 8:00 a 14:00 h; guardia de mascotas de 19:30 a 8:00 h en el 091 2753 102; guardia de animales grandes de 0 a 24 h en el 091 2753 103"
+        "es": "De lunes a viernes de 8:00 a 12:00 y de 15:00 a 19:00 h, sábado de 8:00 a 14:00 h; guardia de mascotas de 19:30 a 8:00 h en el 091 2753 102; guardia de animales grandes de 0 a 24 h en el 091 2753 103",
+        "it": "Lun–ven 8–12 e 15–19, sab 8–14; reperibilità piccoli animali 19:30–8:00 al 091 2753 102; guardia grandi animali 24 ore su 24 al 091 2753 103"
       },
       "small_animals": true,
       "url": "https://www.vads.hr/",
@@ -1400,7 +1447,8 @@
         "hr": "Male životinje: pon i sri 08–11 i 16–19; uto, čet, pet 08–11; sub 08–12 (11–14 za naručene pacijente). Kontakt za hitne slučajeve 0–24: 099 2130 323",
         "de": "Kleintiere: Mo und Mi 8–11 und 16–19 Uhr; Di, Do, Fr 8–11 Uhr; Sa 8–12 Uhr (11–14 Uhr für angemeldete Patienten). Notfallkontakt rund um die Uhr: 099 2130 323",
         "fr": "Petits animaux : lun. et mer. 8 h–11 h et 16 h–19 h ; mar., jeu., ven. 8 h–11 h ; sam. 8 h–12 h (11 h–14 h pour les patients ayant rendez-vous). Contact d’urgence 24 h/24 : 099 2130 323",
-        "es": "Mascotas: lunes y miércoles de 8:00 a 11:00 y de 16:00 a 19:00 h; martes, jueves y viernes de 8:00 a 11:00 h; sábado de 8:00 a 12:00 h (de 11:00 a 14:00 h, pacientes con cita). Contacto de urgencias de 0 a 24 h: 099 2130 323"
+        "es": "Mascotas: lunes y miércoles de 8:00 a 11:00 y de 16:00 a 19:00 h; martes, jueves y viernes de 8:00 a 11:00 h; sábado de 8:00 a 12:00 h (de 11:00 a 14:00 h, pacientes con cita). Contacto de urgencias de 0 a 24 h: 099 2130 323",
+        "it": "Piccoli animali: lun e mer 8–11 e 16–19; mar, gio, ven 8–11; sab 8–12 (11–14 pazienti con appuntamento). Contatto urgenze 24 ore su 24: 099 2130 323"
       },
       "small_animals": true,
       "url": "https://vad.hr/",
@@ -1458,7 +1506,8 @@
         "hr": "pon, sri, pet 09–14; uto, čet 14–19; sub 09–12; ned i blagdani zatvoreno; hitne intervencije 0–24 h",
         "de": "Mo, Mi, Fr 9–14 Uhr; Di, Do 14–19 Uhr; Sa 9–12 Uhr; So und feiertags geschlossen; Notfalleinsätze rund um die Uhr",
         "fr": "Lun., mer., ven. 9 h–14 h ; mar., jeu. 14 h–19 h ; sam. 9 h–12 h ; fermé dim. et jours fériés ; interventions d’urgence 24 h/24",
-        "es": "Lunes, miércoles y viernes de 9:00 a 14:00 h; martes y jueves de 14:00 a 19:00 h; sábado de 9:00 a 12:00 h; domingos y festivos cerrado; intervenciones de urgencia de 0 a 24 h"
+        "es": "Lunes, miércoles y viernes de 9:00 a 14:00 h; martes y jueves de 14:00 a 19:00 h; sábado de 9:00 a 12:00 h; domingos y festivos cerrado; intervenciones de urgencia de 0 a 24 h",
+        "it": "Lun, mer, ven 9–14; mar, gio 14–19; sab 9–12; dom e festivi chiuso; interventi d'urgenza 24 ore su 24"
       },
       "url": "https://www.vaistravet.hr/",
       "source_url": "https://www.vaistravet.hr/index.php/kontakt-istra-vet",
@@ -1502,7 +1551,8 @@
       "duty_i18n": {
         "de": "Tierarzt im Bereitschaftsdienst rund um die Uhr unter 091 511 5092.",
         "fr": "Vétérinaire de garde 24 h/24 au 091 511 5092.",
-        "es": "Veterinario de guardia de 0 a 24 h en el 091 511 5092."
+        "es": "Veterinario de guardia de 0 a 24 h en el 091 511 5092.",
+        "it": "Veterinario di guardia 24 ore su 24 al 091 511 5092."
       },
       "small_animals": true,
       "url": "https://veterinarskaambulantabokanjac.hr/",
@@ -1522,7 +1572,8 @@
       "duty_i18n": {
         "de": "Termine nach telefonischer Vereinbarung; Öffnungszeiten bitte telefonisch bestätigen.",
         "fr": "Rendez-vous par téléphone ; appelez pour confirmer les horaires.",
-        "es": "Citas por teléfono; llama para confirmar el horario."
+        "es": "Citas por teléfono; llama para confirmar el horario.",
+        "it": "Appuntamenti per telefono; chiamare per confermare gli orari."
       },
       "small_animals": true,
       "url": "https://www.veterina-zilic.hr/",
@@ -1566,7 +1617,8 @@
       "duty_i18n": {
         "de": "Bereitschaftstelefon 099 700 3737 (rund um die Uhr).",
         "fr": "Téléphone de garde : 099 700 3737 (24 h/24).",
-        "es": "Teléfono de guardia 099 700 3737 (de 0 a 24 h)."
+        "es": "Teléfono de guardia 099 700 3737 (de 0 a 24 h).",
+        "it": "Telefono di guardia 099 700 3737 (24 ore su 24)."
       },
       "url": "http://www.veterinar-vodice.com",
       "source_url": "https://www.grad-vodice.hr/informacije/vazni-telefonski-brojevi",
@@ -1600,7 +1652,8 @@
         "hr": "pon–pet 8–20, sub 8–13",
         "de": "Mo–Fr 8–20 Uhr, Sa 8–13 Uhr",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–13 h",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:00 a 13:00 h",
+        "it": "Lun–ven 8–20, sab 8–13"
       },
       "small_animals": true,
       "url": "https://veterina-ivana-pilic.hr/",
@@ -1622,7 +1675,8 @@
         "hr": "pon–pet 08:00–20:00, sub 08:30–13:00, ned zatvoreno",
         "de": "Mo–Fr 8–20 Uhr, Sa 8.30–13 Uhr, So geschlossen",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h 30–13 h, fermé le dimanche",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 13:00 h, domingo cerrado"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 13:00 h, domingo cerrado",
+        "it": "Lun–ven 8:00–20:00, sab 8:30–13:00, dom chiuso"
       },
       "small_animals": true,
       "url": "https://vet-anima.com/",
@@ -1792,7 +1846,8 @@
         "hr": "Ambulanta za male životinje pon–pet 07:00–14:30, sub 07:00–12:00 (ili pon–pet 07:30–19:00 s pauzom 16:30–17:30, sub 07:00–13:00). Dežurni veterinar 24/7.",
         "de": "Kleintierklinik Mo–Fr 7–14.30 Uhr, Sa 7–12 Uhr (oder Mo–Fr 7.30–19 Uhr mit Pause 16.30–17.30 Uhr, Sa 7–13 Uhr). Tierarzt im Bereitschaftsdienst rund um die Uhr.",
         "fr": "Clinique pour petits animaux lun.–ven. 7 h–14 h 30, sam. 7 h–12 h (ou lun.–ven. 7 h 30–19 h avec pause 16 h 30–17 h 30, sam. 7 h–13 h). Vétérinaire de garde 24 h/24, 7 j/7.",
-        "es": "Clínica de mascotas de lunes a viernes de 7:00 a 14:30 h, sábado de 7:00 a 12:00 h (o de lunes a viernes de 7:30 a 19:00 h con pausa de 16:30 a 17:30 h, sábado de 7:00 a 13:00 h). Veterinario de guardia 24/7."
+        "es": "Clínica de mascotas de lunes a viernes de 7:00 a 14:30 h, sábado de 7:00 a 12:00 h (o de lunes a viernes de 7:30 a 19:00 h con pausa de 16:30 a 17:30 h, sábado de 7:00 a 13:00 h). Veterinario de guardia 24/7.",
+        "it": "Clinica per piccoli animali lun–ven 7:00–14:30, sab 7:00–12:00 (oppure lun–ven 7:30–19:00 con pausa 16:30–17:30, sab 7:00–13:00). Veterinario di guardia 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://www.vs-krapina.hr/",
@@ -1813,7 +1868,8 @@
       "duty_i18n": {
         "de": "Notdienst rund um die Uhr: die Nummer der Klinik anrufen, der Anrufbeantworter nennt die Mobilnummer des diensthabenden Tierarztes.",
         "fr": "Garde 24 h/24 pour les urgences : appelez le numéro de la clinique, le répondeur indique le portable du vétérinaire de garde.",
-        "es": "Guardia de 0 a 24 h para urgencias: llama al número de la clínica y el contestador indica el móvil del veterinario de guardia."
+        "es": "Guardia de 0 a 24 h para urgencias: llama al número de la clínica y el contestador indica el móvil del veterinario de guardia.",
+        "it": "Guardia 24 ore su 24 per le urgenze: chiamare il numero della clinica e la segreteria telefonica indica il cellulare del veterinario di guardia."
       },
       "small_animals": true,
       "url": "https://veterinarska-pozega.hr/",
@@ -1834,7 +1890,8 @@
       "duty_i18n": {
         "de": "Notfälle und außerhalb der Sprechzeiten: 060 606 777 (diensthabender Tierarzt für Haustiere).",
         "fr": "Urgences et en dehors des heures d’ouverture : 060 606 777 (vétérinaire de garde pour animaux de compagnie).",
-        "es": "Urgencias y fuera de horario: 060 606 777 (veterinario de guardia para mascotas)."
+        "es": "Urgencias y fuera de horario: 060 606 777 (veterinario de guardia para mascotas).",
+        "it": "Urgenze e fuori orario: 060 606 777 (veterinario di guardia per animali da compagnia)."
       },
       "url": "https://vs-djakovo.hr/",
       "source_url": "https://vs-djakovo.hr/kontakt/",
@@ -1877,7 +1934,8 @@
       "duty_i18n": {
         "de": "Tierheim-Auskunft und Vermittlung: Mo–Sa 7–11 Uhr, Di und Do nachmittags.",
         "fr": "Informations sur le refuge et adoptions : lun.–sam. 7 h–11 h, mar. et jeu. après-midi.",
-        "es": "Información y adopción en el refugio: de lunes a sábado de 7:00 a 11:00 h, martes y jueves por la tarde."
+        "es": "Información y adopción en el refugio: de lunes a sábado de 7:00 a 11:00 h, martes y jueves por la tarde.",
+        "it": "Informazioni sul rifugio e adozioni: lun–sab 7–11, mar e gio pomeriggio."
       },
       "url": "http://veterinarskastanicasisak.yolasite.com/",
       "source_url": "https://sisak.hr/info-centar-za-izgubljene-i-napustene-zivotinje/",

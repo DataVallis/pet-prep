@@ -113,7 +113,8 @@
         "hr": "24-satni Notdienst na +43 1 25077-5555 (nazovi unaprijed); životno ugroženi slučajevi mogu doći bez najave na središnji hitni prijam. Redovno: pon/sri/pet 8–16, uto/čet 9.30–16, naručivanje na +43 1 25077-4444",
         "de": "Notdienst rund um die Uhr unter +43 1 25077-5555 (bitte vorher anrufen); lebensbedrohliche Fälle können ohne Voranmeldung direkt zur zentralen Notaufnahme kommen. Sprechzeiten: Mo/Mi/Fr 8–16 Uhr, Di/Do 9.30–16 Uhr, Termine unter +43 1 25077-4444",
         "fr": "Urgences 24 h/24 au +43 1 25077-5555 (appelez avant de venir) ; les cas où le pronostic vital est engagé peuvent se présenter sans prévenir au service central des urgences. Horaires habituels : lun., mer., ven. 8 h–16 h, mar., jeu. 9 h 30–16 h ; rendez-vous au +43 1 25077-4444.",
-        "es": "Urgencias 24 h por teléfono en el +43 1 25077-5555 (llama antes); los casos con riesgo vital pueden acudir sin aviso previo a la admisión central de urgencias. Horario habitual: lun/mié/vie 8–16 h, mar/jue 9:30–16 h, cita previa en el +43 1 25077-4444"
+        "es": "Urgencias 24 h por teléfono en el +43 1 25077-5555 (llama antes); los casos con riesgo vital pueden acudir sin aviso previo a la admisión central de urgencias. Horario habitual: lun/mié/vie 8–16 h, mar/jue 9:30–16 h, cita previa en el +43 1 25077-4444",
+        "it": "Servizio di emergenza 24 ore su 24 al +43 1 25077-5555 (telefonare in anticipo); i casi in pericolo di vita possono presentarsi senza preavviso all'accettazione d'urgenza centrale. Orari regolari: lun/mer/ven 8–16, mar/gio 9:30–16, appuntamenti +43 1 25077-4444"
       },
       "url": "https://www.vetmeduni.ac.at/kleintierklinik",
       "source_url": "https://www.vetmeduni.ac.at/kleintierklinik/fuer-tierbesitzerinnen",
@@ -136,7 +137,8 @@
         "hr": "Hitni slučajevi 0–24 svaki dan; termini radnim danom 9–19",
         "de": "Notdienst täglich rund um die Uhr; Termine werktags 9–19 Uhr",
         "fr": "Urgences 24 h/24, tous les jours ; rendez-vous en semaine 9 h–19 h.",
-        "es": "Urgencias 0–24 h todos los días; cita previa lun–vie 9–19 h"
+        "es": "Urgencias 0–24 h todos los días; cita previa lun–vie 9–19 h",
+        "it": "Urgenze 0–24 tutti i giorni; appuntamenti nei feriali 9–19"
       },
       "url": "https://www.anicura.at/standorte/erdberg/",
       "source_url": "https://www.anicura.at/standorte/erdberg/kontakt/",
@@ -159,7 +161,8 @@
         "hr": "Hitna ambulanta pon–ned 0:00–24:00, bez telefonske prijave, uz trijažu; pregledi pon–pet 9–18",
         "de": "Notambulanz Mo–So rund um die Uhr, keine telefonische Voranmeldung nötig, Triage; Sprechstunde Mo–Fr 9–18 Uhr",
         "fr": "Urgences lun.–dim. 0 h–24 h, sans appel préalable, avec tri à l’arrivée ; consultations lun.–ven. 9 h–18 h.",
-        "es": "Urgencias lun–dom 0:00–24:00 h, sin necesidad de avisar por teléfono, con triaje; consultas lun–vie 9–18 h"
+        "es": "Urgencias lun–dom 0:00–24:00 h, sin necesidad de avisar por teléfono, con triaje; consultas lun–vie 9–18 h",
+        "it": "Pronto soccorso lun–dom 0–24, nessuna registrazione telefonica necessaria, con triage; visite lun–ven 9–18"
       },
       "url": "https://www.vetklinikum.at/",
       "source_url": "https://www.vetklinikum.at/portfolio/notambulanz/",
@@ -182,7 +185,8 @@
         "hr": "Hitna služba 24 sata telefonom; dežurni veterinar možda nije u klinici, zato uvijek nazovi unaprijed. Redovno: pon–pet 9–19 (termini od 14:00), sub 9–13",
         "de": "Telefonischer Notdienst rund um die Uhr; der diensthabende Tierarzt ist unter Umständen nicht in der Klinik, bitte daher immer vorher anrufen. Sprechzeiten: Mo–Fr 9–19 Uhr (Termine ab 14 Uhr), Sa 9–13 Uhr",
         "fr": "Urgences 24 h/24 par téléphone ; le vétérinaire de garde peut ne pas être sur place, appelez donc toujours avant de venir. Horaires habituels : lun.–ven. 9 h–19 h (rendez-vous à partir de 14 h), sam. 9 h–13 h.",
-        "es": "Urgencias 24 h por teléfono; el veterinario de guardia puede no estar en la clínica, así que llama siempre antes. Horario habitual: lun–vie 9–19 h (con cita desde las 14:00 h), sáb 9–13 h"
+        "es": "Urgencias 24 h por teléfono; el veterinario de guardia puede no estar en la clínica, así que llama siempre antes. Horario habitual: lun–vie 9–19 h (con cita desde las 14:00 h), sáb 9–13 h",
+        "it": "Servizio di emergenza telefonico 24 ore su 24; il veterinario di guardia può non essere in clinica, quindi telefonare sempre in anticipo. Orari regolari: lun–ven 9–19 (appuntamenti dalle 14:00), sab 9–13"
       },
       "url": "https://www.tierklinik-doebling.at/",
       "source_url": "https://www.tierklinik-doebling.at/service/notfaelle/",
@@ -205,7 +209,8 @@
         "hr": "Telefonska deneodgodiva služba non-stop na +43 1 88826935; redovno pon–sub 9–12.30, popodne pon/uto/čet/pet 15–17 (termini do 19), sri 12.30–17 uz termin",
         "de": "Telefonischer Bereitschaftsdienst rund um die Uhr unter +43 1 88826935; Sprechzeiten Mo–Sa 9–12.30 Uhr, nachmittags Mo/Di/Do/Fr 15–17 Uhr (Termine bis 19 Uhr), Mi 12.30–17 Uhr nur mit Termin",
         "fr": "Permanence téléphonique 24 h/24 au +43 1 88826935 ; horaires habituels : lun.–sam. 9 h–12 h 30, l’après-midi lun., mar., jeu., ven. 15 h–17 h (rendez-vous jusqu’à 19 h), mer. 12 h 30–17 h sur rendez-vous.",
-        "es": "Servicio telefónico de guardia las 24 horas en el +43 1 88826935; horario habitual lun–sáb 9–12:30 h, por la tarde lun/mar/jue/vie 15–17 h (con cita hasta las 19 h), mié 12:30–17 h con cita"
+        "es": "Servicio telefónico de guardia las 24 horas en el +43 1 88826935; horario habitual lun–sáb 9–12:30 h, por la tarde lun/mar/jue/vie 15–17 h (con cita hasta las 19 h), mié 12:30–17 h con cita",
+        "it": "Servizio telefonico di guardia 24 ore su 24 +43 1 88826935; orari regolari lun–sab 9–12:30, pomeriggio lun/mar/gio/ven 15–17 (appuntamenti fino alle 19), mer 12:30–17 su appuntamento"
       },
       "url": "https://www.veterinaria.at/standorte/wien-mauer",
       "source_url": "https://www.veterinaria.at/standorte/wien-mauer",
@@ -228,7 +233,8 @@
         "hr": "Ambulanta radnim danom 8–20.30, sub 9–12, ned 8–16; hitno radno vrijeme radnim danom 7–8, sub 8–9 i 12–16, ned/blagdanima 8–16; inače upućuje na AniCura Tierklinik Erdberg",
         "de": "Ordination werktags 8–20.30 Uhr, Sa 9–12 Uhr, So 8–16 Uhr; Notdienstzeiten werktags 7–8 Uhr, Sa 8–9 und 12–16 Uhr, So/feiertags 8–16 Uhr; ansonsten wird an die AniCura Tierklinik Erdberg verwiesen",
         "fr": "Cabinet ouvert en semaine 8 h–20 h 30, sam. 9 h–12 h, dim. 8 h–16 h ; urgences en semaine 7 h–8 h, sam. 8 h–9 h et 12 h–16 h, dim. et jours fériés 8 h–16 h ; en dehors de ces horaires, renvoi vers AniCura Tierklinik Erdberg.",
-        "es": "Consulta lun–vie 8–20:30 h, sáb 9–12 h, dom 8–16 h; urgencias lun–vie 7–8 h, sáb 8–9 h y 12–16 h, dom/festivos 8–16 h; fuera de ese horario deriva a AniCura Tierklinik Erdberg"
+        "es": "Consulta lun–vie 8–20:30 h, sáb 9–12 h, dom 8–16 h; urgencias lun–vie 7–8 h, sáb 8–9 h y 12–16 h, dom/festivos 8–16 h; fuera de ese horario deriva a AniCura Tierklinik Erdberg",
+        "it": "Ambulatorio nei feriali 8–20:30, sab 9–12, dom 8–16; orari di emergenza nei feriali 7–8, sab 8–9 e 12–16, dom/festivi 8–16; negli altri orari rimanda ad AniCura Tierklinik Erdberg"
       },
       "url": "https://www.anicura.at/standorte/tierarztpraxis-aspern/",
       "source_url": "https://www.anicura.at/standorte/tierarztpraxis-aspern/kontakt/",
@@ -249,7 +255,8 @@
         "hr": "Uz prethodnu najavu: pon/sri/pet 9–11 i 17–19, uto/čet 17–19, sub 8.30–11; akutni slučajevi mogu se naručiti u kratkom roku telefonom",
         "de": "Nur mit Termin: Mo/Mi/Fr 9–11 und 17–19 Uhr, Di/Do 17–19 Uhr, Sa 8.30–11 Uhr; Akuttermine kurzfristig telefonisch",
         "fr": "Sur rendez-vous : lun., mer., ven. 9 h–11 h et 17 h–19 h, mar., jeu. 17 h–19 h, sam. 8 h 30–11 h ; rendez-vous urgent à court terme par téléphone.",
-        "es": "Con cita previa: lun/mié/vie 9–11 h y 17–19 h, mar/jue 17–19 h, sáb 8:30–11 h; citas urgentes con poca antelación por teléfono"
+        "es": "Con cita previa: lun/mié/vie 9–11 h y 17–19 h, mar/jue 17–19 h, sáb 8:30–11 h; citas urgentes con poca antelación por teléfono",
+        "it": "Su appuntamento: lun/mer/ven 9–11 e 17–19, mar/gio 17–19, sab 8:30–11; appuntamenti urgenti con breve preavviso per telefono"
       },
       "url": "https://tierambulatorium-wienerberg.at/",
       "source_url": "https://tierambulatorium-wienerberg.at/",
@@ -270,7 +277,8 @@
         "hr": "Hitni slučajevi 0–24, nazovi unaprijed; termini 9–18",
         "de": "Notdienst rund um die Uhr, bitte vorher anrufen; Termine 9–18 Uhr",
         "fr": "Urgences 24 h/24, appelez avant de venir ; rendez-vous 9 h–18 h.",
-        "es": "Urgencias 0–24 h, llama antes; cita previa 9–18 h"
+        "es": "Urgencias 0–24 h, llama antes; cita previa 9–18 h",
+        "it": "Urgenze 0–24, telefonare in anticipo; appuntamenti 9–18"
       },
       "url": "https://www.anicura.at/standorte/tierklinik-hollabrunn/",
       "source_url": "https://www.anicura.at/standorte/tierklinik-hollabrunn/",
@@ -292,7 +300,8 @@
         "hr": "Hitna služba 24 sata, prvo nazovi broj za hitne slučajeve; redovno pon–pet 9–19",
         "de": "Notdienst rund um die Uhr, bitte zuerst die Notrufnummer anrufen; Sprechzeiten Mo–Fr 9–19 Uhr",
         "fr": "Urgences 24 h/24, appelez d’abord le numéro d’urgence ; horaires habituels : lun.–ven. 9 h–19 h.",
-        "es": "Urgencias 24 horas, llama primero al número de urgencias; horario habitual lun–vie 9–19 h"
+        "es": "Urgencias 24 horas, llama primero al número de urgencias; horario habitual lun–vie 9–19 h",
+        "it": "Servizio di emergenza 24 ore su 24, chiamare prima il numero di emergenza; orari regolari lun–ven 9–19"
       },
       "url": "https://www.tierklinik-stp.at/",
       "source_url": "https://www.tierklinik-stp.at/notdienst/",
@@ -314,7 +323,8 @@
         "hr": "Hitna služba 24/7, nazovi prije dolaska; klinika pon–pet 9–18, sub 9–11",
         "de": "Notdienst rund um die Uhr, bitte vor dem Kommen anrufen; Klinik Mo–Fr 9–18 Uhr, Sa 9–11 Uhr",
         "fr": "Urgences 24 h/24, 7 j/7, appelez avant de venir ; clinique ouverte lun.–ven. 9 h–18 h, sam. 9 h–11 h.",
-        "es": "Urgencias las 24 horas, llama antes de ir; clínica lun–vie 9–18 h, sáb 9–11 h"
+        "es": "Urgencias las 24 horas, llama antes de ir; clínica lun–vie 9–18 h, sáb 9–11 h",
+        "it": "Servizio di emergenza 24 ore su 24, 7 giorni su 7, telefonare prima di venire; clinica lun–ven 9–18, sab 9–11"
       },
       "url": "https://www.tierklinik-perchtoldsdorf-ost.at/",
       "source_url": "https://www.tierklinik-perchtoldsdorf-ost.at/",
@@ -336,7 +346,8 @@
         "hr": "Hitni slučajevi 24 h, nazovi unaprijed; redovno pon–sub 9–12, pon/sri/pet 14–17, uto/čet 14–18",
         "de": "Notfälle rund um die Uhr, bitte vorher anrufen; Sprechzeiten Mo–Sa 9–12 Uhr, Mo/Mi/Fr 14–17 Uhr, Di/Do 14–18 Uhr",
         "fr": "Urgences 24 h/24, appelez avant de venir ; horaires habituels : lun.–sam. 9 h–12 h, lun., mer., ven. 14 h–17 h, mar., jeu. 14 h–18 h.",
-        "es": "Urgencias 24 h, llama antes; horario habitual lun–sáb 9–12 h, lun/mié/vie 14–17 h, mar/jue 14–18 h"
+        "es": "Urgencias 24 h, llama antes; horario habitual lun–sáb 9–12 h, lun/mié/vie 14–17 h, mar/jue 14–18 h",
+        "it": "Urgenze 24 ore su 24, telefonare in anticipo; orari regolari lun–sab 9–12, lun/mer/ven 14–17, mar/gio 14–18"
       },
       "url": "https://www.veterinaria.at/standorte/dobersberg",
       "source_url": "https://www.veterinaria.at/standorte/dobersberg",
@@ -358,7 +369,8 @@
         "hr": "Hitni tim svaki dan 7–23, uključujući vikende i blagdane kada ima osoblja; prvo nazovi, a ako toga dana nema službe, glasovna poruka navodi obližnje dežurne klinike. Redovno pon–pet 9–19",
         "de": "Notfallteam täglich 7–23 Uhr, auch am Wochenende und an Feiertagen, sofern besetzt; bitte zuerst anrufen – besteht an diesem Tag kein Dienst, nennt eine Ansage diensthabende Kliniken in der Nähe. Sprechzeiten Mo–Fr 9–19 Uhr",
         "fr": "Équipe d’urgence tous les jours 7 h–23 h, y compris week-ends et jours fériés quand elle est en service ; appelez d’abord, un message vocal indique les cliniques de garde proches en l’absence de service ce jour-là. Horaires habituels : lun.–ven. 9 h–19 h.",
-        "es": "Equipo de urgencias todos los días 7–23 h, también fines de semana y festivos cuando hay personal; llama primero: un mensaje de voz indica las clínicas de guardia cercanas si ese día no hay servicio. Horario habitual lun–vie 9–19 h"
+        "es": "Equipo de urgencias todos los días 7–23 h, también fines de semana y festivos cuando hay personal; llama primero: un mensaje de voz indica las clínicas de guardia cercanas si ese día no hay servicio. Horario habitual lun–vie 9–19 h",
+        "it": "Équipe di emergenza tutti i giorni 7–23, festivi e fine settimana inclusi, se in servizio; chiamare prima: un messaggio vocale indica le cliniche di turno vicine se quel giorno non c'è servizio. Orari regolari lun–ven 9–19"
       },
       "url": "https://www.tkwn.at/",
       "source_url": "https://www.tkwn.at/im-notfall",
@@ -380,7 +392,8 @@
         "hr": "Hitni slučajevi za konje 24/7 uz telefonski dogovor",
         "de": "Pferdenotfälle rund um die Uhr nach telefonischer Vereinbarung",
         "fr": "Urgences équines 24 h/24, 7 j/7, sur rendez-vous téléphonique.",
-        "es": "Urgencias de caballos las 24 horas, con cita previa por teléfono"
+        "es": "Urgencias de caballos las 24 horas, con cita previa por teléfono",
+        "it": "Urgenze per cavalli 24 ore su 24, 7 giorni su 7, su appuntamento telefonico"
       },
       "small_animals": false,
       "url": "https://www.veterinaria.at/standorte/pegasus",
@@ -403,7 +416,8 @@
         "hr": "Hitni slučajevi non-stop uz telefonsku prijavu; redovno pon–pet 9–19",
         "de": "Notfälle rund um die Uhr nach telefonischer Anmeldung; Sprechzeiten Mo–Fr 9–19 Uhr",
         "fr": "Urgences 24 h/24 sur appel préalable ; horaires habituels : lun.–ven. 9 h–19 h.",
-        "es": "Urgencias las 24 horas con registro previo por teléfono; horario habitual lun–vie 9–19 h"
+        "es": "Urgencias las 24 horas con registro previo por teléfono; horario habitual lun–vie 9–19 h",
+        "it": "Urgenze 24 ore su 24 con registrazione telefonica; orari regolari lun–ven 9–19"
       },
       "url": "https://www.veterinaria.at/standorte/parndorf",
       "source_url": "https://www.veterinaria.at/standorte/parndorf",
@@ -425,7 +439,8 @@
         "hr": "Telefonska deneodgodiva služba 24 sata; pon/sri 9–18.30, uto/čet/pet 9–16.30, sub 9–11",
         "de": "Telefonischer Bereitschaftsdienst rund um die Uhr; Mo/Mi 9–18.30 Uhr, Di/Do/Fr 9–16.30 Uhr, Sa 9–11 Uhr",
         "fr": "Permanence téléphonique 24 h/24 ; lun., mer. 9 h–18 h 30, mar., jeu., ven. 9 h–16 h 30, sam. 9 h–11 h.",
-        "es": "Guardia telefónica 24 h; lun/mié 9–18:30 h, mar/jue/vie 9–16:30 h, sáb 9–11 h"
+        "es": "Guardia telefónica 24 h; lun/mié 9–18:30 h, mar/jue/vie 9–16:30 h, sáb 9–11 h",
+        "it": "Servizio di guardia telefonico 24 ore su 24; lun/mer 9–18:30, mar/gio/ven 9–16:30, sab 9–11"
       },
       "url": "https://www.tierklinik-neusiedl.at/",
       "source_url": "https://www.tierklinik-neusiedl.at/contact.html",
@@ -448,7 +463,8 @@
         "hr": "Hitni slučajevi 0–24; termini telefonom, 9–19",
         "de": "Notdienst 00–24 Uhr; Termine nach telefonischer Vereinbarung, 9–19 Uhr",
         "fr": "Urgences 24 h/24 ; rendez-vous par téléphone, 9 h–19 h.",
-        "es": "Urgencias 0–24 h; cita previa por teléfono, 9–19 h"
+        "es": "Urgencias 0–24 h; cita previa por teléfono, 9–19 h",
+        "it": "Urgenze 0–24; appuntamenti per telefono, 9–19"
       },
       "url": "https://www.anicura.at/standorte/tierklinik-schwanenstadt/",
       "source_url": "https://www.anicura.at/standorte/tierklinik-schwanenstadt/",
@@ -470,7 +486,8 @@
         "hr": "Hitna služba 0–24, nazovi unaprijed; redovno pon–pet 8–19",
         "de": "Notdienst 0–24 Uhr, bitte vorher anrufen; Sprechzeiten Mo–Fr 8–19 Uhr",
         "fr": "Urgences 24 h/24, appelez avant de venir ; horaires habituels : lun.–ven. 8 h–19 h.",
-        "es": "Urgencias 0–24 h, llama antes; horario habitual lun–vie 8–19 h"
+        "es": "Urgencias 0–24 h, llama antes; horario habitual lun–vie 8–19 h",
+        "it": "Servizio di emergenza 0–24, telefonare in anticipo; orari regolari lun–ven 8–19"
       },
       "url": "https://www.tierklinik-sattledt.at/",
       "source_url": "https://www.tierklinik-sattledt.at/kontakt/",
@@ -492,7 +509,8 @@
         "hr": "Hitna telefonska linija 24 h +43 699 17171808; redovno pon–pet 9–19, sub 9–15, ned 11–12",
         "de": "Notrufnummer rund um die Uhr: +43 699 17171808; Sprechzeiten Mo–Fr 9–19 Uhr, Sa 9–15 Uhr, So 11–12 Uhr",
         "fr": "Ligne d’urgence 24 h/24 : +43 699 17171808 ; horaires habituels : lun.–ven. 9 h–19 h, sam. 9 h–15 h, dim. 11 h–12 h.",
-        "es": "Línea de urgencias 24 h +43 699 17171808; horario habitual lun–vie 9–19 h, sáb 9–15 h, dom 11–12 h"
+        "es": "Línea de urgencias 24 h +43 699 17171808; horario habitual lun–vie 9–19 h, sáb 9–15 h, dom 11–12 h",
+        "it": "Linea di emergenza 24 ore su 24 +43 699 17171808; orari regolari lun–ven 9–19, sab 9–15, dom 11–12"
       },
       "url": "https://www.veterinaria.at/standorte/wels",
       "source_url": "https://www.veterinaria.at/standorte/wels",
@@ -514,7 +532,8 @@
         "hr": "Hitna služba 24/7, nazovi unaprijed ako je moguće; termini pon–pet 8–18, sub 8–12",
         "de": "Notdienst rund um die Uhr, nach Möglichkeit vorher anrufen; Termine Mo–Fr 8–18 Uhr, Sa 8–12 Uhr",
         "fr": "Urgences 24 h/24, 7 j/7, appelez avant de venir si possible ; rendez-vous lun.–ven. 8 h–18 h, sam. 8 h–12 h.",
-        "es": "Urgencias las 24 horas, llama antes si puedes; cita previa lun–vie 8–18 h, sáb 8–12 h"
+        "es": "Urgencias las 24 horas, llama antes si puedes; cita previa lun–vie 8–18 h, sáb 8–12 h",
+        "it": "Servizio di emergenza 24 ore su 24, 7 giorni su 7, se possibile telefonare in anticipo; appuntamenti lun–ven 8–18, sab 8–12"
       },
       "url": "https://www.tierklinik-steyr.at/",
       "source_url": "https://www.tierklinik-steyr.at/notdienst",
@@ -534,7 +553,8 @@
         "hr": "Vikend i blagdanska dežurstva za male životinje, rotacija između ambulanti u Linzu: sub 12–19, ned i blagdanima 8–19, samo uz prethodni poziv. Dežurne ambulante: 7.–8. 11. Mag. Hölzl i Mag. Tischlinger, 14.–15. 11. Dr. Eigl i Mag. Eigl, 21.–22. 11. Dr. Kramberger-Kaplan, 28.–29. 11. Praxis Wienerstrasse",
         "de": "Kleintier-Wochenend- und Feiertagsdienst im Wechsel zwischen Linzer Praxen: Sa 12–19 Uhr, So und feiertags 8–19 Uhr, nur nach telefonischer Anmeldung. Diensthabende Praxen: 7.–8. Nov. Mag. Hölzl & Mag. Tischlinger, 14.–15. Nov. Dr. Eigl & Mag. Eigl, 21.–22. Nov. Dr. Kramberger-Kaplan, 28.–29. Nov. Praxis Wienerstrasse",
         "fr": "Garde des petits animaux le week-end et les jours fériés, assurée à tour de rôle par des cabinets de Linz : sam. 12 h–19 h, dim. et jours fériés 8 h–19 h, uniquement après appel préalable. Cabinets de garde : 7–8 nov. Mag. Hölzl & Mag. Tischlinger, 14–15 nov. Dr. Eigl & Mag. Eigl, 21–22 nov. Dr. Kramberger-Kaplan, 28–29 nov. Praxis Wienerstrasse.",
-        "es": "Guardia de animales pequeños en fines de semana y festivos, rotativa entre clínicas de Linz: sáb 12–19 h, dom y festivos 8–19 h, solo tras llamar antes. Clínicas de guardia: 7–8 nov Mag. Hölzl y Mag. Tischlinger, 14–15 nov Dr. Eigl y Mag. Eigl, 21–22 nov Dr. Kramberger-Kaplan, 28–29 nov Praxis Wienerstrasse"
+        "es": "Guardia de animales pequeños en fines de semana y festivos, rotativa entre clínicas de Linz: sáb 12–19 h, dom y festivos 8–19 h, solo tras llamar antes. Clínicas de guardia: 7–8 nov Mag. Hölzl y Mag. Tischlinger, 14–15 nov Dr. Eigl y Mag. Eigl, 21–22 nov Dr. Kramberger-Kaplan, 28–29 nov Praxis Wienerstrasse",
+        "it": "Turno di guardia per piccoli animali nei fine settimana e festivi, a rotazione tra gli ambulatori di Linz: sab 12–19, dom e festivi 8–19, solo dopo aver telefonato. Ambulatori di turno: 7–8 nov Mag. Hölzl & Mag. Tischlinger, 14–15 nov Dr. Eigl & Mag. Eigl, 21–22 nov Dr. Kramberger-Kaplan, 28–29 nov Praxis Wienerstrasse"
       },
       "url": "https://www.linz.at/serviceguide/viewchapter.php?chapter_id=123203",
       "source_url": "https://www.linz.at/serviceguide/viewchapter.php?chapter_id=123203",
@@ -557,7 +577,8 @@
         "hr": "Pon–pet 8–10.30 i 16–18.30, sub 8–10.30; izvan radnog vremena automatska sekretarica navodi kontakte dežurnih ambulanti; dio je vikend rotacije u Linzu",
         "de": "Mo–Fr 8–10.30 und 16–18.30 Uhr, Sa 8–10.30 Uhr; außerhalb der Sprechzeiten nennt der Anrufbeantworter die Notdienstkontakte; nimmt am Linzer Wochenenddienst teil",
         "fr": "Lun.–ven. 8 h–10 h 30 et 16 h–18 h 30, sam. 8 h–10 h 30 ; en dehors de ces horaires, le répondeur indique les contacts de garde ; participe à la garde du week-end de Linz.",
-        "es": "Lun–vie 8–10:30 h y 16–18:30 h, sáb 8–10:30 h; fuera de horario el contestador da los contactos de guardia; participa en la rotación de fines de semana de Linz"
+        "es": "Lun–vie 8–10:30 h y 16–18:30 h, sáb 8–10:30 h; fuera de horario el contestador da los contactos de guardia; participa en la rotación de fines de semana de Linz",
+        "it": "Lun–ven 8–10:30 e 16–18:30, sab 8–10:30; fuori orario la segreteria telefonica indica i contatti di guardia; partecipa alla rotazione del fine settimana di Linz"
       },
       "url": "https://www.peterek.at/",
       "source_url": "https://www.peterek.at/",
@@ -578,7 +599,8 @@
         "hr": "Samo uz prethodnu najavu; hitna linija +43 664 1404038 po telefonskom dogovoru",
         "de": "Nur mit Termin; Notrufnummer +43 664 1404038 nach telefonischer Vereinbarung",
         "fr": "Sur rendez-vous uniquement ; ligne d’urgence +43 664 1404038, sur rendez-vous téléphonique.",
-        "es": "Solo con cita previa; línea de urgencias +43 664 1404038, previo acuerdo por teléfono"
+        "es": "Solo con cita previa; línea de urgencias +43 664 1404038, previo acuerdo por teléfono",
+        "it": "Solo su appuntamento; linea di emergenza +43 664 1404038 previo accordo telefonico"
       },
       "url": "https://www.tierarzt-rechberger.at/",
       "source_url": "https://www.tierarzt-rechberger.at/",
@@ -600,7 +622,8 @@
         "hr": "Pon/uto/čet/pet 9–12 i 15–18, sri 15–19; trenutačno nema redovne vikend službe, izvan radnog vremena upućuje na Tierklinik Sattledt, Steyr i Schwanenstadt",
         "de": "Mo/Di/Do/Fr 9–12 und 15–18 Uhr, Mi 15–19 Uhr; derzeit kein regulärer Wochenenddienst; außerhalb der Sprechzeiten wird an die Tierkliniken Sattledt, Steyr und Schwanenstadt verwiesen",
         "fr": "Lun., mar., jeu., ven. 9 h–12 h et 15 h–18 h, mer. 15 h–19 h ; pas de service régulier le week-end pour le moment, renvoie en dehors des heures vers Tierklinik Sattledt, Steyr et Schwanenstadt.",
-        "es": "Lun/mar/jue/vie 9–12 h y 15–18 h, mié 15–19 h; por ahora sin servicio regular en fin de semana: fuera de horario deriva a Tierklinik Sattledt, Steyr y Schwanenstadt"
+        "es": "Lun/mar/jue/vie 9–12 h y 15–18 h, mié 15–19 h; por ahora sin servicio regular en fin de semana: fuera de horario deriva a Tierklinik Sattledt, Steyr y Schwanenstadt",
+        "it": "Lun/mar/gio/ven 9–12 e 15–18, mer 15–19; al momento nessun servizio regolare nel fine settimana: fuori orario rimanda a Tierklinik Sattledt, Steyr e Schwanenstadt"
       },
       "url": "https://kleintierpraxis-kaltenboeck.at/",
       "source_url": "https://kleintierpraxis-kaltenboeck.at/notfall/",
@@ -621,7 +644,8 @@
         "hr": "Otvoreno 24 h, 365 dana, veterinari su na licu mjesta; kirurški tim je u pripravnosti noću, vikendom i blagdanima",
         "de": "365 Tage im Jahr rund um die Uhr geöffnet, Tierärzte vor Ort; chirurgisches Team nachts, am Wochenende und feiertags in Bereitschaft",
         "fr": "Ouvert 24 h/24, 365 jours par an, vétérinaires sur place ; équipe chirurgicale d’astreinte la nuit, le week-end et les jours fériés.",
-        "es": "Abierto 24 h, 365 días, con veterinarios en el centro; equipo quirúrgico de guardia por las noches, fines de semana y festivos"
+        "es": "Abierto 24 h, 365 días, con veterinarios en el centro; equipo quirúrgico de guardia por las noches, fines de semana y festivos",
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno, veterinari in sede; équipe chirurgica di guardia di notte, nei fine settimana e nei festivi"
       },
       "url": "https://tierklinik-thalerhof.at/",
       "source_url": "https://tierklinik-thalerhof.at/",
@@ -643,7 +667,8 @@
         "hr": "Hitna služba 24 sata na glavnom broju; redovno pon–pet 8–19, sub 9–11",
         "de": "Notdienst rund um die Uhr unter der Hauptnummer; Sprechzeiten Mo–Fr 8–19 Uhr, Sa 9–11 Uhr",
         "fr": "Urgences 24 h/24 au numéro principal ; horaires habituels : lun.–ven. 8 h–19 h, sam. 9 h–11 h.",
-        "es": "Urgencias 24 horas en el teléfono principal; horario habitual lun–vie 8–19 h, sáb 9–11 h"
+        "es": "Urgencias 24 horas en el teléfono principal; horario habitual lun–vie 8–19 h, sáb 9–11 h",
+        "it": "Servizio di emergenza 24 ore su 24 al numero principale; orari regolari lun–ven 8–19, sab 9–11"
       },
       "url": "https://www.veterinaria.at/standorte/muttendorf",
       "source_url": "https://www.veterinaria.at/standorte/muttendorf",
@@ -665,7 +690,8 @@
         "hr": "Hitni slučajevi 0.00–24.00, uvijek prvo nazovi; pon–pet 8–19, sub 9–11",
         "de": "Notfälle rund um die Uhr, bitte immer zuerst anrufen; Mo–Fr 8–19 Uhr, Sa 9–11 Uhr",
         "fr": "Urgences 0 h–24 h, appelez toujours avant de venir ; lun.–ven. 8 h–19 h, sam. 9 h–11 h.",
-        "es": "Urgencias 0:00–24:00 h, llama siempre primero; lun–vie 8–19 h, sáb 9–11 h"
+        "es": "Urgencias 0:00–24:00 h, llama siempre primero; lun–vie 8–19 h, sáb 9–11 h",
+        "it": "Urgenze 0:00–24:00, telefonare sempre prima; lun–ven 8–19, sab 9–11"
       },
       "url": "https://www.tierklinikleoben.com/",
       "source_url": "https://www.tierklinikleoben.com/kontakt",
@@ -686,7 +712,8 @@
         "hr": "Zatraži dežurnog veterinara na +43 316 681118: pon–pet 19–24, sub 15–24, ned i blagdanima 8–12 i 16–24. Nakon ponoći nema službe",
         "de": "Diensthabenden Tierarzt erfragen unter +43 316 681118: Mo–Fr 19–24 Uhr, Sa 15–24 Uhr, So und feiertags 8–12 und 16–24 Uhr. Kein Dienst nach Mitternacht",
         "fr": "Demandez le vétérinaire de garde au +43 316 681118 : lun.–ven. 19 h–24 h, sam. 15 h–24 h, dim. et jours fériés 8 h–12 h et 16 h–24 h. Pas de service après minuit.",
-        "es": "Pide el veterinario de guardia en el +43 316 681118: lun–vie 19–24 h, sáb 15–24 h, dom y festivos 8–12 h y 16–24 h. Sin servicio después de medianoche"
+        "es": "Pide el veterinario de guardia en el +43 316 681118: lun–vie 19–24 h, sáb 15–24 h, dom y festivos 8–12 h y 16–24 h. Sin servicio después de medianoche",
+        "it": "Chiedere del veterinario di turno al +43 316 681118: lun–ven 19–24, sab 15–24, dom e festivi 8–12 e 16–24. Nessun servizio dopo mezzanotte"
       },
       "url": "https://www.graz.at/cms/ziel/7535916/de/?cms_nearest=10036677",
       "source_url": "https://www.graz.at/cms/ziel/7535916/de/?cms_nearest=10036677",
@@ -709,7 +736,8 @@
         "hr": "Radnim danom 8–12 i 14–18.30, sub 9–11; termini telefonom",
         "de": "Werktags 8–12 und 14–18.30 Uhr, Sa 9–11 Uhr; Termine nach telefonischer Vereinbarung",
         "fr": "En semaine 8 h–12 h et 14 h–18 h 30, sam. 9 h–11 h ; rendez-vous par téléphone.",
-        "es": "Lun–vie 8–12 h y 14–18:30 h, sáb 9–11 h; cita previa por teléfono"
+        "es": "Lun–vie 8–12 h y 14–18:30 h, sáb 9–11 h; cita previa por teléfono",
+        "it": "Nei feriali 8–12 e 14–18:30, sab 9–11; appuntamenti per telefono"
       },
       "url": "https://www.anicura.at/standorte/fachtierarztpraxis-gratkorn/",
       "source_url": "https://www.anicura.at/standorte/fachtierarztpraxis-gratkorn/kontakt/",
@@ -730,7 +758,8 @@
         "hr": "Pon–pet uz prethodnu najavu 9–14 i 15–17",
         "de": "Mo–Fr 9–14 und 15–17 Uhr, nur mit Termin",
         "fr": "Lun.–ven. sur rendez-vous, 9 h–14 h et 15 h–17 h.",
-        "es": "Lun–vie con cita previa 9–14 h y 15–17 h"
+        "es": "Lun–vie con cita previa 9–14 h y 15–17 h",
+        "it": "Lun–ven su appuntamento 9–14 e 15–17"
       },
       "url": "https://www.veterinaria.at/standorte/graz-sued",
       "source_url": "https://www.veterinaria.at/standorte/graz-sued",
@@ -748,7 +777,8 @@
         "hr": "Samo vikendom i blagdanima: dežurstvo za male životinje od sub 08:00 (blagdanima od 19:00 uoči blagdana) do pon 07:00; dežurni veterinari po okrugu (Bezirk) s brojevima telefona (npr. vikend 30.10.–02.11.2026. Klagenfurt: Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844; Villach: Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). Radnim danom: vlastiti veterinar ili klinika",
         "de": "Nur an Wochenenden und Feiertagen: Kleintierdienst von Sa 8 Uhr (an Feiertagen ab 19 Uhr am Vorabend) bis Mo 7 Uhr; diensthabende Tierärzte pro Bezirk mit Telefonnummern (z. B. Wochenende 30.10.–02.11.2026 Klagenfurt: Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844; Villach: Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). Werktags: den eigenen Tierarzt oder die eigene Klinik kontaktieren",
         "fr": "Week-ends et jours fériés uniquement : garde des petits animaux du sam. 8 h (jours fériés à partir de 19 h la veille) au lundi 7 h ; vétérinaires de garde par district avec numéros de téléphone (p. ex. week-end du 30.10 au 02.11.2026, Klagenfurt : Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844 ; Villach : Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). En semaine : votre vétérinaire ou clinique habituelle.",
-        "es": "Solo fines de semana y festivos: guardia de animales pequeños desde el sábado a las 8:00 h (festivos desde las 19:00 h de la víspera) hasta el lunes a las 7:00 h; veterinarios de guardia por Bezirk con teléfonos (p. ej. fin de semana 30.10.-02.11.2026 Klagenfurt: Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844; Villach: Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). Entre semana: tu veterinario o clínica habitual"
+        "es": "Solo fines de semana y festivos: guardia de animales pequeños desde el sábado a las 8:00 h (festivos desde las 19:00 h de la víspera) hasta el lunes a las 7:00 h; veterinarios de guardia por Bezirk con teléfonos (p. ej. fin de semana 30.10.-02.11.2026 Klagenfurt: Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844; Villach: Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). Entre semana: tu veterinario o clínica habitual",
+        "it": "Solo fine settimana e festivi: guardia per piccoli animali da sab 8:00 (nei festivi dalle 19:00 della vigilia) a lun 7:00; veterinari di turno per distretto con numeri di telefono (es. fine settimana 30.10.–02.11.2026 Klagenfurt: Tierklinik Dr. Erdmann 0664/2051300, Dr. Woschnjak 0664/5280844; Villach: Dr. Kušej 0676/5017200, TP Rennstein 0676/3208200). Nei feriali: il proprio veterinario o la clinica"
       },
       "url": "https://www.tierarzt-ktn.at/",
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -771,7 +801,8 @@
         "hr": "Pon–pet 9–19, sub 10–16, uz telefonski dogovor; izvan radnog vremena upućuje na dežurnog veterinara u Koruškoj (Kärnten)",
         "de": "Mo–Fr 9–19 Uhr, Sa 10–16 Uhr, nach telefonischer Vereinbarung; außerhalb der Sprechzeiten wird an den Kärntner Tierärzte-Notdienst verwiesen",
         "fr": "Lun.–ven. 9 h–19 h, sam. 10 h–16 h, sur rendez-vous téléphonique ; en dehors des heures, renvoie vers le vétérinaire de garde de Carinthie.",
-        "es": "Lun–vie 9–19 h, sáb 10–16 h, con cita previa por teléfono; fuera de horario deriva al veterinario de guardia de Kärnten"
+        "es": "Lun–vie 9–19 h, sáb 10–16 h, con cita previa por teléfono; fuera de horario deriva al veterinario de guardia de Kärnten",
+        "it": "Lun–ven 9–19, sab 10–16, su appuntamento telefonico; fuori orario rimanda al veterinario di turno della Carinzia"
       },
       "url": "https://www.krebitz.at/",
       "source_url": "https://www.krebitz.at/notfall/",
@@ -793,7 +824,8 @@
         "hr": "Pon–pet 9–12 i 15–18.30, sub 9–12; hitni slučajevi po dogovoru",
         "de": "Mo–Fr 9–12 und 15–18.30 Uhr, Sa 9–12 Uhr; Notfälle nach Vereinbarung",
         "fr": "Lun.–ven. 9 h–12 h et 15 h–18 h 30, sam. 9 h–12 h ; urgences sur rendez-vous.",
-        "es": "Lun–vie 9–12 h y 15–18:30 h, sáb 9–12 h; urgencias previo acuerdo"
+        "es": "Lun–vie 9–12 h y 15–18:30 h, sáb 9–12 h; urgencias previo acuerdo",
+        "it": "Lun–ven 9–12 e 15–18:30, sab 9–12; urgenze previo accordo"
       },
       "url": "https://www.docc.at/",
       "source_url": "https://www.docc.at/kontakt",
@@ -814,7 +846,8 @@
         "hr": "Pon–pet uz prethodnu najavu; broj za hitne slučajeve +43 664 4010067 (ako nitko ne odgovori, pošalji SMS)",
         "de": "Mo–Fr nach Terminvereinbarung; Notrufnummer +43 664 4010067 (falls niemand abhebt, bitte SMS senden)",
         "fr": "Lun.–ven. sur rendez-vous ; numéro d’urgence +43 664 4010067 (en l’absence de réponse, envoyez un SMS).",
-        "es": "Lun–vie con cita previa; teléfono de urgencias +43 664 4010067 (envía un SMS si no contestan)"
+        "es": "Lun–vie con cita previa; teléfono de urgencias +43 664 4010067 (envía un SMS si no contestan)",
+        "it": "Lun–ven su appuntamento; numero di emergenza +43 664 4010067 (inviare un SMS se non risponde)"
       },
       "url": "https://imfallderfelle.at/",
       "source_url": "https://imfallderfelle.at/",
@@ -835,7 +868,8 @@
         "hr": "Pon–pet 9–11 i 15.30–18.30, vikendom zatvoreno",
         "de": "Mo–Fr 9–11 und 15.30–18.30 Uhr, am Wochenende geschlossen",
         "fr": "Lun.–ven. 9 h–11 h et 15 h 30–18 h 30, fermé le week-end.",
-        "es": "Lun–vie 9–11 h y 15:30–18:30 h, cerrado los fines de semana"
+        "es": "Lun–vie 9–11 h y 15:30–18:30 h, cerrado los fines de semana",
+        "it": "Lun–ven 9–11 e 15:30–18:30, chiuso nel fine settimana"
       },
       "url": "https://www.dein-tierarzt.at/",
       "source_url": "https://www.dein-tierarzt.at/kontakt/",
@@ -854,7 +888,8 @@
         "hr": "Središnji broj za hitne slučajeve kod malih životinja +43 662 261700: pon–pet 19:00–07:00, sub od 12:00, ned cijeli dan; samo za životno ugrožene slučajeve. Pokriva grad Salzburg, Flachgau i Tennengau; Pongau/Pinzgau/Lungau imaju tromjesečne vikend rotacije",
         "de": "Zentrale Kleintier-Notrufnummer +43 662 261700: Mo–Fr 19–7 Uhr, Sa ab 12 Uhr, So ganztägig; nur für lebensbedrohliche Notfälle. Gilt für die Stadt Salzburg, den Flachgau und den Tennengau; Pongau/Pinzgau/Lungau haben vierteljährlich wechselnde Wochenenddienste",
         "fr": "Numéro central des urgences pour petits animaux +43 662 261700 : lun.–ven. 19 h–7 h, sam. à partir de 12 h, dim. toute la journée ; uniquement pour les urgences vitales. Couvre la ville de Salzbourg, le Flachgau et le Tennengau ; Pongau, Pinzgau et Lungau ont une garde de week-end trimestrielle à tour de rôle.",
-        "es": "Teléfono central de urgencias de animales pequeños +43 662 261700: lun–vie 19:00–7:00 h, sáb desde las 12:00 h, dom todo el día; solo para urgencias con riesgo vital. Cubre Stadt Salzburg, Flachgau y Tennengau; Pongau/Pinzgau/Lungau tienen rotaciones trimestrales de fin de semana"
+        "es": "Teléfono central de urgencias de animales pequeños +43 662 261700: lun–vie 19:00–7:00 h, sáb desde las 12:00 h, dom todo el día; solo para urgencias con riesgo vital. Cubre Stadt Salzburg, Flachgau y Tennengau; Pongau/Pinzgau/Lungau tienen rotaciones trimestrales de fin de semana",
+        "it": "Numero centrale di emergenza per piccoli animali +43 662 261700: lun–ven 19:00–7:00, sab dalle 12:00, dom tutto il giorno; solo per urgenze con pericolo di vita. Copre la città di Salisburgo, Flachgau e Tennengau; Pongau/Pinzgau/Lungau hanno turni trimestrali nel fine settimana"
       },
       "url": "https://www.salzburg.gv.at/veterinaerwesen/tieraerztebereitschaft",
       "source_url": "https://www.salzburg.gv.at/veterinaerwesen/tieraerztebereitschaft",
@@ -874,7 +909,8 @@
         "hr": "Tromjesečna vikend rotacija praksi za male životinje (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr); nazovi ambulantu navedenu za taj vikend",
         "de": "Vierteljährlich wechselnder Wochenenddienst der Kleintierpraxen (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr); bitte die für das Wochenende genannte Praxis anrufen",
         "fr": "Garde de week-end trimestrielle à tour de rôle des cabinets pour petits animaux (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr) ; appelez le cabinet indiqué pour le week-end concerné.",
-        "es": "Rotación trimestral de fin de semana de clínicas de animales pequeños (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr); llama a la clínica indicada para ese fin de semana"
+        "es": "Rotación trimestral de fin de semana de clínicas de animales pequeños (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr); llama a la clínica indicada para ese fin de semana",
+        "it": "Turni trimestrali nel fine settimana degli ambulatori per piccoli animali (Schwarzach, St. Johann/Pg., Bischofshofen, Altenmarkt, Bruck/Glocknerstraße, Ramingstein, Mariapfarr); chiamare l'ambulatorio indicato per il fine settimana"
       },
       "url": "https://www.salzburg.gv.at/veterinaerwesen/tieraerztebereitschaft",
       "source_url": "https://www.salzburg.gv.at/fileadmin/Dateien/Agrar-Wald/20403/Not-_und_Bereitschaftsdienste/Tier%C3%A4rztliche_Notfallbereitschaft_Kleintiere_Innergebirge_3._Quartal_2026.pdf",
@@ -897,7 +933,8 @@
         "hr": "Sudjeluje u vikend rotaciji za male životinje u Innergebirgu",
         "de": "Nimmt am Kleintier-Wochenenddienst Innergebirge teil",
         "fr": "Participe à la garde de week-end des petits animaux de l’Innergebirge.",
-        "es": "Participa en la rotación de fin de semana de animales pequeños de Innergebirge"
+        "es": "Participa en la rotación de fin de semana de animales pequeños de Innergebirge",
+        "it": "Partecipa ai turni del fine settimana per piccoli animali dell'Innergebirge"
       },
       "url": "https://www.salzburg.gv.at/veterinaerwesen/tieraerztebereitschaft",
       "source_url": "https://www.salzburg.gv.at/fileadmin/Dateien/Agrar-Wald/20403/Not-_und_Bereitschaftsdienste/Tier%C3%A4rztliche_Notfallbereitschaft_Kleintiere_Innergebirge_3._Quartal_2026.pdf",
@@ -919,7 +956,8 @@
         "hr": "Sudjeluje u vikend rotaciji za male životinje u Innergebirgu",
         "de": "Nimmt am Kleintier-Wochenenddienst Innergebirge teil",
         "fr": "Participe à la garde de week-end des petits animaux de l’Innergebirge.",
-        "es": "Participa en la rotación de fin de semana de animales pequeños de Innergebirge"
+        "es": "Participa en la rotación de fin de semana de animales pequeños de Innergebirge",
+        "it": "Partecipa ai turni del fine settimana per piccoli animali dell'Innergebirge"
       },
       "url": "https://www.salzburg.gv.at/veterinaerwesen/tieraerztebereitschaft",
       "source_url": "https://www.salzburg.gv.at/fileadmin/Dateien/Agrar-Wald/20403/Not-_und_Bereitschaftsdienste/Tier%C3%A4rztliche_Notfallbereitschaft_Kleintiere_Innergebirge_3._Quartal_2026.pdf",
@@ -941,7 +979,8 @@
         "hr": "Pon/uto/čet/pet 8–12 i 15–18, samo uz prethodnu najavu; izvan radnog vremena Kleintiernotruf +43 662 261700",
         "de": "Mo/Di/Do/Fr 8–12 und 15–18 Uhr, nur mit Termin; außerhalb der Sprechzeiten Kleintiernotruf +43 662 261700",
         "fr": "Lun., mar., jeu., ven. 8 h–12 h et 15 h–18 h, sur rendez-vous uniquement ; en dehors des heures, urgences petits animaux Kleintiernotruf +43 662 261700.",
-        "es": "Lun/mar/jue/vie 8–12 h y 15–18 h, solo con cita previa; fuera de horario Kleintiernotruf +43 662 261700"
+        "es": "Lun/mar/jue/vie 8–12 h y 15–18 h, solo con cita previa; fuera de horario Kleintiernotruf +43 662 261700",
+        "it": "Lun/mar/gio/ven 8–12 e 15–18, solo su appuntamento; fuori orario Kleintiernotruf +43 662 261700"
       },
       "url": "https://www.kleintierpraxis-salzburg.at/",
       "source_url": "https://www.kleintierpraxis-salzburg.at/%C3%B6ffnungszeiten-kontakt/",
@@ -960,7 +999,8 @@
         "hr": "Radnim danom noću 19:00–07:00 (financira grad); linija spaja s dežurnom ambulantom; ako nitko ne odgovori, ostavi ime i broj za povratni poziv",
         "de": "Werktags nachts 19–7 Uhr (von der Stadt finanziert); die Leitung verbindet mit der diensthabenden Praxis; falls niemand abhebt, bitte Name und Nummer für einen Rückruf hinterlassen",
         "fr": "Nuits de semaine 19 h–7 h (financé par la ville) ; la ligne renvoie vers le cabinet de garde ; sans réponse, laissez votre nom et votre numéro pour être rappelé.",
-        "es": "Noches entre semana 19:00–7:00 h (financiado por la ciudad); la línea conecta con la clínica de guardia; si no contestan, deja tu nombre y teléfono para que te llamen"
+        "es": "Noches entre semana 19:00–7:00 h (financiado por la ciudad); la línea conecta con la clínica de guardia; si no contestan, deja tu nombre y teléfono para que te llamen",
+        "it": "Notti feriali 19:00–7:00 (finanziato dal comune); la linea inoltra all'ambulatorio di turno; se non risponde, lasciare nome e numero per essere richiamati"
       },
       "url": "https://www.tierarzt-notdienst.tirol/",
       "source_url": "https://www.meinbezirk.at/innsbruck/c-lokales/der-tieraerztlicher-notdienst-ist-gesichert_a8803521",
@@ -981,7 +1021,8 @@
       "duty_i18n": {
         "de": "Eigene Notrufnummer +43 664 7375 4587 (Erreichbarkeit rund um die Uhr nicht garantiert); Mo/Di/Do 10–12 und 16–18 Uhr, Mi 17–20 Uhr, Fr 10–13 Uhr. Notrufnummer der Innsbrucker Tierärzte: +43 664 255 9253",
         "fr": "Ligne d’urgence propre +43 664 7375 4587 (au mieux, sans garantie 24 h/24) ; lun., mar., jeu. 10 h–12 h et 16 h–18 h, mer. 17 h–20 h, ven. 10 h–13 h. Ligne d’urgence des vétérinaires d’Innsbruck : +43 664 255 9253.",
-        "es": "Línea de urgencias propia +43 664 7375 4587 (según disponibilidad, sin garantía de 24 h); lun/mar/jue 10–12 h y 16–18 h, mié 17–20 h, vie 10–13 h. Línea de urgencias de los veterinarios de Innsbruck: +43 664 255 9253"
+        "es": "Línea de urgencias propia +43 664 7375 4587 (según disponibilidad, sin garantía de 24 h); lun/mar/jue 10–12 h y 16–18 h, mié 17–20 h, vie 10–13 h. Línea de urgencias de los veterinarios de Innsbruck: +43 664 255 9253",
+        "it": "Linea di emergenza propria +43 664 7375 4587 (senza garanzia, copertura 24 ore su 24 non assicurata); lun/mar/gio 10–12 e 16–18, mer 17–20, ven 10–13. Linea di emergenza dei veterinari di Innsbruck: +43 664 255 9253"
       },
       "url": "https://www.tierarzt-zwetkoff.at/",
       "source_url": "https://www.tierarzt-zwetkoff.at/",
@@ -1003,7 +1044,8 @@
         "hr": "Radnim danom 9–11.30 i 16–19; vlastiti broj za hitne slučajeve +43 699 10016016",
         "de": "Werktags 9–11.30 und 16–19 Uhr; eigene Notrufnummer +43 699 10016016",
         "fr": "En semaine 9 h–11 h 30 et 16 h–19 h ; numéro d’urgence propre +43 699 10016016.",
-        "es": "Lun–vie 9–11:30 h y 16–19 h; número de urgencias propio +43 699 10016016"
+        "es": "Lun–vie 9–11:30 h y 16–19 h; número de urgencias propio +43 699 10016016",
+        "it": "Nei feriali 9–11:30 e 16–19; numero di emergenza proprio +43 699 10016016"
       },
       "url": "https://www.kleintierpraxis-schuster.at/",
       "source_url": "https://www.kleintierpraxis-schuster.at/",
@@ -1024,7 +1066,8 @@
         "hr": "Pon–pet 9–12 i 16–19, sub 9–11; hitni pozivi samo u tom vremenu — trenutačno nema neprekidne hitne službe",
         "de": "Mo–Fr 9–12 und 16–19 Uhr, Sa 9–11 Uhr; Notfallanrufe nur zu diesen Zeiten; derzeit kein durchgehender Notdienst",
         "fr": "Lun.–ven. 9 h–12 h et 16 h–19 h, sam. 9 h–11 h ; appels d’urgence uniquement pendant ces horaires, pas de service d’urgence continu pour le moment.",
-        "es": "Lun–vie 9–12 h y 16–19 h, sáb 9–11 h; llamadas de urgencia solo en este horario: por ahora no hay servicio de urgencias continuo"
+        "es": "Lun–vie 9–12 h y 16–19 h, sáb 9–11 h; llamadas de urgencia solo en este horario: por ahora no hay servicio de urgencias continuo",
+        "it": "Lun–ven 9–12 e 16–19, sab 9–11; chiamate di emergenza solo in questi orari: al momento nessun servizio di emergenza continuo"
       },
       "url": "https://www.tierklinik-imst.at/",
       "source_url": "https://www.tierklinik-imst.at/kontakt",
@@ -1046,7 +1089,8 @@
         "hr": "Male životinje +43 664 5413344, velike životinje +43 5282 7191; pon/uto/čet/pet 10–12, pon–pet 16–18.30, vikendom zatvoreno",
         "de": "Kleintiere +43 664 5413344, Großtiere +43 5282 7191; Mo/Di/Do/Fr 10–12 Uhr, Mo–Fr 16–18.30 Uhr, am Wochenende geschlossen",
         "fr": "Petits animaux +43 664 5413344, grands animaux +43 5282 7191 ; lun., mar., jeu., ven. 10 h–12 h, lun.–ven. 16 h–18 h 30, fermé le week-end.",
-        "es": "Animales pequeños +43 664 5413344, animales grandes +43 5282 7191; lun/mar/jue/vie 10–12 h, lun–vie 16–18:30 h, cerrado los fines de semana"
+        "es": "Animales pequeños +43 664 5413344, animales grandes +43 5282 7191; lun/mar/jue/vie 10–12 h, lun–vie 16–18:30 h, cerrado los fines de semana",
+        "it": "Piccoli animali +43 664 5413344, grandi animali +43 5282 7191; lun/mar/gio/ven 10–12, lun–ven 16–18:30, chiuso nel fine settimana"
       },
       "url": "https://www.tierarztpraxis-zell.at/",
       "source_url": "https://www.tierarztpraxis-zell.at/kontakt/",
@@ -1068,7 +1112,8 @@
         "hr": "Ambulanta za male životinje i konje",
         "de": "Praxis für Kleintiere und Pferde",
         "fr": "Cabinet pour petits animaux et chevaux.",
-        "es": "Clínica de animales pequeños y caballos"
+        "es": "Clínica de animales pequeños y caballos",
+        "it": "Ambulatorio per piccoli animali e cavalli"
       },
       "url": "https://www.tirol.gv.at/fileadmin/bezirke-gemeinden/kitzbuehel/downloads/Tierarztpraxen_Bezirk_KB.pdf",
       "source_url": "https://www.tirol.gv.at/fileadmin/bezirke-gemeinden/kitzbuehel/downloads/Tierarztpraxen_Bezirk_KB.pdf",
@@ -1090,7 +1135,8 @@
         "hr": "Ambulanta za velike i male životinje",
         "de": "Praxis für Groß- und Kleintiere",
         "fr": "Cabinet pour grands et petits animaux.",
-        "es": "Clínica de animales grandes y pequeños"
+        "es": "Clínica de animales grandes y pequeños",
+        "it": "Ambulatorio per grandi e piccoli animali"
       },
       "url": "https://www.tirol.gv.at/fileadmin/bezirke-gemeinden/kitzbuehel/downloads/Tierarztpraxen_Bezirk_KB.pdf",
       "source_url": "https://www.tirol.gv.at/fileadmin/bezirke-gemeinden/kitzbuehel/downloads/Tierarztpraxen_Bezirk_KB.pdf",
@@ -1112,7 +1158,8 @@
         "hr": "24-satni Notdienst telefonom na glavnom broju; pon–pet 10–12 i 17–19, sub 10–12, termini po dogovoru; ned/blagdanima zatvoreno, ali za hitne slučajeve dostupni telefonom",
         "de": "Telefonischer Notdienst rund um die Uhr unter der Hauptnummer; Mo–Fr 10–12 und 17–19 Uhr, Sa 10–12 Uhr, Terminvereinbarung erbeten; So und feiertags geschlossen, für Notfälle aber telefonisch erreichbar",
         "fr": "Urgences 24 h/24 par téléphone au numéro principal ; lun.–ven. 10 h–12 h et 17 h–19 h, sam. 10 h–12 h, sur rendez-vous ; fermé dim. et jours fériés mais joignable par téléphone en cas d’urgence.",
-        "es": "Urgencias 24 h por teléfono en el número principal; lun–vie 10–12 h y 17–19 h, sáb 10–12 h, con cita previa; cerrado dom/festivos, pero localizable por teléfono en caso de urgencia"
+        "es": "Urgencias 24 h por teléfono en el número principal; lun–vie 10–12 h y 17–19 h, sáb 10–12 h, con cita previa; cerrado dom/festivos, pero localizable por teléfono en caso de urgencia",
+        "it": "Servizio di emergenza telefonico 24 ore su 24 al numero principale; lun–ven 10–12 e 17–19, sab 10–12, su appuntamento; dom/festivi chiuso ma raggiungibile per telefono in caso di urgenza"
       },
       "url": "https://www.cepicka.at/",
       "source_url": "https://www.cepicka.at/",
@@ -1135,7 +1182,8 @@
         "hr": "Pon/uto/pet 8–18, sri/čet 8–19, sub 9–12; izvan radnog vremena hitna linija +43 664 99434064 samo za hitne slučajeve (uz naknadu za hitnu uslugu, plaća se na licu mjesta)",
         "de": "Mo/Di/Fr 8–18 Uhr, Mi/Do 8–19 Uhr, Sa 9–12 Uhr; außerhalb der Sprechzeiten Notrufnummer +43 664 99434064 nur für dringende Fälle (Notdienstgebühr, Zahlung vor Ort)",
         "fr": "Lun., mar., ven. 8 h–18 h, mer., jeu. 8 h–19 h, sam. 9 h–12 h ; ligne d’urgence en dehors des heures +43 664 99434064, cas urgents uniquement (supplément d’urgence, paiement sur place).",
-        "es": "Lun/mar/vie 8–18 h, mié/jue 8–19 h, sáb 9–12 h; línea de urgencias fuera de horario +43 664 99434064 solo para casos urgentes (recargo por urgencia, pago en la clínica)"
+        "es": "Lun/mar/vie 8–18 h, mié/jue 8–19 h, sáb 9–12 h; línea de urgencias fuera de horario +43 664 99434064 solo para casos urgentes (recargo por urgencia, pago en la clínica)",
+        "it": "Lun/mar/ven 8–18, mer/gio 8–19, sab 9–12; fuori orario linea di emergenza +43 664 99434064 solo per i casi urgenti (supplemento per l'urgenza, pagamento in loco)"
       },
       "url": "https://www.tierklinik-fuerst.at/",
       "source_url": "https://www.tierklinik-fuerst.at/",
@@ -1157,7 +1205,8 @@
         "hr": "Pon–sri i pet 10.30–12 i 16.30–18.30, čet 10.30–12; izvan tog vremena samo uz telefonski dogovor",
         "de": "Mo–Mi und Fr 10.30–12 und 16.30–18.30 Uhr, Do 10.30–12 Uhr; außerhalb dieser Zeiten nur nach telefonischer Vereinbarung",
         "fr": "Lun.–mer. et ven. 10 h 30–12 h et 16 h 30–18 h 30, jeu. 10 h 30–12 h ; en dehors de ces horaires, uniquement sur rendez-vous téléphonique.",
-        "es": "Lun–mié y vie 10:30–12 h y 16:30–18:30 h, jue 10:30–12 h; fuera de horario solo previo acuerdo por teléfono"
+        "es": "Lun–mié y vie 10:30–12 h y 16:30–18:30 h, jue 10:30–12 h; fuera de horario solo previo acuerdo por teléfono",
+        "it": "Lun–mer e ven 10:30–12 e 16:30–18:30, gio 10:30–12; fuori orario solo previo accordo telefonico"
       },
       "url": "https://www.tierarzt-bregenz.at/",
       "source_url": "https://www.tierarzt-bregenz.at/",
@@ -1178,7 +1227,8 @@
         "hr": "Pon–čet 9–11 i 16–18, pet 9–15, sub 10–11; ako u hitnom slučaju nitko ne odgovori, obrati se obližnjim klinikama",
         "de": "Mo–Do 9–11 und 16–18 Uhr, Fr 9–15 Uhr, Sa 10–11 Uhr; falls im Notfall niemand erreichbar ist, bitte Kliniken in der Nähe kontaktieren",
         "fr": "Lun.–jeu. 9 h–11 h et 16 h–18 h, ven. 9 h–15 h, sam. 10 h–11 h ; en cas d’urgence sans réponse, contactez les cliniques proches.",
-        "es": "Lun–jue 9–11 h y 16–18 h, vie 9–15 h, sáb 10–11 h; si no contestan en una urgencia, contacta con clínicas cercanas"
+        "es": "Lun–jue 9–11 h y 16–18 h, vie 9–15 h, sáb 10–11 h; si no contestan en una urgencia, contacta con clínicas cercanas",
+        "it": "Lun–gio 9–11 e 16–18, ven 9–15, sab 10–11; se non raggiungibile in caso di urgenza, contattare le cliniche vicine"
       },
       "url": "https://www.veterinaria.at/standorte/zohmann",
       "source_url": "https://www.veterinaria.at/standorte/zohmann",
@@ -1198,7 +1248,8 @@
         "hr": "Središnja vikend i blagdanska linija: od subote 12:00 do ponedjeljka 07:00 te blagdanima; radnim danom obrati se vlastitom veterinaru ili Kleintier-Notfall Innsbruck u. Umgebung +43 512 250555. Internetski popis 'Wer hat heute Notdienst' po okruzima.",
         "de": "Zentrale Wochenend- und Feiertagsnummer: Sa 12 Uhr bis Mo 7 Uhr und an Feiertagen; werktags den eigenen Tierarzt oder den Kleintier-Notfall Innsbruck u. Umgebung unter +43 512 250555 kontaktieren. Online-Liste „Wer hat heute Notdienst“ nach Bezirk.",
         "fr": "Ligne centrale pour les week-ends et jours fériés : du samedi 12 h au lundi 7 h et jours fériés ; en semaine, contactez votre vétérinaire ou Kleintier-Notfall Innsbruck u. Umgebung +43 512 250555. Liste en ligne « Wer hat heute Notdienst » par district.",
-        "es": "Línea central de fines de semana y festivos: desde el sábado a las 12:00 h hasta el lunes a las 7:00 h y festivos; entre semana contacta con tu veterinario o con Kleintier-Notfall Innsbruck u. Umgebung +43 512 250555. Lista en línea «Wer hat heute Notdienst» por distrito."
+        "es": "Línea central de fines de semana y festivos: desde el sábado a las 12:00 h hasta el lunes a las 7:00 h y festivos; entre semana contacta con tu veterinario o con Kleintier-Notfall Innsbruck u. Umgebung +43 512 250555. Lista en línea «Wer hat heute Notdienst» por distrito.",
+        "it": "Linea centrale per fine settimana e festivi: sabato dalle 12:00 a lunedì 7:00 e festivi; nei feriali contattare il proprio veterinario o Kleintier-Notfall Innsbruck u. Umgebung +43 512 250555. Elenco online 'Wer hat heute Notdienst' per distretto."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst.tirol/notdienst",
@@ -1220,7 +1271,8 @@
         "hr": "Pon 16:00–17:30, uto i čet 10:30–12:00; termin telefonom",
         "de": "Mo 16–17.30 Uhr, Di und Do 10.30–12 Uhr; Termin nach telefonischer Vereinbarung",
         "fr": "Lun. 16 h–17 h 30, mar. et jeu. 10 h 30–12 h ; rendez-vous par téléphone.",
-        "es": "Lun 16:00–17:30 h, mar y jue 10:30–12:00 h; cita previa por teléfono"
+        "es": "Lun 16:00–17:30 h, mar y jue 10:30–12:00 h; cita previa por teléfono",
+        "it": "Lun 16:00–17:30, mar e gio 10:30–12:00; appuntamento per telefono"
       },
       "source_url": "https://www.soelden.com/en/region-villages/soelden-a-z/mountainvet.i-62aacc75-5b84-404e-b740-61d9a9f15f8c",
       "checked": "2026-11-02",
@@ -1240,7 +1292,8 @@
         "hr": "Termin telefonom",
         "de": "Termin nach telefonischer Vereinbarung",
         "fr": "Rendez-vous par téléphone.",
-        "es": "Cita previa por teléfono"
+        "es": "Cita previa por teléfono",
+        "it": "Appuntamento per telefono"
       },
       "source_url": "https://www.soelden.com/en/region-villages/soelden-a-z/veterinary-doctor-dr-med-vet-christine-haslwanter.i-1100ccdc-a8a0-413f-bb19-cbf090f868b6",
       "checked": "2026-11-02",
@@ -1273,7 +1326,8 @@
         "hr": "Male životinje pon–sri 10:30–12:00 i 17:30–19:00, pet 10:30–12:00 i 16:00–18:00; sub/ned/blagdanima uz telefonski dogovor; hitni slučajevi telefonom non-stop",
         "de": "Kleintiere Mo–Mi 10.30–12 und 17.30–19 Uhr, Fr 10.30–12 und 16–18 Uhr; Sa/So/feiertags nach telefonischer Vereinbarung; Notfälle telefonisch rund um die Uhr",
         "fr": "Petits animaux lun.–mer. 10 h 30–12 h et 17 h 30–19 h, ven. 10 h 30–12 h et 16 h–18 h ; sam., dim. et jours fériés sur rendez-vous téléphonique ; urgences par téléphone 24 h/24.",
-        "es": "Animales pequeños lun–mié 10:30–12:00 h y 17:30–19:00 h, vie 10:30–12:00 h y 16:00–18:00 h; sáb/dom/festivos con cita previa por teléfono; urgencias por teléfono las 24 horas"
+        "es": "Animales pequeños lun–mié 10:30–12:00 h y 17:30–19:00 h, vie 10:30–12:00 h y 16:00–18:00 h; sáb/dom/festivos con cita previa por teléfono; urgencias por teléfono las 24 horas",
+        "it": "Piccoli animali lun–mer 10:30–12:00 e 17:30–19:00, ven 10:30–12:00 e 16:00–18:00; sab/dom/festivi su appuntamento telefonico; urgenze per telefono 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-fuegen.at/",
@@ -1322,7 +1376,8 @@
         "hr": "Pon–pet 09:00–11:00 i 14:00–17:00, utorkom popodne zatvoreno",
         "de": "Mo–Fr 9–11 und 14–17 Uhr, Di nachmittags geschlossen",
         "fr": "Lun.–ven. 9 h–11 h et 14 h–17 h, fermé le mardi après-midi.",
-        "es": "Lun–vie 9:00–11:00 h y 14:00–17:00 h, cerrado los martes por la tarde"
+        "es": "Lun–vie 9:00–11:00 h y 14:00–17:00 h, cerrado los martes por la tarde",
+        "it": "Lun–ven 9:00–11:00 e 14:00–17:00, martedì pomeriggio chiuso"
       },
       "small_animals": true,
       "source_url": "https://zgz.at/apotheken-arzte/",
@@ -1343,7 +1398,8 @@
         "hr": "Pon–pet 9–12 i 14–18, inače uz prethodnu najavu; hitni slučajevi: male životinje +43 664 3436026, konji +43 664 1034201",
         "de": "Mo–Fr 9–12 und 14–18 Uhr, sonst nach Vereinbarung; dringende Fälle: Kleintiere +43 664 3436026, Pferde +43 664 1034201",
         "fr": "Lun.–ven. 9 h–12 h et 14 h–18 h, sinon sur rendez-vous ; cas urgents : petits animaux +43 664 3436026, chevaux +43 664 1034201.",
-        "es": "Lun–vie 9–12 h y 14–18 h, en otros horarios con cita previa; casos urgentes: animales pequeños +43 664 3436026, caballos +43 664 1034201"
+        "es": "Lun–vie 9–12 h y 14–18 h, en otros horarios con cita previa; casos urgentes: animales pequeños +43 664 3436026, caballos +43 664 1034201",
+        "it": "Lun–ven 9–12 e 14–18, altrimenti su appuntamento; casi urgenti: piccoli animali +43 664 3436026, cavalli +43 664 1034201"
       },
       "small_animals": true,
       "url": "https://www.tierambulatorium-zirl.at/",
@@ -1364,7 +1420,8 @@
         "hr": "Pon–pet 9–12; pon, uto, čet, pet 16–18; termini po dogovoru",
         "de": "Mo–Fr 9–12 Uhr; Mo, Di, Do, Fr 16–18 Uhr; Terminvereinbarung erbeten",
         "fr": "Lun.–ven. 9 h–12 h ; lun., mar., jeu., ven. 16 h–18 h ; rendez-vous demandé.",
-        "es": "Lun–vie 9–12 h; lun, mar, jue, vie 16–18 h; con cita previa"
+        "es": "Lun–vie 9–12 h; lun, mar, jue, vie 16–18 h; con cita previa",
+        "it": "Lun–ven 9–12; lun, mar, gio, ven 16–18; su appuntamento"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-praxis.tirol/",
@@ -1386,7 +1443,8 @@
         "hr": "Pon–sri 10–12 i 17–19, čet 17–19, pet 10–14, sub 9–11; termini po dogovoru",
         "de": "Mo–Mi 10–12 und 17–19 Uhr, Do 17–19 Uhr, Fr 10–14 Uhr, Sa 9–11 Uhr; Terminvereinbarung erbeten",
         "fr": "Lun.–mer. 10 h–12 h et 17 h–19 h, jeu. 17 h–19 h, ven. 10 h–14 h, sam. 9 h–11 h ; rendez-vous demandé.",
-        "es": "Lun–mié 10–12 h y 17–19 h, jue 17–19 h, vie 10–14 h, sáb 9–11 h; con cita previa"
+        "es": "Lun–mié 10–12 h y 17–19 h, jue 17–19 h, vie 10–14 h, sáb 9–11 h; con cita previa",
+        "it": "Lun–mer 10–12 e 17–19, gio 17–19, ven 10–14, sab 9–11; su appuntamento"
       },
       "small_animals": true,
       "source_url": "https://www.kitzbueheler-alpen.com/en/stjo/infra/a-z/vetpoint-small-animal-practice.html",
@@ -1407,7 +1465,8 @@
         "hr": "Pon–pet 09:00–11:30; pon, uto, čet, pet 16:30–18:30",
         "de": "Mo–Fr 9–11.30 Uhr; Mo, Di, Do, Fr 16.30–18.30 Uhr",
         "fr": "Lun.–ven. 9 h–11 h 30 ; lun., mar., jeu., ven. 16 h 30–18 h 30.",
-        "es": "Lun–vie 9:00–11:30 h; lun, mar, jue, vie 16:30–18:30 h"
+        "es": "Lun–vie 9:00–11:30 h; lun, mar, jue, vie 16:30–18:30 h",
+        "it": "Lun–ven 9:00–11:30; lun, mar, gio, ven 16:30–18:30"
       },
       "source_url": "https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/dipl-ta-ruth-briem-feichtner.html",
       "checked": "2026-11-02",
@@ -1427,7 +1486,8 @@
         "hr": "Samo uz prethodnu najavu",
         "de": "Nur mit Termin",
         "fr": "Sur rendez-vous uniquement.",
-        "es": "Solo con cita previa"
+        "es": "Solo con cita previa",
+        "it": "Solo su appuntamento"
       },
       "small_animals": true,
       "source_url": "https://www.kitzbueheler-alpen.com/en/stjo/infra/a-z/dr-vet-med-walter-taxer-vet.html",
@@ -1448,7 +1508,8 @@
         "hr": "Pon–pet 08:00–12:00 i 13:00–16:00, samo uz prethodnu najavu",
         "de": "Mo–Fr 8–12 und 13–16 Uhr, nur mit vorheriger Terminvereinbarung",
         "fr": "Lun.–ven. 8 h–12 h et 13 h–16 h, uniquement sur rendez-vous préalable.",
-        "es": "Lun–vie 8:00–12:00 h y 13:00–16:00 h, solo con cita previa"
+        "es": "Lun–vie 8:00–12:00 h y 13:00–16:00 h, solo con cita previa",
+        "it": "Lun–ven 8:00–12:00 e 13:00–16:00, solo con appuntamento previo"
       },
       "small_animals": true,
       "source_url": "https://www.kitzbueheler-alpen.com/en/hosa/infra/a-z/veterinary-practice-kirchbichl.html",
@@ -1469,7 +1530,8 @@
         "hr": "Pon, uto 8–11 i 15–18; sri 9–12; čet 8–11 i 16–20; pet 7:30–14; izvan radnog vremena tirolska deneodgodiva linija +43 676 8850882444",
         "de": "Mo, Di 8–11 und 15–18 Uhr; Mi 9–12 Uhr; Do 8–11 und 16–20 Uhr; Fr 7.30–14 Uhr; außerhalb der Sprechzeiten Tiroler Notrufnummer +43 676 8850882444",
         "fr": "Lun., mar. 8 h–11 h et 15 h–18 h ; mer. 9 h–12 h ; jeu. 8 h–11 h et 16 h–20 h ; ven. 7 h 30–14 h ; en dehors des heures, ligne de garde du Tyrol +43 676 8850882444.",
-        "es": "Lun, mar 8–11 h y 15–18 h; mié 9–12 h; jue 8–11 h y 16–20 h; vie 7:30–14 h; fuera de horario línea de guardia de Tirol +43 676 8850882444"
+        "es": "Lun, mar 8–11 h y 15–18 h; mié 9–12 h; jue 8–11 h y 16–20 h; vie 7:30–14 h; fuera de horario línea de guardia de Tirol +43 676 8850882444",
+        "it": "Lun, mar 8–11 e 15–18; mer 9–12; gio 8–11 e 16–20; ven 7:30–14; fuori orario linea di guardia del Tirolo +43 676 8850882444"
       },
       "small_animals": true,
       "url": "https://www.vet-doc.at/",
@@ -1491,7 +1553,8 @@
         "hr": "Ambulanta za male životinje uz prethodnu najavu pon–pet; nedjeljom/blagdanima deneodgodiva linija za male životinje +43 676 8850882444",
         "de": "Kleintierpraxis Mo–Fr nach Terminvereinbarung; So und feiertags Kleintier-Notrufnummer +43 676 8850882444",
         "fr": "Cabinet pour petits animaux sur rendez-vous du lundi au vendredi ; dim. et jours fériés, ligne de garde petits animaux +43 676 8850882444.",
-        "es": "Consulta de animales pequeños con cita previa de lunes a viernes; domingos/festivos línea de guardia de animales pequeños +43 676 8850882444"
+        "es": "Consulta de animales pequeños con cita previa de lunes a viernes; domingos/festivos línea de guardia de animales pequeños +43 676 8850882444",
+        "it": "Ambulatorio per piccoli animali su appuntamento lun–ven; dom/festivi linea di guardia per piccoli animali +43 676 8850882444"
       },
       "small_animals": true,
       "url": "https://taxacher.tirol/",
@@ -1513,7 +1576,8 @@
         "hr": "Male životinje pon, sri, pet 11:00–13:00; potreban telefonski dogovor",
         "de": "Kleintiere Mo, Mi, Fr 11–13 Uhr; telefonische Terminvereinbarung erforderlich",
         "fr": "Petits animaux lun., mer., ven. 11 h–13 h ; rendez-vous téléphonique obligatoire.",
-        "es": "Animales pequeños lun, mié, vie 11:00–13:00 h; cita previa por teléfono obligatoria"
+        "es": "Animales pequeños lun, mié, vie 11:00–13:00 h; cita previa por teléfono obligatoria",
+        "it": "Piccoli animali lun, mer, ven 11:00–13:00; necessario appuntamento telefonico"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-laubichler.at/",
@@ -1535,7 +1599,8 @@
         "hr": "Pon, uto 9–11 i 17–19; sri 13–15; čet 17–19; pet 9–11 i 15–17:30; broj za hitne slučajeve +43 699 1155200",
         "de": "Mo, Di 9–11 und 17–19 Uhr; Mi 13–15 Uhr; Do 17–19 Uhr; Fr 9–11 und 15–17.30 Uhr; Notrufnummer +43 699 1155200",
         "fr": "Lun., mar. 9 h–11 h et 17 h–19 h ; mer. 13 h–15 h ; jeu. 17 h–19 h ; ven. 9 h–11 h et 15 h–17 h 30 ; numéro d’urgence +43 699 1155200.",
-        "es": "Lun, mar 9–11 h y 17–19 h; mié 13–15 h; jue 17–19 h; vie 9–11 h y 15–17:30 h; número de urgencias +43 699 1155200"
+        "es": "Lun, mar 9–11 h y 17–19 h; mié 13–15 h; jue 17–19 h; vie 9–11 h y 15–17:30 h; número de urgencias +43 699 1155200",
+        "it": "Lun, mar 9–11 e 17–19; mer 13–15; gio 17–19; ven 9–11 e 15–17:30; numero di emergenza +43 699 1155200"
       },
       "source_url": "https://www.zellamsee-kaprun.com/en/poi/veterinarian-mag-med-vet-veronika-brugger~8099",
       "checked": "2026-11-02",
@@ -1555,7 +1620,8 @@
         "hr": "Pon, sri 14–18; uto, čet 9–13; pet 14–18; izvan radnog vremena salzburški Kleintiernotruf 0662 261700",
         "de": "Mo, Mi 14–18 Uhr; Di, Do 9–13 Uhr; Fr 14–18 Uhr; außerhalb der Sprechzeiten Salzburger Kleintiernotruf 0662 261700",
         "fr": "Lun., mer. 14 h–18 h ; mar., jeu. 9 h–13 h ; ven. 14 h–18 h ; en dehors des heures, urgences petits animaux de Salzbourg 0662 261700.",
-        "es": "Lun, mié 14–18 h; mar, jue 9–13 h; vie 14–18 h; fuera de horario Salzburg Kleintiernotruf 0662 261700"
+        "es": "Lun, mié 14–18 h; mar, jue 9–13 h; vie 14–18 h; fuera de horario Salzburg Kleintiernotruf 0662 261700",
+        "it": "Lun, mer 14–18; mar, gio 9–13; ven 14–18; fuori orario Kleintiernotruf Salisburgo 0662 261700"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-eipeldauer.at/",
@@ -1576,7 +1642,8 @@
         "hr": "Pon–čet 9–11; pon, uto, čet 16–19; pet 8–11 i 14–16; sub 9–11",
         "de": "Mo–Do 9–11 Uhr; Mo, Di, Do 16–19 Uhr; Fr 8–11 und 14–16 Uhr; Sa 9–11 Uhr",
         "fr": "Lun.–jeu. 9 h–11 h ; lun., mar., jeu. 16 h–19 h ; ven. 8 h–11 h et 14 h–16 h ; sam. 9 h–11 h.",
-        "es": "Lun–jue 9–11 h; lun, mar, jue 16–19 h; vie 8–11 h y 14–16 h; sáb 9–11 h"
+        "es": "Lun–jue 9–11 h; lun, mar, jue 16–19 h; vie 8–11 h y 14–16 h; sáb 9–11 h",
+        "it": "Lun–gio 9–11; lun, mar, gio 16–19; ven 8–11 e 14–16; sab 9–11"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-josefiau.at/",
@@ -1597,7 +1664,8 @@
         "hr": "Samo uz prethodnu najavu",
         "de": "Nur mit Termin",
         "fr": "Sur rendez-vous uniquement.",
-        "es": "Solo con cita previa"
+        "es": "Solo con cita previa",
+        "it": "Solo su appuntamento"
       },
       "small_animals": true,
       "url": "https://www.exotendoc.at/",
@@ -1619,7 +1687,8 @@
         "hr": "Pon–čet 13:00–18:00 pregledi (ujutro operacije), petkom zatvoreno",
         "de": "Mo–Do 13–18 Uhr Sprechstunde (vormittags Operationen), Fr geschlossen",
         "fr": "Lun.–jeu. 13 h–18 h consultations (chirurgie le matin), fermé le vendredi.",
-        "es": "Lun–jue 13:00–18:00 h consultas (cirugía por las mañanas), vie cerrado"
+        "es": "Lun–jue 13:00–18:00 h consultas (cirugía por las mañanas), vie cerrado",
+        "it": "Lun–gio 13:00–18:00 visite (al mattino chirurgia), venerdì chiuso"
       },
       "small_animals": true,
       "url": "https://tierpraxis.eu/",
@@ -1641,7 +1710,8 @@
         "hr": "Pon, uto, čet, pet 10–12; pon i pet 15–18; sri 17–20; sub 11–12 i telefonski",
         "de": "Mo, Di, Do, Fr 10–12 Uhr; Mo und Fr 15–18 Uhr; Mi 17–20 Uhr; Sa 11–12 Uhr und nach telefonischer Vereinbarung",
         "fr": "Lun., mar., jeu., ven. 10 h–12 h ; lun. et ven. 15 h–18 h ; mer. 17 h–20 h ; sam. 11 h–12 h et par téléphone.",
-        "es": "Lun, mar, jue, vie 10–12 h; lun y vie 15–18 h; mié 17–20 h; sáb 11–12 h y por teléfono"
+        "es": "Lun, mar, jue, vie 10–12 h; lun y vie 15–18 h; mié 17–20 h; sáb 11–12 h y por teléfono",
+        "it": "Lun, mar, gio, ven 10–12; lun e ven 15–18; mer 17–20; sab 11–12 e per telefono"
       },
       "small_animals": true,
       "source_url": "https://www.salzkammergut.at/oesterreich-poi/detail/103307/tierarzt-dr-sabine-geiger.html?type=2026",
@@ -1662,7 +1732,8 @@
         "hr": "Uz prethodnu najavu",
         "de": "Nur mit Termin",
         "fr": "Sur rendez-vous.",
-        "es": "Con cita previa"
+        "es": "Con cita previa",
+        "it": "Su appuntamento"
       },
       "small_animals": true,
       "source_url": "https://www.salzkammergut.at/oesterreich-poi/detail/103285/kleintierpraxis-dr-gernot-eibl.html?type=2026",
@@ -1683,7 +1754,8 @@
         "hr": "Pon–pet 9–13 i 18–20, sub 9–11; izvan vremena pregleda osoblje je 24 h dostupno za akutne životno ugrožene slučajeve, uključujući nedjelje i blagdane",
         "de": "Mo–Fr 9–13 und 18–20 Uhr, Sa 9–11 Uhr; außerhalb der Sprechzeiten rund um die Uhr besetzt für akut lebensbedrohliche Notfälle, auch an Sonn- und Feiertagen",
         "fr": "Lun.–ven. 9 h–13 h et 18 h–20 h, sam. 9 h–11 h ; en dehors des consultations, permanence 24 h/24 pour les urgences vitales aiguës, y compris dimanches et jours fériés.",
-        "es": "Lun–vie 9–13 h y 18–20 h, sáb 9–11 h; fuera del horario de consulta hay personal las 24 h para urgencias con riesgo vital agudo, también domingos y festivos"
+        "es": "Lun–vie 9–13 h y 18–20 h, sáb 9–11 h; fuera del horario de consulta hay personal las 24 h para urgencias con riesgo vital agudo, también domingos y festivos",
+        "it": "Lun–ven 9–13 e 18–20, sab 9–11; fuori dagli orari di visita presidiato 24 ore su 24 per urgenze acute con pericolo di vita, domeniche e festivi inclusi"
       },
       "small_animals": true,
       "source_url": "https://www.oberoesterreich.at/oesterreich-poi/detail/102019/tierklinik-bad-ischl-dr-adelsmayr-mag-grabner-og.html?type=2026",
@@ -1705,7 +1777,8 @@
         "hr": "Pon, uto, čet, pet 10–12 i 16–18:30; sri 10–12 i 18–20:30; sub 9–11",
         "de": "Mo, Di, Do, Fr 10–12 und 16–18.30 Uhr; Mi 10–12 und 18–20.30 Uhr; Sa 9–11 Uhr",
         "fr": "Lun., mar., jeu., ven. 10 h–12 h et 16 h–18 h 30 ; mer. 10 h–12 h et 18 h–20 h 30 ; sam. 9 h–11 h.",
-        "es": "Lun, mar, jue, vie 10–12 h y 16–18:30 h; mié 10–12 h y 18–20:30 h; sáb 9–11 h"
+        "es": "Lun, mar, jue, vie 10–12 h y 16–18:30 h; mié 10–12 h y 18–20:30 h; sáb 9–11 h",
+        "it": "Lun, mar, gio, ven 10–12 e 16–18:30; mer 10–12 e 18–20:30; sab 9–11"
       },
       "source_url": "https://www.salzkammergut.at/en/oesterreich-poi/detail/105182/tierambulanz-salzkammergut.html",
       "checked": "2026-11-02",
@@ -1725,7 +1798,8 @@
         "hr": "Pon–pet 16–18, sub 11:30–13, inače svaki dan uz telefonski dogovor",
         "de": "Mo–Fr 16–18 Uhr, Sa 11.30–13 Uhr, sonst täglich nach telefonischer Vereinbarung",
         "fr": "Lun.–ven. 16 h–18 h, sam. 11 h 30–13 h, sinon tous les jours sur rendez-vous téléphonique.",
-        "es": "Lun–vie 16–18 h, sáb 11:30–13 h, el resto de los días con cita previa por teléfono"
+        "es": "Lun–vie 16–18 h, sáb 11:30–13 h, el resto de los días con cita previa por teléfono",
+        "it": "Lun–ven 16–18, sab 11:30–13, altrimenti tutti i giorni su appuntamento telefonico"
       },
       "small_animals": true,
       "url": "https://www.tierklinik-cumberland.at/",
@@ -1747,7 +1821,8 @@
         "hr": "Pon 8–12 i 16–18; uto–čet 8–12; pet 8–12 i 14–16; vikendom zatvoreno",
         "de": "Mo 8–12 und 16–18 Uhr; Di–Do 8–12 Uhr; Fr 8–12 und 14–16 Uhr; am Wochenende geschlossen",
         "fr": "Lun. 8 h–12 h et 16 h–18 h ; mar.–jeu. 8 h–12 h ; ven. 8 h–12 h et 14 h–16 h ; fermé le week-end.",
-        "es": "Lun 8–12 h y 16–18 h; mar–jue 8–12 h; vie 8–12 h y 14–16 h; cerrado los fines de semana"
+        "es": "Lun 8–12 h y 16–18 h; mar–jue 8–12 h; vie 8–12 h y 14–16 h; cerrado los fines de semana",
+        "it": "Lun 8–12 e 16–18; mar–gio 8–12; ven 8–12 e 14–16; chiuso nel fine settimana"
       },
       "small_animals": true,
       "url": "https://www.traunseevets.at/",
@@ -1769,7 +1844,8 @@
         "hr": "Pon, sri, pet 18–19; uto, čet 8–10; sub 8–9; hitni slučajevi i termini i izvan tog vremena telefonom",
         "de": "Mo, Mi, Fr 18–19 Uhr; Di, Do 8–10 Uhr; Sa 8–9 Uhr; Notfälle und Termine sind auch außerhalb dieser Zeiten telefonisch möglich",
         "fr": "Lun., mer., ven. 18 h–19 h ; mar., jeu. 8 h–10 h ; sam. 8 h–9 h ; urgences et rendez-vous également en dehors de ces horaires, par téléphone.",
-        "es": "Lun, mié, vie 18–19 h; mar, jue 8–10 h; sáb 8–9 h; urgencias y citas también fuera de este horario por teléfono"
+        "es": "Lun, mié, vie 18–19 h; mar, jue 8–10 h; sáb 8–9 h; urgencias y citas también fuera de este horario por teléfono",
+        "it": "Lun, mer, ven 18–19; mar, gio 8–10; sab 8–9; urgenze e appuntamenti anche fuori da questi orari per telefono"
       },
       "source_url": "https://www.salzkammergut.at/oesterreich-poi/detail/104743/veterinary-practice-barbara-andreas-eisl.html",
       "checked": "2026-11-02",
@@ -1789,7 +1865,8 @@
         "hr": "Pon, sri 15–19; uto, čet, pet 8–12; termini po dogovoru",
         "de": "Mo, Mi 15–19 Uhr; Di, Do, Fr 8–12 Uhr; Terminvereinbarung erbeten",
         "fr": "Lun., mer. 15 h–19 h ; mar., jeu., ven. 8 h–12 h ; rendez-vous demandé.",
-        "es": "Lun, mié 15–19 h; mar, jue, vie 8–12 h; con cita previa"
+        "es": "Lun, mié 15–19 h; mar, jue, vie 8–12 h; con cita previa",
+        "it": "Lun, mer 15–19; mar, gio, ven 8–12; su appuntamento"
       },
       "small_animals": true,
       "source_url": "https://www.salzkammergut.at/oesterreich-poi/detail/430008909/dr-med-vet-sabine-schoenlieb.html?type=2026",
@@ -1810,7 +1887,8 @@
         "hr": "Pon–pet 10–12; pon, čet 17–20; uto, sri, pet 17–19; hitni slučajevi u svako doba na istom broju",
         "de": "Mo–Fr 10–12 Uhr; Mo, Do 17–20 Uhr; Di, Mi, Fr 17–19 Uhr; Notfälle jederzeit unter derselben Nummer",
         "fr": "Lun.–ven. 10 h–12 h ; lun., jeu. 17 h–20 h ; mar., mer., ven. 17 h–19 h ; urgences à toute heure au même numéro.",
-        "es": "Lun–vie 10–12 h; lun, jue 17–20 h; mar, mié, vie 17–19 h; urgencias en el mismo número a cualquier hora"
+        "es": "Lun–vie 10–12 h; lun, jue 17–20 h; mar, mié, vie 17–19 h; urgencias en el mismo número a cualquier hora",
+        "it": "Lun–ven 10–12; lun, gio 17–20; mar, mer, ven 17–19; urgenze allo stesso numero in qualsiasi momento"
       },
       "small_animals": true,
       "source_url": "https://www.steiermark.com/de/Ausseerland-Salzkammergut/Urlaub-planen/Ausflugsziele/Tierarztpraxis-Ausseerland-Neuhuber-Hahn-OG_isd_74313702",
@@ -1831,7 +1909,8 @@
         "hr": "Male životinje uz prethodnu najavu pon 9–16, uto 9–13 i 18–19, sri 10–16, čet 9–13 i 18–19, pet 9–13 i 15–16; hitni slučajevi 00:00–24:00",
         "de": "Kleintiere nur mit Termin Mo 9–16 Uhr, Di 9–13 und 18–19 Uhr, Mi 10–16 Uhr, Do 9–13 und 18–19 Uhr, Fr 9–13 und 15–16 Uhr; Notfälle rund um die Uhr",
         "fr": "Petits animaux sur rendez-vous lun. 9 h–16 h, mar. 9 h–13 h et 18 h–19 h, mer. 10 h–16 h, jeu. 9 h–13 h et 18 h–19 h, ven. 9 h–13 h et 15 h–16 h ; urgences 24 h/24.",
-        "es": "Animales pequeños con cita previa lun 9–16 h, mar 9–13 h y 18–19 h, mié 10–16 h, jue 9–13 h y 18–19 h, vie 9–13 h y 15–16 h; urgencias 0:00–24:00 h"
+        "es": "Animales pequeños con cita previa lun 9–16 h, mar 9–13 h y 18–19 h, mié 10–16 h, jue 9–13 h y 18–19 h, vie 9–13 h y 15–16 h; urgencias 0:00–24:00 h",
+        "it": "Piccoli animali su appuntamento lun 9–16, mar 9–13 e 18–19, mer 10–16, gio 9–13 e 18–19, ven 9–13 e 15–16; urgenze 0:00–24:00"
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxiskraft.at/",
@@ -1854,7 +1933,8 @@
         "hr": "Pon–pet 9–11 i 16–19, sub 9–11; hitni slučajevi +43 664 4610192 svaki dan 7–20",
         "de": "Mo–Fr 9–11 und 16–19 Uhr, Sa 9–11 Uhr; Notfälle +43 664 4610192 täglich 7–20 Uhr",
         "fr": "Lun.–ven. 9 h–11 h et 16 h–19 h, sam. 9 h–11 h ; urgences +43 664 4610192 tous les jours 7 h–20 h.",
-        "es": "Lun–vie 9–11 h y 16–19 h, sáb 9–11 h; urgencias +43 664 4610192 todos los días 7–20 h"
+        "es": "Lun–vie 9–11 h y 16–19 h, sáb 9–11 h; urgencias +43 664 4610192 todos los días 7–20 h",
+        "it": "Lun–ven 9–11 e 16–19, sab 9–11; urgenze +43 664 4610192 tutti i giorni 7–20"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-dr-kucher.at/",
@@ -1875,7 +1955,8 @@
         "hr": "Pon 8:30–17, uto/sri/pet 8:30–15, čet 8:30–14:30; izvan radnog vremena Grazer Tierärzte-Notdienst",
         "de": "Mo 8.30–17 Uhr, Di/Mi/Fr 8.30–15 Uhr, Do 8.30–14.30 Uhr; außerhalb der Sprechzeiten Grazer Tierärzte-Notdienst",
         "fr": "Lun. 8 h 30–17 h, mar., mer., ven. 8 h 30–15 h, jeu. 8 h 30–14 h 30 ; en dehors des heures, service de garde des vétérinaires de Graz (Grazer Tierärzte-Notdienst).",
-        "es": "Lun 8:30–17 h, mar/mié/vie 8:30–15 h, jue 8:30–14:30 h; fuera de horario Grazer Tierärzte-Notdienst"
+        "es": "Lun 8:30–17 h, mar/mié/vie 8:30–15 h, jue 8:30–14:30 h; fuera de horario Grazer Tierärzte-Notdienst",
+        "it": "Lun 8:30–17, mar/mer/ven 8:30–15, gio 8:30–14:30; fuori orario Grazer Tierärzte-Notdienst"
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-schell.at/",
@@ -1897,7 +1978,8 @@
         "hr": "Pon, uto, čet 8–12 i 16–18; sri, pet 8–12; vikendom zatvoreno; izvan radnog vremena Grazer Tierärzte-Notdienst +43 316 681118",
         "de": "Mo, Di, Do 8–12 und 16–18 Uhr; Mi, Fr 8–12 Uhr; am Wochenende geschlossen; außerhalb der Sprechzeiten Grazer Tierärzte-Notdienst +43 316 681118",
         "fr": "Lun., mar., jeu. 8 h–12 h et 16 h–18 h ; mer., ven. 8 h–12 h ; fermé le week-end ; en dehors des heures, service de garde des vétérinaires de Graz (Grazer Tierärzte-Notdienst) +43 316 681118.",
-        "es": "Lun, mar, jue 8–12 h y 16–18 h; mié, vie 8–12 h; cerrado los fines de semana; fuera de horario Grazer Tierärzte-Notdienst +43 316 681118"
+        "es": "Lun, mar, jue 8–12 h y 16–18 h; mié, vie 8–12 h; cerrado los fines de semana; fuera de horario Grazer Tierärzte-Notdienst +43 316 681118",
+        "it": "Lun, mar, gio 8–12 e 16–18; mer, ven 8–12; chiuso nel fine settimana; fuori orario Grazer Tierärzte-Notdienst +43 316 681118"
       },
       "small_animals": true,
       "url": "https://www.jaeger.vet/",
@@ -1930,7 +2012,8 @@
         "hr": "Pon, uto, čet, pet 9–11; pon, uto, čet 16–18; potrebna prethodna najava",
         "de": "Mo, Di, Do, Fr 9–11 Uhr; Mo, Di, Do 16–18 Uhr; Termin erforderlich",
         "fr": "Lun., mar., jeu., ven. 9 h–11 h ; lun., mar., jeu. 16 h–18 h ; rendez-vous obligatoire.",
-        "es": "Lun, mar, jue, vie 9–11 h; lun, mar, jue 16–18 h; cita previa obligatoria"
+        "es": "Lun, mar, jue, vie 9–11 h; lun, mar, jue 16–18 h; cita previa obligatoria",
+        "it": "Lun, mar, gio, ven 9–11; lun, mar, gio 16–18; necessario appuntamento"
       },
       "small_animals": true,
       "url": "https://www.tier-arzt-praxis.at/",
@@ -1952,7 +2035,8 @@
         "hr": "Pon–pet 9–11 i 16:30–18:30; vikendom hitni slučajevi putem popisa dežurnih za Korušku (Kärnten)",
         "de": "Mo–Fr 9–11 und 16.30–18.30 Uhr; Wochenendnotfälle über die Kärntner Dienstliste",
         "fr": "Lun.–ven. 9 h–11 h et 16 h 30–18 h 30 ; urgences le week-end via la liste de garde de Carinthie.",
-        "es": "Lun–vie 9–11 h y 16:30–18:30 h; urgencias de fin de semana a través de la lista de guardia de Kärnten"
+        "es": "Lun–vie 9–11 h y 16:30–18:30 h; urgencias de fin de semana a través de la lista de guardia de Kärnten",
+        "it": "Lun–ven 9–11 e 16:30–18:30; urgenze nel fine settimana tramite l'elenco di guardia della Carinzia"
       },
       "small_animals": true,
       "url": "https://www.tieraerztin.org/",
@@ -1973,7 +2057,8 @@
         "hr": "Pon, sri, pet 9–11 i 16–18; uto, čet uz prethodnu najavu; potreban telefonski dogovor",
         "de": "Mo, Mi, Fr 9–11 und 16–18 Uhr; Di, Do nach Vereinbarung; telefonische Terminvereinbarung erbeten",
         "fr": "Lun., mer., ven. 9 h–11 h et 16 h–18 h ; mar., jeu. sur rendez-vous ; rendez-vous téléphonique demandé.",
-        "es": "Lun, mié, vie 9–11 h y 16–18 h; mar, jue con cita previa; se pide cita previa por teléfono"
+        "es": "Lun, mié, vie 9–11 h y 16–18 h; mar, jue con cita previa; se pide cita previa por teléfono",
+        "it": "Lun, mer, ven 9–11 e 16–18; mar, gio su appuntamento; appuntamento telefonico richiesto"
       },
       "small_animals": true,
       "url": "https://www.sickvet.at/",
@@ -1994,7 +2079,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje, konji",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere, Pferde)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux, chevaux).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali, cavalli)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2014,7 +2100,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje, konji",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere, Pferde)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux, chevaux).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali, cavalli)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2034,7 +2121,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2054,7 +2142,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2075,7 +2164,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje; velike životinje +43 664 5220024",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere; Großtiere +43 664 5220024)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux ; grands animaux +43 664 5220024).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños; animales grandes +43 664 5220024)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños; animales grandes +43 664 5220024)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali; grandi animali +43 664 5220024)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2095,7 +2185,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje; velike životinje +43 664 2373521",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere; Großtiere +43 664 2373521)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux ; grands animaux +43 664 2373521).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños; animales grandes +43 664 2373521)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños; animales grandes +43 664 2373521)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali; grandi animali +43 664 2373521)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2115,7 +2206,8 @@
         "hr": "Na popisu vikend dežurstava u Koruškoj (Kärnten): male životinje, konji",
         "de": "Auf der Kärntner Wochenend-Dienstliste (Kleintiere, Pferde)",
         "fr": "Figure sur la liste de garde du week-end de Carinthie (petits animaux, chevaux).",
-        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)"
+        "es": "En la lista de guardia de fin de semana de Kärnten (animales pequeños, caballos)",
+        "it": "Nell'elenco di guardia del fine settimana della Carinzia (piccoli animali, cavalli)"
       },
       "small_animals": true,
       "source_url": "https://www.tierarzt-ktn.at/",
@@ -2137,7 +2229,8 @@
         "hr": "Pon–čet 8–10 i 17–19, pet 8–12:30, termini po dogovoru",
         "de": "Mo–Do 8–10 und 17–19 Uhr, Fr 8–12.30 Uhr, nach Terminvereinbarung",
         "fr": "Lun.–jeu. 8 h–10 h et 17 h–19 h, ven. 8 h–12 h 30, sur rendez-vous.",
-        "es": "Lun–jue 8–10 h y 17–19 h, vie 8–12:30 h, con cita previa"
+        "es": "Lun–jue 8–10 h y 17–19 h, vie 8–12:30 h, con cita previa",
+        "it": "Lun–gio 8–10 e 17–19, ven 8–12:30, su appuntamento"
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-dornbirn.at/",
@@ -2158,7 +2251,8 @@
         "hr": "Pon 9–12 i 16–18; uto 9–12 i 16–19; sri 9–12; čet 16–19; pet 9–12 i 16–18; sub 9–12",
         "de": "Mo 9–12 und 16–18 Uhr; Di 9–12 und 16–19 Uhr; Mi 9–12 Uhr; Do 16–19 Uhr; Fr 9–12 und 16–18 Uhr; Sa 9–12 Uhr",
         "fr": "Lun. 9 h–12 h et 16 h–18 h ; mar. 9 h–12 h et 16 h–19 h ; mer. 9 h–12 h ; jeu. 16 h–19 h ; ven. 9 h–12 h et 16 h–18 h ; sam. 9 h–12 h.",
-        "es": "Lun 9–12 h y 16–18 h; mar 9–12 h y 16–19 h; mié 9–12 h; jue 16–19 h; vie 9–12 h y 16–18 h; sáb 9–12 h"
+        "es": "Lun 9–12 h y 16–18 h; mar 9–12 h y 16–19 h; mié 9–12 h; jue 16–19 h; vie 9–12 h y 16–18 h; sáb 9–12 h",
+        "it": "Lun 9–12 e 16–18; mar 9–12 e 16–19; mer 9–12; gio 16–19; ven 9–12 e 16–18; sab 9–12"
       },
       "small_animals": true,
       "url": "https://kleintierpraxisforte.at/",
@@ -2180,7 +2274,8 @@
         "hr": "Pon, uto, pet 8–12 i 15–18; sri 8–11 i 15–19; čet 15–18; sub 9–12; hitni slučajevi izvan radnog vremena +43 676 6103750 (ne svaki dan)",
         "de": "Mo, Di, Fr 8–12 und 15–18 Uhr; Mi 8–11 und 15–19 Uhr; Do 15–18 Uhr; Sa 9–12 Uhr; Notfälle außerhalb der Sprechzeiten +43 676 6103750 (nicht jeden Tag)",
         "fr": "Lun., mar., ven. 8 h–12 h et 15 h–18 h ; mer. 8 h–11 h et 15 h–19 h ; jeu. 15 h–18 h ; sam. 9 h–12 h ; urgences en dehors des heures +43 676 6103750 (pas tous les jours).",
-        "es": "Lun, mar, vie 8–12 h y 15–18 h; mié 8–11 h y 15–19 h; jue 15–18 h; sáb 9–12 h; urgencias fuera de horario +43 676 6103750 (no todos los días)"
+        "es": "Lun, mar, vie 8–12 h y 15–18 h; mié 8–11 h y 15–19 h; jue 15–18 h; sáb 9–12 h; urgencias fuera de horario +43 676 6103750 (no todos los días)",
+        "it": "Lun, mar, ven 8–12 e 15–18; mer 8–11 e 15–19; gio 15–18; sab 9–12; urgenze fuori orario +43 676 6103750 (non tutti i giorni)"
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-vorarlberg.at/",
@@ -2202,7 +2297,8 @@
         "hr": "Pon–pet 8–12 i 13:30–19, sub/ned zatvoreno; hitni slučajevi i izvan radnog vremena nakon telefonskog poziva",
         "de": "Mo–Fr 8–12 und 13.30–19 Uhr, Sa/So geschlossen; Notfälle auch außerhalb der Sprechzeiten nach telefonischer Anfrage",
         "fr": "Lun.–ven. 8 h–12 h et 13 h 30–19 h, fermé sam. et dim. ; urgences également en dehors des heures après appel téléphonique.",
-        "es": "Lun–vie 8–12 h y 13:30–19 h, sáb/dom cerrado; urgencias también fuera de horario tras llamar por teléfono"
+        "es": "Lun–vie 8–12 h y 13:30–19 h, sáb/dom cerrado; urgencias también fuera de horario tras llamar por teléfono",
+        "it": "Lun–ven 8–12 e 13:30–19, sab/dom chiuso; urgenze anche fuori orario dopo telefonata"
       },
       "small_animals": true,
       "url": "https://www.tierklinik.at/",
@@ -2224,7 +2320,8 @@
         "hr": "Pon–pet 9–11 i 17–19; sub 10–11; nedjeljom i blagdanima Notdienst 10–11",
         "de": "Mo–Fr 9–11 und 17–19 Uhr; Sa 10–11 Uhr; Notdienst an Sonn- und Feiertagen 10–11 Uhr",
         "fr": "Lun.–ven. 9 h–11 h et 17 h–19 h ; sam. 10 h–11 h ; dim. et jours fériés, garde 10 h–11 h.",
-        "es": "Lun–vie 9–11 h y 17–19 h; sáb 10–11 h; domingos y festivos guardia 10–11 h"
+        "es": "Lun–vie 9–11 h y 17–19 h; sáb 10–11 h; domingos y festivos guardia 10–11 h",
+        "it": "Lun–ven 9–11 e 17–19; sab 10–11; domeniche e festivi servizio di emergenza 10–11"
       },
       "source_url": "https://www.luenersee.at/3-PDF/1-Montafon/Infoblaetter-Plakate/Urlaub-mit-Hund.pdf",
       "checked": "2026-11-02",
@@ -2244,7 +2341,8 @@
         "hr": "Pon, uto, sri, pet 14–15; uto, sub 10–11 i uz telefonski dogovor",
         "de": "Mo, Di, Mi, Fr 14–15 Uhr; Di, Sa 10–11 Uhr und nach telefonischer Vereinbarung",
         "fr": "Lun., mar., mer., ven. 14 h–15 h ; mar., sam. 10 h–11 h et sur rendez-vous téléphonique.",
-        "es": "Lun, mar, mié, vie 14–15 h; mar, sáb 10–11 h y con cita previa por teléfono"
+        "es": "Lun, mar, mié, vie 14–15 h; mar, sáb 10–11 h y con cita previa por teléfono",
+        "it": "Lun, mar, mer, ven 14–15; mar, sab 10–11 e su appuntamento telefonico"
       },
       "source_url": "https://www.luenersee.at/3-PDF/1-Montafon/Infoblaetter-Plakate/Urlaub-mit-Hund.pdf",
       "checked": "2026-11-02",

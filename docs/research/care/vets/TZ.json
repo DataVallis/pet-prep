@@ -57,7 +57,10 @@
       "url": "https://www.vetzcapes.com/",
       "source_url": "https://www.vetzcapes.com/",
       "checked": "2026-11-12",
-      "note": "Page quote: 'Please call us for emergencies.' Page title/metadata says Usa River while body says Dolly Estate - location inconsistent. Serves domestic animals and wildlife, 'not just dogs and cats'. E-mail milou.vetzcapes@gmail.com."
+      "note": "Page quote: 'Please call us for emergencies.' Page title/metadata says Usa River while body says Dolly Estate - location inconsistent. Serves domestic animals and wildlife, 'not just dogs and cats'. E-mail milou.vetzcapes@gmail.com.",
+      "duty_i18n": {
+        "it": "Aperto dal lunedì al venerdì 08:30–16:00 (il giovedì visite a domicilio). Per le urgenze chiamare la clinica."
+      }
     },
     {
       "kind": "clinic",
@@ -71,7 +74,10 @@
       "small_animals": true,
       "source_url": "https://www.everylivingthing.or.tz/our-services",
       "checked": "2026-11-12",
-      "note": "Only source opened is the ELT rescue NGO referral list (Masaki, 0753 643 835, after-hours 0753 520 244); clinic's own site not found (Facebook/LinkedIn not fetchable). Street address and hours unverified; no 24 h claim. Needs a re-check on the clinic's own page."
+      "note": "Only source opened is the ELT rescue NGO referral list (Masaki, 0753 643 835, after-hours 0753 520 244); clinic's own site not found (Facebook/LinkedIn not fetchable). Street address and hours unverified; no 24 h claim. Needs a re-check on the clinic's own page.",
+      "duty_i18n": {
+        "it": "Linea fuori orario: +255 753 520 244."
+      }
     },
     {
       "kind": "clinic",
@@ -85,7 +91,10 @@
       "small_animals": true,
       "source_url": "https://www.everylivingthing.or.tz/our-services",
       "checked": "2026-11-12",
-      "note": "ELT page lists name, Mikocheni and 0713 325 000 only; no street address, hours or 24 h claim. Own site not found. Needs re-check on the clinic's own page."
+      "note": "ELT page lists name, Mikocheni and 0713 325 000 only; no street address, hours or 24 h claim. Own site not found. Needs re-check on the clinic's own page.",
+      "duty_i18n": {
+        "it": "Chiamare la clinica per orari e appuntamenti."
+      }
     }
   ],
   "notes": "Independent check 2026-11-12 (WebFetch of all 3 source_urls): 3 checked, 1 fixed, 0 removed, 0 downgraded. Fix: Vet Care Ltd street address (Plot 246 Ali Hassan Mwinyi Road) came only from an aggregator and is not on the ELT source page, so address reduced to 'Mikocheni, Dar es Salaam' and duty text no longer borrows ELT's appointment sentence. Vetzcapes and Pet Care House confirmed as on page (phones, location, no 24 h claim). Thin run: Tanzania has few clinic websites that WebFetch could open. No duty rotas, no animal poison line, no 24 h clinic found. Official bodies (Tanzania Veterinary Council, Ministry of Livestock and Fisheries, SUA teaching hospital) yielded no readable clinic data. Left: Delta Vets (deltavets.co.tz, redirect loop), Anivet (robots), Merlino Vet Clinic Arusha (named on an expat forum only, no site), Zanzibar, Moshi, Mwanza, Dodoma clinics not found. Follow-up 2026-11-12: searched Zanzibar, Dar es Salaam, Arusha/Moshi/Mwanza, SUA; opened expat.com (failed), expat.com business directory (no clinic data), Workaway Arusha vet host (paused profile, nothing), MAWO OSU page (mobile NGO, e-mail only). No new clinic with own opened page, no duty rota, no poison line, no 24 h clinic. Delta Vets and Anivet skipped as instructed. No entries added."

@@ -42,7 +42,8 @@
       "checked": "2026-11-11",
       "note": "Own site title: 'ветклиника 24/7 в Кишинёве'; description: 'Круглосуточная ветеринарная клиника Zoomama в Кишинёве', 'интенсивная терапия 24/7'. Only meta text was readable: no address, phone or hours obtained (services/contacts subpages could not be fetched). Species not stated; listed as small-animal clinic on the basis of the services (ultrasound, X-ray, oncology).",
       "duty_i18n": {
-        "es": "Clínica veterinaria abierta las 24 horas (24/7), con cuidados intensivos."
+        "es": "Clínica veterinaria abierta las 24 horas (24/7), con cuidados intensivos.",
+        "it": "Clinica veterinaria aperta 24 ore su 24, 7 giorni su 7, con terapia intensiva."
       }
     },
     {
@@ -60,7 +61,8 @@
       "checked": "2026-11-11",
       "note": "Directory page says 'Deschis 24/24'; diez.md 2021 and 2018 articles say 'Program de lucru: 24/24' and 'Doar o clinică din această listă este deschisă 24/24'. Own site/Facebook (facebook.com/ciavdargrup) not opened: Facebook blocks automated access (robots). Both sources are non-official, so re-verify by phone. Other phones: 022 518 983, 022 56 07 31. url points to the directory because no own website was found.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, los 7 días de la semana, en la sede de Buiucani."
+        "es": "Abierto las 24 horas, los 7 días de la semana, en la sede de Buiucani.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, nella sede di Buiucani."
       }
     },
     {
@@ -78,7 +80,8 @@
       "checked": "2026-11-11",
       "note": "Own contact page, no 24h/emergency claim. Footer: 'Ветеринарный центр VetAsist'. Species not stated on the page. diez.md lists an older address (M. Kogălniceanu 54), not used.",
       "duty_i18n": {
-        "es": "Lun–vie 9:00–17:00 h, sáb 9:00–13:00 h, cerrado dom. Móvil: (067) 32-32-11."
+        "es": "Lun–vie 9:00–17:00 h, sáb 9:00–13:00 h, cerrado dom. Móvil: (067) 32-32-11.",
+        "it": "Lun–ven 9:00–17:00, sab 9:00–13:00, chiuso la domenica. Cellulare: (067) 32-32-11."
       }
     },
     {
@@ -96,7 +99,8 @@
       "checked": "2026-11-11",
       "note": "Page of the Registrul Chinologilor din Moldova; the note 'Doar cu programare prealabilă' sits in the contact block and may refer to the training centre rather than the clinic, so duty is cautious. No own clinic site found. diez.md (2021) gives 022 661 444 and Mon-Fri 09:00-17:00 hours, not used because it is an editorial source.",
       "duty_i18n": {
-        "es": "Se recomienda cita previa. Otros teléfonos: +373 79 588 317, +373 69 130 317."
+        "es": "Se recomienda cita previa. Otros teléfonos: +373 79 588 317, +373 69 130 317.",
+        "it": "Si consiglia di prendere appuntamento. Altri telefoni: +373 79 588 317, +373 69 130 317."
       }
     },
     {
@@ -114,7 +118,8 @@
       "note": "Own site (esculapvet.md), contact page and /en/servicii/urgente both fetched 2026-11-11. FAQ 'Are you open 24/7?' is answered with the Mon-Sat hours, so no 24h claim. Species: services (vaccination, spay/neuter, grooming, pet hotel) imply dogs/cats but species not stated explicitly.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–sáb 9:00–18:00 h, cerrado dom. Las urgencias se atienden primero en horario de apertura; llama antes de ir. Móvil/WhatsApp/Viber: +373 60 694 388."
+        "es": "Lun–sáb 9:00–18:00 h, cerrado dom. Las urgencias se atienden primero en horario de apertura; llama antes de ir. Móvil/WhatsApp/Viber: +373 60 694 388.",
+        "it": "Lun–sab 9:00–18:00, chiuso la domenica. Le emergenze hanno la precedenza durante l'orario di apertura; telefonare prima di recarsi in clinica. Cellulare/WhatsApp/Viber: +373 60 694 388."
       }
     },
     {
@@ -132,7 +137,8 @@
       "note": "Own site home page fetched 2026-11-11. No opening hours published. Wording: 'Disponibilitate continuă pentru urgențe veterinare' and 'zi și noapte' - NOT an explicit 24h/non-stop/0-24 statement, so emergency_24h=false; verify by phone. Dogs and cats named explicitly. Only Muncești 94 address is given; branch addresses are not on the fetched page. Branch subpages (urgente-veterinare-centru-chisinau, stationar-...-botanica) failed to fetch.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atienden urgencias; llama antes para confirmar disponibilidad. Sedes en Botanica, Centru, Codru, Telecentru, Durlești, Sângera e Ialoveni."
+        "es": "Atienden urgencias; llama antes para confirmar disponibilidad. Sedes en Botanica, Centru, Codru, Telecentru, Durlești, Sângera e Ialoveni.",
+        "it": "Pronto soccorso disponibile; chiamare prima per verificare la disponibilità. Sedi a Botanica, Centru, Codru, Telecentru, Durlești, Sângera e Ialoveni."
       }
     }
   ],

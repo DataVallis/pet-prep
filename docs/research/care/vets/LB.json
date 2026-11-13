@@ -47,7 +47,10 @@
       "url": "https://animalhousehospital.com/",
       "source_url": "https://animalhousehospital.com/",
       "checked": "2026-11-12",
-      "note": "Own site home page explicitly says 24/7 emergency and 24-hour emergency service. Sidelick lists it under Jal El Dib; own site says Zalka Highway, used as is."
+      "note": "Own site home page explicitly says 24/7 emergency and 24-hour emergency service. Sidelick lists it under Jal El Dib; own site says Zalka Highway, used as is.",
+      "duty_i18n": {
+        "it": "Aperto lun–ven 9:00–13:00 e 15:00–19:00, sab–dom 9:00–12:00. Pronto soccorso 24 ore su 24 al +961 3 664 969; se possibile telefonare prima."
+      }
     }
   ],
   "notes": "LB research 2026-11-12. Very thin: only one clinic with a usable own-site page. No official source found/reachable: Order/Syndicate of Veterinarians (no own site surfaced in search; only news items), Ministry of Agriculture (agriculture.gov.lb not fetchable: URL not in provenance set, skipped), WOAH PDFs only. No duty rota, no animal poison line found. Other clinics (Animalife Hazmieh, Les Acacias Verdun, Mamalia Ashrafieh, Healthy Pet Amchit, CVC 24/7 Batroun, Animal Planet Jbeil, Anipharm Tripoli, Animal Zone Batroun, Vetplus Jbeil, Animal Hub Kesrouane, Vet Care Matn, Vet Point Beirut, Vet 101 Beirut, Mont Liban Vet, Amivet) only appear on aggregators (sidelick.com, pawpots.com, yelleb, telooa, petownerapp) without own pages, so not added. Left: no coverage of Tripoli, Sidon, Tyre, Zahle, Aley. Not opened: AUB/LU/USEK/Balamand vet pages (none surfaced)."

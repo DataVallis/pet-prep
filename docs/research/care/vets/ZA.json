@@ -60,7 +60,8 @@
       "duty": "Open 24/7 as an after-hours trauma and emergency vet; WhatsApp +27 83 287 2459",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, 7 j/7 : urgences et traumatologie en dehors des heures d’ouverture ; WhatsApp +27 83 287 2459",
-        "es": "Abierto 24/7 como veterinario de urgencias y traumatología fuera de horario; WhatsApp +27 83 287 2459"
+        "es": "Abierto 24/7 como veterinario de urgencias y traumatología fuera de horario; WhatsApp +27 83 287 2459",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 come veterinario per traumi e urgenze fuori orario; WhatsApp +27 83 287 2459"
       },
       "small_animals": true,
       "url": "https://aecvet.co.za/",
@@ -80,7 +81,8 @@
       "duty": "Open 24 hours, every day of the year; 24-hour emergency service",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, tous les jours de l’année ; urgences 24 h/24",
-        "es": "Abierto las 24 horas, todos los días del año; servicio de urgencias 24 horas"
+        "es": "Abierto las 24 horas, todos los días del año; servicio de urgencias 24 horas",
+        "it": "Aperto 24 ore su 24, ogni giorno dell'anno; pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.fourwaysvet.co.za/",
@@ -100,7 +102,8 @@
       "duty": "Open 24/7 for pet emergencies. Emergency line 079 390 0696 (load-shedding line 071 695 8885)",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Ligne d’urgence 079 390 0696 (ligne en cas de délestage : 071 695 8885)",
-        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias 079 390 0696 (línea para cortes de luz 071 695 8885)"
+        "es": "Abierto 24/7 para urgencias de mascotas. Línea de urgencias 079 390 0696 (línea para cortes de luz 071 695 8885)",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 per le urgenze degli animali. Linea d'emergenza 079 390 0696 (linea per i blackout programmati 071 695 8885)"
       },
       "small_animals": true,
       "url": "https://animania.co.za/",
@@ -120,7 +123,8 @@
       "duty": "Open 24 hours; 24-hour emergency service",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24 ; urgences 24 h/24",
-        "es": "Abierto las 24 horas; servicio de urgencias 24 horas"
+        "es": "Abierto las 24 horas; servicio de urgencias 24 horas",
+        "it": "Aperto 24 ore su 24; pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://germistonvet.co.za/",
@@ -139,7 +143,8 @@
       "duty": "24-hour emergency specialist and referral hospital; routine consultations by appointment (Mon-Fri 8:00-18:30, Sat-Sun and public holidays 9:00-18:00); after-hours fees apply",
       "duty_i18n": {
         "fr": "Hôpital d’urgences et de référence spécialisé 24 h/24 ; consultations courantes sur rendez-vous (lun.–ven. 8 h–18 h 30, sam.–dim. et jours fériés 9 h–18 h) ; tarifs majorés hors horaires",
-        "es": "Hospital de urgencias y derivación con especialistas las 24 horas; consultas ordinarias con cita previa (lun–vie 8:00–18:30 h, sáb, dom y festivos 9:00–18:00 h); se aplican tarifas fuera de horario"
+        "es": "Hospital de urgencias y derivación con especialistas las 24 horas; consultas ordinarias con cita previa (lun–vie 8:00–18:30 h, sáb, dom y festivos 9:00–18:00 h); se aplican tarifas fuera de horario",
+        "it": "Ospedale specialistico e di riferimento con pronto soccorso 24 ore su 24; visite di routine su appuntamento (lun–ven 8:00–18:30, sab–dom e festivi 9:00–18:00); si applicano tariffe fuori orario"
       },
       "small_animals": true,
       "url": "http://bryanstonvet.co.za/",
@@ -159,7 +164,8 @@
       "duty": "24/7 walk-in emergency care, no appointment needed; ICU monitoring 24/7",
       "duty_i18n": {
         "fr": "Urgences sans rendez-vous 24 h/24, 7 j/7 ; surveillance en soins intensifs 24 h/24, 7 j/7",
-        "es": "Urgencias 24/7 sin cita previa; monitorización en UCI 24/7"
+        "es": "Urgencias 24/7 sin cita previa; monitorización en UCI 24/7",
+        "it": "Pronto soccorso senza appuntamento 24 ore su 24, 7 giorni su 7; monitoraggio in terapia intensiva 24 ore su 24, 7 giorni su 7"
       },
       "small_animals": true,
       "url": "https://www.valleyfarmvet.co.za/",
@@ -179,7 +185,8 @@
       "duty": "Teaching hospital. Small animals: weekdays 09:00-19:00, Sat 09:00-12:00; after-hours rates weekdays 06:00-08:00 and 19:00-23:00, Sat 12:00-23:00, Sun 06:00-23:00. Appointments recommended; call before travelling",
       "duty_i18n": {
         "fr": "Hôpital universitaire. Petits animaux : en semaine 9 h–19 h, sam. 9 h–12 h ; tarifs hors horaires en semaine 6 h–8 h et 19 h–23 h, sam. 12 h–23 h, dim. 6 h–23 h. Rendez-vous recommandé ; appelez avant de venir",
-        "es": "Hospital universitario docente. Animales pequeños: lun–vie 9:00–19:00 h, sáb 9:00–12:00 h; tarifa fuera de horario lun–vie 6:00–8:00 h y 19:00–23:00 h, sáb 12:00–23:00 h, dom 6:00–23:00 h. Se recomienda cita previa; llama antes de desplazarte"
+        "es": "Hospital universitario docente. Animales pequeños: lun–vie 9:00–19:00 h, sáb 9:00–12:00 h; tarifa fuera de horario lun–vie 6:00–8:00 h y 19:00–23:00 h, sáb 12:00–23:00 h, dom 6:00–23:00 h. Se recomienda cita previa; llama antes de desplazarte",
+        "it": "Ospedale universitario. Piccoli animali: giorni feriali 09:00–19:00, sab 09:00–12:00; tariffe fuori orario nei giorni feriali 06:00–08:00 e 19:00–23:00, sab 12:00–23:00, dom 06:00–23:00. Si consiglia l'appuntamento; chiamare prima di venire"
       },
       "small_animals": true,
       "url": "https://www.up.ac.za/veterinary-hospital",
@@ -197,7 +204,8 @@
       "duty": "Mon-Fri 7:00-18:00, Sat 8:00-13:00; emergency line 084 404 1119; home visits +27 12 804 8901",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h–18 h, sam. 8 h–13 h ; ligne d’urgence 084 404 1119 ; visites à domicile +27 12 804 8901",
-        "es": "Lun–vie 7:00–18:00 h, sáb 8:00–13:00 h; línea de urgencias 084 404 1119; visitas a domicilio +27 12 804 8901"
+        "es": "Lun–vie 7:00–18:00 h, sáb 8:00–13:00 h; línea de urgencias 084 404 1119; visitas a domicilio +27 12 804 8901",
+        "it": "Lun–ven 7:00–18:00, sab 8:00–13:00; linea d'emergenza 084 404 1119; visite a domicilio +27 12 804 8901"
       },
       "small_animals": true,
       "url": "https://valdegrace.co.za/",
@@ -216,7 +224,8 @@
       "duty": "Experienced vet on duty 24/7 for emergencies; normal hours Mon-Fri 7:00-19:00, Sat 8:00-13:00; after-hours surcharge applies",
       "duty_i18n": {
         "fr": "Vétérinaire expérimenté de garde 24 h/24, 7 j/7 pour les urgences ; horaires habituels lun.–ven. 7 h–19 h, sam. 8 h–13 h ; supplément hors horaires",
-        "es": "Veterinario con experiencia de guardia 24/7 para urgencias; horario normal lun–vie 7:00–19:00 h, sáb 8:00–13:00 h; recargo fuera de horario"
+        "es": "Veterinario con experiencia de guardia 24/7 para urgencias; horario normal lun–vie 7:00–19:00 h, sáb 8:00–13:00 h; recargo fuera de horario",
+        "it": "Veterinario esperto di guardia 24 ore su 24, 7 giorni su 7 per le urgenze; orario normale lun–ven 7:00–19:00, sab 8:00–13:00; si applica un supplemento fuori orario"
       },
       "small_animals": true,
       "url": "https://panoramavet.co.za/",
@@ -236,7 +245,8 @@
       "duty": "Open 24 hours for emergencies; emergency line 021 91 911 91; surcharge for emergencies outside vet hours",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24 pour les urgences ; ligne d’urgence 021 91 911 91 ; supplément pour les urgences hors des heures d’ouverture",
-        "es": "Abierto las 24 horas para urgencias; línea de urgencias 021 91 911 91; recargo por urgencias fuera del horario veterinario"
+        "es": "Abierto las 24 horas para urgencias; línea de urgencias 021 91 911 91; recargo por urgencias fuera del horario veterinario",
+        "it": "Aperto 24 ore su 24 per le urgenze; linea d'emergenza 021 91 911 91; supplemento per le urgenze fuori dall'orario veterinario"
       },
       "small_animals": true,
       "url": "https://tah.co.za/bellville/",
@@ -256,7 +266,8 @@
       "duty": "Open 24 hours for emergencies; surcharge outside normal vet hours",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24 pour les urgences ; supplément hors des heures d’ouverture habituelles",
-        "es": "Abierto las 24 horas para urgencias; recargo fuera del horario veterinario normal"
+        "es": "Abierto las 24 horas para urgencias; recargo fuera del horario veterinario normal",
+        "it": "Aperto 24 ore su 24 per le urgenze; supplemento fuori dal normale orario veterinario"
       },
       "small_animals": true,
       "url": "https://tah.co.za/rosmead/",
@@ -276,7 +287,8 @@
       "duty": "Vet hours Mon-Fri 8:00-18:30, Sat 8:00-12:30, closed Sundays and public holidays; emergencies go to TAH Bellville (021 91 911 91) or TAH Rosmead (021 674 0034)",
       "duty_i18n": {
         "fr": "Consultations lun.–ven. 8 h–18 h 30, sam. 8 h–12 h 30, fermé dim. et jours fériés ; urgences : TAH Bellville (021 91 911 91) ou TAH Rosmead (021 674 0034)",
-        "es": "Horario veterinario lun–vie 8:00–18:30 h, sáb 8:00–12:30 h, cerrado los domingos y festivos; las urgencias se atienden en TAH Bellville (021 91 911 91) o TAH Rosmead (021 674 0034)"
+        "es": "Horario veterinario lun–vie 8:00–18:30 h, sáb 8:00–12:30 h, cerrado los domingos y festivos; las urgencias se atienden en TAH Bellville (021 91 911 91) o TAH Rosmead (021 674 0034)",
+        "it": "Orario veterinario lun–ven 8:00–18:30, sab 8:00–12:30, chiuso la domenica e i festivi; urgenze presso TAH Bellville (021 91 911 91) o TAH Rosmead (021 674 0034)"
       },
       "small_animals": true,
       "url": "https://tah.co.za/green-point/",
@@ -294,7 +306,8 @@
       "duty": "Vet hours Mon-Fri 8:30-13:00 and 14:00-17:30, Sat 9:00-12:00; closed Sundays and public holidays; emergencies: TAH Rosmead 021 674 0034",
       "duty_i18n": {
         "fr": "Consultations lun.–ven. 8 h 30–13 h et 14 h–17 h 30, sam. 9 h–12 h ; fermé dim. et jours fériés ; urgences : TAH Rosmead 021 674 0034",
-        "es": "Horario veterinario lun–vie 8:30–13:00 h y 14:00–17:30 h, sáb 9:00–12:00 h; cerrado los domingos y festivos; urgencias: TAH Rosmead 021 674 0034"
+        "es": "Horario veterinario lun–vie 8:30–13:00 h y 14:00–17:30 h, sáb 9:00–12:00 h; cerrado los domingos y festivos; urgencias: TAH Rosmead 021 674 0034",
+        "it": "Orario veterinario lun–ven 8:30–13:00 e 14:00–17:30, sab 9:00–12:00; chiuso la domenica e i festivi; urgenze: TAH Rosmead 021 674 0034"
       },
       "small_animals": true,
       "url": "https://tah.co.za/kenilworth/",
@@ -312,7 +325,8 @@
       "duty": "Mon-Fri 8:00-18:30, Sat 9:00-12:00 and 17:00-18:00, Sun and public holidays 10:00-11:00 and 17:00-17:30; emergency hours telephone 021 674 4090; after-hours surcharge",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h 30, sam. 9 h–12 h et 17 h–18 h, dim. et jours fériés 10 h–11 h et 17 h–17 h 30 ; urgences en dehors des horaires : 021 674 4090 ; supplément hors horaires",
-        "es": "Lun–vie 8:00–18:30 h, sáb 9:00–12:00 h y 17:00–18:00 h, dom y festivos 10:00–11:00 h y 17:00–17:30 h; teléfono de urgencias 021 674 4090; recargo fuera de horario"
+        "es": "Lun–vie 8:00–18:30 h, sáb 9:00–12:00 h y 17:00–18:00 h, dom y festivos 10:00–11:00 h y 17:00–17:30 h; teléfono de urgencias 021 674 4090; recargo fuera de horario",
+        "it": "Lun–ven 8:00–18:30, sab 9:00–12:00 e 17:00–18:00, dom e festivi 10:00–11:00 e 17:00–17:30; telefono per le urgenze fuori orario 021 674 4090; supplemento fuori orario"
       },
       "small_animals": true,
       "url": "https://bluecross.co.za/",
@@ -330,7 +344,8 @@
       "duty": "Mon-Fri 8:00-18:30, Sat 9:00-12:00, Sun and public holidays 10:00-11:00 (surcharge); after-hours emergencies: Panorama Veterinary Clinic 021 930 6632",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h 30, sam. 9 h–12 h, dim. et jours fériés 10 h–11 h (supplément) ; urgences hors horaires : Panorama Veterinary Clinic 021 930 6632",
-        "es": "Lun–vie 8:00–18:30 h, sáb 9:00–12:00 h, dom y festivos 10:00–11:00 h (con recargo); urgencias fuera de horario: Panorama Veterinary Clinic 021 930 6632"
+        "es": "Lun–vie 8:00–18:30 h, sáb 9:00–12:00 h, dom y festivos 10:00–11:00 h (con recargo); urgencias fuera de horario: Panorama Veterinary Clinic 021 930 6632",
+        "it": "Lun–ven 8:00–18:30, sab 9:00–12:00, dom e festivi 10:00–11:00 (supplemento); urgenze fuori orario: Panorama Veterinary Clinic 021 930 6632"
       },
       "small_animals": true,
       "url": "https://www.durbanvillevet.co.za/",
@@ -348,7 +363,8 @@
       "duty": "Mon-Fri 8:20-18:00, Sat 9:00-12:00, Sun and public holidays 9:00-10:00; life-threatening emergencies need no appointment; after hours 24-hour care at TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) or Vetscape Paarl (021 867 0700)",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h 20–18 h, sam. 9 h–12 h, dim. et jours fériés 9 h–10 h ; urgences vitales sans rendez-vous ; hors horaires, soins 24 h/24 à TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) ou Vetscape Paarl (021 867 0700)",
-        "es": "Lun–vie 8:20–18:00 h, sáb 9:00–12:00 h, dom y festivos 9:00–10:00 h; las urgencias vitales se atienden sin cita previa; fuera de horario, atención 24 horas en TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) o Vetscape Paarl (021 867 0700)"
+        "es": "Lun–vie 8:20–18:00 h, sáb 9:00–12:00 h, dom y festivos 9:00–10:00 h; las urgencias vitales se atienden sin cita previa; fuera de horario, atención 24 horas en TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) o Vetscape Paarl (021 867 0700)",
+        "it": "Lun–ven 8:20–18:00, sab 9:00–12:00, dom e festivi 9:00–10:00; le urgenze con pericolo di vita non richiedono appuntamento; fuori orario assistenza 24 ore su 24 presso TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) o Vetscape Paarl (021 867 0700)"
       },
       "small_animals": true,
       "url": "https://www.alphenvet.co.za/",
@@ -366,7 +382,8 @@
       "duty": "24-hour emergency line for cats and dogs: 061 101 3909 (on-call vet); office hours 08:00-18:00",
       "duty_i18n": {
         "fr": "Ligne d’urgence 24 h/24 pour chats et chiens : 061 101 3909 (vétérinaire de garde) ; heures de bureau 8 h–18 h",
-        "es": "Línea de urgencias 24 horas para gatos y perros: 061 101 3909 (veterinario de guardia); horario de oficina 8:00–18:00 h"
+        "es": "Línea de urgencias 24 horas para gatos y perros: 061 101 3909 (veterinario de guardia); horario de oficina 8:00–18:00 h",
+        "it": "Linea d'emergenza 24 ore su 24 per cani e gatti: 061 101 3909 (veterinario di guardia); orario d'ufficio 08:00–18:00"
       },
       "small_animals": true,
       "url": "https://vetscape.co.za/",
@@ -386,7 +403,8 @@
       "duty": "Mon-Fri 8:00-18:00, Sat 8:00-13:00, closed Sundays and public holidays; call 021 851 3511 for the vet on call",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–13 h, fermé dim. et jours fériés ; vétérinaire de garde : 021 851 3511",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; llama al 021 851 3511 para el veterinario de guardia"
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; llama al 021 851 3511 para el veterinario de guardia",
+        "it": "Lun–ven 8:00–18:00, sab 8:00–13:00, chiuso la domenica e i festivi; per il veterinario di guardia chiamare il 021 851 3511"
       },
       "small_animals": true,
       "url": "https://tevavetclinic.co.za/",
@@ -404,7 +422,8 @@
       "duty": "24-hour veterinary care; normal hours Mon-Fri 8:00-18:00, Sat 8:00-12:00; emergencies only on Sundays and public holidays; other practices refer after-hours cases here",
       "duty_i18n": {
         "fr": "Soins vétérinaires 24 h/24 ; horaires habituels lun.–ven. 8 h–18 h, sam. 8 h–12 h ; urgences uniquement les dimanches et jours fériés ; d’autres cabinets y orientent les cas hors horaires",
-        "es": "Atención veterinaria 24 horas; horario normal lun–vie 8:00–18:00 h, sáb 8:00–12:00 h; domingos y festivos solo urgencias; otras clínicas derivan aquí los casos fuera de horario"
+        "es": "Atención veterinaria 24 horas; horario normal lun–vie 8:00–18:00 h, sáb 8:00–12:00 h; domingos y festivos solo urgencias; otras clínicas derivan aquí los casos fuera de horario",
+        "it": "Assistenza veterinaria 24 ore su 24; orario normale lun–ven 8:00–18:00, sab 8:00–12:00; la domenica e nei festivi solo urgenze; altri studi inviano qui i casi fuori orario"
       },
       "small_animals": true,
       "url": "https://www.westvet.co.za/",
@@ -424,7 +443,8 @@
       "duty": "Consulting by appointment Mon-Fri 8:00-17:30, Sat 8:00-12:00; open until 22:00 every evening for pet emergencies, 7 days a week (emergency fee)",
       "duty_i18n": {
         "fr": "Consultations sur rendez-vous lun.–ven. 8 h–17 h 30, sam. 8 h–12 h ; ouvert jusqu’à 22 h tous les soirs pour les urgences, 7 j/7 (frais d’urgence)",
-        "es": "Consultas con cita previa lun–vie 8:00–17:30 h, sáb 8:00–12:00 h; abierto hasta las 22:00 h todas las tardes para urgencias de mascotas, los 7 días de la semana (tarifa de urgencias)"
+        "es": "Consultas con cita previa lun–vie 8:00–17:30 h, sáb 8:00–12:00 h; abierto hasta las 22:00 h todas las tardes para urgencias de mascotas, los 7 días de la semana (tarifa de urgencias)",
+        "it": "Visite su appuntamento lun–ven 8:00–17:30, sab 8:00–12:00; aperto fino alle 22:00 ogni sera per le urgenze, 7 giorni su 7 (tariffa d'urgenza)"
       },
       "small_animals": true,
       "url": "https://hillcrestvets.co.za/",
@@ -440,7 +460,8 @@
       "duty": "Emergencies and after-hours care are referred to Westville Veterinary Hospital (031 267 8000)",
       "duty_i18n": {
         "fr": "Urgences et soins hors horaires orientés vers Westville Veterinary Hospital (031 267 8000)",
-        "es": "Las urgencias y la atención fuera de horario se derivan a Westville Veterinary Hospital (031 267 8000)"
+        "es": "Las urgencias y la atención fuera de horario se derivan a Westville Veterinary Hospital (031 267 8000)",
+        "it": "Urgenze e assistenza fuori orario sono indirizzate al Westville Veterinary Hospital (031 267 8000)"
       },
       "small_animals": true,
       "url": "https://www.durbannorthvet.co.za/",
@@ -459,7 +480,8 @@
       "duty": "Consulting Mon-Fri 7:30-12:00 and 15:00-18:00, Sat 7:30-12:00, closed Sundays and public holidays; emergency number 083 255 3469",
       "duty_i18n": {
         "fr": "Consultations lun.–ven. 7 h 30–12 h et 15 h–18 h, sam. 7 h 30–12 h, fermé dim. et jours fériés ; numéro d’urgence : 083 255 3469",
-        "es": "Consultas lun–vie 7:30–12:00 h y 15:00–18:00 h, sáb 7:30–12:00 h, cerrado los domingos y festivos; número de urgencias 083 255 3469"
+        "es": "Consultas lun–vie 7:30–12:00 h y 15:00–18:00 h, sáb 7:30–12:00 h, cerrado los domingos y festivos; número de urgencias 083 255 3469",
+        "it": "Visite lun–ven 7:30–12:00 e 15:00–18:00, sab 7:30–12:00, chiuso la domenica e i festivi; numero d'emergenza 083 255 3469"
       },
       "small_animals": true,
       "url": "https://www.eastlondonvet.co.za/",
@@ -478,7 +500,8 @@
       "duty": "Mon-Fri 7:30-18:00, Sat 8:00-12:00; Sundays and public holidays 9:00-10:00 (surcharge)",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–18 h, sam. 8 h–12 h ; dim. et jours fériés 9 h–10 h (supplément)",
-        "es": "Lun–vie 7:30–18:00 h, sáb 8:00–12:00 h; dom y festivos 9:00–10:00 h (con recargo)"
+        "es": "Lun–vie 7:30–18:00 h, sáb 8:00–12:00 h; dom y festivos 9:00–10:00 h (con recargo)",
+        "it": "Lun–ven 7:30–18:00, sab 8:00–12:00; domeniche e festivi 9:00–10:00 (supplemento)"
       },
       "small_animals": true,
       "url": "https://mountcroixvet.co.za/",
@@ -496,7 +519,8 @@
       "duty": "Mon-Fri 8:00-17:30, Sat 9:00-12:30, closed Sundays; after hours and emergencies: call 044 382 6766",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–12 h 30, fermé le dimanche ; hors horaires et urgences : appelez le 044 382 6766",
-        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–12:30 h, cerrado los domingos; fuera de horario y urgencias: llama al 044 382 6766"
+        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–12:30 h, cerrado los domingos; fuera de horario y urgencias: llama al 044 382 6766",
+        "it": "Lun–ven 8:00–17:30, sab 9:00–12:30, chiuso la domenica; fuori orario e urgenze: chiamare il 044 382 6766"
       },
       "small_animals": true,
       "url": "https://www.georgerexvet.co.za/",
@@ -513,7 +537,8 @@
       "duty": "Mon-Fri 8:00-17:00, Sat 8:00-11:00, closed Sundays and public holidays; emergency number 076 909 2577",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h, sam. 8 h–11 h, fermé dim. et jours fériés ; numéro d’urgence : 076 909 2577",
-        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–11:00 h, cerrado los domingos y festivos; número de urgencias 076 909 2577"
+        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–11:00 h, cerrado los domingos y festivos; número de urgencias 076 909 2577",
+        "it": "Lun–ven 8:00–17:00, sab 8:00–11:00, chiuso la domenica e i festivi; numero d'emergenza 076 909 2577"
       },
       "small_animals": true,
       "url": "https://robbergvet.co.za/",
@@ -531,7 +556,8 @@
       "duty": "24-hour emergency and intensive care practice with full-time nursing staff and on-call vets; emergency phone 084 077 8049; consulting Mon-Fri 8:00-17:00, Sat 8:00-12:00; after-hours call-out fee",
       "duty_i18n": {
         "fr": "Clinique d’urgences et de soins intensifs 24 h/24 avec personnel soignant à plein temps et vétérinaires de garde ; urgences : 084 077 8049 ; consultations lun.–ven. 8 h–17 h, sam. 8 h–12 h ; frais de déplacement hors horaires",
-        "es": "Clínica de urgencias y cuidados intensivos 24 horas con personal de enfermería a tiempo completo y veterinarios de guardia; teléfono de urgencias 084 077 8049; consultas lun–vie 8:00–17:00 h, sáb 8:00–12:00 h; tarifa por llamada de urgencia fuera de horario"
+        "es": "Clínica de urgencias y cuidados intensivos 24 horas con personal de enfermería a tiempo completo y veterinarios de guardia; teléfono de urgencias 084 077 8049; consultas lun–vie 8:00–17:00 h, sáb 8:00–12:00 h; tarifa por llamada de urgencia fuera de horario",
+        "it": "Studio di pronto soccorso e terapia intensiva 24 ore su 24 con personale infermieristico a tempo pieno e veterinari reperibili; telefono d'emergenza 084 077 8049; visite lun–ven 8:00–17:00, sab 8:00–12:00; diritto di chiamata fuori orario"
       },
       "small_animals": true,
       "url": "https://lowveldvet.co.za/",
@@ -551,7 +577,8 @@
       "duty": "Mon-Fri 7:30-13:00 and 14:00-18:00, Sat 8:00-12:00, Sundays and public holidays 10:00-11:00 for emergencies only",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–13 h et 14 h–18 h, sam. 8 h–12 h, dim. et jours fériés 10 h–11 h pour les urgences uniquement",
-        "es": "Lun–vie 7:30–13:00 h y 14:00–18:00 h, sáb 8:00–12:00 h, dom y festivos 10:00–11:00 h solo urgencias"
+        "es": "Lun–vie 7:30–13:00 h y 14:00–18:00 h, sáb 8:00–12:00 h, dom y festivos 10:00–11:00 h solo urgencias",
+        "it": "Lun–ven 7:30–13:00 e 14:00–18:00, sab 8:00–12:00, domeniche e festivi 10:00–11:00 solo per urgenze"
       },
       "small_animals": true,
       "url": "https://www.nelvet.co.za/",
@@ -569,7 +596,8 @@
       "duty": "Mon-Fri 8:00-17:30, Sat 8:30-12:00, Sundays and public holidays 10:00-12:00 (emergencies only); emergency/after-hours line 063 603 0301",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 8 h 30–12 h, dim. et jours fériés 10 h–12 h (urgences uniquement) ; ligne d’urgence/hors horaires : 063 603 0301",
-        "es": "Lun–vie 8:00–17:30 h, sáb 8:30–12:00 h, dom y festivos 10:00–12:00 h (solo urgencias); línea de urgencias y fuera de horario 063 603 0301"
+        "es": "Lun–vie 8:00–17:30 h, sáb 8:30–12:00 h, dom y festivos 10:00–12:00 h (solo urgencias); línea de urgencias y fuera de horario 063 603 0301",
+        "it": "Lun–ven 8:00–17:30, sab 8:30–12:00, domeniche e festivi 10:00–12:00 (solo urgenze); linea d'emergenza/fuori orario 063 603 0301"
       },
       "small_animals": true,
       "url": "https://thevets.co.za/",
@@ -587,7 +615,8 @@
       "duty": "Open 24 hours a day, 365 days a year; hospital and specialist referral facility",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, 365 jours par an ; hôpital et centre de référence spécialisé",
-        "es": "Abierto las 24 horas, los 365 días del año; hospital y centro de derivación con especialistas"
+        "es": "Abierto las 24 horas, los 365 días del año; hospital y centro de derivación con especialistas",
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno; ospedale e struttura specialistica di riferimento"
       },
       "small_animals": true,
       "url": "https://www.olympus24hourvet.com/",
@@ -607,7 +636,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 09:00-12:00, Sun and public holidays closed; 24/7 emergency support, after-hours line 082 376 6555",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–12 h, fermé dim. et jours fériés ; assistance d’urgence 24 h/24, 7 j/7, ligne hors horaires : 082 376 6555",
-        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, cerrado los domingos y festivos; urgencias 24/7, línea fuera de horario 082 376 6555"
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, cerrado los domingos y festivos; urgencias 24/7, línea fuera de horario 082 376 6555",
+        "it": "Lun–ven 08:00–18:00, sab 09:00–12:00, chiuso la domenica e i festivi; assistenza d'urgenza 24 ore su 24, 7 giorni su 7, linea fuori orario 082 376 6555"
       },
       "small_animals": true,
       "url": "https://georgevet.co.za/",
@@ -627,7 +657,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-17:00; on-call 24/7 on emergency line 072 088 1957",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h ; astreinte 24 h/24, 7 j/7 au numéro d’urgence 072 088 1957",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; guardia 24/7 en la línea de urgencias 072 088 1957"
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; guardia 24/7 en la línea de urgencias 072 088 1957",
+        "it": "Lun–ven 08:00–18:00, sab 08:00–17:00; reperibilità 24 ore su 24, 7 giorni su 7 sulla linea d'emergenza 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -647,7 +678,8 @@
       "duty": "Mon-Fri 08:00-17:30, Sat 08:00-13:00, Sun and public holidays closed; group emergency line 072 088 1957",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 8 h–13 h, fermé dim. et jours fériés ; ligne d’urgence du groupe : 072 088 1957",
-        "es": "Lun–vie 8:00–17:30 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; línea de urgencias del grupo 072 088 1957"
+        "es": "Lun–vie 8:00–17:30 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; línea de urgencias del grupo 072 088 1957",
+        "it": "Lun–ven 08:00–17:30, sab 08:00–13:00, chiuso la domenica e i festivi; linea d'emergenza del gruppo 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -666,7 +698,8 @@
       "duty": "Mon-Fri 08:00-17:30, Sat 08:00-13:00, Sun and public holidays closed; group emergency line 072 088 1957",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 8 h–13 h, fermé dim. et jours fériés ; ligne d’urgence du groupe : 072 088 1957",
-        "es": "Lun–vie 8:00–17:30 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; línea de urgencias del grupo 072 088 1957"
+        "es": "Lun–vie 8:00–17:30 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; línea de urgencias del grupo 072 088 1957",
+        "it": "Lun–ven 08:00–17:30, sab 08:00–13:00, chiuso la domenica e i festivi; linea d'emergenza del gruppo 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -685,7 +718,8 @@
       "duty": "Mon-Fri 07:30-17:00, Sat 08:00-12:00, Sun and public holidays 09:00-11:00 emergencies only (surcharge); 24-hour emergency line 082 373 1963",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–17 h, sam. 8 h–12 h, dim. et jours fériés 9 h–11 h urgences uniquement (supplément) ; ligne d’urgence 24 h/24 : 082 373 1963",
-        "es": "Lun–vie 7:30–17:00 h, sáb 8:00–12:00 h, dom y festivos 9:00–11:00 h solo urgencias (con recargo); línea de urgencias 24 horas 082 373 1963"
+        "es": "Lun–vie 7:30–17:00 h, sáb 8:00–12:00 h, dom y festivos 9:00–11:00 h solo urgencias (con recargo); línea de urgencias 24 horas 082 373 1963",
+        "it": "Lun–ven 07:30–17:00, sab 08:00–12:00, dom e festivi 09:00–11:00 solo urgenze (supplemento); linea d'emergenza 24 ore su 24 082 373 1963"
       },
       "small_animals": true,
       "url": "https://vethouse.co.za/",
@@ -705,7 +739,8 @@
       "duty": "Mon-Fri 07:30-17:00, Sat 08:00-12:00, closed Sun and public holidays; after-hours emergencies 082 373 1963",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–17 h, sam. 8 h–12 h, fermé dim. et jours fériés ; urgences hors horaires : 082 373 1963",
-        "es": "Lun–vie 7:30–17:00 h, sáb 8:00–12:00 h, cerrado los domingos y festivos; urgencias fuera de horario 082 373 1963"
+        "es": "Lun–vie 7:30–17:00 h, sáb 8:00–12:00 h, cerrado los domingos y festivos; urgencias fuera de horario 082 373 1963",
+        "it": "Lun–ven 07:30–17:00, sab 08:00–12:00, chiuso la domenica e i festivi; urgenze fuori orario 082 373 1963"
       },
       "small_animals": true,
       "url": "https://vethouse.co.za/",
@@ -724,7 +759,8 @@
       "duty": "After-hours line 082 819 7645; call ahead for current hours",
       "duty_i18n": {
         "fr": "Ligne hors horaires : 082 819 7645 ; appelez pour connaître les horaires actuels",
-        "es": "Línea fuera de horario 082 819 7645; llama antes para consultar el horario actual"
+        "es": "Línea fuera de horario 082 819 7645; llama antes para consultar el horario actual",
+        "it": "Linea fuori orario 082 819 7645; telefonare in anticipo per gli orari attuali"
       },
       "small_animals": true,
       "url": "https://hiltonvethospital.co.za/",
@@ -743,7 +779,8 @@
       "duty": "Mon-Fri 08:00-17:00, Sat 08:00-14:30; a vet is always available for after-hours emergencies on 064 504 3754",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h, sam. 8 h–14 h 30 ; un vétérinaire est toujours disponible pour les urgences hors horaires au 064 504 3754",
-        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–14:30 h; siempre hay un veterinario disponible para urgencias fuera de horario en el 064 504 3754"
+        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–14:30 h; siempre hay un veterinario disponible para urgencias fuera de horario en el 064 504 3754",
+        "it": "Lun–ven 08:00–17:00, sab 08:00–14:30; un veterinario è sempre disponibile per le urgenze fuori orario al 064 504 3754"
       },
       "small_animals": true,
       "url": "https://www.polokwanevetclinic.com/",
@@ -763,7 +800,8 @@
       "duty": "Mon-Fri 07:00-19:00, Sat 08:00-12:00 and 17:00-18:00, Sun 17:00-18:00; emergencies only 067 036 3623",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h–19 h, sam. 8 h–12 h et 17 h–18 h, dim. 17 h–18 h ; urgences uniquement : 067 036 3623",
-        "es": "Lun–vie 7:00–19:00 h, sáb 8:00–12:00 h y 17:00–18:00 h, dom 17:00–18:00 h; solo urgencias 067 036 3623"
+        "es": "Lun–vie 7:00–19:00 h, sáb 8:00–12:00 h y 17:00–18:00 h, dom 17:00–18:00 h; solo urgencias 067 036 3623",
+        "it": "Lun–ven 07:00–19:00, sab 08:00–12:00 e 17:00–18:00, dom 17:00–18:00; solo urgenze 067 036 3623"
       },
       "small_animals": true,
       "url": "https://fichardtparkanimalclinic.yolasite.com/",
@@ -782,7 +820,8 @@
       "duty": "Mon-Fri 08:00-17:00, Sat 08:00-12:00, Sun and public holidays 09:30-10:30",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–17 h, sam. 8 h–12 h, dim. et jours fériés 9 h 30–10 h 30",
-        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–12:00 h, dom y festivos 9:30–10:30 h"
+        "es": "Lun–vie 8:00–17:00 h, sáb 8:00–12:00 h, dom y festivos 9:30–10:30 h",
+        "it": "Lun–ven 08:00–17:00, sab 08:00–12:00, dom e festivi 09:30–10:30"
       },
       "small_animals": true,
       "url": "https://bayswatervets.co.za/",
@@ -801,7 +840,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-12:00, Sun and public holidays 10:00-12:00 and 16:30-18:00; 19:00-07:00 emergencies go to Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 or New South Vet 011 682 3213",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h, dim. et jours fériés 10 h–12 h et 16 h 30–18 h ; de 19 h à 7 h, urgences orientées vers Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 ou New South Vet 011 682 3213",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, dom y festivos 10:00–12:00 h y 16:30–18:00 h; de 19:00 a 7:00 h las urgencias se atienden en Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 o New South Vet 011 682 3213"
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, dom y festivos 10:00–12:00 h y 16:30–18:00 h; de 19:00 a 7:00 h las urgencias se atienden en Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 o New South Vet 011 682 3213",
+        "it": "Lun–ven 08:00–18:00, sab 08:00–12:00, dom e festivi 10:00–12:00 e 16:30–18:00; dalle 19:00 alle 07:00 le urgenze vanno a Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 o New South Vet 011 682 3213"
       },
       "small_animals": true,
       "url": "https://bedfordviewvet.co.za/",
@@ -820,7 +860,8 @@
       "duty": "Mon-Fri 07:30-18:00, Sat 09:00-12:00, public holidays 09:00-11:00",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–18 h, sam. 9 h–12 h, jours fériés 9 h–11 h",
-        "es": "Lun–vie 7:30–18:00 h, sáb 9:00–12:00 h, festivos 9:00–11:00 h"
+        "es": "Lun–vie 7:30–18:00 h, sáb 9:00–12:00 h, festivos 9:00–11:00 h",
+        "it": "Lun–ven 07:30–18:00, sab 09:00–12:00, festivi 09:00–11:00"
       },
       "small_animals": true,
       "url": "https://highveldvet.co.za/",
@@ -839,7 +880,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-13:00, Sun and public holidays closed; emergency number 065 072 0925",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–13 h, fermé dim. et jours fériés ; numéro d’urgence : 065 072 0925",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; número de urgencias 065 072 0925"
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h, cerrado los domingos y festivos; número de urgencias 065 072 0925",
+        "it": "Lun–ven 08:00–18:00, sab 08:00–13:00, chiuso la domenica e i festivi; numero d'emergenza 065 072 0925"
       },
       "small_animals": true,
       "url": "https://www.cncvet.co.za/",
@@ -858,7 +900,8 @@
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-13:00 and 17:00-18:00, Sun and public holidays 09:00-11:00 and 17:00-18:00; after-hours emergencies 073 443 0582 (surcharge)",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–13 h et 17 h–18 h, dim. et jours fériés 9 h–11 h et 17 h–18 h ; urgences hors horaires : 073 443 0582 (supplément)",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h y 17:00–18:00 h, dom y festivos 9:00–11:00 h y 17:00–18:00 h; urgencias fuera de horario 073 443 0582 (con recargo)"
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h y 17:00–18:00 h, dom y festivos 9:00–11:00 h y 17:00–18:00 h; urgencias fuera de horario 073 443 0582 (con recargo)",
+        "it": "Lun–ven 08:00–18:00, sab 08:00–13:00 e 17:00–18:00, dom e festivi 09:00–11:00 e 17:00–18:00; urgenze fuori orario 073 443 0582 (supplemento)"
       },
       "small_animals": true,
       "url": "https://www.walmervet.co.za/",
@@ -877,7 +920,8 @@
       "duty": "Mon-Fri 08:00-18:15, Sat 08:00-12:45 by appointment, Sun and public holidays 09:00-10:45 emergency appointments only (SAVA surcharge)",
       "duty_i18n": {
         "fr": "Lun.–ven. 8 h–18 h 15, sam. 8 h–12 h 45 sur rendez-vous, dim. et jours fériés 9 h–10 h 45 sur rendez-vous d’urgence uniquement (supplément SAVA)",
-        "es": "Lun–vie 8:00–18:15 h, sáb 8:00–12:45 h con cita previa, dom y festivos 9:00–10:45 h solo citas de urgencia (recargo SAVA)"
+        "es": "Lun–vie 8:00–18:15 h, sáb 8:00–12:45 h con cita previa, dom y festivos 9:00–10:45 h solo citas de urgencia (recargo SAVA)",
+        "it": "Lun–ven 08:00–18:15, sab 08:00–12:45 su appuntamento, dom e festivi 09:00–10:45 solo appuntamenti d'urgenza (supplemento SAVA)"
       },
       "small_animals": true,
       "url": "http://www.9thavevet.com/",

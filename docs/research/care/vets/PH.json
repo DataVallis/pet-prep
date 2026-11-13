@@ -119,7 +119,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias, cirugía e ingreso las 24 horas todos los días; línea 24/7 +63 956 308 6855, también +63 32 425 9197."
+        "es": "Urgencias, cirugía e ingreso las 24 horas todos los días; línea 24/7 +63 956 308 6855, también +63 32 425 9197.",
+        "it": "Emergenze, chirurgia e ricovero 24 ore su 24; linea 24 ore su 24, 7 giorni su 7 +63 956 308 6855, anche +63 32 425 9197."
       }
     },
     {
@@ -137,7 +138,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad."
+        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad.",
+        "it": "Visite e accesso senza appuntamento lun–sab 8:00–20:00, dom 9:00–17:00; per le emergenze 24 ore su 24 rivolgersi all'ospedale di Banilad."
       }
     },
     {
@@ -155,7 +157,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad."
+        "es": "Consultas y atención sin cita lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; para urgencias 24 horas usa el hospital de Banilad.",
+        "it": "Visite e accesso senza appuntamento lun–sab 8:00–20:00, dom 9:00–17:00; per le emergenze 24 ore su 24 rivolgersi all'ospedale di Banilad."
       }
     },
     {
@@ -173,7 +176,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–dom 8:00–17:00 h; llama antes."
+        "es": "Abierto lun–dom 8:00–17:00 h; llama antes.",
+        "it": "Aperto lun–dom 8:00–17:00; telefonare in anticipo."
       }
     },
     {
@@ -191,7 +195,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos."
+        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos.",
+        "it": "Aperto lun–sab 9:00–18:00; per la domenica telefonare in anticipo."
       }
     },
     {
@@ -209,7 +214,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos."
+        "es": "Abierto lun–sáb 9:00–18:00 h; llama antes para los domingos.",
+        "it": "Aperto lun–sab 9:00–18:00; per la domenica telefonare in anticipo."
       }
     },
     {
@@ -226,7 +232,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 9:00–18:00 h; cerrado dom."
+        "es": "Abierto lun–sáb 9:00–18:00 h; cerrado dom.",
+        "it": "Aperto lun–sab 9:00–18:00; chiuso la domenica."
       }
     },
     {
@@ -243,7 +250,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 8:00–17:00 h; cerrado dom; consulta el teléfono en la web."
+        "es": "Abierto lun–sáb 8:00–17:00 h; cerrado dom; consulta el teléfono en la web.",
+        "it": "Aperto lun–sab 8:00–17:00; chiuso la domenica; telefono sul sito."
       }
     },
     {
@@ -260,7 +268,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias de guardia 24 horas para clientes; horario de visitas 9:30–20:30 h; llama antes."
+        "es": "Servicio de urgencias de guardia 24 horas para clientes; horario de visitas 9:30–20:30 h; llama antes.",
+        "it": "Servizio di emergenza di guardia 24 ore su 24 per i clienti; orario di visita 9:30–20:30; telefonare in anticipo."
       }
     },
     {
@@ -276,7 +285,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Anuncia urgencias 24/7; horario general lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; datos de las sedes por formulario de consulta o por correo a pethubvetclinic@gmail.com."
+        "es": "Anuncia urgencias 24/7; horario general lun–sáb 8:00–20:00 h, dom 9:00–17:00 h; datos de las sedes por formulario de consulta o por correo a pethubvetclinic@gmail.com.",
+        "it": "Pubblicizza pronto soccorso 24 ore su 24, 7 giorni su 7; orari generali lun–sab 8:00–20:00, dom 9:00–17:00; dettagli delle sedi tramite modulo di richiesta o e-mail pethubvetclinic@gmail.com."
       }
     },
     {
@@ -292,7 +302,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "El grupo anuncia servicio de urgencias; contacta con tu sede más cercana para confirmar el horario."
+        "es": "El grupo anuncia servicio de urgencias; contacta con tu sede más cercana para confirmar el horario.",
+        "it": "Il gruppo pubblicizza servizi di emergenza; contattare la sede più vicina per confermare gli orari."
       }
     },
     {
@@ -310,7 +321,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; acepta urgencias fuera de horario por la noche; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; acepta urgencias fuera de horario por la noche; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; accoglie le emergenze fuori orario durante la notte; telefonare in anticipo."
       }
     },
     {
@@ -327,7 +339,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -344,7 +357,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -361,7 +375,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -378,7 +393,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -396,7 +412,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 10:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 10:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 10:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -414,7 +431,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–19:00 h; llama antes."
+        "es": "Abierto todos los días 9:00–19:00 h; llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -432,7 +450,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Citas por teléfono o por la página de Facebook del hospital."
+        "es": "Citas por teléfono o por la página de Facebook del hospital.",
+        "it": "Appuntamenti per telefono o tramite la pagina Facebook dell'ospedale."
       }
     },
     {
@@ -449,7 +468,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Horario de oficina habitual; llama antes."
+        "es": "Horario de oficina habitual; llama antes.",
+        "it": "Normale orario d'ufficio; telefonare in anticipo."
       }
     },
     {
@@ -467,7 +487,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 8:00–17:00 h, festivos incluidos; llama antes."
+        "es": "Abierto lun–sáb 8:00–17:00 h, festivos incluidos; llama antes.",
+        "it": "Aperto lun–sab 8:00–17:00, festivi inclusi; telefonare in anticipo."
       }
     },
     {
@@ -485,7 +506,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Oficina pública abierta lun–vie 8:00–17:00 h; registro, vacunación y programas de esterilización, no es un hospital de urgencias."
+        "es": "Oficina pública abierta lun–vie 8:00–17:00 h; registro, vacunación y programas de esterilización, no es un hospital de urgencias.",
+        "it": "Ufficio pubblico aperto lun–ven 8:00–17:00; registrazione, vaccinazioni e programmi di sterilizzazione, non è un pronto soccorso."
       }
     },
     {
@@ -503,7 +525,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Oficina pública abierta 8:00–17:00 h; no es un hospital de urgencias."
+        "es": "Oficina pública abierta 8:00–17:00 h; no es un hospital de urgencias.",
+        "it": "Ufficio pubblico aperto 8:00–17:00; non è un pronto soccorso."
       }
     },
     {
@@ -521,7 +544,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario.",
+        "it": "Telefonare alla sede per gli orari aggiornati e le modalità di emergenza fuori orario."
       }
     },
     {
@@ -539,7 +563,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario.",
+        "it": "Telefonare alla sede per gli orari aggiornati e le modalità di emergenza fuori orario."
       }
     },
     {
@@ -557,7 +582,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario.",
+        "it": "Telefonare alla sede per gli orari aggiornati e le modalità di emergenza fuori orario."
       }
     },
     {
@@ -575,7 +601,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario.",
+        "it": "Telefonare alla sede per gli orari aggiornati e le modalità di emergenza fuori orario."
       }
     },
     {
@@ -593,7 +620,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario."
+        "es": "Llama a la sede para conocer el horario actual y la atención de urgencias fuera de horario.",
+        "it": "Telefonare alla sede per gli orari aggiornati e le modalità di emergenza fuori orario."
       }
     },
     {
@@ -611,7 +639,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Solo gatos. Abierto todos los días 8:00–20:00 h; urgencias hasta las 23:00."
+        "es": "Solo gatos. Abierto todos los días 8:00–20:00 h; urgencias hasta las 23:00.",
+        "it": "Solo gatti. Aperto tutti i giorni 8:00–20:00; emergenze accolte fino alle 23:00."
       }
     },
     {
@@ -629,7 +658,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Solo gatos. Abierto dom–vie 9:00–20:00 h, sáb 8:00–20:00 h; urgencias hasta las 21:00."
+        "es": "Solo gatos. Abierto dom–vie 9:00–20:00 h, sáb 8:00–20:00 h; urgencias hasta las 21:00.",
+        "it": "Solo gatti. Aperto dom–ven 9:00–20:00, sab 8:00–20:00; emergenze accolte fino alle 21:00."
       }
     },
     {
@@ -647,7 +677,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Solo gatos. Abierto todos los días 9:00–19:00 h; 18:00–19:00 h reservado para urgencias."
+        "es": "Solo gatos. Abierto todos los días 9:00–19:00 h; 18:00–19:00 h reservado para urgencias.",
+        "it": "Solo gatti. Aperto tutti i giorni 9:00–19:00; 18:00–19:00 riservato ai casi di emergenza."
       }
     },
     {
@@ -665,7 +696,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes.",
+        "it": "In genere aperto tutti i giorni 9:00–18:00; chiuso il Venerdì Santo; telefonare in anticipo."
       }
     },
     {
@@ -683,7 +715,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes.",
+        "it": "In genere aperto tutti i giorni 9:00–18:00; chiuso il Venerdì Santo; telefonare in anticipo."
       }
     },
     {
@@ -701,7 +734,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes."
+        "es": "Normalmente abierto todos los días 9:00–18:00 h; cerrado Viernes Santo; llama antes.",
+        "it": "In genere aperto tutti i giorni 9:00–18:00; chiuso il Venerdì Santo; telefonare in anticipo."
       }
     },
     {
@@ -719,7 +753,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama antes para consultar el horario."
+        "es": "Llama antes para consultar el horario.",
+        "it": "Telefonare in anticipo per gli orari."
       }
     },
     {
@@ -737,7 +772,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–24:00 h; se atiende sin cita y urgencias en horario de apertura, con recargo fuera de horario 21:00–24:00 h; línea de urgencias +63 2 8459 7100."
+        "es": "Abierto todos los días 9:00–24:00 h; se atiende sin cita y urgencias en horario de apertura, con recargo fuera de horario 21:00–24:00 h; línea de urgencias +63 2 8459 7100.",
+        "it": "Aperto tutti i giorni 9:00–24:00; accesso senza appuntamento ed emergenze negli orari di apertura, supplemento fuori orario 21:00–24:00; linea per le urgenze +63 2 8459 7100."
       }
     },
     {
@@ -755,7 +791,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Oficina pública; no es un hospital de urgencias; llama antes."
+        "es": "Oficina pública; no es un hospital de urgencias; llama antes.",
+        "it": "Ufficio pubblico; non è un pronto soccorso; telefonare in anticipo."
       }
     },
     {
@@ -773,7 +810,8 @@
       "small_animals": true,
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Oficina pública; no es un hospital de urgencias; llama antes."
+        "es": "Oficina pública; no es un hospital de urgencias; llama antes.",
+        "it": "Ufficio pubblico; non è un pronto soccorso; telefonare in anticipo."
       }
     }
   ],

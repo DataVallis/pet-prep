@@ -49,7 +49,8 @@
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
       }
     },
     {
@@ -67,7 +68,8 @@
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
       }
     },
     {
@@ -85,7 +87,8 @@
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
       }
     },
     {
@@ -103,7 +106,8 @@
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
       }
     },
     {
@@ -121,7 +125,8 @@
       "note": "Branch address/phone from /sedes page; the /emergencia page says 24 h care is available at all branches. Per-branch hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención médica los 7 días de la semana, las 24 horas del día."
+        "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
       }
     },
     {
@@ -139,7 +144,8 @@
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006).",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
       }
     },
     {
@@ -157,7 +163,8 @@
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006).",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
       }
     },
     {
@@ -175,7 +182,8 @@
       "note": "Home page lists 'Emergencias 24 horas' per clinic. Phone is the central HeyVet line (WhatsApp +51 914 225 006). Home page main section omits 24 h for La Planicie but its tab and the branch page say 'Emergencias 24 horas'.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h."
+        "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
       }
     },
     {
@@ -193,7 +201,8 @@
       "note": "Home page: 'Lunes a Domingo las 24 Horas'; page does not say whether both branches share the hours (plan text says 24 h in both sedes). Page shows conflicting WhatsApp numbers; landline used.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto de lunes a domingo, las 24 horas."
+        "es": "Abierto de lunes a domingo, las 24 horas.",
+        "it": "Aperto da lunedì a domenica, 24 ore su 24."
       }
     },
     {
@@ -211,7 +220,8 @@
       "note": "Home page: 'Lunes a Domingo las 24 Horas'; page does not say whether both branches share the hours (plan text says 24 h in both sedes). Page shows conflicting WhatsApp numbers; landline used.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Abierto de lunes a domingo, las 24 horas."
+        "es": "Abierto de lunes a domingo, las 24 horas.",
+        "it": "Aperto da lunedì a domenica, 24 ore su 24."
       }
     },
     {
@@ -229,7 +239,8 @@
       "note": "Home page: 'Emergencias veterinarias las 24 horas'. Admission WhatsApp 924 679 664.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias veterinarias las 24 horas; hospitalización las 24 horas."
+        "es": "Urgencias veterinarias las 24 horas; hospitalización las 24 horas.",
+        "it": "Emergenze veterinarie 24 ore su 24; ricovero 24 ore su 24."
       }
     },
     {
@@ -247,7 +258,8 @@
       "note": "Page heading 'Emergencias 24 Horas'. Other phones (01) 435 5218, mobile 987 847 761.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Servicio de urgencias veterinarias las 24 horas."
+        "es": "Servicio de urgencias veterinarias las 24 horas.",
+        "it": "Servizio di emergenza veterinaria 24 ore su 24."
       }
     },
     {
@@ -265,7 +277,8 @@
       "note": "WhatsApp 949 116 773. General consultation hours not listed.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias y hospitalización las 24 horas."
+        "es": "Urgencias y hospitalización las 24 horas.",
+        "it": "Pronto soccorso e ricovero 24 ore su 24."
       }
     },
     {
@@ -283,7 +296,8 @@
       "note": "Same phone is WhatsApp.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención veterinaria las 24 horas del día, los 7 días de la semana."
+        "es": "Atención veterinaria las 24 horas del día, los 7 días de la semana.",
+        "it": "Assistenza veterinaria 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -301,7 +315,8 @@
       "note": "Home page: 'Atención 24 horas'. Other phones (01) 422 5110, WhatsApp 977 687 815.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Atención las 24 horas; línea de urgencias 993 737 420."
+        "es": "Atención las 24 horas; línea de urgencias 993 737 420.",
+        "it": "Assistenza 24 ore su 24; linea di emergenza 993 737 420."
       }
     },
     {
@@ -319,7 +334,8 @@
       "note": "Page labels this branch 'Veterinaria 24 horas'. Phone is WhatsApp/general contact.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -337,7 +353,8 @@
       "note": "Page labels this branch 'Veterinaria 24 horas'.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -355,7 +372,8 @@
       "note": "Page labels this branch 'Veterinaria 24 horas'; page shows two different Carabayllo phones (913 728 054 and 902 261 988) - if relevant.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana."
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -373,7 +391,8 @@
       "note": "Checker 2026-11-11: page says 'Mantener la Clínica ABIERTA 24 horas' but its own Atención table says Mon-Sat 8:00-20:30 (conflict, not clarified) -> not marked 24 h. Mobile 983 457 661. Mentions 24 h branches in Surco and La Molina without address.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Horario lun–sáb 8:00–20:30 h; la clínica también anuncia servicio 24 horas, así que llama antes para confirmarlo."
+        "es": "Horario lun–sáb 8:00–20:30 h; la clínica también anuncia servicio 24 horas, así que llama antes para confirmarlo.",
+        "it": "Orari da lunedì a sabato 8:00–20:30; la clinica indica anche un servizio 24 ore su 24, quindi telefonare in anticipo per conferma."
       }
     },
     {
@@ -391,7 +410,8 @@
       "note": "Page: 'EMERGENCIAS - LAS 24 HORAS' with 999 913 680. Landline (01) 744 8394.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h, dom 10:00–18:00 h."
+        "es": "Urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h, dom 10:00–18:00 h.",
+        "it": "Emergenze 24 ore su 24; orari ordinari da lunedì a sabato 9:00–20:00, domenica 10:00–18:00."
       }
     },
     {
@@ -409,7 +429,8 @@
       "note": "Phone is the emergency/WhatsApp line; branch phone 996 658 011.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h."
+        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h.",
+        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00."
       }
     },
     {
@@ -427,7 +448,8 @@
       "note": "Phone is the emergency/WhatsApp line; branch phone 969 404 147.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h."
+        "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h.",
+        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00."
       }
     },
     {
@@ -445,7 +467,8 @@
       "note": "Checker 2026-11-11: page has no formal business name and no hours; 24 h only in heading 'Veterinaria las 24 horas' and a mission sentence, no explicit emergency/hours statement -> not marked 24 h. Facebook handle janavetveterinarios hints at real name (unconfirmed). Removed from duty: Hours not published; the clinic presents itself as a 24-hour clinic, call ahead.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Se presenta como clínica 24 horas; llama antes."
+        "es": "Se presenta como clínica 24 horas; llama antes.",
+        "it": "Si presenta come clinica aperta 24 ore su 24; telefonare in anticipo."
       }
     },
     {
@@ -463,7 +486,8 @@
       "note": "Checker 2026-11-11: page says 'ponte en contacto con nosotros las 24 horas' and 'Atención las 24 Horas' but hours table is inconsistent (09.00-06.00 vs footer Mon-Fri 9am-6pm) -> conflict, not marked 24 h. Mobile/WhatsApp +51 901 181 116. Removed from duty: Emergency contact line advertised 24 hours; opening hours listed as Monday to Friday 9:00-18:00; call ahead.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Línea de contacto de urgencias anunciada las 24 horas; horario lun–vie 9:00–18:00 h; llama antes."
+        "es": "Línea de contacto de urgencias anunciada las 24 horas; horario lun–vie 9:00–18:00 h; llama antes.",
+        "it": "Linea di emergenza indicata come attiva 24 ore su 24; orari di apertura da lunedì a venerdì 9:00–18:00; telefonare in anticipo."
       }
     },
     {
@@ -481,7 +505,8 @@
       "note": "Central extensions 5001/5002. Removed from duty: University small-animal clinic. Monday to Friday 7:00-19:00. Clinical emergency line (01) 435 3348; no 24-hour service stated.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Clínica universitaria de pequeños animales. Lun–vie 7:00–19:00 h. Línea de urgencias clínicas (01) 435 3348."
+        "es": "Clínica universitaria de pequeños animales. Lun–vie 7:00–19:00 h. Línea de urgencias clínicas (01) 435 3348.",
+        "it": "Clinica universitaria per piccoli animali. Da lunedì a venerdì 7:00–19:00. Linea per le emergenze cliniche (01) 435 3348."
       }
     },
     {
@@ -499,7 +524,8 @@
       "note": "Extension 239254; WhatsApp for appointments 982 560 004. No emergency/24 h mention.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Clínica universitaria docente. Lun–vie 8:00–17:30 h, sáb 9:00–16:30 h; cerrado dom y festivos."
+        "es": "Clínica universitaria docente. Lun–vie 8:00–17:30 h, sáb 9:00–16:30 h; cerrado dom y festivos.",
+        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:30, sabato 9:00–16:30; chiusa la domenica e i festivi."
       }
     },
     {
@@ -517,7 +543,8 @@
       "note": "Page metadata says 'atención 24 horas para emergencias' but visible hours say emergencies Mon-Fri 8-17 only; set false. Domain is a third-party hosting domain (posicionarlima.pe) - confirm it is the university's site.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Clínica universitaria docente. Lun–vie 8:00–17:00 h, cerrado fines de semana; urgencias en el mismo horario."
+        "es": "Clínica universitaria docente. Lun–vie 8:00–17:00 h, cerrado fines de semana; urgencias en el mismo horario.",
+        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:00, chiusa nel weekend; emergenze negli stessi orari."
       }
     },
     {
@@ -534,7 +561,8 @@
       "note": "Extension 7108. Address conflicts: Miravet page says Av. El Ejército 1300, services page says Malecón de la Marina 2540 (Manuel Bonilla complex); address omitted. 2019 news article claimed 24 h for municipal vet but body only confirms it for a rescue vehicle; not used.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Clínica municipal de bajo coste. Lun–vie 8:00–13:00 y 14:00–17:00 h; con cita previa."
+        "es": "Clínica municipal de bajo coste. Lun–vie 8:00–13:00 y 14:00–17:00 h; con cita previa.",
+        "it": "Clinica comunale a basso costo. Da lunedì a venerdì 8:00–13:00 e 14:00–17:00; su appuntamento."
       }
     },
     {
@@ -552,7 +580,8 @@
       "note": "24 h only stated for the Lince branch. Address from the Lince emergency page. Removed from duty: Hours not published; call ahead.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Llama antes."
+        "es": "Llama antes.",
+        "it": "Telefonare in anticipo."
       }
     },
     {
@@ -570,7 +599,8 @@
       "note": "Second site (surgical centre): Garci Carbajal Casa 32, Barrio Obrero.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–sáb 8:00–20:00 h, dom 8:00–15:00 h; menciona urgencias, sin indicar servicio 24 horas."
+        "es": "Lun–sáb 8:00–20:00 h, dom 8:00–15:00 h; menciona urgencias, sin indicar servicio 24 horas.",
+        "it": "Da lunedì a sabato 8:00–20:00, domenica 8:00–15:00; si citano le emergenze, nessuna indicazione di servizio 24 ore su 24."
       }
     },
     {
@@ -588,7 +618,8 @@
       "note": "Page lists 'urgencias' only as keyword; no 24 h claim. Aggregator article claimed 24 h, not confirmed on own site.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–sáb 9:00–19:00 h."
+        "es": "Lun–sáb 9:00–19:00 h.",
+        "it": "Da lunedì a sabato 9:00–19:00."
       }
     },
     {
@@ -605,7 +636,8 @@
       "note": "Page says 'Todo el día' for every day but never '24 horas'; no phone (contact form). Not marked 24 h.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Horario indicado: todo el día, todos los días; llama antes."
+        "es": "Horario indicado: todo el día, todos los días; llama antes.",
+        "it": "Orari indicati: tutto il giorno, ogni giorno; telefonare in anticipo."
       }
     },
     {
@@ -623,7 +655,8 @@
       "note": "Conflict: older page veterinaria-amazon-vet.webnode.es (phone 966 642 856) says 'atender las 24 horas del día a su mascota'; newer wixsite page lists 9-21h and no 24 h. Set false.",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Lun–sáb 9:00–21:00 h, dom 9:00–12:00 h."
+        "es": "Lun–sáb 9:00–21:00 h, dom 9:00–12:00 h.",
+        "it": "Da lunedì a sabato 9:00–21:00, domenica 9:00–12:00."
       }
     }
   ],

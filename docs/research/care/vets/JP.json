@@ -210,7 +210,8 @@
       "duty": "Emergency care 24 hours, 365 days a year. Regular hours 9:00-20:00 (closed Wednesdays, emergencies still accepted). Call before coming; after-hours surcharges may apply.",
       "duty_i18n": {
         "fr": "Urgences 24 h/24, 365 jours par an. Horaires habituels 9 h–20 h (fermé le mercredi, urgences toujours acceptées). Appelez avant de venir ; un supplément peut s’appliquer en dehors des horaires d’ouverture.",
-        "es": "Urgencias las 24 horas, 365 días al año. Horario habitual de 9:00 a 20:00 h (cerrado los miércoles, aunque se atienden urgencias). Llama antes de ir; puede haber recargos fuera de horario."
+        "es": "Urgencias las 24 horas, 365 días al año. Horario habitual de 9:00 a 20:00 h (cerrado los miércoles, aunque se atienden urgencias). Llama antes de ir; puede haber recargos fuera de horario.",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Orario ordinario 9:00–20:00 (chiuso il mercoledì, urgenze comunque accettate). Telefonare prima di venire; possibile supplemento fuori orario."
       },
       "small_animals": true,
       "url": "https://jamc.co.jp/english/",
@@ -229,7 +230,8 @@
       "duty": "Emergency reception 24 hours, 365 days a year. Regular hours 10:00-12:30 and 14:30-19:00; out-of-hours fee applies. Call before coming.",
       "duty_i18n": {
         "fr": "Accueil des urgences 24 h/24, 365 jours par an. Horaires habituels 10 h–12 h 30 et 14 h 30–19 h ; supplément en dehors des horaires d’ouverture. Appelez avant de venir.",
-        "es": "Recepción de urgencias las 24 horas, 365 días al año. Horario habitual de 10:00 a 12:30 y de 14:30 a 19:00 h; tarifa adicional fuera de horario. Llama antes de ir."
+        "es": "Recepción de urgencias las 24 horas, 365 días al año. Horario habitual de 10:00 a 12:30 y de 14:30 a 19:00 h; tarifa adicional fuera de horario. Llama antes de ir.",
+        "it": "Accettazione urgenze 24 ore su 24, 365 giorni all'anno. Orario ordinario 10:00–12:30 e 14:30–19:00; tariffa fuori orario. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.daktari.gr.jp/",
@@ -248,7 +250,8 @@
       "duty": "Emergency and critical care 24 hours, 365 days a year (emergency line +81 3-6260-2997; backup +81 3-6706-7170). Specialty care by referral and appointment 9:00-19:00. Call before coming.",
       "duty_i18n": {
         "fr": "Urgences et soins intensifs 24 h/24, 365 jours par an (ligne d’urgences : +81 3-6260-2997 ; second numéro : +81 3-6706-7170). Soins spécialisés sur orientation et sur rendez-vous 9 h–19 h. Appelez avant de venir.",
-        "es": "Urgencias y cuidados críticos las 24 horas, 365 días al año (línea de urgencias +81 3-6260-2997; alternativa +81 3-6706-7170). Atención especializada por derivación y con cita previa de 9:00 a 19:00 h. Llama antes de ir."
+        "es": "Urgencias y cuidados críticos las 24 horas, 365 días al año (línea de urgencias +81 3-6260-2997; alternativa +81 3-6706-7170). Atención especializada por derivación y con cita previa de 9:00 a 19:00 h. Llama antes de ir.",
+        "it": "Pronto soccorso e terapia intensiva 24 ore su 24, 365 giorni all'anno (linea urgenze +81 3-6260-2997; di riserva +81 3-6706-7170). Cure specialistiche su invio e appuntamento 9:00–19:00. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://jarvis.anicom-med.co.jp/",
@@ -267,7 +270,8 @@
       "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, tous les jours. Horaires de jour 9 h–18 h 59, horaires de nuit 19 h–8 h 59. Supplément de nuit et acompte ; téléphonez avant de venir.",
-        "es": "Abierto las 24 horas, todos los días. Horario diurno de 9:00 a 18:59 h, nocturno de 19:00 a 8:59 h. Recargo nocturno y depósito; llama antes de ir."
+        "es": "Abierto las 24 horas, todos los días. Horario diurno de 9:00 a 18:59 h, nocturno de 19:00 a 8:59 h. Recargo nocturno y depósito; llama antes de ir.",
+        "it": "Aperto 24 ore su 24, tutti i giorni. Orario diurno 9:00–18:59, notturno 19:00–8:59. Supplemento notturno e caparra; telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/koto",
@@ -286,7 +290,8 @@
       "duty": "Open 24 hours, every day. Day hours 9:00-18:59, night hours 19:00-8:59. Night surcharge and deposit apply; phone before coming.",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, tous les jours. Horaires de jour 9 h–18 h 59, horaires de nuit 19 h–8 h 59. Supplément de nuit et acompte ; téléphonez avant de venir.",
-        "es": "Abierto las 24 horas, todos los días. Horario diurno de 9:00 a 18:59 h, nocturno de 19:00 a 8:59 h. Recargo nocturno y depósito; llama antes de ir."
+        "es": "Abierto las 24 horas, todos los días. Horario diurno de 9:00 a 18:59 h, nocturno de 19:00 a 8:59 h. Recargo nocturno y depósito; llama antes de ir.",
+        "it": "Aperto 24 ore su 24, tutti i giorni. Orario diurno 9:00–18:59, notturno 19:00–8:59. Supplemento notturno e caparra; telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/adachi",
@@ -305,7 +310,8 @@
       "duty": "Presents itself as a 24-hour animal hospital open on holidays and at night. Call ahead to confirm, as it may temporarily be treating patients at another site.",
       "duty_i18n": {
         "fr": "Se présente comme un hôpital vétérinaire ouvert 24 h/24, de nuit et les jours fériés. Appelez pour confirmer, car l’équipe peut temporairement soigner des patients sur un autre site.",
-        "es": "Se presenta como hospital veterinario 24 horas, abierto en festivos y de noche. Llama antes para confirmar, ya que puede estar atendiendo temporalmente en otra sede."
+        "es": "Se presenta como hospital veterinario 24 horas, abierto en festivos y de noche. Llama antes para confirmar, ya que puede estar atendiendo temporalmente en otra sede.",
+        "it": "Si presenta come ospedale veterinario 24 ore su 24, aperto nei festivi e di notte. Telefonare prima per conferma: potrebbe essere temporaneamente impegnato a curare pazienti in un'altra sede."
       },
       "small_animals": true,
       "url": "https://animal24.tokyo/",
@@ -324,7 +330,8 @@
       "duty": "Night emergency service every day of the year, starting at 20:00 (call +81 3-5760-1212 first). Secondary-care line +81 3-5760-1211.",
       "duty_i18n": {
         "fr": "Urgences de nuit tous les jours de l’année, à partir de 20 h (appelez d’abord le +81 3-5760-1212). Ligne de soins secondaires : +81 3-5760-1211.",
-        "es": "Urgencias nocturnas todos los días del año, a partir de las 20:00 (llama antes al +81 3-5760-1212). Línea de atención secundaria +81 3-5760-1211."
+        "es": "Urgencias nocturnas todos los días del año, a partir de las 20:00 (llama antes al +81 3-5760-1212). Línea de atención secundaria +81 3-5760-1211.",
+        "it": "Pronto soccorso notturno tutti i giorni dell'anno, dalle 20:00 (telefonare prima al +81 3-5760-1212). Linea per cure di secondo livello +81 3-5760-1211."
       },
       "small_animals": true,
       "url": "https://trva.jp/",
@@ -343,7 +350,8 @@
       "duty": "Night emergency hospital open every day of the year from 20:00 until early morning. Call first; opening hours were temporarily shortened, so confirm by phone.",
       "duty_i18n": {
         "fr": "Hôpital d’urgences de nuit ouvert tous les jours de l’année, de 20 h jusqu’au petit matin. Appelez d’abord ; les horaires ont été temporairement raccourcis, confirmez par téléphone.",
-        "es": "Hospital de urgencias nocturnas abierto todos los días del año desde las 20:00 hasta la madrugada. Llama antes; el horario se ha reducido temporalmente, así que confírmalo por teléfono."
+        "es": "Hospital de urgencias nocturnas abierto todos los días del año desde las 20:00 hasta la madrugada. Llama antes; el horario se ha reducido temporalmente, así que confírmalo por teléfono.",
+        "it": "Ospedale di pronto soccorso notturno aperto tutti i giorni dell'anno dalle 20:00 fino a mattina presto. Telefonare prima; l'orario è stato temporaneamente ridotto, quindi confermare per telefono."
       },
       "small_animals": true,
       "url": "https://www.yakan-99.com/",
@@ -362,7 +370,8 @@
       "duty": "Night emergency care every day of the year, 19:00 to 7:00 the next morning (phone reception 19:00-6:00).",
       "duty_i18n": {
         "fr": "Urgences de nuit tous les jours de l’année, de 19 h à 7 h le lendemain matin (accueil téléphonique 19 h–6 h).",
-        "es": "Urgencias nocturnas todos los días del año, de 19:00 a 7:00 h de la mañana siguiente (recepción telefónica de 19:00 a 6:00 h)."
+        "es": "Urgencias nocturnas todos los días del año, de 19:00 a 7:00 h de la mañana siguiente (recepción telefónica de 19:00 a 6:00 h).",
+        "it": "Pronto soccorso notturno tutti i giorni dell'anno, dalle 19:00 alle 7:00 del mattino seguente (accettazione telefonica 19:00–6:00)."
       },
       "small_animals": true,
       "url": "https://www.doubutsu-yakan99.com/",
@@ -380,7 +389,8 @@
       "duty": "Night emergency clinic and home visits. Night emergency hours 20:00-5:00 (check the clinic calendar for closed days); phone reception 9:00-18:00.",
       "duty_i18n": {
         "fr": "Clinique d’urgences de nuit et visites à domicile. Urgences de nuit 20 h–5 h (consultez le calendrier de la clinique pour les jours de fermeture) ; accueil téléphonique 9 h–18 h.",
-        "es": "Clínica de urgencias nocturnas y visitas a domicilio. Urgencias nocturnas de 20:00 a 5:00 h (consulta el calendario de la clínica para los días de cierre); recepción telefónica de 9:00 a 18:00 h."
+        "es": "Clínica de urgencias nocturnas y visitas a domicilio. Urgencias nocturnas de 20:00 a 5:00 h (consulta el calendario de la clínica para los días de cierre); recepción telefónica de 9:00 a 18:00 h.",
+        "it": "Clinica di pronto soccorso notturno e visite a domicilio. Pronto soccorso notturno 20:00–5:00 (giorni di chiusura indicati sul calendario della clinica); accettazione telefonica 9:00–18:00."
       },
       "small_animals": true,
       "url": "https://azabupet.jp/en/",
@@ -399,7 +409,8 @@
       "duty": "University teaching hospital, weekdays only (reception 9:00-11:30 and 13:30-15:30). First visits need a referral from your current vet; no emergency service.",
       "duty_i18n": {
         "fr": "Hôpital universitaire d’enseignement, en semaine uniquement (accueil 9 h–11 h 30 et 13 h 30–15 h 30). Première consultation sur orientation de votre vétérinaire actuel ; pas de service d’urgences.",
-        "es": "Hospital clínico universitario, solo días laborables (recepción de 9:00 a 11:30 y de 13:30 a 15:30 h). La primera visita requiere derivación de tu veterinario habitual; sin servicio de urgencias."
+        "es": "Hospital clínico universitario, solo días laborables (recepción de 9:00 a 11:30 y de 13:30 a 15:30 h). La primera visita requiere derivación de tu veterinario habitual; sin servicio de urgencias.",
+        "it": "Ospedale didattico universitario, solo nei giorni feriali (accettazione 9:00–11:30 e 13:30–15:30). Prime visite su invio del veterinario curante; nessun pronto soccorso."
       },
       "small_animals": true,
       "url": "https://www.vm.a.u-tokyo.ac.jp/vmc/",
@@ -422,7 +433,8 @@
       "checked": "2026-11-10",
       "note": "Address is the university's (page gives no separate one). Saturday outpatient care suspended for now (imaging/surgery only). Direct booking without referral possible online. Not in the 23 wards. Removed from duty: University teaching hospital. Weekdays 9:00-16:00; book first on the reservation line. No after-hours emergency service stated.",
       "duty_i18n": {
-        "es": "Hospital clínico universitario. Días laborables de 9:00 a 16:00 h; pide cita antes en la línea de reservas."
+        "es": "Hospital clínico universitario. Días laborables de 9:00 a 16:00 h; pide cita antes en la línea de reservas.",
+        "it": "Ospedale didattico universitario. Giorni feriali 9:00–16:00; prenotare prima sulla linea di prenotazione."
       }
     },
     {
@@ -436,7 +448,8 @@
       "duty": "Reception 9:30-18:00 on weekdays, until 17:00 on weekends and holidays. English-language website available.",
       "duty_i18n": {
         "fr": "Accueil 9 h 30–18 h en semaine, jusqu’à 17 h les week-ends et jours fériés. Site web disponible en anglais.",
-        "es": "Recepción de 9:30 a 18:00 h en días laborables, hasta las 17:00 en fines de semana y festivos. Sitio web disponible en inglés."
+        "es": "Recepción de 9:30 a 18:00 h en días laborables, hasta las 17:00 en fines de semana y festivos. Sitio web disponible en inglés.",
+        "it": "Accettazione 9:30–18:00 nei giorni feriali, fino alle 17:00 nei weekend e nei festivi. Sito disponibile in inglese."
       },
       "small_animals": true,
       "url": "https://akasaka-ah-en.com/",
@@ -455,7 +468,8 @@
       "duty": "Mornings 10:00-13:00 and afternoons 16:00-19:00; closed Wednesdays; Sundays and holidays mornings only. Call if the case may be urgent.",
       "duty_i18n": {
         "fr": "Le matin 10 h–13 h et l’après-midi 16 h–19 h ; fermé le mercredi ; dimanches et jours fériés : matin uniquement. Appelez si le cas peut être urgent.",
-        "es": "Mañanas de 10:00 a 13:00 h y tardes de 16:00 a 19:00 h; cerrado los miércoles; domingos y festivos solo por la mañana. Llama si el caso puede ser urgente."
+        "es": "Mañanas de 10:00 a 13:00 h y tardes de 16:00 a 19:00 h; cerrado los miércoles; domingos y festivos solo por la mañana. Llama si el caso puede ser urgente.",
+        "it": "Mattina 10:00–13:00 e pomeriggio 16:00–19:00; chiuso il mercoledì; domenica e festivi solo la mattina. Telefonare se il caso potrebbe essere urgente."
       },
       "small_animals": true,
       "url": "https://www.westcross.jp/English.html",
@@ -474,7 +488,8 @@
       "duty": "Open daily 9:00-12:00 and 16:00-19:00; English phone support available. Check by phone for emergencies and night care.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h–12 h et 16 h–19 h ; assistance téléphonique en anglais. Renseignez-vous par téléphone pour les urgences et les soins de nuit.",
-        "es": "Abierto todos los días de 9:00 a 12:00 y de 16:00 a 19:00 h; atención telefónica en inglés. Consulta por teléfono para urgencias y atención nocturna."
+        "es": "Abierto todos los días de 9:00 a 12:00 y de 16:00 a 19:00 h; atención telefónica en inglés. Consulta por teléfono para urgencias y atención nocturna.",
+        "it": "Aperto tutti i giorni 9:00–12:00 e 16:00–19:00; assistenza telefonica in inglese. Per urgenze e cure notturne informarsi per telefono."
       },
       "small_animals": true,
       "url": "https://amc-motoazabu.com/english.php",
@@ -493,7 +508,8 @@
       "duty": "English-speaking veterinary clinic; call for opening hours.",
       "duty_i18n": {
         "fr": "Clinique vétérinaire anglophone ; appelez pour connaître les horaires d’ouverture.",
-        "es": "Clínica veterinaria con atención en inglés; llama para consultar el horario."
+        "es": "Clínica veterinaria con atención en inglés; llama para consultar el horario.",
+        "it": "Clinica veterinaria con personale che parla inglese; telefonare per gli orari."
       },
       "small_animals": true,
       "url": "https://petlife.co.jp/en/",
@@ -512,7 +528,8 @@
       "duty": "Dogs and cats, by appointment; English-speaking vet and nurse. Roughly 10:00-13:00 and 16:00-19:00, closed Thursdays - confirm by phone.",
       "duty_i18n": {
         "fr": "Chiens et chats, sur rendez-vous ; vétérinaire et auxiliaire anglophones. Environ 10 h–13 h et 16 h–19 h, fermé le jeudi ; confirmez par téléphone.",
-        "es": "Perros y gatos, con cita previa; veterinario y enfermera que hablan inglés. Aproximadamente de 10:00 a 13:00 y de 16:00 a 19:00 h, cerrado los jueves; confírmalo por teléfono."
+        "es": "Perros y gatos, con cita previa; veterinario y enfermera que hablan inglés. Aproximadamente de 10:00 a 13:00 y de 16:00 a 19:00 h, cerrado los jueves; confírmalo por teléfono.",
+        "it": "Cani e gatti, su appuntamento; veterinario e infermiere che parlano inglese. Circa 10:00–13:00 e 16:00–19:00, chiuso il giovedì: confermare per telefono."
       },
       "small_animals": true,
       "url": "https://www.mitsubachi-ah.com/",
@@ -531,7 +548,8 @@
       "duty": "Appointment-only (phone or online). Not an emergency hospital; refers night emergencies to a night emergency hospital.",
       "duty_i18n": {
         "fr": "Sur rendez-vous uniquement (téléphone ou en ligne). Pas un hôpital d’urgences ; les urgences de nuit sont orientées vers un hôpital d’urgences de nuit.",
-        "es": "Solo con cita previa (teléfono o en línea). No es un hospital de urgencias; deriva las urgencias nocturnas a un hospital de urgencias nocturnas."
+        "es": "Solo con cita previa (teléfono o en línea). No es un hospital de urgencias; deriva las urgencias nocturnas a un hospital de urgencias nocturnas.",
+        "it": "Solo su appuntamento (telefono o online). Non è un ospedale di pronto soccorso; per le urgenze notturne indirizza a un ospedale di pronto soccorso notturno."
       },
       "small_animals": true,
       "url": "https://crown-ah.tokyo/",
@@ -550,7 +568,8 @@
       "duty": "10:00-13:00 and 14:30-18:30; closed Wednesday afternoons and at New Year. Dental and dermatology; emergencies go to the Japan Animal Medical Center (+81 3-3378-3366).",
       "duty_i18n": {
         "fr": "10 h–13 h et 14 h 30–18 h 30 ; fermé le mercredi après-midi et au Nouvel An. Dentisterie et dermatologie ; urgences : Japan Animal Medical Center (+81 3-3378-3366).",
-        "es": "De 10:00 a 13:00 y de 14:30 a 18:30 h; cerrado los miércoles por la tarde y en Año Nuevo. Odontología y dermatología; las urgencias se derivan al Japan Animal Medical Center (+81 3-3378-3366)."
+        "es": "De 10:00 a 13:00 y de 14:30 a 18:30 h; cerrado los miércoles por la tarde y en Año Nuevo. Odontología y dermatología; las urgencias se derivan al Japan Animal Medical Center (+81 3-3378-3366).",
+        "it": "10:00–13:00 e 14:30–18:30; chiuso il mercoledì pomeriggio e a Capodanno. Odontoiatria e dermatologia; le urgenze vanno al Japan Animal Medical Center (+81 3-3378-3366)."
       },
       "small_animals": true,
       "url": "https://azabu.jamc.co.jp/about/",
@@ -569,7 +588,8 @@
       "duty": "Night emergency only, not 24 hours: 21:00-04:30 on weekdays and public holidays, phone reception 20:00-04:00, closed Saturdays. Dogs and cats mainly. Call before coming; no phone-only consultation; credit card payment only.",
       "duty_i18n": {
         "fr": "Urgences de nuit uniquement, pas 24 h/24 : 21 h–4 h 30 en semaine et les jours fériés, accueil téléphonique 20 h–4 h, fermé le samedi. Principalement chiens et chats. Appelez avant de venir ; pas de consultation uniquement par téléphone ; paiement par carte bancaire uniquement.",
-        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 4:30 h en días laborables y festivos, recepción telefónica de 20:00 a 4:00 h, cerrado los sábados. Sobre todo perros y gatos. Llama antes de ir; sin consultas solo por teléfono; solo pago con tarjeta de crédito."
+        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 4:30 h en días laborables y festivos, recepción telefónica de 20:00 a 4:00 h, cerrado los sábados. Sobre todo perros y gatos. Llama antes de ir; sin consultas solo por teléfono; solo pago con tarjeta de crédito.",
+        "it": "Solo pronto soccorso notturno, non 24 ore su 24: 21:00–04:30 nei giorni feriali e festivi, accettazione telefonica 20:00–04:00, chiuso il sabato. Soprattutto cani e gatti. Telefonare prima di venire; nessuna consulenza solo telefonica; solo pagamento con carta di credito."
       },
       "small_animals": true,
       "url": "https://www.raema.or.jp/",
@@ -588,7 +608,8 @@
       "duty": "Night emergency only, not 24 hours: 21:00 to 05:00 every day of the year; reception until 04:30. Call first with symptoms and expected arrival time. Dogs and cats; ask about other animals.",
       "duty_i18n": {
         "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 21 h–5 h, tous les jours de l’année ; accueil jusqu’à 4 h 30. Appelez d’abord en indiquant les symptômes et l’heure d’arrivée prévue. Chiens et chats ; pour les autres animaux, renseignez-vous.",
-        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 5:00 h todos los días del año; recepción hasta las 4:30. Llama antes e indica los síntomas y la hora prevista de llegada. Perros y gatos; consulta por otras mascotas."
+        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 5:00 h todos los días del año; recepción hasta las 4:30. Llama antes e indica los síntomas y la hora prevista de llegada. Perros y gatos; consulta por otras mascotas.",
+        "it": "Solo pronto soccorso notturno, non 24 ore su 24: dalle 21:00 alle 05:00 tutti i giorni dell'anno; accettazione fino alle 04:30. Telefonare prima indicando i sintomi e l'orario previsto di arrivo. Cani e gatti; per altri animali chiedere."
       },
       "small_animals": true,
       "url": "https://doubutsuyakan.jp/",
@@ -607,7 +628,8 @@
       "duty": "Night emergency only, not 24 hours: 20:00 to 03:00 (last reception 03:00), open every day. Call first if unsure. Dogs and cats.",
       "duty_i18n": {
         "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 20 h–3 h (dernière admission à 3 h), ouvert tous les jours. En cas de doute, appelez d’abord. Chiens et chats.",
-        "es": "Solo urgencias nocturnas, no 24 horas: de 20:00 a 3:00 h (última recepción 3:00), abierto todos los días. Llama antes si tienes dudas. Perros y gatos."
+        "es": "Solo urgencias nocturnas, no 24 horas: de 20:00 a 3:00 h (última recepción 3:00), abierto todos los días. Llama antes si tienes dudas. Perros y gatos.",
+        "it": "Solo pronto soccorso notturno, non 24 ore su 24: dalle 20:00 alle 03:00 (ultima accettazione alle 03:00), aperto tutti i giorni. Telefonare prima in caso di dubbio. Cani e gatti."
       },
       "small_animals": true,
       "url": "https://osaka-pet911.com/",
@@ -626,7 +648,8 @@
       "duty": "Night emergency only, not 24 hours: 21:00 to 06:00 the next morning, every day of the year. Call before coming. Dogs and cats; other animals only after phone confirmation.",
       "duty_i18n": {
         "fr": "Urgences de nuit uniquement, pas de 24 h/24 : 21 h–6 h le lendemain matin, tous les jours de l’année. Appelez avant de venir. Chiens et chats ; autres animaux uniquement après confirmation par téléphone.",
-        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 6:00 h de la mañana siguiente, todos los días del año. Llama antes de ir. Perros y gatos; otras mascotas solo tras confirmarlo por teléfono."
+        "es": "Solo urgencias nocturnas, no 24 horas: de 21:00 a 6:00 h de la mañana siguiente, todos los días del año. Llama antes de ir. Perros y gatos; otras mascotas solo tras confirmarlo por teléfono.",
+        "it": "Solo pronto soccorso notturno, non 24 ore su 24: dalle 21:00 alle 06:00 del mattino seguente, tutti i giorni dell'anno. Telefonare prima di venire. Cani e gatti; altri animali solo dopo conferma telefonica."
       },
       "small_animals": true,
       "url": "https://heah.jp/",
@@ -643,7 +666,8 @@
       "duty": "Night clinic, not 24 hours: 19:00 to 24:00. Emergency and general night consultations. Call ahead to confirm.",
       "duty_i18n": {
         "fr": "Clinique de nuit, pas de 24 h/24 : 19 h–24 h. Urgences et consultations générales de nuit. Appelez pour confirmer avant de venir.",
-        "es": "Clínica nocturna, no 24 horas: de 19:00 a 24:00 h. Urgencias y consultas generales nocturnas. Llama antes para confirmar."
+        "es": "Clínica nocturna, no 24 horas: de 19:00 a 24:00 h. Urgencias y consultas generales nocturnas. Llama antes para confirmar.",
+        "it": "Clinica notturna, non 24 ore su 24: dalle 19:00 alle 24:00. Urgenze e visite generali notturne. Telefonare prima per conferma."
       },
       "small_animals": true,
       "url": "https://osaka-moriguchi-yakan-ah.jp/",
@@ -662,7 +686,8 @@
       "duty": "Night emergency only, not 24 hours: reception 21:00 to 02:00, phone enquiries 20:30 to 01:30. Closed Thursdays; may close at short notice. Call before coming - patients without a call cannot be accepted.",
       "duty_i18n": {
         "fr": "Urgences de nuit uniquement, pas de 24 h/24 : accueil 21 h–2 h, renseignements par téléphone 20 h 30–1 h 30. Fermé le jeudi ; fermeture possible au dernier moment. Appelez avant de venir : aucun patient n’est reçu sans appel préalable.",
-        "es": "Solo urgencias nocturnas, no 24 horas: recepción de 21:00 a 2:00 h, consultas telefónicas de 20:30 a 1:30 h. Cerrado los jueves; puede cerrar sin previo aviso. Llama antes de ir: no se atiende a pacientes sin llamada previa."
+        "es": "Solo urgencias nocturnas, no 24 horas: recepción de 21:00 a 2:00 h, consultas telefónicas de 20:30 a 1:30 h. Cerrado los jueves; puede cerrar sin previo aviso. Llama antes de ir: no se atiende a pacientes sin llamada previa.",
+        "it": "Solo pronto soccorso notturno, non 24 ore su 24: accettazione 21:00–02:00, informazioni telefoniche 20:30–01:30. Chiuso il giovedì; può chiudere con breve preavviso. Telefonare prima di venire: i pazienti senza telefonata non possono essere accettati."
       },
       "small_animals": true,
       "url": "https://ah.aeonpet.com/sakai-yakan-emergency/",
@@ -681,7 +706,8 @@
       "duty": "Regular hours 10:00-13:00 and 16:00-19:00 (last reception 18:40). Night emergencies handled by the Sakai Animal Night Emergency Clinic, 21:00-02:00 - not 24 hours; call before coming.",
       "duty_i18n": {
         "fr": "Horaires habituels 10 h–13 h et 16 h–19 h (dernière admission à 18 h 40). Urgences de nuit assurées par la Sakai Animal Night Emergency Clinic, 21 h–2 h ; pas de 24 h/24, appelez avant de venir.",
-        "es": "Horario habitual de 10:00 a 13:00 y de 16:00 a 19:00 h (última recepción 18:40). Las urgencias nocturnas las atiende la Sakai Animal Night Emergency Clinic, de 21:00 a 2:00 h, no 24 horas; llama antes de ir."
+        "es": "Horario habitual de 10:00 a 13:00 y de 16:00 a 19:00 h (última recepción 18:40). Las urgencias nocturnas las atiende la Sakai Animal Night Emergency Clinic, de 21:00 a 2:00 h, no 24 horas; llama antes de ir.",
+        "it": "Orario ordinario 10:00–13:00 e 16:00–19:00 (ultima accettazione 18:40). Le urgenze notturne sono gestite dalla Sakai Animal Night Emergency Clinic, 21:00–02:00 (non 24 ore su 24); telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/daktari/",
@@ -700,7 +726,8 @@
       "duty": "Open 9:00-12:00 and 16:00-19:00, closed Tuesdays (Sundays 10:00-13:00). Limited evening emergency 21:00-23:00 for dogs and cats on set days only; call ahead. Not 24 hours.",
       "duty_i18n": {
         "fr": "Ouvert 9 h–12 h et 16 h–19 h, fermé le mardi (dimanche 10 h–13 h). Urgences limitées en soirée, 21 h–23 h, pour chiens et chats, certains jours seulement ; appelez avant. Pas de 24 h/24.",
-        "es": "Abierto de 9:00 a 12:00 y de 16:00 a 19:00 h, cerrado los martes (domingos de 10:00 a 13:00 h). Urgencias de tarde limitadas de 21:00 a 23:00 h para perros y gatos solo en días determinados; llama antes. No 24 horas."
+        "es": "Abierto de 9:00 a 12:00 y de 16:00 a 19:00 h, cerrado los martes (domingos de 10:00 a 13:00 h). Urgencias de tarde limitadas de 21:00 a 23:00 h para perros y gatos solo en días determinados; llama antes. No 24 horas.",
+        "it": "Aperto 9:00–12:00 e 16:00–19:00, chiuso il martedì (domenica 10:00–13:00). Pronto soccorso serale limitato 21:00–23:00 per cani e gatti solo in giorni stabiliti; telefonare prima. Non 24 ore su 24."
       },
       "small_animals": true,
       "url": "https://www.higashi-ah.jp/",
@@ -718,7 +745,8 @@
       "duty": "University teaching hospital. Daytime care by appointment only, weekdays 9:00-12:00 and 13:00-17:00 (closed weekends, holidays, year-end). Night emergency care is run with the Rinku Animal Emergency Medical Association - see that entry.",
       "duty_i18n": {
         "fr": "Hôpital universitaire. Consultations de jour sur rendez-vous uniquement, lun.–ven. 9 h–12 h et 13 h–17 h (fermé les week-ends, jours fériés et en fin d’année). Les urgences de nuit sont assurées avec la Rinku Animal Emergency Medical Association : voir sa fiche.",
-        "es": "Hospital clínico universitario. Atención diurna solo con cita previa, días laborables de 9:00 a 12:00 y de 13:00 a 17:00 h (cerrado los fines de semana, festivos y fin de año). Las urgencias nocturnas se atienden junto con la Rinku Animal Emergency Medical Association; consulta esa ficha."
+        "es": "Hospital clínico universitario. Atención diurna solo con cita previa, días laborables de 9:00 a 12:00 y de 13:00 a 17:00 h (cerrado los fines de semana, festivos y fin de año). Las urgencias nocturnas se atienden junto con la Rinku Animal Emergency Medical Association; consulta esa ficha.",
+        "it": "Ospedale didattico universitario. Cure diurne solo su appuntamento, giorni feriali 9:00–12:00 e 13:00–17:00 (chiuso nei weekend, nei festivi e a fine anno). Il pronto soccorso notturno è gestito con la Rinku Animal Emergency Medical Association: vedere la relativa scheda."
       },
       "small_animals": true,
       "url": "https://www.omu.ac.jp/vet/vmc/",
@@ -736,7 +764,8 @@
       "duty": "Rota of small-animal clinics giving first-line night care for dogs and cats, 20:00-23:00 (phone booking until 22:30). Call the association to learn which clinic is on duty; booking required; basic care only, no surgery or hospitalisation.",
       "duty_i18n": {
         "fr": "Tour de garde de cliniques pour petits animaux assurant les premiers soins de nuit pour chiens et chats, 20 h–23 h (réservation par téléphone jusqu’à 22 h 30). Appelez l’association pour connaître la clinique de garde ; réservation obligatoire ; soins de base uniquement, ni chirurgie ni hospitalisation.",
-        "es": "Turno de clínicas de mascotas con atención nocturna de primera línea para perros y gatos, de 20:00 a 23:00 h (reserva telefónica hasta las 22:30). Llama a la asociación para saber qué clínica está de guardia; imprescindible reservar; solo atención básica, sin cirugía ni hospitalización."
+        "es": "Turno de clínicas de mascotas con atención nocturna de primera línea para perros y gatos, de 20:00 a 23:00 h (reserva telefónica hasta las 22:30). Llama a la asociación para saber qué clínica está de guardia; imprescindible reservar; solo atención básica, sin cirugía ni hospitalización.",
+        "it": "Turno di cliniche per piccoli animali che offre prime cure notturne a cani e gatti, 20:00–23:00 (prenotazione telefonica fino alle 22:30). Telefonare all'associazione per sapere quale clinica è di guardia; prenotazione obbligatoria; solo cure di base, niente chirurgia né ricovero."
       },
       "small_animals": true,
       "url": "https://www.kochikenjuishikai.or.jp/article/archives/8",
@@ -755,7 +784,8 @@
       "duty": "Night emergency care 21:30-02:00, every day of the year. Call before visiting.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h 30–2 h, tous les jours de l’année. Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 21:30 a 2:00 h, todos los días del año. Llama antes de ir."
+        "es": "Urgencias nocturnas de 21:30 a 2:00 h, todos los días del año. Llama antes de ir.",
+        "it": "Pronto soccorso notturno 21:30–02:00, tutti i giorni dell'anno. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://kyoto99.net/",
@@ -774,7 +804,8 @@
       "duty": "University hospital night clinic, weekdays only (not weekends, holidays or university closures): 19:00-06:00 by same-day phone appointment; dogs and cats only; separate night entrance.",
       "duty_i18n": {
         "fr": "Clinique de nuit de l’hôpital universitaire, en semaine uniquement (pas les week-ends, jours fériés ni fermetures de l’université) : 19 h–6 h, sur rendez-vous téléphonique le jour même ; chiens et chats uniquement ; entrée de nuit séparée.",
-        "es": "Clínica nocturna del hospital universitario, solo días laborables (no fines de semana, festivos ni cierres de la universidad): de 19:00 a 6:00 h con cita telefónica el mismo día; solo perros y gatos; entrada nocturna aparte."
+        "es": "Clínica nocturna del hospital universitario, solo días laborables (no fines de semana, festivos ni cierres de la universidad): de 19:00 a 6:00 h con cita telefónica el mismo día; solo perros y gatos; entrada nocturna aparte.",
+        "it": "Pronto soccorso notturno dell'ospedale universitario, solo nei giorni feriali (non nei weekend, nei festivi né durante le chiusure dell'università): 19:00–06:00 con appuntamento telefonico in giornata; solo cani e gatti; ingresso notturno separato."
       },
       "small_animals": true,
       "url": "https://www.vet.kagoshima-u.ac.jp/KUVTH/",
@@ -793,7 +824,8 @@
       "duty": "University hospital: weekday evenings 17:00-24:00 on a dedicated line; nights, weekends and holidays are handled by the Anicom24 phone service. Dogs and cats only; call before coming; night fee applies; no CT/MRI.",
       "duty_i18n": {
         "fr": "Hôpital universitaire : en semaine, soirées 17 h–24 h sur une ligne dédiée ; nuits, week-ends et jours fériés assurés par le service téléphonique Anicom24. Chiens et chats uniquement ; appelez avant de venir ; supplément de nuit ; ni scanner ni IRM.",
-        "es": "Hospital universitario: tardes de días laborables de 17:00 a 24:00 h en una línea específica; noches, fines de semana y festivos los atiende el servicio telefónico Anicom24. Solo perros y gatos; llama antes de ir; recargo nocturno; sin TC/RM."
+        "es": "Hospital universitario: tardes de días laborables de 17:00 a 24:00 h en una línea específica; noches, fines de semana y festivos los atiende el servicio telefónico Anicom24. Solo perros y gatos; llama antes de ir; recargo nocturno; sin TC/RM.",
+        "it": "Ospedale universitario: sere dei giorni feriali 17:00–24:00 su una linea dedicata; notti, weekend e festivi sono gestiti dal servizio telefonico Anicom24. Solo cani e gatti; telefonare prima di venire; supplemento notturno; niente TAC/RM."
       },
       "small_animals": true,
       "url": "https://www.vetmed.hokudai.ac.jp/VMTH/",
@@ -812,7 +844,8 @@
       "duty": "Night emergency reception 20:00-08:00 every day (call first; insurance claims at night via Anicom only). Regular hours by appointment 9:00-13:00 and 17:00-19:00.",
       "duty_i18n": {
         "fr": "Accueil des urgences de nuit 20 h–8 h tous les jours (appelez d’abord ; remboursement d’assurance la nuit via Anicom uniquement). Consultations habituelles sur rendez-vous 9 h–13 h et 17 h–19 h.",
-        "es": "Recepción de urgencias nocturnas de 20:00 a 8:00 h todos los días (llama antes; reclamaciones de seguro por la noche solo a través de Anicom). Horario habitual con cita previa de 9:00 a 13:00 y de 17:00 a 19:00 h."
+        "es": "Recepción de urgencias nocturnas de 20:00 a 8:00 h todos los días (llama antes; reclamaciones de seguro por la noche solo a través de Anicom). Horario habitual con cita previa de 9:00 a 13:00 y de 17:00 a 19:00 h.",
+        "it": "Accettazione urgenze notturne 20:00–08:00 tutti i giorni (telefonare prima; rimborsi assicurativi di notte solo tramite Anicom). Orario ordinario su appuntamento 9:00–13:00 e 17:00–19:00."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/makuharishin/",
@@ -831,7 +864,8 @@
       "duty": "Emergency reception 21:00-24:00 and 05:00-09:00 (night emergency line 011-598-9936); regular hours 10:00-13:00 and 17:00-20:00. Call before coming.",
       "duty_i18n": {
         "fr": "Accueil des urgences 21 h–24 h et 5 h–9 h (ligne d’urgence de nuit 011-598-9936) ; horaires habituels 10 h–13 h et 17 h–20 h. Appelez avant de venir.",
-        "es": "Recepción de urgencias de 21:00 a 24:00 y de 5:00 a 9:00 h (línea de urgencias nocturnas 011-598-9936); horario habitual de 10:00 a 13:00 y de 17:00 a 20:00 h. Llama antes de ir."
+        "es": "Recepción de urgencias de 21:00 a 24:00 y de 5:00 a 9:00 h (línea de urgencias nocturnas 011-598-9936); horario habitual de 10:00 a 13:00 y de 17:00 a 20:00 h. Llama antes de ir.",
+        "it": "Accettazione urgenze 21:00–24:00 e 05:00–09:00 (linea urgenze notturne 011-598-9936); orario ordinario 10:00–13:00 e 17:00–20:00. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sapporotsukisamu/",
@@ -850,7 +884,8 @@
       "duty": "Night emergency reception 21:00-08:00 (emergency line 042-757-3166); regular hours 9:00-13:00 and 16:00-19:00 by appointment. Call before coming.",
       "duty_i18n": {
         "fr": "Accueil des urgences de nuit 21 h–8 h (ligne d’urgence 042-757-3166) ; horaires habituels 9 h–13 h et 16 h–19 h sur rendez-vous. Appelez avant de venir.",
-        "es": "Recepción de urgencias nocturnas de 21:00 a 8:00 h (línea de urgencias 042-757-3166); horario habitual de 9:00 a 13:00 y de 16:00 a 19:00 h con cita previa. Llama antes de ir."
+        "es": "Recepción de urgencias nocturnas de 21:00 a 8:00 h (línea de urgencias 042-757-3166); horario habitual de 9:00 a 13:00 y de 16:00 a 19:00 h con cita previa. Llama antes de ir.",
+        "it": "Accettazione urgenze notturne 21:00–08:00 (linea urgenze 042-757-3166); orario ordinario 9:00–13:00 e 16:00–19:00 su appuntamento. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sagamihara/",
@@ -869,7 +904,8 @@
       "duty": "Regular hours 9:30-12:00, 13:00-15:00 (appointment) and 16:00-20:00; 24-hour inpatient nursing. Night emergency details are on a separate page - call first.",
       "duty_i18n": {
         "fr": "Horaires habituels 9 h 30–12 h, 13 h–15 h (sur rendez-vous) et 16 h–20 h ; hospitalisation avec surveillance 24 h/24. Détails des urgences de nuit sur une page distincte : appelez d’abord.",
-        "es": "Horario habitual de 9:30 a 12:00 y de 13:00 a 15:00 h (con cita) y de 16:00 a 20:00 h; cuidados de enfermería 24 horas para pacientes ingresados. Los detalles de las urgencias nocturnas están en otra página; llama antes."
+        "es": "Horario habitual de 9:30 a 12:00 y de 13:00 a 15:00 h (con cita) y de 16:00 a 20:00 h; cuidados de enfermería 24 horas para pacientes ingresados. Los detalles de las urgencias nocturnas están en otra página; llama antes.",
+        "it": "Orario ordinario 9:30–12:00, 13:00–15:00 (su appuntamento) e 16:00–20:00; assistenza infermieristica ai ricoverati 24 ore su 24. I dettagli sulle urgenze notturne sono su una pagina separata: telefonare prima."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/nagoya/",
@@ -888,7 +924,8 @@
       "duty": "Emergency reception 09:00-01:00 every day of the year, with 24-hour ICU care for inpatients. Call before coming.",
       "duty_i18n": {
         "fr": "Accueil des urgences 9 h–1 h tous les jours de l’année, avec soins intensifs 24 h/24 pour les patients hospitalisés. Appelez avant de venir.",
-        "es": "Recepción de urgencias de 9:00 a 1:00 h todos los días del año, con UCI 24 horas para pacientes ingresados. Llama antes de ir."
+        "es": "Recepción de urgencias de 9:00 a 1:00 h todos los días del año, con UCI 24 horas para pacientes ingresados. Llama antes de ir.",
+        "it": "Accettazione urgenze 09:00–01:00 tutti i giorni dell'anno, con terapia intensiva 24 ore su 24 per i ricoverati. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://vsec.jp/",
@@ -907,7 +944,8 @@
       "duty": "Night emergency 19:30-02:00 every day (phone reception 19:00-01:30). Call before coming.",
       "duty_i18n": {
         "fr": "Urgences de nuit 19 h 30–2 h tous les jours (accueil téléphonique 19 h–1 h 30). Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 19:30 a 2:00 h todos los días (recepción telefónica de 19:00 a 1:30 h). Llama antes de ir."
+        "es": "Urgencias nocturnas de 19:30 a 2:00 h todos los días (recepción telefónica de 19:00 a 1:30 h). Llama antes de ir.",
+        "it": "Pronto soccorso notturno 19:30–02:00 tutti i giorni (accettazione telefonica 19:00–01:30). Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://kuki-er-ah.com/",
@@ -926,7 +964,8 @@
       "duty": "Day hospital 9:00-12:00 and 15:00-18:00, closed Thursdays (continuing patients only). Urgent cases seen on request during hours; night emergencies are referred to AEON Petemo Makuhari Shin-toshin.",
       "duty_i18n": {
         "fr": "Clinique de jour 9 h–12 h et 15 h–18 h, fermée le jeudi (patients déjà suivis uniquement). Cas urgents reçus sur demande pendant les heures d’ouverture ; urgences de nuit orientées vers AEON Petemo Makuhari Shin-toshin.",
-        "es": "Hospital de día de 9:00 a 12:00 y de 15:00 a 18:00 h, cerrado los jueves (solo pacientes en seguimiento). Casos urgentes atendidos si se solicita en horario; las urgencias nocturnas se derivan a AEON Petemo Makuhari Shin-toshin."
+        "es": "Hospital de día de 9:00 a 12:00 y de 15:00 a 18:00 h, cerrado los jueves (solo pacientes en seguimiento). Casos urgentes atendidos si se solicita en horario; las urgencias nocturnas se derivan a AEON Petemo Makuhari Shin-toshin.",
+        "it": "Day hospital 9:00–12:00 e 15:00–18:00, chiuso il giovedì (solo pazienti già in cura). Casi urgenti visti su richiesta durante l'orario; le urgenze notturne sono indirizzate ad AEON Petemo Makuhari Shin-toshin."
       },
       "small_animals": true,
       "url": "https://kaihin-amc.com/",
@@ -949,7 +988,8 @@
       "checked": "2026-11-10",
       "note": "Group also runs Kasuga Hospital 092-501-3929. Page notes new-patient reception suspended as of Aug 2026; hours vary slightly between the page and the JAHA listing. No emergency claim. Removed from duty: Day clinic 9:00-12:00 and 13:30-18:00; closed Wednesday, Sunday and public holidays. No emergency service stated; new patients currently not accepted.",
       "duty_i18n": {
-        "es": "Clínica de día de 9:00 a 12:00 y de 13:30 a 18:00 h; cerrado los miércoles, domingos y festivos. Actualmente no admite pacientes nuevos."
+        "es": "Clínica de día de 9:00 a 12:00 y de 13:30 a 18:00 h; cerrado los miércoles, domingos y festivos. Actualmente no admite pacientes nuevos.",
+        "it": "Clinica diurna 9:00–12:00 e 13:30–18:00; chiusa mercoledì, domenica e festivi. Al momento non accetta nuovi pazienti."
       }
     },
     {
@@ -963,7 +1003,8 @@
       "duty": "Emergency centre open 24 hours, every day of the year (dogs and cats mainly). Call before coming.",
       "duty_i18n": {
         "fr": "Centre d’urgences ouvert 24 h/24, tous les jours de l’année (principalement chiens et chats). Appelez avant de venir.",
-        "es": "Centro de urgencias abierto las 24 horas, todos los días del año (sobre todo perros y gatos). Llama antes de ir."
+        "es": "Centro de urgencias abierto las 24 horas, todos los días del año (sobre todo perros y gatos). Llama antes de ir.",
+        "it": "Centro di pronto soccorso aperto 24 ore su 24, tutti i giorni dell'anno (soprattutto cani e gatti). Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://veccs-yokohama.jp/",
@@ -982,7 +1023,8 @@
       "duty": "Emergency care and full nursing 24 hours, 365 days a year. Non-emergency hospital line 044-433-5155.",
       "duty_i18n": {
         "fr": "Urgences et soins continus 24 h/24, 365 jours par an. Ligne hors urgence de l’hôpital : 044-433-5155.",
-        "es": "Urgencias y cuidados completos de enfermería las 24 horas, 365 días al año. Línea del hospital para consultas no urgentes 044-433-5155."
+        "es": "Urgencias y cuidados completos de enfermería las 24 horas, 365 días al año. Línea del hospital para consultas no urgentes 044-433-5155.",
+        "it": "Pronto soccorso e assistenza infermieristica completa 24 ore su 24, 365 giorni all'anno. Linea dell'ospedale per i casi non urgenti 044-433-5155."
       },
       "small_animals": true,
       "url": "https://amc-japan.com/",
@@ -1001,7 +1043,8 @@
       "duty": "Night emergency centre 20:00-03:00. Call before coming.",
       "duty_i18n": {
         "fr": "Centre d’urgences de nuit 20 h–3 h. Appelez avant de venir.",
-        "es": "Centro de urgencias nocturnas de 20:00 a 3:00 h. Llama antes de ir."
+        "es": "Centro de urgencias nocturnas de 20:00 a 3:00 h. Llama antes de ir.",
+        "it": "Centro di pronto soccorso notturno 20:00–03:00. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://yokohama-dvms.com/",
@@ -1024,7 +1067,8 @@
       "checked": "2026-11-10",
       "note": "Night page: 年中無休で24時間救急を行っています。 Removed from duty: States it provides emergency care 24 hours, every day of the year. Call before coming; visits without a call may not be accepted.",
       "duty_i18n": {
-        "es": "Ofrece urgencias las 24 horas, todos los días del año. Llama antes de ir; las visitas sin llamada previa pueden no ser atendidas."
+        "es": "Ofrece urgencias las 24 horas, todos los días del año. Llama antes de ir; las visitas sin llamada previa pueden no ser atendidas.",
+        "it": "Offre pronto soccorso 24 ore su 24, tutti i giorni dell'anno. Telefonare prima di venire; le visite senza telefonata potrebbero non essere accettate."
       }
     },
     {
@@ -1038,7 +1082,8 @@
       "duty": "Night emergency 20:00-09:00 every day, by appointment - call first.",
       "duty_i18n": {
         "fr": "Urgences de nuit 20 h–9 h tous les jours, sur rendez-vous : appelez d’abord.",
-        "es": "Urgencias nocturnas de 20:00 a 9:00 h todos los días, con cita previa; llama antes."
+        "es": "Urgencias nocturnas de 20:00 a 9:00 h todos los días, con cita previa; llama antes.",
+        "it": "Pronto soccorso notturno 20:00–09:00 tutti i giorni, su appuntamento: telefonare prima."
       },
       "small_animals": true,
       "url": "https://www.anicare.net/",
@@ -1057,7 +1102,8 @@
       "duty": "Night emergency 20:00-05:00, every day of the year.",
       "duty_i18n": {
         "fr": "Urgences de nuit 20 h–5 h, tous les jours de l’année.",
-        "es": "Urgencias nocturnas de 20:00 a 5:00 h, todos los días del año."
+        "es": "Urgencias nocturnas de 20:00 a 5:00 h, todos los días del año.",
+        "it": "Pronto soccorso notturno 20:00–05:00, tutti i giorni dell'anno."
       },
       "small_animals": true,
       "url": "https://pet99.net/",
@@ -1076,7 +1122,8 @@
       "duty": "Night emergency weekdays 19:00-06:00; Sundays and holidays 14:00-06:00; open every day of the year.",
       "duty_i18n": {
         "fr": "Urgences de nuit en semaine 19 h–6 h ; dimanches et jours fériés 14 h–6 h ; ouvert tous les jours de l’année.",
-        "es": "Urgencias nocturnas en días laborables de 19:00 a 6:00 h; domingos y festivos de 14:00 a 6:00 h; abierto todos los días del año."
+        "es": "Urgencias nocturnas en días laborables de 19:00 a 6:00 h; domingos y festivos de 14:00 a 6:00 h; abierto todos los días del año.",
+        "it": "Pronto soccorso notturno nei giorni feriali 19:00–06:00; domeniche e festivi 14:00–06:00; aperto tutti i giorni dell'anno."
       },
       "small_animals": true,
       "url": "https://www.sapporo1299.net/",
@@ -1095,7 +1142,8 @@
       "duty": "Night medical centre Mon-Fri 20:00-02:00; phone Mon-Fri 9:00-02:00, Sat-Sun 9:00-19:00; 24-hour inpatient and intensive care.",
       "duty_i18n": {
         "fr": "Centre médical de nuit lun.–ven. 20 h–2 h ; téléphone lun.–ven. 9 h–2 h, sam.–dim. 9 h–19 h ; hospitalisation et soins intensifs 24 h/24.",
-        "es": "Centro médico nocturno de lunes a viernes de 20:00 a 2:00 h; teléfono de lunes a viernes de 9:00 a 2:00 h, sábado y domingo de 9:00 a 19:00 h; hospitalización y cuidados intensivos 24 horas."
+        "es": "Centro médico nocturno de lunes a viernes de 20:00 a 2:00 h; teléfono de lunes a viernes de 9:00 a 2:00 h, sábado y domingo de 9:00 a 19:00 h; hospitalización y cuidados intensivos 24 horas.",
+        "it": "Centro medico notturno lun–ven 20:00–02:00; telefono lun–ven 9:00–02:00, sab–dom 9:00–19:00; ricovero e terapia intensiva 24 ore su 24."
       },
       "small_animals": true,
       "url": "https://anes-amc.com/",
@@ -1114,7 +1162,8 @@
       "duty": "Night emergency 21:00-09:00, every day of the year. Call before coming; no phone-only consultations.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–9 h, tous les jours de l’année. Appelez avant de venir ; pas de consultation par téléphone seul.",
-        "es": "Urgencias nocturnas de 21:00 a 9:00 h, todos los días del año. Llama antes de ir; sin consultas solo por teléfono."
+        "es": "Urgencias nocturnas de 21:00 a 9:00 h, todos los días del año. Llama antes de ir; sin consultas solo por teléfono.",
+        "it": "Pronto soccorso notturno 21:00–09:00, tutti i giorni dell'anno. Telefonare prima di venire; nessuna consulenza solo telefonica."
       },
       "small_animals": true,
       "url": "https://www.kobe-naec.com/",
@@ -1137,7 +1186,8 @@
       "checked": "2026-11-10",
       "note": "Site description: 祝日も24時間診療を行い、夜間救急時などにも対応する動物病院です. Regular hours not on the page. Removed from duty: States it treats animals 24 hours a day, including holidays, with night emergency care. Call before coming.",
       "duty_i18n": {
-        "es": "Atiende a las mascotas las 24 horas, festivos incluidos, con urgencias nocturnas. Llama antes de ir."
+        "es": "Atiende a las mascotas las 24 horas, festivos incluidos, con urgencias nocturnas. Llama antes de ir.",
+        "it": "Cura gli animali 24 ore su 24, festivi inclusi, con pronto soccorso notturno. Telefonare prima di venire."
       }
     },
     {
@@ -1151,7 +1201,8 @@
       "duty": "Emergency care on a 24-hour basis; emergency hours weekdays 19:00-09:00, weekends and holidays 17:00-09:00, all year. Call before coming.",
       "duty_i18n": {
         "fr": "Urgences assurées 24 h/24 ; horaires d’urgence en semaine 19 h–9 h, week-ends et jours fériés 17 h–9 h, toute l’année. Appelez avant de venir.",
-        "es": "Urgencias las 24 horas; horario de urgencias en días laborables de 19:00 a 9:00 h, fines de semana y festivos de 17:00 a 9:00 h, todo el año. Llama antes de ir."
+        "es": "Urgencias las 24 horas; horario de urgencias en días laborables de 19:00 a 9:00 h, fines de semana y festivos de 17:00 a 9:00 h, todo el año. Llama antes de ir.",
+        "it": "Pronto soccorso 24 ore su 24; orario urgenze giorni feriali 19:00–09:00, weekend e festivi 17:00–09:00, tutto l'anno. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.chiba-ah.com/",
@@ -1170,7 +1221,8 @@
       "duty": "Night emergency 21:00-05:00, every day of the year. Call before coming.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–5 h, tous les jours de l’année. Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 21:00 a 5:00 h, todos los días del año. Llama antes de ir."
+        "es": "Urgencias nocturnas de 21:00 a 5:00 h, todos los días del año. Llama antes de ir.",
+        "it": "Pronto soccorso notturno 21:00–05:00, tutti i giorni dell'anno. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.svet.jp/yakan/",
@@ -1189,7 +1241,8 @@
       "duty": "Day hours 8:30-12:00 and 15:00-18:30, open all year except New Year; night emergency care handled via a separate page (from 19:00) - call first.",
       "duty_i18n": {
         "fr": "Horaires de jour 8 h 30–12 h et 15 h–18 h 30, ouvert toute l’année sauf au Nouvel An ; urgences de nuit via une page distincte (à partir de 19 h) : appelez d’abord.",
-        "es": "Horario diurno de 8:30 a 12:00 y de 15:00 a 18:30 h, abierto todo el año salvo Año Nuevo; las urgencias nocturnas se tratan en otra página (desde las 19:00); llama antes."
+        "es": "Horario diurno de 8:30 a 12:00 y de 15:00 a 18:30 h, abierto todo el año salvo Año Nuevo; las urgencias nocturnas se tratan en otra página (desde las 19:00); llama antes.",
+        "it": "Orario diurno 8:30–12:00 e 15:00–18:30, aperto tutto l'anno tranne Capodanno; il pronto soccorso notturno (dalle 19:00) è gestito tramite una pagina separata: telefonare prima."
       },
       "small_animals": true,
       "url": "https://jpbvet.com/",
@@ -1208,7 +1261,8 @@
       "duty": "Night emergency 20:00-03:00 (last reception 02:30); closed Thursday and Friday; hours may change with vet availability - call first.",
       "duty_i18n": {
         "fr": "Urgences de nuit 20 h–3 h (dernière admission à 2 h 30) ; fermé le jeudi et le vendredi ; horaires susceptibles de changer selon la disponibilité des vétérinaires : appelez d’abord.",
-        "es": "Urgencias nocturnas de 20:00 a 3:00 h (última recepción 2:30); cerrado jueves y viernes; el horario puede cambiar según la disponibilidad del veterinario; llama antes."
+        "es": "Urgencias nocturnas de 20:00 a 3:00 h (última recepción 2:30); cerrado jueves y viernes; el horario puede cambiar según la disponibilidad del veterinario; llama antes.",
+        "it": "Pronto soccorso notturno 20:00–03:00 (ultima accettazione 02:30); chiuso giovedì e venerdì; l'orario può variare in base alla disponibilità dei veterinari: telefonare prima."
       },
       "small_animals": true,
       "url": "https://naha-ah.com/night/",
@@ -1227,7 +1281,8 @@
       "duty": "After-hours emergency 19:00-03:00, Monday to Friday; closed Saturday and Sunday. Call before visiting.",
       "duty_i18n": {
         "fr": "Urgences en dehors des heures d’ouverture 19 h–3 h, lun.–ven. ; fermé le samedi et le dimanche. Appelez avant de venir.",
-        "es": "Urgencias fuera de horario de 19:00 a 3:00 h, de lunes a viernes; cerrado sábado y domingo. Llama antes de ir."
+        "es": "Urgencias fuera de horario de 19:00 a 3:00 h, de lunes a viernes; cerrado sábado y domingo. Llama antes de ir.",
+        "it": "Pronto soccorso fuori orario 19:00–03:00, dal lunedì al venerdì; chiuso sabato e domenica. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.okinawa-yakan-ah.com/en/",
@@ -1246,7 +1301,8 @@
       "duty": "Night emergency 21:00-02:00; closed Mondays. Call before coming.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–2 h ; fermé le lundi. Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 21:00 a 2:00 h; cerrado los lunes. Llama antes de ir."
+        "es": "Urgencias nocturnas de 21:00 a 2:00 h; cerrado los lunes. Llama antes de ir.",
+        "it": "Pronto soccorso notturno 21:00–02:00; chiuso il lunedì. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://www.shizujyu.com/publics/index/438/",
@@ -1269,7 +1325,8 @@
       "checked": "2026-11-10",
       "note": "Page: 24時間体制で急病の動物に対応しています。 with listed emergency windows. Removed from duty: States it treats sick animals 24 hours a day: regular hours 9:00-11:30 and 17:00-19:00, emergency reception 19:00-09:00 and 11:30-17:00 (emergencies only Tue/Thu afternoons). Call first.",
       "duty_i18n": {
-        "es": "Atiende a mascotas enfermas las 24 horas: horario habitual de 9:00 a 11:30 y de 17:00 a 19:00 h, recepción de urgencias de 19:00 a 9:00 y de 11:30 a 17:00 h (solo urgencias los martes y jueves por la tarde). Llama antes."
+        "es": "Atiende a mascotas enfermas las 24 horas: horario habitual de 9:00 a 11:30 y de 17:00 a 19:00 h, recepción de urgencias de 19:00 a 9:00 y de 11:30 a 17:00 h (solo urgencias los martes y jueves por la tarde). Llama antes.",
+        "it": "Cura gli animali malati 24 ore su 24: orario ordinario 9:00–11:30 e 17:00–19:00, accettazione urgenze 19:00–09:00 e 11:30–17:00 (martedì e giovedì pomeriggio solo urgenze). Telefonare prima."
       }
     },
     {
@@ -1286,7 +1343,8 @@
       "checked": "2026-11-10",
       "note": "Page says 24時間体制の連携 (partner cooperation) but no explicit 24 h reception; no phone on the page (04-2946-7313 night line appears only on another clinic's page, not used). Not flagged 24 h. | Moved from duty: Provides night and holiday emergency care for animals that become unwell; no hours are published on the page - call before visiting. Removed from duty: Provides night and holiday emergency care for animals that become unwell; opening hours are not published - call before visiting.",
       "duty_i18n": {
-        "es": "Ofrece urgencias nocturnas y en festivos para mascotas que enferman; llama antes de ir."
+        "es": "Ofrece urgencias nocturnas y en festivos para mascotas que enferman; llama antes de ir.",
+        "it": "Offre pronto soccorso notturno e festivo per gli animali che stanno male; telefonare prima di venire."
       }
     },
     {
@@ -1300,7 +1358,8 @@
       "duty": "Night emergency 21:00-01:00 (appointment line 20:30-00:30).",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–1 h (ligne de rendez-vous 20 h 30–0 h 30).",
-        "es": "Urgencias nocturnas de 21:00 a 1:00 h (línea de citas de 20:30 a 0:30 h)."
+        "es": "Urgencias nocturnas de 21:00 a 1:00 h (línea de citas de 20:30 a 0:30 h).",
+        "it": "Pronto soccorso notturno 21:00–01:00 (linea appuntamenti 20:30–00:30)."
       },
       "small_animals": true,
       "url": "https://hiroshimayakan.com/",
@@ -1319,7 +1378,8 @@
       "duty": "Night emergency 21:00-24:00, every day of the year except in snow or typhoon conditions. Call before coming.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–24 h, tous les jours de l’année sauf en cas de neige ou de typhon. Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 21:00 a 24:00 h, todos los días del año salvo con nieve o tifón. Llama antes de ir."
+        "es": "Urgencias nocturnas de 21:00 a 24:00 h, todos los días del año salvo con nieve o tifón. Llama antes de ir.",
+        "it": "Pronto soccorso notturno 21:00–24:00, tutti i giorni dell'anno tranne in caso di neve o tifone. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://kitakyu-vet.com/night/",
@@ -1338,7 +1398,8 @@
       "duty": "Night emergency 21:00-01:00 (phone reception 20:30-00:30), no closed days. Reservation by phone required.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–1 h (accueil téléphonique 20 h 30–0 h 30), sans jour de fermeture. Réservation par téléphone obligatoire.",
-        "es": "Urgencias nocturnas de 21:00 a 1:00 h (recepción telefónica de 20:30 a 0:30 h), sin días de cierre. Imprescindible reservar por teléfono."
+        "es": "Urgencias nocturnas de 21:00 a 1:00 h (recepción telefónica de 20:30 a 0:30 h), sin días de cierre. Imprescindible reservar por teléfono.",
+        "it": "Pronto soccorso notturno 21:00–01:00 (accettazione telefonica 20:30–00:30), nessun giorno di chiusura. Prenotazione telefonica obbligatoria."
       },
       "small_animals": true,
       "url": "https://anecniigata.com/",
@@ -1357,7 +1418,8 @@
       "duty": "Night emergency 21:00-01:00, every day of the year. Call before visiting; no phone-only consultations.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–1 h, tous les jours de l’année. Appelez avant de venir ; pas de consultation par téléphone seul.",
-        "es": "Urgencias nocturnas de 21:00 a 1:00 h, todos los días del año. Llama antes de ir; sin consultas solo por teléfono."
+        "es": "Urgencias nocturnas de 21:00 a 1:00 h, todos los días del año. Llama antes de ir; sin consultas solo por teléfono.",
+        "it": "Pronto soccorso notturno 21:00–01:00, tutti i giorni dell'anno. Telefonare prima di venire; nessuna consulenza solo telefonica."
       },
       "small_animals": true,
       "url": "https://www.gifuyakan.jp/",
@@ -1380,7 +1442,8 @@
       "checked": "2026-11-10",
       "note": "Page: 年中無休・24時間救急応需. Removed from duty: States emergency care is available 24 hours, every day of the year; evening-night consultations 20:00-08:00. Call first.",
       "duty_i18n": {
-        "es": "Urgencias las 24 horas, todos los días del año; consultas de tarde-noche de 20:00 a 8:00 h. Llama antes."
+        "es": "Urgencias las 24 horas, todos los días del año; consultas de tarde-noche de 20:00 a 8:00 h. Llama antes.",
+        "it": "Pronto soccorso disponibile 24 ore su 24, tutti i giorni dell'anno; visite serali e notturne 20:00–08:00. Telefonare prima."
       }
     },
     {
@@ -1392,7 +1455,8 @@
       "duty": "Night emergency 21:00-02:00 (phone reception until 01:30), every day of the year. Call before visiting.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–2 h (accueil téléphonique jusqu’à 1 h 30), tous les jours de l’année. Appelez avant de venir.",
-        "es": "Urgencias nocturnas de 21:00 a 2:00 h (recepción telefónica hasta las 1:30), todos los días del año. Llama antes de ir."
+        "es": "Urgencias nocturnas de 21:00 a 2:00 h (recepción telefónica hasta las 1:30), todos los días del año. Llama antes de ir.",
+        "it": "Pronto soccorso notturno 21:00–02:00 (accettazione telefonica fino alle 01:30), tutti i giorni dell'anno. Telefonare prima di venire."
       },
       "small_animals": true,
       "url": "https://nagoyavet.jp/hospital_yakan.php",
@@ -1415,7 +1479,8 @@
       "checked": "2026-11-10",
       "note": "Page: 24時間体制（完全看護） under hours; service list 救急診療（夜間診療） with no hours given; image caption 夜間も診療します。 Not an explicit 24 h emergency reception claim. Removed from duty: Emergency (night) care is offered and the hospital describes a 24-hour full-nursing (inpatient) system, but emergency reception hours are not published. Call before coming.",
       "duty_i18n": {
-        "es": "Ofrece urgencias (nocturnas) y el hospital dispone de cuidados completos de enfermería 24 horas (hospitalización). Llama antes de ir."
+        "es": "Ofrece urgencias (nocturnas) y el hospital dispone de cuidados completos de enfermería 24 horas (hospitalización). Llama antes de ir.",
+        "it": "Offre pronto soccorso (notturno) e l'ospedale dispone di assistenza infermieristica completa (ricovero) 24 ore su 24. Telefonare prima di venire."
       }
     },
     {
@@ -1429,7 +1494,8 @@
       "duty": "Night emergency Tuesday-Friday 21:00-24:00; closed Monday, Saturday, Sunday and holidays. Call first.",
       "duty_i18n": {
         "fr": "Urgences de nuit du mardi au vendredi 21 h–24 h ; fermé le lundi, le samedi, le dimanche et les jours fériés. Appelez d’abord.",
-        "es": "Urgencias nocturnas de martes a viernes de 21:00 a 24:00 h; cerrado lunes, sábado, domingo y festivos. Llama antes."
+        "es": "Urgencias nocturnas de martes a viernes de 21:00 a 24:00 h; cerrado lunes, sábado, domingo y festivos. Llama antes.",
+        "it": "Pronto soccorso notturno martedì–venerdì 21:00–24:00; chiuso lunedì, sabato, domenica e festivi. Telefonare prima."
       },
       "small_animals": true,
       "url": "https://www.saidaidori-ah.jp/",
@@ -1448,7 +1514,8 @@
       "duty": "Night emergency on weekdays 20:00-22:00 (last reception 21:00); closed Saturday, Sunday and holidays; after 22:00 patients are referred to a night emergency hospital. Call first.",
       "duty_i18n": {
         "fr": "Urgences de nuit en semaine 20 h–22 h (dernière admission à 21 h) ; fermé le samedi, le dimanche et les jours fériés ; après 22 h, orientation vers un hôpital d’urgences de nuit. Appelez d’abord.",
-        "es": "Urgencias nocturnas en días laborables de 20:00 a 22:00 h (última recepción 21:00); cerrado sábado, domingo y festivos; a partir de las 22:00 se deriva a un hospital de urgencias nocturnas. Llama antes."
+        "es": "Urgencias nocturnas en días laborables de 20:00 a 22:00 h (última recepción 21:00); cerrado sábado, domingo y festivos; a partir de las 22:00 se deriva a un hospital de urgencias nocturnas. Llama antes.",
+        "it": "Pronto soccorso notturno nei giorni feriali 20:00–22:00 (ultima accettazione 21:00); chiuso sabato, domenica e festivi; dopo le 22:00 i pazienti sono indirizzati a un ospedale di pronto soccorso notturno. Telefonare prima."
       },
       "small_animals": true,
       "url": "https://musashinokuni-amc.com/",
@@ -1467,7 +1534,8 @@
       "duty": "Night care on weekdays 19:00-22:00 at the main branch only; a 24-hour consultation line exists for existing patients only.",
       "duty_i18n": {
         "fr": "Soins de nuit en semaine 19 h–22 h, au siège principal uniquement ; ligne de consultation 24 h/24 réservée aux patients déjà suivis.",
-        "es": "Atención nocturna en días laborables de 19:00 a 22:00 h solo en la sede principal; existe una línea de consulta 24 horas solo para pacientes ya registrados."
+        "es": "Atención nocturna en días laborables de 19:00 a 22:00 h solo en la sede principal; existe una línea de consulta 24 horas solo para pacientes ya registrados.",
+        "it": "Cure notturne nei giorni feriali 19:00–22:00 solo nella sede principale; esiste una linea di consulenza 24 ore su 24 solo per i pazienti già in cura."
       },
       "small_animals": true,
       "url": "https://www.ukyo-ah.com/",
@@ -1486,7 +1554,8 @@
       "duty": "Open 365 days by appointment: 9:00-12:00 and 16:00-19:00 (Tue 9:00-12:00 and 14:00-17:00). Urgent problems on holidays and New Year are handled; call first.",
       "duty_i18n": {
         "fr": "Ouvert 365 jours par an sur rendez-vous : 9 h–12 h et 16 h–19 h (mardi 9 h–12 h et 14 h–17 h). Urgences prises en charge les jours fériés et au Nouvel An ; appelez d’abord.",
-        "es": "Abierto 365 días con cita previa: de 9:00 a 12:00 y de 16:00 a 19:00 h (martes de 9:00 a 12:00 y de 14:00 a 17:00 h). Se atienden problemas urgentes en festivos y Año Nuevo; llama antes."
+        "es": "Abierto 365 días con cita previa: de 9:00 a 12:00 y de 16:00 a 19:00 h (martes de 9:00 a 12:00 y de 14:00 a 17:00 h). Se atienden problemas urgentes en festivos y Año Nuevo; llama antes.",
+        "it": "Aperto 365 giorni su appuntamento: 9:00–12:00 e 16:00–19:00 (martedì 9:00–12:00 e 14:00–17:00). Problemi urgenti gestiti anche nei festivi e a Capodanno; telefonare prima."
       },
       "small_animals": true,
       "url": "https://www.okayama-amc.com/",
@@ -1509,7 +1578,8 @@
       "checked": "2026-11-10",
       "note": "Hours given as 9:30-17:00 in one place and 9:00-17:00 in another on the page. Removed from duty: University teaching hospital, Monday-Friday daytime, appointment only (web booking since April 2026); no emergency or night service stated.",
       "duty_i18n": {
-        "es": "Hospital clínico universitario, de lunes a viernes de día, solo con cita previa (reserva web desde abril de 2026)."
+        "es": "Hospital clínico universitario, de lunes a viernes de día, solo con cita previa (reserva web desde abril de 2026).",
+        "it": "Ospedale didattico universitario, dal lunedì al venerdì di giorno, solo su appuntamento (prenotazione web da aprile 2026)."
       }
     },
     {
@@ -1523,7 +1593,8 @@
       "duty": "Regular hours 9:00-11:30 and 15:00-18:30, closed Mondays. Night care until midnight (not on Mondays); call first - after 19:00 calls go to voicemail and the clinic calls back. Surcharge +5,000 yen until 0:00, +8,000 yen after 0:00. Night care may be unavailable depending on workload.",
       "duty_i18n": {
         "fr": "Horaires habituels 9 h–11 h 30 et 15 h–18 h 30, fermé le lundi. Soins de nuit jusqu’à minuit (pas le lundi) ; appelez d’abord : après 19 h, les appels sont renvoyés sur répondeur et la clinique rappelle. Supplément de 5 000 yens jusqu’à minuit, 8 000 yens après minuit. Soins de nuit parfois indisponibles selon la charge de travail.",
-        "es": "Horario habitual de 9:00 a 11:30 y de 15:00 a 18:30 h, cerrado los lunes. Atención nocturna hasta medianoche (no los lunes); llama antes: a partir de las 19:00 las llamadas van al buzón de voz y la clínica devuelve la llamada. Recargo de +5.000 yenes hasta las 0:00, +8.000 yenes después de las 0:00. La atención nocturna puede no estar disponible según la carga de trabajo."
+        "es": "Horario habitual de 9:00 a 11:30 y de 15:00 a 18:30 h, cerrado los lunes. Atención nocturna hasta medianoche (no los lunes); llama antes: a partir de las 19:00 las llamadas van al buzón de voz y la clínica devuelve la llamada. Recargo de +5.000 yenes hasta las 0:00, +8.000 yenes después de las 0:00. La atención nocturna puede no estar disponible según la carga de trabajo.",
+        "it": "Orario ordinario 9:00–11:30 e 15:00–18:30, chiuso il lunedì. Cure notturne fino a mezzanotte (non il lunedì); telefonare prima: dopo le 19:00 le chiamate vanno in segreteria e la clinica richiama. Supplemento +5.000 yen fino alle 0:00, +8.000 yen dopo le 0:00. Le cure notturne possono non essere disponibili in base al carico di lavoro."
       },
       "small_animals": true,
       "url": "https://hifumi-petclinic.com/",
@@ -1542,7 +1613,8 @@
       "duty": "Night and after-hours treatment offered: do not walk in at night, call first and give your expected arrival time. If there is no call back within 15 minutes, try another hospital. No phone advice. After-hours examination fee applies. Mainly dogs and cats.",
       "duty_i18n": {
         "fr": "Soins de nuit et hors horaires proposés : ne vous présentez pas sans appel la nuit, appelez d’abord en indiquant votre heure d’arrivée prévue. Sans rappel sous 15 minutes, contactez un autre hôpital. Pas de conseil par téléphone. Frais de consultation hors horaires. Principalement chiens et chats.",
-        "es": "Ofrece atención nocturna y fuera de horario: no vayas sin avisar de noche, llama antes e indica la hora prevista de llegada. Si no te devuelven la llamada en 15 minutos, prueba en otro hospital. Sin consejos por teléfono. Se aplica tarifa de consulta fuera de horario. Sobre todo perros y gatos."
+        "es": "Ofrece atención nocturna y fuera de horario: no vayas sin avisar de noche, llama antes e indica la hora prevista de llegada. Si no te devuelven la llamada en 15 minutos, prueba en otro hospital. Sin consejos por teléfono. Se aplica tarifa de consulta fuera de horario. Sobre todo perros y gatos.",
+        "it": "Cure notturne e fuori orario: non presentarsi di notte senza avvisare, telefonare prima indicando l'orario previsto di arrivo. Se non si viene richiamati entro 15 minuti, rivolgersi a un altro ospedale. Nessuna consulenza telefonica. Tariffa di visita fuori orario. Soprattutto cani e gatti."
       },
       "small_animals": true,
       "url": "https://k1r4t3t0animalhospital.jp/",
@@ -1561,7 +1633,8 @@
       "duty": "After-hours treatment is offered for dogs and cats; call 0985-48-0808 before coming. No 24-hour service.",
       "duty_i18n": {
         "fr": "Soins hors horaires proposés pour chiens et chats ; appelez le 0985-48-0808 avant de venir. Pas de service 24 h/24.",
-        "es": "Ofrece atención fuera de horario para perros y gatos; llama al 0985-48-0808 antes de ir. Sin servicio 24 horas."
+        "es": "Ofrece atención fuera de horario para perros y gatos; llama al 0985-48-0808 antes de ir. Sin servicio 24 horas.",
+        "it": "Cure fuori orario per cani e gatti; telefonare allo 0985-48-0808 prima di venire. Nessun servizio 24 ore su 24."
       },
       "small_animals": true,
       "url": "https://o-vet.com/guidance",
@@ -1579,7 +1652,8 @@
       "duty": "Rotating night emergency clinic for dogs and cats: treatment 20:00-23:00, phone reception until 22:30. Closed Thursdays and Sundays. Check the online calendar for tonight's duty hospital and call it first. Cash mainly; extra after-hours fee (about 5,000 yen).",
       "duty_i18n": {
         "fr": "Clinique d’urgences de nuit en tour de garde pour chiens et chats : soins 20 h–23 h, accueil téléphonique jusqu’à 22 h 30. Fermé le jeudi et le dimanche. Consultez le calendrier en ligne pour connaître l’établissement de garde ce soir et appelez-le d’abord. Paiement surtout en espèces ; supplément hors horaires (environ 5 000 yens).",
-        "es": "Clínica de urgencias nocturnas rotativa para perros y gatos: atención de 20:00 a 23:00 h, recepción telefónica hasta las 22:30. Cerrado jueves y domingos. Consulta el calendario en línea para saber qué hospital está de guardia esta noche y llámalo antes. Sobre todo pago en efectivo; tarifa adicional fuera de horario (unos 5.000 yenes)."
+        "es": "Clínica de urgencias nocturnas rotativa para perros y gatos: atención de 20:00 a 23:00 h, recepción telefónica hasta las 22:30. Cerrado jueves y domingos. Consulta el calendario en línea para saber qué hospital está de guardia esta noche y llámalo antes. Sobre todo pago en efectivo; tarifa adicional fuera de horario (unos 5.000 yenes).",
+        "it": "Clinica di pronto soccorso notturno a rotazione per cani e gatti: cure 20:00–23:00, accettazione telefonica fino alle 22:30. Chiusa giovedì e domenica. Consultare il calendario online per l'ospedale di turno stanotte e telefonargli prima. Soprattutto contanti; supplemento fuori orario (circa 5.000 yen)."
       },
       "small_animals": true,
       "url": "https://ehime-vets.jp/",
@@ -1598,7 +1672,8 @@
       "duty": "Mon-Wed, Fri, Sat 9:00-12:00 and 16:00-19:30; Sun and holidays morning only; closed Thursdays. Night and emergency care as far as possible - phone ahead.",
       "duty_i18n": {
         "fr": "Lun.–mer., ven., sam. 9 h–12 h et 16 h–19 h 30 ; dim. et jours fériés le matin uniquement ; fermé le jeudi. Soins de nuit et d’urgence dans la mesure du possible : appelez avant.",
-        "es": "De lunes a miércoles, viernes y sábado de 9:00 a 12:00 y de 16:00 a 19:30 h; domingo y festivos solo por la mañana; cerrado los jueves. Atención nocturna y de urgencias en la medida de lo posible; llama antes."
+        "es": "De lunes a miércoles, viernes y sábado de 9:00 a 12:00 y de 16:00 a 19:30 h; domingo y festivos solo por la mañana; cerrado los jueves. Atención nocturna y de urgencias en la medida de lo posible; llama antes.",
+        "it": "Lun–mer, ven, sab 9:00–12:00 e 16:00–19:30; dom e festivi solo la mattina; chiuso il giovedì. Cure notturne e urgenti per quanto possibile: telefonare prima."
       },
       "small_animals": true,
       "url": "https://koushindo.com/",
@@ -1617,7 +1692,8 @@
       "duty": "Open 365 days: 10:00-11:30 and 13:30-18:30 (closed on the afternoons of the 2nd and 3rd Thursday). Night emergencies are handled through the Ehime veterinary association's night rota.",
       "duty_i18n": {
         "fr": "Ouvert 365 jours par an : 10 h–11 h 30 et 13 h 30–18 h 30 (fermé les après-midi des 2e et 3e jeudis du mois). Urgences de nuit assurées via le tour de garde de nuit de l’association vétérinaire d’Ehime.",
-        "es": "Abierto 365 días: de 10:00 a 11:30 y de 13:30 a 18:30 h (cerrado por la tarde el 2.º y 3.er jueves). Las urgencias nocturnas se atienden mediante el turno nocturno de la asociación veterinaria de Ehime."
+        "es": "Abierto 365 días: de 10:00 a 11:30 y de 13:30 a 18:30 h (cerrado por la tarde el 2.º y 3.er jueves). Las urgencias nocturnas se atienden mediante el turno nocturno de la asociación veterinaria de Ehime.",
+        "it": "Aperto 365 giorni: 10:00–11:30 e 13:30–18:30 (chiuso il pomeriggio del 2° e 3° giovedì). Le urgenze notturne sono gestite tramite il turno notturno dell'associazione veterinaria di Ehime."
       },
       "small_animals": true,
       "url": "https://mhvc.jp/",
@@ -1636,7 +1712,8 @@
       "duty": "Mon, Wed, Fri, Sat 9:00-11:30 and 15:30-19:00; Tue morning only; Sun morning by appointment; closed Thursdays. Takes part in the Ehime night rota (20:00-23:00); dogs and cats only.",
       "duty_i18n": {
         "fr": "Lun., mer., ven., sam. 9 h–11 h 30 et 15 h 30–19 h ; mardi le matin uniquement ; dimanche matin sur rendez-vous ; fermé le jeudi. Participe au tour de garde de nuit d’Ehime (20 h–23 h) ; chiens et chats uniquement.",
-        "es": "Lunes, miércoles, viernes y sábado de 9:00 a 11:30 y de 15:30 a 19:00 h; martes solo por la mañana; domingo por la mañana con cita previa; cerrado los jueves. Participa en el turno nocturno de Ehime (de 20:00 a 23:00 h); solo perros y gatos."
+        "es": "Lunes, miércoles, viernes y sábado de 9:00 a 11:30 y de 15:30 a 19:00 h; martes solo por la mañana; domingo por la mañana con cita previa; cerrado los jueves. Participa en el turno nocturno de Ehime (de 20:00 a 23:00 h); solo perros y gatos.",
+        "it": "Lun, mer, ven, sab 9:00–11:30 e 15:30–19:00; martedì solo la mattina; domenica mattina su appuntamento; chiuso il giovedì. Partecipa al turno notturno di Ehime (20:00–23:00); solo cani e gatti."
       },
       "small_animals": true,
       "url": "https://murakami-dogcat.com/",
@@ -1655,7 +1732,8 @@
       "duty": "Night emergency 21:00-1:00 (last check-in 0:30), every day; phone reception 20:30-0:30 and booking by phone required. Dogs and cats; credit card only. First-visit fee 10,000 yen.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–1 h (dernière admission à 0 h 30), tous les jours ; accueil téléphonique 20 h 30–0 h 30 et réservation par téléphone obligatoire. Chiens et chats ; carte bancaire uniquement. Frais de première visite : 10 000 yens.",
-        "es": "Urgencias nocturnas de 21:00 a 1:00 h (última admisión 0:30), todos los días; recepción telefónica de 20:30 a 0:30 h e imprescindible reservar por teléfono. Perros y gatos; solo tarjeta de crédito. Tarifa de primera visita 10.000 yenes."
+        "es": "Urgencias nocturnas de 21:00 a 1:00 h (última admisión 0:30), todos los días; recepción telefónica de 20:30 a 0:30 h e imprescindible reservar por teléfono. Perros y gatos; solo tarjeta de crédito. Tarifa de primera visita 10.000 yenes.",
+        "it": "Pronto soccorso notturno 21:00–1:00 (ultimo check-in 0:30), tutti i giorni; accettazione telefonica 20:30–0:30 e prenotazione telefonica obbligatoria. Cani e gatti; solo carta di credito. Tariffa prima visita 10.000 yen."
       },
       "small_animals": true,
       "url": "https://anecniigata.com/",
@@ -1674,7 +1752,8 @@
       "duty": "Night emergency 21:00-2:00, irregular closing days - check the calendar and call first.",
       "duty_i18n": {
         "fr": "Urgences de nuit 21 h–2 h, jours de fermeture irréguliers : consultez le calendrier et appelez d’abord.",
-        "es": "Urgencias nocturnas de 21:00 a 2:00 h, días de cierre irregulares; consulta el calendario y llama antes."
+        "es": "Urgencias nocturnas de 21:00 a 2:00 h, días de cierre irregulares; consulta el calendario y llama antes.",
+        "it": "Pronto soccorso notturno 21:00–2:00, giorni di chiusura irregolari: consultare il calendario e telefonare prima."
       },
       "small_animals": true,
       "url": "https://kanazawa-yakan.com/",
@@ -1693,7 +1772,8 @@
       "duty": "Mon-Sat 9:00-12:00 and 16:00-18:00. Night treatment 20:00-23:00 and closed-day treatment 8:00-23:00 as far as possible (reception ends 30 min before). First-time patients receive first-line emergency care only. No phone-only consultations.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–12 h et 16 h–18 h. Soins de nuit 20 h–23 h et les jours de fermeture 8 h–23 h dans la mesure du possible (fin de l’accueil 30 min avant). Nouveaux patients : premiers soins d’urgence uniquement. Pas de consultation par téléphone seul.",
-        "es": "De lunes a sábado de 9:00 a 12:00 y de 16:00 a 18:00 h. Atención nocturna de 20:00 a 23:00 h y en días de cierre de 8:00 a 23:00 h en la medida de lo posible (la recepción termina 30 min antes). A los pacientes nuevos solo se les presta atención de urgencia de primera línea. Sin consultas solo por teléfono."
+        "es": "De lunes a sábado de 9:00 a 12:00 y de 16:00 a 18:00 h. Atención nocturna de 20:00 a 23:00 h y en días de cierre de 8:00 a 23:00 h en la medida de lo posible (la recepción termina 30 min antes). A los pacientes nuevos solo se les presta atención de urgencia de primera línea. Sin consultas solo por teléfono.",
+        "it": "Lun–sab 9:00–12:00 e 16:00–18:00. Cure notturne 20:00–23:00 e nei giorni di chiusura 8:00–23:00 per quanto possibile (accettazione fino a 30 minuti prima della chiusura). I nuovi pazienti ricevono solo le prime cure di emergenza. Nessuna consulenza solo telefonica."
       },
       "small_animals": true,
       "url": "https://asa-vet.com/",
@@ -1712,7 +1792,8 @@
       "duty": "9:00-12:00 and 16:30-19:30, closed Thursdays and Sunday/holiday afternoons. Night emergency until midnight - call first; existing patients have priority. After-hours fee 3,000-7,000 yen. If no callback, the clinic refers to Kyoto Night Animal Clinic.",
       "duty_i18n": {
         "fr": "9 h–12 h et 16 h 30–19 h 30, fermé le jeudi et les dimanches et jours fériés après-midi. Urgences de nuit jusqu’à minuit : appelez d’abord ; patients déjà suivis prioritaires. Supplément hors horaires de 3 000 à 7 000 yens. Sans rappel, la clinique oriente vers la Kyoto Night Animal Clinic.",
-        "es": "De 9:00 a 12:00 y de 16:30 a 19:30 h, cerrado los jueves y las tardes de domingos y festivos. Urgencias nocturnas hasta medianoche; llama antes; prioridad para pacientes habituales. Tarifa fuera de horario 3.000–7.000 yenes. Si no te devuelven la llamada, la clínica te deriva a Kyoto Night Animal Clinic."
+        "es": "De 9:00 a 12:00 y de 16:30 a 19:30 h, cerrado los jueves y las tardes de domingos y festivos. Urgencias nocturnas hasta medianoche; llama antes; prioridad para pacientes habituales. Tarifa fuera de horario 3.000–7.000 yenes. Si no te devuelven la llamada, la clínica te deriva a Kyoto Night Animal Clinic.",
+        "it": "9:00–12:00 e 16:30–19:30, chiuso il giovedì e i pomeriggi di domenica e festivi. Pronto soccorso notturno fino a mezzanotte: telefonare prima; priorità ai pazienti già in cura. Tariffa fuori orario 3.000–7.000 yen. Se nessuno richiama, la clinica indirizza alla Kyoto Night Animal Clinic."
       },
       "small_animals": true,
       "url": "https://nagahama-ah.com/",
@@ -1731,7 +1812,8 @@
       "duty": "Night first-aid care: call first and leave a voicemail; if the clinic can respond it calls back within 15 minutes. Separate night fees; credit card and PayPay. Dogs, cats, rabbits, hamsters. Bring photo ID.",
       "duty_i18n": {
         "fr": "Soins d’urgence de nuit : appelez d’abord et laissez un message vocal ; si la clinique peut intervenir, elle rappelle sous 15 minutes. Tarifs de nuit distincts ; carte bancaire et PayPay. Chiens, chats, lapins, hamsters. Apportez une pièce d’identité avec photo.",
-        "es": "Primeros auxilios nocturnos: llama antes y deja un mensaje de voz; si la clínica puede atender, devuelve la llamada en 15 minutos. Tarifas nocturnas aparte; tarjeta de crédito y PayPay. Perros, gatos, conejos y hámsteres. Lleva un documento de identidad con foto."
+        "es": "Primeros auxilios nocturnos: llama antes y deja un mensaje de voz; si la clínica puede atender, devuelve la llamada en 15 minutos. Tarifas nocturnas aparte; tarjeta de crédito y PayPay. Perros, gatos, conejos y hámsteres. Lleva un documento de identidad con foto.",
+        "it": "Pronto soccorso notturno: telefonare prima e lasciare un messaggio in segreteria; se la clinica può intervenire, richiama entro 15 minuti. Tariffe notturne a parte; carta di credito e PayPay. Cani, gatti, conigli, criceti. Portare un documento con foto."
       },
       "small_animals": true,
       "url": "https://ukulele-vets.com/",
@@ -1750,7 +1832,8 @@
       "duty": "9:00-12:00 and 16:00-19:30, closed Thursdays and Sunday/holiday afternoons. After-hours care mainly for registered patients; call first (voicemail - a callback within 5 minutes is not guaranteed). Extra after-hours fee applies.",
       "duty_i18n": {
         "fr": "9 h–12 h et 16 h–19 h 30, fermé le jeudi et les dimanches et jours fériés après-midi. Soins hors horaires surtout pour les patients inscrits ; appelez d’abord (répondeur : un rappel sous 5 minutes n’est pas garanti). Supplément hors horaires.",
-        "es": "De 9:00 a 12:00 y de 16:00 a 19:30 h, cerrado los jueves y las tardes de domingos y festivos. Atención fuera de horario sobre todo para pacientes registrados; llama antes (buzón de voz: no se garantiza que te devuelvan la llamada en 5 minutos). Se aplica tarifa adicional fuera de horario."
+        "es": "De 9:00 a 12:00 y de 16:00 a 19:30 h, cerrado los jueves y las tardes de domingos y festivos. Atención fuera de horario sobre todo para pacientes registrados; llama antes (buzón de voz: no se garantiza que te devuelvan la llamada en 5 minutos). Se aplica tarifa adicional fuera de horario.",
+        "it": "9:00–12:00 e 16:00–19:30, chiuso il giovedì e i pomeriggi di domenica e festivi. Cure fuori orario soprattutto per i pazienti registrati; telefonare prima (segreteria: un richiamo entro 5 minuti non è garantito). Tariffa aggiuntiva fuori orario."
       },
       "small_animals": true,
       "url": "https://www.mirai-ac.info/",
@@ -1769,7 +1852,8 @@
       "duty": "Mon, Tue, Thu, Fri 9:00-12:00 and 17:00-20:00; Sat 9:00-15:00; closed Wednesdays. Not a 24-hour hospital, but emergencies can call 059-384-1299 outside hours (answerphone if unavailable); after-hours fee applies. Dogs, cats, hamsters, ferrets.",
       "duty_i18n": {
         "fr": "Lun., mar., jeu., ven. 9 h–12 h et 17 h–20 h ; sam. 9 h–15 h ; fermé le mercredi. Pas d’ouverture 24 h/24, mais en cas d’urgence, appelez le 059-384-1299 hors horaires (répondeur si indisponible) ; supplément hors horaires. Chiens, chats, hamsters, furets.",
-        "es": "Lunes, martes, jueves y viernes de 9:00 a 12:00 y de 17:00 a 20:00 h; sábado de 9:00 a 15:00 h; cerrado los miércoles. No es un hospital 24 horas, pero las urgencias pueden llamar al 059-384-1299 fuera de horario (contestador si no está disponible); tarifa fuera de horario. Perros, gatos, hámsteres y hurones."
+        "es": "Lunes, martes, jueves y viernes de 9:00 a 12:00 y de 17:00 a 20:00 h; sábado de 9:00 a 15:00 h; cerrado los miércoles. No es un hospital 24 horas, pero las urgencias pueden llamar al 059-384-1299 fuera de horario (contestador si no está disponible); tarifa fuera de horario. Perros, gatos, hámsteres y hurones.",
+        "it": "Lun, mar, gio, ven 9:00–12:00 e 17:00–20:00; sab 9:00–15:00; chiuso il mercoledì. Non è un ospedale 24 ore su 24, ma le urgenze possono chiamare lo 059-384-1299 fuori orario (segreteria se non disponibile); tariffa fuori orario. Cani, gatti, criceti, furetti."
       },
       "small_animals": true,
       "url": "https://kitagawa-ac.com/",
@@ -1788,7 +1872,8 @@
       "duty": "Mon-Sat 9:30-12:00 and 15:00-18:00 (Sun 10:00-12:00; holidays 10:30-12:00, 15:00-17:00); closed Thursdays. Night emergency window suspended; after-hours help only for regular and partner-hospital patients via answerphone. No walk-ins at night.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h 30–12 h et 15 h–18 h (dim. 10 h–12 h ; jours fériés 10 h 30–12 h et 15 h–17 h) ; fermé le jeudi. Accueil des urgences de nuit suspendu ; aide hors horaires uniquement pour les patients de la clinique et des hôpitaux partenaires, via répondeur. Aucune admission sans appel la nuit.",
-        "es": "De lunes a sábado de 9:30 a 12:00 y de 15:00 a 18:00 h (domingo de 10:00 a 12:00 h; festivos de 10:30 a 12:00 y de 15:00 a 17:00 h); cerrado los jueves. Franja de urgencias nocturnas suspendida; ayuda fuera de horario solo para pacientes habituales y de hospitales asociados mediante contestador. Sin atención nocturna sin cita."
+        "es": "De lunes a sábado de 9:30 a 12:00 y de 15:00 a 18:00 h (domingo de 10:00 a 12:00 h; festivos de 10:30 a 12:00 y de 15:00 a 17:00 h); cerrado los jueves. Franja de urgencias nocturnas suspendida; ayuda fuera de horario solo para pacientes habituales y de hospitales asociados mediante contestador. Sin atención nocturna sin cita.",
+        "it": "Lun–sab 9:30–12:00 e 15:00–18:00 (dom 10:00–12:00; festivi 10:30–12:00, 15:00–17:00); chiuso il giovedì. Sportello di pronto soccorso notturno sospeso; assistenza fuori orario solo per i pazienti abituali e degli ospedali partner tramite segreteria. Nessun accesso senza appuntamento di notte."
       },
       "small_animals": true,
       "url": "https://aamc.aomori.jp/",
@@ -1807,7 +1892,8 @@
       "duty": "Mon, Tue, Thu-Sat 9:00-12:00 and 16:00-18:00; Sun morning only; closed Wednesdays and holidays. After-hours care is not routine but emergencies are handled as far as possible: leave a voicemail or use the contact form; after-hours fee applies.",
       "duty_i18n": {
         "fr": "Lun., mar., jeu.–sam. 9 h–12 h et 16 h–18 h ; dim. le matin uniquement ; fermé le mercredi et les jours fériés. Soins hors horaires non systématiques, mais urgences prises en charge dans la mesure du possible : laissez un message vocal ou utilisez le formulaire de contact ; supplément hors horaires.",
-        "es": "Lunes, martes, jueves, viernes y sábado de 9:00 a 12:00 y de 16:00 a 18:00 h; domingo solo por la mañana; cerrado los miércoles y festivos. La atención fuera de horario no es habitual, pero las urgencias se atienden en la medida de lo posible: deja un mensaje de voz o usa el formulario de contacto; tarifa fuera de horario."
+        "es": "Lunes, martes, jueves, viernes y sábado de 9:00 a 12:00 y de 16:00 a 18:00 h; domingo solo por la mañana; cerrado los miércoles y festivos. La atención fuera de horario no es habitual, pero las urgencias se atienden en la medida de lo posible: deja un mensaje de voz o usa el formulario de contacto; tarifa fuera de horario.",
+        "it": "Lun, mar, gio–sab 9:00–12:00 e 16:00–18:00; domenica solo la mattina; chiuso mercoledì e festivi. Le cure fuori orario non sono di routine, ma le urgenze sono gestite per quanto possibile: lasciare un messaggio in segreteria o usare il modulo di contatto; tariffa fuori orario."
       },
       "small_animals": true,
       "url": "https://www.yasuda-animal-hospital.com/",
@@ -1826,7 +1912,8 @@
       "duty": "Closed Wednesdays; Sunday and holiday afternoons closed. Urgent cases handled promptly; call ahead.",
       "duty_i18n": {
         "fr": "Fermé le mercredi ; fermé les dimanches et jours fériés après-midi. Cas urgents pris en charge rapidement ; appelez avant de venir.",
-        "es": "Cerrado los miércoles y las tardes de domingos y festivos. Los casos urgentes se atienden con rapidez; llama antes."
+        "es": "Cerrado los miércoles y las tardes de domingos y festivos. Los casos urgentes se atienden con rapidez; llama antes.",
+        "it": "Chiuso il mercoledì; chiuso la domenica e nei festivi il pomeriggio. Casi urgenti gestiti subito; telefonare prima."
       },
       "small_animals": true,
       "url": "https://matuzono.com/",
@@ -1849,7 +1936,8 @@
       "checked": "2026-11-10",
       "note": "Own site; clinic page gives only the district (Onsen-machi), no street number. Yamagata has no night hospital per aggregator (lead only). Removed from duty: Weekdays 9:00-12:00 and 16:00-19:00; Sat and Sun 9:00-12:00 and 15:00-16:00; closed Wednesdays and holidays. No after-hours service stated on its site.",
       "duty_i18n": {
-        "es": "Días laborables de 9:00 a 12:00 y de 16:00 a 19:00 h; sábado y domingo de 9:00 a 12:00 y de 15:00 a 16:00 h; cerrado los miércoles y festivos."
+        "es": "Días laborables de 9:00 a 12:00 y de 16:00 a 19:00 h; sábado y domingo de 9:00 a 12:00 y de 15:00 a 16:00 h; cerrado los miércoles y festivos.",
+        "it": "Giorni feriali 9:00–12:00 e 16:00–19:00; sab e dom 9:00–12:00 e 15:00–16:00; chiuso mercoledì e festivi."
       }
     },
     {
@@ -1863,7 +1951,8 @@
       "duty": "Weekdays 9:00-17:00 by appointment; mainly referrals from other vets. No emergency or 24-hour service.",
       "duty_i18n": {
         "fr": "En semaine 9 h–17 h sur rendez-vous ; principalement sur orientation d’autres vétérinaires. Pas de service d’urgence ni de 24 h/24.",
-        "es": "Días laborables de 9:00 a 17:00 h con cita previa; sobre todo derivaciones de otros veterinarios. Sin urgencias ni servicio 24 horas."
+        "es": "Días laborables de 9:00 a 17:00 h con cita previa; sobre todo derivaciones de otros veterinarios. Sin urgencias ni servicio 24 horas.",
+        "it": "Giorni feriali 9:00–17:00 su appuntamento; soprattutto casi inviati da altri veterinari. Nessun pronto soccorso né servizio 24 ore su 24."
       },
       "small_animals": true,
       "url": "https://vmth.vet.iwate-u.ac.jp/",
@@ -1885,7 +1974,8 @@
       "checked": "2026-11-10",
       "note": "Opened owners, outline, closed and companion pages: no phone number or reception hours on them (contact form only), so no phone. Removed from duty: University secondary-care hospital, fully by appointment through your own vet (exotic animals excepted). Closed weekends and public holidays. No emergency or night service stated.",
       "duty_i18n": {
-        "es": "Hospital universitario de atención secundaria, solo con cita a través de tu veterinario habitual (excepto animales exóticos). Cerrado los fines de semana y festivos."
+        "es": "Hospital universitario de atención secundaria, solo con cita a través de tu veterinario habitual (excepto animales exóticos). Cerrado los fines de semana y festivos.",
+        "it": "Ospedale universitario di secondo livello, solo su appuntamento tramite il proprio veterinario (esclusi gli animali esotici). Chiuso nei weekend e nei festivi."
       }
     },
     {
@@ -1903,7 +1993,8 @@
       "checked": "2026-11-10",
       "note": "University hospital. Address from access page. Dog/cat not named explicitly; small animal department listed. Removed from duty: Weekdays 9:00-17:00 (reception closes 16:00), closed weekends and holidays. Appointment only, through your own vet. No emergency service stated.",
       "duty_i18n": {
-        "es": "Días laborables de 9:00 a 17:00 h (la recepción cierra a las 16:00), cerrado los fines de semana y festivos. Solo con cita previa, a través de tu veterinario habitual."
+        "es": "Días laborables de 9:00 a 17:00 h (la recepción cierra a las 16:00), cerrado los fines de semana y festivos. Solo con cita previa, a través de tu veterinario habitual.",
+        "it": "Giorni feriali 9:00–17:00 (l'accettazione chiude alle 16:00), chiuso nei weekend e nei festivi. Solo su appuntamento, tramite il proprio veterinario."
       }
     },
     {
@@ -1917,7 +2008,8 @@
       "duty": "Exams 9:30-16:00, phone 9:00-16:30, closed Fridays; weekend and holiday exams carry an extra fee. Emergencies accepted during exam hours - call first. No night emergency care; after-hours calls go to a separate 24-hour phone advice line (no treatment).",
       "duty_i18n": {
         "fr": "Consultations 9 h 30–16 h, téléphone 9 h–16 h 30, fermé le vendredi ; supplément pour les consultations les week-ends et jours fériés. Urgences acceptées pendant les heures de consultation : appelez d’abord. Pas d’urgences de nuit ; hors horaires, les appels sont dirigés vers une ligne de conseil téléphonique 24 h/24 distincte (sans soins).",
-        "es": "Consultas de 9:30 a 16:00 h, teléfono de 9:00 a 16:30 h, cerrado los viernes; las consultas en fines de semana y festivos llevan un recargo. Urgencias atendidas en horario de consulta; llama antes. Sin urgencias nocturnas; fuera de horario las llamadas van a una línea de consejo telefónico 24 horas aparte (sin tratamiento)."
+        "es": "Consultas de 9:30 a 16:00 h, teléfono de 9:00 a 16:30 h, cerrado los viernes; las consultas en fines de semana y festivos llevan un recargo. Urgencias atendidas en horario de consulta; llama antes. Sin urgencias nocturnas; fuera de horario las llamadas van a una línea de consejo telefónico 24 horas aparte (sin tratamiento).",
+        "it": "Visite 9:30–16:00, telefono 9:00–16:30, chiuso il venerdì; visite nei weekend e festivi con supplemento. Urgenze accettate durante l'orario delle visite: telefonare prima. Nessun pronto soccorso notturno; fuori orario le chiamate vanno a una linea di consulenza telefonica separata 24 ore su 24 (nessun trattamento)."
       },
       "small_animals": true,
       "url": "https://tuat-kamec.org/",
@@ -1940,7 +2032,8 @@
       "checked": "2026-11-10",
       "note": "University hospital. Address is the page's mailing address (183-8509 Saiwai-cho 3-5-8); no separate street address for the hospital on the page. Removed from duty: Appointments by phone on weekdays 9:00-17:00. Treats small animals and pets. No emergency service stated.",
       "duty_i18n": {
-        "es": "Citas por teléfono en días laborables de 9:00 a 17:00 h. Atiende pequeños animales y mascotas."
+        "es": "Citas por teléfono en días laborables de 9:00 a 17:00 h. Atiende pequeños animales y mascotas.",
+        "it": "Appuntamenti telefonici nei giorni feriali 9:00–17:00. Cura piccoli animali e animali da compagnia."
       }
     },
     {
@@ -1954,7 +2047,8 @@
       "duty": "Mornings Mon-Fri (check-in by 11:30), by appointment and vet referral only. No emergency or 24-hour service; urgent cases via your own referring vet.",
       "duty_i18n": {
         "fr": "Le matin du lundi au vendredi (admission avant 11 h 30), sur rendez-vous et orientation vétérinaire uniquement. Pas de service d’urgence ni de 24 h/24 ; cas urgents via votre vétérinaire référent.",
-        "es": "Mañanas de lunes a viernes (registro antes de las 11:30), solo con cita previa y derivación veterinaria. Sin urgencias ni servicio 24 horas; casos urgentes a través de tu veterinario que te deriva."
+        "es": "Mañanas de lunes a viernes (registro antes de las 11:30), solo con cita previa y derivación veterinaria. Sin urgencias ni servicio 24 horas; casos urgentes a través de tu veterinario que te deriva.",
+        "it": "Mattina lun–ven (check-in entro le 11:30), solo su appuntamento e su invio del veterinario. Nessun pronto soccorso né servizio 24 ore su 24; casi urgenti tramite il proprio veterinario curante."
       },
       "small_animals": true,
       "url": "https://www.animalhospital.gifu-u.ac.jp/",
@@ -1972,7 +2066,8 @@
       "duty": "Night and emergency house-call service, roughly 19:00-6:00 (may end early). Mainly rabbits, ferrets and hamsters; dogs and cats case by case. Cash only. One vet - may be unreachable during other emergencies.",
       "duty_i18n": {
         "fr": "Service de visites à domicile de nuit et d’urgence, environ 19 h–6 h (peut s’arrêter plus tôt). Principalement lapins, furets et hamsters ; chiens et chats selon les cas. Paiement en espèces uniquement. Un seul vétérinaire : peut être injoignable pendant d’autres urgences.",
-        "es": "Servicio de urgencias y visitas a domicilio nocturnas, aproximadamente de 19:00 a 6:00 h (puede terminar antes). Sobre todo conejos, hurones y hámsteres; perros y gatos según el caso. Solo efectivo. Un solo veterinario: puede no estar localizable durante otras urgencias."
+        "es": "Servicio de urgencias y visitas a domicilio nocturnas, aproximadamente de 19:00 a 6:00 h (puede terminar antes). Sobre todo conejos, hurones y hámsteres; perros y gatos según el caso. Solo efectivo. Un solo veterinario: puede no estar localizable durante otras urgencias.",
+        "it": "Servizio di pronto soccorso notturno e visite a domicilio, circa 19:00–6:00 (può terminare prima). Soprattutto conigli, furetti e criceti; cani e gatti caso per caso. Solo contanti. Un solo veterinario: potrebbe essere irraggiungibile durante altre urgenze."
       },
       "small_animals": true,
       "url": "https://animal.oita.jp/",

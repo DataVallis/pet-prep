@@ -97,7 +97,8 @@
       "duty": "Vets on site 24 hours a day, 7 days a week, including public holidays. WhatsApp 0812 3208 1334.",
       "duty_i18n": {
         "fr": "Vétérinaires sur place 24 h/24, 7 j/7, jours fériés compris. WhatsApp : 0812 3208 1334.",
-        "es": "Veterinarios presentes las 24 horas, 7 días a la semana, festivos incluidos. WhatsApp 0812 3208 1334."
+        "es": "Veterinarios presentes las 24 horas, 7 días a la semana, festivos incluidos. WhatsApp 0812 3208 1334.",
+        "it": "Veterinari presenti 24 ore su 24, 7 giorni su 7, festivi compresi. WhatsApp 0812 3208 1334."
       },
       "url": "https://www.sunsetvetbali.com/",
       "source_url": "https://www.sunsetvetbali.com/contact-us",
@@ -116,7 +117,8 @@
       "duty": "Open 08:00-22:00. For out-of-hours emergencies use the Kuta 24-hour hospital (0361 934 8915).",
       "duty_i18n": {
         "fr": "Ouvert 8 h–22 h. Pour les urgences en dehors des heures d’ouverture, s’adresser à l’hôpital ouvert 24 h/24 de Kuta (0361 934 8915).",
-        "es": "Abierto de 8:00 a 22:00 h. Para urgencias fuera de horario, el hospital 24 horas de Kuta (0361 934 8915)."
+        "es": "Abierto de 8:00 a 22:00 h. Para urgencias fuera de horario, el hospital 24 horas de Kuta (0361 934 8915).",
+        "it": "Aperto 8:00–22:00. Per le emergenze fuori orario ricorrere all'ospedale di Kuta aperto 24 ore su 24 (0361 934 8915)."
       },
       "url": "https://www.sunsetvetbali.com/",
       "source_url": "https://www.sunsetvetbali.com/contact-us",
@@ -135,7 +137,8 @@
       "duty": "Call ahead to confirm opening hours and emergency cover.",
       "duty_i18n": {
         "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences.",
-        "es": "Llama antes para confirmar el horario y la cobertura de urgencias."
+        "es": "Llama antes para confirmar el horario y la cobertura de urgencias.",
+        "it": "Telefonare in anticipo per confermare orari e copertura delle emergenze."
       },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
@@ -154,7 +157,8 @@
       "duty": "24-hour emergency care; emergency line +62 811 389 3171.",
       "duty_i18n": {
         "fr": "Urgences 24 h/24 ; ligne d’urgence : +62 811 389 3171.",
-        "es": "Urgencias las 24 horas; línea de urgencias +62 811 389 3171."
+        "es": "Urgencias las 24 horas; línea de urgencias +62 811 389 3171.",
+        "it": "Pronto soccorso 24 ore su 24; linea di emergenza +62 811 389 3171."
       },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
@@ -173,7 +177,8 @@
       "duty": "24-hour critical care; emergency line +62 811 389 3171.",
       "duty_i18n": {
         "fr": "Soins intensifs 24 h/24 ; ligne d’urgence : +62 811 389 3171.",
-        "es": "Cuidados críticos las 24 horas; línea de urgencias +62 811 389 3171."
+        "es": "Cuidados críticos las 24 horas; línea de urgencias +62 811 389 3171.",
+        "it": "Terapia intensiva 24 ore su 24; linea di emergenza +62 811 389 3171."
       },
       "url": "https://balivetclinic.com/",
       "source_url": "https://balivetclinic.com/bvc-services/ambulance-service/",
@@ -192,7 +197,8 @@
       "duty": "Open daily 09:00-21:00.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h–21 h.",
-        "es": "Abierto todos los días de 9:00 a 21:00 h."
+        "es": "Abierto todos los días de 9:00 a 21:00 h.",
+        "it": "Aperto tutti i giorni 9:00–21:00."
       },
       "url": "https://www.islandvetbali.com/",
       "source_url": "https://www.islandvetbali.com/contact-us",
@@ -210,7 +216,8 @@
       "duty": "Advertises a 24-hour emergency vet service. WhatsApp 0811 3993630.",
       "duty_i18n": {
         "fr": "Annonce un service vétérinaire d’urgence 24 h/24. WhatsApp : 0811 3993630.",
-        "es": "Anuncia un servicio de urgencias veterinarias las 24 horas. WhatsApp 0811 3993630."
+        "es": "Anuncia un servicio de urgencias veterinarias las 24 horas. WhatsApp 0811 3993630.",
+        "it": "Dichiara un servizio veterinario di emergenza 24 ore su 24. WhatsApp 0811 3993630."
       },
       "url": "https://www.kedongananveterinary.com/",
       "source_url": "https://www.kedongananveterinary.com/",
@@ -229,7 +236,8 @@
       "duty": "Reported to be open around the clock; call to confirm.",
       "duty_i18n": {
         "fr": "Ouvert en continu d’après les informations disponibles ; appelez pour confirmer.",
-        "es": "Según se indica, abierto las 24 horas; llama para confirmarlo."
+        "es": "Según se indica, abierto las 24 horas; llama para confirmarlo.",
+        "it": "Risulta aperto 24 ore su 24; chiamare per conferma."
       },
       "source_url": "https://www.balipetcrusaders.org/recommended-vets",
       "note": "Only NGO lists (Bali Pet Crusaders recommended vets; The B.A.R.N. vet directory) say 24 hours; no own website opened, so emergency_24h left false. Address from a search result title only (voofla), not a page opened."
@@ -246,7 +254,8 @@
       "duty": "Reported to be open around the clock; call to confirm.",
       "duty_i18n": {
         "fr": "Ouvert en continu d’après les informations disponibles ; appelez pour confirmer.",
-        "es": "Según se indica, abierto las 24 horas; llama para confirmarlo."
+        "es": "Según se indica, abierto las 24 horas; llama para confirmarlo.",
+        "it": "Risulta aperto 24 ore su 24; chiamare per conferma."
       },
       "source_url": "https://www.balipetcrusaders.org/recommended-vets",
       "note": "Bali Pet Crusaders list says 24 hours; no own site; no address. Left false."
@@ -264,7 +273,8 @@
       "duty": "Emergency unit (IGD) open 24 hours; 24-hour WhatsApp admin 0822 2010 5100.",
       "duty_i18n": {
         "fr": "Service des urgences (IGD) ouvert 24 h/24 ; accueil joignable sur WhatsApp 24 h/24 : 0822 2010 5100.",
-        "es": "Unidad de urgencias (IGD) abierta las 24 horas; administración por WhatsApp las 24 horas 0822 2010 5100."
+        "es": "Unidad de urgencias (IGD) abierta las 24 horas; administración por WhatsApp las 24 horas 0822 2010 5100.",
+        "it": "Pronto soccorso (IGD) aperto 24 ore su 24; segreteria WhatsApp 24 ore su 24 0822 2010 5100."
       },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
@@ -283,7 +293,8 @@
       "duty": "Regular hours; for 24-hour emergencies use the Tomang branch (0822 2010 5100).",
       "duty_i18n": {
         "fr": "Horaires habituels ; pour les urgences 24 h/24, s’adresser à la clinique de Tomang (0822 2010 5100).",
-        "es": "Horario normal; para urgencias las 24 horas, la sucursal de Tomang (0822 2010 5100)."
+        "es": "Horario normal; para urgencias las 24 horas, la sucursal de Tomang (0822 2010 5100).",
+        "it": "Orari normali; per le emergenze 24 ore su 24 rivolgersi alla sede di Tomang (0822 2010 5100)."
       },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
@@ -302,7 +313,8 @@
       "duty": "Regular hours; for 24-hour emergencies use the Tomang branch (0822 2010 5100).",
       "duty_i18n": {
         "fr": "Horaires habituels ; pour les urgences 24 h/24, s’adresser à la clinique de Tomang (0822 2010 5100).",
-        "es": "Horario normal; para urgencias las 24 horas, la sucursal de Tomang (0822 2010 5100)."
+        "es": "Horario normal; para urgencias las 24 horas, la sucursal de Tomang (0822 2010 5100).",
+        "it": "Orari normali; per le emergenze 24 ore su 24 rivolgersi alla sede di Tomang (0822 2010 5100)."
       },
       "url": "https://andistaanimalcare.com/",
       "source_url": "https://andistaanimalcare.com/",
@@ -321,7 +333,8 @@
       "duty": "Call ahead to confirm opening hours and emergency cover.",
       "duty_i18n": {
         "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences.",
-        "es": "Llama antes para confirmar el horario y la cobertura de urgencias."
+        "es": "Llama antes para confirmar el horario y la cobertura de urgencias.",
+        "it": "Telefonare in anticipo per confermare orari e copertura delle emergenze."
       },
       "url": "https://sehatianimalcare.com/",
       "source_url": "https://sehatianimalcare.com/",
@@ -340,7 +353,8 @@
       "duty": "Call ahead to confirm opening hours and emergency cover.",
       "duty_i18n": {
         "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences.",
-        "es": "Llama antes para confirmar el horario y la cobertura de urgencias."
+        "es": "Llama antes para confirmar el horario y la cobertura de urgencias.",
+        "it": "Telefonare in anticipo per confermare orari e copertura delle emergenze."
       },
       "url": "https://sehatianimalcare.com/",
       "source_url": "https://sehatianimalcare.com/",
@@ -359,7 +373,8 @@
       "duty": "Open 08:00-20:00. Urgent care offered during opening hours.",
       "duty_i18n": {
         "fr": "Ouvert 8 h–20 h. Soins urgents assurés pendant les heures d’ouverture.",
-        "es": "Abierto de 8:00 a 20:00 h. Atención urgente durante el horario de apertura."
+        "es": "Abierto de 8:00 a 20:00 h. Atención urgente durante el horario de apertura.",
+        "it": "Aperto 8:00–20:00. Cure urgenti durante l'orario di apertura."
       },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/kuningan-branch",
@@ -378,7 +393,8 @@
       "duty": "Open 08:00-20:00.",
       "duty_i18n": {
         "fr": "Ouvert 8 h–20 h.",
-        "es": "Abierto de 8:00 a 20:00 h."
+        "es": "Abierto de 8:00 a 20:00 h.",
+        "it": "Aperto 8:00–20:00."
       },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/pik-branch",
@@ -397,7 +413,8 @@
       "duty": "Open every day 08:00-22:00.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 8 h–22 h.",
-        "es": "Abierto todos los días de 8:00 a 22:00 h."
+        "es": "Abierto todos los días de 8:00 a 22:00 h.",
+        "it": "Aperto tutti i giorni 8:00–22:00."
       },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/radio-dalam-branch",
@@ -416,7 +433,8 @@
       "duty": "Open daily 08:00-20:00.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 8 h–20 h.",
-        "es": "Abierto todos los días de 8:00 a 20:00 h."
+        "es": "Abierto todos los días de 8:00 a 20:00 h.",
+        "it": "Aperto tutti i giorni 8:00–20:00."
       },
       "url": "https://www.modernvet.co/",
       "source_url": "https://www.modernvet.co/kemang",
@@ -435,7 +453,8 @@
       "duty": "Emergency care offered; call ahead for hours.",
       "duty_i18n": {
         "fr": "Soins d’urgence assurés ; appelez pour connaître les horaires.",
-        "es": "Atiende urgencias; llama antes para consultar el horario."
+        "es": "Atiende urgencias; llama antes para consultar el horario.",
+        "it": "Offre pronto soccorso; telefonare in anticipo per gli orari."
       },
       "url": "https://medivet.pet/",
       "source_url": "https://medivet.pet/",
@@ -482,7 +501,8 @@
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h.",
-        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h."
+        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h.",
+        "it": "Lun–sab 9:00–20:00; dom e festivi 9:00–17:00."
       },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
@@ -500,7 +520,8 @@
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h.",
-        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h."
+        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h.",
+        "it": "Lun–sab 9:00–20:00; dom e festivi 9:00–17:00."
       },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
@@ -518,7 +539,8 @@
       "duty": "Mon-Sat 09:00-20:00; Sun and public holidays 09:00-17:00.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–20 h ; dim. et jours fériés 9 h–17 h.",
-        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h."
+        "es": "De lunes a sábado de 9:00 a 20:00 h; domingo y festivos de 9:00 a 17:00 h.",
+        "it": "Lun–sab 9:00–20:00; dom e festivi 9:00–17:00."
       },
       "url": "https://www.jakartavet.com/",
       "source_url": "https://www.jakartavet.com/"
@@ -535,7 +557,8 @@
       "duty": "Advertises a 24-hour emergency service; call first to confirm a vet is available.",
       "duty_i18n": {
         "fr": "Annonce un service d’urgences 24 h/24 ; appelez d’abord pour vous assurer qu’un vétérinaire est disponible.",
-        "es": "Anuncia un servicio de urgencias las 24 horas; llama antes para confirmar que hay un veterinario disponible."
+        "es": "Anuncia un servicio de urgencias las 24 horas; llama antes para confirmar que hay un veterinario disponible.",
+        "it": "Dichiara un servizio di emergenza 24 ore su 24; telefonare prima per accertarsi che ci sia un veterinario disponibile."
       },
       "url": "https://rnpetcare.com/",
       "source_url": "https://rnpetcare.com/layanan-kesehatan-hewan-24-jam/",
@@ -556,7 +579,8 @@
       "source_url": "https://skhb.ipb.ac.id/rshp/",
       "note": "Official SKHB page; no 24-hour or emergency wording (also svmbs.ipb.ac.id/?p=17967). Removed from duty: Mon-Wed 10:00-16:00, Fri 08:00-16:30 (Thu and weekend not listed); call ahead.",
       "duty_i18n": {
-        "es": "De lunes a miércoles de 10:00 a 16:00 h, viernes de 8:00 a 16:30 h; llama antes."
+        "es": "De lunes a miércoles de 10:00 a 16:00 h, viernes de 8:00 a 16:30 h; llama antes.",
+        "it": "Lun–mer 10:00–16:00, ven 8:00–16:30; telefonare in anticipo."
       }
     },
     {
@@ -572,7 +596,8 @@
       "duty": "Emergency unit (IGD) open 24 hours; contact via WhatsApp admin.",
       "duty_i18n": {
         "fr": "Service des urgences (IGD) ouvert 24 h/24 ; contact via l’accueil sur WhatsApp.",
-        "es": "Unidad de urgencias (IGD) abierta las 24 horas; contacto por WhatsApp de administración."
+        "es": "Unidad de urgencias (IGD) abierta las 24 horas; contacto por WhatsApp de administración.",
+        "it": "Pronto soccorso (IGD) aperto 24 ore su 24; contatto tramite la segreteria WhatsApp."
       },
       "url": "https://rsh.unair.ac.id/",
       "source_url": "https://rsh.unair.ac.id/",
@@ -590,7 +615,8 @@
       "duty": "Call ahead to confirm opening hours and emergency cover.",
       "duty_i18n": {
         "fr": "Appelez pour confirmer les horaires d’ouverture et la prise en charge des urgences.",
-        "es": "Llama antes para confirmar el horario y la cobertura de urgencias."
+        "es": "Llama antes para confirmar el horario y la cobertura de urgencias.",
+        "it": "Telefonare in anticipo per confermare orari e copertura delle emergenze."
       },
       "url": "https://kandpclinic.com/",
       "source_url": "https://kandpclinic.com/",
@@ -608,7 +634,8 @@
       "duty": "Mon-Fri 07:30-15:00; Sat 08:00-14:00 (online registration).",
       "duty_i18n": {
         "fr": "Lun.–ven. 7 h 30–15 h ; sam. 8 h–14 h (inscription en ligne).",
-        "es": "De lunes a viernes de 7:30 a 15:00 h; sábado de 8:00 a 14:00 h (registro en línea)."
+        "es": "De lunes a viernes de 7:30 a 15:00 h; sábado de 8:00 a 14:00 h (registro en línea).",
+        "it": "Lun–ven 7:30–15:00; sab 8:00–14:00 (registrazione online)."
       },
       "url": "https://surabaya.go.id/id/berita/76481/pemkot-surabaya-sediakan-layanan-klinik-hewan-secara-gratis",
       "source_url": "https://surabaya.go.id/id/berita/76481/pemkot-surabaya-sediakan-layanan-klinik-hewan-secara-gratis",
@@ -624,7 +651,8 @@
       "duty": "Mon-Thu 07:00-15:30, Fri 07:00-14:30, Sat by appointment.",
       "duty_i18n": {
         "fr": "Lun.–jeu. 7 h–15 h 30, ven. 7 h–14 h 30, sam. sur rendez-vous.",
-        "es": "De lunes a jueves de 7:00 a 15:30 h, viernes de 7:00 a 14:30 h, sábado con cita previa."
+        "es": "De lunes a jueves de 7:00 a 15:30 h, viernes de 7:00 a 14:30 h, sábado con cita previa.",
+        "it": "Lun–gio 7:00–15:30, ven 7:00–14:30, sab su appuntamento."
       },
       "url": "https://disnak.jatimprov.go.id/web/pages/33-rumah-sakit-hewan-dinas-peternakan-jawa-timur",
       "source_url": "https://disnak.jatimprov.go.id/web/pages/33-rumah-sakit-hewan-dinas-peternakan-jawa-timur",
@@ -643,7 +671,8 @@
       "duty": "Open every day, 24 hours non-stop, including an emergency unit. 24-hour mobile 0857-0111-1228.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours, 24 h/24 sans interruption, avec un service d’urgences. Mobile 24 h/24 : 0857-0111-1228.",
-        "es": "Abierto todos los días, las 24 horas sin interrupción, con unidad de urgencias. Móvil 24 horas 0857-0111-1228."
+        "es": "Abierto todos los días, las 24 horas sin interrupción, con unidad de urgencias. Móvil 24 horas 0857-0111-1228.",
+        "it": "Aperto tutti i giorni, 24 ore su 24 senza interruzione, con pronto soccorso. Cellulare attivo 24 ore su 24: 0857-0111-1228."
       },
       "url": "https://klinikhewanjogja.com/",
       "source_url": "https://klinikhewanjogja.com/",
@@ -662,7 +691,8 @@
       "duty": "Open Monday to Sunday; call for hours.",
       "duty_i18n": {
         "fr": "Ouvert du lundi au dimanche ; appelez pour connaître les horaires.",
-        "es": "Abierto de lunes a domingo; llama para consultar el horario."
+        "es": "Abierto de lunes a domingo; llama para consultar el horario.",
+        "it": "Aperto dal lunedì alla domenica; telefonare per gli orari."
       },
       "url": "https://animalovavetclinic.wordpress.com/",
       "source_url": "https://animalovavetclinic.wordpress.com/"
@@ -680,7 +710,8 @@
       "duty": "Open every day, 24 hours non-stop, including an emergency unit.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours, 24 h/24 sans interruption, avec un service d’urgences.",
-        "es": "Abierto todos los días, las 24 horas sin interrupción, con unidad de urgencias."
+        "es": "Abierto todos los días, las 24 horas sin interrupción, con unidad de urgencias.",
+        "it": "Aperto tutti i giorni, 24 ore su 24 senza interruzione, con pronto soccorso."
       },
       "url": "https://klinikhewankhjsemarang.com/",
       "source_url": "https://klinikhewankhjsemarang.com/",
@@ -699,7 +730,8 @@
       "duty": "Open 08:00-21:00; inpatients monitored around the clock, night staff 22:00-07:00.",
       "duty_i18n": {
         "fr": "Ouvert 8 h–21 h ; patients hospitalisés surveillés en permanence, personnel de nuit 22 h–7 h.",
-        "es": "Abierto de 8:00 a 21:00 h; pacientes ingresados vigilados las 24 horas, personal nocturno de 22:00 a 7:00 h."
+        "es": "Abierto de 8:00 a 21:00 h; pacientes ingresados vigilados las 24 horas, personal nocturno de 22:00 a 7:00 h.",
+        "it": "Aperto 8:00–21:00; i degenti sono monitorati di continuo, personale notturno 22:00–7:00."
       },
       "url": "https://satwasehatindonesia.com/",
       "source_url": "https://satwasehatindonesia.com/",
@@ -718,7 +750,8 @@
       "duty": "Mon-Sat 09:00-18:00.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–18 h.",
-        "es": "De lunes a sábado de 9:00 a 18:00 h."
+        "es": "De lunes a sábado de 9:00 a 18:00 h.",
+        "it": "Lun–sab 9:00–18:00."
       },
       "url": "https://highlandvetbandung.wixsite.com/website",
       "source_url": "https://highlandvetbandung.wixsite.com/website"
@@ -736,7 +769,8 @@
       "duty": "Call ahead for appointments, including Sundays and public holidays.",
       "duty_i18n": {
         "fr": "Appelez pour prendre rendez-vous, y compris le dimanche et les jours fériés.",
-        "es": "Llama antes para pedir cita, también domingos y festivos."
+        "es": "Llama antes para pedir cita, también domingos y festivos.",
+        "it": "Telefonare in anticipo per gli appuntamenti, anche di domenica e nei festivi."
       },
       "url": "https://dokterhewanbandung.com/",
       "source_url": "https://dokterhewanbandung.com/contact-us",
@@ -755,7 +789,8 @@
       "duty": "Advertised as a 24-hour clinic with 24-hour emergency service; call ahead.",
       "duty_i18n": {
         "fr": "Annoncée comme clinique ouverte 24 h/24 avec service d’urgences 24 h/24 ; appelez avant de venir.",
-        "es": "Se anuncia como clínica 24 horas con servicio de urgencias las 24 horas; llama antes."
+        "es": "Se anuncia como clínica 24 horas con servicio de urgencias las 24 horas; llama antes.",
+        "it": "Si presenta come clinica 24 ore su 24 con pronto soccorso 24 ore su 24; telefonare in anticipo."
       },
       "url": "https://mamsprivatepetville.com/",
       "source_url": "https://mamsprivatepetville.com/",
@@ -774,7 +809,8 @@
       "duty": "Operating 07:00-02:00 (WITA); doctor consultations until 02:00; emergency service for critical cases advertised. WhatsApp 0823-3292-2222.",
       "duty_i18n": {
         "fr": "Ouvert 7 h–2 h (WITA) ; consultations jusqu’à 2 h ; service d’urgences annoncé pour les cas critiques. WhatsApp : 0823-3292-2222.",
-        "es": "Abierto de 7:00 a 2:00 h (WITA); consultas médicas hasta las 2:00; anuncia servicio de urgencias para casos críticos. WhatsApp 0823-3292-2222."
+        "es": "Abierto de 7:00 a 2:00 h (WITA); consultas médicas hasta las 2:00; anuncia servicio de urgencias para casos críticos. WhatsApp 0823-3292-2222.",
+        "it": "Aperto 7:00–2:00 (WITA); visite mediche fino alle 2:00; dichiara un servizio di pronto soccorso per i casi critici. WhatsApp 0823-3292-2222."
       },
       "url": "https://makassarpetclinic.com/",
       "source_url": "https://makassarpetclinic.com/",
@@ -793,7 +829,8 @@
       "duty": "Open daily 09:00-19:00; cats, emergencies handled when called.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h–19 h ; clinique pour chats, urgences prises en charge sur appel.",
-        "es": "Abierto todos los días de 9:00 a 19:00 h; atiende gatos; urgencias si se llama antes."
+        "es": "Abierto todos los días de 9:00 a 19:00 h; atiende gatos; urgencias si se llama antes.",
+        "it": "Aperto tutti i giorni 9:00–19:00; gatti, emergenze gestite su chiamata."
       },
       "url": "https://duniakucing.id/",
       "source_url": "https://duniakucing.id/kontak-kami/",
@@ -812,7 +849,8 @@
       "duty": "Vets on rota roughly 08:00-21:00 on most days; call to book.",
       "duty_i18n": {
         "fr": "Vétérinaires présents environ 8 h–21 h la plupart des jours ; appelez pour prendre rendez-vous.",
-        "es": "Veterinarios de turno aproximadamente de 8:00 a 21:00 h casi todos los días; llama para pedir cita."
+        "es": "Veterinarios de turno aproximadamente de 8:00 a 21:00 h casi todos los días; llama para pedir cita.",
+        "it": "Veterinari a turno circa 8:00–21:00 nella maggior parte dei giorni; telefonare per prenotare."
       },
       "url": "https://zeroanimalclinic.co.id/",
       "source_url": "https://zeroanimalclinic.co.id/",

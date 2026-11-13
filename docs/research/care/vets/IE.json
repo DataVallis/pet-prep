@@ -73,7 +73,8 @@
         "hr": "Otvoreno 24/7, svaki dan u godini; hitni prijem bez najave",
         "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres; Notfälle auch ohne Termin",
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année ; urgences sans rendez-vous",
-        "es": "Abierto 24/7, todos los días del año; urgencias sin cita"
+        "es": "Abierto 24/7, todos los días del año; urgencias sin cita",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, tutto l'anno; pronto soccorso senza appuntamento"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/dundrum-vets",
@@ -96,7 +97,8 @@
         "hr": "Otvoreno 24/7, svaki dan u godini; hitna služba otvorena i za klijente drugih klinika Village Vets",
         "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres; Notdienst auch für Kunden anderer Village-Vets-Kliniken",
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année ; service d’urgences ouvert aux clients des autres cliniques Village Vets",
-        "es": "Abierto 24/7, todos los días del año; urgencias también para clientes de otras clínicas Village Vets"
+        "es": "Abierto 24/7, todos los días del año; urgencias también para clientes de otras clínicas Village Vets",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, tutto l'anno; pronto soccorso aperto anche ai clienti delle altre cliniche Village Vets"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
@@ -119,7 +121,8 @@
         "hr": "Otvoreno 24/7, svaki dan u godini",
         "de": "Rund um die Uhr geöffnet, an jedem Tag des Jahres",
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année",
-        "es": "Abierto 24/7, todos los días del año"
+        "es": "Abierto 24/7, todos los días del año",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, tutto l'anno"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
@@ -142,7 +145,8 @@
         "hr": "Hitna služba 24 sata, 365 dana u godini. Linija izvan radnog vremena 01 517 5213; izvan uobičajenog radnog vremena uz doplatak",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr. Telefon außerhalb der Sprechzeiten 01 517 5213; außerhalb der regulären Zeiten Zuschlag",
         "fr": "Service d’urgences 24 h/24, 365 jours par an. Ligne hors horaires : 01 517 5213 ; supplément en dehors des heures habituelles",
-        "es": "Urgencias las 24 horas, 365 días al año. Línea fuera de horario 01 517 5213; tarifa adicional fuera del horario habitual"
+        "es": "Urgencias las 24 horas, 365 días al año. Línea fuera de horario 01 517 5213; tarifa adicional fuera del horario habitual",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Linea fuori orario 01 517 5213; costi aggiuntivi fuori dall'orario normale"
       },
       "small_animals": true,
       "url": "https://www.myvet.ie/emergencies",
@@ -164,7 +168,8 @@
         "hr": "Hitna služba izvan radnog vremena 24/7 za registrirane klijente",
         "de": "Notdienst rund um die Uhr außerhalb der Sprechzeiten für registrierte Kunden",
         "fr": "Service d’urgences 24 h/24, 7 j/7 en dehors des heures d’ouverture pour les clients inscrits",
-        "es": "Urgencias fuera de horario 24/7 para clientes registrados"
+        "es": "Urgencias fuera de horario 24/7 para clientes registrados",
+        "it": "Pronto soccorso fuori orario 24 ore su 24, 7 giorni su 7, per i clienti registrati"
       },
       "small_animals": true,
       "url": "https://www.wicklowvets.ie/",
@@ -187,7 +192,8 @@
         "hr": "Dostupna hitna služba 24 sata",
         "de": "Notdienst rund um die Uhr verfügbar",
         "fr": "Service d’urgences 24 h/24 disponible",
-        "es": "Servicio de urgencias las 24 horas"
+        "es": "Servicio de urgencias las 24 horas",
+        "it": "Pronto soccorso disponibile 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.murphysheerinvets.ie/",
@@ -210,7 +216,8 @@
         "hr": "Hitna bolnica izvan radnog vremena: radnim danom 18–8; vikendom i blagdanima 24 sata. Nazovi prije polaska",
         "de": "Notfallklinik außerhalb der Sprechzeiten: unter der Woche 18–8 Uhr; am Wochenende und an Feiertagen rund um die Uhr. Bitte vor dem Kommen anrufen",
         "fr": "Hôpital d’urgences en dehors des heures d’ouverture : en semaine 18 h–8 h ; 24 h/24 le week-end et les jours fériés. Appelez avant de venir",
-        "es": "Hospital de urgencias fuera de horario: noches de lunes a viernes de 18:00 a 8:00 h; las 24 horas los fines de semana y festivos. Llama antes de ir"
+        "es": "Hospital de urgencias fuera de horario: noches de lunes a viernes de 18:00 a 8:00 h; las 24 horas los fines de semana y festivos. Llama antes de ir",
+        "it": "Ospedale di pronto soccorso fuori orario: notti feriali 18:00–8:00; 24 ore su 24 nei fine settimana e nei festivi. Telefonare prima di partire"
       },
       "small_animals": true,
       "url": "https://petemergencyhospital.ie/contact/",
@@ -232,7 +239,8 @@
         "hr": "Otvoreno sedam dana u tjednu; hitni slučajevi izvan radnog vremena preko Pet Emergency Hospital",
         "de": "An sieben Tagen die Woche geöffnet; Notfälle außerhalb der Sprechzeiten über das Pet Emergency Hospital",
         "fr": "Ouvert 7 j/7 ; urgences en dehors des heures d’ouverture via le Pet Emergency Hospital",
-        "es": "Abierto siete días a la semana; urgencias fuera de horario en el Pet Emergency Hospital"
+        "es": "Abierto siete días a la semana; urgencias fuera de horario en el Pet Emergency Hospital",
+        "it": "Aperto sette giorni su sette; emergenze fuori orario tramite il Pet Emergency Hospital"
       },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/",
@@ -254,7 +262,8 @@
         "hr": "Uz prethodnu najavu (pon, uto, čet, pet 16–18:30; sub 9–11:30). Izvan radnog vremena: pogledaj stranicu o hitnoj skrbi",
         "de": "Nach Terminvereinbarung (Mo, Di, Do, Fr 16–18.30 Uhr; Sa 9–11.30 Uhr). Außerhalb der Sprechzeiten: siehe Seite zur Notfallversorgung",
         "fr": "Sur rendez-vous (lun., mar., jeu., ven. 16 h–18 h 30 ; sam. 9 h–11 h 30). En dehors des heures d’ouverture : voir la page consacrée aux urgences",
-        "es": "Con cita previa (lunes, martes, jueves y viernes de 16:00 a 18:30 h; sábado de 9:00 a 11:30 h). Fuera de horario: consulta la página de urgencias"
+        "es": "Con cita previa (lunes, martes, jueves y viernes de 16:00 a 18:30 h; sábado de 9:00 a 11:30 h). Fuera de horario: consulta la página de urgencias",
+        "it": "Su appuntamento (lun, mar, gio, ven 16:00–18:30; sab 9:00–11:30). Fuori orario: vedere la pagina del pronto soccorso"
       },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
@@ -276,7 +285,8 @@
         "hr": "pon–pet 8–19, sub 9–12; hitni slučajevi noću i vikendom preko Pet Emergency Hospital (prvo nazovi)",
         "de": "Mo–Fr 8–19 Uhr, Sa 9–12 Uhr; nächtliche Notfälle und Notfälle am Wochenende über das Pet Emergency Hospital (zuerst anrufen)",
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–12 h ; urgences la nuit et le week-end via le Pet Emergency Hospital (appelez d’abord)",
-        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 12:00 h; urgencias nocturnas y de fin de semana en el Pet Emergency Hospital (llama antes)"
+        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 12:00 h; urgencias nocturnas y de fin de semana en el Pet Emergency Hospital (llama antes)",
+        "it": "Lun–ven 8:00–19:00, sab 9:00–12:00; emergenze notturne e nel fine settimana tramite il Pet Emergency Hospital (telefonare prima)"
       },
       "small_animals": true,
       "url": "https://sandymountvets.ie/contact-us/",
@@ -297,7 +307,8 @@
         "hr": "pon–pet 8–19, sub 9:30–12:30; hitni slučajevi izvan radnog vremena preko MyVet Lucan (01 601 0060)",
         "de": "Mo–Fr 8–19 Uhr, Sa 9.30–12.30 Uhr; Notfälle außerhalb der Sprechzeiten über MyVet Lucan (01 601 0060)",
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h 30–12 h 30 ; urgences en dehors des heures d’ouverture via MyVet Lucan (01 601 0060)",
-        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:30 a 12:30 h; urgencias fuera de horario en MyVet Lucan (01 601 0060)"
+        "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:30 a 12:30 h; urgencias fuera de horario en MyVet Lucan (01 601 0060)",
+        "it": "Lun–ven 8:00–19:00, sab 9:30–12:30; emergenze fuori orario tramite MyVet Lucan (01 601 0060)"
       },
       "small_animals": true,
       "url": "https://www.blackrockvet.ie/",
@@ -319,7 +330,8 @@
         "hr": "pon–pet 9–19, sub 9–17; izvan radnog vremena pozivi se preusmjeravaju na hitne klinike grupe koje rade 24/7",
         "de": "Mo–Fr 9–19 Uhr, Sa 9–17 Uhr; nach Praxisschluss werden Anrufe an die 24-Stunden-Notfallkliniken der Gruppe weitergeleitet",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–17 h ; en dehors des heures d’ouverture, les appels sont dirigés vers les cliniques d’urgences 24 h/24, 7 j/7 du groupe",
-        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 17:00 h; fuera de horario, las llamadas se derivan a las clínicas de urgencias 24/7 del grupo"
+        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 17:00 h; fuera de horario, las llamadas se derivan a las clínicas de urgencias 24/7 del grupo",
+        "it": "Lun–ven 9:00–19:00, sab 9:00–17:00; fuori orario le chiamate vengono indirizzate alle cliniche di emergenza del gruppo, aperte 24 ore su 24, 7 giorni su 7"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
@@ -341,7 +353,8 @@
         "hr": "pon–pet 9–19, sub 9–17 samo odabranim subotama; hitni slučajevi: nazovi najbližu kliniku Village Vets",
         "de": "Mo–Fr 9–19 Uhr, Sa 9–17 Uhr an ausgewählten Samstagen; dringende Fälle: die nächstgelegene Village-Vets-Klinik anrufen",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–17 h certains samedis ; cas urgents : appelez la clinique Village Vets la plus proche",
-        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 17:00 h solo algunos sábados; casos urgentes: llama a la clínica Village Vets más cercana"
+        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 17:00 h solo algunos sábados; casos urgentes: llama a la clínica Village Vets más cercana",
+        "it": "Lun–ven 9:00–19:00, sab 9:00–17:00 solo in alcuni sabati; casi urgenti: chiamare la clinica Village Vets più vicina"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/raheny",
@@ -362,7 +375,8 @@
         "hr": "pon–pet 9–19; izvan radnog vremena pozivi se prebacuju na hitnu kliniku koja radi 24/7",
         "de": "Mo–Fr 9–19 Uhr; Anrufe außerhalb der Sprechzeiten werden an eine 24-Stunden-Notfallklinik weitergeleitet",
         "fr": "Lun.–ven. 9 h–19 h ; en dehors de ces horaires, les appels sont transférés vers une clinique d’urgences ouverte 24 h/24, 7 j/7",
-        "es": "De lunes a viernes de 9:00 a 19:00 h; fuera de horario, las llamadas se transfieren a una clínica de urgencias 24/7"
+        "es": "De lunes a viernes de 9:00 a 19:00 h; fuera de horario, las llamadas se transfieren a una clínica de urgencias 24/7",
+        "it": "Lun–ven 9:00–19:00; le chiamate fuori orario vengono trasferite a una clinica di emergenza aperta 24 ore su 24, 7 giorni su 7"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/portmarnock",
@@ -383,7 +397,8 @@
         "hr": "pon–pet 8:30–19, sub 9–13; izvan radnog vremena pozivi se prebacuju na kliniku u Ashbourneu koja radi 24/7",
         "de": "Mo–Fr 8.30–19 Uhr, Sa 9–13 Uhr; Anrufe außerhalb der Sprechzeiten werden an die 24-Stunden-Klinik in Ashbourne weitergeleitet",
         "fr": "Lun.–ven. 8 h 30–19 h, sam. 9 h–13 h ; en dehors de ces horaires, les appels sont transférés vers la clinique d’Ashbourne, ouverte 24 h/24, 7 j/7",
-        "es": "De lunes a viernes de 8:30 a 19:00 h, sábado de 9:00 a 13:00 h; fuera de horario, las llamadas se transfieren a la clínica 24/7 de Ashbourne"
+        "es": "De lunes a viernes de 8:30 a 19:00 h, sábado de 9:00 a 13:00 h; fuera de horario, las llamadas se transfieren a la clínica 24/7 de Ashbourne",
+        "it": "Lun–ven 8:30–19:00, sab 9:00–13:00; le chiamate fuori orario vengono trasferite alla clinica di Ashbourne aperta 24 ore su 24, 7 giorni su 7"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/lissenhall-vets",
@@ -405,7 +420,8 @@
         "hr": "pon–pet 9–19:30, sub 9–16:30; hitna skrb 24 sata u MyVet Lucan (01 517 5213)",
         "de": "Mo–Fr 9–19.30 Uhr, Sa 9–16.30 Uhr; Notversorgung rund um die Uhr bei MyVet Lucan (01 517 5213)",
         "fr": "Lun.–ven. 9 h–19 h 30, sam. 9 h–16 h 30 ; urgences 24 h/24 à MyVet Lucan (01 517 5213)",
-        "es": "De lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 16:30 h; urgencias las 24 horas en MyVet Lucan (01 517 5213)"
+        "es": "De lunes a viernes de 9:00 a 19:30 h, sábado de 9:00 a 16:30 h; urgencias las 24 horas en MyVet Lucan (01 517 5213)",
+        "it": "Lun–ven 9:00–19:30, sab 9:00–16:30; pronto soccorso 24 ore su 24 presso MyVet Lucan (01 517 5213)"
       },
       "small_animals": true,
       "url": "https://www.myvet.ie/about-us/celbridge",
@@ -425,7 +441,8 @@
         "hr": "pon–pet 8–20, sub 8:30–16:30; hitni slučajevi izvan radnog vremena preko dežurnog veterinara (nazovi ordinaciju)",
         "de": "Mo–Fr 8–20 Uhr, Sa 8.30–16.30 Uhr; Notfälle außerhalb der Sprechzeiten über den diensthabenden Tierarzt (Praxis anrufen)",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h 30–16 h 30 ; urgences en dehors des horaires d’ouverture : vétérinaire de garde (appelez la clinique)",
-        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 16:30 h; urgencias fuera de horario con el veterinario de guardia (llama a la clínica)"
+        "es": "De lunes a viernes de 8:00 a 20:00 h, sábado de 8:30 a 16:30 h; urgencias fuera de horario con el veterinario de guardia (llama a la clínica)",
+        "it": "Lun–ven 8:00–20:00, sab 8:30–16:30; emergenze fuori orario tramite il veterinario di guardia (chiamare lo studio)"
       },
       "small_animals": true,
       "url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
@@ -446,7 +463,8 @@
         "hr": "Hitni slučajevi: nazovi ordinaciju",
         "de": "Notfälle: Praxis anrufen",
         "fr": "Urgences : appelez la clinique",
-        "es": "Urgencias: llama a la clínica"
+        "es": "Urgencias: llama a la clínica",
+        "it": "Emergenze: chiamare lo studio"
       },
       "small_animals": true,
       "url": "https://www.arenavets.ie/",
@@ -468,7 +486,8 @@
         "hr": "Otvoreno 24/7, 365 dana u godini",
         "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr",
         "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an",
-        "es": "Abierto 24/7, 365 días al año"
+        "es": "Abierto 24/7, 365 días al año",
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno"
       },
       "small_animals": true,
       "url": "https://limerickveterinaryhospital.ie/",
@@ -491,7 +510,8 @@
         "hr": "Hitna služba 24 sata tijekom cijele godine; pregledi uz prethodnu najavu",
         "de": "Notdienst rund um die Uhr, ganzjährig; Sprechstunden nach Terminvereinbarung",
         "fr": "Urgences 24 h/24, toute l’année ; consultations sur rendez-vous",
-        "es": "Urgencias las 24 horas todo el año; consultas con cita previa"
+        "es": "Urgencias las 24 horas todo el año; consultas con cita previa",
+        "it": "Pronto soccorso 24 ore su 24 tutto l'anno; visite su appuntamento"
       },
       "small_animals": true,
       "url": "https://treatyveterinaryhospital.ie/limerick/",
@@ -513,7 +533,8 @@
         "hr": "Hitna služba 24 sata dnevno, 7 dana u tjednu; izvan radnog vremena veterinar zove natrag; uz doplatak",
         "de": "Notdienst täglich rund um die Uhr; der diensthabende Tierarzt ruft zurück; Zuschlag",
         "fr": "Urgences 24 h/24, 7 j/7 ; en dehors des horaires d’ouverture, le vétérinaire de garde rappelle ; supplément tarifaire",
-        "es": "Urgencias las 24 horas, 7 días a la semana; el veterinario de guardia devuelve la llamada; con cargo adicional"
+        "es": "Urgencias las 24 horas, 7 días a la semana; el veterinario de guardia devuelve la llamada; con cargo adicional",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; fuori orario il veterinario richiama; supplemento a pagamento"
       },
       "small_animals": true,
       "url": "https://www.cvcvets.ie/emergencies",
@@ -535,7 +556,8 @@
         "hr": "Hitna služba 24 sata",
         "de": "Notdienst rund um die Uhr",
         "fr": "Urgences 24 h/24",
-        "es": "Servicio de urgencias las 24 horas"
+        "es": "Servicio de urgencias las 24 horas",
+        "it": "Pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -558,7 +580,8 @@
         "hr": "Hitna služba 24 sata",
         "de": "Notdienst rund um die Uhr",
         "fr": "Urgences 24 h/24",
-        "es": "Servicio de urgencias las 24 horas"
+        "es": "Servicio de urgencias las 24 horas",
+        "it": "Pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -581,7 +604,8 @@
         "hr": "Hitna služba 24 sata",
         "de": "Notdienst rund um die Uhr",
         "fr": "Urgences 24 h/24",
-        "es": "Servicio de urgencias las 24 horas"
+        "es": "Servicio de urgencias las 24 horas",
+        "it": "Pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -602,7 +626,8 @@
         "hr": "Dežurstvo 24 sata",
         "de": "Bereitschaft rund um die Uhr",
         "fr": "De garde 24 h/24",
-        "es": "Guardia las 24 horas"
+        "es": "Guardia las 24 horas",
+        "it": "Reperibilità 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.ennisvetclinic.ie/",
@@ -625,7 +650,8 @@
         "hr": "Hitna služba 24 sata, 365 dana u godini; pon–pet 8–19, sub 9–17",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; Mo–Fr 8–19 Uhr, Sa 9–17 Uhr",
         "fr": "Urgences 24 h/24, 365 jours par an ; lun.–ven. 8 h–19 h, sam. 9 h–17 h",
-        "es": "Urgencias las 24 horas, 365 días al año; de lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 17:00 h"
+        "es": "Urgencias las 24 horas, 365 días al año; de lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 17:00 h",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; lun–ven 8:00–19:00, sab 9:00–17:00"
       },
       "small_animals": true,
       "url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
@@ -647,7 +673,8 @@
         "hr": "Hitna služba 24 sata; nazovi broj bolnice",
         "de": "Notdienst rund um die Uhr; Rufnummer der Klinik anrufen",
         "fr": "Urgences 24 h/24 ; appelez le numéro de l’hôpital",
-        "es": "Urgencias las 24 horas; llama al número del hospital"
+        "es": "Urgencias las 24 horas; llama al número del hospital",
+        "it": "Pronto soccorso 24 ore su 24; chiamare il numero dell'ospedale"
       },
       "small_animals": true,
       "url": "https://gilabbeyvet.com/",
@@ -670,7 +697,8 @@
         "hr": "Hitna služba 24 sata; pon–pet 9–18, sub 9–16",
         "de": "Notdienst rund um die Uhr; Mo–Fr 9–18 Uhr, Sa 9–16 Uhr",
         "fr": "Urgences 24 h/24 ; lun.–ven. 9 h–18 h, sam. 9 h–16 h",
-        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 16:00 h"
+        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 16:00 h",
+        "it": "Pronto soccorso 24 ore su 24; lun–ven 9:00–18:00, sab 9:00–16:00"
       },
       "small_animals": true,
       "url": "https://www.blackpoolvets.ie/",
@@ -692,7 +720,8 @@
         "hr": "Bolnica radi 24/7; hitna skrb 24 sata",
         "de": "Klinik rund um die Uhr besetzt, mit Notversorgung",
         "fr": "Hôpital avec personnel présent 24 h/24, 7 j/7 ; urgences 24 h/24",
-        "es": "Hospital con personal 24/7; urgencias las 24 horas"
+        "es": "Hospital con personal 24/7; urgencias las 24 horas",
+        "it": "Ospedale presidiato 24 ore su 24, 7 giorni su 7; pronto soccorso 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.sunbeamvets.com/",
@@ -715,7 +744,8 @@
         "hr": "pon–pet 9–19, sub 9–13; hitni slučajevi izvan radnog vremena preko Sunbeam Veterinary Hospital (021 439 1600)",
         "de": "Mo–Fr 9–19 Uhr, Sa 9–13 Uhr; Notfälle außerhalb der Sprechzeiten über das Sunbeam Veterinary Hospital (021 439 1600)",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–13 h ; urgences en dehors des horaires d’ouverture : Sunbeam Veterinary Hospital (021 439 1600)",
-        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 13:00 h; urgencias fuera de horario en el Sunbeam Veterinary Hospital (021 439 1600)"
+        "es": "De lunes a viernes de 9:00 a 19:00 h, sábado de 9:00 a 13:00 h; urgencias fuera de horario en el Sunbeam Veterinary Hospital (021 439 1600)",
+        "it": "Lun–ven 9:00–19:00, sab 9:00–13:00; emergenze fuori orario tramite il Sunbeam Veterinary Hospital (021 439 1600)"
       },
       "small_animals": true,
       "url": "https://www.westsideveterinary.ie/contact-us",
@@ -737,7 +767,8 @@
         "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj ambulante i bit ćeš preusmjeren na službu izvan radnog vremena",
         "de": "Notfälle außerhalb der Sprechzeiten: Rufnummer der Klinik anrufen, Sie werden zum Notdienst weitergeleitet",
         "fr": "Urgences en dehors des horaires d’ouverture : appelez le numéro de la clinique, vous serez dirigé vers le service de garde",
-        "es": "Urgencias fuera de horario: llama al número de la clínica y te derivarán al servicio de urgencias"
+        "es": "Urgencias fuera de horario: llama al número de la clínica y te derivarán al servicio de urgencias",
+        "it": "Emergenze fuori orario: chiamare il numero della clinica, si viene indirizzati al servizio fuori orario"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
@@ -759,7 +790,8 @@
         "hr": "Hitni slučajevi izvan radnog vremena: nazovi broj ambulante i bit ćeš preusmjeren na službu izvan radnog vremena",
         "de": "Notfälle außerhalb der Sprechzeiten: Rufnummer der Klinik anrufen, Sie werden zum Notdienst weitergeleitet",
         "fr": "Urgences en dehors des horaires d’ouverture : appelez le numéro de la clinique, vous serez dirigé vers le service de garde",
-        "es": "Urgencias fuera de horario: llama al número de la clínica y te derivarán al servicio de urgencias"
+        "es": "Urgencias fuera de horario: llama al número de la clínica y te derivarán al servicio de urgencias",
+        "it": "Emergenze fuori orario: chiamare il numero della clinica, si viene indirizzati al servizio fuori orario"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
@@ -780,7 +812,8 @@
         "hr": "pon–pet 8:30–18:30, sub 9–13; vlastita hitna služba u svako doba (nazovi broj ordinacije)",
         "de": "Mo–Fr 8.30–18.30 Uhr, Sa 9–13 Uhr; eigene Notfallbereitschaft jederzeit (Rufnummer der Praxis anrufen)",
         "fr": "Lun.–ven. 8 h 30–18 h 30, sam. 9 h–13 h ; service d’urgences assuré en permanence (appelez le numéro de la clinique)",
-        "es": "De lunes a viernes de 8:30 a 18:30 h, sábado de 9:00 a 13:00 h; cobertura propia de urgencias en todo momento (llama al número de la clínica)"
+        "es": "De lunes a viernes de 8:30 a 18:30 h, sábado de 9:00 a 13:00 h; cobertura propia de urgencias en todo momento (llama al número de la clínica)",
+        "it": "Lun–ven 8:30–18:30, sab 9:00–13:00; copertura di emergenza propria sempre attiva (chiamare il numero dello studio)"
       },
       "small_animals": true,
       "url": "https://midletonvets.ie/emergencies/",
@@ -802,7 +835,8 @@
         "hr": "Hitna služba 24/7; pon–pet 9–18, sub 9–13",
         "de": "Notdienst rund um die Uhr; Mo–Fr 9–18 Uhr, Sa 9–13 Uhr",
         "fr": "Urgences 24 h/24, 7 j/7 ; lun.–ven. 9 h–18 h, sam. 9 h–13 h",
-        "es": "Urgencias 24/7; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 13:00 h"
+        "es": "Urgencias 24/7; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 13:00 h",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; lun–ven 9:00–18:00, sab 9:00–13:00"
       },
       "small_animals": true,
       "url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
@@ -825,7 +859,8 @@
         "hr": "Hitna služba 24 sata; pon–pet 9–17, sub 9–12",
         "de": "Notdienst rund um die Uhr; Mo–Fr 9–17 Uhr, Sa 9–12 Uhr",
         "fr": "Urgences 24 h/24 ; lun.–ven. 9 h–17 h, sam. 9 h–12 h",
-        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 17:00 h, sábado de 9:00 a 12:00 h"
+        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 17:00 h, sábado de 9:00 a 12:00 h",
+        "it": "Pronto soccorso 24 ore su 24; lun–ven 9:00–17:00, sab 9:00–12:00"
       },
       "small_animals": true,
       "url": "https://vikingvets.ie/opening-hours/",
@@ -847,7 +882,8 @@
         "hr": "Hitna služba 24 sata, 365 dana u godini, za male i velike životinje",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr, für Klein- und Großtiere",
         "fr": "Urgences 24 h/24, 365 jours par an, pour les petits et les grands animaux",
-        "es": "Urgencias las 24 horas, 365 días al año, para animales pequeños y grandes"
+        "es": "Urgencias las 24 horas, 365 días al año, para animales pequeños y grandes",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno, per animali piccoli e grandi"
       },
       "small_animals": true,
       "url": "https://lismorevets.ie/",
@@ -869,7 +905,8 @@
         "hr": "Hitna služba 24 sata izvan radnog vremena ambulante (pon–pet 8:30–18, sub 9–18)",
         "de": "Notdienst rund um die Uhr außerhalb der Sprechzeiten (Mo–Fr 8.30–18 Uhr, Sa 9–18 Uhr)",
         "fr": "Urgences 24 h/24 en dehors des horaires de la clinique (lun.–ven. 8 h 30–18 h, sam. 9 h–18 h)",
-        "es": "Urgencias las 24 horas fuera del horario de la clínica (de lunes a viernes de 8:30 a 18:00 h, sábado de 9:00 a 18:00 h)"
+        "es": "Urgencias las 24 horas fuera del horario de la clínica (de lunes a viernes de 8:30 a 18:00 h, sábado de 9:00 a 18:00 h)",
+        "it": "Pronto soccorso 24 ore su 24 fuori dall'orario della clinica (lun–ven 8:30–18:00, sab 9:00–18:00)"
       },
       "small_animals": true,
       "url": "https://www.allcarevets.ie/contact-us",
@@ -891,7 +928,8 @@
         "hr": "Hitna skrb 24 sata: 066 712 2100 u radnom vremenu, 087 265 6611 izvan radnog vremena",
         "de": "Notversorgung rund um die Uhr: 066 712 2100 während der Sprechzeiten, 087 265 6611 außerhalb der Sprechzeiten",
         "fr": "Urgences 24 h/24 : 066 712 2100 en journée, 087 265 6611 en dehors des horaires d’ouverture",
-        "es": "Urgencias las 24 horas: 066 712 2100 en horario, 087 265 6611 fuera de horario"
+        "es": "Urgencias las 24 horas: 066 712 2100 en horario, 087 265 6611 fuera de horario",
+        "it": "Pronto soccorso 24 ore su 24: 066 712 2100 in orario, 087 265 6611 fuori orario"
       },
       "small_animals": true,
       "url": "https://abbeyvets.ie/contact-us/",
@@ -913,7 +951,8 @@
         "hr": "Hitna linija 24/7 +353 83 152 2459; pon–pet 9–17, sub 9–14 uz prethodnu najavu",
         "de": "Notfalltelefon rund um die Uhr +353 83 152 2459; Mo–Fr 9–17 Uhr, Sa 9–14 Uhr nach Terminvereinbarung",
         "fr": "Ligne d’urgences 24 h/24, 7 j/7 : +353 83 152 2459 ; lun.–ven. 9 h–17 h, sam. 9 h–14 h sur rendez-vous",
-        "es": "Línea de urgencias 24 horas +353 83 152 2459; de lunes a viernes de 9:00 a 17:00 h, sábado de 9:00 a 14:00 h con cita previa"
+        "es": "Línea de urgencias 24 horas +353 83 152 2459; de lunes a viernes de 9:00 a 17:00 h, sábado de 9:00 a 14:00 h con cita previa",
+        "it": "Linea di emergenza 24 ore su 24, 7 giorni su 7 +353 83 152 2459; lun–ven 9:00–17:00, sab 9:00–14:00 su appuntamento"
       },
       "small_animals": true,
       "url": "https://www.allcreaturesvetcentre.ie/",
@@ -936,7 +975,8 @@
         "hr": "Hitna služba 24/7/365; više cijene nedjeljom, blagdanima i izvan radnog vremena",
         "de": "Notdienst rund um die Uhr, an 365 Tagen; höhere Tarife an Sonn- und Feiertagen und außerhalb der Sprechzeiten",
         "fr": "Urgences 24 h/24, 7 j/7, 365 jours par an ; tarifs majorés le dimanche, les jours fériés et en dehors des horaires d’ouverture",
-        "es": "Urgencias las 24 horas, 365 días al año; tarifas más altas los domingos, festivos y fuera de horario"
+        "es": "Urgencias las 24 horas, 365 días al año; tarifas más altas los domingos, festivos y fuera de horario",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno; tariffe maggiorate di domenica, nei festivi e fuori orario"
       },
       "small_animals": true,
       "url": "https://dingleveterinaryclinic.com/contact/",
@@ -958,7 +998,8 @@
         "hr": "Hitna služba 24 sata, 365 dana u godini; nazovi 091 445005",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr; Telefon 091 445005",
         "fr": "Urgences 24 h/24, 365 jours par an ; appelez le 091 445005",
-        "es": "Urgencias las 24 horas, 365 días al año; llama al 091 445005"
+        "es": "Urgencias las 24 horas, 365 días al año; llama al 091 445005",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; chiamare 091 445005"
       },
       "small_animals": true,
       "url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
@@ -980,7 +1021,8 @@
         "hr": "Hitna služba 24 h / 365 dana",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr",
         "fr": "Urgences 24 h/24, 365 jours par an",
-        "es": "Urgencias las 24 horas, 365 días al año"
+        "es": "Urgencias las 24 horas, 365 días al año",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno"
       },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
@@ -1003,7 +1045,8 @@
         "hr": "Hitna služba 24 h / 365 dana",
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr",
         "fr": "Urgences 24 h/24, 365 jours par an",
-        "es": "Urgencias las 24 horas, 365 días al año"
+        "es": "Urgencias las 24 horas, 365 días al año",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno"
       },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
@@ -1026,7 +1069,8 @@
         "hr": "Hitna služba 24/7: 087 914 5862",
         "de": "Notdienst rund um die Uhr: 087 914 5862",
         "fr": "Urgences 24 h/24, 7 j/7 : 087 914 5862",
-        "es": "Urgencias las 24 horas: 087 914 5862"
+        "es": "Urgencias las 24 horas: 087 914 5862",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7: 087 914 5862"
       },
       "small_animals": true,
       "url": "https://www.kellyvets.com/contact-2/",
@@ -1049,7 +1093,8 @@
         "hr": "Otvoreno 6 dana u tjednu uz dežurstvo 24 sata",
         "de": "An 6 Tagen die Woche geöffnet, mit Bereitschaft rund um die Uhr",
         "fr": "Ouvert 6 jours sur 7, avec un service de garde 24 h/24",
-        "es": "Abierto 6 días a la semana con guardia las 24 horas"
+        "es": "Abierto 6 días a la semana con guardia las 24 horas",
+        "it": "Aperto 6 giorni su 7 con reperibilità 24 ore su 24"
       },
       "small_animals": true,
       "url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
@@ -1071,7 +1116,8 @@
         "hr": "pon–pet 8:30–18, sub 9:30–16",
         "de": "Mo–Fr 8.30–18 Uhr, Sa 9.30–16 Uhr",
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h 30–16 h",
-        "es": "De lunes a viernes de 8:30 a 18:00 h, sábado de 9:30 a 16:00 h"
+        "es": "De lunes a viernes de 8:30 a 18:00 h, sábado de 9:30 a 16:00 h",
+        "it": "Lun–ven 8:30–18:00, sab 9:30–16:00"
       },
       "small_animals": true,
       "url": "https://www.arkvetsgalway.com/",
@@ -1093,7 +1139,8 @@
         "hr": "pon–pet 9–18, sub 10–14",
         "de": "Mo–Fr 9–18 Uhr, Sa 10–14 Uhr",
         "fr": "Lun.–ven. 9 h–18 h, sam. 10 h–14 h",
-        "es": "De lunes a viernes de 9:00 a 18:00 h, sábado de 10:00 a 14:00 h"
+        "es": "De lunes a viernes de 9:00 a 18:00 h, sábado de 10:00 a 14:00 h",
+        "it": "Lun–ven 9:00–18:00, sab 10:00–14:00"
       },
       "small_animals": true,
       "url": "https://cuddyvets.com/",
@@ -1115,7 +1162,8 @@
         "hr": "pon–pet 9–18, sub 9–13; hitni slučajevi preko broja ordinacije",
         "de": "Mo–Fr 9–18 Uhr, Sa 9–13 Uhr; Notfalltelefon ist die Rufnummer der Praxis",
         "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–13 h ; pour les urgences, appelez le numéro de la clinique",
-        "es": "De lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 13:00 h; la línea de urgencias es el número de la clínica"
+        "es": "De lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 13:00 h; la línea de urgencias es el número de la clínica",
+        "it": "Lun–ven 9:00–18:00, sab 9:00–13:00; la linea di emergenza è il numero dello studio"
       },
       "small_animals": true,
       "url": "https://www.oranvets.com/",
@@ -1137,7 +1185,8 @@
         "hr": "Hitna skrb 24 sata, 365 dana u godini; izvan radnog vremena uz doplatak",
         "de": "Notfallversorgung rund um die Uhr, 365 Tage im Jahr; außerhalb der Sprechzeiten gegen Aufpreis",
         "fr": "Urgences 24 h/24, 365 jours par an ; supplément en dehors des horaires d’ouverture",
-        "es": "Urgencias las 24 horas, 365 días al año; cargo adicional fuera de horario"
+        "es": "Urgencias las 24 horas, 365 días al año; cargo adicional fuera de horario",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; supplemento fuori orario"
       },
       "small_animals": true,
       "url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
@@ -1160,7 +1209,8 @@
         "hr": "Hitna služba 24 sata; pon–pet 9–18, sub 9–15",
         "de": "Notdienst rund um die Uhr; Mo–Fr 9–18 Uhr, Sa 9–15 Uhr",
         "fr": "Urgences 24 h/24 ; lun.–ven. 9 h–18 h, sam. 9 h–15 h",
-        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 15:00 h"
+        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 15:00 h",
+        "it": "Pronto soccorso 24 ore su 24; lun–ven 9:00–18:00, sab 9:00–15:00"
       },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",
@@ -1183,7 +1233,8 @@
         "hr": "Hitna služba 24 sata; pon–pet 9–18, sub 9–15",
         "de": "Notdienst rund um die Uhr; Mo–Fr 9–18 Uhr, Sa 9–15 Uhr",
         "fr": "Urgences 24 h/24 ; lun.–ven. 9 h–18 h, sam. 9 h–15 h",
-        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 15:00 h"
+        "es": "Urgencias las 24 horas; de lunes a viernes de 9:00 a 18:00 h, sábado de 9:00 a 15:00 h",
+        "it": "Pronto soccorso 24 ore su 24; lun–ven 9:00–18:00, sab 9:00–15:00"
       },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",

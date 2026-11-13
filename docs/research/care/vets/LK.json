@@ -63,7 +63,10 @@
       "source_url": "https://vet.pdn.ac.lk/vth/services.php",
       "checked": "2026-11-12",
       "note": "Hours from a notice effective 1 Sep 2018; page copyright 2012. Page also claims 24-hour cover for lab/theatre which conflicts with its own table (lab/theatre weekday daytime). Re-checked 2026-11-12 against source_url: phones 081-5638017 / 081-2395662 are on the page (for booking by referring vets, not specifically an emergency line); +94 81 2388664 removed because it is not on the source page (only on the home page). Address from home page. Confirm before publishing.",
-      "quote": "Emergency & critical care: 24 hours"
+      "quote": "Emergency & critical care: 24 hours",
+      "duty_i18n": {
+        "it": "Ospedale didattico universitario per animali da compagnia, selvatici e da zoo. Pronto soccorso e terapia intensiva 24 ore su 24; ambulatorio lun–sab 8:00–20:00, dom e festivi 8:00–12:00. Clinici residenti reperibili per le urgenze 19:30–08:00. Ricovero su appuntamento, prenotato dal veterinario che segnala il caso."
+      }
     },
     {
       "kind": "clinic",
@@ -79,7 +82,10 @@
       "source_url": "https://ft.lk/healthcare/Rover-Veterinary-Hospital-inaugurated-to-serve-pets/45-652391",
       "checked": "2026-11-12",
       "note": "Weak source: 2018 launch article in Daily FT (future tense), not the clinic's own site; rovervet.lk could not be fetched (not in provenance set). A 2020 Daily FT anniversary article repeats '24/7 emergency service' without contacts. Verify phones/hours on the clinic's site before publishing.",
-      "quote": "Their Emergency and Critical care services will be open 24hrs, seven days a week."
+      "quote": "Their Emergency and Critical care services will be open 24hrs, seven days a week.",
+      "duty_i18n": {
+        "it": "Ambulatorio 6:00–22:00 su appuntamento; pronto soccorso e terapia intensiva aperti 24 ore su 24, 7 giorni su 7."
+      }
     },
     {
       "kind": "clinic",
@@ -93,7 +99,10 @@
       "small_animals": true,
       "source_url": "https://www.sundaytimes.lk/210711/news/air-force-opens-pet-hospital-448983.html",
       "checked": "2026-11-12",
-      "note": "Phones from a 2021 Sunday Times article, no hours. A 2015 Sunday Times article says vets 'work round the clock' and handle night emergencies, but this is not an explicit published 24 h service line and is old, so emergency_24h left false. No own website found. Verify before publishing."
+      "note": "Phones from a 2021 Sunday Times article, no hours. A 2015 Sunday Times article says vets 'work round the clock' and handle night emergencies, but this is not an explicit published 24 h service line and is old, so emergency_24h left false. No own website found. Verify before publishing.",
+      "duty_i18n": {
+        "it": "Ospedale per piccoli animali gestito dall'Aeronautica militare dello Sri Lanka a Borella. Telefonare prima per gli orari e le urgenze."
+      }
     }
   ],
   "notes": "Research 2026-11-12. Sri Lanka has many private small-animal clinics, but WebFetch only allowed URLs surfaced by search results or earlier fetches, and clinic own sites (rovervet.lk) and daph.gov.lk home were blocked as 'URL not in provenance set'. Only 3 entries could be verified: the Peradeniya teaching hospital (official page, explicit 24 h emergency), Rover Veterinary Hospital (news article only, explicit 24 h) and Sky Pet (news, no explicit 24 h). Pet Vet Clinic (Colombo) claims 24/7 emergency but no contact was found on an opened page. Search results for aggregators/directories (ikman, vymaps, magicpin, findit.lk, casite directory) were not used. No duty rota, no animal poison line found. DAPH (daph.gov.lk/about-us) only gives a hotline 081-2388462 for the administrative office. Veterinary Council of Sri Lanka and SLVA own websites were not found/opened. Not covered: Kandy private clinics (e.g. Best Care), Galle, Negombo, Jaffna, Nuwara Eliya, Ella."

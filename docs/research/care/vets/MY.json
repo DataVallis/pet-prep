@@ -109,7 +109,8 @@
       "checked": "2026-11-11",
       "note": "Own homepage opened: 'a fully functional 24-hour emergency and critical care hospital', section '24 Hours Emergency Services', phones +603 4042 6742 / 5873. Address & Working Hours subpage returned empty twice; hours not recorded. Homepage also carried unrelated spam text. MSAVA lists same address/phone.",
       "duty_i18n": {
-        "es": "Hospital de urgencias y cuidados críticos las 24 horas; llama antes."
+        "es": "Hospital de urgencias y cuidados críticos las 24 horas; llama antes.",
+        "it": "Ospedale di pronto soccorso e terapia intensiva 24 ore su 24; chiamare prima."
       }
     },
     {
@@ -141,7 +142,8 @@
       "checked": "2026-11-11",
       "note": "Both homepage and 24-hour-emergency page opened: 'a 24-hour veterinary hospital for cats and dogs', 'Open 24 Hours'. Customer care line 1700 82 5598, mobile 601 2779 1598.",
       "duty_i18n": {
-        "es": "Hospital las 24 horas para gatos y perros. Consultas 7:00–18:00 h, urgencias 18:00–23:00 h, urgencias nocturnas 23:00–8:00 h (llama antes de ir); las urgencias no necesitan cita previa."
+        "es": "Hospital las 24 horas para gatos y perros. Consultas 7:00–18:00 h, urgencias 18:00–23:00 h, urgencias nocturnas 23:00–8:00 h (llama antes de ir); las urgencias no necesitan cita previa.",
+        "it": "Ospedale per cani e gatti 24 ore su 24. Visite 7:00–18:00, pronto soccorso 18:00–23:00, pronto soccorso notturno 23:00–8:00 (chiamare prima di recarsi in clinica); per le emergenze non serve appuntamento."
       }
     },
     {
@@ -159,7 +161,8 @@
       "checked": "2026-11-11",
       "note": "Emergencies page: 'only veterinary practice in north of Peninsular Malaysia to offer a 24 hour out of hours emergency service'. Contact page gives address, phones, 019-4741262 as after-hours number. MSAVA lists same address/phone.",
       "duty_i18n": {
-        "es": "Servicio de urgencias 24 horas fuera del horario de la clínica (teléfono fuera de horario +604 227 2984 o 019-474 1262). Horario de la clínica lun–sáb 9:00–12:00, 14:00–17:00, 20:00–21:30 h; dom y festivos 9:00–12:00, 14:00–17:00 h."
+        "es": "Servicio de urgencias 24 horas fuera del horario de la clínica (teléfono fuera de horario +604 227 2984 o 019-474 1262). Horario de la clínica lun–sáb 9:00–12:00, 14:00–17:00, 20:00–21:30 h; dom y festivos 9:00–12:00, 14:00–17:00 h.",
+        "it": "Pronto soccorso fuori orario 24 ore su 24 (telefono fuori orario +604 227 2984 o 019-474 1262). Orario della clinica lun–sab 9:00–12:00, 14:00–17:00, 20:00–21:30; dom e festivi 9:00–12:00, 14:00–17:00."
       }
     },
     {
@@ -177,7 +180,8 @@
       "checked": "2026-11-11",
       "note": "Page is inconsistent: banner says '24 Hours Emergency Services' and WhatsApp link 'Emergency Booking 24 Hour', but opening hours list an emergency clinic 18:00-22:00 and a '12 Hour Emergency Service'. emergency_24h left false.",
       "duty_i18n": {
-        "es": "Clínica lun–vie 10:00–18:00 h, sáb–dom 10:00–17:00 h; clínica de urgencias todos los días 18:00–22:00 h (con tarifa de urgencias). Reserva de urgencias por WhatsApp 011-3700 4549."
+        "es": "Clínica lun–vie 10:00–18:00 h, sáb–dom 10:00–17:00 h; clínica de urgencias todos los días 18:00–22:00 h (con tarifa de urgencias). Reserva de urgencias por WhatsApp 011-3700 4549.",
+        "it": "Clinica lun–ven 10:00–18:00, sab–dom 10:00–17:00; pronto soccorso tutti i giorni 18:00–22:00 (con supplemento per le emergenze). Prenotazione urgente via WhatsApp 011-3700 4549."
       }
     },
     {
@@ -195,7 +199,8 @@
       "checked": "2026-11-11",
       "note": "Emergency number listed but no 24 h wording.",
       "duty_i18n": {
-        "es": "Consultas todos los días 10:30–16:30 h con cita previa (abierto todos los días, festivos incluidos); línea de urgencias 012-686 7363."
+        "es": "Consultas todos los días 10:30–16:30 h con cita previa (abierto todos los días, festivos incluidos); línea de urgencias 012-686 7363.",
+        "it": "Visite tutti i giorni 10:30–16:30 su appuntamento (aperto ogni giorno, festivi compresi); linea di emergenza 012-686 7363."
       }
     },
     {
@@ -213,7 +218,8 @@
       "checked": "2026-11-11",
       "note": "Second phone +603 6178 0826. No 24 h wording.",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–21:00 h; cerrado en festivos."
+        "es": "Abierto todos los días 9:00–21:00 h; cerrado en festivos.",
+        "it": "Aperto tutti i giorni 9:00–21:00; chiuso nei festivi."
       }
     },
     {
@@ -231,7 +237,8 @@
       "checked": "2026-11-11",
       "note": "Page labels the branch 'Bestari Perdana / Layangkasa'; WhatsApp section calls it 'Meridin East'.",
       "duty_i18n": {
-        "es": "Servicio veterinario nocturno 14:30–22:30 h (descanso 17:30–18:30 h)."
+        "es": "Servicio veterinario nocturno 14:30–22:30 h (descanso 17:30–18:30 h).",
+        "it": "Servizio veterinario notturno 14:30–22:30 (pausa 17:30–18:30)."
       }
     },
     {
@@ -248,7 +255,8 @@
       "source_url": "https://www.pawsanimalclinic.com.my/",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h)."
+        "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h).",
+        "it": "Servizio diurno 9:30–18:30 (pausa 13:00–14:00)."
       }
     },
     {
@@ -265,7 +273,8 @@
       "source_url": "https://www.pawsanimalclinic.com.my/",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h)."
+        "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h).",
+        "it": "Servizio diurno 9:30–18:30 (pausa 13:00–14:00)."
       }
     },
     {
@@ -283,7 +292,8 @@
       "checked": "2026-11-11",
       "note": "Contact page shows hours '12:00 AM - 12:00 AM' Mon-Sun but never says '24 hours'; emergency_24h left false. WhatsApp number differs (+60 12-532 0267). Removed from duty: Listed open daily; call to confirm after-hours availability.",
       "duty_i18n": {
-        "es": "Abierto todos los días; llama para confirmar si atienden fuera de horario."
+        "es": "Abierto todos los días; llama para confirmar si atienden fuera de horario.",
+        "it": "Aperto tutti i giorni; telefonare per confermare la disponibilità fuori orario."
       }
     },
     {
@@ -300,7 +310,8 @@
       "source_url": "https://www.klinikhaiwanctvet.com.my/contactus/",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Todos los días 10:00–21:00 h."
+        "es": "Todos los días 10:00–21:00 h.",
+        "it": "Tutti i giorni 10:00–21:00."
       }
     },
     {
@@ -318,7 +329,8 @@
       "checked": "2026-11-11",
       "note": "Branches page opened; no branch is described as 24 h. Alt phone +6016 716 6530.",
       "duty_i18n": {
-        "es": "Todos los días 10:00–23:00 h (última cita 22:30)."
+        "es": "Todos los días 10:00–23:00 h (última cita 22:30).",
+        "it": "Tutti i giorni 10:00–23:00 (ultimo appuntamento 22:30)."
       }
     },
     {
@@ -336,7 +348,8 @@
       "checked": "2026-11-11",
       "note": "Alt phone +6012 719 9239.",
       "duty_i18n": {
-        "es": "Todos los días 10:00–19:00 h (última cita 18:30)."
+        "es": "Todos los días 10:00–19:00 h (última cita 18:30).",
+        "it": "Tutti i giorni 10:00–19:00 (ultimo appuntamento 18:30)."
       }
     },
     {
@@ -353,7 +366,8 @@
       "source_url": "https://www.vetpartners.com.my/our-branches",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Todos los días 10:00–21:30 h."
+        "es": "Todos los días 10:00–21:30 h.",
+        "it": "Tutti i giorni 10:00–21:30."
       }
     },
     {
@@ -370,7 +384,8 @@
       "source_url": "https://www.vetpartners.com.my/our-branches",
       "checked": "2026-11-11",
       "duty_i18n": {
-        "es": "Todos los días 10:00–19:00 h (última cita 18:30)."
+        "es": "Todos los días 10:00–19:00 h (última cita 18:30).",
+        "it": "Tutti i giorni 10:00–19:00 (ultimo appuntamento 18:30)."
       }
     },
     {
@@ -388,7 +403,8 @@
       "checked": "2026-11-11",
       "note": "Second phone 012-852 2358. Page header shows a slightly different address (SL12 & 13, Ashraf Avenue 2). MSAVA lists 012-8522358.",
       "duty_i18n": {
-        "es": "Laborables 10:00–20:00 h; fines de semana y festivos 10:00–16:00 h."
+        "es": "Laborables 10:00–20:00 h; fines de semana y festivos 10:00–16:00 h.",
+        "it": "Giorni feriali 10:00–20:00; fine settimana e festivi 10:00–16:00."
       }
     },
     {
@@ -405,7 +421,8 @@
       "checked": "2026-11-11",
       "note": "Address on the page says 'to be confirmed'.",
       "duty_i18n": {
-        "es": "Lun–jue 9:00–11:30, 13:00–16:30, 18:00–21:30 h; vie–dom 9:00–11:30, 13:00–16:30, 18:00–20:00 h."
+        "es": "Lun–jue 9:00–11:30, 13:00–16:30, 18:00–21:30 h; vie–dom 9:00–11:30, 13:00–16:30, 18:00–20:00 h.",
+        "it": "Lun–gio 9:00–11:30, 13:00–16:30, 18:00–21:30; ven–dom 9:00–11:30, 13:00–16:30, 18:00–20:00."
       }
     },
     {
@@ -422,7 +439,8 @@
       "checked": "2026-11-11",
       "note": "Address on the page says 'to be confirmed'.",
       "duty_i18n": {
-        "es": "Lun–jue 8:30–11:30, 12:00–16:30, 18:00–21:30 h; vie–dom 8:30–12:00, 13:30–16:30 h."
+        "es": "Lun–jue 8:30–11:30, 12:00–16:30, 18:00–21:30 h; vie–dom 8:30–12:00, 13:30–16:30 h.",
+        "it": "Lun–gio 8:30–11:30, 12:00–16:30, 18:00–21:30; ven–dom 8:30–12:00, 13:30–16:30."
       }
     },
     {
@@ -439,7 +457,8 @@
       "checked": "2026-11-11",
       "note": "No landline on page; WhatsApp +60 10-255 7789.",
       "duty_i18n": {
-        "es": "Laborables 9:30–19:30 h; fines de semana 8:30–17:00 h (descanso para comer 13:00–14:00 h)."
+        "es": "Laborables 9:30–19:30 h; fines de semana 8:30–17:00 h (descanso para comer 13:00–14:00 h).",
+        "it": "Giorni feriali 9:30–19:30; fine settimana 8:30–17:00 (pausa pranzo 13:00–14:00)."
       }
     },
     {
@@ -457,7 +476,8 @@
       "checked": "2026-11-11",
       "note": "Alt phone +6018 2094402.",
       "duty_i18n": {
-        "es": "Lun–vie 10:00–18:00 h, sáb 10:00–16:00 h (descanso para comer 13:00–14:00 h)."
+        "es": "Lun–vie 10:00–18:00 h, sáb 10:00–16:00 h (descanso para comer 13:00–14:00 h).",
+        "it": "Lun–ven 10:00–18:00, sab 10:00–16:00 (pausa pranzo 13:00–14:00)."
       }
     },
     {

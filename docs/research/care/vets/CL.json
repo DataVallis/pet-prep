@@ -61,7 +61,8 @@
       "duty_i18n": {
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, tous les jours de la semaine.",
-        "es": "Abierto las 24 horas, todos los días de la semana."
+        "es": "Abierto las 24 horas, todos los días de la semana.",
+        "it": "Aperto 24 ore su 24, tutti i giorni della settimana."
       }
     },
     {
@@ -81,7 +82,8 @@
       "duty_i18n": {
         "de": "Universitäre Lehrklinik. Nur der Standort Bilbao (Providencia) ist rund um die Uhr geöffnet.",
         "fr": "Hôpital universitaire d’enseignement. Le site de Bilbao (Providencia) est celui qui est ouvert 24 h/24.",
-        "es": "Hospital docente universitario. La sede de Bilbao (Providencia) es la que abre las 24 horas."
+        "es": "Hospital docente universitario. La sede de Bilbao (Providencia) es la que abre las 24 horas.",
+        "it": "Ospedale didattico universitario. La sede di Bilbao (Providencia) è quella aperta 24 ore su 24."
       }
     },
     {
@@ -101,7 +103,8 @@
       "duty_i18n": {
         "de": "Täglich 10:00–20:00 Uhr geöffnet; Notfälle werden rund um die Uhr behandelt.",
         "fr": "Ouvert tous les jours 10 h–20 h ; urgences prises en charge 24 h/24.",
-        "es": "Abierto todos los días 10:00–20:00 h; urgencias atendidas las 24 horas."
+        "es": "Abierto todos los días 10:00–20:00 h; urgencias atendidas las 24 horas.",
+        "it": "Aperto tutti i giorni 10:00–20:00; pronto soccorso 24 ore su 24."
       }
     },
     {
@@ -121,7 +124,8 @@
       "duty_i18n": {
         "de": "Werktags 08:30–18:30 Uhr (erweiterte Öffnungszeiten angekündigt). Stationäre Patienten werden rund um die Uhr überwacht; keine 24-Stunden-Notfallklinik.",
         "fr": "En semaine 8 h 30–18 h 30 (horaires étendus annoncés). Patients hospitalisés surveillés en permanence ; pas une clinique d’urgences 24 h/24.",
-        "es": "Entre semana 8:30–18:30 h (ampliación de horario anunciada). Los pacientes hospitalizados están vigilados las 24 horas; no es una clínica de urgencias 24 horas."
+        "es": "Entre semana 8:30–18:30 h (ampliación de horario anunciada). Los pacientes hospitalizados están vigilados las 24 horas; no es una clínica de urgencias 24 horas.",
+        "it": "Giorni feriali 08:30–18:30 (orari estesi annunciati). I pazienti ricoverati sono monitorati 24 ore su 24; non è una clinica di pronto soccorso aperta 24 ore su 24."
       }
     },
     {
@@ -141,7 +145,8 @@
       "duty_i18n": {
         "de": "Werktags 09:00–19:00 Uhr. Keine 24-Stunden-Notfallklinik.",
         "fr": "En semaine 9 h–19 h. Pas une clinique d’urgences 24 h/24.",
-        "es": "Entre semana 9:00–19:00 h. No es una clínica de urgencias 24 horas."
+        "es": "Entre semana 9:00–19:00 h. No es una clínica de urgencias 24 horas.",
+        "it": "Giorni feriali 09:00–19:00. Non è una clinica di pronto soccorso aperta 24 ore su 24."
       }
     },
     {
@@ -161,7 +166,8 @@
       "duty_i18n": {
         "de": "Täglich 10:00–20:00 Uhr geöffnet. Keine 24-Stunden-Notfallklinik.",
         "fr": "Ouvert tous les jours 10 h–20 h. Pas une clinique d’urgences 24 h/24.",
-        "es": "Abierto todos los días 10:00–20:00 h. No es una clínica de urgencias 24 horas."
+        "es": "Abierto todos los días 10:00–20:00 h. No es una clínica de urgencias 24 horas.",
+        "it": "Aperto tutti i giorni 10:00–20:00. Non è una clinica di pronto soccorso aperta 24 ore su 24."
       }
     },
     {
@@ -181,7 +187,8 @@
       "duty_i18n": {
         "de": "Notfälle ohne Termin rund um die Uhr, 365 Tage im Jahr. Termine täglich 09:30–20:00 Uhr.",
         "fr": "Urgences prises en charge 24 h/24, 365 jours par an, sans rendez-vous. Rendez-vous programmés tous les jours 9 h 30–20 h.",
-        "es": "Urgencias atendidas las 24 horas, los 365 días del año, sin cita previa. Citas programadas todos los días 9:30–20:00 h."
+        "es": "Urgencias atendidas las 24 horas, los 365 días del año, sin cita previa. Citas programadas todos los días 9:30–20:00 h.",
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno, senza appuntamento. Visite programmate tutti i giorni 09:30–20:00."
       }
     },
     {
@@ -201,7 +208,8 @@
       "duty_i18n": {
         "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche.",
         "fr": "Soins urgents 24 h/24, 7 j/7.",
-        "es": "Atención urgente las 24 horas, los 7 días de la semana."
+        "es": "Atención urgente las 24 horas, los 7 días de la semana.",
+        "it": "Urgenze disponibili 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -221,7 +229,8 @@
       "duty_i18n": {
         "de": "Die Filiale Providencia ist täglich rund um die Uhr für Notfälle geöffnet. Die Filiale Santiago Centro (Huérfanos 1951) ist nicht rund um die Uhr geöffnet.",
         "fr": "Succursale de Providencia ouverte 24 h/24, tous les jours, pour les urgences. La succursale de Santiago Centro (Huérfanos 1951) n’est pas ouverte 24 h/24.",
-        "es": "Sucursal de Providencia abierta las 24 horas, todos los días, para urgencias. La sucursal de Santiago Centro (Huérfanos 1951) no abre las 24 horas."
+        "es": "Sucursal de Providencia abierta las 24 horas, todos los días, para urgencias. La sucursal de Santiago Centro (Huérfanos 1951) no abre las 24 horas.",
+        "it": "Sede Providencia aperta 24 ore su 24, tutti i giorni, per le emergenze. La sede Santiago Centro (Huérfanos 1951) non è aperta 24 ore su 24."
       }
     },
     {
@@ -241,7 +250,8 @@
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnete Klinik mit Notfallversorgung.",
         "fr": "Hôpital ouvert 24 h/24 avec urgences 24 h/24, 7 j/7.",
-        "es": "Hospital 24 horas con urgencias las 24 horas."
+        "es": "Hospital 24 horas con urgencias las 24 horas.",
+        "it": "Ospedale aperto 24 ore su 24 con pronto soccorso attivo 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -261,7 +271,8 @@
       "duty_i18n": {
         "de": "Notdienst rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–18:30 Uhr.",
         "fr": "Service d’urgences 24 h/24. Consultations médicales lun.–ven. 9 h–18 h 30.",
-        "es": "Servicio de urgencias las 24 horas. Consultas médicas lun–vie 9:00–18:30 h."
+        "es": "Servicio de urgencias las 24 horas. Consultas médicas lun–vie 9:00–18:30 h.",
+        "it": "Pronto soccorso 24 ore su 24. Visite mediche dal lunedì al venerdì 09:00–18:30."
       }
     },
     {
@@ -281,7 +292,8 @@
       "duty_i18n": {
         "de": "Täglich 09:00–20:00 Uhr geöffnet; Notdienst rund um die Uhr.",
         "fr": "Ouvert tous les jours 9 h–20 h ; service d’urgences 24 h/24.",
-        "es": "Abierto todos los días 9:00–20:00 h; servicio de urgencias las 24 horas."
+        "es": "Abierto todos los días 9:00–20:00 h; servicio de urgencias las 24 horas.",
+        "it": "Aperto tutti i giorni 09:00–20:00; pronto soccorso 24 ore su 24."
       }
     },
     {
@@ -301,7 +313,8 @@
       "duty_i18n": {
         "de": "Tierärztliche Notfallversorgung rund um die Uhr, 7 Tage die Woche, in der Klinik Asunción.",
         "fr": "Urgences vétérinaires 24 h/24, 7 j/7 à la clinique d’Asunción.",
-        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana, en la clínica de Asunción."
+        "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana, en la clínica de Asunción.",
+        "it": "Pronto soccorso veterinario 24 ore su 24, 7 giorni su 7 presso la clinica di Asunción."
       }
     },
     {
@@ -321,7 +334,8 @@
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnet, 7 Tage die Woche; Notfälle an jedem Tag des Jahres.",
         "fr": "Ouvert 24 h/24, 7 j/7 ; urgences tous les jours de l’année.",
-        "es": "Abierto las 24 horas, los 7 días de la semana; urgencias todos los días del año."
+        "es": "Abierto las 24 horas, los 7 días de la semana; urgencias todos los días del año.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; emergenze tutti i giorni dell'anno."
       }
     },
     {
@@ -341,7 +355,8 @@
       "duty_i18n": {
         "de": "Notfälle werden rund um die Uhr an jedem Tag des Jahres behandelt (beide Filialen Los Castaños).",
         "fr": "Urgences prises en charge 24 h/24, tous les jours de l’année (dans les deux succursales Los Castaños).",
-        "es": "Urgencias atendidas las 24 horas, todos los días del año (en las dos sucursales de Los Castaños)."
+        "es": "Urgencias atendidas las 24 horas, todos los días del año (en las dos sucursales de Los Castaños).",
+        "it": "Pronto soccorso 24 ore su 24, tutti i giorni dell'anno (entrambe le sedi di Los Castaños)."
       }
     },
     {
@@ -361,7 +376,8 @@
       "duty_i18n": {
         "de": "Montag bis Samstag 08:00–20:00 Uhr; Notdienst täglich bis 01:00 Uhr. Nicht rund um die Uhr geöffnet.",
         "fr": "Lun.–sam. 8 h–20 h ; service d’urgences tous les jours jusqu’à 1 h. Pas ouvert 24 h/24.",
-        "es": "Lun–sáb 8:00–20:00 h; servicio de urgencias todos los días hasta la 1:00 h. No abre las 24 horas."
+        "es": "Lun–sáb 8:00–20:00 h; servicio de urgencias todos los días hasta la 1:00 h. No abre las 24 horas.",
+        "it": "Dal lunedì al sabato 08:00–20:00; pronto soccorso tutti i giorni fino alle 01:00. Non è aperto 24 ore su 24."
       }
     },
     {
@@ -381,7 +397,8 @@
       "duty_i18n": {
         "de": "Notaufnahme täglich rund um die Uhr geöffnet, auch an Feiertagen. Terminsprechstunde Montag bis Freitag 09:00–21:00 Uhr.",
         "fr": "Urgences ouvertes 24 h/24 tous les jours, jours fériés compris. Rendez-vous programmés lun.–ven. 9 h–21 h.",
-        "es": "Urgencias abiertas las 24 horas todos los días, también festivos. Citas programadas lun–vie 9:00–21:00 h."
+        "es": "Urgencias abiertas las 24 horas todos los días, también festivos. Citas programadas lun–vie 9:00–21:00 h.",
+        "it": "Pronto soccorso aperto 24 ore su 24 tutti i giorni, festivi inclusi. Visite programmate dal lunedì al venerdì 09:00–21:00."
       }
     },
     {
@@ -401,7 +418,8 @@
       "duty_i18n": {
         "de": "Notdienst täglich 11:00–23:00 Uhr. Nicht rund um die Uhr geöffnet.",
         "fr": "Service d’urgences tous les jours 11 h–23 h. Pas ouvert 24 h/24.",
-        "es": "Servicio de urgencias todos los días 11:00–23:00 h. No abre las 24 horas."
+        "es": "Servicio de urgencias todos los días 11:00–23:00 h. No abre las 24 horas.",
+        "it": "Pronto soccorso tutti i giorni 11:00–23:00. Non è aperto 24 ore su 24."
       }
     },
     {
@@ -421,7 +439,8 @@
       "duty_i18n": {
         "de": "Notfallversorgung rund um die Uhr, 7 Tage die Woche. Termine täglich etwa 09:30/10:30–19:30 Uhr.",
         "fr": "Urgences 24 h/24, 7 j/7. Rendez-vous tous les jours environ 9 h 30/10 h 30–19 h 30.",
-        "es": "Urgencias las 24 horas, los 7 días de la semana. Citas todos los días, de unas 9:30/10:30 a 19:30 h."
+        "es": "Urgencias las 24 horas, los 7 días de la semana. Citas todos los días, de unas 9:30/10:30 a 19:30 h.",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Appuntamenti tutti i giorni circa 09:30/10:30–19:30."
       }
     },
     {
@@ -441,7 +460,8 @@
       "duty_i18n": {
         "de": "Universitätsklinik: Montag bis Donnerstag 09:00–12:00 und 14:00–17:00 Uhr, Freitag 09:00–12:00 Uhr. Kleintier-Notfallnummer +56 9 3775 8382.",
         "fr": "Hôpital universitaire : lun.–jeu. 9 h–12 h et 14 h–17 h, ven. 9 h–12 h. Numéro d’urgence pour petits animaux : +56 9 3775 8382.",
-        "es": "Hospital universitario: lun–jue 9:00–12:00 y 14:00–17:00 h, vie 9:00–12:00 h. Número de urgencias de pequeños animales +56 9 3775 8382."
+        "es": "Hospital universitario: lun–jue 9:00–12:00 y 14:00–17:00 h, vie 9:00–12:00 h. Número de urgencias de pequeños animales +56 9 3775 8382.",
+        "it": "Ospedale universitario: dal lunedì al giovedì 09:00–12:00 e 14:00–17:00, venerdì 09:00–12:00. Numero di emergenza per piccoli animali +56 9 3775 8382."
       }
     },
     {
@@ -461,7 +481,8 @@
       "duty_i18n": {
         "de": "Notfälle rund um die Uhr. Sprechstunden Montag bis Freitag 09:00–19:00 Uhr, Samstag 10:00–18:00 Uhr.",
         "fr": "Urgences 24 h/24, 7 j/7. Consultations lun.–ven. 9 h–19 h, sam. 10 h–18 h.",
-        "es": "Urgencias las 24 horas. Consultas lun–vie 9:00–19:00 h, sáb 10:00–18:00 h."
+        "es": "Urgencias las 24 horas. Consultas lun–vie 9:00–19:00 h, sáb 10:00–18:00 h.",
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Visite dal lunedì al venerdì 09:00–19:00, sabato 10:00–18:00."
       }
     },
     {
@@ -481,7 +502,8 @@
       "duty_i18n": {
         "de": "Notfälle Montag bis Samstag 09:30–24:00 Uhr; sonntags nach Verfügbarkeit. Stationäre Patienten werden rund um die Uhr überwacht. Für Sprechstunden ist eine Terminvereinbarung nötig.",
         "fr": "Urgences lun.–sam. 9 h 30–minuit ; dimanche selon disponibilité. Patients hospitalisés surveillés 24 h/24. Consultations sur rendez-vous.",
-        "es": "Urgencias lun–sáb 9:30–24:00 h; domingos según disponibilidad. Pacientes hospitalizados vigilados las 24 horas. Las consultas requieren cita previa."
+        "es": "Urgencias lun–sáb 9:30–24:00 h; domingos según disponibilidad. Pacientes hospitalizados vigilados las 24 horas. Las consultas requieren cita previa.",
+        "it": "Pronto soccorso dal lunedì al sabato 09:30–24:00; la domenica in base alla disponibilità. Pazienti ricoverati monitorati 24 ore su 24. Visite su appuntamento."
       }
     },
     {
@@ -501,7 +523,8 @@
       "duty_i18n": {
         "de": "Rund um die Uhr geöffnet, 7 Tage die Woche: Sprechstunde 09:00–20:00 Uhr, Notfälle 20:30–08:30 Uhr.",
         "fr": "Ouvert 24 h/24, 7 j/7 : consultations 9 h–20 h, urgences 20 h 30–8 h 30.",
-        "es": "Abierto las 24 horas, los 7 días de la semana: consultas de 9:00 a 20:00 h, urgencias de 20:30 a 8:30 h."
+        "es": "Abierto las 24 horas, los 7 días de la semana: consultas de 9:00 a 20:00 h, urgencias de 20:30 a 8:30 h.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7: visite 09:00–20:00, emergenze 20:30–08:30."
       }
     },
     {
@@ -521,7 +544,8 @@
       "duty_i18n": {
         "de": "Stationäre Patienten werden rund um die Uhr von einem Tierarzt betreut; für Notfälle bitte vorab anrufen.",
         "fr": "Patients hospitalisés pris en charge en permanence par un vétérinaire ; appelez pour connaître les modalités d’urgence.",
-        "es": "Los pacientes hospitalizados están atendidos las 24 horas por un veterinario; llama para consultar cómo se gestionan las urgencias."
+        "es": "Los pacientes hospitalizados están atendidos las 24 horas por un veterinario; llama para consultar cómo se gestionan las urgencias.",
+        "it": "I pazienti ricoverati sono assistiti 24 ore su 24 da un veterinario; chiamare per le modalità di emergenza."
       }
     },
     {
@@ -541,7 +565,8 @@
       "duty_i18n": {
         "de": "Notdienst bis 02:00 Uhr.",
         "fr": "Service d’urgences jusqu’à 2 h.",
-        "es": "Servicio de urgencias hasta las 2:00 h."
+        "es": "Servicio de urgencias hasta las 2:00 h.",
+        "it": "Pronto soccorso fino alle 02:00."
       }
     },
     {
@@ -561,7 +586,8 @@
       "duty_i18n": {
         "de": "Notdienst bis 02:00 Uhr; stationäre Aufnahme rund um die Uhr.",
         "fr": "Service d’urgences jusqu’à 2 h ; hospitalisation 24 h/24.",
-        "es": "Servicio de urgencias hasta las 2:00 h; hospitalización las 24 horas."
+        "es": "Servicio de urgencias hasta las 2:00 h; hospitalización las 24 horas.",
+        "it": "Pronto soccorso fino alle 02:00; ricovero 24 ore su 24."
       }
     },
     {
@@ -581,7 +607,8 @@
       "duty_i18n": {
         "de": "Notfallversorgung bis 22:00 Uhr. Werktags 09:00–18:00 Uhr, Samstag 10:00–14:00 Uhr.",
         "fr": "Urgences jusqu’à 22 h. En semaine 9 h–18 h, samedi 10 h–14 h.",
-        "es": "Urgencias hasta las 22:00 h. Entre semana 9:00–18:00 h, sáb 10:00–14:00 h."
+        "es": "Urgencias hasta las 22:00 h. Entre semana 9:00–18:00 h, sáb 10:00–14:00 h.",
+        "it": "Pronto soccorso fino alle 22:00. Giorni feriali 09:00–18:00, sabato 10:00–14:00."
       }
     },
     {
@@ -601,7 +628,8 @@
       "duty_i18n": {
         "de": "Stationäre Betreuung von Haustieren rund um die Uhr.",
         "fr": "Service d’hospitalisation 24 h/24 pour les animaux hospitalisés.",
-        "es": "Servicio hospitalario las 24 horas para mascotas hospitalizadas."
+        "es": "Servicio hospitalario las 24 horas para mascotas hospitalizadas.",
+        "it": "Servizio ospedaliero 24 ore su 24 per gli animali ricoverati."
       }
     },
     {
@@ -621,7 +649,8 @@
       "duty_i18n": {
         "de": "Montag bis Samstag 09:00–19:00 Uhr. Notfälle nach Verfügbarkeit; bitte vor dem Besuch Kontakt aufnehmen.",
         "fr": "Lun.–sam. 9 h–19 h. Urgences selon disponibilité ; contactez la clinique avant de venir.",
-        "es": "Lun–sáb 9:00–19:00 h. Urgencias según disponibilidad; contacta antes de ir."
+        "es": "Lun–sáb 9:00–19:00 h. Urgencias según disponibilidad; contacta antes de ir.",
+        "it": "Dal lunedì al sabato 09:00–19:00. Emergenze in base alla disponibilità; contattare prima di recarsi."
       }
     },
     {
@@ -639,7 +668,8 @@
       "note": "Email clinicavet@udec.cl. Removed from duty: Monday to Friday 09:00-17:00. No emergency service listed.",
       "checked": "2026-11-10",
       "duty_i18n": {
-        "es": "Lun–vie 9:00–17:00 h."
+        "es": "Lun–vie 9:00–17:00 h.",
+        "it": "Dal lunedì al venerdì 09:00–17:00."
       }
     },
     {
@@ -659,7 +689,8 @@
       "duty_i18n": {
         "de": "Montag bis Freitag 09:00–19:00 Uhr; samstags vormittags. 2026 nach Renovierung wiedereröffnet oder kurz vor der Wiedereröffnung; Öffnungszeiten bitte telefonisch bestätigen.",
         "fr": "Lun.–ven. 9 h–19 h ; samedi matin. Rouvert ou en cours de réouverture en 2026 après rénovation ; appelez pour confirmer.",
-        "es": "Lun–vie 9:00–19:00 h; sábados por la mañana. Reabierta o a punto de reabrir en 2026 tras una reforma; llama para confirmar."
+        "es": "Lun–vie 9:00–19:00 h; sábados por la mañana. Reabierta o a punto de reabrir en 2026 tras una reforma; llama para confirmar.",
+        "it": "Dal lunedì al venerdì 09:00–19:00; sabato mattina. Riaperta o in riapertura nel 2026 dopo lavori di ristrutturazione; chiamare per conferma."
       }
     },
     {
@@ -679,7 +710,8 @@
       "duty_i18n": {
         "de": "Städtische Klinik; Termine telefonisch Dienstag bis Donnerstag ab 09:00 Uhr. Kein Notdienst und keine stationäre Aufnahme.",
         "fr": "Clinique municipale ; rendez-vous par téléphone du mardi au jeudi dès 9 h. Pas de service d’urgences ni d’hospitalisation.",
-        "es": "Clínica municipal; citas por teléfono mar–jue desde las 9:00 h. Sin servicio de urgencias ni de hospitalización."
+        "es": "Clínica municipal; citas por teléfono mar–jue desde las 9:00 h. Sin servicio de urgencias ni de hospitalización.",
+        "it": "Clinica comunale; appuntamenti per telefono dal martedì al giovedì dalle 09:00. Nessun servizio di pronto soccorso né di ricovero."
       }
     }
   ],

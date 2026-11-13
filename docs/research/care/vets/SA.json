@@ -47,7 +47,10 @@
       "url": "https://petopiaking.vetpms.com/",
       "source_url": "https://petopiaking.vetpms.com/",
       "checked": "2026-11-12",
-      "note": "Own booking page lists every day '24 Hours'."
+      "note": "Own booking page lists every day '24 Hours'.",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, tutti i giorni."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://thevetclinic.vetpms.com/",
       "source_url": "https://thevetclinic.vetpms.com/",
       "checked": "2026-11-12",
-      "note": "Page lists every day '24 Hours'; country not named, +966 phone."
+      "note": "Page lists every day '24 Hours'; country not named, +966 phone.",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, tutti i giorni."
+      }
     },
     {
       "kind": "clinic",
@@ -75,7 +81,10 @@
       "url": "https://drtom-clinic.com/en/home/",
       "source_url": "https://drtom-clinic.com/en/home/",
       "checked": "2026-11-12",
-      "note": "Home page says 'Work time : 24 hours daily', Friday 4:00-16:00 emergencies only. No address or phone on opened page; contact page blocked by robots.txt. Phone +966 533399462 and Al Aqiq district appear only in aggregator articles (not used)."
+      "note": "Home page says 'Work time : 24 hours daily', Friday 4:00-16:00 emergencies only. No address or phone on opened page; contact page blocked by robots.txt. Phone +966 533399462 and Al Aqiq district appear only in aggregator articles (not used).",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24 da sabato a giovedì; venerdì 4:00–16:00, solo emergenze."
+      }
     },
     {
       "kind": "clinic",
@@ -90,7 +99,10 @@
       "url": "https://www.elitevetksa.com/",
       "source_url": "https://www.elitevetksa.com/",
       "checked": "2026-11-12",
-      "note": "Own site (Arabic): 'طوارئ 24/7'. Regular hours ambiguous on page and differ in Eye of Riyadh listing; omitted. Jeddah branch listed as coming soon."
+      "note": "Own site (Arabic): 'طوارئ 24/7'. Regular hours ambiguous on page and differ in Eye of Riyadh listing; omitted. Jeddah branch listed as coming soon.",
+      "duty_i18n": {
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; telefonare in anticipo."
+      }
     },
     {
       "kind": "clinic",
@@ -105,7 +117,10 @@
       "url": "https://www.pawfectclinic.sa/en",
       "source_url": "https://www.pawfectclinic.sa/en",
       "checked": "2026-11-12",
-      "note": "Page: 'Please contact this number in case of emergency, 24/7.' 24 h applies to the emergency phone line."
+      "note": "Page: 'Please contact this number in case of emergency, 24/7.' 24 h applies to the emergency phone line.",
+      "duty_i18n": {
+        "it": "Sab–mer 8:00–22:00; gio–ven 16:00–22:00. Linea di emergenza 24 ore su 24, 7 giorni su 7: +966 50 229 6655."
+      }
     },
     {
       "kind": "clinic",
@@ -120,7 +135,10 @@
       "url": "https://snapcat.vetpms.com/",
       "source_url": "https://snapcat.vetpms.com/",
       "checked": "2026-11-12",
-      "note": "'24/7 Support Ready' wording unclear; not treated as 24 h clinic."
+      "note": "'24/7 Support Ready' wording unclear; not treated as 24 h clinic.",
+      "duty_i18n": {
+        "it": "Dom–gio e sab 10:00–23:00; ven 15:00–23:00. Visite a domicilio disponibili."
+      }
     },
     {
       "kind": "clinic",
@@ -134,7 +152,10 @@
       "small_animals": true,
       "url": "https://topvetclinics.com/en/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-english/",
       "source_url": "https://topvetclinics.com/en/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-english/",
-      "checked": "2026-11-12"
+      "checked": "2026-11-12",
+      "duty_i18n": {
+        "it": "Sab–gio 9:00–24:00; ven 16:00–24:00. Nessun pronto soccorso dopo mezzanotte; telefonare prima di venire."
+      }
     },
     {
       "kind": "clinic",
@@ -148,7 +169,10 @@
       "small_animals": true,
       "url": "https://primevetclinic.com/en/contact/",
       "source_url": "https://primevetclinic.com/en/contact/",
-      "checked": "2026-11-12"
+      "checked": "2026-11-12",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 15:30–23:30."
+      }
     },
     {
       "kind": "clinic",
@@ -190,7 +214,10 @@
       "small_animals": true,
       "url": "https://petnvet.vetpms.com/index.php",
       "source_url": "https://petnvet.vetpms.com/index.php",
-      "checked": "2026-11-12"
+      "checked": "2026-11-12",
+      "duty_i18n": {
+        "it": "Lun–gio e sab 14:00–22:00; ven 16:00–22:00; chiuso la domenica."
+      }
     },
     {
       "kind": "clinic",
@@ -205,7 +232,10 @@
       "url": "https://art8vet.pages.dev/",
       "source_url": "https://art8vet.pages.dev/",
       "checked": "2026-11-12",
-      "note": "art8vetclinics.com contact page lists Al Khobar and WhatsApp +966 596 519 845; address conflict Dammam vs Al Khobar."
+      "note": "art8vetclinics.com contact page lists Al Khobar and WhatsApp +966 596 519 845; address conflict Dammam vs Al Khobar.",
+      "duty_i18n": {
+        "it": "Sab–gio 9:00–23:00; ven 14:00–23:00."
+      }
     },
     {
       "name": "Misk Al-Tabee'a Veterinary Clinic (Misk Vet Clinic)",
@@ -219,7 +249,10 @@
       "note": "Own site (Arabic) says 'متاحون 24/7' for emergencies but lists 09:00-22:00 Sat-Thu; no street address on page (Al Khalidiyyah only in aggregator madinahcats.com). 24 h claim not reconciled with posted hours.",
       "kind": "clinic",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–gio 9:00–22:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7; telefonare in anticipo."
+      }
     },
     {
       "name": "Advanced Pet Clinic (Riyadh branch)",
@@ -234,7 +267,10 @@
       "note": "No 24 h wording; emergency number only.",
       "kind": "clinic",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0500521717."
+      }
     },
     {
       "name": "Advanced Pet Clinic (Al Khobar branch)",
@@ -249,7 +285,10 @@
       "note": "No 24 h wording; emergency number only.",
       "kind": "clinic",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Dom–gio e sab 8:30–23:00; ven 16:00–21:00. Linea di emergenza: 0559171818."
+      }
     },
     {
       "name": "Advanced Pet Clinic (Al Ahsa branch)",
@@ -264,7 +303,10 @@
       "note": "No 24 h wording; emergency number only.",
       "kind": "clinic",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0559825550."
+      }
     },
     {
       "name": "Pets Houses Veterinary Clinic",
@@ -279,7 +321,10 @@
       "note": "Own store/clinic page; footer phone +966501239936. No 24 h wording.",
       "kind": "clinic",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–gio 9:00–22:00; ven 14:00–22:00."
+      }
     },
     {
       "name": "Sekka Al Ilaj Veterinary Clinic",

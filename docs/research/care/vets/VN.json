@@ -164,7 +164,8 @@
       "checked": "2026-11-11",
       "note": "Page footer swaps addresses of branches 1 and 2; body text used.",
       "duty_i18n": {
-        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos."
+        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos.",
+        "it": "Pronto soccorso veterinario annunciato 24 ore su 24; aperto nei weekend e nei festivi."
       }
     },
     {
@@ -182,7 +183,8 @@
       "checked": "2026-11-11",
       "note": "Page footer swaps addresses of branches 1 and 2; body text used.",
       "duty_i18n": {
-        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos."
+        "es": "Urgencias veterinarias anunciadas las 24 horas del día; abierto fines de semana y festivos.",
+        "it": "Pronto soccorso veterinario annunciato 24 ore su 24; aperto nei weekend e nei festivi."
       }
     },
     {
@@ -199,7 +201,8 @@
       "checked": "2026-11-11",
       "note": "Branch 3 hotline inconsistent on page (081.628.488 / 081.628.4888 / link differs), so no phone published.",
       "duty_i18n": {
-        "es": "Urgencias veterinarias las 24 horas; abierto fines de semana y festivos."
+        "es": "Urgencias veterinarias las 24 horas; abierto fines de semana y festivos.",
+        "it": "Pronto soccorso veterinario annunciato 24 ore su 24; aperto nei weekend e nei festivi."
       }
     },
     {
@@ -217,7 +220,8 @@
       "checked": "2026-11-11",
       "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
       "duty_i18n": {
-        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes.",
+        "it": "Annuncia pronto soccorso 24 ore su 24, 7 giorni su 7, ogni giorno, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -235,7 +239,8 @@
       "checked": "2026-11-11",
       "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
       "duty_i18n": {
-        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes.",
+        "it": "Annuncia pronto soccorso 24 ore su 24, 7 giorni su 7, ogni giorno, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -253,7 +258,8 @@
       "checked": "2026-11-11",
       "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead. Homepage also shows Ha Long emergency number 0328.553.886.",
       "duty_i18n": {
-        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes.",
+        "it": "Annuncia pronto soccorso 24 ore su 24, 7 giorni su 7, ogni giorno, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -271,7 +277,8 @@
       "checked": "2026-11-11",
       "note": "Page says 24/24 and emergency 24/7, but listed branch hours are 9:00-12:00 and 14:00-21:00 (header says 9:00-20:00); homepage shows conflicting hotline digits (0383.553.886 / 0383.533.886). Call ahead.",
       "duty_i18n": {
-        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes."
+        "es": "Anuncia urgencias 24/7, todos los días, festivos incluidos; llama antes.",
+        "it": "Annuncia pronto soccorso 24 ore su 24, 7 giorni su 7, ogni giorno, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -289,7 +296,8 @@
       "checked": "2026-11-11",
       "note": "Page says 26 branches but branch list pages (he-thong-benh-vien..., address list) were empty; only hotline and head-office address verified. Individual branches not listed.",
       "duty_i18n": {
-        "es": "La cadena anuncia urgencias 24/7 con veterinarios en sus sucursales las 24 horas; llama a la línea de atención para saber cuál es la más cercana."
+        "es": "La cadena anuncia urgencias 24/7 con veterinarios en sus sucursales las 24 horas; llama a la línea de atención para saber cuál es la más cercana.",
+        "it": "La catena annuncia pronto soccorso 24 ore su 24, con medici nelle sedi a ogni ora; chiamare la linea diretta per la sede più vicina."
       }
     },
     {
@@ -307,7 +315,8 @@
       "checked": "2026-11-11",
       "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460.",
       "duty_i18n": {
-        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7."
+        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7.",
+        "it": "Orario regolare 08:00–19:00; pronto soccorso 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -325,7 +334,8 @@
       "checked": "2026-11-11",
       "note": "Branch hours 08:00-19:00 with 'Cap cuu 24/7'; FAQ says Tan Son Hoa and Cho Quan accept emergencies 24 hours; emergency hotline 0979 063 460.",
       "duty_i18n": {
-        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7."
+        "es": "Horario habitual 8:00–19:00 h; urgencias 24/7.",
+        "it": "Orario regolare 08:00–19:00; pronto soccorso 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -343,7 +353,8 @@
       "checked": "2026-11-11",
       "note": "No 24/7 emergency listed for this branch.",
       "duty_i18n": {
-        "es": "Abierto 8:00–19:00 h."
+        "es": "Abierto 8:00–19:00 h.",
+        "it": "Aperto 08:00–19:00."
       }
     },
     {
@@ -361,7 +372,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Cap cuu 24/7' (menu 24/24) while general hours 8-19; second hotline 0772 005 686.",
       "duty_i18n": {
-        "es": "Horario habitual 8:00–19:00 h; anuncia urgencias 24/7."
+        "es": "Horario habitual 8:00–19:00 h; anuncia urgencias 24/7.",
+        "it": "Orario regolare 08:00–19:00; pronto soccorso annunciato 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -379,7 +391,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas.",
+        "it": "Aperto 24 ore su 24 anche nei weekend e nei festivi; linea diretta presidiata 24 ore su 24."
       }
     },
     {
@@ -397,7 +410,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas.",
+        "it": "Aperto 24 ore su 24 anche nei weekend e nei festivi; linea diretta presidiata 24 ore su 24."
       }
     },
     {
@@ -415,7 +429,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas.",
+        "it": "Aperto 24 ore su 24 anche nei weekend e nei festivi; linea diretta presidiata 24 ore su 24."
       }
     },
     {
@@ -433,7 +448,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Lam viec 24/24'; second number 0982 451 183; home visits offered.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas."
+        "es": "Abierto las 24 horas, fines de semana y festivos incluidos; línea de atención atendida a todas horas.",
+        "it": "Aperto 24 ore su 24 anche nei weekend e nei festivi; linea diretta presidiata 24 ore su 24."
       }
     },
     {
@@ -451,7 +467,8 @@
       "checked": "2026-11-11",
       "note": "Home page says staff on duty for emergencies 24/7; about page lists inconsistent consultation hours, so call ahead.",
       "duty_i18n": {
-        "es": "Abierto todos los días del año; personal de guardia para urgencias de perros y gatos 24/7."
+        "es": "Abierto todos los días del año; personal de guardia para urgencias de perros y gatos 24/7.",
+        "it": "Aperto ogni giorno dell'anno; personale di turno per le emergenze di cani e gatti 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -469,7 +486,8 @@
       "checked": "2026-11-11",
       "note": "Page says 'luon co bac si truc cap cuu 24/24' while listed hours are 07-19; call ahead. Branch 1: 234 Nguyen Trai, Thanh Xuan, Hanoi (no hours on page).",
       "duty_i18n": {
-        "es": "Horario habitual 7:00–19:00 h todos los días; veterinario de guardia para urgencias las 24 horas."
+        "es": "Horario habitual 7:00–19:00 h todos los días; veterinario de guardia para urgencias las 24 horas.",
+        "it": "Orario regolare 07:00–19:00 tutti i giorni; medico di guardia per le urgenze 24 ore su 24."
       }
     },
     {
@@ -487,7 +505,8 @@
       "checked": "2026-11-11",
       "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
       "duty_i18n": {
-        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7.",
+        "it": "Aperto 9:00–19:00 tutti i giorni; pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -505,7 +524,8 @@
       "checked": "2026-11-11",
       "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
       "duty_i18n": {
-        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7.",
+        "it": "Aperto 9:00–19:00 tutti i giorni; pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -523,7 +543,8 @@
       "checked": "2026-11-11",
       "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
       "duty_i18n": {
-        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7.",
+        "it": "Aperto 9:00–19:00 tutti i giorni; pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -541,7 +562,8 @@
       "checked": "2026-11-11",
       "note": "Site lists one Vietnam hotline for all branches; international +84 28 7304 1144.",
       "duty_i18n": {
-        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7."
+        "es": "Abierto 9:00–19:00 h todos los días; urgencias y cuidados intensivos 24/7.",
+        "it": "Aperto 9:00–19:00 tutti i giorni; pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -559,7 +581,8 @@
       "checked": "2026-11-11",
       "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
       "duty_i18n": {
-        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267.",
+        "it": "Aperto 7:00–21:00 tutti i giorni; assistenza in inglese, francese e cinese al 0909 063 267."
       }
     },
     {
@@ -577,7 +600,8 @@
       "checked": "2026-11-11",
       "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
       "duty_i18n": {
-        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267.",
+        "it": "Aperto 7:00–21:00 tutti i giorni; assistenza in inglese, francese e cinese al 0909 063 267."
       }
     },
     {
@@ -595,7 +619,8 @@
       "checked": "2026-11-11",
       "note": "Branch hours 7am-9pm; site's '24 hours a day' wording refers to the referral hospital in general, not branch hours.",
       "duty_i18n": {
-        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267."
+        "es": "Abierto 7:00–21:00 h todos los días; atención en inglés, francés y chino en el 0909 063 267.",
+        "it": "Aperto 7:00–21:00 tutti i giorni; assistenza in inglese, francese e cinese al 0909 063 267."
       }
     },
     {
@@ -613,7 +638,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'cung cap dich vu cap cuu 24/7, ke ca thu 7, chu nhat va ngay le'; asks to call ahead after 19:00.",
       "duty_i18n": {
-        "es": "Abierto 8:00–17:00 h; anuncia servicio de urgencias 24/7, fines de semana y festivos incluidos; para urgencias después de las 19:00 h, llama antes."
+        "es": "Abierto 8:00–17:00 h; anuncia servicio de urgencias 24/7, fines de semana y festivos incluidos; para urgencias después de las 19:00 h, llama antes.",
+        "it": "Aperto 08:00–17:00; pronto soccorso annunciato 24 ore su 24, 7 giorni su 7, weekend e festivi inclusi; per urgenze dopo le 19:00 chiamare prima."
       }
     },
     {
@@ -631,7 +657,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Cap cuu: 24/24'. Facebook listing shown on the page gives a different address (13 Hung Vuong, Duong Dong).",
       "duty_i18n": {
-        "es": "Abierto 8:00–19:00 h; anuncia urgencias las 24 horas; llama antes."
+        "es": "Abierto 8:00–19:00 h; anuncia urgencias las 24 horas; llama antes.",
+        "it": "Aperto 08:00–19:00; pronto soccorso annunciato 24 ore su 24; chiamare prima."
       }
     },
     {
@@ -649,7 +676,8 @@
       "checked": "2026-11-11",
       "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11. Removed from duty: Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes."
+        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes.",
+        "it": "Aperto lun–sab 08:00–21:00, dom e festivi 08:00–20:00; linea d'emergenza 085 55 85 234; chiamare prima."
       }
     },
     {
@@ -667,7 +695,8 @@
       "checked": "2026-11-11",
       "note": "Source page says 24/24 emergency on 085 55 85 234 but does not tie it to a branch; downgraded by independent check 2026-11-11. Removed from duty: Open Mon-Sat 08:00-21:00, Sun and holidays 08:00-20:00; emergency line 085 55 85 234 (not tied to this branch on the page); call ahead.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes."
+        "es": "Abierto lun–sáb 8:00–21:00 h, dom y festivos 8:00–20:00 h; línea de urgencias 085 55 85 234; llama antes.",
+        "it": "Aperto lun–sab 08:00–21:00, dom e festivi 08:00–20:00; linea d'emergenza 085 55 85 234; chiamare prima."
       }
     },
     {
@@ -685,7 +714,8 @@
       "checked": "2026-11-11",
       "note": "Pet shop/hotel with a 'Pet Clinic' service; page also lists a second address 36 Go Cay Sung, Vinh Ngoc, unclear which houses the clinic. No 24h wording.",
       "duty_i18n": {
-        "es": "Abierto todos los días 7:30–21:30 h (sábados hasta las 22:00 h)."
+        "es": "Abierto todos los días 7:30–21:30 h (sábados hasta las 22:00 h).",
+        "it": "Aperto tutti i giorni 07:30–21:30 (il sabato fino alle 22:00)."
       }
     },
     {
@@ -703,7 +733,8 @@
       "checked": "2026-11-11",
       "note": "Page header 'Cap cuu 24/24: 02435 145 145 - 0399 065 115'; page also shows a not-found title but content loads. Hours Mon-Fri only.",
       "duty_i18n": {
-        "es": "Hospital universitario docente; abierto lun–vie 7:30–11:30 h y 13:30–17:30 h; anuncia línea de urgencias las 24 horas en el 0399 065 115."
+        "es": "Hospital universitario docente; abierto lun–vie 7:30–11:30 h y 13:30–17:30 h; anuncia línea de urgencias las 24 horas en el 0399 065 115.",
+        "it": "Ospedale didattico universitario; aperto lun–ven 07:30–11:30 e 13:30–17:30; linea d'emergenza annunciata 24 ore su 24 al 0399 065 115."
       }
     },
     {
@@ -720,7 +751,8 @@
       "checked": "2026-11-11",
       "note": "Page lists only a fax (+84-28) 38967596, no phone or hours, no 24h wording; news items 2013-2017 so details may be outdated. Removed from duty: University veterinary hospital; no opening hours published, contact by email vethospital@hcmuaf.edu.vn.",
       "duty_i18n": {
-        "es": "Hospital veterinario universitario; contacto por correo electrónico: vethospital@hcmuaf.edu.vn."
+        "es": "Hospital veterinario universitario; contacto por correo electrónico: vethospital@hcmuaf.edu.vn.",
+        "it": "Ospedale veterinario universitario; contatto via email vethospital@hcmuaf.edu.vn."
       }
     },
     {
@@ -738,7 +770,8 @@
       "checked": "2026-11-11",
       "note": "Mobile 0987 774 878 also listed. No hours or 24h wording. Removed from duty: University veterinary clinic; opening hours not published, call ahead.",
       "duty_i18n": {
-        "es": "Clínica veterinaria universitaria; llama antes."
+        "es": "Clínica veterinaria universitaria; llama antes.",
+        "it": "Clinica veterinaria universitaria; chiamare prima."
       }
     },
     {
@@ -756,7 +789,8 @@
       "checked": "2026-11-11",
       "note": "Page uses 'luon san long 24/7' and 'Phuc vu 365 ngay/nam'; chi-nhanh page lists only this branch. Zalo 0394 693 939.",
       "duty_i18n": {
-        "es": "Abierto 8:00–19:00 h; urgencias fuera de horario 19:00–8:00 h con recargo; anuncia atención 24/7, los 365 días del año."
+        "es": "Abierto 8:00–19:00 h; urgencias fuera de horario 19:00–8:00 h con recargo; anuncia atención 24/7, los 365 días del año.",
+        "it": "Aperto 08:00–19:00; pronto soccorso fuori orario 19:00–08:00 con supplemento; annunciato 24 ore su 24, 7 giorni su 7, 365 giorni all'anno."
       }
     },
     {
@@ -774,7 +808,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -792,7 +827,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -810,7 +846,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -828,7 +865,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -846,7 +884,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -864,7 +903,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -882,7 +922,8 @@
       "checked": "2026-11-11",
       "note": "Source page makes only a group-wide 24/24 claim, no per-branch evidence; downgraded by independent check 2026-11-11. Removed from duty: Hospital group advertises doctors on duty 24/24; the page gives no per-branch hours, so call ahead; hotline 1800 599 941.",
       "duty_i18n": {
-        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941."
+        "es": "El grupo hospitalario anuncia veterinarios de guardia las 24 horas; llama antes para confirmarlo en esta sucursal; línea de atención 1800 599 941.",
+        "it": "Il gruppo ospedaliero indica medici di guardia 24 ore su 24; chiamare per confermare la disponibilità in questa sede; linea diretta 1800 599 941."
       }
     },
     {
@@ -900,7 +941,8 @@
       "checked": "2026-11-11",
       "note": "Footer: 'Cap cuu 24h 24/7'.",
       "duty_i18n": {
-        "es": "Hospital abierto todos los días 8:30–21:00 h; ingreso de urgencias 24/7, también de noche, fines de semana y festivos."
+        "es": "Hospital abierto todos los días 8:30–21:00 h; ingreso de urgencias 24/7, también de noche, fines de semana y festivos.",
+        "it": "Ospedale aperto tutti i giorni 08:30–21:00; accettazione d'urgenza 24 ore su 24, 7 giorni su 7, notti, weekend e festivi inclusi."
       }
     },
     {
@@ -918,7 +960,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'mo lien tuc 24 gio trong ngay va 7 ngay trong tuan'; home page also 'CAP CUU 24H'.",
       "duty_i18n": {
-        "es": "Abierto las 24 horas, los 7 días de la semana, con urgencias e ingreso hospitalario, festivos incluidos."
+        "es": "Abierto las 24 horas, los 7 días de la semana, con urgencias e ingreso hospitalario, festivos incluidos.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 con pronto soccorso e ricoveri, festivi inclusi."
       }
     },
     {
@@ -936,7 +979,8 @@
       "checked": "2026-11-11",
       "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Emergency line; page asks owners to use this number for emergencies after 19:00.",
       "duty_i18n": {
-        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes."
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes.",
+        "it": "Orario regolare lun–sab 08:00–12:00 e 14:00–19:00, dom e festivi 08:00–12:00; pronto soccorso annunciato 24 ore su 24, 7 giorni su 7, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -954,7 +998,8 @@
       "checked": "2026-11-11",
       "note": "Not listed under the 24/7 emergency heading on the source page; downgraded by independent check 2026-11-11.",
       "duty_i18n": {
-        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; para urgencias, llama antes."
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; para urgencias, llama antes.",
+        "it": "Orario regolare lun–sab 08:00–12:00 e 14:00–19:00, dom e festivi 08:00–12:00; per le urgenze chiamare prima."
       }
     },
     {
@@ -972,7 +1017,8 @@
       "checked": "2026-11-11",
       "note": "Emergency page: 'For emergencies, we are open 24/7, including public holidays'; contact page hours 8-12/14-19. Hotline 0918 10 11 10. Also an emergency line.",
       "duty_i18n": {
-        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes."
+        "es": "Horario habitual lun–sáb 8:00–12:00 h y 14:00–19:00 h, dom y festivos 8:00–12:00 h; anuncia urgencias 24/7, festivos incluidos; llama antes.",
+        "it": "Orario regolare lun–sab 08:00–12:00 e 14:00–19:00, dom e festivi 08:00–12:00; pronto soccorso annunciato 24 ore su 24, 7 giorni su 7, festivi inclusi; chiamare prima."
       }
     },
     {
@@ -990,7 +1036,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn).",
       "duty_i18n": {
-        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400."
+        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400.",
+        "it": "Pronto soccorso veterinario annunciato 24 ore su 24, 7 giorni su 7 in tutte le sedi; linea d'emergenza 0908 412 400."
       }
     },
     {
@@ -1008,7 +1055,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'cap cuu thu y 24/7 tai toan bo 5 chi nhanh'; no branch hours. Other branches in Dong Nai (Long Khanh, Long Thanh, Xuan Loc) not added. Not related to PetHealth (pethealth.vn).",
       "duty_i18n": {
-        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400."
+        "es": "Anuncia urgencias veterinarias 24/7 en todas sus sucursales; línea de urgencias 0908 412 400.",
+        "it": "Pronto soccorso veterinario annunciato 24 ore su 24, 7 giorni su 7 in tutte le sedi; linea d'emergenza 0908 412 400."
       }
     },
     {
@@ -1026,7 +1074,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'Ho tro cap cuu thu y 24/7'; second hotline 0868 518 021; no regular hours listed. Removed from duty: Emergency support advertised 24/7; regular opening hours not published, call ahead.",
       "duty_i18n": {
-        "es": "Anuncia atención de urgencias 24/7; llama antes."
+        "es": "Anuncia atención de urgencias 24/7; llama antes.",
+        "it": "Assistenza d'urgenza annunciata 24 ore su 24, 7 giorni su 7; chiamare prima."
       }
     },
     {
@@ -1044,7 +1093,8 @@
       "checked": "2026-11-11",
       "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes.",
+        "it": "Aperto lun–sab 07:00–19:00, dom e festivi 07:00–17:00; per urgenze fuori orario chiamare prima."
       }
     },
     {
@@ -1062,7 +1112,8 @@
       "checked": "2026-11-11",
       "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes.",
+        "it": "Aperto lun–sab 07:00–19:00, dom e festivi 07:00–17:00; per urgenze fuori orario chiamare prima."
       }
     },
     {
@@ -1080,7 +1131,8 @@
       "checked": "2026-11-11",
       "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes.",
+        "it": "Aperto lun–sab 07:00–19:00, dom e festivi 07:00–17:00; per urgenze fuori orario chiamare prima."
       }
     },
     {
@@ -1098,7 +1150,8 @@
       "checked": "2026-11-11",
       "note": "Only the meta description says 'cap cuu 24/24' while body hours are 7-19, so 24h not confirmed; hours not tied to a branch. Hotline 0979 820 386.",
       "duty_i18n": {
-        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes."
+        "es": "Abierto lun–sáb 7:00–19:00 h, dom y festivos 7:00–17:00 h; para urgencias fuera de horario, llama antes.",
+        "it": "Aperto lun–sab 07:00–19:00, dom e festivi 07:00–17:00; per urgenze fuori orario chiamare prima."
       }
     },
     {
@@ -1116,7 +1169,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1134,7 +1188,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1152,7 +1207,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1170,7 +1226,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1188,7 +1245,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1206,7 +1264,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1224,7 +1283,8 @@
       "checked": "2026-11-11",
       "note": "Branch-name label only on the source page; footer says emergency duty starts 20:00; downgraded by independent check 2026-11-11. Removed from duty: Opening hours as published; branch name says emergency 24/7 but the page gives no branch-level confirmation; call ahead.",
       "duty_i18n": {
-        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo."
+        "es": "El nombre de la sucursal indica urgencias 24/7; llama antes para confirmarlo.",
+        "it": "Il nome della sede indica pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare per conferma."
       }
     },
     {
@@ -1242,7 +1302,8 @@
       "checked": "2026-11-11",
       "note": "Page: 'CAP CUU 24/7' and 'Truong hop khan cap 24/7'; Zalo 0354 588 966.",
       "duty_i18n": {
-        "es": "Abierto todos los días 8:00–20:00 h; anuncia urgencias 24/7."
+        "es": "Abierto todos los días 8:00–20:00 h; anuncia urgencias 24/7.",
+        "it": "Aperto 08:00–20:00 tutti i giorni; pronto soccorso annunciato 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -1260,7 +1321,8 @@
       "checked": "2026-11-11",
       "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115.",
       "duty_i18n": {
-        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes."
+        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes.",
+        "it": "Aperto tutti i giorni 07:00–19:00; per le urgenze chiamare prima."
       }
     },
     {
@@ -1278,7 +1340,8 @@
       "checked": "2026-11-11",
       "note": "Quang Nam province near Hoi An (no Hoi An clinic own site found). Only '24/7' wording is for wholesale support and a news headline, not clinic hours. Second numbers 0393 434 115 / 0344 615 115.",
       "duty_i18n": {
-        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes."
+        "es": "Abierto todos los días 7:00–19:00 h; para urgencias, llama antes.",
+        "it": "Aperto tutti i giorni 07:00–19:00; per le urgenze chiamare prima."
       }
     },
     {
@@ -1295,7 +1358,8 @@
       "checked": "2026-11-11",
       "note": "Home page gives only emergency phone ('Emergency? We're available at 0339325563'), no address, hours or 24h wording. Removed from duty: English-speaking clinic in Da Nang; emergency line 0339 325 563; opening hours not published, call ahead.",
       "duty_i18n": {
-        "es": "Clínica con atención en inglés en Da Nang; línea de urgencias 0339 325 563; llama antes."
+        "es": "Clínica con atención en inglés en Da Nang; línea de urgencias 0339 325 563; llama antes.",
+        "it": "Clinica con personale che parla inglese a Da Nang; linea d'emergenza 0339 325 563; chiamare prima."
       }
     }
   ],

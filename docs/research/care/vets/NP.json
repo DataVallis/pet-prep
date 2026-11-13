@@ -57,7 +57,10 @@
       "url": "https://katcentre.org/en/contact-us",
       "source_url": "https://katcentre.org/en/contact-us",
       "checked": "2026-11-12",
-      "note": "Contact page gives directions and phones but no street address; Lalitpur from the 'new veterinary hospital' page (katcentre.org/?p=5376), whose wording was forward-looking (opening planned Oct 2025). Charity focused on street dogs; also does low-cost pet sterilisation/vaccination. No 24 h statement. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Contact page gives directions and phones but no street address; Lalitpur from the 'new veterinary hospital' page (katcentre.org/?p=5376), whose wording was forward-looking (opening planned Oct 2025). Charity focused on street dogs; also does low-cost pet sterilisation/vaccination. No 24 h statement. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Orario di lavoro 10:00–17:00, da domenica a venerdì. Chiamare prima; 9801912476 è anche la linea di soccorso KAT per animali in difficoltà."
+      }
     },
     {
       "kind": "clinic",
@@ -71,7 +74,10 @@
       "url": "https://www.facebook.com/Kathmanduanimalhospital/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Independent check 2026-11-12: source_url (Online Khabar, article dated Dec 2021) confirms name, Baluwatar, hours 8:30-18:00 and 24 h emergency claim; it lists NO phone. Phone removed because it only came from a 2015 NepalYP listing, not the source page. Address from the same 2015 listing. Own Facebook page not opened."
+      "note": "Independent check 2026-11-12: source_url (Online Khabar, article dated Dec 2021) confirms name, Baluwatar, hours 8:30-18:00 and 24 h emergency claim; it lists NO phone. Phone removed because it only came from a 2015 NepalYP listing, not the source page. Address from the same 2015 listing. Own Facebook page not opened.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 8:30–18:30; pronto soccorso disponibile 24 ore su 24. Chiamare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -85,7 +91,10 @@
       "url": "https://www.facebook.com/aphktm/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Only source is the Online Khabar article (open 24 hours, 365 days; services limited to dogs and cats). No phone found on any opened page; Facebook page could not be fetched (provenance block). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Only source is the Online Khabar article (open 24 hours, 365 days; services limited to dogs and cats). No phone found on any opened page; Facebook page could not be fetched (provenance block). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno, con pronto soccorso. Solo cani e gatti."
+      }
     },
     {
       "kind": "clinic",
@@ -99,7 +108,10 @@
       "url": "https://cityvetnepal.com/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Online Khabar: 'Open 24*7'. Clinic site cityvetnepal.com linked from the article but could not be fetched (provenance block), so no phone verified. Satdobato is in Lalitpur (city inferred from locality). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Online Khabar: 'Open 24*7'. Clinic site cityvetnepal.com linked from the article but could not be fetched (provenance block), so no phone verified. Satdobato is in Lalitpur (city inferred from locality). Verify before publishing. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+      }
     },
     {
       "kind": "clinic",
@@ -113,7 +125,10 @@
       "url": "https://www.instagram.com/animalmedicalcentrenepal/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Article gives no hours and no 24 h claim. Instagram page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Article gives no hours and no 24 h claim. Instagram page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Pronto soccorso e servizi ordinari. Telefonare in anticipo per gli orari."
+      }
     },
     {
       "kind": "clinic",
@@ -127,7 +142,10 @@
       "url": "https://www.facebook.com/kathmandu.vet.clinic/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Article: open about four hours a day, times not given. Facebook page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Article: open about four hours a day, times not given. Facebook page not fetched. No phone found. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Aperto solo alcune ore al giorno; chiamare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -141,7 +159,10 @@
       "url": "https://crvh.gov.np/",
       "source_url": "https://english.onlinekhabar.com/veterinary-hospitals-kathmandu.html",
       "checked": "2026-11-12",
-      "note": "Online Khabar: veterinary service only after 10 am, no emergency service yet. A 2019 Himalayan Times article (thehimalayantimes.com/ampArticle/169706) said a new building would offer 24-hour emergency service; no current confirmation found. crvh.gov.np could not be fetched (provenance block). Whether it treats pets is implied by the article but not confirmed. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated)."
+      "note": "Online Khabar: veterinary service only after 10 am, no emergency service yet. A 2019 Himalayan Times article (thehimalayantimes.com/ampArticle/169706) said a new building would offer 24-hour emergency service; no current confirmation found. crvh.gov.np could not be fetched (provenance block). Whether it treats pets is implied by the article but not confirmed. Independent check 2026-11-12: confirmed against source_url (article dated Dec 2021, may be dated).",
+      "duty_i18n": {
+        "it": "Ospedale pubblico di riferimento; servizio dalle 10:00. Nessun pronto soccorso secondo le ultime informazioni pubblicate."
+      }
     }
   ],
   "notes": "Research 2026-11-12. WebFetch only permitted URLs that had appeared in earlier search results or fetched pages as literal URLs, so the clinics' own sites (cityvetnepal.com, crvh.gov.np, Facebook/Instagram pages) and snehacare.org were blocked and not used; four of the entries therefore rest on a single news article (Online Khabar) plus the clinics' own links, and are marked for verification. Nepal Veterinary Council, Department of Livestock Services and AFU teaching hospital pages were not found/opened with usable clinic data. No duty rota and no animal poison line found. Not covered: Pokhara, Chitwan/Sauraha, Bhaktapur, Biratnagar, Lumbini/Butwal (no clinic page with contact data was reachable). Sneha's Care animal ambulance (Lalitpur) is a charity rescue service with no published phone on the opened page, so not an entry."
