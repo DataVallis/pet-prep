@@ -52,7 +52,10 @@
       "url": "https://canvethospital.com/",
       "source_url": "https://canvethospital.com/?p=214",
       "checked": "2026-11-12",
-      "note": "Own page ?p=214 and ?p=26 say 'We are open 24/7'; the home page itself only gives the after-hours number and no 24 h claim."
+      "note": "Own page ?p=214 and ?p=26 say 'We are open 24/7'; the home page itself only gives the after-hours number and no 24 h claim.",
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; tra mezzanotte e le 8:00 solo emergenze. Numero per le emergenze fuori orario: +974 3340 9300. Chiuso per la preghiera del venerdì 11:00–13:00, tranne le emergenze assolute."
+      }
     },
     {
       "kind": "clinic",
@@ -67,7 +70,10 @@
       "url": "https://dohavets.com/",
       "source_url": "https://dohavets.com/home/",
       "checked": "2026-11-12",
-      "note": "Independent check 2026-11-12: home page says 'emergency care 24 hours a day, 7 days a week'; phone +974 4436 7187 and after-hours +974 5584 1224 appear on the contact page (https://dohavets.com/contact/), not on the home page. WhatsApp +974 6654 0013 / 6618 8336."
+      "note": "Independent check 2026-11-12: home page says 'emergency care 24 hours a day, 7 days a week'; phone +974 4436 7187 and after-hours +974 5584 1224 appear on the contact page (https://dohavets.com/contact/), not on the home page. WhatsApp +974 6654 0013 / 6618 8336.",
+      "duty_i18n": {
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Orari ordinari sab–gio 8:00–22:00, ven 14:00–21:00. Numero per le emergenze fuori orario: +974 5584 1224."
+      }
     },
     {
       "kind": "clinic",
@@ -82,7 +88,10 @@
       "url": "https://about.me/qatar_vet",
       "source_url": "https://about.me/qatar_vet",
       "checked": "2026-11-12",
-      "note": "Profile page, not the clinic's own site (qatarvet.com not fetchable). No 24 h wording."
+      "note": "Profile page, not the clinic's own site (qatarvet.com not fetchable). No 24 h wording.",
+      "duty_i18n": {
+        "it": "Sab–gio 8:00–20:00. Venerdì e fuori orario: solo emergenze, chiamare il +974 6667 5235. Sede di Duhail: +974 4498 9620."
+      }
     },
     {
       "kind": "clinic",
@@ -96,7 +105,10 @@
       "url": "https://petsqtr.com",
       "source_url": "https://petsqtr.com",
       "checked": "2026-11-12",
-      "note": "Independent check 2026-11-12: petsqtr.com lists it as 'alaseel clinic' with the hours shown; the phone (50032255, from a blog) is not on the page, so it was removed (url kept). No 24 h wording on the page."
+      "note": "Independent check 2026-11-12: petsqtr.com lists it as 'alaseel clinic' with the hours shown; the phone (50032255, from a blog) is not on the page, so it was removed (url kept). No 24 h wording on the page.",
+      "duty_i18n": {
+        "it": "Sab–gio 10:00–23:00; ven 14:00–23:00."
+      }
     }
   ],
   "notes": "Fetching was limited: WebFetch only accepted URLs that had appeared in search results or page content, so many clinic own sites could not be opened (qatarvet.com, parkviewpetcenter.com, drfarisaltimimiclinic.com, larchevet.com, dragons.qa, sanam.qa, novavets.qa, petvetcare.qa, elitepet.online, alaseelclinic.com, www.tnrqatar.com list). Leads left unverified from own pages (aggregator data only): Parkview Pet Center (Madinat Khalifa North, 4417 1560, 8-21 daily), Sanam Veterinary Clinic (Doha, 4460 6069, listed '24 Hours Open' by propertyfinder.qa only), L'Arche Vet Clinic (Al Wakrah, Hassan Bin Thabit St, 4421 1111), Dragon Animal Care Center (Duhail, 4441 1866), Elite Pet Veterinary Clinic (Al Rayyan, Al Shafi St, 3042 3623), Dr Faris Al Timimi Clinic (West Bay/Katara, 4408 1491), Pets Veterinary Clinic (Souq Najd, Salwa Rd / Al Nasr), Nova Vets (The Pearl), Pet Vet Care (Souq Waqif), Vet Point (Al Waab St), Oryx Veterinary Center (Aziziya), Advanced Veterinary Clinic, Royal Vet Clinic, Qatar Animal Welfare Society (qaws.org), Equine Veterinary Medical Center. Government MME Animal Resources Department clinics (Al Rayyan, Al Shamal; 4426 1656 per Marhaba) not confirmed from an official page; MME general line 184. No duty rota and no animal poison line found (searches returned only foreign pet poison lines; Sidra Medicine toxicology is human-only). Not covered: Al Khor and Al Wakrah own-site clinics (only L'Arche lead), Mesaieed, Dukhan. Run 2026-11-12 (second pass): own sites still not fetchable (WebFetch provenance limit; none surfaced by search): parkviewpetcenter.com, larchevet.com, dragons.qa, sanam.qa, novavets.qa, petvetcare.qa, oryxvet.qa, drfarisaltimimiclinic.com, mme.gov.qa (Animal Resources Dept pages id=593/321), tnrqatar.com vet list (redirect blocked). Only secondary pages opened for Parkview (gulf-times 2011 article: no phone/hours), L'Arche (zavis.ai: 4421 1111), Dragon (expat.com: Building 4 Ain Bin Bahar St, Duhail, 4441 1866, 08-22 daily), Oryx (qatarliving ad: Al Aziziya, phone shown on one listing page only, no 24 h), Marhaba handbook (phones for Advanced 4443 5357, Dr Faris 4408 1492 vs 4408 1491 elsewhere, Royal 4017 5721, MME 4426 1656), Royal Vet blogspot (no contact data), EVMC (Al Shaqab page: 4454 1254 farrier course only, equine). Not added: aggregator-only data. Sanam 24 h claim unverified. No official MME clinic page, duty rota, QAWS contact or animal poison line opened. Not searched/found: Elite Pet Al Rayyan own page (only a Google business listing), Nova Vets, Pet Vet Care, Vet Point, Advanced, MME clinics."

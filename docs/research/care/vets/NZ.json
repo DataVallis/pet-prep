@@ -61,7 +61,8 @@
       "duty_i18n": {
         "de": "Montag 8 Uhr bis Samstag 8 Uhr rund um die Uhr geöffnet. Die Notfallversorgung am Wochenende (Samstag 8 Uhr bis Montag 8 Uhr) steht nur Kunden der Community Practice offen; andere Anrufer am Wochenende werden an Totally Vets Fielding verwiesen, +64 6 324 0812. Konsultationsgebühr bei Ankunft; bei stationärer Aufnahme des Haustiers 50 % Anzahlung.",
         "fr": "Ouvert 24 h/24 du lundi 8 h au samedi 8 h. Urgences du week-end (du samedi 8 h au lundi 8 h) réservées aux clients de Community Practice ; les autres appelants sont orientés vers Totally Vets Fielding, +64 6 324 0812. Consultation payable à l’arrivée ; acompte de 50 % en cas d’hospitalisation.",
-        "es": "Abierto las 24 horas desde el lunes a las 8:00 hasta el sábado a las 8:00. La atención de urgencias del fin de semana (del sábado a las 8:00 al lunes a las 8:00) es solo para clientes de Community Practice; a los demás se les deriva a Totally Vets Fielding, +64 6 324 0812. La consulta se paga a la llegada; depósito del 50 % si la mascota queda hospitalizada."
+        "es": "Abierto las 24 horas desde el lunes a las 8:00 hasta el sábado a las 8:00. La atención de urgencias del fin de semana (del sábado a las 8:00 al lunes a las 8:00) es solo para clientes de Community Practice; a los demás se les deriva a Totally Vets Fielding, +64 6 324 0812. La consulta se paga a la llegada; depósito del 50 % si la mascota queda hospitalizada.",
+        "it": "Aperto 24 ore su 24 dalle 8:00 del lunedì alle 8:00 del sabato. Il pronto soccorso del fine settimana (dalle 8:00 del sabato alle 8:00 del lunedì) è riservato ai clienti di Community Practice; gli altri sono indirizzati a Totally Vets Fielding, +64 6 324 0812. Tariffa della visita da pagare all'arrivo; acconto del 50% se l'animale viene ricoverato."
       }
     },
     {
@@ -81,7 +82,8 @@
       "duty_i18n": {
         "de": "Tierärztlicher Notdienst rund um die Uhr. Ohne Termin möglich; telefonische Voranmeldung empfohlen.",
         "fr": "Urgences vétérinaires 24 h/24. Sans rendez-vous acceptés ; il est conseillé d’appeler avant.",
-        "es": "Veterinarios de accidentes y urgencias las 24 horas. Se atiende sin cita; se aconseja llamar antes."
+        "es": "Veterinarios de accidentes y urgencias las 24 horas. Se atiende sin cita; se aconseja llamar antes.",
+        "it": "Veterinari per incidenti e pronto soccorso 24 ore su 24. Accesso senza appuntamento; si consiglia di telefonare prima."
       }
     },
     {
@@ -101,7 +103,8 @@
       "duty_i18n": {
         "de": "Tierärztlicher Notdienst rund um die Uhr.",
         "fr": "Urgences vétérinaires 24 h/24.",
-        "es": "Veterinarios de accidentes y urgencias las 24 horas."
+        "es": "Veterinarios de accidentes y urgencias las 24 horas.",
+        "it": "Pronto soccorso veterinario aperto 24 ore su 24."
       }
     },
     {
@@ -121,7 +124,8 @@
       "duty_i18n": {
         "de": "Notdienst-Klinik außerhalb der Sprechzeiten. Bitte vorher anrufen.",
         "fr": "Clinique d’urgences hors horaires d’ouverture. Appelez avant de venir.",
-        "es": "Clínica de urgencias fuera de horario. Llama antes de ir."
+        "es": "Clínica de urgencias fuera de horario. Llama antes de ir.",
+        "it": "Clinica per emergenze fuori orario. Telefonare prima di andare."
       }
     },
     {
@@ -141,7 +145,8 @@
       "duty_i18n": {
         "de": "Notdienst-Klinik außerhalb der Sprechzeiten. Bitte vorher anrufen.",
         "fr": "Clinique d’urgences hors horaires d’ouverture. Appelez avant de venir.",
-        "es": "Clínica de urgencias fuera de horario. Llama antes de ir."
+        "es": "Clínica de urgencias fuera de horario. Llama antes de ir.",
+        "it": "Clinica per emergenze fuori orario. Telefonare prima di andare."
       }
     },
     {
@@ -161,7 +166,8 @@
       "duty_i18n": {
         "de": "Notdienst-Klinik außerhalb der Sprechzeiten, nicht rund um die Uhr geöffnet: Mo–Fr 18–8 Uhr; am Wochenende von Samstag 12 Uhr bis Montag 8 Uhr.",
         "fr": "Clinique d’urgences hors horaires, non ouverte 24 h/24 : en semaine de 18 h à 8 h ; week-ends du samedi midi au lundi 8 h.",
-        "es": "Clínica de urgencias fuera de horario, no abre las 24 horas: entre semana 18:00–8:00 h; fines de semana, del sábado a mediodía al lunes a las 8:00."
+        "es": "Clínica de urgencias fuera de horario, no abre las 24 horas: entre semana 18:00–8:00 h; fines de semana, del sábado a mediodía al lunes a las 8:00.",
+        "it": "Clinica per emergenze fuori orario, non aperta 24 ore su 24: giorni feriali dalle 18:00 alle 8:00; weekend dalle 12:00 del sabato alle 8:00 del lunedì."
       }
     },
     {
@@ -181,7 +187,8 @@
       "duty_i18n": {
         "de": "Spezialklinik für Überweisungen und Notfälle. Mo–Fr 8–18 Uhr; wegen Notfallversorgung bitte anrufen.",
         "fr": "Hôpital de spécialistes (sur adressage) et d’urgences. Horaires lun.–ven. 8 h–18 h ; appelez pour vous renseigner sur les urgences.",
-        "es": "Hospital de referencia de especialidades y urgencias. Horario comercial lun–vie 8:00–18:00 h; llama para consultar la atención de urgencias."
+        "es": "Hospital de referencia de especialidades y urgencias. Horario comercial lun–vie 8:00–18:00 h; llama para consultar la atención de urgencias.",
+        "it": "Ospedale specialistico di riferimento e pronto soccorso. Orari lun–ven 8:00–18:00; telefonare per informazioni sulle emergenze."
       }
     },
     {
@@ -201,7 +208,8 @@
       "duty_i18n": {
         "de": "Regionale Notdienst-Klinik für Wellington außerhalb der Sprechzeiten. Bitte vorher anrufen, damit das Team Sie erwartet.",
         "fr": "Clinique d’urgences régionale hors horaires pour Wellington. Appelez d’abord pour que l’équipe vous attende.",
-        "es": "Clínica regional de urgencias fuera de horario para Wellington. Llama antes para que te esperen."
+        "es": "Clínica regional de urgencias fuera de horario para Wellington. Llama antes para que te esperen.",
+        "it": "Clinica regionale per emergenze fuori orario di Wellington. Telefonare prima, così il personale vi aspetta."
       }
     },
     {
@@ -220,7 +228,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 7.30–19 Uhr, Sa 9–16 Uhr, So und feiertags geschlossen. Notfälle außerhalb der Sprechzeiten übernimmt die Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fr": "Lun.–ven. 7 h 30–19 h, sam. 9 h–16 h, fermé les dimanches et jours fériés. En dehors de ces horaires, urgences orientées vers Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun–vie 7:30–19:00 h, sáb 9:00–16:00 h, cerrado dom y festivos. Fuera de horario, las urgencias van a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun–vie 7:30–19:00 h, sáb 9:00–16:00 h, cerrado dom y festivos. Fuera de horario, las urgencias van a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun–ven 7:30–19:00, sab 9:00–16:00, chiuso la domenica e i festivi. Fuori orario le emergenze vanno alla Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -240,7 +249,8 @@
       "duty_i18n": {
         "de": "Notdienst-Klinik außerhalb der Sprechzeiten: Mo–Do 19–8 Uhr; Fr 19 Uhr bis Mo 8 Uhr; an allen Feiertagen geöffnet. Werktags nicht rund um die Uhr geöffnet.",
         "fr": "Clinique d’urgences hors horaires : lun.–jeu. 19 h–8 h ; du ven. 19 h au lun. 8 h ; ouverte tous les jours fériés. Pas ouverte 24 h/24 en semaine.",
-        "es": "Clínica de urgencias fuera de horario: lun–jue 19:00–8:00 h; de vie 19:00 a lun 8:00; abre todos los festivos. No abre las 24 horas entre semana."
+        "es": "Clínica de urgencias fuera de horario: lun–jue 19:00–8:00 h; de vie 19:00 a lun 8:00; abre todos los festivos. No abre las 24 horas entre semana.",
+        "it": "Clinica per emergenze fuori orario: lun–gio 19:00–8:00; da ven 19:00 a lun 8:00; aperta in tutti i festivi. Non aperta 24 ore su 24 nei giorni feriali."
       }
     },
     {
@@ -259,7 +269,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–19 Uhr, Sa 8–14 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Christchurch Afterhours Veterinary Clinic anrufen, +64 3 366 1052.",
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–14 h, fermé le dimanche. En dehors de ces horaires, appelez Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
-        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–14:00 h, cerrado dom. Fuera de horario, llama a Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
+        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–14:00 h, cerrado dom. Fuera de horario, llama a Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
+        "it": "Lun–ven 8:00–19:00, sab 8:00–14:00, chiuso la domenica. Fuori orario chiamare la Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
       }
     },
     {
@@ -279,7 +290,8 @@
       "duty_i18n": {
         "de": "Regelungen außerhalb der Sprechzeiten siehe Seite „After Hours“ der Klinik.",
         "fr": "Consultez la page « After Hours » du site de la clinique pour les modalités hors horaires.",
-        "es": "Consulta la página After Hours de la clínica para saber cómo atienden fuera de horario."
+        "es": "Consulta la página After Hours de la clínica para saber cómo atienden fuera de horario.",
+        "it": "Per le modalità fuori orario vedere la pagina «After Hours» della clinica."
       }
     },
     {
@@ -299,7 +311,8 @@
       "duty_i18n": {
         "de": "Mo, Di, Do, Fr 8–17.30 Uhr; Mi 8–20 Uhr; Sa 9–13 Uhr. Telefonischer Bereitschaftsdienst für Kleintiere rund um die Uhr unter der Nummer der Klinik.",
         "fr": "Lun., mar., jeu., ven. 8 h–17 h 30 ; mer. 8 h–20 h ; sam. 9 h–13 h. Astreinte 24 h/24 pour les petits animaux : appelez le numéro de la clinique.",
-        "es": "Lun, mar, jue, vie 8:00–17:30 h; mié 8:00–20:00 h; sáb 9:00–13:00 h. Servicio de guardia 24 horas para pequeños animales: llama al número de la clínica."
+        "es": "Lun, mar, jue, vie 8:00–17:30 h; mié 8:00–20:00 h; sáb 9:00–13:00 h. Servicio de guardia 24 horas para pequeños animales: llama al número de la clínica.",
+        "it": "Lun, mar, gio, ven 8:00–17:30; mer 8:00–20:00; sab 9:00–13:00. Servizio di guardia 24 ore su 24 per piccoli animali: chiamare il numero della clinica."
       }
     },
     {
@@ -319,7 +332,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8.30–17.30 Uhr, Sa 9–13 Uhr, So geschlossen; an Feiertagen können die Zeiten abweichen. Im Notfall bitte zur Beratung anrufen.",
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 9 h–13 h, fermé le dimanche ; horaires pouvant varier les jours fériés. Appelez pour obtenir conseil en cas d’urgence.",
-        "es": "Lun–vie 8:30–17:30 h, sáb 9:00–13:00 h, cerrado dom; el horario puede variar en festivos. En urgencias, llama para recibir orientación."
+        "es": "Lun–vie 8:30–17:30 h, sáb 9:00–13:00 h, cerrado dom; el horario puede variar en festivos. En urgencias, llama para recibir orientación.",
+        "it": "Lun–ven 8:30–17:30, sab 9:00–13:00, chiuso la domenica; gli orari possono variare nei festivi. In caso di emergenza chiamare per ricevere consigli."
       }
     },
     {
@@ -338,7 +352,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So geschlossen. Notfälle außerhalb der Sprechzeiten: siehe Klinikfinder auf der Website.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–14 h, fermé le dimanche. Urgences hors horaires : consultez le localisateur de cliniques sur le site.",
-        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h, cerrado dom. Urgencias fuera de horario: consulta el localizador de clínicas en la web."
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h, cerrado dom. Urgencias fuera de horario: consulta el localizador de clínicas en la web.",
+        "it": "Lun–ven 8:00–18:00, sab 9:00–14:00, chiuso la domenica. Emergenze fuori orario: vedere il localizzatore delle cliniche sul sito."
       }
     },
     {
@@ -357,7 +372,8 @@
       "duty_i18n": {
         "de": "Telefonische Giftberatung für Haustierhalter und Tierarztpraxen in Neuseeland. Kostenpflichtig. Bei einer Vergiftung zusätzlich den Tierarzt anrufen; das National Poisons Centre für Menschen verweist Fälle mit Tieren hierher.",
         "fr": "Ligne de conseil antipoison pour les propriétaires d’animaux et les cliniques vétérinaires de Nouvelle-Zélande. Service payant. En cas d’animal empoisonné, appelez aussi votre vétérinaire ; le National Poisons Centre (pour les humains) y oriente les cas concernant des animaux.",
-        "es": "Línea de asesoramiento sobre intoxicaciones para dueños de mascotas y clínicas veterinarias de Nueva Zelanda. Es de pago. Si tu mascota se ha intoxicado, llama también a tu veterinario; el National Poisons Centre, para personas, deriva aquí los casos de animales."
+        "es": "Línea de asesoramiento sobre intoxicaciones para dueños de mascotas y clínicas veterinarias de Nueva Zelanda. Es de pago. Si tu mascota se ha intoxicado, llama también a tu veterinario; el National Poisons Centre, para personas, deriva aquí los casos de animales.",
+        "it": "Linea di consulenza sugli avvelenamenti per proprietari di animali e cliniche veterinarie della Nuova Zelanda. A pagamento. Per un animale avvelenato chiamare anche il proprio veterinario; il National Poisons Centre per le persone indirizza qui i casi animali."
       }
     },
     {
@@ -377,7 +393,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 18–8 Uhr; am Wochenende rund um die Uhr geöffnet. Bitte vorher anrufen. Übernimmt die Notfälle aller Praxen in Hawke's Bay außerhalb von deren Sprechzeiten.",
         "fr": "En semaine de 18 h à 8 h (du lundi au vendredi) ; ouvert 24 h/24 le week-end. Appelez avant de venir. Prend en charge les cas hors horaires de toutes les cliniques de Hawke's Bay.",
-        "es": "De lunes a viernes por la noche, 18:00–8:00 h; abierto las 24 horas los fines de semana. Llama antes de ir. Atiende los casos fuera de horario de todas las clínicas de Hawke's Bay."
+        "es": "De lunes a viernes por la noche, 18:00–8:00 h; abierto las 24 horas los fines de semana. Llama antes de ir. Atiende los casos fuera de horario de todas las clínicas de Hawke's Bay.",
+        "it": "Notti feriali dalle 18:00 alle 8:00 (da lunedì a venerdì); aperta 24 ore su 24 nel weekend. Telefonare prima di andare. Accoglie i casi fuori orario di tutte le cliniche dell'Hawke's Bay."
       }
     },
     {
@@ -397,7 +414,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 18–8 Uhr; am Wochenende und an Feiertagen rund um die Uhr (Fr 18 Uhr bis Mo 8 Uhr). Bitte vorher anrufen.",
         "fr": "Ouvert en semaine de 18 h à 8 h ; 24 h/24 les week-ends et jours fériés (du vendredi 18 h au lundi 8 h). Appelez avant de venir.",
-        "es": "Abierto de lunes a viernes por la noche, 18:00–8:00 h; las 24 horas los fines de semana y festivos (del viernes a las 18:00 al lunes a las 8:00). Llama antes de ir."
+        "es": "Abierto de lunes a viernes por la noche, 18:00–8:00 h; las 24 horas los fines de semana y festivos (del viernes a las 18:00 al lunes a las 8:00). Llama antes de ir.",
+        "it": "Aperta nelle notti feriali 18:00–8:00; aperta 24 ore su 24 nel weekend e nei festivi (da venerdì 18:00 a lunedì 8:00). Telefonare prima di andare."
       }
     },
     {
@@ -417,7 +435,8 @@
       "duty_i18n": {
         "de": "Notfallklinik für Tauranga außerhalb der Sprechzeiten. Bitte vorher anrufen.",
         "fr": "Hôpital d’urgences hors horaires pour Tauranga. Appelez avant de venir.",
-        "es": "Hospital de urgencias fuera de horario de Tauranga. Llama antes de ir."
+        "es": "Hospital de urgencias fuera de horario de Tauranga. Llama antes de ir.",
+        "it": "Ospedale per emergenze fuori orario di Tauranga. Telefonare prima di andare."
       }
     },
     {
@@ -437,7 +456,8 @@
       "duty_i18n": {
         "de": "Notfall- und Intensivklinik außerhalb der Sprechzeiten an der North Shore von Auckland. Bitte vorher anrufen.",
         "fr": "Clinique d’urgences et de soins intensifs hors horaires sur la North Shore d’Auckland. Appelez avant de venir.",
-        "es": "Clínica de urgencias y cuidados críticos fuera de horario en North Shore, Auckland. Llama antes de ir."
+        "es": "Clínica de urgencias y cuidados críticos fuera de horario en North Shore, Auckland. Llama antes de ir.",
+        "it": "Clinica per emergenze e terapia intensiva fuori orario sulla North Shore di Auckland. Telefonare prima di andare."
       }
     },
     {
@@ -457,7 +477,8 @@
       "duty_i18n": {
         "de": "Notdienst-Klinik außerhalb der Sprechzeiten im Westen von Auckland. Bitte vorher anrufen.",
         "fr": "Clinique d’urgences hors horaires dans l’ouest d’Auckland. Appelez avant de venir.",
-        "es": "Clínica de urgencias fuera de horario en el oeste de Auckland. Llama antes de ir."
+        "es": "Clínica de urgencias fuera de horario en el oeste de Auckland. Llama antes de ir.",
+        "it": "Clinica per emergenze fuori orario nella zona ovest di Auckland. Telefonare prima di andare."
       }
     },
     {
@@ -477,7 +498,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, Sa 8.30–16 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten erreichen Sie unter der Nummer der Klinik den diensthabenden Notdienst.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h 30–16 h, fermé les dimanches et jours fériés. Hors horaires, appelez le numéro de la clinique pour joindre le contact de garde.",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:30–16:00 h, cerrado dom y festivos. Fuera de horario, llama al número de la clínica para el contacto de guardia."
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:30–16:00 h, cerrado dom y festivos. Fuera de horario, llama al número de la clínica para el contacto de guardia.",
+        "it": "Lun–ven 8:00–18:00, sab 8:30–16:00, chiuso la domenica e i festivi. Fuori orario chiamare il numero della clinica per il contatto di turno."
       }
     },
     {
@@ -497,7 +519,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Sprechzeiten erreichen Sie unter +64 7 872 2040 eine tiermedizinische Fachkraft (kostenlose Telefonberatung rund um die Uhr), die Notfallversorgung vermitteln kann.",
         "fr": "Lun.–ven. 8 h–17 h, sam. 9 h–13 h, fermé le dimanche. Hors horaires, appelez le +64 7 872 2040 pour joindre une infirmière vétérinaire (conseils téléphoniques gratuits, 24 h/24, 7 j/7) qui peut organiser une prise en charge d’urgence.",
-        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–13:00 h, cerrado dom. Fuera de horario llama al +64 7 872 2040 para hablar con una enfermera veterinaria (asesoramiento telefónico gratuito 24/7) que puede organizar la atención de urgencias."
+        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–13:00 h, cerrado dom. Fuera de horario llama al +64 7 872 2040 para hablar con una enfermera veterinaria (asesoramiento telefónico gratuito 24/7) que puede organizar la atención de urgencias.",
+        "it": "Lun–ven 8:00–17:00, sab 9:00–13:00, chiuso la domenica. Fuori orario chiamare il +64 7 872 2040 per parlare con un infermiere veterinario (consulenza telefonica gratuita 24 ore su 24, 7 giorni su 7) che può organizzare le cure d'urgenza."
       }
     },
     {
@@ -516,7 +539,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17.30 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–13 h, fermé le dimanche. Pour les urgences hors horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–13:00 h, cerrado dom. Para urgencias fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–13:00 h, cerrado dom. Para urgencias fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–17:30, sab 9:00–13:00, chiuso la domenica. Per le emergenze fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -535,7 +559,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17 Uhr; Sa und So geschlossen, außer an jedem zweiten Samstag 9–12 Uhr (bitte telefonisch bestätigen). Notfälle außerhalb der Sprechzeiten: siehe Klinikfinder auf der Website.",
         "fr": "Lun.–ven. 8 h–17 h ; fermé le samedi et le dimanche, sauf un samedi sur deux 9 h–12 h (appelez pour confirmer). Urgences hors horaires : consultez le localisateur de cliniques sur le site.",
-        "es": "Lun–vie 8:00–17:00 h; sábado y domingo cerrado, salvo un sábado de cada dos, 9:00–12:00 h (llama para confirmar). Urgencias fuera de horario: consulta el localizador de clínicas en la web."
+        "es": "Lun–vie 8:00–17:00 h; sábado y domingo cerrado, salvo un sábado de cada dos, 9:00–12:00 h (llama para confirmar). Urgencias fuera de horario: consulta el localizador de clínicas en la web.",
+        "it": "Lun–ven 8:00–17:00; sabato e domenica chiuso, tranne un sabato su due 9:00–12:00 (chiamare per conferma). Emergenze fuori orario: vedere il localizzatore delle cliniche sul sito."
       }
     },
     {
@@ -555,7 +580,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17.30 Uhr, Sa 9–12 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen.",
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–12 h. Appelez pour connaître les modalités hors horaires.",
-        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–12:00 h. Llama para conocer la atención fuera de horario."
+        "es": "Lun–vie 8:00–17:30 h, sáb 9:00–12:00 h. Llama para conocer la atención fuera de horario.",
+        "it": "Lun–ven 8:00–17:30, sab 9:00–12:00. Chiamare per le modalità fuori orario."
       }
     },
     {
@@ -575,7 +601,8 @@
       "duty_i18n": {
         "de": "Öffnungszeiten: Mo, Mi, Fr 8–17 Uhr; Di und Do 8–18 Uhr; Sa 9–14 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen.",
         "fr": "Horaires : lun., mer., ven. 8 h–17 h ; mar. et jeu. 8 h–18 h ; sam. 9 h–14 h. Appelez pour connaître les modalités hors horaires.",
-        "es": "Horario: lun, mié, vie 8:00–17:00 h; mar y jue 8:00–18:00 h; sáb 9:00–14:00 h. Llama para conocer la atención fuera de horario."
+        "es": "Horario: lun, mié, vie 8:00–17:00 h; mar y jue 8:00–18:00 h; sáb 9:00–14:00 h. Llama para conocer la atención fuera de horario.",
+        "it": "Orari: lun, mer, ven 8:00–17:00; mar e gio 8:00–18:00; sab 9:00–14:00. Chiamare per le modalità fuori orario."
       }
     },
     {
@@ -595,7 +622,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17 Uhr. Für den Notdienst außerhalb der Sprechzeiten bitte anrufen.",
         "fr": "Lun.–ven. 8 h–17 h. Appelez pour connaître les modalités hors horaires.",
-        "es": "Lun–vie 8:00–17:00 h. Llama para conocer la atención fuera de horario."
+        "es": "Lun–vie 8:00–17:00 h. Llama para conocer la atención fuera de horario.",
+        "it": "Lun–ven 8:00–17:00. Chiamare per le modalità fuori orario."
       }
     },
     {
@@ -615,7 +643,8 @@
       "duty_i18n": {
         "de": "Mo und Mi–Do 7.30–20 Uhr, Di und Fr 7.30–18 Uhr, Sa 9–12 Uhr (nur Notfälle am selben Tag), So geschlossen. Außerhalb der Sprechzeiten Notdienst rund um die Uhr unter derselben Nummer.",
         "fr": "Lun. et mer.–jeu. 7 h 30–20 h, mar. et ven. 7 h 30–18 h, sam. 9 h–12 h (urgences du jour uniquement), fermé le dimanche. Hors horaires, appelez le même numéro pour le service d’urgences 24 h/24, 7 j/7.",
-        "es": "Lun y mié–jue 7:30–20:00 h, mar y vie 7:30–18:00 h, sáb 9:00–12:00 h (solo urgencias del mismo día), cerrado dom. Fuera de horario llama al mismo número para el servicio de urgencias 24/7."
+        "es": "Lun y mié–jue 7:30–20:00 h, mar y vie 7:30–18:00 h, sáb 9:00–12:00 h (solo urgencias del mismo día), cerrado dom. Fuera de horario llama al mismo número para el servicio de urgencias 24/7.",
+        "it": "Lun e mer–gio 7:30–20:00, mar e ven 7:30–18:00, sab 9:00–12:00 (solo emergenze in giornata), chiuso la domenica. Fuori orario chiamare lo stesso numero per il servizio di emergenza 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -635,7 +664,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–18 h, week-end 9 h–13 h. En dehors de ces horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–18:00 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–18:00 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–18:00, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -655,7 +685,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–18 h, week-end 9 h–13 h. En dehors de ces horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–18:00 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–18:00 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–18:00, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -675,7 +706,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17.30 Uhr, am Wochenende 9–13 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–17 h 30, week-ends 9 h–13 h. Hors horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–17:30 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–17:30 h, fines de semana 9:00–13:00 h. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–17:30, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -695,7 +727,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17 Uhr, Sa 9–12 Uhr, So geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–17 h, sam. 9 h–12 h, fermé le dimanche. Hors horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–12:00 h, cerrado dom. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–12:00 h, cerrado dom. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–17:00, sab 9:00–12:00, chiuso la domenica. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -714,7 +747,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, Sa 9–14 Uhr, So 10–14 Uhr. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–14 h, dim. 10 h–14 h. Hors horaires, appelez Hawke's Bay Urgent Care, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h, dom 10:00–14:00 h. Fuera de horario llama a Hawke's Bay Urgent Care, +64 6 651 7103."
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h, dom 10:00–14:00 h. Fuera de horario llama a Hawke's Bay Urgent Care, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–18:00, sab 9:00–14:00, dom 10:00–14:00. Fuori orario chiamare Hawke's Bay Urgent Care, +64 6 651 7103."
       }
     },
     {
@@ -733,7 +767,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Bay After Hours Veterinary Hospital anrufen, +64 800 229 838.",
         "fr": "Lun.–ven. 8 h–18 h, fermé les week-ends et jours fériés. Hors horaires, appelez Bay After Hours Veterinary Hospital, +64 800 229 838.",
-        "es": "Lun–vie 8:00–18:00 h, cerrado fines de semana y festivos. Fuera de horario llama a Bay After Hours Veterinary Hospital, +64 800 229 838."
+        "es": "Lun–vie 8:00–18:00 h, cerrado fines de semana y festivos. Fuera de horario llama a Bay After Hours Veterinary Hospital, +64 800 229 838.",
+        "it": "Lun–ven 8:00–18:00, chiuso nel weekend e nei festivi. Fuori orario chiamare Bay After Hours Veterinary Hospital, +64 800 229 838."
       }
     },
     {
@@ -752,7 +787,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, Sa–So 9–16 Uhr (am Wochenende ist nicht immer ein Tierarzt vor Ort), an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Hawke's Bay Urgent Care and After Hours Veterinary Clinic anrufen, +64 6 651 7103.",
         "fr": "Lun.–ven. 8 h–18 h, sam.–dim. 9 h–16 h (pas toujours de vétérinaire sur place le week-end), fermé les jours fériés. Hors horaires, appelez Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "es": "Lun–vie 8:00–18:00 h, sáb–dom 9:00–16:00 h (no siempre hay veterinario en la clínica el fin de semana), cerrado festivos. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "es": "Lun–vie 8:00–18:00 h, sáb–dom 9:00–16:00 h (no siempre hay veterinario en la clínica el fin de semana), cerrado festivos. Fuera de horario llama a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "it": "Lun–ven 8:00–18:00, sab–dom 9:00–16:00 (nel weekend il veterinario non è sempre presente), chiuso nei festivi. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -771,7 +807,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–19 Uhr, Sa 9–15 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545.",
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–15 h, fermé le dimanche et les jours fériés. Hors horaires, appelez Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun–vie 8:00–19:00 h, sáb 9:00–15:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun–vie 8:00–19:00 h, sáb 9:00–15:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun–ven 8:00–19:00, sab 9:00–15:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -790,7 +827,8 @@
       "duty_i18n": {
         "de": "Mo–Mi und Fr 8–18.30 Uhr, Do 8–19 Uhr, Sa 9–16.30 Uhr, So 10–16 Uhr, an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545.",
         "fr": "Lun.–mer. et ven. 8 h–18 h 30, jeu. 8 h–19 h, sam. 9 h–16 h 30, dim. 10 h–16 h, fermé les jours fériés. Hors horaires, appelez Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun–mié y vie 8:00–18:30 h, jue 8:00–19:00 h, sáb 9:00–16:30 h, dom 10:00–16:00 h, cerrado festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun–mié y vie 8:00–18:30 h, jue 8:00–19:00 h, sáb 9:00–16:30 h, dom 10:00–16:00 h, cerrado festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun–mer e ven 8:00–18:30, gio 8:00–19:00, sab 9:00–16:30, dom 10:00–16:00, chiuso nei festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -809,7 +847,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–19 Uhr, Sa 9–16 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545.",
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–16 h, fermé le dimanche et les jours fériés. Hors horaires, appelez Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun–vie 8:00–19:00 h, sáb 9:00–16:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun–vie 8:00–19:00 h, sáb 9:00–16:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun–ven 8:00–19:00, sab 9:00–16:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -828,7 +867,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, Sa 9.30–16.30 Uhr, So 10–15 Uhr (sonntags kein Tierarzt vor Ort), an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h 30–16 h 30, dim. 10 h–15 h (pas de vétérinaire sur place le dimanche), fermé les jours fériés. Hors horaires, appelez Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun–vie 8:00–18:00 h, sáb 9:30–16:30 h, dom 10:00–15:00 h (sin veterinario en la clínica los domingos), cerrado festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun–vie 8:00–18:00 h, sáb 9:30–16:30 h, dom 10:00–15:00 h (sin veterinario en la clínica los domingos), cerrado festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun–ven 8:00–18:00, sab 9:30–16:30, dom 10:00–15:00 (la domenica nessun veterinario in sede), chiuso nei festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -847,7 +887,8 @@
       "duty_i18n": {
         "de": "Mo und Do–Fr 8–18 Uhr, Di–Mi 8–19 Uhr, Sa 9–15 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte die Wellington After Hours Vet Clinic anrufen, +64 4 473 7545.",
         "fr": "Lun. et jeu.–ven. 8 h–18 h, mar.–mer. 8 h–19 h, sam. 9 h–15 h, fermé le dimanche et les jours fériés. Hors horaires, appelez Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "es": "Lun y jue–vie 8:00–18:00 h, mar–mié 8:00–19:00 h, sáb 9:00–15:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "es": "Lun y jue–vie 8:00–18:00 h, mar–mié 8:00–19:00 h, sáb 9:00–15:00 h, cerrado dom y festivos. Fuera de horario llama a Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "it": "Lun e gio–ven 8:00–18:00, mar–mer 8:00–19:00, sab 9:00–15:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -866,7 +907,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–18 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656.",
         "fr": "Lun.–ven. 8 h–18 h, fermé les week-ends et jours fériés. Hors horaires, appelez Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "es": "Lun–vie 8:00–18:00 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "es": "Lun–vie 8:00–18:00 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "it": "Lun–ven 8:00–18:00, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -885,7 +927,8 @@
       "duty_i18n": {
         "de": "Mo, Di, Do, Fr 8–18 Uhr, Mi 8–19 Uhr, Sa–So 9–16 Uhr, an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656.",
         "fr": "Lun., mar., jeu., ven. 8 h–18 h, mer. 8 h–19 h, sam.–dim. 9 h–16 h, fermé les jours fériés. Hors horaires, appelez Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "es": "Lun, mar, jue, vie 8:00–18:00 h, mié 8:00–19:00 h, sáb–dom 9:00–16:00 h, cerrado festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "es": "Lun, mar, jue, vie 8:00–18:00 h, mié 8:00–19:00 h, sáb–dom 9:00–16:00 h, cerrado festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "it": "Lun, mar, gio, ven 8:00–18:00, mer 8:00–19:00, sab–dom 9:00–16:00, chiuso nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -904,7 +947,8 @@
       "duty_i18n": {
         "de": "Mo–Mi und Fr 8–18 Uhr, Do 8–19.30 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656.",
         "fr": "Lun.–mer. et ven. 8 h–18 h, jeu. 8 h–19 h 30, fermé les week-ends et jours fériés. Hors horaires, appelez Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "es": "Lun–mié y vie 8:00–18:00 h, jue 8:00–19:30 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "es": "Lun–mié y vie 8:00–18:00 h, jue 8:00–19:30 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "it": "Lun–mer e ven 8:00–18:00, gio 8:00–19:30, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -923,7 +967,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17.30 Uhr, am Wochenende und an Feiertagen geschlossen. Außerhalb der Sprechzeiten bitte das Waikato After Hours Veterinary Hospital anrufen, +64 7 839 5656.",
         "fr": "Lun.–ven. 8 h–17 h 30, fermé les week-ends et jours fériés. Hors horaires, appelez Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "es": "Lun–vie 8:00–17:30 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "es": "Lun–vie 8:00–17:30 h, cerrado fines de semana y festivos. Fuera de horario llama a Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "it": "Lun–ven 8:00–17:30, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -942,7 +987,8 @@
       "duty_i18n": {
         "de": "Mo–Fr 8–17 Uhr, Sa 9–12 Uhr, So und feiertags geschlossen. Außerhalb der Sprechzeiten bitte den diensthabenden Tierarzt anrufen, +64 21 548 387.",
         "fr": "Lun.–ven. 8 h–17 h, sam. 9 h–12 h, fermé le dimanche et les jours fériés. Hors horaires, appelez le vétérinaire de garde, +64 21 548 387.",
-        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–12:00 h, cerrado dom y festivos. Fuera de horario llama al veterinario de guardia, +64 21 548 387."
+        "es": "Lun–vie 8:00–17:00 h, sáb 9:00–12:00 h, cerrado dom y festivos. Fuera de horario llama al veterinario de guardia, +64 21 548 387.",
+        "it": "Lun–ven 8:00–17:00, sab 9:00–12:00, chiuso la domenica e i festivi. Fuori orario chiamare il veterinario di guardia, +64 21 548 387."
       }
     }
   ],

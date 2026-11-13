@@ -50,7 +50,8 @@
       "duty": "Emergency service advertised 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Service d’urgence annoncé 24 h/24, 7 j/7.",
-        "es": "Servicio de urgencias anunciado las 24 horas, los 7 días de la semana."
+        "es": "Servicio de urgencias anunciado las 24 horas, los 7 días de la semana.",
+        "it": "Servizio di pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://veterinairecasablanca.ma/",
@@ -69,7 +70,8 @@
       "duty": "Open 24 hours a day, 7 days a week, public holidays included.",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris.",
-        "es": "Abierto las 24 horas, los 7 días de la semana, festivos incluidos."
+        "es": "Abierto las 24 horas, los 7 días de la semana, festivos incluidos.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi compresi."
       },
       "small_animals": true,
       "url": "https://cliniqueveterinairesoleil.com/",
@@ -88,7 +90,8 @@
       "duty": "Consultations Mon-Fri 9:00-19:00, Sat 9:00-16:00; emergencies 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Consultations lun.–ven. 9 h–19 h, sam. 9 h–16 h ; urgences 24 h/24, 7 j/7.",
-        "es": "Consultas lun–vie 9:00–19:00 h, sáb 9:00–16:00 h; urgencias las 24 horas, los 7 días de la semana."
+        "es": "Consultas lun–vie 9:00–19:00 h, sáb 9:00–16:00 h; urgencias las 24 horas, los 7 días de la semana.",
+        "it": "Visite lun–ven 9:00–19:00, sab 9:00–16:00; pronto soccorso 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://www.hermitagevets.com/",
@@ -107,7 +110,8 @@
       "duty": "Open 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, 7 j/7.",
-        "es": "Abierto las 24 horas, los 7 días de la semana."
+        "es": "Abierto las 24 horas, los 7 días de la semana.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://www.veterinaireideal.com/",
@@ -126,7 +130,8 @@
       "duty": "Mon-Fri 9:00-19:00, Sat 9:00-14:00; separate emergency number 06 61 49 26 18.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–14 h ; numéro d’urgence distinct 06 61 49 26 18.",
-        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h; número de urgencias aparte: 06 61 49 26 18."
+        "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h; número de urgencias aparte: 06 61 49 26 18.",
+        "it": "Lun–ven 9:00–19:00, sab 9:00–14:00; numero separato per le emergenze 06 61 49 26 18."
       },
       "small_animals": true,
       "url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
@@ -145,7 +150,8 @@
       "duty": "Open daily 9:00-21:00; reachable by phone or WhatsApp for critical situations during these hours.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h–21 h ; joignable par téléphone ou WhatsApp pour les situations critiques pendant ces horaires.",
-        "es": "Abierto todos los días 9:00–21:00 h; en situaciones críticas se atiende por teléfono o WhatsApp en ese horario."
+        "es": "Abierto todos los días 9:00–21:00 h; en situaciones críticas se atiende por teléfono o WhatsApp en ese horario.",
+        "it": "Aperto tutti i giorni 9:00–21:00; raggiungibile per telefono o WhatsApp per le situazioni critiche durante questi orari."
       },
       "small_animals": true,
       "url": "https://www.vetsocrate.ma/",
@@ -163,7 +169,8 @@
       "duty": "Emergency care advertised 24/7.",
       "duty_i18n": {
         "fr": "Urgences annoncées 24 h/24, 7 j/7.",
-        "es": "Urgencias anunciadas 24/7."
+        "es": "Urgencias anunciadas 24/7.",
+        "it": "Pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://cvt.ma/",
@@ -182,7 +189,8 @@
       "duty": "Mon-Fri 9:00-13:00 and 15:00-19:00; emergencies outside opening hours 24 hours a day, 7 days a week by phone (also 06 61 72 99 28).",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h ; urgences en dehors des heures d’ouverture 24 h/24, 7 j/7 par téléphone (également au 06 61 72 99 28).",
-        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h; urgencias fuera de horario por teléfono las 24 horas, los 7 días de la semana (también 06 61 72 99 28)."
+        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h; urgencias fuera de horario por teléfono las 24 horas, los 7 días de la semana (también 06 61 72 99 28).",
+        "it": "Lun–ven 9:00–13:00 e 15:00–19:00; emergenze fuori orario 24 ore su 24, 7 giorni su 7 per telefono (anche 06 61 72 99 28)."
       },
       "small_animals": true,
       "url": "https://cvy.ma/",
@@ -201,7 +209,8 @@
       "duty": "Mon-Fri about 9:00-19:00, Sat morning; emergencies advertised 24/7.",
       "duty_i18n": {
         "fr": "Lun.–ven. environ 9 h–19 h, sam. le matin ; urgences annoncées 24 h/24, 7 j/7.",
-        "es": "Lun–vie 9:00–19:00 h aprox., sáb por la mañana; urgencias anunciadas 24/7."
+        "es": "Lun–vie 9:00–19:00 h aprox., sáb por la mañana; urgencias anunciadas 24/7.",
+        "it": "Lun–ven circa 9:00–19:00, sab mattina; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://agafayvetpractice.wixsite.com/anix",
@@ -220,7 +229,8 @@
       "duty": "Mon-Sat 9:00-20:00; emergencies handled until 3:00 a.m.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h–20 h ; urgences prises en charge jusqu’à 3 h du matin.",
-        "es": "Lun–sáb 9:00–20:00 h; urgencias atendidas hasta las 3:00."
+        "es": "Lun–sáb 9:00–20:00 h; urgencias atendidas hasta las 3:00.",
+        "it": "Lun–sab 9:00–20:00; emergenze gestite fino alle 3:00 di notte."
       },
       "small_animals": true,
       "url": "https://vetezzaytoune.com/",
@@ -238,7 +248,8 @@
       "duty": "Emergency service advertised 24/7, every day of the week.",
       "duty_i18n": {
         "fr": "Service d’urgence annoncé 24 h/24, tous les jours de la semaine.",
-        "es": "Servicio de urgencias anunciado 24/7, todos los días de la semana."
+        "es": "Servicio de urgencias anunciado 24/7, todos los días de la semana.",
+        "it": "Servizio di pronto soccorso dichiarato 24 ore su 24, tutti i giorni della settimana."
       },
       "small_animals": true,
       "url": "https://veterinairegibraltar.com/",
@@ -257,7 +268,8 @@
       "duty": "Mon-Fri 9:30-12:30 and 15:30-18:30, Sat 9:30-13:00; home visits by phone.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h 30–12 h 30 et 15 h 30–18 h 30, sam. 9 h 30–13 h ; visites à domicile sur appel.",
-        "es": "Lun–vie 9:30–12:30 y 15:30–18:30 h, sáb 9:30–13:00 h; visitas a domicilio por teléfono."
+        "es": "Lun–vie 9:30–12:30 y 15:30–18:30 h, sáb 9:30–13:00 h; visitas a domicilio por teléfono.",
+        "it": "Lun–ven 9:30–12:30 e 15:30–18:30, sab 9:30–13:00; visite a domicilio su richiesta telefonica."
       },
       "small_animals": true,
       "url": "https://www.veterinaireagadir.com/",
@@ -276,7 +288,8 @@
       "duty": "Mon-Fri 9:00-13:00 and 15:00-19:00, Sat 9:00-14:00.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–13 h et 15 h–19 h, sam. 9 h–14 h.",
-        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–14:00 h."
+        "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–14:00 h.",
+        "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://vetcareagadir.lovable.app/",
@@ -295,7 +308,8 @@
       "duty": "Consultations daily 9:00-18:00; emergency service 18:00-09:00; open 24 hours, 7 days a week.",
       "duty_i18n": {
         "fr": "Consultations tous les jours 9 h–18 h ; urgences 18 h–9 h ; ouvert 24 h/24, 7 j/7.",
-        "es": "Consultas todos los días 9:00–18:00 h; urgencias 18:00–9:00 h; abierto las 24 horas, los 7 días de la semana."
+        "es": "Consultas todos los días 9:00–18:00 h; urgencias 18:00–9:00 h; abierto las 24 horas, los 7 días de la semana.",
+        "it": "Visite tutti i giorni 9:00–18:00; pronto soccorso 18:00–9:00; aperto 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://vetchampsdecourse.com/",
@@ -314,7 +328,8 @@
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–14 h.",
-        "es": "Lun–vie 9:00–18:00 h, sáb 9:00–14:00 h."
+        "es": "Lun–vie 9:00–18:00 h, sáb 9:00–14:00 h.",
+        "it": "Lun–ven 9:00–18:00, sab 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://veterinaire-rabat.com/",
@@ -332,7 +347,8 @@
       "duty": "Urgent care for life-threatening cases; call ahead.",
       "duty_i18n": {
         "fr": "Soins urgents pour les cas mettant la vie en danger ; appelez avant de venir.",
-        "es": "Atención urgente para casos que ponen en riesgo la vida; llama antes."
+        "es": "Atención urgente para casos que ponen en riesgo la vida; llama antes.",
+        "it": "Pronto soccorso per i casi in pericolo di vita; chiamare prima."
       },
       "small_animals": true,
       "url": "https://mimosa.ma/",
@@ -365,7 +381,8 @@
       "duty": "Mon-Fri 9:00-17:00, Sat 10:00-17:00; emergency care advertised 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–17 h, sam. 10 h–17 h ; urgences annoncées 24 h/24, 7 j/7.",
-        "es": "Lun–vie 9:00–17:00 h, sáb 10:00–17:00 h; urgencias anunciadas las 24 horas, los 7 días de la semana."
+        "es": "Lun–vie 9:00–17:00 h, sáb 10:00–17:00 h; urgencias anunciadas las 24 horas, los 7 días de la semana.",
+        "it": "Lun–ven 9:00–17:00, sab 10:00–17:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7."
       },
       "small_animals": true,
       "url": "https://veterinaire-villehaute.com/",
@@ -384,7 +401,8 @@
       "duty": "Mon-Sat 9:30-19:00.",
       "duty_i18n": {
         "fr": "Lun.–sam. 9 h 30–19 h.",
-        "es": "Lun–sáb 9:30–19:00 h."
+        "es": "Lun–sáb 9:30–19:00 h.",
+        "it": "Lun–sab 9:30–19:00."
       },
       "small_animals": true,
       "url": "https://petcare.ma/",
@@ -419,7 +437,8 @@
       "note": "Emergency number listed but no 24 h claim. Dogs, cats, rabbits, small mammals, exotics, birds; also mobile equine care. Same vet appears as 'La Lagune' on an advertorial page (not used). Removed from duty: Separate emergency number 06 61 56 16 10; opening hours not stated.",
       "checked": "2026-11-10",
       "duty_i18n": {
-        "es": "Número de urgencias aparte: 06 61 56 16 10."
+        "es": "Número de urgencias aparte: 06 61 56 16 10.",
+        "it": "Numero separato per le emergenze 06 61 56 16 10."
       }
     }
   ],

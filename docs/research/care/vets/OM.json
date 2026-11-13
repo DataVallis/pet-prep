@@ -32,7 +32,10 @@
       "url": "https://www.muscatvets.com/",
       "source_url": "https://www.muscatvets.com/aboutus1.html",
       "checked": "2026-11-12",
-      "note": "about-us page says '24hr emergency service available' with call button 92703273; contact page labels 92703273 'Emergency line' but gives no 24 h wording. Expat Focus/ExpatWoman list other (older) numbers for a Qurum clinic; the site's numbers used."
+      "note": "about-us page says '24hr emergency service available' with call button 92703273; contact page labels 92703273 'Emergency line' but gives no 24 h wording. Expat Focus/ExpatWoman list other (older) numbers for a Qurum clinic; the site's numbers used.",
+      "duty_i18n": {
+        "it": "Servizio di emergenza 24 ore su 24: chiamare il +968 9270 3273. Orari sab–gio 8:00–20:00, ven 10:00–19:00."
+      }
     },
     {
       "kind": "clinic",
@@ -47,7 +50,10 @@
       "url": "https://www.muscatvets.com/",
       "source_url": "https://www.muscatvets.com/aboutus1.html",
       "checked": "2026-11-12",
-      "note": "Street address of the Azaiba branch not on the opened pages. The 24 h emergency claim on the page is clinic-wide, not stated per branch, so not flagged for this branch."
+      "note": "Street address of the Azaiba branch not on the opened pages. The 24 h emergency claim on the page is clinic-wide, not stated per branch, so not flagged for this branch.",
+      "duty_i18n": {
+        "it": "Sab–gio 8:00–19:00, chiuso il venerdì. Linea di emergenza della clinica: +968 9270 3273."
+      }
     }
   ],
   "notes": "Very limited run. WebFetch only accepts URLs that appeared in search results or earlier page content; own sites of most clinics were refused (PROVENANCE_REQUIRED) and not worked around: muscatvet.com (Muscat Vet Clinic, Mawaleh South, Seeb, +968 2459 4777 per Expat Focus), barkavet.com (Barka Veterinary Clinic, +968 2688 8888), alqurumvet.com, mvc-oman.com, petcareoman.com (Petcare Veterinary Center, 2204 3965 per ExpatWoman 2017), ovaoman.com, and any Ministry of Agriculture, Fisheries and Water Resources pages (no official page listing vets, duty rota or poison line could be reached via search). Leads only from aggregators (not added): Muscat Veterinary Center (48 Al Barakat St, Seeb, +968 2428 1914, hopsa.io), Pet Care Veterinary Clinic (Al Khuwair), Creatures Veterinary Clinic, Capital Veterinary Centre, Sama Veterinary Clinic (Sohar, no contact data), Al Bashayer Veterinary Hospital (Adam, no contact data), government Directorate General of Animal Health clinics. Salalah veterinary hospital is only an announced investment project (Muscat Daily 2026-05-04). Not covered at all: Sohar, Salalah, Nizwa, Sur, Duqm, Khasab, Bawshar, Muttrah, Al Khoud. No duty rota and no animal poison line found. Follow-up 2026-11-12: second pass added nothing. muscatvet.com and barkavet.com were refused again (PROVENANCE_REQUIRED; they never appear in search results, so unreachable twice, skipped and not worked around). Opened but not usable: Reevol card for Kayan Veterinary Clinic (Muscat; no phone, address or website) and the Gulftalent page for Sama Veterinary Clinic (Muscat; no contact data). Searches for Sohar, Salalah, Nizwa, Sur, Duqm, Khasab clinics and for Ministry (MAFWR) pages, a duty rota or a poison line surfaced no official or own-site page. Still unreachable/uncovered: alqurumvet.com, mvc-oman.com, petcareoman.com, ovaoman.com, Muscat Veterinary Center, Pet Care Veterinary Clinic (Al Khuwair), Creatures, Capital Veterinary Centre, Al Bashayer (Adam), all regional towns."

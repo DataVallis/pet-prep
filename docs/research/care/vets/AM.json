@@ -74,7 +74,8 @@
       "checked": "2026-11-12",
       "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h.",
       "duty_i18n": {
-        "es": "Abierto todos los días 9:00–24:00 h; línea telefónica disponible las 24 horas. Llama antes por la noche."
+        "es": "Abierto todos los días 9:00–24:00 h; línea telefónica disponible las 24 horas. Llama antes por la noche.",
+        "it": "Aperto 9:00–24:00 tutti i giorni; linea telefonica indicata come attiva 24 ore su 24. Di notte telefonare in anticipo."
       }
     },
     {
@@ -91,7 +92,8 @@
       "checked": "2026-11-12",
       "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim.",
       "duty_i18n": {
-        "es": "Veterinario a domicilio en Yerevan y hasta 30 km a la redonda; anuncia atención las 24 horas con veterinario de urgencias."
+        "es": "Veterinario a domicilio en Yerevan y hasta 30 km a la redonda; anuncia atención las 24 horas con veterinario de urgencias.",
+        "it": "Veterinario mobile con visite a domicilio a Yerevan e fino a 30 km intorno; indicato come aperto 24 ore su 24, 7 giorni su 7, con veterinario di guardia per le urgenze."
       }
     },
     {
@@ -109,7 +111,8 @@
       "checked": "2026-11-12",
       "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404.",
       "duty_i18n": {
-        "es": "Anuncia atención veterinaria las 24 horas y ambulancia para mascotas en el +374 99 404070. Llama antes."
+        "es": "Anuncia atención veterinaria las 24 horas y ambulancia para mascotas en el +374 99 404070. Llama antes.",
+        "it": "Indica assistenza veterinaria 24 ore su 24, 7 giorni su 7 e ambulanza per animali al +374 99 404070. Telefonare in anticipo."
       }
     },
     {
@@ -127,7 +130,8 @@
       "checked": "2026-11-12",
       "note": "Locations page lists services Shop, Clinic; hours 10:00-22:00.",
       "duty_i18n": {
-        "es": "Abierto todos los días 10:00–22:00 h."
+        "es": "Abierto todos los días 10:00–22:00 h.",
+        "it": "Aperto tutti i giorni 10:00–22:00."
       }
     },
     {
@@ -145,7 +149,8 @@
       "checked": "2026-11-12",
       "note": "Second phone +374 33 209966. Footer says 'Sunday 9AM-12AM', probably 12 PM.",
       "duty_i18n": {
-        "es": "Lun–sáb 10:00–20:00 h, dom 9:00–12:00 h."
+        "es": "Lun–sáb 10:00–20:00 h, dom 9:00–12:00 h.",
+        "it": "Lun–sab 10:00–20:00, dom 9:00–12:00."
       }
     },
     {
@@ -174,7 +179,10 @@
       "url": "https://shunnukatun.am/en",
       "source_url": "https://shunnukatun.am/en",
       "checked": "2026-11-12",
-      "note": "Own page lists first-aid supplies, no emergency or 24 h service."
+      "note": "Own page lists first-aid supplies, no emergency or 24 h service.",
+      "duty_i18n": {
+        "it": "Mar–sab 11:00–19:00; chiuso la domenica e il lunedì."
+      }
     }
   ],
   "notes": "Armenia has no official register of small-animal clinics: the Food Safety Inspection Body (snund.am) pages describe state veterinary control only, its 118 hotline is not an emergency vet line, and the agrarian university's public clinic is only announced (no address or hours). No animal poison line and no duty rota were found. Follow-up 2026-11-12: Shunn u Katun (Vanadzor) entered from its own site. Still NOT entered: VetLife (Facebook vetlifearmenia blocked by robots; no own site found; areg/yell/spyur list it as 24 h but only aggregators), VetLine (vetline.am not fetchable: not returned by search, only aggregators 2gis/yell/pages/yerevanguide found), AmiryanVet (Amiryan 10; Facebook blocked by robots, only profibank.am listing which has no hours/24 h claim), Vet Vat and Best Clinic (Gyumri; Facebook only, robots-blocked), Van Veterinary Clinic (Facebook, robots-blocked), Paws Pet Medical Center (Dilijan, Getapnya 6/1, +374 44 994299; only a Yandex Maps listing, no own page), Dilijan municipal stray-dog clinic (news article only), nothing found for Tsaghkadzor and Sevan. Other Yerevan leads from the first run (Vahe Mkrtchyan, AlphaVet, Oscar Vet, Quercus, DoctorVet, New Vet, Vetpoint, Maltese City) not retried. turn.am 'Abamyan vet' marketplace page, janvelyan.com (robots) and yerevanzoo clinic (redirect loop) skipped as before."

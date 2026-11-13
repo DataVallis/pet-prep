@@ -46,7 +46,8 @@
         "hr": "Hitna linija 24/7: nazovi besplatni broj 153 i odaberi lokal 22; osoblje procjenjuje slučaj i upućuje te na odgovarajuću veterinarsku pomoć. Hitne klinike izvan radnog vremena izmjenjuju se između Gozoa te sjevernog i južnog dijela Malte, svake noći 20–8 h te nedjeljom i na blagdane.",
         "de": "Notfall-Hotline rund um die Uhr: gebührenfrei 153 wählen, dann Nebenstelle 22; das Personal beurteilt den Fall und verweist an geeignete tierärztliche Hilfe. Die Notdienstkliniken außerhalb der Sprechzeiten wechseln sich auf Gozo sowie im Norden und Süden Maltas ab, nachts 20–8 Uhr sowie sonn- und feiertags.",
         "fr": "Ligne d’urgence 24 h/24, 7 j/7 : appelez le 153 (numéro gratuit) puis choisissez le poste 22 ; l’équipe évalue le cas et vous oriente vers une aide vétérinaire adaptée. Des cliniques d’urgence de garde se relaient entre Gozo, le nord et le sud de Malte, chaque nuit 20 h–8 h et les dimanches et jours fériés.",
-        "es": "Línea de urgencias 24/7: llama al número gratuito 153 y elige la extensión 22; el personal valora el caso y te remite a la ayuda veterinaria adecuada. Las clínicas de urgencias fuera de horario rotan entre Gozo, el norte y el sur de Malta, cada noche 20:00–8:00 h y domingos y festivos."
+        "es": "Línea de urgencias 24/7: llama al número gratuito 153 y elige la extensión 22; el personal valora el caso y te remite a la ayuda veterinaria adecuada. Las clínicas de urgencias fuera de horario rotan entre Gozo, el norte y el sur de Malta, cada noche 20:00–8:00 h y domingos y festivos.",
+        "it": "Linea di emergenza 24 ore su 24, 7 giorni su 7: chiamare il numero verde 153 e scegliere l'interno 22; il personale valuta il caso e indirizza verso l'assistenza veterinaria adatta. Le cliniche di pronto soccorso fuori orario si alternano tra Gozo, Malta settentrionale e meridionale, ogni notte 20:00–8:00 e di domenica e nei festivi."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
@@ -68,7 +69,8 @@
         "hr": "Hitna klinika izvan radnog vremena, 20–8 h; prvo nazovi liniju 153, lokal 22.",
         "de": "Notdienstklinik außerhalb der Sprechzeiten, 20–8 Uhr; bitte zuerst die Hotline 153, Nebenstelle 22, anrufen.",
         "fr": "Clinique d’urgence de garde, 20 h–8 h ; appelez d’abord la ligne d’urgence 153, poste 22.",
-        "es": "Clínica de urgencias fuera de horario, 20:00–8:00 h; llama antes a la línea 153 ext. 22."
+        "es": "Clínica de urgencias fuera de horario, 20:00–8:00 h; llama antes a la línea 153 ext. 22.",
+        "it": "Clinica di pronto soccorso fuori orario, 20:00–8:00; chiamare prima la linea 153 int. 22."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
@@ -88,7 +90,8 @@
         "hr": "Gozo: nedjeljom i na blagdane pripravni prijevoz u stvarnim hitnim slučajevima prevozi male ljubimce u kliniku na Malti; prvo nazovi nacionalni hitni broj.",
         "de": "Gozo: Sonn- und feiertags bringt ein Bereitschaftstransport Kleintiere in echten Notfällen zu einer Tierklinik auf Malta; bitte zuerst die nationale Notrufnummer anrufen.",
         "fr": "Gozo : les dimanches et jours fériés, un transport de permanence emmène les petits animaux en cas d’urgence réelle vers une clinique à Malte ; appelez d’abord la ligne nationale d’urgence.",
-        "es": "Gozo: domingos y festivos, un transporte de guardia lleva a las mascotas pequeñas en urgencias reales a una clínica de Malta; llama antes a la línea nacional de urgencias."
+        "es": "Gozo: domingos y festivos, un transporte de guardia lleva a las mascotas pequeñas en urgencias reales a una clínica de Malta; llama antes a la línea nacional de urgencias.",
+        "it": "Gozo: la domenica e nei festivi un trasporto di emergenza porta gli animali di piccola taglia, nei casi di vera emergenza, a una clinica di Malta; chiamare prima il numero nazionale di emergenza."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",

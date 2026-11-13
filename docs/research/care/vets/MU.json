@@ -57,7 +57,10 @@
       "url": "https://veterinaire.mu/",
       "source_url": "https://veterinaire.mu/about-us/",
       "checked": "2026-11-12",
-      "note": "About page heading: 'Happy to Welcome You at Veterinaire.mu Albion 24/7 and Triolet'. Contact page phones 57013873 / 57070166 / 2385345. Homepage repeats 'Veterinary Care 24/7'. No hours listed. Emergency line 5778 0888 only from 2023 press article (La Gazette Mag) and it is the Triolet number on the contact page."
+      "note": "About page heading: 'Happy to Welcome You at Veterinaire.mu Albion 24/7 and Triolet'. Contact page phones 57013873 / 57070166 / 2385345. Homepage repeats 'Veterinary Care 24/7'. No hours listed. Emergency line 5778 0888 only from 2023 press article (La Gazette Mag) and it is the Triolet number on the contact page.",
+      "duty_i18n": {
+        "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7 nella clinica di Albion. Per le emergenze chiamare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -72,7 +75,10 @@
       "url": "https://veterinaire.mu/",
       "source_url": "https://veterinaire.mu/contact/",
       "checked": "2026-11-12",
-      "note": "Contact page shows 57780888 but the click-to-call link points to the Albion number 57013873 - confirm. 24 h wording on the site applies to Albion only."
+      "note": "Contact page shows 57780888 but the click-to-call link points to the Albion number 57013873 - confirm. 24 h wording on the site applies to Albion only.",
+      "duty_i18n": {
+        "it": "Telefonare alla clinica per gli orari e le emergenze."
+      }
     },
     {
       "kind": "clinic",
@@ -85,7 +91,10 @@
       "url": "https://vetmania.mu/?lang=en",
       "source_url": "https://vetmania.mu/?lang=en",
       "checked": "2026-11-12",
-      "note": "Independent check 2026-11-12: vetmania.mu lists Grand Baie among its towns and titles itself 'Cliniques veterinaires 24/7 a l'ile Maurice' but shows no per-clinic address, phone or hours; address and phone removed (they came only from a 2023 press article). Not marked 24 h."
+      "note": "Independent check 2026-11-12: vetmania.mu lists Grand Baie among its towns and titles itself 'Cliniques veterinaires 24/7 a l'ile Maurice' but shows no per-clinic address, phone or hours; address and phone removed (they came only from a 2023 press article). Not marked 24 h.",
+      "duty_i18n": {
+        "it": "Il titolo del sito indica cliniche veterinarie 24 ore su 24, 7 giorni su 7 a Mauritius, ma nessuna clinica dichiara l'apertura h24; telefonare alla clinica per conferma."
+      }
     },
     {
       "kind": "clinic",
@@ -98,7 +107,10 @@
       "url": "https://vetmania.mu/?lang=en",
       "source_url": "https://vetmania.mu/?lang=en",
       "checked": "2026-11-12",
-      "note": "Moka listed as a Vetmania town on its site, whose title says '24/7'; no per-clinic 24 h statement, address or phone readable, so not marked 24 h. Also listed on site: Coromandel and Poste de Flacq (Poste de Flacq branch confirmed by allAfrica 2026-03 article, no address/phone) - not added."
+      "note": "Moka listed as a Vetmania town on its site, whose title says '24/7'; no per-clinic 24 h statement, address or phone readable, so not marked 24 h. Also listed on site: Coromandel and Poste de Flacq (Poste de Flacq branch confirmed by allAfrica 2026-03 article, no address/phone) - not added.",
+      "duty_i18n": {
+        "it": "Telefonare alla clinica per gli orari."
+      }
     },
     {
       "kind": "clinic",
@@ -113,7 +125,10 @@
       "url": "https://www.vetocareclinic.mu/",
       "source_url": "https://www.vetocareclinic.mu/",
       "checked": "2026-11-12",
-      "note": "Page says 'Emergency ... available 24/7' in the services list but 'For any emergencies between 9am to 9pm' in the contact note - conflicting, so emergency_24h false. Other phone 675 22 44."
+      "note": "Page says 'Emergency ... available 24/7' in the services list but 'For any emergencies between 9am to 9pm' in the contact note - conflicting, so emergency_24h false. Other phone 675 22 44.",
+      "duty_i18n": {
+        "it": "Aperto lun–ven 9:00–21:00, sab 9:00–18:00, dom e festivi 9:00–12:00. Linea di emergenza +230 5947 2244 (sulla pagina: emergenze 9:00–21:00)."
+      }
     },
     {
       "kind": "clinic",
@@ -128,7 +143,10 @@
       "url": "https://www.vetocareclinic.mu/",
       "source_url": "https://www.vetocareclinic.mu/",
       "checked": "2026-11-12",
-      "note": "A later listing on the page marks this branch 'Opening soon' with different hours - confirm. Other phone 628 20 20."
+      "note": "A later listing on the page marks this branch 'Opening soon' with different hours - confirm. Other phone 628 20 20.",
+      "duty_i18n": {
+        "it": "Aperto lun–ven 13:00–19:00, sab 9:00–15:00, chiuso la domenica e nei festivi."
+      }
     },
     {
       "kind": "clinic",
@@ -143,7 +161,10 @@
       "url": "https://myvet.mu/",
       "source_url": "https://myvet.mu/",
       "checked": "2026-11-12",
-      "note": "Page gives two conflicting hour schedules (weekdays 8-22 / Mon-Sat 8-21 / Sun 8-21 or 8-20). '24/7 Inpatient Care' is inpatients only. No street address. E-mail info@myvet.mu."
+      "note": "Page gives two conflicting hour schedules (weekdays 8-22 / Mon-Sat 8-21 / Sun 8-21 or 8-20). '24/7 Inpatient Care' is inpatients only. No street address. E-mail info@myvet.mu.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni, circa 8:00–21:00; degenza 24 ore su 24, 7 giorni su 7 e visite a domicilio di emergenza. Chiamare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -157,7 +178,10 @@
       "url": "https://www.petsconcern.mu/",
       "source_url": "https://www.petsconcern.mu/contact-us/",
       "checked": "2026-11-12",
-      "note": "Phones 5736 2402 / 606 2431 / 606 3032. Site also shows a conflicting schedule (Mon 8-20, Tue-Fri 10-16, Sat closed) and template New York addresses; town Phoenix from a directory lead (mauritiusranking.com), not the clinic page. No street address."
+      "note": "Phones 5736 2402 / 606 2431 / 606 3032. Site also shows a conflicting schedule (Mon 8-20, Tue-Fri 10-16, Sat closed) and template New York addresses; town Phoenix from a directory lead (mauritiusranking.com), not the clinic page. No street address.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni, medici disponibili 7:00–21:00. Emergenze: +230 5736 2402."
+      }
     }
   ],
   "notes": "Research 2026-11-12, all source_urls opened with WebFetch. No duty rota and no animal poison line found: MSAW site and Ministry of Agro-Industry pages give no clinic/emergency lines; no Mauritius Veterinary Association site found; Veterinary Council not readable. Left / unreachable: Animalia (Quatre Bornes, Grand Baie; only a l'express article, no own site found), Vetcross (Floreal, Terre Rouge), Carlos Veterinary Clinic, Animo Vet Clinic, Angel Touch (Calodyne), Aldopet, Vetlife, Woof 'N Whiskers (Mahebourg), Clinique Veterinaire du Nord (Petit Raffray), Ramlochun Veterinary Services (Riviere du Rempart; no phone), All Life Matters (alllifematters.org.mu refused by fetch - provenance), Vetmania Coromandel and Poste de Flacq (no address/phone). le-veto.com is a Lebanese clinic, not Mauritian. Independent check (step 3) done 2026-11-12: all 8 source_urls re-opened."

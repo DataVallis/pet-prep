@@ -97,7 +97,10 @@
       "url": "https://www.theanimaldoctors.org/country/cambodia/",
       "source_url": "https://www.theanimaldoctors.org/country/cambodia/",
       "checked": "2026-11-12",
-      "note": "Own organisation site (country page and home page) both say 24/7 emergency care. No street address and no separate after-hours number published. The ADI Google Sites page only lists Vietnam/Laos - not relevant."
+      "note": "Own organisation site (country page and home page) both say 24/7 emergency care. No street address and no separate after-hours number published. The ADI Google Sites page only lists Vietnam/Laos - not relevant.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 9:00–19:00 (festivi 9:00–12:00). Pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7; chiamare il numero dell'ospedale."
+      }
     },
     {
       "kind": "clinic",
@@ -112,7 +115,10 @@
       "url": "https://animal-mama.com/contact/",
       "source_url": "https://animal-mama.com/contact/",
       "checked": "2026-11-12",
-      "note": "Phone and hours from the own contact page. Address from easy-cambodia.com and thewellfrog.com (both agree; not on own site). Directories list other phones (010 666 742, 010 500 999) - not used. Directories say \"24/7\"; own page does not, so false."
+      "note": "Phone and hours from the own contact page. Address from easy-cambodia.com and thewellfrog.com (both agree; not on own site). Directories list other phones (010 666 742, 010 500 999) - not used. Directories say \"24/7\"; own page does not, so false.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 9:00–19:00 (può chiudere in anticipo: telefonare prima). Chiamate per urgenze dopo le 19:00 allo stesso numero, solo in inglese, con tariffa fuori orario."
+      }
     },
     {
       "kind": "clinic",
@@ -127,7 +133,10 @@
       "url": "https://vslveterinary.com/",
       "source_url": "https://www.ipata.org/member/2455",
       "checked": "2026-11-12",
-      "note": "Phones (office 02 398-6640 / 01 746-4681, after hours 088 818-0022) from the IPATA member page; that page has no address and no 24 h statement. Address and 023 986 640 only from thewellfrog.com aggregator. vslveterinary.com not opened (WebFetch refused). Aggregator calls it 24/7 - not accepted."
+      "note": "Phones (office 02 398-6640 / 01 746-4681, after hours 088 818-0022) from the IPATA member page; that page has no address and no 24 h statement. Address and 023 986 640 only from thewellfrog.com aggregator. vslveterinary.com not opened (WebFetch refused). Aggregator calls it 24/7 - not accepted.",
+      "duty_i18n": {
+        "it": "È disponibile una linea telefonica fuori orario: +855 88 818 0022."
+      }
     },
     {
       "kind": "clinic",
@@ -142,7 +151,10 @@
       "url": "https://movetocambodia.com/?p=10200",
       "source_url": "https://movetocambodia.com/?p=10200",
       "checked": "2026-11-12",
-      "note": "Charity clinic. Only an expat-guide source (undated); ppaws.com could not be opened (not in search results, WebFetch refused). Verify before publishing."
+      "note": "Charity clinic. Only an expat-guide source (undated); ppaws.com could not be opened (not in search results, WebFetch refused). Verify before publishing.",
+      "duty_i18n": {
+        "it": "Aperto da martedì a venerdì e la domenica; telefonare o scrivere prima. Veterinari itineranti vengono anche a Kampot in date prestabilite."
+      }
     },
     {
       "kind": "clinic",
@@ -157,7 +169,10 @@
       "url": "https://movetocambodia.com/?p=10200",
       "source_url": "https://movetocambodia.com/?p=10200",
       "checked": "2026-11-12",
-      "note": "Expat guide only (undated); agrovet-cambodia.com could not be opened (WebFetch refused). small_animals assumed from the guide listing it as a pet vet - unverified."
+      "note": "Expat guide only (undated); agrovet-cambodia.com could not be opened (WebFetch refused). small_animals assumed from the guide listing it as a pet vet - unverified.",
+      "duty_i18n": {
+        "it": "Orari di apertura non pubblicati."
+      }
     },
     {
       "kind": "clinic",
@@ -172,7 +187,10 @@
       "url": "https://movetocambodia.com/?p=10200",
       "source_url": "https://movetocambodia.com/?p=10200",
       "checked": "2026-11-12",
-      "note": "Expat guide only (undated); a 2013-era forum thread says the founding vet left and another poster said there was no vet - verify current operation. Facebook page not openable."
+      "note": "Expat guide only (undated); a 2013-era forum thread says the founding vet left and another poster said there was no vet - verify current operation. Facebook page not openable.",
+      "duty_i18n": {
+        "it": "Visite su appuntamento, giorni feriali 9:00–16:00."
+      }
     },
     {
       "kind": "clinic",
@@ -187,7 +205,10 @@
       "url": "https://movetocambodia.com/?p=10034",
       "source_url": "https://movetocambodia.com/?p=10034",
       "checked": "2026-11-12",
-      "note": "Expat guides only. Hours conflict between pages (10-18 vs 9-19), so no hours published. \"Emergency calls at any time\" is not a 24 h clinic statement."
+      "note": "Expat guides only. Hours conflict between pages (10-18 vs 9-19), so no hours published. \"Emergency calls at any time\" is not a 24 h clinic statement.",
+      "duty_i18n": {
+        "it": "Visite su appuntamento, tutti i giorni. Chiamate per urgenze accettate a qualsiasi ora; visite a domicilio disponibili."
+      }
     },
     {
       "kind": "clinic",
@@ -202,7 +223,10 @@
       "url": "https://movetocambodia.com/city-guides/kampot/expat-essentials/pets-and-veterinarians/",
       "source_url": "https://movetocambodia.com/city-guides/kampot/expat-essentials/pets-and-veterinarians/",
       "checked": "2026-11-12",
-      "note": "Two expat-guide pages say \"available by phone 24 hours a day\" - a phone line of a single mobile vet, not a staffed 24 h hospital; Facebook facebook.com/Animal.Care.Veterinarian not openable. Consider downgrading to false if the 24 h flag should mean a staffed clinic."
+      "note": "Two expat-guide pages say \"available by phone 24 hours a day\" - a phone line of a single mobile vet, not a staffed 24 h hospital; Facebook facebook.com/Animal.Care.Veterinarian not openable. Consider downgrading to false if the 24 h flag should mean a staffed clinic.",
+      "duty_i18n": {
+        "it": "Raggiungibile per telefono 24 ore su 24; visite a domicilio."
+      }
     },
     {
       "kind": "clinic",
@@ -217,7 +241,10 @@
       "url": "https://movetocambodia.com/city-guides/kampot/expat-essentials/pets-and-veterinarians/",
       "source_url": "https://movetocambodia.com/city-guides/kampot/expat-essentials/pets-and-veterinarians/",
       "checked": "2026-11-12",
-      "note": "Expat guide only; two guide pages agree. kampot.city lists it without details."
+      "note": "Expat guide only; two guide pages agree. kampot.city lists it without details.",
+      "duty_i18n": {
+        "it": "Aperto tutti i giorni 7:30–17:00."
+      }
     }
   ],
   "notes": "KH research 2026-11-12. Thin: no official source reachable (GDAHP/MAFF pages found were laws and WOAH PDFs, no vet or clinic directory; RUA faculty page and hospital not reachable with contact data; no duty rota found; no animal poison line found). Only ADI (own site, 24/7 emergency) and Animal Mama (own contact page) have clinic-own sources; the rest rest on one expat guide (movetocambodia.com). Not reachable / no usable page: ppaws.com, agrovet-cambodia.com, vslveterinary.com (WebFetch refused: not in search results), ar-cambodia.com (WVS), Facebook pages. Left: Sunny Animal Hospital (BKK3, only aggregator phone +855 10 461 212), Japan Animal Hospital (St 63), Samaki Clinic, Animovet Toul Kork (worldpetnet only), PAW Global Veterinary (no contact), Navetco, Siem Reap Veterinary Care (41 Sala Lodge Rd, no phone/site), Battambang (nothing found), Kep, Royal University of Agriculture veterinary hospital (rua.edu.kh)."

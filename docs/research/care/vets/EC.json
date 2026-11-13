@@ -71,7 +71,10 @@
       "url": "https://www.usfq.edu.ec/en/veterinary-medical-teaching-hospital-hdev",
       "source_url": "https://www.usfq.edu.ec/en/veterinary-medical-teaching-hospital-hdev",
       "checked": "2026-11-12",
-      "note": "University page says '24 hour emergencies' and '24-hour care, 365 days a year'; no street address or phone in the fetched text (contact is an image). TUERI wildlife hospital is next door at Diego de Robles and Pampite. Needs a phone from a later run."
+      "note": "University page says '24 hour emergencies' and '24-hour care, 365 days a year'; no street address or phone in the fetched text (contact is an image). TUERI wildlife hospital is next door at Diego de Robles and Pampite. Needs a phone from a later run.",
+      "duty_i18n": {
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Telefonare in anticipo."
+      }
     },
     {
       "kind": "clinic",
@@ -86,7 +89,10 @@
       "url": "https://www.usfq.edu.ec/en/node/5153",
       "source_url": "https://www.usfq.edu.ec/en/node/5153",
       "checked": "2026-11-12",
-      "note": "Wildlife hospital, does not treat pets (kept in research, not published). Page lists 990 537 004 (emergencies) and 099 053 7004; tueri@usfq.edu.ec."
+      "note": "Wildlife hospital, does not treat pets (kept in research, not published). Page lists 990 537 004 (emergencies) and 099 053 7004; tueri@usfq.edu.ec.",
+      "duty_i18n": {
+        "it": "Solo animali selvatici: aperto 24 ore su 24, 365 giorni all'anno per le emergenze, gratuito."
+      }
     },
     {
       "kind": "clinic",
@@ -101,7 +107,10 @@
       "url": "https://elyex.com/clinica-veterinaria-municipal-urbanimal-quito-gratis-las-24-horas/",
       "source_url": "https://elyex.com/clinica-veterinaria-municipal-urbanimal-quito-gratis-las-24-horas/",
       "checked": "2026-11-12",
-      "note": "News article (2023, republished 2026) says animals are received 24 hours a day but consultations are Mon-Fri 08:00-16:30; inconsistent, so emergency_24h left false. Street 'Fuertes' also spelled 'Fuentes'. Official Quito Bienestar Animal page not opened."
+      "note": "News article (2023, republished 2026) says animals are received 24 hours a day but consultations are Mon-Fri 08:00-16:30; inconsistent, so emergency_24h left false. Street 'Fuertes' also spelled 'Fuentes'. Official Quito Bienestar Animal page not opened.",
+      "duty_i18n": {
+        "it": "Clinica comunale gratuita. Visite dal lunedì al venerdì 08:00–16:30. Telefonare in anticipo per le emergenze."
+      }
     },
     {
       "kind": "clinic",
@@ -114,7 +123,10 @@
       "url": "https://www.elcomercio.com/narices-frias/servicios-costos-clinicaveterinaria-universidadcentral-quito/",
       "source_url": "https://www.elcomercio.com/narices-frias/servicios-costos-clinicaveterinaria-universidadcentral-quito/",
       "checked": "2026-11-12",
-      "note": "Only a news article; no address or phone. University site not opened."
+      "note": "Only a news article; no address or phone. University site not opened.",
+      "duty_i18n": {
+        "it": "Aperto dal lunedì al venerdì 08:00–16:00; pazienti accettati fino alle 15:00 circa, senza appuntamento. Dispone di un'area emergenze; nessun servizio notturno indicato."
+      }
     },
     {
       "kind": "clinic",
@@ -128,7 +140,10 @@
       "url": "https://elmercurio.com.ec/?p=1073173",
       "source_url": "https://elmercurio.com.ec/?p=1073173",
       "checked": "2026-11-12",
-      "note": "Feb 2024 article (hours may have changed); no phone. Address from Primicias Aug 2023 article. Emergencies for run-over/abandoned pets are covered by an agreement with Fundacion ARCA; no number found. Cuenca Patrulla Canina line 0987050437 (Mon-Fri 08:00-17:00) is a municipal rescue patrol, not listed."
+      "note": "Feb 2024 article (hours may have changed); no phone. Address from Primicias Aug 2023 article. Emergencies for run-over/abandoned pets are covered by an agreement with Fundacion ARCA; no number found. Cuenca Patrulla Canina line 0987050437 (Mon-Fri 08:00-17:00) is a municipal rescue patrol, not listed.",
+      "duty_i18n": {
+        "it": "Ospedale comunale per cani e gatti. Dal lunedì al venerdì 08:00–17:00, chiuso nei fine settimana e nei festivi."
+      }
     }
   ],
   "notes": "Research 2026-11-12. Few verifiable sources: WebSearch returned mostly news articles and directories; clinics' own websites, Agrocalidad, the Colegio de Medicos Veterinarios and Quito's Unidad de Bienestar Animal did not surface as openable pages with clinic contact data (Quito's registry 'Registra tu Huella' has no public list found). No 24 h private clinic with its own page was found in Quito, Guayaquil or Cuenca; none in Galapagos (Puerto Ayora / San Cristobal), Manta/Salinas/Montanita, Banos, Loja, Ambato (only NGO/charity articles about Galapagos pets, no clinic contact data). No animal poison line found (CIATOX 1800-VENENO is for humans, not listed). No duty rota found. Not entries: Cuenca Patrulla Canina 0987050437, Guayaquil fire-brigade animal rescue via 911, Cuenca clinics named only in blogs/news without phone (Villa Club Animal, D'Pelo Medic, Hospital Veterinario San Francisco, Clinica La Herradura). Guayaquil: no clinic with contact data found (Isla Puna municipal vet unit mentioned without contact)."

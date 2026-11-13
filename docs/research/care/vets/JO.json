@@ -41,7 +41,10 @@
       "url": "https://www.petlycenter.com/",
       "source_url": "https://www.petlycenter.com/",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24; linea per le urgenze 24 ore su 24 allo stesso numero."
+      }
     },
     {
       "kind": "clinic",
@@ -55,7 +58,10 @@
       "url": "https://royalpawsjo.com/",
       "source_url": "https://royalpawsjo.com/",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; veterinari di pronto soccorso presenti in sede di notte."
+      }
     },
     {
       "kind": "clinic",
@@ -70,7 +76,10 @@
       "source_url": "https://www.just.edu.jo/FacultiesandDepartments/FacultyOfVeterinaryMedicine/VTH/Pages/small-animal-section.aspx",
       "note": "Hours and the separate Emergency Contact Information page unreadable (Request Rejected).",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Reparto piccoli animali con pronto soccorso e terapia intensiva; telefonare prima per gli orari."
+      }
     },
     {
       "kind": "clinic",
@@ -84,7 +93,10 @@
       "url": "https://www.amazonvetcenter.com/",
       "source_url": "https://www.amazonvetcenter.com/",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Tutti i giorni 10:00–22:00; venerdì 14:00–22:00."
+      }
     },
     {
       "kind": "clinic",
@@ -99,7 +111,10 @@
       "source_url": "https://true-vet.com/",
       "note": "Site also says '24/7 vet access' (boarding/imaging) which conflicts with the listed 11-19 hours; not treated as 24 h.",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Tutti i giorni 11:00–19:00; per le urgenze telefonare prima."
+      }
     },
     {
       "kind": "clinic",
@@ -113,7 +128,10 @@
       "url": "https://firstpetclinic.com/",
       "source_url": "https://firstpetclinic.com/branches",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–mer 08:00–20:00 (martedì fino alle 19:30)."
+      }
     },
     {
       "kind": "clinic",
@@ -127,7 +145,10 @@
       "url": "https://firstpetclinic.com/",
       "source_url": "https://firstpetclinic.com/branches",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–mer 09:00–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -141,7 +162,10 @@
       "url": "https://firstpetclinic.com/",
       "source_url": "https://firstpetclinic.com/branches",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Sab–mer 09:30–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -156,7 +180,10 @@
       "source_url": "https://drpawjo.com/",
       "note": "Site has an Emergency page that was not readable; no hours published on the opened page.",
       "checked": "2026-11-12",
-      "small_animals": true
+      "small_animals": true,
+      "duty_i18n": {
+        "it": "Cure urgenti in giornata; telefonare prima per gli orari."
+      }
     }
   ],
   "notes": "Run 2026-11-12. No opened official Jordan Veterinary Association / Syndicate, Ministry of Agriculture or University of Jordan page with a clinic directory, duty rota or animal poison line; no duty rota and no poison line found (searches returned only foreign services). JUST teaching hospital pages partly firewalled. Robots-blocked/unfetchable: jvc.jo, petmedjo.com, Facebook pages (Lifeline, Amity, PetCharm, Royal Pets, Amman Vet Clinic, Vet Yasmeine Alatoom), jordanvet.com. Leads not added (no own-site data opened): Jordan Veterinary Center (jvc.jo), Lifeline vet clinic, Amity Veterinary Clinic, Royal Pets Veterinary Health Center, Amman Vet Clinic, PetCharm, Pet Care/Pet Zone/Amman Veterinary Clinic/Jordan Mobile Veterinary Clinic (named by Expat Focus without contact data), Abdoun Veterinary Clinic and Alfaqeeh Vet Clinic (aggregators only). Jerash: a clinic reported by Jordan News (2022) as working around the clock, Facebook page Vet Yasmeine Alatoom, no phone and page unreadable - not listed. Petra: PETA/Brooke clinics treat working animals (donkeys, horses), no contact data opened - not listed. Aqaba, Zarqa, Madaba: no clinic found. Total only 9 entries."
