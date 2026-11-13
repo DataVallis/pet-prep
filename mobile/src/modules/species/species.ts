@@ -123,6 +123,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   japanese_chin: 'dog',
   norwich_terrier: 'dog',
   miniature_bull_terrier: 'dog',
+  schipperke: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -250,6 +251,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'japanese_chin',
   'norwich_terrier',
   'miniature_bull_terrier',
+  'schipperke',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
