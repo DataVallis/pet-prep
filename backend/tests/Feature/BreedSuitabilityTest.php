@@ -345,9 +345,9 @@ it('gives the Siberian Husky the new secure_fencing tag, active_family, large_ho
         ->and($husky['consider'])->not->toContain('hips_hind_legs')->not->toContain('shorter_lifespan')->not->toContain('food_motivated_weight');
 
     // Only the Siberian Husky, the Samoyed (PDSA S467 "very accomplished escape artists", M5-R10-57), the Basenji (WebMD
-    // S646 "need very high fences or constant supervision", M5-R10-84) and the Border Terrier (AKC S777 "cannot be trusted off-leash or in an unfenced area", M5-R10-102) carry the chip.
+    // S646 "need very high fences or constant supervision", M5-R10-84) and the Border Terrier (AKC S777 "cannot be trusted off-leash or in an unfenced area", M5-R10-102) and the Norwich Terrier (PetMD S814 "A secure leash and a well-fenced yard are a must.", M5-R10-108) carry the chip.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::SiberianHusky, BreedType::Samoyed, BreedType::Basenji, BreedType::BorderTerrier], true)) {
+        if (! in_array($breed, [BreedType::SiberianHusky, BreedType::Samoyed, BreedType::Basenji, BreedType::BorderTerrier, BreedType::NorwichTerrier], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('secure_fencing');
         }
     }
