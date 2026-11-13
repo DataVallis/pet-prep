@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "3960e1a7b8d016cb45e84b7c63be1df578e83dbea256c3c56982d91d1b7d0eed"
+      "sha256": "7a6bfc95db3bf1ef9873b9b104c1a6138419c96f4338dc4933f4149d6b12a6fe"
     }
   },
   "suitability_vocabulary": {
@@ -62301,7 +62301,12 @@
           "S828"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "schipperke.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
