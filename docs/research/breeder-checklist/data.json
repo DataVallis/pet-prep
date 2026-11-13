@@ -3853,6 +3853,25 @@
         }
       ],
       "notes": "RKC breed page (dog-data S805, 2026-11-12): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC/ISDS eye scheme and BOAS breathing testing under the KC Respiratory Function Grading scheme (marked 'NEW test recognised Aug 2026'; to be added formally to the Health Standard from Jan 2027 — paraphrase); no breed-specific DNA testing package (paraphrase); 'There are not currently any additional breed specific restrictions in place for this breed.' No new test key."
+    },
+    "norwich_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S813",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S813",
+          "quote": "Prioritising genetic diversity"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S813, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; no Best Practice heading and no breed-specific test in the fetched text. PetMD (S814) names no breeder tests; VCA (summary only, not kept) mentions hip and eye clearances — not used. No new test key."
     }
   }
 }
