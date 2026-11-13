@@ -1,0 +1,159 @@
+{
+  "slug": "cocoa-powder",
+  "species": "cat",
+  "name": {
+    "en": "Cocoa powder",
+    "sl": "Kakav v prahu"
+  },
+  "question": {
+    "en": "Can cats eat cocoa powder?",
+    "sl": "Ali lahko mačke jedo kakav v prahu?"
+  },
+  "url_slug": {
+    "en": "cocoa-powder",
+    "sl": "kakav-v-prahu"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Cocoa powder is especially toxic to cats because it contains an extremely high concentration of cocoa solids, which carry theobromine. If your cat eats any, keep the packaging and call your vet immediately.",
+    "sl": "Ne. Kakav v prahu je za mačke še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi, ki vsebuje teobromin. Če ga mačka poje, shranite embalažo in takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
+    "sl": "PDSA pojasnjuje, da čokolada vsebuje teobromin, ki je za ljudi popolnoma varen, za mačke pa strupen. Temnejša kot je čokolada, več suhe kakavove snovi in teobromina vsebuje in bolj je strupena. Kakav v prahu je še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi."
+  },
+  "signs": {
+    "en": [
+      "Excitement, restlessness or hyperactivity",
+      "Vomiting or diarrhoea",
+      "Drinking and weeing more than usual",
+      "Tummy pain",
+      "Fast breathing or panting",
+      "Shaking or tremors",
+      "Fever",
+      "A fast heart rate",
+      "Seizures"
+    ],
+    "sl": [
+      "Vznemirjenost, nemir ali hiperaktivnost",
+      "Bruhanje ali driska",
+      "Pije in lula več kot običajno",
+      "Bolečine v trebuhu",
+      "Hitro dihanje ali sopenje",
+      "Tresenje",
+      "Vročina",
+      "Pospešen srčni utrip",
+      "Krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "Keep the packaging and call your vet immediately. Don't wait for symptoms to appear, and don't try to make your cat sick at home.",
+    "sl": "Shranite embalažo in takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cocoa powder is for people's baking, not for cats. If kitty gets into it, tell a grown-up right away so they can call the vet.",
+    "sl": "Kakav v prahu je za peko, ne za muce. Če muca seže po njem, takoj povej odraslemu, da lahko pokliče veterinarja."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is cocoa shell garden mulch a risk for cats?",
+        "sl": "Ali je zastirka iz kakavovih lupin na vrtu nevarna za mačke?"
+      },
+      "a": {
+        "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
+        "sl": "PDSA svetuje, da se izogibate vrtnim zastirkam, ki vsebujejo kakavove lupine."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC116",
+      "quote": "Chocolate contains theobromine, which is perfectly safe for humans, but toxic for cats, dogs, ferrets and rabbits."
+    },
+    {
+      "id": "KC116",
+      "quote": "the darker the chocolate, the more cocoa solids/theobromine it will contain, and the more toxic it is."
+    },
+    {
+      "id": "KC116",
+      "quote": "Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids."
+    },
+    {
+      "id": "KC116",
+      "quote": "Excitement, restlessness, agitation and hyperactivity"
+    },
+    {
+      "id": "KC116",
+      "quote": "Diarrhoea"
+    },
+    {
+      "id": "KC116",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KC116",
+      "quote": "Drinking and weeing more than usual"
+    },
+    {
+      "id": "KC116",
+      "quote": "Abdominal (tummy) pain"
+    },
+    {
+      "id": "KC116",
+      "quote": "Fast breathing or panting"
+    },
+    {
+      "id": "KC116",
+      "quote": "Shaking, trembling and tremors"
+    },
+    {
+      "id": "KC116",
+      "quote": "High temperature (fever)"
+    },
+    {
+      "id": "KC116",
+      "quote": "A fast heart rate"
+    },
+    {
+      "id": "KC116",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KC116",
+      "quote": "If your cat has eaten chocolate, keep the packaging and call your vet immediately."
+    },
+    {
+      "id": "KC116",
+      "quote": "If you suspect your cat may have eaten chocolate, don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC116",
+      "quote": "Don’t try to make your cat sick at home."
+    },
+    {
+      "id": "KC116",
+      "quote": "Avoid using gardening mulches that contain cocoa shell."
+    }
+  ],
+  "related": [
+    "chocolate",
+    "coffee",
+    "cake",
+    "candy"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "02c2741839130d9a65e8f669dc8a110e2b264012110e8dd0a4a5115ea084c92a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66e075f31189fa7e355e4c0359f06db7e8883f7d6ead58c1f8f22556fbd6315d"
+    }
+  }
+}

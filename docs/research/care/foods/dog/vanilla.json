@@ -1,0 +1,150 @@
+{
+  "slug": "vanilla",
+  "species": "dog",
+  "name": {
+    "en": "Vanilla extract",
+    "sl": "Vanilijev ekstrakt"
+  },
+  "question": {
+    "en": "Can dogs have vanilla extract?",
+    "sl": "Ali lahko psi zaužijejo vanilijev ekstrakt?"
+  },
+  "url_slug": {
+    "en": "vanilla",
+    "sl": "vanilija"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, keep vanilla extract away from your dog. Vanilla extract is mostly made from alcohol, and alcohol can easily cause vomiting, diarrhoea and a drunken walk in dogs. If your dog drank some, contact your vet straight away.",
+    "sl": "Ne, vanilijev ekstrakt naj bo zunaj pasjega dosega. Vanilijev ekstrakt je večinoma narejen iz alkohola, alkohol pa pri psih zlahka povzroči bruhanje, drisko in opotekanje. Če ga je pes popil, takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
+    "sl": "Vanilijev ekstrakt je večinoma narejen iz alkohola, psi pa ga prenesejo zelo malo: alkohol zlahka povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Alkohol se po zaužitju hitro vsrka, zato je pomembno, da hitro poiščete veterinarsko pomoč. Živila, ki vsebujejo alkohol, lahko povzročijo enake težave kot alkoholne pijače."
+  },
+  "signs": {
+    "en": [
+      "Vomiting or retching",
+      "Diarrhoea",
+      "Lack of coordination, a drunken walk",
+      "Drooling",
+      "Depression or lethargy, weakness",
+      "Slower breathing",
+      "Low blood sugar, low blood pressure, low body temperature",
+      "Collapse"
+    ],
+    "sl": [
+      "Bruhanje ali siljenje na bruhanje",
+      "Driska",
+      "Slaba koordinacija, opotekanje",
+      "Slinjenje",
+      "Potrtost ali zaspanost, šibkost",
+      "Počasnejše dihanje",
+      "Nizek krvni sladkor, nizek krvni tlak, nizka telesna temperatura",
+      "Kolaps"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog drank vanilla extract, note how much and contact your vet or a pet poison line right away. A dog showing signs should be seen by a vet as soon as possible.",
+    "sl": "Če je pes popil vanilijev ekstrakt, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali. Psa z znaki zastrupitve naj čim prej pregleda veterinar."
+  },
+  "serving": null,
+  "child": {
+    "en": "Vanilla extract is for baking, not for dogs. Keep the little bottle closed and put away, and tell a grown-up if your dog finds it.",
+    "sl": "Vanilijev ekstrakt je za peko, ne za pse. Stekleničko imej zaprto in pospravljeno ter povej odraslemu, če jo pes najde."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KD201",
+      "quote": "Vanilla extract is mostly made from alcohol."
+    },
+    {
+      "id": "KD201",
+      "quote": "Your dog is a lightweight, and alcohol can easily cause vomiting, diarrhea, a drunken gait and even coma or death."
+    },
+    {
+      "id": "KD201",
+      "quote": "If you think your dog drank eggnog, you should contact your veterinarian"
+    },
+    {
+      "id": "KD1",
+      "quote": "Alcoholic beverages and food products containing alcohol can cause vomiting, diarrhea, incoordination, depression"
+    },
+    {
+      "id": "KD1",
+      "quote": "Alcohol is rapidly absorbed after ingestion, so it's important to take prompt action in seeking veterinary attention"
+    },
+    {
+      "id": "KD1",
+      "quote": "please note the amount ingested and contact your veterinarian or poison control"
+    },
+    {
+      "id": "KD202",
+      "quote": "Anytime your dog does get into alcoholic beverages or foods containing alcohol, look for these key warning signs:"
+    },
+    {
+      "id": "KD202",
+      "quote": "Depression or lethargy"
+    },
+    {
+      "id": "KD202",
+      "quote": "Lack of coordination"
+    },
+    {
+      "id": "KD202",
+      "quote": "Drooling"
+    },
+    {
+      "id": "KD202",
+      "quote": "Vomiting or retching"
+    },
+    {
+      "id": "KD202",
+      "quote": "Weakness"
+    },
+    {
+      "id": "KD202",
+      "quote": "Collapse"
+    },
+    {
+      "id": "KD202",
+      "quote": "Decreased respiratory rate (breathing more slowly than usual)"
+    },
+    {
+      "id": "KD202",
+      "quote": "Hypoglycemia (low blood sugar)"
+    },
+    {
+      "id": "KD202",
+      "quote": "Hypotension (low blood pressure)"
+    },
+    {
+      "id": "KD202",
+      "quote": "Hypothermia (low body temperature)"
+    },
+    {
+      "id": "KD202",
+      "quote": "A dog that is showing symptoms of alcohol poisoning should be seen as soon as possible by a veterinarian."
+    }
+  ],
+  "related": [
+    "alcohol",
+    "raw-yeast-dough",
+    "cake",
+    "cookies"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d13ba1766e74bd06d611508a6bdfa02e0169a15a8525bba4c2a2a86237e2b05c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6da5f3aa197dd0fbb9dfe57ba832d4f1a1c620c7ba450619ffd3b1d67b2979b4"
+    }
+  }
+}

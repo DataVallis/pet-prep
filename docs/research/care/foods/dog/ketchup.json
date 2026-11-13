@@ -1,0 +1,100 @@
+{
+  "slug": "ketchup",
+  "species": "dog",
+  "name": {
+    "en": "Ketchup",
+    "sl": "Kečap"
+  },
+  "question": {
+    "en": "Can dogs eat ketchup?",
+    "sl": "Ali lahko psi jedo kečap?"
+  },
+  "url_slug": {
+    "en": "ketchup",
+    "sl": "kecap"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it's best not to share ketchup with your dog. Ketchup itself is not toxic, but it usually contains garlic and onions, sugar and salt, and sometimes xylitol, which is toxic to dogs.",
+    "sl": "Ne, kečapa raje ne delite s psom. Kečap sam po sebi ni strupen, a običajno vsebuje česen in čebulo, sladkor in sol, včasih pa tudi ksilitol, ki je za pse strupen."
+  },
+  "why": {
+    "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
+    "sl": "Kupljeni kečap običajno vsebuje česen in čebulo, cimet, sladkor in sol, konzervanse in kemikalije, mnoge od teh sestavin pa lahko psom škodijo. Česen in čebula lahko psu povzročita prebavne težave, včasih pa tudi resnejše posledice. Nekateri kečapi vsebujejo tudi ksilitol, ki je za pse strupen. Viri se razlikujejo v strogosti (eden pravi, da kečap ni strupen, drugi preprosto odsvetuje), zato ga psu ne priporočamo."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset"
+    ],
+    "sl": [
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "Some ketchup contains xylitol, which is toxic to dogs. If your dog ate ketchup with xylitol, follow the advice on our xylitol page.",
+    "sl": "Nekateri kečapi vsebujejo ksilitol, ki je za pse strupen. Če je pes pojedel kečap s ksilitolom, ravnajte po nasvetih na naši strani o ksilitolu."
+  },
+  "serving": null,
+  "child": {
+    "en": "Ketchup is a people sauce. It has things inside that are not good for dogs, so keep it on your own plate.",
+    "sl": "Kečap je omaka za ljudi. V njem so sestavine, ki niso dobre za pse, zato naj ostane na tvojem krožniku."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about tomato sauce?",
+        "sl": "Kaj pa paradižnikova omaka?"
+      },
+      "a": {
+        "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
+        "sl": "Ne. Paradižnikova omaka pogosto vsebuje škodljive sestavine, kot so česen, čebula ali neprimerna zelišča."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD80",
+      "quote": "Ketchup, while not toxic for dogs, is best left off of the list of foods you share with your pet."
+    },
+    {
+      "id": "KD80",
+      "quote": "In addition to tomatoes, commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt,"
+    },
+    {
+      "id": "KD80",
+      "quote": "preservatives and chemicals—and many of these ingredients can have detrimental effects on dogs."
+    },
+    {
+      "id": "KD80",
+      "quote": "Garlic and onions can cause stomach upset in dogs, and sometimes have even more serious side effects."
+    },
+    {
+      "id": "KD206",
+      "quote": "No. Ketchup often contains sugar, salt, and sometimes xylitol, which is toxic to dogs."
+    },
+    {
+      "id": "KD206",
+      "quote": "No. Tomato sauce often contains harmful ingredients, like garlic, onion, or unsafe herbs."
+    }
+  ],
+  "related": [
+    "tomatoes",
+    "onion",
+    "garlic",
+    "xylitol",
+    "soy-sauce"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4cea7c5458456160b55bb2d5438a16038f38ff393216aaa3e936e280e9f21f59"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39a2b28f4b48d6470794b763a8bb441d5820e834973eb76cdaa26ab0786a5653"
+    }
+  }
+}

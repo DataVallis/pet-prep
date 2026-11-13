@@ -1,0 +1,132 @@
+{
+  "slug": "turmeric",
+  "species": "cat",
+  "name": {
+    "en": "Turmeric",
+    "sl": "Kurkuma"
+  },
+  "question": {
+    "en": "Can cats eat turmeric?",
+    "sl": "Ali lahko mačke jedo kurkumo?"
+  },
+  "url_slug": {
+    "en": "turmeric",
+    "sl": "kurkuma"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to give your cat turmeric. Studies on feeding turmeric to cats are scarce, and cats have an unusually low capacity for glucuronidation, which researchers say increases the risk of turmeric toxicity in cats.",
+    "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah."
+  },
+  "why": {
+    "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
+    "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Stomach upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat licked a little turmeric, watch for vomiting or an upset stomach. If your cat has eaten something she shouldn't have, contact your vet straight away; don't wait for signs, and don't try to make her sick at home.",
+    "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje."
+  },
+  "serving": null,
+  "child": {
+    "en": "Turmeric is a yellow spice for people's food. Cats don't need spices, so keep the jar away from kitty.",
+    "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is turmeric in cat food safe?",
+        "sl": "Ali je kurkuma v mačji hrani varna?"
+      },
+      "a": {
+        "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
+        "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC115",
+      "quote": "Turmeric is a bright yellow spice"
+    },
+    {
+      "id": "KC115",
+      "quote": "Cats have an unusually low capacity for glucuronidation"
+    },
+    {
+      "id": "KC115",
+      "quote": "glucuronidation, which is an important metabolic step in the metabolism and subsequent excretion of curcuminoid metabolites"
+    },
+    {
+      "id": "KC115",
+      "quote": "This peculiarity increases the risk of turmeric toxicity in cats."
+    },
+    {
+      "id": "KC115",
+      "quote": "Studies describing the feeding of TE to cats are scarce and do not provide adequate toxicology data;"
+    },
+    {
+      "id": "KC115",
+      "quote": "yet there are few data relating to the safety of this ingredient in this species."
+    },
+    {
+      "id": "KC115",
+      "quote": "two groups of test cats were fed the same diet supplemented with two different levels of TE for four months"
+    },
+    {
+      "id": "KC115",
+      "quote": "is well tolerated when fed in a study of 45 healthy adult domesticated cats"
+    },
+    {
+      "id": "KC115",
+      "quote": "complete and balanced cat food"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Although cats don’t need anything other than a complete diet to meet their nutritional needs,"
+    },
+    {
+      "id": "KC87",
+      "quote": "Contact your vet straight away if your cat has eaten something they shouldn’t have."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t wait for symptoms to appear."
+    },
+    {
+      "id": "KC87",
+      "quote": "Don’t try to make your cat sick at home unless your vet tells you to do so."
+    }
+  ],
+  "related": [
+    "ginger",
+    "cinnamon",
+    "nutmeg"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f4b3fa11e939f04cdae6356c127ffaaf4e3285fe423a1ba88051d81a39ee3860"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "63fb51a2db254372a4cc3d0e5516d3870e43c0b115ff62d81e73c7cf05ed2048"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "slug": "turmeric",
+  "species": "dog",
+  "name": {
+    "en": "Turmeric",
+    "sl": "Kurkuma"
+  },
+  "question": {
+    "en": "Can dogs eat turmeric?",
+    "sl": "Ali lahko psi jedo kurkumo?"
+  },
+  "url_slug": {
+    "en": "turmeric",
+    "sl": "kurkuma"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to give your dog turmeric without asking your vet. Small amounts are considered safe, but in high amounts turmeric can act as a blood thinner and cause stomach upset, and there is little research on its risks.",
+    "sl": "Psu kurkume raje ne dajajte brez posveta z veterinarjem. Majhne količine veljajo za varne, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave, raziskav o njenih tveganjih pa je malo."
+  },
+  "why": {
+    "en": "Sources differ: one pet food expert article calls turmeric safe for dogs in small amounts, while another advises caution, notes that there is little research on its risks and that turmeric taken by mouth is poorly absorbed. Serious side effects are fairly uncommon, but in high amounts turmeric can act as a blood thinner and cause stomach upset. Because the sources disagree, we use the stricter rating. The small amounts used to colour or flavour dog food are not likely to bring any noticeable health benefits.",
+    "sl": "Viri se razlikujejo: eden od strokovnih člankov proizvajalca pasje hrane pravi, da je kurkuma v majhnih količinah za pse varna, drugi pa svetuje previdnost ter opozarja, da je raziskav o tveganjih malo in da se kurkuma, zaužita skozi usta, slabo vsrka. Resni neželeni učinki so dokaj redki, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave. Ker se viri ne ujemajo, izberemo strožjo oceno. Majhne količine, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset (high amounts)"
+    ],
+    "sl": [
+      "Prebavne težave (velike količine)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Talk to your vet before giving your dog turmeric or any other supplement, especially if your dog takes medication. Turmeric should not be used as a routine treatment for any health condition.",
+    "sl": "Preden psu daste kurkumo ali kakršen koli drug dodatek, se posvetujte z veterinarjem, še posebej, če pes jemlje zdravila. Kurkume ne uporabljajte kot rutinsko zdravljenje kakršne koli bolezni."
+  },
+  "serving": null,
+  "child": {
+    "en": "Turmeric is a yellow spice for people's cooking. Only a vet can say if a dog should have it, so leave it to grown-ups.",
+    "sl": "Kurkuma je rumena začimba za kuhanje. Ali jo pes sme dobiti, lahko pove le veterinar, zato to prepusti odraslim."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Does the turmeric in dog food have health benefits?",
+        "sl": "Ali ima kurkuma v pasji hrani koristi za zdravje?"
+      },
+      "a": {
+        "en": "The levels of turmeric used to colour or flavour dog food are not likely to have any noticeable health benefits.",
+        "sl": "Količine kurkume, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD198",
+      "quote": "Turmeric is safe for dogs in small doses, and it may have a positive impact."
+    },
+    {
+      "id": "KD198",
+      "quote": "It turns out the levels of turmeric used in coloring or flavoring dog food are not likely to have any noticeable health benefits."
+    },
+    {
+      "id": "KD198",
+      "quote": "Before you introduce any supplementation into your dog's diet, be sure to talk with your veterinarian."
+    },
+    {
+      "id": "KD199",
+      "quote": "unfortunately there are a few reasons why we would advise being cautious about giving this spice to your pup."
+    },
+    {
+      "id": "KD199",
+      "quote": "this spice should not be used for routine clinical treatment of any veterinary conditions."
+    },
+    {
+      "id": "KD199",
+      "quote": "oral turmeric has very poor bioavailability."
+    },
+    {
+      "id": "KD199",
+      "quote": "serious adverse effects of turmeric are fairly uncommon"
+    },
+    {
+      "id": "KD199",
+      "quote": "There is also little research on the potential risks of turmeric"
+    },
+    {
+      "id": "KD199",
+      "quote": "it's safest to always consult a vet"
+    },
+    {
+      "id": "KD200",
+      "quote": "high doses of turmeric can act as a blood thinner and cause stomach upset."
+    },
+    {
+      "id": "KD200",
+      "quote": "Always consult your veterinarian prior to starting botanical therapy or combining it with pharmaceuticals."
+    }
+  ],
+  "related": [
+    "ginger",
+    "cinnamon",
+    "nutmeg"
+  ],
+  "updated": "2026-11-13",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a6380aa3c93978912b9a381b690a3a8f05820d3f554d652f5aaec29665339e8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a24d7a1fcb08bebc9228a1a9c15e1f2fecb2f47cd98b80b51dcb12fbca16bb66"
+    }
+  }
+}
