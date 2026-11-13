@@ -110,6 +110,7 @@ return [
     'japanese_chin' => 'Japonski čin',
     'norwich_terrier' => 'Norwich terier',
     'miniature_bull_terrier' => 'Miniaturni bulterier',
+    'schipperke' => 'Schipperke',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

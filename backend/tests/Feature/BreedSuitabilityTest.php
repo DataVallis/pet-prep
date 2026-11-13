@@ -632,6 +632,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::BouvierDesFlandres->value => 'bouvier_des_flandres.behaviour.other_pets',
         // M5-R10-106: PDSA S800 "Borzois do have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets."
         BreedType::Borzoi->value => 'borzoi.behaviour.other_pets',
+        // M5-R10-110: PetMD S827 "… some Schipperkes maintain a high prey drive and will chase small birds, rodents, reptiles, and (sometimes) cats."
+        BreedType::Schipperke->value => 'schipperke.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

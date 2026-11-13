@@ -721,6 +721,10 @@ return [
         ['key' => 'fawn', 'value' => 'fawn, the colour predominating over any white markings', 'en' => 'Fawn', 'sl' => 'Plav'],
         ['key' => 'tricolour', 'value' => 'tricolour (black, tan and white), the colour predominating', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
     ],
+    // M5-R10-110: FCI-Standard N° 83 (S825) "Totally black."; same order and values as breed_appearance.php.
+    'schipperke' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

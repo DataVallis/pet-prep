@@ -806,6 +806,11 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Schipperke (M5-R10-110, docs/research/dog-data schipperke.appearance): "Totally black." (FCI-Standard N° 83, S825; any
+| other top-coat colour or tiny white spots disqualify); abundant straight harsh coat with a ruff, mane, frill and culottes,
+| erect very small pointed ears, wedge-shaped lupoid head, natural tail (born tailless allowed). Not flat-faced; RKC Breed
+| Watch Category 1 (S826). Black is the only colour (the portrait default); weight unsourced → `verified => false`.
+|
 | Miniature Bull Terrier (M5-R10-109, docs/research/dog-data miniature_bull_terrier.appearance): white; coloured — brindle
 | preferable, black brindle, red, fawn and tricolour acceptable; blue and liver highly undesirable (FCI-Standard N° 359,
 | S819; never merle — RKC S820). Downfaced, egg-shaped head, small thin erect ears, narrow triangular dark eyes, short
@@ -4754,6 +4759,38 @@ return [
             'ear_carriage' => ['small, thin ears set close together and held stiffly erect'],
             'eye_color' => ['small, narrow, triangular, obliquely set very dark eyes'],
             'tail' => ['short, low-set tail carried horizontally, thick at the root and tapering to a fine point'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-110 (docs/research/dog-data/data.json schipperke.appearance; runbook rules 2026-10-10: the only standard colour —
+    // black (FCI S825), no white spots; erect ears, natural tail).
+    'schipperke' => [
+        'display_name' => 'Schipperke',
+        // Colour frequency is in no source (schipperke.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 83 Schipperke (S825, https://www.fci.be/Nomenclature/Standards/083g01-en.pdf), RKC Breeds A–Z (S826) — for the traits listed in `sources`. The colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S826 "Size: Small"; S825 "Between 3 and 9 kg. An average weight of 4 to 7 kg is sought after."',
+            'build' => 'S825 "Lupoid. The Schipperke is a sheepdog of small dimensions but very solidly built." "Height at withers equals length of body, hence this is a squarely built dog."',
+            'coat_length' => 'S825 "The top coat is abundant, thick, straight and sufficiently harsh, with quite firm texture, therefore dry and resistant to the touch." — ruff, mane, frill and culottes',
+            'coat_color' => 'S825 "Totally black." (weight unsourced; no white spots in the game)',
+            'head' => 'S825 "Lupoid, wedge-shaped, but not too long and wide enough to balance with the body."; stop "Pronounced but not exaggerated."',
+            'ear_carriage' => 'S825 "Erect, very small, pointed, triangular (as far as possible equilateral), set high but not too close to each other, firm and extremely mobile."',
+            'eye_color' => 'S825 "Dark brown in colour, small, almond-shaped, neither sunken nor protruding; sharp, lively and mischievous look, black-rimmed eyelids."',
+            'tail' => 'S825 "Some dogs are born completely tailless or with a rudimentary or incomplete tail (stumpy or short tail). They should not be penalized for this." — the natural tail',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, lupoid, very solidly and squarely built sheepdog', 'weight' => 3], 'small, compact, lively sheepdog'],
+            'coat_length' => ['abundant, thick, straight, harsh coat forming a ruff, a mane, a frill and culottes, short hair on the head and very short on the ears'],
+            // The only standard colour (S825) → the register portrait.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 100],
+            ],
+            'head' => ['lupoid, wedge-shaped, fox-like head with a pronounced but not exaggerated stop and a black nose'],
+            'ear_carriage' => ['erect, very small, pointed triangular ears set high'],
+            'eye_color' => ['small, dark brown, almond-shaped, lively eyes'],
+            'tail' => ['natural tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

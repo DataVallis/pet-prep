@@ -2690,5 +2690,28 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S820'], 'refs' => ['miniature_bull_terrier.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-110: schipperke.* (S824–S829), runbook rules (data.json proposed_game_parameters.schipperke.suitability_tags).
+        // RKC key facts (S826) + FCI (S825) + PetMD (S827) + VCA (S828). RKC Breed Watch Category 1 (S826) → no welfare chip; in marketing.
+        'schipperke' => [
+            'suits' => [
+                // S826 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S826'], 'refs' => ['schipperke.suitability.rkc_size_of_home']],
+                // S828 "loves his family and responds to them quite well, including the children".
+                ['tag' => 'family_pet', 'source_ids' => ['S828'], 'refs' => ['schipperke.behaviour.family']],
+                // S825 "very gentle with children" — never small_children (PetMD / VCA caveats).
+                ['tag' => 'children', 'source_ids' => ['S825'], 'refs' => ['schipperke.behaviour.children']],
+            ],
+            'consider' => [
+                // S827 "require activities that keep their mind engaged and their body active"; bored when left alone.
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S827'], 'refs' => ['schipperke.exercise.daily_text', 'schipperke.behaviour.time_alone']],
+                // S826 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S826'], 'refs' => ['schipperke.suitability.rkc_shedding']],
+                // S826 "Grooming: More than once a week"; S828 "must be brushed at least twice a week for fifteen minutes".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S826', 'S828'], 'refs' => ['schipperke.suitability.rkc_grooming', 'schipperke.suitability.vca_grooming']],
+                // S827 "some Schipperkes maintain a high prey drive and will chase small birds, rodents, reptiles, and (sometimes) cats."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S827'], 'refs' => ['schipperke.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

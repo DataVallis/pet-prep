@@ -862,6 +862,12 @@ class FalAiService
                 .'small narrow triangular very dark eyes, small thin ears held stiffly erect, a short low-set tail carried horizontally, '
                 .'keen, determined, fun-loving expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-110: FCI-Standard N° 83 (S825) — small lupoid sheepdog, black only, ruff / mane / culottes, erect small ears.
+            BreedType::Schipperke => 'A small, lupoid, very solidly and squarely built Schipperke, an abundant, thick, straight, harsh solid black coat '
+                .'forming a ruff, a mane, a frill and culottes, short hair on the head, a wedge-shaped fox-like head with a pronounced but not '
+                .'exaggerated stop and a black nose, small dark brown almond-shaped lively eyes, erect, very small, pointed triangular ears set high, '
+                .'a natural tail, alert, lively, mischievous expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2054,6 +2060,13 @@ class FalAiService
                 'eye_color' => 'dark, almost black',
                 'fur_texture' => 'short, flat, harsh coat with a fine gloss',
                 'markings' => 'pure white coat, black nose, downfaced egg-shaped head, small erect ears',
+            ],
+            // M5-R10-110: the only standard colour (FCI S825 "Totally black."), no white spots.
+            BreedType::Schipperke => [
+                'color_scheme' => 'black',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'abundant, thick, straight, harsh coat with a ruff, mane and culottes',
+                'markings' => 'solid black coat without white spots, black nose, erect very small pointed ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
