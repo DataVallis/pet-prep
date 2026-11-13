@@ -1,0 +1,144 @@
+{
+  "country": "BS",
+  "checked": "2026-11-13",
+  "sources": [
+    {
+      "name": "Caribbean Veterinary Medical Association (CbVMA) - member page for the Veterinary Medical Association of the Bahamas",
+      "url": "https://www.cbvma.org/",
+      "note": "Opened; lists the Bahamas association (P.O. Box FH1474, Nassau, 242-325-0053) but no clinics. Regulatory/professional body, no entry."
+    },
+    {
+      "name": "Government of The Bahamas - Veterinary Services Unit (Department of Agriculture)",
+      "url": "https://bahamas.gov.bs/wps/wcm/connect/mof_content/internet/all+services/v/veterinary+services+unit",
+      "note": "Opened; Department of Agriculture offices (head office 242-397-7450, Gladstone Road Agricultural Centre 242-341-1141) and Family Island packing-house contacts. No clinic list, no duty rota, so no entry."
+    },
+    {
+      "name": "Animal Medical Group, Nassau - own website",
+      "url": "https://www.amgvetsnassau.com/",
+      "note": "Opened; address, phones, hours and the wording EMERGENCY 24/7."
+    },
+    {
+      "name": "Happy Pets Animal Hospital, Nassau - own website",
+      "url": "https://happypetsbahamas.com/",
+      "note": "Opened; address, phones, hours, 24-hour on-call emergency service."
+    },
+    {
+      "name": "Central Animal Hospital, Nassau - own website",
+      "url": "https://www.centralanimalhospital242.com/",
+      "note": "Opened; address, phones, hours, after-hours emergency line (no 24 h wording)."
+    },
+    {
+      "name": "Nassau Pet Clinic - own website (hosted on pages.dev)",
+      "url": "https://nassaupetclinic.pages.dev/",
+      "note": "Opened; address, phone, hours. Site is on a pages.dev host, so ownership is not independently confirmed."
+    },
+    {
+      "name": "Bahamas Humane Society - own website",
+      "url": "https://www.bahamashumane.org/about/",
+      "note": "Opened; 35 Dunmore Avenue, Chippingham, 323-5138, clinic Mon/Thu/Sat by appointment. Page partly built from old comments."
+    },
+    {
+      "name": "Noah's Ark Animal Centre, Eleuthera - own website",
+      "url": "https://www.noahsarkeleuthera.com/",
+      "note": "Opened; Rock Sound, Eleuthera, phone, hours, emergency number (no 24 h wording)."
+    },
+    {
+      "name": "Baark! Bahamas - contact page",
+      "url": "https://baarkbahamas.com/contact/",
+      "note": "Opened; spay/neuter nonprofit with mobile clinic, phone only, no address or hours. Not a fixed clinic, so no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Animal Medical Group",
+      "city": "Nassau",
+      "region": "New Providence",
+      "address": "Harbour Bay Shopping Plaza, East Bay Street, Nassau",
+      "phone": "+1 242 698 7387",
+      "emergency_24h": true,
+      "duty": "Mon-Fri 8:30-17:00, Sat 9:00-14:00, closed Sundays and public holidays. Emergency line 24/7: +1 242 807 7960.",
+      "small_animals": true,
+      "url": "https://www.amgvetsnassau.com/",
+      "source_url": "https://www.amgvetsnassau.com/",
+      "checked": "2026-11-13",
+      "quote": "EMERGENCY 24/7: 242 807 7960"
+    },
+    {
+      "kind": "clinic",
+      "name": "Happy Pets Animal Hospital",
+      "city": "Nassau",
+      "region": "New Providence",
+      "address": "Windsor Field Road, Nassau",
+      "phone": "+1 242 377 3647",
+      "emergency_24h": true,
+      "duty": "Mon-Fri 8:30-17:00, Sat 8:30-14:00, closed Sundays. 24-hour on-call emergency service after hours: +1 242 557 0911.",
+      "small_animals": true,
+      "url": "https://happypetsbahamas.com/",
+      "source_url": "https://happypetsbahamas.com/",
+      "checked": "2026-11-13",
+      "quote": "After our normal business hours, we do offer 24-hour on-call emergency service."
+    },
+    {
+      "kind": "clinic",
+      "name": "Central Animal Hospital",
+      "city": "Nassau",
+      "region": "New Providence",
+      "address": "#25 Tenwich Street, Nassau",
+      "phone": "+1 242 325 1288",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-15:00, Sat by appointment, closed Sundays. After-hours emergency line: +1 242 468 3644.",
+      "small_animals": true,
+      "url": "https://www.centralanimalhospital242.com/",
+      "source_url": "https://www.centralanimalhospital242.com/",
+      "note": "Page says the emergency line is available after hours; no 24 h wording.",
+      "checked": "2026-11-13"
+    },
+    {
+      "kind": "clinic",
+      "name": "Nassau Pet Clinic",
+      "city": "Nassau",
+      "region": "New Providence",
+      "address": "Seventh Street North, Coconut Grove, Nassau",
+      "phone": "+1 242 322 4209",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-17:00, Sat 9:00-13:00, closed Sundays. Mobile house calls across New Providence.",
+      "small_animals": true,
+      "url": "https://nassaupetclinic.pages.dev/",
+      "source_url": "https://nassaupetclinic.pages.dev/",
+      "checked": "2026-11-13",
+      "note": "Formerly Nassau Veterinary Clinic. Site is on pages.dev; no emergency wording."
+    },
+    {
+      "kind": "clinic",
+      "name": "Bahamas Humane Society",
+      "city": "Nassau",
+      "region": "New Providence",
+      "address": "35 Dunmore Avenue, Chippingham, Nassau",
+      "phone": "+1 242 323 5138",
+      "emergency_24h": false,
+      "duty": "Clinic Mon, Thu and Sat by appointment. Shelter Mon-Thu and Sat 8:30-16:00, Fri 8:30-13:00.",
+      "small_animals": true,
+      "url": "https://www.bahamashumane.org/about/",
+      "source_url": "https://www.bahamashumane.org/about/",
+      "note": "Spay/neuter-focused animal welfare clinic. Phone on page is 323-5138 (242 added from comments). A directory lists 85 Dunmore Ave; the society's own pages say 35.",
+      "checked": "2026-11-13"
+    },
+    {
+      "kind": "clinic",
+      "name": "Noah's Ark Animal Centre",
+      "city": "Rock Sound",
+      "region": "Eleuthera",
+      "address": "Robert F. Kennedy Dr., Rock Sound, Eleuthera",
+      "phone": "+1 242 334 2934",
+      "emergency_24h": false,
+      "duty": "Tue-Thu 9:00-16:00, Sat 9:00-15:00, closed Mon, Fri, Sun and holidays. Emergencies: call or text +1 242 470 0109.",
+      "small_animals": true,
+      "url": "https://www.noahsarkeleuthera.com/",
+      "source_url": "https://www.noahsarkeleuthera.com/",
+      "note": "Emergency number listed without hours; no 24 h wording.",
+      "checked": "2026-11-13"
+    }
+  ],
+  "notes": "Research 2026-11-13; every source_url opened with WebFetch. No Bahamas veterinary association clinic directory found online (CbVMA page only gives the association contact); Dept. of Agriculture page lists no clinics. No duty rota and no animal poison line found. Not added (only found via directories/aggregators or old news, never opened on the clinic's own page): Freeport Vet Hospital (Poincianna Drive, Grand Bahama; 242-352-8155, emergency 242-727-8381; only on findyello.com; freeportvethospital.net could not be opened - blocked by provenance), Exuma Veterinary Clinic (findyello page failed to fetch twice), Westlake Animal Hospital, Caves Village Veterinary Hospital, Palmdale Veterinary Clinic, Purrfect Pets Veterinary Clinic (only bahamourri/noonsite/yabsta directory listings or a 2016 Tribune article). Abaco: no vet clinic found. Grand Bahama and Exuma therefore have no entry. Baark! Bahamas (spay/neuter nonprofit, mobile clinic) skipped, not a fixed clinic."
+}
