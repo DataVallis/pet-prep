@@ -3872,6 +3872,40 @@
         }
       ],
       "notes": "RKC breed page (dog-data S813, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; no Best Practice heading and no breed-specific test in the fetched text. PetMD (S814) names no breeder tests; VCA (summary only, not kept) mentions hip and eye clearances — not used. No new test key."
+    },
+    "miniature_bull_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S820",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S820",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_pll",
+          "level": "best_practice",
+          "name": "DNA test for primary lens luxation (PLL)",
+          "source_id": "S820",
+          "quote": "DNA test for primary lens luxation (PLL)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S820",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S820, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the PLL DNA test and the BVA/KC/ISDS eye scheme. The page also points to a breed club health scheme (heart and kidney disease pages on miniaturebullterrierclub.org, not read) and says interbreeding with the Bull Terrier needs approval and merle puppies are not registered (paraphrase). No new test key."
     }
   }
 }

@@ -856,6 +856,11 @@ class FalAiService
                 .'with a thick undercoat, longer and rougher on the neck forming a ruff that frames the face, a slightly rounded wide skull, '
                 .'a wedge-shaped strong muzzle with a black nose, small oval dark keen eyes, erect medium-sized ears with pointed tips, '
                 .'a natural tail of moderate length carried erect, alert, fearless, lovable expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-109: FCI-Standard N° 359 (S819) — a small Bull Terrier with a downfaced, egg-shaped head; pure white (first standard colour).
+            BreedType::MiniatureBullTerrier => 'A small, strongly built, muscular, well balanced and active Miniature Bull Terrier with a short, flat, glossy pure white coat, '
+                .'a downfaced, egg-shaped head with no stop and a profile curving down to a black nose, '
+                .'small narrow triangular very dark eyes, small thin ears held stiffly erect, a short low-set tail carried horizontally, '
+                .'keen, determined, fun-loving expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2042,6 +2047,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'hard, wiry, straight close-lying coat with a ruff around the face',
                 'markings' => 'solid red coat without white patches, black nose, erect pointed ears',
+            ],
+            // M5-R10-109: standard colours only (FCI S819) — pure white as the anchor; never blue, liver or merle.
+            BreedType::MiniatureBullTerrier => [
+                'color_scheme' => 'pure white',
+                'eye_color' => 'dark, almost black',
+                'fur_texture' => 'short, flat, harsh coat with a fine gloss',
+                'markings' => 'pure white coat, black nose, downfaced egg-shaped head, small erect ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

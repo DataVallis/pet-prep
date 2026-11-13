@@ -141,9 +141,9 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            // Other names are no breed keys (only search keywords).
+            // Other names are no breed keys (only search keywords); the Miniature Bull Terrier is its own breed since M5-R10-109.
             ->and($refused(['breed_type' => 'english_bull_terrier']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'miniature_bull_terrier']))->toThrow(QueryException::class);
+            ->and($refused(['breed_type' => 'mini_bull_terrier']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2027_02_10_120000_add_bull_terrier_breed.php');
         // down() refuses while a Bull Terrier exists (no silent data loss).

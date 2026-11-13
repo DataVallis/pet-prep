@@ -66,8 +66,8 @@ describe('M5-R10-76 Bull Terrier', () => {
 
   it('is found by its EN / SL names', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
-    // »bulterier« is also part of the Staffordshire Bull Terrier's Slovenian name; the plain name comes last.
-    expect(find('bulterier')).toEqual(['staffordshire_bull_terrier', KEY]);
+    // »bulterier« is also part of the Staffordshire Bull Terrier's and the Miniature Bull Terrier's (M5-R10-109) Slovenian names.
+    expect(find('bulterier')).toEqual(['staffordshire_bull_terrier', KEY, 'miniature_bull_terrier']);
     expect(find('Bully')).toEqual([KEY]);
     expect(find('English Bull Terrier')).toEqual([KEY]);
     expect(find('bul terier')).toEqual([KEY]);

@@ -712,6 +712,15 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
         ['key' => 'grizzle', 'value' => 'grizzle', 'en' => 'Grizzle', 'sl' => 'Sivkast'],
     ],
+    // M5-R10-109: FCI-Standard N° 359 (S819) white; coloured — brindle, black brindle, red, fawn, tricolour; same order and values as breed_appearance.php.
+    'miniature_bull_terrier' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'brindle', 'value' => 'brindle, the colour predominating over any white markings', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black-brindle', 'value' => 'black brindle, the colour predominating over any white markings', 'en' => 'Black brindle', 'sl' => 'Črno tigrast'],
+        ['key' => 'red', 'value' => 'red, the colour predominating over any white markings', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'fawn', 'value' => 'fawn, the colour predominating over any white markings', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black, tan and white), the colour predominating', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -56277,6 +56277,494 @@
       }
     }
   },
+  "miniature_bull_terrier": {
+    "_note": "Added 2026-11-13 (M5-R10-109, unattended run — appended after the Norwich Terrier: AKC 2024 No. 105 'Miniature Bull Terrier', S174 full-list table fetched 2026-11-13 '104 Norwich Terrier', '105 Miniature Bull Terrier', '106 Schipperke'). Quotes as returned by the web-fetch tool on 2026-11-13 (non-preapproved pages under a 125-character quote limit — fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S818–S823 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S818, 'MINIATURE BULL TERRIER' No. 359, Group 3 Section 3 Bull type Terriers, Great Britain); FCI-Standard N° 359 English PDF (S819, valid standard 08.09.2026). RKC Breeds A–Z page (S820, royalkennelclub.com, reached through a search result): key facts, Breed Watch Category 2 (points not returned), Good Practice 'Prioritising genetic diversity', Best Practice PLL DNA test + BVA/KC/ISDS eye scheme. Weight: the FCI standard says 'There is no weight limit.' → PetMD (S821, tier B) 'weigh 18–28 pounds'; the AKC weight chart row (S268, 18-28 pounds) came back only in a model summary (not verbatim) → agreement noted, not used as the source. Lifespan: the Dogs Trust table of McMillan et al. 2024 (S123) was refused by the fetch tool (not in provenance) and the Nature PDF names the breed only in Fig. 5 → RKC lower bound 'Over 10 years' (S820) → senior 90 (Norwich Terrier precedent); Wikipedia (S823, tier C) cites McMillan 2024 '12.2 years' → 110, not used alone. No PDSA / Woodgreen / Dogs Trust breed page exists (searched 2026-11-13; only the (English) Bull Terrier pages). Not in Coren's table (S35) → learning 1.0. Names: RKC 'Bull Terrier (Miniature)', FCI / AKC 'Miniature Bull Terrier'; Slovenian »miniaturni bulterier« — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 359, Group 3 Section 3 (Bull type Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S818",
+      "quote": "Group : n°3 - Terriers",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S818, as returned): 'MINIATURE BULL TERRIER' (French 'BULL TERRIER MINIATURE'), 359, 'Group : n°3 - Terriers', section 'Bull type Terriers', country of origin 'GREAT BRITAIN', 'Recognized on a definitive basis' (7/5/2011), 'Not subject to a working trial according to the FCI breeds nomenclature'. FCI-Standard N° 359 (S819): 'FCI-CLASSIFICATION: Group 3 Terriers' 'Section 3 Bull type Terriers'; 'ORIGIN: Great Britain.' Great Britain is already in FCI_ORIGINS (GB). RKC (S820): first recognised as a separate variety in 1943 (paraphrase of 'was first recognised as a separate variety in 1943.')."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S820",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S820) 'Small'; 18–28 lb (PetMD S821) straddles the 'Small (12–24 pounds)' and 'Medium' classes of S10 — the RKC size is used, so growth = the Small class."
+    },
+    "height": {
+      "petmd": {
+        "value": {
+          "male": [
+            25,
+            36
+          ],
+          "female": [
+            25,
+            36
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S821",
+        "quote": "Mini Bull Terriers typically stand 10–14 inches at the shoulder and weigh 18–28 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S821): 10–14 in = 25.4–35.6 cm → 25–36 cm, both sexes. FCI-Standard N° 359 (S819): 'Height should not exceed 35,5 cm.' (upper limit only); RKC (S820): breeders aimed for dogs 'preferably under 35.5 cms (14ins).'; Wikipedia (S823, tier C): 'usually no smaller than ten inches'.",
+        "alternatives": {
+          "fci_max_cm": 35.5
+        }
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            8.2,
+            12.7
+          ],
+          "female": [
+            8.2,
+            12.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S821",
+        "quote": "Mini Bull Terriers typically stand 10–14 inches at the shoulder and weigh 18–28 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S821, tier B): 18–28 lb = 8.2–12.7 kg, both sexes. The FCI standard (S819) has none: 'There is no weight limit.' ('There should be an impression of substance to size of dog consistent with quality and sex.'). The AKC breed weight chart (S268) row 'Miniature Bull Terrier | 18-28 pounds | 18-28 pounds' was only in a model summary of the page (not verbatim) — agrees, not used as the source. Wikipedia (S823, tier C): 'they tend to range from 20 to 35 lbs.' — background."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific; RKC size 'Small' (S820). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Miniature Bull Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the McMillan et al. 2024 breed median was not reachable on 2026-11-13: the Dogs Trust table (S123) was refused by the fetch tool (not in provenance), the 'shortest and longest' PDF failed at its site, the Nature PDF names the breed only as a Fig. 5 label (no value). Wikipedia (S823, tier C): 'A 2024 UK study found a life expectancy of 12.2 years for the breed' (cites McMillan 2024) → would give senior 110 — tier C, not used alone (Norwich Terrier precedent). Re-check S123 later.",
+        "alternatives": {
+          "wikipedia_mcmillan_12_2_y_senior": 110
+        }
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S820",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S820). Runbook lifespan order: McMillan 2024 → VetCompass median → RKC lower bound → used: 10 years (Norwich Terrier precedent). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "petmd": {
+        "value": "11–13",
+        "unit": "years",
+        "source_id": "S821",
+        "quote": "Miniature Bull Terriers often lead healthy lives, with an average lifespan of 11–13 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S821, tier B, US). Background; the RKC lower bound is used by the runbook order."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S820) → 0.75 × 10 = 7.5 y = 90 months. Alternatives: 110 (Wikipedia's McMillan 12.2 y, tier C), 99 (PetMD lower bound 11 y). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S820"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S820",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S820), runbook first choice → 60 min ('up to N' → N). PetMD (S821) 'they require regular exercise and mental stimulation to prevent boredom' gives no number."
+      },
+      "daily_text": {
+        "value": "regular exercise and mental stimulation to prevent boredom",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Like all dogs, they require regular exercise and mental stimulation to prevent boredom.",
+        "confidence": "high",
+        "notes": "PetMD (S821). Basis of needs_mental_stimulation. PetMD links barking and digging to boredom (paraphrase)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row. PetMD (S821) only 'Avoid late-night feeding to allow for proper digestion.' — not an exercise gap. (The PDSA gap advice of the Bull Terrier, S591, is about another breed — not used.)"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "courageous, full of spirit, fun loving; even temperament, amenable to discipline; obstinate but particularly good with people",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Courageous, full of spirit, with a fun loving attitude.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 359 (S819): 'Of even temperament and amenable to discipline.' 'Although obstinate is particularly good with people.' RKC (S820) tagline 'Courageous, full of spirit, with a fun loving attitude'. AKC (S822): 'These upbeat, mischievous dogs come equipped with terrier fire and fearlessness.'"
+      },
+      "family": {
+        "value": "affectionate, good with children — a friendly family companion",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "they are generally an affectionate breed and good with children, making them a friendly family companion.",
+        "confidence": "medium",
+        "notes": "PetMD (S821, fragment). Basis of family_pet."
+      },
+      "children": {
+        "value": "generally good with children (can be willful)",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "they are generally an affectionate breed and good with children, making them a friendly family companion.",
+        "confidence": "medium",
+        "notes": "PetMD (S821): also 'While generally loyal and good with children, they can be willful.' Explicit statement → children (supervision is always advised in the app); no small_children (no rating)."
+      },
+      "other_pets": {
+        "value": "can get along well with other pets if properly socialised",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Miniature Bull Terriers can also get along well with other pets if properly socialized.",
+        "confidence": "medium",
+        "notes": "PetMD (S821) — conditional ('if properly socialized') → no other_pets chip. No source names a prey drive for this breed (the PDSA 'high prey drive' sentence S591 is the Bull Terrier's page) → no chases_small_pets."
+      },
+      "time_alone": {
+        "value": "will not thrive when left alone for long periods; can become bored and destructive",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "This breed will not thrive in a home where they will be left alone for long periods of time",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment; continues 'as they can become bored and potentially destructive'). Basis of needs_company."
+      },
+      "socialisation": {
+        "value": "needs early socialisation to adapt well to new situations",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "need early socialization to adapt well to new situations.",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment); also 'training and socializing your Miniature Bull Terrier puppy is important.' A need (runbook M5-R17) → proposed_game_parameters.miniature_bull_terrier.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "positive reinforcement with treats and praise; can be willful",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Miniature Bull Terriers benefit from positive reinforcement training using treats and praise.",
+        "confidence": "medium",
+        "notes": "PetMD (S821). FCI (S819): 'Of even temperament and amenable to discipline.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement (PetMD S821 only 'potentially destructive' when left alone — basis of needs_company, not chews_when_bored)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement beyond training with treats (S821) → no food_motivated_weight chip."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S820) — the points of concern were not returned → no welfare chip (Norwich Terrier / Pomeranian precedent), open for David. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice 'DNA test for primary lens luxation (PLL)' and 'Eye testing using the BVA/KC/ISDS Eye Scheme' (S820); the breed club health scheme (heart, kidney) is linked but was not read. Wikipedia (S823, tier C) also names lethal acrodermatitis — tier C, not used.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern not returned",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Particular points of concern for individual breeds may include features not specifically highlighted in the breed standard.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S820, general Breed Watch text) with 'Category 2'. The points were not in the fetched text → no welfare chip; open for David."
+      },
+      "lens_luxation": {
+        "value": "primary lens luxation (PLL) — a serious genetic eye condition",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Primary lens luxation (PLL) is a serious genetic condition in Miniature Bull Terriers",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment). RKC Best Practice 'DNA test for primary lens luxation (PLL)' (S820). Register health key primary_lens_luxation."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Deafness is a significant concern in Miniature Bull Terriers",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment). Register health key deafness."
+      },
+      "heart": {
+        "value": "mitral valve disease — one of the most common heart issues",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Miniature Bull Terriers are prone to heart issues, and mitral valve disease is one of the most common.",
+        "confidence": "medium",
+        "notes": "PetMD (S821). Register health key mitral_valve_disease."
+      },
+      "patella": {
+        "value": "patellar luxation (kneecap dislocation)",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Patellar luxation, a condition where the kneecap dislocates",
+        "confidence": "medium",
+        "notes": "PetMD (S821, fragment). Register health key kneecap_luxation."
+      },
+      "kidney": {
+        "value": "hereditary nephritis (HN) and polycystic kidney disease (PKD)",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Hereditary nephritis (HN) and polycystic kidney disease (PKD) are serious health concerns for Miniature Bull Terriers",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment). Register health key hereditary_nephritis_pkd (new — the existing hereditary_nephritis sentence names the Samoyed disease, kidney_disease_urine_screening claims a urine screening this source does not state)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-13; 79 ranks) lists neither 'Miniature Bull Terrier' nor 'Bull Terrier (Miniature)' ('Bull Terrier' is rank 66 — a different breed, not transferred). Runbook rule: unranked → 1.0 (Havanese / Leonberger precedent)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "positive reinforcement with treats and praise; can be willful",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Miniature Bull Terriers benefit from positive reinforcement training using treats and praise.",
+        "confidence": "medium",
+        "notes": "PetMD (S821) — see behaviour.training."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.miniature_bull_terrier.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strongly built, muscular, well balanced and active small bull terrier with a downfaced, egg-shaped head",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 359 (S819): 'A unique feature is a downfaced, egg-shaped head.' AKC (S822): 'In most every way the Miniature Bull Terrier is a Bull Terrier, only smaller.'"
+      },
+      "colours": {
+        "value": [
+          "white",
+          "brindle",
+          "black brindle",
+          "red",
+          "fawn",
+          "tricolour"
+        ],
+        "unit": "list",
+        "source_id": "S819",
+        "quote": "Black brindle, red, fawn and tricolour acceptable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 359 (S819), colour section as returned: 'Colour: For White, pure white coat.' 'Skin pigmentation and markings on head not to be penalised.' 'For Coloured, colour predominates; all other things being equal, brindle preferable.' 'Black brindle, red, fawn and tricolour acceptable.' 'Blue and liver highly undesirable.' 'Any other colour or combination of colours unacceptable.' RKC (S820): merle puppies not registered since 2011 (paraphrase). Never blue, liver or merle in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): white 0.4 (the first colour of the standard — the portrait default, Bull Terrier precedent), brindle 0.2 (preferred among the coloured), black brindle 0.1, red 0.1, fawn 0.1, tricolour 0.1."
+      },
+      "coat": {
+        "value": "short, flat, even, harsh coat with a fine gloss; skin fitting tightly",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Short, flat, even and harsh to touch with a fine gloss.",
+        "confidence": "high",
+        "notes": "FCI (S819): 'A soft textured undercoat may be present in winter.' RKC key fact 'Coat length: Short' (S820)."
+      },
+      "head": {
+        "value": "downfaced, egg-shaped head; nose black, bent downwards at the tip",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "A unique feature is a downfaced, egg-shaped head.",
+        "confidence": "high",
+        "notes": "FCI (S819): nose 'Should be black. Bent downwards at tip. Nostrils well developed.'"
+      },
+      "eyes": {
+        "value": "narrow, triangular, obliquely placed, black or very dark brown",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Appearing narrow and triangular, obliquely placed, black or as dark brown as possible",
+        "confidence": "high",
+        "notes": "FCI (S819): 'Blue or partly blue undesirable.'"
+      },
+      "ears": {
+        "value": "small, thin, close together, held stiffly erect",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Small, thin and placed close together. Dog should be able to hold them stiffly erect, when they point straight upwards.",
+        "confidence": "high",
+        "notes": "FCI (S819)."
+      },
+      "tail": {
+        "value": "short, set on low, carried horizontally, thick at the root tapering to a fine point",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Short, set on low and carried horizontally. Thick at root, it tapers to a fine point.",
+        "confidence": "high",
+        "notes": "FCI (S819)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S820) and PetMD (S821). RKC key facts reached on 2026-11-13. No PDSA / Woodgreen / Dogs Trust page for the breed.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S820) → small (size class)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S820) → 60 min. Not long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S820). Not 'Flat/ Apartment' → no apartment; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S820). Background."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S820) → brushing 1× a week (runbook »Dog grooming«: 'Once a week' → 1). PetMD (S821) 'about once a week' agrees. Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S820)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S820). Basis of the sheds chip; PetMD brushing 'to manage shedding' (paraphrase) agrees."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S820). The basis of the senior boundary (no McMillan value reachable)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S820). Background only (fact in the register)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S820",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S820)."
+      },
+      "petmd_grooming": {
+        "value": "brushed about once a week",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Mini Bull Terriers just need to be brushed about once a week",
+        "confidence": "high",
+        "notes": "PetMD (S821, fragment; continues: to manage shedding — paraphrase). Agrees with RKC 'Once a week' → 1."
+      },
+      "petmd_bathing": {
+        "value": "bath only when particularly dirty or smelly",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Bathing is only required whenever your dog gets particularly dirty or smelly.",
+        "confidence": "high",
+        "notes": "PetMD (S821). Conditional, no frequency → no bath task (fact only)."
+      },
+      "petmd_ears": {
+        "value": "check the ears regularly; ask the vet how often to clean them",
+        "unit": "—",
+        "source_id": "S821",
+        "quote": "Ask your vet how often you should be cleaning your dog's ears",
+        "confidence": "medium",
+        "notes": "PetMD (S821); also 'Check their ears regularly for dirt or wax buildup.' No frequency → no ear task. Nails and teeth: no statement on the page → no task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -84301,6 +84789,235 @@
         "confidence": "high",
         "notes": "FCI (S812). Not a welfare breed → no `muzzle` trait. Colour weights are ours (unsourced). Natural (undocked) tail — the FCI standard describes both ('Docking previously optional.').",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (first colour of the FCI standard); erect ears, wiry coat with a ruff, natural tail, standard colours only (no white patches)"
+      }
+    },
+    "miniature_bull_terrier": {
+      "_note": "Unattended run M5-R10-109 (2026-11-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S820 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (S820) — provisional until McMillan 2024 is checked (Norwich Terrier precedent). Not in Coren's table → 1.0 (Havanese precedent). Built: brushing 1× a week (RKC 'Once a week', M5-R13), puppy socialisation with the PetMD quote (M5-R17). No care task (bath only when dirty, ears 'ask your vet', no nail / tooth frequency), no meal gap, no heat warning (not flat-faced). One new register health key (hereditary_nephritis_pkd); no new vocabulary key. RKC Breed Watch Category 2 without points → no welfare chip; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S820",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S820) → rule 'up to N' → 60. PetMD (S821) gives no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S820 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S820",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S820) — no McMillan 2024 / VetCompass median reachable. Alternatives: 110 (Wikipedia S823, tier C, McMillan 12.2 y), 99 (PetMD S821 lower bound 11 y), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S820"
+        ],
+        "alternatives": {
+          "senior_wikipedia_mcmillan_12_2_y": 110,
+          "senior_petmd_11_y": 99,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S820; provisional until McMillan 2024 is checked)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's table (S35, checked 2026-11-13; 'Bull Terrier' rank 66 is a different breed) → unranked → 1.0 (Havanese precedent). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S820",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "miniature_bull_terrier.suitability.rkc_grooming. RKC 'Once a week' → 1 (runbook »Dog grooming«); PetMD (S821) 'brushed about once a week' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S821",
+            "quote": "Mini Bull Terriers just need to be brushed about once a week",
+            "notes": "PetMD — agrees."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«, PetMD »about once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S821",
+        "quote": "need early socialization to adapt well to new situations.",
+        "confidence": "high",
+        "notes": "miniature_bull_terrier.behaviour.socialisation (PetMD S821, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S821)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-109); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.family"
+            ],
+            "quote": "S821 'they are generally an affectionate breed and good with children, making them a friendly family companion.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.children"
+            ],
+            "quote": "S821 'they are generally an affectionate breed and good with children, making them a friendly family companion.'",
+            "note": "Supervision is always advised in the app; no small_children."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.exercise.daily_text"
+            ],
+            "quote": "S821 'Like all dogs, they require regular exercise and mental stimulation to prevent boredom.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S821"
+            ],
+            "refs": [
+              "miniature_bull_terrier.behaviour.time_alone"
+            ],
+            "quote": "S821 'This breed will not thrive in a home where they will be left alone for long periods of time'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S820"
+            ],
+            "refs": [
+              "miniature_bull_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S820 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC 'Size of home: Small house' (S820), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S820).",
+          "small_children": "No rating without a caveat (PetMD: can be willful).",
+          "other_pets": "PetMD 'if properly socialized' (S821) — conditional → no chip.",
+          "chases_small_pets": "No source names a prey drive for this breed (the PDSA 'high prey drive' sentence S591 is the Bull Terrier's) → no chip by the rule.",
+          "chews_when_bored": "No chewing statement; 'potentially destructive' when left alone is the basis of needs_company.",
+          "frequent_grooming": "Once a week (S820).",
+          "long_daily_exercise": "Up to 1 hour a day (S820).",
+          "shorter_lifespan": "RKC 'Over 10 years'; PetMD 11–13 y.",
+          "welfare_chip": "RKC Breed Watch Category 2 without the points in the fetched text → no chip (Norwich Terrier / Pomeranian precedent); open for David.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider needs_mental_stimulation, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI S819 'downfaced, egg-shaped head', nose 'Nostrils well developed.'); RKC Breed Watch Category 2 without the points (S820) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Miniature Bull Terrier, pure white (default): small, strongly built, muscular, well balanced and active bull terrier; downfaced, egg-shaped head with a black nose bent downwards at the tip; narrow, triangular, obliquely placed very dark eyes; small, thin ears held stiffly erect; short, flat, glossy harsh coat; short, low-set tail carried horizontally, tapering to a fine point; only white, brindle, black brindle, red, fawn or tricolour — never blue, liver or merle",
+        "unit": "—",
+        "source_id": "S819",
+        "quote": "Short, flat, even and harsh to touch with a fine gloss.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 359 (S819). Not a welfare breed → no `muzzle` trait. Colour weights are ours (unsourced). White as the portrait default: first colour of the standard (Bull Terrier precedent).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white is the portrait default; standard colours only (white, brindle, black brindle, red, fawn, tricolour), never blue, liver or merle"
       }
     }
   }

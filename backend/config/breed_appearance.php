@@ -806,6 +806,12 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Miniature Bull Terrier (M5-R10-109, docs/research/dog-data miniature_bull_terrier.appearance): white; coloured — brindle
+| preferable, black brindle, red, fawn and tricolour acceptable; blue and liver highly undesirable (FCI-Standard N° 359,
+| S819; never merle — RKC S820). Downfaced, egg-shaped head, small thin erect ears, narrow triangular dark eyes, short
+| low-set tail; "Height should not exceed 35,5 cm." Not flat-faced; RKC Breed Watch Category 2 without points (S820). Pure
+| white first with the highest weight (the portrait default, Bull Terrier precedent); weights unsourced → `verified => false`.
+|
 | Norwich Terrier (M5-R10-108, docs/research/dog-data norwich_terrier.appearance): "All shades of red, wheaten, black and
 | tan or grizzle." (FCI-Standard N° 72, S812; any other colour unacceptable, no white patches in the game); hard, wiry,
 | straight coat with a ruff framing the face, erect ears with pointed tips, wedge-shaped muzzle, natural tail of moderate
@@ -4711,6 +4717,43 @@ return [
             'ear_carriage' => ['erect, medium-sized ears with pointed tips, set well apart'],
             'eye_color' => ['relatively small, oval, dark, bright and keen eyes'],
             'tail' => ['natural tail of moderate length, set on high and carried erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-109 (docs/research/dog-data/data.json miniature_bull_terrier.appearance; runbook rules 2026-10-10: standard colours
+    // only — white, brindle, black brindle, red, fawn, tricolour (FCI S819), never blue, liver or merle).
+    'miniature_bull_terrier' => [
+        'display_name' => 'Miniature Bull Terrier',
+        // Colour frequencies are in no source (miniature_bull_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 359 Miniature Bull Terrier (S819, https://www.fci.be/Nomenclature/Standards/359g03-en.pdf), RKC Breeds A–Z (S820) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S820 "Size: Small"; S819 "Height should not exceed 35,5 cm."',
+            'build' => 'S819 "Strongly built, muscular, well balanced and active with a keen, determined and intelligent expression."',
+            'coat_length' => 'S819 "Short, flat, even and harsh to touch with a fine gloss."',
+            'coat_color' => 'S819 "For Coloured, colour predominates; all other things being equal, brindle preferable." "Black brindle, red, fawn and tricolour acceptable." "Blue and liver highly undesirable." (weights unsourced)',
+            'head' => 'S819 "A unique feature is a downfaced, egg-shaped head."; nose "Should be black. Bent downwards at tip. Nostrils well developed."',
+            'ear_carriage' => 'S819 "Small, thin and placed close together. Dog should be able to hold them stiffly erect, when they point straight upwards."',
+            'eye_color' => 'S819 "Appearing narrow and triangular, obliquely placed, black or as dark brown as possible"',
+            'tail' => 'S819 "Short, set on low and carried horizontally. Thick at root, it tapers to a fine point."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, strongly built, muscular, well balanced and active bull terrier', 'weight' => 3], 'compact, muscular small terrier with plenty of substance for its size'],
+            'coat_length' => ['short, flat, harsh coat with a fine gloss and tight-fitting skin'],
+            // Standard colours only (S819, never blue, liver or merle); white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'pure white', 'weight' => 40],
+                ['value' => 'brindle, the colour predominating over any white markings', 'weight' => 20],
+                ['value' => 'black brindle, the colour predominating over any white markings', 'weight' => 10],
+                ['value' => 'red, the colour predominating over any white markings', 'weight' => 10],
+                ['value' => 'fawn, the colour predominating over any white markings', 'weight' => 10],
+                ['value' => 'tricolour (black, tan and white), the colour predominating', 'weight' => 10],
+            ],
+            'head' => ['downfaced, egg-shaped head with no stop, the profile curving down to a black nose bent downwards at the tip'],
+            'ear_carriage' => ['small, thin ears set close together and held stiffly erect'],
+            'eye_color' => ['small, narrow, triangular, obliquely set very dark eyes'],
+            'tail' => ['short, low-set tail carried horizontally, thick at the root and tapering to a fine point'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
