@@ -56551,18 +56551,18 @@
       "coren_rank": {
         "value": null,
         "unit": "rank (working/obedience intelligence)",
-        "source_id": null,
+        "source_id": "S35",
         "quote": null,
         "confidence": "medium",
-        "notes": "Not in Coren's table (S35, read 2026-11-13: neither 'Miniature Bull Terrier' nor 'Bull Terrier (Miniature)' is listed; 'Bull Terrier' is rank 66, a different breed — not transferred) → unranked (Havanese precedent)."
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-13; 79 ranks) lists neither 'Miniature Bull Terrier' nor 'Bull Terrier (Miniature)' ('Bull Terrier' is rank 66 — a different breed, not transferred). Runbook rule: unranked → 1.0 (Havanese / Leonberger precedent)."
       },
       "coren_tier": {
         "value": null,
         "unit": "—",
-        "source_id": null,
+        "source_id": "S35",
         "quote": null,
-        "confidence": "medium",
-        "notes": "Unranked → no tier."
+        "confidence": "low",
+        "notes": "Unranked (S35)."
       },
       "training_notes": {
         "value": "positive reinforcement with treats and praise; can be willful",
@@ -84886,7 +84886,7 @@
           "S35"
         ],
         "alternatives": [],
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
       },
       "care_rates": {
         "value": {
