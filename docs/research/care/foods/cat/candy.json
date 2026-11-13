@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Candy and sweets",
-    "sl": "Bonboni in sladkarije"
+    "sl": "Bonboni in sladkarije",
+    "cs": "Bonbony a sladkosti"
   },
   "question": {
     "en": "Can cats eat candy?",
-    "sl": "Ali lahko mačke jedo sladkarije?"
+    "sl": "Ali lahko mačke jedo sladkarije?",
+    "cs": "Mohou kočky jíst bonbony?"
   },
   "url_slug": {
     "en": "candy",
-    "sl": "sladkarije"
+    "sl": "sladkarije",
+    "cs": "bonbony"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, candy is not for cats and is not safe for them. Many sweets contain chocolate or raisins, which are harmful to cats, and swallowed wrappers can upset or block the gut. Cats can't taste sweetness anyway, so sweets give them nothing good.",
-    "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega."
+    "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega.",
+    "cs": "Ne, bonbony kočkám nepatří a nejsou pro ně bezpečné. Mnoho sladkostí obsahuje čokoládu nebo rozinky, které kočkám škodí, a spolknuté obaly mohou podráždit střeva nebo je ucpat. Kočky navíc sladkou chuť stejně nevnímají, takže jim sladkosti nic dobrého nepřinesou."
   },
   "why": {
     "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
-    "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven."
+    "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven.",
+    "cs": "Pet Poison Helpline uvádí, že kočky by bonbony jíst neměly a že pro ně nejsou bezpečné: čokoláda je pro kočky toxická a rozinky mohou u koček způsobit selhání ledvin. VCA uvádí, že bonbony kočkám nepatří, a upozorňuje, že obaly od bonbonů mohou způsobit podráždění střev a ucpání trávicího traktu, a Blue Cross, že mnoho sladkých pamlsků je pro kočky jedovatých. Samotný cukr toxický není, ale pro kočky je nezdravý. Protože se tato nebezpečí v bonbonech skrývají tak často, používáme přísnější úroveň."
   },
   "signs": {
     "en": [
@@ -30,36 +35,46 @@
     "sl": [
       "Driska ali želodčne težave",
       "Črevesne težave po zaužitem ovitku"
+    ],
+    "cs": [
+      "Průjem nebo podrážděný žaludek",
+      "Podráždění střev po spolknutí obalu"
     ]
   },
   "what_to_do": {
     "en": "If your cat got into candy or a wrapper, contact your vet or a pet poison helpline for guidance. Call about any chocolate, even a little. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+    "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
+    "cs": "Pokud se kočka dostala k bonbonům nebo k obalu, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Volejte při jakékoli čokoládě, i malé. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
     "en": "Sweets are for people, not cats. Some can make kitty poorly, so keep your sweets and wrappers tidied away.",
-    "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi."
+    "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi.",
+    "cs": "Sladkosti jsou pro lidi, ne pro kočky. Po některých může být kočičce špatně, takže bonbony i obaly pěkně schovávej."
   },
   "faq": [
     {
       "q": {
         "en": "Is a lick of a sweet an emergency?",
-        "sl": "Ali je oblizek sladkarije nujen primer?"
+        "sl": "Ali je oblizek sladkarije nujen primer?",
+        "cs": "Je pohotovost, když kočka olízne bonbon?"
       },
       "a": {
         "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
-        "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje."
+        "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje.",
+        "cs": "Obvykle ne. Cats Protection uvádí, že pokud kočka náhodou olízne sladký pamlsek, není třeba spěchat k veterináři. U čokolády je to jiné: volejte při jakékoli čokoládě, kterou kočka snědla."
       }
     },
     {
       "q": {
         "en": "Why is my cat interested in peppermint candy?",
-        "sl": "Zakaj mačko zanimajo mentolovi bonboni?"
+        "sl": "Zakaj mačko zanimajo mentolovi bonboni?",
+        "cs": "Proč kočku zajímají mátové bonbony?"
       },
       "a": {
         "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
-        "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega."
+        "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega.",
+        "cs": "Nejde o cukr. Máta obsahuje vonné látky podobné těm v šantě kočičí, které mohou kočky přitahovat. Silice z máty jsou pro kočky toxické, proto sladkosti uchovávejte mimo dosah kočky."
       }
     }
   ],
@@ -159,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "746c6fb79d3d9141bc73ca90fd71ee053807d63999d83babe9b7dc8a188d78a3"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e6cb0d30b6394ef373b917a4229a7df4bb5d5f70b008cb0ebab952fd65f3d543"
     }
   }
 }

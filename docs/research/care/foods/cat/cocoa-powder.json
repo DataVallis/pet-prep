@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Cocoa powder",
-    "sl": "Kakav v prahu"
+    "sl": "Kakav v prahu",
+    "cs": "Kakaový prášek"
   },
   "question": {
     "en": "Can cats eat cocoa powder?",
-    "sl": "Ali lahko mačke jedo kakav v prahu?"
+    "sl": "Ali lahko mačke jedo kakav v prahu?",
+    "cs": "Mohou kočky jíst kakaový prášek?"
   },
   "url_slug": {
     "en": "cocoa-powder",
-    "sl": "kakav-v-prahu"
+    "sl": "kakav-v-prahu",
+    "cs": "kakaovy-prasek"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Cocoa powder is especially toxic to cats because it contains an extremely high concentration of cocoa solids, which carry theobromine. If your cat eats any, keep the packaging and call your vet immediately.",
-    "sl": "Ne. Kakav v prahu je za mačke še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi, ki vsebuje teobromin. Če ga mačka poje, shranite embalažo in takoj pokličite veterinarja."
+    "sl": "Ne. Kakav v prahu je za mačke še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi, ki vsebuje teobromin. Če ga mačka poje, shranite embalažo in takoj pokličite veterinarja.",
+    "cs": "Ne. Kakaový prášek je pro kočky obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny, která obsahuje theobromin. Pokud kočka snědla byť jen trochu, uschovejte obal a ihned zavolejte veterináři."
   },
   "why": {
     "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
-    "sl": "PDSA pojasnjuje, da čokolada vsebuje teobromin, ki je za ljudi popolnoma varen, za mačke pa strupen. Temnejša kot je čokolada, več suhe kakavove snovi in teobromina vsebuje in bolj je strupena. Kakav v prahu je še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi."
+    "sl": "PDSA pojasnjuje, da čokolada vsebuje teobromin, ki je za ljudi popolnoma varen, za mačke pa strupen. Temnejša kot je čokolada, več suhe kakavove snovi in teobromina vsebuje in bolj je strupena. Kakav v prahu je še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi.",
+    "cs": "PDSA vysvětluje, že čokoláda obsahuje theobromin, který je pro lidi naprosto bezpečný, ale pro kočky toxický. Čím tmavší čokoláda, tím více kakaové sušiny a theobrominu obsahuje a tím je toxičtější. Kakaový prášek je obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny."
   },
   "signs": {
     "en": [
@@ -44,26 +49,41 @@
       "Vročina",
       "Pospešen srčni utrip",
       "Krči"
+    ],
+    "cs": [
+      "Vzrušení, neklid nebo hyperaktivita",
+      "Zvracení nebo průjem",
+      "Zvýšená žízeň a častější močení",
+      "Bolest břicha",
+      "Rychlé dýchání nebo funění",
+      "Třes",
+      "Horečka",
+      "Zrychlený tep",
+      "Záchvaty"
     ]
   },
   "what_to_do": {
     "en": "Keep the packaging and call your vet immediately. Don't wait for symptoms to appear, and don't try to make your cat sick at home.",
-    "sl": "Shranite embalažo in takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje."
+    "sl": "Shranite embalažo in takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje.",
+    "cs": "Uschovejte obal a ihned zavolejte veterináři. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
     "en": "Cocoa powder is for people's baking, not for cats. If kitty gets into it, tell a grown-up right away so they can call the vet.",
-    "sl": "Kakav v prahu je za peko, ne za muce. Če muca seže po njem, takoj povej odraslemu, da lahko pokliče veterinarja."
+    "sl": "Kakav v prahu je za peko, ne za muce. Če muca seže po njem, takoj povej odraslemu, da lahko pokliče veterinarja.",
+    "cs": "Kakaový prášek je na pečení pro lidi, ne pro kočky. Kdyby se k němu kočička dostala, hned to řekni dospělému, ať zavolá veterináře."
   },
   "faq": [
     {
       "q": {
         "en": "Is cocoa shell garden mulch a risk for cats?",
-        "sl": "Ali je zastirka iz kakavovih lupin na vrtu nevarna za mačke?"
+        "sl": "Ali je zastirka iz kakavovih lupin na vrtu nevarna za mačke?",
+        "cs": "Představuje zahradní mulč z kakaových slupek pro kočky riziko?"
       },
       "a": {
         "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
-        "sl": "PDSA svetuje, da se izogibate vrtnim zastirkam, ki vsebujejo kakavove lupine."
+        "sl": "PDSA svetuje, da se izogibate vrtnim zastirkam, ki vsebujejo kakavove lupine.",
+        "cs": "PDSA radí vyhýbat se zahradnímu mulči, který obsahuje kakaové slupky."
       }
     }
   ],
@@ -154,6 +174,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "66e075f31189fa7e355e4c0359f06db7e8883f7d6ead58c1f8f22556fbd6315d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d4a7a67a37b3245cd8d98358f788cbb9f7ec6ecff0d02f7ba808be7bcb3d63b3"
     }
   }
 }

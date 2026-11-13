@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Pizza",
-    "sl": "Pica"
+    "sl": "Pica",
+    "cs": "Pizza"
   },
   "question": {
     "en": "Can cats eat pizza?",
-    "sl": "Ali lahko mačke jedo pico?"
+    "sl": "Ali lahko mačke jedo pico?",
+    "cs": "Mohou kočky jíst pizzu?"
   },
   "url_slug": {
     "en": "pizza",
-    "sl": "pica"
+    "sl": "pica",
+    "cs": "pizza"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, pizza is not a good idea for cats. VCA vets warn that leftovers such as pizza can cause stomach upset in cats and advise against sharing fatty foods with your cat. Offer a cat treat instead.",
-    "sl": "Ne, pica za mačke ni dobra izbira. Veterinarji VCA opozarjajo, da lahko ostanki hrane, kot je pica, mačkam povzročijo prebavne težave, in svetujejo, da mastne hrane z mačko ne delimo. Raje ji ponudite priboljšek za mačke."
+    "sl": "Ne, pica za mačke ni dobra izbira. Veterinarji VCA opozarjajo, da lahko ostanki hrane, kot je pica, mačkam povzročijo prebavne težave, in svetujejo, da mastne hrane z mačko ne delimo. Raje ji ponudite priboljšek za mačke.",
+    "cs": "Ne, pizza pro kočky není dobrý nápad. Veterináři z VCA upozorňují, že zbytky jídla, například pizza, mohou u koček způsobit podráždění žaludku, a nedoporučují dělit se s kočkou o tučná jídla. Nabídněte jí raději pamlsek pro kočky."
   },
   "why": {
     "en": "VCA Animal Hospitals' advice for cats lists pizza among plate leftovers that can cause stomach upset, says not to share spicy or fatty foods with your cat, and notes that many fan-favourite snacks can cause stomach upset and even pancreatitis in cats. Cats Protection says it generally wouldn't recommend feeding your cat food meant for humans unless your vet has advised it.",
-    "sl": "VCA Animal Hospitals v nasvetih za mačke pico navaja med ostanki s krožnika, ki lahko povzročijo prebavne težave, svetuje, da pikantne ali mastne hrane z mačko ne delimo, in opozarja, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke. Cats Protection navaja, da na splošno ne priporoča hranjenja mačk s hrano za ljudi, razen če to svetuje veterinar."
+    "sl": "VCA Animal Hospitals v nasvetih za mačke pico navaja med ostanki s krožnika, ki lahko povzročijo prebavne težave, svetuje, da pikantne ali mastne hrane z mačko ne delimo, in opozarja, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke. Cats Protection navaja, da na splošno ne priporoča hranjenja mačk s hrano za ljudi, razen če to svetuje veterinar.",
+    "cs": "Rady VCA Animal Hospitals pro kočky uvádějí pizzu mezi zbytky z talíře, které mohou způsobit podráždění žaludku, radí nedávat kočce kořeněná ani tučná jídla a poznamenávají, že mnoho oblíbených pochutin může u koček způsobit podráždění žaludku a dokonce zánět slinivky břišní. Cats Protection obecně nedoporučuje krmit kočku jídlem určeným pro lidi, pokud to neporadil veterinář."
   },
   "signs": {
     "en": [
@@ -28,26 +33,33 @@
     ],
     "sl": [
       "Prebavne težave"
+    ],
+    "cs": [
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat has eaten pizza, contact your vet for advice. Don't wait for symptoms to appear.",
-    "sl": "Če je mačka pojedla pico, se za nasvet obrnite na veterinarja. Ne čakajte, da se pokažejo znaki."
+    "sl": "Če je mačka pojedla pico, se za nasvet obrnite na veterinarja. Ne čakajte, da se pokažejo znaki.",
+    "cs": "Pokud kočka snědla pizzu, obraťte se pro radu na veterináře. Nečekejte, až se objeví příznaky."
   },
   "serving": null,
   "child": {
     "en": "Pizza is people food. It can give a cat a sore tummy, so offer kitty her own cat treat instead.",
-    "sl": "Pica je hrana za ljudi. Muco lahko boli trebušček, zato ji raje ponudi njen priboljšek za mačke."
+    "sl": "Pica je hrana za ljudi. Muco lahko boli trebušček, zato ji raje ponudi njen priboljšek za mačke.",
+    "cs": "Pizza je jídlo pro lidi. Po ní může kočičku bolet bříško, nabídni jí proto raději pamlsek pro kočky."
   },
   "faq": [
     {
       "q": {
         "en": "Why shouldn't cats share snacks from the party table?",
-        "sl": "Zakaj mačke ne smejo jesti prigrizkov z zabave?"
+        "sl": "Zakaj mačke ne smejo jesti prigrizkov z zabave?",
+        "cs": "Proč by kočka neměla na oslavě dostávat pochutiny ze stolu?"
       },
       "a": {
         "en": "VCA vets say many fan-favourite snacks can cause stomach upset and even pancreatitis in cats, and that leftovers such as creamy dips, potato chips and pizza can cause stomach upset.",
-        "sl": "Veterinarji VCA navajajo, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke ter da lahko prebavne težave povzročijo tudi ostanki, kot so kremasti namazi, čips in pica."
+        "sl": "Veterinarji VCA navajajo, da lahko številni priljubljeni prigrizki mačkam povzročijo prebavne težave in celo vnetje trebušne slinavke ter da lahko prebavne težave povzročijo tudi ostanki, kot so kremasti namazi, čips in pica.",
+        "cs": "Veterináři z VCA uvádějí, že mnoho oblíbených pochutin může u koček způsobit podráždění žaludku a dokonce zánět slinivky břišní a že zbytky, například smetanové dipy, bramborové lupínky a pizza, mohou způsobit podráždění žaludku."
       }
     }
   ],
@@ -96,6 +108,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "42caf84d3841913a77e0aefae1d9566df28469b00584ddbb23343f23bd9b169c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fa3971cac11b1770b7b2081ceac968d2946201ce357da5366aec679d1eca82e9"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Ginger",
-    "sl": "Ingver"
+    "sl": "Ingver",
+    "cs": "Zázvor"
   },
   "question": {
     "en": "Can cats eat ginger?",
-    "sl": "Ali lahko mačke jedo ingver?"
+    "sl": "Ali lahko mačke jedo ingver?",
+    "cs": "Mohou kočky jíst zázvor?"
   },
   "url_slug": {
     "en": "ginger",
-    "sl": "ingver"
+    "sl": "ingver",
+    "cs": "zazvor"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your cat ginger unless your vet suggests it. Ginger root is used as an herbal supplement in cats, mainly against nausea and vomiting, but natural does not mean safe: it can cause a mild stomach upset.",
-    "sl": "Mački ingverja raje ne dajajte, razen če vam to svetuje veterinar. Ingverjeva korenina se pri mačkah uporablja kot zeliščni dodatek, predvsem proti slabosti in bruhanju, vendar naravno ne pomeni varno: lahko povzroči blage prebavne težave."
+    "sl": "Mački ingverja raje ne dajajte, razen če vam to svetuje veterinar. Ingverjeva korenina se pri mačkah uporablja kot zeliščni dodatek, predvsem proti slabosti in bruhanju, vendar naravno ne pomeni varno: lahko povzroči blage prebavne težave.",
+    "cs": "Zázvor kočce raději nedávejte, pokud to nedoporučí veterinář. Zázvorový kořen se u koček používá jako bylinný doplněk, hlavně proti nevolnosti a zvracení, ale přírodní neznamená bezpečné: může způsobit mírné podráždění žaludku."
   },
   "why": {
     "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
-    "sl": "VCA Animal Hospitals navaja, da se ingverjeva korenina v tradicionalni kitajski in zahodni zeliščni medicini uporablja pri mačkah, psih in drugih živalih, najpogosteje kot dodatek proti slabosti in bruhanju. Ista stran opozarja, da izdelek ni varen samo zato, ker je naraven, da so vse zdravilne rastline lahko strupene, če jih uporabljamo nepravilno ali v velikih odmerkih, in da ingverja ne smemo dajati živalim z znanimi motnjami strjevanja krvi. Najboljši vir informacij o takih izdelkih je veterinar. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+    "sl": "VCA Animal Hospitals navaja, da se ingverjeva korenina v tradicionalni kitajski in zahodni zeliščni medicini uporablja pri mačkah, psih in drugih živalih, najpogosteje kot dodatek proti slabosti in bruhanju. Ista stran opozarja, da izdelek ni varen samo zato, ker je naraven, da so vse zdravilne rastline lahko strupene, če jih uporabljamo nepravilno ali v velikih odmerkih, in da ingverja ne smemo dajati živalim z znanimi motnjami strjevanja krvi. Najboljši vir informacij o takih izdelkih je veterinar. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
+    "cs": "VCA Animal Hospitals uvádějí, že zázvorový kořen se v tradiční čínské medicíně i v západní bylinné medicíně používá u koček, psů a dalších zvířat, nejčastěji jako doplněk proti nevolnosti a zvracení. Na téže stránce varují, že přírodní původ výrobku ještě neznamená, že je bezpečný, že všechny léčivé rostliny mohou být při nesprávném použití nebo ve vysokých dávkách potenciálně toxické a že zvířatům se známými poruchami krevní srážlivosti by se zázvor podávat neměl. Nejlepším zdrojem informací o takových přípravcích je váš veterinář. Kočky nepotřebují nic jiného než kompletní stravu."
   },
   "signs": {
     "en": [
@@ -34,26 +39,36 @@
       "Bruhanje",
       "Blago draženje kože",
       "Znaki alergijske reakcije: nepravilno dihanje, izpuščaj, vročina ali oteklina okoli obraza"
+    ],
+    "cs": [
+      "Mírné podráždění žaludku",
+      "Zvracení",
+      "Mírné podráždění kůže",
+      "Příznaky alergické reakce: nepravidelné dýchání, vyrážka, horečka nebo otok v obličeji"
     ]
   },
   "what_to_do": {
     "en": "If your cat nibbled a little ginger, watch for vomiting or an upset stomach. If you see signs of an allergic reaction, such as irregular breathing, a rash or a swollen face, contact your vet immediately. Don't give ginger as a remedy without asking your vet first.",
-    "sl": "Če je mačka pogrizla malo ingverja, bodite pozorni na bruhanje ali prebavne težave. Če opazite znake alergijske reakcije, na primer nepravilno dihanje, izpuščaj ali otekel obraz, takoj pokličite veterinarja. Ingverja ne dajajte kot zdravilo, ne da bi se prej posvetovali z veterinarjem."
+    "sl": "Če je mačka pogrizla malo ingverja, bodite pozorni na bruhanje ali prebavne težave. Če opazite znake alergijske reakcije, na primer nepravilno dihanje, izpuščaj ali otekel obraz, takoj pokličite veterinarja. Ingverja ne dajajte kot zdravilo, ne da bi se prej posvetovali z veterinarjem.",
+    "cs": "Pokud kočka ochutnala trochu zázvoru, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud zaznamenáte příznaky alergické reakce, například nepravidelné dýchání, vyrážku nebo oteklý obličej, okamžitě se obraťte na veterináře. Zázvor jako lék nepodávejte, aniž byste se předem zeptali veterináře."
   },
   "serving": null,
   "child": {
     "en": "Ginger is a root for people's cooking. Cats don't need it, so leave it for the grown-ups and the vet to decide.",
-    "sl": "Ingver je korenina, s katero kuhajo ljudje. Muce ga ne potrebujejo, zato naj o njem odločajo odrasli in veterinar."
+    "sl": "Ingver je korenina, s katero kuhajo ljudje. Muce ga ne potrebujejo, zato naj o njem odločajo odrasli in veterinar.",
+    "cs": "Zázvor je kořen do jídel pro lidi. Kočky ho nepotřebují, takže ať o něm rozhodnou dospělí a veterinář."
   },
   "faq": [
     {
       "q": {
         "en": "Can ginger help my cat with nausea?",
-        "sl": "Ali lahko ingver mački pomaga pri slabosti?"
+        "sl": "Ali lahko ingver mački pomaga pri slabosti?",
+        "cs": "Může zázvor kočce pomoci při nevolnosti?"
       },
       "a": {
         "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
-        "sl": "Ingver se pri živalih uporablja kot dodatek proti slabosti in bruhanju, vendar vam le veterinar lahko pove, ali je varen za vašo mačko. Zdravilne rastline so lahko strupene, če jih uporabljamo nepravilno."
+        "sl": "Ingver se pri živalih uporablja kot dodatek proti slabosti in bruhanju, vendar vam le veterinar lahko pove, ali je varen za vašo mačko. Zdravilne rastline so lahko strupene, če jih uporabljamo nepravilno.",
+        "cs": "Zázvor se u zvířat používá jako doplněk proti nevolnosti a zvracení, ale jen veterinář vám řekne, zda je pro vaši kočku bezpečný. Léčivé rostliny mohou být při nesprávném použití toxické."
       }
     }
   ],
@@ -124,6 +139,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "53c5fbfdfadd7df0f08d191be6b99a7847f3453147212b2367be8a40842be6c5"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3272f33f489bb803916b99556cf8c39742748145e8f05c4a07a4205497d1629d"
     }
   }
 }

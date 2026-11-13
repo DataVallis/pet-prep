@@ -3,67 +3,81 @@
   "species": "dog",
   "name": {
     "en": "Bread",
-    "sl": "Kruh"
+    "sl": "Kruh",
+    "cs": "Chléb"
   },
   "question": {
     "en": "Can dogs eat bread?",
-    "sl": "Ali lahko psi jedo kruh?"
+    "sl": "Ali lahko psi jedo kruh?",
+    "cs": "Mohou psi jíst chléb?"
   },
   "url_slug": {
     "en": "bread",
-    "sl": "kruh"
+    "sl": "kruh",
+    "cs": "chleb"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Plain, fully baked white or wheat bread is generally safe for dogs without a wheat allergy, but it offers no real benefit and is high in calories. Never give raisin bread, garlic bread or raw dough.",
-    "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa."
+    "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa.",
+    "cs": "Ano, v malém množství. Obyčejný, dobře upečený bílý nebo pšeničný chléb je pro psy bez alergie na pšenici obvykle bezpečný, ale nemá pro ně žádný skutečný přínos a je kalorický. Nikdy nedávejte chléb s rozinkami, česnekový chléb ani syrové těsto."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
-    "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol."
+    "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol.",
+    "cs": "Chléb zasytí, ale neobsahuje žádné živiny, které by pes nedostával už z krmiva, a je plný sacharidů a kalorií, takže příliš velké množství může vést k obezitě. Skutečným nebezpečím jsou přísady: rozinky jsou vysoce jedovaté a v pečivu se často vyskytují, česnekový chléb může způsobit bolest břicha, zvracení, průjem, slabost a zhroucení a xylitol, sladidlo v některém pečivu, je pro psy jedovatý. Syrové kvasnicové těsto v žaludku dál kyne a uvolňuje alkohol."
   },
   "signs": null,
   "what_to_do": {
     "en": "Plain bread usually doesn't upset a dog's stomach. If you give bread or baked goods regularly, check the ingredients. If your dog eats raw bread dough, call your vet straight away; the same goes for bread with raisins or garlic.",
-    "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom."
+    "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom.",
+    "cs": "Obyčejný chléb psovi většinou žaludek nerozhodí. Pokud psovi dáváte chléb nebo pečivo pravidelně, kontrolujte složení. Pokud pes snědl syrové chlebové těsto, zavolejte ihned veterináři; stejně postupujte u chleba s rozinkami nebo česnekem."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
-    "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse."
+    "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse.",
+    "cs": "Jen malinké kousky obyčejného, dobře upečeného bílého nebo pšeničného chleba, jen občas. Bez rozinek, česneku, xylitolu a dalších přísad, které jsou pro psy jedovaté."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
-    "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega."
+    "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega.",
+    "cs": "Pes může dostat malinký kousek obyčejného chleba. Rozinkový a česnekový chléb pro psy není, takže se nejdřív zeptej dospělého."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat garlic bread?",
-        "sl": "Ali lahko psi jedo česnov kruh?"
+        "sl": "Ali lahko psi jedo česnov kruh?",
+        "cs": "Mohou psi jíst česnekový chléb?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
-        "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps."
+        "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps.",
+        "cs": "Ne. Česnekový chléb může způsobit vážné potíže, jako je bolest břicha, zvracení, průjem, slabost a zhroucení."
       }
     },
     {
       "q": {
         "en": "Is bread good for a dog's upset stomach?",
-        "sl": "Ali kruh pomaga psu pri razdraženem želodcu?"
+        "sl": "Ali kruh pomaga psu pri razdraženem želodcu?",
+        "cs": "Pomůže chléb psovi, když má podrážděný žaludek?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
-        "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja."
+        "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja.",
+        "cs": "Lepší volbou je šetřící dieta z rýže a vařeného kuřecího masa, a ještě lepší je zavolat veterináři a poradit se."
       }
     },
     {
       "q": {
         "en": "What if my dog eats raw bread dough?",
-        "sl": "Kaj, če pes poje surovo testo za kruh?"
+        "sl": "Kaj, če pes poje surovo testo za kruh?",
+        "cs": "Co když pes snědl syrové chlebové těsto?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
-        "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola."
+        "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola.",
+        "cs": "Zavolejte ihned veterináři. Kvasnice nechávají těsto kynout, takže se žaludek roztahuje a do krve se uvolňuje jedovaté množství alkoholu."
       }
     }
   ],
@@ -196,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "10cd36a76aa0194957d0a7857de5d945afe24bff1bf25978826c6111f94d2d12"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8423d13db9732ce60b12c4463fcd41eb0ee67b773c1617ce0fde5fa78bd7d001"
     }
   }
 }

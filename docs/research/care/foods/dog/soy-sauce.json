@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Soy sauce",
-    "sl": "Sojina omaka"
+    "sl": "Sojina omaka",
+    "cs": "Sójová omáčka"
   },
   "question": {
     "en": "Can dogs have soy sauce?",
-    "sl": "Ali lahko psi zaužijejo sojino omako?"
+    "sl": "Ali lahko psi zaužijejo sojino omako?",
+    "cs": "Mohou psi mít sójovou omáčku?"
   },
   "url_slug": {
     "en": "soy-sauce",
-    "sl": "sojina-omaka"
+    "sl": "sojina-omaka",
+    "cs": "sojova-omacka"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, don't give your dog soy sauce. Dogs can get salt poisoning from eating too much table salt or soy sauce, and edamame seasoned with soy sauce isn't good for dogs either.",
-    "sl": "Ne, psu ne dajajte sojine omake. Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake, tudi edamame, začinjen s sojino omako, pa za pse ni dober."
+    "sl": "Ne, psu ne dajajte sojine omake. Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake, tudi edamame, začinjen s sojino omako, pa za pse ni dober.",
+    "cs": "Ne, psovi sójovou omáčku nedávejte. Psi se mohou otrávit solí, když sní příliš mnoho kuchyňské soli nebo sójové omáčky, a ani edamame ochucené sójovou omáčkou není pro psy vhodné."
   },
   "why": {
     "en": "Dogs can suffer from salt poisoning if they eat excess amounts of table salt or soy sauce. Dogs cope with salt better when they can drink plenty of fresh water; without it the risk is higher. Too many salty foods are especially bad for dogs with medical issues such as heart disease, because salt can cause fluid retention.",
-    "sl": "Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake. S soljo se psi lažje spopadejo, če lahko pijejo veliko sveže vode; brez nje je tveganje večje. Preveč slane hrane še posebej škodi psom z zdravstvenimi težavami, kot je bolezen srca, ker sol lahko povzroči zastajanje tekočine."
+    "sl": "Psi se lahko zastrupijo s soljo, če pojedo preveč kuhinjske soli ali sojine omake. S soljo se psi lažje spopadejo, če lahko pijejo veliko sveže vode; brez nje je tveganje večje. Preveč slane hrane še posebej škodi psom z zdravstvenimi težavami, kot je bolezen srca, ker sol lahko povzroči zastajanje tekočine.",
+    "cs": "Psi mohou trpět otravou solí, pokud sní nadměrné množství kuchyňské soli nebo sójové omáčky. Sůl snášejí lépe, když mohou pít dost čerstvé vody; bez ní je riziko vyšší. Příliš mnoho slaných jídel je zvlášť nevhodné pro psy se zdravotními potížemi, například se srdeční chorobou, protože sůl může způsobit zadržování tekutin."
   },
   "signs": {
     "en": [
@@ -40,26 +45,39 @@
       "Opotekanje",
       "Izrazita žeja ali pogosto uriniranje",
       "Tresenje ali krči"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Snížená chuť k jídlu",
+      "Malátnost",
+      "Vrávorání",
+      "Nadměrná žízeň nebo nadměrné močení",
+      "Třes nebo záchvaty"
     ]
   },
   "what_to_do": {
     "en": "If you think your dog has had too much soy sauce, contact your vet or a pet poison line immediately. Make sure your dog has fresh water to drink.",
-    "sl": "Če sumite, da je pes zaužil preveč sojine omake, takoj pokličite veterinarja ali center za zastrupitve živali. Poskrbite, da ima pes na voljo svežo vodo."
+    "sl": "Če sumite, da je pes zaužil preveč sojine omake, takoj pokličite veterinarja ali center za zastrupitve živali. Poskrbite, da ima pes na voljo svežo vodo.",
+    "cs": "Pokud si myslíte, že pes snědl příliš mnoho sójové omáčky, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Zajistěte, aby pes měl k pití čerstvou vodu."
   },
   "serving": null,
   "child": {
     "en": "Soy sauce is not for dogs. Too much of it can make a dog sick, so give your dog dog food and fresh water instead.",
-    "sl": "Sojina omaka ni za pse. Če je pes poje preveč, mu lahko slabo dene, zato mu raje daj pasjo hrano in svežo vodo."
+    "sl": "Sojina omaka ni za pse. Če je pes poje preveč, mu lahko slabo dene, zato mu raje daj pasjo hrano in svežo vodo.",
+    "cs": "Sójová omáčka není pro psy. Když jí pes sní příliš mnoho, může mu být zle, a proto mu dej jeho psí krmivo a čerstvou vodu."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog eat edamame with soy sauce?",
-        "sl": "Ali lahko pes je edamame s sojino omako?"
+        "sl": "Ali lahko pes je edamame s sojino omako?",
+        "cs": "Může můj pes jíst edamame se sójovou omáčkou?"
       },
       "a": {
         "en": "No. Stay away from edamame with added seasonings such as sea salt and soy sauce, as these aren't good for dogs. Stick to plain, fresh beans.",
-        "sl": "Ne. Izogibajte se edamamu z dodanimi začimbami, kot sta morska sol in sojina omaka, saj za pse nista dobri. Dajajte le navaden, svež edamame."
+        "sl": "Ne. Izogibajte se edamamu z dodanimi začimbami, kot sta morska sol in sojina omaka, saj za pse nista dobri. Dajajte le navaden, svež edamame.",
+        "cs": "Ne. Vyhněte se edamame s přidanými dochucovadly, jako je mořská sůl a sójová omáčka, protože nejsou pro psy vhodná. Držte se obyčejných čerstvých lusků."
       }
     }
   ],
@@ -162,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a215972fd0e81c45440ac459eba9cf006b58424d82e210bf64e03a9b90bc9d30"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16ae3247c551e0ff2faa75143773bb94e92b7fb65e5b371ddcc8a17bd21022b1"
     }
   }
 }

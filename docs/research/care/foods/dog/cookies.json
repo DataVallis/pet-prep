@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Cookies",
-    "sl": "Piškoti"
+    "sl": "Piškoti",
+    "cs": "Sušenky"
   },
   "question": {
     "en": "Can dogs eat cookies?",
-    "sl": "Ali lahko psi jedo piškote?"
+    "sl": "Ali lahko psi jedo piškote?",
+    "cs": "Mohou psi jíst sušenky?"
   },
   "url_slug": {
     "en": "cookies",
-    "sl": "piskoti"
+    "sl": "piskoti",
+    "cs": "susenky"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Cookies can contain a lot of sugar, which can upset a dog's stomach, and some contain chocolate, raisins or xylitol, which are toxic to dogs. Give treats made for dogs instead.",
-    "sl": "Ne, raje ne. Piškoti lahko vsebujejo veliko sladkorja, ki lahko psu razdraži prebavo, nekateri pa vsebujejo čokolado, rozine ali ksilitol, ki so za pse strupeni. Namesto tega psu dajte priboljške, narejene za pse."
+    "sl": "Ne, raje ne. Piškoti lahko vsebujejo veliko sladkorja, ki lahko psu razdraži prebavo, nekateri pa vsebujejo čokolado, rozine ali ksilitol, ki so za pse strupeni. Namesto tega psu dajte priboljške, narejene za pse.",
+    "cs": "Ne, nejlepší je nedávat je. Sušenky mohou obsahovat hodně cukru, který může psovi rozhodit žaludek, a některé obsahují čokoládu, rozinky nebo xylitol, které jsou pro psy jedovaté. Dejte psovi raději pamlsky určené pro psy."
   },
   "why": {
     "en": "A sugar-free cookie is no safer: sugar-free cookies commonly contain xylitol, which causes a dangerous drop in blood sugar. All types of chocolate contain theobromine and caffeine, which are toxic to dogs, and raisins can be hidden in cookies. Cookies without these ingredients mainly cause stomach upset from sugar, so we rate cookies not recommended; cookies with chocolate, raisins or xylitol need a vet right away.",
-    "sl": "Piškot brez sladkorja ni nič varnejši: piškoti brez sladkorja pogosto vsebujejo ksilitol, ki povzroči nevaren padec krvnega sladkorja. Vse vrste čokolade vsebujejo teobromin in kofein, ki sta za pse strupena, rozine pa so lahko skrite v piškotih. Piškoti brez teh sestavin zaradi sladkorja povzročajo predvsem prebavne težave, zato jih uvrščamo med nepriporočljive; če piškoti vsebujejo čokolado, rozine ali ksilitol, takoj k veterinarju."
+    "sl": "Piškot brez sladkorja ni nič varnejši: piškoti brez sladkorja pogosto vsebujejo ksilitol, ki povzroči nevaren padec krvnega sladkorja. Vse vrste čokolade vsebujejo teobromin in kofein, ki sta za pse strupena, rozine pa so lahko skrite v piškotih. Piškoti brez teh sestavin zaradi sladkorja povzročajo predvsem prebavne težave, zato jih uvrščamo med nepriporočljive; če piškoti vsebujejo čokolado, rozine ali ksilitol, takoj k veterinarju.",
+    "cs": "Sušenka bez cukru není bezpečnější: sušenky bez cukru běžně obsahují xylitol, který způsobuje nebezpečný pokles hladiny cukru v krvi. Všechny druhy čokolády obsahují theobromin a kofein, které jsou pro psy jedovaté, a rozinky se mohou v sušenkách skrývat. Sušenky bez těchto přísad způsobují hlavně potíže se žaludkem z cukru, takže je hodnotíme jako nedoporučené; sušenky s čokoládou, rozinkami nebo xylitolem vyžadují okamžitou péči veterináře."
   },
   "signs": {
     "en": [
@@ -32,39 +37,51 @@
       "Prebavne težave",
       "Bruhanje, opotekanje, šibkost, tresenje ali krči (ksilitol)",
       "Nemir, tresenje, hiter ali nereden srčni utrip ali krči (čokolada)"
+    ],
+    "cs": [
+      "Potíže se žaludkem",
+      "Zvracení, vrávorání, slabost, třes nebo záchvaty (xylitol)",
+      "Neklid, třes, rychlý nebo nepravidelný tep či záchvaty (čokoláda)"
     ]
   },
   "what_to_do": {
     "en": "If the cookie contained chocolate, raisins or xylitol, or your dog shows signs of poisoning, get help right away and take your dog to a vet so they can assess and treat it.",
-    "sl": "Če je piškot vseboval čokolado, rozine ali ksilitol ali če ima pes znake zastrupitve, takoj poiščite pomoč in psa odpeljite k veterinarju, da ga pregleda in zdravi."
+    "sl": "Če je piškot vseboval čokolado, rozine ali ksilitol ali če ima pes znake zastrupitve, takoj poiščite pomoč in psa odpeljite k veterinarju, da ga pregleda in zdravi.",
+    "cs": "Pokud sušenka obsahovala čokoládu, rozinky nebo xylitol, nebo pokud má pes příznaky otravy, odvezte ho okamžitě k veterináři, aby ho vyšetřil a léčil."
   },
   "serving": {
     "en": "Instead of people cookies: treats and cookies made especially for dogs, after checking with your vet.",
-    "sl": "Namesto piškotov za ljudi: priboljški in piškoti, narejeni posebej za pse, po posvetu z veterinarjem."
+    "sl": "Namesto piškotov za ljudi: priboljški in piškoti, narejeni posebej za pse, po posvetu z veterinarjem.",
+    "cs": "Místo sušenek pro lidi: pamlsky a sušenky vyrobené speciálně pro psy, po poradě s veterinářem."
   },
   "child": {
     "en": "Cookies are a people treat. Some have chocolate or raisins that are bad for dogs, so give your dog a dog treat instead.",
-    "sl": "Piškoti so priboljšek za ljudi. Nekateri vsebujejo čokolado ali rozine, ki so za pse slabe, zato psu raje daj pasji priboljšek."
+    "sl": "Piškoti so priboljšek za ljudi. Nekateri vsebujejo čokolado ali rozine, ki so za pse slabe, zato psu raje daj pasji priboljšek.",
+    "cs": "Sušenky jsou pamlsek pro lidi. Některé mají čokoládu nebo rozinky, které psům škodí, takže dej psovi raději pamlsek pro psy."
   },
   "faq": [
     {
       "q": {
         "en": "Is a sugar-free cookie safer for my dog?",
-        "sl": "Ali je piškot brez sladkorja za psa varnejši?"
+        "sl": "Ali je piškot brez sladkorja za psa varnejši?",
+        "cs": "Je sušenka bez cukru pro psa bezpečnější?"
       },
       "a": {
         "en": "No. Sugar-free cookies commonly contain xylitol, a sugar alternative that is poisonous to dogs.",
-        "sl": "Ne. Piškoti brez sladkorja pogosto vsebujejo ksilitol, nadomestek za sladkor, ki je za pse strupen."
+        "sl": "Ne. Piškoti brez sladkorja pogosto vsebujejo ksilitol, nadomestek za sladkor, ki je za pse strupen.",
+        "cs": "Ne. Sušenky bez cukru běžně obsahují xylitol, náhradní sladidlo, které je pro psy jedovaté."
       }
     },
     {
       "q": {
         "en": "What about oatmeal raisin cookies?",
-        "sl": "Kaj pa ovseni piškoti z rozinami?"
+        "sl": "Kaj pa ovseni piškoti z rozinami?",
+        "cs": "A co ovesné sušenky s rozinkami?"
       },
       "a": {
         "en": "They are not safe. Raisins can be hidden in cookies, and just a small number of raisins can cause kidney failure in dogs.",
-        "sl": "Niso varni. Rozine so lahko skrite v piškotih, že nekaj rozin pa lahko pri psu povzroči odpoved ledvic."
+        "sl": "Niso varni. Rozine so lahko skrite v piškotih, že nekaj rozin pa lahko pri psu povzroči odpoved ledvic.",
+        "cs": "Bezpečné nejsou. Rozinky se mohou v sušenkách skrývat a už malý počet rozinek může u psů způsobit selhání ledvin."
       }
     }
   ],
@@ -181,6 +198,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d6ea39d4fee92c27be55cafd5ee2bbe9b1e7cc5a57c43c4a35e25d74cd654f35"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d46afe72ec9d1596193f45f58c440f9f349e28774f611d1cab54d649653e6450"
     }
   }
 }

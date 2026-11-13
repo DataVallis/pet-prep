@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Cinnamon",
-    "sl": "Cimet"
+    "sl": "Cimet",
+    "cs": "Skořice"
   },
   "question": {
     "en": "Can dogs eat cinnamon?",
-    "sl": "Ali lahko psi jedo cimet?"
+    "sl": "Ali lahko psi jedo cimet?",
+    "cs": "Mohou psi jíst skořici?"
   },
   "url_slug": {
     "en": "cinnamon",
-    "sl": "cimet"
+    "sl": "cimet",
+    "cs": "skorice"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Cinnamon is not toxic to dogs, but it isn't recommended as a regular treat. A little in baked goods won't hurt, but cinnamon sticks, powder and large amounts can irritate the mouth and stomach, and cinnamon essential oil is riskier.",
-    "sl": "Cimet za pse ni strupen, vendar ga ne priporočamo kot reden priboljšek. Malo cimeta v pecivu ne škodi, cimetove palčke, cimet v prahu in večje količine pa lahko razdražijo usta in prebavila, eterično olje cimeta pa je še bolj tvegano."
+    "sl": "Cimet za pse ni strupen, vendar ga ne priporočamo kot reden priboljšek. Malo cimeta v pecivu ne škodi, cimetove palčke, cimet v prahu in večje količine pa lahko razdražijo usta in prebavila, eterično olje cimeta pa je še bolj tvegano.",
+    "cs": "Skořice pro psy není jedovatá, ale jako pravidelný pamlsek se nedoporučuje. Trocha v pečivu neuškodí, ale skořicové tyčinky, prášek a velké množství mohou dráždit tlamu a žaludek a skořicový esenciální olej je rizikovější."
   },
   "why": {
     "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
-    "sl": "Žvečenje cimetovih palčk ali uživanje mletega cimeta lahko psu razdraži usta, vdihavanje cimeta v prahu pa lahko povzroči kašelj, dušenje in težko dihanje. Zaužitje zelo velike količine cimeta lahko povzroči bruhanje, drisko, spremembe srčnega utripa, nizek krvni sladkor in bolezen jeter. Majhni psi so lahko občutljivi že na manjše količine, eterično olje cimeta pa je lahko za pse strupeno. Pecivo s cimetom lahko vsebuje tudi ksilitol."
+    "sl": "Žvečenje cimetovih palčk ali uživanje mletega cimeta lahko psu razdraži usta, vdihavanje cimeta v prahu pa lahko povzroči kašelj, dušenje in težko dihanje. Zaužitje zelo velike količine cimeta lahko povzroči bruhanje, drisko, spremembe srčnega utripa, nizek krvni sladkor in bolezen jeter. Majhni psi so lahko občutljivi že na manjše količine, eterično olje cimeta pa je lahko za pse strupeno. Pecivo s cimetom lahko vsebuje tudi ksilitol.",
+    "cs": "Žvýkání skořicových tyčinek nebo pojídání mleté skořice může psovi dráždit tlamu a vdechnutí skořicového prášku může způsobit kašel, dušení a potíže s dýcháním. Velké předávkování může vést ke zvracení, průjmu, změnám tepové frekvence, nízké hladině cukru v krvi a onemocnění jater. Malí psi mohou reagovat už na menší množství a skořicový esenciální olej může být pro psy jedovatý. Pečivo se skořicí může obsahovat také xylitol."
   },
   "signs": {
     "en": [
@@ -36,39 +41,53 @@
       "Bruhanje",
       "Driska",
       "Spremembe srčnega utripa"
+    ],
+    "cs": [
+      "Podráždění tlamy",
+      "Kašel, dušení nebo potíže s dýcháním (vdechnutý prášek)",
+      "Zvracení",
+      "Průjem",
+      "Změny tepové frekvence"
     ]
   },
   "what_to_do": {
     "en": "If your dog eats a large amount of cinnamon, you don't need to panic, but do call your vet.",
-    "sl": "Če pes poje veliko cimeta, ni razloga za paniko, vseeno pa pokličite veterinarja."
+    "sl": "Če pes poje veliko cimeta, ni razloga za paniko, vseeno pa pokličite veterinarja.",
+    "cs": "Pokud pes snědl velké množství skořice, nemusíte panikařit, ale zavolejte veterináři."
   },
   "serving": {
     "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
-    "sl": "Če psu daste pecivo s cimetom: le majhen košček, redko in nikoli pecivo, sladkano s ksilitolom."
+    "sl": "Če psu daste pecivo s cimetom: le majhen košček, redko in nikoli pecivo, sladkano s ksilitolom.",
+    "cs": "Pokud se se psem podělíte o pečivo se skořicí: jen malý kousek, málokdy a nikdy pečivo oslazené xylitolem."
   },
   "child": {
     "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
-    "sl": "Cimet je začimba za ljudi. Psu ne dovoli lizati cimeta v prahu ali žvečiti cimetovih palčk, ker ga lahko zaboli v gobčku."
+    "sl": "Cimet je začimba za ljudi. Psu ne dovoli lizati cimeta v prahu ali žvečiti cimetovih palčk, ker ga lahko zaboli v gobčku.",
+    "cs": "Skořice je koření pro lidi. Nenech psa olizovat skořicový prášek ani žvýkat skořicové tyčinky, protože by ho mohla bolet tlama."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog have a cinnamon cookie?",
-        "sl": "Ali lahko pes poje piškot s cimetom?"
+        "sl": "Ali lahko pes poje piškot s cimetom?",
+        "cs": "Může pes dostat skořicovou sušenku?"
       },
       "a": {
         "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
-        "sl": "Malo cimeta, kot ga je v večini peciva, psu ne bo škodilo, vendar mu pecivo dajte le v majhnih količinah in redko. Nekatero pecivo vsebuje ksilitol, ki je zelo strupen."
+        "sl": "Malo cimeta, kot ga je v večini peciva, psu ne bo škodilo, vendar mu pecivo dajte le v majhnih količinah in redko. Nekatero pecivo vsebuje ksilitol, ki je zelo strupen.",
+        "cs": "Trocha skořice, jaká bývá ve většině pečiva, psovi neublíží, ale pečivo dávejte jen v malém množství a málokdy. Některé pečivo obsahuje xylitol, který je velmi jedovatý."
       }
     },
     {
       "q": {
         "en": "Is cinnamon essential oil dangerous for dogs?",
-        "sl": "Ali je eterično olje cimeta za pse nevarno?"
+        "sl": "Ali je eterično olje cimeta za pse nevarno?",
+        "cs": "Je skořicový esenciální olej pro psy nebezpečný?"
       },
       "a": {
         "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
-        "sl": "Da. Eterično olje cimeta je lahko za pse strupeno in je bolj tvegano kot mleti cimet ali palčke."
+        "sl": "Da. Eterično olje cimeta je lahko za pse strupeno in je bolj tvegano kot mleti cimet ali palčke.",
+        "cs": "Ano. Skořicový esenciální olej může být pro psy jedovatý a je rizikovější než mletá skořice nebo skořicové tyčinky."
       }
     }
   ],
@@ -151,6 +170,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b3beaeb32c1f58a4edb27c308d62d26004b080165bff37196442dbfb62b9e88a"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d77361b54df75f894e0aafa4d7046e6588a26366fdf4abf61fc09dc1cd2f658b"
     }
   }
 }

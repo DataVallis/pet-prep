@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Turmeric",
-    "sl": "Kurkuma"
+    "sl": "Kurkuma",
+    "cs": "Kurkuma"
   },
   "question": {
     "en": "Can dogs eat turmeric?",
-    "sl": "Ali lahko psi jedo kurkumo?"
+    "sl": "Ali lahko psi jedo kurkumo?",
+    "cs": "Mohou psi jíst kurkumu?"
   },
   "url_slug": {
     "en": "turmeric",
-    "sl": "kurkuma"
+    "sl": "kurkuma",
+    "cs": "kurkuma"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your dog turmeric without asking your vet. Small amounts are considered safe, but in high amounts turmeric can act as a blood thinner and cause stomach upset, and there is little research on its risks.",
-    "sl": "Psu kurkume raje ne dajajte brez posveta z veterinarjem. Majhne količine veljajo za varne, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave, raziskav o njenih tveganjih pa je malo."
+    "sl": "Psu kurkume raje ne dajajte brez posveta z veterinarjem. Majhne količine veljajo za varne, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave, raziskav o njenih tveganjih pa je malo.",
+    "cs": "Je lepší psovi kurkumu nedávat bez porady s veterinářem. Malé množství se považuje za bezpečné, ale ve vysokém množství může kurkuma působit jako lék na ředění krve a způsobit podráždění žaludku; o jejích rizicích navíc existuje jen málo výzkumů."
   },
   "why": {
     "en": "Sources differ: one pet food expert article calls turmeric safe for dogs in small amounts, while another advises caution, notes that there is little research on its risks and that turmeric taken by mouth is poorly absorbed. Serious side effects are fairly uncommon, but in high amounts turmeric can act as a blood thinner and cause stomach upset. Because the sources disagree, we use the stricter rating. The small amounts used to colour or flavour dog food are not likely to bring any noticeable health benefits.",
-    "sl": "Viri se razlikujejo: eden od strokovnih člankov proizvajalca pasje hrane pravi, da je kurkuma v majhnih količinah za pse varna, drugi pa svetuje previdnost ter opozarja, da je raziskav o tveganjih malo in da se kurkuma, zaužita skozi usta, slabo vsrka. Resni neželeni učinki so dokaj redki, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave. Ker se viri ne ujemajo, izberemo strožjo oceno. Majhne količine, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+    "sl": "Viri se razlikujejo: eden od strokovnih člankov proizvajalca pasje hrane pravi, da je kurkuma v majhnih količinah za pse varna, drugi pa svetuje previdnost ter opozarja, da je raziskav o tveganjih malo in da se kurkuma, zaužita skozi usta, slabo vsrka. Resni neželeni učinki so dokaj redki, v velikih količinah pa lahko kurkuma redči kri in povzroči prebavne težave. Ker se viri ne ujemajo, izberemo strožjo oceno. Majhne količine, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje.",
+    "cs": "Zdroje se liší: jeden článek odborníka na krmiva pro zvířata označuje kurkumu pro psy v malém množství za bezpečnou, jiný radí k opatrnosti, uvádí, že o jejích rizicích je málo výzkumů, a že kurkuma užívaná ústy se špatně vstřebává. Závažné vedlejší účinky jsou poměrně vzácné, ale ve vysokém množství může kurkuma působit jako lék na ředění krve a způsobit podráždění žaludku. Protože se zdroje rozcházejí, použili jsme přísnější hodnocení. Malé množství používané k obarvení nebo dochucení psího krmiva pravděpodobně nepřinese žádný znatelný zdravotní přínos."
   },
   "signs": {
     "en": [
@@ -28,26 +33,33 @@
     ],
     "sl": [
       "Prebavne težave (velike količine)"
+    ],
+    "cs": [
+      "Podráždění žaludku (vysoké množství)"
     ]
   },
   "what_to_do": {
     "en": "Talk to your vet before giving your dog turmeric or any other supplement, especially if your dog takes medication. Turmeric should not be used as a routine treatment for any health condition.",
-    "sl": "Preden psu daste kurkumo ali kakršen koli drug dodatek, se posvetujte z veterinarjem, še posebej, če pes jemlje zdravila. Kurkume ne uporabljajte kot rutinsko zdravljenje kakršne koli bolezni."
+    "sl": "Preden psu daste kurkumo ali kakršen koli drug dodatek, se posvetujte z veterinarjem, še posebej, če pes jemlje zdravila. Kurkume ne uporabljajte kot rutinsko zdravljenje kakršne koli bolezni.",
+    "cs": "Než psovi dáte kurkumu nebo jakýkoli jiný doplněk, poraďte se s veterinářem, zvlášť pokud pes bere léky. Kurkuma by se neměla používat jako běžná léčba jakéhokoli zdravotního problému."
   },
   "serving": null,
   "child": {
     "en": "Turmeric is a yellow spice for people's cooking. Only a vet can say if a dog should have it, so leave it to grown-ups.",
-    "sl": "Kurkuma je rumena začimba za kuhanje. Ali jo pes sme dobiti, lahko pove le veterinar, zato to prepusti odraslim."
+    "sl": "Kurkuma je rumena začimba za kuhanje. Ali jo pes sme dobiti, lahko pove le veterinar, zato to prepusti odraslim.",
+    "cs": "Kurkuma je žluté koření do jídel pro lidi. Jen veterinář může říct, jestli ji pes smí dostat, a tak to nech na dospělých."
   },
   "faq": [
     {
       "q": {
         "en": "Does the turmeric in dog food have health benefits?",
-        "sl": "Ali ima kurkuma v pasji hrani koristi za zdravje?"
+        "sl": "Ali ima kurkuma v pasji hrani koristi za zdravje?",
+        "cs": "Má kurkuma v psím krmivu nějaký zdravotní přínos?"
       },
       "a": {
         "en": "The levels of turmeric used to colour or flavour dog food are not likely to have any noticeable health benefits.",
-        "sl": "Količine kurkume, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje."
+        "sl": "Količine kurkume, ki se uporabljajo za barvo ali okus pasje hrane, verjetno nimajo opaznih koristi za zdravje.",
+        "cs": "Množství kurkumy používané k obarvení nebo dochucení psího krmiva pravděpodobně nepřinese žádný znatelný zdravotní přínos."
       }
     }
   ],
@@ -113,6 +125,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a24d7a1fcb08bebc9228a1a9c15e1f2fecb2f47cd98b80b51dcb12fbca16bb66"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5adff9378918125a0bf2d06be76c2cceacf4a873f5ea606cc34a53d080e59682"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Vanilla extract",
-    "sl": "Vanilijev ekstrakt"
+    "sl": "Vanilijev ekstrakt",
+    "cs": "Vanilkový extrakt"
   },
   "question": {
     "en": "Can cats have vanilla extract?",
-    "sl": "Ali lahko mačke zaužijejo vanilijev ekstrakt?"
+    "sl": "Ali lahko mačke zaužijejo vanilijev ekstrakt?",
+    "cs": "Mohou kočky dostat vanilkový extrakt?"
   },
   "url_slug": {
     "en": "vanilla",
-    "sl": "vanilija"
+    "sl": "vanilija",
+    "cs": "vanilkovy-extrakt"
   },
   "level": "toxic",
   "answer": {
     "en": "No, keep vanilla extract away from your cat. Vanilla extract is mostly made from alcohol, and cats are especially sensitive to alcohol. It can cause vomiting, diarrhoea, a drunken gait and even coma or death. Call your vet right away if your cat drinks any.",
-    "sl": "Ne, vanilijev ekstrakt hranite zunaj mačjega dosega. Vanilijev ekstrakt je večinoma iz alkohola, mačke pa so za alkohol še posebej občutljive. Ta lahko povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Če mačka popije kaj ekstrakta, takoj pokličite veterinarja."
+    "sl": "Ne, vanilijev ekstrakt hranite zunaj mačjega dosega. Vanilijev ekstrakt je večinoma iz alkohola, mačke pa so za alkohol še posebej občutljive. Ta lahko povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Če mačka popije kaj ekstrakta, takoj pokličite veterinarja.",
+    "cs": "Ne, vanilkový extrakt držte od kočky dál. Vanilkový extrakt se vyrábí převážně z alkoholu a kočky jsou na alkohol zvlášť citlivé. Může způsobit zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Pokud kočka nějaký vypije, ihned zavolejte veterináři."
   },
   "why": {
     "en": "VCA Animal Hospitals says vanilla extract is mostly made from alcohol, and that alcohol can cause vomiting, diarrhoea, a drunken gait and even coma or death. All animals are at risk of alcohol poisoning, but cats are especially sensitive.",
-    "sl": "VCA Animal Hospitals navaja, da je vanilijev ekstrakt večinoma iz alkohola in da lahko alkohol povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Zastrupitev z alkoholom ogroža vse živali, mačke pa so še posebej občutljive."
+    "sl": "VCA Animal Hospitals navaja, da je vanilijev ekstrakt večinoma iz alkohola in da lahko alkohol povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Zastrupitev z alkoholom ogroža vse živali, mačke pa so še posebej občutljive.",
+    "cs": "VCA Animal Hospitals uvádějí, že vanilkový extrakt se vyrábí převážně z alkoholu a že alkohol může způsobit zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Otravě alkoholem jsou vystavena všechna zvířata, ale kočky jsou obzvlášť citlivé."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Nenavadna zaspanost ali otopelost",
       "Počasno dihanje",
       "V hudih primerih: tresenje, krči ali koma"
+    ],
+    "cs": [
+      "Zvracení nebo průjem",
+      "Vrávorání, chůze jako po opilosti",
+      "Neobvyklá ospalost nebo otupělost",
+      "Zpomalené dýchání",
+      "V závažných případech: třes, záchvaty nebo kóma"
     ]
   },
   "what_to_do": {
     "en": "Call your vet or a pet poison helpline immediately. Don't wait for signs to appear, and don't try to make your cat sick at home unless your vet tells you to.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje, razen če vam tako naroči veterinar."
+    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje, razen če vam tako naroči veterinar.",
+    "cs": "Okamžitě zavolejte veterináři nebo na toxikologickou linku pro zvířata. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení, pokud vám to neřekne veterinář."
   },
   "serving": null,
   "child": {
     "en": "Vanilla extract smells sweet, but it isn't for cats. Keep the little bottle away from kitty and tell a grown-up if she licks some.",
-    "sl": "Vanilijev ekstrakt diši sladko, a ni za muce. Stekleničko drži daleč od muce in povej odraslemu, če ga muca poliže."
+    "sl": "Vanilijev ekstrakt diši sladko, a ni za muce. Stekleničko drži daleč od muce in povej odraslemu, če ga muca poliže.",
+    "cs": "Vanilkový extrakt voní sladce, ale pro kočky není. Lahvičku drž od kočičky dál a kdyby z ní kočička olízla, řekni to dospělému."
   },
   "faq": [
     {
       "q": {
         "en": "Is eggnog with vanilla safe for cats?",
-        "sl": "Ali je jajčni liker z vanilijo varen za mačke?"
+        "sl": "Ali je jajčni liker z vanilijo varen za mačke?",
+        "cs": "Je eggnog s vanilkou pro kočky bezpečný?"
       },
       "a": {
         "en": "No. VCA lists vanilla extract among eggnog's risks because it is mostly alcohol, and advises contacting your vet right away if you think your cat drank eggnog.",
-        "sl": "Ne. VCA vanilijev ekstrakt navaja med nevarnostmi jajčnega likerja, ker je večinoma iz alkohola, in svetuje, da takoj pokličete veterinarja, če mislite, da je mačka pila jajčni liker."
+        "sl": "Ne. VCA vanilijev ekstrakt navaja med nevarnostmi jajčnega likerja, ker je večinoma iz alkohola, in svetuje, da takoj pokličete veterinarja, če mislite, da je mačka pila jajčni liker.",
+        "cs": "Ne. VCA uvádí vanilkový extrakt jako riziko v nápoji eggnog, protože se vyrábí převážně z alkoholu, a radí ihned se obrátit na veterináře, pokud se domníváte, že kočka eggnog pila."
       }
     }
   ],
@@ -142,6 +158,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d86287fdc81732db141bf2394f1e8d9dfddb73df8a5bc5c8b0b24728070390cc"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6343d7bc5da744c57946b641b7391081f775ae20fa89aad11b1d6a766104fdc7"
     }
   }
 }

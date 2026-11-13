@@ -3,57 +3,69 @@
   "species": "cat",
   "name": {
     "en": "Bread (baked)",
-    "sl": "Kruh (pečen)"
+    "sl": "Kruh (pečen)",
+    "cs": "Chléb (pečený)"
   },
   "question": {
     "en": "Can cats eat bread?",
-    "sl": "Ali lahko mačke jedo kruh?"
+    "sl": "Ali lahko mačke jedo kruh?",
+    "cs": "Mohou kočky jíst chléb?"
   },
   "url_slug": {
     "en": "bread",
-    "sl": "kruh"
+    "sl": "kruh",
+    "cs": "chleb"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain, fully baked bread is fine as an occasional treat. The ASPCA says baked bread is safe as an occasional treat as long as it is not raisin bread. Raw, rising dough is different and must be kept away from cats.",
-    "sl": "Da, majhen košček navadnega, dobro pečenega kruha je v redu kot občasen priboljšek. ASPCA navaja, da je pečen kruh varen kot občasen priboljšek, če ni kruh z rozinami. Surovo, vzhajajoče testo pa je nekaj drugega in mora biti zunaj mačjega dosega."
+    "sl": "Da, majhen košček navadnega, dobro pečenega kruha je v redu kot občasen priboljšek. ASPCA navaja, da je pečen kruh varen kot občasen priboljšek, če ni kruh z rozinami. Surovo, vzhajajoče testo pa je nekaj drugega in mora biti zunaj mačjega dosega.",
+    "cs": "Ano, malý kousek obyčejného, důkladně upečeného chleba je jako občasný pamlsek v pořádku. ASPCA uvádí, že pečený chléb je jako občasný pamlsek bezpečný, pokud nejde o chléb s rozinkami. Syrové, kynoucí těsto je ale něco jiného a kočka se k němu nesmí dostat."
   },
   "why": {
     "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
-    "sl": "ASPCA na strani o psih in mačkah navaja, da je dobro pečen kruh za hišne živali varen kot občasen priboljšek, če ni kruh z rozinami. Agriculture Victoria pojasnjuje, da se tveganje pri kvašenem testu zmanjša, ko je testo pečeno in je kvas povsem vzhajal. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Blue Cross pa, da mačke potrebujejo prehrano na osnovi mesa. Cats Protection svetuje, da se raje držimo priboljškov za mačke kot človeške hrane."
+    "sl": "ASPCA na strani o psih in mačkah navaja, da je dobro pečen kruh za hišne živali varen kot občasen priboljšek, če ni kruh z rozinami. Agriculture Victoria pojasnjuje, da se tveganje pri kvašenem testu zmanjša, ko je testo pečeno in je kvas povsem vzhajal. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Blue Cross pa, da mačke potrebujejo prehrano na osnovi mesa. Cats Protection svetuje, da se raje držimo priboljškov za mačke kot človeške hrane.",
+    "cs": "ASPCA na stránce o psech a kočkách uvádí, že důkladně upečený chléb je pro domácí zvířata jako občasný pamlsek bezpečný, pokud nejde o chléb s rozinkami. Agriculture Victoria vysvětluje, že riziko spojené s kvasnicovým těstem se po upečení a plném vykynutí kvasnic snižuje. International Cat Care uvádí, že kočky jako striktní masožravci hůře tráví a využívají sacharidy, a Blue Cross, že kočky potřebují stravu založenou na mase. Cats Protection radí držet se raději pamlsků pro kočky než lidského jídla."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer only a small piece now and then. If your cat has eaten raw or rising dough rather than baked bread, contact your vet straight away and don't wait for symptoms to appear.",
-    "sl": "Ponudite le majhen košček, in to le občasno. Če je mačka pojedla surovo ali vzhajajoče testo in ne pečenega kruha, takoj pokličite veterinarja in ne čakajte, da se pokažejo znaki."
+    "sl": "Ponudite le majhen košček, in to le občasno. Če je mačka pojedla surovo ali vzhajajoče testo in ne pečenega kruha, takoj pokličite veterinarja in ne čakajte, da se pokažejo znaki.",
+    "cs": "Nabídněte jen malý kousek a jen občas. Pokud kočka snědla syrové nebo kynoucí těsto místo upečeného chleba, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky."
   },
   "serving": {
     "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
-    "sl": "Majhen košček navadnega, dobro pečenega kruha. Nikoli kruha z rozinami in nikoli surovega testa."
+    "sl": "Majhen košček navadnega, dobro pečenega kruha. Nikoli kruha z rozinami in nikoli surovega testa.",
+    "cs": "Malý kousek obyčejného, důkladně upečeného chleba. Nikdy chléb s rozinkami a nikdy syrové těsto."
   },
   "child": {
     "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
-    "sl": "Košček navadnega kruha je lahko občasno priboljšek. Muce potrebujejo predvsem meso, surovo testo pa je samo za peko."
+    "sl": "Košček navadnega kruha je lahko občasno priboljšek. Muce potrebujejo predvsem meso, surovo testo pa je samo za peko.",
+    "cs": "Drobek obyčejného chleba je občas v pořádku jako pamlsek. Kočky potřebují hlavně maso a syrové těsto je jen na pečení."
   },
   "faq": [
     {
       "q": {
         "en": "Is raw bread dough safe for cats?",
-        "sl": "Ali je surovo testo za kruh varno za mačke?"
+        "sl": "Ali je surovo testo za kruh varno za mačke?",
+        "cs": "Je syrové chlebové těsto pro kočky bezpečné?"
       },
       "a": {
         "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
-        "sl": "Ne. ASPCA navaja, da psi in mačke nikoli ne smejo jesti surovega kvašenega testa, Agriculture Victoria pa, da lahko kvašeno testo vzhaja in povzroči nabiranje plinov v mačjih prebavilih."
+        "sl": "Ne. ASPCA navaja, da psi in mačke nikoli ne smejo jesti surovega kvašenega testa, Agriculture Victoria pa, da lahko kvašeno testo vzhaja in povzroči nabiranje plinov v mačjih prebavilih.",
+        "cs": "Ne. ASPCA uvádí, že psi ani kočky nikdy nesmějí jíst syrové kvasnicové těsto, a Agriculture Victoria, že kvasnicové těsto může v kočičím trávicím ústrojí kynout a způsobit hromadění plynů."
       }
     },
     {
       "q": {
         "en": "Can cats eat raisin bread?",
-        "sl": "Ali lahko mačke jedo kruh z rozinami?"
+        "sl": "Ali lahko mačke jedo kruh z rozinami?",
+        "cs": "Mohou kočky jíst chléb s rozinkami?"
       },
       "a": {
         "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
-        "sl": "Ne. Nasvet ASPCA, da je pečen kruh v redu kot občasen priboljšek, kruha z rozinami ne vključuje."
+        "sl": "Ne. Nasvet ASPCA, da je pečen kruh v redu kot občasen priboljšek, kruha z rozinami ne vključuje.",
+        "cs": "Ne. Rada ASPCA, že pečený chléb je jako občasný pamlsek v pořádku, se na chléb s rozinkami nevztahuje."
       }
     }
   ],
@@ -115,6 +127,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ac685e9ab4d6813fd79a2dc14d434e19646eddc7a14b8b9969d5749dfa23015d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "19adf573e911cf7c36b1a335721eb8c642250e060fd90cf03d96348236f80c0b"
     }
   }
 }

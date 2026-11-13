@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Turmeric",
-    "sl": "Kurkuma"
+    "sl": "Kurkuma",
+    "cs": "Kurkuma"
   },
   "question": {
     "en": "Can cats eat turmeric?",
-    "sl": "Ali lahko mačke jedo kurkumo?"
+    "sl": "Ali lahko mačke jedo kurkumo?",
+    "cs": "Mohou kočky jíst kurkumu?"
   },
   "url_slug": {
     "en": "turmeric",
-    "sl": "kurkuma"
+    "sl": "kurkuma",
+    "cs": "kurkuma"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your cat turmeric. Studies on feeding turmeric to cats are scarce, and cats have an unusually low capacity for glucuronidation, which researchers say increases the risk of turmeric toxicity in cats.",
-    "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah."
+    "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah.",
+    "cs": "Kurkumu kočce raději nedávejte. Studií o krmení koček kurkumou je málo a kočky mají neobvykle nízkou schopnost glukuronidace, což podle výzkumníků zvyšuje riziko toxicity kurkumy u koček."
   },
   "why": {
     "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
-    "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+    "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
+    "cs": "Kurkuma je výrazně žluté koření. Studie z roku 2026 v časopise Animals uvádí, že kočky mají neobvykle nízkou schopnost glukuronidace, důležitého kroku při odbourávání a vylučování kurkuminoidů z kurkumy, a že to zvyšuje riziko toxicity kurkumy u koček. Autoři dodávají, že údajů o její bezpečnosti u koček je málo. V jejich studii zdravé dospělé kočky dobře snášely extrakt z kurkumy přidaný do kompletního vyváženého krmiva pro kočky. Kočky nepotřebují nic jiného než kompletní stravu."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Bruhanje",
       "Prebavne težave"
+    ],
+    "cs": [
+      "Zvracení",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat licked a little turmeric, watch for vomiting or an upset stomach. If your cat has eaten something she shouldn't have, contact your vet straight away; don't wait for signs, and don't try to make her sick at home.",
-    "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje."
+    "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje.",
+    "cs": "Pokud kočka olízla trochu kurkumy, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka snědla něco, co neměla, okamžitě se obraťte na veterináře; nečekejte na příznaky a nesnažte se ji doma přimět ke zvracení."
   },
   "serving": null,
   "child": {
     "en": "Turmeric is a yellow spice for people's food. Cats don't need spices, so keep the jar away from kitty.",
-    "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce."
+    "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce.",
+    "cs": "Kurkuma je žluté koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu drž od kočičky dál."
   },
   "faq": [
     {
       "q": {
         "en": "Is turmeric in cat food safe?",
-        "sl": "Ali je kurkuma v mačji hrani varna?"
+        "sl": "Ali je kurkuma v mačji hrani varna?",
+        "cs": "Je kurkuma v kočičím krmivu bezpečná?"
       },
       "a": {
         "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
-        "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo."
+        "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo.",
+        "cs": "V jedné studii dostávaly zdravé dospělé kočky čtyři měsíce kompletní krmivo s přidaným extraktem z kurkumy a snášely ho dobře. Autoři poznamenávají, že jiných studií o krmení koček kurkumou je málo."
       }
     }
   ],
@@ -127,6 +140,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "63fb51a2db254372a4cc3d0e5516d3870e43c0b115ff62d81e73c7cf05ed2048"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2d44d42f0c2dc26950f202fb6bbe9f0222f5eacf1da03f0cc91756ab8ab7d221"
     }
   }
 }
