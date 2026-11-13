@@ -1,0 +1,136 @@
+{
+  "country": "NA",
+  "checked": "2026-11-13",
+  "sources": [
+    {
+      "name": "NBC News - UNAM's Small Animal Academic Hospital inaugurated",
+      "url": "https://nbcnews.na/news/unams-small-animal-academic-hospital-inaugurated.60796",
+      "note": "Opened; hospital is in Windhoek, open to the public; no address, phone or hours on the page."
+    },
+    {
+      "name": "UNAM Forum Online - inauguration of the Small Animal Unit (22 Sep 2022)",
+      "url": "https://forumonline.unam.edu.na/?p=3929",
+      "note": "Opened; Small Animal Unit of the Veterinary Academic Hospital, six consultation rooms and a laboratory; no address, phone, hours or emergency info."
+    },
+    {
+      "name": "New Era - Safeguarding animal welfare",
+      "url": "https://neweralive.na/safeguarding-animal-welfare-2",
+      "note": "Opened; UNAM Small Animal Academic Hospital (small animals) and Unam Mobile Animal Clinic; large animals at Neudamm campus. No phones or emergency details."
+    },
+    {
+      "name": "UNAM Forum Online - Veterinary Consultation Room at Katima Mulilo",
+      "url": "https://forumonline.unam.edu.na/?p=5919",
+      "note": "Opened; consultation room at UNAM Katima Mulilo campus opened 14 Aug 2025; no hours, phone, or statement that it treats small animals."
+    },
+    {
+      "name": "Swakopmund Municipality - emergency numbers (After Hours)",
+      "url": "https://swakopmun.com/index/emergency",
+      "note": "Opened; municipal list with animal controller and SPCA Swakopmund numbers; no addresses or hours; page says all emergency numbers available 24/7 but not specifically for animal services."
+    },
+    {
+      "name": "Swakopmund Municipality - Health Services page",
+      "url": "https://swakopmun.com/?p=1061",
+      "note": "Opened; municipality main phone +264 64 410 4111; no vet contacts."
+    },
+    {
+      "name": "World Rabies Day event page - Animal Hospital Windhoek",
+      "url": "https://rabiesalliance.org/world-rabies-day/event/animal-hospital-windhoek-world-rabies-day",
+      "note": "Opened; address 10 Simeon Shixungileni Street, Old Bismarck Street, Windhoek; website animalhospital.com.na; no phone/hours."
+    },
+    {
+      "name": "Wildlife Vets Namibia - Veterinary work (Rhino Park Veterinary Clinic)",
+      "url": "https://wildlifevetsnamibia.com/veterinarywork",
+      "note": "Opened; Rhino Park Veterinary Clinic, 54 Rhino Street, Windhoek, phones and an emergency number; no hours or 24 h statement."
+    },
+    {
+      "name": "HQ Magazine - Equifarm Veterinary Clinic (April 2020)",
+      "url": "https://hqmagazine.co.za/?p=11452",
+      "note": "Opened; equine-focused clinic south of Windhoek, '24/7 mobile veterinary services'; magazine article only."
+    },
+    {
+      "name": "Namibia Department of Veterinary Services (via Noonsite)",
+      "url": "https://www.noonsite.com/?p=73329884",
+      "note": "Opened; administrative address Private Bag 12022 Windhoek, phone +264 61 208 7505. Government regulatory office; no emergency service, duty rota or poison line."
+    },
+    {
+      "name": "Have a Heart Namibia (civic264 profile)",
+      "url": "https://www.civic264.org.na/health/have-a-heart-namibia-spay-and-neuter-project",
+      "note": "Opened; Swakopmund spay/neuter charity working with ~30 vets nationwide; not a clinic or emergency service, no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "UNAM Small Animal Academic Hospital (Veterinary Academic Hospital, Small Animal Unit)",
+      "city": "Windhoek",
+      "region": "Khomas",
+      "address": "Windhoek (University of Namibia School of Veterinary Medicine)",
+      "emergency_24h": false,
+      "duty": "University small-animal hospital open to the public, also serving the SPCA and the police K9 unit. Call ahead or contact UNAM for opening hours and emergencies.",
+      "small_animals": true,
+      "url": "https://nbcnews.na/news/unams-small-animal-academic-hospital-inaugurated.60796",
+      "source_url": "https://nbcnews.na/news/unams-small-animal-academic-hospital-inaugurated.60796",
+      "checked": "2026-11-13",
+      "note": "News pages (2022) only; no phone, street address, hours or emergency info found on any opened page. url field is the news article because UNAM's own page was not opened. Needs a phone from unam.edu.na before publishing."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Hospital Windhoek",
+      "city": "Windhoek",
+      "region": "Khomas",
+      "address": "10 Simeon Shixungileni Street (Old Bismarck Street), Windhoek",
+      "phone": "081 124 9052",
+      "emergency_24h": false,
+      "duty": "Small-animal hospital with a vet on call; call 081 124 9052 for emergencies. Okahandja branch 062 500 969 during opening hours.",
+      "small_animals": true,
+      "url": "https://animalhospital.com.na/",
+      "source_url": "https://rabiesalliance.org/world-rabies-day/event/animal-hospital-windhoek-world-rabies-day",
+      "checked": "2026-11-13",
+      "note": "Re-checked 2026-11-13: name and address confirmed on the World Rabies Day page and animalhospital.com.na was blocked (PROVENANCE_REQUIRED, not fetchable). Phone 081 124 9052 and '24/7 vet on call' appear only on the my.na aggregator (opened), so emergency_24h stays false. Confirm on the clinic's own site.",
+      "quote": "Our 24/7 vet on call can be reached in Windhoek on 081 124 9052."
+    },
+    {
+      "kind": "clinic",
+      "name": "Rhino Park Veterinary Clinic",
+      "city": "Windhoek",
+      "region": "Khomas",
+      "address": "54 Rhino Street, Windhoek",
+      "phone": "+264 83 726 2000 (emergency +264 81 877 9708)",
+      "emergency_24h": false,
+      "duty": "Emergency number +264 81 877 9708; WhatsApp +264 81 375 5701. Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "https://wildlifevetsnamibia.com/veterinarywork",
+      "source_url": "https://wildlifevetsnamibia.com/veterinarywork",
+      "checked": "2026-11-13",
+      "note": "Page is the linked Wildlife Vets Namibia site, not the clinic's own site; it does not state hours or 24 h cover. Page shows dog surgery but does not explicitly say small animals; treated as a general practice."
+    },
+    {
+      "kind": "clinic",
+      "name": "Equifarm Veterinary Clinic",
+      "city": "Windhoek",
+      "region": "Khomas",
+      "address": "Out of Nature, about 30 km south of Windhoek on the B1 to Rehoboth",
+      "phone": "+264 81 317 3376",
+      "emergency_24h": false,
+      "duty": "Equine-focused practice with mobile veterinary service; call for emergencies.",
+      "small_animals": false,
+      "source_url": "https://hqmagazine.co.za/?p=11452",
+      "checked": "2026-11-13",
+      "note": "Re-checked 2026-11-13: article (Apr 2020) confirms name, phone and '24/7 mobile veterinary services'; caseload 80% equine, 10% production, 10% small animals. Not the clinic's own page, so emergency_24h false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Swakopmund Vet (listed with SPCA Swakopmund)",
+      "city": "Swakopmund",
+      "region": "Erongo",
+      "phone": "064 405 207",
+      "emergency_24h": false,
+      "duty": "Listed by the Swakopmund municipality for after-hours animal matters: vet 064 405 207; injured or sick animals 081 124 4152. Call ahead for hours.",
+      "small_animals": true,
+      "source_url": "https://swakopmun.com/index/emergency",
+      "checked": "2026-11-13",
+      "note": "Re-checked 2026-11-13: official municipal 'Municipal Services (After Hours)' list labels 064 405 207 'Swakopmund Vet' under the SPCA Swakopmund / Animal Control block; injured/sick animals line is 081 124 4152. Page gives no clinic name, address or hours; the 24/7 note is generic to all emergency numbers, so emergency_24h false. Kept because the number is explicitly labelled vet."
+    }
+  ],
+  "notes": "Research 2026-11-13. Very little verifiable data: WebFetch only allowed URLs surfaced by search results, and Namibian clinics rarely have own pages in search results. Blocked (PROVENANCE_REQUIRED, not retried): animalhospital.com.na, spcawindhoek.org.na. Not found/opened: Namibia Veterinary Association site, Veterinary Council of Namibia register, any clinic in Swakopmund/Walvis Bay (only a Google business listing for Coastal Pets Vet Shop, not used), Oshakati, Ondangwa, Otjiwarongo, Rundu, Katima Mulilo (UNAM consultation room opened but no contacts or small-animal statement), Keetmanshoop, Luderitz, Mariental, Tsumeb, Grootfontein, Etosha area, Gobabis. No duty rota and no animal poison line found. Directory aggregators (my.na, dnb, goafrica) not used as sole sources. The Department of Veterinary Services (Windhoek, +264 61 208 7505) is a regulator only. Follow-up: Windhoek Animal Hospital 24/7 claim needs own-site confirmation."
+}
