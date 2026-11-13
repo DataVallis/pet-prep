@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `norwich_terrier` (viri S811–S817; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S813) |
 | Izvor | FCI št. 72 »Norwich Terrier«, skupina 3, sekcija 2 (mali terierji), Velika Britanija (S811, S812) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 104. mesto »Norwich Terrier« (S174, zapisano 2026-11-12) |
-| PR-ji | pet-prep #1097 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-norwich-terrier` |
+| PR-ji | pet-prep #1097 (pasma, združen `1a8f964`) · portret pet-prep PR `feat/M5-R10-108-norwich-terrier-portrait` (zagon `breed-portraits.yml` 43341679982, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-norwich-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-108 | 2026-11-13 |
 | Česanje 2× na teden, ščetkanje zob 1× na teden, kremplji vsake 4 tedne, opomnik za kopanje vsake 3 mesece, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R19 / M5-R18 / M5-R17 | 2026-11-13 |
 | Barva (izbirnik: rdeč, pšenično rumen, črno-rjav, sivkast) | 🛠 | 💶 izziv | M5-R21 | 2026-11-13 |
-| AI portret v registru | sledi (portretni PR) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/norwich-terrier`, `/sl/zivali/psi/norwich-terier`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč, pokonci stoječa ušesa, žimasta dlaka z ovratnikom, naraven rep | — | M5-R11-04 | 2026-11-13 |
+| Stran na petprep.si (`/animals/dogs/norwich-terrier`, `/sl/zivali/psi/norwich-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

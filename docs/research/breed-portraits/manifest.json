@@ -1312,6 +1312,19 @@
             "prompt_hash": "sha256:e69875079ca0164dd2aa945a43dce380a678c71cc877262e3bfe023d01c56c4a",
             "generated_at": "2026-11-12T07:07:34+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "norwich_terrier",
+            "species": "dog",
+            "colour": "red",
+            "file": "dog/norwich-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:6364fd7f87a0e164f0f985ff5a883b8d07161cb0850940c127ea79d811507c8b",
+            "generated_at": "2026-11-13T01:02:09+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
