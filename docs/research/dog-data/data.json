@@ -56765,6 +56765,514 @@
       }
     }
   },
+  "schipperke": {
+    "_note": "Added 2026-11-13 (M5-R10-110, unattended run — appended after the Miniature Bull Terrier: AKC 2024 No. 106 'Schipperke', S174 full-list table as recorded on 2026-11-13 in row 109 '105 Miniature Bull Terrier', '106 Schipperke'). Quotes as returned by the web-fetch tool on 2026-11-13 (fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S824–S829 (reused S10, S11, S14, S24, S35, S45, S174, S771). No health percentages anywhere. Identity from the FCI nomenclature (S824, 'SCHIPPERKE (83)', Group 1 Section 1 Sheepdogs, Belgium); FCI-Standard N° 83 English PDF (S825, valid standard 28.07.2009, English 20.01.2010). RKC Breeds A–Z page (S826, royalkennelclub.com — reached through a search result; the thekennelclub.org.uk addresses redirect and were refused): key facts, Breed Watch Category 1, Good Practice 'Prioritising genetic diversity', Best Practice MPS IIIB and T-box DNA tests. The RKC breed-standard page returned a client error. Weight from the FCI standard 'Between 3 and 9 kg.' (one range for both sexes). Lifespan: McMillan et al. 2024 results text (S771, nature.com PDF) 'Schipperke (x̃ = 14.2, HR 0.6, 0.4–0.9)' → senior 128 (Border Terrier precedent). No PDSA / Woodgreen / Dogs Trust breed page found (searched 2026-11-13). Coren rank 15 (S35) → Excellent → 1.5. Names: FCI / RKC / AKC 'Schipperke'; Slovenian name »schipperke« (no KZS page read — open for David).",
+    "identity": {
+      "value": "FCI No. 83, Group 1 Section 1 (Sheepdogs), Belgium",
+      "unit": "—",
+      "source_id": "S824",
+      "quote": "Group : n°1 - Chiens de berger et de bouvier (sauf chiens de bouvier suisses)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S824, as returned): 'SCHIPPERKE (83)', section 'Chiens de berger', country of origin 'BELGIQUE', valid standard published 28/07/2009, recognised on a definitive basis 27/10/1954. FCI-Standard N° 83 (S825): 'ORIGIN: Belgium.' 'FCI-CLASSIFICATION: Group 1 Sheep and cattle dog (except Swiss cattle dogs). Section 1 Sheepdog. Without working trial.' Belgium is already in FCI_ORIGINS (BE)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S826",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S826) 'Small'; FCI (S825) 'a sheepdog of small dimensions but very solidly built' (fragment); 3–9 kg (S825) / PetMD 10–16 lb (S827) → the 'Small (12–24 pounds)' class of S10 — used for growth."
+    },
+    "height": {
+      "petmd": {
+        "value": {
+          "male": [
+            25,
+            33
+          ],
+          "female": [
+            25,
+            33
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S827",
+        "quote": "This small black dog breed weighs 10–16 pounds and stands 10–13 inches tall at the shoulder.",
+        "confidence": "medium",
+        "notes": "PetMD (S827, tier B): 10–13 in = 25.4–33.0 cm → 25–33 cm (one range for both sexes, stored per sex). The FCI standard (S825) gives no height, only proportions: 'Height at withers equals length of body, hence this is a squarely built dog.' VCA (S828) '10 to 13 inches' agrees."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            3,
+            9
+          ],
+          "female": [
+            3,
+            9
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S825",
+        "quote": "Between 3 and 9 kg. An average weight of 4 to 7 kg is sought after.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 83 (S825): one range for both sexes (stored per sex); faults: 'Weight: Clearly outside the designated limits.' Alternatives: PetMD (S827) 10–16 lb (4.5–7.3 kg); VCA (S828) '16 to 18 pounds'; Wikipedia (S829, tier C) 3–9 kg."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD's 10–16 lb (S827) sits around the Toy / Small border; the Small class is used (RKC 'Size: Small'). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Schipperke growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.2,
+        "unit": "years",
+        "source_id": "S771",
+        "quote": "Schipperke (x̃ = 14.2, HR 0.6, 0.4–0.9)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep, S771) results text as returned on 2026-11-13 — among the breeds least at risk from early death. Runbook first choice (McMillan 2024) → not provisional. The Dogs Trust table (S123) was not fetched (provenance); no CI / n here. Wikipedia (S829, tier C) cites an older Kennel Club survey median of 13 years — background."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S826",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S826, value as returned). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–16",
+        "unit": "years",
+        "source_id": "S827",
+        "quote": "have a long lifespan",
+        "confidence": "medium",
+        "notes": "PetMD (S827, tier B, US), fragment as returned; the page gives 12–16 years (paraphrase of the number line). VCA (S828) '12 to 15 years'."
+      },
+      "senior_from": {
+        "value": 10.65,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 14.2 y (McMillan 2024, S771) → 0.75 × 14.2 = 10.65 y = 127.8 → 128 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S771"
+        ],
+        "months": 128,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S826",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S826), runbook first choice → 60 min ('up to N' → N). PetMD (S827) 'Take your Schipperke on frequent walks.' and VCA (S828) 'High - needs to walk every day, plus some running and play' give no number."
+      },
+      "daily_text": {
+        "value": "lively — frequent walks plus activities that keep mind and body busy",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "require activities that keep their mind engaged and their body active",
+        "confidence": "high",
+        "notes": "PetMD (S827, fragment). Basis of needs_mental_stimulation together with the time-alone sentence (behaviour.time_alone)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row. PetMD (S827): adults fed twice a day, puppies at least three meals a day (paraphrase)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "excellent small guard dog, exceptional alarm, bubbling with vitality, aloof with strangers",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "An excellent small guard dog, an exceptional alarm, bubbling with vitality, aloof with strangers.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 83 (S825). The standard also says it is 'inclined to snap if anyone approaches objects it has been given to guard' (fragment). VCA (S828) 'With Strangers: Protective'."
+      },
+      "family": {
+        "value": "loves its family and responds well to them, including the children",
+        "unit": "—",
+        "source_id": "S828",
+        "quote": "loves his family and responds to them quite well, including the children",
+        "confidence": "medium",
+        "notes": "VCA (S828, fragment). Basis of family_pet."
+      },
+      "children": {
+        "value": "very gentle with children",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "very gentle with children",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 83 (S825, fragment) — explicit statement → children (supervision is always advised in the app). PetMD (S827): 'They are affectionate and patient with children who are gentle with pets.'; VCA (S828) 'With Kids: Fine if raised with them' — caveats → no small_children."
+      },
+      "other_pets": {
+        "value": "some keep a high prey drive and chase small birds, rodents, reptiles and sometimes cats",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "some Schipperkes maintain a high prey drive and will chase small birds, rodents, reptiles, and (sometimes) cats.",
+        "confidence": "high",
+        "notes": "PetMD (S827, fragment); 'they may not do well in homes with smaller pets' (fragment). A quote naming a high prey drive → chases_small_pets (runbook). VCA (S828) 'He's also good with other animals' conflicts → no other_pets chip."
+      },
+      "time_alone": {
+        "value": "bored when left alone for long periods without anything to do — destructive",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "If they are left alone for long periods without anything to keep their brain busy, you'll probably come home to shredded pillows or a dug-up flower bed.",
+        "confidence": "high",
+        "notes": "PetMD (S827). Basis of needs_mental_stimulation (not needs_company — the sentence is about boredom)."
+      },
+      "socialisation": {
+        "value": "begin obedience training and socialisation at an early age",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Like all dogs, Schipperkes should begin obedience training and socialization at an early age.",
+        "confidence": "high",
+        "notes": "PetMD (S827); 'They should be exposed to children, cats, and other dogs in a supervised setting early as well.' A need (runbook M5-R17) → proposed_game_parameters.schipperke.socialisation (DOG_SOCIALISATION row)."
+      },
+      "training": {
+        "value": "remarkably intelligent but not always easy to train; strong-willed",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Despite their remarkable intelligence, Schipperkes are not always easy to train.",
+        "confidence": "medium",
+        "notes": "PetMD (S827); 'They can be strong-willed and may get bored with standard training.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PetMD: shredded pillows when bored — see time_alone)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S826) — no welfare chip. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice DNA tests for MPS IIIB and T-box (bob tail) (S826). PetMD (S827) names patellar luxation, Legg-Calvé-Perthes disease, progressive retinal atrophy, hypothyroidism and dental disease; VCA (S828) dermatological disorders, epilepsy and cataracts (summary only).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Currently no points of concern specific to this breed have been identified",
+        "confidence": "high",
+        "notes": "RKC breed page (S826, fragment). Not a welfare breed."
+      },
+      "mps_iiib": {
+        "value": "mucopolysaccharidosis type IIIB — DNA test for breeders",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "DNA test for Mucopolysaccharidosis (MPSIIIB)",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S826). Register health key mucopolysaccharidosis."
+      },
+      "patella": {
+        "value": "patellar luxation (kneecap dislocation)",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Patellar Luxation",
+        "confidence": "medium",
+        "notes": "PetMD (S827) health heading. Register health key kneecap_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease (hip)",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Legg-Calvé-Perthes Disease",
+        "confidence": "medium",
+        "notes": "PetMD (S827) health heading. Register health key legg_calve_perthes."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (eyes)",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Progressive Retinal Atrophy",
+        "confidence": "medium",
+        "notes": "PetMD (S827) health heading. Register health key progressive_retinal_atrophy."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Hypothyroidism",
+        "confidence": "medium",
+        "notes": "PetMD (S827) health heading. Register health key hypothyroidism."
+      },
+      "dental": {
+        "value": "dental disease — daily tooth brushing is the best prevention",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "The best way to prevent dental disease is with daily tooth brushing.",
+        "confidence": "high",
+        "notes": "PetMD (S827). Register health key dental_disease. Basis of the daily tooth brushing (proposed_game_parameters.schipperke.tooth_brushing)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 15,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Schipperke",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-13): '| 15 | Schipperke | Excellent Working Dogs …' (as returned; rank shared with the Belgian Sheepdog). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 11–26 (as returned: 'Excellent Working Dogs')."
+      },
+      "training_notes": {
+        "value": "intelligent but strong-willed; may get bored with standard training",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "They can be strong-willed and may get bored with standard training.",
+        "confidence": "medium",
+        "notes": "PetMD (S827) — see behaviour.training."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.schipperke.learning_multiplier (1.5, runbook rule: Excellent tier, rank 15).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "lupoid small sheepdog, very solidly built and squarely proportioned, with a characteristic ruff, mane, frill and culottes",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Lupoid. The Schipperke is a sheepdog of small dimensions but very solidly built.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 83 (S825); 'Its coat is very characteristic, well-furnished and with straight hair, forming a ruff, a mane, a frill and culottes which give it its truly unique outline.' 'Height at withers equals length of body, hence this is a squarely built dog.'"
+      },
+      "colours": {
+        "value": [
+          "black"
+        ],
+        "unit": "list",
+        "source_id": "S825",
+        "quote": "Totally black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 83 (S825): 'The undercoat need not be completely black but can also be dark grey provided it is totally hidden by the top coat. A little greying for example on the muzzle due to age is tolerated.' Disqualifying: 'Topcoat of any other colour than black (except grey, brownish or reddish tones) or with tiny white spots, even on the toes.' Black only in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): black 1.0 (the only standard colour — the portrait default)."
+      },
+      "coat": {
+        "value": "abundant, thick, straight, fairly harsh top coat; very short on the ears, short on the head; ruff, mane, frill and culottes",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "The top coat is abundant, thick, straight and sufficiently harsh, with quite firm texture, therefore dry and resistant to the touch.",
+        "confidence": "high",
+        "notes": "FCI (S825); 'Very short hair on the ears, short hair on the head.' RKC key fact 'Coat length: Medium' (S826)."
+      },
+      "head": {
+        "value": "lupoid, wedge-shaped head, pronounced but not exaggerated stop, muzzle about 40 % of the head length",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Lupoid, wedge-shaped, but not too long and wide enough to balance with the body.",
+        "confidence": "high",
+        "notes": "FCI (S825): stop 'Pronounced but not exaggerated.'; muzzle 'not too long, and not truncated' (fragment). Not flat-faced."
+      },
+      "eyes": {
+        "value": "dark brown, small, almond-shaped, lively and mischievous",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Dark brown in colour, small, almond-shaped, neither sunken nor protruding; sharp, lively and mischievous look, black-rimmed eyelids.",
+        "confidence": "high",
+        "notes": "FCI (S825)."
+      },
+      "ears": {
+        "value": "erect, very small, pointed, triangular, set high, very mobile",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Erect, very small, pointed, triangular (as far as possible equilateral), set high but not too close to each other, firm and extremely mobile.",
+        "confidence": "high",
+        "notes": "FCI (S825); falling or semi-erect ears disqualify."
+      },
+      "tail": {
+        "value": "natural tail reaching at least to the hock; some are born tailless or with a short tail",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Some dogs are born completely tailless or with a rudimentary or incomplete tail (stumpy or short tail). They should not be penalized for this.",
+        "confidence": "high",
+        "notes": "FCI (S825); a natural tail 'reaching at least to the hock' (fragment). The history section says the tail was formerly docked (paraphrase). The game shows the natural tail (the RKC Best Practice T-box DNA test, S826, concerns the natural bob tail)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S826), PetMD (S827) and VCA (S828). RKC key facts reached on 2026-11-13. No PDSA / Woodgreen / Dogs Trust page for the breed.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S826) → small (size class)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S826) → 60 min. Not long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S826). Basis of apartment (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S826). Background."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S826) — no number → the most specific number of another A/B source: VCA (S828) 'at least twice a week' → 2 (runbook »Dog grooming«); PetMD 'Weekly brushing' (1) in alternatives. With the shedding seasons → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S826)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S826). Basis of the sheds chip; PetMD 'heavy shedding periods' (S827) agrees."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S826). McMillan 2024 (S771) 14.2 y is the senior basis."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S826). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S826",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S826)."
+      },
+      "vca_grooming": {
+        "value": "brushed at least twice a week for fifteen minutes; daily short sessions while shedding",
+        "unit": "—",
+        "source_id": "S828",
+        "quote": "must be brushed at least twice a week for fifteen minutes",
+        "confidence": "high",
+        "notes": "VCA (S828, fragment) → 2 sessions a week (runbook »Dog grooming«: RKC has no number). 'short brushing sessions should be undertaken every day' during shedding season (fragment) — seasonal, moult is not modelled."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; at least weekly during heavy shedding",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "Weekly brushing helps keep the coat free of tangles and removes dead hair.",
+        "confidence": "high",
+        "notes": "PetMD (S827); 'They need at least weekly brushing to remove dead hairs, especially during these heavy shedding periods.' (fragment) → 1, kept as an alternative to VCA's 2. 'Schipperkes do not require professional grooming.' → no groomer task."
+      },
+      "petmd_bathing": {
+        "value": "a monthly bath at most",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "only needs a monthly bath",
+        "confidence": "high",
+        "notes": "PetMD (S827, fragment) → bath reminder every 4 weeks (proposed_game_parameters.schipperke.bathing, M5-R18 parent reminder, never scored)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every two weeks",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "cleaning the ears every two weeks for maintenance may help prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S827, fragment) → ear cleaning every 2 weeks (proposed_game_parameters.schipperke.ear_care, M5-R18 child mini-game)."
+      },
+      "petmd_teeth": {
+        "value": "daily tooth brushing",
+        "unit": "—",
+        "source_id": "S827",
+        "quote": "The best way to prevent dental disease is with daily tooth brushing.",
+        "confidence": "high",
+        "notes": "PetMD (S827) → tooth brushing every day (proposed_game_parameters.schipperke.tooth_brushing, M5-R15; Lhasa Apso precedent — 'best way' is an ideal, open for David). Nails: no frequency on the page → no task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -85018,6 +85526,291 @@
         "confidence": "high",
         "notes": "FCI-Standard N° 359 (S819). Not a welfare breed → no `muzzle` trait. Colour weights are ours (unsourced). White as the portrait default: first colour of the standard (Bull Terrier precedent).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white is the portrait default; standard colours only (white, brindle, black brindle, red, fawn, tricolour), never blue, liver or merle"
+      }
+    },
+    "schipperke": {
+      "_note": "Unattended run M5-R10-110 (2026-11-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S826 'Up to 1 hour per day' → 60). Senior 128 from McMillan 2024 (S771, 14.2 y). Coren rank 15 (Excellent) → 1.5. Built: brushing 2× a week (RKC 'More than once a week' → VCA S828 'at least twice a week', M5-R13), tooth brushing every day (M5-R15), ear cleaning every 2 weeks (M5-R18), bath reminder every 4 weeks (M5-R18), puppy socialisation with the PetMD quote (M5-R17). No meal gap, no heat warning (not flat-faced), no nail / groomer task (no frequency; PetMD 'do not require professional grooming'). No new vocabulary key. RKC Breed Watch Category 1 → in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S826",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S826) → rule 'up to N' → 60. PetMD (S827) and VCA (S828) give no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S826 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S826",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 128
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 128 = round(0.75 × 14.2 y × 12) = round(127.8) = 128 (S11 + McMillan 2024 median 14.2 y, S771). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S771"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 128 (0.75 × 14.2 y, McMillan 2024 S771)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 128
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 128)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 15 'Schipperke' (S35, checked 2026-11-13) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 15, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S828",
+        "quote": "must be brushed at least twice a week for fifteen minutes",
+        "confidence": "high",
+        "notes": "schipperke.suitability.vca_grooming. RKC 'Grooming: More than once a week' (S826) has no number → runbook dog-grooming rule: the most specific number of another A/B source — VCA (S828) 'at least twice a week' → 2 (consistent with 'more than once'); PetMD 'Weekly brushing' (S827) → 1 in alternatives. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S826",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 1,
+            "source_id": "S827",
+            "quote": "Weekly brushing helps keep the coat free of tangles and removes dead hair.",
+            "notes": "PetMD — lower number; open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → VCA »at least twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S827",
+        "quote": "The best way to prevent dental disease is with daily tooth brushing.",
+        "confidence": "medium",
+        "notes": "schipperke.suitability.petmd_teeth → every day (Lhasa Apso precedent; no lower minimum stated). Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15). Open for David: 'the best way' is an ideal, not a minimum.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily tooth brushing« → vsak dan"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          14
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S827",
+        "quote": "cleaning the ears every two weeks for maintenance may help prevent ear infections.",
+        "confidence": "high",
+        "notes": "schipperke.suitability.petmd_ears. 'every two weeks' → every 2 weeks.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two weeks«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R18)",
+        "source_id": "S827",
+        "quote": "only needs a monthly bath",
+        "confidence": "high",
+        "notes": "schipperke.suitability.petmd_bathing. 'monthly' → every 4 weeks (Japanese Chin precedent). Nails: no frequency; groomer: 'Schipperkes do not require professional grooming.' → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »only needs a monthly bath«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S827",
+        "quote": "Like all dogs, Schipperkes should begin obedience training and socialization at an early age.",
+        "confidence": "high",
+        "notes": "schipperke.behaviour.socialisation (PetMD S827, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S827)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-110); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S826"
+            ],
+            "refs": [
+              "schipperke.suitability.rkc_size_of_home"
+            ],
+            "quote": "S826 'Size of home: Flat/ Apartment'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S828"
+            ],
+            "refs": [
+              "schipperke.behaviour.family"
+            ],
+            "quote": "S828 'loves his family and responds to them quite well, including the children'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S825"
+            ],
+            "refs": [
+              "schipperke.behaviour.children"
+            ],
+            "quote": "S825 'very gentle with children'",
+            "note": "Supervision is always advised in the app; no small_children (PetMD / VCA caveats)."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S827"
+            ],
+            "refs": [
+              "schipperke.exercise.daily_text",
+              "schipperke.behaviour.time_alone"
+            ],
+            "quote": "S827 'require activities that keep their mind engaged and their body active'; S827 'If they are left alone for long periods without anything to keep their brain busy, you'll probably come home to shredded pillows or a dug-up flower bed.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S826"
+            ],
+            "refs": [
+              "schipperke.suitability.rkc_shedding"
+            ],
+            "quote": "S826 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S826",
+              "S828"
+            ],
+            "refs": [
+              "schipperke.suitability.rkc_grooming",
+              "schipperke.suitability.vca_grooming"
+            ],
+            "quote": "S826 'Grooming: More than once a week'; S828 'must be brushed at least twice a week for fifteen minutes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S827"
+            ],
+            "refs": [
+              "schipperke.behaviour.other_pets"
+            ],
+            "quote": "S827 'some Schipperkes maintain a high prey drive and will chase small birds, rodents, reptiles, and (sometimes) cats.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating without a caveat (PetMD 'children who are gentle with pets', VCA 'Fine if raised with them').",
+          "other_pets": "VCA 'good with other animals' vs PetMD 'high prey drive' (S827) — conflicting → no chip.",
+          "needs_company": "The PetMD time-alone sentence is about boredom → needs_mental_stimulation, not needs_company.",
+          "long_daily_exercise": "Up to 1 hour a day (S826).",
+          "shorter_lifespan": "RKC 'Over 12 years'; McMillan 14.2 y.",
+          "welfare_chip": "RKC Breed Watch Category 1 (S826) — no points of concern.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider needs_mental_stimulation, sheds, frequent_grooming, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI S825 muzzle 'not too long, and not truncated'); RKC Breed Watch Category 1 (S826) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Schipperke, black (the only standard colour): small, lupoid, very solidly and squarely built sheepdog; abundant straight harsh black coat forming a ruff, mane, frill and culottes, short on the head; wedge-shaped fox-like head, pronounced but not exaggerated stop, black nose; small dark brown almond-shaped lively eyes; erect, very small, pointed triangular ears set high; natural tail",
+        "unit": "—",
+        "source_id": "S825",
+        "quote": "Totally black.",
+        "confidence": "high",
+        "notes": "FCI (S825). Not a welfare breed → no `muzzle` trait. Colour weight is ours (unsourced). Natural tail (born tailless or with a short tail is allowed, S825).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (the only standard colour); erect small ears, ruff and culottes, natural tail, no white spots"
       }
     }
   }
