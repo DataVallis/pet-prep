@@ -110,6 +110,7 @@ return [
     'japanese_chin' => 'Japanese Chin',
     'norwich_terrier' => 'Norwich Terrier',
     'miniature_bull_terrier' => 'Miniature Bull Terrier',
+    'schipperke' => 'Schipperke',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

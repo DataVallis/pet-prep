@@ -3906,6 +3906,39 @@
         }
       ],
       "notes": "RKC breed page (dog-data S820, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the PLL DNA test and the BVA/KC/ISDS eye scheme. The page also points to a breed club health scheme (heart and kidney disease pages on miniaturebullterrierclub.org, not read) and says interbreeding with the Bull Terrier needs approval and merle puppies are not registered (paraphrase). No new test key."
+    },
+    "schipperke": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S826",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S826",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_mps3b",
+          "level": "best_practice",
+          "name": "DNA test for Mucopolysaccharidosis (MPSIIIB)",
+          "source_id": "S826",
+          "quote": "DNA test for Mucopolysaccharidosis (MPSIIIB)"
+        },
+        {
+          "key": "dna_tbox",
+          "level": "best_practice",
+          "name": "DNA test for T-box (bob tail)",
+          "source_id": "S826",
+          "quote": "DNA test for T-box (bob tail)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S826, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the DNA tests for MPS IIIB and T-box (bob tail). Two new test keys (dna_mps3b, dna_tbox). PetMD (S827) names no breeder tests."
     }
   }
 }

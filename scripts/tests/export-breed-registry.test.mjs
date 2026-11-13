@@ -216,6 +216,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.japanese_chin.slug, { en: 'japanese-chin', sl: 'japonski-cin' });
   assert.deepEqual(byId.norwich_terrier.slug, { en: 'norwich-terrier', sl: 'norwich-terier' });
   assert.deepEqual(byId.miniature_bull_terrier.slug, { en: 'miniature-bull-terrier', sl: 'miniaturni-bulterier' });
+  assert.deepEqual(byId.schipperke.slug, { en: 'schipperke', sl: 'schipperke' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -414,6 +415,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     japanese_chin: { adult: 3000, senior: 2300, seniorFrom: 113, learning: 0.7 },
     norwich_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1.2 },
     miniature_bull_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
+    schipperke: { adult: 6000, senior: 4500, seniorFrom: 128, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -3428,4 +3430,31 @@ test('Miniature Bull Terrier (M5-R10-109): RKC up to 1 hour, PetMD weight / heig
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, never merle / blue / liver.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|\bblue\b|\bliver\b/i);
+});
+
+test('Schipperke (M5-R10-110): RKC up to 1 hour, FCI standard weight / PetMD height, group 1 section 1 Belgium, McMillan 14.2 y + RKC "over 12", senior 128, Coren 15 → 1.5, brushing 2× a week, teeth daily + ears every 2 weeks + bath every 4 weeks, no heat warning, RKC genetic diversity + MPS IIIB + T-box', () => {
+  const d = registry.breeds.find((b) => b.id === 'schipperke');
+  assert.deepEqual(d.name, { en: 'Schipperke', sl: 'Schipperke' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.ok(d.synonyms.en.includes('Little Captain'));
+  assert.ok(d.synonyms.sl.includes('šiperke'));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S826']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 83, group: 1, section: 1, origin: 'BE' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [3, 9], female: [3, 9] }, ['S825']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [25, 33], female: [25, 33] }, ['S827']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.source_ids]), [['median', ['S771']], ['more_than', ['S826']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 15);
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 128 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1.5 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 2 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.times, r.params.period_days]), [['tooth_brushing', 7, 7], ['ear_cleaning', 1, 14], ['bath', 1, 28]]);
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'sheds', 'frequent_grooming', 'chases_small_pets']);
+  assert.deepEqual(d.health.map((h) => h.key), ['mucopolysaccharidosis_mps3b', 'kneecap_luxation', 'legg_perthes', 'pra_inherited_blindness', 'hypothyroidism', 'dental_disease_home_brushing']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['inbreeding_coi', 'minimum'], ['dna_mps3b', 'best_practice'], ['dna_tbox', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage, never merle / brindle.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
 });

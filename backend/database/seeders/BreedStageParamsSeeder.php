@@ -1313,6 +1313,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_MINIATURE_BULL_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-109)';
 
     /**
+     * M5-R10-110 Schipperke (unattended run 2026-11-13, data.json proposed_game_parameters.schipperke.*.decision): every
+     * value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S826 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages young 9 /
+     * adult 36 / senior 128 (0.75 × McMillan 2024 median 14.2 y, S771), arrival 2 / 9 / 36 / 128, learning multiplier 1.5
+     * (Coren rank 15, Excellent, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SCHIPPERKE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-110)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1658,6 +1667,11 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'month', 'S814', 'While most dogs will wear their nails down naturally, a little parental intervention may be necessary about once a month.', 'proposed_game_parameters.norwich_terrier.nail_trimming', '"about once a month" → every 4 weeks'],
             'bath' => [1, 'three_months', 'S814', 'Baths should be limited to once every three months, as too much bathing can irritate their skin.', 'proposed_game_parameters.norwich_terrier.bathing', '"once every three months" → every 12 weeks (ears "regularly" and hand stripping "a few times a year" have no number → no task)'],
         ],
+        'schipperke' => [
+            'tooth_brushing' => [7, 'day', 'S827', 'The best way to prevent dental disease is with daily tooth brushing.', 'proposed_game_parameters.schipperke.tooth_brushing', '"daily tooth brushing" ("the best way") → every day (no lower minimum stated — open for David)'],
+            'ear_cleaning' => [1, 'two_weeks', 'S827', 'cleaning the ears every two weeks for maintenance may help prevent ear infections.', 'proposed_game_parameters.schipperke.ear_care', '"every two weeks" → every 2 weeks'],
+            'bath' => [1, 'month', 'S827', 'only needs a monthly bath', 'proposed_game_parameters.schipperke.bathing', '"a monthly bath" → every 4 weeks (nails: no frequency; "Schipperkes do not require professional grooming." → no groomer task)'],
+        ],
     ];
 
     /**
@@ -1787,6 +1801,7 @@ class BreedStageParamsSeeder extends Seeder
         'japanese_chin' => [2, 'S809', 'Brushing your pup once or twice a week, along with as-needed baths, will keep your Japanese Chin looking their best.', 'high', false],
         'norwich_terrier' => [2, 'S814', 'Routine coat care for Norwich Terriers includes regular brushing (at least twice a week)', 'high', false],
         'miniature_bull_terrier' => [1, 'S820', 'Grooming: Once a week', 'high', false],
+        'schipperke' => [2, 'S828', 'must be brushed at least twice a week for fifteen minutes', 'high', false],
     ];
 
     /**
@@ -1960,13 +1975,14 @@ class BreedStageParamsSeeder extends Seeder
         'japanese_chin' => ['S809', 'enroll your Japanese Chin puppy in socialization classes at an early age (before they’re 12–16 weeks old)'],
         'norwich_terrier' => ['S814', 'Socializing your Norwich Terrier puppy from an early age is crucial'],
         'miniature_bull_terrier' => ['S821', 'need early socialization to adapt well to new situations.'],
+        'schipperke' => ['S827', 'Like all dogs, Schipperkes should begin obedience training and socialization at an early age.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2794,6 +2810,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::JapaneseChin => self::japaneseChinProfile(),
             BreedType::NorwichTerrier => self::norwichTerrierProfile(),
             BreedType::MiniatureBullTerrier => self::miniatureBullTerrierProfile(),
+            BreedType::Schipperke => self::schipperkeProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10468,6 +10485,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'miniature_bull_terrier.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC lower bound (S820) — the runbook\'s third choice after McMillan 2024 and a VetCompass median (neither reachable). PetMD 11–13 y (S821). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Schipperke (M5-R10-110). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_SCHIPPERKE); weight, growth, Coren rank and lifespan are sourced. The senior
+     * boundary uses the McMillan 2024 median 14.2 y (S771).
+     *
+     * @return array<string, mixed>
+     */
+    private static function schipperkeProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SCHIPPERKE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S771', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.schipperke.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [128, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 14.2 y (S771) = 10.65 y = 127.8 → 128 months. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 128],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.schipperke.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S826', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.schipperke.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S826) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PetMD (S827) and VCA (S828) give no number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.schipperke.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3, 9], [
+                'unit' => 'kg', 'source_id' => 'S825', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'schipperke.adult_weight.fci',
+                'quote' => 'Between 3 and 9 kg. An average weight of 4 to 7 kg is sought after.',
+                'notes' => 'FCI-Standard N° 83 (S825): one range for both sexes. PetMD (S827) 10–16 lb, VCA (S828) 16–18 lb.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'schipperke.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Size: Small", S826; PetMD 10–16 lb, S827 → the Small class of S10).',
+            ]],
+            'coren_rank' => [15, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'schipperke.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, read 2026-11-13): rank 15, "Excellent Working Dogs" (ranks 11–26).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.schipperke.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 15 (S35) → "Excellent" tier (ranks 11–26) → 1.5 (PetMD S827: remarkable intelligence, but strong-willed). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [14.2, [
+                'unit' => 'years', 'source_id' => 'S771', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'schipperke.lifespan.median_uk',
+                'quote' => 'Schipperke (x̃ = 14.2, HR 0.6, 0.4–0.9)',
+                'notes' => 'McMillan et al. 2024 median (S771, results text). RKC "Over 12 years" (S826), PetMD 12–16 years (S827). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
