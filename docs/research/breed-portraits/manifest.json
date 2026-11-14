@@ -1351,6 +1351,19 @@
             "prompt_hash": "sha256:480318b03cde01d5dde446416126c360f1f16aeefdeba2601c7621a0f367ba83",
             "generated_at": "2026-11-13T06:50:40+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "belgian_tervuren",
+            "species": "dog",
+            "colour": "fawn",
+            "file": "dog/belgian-tervuren.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1d8236318ad29b7045f2892f815ba6deec75051d6ec0cf07c2c5a6a22e67105d",
+            "generated_at": "2026-11-14T01:01:20+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
