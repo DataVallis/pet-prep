@@ -1,0 +1,138 @@
+{
+  "slug": "tofu",
+  "species": "dog",
+  "name": {
+    "en": "Tofu",
+    "sl": "Tofu"
+  },
+  "question": {
+    "en": "Can dogs eat tofu?",
+    "sl": "Ali lahko psi jedo tofu?"
+  },
+  "url_slug": {
+    "en": "tofu",
+    "sl": "tofu"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation. Tofu is not toxic to dogs and can be an occasional snack, but it shouldn't be a main part of your dog's diet. Give only plain, unsalted, fully cooked tofu, and avoid it if your dog has a soy allergy.",
+    "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo."
+  },
+  "why": {
+    "en": "Tofu is made from soybeans but doesn't contain enough protein to meet a dog's needs, so it shouldn't replace dog food. Many dogs find tofu hard to digest and produce a lot of gas, so dogs with a history of bloat or breeds at higher risk should avoid it. Tofu is high in silicate, which may make kidney stones more likely, and soy contains phytoestrogens, which in large amounts could affect a male dog's hormone balance.",
+    "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog has a soy allergy or sensitivity, don't give tofu. Talk to your vet before changing your dog's diet, especially if your dog has had digestive problems.",
+    "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave."
+  },
+  "serving": {
+    "en": "Plain and unsalted, not flavoured, with no onion or garlic. Make sure it is fully cooked and has cooled. Give small amounts as an occasional snack.",
+    "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Dogs can try a little plain tofu as a treat now and then, but their main food should still be dog food.",
+    "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can tofu replace meat in my dog's diet?",
+        "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?"
+      },
+      "a": {
+        "en": "No. Tofu doesn't contain enough protein for a dog's needs. For main meals, feed a vet-recommended dog food.",
+        "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD219",
+      "quote": "a complete vegan protein made from soybeans"
+    },
+    {
+      "id": "KD219",
+      "quote": "Dogs can eat tofu in moderation as it is not toxic to them"
+    },
+    {
+      "id": "KD219",
+      "quote": "it does not contain enough protein to fulfill their nutritional requirements,"
+    },
+    {
+      "id": "KD219",
+      "quote": "you should not use tofu protein as a primary ingredient in your dog’s diet."
+    },
+    {
+      "id": "KD219",
+      "quote": "feed your dog veterinarian-recommended commercial dog food, which contains sufficient protein for proper health."
+    },
+    {
+      "id": "KD219",
+      "quote": "If your dog has a soy allergy or any kind of soy sensitivity, you should avoid feeding tofu to your dog."
+    },
+    {
+      "id": "KD219",
+      "quote": "many dogs may have difficulty processing tofu and will produce a lot of gas,"
+    },
+    {
+      "id": "KD219",
+      "quote": "Dogs with a history of bloat or breeds at a heightened risk of bloat should avoid snacks"
+    },
+    {
+      "id": "KD219",
+      "quote": "that naturally produce excess gas like tofu."
+    },
+    {
+      "id": "KD219",
+      "quote": "Tofu is also high in silicate, which can result in dogs being more likely to develop kidney stones."
+    },
+    {
+      "id": "KD219",
+      "quote": "Dr. Klein explains that soy contains phytoestrogens."
+    },
+    {
+      "id": "KD219",
+      "quote": "He notes that studies show that if fed in large amounts, soy could affect a male dog’s hormone balance"
+    },
+    {
+      "id": "KD219",
+      "quote": "Only use plain, unsalted varieties of tofu, rather than flavored ones."
+    },
+    {
+      "id": "KD219",
+      "quote": "ingredients that are toxic to dogs, such as onions and garlic."
+    },
+    {
+      "id": "KD219",
+      "quote": "Ensure that any tofu is fully cooked and has had time to cool before serving it to your dog."
+    },
+    {
+      "id": "KD219",
+      "quote": "can be given in small or moderate amounts as an occasional snack."
+    },
+    {
+      "id": "KD219",
+      "quote": "consult your veterinarian before changing your dog’s diet, especially if they have a history of digestive issues."
+    }
+  ],
+  "related": [
+    "edamame",
+    "soy-sauce",
+    "green-beans"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4dde6e3ac9e275cd9c8fe0f46a5a02ef8db49a923220eb74c4dd01b0ba033fd8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b76d47b87761d60242ec159b117a860a14947b51a9de4421571a858592d698a"
+    }
+  }
+}

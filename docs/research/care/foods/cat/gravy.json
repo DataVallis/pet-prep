@@ -1,0 +1,136 @@
+{
+  "slug": "gravy",
+  "species": "cat",
+  "name": {
+    "en": "Gravy",
+    "sl": "Mesna omaka"
+  },
+  "question": {
+    "en": "Can cats eat gravy?",
+    "sl": "Ali lahko mačke jedo mesno omako?"
+  },
+  "url_slug": {
+    "en": "gravy",
+    "sl": "mesna-omaka"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, gravy made for people is not for cats. It is usually salty and often contains onion, garlic and seasoning, and onion and garlic are toxic to cats. Gravy can also be high in fat. Keep it off your cat's plate.",
+    "sl": "Ne, omaka, pripravljena za ljudi, ni za mačke. Običajno je slana in pogosto vsebuje čebulo, česen in začimbe, čebula in česen pa sta za mačke strupena. Omaka ima lahko tudi veliko maščobe. Mački je ne dajajte."
+  },
+  "why": {
+    "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. ASPCA predlaga, da hišnemu ljubljenčku praznično večerjo prelijete s kančkom omake, Cats Protection pa opozarja, da je omaka, pripravljena za ljudi, običajno slana ter vsebuje česen in začimbe, PDSA pa pravi, da nadev in omaka pogosto vsebujeta čebulo, por in česen, ki so lahko za mačke in pse smrtno nevarni. Čebula, česen, drobnjak in por so za mačke strupeni tudi kuhani ali posušeni. RSPCA dodaja, da omaka lahko vsebuje veliko soli in maščob, ASPCA pa opozarja, da jušne kocke, ki se uporabljajo za pripravo omake, vsebujejo veliko natrija."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Tummy upset"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate gravy that may contain onion or garlic, contact your vet as soon as possible. If you think she ate other leftovers too, tell your vet what she ate.",
+    "sl": "Če je mačka pojedla omako, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če mislite, da je pojedla tudi druge ostanke hrane, veterinarju povejte, kaj je pojedla."
+  },
+  "serving": null,
+  "child": {
+    "en": "Gravy is a people food with salt and onion in it. Kitty's own cat food is the best choice for her.",
+    "sl": "Omaka je hrana za ljudi, v njej sta sol in čebula. Za muco je najboljša njena mačja hrana."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What can my cat have from the holiday dinner instead?",
+        "sl": "Kaj lahko mačka namesto tega dobi s praznične večerje?"
+      },
+      "a": {
+        "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
+        "sl": "PDSA pravi, da majhna rezina purana brez kože in kosti ter kuhana zelenjava brez omak ne bi smeli povzročiti težav. Omako izpustite."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC26",
+      "quote": "Gravy made for humans. This is usually salty and contains garlic and seasoning"
+    },
+    {
+      "id": "KC26",
+      "quote": "Seasonings like garlic and onion can be fatal to cats."
+    },
+    {
+      "id": "KC25",
+      "quote": "Stuffing and gravy often contain onion, leeks and garlic, which can be deadly to both cats and dogs."
+    },
+    {
+      "id": "KC4",
+      "quote": "but garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC4",
+      "quote": "Onions (including spring onions and shallots) are the most toxic allium for cats,"
+    },
+    {
+      "id": "KC76",
+      "quote": "Gravy can contain high levels of salt and fat, which can be dangerous for pets."
+    },
+    {
+      "id": "KC117",
+      "quote": "Bouillon cubes used for making stocks and gravy contain high amounts of sodium"
+    },
+    {
+      "id": "KC117",
+      "quote": "gastrointestinal problems and even seizures."
+    },
+    {
+      "id": "KC117",
+      "quote": "You can even top it off with a drizzle of gravy."
+    },
+    {
+      "id": "KC125",
+      "quote": "Onion/garlic (the flavoring in many prepared dishes can cause vomiting, diarrhea)"
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC76",
+      "quote": "If you think your cat or dog has eaten your Christmas leftovers, contact your vet."
+    },
+    {
+      "id": "KC25",
+      "quote": "a small slice of skin and bone-free turkey (pick the white meat for them)"
+    },
+    {
+      "id": "KC25",
+      "quote": "and boiled vegetables without any sauces shouldn't cause problems."
+    }
+  ],
+  "related": [
+    "onion",
+    "garlic",
+    "salt",
+    "turkey",
+    "fatty-meat"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "31936dfac5d3780ed20deb1169daf2c8be17627d838239ae25806e95e925db22"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef70f4fbe2d852eae9a446a774f130a485c260f133a818b96807d86978950fe1"
+    }
+  }
+}

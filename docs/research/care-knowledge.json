@@ -3022,6 +3022,81 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "broth",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Broth and stock",
+        "sl": "Mesna juha in osnova"
+      },
+      "question": {
+        "en": "Can cats have broth?",
+        "sl": "Ali lahko mačke jedo mesno juho?"
+      },
+      "url_slug": {
+        "en": "broth",
+        "sl": "mesna-juha"
+      },
+      "answer": {
+        "en": "Yes, a little plain broth is fine. Vets suggest a small amount of low-sodium chicken broth with no added spices to flavour a cat's water. Broth or stock cubes made for people can be very salty and may contain onion or garlic, which are toxic to cats.",
+        "sl": "Da, malo navadne mesne juhe je v redu. Veterinarji predlagajo majhno količino piščančje juhe z malo soli in brez dodanih začimb, s katero mački izboljšate okus vode. Juha ali jušne kocke za ljudi so lahko zelo slane in lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+      },
+      "why": {
+        "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
+        "sl": "Cornell Feline Health Center navaja, da lahko majhna količina piščančje juhe z malo natrija v vodi mačko spodbudi, da pije več, VCA pa predlaga piščančjo juho z malo natrija in brez dodanih začimb. Jušne kocke, ki se uporabljajo za pripravo osnov, vsebujejo veliko natrija. Čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, sta za mačke strupena tudi kuhana ali posušena. Veterinarji z univerze Tufts svetujejo, da natančno preberete seznam sestavin kupljenih juh."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your cat drank broth or stock that contains onion or garlic, contact your vet as soon as possible.",
+        "sl": "Če je mačka popila juho ali osnovo, ki vsebuje čebulo ali česen, čim prej pokličite veterinarja."
+      },
+      "serving": {
+        "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
+        "sl": "Le navadna juha z malo soli, brez čebule, česna ali dodanih začimb, malo primešana mački v vodo. Najvarnejša domača juha je nezačinjeno meso, kuhano v navadni vodi. Jušnih kock ne uporabljajte."
+      },
+      "child": {
+        "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
+        "sl": "Odrasli lahko muci v vodo doda malo navadne juhe. Juha za ljudi ima pogosto čebulo, zato vedno najprej vprašaj."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can I use a stock cube?",
+            "sl": "Lahko uporabim jušno kocko?"
+          },
+          "a": {
+            "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
+            "sl": "Raje ne. Jušne kocke za pripravo osnov vsebujejo veliko natrija, že pripravljena hrana pa lahko vsebuje čebulo ali česen, ki sta za mačke strupena."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC119",
+        "KC119",
+        "KC118",
+        "KC117",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC120",
+        "KC120"
+      ],
+      "related": [
+        "gravy",
+        "salt",
+        "onion",
+        "garlic",
+        "cooked-chicken"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "brussels-sprouts",
       "species": "cat",
       "level": "small_amounts",
@@ -9000,6 +9075,89 @@
       "updated": "2026-11-04"
     },
     {
+      "slug": "deli-meat",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Deli meat",
+        "sl": "Mesni narezek"
+      },
+      "question": {
+        "en": "Can cats eat deli meat?",
+        "sl": "Ali lahko mačke jedo mesni narezek?"
+      },
+      "url_slug": {
+        "en": "deli-meat",
+        "sl": "mesni-narezek"
+      },
+      "answer": {
+        "en": "It's best not to. Deli and lunch meat is usually high in salt and may contain seasonings, preservatives or nitrates that can upset a cat's stomach. RSPCA Australia advises avoiding cooked manufactured meats for cats. Plain cooked meat without spices is a better choice.",
+        "sl": "Raje ne. Mesni narezek je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate, ki mački lahko razdražijo želodec. RSPCA Avstralija svetuje, da mačkam ne dajete kuhanih mesnih izdelkov. Boljša izbira je navadno kuhano meso brez začimb."
+      },
+      "why": {
+        "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
+        "sl": "Veterinarji pri PetMD pravijo, da mačke ne bi smele jesti puranjega narezka, ker je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate. Purina navaja, da so puranji narezek in drugi predelani puranji izdelki običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1)."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset"
+        ],
+        "sl": [
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate deli meat seasoned with onion or garlic, contact your vet as soon as possible. If she has a stomach upset afterwards, call your vet for advice.",
+        "sl": "Če je mačka pojedla mesni narezek, začinjen s čebulo ali česnom, čim prej pokličite veterinarja. Če ima nato prebavne težave, se za nasvet obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sandwich meat is too salty for cats. Kitty is happiest with her own cat food.",
+        "sl": "Narezek za sendviče je za muce preslan. Muca je najbolj vesela svoje mačje hrane."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What meat can I share instead?",
+            "sl": "Kakšno meso lahko mački dam namesto tega?"
+          },
+          "a": {
+            "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
+            "sl": "Kuhano pusto meso, na primer piščanec ali puran, brez začimb in dodatkov je za mačke v redu. Predelanemu in začinjenemu mesu se izogibajte."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC124",
+        "KC124",
+        "KC124",
+        "KC124",
+        "KC124",
+        "KC124",
+        "KC123",
+        "KC123",
+        "KC123",
+        "KC121",
+        "KC121",
+        "KC121",
+        "KC4",
+        "KC122",
+        "KC126"
+      ],
+      "related": [
+        "ham",
+        "turkey",
+        "sausages",
+        "salt",
+        "cooked-chicken"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "dried-fruit",
       "species": "cat",
       "level": "toxic",
@@ -11254,6 +11412,92 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "gravy",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Gravy",
+        "sl": "Mesna omaka"
+      },
+      "question": {
+        "en": "Can cats eat gravy?",
+        "sl": "Ali lahko mačke jedo mesno omako?"
+      },
+      "url_slug": {
+        "en": "gravy",
+        "sl": "mesna-omaka"
+      },
+      "answer": {
+        "en": "No, gravy made for people is not for cats. It is usually salty and often contains onion, garlic and seasoning, and onion and garlic are toxic to cats. Gravy can also be high in fat. Keep it off your cat's plate.",
+        "sl": "Ne, omaka, pripravljena za ljudi, ni za mačke. Običajno je slana in pogosto vsebuje čebulo, česen in začimbe, čebula in česen pa sta za mačke strupena. Omaka ima lahko tudi veliko maščobe. Mački je ne dajajte."
+      },
+      "why": {
+        "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
+        "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. ASPCA predlaga, da hišnemu ljubljenčku praznično večerjo prelijete s kančkom omake, Cats Protection pa opozarja, da je omaka, pripravljena za ljudi, običajno slana ter vsebuje česen in začimbe, PDSA pa pravi, da nadev in omaka pogosto vsebujeta čebulo, por in česen, ki so lahko za mačke in pse smrtno nevarni. Čebula, česen, drobnjak in por so za mačke strupeni tudi kuhani ali posušeni. RSPCA dodaja, da omaka lahko vsebuje veliko soli in maščob, ASPCA pa opozarja, da jušne kocke, ki se uporabljajo za pripravo omake, vsebujejo veliko natrija."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Tummy upset"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Prebavne težave"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate gravy that may contain onion or garlic, contact your vet as soon as possible. If you think she ate other leftovers too, tell your vet what she ate.",
+        "sl": "Če je mačka pojedla omako, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če mislite, da je pojedla tudi druge ostanke hrane, veterinarju povejte, kaj je pojedla."
+      },
+      "serving": null,
+      "child": {
+        "en": "Gravy is a people food with salt and onion in it. Kitty's own cat food is the best choice for her.",
+        "sl": "Omaka je hrana za ljudi, v njej sta sol in čebula. Za muco je najboljša njena mačja hrana."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What can my cat have from the holiday dinner instead?",
+            "sl": "Kaj lahko mačka namesto tega dobi s praznične večerje?"
+          },
+          "a": {
+            "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
+            "sl": "PDSA pravi, da majhna rezina purana brez kože in kosti ter kuhana zelenjava brez omak ne bi smeli povzročiti težav. Omako izpustite."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC26",
+        "KC26",
+        "KC25",
+        "KC4",
+        "KC4",
+        "KC76",
+        "KC117",
+        "KC117",
+        "KC117",
+        "KC125",
+        "KC4",
+        "KC76",
+        "KC25",
+        "KC25"
+      ],
+      "related": [
+        "onion",
+        "garlic",
+        "salt",
+        "turkey",
+        "fatty-meat"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "green-beans",
       "species": "cat",
       "level": "small_amounts",
@@ -12251,6 +12495,90 @@
         "strawberries"
       ],
       "updated": "2026-11-02"
+    },
+    {
+      "slug": "hot-dogs",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Hot dogs",
+        "sl": "Hrenovke"
+      },
+      "question": {
+        "en": "Can cats eat hot dogs?",
+        "sl": "Ali lahko mačke jedo hrenovke?"
+      },
+      "url_slug": {
+        "en": "hot-dogs",
+        "sl": "hrenovke"
+      },
+      "answer": {
+        "en": "It's best not to. Hot dogs are a processed meat, usually packed with extra salt and spices, and some added seasonings may even be toxic to cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats for cats.",
+        "sl": "Raje ne. Hrenovke so predelano meso, običajno polno dodane soli in začimb, nekatere dodane začimbe pa so lahko za mačke celo strupene. RSPCA Avstralija svetuje, da mačkam ne dajete klobas in kuhanih mesnih izdelkov."
+      },
+      "why": {
+        "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
+        "sl": "Purina navaja, da so puranje hrenovke, puranje klobase, mesni narezki in drugo predelano meso običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo klobasam in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). RSPCA opozarja, da je predelano meso, kot so hrenovke v slanini, izjemno slano, čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, pa sta za mačke strupena."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate a hot dog that may contain onion or garlic, contact your vet as soon as possible. If she has a stomach upset or diarrhoea afterwards, call your vet for advice.",
+        "sl": "Če je mačka pojedla hrenovko, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Hot dogs are a salty people snack. Kitty is happier with her own cat treats.",
+        "sl": "Hrenovke so slan prigrizek za ljudi. Muca je bolj vesela svojih mačjih priboljškov."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is one tiny bite harmful?",
+            "sl": "Ali en majhen grižljaj škodi?"
+          },
+          "a": {
+            "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
+            "sl": "Majhen košček nezačinjenega predelanega puranjega mesa, na primer puranje hrenovke, morda ne bo zelo škodil, vendar ga je bolje ne dajati redno, začinjene hrenovke pa lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC123",
+        "KC123",
+        "KC123",
+        "KC123",
+        "KC123",
+        "KC121",
+        "KC121",
+        "KC121",
+        "KC76",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC122",
+        "KC122"
+      ],
+      "related": [
+        "sausages",
+        "ham",
+        "salt",
+        "onion",
+        "garlic"
+      ],
+      "updated": "2026-11-14"
     },
     {
       "slug": "ice-cream",
@@ -21738,6 +22066,93 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "sausages",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sausages",
+        "sl": "Klobase"
+      },
+      "question": {
+        "en": "Can cats eat sausages?",
+        "sl": "Ali lahko mačke jedo klobase?"
+      },
+      "url_slug": {
+        "en": "sausages",
+        "sl": "klobase"
+      },
+      "answer": {
+        "en": "It's best not to. Sausages are processed, fatty and usually high in salt, and many contain preservatives, spices, onion or garlic that can be harmful to cats. RSPCA Australia advises avoiding sausages for cats because they can contain sulphite preservatives.",
+        "sl": "Raje ne. Klobase so predelane, mastne in običajno zelo slane, mnoge pa vsebujejo konzervanse, začimbe, čebulo ali česen, ki mački lahko škodijo. RSPCA Avstralija svetuje, da mačkam klobas ne dajete, ker lahko vsebujejo sulfitne konzervanse."
+      },
+      "why": {
+        "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
+        "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Purina pravi, da je zelo majhen košček klobase iz samega mesa, brez konzervansov in začimb, na splošno v redu, RSPCA Avstralija pa svetuje, naj se mačke izogibajo klobasam, klobasnemu mesu in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). Tudi klobase iz samega mesa so zelo mastne, klobase so običajno zelo slane, čebula, česen in nekatere začimbe v njih pa so lahko za mačke strupeni."
+      },
+      "signs": {
+        "en": [
+          "Stomach upset",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate sausage that may contain onion or garlic, contact your vet as soon as possible. If she ate plain sausage and then has a stomach upset or diarrhoea, call your vet for advice.",
+        "sl": "Če je mačka pojedla klobaso, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če je pojedla navadno klobaso in ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sausages are too salty and fatty for cats. Kitty's own cat treats make a much better surprise.",
+        "sl": "Klobase so za muce preslane in premastne. Njeni mačji priboljški so veliko boljše presenečenje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about the sausage skin or a raw sausage?",
+            "sl": "Kaj pa ovoj klobase ali surova klobasa?"
+          },
+          "a": {
+            "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
+            "sl": "Ovoj je lahko težko prežvečiti in pogoltniti, zato se mačka lahko zaduši. Surovih klobas ji nikoli ne dajajte, ker pogosto vsebujejo škodljive bakterije, kot je salmonela."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC121",
+        "KC121",
+        "KC121",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC122",
+        "KC4",
+        "KC76"
+      ],
+      "related": [
+        "ham",
+        "pork",
+        "fatty-meat",
+        "salt",
+        "onion",
+        "garlic"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "spinach",
       "species": "cat",
       "level": "small_amounts",
@@ -28476,6 +28891,103 @@
       "updated": "2026-11-10"
     },
     {
+      "slug": "beans",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Beans",
+        "sl": "Fižol"
+      },
+      "question": {
+        "en": "Can dogs eat beans?",
+        "sl": "Ali lahko psi jedo fižol?"
+      },
+      "url_slug": {
+        "en": "beans",
+        "sl": "fizol"
+      },
+      "answer": {
+        "en": "Yes, as a treat. Dogs can eat many kinds of beans, such as black, kidney, pinto, lima and navy beans, if they have been soaked and then cooked. Beans may give your dog some gas. Baked beans in sauce are not a good idea.",
+        "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira."
+      },
+      "why": {
+        "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
+        "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog ate some baked beans, a small amount is unlikely to cause much harm. Watch your dog for 24 hours and contact your vet for advice if you notice concerning signs such as an upset stomach or diarrhoea.",
+        "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska."
+      },
+      "serving": {
+        "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
+        "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
+        "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat baked beans?",
+            "sl": "Ali lahko psi jedo pečen fižol v omaki?"
+          },
+          "a": {
+            "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
+            "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb."
+          }
+        },
+        {
+          "q": {
+            "en": "Can beans replace meat in my dog's diet?",
+            "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?"
+          },
+          "a": {
+            "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
+            "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221",
+        "KD221"
+      ],
+      "related": [
+        "green-beans",
+        "edamame",
+        "peas"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "beef",
       "species": "dog",
       "level": "small_amounts",
@@ -29727,6 +30239,92 @@
         "green-beans"
       ],
       "updated": "2026-11-04"
+    },
+    {
+      "slug": "broth",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Broth and stock",
+        "sl": "Juha in jušna osnova"
+      },
+      "question": {
+        "en": "Can dogs have broth?",
+        "sl": "Ali lahko psi pijejo juho?"
+      },
+      "url_slug": {
+        "en": "broth",
+        "sl": "juha"
+      },
+      "answer": {
+        "en": "Yes, a little low-sodium broth is fine. Vets sometimes suggest adding a bit of low-sodium chicken, vegetable or beef broth to a dog's food for flavour. Skip stock cubes, which are very salty, and broths made with onions, garlic or added salt.",
+        "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo."
+      },
+      "why": {
+        "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
+        "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog had broth made with onions or garlic, contact your vet as soon as possible.",
+        "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
+        "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte."
+      },
+      "child": {
+        "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
+        "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can I use a stock cube?",
+            "sl": "Ali lahko uporabim jušno kocko?"
+          },
+          "a": {
+            "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
+            "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče."
+          }
+        },
+        {
+          "q": {
+            "en": "Can broth help a dog who won't eat?",
+            "sl": "Ali lahko juha pomaga psu, ki noče jesti?"
+          },
+          "a": {
+            "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
+            "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD212",
+        "KD212",
+        "KD212",
+        "KD209",
+        "KD209",
+        "KD211",
+        "KD211",
+        "KD211",
+        "KD211",
+        "KD9",
+        "KD9",
+        "KD222"
+      ],
+      "related": [
+        "salt",
+        "onion",
+        "garlic",
+        "cooked-bones",
+        "cooked-chicken"
+      ],
+      "updated": "2026-11-14"
     },
     {
       "slug": "brussels-sprouts",
@@ -40857,6 +41455,97 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "gravy",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Gravy",
+        "sl": "Mesna omaka"
+      },
+      "question": {
+        "en": "Can dogs eat gravy?",
+        "sl": "Ali lahko psi jedo mesno omako?"
+      },
+      "url_slug": {
+        "en": "gravy",
+        "sl": "mesna-omaka"
+      },
+      "answer": {
+        "en": "No, it's best to keep gravy away from dogs. Gravy is a fatty food that can upset a dog's stomach and can lead to pancreatitis. Gravy made from stock cubes is high in salt, and onion gravy contains onion, which dogs should not eat.",
+        "sl": "Ne, mesno omako je bolje držati stran od psa. Omaka je mastna hrana, ki lahko psu povzroči prebavne težave in vodi v vnetje trebušne slinavke. Omaka iz jušnih kock je zelo slana, čebulna omaka pa vsebuje čebulo, ki je psi ne smejo jesti."
+      },
+      "why": {
+        "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
+        "sl": "Mesna omaka sama po sebi ni strupena, a maslo, mesni sok, omake in druga mastna hrana lahko povzročijo prebavne težave z drisko in bruhanjem. Mastna hrana lahko povzroči tudi vnetje trebušne slinavke (pankreatitis), ki lahko zahteva zdravljenje v bolnišnici. Jušne kocke, iz katerih se pripravlja omaka, vsebujejo veliko natrija, psi pa ne smejo jesti kuhane hrane s čebulo, kot je čebulna omaka."
+      },
+      "signs": {
+        "en": [
+          "Vomiting, sometimes starting 1–4 days after the fatty meal",
+          "Diarrhoea",
+          "Tummy pain",
+          "Not wanting to eat",
+          "Tiredness"
+        ],
+        "sl": [
+          "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+          "Driska",
+          "Bolečine v trebuhu",
+          "Pes noče jesti",
+          "Utrujenost"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate gravy or other fatty food and shows vomiting, tummy pain or tiredness in the following days, contact your vet. Signs can be delayed by a few days. If the gravy contained onions or garlic, contact your vet promptly.",
+        "sl": "Če je pes pojedel omako ali drugo mastno hrano in v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Znaki se lahko pokažejo z nekajdnevno zamudo. Če je omaka vsebovala čebulo ali česen, se takoj obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Gravy is a rich people sauce that can give dogs a sore tummy. Keep it on your own plate.",
+        "sl": "Mesna omaka je mastna omaka za ljudi, zaradi katere psa lahko boli trebušček. Naj ostane na tvojem krožniku."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can I pour a little gravy over my dog's food?",
+            "sl": "Ali lahko psu prelijem hrano z malo omake?"
+          },
+          "a": {
+            "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
+            "sl": "Raje ne. Veterinarska dobrodelna organizacija svetuje, naj bo hrana, ki jo delite s psom, navadna in ne prelita z omako ali začinjena, saj bi to lahko psu povzročilo prebavne težave."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD37",
+        "KD37",
+        "KD37",
+        "KD208",
+        "KD208",
+        "KD208",
+        "KD208",
+        "KD209",
+        "KD47",
+        "KD210",
+        "KD210",
+        "KD210",
+        "KD214",
+        "KD214"
+      ],
+      "related": [
+        "fatty-meat",
+        "onion",
+        "garlic",
+        "salt",
+        "butter",
+        "turkey"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "green-beans",
       "species": "dog",
       "level": "small_amounts",
@@ -42452,6 +43141,93 @@
         "bananas"
       ],
       "updated": "2026-11-02"
+    },
+    {
+      "slug": "hot-dogs",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Hot dogs",
+        "sl": "Hrenovke"
+      },
+      "question": {
+        "en": "Can dogs eat hot dogs?",
+        "sl": "Ali lahko psi jedo hrenovke?"
+      },
+      "url_slug": {
+        "en": "hot-dogs",
+        "sl": "hrenovke"
+      },
+      "answer": {
+        "en": "No, hot dogs aren't a good choice for dogs. They are very salty and often contain sodium nitrate and seasonings such as garlic and onion powder, which can be toxic to dogs. Hot dogs can also be a choking hazard.",
+        "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši."
+      },
+      "why": {
+        "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
+        "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili."
+      },
+      "signs": {
+        "en": [
+          "Tummy ache",
+          "Diarrhoea",
+          "Vomiting together with diarrhoea"
+        ],
+        "sl": [
+          "Bolečine v trebuhu",
+          "Driska",
+          "Bruhanje skupaj z drisko"
+        ]
+      },
+      "what_to_do": {
+        "en": "After eating a hot dog, your dog may get a tummy ache or diarrhoea, which should pass within a day. Call your vet if the diarrhoea doesn't stop or your dog is vomiting as well, as this can lead to serious dehydration.",
+        "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo."
+      },
+      "serving": null,
+      "child": {
+        "en": "Hot dogs are too salty for dogs. At a barbecue, ask a grown-up for a little plain meat for your dog instead.",
+        "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What can I give my dog at a barbecue instead?",
+            "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?"
+          },
+          "a": {
+            "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
+            "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD213",
+        "KD80",
+        "KD80",
+        "KD80",
+        "KD80"
+      ],
+      "related": [
+        "salt",
+        "ham",
+        "bacon",
+        "ketchup",
+        "garlic",
+        "onion"
+      ],
+      "updated": "2026-11-14"
     },
     {
       "slug": "ice-cream",
@@ -46708,6 +47484,106 @@
         "apples"
       ],
       "updated": "2026-11-09"
+    },
+    {
+      "slug": "mustard",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Mustard",
+        "sl": "Gorčica"
+      },
+      "question": {
+        "en": "Can dogs eat mustard?",
+        "sl": "Ali lahko psi jedo gorčico?"
+      },
+      "url_slug": {
+        "en": "mustard",
+        "sl": "gorcica"
+      },
+      "answer": {
+        "en": "No, you should never give your dog mustard. Mustard seeds contain compounds that can inflame a dog's stomach and intestines, and mustard can cause vomiting. A small lick off your plate is unlikely to cause a problem, but a large amount could be serious.",
+        "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava."
+      },
+      "why": {
+        "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
+        "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet."
+      },
+      "signs": {
+        "en": [
+          "Not wanting to eat",
+          "Drooling",
+          "Vomiting",
+          "Diarrhoea",
+          "Tummy pain"
+        ],
+        "sl": [
+          "Pes noče jesti",
+          "Slinjenje",
+          "Bruhanje",
+          "Driska",
+          "Bolečine v trebuhu"
+        ]
+      },
+      "what_to_do": {
+        "en": "A small lick is unlikely to cause a problem. If your dog ate a lot of mustard, or you notice signs such as vomiting, drooling or tummy pain, contact your vet as soon as possible.",
+        "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Mustard can give dogs a sore tummy. Keep it on your own plate, away from your dog.",
+        "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "My dog licked a little mustard. Is that a problem?",
+            "sl": "Pes je polizal malo gorčice. Je to težava?"
+          },
+          "a": {
+            "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
+            "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji."
+          }
+        },
+        {
+          "q": {
+            "en": "Is any kind of mustard safe?",
+            "sl": "Je katera vrsta gorčice varna?"
+          },
+          "a": {
+            "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
+            "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD207",
+        "KD80"
+      ],
+      "related": [
+        "ketchup",
+        "soy-sauce",
+        "salt"
+      ],
+      "updated": "2026-11-14"
     },
     {
       "slug": "nutmeg",
@@ -56978,6 +57854,95 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "sausages",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sausages",
+        "sl": "Klobase"
+      },
+      "question": {
+        "en": "Can dogs eat sausages?",
+        "sl": "Ali lahko psi jedo klobase?"
+      },
+      "url_slug": {
+        "en": "sausages",
+        "sl": "klobase"
+      },
+      "answer": {
+        "en": "No, it's best not to give your dog sausages. Sausage is high in fat and salt and often contains seasonings like garlic and onion. Too much fat or salt can lead to painful health problems such as pancreatitis.",
+        "sl": "Ne, klobas psu raje ne dajajte. Klobasa vsebuje veliko maščob in soli, pogosto pa tudi začimbe, kot sta česen in čebula. Preveč maščob ali soli lahko vodi v boleče zdravstvene težave, kot je vnetje trebušne slinavke."
+      },
+      "why": {
+        "en": "Unlike plain chicken or beef, sausage is high in fat and sodium and is often seasoned with garlic, onion or other spicy additives. Salty, fatty or preserved meats can be unhealthy for dogs. A vet at a UK vet charity says pigs in blankets aren't dangerous but are high in fat and can easily upset a dog's stomach; another source says dogs should not eat sausage at all, so we follow the stricter advice.",
+        "sl": "Za razliko od navadne piščančjine ali govedine vsebuje klobasa veliko maščob in natrija, pogosto pa je začinjena s česnom, čebulo ali drugimi pekočimi dodatki. Slano, mastno ali konzervirano meso je lahko za pse nezdravo. Veterinarka britanske veterinarske dobrodelne organizacije pravi, da klobasice, ovite v slanino (pigs in blankets), niso nevarne, a so zelo mastne in psu zlahka povzročijo prebavne težave; drug vir pravi, da psi klobas sploh ne bi smeli jesti, zato upoštevamo strožji nasvet."
+      },
+      "signs": {
+        "en": [
+          "Vomiting, sometimes starting 1–4 days after the fatty meal",
+          "Tummy pain",
+          "Diarrhoea",
+          "Not wanting to eat",
+          "Tiredness"
+        ],
+        "sl": [
+          "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+          "Bolečine v trebuhu",
+          "Driska",
+          "Pes noče jesti",
+          "Utrujenost"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate some sausage, watch them and call your vet for advice. Contact your vet if your dog vomits, has tummy pain or seems tired in the following days, because signs after a fatty meal can be delayed.",
+        "sl": "Če je pes pojedel nekaj klobase, ga opazujte in pokličite veterinarja za nasvet. Če v naslednjih dneh bruha, ga boli trebuh ali je utrujen, se obrnite na veterinarja, saj se znaki po mastnem obroku lahko pokažejo z zamudo."
+      },
+      "serving": null,
+      "child": {
+        "en": "Sausages are too fatty and salty for dogs, so keep them on your own plate.",
+        "sl": "Klobase so za pse premastne in preslane, zato naj ostanejo na tvojem krožniku."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about pigs in blankets at Christmas?",
+            "sl": "Kaj pa klobasice, ovite v slanino, za božič?"
+          },
+          "a": {
+            "en": "According to a vet, they aren't dangerous, but they are high in fat and could easily upset your dog's stomach.",
+            "sl": "Po besedah veterinarke niso nevarne, a so zelo mastne in lahko psu zlahka povzročijo prebavne težave."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD216",
+        "KD216",
+        "KD216",
+        "KD216",
+        "KD216",
+        "KD214",
+        "KD214",
+        "KD215",
+        "KD215",
+        "KD37",
+        "KD37"
+      ],
+      "related": [
+        "ham",
+        "bacon",
+        "fatty-meat",
+        "pork",
+        "salt",
+        "garlic",
+        "onion"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "seaweed",
       "species": "dog",
       "level": "small_amounts",
@@ -59158,6 +60123,85 @@
         "milk"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "tofu",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Tofu",
+        "sl": "Tofu"
+      },
+      "question": {
+        "en": "Can dogs eat tofu?",
+        "sl": "Ali lahko psi jedo tofu?"
+      },
+      "url_slug": {
+        "en": "tofu",
+        "sl": "tofu"
+      },
+      "answer": {
+        "en": "Yes, in moderation. Tofu is not toxic to dogs and can be an occasional snack, but it shouldn't be a main part of your dog's diet. Give only plain, unsalted, fully cooked tofu, and avoid it if your dog has a soy allergy.",
+        "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo."
+      },
+      "why": {
+        "en": "Tofu is made from soybeans but doesn't contain enough protein to meet a dog's needs, so it shouldn't replace dog food. Many dogs find tofu hard to digest and produce a lot of gas, so dogs with a history of bloat or breeds at higher risk should avoid it. Tofu is high in silicate, which may make kidney stones more likely, and soy contains phytoestrogens, which in large amounts could affect a male dog's hormone balance.",
+        "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog has a soy allergy or sensitivity, don't give tofu. Talk to your vet before changing your dog's diet, especially if your dog has had digestive problems.",
+        "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave."
+      },
+      "serving": {
+        "en": "Plain and unsalted, not flavoured, with no onion or garlic. Make sure it is fully cooked and has cooled. Give small amounts as an occasional snack.",
+        "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can try a little plain tofu as a treat now and then, but their main food should still be dog food.",
+        "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can tofu replace meat in my dog's diet?",
+            "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?"
+          },
+          "a": {
+            "en": "No. Tofu doesn't contain enough protein for a dog's needs. For main meals, feed a vet-recommended dog food.",
+            "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219",
+        "KD219"
+      ],
+      "related": [
+        "edamame",
+        "soy-sauce",
+        "green-beans"
+      ],
+      "updated": "2026-11-14"
     },
     {
       "slug": "tomato-plant",
@@ -62570,11 +63614,91 @@
     },
     {
       "species": "cat",
+      "id": "KC117",
+      "tier": "B",
+      "publisher": "ASPCA (no date or author shown)",
+      "title": "Thanksgiving Safety Tips",
+      "url": "https://www.aspca.org/pet-care/general-pet-care/thanksgiving-safety-tips"
+    },
+    {
+      "species": "cat",
+      "id": "KC118",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no author or date shown)",
+      "title": "How To Get Your Cat To Drink More Water",
+      "url": "https://vcahospitals.com/resources/preventive-cat/nutrition/tips-to-encourage-cats-to-drink-more-water"
+    },
+    {
+      "species": "cat",
+      "id": "KC119",
+      "tier": "A",
+      "publisher": "Cornell Feline Health Center (last updated 2021)",
+      "title": "Hydration",
+      "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hydration"
+    },
+    {
+      "species": "cat",
       "id": "KC12",
       "tier": "B",
       "publisher": "PDSA",
       "title": "PDSA Hidden Hazards guide (PDF)",
       "url": "https://www.pdsa.org.uk/media/2583/pdsa-hidden-hazards-guide.pdf"
+    },
+    {
+      "species": "cat",
+      "id": "KC120",
+      "tier": "B",
+      "publisher": "Tufts Cummings School of Veterinary Medicine, Petfoodology (D. E. Linder, DVM, DACVIM (Nutrition), with R. Hanford; 2020-10-05)",
+      "title": "Boiling it Down: Adding Broth to Your Pet's Meals",
+      "url": "https://sites.tufts.edu/petfoodology/?p=9950"
+    },
+    {
+      "species": "cat",
+      "id": "KC121",
+      "tier": "B",
+      "publisher": "RSPCA Australia Knowledgebase (updated 2025-11-20)",
+      "title": "What should I feed my cat?",
+      "url": "https://kb.rspca.org.au/categories/companion-animals/cats/caring-for-my-cat/what-should-i-feed-my-cat"
+    },
+    {
+      "species": "cat",
+      "id": "KC122",
+      "tier": "C",
+      "publisher": "Purina UK (Purina Editorial Team, no vet reviewer named; 2024-11-25)",
+      "title": "Can Cats Eat Sausage? Read Before You Feed",
+      "url": "https://www.purina.co.uk/articles/cats/feeding/what-cats-eat/can-cats-eat-sausage"
+    },
+    {
+      "species": "cat",
+      "id": "KC123",
+      "tier": "C",
+      "publisher": "Purina US (Purina Pet Expert Team, no reviewer named; updated 2026-11-13)",
+      "title": "Can Cats Eat Turkey? A Guide to Safety",
+      "url": "https://purina.com/articles/cat/feeding/can-cats-eat/turkey"
+    },
+    {
+      "species": "cat",
+      "id": "KC124",
+      "tier": "C",
+      "publisher": "PetMD (S. C. Mitchell DVM DABVP; reviewed by J. Coates DVM; updated 2025-10-15)",
+      "title": "Can Cats Eat Turkey?",
+      "url": "https://www.petmd.com/cat/nutrition/can-cats-eat-turkey"
+    },
+    {
+      "species": "cat",
+      "id": "KC125",
+      "tier": "B",
+      "publisher": "Tufts Cummings School of Veterinary Medicine news (2022-11-17)",
+      "title": "Keeping Pets Safe During This Season",
+      "url": "https://vet.tufts.edu/news-events/news/keeping-pets-safe-during-season"
+    },
+    {
+      "species": "cat",
+      "id": "KC126",
+      "tier": "C",
+      "publisher": "Purina UK (Purina Editorial Team, no vet reviewer named; 2026-10-15)",
+      "title": "Human Foods Cats Can Eat & Common Myths",
+      "url": "https://www.purina.co.uk/articles/cats/feeding/what-cats-eat/human-foods-for-cats"
     },
     {
       "species": "cat",
@@ -64258,6 +65382,30 @@
     },
     {
       "species": "dog",
+      "id": "KD207",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-20)",
+      "title": "Can Dogs Eat Mustard?",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/what-dogs-eat/can-dogs-eat-mustard"
+    },
+    {
+      "species": "dog",
+      "id": "KD208",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (no date; ©2026)",
+      "title": "Top safety tips to avoid a pet emergency for your dog this Thanksgiving",
+      "url": "https://vcahospitals.com/resources/conditions-dog/emergency/top-safety-tips-to-avoid-a-pet-emergency-for-your-dog-this-thanksgiving"
+    },
+    {
+      "species": "dog",
+      "id": "KD209",
+      "tier": "B",
+      "publisher": "ASPCA (2025-11-20)",
+      "title": "Thanksgiving Safety Tips That Will Keep Your Pets Feeling Thankful This Holiday",
+      "url": "https://www.aspca.org/news/thanksgiving-safety-tips-will-keep-your-pets-feeling-thankful-holiday"
+    },
+    {
+      "species": "dog",
       "id": "KD21",
       "tier": "A",
       "publisher": "Merck Veterinary Manual",
@@ -64266,11 +65414,99 @@
     },
     {
       "species": "dog",
+      "id": "KD210",
+      "tier": "B",
+      "publisher": "American Kennel Club, Mary Kearl (updated 2026-11-03)",
+      "title": "Can Dogs Eat Thanksgiving Dinner? Safe and Unsafe Holiday Foods",
+      "url": "https://www.akc.org/expert-advice/nutrition/thanksgiving-foods-for-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD211",
+      "tier": "B",
+      "publisher": "American Kennel Club, AKC Staff (updated 2026-03-02)",
+      "title": "Bone Broth for Dogs: A Superfood With Many Benefits",
+      "url": "https://www.akc.org/expert-advice/health/bone-broth-for-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD212",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals, Tammy Hunter DVM, Ryan Llera DVM, Robin Downing DVM (updated 2023-09-13)",
+      "title": "Anorexia in Dogs",
+      "url": "https://vcahospitals.com/know-your-pet/anorexia-in-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD213",
+      "tier": "B",
+      "publisher": "American Kennel Club, Katherine Ripley (updated 2025-07-16)",
+      "title": "Can Dogs Eat Hot Dogs? Why Hot Dogs Aren't Healthy for Dogs",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-hot-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD214",
+      "tier": "B",
+      "publisher": "PDSA (2022-12-19)",
+      "title": "Festive feast for four-legged friends! How to create a 'dog-safe' Christmas dinner",
+      "url": "https://www.pdsa.org.uk/press-office/latest-news/festive-feast-for-four-legged-friends-how-to-create-a-dog-safe-christmas-dinner"
+    },
+    {
+      "species": "dog",
+      "id": "KD215",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-20)",
+      "title": "Can Dogs Eat Pork? To Feed or Not to Feed?",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/what-dogs-eat/can-dogs-eat-pork"
+    },
+    {
+      "species": "dog",
+      "id": "KD216",
+      "tier": "C",
+      "publisher": "PetMD, April Saylor, reviewed by Sandra C. Mitchell DVM, DABVP (updated 2024-02-14)",
+      "title": "Can Dogs Eat Sausage?",
+      "url": "https://www.petmd.com/dog/nutrition/can-dogs-eat-sausage"
+    },
+    {
+      "species": "dog",
+      "id": "KD219",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-08-18)",
+      "title": "Can Dogs Eat Tofu?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-tofu/"
+    },
+    {
+      "species": "dog",
       "id": "KD22",
       "tier": "B",
       "publisher": "American Kennel Club (Updated Jun 04, 2026)",
       "title": "Can Dogs Eat Avocado? Are Avocados Bad for Dogs?",
       "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-avocado/"
+    },
+    {
+      "species": "dog",
+      "id": "KD220",
+      "tier": "B",
+      "publisher": "Purina (US), Purina Pet Expert Team (updated 2026-10-21)",
+      "title": "Can Dogs Eat Beans? A Guide to Safety",
+      "url": "https://www.purina.com/articles/dog/feeding/can-dogs-eat/beans"
+    },
+    {
+      "species": "dog",
+      "id": "KD221",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2025-03-21)",
+      "title": "Can Dogs Eat Baked Beans? Read Before You Feed",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/what-dogs-eat/can-dogs-eat-baked-beans"
+    },
+    {
+      "species": "dog",
+      "id": "KD222",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-30)",
+      "title": "Best Foods to Soothe Your Dog's Upset Stomach",
+      "url": "https://www.akc.org/expert-advice/nutrition/food-for-dogs-stomach-upset/"
     },
     {
       "species": "dog",

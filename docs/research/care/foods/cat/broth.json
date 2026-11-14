@@ -1,0 +1,116 @@
+{
+  "slug": "broth",
+  "species": "cat",
+  "name": {
+    "en": "Broth and stock",
+    "sl": "Mesna juha in osnova"
+  },
+  "question": {
+    "en": "Can cats have broth?",
+    "sl": "Ali lahko mačke jedo mesno juho?"
+  },
+  "url_slug": {
+    "en": "broth",
+    "sl": "mesna-juha"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain broth is fine. Vets suggest a small amount of low-sodium chicken broth with no added spices to flavour a cat's water. Broth or stock cubes made for people can be very salty and may contain onion or garlic, which are toxic to cats.",
+    "sl": "Da, malo navadne mesne juhe je v redu. Veterinarji predlagajo majhno količino piščančje juhe z malo soli in brez dodanih začimb, s katero mački izboljšate okus vode. Juha ali jušne kocke za ljudi so lahko zelo slane in lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+  },
+  "why": {
+    "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
+    "sl": "Cornell Feline Health Center navaja, da lahko majhna količina piščančje juhe z malo natrija v vodi mačko spodbudi, da pije več, VCA pa predlaga piščančjo juho z malo natrija in brez dodanih začimb. Jušne kocke, ki se uporabljajo za pripravo osnov, vsebujejo veliko natrija. Čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, sta za mačke strupena tudi kuhana ali posušena. Veterinarji z univerze Tufts svetujejo, da natančno preberete seznam sestavin kupljenih juh."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your cat drank broth or stock that contains onion or garlic, contact your vet as soon as possible.",
+    "sl": "Če je mačka popila juho ali osnovo, ki vsebuje čebulo ali česen, čim prej pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
+    "sl": "Le navadna juha z malo soli, brez čebule, česna ali dodanih začimb, malo primešana mački v vodo. Najvarnejša domača juha je nezačinjeno meso, kuhano v navadni vodi. Jušnih kock ne uporabljajte."
+  },
+  "child": {
+    "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
+    "sl": "Odrasli lahko muci v vodo doda malo navadne juhe. Juha za ljudi ima pogosto čebulo, zato vedno najprej vprašaj."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can I use a stock cube?",
+        "sl": "Lahko uporabim jušno kocko?"
+      },
+      "a": {
+        "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
+        "sl": "Raje ne. Jušne kocke za pripravo osnov vsebujejo veliko natrija, že pripravljena hrana pa lahko vsebuje čebulo ali česen, ki sta za mačke strupena."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC119",
+      "quote": "flavoring the water with a small amount of either water from a can of tuna or low sodium chicken broth"
+    },
+    {
+      "id": "KC119",
+      "quote": "can prompt a cat to drink more."
+    },
+    {
+      "id": "KC118",
+      "quote": "low-sodium chicken broth with no additional spices to your cat’s water."
+    },
+    {
+      "id": "KC117",
+      "quote": "Bouillon cubes used for making stocks and gravy contain high amounts of sodium"
+    },
+    {
+      "id": "KC4",
+      "quote": "Onion and garlic can be found in many pre-made foods like sauces and baby food,"
+    },
+    {
+      "id": "KC4",
+      "quote": "Remember that sauces, baby food and other pre-made foods may contain onions or garlic"
+    },
+    {
+      "id": "KC4",
+      "quote": "but garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC4",
+      "quote": "Onions (including spring onions and shallots) are the most toxic allium for cats,"
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC120",
+      "quote": "While there are many commercial broth products, it is important to look at the ingredients list closely."
+    },
+    {
+      "id": "KC120",
+      "quote": "The safest recipe is boiling unseasoned meat or vegetables in plain water to form a basic broth."
+    }
+  ],
+  "related": [
+    "gravy",
+    "salt",
+    "onion",
+    "garlic",
+    "cooked-chicken"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ba1a4cfb3d094c8f803bcb49b82d93477ba2fb1992cb7660749cc99086785d3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e6249579dfd53f24be8bf160254b8925044cc4b964a017fbe7fa29a05ec1f4f6"
+    }
+  }
+}

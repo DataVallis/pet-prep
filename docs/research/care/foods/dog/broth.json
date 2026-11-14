@@ -1,0 +1,130 @@
+{
+  "slug": "broth",
+  "species": "dog",
+  "name": {
+    "en": "Broth and stock",
+    "sl": "Juha in jušna osnova"
+  },
+  "question": {
+    "en": "Can dogs have broth?",
+    "sl": "Ali lahko psi pijejo juho?"
+  },
+  "url_slug": {
+    "en": "broth",
+    "sl": "juha"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little low-sodium broth is fine. Vets sometimes suggest adding a bit of low-sodium chicken, vegetable or beef broth to a dog's food for flavour. Skip stock cubes, which are very salty, and broths made with onions, garlic or added salt.",
+    "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo."
+  },
+  "why": {
+    "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
+    "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog had broth made with onions or garlic, contact your vet as soon as possible.",
+    "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
+    "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte."
+  },
+  "child": {
+    "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
+    "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can I use a stock cube?",
+        "sl": "Ali lahko uporabim jušno kocko?"
+      },
+      "a": {
+        "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
+        "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče."
+      }
+    },
+    {
+      "q": {
+        "en": "Can broth help a dog who won't eat?",
+        "sl": "Ali lahko juha pomaga psu, ki noče jesti?"
+      },
+      "a": {
+        "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
+        "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD212",
+      "quote": "It may be useful to enhance the palatability of your dog's food."
+    },
+    {
+      "id": "KD212",
+      "quote": "Your veterinarian can help you with specific recommendations, but simple steps to try include:"
+    },
+    {
+      "id": "KD212",
+      "quote": "Adding a bit of low-sodium chicken, vegetable, or beef broth for flavor enhancement."
+    },
+    {
+      "id": "KD209",
+      "quote": "Bouillon cubes used for making stocks and gravy contain high amounts of sodium which can lead to gastrointestinal problems"
+    },
+    {
+      "id": "KD209",
+      "quote": "and even seizures."
+    },
+    {
+      "id": "KD211",
+      "quote": "Bone broth is a stock liquid made from slowly cooking animal bones at low heat for an extended period."
+    },
+    {
+      "id": "KD211",
+      "quote": "When choosing a bone broth for your dog, you need to look for ones with natural, dog-safe ingredients."
+    },
+    {
+      "id": "KD211",
+      "quote": "Some may contain additives for preservation and taste, such as onions, garlic, or salt."
+    },
+    {
+      "id": "KD211",
+      "quote": "cooked bones themselves are incredibly dangerous for dogs."
+    },
+    {
+      "id": "KD9",
+      "quote": "Remember that onions and garlic can be found in many pre-made foods, such as sauces and baby food."
+    },
+    {
+      "id": "KD9",
+      "quote": "If your dog has eaten onions, garlic or leeks, you should contact your vet as soon as possible."
+    },
+    {
+      "id": "KD222",
+      "quote": "After cooking, refrigerate the broth and remove the hardened layer of fat from the top before serving."
+    }
+  ],
+  "related": [
+    "salt",
+    "onion",
+    "garlic",
+    "cooked-bones",
+    "cooked-chicken"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ae6c729e935cb2373c9c63158296ff08199128b1b7a3161802b0dcd3c315d343"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "269d92a8fd5c6f4b21a117ff293ffdc0d809ff61daedd5c93c7df6fd6f10a117"
+    }
+  }
+}

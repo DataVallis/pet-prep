@@ -1,0 +1,136 @@
+{
+  "slug": "deli-meat",
+  "species": "cat",
+  "name": {
+    "en": "Deli meat",
+    "sl": "Mesni narezek"
+  },
+  "question": {
+    "en": "Can cats eat deli meat?",
+    "sl": "Ali lahko mačke jedo mesni narezek?"
+  },
+  "url_slug": {
+    "en": "deli-meat",
+    "sl": "mesni-narezek"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Deli and lunch meat is usually high in salt and may contain seasonings, preservatives or nitrates that can upset a cat's stomach. RSPCA Australia advises avoiding cooked manufactured meats for cats. Plain cooked meat without spices is a better choice.",
+    "sl": "Raje ne. Mesni narezek je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate, ki mački lahko razdražijo želodec. RSPCA Avstralija svetuje, da mačkam ne dajete kuhanih mesnih izdelkov. Boljša izbira je navadno kuhano meso brez začimb."
+  },
+  "why": {
+    "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
+    "sl": "Veterinarji pri PetMD pravijo, da mačke ne bi smele jesti puranjega narezka, ker je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate. Purina navaja, da so puranji narezek in drugi predelani puranji izdelki običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1)."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset"
+    ],
+    "sl": [
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate deli meat seasoned with onion or garlic, contact your vet as soon as possible. If she has a stomach upset afterwards, call your vet for advice.",
+    "sl": "Če je mačka pojedla mesni narezek, začinjen s čebulo ali česnom, čim prej pokličite veterinarja. Če ima nato prebavne težave, se za nasvet obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sandwich meat is too salty for cats. Kitty is happiest with her own cat food.",
+    "sl": "Narezek za sendviče je za muce preslan. Muca je najbolj vesela svoje mačje hrane."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What meat can I share instead?",
+        "sl": "Kakšno meso lahko mački dam namesto tega?"
+      },
+      "a": {
+        "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
+        "sl": "Kuhano pusto meso, na primer piščanec ali puran, brez začimb in dodatkov je za mačke v redu. Predelanemu in začinjenemu mesu se izogibajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC124",
+      "quote": "No, cats shouldn't eat turkey lunch meat."
+    },
+    {
+      "id": "KC124",
+      "quote": "Deli meat, turkey bacon, and raw or seasoned turkey can be harmful, as can turkey skin and bones."
+    },
+    {
+      "id": "KC124",
+      "quote": "It's usually high in sodium"
+    },
+    {
+      "id": "KC124",
+      "quote": "may contain seasonings, preservatives, or nitrates that can upset your cat's stomach or harm their health."
+    },
+    {
+      "id": "KC124",
+      "quote": "Processed turkey is unsafe."
+    },
+    {
+      "id": "KC124",
+      "quote": "Make turkey without added salt, oils, or seasonings, including onion and garlic, which can be toxic to cats."
+    },
+    {
+      "id": "KC123",
+      "quote": "The reason is because turkey deli meat, turkey bacon, turkey hot dogs, turkey sausage, smoked turkey,"
+    },
+    {
+      "id": "KC123",
+      "quote": "and other forms of processed turkey meat are usually packed with extra sodium and spices."
+    },
+    {
+      "id": "KC123",
+      "quote": "Some of the added seasonings might even be toxic for your loved one."
+    },
+    {
+      "id": "KC121",
+      "quote": "sausages, sausage meat and cooked manufactured meats as they can contain sulphite preservatives."
+    },
+    {
+      "id": "KC121",
+      "quote": "There have been many pet food safety incidents linked to sulphite preservative-induced thiamine"
+    },
+    {
+      "id": "KC121",
+      "quote": "(Vitamin B1) deficiency, which can be fatal."
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC122",
+      "quote": "Choosing the right product can be difficult though, and it’s important to speak with your vet"
+    },
+    {
+      "id": "KC126",
+      "quote": "Cooked, lean meats such as beef, chicken, turkey, liver and lamb without any spices or condiments"
+    }
+  ],
+  "related": [
+    "ham",
+    "turkey",
+    "sausages",
+    "salt",
+    "cooked-chicken"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b9bdf85fe9ba06721763ba332857d080506ef8dc3fb72bce8bb8ec9b98e71659"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df1d35e7b94d8dd22cdef18312a0c64467a7a92497f516dab4d8f3e2ca619d6b"
+    }
+  }
+}
