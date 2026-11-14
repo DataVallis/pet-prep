@@ -1364,6 +1364,19 @@
             "prompt_hash": "sha256:1d8236318ad29b7045f2892f815ba6deec75051d6ec0cf07c2c5a6a22e67105d",
             "generated_at": "2026-11-14T01:01:20+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "toy_fox_terrier",
+            "species": "dog",
+            "colour": "tricolour",
+            "file": "dog/toy-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:628c2eee72c5b86b66c65fdb90d22fa88ad1653e84a10f873299643e9d92da7d",
+            "generated_at": "2026-11-14T03:11:02+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
