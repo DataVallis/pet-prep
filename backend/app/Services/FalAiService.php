@@ -868,6 +868,14 @@ class FalAiService
                 .'exaggerated stop and a black nose, small dark brown almond-shaped lively eyes, erect, very small, pointed triangular ears set high, '
                 .'a natural tail, alert, lively, mischievous expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-111: FCI standard No. 15 (S313, S831) — long-haired Tervueren variety, fawn with black overlay and a pronounced
+            // black mask (the preferred colour); erect triangular ears, natural plumed tail.
+            BreedType::BelgianTervuren => 'A medium-sized, harmoniously proportioned, elegant and powerful Belgian Tervuren dog (Belgian Shepherd, long-haired variety) '
+                .'with a long, smooth fawn coat with black overlay and a pronounced black mask, a full ruff around the neck, breeches and a plumed tail, '
+                .'short hair on the head and lower legs, rather small high-set triangular erect ears, medium slightly almond-shaped dark brown eyes, '
+                .'a long wedge-shaped muzzle, natural tail reaching the hock carried low, watchful expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2067,6 +2075,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'abundant, thick, straight, harsh coat with a ruff, mane and culottes',
                 'markings' => 'solid black coat without white spots, black nose, erect very small pointed ears',
+            ],
+            // M5-R10-111: the two Tervueren colours of FCI standard 15 (S831) — fawn (preferred) and grey, both with black overlay and mask.
+            BreedType::BelgianTervuren => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with black overlay',
+                    1 => 'rich fawn with black overlay',
+                    2 => 'grey with black overlay',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, smooth coat with a dense undercoat, a ruff, breeches and a plumed tail',
+                'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs, erect triangular ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

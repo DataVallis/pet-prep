@@ -2713,5 +2713,28 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S827'], 'refs' => ['schipperke.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-111: belgian_tervuren.* (S830–S832), runbook rules (data.json proposed_game_parameters.belgian_tervuren.suitability_tags).
+        // RKC key facts (S830) + PetMD (S832). RKC Breed Watch Category 1 (S830) → no welfare chip; in marketing.
+        'belgian_tervuren' => [
+            'suits' => [
+                // S830 "Exercise: More than 2 hours per day"; S832 "a lot of physical activity and mental stimulation".
+                ['tag' => 'active_family', 'source_ids' => ['S830', 'S832'], 'refs' => ['belgian_tervuren.exercise.adult', 'belgian_tervuren.exercise.daily_text']],
+                // S830 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.suitability.rkc_size_of_home', 'belgian_tervuren.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S830 "More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.exercise.adult', 'belgian_tervuren.suitability.rkc_exercise']],
+                // S832 "As a herding breed, the Belgian Tervuren may try to "herd" children and smaller animals such as cats."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S832'], 'refs' => ['belgian_tervuren.behaviour.children']],
+                // S832 "a lot of physical activity and mental stimulation"; "Bored Tervs may get into trouble …".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S832'], 'refs' => ['belgian_tervuren.exercise.daily_text', 'belgian_tervuren.behaviour.boredom']],
+                // S830 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.suitability.rkc_shedding']],
+                // S830 "Grooming: More than once a week"; S832 weekly brushing, near-daily while shedding.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S830', 'S832'], 'refs' => ['belgian_tervuren.suitability.rkc_grooming', 'belgian_tervuren.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

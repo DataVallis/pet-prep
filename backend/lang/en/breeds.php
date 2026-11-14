@@ -111,6 +111,7 @@ return [
     'norwich_terrier' => 'Norwich Terrier',
     'miniature_bull_terrier' => 'Miniature Bull Terrier',
     'schipperke' => 'Schipperke',
+    'belgian_tervuren' => 'Belgian Tervuren',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

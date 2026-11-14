@@ -1322,6 +1322,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SCHIPPERKE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-110)';
 
     /**
+     * M5-R10-111 Belgian Tervuren (unattended run 2026-11-14, data.json proposed_game_parameters.belgian_tervuren.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S830 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S830 — provisional until McMillan 2024 is checked, like
+     * the Belgian Malinois), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 14, Excellent, S35); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_BELGIAN_TERVUREN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-111)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1672,6 +1682,10 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'two_weeks', 'S827', 'cleaning the ears every two weeks for maintenance may help prevent ear infections.', 'proposed_game_parameters.schipperke.ear_care', '"every two weeks" → every 2 weeks'],
             'bath' => [1, 'month', 'S827', 'only needs a monthly bath', 'proposed_game_parameters.schipperke.bathing', '"a monthly bath" → every 4 weeks (nails: no frequency; "Schipperkes do not require professional grooming." → no groomer task)'],
         ],
+        'belgian_tervuren' => [
+            'ear_cleaning' => [1, 'week', 'S832', "Cleaning your Terv's ears every one or two weeks helps prevent ear infections and keeps the canals clean.", 'proposed_game_parameters.belgian_tervuren.ear_care', '"every one or two weeks" → a range → its lower bound → once a week'],
+            'bath' => [1, 'month', 'S832', 'The Belgian Tervuren will benefit from a bath every four to six weeks.', 'proposed_game_parameters.belgian_tervuren.bathing', '"every four to six weeks" → every 4 weeks (teeth, nails, groomer: no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1802,6 +1816,7 @@ class BreedStageParamsSeeder extends Seeder
         'norwich_terrier' => [2, 'S814', 'Routine coat care for Norwich Terriers includes regular brushing (at least twice a week)', 'high', false],
         'miniature_bull_terrier' => [1, 'S820', 'Grooming: Once a week', 'high', false],
         'schipperke' => [2, 'S828', 'must be brushed at least twice a week for fifteen minutes', 'high', false],
+        'belgian_tervuren' => [1, 'S832', "You'll also need to set aside time to brush their beautiful, long double coat every week.", 'medium', false],
     ];
 
     /**
@@ -1976,13 +1991,14 @@ class BreedStageParamsSeeder extends Seeder
         'norwich_terrier' => ['S814', 'Socializing your Norwich Terrier puppy from an early age is crucial'],
         'miniature_bull_terrier' => ['S821', 'need early socialization to adapt well to new situations.'],
         'schipperke' => ['S827', 'Like all dogs, Schipperkes should begin obedience training and socialization at an early age.'],
+        'belgian_tervuren' => ['S832', 'This makes socializing your Belgian Tervuren puppy a vital part of their care.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2811,6 +2827,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::NorwichTerrier => self::norwichTerrierProfile(),
             BreedType::MiniatureBullTerrier => self::miniatureBullTerrierProfile(),
             BreedType::Schipperke => self::schipperkeProfile(),
+            BreedType::BelgianTervuren => self::belgianTervurenProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10558,6 +10575,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'schipperke.lifespan.median_uk',
                 'quote' => 'Schipperke (x̃ = 14.2, HR 0.6, 0.4–0.9)',
                 'notes' => 'McMillan et al. 2024 median (S771, results text). RKC "Over 12 years" (S826), PetMD 12–16 years (S827). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Belgian Tervuren (M5-R10-111). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_BELGIAN_TERVUREN); weight, growth, Coren rank and lifespan are sourced. The
+     * senior boundary uses the RKC lower bound (no McMillan 2024 / VetCompass median reachable for the variety) —
+     * provisional, like the Belgian Malinois.
+     *
+     * @return array<string, mixed>
+     */
+    private static function belgianTervurenProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BELGIAN_TERVUREN;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S830', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.belgian_tervuren.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S830) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable for the Tervueren (McMillan 2024 13.8 y only via Wikipedia, S318, tier C → 124; PetMD lower bound 12 y, S832 → 108 — alternatives only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S830', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S830) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PetMD (S832) "a lot of physical activity and mental stimulation" gives no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S313', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_tervuren.adult_weight.fci',
+                'quote' => 'Males about 25-30 kg.',
+                'notes' => 'FCI standard 15 (S313; KUSA reprint S831 agrees): males about 25–30 kg, females about 20–25 kg → 20–30 kg for the game. PetMD (S832) 45–75 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_tervuren.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Medium-Large", S830 — Belgian Malinois precedent).',
+            ]],
+            'coren_rank' => [14, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_tervuren.trainability.coren_rank',
+                'quote' => 'Belgian Shepherd Dog (Tervuren)',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, read 2026-11-14): rank 14 "Belgian Shepherd Dog (Tervuren)", tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 14 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S830', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_tervuren.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S830); PetMD "12–14 years" (S832). McMillan 2024 13.8 y only via Wikipedia (S318, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

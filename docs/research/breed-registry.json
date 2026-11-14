@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "d770ab37ddb7ac83c23f4b104e09cb86546d9f7154eb0b58d22ce9f26e834c41"
+      "sha256": "b8f873a6f14d1d14f442dacdaa57e910e389d2bb9a6f268734ce12e6541f4af7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "39817bacfe51300831b3b28c8f057b90175a43cbfad4d13f74695bb23d37c4df"
+      "sha256": "d2eccfa39acfb857496cc93474d4f272e8443dd379d04c09ddaadeb763a8f3f0"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b780b93804b632605cc835c42214984145dd7293159c32e300adc6a91de882e6"
+      "sha256": "357a2f85c7c4b336dfe14dcfd5685e1ee147ee41574b1feed23b5ecae14c2f0c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1dd330d452d01680f9cd84dc1b7b34f9785bc480cc4df70627780f830dd3beda"
+      "sha256": "a55901de8c092cc712968d48d0d510621837b489950310a8fa53354ec7db4b9f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4075d30e87f0adbeb0c0a538e38f0da60430d765c3f1faf993f577cf3877f28d"
+      "sha256": "00e553810bb272518fae373c188b4adae8346bb7ed9f9c376fc6adc9bd642854"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e49a6af0f242f41607577e20e86bddf76b807c6d737dde902ff4917d99759507"
+      "sha256": "7c5fd59a86f40989299fcb77826d792e96dd77a3a18da0594999d44d92252200"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "1df89ff7bfe15f1f3341e849bdde20ae64eb41f91fe6ace9fb21a1c347589fc9"
+      "sha256": "ae064b3ddc9d19a20d4658bffe9083d76174e108a1181a5f3e6ba58ade8c1b7d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 103,
+      "breed_count": 104,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -62366,6 +62366,613 @@
       ]
     },
     {
+      "id": "belgian_tervuren",
+      "species": "dog",
+      "order": 103,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Belgian Tervuren",
+        "sl": "Belgijski ovčar tervuren"
+      },
+      "slug": {
+        "en": "belgian-tervuren",
+        "sl": "belgijski-ovcar-tervuren"
+      },
+      "synonyms": {
+        "en": [
+          "Tervuren",
+          "Tervueren",
+          "Belgian Shepherd Dog (Tervueren)",
+          "Terv"
+        ],
+        "sl": [
+          "tervuren",
+          "belgijski ovcar tervuren"
+        ]
+      },
+      "facets": {
+        "size": "medium_large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium_large",
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              66
+            ],
+            "female": [
+              56,
+              62
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_tervuren.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              30
+            ],
+            "female": [
+              20,
+              25
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_tervuren.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "belgian_tervuren.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S830"
+          ],
+          "ref": "belgian_tervuren.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 14,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "belgian_tervuren.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 15,
+            "group": 1,
+            "section": 1,
+            "origin": "BE"
+          },
+          "source_ids": [
+            "S312"
+          ],
+          "ref": "belgian_tervuren.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S832"
+          ],
+          "ref": "belgian_tervuren.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S832"
+          ],
+          "ref": "belgian_tervuren.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S832"
+          ],
+          "ref": "belgian_tervuren.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S832"
+          ],
+          "ref": "belgian_tervuren.health.vwd",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S832"
+          ],
+          "ref": "belgian_tervuren.health.gdv",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S830",
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.adult",
+              "belgian_tervuren.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_size_of_home",
+              "belgian_tervuren.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.adult",
+              "belgian_tervuren.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.behaviour.children"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.daily_text",
+              "belgian_tervuren.behaviour.boredom"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S830",
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_grooming",
+              "belgian_tervuren.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S830"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S830 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S830"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S830)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 14, Excellent, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.grooming",
+            "basis_source_ids": [
+              "S832"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »every week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.ear_care",
+            "basis_source_ids": [
+              "S832"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes 1× na teden (PetMD »every one or two weeks« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_tervuren.bathing",
+            "basis_source_ids": [
+              "S832"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »every four to six weeks«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S830",
+          "S832"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S830"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S830"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S830"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S830"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S830"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S312",
+        "S313",
+        "S830",
+        "S832",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -68482,6 +69089,20 @@
       "publisher": "VCA Canada (LifeLearn, created 2014-05-30)",
       "title": "Schipperke",
       "url": "https://vcacanada.com/know-your-pet/schipperke"
+    },
+    {
+      "id": "S830",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Belgian Shepherd Dog (Tervueren) — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/"
+    },
+    {
+      "id": "S832",
+      "tier": "B",
+      "publisher": "PetMD — V. LaMon, DVM, 2024-01-22",
+      "title": "Belgian Tervuren",
+      "url": "https://www.petmd.com/dog/breeds/belgian-tervuren"
     },
     {
       "id": "C1",

@@ -57273,6 +57273,541 @@
       }
     }
   },
+  "belgian_tervuren": {
+    "_note": "Added 2026-11-14 (M5-R10-111, unattended run — appended after the Schipperke: AKC 2024 No. 107 'Belgian Tervuren', S174 full-list table fetched 2026-11-14 '106 Schipperke', '107 Belgian Tervuren', '108 Toy Fox Terrier'). The FCI recognises one breed, the Belgian Shepherd Dog (FCI No. 15, S312), with four varieties; the game breed is the long-haired Tervueren variety only (the short-haired Malinois is its own game breed, M5-R10-38). Quotes as returned by the web-fetch tool on 2026-11-14 (fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S830–S832 (reused S10, S11, S14, S24, S35, S45, S174, S312, S313, S318). No health percentages anywhere. RKC Breeds A–Z page (S830, royalkennelclub.com, reached through a search result): key facts, Breed Watch Category 1, Good Practice 'Prioritising genetic diversity', Best Practice BVA/KC elbow / hip and BVA/KC/ISDS eye schemes. FCI standard 15 read again through the KUSA reprint (S831); weight and height as in S313. Lifespan: McMillan 2024 not reachable for this variety (the main PDF S771 shows 'Belgian Tervuren' only as a phylogeny tip; Supplementary Table 3 and the Dogs Trust table S123 not fetched) → RKC lower bound 'Over 10 years' → senior 90, provisional (Belgian Malinois precedent); Wikipedia (S318, tier C) quotes McMillan 2024 at 13.8 y → 124 listed for David. Coren rank 14 'Belgian Shepherd Dog (Tervuren)' (S35) → Excellent → 1.5. No PDSA / Woodgreen / Dogs Trust page found. Names: RKC 'Belgian Shepherd Dog (Tervueren)', AKC 'Belgian Tervuren'; Slovenian »belgijski ovčar tervuren« (Malinois precedent, no KZS page read — open for David).",
+    "identity": {
+      "value": "FCI No. 15, Group 1 Section 1 (Sheepdogs), Belgium",
+      "unit": "—",
+      "source_id": "S312",
+      "quote": "CHIEN DE BERGER BELGE (15)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S312, read 2026-10-14 for the Malinois): varieties 'a) Groenendael, b) Laekenois, c) Malinois, d) Tervueren'; group 1 'Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country BELGIUM. FCI standard 15 (S831): 'The Groenendael and the Tervueren are the long-haired varieties.'; 'The four varieties of this breed are judged separately' (fragments). The AKC registers the 'Belgian Tervuren' as its own breed (S174); the RKC as 'Belgian Shepherd Dog (Tervueren)' (S830). Belgium is already in FCI_ORIGINS (BE)."
+    },
+    "size_class": {
+      "value": "medium-large",
+      "unit": "—",
+      "source_id": "S830",
+      "quote": "Size: Medium-Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S830). FCI 20–30 kg (S313 / S831) = 44–66 lb → mostly the 'Medium (24–59 pounds)' class of S10 (the male maximum touches 'Large'); treated like the Belgian Malinois. RKC group: Pastoral."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            66
+          ],
+          "female": [
+            56,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S313",
+        "quote": "The ideal height at withers is on average - 62 cm for males",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313, read 2026-10-14; same wording in the KUSA reprint S831: males 'on average: 62cm (approx. 24½”)', females 'on average: 58cm (approx. 22½”)', limits '2 cm less, 4 cm more') → 60–66 / 56–62 cm. The standard is shared by the four varieties."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            56,
+            66
+          ],
+          "female": [
+            56,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S832",
+        "quote": "Belgian Tervuren weigh 45–75 pounds and stand 22–26 inches tall.",
+        "confidence": "medium",
+        "notes": "PetMD (S832, tier B): one range for both sexes; 22–26 in × 2.54 = 55.9–66.0 → 56–66 cm (by us). Alternative only."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            20,
+            25
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S313",
+        "quote": "Males about 25-30 kg.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313): 'Males about 25-30 kg.' and 'Females about 20-25 kg.'; the KUSA reprint (S831) 'about 25kg – 30kg.' / 'about 20 – 25kg.' agrees. The game range (adult_weight_kg 20–30). Shared by the four varieties."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            20.4,
+            34.0
+          ],
+          "female": [
+            20.4,
+            34.0
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S832",
+        "quote": "Belgian Tervuren weigh 45–75 pounds and stand 22–26 inches tall.",
+        "confidence": "medium",
+        "notes": "PetMD (S832, tier B), one range for both sexes; pounds × 0.4536 by us. Alternative only (wider than the FCI standard)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 20–30 kg (S313) ≈ 44–66 lb → mostly 'Medium (24–59 pounds)' (Belgian Malinois precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Belgian Tervuren growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S830",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S830). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S832",
+        "quote": "They have an average lifespan of 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S832, tier B, US). Lower bound 12 y → 108 would be the senior boundary; alternative only (the runbook's order is McMillan → VetCompass → RKC)."
+      },
+      "mcmillan_2024": {
+        "value": 13.8,
+        "unit": "years",
+        "source_id": "S318",
+        "quote": "A UK study found a life expectancy of 12 years for the Malinois and 13.8 years for the Tervueren",
+        "confidence": "low",
+        "notes": "Wikipedia (S318, tier C, fragment as returned 2026-11-14) citing McMillan et al. 2024 — background only, never alone. The paper (S771) shows 'Belgian Tervuren' only as a phylogeny tip; breed medians are in its Supplementary Table 3 (not fetched). 0.75 × 13.8 × 12 = 124.2 → 124 would be the senior boundary — open for David."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S830) → 7.5 y = 90 months. Provisional until McMillan 2024 (Supplementary Table 3 / Dogs Trust table S123) is checked. Alternatives: 124 (McMillan 13.8 y via Wikipedia S318), 108 (PetMD lower bound 12 y, S832), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S830"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S830",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S830), runbook first choice → 120 min ('more than N' → N). PetMD (S832) gives no number."
+      },
+      "daily_text": {
+        "value": "a lot of physical activity and mental stimulation",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "And as their family, you need to provide your Terv with a lot of physical activity and mental stimulation.",
+        "confidence": "high",
+        "notes": "PetMD (S832). Basis of active_family / needs_mental_stimulation (with behaviour.boredom)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B quote advising a gap between meals and exercise found (PetMD S832 lists gastric dilatation-volvulus only as a health heading) → no meal_exercise_gap row (runbook: never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "watchful and active, bursting with energy; neither fear nor aggression",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "The Belgian Shepherd is a watchful and active dog, bursting with energy",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragment); 'showing no fear or aggressiveness' (fragment). RKC (S830): watchful, wary and highly intelligent, a working dog (paraphrase)."
+      },
+      "family": {
+        "value": "confident herding dog that forms close bonds with its family",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "The Belgian Tervuren is a confident herding dog that forms close bonds with their family.",
+        "confidence": "medium",
+        "notes": "PetMD (S832). Not used for family_pet (the same page warns it may herd children — see children)."
+      },
+      "children": {
+        "value": "may try to herd children and smaller animals such as cats",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "As a herding breed, the Belgian Tervuren may try to \"herd\" children and smaller animals such as cats.",
+        "confidence": "medium",
+        "notes": "PetMD (S832). → may_herd_children; never children / small_children (no explicit rating)."
+      },
+      "other_pets": {
+        "value": "may try to herd smaller animals such as cats",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "As a herding breed, the Belgian Tervuren may try to \"herd\" children and smaller animals such as cats.",
+        "confidence": "medium",
+        "notes": "PetMD (S832). Herding, not a 'high prey drive' statement → no chases_small_pets (runbook)."
+      },
+      "strangers": {
+        "value": "may be hesitant around new people",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Tervs may be hesitant around new people, emphasizing the need for early and consistent socialization.",
+        "confidence": "medium",
+        "notes": "PetMD (S832). See socialisation."
+      },
+      "boredom": {
+        "value": "bored Tervs may get into trouble or develop undesirable behaviours",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Bored Tervs may get into trouble or develop undesirable behaviors to keep themselves entertained.",
+        "confidence": "medium",
+        "notes": "PetMD (S832). Basis of needs_mental_stimulation (with exercise.daily_text). Nothing on being left alone → no needs_company."
+      },
+      "socialisation": {
+        "value": "socialising the puppy is a vital part of its care",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "This makes socializing your Belgian Tervuren puppy a vital part of their care.",
+        "confidence": "high",
+        "notes": "PetMD (S832). A need (runbook M5-R17) → proposed_game_parameters.belgian_tervuren.socialisation (DOG_SOCIALISATION row)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No time-alone statement found (S830, S832)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S830) → no welfare chip. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice BVA/KC elbow and hip schemes and the BVA/KC/ISDS eye scheme (S830). PetMD (S832) health headings: hip dysplasia, progressive retinal atrophy, hypothyroidism, von Willebrand disease, gastric dilatation-volvulus.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S830, fragment). Not a welfare breed."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia (and elbow testing for breeders)",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Hip dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S832) health heading; RKC Best Practice hip and elbow schemes (S830). Register health key hip_elbow_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (an inherited eye disease)",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Progressive retinal atrophy (PRA)",
+        "confidence": "medium",
+        "notes": "PetMD (S832) health heading; RKC Best Practice eye scheme (S830). Register health key pra_inherited_blindness."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Hypothyroidism",
+        "confidence": "medium",
+        "notes": "PetMD (S832) health heading. Register health key hypothyroidism."
+      },
+      "vwd": {
+        "value": "von Willebrand disease (a bleeding disorder)",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Von Willebrand Disease (vWD)",
+        "confidence": "medium",
+        "notes": "PetMD (S832) health heading. Register health key bleeding_disorder_vwd."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat)",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Gastric dilatation-volvulus (GDV)",
+        "confidence": "medium",
+        "notes": "PetMD (S832) health heading only — no advice on a gap after meals quoted → no meal-gap warning. Register health key bloat_gdv."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 14,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Belgian Shepherd Dog (Tervuren)",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-14): rank 14 'Belgian Shepherd Dog (Tervuren)' under 'Excellent Working Dogs' (ranks 11–26); 'Belgian Sheepdog' 15, 'Belgian Malinois' 22. Coren's own article (S34) lists only the top and bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "medium",
+        "notes": "S35 tier 'Excellent Working Dogs' (ranks 11–26). Tier definitions from Wikipedia; verify in the book."
+      },
+      "training_notes": {
+        "value": "intelligent and hardworking; needs mental stimulation",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "And as their family, you need to provide your Terv with a lot of physical activity and mental stimulation.",
+        "confidence": "medium",
+        "notes": "PetMD (S832) — see exercise.daily_text."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.belgian_tervuren.learning_multiplier (1.5, runbook rule: Excellent tier, rank 14).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, harmoniously proportioned long-haired shepherd combining elegance and power",
+        "unit": "—",
+        "source_id": "S313",
+        "quote": "The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313, read 2026-10-14 for the Malinois; shared by the varieties)."
+      },
+      "colours": {
+        "value": [
+          "fawn with black overlay and black mask",
+          "grey with black overlay and black mask"
+        ],
+        "unit": "list",
+        "source_id": "S831",
+        "quote": "Only fawn with black overlay or grey with black overlay, with black mask",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragment): 'the fawn with black overlay is still preferred'; 'The fawn must be rich, neither light nor washed-out.'; black overlay = 'the hairs have a black tip that shades the base colour' (flamed, not patches or brindle — paraphrase); faults 'Tervueren: grey' and 'too light a fawn' (fragments); disqualifying 'lack of mask, including a muzzle of lighter colour than the rest of the coat in Tervueren and Malinois' (fragment). Wikipedia (S318, tier C) 'Fawn or grey with black overlay and a black mask'. Never black, brindle, merle or white patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): fawn with black overlay and mask first with the highest weight (the standard's preferred colour — the portrait default), grey with black overlay and mask lower (a fault in the standard, still allowed)."
+      },
+      "coat": {
+        "value": "long-haired variety: short on the head, outer ears and lower legs; long and smooth on the body, a ruff and jabot, breeches and a plumed tail; dense woolly undercoat",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "The Groenendael and the Tervueren are the long-haired varieties.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831); the coat details are a paraphrase of the long-haired section as returned (short on the head, outer ears and lower legs; long and smooth on the body, longer around the neck and forechest — collarette and jabot; breeches on the thighs; a plume on the tail; dense, close-fitting hair with a woolly undercoat). RKC key fact 'Coat length: Medium' (S830)."
+      },
+      "mask": {
+        "value": "pronounced black mask encompassing the top and bottom lip",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "the mask must be very pronounced",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragments): 'the mask must be very pronounced' and 'encompass the top and bottom lip' (Tervueren and Malinois); 'A strict minimum of six points of skin pigmentation' (ears, upper eyelids, lips)."
+      },
+      "head": {
+        "value": "muzzle of medium length, well chiselled, narrowing like an elongated wedge",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "narrowing gradually toward the nose like an elongated wedge",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragment): 'Medium length and well-chiselled under the eyes'; skull and muzzle roughly equal in length. Not flat-faced."
+      },
+      "eyes": {
+        "value": "medium size, slightly almond-shaped, brownish, preferably dark",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Medium size, neither protruding nor sunken, slightly almond-shaped",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831): 'brownish colour, preferably dark' (fragment)."
+      },
+      "ears": {
+        "value": "rather small, set high, distinctly triangular, stiff and erect",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Rather small, set high, distinctly triangular appearance",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831): 'stiff, carried upright, and vertical when dog is alert' (fragment); drooping ears disqualify."
+      },
+      "tail": {
+        "value": "medium length, reaching at least to the hock; carried down at rest with the tip curved back; plumed",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Well set on, strong at the base, of medium length, reaching at least to hock",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831): 'at rest carried down, with tip curved backwards at level of hock' (fragment); a missing or shortened tail disqualifies."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S830, reached 2026-11-14) and PetMD (S832). No PDSA / Woodgreen / Dogs Trust page for the breed. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Medium-Large",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Size: Medium-Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S830)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S830). Basis of 120 min, active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the home)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S830) — no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S832) 'every week' → 1 (open for David: 'more than once a week' reads as 2 or more). With PetMD's near-daily brushing while shedding → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S830); the standard describes the long-haired variety (S831)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds chip; PetMD (S832) 'Tervs shed heavily in the spring and fall' agrees."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S830",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; near-daily while shedding in spring and autumn",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "You'll also need to set aside time to brush their beautiful, long double coat every week.",
+        "confidence": "high",
+        "notes": "PetMD (S832); 'Weekly brushing will prevent tangles, and keep your Terv's coat shiny and free from tangles and matting.'; 'Tervs shed heavily in the spring and fall, and you may need to increase your grooming routine to near-daily brushing during this time.' → 1 session a week (seasonal moult not modelled). With RKC 'More than once a week' → frequent_grooming."
+      },
+      "petmd_bathing": {
+        "value": "a bath every four to six weeks",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "The Belgian Tervuren will benefit from a bath every four to six weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S832); 'bathing more than twice a month can strip the skin of its natural oils' (paraphrase of the warning). → bath reminder every 4 weeks (range → lower bound; M5-R18 parent reminder, never scored)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every one or two weeks",
+        "unit": "—",
+        "source_id": "S832",
+        "quote": "Cleaning your Terv's ears every one or two weeks helps prevent ear infections and keeps the canals clean.",
+        "confidence": "high",
+        "notes": "PetMD (S832) → ear cleaning once a week (range → lower bound; M5-R18 child mini-game). Nails and teeth: no frequency on the page → no task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -85811,6 +86346,291 @@
         "confidence": "high",
         "notes": "FCI (S825). Not a welfare breed → no `muzzle` trait. Colour weight is ours (unsourced). Natural tail (born tailless or with a short tail is allowed, S825).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (the only standard colour); erect small ears, ruff and culottes, natural tail, no white spots"
+      }
+    },
+    "belgian_tervuren": {
+      "_note": "Unattended run M5-R10-111 (2026-11-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S830 'More than 2 hours per day' → 120). Senior 90 provisional (RKC lower bound 'Over 10 years' — McMillan 2024 not reachable for the variety; 124 via Wikipedia listed for David). Coren rank 14 (Excellent) → 1.5. Built: brushing 1× a week (RKC 'More than once a week' → PetMD S832 'every week', M5-R13 — open for David), ear cleaning once a week (PetMD 'every one or two weeks', M5-R18), bath reminder every 4 weeks (PetMD 'every four to six weeks', M5-R18), puppy socialisation with the PetMD quote (M5-R17). No meal gap (no quote), no heat warning (not flat-faced), no tooth / nail / groomer task (no frequency). No new vocabulary key. RKC Breed Watch Category 1 → in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S830",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S830) → rule 'more than N' → 120. PetMD (S832) 'a lot of physical activity' gives no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S830 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S830",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S830). No McMillan 2024 / VetCompass value reachable for the Tervueren. Alternatives: 124 (McMillan 2024 13.8 y via Wikipedia S318, tier C), 108 (PetMD lower bound 12 y, S832), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 Supplementary Table 3 / the Dogs Trust table (S123) is checked — open for David.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S830"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 124,
+          "senior_petmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S830)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 14 'Belgian Shepherd Dog (Tervuren)' (S35, checked 2026-11-14) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 14, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S832",
+        "quote": "You'll also need to set aside time to brush their beautiful, long double coat every week.",
+        "confidence": "medium",
+        "notes": "belgian_tervuren.suitability.petmd_grooming. RKC 'Grooming: More than once a week' (S830) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S832) 'every week' → 1. Open for David: 'more than once a week' suggests 2 or more (Belgian Malinois 2, verified=false). Seasonal near-daily brushing while shedding is not modelled. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S830",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 7,
+            "source_id": "S832",
+            "quote": "near-daily brushing",
+            "notes": "PetMD — only while shedding in spring and autumn (seasonal, not modelled)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »every week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S832",
+        "quote": "Cleaning your Terv's ears every one or two weeks helps prevent ear infections and keeps the canals clean.",
+        "confidence": "high",
+        "notes": "belgian_tervuren.suitability.petmd_ears. 'every one or two weeks' → a range → its lower bound → once a week.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes 1× na teden (PetMD »every one or two weeks« → spodnja meja)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R18)",
+        "source_id": "S832",
+        "quote": "The Belgian Tervuren will benefit from a bath every four to six weeks.",
+        "confidence": "high",
+        "notes": "belgian_tervuren.suitability.petmd_bathing. '4–6 weeks' → month / 4–6 weeks → every 4 weeks. Teeth, nails and groomer: no frequency → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »every four to six weeks«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S832",
+        "quote": "This makes socializing your Belgian Tervuren puppy a vital part of their care.",
+        "confidence": "high",
+        "notes": "belgian_tervuren.behaviour.socialisation (PetMD S832, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S832)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-111); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S830",
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.adult",
+              "belgian_tervuren.exercise.daily_text"
+            ],
+            "quote": "S830 'Exercise: More than 2 hours per day'; S832 'you need to provide your Terv with a lot of physical activity and mental stimulation.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_size_of_home",
+              "belgian_tervuren.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S830 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.adult",
+              "belgian_tervuren.suitability.rkc_exercise"
+            ],
+            "quote": "S830 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.behaviour.children"
+            ],
+            "quote": "S832 'As a herding breed, the Belgian Tervuren may try to \"herd\" children and smaller animals such as cats.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.exercise.daily_text",
+              "belgian_tervuren.behaviour.boredom"
+            ],
+            "quote": "S832 'a lot of physical activity and mental stimulation'; S832 'Bored Tervs may get into trouble or develop undesirable behaviors to keep themselves entertained.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S830"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_shedding"
+            ],
+            "quote": "S830 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S830",
+              "S832"
+            ],
+            "refs": [
+              "belgian_tervuren.suitability.rkc_grooming",
+              "belgian_tervuren.suitability.petmd_grooming"
+            ],
+            "quote": "S830 'Grooming: More than once a week'; S832 'brush their beautiful, long double coat every week' (near-daily while shedding)"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PetMD 'forms close bonds with their family' but warns it may herd children — no plain family-pet statement (Belgian Malinois precedent).",
+          "children": "No explicit statement; PetMD (S832) may herd children.",
+          "small_children": "No rating.",
+          "apartment": "RKC 'Large house' (S830).",
+          "other_pets": "PetMD: may herd smaller animals such as cats.",
+          "chases_small_pets": "No 'prey drive' wording — herding only (runbook).",
+          "needs_company": "No time-alone statement.",
+          "experienced_owner": "No A/B statement found for the Tervueren.",
+          "shorter_lifespan": "RKC 'Over 10 years'.",
+          "welfare_chip": "RKC Breed Watch Category 1 (S830) — no points of concern.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, may_herd_children, needs_mental_stimulation, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI S831 muzzle 'like an elongated wedge'); RKC Breed Watch Category 1 (S830) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Belgian Tervuren (Belgian Shepherd, long-haired variety), fawn with black overlay and a pronounced black mask (the preferred standard colour): medium-sized, harmoniously proportioned, elegant and powerful; long smooth coat with a ruff, breeches and a plumed tail, short on the head and lower legs; rather small, high-set, triangular erect ears; medium, slightly almond-shaped dark brown eyes; long wedge-shaped muzzle; natural tail reaching the hock, carried low",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "the fawn with black overlay is still preferred",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831). Not a welfare breed → no welfare trait, but the black mask is described in a `muzzle` trait (as for the Belgian Malinois). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with black overlay and black mask is the portrait default (the standard's preferred colour); grey with black overlay and mask as the second picker colour; never black, brindle or white patches"
       }
     }
   }

@@ -139,7 +139,8 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'belgian_tervuren']))->toThrow(QueryException::class);
+            // Another variety without its own game breed (the Tervueren is a breed since M5-R10-111).
+            ->and($refused(['breed_type' => 'belgian_laekenois']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2026_12_16_120000_add_belgian_malinois_breed.php');
         // down() refuses while a Belgian Malinois exists (no silent data loss).

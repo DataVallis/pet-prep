@@ -806,6 +806,12 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Belgian Tervuren (M5-R10-111, docs/research/dog-data belgian_tervuren.appearance): "Only fawn with black overlay or grey
+| with black overlay, with black mask" (FCI standard No. 15, S831 — "the fawn with black overlay is still preferred"; grey
+| is a fault but allowed; never black, brindle or white patches); long-haired variety with a ruff, breeches and a plumed
+| tail, rather small erect triangular ears, pronounced black mask. Not flat-faced; RKC Breed Watch Category 1 (S830). Fawn
+| first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Schipperke (M5-R10-110, docs/research/dog-data schipperke.appearance): "Totally black." (FCI-Standard N° 83, S825; any
 | other top-coat colour or tiny white spots disqualify); abundant straight harsh coat with a ruff, mane, frill and culottes,
 | erect very small pointed ears, wedge-shaped lupoid head, natural tail (born tailless allowed). Not flat-faced; RKC Breed
@@ -4793,6 +4799,39 @@ return [
             'tail' => ['natural tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-111 (docs/research/dog-data/data.json belgian_tervuren.appearance; runbook rules 2026-10-10: the standard's
+    // Tervueren colours only — fawn or grey with black overlay and black mask (FCI S831); erect ears, natural plumed tail).
+    'belgian_tervuren' => [
+        'display_name' => 'Belgian Tervuren',
+        // Colour frequencies are in no source (belgian_tervuren.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 15 (S313, KUSA reprint S831), RKC Breeds A–Z (S830) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S830 "Size: Medium-Large"; S313 ideal height 62 cm (males) / 58 cm (females)',
+            'build' => 'S313 "The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power."',
+            'coat_length' => 'S831 "The Groenendael and the Tervueren are the long-haired varieties." — short on the head and lower legs, long on the body, ruff, breeches, plumed tail',
+            'coat_color' => 'S831 "Only fawn with black overlay or grey with black overlay, with black mask"; "the fawn with black overlay is still preferred" (weights unsourced)',
+            'ear_carriage' => 'S831 "Rather small, set high, distinctly triangular appearance"; "stiff, carried upright, and vertical when dog is alert"',
+            'eye_color' => 'S831 "Medium size, neither protruding nor sunken, slightly almond-shaped"; "brownish colour, preferably dark"',
+            'tail' => 'S831 "Well set on, strong at the base, of medium length, reaching at least to hock"; "at rest carried down, with tip curved backwards at level of hock"',
+            'muzzle' => 'S831 "the mask must be very pronounced"; "narrowing gradually toward the nose like an elongated wedge"',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'harmoniously proportioned, elegant and powerful long-haired shepherd build with a proud head carriage', 'weight' => 3], 'lean, athletic, square shepherd build'],
+            'coat_length' => ['long, smooth coat with a dense undercoat, a full ruff around the neck, breeches and a plumed tail, short hair on the head and lower legs'],
+            // FCI Tervueren colours only (S831); fawn highest (the preferred colour) → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'weight' => 4],
+                'grey with black overlay (black-tipped hairs) and a pronounced black mask',
+            ],
+            'ear_carriage' => ['rather small, high-set, distinctly triangular ears carried stiffly erect'],
+            'eye_color' => ['medium, slightly almond-shaped, dark brown eyes'],
+            'tail' => ['natural plumed tail reaching the hock, carried low at rest with the tip curved slightly back'],
+            'muzzle' => ['black mask covering the muzzle and lips; long muzzle narrowing like an elongated wedge'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
