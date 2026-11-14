@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `toy_fox_terrier` (viri S833–S839; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: American Toy Fox Terrier Club (K42) |
 | Izvor | ameriška pasma, AKC skupina pritlikavih psov (priznana 2003, standard velja od 2016; S835, S837); UKC od 1936; **standarda FCI ni** (pasma ni pri FCI in ne pri RKC; v registru ni podatka FCI) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 108. mesto (S174, zabeleženo 2026-11-14) |
-| PR-ji | pet-prep #1123 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #1123 (pasma, združen `8f915f7`) · portret: pet-prep portretni PR (zagon `breed-portraits.yml` 43550212898 14. 11. 2026, koda `8f915f7`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-toy-fox-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje 2× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-14 |
 | Mini igre zobje (vsak dan), ušesa (1× na teden), kremplji (vsake 4 tedne) | 🛠 | 💶 izziv | M5-R15 / R18 / R19 | 2026-11-14 |
 | Barva (izbirnik: 4 standardne barve) | 🛠 | 💶 izziv | M5-R21 | 2026-11-14 |
-| AI portret v registru | sledi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/toy-fox-terrier`, `/sl/zivali/psi/toy-fox-terier`) | sledi (le s portretom); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru (trobarven, naravni rep) | ✅ AI fotografija (oznaka »AI-generated photo«) | — | M5-R11-04 | 2026-11-14 |
+| Stran na petprep.si (`/animals/dogs/toy-fox-terrier`, `/sl/zivali/psi/toy-fox-terier`) | 🛠 s portretom (spletni PR `feat/register-toy-fox-terrier`, v živo z naslednjo dnevno namestitvijo spletne strani); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-11-14 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
