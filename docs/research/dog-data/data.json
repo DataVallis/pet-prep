@@ -57921,10 +57921,10 @@
       "mcmillan_2024": {
         "value": 12.9,
         "unit": "years",
-        "source_id": null,
-        "quote": null,
+        "source_id": "S837",
+        "quote": "A 2024 UK study found a life expectancy of 12.9 years from a sample of 52 deaths for the breed",
         "confidence": "low",
-        "notes": "UNSOURCED as A/B — McMillan et al. 2024 is quoted only by Wikipedia (S837, tier C): 'A 2024 UK study found a life expectancy of 12.9 years from a sample of 52 deaths for the breed' (fragment). The paper's own table (S771 / Dogs Trust S123) was not reachable this run → not used for the senior boundary; 0.75 × 12.9 × 12 = 116.1 → 116 listed for David."
+        "notes": "Wikipedia (S837, tier C, fragment as returned 2026-11-14) citing McMillan et al. 2024 — background only, never alone. The paper's own table (S771 / Dogs Trust S123) was not reachable this run → not used for the senior boundary; 0.75 × 12.9 × 12 = 116.1 → 116 would be the senior boundary — open for David."
       },
       "senior_from": {
         "value": 9.75,
@@ -57936,7 +57936,15 @@
         "derived_from": [
           "S11",
           "S833"
-        ]
+        ],
+        "months": 117,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
       }
     },
     "exercise": {
