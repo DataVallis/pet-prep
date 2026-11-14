@@ -1,0 +1,180 @@
+{
+  "slug": "beans",
+  "species": "dog",
+  "name": {
+    "en": "Beans",
+    "sl": "Fižol"
+  },
+  "question": {
+    "en": "Can dogs eat beans?",
+    "sl": "Ali lahko psi jedo fižol?"
+  },
+  "url_slug": {
+    "en": "beans",
+    "sl": "fizol"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as a treat. Dogs can eat many kinds of beans, such as black, kidney, pinto, lima and navy beans, if they have been soaked and then cooked. Beans may give your dog some gas. Baked beans in sauce are not a good idea.",
+    "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira."
+  },
+  "why": {
+    "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
+    "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog ate some baked beans, a small amount is unlikely to cause much harm. Watch your dog for 24 hours and contact your vet for advice if you notice concerning signs such as an upset stomach or diarrhoea.",
+    "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska."
+  },
+  "serving": {
+    "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
+    "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
+    "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat baked beans?",
+        "sl": "Ali lahko psi jedo pečen fižol v omaki?"
+      },
+      "a": {
+        "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
+        "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb."
+      }
+    },
+    {
+      "q": {
+        "en": "Can beans replace meat in my dog's diet?",
+        "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?"
+      },
+      "a": {
+        "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
+        "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD220",
+      "quote": "Yes. Beans can be a part of a dog’s healthy diet."
+    },
+    {
+      "id": "KD220",
+      "quote": "Your dog can eat a variety of beans. Some he may enjoy are:"
+    },
+    {
+      "id": "KD220",
+      "quote": "Black beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Lima beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Kidney beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Pinto beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Navy beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans or legumes that have been soaked first and then cooked."
+    },
+    {
+      "id": "KD220",
+      "quote": "Beans already contain a lot of fiber, but uncooked they are almost indigestible."
+    },
+    {
+      "id": "KD220",
+      "quote": "This helps your dog digest them and may help reduce flatulence."
+    },
+    {
+      "id": "KD220",
+      "quote": "(Beans may still give your dog some gas!)"
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans as a treat."
+    },
+    {
+      "id": "KD220",
+      "quote": "No. Dogs can eat soybeans, but feeding just beans is bad for dogs if it’s replacing meat in their diet."
+    },
+    {
+      "id": "KD221",
+      "quote": "Although the beans themselves aren’t toxic,"
+    },
+    {
+      "id": "KD221",
+      "quote": "the sauce they come in can contain ingredients which may harm or irritate their stomach,"
+    },
+    {
+      "id": "KD221",
+      "quote": "so it’s not a good idea to feed your dog baked beans in sauce."
+    },
+    {
+      "id": "KD221",
+      "quote": "Baked beans are high in salt and sugar, and some contain high-fructose corn syrup."
+    },
+    {
+      "id": "KD221",
+      "quote": "A dog eating baked beans could lead to stomach upset, including diarrhoea."
+    },
+    {
+      "id": "KD221",
+      "quote": "The occasional baked bean is unlikely to cause any real harm, but if your dog consumes them on a regular basis"
+    },
+    {
+      "id": "KD221",
+      "quote": "it could lead to an increased risk of pancreatitis."
+    },
+    {
+      "id": "KD221",
+      "quote": "However, a small quantity is unlikely to cause much harm"
+    },
+    {
+      "id": "KD221",
+      "quote": "so it’s probably not a cause for concern if you’ve spilt some of your dinner"
+    },
+    {
+      "id": "KD221",
+      "quote": "and your dog has scoffed it off the floor."
+    },
+    {
+      "id": "KD221",
+      "quote": "Monitor them for 24 hours after eating and if you notice any concerning signs such as the ones listed above,"
+    },
+    {
+      "id": "KD221",
+      "quote": "contact your vet for advice."
+    }
+  ],
+  "related": [
+    "green-beans",
+    "edamame",
+    "peas"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a17d6cc2c34675d9c80c1b80f5fd1f595d80aaf8594415ec4d6022e94bff26f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "90d083c9179da00cc565f27ab6432e07d06d000da146487967a2837c560e6052"
+    }
+  }
+}

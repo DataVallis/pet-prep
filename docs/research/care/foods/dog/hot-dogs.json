@@ -1,0 +1,137 @@
+{
+  "slug": "hot-dogs",
+  "species": "dog",
+  "name": {
+    "en": "Hot dogs",
+    "sl": "Hrenovke"
+  },
+  "question": {
+    "en": "Can dogs eat hot dogs?",
+    "sl": "Ali lahko psi jedo hrenovke?"
+  },
+  "url_slug": {
+    "en": "hot-dogs",
+    "sl": "hrenovke"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, hot dogs aren't a good choice for dogs. They are very salty and often contain sodium nitrate and seasonings such as garlic and onion powder, which can be toxic to dogs. Hot dogs can also be a choking hazard.",
+    "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši."
+  },
+  "why": {
+    "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
+    "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili."
+  },
+  "signs": {
+    "en": [
+      "Tummy ache",
+      "Diarrhoea",
+      "Vomiting together with diarrhoea"
+    ],
+    "sl": [
+      "Bolečine v trebuhu",
+      "Driska",
+      "Bruhanje skupaj z drisko"
+    ]
+  },
+  "what_to_do": {
+    "en": "After eating a hot dog, your dog may get a tummy ache or diarrhoea, which should pass within a day. Call your vet if the diarrhoea doesn't stop or your dog is vomiting as well, as this can lead to serious dehydration.",
+    "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Hot dogs are too salty for dogs. At a barbecue, ask a grown-up for a little plain meat for your dog instead.",
+    "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What can I give my dog at a barbecue instead?",
+        "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?"
+      },
+      "a": {
+        "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
+        "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD213",
+      "quote": "Because they contain so many added ingredients that aren’t healthy for dogs, hot dogs aren’t the best choice for your pet."
+    },
+    {
+      "id": "KD213",
+      "quote": "The biggest problem with hot dogs, though, is salt."
+    },
+    {
+      "id": "KD213",
+      "quote": "Hot dogs also contain seasonings, such as garlic and onion powder, which can be toxic to dogs."
+    },
+    {
+      "id": "KD213",
+      "quote": "Hot dogs can also be a choking hazard, especially for big dogs that might try to swallow them without chewing them."
+    },
+    {
+      "id": "KD213",
+      "quote": "Your dog might get a bellyache or have some other digestive problems, like diarrhea, but this should pass within a day."
+    },
+    {
+      "id": "KD213",
+      "quote": "You only need to call the vet if the diarrhea persists, or if your dog is vomiting with diarrhea,"
+    },
+    {
+      "id": "KD213",
+      "quote": "as this could lead to extreme dehydration."
+    },
+    {
+      "id": "KD213",
+      "quote": "If you’re at a cookout and want to give your dog a safer snack, it’s best to give them some plain beef,"
+    },
+    {
+      "id": "KD213",
+      "quote": "pork, or chicken that has no salt or other seasoning on it."
+    },
+    {
+      "id": "KD213",
+      "quote": "Just make sure to cut the meat up into bite-sized pieces."
+    },
+    {
+      "id": "KD80",
+      "quote": "Hot dogs often contain ingredients that are not good for dogs, such as sodium nitrate, which has been linked to cancer;"
+    },
+    {
+      "id": "KD80",
+      "quote": "monosodium glutamate (MSG); and sugars or artificial sweeteners."
+    },
+    {
+      "id": "KD80",
+      "quote": "Feeding your dog even one-half of a hot dog would probably put them way over their daily sodium limit,"
+    },
+    {
+      "id": "KD80",
+      "quote": "and too much sodium can lead to dehydration and high blood pressure."
+    }
+  ],
+  "related": [
+    "salt",
+    "ham",
+    "bacon",
+    "ketchup",
+    "garlic",
+    "onion"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ef79f5f1f510c97a51d0ca52ecdf677fb97a1aae17e1f34374237152e052e3f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "09b9744787d97985ed2d6d9791337a1da30c78f94476ae1a6e2827552e7913dd"
+    }
+  }
+}
