@@ -813,6 +813,13 @@
 | UKC S838 does not penalise it). Tricolour first with the highest weight (the portrait default, Claude's choice); weights
 | unsourced → `verified => false`.
 |
+| Gordon Setter (M5-R10-113, docs/research/dog-data gordon_setter.appearance): "Stylish dog, with galloping lines."
+| (FCI-Standard N° 6, S841); colour "Deep, shining coal black, without rustiness, with markings of chestnut red, i.e. lustrous
+| tan." and "No other colour permissible." (S841); muzzle "Long with almost parallel lines", eyes dark brown, ears "Set low,
+| lying close to head", coat flat and of moderate length with silky feathering, tail "Straight or slightly scimitar"
+| (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
+| weight unsourced → `verified => false`.
+|
 | Belgian Tervuren (M5-R10-111, docs/research/dog-data belgian_tervuren.appearance): "Only fawn with black overlay or grey
 | with black overlay, with black mask" (FCI standard No. 15, S831 — "the fawn with black overlay is still preferred"; grey
 | is a fault but allowed; never black, brindle or white patches); long-haired variety with a ruff, breeches and a plumed
@@ -4876,6 +4883,38 @@ return [
             'tail' => ['natural tail, set high and held erect'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-113 (docs/research/dog-data/data.json gordon_setter.appearance; runbook rules 2026-10-10: the one standard colour
+    // of FCI-Standard N° 6 (S841), black and tan = the portrait default; natural tail).
+    'gordon_setter' => [
+        'display_name' => 'Gordon Setter',
+        // Colour frequencies are in no source (gordon_setter.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 6 (S841) and the RKC breed page (S842) — for the traits listed in `sources`. The colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S841 "Height at the withers: Males 66 cm (26 ins.)." / "Weight: Males 29.5 kg (65 lbs)."; RKC S842 "Large"',
+            'build' => 'S841 "Stylish dog, with galloping lines."',
+            'coat_length' => 'S841 "moderate length, flat and free from curl or wave on all other parts of body."',
+            'coat_color' => 'S841 "Deep, shining coal black, without rustiness, with markings of chestnut red, i.e. lustrous tan." / "No other colour permissible." (weight unsourced)',
+            'muzzle' => 'S841 "Long with almost parallel lines, neither pointed nor snipey."; nose "Large, broad, nostrils open and black."',
+            'ear_carriage' => 'S841 "Medium size, thin. Set low, lying close to head."',
+            'eye_color' => 'S841 "Dark brown, bright. Neither deep nor prominent, set sufficiently under brows, showing keen, intelligent expression."',
+            'tail' => 'S841 "Straight or slightly scimitar, not reaching below hocks." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'stylish, symmetrical setter with galloping lines', 'weight' => 3], 'strong, athletic gundog'],
+            'coat_length' => ['flat coat of moderate length with long silky feathering on the ears, chest, legs and tail'],
+            // The one standard colour (FCI S841) → the register portrait.
+            'coat_color' => [
+                ['value' => 'black and tan (deep coal black with chestnut-red tan markings)', 'weight' => 100],
+            ],
+            'muzzle' => ['long muzzle with almost parallel lines and a large, broad black nose'],
+            'ear_carriage' => ['thin, low-set ears of medium size lying close to the head, with silky feathering'],
+            'eye_color' => ['bright dark brown eyes with a keen, intelligent expression'],
+            'tail' => ['natural tail, straight or slightly curved, carried level or below the back, with feathering'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

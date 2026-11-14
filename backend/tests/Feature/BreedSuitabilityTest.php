@@ -636,6 +636,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::Schipperke->value => 'schipperke.behaviour.other_pets',
         // M5-R10-112: PetMD S833 "… Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive".
         BreedType::ToyFoxTerrier->value => 'toy_fox_terrier.behaviour.other_pets',
+        // M5-R10-113: PetMD S844 "Recall training is especially important for Gordon Setters due to their high prey drive."
+        BreedType::GordonSetter->value => 'gordon_setter.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -726,9 +728,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33), the Shiba Inu (AKC S383, M5-R10-46), the Russell Terrier (PDSA S560, M5-R10-70), the Miniature Pinscher (VCA S597, M5-R10-77), the Pekingese (PDSA S693, M5-R10-91) and the Toy Fox Terrier (WebMD S834, M5-R10-112) carry older_children.
+    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33), the Shiba Inu (AKC S383, M5-R10-46), the Russell Terrier (PDSA S560, M5-R10-70), the Miniature Pinscher (VCA S597, M5-R10-77), the Pekingese (PDSA S693, M5-R10-91), the Toy Fox Terrier (WebMD S834, M5-R10-112) and the Gordon Setter (WebMD S845, M5-R10-113) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu, BreedType::RussellTerrier, BreedType::MiniaturePinscher, BreedType::Pekingese, BreedType::ToyFoxTerrier], true)) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu, BreedType::RussellTerrier, BreedType::MiniaturePinscher, BreedType::Pekingese, BreedType::ToyFoxTerrier, BreedType::GordonSetter], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }
