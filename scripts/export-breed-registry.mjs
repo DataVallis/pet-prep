@@ -493,6 +493,7 @@ const SPECIES = [
       { id: 'norwich_terrier', synonyms: { en: ['Norwich'], sl: ['norwiški terier'] } },
       { id: 'miniature_bull_terrier', synonyms: { en: ['Bull Terrier (Miniature)', 'Mini Bull Terrier', 'Mini Bull'], sl: ['mini bulterier', 'miniaturni bul terier'] } },
       { id: 'schipperke', synonyms: { en: ['Little Captain', 'Little Black Devil', 'Spitzke'], sl: ['šiperke', 'siperke'] } },
+      { id: 'belgian_tervuren', synonyms: { en: ['Tervuren', 'Tervueren', 'Belgian Shepherd Dog (Tervueren)', 'Terv'], sl: ['tervuren', 'belgijski ovcar tervuren'] } },
     ],
   },
   {
@@ -2861,6 +2862,28 @@ const DOG_FACTS = {
       ['dental_disease_home_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-111. Height = FCI standard 15 (S313; KUSA reprint S831), weight = FCI 'Males about 25-30 kg.' (S313),
+  // lifespan = RKC 'Over 10 years' (S830; McMillan 2024 not reachable for the variety — Wikipedia S318 tier C not exported),
+  // exercise = RKC 'More than 2 hours per day' (S830), grooming / shedding = RKC key facts (S830). Coren rank 14 (S35). FCI
+  // origin Belgium (BE). Not exported: height.petmd / adult_weight.petmd / lifespan.petmd (alternatives), lifespan.mcmillan_2024
+  // (tier C), senior_from (derived), health.breed_watch (Category 1). No new health key.
+  belgian_tervuren: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['bleeding_disorder_vwd', 'health.vwd'],
+      ['bloat_gdv', 'health.gdv'],
+    ],
+  },
 
 
 
@@ -2931,6 +2954,7 @@ export const DOG_CARE_TASKS = {
   japanese_chin: [['ear_cleaning', 1, 14, 'proposed_game_parameters.japanese_chin.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.japanese_chin.bathing']],
   norwich_terrier: [['tooth_brushing', 1, 7, 'proposed_game_parameters.norwich_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.norwich_terrier.nail_trimming'], ['bath', 1, 84, 'proposed_game_parameters.norwich_terrier.bathing']],
   schipperke: [['tooth_brushing', 7, 7, 'proposed_game_parameters.schipperke.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.schipperke.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.schipperke.bathing']],
+  belgian_tervuren: [['ear_cleaning', 1, 7, 'proposed_game_parameters.belgian_tervuren.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_tervuren.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3777,6 +3801,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.schipperke.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.schipperke.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.schipperke.exercise_minutes_senior',
+  },
+  belgian_tervuren: {
+    adult_minutes: ['proposed_game_parameters.belgian_tervuren.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.belgian_tervuren.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.belgian_tervuren.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.belgian_tervuren.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.belgian_tervuren.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.belgian_tervuren.exercise_minutes_senior',
   },
 
 
