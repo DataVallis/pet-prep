@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "62fe938ead435200c6443894fc8357b059276955088049b536b11ab4f5904aca"
+      "sha256": "76a03572009eed72622e4feeac695864e0659dc4c469f8c3bf0d72524dbc4769"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -60582,7 +60582,7 @@
       "id": "norwich_terrier",
       "species": "dog",
       "order": 100,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Norwich Terrier",
         "sl": "Norwich terier"
@@ -61180,7 +61180,7 @@
       "id": "miniature_bull_terrier",
       "species": "dog",
       "order": 101,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Miniature Bull Terrier",
         "sl": "Miniaturni bulterier"
@@ -61729,7 +61729,7 @@
       "id": "schipperke",
       "species": "dog",
       "order": 102,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Schipperke",
         "sl": "Schipperke"
@@ -62369,7 +62369,7 @@
       "id": "belgian_tervuren",
       "species": "dog",
       "order": 103,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Belgian Tervuren",
         "sl": "Belgijski ovčar tervuren"
@@ -62981,7 +62981,7 @@
       "id": "toy_fox_terrier",
       "species": "dog",
       "order": 104,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Toy Fox Terrier",
         "sl": "Toy fox terier"
@@ -63540,7 +63540,7 @@
       "id": "gordon_setter",
       "species": "dog",
       "order": 105,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Gordon Setter",
         "sl": "Gordonski seter"
