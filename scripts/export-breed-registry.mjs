@@ -495,6 +495,7 @@ const SPECIES = [
       { id: 'schipperke', synonyms: { en: ['Little Captain', 'Little Black Devil', 'Spitzke'], sl: ['šiperke', 'siperke'] } },
       { id: 'belgian_tervuren', synonyms: { en: ['Tervuren', 'Tervueren', 'Belgian Shepherd Dog (Tervueren)', 'Terv'], sl: ['tervuren', 'belgijski ovcar tervuren'] } },
       { id: 'toy_fox_terrier', synonyms: { en: ['American Toy Terrier', 'Amertoy', 'TFT'], sl: ['toy fox terrier', 'amertoy'] } },
+      { id: 'gordon_setter', synonyms: { en: ['Black and Tan Setter', 'Scottish Setter', 'Setter'], sl: ['gordon seter', 'škotski seter', 'seter'] } },
     ],
   },
   {
@@ -2910,6 +2911,29 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-113. RKC page (S842): exercise 'More than 2 hours per day', coat 'Medium', grooming 'More than once a week',
+  // sheds 'Yes', lifespan 'Over 10 years'; FCI N° 6 (S841) height males 66 / females 62 cm, weight males 29.5 / females
+  // 25.5 kg (single values). Coren rank 34 (S35). FCI origin Great Britain (GB). Not exported: adult_weight.pdsa
+  // (alternative), lifespan.petmd / mcmillan_2024 (null; 12.4 y only via Wikipedia, tier C) / senior_from (derived),
+  // health.breed_watch (Category 2, points not returned), health.elbows (inside hip_elbow_dysplasia), health.ears
+  // ('regularly'), health.other (WebMD list, paraphrase). No new health key.
+  gordon_setter: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['pra_inherited_blindness', 'health.eyes'],
+    ],
+  },
 
 
 
@@ -2982,6 +3006,7 @@ export const DOG_CARE_TASKS = {
   schipperke: [['tooth_brushing', 7, 7, 'proposed_game_parameters.schipperke.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.schipperke.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.schipperke.bathing']],
   belgian_tervuren: [['ear_cleaning', 1, 7, 'proposed_game_parameters.belgian_tervuren.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_tervuren.bathing']],
   toy_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.toy_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.toy_fox_terrier.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.toy_fox_terrier.nail_trimming']],
+  gordon_setter: [['tooth_brushing', 7, 7, 'proposed_game_parameters.gordon_setter.tooth_brushing'], ['bath', 1, 28, 'proposed_game_parameters.gordon_setter.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3844,6 +3869,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.toy_fox_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.toy_fox_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior',
+  },
+  gordon_setter: {
+    adult_minutes: ['proposed_game_parameters.gordon_setter.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.gordon_setter.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.gordon_setter.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.gordon_setter.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.gordon_setter.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.gordon_setter.exercise_minutes_senior',
   },
 
 

@@ -739,6 +739,10 @@ return [
         ['key' => 'tan-white', 'value' => 'white and tan: predominantly white body with a tan head', 'en' => 'White and tan', 'sl' => 'Belo-rjavkast'],
         ['key' => 'black-white', 'value' => 'white and black: predominantly white body with a black head', 'en' => 'White and black', 'sl' => 'Belo-črn'],
     ],
+    // M5-R10-113: FCI-Standard N° 6 (S841) — the one standard colour, same value as breed_appearance.php.
+    'gordon_setter' => [
+        ['key' => 'black-tan', 'value' => 'black and tan (deep coal black with chestnut-red tan markings)', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -636,6 +636,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::Schipperke->value => 'schipperke.behaviour.other_pets',
         // M5-R10-112: PetMD S833 "… Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive".
         BreedType::ToyFoxTerrier->value => 'toy_fox_terrier.behaviour.other_pets',
+        // M5-R10-113: PetMD S844 "Recall training is especially important for Gordon Setters due to their high prey drive."
+        BreedType::GordonSetter->value => 'gordon_setter.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

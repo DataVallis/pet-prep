@@ -2751,5 +2751,25 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S833'], 'refs' => ['toy_fox_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-113: gordon_setter.* (S842–S845), runbook rules (data.json proposed_game_parameters.gordon_setter.suitability_tags).
+        // RKC Breed Watch Category 2 without returned points (S842) → no welfare chip; in marketing. No new vocabulary key.
+        'gordon_setter' => [
+            'suits' => [
+                // S842 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.exercise.adult', 'gordon_setter.suitability.rkc_exercise']],
+                // S842 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.exercise.adult', 'gordon_setter.suitability.rkc_exercise']],
+                // S842 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.suitability.rkc_shedding']],
+                // S842 "Grooming: More than once a week"; S843 daily grooming.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S842', 'S843'], 'refs' => ['gordon_setter.suitability.rkc_grooming', 'gordon_setter.suitability.pdsa_grooming']],
+                // S844 "Recall training is especially important for Gordon Setters due to their high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S844'], 'refs' => ['gordon_setter.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

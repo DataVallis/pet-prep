@@ -883,6 +883,15 @@ class FalAiService
                 .'erect, pointed, inverted V-shaped ears set high, clear bright dark eyes, a natural tail set high and held erect, alert, spirited expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-113: FCI-Standard N° 6 (S841) — a stylish, symmetrical large setter, black and tan (the only standard
+            // colour), flat coat of moderate length with silky feathering, low-set thin ears; natural tail.
+            BreedType::GordonSetter => 'A stylish, symmetrical Gordon Setter gundog with galloping lines, black and tan: a deep, shining coal-black coat '
+                .'with chestnut-red tan markings above the eyes, on the muzzle, throat, chest, legs and under the tail, '
+                .'a flat coat of moderate length with long silky feathering on the ears, chest, legs and tail, '
+                .'a long head with a long muzzle and a large, broad black nose, bright dark brown eyes with a keen, intelligent expression, '
+                .'thin, low-set ears of medium size lying close to the head, a natural straight or slightly curved tail carried level or below the back, '
+                .'kindly, dignified expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2104,6 +2113,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, satiny, shiny, smooth coat',
                 'markings' => 'predominantly white body, erect pointed V-shaped ears, natural tail held erect',
+            ],
+            // M5-R10-113: the one standard colour (FCI S841 "No other colour permissible.").
+            BreedType::GordonSetter => [
+                'color_scheme' => 'black and tan (coal black with chestnut-red tan markings)',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'flat coat of moderate length with long silky feathering',
+                'markings' => 'tan above the eyes, on the muzzle, throat, chest, legs and under the tail, never another colour',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

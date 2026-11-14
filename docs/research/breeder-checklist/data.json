@@ -4017,6 +4017,54 @@
         }
       ],
       "notes": "Not RKC-registered → no RKC minimum / best_practice level. American Toy Fox Terrier Club health page (K42): 'The following health conditions have been identified in the Toy Fox Terrier.' and 'Except for Patellar Luxation, these conditions have DNA tests available.' — PLL, patellar luxation (OFA form), CHG, SCA; degenerative myelopathy 'not an ATFTC required test' (not taken); CHIC certification optional (not taken). New key dna_chg."
+    },
+    "gordon_setter": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S842",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S842",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_rcd4_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (PRA (rcd4)",
+          "source_id": "S842",
+          "quote": "DNA test for progressive retinal atrophy (PRA (rcd4)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S842",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S842",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S842",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S842, 2026-11-14; 'Good Practice' tests = minimum, 'Best Practice'; names as returned — the PRA line has an unclosed parenthesis on the page): minimum genetic diversity (inbreeding_coi), PRA rcd4 DNA test (dna_rcd4_pra), BVA/KC hip scheme (hip_scheme); Best Practice eye scheme (eye_scheme) and elbow scheme (elbow_scheme). No new key."
     }
   }
 }
