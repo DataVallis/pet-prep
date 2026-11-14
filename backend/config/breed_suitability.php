@@ -2763,8 +2763,6 @@ return [
             ],
             'consider' => [
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.exercise.adult', 'gordon_setter.suitability.rkc_exercise']],
-                // S845 "they're only moderately good with young children and other dogs."
-                ['tag' => 'older_children', 'source_ids' => ['S845'], 'refs' => ['gordon_setter.behaviour.children']],
                 // S842 "Sheds: Yes"
                 ['tag' => 'sheds', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.suitability.rkc_shedding']],
                 // S842 "Grooming: More than once a week"; S843 daily grooming.

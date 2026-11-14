@@ -58460,7 +58460,7 @@
         "source_id": "S845",
         "quote": "they're only moderately good with young children and other dogs.",
         "confidence": "high",
-        "notes": "WebMD (S845; continues 'The AKC rates them a three out of five for both traits.'). VCA (S846, tool summary) 'With Kids | Fine with older kids'; PetMD (S844): the breed club says they can be great with children, especially when introduced as puppies, every interaction supervised (paraphrase); Wikipedia (S847, tier C): may not be suitable for households with very young children (paraphrase). Basis of the older_children chip; never children / small_children."
+        "notes": "WebMD (S845; continues 'The AKC rates them a three out of five for both traits.'). VCA (S846, tool summary) 'With Kids | Fine with older kids'; PetMD (S844): the breed club says they can be great with children, especially when introduced as puppies, every interaction supervised (paraphrase); Wikipedia (S847, tier C): may not be suitable for households with very young children (paraphrase). No children chip: 'only moderately good' is neither an explicit children statement nor a 'not for small children' statement, and older_children names a small dog (Toy Fox Terrier wording) → background for parents only (breed doc); never children / small_children."
       },
       "other_pets": {
         "value": "high prey drive — may chase birds; recall training, leash or fence",
@@ -88133,17 +88133,6 @@
             "quote": "S842 'More than 2 hours per day'"
           },
           {
-            "tag": "older_children",
-            "source_ids": [
-              "S845"
-            ],
-            "refs": [
-              "gordon_setter.behaviour.children"
-            ],
-            "quote": "S845 'they're only moderately good with young children and other dogs.'",
-            "note": "WebMD (S845) + VCA 'Fine with older kids' (S846, tool summary); never children / small_children."
-          },
-          {
             "tag": "sheds",
             "source_ids": [
               "S842"
@@ -88178,7 +88167,7 @@
         ],
         "not_proposed": {
           "family_pet": "Only the RKC Gundog-group sentence (not breed-specific).",
-          "children": "WebMD (S845) only moderately good with young children → older_children.",
+          "children": "WebMD (S845) only moderately good with young children → no chip (older_children names a small dog; not_for_small_children needs an explicit statement).",
           "small_children": "No explicit rating; WebMD the opposite.",
           "other_pets": "High prey drive (PetMD S844), only moderately good with other dogs (WebMD S845).",
           "apartment": "RKC 'Large house' (S842).",
@@ -88187,9 +88176,10 @@
           "low_shedding": "RKC 'Sheds: Yes' (S842).",
           "shorter_lifespan": "RKC 'Over 10 years' (S842).",
           "hips_hind_legs": "RKC Breed Watch Category 2 points not returned (S842) — hip dysplasia only as a list item; open for David.",
-          "hypoallergenic": "Never a tag (runbook)."
+          "hypoallergenic": "Never a tag (runbook).",
+          "older_children": "The chip label names a small dog; the Gordon Setter is large — fact kept in the breed text."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, older_children, sheds, frequent_grooming, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, sheds, frequent_grooming, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes",

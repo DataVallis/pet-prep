@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | brushing every day (PDSA "daily grooming", M5-R13), the meal / exercise warning (PetMD, M5-R16), puppy socialisation
 | with the PetMD quote (S844, M5-R17), tooth brushing every day (WebMD, M5-R15) and the parent's bath reminder every
 | 4 weeks (WebMD "about once a month", M5-R19). RKC Breed Watch Category 2 without returned points → no welfare chip,
-| in marketing; suits active_family / large_home; consider long_daily_exercise / older_children / sheds /
+| in marketing; suits active_family / large_home; consider long_daily_exercise / sheds /
 | frequent_grooming / chases_small_pets; black and tan portrait.
 */
 
@@ -424,7 +424,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('gordon_setter')['search_keywords'], 'sort_order' => 1060,
             'suitability' => [
                 'suits' => ['active_family', 'large_home'],
-                'consider' => ['long_daily_exercise', 'older_children', 'sheds', 'frequent_grooming', 'chases_small_pets'],
+                'consider' => ['long_daily_exercise', 'sheds', 'frequent_grooming', 'chases_small_pets'],
             ],
         ]);
     });
@@ -504,15 +504,16 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits an active family in a large home; consider long walks, older children, shedding, daily grooming and prey drive', function () {
+    it('suits an active family in a large home; consider long walks, shedding, daily grooming and prey drive', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::GordonSetter);
         expect($tags['suits'])->toBe(['active_family', 'large_home'])
-            ->and($tags['consider'])->toBe(['long_daily_exercise', 'older_children', 'sheds', 'frequent_grooming', 'chases_small_pets'])
-            // WebMD: only moderately good with young children and other dogs → never children / small_children / other_pets.
+            ->and($tags['consider'])->toBe(['long_daily_exercise', 'sheds', 'frequent_grooming', 'chases_small_pets'])
+            // WebMD: only moderately good with young children and other dogs → no children chip either way (older_children names a
+            // small dog; "only moderately good" is not a "not for small children" statement), never other_pets.
             ->and($tags['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
             ->not->toContain('family_pet')->not->toContain('apartment')->not->toContain('first_time_owner')->not->toContain('low_shedding')
             ->and($tags['consider'])->not->toContain('shorter_lifespan')->not->toContain('needs_company')
-            ->not->toContain('experienced_owner')->not->toContain('not_for_small_children');
+            ->not->toContain('experienced_owner')->not->toContain('not_for_small_children')->not->toContain('older_children');
 
         expect(gsData('gordon_setter.behaviour.children.quote'))->toContain('only moderately good with young children')
             ->and(gsData('gordon_setter.behaviour.other_pets.quote'))->toContain('high prey drive')
