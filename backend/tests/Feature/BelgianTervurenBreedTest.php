@@ -48,7 +48,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function btData(string $path): mixed
+function tvrData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -63,7 +63,7 @@ function btData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Belgian Tervuren seeder row of (stage, from, key) */
-function btRow(string $stage, int $from, StageParamKey $key): array
+function tvrRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'belgian-tervuren'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -72,7 +72,7 @@ function btRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function btPet(int $arrivalMonths, array $attributes = []): Pet
+function tvrPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -84,7 +84,7 @@ function btPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function btPin(User $parent, array $body): TestResponse
+function tvrPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -93,7 +93,7 @@ function btPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function btLogin(string $pin): TestResponse
+function tvrLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -116,7 +116,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1040, 'breeds.belgian_tervuren'])
             ->and($config->search_keywords)->toBe(['belgian tervuren', 'belgijski ovčar tervuren', 'belgijski ovcar tervuren', 'tervuren', 'tervueren', 'terv', 'belgian shepherd tervueren', 'belgian shepherd dog tervueren'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) btData('proposed_game_parameters.belgian_tervuren.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) tvrData('proposed_game_parameters.belgian_tervuren.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -124,13 +124,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = btData('proposed_game_parameters.belgian_tervuren.care_rates.value');
+        $care = tvrData('proposed_game_parameters.belgian_tervuren.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Belgian Tervuren pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = btPet(36);
+        $pet = tvrPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('belgian_tervuren');
 
@@ -188,33 +188,33 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.belgian_tervuren';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(btRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(btRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(tvrRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(tvrData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(tvrRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(tvrData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(btRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(tvrRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(tvrData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = round(0.75 × 10 y × 12) = 90 (RKC lower bound, S830) → runbook rule, verified (provisional, open for David).
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData('belgian_tervuren.lifespan.senior_from.months'))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * btRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(btData('belgian_tervuren.lifespan.senior_from.derived_from'))->toBe(['S11', 'S830'])
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', btData("{$pgp}.stage_boundaries_months.derived_from")))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BELGIAN_TERVUREN)
-            ->and(btRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90)
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(tvrData('belgian_tervuren.lifespan.senior_from.months'))
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * tvrRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(tvrData('belgian_tervuren.lifespan.senior_from.derived_from'))->toBe(['S11', 'S830'])
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', tvrData("{$pgp}.stage_boundaries_months.derived_from")))
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BELGIAN_TERVUREN)
+            ->and(tvrRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
+            ->and(tvrRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90)
             // McMillan via Wikipedia (124), PetMD (108) and Dogs Trust's 7 y stay alternatives.
-            ->and(btData("{$pgp}.stage_boundaries_months.alternatives"))->toBe(['senior_mcmillan_via_wikipedia' => 124, 'senior_petmd_12_y' => 108, 'senior_dogs_trust_7_y' => 84]);
+            ->and(tvrData("{$pgp}.stage_boundaries_months.alternatives"))->toBe(['senior_mcmillan_via_wikipedia' => 124, 'senior_petmd_12_y' => 108, 'senior_dogs_trust_7_y' => 84]);
 
-        expect(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData('belgian_tervuren.exercise.adult.quote'))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S830')
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
-            ->and(btRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(btData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(btData("{$pgp}.learning_multiplier.value"))
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.5);
+        expect(tvrRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(tvrData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(tvrRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
+            ->and(tvrRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(tvrData('belgian_tervuren.exercise.adult.quote'))
+            ->and(tvrRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(tvrData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(tvrRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S830')
+            ->and(tvrRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(tvrData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(tvrRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
+            ->and(tvrRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(tvrData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
+            ->and(tvrRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(tvrData("{$pgp}.learning_multiplier.value"))
+            ->and(tvrRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.5);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -224,7 +224,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('belgian-tervuren')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.belgian_tervuren.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) btData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) tvrData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -233,50 +233,50 @@ describe('life-stage data against data.json', function () {
         // 4 weeks (M5-R18) from PetMD S832, puppy socialisation with the PetMD quote (M5-R17). No meal gap and no heat
         // warning (no quote), no tooth / nail / groomer task (no frequency).
         $tasks = BreedStageParamsSeeder::DOG_CARE_TASKS['belgian_tervuren'];
-        expect(json_encode([btData('belgian_tervuren'), btData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(btData("{$pgp}.grooming.value"))->toBe(1)
-            ->and(btData("{$pgp}.grooming.decision"))->toContain('M5-R13')
+        expect(json_encode([tvrData('belgian_tervuren'), tvrData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(tvrData("{$pgp}.grooming.value"))->toBe(1)
+            ->and(tvrData("{$pgp}.grooming.decision"))->toContain('M5-R13')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('belgian_tervuren')
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('belgian_tervuren')
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['belgian_tervuren'])->toBe(['S832', btData("{$pgp}.socialisation.quote")])
-            ->and(btData("{$pgp}.socialisation.quote"))->toBe(btData('belgian_tervuren.behaviour.socialisation.quote'))
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['belgian_tervuren'])->toBe(['S832', tvrData("{$pgp}.socialisation.quote")])
+            ->and(tvrData("{$pgp}.socialisation.quote"))->toBe(tvrData('belgian_tervuren.behaviour.socialisation.quote'))
             ->and(array_keys($tasks))->toBe(['ear_cleaning', 'bath'])
             ->and([$tasks['ear_cleaning'][0], $tasks['ear_cleaning'][1]])->toBe([1, 'week'])
             ->and([$tasks['bath'][0], $tasks['bath'][1]])->toBe([1, 'month'])
-            ->and($tasks['ear_cleaning'][3])->toBe(btData("{$pgp}.ear_care.quote"))
-            ->and($tasks['bath'][3])->toBe(btData("{$pgp}.bathing.quote"))
-            ->and(btData("{$pgp}.ear_care.value"))->toBe([1, 7])
-            ->and(btData("{$pgp}.bathing.value"))->toBe([1, 28])
-            ->and(btData("{$pgp}.ear_care.quote"))->toBe(btData('belgian_tervuren.suitability.petmd_ears.quote'))
-            ->and(btData("{$pgp}.bathing.quote"))->toBe(btData('belgian_tervuren.suitability.petmd_bathing.quote'));
+            ->and($tasks['ear_cleaning'][3])->toBe(tvrData("{$pgp}.ear_care.quote"))
+            ->and($tasks['bath'][3])->toBe(tvrData("{$pgp}.bathing.quote"))
+            ->and(tvrData("{$pgp}.ear_care.value"))->toBe([1, 7])
+            ->and(tvrData("{$pgp}.bathing.value"))->toBe([1, 28])
+            ->and(tvrData("{$pgp}.ear_care.quote"))->toBe(tvrData('belgian_tervuren.suitability.petmd_ears.quote'))
+            ->and(tvrData("{$pgp}.bathing.quote"))->toBe(tvrData('belgian_tervuren.suitability.petmd_bathing.quote'));
     });
 
     it('takes the breed-level numbers from the sourced belgian_tervuren entries', function () {
         // FCI standard No. 15 (S313): males about 25–30 kg, females about 20–25 kg → 20–30 kg.
-        expect(btRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([20.0, 30.0])
-            ->and(btData('belgian_tervuren.adult_weight.fci.value'))->toEqual(['male' => [25, 30], 'female' => [20, 25]])
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(btData('belgian_tervuren.adult_weight.fci.source_id'))
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(btData('belgian_tervuren.adult_weight.fci.quote'))
-            ->and(btRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([12, 15])
-            ->and(btData('belgian_tervuren.growth.adult_weight_reached.value'))->toStartWith('12–15 months')
-            ->and(btRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(14)
-            ->and(btData('belgian_tervuren.trainability.coren_rank.value'))->toBe(14)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('belgian_tervuren.lifespan.rkc')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S830')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(btData('belgian_tervuren.lifespan.rkc.quote'));
+        expect(tvrRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([20.0, 30.0])
+            ->and(tvrData('belgian_tervuren.adult_weight.fci.value'))->toEqual(['male' => [25, 30], 'female' => [20, 25]])
+            ->and(tvrRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(tvrData('belgian_tervuren.adult_weight.fci.source_id'))
+            ->and(tvrRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(tvrData('belgian_tervuren.adult_weight.fci.quote'))
+            ->and(tvrRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([12, 15])
+            ->and(tvrData('belgian_tervuren.growth.adult_weight_reached.value'))->toStartWith('12–15 months')
+            ->and(tvrRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(14)
+            ->and(tvrData('belgian_tervuren.trainability.coren_rank.value'))->toBe(14)
+            ->and(tvrRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('belgian_tervuren.lifespan.rkc')
+            ->and(tvrRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S830')
+            ->and(tvrRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
+            ->and(tvrRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(tvrData('belgian_tervuren.lifespan.rkc.quote'));
 
         // Brushing 1× a week: RKC "More than once a week" has no number → PetMD "every week" → 1.
-        $grooming = btRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = tvrRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(1)
             ->and($grooming['source_id'])->toBe('S832')
-            ->and($grooming['quote'])->toBe(btData('belgian_tervuren.suitability.petmd_grooming.quote'))
-            ->and($grooming['quote'])->toBe(btData('proposed_game_parameters.belgian_tervuren.grooming.quote'))
+            ->and($grooming['quote'])->toBe(tvrData('belgian_tervuren.suitability.petmd_grooming.quote'))
+            ->and($grooming['quote'])->toBe(tvrData('proposed_game_parameters.belgian_tervuren.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S832')
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
+            ->and(tvrRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(tvrRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S832')
+            ->and(tvrRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'belgian-tervuren');
         expect($mine->where('key', StageParamKey::MealExerciseGapMinutes->value)->count())->toBe(0)
@@ -312,7 +312,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 120 minutes = 12,000 steps and 90 minutes = 9,000 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = btPet($arrival);
+        $pet = tvrPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -337,7 +337,7 @@ describe('stage rules', function () {
 
     it('learns 1.5× as fast (Coren rank 14, Excellent) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = btPet(36);
+        $dog = tvrPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -354,7 +354,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = btPin($parent, $body);
+        $response = tvrPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -363,7 +363,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(btLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(tvrLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::BelgianTervuren)
             ->and($pet->species)->toBe(Species::Dog)
@@ -378,8 +378,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'belgian_tervuren'] as $breed) {
-            $pin = btPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(btLogin($pin)->assertOk()->json('pet.id'));
+            $pin = tvrPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(tvrLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['belgian_tervuren'];
@@ -392,7 +392,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = btPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = tvrPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -472,7 +472,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI standard No
             ->and($v1['visual_traits']['eye_color'])->toBe('dark brown')
             ->and($v1['visual_traits']['color_scheme'])->toBeIn(['fawn with black overlay', 'rich fawn with black overlay', 'grey with black overlay']);
 
-        $pet = btPet(90, ['origin' => PetOrigin::Adopted]);
+        $pet = tvrPet(90, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Belgian Tervuren')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -493,8 +493,8 @@ describe('no health statistics in the app; not a welfare breed, in marketing (ru
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // Not flat-faced; RKC Breed Watch Category 1 → no welfare chip.
             ->and($tags['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
-            ->and(btData('belgian_tervuren.health.breed_watch.value'))->toStartWith('RKC Breed Watch Category 1')
-            ->and(btData('proposed_game_parameters.belgian_tervuren.marketing.value'))->toBe('in the app: yes; in marketing: yes')
+            ->and(tvrData('belgian_tervuren.health.breed_watch.value'))->toStartWith('RKC Breed Watch Category 1')
+            ->and(tvrData('proposed_game_parameters.belgian_tervuren.marketing.value'))->toBe('in the app: yes; in marketing: yes')
             // The alternatives (124, 108, 84) are never seeded as the senior boundary.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'belgian-tervuren')->where('key', StageParamKey::StartsAtMonths->value)->where('stage', 'senior')->pluck('value')->all())
             ->toBe([90]);
@@ -510,11 +510,11 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('low_shedding')
             ->and($tags['consider'])->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_company');
 
-        expect(btData('belgian_tervuren.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Large house')
-            ->and(btData('belgian_tervuren.suitability.rkc_shedding.quote'))->toBe('Sheds: Yes')
-            ->and(btData('belgian_tervuren.suitability.rkc_grooming.quote'))->toBe('Grooming: More than once a week')
-            ->and(btData('belgian_tervuren.suitability.rkc_lifespan.quote'))->toBe('Lifespan: Over 10 years')
+        expect(tvrData('belgian_tervuren.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Large house')
+            ->and(tvrData('belgian_tervuren.suitability.rkc_shedding.quote'))->toBe('Sheds: Yes')
+            ->and(tvrData('belgian_tervuren.suitability.rkc_grooming.quote'))->toBe('Grooming: More than once a week')
+            ->and(tvrData('belgian_tervuren.suitability.rkc_lifespan.quote'))->toBe('Lifespan: Over 10 years')
             // Herding, not a "high prey drive" → no chases_small_pets (runbook).
-            ->and(btData('belgian_tervuren.behaviour.other_pets.quote'))->not->toContain('prey drive');
+            ->and(tvrData('belgian_tervuren.behaviour.other_pets.quote'))->not->toContain('prey drive');
     });
 });
