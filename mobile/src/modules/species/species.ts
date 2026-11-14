@@ -124,6 +124,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   norwich_terrier: 'dog',
   miniature_bull_terrier: 'dog',
   schipperke: 'dog',
+  belgian_tervuren: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -252,6 +253,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'norwich_terrier',
   'miniature_bull_terrier',
   'schipperke',
+  'belgian_tervuren',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
