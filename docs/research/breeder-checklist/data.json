@@ -3979,6 +3979,44 @@
         }
       ],
       "notes": "RKC breed page (dog-data S830, 2026-11-14): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (link labels as returned). No new test key. PetMD (S832) names no breeder tests."
+    },
+    "toy_fox_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K42",
+        "quote": "It is important to know the status before breeding a dog or bitch"
+      },
+      "tests": [
+        {
+          "key": "dna_pll",
+          "level": "other_scheme",
+          "name": "DNA test for primary lens luxation (US breed club)",
+          "source_id": "K42",
+          "quote": "Primary Lens Luxation (PLL)"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Kneecap (patella) evaluation of breeding dogs (US breed club)",
+          "source_id": "K42",
+          "quote": "this is not a DNA test, download a form from the OFA and have your veterinarian test and certify"
+        },
+        {
+          "key": "dna_chg",
+          "level": "other_scheme",
+          "name": "DNA test for congenital hypothyroidism with goiter (US breed club)",
+          "source_id": "K42",
+          "quote": "Congenital hypothyroidism with goiter (CHG)"
+        },
+        {
+          "key": "dna_sca",
+          "level": "other_scheme",
+          "name": "DNA test for spinocerebellar ataxia (US breed club)",
+          "source_id": "K42",
+          "quote": "Spinocerebellar Ataxia (SCA)"
+        }
+      ],
+      "notes": "Not RKC-registered → no RKC minimum / best_practice level. American Toy Fox Terrier Club health page (K42): 'The following health conditions have been identified in the Toy Fox Terrier.' and 'Except for Patellar Luxation, these conditions have DNA tests available.' — PLL, patellar luxation (OFA form), CHG, SCA; degenerative myelopathy 'not an ATFTC required test' (not taken); CHIC certification optional (not taken). New key dna_chg."
     }
   }
 }
