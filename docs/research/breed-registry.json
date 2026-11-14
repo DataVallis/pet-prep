@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "15d4e2ff470bcd33b0f344c34363c6180318346895fc4dadecd909b6b1ac58be"
+      "sha256": "7d6b711b81c680d11da7a202fe84507df3a58acdc96a51e41f2126c5dc0b8bb5"
     }
   },
   "suitability_vocabulary": {
@@ -64068,7 +64068,12 @@
           "S845"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "gordon-setter.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

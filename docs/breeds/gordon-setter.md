@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `gordon_setter` (viri S840–S847; ponovno S10, S11, S14, S24, S35, S45, S54, S174); seznam za vzreditelja: stran RKC (S842) |
 | Izvor | FCI št. 6, skupina 7, sekcija 2 (britanski in irski ptičarji in setri), Velika Britanija — Škotska (S840, S841, S847) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 109. mesto »Gordon Setter« (S174, prebrano 2026-11-14) |
-| PR-ji | pet-prep #1125 (pasma) · portret: pet-prep PR `feat/M5-R10-113-gordon-setter-portrait` · spletna stran: pet-prep-website `feat/register-gordon-setter` |
+| PR-ji | pet-prep #1125 (pasma, združen `c6b4616`) · portret pet-prep PR `feat/M5-R10-113-gordon-setter-portrait` (zagon `breed-portraits.yml` 43569387281, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-gordon-setter` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-14 |
 | Ščetkanje zob vsak dan (otrok), opomnik staršem: kopanje vsake 4 tedne | 🛠 | 💶 izziv | M5-R15 / M5-R19 | 2026-11-14 |
 | Barva (izbirnik: ena barva standarda, črn z rjavimi oznakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-14 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/gordon-setter`, `/sl/zivali/psi/gordonski-seter`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn z rjavimi oznakami, naraven rep | — | M5-R11-04 | 2026-11-14 |
+| Stran na petprep.si (`/animals/dogs/gordon-setter`, `/sl/zivali/psi/gordonski-seter`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
