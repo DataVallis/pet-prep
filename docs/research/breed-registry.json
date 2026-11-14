@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f7ae2552317ccfeedab68baf2ce0b3ea2f51b3ba27ff3607b7a47fa0992a4bc4"
+      "sha256": "310b01ba3d555d1cf79ff518a4c2062353f1e03d1f94ed3e9f765bf6d1f4ce8a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "7242826cb202f4363fd2890ef400a9bd87fbc26e234e8bacf14309eb537820ad"
+      "sha256": "cb73c80b2f6e40ad25b255cbf2047b8868460969cfe3f02cbab368e7b505bd41"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "498c8b7a453f6cba89e766195a919130c7d3b4bb6d973363c5d167e0449c3792"
+      "sha256": "b55c61a7b324b1fc135b2ebac4691fd4624301cf925e523d59424dc1badcf433"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5247d7f197002b5e949853219c8048b3ae1f2b92eb376b990f5468d8b85c41dc"
+      "sha256": "13712ca9651ce81d09889d540e15e2a3f828d17df90c0acc16072eb5ada811f3"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c48f0268d1f2d2b236b695b5da09f5a5f3067fb22b07e85cbef4d0a6f0674134"
+      "sha256": "c799141095f2e0636a263d7307e82b43f6f0299fce099ee2f0938df1e871bee1"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "926cd45089926843e0107c1bbf9d0b572a4f40dc93685d228624ab25e95102a3"
+      "sha256": "c84a7bc6f9adee170ee99de0265f1bf46ef55d4c7085918dfd3fc98c94c4900b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "fc5005b5f1670d0b041082dfe9656a039957576e76b4923f38835c35fe6244ca"
+      "sha256": "3caf665baf14b70924460c744ba634013f2c159e4b3919e5a81e17aa0511ca5d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 105,
+      "breed_count": 106,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -63537,6 +63537,611 @@
       ]
     },
     {
+      "id": "gordon_setter",
+      "species": "dog",
+      "order": 105,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Gordon Setter",
+        "sl": "Gordonski seter"
+      },
+      "slug": {
+        "en": "gordon-setter",
+        "sl": "gordonski-seter"
+      },
+      "synonyms": {
+        "en": [
+          "Black and Tan Setter",
+          "Scottish Setter",
+          "Setter"
+        ],
+        "sl": [
+          "gordon seter",
+          "škotski seter",
+          "seter"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              66,
+              66
+            ],
+            "female": [
+              62,
+              62
+            ]
+          },
+          "source_ids": [
+            "S841"
+          ],
+          "ref": "gordon_setter.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              29.5,
+              29.5
+            ],
+            "female": [
+              25.5,
+              25.5
+            ]
+          },
+          "source_ids": [
+            "S841"
+          ],
+          "ref": "gordon_setter.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "gordon_setter.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 34,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "gordon_setter.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 6,
+            "group": 7,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S840"
+          ],
+          "ref": "gordon_setter.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S843"
+          ],
+          "ref": "gordon_setter.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S843"
+          ],
+          "ref": "gordon_setter.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S843"
+          ],
+          "ref": "gordon_setter.health.skin",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S843"
+          ],
+          "ref": "gordon_setter.health.thyroid",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S842"
+          ],
+          "ref": "gordon_setter.health.eyes",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S842"
+            ],
+            "refs": [
+              "gordon_setter.exercise.adult",
+              "gordon_setter.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S842"
+            ],
+            "refs": [
+              "gordon_setter.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S842"
+            ],
+            "refs": [
+              "gordon_setter.exercise.adult",
+              "gordon_setter.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S842"
+            ],
+            "refs": [
+              "gordon_setter.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S842",
+              "S843"
+            ],
+            "refs": [
+              "gordon_setter.suitability.rkc_grooming",
+              "gordon_setter.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S844"
+            ],
+            "refs": [
+              "gordon_setter.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S842"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S842 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S842"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S842)"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 34, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.grooming",
+            "basis_source_ids": [
+              "S843"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »More than once a week« brez števila → PDSA »daily grooming« → vsak dan); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.tooth_brushing",
+            "basis_source_ids": [
+              "S845"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »on a daily basis« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.gordon_setter.bathing",
+            "basis_source_ids": [
+              "S845"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »about once a month« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S842",
+          "S843",
+          "S845"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S842"
+            ]
+          },
+          {
+            "key": "dna_rcd4_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S842"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S842"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S842"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S842"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S842"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S840",
+        "S841",
+        "S842",
+        "S843",
+        "S844",
+        "S845",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -69702,6 +70307,48 @@
       "publisher": "American Toy Fox Terrier Club",
       "title": "Health (© 2009 – 2022)",
       "url": "https://atftc.com/health/health.htm"
+    },
+    {
+      "id": "S840",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — GORDON SETTER (6)",
+      "url": "https://fci.be/en/nomenclature/GORDON-SETTER-6.html"
+    },
+    {
+      "id": "S841",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 6 — Gordon Setter (English PDF, FCI-St. N°6 / 1.06.2016)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/006g07-en.pdf"
+    },
+    {
+      "id": "S842",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Gordon Setter",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/gordon-setter/"
+    },
+    {
+      "id": "S843",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Gordon Setter breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/gordon-setter"
+    },
+    {
+      "id": "S844",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Mar. 25, 2024)",
+      "title": "Gordon Setter",
+      "url": "https://www.petmd.com/dog/breeds/gordon-setter"
+    },
+    {
+      "id": "S845",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Shruthi N, MD (2024-08-07)",
+      "title": "What to Know About Gordon Setters",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-gordon-setters"
     },
     {
       "id": "C1",
