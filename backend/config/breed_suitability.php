@@ -2736,5 +2736,20 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S830', 'S832'], 'refs' => ['belgian_tervuren.suitability.rkc_grooming', 'belgian_tervuren.suitability.petmd_grooming']],
             ],
         ],
+
+        // M5-R10-112: toy_fox_terrier.* (S833–S839), runbook rules (data.json proposed_game_parameters.toy_fox_terrier.suitability_tags).
+        // PetMD (S833) + WebMD (S834); no RKC page (not RKC-recognised) → no RKC-only chips (apartment, large_home, sheds);
+        // no welfare chip; in marketing. No suits chip: WebMD advises against small children.
+        'toy_fox_terrier' => [
+            'suits' => [],
+            'consider' => [
+                // S834 "TFTs are not recommended for families with small children because they are skittish and prone to biting."
+                ['tag' => 'older_children', 'source_ids' => ['S834'], 'refs' => ['toy_fox_terrier.behaviour.children']],
+                // S834 "TFTs may show separation anxiety when they're left alone for long."
+                ['tag' => 'needs_company', 'source_ids' => ['S834'], 'refs' => ['toy_fox_terrier.behaviour.time_alone']],
+                // S833 "… Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S833'], 'refs' => ['toy_fox_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

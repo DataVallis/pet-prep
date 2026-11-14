@@ -876,6 +876,13 @@ class FalAiService
                 .'a long wedge-shaped muzzle, natural tail reaching the hock carried low, watchful expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-112: AKC standard (S835) — well-balanced athletic toy terrier, tricolour (white body, black head with tan
+            // markings), short satiny coat, erect V-shaped ears; natural tail (UKC S838 does not penalise a full tail).
+            BreedType::ToyFoxTerrier => 'A tiny, well-balanced, athletic Toy Fox Terrier with a short, satiny, shiny coat, a predominantly white body '
+                .'and a black head with sharply defined tan markings on the cheeks, lips and eye dots, an elegant wedge-shaped head with a black nose, '
+                .'erect, pointed, inverted V-shaped ears set high, clear bright dark eyes, a natural tail set high and held erect, alert, spirited expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2086,6 +2093,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, smooth coat with a dense undercoat, a ruff, breeches and a plumed tail',
                 'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs, erect triangular ears',
+            ],
+            // M5-R10-112: AKC colours (S835) — tricolour (the portrait default), white and tan, white and black; always a mostly white body.
+            BreedType::ToyFoxTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'tricolour: white body, black head with tan markings',
+                    1 => 'white body with a tan head',
+                    2 => 'white body with a black head',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, satiny, shiny, smooth coat',
+                'markings' => 'predominantly white body, erect pointed V-shaped ears, natural tail held erect',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

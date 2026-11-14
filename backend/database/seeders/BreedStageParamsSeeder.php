@@ -1332,6 +1332,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BELGIAN_TERVUREN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-111)';
 
     /**
+     * M5-R10-112 Toy Fox Terrier (unattended run 2026-11-14, data.json proposed_game_parameters.toy_fox_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PetMD S833 "at least an hour every day"; no RKC / PDSA page exists for this American breed), senior
+     * 45 min, puppy 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not
+     * ranked by Coren); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower bound
+     * "13–15 years", S833 — no McMillan 2024 / VetCompass median reachable, no RKC band) and is NOT covered by the
+     * confirmation: see PROPOSED_R10_TOY_FOX_TERRIER_SENIOR.
+     */
+    public const CONFIRMED_R10_TOY_FOX_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-112)';
+
+    /**
+     * M5-R10-112 Toy Fox Terrier senior boundary / senior arrival (117 months): Claude's suggestion from the closest rule row
+     * (0.75 × PetMD lower bound 13 y, S833 — Rat Terrier precedent), verified=false until David decides
+     * (data.json proposed_game_parameters.toy_fox_terrier.senior_boundary_months).
+     */
+    public const PROPOSED_R10_TOY_FOX_TERRIER_SENIOR = 'predlog Claude 2026-11-14 (najbližja vrstica pravila runbooka, M5-R10-112) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1686,6 +1704,11 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S832', "Cleaning your Terv's ears every one or two weeks helps prevent ear infections and keeps the canals clean.", 'proposed_game_parameters.belgian_tervuren.ear_care', '"every one or two weeks" → a range → its lower bound → once a week'],
             'bath' => [1, 'month', 'S832', 'The Belgian Tervuren will benefit from a bath every four to six weeks.', 'proposed_game_parameters.belgian_tervuren.bathing', '"every four to six weeks" → every 4 weeks (teeth, nails, groomer: no frequency → no task)'],
         ],
+        'toy_fox_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S834', 'Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.', 'proposed_game_parameters.toy_fox_terrier.tooth_brushing', '"brush their teeth daily" → every day'],
+            'ear_cleaning' => [1, 'week', 'S834', 'Wash your TFT’s ears every week to prevent wax and dirt buildup.', 'proposed_game_parameters.toy_fox_terrier.ear_care', '"every week" → once a week'],
+            'nail_trim' => [1, 'month', 'S834', 'Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.', 'proposed_game_parameters.toy_fox_terrier.nail_trimming', '"every month" → every 4 weeks (bath "occasional", groomer: no frequency → no reminder)'],
+        ],
     ];
 
     /**
@@ -1817,6 +1840,7 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_bull_terrier' => [1, 'S820', 'Grooming: Once a week', 'high', false],
         'schipperke' => [2, 'S828', 'must be brushed at least twice a week for fifteen minutes', 'high', false],
         'belgian_tervuren' => [1, 'S832', "You'll also need to set aside time to brush their beautiful, long double coat every week.", 'medium', false],
+        'toy_fox_terrier' => [2, 'S833', "It's helpful to brush their coat once or twice a week to minimize what shedding does occur", 'high', false],
     ];
 
     /**
@@ -1992,13 +2016,14 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_bull_terrier' => ['S821', 'need early socialization to adapt well to new situations.'],
         'schipperke' => ['S827', 'Like all dogs, Schipperkes should begin obedience training and socialization at an early age.'],
         'belgian_tervuren' => ['S832', 'This makes socializing your Belgian Tervuren puppy a vital part of their care.'],
+        'toy_fox_terrier' => ['S834', 'Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2828,6 +2853,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::MiniatureBullTerrier => self::miniatureBullTerrierProfile(),
             BreedType::Schipperke => self::schipperkeProfile(),
             BreedType::BelgianTervuren => self::belgianTervurenProfile(),
+            BreedType::ToyFoxTerrier => self::toyFoxTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10650,6 +10676,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'belgian_tervuren.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S830); PetMD "12–14 years" (S832). McMillan 2024 13.8 y only via Wikipedia (S318, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Toy Fox Terrier (M5-R10-112). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_TOY_FOX_TERRIER); weight, growth and lifespan are sourced; not ranked
+     * by Coren. The senior boundary is Claude's suggestion (PROPOSED_R10_TOY_FOX_TERRIER_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function toyFoxTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_TOY_FOX_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S833', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.toy_fox_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog reaches adult weight at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [117, [
+                    'unit' => 'months', 'source_id' => 'S11,S833', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.toy_fox_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_TOY_FOX_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound "13–15 years" (S833; WebMD S834 13–15 y too) = 9.75 y = 117 months. Not RKC-registered, no McMillan 2024 / VetCompass median reachable. Alternatives: McMillan 2024 12.9 y only via Wikipedia (S837, tier C) → 116; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 117],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.toy_fox_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_TOY_FOX_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 117 months (0.75 × 13 y, S833).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S833', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy',
+                'notes' => 'PetMD (S833): "at least an hour every day" → 60 min = 6,000 steps (runbook rule: "at least N" → N; no RKC / PDSA page exists for this breed). WebMD (S834) gives no number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.8, 4.1], [
+                'unit' => 'kg', 'source_id' => 'S833', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.adult_weight.petmd',
+                'quote' => 'Toy Fox Terriers are pint-size powerhouses weighing 4–9 pounds and standing 8.5–11.5 inches tall.',
+                'notes' => 'PetMD (S833): 4–9 lb = 1.8–4.1 kg, one range for both sexes (WebMD S834 agrees). The AKC standard (S835) gives no weight; UKC preferred 4.5–7.5 lb (S838).',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (4–9 lb, the Toy class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.trainability.coren_rank',
+                'notes' => 'Not ranked: the Toy Fox Terrier is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-14).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (AKC standard S835: "intelligent, alert, and friendly"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.0, [
+                'unit' => 'years', 'source_id' => 'S833', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.lifespan.petmd',
+                'quote' => 'The average lifespan of a Toy Fox Terrier is 13–15 years, and they’re known to be a generally healthy breed.',
+                'notes' => 'PetMD lower bound "13–15 years" (S833); WebMD 13–15 y (S834); McMillan 2024 12.9 y only via Wikipedia (S837, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

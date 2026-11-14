@@ -806,6 +806,13 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Toy Fox Terrier (M5-R10-112, docs/research/dog-data toy_fox_terrier.appearance): "The Toy Fox Terrier is a well-balanced
+| Toy dog of athletic appearance" (AKC standard via KUSA, S835); tri-colour, white chocolate and tan, white and tan, white
+| and black — the body over half white; never a solid colour, a blaze into the eyes or ears, or blue / grey (S835, UKC
+| S838); short, satiny, shiny coat; erect pointed V-shaped ears; tail customarily docked (the portrait shows a natural tail,
+| UKC S838 does not penalise it). Tricolour first with the highest weight (the portrait default, Claude's choice); weights
+| unsourced → `verified => false`.
+|
 | Belgian Tervuren (M5-R10-111, docs/research/dog-data belgian_tervuren.appearance): "Only fawn with black overlay or grey
 | with black overlay, with black mask" (FCI standard No. 15, S831 — "the fawn with black overlay is still preferred"; grey
 | is a fault but allowed; never black, brindle or white patches); long-haired variety with a ruff, breeches and a plumed
@@ -4832,6 +4839,43 @@ return [
             'muzzle' => ['black mask covering the muzzle and lips; long muzzle narrowing like an elongated wedge'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-112 (docs/research/dog-data/data.json toy_fox_terrier.appearance; runbook rules 2026-10-10: the AKC standard's
+    // colours only — tri-colour, white chocolate and tan, white and tan, white and black, the body over half white (S835);
+    // never solid, never blue / grey; erect ears, natural tail).
+    'toy_fox_terrier' => [
+        'display_name' => 'Toy Fox Terrier',
+        // Colour frequencies are in no source (toy_fox_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC Official Standard of the Toy Fox Terrier, effective 2016, KUSA reprint (S835), UKC standard 2024 (S838) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S835 "21.5cm – 28cm (approx. 8½” – 11½”) acceptable."; S833 "weighing 4–9 pounds"',
+            'build' => 'S835 "The Toy Fox Terrier is a well-balanced Toy dog of athletic appearance, displaying grace and agility in equal measure"',
+            'coat_length' => 'S838 "the coat is short, satiny and shiny; fine in texture and smooth to the touch."',
+            'coat_color' => 'S835 "Tri-colour: Predominately black head with sharply defined tan markings on cheeks, lips, and eye dots." — also white, chocolate and tan; white and tan; white and black; body over 50 % white (weights unsourced)',
+            'head' => 'S835 "The head is elegant, balanced, and expressive with no indication of coarseness."',
+            'ear_carriage' => 'S835 "The ears are erect, pointed, inverted V-shaped, set high and close together, but never touching."',
+            'eye_color' => 'S835 "Clear, bright, and dark, including eye-rims, with the exception of chocolates, whose eye-rims should be selfcoloured."',
+            'tail' => 'S835 "Set high, held erect, and in proportion to the size of the dog. Docked to the third or fourth joint." (UKC S838: a full tail is not penalised — the portrait shows a natural tail)',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'well-balanced, athletic toy terrier with a graceful, agile and strong build', 'weight' => 3], 'small, lithe and sturdy terrier build'],
+            'coat_length' => ['short, satiny, shiny coat, fine and smooth to the touch'],
+            // AKC colours (S835), always a predominantly white body; tricolour first with the highest weight → the register
+            // portrait (Claude's choice: the most typical, PetMD S833 "predominantly white color with striking patches of black and tan").
+            'coat_color' => [
+                ['value' => 'tricolour: predominantly white body, black head with sharply defined tan markings on the cheeks, lips and eye dots', 'weight' => 40],
+                ['value' => 'white, chocolate and tan: predominantly white body, chocolate-brown head with tan markings and a self-coloured brown nose', 'weight' => 20],
+                ['value' => 'white and tan: predominantly white body with a tan head', 'weight' => 20],
+                ['value' => 'white and black: predominantly white body with a black head', 'weight' => 20],
+            ],
+            'head' => ['elegant, balanced, expressive wedge-shaped head with a black nose'],
+            'ear_carriage' => ['erect, pointed, inverted V-shaped ears set high and close together'],
+            'eye_color' => ['clear, bright, dark round eyes with dark eye-rims'],
+            'tail' => ['natural tail, set high and held erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
