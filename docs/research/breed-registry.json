@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d1215d00c0ab300238a1e08c7d51110d2503ecc03ddf8e886b53ed3a49a1ac90"
+      "sha256": "15d4e2ff470bcd33b0f344c34363c6180318346895fc4dadecd909b6b1ac58be"
     }
   },
   "suitability_vocabulary": {
@@ -63465,7 +63465,12 @@
           "S834"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "toy-fox-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
