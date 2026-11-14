@@ -3939,6 +3939,46 @@
         }
       ],
       "notes": "RKC breed page (dog-data S826, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the DNA tests for MPS IIIB and T-box (bob tail). Two new test keys (dna_mps3b, dna_tbox). PetMD (S827) names no breeder tests."
+    },
+    "belgian_tervuren": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S830",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S830",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S830",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S830",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S830",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S830, 2026-11-14): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (link labels as returned). No new test key. PetMD (S832) names no breeder tests."
     }
   }
 }
