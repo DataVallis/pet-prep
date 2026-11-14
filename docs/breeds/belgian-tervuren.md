@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `belgian_tervuren` (viri S830–S832; ponovno S10, S11, S14, S24, S35, S45, S174, S312, S313, S318); seznam za vzreditelja: RKC (S830) |
 | Izvor | FCI št. 15 »Chien de Berger Belge«, različica tervueren (dolgodlaka), skupina 1, sekcija 1 (ovčarski psi), Belgija (S312, S313, S831) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 107. mesto »Belgian Tervuren« (S174, prebrano 2026-11-14) |
-| PR-ji | pet-prep #1120 (pasma) · portret pet-prep PR `feat/M5-R10-111-belgian-tervuren-portrait` · spletna stran: pet-prep-website `feat/register-belgian-tervuren` |
+| PR-ji | pet-prep #1120 (pasma, združen `d792b77`) · portret pet-prep PR `feat/M5-R10-111-belgian-tervuren-portrait` (zagon `breed-portraits.yml` 43537873526, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-belgian-tervuren` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,5×) | 🛠 | 💶 izziv | M5-R10-111 | 2026-11-14 |
 | Česanje 1× na teden, ušesa 1× na teden, opomnik za kopanje vsake 4 tedne, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R18 / M5-R17 | 2026-11-14 |
 | Barva (izbirnik: plav s črno masko, siv s črno masko) | 🛠 | 💶 izziv | M5-R21 | 2026-11-14 |
-| AI portret v registru | 🗓 po združitvi (breed-portraits.yml) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/belgian-tervuren`, `/sl/zivali/psi/belgijski-ovcar-tervuren`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), plav s črno masko, pokonci stoječa ušesa, ovratnik, košat rep | — | M5-R11-04 | 2026-11-14 |
+| Stran na petprep.si (`/animals/dogs/belgian-tervuren`, `/sl/zivali/psi/belgijski-ovcar-tervuren`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

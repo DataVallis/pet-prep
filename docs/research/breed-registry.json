@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7a6bfc95db3bf1ef9873b9b104c1a6138419c96f4338dc4933f4149d6b12a6fe"
+      "sha256": "d1215d00c0ab300238a1e08c7d51110d2503ecc03ddf8e886b53ed3a49a1ac90"
     }
   },
   "suitability_vocabulary": {
@@ -62908,7 +62908,12 @@
           "S832"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "belgian-tervuren.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
