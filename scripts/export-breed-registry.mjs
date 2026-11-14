@@ -494,6 +494,7 @@ const SPECIES = [
       { id: 'miniature_bull_terrier', synonyms: { en: ['Bull Terrier (Miniature)', 'Mini Bull Terrier', 'Mini Bull'], sl: ['mini bulterier', 'miniaturni bul terier'] } },
       { id: 'schipperke', synonyms: { en: ['Little Captain', 'Little Black Devil', 'Spitzke'], sl: ['šiperke', 'siperke'] } },
       { id: 'belgian_tervuren', synonyms: { en: ['Tervuren', 'Tervueren', 'Belgian Shepherd Dog (Tervueren)', 'Terv'], sl: ['tervuren', 'belgijski ovcar tervuren'] } },
+      { id: 'toy_fox_terrier', synonyms: { en: ['American Toy Terrier', 'Amertoy', 'TFT'], sl: ['toy fox terrier', 'amertoy'] } },
     ],
   },
   {
@@ -2884,6 +2885,31 @@ const DOG_FACTS = {
       ['bloat_gdv', 'health.gdv'],
     ],
   },
+  // M5-R10-112. Height = the AKC standard 21.5–28 cm (KUSA reprint S835), weight = PetMD 4–9 lb (S833; the AKC standard gives
+  // none), lifespan = the PetMD span 13–15 y (S833; WebMD the same span — not exported twice; McMillan 2024 12.9 y only via
+  // Wikipedia S837, tier C — not exported), exercise = PetMD 'at least an hour every day' (S833, at least 60), coat 'Short'
+  // (UKC standard S838), grooming = WebMD weekly brushing (S834, Once a week). Not FCI-recognised, not ranked by Coren.
+  // Not exported: adult_weight alternatives (UKC), senior_from (derived), health.demodectic_mange (no register key), the
+  // shedding statement (no register shedding code for 'not a lot'). No new health key.
+  toy_fox_terrier: {
+    height: ['height.akc'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.ukc_coat_length'],
+    grooming: [['suitability.webmd_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: 'behaviour.food_motivation',
+    coren_rank: false,
+    fci_standard: false,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['bleeding_disorder_vwd', 'health.vwd'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 
 
@@ -2955,6 +2981,7 @@ export const DOG_CARE_TASKS = {
   norwich_terrier: [['tooth_brushing', 1, 7, 'proposed_game_parameters.norwich_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.norwich_terrier.nail_trimming'], ['bath', 1, 84, 'proposed_game_parameters.norwich_terrier.bathing']],
   schipperke: [['tooth_brushing', 7, 7, 'proposed_game_parameters.schipperke.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.schipperke.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.schipperke.bathing']],
   belgian_tervuren: [['ear_cleaning', 1, 7, 'proposed_game_parameters.belgian_tervuren.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_tervuren.bathing']],
+  toy_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.toy_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.toy_fox_terrier.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.toy_fox_terrier.nail_trimming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3809,6 +3836,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.belgian_tervuren.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.belgian_tervuren.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.belgian_tervuren.exercise_minutes_senior',
+  },
+  toy_fox_terrier: {
+    adult_minutes: ['proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.toy_fox_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.toy_fox_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.toy_fox_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior',
   },
 
 

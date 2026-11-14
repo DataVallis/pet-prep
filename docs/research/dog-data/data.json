@@ -57808,6 +57808,464 @@
       }
     }
   },
+  "toy_fox_terrier": {
+    "_note": "Added 2026-11-14 (M5-R10-112, unattended run — appended after the Belgian Tervuren: AKC 2024 No. 108 'Toy Fox Terrier', S174 full-list table recorded 2026-11-14 '107 Belgian Tervuren', '108 Toy Fox Terrier'). Quotes as returned by the web-fetch tool on 2026-11-14 (125-character limit; fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S833–S839 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. An American breed (Rat Terrier precedent): no RKC Breeds A–Z page (not RKC-recognised), no PDSA / Woodgreen / Dogs Trust breed page, not FCI-recognised (Wikipedia S837 does not mention the FCI — paraphrase), not in Coren's ranking (S35, checked 2026-11-14). Standard: AKC 'Official Standard of the Toy Fox Terrier' as reprinted by KUSA (S835, effective date '01/06/2016'), American Toy Fox Terrier Club page of the 2003 standard (S836); UKC standard revised 2024 (S838) for the coat and the preferred weight. Exercise from PetMD (S833 'at least an hour every day' → 60). Weight from PetMD / WebMD (4–9 lb); lifespan bands PetMD / WebMD 13–15 y (S833 / S834) — no McMillan 2024 / VetCompass value reachable (Wikipedia S837, tier C, quotes McMillan 2024 at 12.9 y from 52 deaths → 116, listed for David) → senior boundary from the vet-reviewed lower bound 13 y = 117, seeded verified=false (Rat Terrier precedent). VCA's Toy Fox Terrier page was fetched only as a model summary (not verbatim) → not used. Never hypoallergenic. Names: AKC 'Toy Fox Terrier' (S174); other names 'American Toy Terrier', 'Amertoy' (Wikipedia S837 infobox), nickname 'TFT' (WebMD S834); Slovenian »toy fox terier« (no KZS page — Claude, open for David).",
+    "identity": {
+      "value": "AKC Toy Group (recognised 2003; standard effective 2016), USA — not FCI",
+      "unit": "—",
+      "source_id": "S835",
+      "quote": "Most recent changes to this Standard have an effective date of 01/06/2016",
+      "confidence": "medium",
+      "notes": "AKC standard reprinted by KUSA (S835). Wikipedia (S837, tier C): 'Toy Fox Terriers were recognized by the United Kennel Club (UKC) in 1936 and placed in the Terrier Group' (fragment) and 'by the American Kennel Club (AKC) in 2003' (Toy Group). ATFTC (S836): standard 'Approved: July 8, 2003 Effective: August 27, 2003'. No FCI standard (Wikipedia does not mention the FCI — paraphrase; FCI nomenclature not checked this run — Claude, open for David). The export carries no fci_standard fact (DOG_FACTS fci_standard: false)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S833",
+      "quote": "Toy Fox Terriers are pint-size powerhouses weighing 4–9 pounds and standing 8.5–11.5 inches tall.",
+      "confidence": "high",
+      "notes": "PetMD (S833). AKC Toy Group (S835). No RKC / PDSA size key fact (no such pages) — 'small' like the other toy breeds in the game (Chihuahua, Papillon)."
+    },
+    "height": {
+      "akc": {
+        "value": {
+          "male": [
+            21.5,
+            28.0
+          ],
+          "female": [
+            21.5,
+            28.0
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S835",
+        "quote": "21.5cm – 28cm (approx. 8½” – 11½”) acceptable.",
+        "confidence": "high",
+        "notes": "AKC standard (KUSA reprint S835): '22.5cm – 29cm (approx. 9” – 11”) preferred.' and the acceptable range (quote); disqualification 'Any dog under 21.5cm (approx. 8½”) or over 28cm (approx. 11½”).' One range for both sexes, stored per sex. ATFTC (S836) 'Size: 8.5 - 11.5 inches, 9 -11 preferred, 8.5 - 11.5 acceptable.'; PetMD / WebMD 8.5–11.5 in."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            1.8,
+            4.1
+          ],
+          "female": [
+            1.8,
+            4.1
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S833",
+        "quote": "Toy Fox Terriers are pint-size powerhouses weighing 4–9 pounds and standing 8.5–11.5 inches tall.",
+        "confidence": "medium",
+        "notes": "PetMD (S833): 4–9 lb = 1.8–4.1 kg (our conversion), one range for both sexes (stored per sex) — the game / register range. WebMD (S834) 'Both male and female toy fox terriers are 8.5 to 11.5 inches tall and weigh between 4 and 9 pounds.' agrees. The AKC standard (S835) gives no weight. UKC standard (S838): 'Weight for both males and females is up to 8 lbs.', 'Preferred weight is 4.5 to 7.5 lbs.' — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                2.0,
+                3.4
+              ],
+              "female": [
+                2.0,
+                3.4
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S838",
+            "quote": "Preferred weight is 4.5 to 7.5 lbs.",
+            "confidence": "medium",
+            "notes": "UKC standard (S838); 4.5–7.5 lb = 2.0–3.4 kg (our conversion)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 4–9 lb (S833) → the 'Toy (5–12 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Toy Fox Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S833",
+        "quote": "The average lifespan of a Toy Fox Terrier is 13–15 years, and they’re known to be a generally healthy breed.",
+        "confidence": "medium",
+        "notes": "PetMD (S833, vet-reviewed). The lower bound 13 y is the basis of the senior boundary (closest rule row, verified=false)."
+      },
+      "webmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S834",
+        "quote": "The lifespan of toy fox terriers is about 13 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S834, medically reviewed). Same span as PetMD — not exported twice."
+      },
+      "mcmillan_2024": {
+        "value": 12.9,
+        "unit": "years",
+        "source_id": "S837",
+        "quote": "A 2024 UK study found a life expectancy of 12.9 years from a sample of 52 deaths for the breed",
+        "confidence": "low",
+        "notes": "Wikipedia (S837, tier C, fragment as returned 2026-11-14) citing McMillan et al. 2024 — background only, never alone. The paper's own table (S771 / Dogs Trust S123) was not reachable this run → not used for the senior boundary; 0.75 × 12.9 × 12 = 116.1 → 116 would be the senior boundary — open for David."
+      },
+      "senior_from": {
+        "value": 9.75,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the PetMD lower bound 13 y (S833) = 9.75 y = 117 months (verified=false, Claude's suggestion — see proposed_game_parameters.toy_fox_terrier.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S833"
+        ],
+        "months": 117,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S833",
+        "quote": "so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy",
+        "confidence": "high",
+        "notes": "PetMD (S833, fragment) — no RKC / PDSA page exists for this breed, so the vet-reviewed PetMD page is the strongest source with a number: 'at least an hour every day' → 60 (runbook rule 'at least N' → N). WebMD (S834) 'Toy fox terriers need regular exercise to stay healthy and happy.' (no minutes)."
+      },
+      "daily_text": {
+        "value": "energetic — at least an hour of exercise every day to prevent boredom",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy",
+        "confidence": "high",
+        "notes": "PetMD (S833, fragment)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD / WebMD name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, alert, friendly and loyal; spirited and affectionate",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "The Toy Fox Terrier is intelligent, alert, and friendly, and loyal to its owners.",
+        "confidence": "high",
+        "notes": "AKC standard (S835). PetMD (S833): 'the typical Toy Fox Terrier temperament is spirited and affectionate' (fragment). UKC (S838): 'The Toy Fox Terrier is self-possessed, spirited and determined.' WebMD (S834): 'naturally independent' (fragment)."
+      },
+      "family": {
+        "value": "playful, friendly companions for respectful, especially older, children",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "They can be playful, friendly, and great companions for respectful, especially older, children.",
+        "confidence": "high",
+        "notes": "WebMD (S834). PetMD (S833): 'when socialized and trained, can be good playmates for children who know how to interact with small dogs' (fragment). No children / small_children chip (caveats) — see behaviour.children."
+      },
+      "children": {
+        "value": "not recommended for families with small children — skittish and prone to biting; better with older children",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "TFTs are not recommended for families with small children because they are skittish and prone to biting.",
+        "confidence": "high",
+        "notes": "WebMD (S834). Basis of the older_children chip (a small dog better with older children; PetMD S833 'children who know how to interact with small dogs' — fragment). Not not_for_small_children (that chip names a large dog)."
+      },
+      "time_alone": {
+        "value": "may show separation anxiety when left alone for long",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "TFTs may show separation anxiety when they're left alone for long.",
+        "confidence": "high",
+        "notes": "WebMD (S834). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "strong prey drive — may chase smaller animals; leash or fence outdoors",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Like many terrier breeds, Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive",
+        "confidence": "high",
+        "notes": "PetMD (S833, fragment; continues 'today, according to the NTFTA'); they may bark at and chase smaller animals and must be leashed or fenced outdoors (paraphrase). WebMD (S834): 'TFTs accommodate other pets and do not show aggression with unfamiliar dogs.' — about pets in general, not small animals → no other_pets chip (conflicting). Basis of chases_small_pets (runbook rule: a verbatim strong prey drive)."
+      },
+      "socialisation": {
+        "value": "early training and socialisation for a friendly, well-mannered companion",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.",
+        "confidence": "high",
+        "notes": "WebMD (S834, a need). PetMD (S833): 'This dog is a typically loyal and devoted companion when trained and socialized from an early age.' → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "learns cues quickly; can lose interest in long sessions; a stubborn streak",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "these dogs have a stubborn streak and might need a professional",
+        "confidence": "medium",
+        "notes": "WebMD (S834, fragment); 'easy to train' (fragment). PetMD (S833): 'Toy Fox Terriers can learn cues quickly' (fragment), they lose interest in long, boring sessions (paraphrase)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on chewing found → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": "respond well to treats; easy to become overweight",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "Although TFTs respond well to treats, it's easy for them to become overweight.",
+        "confidence": "medium",
+        "notes": "WebMD (S834). Not the food_motivated_weight chip (one source, a single sentence; Claude kept the chip set small) — the fact stays in the register text."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not RKC-registered → no Breed Watch category; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: American Toy Fox Terrier Club health page (S839 / K42): PLL, patellas, CHG, SCA. PetMD (S833) also names demodectic mange (no register key — background).",
+      "luxating_patella": {
+        "value": "patellar luxation — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Patellar Luxation",
+        "confidence": "high",
+        "notes": "PetMD (S833) subheading (as returned); WebMD (S834) 'luxating patellas' (paraphrase). ATFTC (S839 / K42) patella evaluation. Register health key kneecap_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease (hip)",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Legg-Calve-Perthes Disease",
+        "confidence": "high",
+        "notes": "PetMD (S833) subheading (as returned); WebMD (S834) names it too (paraphrase); ATFTC (S839) 'no test is available but affected dogs should not be bred' (fragment). Register health key legg_perthes."
+      },
+      "vwd": {
+        "value": "von Willebrand disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Von Willebrand Disease (vWD)",
+        "confidence": "high",
+        "notes": "PetMD (S833) subheading (as returned); WebMD (S834) 'von Willebrand's disease' (paraphrase); ATFTC (S839) lists it under other conditions common to toy breeds (paraphrase). Register health key bleeding_disorder_vwd."
+      },
+      "primary_lens_luxation": {
+        "value": "primary lens luxation — the lens of the eye slips out of place; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S839",
+        "quote": "Primary Lens Luxation (PLL) is explained at",
+        "confidence": "high",
+        "notes": "American Toy Fox Terrier Club health page (S839, fragment); 'Except for Patellar Luxation, these conditions have DNA tests available.' (S839). WebMD (S834) names primary lens luxation (paraphrase). Register health key primary_lens_luxation."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism (including congenital hypothyroidism with goiter — DNA test)",
+        "unit": "—",
+        "source_id": "S839",
+        "quote": "Congenital hypothyroidism with goiter (CHG)",
+        "confidence": "medium",
+        "notes": "ATFTC health page (S839) — a DNA test (see the PLL note); WebMD (S834) names hypothyroidism (paraphrase). Register health key hypothyroidism."
+      },
+      "demodectic_mange": {
+        "value": "demodectic mange (skin mites)",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Demodectic Mange",
+        "confidence": "medium",
+        "notes": "PetMD (S833) subheading (as returned). No register health key — background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-14) does not list 'Toy Fox Terrier' or 'American Toy Terrier' (only 'Smooth Fox Terrier', rank 40 — a different breed). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "intelligent, learns cues quickly; short sessions; a stubborn streak",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "The Toy Fox Terrier is intelligent, alert, and friendly, and loyal to its owners.",
+        "confidence": "medium",
+        "notes": "AKC standard (S835); PetMD / WebMD (behaviour.training). The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.toy_fox_terrier.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well-balanced, athletic toy terrier, graceful and agile with strength and stamina; predominantly white body with a black or tan head",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "The Toy Fox Terrier is a well-balanced Toy dog of athletic appearance, displaying grace and agility in equal measure",
+        "confidence": "high",
+        "notes": "AKC standard (S835, fragment; continues 'with strength and stamina'). UKC (S838): 'this small dog, above all, has the conformation, characteristics and personality of a terrier' (fragment)."
+      },
+      "colours": {
+        "value": [
+          "tricolour (white body, black head with tan markings)",
+          "white, chocolate and tan",
+          "white and tan",
+          "white and black"
+        ],
+        "unit": "list",
+        "source_id": "S835",
+        "quote": "Tri-colour: Predominately black head with sharply defined tan markings on cheeks, lips, and eye dots.",
+        "confidence": "high",
+        "notes": "AKC standard (S835): tri-colour; white, chocolate and tan; white and tan; white and black; the body over 50 % white (paraphrase). Disqualifications 'A blaze extending into the eyes or ears.', 'Any colour combination not stated above.' (S835). WebMD (S834) 'tricolor, white and tan, black and white, and white and chocolate' (fragment); PetMD (S833) 'often featuring a predominantly white color with striking patches of black and tan' (fragment). Listed in game order — tricolour first = the portrait default (Claude: the most typical, PetMD). Never a solid colour, never more than half white on the head, never blue / grey (UKC S838 disqualification 'Maltese (Blue/Grey)')."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Tricolour first with the highest weight (the portrait default), then the other standard colours."
+      },
+      "coat": {
+        "value": "short, satiny, shiny, fine in texture and smooth to the touch",
+        "unit": "—",
+        "source_id": "S838",
+        "quote": "A distinguishing feature of the breed, the coat is short, satiny and shiny; fine in texture and smooth to the touch.",
+        "confidence": "high",
+        "notes": "UKC standard (S838). AKC (S835): 'The coat is shiny, satiny, fine in texture, and smooth to the touch.'"
+      },
+      "head": {
+        "value": "elegant, balanced and expressive, no coarseness",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "The head is elegant, balanced, and expressive with no indication of coarseness.",
+        "confidence": "high",
+        "notes": "AKC standard (S835). Nose 'Black only, with the exception of self-coloured in chocolate dogs.' (S835)."
+      },
+      "ears": {
+        "value": "erect, pointed, inverted V-shaped, set high and close together",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "The ears are erect, pointed, inverted V-shaped, set high and close together, but never touching.",
+        "confidence": "high",
+        "notes": "AKC standard (S835)."
+      },
+      "eyes": {
+        "value": "clear, bright and dark, including the eye-rims (self-coloured in chocolates)",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "Clear, bright, and dark, including eye-rims, with the exception of chocolates, whose eye-rims should be selfcoloured.",
+        "confidence": "high",
+        "notes": "AKC standard (S835)."
+      },
+      "tail": {
+        "value": "set high, held erect; customarily docked — natural tail accepted by the UKC",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": "Set high, held erect, and in proportion to the size of the dog. Docked to the third or fourth joint.",
+        "confidence": "high",
+        "notes": "AKC standard (S835). UKC (S838): no dog 'shall be penalized for a full tail or natural ears' (fragment). Portrait: natural tail, set high and held erect (Claude — the Rat Terrier / Dobermann natural-tail precedent; docking is not shown)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PetMD (S833), WebMD (S834), UKC standard (S838). No RKC / PDSA / Woodgreen page exists for this breed → no rkc_* / pdsa_* rows.",
+      "petmd_grooming": {
+        "value": "once or twice a week",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "It's helpful to brush their coat once or twice a week to minimize what shedding does occur",
+        "confidence": "high",
+        "notes": "PetMD (S833, fragment) → brushing 2× a week (M5-R13 rule: a range 'once or twice a week' → the upper bound). WebMD (S834) weekly → alternative."
+      },
+      "webmd_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "Weekly brushing and occasional baths are all this dog needs to maintain a healthy skin and coat.",
+        "confidence": "high",
+        "notes": "WebMD (S834) — read as the register category 'Once a week' (our wording; quote verbatim). 'occasional baths' has no frequency → no bath reminder."
+      },
+      "ukc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S838",
+        "quote": "A distinguishing feature of the breed, the coat is short, satiny and shiny; fine in texture and smooth to the touch.",
+        "confidence": "high",
+        "notes": "UKC standard (S838) — read as the coat-length category 'Short' (our wording)."
+      },
+      "petmd_shedding": {
+        "value": "does not shed a lot",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": "Toy Fox Terrier dogs have a short and smooth coat that doesn’t shed a lot or become tangled.",
+        "confidence": "high",
+        "notes": "PetMD (S833). WebMD (S834): 'Toy fox terriers have short coats, so there is not much to shed.' No chip (low_shedding is not given without an RKC 'Sheds: No' — Claude, Rat Terrier precedent) — fact in the register text only."
+      },
+      "webmd_teeth_nails": {
+        "value": "brush the teeth daily; trim the nails every month",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.",
+        "confidence": "high",
+        "notes": "WebMD (S834) → the child's tooth-brushing mini-game every day (M5-R15) and nail-trim mini-game every 4 weeks (M5-R19)."
+      },
+      "webmd_ears": {
+        "value": "wash the ears every week",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "Wash your TFT’s ears every week to prevent wax and dirt buildup.",
+        "confidence": "high",
+        "notes": "WebMD (S834) → the child's ear-cleaning mini-game once a week (M5-R18)."
+      },
+      "webmd_apartment": {
+        "value": "does well in an apartment with enough outdoor exercise",
+        "unit": "—",
+        "source_id": "S834",
+        "quote": "They do well in small living spaces like apartments, provided that they get enough exercise outdoors.",
+        "confidence": "medium",
+        "notes": "WebMD (S834). Not the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -86631,6 +87089,260 @@
         "confidence": "high",
         "notes": "FCI standard 15 (S831). Not a welfare breed → no welfare trait, but the black mask is described in a `muzzle` trait (as for the Belgian Malinois). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with black overlay and black mask is the portrait default (the standard's preferred colour); grey with black overlay and mask as the second picker colour; never black, brindle or white patches"
+      }
+    },
+    "toy_fox_terrier": {
+      "_note": "Unattended run M5-R10-112 (2026-11-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). No RKC / PDSA page exists → exercise from PetMD (S833 'at least an hour every day' → 60). Built: brushing 2× a week (PetMD S833 'once or twice a week' → upper bound, M5-R13), tooth brushing every day (WebMD S834, M5-R15), ear cleaning every week (WebMD S834, M5-R18), nail trim every 4 weeks (WebMD S834 'every month', M5-R19), puppy socialisation with the WebMD quote (M5-R17). No meal gap, no heat warning, no bath / groomer reminder (no frequency: 'occasional baths'). No new vocabulary key. In marketing (not a welfare breed). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S833",
+        "quote": "so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy",
+        "confidence": "high",
+        "notes": "PetMD (S833, fragment): 'at least an hour every day' → rule 'at least N' → 60. No RKC / PDSA page exists; WebMD (S834) gives no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S833 'at least an hour every day'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S833",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 117
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 117 = round(0.75 × 13 y × 12) (S11 + the PetMD lower bound '13–15 years', S833 — no McMillan 2024 / VetCompass row reachable, no RKC page). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S833"
+        ],
+        "alternatives": {
+          "senior_mcmillan_2024_via_wikipedia_12_9_y": 116,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 117 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 117,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Closest rule row (Rat Terrier / Basenji precedent): 0.75 × the PetMD lower bound 13 y (S833; WebMD S834 13–15 y too) × 12 = 117. McMillan 2024 12.9 y only via Wikipedia (S837, tier C) → 116 — alternative for David.",
+        "derived_from": [
+          "S11",
+          "S833"
+        ],
+        "decision": "predlog Claude 2026-11-14 (najbližja vrstica pravila runbooka, M5-R10-112) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 117
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 117 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35, checked 2026-11-14) → unranked rule → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S833",
+        "quote": "It's helpful to brush their coat once or twice a week to minimize what shedding does occur",
+        "confidence": "high",
+        "notes": "toy_fox_terrier.suitability.petmd_grooming. 'once or twice a week' → runbook dog-grooming rule: the upper bound → 2 (WebMD 'Weekly brushing' S834 → 1 in alternatives). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S834",
+            "quote": "Weekly brushing and occasional baths are all this dog needs to maintain a healthy skin and coat.",
+            "notes": "WebMD — lower number; open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PetMD »once or twice a week« → zgornja meja); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S834",
+        "quote": "Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.",
+        "confidence": "high",
+        "notes": "toy_fox_terrier.suitability.webmd_teeth_nails → every day. Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush their teeth daily« → vsak dan"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S834",
+        "quote": "Wash your TFT’s ears every week to prevent wax and dirt buildup.",
+        "confidence": "high",
+        "notes": "toy_fox_terrier.suitability.webmd_ears. 'every week' → once a week.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsak teden (WebMD »every week«)"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R19)",
+        "source_id": "S834",
+        "quote": "Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.",
+        "confidence": "high",
+        "notes": "toy_fox_terrier.suitability.webmd_teeth_nails. 'every month' → every 4 weeks. Bath: 'occasional baths' (no frequency) → no reminder; groomer: no source → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (WebMD »every month«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S834",
+        "quote": "Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.",
+        "confidence": "high",
+        "notes": "toy_fox_terrier.behaviour.socialisation (WebMD S834, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat WebMD S834)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-112); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S834"
+            ],
+            "refs": [
+              "toy_fox_terrier.behaviour.children"
+            ],
+            "quote": "S834 'TFTs are not recommended for families with small children because they are skittish and prone to biting.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S834"
+            ],
+            "refs": [
+              "toy_fox_terrier.behaviour.time_alone"
+            ],
+            "quote": "S834 'TFTs may show separation anxiety when they're left alone for long.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S833"
+            ],
+            "refs": [
+              "toy_fox_terrier.behaviour.other_pets"
+            ],
+            "quote": "S833 'Like many terrier breeds, Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "children": "WebMD 'not recommended for families with small children' (S834) — the caveat outweighs 'great companions for respectful, especially older, children' → older_children instead.",
+          "small_children": "WebMD advises against it (S834).",
+          "not_for_small_children": "That chip names a large dog that could knock children over; the Toy Fox Terrier is a small dog → older_children.",
+          "family_pet": "PetMD 'excellent companions for active individuals and families' only as a paraphrase.",
+          "apartment": "WebMD 'They do well in small living spaces like apartments' (S834) — the runbook allows the chip only from RKC 'Flat/ Apartment' (no RKC page).",
+          "other_pets": "WebMD 'accommodate other pets' vs PetMD strong prey drive → conflicting → no other_pets; chases_small_pets per the prey-drive rule.",
+          "low_shedding": "PetMD 'doesn’t shed a lot' (S833) — no RKC 'Sheds: No'; Rat Terrier precedent → no chip.",
+          "food_motivated_weight": "WebMD one sentence (S834) — kept as a register fact.",
+          "needs_mental_stimulation": "PetMD 'to prevent boredom' is about exercise, not mental work.",
+          "long_daily_exercise": "60 minutes a day — the chip is for 2 hours or more.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "shorter_lifespan": "13–15 years (S833 / S834).",
+          "welfare": "Not RKC-registered (no Breed Watch); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): consider older_children, needs_company, chases_small_pets (no suits chip)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S833",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); not RKC-registered (no Breed Watch). Marketing never shows the Toy Fox Terrier with small children, as a dog for homes with small pets, as hypoallergenic, or with a docked tail (S833, S834, S835).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Toy Fox Terrier, tricolour (default): predominantly white body, black head with tan markings on cheeks, lips and eye dots; well-balanced athletic toy terrier; short, satiny, shiny coat; elegant head; erect pointed V-shaped ears set high; clear dark eyes; natural tail set high and held erect",
+        "unit": "—",
+        "source_id": "S835",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "AKC standard (S835) and UKC (S838) as in toy_fox_terrier.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour is the portrait default; standard colours only, never solid / blue, natural tail"
       }
     }
   }

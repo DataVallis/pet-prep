@@ -112,6 +112,7 @@ return [
     'miniature_bull_terrier' => 'Miniaturni bulterier',
     'schipperke' => 'Schipperke',
     'belgian_tervuren' => 'Belgijski ovčar tervuren',
+    'toy_fox_terrier' => 'Toy fox terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
