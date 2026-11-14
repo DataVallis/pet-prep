@@ -35,7 +35,8 @@
       "note": "No emergency/opening-hours statement; the 24 h wording refers to intensive care of hospitalised patients only. Removed from duty: Hospitalised pets are monitored 24 hours; opening hours are not published.",
       "duty_i18n": {
         "es": "Las mascotas hospitalizadas están vigiladas las 24 horas.",
-        "it": "Gli animali ricoverati sono monitorati 24 ore su 24."
+        "it": "Gli animali ricoverati sono monitorati 24 ore su 24.",
+        "pt": "Animais internados vigiados 24 horas."
       }
     },
     {
@@ -54,7 +55,8 @@
       "note": "After-hours number on the page is shown as +1 809 626 666 (one digit short); not published.",
       "duty_i18n": {
         "es": "Lun–vie 7:00–18:00 h, sáb 9:00–15:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
-        "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti."
+        "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
+        "pt": "Segunda a sexta 7h00–18h00, sábado 9h00–15h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes."
       }
     },
     {
@@ -73,7 +75,8 @@
       "note": "Branch number is the WhatsApp line shown for this branch on the page; main line +1 809 626 6666.",
       "duty_i18n": {
         "es": "Lun–vie 7:00–18:00 h, sáb 9:00–15:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
-        "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti."
+        "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
+        "pt": "Segunda a sexta 7h00–18h00, sábado 9h00–15h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes."
       }
     },
     {
@@ -92,7 +95,8 @@
       "note": "Branch number is the WhatsApp line shown for this branch on the page; main line +1 809 626 6666.",
       "duty_i18n": {
         "es": "Lun–vie 8:00–17:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
-        "it": "Lun–ven 8:00–17:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti."
+        "it": "Lun–ven 8:00–17:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
+        "pt": "Segunda a sexta 8h00–17h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes."
       }
     },
     {
@@ -111,7 +115,8 @@
       "note": "Second phone +1 809 806 0991; WhatsApp appointments +1 829 868 2588. Clinic itself not open 24 h.",
       "duty_i18n": {
         "es": "Lun–vie 9:00–18:00 h, sáb 9:00–14:00 h, dom y festivos cerrado. Línea telefónica de urgencias las 24 horas, todos los días, solo para pacientes registrados.",
-        "it": "Lun–ven 9:00–18:00, sab 9:00–14:00, chiuso la domenica e nei festivi. Linea telefonica di emergenza 24 ore su 24, 7 giorni su 7, solo per pazienti registrati."
+        "it": "Lun–ven 9:00–18:00, sab 9:00–14:00, chiuso la domenica e nei festivi. Linea telefonica di emergenza 24 ore su 24, 7 giorni su 7, solo per pazienti registrati.",
+        "pt": "Segunda a sexta 9h00–18h00, sábado 9h00–14h00, encerrado aos domingos e feriados. Linha de urgência telefónica 24 h/24, 7 dias por semana, apenas para pacientes registados."
       }
     }
   ],

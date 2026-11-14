@@ -49,7 +49,8 @@
       "checked": "2026-11-12",
       "note": "Own booking page lists every day '24 Hours'.",
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24, tutti i giorni."
+        "it": "Aperto 24 ore su 24, tutti i giorni.",
+        "pt": "Aberto 24 horas por dia, todos os dias."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-12",
       "note": "Page lists every day '24 Hours'; country not named, +966 phone.",
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24, tutti i giorni."
+        "it": "Aperto 24 ore su 24, tutti i giorni.",
+        "pt": "Aberto 24 horas por dia, todos os dias."
       }
     },
     {
@@ -83,7 +85,8 @@
       "checked": "2026-11-12",
       "note": "Home page says 'Work time : 24 hours daily', Friday 4:00-16:00 emergencies only. No address or phone on opened page; contact page blocked by robots.txt. Phone +966 533399462 and Al Aqiq district appear only in aggregator articles (not used).",
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24 da sabato a giovedì; venerdì 4:00–16:00, solo emergenze."
+        "it": "Aperto 24 ore su 24 da sabato a giovedì; venerdì 4:00–16:00, solo emergenze.",
+        "pt": "Aberto 24 horas por dia de sábado a quinta-feira; sexta-feira, 4h00–16h00, apenas urgências."
       }
     },
     {
@@ -101,7 +104,8 @@
       "checked": "2026-11-12",
       "note": "Own site (Arabic): 'طوارئ 24/7'. Regular hours ambiguous on page and differ in Eye of Riyadh listing; omitted. Jeddah branch listed as coming soon.",
       "duty_i18n": {
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia, 7 dias por semana; liga antes."
       }
     },
     {
@@ -119,7 +123,8 @@
       "checked": "2026-11-12",
       "note": "Page: 'Please contact this number in case of emergency, 24/7.' 24 h applies to the emergency phone line.",
       "duty_i18n": {
-        "it": "Sab–mer 8:00–22:00; gio–ven 16:00–22:00. Linea di emergenza 24 ore su 24, 7 giorni su 7: +966 50 229 6655."
+        "it": "Sab–mer 8:00–22:00; gio–ven 16:00–22:00. Linea di emergenza 24 ore su 24, 7 giorni su 7: +966 50 229 6655.",
+        "pt": "Sábado a quarta-feira, 8h00–22h00; quinta e sexta-feira, 16h00–22h00. Linha de urgências 24 horas por dia, 7 dias por semana: +966 50 229 6655."
       }
     },
     {
@@ -137,7 +142,8 @@
       "checked": "2026-11-12",
       "note": "'24/7 Support Ready' wording unclear; not treated as 24 h clinic.",
       "duty_i18n": {
-        "it": "Dom–gio e sab 10:00–23:00; ven 15:00–23:00. Visite a domicilio disponibili."
+        "it": "Dom–gio e sab 10:00–23:00; ven 15:00–23:00. Visite a domicilio disponibili.",
+        "pt": "Domingo a quinta-feira e sábado, 10h00–23h00; sexta-feira, 15h00–23h00. Visitas ao domicílio disponíveis."
       }
     },
     {
@@ -154,7 +160,8 @@
       "source_url": "https://topvetclinics.com/en/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-english/",
       "checked": "2026-11-12",
       "duty_i18n": {
-        "it": "Sab–gio 9:00–24:00; ven 16:00–24:00. Nessun pronto soccorso dopo mezzanotte; telefonare prima di venire."
+        "it": "Sab–gio 9:00–24:00; ven 16:00–24:00. Nessun pronto soccorso dopo mezzanotte; telefonare prima di venire.",
+        "pt": "Sábado a quinta-feira, 9h00–0h00; sexta-feira, 16h00–0h00. Sem urgências após a meia-noite; liga antes de ires."
       }
     },
     {
@@ -171,7 +178,8 @@
       "source_url": "https://primevetclinic.com/en/contact/",
       "checked": "2026-11-12",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni 15:30–23:30."
+        "it": "Aperto tutti i giorni 15:30–23:30.",
+        "pt": "Aberto todos os dias, 15h30–23h30."
       }
     },
     {
@@ -216,7 +224,8 @@
       "source_url": "https://petnvet.vetpms.com/index.php",
       "checked": "2026-11-12",
       "duty_i18n": {
-        "it": "Lun–gio e sab 14:00–22:00; ven 16:00–22:00; chiuso la domenica."
+        "it": "Lun–gio e sab 14:00–22:00; ven 16:00–22:00; chiuso la domenica.",
+        "pt": "Segunda a quinta-feira e sábado, 14h00–22h00; sexta-feira, 16h00–22h00; fechado ao domingo."
       }
     },
     {
@@ -234,7 +243,8 @@
       "checked": "2026-11-12",
       "note": "art8vetclinics.com contact page lists Al Khobar and WhatsApp +966 596 519 845; address conflict Dammam vs Al Khobar.",
       "duty_i18n": {
-        "it": "Sab–gio 9:00–23:00; ven 14:00–23:00."
+        "it": "Sab–gio 9:00–23:00; ven 14:00–23:00.",
+        "pt": "Sábado a quinta-feira, 9h00–23h00; sexta-feira, 14h00–23h00."
       }
     },
     {
@@ -251,7 +261,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–gio 9:00–22:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7; telefonare in anticipo."
+        "it": "Sab–gio 9:00–22:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7; telefonare in anticipo.",
+        "pt": "Sábado a quinta-feira, 9h00–22h00; serviço de urgências anunciado 24 horas por dia, 7 dias por semana, liga antes."
       }
     },
     {
@@ -269,7 +280,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0500521717."
+        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0500521717.",
+        "pt": "Sábado a quinta-feira, 8h30–22h00; sexta-feira, 16h00–22h00. Linha de urgências: 0500521717."
       }
     },
     {
@@ -287,7 +299,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Dom–gio e sab 8:30–23:00; ven 16:00–21:00. Linea di emergenza: 0559171818."
+        "it": "Dom–gio e sab 8:30–23:00; ven 16:00–21:00. Linea di emergenza: 0559171818.",
+        "pt": "Domingo a quinta-feira e sábado, 8h30–23h00; sexta-feira, 16h00–21h00. Linha de urgências: 0559171818."
       }
     },
     {
@@ -305,7 +318,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0559825550."
+        "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0559825550.",
+        "pt": "Sábado a quinta-feira, 8h30–22h00; sexta-feira, 16h00–22h00. Linha de urgências: 0559825550."
       }
     },
     {
@@ -323,7 +337,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–gio 9:00–22:00; ven 14:00–22:00."
+        "it": "Sab–gio 9:00–22:00; ven 14:00–22:00.",
+        "pt": "Sábado a quinta-feira, 9h00–22h00; sexta-feira, 14h00–22h00."
       }
     },
     {

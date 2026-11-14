@@ -54,7 +54,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas; llama a la línea de urgencias.",
-        "it": "Pronto soccorso disponibile 24 ore su 24; chiamare la linea d'emergenza."
+        "it": "Pronto soccorso disponibile 24 ore su 24; chiamare la linea d'emergenza.",
+        "pt": "Serviço de urgências 24 horas por dia; liga para a linha de urgência."
       }
     },
     {
@@ -73,7 +74,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Visitas de urgencia a domicilio las 24 horas; horario habitual mar–dom 9:00–16:00 h.",
-        "it": "Visite d'urgenza a domicilio 24 ore su 24; orario regolare martedì–domenica 9:00–16:00."
+        "it": "Visite d'urgenza a domicilio 24 ore su 24; orario regolare martedì–domenica 9:00–16:00.",
+        "pt": "Visitas urgentes ao domicílio 24 horas por dia; horário normal de terça a domingo 9h00–16h00."
       }
     },
     {
@@ -92,7 +94,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h.",
-        "it": "Pronto soccorso 24 ore su 24; orario regolare lun–sab 9:00–20:00."
+        "it": "Pronto soccorso 24 ore su 24; orario regolare lun–sab 9:00–20:00.",
+        "pt": "Serviço de urgências 24 horas por dia; horário normal de segunda a sábado 9h00–20h00."
       }
     },
     {
@@ -111,7 +114,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Línea de urgencias las 24 horas; horario de la clínica lun–vie 10:00–20:00 h, sáb 10:00–15:00 h.",
-        "it": "Linea d'emergenza 24 ore su 24; orario della clinica lun–ven 10:00–20:00, sab 10:00–15:00."
+        "it": "Linea d'emergenza 24 ore su 24; orario della clinica lun–ven 10:00–20:00, sab 10:00–15:00.",
+        "pt": "Linha de urgência 24 horas por dia; clínica aberta de segunda a sexta 10h00–20h00, sábado 10h00–15h00."
       }
     },
     {
@@ -130,7 +134,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto todos los días 9:00–21:00 h; visitas de urgencia a domicilio las 24 horas (con tarifa, llama al 091 404 141 y di que eres socio de Veterinaria Lacucha).",
-        "it": "Aperto tutti i giorni 9:00–21:00; visite d'urgenza a domicilio 24 ore su 24 (a pagamento, chiamare il 091 404 141 e dire di essere socio di Veterinaria Lacucha)."
+        "it": "Aperto tutti i giorni 9:00–21:00; visite d'urgenza a domicilio 24 ore su 24 (a pagamento, chiamare il 091 404 141 e dire di essere socio di Veterinaria Lacucha).",
+        "pt": "Aberto todos os dias 9h00–21h00; visitas urgentes ao domicílio 24 horas por dia (serviço pago; liga para 091 404 141 e diz que és sócio da Veterinaria Lacucha)."
       }
     },
     {
@@ -149,7 +154,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas, los 365 días del año; horario de la tienda lun–vie 9:00–20:00 h, sáb 10:00–20:00 h, dom 12:00–20:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; orario del negozio lun–ven 9:00–20:00, sab 10:00–20:00, dom 12:00–20:00."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; orario del negozio lun–ven 9:00–20:00, sab 10:00–20:00, dom 12:00–20:00.",
+        "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano; loja aberta de segunda a sexta 9h00–20h00, sábado 10h00–20h00, domingo 12h00–20h00."
       }
     },
     {
@@ -167,7 +173,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias).",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza)."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza).",
+        "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano (liga para a linha de urgência)."
       }
     },
     {
@@ -185,7 +192,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas, los 365 días del año (llama a la línea de urgencias).",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza)."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza).",
+        "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano (liga para a linha de urgência)."
       }
     },
     {
@@ -204,7 +212,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias y hospitalización las 24 horas, los 7 días de la semana; consultas lun–vie 9:30–19:00 h, sáb 9:00–14:00 h.",
-        "it": "Urgenze e ricoveri 24 ore su 24, 7 giorni su 7; visite lun–ven 9:30–19:00, sab 9:00–14:00."
+        "it": "Urgenze e ricoveri 24 ore su 24, 7 giorni su 7; visite lun–ven 9:30–19:00, sab 9:00–14:00.",
+        "pt": "Urgências e internamento 24 horas por dia, 7 dias por semana; consultas de segunda a sexta 9h30–19h00, sábado 9h00–14h00."
       }
     },
     {
@@ -223,7 +232,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 10:00–19:00 h; domingos solo urgencias. Línea de urgencias (solo llamadas), llama antes de ir.",
-        "it": "Lun–sab 10:00–19:00; domenica solo urgenze. Linea d'emergenza (solo chiamate), telefonare in anticipo."
+        "it": "Lun–sab 10:00–19:00; domenica solo urgenze. Linea d'emergenza (solo chiamate), telefonare in anticipo.",
+        "pt": "Segunda a sábado 10h00–19h00; domingo apenas urgências. Linha de urgência (apenas chamadas telefónicas), liga antes."
       }
     },
     {
@@ -242,7 +252,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas, los 7 días de la semana; horario habitual lun–vie 8:30–12:30 y 15:00–18:00 h, sáb 16:00–18:00 h.",
-        "it": "Urgenze 24 ore su 24, 7 giorni su 7; orario regolare lun–ven 8:30–12:30 e 15:00–18:00, sab 16:00–18:00."
+        "it": "Urgenze 24 ore su 24, 7 giorni su 7; orario regolare lun–ven 8:30–12:30 e 15:00–18:00, sab 16:00–18:00.",
+        "pt": "Urgências 24 horas por dia, 7 dias por semana; horário normal de segunda a sexta 8h30–12h30 e 15h00–18h00, sábado 16h00–18h00."
       }
     },
     {
@@ -261,7 +272,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Clínica de animales pequeños con línea de urgencias; lun–vie 7:00–12:00 y 14:00–18:00 h, sáb 7:00–12:00 h; llama antes de ir.",
-        "it": "Clinica per piccoli animali con linea d'emergenza; lun–ven 7:00–12:00 e 14:00–18:00, sab 7:00–12:00; telefonare in anticipo."
+        "it": "Clinica per piccoli animali con linea d'emergenza; lun–ven 7:00–12:00 e 14:00–18:00, sab 7:00–12:00; telefonare in anticipo.",
+        "pt": "Clínica para animais de pequeno porte com linha de urgência; segunda a sexta 7h00–12h00 e 14h00–18h00, sábado 7h00–12h00; liga antes."
       }
     },
     {
@@ -279,7 +291,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–vie 7:00–12:00 y 14:00–18:30 h, sáb 7:00–12:00 h (el horario de tarde en verano cambia ligeramente).",
-        "it": "Lun–ven 7:00–12:00 e 14:00–18:30, sab 7:00–12:00 (gli orari pomeridiani estivi variano leggermente)."
+        "it": "Lun–ven 7:00–12:00 e 14:00–18:30, sab 7:00–12:00 (gli orari pomeridiani estivi variano leggermente).",
+        "pt": "Segunda a sexta 7h00–12h00 e 14h00–18h30, sábado 7h00–12h00 (no verão, o horário da tarde varia ligeiramente)."
       }
     },
     {
@@ -298,7 +311,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Llama antes de ir.",
-        "it": "Telefonare in anticipo."
+        "it": "Telefonare in anticipo.",
+        "pt": "Liga antes."
       }
     },
     {
@@ -317,7 +331,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–13:00 h; llama antes de ir.",
-        "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–13:00; telefonare in anticipo."
+        "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–13:00; telefonare in anticipo.",
+        "pt": "Segunda a sexta 9h00–13h00 e 15h00–19h00, sábado 9h00–13h00; liga antes."
       }
     },
     {
@@ -335,7 +350,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio municipal de urgencias las 24 horas para animales heridos en la vía pública y para animales salvajes o exóticos; no es una clínica general. WhatsApp 099 019 500 todos los días 6:00–24:00 h.",
-        "it": "Servizio comunale di pronto soccorso 24 ore su 24 per animali feriti su strada pubblica e per animali selvatici o esotici; non è una clinica generica. WhatsApp 099 019 500 tutti i giorni 6:00–24:00."
+        "it": "Servizio comunale di pronto soccorso 24 ore su 24 per animali feriti su strada pubblica e per animali selvatici o esotici; non è una clinica generica. WhatsApp 099 019 500 tutti i giorni 6:00–24:00.",
+        "pt": "Serviço municipal de urgências 24 horas por dia para animais feridos na via pública e animais selvagens ou exóticos; não é uma clínica geral. WhatsApp 099 019 500 todos os dias 6h00–24h00."
       }
     },
     {
@@ -354,7 +370,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas; consultas de día hasta las 20:00, de lunes a sábado.",
-        "it": "Pronto soccorso 24 ore su 24; visite diurne fino alle 20:00 da lunedì a sabato."
+        "it": "Pronto soccorso 24 ore su 24; visite diurne fino alle 20:00 da lunedì a sabato.",
+        "pt": "Urgências 24 horas por dia; consultas diurnas até às 20h00, de segunda a sábado."
       }
     }
   ],

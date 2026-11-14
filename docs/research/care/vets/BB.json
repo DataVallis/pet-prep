@@ -38,7 +38,10 @@
       "source_url": "https://www.wellvetbarbados.com/",
       "checked": "2026-11-13",
       "note": "Home page footer: '24 Hour Emergency' with (246) 429-9355. How-to-find-us page: 'ready to respond quickly to any veterinary emergencies island-wide'; address given only as Neils development, St Michael (no street number). Business hours not published on opened pages.",
-      "quote": "24 Hour Emergency"
+      "quote": "24 Hour Emergency",
+      "duty_i18n": {
+        "pt": "Linha de urgência 24 horas por dia: +1 246 429 9355. Urgências veterinárias em toda a ilha."
+      }
     },
     {
       "kind": "clinic",
@@ -50,7 +53,10 @@
       "url": "https://www.trinityclinic.bb/",
       "source_url": "https://www.trinityclinic.bb/contact/",
       "checked": "2026-11-13",
-      "note": "Contact page lists general (246) 420-7894 and an emergency number (246) 231-0450 (labelled 'Emerency Call'); no hours and no 24 h wording. Street address not published. Town/parish not on the opened page, so removed after the independent check."
+      "note": "Contact page lists general (246) 420-7894 and an emergency number (246) 231-0450 (labelled 'Emerency Call'); no hours and no 24 h wording. Street address not published. Town/parish not on the opened page, so removed after the independent check.",
+      "duty_i18n": {
+        "pt": "Linha de urgência: +1 246 231 0450."
+      }
     },
     {
       "kind": "clinic",
@@ -65,7 +71,10 @@
       "url": "https://www.centralvetbim.com/",
       "source_url": "https://www.centralvetbim.com/",
       "checked": "2026-11-13",
-      "note": "No emergency or 24 h wording on the page."
+      "note": "No emergency or 24 h wording on the page.",
+      "duty_i18n": {
+        "pt": "Sob marcação. Segunda a sexta, 8h30–17h00; sábado e domingo, 9h00–11h00."
+      }
     },
     {
       "kind": "clinic",
@@ -80,7 +89,10 @@
       "url": "https://www.centralvetbim.com/",
       "source_url": "https://www.centralvetbim.com/",
       "checked": "2026-11-13",
-      "note": "No emergency or 24 h wording on the page."
+      "note": "No emergency or 24 h wording on the page.",
+      "duty_i18n": {
+        "pt": "Sob marcação. Segunda a sexta, 9h00–18h00; sábado e domingo, 9h00–11h00."
+      }
     }
   ],
   "notes": "Research 2026-11-13; every source_url opened with WebFetch. No Barbados Veterinary Association clinic directory reachable (cbvma.org gives only the association e-mail; association site not found). Ministry of Agriculture Veterinary Services: no clinic list or duty rota page found. No duty rota, no animal poison line found. Unreachable: centralvetbarbados.com (robots disallowed); arkanimalwelfarebarbados.com vets-in-barbados page (http/https redirect loop, WebFetch refused twice). Clinics named only in news/expat articles with no own page found and not added: Barbados RSPCA Animal Clinic, Sandy Lane Clinic (barbadostoday/expatfocus articles, no website/phone), Eastern Veterinary Clinic, Golden Pride Veterinary Clinic (directory listings only). WellVet address page gives no street number and no phone/hours."

@@ -59,7 +59,8 @@
       "checked": "2026-11-12",
       "note": "Page quote: 'Please call us for emergencies.' Page title/metadata says Usa River while body says Dolly Estate - location inconsistent. Serves domestic animals and wildlife, 'not just dogs and cats'. E-mail milou.vetzcapes@gmail.com.",
       "duty_i18n": {
-        "it": "Aperto dal lunedì al venerdì 08:30–16:00 (il giovedì visite a domicilio). Per le urgenze chiamare la clinica."
+        "it": "Aperto dal lunedì al venerdì 08:30–16:00 (il giovedì visite a domicilio). Per le urgenze chiamare la clinica.",
+        "pt": "Aberto de segunda a sexta 8h30–16h00 (às quintas-feiras, consultas ao domicílio). Para urgências, liga para a clínica."
       }
     },
     {
@@ -76,7 +77,8 @@
       "checked": "2026-11-12",
       "note": "Only source opened is the ELT rescue NGO referral list (Masaki, 0753 643 835, after-hours 0753 520 244); clinic's own site not found (Facebook/LinkedIn not fetchable). Street address and hours unverified; no 24 h claim. Needs a re-check on the clinic's own page.",
       "duty_i18n": {
-        "it": "Linea fuori orario: +255 753 520 244."
+        "it": "Linea fuori orario: +255 753 520 244.",
+        "pt": "Linha fora de horas: +255 753 520 244."
       }
     },
     {
@@ -93,7 +95,8 @@
       "checked": "2026-11-12",
       "note": "ELT page lists name, Mikocheni and 0713 325 000 only; no street address, hours or 24 h claim. Own site not found. Needs re-check on the clinic's own page.",
       "duty_i18n": {
-        "it": "Chiamare la clinica per orari e appuntamenti."
+        "it": "Chiamare la clinica per orari e appuntamenti.",
+        "pt": "Liga para a clínica para saberes o horário e marcares consulta."
       }
     }
   ],

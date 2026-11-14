@@ -50,7 +50,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
-        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24.",
+        "pt": "Atendimento médico 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -69,7 +70,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
-        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24.",
+        "pt": "Atendimento médico 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -88,7 +90,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
-        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24.",
+        "pt": "Atendimento médico 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -107,7 +110,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
-        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24.",
+        "pt": "Atendimento médico 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -126,7 +130,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención médica los 7 días de la semana, las 24 horas del día.",
-        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24."
+        "it": "Assistenza medica 7 giorni su 7, 24 ore su 24.",
+        "pt": "Atendimento médico 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -145,7 +150,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
-        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00.",
+        "pt": "Urgências 24 horas por dia; consultas normais de segunda a sábado 8h00–20h00."
       }
     },
     {
@@ -164,7 +170,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
-        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00.",
+        "pt": "Urgências 24 horas por dia; consultas normais de segunda a sábado 8h00–20h00."
       }
     },
     {
@@ -183,7 +190,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas; consultas ordinarias lun–sáb 8:00–20:00 h.",
-        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00."
+        "it": "Emergenze 24 ore su 24; visite ordinarie da lunedì a sabato 8:00–20:00.",
+        "pt": "Urgências 24 horas por dia; consultas normais de segunda a sábado 8h00–20h00."
       }
     },
     {
@@ -202,7 +210,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto de lunes a domingo, las 24 horas.",
-        "it": "Aperto da lunedì a domenica, 24 ore su 24."
+        "it": "Aperto da lunedì a domenica, 24 ore su 24.",
+        "pt": "Aberto de segunda a domingo, 24 horas por dia."
       }
     },
     {
@@ -221,7 +230,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto de lunes a domingo, las 24 horas.",
-        "it": "Aperto da lunedì a domenica, 24 ore su 24."
+        "it": "Aperto da lunedì a domenica, 24 ore su 24.",
+        "pt": "Aberto de segunda a domingo, 24 horas por dia."
       }
     },
     {
@@ -240,7 +250,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias veterinarias las 24 horas; hospitalización las 24 horas.",
-        "it": "Emergenze veterinarie 24 ore su 24; ricovero 24 ore su 24."
+        "it": "Emergenze veterinarie 24 ore su 24; ricovero 24 ore su 24.",
+        "pt": "Urgências veterinárias 24 horas por dia; internamento 24 horas por dia."
       }
     },
     {
@@ -259,7 +270,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias veterinarias las 24 horas.",
-        "it": "Servizio di emergenza veterinaria 24 ore su 24."
+        "it": "Servizio di emergenza veterinaria 24 ore su 24.",
+        "pt": "Serviço de urgências veterinárias 24 horas por dia."
       }
     },
     {
@@ -278,7 +290,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias y hospitalización las 24 horas.",
-        "it": "Pronto soccorso e ricovero 24 ore su 24."
+        "it": "Pronto soccorso e ricovero 24 ore su 24.",
+        "pt": "Urgências e internamento 24 horas por dia."
       }
     },
     {
@@ -297,7 +310,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención veterinaria las 24 horas del día, los 7 días de la semana.",
-        "it": "Assistenza veterinaria 24 ore su 24, 7 giorni su 7."
+        "it": "Assistenza veterinaria 24 ore su 24, 7 giorni su 7.",
+        "pt": "Atendimento veterinário 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -316,7 +330,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención las 24 horas; línea de urgencias 993 737 420.",
-        "it": "Assistenza 24 ore su 24; linea di emergenza 993 737 420."
+        "it": "Assistenza 24 ore su 24; linea di emergenza 993 737 420.",
+        "pt": "Atendimento 24 horas por dia; linha de urgências 993 737 420."
       }
     },
     {
@@ -335,7 +350,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
-        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7.",
+        "pt": "Urgências veterinárias 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -354,7 +370,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
-        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7.",
+        "pt": "Urgências veterinárias 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -373,7 +390,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias veterinarias las 24 horas, los 7 días de la semana.",
-        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7."
+        "it": "Emergenze veterinarie 24 ore su 24, 7 giorni su 7.",
+        "pt": "Urgências veterinárias 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -392,7 +410,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Horario lun–sáb 8:00–20:30 h; la clínica también anuncia servicio 24 horas, así que llama antes para confirmarlo.",
-        "it": "Orari da lunedì a sabato 8:00–20:30; la clinica indica anche un servizio 24 ore su 24, quindi telefonare in anticipo per conferma."
+        "it": "Orari da lunedì a sabato 8:00–20:30; la clinica indica anche un servizio 24 ore su 24, quindi telefonare in anticipo per conferma.",
+        "pt": "Horário de segunda a sábado 8h00–20h30; a clínica anuncia também serviço 24 horas, por isso liga antes para confirmar."
       }
     },
     {
@@ -411,7 +430,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas; horario habitual lun–sáb 9:00–20:00 h, dom 10:00–18:00 h.",
-        "it": "Emergenze 24 ore su 24; orari ordinari da lunedì a sabato 9:00–20:00, domenica 10:00–18:00."
+        "it": "Emergenze 24 ore su 24; orari ordinari da lunedì a sabato 9:00–20:00, domenica 10:00–18:00.",
+        "pt": "Urgências 24 horas por dia; horário normal de segunda a sábado 9h00–20h00, domingo 10h00–18h00."
       }
     },
     {
@@ -430,7 +450,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h.",
-        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00."
+        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00.",
+        "pt": "Linha de urgências 24 horas por dia, 365 dias por ano; horário geral todos os dias 8h00–22h00."
       }
     },
     {
@@ -449,7 +470,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Línea de urgencias las 24 horas, 365 días al año; horario general todos los días 8:00–22:00 h.",
-        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00."
+        "it": "Linea di emergenza 24 ore su 24, 365 giorni all'anno; orari generali tutti i giorni 8:00–22:00.",
+        "pt": "Linha de urgências 24 horas por dia, 365 dias por ano; horário geral todos os dias 8h00–22h00."
       }
     },
     {
@@ -468,7 +490,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Se presenta como clínica 24 horas; llama antes.",
-        "it": "Si presenta come clinica aperta 24 ore su 24; telefonare in anticipo."
+        "it": "Si presenta come clinica aperta 24 ore su 24; telefonare in anticipo.",
+        "pt": "Apresenta-se como clínica 24 horas; liga antes."
       }
     },
     {
@@ -487,7 +510,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Línea de contacto de urgencias anunciada las 24 horas; horario lun–vie 9:00–18:00 h; llama antes.",
-        "it": "Linea di emergenza indicata come attiva 24 ore su 24; orari di apertura da lunedì a venerdì 9:00–18:00; telefonare in anticipo."
+        "it": "Linea di emergenza indicata come attiva 24 ore su 24; orari di apertura da lunedì a venerdì 9:00–18:00; telefonare in anticipo.",
+        "pt": "Linha de contacto para urgências anunciada como 24 horas; horário de segunda a sexta 9h00–18h00; liga antes."
       }
     },
     {
@@ -506,7 +530,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Clínica universitaria de pequeños animales. Lun–vie 7:00–19:00 h. Línea de urgencias clínicas (01) 435 3348.",
-        "it": "Clinica universitaria per piccoli animali. Da lunedì a venerdì 7:00–19:00. Linea per le emergenze cliniche (01) 435 3348."
+        "it": "Clinica universitaria per piccoli animali. Da lunedì a venerdì 7:00–19:00. Linea per le emergenze cliniche (01) 435 3348.",
+        "pt": "Clínica universitária para animais de pequeno porte. Segunda a sexta 7h00–19h00. Linha de urgências clínicas (01) 435 3348."
       }
     },
     {
@@ -525,7 +550,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Clínica universitaria docente. Lun–vie 8:00–17:30 h, sáb 9:00–16:30 h; cerrado dom y festivos.",
-        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:30, sabato 9:00–16:30; chiusa la domenica e i festivi."
+        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:30, sabato 9:00–16:30; chiusa la domenica e i festivi.",
+        "pt": "Clínica universitária de ensino. Segunda a sexta 8h00–17h30, sábado 9h00–16h30; fechada ao domingo e feriados."
       }
     },
     {
@@ -544,7 +570,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Clínica universitaria docente. Lun–vie 8:00–17:00 h, cerrado fines de semana; urgencias en el mismo horario.",
-        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:00, chiusa nel weekend; emergenze negli stessi orari."
+        "it": "Clinica didattica universitaria. Da lunedì a venerdì 8:00–17:00, chiusa nel weekend; emergenze negli stessi orari.",
+        "pt": "Clínica universitária de ensino. Segunda a sexta 8h00–17h00, fechada aos fins de semana; urgências no mesmo horário."
       }
     },
     {
@@ -562,7 +589,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Clínica municipal de bajo coste. Lun–vie 8:00–13:00 y 14:00–17:00 h; con cita previa.",
-        "it": "Clinica comunale a basso costo. Da lunedì a venerdì 8:00–13:00 e 14:00–17:00; su appuntamento."
+        "it": "Clinica comunale a basso costo. Da lunedì a venerdì 8:00–13:00 e 14:00–17:00; su appuntamento.",
+        "pt": "Clínica municipal de baixo custo. Segunda a sexta 8h00–13h00 e 14h00–17h00; sob marcação."
       }
     },
     {
@@ -581,7 +609,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Llama antes.",
-        "it": "Telefonare in anticipo."
+        "it": "Telefonare in anticipo.",
+        "pt": "Liga antes."
       }
     },
     {
@@ -600,7 +629,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 8:00–20:00 h, dom 8:00–15:00 h; menciona urgencias, sin indicar servicio 24 horas.",
-        "it": "Da lunedì a sabato 8:00–20:00, domenica 8:00–15:00; si citano le emergenze, nessuna indicazione di servizio 24 ore su 24."
+        "it": "Da lunedì a sabato 8:00–20:00, domenica 8:00–15:00; si citano le emergenze, nessuna indicazione di servizio 24 ore su 24.",
+        "pt": "Segunda a sábado 8h00–20h00, domingo 8h00–15h00; menciona urgências, sem indicação de serviço 24 horas."
       }
     },
     {
@@ -619,7 +649,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 9:00–19:00 h.",
-        "it": "Da lunedì a sabato 9:00–19:00."
+        "it": "Da lunedì a sabato 9:00–19:00.",
+        "pt": "Segunda a sábado 9h00–19h00."
       }
     },
     {
@@ -637,7 +668,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Horario indicado: todo el día, todos los días; llama antes.",
-        "it": "Orari indicati: tutto il giorno, ogni giorno; telefonare in anticipo."
+        "it": "Orari indicati: tutto il giorno, ogni giorno; telefonare in anticipo.",
+        "pt": "Horário indicado: todos os dias, o dia todo; liga antes."
       }
     },
     {
@@ -656,7 +688,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 9:00–21:00 h, dom 9:00–12:00 h.",
-        "it": "Da lunedì a sabato 9:00–21:00, domenica 9:00–12:00."
+        "it": "Da lunedì a sabato 9:00–21:00, domenica 9:00–12:00.",
+        "pt": "Segunda a sábado 9h00–21h00, domingo 9h00–12h00."
       }
     }
   ],

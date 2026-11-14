@@ -67,7 +67,8 @@
         "de": "Kleintier-Lehrklinik der Universität. Notfälle Mo–Fr 8–17 Uhr und Sa 8–14 Uhr (kein 24-Stunden-Dienst); Termine Mo–Fr 10–17 Uhr, Sa 10–14 Uhr. Der Betrieb kann ohne Vorankündigung ausgesetzt werden.",
         "fr": "Hôpital universitaire pour petits animaux. Urgences lun.–ven. 8 h–17 h et sam. 8 h–14 h (pas de 24 h/24) ; rendez-vous lun.–ven. 10 h–17 h, sam. 10 h–14 h. Service pouvant être suspendu sans préavis.",
         "es": "Hospital universitario de enseñanza de pequeños animales. Urgencias lun–vie 8:00–17:00 h y sáb 8:00–14:00 h (no 24 horas); citas lun–vie 10:00–17:00 h, sáb 10:00–14:00 h. El servicio puede suspenderse sin previo aviso.",
-        "it": "Ospedale didattico universitario per piccoli animali. Pronto soccorso lun–ven 8:00–17:00 e sab 8:00–14:00 (non 24 ore su 24); visite su appuntamento lun–ven 10:00–17:00, sab 10:00–14:00. Il servizio può essere sospeso senza preavviso."
+        "it": "Ospedale didattico universitario per piccoli animali. Pronto soccorso lun–ven 8:00–17:00 e sab 8:00–14:00 (non 24 ore su 24); visite su appuntamento lun–ven 10:00–17:00, sab 10:00–14:00. Il servizio può essere sospeso senza preavviso.",
+        "pt": "Hospital universitário para animais de pequeno porte. Urgências de segunda a sexta 8h00–17h00 e sábado 8h00–14h00 (não abre 24 horas); consultas de segunda a sexta 10h00–17h00, sábado 10h00–14h00. O serviço pode ser suspenso sem aviso prévio."
       }
     },
     {
@@ -87,7 +88,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert du lundi au dimanche, 24 h/24.",
         "es": "Abierto de lunes a domingo, las 24 horas.",
-        "it": "Aperto dal lunedì alla domenica, 24 ore su 24."
+        "it": "Aperto dal lunedì alla domenica, 24 ore su 24.",
+        "pt": "Aberto de segunda a domingo, 24 horas por dia."
       }
     },
     {
@@ -107,7 +109,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert du lundi au dimanche, 24 h/24.",
         "es": "Abierto de lunes a domingo, las 24 horas.",
-        "it": "Aperto dal lunedì alla domenica, 24 ore su 24."
+        "it": "Aperto dal lunedì alla domenica, 24 ore su 24.",
+        "pt": "Aberto de segunda a domingo, 24 horas por dia."
       }
     },
     {
@@ -128,7 +131,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Notdienst bitte vorher telefonisch bestätigen.",
         "fr": "Ouvert du lundi au dimanche, 24 h/24. Appelez pour confirmer le service d’urgence.",
         "es": "Abierto de lunes a domingo, las 24 horas. Llama antes para confirmar el servicio de urgencias.",
-        "it": "Aperto dal lunedì alla domenica, 24 ore su 24. Chiamare prima per confermare il pronto soccorso."
+        "it": "Aperto dal lunedì alla domenica, 24 ore su 24. Chiamare prima per confermare il pronto soccorso.",
+        "pt": "Aberto de segunda a domingo, 24 horas por dia. Liga antes para confirmar o serviço de urgência."
       }
     },
     {
@@ -148,7 +152,8 @@
         "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
         "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24.",
         "es": "Abierto todos los días 10:00–20:00 h. Sucursal sin servicio 24 horas.",
-        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24."
+        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
+        "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas."
       }
     },
     {
@@ -168,7 +173,8 @@
         "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
         "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24.",
         "es": "Abierto todos los días 10:00–20:00 h. Sucursal sin servicio 24 horas.",
-        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24."
+        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
+        "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas."
       }
     },
     {
@@ -188,7 +194,8 @@
         "de": "Täglich 10–20 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
         "fr": "Ouvert tous les jours 10 h–20 h. Succursale non ouverte 24 h/24.",
         "es": "Abierto todos los días 10:00–20:00 h. Sucursal sin servicio 24 horas.",
-        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24."
+        "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
+        "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas."
       }
     },
     {
@@ -209,7 +216,8 @@
         "de": "Notfälle und Labor täglich rund um die Uhr. Reguläre Öffnungszeiten Mo–Sa 11–21 Uhr.",
         "fr": "Urgences et laboratoire 24 h/24, 7 j/7. Horaires habituels lun.–sam. 11 h–21 h.",
         "es": "Urgencias y laboratorio las 24 horas, los 7 días de la semana. Horario habitual lun–sáb 11:00–21:00 h.",
-        "it": "Pronto soccorso e laboratorio 24 ore su 24, 7 giorni su 7. Orario ordinario lun–sab 11:00–21:00."
+        "it": "Pronto soccorso e laboratorio 24 ore su 24, 7 giorni su 7. Orario ordinario lun–sab 11:00–21:00.",
+        "pt": "Urgências e laboratório 24 h/24, 7 dias por semana. Horário normal de segunda a sábado 11h00–21h00."
       }
     },
     {
@@ -229,7 +237,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer; WhatsApp nur für Nachrichten.",
         "fr": "Ouvert tous les jours, 24 h/24, 365 jours par an. Ligne d’urgence ; WhatsApp réservé aux messages.",
         "es": "Abierto todos los días, las 24 horas, 365 días al año. Línea de urgencias; WhatsApp solo para mensajes.",
-        "it": "Aperto tutti i giorni, 24 ore su 24, 365 giorni all'anno. Linea di emergenza; WhatsApp solo per messaggi."
+        "it": "Aperto tutti i giorni, 24 ore su 24, 365 giorni all'anno. Linea di emergenza; WhatsApp solo per messaggi.",
+        "pt": "Aberto todos os dias, 24 horas por dia, 365 dias por ano. Linha de urgência; o WhatsApp serve apenas para mensagens."
       }
     },
     {
@@ -250,7 +259,8 @@
         "de": "Katzenklinik; täglich rund um die Uhr geöffnet.",
         "fr": "Hôpital pour chats ; ouvert tous les jours, 24 h/24.",
         "es": "Hospital felino; abierto todos los días, las 24 horas.",
-        "it": "Ospedale per gatti; aperto tutti i giorni, 24 ore su 24."
+        "it": "Ospedale per gatti; aperto tutti i giorni, 24 ore su 24.",
+        "pt": "Hospital de gatos; aberto todos os dias, 24 horas por dia."
       }
     },
     {
@@ -271,7 +281,8 @@
         "de": "Vorsorge, täglich 7.30–21 Uhr geöffnet. Kein 24-Stunden-Betrieb.",
         "fr": "Soins préventifs, ouvert tous les jours 7 h 30–21 h. Site non ouvert 24 h/24.",
         "es": "Atención preventiva, abierto todos los días 7:30–21:00 h. No abre las 24 horas.",
-        "it": "Medicina preventiva, aperto tutti i giorni 7:30–21:00. Non è una sede aperta 24 ore su 24."
+        "it": "Medicina preventiva, aperto tutti i giorni 7:30–21:00. Non è una sede aperta 24 ore su 24.",
+        "pt": "Cuidados preventivos, aberto todos os dias 7h30–21h00. Não abre 24 horas."
       }
     },
     {
@@ -292,7 +303,8 @@
         "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Klinik Mo–Sa 10–18 Uhr, So 10–15 Uhr.",
         "fr": "Urgences 24 h/24, 365 jours par an. Clinique lun.–sam. 10 h–18 h, dim. 10 h–15 h.",
         "es": "Urgencias las 24 horas, 365 días al año. Clínica lun–sáb 10:00–18:00 h, dom 10:00–15:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Clinica lun–sab 10:00–18:00, dom 10:00–15:00."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Clinica lun–sab 10:00–18:00, dom 10:00–15:00.",
+        "pt": "Urgências 24 horas por dia, 365 dias por ano. Clínica de segunda a sábado 10h00–18h00, domingo 10h00–15h00."
       }
     },
     {
@@ -312,7 +324,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet (Tagdienst 9–19.30 Uhr, Nachtdienst 19.31–8.59 Uhr).",
         "fr": "Ouvert 24 h/24, 365 jours par an (jour 9 h–19 h 30, nuit 19 h 31–8 h 59).",
         "es": "Abierto las 24 horas, 365 días al año (día 9:00–19:30 h, noche 19:31–8:59 h).",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno (giorno 9:00–19:30, notte 19:31–8:59)."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno (giorno 9:00–19:30, notte 19:31–8:59).",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano (dia 9h00–19h30, noite 19h31–8h59)."
       }
     },
     {
@@ -332,7 +345,8 @@
         "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr.",
         "fr": "Service 24 h/24 ; urgences 24 h/24, 365 jours par an.",
         "es": "Servicio 24 horas; urgencias las 24 horas, 365 días al año.",
-        "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno."
+        "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno.",
+        "pt": "Serviço 24 horas por dia; urgências 24 horas por dia, 365 dias por ano."
       }
     },
     {
@@ -352,7 +366,8 @@
         "de": "Rund um die Uhr geöffnet; Notfälle 365 Tage im Jahr rund um die Uhr.",
         "fr": "Service 24 h/24 ; urgences 24 h/24, 365 jours par an.",
         "es": "Servicio 24 horas; urgencias las 24 horas, 365 días al año.",
-        "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno."
+        "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno.",
+        "pt": "Serviço 24 horas por dia; urgências 24 horas por dia, 365 dias por ano."
       }
     },
     {
@@ -373,7 +388,8 @@
         "de": "Tierklinik rund um die Uhr geöffnet.",
         "fr": "Hôpital ouvert 24 h/24.",
         "es": "Hospital abierto las 24 horas.",
-        "it": "Ospedale aperto 24 ore su 24."
+        "it": "Ospedale aperto 24 ore su 24.",
+        "pt": "Hospital aberto 24 horas por dia."
       }
     },
     {
@@ -393,7 +409,8 @@
         "de": "Täglich und an Feiertagen rund um die Uhr geöffnet. Notfälle der Inneren Medizin rund um die Uhr.",
         "fr": "Ouvert du lundi au dimanche et jours fériés, 24 h/24. Urgences de médecine interne 24 h/24.",
         "es": "Abierto de lunes a domingo y festivos, las 24 horas. Urgencias de medicina interna las 24 horas.",
-        "it": "Aperto dal lunedì alla domenica e nei festivi, 24 ore su 24. Pronto soccorso di medicina interna 24 ore su 24."
+        "it": "Aperto dal lunedì alla domenica e nei festivi, 24 ore su 24. Pronto soccorso di medicina interna 24 ore su 24.",
+        "pt": "Aberto de segunda a domingo e feriados, 24 horas por dia. Urgências de medicina interna 24 horas por dia."
       }
     },
     {
@@ -413,7 +430,8 @@
         "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Sprechstunde 9–19 Uhr, Nachtsprechstunde 19–9 Uhr.",
         "fr": "Urgences 24 h/24, 365 jours par an. Consultations 9 h–19 h, consultations de nuit 19 h–9 h.",
         "es": "Urgencias las 24 horas, 365 días al año. Consultas 9:00–19:00 h, consultas nocturnas 19:00–9:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Visite 9:00–19:00, visite notturne 19:00–9:00."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Visite 9:00–19:00, visite notturne 19:00–9:00.",
+        "pt": "Urgências 24 horas por dia, 365 dias por ano. Consultas 9h00–19h00, consultas noturnas 19h00–9h00."
       }
     },
     {
@@ -448,7 +466,8 @@
         "de": "Notaufnahme rund um die Uhr geöffnet.",
         "fr": "Urgences ouvertes 24 h/24.",
         "es": "Urgencias abiertas las 24 horas.",
-        "it": "Pronto soccorso aperto 24 ore su 24."
+        "it": "Pronto soccorso aperto 24 ore su 24.",
+        "pt": "Urgências abertas 24 horas por dia."
       }
     },
     {
@@ -468,7 +487,8 @@
         "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
         "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco).",
         "es": "Abierto todos los días 9:00–21:00 h (dentro de una tienda Petco).",
-        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco)."
+        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
+        "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco)."
       }
     },
     {
@@ -488,7 +508,8 @@
         "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
         "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco).",
         "es": "Abierto todos los días 9:00–21:00 h (dentro de una tienda Petco).",
-        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco)."
+        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
+        "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco)."
       }
     },
     {
@@ -508,7 +529,8 @@
         "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
         "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco).",
         "es": "Abierto todos los días 9:00–21:00 h (dentro de una tienda Petco).",
-        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco)."
+        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
+        "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco)."
       }
     },
     {
@@ -528,7 +550,8 @@
         "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
         "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco).",
         "es": "Abierto todos los días 9:00–21:00 h (dentro de una tienda Petco).",
-        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco)."
+        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
+        "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco)."
       }
     },
     {
@@ -548,7 +571,8 @@
         "de": "Täglich 9–21 Uhr geöffnet (in einer Petco-Filiale).",
         "fr": "Ouvert tous les jours 9 h–21 h (dans un magasin Petco).",
         "es": "Abierto todos los días 9:00–21:00 h (dentro de una tienda Petco).",
-        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco)."
+        "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
+        "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco)."
       }
     },
     {
@@ -569,7 +593,8 @@
         "de": "Täglich rund um die Uhr geöffnet, auch sonn- und feiertags.",
         "fr": "Ouvert 24 h/24, 7 j/7, dimanches et jours fériés compris.",
         "es": "Abierto las 24 horas, los 7 días de la semana, incluidos domingos y festivos.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, domeniche e festivi compresi."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, domeniche e festivi compresi.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, incluindo domingos e feriados."
       }
     },
     {
@@ -589,7 +614,8 @@
         "de": "Tierklinik in Condesa 365 Tage im Jahr rund um die Uhr geöffnet.",
         "fr": "Hôpital Condesa ouvert 24 h/24, 365 j/an.",
         "es": "Hospital de Condesa abierto las 24 horas, 365 días al año.",
-        "it": "Ospedale di Condesa aperto 24 ore su 24, 365 giorni all'anno."
+        "it": "Ospedale di Condesa aperto 24 ore su 24, 365 giorni all'anno.",
+        "pt": "Hospital de Condesa aberto 24 horas por dia, 365 dias por ano."
       }
     },
     {
@@ -610,7 +636,8 @@
         "de": "Das ganze Jahr über täglich rund um die Uhr geöffnet, für Vorsorge und Notfälle.",
         "fr": "Ouvert 24 h/24, tous les jours de l’année, pour les soins préventifs et les urgences.",
         "es": "Abierto las 24 horas, todos los días del año, para atención preventiva y urgencias.",
-        "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, per medicina preventiva e pronto soccorso."
+        "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, per medicina preventiva e pronto soccorso.",
+        "pt": "Aberto 24 horas por dia, todos os dias do ano, para cuidados preventivos e urgências."
       }
     },
     {
@@ -631,7 +658,8 @@
         "de": "Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Appelez pour connaître les horaires.",
         "es": "Llama antes para consultar el horario.",
-        "it": "Telefonare in anticipo per gli orari."
+        "it": "Telefonare in anticipo per gli orari.",
+        "pt": "Liga antes para saber o horário."
       }
     },
     {
@@ -651,7 +679,8 @@
         "de": "Notfälle 365 Tage im Jahr rund um die Uhr. Fachärzte für Orthopädie und Neurologie Mo–Fr.",
         "fr": "Urgences 24 h/24, 365 j/an. Spécialistes en orthopédie et en neurologie du lun. au ven.",
         "es": "Urgencias las 24 horas, 365 días al año. Especialistas en ortopedia y neurología de lunes a viernes.",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Specialisti di ortopedia e neurologia lun–ven."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Specialisti di ortopedia e neurologia lun–ven.",
+        "pt": "Urgências 24 horas por dia, 365 dias por ano. Especialistas em ortopedia e neurologia de segunda a sexta."
       }
     },
     {
@@ -672,7 +701,8 @@
         "de": "Notfallversorgung täglich rund um die Uhr. Sprechstunde Mo–Sa 9–20 Uhr; sonntags nur Notfälle.",
         "fr": "Urgences 24 h/24, 7 j/7. Consultations lun.–sam. 9 h–20 h ; le dimanche, urgences uniquement.",
         "es": "Urgencias las 24 horas, los 7 días de la semana. Consultas lun–sáb 9:00–20:00 h; domingos solo urgencias.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Visite lun–sab 9:00–20:00; la domenica solo emergenze."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Visite lun–sab 9:00–20:00; la domenica solo emergenze.",
+        "pt": "Urgências 24 h/24, 7 dias por semana. Consultas de segunda a sábado 9h00–20h00; aos domingos só urgências."
       }
     },
     {
@@ -691,7 +721,8 @@
         "de": "Tierkliniken in der Hotelzone, in der Innenstadt und in Puerto Cancún. Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Cliniques vétérinaires dans la Zone hôtelière, le centre-ville et Puerto Cancún. Appelez pour connaître les horaires d’ouverture.",
         "es": "Clínicas veterinarias en la Zona Hotelera, el Centro y Puerto Cancún. Llama antes para consultar el horario.",
-        "it": "Cliniche veterinarie nella Zona Hotelera, in centro e a Puerto Cancún. Telefonare in anticipo per gli orari di apertura."
+        "it": "Cliniche veterinarie nella Zona Hotelera, in centro e a Puerto Cancún. Telefonare in anticipo per gli orari di apertura.",
+        "pt": "Clínicas veterinárias na Zona Hoteleira, no Centro e em Puerto Cancún. Liga antes para saber o horário."
       }
     },
     {
@@ -712,7 +743,8 @@
         "de": "Kleintierklinik in Jardines del Sur. Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Clinique pour petits animaux à Jardines del Sur. Appelez pour connaître les horaires d’ouverture.",
         "es": "Clínica de pequeños animales en Jardines del Sur. Llama antes para consultar el horario.",
-        "it": "Clinica per piccoli animali a Jardines del Sur. Telefonare in anticipo per gli orari di apertura."
+        "it": "Clinica per piccoli animali a Jardines del Sur. Telefonare in anticipo per gli orari di apertura.",
+        "pt": "Clínica de animais de pequeno porte em Jardines del Sur. Liga antes para saber o horário."
       }
     },
     {
@@ -733,7 +765,8 @@
         "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
         "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24.",
         "es": "Clínica y tienda de mascotas: lun–sáb 9:00–21:00 h, dom 10:00–20:00 h. Visitas a la clínica entre semana con cita previa; fines de semana por orden de llegada. No abre las 24 horas.",
-        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24."
+        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas."
       }
     },
     {
@@ -754,7 +787,8 @@
         "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
         "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24.",
         "es": "Clínica y tienda de mascotas: lun–sáb 9:00–21:00 h, dom 10:00–20:00 h. Visitas a la clínica entre semana con cita previa; fines de semana por orden de llegada. No abre las 24 horas.",
-        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24."
+        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas."
       }
     },
     {
@@ -775,7 +809,8 @@
         "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
         "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–21 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24.",
         "es": "Clínica y tienda de mascotas: lun–sáb 9:00–21:00 h, dom 10:00–21:00 h. Visitas a la clínica entre semana con cita previa; fines de semana por orden de llegada. No abre las 24 horas.",
-        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24."
+        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–21h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas."
       }
     },
     {
@@ -796,7 +831,8 @@
         "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–20 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
         "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–20 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24.",
         "es": "Clínica y tienda de mascotas: lun–sáb 9:00–21:00 h, dom 10:00–20:00 h. Visitas a la clínica entre semana con cita previa; fines de semana por orden de llegada. No abre las 24 horas.",
-        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24."
+        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas."
       }
     },
     {
@@ -817,7 +853,8 @@
         "de": "Klinik und Zoofachgeschäft: Mo–Sa 9–21 Uhr, So 10–21 Uhr. Wochentags Klinikbesuche nach Terminvereinbarung; am Wochenende ohne Termin, der Reihe nach. Kein 24-Stunden-Betrieb.",
         "fr": "Clinique et animalerie : lun.–sam. 9 h–21 h, dim. 10 h–21 h. En semaine, consultations sur rendez-vous ; le week-end, sans rendez-vous, par ordre d’arrivée. Pas de service 24 h/24.",
         "es": "Clínica y tienda de mascotas: lun–sáb 9:00–21:00 h, dom 10:00–21:00 h. Visitas a la clínica entre semana con cita previa; fines de semana por orden de llegada. No abre las 24 horas.",
-        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24."
+        "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–21h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas."
       }
     },
     {
@@ -838,7 +875,8 @@
         "de": "Mo–Fr 9–19 Uhr und Sa 9–16 Uhr; So geschlossen. Notfälle außerhalb der Öffnungszeiten: bitte zuerst anrufen, Sie werden telefonisch beraten. Englisch und Spanisch.",
         "fr": "Lun.–ven. 9 h–19 h et sam. 9 h–16 h ; fermé le dimanche. Urgences hors horaires : appelez d’abord pour être guidé. Anglais et espagnol.",
         "es": "Lun–vie 9:00–19:00 h y sáb 9:00–16:00 h; cerrado dom. Urgencias fuera de horario: llama primero para recibir orientación. Atienden en inglés y español.",
-        "it": "Lun–ven 9:00–19:00 e sab 9:00–16:00; chiuso la domenica. Emergenze fuori orario: chiamare prima per indicazioni. Inglese e spagnolo."
+        "it": "Lun–ven 9:00–19:00 e sab 9:00–16:00; chiuso la domenica. Emergenze fuori orario: chiamare prima per indicazioni. Inglese e spagnolo.",
+        "pt": "Segunda a sexta 9h00–19h00 e sábado 9h00–16h00; fechado ao domingo. Urgências fora de horas: liga primeiro para obter orientação. Falam inglês e espanhol."
       }
     },
     {
@@ -859,7 +897,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Notfallnummer und WhatsApp +52 33 2162 6445; Termine +52 33 2316 2714.",
         "fr": "Ouvert 24 h/24, 365 j/an. Ligne d’urgence et WhatsApp +52 33 2162 6445 ; rendez-vous +52 33 2316 2714.",
         "es": "Abierto las 24 horas, 365 días al año. Línea de urgencias y WhatsApp +52 33 2162 6445; citas +52 33 2316 2714.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Linea di emergenza e WhatsApp +52 33 2162 6445; appuntamenti +52 33 2316 2714."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Linea di emergenza e WhatsApp +52 33 2162 6445; appuntamenti +52 33 2316 2714.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Linha de urgência e WhatsApp +52 33 2162 6445; marcações +52 33 2316 2714."
       }
     },
     {
@@ -879,7 +918,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
         "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, 365 días al año. Urgencias sin cita previa.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação."
       }
     },
     {
@@ -899,7 +939,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
         "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, 365 días al año. Urgencias sin cita previa.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação."
       }
     },
     {
@@ -919,7 +960,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
         "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, 365 días al año. Urgencias sin cita previa.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação."
       }
     },
     {
@@ -939,7 +981,8 @@
         "de": "Rund um die Uhr geöffnet. Dringende Fälle ohne Termin.",
         "fr": "Ouvert 24 h/24. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas. Urgencias sin cita previa.",
-        "it": "Aperto 24 ore su 24. Pronto soccorso senza appuntamento."
+        "it": "Aperto 24 ore su 24. Pronto soccorso senza appuntamento.",
+        "pt": "Aberto 24 horas por dia. Atendimento urgente sem marcação."
       }
     },
     {
@@ -959,7 +1002,8 @@
         "de": "Tierklinik 365 Tage im Jahr rund um die Uhr geöffnet. WhatsApp +52 33 3849 4603.",
         "fr": "Hôpital ouvert 24 h/24, 365 j/an. WhatsApp +52 33 3849 4603.",
         "es": "Hospital abierto las 24 horas, 365 días al año. WhatsApp +52 33 3849 4603.",
-        "it": "Ospedale aperto 24 ore su 24, 365 giorni all'anno. WhatsApp +52 33 3849 4603."
+        "it": "Ospedale aperto 24 ore su 24, 365 giorni all'anno. WhatsApp +52 33 3849 4603.",
+        "pt": "Hospital aberto 24 horas por dia, 365 dias por ano. WhatsApp +52 33 3849 4603."
       }
     },
     {
@@ -980,7 +1024,8 @@
         "de": "Zweigstelle; Öffnungszeiten bitte telefonisch erfragen. Die Hauptklinik an der Av. Patria ist rund um die Uhr geöffnet.",
         "fr": "Clinique annexe ; appelez pour connaître les horaires. L’hôpital principal, Av. Patria, est ouvert 24 h/24.",
         "es": "Clínica sucursal; llama antes para consultar el horario. El hospital principal de Av. Patria abre las 24 horas.",
-        "it": "Clinica succursale; telefonare in anticipo per gli orari. L'ospedale principale in Av. Patria è aperto 24 ore su 24."
+        "it": "Clinica succursale; telefonare in anticipo per gli orari. L'ospedale principale in Av. Patria è aperto 24 ore su 24.",
+        "pt": "Clínica filial; liga antes para saber o horário. O hospital principal, na Av. Patria, está aberto 24 horas por dia."
       }
     },
     {
@@ -1000,7 +1045,8 @@
         "de": "Notfälle täglich rund um die Uhr; Sprechstunde täglich 9–20 Uhr.",
         "fr": "Urgences 24 h/24, tous les jours ; consultations tous les jours 9 h–20 h.",
         "es": "Urgencias las 24 horas, todos los días; consultas todos los días 9:00–20:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, tutti i giorni; visite tutti i giorni 9:00–20:00."
+        "it": "Pronto soccorso 24 ore su 24, tutti i giorni; visite tutti i giorni 9:00–20:00.",
+        "pt": "Urgências 24 horas por dia, todos os dias; consultas todos os dias 9h00–20h00."
       }
     },
     {
@@ -1020,7 +1066,8 @@
         "de": "Sprechstunde täglich 9–21 Uhr. Notfälle rund um die Uhr in der Tierklinik an der Av. La Calma 4471.",
         "fr": "Consultations tous les jours 9 h–21 h. Urgences 24 h/24 à l’hôpital, Av. La Calma 4471.",
         "es": "Consultas todos los días 9:00–21:00 h. Las urgencias 24 horas se atienden en el hospital de Av. La Calma 4471.",
-        "it": "Visite tutti i giorni 9:00–21:00. Il pronto soccorso 24 ore su 24 è presso l'ospedale in Av. La Calma 4471."
+        "it": "Visite tutti i giorni 9:00–21:00. Il pronto soccorso 24 ore su 24 è presso l'ospedale in Av. La Calma 4471.",
+        "pt": "Consultas todos os dias 9h00–21h00. As urgências 24 horas por dia são no hospital da Av. La Calma 4471."
       }
     },
     {
@@ -1041,7 +1088,8 @@
         "de": "Täglich rund um die Uhr geöffnet, auch für Notfälle. Termine +52 81 1871 0654.",
         "fr": "Ouvert 24 h/24, 7 j/7, urgences comprises. Rendez-vous +52 81 1871 0654.",
         "es": "Abierto las 24 horas, los 7 días de la semana, urgencias incluidas. Citas +52 81 1871 0654.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, pronto soccorso compreso. Appuntamenti +52 81 1871 0654."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, pronto soccorso compreso. Appuntamenti +52 81 1871 0654.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, incluindo urgências. Marcações +52 81 1871 0654."
       }
     },
     {
@@ -1062,7 +1110,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Zweite Nummer: +52 81 8348 0492.",
         "fr": "Ouvert 24 h/24, 7 j/7. Deuxième ligne +52 81 8348 0492.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Segunda línea +52 81 8348 0492.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. Seconda linea +52 81 8348 0492."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Seconda linea +52 81 8348 0492.",
+        "pt": "Aberto 24 h/24, 7 dias por semana. Segunda linha +52 81 8348 0492."
       }
     },
     {
@@ -1081,7 +1130,8 @@
         "de": "Tierklinik mit Notfallversorgung; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital vétérinaire avec service d’urgences ; appelez pour connaître les horaires.",
         "es": "Hospital veterinario con servicio de urgencias; llama para consultar el horario.",
-        "it": "Ospedale veterinario con pronto soccorso; telefonare per gli orari di apertura."
+        "it": "Ospedale veterinario con pronto soccorso; telefonare per gli orari di apertura.",
+        "pt": "Hospital veterinário com urgências; liga para saber o horário."
       }
     },
     {
@@ -1101,7 +1151,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Weitere Nummern: +52 222 169 6687 und +52 221 195 3312.",
         "fr": "Ouvert 24 h/24, tous les jours. Autres lignes +52 222 169 6687 et +52 221 195 3312.",
         "es": "Abierto las 24 horas, todos los días. Otras líneas +52 222 169 6687 y +52 221 195 3312.",
-        "it": "Aperto 24 ore su 24, tutti i giorni. Altre linee +52 222 169 6687 e +52 221 195 3312."
+        "it": "Aperto 24 ore su 24, tutti i giorni. Altre linee +52 222 169 6687 e +52 221 195 3312.",
+        "pt": "Aberto 24 horas por dia, todos os dias. Outras linhas +52 222 169 6687 e +52 221 195 3312."
       }
     },
     {
@@ -1121,7 +1172,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 h/24, 7 dias por semana."
       }
     },
     {
@@ -1142,7 +1194,8 @@
         "de": "Öffnungszeiten bitte telefonisch erfragen. Die Tierklinik an der Recta a Cholula ist rund um die Uhr geöffnet.",
         "fr": "Appelez pour connaître les horaires. L’hôpital Recta a Cholula est ouvert 24 h/24.",
         "es": "Llama antes para consultar el horario. El hospital de Recta a Cholula abre las 24 horas.",
-        "it": "Telefonare in anticipo per gli orari. L'ospedale di Recta a Cholula è aperto 24 ore su 24."
+        "it": "Telefonare in anticipo per gli orari. L'ospedale di Recta a Cholula è aperto 24 ore su 24.",
+        "pt": "Liga antes para saber o horário. O hospital de Recta a Cholula está aberto 24 horas por dia."
       }
     },
     {
@@ -1162,7 +1215,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet, auch an Wochenenden und Feiertagen. Telefon und WhatsApp.",
         "fr": "Ouvert 24 h/24, 365 j/an, week-ends et jours fériés compris. Téléphone et WhatsApp.",
         "es": "Abierto las 24 horas, 365 días al año, incluidos fines de semana y festivos. Teléfono y WhatsApp.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno, fine settimana e festivi compresi. Telefono e WhatsApp."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno, fine settimana e festivi compresi. Telefono e WhatsApp.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano, incluindo fins de semana e feriados. Telefone e WhatsApp."
       }
     },
     {
@@ -1183,7 +1237,8 @@
         "de": "Täglich 10–20 Uhr geöffnet; nach 20 Uhr Notfälle nach vorherigem Anruf. WhatsApp +52 442 269 8977.",
         "fr": "Ouvert tous les jours 10 h–20 h ; après 20 h, urgences sur appel préalable. WhatsApp +52 442 269 8977.",
         "es": "Abierto todos los días 10:00–20:00 h; pasadas las 20:00, urgencias previa llamada. WhatsApp +52 442 269 8977.",
-        "it": "Aperto tutti i giorni 10:00–20:00; dopo le 20:00 emergenze previa telefonata. WhatsApp +52 442 269 8977."
+        "it": "Aperto tutti i giorni 10:00–20:00; dopo le 20:00 emergenze previa telefonata. WhatsApp +52 442 269 8977.",
+        "pt": "Aberto todos os dias 10h00–20h00; depois das 20h00, urgências mediante telefonema prévio. WhatsApp +52 442 269 8977."
       }
     },
     {
@@ -1204,7 +1259,8 @@
         "de": "Nacht-Notfallklinik: Mo–Fr 18–8 Uhr, Sa von 13 bis 8 Uhr, So rund um die Uhr.",
         "fr": "Hôpital d’urgences de nuit : lun.–ven. 18 h–8 h, sam. de 13 h à 8 h, dimanche 24 h/24.",
         "es": "Hospital de urgencias nocturno: lun–vie 18:00–8:00 h, sáb 13:00–8:00 h, domingo 24 horas.",
-        "it": "Ospedale di pronto soccorso notturno: lun–ven 18:00–8:00, sab dalle 13:00 alle 8:00, domenica 24 ore su 24."
+        "it": "Ospedale di pronto soccorso notturno: lun–ven 18:00–8:00, sab dalle 13:00 alle 8:00, domenica 24 ore su 24.",
+        "pt": "Hospital de urgências noturnas: segunda a sexta 18h00–8h00, sábado das 13h00 às 8h00, domingo 24 horas por dia."
       }
     },
     {
@@ -1224,7 +1280,8 @@
         "de": "Täglich rund um die Uhr erreichbar. Telefon und WhatsApp.",
         "fr": "Service disponible 24 h/24, tous les jours. Téléphone et WhatsApp.",
         "es": "Servicio disponible las 24 horas, todos los días. Teléfono y WhatsApp.",
-        "it": "Servizio disponibile 24 ore su 24, tutti i giorni. Telefono e WhatsApp."
+        "it": "Servizio disponibile 24 ore su 24, tutti i giorni. Telefono e WhatsApp.",
+        "pt": "Serviço disponível 24 horas por dia, todos os dias. Telefone e WhatsApp."
       }
     },
     {
@@ -1244,7 +1301,8 @@
         "de": "Täglich rund um die Uhr geöffnet. WhatsApp +52 619 507 7283.",
         "fr": "Ouvert 24 h/24, du lundi au dimanche. WhatsApp +52 619 507 7283.",
         "es": "Abierto las 24 horas, de lunes a domingo. WhatsApp +52 619 507 7283.",
-        "it": "Aperto 24 ore su 24, dal lunedì alla domenica. WhatsApp +52 619 507 7283."
+        "it": "Aperto 24 ore su 24, dal lunedì alla domenica. WhatsApp +52 619 507 7283.",
+        "pt": "Aberto 24 horas por dia, de segunda a domingo. WhatsApp +52 619 507 7283."
       }
     },
     {
@@ -1264,7 +1322,8 @@
         "de": "Notfälle rund um die Uhr (Notfallnummer +52 664 356 3990). Reguläre Öffnungszeiten Mo–Sa 7–24 Uhr, So 9–24 Uhr.",
         "fr": "Urgences 24 h/24 (ligne d’urgence +52 664 356 3990). Horaires habituels : lun.–sam. 7 h–24 h, dim. 9 h–24 h.",
         "es": "Urgencias las 24 horas (línea de urgencias +52 664 356 3990). Horario habitual lun–sáb 7:00–24:00 h, dom 9:00–24:00 h.",
-        "it": "Pronto soccorso 24 ore su 24 (linea di emergenza +52 664 356 3990). Orario ordinario lun–sab 7:00–24:00, dom 9:00–24:00."
+        "it": "Pronto soccorso 24 ore su 24 (linea di emergenza +52 664 356 3990). Orario ordinario lun–sab 7:00–24:00, dom 9:00–24:00.",
+        "pt": "Urgências 24 horas por dia (linha de urgência +52 664 356 3990). Horário normal de segunda a sábado 7h00–24h00, domingo 9h00–24h00."
       }
     },
     {
@@ -1284,7 +1343,8 @@
         "de": "Täglich rund um die Uhr geöffnet; Notfälle ohne Termin.",
         "fr": "Ouvert 24 h/24, 7 j/7 ; urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana; urgencias sin cita previa.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7; pronto soccorso senza appuntamento."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; pronto soccorso senza appuntamento.",
+        "pt": "Aberto 24 h/24, 7 dias por semana; urgências sem marcação."
       }
     },
     {
@@ -1305,7 +1365,8 @@
         "de": "365 Tage im Jahr rund um die Uhr geöffnet. Weitere Nummer: +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
         "fr": "Ouvert 24 h/24, 365 j/an. Aussi +52 55 5373 4573 ; WhatsApp +52 56 1995 0824.",
         "es": "Abierto las 24 horas, 365 días al año. También +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Anche +52 55 5373 4573; WhatsApp +52 56 1995 0824."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno. Anche +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Também +52 55 5373 4573; WhatsApp +52 56 1995 0824."
       }
     },
     {
@@ -1325,7 +1386,8 @@
         "de": "Notdienst täglich rund um die Uhr. Zweite Nummer: +52 612 171 9708.",
         "fr": "Service d’urgences disponible 24 h/24, 7 j/7. Deuxième ligne +52 612 171 9708.",
         "es": "Servicio de urgencias disponible las 24 horas, los 7 días de la semana. Segunda línea +52 612 171 9708.",
-        "it": "Servizio di pronto soccorso disponibile 24 ore su 24, 7 giorni su 7. Seconda linea +52 612 171 9708."
+        "it": "Servizio di pronto soccorso disponibile 24 ore su 24, 7 giorni su 7. Seconda linea +52 612 171 9708.",
+        "pt": "Serviço de urgência disponível 24 h/24, 7 dias por semana. Segunda linha +52 612 171 9708."
       }
     },
     {
@@ -1346,7 +1408,8 @@
         "de": "Notfälle Mo–Sa rund um die Uhr; So 9–19 Uhr. Telefon und WhatsApp.",
         "fr": "Urgences 24 h/24 du lundi au samedi ; dimanche 9 h–19 h. Téléphone et WhatsApp.",
         "es": "Urgencias las 24 horas de lunes a sábado; domingo 9:00–19:00 h. Teléfono y WhatsApp.",
-        "it": "Pronto soccorso 24 ore su 24 dal lunedì al sabato; domenica 9:00–19:00. Telefono e WhatsApp."
+        "it": "Pronto soccorso 24 ore su 24 dal lunedì al sabato; domenica 9:00–19:00. Telefono e WhatsApp.",
+        "pt": "Urgências 24 horas por dia de segunda a sábado; domingo 9h00–19h00. Telefone e WhatsApp."
       }
     },
     {
@@ -1366,7 +1429,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 h/24, 7 dias por semana."
       }
     }
   ],

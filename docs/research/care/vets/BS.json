@@ -62,7 +62,10 @@
       "url": "https://www.amgvetsnassau.com/",
       "source_url": "https://www.amgvetsnassau.com/",
       "checked": "2026-11-13",
-      "quote": "EMERGENCY 24/7: 242 807 7960"
+      "quote": "EMERGENCY 24/7: 242 807 7960",
+      "duty_i18n": {
+        "pt": "Seg.–sex. 8h30–17h00, sáb. 9h00–14h00, encerrado aos domingos e feriados. Linha de urgências 24 h/24, 7 dias por semana: +1 242 807 7960."
+      }
     },
     {
       "kind": "clinic",
@@ -77,7 +80,10 @@
       "url": "https://happypetsbahamas.com/",
       "source_url": "https://happypetsbahamas.com/",
       "checked": "2026-11-13",
-      "quote": "After our normal business hours, we do offer 24-hour on-call emergency service."
+      "quote": "After our normal business hours, we do offer 24-hour on-call emergency service.",
+      "duty_i18n": {
+        "pt": "Seg.–sex. 8h30–17h00, sáb. 8h30–14h00, encerrado aos domingos. Serviço de urgência 24 horas fora do horário: +1 242 557 0911."
+      }
     },
     {
       "kind": "clinic",
@@ -92,7 +98,10 @@
       "url": "https://www.centralanimalhospital242.com/",
       "source_url": "https://www.centralanimalhospital242.com/",
       "note": "Page says the emergency line is available after hours; no 24 h wording.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Seg.–sex. 9h00–15h00, sáb. sob marcação, encerrado aos domingos. Linha de urgências fora do horário: +1 242 468 3644."
+      }
     },
     {
       "kind": "clinic",
@@ -107,7 +116,10 @@
       "url": "https://nassaupetclinic.pages.dev/",
       "source_url": "https://nassaupetclinic.pages.dev/",
       "checked": "2026-11-13",
-      "note": "Formerly Nassau Veterinary Clinic. Site is on pages.dev; no emergency wording."
+      "note": "Formerly Nassau Veterinary Clinic. Site is on pages.dev; no emergency wording.",
+      "duty_i18n": {
+        "pt": "Seg.–sex. 9h00–17h00, sáb. 9h00–13h00, encerrado aos domingos. Consultas ao domicílio em toda a ilha de New Providence."
+      }
     },
     {
       "kind": "clinic",
@@ -122,7 +134,10 @@
       "url": "https://www.bahamashumane.org/about/",
       "source_url": "https://www.bahamashumane.org/about/",
       "note": "Spay/neuter-focused animal welfare clinic. Phone on page is 323-5138 (242 added from comments). A directory lists 85 Dunmore Ave; the society's own pages say 35.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Clínica à segunda, quinta e sábado, sob marcação. Abrigo de segunda a quinta e sábado 8h30–16h00, sexta 8h30–13h00."
+      }
     },
     {
       "kind": "clinic",
@@ -137,7 +152,10 @@
       "url": "https://www.noahsarkeleuthera.com/",
       "source_url": "https://www.noahsarkeleuthera.com/",
       "note": "Emergency number listed without hours; no 24 h wording.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Ter.–qui. 9h00–16h00, sáb. 9h00–15h00, encerrado à segunda, sexta, domingo e feriados. Urgências: liga ou envia mensagem para +1 242 470 0109."
+      }
     }
   ],
   "notes": "Research 2026-11-13; every source_url opened with WebFetch. No Bahamas veterinary association clinic directory found online (CbVMA page only gives the association contact); Dept. of Agriculture page lists no clinics. No duty rota and no animal poison line found. Not added (only found via directories/aggregators or old news, never opened on the clinic's own page): Freeport Vet Hospital (Poincianna Drive, Grand Bahama; 242-352-8155, emergency 242-727-8381; only on findyello.com; freeportvethospital.net could not be opened - blocked by provenance), Exuma Veterinary Clinic (findyello page failed to fetch twice), Westlake Animal Hospital, Caves Village Veterinary Hospital, Palmdale Veterinary Clinic, Purrfect Pets Veterinary Clinic (only bahamourri/noonsite/yabsta directory listings or a 2016 Tribune article). Abaco: no vet clinic found. Grand Bahama and Exuma therefore have no entry. Baark! Bahamas (spay/neuter nonprofit, mobile clinic) skipped, not a fixed clinic."

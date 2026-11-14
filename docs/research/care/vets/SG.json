@@ -51,7 +51,8 @@
       "duty_i18n": {
         "fr": "Ouvert 24 h/24, tous les jours, pour les urgences et les soins intensifs. Appelez en route.",
         "es": "Abierto las 24 horas todos los días para urgencias y cuidados críticos. Llama de camino, antes de llegar.",
-        "it": "Aperto 24 ore su 24, tutti i giorni, per emergenze e terapia intensiva. Telefonare in anticipo durante il tragitto."
+        "it": "Aperto 24 ore su 24, tutti i giorni, per emergenze e terapia intensiva. Telefonare in anticipo durante il tragitto.",
+        "pt": "Aberto 24 horas por dia para urgências e cuidados intensivos. Liga durante o trajeto."
       },
       "small_animals": true,
       "url": "https://www.veshospital.com.sg/",
@@ -71,7 +72,8 @@
       "duty_i18n": {
         "fr": "Clinique vétérinaire d’urgences 24 h/24. Appelez avant de venir.",
         "es": "Clínica veterinaria de urgencias las 24 horas. Llama antes de ir.",
-        "it": "Clinica veterinaria di pronto soccorso aperta 24 ore su 24. Telefonare in anticipo."
+        "it": "Clinica veterinaria di pronto soccorso aperta 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Clínica veterinária de urgência 24 horas. Liga antes."
       },
       "small_animals": true,
       "url": "https://www.westsideemergency.com.sg/",
@@ -91,7 +93,8 @@
       "duty_i18n": {
         "fr": "Service d’urgences et de soins intensifs ouvert 24 h/24.",
         "es": "Servicio de urgencias y cuidados críticos abierto las 24 horas.",
-        "it": "Reparto di pronto soccorso e terapia intensiva aperto 24 ore su 24."
+        "it": "Reparto di pronto soccorso e terapia intensiva aperto 24 ore su 24.",
+        "pt": "Serviço de urgências e cuidados intensivos aberto 24 horas por dia."
       },
       "small_animals": true,
       "url": "https://www.beecroft.com.sg/",
@@ -111,7 +114,8 @@
       "duty_i18n": {
         "fr": "Soins assurés 24 h/24, y compris urgences et soins intensifs.",
         "es": "Atención las 24 horas, incluidas urgencias y cuidados críticos.",
-        "it": "Assistenza 24 ore su 24, inclusi pronto soccorso e terapia intensiva."
+        "it": "Assistenza 24 ore su 24, inclusi pronto soccorso e terapia intensiva.",
+        "pt": "Atendimento 24 horas por dia, incluindo urgências e cuidados intensivos."
       },
       "small_animals": true,
       "url": "https://www.advancedvetcare.sg/",
@@ -131,7 +135,8 @@
       "duty_i18n": {
         "fr": "Ouvert 24 h/24 ; clinique de jour et clinique de nuit.",
         "es": "Abierto las 24 horas; clínica de día y clínica nocturna.",
-        "it": "Aperto 24 ore su 24; clinica diurna più clinica notturna."
+        "it": "Aperto 24 ore su 24; clinica diurna più clinica notturna.",
+        "pt": "Aberto 24 horas; clínica de dia e clínica noturna."
       },
       "small_animals": true,
       "url": "http://www.comvet.com/",
@@ -151,7 +156,8 @@
       "duty_i18n": {
         "fr": "Service d’urgences (Pet A&E) ; appelez pour connaître les horaires actuels.",
         "es": "Servicio de urgencias (Pet A&E); llama antes para conocer el horario actual.",
-        "it": "Servizio di pronto soccorso (Pet A&E); telefonare in anticipo per gli orari attuali."
+        "it": "Servizio di pronto soccorso (Pet A&E); telefonare in anticipo per gli orari attuali.",
+        "pt": "Serviço de urgência (Pet A&E); liga antes para saberes o horário atual."
       },
       "small_animals": true,
       "url": "http://www.lvs.com.sg/",
@@ -171,7 +177,8 @@
       "duty_i18n": {
         "fr": "Hôpital de référence spécialisé ; appelez avant de venir.",
         "es": "Hospital de referencia y especialidades; llama antes de ir.",
-        "it": "Ospedale di riferimento e specialistico; telefonare in anticipo."
+        "it": "Ospedale di riferimento e specialistico; telefonare in anticipo.",
+        "pt": "Hospital veterinário de referência e especialidade; liga antes."
       },
       "small_animals": true,
       "url": "https://www.awrc.sg/",
@@ -191,7 +198,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture et l’organisation des urgences.",
         "es": "Llama para conocer el horario y la atención de urgencias.",
-        "it": "Telefonare per orari di apertura e modalità di emergenza."
+        "it": "Telefonare per orari di apertura e modalità di emergenza.",
+        "pt": "Liga para saberes o horário e as regime de urgência."
       },
       "small_animals": true,
       "url": "http://www.mountpleasant.com.sg/",
@@ -211,7 +219,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "http://jtvet.com",
@@ -231,7 +240,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "https://www.unitedvetclinic.com/",
@@ -251,7 +261,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "http://ambervet.com",
@@ -271,7 +282,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -291,7 +303,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -311,7 +324,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture.",
         "es": "Llama para conocer el horario.",
-        "it": "Telefonare per gli orari di apertura."
+        "it": "Telefonare per gli orari di apertura.",
+        "pt": "Liga para saberes o horário."
       },
       "small_animals": true,
       "url": "http://vetclinic.sg",
@@ -331,7 +345,8 @@
       "duty_i18n": {
         "fr": "Appelez pour connaître les horaires d’ouverture. L’aide d’urgence hors horaires est réservée aux patients déjà suivis.",
         "es": "Llama para conocer el horario. La ayuda de urgencias fuera de horario es solo para pacientes habituales.",
-        "it": "Telefonare per gli orari di apertura. L'assistenza di emergenza fuori orario è riservata ai pazienti già in cura."
+        "it": "Telefonare per gli orari di apertura. L'assistenza di emergenza fuori orario è riservata ai pazienti già in cura.",
+        "pt": "Liga para saberes o horário. A ajuda de urgência fora de horas é só para pacientes já registados."
       },
       "small_animals": true,
       "url": "http://thevisitingvets.com.sg",
@@ -350,7 +365,8 @@
       "duty_i18n": {
         "fr": "Appelez ou consultez le site web pour connaître les horaires d’ouverture.",
         "es": "Llama o consulta la web para conocer el horario.",
-        "it": "Telefonare o consultare il sito web per gli orari di apertura."
+        "it": "Telefonare o consultare il sito web per gli orari di apertura.",
+        "pt": "Liga ou consulta o site para saberes o horário."
       },
       "small_animals": true,
       "url": "https://www.apexvetclinic.com/",
@@ -369,7 +385,8 @@
       "duty_i18n": {
         "fr": "Consultez le site web pour connaître les horaires d’ouverture.",
         "es": "Consulta la web para conocer el horario.",
-        "it": "Consultare il sito web per gli orari di apertura."
+        "it": "Consultare il sito web per gli orari di apertura.",
+        "pt": "Consulta o site para saberes o horário."
       },
       "small_animals": true,
       "url": "https://petsavenue.com.sg/",
@@ -388,7 +405,8 @@
       "duty_i18n": {
         "fr": "Consultez le site web pour connaître les horaires d’ouverture.",
         "es": "Consulta la web para conocer el horario.",
-        "it": "Consultare il sito web per gli orari di apertura."
+        "it": "Consultare il sito web per gli orari di apertura.",
+        "pt": "Consulta o site para saberes o horário."
       },
       "small_animals": true,
       "url": "http://starsveterinaryclinic.com/our-facilities/",
@@ -408,7 +426,8 @@
       "duty_i18n": {
         "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés.",
         "es": "Todos los días 10:00–14:00 y 15:00–19:00 h, solo con cita previa. Cerrado en festivos.",
-        "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi."
+        "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi.",
+        "pt": "Todos os dias 10h00–14h00 e 15h00–19h00, só sob marcação. Fechado nos feriados."
       },
       "small_animals": true,
       "url": "https://brightonvetcare.com/pages/serangoon-gardens",
@@ -428,7 +447,8 @@
       "duty_i18n": {
         "fr": "Tous les jours 10 h–14 h et 15 h–19 h, sur rendez-vous uniquement. Fermé les jours fériés.",
         "es": "Todos los días 10:00–14:00 y 15:00–19:00 h, solo con cita previa. Cerrado en festivos.",
-        "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi."
+        "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi.",
+        "pt": "Todos os dias 10h00–14h00 e 15h00–19h00, só sob marcação. Fechado nos feriados."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",
@@ -448,7 +468,8 @@
       "duty_i18n": {
         "fr": "Lun.–ven. 10 h–15 h et 16 h–21 h ; sam.–dim. 10 h–15 h ; sur rendez-vous uniquement. Fermé les jours fériés.",
         "es": "Lun–vie 10:00–15:00 y 16:00–21:00 h; sáb–dom 10:00–15:00 h; solo con cita previa. Cerrado en festivos.",
-        "it": "Lun–ven 10:00–15:00 e 16:00–21:00; sab–dom 10:00–15:00; solo su appuntamento. Chiuso nei festivi."
+        "it": "Lun–ven 10:00–15:00 e 16:00–21:00; sab–dom 10:00–15:00; solo su appuntamento. Chiuso nei festivi.",
+        "pt": "Seg–sex 10h00–15h00 e 16h00–21h00; sáb–dom 10h00–15h00; só sob marcação. Fechado nos feriados."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",

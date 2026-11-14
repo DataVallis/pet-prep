@@ -38,7 +38,10 @@
       "quote": "ежедневно, круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias 24 horas por dia (clínica pública). Liga primeiro para o centro de contacto veterinário da cidade +7 495 612 12 12."
+      }
     },
     {
       "name": "State vet clinic Veshnyaki (SBBZh East and South-East districts)",
@@ -53,7 +56,10 @@
       "note": "Page: hours 09:00-21:00; heading 'круглосуточный стационар' (inpatient only), also mos.ru/news/item/151098073 mentions круглосуточный стационар at Veshnyaki. Not marked 24 h clinic.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Todos os dias, 9h00–21h00; unidade de internamento 24 horas por dia para animais gravemente doentes."
+      }
     },
     {
       "kind": "duty_rota",
@@ -68,7 +74,10 @@
       "note": "mos.ru (official city portal) says the single number is 'доступен круглосуточно' / 'единый круглосуточный контакт-центр'. mos.ru/news/item/170693073 repeats it and says specialists work around the clock and home visits at night/weekends. Another mos.ru item (148658073) gives +7 495 612-04-25 for the same centre; the 612-12-12 number is the one repeated on three pages. No per-day rota published.",
       "quote": "единый круглосуточный контакт-центр",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Centro de contacto municipal 24 horas por dia do serviço veterinário público: indica que clínicas públicas estão a aceitar animais e envia um veterinário a casa, também à noite e aos fins de semana."
+      }
     },
     {
       "name": "Vetcity Clinic",
@@ -84,7 +93,10 @@
       "quote": "Круглосуточно, без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, sem dias de encerramento. Estacionamento vigiado gratuito."
+      }
     },
     {
       "name": "V dobrye ruki (Good Hands)",
@@ -100,7 +112,10 @@
       "quote": "работает круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, sem dias de encerramento, com cuidados intensivos e unidade de internamento."
+      }
     },
     {
       "name": "VetGlobal (Zarayskaya 53)",
@@ -116,7 +131,10 @@
       "quote": "Работаем круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia."
+      }
     },
     {
       "name": "VetGlobal (Sergiya Radonezhskogo 23/25 bld 1)",
@@ -132,7 +150,10 @@
       "quote": "Работаем круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia."
+      }
     },
     {
       "name": "VetGlobal (Turistskaya 13 k.2)",
@@ -148,7 +169,10 @@
       "quote": "Работаем круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia."
+      }
     },
     {
       "name": "VetGlobal (Polyarnaya 10 bld 1)",
@@ -164,7 +188,10 @@
       "quote": "Работаем круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia."
+      }
     },
     {
       "name": "Bely Klyk - Krylatskoe hospital",
@@ -180,7 +207,10 @@
       "quote": "Экстренный прием круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Unidade hospitalar aberta 24 horas por dia; as restantes unidades, 9h00–21h00."
+      }
     },
     {
       "name": "Veterinarika - clinic on Turku",
@@ -196,7 +226,10 @@
       "quote": "24/7, без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento, com unidade de internamento 24 horas por dia."
+      }
     },
     {
       "name": "Veterinarika - clinic on Peterhof highway",
@@ -212,7 +245,10 @@
       "quote": "24/7, без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento, com unidade de internamento 24 horas por dia."
+      }
     },
     {
       "name": "RuVet - Oleko Dundicha",
@@ -228,7 +264,10 @@
       "quote": "Работаем 24 часа",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia. A segunda unidade (Bukharestskaya 146 k.1) está aberta todos os dias, 10h00–20h00. À noite (20h00–10h00) trabalham apenas o médico de serviço e um assistente, com serviços reduzidos."
+      }
     },
     {
       "name": "Tolstyi Lori",
@@ -244,7 +283,10 @@
       "quote": "Работаем круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia; sem suplemento noturno, segundo a clínica."
+      }
     },
     {
       "name": "VetDrug Kazan",
@@ -259,7 +301,10 @@
       "quote": "Круглосуточно, без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, sem dias de encerramento."
+      }
     },
     {
       "name": "Petlife veterinary centre",
@@ -274,7 +319,10 @@
       "note": "24/7 wording applies to inpatient/ICU only; reception 09:00-21:00.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Receção todos os dias, 9h00–21h00; internamento e cuidados intensivos 24 horas por dia, 7 dias por semana."
+      }
     },
     {
       "name": "Veterinary clinic 911",
@@ -289,7 +337,10 @@
       "note": "Page: 'Работаем 8:00 - 22:00' and 'круглосуточного стационара' only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Receção todos os dias, 8h00–22h00; internamento 24 horas por dia."
+      }
     },
     {
       "name": "Dyadya Fedor 24-hour clinic (Chkalova 252)",
@@ -305,7 +356,10 @@
       "quote": "Ветклиника работает 24 часа!",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia."
+      }
     },
     {
       "name": "Dyadya Fedor 24-hour clinic (Sovetskaya 64/2)",
@@ -321,7 +375,10 @@
       "quote": "Ветклиника работает 24 часа!",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia."
+      }
     },
     {
       "name": "BEST veterinary clinic (1905 goda)",
@@ -337,7 +394,10 @@
       "quote": "круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia nesta unidade."
+      }
     },
     {
       "name": "VetDoctor",
@@ -352,7 +412,10 @@
       "note": "Page title says 'круглосуточная', meta 'приезжайте к нам круглосуточно', but footer hours 'Ежедневно 08:00-23:00' - conflict, set false.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Todos os dias, 8h00–23h00."
+      }
     },
     {
       "name": "Agat-Tsentr (Zakharov and Farafontova veterinary service)",
@@ -368,7 +431,10 @@
       "quote": "круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia; tarifa noturna 21h00–9h00."
+      }
     },
     {
       "name": "Veterinary hospital (Zakharov and Farafontova)",
@@ -384,7 +450,10 @@
       "quote": "круглосуточно без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, sem dias de encerramento; tarifa noturna 21h00–9h00."
+      }
     },
     {
       "name": "MedVetCentr",
@@ -400,7 +469,10 @@
       "quote": "Круглосуточно, без выходных",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento. Liga antes de ires em caso de urgência."
+      }
     },
     {
       "name": "IVC MVA (Innovative Veterinary Centre)",
@@ -416,7 +488,10 @@
       "quote": "ИВЦ работает круглосуточно",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Afirma funcionar 24 horas por dia; cirurgia, cuidados intensivos e radiografia 24 horas por dia, outros serviços durante o dia."
+      }
     },
     {
       "name": "Drug veterinary clinic - Machugi",
@@ -432,7 +507,10 @@
       "quote": "Клиника на Мачуги работает 24/7/365",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano, com urgências 24 horas por dia. A segunda unidade, em ul. Uralskaya 184/2, está aberta 9h00–21h00."
+      }
     },
     {
       "name": "Bulldog veterinary clinic",
@@ -448,7 +526,10 @@
       "quote": "Мы работаем круглосуточно!",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana."
+      }
     },
     {
       "name": "State veterinary clinic Sovetsky district (Sedanka)",
@@ -463,7 +544,10 @@
       "note": "Site of KGBU Vladivostok veterinary station (Nevskaya 38, +7 423 236 48 16). No круглосуточно wording.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Todos os dias, 8h00–20h00; os animais são aceites até uma hora antes do fecho."
+      }
     },
     {
       "name": "State veterinary clinic Trudovoye",
@@ -478,7 +562,10 @@
       "note": "Same official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Todos os dias, 8h00–20h00; os animais são aceites até uma hora antes do fecho."
+      }
     },
     {
       "name": "State veterinary clinic Pervomaysky district",
@@ -493,7 +580,10 @@
       "note": "Same official page.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 9h00–17h00; fechado ao sábado e domingo."
+      }
     },
     {
       "name": "Chetyre Lapy veterinary clinic",
@@ -508,7 +598,10 @@
       "note": "No hours and no 24 h wording on the page; opens every day only.",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias, incluindo feriados; liga para saberes o horário exato."
+      }
     }
   ],
   "notes": "Research 2026-11-13; every source_url opened with WebFetch. No animal poison line found (no Russian veterinary toxicology hotline page found; none added). No per-day duty rota found; the only duty-style entry is the Moscow state veterinary contact centre (+7 495 612 12 12, 24 h), which routes to open state clinics. Rosselkhoznadzor and Saint Petersburg state vet committee pages not reached via search. University hospitals not added: mgavm.ru contacts page errored (SERVER_ERROR), SPbGUVM clinic page not found. Unreachable/refused: evrovet.su, vet25.ru, vetservice.su, vet-pet-ekb.ru (robots disallowed); zoocity-vet.ru and hatiko.pro (errors); kudago, animalz-nsk.ru, mskagency (fetch errors). Left: remaining 23 Moscow state clinics (09:00-21:00, listed on mos-obvet.ru/clinics, not added), Saint Petersburg state vet stations, Rosselkhoznadzor regional bodies, MGAVMiB and SPbGUVM university clinics, more clinics in Yekaterinburg, Novosibirsk (VetaClinic, Animalz, Evrovet), Kazan (ZooCity, Planeta, Tri Kota), Kaliningrad (BK Vet, Vetbalto, Vet39), Vladivostok (Vet-Service, Nadezhda), Saint Petersburg (Duocor, Svoy Doctor, Vet24), Moscow (Biovet, Medvet, Kovcheg, Vetcore, Svoy Doctor, DoboVet)."

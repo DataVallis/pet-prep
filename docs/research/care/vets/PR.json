@@ -58,7 +58,10 @@
       "source_url": "https://www.veterinaria24-7.com/",
       "checked": "2026-11-13",
       "note": "Hours line 'Lunes - Domingo 24 hrs'; 'las 24 horas del día, los 7 días de la semana'.",
-      "quote": "Disponibles 24 horas para atender"
+      "quote": "Disponibles 24 horas para atender",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências veterinárias. Liga antes: +1 787 751 3737."
+      }
     },
     {
       "kind": "clinic",
@@ -74,7 +77,10 @@
       "source_url": "https://animalemergencyclinicpr.com/",
       "checked": "2026-11-13",
       "note": "'24 horas los 7 días a la semana', 'Abierto todos los días 24/7'.",
-      "quote": "¡Servicios las 24 Horas!"
+      "quote": "¡Servicios las 24 Horas!",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana. Liga antes: +1 787 765 1120."
+      }
     },
     {
       "kind": "clinic",
@@ -90,7 +96,10 @@
       "source_url": "https://emervet.com/en/home/",
       "checked": "2026-11-13",
       "note": "Page: 'come 24 hours a day, 7 days a week'. MetroVet page gives a different address description (Ave. Las Cumbres / Carr. 181); site address used.",
-      "quote": "We attend to your pet's emergency 24/7"
+      "quote": "We attend to your pet's emergency 24/7",
+      "duty_i18n": {
+        "pt": "Urgências 24 horas por dia, 7 dias por semana, sem marcação. Liga antes: +1 787 331 6060."
+      }
     },
     {
       "kind": "clinic",
@@ -106,7 +115,10 @@
       "source_url": "https://vetspr.com/",
       "checked": "2026-11-13",
       "note": "Page says emergencies 'disponible 24/7'; regular hours not listed. ZIP differs on page footer (00727).",
-      "quote": "disponible 24/7"
+      "quote": "disponible 24/7",
+      "duty_i18n": {
+        "pt": "Equipa de urgência disponível 24 h/24, 7 dias por semana. Liga antes: +1 787 979 3139."
+      }
     },
     {
       "kind": "clinic",
@@ -121,7 +133,10 @@
       "url": "https://www.doctorpetpr.com/",
       "source_url": "https://www.doctorpetpr.com/san-juan-pr/emergencies/",
       "note": "Own page says 8am-10pm daily; prvets.com says 8am-midnight; Gardenville page calls it '24 horas' but lists until midnight. No explicit 24 h walk-in wording, so false.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Hospital de urgências aberto todos os dias, 8h00–22h00; os animais internados são monitorizados 24 horas por dia. Liga antes: +1 787 592 3939."
+      }
     },
     {
       "kind": "clinic",
@@ -136,7 +151,10 @@
       "url": "https://doctordoggiepr.com/",
       "source_url": "https://doctordoggiepr.com/",
       "checked": "2026-11-13",
-      "note": "No hours and no 24 h wording on page."
+      "note": "No hours and no 24 h wording on page.",
+      "duty_i18n": {
+        "pt": "Apresenta-se como especializada em urgências veterinárias; horário não divulgado. Liga antes: +1 787 842 7974 ou +1 939 313 0886."
+      }
     },
     {
       "kind": "clinic",
@@ -151,7 +169,10 @@
       "url": "https://aguadillavc.com/",
       "source_url": "https://aguadillavc.com/",
       "checked": "2026-11-13",
-      "note": "Page header says 8-18, hours section 8-17 (inconsistent). Second phone 939-235-1537."
+      "note": "Page header says 8-18, hours section 8-17 (inconsistent). Second phone 939-235-1537.",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–17h00; fechado aos fins de semana. Sem serviço de urgências indicado. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -166,7 +187,10 @@
       "url": "https://www.amcpr.org/",
       "source_url": "https://www.amcpr.org/",
       "note": "Near Rincón/Aguadilla.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 9h00–17h00. Sem serviço de urgências indicado. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -181,7 +205,10 @@
       "url": "https://www.veterinariadeleste.com/",
       "source_url": "https://www.veterinariadeleste.com/",
       "note": "No hours, no emergency wording.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Sob marcação; horário não divulgado. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -196,7 +223,10 @@
       "url": "https://www.condadoveterinaryhospital.com/",
       "source_url": "https://www.condadoveterinaryhospital.com/",
       "note": "prvets.com lists phone 787-714-9531 and 7:30-17:30; CMVPR and own site 787-724-9333. Own site used.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sábado, 7h30–17h30. Não funciona 24 horas por dia. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -211,7 +241,10 @@
       "url": "https://www.clinicaveterinariagardenville.com/",
       "source_url": "https://www.clinicaveterinariagardenville.com/guaynabo-pr/en-caso-de-emergencias/",
       "note": "Page says it offers no 24 h emergency care; prvets.com shows phone 787-710-2524 and 9-18 hours.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 9h00–14h00. Sem urgências 24 horas por dia; fora de horas encaminha para o Doctor Pet Emergency Hospital, +1 787 592 3939."
+      }
     },
     {
       "kind": "clinic",
@@ -226,7 +259,10 @@
       "url": "https://www.centromedicoveterinariopr.com/home/",
       "source_url": "https://www.centromedicoveterinariopr.com/home/",
       "note": "No hours or emergency wording.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Horário não divulgado. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -241,7 +277,10 @@
       "url": "https://www.banfield.com/locations/veterinarians/pr/guaynabo/spp",
       "source_url": "https://www.banfield.com/locations/veterinarians/pr/guaynabo/spp",
       "note": "Directs life-threatening emergencies to a local emergency hospital.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–17h00, domingo, 10h00–17h00. Não é um hospital de urgências."
+      }
     },
     {
       "kind": "clinic",
@@ -256,7 +295,10 @@
       "url": "https://www.prvets.com/nuestrasclinicas",
       "source_url": "https://www.prvets.com/nuestrasclinicas",
       "note": "Also 787-780-5583 (CMVPR). Page also says 7 days/week; listed hours omit Saturday.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–18h00, domingo, 9h00–18h00. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -271,7 +313,10 @@
       "url": "https://www.prvets.com/nuestrasclinicas",
       "source_url": "https://www.prvets.com/nuestrasclinicas",
       "note": "CMVPR lists 787-763-2584 for this name.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–16h00. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -286,7 +331,10 @@
       "url": "https://www.prvets.com/nuestrasclinicas",
       "source_url": "https://www.prvets.com/nuestrasclinicas",
       "note": "Phone matches CMVPR.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 7h00–17h00, sábado, 8h00–14h00. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -301,7 +349,10 @@
       "url": "https://www.prvets.com/nuestrasclinicas",
       "source_url": "https://www.prvets.com/nuestrasclinicas",
       "note": "CMVPR lists 787-789-2934 for Clínica Veterinaria Guaynabo; phones differ.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Segunda a sexta, 8h00–18h00, fechado aos fins de semana. Liga antes."
+      }
     },
     {
       "kind": "clinic",
@@ -316,7 +367,10 @@
       "url": "https://viequeshumanesociety.org/veterinarian",
       "source_url": "https://viequeshumanesociety.org/veterinarian",
       "note": "Page says emergencies evaluated 'as needed and assigned'. Non-profit clinic; CMVPR also lists Isla Nena Clínica de Animales (917-776-1231), no own page opened.",
-      "checked": "2026-11-13"
+      "checked": "2026-11-13",
+      "duty_i18n": {
+        "pt": "Clínica com atendimento à terça, quarta e sexta-feira, 8h00–17h00. Sem linha de urgências fora de horas divulgada. Liga antes."
+      }
     }
   ],
   "notes": "WebFetch was refused for rameyvethospital.com (robots_disallowed), doctorpetpr.com/doctores/ (client_error), cruzvet.com (client_error) and friendsofculebraanimals.org (client_error); Ramey Veterinary Hospital (Aguadilla, 787-819-0586) and Cruz Veterinary Services (Fajardo, 787-449-3192) are only in the CMVPR list and were not added. CMVPR tags as 'Emergencia' but no own page opened: Hospital Veterinario San Francisco de Asis (Hatillo, 787-879-5251), Emergencias Veterinarias del Sur (Ponce, 787-913-1363). No own site found for Mayagüez, Ponce, Rincón or Culebra clinics (Culebra: only a Friends of Culebra Animals page, unreachable). No island poison line or duty rota found in Puerto Rico; the two US poison lines do not state PR coverage. Not opened: Veterinary Specialty Hospital, CEVET (cevet.net llms.txt had no contact data), Old San Juan Veterinary Center, Ocean Park, Fajardo Animal Hospital, Mayagüez and Ponce clinics. Colegio de Médicos Veterinarios has no duty-rota page found. Remaining work: open those clinics' own sites, and confirm the two Hatillo/Ponce emergency clinics. Independent check 2026-11-13: the two US poison lines (Pet Poison Helpline, ASPCA) removed because their pages do not state Puerto Rico/US-territory coverage."

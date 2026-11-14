@@ -175,7 +175,8 @@
         "de": "Täglich rund um die Uhr geöffnet, auch an Feiertagen. Für Notfälle ist kein Termin nötig.",
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos. Las urgencias no requieren cita previa.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi. Per le emergenze non serve appuntamento."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi. Per le emergenze non serve appuntamento.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados. Urgências sem marcação."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/tveh",
@@ -197,7 +198,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Spezialabteilungen sind an Feiertagen geschlossen.",
         "fr": "Ouvert 24 h/24, 7 j/7. Fermeture des services spécialisés les jours fériés.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Los servicios de especialidades cierran en festivos.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. I servizi specialistici chiudono nei festivi."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. I servizi specialistici chiudono nei festivi.",
+        "pt": "Aberto 24 horas, 7 dias por semana. Os serviços de especialidade encerram nos feriados."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/movh/clients",
@@ -219,7 +221,8 @@
         "de": "Notdienst täglich rund um die Uhr, auch an Feiertagen.",
         "fr": "Urgences 24 h/24, 7 j/7, jours fériés compris.",
         "es": "Urgencias las 24 horas, los 7 días de la semana, también festivos.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, festivi inclusi."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, festivi inclusi.",
+        "pt": "Urgências 24 horas por dia, 7 dias por semana, incluindo feriados."
       },
       "small_animals": true,
       "url": "https://www.vectoronto.com",
@@ -241,7 +244,8 @@
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr.",
         "fr": "Urgences 24 h/24, 365 j/an.",
         "es": "Urgencias las 24 horas, los 365 días del año.",
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno.",
+        "pt": "Urgências 24 horas por dia, 365 dias por ano."
       },
       "small_animals": true,
       "url": "https://ctvrc.ca/",
@@ -263,7 +267,8 @@
         "de": "Notdienst außerhalb der Öffnungszeiten Mo–Fr von 19 bis 8 Uhr; an Wochenenden und Feiertagen rund um die Uhr.",
         "fr": "Urgences hors horaires en semaine, 19 h–8 h ; ouvert 24 h/24 le week-end et les jours fériés.",
         "es": "Servicio de urgencias fuera de horario entre semana de 19:00 a 8:00 h; las 24 horas en fines de semana y festivos.",
-        "it": "Pronto soccorso fuori orario nei giorni feriali 19:00–8:00; copertura 24 ore su 24 nei weekend e nei festivi."
+        "it": "Pronto soccorso fuori orario nei giorni feriali 19:00–8:00; copertura 24 ore su 24 nei weekend e nei festivi.",
+        "pt": "Serviço de urgências fora do horário nos dias úteis, das 19h00 às 8h00; atendimento 24 horas aos fins de semana e feriados."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/westsideon/our-hospital/in-an-emergency",
@@ -284,7 +289,8 @@
         "de": "Tierklinik mit Notdienst rund um die Uhr.",
         "fr": "Hôpital vétérinaire d’urgences ouvert 24 h/24.",
         "es": "Hospital veterinario de urgencias las 24 horas.",
-        "it": "Ospedale veterinario di pronto soccorso 24 ore su 24."
+        "it": "Ospedale veterinario di pronto soccorso 24 ore su 24.",
+        "pt": "Hospital veterinário de urgências 24 horas."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/secord/our-hospital/in-an-emergency",
@@ -305,7 +311,8 @@
         "de": "Notfall- und Spezialklinik; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital d’urgences et de spécialités ; appelez pour connaître les horaires.",
         "es": "Hospital de urgencias y especialidades; llama para consultar el horario.",
-        "it": "Ospedale di pronto soccorso e specialistico; chiamare per gli orari."
+        "it": "Ospedale di pronto soccorso e specialistico; chiamare per gli orari.",
+        "pt": "Hospital de urgências e especialidades; liga para saber o horário."
       },
       "small_animals": true,
       "source_url": "https://www.clappisonvet.com/contact-us/emergencies",
@@ -326,7 +333,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Termine für Spezialsprechstunden Mo–Fr telefonisch.",
         "fr": "Ouvert 24 h/24, 7 j/7. Rendez-vous de spécialité du lundi au vendredi, par téléphone.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Citas de especialidades de lunes a viernes por teléfono.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. Appuntamenti specialistici lun–ven per telefono."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Appuntamenti specialistici lun–ven per telefono.",
+        "pt": "Aberto 24 horas, 7 dias por semana. Consultas de especialidade de segunda a sexta, por telefone."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/404emerg",
@@ -348,7 +356,8 @@
         "de": "Notdienstklinik außerhalb der Öffnungszeiten; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Clinique d’urgences hors horaires ; appelez pour connaître les horaires.",
         "es": "Clínica de urgencias fuera de horario; llama para consultar el horario.",
-        "it": "Clinica di pronto soccorso fuori orario; chiamare per gli orari."
+        "it": "Clinica di pronto soccorso fuori orario; chiamare per gli orari.",
+        "pt": "Clínica de urgências fora do horário; liga para saber o horário."
       },
       "small_animals": true,
       "source_url": "https://www.collegemanorvet.com/contact-us/emergencies",
@@ -369,7 +378,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Überweisungssprechstunde Mo–Fr 7–18 Uhr.",
         "fr": "Ouvert 24 h/24, 7 j/7. Services de référence : lun.–ven. 7 h–18 h.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Servicios de derivación lun–vie 7:00–18:00 h.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. Servizi su invio lun–ven 7:00–18:00."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Servizi su invio lun–ven 7:00–18:00.",
+        "pt": "Aberto 24 horas, 7 dias por semana. Serviços de referenciação de segunda a sexta, 7h00–18h00."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/avse",
@@ -391,7 +401,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 horas, 7 dias por semana."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/ottawa",
@@ -412,7 +423,8 @@
         "de": "Notfall- und Spezialklinik außerhalb der Öffnungszeiten; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital d’urgences et de spécialités hors horaires ; appelez pour connaître les horaires.",
         "es": "Hospital de urgencias y especialidades fuera de horario; llama para consultar el horario.",
-        "it": "Ospedale di pronto soccorso e specialistico fuori orario; chiamare per gli orari."
+        "it": "Ospedale di pronto soccorso e specialistico fuori orario; chiamare per gli orari.",
+        "pt": "Hospital de urgências e especialidades fora do horário; liga para saber o horário."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/carproad/our-hospital/in-an-emergency",
@@ -433,7 +445,8 @@
         "de": "Täglich rund um die Uhr geöffnet. Überweisungssprechstunde: Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Ouvert 24 h/24, 7 j/7. Services de référence : appelez pour connaître les horaires.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Servicios de derivación: llama para consultar el horario.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. Servizi su invio: chiamare per gli orari."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Servizi su invio: chiamare per gli orari.",
+        "pt": "Aberto 24 horas, 7 dias por semana. Serviços de referenciação: liga para saber o horário."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/londonregional",
@@ -455,7 +468,8 @@
         "de": "Täglich rund um die Uhr geöffnet, 365 Tage im Jahr, auch an Feiertagen.",
         "fr": "Ouvert 24 h/24, 7 j/7, 365 j/an, jours fériés compris.",
         "es": "Abierto las 24 horas, los 365 días del año, también festivos.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, festivi inclusi."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, festivi inclusi.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, 365 dias por ano, incluindo feriados."
       },
       "small_animals": true,
       "url": "https://hamiltonevc.ca/",
@@ -477,7 +491,8 @@
         "de": "Notfall- und Überweisungsklinik außerhalb der Öffnungszeiten; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital d’urgences et de référence hors horaires ; appelez pour connaître les horaires.",
         "es": "Hospital de urgencias y derivación fuera de horario; llama para consultar el horario.",
-        "it": "Ospedale di pronto soccorso e di riferimento fuori orario; chiamare per gli orari."
+        "it": "Ospedale di pronto soccorso e di riferimento fuori orario; chiamare per gli orari.",
+        "pt": "Hospital de urgências e referenciação fora do horário; liga para saber o horário."
       },
       "small_animals": true,
       "source_url": "https://www.clappisonvet.com/contact-us/emergencies",
@@ -498,7 +513,8 @@
         "de": "Geöffnet wochentags von 18 bis 8 Uhr, von Freitag 18 Uhr bis Montag 8 Uhr sowie an gesetzlichen Feiertagen.",
         "fr": "Ouvert en semaine de 18 h à 8 h, du vendredi 18 h au lundi 8 h, et les jours fériés.",
         "es": "Abierto las noches entre semana de 18:00 a 8:00 h, desde el viernes a las 18:00 h hasta el lunes a las 8:00 h y en festivos.",
-        "it": "Aperto di notte nei giorni feriali 18:00–8:00, dal venerdì alle 18:00 al lunedì alle 8:00 e nei festivi ufficiali."
+        "it": "Aperto di notte nei giorni feriali 18:00–8:00, dal venerdì alle 18:00 al lunedì alle 8:00 e nei festivi ufficiali.",
+        "pt": "Aberto nas noites de dias úteis, das 18h00 às 8h00, de sexta às 18h00 até segunda às 8h00 e em feriados oficiais."
       },
       "small_animals": true,
       "url": "https://web4.lifelearn.com/emergencyvc",
@@ -520,7 +536,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 8–16 Uhr, So geschlossen. Kein Betrieb rund um die Uhr.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–16 h, fermé le dimanche. Pas ouvert 24 h/24.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h, dom cerrado. No es una clínica 24 horas.",
-        "it": "Lun–ven 8:00–18:00, sab 8:00–16:00, chiuso la domenica. Non è una clinica aperta 24 ore su 24."
+        "it": "Lun–ven 8:00–18:00, sab 8:00–16:00, chiuso la domenica. Non è una clinica aperta 24 ore su 24.",
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00, encerrado ao domingo. Não é uma clínica aberta 24 horas."
       },
       "small_animals": true,
       "url": "https://www.kingsdale.com/petcare/vet-emergency",
@@ -541,7 +558,8 @@
         "de": "Geöffnet abends, an Wochenenden und Feiertagen.",
         "fr": "Ouvert en soirée, le week-end et les jours fériés.",
         "es": "Abierto por las tardes, fines de semana y festivos.",
-        "it": "Aperto la sera, nei weekend e nei festivi."
+        "it": "Aperto la sera, nei weekend e nei festivi.",
+        "pt": "Aberto ao fim do dia, aos fins de semana e feriados."
       },
       "small_animals": true,
       "source_url": "https://web4.lifelearn.com/huntsvilleah/?p=26",
@@ -561,7 +579,8 @@
         "de": "Notdienstklinik außerhalb der Öffnungszeiten für die Region Niagara; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Clinique d’urgences hors horaires pour la région du Niagara ; appelez pour connaître les horaires.",
         "es": "Clínica de urgencias fuera de horario para la región de Niagara; llama para consultar el horario.",
-        "it": "Clinica di pronto soccorso fuori orario per la regione del Niagara; chiamare per gli orari."
+        "it": "Clinica di pronto soccorso fuori orario per la regione del Niagara; chiamare per gli orari.",
+        "pt": "Clínica de urgências fora do horário para a região de Niagara; liga para saber o horário."
       },
       "small_animals": true,
       "source_url": "https://drtolesvet.com/locations/main-office/",
@@ -582,7 +601,8 @@
         "de": "Mo 8–19 Uhr, Di 8–18 Uhr, Mi 8–19 Uhr, Do 8–18 Uhr, Fr 8–17 Uhr, Sa 8–13 Uhr, So geschlossen. Tierarztsprechstunde nach Terminvereinbarung; bei Notfällen außerhalb der Öffnungszeiten bitte an die Niagara Veterinary Emergency Clinic wenden.",
         "fr": "Lundi 8 h–19 h, mardi 8 h–18 h, mercredi 8 h–19 h, jeudi 8 h–18 h, vendredi 8 h–17 h, samedi 8 h–13 h, fermé le dimanche. Consultations sur rendez-vous ; urgences hors horaires : Niagara Veterinary Emergency Clinic.",
         "es": "Lun 8:00–19:00 h, mar 8:00–18:00 h, mié 8:00–19:00 h, jue 8:00–18:00 h, vie 8:00–17:00 h, sáb 8:00–13:00 h, dom cerrado. Consultas con el veterinario con cita previa; las urgencias fuera de horario se atienden en Niagara Veterinary Emergency Clinic.",
-        "it": "Lunedì 8:00–19:00, martedì 8:00–18:00, mercoledì 8:00–19:00, giovedì 8:00–18:00, venerdì 8:00–17:00, sabato 8:00–13:00, chiuso la domenica. Visite mediche su appuntamento; le emergenze fuori orario vanno al Niagara Veterinary Emergency Clinic."
+        "it": "Lunedì 8:00–19:00, martedì 8:00–18:00, mercoledì 8:00–19:00, giovedì 8:00–18:00, venerdì 8:00–17:00, sabato 8:00–13:00, chiuso la domenica. Visite mediche su appuntamento; le emergenze fuori orario vanno al Niagara Veterinary Emergency Clinic.",
+        "pt": "Segunda 8h00–19h00, terça 8h00–18h00, quarta 8h00–19h00, quinta 8h00–18h00, sexta 8h00–17h00, sábado 8h00–13h00, encerrado ao domingo. Consultas médicas sob marcação; as urgências fora do horário são encaminhadas para a Niagara Veterinary Emergency Clinic."
       },
       "small_animals": true,
       "url": "https://drtolesvet.com/locations/main-office/",
@@ -603,7 +623,8 @@
         "de": "Mo und Mi 8–20 Uhr, Di, Do und Fr 8–17 Uhr, am Wochenende geschlossen. Notfälle außerhalb der Öffnungszeiten: Huronia Veterinary Emergency Clinic, Barrie.",
         "fr": "Lun. et mer. 8 h–20 h, mar., jeu. et ven. 8 h–17 h, fermé le week-end. Urgences hors horaires : Huronia Veterinary Emergency Clinic, Barrie.",
         "es": "Lun y mié 8:00–20:00 h, mar, jue y vie 8:00–17:00 h, fines de semana cerrado. Urgencias fuera de horario: Huronia Veterinary Emergency Clinic, Barrie.",
-        "it": "Lunedì e mercoledì 8:00–20:00, martedì, giovedì e venerdì 8:00–17:00, chiuso nei weekend. Emergenze fuori orario: Huronia Veterinary Emergency Clinic, Barrie."
+        "it": "Lunedì e mercoledì 8:00–20:00, martedì, giovedì e venerdì 8:00–17:00, chiuso nei weekend. Emergenze fuori orario: Huronia Veterinary Emergency Clinic, Barrie.",
+        "pt": "Segunda e quarta 8h00–20h00, terça, quinta e sexta 8h00–17h00, encerrado aos fins de semana. Urgências fora do horário: Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://www.centennialah.ca/contact-us",
@@ -624,7 +645,8 @@
         "de": "Mo–Mi und Fr 8–17 Uhr, Do 8–19 Uhr, Sa 8.30–13 Uhr, So geschlossen. Kein Notdienst außerhalb der Öffnungszeiten; bei Notfällen bitte an die Huronia Veterinary Emergency Clinic, Barrie, wenden.",
         "fr": "Lun.–mer. et ven. 8 h–17 h, jeu. 8 h–19 h, sam. 8 h 30–13 h, fermé le dimanche. Pas de permanence hors horaires ; urgences : Huronia Veterinary Emergency Clinic, Barrie.",
         "es": "Lun–mié y vie 8:00–17:00 h, jue 8:00–19:00 h, sáb 8:30–13:00 h, dom cerrado. Sin atención fuera de horario; las urgencias se atienden en Huronia Veterinary Emergency Clinic, Barrie.",
-        "it": "Lun–mer e ven 8:00–17:00, giovedì 8:00–19:00, sabato 8:30–13:00, chiuso la domenica. Nessuna copertura fuori orario; le emergenze vanno all'Huronia Veterinary Emergency Clinic, Barrie."
+        "it": "Lun–mer e ven 8:00–17:00, giovedì 8:00–19:00, sabato 8:30–13:00, chiuso la domenica. Nessuna copertura fuori orario; le emergenze vanno all'Huronia Veterinary Emergency Clinic, Barrie.",
+        "pt": "Segunda a quarta e sexta 8h00–17h00, quinta 8h00–19h00, sábado 8h30–13h00, encerrado ao domingo. Sem atendimento fora do horário; as urgências são encaminhadas para a Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://web4.lifelearn.com/huntsvilleah/?p=26",
@@ -645,7 +667,8 @@
         "de": "Mo–Fr 9–18 Uhr, am Wochenende geschlossen. Außerhalb der Öffnungszeiten: Huronia Veterinary Emergency Clinic, Barrie.",
         "fr": "Lun.–ven. 9 h–18 h, fermé le week-end. Hors horaires : Huronia Veterinary Emergency Clinic, Barrie.",
         "es": "Lun–vie 9:00–18:00 h, fines de semana cerrado. Fuera de horario: Huronia Veterinary Emergency Clinic, Barrie.",
-        "it": "Lun–ven 9:00–18:00, chiuso nei weekend. Fuori orario: Huronia Veterinary Emergency Clinic, Barrie."
+        "it": "Lun–ven 9:00–18:00, chiuso nei weekend. Fuori orario: Huronia Veterinary Emergency Clinic, Barrie.",
+        "pt": "Segunda a sexta 9h00–18h00, encerrado aos fins de semana. Fora do horário: Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/heritageon/our-hospital/in-an-emergency",
@@ -666,7 +689,8 @@
         "de": "Mo–Fr 8–19 Uhr, am Wochenende geschlossen. Außerhalb der Öffnungszeiten: VEC South oder Willowdale Animal Hospital.",
         "fr": "Lun.–ven. 8 h–19 h, fermé le week-end. Hors horaires : VEC South ou Willowdale Animal Hospital.",
         "es": "Lun–vie 8:00–19:00 h, fines de semana cerrado. Fuera de horario: VEC South o Willowdale Animal Hospital.",
-        "it": "Lun–ven 8:00–19:00, chiuso nei weekend. Fuori orario: VEC South o Willowdale Animal Hospital."
+        "it": "Lun–ven 8:00–19:00, chiuso nei weekend. Fuori orario: VEC South o Willowdale Animal Hospital.",
+        "pt": "Segunda a sexta 8h00–19h00, encerrado aos fins de semana. Fora do horário: VEC South ou Willowdale Animal Hospital."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/secord/our-hospital/in-an-emergency",
@@ -687,7 +711,8 @@
         "de": "Mo–Fr 9–19 Uhr, Sa 9–14 Uhr, So geschlossen. Außerhalb der Öffnungszeiten bitte eine rund um die Uhr geöffnete Notfallklinik aufsuchen.",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–14 h, fermé le dimanche. Hors horaires, adressez-vous à un hôpital d’urgences ouvert 24 h/24.",
         "es": "Lun–vie 9:00–19:00 h, sáb 9:00–14:00 h, dom cerrado. Fuera de horario, acude a un hospital de urgencias 24 horas.",
-        "it": "Lun–ven 9:00–19:00, sabato 9:00–14:00, chiuso la domenica. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24."
+        "it": "Lun–ven 9:00–19:00, sabato 9:00–14:00, chiuso la domenica. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24.",
+        "pt": "Segunda a sexta 9h00–19h00, sábado 9h00–14h00, encerrado ao domingo. Fora do horário, recorre a um hospital veterinário de urgências aberto 24 horas."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/applecreek/our-hospital/in-an-emergency",
@@ -708,7 +733,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 8–15 Uhr, So geschlossen.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–15 h, fermé le dimanche.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–15:00 h, dom cerrado.",
-        "it": "Lun–ven 8:00–18:00, sabato 8:00–15:00, chiuso la domenica."
+        "it": "Lun–ven 8:00–18:00, sabato 8:00–15:00, chiuso la domenica.",
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–15h00, encerrado ao domingo."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/burlington/hospital/in-an-emergency",
@@ -729,7 +755,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 8–15 Uhr, So geschlossen. Dringende Fälle werden während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–15 h, fermé le dimanche. Cas urgents reçus pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–15:00 h, dom cerrado. Las urgencias se atienden en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:00–18:00, sabato 8:00–15:00, chiuso la domenica. Casi urgenti accolti in orario di apertura; chiamare prima."
+        "it": "Lun–ven 8:00–18:00, sabato 8:00–15:00, chiuso la domenica. Casi urgenti accolti in orario di apertura; chiamare prima.",
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–15h00, encerrado ao domingo. Casos urgentes atendidos durante o horário de funcionamento; liga primeiro."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/kingsway/hospital/in-an-emergency",
@@ -749,7 +776,8 @@
         "de": "Tier-Giftnotruf, rund um die Uhr erreichbar, 365 Tage im Jahr. Eine Beratungsgebühr kann anfallen.",
         "fr": "Ligne d’aide en cas d’intoxication animale, 24 h/24, 7 j/7, 365 j/an. Une consultation peut être facturée.",
         "es": "Línea de intoxicaciones en mascotas, disponible las 24 horas, los 365 días del año. Puede aplicarse una tarifa de consulta.",
-        "it": "Linea antiveleni per animali, disponibile 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Può essere applicata una tariffa di consulenza."
+        "it": "Linea antiveleni per animali, disponibile 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Può essere applicata una tariffa di consulenza.",
+        "pt": "Linha de apoio toxicológico para animais, disponível 24 h/24, 7 dias por semana, 365 dias por ano. Pode haver lugar a uma taxa de consulta."
       },
       "small_animals": true,
       "url": "https://www.aspca.org/pet-care/aspca-poison-control",
@@ -770,7 +798,8 @@
         "de": "Tier-Giftnotruf, rund um die Uhr erreichbar. Pro Fall fällt eine Gebühr an (USD 99).",
         "fr": "Centre antipoison pour animaux, 24 h/24, 7 j/7. Frais par cas : 99 USD.",
         "es": "Centro de toxicología para mascotas, disponible las 24 horas. Se aplica una tarifa por incidente (99 USD).",
-        "it": "Centro antiveleni per animali, disponibile 24 ore su 24, 7 giorni su 7. Tariffa per singolo caso (USD 99)."
+        "it": "Centro antiveleni per animali, disponibile 24 ore su 24, 7 giorni su 7. Tariffa per singolo caso (USD 99).",
+        "pt": "Centro de controlo de intoxicações para animais, disponível 24 h/24, 7 dias por semana. Aplica-se uma taxa por ocorrência (USD 99)."
       },
       "small_animals": true,
       "url": "https://www.petpoisonhelpline.com/",
@@ -792,7 +821,8 @@
         "de": "Notfall- und Überweisungszentrum, rund um die Uhr geöffnet. Im Notfall bitte zuerst anrufen; das Online-Formular ist nicht für Notfälle gedacht.",
         "fr": "Centre d’urgences et de référence ouvert 24 h/24, 7 j/7. En cas d’urgence, appelez d’abord ; le formulaire en ligne n’est pas destiné aux urgences.",
         "es": "Centro de urgencias y derivación abierto las 24 horas. En caso de urgencia, llama antes; el formulario en línea no es para urgencias.",
-        "it": "Centro di pronto soccorso e di riferimento aperto 24 ore su 24, 7 giorni su 7. In caso di emergenza chiamare prima; il modulo online non è per le emergenze."
+        "it": "Centro di pronto soccorso e di riferimento aperto 24 ore su 24, 7 giorni su 7. In caso di emergenza chiamare prima; il modulo online non è per le emergenze.",
+        "pt": "Centro de urgências e referenciação aberto 24 h/24, 7 dias por semana. Em caso de urgência, liga primeiro; o formulário online não se destina a urgências."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-montreal/",
@@ -814,7 +844,8 @@
         "de": "Notfall- und Überweisungszentrum, rund um die Uhr geöffnet. Im Notfall bitte zuerst anrufen; das Online-Formular ist nicht für Notfälle gedacht.",
         "fr": "Centre d’urgences et de référence ouvert 24 h/24, 7 j/7. En cas d’urgence, appelez d’abord ; le formulaire en ligne n’est pas destiné aux urgences.",
         "es": "Centro de urgencias y derivación abierto las 24 horas. En caso de urgencia, llama antes; el formulario en línea no es para urgencias.",
-        "it": "Centro di pronto soccorso e di riferimento aperto 24 ore su 24, 7 giorni su 7. In caso di emergenza chiamare prima; il modulo online non è per le emergenze."
+        "it": "Centro di pronto soccorso e di riferimento aperto 24 ore su 24, 7 giorni su 7. In caso di emergenza chiamare prima; il modulo online non è per le emergenze.",
+        "pt": "Centro de urgências e referenciação aberto 24 h/24, 7 dias por semana. Em caso de urgência, liga primeiro; o formulário online não se destina a urgências."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-laval/",
@@ -836,7 +867,8 @@
         "de": "Rund um die Uhr geöffnet. Bei Notfällen bitte das Zentrum anrufen.",
         "fr": "Ouvert 24 h/24, 7 j/7. Pour une urgence, appelez le centre.",
         "es": "Abierto las 24 horas. En caso de urgencia, llama al centro.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7. Per le emergenze chiamare il centro."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Per le emergenze chiamare il centro.",
+        "pt": "Aberto 24 h/24, 7 dias por semana. Para urgências, liga para o centro."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-rive-sud/",
@@ -858,7 +890,8 @@
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr, ohne Termin.",
         "fr": "Urgences 24 h/24, 7 j/7, 365 j/an, sans rendez-vous.",
         "es": "Urgencias las 24 horas, los 365 días del año, sin cita previa.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento.",
+        "pt": "Urgências 24 h/24, 7 dias por semana, 365 dias por ano, sem marcação."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/centre/centredmvet-montreal/",
@@ -880,7 +913,8 @@
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr, ohne Termin.",
         "fr": "Urgences 24 h/24, 7 j/7, 365 j/an, sans rendez-vous.",
         "es": "Urgencias las 24 horas, los 365 días del año, sin cita previa.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento.",
+        "pt": "Urgências 24 h/24, 7 dias por semana, 365 dias por ano, sem marcação."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -902,7 +936,8 @@
         "de": "Notdienst rund um die Uhr, 365 Tage im Jahr, ohne Termin.",
         "fr": "Urgences 24 h/24, 7 j/7, 365 j/an, sans rendez-vous.",
         "es": "Urgencias las 24 horas, los 365 días del año, sin cita previa.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, senza appuntamento.",
+        "pt": "Urgências 24 h/24, 7 dias por semana, 365 dias por ano, sem marcação."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -924,7 +959,8 @@
         "de": "Geöffnet von 8 Uhr bis Mitternacht. Kein Betrieb rund um die Uhr; für dringende Fälle außerhalb dieser Zeiten bitte ein anderes rund um die Uhr geöffnetes Zentrum aufsuchen (zum Beispiel Centre vétérinaire Daubigny, Québec).",
         "fr": "Ouvert de 8 h à minuit. Pas ouvert 24 h/24 ; pour des soins urgents en dehors de ces heures, adressez-vous à un autre centre ouvert 24 h/24, 7 j/7 (par exemple le Centre vétérinaire Daubigny, Québec).",
         "es": "Abierto de 8:00 h a medianoche. No abre las 24 horas; para urgencias fuera de este horario acude a otro centro 24 horas (por ejemplo, Centre vétérinaire Daubigny, Québec).",
-        "it": "Aperto dalle 8:00 alla mezzanotte. Non aperto 24 ore su 24; per urgenze fuori da questi orari rivolgersi a un altro centro aperto 24 ore su 24 (ad esempio Centre vétérinaire Daubigny, Québec)."
+        "it": "Aperto dalle 8:00 alla mezzanotte. Non aperto 24 ore su 24; per urgenze fuori da questi orari rivolgersi a un altro centro aperto 24 ore su 24 (ad esempio Centre vétérinaire Daubigny, Québec).",
+        "pt": "Aberto das 8h00 às 24h00. Não está aberto 24 horas; para urgências fora deste horário, recorre a outro centro aberto 24 h/24 (por exemplo, o Centre vétérinaire Daubigny, Québec)."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -946,7 +982,8 @@
         "de": "Notdienst täglich rund um die Uhr, ohne Termin. Intensivstation rund um die Uhr. Vor der Behandlung ist eine Anzahlung erforderlich.",
         "fr": "Service d’urgences ouvert 24 h/24, 7 j/7, sans rendez-vous. Soins intensifs 24 h/24, 7 j/7. Un acompte est exigé avant les soins.",
         "es": "Servicio de urgencias abierto las 24 horas, los 7 días de la semana, sin cita previa. Cuidados intensivos las 24 horas. Se exige un depósito antes del tratamiento.",
-        "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7, senza appuntamento. Terapia intensiva 24 ore su 24, 7 giorni su 7. Prima del trattamento è richiesto un deposito."
+        "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7, senza appuntamento. Terapia intensiva 24 ore su 24, 7 giorni su 7. Prima del trattamento è richiesto un deposito.",
+        "pt": "Serviço de urgências aberto 24 horas por dia, 7 dias por semana, sem marcação. Cuidados intensivos 24 h/24. É exigido um depósito antes do tratamento."
       },
       "small_animals": true,
       "url": "https://www.daubigny.ca/",
@@ -968,7 +1005,8 @@
         "de": "Notfall- und Intensivstation ganzjährig geöffnet; Notfälle werden täglich rund um die Uhr ohne Überweisung aufgenommen. Vor der Anreise bitte anrufen.",
         "fr": "Service d’urgences et de soins intensifs ouvert toute l’année, urgences reçues 24 h/24, 7 j/7, même sans passer par votre vétérinaire. Appelez avant de venir.",
         "es": "Servicio de urgencias y cuidados intensivos abierto todo el año, con admisión de urgencias las 24 horas, los 7 días de la semana, sin derivación. Llama antes de ir.",
-        "it": "Servizio di pronto soccorso e terapia intensiva aperto tutto l'anno: accoglie le emergenze 24 ore su 24, 7 giorni su 7, senza invio. Telefonare prima di arrivare."
+        "it": "Servizio di pronto soccorso e terapia intensiva aperto tutto l'anno: accoglie le emergenze 24 ore su 24, 7 giorni su 7, senza invio. Telefonare prima di arrivare.",
+        "pt": "Serviço de urgências e cuidados intensivos aberto todo o ano, com receção de urgências 24 horas por dia, 7 dias por semana, sem necessidade de encaminhamento. Liga antes de chegares."
       },
       "small_animals": true,
       "url": "https://chuv.umontreal.ca/le-chuv/hopital-des-animaux-de-compagnie/",
@@ -990,7 +1028,8 @@
         "de": "Mo–Fr 8–21 Uhr, Sa–So 9–17 Uhr. Außerhalb der Öffnungszeiten bitte das Centre Vétérinaire Rive-Sud kontaktieren.",
         "fr": "Lun.–ven. 8 h–21 h, sam.–dim. 9 h–17 h. En dehors des heures d’ouverture, contactez le Centre Vétérinaire Rive-Sud.",
         "es": "Lun–vie 8:00–21:00 h, sáb–dom 9:00–17:00 h. Fuera de horario, contacta con Centre Vétérinaire Rive-Sud.",
-        "it": "Lun–ven 8:00–21:00, sab–dom 9:00–17:00. Fuori orario contattare il Centre Vétérinaire Rive-Sud."
+        "it": "Lun–ven 8:00–21:00, sab–dom 9:00–17:00. Fuori orario contattare il Centre Vétérinaire Rive-Sud.",
+        "pt": "Seg.–sex. 8h00–21h00, sáb.–dom. 9h00–17h00. Fora do horário, contacta o Centre Vétérinaire Rive-Sud."
       },
       "small_animals": true,
       "url": "https://vetetnous.com/en/?p=928",
@@ -1011,7 +1050,8 @@
         "de": "Mo–Fr 9–19 Uhr, Sa 9–13 Uhr, So geschlossen. Außerhalb der Öffnungszeiten bitte das Centre Vétérinaire Montréal kontaktieren.",
         "fr": "Lun.–ven. 9 h–19 h, sam. 9 h–13 h, fermé le dimanche. En dehors des heures d’ouverture, contactez le Centre Vétérinaire Montréal.",
         "es": "Lun–vie 9:00–19:00 h, sáb 9:00–13:00 h, dom cerrado. Fuera de horario, contacta con Centre Vétérinaire Montréal.",
-        "it": "Lun–ven 9:00–19:00, sab 9:00–13:00, dom chiuso. Fuori orario contattare il Centre Vétérinaire Montréal."
+        "it": "Lun–ven 9:00–19:00, sab 9:00–13:00, dom chiuso. Fuori orario contattare il Centre Vétérinaire Montréal.",
+        "pt": "Seg.–sex. 9h00–19h00, sáb. 9h00–13h00, domingo encerrado. Fora do horário, contacta o Centre Vétérinaire Montréal."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/clinique-veterinaire-hochelaga/",
@@ -1032,7 +1072,8 @@
         "de": "Mo–Fr 8–20 Uhr, Sa 8–15 Uhr, So geschlossen. Außerhalb der Öffnungszeiten bitte das Centre Vétérinaire Rive-Sud kontaktieren.",
         "fr": "Lun.–ven. 8 h–20 h, sam. 8 h–15 h, fermé le dimanche. En dehors des heures d’ouverture, contactez le Centre Vétérinaire Rive-Sud.",
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–15:00 h, dom cerrado. Fuera de horario, contacta con Centre Vétérinaire Rive-Sud.",
-        "it": "Lun–ven 8:00–20:00, sab 8:00–15:00, dom chiuso. Fuori orario contattare il Centre Vétérinaire Rive-Sud."
+        "it": "Lun–ven 8:00–20:00, sab 8:00–15:00, dom chiuso. Fuori orario contattare il Centre Vétérinaire Rive-Sud.",
+        "pt": "Seg.–sex. 8h00–20h00, sáb. 8h00–15h00, domingo encerrado. Fora do horário, contacta o Centre Vétérinaire Rive-Sud."
       },
       "small_animals": true,
       "url": "https://vetetnous.com/en/?p=3372",
@@ -1055,7 +1096,8 @@
       "note": "Removed from duty: Mon-Fri 8:00 am to 9:00 pm, Sat-Sun 9:00 am to 4:00 pm. In an emergency call the clinic; no separate after-hours service is published.",
       "duty_i18n": {
         "es": "Lun–vie 8:00–21:00 h, sáb–dom 9:00–16:00 h. En caso de urgencia, llama a la clínica.",
-        "it": "Lun–ven 8:00–21:00, sab–dom 9:00–16:00. In caso di emergenza chiamare la clinica."
+        "it": "Lun–ven 8:00–21:00, sab–dom 9:00–16:00. In caso di emergenza chiamare la clinica.",
+        "pt": "Seg.–sex. 8h00–21h00, sáb.–dom. 9h00–16h00. Em caso de urgência, liga para a clínica."
       }
     },
     {
@@ -1072,7 +1114,8 @@
         "de": "Mo–Fr 8–19.30 Uhr, Sa 11–17 Uhr, So geschlossen (kein Tierarzt vor Ort). Bei einem Notfall bitte vor dem Kommen anrufen.",
         "fr": "Lun.–ven. 8 h–19 h 30, sam. 11 h–17 h, fermé le dimanche (aucun vétérinaire sur place). Appelez avant de venir en cas d’urgence.",
         "es": "Lun–vie 8:00–19:30 h, sáb 11:00–17:00 h, dom cerrado (sin veterinario en el centro). En caso de urgencia, llama antes de ir.",
-        "it": "Lun–ven 8:00–19:30, sab 11:00–17:00, dom chiuso (nessun veterinario in sede). Per un'emergenza telefonare prima di venire."
+        "it": "Lun–ven 8:00–19:30, sab 11:00–17:00, dom chiuso (nessun veterinario in sede). Per un'emergenza telefonare prima di venire.",
+        "pt": "Seg.–sex. 7h30–19h30, sáb. 11h00–17h00, domingo encerrado (sem veterinário no local). Em caso de urgência, liga antes de ir."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/hopital-veterinaire-du-boise/",
@@ -1094,7 +1137,8 @@
         "de": "Reine Katzenklinik. Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital réservé aux chats. Appelez pour connaître les horaires.",
         "es": "Hospital solo para gatos. Llama para consultar el horario.",
-        "it": "Ospedale solo per gatti. Chiamare per gli orari di apertura."
+        "it": "Ospedale solo per gatti. Chiamare per gli orari di apertura.",
+        "pt": "Hospital só para gatos. Liga para saber o horário."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/clinique-veterinaire-feline-de-ste-foy/",
@@ -1116,7 +1160,8 @@
         "de": "Notdienst täglich rund um die Uhr. Bei Notfällen bitte die Klinik direkt anrufen.",
         "fr": "Urgences ouvertes 24 h/24, 7 j/7. Appelez directement l’hôpital en cas d’urgence.",
         "es": "Urgencias abiertas las 24 horas, los 7 días de la semana. Llama directamente al hospital en caso de urgencia.",
-        "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7. Per le emergenze chiamare direttamente l'ospedale."
+        "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7. Per le emergenze chiamare direttamente l'ospedale.",
+        "pt": "Urgências abertas 24 horas, 7 dias por semana. Em caso de urgência, liga diretamente para o hospital."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/vancouveremergency",
@@ -1138,7 +1183,8 @@
         "de": "Das ganze Jahr täglich rund um die Uhr geöffnet, mit Tierarzt und Notfallteam vor Ort. Spezialsprechstunden Mo–Fr nach Terminvereinbarung.",
         "fr": "Ouvert 24 h/24, tous les jours de l’année, avec vétérinaire et équipe d’urgence sur place. Services de spécialité sur rendez-vous du lundi au vendredi.",
         "es": "Abierto las 24 horas, todos los días del año, con veterinario y equipo de urgencias en el centro. Servicios de especialidades con cita previa de lun a vie.",
-        "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, con veterinario in sede e équipe di pronto soccorso. Servizi specialistici su appuntamento lun–ven."
+        "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, con veterinario in sede e équipe di pronto soccorso. Servizi specialistici su appuntamento lun–ven.",
+        "pt": "Aberto 24 horas, todos os dias do ano, com veterinário e equipa de urgências no local. Serviços de especialidade sob marcação de seg. a sex."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/centralvictoria",
@@ -1160,7 +1206,8 @@
         "de": "Notfall- und Akutversorgung täglich rund um die Uhr: Rufen Sie 250-766-3236 an und drücken Sie die 1 für das tierärztliche Team. Reguläre Öffnungszeiten Mo–Fr 8–19 Uhr, Sa–So 9–17 Uhr. Vögel und Exoten: bitte vorher anrufen, eventuell werden sie an eine andere Praxis verwiesen.",
         "fr": "Urgences et soins urgents 24 h/24, 7 j/7, 365 j/an : appelez le 250-766-3236 et appuyez sur 1 pour joindre l’équipe vétérinaire. Horaires habituels : lun.–ven. 8 h–19 h, sam.–dim. 9 h–17 h. Oiseaux et animaux exotiques : appelez avant de venir, ils pourraient être dirigés ailleurs.",
         "es": "Urgencias y atención urgente las 24 horas, los 365 días del año: llama al 250-766-3236 y pulsa 1 para el equipo veterinario. Horario habitual: lun–vie 8:00–19:00 h, sáb–dom 9:00–17:00 h. Aves y mascotas exóticas: llama antes, pueden derivarte a otro centro.",
-        "it": "Pronto soccorso e assistenza urgente 24 ore su 24, 7 giorni su 7, 365 giorni all'anno: chiamare il 250-766-3236 e premere 1 per il team veterinario. Orario normale lun–ven 8:00–19:00, sab–dom 9:00–17:00. Uccelli e animali esotici: telefonare prima, potrebbero essere indirizzati altrove."
+        "it": "Pronto soccorso e assistenza urgente 24 ore su 24, 7 giorni su 7, 365 giorni all'anno: chiamare il 250-766-3236 e premere 1 per il team veterinario. Orario normale lun–ven 8:00–19:00, sab–dom 9:00–17:00. Uccelli e animali esotici: telefonare prima, potrebbero essere indirizzati altrove.",
+        "pt": "Urgências e cuidados urgentes disponíveis 24 h/24, 7 dias por semana, 365 dias por ano: liga para 250-766-3236 e prime 1 para falar com a equipa veterinária. Horário normal seg.–sex. 8h00–19h00, sáb.–dom. 9h00–17h00. Aves e animais exóticos: liga antes, pois podem ser encaminhados para outro local."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/trilake/primary",
@@ -1181,7 +1228,8 @@
         "de": "Rund um die Uhr für dringende Fälle geöffnet, 365 Tage im Jahr. Ohne Termin, telefonisch oder auf Überweisung einer Tierarztpraxis.",
         "fr": "Ouvert 24 h/24, 365 j/an, pour les soins urgents. Sans rendez-vous, par téléphone ou sur recommandation de votre vétérinaire traitant.",
         "es": "Abierto las 24 horas, los 365 días del año, para atención urgente. Sin cita, por teléfono o derivado por el veterinario de cabecera.",
-        "it": "Aperto 24 ore su 24, 365 giorni all'anno, per le urgenze. Accesso diretto, per telefono o su invio del veterinario di famiglia."
+        "it": "Aperto 24 ore su 24, 365 giorni all'anno, per le urgenze. Accesso diretto, per telefono o su invio del veterinario di famiglia.",
+        "pt": "Aberto 24 horas por dia, 365 dias por ano, para cuidados urgentes. Sem marcação, por telefone ou por encaminhamento do veterinário habitual."
       },
       "small_animals": true,
       "url": "https://phasesvetemerg.com/",
@@ -1203,7 +1251,8 @@
         "de": "Nicht täglich geöffnet; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Pas ouvert 7 j/7 ; appelez pour vérifier les horaires.",
         "es": "No abre los 7 días de la semana; llama antes para confirmar el horario.",
-        "it": "Non aperto 7 giorni su 7; telefonare prima per verificare gli orari."
+        "it": "Non aperto 7 giorni su 7; telefonare prima per verificare gli orari.",
+        "pt": "Não abre 7 dias por semana; liga antes para confirmar o horário."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/shamrock/our-hospital/in-an-emergency",
@@ -1225,7 +1274,8 @@
         "de": "Mo–Fr 8–17.30 Uhr, an gesetzlichen Feiertagen geschlossen. Gemeinnützige Tierklinik mit vollem Leistungsumfang, für alle zugänglich. BC SPCA Animal Helpline 1-855-622-7722.",
         "fr": "Lun.–ven. 8 h–17 h 30, fermé les jours fériés. Hôpital à but non lucratif offrant tous les services, ouvert au public. BC SPCA Animal Helpline : 1-855-622-7722.",
         "es": "Lun–vie 8:00–17:30 h, cerrado en festivos. Hospital sin ánimo de lucro con servicio completo, abierto al público. Línea de ayuda animal BC SPCA 1-855-622-7722.",
-        "it": "Lun–ven 8:00–17:30, chiuso nei festivi ufficiali. Ospedale a servizio completo, senza scopo di lucro, aperto al pubblico. BC SPCA Animal Helpline 1-855-622-7722."
+        "it": "Lun–ven 8:00–17:30, chiuso nei festivi ufficiali. Ospedale a servizio completo, senza scopo di lucro, aperto al pubblico. BC SPCA Animal Helpline 1-855-622-7722.",
+        "pt": "Seg.–sex. 8h00–17h30, encerrado nos feriados oficiais. Hospital completo sem fins lucrativos, aberto ao público. Linha de apoio animal da BC SPCA 1-855-622-7722."
       },
       "small_animals": true,
       "url": "https://spca.bc.ca/locations/bcspca-hospital/",
@@ -1247,7 +1297,8 @@
         "de": "Reine Katzenklinik. Mo–Fr 8–18 Uhr, Sa 8–16 Uhr, So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Hôpital réservé aux chats. Lun.–ven. 8 h–18 h, sam. 8 h–16 h, fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Hospital solo para gatos. Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h, dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Ospedale solo per gatti. Lun–ven 8:00–18:00, sab 8:00–16:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Ospedale solo per gatti. Lun–ven 8:00–18:00, sab 8:00–16:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Hospital só para gatos. Seg.–sex. 8h00–18h00, sáb. 8h00–16h00, domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/catsonly",
@@ -1269,7 +1320,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 9–17 Uhr, So geschlossen; täglich 13–14 Uhr geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–17 h, fermé le dimanche ; fermé tous les jours de 13 h à 14 h. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–17:00 h, dom cerrado; cierra de 13:00 a 14:00 h todos los días. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:00–18:00, sab 9:00–17:00, dom chiuso; chiuso ogni giorno 13:00–14:00. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 8:00–18:00, sab 9:00–17:00, dom chiuso; chiuso ogni giorno 13:00–14:00. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 8h00–18h00, sáb. 9h00–17h00, domingo encerrado; encerra todos os dias das 13h00 às 14h00. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/highlands",
@@ -1291,7 +1343,8 @@
         "de": "Mo–Fr 8–20 Uhr, Sa 9–17 Uhr, So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–17 h, fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:00–20:00 h, sáb 9:00–17:00 h, dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:00–20:00, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 8:00–20:00, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 8h00–20h00, sáb. 9h00–17h00, domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/lynnvalley",
@@ -1313,7 +1366,8 @@
         "de": "Mo, Di und Fr 8–17 Uhr, Mi–Do 8–18 Uhr, Sa 8–17 Uhr, So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–mar. et ven. 8 h–17 h, mer.–jeu. 8 h–18 h, sam. 8 h–17 h, fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–mar y vie 8:00–17:00 h, mié–jue 8:00–18:00 h, sáb 8:00–17:00 h, dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–mar e ven 8:00–17:00, mer–gio 8:00–18:00, sab 8:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–mar e ven 8:00–17:00, mer–gio 8:00–18:00, sab 8:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–ter. e sex. 8h00–17h00, qua.–qui. 8h00–18h00, sáb. 8h00–17h00, domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/comolake",
@@ -1335,7 +1389,8 @@
         "de": "Mo–Fr 9–18 Uhr, Sa 9–17 Uhr, So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–17 h, fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 9:00–18:00 h, sáb 9:00–17:00 h, dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 9:00–18:00, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 9:00–18:00, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 9h00–18h00, sáb. 9h00–17h00, domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/healingpaws",
@@ -1357,7 +1412,8 @@
         "de": "Mo–Fr 8–17.30 Uhr, Sa 9–17 Uhr (Tierarztbesetzung am Samstag variiert), So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–17 h (horaires des vétérinaires variables le samedi), fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:00–17:30 h, sáb 9:00–17:00 h (el horario de los veterinarios los sábados varía), dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:00–17:30, sab 9:00–17:00 (l'orario dei medici il sabato varia), dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 8:00–17:30, sab 9:00–17:00 (l'orario dei medici il sabato varia), dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 8h00–17h30, sáb. 9h00–17h00 (o horário dos médicos ao sábado varia), domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/feltham",
@@ -1379,7 +1435,8 @@
         "de": "Mo, Di, Do und Fr 9–17 Uhr, Mi 10–19 Uhr, Sa–So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun., mar., jeu., ven. 9 h–17 h, mer. 10 h–19 h, fermé le week-end. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun, mar, jue y vie 9:00–17:00 h, mié 10:00–19:00 h, sáb–dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun, mar, gio, ven 9:00–17:00, mer 10:00–19:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun, mar, gio, ven 9:00–17:00, mer 10:00–19:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg., ter., qui. e sex. 9h00–17h00, qua. 10h00–19h00, sáb.–dom. encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/centralsaanich",
@@ -1401,7 +1458,8 @@
         "de": "Mo–Fr 7.30–17.30 Uhr, Sa 9–17 Uhr, So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 7 h 30–17 h 30, sam. 9 h–17 h, fermé le dimanche. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 7:30–17:30 h, sáb 9:00–17:00 h, dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 7:30–17:30, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 7:30–17:30, sab 9:00–17:00, dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 7h30–17h30, sáb. 9h00–17h00, domingo encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/island",
@@ -1423,7 +1481,8 @@
         "de": "Mo–Fr 8.30–17.30 Uhr, Sa–So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h 30–17 h 30, fermé le week-end. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:30–17:30 h, sáb–dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:30–17:30, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 8:30–17:30, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 8h30–17h30, sáb.–dom. encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/applecrossbc",
@@ -1445,7 +1504,8 @@
         "de": "Mo–Fr 9–17 Uhr, Sa–So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 9 h–17 h, fermé le week-end. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 9:00–17:00 h, sáb–dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 9:00–17:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 9:00–17:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 9h00–17h00, sáb.–dom. encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/shamrock",
@@ -1467,7 +1527,8 @@
         "de": "Mo–Fr 8–17 Uhr, Sa–So geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt; bitte vorher anrufen.",
         "fr": "Lun.–ven. 8 h–17 h, fermé le week-end. Les cas urgents sont reçus uniquement pendant les heures d’ouverture ; appelez d’abord.",
         "es": "Lun–vie 8:00–17:00 h, sáb–dom cerrado. Las urgencias se atienden solo en horario de apertura; llama antes.",
-        "it": "Lun–ven 8:00–17:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima."
+        "it": "Lun–ven 8:00–17:00, sab–dom chiuso. Le urgenze sono accolte solo in orario di apertura; telefonare prima.",
+        "pt": "Seg.–sex. 8h00–17h00, sáb.–dom. encerrado. Os casos urgentes são atendidos apenas durante o horário de funcionamento; liga antes."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/ladysmith",
@@ -1489,7 +1550,8 @@
         "de": "Mo–Do 8–17 Uhr, Fr 8.30–17 Uhr, Sa–So geschlossen. Außerhalb der Öffnungszeiten verweist die Klinik an Tierkliniken in Victoria mit Betrieb rund um die Uhr.",
         "fr": "Lun.–jeu. 8 h–17 h, ven. 8 h 30–17 h, fermé le week-end. Hors horaires, la clinique oriente vers les hôpitaux ouverts 24 h/24, 7 j/7 à Victoria.",
         "es": "Lun–jue 8:00–17:00 h, vie 8:30–17:00 h, sáb–dom cerrado. Fuera de horario, la clínica deriva a hospitales 24 horas de Victoria.",
-        "it": "Lun–gio 8:00–17:00, ven 8:30–17:00, sab–dom chiuso. Fuori orario la clinica indirizza agli ospedali aperti 24 ore su 24, 7 giorni su 7 a Victoria."
+        "it": "Lun–gio 8:00–17:00, ven 8:30–17:00, sab–dom chiuso. Fuori orario la clinica indirizza agli ospedali aperti 24 ore su 24, 7 giorni su 7 a Victoria.",
+        "pt": "Seg.–qui. 8h00–17h00, sex. 8h30–17h00, sáb.–dom. encerrado. Fora do horário, a clínica encaminha para hospitais abertos 24 h/24 em Victoria."
       },
       "small_animals": true,
       "url": "https://nanaimovet.com/",
@@ -1511,7 +1573,8 @@
         "de": "Für Notfälle außerhalb der Öffnungszeiten 250-757-9911 anrufen und den Ansagen folgen; die Klinik verweist Notfälle nach Nanaimo.",
         "fr": "Pour les urgences hors horaires, appelez le 250-757-9911 et suivez les instructions ; la clinique oriente les urgences vers Nanaimo.",
         "es": "Llama al 250-757-9911 y sigue las indicaciones para urgencias fuera de horario; la clínica deriva las urgencias a Nanaimo.",
-        "it": "Chiamare il 250-757-9911 e seguire le istruzioni per le emergenze fuori orario; la clinica indirizza le emergenze a Nanaimo."
+        "it": "Chiamare il 250-757-9911 e seguire le istruzioni per le emergenze fuori orario; la clinica indirizza le emergenze a Nanaimo.",
+        "pt": "Liga para 250-757-9911 e segue as indicações para urgências fora do horário; a clínica encaminha as urgências para Nanaimo."
       },
       "small_animals": true,
       "url": "https://www.lighthousevet.ca/",
@@ -1533,7 +1596,8 @@
         "de": "Mo 9–17.30 Uhr, Di–Fr 8.30–19 Uhr, Sa 9–17 Uhr, So geschlossen. Außerhalb der Öffnungszeiten: Central Victoria Veterinary Hospital, 250-475-2495 (rund um die Uhr geöffnet).",
         "fr": "Lun. 9 h–17 h 30, mar.–ven. 8 h 30–19 h, sam. 9 h–17 h, fermé le dimanche. Hors horaires : Central Victoria Veterinary Hospital, 250-475-2495 (ouvert 24 h/24, 7 j/7).",
         "es": "Lun 9:00–17:30 h, mar–vie 8:30–19:00 h, sáb 9:00–17:00 h, dom cerrado. Fuera de horario: Central Victoria Veterinary Hospital, 250-475-2495 (abierto las 24 horas).",
-        "it": "Lun 9:00–17:30, mar–ven 8:30–19:00, sab 9:00–17:00, dom chiuso. Fuori orario: Central Victoria Veterinary Hospital, 250-475-2495 (aperto 24 ore su 24, 7 giorni su 7)."
+        "it": "Lun 9:00–17:30, mar–ven 8:30–19:00, sab 9:00–17:00, dom chiuso. Fuori orario: Central Victoria Veterinary Hospital, 250-475-2495 (aperto 24 ore su 24, 7 giorni su 7).",
+        "pt": "Seg. 9h00–17h30, ter.–sex. 8h30–19h00, sáb. 9h00–17h00, domingo encerrado. Fora do horário: Central Victoria Veterinary Hospital, 250-475-2495 (aberto 24 h/24)."
       },
       "small_animals": true,
       "url": "https://www.beaconpethospital.ca/",
@@ -1555,7 +1619,8 @@
         "de": "Täglich rund um die Uhr geöffnet, 365 Tage im Jahr. Überweisungstermine nur wochentags.",
         "fr": "Ouvert 24 h/24, 7 j/7, 365 j/an. Rendez-vous de référence en semaine uniquement.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año. Las citas de derivación son solo entre semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Appuntamenti su invio solo nei giorni feriali."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Appuntamenti su invio solo nei giorni feriali.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Consultas de referenciação apenas em dias úteis."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/care",
@@ -1576,7 +1641,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 horas, 7 dias por semana."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/calgarynorth/specialty",
@@ -1597,7 +1663,8 @@
         "de": "Notdienstzeiten derzeit täglich 8–22 Uhr; außerhalb dieser Zeiten bitte das CARE Centre oder Calgary North aufsuchen.",
         "fr": "Urgences actuellement tous les jours 8 h–22 h ; hors horaires, adressez-vous au CARE Centre ou à Calgary North.",
         "es": "Horario de urgencias actual de 8:00 a 22:00 h todos los días; fuera de horario, acude a CARE Centre o Calgary North.",
-        "it": "Pronto soccorso attualmente dalle 8:00 alle 22:00, tutti i giorni; fuori orario rivolgersi al CARE Centre o a Calgary North."
+        "it": "Pronto soccorso attualmente dalle 8:00 alle 22:00, tutti i giorni; fuori orario rivolgersi al CARE Centre o a Calgary North.",
+        "pt": "Horário de urgências atual: 8h00–22h00, todos os dias; fora do horário, recorre ao CARE Centre ou ao Calgary North."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/western",
@@ -1619,7 +1686,8 @@
         "de": "Di 8–18 Uhr, Mi–Do 8–20 Uhr, Fr 8–19 Uhr, Sa 8–18 Uhr; So und Mo geschlossen. Außerhalb der Öffnungszeiten bitte eine rund um die Uhr geöffnete Notfallklinik aufsuchen (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
         "fr": "Mar. 8 h–18 h, mer.–jeu. 8 h–20 h, ven. 8 h–19 h, sam. 8 h–18 h ; fermé le dimanche et le lundi. Hors horaires, adressez-vous à un hôpital d’urgences ouvert 24 h/24 (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
         "es": "Mar 8:00–18:00 h, mié–jue 8:00–20:00 h, vie 8:00–19:00 h, sáb 8:00–18:00 h; dom y lun cerrado. Fuera de horario, acude a un hospital de urgencias 24 horas (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
-        "it": "Mar 8–18, mer–gio 8–20, ven 8–19, sab 8–18; chiuso dom e lun. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24 (CARE Centre 403-520-8387, Calgary North 403-277-0135)."
+        "it": "Mar 8–18, mer–gio 8–20, ven 8–19, sab 8–18; chiuso dom e lun. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24 (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
+        "pt": "Ter. 8h00–18h00, qua.–qui. 8h00–20h00, sex. 8h00–19h00, sáb. 8h00–18h00; encerrado ao domingo e à segunda. Fora do horário, recorre a um hospital de urgências aberto 24 horas (CARE Centre 403-520-8387, Calgary North 403-277-0135)."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/district/our-hospital/in-an-emergency",
@@ -1639,7 +1707,8 @@
         "de": "Mo–Fr 8.30–17 Uhr; am Wochenende geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt.",
         "fr": "Lun.–ven. 8 h 30–17 h ; fermé le week-end. Urgences prises en charge uniquement pendant les heures d’ouverture.",
         "es": "Lun–vie 8:30–17:00 h; fines de semana cerrado. Las urgencias se atienden solo en horario de apertura.",
-        "it": "Lun–ven 8:30–17:00; chiuso nel fine settimana. I pazienti urgenti sono visitati solo in orario di apertura."
+        "it": "Lun–ven 8:30–17:00; chiuso nel fine settimana. I pazienti urgenti sono visitati solo in orario di apertura.",
+        "pt": "Seg.–sex. 8h30–17h00; encerrado aos fins de semana. Casos urgentes atendidos apenas durante o horário de funcionamento."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/17th/hospital/in-an-emergency",
@@ -1659,7 +1728,8 @@
         "de": "Notdienst täglich rund um die Uhr geöffnet. Spezialsprechstunden nach Termin wochentags.",
         "fr": "Urgences ouvertes 24 h/24, 7 j/7. Spécialités sur rendez-vous en semaine.",
         "es": "Urgencias abiertas las 24 horas, de lunes a domingo. Especialidades con cita previa entre semana.",
-        "it": "Pronto soccorso aperto 24 ore su 24, dal lunedì alla domenica. Visite specialistiche su appuntamento nei giorni feriali."
+        "it": "Pronto soccorso aperto 24 ore su 24, dal lunedì alla domenica. Visite specialistiche su appuntamento nei giorni feriali.",
+        "pt": "Urgências abertas 24 horas, de segunda a domingo. Especialidades sob marcação em dias úteis."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/guardian",
@@ -1680,7 +1750,8 @@
         "de": "Rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 h/24, 7 dias por semana."
       },
       "small_animals": true,
       "source_url": "https://bellerivepethospital.com/emergencies.pml",
@@ -1714,7 +1785,8 @@
         "de": "Notfall- und Spezialklinik. Notdienstzeiten bitte telefonisch erfragen.",
         "fr": "Hôpital d’urgences et de spécialités. Appelez pour confirmer les heures des urgences.",
         "es": "Hospital de urgencias y especialidades. Llama antes para confirmar el horario de urgencias.",
-        "it": "Ospedale di pronto soccorso e specialistico. Chiamare prima per confermare gli orari del pronto soccorso."
+        "it": "Ospedale di pronto soccorso e specialistico. Chiamare prima per confermare gli orari del pronto soccorso.",
+        "pt": "Hospital de urgências e especialidades. Liga antes para confirmar o horário das urgências."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/alberta",
@@ -1807,7 +1879,8 @@
         "de": "Notdienst außerhalb der Öffnungszeiten vorhanden (bitte in der Klinik anrufen).",
         "fr": "Services en dehors des heures d’ouverture (appelez la clinique).",
         "es": "Ofrece servicio fuera de horario (llama a la clínica).",
-        "it": "Offre servizi fuori orario (telefonare alla clinica)."
+        "it": "Offre servizi fuori orario (telefonare alla clinica).",
+        "pt": "Oferece serviços fora do horário (liga para a clínica)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/alberta",
@@ -1840,7 +1913,8 @@
         "de": "Mo–Fr 8–18 Uhr; am Wochenende geschlossen.",
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end.",
         "es": "Lun–vie 8:00–18:00 h; fines de semana cerrado.",
-        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana."
+        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana.",
+        "pt": "Seg.–sex. 8h00–18h00; encerrado aos fins de semana."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/whitemud/contact-us",
@@ -1860,7 +1934,8 @@
         "de": "Notdienst rund um die Uhr, auch an gesetzlichen Feiertagen, 365 Tage im Jahr. Bitte vor dem Kommen anrufen. Von 22 bis 7.30 Uhr kann die Aufnahme auf lebensbedrohliche Fälle beschränkt sein. Für Notfälle fallen Gebühren an.",
         "fr": "Urgences 24 h/24, 7 j/7, jours fériés compris, 365 jours par an. Appelez avant de venir. De 22 h à 7 h 30, la prise en charge peut être limitée aux cas mettant la vie en danger. Frais d’urgence applicables.",
         "es": "Urgencias las 24 horas, también festivos, los 365 días del año. Llama antes de ir. De 22:00 a 7:30 h la admisión puede limitarse a casos con riesgo vital. Se aplican tarifas de urgencias.",
-        "it": "Pronto soccorso 24 ore su 24, festivi inclusi, 365 giorni all'anno. Telefonare prima di recarsi. Dalle 22:00 alle 7:30 l'accettazione può essere limitata ai casi in pericolo di vita. Si applicano tariffe d'urgenza."
+        "it": "Pronto soccorso 24 ore su 24, festivi inclusi, 365 giorni all'anno. Telefonare prima di recarsi. Dalle 22:00 alle 7:30 l'accettazione può essere limitata ai casi in pericolo di vita. Si applicano tariffe d'urgenza.",
+        "pt": "Urgências 24 h/24, incluindo feriados oficiais, 365 dias por ano. Liga antes de ires. Das 22h00 às 7h30 a admissão pode limitar-se a casos que ponham a vida em risco. Aplicam-se taxas de urgência."
       },
       "small_animals": true,
       "url": "https://vmc.usask.ca/",
@@ -1882,7 +1957,8 @@
         "de": "Mo–Fr 8–18 Uhr; am Wochenende geschlossen. Dringende Fälle werden nur während der Öffnungszeiten behandelt.",
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end. Urgences prises en charge uniquement pendant les heures d’ouverture.",
         "es": "Lun–vie 8:00–18:00 h; fines de semana cerrado. Las urgencias se atienden solo en horario de apertura.",
-        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana. I pazienti urgenti sono visitati solo in orario di apertura."
+        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana. I pazienti urgenti sono visitati solo in orario di apertura.",
+        "pt": "Seg.–sex. 8h00–18h00; encerrado aos fins de semana. Casos urgentes atendidos apenas durante o horário de funcionamento."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/lakeview/hospital/in-an-emergency",
@@ -1902,7 +1978,8 @@
         "de": "Mo–Mi 8–18 Uhr, Do–Fr 8–20 Uhr, Sa 9–17 Uhr; So geschlossen. Außerhalb der Öffnungszeiten: Small Animal Clinic am WCVM, 306-966-7126.",
         "fr": "Lun.–mer. 8 h–18 h, jeu.–ven. 8 h–20 h, sam. 9 h–17 h ; fermé le dim. En dehors des heures d’ouverture : Small Animal Clinic du WCVM, 306-966-7126.",
         "es": "Lun–mié 8:00–18:00 h, jue–vie 8:00–20:00 h, sáb 9:00–17:00 h; dom cerrado. Fuera de horario: Small Animal Clinic at WCVM, 306-966-7126.",
-        "it": "Lun–mer 8–18, gio–ven 8–20, sab 9–17; chiuso dom. Fuori orario: Small Animal Clinic del WCVM, 306-966-7126."
+        "it": "Lun–mer 8–18, gio–ven 8–20, sab 9–17; chiuso dom. Fuori orario: Small Animal Clinic del WCVM, 306-966-7126.",
+        "pt": "Seg.–qua. 8h00–18h00, qui.–sex. 8h00–20h00, sáb. 9h00–17h00; encerrado ao domingo. Fora do horário: Small Animal Clinic do WCVM, 306-966-7126."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/allwest/our-hospital/in-an-emergency",
@@ -1922,7 +1999,8 @@
         "de": "Notdienst und Akutversorgung außerhalb der Öffnungszeiten für die Region Regina; Tel. 306-761-1449.",
         "fr": "Urgences et soins urgents en dehors des heures d’ouverture pour la région de Regina ; appelez le 306-761-1449.",
         "es": "Urgencias y atención urgente fuera de horario para la zona de Regina; llama al 306-761-1449.",
-        "it": "Pronto soccorso e urgenze fuori orario per l'area di Regina; chiamare il 306-761-1449."
+        "it": "Pronto soccorso e urgenze fuori orario per l'area di Regina; chiamare il 306-761-1449.",
+        "pt": "Urgências e cuidados urgentes fora do horário para a zona de Regina; liga para 306-761-1449."
       },
       "small_animals": true,
       "source_url": "https://careport.squarespace.com/emergency-care",
@@ -1943,7 +2021,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 9–12 Uhr, So geschlossen; nur nach Terminvereinbarung. Außerhalb der Öffnungszeiten: 306-761-1449.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–12 h, fermé le dim. ; sur rendez-vous uniquement. En dehors des heures d’ouverture : 306-761-1449.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, dom cerrado; solo con cita previa. Fuera de horario: 306-761-1449.",
-        "it": "Lun–ven 8–18, sab 9–12, chiuso dom; solo su appuntamento. Fuori orario: 306-761-1449."
+        "it": "Lun–ven 8–18, sab 9–12, chiuso dom; solo su appuntamento. Fuori orario: 306-761-1449.",
+        "pt": "Seg.–sex. 8h00–18h00, sáb. 9h00–12h00, encerrado ao domingo; apenas sob marcação. Fora do horário: 306-761-1449."
       },
       "small_animals": true,
       "source_url": "https://careport.squarespace.com/emergency-care",
@@ -1963,7 +2042,8 @@
         "de": "Tierklinik. Notdienstzeiten bitte telefonisch erfragen.",
         "fr": "Hôpital vétérinaire. Appelez pour confirmer les heures des urgences.",
         "es": "Hospital veterinario. Llama antes para confirmar el horario de urgencias.",
-        "it": "Ospedale veterinario. Chiamare prima per confermare gli orari del pronto soccorso."
+        "it": "Ospedale veterinario. Chiamare prima per confermare gli orari del pronto soccorso.",
+        "pt": "Hospital veterinário. Liga antes para confirmar o horário das urgências."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/manitoba",
@@ -1983,7 +2063,8 @@
         "de": "Notdienst für Kleintiere; Tierarzt und tiermedizinische Fachkraft sind jederzeit im Dienst.",
         "fr": "Urgences pour petits animaux ; vétérinaire et technicien présents en permanence.",
         "es": "Urgencias de pequeños animales; veterinario y técnico de guardia en todo momento.",
-        "it": "Pronto soccorso per piccoli animali; veterinario e tecnico sempre presenti."
+        "it": "Pronto soccorso per piccoli animali; veterinario e tecnico sempre presenti.",
+        "pt": "Urgências para pequenos animais; veterinário e técnico de serviço em permanência."
       },
       "small_animals": true,
       "url": "https://winnipeganimalemergency.ca",
@@ -2005,7 +2086,8 @@
         "de": "An sechs Tagen die Woche geöffnet; außerhalb der Öffnungszeiten 204-452-0911 anrufen. Nächster Notdienst: Winnipeg Animal Emergency Hospital.",
         "fr": "Ouvert six jours sur sept ; en dehors des heures d’ouverture, appelez le 204-452-0911. Urgences les plus proches : Winnipeg Animal Emergency Hospital.",
         "es": "Abierto seis días a la semana; fuera de horario llama al 204-452-0911. Urgencias más cercanas: Winnipeg Animal Emergency Hospital.",
-        "it": "Aperto sei giorni su sette; fuori orario chiamare il 204-452-0911. Pronto soccorso più vicino: Winnipeg Animal Emergency Hospital."
+        "it": "Aperto sei giorni su sette; fuori orario chiamare il 204-452-0911. Pronto soccorso più vicino: Winnipeg Animal Emergency Hospital.",
+        "pt": "Aberto seis dias por semana; fora do horário, liga para 204-452-0911. Urgências mais próximas: Winnipeg Animal Emergency Hospital."
       },
       "small_animals": true,
       "source_url": "https://www.corydonanimalhospital.ca/dog/dog-emergency-vet",
@@ -2025,7 +2107,8 @@
         "de": "Mo–Fr 8.30–17 Uhr; am Wochenende geschlossen. Bei Bedarf Notdienst außerhalb der Öffnungszeiten für das Einzugsgebiet der Klinik.",
         "fr": "Lun.–ven. 8 h 30–17 h ; fermé le week-end. Urgences en dehors des heures d’ouverture dans sa zone de desserte, si nécessaire.",
         "es": "Lun–vie 8:30–17:00 h; fines de semana cerrado. Urgencias fuera de horario en su zona de servicio si es necesario.",
-        "it": "Lun–ven 8:30–17:00; chiuso nel fine settimana. Se necessario, gestisce le urgenze fuori orario per la propria area di servizio."
+        "it": "Lun–ven 8:30–17:00; chiuso nel fine settimana. Se necessario, gestisce le urgenze fuori orario per la propria area di servizio.",
+        "pt": "Seg.–sex. 8h30–17h00; encerrado aos fins de semana. Urgências fora do horário para a sua área de atuação, se necessário."
       },
       "small_animals": true,
       "url": "https://swanvalleyvetclinic.com",
@@ -2071,7 +2154,8 @@
         "de": "Notdienst außerhalb der Öffnungszeiten vorhanden (bitte in der Klinik anrufen).",
         "fr": "Services en dehors des heures d’ouverture (appelez la clinique).",
         "es": "Ofrece servicio fuera de horario (llama a la clínica).",
-        "it": "Offre servizi fuori orario (telefonare alla clinica)."
+        "it": "Offre servizi fuori orario (telefonare alla clinica).",
+        "pt": "Oferece serviços fora do horário (liga para a clínica)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/manitoba",
@@ -2092,7 +2176,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 horas, 7 dias por semana."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2113,7 +2198,8 @@
         "de": "Täglich rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Aberto 24 horas, 7 dias por semana."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2134,7 +2220,8 @@
         "de": "Notdienstklinik, rund um die Uhr geöffnet, außer mittwochs.",
         "fr": "Clinique d’urgences, ouverte 24 h/24 sauf le mercredi.",
         "es": "Clínica de urgencias abierta las 24 horas, excepto los miércoles.",
-        "it": "Clinica di pronto soccorso, aperta 24 ore su 24 tranne il mercoledì."
+        "it": "Clinica di pronto soccorso, aperta 24 ore su 24 tranne il mercoledì.",
+        "pt": "Clínica de urgências, aberta 24 horas por dia, exceto às quartas-feiras."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2155,7 +2242,8 @@
         "de": "Akutversorgung täglich 10–20 Uhr.",
         "fr": "Soins urgents 7 j/7, 10 h–20 h.",
         "es": "Atención urgente los 7 días de la semana, de 10:00 a 20:00 h.",
-        "it": "Urgenze 7 giorni su 7, 10:00–20:00."
+        "it": "Urgenze 7 giorni su 7, 10:00–20:00.",
+        "pt": "Cuidados urgentes 7 dias por semana, 10h00–20h00."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2175,7 +2263,8 @@
         "de": "Akutversorgung täglich 7–23 Uhr.",
         "fr": "Soins urgents 7 j/7, 7 h–23 h.",
         "es": "Atención urgente los 7 días de la semana, de 7:00 a 23:00 h.",
-        "it": "Urgenze 7 giorni su 7, 7:00–23:00."
+        "it": "Urgenze 7 giorni su 7, 7:00–23:00.",
+        "pt": "Cuidados urgentes 7 dias por semana, 7h00–23h00."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2195,7 +2284,8 @@
         "de": "Mo–Fr 7.30–20 Uhr, Sa 9–15 Uhr; So geschlossen. Außerhalb der Öffnungszeiten bitte eine rund um die Uhr geöffnete Notfallklinik in Halifax/Dartmouth aufsuchen.",
         "fr": "Lun.–ven. 7 h 30–20 h, sam. 9 h–15 h ; fermé le dim. En dehors des heures d’ouverture, rendez-vous dans un hôpital d’urgences ouvert 24 h/24 à Halifax/Dartmouth.",
         "es": "Lun–vie 7:30–20:00 h, sáb 9:00–15:00 h; dom cerrado. Fuera de horario, acude a un hospital de urgencias 24 horas en Halifax/Dartmouth.",
-        "it": "Lun–ven 7:30–20:00, sab 9:00–15:00; chiuso dom. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24 a Halifax/Dartmouth."
+        "it": "Lun–ven 7:30–20:00, sab 9:00–15:00; chiuso dom. Fuori orario rivolgersi a un ospedale di pronto soccorso aperto 24 ore su 24 a Halifax/Dartmouth.",
+        "pt": "Seg.–sex. 7h30–20h00, sáb. 9h00–15h00; encerrado ao domingo. Fora do horário, recorre a um hospital de urgências aberto 24 horas em Halifax/Dartmouth."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2215,7 +2305,8 @@
         "de": "Nur nach Terminvereinbarung. Außerhalb der Öffnungszeiten: Videosprechstunde mit einem Tierarzt über VetTriage rund um die Uhr, Gebühr USD 50; Notfälle vor Ort werden an die Metro Animal Emergency Clinic in Dartmouth verwiesen.",
         "fr": "Sur rendez-vous. En dehors des heures d’ouverture : téléconsultation vidéo avec un vétérinaire via VetTriage 24 h/24, 7 j/7 (50 USD) ; urgences en personne orientées vers Metro Animal Emergency Clinic à Dartmouth.",
         "es": "Con cita previa. Fuera de horario: videoconsulta con un veterinario por VetTriage las 24 horas (tarifa de 50 USD); las urgencias presenciales se derivan a Metro Animal Emergency Clinic en Dartmouth.",
-        "it": "Su appuntamento. Fuori orario: videoconsulto con un veterinario tramite VetTriage 24 ore su 24, 7 giorni su 7 (costo USD 50); le emergenze in presenza vengono indirizzate al Metro Animal Emergency Clinic di Dartmouth."
+        "it": "Su appuntamento. Fuori orario: videoconsulto con un veterinario tramite VetTriage 24 ore su 24, 7 giorni su 7 (costo USD 50); le emergenze in presenza vengono indirizzate al Metro Animal Emergency Clinic di Dartmouth.",
+        "pt": "Sob marcação. Fora do horário: videoconsulta com um veterinário através da VetTriage, 24 h/24, 7 dias por semana (taxa de USD 50); urgências presenciais encaminhadas para a Metro Animal Emergency Clinic, em Dartmouth."
       },
       "small_animals": true,
       "url": "https://www.novascotiaspca.ca",
@@ -2236,7 +2327,8 @@
         "de": "Akut- und Notfallversorgung für Kleintiere täglich 8–23 Uhr; bitte zuerst 902-566-0950 anrufen. Empfang 8–23 Uhr besetzt.",
         "fr": "Soins urgents et urgences pour petits animaux 8 h–23 h, 7 j/7 ; appelez d’abord le 902-566-0950. Accueil assuré de 8 h à 23 h.",
         "es": "Urgencias y atención urgente de pequeños animales de 8:00 a 23:00 h, los 7 días de la semana; llama primero al 902-566-0950. Recepción atendida de 8:00 a 23:00 h.",
-        "it": "Urgenze e pronto soccorso per piccoli animali dalle 8:00 alle 23:00, 7 giorni su 7; chiamare prima il 902-566-0950. Reception aperta dalle 8:00 alle 23:00."
+        "it": "Urgenze e pronto soccorso per piccoli animali dalle 8:00 alle 23:00, 7 giorni su 7; chiamare prima il 902-566-0950. Reception aperta dalle 8:00 alle 23:00.",
+        "pt": "Urgências e cuidados urgentes para pequenos animais das 8h00 às 23h00, 7 dias por semana; liga primeiro para 902-566-0950. Receção com atendimento das 8h00 às 23h00."
       },
       "small_animals": true,
       "url": "https://vth.upei.ca",
@@ -2258,7 +2350,8 @@
         "de": "Täglich 8–19 Uhr geöffnet (seit Juli 2024); Notfälle außerhalb der Öffnungszeiten übernimmt eine gemeinsame Bereitschaftsgruppe lokaler Praxen.",
         "fr": "Ouvert 8 h–19 h, 7 j/7 (depuis juillet 2024) ; les urgences en dehors des heures d’ouverture sont assurées par un groupe de garde partagé de cliniques locales.",
         "es": "Abierto de 8:00 a 19:00 h, los 7 días de la semana (desde julio de 2024); las urgencias fuera de horario las atiende un grupo de guardia compartido de clínicas locales.",
-        "it": "Aperto 8:00–19:00, 7 giorni su 7 (da luglio 2024); le emergenze fuori orario sono gestite da un gruppo di reperibilità condiviso tra cliniche locali."
+        "it": "Aperto 8:00–19:00, 7 giorni su 7 (da luglio 2024); le emergenze fuori orario sono gestite da un gruppo di reperibilità condiviso tra cliniche locali.",
+        "pt": "Aberto das 8h00 às 19h00, 7 dias por semana (desde julho de 2024); as urgências fora do horário são asseguradas por um grupo de piquete partilhado entre clínicas locais."
       },
       "small_animals": true,
       "url": "https://vscnl.ca",
@@ -2280,7 +2373,8 @@
         "de": "Lokale Praxen teilen sich den Notdienst außerhalb der Öffnungszeiten; unter 709-754-1750 werden Sie mit der gemeinsamen Notfall-Triage-Gruppe verbunden.",
         "fr": "Les cliniques locales se partagent les urgences en dehors des heures d’ouverture ; appelez le 709-754-1750 pour être mis en relation avec le groupe de tri des urgences.",
         "es": "Las clínicas locales comparten la cobertura de urgencias fuera de horario; llama al 709-754-1750 para que te pongan en contacto con el grupo de triaje de urgencias colaborativo.",
-        "it": "Le cliniche locali condividono il pronto soccorso fuori orario; chiamare il 709-754-1750 per essere messi in contatto con il gruppo collaborativo di triage per le emergenze."
+        "it": "Le cliniche locali condividono il pronto soccorso fuori orario; chiamare il 709-754-1750 per essere messi in contatto con il gruppo collaborativo di triage per le emergenze.",
+        "pt": "As clínicas locais partilham o atendimento de urgências fora do horário; liga para 709-754-1750 para seres ligado ao grupo colaborativo de triagem de urgências."
       },
       "small_animals": true,
       "source_url": "https://avalonanimalhospital.squarespace.com/emergency",
@@ -2301,7 +2395,8 @@
         "de": "Mo und Di 8–17 Uhr, Mi und Do 8–18 Uhr, Fr 8–17 Uhr; am Wochenende geschlossen. Außerhalb der Öffnungszeiten unter derselben Nummer die gemeinsame Notfall-Triage-Gruppe anrufen.",
         "fr": "Lun.–mar. 8 h–17 h, mer.–jeu. 8 h–18 h, ven. 8 h–17 h ; fermé le week-end. En dehors des heures d’ouverture, appelez le même numéro pour joindre le groupe de tri des urgences.",
         "es": "Lun–mar 8:00–17:00 h, mié–jue 8:00–18:00 h, vie 8:00–17:00 h; fines de semana cerrado. Fuera de horario, llama al mismo número para el grupo de triaje de urgencias colaborativo.",
-        "it": "Lun–mar 8–17, mer–gio 8–18, ven 8–17; chiuso nel fine settimana. Fuori orario chiamare lo stesso numero per il gruppo collaborativo di triage per le emergenze."
+        "it": "Lun–mar 8–17, mer–gio 8–18, ven 8–17; chiuso nel fine settimana. Fuori orario chiamare lo stesso numero per il gruppo collaborativo di triage per le emergenze.",
+        "pt": "Seg.–ter. 8h00–17h00, qua.–qui. 8h00–18h00, sex. 8h00–17h00; encerrado aos fins de semana. Fora do horário, liga para o mesmo número para o grupo colaborativo de triagem de urgências."
       },
       "small_animals": true,
       "source_url": "https://avalonanimalhospital.squarespace.com/emergency",
@@ -2346,7 +2441,8 @@
         "de": "Notdienst außerhalb der Öffnungszeiten vorhanden (bitte in der Klinik anrufen).",
         "fr": "Services en dehors des heures d’ouverture (appelez la clinique).",
         "es": "Ofrece servicio fuera de horario (llama a la clínica).",
-        "it": "Offre servizi fuori orario (telefonare alla clinica)."
+        "it": "Offre servizi fuori orario (telefonare alla clinica).",
+        "pt": "Oferece serviços fora do horário (liga para a clínica)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/newfoundland-and-labrador",
@@ -2367,7 +2463,8 @@
         "de": "Mo–Fr 7.30–17 Uhr. Für Notfallversorgung rund um die Uhr anrufen oder eine SMS schreiben (Tierarzt für Haustiere rund um die Uhr in Bereitschaft). Großtier-Notfälle werden nicht versorgt.",
         "fr": "Lun.–ven. 7 h 30–17 h. Appelez ou envoyez un SMS pour les urgences 24 h/24 (vétérinaire de garde 24 h/24 pour les animaux de compagnie). Urgences des grands animaux non prises en charge.",
         "es": "Lun–vie 7:30–17:00 h. Llama o envía un mensaje para urgencias las 24 horas (veterinario de guardia las 24 horas para mascotas). No cubre urgencias de animales grandes.",
-        "it": "Lun–ven 7:30–17:00. Chiamare o scrivere per il pronto soccorso 24 ore su 24 (veterinario di guardia 24 ore su 24 per gli animali da compagnia). Non sono coperte le emergenze per grandi animali."
+        "it": "Lun–ven 7:30–17:00. Chiamare o scrivere per il pronto soccorso 24 ore su 24 (veterinario di guardia 24 ore su 24 per gli animali da compagnia). Non sono coperte le emergenze per grandi animali.",
+        "pt": "Seg.–sex. 7h30–17h00. Liga ou envia mensagem para urgências 24 horas (veterinário de piquete 24 horas para animais de estimação). Não inclui urgências de grandes animais."
       },
       "small_animals": true,
       "url": "https://alpinevet.squarespace.com",
@@ -2389,7 +2486,8 @@
         "de": "Täglich rund um die Uhr geöffnet für Notfälle, dringende Fälle und Patienten ohne Termin; reguläre Termine zu den Öffnungszeiten.",
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences, les soins urgents et les consultations sans rendez-vous ; rendez-vous habituels pendant les heures d’ouverture.",
         "es": "Abierto las 24 horas, los 7 días de la semana, para urgencias, atención urgente y sin cita; consultas programadas en horario de clínica.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7 per emergenze, urgenze e accessi senza appuntamento; visite programmate in orario di apertura della clinica."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 per emergenze, urgenze e accessi senza appuntamento; visite programmate in orario di apertura della clinica.",
+        "pt": "Aberto 24 horas, 7 dias por semana, para urgências, cuidados urgentes e atendimento sem marcação; consultas normais durante o horário da clínica."
       },
       "small_animals": true,
       "url": "https://www.riverviewanimalhealthcentre.ca/",
@@ -2411,7 +2509,8 @@
         "de": "Akutversorgung ohne Termin, täglich 12–24 Uhr.",
         "fr": "Soins urgents sans rendez-vous, 12 h–0 h, 7 j/7.",
         "es": "Atención urgente sin cita, de 12:00 a 24:00 h, los 7 días de la semana.",
-        "it": "Urgenze senza appuntamento, 12:00–24:00, 7 giorni su 7."
+        "it": "Urgenze senza appuntamento, 12:00–24:00, 7 giorni su 7.",
+        "pt": "Cuidados urgentes sem marcação, 12h00–24h00, 7 dias por semana."
       },
       "small_animals": true,
       "url": "http://monctonurgentcare.ca/",
@@ -2517,7 +2616,8 @@
         "de": "Reguläre Öffnungszeiten Mo–Fr 7.30–22 Uhr, Sa–So 9–21 Uhr; Notfallnummer außerhalb der Öffnungszeiten (403) 320-5200.",
         "fr": "Heures habituelles : lun.–ven. 7 h 30–22 h, sam.–dim. 9 h–21 h ; ligne d’urgence en dehors des heures d’ouverture : (403) 320-5200.",
         "es": "Horario habitual lun–vie 7:30–22:00 h, sáb–dom 9:00–21:00 h; línea de urgencias fuera de horario (403) 320-5200.",
-        "it": "Orario ordinario lun–ven 7:30–22:00, sab–dom 9:00–21:00; linea di emergenza fuori orario (403) 320-5200."
+        "it": "Orario ordinario lun–ven 7:30–22:00, sab–dom 9:00–21:00; linea di emergenza fuori orario (403) 320-5200.",
+        "pt": "Horário normal seg.–sex. 7h30–22h00, sáb.–dom. 9h00–21h00; linha de urgências fora do horário (403) 320-5200."
       },
       "small_animals": true,
       "url": "https://www.familypet.ca/",
@@ -2538,7 +2638,8 @@
         "de": "Notfall- und Spezialklinik, rund um die Uhr geöffnet.",
         "fr": "Hôpital d’urgences et de spécialités, ouvert 24 h/24, 7 j/7.",
         "es": "Hospital de urgencias y especialidades, abierto las 24 horas.",
-        "it": "Ospedale di pronto soccorso e specialistico, aperto 24 ore su 24, 7 giorni su 7."
+        "it": "Ospedale di pronto soccorso e specialistico, aperto 24 ore su 24, 7 giorni su 7.",
+        "pt": "Hospital de urgências e especialidades, aberto 24 h/24, 7 dias por semana."
       },
       "small_animals": true,
       "url": "https://bbvsh.com/",
@@ -2560,7 +2661,8 @@
         "de": "Täglich rund um die Uhr geöffnet, 365 Tage im Jahr.",
         "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano."
       },
       "small_animals": true,
       "url": "https://animalemerg.com/",
@@ -2582,7 +2684,8 @@
         "de": "Für Notfälle rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences.",
         "es": "Urgencias abiertas las 24 horas.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -2603,7 +2706,8 @@
         "de": "Für Notfälle rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences.",
         "es": "Urgencias abiertas las 24 horas.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências."
       },
       "small_animals": true,
       "source_url": "https://www.bowmanvilleveterinaryclinic.com/emergency",
@@ -2624,7 +2728,8 @@
         "de": "Für Notfälle rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24 pour les urgences.",
         "es": "Abierto las 24 horas para urgencias.",
-        "it": "Aperto 24 ore su 24 per le emergenze."
+        "it": "Aperto 24 ore su 24 per le emergenze.",
+        "pt": "Aberto 24 horas para urgências."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -2645,7 +2750,8 @@
         "de": "Notdienstklinik für die Nacht; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Clinique d’urgences de nuit ; appelez pour connaître les horaires.",
         "es": "Clínica de urgencias nocturna; llama antes para consultar el horario.",
-        "it": "Pronto soccorso notturno; chiamare prima per gli orari."
+        "it": "Pronto soccorso notturno; chiamare prima per gli orari.",
+        "pt": "Clínica de urgências noturna; liga para saber o horário."
       },
       "small_animals": true,
       "url": "http://www.animalemergencydurham.com",
@@ -2667,7 +2773,8 @@
         "de": "Mo–Fr 8:00–16:30 Uhr, Sa 8:00–13:00 Uhr; Notfälle außerhalb der Sprechzeiten übernimmt die Kawartha Veterinary Emergency Clinic, 705-741-5832.",
         "fr": "Lun.–ven. 8 h–16 h 30, sam. 8 h–13 h ; urgences en dehors des heures d’ouverture orientées vers Kawartha Veterinary Emergency Clinic, 705-741-5832.",
         "es": "Lun–vie 8:00–16:30 h, sáb 8:00–13:00 h; las urgencias fuera de horario se atienden en Kawartha Veterinary Emergency Clinic, 705-741-5832.",
-        "it": "Lun–ven 8:00–16:30, sab 8:00–13:00; le emergenze fuori orario vanno al Kawartha Veterinary Emergency Clinic, 705-741-5832."
+        "it": "Lun–ven 8:00–16:30, sab 8:00–13:00; le emergenze fuori orario vanno al Kawartha Veterinary Emergency Clinic, 705-741-5832.",
+        "pt": "Seg.–sex. 8h00–16h30, sáb. 8h00–13h00; as urgências fora do horário são encaminhadas para a Kawartha Veterinary Emergency Clinic, 705-741-5832."
       },
       "small_animals": true,
       "url": "https://haliburtonvets.squarespace.com",
@@ -2688,7 +2795,8 @@
         "de": "Notfälle nur während der Sprechzeiten; außerhalb der Sprechzeiten wenden Sie sich an die 24-Stunden-Notfallkliniken in Kawartha oder Belleville.",
         "fr": "Urgences pendant les heures d’ouverture uniquement ; en dehors, hôpitaux d’urgences ouverts 24 h/24 de Kawartha ou de Belleville.",
         "es": "Urgencias solo en horario de clínica; fuera de horario, acude a los hospitales de urgencias 24 horas de Kawartha o Belleville.",
-        "it": "Emergenze solo in orario di apertura della clinica; fuori orario rivolgersi agli ospedali di pronto soccorso aperti 24 ore su 24 di Kawartha o Belleville."
+        "it": "Emergenze solo in orario di apertura della clinica; fuori orario rivolgersi agli ospedali di pronto soccorso aperti 24 ore su 24 di Kawartha o Belleville.",
+        "pt": "Urgências apenas durante o horário da clínica; fora do horário, recorre aos hospitais de urgências abertos 24 horas de Kawartha ou Belleville."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -2720,7 +2828,8 @@
         "de": "Mo–Fr 8–18 Uhr; am Wochenende geschlossen. In dringenden Fällen bitte anrufen.",
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end. Appelez pour les urgences.",
         "es": "Lun–vie 8:00–18:00 h; fines de semana cerrado. Llama si es urgente.",
-        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana. Chiamare per le urgenze."
+        "it": "Lun–ven 8:00–18:00; chiuso nel fine settimana. Chiamare per le urgenze.",
+        "pt": "Seg.–sex. 8h00–18h00; encerrado aos fins de semana. Liga em caso de necessidade urgente."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/centralsk/contact-us",
@@ -2803,7 +2912,8 @@
         "de": "Mo–Do 8–20 Uhr, Fr 8–19:30 Uhr, Sa 8–13 Uhr, So geschlossen; Notfälle außerhalb der Sprechzeiten über die Metro Animal Emergency Clinic, 902-468-0674.",
         "fr": "Lun.–jeu. 8 h–20 h, ven. 8 h–19 h 30, sam. 8 h–13 h, fermé le dim. ; urgences en dehors des heures d’ouverture via Metro Animal Emergency Clinic, 902-468-0674.",
         "es": "Lun–jue 8:00–20:00 h, vie 8:00–19:30 h, sáb 8:00–13:00 h, dom cerrado; urgencias fuera de horario en Metro Animal Emergency Clinic, 902-468-0674.",
-        "it": "Lun–gio 8:00–20:00, ven 8–19:30, sab 8–13, chiuso dom; emergenze fuori orario tramite Metro Animal Emergency Clinic, 902-468-0674."
+        "it": "Lun–gio 8:00–20:00, ven 8–19:30, sab 8–13, chiuso dom; emergenze fuori orario tramite Metro Animal Emergency Clinic, 902-468-0674.",
+        "pt": "Seg.–qui. 8h00–20h00, sex. 8h00–19h30, sáb. 8h00–13h00, encerrado ao domingo; urgências fora do horário através da Metro Animal Emergency Clinic, 902-468-0674."
       },
       "small_animals": true,
       "source_url": "https://web4q.lifelearn.com/carnegyah/?p=26",
@@ -2822,7 +2932,8 @@
         "de": "Zahnbehandlungen und Notdienst.",
         "fr": "Soins dentaires et urgences.",
         "es": "Servicios dentales y de urgencias.",
-        "it": "Servizi odontoiatrici e di pronto soccorso."
+        "it": "Servizi odontoiatrici e di pronto soccorso.",
+        "pt": "Serviços de medicina dentária e urgências."
       },
       "small_animals": true,
       "url": "http://horizonveterinaryservices.com",

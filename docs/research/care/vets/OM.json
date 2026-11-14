@@ -34,7 +34,8 @@
       "checked": "2026-11-12",
       "note": "about-us page says '24hr emergency service available' with call button 92703273; contact page labels 92703273 'Emergency line' but gives no 24 h wording. Expat Focus/ExpatWoman list other (older) numbers for a Qurum clinic; the site's numbers used.",
       "duty_i18n": {
-        "it": "Servizio di emergenza 24 ore su 24: chiamare il +968 9270 3273. Orari sab–gio 8:00–20:00, ven 10:00–19:00."
+        "it": "Servizio di emergenza 24 ore su 24: chiamare il +968 9270 3273. Orari sab–gio 8:00–20:00, ven 10:00–19:00.",
+        "pt": "Serviço de urgências 24 horas por dia: liga para +968 9270 3273. Horário: sábado a quinta 8h00–20h00, sexta 10h00–19h00."
       }
     },
     {
@@ -52,7 +53,8 @@
       "checked": "2026-11-12",
       "note": "Street address of the Azaiba branch not on the opened pages. The 24 h emergency claim on the page is clinic-wide, not stated per branch, so not flagged for this branch.",
       "duty_i18n": {
-        "it": "Sab–gio 8:00–19:00, chiuso il venerdì. Linea di emergenza della clinica: +968 9270 3273."
+        "it": "Sab–gio 8:00–19:00, chiuso il venerdì. Linea di emergenza della clinica: +968 9270 3273.",
+        "pt": "Sábado a quinta 8h00–19h00, fechado à sexta-feira. Linha de urgências da clínica: +968 9270 3273."
       }
     }
   ],

@@ -39,7 +39,8 @@
       "note": "Registered address confirmed in Jamaica Veterinary Board list 2024. Own site noahsarkja.com could not be opened (PROVENANCE_REQUIRED). Second phone +1 876-619-2273 on my-island-jamaica.com. Not 24 h.",
       "duty_i18n": {
         "es": "Urgencias atendidas dentro y fuera del horario de la clínica; para urgencias fuera de horario, llama antes de las 22:00 para localizar al médico de guardia.",
-        "it": "Urgenze gestite durante e fuori dall'orario della clinica; per le urgenze fuori orario chiamare prima delle 22:00 per raggiungere il veterinario di guardia."
+        "it": "Urgenze gestite durante e fuori dall'orario della clinica; per le urgenze fuori orario chiamare prima delle 22:00 per raggiungere il veterinario di guardia.",
+        "pt": "Urgências atendidas durante e depois do horário da clínica; para urgências fora de horas, liga antes das 22h00 para falar com o médico de serviço."
       }
     },
     {
@@ -57,7 +58,8 @@
       "note": "Address confirmed in Jamaica Veterinary Board list 2024. Own site phoenixvetcareja.com could not be opened (PROVENANCE_REQUIRED). Page also lists a Mandeville branch with an incomplete phone number, not used. No 24 h statement.",
       "duty_i18n": {
         "es": "Atiende urgencias; móvil de urgencias +1 876-469-1260.",
-        "it": "Pronto soccorso disponibile; cellulare per le urgenze +1 876-469-1260."
+        "it": "Pronto soccorso disponibile; cellulare per le urgenze +1 876-469-1260.",
+        "pt": "Serviço de urgência disponível; telemóvel de urgência +1 876-469-1260."
       }
     },
     {
@@ -75,7 +77,8 @@
       "note": "Address confirmed in Jamaica Veterinary Board list 2024. Second phone +1 876-931-7434. Directory only for phone and hours.",
       "duty_i18n": {
         "es": "Abierto de lunes a sábado.",
-        "it": "Aperto dal lunedì al sabato."
+        "it": "Aperto dal lunedì al sabato.",
+        "pt": "Aberto de segunda a sábado."
       }
     },
     {
@@ -93,7 +96,8 @@
       "note": "4 Goodwood Terrace is the registered address of Drs Brown/Burnett in the Veterinary Board list 2024. my-island-jamaica.com gives a different address (110a Constant Spring Road, Kingston 8) for Animalcare Veterinary Services; unresolved. Directory only; own site not opened.",
       "duty_i18n": {
         "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 16:00 h, domingo de 10:00 a 15:00 h.",
-        "it": "Lun–ven 8:00–19:00, sab 9:00–16:00, dom 10:00–15:00."
+        "it": "Lun–ven 8:00–19:00, sab 9:00–16:00, dom 10:00–15:00.",
+        "pt": "Segunda a sexta, 8h00–19h00, sábado 9h00–16h00, domingo 10h00–15h00."
       }
     },
     {
@@ -111,7 +115,8 @@
       "note": "JSPCA, 10 Winchester Road, appears in Jamaica Veterinary Board list 2024 as vets' practice address. Directory only. Removed from duty: Clinic open to the public; hours not published.",
       "duty_i18n": {
         "es": "Clínica abierta al público.",
-        "it": "Clinica aperta al pubblico."
+        "it": "Clinica aperta al pubblico.",
+        "pt": "Clínica aberta ao público."
       }
     }
   ],

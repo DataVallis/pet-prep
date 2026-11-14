@@ -49,7 +49,8 @@
       "checked": "2026-11-12",
       "note": "Page quote: 'For emergencies, we are open 24 hours / 7 days a week.' Another sub-page says round the clock with doctors on call. Independent check 2026-11-12: name, address, phone 0115 158 558 and the 24 h emergency quote confirmed on the page.",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze aperto 24 ore su 24, 7 giorni su 7, allo stesso numero."
+        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze aperto 24 ore su 24, 7 giorni su 7, allo stesso numero.",
+        "pt": "Aberto todos os dias, 10h00–19h00; para urgências, aberto 24 horas por dia, 7 dias por semana, no mesmo número."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-12",
       "note": "Page lists further phones +254 736 752 182 and +254 114 744 100 and the chain-wide 'doctors on call 24 hours' claim, not tied to this branch; hours 10-19 are chain-wide.",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze telefonare prima."
+        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze telefonare prima.",
+        "pt": "Aberto todos os dias, 10h00–19h00; liga antes em caso de urgência."
       }
     },
     {
@@ -85,7 +87,8 @@
       "checked": "2026-11-12",
       "note": "Second phone +254 734 934 062; chain-wide hours.",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze telefonare prima."
+        "it": "Aperto tutti i giorni 10:00–19:00; per le urgenze telefonare prima.",
+        "pt": "Aberto todos os dias, 10h00–19h00; liga antes em caso de urgência."
       }
     },
     {
@@ -102,7 +105,8 @@
       "checked": "2026-11-12",
       "note": "Home page lists a '24/7 Emergency Line' without detail; About page does not mention it, no address or licence; not treated as 24 h.",
       "duty_i18n": {
-        "it": "Si accede senza appuntamento; c'è anche una clinica a Busia. Per le urgenze telefonare o scrivere prima su WhatsApp."
+        "it": "Si accede senza appuntamento; c'è anche una clinica a Busia. Per le urgenze telefonare o scrivere prima su WhatsApp.",
+        "pt": "Atendimento sem marcação; também com clínica em Busia. Liga ou envia mensagem por WhatsApp antes em caso de urgência."
       }
     },
     {
@@ -120,7 +124,8 @@
       "checked": "2026-11-12",
       "note": "Second phone 0702 624 945. Page says 'all-in animal care'; small-animal focus inferred from the clinic's blog, not stated on the FAQ page.",
       "duty_i18n": {
-        "it": "Lun–ven 08:00–18:00; la domenica solo urgenze; supplemento urgenze fuori orario."
+        "it": "Lun–ven 08:00–18:00; la domenica solo urgenze; supplemento urgenze fuori orario.",
+        "pt": "Segunda a sexta, 8h00–18h00; domingos apenas urgências; taxa de urgência adicional fora de horas."
       }
     },
     {
@@ -137,7 +142,8 @@
       "checked": "2026-11-12",
       "note": "No phone, hours or emergency statement on the opened page.",
       "duty_i18n": {
-        "it": "Sezione piccoli animali dell'ospedale didattico; telefonare prima per gli orari."
+        "it": "Sezione piccoli animali dell'ospedale didattico; telefonare prima per gli orari.",
+        "pt": "Secção de animais de pequeno porte do hospital universitário; liga antes para saber o horário."
       }
     }
   ],

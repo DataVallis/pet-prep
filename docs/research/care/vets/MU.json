@@ -59,7 +59,8 @@
       "checked": "2026-11-12",
       "note": "About page heading: 'Happy to Welcome You at Veterinaire.mu Albion 24/7 and Triolet'. Contact page phones 57013873 / 57070166 / 2385345. Homepage repeats 'Veterinary Care 24/7'. No hours listed. Emergency line 5778 0888 only from 2023 press article (La Gazette Mag) and it is the Triolet number on the contact page.",
       "duty_i18n": {
-        "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7 nella clinica di Albion. Per le emergenze chiamare prima."
+        "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7 nella clinica di Albion. Per le emergenze chiamare prima.",
+        "pt": "Anunciado como aberto 24 h/24, 7 dias por semana, na clínica de Albion. Liga antes para urgências."
       }
     },
     {
@@ -77,7 +78,8 @@
       "checked": "2026-11-12",
       "note": "Contact page shows 57780888 but the click-to-call link points to the Albion number 57013873 - confirm. 24 h wording on the site applies to Albion only.",
       "duty_i18n": {
-        "it": "Telefonare alla clinica per gli orari e le emergenze."
+        "it": "Telefonare alla clinica per gli orari e le emergenze.",
+        "pt": "Liga para a clínica para saber o horário e para urgências."
       }
     },
     {
@@ -93,7 +95,8 @@
       "checked": "2026-11-12",
       "note": "Independent check 2026-11-12: vetmania.mu lists Grand Baie among its towns and titles itself 'Cliniques veterinaires 24/7 a l'ile Maurice' but shows no per-clinic address, phone or hours; address and phone removed (they came only from a 2023 press article). Not marked 24 h.",
       "duty_i18n": {
-        "it": "Il titolo del sito indica cliniche veterinarie 24 ore su 24, 7 giorni su 7 a Mauritius, ma nessuna clinica dichiara l'apertura h24; telefonare alla clinica per conferma."
+        "it": "Il titolo del sito indica cliniche veterinarie 24 ore su 24, 7 giorni su 7 a Mauritius, ma nessuna clinica dichiara l'apertura h24; telefonare alla clinica per conferma.",
+        "pt": "O título do site refere clínicas veterinárias abertas 24 h/24, 7 dias por semana, nas Maurícias, mas sem indicação de 24 horas por clínica; liga para a clínica para confirmar."
       }
     },
     {
@@ -109,7 +112,8 @@
       "checked": "2026-11-12",
       "note": "Moka listed as a Vetmania town on its site, whose title says '24/7'; no per-clinic 24 h statement, address or phone readable, so not marked 24 h. Also listed on site: Coromandel and Poste de Flacq (Poste de Flacq branch confirmed by allAfrica 2026-03 article, no address/phone) - not added.",
       "duty_i18n": {
-        "it": "Telefonare alla clinica per gli orari."
+        "it": "Telefonare alla clinica per gli orari.",
+        "pt": "Liga para a clínica para saber o horário."
       }
     },
     {
@@ -127,7 +131,8 @@
       "checked": "2026-11-12",
       "note": "Page says 'Emergency ... available 24/7' in the services list but 'For any emergencies between 9am to 9pm' in the contact note - conflicting, so emergency_24h false. Other phone 675 22 44.",
       "duty_i18n": {
-        "it": "Aperto lun–ven 9:00–21:00, sab 9:00–18:00, dom e festivi 9:00–12:00. Linea di emergenza +230 5947 2244 (sulla pagina: emergenze 9:00–21:00)."
+        "it": "Aperto lun–ven 9:00–21:00, sab 9:00–18:00, dom e festivi 9:00–12:00. Linea di emergenza +230 5947 2244 (sulla pagina: emergenze 9:00–21:00).",
+        "pt": "Aberto de segunda a sexta 9h00–21h00, sábado 9h00–18h00, domingo e feriados 9h00–12h00. Linha de urgência +230 5947 2244 (na página: urgências 9h00–21h00)."
       }
     },
     {
@@ -145,7 +150,8 @@
       "checked": "2026-11-12",
       "note": "A later listing on the page marks this branch 'Opening soon' with different hours - confirm. Other phone 628 20 20.",
       "duty_i18n": {
-        "it": "Aperto lun–ven 13:00–19:00, sab 9:00–15:00, chiuso la domenica e nei festivi."
+        "it": "Aperto lun–ven 13:00–19:00, sab 9:00–15:00, chiuso la domenica e nei festivi.",
+        "pt": "Aberto de segunda a sexta 13h00–19h00, sábado 9h00–15h00, fechado aos domingos e feriados."
       }
     },
     {
@@ -163,7 +169,8 @@
       "checked": "2026-11-12",
       "note": "Page gives two conflicting hour schedules (weekdays 8-22 / Mon-Sat 8-21 / Sun 8-21 or 8-20). '24/7 Inpatient Care' is inpatients only. No street address. E-mail info@myvet.mu.",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni, circa 8:00–21:00; degenza 24 ore su 24, 7 giorni su 7 e visite a domicilio di emergenza. Chiamare prima."
+        "it": "Aperto tutti i giorni, circa 8:00–21:00; degenza 24 ore su 24, 7 giorni su 7 e visite a domicilio di emergenza. Chiamare prima.",
+        "pt": "Aberto todos os dias, aproximadamente 8h00–21h00; oferece internamento 24 h/24 e consultas de urgência ao domicílio. Liga antes."
       }
     },
     {
@@ -180,7 +187,8 @@
       "checked": "2026-11-12",
       "note": "Phones 5736 2402 / 606 2431 / 606 3032. Site also shows a conflicting schedule (Mon 8-20, Tue-Fri 10-16, Sat closed) and template New York addresses; town Phoenix from a directory lead (mauritiusranking.com), not the clinic page. No street address.",
       "duty_i18n": {
-        "it": "Aperto tutti i giorni, medici disponibili 7:00–21:00. Emergenze: +230 5736 2402."
+        "it": "Aperto tutti i giorni, medici disponibili 7:00–21:00. Emergenze: +230 5736 2402.",
+        "pt": "Aberto todos os dias, médicos disponíveis 7h00–21h00. Urgências: +230 5736 2402."
       }
     }
   ],

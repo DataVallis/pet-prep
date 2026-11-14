@@ -38,7 +38,10 @@
       "source_url": "https://www.uvas.edu.pk/centers/pet-center/",
       "checked": "2026-11-13",
       "note": "Opened UVAS page; only university numbers (99211374, 99211449) listed, no dedicated Pet Centre number. Business Recorder article confirms 24/7 at City Campus. UVAS 24/7 Extension Service page (uvas.edu.pk/Extension_service/appointment.htm): emergency appointments 24/7, routine 8:30-14:30 Mon-Sat, phone 0335-7668783 (not stated which is which).",
-      "quote": "OPEN 24/7"
+      "quote": "OPEN 24/7",
+      "duty_i18n": {
+        "pt": "Hospital universitário de ensino, aberto 24 horas por dia, 7 dias por semana, com urgências e cuidados intensivos."
+      }
     },
     {
       "kind": "clinic",
@@ -54,7 +57,10 @@
       "source_url": "https://petxpress.pk/emergency",
       "checked": "2026-11-13",
       "note": "Opened emergency page; only DHA address given, Lake City branch address not listed. Phone also on WhatsApp.",
-      "quote": "Emergency line: open 24 hours, 7 days a week, including public holidays, at our DHA and Lake City branches."
+      "quote": "Emergency line: open 24 hours, 7 days a week, including public holidays, at our DHA and Lake City branches.",
+      "duty_i18n": {
+        "pt": "Linha de urgências aberta 24 horas por dia, 7 dias por semana, incluindo feriados, nas unidades DHA e Lake City. Unidade UVAS 9h00–3h00, unidade UET 12h00–22h00."
+      }
     },
     {
       "kind": "clinic",
@@ -70,7 +76,10 @@
       "source_url": "https://pet360.pk/",
       "checked": "2026-11-13",
       "note": "Opened own site.",
-      "quote": "offering 24/7 care by our qualified veterinarians and compassionate staff"
+      "quote": "offering 24/7 care by our qualified veterinarians and compassionate staff",
+      "duty_i18n": {
+        "pt": "Aberto de segunda a domingo 24 horas por dia; urgências 24 h/24, 7 dias por semana."
+      }
     },
     {
       "kind": "clinic",
@@ -85,7 +94,10 @@
       "source_url": "https://roundlakeanimalhospital.com.pk/veterinary-services/hospitalization-services/",
       "checked": "2026-11-13",
       "note": "Opened hospitalisation page; no street address; header also lists 042 35600600.",
-      "quote": "Open 24/7"
+      "quote": "Open 24/7",
+      "duty_i18n": {
+        "pt": "Aberto 24 h/24, 7 dias por semana, com vigilância permanente dos animais internados."
+      }
     },
     {
       "kind": "clinic",
@@ -100,7 +112,10 @@
       "source_url": "https://www.hometownpetsvets.com/",
       "checked": "2026-11-13",
       "note": "Opened own site; no phone displayed, number taken from WhatsApp booking link (923057883402); only partial address 'Airport Road, Lahore'.",
-      "quote": "Open 24 / 7 · Airport Road, Lahore"
+      "quote": "Open 24 / 7 · Airport Road, Lahore",
+      "duty_i18n": {
+        "pt": "Aberto 24 h/24, 7 dias por semana, em Airport Road. Marcações por WhatsApp."
+      }
     },
     {
       "kind": "clinic",
@@ -116,7 +131,10 @@
       "source_url": "https://kianimalhospital.wixsite.com/bahria-town-lahore",
       "checked": "2026-11-13",
       "note": "Opened own site. 24/7 wording is for emergency cases while regular hours are 11-23.",
-      "quote": "Emergency case: 24/7"
+      "quote": "Emergency case: 24/7",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias 11h00–23h00; urgências 24 h/24, 7 dias por semana. Telemóvel 0306 7997887."
+      }
     },
     {
       "kind": "clinic",
@@ -132,7 +150,10 @@
       "source_url": "https://helixpetclinic.com/",
       "checked": "2026-11-13",
       "note": "Opened own site.",
-      "quote": "24/7 Emergency — 0336-436 4360"
+      "quote": "24/7 Emergency — 0336-436 4360",
+      "duty_i18n": {
+        "pt": "Consultas externas todos os dias 10h00–22h00; urgências 24 h/24, 7 dias por semana, liga a qualquer hora."
+      }
     },
     {
       "kind": "clinic",
@@ -148,7 +169,10 @@
       "source_url": "https://jassaraftab.com/dr-ranas-pet-care-centre/",
       "checked": "2026-11-13",
       "note": "Opened page on jassaraftab.com (appears to be the practice's own domain, not confirmed). No opening times listed.",
-      "quote": "We are available for 24/7"
+      "quote": "We are available for 24/7",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, 7 dias por semana. Também 0304 534 9999, 051 2653157."
+      }
     },
     {
       "kind": "clinic",
@@ -163,7 +187,10 @@
       "source_url": "https://doctorpethospitals.com/trusted-vet-clinic-in-sector-g-11-islamabad-emergency-routine-care-available/",
       "checked": "2026-11-13",
       "note": "Opened page; text says Sector G-11 Islamabad but gives address in Bahria Town Rawalpindi (Plaza 15, Marina Commercial, Phase 4); address not published until confirmed.",
-      "quote": "we provide 24/7 emergency pet care in Sector G-11"
+      "quote": "we provide 24/7 emergency pet care in Sector G-11",
+      "duty_i18n": {
+        "pt": "Urgências para animais de estimação 24 h/24, 7 dias por semana, equipa de urgência de prontidão. Também 051 5148545."
+      }
     },
     {
       "kind": "clinic",
@@ -178,7 +205,10 @@
       "url": "https://www.petcareclinicbahria.com/",
       "source_url": "https://www.petcareclinicbahria.com/",
       "checked": "2026-11-13",
-      "note": "Opened own site. Meta description says 'Premium 24/7 veterinary hospital' but listed hours are 9:30-21:00, so 24 h not claimed."
+      "note": "Opened own site. Meta description says 'Premium 24/7 veterinary hospital' but listed hours are 9:30-21:00, so 24 h not claimed.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias 9h30–21h00; linha de urgências 0315 9596162, marcações 0333 1904310."
+      }
     },
     {
       "kind": "clinic",
@@ -193,7 +223,10 @@
       "url": "https://animalmedical-centre.com/",
       "source_url": "https://animalmedical-centre.com/",
       "checked": "2026-11-13",
-      "note": "Opened home and emergency-care pages. Emergency page says '24-hour emergency veterinary services in Karachi' but listed hours end 23:00-23:30 and no emergency number is shown, so 24 h not claimed. DHA branch exists, no address given."
+      "note": "Opened home and emergency-care pages. Emergency page says '24-hour emergency veterinary services in Karachi' but listed hours end 23:00-23:30 and no emergency number is shown, so 24 h not claimed. DHA branch exists, no address given.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias, aproximadamente das 11h00 às 23h30; oferece apoio de urgência, liga antes. Também 0320 8285086."
+      }
     },
     {
       "kind": "clinic",
@@ -208,7 +241,10 @@
       "url": "https://petsylvania.org/",
       "source_url": "https://petsylvania.org/",
       "checked": "2026-11-13",
-      "note": "Opened own site; 'Call us 24/7' and '24/7 Emergency Services' headings conflict with hours noon-midnight, so 24 h not claimed."
+      "note": "Opened own site; 'Call us 24/7' and '24/7 Emergency Services' headings conflict with hours noon-midnight, so 24 h not claimed.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias do meio-dia à meia-noite. Também +92 304 0738738."
+      }
     },
     {
       "kind": "clinic",
@@ -224,7 +260,10 @@
       "source_url": "https://mugheespetclinic.com/",
       "checked": "2026-11-13",
       "note": "Opened own site.",
-      "quote": "Open 24 hours in D Ground, Faisalabad"
+      "quote": "Open 24 hours in D Ground, Faisalabad",
+      "duty_i18n": {
+        "pt": "Aberto 24 horas por dia, com urgências disponíveis 24 h/24, 7 dias por semana."
+      }
     },
     {
       "kind": "clinic",
@@ -240,7 +279,10 @@
       "source_url": "https://rosewoodanimalhospital.lovable.app/",
       "checked": "2026-11-13",
       "note": "Opened own site (lovable.app hosting).",
-      "quote": "Emergency support is available 24/7."
+      "quote": "Emergency support is available 24/7.",
+      "duty_i18n": {
+        "pt": "Cuidados de rotina todos os dias 11h00–21h00; apoio de urgência disponível 24 h/24, 7 dias por semana."
+      }
     },
     {
       "kind": "clinic",
@@ -255,7 +297,10 @@
       "url": "https://dvetsfaisalabad.com/",
       "source_url": "https://dvetsfaisalabad.com/",
       "checked": "2026-11-13",
-      "note": "Opened own site; no 24 h wording."
+      "note": "Opened own site; no 24 h wording.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias 15h00–22h00. WhatsApp disponível."
+      }
     },
     {
       "kind": "clinic",
@@ -270,7 +315,10 @@
       "source_url": "https://gentlecarepetsclinic.com/",
       "checked": "2026-11-13",
       "note": "Opened own site; Model Town, no street address. 24/7 wording is for emergency service while regular hours are limited.",
-      "quote": "Available around the clock for urgent pet care needs."
+      "quote": "Available around the clock for urgent pet care needs.",
+      "duty_i18n": {
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00; serviço de urgências disponível 24 horas por dia."
+      }
     },
     {
       "kind": "clinic",
@@ -286,7 +334,10 @@
       "source_url": "https://aghavetclinic.com/",
       "checked": "2026-11-13",
       "note": "Opened own site; 24/7 emergency claim conflicts with Sunday closed in regular hours. Small animal diagnostics, emergency treatment and surgery plus large animals.",
-      "quote": "Reliable 24/7 emergency veterinary support for pets and livestock in Multan."
+      "quote": "Reliable 24/7 emergency veterinary support for pets and livestock in Multan.",
+      "duty_i18n": {
+        "pt": "Segunda a sexta 8h00–20h00, sábado 9h00–20h00, fechado ao domingo; apoio de urgência para animais de estimação e gado anunciado 24 h/24, 7 dias por semana (também +92 315 6300087)."
+      }
     },
     {
       "kind": "clinic",
@@ -300,7 +351,10 @@
       "url": "https://www.pet24clinic.com/",
       "source_url": "https://www.pet24clinic.com/",
       "checked": "2026-11-13",
-      "note": "Opened own site; no phone or hours, '24' is only in the name."
+      "note": "Opened own site; no phone or hours, '24' is only in the name.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias, Hayatabad Phase 3."
+      }
     }
   ],
   "notes": "Only 18 entries from opened pages. No official duty rota or animal poison line found for Pakistan (PVMC page lists no clinics; provincial livestock departments, PMAS Arid Agriculture, Sindh Agriculture University (SAU AHVS page opened, no clinic phone/address) and Karachi university hospitals not verified). WebFetch refusals (skipped, not worked around): healthytailsanimalhospital.com (robots_disallowed), gvhospital.com (robots_disallowed); errors: petplanethospital.com, thevetsanimal.com, veterinby.com. Facebook/Instagram-only clinics not fetched. Leads for next run (not opened): Aliyan Pets Hospital (Karachi/Islamabad, 24/7 per directory only), Healthy Paws Pet Hospital Karachi, Vet Care Pets Hospital Islamabad (24/7 emergency per wa.me listing), Pets Care N Cure Karachi (page fetch returned unrelated content), Pet Planet Hospital Karachi. No coverage yet of Quetta, Peshawar beyond one clinic, Murree/Gilgit/Hunza/Swat tourist areas, Hyderabad, Sialkot."

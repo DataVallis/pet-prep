@@ -35,7 +35,8 @@
       "note": "Page opened 2026-11-09. Says 'Guardia Quirurgica' exists among services but gives no hours; equine hospital has no on-call. fvet.uba.ar itself could not be fetched (PROVENANCE_REQUIRED). Removed from duty: Small-animal hospital open Monday to Friday 9:00-19:00. A surgical on-call service is mentioned but its hours are not published. Not a 24-hour emergency clinic.",
       "duty_i18n": {
         "es": "Hospital de animales pequeños abierto lun–vie 9:00–19:00 h. No es una clínica de urgencias 24 horas.",
-        "it": "Ospedale per piccoli animali aperto dal lunedì al venerdì 9:00–19:00. Non è un pronto soccorso aperto 24 ore su 24."
+        "it": "Ospedale per piccoli animali aperto dal lunedì al venerdì 9:00–19:00. Non è un pronto soccorso aperto 24 ore su 24.",
+        "pt": "Hospital de pequenos animais aberto de segunda a sexta, 9h00–19h00. Não é uma clínica de urgências 24 horas."
       }
     },
     {
@@ -56,7 +57,8 @@
         "de": "Sprechzeiten Mo–Fr 10–12 und 14–17 Uhr. Notfälle werden außerhalb dieser Zeiten versorgt, auch nachts, am Wochenende und an Feiertagen; bitte vorher anrufen.",
         "fr": "Horaires habituels : lundi–vendredi 10 h–12 h et 14 h–17 h. Urgences prises en charge en dehors de ces horaires, y compris la nuit, le week-end et les jours fériés ; appelez avant de venir.",
         "es": "Horario habitual lun–vie 10:00–12:00 h y 14:00–17:00 h. Fuera de ese horario se atienden urgencias, también de noche, fines de semana y festivos; llama antes.",
-        "it": "Orari regolari dal lunedì al venerdì 10:00–12:00 e 14:00–17:00. Le urgenze sono seguite anche fuori da questi orari, di notte, nei fine settimana e nei festivi; telefonare in anticipo."
+        "it": "Orari regolari dal lunedì al venerdì 10:00–12:00 e 14:00–17:00. Le urgenze sono seguite anche fuori da questi orari, di notte, nei fine settimana e nei festivi; telefonare in anticipo.",
+        "pt": "Horário normal de segunda a sexta, 10h00–12h00 e 14h00–17h00. Fora deste horário, incluindo noites, fins de semana e feriados, atendem-se urgências; liga antes."
       }
     },
     {
@@ -76,7 +78,8 @@
         "de": "Giftinformationsdienst für Tiere, werktags 8–18 Uhr. Nicht rund um die Uhr erreichbar.",
         "fr": "Service d’information toxicologique vétérinaire, en semaine 8 h–18 h. Pas de ligne 24 h/24.",
         "es": "Servicio de información veterinaria sobre intoxicaciones, lun–vie 8:00–18:00 h. No es una línea 24 horas.",
-        "it": "Servizio veterinario di informazione sui veleni, nei giorni feriali 8:00–18:00. Non è una linea attiva 24 ore su 24."
+        "it": "Servizio veterinario di informazione sui veleni, nei giorni feriali 8:00–18:00. Non è una linea attiva 24 ore su 24.",
+        "pt": "Linha de apoio toxicológico para animais, dias úteis 8h00–18h00. Não funciona 24 horas por dia."
       }
     }
   ],

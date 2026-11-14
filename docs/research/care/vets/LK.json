@@ -65,7 +65,8 @@
       "note": "Hours from a notice effective 1 Sep 2018; page copyright 2012. Page also claims 24-hour cover for lab/theatre which conflicts with its own table (lab/theatre weekday daytime). Re-checked 2026-11-12 against source_url: phones 081-5638017 / 081-2395662 are on the page (for booking by referring vets, not specifically an emergency line); +94 81 2388664 removed because it is not on the source page (only on the home page). Address from home page. Confirm before publishing.",
       "quote": "Emergency & critical care: 24 hours",
       "duty_i18n": {
-        "it": "Ospedale didattico universitario per animali da compagnia, selvatici e da zoo. Pronto soccorso e terapia intensiva 24 ore su 24; ambulatorio lun–sab 8:00–20:00, dom e festivi 8:00–12:00. Clinici residenti reperibili per le urgenze 19:30–08:00. Ricovero su appuntamento, prenotato dal veterinario che segnala il caso."
+        "it": "Ospedale didattico universitario per animali da compagnia, selvatici e da zoo. Pronto soccorso e terapia intensiva 24 ore su 24; ambulatorio lun–sab 8:00–20:00, dom e festivi 8:00–12:00. Clinici residenti reperibili per le urgenze 19:30–08:00. Ricovero su appuntamento, prenotato dal veterinario che segnala il caso.",
+        "pt": "Hospital universitário para animais de companhia, selvagens e de jardim zoológico. Urgências e cuidados intensivos 24 horas por dia; consultas externas de segunda a sábado 8h00–20h00, domingo e feriados 8h00–12h00. Clínicos residentes de piquete para urgências 19h30–8h00. Admissão sob marcação, feita por um veterinário que encaminha o animal."
       }
     },
     {
@@ -84,7 +85,8 @@
       "note": "Weak source: 2018 launch article in Daily FT (future tense), not the clinic's own site; rovervet.lk could not be fetched (not in provenance set). A 2020 Daily FT anniversary article repeats '24/7 emergency service' without contacts. Verify phones/hours on the clinic's site before publishing.",
       "quote": "Their Emergency and Critical care services will be open 24hrs, seven days a week.",
       "duty_i18n": {
-        "it": "Ambulatorio 6:00–22:00 su appuntamento; pronto soccorso e terapia intensiva aperti 24 ore su 24, 7 giorni su 7."
+        "it": "Ambulatorio 6:00–22:00 su appuntamento; pronto soccorso e terapia intensiva aperti 24 ore su 24, 7 giorni su 7.",
+        "pt": "Consultas externas 6h00–22h00 sob marcação; urgências e cuidados intensivos abertos 24 horas por dia, 7 dias por semana."
       }
     },
     {
@@ -101,7 +103,8 @@
       "checked": "2026-11-12",
       "note": "Phones from a 2021 Sunday Times article, no hours. A 2015 Sunday Times article says vets 'work round the clock' and handle night emergencies, but this is not an explicit published 24 h service line and is old, so emergency_24h left false. No own website found. Verify before publishing.",
       "duty_i18n": {
-        "it": "Ospedale per piccoli animali gestito dall'Aeronautica militare dello Sri Lanka a Borella. Telefonare prima per gli orari e le urgenze."
+        "it": "Ospedale per piccoli animali gestito dall'Aeronautica militare dello Sri Lanka a Borella. Telefonare prima per gli orari e le urgenze.",
+        "pt": "Hospital de animais de pequeno porte gerido pela Força Aérea do Sri Lanka, em Borella. Liga antes para saber o horário e para urgências."
       }
     }
   ],

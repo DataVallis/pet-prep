@@ -43,7 +43,8 @@
       "note": "Taiwan News article (CNY holiday notice) quotes the office: 24小時動物救援專線 02-87913064~5 or 1999. Office's own site not opened. Rescue line, not an on-duty vet rota.",
       "duty_i18n": {
         "es": "Línea de rescate las 24 horas para animales heridos o callejeros (también a través de la línea ciudadana de Taipéi 1999). No es una clínica veterinaria.",
-        "it": "Linea di soccorso attiva 24 ore su 24 per animali feriti o randagi (anche tramite la linea cittadina di Taipei 1999). Non è una clinica veterinaria."
+        "it": "Linea di soccorso attiva 24 ore su 24 per animali feriti o randagi (anche tramite la linea cittadina di Taipei 1999). Non è una clinica veterinaria.",
+        "pt": "Linha de apoio 24 horas por dia para animais feridos ou abandonados (também através da linha de apoio ao cidadão de Taipé, 1999). Não é uma clínica veterinária."
       }
     },
     {
@@ -61,7 +62,8 @@
       "note": "udn: '24hr急診重症中心' (phone 02-2579-5722); Royal Canin: 24-hour emergency care, year-round. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Centro de urgencias y cuidados críticos las 24 horas; atención de urgencias todo el año (aviso en festivos). Llama antes de ir.",
-        "it": "Centro di pronto soccorso e terapia intensiva 24 ore su 24; pronto soccorso tutto l'anno (avviso per i festivi). Telefonare in anticipo."
+        "it": "Centro di pronto soccorso e terapia intensiva 24 ore su 24; pronto soccorso tutto l'anno (avviso per i festivi). Telefonare in anticipo.",
+        "pt": "Centro de urgências e cuidados intensivos 24 horas por dia; urgências todo o ano (aviso nos feriados). Liga antes."
       }
     },
     {
@@ -79,7 +81,8 @@
       "note": "Royal Canin page: 24-hour cat and dog emergency care; also in Line Today 24-hour roundup (02-8509-2579). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Urgencias las 24 horas para gatos y perros. Llama antes de ir.",
-        "it": "Pronto soccorso 24 ore su 24 per cani e gatti. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24 per cani e gatti. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia para gatos e cães. Liga antes."
       }
     },
     {
@@ -97,7 +100,8 @@
       "note": "Royal Canin lists a 24-hour statement for the CNY period; Line Today lists it as 展望急診動物醫院 in its 24-hour roundup (02-2388-0122). Year-round 24 h not confirmed on own page. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -115,7 +119,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2756-2005). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Urgencias las 24 horas. Llama antes de ir.",
-        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia. Liga antes."
       }
     },
     {
@@ -133,7 +138,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2556-3320). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -151,7 +157,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period only confirmed). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -169,7 +176,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2834-1119). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -187,7 +195,8 @@
       "note": "Independent check 2026-11-11: udn page has no 24H label for this clinic; Royal Canin (different phone 02-23581199, CNY list) says all-day emergency. Conflict, so 24 h not confirmed: downgraded. Phone 02-2363-2020 matches udn and Line Today. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -205,7 +214,8 @@
       "note": "udn: '夜間急診/24小時住院照護' - night emergency, not stated as full 24 h emergency, so false. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Servicio de urgencias nocturno y hospitalización las 24 horas. Llama antes de ir.",
-        "it": "Pronto soccorso notturno e ricovero 24 ore su 24. Telefonare in anticipo."
+        "it": "Pronto soccorso notturno e ricovero 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Serviço de urgências noturno e internamento 24 horas por dia. Liga antes."
       }
     },
     {
@@ -223,7 +233,8 @@
       "note": "Royal Canin: 24-hour staff for hospitalised pets only. CONFLICT: Line Today gives 02-2882-7381. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Hospital de urgencias para gatos y perros; personal en el centro las 24 horas para mascotas hospitalizadas. Llama antes de ir.",
-        "it": "Ospedale di pronto soccorso per cani e gatti; personale presente 24 ore su 24 per gli animali ricoverati. Telefonare in anticipo."
+        "it": "Ospedale di pronto soccorso per cani e gatti; personale presente 24 ore su 24 per gli animali ricoverati. Telefonare in anticipo.",
+        "pt": "Hospital de urgências para gatos e cães; pessoal presente 24 horas por dia para os animais internados. Liga antes."
       }
     },
     {
@@ -241,7 +252,8 @@
       "note": "Line Today roundup lists it; Royal Canin shows 24-hour only from 2/1 (holiday); no explicit year-round 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in 24-hour roundup articles; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -259,7 +271,8 @@
       "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -277,7 +290,8 @@
       "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -295,7 +309,8 @@
       "note": "CONFLICT: Royal Canin 羅斯福路6段136號 02-77505028; Line Today 羅斯福路六段206號 02-2930-5557 (24-hour roundup). 24 h not confirmed. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Llama para confirmar el horario.",
-        "it": "Chiamare per confermare gli orari."
+        "it": "Chiamare per confermare gli orari.",
+        "pt": "Liga para confirmar o horário."
       }
     },
     {
@@ -313,7 +328,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -331,7 +347,8 @@
       "note": "Line Today roundup; Royal Canin 24 h only from 2/2 (holiday). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -349,7 +366,8 @@
       "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -367,7 +385,8 @@
       "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -385,7 +404,8 @@
       "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -403,7 +423,8 @@
       "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -421,7 +442,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period); Line Today and udn list it (03-333-3816). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -439,7 +461,8 @@
       "note": "udn: '24hr Emergency & Critical Care Center' (phone 03-355-3911). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Centro de urgencias y cuidados críticos las 24 horas. Llama antes de ir.",
-        "it": "Centro di pronto soccorso e terapia intensiva 24 ore su 24. Telefonare in anticipo."
+        "it": "Centro di pronto soccorso e terapia intensiva 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Centro de urgências e cuidados intensivos 24 horas por dia. Liga antes."
       }
     },
     {
@@ -457,7 +480,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -475,7 +499,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -493,7 +518,8 @@
       "note": "Royal Canin: 24 h statement with an exception for New Year's Eve before 21:00. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -511,7 +537,8 @@
       "note": "Line Today roundup (address no. 20 there vs 18 on Royal Canin). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -529,7 +556,8 @@
       "note": "udn: '24H急診'; Royal Canin also lists a 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Urgencias las 24 horas. Llama antes de ir.",
-        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia. Liga antes."
       }
     },
     {
@@ -547,7 +575,8 @@
       "note": "udn: '24H Emergency'; Royal Canin: 24-hour statement. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Urgencias las 24 horas. Llama antes de ir.",
-        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia. Liga antes."
       }
     },
     {
@@ -565,7 +594,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -583,7 +613,8 @@
       "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
-        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma."
+        "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
+        "pt": "Horário de urgências ou alargado indicado em listas de clínicas, sobretudo em períodos de feriados. Liga antes para confirmar."
       }
     },
     {
@@ -601,7 +632,8 @@
       "note": "udn: '夜間急診' (night emergency), not stated as 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Servicio de urgencias nocturno. Llama antes de ir.",
-        "it": "Pronto soccorso notturno. Telefonare in anticipo."
+        "it": "Pronto soccorso notturno. Telefonare in anticipo.",
+        "pt": "Serviço de urgências noturno. Liga antes."
       }
     },
     {
@@ -619,7 +651,8 @@
       "note": "udn/Line Today roundups list it with no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -637,7 +670,8 @@
       "note": "udn: '24H Emergency' (phone 06-220-3166). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page.",
       "duty_i18n": {
         "es": "Urgencias las 24 horas. Llama antes de ir.",
-        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas por dia. Liga antes."
       }
     },
     {
@@ -655,7 +689,8 @@
       "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -673,7 +708,8 @@
       "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -691,7 +727,8 @@
       "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
-        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari."
+        "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
+        "pt": "Indicada como clínica aberta 24 horas por dia; liga para confirmar o horário."
       }
     },
     {
@@ -709,7 +746,8 @@
       "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Llama para confirmar el horario.",
-        "it": "Chiamare per confermare gli orari."
+        "it": "Chiamare per confermare gli orari.",
+        "pt": "Liga para confirmar o horário."
       }
     },
     {
@@ -727,7 +765,8 @@
       "note": "Royal Canin holiday list only. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page.",
       "duty_i18n": {
         "es": "Llama para confirmar el horario.",
-        "it": "Chiamare per confermare gli orari."
+        "it": "Chiamare per confermare gli orari.",
+        "pt": "Liga para confirmar o horário."
       }
     }
   ],
