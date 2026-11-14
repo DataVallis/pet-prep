@@ -725,6 +725,12 @@ return [
     'schipperke' => [
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-111: FCI standard 15 (S831) "Only fawn with black overlay or grey with black overlay, with black mask"; same order
+    // and values as breed_appearance.php.
+    'belgian_tervuren' => [
+        ['key' => 'fawn', 'value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'grey', 'value' => 'grey with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Grey with black mask', 'sl' => 'Siv s črno masko'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
