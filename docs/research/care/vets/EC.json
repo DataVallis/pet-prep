@@ -73,7 +73,8 @@
       "checked": "2026-11-12",
       "note": "University page says '24 hour emergencies' and '24-hour care, 365 days a year'; no street address or phone in the fetched text (contact is an image). TUERI wildlife hospital is next door at Diego de Robles and Pampite. Needs a phone from a later run.",
       "duty_i18n": {
-        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Telefonare in anticipo."
+        "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Telefonare in anticipo.",
+        "pt": "Urgências 24 horas, 365 dias por ano. Liga antes."
       }
     },
     {
@@ -91,7 +92,8 @@
       "checked": "2026-11-12",
       "note": "Wildlife hospital, does not treat pets (kept in research, not published). Page lists 990 537 004 (emergencies) and 099 053 7004; tueri@usfq.edu.ec.",
       "duty_i18n": {
-        "it": "Solo animali selvatici: aperto 24 ore su 24, 365 giorni all'anno per le emergenze, gratuito."
+        "it": "Solo animali selvatici: aperto 24 ore su 24, 365 giorni all'anno per le emergenze, gratuito.",
+        "pt": "Apenas animais selvagens: aberto 24 horas, 365 dias por ano para urgências, gratuito."
       }
     },
     {
@@ -109,7 +111,8 @@
       "checked": "2026-11-12",
       "note": "News article (2023, republished 2026) says animals are received 24 hours a day but consultations are Mon-Fri 08:00-16:30; inconsistent, so emergency_24h left false. Street 'Fuertes' also spelled 'Fuentes'. Official Quito Bienestar Animal page not opened.",
       "duty_i18n": {
-        "it": "Clinica comunale gratuita. Visite dal lunedì al venerdì 08:00–16:30. Telefonare in anticipo per le emergenze."
+        "it": "Clinica comunale gratuita. Visite dal lunedì al venerdì 08:00–16:30. Telefonare in anticipo per le emergenze.",
+        "pt": "Clínica municipal gratuita. Consultas de segunda a sexta 8h00–16h30. Liga antes para urgências."
       }
     },
     {
@@ -125,7 +128,8 @@
       "checked": "2026-11-12",
       "note": "Only a news article; no address or phone. University site not opened.",
       "duty_i18n": {
-        "it": "Aperto dal lunedì al venerdì 08:00–16:00; pazienti accettati fino alle 15:00 circa, senza appuntamento. Dispone di un'area emergenze; nessun servizio notturno indicato."
+        "it": "Aperto dal lunedì al venerdì 08:00–16:00; pazienti accettati fino alle 15:00 circa, senza appuntamento. Dispone di un'area emergenze; nessun servizio notturno indicato.",
+        "pt": "Aberto de segunda a sexta 8h00–16h00; atende até cerca das 15h00, sem marcação. Tem área de urgência; não indica serviço noturno."
       }
     },
     {
@@ -142,7 +146,8 @@
       "checked": "2026-11-12",
       "note": "Feb 2024 article (hours may have changed); no phone. Address from Primicias Aug 2023 article. Emergencies for run-over/abandoned pets are covered by an agreement with Fundacion ARCA; no number found. Cuenca Patrulla Canina line 0987050437 (Mon-Fri 08:00-17:00) is a municipal rescue patrol, not listed.",
       "duty_i18n": {
-        "it": "Ospedale comunale per cani e gatti. Dal lunedì al venerdì 08:00–17:00, chiuso nei fine settimana e nei festivi."
+        "it": "Ospedale comunale per cani e gatti. Dal lunedì al venerdì 08:00–17:00, chiuso nei fine settimana e nei festivi.",
+        "pt": "Hospital municipal para cães e gatos. Segunda a sexta 8h00–17h00, encerrado aos fins de semana e feriados."
       }
     }
   ],

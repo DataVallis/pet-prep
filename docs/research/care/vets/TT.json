@@ -42,7 +42,10 @@
       "url": "https://sta.uwi.edu/fms/vet/small-animal-hospital-uwi-svm",
       "source_url": "https://sta.uwi.edu/fms/vet/hours-operation",
       "checked": "2026-11-13",
-      "note": "Hours page says Wed 15:00-19:00, hospital page says 16:00-19:00 (conflict); Sat 9:00-13:00. Only emergency line listed (756-9427) is farm animals only. Address from hours page; hospital page has no street address. Phone corrected 2026-11-13: hours page lists small animal as 225-4673 ext 4303 and 4302 (also 663-5160, 766-1122); 645-3232 is the School of Veterinary Medicine main line."
+      "note": "Hours page says Wed 15:00-19:00, hospital page says 16:00-19:00 (conflict); Sat 9:00-13:00. Only emergency line listed (756-9427) is farm animals only. Address from hours page; hospital page has no street address. Phone corrected 2026-11-13: hours page lists small animal as 225-4673 ext 4303 and 4302 (also 663-5160, 766-1122); 645-3232 is the School of Veterinary Medicine main line.",
+      "duty_i18n": {
+        "pt": "Hospital universitário, sob marcação: segunda a sexta 8h00–15h00, quarta com horário alargado ao fim do dia, sábado 9h00–13h00. Sem serviço de urgências para animais de pequeno porte."
+      }
     },
     {
       "kind": "clinic",
@@ -56,7 +59,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/tobago-animal-hospital/",
       "checked": "2026-11-13",
-      "note": "After-hours line listed; no 24 h wording. Only vet clinic found for Tobago; no own website found."
+      "note": "After-hours line listed; no 24 h wording. Only vet clinic found for Tobago; no own website found.",
+      "duty_i18n": {
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–14h00. Fora de horas e urgências: +1 868 688 8281."
+      }
     },
     {
       "kind": "clinic",
@@ -83,7 +89,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/annimalia-veterinary-services/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 725 2548."
+      }
     },
     {
       "kind": "clinic",
@@ -97,7 +106,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/honey-bunches-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 759 3161."
+      }
     },
     {
       "kind": "clinic",
@@ -111,7 +123,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/west-park-veterinary-clinic-ltd/",
       "checked": "2026-11-13",
-      "note": "Not stated whether the after-hours line is staffed 24 h."
+      "note": "Not stated whether the after-hours line is staffed 24 h.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 310 1227."
+      }
     },
     {
       "kind": "clinic",
@@ -125,7 +140,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/acote-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "No emergency wording."
+      "note": "No emergency wording.",
+      "duty_i18n": {
+        "pt": "Segunda a sexta 8h00–16h45, sábado 9h00–12h45, domingo e feriados 9h00–10h45. WhatsApp +1 868 376 3427."
+      }
     },
     {
       "kind": "clinic",
@@ -139,7 +157,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/central-animal-hospital/",
       "checked": "2026-11-13",
-      "note": "TTVA page: after hours for clients only; no 24 h wording."
+      "note": "TTVA page: after hours for clients only; no 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências apenas para clientes já registados."
+      }
     },
     {
       "kind": "clinic",
@@ -153,7 +174,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/chaguanas-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 715 3555."
+      }
     },
     {
       "kind": "clinic",
@@ -167,7 +191,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/ackbar-animal-medics-services-ltd/",
       "checked": "2026-11-13",
-      "note": "Same number as main line; no 24 h wording."
+      "note": "Same number as main line; no 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 353 3412."
+      }
     },
     {
       "kind": "clinic",
@@ -181,7 +208,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/compassionate-care-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 701 4288."
+      }
     },
     {
       "kind": "clinic",
@@ -195,7 +225,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/pets-first-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Urgências: +1 868 360 4802."
+      }
     },
     {
       "kind": "clinic",
@@ -222,7 +255,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/golden-pride-veterinary-clinic/",
       "checked": "2026-11-13",
-      "note": "Not stated whether staffed 24 h. WhatsApp 338 8387."
+      "note": "Not stated whether staffed 24 h. WhatsApp 338 8387.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 333 1010."
+      }
     },
     {
       "kind": "clinic",
@@ -236,7 +272,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/bassaws-veterinary-and-surgical-centre/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 342 5928."
+      }
     },
     {
       "kind": "clinic",
@@ -263,7 +302,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/healthy-hearts-animal-hospital/",
       "checked": "2026-11-13",
-      "note": "City not on page; Orange Field Road used from address."
+      "note": "City not on page; Orange Field Road used from address.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências apenas para clientes já registados."
+      }
     },
     {
       "kind": "clinic",
@@ -277,7 +319,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/dr-carolyn-mike/",
       "checked": "2026-11-13",
-      "note": "Practice name not on page."
+      "note": "Practice name not on page.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências apenas para clientes já registados."
+      }
     },
     {
       "kind": "clinic",
@@ -291,7 +336,10 @@
       "small_animals": true,
       "source_url": "https://www.ttva1.org/doctor/first-call-veterinary-services-and-supplies/",
       "checked": "2026-11-13",
-      "note": "Same number as main line; no 24 h wording."
+      "note": "Same number as main line; no 24 h wording.",
+      "duty_i18n": {
+        "pt": "Fora de horas e urgências: +1 868 276 1706."
+      }
     }
   ],
   "notes": "Research 2026-11-13. No clinic page opened explicitly says 24 h / 24/7, so no emergency_24h entries. No duty rota and no animal poison line found. All entries come from the official TTVA member directory (each practice page opened); no clinic own websites were found or opened. Not reachable: noonsite.com (client error), TTVA home page and TTVA doctors-list page 2 (fetch refused), vetshunter.com (no data). Not opened, remaining TTVA members: Aminalz, Bark N' Shake (Sangre Grande), Brown's Pet Care, Companion Care, Creature Care (St. Joseph), Debe Animal Clinic, Felicity (Chaguanas), Exotic Pets Plus (Couva), Freeport, Gasparillo, Infinity Paws, Island Haven (mobile, Diego Martin), Kairi (Penal), Paws Fins and Feathers / Paws n Claws (Princes Town), Pet Avenue (Fyzabad), Pet Point (Enterprise), Petoline, PetWell TT (mobile), Sarah's, Solomon's, Sunny Paws, Sunnyview (Diego Martin), Naive Terrain, Dr. Philbert (Maraval), Siparia and Point Fortin clinics."

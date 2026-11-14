@@ -43,7 +43,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24; linea per le urgenze 24 ore su 24 allo stesso numero."
+        "it": "Aperto 24 ore su 24; linea per le urgenze 24 ore su 24 allo stesso numero.",
+        "pt": "Aberto 24 horas por dia; linha de urgência 24 horas por dia no mesmo número."
       }
     },
     {
@@ -60,7 +61,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24, 7 giorni su 7; veterinari di pronto soccorso presenti in sede di notte."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; veterinari di pronto soccorso presenti in sede di notte.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana; médicos de urgência no local durante a noite."
       }
     },
     {
@@ -78,7 +80,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Reparto piccoli animali con pronto soccorso e terapia intensiva; telefonare prima per gli orari."
+        "it": "Reparto piccoli animali con pronto soccorso e terapia intensiva; telefonare prima per gli orari.",
+        "pt": "Secção de animais de pequeno porte com urgências e cuidados intensivos; liga antes para saber o horário."
       }
     },
     {
@@ -95,7 +98,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Tutti i giorni 10:00–22:00; venerdì 14:00–22:00."
+        "it": "Tutti i giorni 10:00–22:00; venerdì 14:00–22:00.",
+        "pt": "Todos os dias, 10h00–22h00; sexta-feira 14h00–22h00."
       }
     },
     {
@@ -113,7 +117,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Tutti i giorni 11:00–19:00; per le urgenze telefonare prima."
+        "it": "Tutti i giorni 11:00–19:00; per le urgenze telefonare prima.",
+        "pt": "Todos os dias, 11h00–19h00; liga antes em caso de urgência."
       }
     },
     {
@@ -130,7 +135,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–mer 08:00–20:00 (martedì fino alle 19:30)."
+        "it": "Sab–mer 08:00–20:00 (martedì fino alle 19:30).",
+        "pt": "Sábado a quarta-feira, 8h00–20h00 (terça-feira até às 19h30)."
       }
     },
     {
@@ -147,7 +153,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–mer 09:00–18:00."
+        "it": "Sab–mer 09:00–18:00.",
+        "pt": "Sábado a quarta-feira, 9h00–18h00."
       }
     },
     {
@@ -164,7 +171,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Sab–mer 09:30–18:00."
+        "it": "Sab–mer 09:30–18:00.",
+        "pt": "Sábado a quarta-feira, 9h30–18h00."
       }
     },
     {
@@ -182,7 +190,8 @@
       "checked": "2026-11-12",
       "small_animals": true,
       "duty_i18n": {
-        "it": "Cure urgenti in giornata; telefonare prima per gli orari."
+        "it": "Cure urgenti in giornata; telefonare prima per gli orari.",
+        "pt": "Atendimento urgente no próprio dia; liga antes para saber o horário."
       }
     }
   ],

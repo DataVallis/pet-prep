@@ -43,7 +43,10 @@
       "source_url": "https://hospitaldemascotasgt.com/",
       "checked": "2026-11-13",
       "note": "Page headline 'Emergencias veterinarias 24 horas'; FAQ 'Atendemos 24/7, incluyendo dias festivos'; staff physically present 24 h. Daytime emergency line 5518-8301; 24 h pharmacy 5555-8004.",
-      "quote": "Emergencias veterinarias 24 horas"
+      "quote": "Emergencias veterinarias 24 horas",
+      "duty_i18n": {
+        "pt": "Urgências 24 horas por dia, 365 dias por ano, incluindo feriados: +502 2375 8700. Consultas externas 7h00–18h00; horário de urgências a partir das 18h00. Ambulância só durante o dia."
+      }
     },
     {
       "kind": "clinic",
@@ -59,7 +62,10 @@
       "source_url": "https://veterinariavetmas.com/veterinaria/urgencias-veterinarias-zona-10-guatemala/",
       "checked": "2026-11-13",
       "note": "Page title 'Emergencias Veterinarias 24 Horas en Zona 10 | VETMAS'; text 'Atencion de urgencias veterinarias a cualquier hora'. Address on page is Zona 7 though the title says Zona 10; the Zona 16 (aves) page also does not give 24 h. No opening hours published.",
-      "quote": "Emergencias Veterinarias 24 Horas en Zona 10, Guatemala"
+      "quote": "Emergencias Veterinarias 24 Horas en Zona 10, Guatemala",
+      "duty_i18n": {
+        "pt": "Casos veterinários urgentes atendidos a qualquer hora. Telefone/WhatsApp +502 4363 4958, também +502 2394 9324. Liga para confirmar."
+      }
     },
     {
       "kind": "clinic",
@@ -74,7 +80,10 @@
       "source_url": "https://veitguatemala.com/SOS.html",
       "checked": "2026-11-13",
       "note": "Only source is the Vet IT SOS list (third-party page); the hospital's own site was not found. Name on the list contains '24/7'. Pharmacy 7:00-19:00. Verify in independent check.",
-      "quote": "Hospital de Mascotas Mariscal 24/7"
+      "quote": "Hospital de Mascotas Mariscal 24/7",
+      "duty_i18n": {
+        "pt": "Indicado como 24 h/24, 7 dias por semana, com serviço de urgências. Liga antes: +502 5480 8888."
+      }
     },
     {
       "kind": "clinic",
@@ -89,7 +98,10 @@
       "source_url": "https://veitguatemala.com/SOS.html",
       "checked": "2026-11-13",
       "note": "Only source is the Vet IT SOS list (third-party page); own site not found. Text 'Emergencias 24/7'. Verify in independent check.",
-      "quote": "Emergencias 24/7"
+      "quote": "Emergencias 24/7",
+      "duty_i18n": {
+        "pt": "Serviço de urgências indicado como 24 h/24, 7 dias por semana. Liga antes: +502 2215 2777."
+      }
     },
     {
       "kind": "clinic",
@@ -104,7 +116,10 @@
       "url": "https://veterinarialascharcas.com.gt/",
       "source_url": "https://veterinarialascharcas.com.gt/servicios/emergencias-veterinarias/",
       "checked": "2026-11-13",
-      "note": "No 24 h wording."
+      "note": "No 24 h wording.",
+      "duty_i18n": {
+        "pt": "Aberto todos os dias 7h00–19h00; urgências atendidas sem marcação nesse horário. WhatsApp +502 5106 4444. Para urgências noturnas, a clínica encaminha para um hospital veterinário noturno."
+      }
     },
     {
       "kind": "clinic",
@@ -119,7 +134,10 @@
       "url": "https://clinivet.com.gt/",
       "source_url": "https://clinivet.com.gt/",
       "checked": "2026-11-13",
-      "note": "No emergency or 24 h wording."
+      "note": "No emergency or 24 h wording.",
+      "duty_i18n": {
+        "pt": "Seg–sex 8h00–17h00, sáb 7h00–14h00. WhatsApp +502 3040 8152."
+      }
     }
   ],
   "notes": "Research 2026-11-13; all source_urls opened with WebFetch. Official bodies (Colegio de Medicos Veterinarios y Zootecnistas de Guatemala, MAGA, USAC FMVZ hospital) not reachable with a usable clinic list: search surfaced only PDFs/news, WebFetch refused un-surfaced URLs (portal.fmvz.usac.edu.gt blocked by provenance rule); an emisorasunidas.com article on the USAC hospital has no address/phone. No duty rota and no animal poison line found. veterinariasanpedro.gt blocked by robots (not used). Not added for lack of own-page confirmation: AmbuPet (home service, 24/7, phone 3285-4838), Ortovet (home service 24 h, phone 2316-4134), PAWS, Veterinaria San Pedro - all only on the Vet IT SOS list. No Antigua, Quetzaltenango, Atitlan or Flores clinics found with own pages. Left to do: official college directory, USAC hospital page, regional clinics."

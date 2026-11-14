@@ -54,7 +54,8 @@
       "checked": "2026-11-12",
       "note": "Own page ?p=214 and ?p=26 say 'We are open 24/7'; the home page itself only gives the after-hours number and no 24 h claim.",
       "duty_i18n": {
-        "it": "Aperto 24 ore su 24, 7 giorni su 7; tra mezzanotte e le 8:00 solo emergenze. Numero per le emergenze fuori orario: +974 3340 9300. Chiuso per la preghiera del venerdì 11:00–13:00, tranne le emergenze assolute."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7; tra mezzanotte e le 8:00 solo emergenze. Numero per le emergenze fuori orario: +974 3340 9300. Chiuso per la preghiera del venerdì 11:00–13:00, tranne le emergenze assolute.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana; entre a meia-noite e as 8h00 apenas casos de urgência. Número de urgências fora de horas: +974 3340 9300. Encerra à sexta-feira para a oração, 11h00–13h00, exceto em urgências absolutas."
       }
     },
     {
@@ -72,7 +73,8 @@
       "checked": "2026-11-12",
       "note": "Independent check 2026-11-12: home page says 'emergency care 24 hours a day, 7 days a week'; phone +974 4436 7187 and after-hours +974 5584 1224 appear on the contact page (https://dohavets.com/contact/), not on the home page. WhatsApp +974 6654 0013 / 6618 8336.",
       "duty_i18n": {
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Orari ordinari sab–gio 8:00–22:00, ven 14:00–21:00. Numero per le emergenze fuori orario: +974 5584 1224."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Orari ordinari sab–gio 8:00–22:00, ven 14:00–21:00. Numero per le emergenze fuori orario: +974 5584 1224.",
+        "pt": "Urgências 24 horas por dia, 7 dias por semana. Horário normal: sábado a quinta-feira, 8h00–22h00, sexta-feira, 14h00–21h00. Número de urgências fora de horas: +974 5584 1224."
       }
     },
     {
@@ -90,7 +92,8 @@
       "checked": "2026-11-12",
       "note": "Profile page, not the clinic's own site (qatarvet.com not fetchable). No 24 h wording.",
       "duty_i18n": {
-        "it": "Sab–gio 8:00–20:00. Venerdì e fuori orario: solo emergenze, chiamare il +974 6667 5235. Sede di Duhail: +974 4498 9620."
+        "it": "Sab–gio 8:00–20:00. Venerdì e fuori orario: solo emergenze, chiamare il +974 6667 5235. Sede di Duhail: +974 4498 9620.",
+        "pt": "Sábado a quinta-feira, 8h00–20h00. Sexta-feira e fora de horas: apenas urgências, liga para +974 6667 5235. Filial de Duhail: +974 4498 9620."
       }
     },
     {
@@ -107,7 +110,8 @@
       "checked": "2026-11-12",
       "note": "Independent check 2026-11-12: petsqtr.com lists it as 'alaseel clinic' with the hours shown; the phone (50032255, from a blog) is not on the page, so it was removed (url kept). No 24 h wording on the page.",
       "duty_i18n": {
-        "it": "Sab–gio 10:00–23:00; ven 14:00–23:00."
+        "it": "Sab–gio 10:00–23:00; ven 14:00–23:00.",
+        "pt": "Sábado a quinta-feira, 10h00–23h00; sexta-feira, 14h00–23h00."
       }
     }
   ],

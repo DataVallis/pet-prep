@@ -90,7 +90,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto las 24 horas, los 7 días de la semana, con servicio de urgencias 24 horas; pide cita por sus canales digitales.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, con pronto soccorso 24 ore su 24, 7 giorni su 7; appuntamenti tramite i suoi canali digitali."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, con pronto soccorso 24 ore su 24, 7 giorni su 7; appuntamenti tramite i suoi canali digitali.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, com serviço de urgência 24 h/24; marcações através dos canais digitais."
       }
     },
     {
@@ -109,7 +110,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Atención hospitalaria y urgencias las 24 horas; WhatsApp +506 6453 2349.",
-        "it": "Cure ospedaliere e pronto soccorso 24 ore su 24; WhatsApp +506 6453 2349."
+        "it": "Cure ospedaliere e pronto soccorso 24 ore su 24; WhatsApp +506 6453 2349.",
+        "pt": "Cuidados hospitalares e urgências 24 horas por dia; WhatsApp +506 6453 2349."
       }
     },
     {
@@ -127,7 +129,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas, sin llamada ni cita previa; tiendas abiertas lun–sáb 8:00–20:00 h y dom 8:00–19:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00.",
+        "pt": "Urgências 24 h/24, 7 dias por semana, sem necessidade de ligar nem de marcação; lojas abertas de segunda a sábado 8h00–20h00 e ao domingo 8h00–19h00."
       }
     },
     {
@@ -145,7 +148,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas, sin llamada ni cita previa; tiendas abiertas lun–sáb 8:00–20:00 h y dom 8:00–19:00 h.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00.",
+        "pt": "Urgências 24 h/24, 7 dias por semana, sem necessidade de ligar nem de marcação; lojas abertas de segunda a sábado 8h00–20h00 e ao domingo 8h00–19h00."
       }
     },
     {
@@ -164,7 +168,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Hospital universitario de pequeños animales y fauna silvestre: lun–vie 9:00–19:00 h; fines de semana solo urgencias, 10:00–17:00 h. No es un servicio 24 horas; llama antes.",
-        "it": "Ospedale universitario per piccoli animali e fauna selvatica: dal lunedì al venerdì 9:00–19:00; nei weekend solo urgenze, 10:00–17:00. Non è un servizio 24 ore su 24; telefonare in anticipo."
+        "it": "Ospedale universitario per piccoli animali e fauna selvatica: dal lunedì al venerdì 9:00–19:00; nei weekend solo urgenze, 10:00–17:00. Non è un servizio 24 ore su 24; telefonare in anticipo.",
+        "pt": "Hospital universitário de pequenos animais e animais selvagens: segunda a sexta 9h00–19h00; ao fim de semana só urgências, 10h00–17h00. Não funciona 24 horas; liga antes."
       }
     },
     {
@@ -183,7 +188,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto todos los días 8:00–22:00 h.",
-        "it": "Aperto tutti i giorni 8:00–22:00."
+        "it": "Aperto tutti i giorni 8:00–22:00.",
+        "pt": "Aberto todos os dias, 8h00–22h00."
       }
     },
     {
@@ -202,7 +208,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto todos los días 9:00–21:00 h.",
-        "it": "Aperto tutti i giorni 9:00–21:00."
+        "it": "Aperto tutti i giorni 9:00–21:00.",
+        "pt": "Aberto todos os dias, 9h00–21h00."
       }
     },
     {
@@ -221,7 +228,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 9:00–12:00 y 14:00–19:00 h, solo con cita previa; número de urgencias 8301 3271 (WhatsApp).",
-        "it": "Dal lunedì al sabato 9:00–12:00 e 14:00–19:00, solo su appuntamento; numero per le urgenze 8301 3271 (WhatsApp)."
+        "it": "Dal lunedì al sabato 9:00–12:00 e 14:00–19:00, solo su appuntamento; numero per le urgenze 8301 3271 (WhatsApp).",
+        "pt": "Segunda a sábado 9h00–12h00 e 14h00–19h00, sob marcação; número de urgência 8301 3271 (WhatsApp)."
       }
     },
     {
@@ -240,7 +248,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Hospital abierto todos los días 8:00–20:00 h, también festivos, con urgencias las 24 horas para perros y gatos; segundo teléfono +506 4700 1898.",
-        "it": "Ospedale aperto tutti i giorni 8:00–20:00, festivi inclusi, con pronto soccorso 24 ore su 24 per cani e gatti; secondo telefono +506 4700 1898."
+        "it": "Ospedale aperto tutti i giorni 8:00–20:00, festivi inclusi, con pronto soccorso 24 ore su 24 per cani e gatti; secondo telefono +506 4700 1898.",
+        "pt": "Hospital aberto todos os dias 8h00–20h00, incluindo feriados, com urgências 24 horas por dia para cães e gatos; segundo telefone +506 4700 1898."
       }
     },
     {
@@ -259,7 +268,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–vie 8:00–21:00 h, sáb 9:00–19:00 h, dom y festivos 9:00–17:00 h. Segundo teléfono +506 4700 0518.",
-        "it": "Dal lunedì al venerdì 8:00–21:00, sabato 9:00–19:00, domenica e festivi 9:00–17:00. Secondo telefono +506 4700 0518."
+        "it": "Dal lunedì al venerdì 8:00–21:00, sabato 9:00–19:00, domenica e festivi 9:00–17:00. Secondo telefono +506 4700 0518.",
+        "pt": "Segunda a sexta 8h00–21h00, sábado 9h00–19h00, domingo e feriados 9h00–17h00. Segundo telefone +506 4700 0518."
       }
     },
     {
@@ -278,7 +288,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 7:30–19:00 h, dom 8:00–14:00 h; línea de urgencias +506 8817 0000; WhatsApp +506 8661 1717.",
-        "it": "Dal lunedì al sabato 7:30–19:00, domenica 8:00–14:00; linea urgenze +506 8817 0000; WhatsApp +506 8661 1717."
+        "it": "Dal lunedì al sabato 7:30–19:00, domenica 8:00–14:00; linea urgenze +506 8817 0000; WhatsApp +506 8661 1717.",
+        "pt": "Segunda a sábado 7h30–19h00, domingo 8h00–14h00; linha de urgência +506 8817 0000; WhatsApp +506 8661 1717."
       }
     },
     {
@@ -297,7 +308,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto las 24 horas, los 7 días de la semana, con urgencias veterinarias las 24 horas; WhatsApp en el mismo número.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, com urgências veterinárias 24 h/24; WhatsApp no mesmo número."
       }
     },
     {
@@ -316,7 +328,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Abierto las 24 horas, los 7 días de la semana, con urgencias veterinarias las 24 horas; WhatsApp en el mismo número.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero.",
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, com urgências veterinárias 24 h/24; WhatsApp no mesmo número."
       }
     },
     {
@@ -335,7 +348,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas; segundo teléfono +506 2203 1944.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2203 1944."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2203 1944.",
+        "pt": "Urgências 24 h/24; segundo telefone +506 2203 1944."
       }
     },
     {
@@ -354,7 +368,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Servicio de urgencias las 24 horas; segundo teléfono +506 2278 2681.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2278 2681."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2278 2681.",
+        "pt": "Urgências 24 h/24; segundo telefone +506 2278 2681."
       }
     },
     {
@@ -372,7 +387,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias las 24 horas para perros y gatos, también festivos; WhatsApp +506 8780 5273.",
-        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per cani e gatti, festivi inclusi; WhatsApp +506 8780 5273."
+        "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per cani e gatti, festivi inclusi; WhatsApp +506 8780 5273.",
+        "pt": "Urgências 24 h/24 para cães e gatos, incluindo feriados; WhatsApp +506 8780 5273."
       }
     },
     {
@@ -390,7 +406,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Lun–sáb 8:00–20:30 h; servicio de urgencias las 24 horas fuera del horario habitual; WhatsApp y segundo teléfono +506 4070 0543.",
-        "it": "Dal lunedì al sabato 8:00–20:30; pronto soccorso 24 ore su 24, 7 giorni su 7 fuori dall'orario ordinario; WhatsApp e secondo telefono +506 4070 0543."
+        "it": "Dal lunedì al sabato 8:00–20:30; pronto soccorso 24 ore su 24, 7 giorni su 7 fuori dall'orario ordinario; WhatsApp e secondo telefono +506 4070 0543.",
+        "pt": "Segunda a sábado 8h00–20h30; urgências 24 h/24 fora do horário normal; WhatsApp e segundo telefone +506 4070 0543."
       }
     },
     {
@@ -422,7 +439,8 @@
       "checked": "2026-11-11",
       "duty_i18n": {
         "es": "Urgencias nocturnas de 18:00 a 6:00 h todos los días y solo urgencias los domingos; WhatsApp +506 8764 0777. Llama antes para confirmar el horario.",
-        "it": "Urgenze notturne 18:00–06:00 tutti i giorni e la domenica solo urgenze; WhatsApp +506 8764 0777. Telefonare in anticipo per confermare gli orari."
+        "it": "Urgenze notturne 18:00–06:00 tutti i giorni e la domenica solo urgenze; WhatsApp +506 8764 0777. Telefonare in anticipo per confermare gli orari.",
+        "pt": "Urgências noturnas das 18h00 às 6h00, todos os dias, e ao domingo apenas urgências; WhatsApp +506 8764 0777. Liga antes para confirmar o horário."
       }
     }
   ],

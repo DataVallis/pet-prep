@@ -64,7 +64,8 @@
       "note": "Only the og:description was readable; no address, phone, hours or species obtained. Phone-less, listed on url. Species unknown; small_animals assumed from a general vet clinic, verify.",
       "duty_i18n": {
         "es": "Urgencias anunciadas 24/7 (web en georgiano). Llama antes.",
-        "it": "Pronto soccorso indicato come disponibile 24 ore su 24, 7 giorni su 7 (sito in lingua georgiana). Telefonare in anticipo."
+        "it": "Pronto soccorso indicato come disponibile 24 ore su 24, 7 giorni su 7 (sito in lingua georgiana). Telefonare in anticipo.",
+        "pt": "Apoio de urgência anunciado como disponível 24 h/24, 7 dias por semana (site em georgiano). Liga antes."
       }
     },
     {
@@ -83,7 +84,8 @@
       "note": "Own page says 'round-the-clock hospital for animals' and 'emergency medical care 24/7' but also lists working hours 10:00-20:00 and reception 10:00-19:30 daily - contradictory, so emergency_24h left false. Madloba lists a second phone +995 596 11 00 05. Removed from duty: Published hours 10:00-20:00 daily; call ahead for emergencies. Dog and cat hospital with a cat department.",
       "duty_i18n": {
         "es": "Abierto todos los días de 10:00 a 20:00 h; llama antes en caso de urgencia. Hospital para perros y gatos con departamento de gatos.",
-        "it": "Aperto tutti i giorni 10:00–20:00; per le urgenze telefonare in anticipo. Ospedale per cani e gatti con reparto dedicato ai gatti."
+        "it": "Aperto tutti i giorni 10:00–20:00; per le urgenze telefonare in anticipo. Ospedale per cani e gatti con reparto dedicato ai gatti.",
+        "pt": "Aberto todos os dias 10h00–20h00; liga antes em caso de urgência. Hospital para cães e gatos com secção de gatos."
       }
     },
     {
@@ -102,7 +104,8 @@
       "note": "Own site: Mon-Sun 10:00-19:00, no 24 h statement. A Vet Times article calls Vetlife a 24-hour small animal hospital - conflicting, not used. Second phone +995 322 305 950. Removed from duty: Open daily 10:00-19:00 (as published by the clinic).",
       "duty_i18n": {
         "es": "Abierto todos los días de 10:00 a 19:00 h.",
-        "it": "Aperto tutti i giorni 10:00–19:00."
+        "it": "Aperto tutti i giorni 10:00–19:00.",
+        "pt": "Aberto todos os dias 10h00–19h00."
       }
     },
     {
@@ -121,7 +124,8 @@
       "note": "'24/7' on the page is the AI chat assistant, not in-person care. Removed from duty: Open daily 11:00-20:00 (as published by the clinic). Dogs and cats.",
       "duty_i18n": {
         "es": "Abierto todos los días de 11:00 a 20:00 h. Perros y gatos.",
-        "it": "Aperto tutti i giorni 11:00–20:00. Cani e gatti."
+        "it": "Aperto tutti i giorni 11:00–20:00. Cani e gatti.",
+        "pt": "Aberto todos os dias 11h00–20h00. Cães e gatos."
       }
     },
     {
@@ -140,7 +144,8 @@
       "note": "Own site zooplaza.ge could not be fetched (provenance block). Only directories (yell.ge, petstory.ge) say '24-hour clinic'; yell.ge page re-checked 2026-11-11: name, address and phones match, no closure comment seen on the fetched page (earlier note of a user closure comment not reproduced). Other phones: 236 32 04, 599 520 558. Not marked 24 h per rules (aggregator only). Removed from duty: Listed as a 24-hour clinic by directories; confirm by phone before travelling.",
       "duty_i18n": {
         "es": "Según se indica, clínica 24 horas; confirma por teléfono antes de ir.",
-        "it": "Risulta una clinica aperta 24 ore su 24; confermare per telefono prima di mettersi in viaggio."
+        "it": "Risulta una clinica aperta 24 ore su 24; confermare per telefono prima di mettersi in viaggio.",
+        "pt": "Segundo consta, é uma clínica 24 horas; confirma por telefone antes de te deslocares."
       }
     },
     {
@@ -159,7 +164,8 @@
       "note": "Only aggregator (Madloba) says 'open 24 hours Mon-Sun'; no own website found, Facebook cannot be fetched. Candidate 24 h clinic - verify. Removed from duty: Listed by directories as open 24 hours daily; confirm by phone before travelling.",
       "duty_i18n": {
         "es": "Según se indica, abierto las 24 horas todos los días; confirma por teléfono antes de ir.",
-        "it": "Risulta aperta 24 ore su 24 tutti i giorni; confermare per telefono prima di mettersi in viaggio."
+        "it": "Risulta aperta 24 ore su 24 tutti i giorni; confermare per telefono prima di mettersi in viaggio.",
+        "pt": "Segundo consta, está aberto 24 horas por dia; confirma por telefone antes de te deslocares."
       }
     },
     {
@@ -178,7 +184,8 @@
       "note": "Own site; no 24 h statement.",
       "duty_i18n": {
         "es": "Con cita previa: de lunes a viernes de 10:00 a 18:00 h, domingo de 11:00 a 16:00 h, sábado cerrado. Visitas a domicilio. Perros, gatos, conejos, cobayas, roedores.",
-        "it": "Su appuntamento: lun–ven 10:00–18:00, dom 11:00–16:00, sab chiuso. Visite a domicilio. Cani, gatti, conigli, porcellini d'India, roditori."
+        "it": "Su appuntamento: lun–ven 10:00–18:00, dom 11:00–16:00, sab chiuso. Visite a domicilio. Cani, gatti, conigli, porcellini d'India, roditori.",
+        "pt": "Sob marcação: seg–sex 10h00–18h00, dom 11h00–16h00, sáb fechado. Visitas ao domicílio. Cães, gatos, coelhos, porquinhos-da-índia, roedores."
       }
     }
   ],

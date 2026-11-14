@@ -46,7 +46,8 @@
         "de": "Notfälle und diensthabender Tierarzt rund um die Uhr erreichbar. Reguläre Öffnungszeiten Mo–Fr 10–14 und 17–19 Uhr, Sa 10–14 Uhr, So geschlossen.",
         "fr": "Cas urgents et vétérinaire de garde 24 h/24, 7 j/7. Horaires habituels lun.–ven. 10 h–14 h et 17 h–19 h, sam. 10 h–14 h, fermé le dimanche.",
         "es": "Casos urgentes y veterinario de guardia abiertos 24/7. Horario habitual lun–vie 10:00–14:00 y 17:00–19:00 h, sáb 10:00–14:00 h, cerrado dom.",
-        "it": "Casi urgenti e veterinario di guardia 24 ore su 24, 7 giorni su 7. Orario ordinario lun–ven 10:00–14:00 e 17:00–19:00, sab 10:00–14:00, chiuso la domenica."
+        "it": "Casi urgenti e veterinario di guardia 24 ore su 24, 7 giorni su 7. Orario ordinario lun–ven 10:00–14:00 e 17:00–19:00, sab 10:00–14:00, chiuso la domenica.",
+        "pt": "Casos urgentes e veterinário de piquete disponíveis 24 h/24, 7 dias por semana. Horário normal de segunda a sexta 10h00–14h00 e 17h00–19h00, sábado 10h00–14h00, domingo fechado."
       },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
@@ -69,7 +70,8 @@
         "de": "Mo–Fr 8–20 Uhr, Sa 9–14 Uhr, So 10–14 Uhr.",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–14 h, dim. 10 h–14 h.",
         "es": "Lun–vie 8:00–20:00 h, sáb 9:00–14:00 h, dom 10:00–14:00 h.",
-        "it": "Lun–ven 8:00–20:00, sab 9:00–14:00, dom 10:00–14:00."
+        "it": "Lun–ven 8:00–20:00, sab 9:00–14:00, dom 10:00–14:00.",
+        "pt": "Segunda a sexta 8h00–20h00, sábado 9h00–14h00, domingo 10h00–14h00."
       },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
@@ -92,7 +94,8 @@
         "de": "Mo–Fr 8–19 Uhr, Sa 8–15 Uhr. Telefon 070 722 967, besetzt 9–19 Uhr.",
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–15 h. Téléphone 070 722 967, joignable 9 h–19 h.",
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–15:00 h. Teléfono 070 722 967, atendido 9:00–19:00 h.",
-        "it": "Lun–ven 8:00–19:00, sab 8:00–15:00. Al telefono 070 722 967 rispondono 9:00–19:00."
+        "it": "Lun–ven 8:00–19:00, sab 8:00–15:00. Al telefono 070 722 967 rispondono 9:00–19:00.",
+        "pt": "Segunda a sexta 8h00–19h00, sábado 8h00–15h00. O telefone 070 722 967 atende das 9h00 às 19h00."
       },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
@@ -115,7 +118,8 @@
         "de": "Mo–Fr 8–18 Uhr, Sa 9–16 Uhr, So geschlossen.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h, fermé le dimanche.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–16:00 h, cerrado dom.",
-        "it": "Lun–ven 8:00–18:00, sab 9:00–16:00, chiuso la domenica."
+        "it": "Lun–ven 8:00–18:00, sab 9:00–16:00, chiuso la domenica.",
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–16h00, domingo fechado."
       },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
@@ -138,7 +142,8 @@
         "de": "Zweite Telefonnummer: +389 70 265 872.",
         "fr": "Second numéro +389 70 265 872.",
         "es": "Segundo teléfono +389 70 265 872.",
-        "it": "Secondo telefono +389 70 265 872."
+        "it": "Secondo telefono +389 70 265 872.",
+        "pt": "Segundo telefone +389 70 265 872."
       },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
@@ -175,7 +180,8 @@
         "de": "Eventuell separate Notdienstnummer; bitte vorher anrufen.",
         "fr": "Une ligne de garde distincte existe peut-être ; appelez avant de venir.",
         "es": "Puede haber una línea de guardia aparte; llama antes.",
-        "it": "Potrebbe esserci una linea di guardia separata; chiamare prima."
+        "it": "Potrebbe esserci una linea di guardia separata; chiamare prima.",
+        "pt": "Pode existir uma linha de piquete separada; liga antes."
       },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",
