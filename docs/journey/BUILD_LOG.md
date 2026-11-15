@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Three.js: prototip »Koliko dela je labradorec?«
+
+**Kaj:** David je vprašal, kje lahko three.js naredi korak naprej, tudi poslovno. Odgovor: na spletni strani, ne v aplikaciji — pes v aplikaciji ostane realističen video. Narejen je prototip za petprep.si: en dan z labradorcem v 3D, vsako opravilo pade kot žeton na kup, kup se pomnoži na teden, leto in 13 let (odrasel labradorec: 7.177 ur sprehodov in 9.570 obrokov), nato stroški z izbiro valute in poziv partnerjem. V prizoru so info točke z dejstvi in viri. Samo prototip (`docs/prototypes/real-cost/`), *ni objavljen*.
+**Zakaj je pomembno:** kalkulator »koliko res stane in koliko dela je pes« je v poslovnem modelu kot vaba za starše, a še ni bil zgrajen; hkrati je prostor, ki ga lahko sponzorira zavarovalnica.
+**Kako povedati:** 🧒 »Poglej, koliko opravil pade na kup v enem dnevu — in v 13 letih.« 👩 »Preden se odločite: številke iz virov, stroški v vaši valuti.« 🤝 »Želite postati naš partner? Tu lahko predstavite svojo storitev.« 🛠 »three.js + cannon-es, ena stran brez strežnika; številke skrbi iz registra pasem, stroški PDSA, tečaj ECB fiksiran na 13. 11. 2026.«
+
 ## 2026-11-15 — Priboljšek šele, ko je pripravljen (in pravilo za vse funkcije)
 
 **Kaj:** David je na produkciji kupil priboljške in dal prvega: število se je zmanjšalo za 1, na zaslonu pa se ni zgodilo nič — video, kako kuža poje priboljšek, še ni bil narejen. Vzrok: strežnik je video sicer začel pripravljati ob nakupu, a gumb »Priboljšek« in strežniška pot za dajanje priboljška pripravljenosti sploh nista preverjala. Zdaj je gumb viden, a onemogočen z napisom »Priboljški se še pripravljajo — to lahko traja nekaj minut«, strežnik dajanje zavrne in **priboljšek se ne porabi**. Ko je video pripravljen, se gumb vklopi sam in otrok dobi obvestilo.
