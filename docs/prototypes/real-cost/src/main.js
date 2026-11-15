@@ -3,6 +3,10 @@ import * as CANNON from 'cannon-es';
 import { STR } from './strings.js';
 
 /* ---------- Data (every number has its origin in SOURCES in strings.js) ---------- */
+// Parent e-mail (optional, with consent) goes to the PetPrep API (M6-S05, POST /api/summary-leads).
+const API_URL = 'https://api.petprep.si';
+const CONSENT_VERSION = '2026-11'; // the news_consent sentence in strings.js; a new wording needs a new version on the server
+const BREED = 'labrador_retriever';
 const LIFE_YEARS = 13.1; // McMillan 2024 (PetPrep S54)
 const PROFILES = {
   adult: { meals: 2, walkMin: 90, walks: 2, poops: 2, trainMin: 5, takeOuts: 0, groomWeek: 1 },
@@ -375,6 +379,28 @@ function openSheet() {
   $('#sheet').hidden = false; document.body.classList.add('sheet-open'); $('#sheet-print').focus();
 }
 function closeSheet() { $('#sheet').hidden = true; document.body.classList.remove('sheet-open'); sheetReturn?.focus(); }
+/* E-mail form: optional. The server keeps one row per e-mail, so a repeat entry never duplicates; the
+   browser also remembers that it was left (when storage is available) and hides the form next time. */
+const LEFT_KEY = 'petprep.summaryLead';
+const hasLeft = () => { try { return localStorage.getItem(LEFT_KEY) === '1'; } catch { return false; } };
+function showNews() { const left = hasLeft(); $('#news').hidden = left; $('#news-done').hidden = !left; }
+$('#news').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const msg = $('#news-msg'), email = $('#news-email').value.trim(), btn = e.target.querySelector('button');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = t('news_err_email'); $('#news-email').focus(); return; }
+  if (!$('#news-consent').checked) { msg.textContent = t('news_err_consent'); $('#news-consent').focus(); return; }
+  msg.textContent = ''; btn.disabled = true;
+  try {
+    const res = await fetch(`${API_URL}/api/summary-leads`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email, consent: true, consent_version: CONSENT_VERSION, source: 'real_cost', locale: state.lang, breed: BREED, stage: state.stage, website: $('#news-hp').value }),
+    });
+    if (res.status === 201) { try { localStorage.setItem(LEFT_KEY, '1'); } catch { /* private mode */ } $('#news').hidden = true; $('#news-done').hidden = false; }
+    else msg.textContent = t(res.status === 422 ? 'news_err_email' : 'news_err');
+  } catch { msg.textContent = t('news_err'); }
+  btn.disabled = false;
+});
+showNews();
 $('#sheet-open').addEventListener('click', openSheet);
 $('#sheet-close').addEventListener('click', closeSheet);
 $('#sheet-print').addEventListener('click', () => window.print());
