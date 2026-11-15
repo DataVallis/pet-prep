@@ -1,0 +1,11 @@
+{
+  "name": "petprep-real-cost-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --format=esm --outfile=dist/app.js && cp index.html dist/",
+    "serve": "npm run build && python3 -m http.server 8765 --directory dist"
+  },
+  "dependencies": { "cannon-es": "0.20.0", "three": "0.187.0" },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}
