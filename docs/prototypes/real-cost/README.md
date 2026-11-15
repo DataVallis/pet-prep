@@ -13,19 +13,18 @@ the app, the backend or `pet-prep-website`. Product context, numbers with their 
 - `standalone.html` — the built single file (own code inlined, three.js and cannon-es from cdn.jsdelivr.net through an
   import map). This is what was published as a private Claude page for David.
 
-## Lead PDF ("Summary for a Labrador")
-- `summary/build_summary.py` builds `summary/petprep-povzetek-labradorec-sl.pdf` and `summary/petprep-summary-labrador-en.pdf`
-  (A4, 2 pages: care table, puppy note, costs in GBP with `~` EUR / USD, promise with signature lines, sources) from
-  HTML with headless Chrome, fonts and logo from `brand/`. Numbers mirror `src/main.js` — change both.
-- Use (David 2026-11-15, T7): both PDFs are the files of the **free Lemon Squeezy product** »PetPrep Summary: How Much
-  Work Is a Labrador? (free)« (id 1528939, lead magnet, €0, published 2026-11-15). Step 5 of the page has a button
-  (`SUMMARY_URL` in `src/main.js`) that opens its checkout: `https://petprep.lemonsqueezy.com/checkout/buy/5cb18a19-22d9-4ec7-befe-19a82e687cc5`.
-  The parent enters an e-mail there and Lemon Squeezy sends the files.
-- **Store is still in test mode** (Lemon Squeezy identity verification »In Review« on 2026-11-15): the checkout shows
-  »Test mode is currently enabled«. After activation the product must be copied to live mode and `SUMMARY_URL` replaced
-  with the live link.
-- **No marketing consent:** the Lemon Squeezy checkout has no opt-in checkbox (checked 2026-11-15), so the addresses
-  may be used only to deliver the summary, not for news.
+## Summary for parents (dynamic, T8)
+- Step 5 has the button »Odpri povzetek za starše«. `renderSheet()` in `src/main.js` builds the summary **in the browser**
+  from the current choices (adult / puppy, language, currency, the parent's own cost sliders): care table (day / week /
+  year / 13 years), costs, promise with signature lines, sources. »Natisni ali shrani kot PDF« calls `window.print()`;
+  the print styles (`@media print`, A4) show only the sheet, one page.
+- **No files, no e-mail, no upload anywhere** (David 2026-11-15: thousands of PDFs for 300 breeds × many languages are
+  not practical). On petprep.si the same builder takes the breed's numbers from `registry.json`.
+- History: the static PDFs + `summary/build_summary.py` and the free Lemon Squeezy product (id 1528939, T7) were made the
+  same day and dropped; the two PDFs stay on Drive (`PetPrep/spletna-prodaja`) as an archive, the script is in git history
+  (PR #1146).
+- **E-mail collection is not built.** David wants it (partners with a logo need reach numbers); proposal T9 in
+  `docs/product/THREEJS_OPPORTUNITIES.md`.
 
 ## Run
 ```bash
@@ -45,4 +44,4 @@ npm run serve      # http://localhost:8765/index.html
   position to the screen (`placeOverlays`). Info-point copy: `i_*` keys in `src/strings.js`.
 
 ## Not done
-The summary button points to a test-mode checkout (see above); the page itself collects nothing. The dog is a toy figure on purpose (the app pet is a realistic AI video).
+The page collects nothing (no e-mail, see T9). The dog is a toy figure on purpose (the app pet is a realistic AI video).
