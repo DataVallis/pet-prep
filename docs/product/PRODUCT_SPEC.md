@@ -266,6 +266,20 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 - **Strošek in izpad:** vsak klic AI ima ocenjen strošek; dnevna in mesečna meja porabe (privzeto 5 $ / 50 $). Če je meja dosežena ali je račun pri fal.ai prazen, slika/video ni ustvarjen, **igra pa teče normalno** (pes brez slike). Osnovni mediji ob rojstvu so brezplačni za družino; več prek žetonov (M4-09, *načrt*).
 - **Izbira modelov:** David je 5. 10. 2026 izbral Nano Banana Pro + Kling 3.0 Pro; AI Lab (admin) ostaja za primerjavo novih modelov.
 
+### 10.1 Splošno pravilo »stanje → medij«: funkcija brez svoje animacije ni na voljo (David 15. 11. 2026)
+
+**Pravilo:** če animacija (video) neke funkcije še ne obstaja, je funkcija **onemogočena** in piše, da **se pripravlja** — nikoli se ne zgodi, da otrok nekaj naredi in se na zaslonu »nič ne zgodi«. Ko je animacija pripravljena (shranjena, preverjena, stisnjena), se funkcija vklopi sama. Otroku in staršu nikoli ne povemo, da nastajajo slike ali videi (pravilo 20. 10. 2026): piše samo, da se nekaj pripravlja in da lahko traja nekaj minut.
+
+| Funkcija | Animacija, ki jo potrebuje | Dokler je ni |
+|---|---|---|
+| **Priboljšek** (»Želje«) | video, kako ljubljenček poje priboljšek (nastane ob nakupu) | gumb onemogočen, »Priboljški se še pripravljajo«; priboljšek se ne porabi (SHOP_SPEC S14) |
+| **Šola** | vsi posnetki šole | »Šola se še pripravlja« (David 28. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) |
+| **Igra z žogo, palica s peresom, crkljanje** | posnetki igre | »Igra se še pripravlja« (David 20. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) |
+| Postelja, skledi, igrači (»Želje«) | svoja vsebina v prizoru | nimajo svojega gumba — prizor (spanje, hranjenje, igra) deluje kot brez stvari; v katalogu piše »Na poti …« |
+| **Osnovna skrb: hranjenje, voda, čiščenje, ven / sprehod** | nima svoje animacije | **nikoli ni zaklenjena** zaradi manjkajočih medijev — ljubljenček ne sme trpeti zaradi nas (*predlog Claude, čaka Davida*) |
+
+Izjeme: ljubljenček, ki AI medijev sploh ne dobi (izklopljeni, narisan prizor), ni nikoli zaklenjen zaradi njih; izklopljeno stikalo za posnetke ne zaklene funkcije. Ob neuspehu funkcija ostane zaklenjena, sistem poskuša znova sam; pri priboljških po izčrpanih poskusih skrbnik dobi opozorilo in jih odklene (*privzeto Claude — David lahko spremeni*). Celoten pregled vseh dejanj otroka: `docs/engineering/ARCHITECTURE.md` → *Feature readiness — the general media rule*.
+
 ## 11. Ocenjevanje in certifikat
 
 - **7. dan:** "Puppy Promoter" značka staršu (prvi dokaz vrednosti, točka aktivacije garancije).

@@ -8,6 +8,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Priboljšek šele, ko je pripravljen (in pravilo za vse funkcije)
+
+**Kaj:** David je na produkciji kupil priboljške in dal prvega: število se je zmanjšalo za 1, na zaslonu pa se ni zgodilo nič — video, kako kuža poje priboljšek, še ni bil narejen. Vzrok: strežnik je video sicer začel pripravljati ob nakupu, a gumb »Priboljšek« in strežniška pot za dajanje priboljška pripravljenosti sploh nista preverjala. Zdaj je gumb viden, a onemogočen z napisom »Priboljški se še pripravljajo — to lahko traja nekaj minut«, strežnik dajanje zavrne in **priboljšek se ne porabi**. Ko je video pripravljen, se gumb vklopi sam in otrok dobi obvestilo.
+
+**Pravilo za naprej (David):** »Če nek video še ne obstaja, mora biti funkcija onemogočena.« Zapisano je v PRODUCT_SPEC §10.1 in v navodilih za razvoj; narejen je pregled vseh 17 skupin otrokovih dejanj (tabela v ARCHITECTURE). Šola in igre so to pravilo že imele, priboljški so bili edini primer »tiho se nič ne zgodi«. Osnovna skrb (hranjenje, voda, čiščenje, sprehod) ne potrebuje svoje animacije in ni nikoli zaklenjena.
+
+**Številke:** video priboljška stane ≈ 0,49 $ enkrat na videz in obdobje (0,15 $ slika + 0,34 $ video); naslednji kupci istega videza 0 $. 9 novih strežniških testov, 14 novih testov aplikacije.
+
+**Kako povedati:** 👩 Kar otrok kupi z vami, deluje od prvega tapa — če še ni pripravljeno, aplikacija to pove in ničesar ne porabi. 🧒 Priboljšek daš, ko je pripravljen; nič se ne izgubi. 💼 Plačana vsebina se nikoli ne porabi brez prikazane vrednosti; pravilo velja za vse prihodnje plačljive dodatke. 🛠 En koncept pripravljenosti (`media_ready` + 422 `media_not_ready`) za posnetke v `pet_media` in `item_media`.
+
+---
+
 ## 2026-11-15 — Menjava peska s tremi kretnjami: vleci, drgni, drži
 
 **Kaj:** David je po popravku menjave peska rekel: »Želim da je bolj interaktivno.« Tedenska menjava ima zdaj za vsak korak svojo kretnjo in risbo, ki sledi prstu: stranišče povlečeš do koša (nagne se in star pesek se strese vanj, trije vleki), z drgnjenjem umiješ osem madežev (pena pod prstom), s pritiskom in držanjem vreče nasuješ svež pesek do označene črte (5 sekund). Vse je narisano v aplikaciji — brez AI posnetkov, strošek 0 $. Strežnik se ni spremenil: ista 30-sekundna seja, ista ocena, ista tedenska rutina. Zgrajeno in pokrito s testi (36 novih), **na telefonu še ni preverjeno**.
