@@ -1,0 +1,64 @@
+{
+  "country": "AZ",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "VetLife Hospital (own site)",
+      "url": "https://www.vetlife-hospital.com/",
+      "note": "Opened: '7/24 veterinar dəstək', 'Daim açıq', '24/7 təcili yardım xidməti mövcuddur'; phone +994 55 748 57 02; no street address (only 28 May / Nasimi district, AZ1010). vetlifehospital.az could not be opened (PROVENANCE_REQUIRED)."
+    },
+    {
+      "name": "AARC Azerbaijan Animal Rescue Center (own site)",
+      "url": "https://aarc.az/en/",
+      "note": "Opened: 35 Badamdar road, Baku; 050 355 17 17 (also emergency hotline); Mon-Sat 10:00-18:00; on-call doctor during working hours only; no 24 h statement."
+    },
+    {
+      "name": "Azerbaijan State Agrarian University - veterinary clinic page",
+      "url": "https://adau.edu.az/en/{HTTP_HOME_URL_LINK/elmi_tedqiqat_en/veterinary-clinic-633/",
+      "note": "Opened: only a menu entry for a veterinary clinic; no clinic address, phone or hours (only the university address in Ganja)."
+    },
+    {
+      "name": "Report.az / Trend.az - clinic at the Veterinary Medicine Research Institute",
+      "url": "https://www.trend.az/azerbaijan/society/3537462.html",
+      "note": "Opened: clinic opened 2021-12-28 on the grounds of the Research Institute of Veterinary Medicine (Nizami district, Baku); no name, phone, hours; no entry."
+    },
+    {
+      "name": "OneClick - Royal Vet",
+      "url": "https://oneclick.az/company/royal-vet?hl=en",
+      "note": "Opened: Nasimi district, Vagif prospect 3, Baku; phone masked, no hours, no website; no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "VetLife Hospital",
+      "city": "Baku",
+      "region": "Baku",
+      "address": "Nasimi district (28 May), Baku, AZ1010",
+      "phone": "+994 55 748 57 02",
+      "emergency_24h": true,
+      "duty": "Open 24/7 with an emergency service; also reachable on WhatsApp.",
+      "small_animals": true,
+      "url": "https://www.vetlife-hospital.com/",
+      "source_url": "https://www.vetlife-hospital.com/",
+      "checked": "2026-11-15",
+      "note": "Own page says '7/24 veterinar dəstək', 'Daim açıq', '24/7 təcili yardım xidməti mövcuddur'. No street address on the page, only district/postcode/coordinates (40.380000, 49.837889). Page images point to vetlifehospital.az, which could not be opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "AARC Veterinary Clinic (Azerbaijan Animal Rescue Center)",
+      "city": "Baku",
+      "region": "Baku",
+      "address": "35 Badamdar road, Baku",
+      "phone": "+994 50 355 17 17",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-18:00, closed Sunday; emergency doctor on call during working hours; home visits within 50 km of Baku.",
+      "small_animals": true,
+      "url": "https://aarc.az/en/",
+      "source_url": "https://aarc.az/en/",
+      "checked": "2026-11-15",
+      "note": "Own page; same number is the emergency hotline; no 24 h statement ('overnight care' mentioned without hours)."
+    }
+  ],
+  "notes": "2 entries, 1 with 24 h (VetLife Hospital Baku). No duty rota or animal poison line found. Search returned very few Azerbaijani vet sites. AFSA (afsa.gov.az) only surfaced legal PDFs, no clinic list; no Azerbaijan Veterinary Association site found. Not openable: vetlifehospital.az (PROVENANCE_REQUIRED). Not usable (no contact data): Azerbaijan State Agrarian University (Ganja; page only has a \"Veterinary clinic\" menu link, no clinic contact data - removed at independent check 2026-11-15), Royal Vet (oneclick.az), Research Institute of Veterinary Medicine clinic (Baku, Nizami district). Nothing found for Sumqayit, Lankaran, Gabala."
+}
