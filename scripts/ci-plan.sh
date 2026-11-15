@@ -198,6 +198,7 @@ classify() {
       docs/research/breed-portraits/*) need_scripts=true ;; # AI breed portraits + manifest (export input, M5-R11-04), nothing ships
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
+      scripts/ci-api-types.sh|package.json|yarn.lock) need_mobile=true need_scripts=true ;; # API types job (schema.ts vs the backend's OpenAPI, David 2026-11-15) runs with the mobile suite; shellcheck
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
       scripts/daily-deploy.sh|scripts/tests/daily-deploy.test.sh|.github/workflows/daily-deploy.yml) need_scripts=true ;; # D21 daily deploy trigger (Actions only), nothing ships
       scripts/ci-install-ffmpeg.sh|scripts/tests/ci-install-ffmpeg.test.sh) need_backend=true need_scripts=true ;; # D24 ffmpeg for the backend test job (Actions only), nothing ships

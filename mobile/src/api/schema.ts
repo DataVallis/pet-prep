@@ -124,6 +124,12 @@ export interface paths {
          *     `POST /api/child/pin-login`; this endpoint answers them like any wrong
          *     credentials (401).
          *
+         *     Brute-force guard (David 2026-11-11): 429 (`{message}` + `Retry-After`)
+         *     after 10 requests / min or 30 / h per IP (IPv6 /64), and for an account
+         *     (normalised e-mail, any IP) after 5 wrong passwords in 15 min — while it
+         *     lasts even the right password gets 429; a success before that resets
+         *     the counter. Successful responses are unchanged.
+         *
          *     POST /api/login
          */
         post: operations["auth.login"];
@@ -273,7 +279,7 @@ export interface paths {
          *     null for a challenge pet) says whether the free pet can be upgraded to the
          *     challenge (`reason` when not — `legacy_profile` → the app explains);
          *     `challenge_started_at` = the purchase that upgraded a free pet (its 12 weeks
-         *     start there), null for every other pet
+         *     start there; the score too, unless the parent kept it — M6-U03), null for every other pet
          * @description GET /api/parent/billing
          */
         get: operations["billing.index"];
@@ -304,7 +310,10 @@ export interface paths {
          *     pet → 404 `pet_not_found`. M6-U01: a born, active free pet (mutt / domestic
          *     cat) is upgraded to the 12-week challenge — the challenge starts now; 422
          *     `game_over`, `pet_not_born`, `legacy_profile` (a pre-M5 mutt), `free_plan`
-         *     (a free pet of a paid breed)
+         *     (a free pet of a paid breed). M6-U03: optional body `keep_score` (bool) for that
+         *     upgrade — true keeps the Care Score so far (it counts from each child's start), false /
+         *     absent starts it again at the purchase (absent: the choice of the parent's open intent
+         *     for this pet, if any). The 12 weeks run from the purchase either way
          * @description POST /api/parent/pets/{pet}/challenge/activate
          */
         post: operations["billing.activate"];
@@ -333,7 +342,9 @@ export interface paths {
          *     unpaid challenge pet (also unborn) or an upgradeable free pet; 422
          *     `already_paid`, `pet_not_active`, `game_over`, `pet_not_born`,
          *     `legacy_profile`, `free_plan`. Another family's pet → 404 `pet_not_found`.
-         *     The app must not open the store sheet when this fails
+         *     The app must not open the store sheet when this fails. M6-U03: optional body
+         *     `keep_score` (bool) for a free pet — the parent's choice to keep the Care Score so far
+         *     (true) or start again (false); the webhook applies it when it upgrades the pet
          * @description POST /api/parent/pets/{pet}/challenge/intent
          */
         post: operations["billing.intent"];
@@ -1542,6 +1553,69 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/gift/redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Redeem a website gift voucher (M6-S01, WEBSITE_SALES_SPEC §3.4)
+         * @description Called by petprep.si from the browser with `Authorization: Bearer <token>` from
+         *     `POST /api/web/parent-session` (M6-S01b) — ONLY that website token (ability
+         *     `gift:redeem`); app tokens get 401. The family is the token's parent's family.
+         *     Rate limited per IP (10 / min, 30 / h), per code (10 / h) and per family
+         *     (20 / h) → 429 `rate_limited`. The code (a Lemon Squeezy license key) is checked
+         *     with Lemon Squeezy. Success = one unused 12-week challenge purchase in the
+         *     family (the parent chooses the pet in the app).
+         *
+         *     200 `{status: redeemed, already}` · 422 `invalid_request` | `invalid_code` |
+         *     `expired` | `refunded` · 409 `already_redeemed` · 401 `unauthenticated` (no /
+         *     expired / non-web token; family gone) · 403 `not_parent` · 502
+         *     `upstream_error` · 503 `unavailable` (switch off / not configured — checked
+         *     after the token). `message` is for logs only (sl | en by `locale`; the other
+         *     website languages → en).
+         *
+         *     POST /api/gift/redeem
+         */
+        post: operations["gift.redeem"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/webhooks/lemonsqueezy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Lemon Squeezy webhook (M6-S01, website gift vouchers)
+         * @description Auth: `X-Signature` = hex HMAC-SHA256 of the raw body with
+         *     LEMONSQUEEZY_WEBHOOK_SECRET — not configured → 503, wrong → 401
+         *     (VerifyLemonSqueezyWebhook). Every delivery is stored once in
+         *     `lemonsqueezy_events` (a repeat → 200 `duplicate: true`). `order_created` is
+         *     recorded; `license_key_created` / `_updated` create or update the voucher;
+         *     a full `order_refunded` or a disabled key invalidates it and revokes its
+         *     challenge credit. Processed whatever the »Gift vouchers« switch says.
+         *
+         *     POST /api/webhooks/lemonsqueezy
+         */
+        post: operations["lemonSqueezyWebhook.handle"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/generate-pin": {
         parameters: {
             query?: never;
@@ -1726,6 +1800,33 @@ export interface paths {
          */
         put: operations["parentSettings.update"];
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/partner-inquiries": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Send a partner inquiry. Public, no token; throttled per IP (5 / hour,
+         *     IPv6 /64). The server stores it and posts a Discord alert without the
+         *     sender's data; there is no automatic e-mail. Nothing about the visitor's
+         *     address is stored. A filled hidden `website` field = bot: 201 and nothing
+         *     stored
+         * @description 201 `{ok: true}`; 422 invalid body; 429 throttled; 503 while the
+         *     superadmin switch »Partner inquiries« is off.
+         *
+         *     POST /api/partner-inquiries
+         */
+        post: operations["partnerInquiry.store"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1971,6 +2072,48 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/web/parent-session": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Website sign-in of a parent for gift voucher redemption (M6-S01b)
+         * @description Called by petprep.si's redeem page. `method` = `password` (`email` +
+         *     `password`), `google` or `apple` (`id_token` from the provider's redirect for
+         *     the WEBSITE client id + the raw `nonce`, required for both). Signs in an
+         *     EXISTING parent with a family — never creates, links or changes an account.
+         *     The token has the single ability `gift:redeem`, expires after 15 minutes and
+         *     works only on `POST /api/gift/redeem` and `DELETE /api/web/parent-session`
+         *     (every other route → 403 `token_scope`). No user data in the answer.
+         *
+         *     Errors `{error, message}`: 422 `invalid_request` · 401 `invalid_credentials`
+         *     (unknown e-mail / wrong password / account without a password — one body) |
+         *     `invalid_token` · 404 `account_not_found` · 403 `not_parent` · 429
+         *     `rate_limited` + `Retry-After` (10 / min + 30 / h per IP; 5 password failures
+         *     per account in 15 min from any IP) · 503 `provider_disabled` |
+         *     `provider_unavailable` | `unavailable` (gift switch off). `message` is for
+         *     logs only (sl | en by `locale`, other website languages → en).
+         *
+         *     POST /api/web/parent-session
+         */
+        post: operations["web.parent-session.store"];
+        /**
+         * Sign out of the website session (M6-S01b). Deletes the presented token only
+         *     when it is a valid web (`gift:redeem`) token; no token, an unknown or expired
+         *     one, or an APP token → also 204 and nothing is deleted
+         * @description DELETE /api/web/parent-session
+         */
+        delete: operations["web.parent-session.destroy"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/wishes": {
         parameters: {
             query?: never;
@@ -2112,6 +2255,21 @@ export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
         /**
+         * ActivateChallengeRequest
+         * @description POST /api/parent/pets/{pet}/challenge/activate (M3-11). Parents only
+         *     (UserPolicy::viewBilling → 403 for a child); whether the pet belongs to the
+         *     parent's family is checked in the controller (PetPolicy::manage) so another
+         *     family's pet looks exactly like a missing one (404). Optional body
+         *     `keep_score` (M6-U03).
+         */
+        ActivateChallengeRequest: {
+            /**
+             * @description M6-U03 (U7): upgrade of a free pet — keep the Care Score so far (true) or start
+             *     again at the purchase (false / absent). Ignored for a pet that is not free.
+             */
+            keep_score?: boolean;
+        };
+        /**
          * AppErrorScope
          * @description Where an app error report comes from (M5-05). Error-boundary scopes mirror the app's `RenderErrorScope` (`app`, `child-hud`, `locked-overlay`); the global handlers report `global` (ErrorUtils: uncaught JS error) and `unhandled-rejection` (promise without a catch). Mirrored in the `app_error_fingerprints_scope_check` constraint.
          * @enum {string}
@@ -2172,6 +2330,21 @@ export interface components {
          * @enum {string}
          */
         BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        /**
+         * ChallengeIntentRequest
+         * @description POST /api/parent/pets/{pet}/challenge/intent (M6-U01, FREE_PET_UPGRADE_SPEC
+         *     §5.3). Parents only (UserPolicy::viewBilling → 403 for a child); the pet is
+         *     authorized in the controller with PetPolicy::buyChallenge so another
+         *     family's pet looks exactly like a missing one (404). Optional body
+         *     `keep_score` (M6-U03).
+         */
+        ChallengeIntentRequest: {
+            /**
+             * @description M6-U03 (U7): upgrade of a free pet — keep the Care Score so far (true) or start
+             *     again at the purchase (false / absent). Ignored for a pet that is not free.
+             */
+            keep_score?: boolean;
+        };
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -2531,7 +2704,8 @@ export interface components {
         /** PairedPetResource */
         PairedPetResource: {
             id: number;
-            breed_type: string;
+            /** @enum {string} */
+            breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
             /**
              * @description M5-R06-01: the pet's species.
              * @enum {string}
@@ -2619,9 +2793,9 @@ export interface components {
                 };
             };
             pet_dna: {
-                seed: string | null;
-                prompt_anchor: string | null;
-                visual_traits: string | null;
+                seed: unknown;
+                prompt_anchor: unknown;
+                visual_traits: unknown;
                 /** @description Our signed URL (M4-05), never the fal URL. */
                 reference_image_url: string | null;
             };
@@ -2791,6 +2965,12 @@ export interface components {
              */
             grooming_enabled: boolean;
         };
+        /**
+         * PartnerInquiryType
+         * @description Kind of cooperation a partner asks about on petprep.si/partners (M6-S03, WEBSITE_SALES_SPEC §5.2). Mirrored in the CHECK constraint of `partner_inquiries.type`.
+         * @enum {string}
+         */
+        PartnerInquiryType: "series" | "sponsored_content" | "insurer" | "directory" | "shelter" | "other";
         /** Pet */
         Pet: {
             id: number;
@@ -2862,6 +3042,7 @@ export interface components {
             timezone: string | null;
             /** Format: date-time */
             challenge_started_at: string | null;
+            challenge_score_kept: boolean;
         };
         /**
          * PetOrigin
@@ -2926,6 +3107,23 @@ export interface components {
             kind: components["schemas"]["PlayKind"];
         };
         /**
+         * RedeemGiftRequest
+         * @description POST /api/gift/redeem (M6-S01, CONTRACT §2.4 step 1; M6-S01b). Authenticated by the
+         *     website sign-in token (RequireWebSession) — the family comes from the token, never
+         *     from the body: a sent `email` is ignored (never validated, never logged). A failure
+         *     answers 422 `invalid_request` without echoing field names or values.
+         */
+        RedeemGiftRequest: {
+            /** @description The voucher code (a Lemon Squeezy license key) as printed: letters, digits, dashes, spaces. */
+            code: string;
+            /**
+             * @description Language of the `message` text only (one of the 15 website languages; the
+             *     server answers sl / en, the rest en — the website maps `error`).
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb" | null;
+        };
+        /**
          * RedeemItemRequest
          * @description POST /api/parent/pets/{pet}/items/redeem (M6-W02): `product_id` (a wish store
          *     product; unknown → 422 `unknown_product` from WishCreditService), optional
@@ -2948,7 +3146,7 @@ export interface components {
                 bed?: string | null;
                 bowls?: string | null;
                 toy_1?: string | null;
-            };
+            } | null;
         };
         /**
          * RegisterDeviceRequest
@@ -3170,6 +3368,21 @@ export interface components {
             rules?: number;
         };
         /**
+         * StorePartnerInquiryRequest
+         * @description POST /api/partner-inquiries (M6-S03, WEBSITE_SALES_SPEC §5.2). Public.
+         */
+        StorePartnerInquiryRequest: {
+            company: string;
+            contact_name: string;
+            /** Format: email */
+            email: string;
+            type: components["schemas"]["PartnerInquiryType"];
+            message: string;
+            website?: string | null;
+            /** @enum {string|null} */
+            locale?: "sl" | "en" | null;
+        };
+        /**
          * SyncStepsRequest
          * @description POST /api/child/pet/steps (M1-04 / M1-07): today's cumulative step count
          *     from the phone. The service handles idempotency (max wins), anti-cheat and
@@ -3306,6 +3519,38 @@ export interface components {
             is_active?: boolean;
             /** @description Optional family timezone (IANA), saved on the parent (M1-03). */
             timezone?: string;
+        };
+        /**
+         * WebParentSessionRequest
+         * @description POST /api/web/parent-session (M6-S01b, CONTRACT_WEB_SIGNIN §1.1). Public;
+         *     `throttle:web-session`. Every other body field (`abilities`, `device_name`,
+         *     `name`, `terms_accepted`, `timezone` …) is ignored — nothing from the request
+         *     shapes the token. A failure answers 422 `invalid_request` without echoing
+         *     field names or values.
+         */
+        WebParentSessionRequest: {
+            /**
+             * @example password
+             * @enum {string}
+             */
+            method: "password" | "google" | "apple";
+            /**
+             * Format: email
+             * @description password: the parent's app account e-mail + password.
+             */
+            email: string;
+            password: string;
+            /**
+             * @description google / apple: the provider's ID token from the redirect (website client id only)
+             *     and the RAW nonce whose SHA-256 hex the website passed to the provider.
+             */
+            id_token: string;
+            nonce: string;
+            /**
+             * @description Language of `message` only (sl / en; the other website languages get English).
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb" | null;
         };
     };
     responses: {
@@ -3490,16 +3735,17 @@ export interface operations {
                     "application/json": {
                         token: string;
                         abilities: [
-                            string
+                            "parent" | "child" | "gift:redeem"
                         ];
                         user: {
                             id: number;
                             name: string;
                             email: string | null;
-                            role: string;
+                            /** @enum {string} */
+                            role: "parent" | "child";
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
-                            linked_providers: string[];
+                            linked_providers: ("google" | "apple")[];
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Per child (M2-02): this child must sign before acting. null for a parent. */
@@ -3519,6 +3765,18 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+            /** @description Too many requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @description Error overview. */
+                        message: string;
+                    };
+                };
+            };
         };
     };
     "auth.register": {
@@ -3542,16 +3800,17 @@ export interface operations {
                     "application/json": {
                         token: string;
                         abilities: [
-                            string
+                            "parent" | "child" | "gift:redeem"
                         ];
                         user: {
                             id: number;
                             name: string;
                             email: string | null;
-                            role: string;
+                            /** @enum {string} */
+                            role: "parent" | "child";
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
-                            linked_providers: string[];
+                            linked_providers: ("google" | "apple")[];
                         };
                         /** @description A new family has no pet yet; the parent adds a child next. */
                         pet: null;
@@ -3583,16 +3842,17 @@ export interface operations {
                     "application/json": {
                         token: string;
                         abilities: [
-                            string
+                            "parent" | "child" | "gift:redeem"
                         ];
                         user: {
                             id: number;
                             name: string;
                             email: string | null;
-                            role: string;
+                            /** @enum {string} */
+                            role: "parent" | "child";
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
-                            linked_providers: string[];
+                            linked_providers: ("google" | "apple")[];
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Parents never sign a contract. */
@@ -3623,10 +3883,11 @@ export interface operations {
                         id: number;
                         name: string;
                         email: string | null;
-                        role: string;
+                        /** @enum {string} */
+                        role: "parent" | "child";
                         /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                         has_password: boolean;
-                        linked_providers: string[];
+                        linked_providers: ("google" | "apple")[];
                         pet: components["schemas"]["Pet"] | null;
                         awaiting_contract: boolean | null;
                         /** @description M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch, default off). */
@@ -3676,6 +3937,7 @@ export interface operations {
                 content: {
                     "application/json": {
                         credits_available: number;
+                        /** @description Kill switch (config/payments.php): false = nobody is payment-locked yet. */
                         payments_enforced: boolean;
                         pets: {
                             pet_id: number;
@@ -3711,7 +3973,11 @@ export interface operations {
             };
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ActivateChallengeRequest"];
+            };
+        };
         responses: {
             200: {
                 headers: {
@@ -3721,24 +3987,17 @@ export interface operations {
                     "application/json": {
                         /** @enum {string} */
                         status: "activated" | "already_active";
-                        pet_id: string;
+                        pet_id: number;
                         plan: {
-                            type: string;
-                            /** @enum {string|null} */
-                            status: "trial" | "payment_required" | "paid" | null;
-                            trial_ends_at: string | null;
-                            paid_at: string | null;
-                            payments_enforced: boolean;
-                            /**
-                             * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                             * @enum {string}
-                             */
-                            display_type: "free" | "challenge";
-                            /**
-                             * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                             *     start here); null for every other pet.
-                             */
-                            challenge_started_at: string | null;
+                            type: string | unknown;
+                            status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                            trial_ends_at: (string | null) | unknown;
+                            paid_at: (string | null) | unknown;
+                            payments_enforced: boolean | unknown;
+                            display_type: ("free" | "challenge") | unknown;
+                            challenge_started_at: (string | null) | unknown;
+                        } & {
+                            [key: string]: unknown;
                         };
                         credits_available: number;
                     } | string;
@@ -3771,7 +4030,11 @@ export interface operations {
             };
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ChallengeIntentRequest"];
+            };
+        };
         responses: {
             200: {
                 headers: {
@@ -3857,8 +4120,11 @@ export interface operations {
                 };
                 content: {
                     "application/json": {
-                        /** @description BreedType value of the breed (e.g. border_collie). */
-                        breed: string;
+                        /**
+                         * @description BreedType value of the breed (e.g. border_collie).
+                         * @enum {string}
+                         */
+                        breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                         /**
                          * @description Approved facts the caller may see, in display order. Empty for a breed
                          *     without approved facts (and always for mutt / domestic cat) — hide every
@@ -4258,9 +4524,13 @@ export interface operations {
                             /** @description The child's current nickname (null if unknown). */
                             child_nickname: unknown;
                             pet_id: number;
-                            /** @description dog | cat */
-                            species: string;
-                            breed_type: string;
+                            /**
+                             * @description dog | cat
+                             * @enum {string}
+                             */
+                            species: "dog" | "cat";
+                            /** @enum {string} */
+                            breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                             /**
                              * @description certificate: final Care Score ≥ 70 and no game over — the parent may generate the PDF;
                              *     report: no certificate (see `reason`).
@@ -4279,7 +4549,7 @@ export interface operations {
                             completed_local_date: string;
                             /** @description A parent generated the PDF (pdf_url is set). */
                             generated: boolean;
-                            generated_at: string;
+                            generated_at: string | null;
                             /** @description As printed on the last generated PDF (null before the first generation). */
                             child_name: string | null;
                             pet_name: string | null;
@@ -4362,17 +4632,19 @@ export interface operations {
                     "application/json": {
                         token: string;
                         abilities: [
-                            string
+                            "child"
                         ];
                         /** @description Only the nickname — the profile has no e-mail. */
                         user: {
                             id: number;
                             name: string;
-                            role: string;
+                            /** @enum {string} */
+                            role: "parent" | "child";
                         };
-                        mode: string;
+                        /** @enum {string} */
+                        mode: "join_pet" | "new_pet" | "relogin";
                         joined_existing: boolean;
-                        family_id: number;
+                        family_id: string;
                         pet: components["schemas"]["PairedPetResource"];
                         awaiting_contract: boolean;
                     } | string;
@@ -4404,17 +4676,19 @@ export interface operations {
                     "application/json": {
                         token: string;
                         abilities: [
-                            string
+                            "child"
                         ];
                         /** @description Only the nickname — the profile has no e-mail. */
                         user: {
                             id: number;
                             name: string;
-                            role: string;
+                            /** @enum {string} */
+                            role: "parent" | "child";
                         };
-                        mode: string;
+                        /** @constant */
+                        mode: "relogin";
                         joined_existing: boolean;
-                        family_id: number;
+                        family_id: string;
                         pet: components["schemas"]["PairedPetResource"];
                         awaiting_contract: boolean;
                     } | string;
@@ -4485,15 +4759,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -4596,7 +4875,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -4607,22 +4887,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4855,13 +5128,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -4875,11 +5151,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -4897,10 +5173,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -4921,13 +5197,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -4986,7 +5262,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -5366,7 +5642,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -5389,7 +5665,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -5532,9 +5808,13 @@ export interface operations {
                     "application/json": {
                         pet: {
                             id: number;
-                            breed_type: string;
-                            /** @description M5-R06-01: dog | cat. */
-                            species: string;
+                            /** @enum {string} */
+                            breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            /**
+                             * @description M5-R06-01: dog | cat.
+                             * @enum {string}
+                             */
+                            species: "dog" | "cat";
                             /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                             name: string | null;
                             /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -5637,7 +5917,8 @@ export interface operations {
                             thirst_level: number;
                             energy_level: number;
                             hygiene_level: number;
-                            pet_state: string;
+                            /** @enum {string} */
+                            pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                             escalation_level: number;
                             needs_cleaning: boolean;
                             is_active: boolean;
@@ -5648,22 +5929,15 @@ export interface operations {
                             certificate_eligible: boolean;
                             /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                             plan: {
-                                type: string;
-                                /** @enum {string|null} */
-                                status: "trial" | "payment_required" | "paid" | null;
-                                trial_ends_at: string | null;
-                                paid_at: string | null;
-                                payments_enforced: boolean;
-                                /**
-                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                 * @enum {string}
-                                 */
-                                display_type: "free" | "challenge";
-                                /**
-                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                 *     start here); null for every other pet.
-                                 */
-                                challenge_started_at: string | null;
+                                type: string | unknown;
+                                status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                trial_ends_at: (string | null) | unknown;
+                                paid_at: (string | null) | unknown;
+                                payments_enforced: boolean | unknown;
+                                display_type: ("free" | "challenge") | unknown;
+                                challenge_started_at: (string | null) | unknown;
+                            } & {
+                                [key: string]: unknown;
                             };
                             /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                             current_video_url: string | null;
@@ -5896,13 +6170,16 @@ export interface operations {
                         };
                         lock: {
                             is_locked: boolean;
-                            /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                            reason: string | null;
+                            /**
+                             * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                             * @enum {string|null}
+                             */
+                            reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                             /** @description End of the vet visit; null for locks without an end time. */
                             until: string | null;
                         };
                         timezone: string;
-                        server_time: string;
+                        server_time: string | null;
                         /**
                          * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                          *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -5916,11 +6193,11 @@ export interface operations {
                         feeding: {
                             windows: unknown[];
                             current_window: {
-                                start: string;
-                                end: string;
+                                start: string | null;
+                                end: string | null;
                             } | null;
                             fed_in_current_window: boolean;
-                            can_feed: string;
+                            can_feed: boolean;
                             /**
                              * @description M3-12: how a feed now would count — `window` (inside an unused meal
                              *     window, on time) or `emergency` (outside a window because hunger shows
@@ -5938,10 +6215,10 @@ export interface operations {
                             emergency_threshold: number | null;
                             /** @description The current window while unused, otherwise the next one. */
                             next_feed_window: {
-                                start: string;
-                                end: string;
+                                start: string | null;
+                                end: string | null;
                             } | null;
-                            last_fed_at: string;
+                            last_fed_at: string | null;
                             /**
                              * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                              *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -5962,13 +6239,13 @@ export interface operations {
                             used_today: string | 0;
                             /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                             remaining_today: string | 0;
-                            last_watered_at: string;
-                            can_water: string;
+                            last_watered_at: string | null;
+                            can_water: boolean;
                             /**
                              * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                              *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                              */
-                            next_allowed_at: string;
+                            next_allowed_at: string | null;
                             /**
                              * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                              *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -6027,7 +6304,7 @@ export interface operations {
                         };
                         contract: {
                             signed: boolean;
-                            signed_at: string;
+                            signed_at: string | null;
                         };
                         /**
                          * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -6407,7 +6684,7 @@ export interface operations {
                             /** @description Why a start would be refused now (not the lock); null = it may start. */
                             blocked_reason: string | null;
                             /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                            can_start: string;
+                            can_start: boolean;
                             /** @description The viewing child's running session (as returned by start), else null. */
                             session: {
                                 id: string;
@@ -6430,7 +6707,7 @@ export interface operations {
                         walk_heat: {
                             starts_at: string;
                             ends_at: string;
-                            active: string;
+                            active: boolean;
                         } | null;
                         /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                         care_guide: {
@@ -6587,15 +6864,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -6698,7 +6980,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -6709,22 +6992,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -6957,13 +7233,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -6977,11 +7256,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -6999,10 +7278,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -7023,13 +7302,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -7088,7 +7367,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -7468,7 +7747,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -7491,7 +7770,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -7646,15 +7925,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -7757,7 +8041,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -7768,22 +8053,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -8016,13 +8294,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -8036,11 +8317,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -8058,10 +8339,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -8082,13 +8363,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -8147,7 +8428,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -8527,7 +8808,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -8550,7 +8831,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -8705,15 +8986,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -8816,7 +9102,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -8827,22 +9114,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -9075,13 +9355,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -9095,11 +9378,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -9117,10 +9400,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -9141,13 +9424,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -9206,7 +9489,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -9586,7 +9869,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -9609,7 +9892,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -9764,15 +10047,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -9875,7 +10163,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -9886,22 +10175,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -10134,13 +10416,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -10154,11 +10439,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -10176,10 +10461,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -10200,13 +10485,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -10265,7 +10550,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -10645,7 +10930,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -10668,7 +10953,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -10823,15 +11108,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -10934,7 +11224,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -10945,22 +11236,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -11193,13 +11477,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -11213,11 +11500,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -11235,10 +11522,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -11259,13 +11546,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -11324,7 +11611,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -11704,7 +11991,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -11727,7 +12014,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -11886,15 +12173,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -11997,7 +12289,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -12008,22 +12301,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -12256,13 +12542,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -12276,11 +12565,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -12298,10 +12587,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -12322,13 +12611,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -12387,7 +12676,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -12767,7 +13056,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -12790,7 +13079,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -12949,15 +13238,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -13060,7 +13354,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -13071,22 +13366,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -13319,13 +13607,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -13339,11 +13630,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -13361,10 +13652,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -13385,13 +13676,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -13450,7 +13741,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -13830,7 +14121,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -13853,7 +14144,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -14012,15 +14303,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -14123,7 +14419,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -14134,22 +14431,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -14382,13 +14672,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -14402,11 +14695,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -14424,10 +14717,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -14448,13 +14741,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -14513,7 +14806,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -14893,7 +15186,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -14916,7 +15209,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -15075,15 +15368,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -15186,7 +15484,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -15197,22 +15496,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -15445,13 +15737,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -15465,11 +15760,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -15487,10 +15782,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -15511,13 +15806,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -15576,7 +15871,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -15956,7 +16251,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -15979,7 +16274,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -16138,15 +16433,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -16249,7 +16549,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -16260,22 +16561,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -16508,13 +16802,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -16528,11 +16825,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -16550,10 +16847,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -16574,13 +16871,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -16639,7 +16936,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -17019,7 +17316,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -17042,7 +17339,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -17197,15 +17494,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -17308,7 +17610,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -17319,22 +17622,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -17567,13 +17863,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -17587,11 +17886,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -17609,10 +17908,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -17633,13 +17932,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -17698,7 +17997,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -18078,7 +18377,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -18101,7 +18400,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -18256,15 +18555,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -18367,7 +18671,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -18378,22 +18683,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -18626,13 +18924,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -18646,11 +18947,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -18668,10 +18969,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -18692,13 +18993,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -18757,7 +19058,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -19137,7 +19438,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -19160,7 +19461,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -19319,15 +19620,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -19430,7 +19736,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -19441,22 +19748,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -19689,13 +19989,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -19709,11 +20012,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -19731,10 +20034,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -19755,13 +20058,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -19820,7 +20123,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -20200,7 +20503,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -20223,7 +20526,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -20378,15 +20681,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -20489,7 +20797,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -20500,22 +20809,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -20748,13 +21050,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -20768,11 +21073,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -20790,10 +21095,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -20814,13 +21119,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -20879,7 +21184,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -21259,7 +21564,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -21282,7 +21587,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -21441,15 +21746,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -21552,7 +21862,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -21563,22 +21874,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -21811,13 +22115,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -21831,11 +22138,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -21853,10 +22160,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -21877,13 +22184,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -21942,7 +22249,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -22322,7 +22629,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -22345,7 +22652,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -22500,15 +22807,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -22611,7 +22923,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -22622,22 +22935,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -22870,13 +23176,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -22890,11 +23199,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -22912,10 +23221,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -22936,13 +23245,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -23001,7 +23310,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -23381,7 +23690,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -23404,7 +23713,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -23563,15 +23872,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -23674,7 +23988,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -23685,22 +24000,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -23933,13 +24241,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -23953,11 +24264,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -23975,10 +24286,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -23999,13 +24310,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -24064,7 +24375,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -24444,7 +24755,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -24467,7 +24778,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -24626,15 +24937,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -24737,7 +25053,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -24748,22 +25065,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -24996,13 +25306,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -25016,11 +25329,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -25038,10 +25351,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -25062,13 +25375,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -25127,7 +25440,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -25507,7 +25820,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -25530,7 +25843,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -25689,15 +26002,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -25800,7 +26118,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -25811,22 +26130,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -26059,13 +26371,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -26079,11 +26394,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -26101,10 +26416,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -26125,13 +26440,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -26190,7 +26505,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -26570,7 +26885,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -26593,7 +26908,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -26752,15 +27067,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -26863,7 +27183,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -26874,22 +27195,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -27122,13 +27436,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -27142,11 +27459,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -27164,10 +27481,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -27188,13 +27505,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -27253,7 +27570,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -27633,7 +27950,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -27656,7 +27973,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -27815,15 +28132,20 @@ export interface operations {
                         /** @constant */
                         message: "The pet is locked right now.";
                         status: string;
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -27926,7 +28248,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -27937,22 +28260,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -28185,13 +28501,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -28205,11 +28524,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -28227,10 +28546,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -28251,13 +28570,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -28316,7 +28635,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -28696,7 +29015,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -28719,7 +29038,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -28876,13 +29195,17 @@ export interface operations {
                             id: number;
                             display_name: string;
                             birth_year: number | null;
-                            family_id: number;
+                            family_id: number | null;
                             pet_id: null;
-                            devices: number;
+                            /** @constant */
+                            devices: 0;
                             /** @description M5-T12: a new profile starts without adapted mode. */
                             adapted_mode: boolean;
-                            /** @description M5-T11: a new profile shows video. */
-                            media_display: string;
+                            /**
+                             * @description M5-T11: a new profile shows video.
+                             * @constant
+                             */
+                            media_display: "video";
                             /** @description M5-T17: a new profile swipes (no »Lažje kretnje«). */
                             easy_gestures: boolean;
                             /** @description GAMES_SPEC phase 1: game sounds and haptics are on by default (V5). */
@@ -29071,7 +29394,8 @@ export interface operations {
                     "application/json": {
                         /** @constant */
                         message: "The pet is locked right now.";
-                        reason: string | null;
+                        /** @enum {string|null} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                     };
                 };
             };
@@ -29246,7 +29570,8 @@ export interface operations {
                     "application/json": {
                         device: {
                             id: number;
-                            platform: string;
+                            /** @enum {string} */
+                            platform: "ios" | "android";
                             app_version: string | null;
                             /** @description Language of this install's pushes (M1-18): the `locale` field; new installs without it get 'sl'. */
                             locale: string | null;
@@ -29367,7 +29692,8 @@ export interface operations {
                 };
                 content: {
                     "application/json": {
-                        code: string;
+                        /** @constant */
+                        code: "";
                         expires_at: string;
                         /** @constant */
                         expires_in_hours: 24;
@@ -29413,6 +29739,58 @@ export interface operations {
             401: components["responses"]["AuthenticationException"];
             403: components["responses"]["AuthorizationException"];
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "gift.redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RedeemGiftRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string | {
+                        /** @constant */
+                        status: "redeemed";
+                        already: boolean;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "lemonSqueezyWebhook.handle": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        received: boolean;
+                        duplicate: boolean;
+                        /** @enum {string|null} */
+                        outcome: "recorded" | "voucher_created" | "voucher_updated" | "refunded" | "revoked" | "disabled" | "expired" | "partial_refund" | "ignored" | "foreign_store" | "unknown_product" | "test_mode_ignored" | null;
+                    };
+                };
+            };
         };
     };
     "pairing.generatePin": {
@@ -29516,7 +29894,7 @@ export interface operations {
                         message: "Pairing successful. Pet session initialized.";
                         parent_id: number;
                         family_id: string;
-                        joined_existing: string;
+                        joined_existing: boolean;
                         pet: components["schemas"]["PairedPetResource"];
                     };
                 };
@@ -29543,9 +29921,13 @@ export interface operations {
                         timezone: string;
                         pet: {
                             id: number;
-                            breed_type: string;
-                            /** @description M5-R06-01: dog | cat. */
-                            species: string;
+                            /** @enum {string} */
+                            breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            /**
+                             * @description M5-R06-01: dog | cat.
+                             * @enum {string}
+                             */
+                            species: "dog" | "cat";
                             /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                             name: string | null;
                             /**
@@ -29559,7 +29941,8 @@ export interface operations {
                             thirst_level: number;
                             energy_level: number;
                             hygiene_level: number;
-                            pet_state: string;
+                            /** @enum {string} */
+                            pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                             is_active: boolean;
                             is_ill: boolean;
                             is_game_over: boolean;
@@ -29568,22 +29951,15 @@ export interface operations {
                             virtual_age_months: number;
                             /** @description M3-11: plan + payment status (paywall per pet). */
                             plan: {
-                                type: string;
-                                /** @enum {string|null} */
-                                status: "trial" | "payment_required" | "paid" | null;
-                                trial_ends_at: string | null;
-                                paid_at: string | null;
-                                payments_enforced: boolean;
-                                /**
-                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                 * @enum {string}
-                                 */
-                                display_type: "free" | "challenge";
-                                /**
-                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                 *     start here); null for every other pet.
-                                 */
-                                challenge_started_at: string | null;
+                                type: string | unknown;
+                                status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                trial_ends_at: (string | null) | unknown;
+                                paid_at: (string | null) | unknown;
+                                payments_enforced: boolean | unknown;
+                                display_type: ("free" | "challenge") | unknown;
+                                challenge_started_at: (string | null) | unknown;
+                            } & {
+                                [key: string]: unknown;
                             };
                             /** @description M5-R01: origin, age, life stage and today's rules. */
                             profile: {
@@ -29814,7 +30190,7 @@ export interface operations {
                             };
                         };
                         child: {
-                            id: number;
+                            id: string;
                             name: string;
                         } | null;
                         /** @enum {string} */
@@ -29868,9 +30244,13 @@ export interface operations {
                                  *     the app shows »po družini«.
                                  */
                                 timezone_follows_family: boolean;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 born_at: string | null;
@@ -29883,26 +30263,20 @@ export interface operations {
                                 /**
                                  * @description Mood label (David 2026-11-05): the server's pet state, the same value
                                  *     the child state and the PetUpdated broadcast carry — the app never re-derives it.
+                                 * @enum {string}
                                  */
-                                pet_state: string;
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /**
                                  * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
@@ -30412,9 +30786,13 @@ export interface operations {
                                     pending: number;
                                     missed_count: number;
                                     missed: {
-                                        type: string;
-                                        /** @description M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types. */
-                                        kind: string | null;
+                                        /** @enum {string} */
+                                        type: "feed" | "water" | "clean" | "walk" | "training" | "play" | "litter_scoop" | "litter_change" | "grooming" | "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                        /**
+                                         * @description M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types.
+                                         * @enum {string|null}
+                                         */
+                                        kind: "poop" | "accident" | "chewing" | "litter_use" | "litter_accident" | "scratching" | null;
                                         date: string;
                                         opens_at: string;
                                         due_at: string;
@@ -30472,9 +30850,13 @@ export interface operations {
                                  *     the app shows »po družini«.
                                  */
                                 timezone_follows_family: boolean;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 born_at: string | null;
@@ -30487,26 +30869,20 @@ export interface operations {
                                 /**
                                  * @description Mood label (David 2026-11-05): the server's pet state, the same value
                                  *     the child state and the PetUpdated broadcast carry — the app never re-derives it.
+                                 * @enum {string}
                                  */
-                                pet_state: string;
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /**
                                  * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
@@ -31016,9 +31392,13 @@ export interface operations {
                                     pending: number;
                                     missed_count: number;
                                     missed: {
-                                        type: string;
-                                        /** @description M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types. */
-                                        kind: string | null;
+                                        /** @enum {string} */
+                                        type: "feed" | "water" | "clean" | "walk" | "training" | "play" | "litter_scoop" | "litter_change" | "grooming" | "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                        /**
+                                         * @description M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types.
+                                         * @enum {string|null}
+                                         */
+                                        kind: "poop" | "accident" | "chewing" | "litter_use" | "litter_accident" | "scratching" | null;
                                         date: string;
                                         opens_at: string;
                                         due_at: string;
@@ -31038,7 +31418,8 @@ export interface operations {
                         quiet_hours: null;
                         recent_activities: string[];
                         family: null;
-                        wishes_open_count: number;
+                        /** @constant */
+                        wishes_open_count: 0;
                     };
                 };
             };
@@ -31096,7 +31477,8 @@ export interface operations {
                             current_page: 1;
                             /** @constant */
                             last_page: 1;
-                            total: number;
+                            /** @constant */
+                            total: 0;
                         };
                     };
                 };
@@ -31214,6 +31596,43 @@ export interface operations {
             401: components["responses"]["AuthenticationException"];
             403: components["responses"]["AuthorizationException"];
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "partnerInquiry.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StorePartnerInquiryRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        ok: boolean;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "Partner inquiries are not accepted right now.";
+                    };
+                };
+            };
         };
     };
     "petGrowth.parent": {
@@ -31340,8 +31759,15 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": Record<string, never>;
+                    "application/octet-stream": string;
                 };
+            };
+            302: {
+                headers: {
+                    Location: string;
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             404: components["responses"]["ModelNotFoundException"];
         };
@@ -31364,8 +31790,15 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": Record<string, never>;
+                    "video/mp4": string;
                 };
+            };
+            302: {
+                headers: {
+                    Location: string;
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             404: components["responses"]["ModelNotFoundException"];
         };
@@ -31387,8 +31820,15 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": Record<string, never>;
+                    "application/octet-stream": string;
                 };
+            };
+            302: {
+                headers: {
+                    Location: string;
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             404: components["responses"]["ModelNotFoundException"];
         };
@@ -31410,8 +31850,15 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": Record<string, never>;
+                    "application/octet-stream": string;
                 };
+            };
+            302: {
+                headers: {
+                    Location: string;
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             404: components["responses"]["ModelNotFoundException"];
         };
@@ -31619,6 +32066,56 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "web.parent-session.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["WebParentSessionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        /** @constant */
+                        token_type: "Bearer";
+                        abilities: "gift:redeem"[];
+                        expires_at: string;
+                        /** @constant */
+                        expires_in: 900;
+                    } | string;
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "web.parent-session.destroy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
         };
     };
     "wish.parentIndex": {
@@ -31925,9 +32422,13 @@ export interface operations {
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -32030,7 +32531,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -32041,22 +32543,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -32289,13 +32784,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -32309,11 +32807,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -32331,10 +32829,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -32355,13 +32853,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -32420,7 +32918,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -32800,7 +33298,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -32823,7 +33321,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
@@ -32960,15 +33458,20 @@ export interface operations {
                         message: "The pet is locked right now.";
                         /** @constant */
                         status: "locked";
-                        reason: string;
+                        /** @enum {string} */
+                        reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill";
                         /** @description End of the vet visit; null for locks without an end time. */
                         locked_until: string | null;
                         state: {
                             pet: {
                                 id: number;
-                                breed_type: string;
-                                /** @description M5-R06-01: dog | cat. */
-                                species: string;
+                                /** @enum {string} */
+                                breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                                /**
+                                 * @description M5-R06-01: dog | cat.
+                                 * @enum {string}
+                                 */
+                                species: "dog" | "cat";
                                 /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
                                 name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
@@ -33071,7 +33574,8 @@ export interface operations {
                                 thirst_level: number;
                                 energy_level: number;
                                 hygiene_level: number;
-                                pet_state: string;
+                                /** @enum {string} */
+                                pet_state: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
                                 escalation_level: number;
                                 needs_cleaning: boolean;
                                 is_active: boolean;
@@ -33082,22 +33586,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -33330,13 +33827,16 @@ export interface operations {
                             };
                             lock: {
                                 is_locked: boolean;
-                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
-                                reason: string | null;
+                                /**
+                                 * @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
+                                 * @enum {string|null}
+                                 */
+                                reason: "game_over" | "inactive" | "hard_stopped" | "payment_required" | "contract_required" | "ill" | null;
                                 /** @description End of the vet visit; null for locks without an end time. */
                                 until: string | null;
                             };
                             timezone: string;
-                            server_time: string;
+                            server_time: string | null;
                             /**
                              * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
@@ -33350,11 +33850,11 @@ export interface operations {
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
                                 fed_in_current_window: boolean;
-                                can_feed: string;
+                                can_feed: boolean;
                                 /**
                                  * @description M3-12: how a feed now would count — `window` (inside an unused meal
                                  *     window, on time) or `emergency` (outside a window because hunger shows
@@ -33372,10 +33872,10 @@ export interface operations {
                                 emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
-                                    start: string;
-                                    end: string;
+                                    start: string | null;
+                                    end: string | null;
                                 } | null;
-                                last_fed_at: string;
+                                last_fed_at: string | null;
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
@@ -33396,13 +33896,13 @@ export interface operations {
                                 used_today: string | 0;
                                 /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
-                                last_watered_at: string;
-                                can_water: string;
+                                last_watered_at: string | null;
+                                can_water: boolean;
                                 /**
                                  * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
                                  *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
                                  */
-                                next_allowed_at: string;
+                                next_allowed_at: string | null;
                                 /**
                                  * @description Display only (David 2026-10-25): the time the app shows for the next refill —
                                  *     `next_allowed_at`, or the pet's wake time when that falls while it sleeps (quiet
@@ -33461,7 +33961,7 @@ export interface operations {
                             };
                             contract: {
                                 signed: boolean;
-                                signed_at: string;
+                                signed_at: string | null;
                             };
                             /**
                              * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
@@ -33841,7 +34341,7 @@ export interface operations {
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
                                 /** @description POST /api/child/pet/care-task/start would be accepted now. */
-                                can_start: string;
+                                can_start: boolean;
                                 /** @description The viewing child's running session (as returned by start), else null. */
                                 session: {
                                     id: string;
@@ -33864,7 +34364,7 @@ export interface operations {
                             walk_heat: {
                                 starts_at: string;
                                 ends_at: string;
-                                active: string;
+                                active: boolean;
                             } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {

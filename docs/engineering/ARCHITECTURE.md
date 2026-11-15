@@ -367,7 +367,7 @@ Guests on any `/api/*` route get a JSON 401 even without `Accept: application/js
 
 **Still missing:** social login, password reset; child-profile edit; asynchronous export for very large families (M2-08 follow-up). The app uses every child endpoint since M1-13/M1-14 (§7).
 
-Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:export`.
+Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:export`. `mobile/src/api/schema.ts` is generated from `/docs/api.json` (`scripts/generate-api-types.mjs`); CI job **API types** (`scripts/ci-api-types.sh`, David 2026-11-15, DEPLOYMENT D35) exports the spec with `php artisan scramble:export` on a migrated PostgreSQL, regenerates it and fails when the committed file differs — the fresh file is the run's artifact `api-schema`.
 
 ### Games rules v2 — contract for the app (GAMES_SPEC §7.2 / §7.3, David 2026-10-30; the wand: simple hunt, rules 3, 2026-11-08)
 
