@@ -1390,6 +1390,19 @@
             "prompt_hash": "sha256:94af295bda347e4d56e8490ae8245c561a882b8b6596617580b765acfdb9c19b",
             "generated_at": "2026-11-14T07:05:42+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "afghan_hound",
+            "species": "dog",
+            "colour": "gold-black-mask",
+            "file": "dog/afghan-hound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:59fc9ec64cf78887dab1d7c4a8f22d3769908f2010cd881c4abd6909112317c2",
+            "generated_at": "2026-11-15T00:58:35+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

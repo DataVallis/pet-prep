@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `afghan_hound` (viri S848–S854; ponovno S10, S11, S14, S24, S34, S35, S45, S54, S174); seznam za vzreditelja: stran RKC (S850) |
 | Izvor | FCI št. 228, skupina 10, sekcija 1 (dolgodlaki hrti), Afganistan; pokroviteljstvo Velika Britanija (S848, S849) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 110. mesto »Afghan Hound« (S174, zapisano 2026-11-14 v vrstici 113) |
-| PR-ji | pet-prep #1128 (pasma) · portret pet-prep PR `feat/M5-R10-114-afghan-hound-portrait` · spletna stran: pet-prep-website `feat/register-afghan-hound` |
+| PR-ji | pet-prep #1128 (pasma, združen `42e6bca`) · portret pet-prep PR `feat/M5-R10-114-afghan-hound-portrait` (zagon `breed-portraits.yml` 43660780963, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-afghan-hound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,8 +43,8 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-15 |
 | Ščetkanje zob vsak dan (otrok), opomnik staršem: kopanje vsak teden | 🛠 | 💶 izziv | M5-R15 / M5-R19 | 2026-11-15 |
 | Barva (izbirnik: sedem barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-15 |
-| AI portret v registru | 🗓 po združitvi (zlat s črno masko) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/afghan-hound`, `/sl/zivali/psi/afganski-hrt`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), zlat s črno masko, naraven rep z obročkom | — | M5-R11-04 | 2026-11-15 |
+| Stran na petprep.si (`/animals/dogs/afghan-hound`, `/sl/zivali/psi/afganski-hrt`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
