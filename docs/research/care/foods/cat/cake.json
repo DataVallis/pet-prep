@@ -9,7 +9,8 @@
     "sv": "Kaka",
     "da": "Kage",
     "fi": "Kakku",
-    "nb": "Kake"
+    "nb": "Kake",
+    "it": "Torta"
   },
   "question": {
     "en": "Can cats eat cake?",
@@ -19,7 +20,8 @@
     "sv": "Får katter äta kaka?",
     "da": "Må katte spise kage?",
     "fi": "Saako kissa syödä kakkua?",
-    "nb": "Kan katter spise kake?"
+    "nb": "Kan katter spise kake?",
+    "it": "I gatti possono mangiare la torta?"
   },
   "url_slug": {
     "en": "cake",
@@ -29,7 +31,8 @@
     "sv": "kaka",
     "da": "kage",
     "fi": "kakku",
-    "nb": "kake"
+    "nb": "kake",
+    "it": "torta"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej, kaka är inget för katter. Den är söt, vilket inte är nyttigt för katter, och många kakor, särskilt julkakor och fruktkakor, innehåller torkad frukt eller choklad, som är skadligt för katter. RSPCA varnar för att julkakor är farliga för katter.",
     "da": "Nej, kage er ikke noget for katte. Den er sukkerholdig, hvilket er usundt for katte, og mange kager, især engelske julekager og frugtkager, indeholder tørret frugt eller chokolade, som er skadelige for katte. RSPCA advarer om at engelske julekager er farlige for katte.",
     "fi": "Ei saa, kakku ei ole kissoille. Se on sokerista, mikä ei ole kissoille hyväksi, ja monissa kakuissa, etenkin joulu- ja hedelmäkakuissa, on kuivattuja hedelmiä tai suklaata, jotka ovat kissoille haitallisia. RSPCA varoittaa, että joulukakut ovat kissoille vaarallisia.",
-    "nb": "Nei, kake er ikke for katter. Den er søt, noe som er usunt for katter, og mange kaker, særlig engelsk julekake og fruktkake, inneholder tørket frukt eller sjokolade, som er skadelig for katter. RSPCA advarer om at engelsk julekake er farlig for katter."
+    "nb": "Nei, kake er ikke for katter. Den er søt, noe som er usunt for katter, og mange kaker, særlig engelsk julekake og fruktkake, inneholder tørket frukt eller sjokolade, som er skadelig for katter. RSPCA advarer om at engelsk julekake er farlig for katter.",
+    "it": "No, la torta non è per i gatti. È piena di zucchero, che fa male ai gatti, e molte torte, soprattutto quelle natalizie e alla frutta, contengono frutta essiccata o cioccolato, dannosi per i gatti. L’RSPCA avverte che i dolci natalizi come il Christmas cake inglese sono pericolosi per i gatti."
   },
   "why": {
     "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
@@ -50,7 +54,8 @@
     "sv": "RSPCA säger att julkakor är farliga för katter. Sådana kakor innehåller ofta sultanrussin, russin och korinter, som RSPCA kallar giftiga, och organisationen säger att katter inte ska få äta några druvor. Choklad är absolut förbjudet för katter. En vanlig sockerkaka innehåller inget av detta, men sockret är onyttigt för katter och ger dem inget näringsvärde, så vi använder den strängare nivån för all kaka.",
     "da": "RSPCA skriver at engelske julekager er farlige for katte. Sådanne kager indeholder ofte sultanrosiner, rosiner og korender, som RSPCA kalder giftige, og RSPCA skriver at katte ikke må få druer. Chokolade er aldrig i orden til katte. En almindelig sukkerbrødskage indeholder ingen af delene, men sukkeret er usundt for katte og giver dem ingen næring, så vi bruger det strengeste niveau for al kage.",
     "fi": "RSPCA:n mukaan joulukakut ovat kissoille vaarallisia. Niissä on usein sultaanoja, rusinoita ja korintteja, joita RSPCA kutsuu myrkyllisiksi, ja se neuvoo, ettei kissalle saa antaa viinirypäleitä lainkaan. Suklaa on kissoille ehdottomasti kielletty. Tavallisessa sokerikakussa näitä ei ole, mutta sen sokeri ei ole kissoille hyväksi eikä sillä ole niille ravintoarvoa, joten käytämme kaikelle kakulle tiukempaa luokitusta.",
-    "nb": "RSPCA sier at engelsk julekake er farlig for katter. Slike kaker inneholder ofte sultanrosiner, rosiner og korinter, som RSPCA kaller giftige, og organisasjonen sier at katter ikke skal få spise noen druer. Sjokolade er helt uaktuelt for katter. Et enkelt sukkerbrød har ikke noe av dette, men sukkeret er usunt for katter og gir dem ingen næringsverdi, så vi bruker det strengeste nivået for all kake."
+    "nb": "RSPCA sier at engelsk julekake er farlig for katter. Slike kaker inneholder ofte sultanrosiner, rosiner og korinter, som RSPCA kaller giftige, og organisasjonen sier at katter ikke skal få spise noen druer. Sjokolade er helt uaktuelt for katter. Et enkelt sukkerbrød har ikke noe av dette, men sukkeret er usunt for katter og gir dem ingen næringsverdi, så vi bruker det strengeste nivået for all kake.",
+    "it": "L’RSPCA afferma che i Christmas cake, i dolci natalizi alla frutta inglesi, sono pericolosi per i gatti. Questi dolci contengono spesso uva sultanina, uvetta e uva passa di Corinto, che l’RSPCA definisce tossiche, e raccomanda di non lasciare che i gatti mangino uva di alcun tipo. Il cioccolato è assolutamente da evitare per i gatti. Un pan di Spagna semplice non contiene nulla di tutto ciò, ma il suo zucchero fa male ai gatti e non ha per loro alcun valore nutritivo, perciò per tutte le torte usiamo il livello più prudente."
   },
   "signs": {
     "en": [
@@ -84,6 +89,10 @@
     "nb": [
       "Oppkast",
       "Diaré eller urolig mage"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea o mal di stomaco"
     ]
   },
   "what_to_do": {
@@ -94,7 +103,8 @@
     "sv": "Om din katt har ätit kaka med torkad frukt eller choklad ska du kontakta din veterinär direkt. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma. Efter en slick av vanlig sockerkaka: håll ett öga på om magen blir orolig.",
     "da": "Hvis din kat har spist kage med tørret frugt eller chokolade, skal du kontakte din dyrlæge med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op. Hvis katten har slikket på almindelig sukkerbrødskage, skal du holde øje med mavebesvær.",
     "fi": "Jos kissasi söi kakkua, jossa oli kuivattuja hedelmiä tai suklaata, ota heti yhteyttä eläinlääkäriin. Älä odota oireita äläkä yritä oksennuttaa kissaa itse. Jos kissa nuolaisi tavallista sokerikakkua, seuraa, tuleeko vatsavaivoja.",
-    "nb": "Hvis katten har spist kake med tørket frukt eller sjokolade i, kontakt dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv. Hvis katten bare har slikket på et enkelt sukkerbrød, følg med på om magen blir urolig."
+    "nb": "Hvis katten har spist kake med tørket frukt eller sjokolade i, kontakt dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv. Hvis katten bare har slikket på et enkelt sukkerbrød, følg med på om magen blir urolig.",
+    "it": "Se il tuo gatto ha mangiato torta con frutta essiccata o cioccolato, chiama subito il veterinario. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa. Se ha solo leccato un po’ di pan di Spagna semplice, controlla che non gli venga mal di stomaco."
   },
   "serving": null,
   "child": {
@@ -105,7 +115,8 @@
     "sv": "Kaka är en godbit för människor. Vissa kakor innehåller russin eller choklad som kan göra katter sjuka, så behåll din bit själv.",
     "da": "Kage er en godbid for mennesker. Nogle kager indeholder rosiner eller chokolade, som kan gøre katte syge, så behold dit stykke selv.",
     "fi": "Kakku on ihmisten herkkua. Joissakin kakuissa on rusinoita tai suklaata, jotka voivat tehdä kissan sairaaksi, joten syö oma palasi itse.",
-    "nb": "Kake er søtsaker for mennesker. Noen kaker har rosiner eller sjokolade som kan gjøre katter syke, så spis kakestykket selv."
+    "nb": "Kake er søtsaker for mennesker. Noen kaker har rosiner eller sjokolade som kan gjøre katter syke, så spis kakestykket selv.",
+    "it": "La torta è un dolce per le persone. Alcune torte contengono uvetta o cioccolato, che possono far stare male i gatti, quindi tieni la tua fetta per te."
   },
   "faq": [
     {
@@ -117,7 +128,8 @@
         "sv": "Är julkaka farlig för katter?",
         "da": "Er engelsk julekage farlig for katte?",
         "fi": "Onko joulukakku vaarallista kissoille?",
-        "nb": "Er engelsk julekake farlig for katter?"
+        "nb": "Er engelsk julekake farlig for katter?",
+        "it": "I dolci natalizi alla frutta, come il Christmas cake, sono pericolosi per i gatti?"
       },
       "a": {
         "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
@@ -127,7 +139,8 @@
         "sv": "Ja. RSPCA varnar för att julkakor är farliga för katter, eftersom de ofta innehåller torkad frukt. Blue Cross berättar om en katt som mådde dåligt efter att ha ätit en mustig julkaka och fick stanna över natten hos veterinären i dropp.",
         "da": "Ja. RSPCA advarer om at engelske julekager er farlige for katte, fordi de ofte indeholder tørret frugt. Blue Cross fortæller om en kat, der blev syg af at spise en tung engelsk julekage og måtte blive natten over hos dyrlægen og have drop.",
         "fi": "On. RSPCA varoittaa, että joulukakut ovat kissoille vaarallisia, koska niissä on usein kuivattuja hedelmiä. Blue Cross kertoo kissasta, joka oksenteli syötyään runsaan joulukakun ja jouduttiin pitämään yön yli eläinlääkärillä tiputuksessa.",
-        "nb": "Ja. RSPCA advarer om at engelsk julekake er farlig for katter, siden den ofte inneholder tørket frukt. Blue Cross forteller om en katt som kastet opp etter å ha spist en tung julekake og måtte ligge inne en natt hos dyrlegen og få drypp."
+        "nb": "Ja. RSPCA advarer om at engelsk julekake er farlig for katter, siden den ofte inneholder tørket frukt. Blue Cross forteller om en katt som kastet opp etter å ha spist en tung julekake og måtte ligge inne en natt hos dyrlegen og få drypp.",
+        "it": "Sì. L’RSPCA avverte che i dolci natalizi come il Christmas cake sono pericolosi per i gatti, perché spesso contengono frutta essiccata. Blue Cross racconta di un gatto che ha vomitato dopo aver mangiato un ricco Christmas cake ed è rimasto una notte dal veterinario con la flebo."
       }
     }
   ],
@@ -253,6 +266,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "711091669b5f86a65ec70a9095e55e4b5cf497ed0b870952e6764df2ccdfc5af"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a95eece418ebfe3a1427b06bd139d82a57bba315fb977bdc9401ff390b6342db"
     }
   }
 }

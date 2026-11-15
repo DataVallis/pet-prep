@@ -9,7 +9,8 @@
     "sv": "Popcorn (naturell)",
     "da": "Popcorn (naturel)",
     "fi": "Popcornit (maustamattomat)",
-    "nb": "Popcorn (naturelt)"
+    "nb": "Popcorn (naturelt)",
+    "it": "Popcorn (al naturale)"
   },
   "question": {
     "en": "Can cats eat popcorn?",
@@ -19,7 +20,8 @@
     "sv": "Får katter äta popcorn?",
     "da": "Må katte spise popcorn?",
     "fi": "Saako kissa syödä popcornia?",
-    "nb": "Kan katter spise popcorn?"
+    "nb": "Kan katter spise popcorn?",
+    "it": "I gatti possono mangiare i popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
@@ -29,7 +31,8 @@
     "sv": "popcorn",
     "da": "popcorn",
     "fi": "popcorn",
-    "nb": "popcorn"
+    "nb": "popcorn",
+    "it": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Ja, några bitar naturell popcorn går bra som godbit då och då. Pet Poison Helpline listar popcorn bland mat som är säker för katter och hundar, så länge du lämnar smöret och saltet därhän. Smörad eller saltad popcorn är inget för katter.",
     "da": "Ja, nogle få stykker naturel popcorn er fint som en godbid af og til. Pet Poison Helpline nævner popcorn blandt de fødevarer, der er ufarlige for katte og hunde, så længe der ikke er smør og salt på. Popcorn med smør eller salt er ikke noget for katte.",
     "fi": "Saa, muutama maustamaton popcorn kelpaa satunnaiseksi herkuksi. Pet Poison Helpline luettelee popcornin kissoille ja koirille turvallisten ruokien joukkoon, kunhan voi ja suola jätetään pois. Voilla tai suolalla maustettu popcorn ei sovi kissoille.",
-    "nb": "Ja, noen få biter naturelt popcorn er greit som en godbit en gang iblant. Pet Poison Helpline oppgir popcorn blant maten som er trygg for katter og hunder, så lenge du holder smør og salt unna. Popcorn med smør eller salt er ikke for katter."
+    "nb": "Ja, noen få biter naturelt popcorn er greit som en godbit en gang iblant. Pet Poison Helpline oppgir popcorn blant maten som er trygg for katter og hunder, så lenge du holder smør og salt unna. Popcorn med smør eller salt er ikke for katter.",
+    "it": "Sì, qualche popcorn al naturale va bene come premio occasionale. Pet Poison Helpline inserisce i popcorn tra gli alimenti sicuri per gatti e cani, purché senza burro né sale. I popcorn al burro o salati non sono per i gatti."
   },
   "why": {
     "en": "Pet Poison Helpline lists popcorn, without butter and salt, among foods that are safe for cats and dogs, and the ASPCA includes popcorn among easy treats in its snack ideas for cats and dogs. Salt is the catch: Pet Poison Helpline says excessive salt should not be in a cat's diet. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Cats Protection says it's best to stick to cat food treats rather than human foods.",
@@ -50,7 +54,8 @@
     "sv": "Pet Poison Helpline listar popcorn, utan smör och salt, bland mat som är säker för katter och hundar, och ASPCA tar med popcorn bland enkla godbitar i sina snacksidéer för katter och hundar. Saltet är haken: Pet Poison Helpline säger att för mycket salt inte hör hemma i kattens kost. International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater, och Cats Protection säger att det är bäst att hålla sig till kattgodis i stället för mat från matbordet.",
     "da": "Pet Poison Helpline nævner popcorn uden smør og salt blandt de fødevarer, der er ufarlige for katte og hunde, og ASPCA tager popcorn med blandt de nemme godbidder i sine snackidéer til katte og hunde. Saltet er hagen ved det: Pet Poison Helpline skriver at for meget salt ikke hører hjemme i en kats kost. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Cats Protection skriver at det er bedst at holde sig til godbidder til katte frem for menneskemad.",
     "fi": "Pet Poison Helpline luettelee popcornin ilman voita ja suolaa kissoille ja koirille turvallisten ruokien joukkoon, ja ASPCA mainitsee popcornin kissoille ja koirille tarkoitetuissa välipalavinkeissään helppojen herkkujen joukossa. Suola on kuitenkin ongelma: Pet Poison Helplinen mukaan liikaa suolaa ei kuulu kissan ruokavalioon. International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi, ja Cats Protection toteaa, että on parasta pitäytyä kissoille tarkoitetuissa herkuissa ihmisten ruoan sijaan.",
-    "nb": "Pet Poison Helpline oppgir popcorn uten smør og salt blant maten som er trygg for katter og hunder, og ASPCA nevner popcorn blant de enkle godbitene i forslagene sine til snacks for katter og hunder. Saltet er haken: Pet Poison Helpline sier at for mye salt ikke hører hjemme i kattens kosthold. International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater, og Cats Protection sier at det er best å holde seg til godbiter laget for katter i stedet for menneskemat."
+    "nb": "Pet Poison Helpline oppgir popcorn uten smør og salt blant maten som er trygg for katter og hunder, og ASPCA nevner popcorn blant de enkle godbitene i forslagene sine til snacks for katter og hunder. Saltet er haken: Pet Poison Helpline sier at for mye salt ikke hører hjemme i kattens kosthold. International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater, og Cats Protection sier at det er best å holde seg til godbiter laget for katter i stedet for menneskemat.",
+    "it": "Pet Poison Helpline inserisce i popcorn, senza burro e sale, tra gli alimenti sicuri per gatti e cani, e l’ASPCA li include tra gli spuntini facili da offrire a gatti e cani. Il problema è il sale: Pet Poison Helpline afferma che il sale in eccesso non deve far parte dell’alimentazione del gatto. International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati, e Cats Protection dice che è meglio attenersi ai premi per gatti piuttosto che agli alimenti per le persone."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "sv": "Ge bara några naturella bitar. Om din katt har ätit mycket salt popcorn och kräks, har diarré, verkar mycket törstig eller ovanligt orkeslös, ska du kontakta din veterinär.",
     "da": "Giv kun nogle få stykker naturel popcorn. Hvis din kat har spist meget salt popcorn og kaster op, har diarré, virker meget tørstig eller usædvanligt træt, skal du kontakte din dyrlæge.",
     "fi": "Anna vain muutama maustamaton popcorn. Jos kissasi on syönyt paljon suolaista popcornia ja se oksentelee, sillä on ripulia, se vaikuttaa tavallista janoisemmalta tai epätavallisen väsyneeltä, ota yhteyttä eläinlääkäriin.",
-    "nb": "Gi bare noen få biter uten tilsetninger. Hvis katten har spist mye salt popcorn og kaster opp, har diaré, har sterk tørst eller virker uvanlig sløv, kontakt dyrlegen."
+    "nb": "Gi bare noen få biter uten tilsetninger. Hvis katten har spist mye salt popcorn og kaster opp, har diaré, har sterk tørst eller virker uvanlig sløv, kontakt dyrlegen.",
+    "it": "Offrine solo qualcuno, al naturale. Se il tuo gatto ha mangiato molti popcorn salati e vomita, ha la diarrea, sembra molto assetato o insolitamente stanco, contatta il veterinario."
   },
   "serving": {
     "en": "A few pieces of plain popcorn with no butter or salt.",
@@ -71,7 +77,8 @@
     "sv": "Några bitar naturell popcorn utan smör eller salt.",
     "da": "Nogle få stykker naturel popcorn uden smør og salt.",
     "fi": "Muutama maustamaton popcorn ilman voita ja suolaa.",
-    "nb": "Noen få biter naturelt popcorn uten smør eller salt."
+    "nb": "Noen få biter naturelt popcorn uten smør eller salt.",
+    "it": "Qualche popcorn al naturale, senza burro né sale."
   },
   "child": {
     "en": "A piece of plain popcorn can be a cat treat sometimes. Buttery, salty popcorn is just for people.",
@@ -81,7 +88,8 @@
     "sv": "En bit vanlig popcorn kan vara en godbit för katten ibland. Smörad, saltad popcorn är bara för människor.",
     "da": "Et stykke naturel popcorn kan være en godbid til katte en gang imellem. Popcorn med smør og salt er kun til mennesker.",
     "fi": "Yksi maustamaton popcorn voi joskus olla kissalle herkku. Voilla ja suolalla maustettu popcorn on vain ihmisille.",
-    "nb": "En bit naturelt popcorn kan være en godbit til katten av og til. Popcorn med smør og salt er bare for mennesker."
+    "nb": "En bit naturelt popcorn kan være en godbit til katten av og til. Popcorn med smør og salt er bare for mennesker.",
+    "it": "Un popcorn al naturale può essere ogni tanto un premio per il gatto. I popcorn al burro e salati sono solo per le persone."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "sv": "Får katter äta saltad eller smörad popcorn?",
         "da": "Må katte spise saltet popcorn eller popcorn med smør?",
         "fi": "Saako kissa syödä suolattua tai voilla maustettua popcornia?",
-        "nb": "Kan katter spise salt popcorn eller popcorn med smør?"
+        "nb": "Kan katter spise salt popcorn eller popcorn med smør?",
+        "it": "I gatti possono mangiare popcorn salati o al burro?"
       },
       "a": {
         "en": "No. Pet Poison Helpline says to hold the butter and salt, and that excessive salt should not be in a cat's diet. Agriculture Victoria says large amounts of salt can cause excessive thirst and urination.",
@@ -103,7 +112,8 @@
         "sv": "Nej. Pet Poison Helpline säger att du ska lämna smöret och saltet därhän, och att för mycket salt inte hör hemma i kattens kost. Agriculture Victoria säger att stora mängder salt kan orsaka kraftig törst och ökat kissande.",
         "da": "Nej. Pet Poison Helpline skriver at man skal undlade smør og salt, og at for meget salt ikke hører hjemme i en kats kost. Agriculture Victoria skriver at store mængder salt kan give kraftig tørst og hyppig vandladning.",
         "fi": "Ei. Pet Poison Helplinen mukaan voi ja suola on jätettävä pois, eikä liikaa suolaa kuulu kissan ruokavalioon. Agriculture Victorian mukaan suuret suolamäärät voivat aiheuttaa liiallista janoa ja virtsaamista.",
-        "nb": "Nei. Pet Poison Helpline sier at du skal holde smør og salt unna, og at for mye salt ikke hører hjemme i kattens kosthold. Agriculture Victoria sier at store mengder salt kan gi sterk tørst og økt vannlating."
+        "nb": "Nei. Pet Poison Helpline sier at du skal holde smør og salt unna, og at for mye salt ikke hører hjemme i kattens kosthold. Agriculture Victoria sier at store mengder salt kan gi sterk tørst og økt vannlating.",
+        "it": "No. Pet Poison Helpline raccomanda di evitare burro e sale e afferma che il sale in eccesso non deve far parte dell’alimentazione del gatto. Agriculture Victoria spiega che grandi quantità di sale possono causare sete e minzione eccessive."
       }
     }
   ],
@@ -211,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e3c939a64a6fe796d2fae47c6c74237711efc155f0e9ff57ad0af7ef90ab17ff"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bbcbbba58a1cf88cbe494d12b9f91f2f4d8f4695a99cb5eeeeaaebfaa7790a10"
     }
   }
 }

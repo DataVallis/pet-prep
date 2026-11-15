@@ -9,7 +9,8 @@
     "sv": "Vaniljextrakt",
     "da": "Vaniljeekstrakt",
     "fi": "Vaniljauute",
-    "nb": "Vaniljeekstrakt"
+    "nb": "Vaniljeekstrakt",
+    "it": "Estratto di vaniglia"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
@@ -19,7 +20,8 @@
     "sv": "Får hundar äta vaniljextrakt?",
     "da": "Må hunde få vaniljeekstrakt?",
     "fi": "Saako koira vaniljauutetta?",
-    "nb": "Kan hunder få vaniljeekstrakt?"
+    "nb": "Kan hunder få vaniljeekstrakt?",
+    "it": "I cani possono mangiare l’estratto di vaniglia?"
   },
   "url_slug": {
     "en": "vanilla",
@@ -29,7 +31,8 @@
     "sv": "vaniljextrakt",
     "da": "vaniljeekstrakt",
     "fi": "vaniljauute",
-    "nb": "vaniljeekstrakt"
+    "nb": "vaniljeekstrakt",
+    "it": "estratto-di-vaniglia"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej, håll vaniljextrakt borta från din hund. Vaniljextrakt består mest av alkohol, och alkohol kan lätt orsaka kräkningar, diarré och vinglig gång hos hundar. Om din hund har fått i sig något ska du kontakta din veterinär direkt.",
     "da": "Nej, hold vaniljeekstrakt væk fra din hund. Vaniljeekstrakt er for det meste lavet af alkohol, og alkohol kan let give hunde opkast, diarré og vaklende gang som hos en beruset. Hvis din hund har drukket noget, skal du kontakte din dyrlæge med det samme.",
     "fi": "Ei saa, pidä vaniljauute poissa koirasi ulottuvilta. Vaniljauute koostuu pääosin alkoholista, ja alkoholi voi helposti aiheuttaa koirille oksentelua, ripulia ja humalaista kävelyä. Jos koirasi joi sitä, ota heti yhteyttä eläinlääkäriin.",
-    "nb": "Nei, hold vaniljeekstrakt unna hunden. Vaniljeekstrakt er for det meste laget av alkohol, og alkohol kan lett gi hunder oppkast, diaré og ustø gange som om de var fulle. Hvis hunden har drukket noe, kontakt dyrlegen med en gang."
+    "nb": "Nei, hold vaniljeekstrakt unna hunden. Vaniljeekstrakt er for det meste laget av alkohol, og alkohol kan lett gi hunder oppkast, diaré og ustø gange som om de var fulle. Hvis hunden har drukket noe, kontakt dyrlegen med en gang.",
+    "it": "No, tieni l’estratto di vaniglia lontano dal tuo cane. L’estratto di vaniglia è fatto per lo più di alcol, e l’alcol può facilmente causare nei cani vomito, diarrea e un’andatura da ubriaco. Se il tuo cane ne ha bevuto un po’, contatta subito il veterinario."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
@@ -50,7 +54,8 @@
     "sv": "Vaniljextrakt består mest av alkohol, och hundar är lättviktare och tål mycket lite alkohol: den kan lätt orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alkohol tas upp snabbt efter att den har svalts, så det är viktigt att få veterinärhjälp utan dröjsmål. Livsmedel som innehåller alkohol kan orsaka samma problem som alkoholhaltiga drycker.",
     "da": "Vaniljeekstrakt er for det meste lavet af alkohol, og hunde tåler meget lidt: alkohol kan let give opkast, diarré, beruset gang og endda koma eller død. Alkohol optages hurtigt, efter at det er slugt, så det er vigtigt at få dyrlægehjælp hurtigt. Fødevarer, der indeholder alkohol, kan give de samme problemer som alkoholiske drikke.",
     "fi": "Vaniljauute koostuu pääosin alkoholista, ja koirat ovat pieniä: alkoholi voi helposti aiheuttaa oksentelua, ripulia, humalaista kävelyä ja jopa kooman tai kuoleman. Alkoholi imeytyy nopeasti nielemisen jälkeen, joten on tärkeää hakea eläinlääkärin apua nopeasti. Alkoholia sisältävät ruokatuotteet voivat aiheuttaa samoja ongelmia kuin alkoholijuomat.",
-    "nb": "Vaniljeekstrakt er for det meste laget av alkohol, og hunder tåler lite: alkohol kan lett gi oppkast, diaré, ustø gange som om de var fulle og til og med koma eller død. Alkohol tas raskt opp i kroppen etter at den er svelget, så det er viktig å få dyrlegehjelp raskt. Matvarer som inneholder alkohol, kan gi de samme problemene som alkoholholdige drikker."
+    "nb": "Vaniljeekstrakt er for det meste laget av alkohol, og hunder tåler lite: alkohol kan lett gi oppkast, diaré, ustø gange som om de var fulle og til og med koma eller død. Alkohol tas raskt opp i kroppen etter at den er svelget, så det er viktig å få dyrlegehjelp raskt. Matvarer som inneholder alkohol, kan gi de samme problemene som alkoholholdige drikker.",
+    "it": "L’estratto di vaniglia è fatto per lo più di alcol, e i cani sono molto sensibili: l’alcol può facilmente causare vomito, diarrea, un’andatura da ubriaco e perfino coma o morte. L’alcol viene assorbito rapidamente dopo l’ingestione, quindi è importante rivolgersi subito al veterinario. I prodotti alimentari che contengono alcol possono causare gli stessi problemi delle bevande alcoliche."
   },
   "signs": {
     "en": [
@@ -132,6 +137,16 @@
       "Langsommere pust",
       "Lavt blodsukker, lavt blodtrykk, lav kroppstemperatur",
       "Kollaps"
+    ],
+    "it": [
+      "Vomito o conati",
+      "Diarrea",
+      "Mancanza di coordinazione, andatura da ubriaco",
+      "Salivazione eccessiva",
+      "Abbattimento o letargia, debolezza",
+      "Respiro più lento",
+      "Glicemia bassa, pressione bassa, temperatura corporea bassa",
+      "Collasso"
     ]
   },
   "what_to_do": {
@@ -142,7 +157,8 @@
     "sv": "Om din hund har druckit vaniljextrakt: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt. En hund som visar tecken ska komma till en veterinär så snart som möjligt.",
     "da": "Hvis din hund har drukket vaniljeekstrakt, skal du notere, hvor meget, og straks kontakte din dyrlæge eller en giftrådgivning for dyr. En hund, der viser tegn, bør til dyrlæge så hurtigt som muligt.",
     "fi": "Jos koirasi joi vaniljauutetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Koira, jolla on oireita, pitää viedä eläinlääkärille mahdollisimman pian.",
-    "nb": "Hvis hunden har drukket vaniljeekstrakt, merk deg hvor mye, og kontakt dyrlegen eller giftinformasjon for dyr med en gang. En hund som viser symptomer, bør til dyrlegen så snart som mulig."
+    "nb": "Hvis hunden har drukket vaniljeekstrakt, merk deg hvor mye, og kontakt dyrlegen eller giftinformasjon for dyr med en gang. En hund som viser symptomer, bør til dyrlegen så snart som mulig.",
+    "it": "Se il tuo cane ha bevuto l’estratto di vaniglia, annota quanto ne ha bevuto e contatta subito il veterinario o un centro antiveleni veterinario. Un cane che mostra sintomi deve essere visitato da un veterinario il prima possibile."
   },
   "serving": null,
   "child": {
@@ -153,7 +169,8 @@
     "sv": "Vaniljextrakt är till för bakning, inte för hundar. Håll den lilla flaskan stängd och undanställd, och berätta för en vuxen om din hund hittar den.",
     "da": "Vaniljeekstrakt er til bagning, ikke til hunde. Hold den lille flaske lukket og lagt væk, og sig det til en voksen, hvis din hund finder den.",
     "fi": "Vaniljauute on leivontaan, ei koirille. Pidä pieni pullo suljettuna ja laita se talteen, ja kerro aikuiselle, jos koirasi löytää sen.",
-    "nb": "Vaniljeekstrakt er til baking, ikke til hunder. Hold den lille flasken lukket og lagt bort, og si fra til en voksen hvis hunden finner den."
+    "nb": "Vaniljeekstrakt er til baking, ikke til hunder. Hold den lille flasken lukket og lagt bort, og si fra til en voksen hvis hunden finner den.",
+    "it": "L’estratto di vaniglia serve per i dolci, non per i cani. Tieni la boccetta chiusa e al suo posto, e dillo a un adulto se il tuo cane la trova."
   },
   "faq": [],
   "sources": [
@@ -277,6 +294,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0bf49a3885a2bc45ffe73e3d3d57a42f6165f78a2504b586bdd1bf1719e09708"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb4dbd533014bced964115ca91e18b0b729b717b1fc3af3805dabb706452adba"
     }
   }
 }

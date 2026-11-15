@@ -8,7 +8,8 @@
     "sv": "Korv",
     "da": "Pølser",
     "fi": "Makkarat",
-    "nb": "Pølser"
+    "nb": "Pølser",
+    "it": "Salsicce"
   },
   "question": {
     "en": "Can dogs eat sausages?",
@@ -17,7 +18,8 @@
     "sv": "Får hundar äta korv?",
     "da": "Må hunde spise pølser?",
     "fi": "Saako koira syödä makkaraa?",
-    "nb": "Kan hunder spise pølser?"
+    "nb": "Kan hunder spise pølser?",
+    "it": "I cani possono mangiare le salsicce?"
   },
   "url_slug": {
     "en": "sausages",
@@ -26,7 +28,8 @@
     "sv": "korv",
     "da": "poelser",
     "fi": "makkarat",
-    "nb": "polser"
+    "nb": "polser",
+    "it": "salsicce"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "sv": "Nej, det är bäst att inte ge din hund korv. Korv innehåller mycket fett och salt och ofta kryddor som vitlök och lök. För mycket fett eller salt kan leda till smärtsamma hälsoproblem som bukspottkörtelinflammation (pankreatit).",
     "da": "Nej, det er bedst ikke at give din hund pølser. Pølser indeholder meget fedt og salt og ofte krydderier som hvidløg og løg. For meget fedt eller salt kan give smertefulde helbredsproblemer som betændelse i bugspytkirtlen.",
     "fi": "Ei suositella, koiralle ei kannata antaa makkaraa. Makkara on rasvaista ja suolaista, ja siinä on usein mausteita, kuten valkosipulia ja sipulia. Liiallinen rasva tai suola voi johtaa kivuliaisiin terveysongelmiin, kuten haimatulehdukseen.",
-    "nb": "Nei, det er best å ikke gi hunden pølser. Pølser har mye fett og salt og inneholder ofte krydder som hvitløk og løk. For mye fett eller salt kan gi smertefulle helseproblemer som betennelse i bukspyttkjertelen."
+    "nb": "Nei, det er best å ikke gi hunden pølser. Pølser har mye fett og salt og inneholder ofte krydder som hvitløk og løk. For mye fett eller salt kan gi smertefulle helseproblemer som betennelse i bukspyttkjertelen.",
+    "it": "No, è meglio non dare le salsicce al tuo cane. La salsiccia è ricca di grassi e sale e contiene spesso condimenti come aglio e cipolla. Troppi grassi o troppo sale possono causare problemi di salute dolorosi come la pancreatite."
   },
   "why": {
     "en": "Unlike plain chicken or beef, sausage is high in fat and sodium and is often seasoned with garlic, onion or other spicy additives. Salty, fatty or preserved meats can be unhealthy for dogs. A vet at a UK vet charity says pigs in blankets aren't dangerous but are high in fat and can easily upset a dog's stomach; another source says dogs should not eat sausage at all, so we follow the stricter advice.",
@@ -45,7 +49,8 @@
     "sv": "Till skillnad från okryddad kyckling eller nötkött innehåller korv mycket fett och natrium och är ofta kryddad med vitlök, lök eller andra starka tillsatser. Salt, fet eller konserverad mat kan vara ohälsosam för hundar. En veterinär vid en brittisk djurvälfärdsorganisation säger att baconlindad korv inte är farlig men innehåller mycket fett och lätt kan reta hundens mage; en annan källa säger att hundar inte alls ska äta korv, så vi följer det strängare rådet.",
     "da": "I modsætning til almindelig kylling eller oksekød indeholder pølser meget fedt og natrium og er ofte krydret med hvidløg, løg eller andre skarpe tilsætninger. Salt, fedt eller konserveret kød kan være usundt for hunde. En dyrlæge fra en britisk velgørende dyrlægeorganisation skriver at pølser svøbt i bacon ikke er farlige, men indeholder meget fedt og let kan give hunden dårlig mave; en anden kilde skriver at hunde slet ikke bør spise pølser, så vi følger det strengeste råd.",
     "fi": "Toisin kuin maustamaton kana tai naudanliha, makkara on runsasrasvaista ja natriumpitoista, ja se on usein maustettu valkosipulilla, sipulilla tai muilla mausteisilla lisäaineilla. Suolaiset, rasvaiset tai säilötyt lihat voivat olla koirille epäterveellisiä. Brittiläisen eläinlääkintäalan hyväntekeväisyysjärjestön eläinlääkäri sanoo, että pekoniin käärityt makkarat (pigs in blankets) eivät ole vaarallisia mutta ovat rasvaisia ja voivat helposti ärsyttää koiran vatsaa; toinen lähde sanoo, ettei koirien pitäisi syödä makkaraa lainkaan, joten noudatamme tiukempaa neuvoa.",
-    "nb": "I motsetning til naturell kylling eller storfekjøtt har pølser mye fett og natrium og er ofte krydret med hvitløk, løk eller andre sterke tilsetninger. Salt, fett eller konservert kjøtt kan være usunt for hunder. En dyrlege i en britisk veldedig dyrehelseorganisasjon sier at pølser i bacon ikke er farlige, men at de har mye fett og lett kan gi hunden urolig mage; en annen kilde sier at hunder ikke bør spise pølser i det hele tatt, så vi følger det strengeste rådet."
+    "nb": "I motsetning til naturell kylling eller storfekjøtt har pølser mye fett og natrium og er ofte krydret med hvitløk, løk eller andre sterke tilsetninger. Salt, fett eller konservert kjøtt kan være usunt for hunder. En dyrlege i en britisk veldedig dyrehelseorganisasjon sier at pølser i bacon ikke er farlige, men at de har mye fett og lett kan gi hunden urolig mage; en annen kilde sier at hunder ikke bør spise pølser i det hele tatt, så vi følger det strengeste rådet.",
+    "it": "A differenza del pollo o del manzo al naturale, la salsiccia è ricca di grassi e sodio ed è spesso condita con aglio, cipolla o altri additivi piccanti. Le carni salate, grasse o conservate possono far male ai cani. Un veterinario di un’organizzazione benefica britannica dice che le salsicce avvolte nella pancetta (pigs in blankets) non sono pericolose ma sono ricche di grassi e possono facilmente dare fastidio allo stomaco del cane; un’altra fonte dice che i cani non dovrebbero mangiare affatto la salsiccia, quindi seguiamo il consiglio più severo."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Diaré",
       "Vil ikke spise",
       "Tretthet"
+    ],
+    "it": [
+      "Vomito, a volte da 1 a 4 giorni dopo il pasto grasso",
+      "Mal di pancia",
+      "Diarrea",
+      "Rifiuto del cibo",
+      "Stanchezza"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "sv": "Om din hund har ätit lite korv: håll ett öga på den och ring din veterinär för råd. Kontakta din veterinär om din hund kräks, har ont i magen eller verkar slö under de följande dagarna, eftersom tecknen efter en fet måltid kan komma med fördröjning.",
     "da": "Hvis din hund har spist noget pølse, skal du holde øje med den og ringe til din dyrlæge for at få råd. Kontakt din dyrlæge, hvis din hund kaster op, har mavesmerter eller virker træt i dagene efter, for tegn efter et fedt måltid kan komme med forsinkelse.",
     "fi": "Jos koirasi söi makkaraa, seuraa sitä ja soita eläinlääkärille neuvoja varten. Ota yhteyttä eläinlääkäriin, jos koira oksentelee, sillä on vatsakipua tai se vaikuttaa väsyneeltä seuraavien päivien aikana, koska rasvaisen aterian jälkeiset oireet voivat viivästyä.",
-    "nb": "Hvis hunden har spist litt pølse, hold øye med den og ring dyrlegen for råd. Kontakt dyrlegen hvis hunden kaster opp, har magesmerter eller virker sliten de neste dagene, for symptomer etter et fett måltid kan komme forsinket."
+    "nb": "Hvis hunden har spist litt pølse, hold øye med den og ring dyrlegen for råd. Kontakt dyrlegen hvis hunden kaster opp, har magesmerter eller virker sliten de neste dagene, for symptomer etter et fett måltid kan komme forsinket.",
+    "it": "Se il tuo cane ha mangiato della salsiccia, tienilo d’occhio e chiama il veterinario per un consiglio. Contatta il veterinario se nei giorni successivi il cane vomita, ha mal di pancia o sembra stanco, perché i sintomi dopo un pasto grasso possono comparire in ritardo."
   },
   "serving": null,
   "child": {
@@ -115,7 +128,8 @@
     "sv": "Korv är för fet och salt för hundar, så behåll den på din egen tallrik.",
     "da": "Pølser er for fede og salte til hunde, så behold dem på din egen tallerken.",
     "fi": "Makkarat ovat koirille liian rasvaisia ja suolaisia, joten pidä ne omalla lautasellasi.",
-    "nb": "Pølser er for fete og salte for hunder, så la dem bli på din egen tallerken."
+    "nb": "Pølser er for fete og salte for hunder, så la dem bli på din egen tallerken.",
+    "it": "Le salsicce sono troppo grasse e salate per i cani, quindi tienile nel tuo piatto."
   },
   "faq": [
     {
@@ -126,7 +140,8 @@
         "sv": "Hur är det med baconlindad korv vid jul?",
         "da": "Hvad med pølser svøbt i bacon til jul?",
         "fi": "Entä makkara pekonissa (pigs in blankets) jouluna?",
-        "nb": "Hva med pølser i bacon til jul?"
+        "nb": "Hva med pølser i bacon til jul?",
+        "it": "E le salsicce avvolte nella pancetta (pigs in blankets) che si mangiano a Natale?"
       },
       "a": {
         "en": "According to a vet, they aren't dangerous, but they are high in fat and could easily upset your dog's stomach.",
@@ -135,7 +150,8 @@
         "sv": "Enligt en veterinär är den inte farlig, men den innehåller mycket fett och kan lätt reta hundens mage.",
         "da": "Ifølge en dyrlæge er de ikke farlige, men de indeholder meget fedt og kan let give din hund dårlig mave.",
         "fi": "Eläinlääkärin mukaan ne eivät ole vaarallisia, mutta ne ovat rasvaisia ja voivat helposti ärsyttää koirasi vatsaa.",
-        "nb": "Ifølge en dyrlege er de ikke farlige, men de har mye fett og kan lett gi hunden urolig mage."
+        "nb": "Ifølge en dyrlege er de ikke farlige, men de har mye fett og kan lett gi hunden urolig mage.",
+        "it": "Secondo un veterinario non sono pericolose, ma sono ricche di grassi e potrebbero facilmente dare fastidio allo stomaco del tuo cane."
       }
     }
   ],
@@ -230,6 +246,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1ea7163f4d9eb75f53744582c817000d6f184ab126cff9b6c4035817afc381ba"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a7ff1b7070f04bb05f2f64b9f1ae227c00a6609d1a787b0cfcd4b8c3419f578"
     }
   }
 }

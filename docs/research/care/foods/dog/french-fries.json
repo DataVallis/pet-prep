@@ -9,7 +9,8 @@
     "sv": "Pommes frites",
     "da": "Pomfritter",
     "fi": "Ranskalaiset perunat",
-    "nb": "Pommes frites"
+    "nb": "Pommes frites",
+    "it": "Patatine fritte"
   },
   "question": {
     "en": "Can dogs eat french fries?",
@@ -19,7 +20,8 @@
     "sv": "Får hundar äta pommes frites?",
     "da": "Må hunde spise pomfritter?",
     "fi": "Saako koira syödä ranskalaisia perunoita?",
-    "nb": "Kan hunder spise pommes frites?"
+    "nb": "Kan hunder spise pommes frites?",
+    "it": "I cani possono mangiare le patatine fritte?"
   },
   "url_slug": {
     "en": "french-fries",
@@ -29,7 +31,8 @@
     "sv": "pommes-frites",
     "da": "pomfritter",
     "fi": "ranskalaiset-perunat",
-    "nb": "pommes-frites"
+    "nb": "pommes-frites",
+    "it": "patatine-fritte"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Rekommenderas inte. Pommes frites innehåller alldeles för många kalorier för hundar och kan leda till fetma, och för mycket salt mat är inte bra för dem. En tappad pommes frites orsakar sällan saltförgiftning, och vanlig kokt potatis går bra i små mängder i stället.",
     "da": "Anbefales ikke. Pomfritter indeholder alt for mange kalorier til hunde og kan føre til fedme, og for meget salt mad er ikke godt for dem. En tabt pomfrit giver næppe saltforgiftning, og almindelig kogt kartoffel er fint i små mængder i stedet.",
     "fi": "Ei suositella. Ranskalaiset perunat ovat koiralle aivan liian runsaskalorisia ja voivat johtaa lihavuuteen, eikä liian suolainen ruoka ole niille hyväksi. Lattialle pudonnut ranskalainen tuskin aiheuttaa suolamyrkytystä, ja maustamaton keitetty peruna sopii sen sijaan pieninä määrinä.",
-    "nb": "Anbefales ikke. Pommes frites har altfor mange kalorier for hunder og kan føre til fedme, og for mye salt mat er ikke bra for dem. En enkelt pommes frites som faller på gulvet, gir neppe saltforgiftning, og vanlig kokt potet er greit i små mengder i stedet."
+    "nb": "Anbefales ikke. Pommes frites har altfor mange kalorier for hunder og kan føre til fedme, og for mye salt mat er ikke bra for dem. En enkelt pommes frites som faller på gulvet, gir neppe saltforgiftning, og vanlig kokt potet er greit i små mengder i stedet.",
+    "it": "Sconsigliate. Le patatine fritte sono troppo caloriche per i cani e possono portare all’obesità, e troppo cibo salato non fa loro bene. Una patatina caduta a terra difficilmente causa un’intossicazione da sale, e al suo posto va bene un po’ di patata cotta senza condimenti, in piccole quantità."
   },
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
@@ -50,7 +54,8 @@
     "sv": "AKC påpekar att för mycket av något gott kan vara ett problem, och det gäller mat som pommes frites. En veterinärnutritionist vid Cornell säger att pommes frites innehåller alldeles för många kalorier och kan leda till fetma och dåligt näringsintag. Salt mat i måttliga mängder bör inte orsaka saltförgiftning, men alldeles för mycket salt mat är inte bra för hundar, särskilt inte för dem med hjärtsjukdom, eftersom det kan ge vätskeansamling.",
     "da": "AKC skriver at man kan få for meget af det gode med mad som pomfritter, og en dyrlæge og ernæringsekspert fra Cornell skriver at pomfritter indeholder alt for mange kalorier og kan føre til fedme og dårligt næringsindtag. Salt mad med måde bør ikke give saltforgiftning, men for meget salt mad er ikke godt for hunde, især ikke for dem med hjertesygdom, fordi det kan give væskeophobning.",
     "fi": "AKC toteaa, että liiasta hyvästä voi olla haittaa, ja näin on myös ranskalaisten perunoiden kaltaisten ruokien kohdalla. Cornellin eläinravitsemukseen perehtyneen eläinlääkärin mukaan ranskalaiset ovat aivan liian runsaskalorisia ja voivat johtaa lihavuuteen ja puutteelliseen ravintoaineiden saantiin. Kohtuudella syötynä suolaisen ruoan ei pitäisi aiheuttaa suolamyrkytystä, mutta liian suolainen ruoka ei ole koirille hyväksi, etenkään sydänsairaille, koska se voi aiheuttaa nesteen kertymistä elimistöön.",
-    "nb": "AKC påpeker at man kan få for mye av det gode med mat som pommes frites, og en ernæringsdyrlege ved Cornell sier at pommes frites har altfor mange kalorier og kan føre til fedme og dårlig næringsopptak. Salt mat med måte bør ikke gi saltforgiftning, men for mye salt mat er ikke bra for hunder, særlig for dem med hjertesykdom, fordi det kan gi væskeansamling."
+    "nb": "AKC påpeker at man kan få for mye av det gode med mat som pommes frites, og en ernæringsdyrlege ved Cornell sier at pommes frites har altfor mange kalorier og kan føre til fedme og dårlig næringsopptak. Salt mat med måte bør ikke gi saltforgiftning, men for mye salt mat er ikke bra for hunder, særlig for dem med hjertesykdom, fordi det kan gi væskeansamling.",
+    "it": "L’AKC osserva che con cibi come le patatine fritte è facile esagerare, e un nutrizionista veterinario della Cornell dice che le patatine sono decisamente troppo caloriche e possono portare a obesità e a un apporto scarso di nutrienti. Un po’ di cibo salato non dovrebbe causare intossicazione da sale, ma troppo cibo salato non fa bene ai cani, soprattutto a quelli con malattie cardiache, perché può causare ritenzione di liquidi."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Oppkast eller diaré",
       "Dårlig matlyst eller sløvhet",
       "Ustøhet, skjelvinger eller kramper (for mye salt)"
+    ],
+    "it": [
+      "Molta sete e tanta pipì",
+      "Vomito o diarrea",
+      "Poco appetito o abbattimento",
+      "Andatura instabile, tremori o convulsioni (troppo sale)"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "sv": "En eller ett par pommes frites kräver oftast inget mer än färskt dricksvatten. Om du tror att din hund har ätit för mycket salt mat ska du kontakta din veterinär direkt.",
     "da": "En pomfrit eller to kræver som regel kun friskt drikkevand. Hvis du tror, at din hund har spist for meget salt mad, skal du kontakte din dyrlæge med det samme.",
     "fi": "Yksi tai kaksi ranskalaista perunaa ei yleensä vaadi muuta kuin raikasta juomavettä. Jos arvelet koirasi syöneen liikaa suolaista ruokaa, ota heti yhteyttä eläinlääkäriin.",
-    "nb": "En pommes frites eller to krever vanligvis ikke mer enn friskt drikkevann. Hvis du tror hunden har spist for mye salt mat, må du kontakte dyrlegen med en gang."
+    "nb": "En pommes frites eller to krever vanligvis ikke mer enn friskt drikkevann. Hvis du tror hunden har spist for mye salt mat, må du kontakte dyrlegen med en gang.",
+    "it": "Per una patatina o due di solito basta dare acqua fresca da bere. Se pensi che il tuo cane abbia mangiato troppo cibo salato, contatta subito il veterinario."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "sv": "Pommes frites är ett salt tilltugg för människor. Hundar mår bättre av sina egna godbitar, så spara pommes fritesen till människorna.",
     "da": "Pomfritter er en salt snack til mennesker. Hunde har det bedre med deres egne godbidder, så behold pomfritterne til mennesker.",
     "fi": "Ranskalaiset perunat ovat suolainen ihmisten välipala. Koirille sopivat paremmin niiden omat herkut, joten pidä ranskalaiset ihmisten ruokana.",
-    "nb": "Pommes frites er salt mat for mennesker. Hunder har det best med sine egne godbiter, så spis pommes fritesen selv."
+    "nb": "Pommes frites er salt mat for mennesker. Hunder har det best med sine egne godbiter, så spis pommes fritesen selv.",
+    "it": "Le patatine fritte sono uno spuntino salato per le persone. Ai cani fanno meglio i loro premi, quindi lascia le patatine alle persone."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "sv": "Är vanlig potatis bättre än pommes frites?",
         "da": "Er almindelig kartoffel bedre end pomfritter?",
         "fi": "Onko tavallinen peruna parempaa kuin ranskalaiset?",
-        "nb": "Er vanlig potet bedre enn pommes frites?"
+        "nb": "Er vanlig potet bedre enn pommes frites?",
+        "it": "Le patate senza condimenti sono meglio delle patatine fritte?"
       },
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
@@ -143,7 +157,8 @@
         "sv": "Ja. Vanlig potatismos eller mjukt kokt potatis går bra i små mängder, utan smör och kryddor.",
         "da": "Ja. Almindelig kartoffelmos eller blødkogte kartofler er fine i små mængder, uden smør eller krydderier.",
         "fi": "On. Maustamaton perunamuusi tai pehmeäksi keitetyt perunat sopivat pieninä määrinä, ilman voita ja mausteita.",
-        "nb": "Ja. Vanlig potetmos eller bløte kokte poteter er greit i små mengder, uten smør eller krydder."
+        "nb": "Ja. Vanlig potetmos eller bløte kokte poteter er greit i små mengder, uten smør eller krydder.",
+        "it": "Sì. Le patate senza condimenti, schiacciate o cotte finché sono morbide, vanno bene in piccole quantità, senza burro né spezie."
       }
     }
   ],
@@ -265,6 +280,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "38eaa53734988dad377fe090b0da1cf56c1be7321b68daaed7853fb26cd90ac5"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0920e6c8bbacdb59b317cef70072de1030d3c19b2f1194c0152ab2232f750c52"
     }
   }
 }
