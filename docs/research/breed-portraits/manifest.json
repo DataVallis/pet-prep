@@ -1403,6 +1403,19 @@
             "prompt_hash": "sha256:59fc9ec64cf78887dab1d7c4a8f22d3769908f2010cd881c4abd6909112317c2",
             "generated_at": "2026-11-15T00:58:35+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "australian_silky_terrier",
+            "species": "dog",
+            "colour": "blue-tan",
+            "file": "dog/australian-silky-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b51c4ef00a05bab47d11defa992fc14c93af1c0122727e061d2cf8b4b9514845",
+            "generated_at": "2026-11-15T02:58:08+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
