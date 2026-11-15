@@ -1,0 +1,104 @@
+{
+  "country": "NG",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "Lovable Veterinary Services own site",
+      "url": "https://doorstep-vet-lagos.lovable.app/",
+      "note": "Opened (home page and /ambulatory); phone, WhatsApp, explicit 'Open 24 hours, 7 days a week, including emergencies'; mobile home-visit service, no street address."
+    },
+    {
+      "name": "Doctor VetTreat Animal Pet Clinic Abuja own site",
+      "url": "https://doctorvettreatanimalclinic.netlify.app/",
+      "note": "Opened; Maitama, Abuja, phone, hours Mon-Sat 08:00-18:00; no 24 h claim."
+    },
+    {
+      "name": "ABU Zaria Veterinary Teaching Hospital own site",
+      "url": "https://vth.abu.edu.ng/history",
+      "note": "Opened; phone and e-mail only; no address, hours or emergency statement."
+    },
+    {
+      "name": "University of Ibadan Veterinary Teaching Hospital",
+      "url": "https://vet.ui.edu.ng/node/72",
+      "note": "Opened (also node/891); describes hospital and outstations; contact section empty, no phone, hours or emergency statement."
+    },
+    {
+      "name": "University of Ilorin Veterinary Teaching Hospital",
+      "url": "https://unilorin.edu.ng/?p=10935",
+      "note": "Opened; location GRA/Sabo-Oke, Small Animal Clinic with intensive care; no phone, hours or emergency statement."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Lovable Veterinary Services (mobile vet, Lagos)",
+      "city": "Lagos",
+      "region": "Lagos",
+      "phone": "+234 902 851 1038",
+      "emergency_24h": true,
+      "duty": "Mobile home-visit vet for dogs and cats; open 24 hours, 7 days a week, including emergencies. Listed areas: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+      "small_animals": true,
+      "url": "https://doorstep-vet-lagos.lovable.app/",
+      "source_url": "https://doorstep-vet-lagos.lovable.app/ambulatory",
+      "checked": "2026-11-15",
+      "note": "Page quote: 'Open 24 hours, 7 days a week, including emergencies.' Phone 09028511038, WhatsApp 08153312813. No street address; site is a builder-hosted page (lovable.app), coverage 'anywhere in Lagos' vs five listed areas is unclear. Independent check 2026-11-15: all details and the 24 h claim re-confirmed on /ambulatory."
+    },
+    {
+      "kind": "clinic",
+      "name": "Doctor VetTreat Animal Pet Clinic",
+      "city": "Abuja",
+      "region": "FCT",
+      "address": "Osun Crescent, Maitama, Abuja",
+      "phone": "+234 703 990 9147",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 08:00-18:00; Sunday on request. Call ahead for emergencies.",
+      "small_animals": true,
+      "url": "https://doctorvettreatanimalclinic.netlify.app/",
+      "source_url": "https://doctorvettreatanimalclinic.netlify.app/",
+      "checked": "2026-11-15",
+      "note": "WhatsApp 08084379459. Page mentions emergency care but no 24 h claim. Builder-hosted site (netlify.app)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, Ahmadu Bello University",
+      "city": "Zaria",
+      "region": "Kaduna",
+      "phone": "+234 805 569 6488",
+      "emergency_24h": false,
+      "duty": "University teaching and referral animal hospital; call ahead for hours.",
+      "small_animals": true,
+      "url": "https://vth.abu.edu.ng/",
+      "source_url": "https://vth.abu.edu.ng/history",
+      "checked": "2026-11-15",
+      "note": "Page gives phone and vth@abu.edu.ng only; no address, hours, small-animal or emergency statement (small_animals inferred from 'primary and tertiary animal healthcare')."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, University of Ibadan",
+      "city": "Ibadan",
+      "region": "Oyo",
+      "emergency_24h": false,
+      "duty": "University teaching hospital for pets, food animals and wildlife; call ahead for hours.",
+      "small_animals": true,
+      "url": "https://vet.ui.edu.ng/node/72",
+      "source_url": "https://vet.ui.edu.ng/node/72",
+      "checked": "2026-11-15",
+      "note": "Page says services for pets, food animals and wild animals; contact section empty (contact page vet.ui.edu.ng/contactvettea blocked by provenance); no phone, hours or emergency statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, University of Ilorin - Small Animal Clinic",
+      "city": "Ilorin",
+      "region": "Kwara",
+      "address": "GRA/Sabo-Oke, University of Ilorin",
+      "emergency_24h": false,
+      "duty": "Small animal clinic with intensive care and infectious diseases ward; call ahead for hours.",
+      "small_animals": true,
+      "url": "https://unilorin.edu.ng/?p=10935",
+      "source_url": "https://unilorin.edu.ng/?p=10935",
+      "checked": "2026-11-15",
+      "note": "No phone, hours or emergency statement on the opened page."
+    }
+  ],
+  "notes": "Run 2026-11-15. Very limited usable sources. WebFetch PROVENANCE_REQUIRED blocked vcnngr.gov.ng (Veterinary Council of Nigeria) and vet.ui.edu.ng/contactvettea; not retried. NVMA, UNN, UNAAB, Kano/Enugu/Port Harcourt/Benin/Jos/Calabar clinics: searches returned only aggregators (finelib, connectciti, businesslist, goafricaonline, jiji, starofservice, myguidenigeria), deliberately not used as sources. Leads not opened: Crimson Veterinary Centre Ibadan (insideoyo.com news article), Zoba Veterinary Hospital (myguidenigeria listing), Pets-Choice, Damos, Supervet Clinic and Surgery, Innova Veterinary Hospital, May Veterinary Clinic, Ritab Vet Clinics (Lagos), Vet Planet, Rapkin, Crystal Veterinary Services, Marshall Veterinary Clinic (Port Harcourt). FurryPaws Veterinary Healthcare (Kabusa, Abuja; austineasika.github.io/FurryPawsVetHealthcare/) opened but dropped: no phone listed (only WhatsApp link, +234 811 016 3833 implied), no hours, no 24 h claim, looks like a demo page. No duty rota and no animal poison line found."
+}
