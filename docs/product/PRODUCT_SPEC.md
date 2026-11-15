@@ -273,12 +273,12 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 | Funkcija | Animacija, ki jo potrebuje | Dokler je ni |
 |---|---|---|
 | **Priboljšek** (»Želje«) | video, kako ljubljenček poje priboljšek (nastane ob nakupu) | gumb onemogočen, »Priboljški se še pripravljajo«; priboljšek se ne porabi (SHOP_SPEC S14) |
-| **Šola** | vsi posnetki šole | »Šola se še pripravlja« (David 28. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) |
-| **Igra z žogo, palica s peresom, crkljanje** | posnetki igre | »Igra se še pripravlja« (David 20. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) |
+| **Šola** | vsi posnetki šole | »Šola se še pripravlja« (David 28. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) — sprejeta izjema pravila, *potrdil David 15. 11. 2026: »naj ostane«* |
+| **Igra z žogo, palica s peresom, crkljanje** | posnetki igre | »Igra se še pripravlja« (David 20. 10. 2026); po izčrpanih samodejnih poskusih preprost način (David 2. 11. 2026) — sprejeta izjema pravila, *potrdil David 15. 11. 2026: »naj ostane«* |
 | Postelja, skledi, igrači (»Želje«) | svoja vsebina v prizoru | nimajo svojega gumba — prizor (spanje, hranjenje, igra) deluje kot brez stvari; v katalogu piše »Na poti …« |
-| **Osnovna skrb: hranjenje, voda, čiščenje, ven / sprehod** | nima svoje animacije | **nikoli ni zaklenjena** zaradi manjkajočih medijev — ljubljenček ne sme trpeti zaradi nas (*predlog Claude, čaka Davida*) |
+| **Osnovna skrb: hranjenje, voda, čiščenje, ven / sprehod** (tudi čiščenje po luži, grizenju in praskanju) | nima svoje animacije | **nikoli ni zaklenjena** zaradi manjkajočih medijev — ljubljenček ne sme trpeti zaradi nas (*potrdil David 15. 11. 2026*) |
 
-Izjeme: ljubljenček, ki AI medijev sploh ne dobi (izklopljeni, narisan prizor), ni nikoli zaklenjen zaradi njih; izklopljeno stikalo za posnetke ne zaklene funkcije. Ob neuspehu funkcija ostane zaklenjena, sistem poskuša znova sam; pri priboljških po izčrpanih poskusih skrbnik dobi opozorilo in jih odklene (*privzeto Claude — David lahko spremeni*). Celoten pregled vseh dejanj otroka: `docs/engineering/ARCHITECTURE.md` → *Feature readiness — the general media rule*.
+Izjeme: ljubljenček, ki AI medijev sploh ne dobi (izklopljeni, narisan prizor), ni nikoli zaklenjen zaradi njih; izklopljeno stikalo za posnetke ne zaklene funkcije. Ob neuspehu funkcija ostane zaklenjena, sistem poskuša znova sam; pri priboljških po izčrpanih poskusih skrbnik dobi opozorilo in jih odklene (*privzeto Claude — David lahko spremeni*). Ob prehodu v novo življenjsko obdobje so priboljški spet nekaj minut »v pripravi«, dokler posnetek novega obdobja ni shranjen (*potrdil David 15. 11. 2026*). Celoten pregled vseh dejanj otroka: `docs/engineering/ARCHITECTURE.md` → *Feature readiness — the general media rule*.
 
 ## 11. Ocenjevanje in certifikat
 
