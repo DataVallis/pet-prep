@@ -124,6 +124,12 @@ export interface paths {
          *     `POST /api/child/pin-login`; this endpoint answers them like any wrong
          *     credentials (401).
          *
+         *     Brute-force guard (David 2026-11-11): 429 (`{message}` + `Retry-After`)
+         *     after 10 requests / min or 30 / h per IP (IPv6 /64), and for an account
+         *     (normalised e-mail, any IP) after 5 wrong passwords in 15 min — while it
+         *     lasts even the right password gets 429; a success before that resets
+         *     the counter. Successful responses are unchanged.
+         *
          *     POST /api/login
          */
         post: operations["auth.login"];
@@ -1542,6 +1548,69 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/gift/redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Redeem a website gift voucher (M6-S01, WEBSITE_SALES_SPEC §3.4)
+         * @description Called by petprep.si from the browser with `Authorization: Bearer <token>` from
+         *     `POST /api/web/parent-session` (M6-S01b) — ONLY that website token (ability
+         *     `gift:redeem`); app tokens get 401. The family is the token's parent's family.
+         *     Rate limited per IP (10 / min, 30 / h), per code (10 / h) and per family
+         *     (20 / h) → 429 `rate_limited`. The code (a Lemon Squeezy license key) is checked
+         *     with Lemon Squeezy. Success = one unused 12-week challenge purchase in the
+         *     family (the parent chooses the pet in the app).
+         *
+         *     200 `{status: redeemed, already}` · 422 `invalid_request` | `invalid_code` |
+         *     `expired` | `refunded` · 409 `already_redeemed` · 401 `unauthenticated` (no /
+         *     expired / non-web token; family gone) · 403 `not_parent` · 502
+         *     `upstream_error` · 503 `unavailable` (switch off / not configured — checked
+         *     after the token). `message` is for logs only (sl | en by `locale`; the other
+         *     website languages → en).
+         *
+         *     POST /api/gift/redeem
+         */
+        post: operations["gift.redeem"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/webhooks/lemonsqueezy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Lemon Squeezy webhook (M6-S01, website gift vouchers)
+         * @description Auth: `X-Signature` = hex HMAC-SHA256 of the raw body with
+         *     LEMONSQUEEZY_WEBHOOK_SECRET — not configured → 503, wrong → 401
+         *     (VerifyLemonSqueezyWebhook). Every delivery is stored once in
+         *     `lemonsqueezy_events` (a repeat → 200 `duplicate: true`). `order_created` is
+         *     recorded; `license_key_created` / `_updated` create or update the voucher;
+         *     a full `order_refunded` or a disabled key invalidates it and revokes its
+         *     challenge credit. Processed whatever the »Gift vouchers« switch says.
+         *
+         *     POST /api/webhooks/lemonsqueezy
+         */
+        post: operations["lemonSqueezyWebhook.handle"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/generate-pin": {
         parameters: {
             query?: never;
@@ -1726,6 +1795,33 @@ export interface paths {
          */
         put: operations["parentSettings.update"];
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/partner-inquiries": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Send a partner inquiry. Public, no token; throttled per IP (5 / hour,
+         *     IPv6 /64). The server stores it and posts a Discord alert without the
+         *     sender's data; there is no automatic e-mail. Nothing about the visitor's
+         *     address is stored. A filled hidden `website` field = bot: 201 and nothing
+         *     stored
+         * @description 201 `{ok: true}`; 422 invalid body; 429 throttled; 503 while the
+         *     superadmin switch »Partner inquiries« is off.
+         *
+         *     POST /api/partner-inquiries
+         */
+        post: operations["partnerInquiry.store"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1971,6 +2067,48 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/web/parent-session": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Website sign-in of a parent for gift voucher redemption (M6-S01b)
+         * @description Called by petprep.si's redeem page. `method` = `password` (`email` +
+         *     `password`), `google` or `apple` (`id_token` from the provider's redirect for
+         *     the WEBSITE client id + the raw `nonce`, required for both). Signs in an
+         *     EXISTING parent with a family — never creates, links or changes an account.
+         *     The token has the single ability `gift:redeem`, expires after 15 minutes and
+         *     works only on `POST /api/gift/redeem` and `DELETE /api/web/parent-session`
+         *     (every other route → 403 `token_scope`). No user data in the answer.
+         *
+         *     Errors `{error, message}`: 422 `invalid_request` · 401 `invalid_credentials`
+         *     (unknown e-mail / wrong password / account without a password — one body) |
+         *     `invalid_token` · 404 `account_not_found` · 403 `not_parent` · 429
+         *     `rate_limited` + `Retry-After` (10 / min + 30 / h per IP; 5 password failures
+         *     per account in 15 min from any IP) · 503 `provider_disabled` |
+         *     `provider_unavailable` | `unavailable` (gift switch off). `message` is for
+         *     logs only (sl | en by `locale`, other website languages → en).
+         *
+         *     POST /api/web/parent-session
+         */
+        post: operations["web.parent-session.store"];
+        /**
+         * Sign out of the website session (M6-S01b). Deletes the presented token only
+         *     when it is a valid web (`gift:redeem`) token; no token, an unknown or expired
+         *     one, or an APP token → also 204 and nothing is deleted
+         * @description DELETE /api/web/parent-session
+         */
+        delete: operations["web.parent-session.destroy"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/wishes": {
         parameters: {
             query?: never;
@@ -2093,9 +2231,11 @@ export interface paths {
          * Give the pet one treat (max 2 per family-local day; looks only — never a
          *     need, score or certificate). 200 {treats_left, given_today, daily_limit,
          *     media: the treat clip (M6-W03 — `media.items.treats` + `video_url` / `url`)
-         *     or null while it is made / for a pet without AI media}; 422 no_treats | treat_limit_today (+ next_at =
-         *     the next local midnight) | pet_sleeping (+ next_at = wake time); 423 as
-         *     every child action. Every body carries `state`
+         *     or null for a pet without AI media}; 422 no_treats | media_not_ready (David
+         *     2026-11-15: the treat clip is not there yet — `state.wishes.treats.ready`
+         *     false, the app shows »se pripravlja«; nothing is used up) | treat_limit_today
+         *     (+ next_at = the next local midnight) | pet_sleeping (+ next_at = wake time);
+         *     423 as every child action. Every body carries `state`
          * @description POST /api/child/pet/treat
          */
         post: operations["wish.treat"];
@@ -2789,6 +2929,12 @@ export interface components {
              */
             grooming_enabled: boolean;
         };
+        /**
+         * PartnerInquiryType
+         * @description Kind of cooperation a partner asks about on petprep.si/partners (M6-S03, WEBSITE_SALES_SPEC §5.2). Mirrored in the CHECK constraint of `partner_inquiries.type`.
+         * @enum {string}
+         */
+        PartnerInquiryType: "series" | "sponsored_content" | "insurer" | "directory" | "shelter" | "other";
         /** Pet */
         Pet: {
             id: number;
@@ -2922,6 +3068,23 @@ export interface components {
              *     | `cuddle` <br/> Cuddles: stroking the dog with a finger. |
              */
             kind: components["schemas"]["PlayKind"];
+        };
+        /**
+         * RedeemGiftRequest
+         * @description POST /api/gift/redeem (M6-S01, CONTRACT §2.4 step 1; M6-S01b). Authenticated by the
+         *     website sign-in token (RequireWebSession) — the family comes from the token, never
+         *     from the body: a sent `email` is ignored (never validated, never logged). A failure
+         *     answers 422 `invalid_request` without echoing field names or values.
+         */
+        RedeemGiftRequest: {
+            /** @description The voucher code (a Lemon Squeezy license key) as printed: letters, digits, dashes, spaces. */
+            code: string;
+            /**
+             * @description Language of the `message` text only (one of the 15 website languages; the
+             *     server answers sl / en, the rest en — the website maps `error`).
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb" | null;
         };
         /**
          * RedeemItemRequest
@@ -3168,6 +3331,21 @@ export interface components {
             rules?: number;
         };
         /**
+         * StorePartnerInquiryRequest
+         * @description POST /api/partner-inquiries (M6-S03, WEBSITE_SALES_SPEC §5.2). Public.
+         */
+        StorePartnerInquiryRequest: {
+            company: string;
+            contact_name: string;
+            /** Format: email */
+            email: string;
+            type: components["schemas"]["PartnerInquiryType"];
+            message: string;
+            website?: string | null;
+            /** @enum {string|null} */
+            locale?: "sl" | "en" | null;
+        };
+        /**
          * SyncStepsRequest
          * @description POST /api/child/pet/steps (M1-04 / M1-07): today's cumulative step count
          *     from the phone. The service handles idempotency (max wins), anti-cheat and
@@ -3304,6 +3482,38 @@ export interface components {
             is_active?: boolean;
             /** @description Optional family timezone (IANA), saved on the parent (M1-03). */
             timezone?: string;
+        };
+        /**
+         * WebParentSessionRequest
+         * @description POST /api/web/parent-session (M6-S01b, CONTRACT_WEB_SIGNIN §1.1). Public;
+         *     `throttle:web-session`. Every other body field (`abilities`, `device_name`,
+         *     `name`, `terms_accepted`, `timezone` …) is ignored — nothing from the request
+         *     shapes the token. A failure answers 422 `invalid_request` without echoing
+         *     field names or values.
+         */
+        WebParentSessionRequest: {
+            /**
+             * @example password
+             * @enum {string}
+             */
+            method: "password" | "google" | "apple";
+            /**
+             * Format: email
+             * @description password: the parent's app account e-mail + password.
+             */
+            email: string;
+            password: string;
+            /**
+             * @description google / apple: the provider's ID token from the redirect (website client id only)
+             *     and the RAW nonce whose SHA-256 hex the website passed to the provider.
+             */
+            id_token: string;
+            nonce: string;
+            /**
+             * @description Language of `message` only (sl / en; the other website languages get English).
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb" | null;
         };
     };
     responses: {
@@ -3517,6 +3727,18 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+            /** @description Too many requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @description Error overview. */
+                        message: string;
+                    };
+                };
+            };
         };
     };
     "auth.register": {
@@ -5504,6 +5726,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -6544,6 +6767,7 @@ export interface operations {
                                 left: number;
                                 given_today: number;
                                 daily_limit: number;
+                                ready: boolean;
                             };
                         };
                     };
@@ -7604,6 +7828,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -8662,6 +8887,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -9720,6 +9946,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -10778,6 +11005,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -11836,6 +12064,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -12898,6 +13127,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -13960,6 +14190,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -15022,6 +15253,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -16084,6 +16316,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -17146,6 +17379,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -18204,6 +18438,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -19262,6 +19497,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -20324,6 +20560,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -21382,6 +21619,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -22444,6 +22682,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -23502,6 +23741,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -24564,6 +24804,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -25626,6 +25867,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -26688,6 +26930,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -27750,6 +27993,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -28812,6 +29056,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -29388,6 +29633,58 @@ export interface operations {
             401: components["responses"]["AuthenticationException"];
             403: components["responses"]["AuthorizationException"];
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "gift.redeem": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RedeemGiftRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string | {
+                        /** @constant */
+                        status: "redeemed";
+                        already: boolean;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "lemonSqueezyWebhook.handle": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        received: boolean;
+                        duplicate: boolean;
+                        /** @enum {string|null} */
+                        outcome: "recorded" | "voucher_created" | "voucher_updated" | "refunded" | "revoked" | "disabled" | "expired" | "partial_refund" | "ignored" | "foreign_store" | "unknown_product" | "test_mode_ignored" | null;
+                    };
+                };
+            };
         };
     };
     "pairing.generatePin": {
@@ -31191,6 +31488,43 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "partnerInquiry.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StorePartnerInquiryRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        ok: boolean;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "Partner inquiries are not accepted right now.";
+                    };
+                };
+            };
+        };
+    };
     "petGrowth.parent": {
         parameters: {
             query?: never;
@@ -31594,6 +31928,56 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "web.parent-session.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["WebParentSessionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        /** @constant */
+                        token_type: "Bearer";
+                        abilities: "gift:redeem"[];
+                        expires_at: string;
+                        /** @constant */
+                        expires_in: 900;
+                    } | string;
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "web.parent-session.destroy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
         };
     };
     "wish.parentIndex": {
@@ -32915,6 +33299,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -33955,6 +34340,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };

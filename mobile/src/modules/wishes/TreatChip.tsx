@@ -3,6 +3,11 @@
  * pet has treats (`showTreatButton`). A given treat plays the treat clip once ON THE STAGE
  * (M6-W03: `media.items.treats` via the HUD's `useItemMoment`; picture mode → its image);
  * without one the HUD shows a short toast and the hearts. Treats never change needs or scores (S1).
+ *
+ * David 2026-11-15 (the general media rule — a feature is never usable without its animation):
+ * while the treat's animation is not ready (`treatsPreparing`, server `wishes.treats.ready`
+ * false) the chip is shown but OFF, with »Priboljški se še pripravljajo« as its hint — the same
+ * pattern as the school / game chips. Nothing is said about pictures or videos being made.
  */
 
 import { Pressable, StyleSheet } from 'react-native';
@@ -26,6 +31,8 @@ export function treatErrorText(error: unknown, view: ChildPetView | null): strin
       return t('wishes:child.treat.noTreats');
     case 'pet_sleeping':
       return t('wishes:child.treat.sleeping');
+    case 'media_not_ready':
+      return t('wishes:child.treat.preparing');
     default:
       break;
   }
@@ -40,20 +47,24 @@ export interface TreatChipProps {
   busy: boolean;
   onPress: () => void;
   compact?: boolean;
+  /** The treats are not ready yet (`treatsPreparing`): the chip is off, the hint says why. */
+  preparing?: boolean;
 }
 
-export function TreatChip({ left, species, busy, onPress, compact = false }: TreatChipProps) {
+export function TreatChip({ left, species, busy, onPress, compact = false, preparing = false }: TreatChipProps) {
   const Icon = species === 'cat' ? Cookie : Bone;
+  const disabled = busy || preparing;
   return (
     <Pressable
       testID="hud-treat"
       accessibilityRole="button"
       accessibilityLabel={t('wishes:child.treat.a11y', { count: left })}
-      accessibilityState={{ disabled: busy, busy }}
-      disabled={busy}
+      accessibilityHint={preparing ? t('wishes:child.treat.preparing') : undefined}
+      accessibilityState={{ disabled, busy }}
+      disabled={disabled}
       onPress={onPress}
       hitSlop={compact ? COMPACT_CHIP_HIT_SLOP : 6}
-      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, busy && styles.disabled]}
+      style={({ pressed }) => [styles.chip, compact && compactChipStyles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <Icon color={palette.mint} size={16} />
       {!compact && <Text style={styles.text}>{t('wishes:child.treat.button')}</Text>}

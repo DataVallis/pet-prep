@@ -52,6 +52,7 @@
       "limit": "Two treats today already. More tomorrow.",
       "noTreats": "No treats left.",
       "sleeping": "Your pet is asleep. Give the treat when it wakes up.",
+      "preparing": "The treats are still getting ready — this can take a few minutes",
       "failed": "That didn't work. Try again."
     }
   },
@@ -87,6 +88,7 @@
     "onTheWay": "On its way …",
     "treatsLeft_one": "{{count}} treat left",
     "treatsLeft_other": "{{count}} treats left",
+    "treatsPreparing": "The treats are still getting ready — this can take a few minutes.",
     "creditsTitle": "Bought, not given to a pet yet",
     "creditLine": "{{item}} ({{count}}×)",
     "assign": "Who gets it?",

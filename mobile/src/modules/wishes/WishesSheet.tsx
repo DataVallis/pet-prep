@@ -267,12 +267,19 @@ function WishRow({ item, state, busy, onAsk }: { item: ChildWishItem; state: Chi
   const showButton = state === 'ask' || state === 'limit';
   const disabled = state !== 'ask' || busy;
   const treatsNote = item.key === 'treats' && state !== 'treats_left' && (item.treats_left ?? 0) > 0 ? t('wishes:child.treatsLeft', { count: item.treats_left ?? 0 }) : null;
+  // David 2026-11-15: bought treats that cannot be given yet say so (never anything about videos).
+  const preparingNote = item.preparing ? t('wishes:child.treat.preparing') : null;
   return (
     <View style={styles.row} testID={`wish-row-${item.key}`}>
       <DesignThumb design={ownDesign} variant={item.variant} tone="dark" size={52} testID={`wish-row-design-${item.key}`} />
       <View style={styles.rowTexts}>
         <Text style={styles.rowName}>{name}</Text>
         {treatsNote && <Text style={styles.rowStatus}>{treatsNote}</Text>}
+        {preparingNote && (
+          <Text style={styles.rowStatus} testID="wish-treats-preparing">
+            {preparingNote}
+          </Text>
+        )}
         {status && !showButton && (
           <View style={styles.statusLine}>
             {(state === 'requested' || state === 'owned') && <Check color={palette.mint} size={14} />}
