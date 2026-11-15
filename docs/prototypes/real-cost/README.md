@@ -13,6 +13,13 @@ the app, the backend or `pet-prep-website`. Product context, numbers with their 
 - `standalone.html` — the built single file (own code inlined, three.js and cannon-es from cdn.jsdelivr.net through an
   import map). This is what was published as a private Claude page for David.
 
+## Lead PDF ("Summary for a Labrador")
+- `summary/build_summary.py` builds `summary/petprep-povzetek-labradorec-sl.pdf` and `summary/petprep-summary-labrador-en.pdf`
+  (A4, 2 pages: care table, puppy note, costs in GBP with `~` EUR / USD, promise with signature lines, sources) from
+  HTML with headless Chrome, fonts and logo from `brand/`. Numbers mirror `src/main.js` — change both.
+- Planned use (David 2026-11-15, T7): the file of a **free Lemon Squeezy product**; Lemon Squeezy e-mails it to the
+  parent. The product does not exist yet.
+
 ## Run
 ```bash
 cd docs/prototypes/real-cost

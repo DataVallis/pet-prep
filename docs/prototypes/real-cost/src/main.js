@@ -301,7 +301,7 @@ function renderHud() {
 function renderSummary(keepPile = false) {
   const days = SCALES[state.scale], x = totals(state.stage, days), isLife = state.scale === 'life';
   const row = (label, value, tag) => `<li><span>${label}<em class="tag ${tag}">${t('tag_' + tag)}</em></span><b>${value}</b></li>`;
-  const hours = (m) => (m >= 600 ? `${nf(m / 60)} ${t('h')}` : m >= 60 ? `${nf(m / 60, 1)} ${t('h')}` : `${nf(m)} ${t('min')}`);
+  const hours = (m) => (m >= 6000 ? `${nf(m / 60)} ${t('h')}` : m >= 60 ? `${nf(m / 60, 1)} ${t('h')}` : `${nf(m)} ${t('min')}`);
   let html = row(t('r_walk'), hours(x.walkMin), 'src') + row(t('r_steps'), nf(x.steps), 'rule') + row(t('r_meals'), nf(x.meals), 'src');
   if (x.takeOuts) html += row(t('r_outs'), nf(x.takeOuts), 'src');
   html += row(t('r_bags'), nf(x.poops), 'rule') + row(t('r_train'), hours(x.trainMin), 'src');

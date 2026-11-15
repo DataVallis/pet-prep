@@ -277,7 +277,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 - Analysis: three.js pays off on petprep.si, not in the app and not for the pet (the pet stays video). `docs/product/THREEJS_OPPORTUNITIES.md`, ROADMAP M6-S04, DECISIONS 2026-11-15.
 - Prototype source in `docs/prototypes/real-cost/` (three.js 0.187.0 + cannon-es 0.20.0, SL + EN; `npm install && npm run serve`). **Nothing shipped:** no app, backend or website change; the e-mail form sends nothing.
 - David's decisions: currency switch € / $ / £ with the fixed ECB rate of 13 Nov 2026 and `~` on converted amounts; made-up »petprep partner« logo; label + colour legend pinned above the bin; five info points with sourced facts; the partner slot is a call to partner up (links to the partners page).
-- **Decided (David, same day):** the parent's e-mail goes through a free Lemon Squeezy product (»Povzetek za <pasmo>«), no SMTP, no new backend table — *planned*, the product does not exist yet.
+- **Decided (David, same day):** the parent's e-mail goes through a free Lemon Squeezy product (»Povzetek za <pasmo>«), no SMTP, no new backend table. The PDF is built (`docs/prototypes/real-cost/summary/`, SL + EN, `build_summary.py`); **the Lemon Squeezy product does not exist yet** (David has to sign in to Lemon Squeezy in the built-in browser first) and the page's form still sends nothing.
 - **Open (David):** Slovenian prices, a real partner, whether it goes live before the validation ends, port to `pet-prep-website`.
 
 ### 2026-11-15 (cloud, backend + mobile) — treats locked until their clip exists + the general media rule (`fix/treats-locked-until-clip-ready`, David's production report, **not merged — one QA round first**: AI cost + purchase logic)
