@@ -114,6 +114,7 @@ return [
     'belgian_tervuren' => 'Belgijski ovčar tervuren',
     'toy_fox_terrier' => 'Toy fox terier',
     'gordon_setter' => 'Gordonski seter',
+    'afghan_hound' => 'Afganski hrt',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

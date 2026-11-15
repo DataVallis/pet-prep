@@ -1360,6 +1360,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GORDON_SETTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-113)';
 
     /**
+     * M5-R10-114 Afghan Hound (unattended run 2026-11-15, data.json proposed_game_parameters.afghan_hound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S850 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S850 — McMillan 2024's breed value not
+     * reachable), arrival 2 / 9 / 36 / 90, learning multiplier 0.5 (Coren rank 79, Lowest, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AFGHAN_HOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-114)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1723,6 +1732,10 @@ class BreedStageParamsSeeder extends Seeder
             'tooth_brushing' => [7, 'day', 'S845', 'You should also brush their teeth on a daily basis to prevent dental disease.', 'proposed_game_parameters.gordon_setter.tooth_brushing', '"on a daily basis" → every day'],
             'bath' => [1, 'month', 'S845', 'Your dog will need a bath about once a month.', 'proposed_game_parameters.gordon_setter.bathing', '"about once a month" → every 4 weeks (nails / ears "regularly", groomer: no frequency → no task)'],
         ],
+        'afghan_hound' => [
+            'tooth_brushing' => [7, 'day', 'S853', 'Their teeth should be brushed daily with dog-friendly toothpaste.', 'proposed_game_parameters.afghan_hound.tooth_brushing', '"daily" → every day'],
+            'bath' => [1, 'week', 'S852', 'Bathing your dog at least once every week or two is important for keeping the coat clean and conditioned', 'proposed_game_parameters.afghan_hound.bathing', '"at least once every week or two" → the lower bound, every week (WebMD "twice a week" alternative; nails / ears / groomer: no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1856,6 +1869,7 @@ class BreedStageParamsSeeder extends Seeder
         'belgian_tervuren' => [1, 'S832', "You'll also need to set aside time to brush their beautiful, long double coat every week.", 'medium', false],
         'toy_fox_terrier' => [2, 'S833', "It's helpful to brush their coat once or twice a week to minimize what shedding does occur", 'high', false],
         'gordon_setter' => [7, 'S843', 'They have a heavy coat which will require daily grooming to keep it free from debris and tangles.', 'high', false],
+        'afghan_hound' => [7, 'S850', 'Every day', 'high', false],
     ];
 
     /**
@@ -1915,6 +1929,7 @@ class BreedStageParamsSeeder extends Seeder
         'bouvier_des_flandres' => ['S798', 'Prevent exercise one hour before and one hour after eating'],
         'borzoi' => ['S800', 'Remember to leave a gap between eating and exercising.'],
         'gordon_setter' => ['S844', 'Restrict exercise an hour before and after mealtimes'],
+        'afghan_hound' => ['S852', 'It’s important to wait at least an hour after your Afghan Hound eats before letting them exercise'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -2034,13 +2049,14 @@ class BreedStageParamsSeeder extends Seeder
         'belgian_tervuren' => ['S832', 'This makes socializing your Belgian Tervuren puppy a vital part of their care.'],
         'toy_fox_terrier' => ['S834', 'Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.'],
         'gordon_setter' => ['S844', 'Gordon Setter puppies need socialization to grow into confident adults.'],
+        'afghan_hound' => ['S851', 'Afghan Hounds, if well socialised, are good with children.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2872,6 +2888,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::BelgianTervuren => self::belgianTervurenProfile(),
             BreedType::ToyFoxTerrier => self::toyFoxTerrierProfile(),
             BreedType::GordonSetter => self::gordonSetterProfile(),
+            BreedType::AfghanHound => self::afghanHoundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10850,6 +10867,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'gordon_setter.lifespan.rkc',
                 'quote' => 'Over 10 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S842); PDSA "Over 10 years" (S843), PetMD / WebMD 12–13 y (S844, S845) and VCA 10–13 y (S846) are consistent. No McMillan 2024 value reachable (12.4 y only via Wikipedia S847, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Afghan Hound (M5-R10-114). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_AFGHAN_HOUND); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function afghanHoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AFGHAN_HOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S850', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.afghan_hound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S850) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S850', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S850) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S851) and WebMD (S853) 2 hours agree; PetMD (S852) "at least an hour" is an alternative.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.7, 27.2], [
+                'unit' => 'kg', 'source_id' => 'S854', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'afghan_hound.adult_weight.akc',
+                'quote' => 'Dogs, about 60 pounds; bitches, about 50 pounds.',
+                'notes' => 'AKC standard (S854): dogs about 60 lb (27.2 kg), bitches about 50 lb (22.7 kg) → the range 22.7–27.2 kg (our conversion). The FCI standard gives no weight; PDSA "23-27 kg" (S851) is an alternative.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Large", S850 → the Large class of S10).',
+            ]],
+            'coren_rank' => [79, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.trainability.coren_rank',
+                'notes' => 'Coren rank 79 "Afghan Hound", Lowest Degree of Working/Obedience Intelligence (ranks 70–79) — Wikipedia "The Intelligence of Dogs" table (S35, read through a mirror, checked 2026-11-15); Coren\'s own article lists it last of the bottom 10 (S34).',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 79 = Lowest (S35) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S850', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S850); PDSA "Over 10 years" (S851) agrees. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
