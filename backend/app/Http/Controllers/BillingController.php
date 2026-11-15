@@ -70,7 +70,10 @@ class BillingController extends Controller
      * pet → 404 `pet_not_found`. M6-U01: a born, active free pet (mutt / domestic
      * cat) is upgraded to the 12-week challenge — the challenge starts now; 422
      * `game_over`, `pet_not_born`, `legacy_profile` (a pre-M5 mutt), `free_plan`
-     * (a free pet of a paid breed).
+     * (a free pet of a paid breed). M6-U03: optional body `keep_score` (bool) for that
+     * upgrade — true keeps the Care Score so far (it counts from each child's start), false /
+     * absent starts it again at the purchase (absent: the choice of the parent's open intent
+     * for this pet, if any). The 12 weeks run from the purchase either way.
      *
      * POST /api/parent/pets/{pet}/challenge/activate
      */
@@ -86,7 +89,7 @@ class BillingController extends Controller
         }
 
         try {
-            $result = $this->credits->activate($target, $parent);
+            $result = $this->credits->activate($target, $parent, $request->has('keep_score') ? $request->boolean('keep_score') : null);
         } catch (ChallengeException $e) {
             return response()->json(['message' => $e->getMessage(), 'reason' => $e->reason], $e->status);
         }
@@ -113,7 +116,9 @@ class BillingController extends Controller
      * unpaid challenge pet (also unborn) or an upgradeable free pet; 422
      * `already_paid`, `pet_not_active`, `game_over`, `pet_not_born`,
      * `legacy_profile`, `free_plan`. Another family's pet → 404 `pet_not_found`.
-     * The app must not open the store sheet when this fails.
+     * The app must not open the store sheet when this fails. M6-U03: optional body
+     * `keep_score` (bool) for a free pet — the parent's choice to keep the Care Score so far
+     * (true) or start again (false); the webhook applies it when it upgrades the pet.
      *
      * POST /api/parent/pets/{pet}/challenge/intent
      */
@@ -129,7 +134,7 @@ class BillingController extends Controller
         }
 
         try {
-            $intent = $this->intents->create($parent, $target);
+            $intent = $this->intents->create($parent, $target, $request->has('keep_score') ? $request->boolean('keep_score') : null);
         } catch (ChallengeException $e) {
             return response()->json(['message' => $e->getMessage(), 'reason' => $e->reason], $e->status);
         }

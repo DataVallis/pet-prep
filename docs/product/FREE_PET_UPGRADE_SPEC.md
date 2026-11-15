@@ -5,6 +5,7 @@
 > **Gradnja poteka v dveh PR-jih** (§8): PR 1 je nadgradnja obstoječega ljubljenčka, PR 2 je izziv z mešančkom ob ustvarjanju (U4) in opomnik 7. dan (U5).
 > **Stanje (11. 11. 2026): PR 1 (M6-U01) je zgrajen** — strežnik in aplikacija (OTA, brez nove trgovinske gradnje), vključno z »namenom nakupa« (§5.3, David »da« 10. 11. 2026). **Pri uporabnikih od 11. 11. 2026** (produkcijski deploy + OTA za iOS in Android); na napravi še ni preverjeno. **PR 2 (M6-U02) je zgrajen 11. 11. 2026** — »mešanček + izziv« ob ustvarjanju (nove aplikacije) in opomnik 7. dan (§5.6, §5.7 »Kako je zgrajeno«); prav tako pri uporabnikih od 11. 11. 2026, na napravi še ni preverjeno.
 > Del načrta validacije (`VALIDATION_PLAN.md` §4.3).
+> **Sprememba 15. 11. 2026 (U7, M6-U03):** ocena skrbi se ob nadgradnji ne začne več vedno na novo — **starš ob nakupu izbere**, ali se dosedanja ocena obdrži ali začne znova. 12 tednov v obeh primerih teče od nakupa. Kjer spodnja pravila pravijo »šteje od nakupa« (U1, K1, K2, §3, §5.4), to velja za izbiro »Začni na novo«.
 
 ## 1. Zakaj
 
@@ -28,6 +29,7 @@ Danes je brezplačni mešanček (in domača mačka) preizkus aplikacije, plačlj
 | K6 | **Igra in crkljanje** se odkleneta ob nakupu, kot danes v kodi (D4). |
 | K7 | **Ponoven nakup po vračilu** pomeni novih 12 tednov od novega nakupa. |
 | K8 | **Ni poti nazaj na brezplačni načrt** (David 11. 11. 2026): nadgrajen ljubljenček ali neplačan »mešanček + izziv« se ne more sam vrniti na brezplačni načrt, enako kot pasemski. Edini poti sta vračilo kupnine (→ brezplačno) in izbris. |
+| U7 | **Starš ob nakupu izbere, kaj se zgodi z dosedanjo oceno skrbi** (David 15. 11. 2026: otrok, ki že mesec dni lepo skrbi in za nagrado dobi izziv, ne sme začeti ocene od začetka). Izbiri: **»Obdrži dosedanjo oceno«** — ocena otroka, ocena ljubljenčka in končna ocena za potrdilo štejejo vse od otrokovega začetka skrbi (rutine in bolezni, tudi pred nakupom); noben dan ni »pred izzivom«. **»Začni na novo«** — kot U1 / K1 / K2 (šteje samo od nakupa, dnevi prej so »pred izzivom«). **12 tednov vedno teče od nakupa.** Ob vsaki izbiri je razlaga, kaj pomeni (David: starš mora prebrati, preden izbere). **Opozorilo**, kadar bi starš obdržal oceno pod 70 (prag za potrdilo); opomba, kadar bi oceno 70+ zavrgel. Vnaprej označeno: »Obdrži«, če imajo vsi otroci ljubljenčka oceno ≥ 70, sicer »Začni na novo«. Ena izbira velja za vse otroke, ki takrat skrbijo za ljubljenčka. **Izbira je dokončna.** Brez ocene (še nobene ocenjene rutine) izbire ni. Že nadgrajeni ljubljenčki (11.–15. 11.) ostanejo pri novem začetku; ponoven nakup po vračilu izbiro ponudi znova. |
 | D1 | Opomnik 7. dan se pošlje, ko je od pogodbe minilo **7 dni** in je otrok vsaj eno dejanje naredil v **vsaj 5 od teh 7 dni** (ne vsak dan). |
 | D2 | Pred spremembo webhooka preveriti v kodi, ali **vse** različice aplikacije, ki so pri uporabnikih (trgovinske gradnje in OTA), po nakupu same pokličejo aktivacijo za izbranega ljubljenčka. Če se katera zanaša na samodejno dodelitev, se ustavimo, Davidu predlagamo rešitev in čakamo nanj. **Starš nikoli ne sme plačati in ostati z zaklenjenim ljubljenčkom.** Stanje (10. 11.): **preverjeno — ni varno, kot je bilo predlagano.** Vse različice pokličejo aktivacijo samo, če nakup vidijo v ~8 s (5 poizvedb), brez kasnejšega poskusa; ob zakasnelem webhooku, zaprti aplikaciji ali brez povezave ljubljenčka danes odklene samodejna dodelitev. Predlog »namen nakupa« (§5.3) je David potrdil 10. 11. 2026 (»da«); zgrajen v PR 1. |
 | D3 | Staršu starega mešančka **pošteno povemo**, zakaj nadgradnja ni mogoča (kratko besedilo). Gumba ne skrijemo brez razlage. |
@@ -48,7 +50,7 @@ Danes je brezplačni mešanček (in domača mačka) preizkus aplikacije, plačlj
   - ljubljenčkova: »konec simulacije«.
 
   Mešanček, starejši od 12 tednov, ob nakupu **ni** »končan«. Vračilo, opozorilo ob izbrisu in potrdilo delujejo kot pri vsakem drugem plačanem izzivu.
-- **Ocena skrbi in potrdilo** štejeta samo rutine od nakupa naprej (K1). Bolezni pred nakupom ne odštevajo točk. Ocena ljubljenčka na nadzorni plošči šteje od nakupa (K2).
+- **Ocena skrbi in potrdilo** (izbira »Začni na novo«; pri »Obdrži dosedanjo oceno« šteje vse od otrokovega začetka — U7) štejeta samo rutine od nakupa naprej (K1). Bolezni pred nakupom ne odštevajo točk. Ocena ljubljenčka na nadzorni plošči šteje od nakupa (K2).
 - **Zgodovina:** omejitev 7 dni za brezplačne izgine. Dnevi pred nakupom so v poročilu vidni z oznako **»pred izzivom«** in niso v oceni.
 - **Nova pogodba ni potrebna**, ker jo je otrok že podpisal. Otrok vidi kratko sporočilo »Izziv se je začel! Teden 1 od 12«.
 - **AI mediji:** nakup sproži manjkajoče posnetke polnega nabora na skupnem videzu (že zgrajeno, P6 / M4-10). Igra medtem teče z obstoječimi posnetki. Šola in igre z lastnimi posnetki so »v pripravi«, dokler posnetki niso narejeni (obstoječe pravilo).
@@ -70,6 +72,7 @@ Danes je brezplačni mešanček (in domača mačka) preizkus aplikacije, plačlj
   - kaj se doda: 12-tedenski program, potrdilo, celotna zgodovina in vsi posnetki;
   - kdaj se začne: takoj;
   - cena in podatek, da ni naročnine.
+- **Izbira ocene (U7, M6-U03):** na kartici ljubljenčka na plačilnem zaslonu (pri nakupu in pri »Uporabi kupljen izziv«) sta izbiri »Obdrži dosedanjo oceno« in »Začni na novo«, vsaka z razlago; nad njima trenutna ocena (pri več otrocih ocene vseh), pod njima opozorilo pri nizki oceni in stavek, da izbire po nakupu ni mogoče spremeniti.
 - Po nakupu aplikacija pokliče aktivacijo **za tega ljubljenčka**.
 - Pri starem mešančku (K5) je namesto gumba kratko pojasnilo (D3).
 - V poročilu in zgodovini so dnevi pred nakupom označeni »pred izzivom«.
@@ -145,6 +148,12 @@ Besedila so EN + SL, za psa in muco.
 - Bolezni (−10) se štejejo od začetka. Z dejanskim začetkom izziva bolezni pred nakupom izpadejo same.
 - Datumi v pasu ljubljenčka: `Pet::effectiveTimezone()`.
 
+**5.4a Izbira ocene (U7, M6-U03, 15. 11. 2026)**
+- Stolpec `pets.challenge_score_kept` (bool, privzeto false, brez polnjenja obstoječih; CHECK: samo pri nadgrajenem ljubljenčku; vračilo ga počisti) in `challenge_purchase_intents.keep_score` (nullable).
+- Aplikacija pošlje `keep_score` v `POST …/challenge/intent` (pred odprtjem trgovine) in v `POST …/challenge/activate`. Webhook z namenom uporabi izbiro iz namena. Aktivacija brez polja uporabi izbiro iz odprtega namena tega starša za tega ljubljenčka, sicer »začni na novo« (stare aplikacije).
+- `CareScoreService::scoreSinceOf()` / `scoreStartOf()`: pri obdržani oceni `childScore`, `petSummary`, bolezni in `pre_challenge` ne režejo pri nakupu (štejejo od otrokovega začetka oz. rojstva). `challengeStartOf()` / `challengeStartedOf()` (teden N, 84 dni, konec potrdila, »konec simulacije«) ostanejo pri nakupu.
+- `plan.challenge_score_kept` v podatkih načrta in v izvozu družine.
+
 **5.5 Zgodovina 7 dni (PR 1)**
 - Omejitev velja po `isFreePlan()` (`FamilyDashboardService.php:41-63, 358-374, 476-483`, `ParentDashboardController.php:141-142, 195-196`) in ob spremembi načrta izgine sama. Podatki niso pobrisani.
 - Dodaj oznako »pred izzivom« (polje, npr. `pre_challenge: true` na dnevu ali `challenge_started_at` v podatkih).
@@ -215,6 +224,13 @@ Besedila so EN + SL, za psa in muco.
   - ponoven nakup po vračilu → nov začetek.
 - **Mediji:** pes in muca; skupni videz dopolni manjkajoče posnetke.
 - **Regresija:** obstoječi plačani ljubljenčki se ne spremenijo (regresijski posnetek); stare aplikacije dobijo enake podatke kot prej.
+
+**M6-U03 (U7)**
+- Aktivacija s `keep_score: true`: ocena otroka in ljubljenčka šteje rutine in bolezni pred nakupom, teden 1 od 12 od nakupa, noben dan »pred izzivom«, začetek potrdila = nakup.
+- Brez polja ali `false`: kot M6-U01.
+- Webhook uporabi izbiro iz namena; kasnejša aktivacija je ne spremeni. Aktivacija brez polja uporabi izbiro odprtega namena.
+- Ljubljenček, ki ni brezplačen, izbire ne shrani; neveljavna vrednost → 422; vračilo izbiro počisti; migracija se ne povrne, dokler obstaja ljubljenček z obdržano oceno.
+- Aplikacija: razlaga obeh izbir, privzeta izbira po oceni, opozorilo pri nizki oceni, brez ocene ni izbire.
 
 **PR 2**
 - **Nov mešanček z izzivom:** ob rojstvu zaklenjen, z nakupom odklenjen; stara aplikacija dobi brezplačnega.

@@ -318,6 +318,7 @@ class ChallengeService
                 'payment_locked_at' => null,
                 'converted_to_free_at' => $now,
                 'challenge_started_at' => null,
+                'challenge_score_kept' => false,
             ])->save();
             PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
 

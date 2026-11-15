@@ -23,6 +23,7 @@ import {
   upgradeNote,
 } from '@/modules/plan/purchaseEntry';
 import { readChallengeWeek } from '@/modules/childPet/childPetView';
+import { caretakerScores, defaultKeepScore, scoreChoiceWarning } from '@/modules/plan/scoreChoice';
 import { lowerDismissal, setUnusedPurchaseStoreForTests } from '@/modules/plan/unusedPurchasePrefs';
 import {
   challengeStartedMessage,
@@ -204,7 +205,8 @@ describe('paywall for one free pet', () => {
     expect(screen.getByText(/takoj ob nakupu/)).toBeTruthy();
     expect(screen.getByText(/Enkratni nakup 49,99 €\. Brez naročnine/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('challenge-buy-7'));
-    expect(mockPurchase).toHaveBeenCalledWith({ pkg: mockPackage, target: { petId: 7, baselineCredits: 0 } }, expect.anything());
+    // M6-U03: the child's score is 86 → »Obdrži dosedanjo oceno« is preselected and travels with the purchase.
+    expect(mockPurchase).toHaveBeenCalledWith({ pkg: mockPackage, target: { petId: 7, baselineCredits: 0, keepScore: true } }, expect.anything());
   });
 
   it('with an unused purchase: »Uporabi kupljen izziv« upgrades the pet (activate)', async () => {
@@ -217,7 +219,7 @@ describe('paywall for one free pet', () => {
     await flush();
     fireEvent.press(screen.getByTestId('challenge-use-credit-7'));
     await flush();
-    expect(activateChallenge).toHaveBeenCalledWith(7);
+    expect(activateChallenge).toHaveBeenCalledWith(7, true);
     expect(screen.getByTestId('challenge-message')).toHaveTextContent(/izziv se je začel/);
   });
 
@@ -230,6 +232,88 @@ describe('paywall for one free pet', () => {
     await flush();
     expect(screen.queryByTestId('challenge-pet-7')).toBeNull();
     expect(screen.queryByTestId('challenge-upgrade')).toBeNull();
+  });
+});
+
+describe('score choice at the upgrade (M6-U03, U7)', () => {
+  const FREE_BILLING = (credits = 0) => ({
+    credits_available: credits,
+    pets: [{ pet_id: 7, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false, challenge_started_at: null, upgrade: UPGRADEABLE }],
+  });
+  const familyScored = (score: number | null): FamilyOverview => {
+    const dashboard = makeScoredDashboard(
+      [makeScoredChild({ care_score: { score, done: 0, expected: 0, routines: 0, illnesses: 0, since: null } })],
+      [makeFamilyPet({ id: 7, breed_type: 'mutt', name: 'Luna', caretakers: [{ child_id: 2, contract_signed: true }], plan: FREE_PLAN, upgrade: UPGRADEABLE } as never)],
+    );
+    return familyFromDashboard(dashboard as unknown as ParentDashboardResponse) as FamilyOverview;
+  };
+
+  it('rules: default keeps a score of 70+, starts again below; warnings; no score → nothing to choose', () => {
+    const scores = (score: number) => [{ childId: 2, name: 'Maja', score }];
+    expect(defaultKeepScore(scores(70))).toBe(true);
+    expect(defaultKeepScore(scores(69))).toBe(false);
+    expect(defaultKeepScore([])).toBeNull();
+    // Several children: the lowest score decides.
+    expect(defaultKeepScore([...scores(90), { childId: 3, name: 'Luka', score: 40 }])).toBe(false);
+    expect(scoreChoiceWarning(scores(55), true)).toBe('keepLow');
+    expect(scoreChoiceWarning(scores(55), false)).toBeNull();
+    expect(scoreChoiceWarning(scores(86), false)).toBe('dropGood');
+    expect(scoreChoiceWarning(scores(86), true)).toBeNull();
+    expect(caretakerScores(familyScored(null).pets[0], familyScored(null))).toEqual([]);
+    expect(caretakerScores(familyScored(86).pets[0], familyScored(86))).toEqual([{ childId: 2, name: expect.any(String), score: 86 }]);
+  });
+
+  it('explains both options, preselects »Obdrži« for a good score and sends the changed choice', async () => {
+    getBilling.mockResolvedValue(FREE_BILLING());
+    renderWithQuery(<ChallengeScreen family={familyScored(86)} onBack={jest.fn()} focusPetId={7} />);
+    await flush();
+
+    expect(screen.getByText('Ocena skrbi do zdaj: 86 od 100.')).toBeTruthy();
+    expect(screen.getByText(/šteje vse od začetka skrbi/)).toBeTruthy();
+    expect(screen.getByText(/šteje samo skrb od nakupa naprej/)).toBeTruthy();
+    expect(screen.getByText(/Izbire po nakupu ni mogoče spremeniti/)).toBeTruthy();
+    expect(screen.getByTestId('score-choice-keep-7').props.accessibilityState.checked).toBe(true);
+    expect(screen.queryByTestId('score-choice-warning-7')).toBeNull();
+
+    fireEvent.press(screen.getByTestId('score-choice-fresh-7'));
+    expect(screen.getByTestId('score-choice-warning-7')).toHaveTextContent(/86 se v tem primeru ne prenese/);
+    fireEvent.press(screen.getByTestId('challenge-buy-7'));
+    expect(mockPurchase).toHaveBeenCalledWith({ pkg: mockPackage, target: { petId: 7, baselineCredits: 0, keepScore: false } }, expect.anything());
+  });
+
+  it('a low score: »Začni na novo« is preselected; keeping it shows the warning', async () => {
+    getBilling.mockResolvedValue(FREE_BILLING(1));
+    activateChallenge.mockResolvedValueOnce({ status: 'activated' });
+    renderWithQuery(<ChallengeScreen family={familyScored(48)} onBack={jest.fn()} />);
+    await flush();
+
+    expect(screen.getByTestId('score-choice-fresh-7').props.accessibilityState.checked).toBe(true);
+    expect(screen.queryByTestId('score-choice-warning-7')).toBeNull();
+    fireEvent.press(screen.getByTestId('score-choice-keep-7'));
+    expect(screen.getByTestId('score-choice-warning-7')).toHaveTextContent(/dosedanja ocena je 48, potrdilo pa zahteva končno oceno vsaj 70/);
+
+    fireEvent.press(screen.getByTestId('challenge-use-credit-7'));
+    await flush();
+    expect(activateChallenge).toHaveBeenCalledWith(7, true);
+  });
+
+  it('no score yet: no choice, nothing sent', async () => {
+    getBilling.mockResolvedValue(FREE_BILLING());
+    renderWithQuery(<ChallengeScreen family={familyScored(null)} onBack={jest.fn()} focusPetId={7} />);
+    await flush();
+    expect(screen.queryByTestId('score-choice-7')).toBeNull();
+    fireEvent.press(screen.getByTestId('challenge-buy-7'));
+    expect(mockPurchase).toHaveBeenCalledWith({ pkg: mockPackage, target: { petId: 7, baselineCredits: 0 } }, expect.anything());
+  });
+
+  it('English copy', async () => {
+    await i18n.changeLanguage('en');
+    getBilling.mockResolvedValue(FREE_BILLING());
+    renderWithQuery(<ChallengeScreen family={familyScored(48)} onBack={jest.fn()} focusPetId={7} />);
+    await flush();
+    expect(screen.getByText('Keep the score so far')).toBeTruthy();
+    expect(screen.getByText('Start again')).toBeTruthy();
+    expect(screen.getByText(/cannot be changed after the purchase/)).toBeTruthy();
   });
 });
 

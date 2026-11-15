@@ -8,6 +8,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Nadgradnja v izziv: starš izbere, ali se ocena skrbi obdrži
+
+**Kaj:** Do zdaj se je ocena skrbi ob nadgradnji brezplačnega ljubljenčka v 12-tedenski izziv vedno začela na novo. David: otrok, ki že mesec dni lepo skrbi za mešančka in za nagrado dobi izziv, ne sme začeti od začetka. Zdaj starš na plačilnem zaslonu izbere »Obdrži dosedanjo oceno« ali »Začni na novo«. Vsaka izbira ima razlago, kaj pomeni za oceno in potrdilo; pri oceni pod 70 aplikacija opozori, če bi jo starš obdržal. 12 tednov v obeh primerih teče od nakupa, izbira je dokončna.
+**Zakaj je pomembno:** nakup izziva je pogosto nagrada za dobro skrb — ponastavitev ocene bi bila ravno takrat kazen. Otrok s slabim začetkom pa lahko dobi čist list.
+**Kako povedati:** 👩 »Mesec dobre skrbi šteje tudi v izzivu — ali pa začnete na novo. Izberete vi.« 🧒 otrok o izbiri ne vidi ničesar; njegova ocena ostane ali se začne znova. 💼 manj trenja pri nadgradnji iz brezplačnega v plačljivo. 🛠 »Ura izziva in začetek ocene sta ločena: 84 dni od nakupa, ocena od otrokovega začetka.«
 ## 2026-11-15 — »Nazaj« ne konča nobene igre več
 
 **Kaj:** David je potrdil (»1 ja«), da pravilo iz iger nege velja za vse igre: palica s peresom, žoga, crkljanje, čiščenje nereda, lopatka, copat in šola. Če otrok na Androidu med igro potegne od roba zaslona (sistemska kretnja »nazaj«), igra teče naprej in v vrstici se za 4 sekunde pokaže »Za konec igre tapni ×.«. Pravilo je zdaj na enem mestu v igralnem sloju, zato ga dobi tudi vsaka nova igra. Samo aplikacija (OTA), 0 $.

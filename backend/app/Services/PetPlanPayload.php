@@ -29,6 +29,9 @@ use Carbon\CarbonInterface;
  * `challenge_started_at` (M6-U01, additive): the purchase that upgraded a free pet to
  * the challenge — its 12 weeks, score and certificate count from here, days before it
  * are »pred izzivom« in the history; null for every other pet (unchanged behaviour).
+ * `challenge_score_kept` (M6-U03, additive): the parent chose at that purchase to keep the
+ * Care Score so far — only the 12 weeks count from the purchase, the score from each
+ * child's own start.
  */
 final class PetPlanPayload
 {
@@ -45,6 +48,7 @@ final class PetPlanPayload
         public readonly bool $paymentsEnforced = true,
         public readonly ?string $displayType = null,
         public readonly ?string $challengeStartedAt = null,
+        public readonly bool $challengeScoreKept = false,
     ) {}
 
     /**
@@ -80,11 +84,11 @@ final class PetPlanPayload
         /** @var 'free'|'challenge' $displayType */
         $displayType = self::displaysAsFree($pet) ? PetPlan::Free->value : $type;
 
-        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(), $displayType, $iso($pet->challenge_started_at));
+        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(), $displayType, $iso($pet->challenge_started_at), (bool) $pet->challenge_score_kept);
     }
 
     /**
-     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge', challenge_started_at: string|null}
+     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge', challenge_started_at: string|null, challenge_score_kept: bool}
      */
     public function toArray(): array
     {
@@ -107,6 +111,13 @@ final class PetPlanPayload
              * @var string|null
              */
             'challenge_started_at' => $this->challengeStartedAt,
+            /**
+             * M6-U03: the parent kept the Care Score at the upgrade — the score (and the
+             * certificate's) counts from each child's own start, no day is »pred izzivom«.
+             *
+             * @var bool
+             */
+            'challenge_score_kept' => $this->challengeScoreKept,
         ];
     }
 }

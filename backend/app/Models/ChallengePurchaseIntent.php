@@ -23,6 +23,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $consumed_at
  * @property string|null $consumed_by webhook | activate | superseded
  * @property int|null $challenge_credit_id
+ * @property bool|null $keep_score M6-U03: upgrade of a free pet — keep the Care Score so far (null = not asked → starts again)
  * @property Carbon $created_at
  */
 class ChallengePurchaseIntent extends Model
@@ -36,7 +37,7 @@ class ChallengePurchaseIntent extends Model
     /**
      * @var list<string>
      */
-    protected $fillable = ['family_id', 'parent_user_id', 'pet_id', 'expires_at'];
+    protected $fillable = ['family_id', 'parent_user_id', 'pet_id', 'expires_at', 'keep_score'];
 
     /**
      * @return array<string, string>
@@ -46,6 +47,7 @@ class ChallengePurchaseIntent extends Model
         return [
             'expires_at' => 'datetime',
             'consumed_at' => 'datetime',
+            'keep_score' => 'boolean',
         ];
     }
 
