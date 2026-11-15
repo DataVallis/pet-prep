@@ -71,16 +71,17 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 | T3 | Vse se zapiše v repozitorij (ta dokument + izvorna koda prototipa). |
 | T4 | **Posoda mora biti razumljiva.** David: »kaj je tam v steklenem boxu? ne razumem«, »zakaj so coini napisani desno zgoraj«. Oznaka ni več v kotu zaslona, ampak je pripeta nad posodo: naslov (»Kup opravil« / »Stroški v 13 letih«), merilo (»1 žeton = 500 opravil«, »1 kovanec = 200 €«) in legenda barv žetonov (obrok, sprehod, vrečka za kakec, hitro ven, vaja). |
 | T5 | **Info točke z vsebino**, da si obiskovalec vmes kaj prebere: pet gumbov »i« v prizoru (skleda, pot, vrata, ležišče, 13 let), vsak odpre kratko dejstvo z virom. Med predvajanjem dneva so skrite. |
+| T7 | **E-naslov starša gre prek Lemon Squeezy, brez SMTP** (David 15. 11. 2026, »ok se strinjam«): enako kot brezplačen vzorec »Obljube« (WEBSITE_SALES_SPEC) — brezplačen izdelek »Povzetek za <pasmo>« v trgovini PetPrep na Lemon Squeezy. Lemon Squeezy pošlje sporočilo staršu, shrani naslov s privolitvijo in obvesti Davida. Strežnik PetPrep ne pošilja e-pošte (`MAIL_MAILER=log` ostane) in ne dobi nove tabele. *Načrt — izdelek še ne obstaja, obrazec v prototipu še ne pošlje ničesar.* |
 | T6 | **Mesto za partnerja je poziv, ne prazen okvir:** »Želite postati naš partner? Tu lahko predstavite svojo storitev in logotip …« s povezavo na stran za partnerje (`/sl/partnerji`, `/partners`), da je stran smiselna tudi, ko se povezava deli naokrog. |
 
 ### Odprto za Davida
-1. **E-naslov starša — kam gre.** Strežnik danes ne pošilja e-pošte (`MAIL_MAILER=log`, ponudnika ni; ROADMAP M2-10b). Claudov predlog: **brez SMTP**, enako kot brezplačen vzorec »Obljube« (WEBSITE_SALES_SPEC): brezplačen izdelek v Lemon Squeezy »Povzetek za <pasmo>« — Lemon Squeezy pošlje e-sporočilo staršu, shrani naslov s privolitvijo in obvesti Davida. Druga možnost: `POST /api/...` po vzoru povpraševanj partnerjev (tabela + opozorilo v Discord + seznam v administraciji), kjer starš ne dobi ničesar, dokler ni ponudnika e-pošte.
-2. **Cene za Slovenijo.** Številke so britanski minimum PDSA, samo preračunan. Ali poiščemo slovenski vir ali ostane PDSA z opombo »cene v vaši državi so lahko drugačne«.
-3. **Pravi partner:** kdo in pod kakšnimi pogoji (REVENUE_MODELS §4).
-4. **Ali gre to na petprep.si pred koncem validacije** (VALIDATION_PLAN §2) in v katerih jezikih (stran ima 15 jezikov; prototip ima SL + EN).
-5. Ali naj se pasma izbira (podatki za vse pasme so v registru) ali ostane ena stran na pasmo.
+1. **Cene za Slovenijo.** Številke so britanski minimum PDSA, samo preračunan. Ali poiščemo slovenski vir ali ostane PDSA z opombo »cene v vaši državi so lahko drugačne«.
+2. **Pravi partner:** kdo in pod kakšnimi pogoji (REVENUE_MODELS §4).
+3. **Ali gre to na petprep.si pred koncem validacije** (VALIDATION_PLAN §2) in v katerih jezikih (stran ima 15 jezikov; prototip ima SL + EN).
+4. Ali naj se pasma izbira (podatki za vse pasme so v registru) ali ostane ena stran na pasmo.
 
 ### Naslednji koraki, če David potrdi
 1. Prenos v `pet-prep-website` kot komponenta (three.js naložen šele ob odprtju strani), podatki iz `registry.json` namesto vpisanih v kodo.
 2. Stran na pasmo v registru: »Koliko dela je <pasma>?«.
-3. Merjenje: delež obiskov, ki pridejo do koraka 5 in pustijo e-naslov (cena stika za H4).
+3. E-naslov (T7): PDF »Povzetek za <pasmo>« (številke iz koraka 3 in 4 + obljuba), brezplačen izdelek v Lemon Squeezy z izrecno privolitvijo za obveščanje, v koraku 5 gumb do nakupa namesto polja za e-naslov.
+4. Merjenje: delež obiskov, ki pridejo do koraka 5 in pustijo e-naslov (cena stika za H4).
