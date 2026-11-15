@@ -10,6 +10,7 @@ import { act, fireEvent, screen } from '@testing-library/react-native';
 import { api } from '@/api/client';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { GAME_BACK_HINT_MS } from '@/modules/gameLayer/gameExit';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import TrainingOverlay, { resetSchoolGameV2ForTests } from '@/modules/training/TrainingOverlay';
 import { makeEnabledTraining, makeLiveChildState, makeMedia, makeSchoolV2SessionPayload } from '@/test-utils/fixtures';
@@ -94,10 +95,22 @@ describe('school v2 — exit and z-order', () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('Android back closes the running school', async () => {
+  // David 2026-11-15 (»1 ja«): back never ends a running game — the hint, the × stays the way out.
+  it('Android back in the running school only shows the »tap ×« hint; the same session goes on, the × closes', async () => {
     const back = captureAndroidBack();
     const { onClose } = await openRunningSchool();
+    for (let i = 0; i < 3; i += 1) fireEvent(screen.getByTestId(`${ID}-deck-player-${i}`), 'firstFrameRender');
+    await advance(1_000);
     expect(back.pressBack()).toBe(true);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Za konec igre tapni ×.');
+    expect(screen.getByTestId(ID)).toBeTruthy();
+    expect(startTraining).toHaveBeenCalledTimes(1);
+    await advance(GAME_BACK_HINT_MS);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).not.toBe('Za konec igre tapni ×.');
+    expect(screen.getByTestId(ID)).toBeTruthy();
+    expect(startTraining).toHaveBeenCalledTimes(1);
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

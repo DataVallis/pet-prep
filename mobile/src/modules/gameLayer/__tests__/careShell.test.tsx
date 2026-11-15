@@ -15,9 +15,8 @@ import ScratchingOverlay from '@/modules/catCare/ScratchingOverlay';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { careCues, careFrame } from '@/modules/gameLayer/careFrame';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
-import { GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
+import { GAME_BACK_HINT_MS, GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
-import { CARE_BACK_HINT_MS } from '@/modules/gameLayer/CareGameShell';
 import { resetCareShellForTests } from '@/modules/gameLayer/loadCareShell';
 import { useAppStore } from '@/store/appStore';
 import {
@@ -240,19 +239,18 @@ describe('care games on the game layer', () => {
     expect(screen.getByTestId('cat-litter_change-layer')).toBeTruthy();
     expect(screen.queryByTestId('cat-litter_change-start')).toBeNull();
     expect(onClose).not.toHaveBeenCalled();
-    // The hint takes the line once the step text had its time (GameLine: a line stays ≥ 2 s).
-    await advance(500);
+    // The hint replaces the step line at once (GameScreen's rule for every game).
     expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Za konec igre tapni ×.');
     // The game goes on with the same session: the hint leaves, the strokes before and after count.
     fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
-    await advance(CARE_BACK_HINT_MS);
+    await advance(GAME_BACK_HINT_MS);
     expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Umij ga');
-    await advance(8_300 - CARE_BACK_HINT_MS);
+    await advance(8_800 - GAME_BACK_HINT_MS);
     fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
     expect(back.pressBack()).toBe(true);
     await advance(10_000);
     expect(mocked.startCareChore).toHaveBeenCalledTimes(1);
-    expect(mocked.finishCareChore).toHaveBeenCalledWith('litter_change', session.id, [1_000, 12_600, 20_900]);
+    expect(mocked.finishCareChore).toHaveBeenCalledWith('litter_change', session.id, [1_000, 12_100, 20_900]);
     await advance(0);
     expect(screen.getByTestId('cat-litter_change-result-title').props.children).toBe('Sveže in čisto!');
     jest.restoreAllMocks();

@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — »Nazaj« ne konča nobene igre več
+
+**Kaj:** David je potrdil (»1 ja«), da pravilo iz iger nege velja za vse igre: palica s peresom, žoga, crkljanje, čiščenje nereda, lopatka, copat in šola. Če otrok na Androidu med igro potegne od roba zaslona (sistemska kretnja »nazaj«), igra teče naprej in v vrstici se za 4 sekunde pokaže »Za konec igre tapni ×.«. Pravilo je zdaj na enem mestu v igralnem sloju, zato ga dobi tudi vsaka nova igra. Samo aplikacija (OTA), 0 $.
+**Zakaj je pomembno:** met, krog šole ali napolnjeno srce se ne sme izgubiti zaradi kretnje, ki je otrok ni nameraval narediti.
+**Kako povedati:** 👩 »Igra se konča, ko otrok tapne ×, ne po nesreči.« · 🛠 eno pravilo v `GameScreen` namesto kopij po igrah; gostiteljski sloj ne sme imeti svojega poslušalca za »nazaj« nad igro.
+
 ## 2026-11-15 — Menjava peska: stranišče na zaslonu in igra, ki se ne prekine sama
 
 **Kaj:** David je na Androidu posnel tedensko menjavo peska pri brezplačni domači mački: med igro je bil na zaslonu posnetek sedeče muce (brez stranišča), po prvem koraku pa je igra padla nazaj na »Začni menjavo«. Vzroka: oder je pokazal posnetek muce, kadar ga muca ima; drgnjenje od roba zaslona pa je Android razumel kot kretnjo »nazaj«, ki je igro ustavila. Zdaj menjava vedno kaže risbo stranišča po korakih (star pesek → prazno z mehurčki → svež pesek), »nazaj« pa med igrami nege samo pokaže »Za konec igre tapni ×.«. Brez novih posnetkov (0 $), samo aplikacija (OTA).

@@ -630,14 +630,18 @@ export default function PlayOverlay({
   // C1: one report per finished v2 cuddle (the game calls it once; no auto-close card here).
   const finishCuddleV2 = useCallback(() => finishedRef.current('cuddle'), []);
 
-  // Android back closes the layer (like × — an unfinished game reports nothing).
+  // Android back closes the v1 layer (like × — an unfinished game reports nothing). The v2 games
+  // own it (`GameScreen`: a running game only shows the »tap ×« hint, David 2026-11-15) — this
+  // listener is registered after theirs and would win.
+  const ownsBack = BallGameV2 === null && CuddleGameV2 === null;
   useEffect(() => {
+    if (!ownsBack) return;
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
       closeRef.current();
       return true;
     });
     return () => sub.remove();
-  }, []);
+  }, [ownsBack]);
 
   // VoiceOver: read the thank-you line.
   useEffect(() => {
