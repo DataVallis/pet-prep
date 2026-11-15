@@ -40,7 +40,8 @@
       "note": "Opened own site; 'Lunes a domingo 24H'.",
       "quote": "Lunes a domingo 24H",
       "duty_i18n": {
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Também +58 212 634 4335, +58 212 634 4314; WhatsApp +58 424 266 3088."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Também +58 212 634 4335, +58 212 634 4314; WhatsApp +58 424 266 3088.",
+        "nl": "24 uur per dag, 7 dagen per week, 365 dagen per jaar open. Ook +58 212 634 4335, +58 212 634 4314; WhatsApp +58 424 266 3088."
       }
     },
     {
@@ -59,7 +60,8 @@
       "note": "Opened own site; additional lines 237-9569, 235-1465.",
       "quote": "Emergencias disponibles las 24 horas.",
       "duty_i18n": {
-        "pt": "Urgências 24 horas por dia: +58 414 223 8214 ou +58 424 119 7723. Horário normal de segunda a sexta 8h00–18h00, sábado 8h00–13h00."
+        "pt": "Urgências 24 horas por dia: +58 414 223 8214 ou +58 424 119 7723. Horário normal de segunda a sexta 8h00–18h00, sábado 8h00–13h00.",
+        "nl": "Spoed 24 uur per dag: +58 414 223 8214 of +58 424 119 7723. Reguliere openingstijden ma–vr 8.00–18.00 uur, za 8.00–13.00 uur."
       }
     },
     {
@@ -78,7 +80,8 @@
       "note": "Opened own site; every day listed 24/7. Second WhatsApp number 58 422 740 4077 in header.",
       "quote": "Emergencia 24/7",
       "duty_i18n": {
-        "pt": "Aberto 24 horas por dia, 7 dias por semana (urgências e internamento). WhatsApp disponível."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana (urgências e internamento). WhatsApp disponível.",
+        "nl": "24 uur per dag, 7 dagen per week open (spoed en opname). WhatsApp beschikbaar."
       }
     },
     {
@@ -97,7 +100,8 @@
       "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
       "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes",
       "duty_i18n": {
-        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp."
+        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp.",
+        "nl": "Dierenartsenzorg 24 uur per dag voor spoedpatiënten. Consulten ma–vr 8.00–17.00 uur, za 8.00–14.00 uur. Contact via WhatsApp."
       }
     },
     {
@@ -116,7 +120,8 @@
       "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
       "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes",
       "duty_i18n": {
-        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp."
+        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp.",
+        "nl": "Dierenartsenzorg 24 uur per dag voor spoedpatiënten. Consulten ma–vr 8.00–17.00 uur, za 8.00–14.00 uur. Contact via WhatsApp."
       }
     },
     {
@@ -135,7 +140,8 @@
       "note": "Group site 'Grupo Centro Veterinario - Dr. Vuurman'. 24 h wording covers three sedes; phone is a single WhatsApp number for the whole group, not per location. Ecovet (Calle El Lazo) listed but 24 h not stated, so omitted.",
       "quote": "atención médica veterinaria las 24 horas del día en nuestras tres sedes",
       "duty_i18n": {
-        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp."
+        "pt": "Cuidados veterinários 24 horas por dia para pacientes de urgência. Consultas de segunda a sexta 8h00–17h00, sábado 8h00–14h00. Contacto por WhatsApp.",
+        "nl": "Dierenartsenzorg 24 uur per dag voor spoedpatiënten. Consulten ma–vr 8.00–17.00 uur, za 8.00–14.00 uur. Contact via WhatsApp."
       }
     }
   ],

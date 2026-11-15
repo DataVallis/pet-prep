@@ -111,7 +111,8 @@
       "duty_i18n": {
         "es": "Hospital de urgencias y cuidados críticos las 24 horas; llama antes.",
         "it": "Ospedale di pronto soccorso e terapia intensiva 24 ore su 24; chiamare prima.",
-        "pt": "Hospital de urgências e cuidados intensivos 24 horas por dia; liga antes."
+        "pt": "Hospital de urgências e cuidados intensivos 24 horas por dia; liga antes.",
+        "nl": "Dierenziekenhuis voor spoed- en intensieve zorg, 24 uur; bel vooraf."
       }
     },
     {
@@ -145,7 +146,8 @@
       "duty_i18n": {
         "es": "Hospital las 24 horas para gatos y perros. Consultas 7:00–18:00 h, urgencias 18:00–23:00 h, urgencias nocturnas 23:00–8:00 h (llama antes de ir); las urgencias no necesitan cita previa.",
         "it": "Ospedale per cani e gatti 24 ore su 24. Visite 7:00–18:00, pronto soccorso 18:00–23:00, pronto soccorso notturno 23:00–8:00 (chiamare prima di recarsi in clinica); per le emergenze non serve appuntamento.",
-        "pt": "Hospital para gatos e cães 24 horas por dia. Consultas 7h00–18h00, urgências 18h00–23h00, urgências noturnas 23h00–8h00 (liga antes de ires); urgências sem marcação."
+        "pt": "Hospital para gatos e cães 24 horas por dia. Consultas 7h00–18h00, urgências 18h00–23h00, urgências noturnas 23h00–8h00 (liga antes de ires); urgências sem marcação.",
+        "nl": "24-uursdierenziekenhuis voor katten en honden. Consulten 07.00–18.00 uur, spoed 18.00–23.00 uur, nachtspoed 23.00–08.00 uur (bel vooraf); voor spoed geen afspraak nodig."
       }
     },
     {
@@ -165,7 +167,8 @@
       "duty_i18n": {
         "es": "Servicio de urgencias 24 horas fuera del horario de la clínica (teléfono fuera de horario +604 227 2984 o 019-474 1262). Horario de la clínica lun–sáb 9:00–12:00, 14:00–17:00, 20:00–21:30 h; dom y festivos 9:00–12:00, 14:00–17:00 h.",
         "it": "Pronto soccorso fuori orario 24 ore su 24 (telefono fuori orario +604 227 2984 o 019-474 1262). Orario della clinica lun–sab 9:00–12:00, 14:00–17:00, 20:00–21:30; dom e festivi 9:00–12:00, 14:00–17:00.",
-        "pt": "Serviço de urgência fora de horas 24 horas por dia (telefone fora de horas +604 227 2984 ou 019-474 1262). Horário da clínica de segunda a sábado 9h00–12h00, 14h00–17h00, 20h00–21h30; domingo e feriados 9h00–12h00, 14h00–17h00."
+        "pt": "Serviço de urgência fora de horas 24 horas por dia (telefone fora de horas +604 227 2984 ou 019-474 1262). Horário da clínica de segunda a sábado 9h00–12h00, 14h00–17h00, 20h00–21h30; domingo e feriados 9h00–12h00, 14h00–17h00.",
+        "nl": "24-uurs spoeddienst buiten kantooruren (telefoon buiten kantooruren +604 227 2984 of 019-474 1262). Openingstijden kliniek ma–za 09.00–12.00, 14.00–17.00, 20.00–21.30 uur; zo en feestdagen 09.00–12.00, 14.00–17.00 uur."
       }
     },
     {
@@ -185,7 +188,8 @@
       "duty_i18n": {
         "es": "Clínica lun–vie 10:00–18:00 h, sáb–dom 10:00–17:00 h; clínica de urgencias todos los días 18:00–22:00 h (con tarifa de urgencias). Reserva de urgencias por WhatsApp 011-3700 4549.",
         "it": "Clinica lun–ven 10:00–18:00, sab–dom 10:00–17:00; pronto soccorso tutti i giorni 18:00–22:00 (con supplemento per le emergenze). Prenotazione urgente via WhatsApp 011-3700 4549.",
-        "pt": "Clínica de segunda a sexta 10h00–18h00, sábado e domingo 10h00–17h00; clínica de urgência todos os dias 18h00–22h00 (aplicam-se taxas de urgência). Marcação de urgências por WhatsApp 011-3700 4549."
+        "pt": "Clínica de segunda a sexta 10h00–18h00, sábado e domingo 10h00–17h00; clínica de urgência todos os dias 18h00–22h00 (aplicam-se taxas de urgência). Marcação de urgências por WhatsApp 011-3700 4549.",
+        "nl": "Kliniek ma–vr 10.00–18.00 uur, za–zo 10.00–17.00 uur; spoedkliniek dagelijks 18.00–22.00 uur (spoedtoeslag van toepassing). Spoed reserveren via WhatsApp 011-3700 4549."
       }
     },
     {
@@ -205,7 +209,8 @@
       "duty_i18n": {
         "es": "Consultas todos los días 10:30–16:30 h con cita previa (abierto todos los días, festivos incluidos); línea de urgencias 012-686 7363.",
         "it": "Visite tutti i giorni 10:30–16:30 su appuntamento (aperto ogni giorno, festivi compresi); linea di emergenza 012-686 7363.",
-        "pt": "Consultas todos os dias 10h30–16h30 sob marcação (aberto todos os dias, incluindo feriados); linha de urgência 012-686 7363."
+        "pt": "Consultas todos os dias 10h30–16h30 sob marcação (aberto todos os dias, incluindo feriados); linha de urgência 012-686 7363.",
+        "nl": "Consulten dagelijks 10.30–16.30 uur op afspraak (elke dag geopend, ook op feestdagen); spoedlijn 012-686 7363."
       }
     },
     {
@@ -225,7 +230,8 @@
       "duty_i18n": {
         "es": "Abierto todos los días 9:00–21:00 h; cerrado en festivos.",
         "it": "Aperto tutti i giorni 9:00–21:00; chiuso nei festivi.",
-        "pt": "Aberto todos os dias 9h00–21h00; fechado nos feriados."
+        "pt": "Aberto todos os dias 9h00–21h00; fechado nos feriados.",
+        "nl": "Dagelijks geopend 09.00–21.00 uur; op feestdagen gesloten."
       }
     },
     {
@@ -245,7 +251,8 @@
       "duty_i18n": {
         "es": "Servicio veterinario nocturno 14:30–22:30 h (descanso 17:30–18:30 h).",
         "it": "Servizio veterinario notturno 14:30–22:30 (pausa 17:30–18:30).",
-        "pt": "Serviços veterinários noturnos 14h30–22h30 (pausa 17h30–18h30)."
+        "pt": "Serviços veterinários noturnos 14h30–22h30 (pausa 17h30–18h30).",
+        "nl": "Nachtdienst dierenartsen 14.30–22.30 uur (pauze 17.30–18.30 uur)."
       }
     },
     {
@@ -264,7 +271,8 @@
       "duty_i18n": {
         "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h).",
         "it": "Servizio diurno 9:30–18:30 (pausa 13:00–14:00).",
-        "pt": "Horário diurno 9h30–18h30 (pausa 13h00–14h00)."
+        "pt": "Horário diurno 9h30–18h30 (pausa 13h00–14h00).",
+        "nl": "Overdag 09.30–18.30 uur (pauze 13.00–14.00 uur)."
       }
     },
     {
@@ -283,7 +291,8 @@
       "duty_i18n": {
         "es": "Horario diurno 9:30–18:30 h (descanso 13:00–14:00 h).",
         "it": "Servizio diurno 9:30–18:30 (pausa 13:00–14:00).",
-        "pt": "Horário diurno 9h30–18h30 (pausa 13h00–14h00)."
+        "pt": "Horário diurno 9h30–18h30 (pausa 13h00–14h00).",
+        "nl": "Overdag 09.30–18.30 uur (pauze 13.00–14.00 uur)."
       }
     },
     {
@@ -303,7 +312,8 @@
       "duty_i18n": {
         "es": "Abierto todos los días; llama para confirmar si atienden fuera de horario.",
         "it": "Aperto tutti i giorni; telefonare per confermare la disponibilità fuori orario.",
-        "pt": "Aberto todos os dias; liga para confirmar a disponibilidade fora de horas."
+        "pt": "Aberto todos os dias; liga para confirmar a disponibilidade fora de horas.",
+        "nl": "Dagelijks geopend; bel om beschikbaarheid buiten de openingstijden te bevestigen."
       }
     },
     {
@@ -322,7 +332,8 @@
       "duty_i18n": {
         "es": "Todos los días 10:00–21:00 h.",
         "it": "Tutti i giorni 10:00–21:00.",
-        "pt": "Todos os dias 10h00–21h00."
+        "pt": "Todos os dias 10h00–21h00.",
+        "nl": "Dagelijks 10.00–21.00 uur."
       }
     },
     {
@@ -342,7 +353,8 @@
       "duty_i18n": {
         "es": "Todos los días 10:00–23:00 h (última cita 22:30).",
         "it": "Tutti i giorni 10:00–23:00 (ultimo appuntamento 22:30).",
-        "pt": "Todos os dias 10h00–23h00 (última consulta às 22h30)."
+        "pt": "Todos os dias 10h00–23h00 (última consulta às 22h30).",
+        "nl": "Dagelijks 10.00–23.00 uur (laatste afspraak 22.30 uur)."
       }
     },
     {
@@ -362,7 +374,8 @@
       "duty_i18n": {
         "es": "Todos los días 10:00–19:00 h (última cita 18:30).",
         "it": "Tutti i giorni 10:00–19:00 (ultimo appuntamento 18:30).",
-        "pt": "Todos os dias 10h00–19h00 (última consulta às 18h30)."
+        "pt": "Todos os dias 10h00–19h00 (última consulta às 18h30).",
+        "nl": "Dagelijks 10.00–19.00 uur (laatste afspraak 18.30 uur)."
       }
     },
     {
@@ -381,7 +394,8 @@
       "duty_i18n": {
         "es": "Todos los días 10:00–21:30 h.",
         "it": "Tutti i giorni 10:00–21:30.",
-        "pt": "Todos os dias 10h00–21h30."
+        "pt": "Todos os dias 10h00–21h30.",
+        "nl": "Dagelijks 10.00–21.30 uur."
       }
     },
     {
@@ -400,7 +414,8 @@
       "duty_i18n": {
         "es": "Todos los días 10:00–19:00 h (última cita 18:30).",
         "it": "Tutti i giorni 10:00–19:00 (ultimo appuntamento 18:30).",
-        "pt": "Todos os dias 10h00–19h00 (última consulta às 18h30)."
+        "pt": "Todos os dias 10h00–19h00 (última consulta às 18h30).",
+        "nl": "Dagelijks 10.00–19.00 uur (laatste afspraak 18.30 uur)."
       }
     },
     {
@@ -420,7 +435,8 @@
       "duty_i18n": {
         "es": "Laborables 10:00–20:00 h; fines de semana y festivos 10:00–16:00 h.",
         "it": "Giorni feriali 10:00–20:00; fine settimana e festivi 10:00–16:00.",
-        "pt": "Dias úteis 10h00–20h00; fins de semana e feriados 10h00–16h00."
+        "pt": "Dias úteis 10h00–20h00; fins de semana e feriados 10h00–16h00.",
+        "nl": "Op werkdagen 10.00–20.00 uur; in weekenden en op feestdagen 10.00–16.00 uur."
       }
     },
     {
@@ -439,7 +455,8 @@
       "duty_i18n": {
         "es": "Lun–jue 9:00–11:30, 13:00–16:30, 18:00–21:30 h; vie–dom 9:00–11:30, 13:00–16:30, 18:00–20:00 h.",
         "it": "Lun–gio 9:00–11:30, 13:00–16:30, 18:00–21:30; ven–dom 9:00–11:30, 13:00–16:30, 18:00–20:00.",
-        "pt": "Segunda a quinta 9h00–11h30, 13h00–16h30, 18h00–21h30; sexta a domingo 9h00–11h30, 13h00–16h30, 18h00–20h00."
+        "pt": "Segunda a quinta 9h00–11h30, 13h00–16h30, 18h00–21h30; sexta a domingo 9h00–11h30, 13h00–16h30, 18h00–20h00.",
+        "nl": "Ma–do 09.00–11.30, 13.00–16.30, 18.00–21.30 uur; vr–zo 09.00–11.30, 13.00–16.30, 18.00–20.00 uur."
       }
     },
     {
@@ -458,7 +475,8 @@
       "duty_i18n": {
         "es": "Lun–jue 8:30–11:30, 12:00–16:30, 18:00–21:30 h; vie–dom 8:30–12:00, 13:30–16:30 h.",
         "it": "Lun–gio 8:30–11:30, 12:00–16:30, 18:00–21:30; ven–dom 8:30–12:00, 13:30–16:30.",
-        "pt": "Segunda a quinta 8h30–11h30, 12h00–16h30, 18h00–21h30; sexta a domingo 8h30–12h00, 13h30–16h30."
+        "pt": "Segunda a quinta 8h30–11h30, 12h00–16h30, 18h00–21h30; sexta a domingo 8h30–12h00, 13h30–16h30.",
+        "nl": "Ma–do 08.30–11.30, 12.00–16.30, 18.00–21.30 uur; vr–zo 08.30–12.00, 13.30–16.30 uur."
       }
     },
     {
@@ -477,7 +495,8 @@
       "duty_i18n": {
         "es": "Laborables 9:30–19:30 h; fines de semana 8:30–17:00 h (descanso para comer 13:00–14:00 h).",
         "it": "Giorni feriali 9:30–19:30; fine settimana 8:30–17:00 (pausa pranzo 13:00–14:00).",
-        "pt": "Dias úteis 9h30–19h30; fins de semana 8h30–17h00 (almoço 13h00–14h00)."
+        "pt": "Dias úteis 9h30–19h30; fins de semana 8h30–17h00 (almoço 13h00–14h00).",
+        "nl": "Op werkdagen 09.30–19.30 uur; in weekenden 08.30–17.00 uur (lunchpauze 13.00–14.00 uur)."
       }
     },
     {
@@ -497,7 +516,8 @@
       "duty_i18n": {
         "es": "Lun–vie 10:00–18:00 h, sáb 10:00–16:00 h (descanso para comer 13:00–14:00 h).",
         "it": "Lun–ven 10:00–18:00, sab 10:00–16:00 (pausa pranzo 13:00–14:00).",
-        "pt": "Segunda a sexta 10h00–18h00, sábado 10h00–16h00 (almoço 13h00–14h00)."
+        "pt": "Segunda a sexta 10h00–18h00, sábado 10h00–16h00 (almoço 13h00–14h00).",
+        "nl": "Ma–vr 10.00–18.00 uur, za 10.00–16.00 uur (lunchpauze 13.00–14.00 uur)."
       }
     },
     {

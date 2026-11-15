@@ -41,7 +41,8 @@
       "duty_i18n": {
         "es": "Línea de urgencias 24 horas 3650 3200, 7 días a la semana. Citas e información general 3650 3000, todos los días de 9:00 a 19:00 h.",
         "it": "Linea urgenze 24 ore su 24, 7 giorni su 7: 3650 3200. Appuntamenti e informazioni generali 3650 3000, tutti i giorni 9:00–19:00.",
-        "pt": "Linha de urgências 24 horas por dia 3650 3200, 7 dias por semana. Marcações e informações gerais 3650 3000, todos os dias 9h00–19h00."
+        "pt": "Linha de urgências 24 horas por dia 3650 3200, 7 dias por semana. Marcações e informações gerais 3650 3000, todos os dias 9h00–19h00.",
+        "nl": "24-uurs spoedlijn 3650 3200, 7 dagen per week. Afspraken en algemene vragen 3650 3000, dagelijks 9.00–19.00 uur."
       }
     },
     {
@@ -61,7 +62,8 @@
       "duty_i18n": {
         "es": "Abierto las 24 horas, 7 días a la semana. Línea de urgencias 24 horas 6828 6620; línea general 2334 2334.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7. Linea urgenze 24 ore su 24 6828 6620; numero generale 2334 2334.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana. Linha de urgências 24 horas por dia 6828 6620; linha geral 2334 2334."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana. Linha de urgências 24 horas por dia 6828 6620; linha geral 2334 2334.",
+        "nl": "De klok rond open, 7 dagen per week. 24-uurs spoedlijn 6828 6620; algemene lijn 2334 2334."
       }
     },
     {
@@ -81,7 +83,8 @@
       "duty_i18n": {
         "es": "Urgencias 24 horas, 7 días a la semana. Horario habitual de 9:00 a 19:00 h todos los días.",
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Orario ordinario 9:00–19:00 tutti i giorni.",
-        "pt": "Urgências 24 horas por dia, 7 dias por semana. Horário normal 9h00–19h00 todos os dias."
+        "pt": "Urgências 24 horas por dia, 7 dias por semana. Horário normal 9h00–19h00 todos os dias.",
+        "nl": "Spoed 24 uur per dag, 7 dagen per week. Reguliere openingstijden dagelijks 9.00–19.00 uur."
       }
     },
     {
@@ -101,7 +104,8 @@
       "duty_i18n": {
         "es": "Urgencias veterinarias 24 horas, 365 días al año, con veterinarios en el centro las 24 horas. Mascotas exóticas: llama antes de ir.",
         "it": "Pronto soccorso veterinario 24 ore su 24, 365 giorni all'anno, con veterinari in sede a ogni ora. Animali esotici: telefonare prima di mettersi in viaggio.",
-        "pt": "Urgências veterinárias 24 horas por dia, 365 dias por ano, com veterinários nas instalações a toda a hora. Animais exóticos: liga antes de te deslocares."
+        "pt": "Urgências veterinárias 24 horas por dia, 365 dias por ano, com veterinários nas instalações a toda a hora. Animais exóticos: liga antes de te deslocares.",
+        "nl": "Spoedeisende dierenartszorg 24 uur per dag, 365 dagen per jaar, met dierenartsen de klok rond aanwezig. Exotische dieren: bel voordat je komt."
       }
     },
     {
@@ -121,7 +125,8 @@
       "duty_i18n": {
         "es": "Atención de urgencias las 24 horas, 365 días al año; se atiende sin cita mediante triaje.",
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; accesso senza appuntamento tramite triage.",
-        "pt": "Urgências 24 horas por dia, 365 dias por ano; atendimento sem marcação através de triagem."
+        "pt": "Urgências 24 horas por dia, 365 dias por ano; atendimento sem marcação através de triagem.",
+        "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar; zonder afspraak welkom via triage."
       }
     },
     {
@@ -141,7 +146,8 @@
       "duty_i18n": {
         "es": "Atención e ingreso 24 horas; llama para pedir consulta.",
         "it": "Assistenza e ricovero 24 ore su 24; telefonare per una visita.",
-        "pt": "Cuidados e internamento 24 horas por dia; liga para marcar consulta."
+        "pt": "Cuidados e internamento 24 horas por dia; liga para marcar consulta.",
+        "nl": "Zorg en opname 24 uur per dag; bel voor een consult."
       }
     },
     {
@@ -161,7 +167,8 @@
       "duty_i18n": {
         "es": "Abierto todos los días las 24 horas.",
         "it": "Aperto tutti i giorni 24 ore su 24.",
-        "pt": "Aberto todos os dias 24 horas por dia."
+        "pt": "Aberto todos os dias 24 horas por dia.",
+        "nl": "Dagelijks 24 uur open."
       }
     },
     {
@@ -181,7 +188,8 @@
       "duty_i18n": {
         "es": "Sala de urgencias 24 horas, todos los días. Línea de urgencias 3102 8528; línea principal 3426 3500.",
         "it": "Pronto soccorso 24 ore su 24, tutti i giorni. Linea urgenze 3102 8528; numero principale 3426 3500.",
-        "pt": "Urgências 24 horas por dia, todos os dias. Linha de urgências 3102 8528; linha principal 3426 3500."
+        "pt": "Urgências 24 horas por dia, todos os dias. Linha de urgências 3102 8528; linha principal 3426 3500.",
+        "nl": "Spoedeisende hulp 24 uur per dag, dagelijks. Spoedlijn 3102 8528; hoofdnummer 3426 3500."
       }
     },
     {
@@ -200,7 +208,8 @@
       "duty_i18n": {
         "es": "Hospital de urgencias 24/7.",
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
-        "pt": "Hospital de urgências 24 h/24, 7 dias por semana."
+        "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
+        "nl": "Dierenziekenhuis met spoedzorg 24/7."
       }
     },
     {
@@ -219,7 +228,8 @@
       "duty_i18n": {
         "es": "Hospital de urgencias 24/7.",
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
-        "pt": "Hospital de urgências 24 h/24, 7 dias por semana."
+        "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
+        "nl": "Dierenziekenhuis met spoedzorg 24/7."
       }
     },
     {
@@ -238,7 +248,8 @@
       "duty_i18n": {
         "es": "Hospital de urgencias 24/7.",
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
-        "pt": "Hospital de urgências 24 h/24, 7 dias por semana."
+        "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
+        "nl": "Dierenziekenhuis met spoedzorg 24/7."
       }
     },
     {
@@ -258,7 +269,8 @@
       "duty_i18n": {
         "es": "Abierto las 24 horas, 365 días al año, con veterinarios en el centro las 24 horas.",
         "it": "Attivo 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, con veterinari in sede a ogni ora.",
-        "pt": "Funciona 24 h/24, 7 dias por semana, 365 dias por ano, com veterinários nas instalações a toda a hora."
+        "pt": "Funciona 24 h/24, 7 dias por semana, 365 dias por ano, com veterinários nas instalações a toda a hora.",
+        "nl": "24/7/365 geopend, met dierenartsen de klok rond aanwezig."
       }
     },
     {
@@ -278,7 +290,8 @@
       "duty_i18n": {
         "es": "Servicios veterinarios de urgencias 24/7 todo el año.",
         "it": "Servizi veterinari di pronto soccorso 24 ore su 24, 7 giorni su 7, tutto l'anno.",
-        "pt": "Serviços veterinários de urgência 24 h/24, 7 dias por semana, durante todo o ano."
+        "pt": "Serviços veterinários de urgência 24 h/24, 7 dias por semana, durante todo o ano.",
+        "nl": "Het hele jaar spoedeisende dierenartszorg 24/7."
       }
     },
     {
@@ -297,7 +310,8 @@
       "duty_i18n": {
         "es": "Línea de atención disponible las 24 horas, todos los días. Llama antes; no vayas a un centro esperando encontrar un veterinario de guardia. Solo para urgencias reales; la atención veterinaria fuera de horario suele ser en el Hong Kong Centre.",
         "it": "Linea telefonica attiva 24 ore su 24, tutti i giorni. Chiamare prima; non recarsi in un centro aspettandosi un veterinario di guardia. Solo per vere urgenze; l'assistenza veterinaria fuori orario si svolge di norma all'Hong Kong Centre.",
-        "pt": "Linha de apoio disponível 24 horas por dia, todos os dias. Liga primeiro; não te desloques a um centro à espera de encontrar um veterinário de serviço. Só para urgências reais; os cuidados veterinários fora de horas são normalmente prestados no Hong Kong Centre."
+        "pt": "Linha de apoio disponível 24 horas por dia, todos os dias. Liga primeiro; não te desloques a um centro à espera de encontrar um veterinário de serviço. Só para urgências reais; os cuidados veterinários fora de horas são normalmente prestados no Hong Kong Centre.",
+        "nl": "Hotline staat 24 uur per dag, elke dag paraat. Bel eerst; ga niet naar een centrum in de verwachting dat er een dierenarts dienst heeft. Alleen voor echte noodgevallen; dierenartszorg buiten kantooruren is meestal in het Hong Kong Centre."
       }
     },
     {
@@ -317,7 +331,8 @@
       "duty_i18n": {
         "es": "Abierto todos los días de 7:00 a 21:00 h. Llama para confirmar el horario.",
         "it": "Aperto tutti i giorni 7:00–21:00. Chiamare per confermare gli orari.",
-        "pt": "Aberto todos os dias 7h00–21h00. Liga para confirmar o horário."
+        "pt": "Aberto todos os dias 7h00–21h00. Liga para confirmar o horário.",
+        "nl": "Dagelijks open 7.00–21.00 uur. Bel om de openingstijden te bevestigen."
       }
     },
     {
@@ -337,7 +352,8 @@
       "duty_i18n": {
         "es": "Servicio veterinario de 8:00 a 20:00 h; servicio de enfermería 24 horas.",
         "it": "Servizio veterinario 8:00–20:00; servizio infermieristico 24 ore su 24.",
-        "pt": "Serviço veterinário 8h00–20h00; serviço de enfermagem 24 horas por dia."
+        "pt": "Serviço veterinário 8h00–20h00; serviço de enfermagem 24 horas por dia.",
+        "nl": "Dierenarts 8.00–20.00 uur; verpleegkundige 24 uur per dag."
       }
     },
     {
@@ -356,7 +372,8 @@
       "duty_i18n": {
         "es": "Todos los días de 8:00 a 20:00 h.",
         "it": "Tutti i giorni 8:00–20:00.",
-        "pt": "Todos os dias 8h00–20h00."
+        "pt": "Todos os dias 8h00–20h00.",
+        "nl": "Dagelijks 8.00–20.00 uur."
       }
     },
     {
@@ -375,7 +392,8 @@
       "duty_i18n": {
         "es": "Todos los días de 10:30 a 13:30 y de 16:00 a 19:00 h; cerrado en festivos.",
         "it": "Tutti i giorni 10:30–13:30 e 16:00–19:00; chiuso nei festivi.",
-        "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados."
+        "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados.",
+        "nl": "Dagelijks 10.30–13.30 en 16.00–19.00 uur; gesloten op feestdagen."
       }
     },
     {
@@ -395,7 +413,8 @@
       "duty_i18n": {
         "es": "Todos los días de 10:30 a 13:30 y de 16:00 a 19:00 h; cerrado en festivos.",
         "it": "Tutti i giorni 10:30–13:30 e 16:00–19:00; chiuso nei festivi.",
-        "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados."
+        "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados.",
+        "nl": "Dagelijks 10.30–13.30 en 16.00–19.00 uur; gesloten op feestdagen."
       }
     },
     {
@@ -414,7 +433,8 @@
       "duty_i18n": {
         "es": "De lunes a sábado de 9:00 a 21:00 h; domingos y festivos de 10:00 a 19:00 h.",
         "it": "Lun–sab 9:00–21:00; dom e festivi 10:00–19:00.",
-        "pt": "Seg–sáb 9h00–21h00; dom e feriados 10h00–19h00."
+        "pt": "Seg–sáb 9h00–21h00; dom e feriados 10h00–19h00.",
+        "nl": "Ma–za 9.00–21.00 uur; zo en feestdagen 10.00–19.00 uur."
       }
     },
     {
@@ -434,7 +454,8 @@
       "duty_i18n": {
         "es": "Todos los días de 9:00 a 20:00 h; domingos y festivos de 10:00 a 19:00 h.",
         "it": "Tutti i giorni 9:00–20:00; dom e festivi 10:00–19:00.",
-        "pt": "Todos os dias 9h00–20h00; dom e feriados 10h00–19h00."
+        "pt": "Todos os dias 9h00–20h00; dom e feriados 10h00–19h00.",
+        "nl": "Dagelijks 9.00–20.00 uur; zo en feestdagen 10.00–19.00 uur."
       }
     },
     {
@@ -453,7 +474,8 @@
       "duty_i18n": {
         "es": "Todos los días de 9:00 a 19:00 h.",
         "it": "Tutti i giorni 9:00–19:00.",
-        "pt": "Todos os dias 9h00–19h00."
+        "pt": "Todos os dias 9h00–19h00.",
+        "nl": "Dagelijks 9.00–19.00 uur."
       }
     },
     {
@@ -472,7 +494,8 @@
       "duty_i18n": {
         "es": "Todos los días de 9:00 a 19:00 h.",
         "it": "Tutti i giorni 9:00–19:00.",
-        "pt": "Todos os dias 9h00–19h00."
+        "pt": "Todos os dias 9h00–19h00.",
+        "nl": "Dagelijks 9.00–19.00 uur."
       }
     },
     {
@@ -491,7 +514,8 @@
       "duty_i18n": {
         "es": "Todos los días de 9:00 a 19:00 h.",
         "it": "Tutti i giorni 9:00–19:00.",
-        "pt": "Todos os dias 9h00–19h00."
+        "pt": "Todos os dias 9h00–19h00.",
+        "nl": "Dagelijks 9.00–19.00 uur."
       }
     },
     {
@@ -510,7 +534,8 @@
       "duty_i18n": {
         "es": "Lunes y martes de 9:00 a 21:00 h, de miércoles a viernes de 9:00 a 19:00 h, sábado de 9:00 a 18:00 h, domingo de 10:00 a 17:00 h. Reservas por WhatsApp +852 5935 6970.",
         "it": "Lun–mar 9:00–21:00, mer–ven 9:00–19:00, sab 9:00–18:00, dom 10:00–17:00. Prenotazioni tramite WhatsApp +852 5935 6970.",
-        "pt": "Seg–ter 9h00–21h00, qua–sex 9h00–19h00, sáb 9h00–18h00, dom 10h00–17h00. Marcações pelo WhatsApp +852 5935 6970."
+        "pt": "Seg–ter 9h00–21h00, qua–sex 9h00–19h00, sáb 9h00–18h00, dom 10h00–17h00. Marcações pelo WhatsApp +852 5935 6970.",
+        "nl": "Ma–di 9.00–21.00 uur, wo–vr 9.00–19.00 uur, za 9.00–18.00 uur, zo 10.00–17.00 uur. Afspraken via WhatsApp +852 5935 6970."
       }
     }
   ],

@@ -60,7 +60,8 @@
         "fr": "Urgences et vétérinaire de garde joignables 24 h/24 au même numéro, week-ends et jours fériés compris. Rendez-vous en journée lun.–ven. 8 h 30–15 h 30.",
         "es": "Sala de urgencias y veterinario de guardia disponibles las 24 horas en el mismo número, también en fines de semana y festivos. Citas de día lun–vie 8:30–15:30 h.",
         "it": "Pronto soccorso e veterinario reperibile 24 ore su 24, 7 giorni su 7 allo stesso numero, weekend e festivi inclusi. Appuntamenti diurni lun–ven 8:30–15:30.",
-        "pt": "Sala de urgência e veterinário de piquete disponíveis 24 h/24, 7 dias por semana, pelo mesmo número, incluindo fins de semana e feriados. Consultas diurnas com marcação de segunda a sexta 8h30–15h30."
+        "pt": "Sala de urgência e veterinário de piquete disponíveis 24 h/24, 7 dias por semana, pelo mesmo número, incluindo fins de semana e feriados. Consultas diurnas com marcação de segunda a sexta 8h30–15h30.",
+        "nl": "Spoedeisende hulp en dienstdoende dierenarts 24/7 bereikbaar op hetzelfde nummer, ook in weekenden en op feestdagen. Afspraken overdag ma–vr 8.30–15.30 uur."
       },
       "small_animals": true,
       "url": "https://dyrehospitalet.ku.dk/",
@@ -84,7 +85,8 @@
         "fr": "Urgences ouvertes tous les jours 24 h/24 ; clinique en semaine 8 h–16 h. Appelez avant de venir.",
         "es": "Sala de urgencias abierta todos los días las 24 horas (0:00–24:00 h); clínica entre semana 8:00–16:00 h. Llama antes de ir.",
         "it": "Pronto soccorso aperto tutti i giorni 24 ore su 24 (00–24); clinica nei giorni feriali 8–16. Telefonare prima di arrivare.",
-        "pt": "Sala de urgência aberta todos os dias 24 horas por dia (0h00–24h00); clínica em dias úteis 8h00–16h00. Liga antes de chegar."
+        "pt": "Sala de urgência aberta todos os dias 24 horas por dia (0h00–24h00); clínica em dias úteis 8h00–16h00. Liga antes de chegar.",
+        "nl": "Spoedeisende hulp elke dag de klok rond open (00–24); kliniek op werkdagen 8–16 uur. Bel vóór aankomst."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koebenhavns-dyrehospital/",
@@ -108,7 +110,8 @@
         "fr": "Urgences ouvertes 24 h/24 ; appelez avant de venir. En journée 8 h–18 h.",
         "es": "Sala de urgencias abierta las 24 horas; llama antes de ir. De día, de 8:00 a 18:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24; telefonare prima di arrivare. Orario diurno 8–18.",
-        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–18h00."
+        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–18h00.",
+        "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–18 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koge-dyrehospital/",
@@ -133,7 +136,8 @@
         "fr": "Ligne d’urgence 77 77 77 11 ; standard 46 15 15 25. Urgences lun. 18 h–8 h, mar.–ven. 17 h–8 h, sam.–dim. 8 h–8 h ; hôpital ouvert 24 h/24 tous les jours. Appelez avant de venir.",
         "es": "Línea de urgencias 77 77 77 11; general 46 15 15 25. Sala de urgencias lun 18:00–8:00 h, mar–vie 17:00–8:00 h, sáb y dom 8:00–8:00 h; hospital abierto las 24 horas todos los días. Llama antes de ir.",
         "it": "Linea urgenze 77 77 77 11; generale 46 15 15 25. Pronto soccorso lun 18–08, mar–ven 17–08, sab–dom 08–08; ospedale aperto 24 ore su 24 tutti i giorni. Telefonare prima di venire.",
-        "pt": "Linha de urgência 77 77 77 11; geral 46 15 15 25. Sala de urgência segunda 18h00–8h00, terça a sexta 17h00–8h00, sábado e domingo 8h00–8h00; hospital aberto 24 horas todos os dias. Liga antes de vires."
+        "pt": "Linha de urgência 77 77 77 11; geral 46 15 15 25. Sala de urgência segunda 18h00–8h00, terça a sexta 17h00–8h00, sábado e domingo 8h00–8h00; hospital aberto 24 horas todos os dias. Liga antes de vires.",
+        "nl": "Spoedlijn 77 77 77 11; algemeen 46 15 15 25. Spoedeisende hulp ma 18–08, di–vr 17–08, za–zo 08–08 uur; dierenziekenhuis elke dag 24 uur open. Bel voordat je komt."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-karlslunde-dyrehospital/",
@@ -157,7 +161,8 @@
         "fr": "Urgences ouvertes 24 h/24 tous les jours de l’année ; le téléphone joint le vétérinaire de garde à toute heure. Consultations habituelles en semaine 8 h–16 h. Appelez avant de venir.",
         "es": "Sala de urgencias las 24 horas todos los días del año; el teléfono conecta con el veterinario de guardia a cualquier hora. Consultas ordinarias entre semana 8:00–16:00 h. Llama antes de ir.",
         "it": "Pronto soccorso 24 ore su 24 tutti i giorni dell'anno; il telefono raggiunge il veterinario di guardia a qualsiasi ora. Visite ordinarie nei giorni feriali 8–16. Telefonare prima di venire.",
-        "pt": "Sala de urgência 24 horas todos os dias do ano; o telefone contacta o veterinário de serviço a qualquer hora. Consultas regulares em dias úteis 8h00–16h00. Liga antes de vires."
+        "pt": "Sala de urgência 24 horas todos os dias do ano; o telefone contacta o veterinário de serviço a qualquer hora. Consultas regulares em dias úteis 8h00–16h00. Liga antes de vires.",
+        "nl": "Spoedeisende hulp 24 uur per dag het hele jaar; telefonisch altijd de dienstdoende dierenarts te bereiken. Reguliere consulten op werkdagen 8–16 uur. Bel voordat je komt."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/odense-dyrehospital/",
@@ -181,7 +186,8 @@
         "fr": "Urgences ouvertes 24 h/24 ; appelez avant de venir. En journée 8 h–17 h.",
         "es": "Sala de urgencias abierta las 24 horas; llama antes de ir. De día, de 8:00 a 17:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24; telefonare prima di arrivare. Orario diurno 8–17.",
-        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–17h00."
+        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–17h00.",
+        "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–17 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/varde-dyrehospital/",
@@ -206,7 +212,8 @@
         "fr": "Urgences ouvertes 24 h/24, toute l’année ; appelez d’abord. Horaires habituels lun.–ven. 8 h–17 h.",
         "es": "Sala de urgencias abierta las 24 horas, todo el año; llama primero. Horario habitual lun–vie 8:00–17:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24, tutto l'anno; telefonare prima. Orari ordinari lun–ven 08:00–17:00.",
-        "pt": "Sala de urgência aberta 24 horas por dia, todo o ano; liga primeiro. Horário normal de segunda a sexta 8h00–17h00."
+        "pt": "Sala de urgência aberta 24 horas por dia, todo o ano; liga primeiro. Horário normal de segunda a sexta 8h00–17h00.",
+        "nl": "Spoedeisende hulp de klok rond open, het hele jaar; bel eerst. Reguliere tijden ma–vr 08.00–17.00 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/aarhus-dyrehospital/",
@@ -231,7 +238,8 @@
         "fr": "Urgences ouvertes 24 h/24 ; appelez avant de venir. En journée 8 h–16 h 30.",
         "es": "Sala de urgencias abierta las 24 horas; llama antes de ir. De día, de 8:00 a 16:30 h.",
         "it": "Pronto soccorso aperto 24 ore su 24; telefonare prima di arrivare. Orario diurno 8–16:30.",
-        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–16h30."
+        "pt": "Sala de urgência aberta 24 horas; liga antes de chegar. Horário diurno 8h00–16h30.",
+        "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–16.30 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
@@ -256,7 +264,8 @@
         "fr": "Vétérinaire de garde en dehors des horaires habituels au même numéro ; animaux malades ou blessés pris en charge « hele døgnet » (24 h/24).",
         "es": "Veterinario de guardia fuera del horario habitual en el mismo número; las mascotas gravemente enfermas o heridas pueden ser atendidas «hele døgnet» (las 24 horas).",
         "it": "Veterinario di guardia fuori orario allo stesso numero; animali gravemente malati o feriti curati 'hele døgnet' (24 ore su 24).",
-        "pt": "Veterinário de serviço fora do horário normal pelo mesmo número; animais com doença aguda ou lesionados podem ser tratados «hele døgnet» (24 horas por dia)."
+        "pt": "Veterinário de serviço fora do horário normal pelo mesmo número; animais com doença aguda ou lesionados podem ser tratados «hele døgnet» (24 horas por dia).",
+        "nl": "Dienstdoende dierenarts buiten reguliere tijden op hetzelfde nummer; acuut zieke of gewonde dieren kunnen 'hele døgnet' (de klok rond) worden behandeld."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/dyrehospitalet-city-syd/",
@@ -280,7 +289,8 @@
         "fr": "Urgences 8 h–23 h ; horaires habituels 8 h–17 h.",
         "es": "Urgencias de 8:00 a 23:00 h; horario habitual de 8:00 a 17:00 h.",
         "it": "Pronto soccorso 8–23; orari ordinari 8–17.",
-        "pt": "Urgências 8h00–23h00; horário normal 8h00–17h00."
+        "pt": "Urgências 8h00–23h00; horário normal 8h00–17h00.",
+        "nl": "Spoed 8–23 uur; reguliere tijden 8–17 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -304,7 +314,8 @@
         "fr": "Urgences 8 h–17 h uniquement.",
         "es": "Urgencias solo de 8:00 a 17:00 h.",
         "it": "Pronto soccorso solo 8–17.",
-        "pt": "Urgências apenas 8h00–17h00."
+        "pt": "Urgências apenas 8h00–17h00.",
+        "nl": "Spoed alleen 8–17 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -328,7 +339,8 @@
         "fr": "Appelez le 75 52 23 33 pour être mis en relation avec le vétérinaire de garde de la région de Trekant, 24 h/24, week-ends et jours fériés compris. Astreinte : un vétérinaire n’est pas toujours sur place ; convenez de l’heure et du lieu par téléphone.",
         "es": "Llama al 75 52 23 33 y te pasan con el veterinario de guardia de la zona de Trekant, las 24 horas, incluidos fines de semana y festivos. Guardia localizada: no siempre hay un veterinario en la clínica; acuerda hora y lugar por teléfono.",
         "it": "Chiamando il 75 52 23 33 si viene collegati al veterinario di guardia dell'area di Trekant, 24 ore su 24, weekend e festivi inclusi. Reperibilità: il veterinario non è sempre in sede; concordare ora e luogo per telefono.",
-        "pt": "Liga para 75 52 23 33 e és ligado ao veterinário de serviço na zona de Trekant, 24 horas, incluindo fins de semana e feriados. Em regime de piquete: nem sempre há um veterinário no local; combina hora e local por telefone."
+        "pt": "Liga para 75 52 23 33 e és ligado ao veterinário de serviço na zona de Trekant, 24 horas, incluindo fins de semana e feriados. Em regime de piquete: nem sempre há um veterinário no local; combina hora e local por telefone.",
+        "nl": "Bel 75 52 23 33 en je wordt doorverbonden met de dienstdoende dierenarts in de regio Trekant, 24 uur per dag, ook in weekenden en op feestdagen. Bereikbaarheidsdienst: er is niet altijd een dierenarts ter plaatse; spreek tijd en plaats telefonisch af."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -352,7 +364,8 @@
         "fr": "Horaires d’ouverture lun. 8 h–18 h, mar.–ven. 8 h–17 h, fermé le week-end ; en dehors, voir la fiche du service de garde de Trekant.",
         "es": "Abierto lun 8:00–18:00 h, mar–vie 8:00–17:00 h, cerrado en fines de semana; fuera de horario, consulta la ficha de la cooperación de guardias de Trekant.",
         "it": "Orari di apertura lun 8–18, mar–ven 8–17, chiuso nei weekend; fuori orario vedere la voce sulla cooperazione di guardia di Trekant.",
-        "pt": "Horário: segunda 8h00–18h00, terça a sexta 8h00–17h00, encerrado aos fins de semana; fora do horário ver a entrada da cooperação de serviço de Trekant."
+        "pt": "Horário: segunda 8h00–18h00, terça a sexta 8h00–17h00, encerrado aos fins de semana; fora do horário ver a entrada da cooperação de serviço de Trekant.",
+        "nl": "Openingstijden ma 8–18, di–vr 8–17 uur, in het weekend gesloten; buiten die tijden zie de vermelding van de dienstsamenwerking Trekant."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -375,7 +388,8 @@
         "fr": "Astreinte jeu.–ven. 17 h–22 h 30 et sam. 8 h–17 h ; un vétérinaire n’est pas forcément sur place, appelez pour convenir de l’heure et du lieu.",
         "es": "Guardia jue y vie 17:00–22:30 h y sáb 8:00–17:00 h; no siempre hay un veterinario en la clínica, llama para acordar hora y lugar.",
         "it": "Reperibilità gio–ven 17:00–22:30 e sab 8:00–17:00; il veterinario non è necessariamente in sede, telefonare per concordare orario e luogo.",
-        "pt": "Piquete quinta e sexta 17h00–22h30 e sábado 8h00–17h00; nem sempre há um veterinário no local, liga para combinar hora e local."
+        "pt": "Piquete quinta e sexta 17h00–22h30 e sábado 8h00–17h00; nem sempre há um veterinário no local, liga para combinar hora e local.",
+        "nl": "Bereikbaarheidsdienst do–vr 17.00–22.30 uur en za 8.00–17.00 uur; er is niet per se een dierenarts ter plaatse, bel om tijd en plaats af te spreken."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyrlaegevagten-akut-dyrlaege/",
@@ -399,7 +413,8 @@
         "fr": "En journée Helsingør +45 49 20 30 16 (lun.–jeu. 8 h–17 h, ven. 8 h–16 h) ; en dehors, appelez Birkerød Dyrehospital +45 81 81 89 81, où un vétérinaire est toujours joignable (Birkerød assure une garde 24 h/24).",
         "es": "De día, Helsingør +45 49 20 30 16 (lun–jue 8:00–17:00 h, vie 8:00–16:00 h); fuera de horario, llama a Birkerød Dyrehospital +45 81 81 89 81, donde siempre te atiende un veterinario (Birkerød ofrece guardia las 24 horas).",
         "it": "Di giorno Helsingør +45 49 20 30 16 (lun–gio 8–17, ven 8–16); fuori orario chiamare Birkerød Dyrehospital +45 81 81 89 81, dove un veterinario è sempre raggiungibile (Birkerød offre il servizio di guardia 24 ore su 24).",
-        "pt": "Durante o dia Helsingør +45 49 20 30 16 (segunda a quinta 8h00–17h00, sexta 8h00–16h00); fora do horário liga para Birkerød Dyrehospital +45 81 81 89 81, onde há sempre um veterinário contactável (Birkerød tem serviço 24 horas)."
+        "pt": "Durante o dia Helsingør +45 49 20 30 16 (segunda a quinta 8h00–17h00, sexta 8h00–16h00); fora do horário liga para Birkerød Dyrehospital +45 81 81 89 81, onde há sempre um veterinário contactável (Birkerød tem serviço 24 horas).",
+        "nl": "Overdag Helsingør +45 49 20 30 16 (ma–do 8–17, vr 8–16 uur); buiten kantooruren bel Birkerød Dyrehospital +45 81 81 89 81, waar altijd een dierenarts te bereiken is (Birkerød biedt de klok rond dienst)."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/helsingoerdyrehospital/",
@@ -423,7 +438,8 @@
         "fr": "Garde en semaine 17 h–22 h et week-ends 8 h–22 h par le vétérinaire de la clinique ; 24 h/24 « dans la mesure du possible », sinon orientation vers Karlslunde Dyrehospital.",
         "es": "Guardia entre semana 17:00–22:00 h y fines de semana 8:00–22:00 h con el veterinario de la propia clínica; las 24 horas «en la medida de lo posible», si no, derivación a Karlslunde Dyrehospital.",
         "it": "Guardia nei giorni feriali 17–22 e nei fine settimana 8–22 con il veterinario della clinica; «per quanto possibile» 24 ore su 24, altrimenti invio a Karlslunde Dyrehospital.",
-        "pt": "Serviço em dias úteis 17h00–22h00 e fins de semana 8h00–22h00 pelo veterinário da própria clínica; «tanto quanto possível» 24 horas por dia, caso contrário encaminhamento para Karlslunde Dyrehospital."
+        "pt": "Serviço em dias úteis 17h00–22h00 e fins de semana 8h00–22h00 pelo veterinário da própria clínica; «tanto quanto possível» 24 horas por dia, caso contrário encaminhamento para Karlslunde Dyrehospital.",
+        "nl": "Dienst op werkdagen 17–22 uur en in weekenden 8–22 uur door de eigen dierenarts van de kliniek; 'voor zover mogelijk' de klok rond, anders verwijzing naar Karlslunde Dyrehospital."
       },
       "small_animals": true,
       "url": "https://storehavelsedyreklinik.dk/",
@@ -446,7 +462,8 @@
         "fr": "Vétérinaire de garde joignable en dehors des horaires d’ouverture (lun.–jeu. 8 h–17 h, ven. 8 h–16 h) au même numéro ; astreinte en partenariat avec Guldborgsund Dyrehospital ; supplément de garde de 100 %.",
         "es": "Veterinario de guardia fuera del horario de apertura (lun–jue 8:00–17:00 h, vie 8:00–16:00 h) en el mismo número; acuerdo de guardia con Guldborgsund Dyrehospital; recargo de guardia del 100 %.",
         "it": "Veterinario di guardia raggiungibile fuori orario di apertura (lun–gio 8–17, ven 8–16) allo stesso numero; accordo di reperibilità con Guldborgsund Dyrehospital; supplemento di guardia del 100%.",
-        "pt": "Veterinário de serviço contactável fora do horário de funcionamento (segunda a quinta 8h00–17h00, sexta 8h00–16h00) pelo mesmo número; acordo de piquete com Guldborgsund Dyrehospital; suplemento de serviço de 100 %."
+        "pt": "Veterinário de serviço contactável fora do horário de funcionamento (segunda a quinta 8h00–17h00, sexta 8h00–16h00) pelo mesmo número; acordo de piquete com Guldborgsund Dyrehospital; suplemento de serviço de 100 %.",
+        "nl": "Dienstdoende dierenarts buiten openingstijden (ma–do 8–17, vr 8–16 uur) bereikbaar op hetzelfde nummer; dienstafspraak met Guldborgsund Dyrehospital; 100 % toeslag voor de dienst."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/nykfdyrehospital/",
@@ -470,7 +487,8 @@
         "fr": "Appelez le 97 51 30 45 pour joindre le vétérinaire de garde : de la fermeture à 22 h, Skive Dyrehospital, Morsø Dyreklinik et Dyrehospitalet Heden se relaient ; 22 h–8 h, Dyrehospitalet Heden, Herning.",
         "es": "Llama al 97 51 30 45 para hablar con el veterinario de guardia: desde el cierre hasta las 22:00 h se turnan Skive Dyrehospital, Morsø Dyreklinik y Dyrehospitalet Heden; de 22:00 a 8:00 h, Dyrehospitalet Heden, Herning.",
         "it": "Chiamare il 97 51 30 45 per raggiungere il veterinario di guardia: dalla chiusura alle 22:00 si alternano Skive Dyrehospital, Morsø Dyreklinik e Dyrehospitalet Heden; 22:00–08:00 Dyrehospitalet Heden, Herning.",
-        "pt": "Liga para 97 51 30 45 para contactar o veterinário de serviço: do fecho até às 22h00 alternam Skive Dyrehospital, Morsø Dyreklinik e Dyrehospitalet Heden; 22h00–8h00 Dyrehospitalet Heden, Herning."
+        "pt": "Liga para 97 51 30 45 para contactar o veterinário de serviço: do fecho até às 22h00 alternam Skive Dyrehospital, Morsø Dyreklinik e Dyrehospitalet Heden; 22h00–8h00 Dyrehospitalet Heden, Herning.",
+        "nl": "Bel 97 51 30 45 voor de dienstdoende dierenarts: vanaf sluitingstijd tot 22.00 uur wisselen Skive Dyrehospital, Morsø Dyreklinik en Dyrehospitalet Heden elkaar af; 22.00–08.00 uur Dyrehospitalet Heden, Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/",
@@ -494,7 +512,8 @@
         "fr": "Assure la garde de nuit 22 h–8 h pour le tour de garde Skive/Morsø/Herning.",
         "es": "Cubre la guardia nocturna de 22:00 a 8:00 h del turno de Skive/Morsø/Herning.",
         "it": "Copre la guardia notturna 22:00–08:00 per il turno Skive/Morsø/Herning.",
-        "pt": "Assegura o serviço noturno 22h00–8h00 da escala de serviço Skive/Morsø/Herning."
+        "pt": "Assegura o serviço noturno 22h00–8h00 da escala de serviço Skive/Morsø/Herning.",
+        "nl": "Dekt de nachtdienst 22.00–08.00 uur voor het dienstrooster Skive/Morsø/Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
@@ -518,7 +537,8 @@
         "fr": "Astreinte en semaine 17 h–8 h, week-ends du vendredi 17 h au lundi 8 h et jours fériés ; appelez le numéro principal pour savoir quel vétérinaire est de garde.",
         "es": "Guardia entre semana 17:00–8:00 h, fines de semana desde el viernes a las 17:00 h hasta el lunes a las 8:00 h y festivos; llama al número principal para saber qué veterinario está de guardia.",
         "it": "Reperibilità nei giorni feriali 17:00–08:00, nei fine settimana dal venerdì alle 17:00 al lunedì alle 08:00 e nei festivi; chiamare il numero principale per sapere quale veterinario è di guardia.",
-        "pt": "Piquete em dias úteis 17h00–8h00, fins de semana de sexta 17h00 a segunda 8h00 e feriados; liga para o número principal para saberes que veterinário está de serviço."
+        "pt": "Piquete em dias úteis 17h00–8h00, fins de semana de sexta 17h00 a segunda 8h00 e feriados; liga para o número principal para saberes que veterinário está de serviço.",
+        "nl": "Bereikbaarheidsdienst op werkdagen 17.00–08.00 uur, in weekenden van vrijdag 17.00 uur tot maandag 08.00 uur en op feestdagen; bel het hoofdnummer om te horen welke dierenarts dienst heeft."
       },
       "small_animals": true,
       "url": "https://vodskovdyreklinik.dk/",
@@ -542,7 +562,8 @@
         "fr": "Astreinte 24 h/24 pour les animaux gravement blessés au même numéro ; ouvert lun.–ven. 8 h–17 h (fermé 12 h–13 h). Service d’astreinte, pas forcément de personnel sur place.",
         "es": "Guardia las 24 horas para mascotas con lesiones graves en el mismo número; abierto lun–vie 8:00–17:00 h (cerrado de 12:00 a 13:00 h). Servicio de guardia localizada, no siempre con personal en la clínica.",
         "it": "Reperibilità 24 ore su 24 per animali feriti gravemente allo stesso numero; aperto lun–ven 8–17 (chiuso 12–13). Servizio di reperibilità, non necessariamente con presenza in sede.",
-        "pt": "Piquete 24 horas para animais com lesões agudas pelo mesmo número; aberto de segunda a sexta 8h00–17h00 (encerrado 12h00–13h00). Serviço de piquete, nem sempre com pessoal no local."
+        "pt": "Piquete 24 horas para animais com lesões agudas pelo mesmo número; aberto de segunda a sexta 8h00–17h00 (encerrado 12h00–13h00). Serviço de piquete, nem sempre com pessoal no local.",
+        "nl": "24-uurs bereikbaarheidsdienst voor acuut gewonde dieren op hetzelfde nummer; open ma–vr 8–17 uur (gesloten 12–13 uur). Bereikbaarheidsdienst, niet per se ter plaatse bemand."
       },
       "small_animals": true,
       "url": "https://dyrlaegegaardenbornholm.dk/",
@@ -566,7 +587,8 @@
         "fr": "Lun.–ven., horaires de semaine uniquement (p. ex. mar. 8 h 30–16 h 30) ; hors horaires d’ouverture, les appels sont transférés à Bindslev Dyrehospital. Examens plus importants et chirurgie à Bindslev.",
         "es": "Solo en horario laborable, de lunes a viernes (p. ej., mar 8:30–16:30 h); fuera del horario de apertura, las llamadas se desvían a Bindslev Dyrehospital. Exploraciones mayores y cirugía en Bindslev.",
         "it": "Solo lun–ven in orario diurno (es. mar 08:30–16:30); fuori orario le chiamate sono inoltrate a Bindslev Dyrehospital. Visite più complesse e interventi a Bindslev.",
-        "pt": "Apenas em dias úteis, segunda a sexta (p. ex., terça 8h30–16h30); fora do horário as chamadas são reencaminhadas para Bindslev Dyrehospital. Exames maiores e cirurgia em Bindslev."
+        "pt": "Apenas em dias úteis, segunda a sexta (p. ex., terça 8h30–16h30); fora do horário as chamadas são reencaminhadas para Bindslev Dyrehospital. Exames maiores e cirurgia em Bindslev.",
+        "nl": "Alleen op werkdagen (ma–vr) open (bijv. di 08.30–16.30 uur); buiten openingstijden worden oproepen doorgeschakeld naar Bindslev Dyrehospital. Grotere onderzoeken en operaties in Bindslev."
       },
       "small_animals": true,
       "url": "https://bindslevdyrehospital.dk/skagen/",
@@ -589,7 +611,8 @@
         "fr": "Appelez pour confirmer les horaires.",
         "es": "Llama para confirmar el horario.",
         "it": "Telefonare per confermare gli orari.",
-        "pt": "Liga para confirmar o horário."
+        "pt": "Liga para confirmar o horário.",
+        "nl": "Bel om de openingstijden te bevestigen."
       },
       "small_animals": true,
       "url": "https://www.dcvest.dk",
@@ -674,7 +697,8 @@
         "fr": "Lun.–ven. 8 h–17 h.",
         "es": "Lun–vie 8:00–17:00 h.",
         "it": "Lun–ven 8:00–17:00.",
-        "pt": "Segunda a sexta 8h00–17h00."
+        "pt": "Segunda a sexta 8h00–17h00.",
+        "nl": "ma–vr 8.00–17.00 uur."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/esbjergdyrehospital/",
