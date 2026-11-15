@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Lentils",
-    "sl": "Leča"
+    "sl": "Leča",
+    "es": "Lentejas"
   },
   "question": {
     "en": "Can dogs eat lentils?",
-    "sl": "Ali lahko psi jedo lečo?"
+    "sl": "Ali lahko psi jedo lečo?",
+    "es": "¿Pueden los perros comer lentejas?"
   },
   "url_slug": {
     "en": "lentils",
-    "sl": "leca"
+    "sl": "leca",
+    "es": "lentejas"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
-    "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi."
+    "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi.",
+    "es": "Sí, si están cocinadas. Las lentejas son una legumbre, como las alubias, y los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado. A algunos perros les cuesta digerir las legumbres, así que introduce las lentejas cocidas poco a poco."
   },
   "why": {
     "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
-    "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi."
+    "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi.",
+    "es": "Las legumbres como las lentejas son una buena fuente de fibra y proteínas para los perros. Sin embargo, a algunos perros les cuesta digerirlas, por eso hay que cocinarlas bien e incorporarlas a la dieta poco a poco."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a little well-cooked lentil and introduce it slowly, because some dogs have trouble digesting legumes.",
-    "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo."
+    "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo.",
+    "es": "Empieza con un poco de lenteja bien cocida e introdúcela poco a poco, porque a algunos perros les cuesta digerir las legumbres."
   },
   "serving": {
     "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
-    "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi."
+    "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi.",
+    "es": "Bien cocidas (las lentejas secas, primero en remojo y luego cocinadas), introducidas poco a poco."
   },
   "child": {
     "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
-    "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!"
+    "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!",
+    "es": "Las lentejas cocidas pueden ser un pequeño premio para los perros. ¡Un adulto debe cocinarlas bien antes!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat uncooked lentils?",
-        "sl": "Ali lahko psi jedo nekuhano lečo?"
+        "sl": "Ali lahko psi jedo nekuhano lečo?",
+        "es": "¿Pueden los perros comer lentejas crudas?"
       },
       "a": {
         "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
-        "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati."
+        "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati.",
+        "es": "No. Los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado, y las lentejas deben estar bien cocidas."
       }
     }
   ],
@@ -89,6 +99,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5fe93ed2400629a187883fd8c2a1c4018201c11163786195be9ca1aba634991c"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb9a0e3bada2e43c3e029d1ef8c6b4c9cd9f2c8e92f3542ea40dd2d4fa735da9"
     }
   }
 }

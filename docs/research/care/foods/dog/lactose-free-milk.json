@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Lactose-free milk",
-    "sl": "Mleko brez laktoze"
+    "sl": "Mleko brez laktoze",
+    "es": "Leche sin lactosa"
   },
   "question": {
     "en": "Can dogs drink lactose-free milk?",
-    "sl": "Ali lahko psi pijejo mleko brez laktoze?"
+    "sl": "Ali lahko psi pijejo mleko brez laktoze?",
+    "es": "¿Pueden los perros beber leche sin lactosa?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
-    "sl": "mleko-brez-laktoze"
+    "sl": "mleko-brez-laktoze",
+    "es": "leche-sin-lactosa"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Only a little, and it isn't needed. Some dogs may tolerate small amounts of lactose-free milk, but dogs on a good, balanced diet don't need it, and it can still upset the stomach of dogs allergic to milk protein.",
-    "sl": "Le malo, potrebno pa ni. Nekateri psi morda prenesejo majhne količine mleka brez laktoze, a psi, ki dobivajo kakovostno, uravnoteženo hrano, ga ne potrebujejo, pri psih z alergijo na mlečne beljakovine pa lahko še vedno povzroči prebavne težave."
+    "sl": "Le malo, potrebno pa ni. Nekateri psi morda prenesejo majhne količine mleka brez laktoze, a psi, ki dobivajo kakovostno, uravnoteženo hrano, ga ne potrebujejo, pri psih z alergijo na mlečne beljakovine pa lahko še vedno povzroči prebavne težave.",
+    "es": "Solo un poco, y no hace falta. Algunos perros pueden tolerar pequeñas cantidades de leche sin lactosa, pero los perros con una dieta buena y equilibrada no la necesitan, y aun así puede sentar mal al estómago de los perros alérgicos a la proteína de la leche."
   },
   "why": {
     "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
-    "sl": "Mleko brez laktoze ima enake hranilne snovi kot navadno mleko, a brez laktoze, ki lahko povzroča prebavne težave; ena veterinarska bolnišnica ga opisuje kot primerno nadomestilo za pse, ki ne prenašajo laktoze. Avstralsko veterinarsko združenje je strožje: psi na uravnoteženi prehrani ga ne potrebujejo, pri alergiji na mlečne beljakovine pa lahko še vedno povzroči prebavne težave, zato upoštevamo strožje stališče: le malo."
+    "sl": "Mleko brez laktoze ima enake hranilne snovi kot navadno mleko, a brez laktoze, ki lahko povzroča prebavne težave; ena veterinarska bolnišnica ga opisuje kot primerno nadomestilo za pse, ki ne prenašajo laktoze. Avstralsko veterinarsko združenje je strožje: psi na uravnoteženi prehrani ga ne potrebujejo, pri alergiji na mlečne beljakovine pa lahko še vedno povzroči prebavne težave, zato upoštevamo strožje stališče: le malo.",
+    "es": "La leche sin lactosa tiene los mismos nutrientes que la leche normal, pero sin la lactosa que puede causar problemas digestivos, y un hospital veterinario la considera una alternativa adecuada para los perros con intolerancia a la lactosa. La Asociación Veterinaria Australiana es más estricta: no es necesaria para los perros con una dieta equilibrada y aun así puede causar problemas de estómago relacionados con la alergia a la proteína de la leche, así que seguimos la opinión más estricta: solo un poco."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog gets diarrhoea, vomiting, gas or bloating after milk and it doesn't go away, contact your vet.",
-    "sl": "Če ima pes po mleku drisko, bruha, ima vetrove ali je napihnjen in to ne mine, pokličite veterinarja."
+    "sl": "Če ima pes po mleku drisko, bruha, ima vetrove ali je napihnjen in to ne mine, pokličite veterinarja.",
+    "es": "Si tu perro tiene diarrea, vómitos, gases o hinchazón después de tomar leche y no se le pasan, ponte en contacto con tu veterinario."
   },
   "serving": {
     "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
-    "sl": "Začnite z malo, najbolje z mlekom brez laktoze, ki je narejeno za pse, in opazujte, ali ima pes prebavne težave."
+    "sl": "Začnite z malo, najbolje z mlekom brez laktoze, ki je narejeno za pse, in opazujte, ali ima pes prebavne težave.",
+    "es": "Empieza con una cantidad pequeña, a ser posible una leche sin lactosa hecha para perros, y vigila si le sienta mal a la barriga."
   },
   "child": {
     "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
-    "sl": "Psi za zdravje ne potrebujejo mleka, zato vprašaj odraslega, preden psu daš kaj mleka."
+    "sl": "Psi za zdravje ne potrebujejo mleka, zato vprašaj odraslega, preden psu daš kaj mleka.",
+    "es": "Los perros no necesitan leche para estar sanos, así que pregunta a un adulto antes de compartirla con tu perro."
   },
   "faq": [
     {
       "q": {
         "en": "Is lactose-free milk better for dogs than regular milk?",
-        "sl": "Ali je mleko brez laktoze za pse boljše od navadnega?"
+        "sl": "Ali je mleko brez laktoze za pse boljše od navadnega?",
+        "es": "¿Es la leche sin lactosa mejor para los perros que la leche normal?"
       },
       "a": {
         "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
-        "sl": "Ne vsebuje laktoze, ki lahko povzroča prebavne težave, a pri psih z alergijo na mlečne beljakovine lahko še vedno povzroči težave."
+        "sl": "Ne vsebuje laktoze, ki lahko povzroča prebavne težave, a pri psih z alergijo na mlečne beljakovine lahko še vedno povzroči težave.",
+        "es": "No tiene lactosa, que puede causar problemas digestivos, pero aun así puede sentar mal a los perros alérgicos a la proteína de la leche."
       }
     }
   ],
@@ -110,6 +120,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a778b4f96c9865925fc34102dc306596ad0eab61ce55affd829ddf81342a6c7a"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a8cc1bbb72f7950d198b6cfce9f7c37bb325f8b4b4f180db8179ad13a9caeee"
     }
   }
 }

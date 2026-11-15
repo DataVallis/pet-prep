@@ -11,7 +11,8 @@
     "nb": "Pølser",
     "it": "Salsicce",
     "de": "Würstchen",
-    "fr": "Saucisses"
+    "fr": "Saucisses",
+    "es": "Salchichas"
   },
   "question": {
     "en": "Can cats eat sausages?",
@@ -23,7 +24,8 @@
     "nb": "Kan katter spise pølser?",
     "it": "I gatti possono mangiare le salsicce?",
     "de": "Dürfen Katzen Würstchen fressen?",
-    "fr": "Les chats peuvent-ils manger des saucisses ?"
+    "fr": "Les chats peuvent-ils manger des saucisses ?",
+    "es": "¿Pueden los gatos comer salchichas?"
   },
   "url_slug": {
     "en": "sausages",
@@ -35,7 +37,8 @@
     "nb": "polser",
     "it": "salsicce",
     "de": "wuerstchen",
-    "fr": "saucisses"
+    "fr": "saucisses",
+    "es": "salchichas"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "nb": "Det er best å la være. Pølser er bearbeidet, fete og vanligvis salte, og mange inneholder konserveringsmidler, krydder, løk eller hvitløk som kan være skadelig for katter. RSPCA Australia anbefaler å unngå pølser til katter fordi de kan inneholde sulfitter som konserveringsmiddel.",
     "it": "Meglio di no. Le salsicce sono lavorate, grasse e di solito molto salate, e molte contengono conservanti, spezie, cipolla o aglio che possono far male ai gatti. L’RSPCA Australia consiglia di evitare le salsicce per i gatti perché possono contenere conservanti a base di solfiti.",
     "de": "Besser nicht. Würstchen sind verarbeitet, fettig und meist sehr salzig, und viele enthalten Konservierungsstoffe, Gewürze, Zwiebel oder Knoblauch, die Katzen schaden können. RSPCA Australia rät, Katzen keine Würstchen zu geben, weil sie Sulfite als Konservierungsstoffe enthalten können.",
-    "fr": "Mieux vaut éviter. Les saucisses sont une viande transformée, grasse et généralement très salée, et beaucoup contiennent des conservateurs, des épices, de l’oignon ou de l’ail, nocifs pour les chats. La RSPCA Australia conseille d’éviter les saucisses pour les chats, car elles peuvent contenir des conservateurs à base de sulfites."
+    "fr": "Mieux vaut éviter. Les saucisses sont une viande transformée, grasse et généralement très salée, et beaucoup contiennent des conservateurs, des épices, de l’oignon ou de l’ail, nocifs pour les chats. La RSPCA Australia conseille d’éviter les saucisses pour les chats, car elles peuvent contenir des conservateurs à base de sulfites.",
+    "es": "Es mejor no dárselas. Las salchichas son un producto procesado, graso y normalmente con mucha sal, y muchas llevan conservantes, especias, cebolla o ajo que pueden ser dañinos para los gatos. RSPCA Australia aconseja evitar las salchichas para los gatos porque pueden llevar conservantes con sulfitos."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
@@ -60,7 +64,8 @@
     "nb": "Kildene er forskjellige, så vi bruker det strengeste nivået. Purina sier at en helt liten bit pølse laget bare av kjøtt, uten konserveringsmidler eller krydder, vanligvis er greit, men RSPCA Australia anbefaler å unngå pølser, pølsekjøtt og ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1). Selv rene kjøttpølser er svært fete, pølser er vanligvis salte, og løk, hvitløk og enkelte krydder i dem kan være giftige for katter.",
     "it": "Le fonti non concordano, quindi usiamo il livello più prudente. Purina afferma che un pezzettino piccolissimo di salsiccia fatta solo di carne, senza conservanti né condimenti, in genere va bene, ma l’RSPCA Australia consiglia di evitare salsicce, impasto di salsiccia e carni cotte industriali perché possono contenere conservanti a base di solfiti, associati a una carenza di tiamina (vitamina B1). Anche quelle di sola carne sono molto grasse, in genere sono molto salate, e la cipolla, l’aglio e alcune spezie che contengono possono essere tossici per i gatti.",
     "de": "Die Quellen sind sich nicht einig, deshalb gilt die strengere Stufe. Purina sagt, dass ein sehr kleines Stück Wurst, die ausschließlich aus Fleisch besteht und weder Konservierungsstoffe noch Gewürze enthält, grundsätzlich in Ordnung ist. RSPCA Australia rät dagegen, Würstchen, Wurstbrät und industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden. Selbst reine Fleischwürstchen sind sehr fettig, Würstchen enthalten meist viel Salz, und Zwiebel, Knoblauch und manche Gewürze darin können für Katzen giftig sein.",
-    "fr": "Les sources divergent : nous appliquons donc le niveau le plus strict. Purina indique qu’un tout petit morceau de saucisse faite uniquement de viande, sans conservateurs ni assaisonnement, ne pose généralement pas de problème, mais la RSPCA Australia conseille d’éviter les saucisses, la chair à saucisse et les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1). Même les saucisses faites uniquement de viande sont très grasses, les saucisses sont généralement très salées, et l’oignon, l’ail et certaines épices qu’elles contiennent peuvent être toxiques pour les chats."
+    "fr": "Les sources divergent : nous appliquons donc le niveau le plus strict. Purina indique qu’un tout petit morceau de saucisse faite uniquement de viande, sans conservateurs ni assaisonnement, ne pose généralement pas de problème, mais la RSPCA Australia conseille d’éviter les saucisses, la chair à saucisse et les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1). Même les saucisses faites uniquement de viande sont très grasses, les saucisses sont généralement très salées, et l’oignon, l’ail et certaines épices qu’elles contiennent peuvent être toxiques pour les chats.",
+    "es": "Las fuentes difieren, así que aplicamos el nivel más estricto. Purina dice que un trocito muy pequeño de salchicha hecha solo con carne, sin conservantes ni condimentos, suele estar bien, pero RSPCA Australia aconseja evitar las salchichas, la carne de salchicha y las carnes cocinadas de fabricación industrial porque pueden llevar conservantes con sulfitos, que se han relacionado con la deficiencia de tiamina (vitamina B1). Incluso las salchichas solo de carne son muy grasas, las salchichas suelen tener mucha sal, y la cebolla, el ajo y algunas especias que llevan pueden ser tóxicos para los gatos."
   },
   "signs": {
     "en": [
@@ -102,6 +107,10 @@
     "fr": [
       "Troubles digestifs",
       "Diarrhée"
+    ],
+    "es": [
+      "Malestar de estómago",
+      "Diarrea"
     ]
   },
   "what_to_do": {
@@ -114,7 +123,8 @@
     "nb": "Hvis katten har spist pølse som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis den har spist en ukrydret pølse og deretter får urolig mage eller diaré, ring dyrlegen for råd.",
     "it": "Se il tuo gatto ha mangiato salsiccia che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se ha mangiato salsiccia senza condimenti e poi ha mal di stomaco o diarrea, chiama il veterinario per un consiglio.",
     "de": "Hat Ihre Katze Wurst gefressen, die Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie ungewürzte Wurst gefressen und danach Magenbeschwerden oder Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
-    "fr": "Si votre chat a mangé une saucisse pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. S’il a mangé une saucisse nature et a ensuite des troubles digestifs ou de la diarrhée, appelez votre vétérinaire pour demander conseil."
+    "fr": "Si votre chat a mangé une saucisse pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. S’il a mangé une saucisse nature et a ensuite des troubles digestifs ou de la diarrhée, appelez votre vétérinaire pour demander conseil.",
+    "es": "Si tu gato ha comido salchicha que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si ha comido salchicha natural y después tiene malestar de estómago o diarrea, llama a tu veterinario para que te aconseje."
   },
   "serving": null,
   "child": {
@@ -127,7 +137,8 @@
     "nb": "Pølser er for salte og feite for katter. Pusen blir mye gladere for sine egne kattegodbiter.",
     "it": "Le salsicce sono troppo salate e grasse per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa molto più bella.",
     "de": "Würstchen sind für Katzen zu salzig und zu fettig. Mit den eigenen Katzenleckerlis machst du ihr eine viel schönere Überraschung.",
-    "fr": "Les saucisses sont trop salées et trop grasses pour les chats. Mieux vaut lui offrir ses propres friandises pour chats : la surprise sera bien meilleure."
+    "fr": "Les saucisses sont trop salées et trop grasses pour les chats. Mieux vaut lui offrir ses propres friandises pour chats : la surprise sera bien meilleure.",
+    "es": "Las salchichas son demasiado saladas y grasas para los gatos. Los premios para gatos son una sorpresa mucho mejor para el gatito."
   },
   "faq": [
     {
@@ -141,7 +152,8 @@
         "nb": "Hva med pølsepellen eller en rå pølse?",
         "it": "E il budello della salsiccia o una salsiccia cruda?",
         "de": "Und die Wurstpelle oder ein rohes Würstchen?",
-        "fr": "Et le boyau, ou une saucisse crue ?"
+        "fr": "Et le boyau, ou une saucisse crue ?",
+        "es": "¿Y la piel de la salchicha o una salchicha cruda?"
       },
       "a": {
         "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
@@ -153,7 +165,8 @@
         "nb": "Pellen kan være vanskelig å tygge og svelge, noe som kan føre til kvelning. Rå pølser skal aldri gis, siden de ofte inneholder skadelige bakterier som salmonella.",
         "it": "Il budello può essere difficile da masticare e da ingoiare e potrebbe causare soffocamento. Le salsicce crude non vanno mai date, perché contengono spesso batteri dannosi come la salmonella.",
         "de": "Die Pelle lässt sich schlecht kauen und schlucken, und das kann zum Ersticken führen. Geben Sie niemals rohe Würstchen, denn sie enthalten oft schädliche Bakterien wie Salmonellen.",
-        "fr": "Le boyau peut être difficile à mâcher et à avaler, ce qui pourrait provoquer un étouffement. Il ne faut jamais donner de saucisses crues, car elles contiennent souvent des bactéries nocives comme la salmonelle."
+        "fr": "Le boyau peut être difficile à mâcher et à avaler, ce qui pourrait provoquer un étouffement. Il ne faut jamais donner de saucisses crues, car elles contiennent souvent des bactéries nocives comme la salmonelle.",
+        "es": "La tripa puede ser difícil de masticar y tragar, lo que podría provocar atragantamiento. Nunca se deben dar salchichas crudas, ya que a menudo contienen bacterias dañinas como la salmonela."
       }
     }
   ],
@@ -282,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5bc258f6717b2a02b02d35abf93f0d677024daf62834727d526035893c1d4e43"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "12db43ee3f30ded2571442a8511167f7d27885e7437859b55561ecb1dcfec398"
     }
   }
 }

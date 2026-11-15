@@ -4,6 +4,7 @@
   "name": {
     "en": "Broth and stock",
     "sl": "Juha in jušna osnova",
+    "es": "Caldo",
     "hr": "Juha i temeljac",
     "sv": "Buljong och fond",
     "da": "Bouillon og fond",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs have broth?",
     "sl": "Ali lahko psi pijejo juho?",
+    "es": "¿Pueden los perros tomar caldo?",
     "hr": "Smiju li psi jesti juhu?",
     "sv": "Får hundar dricka buljong?",
     "da": "Må hunde få bouillon?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "broth",
     "sl": "juha",
+    "es": "caldo",
     "hr": "juha-i-temeljac",
     "sv": "buljong",
     "da": "bouillon",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Yes, a little low-sodium broth is fine. Vets sometimes suggest adding a bit of low-sodium chicken, vegetable or beef broth to a dog's food for flavour. Skip stock cubes, which are very salty, and broths made with onions, garlic or added salt.",
     "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo.",
+    "es": "Sí, un poco de caldo bajo en sodio no hace daño. A veces los veterinarios recomiendan añadir un poco de caldo de pollo, de verduras o de ternera bajo en sodio a la comida del perro para darle sabor. Evita las pastillas de caldo, que son muy saladas, y los caldos hechos con cebolla, ajo o sal añadida.",
     "hr": "Da, malo juhe s malo natrija u redu je. Veterinari ponekad predlažu da se hrani za psa doda malo pileće, povrtne ili goveđe juhe s malo natrija radi okusa. Ne koristi kocke za juhu, koje su jako slane, ni juhe s lukom, češnjakom ili dodanom soli.",
     "sv": "Ja, lite natriumfattig buljong går bra. Veterinärer föreslår ibland att man tillsätter lite natriumfattig kyckling-, grönsaks- eller nötbuljong i hundens mat för smakens skull. Hoppa över buljongtärningar, som är mycket salta, och buljonger gjorda med lök, vitlök eller tillsatt salt.",
     "da": "Ja, lidt natriumfattig bouillon er fint. Dyrlæger foreslår nogle gange at komme lidt natriumfattig hønsebouillon, grøntsagsbouillon eller oksebouillon i hundens foder for at give det smag. Undlad bouillonterninger, som er meget salte, og bouillon lavet med løg, hvidløg eller tilsat salt.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
     "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne.",
+    "es": "Las pastillas de caldo que se usan para hacer caldos y salsas llevan mucho sodio, que puede causar problemas de estómago e intestino e incluso convulsiones. Algunos caldos ya preparados pueden llevar cebolla, ajo o sal, añadidos para dar sabor y para que duren más, y la cebolla y el ajo están en muchos alimentos preparados. Por eso solo es buena opción un caldo sencillo, bajo en sodio y con ingredientes seguros para los perros.",
     "hr": "Kocke za juhu (temeljac) kojima se pripremaju juha i umak sadrže mnogo natrija, što može izazvati probleme sa želucem i crijevima, pa čak i napadaje. Neke gotove juhe mogu sadržavati luk, češnjak ili sol, dodane radi okusa i dulje trajnosti, a luk i češnjak nalaze se u mnogim gotovim jelima. Zato je dobar izbor samo obična juha s malo natrija i sastojcima sigurnima za pse.",
     "sv": "Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan orsaka mag- och tarmproblem och till och med kramper. En del färdiga buljonger kan innehålla lök, vitlök eller salt, som tillsätts för smakens skull och för att hålla längre, och lök och vitlök finns i många färdiglagade livsmedel. Därför är bara okryddad, natriumfattig buljong med hundsäkra ingredienser ett bra val.",
     "da": "Bouillonterninger (fondterninger), der bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper. Nogle færdiglavede bouilloner kan indeholde løg, hvidløg eller salt, tilsat for smagens skyld og for at holde sig længere, og løg og hvidløg findes i mange færdiglavede produkter. Derfor er det kun almindelig, natriumfattig bouillon med ingredienser, der er ufarlige for hunde, der er et godt valg.",
@@ -66,6 +71,7 @@
   "what_to_do": {
     "en": "If your dog had broth made with onions or garlic, contact your vet as soon as possible.",
     "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja.",
+    "es": "Si tu perro ha tomado caldo hecho con cebolla o ajo, ponte en contacto con tu veterinario cuanto antes.",
     "hr": "Ako je pas pojeo juhu s lukom ili češnjakom, što prije se obrati veterinaru.",
     "sv": "Om din hund har fått buljong gjord med lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
     "da": "Hvis din hund har fået bouillon lavet med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt.",
@@ -78,6 +84,7 @@
   "serving": {
     "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
     "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte.",
+    "es": "Elige un caldo sencillo, bajo en sodio y sin cebolla ni ajo, y añade solo un poco a la comida de tu perro para darle sabor. Si haces el caldo en casa, retira la capa de grasa endurecida cuando se haya enfriado y no le des nunca a tu perro los huesos cocinados.",
     "hr": "Odaberi običnu juhu s malo natrija, bez luka i češnjaka, i dodaj samo malo u hranu psa radi okusa. Ako juhu kuhaš kod kuće, kad se ohladi skini stvrdnuti sloj masti i psu nikad ne daj kuhane kosti.",
     "sv": "Välj en okryddad, natriumfattig buljong utan lök eller vitlök och tillsätt bara lite i hundens mat för smakens skull. Om du gör buljong hemma, ta bort det stelnade fettlagret när den har svalnat, och ge aldrig hunden de tillagade benen.",
     "da": "Vælg en almindelig, natriumfattig bouillon uden løg og hvidløg, og kom kun lidt i hundens foder for at give smag. Hvis du laver bouillon hjemme, skal du fjerne det størknede lag fedt, når den er kølet af, og aldrig give din hund de kogte knogler.",
@@ -90,6 +97,7 @@
   "child": {
     "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
     "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli.",
+    "es": "Un poco de caldo sencillo puede hacer que la comida del perro esté aún más rica. Pregunta antes a un adulto, porque algunos caldos llevan cebolla y mucha sal.",
     "hr": "Malo obične juhe može hranu za psa učiniti još ukusnijom. Prvo pitaj odraslu osobu, jer neke juhe imaju luk i puno soli.",
     "sv": "Lite okryddad buljong kan göra hundmaten extra god. Fråga en vuxen först, för en del buljonger innehåller lök och mycket salt.",
     "da": "Lidt almindelig bouillon kan få hundefoder til at smage ekstra godt. Spørg først en voksen, for nogle bouilloner indeholder løg og meget salt.",
@@ -104,6 +112,7 @@
       "q": {
         "en": "Can I use a stock cube?",
         "sl": "Ali lahko uporabim jušno kocko?",
+        "es": "¿Puedo usar una pastilla de caldo?",
         "hr": "Smijem li upotrijebiti kocku za juhu?",
         "sv": "Kan jag använda en buljongtärning?",
         "da": "Må jeg bruge en bouillonterning?",
@@ -116,6 +125,7 @@
       "a": {
         "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
         "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče.",
+        "es": "No. Las pastillas de caldo que se usan para hacer caldos y salsas llevan mucho sodio, que puede causar problemas de estómago e intestino e incluso convulsiones.",
         "hr": "Ne. Kocke za temeljac kojima se pripremaju juha i umak sadrže mnogo natrija, što može dovesti do problema sa želucem i crijevima, pa čak i do napadaja.",
         "sv": "Nej. Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan leda till mag- och tarmproblem och till och med kramper.",
         "da": "Nej. Bouillonterninger, som bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper.",
@@ -130,6 +140,7 @@
       "q": {
         "en": "Can broth help a dog who won't eat?",
         "sl": "Ali lahko juha pomaga psu, ki noče jesti?",
+        "es": "¿Puede el caldo ayudar a un perro que no quiere comer?",
         "hr": "Može li juha pomoći psu koji ne želi jesti?",
         "sv": "Kan buljong hjälpa en hund som inte vill äta?",
         "da": "Kan bouillon hjælpe en hund, der ikke vil spise?",
@@ -142,6 +153,7 @@
       "a": {
         "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
         "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno.",
+        "es": "Añadir un poco de caldo bajo en sodio es una de las medidas sencillas que recomiendan los veterinarios para que la comida resulte más apetecible. Tu veterinario puede darte un consejo concreto.",
         "hr": "Dodavanje malo juhe s malo natrija jedan je od jednostavnih koraka koje veterinari predlažu da bi hrana bila ukusnija. Veterinar ti može dati konkretan savjet.",
         "sv": "Att tillsätta lite natriumfattig buljong är ett av de enkla steg som veterinärer föreslår för att göra maten godare. Din veterinär kan ge dig specifika råd.",
         "da": "Lidt natriumfattig bouillon i maden er et af de enkle trin, som dyrlæger foreslår for at få maden til at smage bedre. Din dyrlæge kan give dig konkrete råd.",
@@ -221,6 +233,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "269d92a8fd5c6f4b21a117ff293ffdc0d809ff61daedd5c93c7df6fd6f10a117"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8aef61623a1df27adb41a728d680aa63f4ffbbd663febf3356c6dbbb3a7a938a"
     },
     "hr": {
       "status": "verified",

@@ -12,7 +12,8 @@
     "nb": "Ris (kokt)",
     "it": "Riso (cotto)",
     "de": "Reis (gekocht)",
-    "fr": "Riz (cuit)"
+    "fr": "Riz (cuit)",
+    "es": "Arroz (cocido)"
   },
   "question": {
     "en": "Can cats eat rice?",
@@ -25,7 +26,8 @@
     "nb": "Kan katter spise ris?",
     "it": "I gatti possono mangiare il riso?",
     "de": "Dürfen Katzen Reis fressen?",
-    "fr": "Les chats peuvent-ils manger du riz ?"
+    "fr": "Les chats peuvent-ils manger du riz ?",
+    "es": "¿Pueden los gatos comer arroz?"
   },
   "url_slug": {
     "en": "rice",
@@ -38,7 +40,8 @@
     "nb": "ris",
     "it": "riso",
     "de": "reis",
-    "fr": "riz"
+    "fr": "riz",
+    "es": "arroz"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nb": "Ja, litt naturell kokt ris er greit for katter nå og da. Blue Cross foreslår til og med å strekke en liten mengde kattemat med kokt ris. Men ris kan ikke erstatte kattemat: katter trenger kjøtt hver dag.",
     "it": "Sì, un po’ di riso in bianco ogni tanto va bene. Se il cibo per gatti scarseggia, Blue Cross suggerisce perfino di allungarlo con del riso cotto. Ma il riso non può sostituire il cibo per gatti: i gatti hanno bisogno di carne ogni giorno.",
     "de": "Ja, ein wenig ungewürzter gekochter Reis ist für Katzen ab und zu in Ordnung. Blue Cross empfiehlt sogar, bei knappem Vorrat das Katzenfutter mit gekochtem Reis zu strecken. Reis kann Katzenfutter aber nicht ersetzen: Katzen brauchen jeden Tag Fleisch.",
-    "fr": "Oui, un peu de riz cuit nature ne pose pas de problème de temps en temps. Blue Cross suggère même d’allonger une petite réserve de nourriture pour chats avec du riz cuit. Mais le riz ne peut pas remplacer la nourriture pour chats : les chats ont besoin de viande chaque jour."
+    "fr": "Oui, un peu de riz cuit nature ne pose pas de problème de temps en temps. Blue Cross suggère même d’allonger une petite réserve de nourriture pour chats avec du riz cuit. Mais le riz ne peut pas remplacer la nourriture pour chats : les chats ont besoin de viande chaque jour.",
+    "es": "Sí, un poco de arroz cocido natural está bien para los gatos de vez en cuando. Blue Cross incluso sugiere completar una pequeña reserva de comida para gatos con arroz cocido. Pero el arroz no puede sustituir a la comida para gatos: los gatos necesitan carne todos los días."
   },
   "why": {
     "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
@@ -65,7 +69,8 @@
     "nb": "Blue Cross sier at hvis kattematen må vare noen dager, kan du strekke den med kokte grønnsaker eller ris, men katter trenger fortsatt animalsk protein som tilberedt kjøtt eller fisk hver dag. Dyrleger hos VCA påpeker at kornslag som ris i kjæledyrmat gir hunder og katter en lettfordøyelig energikilde, mens International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater. Blue Cross legger til at katter ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for hunder og katter.",
     "it": "Blue Cross afferma che, se il cibo per gatti deve durare qualche giorno, si può allungare con verdure cotte o riso, ma i gatti hanno comunque bisogno ogni giorno di proteine animali come carne o pesce cotti. I veterinari di VCA osservano che negli alimenti per animali i cereali come il riso forniscono a cani e gatti una fonte di energia facilmente digeribile, mentre International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati. Blue Cross aggiunge che i gatti non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per cani e gatti.",
     "de": "Blue Cross sagt, dass Sie Katzenfutter, das ein paar Tage reichen muss, mit gekochtem Gemüse oder Reis strecken können, Katzen aber trotzdem jeden Tag tierisches Eiweiß wie gekochtes Fleisch oder Fisch brauchen. Die Tierärzte von VCA weisen darauf hin, dass Getreide wie Reis in Fertigfutter Hunden und Katzen eine leicht verdauliche Energiequelle liefert, während International Cat Care sagt, dass Katzen als reine Fleischfresser Kohlenhydrate schlechter verdauen und verwerten können. Blue Cross ergänzt, dass Katzen in einer Schonkost keine Kohlenhydrate brauchen, und laut VCA fehlen bei gekochter Hühnerbrust mit weißem Reis viele für Hunde und Katzen wichtige Nährstoffe.",
-    "fr": "Blue Cross indique que si la nourriture pour chats doit durer quelques jours, on peut l’allonger avec des légumes cuits ou du riz, mais que les chats ont quand même besoin chaque jour de protéines animales, comme de la viande ou du poisson cuits. Les vétérinaires de VCA notent que, dans les aliments pour animaux, les céréales comme le riz offrent aux chiens et aux chats une source d’énergie facile à digérer, tandis qu’International Cat Care précise que les chats, carnivores stricts, digèrent et utilisent moins bien les glucides. Blue Cross ajoute que les chats n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chiens et les chats."
+    "fr": "Blue Cross indique que si la nourriture pour chats doit durer quelques jours, on peut l’allonger avec des légumes cuits ou du riz, mais que les chats ont quand même besoin chaque jour de protéines animales, comme de la viande ou du poisson cuits. Les vétérinaires de VCA notent que, dans les aliments pour animaux, les céréales comme le riz offrent aux chiens et aux chats une source d’énergie facile à digérer, tandis qu’International Cat Care précise que les chats, carnivores stricts, digèrent et utilisent moins bien les glucides. Blue Cross ajoute que les chats n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chiens et les chats.",
+    "es": "Blue Cross dice que, si la comida para gatos tiene que durar unos días, puedes completarla con verduras cocidas o arroz, pero los gatos siguen necesitando proteína animal, como carne o pescado cocinados, todos los días. Los veterinarios de VCA señalan que, en la comida para mascotas, los cereales como el arroz aportan a perros y gatos una fuente de energía fácil de digerir, mientras que International Cat Care señala que los gatos, al ser carnívoros estrictos, digieren y aprovechan peor los carbohidratos. Blue Cross añade que los gatos no necesitan carbohidratos en una dieta blanda, y VCA dice que la pechuga de pollo cocida con arroz blanco carece de muchos nutrientes esenciales para perros y gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nb": "La ris være et lite tillegg ved siden av kattematen. Spør dyrlegen før du gir ris til en katt med urolig mage, siden katter ikke trenger karbohydrater i skånekost.",
     "it": "Il riso deve restare un piccolo extra accanto al cibo per gatti. Chiedi al veterinario prima di dare riso a un gatto con mal di stomaco, perché i gatti non hanno bisogno di carboidrati in una dieta in bianco.",
     "de": "Reis bleibt nur eine kleine Beigabe zum Katzenfutter. Fragen Sie Ihren Tierarzt, bevor Sie einer Katze mit Magenbeschwerden Reis geben, denn Katzen brauchen in einer Schonkost keine Kohlenhydrate.",
-    "fr": "Le riz doit rester un petit complément à côté de la nourriture pour chats. Demandez conseil à votre vétérinaire avant de donner du riz à un chat qui a des troubles digestifs, car les chats n’ont pas besoin de glucides dans une alimentation légère."
+    "fr": "Le riz doit rester un petit complément à côté de la nourriture pour chats. Demandez conseil à votre vétérinaire avant de donner du riz à un chat qui a des troubles digestifs, car les chats n’ont pas besoin de glucides dans une alimentation légère.",
+    "es": "Dale el arroz solo como un pequeño extra junto a la comida para gatos. Pregunta a tu veterinario antes de darle arroz a un gato con malestar de estómago, ya que los gatos no necesitan carbohidratos en una dieta blanda."
   },
   "serving": {
     "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
@@ -92,7 +98,8 @@
     "nb": "Litt naturell kokt ris uten tilsatt salt, som et lite tillegg ved siden av kattematen.",
     "it": "Un po’ di riso in bianco, senza sale aggiunto, come piccolo extra accanto al cibo per gatti.",
     "de": "Ein wenig gekochter Reis ohne Gewürze und Salz, als kleine Beigabe zum Katzenfutter.",
-    "fr": "Un peu de riz cuit nature, sans sel ajouté, comme petit complément à côté de la nourriture pour chats."
+    "fr": "Un peu de riz cuit nature, sans sel ajouté, comme petit complément à côté de la nourriture pour chats.",
+    "es": "Un poco de arroz cocido natural, sin sal añadida, como pequeño extra junto a la comida para gatos."
   },
   "child": {
     "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
@@ -105,7 +112,8 @@
     "nb": "Litt naturell kokt ris er greit for en katt av og til. Men mest av alt trenger katter sin kjøttrike kattemat.",
     "it": "Un po’ di riso in bianco ogni tanto va bene per il gatto. Ma i gatti hanno bisogno soprattutto del loro cibo per gatti a base di carne.",
     "de": "Ein bisschen ungewürzter gekochter Reis ist für eine Katze ab und zu in Ordnung. Aber am allermeisten braucht deine Katze ihr fleischiges Katzenfutter.",
-    "fr": "Un peu de riz cuit nature, c’est permis pour un chat de temps en temps. Mais ton chat a avant tout besoin de sa nourriture à base de viande."
+    "fr": "Un peu de riz cuit nature, c’est permis pour un chat de temps en temps. Mais ton chat a avant tout besoin de sa nourriture à base de viande.",
+    "es": "Un poco de arroz cocido natural está bien a veces para un gato. Pero lo que más necesitan los gatos es su comida con carne."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nb": "Er kylling og ris bra for en katt med urolig mage?",
         "it": "Pollo e riso fanno bene a un gatto con mal di pancia?",
         "de": "Sind Huhn und Reis gut für eine Katze mit Bauchweh?",
-        "fr": "Le poulet au riz convient-il à un chat qui a mal au ventre ?"
+        "fr": "Le poulet au riz convient-il à un chat qui a mal au ventre ?",
+        "es": "¿Es bueno el pollo con arroz para un gato con malestar de estómago?"
       },
       "a": {
         "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
@@ -133,7 +142,8 @@
         "nb": "Spør dyrlegen først. Blue Cross sier at katter trenger et kjøttbasert kosthold og ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for katter.",
         "it": "Chiedi prima al veterinario. Blue Cross afferma che i gatti hanno bisogno di un’alimentazione a base di carne e non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per i gatti.",
         "de": "Fragen Sie zuerst Ihren Tierarzt. Blue Cross sagt, dass Katzen eine fleischbasierte Ernährung brauchen und in einer Schonkost keine Kohlenhydrate benötigen, und laut VCA fehlen bei gekochter Hühnerbrust mit weißem Reis viele wichtige Nährstoffe für Katzen.",
-        "fr": "Demandez d’abord conseil à votre vétérinaire. Blue Cross indique que les chats ont besoin d’une alimentation à base de viande et n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chats."
+        "fr": "Demandez d’abord conseil à votre vétérinaire. Blue Cross indique que les chats ont besoin d’une alimentation à base de viande et n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chats.",
+        "es": "Consulta primero con tu veterinario. Blue Cross dice que los gatos necesitan una alimentación a base de carne y que no necesitan carbohidratos en una dieta blanda, y VCA dice que la pechuga de pollo cocida con arroz blanco carece de muchos nutrientes esenciales para los gatos."
       }
     }
   ],
@@ -241,6 +251,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8bc4c6c1269836e6a1ec597f319dc4ee33f707581b0b186e5d84334f38c3b502"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cb91e921defbe97d3f131850a8b58fcb48f1365bc25da2f2422a121ccca0ffae"
     }
   }
 }

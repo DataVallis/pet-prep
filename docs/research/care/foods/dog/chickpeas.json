@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Chickpeas",
-    "sl": "Čičerika"
+    "sl": "Čičerika",
+    "es": "Garbanzos"
   },
   "question": {
     "en": "Can dogs eat chickpeas?",
-    "sl": "Ali lahko psi jedo čičeriko?"
+    "sl": "Ali lahko psi jedo čičeriko?",
+    "es": "¿Pueden los perros comer garbanzos?"
   },
   "url_slug": {
     "en": "chickpeas",
-    "sl": "cicerika"
+    "sl": "cicerika",
+    "es": "garbanzos"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
-    "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen."
+    "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen.",
+    "es": "Sí, con moderación y bien cocidos. Los garbanzos recién cocinados pueden ser un premio para los perros. Los garbanzos secos son un peligro de atragantamiento, los de lata suelen llevar mucha sal y el hummus no es seguro para los perros."
   },
   "why": {
     "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
-    "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov."
+    "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov.",
+    "es": "Los garbanzos son legumbres y una buena fuente de fibra y proteínas para los perros, pero a algunos les cuesta digerirlos, así que hay que cocinarlos bien e introducirlos poco a poco. Los garbanzos secos son mucho más difíciles de digerir. Los de lata suelen llevar mucho sodio, que no es saludable para los perros. Como otras legumbres, los garbanzos pueden provocarle algunos gases a tu perro."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce cooked chickpeas slowly. If you use canned chickpeas, choose a low-sodium kind and rinse them well to remove as much salt as possible.",
-    "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli."
+    "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli.",
+    "es": "Introduce los garbanzos cocidos poco a poco. Si usas garbanzos de lata, elige una variedad baja en sodio y acláralos bien para quitarles la mayor parte de la sal."
   },
   "serving": {
     "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
-    "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana."
+    "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana.",
+    "es": "En remojo y bien cocidos hasta que estén blandos, con moderación; los de lata, solo bajos en sodio y bien aclarados."
   },
   "child": {
     "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
-    "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+    "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
+    "es": "Los garbanzos blandos y cocidos pueden ser un pequeño premio para los perros, ¡aunque puede que tu perro tenga algunos gases!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat hummus?",
-        "sl": "Ali lahko psi jedo humus?"
+        "sl": "Ali lahko psi jedo humus?",
+        "es": "¿Pueden los perros comer hummus?"
       },
       "a": {
         "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
-        "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe."
+        "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe.",
+        "es": "No. El hummus lleva otros ingredientes que no son aptos para los perros, como ajo, cebolla y especias."
       }
     },
     {
       "q": {
         "en": "Can dogs eat dry chickpeas?",
-        "sl": "Ali lahko psi jedo suho čičeriko?"
+        "sl": "Ali lahko psi jedo suho čičeriko?",
+        "es": "¿Pueden los perros comer garbanzos secos?"
       },
       "a": {
         "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
-        "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte."
+        "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte.",
+        "es": "No. Los garbanzos secos pueden suponer un peligro de atragantamiento y son mucho más difíciles de digerir para los perros; cocínalos bien antes."
       }
     }
   ],
@@ -124,6 +136,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "26333f56fdcf07ba7673c7ff9702609ad3a17bc30c64d1da8575d9a857bcb99e"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "daa51028fac110211dd97e585a6f0c08dc7896de7a32606fdea1688c953329c0"
     }
   }
 }

@@ -4,6 +4,7 @@
   "name": {
     "en": "Pizza",
     "sl": "Pica",
+    "es": "Pizza",
     "cs": "Pizza",
     "hr": "Pizza",
     "sv": "Pizza",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can dogs eat pizza?",
     "sl": "Ali lahko psi jedo pico?",
+    "es": "¿Pueden los perros comer pizza?",
     "cs": "Mohou psi jíst pizzu?",
     "hr": "Smiju li psi jesti pizzu?",
     "sv": "Får hundar äta pizza?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "pizza",
     "sl": "pica",
+    "es": "pizza",
     "cs": "pizza",
     "hr": "pizza",
     "sv": "pizza",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "No, it's best not to share pizza. It can upset a dog's stomach and even lead to pancreatitis, toppings can contain garlic or onion, which damage red blood cells, and the crust is far too high in calories. Raw pizza dough is risky too.",
     "sl": "Ne, pice raje ne delite s psom. Lahko mu razdraži želodec in celo povzroči vnetje trebušne slinavke, nadevi lahko vsebujejo česen ali čebulo, ki poškodujeta rdeče krvničke, skorja pa ima veliko preveč kalorij. Tvegano je tudi surovo testo za pico.",
+    "es": "No, es mejor no compartir la pizza. Puede sentar mal al estómago del perro e incluso provocar pancreatitis; los ingredientes pueden llevar ajo o cebolla, que dañan los glóbulos rojos, y la masa tiene muchísimas calorías. La masa de pizza cruda también es arriesgada.",
     "cs": "Ne, pizzu raději nesdílejte. Může psovi podráždit žaludek a dokonce vést k zánětu slinivky břišní; polevy mohou obsahovat česnek nebo cibuli, které poškozují červené krvinky, a okraj pizzy má příliš mnoho kalorií. Riziko představuje i syrové pizzové těsto.",
     "hr": "Ne, pizzu je najbolje ne dijeliti. Može nadražiti želudac psa pa čak i dovesti do upale gušterače, dodaci mogu sadržavati češnjak ili luk, koji oštećuju crvena krvna zrnca, a kora je previše kalorična. Sirovo tijesto za pizzu također je rizično.",
     "sv": "Nej, det är bäst att inte dela pizza. Den kan reta hundens mage och till och med leda till bukspottkörtelinflammation (pankreatit), pålägg kan innehålla vitlök eller lök, som skadar de röda blodkropparna, och pizzabotten innehåller alldeles för många kalorier. Rå pizzadeg är också riskabel.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "AKC lists pizza among party foods to keep away from dogs, and VCA and the ASPCA say leftovers and party food like pizza can cause stomach upset and even pancreatitis. Cheese is high in fat, and pepperoni is too fatty and spicy and risks salt poisoning. Garlic and onion, which can be in toppings and seasonings, damage red blood cells and kidneys. Pizza crust is way too high in calories and can lead to obesity. Uncooked pizza dough produces ethanol inside a dog's body.",
     "sl": "AKC pico uvršča med hrano z zabav, ki naj bo zunaj pasjega dosega, VCA in ASPCA pa navajata, da lahko ostanki in hrana z zabav, kot je pica, lahko razdražijo želodec in celo povzročijo vnetje trebušne slinavke. Sir je zelo masten, salama pepperoni pa je premastna in prepikantna ter prinaša tveganje zastrupitve s soljo. Česen in čebula, ki sta lahko v nadevih in začimbah, poškodujeta rdeče krvničke in ledvice. Skorja ima veliko preveč kalorij in lahko vodi v debelost. Surovo testo za pico v pasjem telesu tvori etanol.",
+    "es": "La AKC incluye la pizza entre las comidas de fiesta que hay que mantener lejos de los perros, y VCA y la ASPCA dicen que las sobras y la comida de fiesta como la pizza pueden causar malestar de estómago e incluso pancreatitis. El queso tiene mucha grasa, y el pepperoni es demasiado graso y picante y supone un riesgo de intoxicación por sal. El ajo y la cebolla, que pueden estar en los ingredientes y los condimentos, dañan los glóbulos rojos y los riñones. La masa de la pizza tiene muchísimas calorías y puede provocar obesidad. La masa de pizza sin cocer produce etanol dentro del cuerpo del perro.",
     "cs": "Organizace AKC řadí pizzu mezi jídla z oslav, která se psům nemají dávat, a VCA i ASPCA uvádějí, že zbytky a jídla z oslav, jako je pizza, mohou způsobit podráždění žaludku a dokonce zánět slinivky břišní. Sýr je bohatý na tuk a feferonková salámová poleva je příliš tučná a pálivá a hrozí i otrava solí. Česnek a cibule, které mohou být v polevách a koření, poškozují červené krvinky a ledviny. Okraj pizzy má mnohem víc kalorií, než by měl, a může vést k obezitě. Nepečené pizzové těsto produkuje ve psím těle etanol.",
     "hr": "AKC navodi pizzu među hranom sa zabava koju treba držati podalje od pasa, a VCA i ASPCA kažu da ostaci hrane i hrana sa zabava poput pizze mogu izazvati želučane tegobe pa čak i upalu gušterače. Sir je bogat mašću, a pepperoni je previše masan i začinjen te nosi rizik od trovanja solju. Češnjak i luk, koji mogu biti u dodacima i začinima, oštećuju crvena krvna zrnca i bubrege. Kora pizze previše je kalorična i može dovesti do pretilosti. Nepečeno tijesto za pizzu stvara etanol u tijelu psa.",
     "sv": "AKC listar pizza bland festmat som ska hållas borta från hundar, och VCA och ASPCA säger att rester och festmat som pizza kan orsaka magbesvär och till och med bukspottkörtelinflammation (pankreatit). Ost är fet, och pepperoni är för fet och kryddig och innebär risk för saltförgiftning. Vitlök och lök, som kan finnas i pålägg och kryddor, skadar de röda blodkropparna och njurarna. Pizzabotten innehåller alldeles för många kalorier och kan leda till fetma. Obakad pizzadeg bildar etanol inne i hundens kropp.",
@@ -77,6 +82,11 @@
       "Prebavne težave, bruhanje ali driska",
       "Bolečine v trebuhu, slabost, vročina, utrujenost ali slab apetit (morda vnetje trebušne slinavke)",
       "Izguba apetita ali potrtost po nadevih s čebulo ali česnom"
+    ],
+    "es": [
+      "Malestar de estómago, vómitos o diarrea",
+      "Dolor de barriga, náuseas, fiebre, falta de energía o poco apetito (posible pancreatitis)",
+      "Pérdida de apetito o decaimiento tras comer ingredientes con cebolla o ajo"
     ],
     "cs": [
       "Podráždění žaludku, zvracení nebo průjem",
@@ -127,6 +137,7 @@
   "what_to_do": {
     "en": "If your dog got into pizza, contact your vet. If the toppings may have contained garlic or onion, don't wait to see. If your dog ate raw pizza dough, contact your vet too.",
     "sl": "Če je pes pojedel pico, pokličite veterinarja. Če sta bila v nadevu morda česen ali čebula, ne čakajte. Tudi če je pes pojedel surovo testo za pico, pokličite veterinarja.",
+    "es": "Si tu perro ha comido pizza, ponte en contacto con tu veterinario. Si los ingredientes pueden haber llevado ajo o cebolla, no esperes a ver qué pasa. Si tu perro ha comido masa de pizza cruda, ponte en contacto también con tu veterinario.",
     "cs": "Pokud se pes dostal k pizze, obraťte se na veterináře. Pokud poleva mohla obsahovat česnek nebo cibuli, nečekejte, co se stane. Obraťte se na veterináře i tehdy, když pes snědl syrové pizzové těsto.",
     "hr": "Ako je pas dohvatio pizzu, obrati se veterinaru. Ako su dodaci mogli sadržavati češnjak ili luk, ne čekaj da vidiš. Ako je pas pojeo sirovo tijesto za pizzu, također se obrati veterinaru.",
     "sv": "Om din hund har ätit pizza ska du kontakta din veterinär. Om pålägget kan ha innehållit vitlök eller lök ska du inte vänta och se. Om din hund har ätit rå pizzadeg ska du också kontakta din veterinär.",
@@ -141,6 +152,7 @@
   "child": {
     "en": "Pizza is a people food. Its cheese and toppings can upset a dog's tummy, so give your dog its own treat instead.",
     "sl": "Pica je hrana za ljudi. Sir in nadevi lahko psu razdražijo trebušček, zato mu raje daj njegov priboljšek.",
+    "es": "La pizza es comida de personas. Su queso y sus ingredientes pueden dar dolor de barriga a los perros, así que dale a tu perro su propio premio.",
     "cs": "Pizza je jídlo pro lidi. Sýr a polevy mohou psovi rozbolet bříško, a tak mu radši dej jeho vlastní pamlsek.",
     "hr": "Pizza je hrana za ljude. Od sira i dodataka na pizzi psa može zaboljeti trbuščić, zato mu radije daj njegovu poslasticu.",
     "sv": "Pizza är mat för människor. Osten och pålägget kan ge hunden ont i magen, så ge din hund en egen godbit i stället.",
@@ -156,6 +168,7 @@
       "q": {
         "en": "Can dogs eat pizza crust?",
         "sl": "Ali lahko psi jedo skorjo pice?",
+        "es": "¿Pueden los perros comer el borde de la pizza?",
         "cs": "Mohou psi jíst okraj pizzy?",
         "hr": "Smiju li psi jesti koru pizze?",
         "sv": "Får hundar äta pizzabotten?",
@@ -169,6 +182,7 @@
       "a": {
         "en": "It's best not to. A vet nutritionist at Cornell says pizza crust is way too high in calories and can lead to obesity.",
         "sl": "Bolje ne. Veterinarski nutricionist s Cornella pravi, da ima skorja pice veliko preveč kalorij in lahko vodi v debelost.",
+        "es": "Es mejor que no. Una veterinaria nutricionista de Cornell dice que la masa de la pizza tiene muchísimas calorías y puede provocar obesidad.",
         "cs": "Raději ne. Veterinární specialistka na výživu z Cornellovy univerzity uvádí, že okraj pizzy má mnohem víc kalorií, než by měl, a může vést k obezitě.",
         "hr": "Bolje ne. Veterinarski nutricionist sa Sveučilišta Cornell kaže da je kora pizze previše kalorična i može dovesti do pretilosti.",
         "sv": "Det är bäst att låta bli. En veterinärnutritionist vid Cornell säger att pizzabotten innehåller alldeles för många kalorier och kan leda till fetma.",
@@ -184,6 +198,7 @@
       "q": {
         "en": "Is raw pizza dough dangerous?",
         "sl": "Je surovo testo za pico nevarno?",
+        "es": "¿Es peligrosa la masa de pizza cruda?",
         "cs": "Je syrové pizzové těsto nebezpečné?",
         "hr": "Je li sirovo tijesto za pizzu opasno?",
         "sv": "Är rå pizzadeg farlig?",
@@ -197,6 +212,7 @@
       "a": {
         "en": "Yes. Uncooked bread and pizza dough produce ethanol inside a dog's body, and raw yeast dough can expand in the stomach. Contact your vet.",
         "sl": "Da. Surovo testo za kruh in pico v pasjem telesu tvori etanol, kvašeno testo pa se lahko v želodcu razširi. Pokličite veterinarja.",
+        "es": "Sí. El pan y la masa de pizza sin cocer producen etanol dentro del cuerpo del perro, y la masa cruda con levadura puede expandirse en el estómago. Ponte en contacto con tu veterinario.",
         "cs": "Ano. Nepečený chléb a pizzové těsto produkují ve psím těle etanol a syrové kvasnicové těsto se může v žaludku zvětšovat. Obraťte se na veterináře.",
         "hr": "Da. Nepečeni kruh i tijesto za pizzu stvaraju etanol u tijelu psa, a sirovo tijesto s kvascem može se širiti u želucu. Obrati se veterinaru.",
         "sv": "Ja. Obakat bröd och obakad pizzadeg bildar etanol inne i hundens kropp, och rå jästdeg kan svälla i magen. Kontakta din veterinär.",
@@ -335,6 +351,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "45973f8a7bfe68f2aa976fff63b6e61f7999c2c1be7477e114ece0fcf9d4a759"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f3cc6106ec37e7975c1786a7f3976841a97569c7d051f6d30a87648c874d964d"
     },
     "cs": {
       "status": "verified",

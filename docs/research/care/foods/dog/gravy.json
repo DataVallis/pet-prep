@@ -4,6 +4,7 @@
   "name": {
     "en": "Gravy",
     "sl": "Mesna omaka",
+    "es": "Salsa de carne",
     "hr": "Umak od mesa",
     "sv": "Sås",
     "da": "Sovs",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat gravy?",
     "sl": "Ali lahko psi jedo mesno omako?",
+    "es": "¿Pueden los perros comer salsa de carne?",
     "hr": "Smiju li psi jesti umak od mesa?",
     "sv": "Får hundar äta sås?",
     "da": "Må hunde spise sovs?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "gravy",
     "sl": "mesna-omaka",
+    "es": "salsa-de-carne",
     "hr": "umak-od-mesa",
     "sv": "sas",
     "da": "sovs",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "No, it's best to keep gravy away from dogs. Gravy is a fatty food that can upset a dog's stomach and can lead to pancreatitis. Gravy made from stock cubes is high in salt, and onion gravy contains onion, which dogs should not eat.",
     "sl": "Ne, mesno omako je bolje držati stran od psa. Omaka je mastna hrana, ki lahko psu povzroči prebavne težave in vodi v vnetje trebušne slinavke. Omaka iz jušnih kock je zelo slana, čebulna omaka pa vsebuje čebulo, ki je psi ne smejo jesti.",
+    "es": "No, es mejor mantener la salsa de carne lejos de los perros. Es un alimento graso que puede sentar mal al estómago del perro y provocar pancreatitis. La salsa hecha con pastillas de caldo lleva mucha sal, y la salsa de cebolla contiene cebolla, que los perros no deben comer.",
     "hr": "Ne, umak od mesa najbolje je držati podalje od pasa. To je masna hrana koja može nadražiti želudac psa i dovesti do upale gušterače. Umak od kocke za juhu bogat je solju, a umak s lukom sadrži luk, koji psi ne smiju jesti.",
     "sv": "Nej, det är bäst att hålla sås borta från hundar. Sås är fet mat som kan reta hundens mage och leda till bukspottkörtelinflammation (pankreatit). Sås som är gjord på buljongtärning innehåller mycket salt, och lökbaserad sås innehåller lök, som hundar inte ska äta.",
     "da": "Nej, det er bedst at holde sovs væk fra hunde. Sovs er fed mad, som kan give hunden dårlig mave og kan føre til betændelse i bugspytkirtlen. Sovs lavet af bouillonterninger indeholder meget salt, og løgsovs indeholder løg, som hunde ikke må spise.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
     "sl": "Mesna omaka sama po sebi ni strupena, a maslo, mesni sok, omake in druga mastna hrana lahko povzročijo prebavne težave z drisko in bruhanjem. Mastna hrana lahko povzroči tudi vnetje trebušne slinavke (pankreatitis), ki lahko zahteva zdravljenje v bolnišnici. Jušne kocke, iz katerih se pripravlja omaka, vsebujejo veliko natrija, psi pa ne smejo jesti kuhane hrane s čebulo, kot je čebulna omaka.",
+    "es": "La salsa de carne no es tóxica en sí, pero la mantequilla, la grasa de la carne, las salsas de carne y otros alimentos grasos pueden causar malestar de estómago con diarrea y vómitos. Los alimentos grasos también pueden provocar pancreatitis, una inflamación del páncreas que puede requerir hospitalización. Las pastillas de caldo que se usan para las salsas llevan mucho sodio, y los perros no deben comer alimentos cocinados con cebolla, como la salsa de cebolla.",
     "hr": "Umak od mesa sam po sebi nije otrovan, ali maslac, masnoća od pečenja, umaci i druga masna hrana mogu izazvati želučane tegobe s proljevom i povraćanjem. Masna hrana može izazvati i upalu gušterače, koja može zahtijevati bolničko liječenje. Kocke za juhu koje se koriste za umak sadrže mnogo natrija, a psi ne bi smjeli jesti termički obrađenu hranu koja sadrži luk, poput umaka s lukom.",
     "sv": "Sås är inte giftig i sig, men smör, stekfett, såser och annan fet mat kan ge magbesvär med diarré och kräkningar. Fet mat kan också orsaka bukspottkörtelinflammation (pankreatit), som kan kräva sjukhusvård. Buljongtärningar som används till sås innehåller mycket natrium, och hundar ska inte äta tillagad mat som innehåller lök, till exempel lökbaserad sås.",
     "da": "Sovs er ikke giftigt i sig selv, men smør, stegefedt, sovs og anden fed mad kan give mavebesvær med diarré og opkast. Fed mad kan også give betændelse i bugspytkirtlen, som kan kræve behandling på dyrehospital. Bouillonterninger til sovs indeholder meget natrium, og hunde bør ikke spise tilberedt mad med løg, fx løgsovs.",
@@ -76,6 +81,13 @@
       "Bolečine v trebuhu",
       "Pes noče jesti",
       "Utrujenost"
+    ],
+    "es": [
+      "Vómitos, a veces de 1 a 4 días después de la comida grasa",
+      "Diarrea",
+      "Dolor de barriga",
+      "No querer comer",
+      "Cansancio"
     ],
     "hr": [
       "Povraćanje, ponekad 1–4 dana nakon masnog obroka",
@@ -137,6 +149,7 @@
   "what_to_do": {
     "en": "If your dog ate gravy or other fatty food and shows vomiting, tummy pain or tiredness in the following days, contact your vet. Signs can be delayed by a few days. If the gravy contained onions or garlic, contact your vet promptly.",
     "sl": "Če je pes pojedel omako ali drugo mastno hrano in v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Znaki se lahko pokažejo z nekajdnevno zamudo. Če je omaka vsebovala čebulo ali česen, se takoj obrnite na veterinarja.",
+    "es": "Si tu perro ha comido salsa de carne u otro alimento graso y en los días siguientes tiene vómitos, dolor de barriga o cansancio, ponte en contacto con tu veterinario. Los síntomas pueden tardar unos días en aparecer. Si la salsa llevaba cebolla o ajo, ponte en contacto con tu veterinario sin demora.",
     "hr": "Ako je pas pojeo umak od mesa ili drugu masnu hranu i idućih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Znakovi se mogu javiti tek nakon nekoliko dana. Ako je umak sadržavao luk ili češnjak, što prije se obrati veterinaru.",
     "sv": "Om din hund har ätit sås eller annan fet mat och får kräkningar, ont i magen eller är slö under de följande dagarna: kontakta din veterinär. Tecknen kan komma med några dagars fördröjning. Om såsen innehöll lök eller vitlök ska du kontakta din veterinär utan dröjsmål.",
     "da": "Hvis din hund har spist sovs eller anden fed mad og får opkast, mavesmerter eller bliver træt i dagene efter, skal du kontakte din dyrlæge. Tegnene kan komme med nogle dages forsinkelse. Hvis sovsen indeholdt løg eller hvidløg, skal du kontakte din dyrlæge hurtigt.",
@@ -150,6 +163,7 @@
   "child": {
     "en": "Gravy is a rich people sauce that can give dogs a sore tummy. Keep it on your own plate.",
     "sl": "Mesna omaka je mastna omaka za ljudi, zaradi katere psa lahko boli trebušček. Naj ostane na tvojem krožniku.",
+    "es": "La salsa de carne es una salsa muy rica para las personas que puede dar dolor de barriga a los perros. Déjala en tu plato.",
     "hr": "Umak od mesa je masan umak za ljude od kojeg psa može zaboljeti trbuščić. Neka ostane na tvom tanjuru.",
     "sv": "Sås är något tungt och fett för människor, och det kan ge hundar ont i magen. Behåll den på din egen tallrik.",
     "da": "Sovs er fed mad til mennesker og kan give hunde ondt i maven. Behold den på din egen tallerken.",
@@ -164,6 +178,7 @@
       "q": {
         "en": "Can I pour a little gravy over my dog's food?",
         "sl": "Ali lahko psu prelijem hrano z malo omake?",
+        "es": "¿Puedo echar un poco de salsa de carne sobre la comida de mi perro?",
         "hr": "Smijem li psu malo umaka preliti preko hrane?",
         "sv": "Kan jag hälla lite sås över min hunds mat?",
         "da": "Må jeg hælde lidt sovs over min hunds mad?",
@@ -176,6 +191,7 @@
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
         "sl": "Raje ne. Veterinarska dobrodelna organizacija svetuje, naj bo hrana, ki jo delite s psom, navadna in ne prelita z omako ali začinjena, saj bi to lahko psu povzročilo prebavne težave.",
+        "es": "Mejor que no. Una organización benéfica veterinaria aconseja que cualquier comida que compartas sea sencilla y no vaya cubierta de salsa ni de condimentos, porque podría sentarle mal al estómago a tu perro.",
         "hr": "Bolje ne. Dobrotvorna veterinarska organizacija savjetuje da svaka hrana koju dijeliš bude obična i da nije prelivena umakom ili začinima, jer to može nadražiti želudac psa.",
         "sv": "Hellre inte. En djurskyddsorganisation som bedriver veterinärvård rekommenderar att mat du delar är okryddad och inte täckt med sås, skysås eller kryddor, eftersom det kan reta hundens mage.",
         "da": "Helst ikke. En velgørende dyrlægeorganisation anbefaler at holde al mad, du deler, almindelig og uden sovs, saucer eller krydderier, da det kan give din hund dårlig mave.",
@@ -264,6 +280,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "638b00d818ec2c6b3b0675c905e7eca2cc6d9cf9b6d3884ba27c7272aa968946"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7c867e7eb584be4370504299470d9589c7ac1f1168dcfcaa738d6bf8158ab0a7"
     },
     "hr": {
       "status": "verified",

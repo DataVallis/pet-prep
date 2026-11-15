@@ -4,6 +4,7 @@
   "name": {
     "en": "Cake",
     "sl": "Torta",
+    "es": "Tarta",
     "cs": "Dort",
     "hr": "Kolač",
     "sv": "Kaka",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can dogs eat cake?",
     "sl": "Ali lahko psi jedo torto?",
+    "es": "¿Pueden los perros comer tarta?",
     "cs": "Mohou psi jíst dort?",
     "hr": "Smiju li psi jesti kolač?",
     "sv": "Får hundar äta kaka?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "cake",
     "sl": "torta",
+    "es": "tarta",
     "cs": "dort",
     "hr": "kolac",
     "sv": "kaka",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "No, it is best not to share cake with your dog. Its high sugar and fat are bad for a dog's health, and chocolate cake, cakes with raisins and cakes sweetened with xylitol are toxic to dogs.",
     "sl": "Ne, torte raje ne delite s psom. Veliko sladkorja in maščobe psu škodi, torte s čokolado, rozinami ali ksilitolom pa so za pse strupene.",
+    "es": "No, es mejor no compartir la tarta con tu perro. Su alto contenido en azúcar y grasa es malo para la salud del perro, y la tarta de chocolate, las tartas con pasas y las endulzadas con xilitol son tóxicas para los perros.",
     "cs": "Ne, nejlepší je dort se psem nesdílet. Hodně cukru a tuku škodí psímu zdraví a čokoládový dort, dorty s rozinkami a dorty slazené xylitolem jsou pro psy jedovaté.",
     "hr": "Ne, najbolje je da kolač ne dijeliš sa psom. Visok udio šećera i masti šteti zdravlju psa, a čokoladni kolač, kolači s grožđicama i kolači zasladeni ksilitolom otrovni su za pse.",
     "sv": "Nej, det är bäst att inte dela kaka med din hund. Det höga sockerinnehållet och fettet är dåligt för hundens hälsa, och chokladkaka, kakor med russin och kakor som sötats med xylitol är giftiga för hundar.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "Chocolate cake can poison a dog, with signs ranging from vomiting and diarrhoea to an irregular heartbeat and seizures. Christmas cake contains raisins, sultanas and currants, and xylitol can be used in cakes, muffins and pies. Even without these, cake brings a lot of sugar and fat, and sugary, high-fat foods can lead to pancreatitis. Because the risk depends on the ingredients, we rate cake not recommended; cake with chocolate, raisins or xylitol needs a vet at once.",
     "sl": "Čokoladna torta lahko psa zastrupi; znaki segajo od bruhanja in driske do nerednega srčnega utripa in krčev. Božični kolač vsebuje rozine, sultanine in korintke, ksilitol pa je lahko v tortah, mafinih in pitah. Tudi brez teh sestavin ima torta veliko sladkorja in maščobe, sladka in mastna hrana pa lahko povzroči pankreatitis. Ker je tveganje odvisno od sestavin, torto uvrščamo med nepriporočljive; torta s čokolado, rozinami ali ksilitolom pomeni takojšen obisk veterinarja.",
+    "es": "La tarta de chocolate puede intoxicar a un perro, con síntomas que van desde vómitos y diarrea hasta latidos irregulares y convulsiones. El pastel de Navidad lleva pasas, sultanas y pasas de Corinto, y el xilitol puede usarse en tartas, magdalenas y pasteles. Incluso sin esos ingredientes, la tarta aporta mucho azúcar y grasa, y los alimentos azucarados y ricos en grasa pueden provocar pancreatitis. Como el riesgo depende de los ingredientes, valoramos la tarta como no recomendada; si lleva chocolate, pasas o xilitol, hace falta un veterinario de inmediato.",
     "cs": "Čokoládový dort může psa otrávit, s příznaky od zvracení a průjmu až po nepravidelný tep a záchvaty. Vánoční dort obsahuje rozinky, sultánky a korintky a v dortech, muffinech i koláčích se může používat xylitol. I bez těchto přísad dort přináší hodně cukru a tuku a sladká a tučná jídla mohou vést k zánětu slinivky břišní. Protože riziko závisí na složení, hodnotíme dort jako nedoporučený; dort s čokoládou, rozinkami nebo xylitolem vyžaduje okamžitou péči veterináře.",
     "hr": "Čokoladni kolač može otrovati psa, a znakovi idu od povraćanja i proljeva do nepravilnog rada srca i napadaja. Božićni kolač sadrži grožđice, sultanije i korintsko grožđe, a ksilitol se može koristiti u kolačima, mafinima i pitama. Čak i bez njih kolač donosi puno šećera i masti, a slatka hrana bogata mašću može dovesti do upale gušterače. Budući da rizik ovisi o sastojcima, kolač ocjenjujemo kao nepreporučen; kolač s čokoladom, grožđicama ili ksilitolom hitno treba veterinara.",
     "sv": "Chokladkaka kan förgifta en hund, med tecken som sträcker sig från kräkningar och diarré till oregelbunden hjärtrytm och kramper. Julkaka innehåller russin, sultanrussin och korinter, och xylitol kan användas i kakor, muffins och pajer. Även utan dessa ingredienser innehåller kaka mycket socker och fett, och söt och fet mat kan leda till bukspottkörtelinflammation (pankreatit). Eftersom risken beror på ingredienserna rekommenderar vi inte kaka; kaka med choklad, russin eller xylitol kräver veterinärvård direkt.",
@@ -77,6 +82,11 @@
       "Bruhanje in driska",
       "Nemir, tresenje, hiter ali nereden srčni utrip (čokolada)",
       "Krči"
+    ],
+    "es": [
+      "Vómitos y diarrea",
+      "Inquietud, temblores, latidos rápidos o irregulares (chocolate)",
+      "Convulsiones"
     ],
     "cs": [
       "Zvracení a průjem",
@@ -127,6 +137,7 @@
   "what_to_do": {
     "en": "If the cake contained chocolate, raisins or xylitol, contact your vet or a pet poison helpline and seek veterinary care at once. If your dog shows signs of poisoning, get veterinary care immediately.",
     "sl": "Če je torta vsebovala čokolado, rozine ali ksilitol, pokličite veterinarja ali telefonsko linijo za zastrupitve živali in nemudoma poiščite veterinarsko pomoč. Če ima pes znake zastrupitve, ga takoj odpeljite k veterinarju.",
+    "es": "Si la tarta llevaba chocolate, pasas o xilitol, ponte en contacto con tu veterinario o con una línea de información toxicológica para animales y busca atención veterinaria de inmediato. Si tu perro muestra síntomas de intoxicación, llévalo al veterinario enseguida.",
     "cs": "Pokud dort obsahoval čokoládu, rozinky nebo xylitol, obraťte se na veterináře nebo na toxikologickou linku pro zvířata a okamžitě vyhledejte veterinární péči. Pokud má pes příznaky otravy, jeďte s ním okamžitě k veterináři.",
     "hr": "Ako je kolač sadržavao čokoladu, grožđice ili ksilitol, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja i odmah potraži veterinarsku pomoć. Ako pas pokazuje znakove trovanja, odmah ga odvedi veterinaru.",
     "sv": "Om kakan innehöll choklad, russin eller xylitol ska du kontakta din veterinär eller giftrådgivningen för djur och söka veterinärvård direkt. Om din hund visar tecken på förgiftning ska du söka veterinärvård omedelbart.",
@@ -141,6 +152,7 @@
   "child": {
     "en": "Cake is a treat for people. Some cakes have chocolate or raisins that are bad for dogs, so keep your slice to yourself.",
     "sl": "Torta je priboljšek za ljudi. Nekatere torte vsebujejo čokolado ali rozine, ki so za pse slabe, zato svoj kos obdrži zase.",
+    "es": "La tarta es un capricho para las personas. Algunas llevan chocolate o pasas, que son malos para los perros, así que quédate tu trozo.",
     "cs": "Dort je pamlsek pro lidi. Některé dorty mají čokoládu nebo rozinky, které psům škodí, takže svůj kousek nech pro sebe.",
     "hr": "Kolač je poslastica za ljude. U nekima su čokolada ili grožđice koje psu škode, zato svoj komad zadrži za sebe.",
     "sv": "Kaka är en godbit för människor. Vissa kakor innehåller choklad eller russin som är dåligt för hundar, så behåll din bit själv.",
@@ -156,6 +168,7 @@
       "q": {
         "en": "What about Christmas cake or mince pies?",
         "sl": "Kaj pa božični kolač ali pitice s suhim sadjem?",
+        "es": "¿Y el pastel de Navidad o los mince pies?",
         "cs": "A co vánoční dort nebo koláčky s ovocnou náplní?",
         "hr": "Što je s božićnim kolačem ili pitama s nadjevom od suhog voća (mince pies)?",
         "sv": "Hur är det med julkaka eller mince pies?",
@@ -169,6 +182,7 @@
       "a": {
         "en": "No. Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to dogs.",
         "sl": "Ne. Pitice s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintke, ki so za pse zelo strupeni.",
+        "es": "No. Los mince pies y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, que son muy tóxicas para los perros.",
         "cs": "Ne. Koláčky s ovocnou náplní i vánoční dort obsahují rozinky, sultánky a korintky, které jsou pro psy vysoce jedovaté.",
         "hr": "Ne. Mince pies i božićni kolač sadrže grožđice, sultanije i korintsko grožđe, koji su vrlo otrovni za pse.",
         "sv": "Nej. Mince pies och julkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för hundar.",
@@ -184,6 +198,7 @@
       "q": {
         "en": "Is a sugar-free cake safer?",
         "sl": "Ali je torta brez sladkorja varnejša?",
+        "es": "¿Es más segura una tarta sin azúcar?",
         "cs": "Je dort bez cukru bezpečnější?",
         "hr": "Je li kolač bez šećera sigurniji?",
         "sv": "Är en sockerfri kaka säkrare?",
@@ -197,6 +212,7 @@
       "a": {
         "en": "Not necessarily. Xylitol can be used in baked goods such as cakes, muffins and pies, and it is toxic to dogs. Check the label, especially on products sold as sugar-free or low sugar.",
         "sl": "Ne nujno. Ksilitol se lahko uporablja v pecivu, kot so torte, mafini in pite, in je za pse strupen. Preberite deklaracijo, zlasti pri izdelkih brez sladkorja ali z malo sladkorja.",
+        "es": "No necesariamente. El xilitol puede usarse en productos de panadería como tartas, magdalenas y pasteles, y es tóxico para los perros. Mira la etiqueta, sobre todo en los productos que se anuncian sin azúcar o bajos en azúcar.",
         "cs": "Nemusí být. Xylitol se může používat v pečivu, například v dortech, muffinech a koláčích, a je pro psy jedovatý. Čtěte složení na obalu, zvlášť u výrobků prodávaných jako bez cukru nebo se sníženým obsahem cukru.",
         "hr": "Ne nužno. Ksilitol se može koristiti u pekarskim proizvodima poput kolača, mafina i pita, a otrovan je za pse. Provjeri deklaraciju, osobito na proizvodima koji se prodaju kao bez šećera ili s malo šećera.",
         "sv": "Inte nödvändigtvis. Xylitol kan användas i bakverk som kakor, muffins och pajer, och det är giftigt för hundar. Kontrollera etiketten, särskilt på produkter som säljs som sockerfria eller med lågt sockerinnehåll.",
@@ -286,6 +302,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8042921a065421accc824a4e33bae09be6df0f52fbf8a4b978e23594795295d7"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bd5a52464a249b709c118c1cd4abfc0191000da8308e865788fba41f2479d642"
     },
     "cs": {
       "status": "verified",

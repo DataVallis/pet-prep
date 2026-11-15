@@ -4,6 +4,7 @@
   "name": {
     "en": "Mustard",
     "sl": "Gorčica",
+    "es": "Mostaza",
     "hr": "Senf",
     "sv": "Senap",
     "da": "Sennep",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat mustard?",
     "sl": "Ali lahko psi jedo gorčico?",
+    "es": "¿Pueden los perros comer mostaza?",
     "hr": "Smiju li psi jesti senf?",
     "sv": "Får hundar äta senap?",
     "da": "Må hunde spise sennep?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "mustard",
     "sl": "gorcica",
+    "es": "mostaza",
     "hr": "senf",
     "sv": "senap",
     "da": "sennep",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "No, you should never give your dog mustard. Mustard seeds contain compounds that can inflame a dog's stomach and intestines, and mustard can cause vomiting. A small lick off your plate is unlikely to cause a problem, but a large amount could be serious.",
     "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava.",
+    "es": "No, nunca le des mostaza a tu perro. Las semillas de mostaza contienen compuestos que pueden inflamar el estómago y los intestinos del perro, y la mostaza puede provocar vómitos. Es poco probable que un pequeño lametón de tu plato cause un problema, pero una cantidad grande podría ser grave.",
     "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna.",
     "sv": "Nej, du ska aldrig ge din hund senap. Senapsfrön innehåller ämnen som kan ge inflammation i hundens mage och tarmar, och senap kan orsaka kräkningar. En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan vara allvarlig.",
     "da": "Nej, du bør aldrig give din hund sennep. Sennepsfrø indeholder stoffer, som kan give betændelse i hundens mave og tarme, og sennep kan give opkast. Hvis hunden bare slikker lidt af din tallerken, giver det næppe problemer, men en stor mængde kan være alvorligt.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
     "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet.",
+    "es": "La mostaza contiene semillas de mostaza, y estas llevan compuestos tóxicos que pueden provocar gastroenteritis, una inflamación del estómago y los intestinos. La mostaza del supermercado también puede llevar otros ingredientes que podrían perjudicar a tu perro. Los perros más pequeños reaccionan con menos cantidad que los grandes. Una fuente dice simplemente que la mostaza puede sentar mal al estómago del perro y otra la califica de tóxica, así que seguimos el consejo más estricto.",
     "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku.",
     "sv": "Senap innehåller senapsfrön, och de innehåller giftiga ämnen som kan leda till gastroenterit, en inflammation i mage och tarmar. Senap från affären kan också innehålla andra ingredienser som kan skada din hund. Mindre hundar behöver äta mindre än större hundar för att reagera. En källa säger bara att senap kan reta hundens mage, en annan kallar den giftig, så vi följer det strängare rådet.",
     "da": "Sennep indeholder sennepsfrø, og de indeholder giftige stoffer, som kan give mave-tarm-betændelse, en betændelse i mave og tarme. Sennep fra butikken kan også indeholde andre ingredienser, som kan skade din hund. Mindre hunde skal spise mindre end større hunde for at reagere. En kilde skriver blot at sennep kan give hunden dårlig mave, en anden kalder det giftigt, så vi følger det strengeste råd.",
@@ -76,6 +81,13 @@
       "Bruhanje",
       "Driska",
       "Bolečine v trebuhu"
+    ],
+    "es": [
+      "No querer comer",
+      "Babeo",
+      "Vómitos",
+      "Diarrea",
+      "Dolor de barriga"
     ],
     "hr": [
       "Odbijanje hrane",
@@ -137,6 +149,7 @@
   "what_to_do": {
     "en": "A small lick is unlikely to cause a problem. If your dog ate a lot of mustard, or you notice signs such as vomiting, drooling or tummy pain, contact your vet as soon as possible.",
     "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja.",
+    "es": "Es poco probable que un pequeño lametón cause un problema. Si tu perro ha comido mucha mostaza, o notas síntomas como vómitos, babeo o dolor de barriga, ponte en contacto con tu veterinario cuanto antes.",
     "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru.",
     "sv": "En liten slick orsakar sällan problem. Om din hund har ätit mycket senap, eller om du märker tecken som kräkningar, dregling eller ont i magen, kontakta din veterinär så snart som möjligt.",
     "da": "Hvis hunden bare har slikket lidt, giver det næppe problemer. Hvis din hund har spist meget sennep, eller du ser tegn som opkast, savlen eller mavesmerter, skal du kontakte din dyrlæge hurtigst muligt.",
@@ -150,6 +163,7 @@
   "child": {
     "en": "Mustard can give dogs a sore tummy. Keep it on your own plate, away from your dog.",
     "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa.",
+    "es": "La mostaza puede dar dolor de barriga a los perros. Déjala en tu plato, lejos de tu perro.",
     "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa.",
     "sv": "Senap kan ge hundar ont i magen. Behåll den på din egen tallrik, långt från din hund.",
     "da": "Sennep kan give hunde ondt i maven. Behold den på din egen tallerken, væk fra din hund.",
@@ -164,6 +178,7 @@
       "q": {
         "en": "My dog licked a little mustard. Is that a problem?",
         "sl": "Pes je polizal malo gorčice. Je to težava?",
+        "es": "Mi perro ha lamido un poco de mostaza. ¿Es un problema?",
         "hr": "Moj je pas poližao malo senfa. Je li to problem?",
         "sv": "Min hund slickade i sig lite senap. Är det ett problem?",
         "da": "Min hund har slikket lidt sennep. Er det et problem?",
@@ -176,6 +191,7 @@
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
         "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji.",
+        "es": "Es poco probable que un pequeño lametón de tu plato cause un problema, pero una cantidad grande podría causar un problema grave. Los perros pequeños reaccionan con menos cantidad que los grandes.",
         "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih.",
         "sv": "En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan ge ett allvarligt problem. Mindre hundar reagerar på mindre än större hundar.",
         "da": "Hvis hunden bare har slikket lidt fra din tallerken, giver det næppe problemer, men en stor mængde kan give et alvorligt problem. Mindre hunde reagerer på mindre end større hunde.",
@@ -190,6 +206,7 @@
       "q": {
         "en": "Is any kind of mustard safe?",
         "sl": "Je katera vrsta gorčice varna?",
+        "es": "¿Es segura alguna clase de mostaza?",
         "hr": "Je li neka vrsta senfa sigurna?",
         "sv": "Finns det någon sorts senap som är säker?",
         "da": "Findes der en slags sennep, som er ufarlig?",
@@ -202,6 +219,7 @@
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
         "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski.",
+        "es": "No. Hay que evitar todos los tipos de mostaza, incluidas la casera, la silvestre, la inglesa y la de Dijon.",
         "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf.",
         "sv": "Nej. Alla sorters senap bör undvikas, även hemgjord, vild, engelsk och dijonsenap.",
         "da": "Nej. Alle slags sennep bør undgås, også hjemmelavet, vild, engelsk og Dijon-sennep.",
@@ -295,6 +313,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75d5dfdfcae20d8996f425f74e2ccc7179069253977a1d9f71d7d45599606f13"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40c06d80726e664ff4cdadd63adaacc5e379201c9a17e8a771cb61ff2b62e1e5"
     },
     "hr": {
       "status": "verified",
