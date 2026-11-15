@@ -5,32 +5,37 @@
     "en": "Deli meat",
     "sl": "Mesni narezek",
     "hr": "Mesni narezak",
-    "sv": "Charkuterier och pålägg"
+    "sv": "Charkuterier och pålägg",
+    "da": "Pålæg"
   },
   "question": {
     "en": "Can cats eat deli meat?",
     "sl": "Ali lahko mačke jedo mesni narezek?",
     "hr": "Smiju li mačke jesti mesni narezak?",
-    "sv": "Får katter äta pålägg?"
+    "sv": "Får katter äta pålägg?",
+    "da": "Må katte spise pålæg?"
   },
   "url_slug": {
     "en": "deli-meat",
     "sl": "mesni-narezek",
     "hr": "mesni-narezak",
-    "sv": "palagg"
+    "sv": "palagg",
+    "da": "paalaeg"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Deli and lunch meat is usually high in salt and may contain seasonings, preservatives or nitrates that can upset a cat's stomach. RSPCA Australia advises avoiding cooked manufactured meats for cats. Plain cooked meat without spices is a better choice.",
     "sl": "Raje ne. Mesni narezek je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate, ki mački lahko razdražijo želodec. RSPCA Avstralija svetuje, da mačkam ne dajete kuhanih mesnih izdelkov. Boljša izbira je navadno kuhano meso brez začimb.",
     "hr": "Bolje ne. Narezak je obično bogat soli i može sadržavati začine, konzervanse ili nitrate koji mogu nadražiti mačji želudac. RSPCA Australia savjetuje da se mačkama ne daju termički obrađeni industrijski mesni proizvodi. Bolji je izbor jednostavno termički obrađeno meso bez začina.",
-    "sv": "Det är bäst att låta bli. Charkuterier och smörgåspålägg är oftast salta och kan innehålla kryddor, konserveringsmedel eller nitrat som kan reta kattens mage. RSPCA Australia avråder från tillagat, industriellt framställt kött åt katter. Okryddat, tillagat kött är ett bättre val."
+    "sv": "Det är bäst att låta bli. Charkuterier och smörgåspålägg är oftast salta och kan innehålla kryddor, konserveringsmedel eller nitrat som kan reta kattens mage. RSPCA Australia avråder från tillagat, industriellt framställt kött åt katter. Okryddat, tillagat kött är ett bättre val.",
+    "da": "Helst ikke. Pålæg af kød er som regel meget salt og kan indeholde krydderier, konserveringsmidler eller nitrater, som kan give kattens mave problemer. RSPCA Australia fraråder at give katte forarbejdede, tilberedte kødprodukter. Almindeligt tilberedt kød uden krydderier er et bedre valg."
   },
   "why": {
     "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
     "sl": "Veterinarji pri PetMD pravijo, da mačke ne bi smele jesti puranjega narezka, ker je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate. Purina navaja, da so puranji narezek in drugi predelani puranji izdelki običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1).",
     "hr": "Veterinari iz PetMD-a kažu da mačke ne bi smjele jesti puretinu iz narezaka, jer je obično bogata natrijem i može sadržavati začine, konzervanse ili nitrate. Purina napominje da su puretina iz narezaka i druga prerađena puretina obično prepune dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1).",
-    "sv": "Veterinärer på PetMD säger att katter inte bör äta kalkonpålägg, eftersom det oftast innehåller mycket natrium och kan innehålla kryddor, konserveringsmedel eller nitrat. Purina påpekar att kalkonpålägg och annat bearbetat kalkonkött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1)."
+    "sv": "Veterinärer på PetMD säger att katter inte bör äta kalkonpålägg, eftersom det oftast innehåller mycket natrium och kan innehålla kryddor, konserveringsmedel eller nitrat. Purina påpekar att kalkonpålägg och annat bearbetat kalkonkött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1).",
+    "da": "Dyrlæger fra PetMD skriver at katte ikke bør spise kalkunpålæg, fordi det som regel indeholder meget natrium og kan indeholde krydderier, konserveringsmidler eller nitrater. Purina skriver at kalkunpålæg og andet forarbejdet kalkunkød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1)."
   },
   "signs": {
     "en": [
@@ -44,20 +49,25 @@
     ],
     "sv": [
       "Orolig mage"
+    ],
+    "da": [
+      "Mavebesvær"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate deli meat seasoned with onion or garlic, contact your vet as soon as possible. If she has a stomach upset afterwards, call your vet for advice.",
     "sl": "Če je mačka pojedla mesni narezek, začinjen s čebulo ali česnom, čim prej pokličite veterinarja. Če ima nato prebavne težave, se za nasvet obrnite na veterinarja.",
     "hr": "Ako je mačka pojela narezak začinjen lukom ili češnjakom, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe, nazovi veterinara za savjet.",
-    "sv": "Om din katt har ätit pålägg som är kryddat med lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om katten får orolig mage efteråt, ring din veterinär och be om råd."
+    "sv": "Om din katt har ätit pålägg som är kryddat med lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om katten får orolig mage efteråt, ring din veterinär och be om råd.",
+    "da": "Hvis din kat har spist pålæg med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær bagefter, skal du ringe til din dyrlæge for at få råd."
   },
   "serving": null,
   "child": {
     "en": "Sandwich meat is too salty for cats. Kitty is happiest with her own cat food.",
     "sl": "Narezek za sendviče je za muce preslan. Muca je najbolj vesela svoje mačje hrane.",
     "hr": "Meso za sendviče previše je slano za mačke. Maca je najsretnija sa svojom mačjom hranom.",
-    "sv": "Smörgåspålägg är för salt för katter. Katten mår bäst av sin egen kattmat."
+    "sv": "Smörgåspålägg är för salt för katter. Katten mår bäst av sin egen kattmat.",
+    "da": "Pålæg er for salt til katte. Din kat er gladest for sin egen kattemad."
   },
   "faq": [
     {
@@ -65,13 +75,15 @@
         "en": "What meat can I share instead?",
         "sl": "Kakšno meso lahko mački dam namesto tega?",
         "hr": "Koje meso mogu podijeliti s mačkom umjesto toga?",
-        "sv": "Vilket kött kan jag dela med mig av i stället?"
+        "sv": "Vilket kött kan jag dela med mig av i stället?",
+        "da": "Hvilket kød kan jeg give i stedet?"
       },
       "a": {
         "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
         "sl": "Kuhano pusto meso, na primer piščanec ali puran, brez začimb in dodatkov je za mačke v redu. Predelanemu in začinjenemu mesu se izogibajte.",
         "hr": "Termički obrađeno nemasno meso, poput piletine ili puretine bez ikakvih začina i dodataka, u redu je za mačke. Izbjegavaj prerađeno i začinjeno meso.",
-        "sv": "Tillagat, magert kött som kyckling eller kalkon utan kryddor eller tillbehör går bra för katter. Undvik bearbetat och kryddat kött."
+        "sv": "Tillagat, magert kött som kyckling eller kalkon utan kryddor eller tillbehör går bra för katter. Undvik bearbetat och kryddat kött.",
+        "da": "Tilberedt, magert kød som kylling eller kalkun uden krydderier eller sovs er fint til katte. Undgå forarbejdet og krydret kød."
       }
     }
   ],
@@ -165,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "43499fff2ef4031de85a2a4503e9e3762a5e10a03c3166487c6aa5d13ae590b2"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b1f02a19a9448ea5ea5f3ff85ee8cd2bfaaf17bdb94c09092d468cd7a0614b2"
     }
   }
 }

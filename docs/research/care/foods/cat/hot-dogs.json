@@ -5,32 +5,37 @@
     "en": "Hot dogs",
     "sl": "Hrenovke",
     "hr": "Hrenovke (hot dog)",
-    "sv": "Varmkorv"
+    "sv": "Varmkorv",
+    "da": "Hotdogs"
   },
   "question": {
     "en": "Can cats eat hot dogs?",
     "sl": "Ali lahko mačke jedo hrenovke?",
     "hr": "Smiju li mačke jesti hrenovke?",
-    "sv": "Får katter äta varmkorv?"
+    "sv": "Får katter äta varmkorv?",
+    "da": "Må katte spise hotdogs?"
   },
   "url_slug": {
     "en": "hot-dogs",
     "sl": "hrenovke",
     "hr": "hot-dog",
-    "sv": "varmkorv"
+    "sv": "varmkorv",
+    "da": "hotdogs"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Hot dogs are a processed meat, usually packed with extra salt and spices, and some added seasonings may even be toxic to cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats for cats.",
     "sl": "Raje ne. Hrenovke so predelano meso, običajno polno dodane soli in začimb, nekatere dodane začimbe pa so lahko za mačke celo strupene. RSPCA Avstralija svetuje, da mačkam ne dajete klobas in kuhanih mesnih izdelkov.",
     "hr": "Bolje ne. Hrenovke su prerađeno meso, obično prepuno dodatne soli i začina, a neki dodani začini mogu čak biti otrovni za mačke. RSPCA Australia savjetuje da se mačkama ne daju kobasice ni termički obrađeni industrijski mesni proizvodi.",
-    "sv": "Det är bäst att låta bli. Varmkorv är ett bearbetat kött, oftast fullt av extra salt och kryddor, och en del tillsatta kryddor kan till och med vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött åt katter."
+    "sv": "Det är bäst att låta bli. Varmkorv är ett bearbetat kött, oftast fullt av extra salt och kryddor, och en del tillsatta kryddor kan till och med vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött åt katter.",
+    "da": "Helst ikke. Hotdogpølser er forarbejdet kød, som regel fyldt med ekstra salt og krydderier, og nogle af de tilsatte krydderier kan endda være giftige for katte. RSPCA Australia fraråder at give katte pølser og forarbejdede, tilberedte kødprodukter."
   },
   "why": {
     "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
     "sl": "Purina navaja, da so puranje hrenovke, puranje klobase, mesni narezki in drugo predelano meso običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo klobasam in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). RSPCA opozarja, da je predelano meso, kot so hrenovke v slanini, izjemno slano, čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, pa sta za mačke strupena.",
     "hr": "Purina napominje da su hrenovke od puretine, kobasice od puretine, narezak i drugo prerađeno meso obično prepuni dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje kobasica i termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1). RSPCA upozorava da je prerađeno meso poput kobasica omotanih slaninom (pigs in blankets) iznimno slano, a luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke.",
-    "sv": "Purina påpekar att kalkonkorv, kalkonpålägg och annat bearbetat kött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). RSPCA varnar för att bearbetat kött som baconlindad korv är otroligt salt, och lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter."
+    "sv": "Purina påpekar att kalkonkorv, kalkonpålägg och annat bearbetat kött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). RSPCA varnar för att bearbetat kött som baconlindad korv är otroligt salt, och lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter.",
+    "da": "Purina skriver at hotdogpølser af kalkun, kalkunpølser, pålæg og andet forarbejdet kød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder pølser og forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1). RSPCA advarer om at forarbejdet kød som pølser svøbt i bacon er utroligt salt, og løg og hvidløg, som findes i mange færdiglavede produkter, er giftige for katte."
   },
   "signs": {
     "en": [
@@ -48,20 +53,26 @@
     "sv": [
       "Orolig mage",
       "Diarré"
+    ],
+    "da": [
+      "Mavebesvær",
+      "Diarré"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a hot dog that may contain onion or garlic, contact your vet as soon as possible. If she has a stomach upset or diarrhoea afterwards, call your vet for advice.",
     "sl": "Če je mačka pojedla hrenovko, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja.",
     "hr": "Ako je mačka pojela hrenovku koja bi mogla sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe ili proljev, nazovi veterinara za savjet.",
-    "sv": "Om din katt har ätit en varmkorv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon får orolig mage eller diarré efteråt, ring din veterinär och be om råd."
+    "sv": "Om din katt har ätit en varmkorv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon får orolig mage eller diarré efteråt, ring din veterinär och be om råd.",
+    "da": "Hvis din kat har spist en hotdog, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær eller diarré bagefter, skal du ringe til din dyrlæge for at få råd."
   },
   "serving": null,
   "child": {
     "en": "Hot dogs are a salty people snack. Kitty is happier with her own cat treats.",
     "sl": "Hrenovke so slan prigrizek za ljudi. Muca je bolj vesela svojih mačjih priboljškov.",
     "hr": "Hrenovke su slana grickalica za ljude. Maci je draže sa svojim mačjim poslasticama.",
-    "sv": "Varmkorv är en salt mellanmålsmat för människor. Katten blir gladare av sitt eget kattgodis."
+    "sv": "Varmkorv är en salt mellanmålsmat för människor. Katten blir gladare av sitt eget kattgodis.",
+    "da": "Hotdogs er en salt snack til mennesker. Din kat er gladere for sine egne godbidder."
   },
   "faq": [
     {
@@ -69,13 +80,15 @@
         "en": "Is one tiny bite harmful?",
         "sl": "Ali en majhen grižljaj škodi?",
         "hr": "Je li jedan sitan zalogaj štetan?",
-        "sv": "Är en pytteliten tugga skadlig?"
+        "sv": "Är en pytteliten tugga skadlig?",
+        "da": "Gør en lille bid noget?"
       },
       "a": {
         "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
         "sl": "Majhen košček nezačinjenega predelanega puranjega mesa, na primer puranje hrenovke, morda ne bo zelo škodil, vendar ga je bolje ne dajati redno, začinjene hrenovke pa lahko vsebujejo čebulo ali česen, ki sta za mačke strupena.",
         "hr": "Sitan komadić nezačinjene prerađene puretine, poput hrenovke od puretine, vjerojatno neće mnogo naškoditi, ali je bolje ne davati je redovito, a začinjene hrenovke mogu sadržavati luk ili češnjak, koji su otrovni za mačke.",
-        "sv": "En liten bit okryddat bearbetat kalkonkött, som en kalkonkorv, gör kanske inte så stor skada, men det är bäst att inte ge det regelbundet, och kryddade korvar kan innehålla lök eller vitlök, som är giftigt för katter."
+        "sv": "En liten bit okryddat bearbetat kalkonkött, som en kalkonkorv, gör kanske inte så stor skada, men det är bäst att inte ge det regelbundet, och kryddade korvar kan innehålla lök eller vitlök, som är giftigt för katter.",
+        "da": "En lille bid forarbejdet kalkunkød uden krydderier, fx en kalkunpølse, gør måske ikke ret meget skade, men det er bedst ikke at give det jævnligt, og krydrede hotdogpølser kan indeholde løg eller hvidløg, som er giftige for katte."
       }
     }
   ],
@@ -165,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6a43d928dbf7d0c10487c9838903e4a456fe23d540a51da888cca62268c30d38"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fdd714cbf3f1b5082f0f7c23c4e1b1ea3c5c83eacec4372745b56b35ec83b088"
     }
   }
 }

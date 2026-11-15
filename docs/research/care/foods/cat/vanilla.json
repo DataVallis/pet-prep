@@ -6,21 +6,24 @@
     "sl": "Vanilijev ekstrakt",
     "cs": "Vanilkový extrakt",
     "hr": "Ekstrakt vanilije",
-    "sv": "Vaniljextrakt"
+    "sv": "Vaniljextrakt",
+    "da": "Vaniljeekstrakt"
   },
   "question": {
     "en": "Can cats have vanilla extract?",
     "sl": "Ali lahko mačke zaužijejo vanilijev ekstrakt?",
     "cs": "Mohou kočky dostat vanilkový extrakt?",
     "hr": "Smiju li mačke jesti ekstrakt vanilije?",
-    "sv": "Får katter äta vaniljextrakt?"
+    "sv": "Får katter äta vaniljextrakt?",
+    "da": "Må katte få vaniljeekstrakt?"
   },
   "url_slug": {
     "en": "vanilla",
     "sl": "vanilija",
     "cs": "vanilkovy-extrakt",
     "hr": "ekstrakt-vanilije",
-    "sv": "vaniljextrakt"
+    "sv": "vaniljextrakt",
+    "da": "vaniljeekstrakt"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, vanilijev ekstrakt hranite zunaj mačjega dosega. Vanilijev ekstrakt je večinoma iz alkohola, mačke pa so za alkohol še posebej občutljive. Ta lahko povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Če mačka popije kaj ekstrakta, takoj pokličite veterinarja.",
     "cs": "Ne, vanilkový extrakt držte od kočky dál. Vanilkový extrakt se vyrábí převážně z alkoholu a kočky jsou na alkohol zvlášť citlivé. Může způsobit zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Pokud kočka nějaký vypije, ihned zavolejte veterináři.",
     "hr": "Ne, ekstrakt vanilije drži podalje od mačke. Većim se dijelom sastoji od alkohola, a mačke su na alkohol posebno osjetljive. Može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Ako mačka popije imalo, odmah nazovi veterinara.",
-    "sv": "Nej, håll vaniljextrakt borta från din katt. Vaniljextrakt består mest av alkohol, och katter är särskilt känsliga för alkohol. Det kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Ring din veterinär direkt om din katt får i sig något."
+    "sv": "Nej, håll vaniljextrakt borta från din katt. Vaniljextrakt består mest av alkohol, och katter är särskilt känsliga för alkohol. Det kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Ring din veterinär direkt om din katt får i sig något.",
+    "da": "Nej, hold vaniljeekstrakt væk fra din kat. Vaniljeekstrakt er for det meste lavet af alkohol, og katte er særligt følsomme over for alkohol. Det kan give opkast, diarré, vaklende gang som hos en beruset og endda koma eller død. Ring straks til din dyrlæge, hvis din kat drikker noget."
   },
   "why": {
     "en": "VCA Animal Hospitals says vanilla extract is mostly made from alcohol, and that alcohol can cause vomiting, diarrhoea, a drunken gait and even coma or death. All animals are at risk of alcohol poisoning, but cats are especially sensitive.",
     "sl": "VCA Animal Hospitals navaja, da je vanilijev ekstrakt večinoma iz alkohola in da lahko alkohol povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Zastrupitev z alkoholom ogroža vse živali, mačke pa so še posebej občutljive.",
     "cs": "VCA Animal Hospitals uvádějí, že vanilkový extrakt se vyrábí převážně z alkoholu a že alkohol může způsobit zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Otravě alkoholem jsou vystavena všechna zvířata, ale kočky jsou obzvlášť citlivé.",
     "hr": "VCA Animal Hospitals navodi da se ekstrakt vanilije većim dijelom sastoji od alkohola i da alkohol može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Otrovanju alkoholom izložene su sve životinje, ali su mačke posebno osjetljive.",
-    "sv": "VCA Animal Hospitals säger att vaniljextrakt mestadels består av alkohol, och att alkohol kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alla djur riskerar alkoholförgiftning, men katter är särskilt känsliga."
+    "sv": "VCA Animal Hospitals säger att vaniljextrakt mestadels består av alkohol, och att alkohol kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alla djur riskerar alkoholförgiftning, men katter är särskilt känsliga.",
+    "da": "VCA Animal Hospitals skriver at vaniljeekstrakt for det meste er lavet af alkohol, og at alkohol kan give opkast, diarré, beruset gang og endda koma eller død. Alle dyr er i risiko for alkoholforgiftning, men katte er særligt følsomme."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Ovanlig sömnighet eller slöhet",
       "Långsam andning",
       "Vid svåra fall: darrningar, kramper eller koma"
+    ],
+    "da": [
+      "Opkast eller diarré",
+      "Vaklende, beruset gang",
+      "Usædvanlig døsighed eller sløvhed",
+      "Langsom vejrtrækning",
+      "I svære tilfælde: rysten, kramper eller koma"
     ]
   },
   "what_to_do": {
@@ -79,7 +91,8 @@
     "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje, razen če vam tako naroči veterinar.",
     "cs": "Okamžitě zavolejte veterináři nebo na toxikologickou linku pro zvířata. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení, pokud vám to neřekne veterinář.",
     "hr": "Odmah nazovi veterinara ili telefonsku liniju za otrovanja životinja. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje osim ako ti veterinar to ne kaže.",
-    "sv": "Ring din veterinär eller giftrådgivningen för djur omedelbart. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma om inte din veterinär säger det."
+    "sv": "Ring din veterinär eller giftrådgivningen för djur omedelbart. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma om inte din veterinär säger det.",
+    "da": "Ring til din dyrlæge eller en giftrådgivning for dyr med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op, medmindre din dyrlæge siger, at du skal."
   },
   "serving": null,
   "child": {
@@ -87,7 +100,8 @@
     "sl": "Vanilijev ekstrakt diši sladko, a ni za muce. Stekleničko drži daleč od muce in povej odraslemu, če ga muca poliže.",
     "cs": "Vanilkový extrakt voní sladce, ale pro kočky není. Lahvičku drž od kočičky dál a kdyby z ní kočička olízla, řekni to dospělému.",
     "hr": "Ekstrakt vanilije slatko miriši, ali nije za mačke. Bočicu drži podalje od mace i reci odrasloj osobi ako maca poliže malo ekstrakta.",
-    "sv": "Vaniljextrakt doftar sött, men det är inget för katter. Håll den lilla flaskan borta från katten och säg till en vuxen om hon slickar i sig något."
+    "sv": "Vaniljextrakt doftar sött, men det är inget för katter. Håll den lilla flaskan borta från katten och säg till en vuxen om hon slickar i sig något.",
+    "da": "Vaniljeekstrakt dufter sødt, men det er ikke til katte. Hold den lille flaske væk fra din kat, og sig det til en voksen, hvis den slikker på noget."
   },
   "faq": [
     {
@@ -96,14 +110,16 @@
         "sl": "Ali je jajčni liker z vanilijo varen za mačke?",
         "cs": "Je eggnog s vanilkou pro kočky bezpečný?",
         "hr": "Je li eggnog s vanilijom siguran za mačke?",
-        "sv": "Är äggtoddy med vanilj säker för katter?"
+        "sv": "Är äggtoddy med vanilj säker för katter?",
+        "da": "Er æggepunch med vanilje ufarlig for katte?"
       },
       "a": {
         "en": "No. VCA lists vanilla extract among eggnog's risks because it is mostly alcohol, and advises contacting your vet right away if you think your cat drank eggnog.",
         "sl": "Ne. VCA vanilijev ekstrakt navaja med nevarnostmi jajčnega likerja, ker je večinoma iz alkohola, in svetuje, da takoj pokličete veterinarja, če mislite, da je mačka pila jajčni liker.",
         "cs": "Ne. VCA uvádí vanilkový extrakt jako riziko v nápoji eggnog, protože se vyrábí převážně z alkoholu, a radí ihned se obrátit na veterináře, pokud se domníváte, že kočka eggnog pila.",
         "hr": "Ne. VCA među rizicima eggnoga navodi ekstrakt vanilije, jer se većim dijelom sastoji od alkohola, i savjetuje da se odmah obratiš veterinaru ako misliš da je mačka popila eggnog.",
-        "sv": "Nej. VCA nämner vaniljextrakt bland riskerna med äggtoddy, eftersom det mest består av alkohol, och råder dig att kontakta din veterinär direkt om du tror att din katt har druckit äggtoddy."
+        "sv": "Nej. VCA nämner vaniljextrakt bland riskerna med äggtoddy, eftersom det mest består av alkohol, och råder dig att kontakta din veterinär direkt om du tror att din katt har druckit äggtoddy.",
+        "da": "Nej. VCA nævner vaniljeekstrakt blandt risiciene ved æggepunch, fordi det for det meste er alkohol, og anbefaler at kontakte din dyrlæge med det samme, hvis du tror, at din kat har drukket æggepunch."
       }
     }
   ],
@@ -205,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "516ad433048c1c7aab2df17ed23bbd9dd191835d04e45acc8adbc27a64abfc13"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "281209c099ca70e9a9154d86937b3bd043650053250eff52607762173bf22701"
     }
   }
 }

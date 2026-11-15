@@ -5,32 +5,37 @@
     "en": "Gravy",
     "sl": "Mesna omaka",
     "hr": "Umak od mesa",
-    "sv": "Sås (brunsås)"
+    "sv": "Sås (brunsås)",
+    "da": "Sovs"
   },
   "question": {
     "en": "Can cats eat gravy?",
     "sl": "Ali lahko mačke jedo mesno omako?",
     "hr": "Smiju li mačke jesti umak od mesa?",
-    "sv": "Får katter äta sås?"
+    "sv": "Får katter äta sås?",
+    "da": "Må katte spise sovs?"
   },
   "url_slug": {
     "en": "gravy",
     "sl": "mesna-omaka",
     "hr": "umak-od-mesa",
-    "sv": "sas"
+    "sv": "sas",
+    "da": "sovs"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, gravy made for people is not for cats. It is usually salty and often contains onion, garlic and seasoning, and onion and garlic are toxic to cats. Gravy can also be high in fat. Keep it off your cat's plate.",
     "sl": "Ne, omaka, pripravljena za ljudi, ni za mačke. Običajno je slana in pogosto vsebuje čebulo, česen in začimbe, čebula in česen pa sta za mačke strupena. Omaka ima lahko tudi veliko maščobe. Mački je ne dajajte.",
     "hr": "Ne, umak od mesa za ljude nije za mačke. Obično je slan i često sadrži luk, češnjak i začine, a luk i češnjak otrovni su za mačke. Umak može biti i bogat mašću. Drži ga podalje od mačjeg tanjura.",
-    "sv": "Nej, sås som är gjord för människor är inget för katter. Den är oftast salt och innehåller ofta lök, vitlök och krydda, och lök och vitlök är giftigt för katter. Sås kan också innehålla mycket fett. Låt den inte hamna på kattens tallrik."
+    "sv": "Nej, sås som är gjord för människor är inget för katter. Den är oftast salt och innehåller ofta lök, vitlök och krydda, och lök och vitlök är giftigt för katter. Sås kan också innehålla mycket fett. Låt den inte hamna på kattens tallrik.",
+    "da": "Nej, sovs lavet til mennesker er ikke noget for katte. Den er som regel salt og indeholder ofte løg, hvidløg og krydderier, og løg og hvidløg er giftige for katte. Sovs kan også være fed. Hold den væk fra kattens tallerken."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. ASPCA predlaga, da hišnemu ljubljenčku praznično večerjo prelijete s kančkom omake, Cats Protection pa opozarja, da je omaka, pripravljena za ljudi, običajno slana ter vsebuje česen in začimbe, PDSA pa pravi, da nadev in omaka pogosto vsebujeta čebulo, por in česen, ki so lahko za mačke in pse smrtno nevarni. Čebula, česen, drobnjak in por so za mačke strupeni tudi kuhani ali posušeni. RSPCA dodaja, da omaka lahko vsebuje veliko soli in maščob, ASPCA pa opozarja, da jušne kocke, ki se uporabljajo za pripravo omake, vsebujejo veliko natrija.",
     "hr": "Izvori se razilaze, pa primjenjujemo strožu razinu. ASPCA predlaže malo umaka preko blagdanske večere za kućnog ljubimca, ali Cats Protection upozorava da je umak za ljude obično slan i sadrži češnjak i začine, a PDSA kaže da nadjev i umak često sadrže luk, poriluk i češnjak, koji mogu biti smrtonosni za mačke i pse. Luk, češnjak, vlasac i poriluk otrovni su za mačke čak i kad su kuhani ili sušeni. RSPCA dodaje da umak može sadržavati mnogo soli i masti, a ASPCA napominje da kocke za juhu kojima se pravi umak sadrže mnogo natrija.",
-    "sv": "Källorna är oense, så vi använder den strängare nivån. ASPCA föreslår en skvätt sås över husdjurets högtidsmiddag, men Cats Protection varnar för att sås som är gjord för människor oftast är salt och innehåller vitlök och krydda, och PDSA säger att fyllning och sås ofta innehåller lök, purjolök och vitlök, vilket kan vara dödligt för katter och hundar. Lök, vitlök, gräslök och purjolök är giftiga för katter även när de är tillagade eller torkade. RSPCA tillägger att sås kan innehålla höga halter salt och fett, och ASPCA påpekar att buljongtärningar som används för sås innehåller mycket natrium."
+    "sv": "Källorna är oense, så vi använder den strängare nivån. ASPCA föreslår en skvätt sås över husdjurets högtidsmiddag, men Cats Protection varnar för att sås som är gjord för människor oftast är salt och innehåller vitlök och krydda, och PDSA säger att fyllning och sås ofta innehåller lök, purjolök och vitlök, vilket kan vara dödligt för katter och hundar. Lök, vitlök, gräslök och purjolök är giftiga för katter även när de är tillagade eller torkade. RSPCA tillägger att sås kan innehålla höga halter salt och fett, och ASPCA påpekar att buljongtärningar som används för sås innehåller mycket natrium.",
+    "da": "Kilderne er uenige, så vi bruger det strengeste niveau. ASPCA foreslår en smule sovs over kæledyrets festmiddag, men Cats Protection advarer om at sovs lavet til mennesker som regel er salt og indeholder hvidløg og krydderier, og PDSA skriver at fyld og sovs ofte indeholder løg, porrer og hvidløg, som kan være dødelige for katte og hunde. Løg, hvidløg, purløg og porrer er giftige for katte, også når de er kogt eller tørret. RSPCA tilføjer at sovs kan indeholde meget salt og fedt, og ASPCA nævner at bouillonterninger, der bruges til at lave sovs, indeholder meget natrium."
   },
   "signs": {
     "en": [
@@ -52,20 +57,27 @@
       "Kräkningar",
       "Diarré",
       "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Mavebesvær"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate gravy that may contain onion or garlic, contact your vet as soon as possible. If you think she ate other leftovers too, tell your vet what she ate.",
     "sl": "Če je mačka pojedla omako, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če mislite, da je pojedla tudi druge ostanke hrane, veterinarju povejte, kaj je pojedla.",
     "hr": "Ako je mačka pojela umak koji bi mogao sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako misliš da je pojela i druge ostatke hrane, reci veterinaru što je sve pojela.",
-    "sv": "Om din katt har ätit sås som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om du tror att hon har ätit andra rester också, berätta för veterinären vad hon fått i sig."
+    "sv": "Om din katt har ätit sås som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om du tror att hon har ätit andra rester också, berätta för veterinären vad hon fått i sig.",
+    "da": "Hvis din kat har spist sovs, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis du tror, at katten også har spist andre rester, skal du fortælle dyrlægen, hvad den har spist."
   },
   "serving": null,
   "child": {
     "en": "Gravy is a people food with salt and onion in it. Kitty's own cat food is the best choice for her.",
     "sl": "Omaka je hrana za ljudi, v njej sta sol in čebula. Za muco je najboljša njena mačja hrana.",
     "hr": "Umak od mesa hrana je za ljude, sa solju i lukom. Za macu je najbolja njezina mačja hrana.",
-    "sv": "Sås är mat för människor med salt och lök i. Kattens egen kattmat är bäst för henne."
+    "sv": "Sås är mat för människor med salt och lök i. Kattens egen kattmat är bäst för henne.",
+    "da": "Sovs er menneskemad med salt og løg i. Din kats egen kattemad er det bedste for den."
   },
   "faq": [
     {
@@ -73,13 +85,15 @@
         "en": "What can my cat have from the holiday dinner instead?",
         "sl": "Kaj lahko mačka namesto tega dobi s praznične večerje?",
         "hr": "Što moja mačka umjesto toga može dobiti s blagdanske večere?",
-        "sv": "Vad kan min katt få från högtidsmiddagen i stället?"
+        "sv": "Vad kan min katt få från högtidsmiddagen i stället?",
+        "da": "Hvad kan min kat få af festmaden i stedet?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
         "sl": "PDSA pravi, da majhna rezina purana brez kože in kosti ter kuhana zelenjava brez omak ne bi smeli povzročiti težav. Omako izpustite.",
         "hr": "PDSA kaže da mala kriška puretine bez kože i kostiju te kuhano povrće bez ikakvih umaka ne bi trebali stvarati probleme. Umak izostavi.",
-        "sv": "PDSA säger att en liten skiva kalkon utan skinn och ben och kokta grönsaker utan såser inte borde orsaka problem. Lämna såsen därhän."
+        "sv": "PDSA säger att en liten skiva kalkon utan skinn och ben och kokta grönsaker utan såser inte borde orsaka problem. Lämna såsen därhän.",
+        "da": "PDSA skriver at en lille skive kalkun uden skind og ben og kogte grøntsager uden sovs ikke bør give problemer. Undlad sovsen."
       }
     }
   ],
@@ -169,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d7669a2b308d680a1d5b128940e2c3c0218cd35e51ff1974c55efcf837bfc0d3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f66344d10cbef73e7e7a397f633decb89c48941f40f147457305f5726b61c9e1"
     }
   }
 }

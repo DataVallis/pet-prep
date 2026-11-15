@@ -6,21 +6,24 @@
     "sl": "Soda bikarbona",
     "cs": "Jedlá soda",
     "hr": "Soda bikarbona",
-    "sv": "Bikarbonat"
+    "sv": "Bikarbonat",
+    "da": "Natron"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
     "sl": "Ali lahko psi jedo sodo bikarbono?",
     "cs": "Mohou psi jíst jedlou sodu?",
     "hr": "Smiju li psi jesti sodu bikarbonu?",
-    "sv": "Får hundar äta bikarbonat?"
+    "sv": "Får hundar äta bikarbonat?",
+    "da": "Må hunde spise natron?"
   },
   "url_slug": {
     "en": "baking-soda",
     "sl": "soda-bikarbona",
     "cs": "jedla-soda",
     "hr": "soda-bikarbona",
-    "sv": "bikarbonat"
+    "sv": "bikarbonat",
+    "da": "natron"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi.",
     "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné.",
     "hr": "Ne, soda bikarbona loša je za pse zbog visokog udjela natrija. Čak i male količine mogu biti štetne, osobito za manje pse. Ako je pas pojeo sodu bikarbonu, odmah nazovi veterinara, čak i ako se znakovi čine blagima.",
-    "sv": "Nej, bikarbonat är dåligt för hundar på grund av det höga natriuminnehållet. Redan små mängder kan vara skadliga, särskilt för mindre hundar. Om din hund har ätit bikarbonat ska du ringa en veterinär direkt, även om tecknen verkar milda."
+    "sv": "Nej, bikarbonat är dåligt för hundar på grund av det höga natriuminnehållet. Redan små mängder kan vara skadliga, särskilt för mindre hundar. Om din hund har ätit bikarbonat ska du ringa en veterinär direkt, även om tecknen verkar milda.",
+    "da": "Nej, natron er skadeligt for hunde på grund af det høje natriumindhold. Selv små mængder kan være skadelige, især for mindre hunde. Hvis din hund har spist natron, skal du ringe til en dyrlæge med det samme, selvom tegnene virker milde."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
     "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam.",
     "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů.",
     "hr": "Soda bikarbona (natrijev bikarbonat) remeti ravnotežu soli u tijelu psa i može dovesti do trovanja natrijem. Kad se razina natrija u krvi povisi, voda se izvlači iz stanica, uključujući stanice mozga. Soda bikarbona nalazi se i u kućanskim proizvodima poput zubne paste i sredstava za neutralizaciju mirisa.",
-    "sv": "Bikarbonat (natriumbikarbonat) rubbar hundens saltbalans och kan leda till natriumförgiftning. När natriumhalten i blodet stiger dras vatten ut ur cellerna, även hjärnceller. Bikarbonat finns också i hushållsprodukter som tandkräm och luktborttagare."
+    "sv": "Bikarbonat (natriumbikarbonat) rubbar hundens saltbalans och kan leda till natriumförgiftning. När natriumhalten i blodet stiger dras vatten ut ur cellerna, även hjärnceller. Bikarbonat finns också i hushållsprodukter som tandkräm och luktborttagare.",
+    "da": "Natron (natriumbicarbonat) forstyrrer hundens saltbalance og kan føre til natriumforgiftning. Når natriumniveauet i blodet stiger, trækkes vand ud af cellerne, også hjerneceller. Natron findes også i husholdningsprodukter som tandpasta og lugtfjernere."
   },
   "signs": {
     "en": [
@@ -77,6 +82,14 @@
       "Muskelskakningar eller svårt att gå",
       "Snabb eller ansträngd andning",
       "Kramper eller kollaps i svåra fall"
+    ],
+    "da": [
+      "Mavebesvær med opkast eller diarré en gang imellem",
+      "Drikker mere vand og har lav energi",
+      "Vedvarende opkast og meget lav energi",
+      "Muskelrystelser eller besvær med at gå",
+      "Hurtig eller anstrengt vejrtrækning",
+      "Kramper eller sammenbrud i svære tilfælde"
     ]
   },
   "what_to_do": {
@@ -84,7 +97,8 @@
     "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil.",
     "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář.",
     "hr": "Odmah nazovi veterinara, čak i ako se znakovi čine blagima. Psu ne daj nikakve lijekove osim ako ti veterinar to ne kaže.",
-    "sv": "Ring en veterinär direkt, även om tecknen verkar milda. Ge inte din hund någon medicin om inte din veterinär säger det."
+    "sv": "Ring en veterinär direkt, även om tecknen verkar milda. Ge inte din hund någon medicin om inte din veterinär säger det.",
+    "da": "Ring til en dyrlæge med det samme, selvom tegnene virker milde. Giv ikke din hund medicin, medmindre din dyrlæge siger, at du skal."
   },
   "serving": null,
   "child": {
@@ -92,7 +106,8 @@
     "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde.",
     "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému.",
     "hr": "Soda bikarbona služi za kuhanje i čišćenje, a ne za pse. Kutiju drži u ormariću i reci odrasloj osobi ako je pas pronađe.",
-    "sv": "Bikarbonat är till för matlagning och städning, inte för hundar. Förvara asken i ett skåp och säg till en vuxen om hunden hittar den."
+    "sv": "Bikarbonat är till för matlagning och städning, inte för hundar. Förvara asken i ett skåp och säg till en vuxen om hunden hittar den.",
+    "da": "Natron er til madlavning og rengøring, ikke til hunde. Opbevar æsken i et skab, og sig det til en voksen, hvis din hund finder den."
   },
   "faq": [
     {
@@ -101,14 +116,16 @@
         "sl": "Kje še lahko pes najde sodo bikarbono?",
         "cs": "Kde jinde může pes jedlou sodu najít?",
         "hr": "Gdje još moj pas može naći sodu bikarbonu?",
-        "sv": "Var kan min hund annars hitta bikarbonat?"
+        "sv": "Var kan min hund annars hitta bikarbonat?",
+        "da": "Hvor kan min hund ellers finde natron?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
         "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more.",
         "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane.",
         "hr": "Soda bikarbona nalazi se u mnogim kućanskim proizvodima, među ostalim u zubnoj pasti i sredstvima za neutralizaciju mirisa. Spremi je i sredstva za čišćenje u ormariće koji se čvrsto zatvaraju ili na mjesta koja pas ne može dosegnuti.",
-        "sv": "Bikarbonat finns i många hushållsprodukter, bland annat tandkräm och luktborttagare. Förvara det och rengöringsprodukter i skåp med lås eller på platser som hunden inte kommer åt."
+        "sv": "Bikarbonat finns i många hushållsprodukter, bland annat tandkräm och luktborttagare. Förvara det och rengöringsprodukter i skåp med lås eller på platser som hunden inte kommer åt.",
+        "da": "Natron findes i mange husholdningsprodukter, blandt andet tandpasta og lugtfjernere. Opbevar det og rengøringsmidler i skabe med lås eller steder, som din hund ikke kan nå."
       }
     }
   ],
@@ -197,6 +214,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d2f4475facda5e2d47100e31afb36fe0f20873b7c65a73dc444f00adfd4685dd"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1e9e40e5faea028b785049cd4a42a8982b878e01b6fff60b1246209a74d4baa3"
     }
   }
 }

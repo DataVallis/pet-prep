@@ -6,21 +6,24 @@
     "sl": "Žitni kosmiči",
     "cs": "Snídaňové cereálie",
     "hr": "Žitarice za doručak",
-    "sv": "Flingor (frukostflingor)"
+    "sv": "Flingor (frukostflingor)",
+    "da": "Morgenmadsprodukter"
   },
   "question": {
     "en": "Can dogs eat cereal?",
     "sl": "Ali lahko psi jedo žitne kosmiče?",
     "cs": "Mohou psi jíst cereálie?",
     "hr": "Smiju li psi jesti žitarice za doručak?",
-    "sv": "Får hundar äta flingor?"
+    "sv": "Får hundar äta flingor?",
+    "da": "Må hunde spise morgenmadsprodukter?"
   },
   "url_slug": {
     "en": "cereal",
     "sl": "zitni-kosmici",
     "cs": "cerealie",
     "hr": "zitarice-za-dorucak",
-    "sv": "frukostflingor"
+    "sv": "frukostflingor",
+    "da": "morgenmadsprodukter"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Nekatere, zmerno. Dogs Trust kosmiče Weetabix Original (ne pa njihovih čokoladnih različic) uvršča med hrano, ki jo psi običajno lahko jedo zmerno. Izogibajte se čokoladnim kosmičem ter kosmičem ali granoli z rozinami, ki pri psih ogrožajo ledvice.",
     "cs": "Některé ano, s mírou. Organizace Dogs Trust uvádí Weetabix Original (ne jeho čokoládové varianty) mezi potravinami, které psi obvykle mohou jíst s mírou. Vyhněte se čokoládovým cereáliím a všem cereáliím nebo granole s rozinkami, které ohrožují psy selháním ledvin.",
     "hr": "Neke, umjereno. Dogs Trust navodi Weetabix Original (ne i njegove čokoladne varijante) među hranom koju psi obično smiju jesti umjereno. Izbjegavaj čokoladne pahuljice i sve žitarice ili granolu s grožđicama, zbog kojih psima prijeti zatajenje bubrega.",
-    "sv": "Vissa, med måtta. Dogs Trust listar Weetabix Original (inte dess chokladsorter) bland mat som hundar vanligtvis kan få med måtta. Undvik chokladflingor och alla flingor eller müsli med russin, som kan orsaka njursvikt hos hundar."
+    "sv": "Vissa, med måtta. Dogs Trust listar Weetabix Original (inte dess chokladsorter) bland mat som hundar vanligtvis kan få med måtta. Undvik chokladflingor och alla flingor eller müsli med russin, som kan orsaka njursvikt hos hundar.",
+    "da": "Nogle, med måde. Dogs Trust nævner Weetabix Original (ikke varianterne med chokolade) blandt den mad, hunde som regel kan få med måde. Undgå morgenmadsprodukter med chokolade og alle slags morgenmadsprodukter eller granola med rosiner, som giver hunde risiko for nyresvigt."
   },
   "why": {
     "en": "Dogs Trust includes Weetabix Original, but not its chocolate varieties, in its list of human foods dogs can usually eat in moderation. Raisins can be hidden in cereals and granola, and grapes and raisins can put dogs at risk of kidney failure, even in small amounts. Chocolate can be toxic to dogs even in quite small amounts. Even foods that are usually non-toxic can upset an individual dog because of intolerance, fat content or portion size.",
     "sl": "Dogs Trust kosmiče Weetabix Original, ne pa njihovih čokoladnih različic, uvršča na seznam človeške hrane, ki jo psi običajno lahko jedo zmerno. Rozine se lahko skrivajo v kosmičih in granoli, grozdje in rozine pa lahko pri psih ogrozijo ledvice že v majhnih količinah. Čokolada je za pse lahko strupena že v precej majhnih količinah. Tudi hrana, ki običajno ni strupena, lahko posameznega psa razdraži zaradi nestrpnosti, vsebnosti maščob ali velikosti porcije.",
     "cs": "Dogs Trust řadí Weetabix Original, ale ne jeho čokoládové varianty, mezi lidské potraviny, které psi obvykle mohou jíst s mírou. Rozinky se mohou skrývat v cereáliích a granole a hrozny a rozinky mohou i v malém množství ohrozit psa selháním ledvin. Čokoláda může být pro psy jedovatá i v poměrně malém množství. I potraviny, které obvykle nejsou jedovaté, mohou jednotlivému psovi způsobit potíže kvůli nesnášenlivosti, obsahu tuku nebo velikosti porce.",
     "hr": "Dogs Trust Weetabix Original, ali ne i njegove čokoladne varijante, ubraja u svoj popis ljudske hrane koju psi obično smiju jesti umjereno. Grožđice se mogu skrivati u žitaricama i granoli, a grožđe i grožđice mogu dovesti pse u opasnost od zatajenja bubrega, čak i u malim količinama. Čokolada može biti otrovna za pse čak i u prilično malim količinama. Čak i hrana koja je obično neotrovna može nekom psu naškoditi zbog netolerancije, udjela masti ili veličine porcije.",
-    "sv": "Dogs Trust tar med Weetabix Original, men inte dess chokladsorter, i sin lista över mat för människor som hundar vanligtvis kan äta med måtta. Russin kan gömma sig i flingor och müsli, och druvor och russin kan orsaka njursvikt hos hundar, även i små mängder. Choklad kan vara giftigt för hundar även i ganska små mängder. Även mat som vanligtvis är ogiftig kan göra en enskild hund sjuk på grund av intolerans, fetthalt eller portionsstorlek."
+    "sv": "Dogs Trust tar med Weetabix Original, men inte dess chokladsorter, i sin lista över mat för människor som hundar vanligtvis kan äta med måtta. Russin kan gömma sig i flingor och müsli, och druvor och russin kan orsaka njursvikt hos hundar, även i små mängder. Choklad kan vara giftigt för hundar även i ganska små mängder. Även mat som vanligtvis är ogiftig kan göra en enskild hund sjuk på grund av intolerans, fetthalt eller portionsstorlek.",
+    "da": "Dogs Trust tager Weetabix Original, men ikke varianterne med chokolade, med på sin liste over menneskemad, som hunde som regel kan spise med måde. Rosiner kan gemme sig i morgenmadsprodukter og granola, og druer og rosiner kan give hunde risiko for nyresvigt, selv i små mængder. Chokolade kan være giftigt for hunde, selv i ret små mængder. Selv mad, der som regel ikke er giftig, kan give en enkelt hund problemer på grund af intolerance, fedtindhold eller portionsstørrelse."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Med sestavinami preverite, ali so rozine, drugo suho sadje ali čokolada. Če mislite, da je pes pojedel kosmiče z rozinami ali čokolado, takoj pokličite veterinarja, tudi če je šlo le za majhno količino. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem.",
     "cs": "Zkontrolujte ve složení rozinky, jiné sušené ovoce a čokoládu. Pokud si myslíte, že pes snědl cereálie s rozinkami nebo čokoládou, obraťte se ihned na veterináře, i když šlo jen o malé množství. Než psovi nabídnete potravinu, kterou ještě nejedl, zeptejte se veterináře.",
     "hr": "Provjeri sadrže li grožđice, drugo suho voće ili čokoladu. Ako misliš da je pas pojeo žitarice s grožđicama ili čokoladom, odmah se obrati veterinaru, čak i ako je količina bila mala. Pitaj veterinara prije nego što ponudiš hranu koju pas još nije jeo.",
-    "sv": "Kontrollera ingredienserna efter russin, annan torkad frukt och choklad. Om du tror att din hund har ätit flingor med russin eller choklad ska du kontakta din veterinär direkt, även om det bara var en liten mängd. Fråga din veterinär innan du ger hunden något nytt som den inte har ätit förut."
+    "sv": "Kontrollera ingredienserna efter russin, annan torkad frukt och choklad. Om du tror att din hund har ätit flingor med russin eller choklad ska du kontakta din veterinär direkt, även om det bara var en liten mängd. Fråga din veterinär innan du ger hunden något nytt som den inte har ätit förut.",
+    "da": "Tjek ingredienserne for rosiner, anden tørret frugt og chokolade. Hvis du tror, at din hund har spist morgenmadsprodukter med rosiner eller chokolade, skal du kontakte din dyrlæge med det samme, selvom det kun var en lille mængde. Spørg din dyrlæge, før du giver din hund noget mad, den ikke har fået før."
   },
   "serving": {
     "en": "Only in moderation, for example Weetabix Original. No chocolate, raisins or other dried fruit.",
     "sl": "Le zmerno, na primer Weetabix Original. Brez čokolade, rozin in drugega suhega sadja.",
     "cs": "Jen s mírou, například Weetabix Original. Bez čokolády, rozinek a jiného sušeného ovoce.",
     "hr": "Samo umjereno, na primjer Weetabix Original. Bez čokolade, grožđica ni drugog suhog voća.",
-    "sv": "Bara med måtta, till exempel Weetabix Original. Ingen choklad, inga russin eller annan torkad frukt."
+    "sv": "Bara med måtta, till exempel Weetabix Original. Ingen choklad, inga russin eller annan torkad frukt.",
+    "da": "Kun med måde, fx Weetabix Original. Ingen chokolade, rosiner eller anden tørret frugt."
   },
   "child": {
     "en": "Some cereals are okay for a dog in small amounts. Chocolate or raisin cereal is not for dogs, so ask a grown-up.",
     "sl": "Nekateri kosmiči so za psa v majhnih količinah v redu. Čokoladni kosmiči ali kosmiči z rozinami niso za pse, zato vprašaj odraslega.",
     "cs": "Pes může dostat některé cereálie, ale jen trochu. Čokoládové nebo rozinkové cereálie pro psy nejsou, takže se zeptej dospělého.",
     "hr": "Neke su žitarice u redu za psa u malim količinama. Žitarice s čokoladom ili grožđicama nisu za pse, zato pitaj odraslu osobu.",
-    "sv": "Vissa flingor är okej för en hund i små mängder. Flingor med choklad eller russin är inget för hundar, så fråga en vuxen."
+    "sv": "Vissa flingor är okej för en hund i små mängder. Flingor med choklad eller russin är inget för hundar, så fråga en vuxen.",
+    "da": "Nogle morgenmadsprodukter er i orden til en hund i små mængder. Morgenmadsprodukter med chokolade eller rosiner er ikke til hunde, så spørg en voksen."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo granolo?",
         "cs": "Mohou psi jíst granolu?",
         "hr": "Smiju li psi jesti granolu?",
-        "sv": "Får hundar äta müsli?"
+        "sv": "Får hundar äta müsli?",
+        "da": "Må hunde spise granola?"
       },
       "a": {
         "en": "It's best not to. Raisins can be hidden in granola and cereals, and they can put dogs at risk of kidney failure.",
         "sl": "Bolje ne. V granoli in kosmičih se lahko skrivajo rozine, ki lahko pri psih ogrozijo ledvice.",
         "cs": "Nejlepší je nedávat ji. Rozinky se mohou skrývat v granole i cereáliích a mohou psa ohrozit selháním ledvin.",
         "hr": "Bolje ne. Grožđice se mogu skrivati u granoli i žitaricama, a zbog njih psi mogu biti u opasnosti od zatajenja bubrega.",
-        "sv": "Det är bäst att låta bli. Russin kan gömma sig i müsli och flingor, och de kan orsaka njursvikt hos hundar."
+        "sv": "Det är bäst att låta bli. Russin kan gömma sig i müsli och flingor, och de kan orsaka njursvikt hos hundar.",
+        "da": "Helst ikke. Rosiner kan gemme sig i granola og morgenmadsprodukter, og de kan give hunde risiko for nyresvigt."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo čokoladne kosmiče?",
         "cs": "Mohou psi jíst čokoládové cereálie?",
         "hr": "Smiju li psi jesti čokoladne žitarice?",
-        "sv": "Får hundar äta chokladflingor?"
+        "sv": "Får hundar äta chokladflingor?",
+        "da": "Må hunde spise morgenmadsprodukter med chokolade?"
       },
       "a": {
         "en": "No. Chocolate can be toxic to dogs even in quite small amounts; Dogs Trust excludes chocolate varieties.",
         "sl": "Ne. Čokolada je za pse lahko strupena že v precej majhnih količinah; Dogs Trust čokoladne različice izrecno izključuje.",
         "cs": "Ne. Čokoláda může být pro psy jedovatá i v poměrně malém množství; Dogs Trust čokoládové varianty vylučuje.",
         "hr": "Ne. Čokolada može biti otrovna za pse čak i u prilično malim količinama; Dogs Trust isključuje čokoladne varijante.",
-        "sv": "Nej. Choklad kan vara giftigt för hundar även i ganska små mängder; Dogs Trust undantar chokladsorterna."
+        "sv": "Nej. Choklad kan vara giftigt för hundar även i ganska små mängder; Dogs Trust undantar chokladsorterna.",
+        "da": "Nej. Chokolade kan være giftigt for hunde, selv i ret små mængder; Dogs Trust udelader varianter med chokolade."
       }
     }
   ],
@@ -165,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c1d7be916970f659185d37fe298c0bc44c86333071134317a003077e782413df"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53f0e39a7cd740c6ee4af0d706a8762fb3d53b46ddb6695a9bdb1c97e72dfa03"
     }
   }
 }

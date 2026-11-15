@@ -6,21 +6,24 @@
     "sl": "Ingver",
     "cs": "Zázvor",
     "hr": "Đumbir",
-    "sv": "Ingefära"
+    "sv": "Ingefära",
+    "da": "Ingefær"
   },
   "question": {
     "en": "Can dogs eat ginger?",
     "sl": "Ali lahko psi jedo ingver?",
     "cs": "Mohou psi jíst zázvor?",
     "hr": "Smiju li psi jesti đumbir?",
-    "sv": "Får hundar äta ingefära?"
+    "sv": "Får hundar äta ingefära?",
+    "da": "Må hunde spise ingefær?"
   },
   "url_slug": {
     "en": "ginger",
     "sl": "ingver",
     "cs": "zazvor",
     "hr": "dumbir",
-    "sv": "ingefara"
+    "sv": "ingefara",
+    "da": "ingefaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah je ingver za pse varen. Dajte ga le zmerno, ker lahko velike količine povzročijo vetrove in slabost. Piškotov z ingverjem in vloženega ingverja psu ne dajajte.",
     "cs": "Ano, v malém množství je zázvor pro psy bezpečný. Dávejte ho jen s mírou, protože velké množství může způsobit plynatost a nevolnost. Vyhněte se zázvorkám a nakládanému zázvoru.",
     "hr": "Da, u malim količinama đumbir je siguran za pse. Daj ga samo umjereno, jer velike količine mogu izazvati nadutost i mučninu. Ne daj kekse s đumbirom ni ukiseljeni đumbir.",
-    "sv": "Ja, i små mängder är ingefära säkert för hundar. Ge den bara med måtta, eftersom stora mängder kan orsaka gaser och illamående. Undvik pepparkakor och inlagd ingefära."
+    "sv": "Ja, i små mängder är ingefära säkert för hundar. Ge den bara med måtta, eftersom stora mängder kan orsaka gaser och illamående. Undvik pepparkakor och inlagd ingefära.",
+    "da": "Ja, ingefær er ufarligt for hunde i små mængder. Giv det kun med måde, fordi store mængder kan give luft i maven og kvalme. Undlad ingefærkiks og syltet ingefær."
   },
   "why": {
     "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
     "sl": "Ingver lahko v velikih količinah povzroči vetrove in slabost, kot vsaka hrana, ki je ne dajemo zmerno, pa lahko vodi v prebavne težave. Ingver redči kri ter lahko zniža krvni tlak in krvni sladkor, zato ga ne dajajte psom z motnjami strjevanja krvi ali psom, ki jih kmalu čaka operacija; če ima pes sladkorno bolezen ali bolezen srca, se najprej posvetujte z veterinarjem. Nekateri veterinarji odsvetujejo ingver tudi brejim psicam in psicam, ki dojijo. Psi so lahko na ingver tudi alergični.",
     "cs": "Zázvor ve velkém množství může způsobit plynatost a nevolnost a jako každé jídlo, které se nedává s mírou, může vést k potížím se žaludkem. Zázvor ředí krev a může snižovat krevní tlak a hladinu cukru v krvi, proto se mu u psů s poruchami krvácivosti nebo před operací vyhněte a u psů s cukrovkou nebo srdečním onemocněním se nejdřív zeptejte veterináře. Někteří veterináři také radí vyhnout se mu u březích a kojících fen. Psi mohou být na zázvor také alergičtí.",
     "hr": "Đumbir u velikim količinama može izazvati nadutost i mučninu, a kao i svaka hrana koja se ne daje umjereno, može dovesti do problema sa želucem. Đumbir djeluje kao razrjeđivač krvi te može sniziti krvni tlak i šećer u krvi, zato ga izbjegavaj kod pasa s poremećajima krvarenja ili onih koji će uskoro na operaciju, a ako pas ima dijabetes ili srčanu bolest, prvo pitaj veterinara. Neki veterinari savjetuju da ga se izbjegava i kod skotnih kuja i kuja koje doje. Psi mogu biti i alergični na đumbir.",
-    "sv": "Stora mängder ingefära kan orsaka gaser och illamående, och som all mat som inte ges med måtta kan den leda till magproblem. Ingefära verkar blodförtunnande och kan sänka blodtrycket och blodsockret, så undvik den till hundar med blödningssjukdomar eller som ska opereras snart, och fråga din veterinär först om din hund har diabetes eller hjärtsjukdom. Vissa veterinärer rekommenderar också att man undviker den till dräktiga och digivande tikar. Hundar kan också vara allergiska mot ingefära."
+    "sv": "Stora mängder ingefära kan orsaka gaser och illamående, och som all mat som inte ges med måtta kan den leda till magproblem. Ingefära verkar blodförtunnande och kan sänka blodtrycket och blodsockret, så undvik den till hundar med blödningssjukdomar eller som ska opereras snart, och fråga din veterinär först om din hund har diabetes eller hjärtsjukdom. Vissa veterinärer rekommenderar också att man undviker den till dräktiga och digivande tikar. Hundar kan också vara allergiska mot ingefära.",
+    "da": "Ingefær i store mængder kan give luft i maven og kvalme, og ligesom al anden mad, der ikke gives med måde, kan det give mavebesvær. Ingefær virker blodfortyndende og kan sænke blodtrykket og blodsukkeret, så undgå det til hunde med blødningssygdomme eller hunde, der skal opereres snart, og spørg først din dyrlæge, hvis din hund har diabetes eller hjertesygdom. Nogle dyrlæger fraråder det også til drægtige og diegivende tæver. Hunde kan også være allergiske over for ingefær."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če želite ingver dodati pasji prehrani zaradi zdravja, se najprej posvetujte z veterinarjem, še posebej, če pes jemlje zdravila.",
     "cs": "Pokud chcete psovi zázvor přidat do jídelníčku jako podporu zdraví, nejdřív se poraďte s veterinářem, zvlášť pokud pes bere léky.",
     "hr": "Ako želiš dodati đumbir prehrani svog psa radi zdravlja, prvo razgovaraj s veterinarom, osobito ako pas uzima lijekove.",
-    "sv": "Om du vill ge din hund ingefära som ett hälsotillskott ska du prata med din veterinär först, särskilt om din hund tar mediciner."
+    "sv": "Om du vill ge din hund ingefära som ett hälsotillskott ska du prata med din veterinär först, särskilt om din hund tar mediciner.",
+    "da": "Hvis du vil give din hund ingefær for sundhedens skyld, skal du tale med din dyrlæge først, især hvis din hund får medicin."
   },
   "serving": {
     "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
     "sl": "Svež ingver, ingver v prahu in ingverjev sok so v majhnih količinah primerni. Svež ingver temeljito olupite in drobno sesekljajte. Ne dajajte piškotov z ingverjem (veliko sladkorja, včasih makadamijini oreščki) ali vloženega ingverja (sol, včasih ksilitol).",
     "cs": "Čerstvý zázvor, zázvorový prášek i zázvorová šťáva jsou v malém množství v pořádku. Čerstvý zázvor důkladně oloupejte a jemně nasekejte. Nedávejte zázvorky (hodně cukru, někdy makadamové ořechy) ani nakládaný zázvor (sůl, někdy xylitol).",
     "hr": "Svjež đumbir, đumbir u prahu i sok od đumbira u malim su količinama u redu. Svjež đumbir temeljito oguli i vrlo sitno nareži. Ne daj kekse s đumbirom (puno šećera, ponekad makadamija orasi) ni ukiseljeni đumbir (sol, ponekad ksilitol).",
-    "sv": "Färsk ingefära, ingefärspulver och ingefärsjuice går alla bra i små mängder. Skala färsk ingefära noga och finhacka den. Ge inte pepparkakor (mycket socker, ibland macadamianötter) eller inlagd ingefära (salt, ibland xylitol)."
+    "sv": "Färsk ingefära, ingefärspulver och ingefärsjuice går alla bra i små mängder. Skala färsk ingefära noga och finhacka den. Ge inte pepparkakor (mycket socker, ibland macadamianötter) eller inlagd ingefära (salt, ibland xylitol).",
+    "da": "Frisk ingefær, ingefærpulver og ingefærsaft er alt sammen fint i små mængder. Skræl frisk ingefær grundigt, og hak den helt fint. Giv ikke ingefærkiks (meget sukker, nogle gange macadamianødder) eller syltet ingefær (salt, nogle gange xylitol)."
   },
   "child": {
     "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
     "sl": "Čisto malo ingverja je za pse v redu. Koliko, odločijo odrasli, ingverjevi piškoti pa niso pasja poslastica.",
     "cs": "Malinká špetka zázvoru psovi nevadí. O množství rozhodují dospělí a zázvorky nejsou pamlsky pro psy.",
     "hr": "Sitan komadić đumbira u redu je za pse. O količini odlučuju odrasli, a keksi s đumbirom nisu poslastica za pse.",
-    "sv": "Lite ingefära är okej för hundar. De vuxna bestämmer hur mycket, och pepparkakor är inte hundgodis."
+    "sv": "Lite ingefära är okej för hundar. De vuxna bestämmer hur mycket, och pepparkakor är inte hundgodis.",
+    "da": "En lille smule ingefær er i orden til hunde. De voksne bestemmer, hvor meget, og ingefærkiks er ikke hundegodbidder."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko pes poje piškot z ingverjem?",
         "cs": "Může pes dostat zázvorku?",
         "hr": "Smije li moj pas dobiti keks s đumbirom?",
-        "sv": "Får min hund äta en pepparkaka?"
+        "sv": "Får min hund äta en pepparkaka?",
+        "da": "Må min hund få et ingefærkiks?"
       },
       "a": {
         "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
         "sl": "Piškotom z ingverjem se je bolje izogniti. Kot večina sladkih priboljškov vsebujejo veliko sladkorja in lahko vsebujejo sestavine, ki so za pse škodljive, na primer makadamijine oreščke.",
         "cs": "Zázvorkám je lepší se vyhnout. Jako většina sladkostí obsahují hodně cukru a mohou obsahovat přísady, které psům škodí, například makadamové ořechy.",
         "hr": "Kekse s đumbirom bolje je izbjegavati. Kao i većina slatkih poslastica, bogati su šećerom i mogu sadržavati sastojke koji su štetni za pse, poput makadamija oraha.",
-        "sv": "Det är bäst att undvika pepparkakor. Som de flesta söta godsaker innehåller de mycket socker och kan innehålla ingredienser som är skadliga för hundar, till exempel macadamianötter."
+        "sv": "Det är bäst att undvika pepparkakor. Som de flesta söta godsaker innehåller de mycket socker och kan innehålla ingredienser som är skadliga för hundar, till exempel macadamianötter.",
+        "da": "Det er bedst at undgå ingefærkiks. Ligesom de fleste søde sager indeholder de meget sukker og kan indeholde ingredienser, som er skadelige for hunde, fx macadamianødder."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali je vloženi ingver varen za pse?",
         "cs": "Je nakládaný zázvor pro psy bezpečný?",
         "hr": "Je li ukiseljeni đumbir siguran za pse?",
-        "sv": "Är inlagd ingefära säker för hundar?"
+        "sv": "Är inlagd ingefära säker för hundar?",
+        "da": "Er syltet ingefær ufarligt for hunde?"
       },
       "a": {
         "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
         "sl": "Vloženi ingver je bolje obdržati zase. Večini psov okus kisa ni všeč, vsebuje sol, ki je pes ne potrebuje, lahko pa vsebuje tudi ksilitol, ki je za pse strupen.",
         "cs": "Nakládaný zázvor je lepší nechat si pro sebe. Většině psů octová chuť nechutná, obsahuje sůl, kterou pes nepotřebuje, a může obsahovat xylitol, který je pro psy jedovatý.",
         "hr": "Ukiseljeni đumbir bolje je zadržati za sebe. Većina pasa ne voli okus octa, sadrži sol koja psu nije potrebna i može sadržavati ksilitol, koji je otrovan za pse.",
-        "sv": "Det är bäst att behålla den inlagda ingefäran själv. De flesta hundar tycker inte om vinägersmaken, den innehåller salt som din hund inte behöver, och den kan innehålla xylitol, som är giftigt för hundar."
+        "sv": "Det är bäst att behålla den inlagda ingefäran själv. De flesta hundar tycker inte om vinägersmaken, den innehåller salt som din hund inte behöver, och den kan innehålla xylitol, som är giftigt för hundar.",
+        "da": "Det er bedst at beholde syltet ingefær selv. De fleste hunde kan ikke lide smagen af eddike. Den indeholder salt, som din hund ikke har brug for, og den kan indeholde xylitol, som er giftigt for hunde."
       }
     }
   ],
@@ -212,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f2d1c3a113887673fe0fc5dc8302dc9e4daf04f5b040739376c32d689a2fd4c3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4e9ae9e4a3e8b707d9a5f513912d2a2cb951308559c6664edb02de02d501384b"
     }
   }
 }

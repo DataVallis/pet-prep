@@ -6,21 +6,24 @@
     "sl": "Kvinoja",
     "cs": "Quinoa",
     "hr": "Kinoa",
-    "sv": "Quinoa"
+    "sv": "Quinoa",
+    "da": "Quinoa"
   },
   "question": {
     "en": "Can dogs eat quinoa?",
     "sl": "Ali lahko psi jedo kvinojo?",
     "cs": "Mohou psi jíst quinou?",
     "hr": "Smiju li psi jesti kinou?",
-    "sv": "Får hundar äta quinoa?"
+    "sv": "Får hundar äta quinoa?",
+    "da": "Må hunde spise quinoa?"
   },
   "url_slug": {
     "en": "quinoa",
     "sl": "kvinoja",
     "cs": "quinoa",
     "hr": "kinoa",
-    "sv": "quinoa"
+    "sv": "quinoa",
+    "da": "quinoa"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Na splošno da. Navadna kuhana kvinoja je za pse v majhnih količinah varna. Psu ne dajajte kvinoje s svojega krožnika, saj je pogosto kuhana s soljo, česnom ali čebulo, ki so lahko za pse škodljivi.",
     "cs": "Obecně ano. Obyčejná uvařená quinoa je pro psy v malém množství bezpečná. Nedávejte psovi quinou ze svého talíře, protože se často vaří se solí, česnekem nebo cibulí, což může psům škodit.",
     "hr": "Općenito da. Obična kuhana kinoa sigurna je za pse u malim količinama. Ne dijeli kinou sa svog tanjura, jer se često kuha sa solju, češnjakom ili lukom, koji mogu biti štetni za pse.",
-    "sv": "I allmänhet ja. Okryddad tillagad quinoa är säker för hundar i små mängder. Dela inte quinoa från din egen tallrik, eftersom den ofta kokas med salt, vitlök eller lök, som kan vara skadliga för hundar."
+    "sv": "I allmänhet ja. Okryddad tillagad quinoa är säker för hundar i små mängder. Dela inte quinoa från din egen tallrik, eftersom den ofta kokas med salt, vitlök eller lök, som kan vara skadliga för hundar.",
+    "da": "Som regel ja. Almindelig kogt quinoa er ufarligt for hunde i små mængder. Del ikke quinoa fra din egen tallerken, for den er ofte kogt med salt, hvidløg eller løg, som kan være skadelige for hunde."
   },
   "why": {
     "en": "Quinoa makes saponin to protect itself from insects. The amount is usually too small to cause problems, but dogs may be more sensitive to saponin than people, and it may irritate the intestines. Rinsing quinoa before cooking helps, and cooking makes it easier to digest. Quinoa recipes often add salt, garlic and onions, which could be toxic to dogs.",
     "sl": "Kvinoja tvori saponin, s katerim se brani pred žuželkami. Količina je običajno premajhna, da bi povzročala težave, a psi so na saponin morda bolj občutljivi kot ljudje, saponin pa lahko draži črevesje. Pomaga, če kvinojo pred kuhanjem operete, kuhanje pa jo naredi lažje prebavljivo. V receptih s kvinojo so pogosto sol, česen in čebula, ki so lahko za pse strupeni.",
     "cs": "Quinoa obsahuje saponin, kterým se chrání před hmyzem. Jeho množství bývá příliš malé, aby způsobilo potíže, ale psi mohou být na saponin citlivější než lidé a saponin může dráždit střeva. Quinou je dobré před vařením propláchnout a vařením se lépe stráví. Do receptů s quinoou se často přidává sůl, česnek a cibule, které mohou být pro psy jedovaté.",
     "hr": "Kinoa stvara saponin kako bi se zaštitila od kukaca. Količina je obično premala da bi izazivala probleme, ali psi bi na saponin mogli biti osjetljiviji od ljudi, a on može nadražiti crijeva. Ispiranje kinoe prije kuhanja pomaže, a kuhanjem postaje lakše probavljiva. U receptima s kinoom često se dodaju sol, češnjak i luk, koji bi mogli biti otrovni za pse.",
-    "sv": "Quinoa bildar saponin för att skydda sig mot insekter. Mängden är oftast för liten för att orsaka problem, men hundar kan vara känsligare för saponin än människor, och det kan irritera tarmarna. Det hjälper att skölja quinoan före tillagning, och tillagning gör den lättare att smälta. Recept med quinoa innehåller ofta salt, vitlök och lök, som kan vara giftiga för hundar."
+    "sv": "Quinoa bildar saponin för att skydda sig mot insekter. Mängden är oftast för liten för att orsaka problem, men hundar kan vara känsligare för saponin än människor, och det kan irritera tarmarna. Det hjälper att skölja quinoan före tillagning, och tillagning gör den lättare att smälta. Recept med quinoa innehåller ofta salt, vitlök och lök, som kan vara giftiga för hundar.",
+    "da": "Quinoa danner saponin for at beskytte sig mod insekter. Mængden er som regel for lille til at give problemer, men hunde kan være mere følsomme over for saponin end mennesker, og det kan irritere tarmene. Det hjælper at skylle quinoa før kogning, og kogning gør den lettere at fordøje. Quinoaopskrifter indeholder ofte salt, hvidløg og løg, som kan være giftige for hunde."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če pes kvinoje še ni jedel, začnite z majhno količino. Če po njej bruha, ima drisko ali zaprtje, mu je ne dajajte več. Pred uvedbo nove hrane se posvetujte z veterinarjem.",
     "cs": "Pokud pes quinou ještě nikdy neměl, začněte malým množstvím. Pokud po ní zvrací, má průjem nebo zácpu, už mu ji nedávejte. Než do jídelníčku zařadíte jakoukoli novou potravinu, poraďte se s veterinářem.",
     "hr": "Ako pas još nije jeo kinou, počni s malom količinom. Ako izazove povraćanje, proljev ili zatvor, nemoj je više davati. Prije dodavanja bilo koje nove hrane provjeri s veterinarom.",
-    "sv": "Om din hund aldrig har ätit quinoa, börja med en liten mängd. Om den orsakar kräkningar, diarré eller förstoppning ska du inte ge den igen. Fråga din veterinär innan du lägger till någon ny mat."
+    "sv": "Om din hund aldrig har ätit quinoa, börja med en liten mängd. Om den orsakar kräkningar, diarré eller förstoppning ska du inte ge den igen. Fråga din veterinär innan du lägger till någon ny mat.",
+    "da": "Hvis din hund aldrig har fået quinoa, skal du starte med en lille mængde. Hvis den giver opkast, diarré eller forstoppelse, skal du ikke give den igen. Spørg din dyrlæge, før du giver din hund nogen ny mad."
   },
   "serving": {
     "en": "Rinsed, then cooked plain, without salt, garlic, onion or other seasoning; a small amount at first.",
     "sl": "Oprana in nato navadno kuhana, brez soli, česna, čebule ali drugih začimb; na začetku le malo.",
     "cs": "Propláchnutá a pak uvařená bez soli, česneku, cibule i jiného koření; nejdřív malé množství.",
     "hr": "Isprana pa skuhana, bez soli, češnjaka, luka i drugih začina; isprva mala količina.",
-    "sv": "Sköljd och sedan tillagad och okryddad, utan salt, vitlök, lök eller andra kryddor; börja med en liten mängd."
+    "sv": "Sköljd och sedan tillagad och okryddad, utan salt, vitlök, lök eller andra kryddor; börja med en liten mängd.",
+    "da": "Skyllet og derefter kogt uden tilsætninger, uden salt, hvidløg, løg eller andre krydderier; i begyndelsen en lille mængde."
   },
   "child": {
     "en": "Dogs can try a little plain quinoa cooked just for them. Quinoa from our plates often has onion or garlic.",
     "sl": "Psi lahko poskusijo malo navadne kvinoje, kuhane posebej zanje. Kvinoja z naših krožnikov ima pogosto čebulo ali česen.",
     "cs": "Psi mohou vyzkoušet trochu obyčejné quinoy uvařené jen pro ně. V quinoe z našich talířů bývá často cibule nebo česnek.",
     "hr": "Psi smiju probati malo obične kinoe kuhane samo za njih. Kinoa s našeg tanjura često ima luk ili češnjak.",
-    "sv": "Hundar kan prova lite okryddad quinoa som lagats särskilt åt dem. Quinoa från våra tallrikar innehåller ofta lök eller vitlök."
+    "sv": "Hundar kan prova lite okryddad quinoa som lagats särskilt åt dem. Quinoa från våra tallrikar innehåller ofta lök eller vitlök.",
+    "da": "Hunde kan prøve lidt almindelig quinoa, der er kogt specielt til dem. Quinoa fra vores tallerkener indeholder ofte løg eller hvidløg."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali naj kvinojo za psa operem?",
         "cs": "Mám quinou pro psa propláchnout?",
         "hr": "Treba li kinou isprati za psa?",
-        "sv": "Ska jag skölja quinoa åt min hund?"
+        "sv": "Ska jag skölja quinoa åt min hund?",
+        "da": "Skal jeg skylle quinoa til min hund?"
       },
       "a": {
         "en": "Yes, if you're concerned about saponin, wash the quinoa before cooking it.",
         "sl": "Da, če vas skrbi saponin, kvinojo pred kuhanjem operite.",
         "cs": "Ano, pokud se saponinu obáváte, quinou před vařením propláchněte.",
         "hr": "Da, ako te brine saponin, operi kinou prije kuhanja.",
-        "sv": "Ja, om du oroar dig för saponin ska du skölja quinoan före tillagning."
+        "sv": "Ja, om du oroar dig för saponin ska du skölja quinoan före tillagning.",
+        "da": "Ja, hvis du er bekymret for saponin, skal du skylle quinoaen, før du koger den."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo solato s kvinojo?",
         "cs": "Mohou psi jíst salát z quinoy?",
         "hr": "Smiju li psi jesti salatu od kinoe?",
-        "sv": "Får hundar äta quinoasallad?"
+        "sv": "Får hundar äta quinoasallad?",
+        "da": "Må hunde spise quinoasalat?"
       },
       "a": {
         "en": "It's best not to. Never give your dog quinoa straight from your plate, as dishes often contain salt, garlic or onions.",
         "sl": "Bolje ne. Psu nikoli ne dajajte kvinoje naravnost s krožnika, saj jedi pogosto vsebujejo sol, česen ali čebulo.",
         "cs": "Raději ne. Nikdy psovi nedávejte quinou přímo ze svého talíře, protože taková jídla často obsahují sůl, česnek nebo cibuli.",
         "hr": "Bolje ne. Psu nikad ne daj kinou izravno sa svog tanjura, jer jela često sadrže sol, češnjak ili luk.",
-        "sv": "Det är bäst att låta bli. Ge aldrig din hund quinoa direkt från din tallrik, eftersom rätter ofta innehåller salt, vitlök eller lök."
+        "sv": "Det är bäst att låta bli. Ge aldrig din hund quinoa direkt från din tallrik, eftersom rätter ofta innehåller salt, vitlök eller lök.",
+        "da": "Det er bedst ikke at give det. Giv aldrig din hund quinoa direkte fra din egen tallerken, for retter indeholder ofte salt, hvidløg eller løg."
       }
     }
   ],
@@ -188,6 +200,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "299c10bdc76868e13a043906f8b208f9b8b8692f22b0f27307d9ef9ab0be8613"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01e142e3f445ddca6edb1f8c52ade75bbf5d3024ca1ef63e57e9047a3ac28fc7"
     }
   }
 }

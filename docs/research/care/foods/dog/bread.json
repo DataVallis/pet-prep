@@ -6,21 +6,24 @@
     "sl": "Kruh",
     "cs": "Chléb",
     "hr": "Kruh",
-    "sv": "Bröd"
+    "sv": "Bröd",
+    "da": "Brød"
   },
   "question": {
     "en": "Can dogs eat bread?",
     "sl": "Ali lahko psi jedo kruh?",
     "cs": "Mohou psi jíst chléb?",
     "hr": "Smiju li psi jesti kruh?",
-    "sv": "Får hundar äta bröd?"
+    "sv": "Får hundar äta bröd?",
+    "da": "Må hunde spise brød?"
   },
   "url_slug": {
     "en": "bread",
     "sl": "kruh",
     "cs": "chleb",
     "hr": "kruh",
-    "sv": "brod"
+    "sv": "brod",
+    "da": "broed"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa.",
     "cs": "Ano, v malém množství. Obyčejný, dobře upečený bílý nebo pšeničný chléb je pro psy bez alergie na pšenici obvykle bezpečný, ale nemá pro ně žádný skutečný přínos a je kalorický. Nikdy nedávejte chléb s rozinkami, česnekový chléb ani syrové těsto.",
     "hr": "Da, u malim količinama. Običan, potpuno pečen bijeli ili pšenični kruh općenito je siguran za pse koji nisu alergični na pšenicu, ali ne donosi pravu korist i bogat je kalorijama. Nikad ne daj kruh s grožđicama, kruh s češnjakom ni sirovo tijesto.",
-    "sv": "Ja, i små mängder. Okryddat, helt bakat vitt bröd eller bröd av vete är i allmänhet säkert för hundar utan veteallergi, men det ger ingen verklig nytta och är kaloririkt. Ge aldrig russinbröd, vitlöksbröd eller rå deg."
+    "sv": "Ja, i små mängder. Okryddat, helt bakat vitt bröd eller bröd av vete är i allmänhet säkert för hundar utan veteallergi, men det ger ingen verklig nytta och är kaloririkt. Ge aldrig russinbröd, vitlöksbröd eller rå deg.",
+    "da": "Ja, i små mængder. Almindeligt, gennembagt hvidt brød eller hvedebrød er som regel ufarligt for hunde uden hvedeallergi, men det gavner ikke rigtig og indeholder mange kalorier. Giv aldrig rosinbrød, hvidløgsbrød eller rå dej."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
     "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol.",
     "cs": "Chléb zasytí, ale neobsahuje žádné živiny, které by pes nedostával už z krmiva, a je plný sacharidů a kalorií, takže příliš velké množství může vést k obezitě. Skutečným nebezpečím jsou přísady: rozinky jsou vysoce jedovaté a v pečivu se často vyskytují, česnekový chléb může způsobit bolest břicha, zvracení, průjem, slabost a zhroucení a xylitol, sladidlo v některém pečivu, je pro psy jedovatý. Syrové kvasnicové těsto v žaludku dál kyne a uvolňuje alkohol.",
     "hr": "Kruh je samo punilo: nema hranjivih tvari koje psu već ne pruža njegova hrana, a pun je ugljikohidrata i kalorija, pa previše može dovesti do pretilosti. Prava opasnost leži u sastojcima: grožđice su vrlo otrovne i često se nalaze u kruhu, kruh s češnjakom može izazvati bolove u trbuhu, povraćanje, proljev, slabost i kolaps, a ksilitol, sladilo u nekim pekarskim proizvodima, otrovan je za pse. Sirovo tijesto s kvascem nastavlja rasti u želucu i oslobađa alkohol.",
-    "sv": "Bröd är en utfyllnadsmat utan näringsämnen som hundens mat inte redan ger, och det är fullt av kolhydrater och kalorier, så för mycket kan göra att hunden riskerar fetma. De verkliga farorna är ingredienserna: russin är mycket giftiga och finns ofta i bröd, vitlöksbröd kan orsaka magont, kräkningar, diarré, svaghet och kollaps, och xylitol, ett sötningsmedel i en del bakverk, är giftigt för hundar. Rå jäsdeg fortsätter att jäsa i magen och frigör alkohol."
+    "sv": "Bröd är en utfyllnadsmat utan näringsämnen som hundens mat inte redan ger, och det är fullt av kolhydrater och kalorier, så för mycket kan göra att hunden riskerar fetma. De verkliga farorna är ingredienserna: russin är mycket giftiga och finns ofta i bröd, vitlöksbröd kan orsaka magont, kräkningar, diarré, svaghet och kollaps, och xylitol, ett sötningsmedel i en del bakverk, är giftigt för hundar. Rå jäsdeg fortsätter att jäsa i magen och frigör alkohol.",
+    "da": "Brød er fyldstof uden næringsstoffer, som hundens foder ikke allerede indeholder, og det er fyldt med kulhydrater og kalorier, så for meget kan føre til fedme hos hunden. De virkelige farer er ingredienserne: rosiner er meget giftige og findes ofte i brød, hvidløgsbrød kan give mavesmerter, opkast, diarré, svaghed og sammenbrud, og xylitol, et sødemiddel i nogle bagværk, er giftigt for hunde. Rå gærdej bliver ved med at hæve i maven og frigør alkohol."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom.",
     "cs": "Obyčejný chléb psovi většinou žaludek nerozhodí. Pokud psovi dáváte chléb nebo pečivo pravidelně, kontrolujte složení. Pokud pes snědl syrové chlebové těsto, zavolejte ihned veterináři; stejně postupujte u chleba s rozinkami nebo česnekem.",
     "hr": "Običan kruh obično ne izaziva želučane tegobe kod psa. Ako redovito daješ kruh ili pekarske proizvode, provjeri sastojke. Ako pas pojede sirovo tijesto za kruh, odmah nazovi veterinara; isto vrijedi za kruh s grožđicama ili češnjakom.",
-    "sv": "Okryddat bröd stör vanligtvis inte hundens mage. Om du ger bröd eller bakverk regelbundet ska du kontrollera ingredienserna. Om din hund äter rå bröddeg ska du ringa din veterinär direkt; detsamma gäller bröd med russin eller vitlök."
+    "sv": "Okryddat bröd stör vanligtvis inte hundens mage. Om du ger bröd eller bakverk regelbundet ska du kontrollera ingredienserna. Om din hund äter rå bröddeg ska du ringa din veterinär direkt; detsamma gäller bröd med russin eller vitlök.",
+    "da": "Almindeligt brød giver som regel ikke hunde dårlig mave. Hvis du giver brød eller bagværk jævnligt, skal du tjekke ingredienserne. Hvis din hund spiser rå brøddej, skal du ringe til din dyrlæge med det samme; det samme gælder brød med rosiner eller hvidløg."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
     "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse.",
     "cs": "Jen malinké kousky obyčejného, dobře upečeného bílého nebo pšeničného chleba, jen občas. Bez rozinek, česneku, xylitolu a dalších přísad, které jsou pro psy jedovaté.",
     "hr": "Samo vrlo mali komadići običnog, potpuno pečenog bijelog ili pšeničnog kruha, povremeno. Bez grožđica, češnjaka, ksilitola ni drugih sastojaka otrovnih za pse.",
-    "sv": "Bara mycket små bitar okryddat, helt bakat vitt bröd eller bröd av vete, då och då. Inga russin, ingen vitlök, inget xylitol eller andra ingredienser som är giftiga för hundar."
+    "sv": "Bara mycket små bitar okryddat, helt bakat vitt bröd eller bröd av vete, då och då. Inga russin, ingen vitlök, inget xylitol eller andra ingredienser som är giftiga för hundar.",
+    "da": "Kun helt små stykker almindeligt, gennembagt hvidt brød eller hvedebrød, en gang imellem. Ingen rosiner, hvidløg, xylitol eller andre ingredienser, der er giftige for hunde."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
     "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega.",
     "cs": "Pes může dostat malinký kousek obyčejného chleba. Rozinkový a česnekový chléb pro psy není, takže se nejdřív zeptej dospělého.",
     "hr": "Psi smiju dobiti sitan komadić običnog kruha. Kruh s grožđicama i kruh s češnjakom nisu za pse, zato prvo pitaj odraslu osobu.",
-    "sv": "Hundar kan få en liten bit vanligt bröd. Russinbröd och vitlöksbröd är inget för hundar, så fråga en vuxen först."
+    "sv": "Hundar kan få en liten bit vanligt bröd. Russinbröd och vitlöksbröd är inget för hundar, så fråga en vuxen först.",
+    "da": "Hunde kan få et lille stykke almindeligt brød. Rosinbrød og hvidløgsbrød er ikke til hunde, så spørg først en voksen."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo česnov kruh?",
         "cs": "Mohou psi jíst česnekový chléb?",
         "hr": "Smiju li psi jesti kruh s češnjakom?",
-        "sv": "Får hundar äta vitlöksbröd?"
+        "sv": "Får hundar äta vitlöksbröd?",
+        "da": "Må hunde spise hvidløgsbrød?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
         "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps.",
         "cs": "Ne. Česnekový chléb může způsobit vážné potíže, jako je bolest břicha, zvracení, průjem, slabost a zhroucení.",
         "hr": "Ne. Kruh s češnjakom može izazvati ozbiljne nuspojave poput bolova u trbuhu, povraćanja, proljeva, slabosti i kolapsa.",
-        "sv": "Nej. Vitlöksbröd kan orsaka allvarliga symtom som magont, kräkningar, diarré, svaghet och kollaps."
+        "sv": "Nej. Vitlöksbröd kan orsaka allvarliga symtom som magont, kräkningar, diarré, svaghet och kollaps.",
+        "da": "Nej. Hvidløgsbrød kan give alvorlige bivirkninger som mavesmerter, opkast, diarré, svaghed og sammenbrud."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali kruh pomaga psu pri razdraženem želodcu?",
         "cs": "Pomůže chléb psovi, když má podrážděný žaludek?",
         "hr": "Je li kruh dobar kad psu pozli u želucu?",
-        "sv": "Är bröd bra för en hund med orolig mage?"
+        "sv": "Är bröd bra för en hund med orolig mage?",
+        "da": "Er brød godt mod en hunds dårlige mave?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
         "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja.",
         "cs": "Lepší volbou je šetřící dieta z rýže a vařeného kuřecího masa, a ještě lepší je zavolat veterináři a poradit se.",
         "hr": "Bolji je izbor blaga dijeta od riže i kuhane piletine, a još je bolje nazvati veterinara za savjet.",
-        "sv": "En skonsam kost med ris och tillagad kyckling är ett bättre val, och ännu bättre är att ringa din veterinär och be om råd."
+        "sv": "En skonsam kost med ris och tillagad kyckling är ett bättre val, och ännu bättre är att ringa din veterinär och be om råd.",
+        "da": "Skånekost af ris og kogt kylling er et bedre valg, og det er endnu bedre at ringe til din dyrlæge for at få råd."
       }
     },
     {
@@ -98,14 +110,16 @@
         "sl": "Kaj, če pes poje surovo testo za kruh?",
         "cs": "Co když pes snědl syrové chlebové těsto?",
         "hr": "Što ako moj pas pojede sirovo tijesto za kruh?",
-        "sv": "Vad gör jag om min hund äter rå bröddeg?"
+        "sv": "Vad gör jag om min hund äter rå bröddeg?",
+        "da": "Hvad hvis min hund spiser rå brøddej?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
         "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola.",
         "cs": "Zavolejte ihned veterináři. Kvasnice nechávají těsto kynout, takže se žaludek roztahuje a do krve se uvolňuje jedovaté množství alkoholu.",
         "hr": "Odmah nazovi veterinara. Kvasac neprestano diže tijesto, rasteže želudac i u krv oslobađa otrovne količine alkohola.",
-        "sv": "Ring din veterinär omedelbart. Jästen får degen att fortsätta jäsa, vilket sträcker ut magen och frigör giftiga mängder alkohol i blodet."
+        "sv": "Ring din veterinär omedelbart. Jästen får degen att fortsätta jäsa, vilket sträcker ut magen och frigör giftiga mängder alkohol i blodet.",
+        "da": "Ring til din dyrlæge med det samme. Gæren får dejen til at blive ved med at hæve, så maven bliver udspilet, og der frigives giftige mængder alkohol i blodet."
       }
     }
   ],
@@ -253,6 +267,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e82228975fb778a7d2c7c2a4abc19c3bf77375c995dfa106ab4fd5718a8680ee"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e1c82d9314ed4a1f1b26f0b0eab1b279a2636d7b2a3b7109961565b6ba649c3"
     }
   }
 }
