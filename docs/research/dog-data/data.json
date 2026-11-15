@@ -59363,6 +59363,572 @@
       }
     }
   },
+  "australian_silky_terrier": {
+    "_note": "Added 2026-11-15 (M5-R10-115, unattended run — appended after the Afghan Hound: AKC 2024 No. 111 'Silky Terrier', S174 full-list table recorded 2026-11-14 in row 113 '110 Afghan Hound', '111 Silky Terrier'). Quotes as returned by the web-fetch tool on 2026-11-15 (non-preapproved pages: short fragments only); paraphrase only in notes, marked '(paraphrase)'. Sources S855–S863 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 236 (S855, 05.12.2012/EN; group, section and origin from the FCI nomenclature page, same id); ANKC (S863), AKC (S860) and UKC (S861) standards for the alternatives. RKC Breeds A–Z page (S856) for exercise ('Up to 30 minutes per day'), home, grooming ('Every day'), coat, shedding, lifespan ('Over 12 years'), Breed Watch (Category 1) and the breeder tests. No PDSA / Woodgreen / Dogs Trust breed page found. PetMD (S857, Michelle Diener, DVM, 2024-02-20) and WebMD (S858, medically reviewed by Amy Flowers, DVM, 2024-08-17) for weight ('around / about 10 pounds' — the FCI, ANKC, AKC and UKC standards give no weight), care frequencies and behaviour. Lifespan: no McMillan 2024 / VetCompass value reachable (Dogs Trust table PDF not in the fetch tool's provenance; Wikipedia S862, tier C, quotes McMillan 2024 at 13.3 y from 45 deaths → 120, listed for David) → senior boundary from the RKC lower bound 12 y = 108 (runbook rule). Coren rank 37 'Australian Silky Terrier' (Above average, S35 via a mirror). Never hypoallergenic. Names: RKC / FCI 'Australian Silky Terrier', AKC 'Silky Terrier' (S860; Wikipedia S862: called the Silky Terrier in North America — paraphrase); Slovenian »avstralski svilnati terier« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 236, Group 3 Section 4 (Toy Terriers), Australia",
+      "unit": "—",
+      "source_id": "S855",
+      "quote": "Section 4 Toy Terriers.",
+      "confidence": "high",
+      "notes": "FCI standard N° 236 (S855): 'ORIGIN: Australia.', 'FCI-CLASSIFICATION: Group 3 Terriers.', 'Section 4 Toy Terriers.'; header '05.12.2012/EN', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.10.2012.'. FCI nomenclature page (fetched 2026-11-15, recorded under S855): 'Group : n°3 - Terriers', section 'Toy Terriers', 'Country of origin of the breed | AUSTRALIA', accepted on a definitive basis 10/3/1962 (as shown). Wikipedia (S862, tier C): 'The American Kennel Club recognised the breed as the Silky Terrier in 1959' (fragment)."
+    },
+    "size_class": {
+      "value": "toy",
+      "unit": "—",
+      "source_id": "S856",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S856) 'Small'; PetMD (S857) 'around 10 pounds' → the 'Toy (5–12 pounds)' class of S10 (Japanese Chin / Pomeranian precedent) — used for growth. AKC Toy Group (S860 breed page, fragment 'A charming member of the AKC Toy Group')."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            23,
+            26
+          ],
+          "female": [
+            23,
+            26
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S855",
+        "quote": "Height at the withers: Males: 23 to 26 cms.",
+        "confidence": "high",
+        "notes": "FCI standard N° 236 (S855): males 23–26 cm; 'Females: can be slightly less.' (no number → the male range stored for both sexes, our reading). ANKC (S863) 'Dogs - 23 to 26 cms (9 to 10 ins) at the withers', 'Bitches can be slightly less'; AKC (S860) 'Size - Shoulder height from 9 to 10 inches.' (fragment); UKC (S861) 'ranges from 9 to 10 inches' (fragment); PetMD (S857) 'stand 9–10 inches at the shoulder' (fragment)."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            4.5,
+            4.5
+          ],
+          "female": [
+            4.5,
+            4.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S857",
+        "quote": "This breed weighs in at around 10 pounds",
+        "confidence": "medium",
+        "notes": "PetMD (S857, vet-written): around 10 lb = 4.5 kg (our conversion, rounded to 0.1 kg), one value for both sexes (stored per sex) — the game / register value. WebMD (S858) 'They should weigh about 10 pounds.' agrees. The FCI (S855) and ANKC (S863) standards say only 'Weight in proportion to height.', the AKC standard (S860) gives no weight sentence, UKC (S861) 'Weight is proportionate to height and correct substance.' — no number.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                4.5,
+                4.5
+              ],
+              "female": [
+                4.5,
+                4.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S858",
+            "quote": "They should weigh about 10 pounds.",
+            "notes": "WebMD (S858); same value (our conversion)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. Around 10 lb (S857) → the 'Toy (5–12 pounds)' class. The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Australian Silky Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S856",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S856, value as returned). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S857",
+        "quote": "the Silky Terrier's lifespan is 13–15 years",
+        "confidence": "medium",
+        "notes": "PetMD (S857, fragment). WebMD (S858) 'They live an average of 13 to 15 years.' agrees. Background; the RKC lower bound is used."
+      },
+      "mcmillan_2024": {
+        "value": 13.3,
+        "unit": "years",
+        "source_id": "S862",
+        "quote": "A 2024 UK study found a life expectancy of 13.3 years from a sample of 45 deaths for the breed",
+        "confidence": "low",
+        "notes": "Wikipedia (S862, tier C, fragment as returned 2026-11-15) citing McMillan et al. 2024 — background only, never alone. The paper's own breed table (S771 / the Dogs Trust table PDF) was not reachable this run → not used for the senior boundary; 0.75 × 13.3 × 12 = 119.7 → 120 would be the senior boundary — open for David."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S856) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14); McMillan 2024 via Wikipedia (S862) 13.3 y → 120 (open for David).",
+        "derived_from": [
+          "S11",
+          "S856"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S856",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S856), runbook first choice → 30 min ('up to N' → N). Alternatives: PetMD (S857) 'This breed needs at least one hour of exercise daily' (FAQ 'One to two hours of daily exercise is a must' — fragment); Hill's (S859, tier C) 'Exercise 20-40 minutes/day'; WebMD (S858) no minutes ('Silkies have greater energy requirements than many toy breeds.').",
+        "alternatives": [
+          {
+            "value": "≥ 60",
+            "source_id": "S857",
+            "quote": "This breed needs at least one hour of exercise daily",
+            "notes": "PetMD (S857, fragment) — 60 min; the RKC value is preferred by the runbook rule."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "active toy terrier; a lot of energy for a toy breed",
+        "unit": "—",
+        "source_id": "S858",
+        "quote": "Silkies have greater energy requirements than many toy breeds.",
+        "confidence": "medium",
+        "notes": "WebMD (S858). RKC Toy group text (S856): 'They do not need a large amount of exercise and some can be finicky eaters.' Hill's (S859, tier C): exercise needs can be met in a small space (paraphrase)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD / WebMD name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "keenly alert, active and sound terrier; courageous and dignified companion",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "It should display Terrier characteristics, embodying keen alertness, activity and soundness.",
+        "confidence": "high",
+        "notes": "FCI standard (S855); 'A courageous and dignified Toyterrier, that is second to none as a companion.' (S855). RKC (S856) tagline 'Friendly and active with characteristic straight silky hair'. UKC (S861): 'The Silky exhibits a keenly alert air, and has a quick, friendly, responsive manner.' AKC (S860): 'The keenly alert air of the terrier is characteristic, with shyness or excessive nervousness to be faulted.'"
+      },
+      "family": {
+        "value": "craves attention and wants to be with the family as much as possible",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "This breed craves attention and being around their family as much as possible.",
+        "confidence": "high",
+        "notes": "PetMD (S857). RKC Toy group text (S856): 'They should have friendly personalities and love attention.' No needs_company chip (no source names separation anxiety or time alone)."
+      },
+      "children": {
+        "value": "good with children (and other pets) if socialised properly at a young age; only moderately good with young children",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "they're good around other pets and children if your pup is socialized properly at a young age",
+        "confidence": "high",
+        "notes": "PetMD (S857, fragment) — the basis of the children chip (caveat: socialisation, kept here; Afghan Hound precedent 'if well socialised, are good with children'). WebMD (S858): 'They're only moderately good with young children and other dogs.' → no small_children chip. Hill's (S859, tier C): 'Silky terriers can be great playmates for considerate children.'"
+      },
+      "other_pets": {
+        "value": "prey drive from its terrier parents — always on a leash or in a fenced area outdoors; can still hunt rodents",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "the prey drive inherited from their parent breeds",
+        "confidence": "high",
+        "notes": "PetMD (S857, fragment): 'This means your Silky always needs to be on a leash or inside a fenced area when they're outside.' RKC (S856): 'Toy breed he may be but he is still capable of despatching rodents.' WebMD (S858): 'still tough enough to hunt down domestic rodents' (fragment). No verbatim 'high / strong prey drive' → no chases_small_pets chip by the runbook rule (Afghan Hound precedent); PetMD 'good around other pets … if socialized' vs prey drive → no other_pets chip either."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on time alone / separation anxiety found (PetMD / WebMD / RKC) → no needs_company / often_alone chip."
+      },
+      "socialisation": {
+        "value": "socialisation classes before 16 weeks help with children, other dogs and new people",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Enrolling Silky puppies in socialization classes before 16 weeks of age can help them become comfortable around children, other dogs, and new people.",
+        "confidence": "high",
+        "notes": "PetMD (S857, a need). PetMD also: 'if your pup is socialized properly at a young age' (behaviour.children) → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "smart and eager to please — easy to train as puppies",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Silky Terrier puppies can be easy to train because they are smart and eager to please their family members.",
+        "confidence": "medium",
+        "notes": "PetMD (S857)."
+      },
+      "barking": {
+        "value": "barks to alert the family or to seek attention",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Silky Terriers have a reputation for barking to alert their family or to seek attention.",
+        "confidence": "medium",
+        "notes": "PetMD (S857). WebMD (S858): 'they do bark excessively' (fragment). No chip in the vocabulary — register text only."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on chewing found → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed statement on food motivation / weight gain found (RKC Toy group text: 'some can be finicky eaters' — group, not breed) → no food_motivated_weight chip."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S856) — no points of concern; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: RKC minimum only 'Prioritising genetic diversity' (S856), no breed DNA package.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S856, fragment): Category 1 → no welfare chip, in marketing."
+      },
+      "patella": {
+        "value": "patellar luxation — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Patellar Luxation",
+        "confidence": "high",
+        "notes": "PetMD (S857) subheading (as returned); WebMD (S858) 'Patellar luxation' (bold item). Register health key kneecap_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease (hip)",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Legg-Calve-Perthes Disease",
+        "confidence": "high",
+        "notes": "PetMD (S857) subheading (as returned); WebMD (S858) 'Hip deterioration' (bold item). Register health key legg_perthes."
+      },
+      "liver_shunt": {
+        "value": "liver shunt",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Liver Shunt",
+        "confidence": "high",
+        "notes": "PetMD (S857) subheading (as returned); WebMD (S858) 'Liver problems' (bold item). Register health key liver_shunt."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Cataracts",
+        "confidence": "high",
+        "notes": "PetMD (S857) subheading; WebMD (S858) 'Cataracts'. Register health key cataracts."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (inherited blindness)",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Progressive Retinal Atrophy",
+        "confidence": "high",
+        "notes": "PetMD (S857) subheading. Register health key pra_inherited_blindness."
+      },
+      "dental": {
+        "value": "dental disease — brush the teeth every day",
+        "unit": "—",
+        "source_id": "S858",
+        "quote": "Brush their teeth daily to help prevent dental disease.",
+        "confidence": "high",
+        "notes": "WebMD (S858); PetMD (S857) subheading 'Dental Disease'. Register health key dental_disease_tooth_brushing."
+      },
+      "other": {
+        "value": "Malassezia dermatitis (PetMD); Cushing's disease, pyometra, idiopathic epilepsy, allergies and skin infections, thyroid problems (WebMD)",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Malassezia Dermatitis",
+        "confidence": "medium",
+        "notes": "PetMD (S857) subheading; WebMD (S858) bold items (paraphrase list). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 37,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Coren rank 37 'Australian Silky Terrier' (tied with the Affenpinscher, Miniature Pinscher, English Setter, Pharaoh Hound and Clumber Spaniel), section 'Above Average Working Dogs' starting at rank 27 ('Understanding of new commands: 15 to 25 repetitions.') — Wikipedia 'The Intelligence of Dogs' table (S35, read through the mirror wiki.riteme.site, checked 2026-11-15; en.wikipedia.org not in the fetch tool's provenance); neighbours '36 Norwegian Elkhound', '38 Norwich Terrier'. Tier 27–39 from the table layout."
+      },
+      "coren_tier": {
+        "value": "Above Average Working Dogs",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 27–39 (S35)."
+      },
+      "training_notes": {
+        "value": "smart and eager to please; easy to train",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Silky Terrier puppies can be easy to train because they are smart and eager to please their family members.",
+        "confidence": "medium",
+        "notes": "PetMD (S857). The game uses Coren's rank only (Above average → 1.2)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.australian_silky_terrier.learning_multiplier (1.2, runbook rule: Above average).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "compact, moderately low-set toy terrier, about one fifth longer than tall; keenly alert; straight, single, glossy, silky coat",
+        "unit": "—",
+        "source_id": "S860",
+        "quote": "The body is about one fifth longer than the dog's height at the withers.",
+        "confidence": "high",
+        "notes": "AKC standard (S860, fragment). FCI (S855): 'It should display Terrier characteristics, embodying keen alertness, activity and soundness.'"
+      },
+      "colours": {
+        "value": [
+          "blue and tan"
+        ],
+        "unit": "list",
+        "source_id": "S855",
+        "quote": "All shades of blue and tan are acceptable, the richer these colours and more clearly defined the better.",
+        "confidence": "high",
+        "notes": "FCI standard (S855, fragment); 'Silver and white not acceptable.', 'Blue on the tail to be very dark.', 'Silver blue or fawn topknot desirable.', 'The blue body colour must be free from tan or bronzing.', 'Black colouring is permissible in puppies, blue colour must be established by 18 months of age.' (S855). AKC (S860): 'Blue and tan. The blue may be silver blue, pigeon blue or slate blue, the tan deep and rich.'; 'The topknot should be silver or fawn which is lighter than the tan points.' UKC (S861): 'Blue and tan is the acceptable color combination.' One standard colour — never black (adult), silver, white or bronzing."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour (blue and tan) — the portrait default."
+      },
+      "coat": {
+        "value": "flat, fine and glossy, silky in texture; straight and single; on adults it falls below and follows the body outline",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "Hair: Must be flat, fine and glossy and of a silky texture.",
+        "confidence": "high",
+        "notes": "FCI standard (S855). AKC (S860): 'Straight, single, glossy, silky in texture. On matured specimens the coat falls below and follows the body outline.' (fragment). RKC (S856) 'Coat length: Medium'."
+      },
+      "head": {
+        "value": "of moderate length, nose black",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "Nose: Black.",
+        "confidence": "high",
+        "notes": "FCI standard (S855): 'Of moderate length, slightly shorter from the tip of the nose to between the eyes than from the same position to the occiput.' (fragment)."
+      },
+      "eyes": {
+        "value": "small, oval, as dark as possible, keen intelligent expression",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "Shall be small, oval never round or prominent, dark as possible in colour with a keen intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI standard (S855)."
+      },
+      "ears": {
+        "value": "small, V-shaped, set high, pricked, free from long hair",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "Should be small, V-shaped with fine leather, set high on the skull, pricked, and entirely free from long hair.",
+        "confidence": "high",
+        "notes": "FCI standard (S855)."
+      },
+      "tail": {
+        "value": "set high, carried erect or slightly curved, never over the back; docked or natural",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": "the first three vertebrae to be carried erect or slightly curved but not curved over back.",
+        "confidence": "high",
+        "notes": "FCI standard (S855, undocked tail, fragment); docked: 'If docked, set on high and carried erect but not over-gay.' AKC (S860): 'The tail is docked, set high and carried at twelve to two o'clock position.' Portrait: natural tail carried erect (Claude — natural-tail precedent; docking is not shown)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S856), PetMD (S857), WebMD (S858). RKC key facts reached on 2026-11-15. No PDSA / Woodgreen page for the breed.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S856) → toy (size class)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S856) → 30 min. Not long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S856). Basis of apartment (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S856). Background."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S856). The basis of brushing every day (M5-R13: 'Every day' → 7) and of frequent_grooming. Alternatives: PetMD (S857) 'Brush your dog at least twice a week using a soft-bristle brush.', WebMD (S858) 'You should brush your pet at least twice a week with a gentle brush.' → 2; Hill's (S859, tier C) 'brushed and combed every other day' (fragment)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S856)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S856). Basis of the sheds chip. Never hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S856) — see lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S856). Background."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S856). Background."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S856) — see health.breed_watch."
+      },
+      "petmd_grooming": {
+        "value": "at least twice a week",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Brush your dog at least twice a week using a soft-bristle brush.",
+        "confidence": "high",
+        "notes": "PetMD (S857) — alternative to the RKC \"Every day\" (grooming 2 in alternatives)."
+      },
+      "petmd_bath": {
+        "value": "every four to six weeks",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "bathed with a gentle dog shampoo every four to six weeks",
+        "confidence": "high",
+        "notes": "PetMD (S857, fragment) → the lower bound, every 4 weeks (agrees with WebMD \"about once a month\")."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every two to three weeks",
+        "unit": "—",
+        "source_id": "S857",
+        "quote": "Do this every two to three weeks for maintenance and after any water activities, like a bath.",
+        "confidence": "high",
+        "notes": "PetMD (S857), in the ear-cleaning paragraph ('this' = cleaning the ears — paraphrase of the context) → the child's ear-cleaning mini-game every 2 weeks (lower bound, M5-R18; Japanese Chin precedent)."
+      },
+      "webmd_grooming": {
+        "value": "at least twice a week",
+        "unit": "—",
+        "source_id": "S858",
+        "quote": "You should brush your pet at least twice a week with a gentle brush.",
+        "confidence": "high",
+        "notes": "WebMD (S858) — alternative (2)."
+      },
+      "webmd_bath": {
+        "value": "about once a month",
+        "unit": "—",
+        "source_id": "S858",
+        "quote": "You should also give your dog a bath about once a month with a dog-safe shampoo.",
+        "confidence": "high",
+        "notes": "WebMD (S858) → the parent's bath reminder every 4 weeks (M5-R19)."
+      },
+      "webmd_teeth_nails": {
+        "value": "brush the teeth daily; trim the nails regularly",
+        "unit": "—",
+        "source_id": "S858",
+        "quote": "Brush their teeth daily to help prevent dental disease.",
+        "confidence": "high",
+        "notes": "WebMD (S858) → the child's tooth-brushing mini-game every day (M5-R15). 'Trim their nails regularly.' (S858) has no frequency → no nail task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -89041,6 +89607,263 @@
         "confidence": "high",
         "notes": "FCI standard No. 228 (S849). Gold with a black mask (a common colour of 'all colours') → portrait default (weights unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): gold with a black mask is the portrait default (FCI S849 'All colours, except merle'); natural tail; never merle"
+      }
+    },
+    "australian_silky_terrier": {
+      "_note": "Unattended run M5-R10-115 (2026-11-15): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC page (S856 'Up to 30 minutes per day' → 30). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S856; McMillan 2024 13.3 y only via Wikipedia S862 → 120, open for David). Built: brushing every day (RKC 'Every day', M5-R13), tooth brushing every day (WebMD S858, M5-R15), ear cleaning every 2 weeks (PetMD S857 'every two to three weeks' → lower bound, M5-R18), bath every 4 weeks (WebMD S858 'about once a month', M5-R19), puppy socialisation with the PetMD quote (M5-R17). No meal gap, no heat warning, no nail / groomer task (no frequency). No new vocabulary key. In marketing (RKC Breed Watch Category 1). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S856",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S856) → rule 'up to N' → 30. PetMD (S857) 'at least one hour' → alternative (the RKC value is preferred).",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S857",
+            "quote": "This breed needs at least one hour of exercise daily"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S856 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S856",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the RKC lower bound 'Over 12 years', S856 — no McMillan 2024 / VetCompass row reachable).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S856"
+        ],
+        "alternatives": {
+          "senior_mcmillan_2024_via_wikipedia_13_3_y": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S856)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 37 'Australian Silky Terrier' = Above Average Working Dogs (ranks 27–39, S35) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 37, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S856",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "australian_silky_terrier.suitability.rkc_grooming. RKC 'Every day' → runbook dog-grooming rule → 7 (PetMD / WebMD 'at least twice a week' → 2 in alternatives). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S857",
+            "quote": "Brush your dog at least twice a week using a soft-bristle brush.",
+            "notes": "PetMD — lower number; WebMD (S858) the same."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S858",
+        "quote": "Brush their teeth daily to help prevent dental disease.",
+        "confidence": "high",
+        "notes": "australian_silky_terrier.suitability.webmd_teeth_nails → every day. Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »Brush their teeth daily« → vsak dan"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          14
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S857",
+        "quote": "Do this every two to three weeks for maintenance and after any water activities, like a bath.",
+        "confidence": "high",
+        "notes": "australian_silky_terrier.suitability.petmd_ears. 'every two to three weeks' → the lower bound, every 2 weeks (Japanese Chin / Saint Bernard precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to three weeks« → spodnja meja)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R19, never scored)",
+        "source_id": "S858",
+        "quote": "You should also give your dog a bath about once a month with a dog-safe shampoo.",
+        "confidence": "high",
+        "notes": "australian_silky_terrier.suitability.webmd_bath. 'about once a month' → every 4 weeks; PetMD (S857) 'every four to six weeks' → lower bound 4 weeks agrees. Nails 'regularly' (S858), groomer: no source → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsake 4 tedne (WebMD »about once a month«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S857",
+        "quote": "Enrolling Silky puppies in socialization classes before 16 weeks of age can help them become comfortable around children, other dogs, and new people.",
+        "confidence": "high",
+        "notes": "australian_silky_terrier.behaviour.socialisation (PetMD S857, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S857)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-115); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_size_of_home"
+            ],
+            "quote": "S856 'Flat/ Apartment'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S857"
+            ],
+            "refs": [
+              "australian_silky_terrier.behaviour.children"
+            ],
+            "quote": "S857 'they're good around other pets and children if your pup is socialized properly at a young age'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S856 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_grooming"
+            ],
+            "quote": "S856 'Every day'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "WebMD 'only moderately good with young children' (S858).",
+          "chases_small_pets": "PetMD 'the prey drive inherited from their parent breeds' (S857) and RKC 'still capable of despatching rodents' (S856) — no verbatim 'high / strong prey drive' → no chip by the runbook rule (Afghan Hound precedent); open for David.",
+          "other_pets": "PetMD good around other pets if socialised vs prey drive (S857); WebMD only moderately good with other dogs (S858) → conflicting.",
+          "needs_company": "No source on time alone / separation anxiety.",
+          "family_pet": "No breed-specific family-pet statement.",
+          "active_family": "RKC 'Up to 30 minutes per day' (S856).",
+          "long_daily_exercise": "30 minutes a day — the chip is for 2 hours or more.",
+          "low_shedding": "RKC 'Sheds: Yes' (S856).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S856).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch Category 1 (S856); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, children; consider sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S856",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 (S856). Marketing never shows the Australian Silky Terrier as hypoallergenic, with small pets or with a docked tail (S856, S857, S860).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Australian Silky Terrier, blue and tan (the only standard colour): silver / slate blue body, rich tan points, silver or fawn topknot; compact, moderately low-set toy terrier; flat, fine, glossy, silky coat following the body outline; moderate-length head, black nose; small dark oval eyes; small pricked V-shaped ears free from long hair; natural tail carried erect",
+        "unit": "—",
+        "source_id": "S855",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S855) and AKC (S860) as in australian_silky_terrier.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue and tan is the portrait default (the only standard colour); never black / silver / white, natural tail"
       }
     }
   }
