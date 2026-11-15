@@ -39,7 +39,9 @@ class SendItemMediaAlert implements ShouldQueue
             $discord->send(new AdminAlert(
                 AdminAlertKind::ItemMediaStuck,
                 __('admin.item_media.discord.title', ['count' => $this->count]),
-                __('admin.item_media.discord.body').($this->locked > 0 ? "\n\n".__('admin.item_media.discord.locked', ['count' => $this->locked]) : ''),
+                $this->locked > 0
+                    ? __('admin.item_media.discord.body_locked', ['locked' => $this->locked, 'others' => max(0, $this->count - $this->locked)])
+                    : __('admin.item_media.discord.body'),
                 [],
             ));
         } catch (DiscordWebhookException $e) {

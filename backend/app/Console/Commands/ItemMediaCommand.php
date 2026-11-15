@@ -33,6 +33,7 @@ class ItemMediaCommand extends Command
                 ])->all());
             }
             $heal = $items->heal(dryRun: true);
+            $this->info("[dry run] {$items->stuckActionPets()} pet(s) with treats »preparing« for more than ".ItemMediaService::watchdogHours().' h.');
             $this->info("[dry run] {$rows->count()} row(s) not made; would retry {$heal['retried']}, give up {$heal['exhausted']}, {$heal['waiting']} waiting for the AI budget.");
 
             return self::SUCCESS;
@@ -40,7 +41,8 @@ class ItemMediaCommand extends Command
 
         $r = $items->run();
         $this->info("Catalogue pictures queued {$r['catalogue']}; polled {$r['polled']}, timed out {$r['timed_out']}; retried {$r['retried']}, given up {$r['exhausted']}; "
-            ."{$r['pets']} pet(s) with items, {$r['dispatched']} job(s) queued, {$r['settled']} item(s) newly ready.");
+            ."{$r['pets']} pet(s) with items, {$r['dispatched']} job(s) queued, {$r['settled']} item(s) newly ready"
+            .($r['stuck_reported'] > 0 ? "; watchdog: {$r['stuck_reported']} pet(s) with treats still preparing — alert sent." : '.'));
 
         return self::SUCCESS;
     }

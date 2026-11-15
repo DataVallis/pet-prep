@@ -5,6 +5,7 @@ use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Filament\Resources\ItemMediaResource\Pages\ListItemMedia;
 use App\Jobs\SendItemMediaAlert;
+use App\Jobs\SendTreatsWaitingAlert;
 use App\Jobs\StoreItemMedia;
 use App\Models\AiSpendLedger;
 use App\Models\ItemMedia;
@@ -929,12 +930,34 @@ describe('treats wait for their clip', function () {
             'status' => 'failed', 'error_reason' => 'generation_failed', 'auto_retries' => 2, 'exhausted_at' => now()->subDays(3)]);
         expect(imChildState($child)->json('wishes.treats.ready'))->toBeFalse();
 
+        // QA #1139 m4: given-up treat rows nobody waits for stay as they are — a pet with an empty
+        // pack, a game-over pet, a look row at a stage no waiting pet shows.
+        [, , $emptyPet] = imFamily(null);
+        PetItem::create(['pet_id' => $emptyPet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 0, 'acquired_at' => now()->subDays(5)]);
+        [, , $overPet] = imFamily(null, ['is_game_over' => true]);
+        PetItem::create(['pet_id' => $overPet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 4, 'acquired_at' => now()->subDays(5)]);
+        $look = imLook();
+        [, , $lookPet] = imFamily($look); // shows the look's `young` picture, has treats left
+        PetItem::create(['pet_id' => $lookPet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 3, 'acquired_at' => now()->subDays(5)]);
+        $givenUp = fn (array $attributes) => ItemMedia::create($attributes + ['item_key' => 'treats', 'design' => 'dog_treats', 'kind' => 'image',
+            'status' => 'failed', 'error_reason' => 'generation_failed', 'auto_retries' => 2, 'prompt_variant' => 1, 'exhausted_at' => now()->subDays(3), 'alerted_at' => now()->subDays(3)]);
+        $ofEmpty = $givenUp(['scope' => 'pet', 'pet_id' => $emptyPet->id]);
+        $ofOver = $givenUp(['scope' => 'pet', 'pet_id' => $overPet->id]);
+        $lookYoung = $givenUp(['scope' => 'look', 'pet_look_id' => $look->id, 'life_stage' => 'young']);
+        $lookAdult = $givenUp(['scope' => 'look', 'pet_look_id' => $look->id, 'life_stage' => 'adult']);
+
         $migration = require database_path('migrations/2027_04_07_130000_reopen_given_up_treat_content.php');
-        expect($migration->reopenGivenUpTreats())->toBe(1)
+        expect($migration->reopenGivenUpTreats())->toBe(2)
             ->and($migration->reopenGivenUpTreats())->toBe(0) // idempotent
             ->and($clip->fresh()->exhausted_at)->toBeNull()
             ->and($clip->fresh()->auto_retries)->toBe(0)
+            ->and($lookYoung->fresh()->exhausted_at)->toBeNull()
+            ->and($lookYoung->fresh()->prompt_variant)->toBe(0) // QA #1139 m5: the next variant gets its try
+            ->and($lookAdult->fresh()->exhausted_at)->not->toBeNull()
+            ->and($ofEmpty->fresh()->exhausted_at)->not->toBeNull()
+            ->and($ofOver->fresh()->exhausted_at)->not->toBeNull()
             ->and($bed->fresh()->exhausted_at)->not->toBeNull();
+        ItemMedia::whereKey([$lookYoung->id, $lookAdult->id, $ofEmpty->id, $ofOver->id])->delete(); // the rest of the test is about the first pet
 
         // The next scheduled pass retries it (no manual step) and the treat unlocks.
         artisan('media:item-media')->assertSuccessful();
@@ -943,6 +966,172 @@ describe('treats wait for their clip', function () {
         imAs($child);
         postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
         Queue::assertNotPushed(SendItemMediaAlert::class);
+    });
+
+    it('QA #1139 M1: a second buyer on a given-up look chain gets ONE fresh chain — and a second give-up alerts again', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        $look = imLook();
+        [$parent, $child, $pet] = imFamily($look);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        $row = ItemMedia::where('scope', 'look')->where('kind', 'image')->firstOrFail();
+        foreach ([0, 1] as $try) {
+            imFailWebhook($row->fresh(), noMedia: true);
+            $this->travel(31)->minutes();
+            artisan('media:item-media')->assertSuccessful();
+        }
+        // Alerts about the treat row (the catalogue pictures of this test time out on their own).
+        $treatAlerts = fn () => Queue::pushed(SendItemMediaAlert::class, fn ($job) => $job->locked === 1)->count();
+        expect($row->fresh()->exhausted_at)->not->toBeNull()->and(imFalSubmits('image'))->toHaveCount(2)->and($treatAlerts())->toBe(1);
+        // The scheduler alone never touches a given-up chain.
+        $this->travel(1)->days();
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image'))->toHaveCount(2);
+
+        // Another family with the same look + stage buys treats: one fresh chain, once.
+        [$parent2, $child2, $pet2] = imFamily($look);
+        imRedeem($parent2, $pet2, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', false);
+        $row->refresh();
+        expect(imFalSubmits('image'))->toHaveCount(3)
+            ->and($row->exhausted_at)->toBeNull()->and($row->alerted_at)->toBeNull()
+            ->and($row->auto_retries)->toBe(0)->and($row->prompt_variant)->toBe(0);
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image'))->toHaveCount(3);
+
+        // It gives up again → a SECOND alert (2 pets wait for this one row).
+        foreach ([0, 1] as $try) {
+            imFailWebhook($row->fresh(), noMedia: true);
+            $this->travel(31)->minutes();
+            artisan('media:item-media')->assertSuccessful();
+        }
+        expect($row->fresh()->exhausted_at)->not->toBeNull()->and($treatAlerts())->toBe(2);
+        imAs($child2);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 10);
+
+        // A second pack for the first pet reopens it once more; this time it is made → both pets unlock.
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        expect(imFalSubmits('image'))->toHaveCount(5);
+        imComplete();
+        artisan('media:item-media')->assertSuccessful();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 19);
+        imAs($child2);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+    });
+
+    it('QA #1139 M1: buying a durable item never reopens a given-up treat chain, and a chain at work is left alone', function () {
+        [$parent, , $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        $row = ItemMedia::where('item_key', 'treats')->where('kind', 'image')->firstOrFail();
+        $service = app(ItemMediaService::class);
+        // Running, not given up → nothing to reopen.
+        expect($service->reopenGivenUp($pet->fresh(), ['treats']))->toBe(0);
+
+        imFailWebhook($row->fresh());
+        $row->refresh()->forceFill(['auto_retries' => 2, 'exhausted_at' => now(), 'alerted_at' => now()])->save();
+        expect($service->reopenGivenUp($pet->fresh(), ['bed', 'bowls', 'toy_1']))->toBe(0)
+            ->and($row->fresh()->exhausted_at)->not->toBeNull()
+            ->and($service->reopenGivenUp($pet->fresh(), ['treats']))->toBe(1)
+            ->and($service->reopenGivenUp($pet->fresh(), ['treats']))->toBe(0);
+    });
+
+    it('QA #1139 M2 watchdog: one alert a day with the count of pets whose treats are »preparing« for more than 2 h', function () {
+        Queue::fake([SendTreatsWaitingAlert::class]);
+        Cache::flush();
+        config(['media.budget.daily_usd' => 0.01]); // waiting for the AI budget is never given up
+        [$parent, , $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        // A pet whose own picture never came (no item row at all).
+        [$parent2, , $pet2] = imFamily(null, ['media_status' => 'pending'], withPicture: false);
+        PetItem::create(['pet_id' => $pet2->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()]);
+        // Not counted: an empty pack, a pet without AI media, a pet that is ready.
+        [, , $empty] = imFamily(null);
+        PetItem::create(['pet_id' => $empty->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 0, 'acquired_at' => now()]);
+        [, , $drawn] = imFamily(null, ['media_status' => 'disabled'], withPicture: false);
+        PetItem::create(['pet_id' => $drawn->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()]);
+        $service = app(ItemMediaService::class);
+
+        // Fresh purchases: still within the 2 hours.
+        $this->travel(110)->minutes();
+        artisan('media:item-media')->assertSuccessful();
+        expect($service->stuckActionPets())->toBe(0);
+        Queue::assertNothingPushed();
+
+        $this->travel(20)->minutes();
+        expect($service->stuckActionPets())->toBe(2);
+        artisan('media:item-media')->assertSuccessful();
+        Queue::assertPushed(SendTreatsWaitingAlert::class, fn ($job) => $job->count === 2 && $job->hours === 2);
+
+        // Not every 10 minutes: once per day while it lasts.
+        $this->travel(10)->minutes();
+        artisan('media:item-media')->assertSuccessful();
+        $this->travel(3)->hours();
+        artisan('media:item-media')->assertSuccessful();
+        Queue::assertPushed(SendTreatsWaitingAlert::class, 1);
+        $this->travel(1)->days();
+        artisan('media:item-media')->assertSuccessful();
+        Queue::assertPushed(SendTreatsWaitingAlert::class, 2);
+
+        // The budget allows again → the first pet is made; the pet without a picture still counts.
+        config(['media.budget.daily_usd' => 50.0]);
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        expect($service->stuckActionPets())->toBe(1);
+        $pet2->delete();
+        $this->travel(1)->days();
+        artisan('media:item-media')->assertSuccessful();
+        Queue::assertPushed(SendTreatsWaitingAlert::class, 2);
+    });
+
+    it('QA #1139 M2 watchdog: a given-up chain whose own alert was lost is still reported; the alert texts carry counts only and never contradict themselves', function () {
+        Cache::flush();
+        Http::fake(['discord.com/api/webhooks/*' => Http::response('', 204)]);
+        config(['services.discord.alerts_webhook_url' => 'https://discord.com/api/webhooks/1/secret-token']);
+        [$parent, , $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        $row = ItemMedia::where('kind', 'image')->firstOrFail();
+        imFailWebhook($row->fresh());
+        // Given up with `alerted_at` set although Discord never got it (job lost / webhook down).
+        $row->refresh()->forceFill(['auto_retries' => 2, 'exhausted_at' => now(), 'alerted_at' => now()])->save();
+
+        $this->travel(121)->minutes();
+        expect(app(ItemMediaService::class)->stuckActionPets())->toBe(1);
+        artisan('media:item-media')->assertSuccessful(); // sync queue → the watchdog post goes out
+        $posts = fn () => Http::recorded(fn (Request $r) => str_contains($r->url(), 'discord.com'))->map(fn (array $pair) => json_encode($pair[0]->data(), JSON_UNESCAPED_UNICODE))->values();
+        expect($posts())->toHaveCount(1)
+            ->and($posts()[0])->toContain('1 pet(s)')->toContain('more than 2 h')
+            ->and($posts()[0])->not->toContain((string) $parent->email)->not->toContain('secret-token');
+
+        // QA #1139 m3: with locked rows the give-up alert asks for action and never says »no admin action needed«.
+        app()->call([new SendItemMediaAlert(3, 1), 'handle']);
+        app()->call([new SendItemMediaAlert(2, 0), 'handle']);
+        expect($posts()[1])->toContain('ACTION NEEDED for 1 of them')->toContain('The other 2 belong to durable items')
+            ->and($posts()[1])->not->toContain('no admin action needed')
+            ->and($posts()[2])->toContain('no admin action needed')->not->toContain('ACTION NEEDED');
+    });
+
+    it('QA #1139 m6: an empty pack is not regenerated at a new stage and does not count as locked; a new pack brings it back', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        [$parent, $child, $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        imComplete();
+        PetItem::where('pet_id', $pet->id)->update(['quantity_left' => 0]);
+
+        imPicture($pet, 'adult', null, 2); // the pet grew
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image'))->toHaveCount(1)->and(imFalSubmits('clip'))->toHaveCount(1)
+            ->and(imChildState($child)->json('wishes.treats'))->toBe(['left' => 0, 'given_today' => 0, 'daily_limit' => 2, 'ready' => true]);
+
+        // A given-up row nobody can use is not »ACTION NEEDED«.
+        $row = ItemMedia::where('kind', 'image')->firstOrFail();
+        $row->forceFill(['status' => 'failed', 'error_reason' => 'timed_out', 'target_path' => "{$pet->id}/reference-g2.jpg", 'completed_at' => now()->subHour()])->save();
+        artisan('media:item-media')->assertSuccessful();
+        Queue::assertPushed(SendItemMediaAlert::class, fn ($job) => $job->count === 1 && $job->locked === 0);
+
+        // New treats → the purchase reopens the chain for the new picture.
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', false);
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
     });
 
     it('never locks a pet that gets no AI media (drawn stage) and reports no_treats before the clip', function () {
