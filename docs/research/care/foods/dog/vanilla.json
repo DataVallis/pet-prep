@@ -10,7 +10,8 @@
     "da": "Vaniljeekstrakt",
     "fi": "Vaniljauute",
     "nb": "Vaniljeekstrakt",
-    "it": "Estratto di vaniglia"
+    "it": "Estratto di vaniglia",
+    "de": "Vanilleextrakt"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
@@ -21,7 +22,8 @@
     "da": "Må hunde få vaniljeekstrakt?",
     "fi": "Saako koira vaniljauutetta?",
     "nb": "Kan hunder få vaniljeekstrakt?",
-    "it": "I cani possono mangiare l’estratto di vaniglia?"
+    "it": "I cani possono mangiare l’estratto di vaniglia?",
+    "de": "Dürfen Hunde Vanilleextrakt bekommen?"
   },
   "url_slug": {
     "en": "vanilla",
@@ -32,7 +34,8 @@
     "da": "vaniljeekstrakt",
     "fi": "vaniljauute",
     "nb": "vaniljeekstrakt",
-    "it": "estratto-di-vaniglia"
+    "it": "estratto-di-vaniglia",
+    "de": "vanilleextrakt"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, hold vaniljeekstrakt væk fra din hund. Vaniljeekstrakt er for det meste lavet af alkohol, og alkohol kan let give hunde opkast, diarré og vaklende gang som hos en beruset. Hvis din hund har drukket noget, skal du kontakte din dyrlæge med det samme.",
     "fi": "Ei saa, pidä vaniljauute poissa koirasi ulottuvilta. Vaniljauute koostuu pääosin alkoholista, ja alkoholi voi helposti aiheuttaa koirille oksentelua, ripulia ja humalaista kävelyä. Jos koirasi joi sitä, ota heti yhteyttä eläinlääkäriin.",
     "nb": "Nei, hold vaniljeekstrakt unna hunden. Vaniljeekstrakt er for det meste laget av alkohol, og alkohol kan lett gi hunder oppkast, diaré og ustø gange som om de var fulle. Hvis hunden har drukket noe, kontakt dyrlegen med en gang.",
-    "it": "No, tieni l’estratto di vaniglia lontano dal tuo cane. L’estratto di vaniglia è fatto per lo più di alcol, e l’alcol può facilmente causare nei cani vomito, diarrea e un’andatura da ubriaco. Se il tuo cane ne ha bevuto un po’, contatta subito il veterinario."
+    "it": "No, tieni l’estratto di vaniglia lontano dal tuo cane. L’estratto di vaniglia è fatto per lo più di alcol, e l’alcol può facilmente causare nei cani vomito, diarrea e un’andatura da ubriaco. Se il tuo cane ne ha bevuto un po’, contatta subito il veterinario.",
+    "de": "Nein, halten Sie Vanilleextrakt von Ihrem Hund fern. Vanilleextrakt besteht größtenteils aus Alkohol, und Alkohol kann bei Hunden leicht Erbrechen, Durchfall und einen torkelnden Gang verursachen. Hat Ihr Hund davon getrunken, wenden Sie sich sofort an Ihren Tierarzt."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
@@ -55,7 +59,8 @@
     "da": "Vaniljeekstrakt er for det meste lavet af alkohol, og hunde tåler meget lidt: alkohol kan let give opkast, diarré, beruset gang og endda koma eller død. Alkohol optages hurtigt, efter at det er slugt, så det er vigtigt at få dyrlægehjælp hurtigt. Fødevarer, der indeholder alkohol, kan give de samme problemer som alkoholiske drikke.",
     "fi": "Vaniljauute koostuu pääosin alkoholista, ja koirat ovat pieniä: alkoholi voi helposti aiheuttaa oksentelua, ripulia, humalaista kävelyä ja jopa kooman tai kuoleman. Alkoholi imeytyy nopeasti nielemisen jälkeen, joten on tärkeää hakea eläinlääkärin apua nopeasti. Alkoholia sisältävät ruokatuotteet voivat aiheuttaa samoja ongelmia kuin alkoholijuomat.",
     "nb": "Vaniljeekstrakt er for det meste laget av alkohol, og hunder tåler lite: alkohol kan lett gi oppkast, diaré, ustø gange som om de var fulle og til og med koma eller død. Alkohol tas raskt opp i kroppen etter at den er svelget, så det er viktig å få dyrlegehjelp raskt. Matvarer som inneholder alkohol, kan gi de samme problemene som alkoholholdige drikker.",
-    "it": "L’estratto di vaniglia è fatto per lo più di alcol, e i cani sono molto sensibili: l’alcol può facilmente causare vomito, diarrea, un’andatura da ubriaco e perfino coma o morte. L’alcol viene assorbito rapidamente dopo l’ingestione, quindi è importante rivolgersi subito al veterinario. I prodotti alimentari che contengono alcol possono causare gli stessi problemi delle bevande alcoliche."
+    "it": "L’estratto di vaniglia è fatto per lo più di alcol, e i cani sono molto sensibili: l’alcol può facilmente causare vomito, diarrea, un’andatura da ubriaco e perfino coma o morte. L’alcol viene assorbito rapidamente dopo l’ingestione, quindi è importante rivolgersi subito al veterinario. I prodotti alimentari che contengono alcol possono causare gli stessi problemi delle bevande alcoliche.",
+    "de": "Vanilleextrakt besteht größtenteils aus Alkohol, und Hunde sind Leichtgewichte: Alkohol kann leicht Erbrechen, Durchfall, einen torkelnden Gang und sogar Koma oder Tod verursachen. Alkohol wird nach dem Schlucken schnell aufgenommen, deshalb ist es wichtig, rasch tierärztliche Hilfe zu holen. Lebensmittel, die Alkohol enthalten, können dieselben Probleme verursachen wie alkoholische Getränke."
   },
   "signs": {
     "en": [
@@ -147,6 +152,16 @@
       "Respiro più lento",
       "Glicemia bassa, pressione bassa, temperatura corporea bassa",
       "Collasso"
+    ],
+    "de": [
+      "Erbrechen oder Würgen",
+      "Durchfall",
+      "Koordinationsstörungen, torkelnder Gang",
+      "Sabbern",
+      "Niedergeschlagenheit oder Teilnahmslosigkeit, Schwäche",
+      "Langsamere Atmung",
+      "Niedriger Blutzucker, niedriger Blutdruck, niedrige Körpertemperatur",
+      "Kollaps"
     ]
   },
   "what_to_do": {
@@ -158,7 +173,8 @@
     "da": "Hvis din hund har drukket vaniljeekstrakt, skal du notere, hvor meget, og straks kontakte din dyrlæge eller en giftrådgivning for dyr. En hund, der viser tegn, bør til dyrlæge så hurtigt som muligt.",
     "fi": "Jos koirasi joi vaniljauutetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Koira, jolla on oireita, pitää viedä eläinlääkärille mahdollisimman pian.",
     "nb": "Hvis hunden har drukket vaniljeekstrakt, merk deg hvor mye, og kontakt dyrlegen eller giftinformasjon for dyr med en gang. En hund som viser symptomer, bør til dyrlegen så snart som mulig.",
-    "it": "Se il tuo cane ha bevuto l’estratto di vaniglia, annota quanto ne ha bevuto e contatta subito il veterinario o un centro antiveleni veterinario. Un cane che mostra sintomi deve essere visitato da un veterinario il prima possibile."
+    "it": "Se il tuo cane ha bevuto l’estratto di vaniglia, annota quanto ne ha bevuto e contatta subito il veterinario o un centro antiveleni veterinario. Un cane che mostra sintomi deve essere visitato da un veterinario il prima possibile.",
+    "de": "Hat Ihr Hund Vanilleextrakt getrunken, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Ein Hund mit Anzeichen sollte so schnell wie möglich von einem Tierarzt untersucht werden."
   },
   "serving": null,
   "child": {
@@ -170,7 +186,8 @@
     "da": "Vaniljeekstrakt er til bagning, ikke til hunde. Hold den lille flaske lukket og lagt væk, og sig det til en voksen, hvis din hund finder den.",
     "fi": "Vaniljauute on leivontaan, ei koirille. Pidä pieni pullo suljettuna ja laita se talteen, ja kerro aikuiselle, jos koirasi löytää sen.",
     "nb": "Vaniljeekstrakt er til baking, ikke til hunder. Hold den lille flasken lukket og lagt bort, og si fra til en voksen hvis hunden finner den.",
-    "it": "L’estratto di vaniglia serve per i dolci, non per i cani. Tieni la boccetta chiusa e al suo posto, e dillo a un adulto se il tuo cane la trova."
+    "it": "L’estratto di vaniglia serve per i dolci, non per i cani. Tieni la boccetta chiusa e al suo posto, e dillo a un adulto se il tuo cane la trova.",
+    "de": "Vanilleextrakt ist zum Backen da, nicht für Hunde. Lass das Fläschchen verschlossen, räum es weg und sag einem Erwachsenen Bescheid, wenn dein Hund es findet."
   },
   "faq": [],
   "sources": [
@@ -299,6 +316,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bb4dbd533014bced964115ca91e18b0b729b717b1fc3af3805dabb706452adba"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "daba237d7abad4c779b2b20668655f9b576424426b28069b600df9226b85de39"
     }
   }
 }

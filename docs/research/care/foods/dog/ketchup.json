@@ -10,7 +10,8 @@
     "da": "Ketchup",
     "fi": "Ketsuppi",
     "nb": "Ketchup",
-    "it": "Ketchup"
+    "it": "Ketchup",
+    "de": "Ketchup"
   },
   "question": {
     "en": "Can dogs eat ketchup?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise ketchup?",
     "fi": "Saako koira syödä ketsuppia?",
     "nb": "Kan hunder spise ketchup?",
-    "it": "I cani possono mangiare il ketchup?"
+    "it": "I cani possono mangiare il ketchup?",
+    "de": "Dürfen Hunde Ketchup fressen?"
   },
   "url_slug": {
     "en": "ketchup",
@@ -32,7 +34,8 @@
     "da": "ketchup",
     "fi": "ketsuppi",
     "nb": "ketchup",
-    "it": "ketchup"
+    "it": "ketchup",
+    "de": "ketchup"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, det er bedst ikke at dele ketchup med din hund. Ketchup er ikke giftigt i sig selv, men det indeholder som regel hvidløg og løg, sukker og salt og nogle gange xylitol, som er giftigt for hunde.",
     "fi": "Ei suositella, ketsuppia on parasta olla jakamatta koiran kanssa. Ketsuppi ei sinänsä ole myrkyllistä, mutta siinä on yleensä valkosipulia ja sipulia, sokeria ja suolaa, ja joskus ksylitolia, joka on koirille myrkyllistä.",
     "nb": "Nei, det er best å ikke dele ketchup med hunden. Ketchup er ikke giftig i seg selv, men den inneholder som regel hvitløk og løk, sukker og salt, og noen ganger xylitol, som er giftig for hunder.",
-    "it": "No, è meglio non dare il ketchup al tuo cane. Il ketchup in sé non è tossico, ma di solito contiene aglio e cipolla, zucchero e sale, e a volte xilitolo, che è tossico per i cani."
+    "it": "No, è meglio non dare il ketchup al tuo cane. Il ketchup in sé non è tossico, ma di solito contiene aglio e cipolla, zucchero e sale, e a volte xilitolo, che è tossico per i cani.",
+    "de": "Nein, teilen Sie Ketchup besser nicht mit Ihrem Hund. Ketchup selbst ist nicht giftig, enthält aber meist Knoblauch und Zwiebeln, Zucker und Salz und manchmal Xylit, das für Hunde giftig ist."
   },
   "why": {
     "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
@@ -55,7 +59,8 @@
     "da": "Ketchup fra butikken indeholder typisk hvidløg og løg, kanel, sukker og salt, konserveringsmidler og kemikalier, og mange af dem kan skade hunde. Hvidløg og løg kan give hunden dårlig mave og har nogle gange mere alvorlige virkninger. Noget ketchup indeholder også xylitol, som er giftigt for hunde. Kilderne er uenige om, hvor strenge man skal være (en kilde kalder ketchup ugiftigt, en anden siger blot nej), så vi fraråder at give den.",
     "fi": "Kaupan ketsupissa on tyypillisesti valkosipulia ja sipulia, kanelia, sokeria ja suolaa sekä säilöntäaineita ja kemikaaleja, ja monet näistä voivat vahingoittaa koiria. Valkosipuli ja sipuli voivat ärsyttää koiran vatsaa ja joskus aiheuttaa vakavampia vaikutuksia. Joissakin ketsupeissa on myös ksylitolia, joka on koirille myrkyllistä. Lähteet ovat eri linjoilla siitä, kuinka tiukasti ketsuppiin pitäisi suhtautua (yksi pitää sitä myrkyttömänä, toinen sanoo yksinkertaisesti ei), joten neuvomme olemaan antamatta sitä.",
     "nb": "Ketchup fra butikken inneholder vanligvis hvitløk og løk, kanel, sukker og salt, konserveringsmidler og kjemikalier, og mange av disse stoffene kan skade hunder. Hvitløk og løk kan gi hunder urolig mage og av og til mer alvorlige virkninger. Noen typer ketchup inneholder også xylitol, som er giftig for hunder. Kildene er uenige om hvor streng man bør være (én kaller ketchup ikke giftig, en annen sier rett og slett nei), så vi anbefaler å ikke gi den.",
-    "it": "Il ketchup industriale contiene in genere aglio e cipolla, cannella, zucchero e sale, conservanti e additivi, e molti di questi ingredienti possono far male ai cani. Aglio e cipolla possono irritare lo stomaco del cane e a volte avere effetti più seri. Alcuni ketchup contengono anche xilitolo, tossico per i cani. Le fonti non sono d’accordo su quanto essere severi (una dice che il ketchup non è tossico, un’altra dice semplicemente no), quindi ti consigliamo di non darlo."
+    "it": "Il ketchup industriale contiene in genere aglio e cipolla, cannella, zucchero e sale, conservanti e additivi, e molti di questi ingredienti possono far male ai cani. Aglio e cipolla possono irritare lo stomaco del cane e a volte avere effetti più seri. Alcuni ketchup contengono anche xilitolo, tossico per i cani. Le fonti non sono d’accordo su quanto essere severi (una dice che il ketchup non è tossico, un’altra dice semplicemente no), quindi ti consigliamo di non darlo.",
+    "de": "Handelsüblicher Ketchup enthält typischerweise Knoblauch und Zwiebeln, Zimt, Zucker und Salz, Konservierungsstoffe und Zusatzstoffe, und viele davon können Hunden schaden. Knoblauch und Zwiebeln können einem Hund auf den Magen schlagen und haben manchmal noch ernstere Folgen. Manche Ketchups enthalten außerdem Xylit, das für Hunde giftig ist. Die Quellen sind sich uneinig, wie streng man sein sollte (eine Quelle nennt Ketchup nicht giftig, eine andere sagt schlicht Nein), deshalb raten wir davon ab."
   },
   "signs": {
     "en": [
@@ -84,6 +89,9 @@
     ],
     "it": [
       "Mal di stomaco"
+    ],
+    "de": [
+      "Magenbeschwerden"
     ]
   },
   "what_to_do": {
@@ -95,7 +103,8 @@
     "da": "Noget ketchup indeholder xylitol, som er giftigt for hunde. Hvis din hund har spist ketchup med xylitol, skal du følge rådene på vores side om xylitol.",
     "fi": "Joissakin ketsupeissa on ksylitolia, joka on koirille myrkyllistä. Jos koirasi söi ksylitolia sisältävää ketsuppia, noudata ksylitolia käsittelevän sivumme ohjeita.",
     "nb": "Noen typer ketchup inneholder xylitol, som er giftig for hunder. Hvis hunden har spist ketchup med xylitol, følg rådene på siden vår om xylitol.",
-    "it": "Alcuni ketchup contengono xilitolo, che è tossico per i cani. Se il tuo cane ha mangiato ketchup con xilitolo, segui i consigli della nostra pagina sullo xilitolo."
+    "it": "Alcuni ketchup contengono xilitolo, che è tossico per i cani. Se il tuo cane ha mangiato ketchup con xilitolo, segui i consigli della nostra pagina sullo xilitolo.",
+    "de": "Manche Ketchups enthalten Xylit, das für Hunde giftig ist. Hat Ihr Hund Ketchup mit Xylit gefressen, befolgen Sie den Rat auf unserer Xylit-Seite."
   },
   "serving": null,
   "child": {
@@ -107,7 +116,8 @@
     "da": "Ketchup er en sovs til mennesker. Den indeholder ting, som ikke er gode for hunde, så behold den på din egen tallerken.",
     "fi": "Ketsuppi on ihmisten kastike. Siinä on aineita, jotka eivät ole hyväksi koirille, joten pidä se omalla lautasellasi.",
     "nb": "Ketchup er saus for mennesker. Den inneholder ting som ikke er bra for hunder, så la den bli på din egen tallerken.",
-    "it": "Il ketchup è una salsa per le persone. Dentro ci sono cose che non fanno bene ai cani, quindi tienilo nel tuo piatto."
+    "it": "Il ketchup è una salsa per le persone. Dentro ci sono cose che non fanno bene ai cani, quindi tienilo nel tuo piatto.",
+    "de": "Ketchup ist eine Soße für Menschen. Es steckt einiges drin, das für Hunde nicht gut ist, also lass ihn auf deinem eigenen Teller."
   },
   "faq": [
     {
@@ -120,7 +130,8 @@
         "da": "Hvad med tomatsovs?",
         "fi": "Entä tomaattikastike?",
         "nb": "Hva med tomatsaus?",
-        "it": "E la salsa di pomodoro?"
+        "it": "E la salsa di pomodoro?",
+        "de": "Und Tomatensoße?"
       },
       "a": {
         "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
@@ -131,7 +142,8 @@
         "da": "Nej. Tomatsovs indeholder ofte skadelige ingredienser som hvidløg, løg eller urter, der ikke er sikre for hunde.",
         "fi": "Ei. Tomaattikastikkeessa on usein haitallisia ainesosia, kuten valkosipulia, sipulia tai koirille sopimattomia yrttejä.",
         "nb": "Nei. Tomatsaus inneholder ofte skadelige ingredienser som hvitløk, løk eller urter som ikke er trygge for hunder.",
-        "it": "No. La salsa di pomodoro contiene spesso ingredienti dannosi come aglio, cipolla o erbe aromatiche non sicure."
+        "it": "No. La salsa di pomodoro contiene spesso ingredienti dannosi come aglio, cipolla o erbe aromatiche non sicure.",
+        "de": "Nein. Tomatensoße enthält oft schädliche Zutaten wie Knoblauch, Zwiebel oder ungeeignete Kräuter."
       }
     }
   ],
@@ -214,6 +226,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9db2d9f19cf08f1af7248aa646f234462ad4208db0996fb85f60657cb34da18a"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca3910902aa45f71e10c4a3d7bf3a28cc7eb5ca8a6e88051cf1d235a4a56369c"
     }
   }
 }

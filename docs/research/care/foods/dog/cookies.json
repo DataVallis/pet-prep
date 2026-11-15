@@ -10,7 +10,8 @@
     "da": "Småkager",
     "fi": "Keksit",
     "nb": "Cookies",
-    "it": "Biscotti"
+    "it": "Biscotti",
+    "de": "Kekse"
   },
   "question": {
     "en": "Can dogs eat cookies?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise småkager?",
     "fi": "Saako koira syödä keksejä?",
     "nb": "Kan hunder spise cookies?",
-    "it": "I cani possono mangiare i biscotti?"
+    "it": "I cani possono mangiare i biscotti?",
+    "de": "Dürfen Hunde Kekse fressen?"
   },
   "url_slug": {
     "en": "cookies",
@@ -32,7 +34,8 @@
     "da": "smaakager",
     "fi": "keksit",
     "nb": "cookies",
-    "it": "biscotti"
+    "it": "biscotti",
+    "de": "kekse"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, det er bedst ikke at gøre det. Småkager kan indeholde meget sukker, som kan give hunden dårlig mave, og nogle indeholder chokolade, rosiner eller xylitol, som er giftige for hunde. Giv i stedet godbidder, der er lavet til hunde.",
     "fi": "Ei suositella. Keksit voivat sisältää paljon sokeria, mikä voi ärsyttää koiran vatsaa, ja joissakin on suklaata, rusinoita tai ksylitolia, jotka ovat koirille myrkyllisiä. Anna sen sijaan koirille tarkoitettuja herkkuja.",
     "nb": "Nei, det er best å la være. Cookies kan inneholde mye sukker, som kan gi hunden urolig mage, og noen inneholder sjokolade, rosiner eller xylitol, som er giftige for hunder. Gi heller godbiter laget for hunder.",
-    "it": "No, meglio di no. I biscotti possono contenere molto zucchero, che può far venire mal di pancia al cane, e alcuni contengono cioccolato, uvetta o xilitolo, tossici per i cani. Dai invece premi pensati per i cani."
+    "it": "No, meglio di no. I biscotti possono contenere molto zucchero, che può far venire mal di pancia al cane, e alcuni contengono cioccolato, uvetta o xilitolo, tossici per i cani. Dai invece premi pensati per i cani.",
+    "de": "Nein, besser nicht. Kekse können viel Zucker enthalten, der einem Hund auf den Magen schlagen kann, und manche enthalten Schokolade, Rosinen oder Xylit, die für Hunde giftig sind. Geben Sie stattdessen Leckerlis für Hunde."
   },
   "why": {
     "en": "A sugar-free cookie is no safer: sugar-free cookies commonly contain xylitol, which causes a dangerous drop in blood sugar. All types of chocolate contain theobromine and caffeine, which are toxic to dogs, and raisins can be hidden in cookies. Cookies without these ingredients mainly cause stomach upset from sugar, so we rate cookies not recommended; cookies with chocolate, raisins or xylitol need a vet right away.",
@@ -55,7 +59,8 @@
     "da": "En sukkerfri småkage er ikke mere sikker: sukkerfri småkager indeholder ofte xylitol, som giver et farligt fald i blodsukkeret. Alle slags chokolade indeholder theobromin og koffein, som er giftige for hunde, og rosiner kan gemme sig i småkager. Småkager uden disse ingredienser giver mest mavebesvær på grund af sukkeret, så vi vurderer småkager som ikke anbefalet; småkager med chokolade, rosiner eller xylitol kræver dyrlægehjælp med det samme.",
     "fi": "Sokeriton keksi ei ole sen turvallisempi: sokerittomissa keksissä on yleisesti ksylitolia, joka aiheuttaa vaarallisen verensokerin laskun. Kaikenlaisessa suklaassa on teobromiinia ja kofeiinia, jotka ovat koirille myrkyllisiä, ja rusinat voivat olla piilossa keksissä. Keksit ilman näitä ainesosia aiheuttavat lähinnä sokerin aiheuttamia vatsavaivoja, joten emme suosittele keksejä; suklaata, rusinoita tai ksylitolia sisältävien keksien jälkeen tarvitaan heti eläinlääkäri.",
     "nb": "En sukkerfri cookie er ikke tryggere: sukkerfrie cookies inneholder ofte xylitol, som gir et farlig fall i blodsukkeret. All slags sjokolade inneholder teobromin og koffein, som er giftige for hunder, og rosiner kan skjule seg i cookies. Cookies uten disse ingrediensene gir hovedsakelig urolig mage på grunn av sukkeret, så vi vurderer cookies som «Anbefales ikke». Cookies med sjokolade, rosiner eller xylitol krever dyrlege med en gang.",
-    "it": "Un biscotto senza zucchero non è più sicuro: i biscotti senza zucchero contengono spesso xilitolo, che provoca un pericoloso calo degli zuccheri nel sangue. Tutti i tipi di cioccolato contengono teobromina e caffeina, tossiche per i cani, e l’uvetta può nascondersi nei biscotti. I biscotti senza questi ingredienti causano soprattutto mal di pancia per lo zucchero, quindi li valutiamo come sconsigliati; i biscotti con cioccolato, uvetta o xilitolo richiedono subito il veterinario."
+    "it": "Un biscotto senza zucchero non è più sicuro: i biscotti senza zucchero contengono spesso xilitolo, che provoca un pericoloso calo degli zuccheri nel sangue. Tutti i tipi di cioccolato contengono teobromina e caffeina, tossiche per i cani, e l’uvetta può nascondersi nei biscotti. I biscotti senza questi ingredienti causano soprattutto mal di pancia per lo zucchero, quindi li valutiamo come sconsigliati; i biscotti con cioccolato, uvetta o xilitolo richiedono subito il veterinario.",
+    "de": "Ein zuckerfreier Keks ist nicht sicherer: Zuckerfreie Kekse enthalten häufig Xylit, das einen gefährlichen Blutzuckerabfall verursacht. Alle Schokoladensorten enthalten Theobromin und Koffein, die für Hunde giftig sind, und Rosinen können sich in Keksen verstecken. Kekse ohne diese Zutaten verursachen vor allem Magenbeschwerden durch den Zucker. Deshalb stufen wir Kekse als „nicht empfohlen“ ein. Bei Keksen mit Schokolade, Rosinen oder Xylit brauchen Sie sofort einen Tierarzt."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Disturbi di stomaco",
       "Vomito, andatura instabile, debolezza, tremori o convulsioni (xilitolo)",
       "Irrequietezza, tremori, battito cardiaco accelerato o irregolare o convulsioni (cioccolato)"
+    ],
+    "de": [
+      "Magenbeschwerden",
+      "Erbrechen, wackeliger Gang, Schwäche, Zittern oder Krampfanfälle (Xylit)",
+      "Unruhe, Zittern, schneller oder unregelmäßiger Herzschlag oder Krampfanfälle (Schokolade)"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "da": "Hvis småkagen indeholdt chokolade, rosiner eller xylitol, eller din hund viser tegn på forgiftning, skal du straks søge hjælp og tage din hund med til en dyrlæge, så den kan blive undersøgt og behandlet.",
     "fi": "Jos keksissä oli suklaata, rusinoita tai ksylitolia tai koirallasi on myrkytyksen merkkejä, hae heti apua ja vie koira eläinlääkärin tutkittavaksi ja hoidettavaksi.",
     "nb": "Hvis cookien inneholdt sjokolade, rosiner eller xylitol, eller hunden viser tegn på forgiftning, må du søke hjelp med en gang og ta hunden med til dyrlegen, slik at den kan vurderes og behandles.",
-    "it": "Se il biscotto conteneva cioccolato, uvetta o xilitolo, o se il tuo cane mostra segni di avvelenamento, cerca subito aiuto e portalo dal veterinario, che potrà valutare il caso e curarlo."
+    "it": "Se il biscotto conteneva cioccolato, uvetta o xilitolo, o se il tuo cane mostra segni di avvelenamento, cerca subito aiuto e portalo dal veterinario, che potrà valutare il caso e curarlo.",
+    "de": "Enthielt der Keks Schokolade, Rosinen oder Xylit oder zeigt Ihr Hund Anzeichen einer Vergiftung, suchen Sie sofort Hilfe und bringen Sie Ihren Hund zu einem Tierarzt, der ihn untersuchen und behandeln kann."
   },
   "serving": {
     "en": "Instead of people cookies: treats and cookies made especially for dogs, after checking with your vet.",
@@ -124,7 +135,8 @@
     "da": "I stedet for småkager til mennesker: godbidder og småkager lavet specielt til hunde, efter at du har tjekket med din dyrlæge.",
     "fi": "Ihmisten keksien sijaan: erityisesti koirille tehtyjä herkkuja ja keksejä, kun olet kysynyt asiaa eläinlääkäriltä.",
     "nb": "I stedet for cookies for mennesker: godbiter og kjeks laget spesielt for hunder, etter at du har spurt dyrlegen.",
-    "it": "Al posto dei biscotti per le persone: premi e biscotti fatti apposta per i cani, dopo averne parlato con il veterinario."
+    "it": "Al posto dei biscotti per le persone: premi e biscotti fatti apposta per i cani, dopo averne parlato con il veterinario.",
+    "de": "Statt Keksen für Menschen: Leckerlis und Kekse, die speziell für Hunde gemacht sind, nach Rücksprache mit Ihrem Tierarzt."
   },
   "child": {
     "en": "Cookies are a people treat. Some have chocolate or raisins that are bad for dogs, so give your dog a dog treat instead.",
@@ -135,7 +147,8 @@
     "da": "Småkager er en godbid for mennesker. Nogle indeholder chokolade eller rosiner, som er skidt for hunde, så giv din hund en hundegodbid i stedet.",
     "fi": "Keksit ovat ihmisten herkkuja. Joissakin on suklaata tai rusinoita, jotka ovat koirille haitallisia, joten anna koirallesi sen oma herkku.",
     "nb": "Cookies er en godbit for mennesker. Noen har sjokolade eller rosiner, som er dårlig for hunder, så gi hunden en hundegodbit i stedet.",
-    "it": "I biscotti sono un dolcetto per le persone. Alcuni contengono cioccolato o uvetta, che fanno male ai cani, quindi dai al tuo cane un premio per cani."
+    "it": "I biscotti sono un dolcetto per le persone. Alcuni contengono cioccolato o uvetta, che fanno male ai cani, quindi dai al tuo cane un premio per cani.",
+    "de": "Kekse sind eine Leckerei für Menschen. In manchen stecken Schokolade oder Rosinen, die für Hunde schlecht sind, also gib deinem Hund lieber ein Hundeleckerli."
   },
   "faq": [
     {
@@ -148,7 +161,8 @@
         "da": "Er en sukkerfri småkage sikrere for min hund?",
         "fi": "Onko sokeriton keksi turvallisempi koiralleni?",
         "nb": "Er en sukkerfri cookie tryggere for hunden min?",
-        "it": "Un biscotto senza zucchero è più sicuro per il mio cane?"
+        "it": "Un biscotto senza zucchero è più sicuro per il mio cane?",
+        "de": "Ist ein zuckerfreier Keks sicherer für meinen Hund?"
       },
       "a": {
         "en": "No. Sugar-free cookies commonly contain xylitol, a sugar alternative that is poisonous to dogs.",
@@ -159,7 +173,8 @@
         "da": "Nej. Sukkerfri småkager indeholder ofte xylitol, en sukkererstatning, som er giftig for hunde.",
         "fi": "Ei. Sokerittomissa keksissä on yleisesti ksylitolia, joka on sokerin korvike ja koirille myrkyllistä.",
         "nb": "Nei. Sukkerfrie cookies inneholder ofte xylitol, et søtstoff som er giftig for hunder.",
-        "it": "No. I biscotti senza zucchero contengono spesso xilitolo, un sostituto dello zucchero velenoso per i cani."
+        "it": "No. I biscotti senza zucchero contengono spesso xilitolo, un sostituto dello zucchero velenoso per i cani.",
+        "de": "Nein. Zuckerfreie Kekse enthalten häufig Xylit, einen Zuckeraustauschstoff, der für Hunde giftig ist."
       }
     },
     {
@@ -172,7 +187,8 @@
         "da": "Hvad med havregrynskager med rosiner?",
         "fi": "Entä kaura-rusinakeksit?",
         "nb": "Hva med havrecookies med rosiner?",
-        "it": "E i biscotti con avena e uvetta?"
+        "it": "E i biscotti con avena e uvetta?",
+        "de": "Und Haferflocken-Rosinen-Kekse?"
       },
       "a": {
         "en": "They are not safe. Raisins can be hidden in cookies, and just a small number of raisins can cause kidney failure in dogs.",
@@ -183,7 +199,8 @@
         "da": "De er ikke sikre. Rosiner kan gemme sig i småkager, og selv et lille antal rosiner kan give nyresvigt hos hunde.",
         "fi": "Ne eivät ole turvallisia. Rusinat voivat olla piilossa keksissä, ja jo pieni määrä rusinoita voi aiheuttaa koirille munuaisten vajaatoiminnan.",
         "nb": "De er ikke trygge. Rosiner kan skjule seg i cookies, og bare noen få rosiner kan gi hunder nyresvikt.",
-        "it": "Non sono sicuri. L’uvetta può nascondersi nei biscotti, e anche pochissima uvetta può causare insufficienza renale nei cani."
+        "it": "Non sono sicuri. L’uvetta può nascondersi nei biscotti, e anche pochissima uvetta può causare insufficienza renale nei cani.",
+        "de": "Sie sind nicht sicher. Rosinen können sich in Keksen verstecken, und schon wenige Rosinen können bei Hunden Nierenversagen verursachen."
       }
     }
   ],
@@ -335,6 +352,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a96819bd083fe4704ae0a944e188dc5d2638677746fa45ef7568b292b4b80f62"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f0818ef5da80ecc1dba05b483fe3cefb061ba61b0fbf3c73086de1c99590efc3"
     }
   }
 }

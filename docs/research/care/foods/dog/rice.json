@@ -10,7 +10,8 @@
     "da": "Ris",
     "fi": "Riisi",
     "nb": "Ris",
-    "it": "Riso"
+    "it": "Riso",
+    "de": "Reis"
   },
   "question": {
     "en": "Can dogs eat rice?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise ris?",
     "fi": "Saako koira syödä riisiä?",
     "nb": "Kan hunder spise ris?",
-    "it": "I cani possono mangiare il riso?"
+    "it": "I cani possono mangiare il riso?",
+    "de": "Dürfen Hunde Reis fressen?"
   },
   "url_slug": {
     "en": "rice",
@@ -32,7 +34,8 @@
     "da": "ris",
     "fi": "riisi",
     "nb": "ris",
-    "it": "riso"
+    "it": "riso",
+    "de": "reis"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Ja. Almindelige kogte ris er fint til de fleste hunde i små mængder, og dyrlæger bruger dem i skånekost efter dårlig mave. Kog dem i vand uden krydderier, og hold portionerne små, fordi for mange kulhydrater kan give vægtstigning.",
     "fi": "Saa. Maustamaton keitetty riisi sopii useimmille koirille pieninä määrinä, ja eläinlääkärit käyttävät sitä kevyessä ruokavaliossa vatsavaivojen jälkeen. Keitä se vedessä ilman mausteita ja pidä annokset maltillisina, koska liiasta hiilihydraatista voi seurata painonnousua.",
     "nb": "Ja. Naturell kokt ris er greit for de fleste hunder i små mengder, og dyrleger bruker den i skånekost etter urolig mage. Kok den i vann uten krydder eller smakstilsetninger, og hold porsjonene moderate, siden for mye karbohydrater kan gi vektøkning.",
-    "it": "Sì. Il riso cotto in bianco va bene per la maggior parte dei cani in piccole quantità, e i veterinari lo usano in una dieta in bianco dopo un mal di pancia. Lessalo in acqua senza condimenti né spezie e tieni le porzioni contenute, perché troppi carboidrati possono far ingrassare."
+    "it": "Sì. Il riso cotto in bianco va bene per la maggior parte dei cani in piccole quantità, e i veterinari lo usano in una dieta in bianco dopo un mal di pancia. Lessalo in acqua senza condimenti né spezie e tieni le porzioni contenute, perché troppi carboidrati possono far ingrassare.",
+    "de": "Ja. Einfacher gekochter Reis ist für die meisten Hunde in kleinen Mengen in Ordnung, und Tierärzte setzen ihn bei Magenbeschwerden in der Schonkost ein. Kochen Sie ihn in Wasser ohne Gewürze und halten Sie die Portionen klein, denn zu viele Kohlenhydrate können zu Gewichtszunahme führen."
   },
   "why": {
     "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
@@ -55,7 +59,8 @@
     "da": "Ris er en ingrediens i noget kommercielt hundefoder, og dyrlæger bruger dem som kulhydratkilde i skånekost efter dårlig mave. Krydderier kan give mavebesvær eller endda være giftige. Hvide ris har et højere glykæmisk indeks end brune ris og kan hæve blodsukkeret, så en hund med diabetes bør kun få lidt, og ikke jævnligt. Kylling og ris er tænkt som en midlertidig kost ved dårlig fordøjelse og ikke som en afbalanceret kost på lang sigt.",
     "fi": "Riisi on ainesosa joissakin kaupallisissa koiranruoissa, ja eläinlääkärit käyttävät sitä hiilihydraattilähteenä kevyessä ruokavaliossa vatsavaivojen jälkeen. Mausteet voivat ärsyttää vatsaa tai olla jopa myrkyllisiä. Valkoisella riisillä on korkeampi glykeeminen indeksi kuin ruskealla riisillä, ja se voi nostaa verensokeria, joten diabeetikkokoiran pitäisi saada sitä vain vähän eikä säännöllisesti. Kana ja riisi on tarkoitettu väliaikaiseksi ruokavalioksi ruoansulatusvaivoihin, ei tasapainoiseksi pitkäaikaiseksi ruokavalioksi.",
     "nb": "Ris er en ingrediens i en del kommersielt hundefôr, og dyrleger bruker den som karbohydratkilde i skånekost etter urolig mage. Krydder og smakstilsetninger kan gi urolig mage eller til og med være giftige. Hvit ris har høyere glykemisk indeks enn brun ris og kan øke blodsukkeret, så en hund med diabetes bør bare få litt, og ikke regelmessig. Kylling og ris er ment som en midlertidig kost ved urolig mage, ikke som en balansert kost over lang tid.",
-    "it": "Il riso è un ingrediente di alcuni alimenti industriali per cani, e i veterinari lo usano come fonte di carboidrati in una dieta in bianco dopo un disturbo di stomaco. Condimenti e spezie possono irritare lo stomaco o addirittura essere tossici. Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi un cane diabetico ne deve mangiare solo un po’ e non regolarmente. Pollo e riso sono pensati come dieta temporanea per una digestione in difficoltà, non come dieta equilibrata a lungo termine."
+    "it": "Il riso è un ingrediente di alcuni alimenti industriali per cani, e i veterinari lo usano come fonte di carboidrati in una dieta in bianco dopo un disturbo di stomaco. Condimenti e spezie possono irritare lo stomaco o addirittura essere tossici. Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi un cane diabetico ne deve mangiare solo un po’ e non regolarmente. Pollo e riso sono pensati come dieta temporanea per una digestione in difficoltà, non come dieta equilibrata a lungo termine.",
+    "de": "Reis ist eine Zutat in manchen Fertigfuttern für Hunde, und Tierärzte nutzen ihn als Kohlenhydratquelle in der Schonkost bei Magenbeschwerden. Gewürze können den Magen reizen oder sogar giftig sein. Weißer Reis hat einen höheren glykämischen Index als Naturreis und kann den Blutzucker ansteigen lassen, deshalb sollte ein Hund mit Diabetes nur ein wenig davon bekommen, nicht regelmäßig. Huhn mit Reis ist als vorübergehende Kost bei gereizter Verdauung gedacht, nicht als ausgewogene Dauerkost."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "da": "Som med al ny mad skal du spørge din dyrlæge først og starte langsomt. Hvis din hund har diabetes, skal du kun give lidt hvide ris, og ikke regelmæssigt.",
     "fi": "Kuten minkä tahansa uuden ruoan kohdalla, kysy ensin eläinlääkäriltä ja aloita hitaasti. Jos koirasi on diabeetikko, anna vain vähän valkoista riisiä, äläkä säännöllisesti.",
     "nb": "Som med all ny mat: spør dyrlegen først, og begynn forsiktig. Hvis hunden har diabetes, gi bare litt hvit ris, og ikke regelmessig.",
-    "it": "Come per ogni alimento nuovo, chiedi prima al veterinario e comincia con poco. Se il tuo cane è diabetico, dagli solo un po’ di riso bianco, e non regolarmente."
+    "it": "Come per ogni alimento nuovo, chiedi prima al veterinario e comincia con poco. Se il tuo cane è diabetico, dagli solo un po’ di riso bianco, e non regolarmente.",
+    "de": "Wie bei jedem neuen Futter gilt: Fragen Sie zuerst Ihren Tierarzt und beginnen Sie langsam. Hat Ihr Hund Diabetes, geben Sie nur ein wenig weißen Reis und nicht regelmäßig."
   },
   "serving": {
     "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
@@ -78,7 +84,8 @@
     "da": "Almindelige ris kogt i vand, uden krydderier, som en lille del af et måltid.",
     "fi": "Maustamatonta vedessä keitettyä riisiä, ilman mausteita, pienenä osana ateriaa.",
     "nb": "Naturell ris kokt i vann, uten krydder eller smakstilsetninger, som en liten del av et måltid.",
-    "it": "Riso lessato in acqua, senza condimenti né spezie, come piccola parte di un pasto."
+    "it": "Riso lessato in acqua, senza condimenti né spezie, come piccola parte di un pasto.",
+    "de": "Einfacher, in Wasser gekochter Reis ohne Gewürze, als kleiner Teil einer Mahlzeit."
   },
   "child": {
     "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
@@ -89,7 +96,8 @@
     "da": "Hunde kan få lidt almindelige kogte ris. En voksen koger dem i vand uden krydderier, kun til hunden.",
     "fi": "Koira saa vähän maustamatonta keitettyä riisiä. Aikuinen keittää sen vedessä ilman mausteita vain koiraa varten.",
     "nb": "Hunder kan få litt naturell kokt ris. En voksen koker den i vann uten krydder, bare til hunden.",
-    "it": "I cani possono mangiare un po’ di riso cotto in bianco. Lo cuoce un adulto in acqua, senza spezie, apposta per il cane."
+    "it": "I cani possono mangiare un po’ di riso cotto in bianco. Lo cuoce un adulto in acqua, senza spezie, apposta per il cane.",
+    "de": "Hunde dürfen ein wenig einfachen gekochten Reis haben. Ein Erwachsener kocht ihn in Wasser ohne Gewürze, extra für den Hund."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "da": "Hvide eller brune ris – hvilke er bedst?",
         "fi": "Valkoinen vai ruskea riisi, kumpi on parempi?",
         "nb": "Hvit eller brun ris – hva er best?",
-        "it": "Riso bianco o integrale: qual è meglio?"
+        "it": "Riso bianco o integrale: qual è meglio?",
+        "de": "Weißer oder brauner Reis – was ist besser?"
       },
       "a": {
         "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
@@ -113,7 +122,8 @@
         "da": "Hvide ris har et højere glykæmisk indeks end brune ris og kan hæve blodsukkeret, så hunde med diabetes bør kun få lidt hvide ris og ikke jævnligt.",
         "fi": "Valkoisella riisillä on korkeampi glykeeminen indeksi kuin ruskealla riisillä, ja se voi nostaa verensokeria, joten diabeetikkokoirien pitäisi saada vain vähän valkoista riisiä, ei säännöllisesti.",
         "nb": "Hvit ris har høyere glykemisk indeks enn brun ris og kan øke blodsukkeret, så hunder med diabetes bør bare få litt hvit ris, og ikke regelmessig.",
-        "it": "Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi i cani diabetici devono mangiarne solo un po’ e non regolarmente."
+        "it": "Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi i cani diabetici devono mangiarne solo un po’ e non regolarmente.",
+        "de": "Weißer Reis hat einen höheren glykämischen Index als Naturreis und kann den Blutzucker ansteigen lassen, deshalb sollten Hunde mit Diabetes nur wenig weißen Reis bekommen, nicht regelmäßig."
       }
     },
     {
@@ -126,7 +136,8 @@
         "da": "Kan ris hjælpe, når min hund har diarré?",
         "fi": "Voiko riisi auttaa, kun koirallani on ripuli?",
         "nb": "Kan ris hjelpe når hunden har diaré?",
-        "it": "Il riso può aiutare quando il mio cane ha la diarrea?"
+        "it": "Il riso può aiutare quando il mio cane ha la diarrea?",
+        "de": "Kann Reis helfen, wenn mein Hund Durchfall hat?"
       },
       "a": {
         "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
@@ -137,7 +148,8 @@
         "da": "Almindelig kogt kylling med ris kan hjælpe, når en hund har diarré, men det er en midlertidig kost og ikke afbalanceret til langvarig fodring.",
         "fi": "Maustamaton keitetty kana ja riisi voivat auttaa, kun koirallasi on ripuli, mutta se on väliaikainen ruokavalio eikä tasapainoinen pitkäaikaiseen ruokintaan.",
         "nb": "Naturell kokt kylling og ris kan hjelpe når en hund har diaré, men det er en midlertidig kost og ikke balansert nok til å gis over lang tid.",
-        "it": "Pollo lesso e riso in bianco possono aiutare quando un cane ha la diarrea, ma è una dieta temporanea e non è equilibrata per un’alimentazione a lungo termine."
+        "it": "Pollo lesso e riso in bianco possono aiutare quando un cane ha la diarrea, ma è una dieta temporanea e non è equilibrata per un’alimentazione a lungo termine.",
+        "de": "Einfaches gekochtes Huhn mit Reis kann bei Durchfall helfen, ist aber eine vorübergehende Kost und für die Dauerfütterung nicht ausgewogen."
       }
     }
   ],
@@ -248,6 +260,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "db48c46d4ee76f6da21586939a4d8e5459c0ba7ddc2406a12f9b11fba5c3b669"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "299b674b902da781492e8092d1555785818d589f728951d9b4587df85236bcc5"
     }
   }
 }

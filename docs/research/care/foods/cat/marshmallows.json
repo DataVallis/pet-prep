@@ -10,7 +10,8 @@
     "da": "Skumfiduser",
     "fi": "Vaahtokarkit",
     "nb": "Marshmallows",
-    "it": "Marshmallow"
+    "it": "Marshmallow",
+    "de": "Marshmallows"
   },
   "question": {
     "en": "Can cats eat marshmallows?",
@@ -21,7 +22,8 @@
     "da": "Må katte spise skumfiduser?",
     "fi": "Saako kissa syödä vaahtokarkkeja?",
     "nb": "Kan katter spise marshmallows?",
-    "it": "I gatti possono mangiare i marshmallow?"
+    "it": "I gatti possono mangiare i marshmallow?",
+    "de": "Dürfen Katzen Marshmallows fressen?"
   },
   "url_slug": {
     "en": "marshmallows",
@@ -32,7 +34,8 @@
     "da": "skumfiduser",
     "fi": "vaahtokarkit",
     "nb": "marshmallows",
-    "it": "marshmallow"
+    "it": "marshmallow",
+    "de": "marshmallows"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, katte bør ikke spise skumfiduser. De giver katte ingen næringsværdi, for meget sukker kan være et problem for katte, og skumfidusslik kan indeholde chokolade, som er giftigt for katte.",
     "fi": "Ei suositella. Kissojen ei pitäisi syödä vaahtokarkkeja. Niistä ei ole kissoille ravitsemuksellista hyötyä, liiallinen sokeri voi olla kissoille ongelma, ja vaahtokarkkiherkuissa voi olla suklaata, joka on kissoille myrkyllistä.",
     "nb": "Nei, katter bør ikke spise marshmallows. De gir katter ingen næringsverdi, for mye sukker kan være et problem for katter, og godteri med marshmallow kan inneholde sjokolade, som er giftig for katter.",
-    "it": "No, i gatti non devono mangiare marshmallow. Non apportano ai gatti alcun beneficio nutrizionale, l’eccesso di zucchero può essere un problema e i dolcetti a base di marshmallow possono contenere cioccolato, tossico per i gatti."
+    "it": "No, i gatti non devono mangiare marshmallow. Non apportano ai gatti alcun beneficio nutrizionale, l’eccesso di zucchero può essere un problema e i dolcetti a base di marshmallow possono contenere cioccolato, tossico per i gatti.",
+    "de": "Nein, Katzen sollten keine Marshmallows fressen. Sie haben für Katzen keinen Nährwert, zu viel Zucker kann bei Katzen ein Problem sein, und Marshmallow-Süßigkeiten können Schokolade enthalten, die für Katzen giftig ist."
   },
   "why": {
     "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
@@ -55,7 +59,8 @@
     "da": "Pet Poison Helpline skriver at skumfiduser ikke er et godt valg til katte: katte har en nedsat evne til at smage sødt, skumfiduser giver dem ingen næringsværdi, og for meget sukker kan være et problem. Cats Protection forklarer at sukker ikke er giftigt for katte, men stadig er usundt, og at det giver unødvendige kalorier, som kan føre til vægtstigning. Skumfidusslik kan også indeholde chokolade, som er giftigt for katte.",
     "fi": "Pet Poison Helplinen mukaan vaahtokarkit eivät ole hyvä valinta kissoille: kissojen kyky maistaa makeaa on heikentynyt, vaahtokarkeista ei ole niille ravitsemuksellista hyötyä, ja liiallinen sokeri voi olla kissoille ongelma. Cats Protection kertoo, että sokeri ei ole kissoille myrkyllistä mutta silti epäterveellistä, sillä se lisää turhia kaloreita, jotka voivat johtaa painonnousuun. Vaahtokarkkiherkuissa voi myös olla suklaata, joka on kissoille myrkyllistä.",
     "nb": "Pet Poison Helpline sier at marshmallows ikke er et godt valg for katter: katter kjenner søtt dårlig, marshmallows gir dem ingen næringsmessig fordel, og for mye sukker kan være et problem. Cats Protection forklarer at sukker ikke er giftig for katter, men likevel usunt, og at det gir unødvendige kalorier som kan føre til vektøkning. Godteri med marshmallow kan også inneholde sjokolade, som er giftig for katter.",
-    "it": "Pet Poison Helpline afferma che i marshmallow non sono una buona scelta per i gatti: i gatti hanno una ridotta capacità di percepire il dolce, i marshmallow non offrono loro alcun beneficio nutrizionale e l’eccesso di zucchero può essere un problema. Cats Protection spiega che lo zucchero non è tossico per i gatti ma fa comunque male, perché aggiunge calorie inutili che possono portare a un aumento di peso. I dolcetti a base di marshmallow possono inoltre contenere cioccolato, tossico per i gatti."
+    "it": "Pet Poison Helpline afferma che i marshmallow non sono una buona scelta per i gatti: i gatti hanno una ridotta capacità di percepire il dolce, i marshmallow non offrono loro alcun beneficio nutrizionale e l’eccesso di zucchero può essere un problema. Cats Protection spiega che lo zucchero non è tossico per i gatti ma fa comunque male, perché aggiunge calorie inutili che possono portare a un aumento di peso. I dolcetti a base di marshmallow possono inoltre contenere cioccolato, tossico per i gatti.",
+    "de": "Pet Poison Helpline sagt, dass Marshmallows keine gute Wahl für Katzen sind: Katzen können Süßes schlechter schmecken, Marshmallows haben für sie keinen Nährwert, und zu viel Zucker kann ein Problem sein. Cats Protection erklärt, dass Zucker für Katzen nicht giftig, aber trotzdem ungesund ist, weil er unnötige Kalorien liefert, die zu Gewichtszunahme führen können. Marshmallow-Süßigkeiten können außerdem Schokolade enthalten, die für Katzen giftig ist."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "it": [
       "Diarrea",
       "Mal di stomaco"
+    ],
+    "de": [
+      "Durchfall",
+      "Magenbeschwerden"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "da": "Hvis din kat har fået fat i skumfiduser eller skumfidusslik, skal du kontakte din dyrlæge eller en giftrådgivning for dyr for at få vejledning. Hvis slikket indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
     "fi": "Jos kissasi pääsi vaahtokarkkeihin tai vaahtokarkkiherkkuun, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan ohjeita varten. Jos herkussa oli suklaata, ota heti yhteyttä eläinlääkäriin.",
     "nb": "Hvis katten har fått i seg marshmallows eller godteri med marshmallow, kontakt dyrlegen eller giftinformasjon for dyr for råd. Hvis godteriet inneholdt sjokolade, kontakt dyrlegen med en gang.",
-    "it": "Se il tuo gatto ha mangiato marshmallow o un dolcetto a base di marshmallow, contatta il veterinario o un centro antiveleni veterinario per un consiglio. Se il dolcetto conteneva cioccolato, contatta subito il veterinario."
+    "it": "Se il tuo gatto ha mangiato marshmallow o un dolcetto a base di marshmallow, contatta il veterinario o un centro antiveleni veterinario per un consiglio. Se il dolcetto conteneva cioccolato, contatta subito il veterinario.",
+    "de": "Ist Ihre Katze an Marshmallows oder einer Marshmallow-Süßigkeit gekommen, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und lassen Sie sich beraten. Enthielt die Süßigkeit Schokolade, wenden Sie sich sofort an Ihren Tierarzt."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "da": "Skumfiduser er en sød godbid til mennesker. Katte kan næsten ikke smage sødt, så de er ikke noget for din kat.",
     "fi": "Vaahtokarkit ovat makea herkku ihmisille. Kissat tuskin maistavat makeaa, joten ne eivät ole kisulle.",
     "nb": "Marshmallows er søtsaker for mennesker. Katter kjenner nesten ikke søtt, så de er ikke for pusen.",
-    "it": "I marshmallow sono un dolcetto per le persone. I gatti sentono pochissimo il sapore dolce, quindi non sono per il micio."
+    "it": "I marshmallow sono un dolcetto per le persone. I gatti sentono pochissimo il sapore dolce, quindi non sono per il micio.",
+    "de": "Marshmallows sind eine süße Leckerei für Menschen. Katzen schmecken Süßes kaum, deshalb sind sie nichts für deine Katze."
   },
   "faq": [
     {
@@ -129,7 +140,8 @@
         "da": "Er sukkerfri skumfiduser farlige for katte?",
         "fi": "Ovatko sokerittomat vaahtokarkit vaarallisia kissoille?",
         "nb": "Er sukkerfrie marshmallows farlige for katter?",
-        "it": "I marshmallow senza zucchero sono pericolosi per i gatti?"
+        "it": "I marshmallow senza zucchero sono pericolosi per i gatti?",
+        "de": "Sind zuckerfreie Marshmallows für Katzen gefährlich?"
       },
       "a": {
         "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
@@ -140,7 +152,8 @@
         "da": "Nogle sukkerfri skumfiduser indeholder xylitol, som er giftigt for hunde. Pet Poison Helpline skriver at katte ikke ser ud til at blive påvirket af xylitol på samme måde som hunde, men skumfiduser er stadig ikke et godt valg til katte.",
         "fi": "Joissakin sokerittomissa vaahtokarkeissa on ksylitolia, joka on koirille myrkyllistä. Pet Poison Helplinen mukaan ksylitoli ei näytä vaikuttavan kissoihin samalla tavalla kuin koiriin, mutta vaahtokarkit eivät silti ole hyvä valinta kissoille.",
         "nb": "Noen sukkerfrie marshmallows inneholder xylitol, som er giftig for hunder. Pet Poison Helpline sier at katter ikke ser ut til å bli påvirket av xylitol på samme måte som hunder, men marshmallows er likevel ikke et godt valg for katter.",
-        "it": "Alcuni marshmallow senza zucchero contengono xilitolo, tossico per i cani. Pet Poison Helpline afferma che i gatti non sembrano risentire dello xilitolo come i cani, ma i marshmallow restano comunque una scelta poco adatta ai gatti."
+        "it": "Alcuni marshmallow senza zucchero contengono xilitolo, tossico per i cani. Pet Poison Helpline afferma che i gatti non sembrano risentire dello xilitolo come i cani, ma i marshmallow restano comunque una scelta poco adatta ai gatti.",
+        "de": "Manche zuckerfreien Marshmallows enthalten Xylit, das für Hunde giftig ist. Pet Poison Helpline sagt, dass Katzen von Xylit offenbar nicht so betroffen sind wie Hunde, aber Marshmallows sind trotzdem keine gute Wahl für Katzen."
       }
     }
   ],
@@ -250,6 +263,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "25719fc3b12714d508de58d0311079ab02718ca1675cc686e9dce64148033cff"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f7b2fc0b685ae4c1c086f9a8e9e27120f4fbe66242cb373c53735b50ab96a7a"
     }
   }
 }

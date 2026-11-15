@@ -10,7 +10,8 @@
     "da": "Kanel",
     "fi": "Kaneli",
     "nb": "Kanel",
-    "it": "Cannella"
+    "it": "Cannella",
+    "de": "Zimt"
   },
   "question": {
     "en": "Can dogs eat cinnamon?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise kanel?",
     "fi": "Saako koira syödä kanelia?",
     "nb": "Kan hunder spise kanel?",
-    "it": "I cani possono mangiare la cannella?"
+    "it": "I cani possono mangiare la cannella?",
+    "de": "Dürfen Hunde Zimt fressen?"
   },
   "url_slug": {
     "en": "cinnamon",
@@ -32,7 +34,8 @@
     "da": "kanel",
     "fi": "kaneli",
     "nb": "kanel",
-    "it": "cannella"
+    "it": "cannella",
+    "de": "zimt"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Kanel er ikke giftigt for hunde, men det anbefales ikke som en fast godbid. Lidt i bagværk skader ikke, men kanelstænger, kanelpulver og store mængder kan irritere mund og mave, og æterisk kanelolie er mere risikabel.",
     "fi": "Kaneli ei ole koirille myrkyllistä, mutta sitä ei suositella säännölliseksi herkuksi. Vähän kanelia leivonnaisissa ei vahingoita, mutta kanelitangot, kanelijauhe ja suuret määrät voivat ärsyttää suuta ja vatsaa, ja eteerinen kanelöljy on riskialttiimpi.",
     "nb": "Kanel er ikke giftig for hunder, men det er ikke noe du bør gi som fast godbit. Litt i bakevarer gjør ikke noe, men kanelstenger, kanelpulver og store mengder kan irritere munn og mage, og eterisk kanelolje er mer risikabelt.",
-    "it": "La cannella non è tossica per i cani, ma non è consigliata come premio abituale. Un po’ di cannella in un prodotto da forno non fa male, ma le stecche, la cannella in polvere e le grandi quantità possono irritare bocca e stomaco, e l’olio essenziale di cannella è più rischioso."
+    "it": "La cannella non è tossica per i cani, ma non è consigliata come premio abituale. Un po’ di cannella in un prodotto da forno non fa male, ma le stecche, la cannella in polvere e le grandi quantità possono irritare bocca e stomaco, e l’olio essenziale di cannella è più rischioso.",
+    "de": "Zimt ist für Hunde nicht giftig, wird aber nicht als regelmäßiges Leckerli empfohlen. Ein wenig in Backwaren schadet nicht, doch Zimtstangen, Zimtpulver und große Mengen können Maul und Magen reizen, und ätherisches Zimtöl ist riskanter."
   },
   "why": {
     "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
@@ -55,7 +59,8 @@
     "da": "Hvis en hund tygger på kanelstænger eller spiser stødt kanel, kan det irritere hundens mund, og hvis den indånder kanelpulver, kan den hoste, få noget galt i halsen og få svært ved at trække vejret. En stor overdosis kan give opkast, diarré, ændringer i pulsen, lavt blodsukker og leversygdom. Små hunde kan reagere på mindre mængder, og æterisk kanelolie kan være giftig for hunde. Bagværk med kanel kan også indeholde xylitol.",
     "fi": "Kanelitankojen pureskelu tai jauhetun kanelin syöminen voi ärsyttää koiran suuta, ja kanelijauheen hengittäminen voi saada koiran yskimään, tukehtumaan ja hengittämään vaikeasti. Suuri yliannos voi johtaa oksenteluun, ripuliin, sydämen sykkeen muutoksiin, matalaan verensokeriin ja maksasairauteen. Pienet koirat voivat reagoida pienempiin määriin, ja eteerinen kanelöljy voi olla koirille myrkyllistä. Kanelia sisältävissä leivonnaisissa voi olla myös ksylitolia.",
     "nb": "Å tygge på kanelstenger eller spise malt kanel kan irritere munnen til en hund, og å puste inn kanelpulver kan få hunden til å hoste, kveles og få problemer med å puste. En stor mengde kan føre til oppkast, diaré, endringer i hjerterytmen, lavt blodsukker og leversykdom. Små hunder kan reagere på mindre mengder, og eterisk kanelolje kan være giftig for hunder. Bakevarer med kanel kan også inneholde xylitol.",
-    "it": "Masticare stecche di cannella o mangiare cannella in polvere può irritare la bocca del cane, e inalare la polvere di cannella può far tossire il cane, farlo soffocare e dargli difficoltà a respirare. Un forte sovradosaggio può portare a vomito, diarrea, variazioni del battito cardiaco, calo degli zuccheri nel sangue e malattie del fegato. I cani di piccola taglia possono reagire a quantità minori, e l’olio essenziale di cannella può essere tossico per i cani. I prodotti da forno con cannella possono contenere anche xilitolo."
+    "it": "Masticare stecche di cannella o mangiare cannella in polvere può irritare la bocca del cane, e inalare la polvere di cannella può far tossire il cane, farlo soffocare e dargli difficoltà a respirare. Un forte sovradosaggio può portare a vomito, diarrea, variazioni del battito cardiaco, calo degli zuccheri nel sangue e malattie del fegato. I cani di piccola taglia possono reagire a quantità minori, e l’olio essenziale di cannella può essere tossico per i cani. I prodotti da forno con cannella possono contenere anche xilitolo.",
+    "de": "Das Kauen von Zimtstangen oder das Fressen von gemahlenem Zimt kann das Maul eines Hundes reizen, und wenn ein Hund Zimtpulver einatmet, kann er husten, würgen und schlecht Luft bekommen. Eine große Überdosis kann zu Erbrechen, Durchfall, Veränderungen der Herzfrequenz, niedrigem Blutzucker und Lebererkrankungen führen. Kleine Hunde reagieren möglicherweise schon auf geringere Mengen, und ätherisches Zimtöl kann für Hunde giftig sein. Backwaren mit Zimt können außerdem Xylit enthalten."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Vomito",
       "Diarrea",
       "Variazioni del battito cardiaco"
+    ],
+    "de": [
+      "Reizung im Maul",
+      "Husten, Würgen oder Atembeschwerden (eingeatmetes Pulver)",
+      "Erbrechen",
+      "Durchfall",
+      "Veränderungen der Herzfrequenz"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "da": "Hvis din hund spiser en stor mængde kanel, behøver du ikke gå i panik, men du bør ringe til din dyrlæge.",
     "fi": "Jos koirasi syö suuren määrän kanelia, ei tarvitse panikoida, mutta soita eläinlääkärille.",
     "nb": "Hvis hunden spiser en stor mengde kanel, trenger du ikke få panikk, men du bør kontakte dyrlegen.",
-    "it": "Se il tuo cane mangia molta cannella non serve farsi prendere dal panico, ma chiama comunque il veterinario."
+    "it": "Se il tuo cane mangia molta cannella non serve farsi prendere dal panico, ma chiama comunque il veterinario.",
+    "de": "Frisst Ihr Hund eine große Menge Zimt, müssen Sie nicht in Panik verfallen, sollten aber Ihren Tierarzt anrufen."
   },
   "serving": {
     "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
@@ -142,7 +155,8 @@
     "da": "Hvis du deler et bagt stykke med kanel: kun et lille stykke, sjældent, og aldrig et, der er sødet med xylitol.",
     "fi": "Jos jaat kanelilla maustetun leivonnaisen: vain pieni pala, harvoin, eikä koskaan ksylitolilla makeutettua.",
     "nb": "Hvis du deler en bakevare med kanel: bare en liten bit, sjelden, og aldri en som er søtet med xylitol.",
-    "it": "Se gli dai un dolcetto da forno alla cannella: solo un pezzettino, raramente, e mai uno dolcificato con xilitolo."
+    "it": "Se gli dai un dolcetto da forno alla cannella: solo un pezzettino, raramente, e mai uno dolcificato con xilitolo.",
+    "de": "Wenn Sie ein Gebäck mit Zimt teilen: nur ein kleines Stück, selten, und niemals eines, das mit Xylit gesüßt ist."
   },
   "child": {
     "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
@@ -153,7 +167,8 @@
     "da": "Kanel er et krydderi til mennesker. Lad ikke din hund slikke på kanelpulver eller tygge på kanelstænger, for det kan gøre dens mund øm.",
     "fi": "Kaneli on mauste ihmisille. Älä anna koiran nuolla kanelijauhetta tai pureskella kanelitankoja, sillä ne voivat tehdä sen suusta kipeän.",
     "nb": "Kanel er et krydder for mennesker. Ikke la hunden slikke kanelpulver eller tygge på kanelstenger, for det kan gjøre munnen øm.",
-    "it": "La cannella è una spezia per le persone. Non lasciare che il tuo cane lecchi la cannella in polvere o mastichi le stecche: possono fargli male alla bocca."
+    "it": "La cannella è una spezia per le persone. Non lasciare che il tuo cane lecchi la cannella in polvere o mastichi le stecche: possono fargli male alla bocca.",
+    "de": "Zimt ist ein Gewürz für Menschen. Lass deinen Hund kein Zimtpulver lecken und keine Zimtstangen kauen, denn davon kann sein Maul wehtun."
   },
   "faq": [
     {
@@ -166,7 +181,8 @@
         "da": "Må min hund få en småkage med kanel?",
         "fi": "Saako koirani kanelikeksin?",
         "nb": "Kan hunden min få en kanelkjeks?",
-        "it": "Il mio cane può mangiare un biscotto alla cannella?"
+        "it": "Il mio cane può mangiare un biscotto alla cannella?",
+        "de": "Darf mein Hund einen Zimtkeks haben?"
       },
       "a": {
         "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
@@ -177,7 +193,8 @@
         "da": "Lidt kanel, som i det meste bagværk, skader ikke din hund, men giv kun bagværk i små mængder og sjældent. Noget indeholder xylitol, som er meget giftigt.",
         "fi": "Vähän kanelia, kuten useimmissa leivonnaisissa, ei vahingoita koiraasi, mutta anna leivonnaisia vain pieniä määriä ja harvoin. Joissakin on ksylitolia, joka on erittäin myrkyllistä.",
         "nb": "Litt kanel, slik som i de fleste bakevarer, gjør ikke hunden noe, men gi bakevarer bare i små mengder og sjelden. Noen inneholder xylitol, som er veldig giftig.",
-        "it": "Un po’ di cannella, nella quantità presente nella maggior parte dei prodotti da forno, non fa male al tuo cane, ma dai i prodotti da forno solo in piccole quantità e raramente. Alcuni contengono xilitolo, che è molto tossico."
+        "it": "Un po’ di cannella, nella quantità presente nella maggior parte dei prodotti da forno, non fa male al tuo cane, ma dai i prodotti da forno solo in piccole quantità e raramente. Alcuni contengono xilitolo, che è molto tossico.",
+        "de": "Ein wenig Zimt, wie er in den meisten Backwaren steckt, schadet Ihrem Hund nicht, aber geben Sie Backwaren nur in kleinen Mengen und selten. Manche enthalten Xylit, das sehr giftig ist."
       }
     },
     {
@@ -190,7 +207,8 @@
         "da": "Er æterisk kanelolie farlig for hunde?",
         "fi": "Onko eteerinen kanelöljy vaarallista koirille?",
         "nb": "Er eterisk kanelolje farlig for hunder?",
-        "it": "L’olio essenziale di cannella è pericoloso per i cani?"
+        "it": "L’olio essenziale di cannella è pericoloso per i cani?",
+        "de": "Ist ätherisches Zimtöl für Hunde gefährlich?"
       },
       "a": {
         "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
@@ -201,7 +219,8 @@
         "da": "Ja. Æterisk kanelolie kan være giftig for hunde og udgør en højere risiko end stødt kanel eller kanelstænger.",
         "fi": "On. Eteerinen kanelöljy voi olla koirille myrkyllistä, ja siihen liittyy suurempi riski kuin jauhettuun kaneliin tai kanelitankoihin.",
         "nb": "Ja. Eterisk kanelolje kan være giftig for hunder og er mer risikabel enn malt kanel eller kanelstenger.",
-        "it": "Sì. L’olio essenziale di cannella può essere tossico per i cani e comporta un rischio maggiore rispetto alla cannella in polvere o in stecche."
+        "it": "Sì. L’olio essenziale di cannella può essere tossico per i cani e comporta un rischio maggiore rispetto alla cannella in polvere o in stecche.",
+        "de": "Ja. Ätherisches Zimtöl kann für Hunde giftig sein und birgt ein höheres Risiko als gemahlener Zimt oder Zimtstangen."
       }
     }
   ],
@@ -319,6 +338,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9a45f6f117fa9f4c8a66575bef88c1beddc4043b06b230a016af5048cb0af88d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bcca6c881ce6e9edf8b8c35f311db0be7b00e2342977c736abbfd523af855559"
     }
   }
 }

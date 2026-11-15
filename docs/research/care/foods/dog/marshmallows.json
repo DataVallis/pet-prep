@@ -10,7 +10,8 @@
     "da": "Skumfiduser",
     "fi": "Vaahtokarkit",
     "nb": "Marshmallows",
-    "it": "Marshmallow"
+    "it": "Marshmallow",
+    "de": "Marshmallows"
   },
   "question": {
     "en": "Can dogs eat marshmallows?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise skumfiduser?",
     "fi": "Saako koira syödä vaahtokarkkeja?",
     "nb": "Kan hunder spise marshmallows?",
-    "it": "I cani possono mangiare i marshmallow?"
+    "it": "I cani possono mangiare i marshmallow?",
+    "de": "Dürfen Hunde Marshmallows fressen?"
   },
   "url_slug": {
     "en": "marshmallows",
@@ -32,7 +34,8 @@
     "da": "skumfiduser",
     "fi": "vaahtokarkit",
     "nb": "marshmallows",
-    "it": "marshmallow"
+    "it": "marshmallow",
+    "de": "marshmallows"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej. Ikke alle skumfiduser er giftige for hunde, men de er ikke gode for dem: de er lavet af sukker, majssirup og gelatine og har ringe eller ingen næringsværdi. Nogle indeholder xylitol, som er giftigt for hunde.",
     "fi": "Ei suositella. Kaikki vaahtokarkit eivät ole koirille myrkyllisiä, mutta ne eivät ole niille hyväksi: ne on tehty sokerista, maissisiirapista ja gelatiinista, ja niillä on vain vähän tai ei lainkaan ravintoarvoa. Joissakin on ksylitolia, joka on koirille myrkyllistä.",
     "nb": "Nei. Ikke alle marshmallows er giftige for hunder, men de er ikke bra for dem. De er laget av sukker, maissirup og gelatin og har liten eller ingen næringsverdi. Noen inneholder xylitol, som er giftig for hunder.",
-    "it": "No. Non tutti i marshmallow sono tossici per i cani, ma non gli fanno bene: sono fatti di zucchero, sciroppo di mais e gelatina e hanno un valore nutritivo scarso o nullo. Alcuni contengono xilitolo, che è tossico per i cani."
+    "it": "No. Non tutti i marshmallow sono tossici per i cani, ma non gli fanno bene: sono fatti di zucchero, sciroppo di mais e gelatina e hanno un valore nutritivo scarso o nullo. Alcuni contengono xilitolo, che è tossico per i cani.",
+    "de": "Nein. Nicht alle Marshmallows sind für Hunde giftig, aber gut sind sie nicht: Sie bestehen aus Zucker, Maissirup und Gelatine und haben kaum oder keinen Nährwert. Manche enthalten Xylit, das für Hunde giftig ist."
   },
   "why": {
     "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
@@ -55,7 +59,8 @@
     "da": "Skumfiduser indeholder meget sukker og mange kalorier, så de er særligt risikable for hunde med diabetes eller vægtproblemer, og selv hos raske hunde kan sukkerholdige godbidder bidrage til fedme. Hvis hunden spiser for mange, kan det give mave-tarm-besvær og øge risikoen for betændelse i bugspytkirtlen. En skumfidus med xylitol er giftig selv i små mængder og kan give farligt lavt blodsukker.",
     "fi": "Vaahtokarkeissa on erittäin paljon sokeria ja kaloreita, joten ne ovat erityisen riskialttiita koirille, joilla on diabetes tai painonhallintaongelmia, ja terveelläkin koiralla sokeriset herkut voivat edistää lihavuutta. Liian monen syöminen voi aiheuttaa maha-suolikanavan vaivoja ja altistaa koiran haimatulehdukselle. Ksylitolia sisältävä vaahtokarkki on myrkyllinen jo pieninä määrinä ja voi aiheuttaa vaarallisen matalan verensokerin.",
     "nb": "Marshmallows inneholder svært mye sukker og mange kalorier, så de er spesielt risikable for hunder med diabetes eller vektproblemer, og selv for friske hunder kan sukkerholdig godbit bidra til fedme. Hvis hunden spiser for mange, kan det gi urolig mage og fare for betennelse i bukspyttkjertelen. En marshmallow med xylitol er giftig selv i små mengder og kan gi farlig lavt blodsukker.",
-    "it": "I marshmallow contengono moltissimo zucchero e molte calorie, quindi sono particolarmente rischiosi per i cani con diabete o problemi di peso, e anche nei cani sani i dolci zuccherati possono contribuire all’obesità. Mangiarne troppi può causare disturbi gastrointestinali e mette il cane a rischio di pancreatite. Un marshmallow con xilitolo è tossico anche in piccole quantità e può provocare un calo pericoloso della glicemia."
+    "it": "I marshmallow contengono moltissimo zucchero e molte calorie, quindi sono particolarmente rischiosi per i cani con diabete o problemi di peso, e anche nei cani sani i dolci zuccherati possono contribuire all’obesità. Mangiarne troppi può causare disturbi gastrointestinali e mette il cane a rischio di pancreatite. Un marshmallow con xilitolo è tossico anche in piccole quantità e può provocare un calo pericoloso della glicemia.",
+    "de": "Marshmallows enthalten extrem viel Zucker und Kalorien, deshalb sind sie besonders riskant für Hunde mit Diabetes oder Gewichtsproblemen, und selbst bei gesunden Hunden können zuckerhaltige Leckereien zu Übergewicht beitragen. Zu viele können Magen-Darm-Beschwerden verursachen und bergen das Risiko einer Bauchspeicheldrüsenentzündung. Ein Marshmallow mit Xylit ist schon in kleinen Mengen giftig und kann gefährlich niedrigen Blutzucker verursachen."
   },
   "signs": {
     "en": [
@@ -111,6 +116,12 @@
       "Scarso appetito",
       "Diarrea",
       "Andatura traballante o convulsioni (xilitolo)"
+    ],
+    "de": [
+      "Erbrechen",
+      "Appetitlosigkeit",
+      "Durchfall",
+      "Wackeliger Gang oder Krampfanfälle (Xylit)"
     ]
   },
   "what_to_do": {
@@ -122,7 +133,8 @@
     "da": "Ring til din dyrlæge med det samme, hvis din hund har spist flere skumfiduser eller en skumfidus, der kan indeholde xylitol.",
     "fi": "Soita heti eläinlääkärille, jos koirasi söi useita vaahtokarkkeja tai yhdenkin vaahtokarkin, jossa voi olla ksylitolia.",
     "nb": "Ring dyrlegen med en gang hvis hunden har spist flere marshmallows, eller en marshmallow som kan inneholde xylitol.",
-    "it": "Chiama subito il veterinario se il tuo cane ha mangiato diversi marshmallow, o anche un solo marshmallow che potrebbe contenere xilitolo."
+    "it": "Chiama subito il veterinario se il tuo cane ha mangiato diversi marshmallow, o anche un solo marshmallow che potrebbe contenere xilitolo.",
+    "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund mehrere Marshmallows gefressen hat oder ein Marshmallow, das Xylit enthalten könnte."
   },
   "serving": {
     "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
@@ -133,7 +145,8 @@
     "da": "I stedet for skumfiduser: hundegodbidder af god kvalitet eller sundere snacks som gulerødder, grønt eller blåbær.",
     "fi": "Vaahtokarkkien sijaan: laadukkaita koiranherkkuja tai terveellisempiä välipaloja, kuten porkkanaa, vihreitä kasviksia tai mustikoita.",
     "nb": "I stedet for marshmallows: godbiter av god kvalitet til hunder, eller sunnere snacks som gulrøtter, grønnsaker eller blåbær.",
-    "it": "Al posto dei marshmallow: premi per cani di buona qualità o spuntini più sani come carote, ortaggi verdi o mirtilli."
+    "it": "Al posto dei marshmallow: premi per cani di buona qualità o spuntini più sani come carote, ortaggi verdi o mirtilli.",
+    "de": "Statt Marshmallows: hochwertige Hundeleckerlis oder gesündere Snacks wie Karotten, grünes Gemüse oder Heidelbeeren."
   },
   "child": {
     "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
@@ -144,7 +157,8 @@
     "da": "Skumfiduser er for sukkerholdige til hunde. Del i stedet en gulerod eller nogle få blåbær med din hund!",
     "fi": "Vaahtokarkit ovat koirille liian sokerisia. Jaa koirasi kanssa mieluummin porkkana tai muutama mustikka!",
     "nb": "Marshmallows er for søte for hunder. Gi hunden en gulrot eller noen blåbær i stedet!",
-    "it": "I marshmallow sono troppo zuccherati per i cani. Dividi invece con il tuo cane una carota o qualche mirtillo!"
+    "it": "I marshmallow sono troppo zuccherati per i cani. Dividi invece con il tuo cane una carota o qualche mirtillo!",
+    "de": "Marshmallows sind für Hunde zu zuckerig. Teile mit deinem Hund lieber eine Karotte oder ein paar Heidelbeeren!"
   },
   "faq": [
     {
@@ -157,7 +171,8 @@
         "da": "Er sukkerfri skumfiduser sikrere?",
         "fi": "Ovatko sokerittomat vaahtokarkit turvallisempia?",
         "nb": "Er sukkerfrie marshmallows tryggere?",
-        "it": "I marshmallow senza zucchero sono più sicuri?"
+        "it": "I marshmallow senza zucchero sono più sicuri?",
+        "de": "Sind zuckerfreie Marshmallows sicherer?"
       },
       "a": {
         "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
@@ -168,7 +183,8 @@
         "da": "Nej. Tjek varedeklarationen: hvis en skumfidus indeholder xylitol, er den giftig for hunde og kan være ekstremt skadelig, selv i små mængder.",
         "fi": "Eivät. Tarkista pakkausmerkinnät: jos vaahtokarkissa on ksylitolia, se on koirille myrkyllistä ja voi olla erittäin haitallista jo pieninä määrinä.",
         "nb": "Nei. Sjekk ingredienslisten. Hvis en marshmallow inneholder xylitol, er den giftig for hunder og kan være ekstremt skadelig selv i små mengder.",
-        "it": "No. Controlla l’etichetta: se un marshmallow contiene xilitolo, è tossico per i cani e può fare molto male anche in piccole quantità."
+        "it": "No. Controlla l’etichetta: se un marshmallow contiene xilitolo, è tossico per i cani e può fare molto male anche in piccole quantità.",
+        "de": "Nein. Prüfen Sie das Etikett: Enthält ein Marshmallow Xylit, ist es für Hunde giftig und kann schon in kleinen Mengen extrem schädlich sein."
       }
     }
   ],
@@ -303,6 +319,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "450f623f7ceb588a27a7c79971a2c34d5de4c03b1a6aaaccfe3da38c5219d5c6"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "35980c96dcce2813fa31930e1c2d1829f3e3c5638761c09648668403173ede69"
     }
   }
 }

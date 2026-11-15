@@ -9,7 +9,8 @@
     "da": "Sovs",
     "fi": "Kastike",
     "nb": "Brun saus",
-    "it": "Sugo di carne"
+    "it": "Sugo di carne",
+    "de": "Bratensoße"
   },
   "question": {
     "en": "Can cats eat gravy?",
@@ -19,7 +20,8 @@
     "da": "Må katte spise sovs?",
     "fi": "Saako kissa syödä kastiketta?",
     "nb": "Kan katter spise brun saus?",
-    "it": "I gatti possono mangiare il sugo di carne?"
+    "it": "I gatti possono mangiare il sugo di carne?",
+    "de": "Dürfen Katzen Bratensoße fressen?"
   },
   "url_slug": {
     "en": "gravy",
@@ -29,7 +31,8 @@
     "da": "sovs",
     "fi": "kastike",
     "nb": "brun-saus",
-    "it": "sugo-di-carne"
+    "it": "sugo-di-carne",
+    "de": "bratensosse"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "da": "Nej, sovs lavet til mennesker er ikke noget for katte. Den er som regel salt og indeholder ofte løg, hvidløg og krydderier, og løg og hvidløg er giftige for katte. Sovs kan også være fed. Hold den væk fra kattens tallerken.",
     "fi": "Ei saa, ihmisille tarkoitettu kastike ei sovi kissoille. Se on yleensä suolaista ja sisältää usein sipulia, valkosipulia ja mausteita, ja sipuli ja valkosipuli ovat kissoille myrkyllisiä. Kastikkeessa voi olla myös paljon rasvaa. Pidä se poissa kissan lautaselta.",
     "nb": "Nei, brun saus laget for mennesker er ikke for katter. Den er vanligvis salt og inneholder ofte løk, hvitløk og krydder, og løk og hvitløk er giftig for katter. Saus kan også ha mye fett. Hold den unna kattens tallerken.",
-    "it": "No, il sugo di carne fatto per le persone non è per i gatti. Di solito è salato e spesso contiene cipolla, aglio e condimenti, e cipolla e aglio sono tossici per i gatti. Può anche essere ricco di grassi. Non metterlo nella ciotola del tuo gatto."
+    "it": "No, il sugo di carne fatto per le persone non è per i gatti. Di solito è salato e spesso contiene cipolla, aglio e condimenti, e cipolla e aglio sono tossici per i gatti. Può anche essere ricco di grassi. Non metterlo nella ciotola del tuo gatto.",
+    "de": "Nein, Bratensoße für Menschen ist nichts für Katzen. Sie ist meist salzig und enthält oft Zwiebel, Knoblauch und Gewürze, und Zwiebel und Knoblauch sind für Katzen giftig. Außerdem kann Soße viel Fett enthalten. Halten Sie sie vom Napf Ihrer Katze fern."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
@@ -50,7 +54,8 @@
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. ASPCA foreslår en smule sovs over kæledyrets festmiddag, men Cats Protection advarer om at sovs lavet til mennesker som regel er salt og indeholder hvidløg og krydderier, og PDSA skriver at fyld og sovs ofte indeholder løg, porrer og hvidløg, som kan være dødelige for katte og hunde. Løg, hvidløg, purløg og porrer er giftige for katte, også når de er kogt eller tørret. RSPCA tilføjer at sovs kan indeholde meget salt og fedt, og ASPCA nævner at bouillonterninger, der bruges til at lave sovs, indeholder meget natrium.",
     "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. ASPCA ehdottaa vähän kastiketta lemmikin joulupäivälliselle, mutta Cats Protection varoittaa, että ihmisille tarkoitettu kastike on yleensä suolaista ja sisältää valkosipulia ja mausteita, ja PDSA toteaa, että täytteissä ja kastikkeissa on usein sipulia, purjoa ja valkosipulia, jotka voivat olla kissoille ja koirille tappavia. Sipuli, valkosipuli, ruohosipuli ja purjo ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. RSPCA lisää, että kastike voi sisältää runsaasti suolaa ja rasvaa, ja ASPCA huomauttaa, että kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia.",
     "nb": "Kildene er uenige, så vi bruker det strengeste nivået. ASPCA foreslår en skvett saus over kjæledyrets høytidsmiddag, men Cats Protection advarer om at saus laget for mennesker vanligvis er salt og inneholder hvitløk og krydder, og PDSA sier at fyll og saus ofte inneholder løk, purre og hvitløk, som kan være dødelig for både katter og hunder. Løk, hvitløk, gressløk og purre er giftig for katter selv når de er kokt eller tørket. RSPCA legger til at saus kan inneholde mye salt og fett, og ASPCA påpeker at buljongterninger til saus inneholder mye natrium.",
-    "it": "Le fonti non concordano, quindi usiamo il livello più prudente. L’ASPCA suggerisce di aggiungere un filo di sugo al pasto delle feste dell’animale, ma Cats Protection avverte che il sugo fatto per le persone è di solito salato e contiene aglio e condimenti, e PDSA afferma che ripieni e sughi contengono spesso cipolla, porri e aglio, che possono essere letali per gatti e cani. Cipolla, aglio, erba cipollina e porri sono tossici per i gatti anche se cotti o essiccati. L’RSPCA aggiunge che il sugo può contenere livelli elevati di sale e grassi, e l’ASPCA osserva che i dadi da brodo usati per preparare il sugo contengono grandi quantità di sodio."
+    "it": "Le fonti non concordano, quindi usiamo il livello più prudente. L’ASPCA suggerisce di aggiungere un filo di sugo al pasto delle feste dell’animale, ma Cats Protection avverte che il sugo fatto per le persone è di solito salato e contiene aglio e condimenti, e PDSA afferma che ripieni e sughi contengono spesso cipolla, porri e aglio, che possono essere letali per gatti e cani. Cipolla, aglio, erba cipollina e porri sono tossici per i gatti anche se cotti o essiccati. L’RSPCA aggiunge che il sugo può contenere livelli elevati di sale e grassi, e l’ASPCA osserva che i dadi da brodo usati per preparare il sugo contengono grandi quantità di sodio.",
+    "de": "Die Quellen sind sich nicht einig, deshalb gilt die strengere Stufe. Die ASPCA schlägt vor, das Festtagsessen eines Haustiers mit einem Spritzer Bratensoße abzurunden, doch Cats Protection warnt, dass Bratensoße für Menschen meist salzig ist und Knoblauch und Gewürze enthält, und PDSA sagt, dass Füllung und Bratensoße oft Zwiebel, Lauch und Knoblauch enthalten, die für Katzen und Hunde tödlich sein können. Zwiebel, Knoblauch, Schnittlauch und Lauch sind für Katzen auch gekocht oder getrocknet giftig. Die RSPCA ergänzt, dass Bratensoße viel Salz und Fett enthalten kann, und die ASPCA weist darauf hin, dass Brühwürfel zum Anrühren von Soße sehr viel Natrium enthalten."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Vomito",
       "Diarrea",
       "Mal di pancia"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenbeschwerden"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "da": "Hvis din kat har spist sovs, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis du tror, at katten også har spist andre rester, skal du fortælle dyrlægen, hvad den har spist.",
     "fi": "Jos kissasi söi kastiketta, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos arvelet kissan syöneen myös muita ruoantähteitä, kerro eläinlääkärille, mitä se söi.",
     "nb": "Hvis katten har spist saus som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis du tror katten har spist andre rester også, fortell dyrlegen hva den har fått i seg.",
-    "it": "Se il tuo gatto ha mangiato sugo che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se pensi che abbia mangiato anche altri avanzi, di’ al veterinario che cosa ha mangiato."
+    "it": "Se il tuo gatto ha mangiato sugo che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se pensi che abbia mangiato anche altri avanzi, di’ al veterinario che cosa ha mangiato.",
+    "de": "Hat Ihre Katze Bratensoße gefressen, die Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Vermuten Sie, dass sie auch andere Reste gefressen hat, sagen Sie Ihrem Tierarzt, was es genau war."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "da": "Sovs er menneskemad med salt og løg i. Din kats egen kattemad er det bedste for den.",
     "fi": "Kastike on ihmisten ruokaa, jossa on suolaa ja sipulia. Kisulle paras valinta on sen oma kissanruoka.",
     "nb": "Saus er menneskemat med salt og løk i. Pusens egen kattemat er best.",
-    "it": "Il sugo di carne è un cibo per le persone, con sale e cipolla. Per il micio la scelta migliore è il suo cibo per gatti."
+    "it": "Il sugo di carne è un cibo per le persone, con sale e cipolla. Per il micio la scelta migliore è il suo cibo per gatti.",
+    "de": "Bratensoße ist Essen für Menschen und enthält Salz und Zwiebel. Für deine Katze ist ihr eigenes Katzenfutter das Beste."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "da": "Hvad kan min kat få af festmaden i stedet?",
         "fi": "Mitä kissa voi syödä joulupöydästä sen sijaan?",
         "nb": "Hva kan katten få av høytidsmiddagen i stedet?",
-        "it": "Che cosa può mangiare invece il mio gatto del pranzo delle feste?"
+        "it": "Che cosa può mangiare invece il mio gatto del pranzo delle feste?",
+        "de": "Was darf meine Katze stattdessen vom Festtagsessen haben?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
@@ -135,7 +148,8 @@
         "da": "PDSA skriver at en lille skive kalkun uden skind og ben og kogte grøntsager uden sovs ikke bør give problemer. Undlad sovsen.",
         "fi": "PDSA:n mukaan pieni pala kalkkunaa ilman nahkaa ja luita sekä keitetyt kasvikset ilman kastikkeita eivät pitäisi aiheuttaa ongelmia. Jätä kastike pois.",
         "nb": "PDSA sier at en liten skive kalkun uten skinn og bein og kokte grønnsaker uten saus ikke skal gi problemer. La sausen være.",
-        "it": "PDSA afferma che una piccola fetta di tacchino senza pelle né ossa e verdure bollite senza salse non dovrebbero causare problemi. Lascia da parte il sugo."
+        "it": "PDSA afferma che una piccola fetta di tacchino senza pelle né ossa e verdure bollite senza salse non dovrebbero causare problemi. Lascia da parte il sugo.",
+        "de": "PDSA sagt, eine kleine Scheibe Pute ohne Haut und Knochen und gekochtes Gemüse ohne Soßen sollten keine Probleme machen. Lassen Sie die Bratensoße weg."
       }
     }
   ],
@@ -245,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5bf3bb0d8fe16a6e95eb65df32682d5865b370f28137ec6dbae2d8bf5e66e7d2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30a1fefdbe7e3ceb538c4550a2c3ff4bc787312e9de766c8734528f479b773ac"
     }
   }
 }
