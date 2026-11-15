@@ -13,7 +13,8 @@
     "nb": "Soyasaus",
     "it": "Salsa di soia",
     "de": "Sojasoße",
-    "fr": "Sauce soja"
+    "fr": "Sauce soja",
+    "pt": "Molho de soja"
   },
   "question": {
     "en": "Can dogs have soy sauce?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder få soyasaus?",
     "it": "I cani possono mangiare la salsa di soia?",
     "de": "Dürfen Hunde Sojasoße bekommen?",
-    "fr": "Les chiens peuvent-ils manger de la sauce soja ?"
+    "fr": "Les chiens peuvent-ils manger de la sauce soja ?",
+    "pt": "Os cães podem comer molho de soja?"
   },
   "url_slug": {
     "en": "soy-sauce",
@@ -41,7 +43,8 @@
     "nb": "soyasaus",
     "it": "salsa-di-soia",
     "de": "sojasosse",
-    "fr": "sauce-soja"
+    "fr": "sauce-soja",
+    "pt": "molho-de-soja"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Nei, ikke gi hunden soyasaus. Hunder kan få saltforgiftning av å spise for mye bordsalt eller soyasaus, og edamame krydret med soyasaus er heller ikke bra for hunder.",
     "it": "No, non dare la salsa di soia al tuo cane. I cani possono avere un’intossicazione da sale se mangiano troppo sale da cucina o troppa salsa di soia, e nemmeno l’edamame condito con salsa di soia fa bene ai cani.",
     "de": "Nein, geben Sie Ihrem Hund keine Sojasoße. Hunde können eine Salzvergiftung bekommen, wenn sie zu viel Speisesalz oder Sojasoße fressen, und Edamame mit Sojasoße sind für Hunde ebenfalls nicht gut.",
-    "fr": "Non, ne donnez pas de sauce soja à votre chien. Les chiens peuvent s’intoxiquer au sel en mangeant trop de sel de table ou de sauce soja, et les edamames assaisonnés à la sauce soja ne sont pas bons pour eux non plus."
+    "fr": "Non, ne donnez pas de sauce soja à votre chien. Les chiens peuvent s’intoxiquer au sel en mangeant trop de sel de table ou de sauce soja, et les edamames assaisonnés à la sauce soja ne sont pas bons pour eux non plus.",
+    "pt": "Não, não dês molho de soja ao teu cão. Os cães podem ter intoxicação por sal se comerem demasiado sal de mesa ou molho de soja, e o edamame temperado com molho de soja também não é bom para os cães."
   },
   "why": {
     "en": "Dogs can suffer from salt poisoning if they eat excess amounts of table salt or soy sauce. Dogs cope with salt better when they can drink plenty of fresh water; without it the risk is higher. Too many salty foods are especially bad for dogs with medical issues such as heart disease, because salt can cause fluid retention.",
@@ -70,7 +74,8 @@
     "nb": "Hunder kan få saltforgiftning hvis de spiser for mye bordsalt eller soyasaus. Hunder tåler salt bedre når de kan drikke mye friskt vann; uten vann er risikoen høyere. For mye salt mat er særlig dårlig for hunder med sykdommer som hjertesykdom, fordi salt kan gi væskeansamling.",
     "it": "I cani possono soffrire di intossicazione da sale se mangiano quantità eccessive di sale da cucina o di salsa di soia. I cani sopportano meglio il sale quando possono bere molta acqua fresca; senza, il rischio è più alto. Troppi cibi salati sono particolarmente dannosi per i cani con problemi di salute come le malattie cardiache, perché il sale può causare ritenzione di liquidi.",
     "de": "Hunde können eine Salzvergiftung erleiden, wenn sie übermäßige Mengen Speisesalz oder Sojasoße fressen. Mit Salz kommen Hunde besser zurecht, wenn sie reichlich frisches Wasser trinken können. Ohne ausreichend Wasser ist das Risiko höher. Zu viel Salziges ist besonders schlecht für Hunde mit Vorerkrankungen wie Herzerkrankungen, weil Salz Wassereinlagerungen verursachen kann.",
-    "fr": "Les chiens peuvent souffrir d’une intoxication au sel s’ils mangent des quantités excessives de sel de table ou de sauce soja. Les chiens supportent mieux le sel quand ils peuvent boire beaucoup d’eau fraîche ; sans eau, le risque est plus élevé. Un excès d’aliments salés est particulièrement mauvais pour les chiens souffrant de problèmes de santé comme une maladie cardiaque, car le sel peut provoquer une rétention d’eau."
+    "fr": "Les chiens peuvent souffrir d’une intoxication au sel s’ils mangent des quantités excessives de sel de table ou de sauce soja. Les chiens supportent mieux le sel quand ils peuvent boire beaucoup d’eau fraîche ; sans eau, le risque est plus élevé. Un excès d’aliments salés est particulièrement mauvais pour les chiens souffrant de problèmes de santé comme une maladie cardiaque, car le sel peut provoquer une rétention d’eau.",
+    "pt": "Os cães podem sofrer de intoxicação por sal se comerem quantidades excessivas de sal de mesa ou de molho de soja. Os cães lidam melhor com o sal quando podem beber muita água fresca; sem ela, o risco é maior. Demasiados alimentos salgados são especialmente maus para cães com problemas de saúde, como doenças do coração, porque o sal pode causar retenção de líquidos."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Démarche instable",
       "Soif excessive ou besoin d’uriner excessif",
       "Tremblements ou convulsions"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Menos apetite",
+      "Apatia",
+      "Andar cambaleante",
+      "Sede excessiva ou vontade de urinar em excesso",
+      "Tremores ou convulsões"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "nb": "Hvis du tror at hunden har fått i seg for mye soyasaus, kontakt dyrlegen eller giftinformasjon for dyr med en gang. Sørg for at hunden har friskt vann å drikke.",
     "it": "Se pensi che il tuo cane abbia mangiato troppa salsa di soia, contatta subito il veterinario o un centro antiveleni veterinario. Assicurati che il cane abbia acqua fresca da bere.",
     "de": "Vermuten Sie, dass Ihr Hund zu viel Sojasoße bekommen hat, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Sorgen Sie dafür, dass Ihr Hund frisches Wasser zu trinken hat.",
-    "fr": "Si vous pensez que votre chien a mangé trop de sauce soja, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Assurez-vous que votre chien a de l’eau fraîche à boire."
+    "fr": "Si vous pensez que votre chien a mangé trop de sauce soja, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Assurez-vous que votre chien a de l’eau fraîche à boire.",
+    "pt": "Se achas que o teu cão comeu demasiado molho de soja, liga imediatamente ao teu veterinário ou a uma linha de apoio toxicológico para animais. Garante que o teu cão tem água fresca para beber."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "nb": "Soyasaus er ikke for hunder. For mye av den kan gjøre en hund syk, så gi hunden hundemat og friskt vann i stedet.",
     "it": "La salsa di soia non è per i cani. Se ne mangia troppa, un cane può stare male, quindi dagli il suo cibo per cani e acqua fresca.",
     "de": "Sojasoße ist nichts für Hunde. Zu viel davon kann einen Hund krank machen, also gib deinem Hund Hundefutter und frisches Wasser.",
-    "fr": "La sauce soja n’est pas pour les chiens. Trop de sauce peut rendre un chien malade : donne-lui plutôt de la nourriture pour chiens et de l’eau fraîche."
+    "fr": "La sauce soja n’est pas pour les chiens. Trop de sauce peut rendre un chien malade : donne-lui plutôt de la nourriture pour chiens et de l’eau fraîche.",
+    "pt": "O molho de soja não é para cães. Em excesso, pode deixar um cão doente, por isso dá ao teu cão comida de cão e água fresca."
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "nb": "Kan hunden min spise edamame med soyasaus?",
         "it": "Il mio cane può mangiare l’edamame con la salsa di soia?",
         "de": "Darf mein Hund Edamame mit Sojasoße fressen?",
-        "fr": "Mon chien peut-il manger des edamames à la sauce soja ?"
+        "fr": "Mon chien peut-il manger des edamames à la sauce soja ?",
+        "pt": "O meu cão pode comer edamame com molho de soja?"
       },
       "a": {
         "en": "No. Stay away from edamame with added seasonings such as sea salt and soy sauce, as these aren't good for dogs. Stick to plain, fresh beans.",
@@ -239,7 +256,8 @@
         "nb": "Nei. Hold deg unna edamame med tilsatt krydder som havsalt og soyasaus, for det er ikke bra for hunder. Hold deg til naturelle, ferske bønner.",
         "it": "No. Evita l’edamame con condimenti aggiunti come sale marino e salsa di soia, perché non fanno bene ai cani. Limitati ai fagioli di soia freschi, al naturale.",
         "de": "Nein. Verzichten Sie auf Edamame mit zugesetzten Gewürzen wie Meersalz und Sojasoße, denn die sind für Hunde nicht gut. Bleiben Sie bei ungewürzten, frischen Bohnen.",
-        "fr": "Non. Évitez les edamames avec des assaisonnements ajoutés comme le sel marin et la sauce soja, qui ne sont pas bons pour les chiens. Préférez les fèves fraîches, nature."
+        "fr": "Non. Évitez les edamames avec des assaisonnements ajoutés comme le sel marin et la sauce soja, qui ne sont pas bons pour les chiens. Préférez les fèves fraîches, nature.",
+        "pt": "Não. Evita o edamame com temperos adicionados, como sal marinho e molho de soja, porque não fazem bem aos cães. Dá apenas feijões frescos e simples."
       }
     }
   ],
@@ -392,6 +410,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e987f364b96146e011b4a16a467fc84fc199a79a0e26e5a5fb2fec50620daaba"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67d5dec8681951ed5da9d213ccfa32b5cb6af0520bba6b2af44cc7464265d63b"
     }
   }
 }

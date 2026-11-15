@@ -13,7 +13,8 @@
     "nb": "Brød",
     "it": "Pane",
     "de": "Brot",
-    "fr": "Pain"
+    "fr": "Pain",
+    "pt": "Pão"
   },
   "question": {
     "en": "Can dogs eat bread?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder spise brød?",
     "it": "I cani possono mangiare il pane?",
     "de": "Dürfen Hunde Brot fressen?",
-    "fr": "Les chiens peuvent-ils manger du pain ?"
+    "fr": "Les chiens peuvent-ils manger du pain ?",
+    "pt": "Os cães podem comer pão?"
   },
   "url_slug": {
     "en": "bread",
@@ -41,7 +43,8 @@
     "nb": "brod",
     "it": "pane",
     "de": "brot",
-    "fr": "pain"
+    "fr": "pain",
+    "pt": "pao"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Ja, i små mengder. Vanlig, gjennombakt hvitt brød eller hvetebrød er som regel trygt for hunder uten hveteallergi, men det gir ingen reell nytte og inneholder mange kalorier. Gi aldri rosinbrød, hvitløksbrød eller rå deig.",
     "it": "Sì, in piccole quantità. Il pane bianco o di grano semplice e ben cotto in genere è sicuro per i cani senza allergia al grano, ma non porta benefici reali ed è molto calorico. Non dare mai pane all’uvetta, pane all’aglio o impasto crudo.",
     "de": "Ja, in kleinen Mengen. Ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot ist für Hunde ohne Weizenallergie in der Regel unbedenklich, bringt aber keinen echten Nutzen und ist kalorienreich. Geben Sie niemals Rosinenbrot, Knoblauchbrot oder rohen Teig.",
-    "fr": "Oui, en petite quantité. Le pain blanc ou de blé nature, bien cuit, est généralement sans danger pour les chiens qui n’ont pas d’allergie au blé, mais il n’a pas de réel intérêt nutritionnel et il est riche en calories. Ne donnez jamais de pain aux raisins secs, de pain à l’ail ni de pâte crue."
+    "fr": "Oui, en petite quantité. Le pain blanc ou de blé nature, bien cuit, est généralement sans danger pour les chiens qui n’ont pas d’allergie au blé, mais il n’a pas de réel intérêt nutritionnel et il est riche en calories. Ne donnez jamais de pain aux raisins secs, de pain à l’ail ni de pâte crue.",
+    "pt": "Sim, em pequenas quantidades. O pão branco ou de trigo simples e bem cozido é geralmente seguro para cães sem alergia ao trigo, mas não traz benefício real e tem muitas calorias. Nunca dês pão com passas, pão de alho ou massa crua."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
@@ -70,7 +74,8 @@
     "nb": "Brød er fyllstoff uten næringsstoffer som hundens vanlige mat ikke allerede dekker, og det er fullt av karbohydrater og kalorier, så for mye kan føre til fedme. Det virkelige problemet er ingrediensene: rosiner er svært giftige og finnes ofte i brød, hvitløksbrød kan gi magesmerter, oppkast, diaré, svakhet og kollaps, og xylitol, et søtstoff i enkelte bakevarer, er giftig for hunder. Rå gjærdeig fortsetter å heve i magen og danner alkohol.",
     "it": "Il pane è un cibo di riempimento, senza nutrienti che il cibo del tuo cane non fornisca già, ed è pieno di carboidrati e calorie: troppo pane può portare il cane verso l’obesità. I veri pericoli sono gli ingredienti: l’uvetta è altamente tossica e si trova spesso in vari tipi di pane, il pane all’aglio può causare dolore addominale, vomito, diarrea, debolezza e collasso, e lo xilitolo, un dolcificante presente in alcuni prodotti da forno, è tossico per i cani. L’impasto crudo lievitato continua a lievitare nello stomaco e libera alcol.",
     "de": "Brot ist ein Füllmittel: Es enthält keine Nährstoffe, die das Hundefutter nicht ohnehin liefert, dafür aber viele Kohlenhydrate und Kalorien. Zu viel davon kann zu Übergewicht führen. Die eigentlichen Gefahren sind die Zutaten: Rosinen sind stark giftig und stecken oft in Broten, Knoblauchbrot kann Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen, und Xylit, ein Zuckeraustauschstoff in manchen Backwaren, ist für Hunde giftig. Roher Hefeteig geht im Magen weiter auf und setzt Alkohol frei.",
-    "fr": "Le pain est un aliment de remplissage qui n’apporte aucun nutriment que l’alimentation de votre chien ne fournit déjà, et il est riche en glucides et en calories : en donner trop peut mener à l’obésité. Les vrais dangers viennent des ingrédients : les raisins secs sont très toxiques et se cachent souvent dans les pains, le pain à l’ail peut provoquer douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement, et le xylitol, un édulcorant présent dans certaines pâtisseries, est toxique pour les chiens. La pâte crue à la levure continue de gonfler dans l’estomac et libère de l’alcool."
+    "fr": "Le pain est un aliment de remplissage qui n’apporte aucun nutriment que l’alimentation de votre chien ne fournit déjà, et il est riche en glucides et en calories : en donner trop peut mener à l’obésité. Les vrais dangers viennent des ingrédients : les raisins secs sont très toxiques et se cachent souvent dans les pains, le pain à l’ail peut provoquer douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement, et le xylitol, un édulcorant présent dans certaines pâtisseries, est toxique pour les chiens. La pâte crue à la levure continue de gonfler dans l’estomac et libère de l’alcool.",
+    "pt": "O pão enche, mas não tem nutrientes que a comida do teu cão ainda não forneça, e tem muitos hidratos de carbono e calorias, por isso, em excesso, pode levar à obesidade. Os verdadeiros perigos são os ingredientes: as passas são muito tóxicas e aparecem muitas vezes em pães, o pão de alho pode causar dor abdominal, vómitos, diarreia, fraqueza e colapso, e o xilitol, um adoçante presente em alguns produtos de pastelaria, é tóxico para os cães. A massa crua com fermento continua a crescer no estômago e liberta álcool."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "nb": "Vanlig brød gir som regel ikke urolig mage hos hunder. Hvis du jevnlig gir brød eller bakevarer, må du sjekke ingredienslisten. Hvis hunden spiser rå brøddeig, må du kontakte dyrlegen med en gang. Det samme gjelder brød med rosiner eller hvitløk.",
     "it": "Il pane semplice di solito non dà fastidio allo stomaco del cane. Se dai regolarmente pane o prodotti da forno, controlla gli ingredienti. Se il tuo cane mangia impasto di pane crudo, chiama subito il veterinario; lo stesso vale per il pane con uvetta o aglio.",
     "de": "Ungewürztes Brot verursacht bei Hunden meist keine Magenbeschwerden. Wenn Sie Brot oder Backwaren regelmäßig geben, prüfen Sie die Zutaten. Frisst Ihr Hund rohen Brotteig, rufen Sie sofort Ihren Tierarzt an. Dasselbe gilt für Brot mit Rosinen oder Knoblauch.",
-    "fr": "Le pain nature ne dérange généralement pas l’estomac du chien. Si vous donnez régulièrement du pain ou des pâtisseries, vérifiez la liste des ingrédients. Si votre chien mange de la pâte à pain crue, appelez immédiatement votre vétérinaire ; faites de même s’il a mangé du pain aux raisins secs ou à l’ail."
+    "fr": "Le pain nature ne dérange généralement pas l’estomac du chien. Si vous donnez régulièrement du pain ou des pâtisseries, vérifiez la liste des ingrédients. Si votre chien mange de la pâte à pain crue, appelez immédiatement votre vétérinaire ; faites de même s’il a mangé du pain aux raisins secs ou à l’ail.",
+    "pt": "O pão simples costuma não incomodar o estômago do cão. Se deres pão ou produtos de pastelaria com regularidade, confirma os ingredientes. Se o teu cão comer massa de pão crua, liga imediatamente ao teu veterinário; o mesmo se for pão com passas ou alho."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
@@ -99,7 +105,8 @@
     "nb": "Bare helt små biter av vanlig, gjennombakt hvitt brød eller hvetebrød, av og til. Ingen rosiner, hvitløk, xylitol eller andre ingredienser som er giftige for hunder.",
     "it": "Solo pezzetti molto piccoli di pane bianco o di grano semplice e ben cotto, ogni tanto. Niente uvetta, aglio, xilitolo o altri ingredienti tossici per i cani.",
     "de": "Nur sehr kleine Stücke ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot, ab und zu. Keine Rosinen, kein Knoblauch, kein Xylit und keine anderen Zutaten, die für Hunde giftig sind.",
-    "fr": "Seulement de très petits morceaux de pain blanc ou de blé nature, bien cuit, de temps en temps. Sans raisins secs, ail, xylitol ni autre ingrédient toxique pour les chiens."
+    "fr": "Seulement de très petits morceaux de pain blanc ou de blé nature, bien cuit, de temps en temps. Sans raisins secs, ail, xylitol ni autre ingrédient toxique pour les chiens.",
+    "pt": "Só pedaços muito pequenos de pão branco ou de trigo simples e bem cozido, de vez em quando. Sem passas, alho, xilitol nem outros ingredientes tóxicos para os cães."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
@@ -113,7 +120,8 @@
     "nb": "Hunder kan få en bitteliten bit vanlig brød. Rosinbrød og hvitløksbrød er ikke for hunder, så spør en voksen først.",
     "it": "I cani possono mangiare un pezzettino di pane semplice. Il pane all’uvetta e il pane all’aglio non sono per i cani, quindi chiedi prima a un adulto.",
     "de": "Hunde dürfen ein winziges Stück ungewürztes Brot haben. Rosinenbrot und Knoblauchbrot sind nichts für Hunde, also frag vorher einen Erwachsenen.",
-    "fr": "Un tout petit morceau de pain nature, c’est possible pour un chien. Pain aux raisins secs et pain à l’ail : non, demande d’abord à un adulte."
+    "fr": "Un tout petit morceau de pain nature, c’est possible pour un chien. Pain aux raisins secs et pain à l’ail : non, demande d’abord à un adulte.",
+    "pt": "Os cães podem comer um bocadinho de pão simples. O pão com passas e o pão de alho não são para cães, por isso pergunta primeiro a um adulto."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "nb": "Kan hunder spise hvitløksbrød?",
         "it": "I cani possono mangiare il pane all’aglio?",
         "de": "Dürfen Hunde Knoblauchbrot fressen?",
-        "fr": "Les chiens peuvent-ils manger du pain à l’ail ?"
+        "fr": "Les chiens peuvent-ils manger du pain à l’ail ?",
+        "pt": "Os cães podem comer pão de alho?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
@@ -143,7 +152,8 @@
         "nb": "Nei. Hvitløksbrød kan gi alvorlige bivirkninger som magesmerter, oppkast, diaré, svakhet og kollaps.",
         "it": "No. Il pane all’aglio può causare effetti collaterali gravi come dolore addominale, vomito, diarrea, debolezza e collasso.",
         "de": "Nein. Knoblauchbrot kann ernste Nebenwirkungen wie Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen.",
-        "fr": "Non. Le pain à l’ail peut provoquer de graves effets indésirables : douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement."
+        "fr": "Non. Le pain à l’ail peut provoquer de graves effets indésirables : douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement.",
+        "pt": "Não. O pão de alho pode causar efeitos graves, como dor abdominal, vómitos, diarreia, fraqueza e colapso."
       }
     },
     {
@@ -159,7 +169,8 @@
         "nb": "Er brød bra for en hund med urolig mage?",
         "it": "Il pane fa bene al cane quando ha mal di pancia?",
         "de": "Ist Brot gut, wenn der Hund Magenbeschwerden hat?",
-        "fr": "Le pain est-il bon pour un chien qui a mal au ventre ?"
+        "fr": "Le pain est-il bon pour un chien qui a mal au ventre ?",
+        "pt": "O pão faz bem a um cão com indisposição de estômago?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
@@ -173,7 +184,8 @@
         "nb": "Skånekost med ris og kokt kylling er et bedre valg, og enda bedre er det å ringe dyrlegen og be om råd.",
         "it": "Una dieta in bianco a base di riso e pollo bollito è un’opzione migliore, e ancora meglio è chiamare il veterinario per un consiglio.",
         "de": "Besser geeignet ist Schonkost aus Reis und gekochtem Huhn. Noch besser ist es, Ihren Tierarzt um Rat zu fragen.",
-        "fr": "Une alimentation douce à base de riz et de poulet bouilli est préférable, et le mieux est encore d’appeler votre vétérinaire pour demander conseil."
+        "fr": "Une alimentation douce à base de riz et de poulet bouilli est préférable, et le mieux est encore d’appeler votre vétérinaire pour demander conseil.",
+        "pt": "Uma dieta suave de arroz e frango cozido é uma opção melhor, e ainda melhor é ligar ao veterinário para pedir conselho."
       }
     },
     {
@@ -189,7 +201,8 @@
         "nb": "Hva hvis hunden min spiser rå brøddeig?",
         "it": "E se il mio cane mangia impasto di pane crudo?",
         "de": "Was, wenn mein Hund rohen Brotteig frisst?",
-        "fr": "Que faire si mon chien mange de la pâte à pain crue ?"
+        "fr": "Que faire si mon chien mange de la pâte à pain crue ?",
+        "pt": "E se o meu cão comer massa de pão crua?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
@@ -203,7 +216,8 @@
         "nb": "Kontakt dyrlegen med en gang. Gjæren får deigen til å fortsette å heve, noe som strekker ut magesekken og gir giftige mengder alkohol i blodet.",
         "it": "Chiama subito il veterinario. Il lievito continua a far lievitare l’impasto, che dilata lo stomaco e libera nel sangue alcol a livelli tossici.",
         "de": "Rufen Sie sofort Ihren Tierarzt an. Die Hefe lässt den Teig weiter aufgehen, dehnt den Magen und setzt giftige Mengen Alkohol ins Blut frei.",
-        "fr": "Appelez immédiatement votre vétérinaire. La levure continue de faire lever la pâte, ce qui distend l’estomac et libère dans le sang des quantités toxiques d’alcool."
+        "fr": "Appelez immédiatement votre vétérinaire. La levure continue de faire lever la pâte, ce qui distend l’estomac et libère dans le sang des quantités toxiques d’alcool.",
+        "pt": "Liga imediatamente ao teu veterinário. A levedura faz a massa continuar a crescer, esticando o estômago e libertando para o sangue níveis tóxicos de álcool."
       }
     }
   ],
@@ -386,6 +400,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bce3f1041418ce1ec2e5f61898acddaccfa46f9f7752596bfa439196b115f3b0"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dbeedfea1ccb6bd515e3daf8870c9ed4db30138c19158d00fbde6632918032d"
     }
   }
 }

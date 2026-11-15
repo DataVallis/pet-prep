@@ -12,7 +12,8 @@
     "nb": "Pølser",
     "it": "Salsicce",
     "de": "Würstchen",
-    "fr": "Saucisses"
+    "fr": "Saucisses",
+    "pt": "Salsichas"
   },
   "question": {
     "en": "Can dogs eat sausages?",
@@ -25,7 +26,8 @@
     "nb": "Kan hunder spise pølser?",
     "it": "I cani possono mangiare le salsicce?",
     "de": "Dürfen Hunde Würstchen fressen?",
-    "fr": "Les chiens peuvent-ils manger des saucisses ?"
+    "fr": "Les chiens peuvent-ils manger des saucisses ?",
+    "pt": "Os cães podem comer salsichas?"
   },
   "url_slug": {
     "en": "sausages",
@@ -38,7 +40,8 @@
     "nb": "polser",
     "it": "salsicce",
     "de": "wuerstchen",
-    "fr": "saucisses"
+    "fr": "saucisses",
+    "pt": "salsichas"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nb": "Nei, det er best å ikke gi hunden pølser. Pølser har mye fett og salt og inneholder ofte krydder som hvitløk og løk. For mye fett eller salt kan gi smertefulle helseproblemer som betennelse i bukspyttkjertelen.",
     "it": "No, è meglio non dare le salsicce al tuo cane. La salsiccia è ricca di grassi e sale e contiene spesso condimenti come aglio e cipolla. Troppi grassi o troppo sale possono causare problemi di salute dolorosi come la pancreatite.",
     "de": "Nein, geben Sie Ihrem Hund besser keine Würstchen. Wurst enthält viel Fett und Salz und oft Gewürze wie Knoblauch und Zwiebel. Zu viel Fett oder Salz kann zu schmerzhaften Erkrankungen wie einer Bauchspeicheldrüsenentzündung führen.",
-    "fr": "Non, mieux vaut ne pas donner de saucisses à votre chien. La saucisse est riche en graisses et en sel et contient souvent des assaisonnements comme l’ail et l’oignon. Trop de graisse ou de sel peut entraîner des problèmes de santé douloureux comme la pancréatite."
+    "fr": "Non, mieux vaut ne pas donner de saucisses à votre chien. La saucisse est riche en graisses et en sel et contient souvent des assaisonnements comme l’ail et l’oignon. Trop de graisse ou de sel peut entraîner des problèmes de santé douloureux comme la pancréatite.",
+    "pt": "Não, o melhor é não dar salsichas ao teu cão. A salsicha tem muita gordura e sal e leva muitas vezes temperos como alho e cebola. Demasiada gordura ou sal pode causar problemas de saúde dolorosos, como a pancreatite."
   },
   "why": {
     "en": "Unlike plain chicken or beef, sausage is high in fat and sodium and is often seasoned with garlic, onion or other spicy additives. Salty, fatty or preserved meats can be unhealthy for dogs. A vet at a UK vet charity says pigs in blankets aren't dangerous but are high in fat and can easily upset a dog's stomach; another source says dogs should not eat sausage at all, so we follow the stricter advice.",
@@ -65,7 +69,8 @@
     "nb": "I motsetning til naturell kylling eller storfekjøtt har pølser mye fett og natrium og er ofte krydret med hvitløk, løk eller andre sterke tilsetninger. Salt, fett eller konservert kjøtt kan være usunt for hunder. En dyrlege i en britisk veldedig dyrehelseorganisasjon sier at pølser i bacon ikke er farlige, men at de har mye fett og lett kan gi hunden urolig mage; en annen kilde sier at hunder ikke bør spise pølser i det hele tatt, så vi følger det strengeste rådet.",
     "it": "A differenza del pollo o del manzo al naturale, la salsiccia è ricca di grassi e sodio ed è spesso condita con aglio, cipolla o altri additivi piccanti. Le carni salate, grasse o conservate possono far male ai cani. Un veterinario di un’organizzazione benefica britannica dice che le salsicce avvolte nella pancetta (pigs in blankets) non sono pericolose ma sono ricche di grassi e possono facilmente dare fastidio allo stomaco del cane; un’altra fonte dice che i cani non dovrebbero mangiare affatto la salsiccia, quindi seguiamo il consiglio più severo.",
     "de": "Anders als einfaches Huhn oder Rindfleisch enthält Wurst viel Fett und Natrium und wird oft mit Knoblauch, Zwiebel oder anderen scharfen Zutaten gewürzt. Salziges, fettiges oder haltbar gemachtes Fleisch kann für Hunde ungesund sein. Ein Tierarzt einer britischen tiermedizinischen Hilfsorganisation sagt, dass Würstchen im Speckmantel nicht gefährlich sind, aber viel Fett enthalten und einem Hund leicht auf den Magen schlagen können. Eine andere Quelle sagt, dass Hunde überhaupt keine Wurst fressen sollten, deshalb folgen wir dem strengeren Rat.",
-    "fr": "Contrairement au poulet ou au bœuf nature, la saucisse est riche en graisses et en sodium et est souvent assaisonnée d’ail, d’oignon ou d’autres additifs épicés. Les viandes salées, grasses ou conservées peuvent être mauvaises pour les chiens. Un vétérinaire travaillant pour une association caritative britannique de soins vétérinaires explique que les « pigs in blankets » (petites saucisses enrobées de bacon) ne sont pas dangereux mais sont très gras et peuvent facilement déranger l’estomac d’un chien ; une autre source dit que les chiens ne doivent pas manger de saucisse du tout ; nous suivons donc l’avis le plus strict."
+    "fr": "Contrairement au poulet ou au bœuf nature, la saucisse est riche en graisses et en sodium et est souvent assaisonnée d’ail, d’oignon ou d’autres additifs épicés. Les viandes salées, grasses ou conservées peuvent être mauvaises pour les chiens. Un vétérinaire travaillant pour une association caritative britannique de soins vétérinaires explique que les « pigs in blankets » (petites saucisses enrobées de bacon) ne sont pas dangereux mais sont très gras et peuvent facilement déranger l’estomac d’un chien ; une autre source dit que les chiens ne doivent pas manger de saucisse du tout ; nous suivons donc l’avis le plus strict.",
+    "pt": "Ao contrário do frango ou da carne de vaca simples, a salsicha tem muita gordura e sódio e é muitas vezes temperada com alho, cebola ou outros condimentos picantes. As carnes salgadas, gordas ou conservadas podem não ser saudáveis para os cães. Um veterinário de uma organização de beneficência veterinária do Reino Unido diz que as salsichas embrulhadas em bacon (pigs in blankets) não são perigosas, mas têm muita gordura e podem facilmente irritar o estômago de um cão; outra fonte diz que os cães não devem comer salsicha de forma alguma, por isso seguimos o conselho mais rigoroso."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Diarrhée",
       "Refus de manger",
       "Fatigue"
+    ],
+    "pt": [
+      "Vómitos, por vezes a começar 1–4 dias depois da refeição gorda",
+      "Dor de barriga",
+      "Diarreia",
+      "Falta de vontade de comer",
+      "Cansaço"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nb": "Hvis hunden har spist litt pølse, hold øye med den og ring dyrlegen for råd. Kontakt dyrlegen hvis hunden kaster opp, har magesmerter eller virker sliten de neste dagene, for symptomer etter et fett måltid kan komme forsinket.",
     "it": "Se il tuo cane ha mangiato della salsiccia, tienilo d’occhio e chiama il veterinario per un consiglio. Contatta il veterinario se nei giorni successivi il cane vomita, ha mal di pancia o sembra stanco, perché i sintomi dopo un pasto grasso possono comparire in ritardo.",
     "de": "Hat Ihr Hund etwas Wurst gefressen, beobachten Sie ihn und rufen Sie Ihren Tierarzt an. Wenden Sie sich an Ihren Tierarzt, wenn Ihr Hund in den folgenden Tagen erbricht, Bauchschmerzen hat oder müde wirkt, denn Anzeichen nach einer fetten Mahlzeit können sich verzögern.",
-    "fr": "Si votre chien a mangé de la saucisse, surveillez-le et appelez votre vétérinaire pour demander conseil. Contactez votre vétérinaire si votre chien vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, car les signes peuvent apparaître avec retard après un repas gras."
+    "fr": "Si votre chien a mangé de la saucisse, surveillez-le et appelez votre vétérinaire pour demander conseil. Contactez votre vétérinaire si votre chien vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, car les signes peuvent apparaître avec retard après un repas gras.",
+    "pt": "Se o teu cão comeu salsicha, observa-o e fala com o teu veterinário para pedires conselho. Liga ao teu veterinário se o teu cão vomitar, tiver dor de barriga ou parecer cansado nos dias seguintes, porque os sinais depois de uma refeição gorda podem demorar a aparecer."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nb": "Pølser er for fete og salte for hunder, så la dem bli på din egen tallerken.",
     "it": "Le salsicce sono troppo grasse e salate per i cani, quindi tienile nel tuo piatto.",
     "de": "Würstchen sind für Hunde zu fettig und zu salzig, also behalte sie auf deinem eigenen Teller.",
-    "fr": "Les saucisses sont trop grasses et trop salées pour les chiens : garde-les dans ton assiette."
+    "fr": "Les saucisses sont trop grasses et trop salées pour les chiens : garde-les dans ton assiette.",
+    "pt": "As salsichas são gordas e salgadas demais para os cães, por isso deixa-as no teu prato."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nb": "Hva med pølser i bacon til jul?",
         "it": "E le salsicce avvolte nella pancetta (pigs in blankets) che si mangiano a Natale?",
         "de": "Und Würstchen im Speckmantel an Weihnachten?",
-        "fr": "Et les « pigs in blankets » de Noël (petites saucisses enrobées de bacon) ?"
+        "fr": "Et les « pigs in blankets » de Noël (petites saucisses enrobées de bacon) ?",
+        "pt": "E as salsichas embrulhadas em bacon (pigs in blankets) do Natal?"
       },
       "a": {
         "en": "According to a vet, they aren't dangerous, but they are high in fat and could easily upset your dog's stomach.",
@@ -199,7 +214,8 @@
         "nb": "Ifølge en dyrlege er de ikke farlige, men de har mye fett og kan lett gi hunden urolig mage.",
         "it": "Secondo un veterinario non sono pericolose, ma sono ricche di grassi e potrebbero facilmente dare fastidio allo stomaco del tuo cane.",
         "de": "Laut einem Tierarzt sind sie nicht gefährlich, enthalten aber viel Fett und könnten Ihrem Hund leicht auf den Magen schlagen.",
-        "fr": "D’après un vétérinaire, elles ne sont pas dangereuses, mais elles sont très grasses et pourraient facilement déranger l’estomac de votre chien."
+        "fr": "D’après un vétérinaire, elles ne sont pas dangereuses, mais elles sont très grasses et pourraient facilement déranger l’estomac de votre chien.",
+        "pt": "Segundo um veterinário, não são perigosas, mas têm muita gordura e podem facilmente irritar o estômago do teu cão."
       }
     }
   ],
@@ -314,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b61765d718a40750508b7e8c854d493bed338733fd1370ea9d078778da01dd28"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a1b2fe0f915c885452ddb6ca71f08c9e465cc8479a0cd728b19cd6b1712090af"
     }
   }
 }

@@ -13,7 +13,8 @@
     "nb": "Tyggegummi",
     "it": "Gomma da masticare",
     "de": "Kaugummi",
-    "fr": "Chewing-gum"
+    "fr": "Chewing-gum",
+    "pt": "Pastilha elástica"
   },
   "question": {
     "en": "Can dogs eat chewing gum?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder spise tyggegummi?",
     "it": "I cani possono mangiare la gomma da masticare?",
     "de": "Dürfen Hunde Kaugummi fressen?",
-    "fr": "Les chiens peuvent-ils manger du chewing-gum ?"
+    "fr": "Les chiens peuvent-ils manger du chewing-gum ?",
+    "pt": "Os cães podem comer pastilha elástica?"
   },
   "url_slug": {
     "en": "chewing-gum",
@@ -41,7 +43,8 @@
     "nb": "tyggegummi",
     "it": "gomma-da-masticare",
     "de": "kaugummi",
-    "fr": "chewing-gum"
+    "fr": "chewing-gum",
+    "pt": "pastilha-elastica"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Nei. Tyggegummi er ikke for hunder. Sukkerfritt tyggegummi inneholder nesten alltid xylitol, som er like farlig for hunder som sjokolade: det kan gi et raskt fall i blodsukkeret, kramper og leversvikt. Hvis hunden spiser tyggegummi, må du til dyrlegen umiddelbart.",
     "it": "No. La gomma da masticare non è per i cani. Quella senza zucchero contiene quasi sempre xilitolo, pericoloso per i cani quanto il cioccolato: può causare un rapido calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Se il tuo cane mangia una gomma da masticare, portalo subito dal veterinario.",
     "de": "Nein. Kaugummi ist nichts für Hunde. Zuckerfreier Kaugummi enthält fast immer Xylit, das für Hunde so gefährlich ist wie Schokolade: Es kann einen raschen Blutzuckerabfall, Krampfanfälle und Leberversagen verursachen. Frisst Ihr Hund Kaugummi, bringen Sie ihn sofort zum Tierarzt.",
-    "fr": "Non. Le chewing-gum n’est pas pour les chiens. Le chewing-gum sans sucre contient presque toujours du xylitol, aussi dangereux pour les chiens que le chocolat : il peut provoquer une chute rapide de la glycémie, des convulsions et une insuffisance hépatique. Si votre chien mange du chewing-gum, emmenez-le immédiatement chez le vétérinaire."
+    "fr": "Non. Le chewing-gum n’est pas pour les chiens. Le chewing-gum sans sucre contient presque toujours du xylitol, aussi dangereux pour les chiens que le chocolat : il peut provoquer une chute rapide de la glycémie, des convulsions et une insuffisance hépatique. Si votre chien mange du chewing-gum, emmenez-le immédiatement chez le vétérinaire.",
+    "pt": "Não. A pastilha elástica não é para cães. A pastilha elástica sem açúcar contém quase sempre xilitol, que é tão perigoso para os cães como o chocolate: pode causar uma descida rápida do açúcar no sangue, convulsões e insuficiência hepática. Se o teu cão comer pastilha elástica, leva-o imediatamente ao veterinário."
   },
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
@@ -70,7 +74,8 @@
     "nb": "Xylitol er den vanligste og farligste ingrediensen i tyggegummi, og noen hunder får alvorlig leverskade etter å ha spist det. Tyggegummi inneholder også ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og store mengder tyggegummi kan klumpe seg sammen i magen og gi tarmblokkering. Siden sukkerfritt tyggegummi nesten alltid inneholder xylitol, vurderer vi tyggegummi som giftig.",
     "it": "Lo xilitolo è l’ingrediente più comune e pericoloso delle gomme da masticare, e alcuni cani sviluppano un grave danno al fegato dopo averlo mangiato. Le gomme contengono spesso anche zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e grandi quantità di gomma possono formare un grumo nello stomaco e causare un’ostruzione. Poiché la gomma senza zucchero contiene quasi sempre xilitolo, la valutiamo come tossica.",
     "de": "Xylit ist der häufigste und gefährlichste Inhaltsstoff in Kaugummi, und manche Hunde erleiden nach dem Fressen schwere Leberschäden. Kaugummi enthält außerdem oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und große Mengen Kaugummi können sich im Magen zusammenballen und einen Darmverschluss verursachen. Weil zuckerfreier Kaugummi fast immer Xylit enthält, stufen wir Kaugummi als giftig ein.",
-    "fr": "Le xylitol est l’ingrédient le plus courant et le plus dangereux des chewing-gums, et certains chiens développent de graves lésions du foie après en avoir mangé. Les chewing-gums contiennent aussi souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et de grandes quantités peuvent s’agglomérer dans l’estomac et provoquer une occlusion. Comme le chewing-gum sans sucre contient presque toujours du xylitol, nous le classons comme toxique."
+    "fr": "Le xylitol est l’ingrédient le plus courant et le plus dangereux des chewing-gums, et certains chiens développent de graves lésions du foie après en avoir mangé. Les chewing-gums contiennent aussi souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et de grandes quantités peuvent s’agglomérer dans l’estomac et provoquer une occlusion. Comme le chewing-gum sans sucre contient presque toujours du xylitol, nous le classons comme toxique.",
+    "pt": "O xilitol é o ingrediente mais comum e perigoso nas pastilhas elásticas, e alguns cães desenvolvem lesões graves no fígado depois de o comer. As pastilhas elásticas também contêm muitas vezes açúcar, adoçantes artificiais e outros ingredientes que podem ser tóxicos para os cães, e grandes quantidades podem formar uma massa no estômago e causar uma obstrução. Como a pastilha elástica sem açúcar contém quase sempre xilitol, classificamo-la como tóxica."
   },
   "signs": {
     "en": [
@@ -168,6 +173,14 @@
       "Convulsions",
       "Abattement",
       "Les signes peuvent apparaître en quelques minutes"
+    ],
+    "pt": [
+      "Vómitos",
+      "Andar cambaleante ou dificuldade em andar",
+      "Tremores",
+      "Convulsões",
+      "Apatia",
+      "Os sinais podem começar em poucos minutos"
     ]
   },
   "what_to_do": {
@@ -182,7 +195,8 @@
     "nb": "Ta hunden med til dyrlegen umiddelbart, og ring giftinformasjon for dyr for å få råd. Ikke gi hunden noe i munnen med mindre dyrlegen ber deg om det.",
     "it": "Porta subito il cane dal veterinario e chiama un centro antiveleni veterinario per un consiglio. Non dare al cane nulla per bocca, a meno che non sia il veterinario a dirtelo.",
     "de": "Bringen Sie Ihren Hund sofort zum Tierarzt und rufen Sie einen Giftnotruf für Tiere an. Geben Sie Ihrem Hund nichts zu fressen oder zu trinken, es sei denn, Ihr Tierarzt weist Sie dazu an.",
-    "fr": "Emmenez immédiatement votre chien chez le vétérinaire et appelez un centre antipoison vétérinaire pour demander conseil. Ne donnez rien par la bouche à votre chien sans l’accord de votre vétérinaire."
+    "fr": "Emmenez immédiatement votre chien chez le vétérinaire et appelez un centre antipoison vétérinaire pour demander conseil. Ne donnez rien par la bouche à votre chien sans l’accord de votre vétérinaire.",
+    "pt": "Leva o teu cão imediatamente ao veterinário e liga a uma linha de apoio toxicológico para animais para pedires conselho. Não dês nada ao teu cão pela boca, a não ser que o teu veterinário to diga."
   },
   "serving": null,
   "child": {
@@ -197,7 +211,8 @@
     "nb": "Tyggegummi er ikke for hunder. Hold tyggegummi unna hunden din, og si fra til en voksen med en gang hvis hunden spiser noe.",
     "it": "La gomma da masticare non è per i cani. Tienila lontana dal tuo cane e dillo subito a un adulto se ne mangia.",
     "de": "Kaugummi ist nichts für Hunde. Halte Kaugummi von deinem Hund fern und sag sofort einem Erwachsenen Bescheid, wenn dein Hund welchen frisst.",
-    "fr": "Le chewing-gum n’est pas pour les chiens. Garde le chewing-gum hors de portée de ton chien et préviens tout de suite un adulte s’il en mange."
+    "fr": "Le chewing-gum n’est pas pour les chiens. Garde le chewing-gum hors de portée de ton chien et préviens tout de suite un adulte s’il en mange.",
+    "pt": "A pastilha elástica não é para cães. Mantém a pastilha longe do teu cão e avisa logo um adulto se ele comer alguma."
   },
   "faq": [
     {
@@ -213,7 +228,8 @@
         "nb": "Er vanlig tyggegummi med sukker trygt for hunder?",
         "it": "La gomma normale, con zucchero, è sicura per i cani?",
         "de": "Ist normaler Kaugummi mit Zucker für Hunde unbedenklich?",
-        "fr": "Le chewing-gum classique au sucre est-il sans danger pour les chiens ?"
+        "fr": "Le chewing-gum classique au sucre est-il sans danger pour les chiens ?",
+        "pt": "A pastilha elástica normal, com açúcar, é segura para os cães?"
       },
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
@@ -227,7 +243,8 @@
         "nb": "Egentlig ikke. Tyggegummi inneholder ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og mye tyggegummi kan klumpe seg sammen i magen. Ring dyrlegen hvis hunden har spist noe.",
         "it": "Non proprio. La gomma da masticare contiene spesso zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e molta gomma può formare un grumo nello stomaco. Chiama il veterinario se il tuo cane ne ha mangiata.",
         "de": "Nicht wirklich. Kaugummi enthält oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und viel Kaugummi kann sich im Magen zusammenballen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welchen gefressen hat.",
-        "fr": "Pas vraiment. Le chewing-gum contient souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et une grande quantité peut s’agglomérer dans l’estomac. Appelez votre vétérinaire si votre chien en a mangé."
+        "fr": "Pas vraiment. Le chewing-gum contient souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et une grande quantité peut s’agglomérer dans l’estomac. Appelez votre vétérinaire si votre chien en a mangé.",
+        "pt": "Não propriamente. As pastilhas elásticas contêm muitas vezes açúcar, adoçantes artificiais e outros ingredientes que podem ser tóxicos para os cães, e muita pastilha pode formar uma massa no estômago. Liga ao teu veterinário se o teu cão comeu alguma."
       }
     },
     {
@@ -243,7 +260,8 @@
         "nb": "Hvilke andre produkter inneholder xylitol?",
         "it": "Quali altri prodotti contengono xilitolo?",
         "de": "Welche anderen Produkte enthalten Xylit?",
-        "fr": "Quels autres produits contiennent du xylitol ?"
+        "fr": "Quels autres produits contiennent du xylitol ?",
+        "pt": "Que outros produtos contêm xilitol?"
       },
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
@@ -257,7 +275,8 @@
         "nb": "Noe sukkerfritt godteri, tannkrem, bakevarer, medisiner og drikkepulver. På ingredienslisten kan det også stå som bjørkesukker, tresukker eller bjørkebarkekstrakt.",
         "it": "Alcune caramelle senza zucchero, dentifrici, prodotti da forno, medicinali e preparati per bevande. Sulle etichette può comparire anche come zucchero di betulla, zucchero di legno o estratto di corteccia di betulla.",
         "de": "Manche zuckerfreien Süßigkeiten, Zahnpasta, Backwaren, Medikamente und Getränkepulver. Auf Etiketten kann es auch als Birkenzucker, Holzzucker oder Birkenrindenextrakt angegeben sein.",
-        "fr": "Certains bonbons sans sucre, dentifrices, pâtisseries, médicaments et préparations pour boissons. Sur les étiquettes, il peut aussi apparaître sous les noms « sucre de bouleau », « sucre de bois » ou « extrait d’écorce de bouleau »."
+        "fr": "Certains bonbons sans sucre, dentifrices, pâtisseries, médicaments et préparations pour boissons. Sur les étiquettes, il peut aussi apparaître sous les noms « sucre de bouleau », « sucre de bois » ou « extrait d’écorce de bouleau ».",
+        "pt": "Alguns doces sem açúcar, pasta de dentes, produtos de pastelaria, medicamentos e preparados para bebidas. Nos rótulos também pode aparecer como açúcar de bétula, açúcar de madeira ou extrato de casca de bétula."
       }
     }
   ],
@@ -411,6 +430,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a2442c462c0e43a6b858f396f003009b5beb5583a7202efa2a3aa46cb9fdf4be"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9dcaf4ff69bc2cd16880ccb6a016bc86ea5cc49f148040fdab1a9963522e57e5"
     }
   }
 }
