@@ -10,7 +10,8 @@
     "da": "Kage",
     "fi": "Kakku",
     "nb": "Kake",
-    "it": "Torta"
+    "it": "Torta",
+    "de": "Kuchen"
   },
   "question": {
     "en": "Can dogs eat cake?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise kage?",
     "fi": "Saako koira syödä kakkua?",
     "nb": "Kan hunder spise kake?",
-    "it": "I cani possono mangiare la torta?"
+    "it": "I cani possono mangiare la torta?",
+    "de": "Dürfen Hunde Kuchen fressen?"
   },
   "url_slug": {
     "en": "cake",
@@ -32,7 +34,8 @@
     "da": "kage",
     "fi": "kakku",
     "nb": "kake",
-    "it": "torta"
+    "it": "torta",
+    "de": "kuchen"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, det er bedst ikke at dele kage med din hund. Det høje indhold af sukker og fedt er skidt for hundens helbred, og chokoladekage, kager med rosiner og kager sødet med xylitol er giftige for hunde.",
     "fi": "Ei suositella, kakkua on parasta olla jakamatta koiran kanssa. Sen runsas sokeri ja rasva ovat haitallisia koiran terveydelle, ja suklaakakku, rusinoita sisältävät kakut ja ksylitolilla makeutetut kakut ovat koirille myrkyllisiä.",
     "nb": "Nei, det er best å ikke dele kake med hunden. Det høye sukker- og fettinnholdet er dårlig for helsen til en hund, og sjokoladekake, kake med rosiner og kake søtet med xylitol er giftige for hunder.",
-    "it": "No, meglio non condividere la torta con il tuo cane. L’alto contenuto di zucchero e grassi fa male alla salute del cane, e le torte al cioccolato, quelle con l’uvetta e quelle dolcificate con xilitolo sono tossiche per i cani."
+    "it": "No, meglio non condividere la torta con il tuo cane. L’alto contenuto di zucchero e grassi fa male alla salute del cane, e le torte al cioccolato, quelle con l’uvetta e quelle dolcificate con xilitolo sono tossiche per i cani.",
+    "de": "Nein, teilen Sie Kuchen besser nicht mit Ihrem Hund. Der hohe Zucker- und Fettgehalt schadet der Gesundheit eines Hundes, und Schokoladenkuchen, Kuchen mit Rosinen und mit Xylit gesüßte Kuchen sind für Hunde giftig."
   },
   "why": {
     "en": "Chocolate cake can poison a dog, with signs ranging from vomiting and diarrhoea to an irregular heartbeat and seizures. Christmas cake contains raisins, sultanas and currants, and xylitol can be used in cakes, muffins and pies. Even without these, cake brings a lot of sugar and fat, and sugary, high-fat foods can lead to pancreatitis. Because the risk depends on the ingredients, we rate cake not recommended; cake with chocolate, raisins or xylitol needs a vet at once.",
@@ -55,7 +59,8 @@
     "da": "Chokoladekage kan forgifte en hund, med tegn lige fra opkast og diarré til uregelmæssig puls og kramper. Engelsk julekage indeholder rosiner, sultanrosiner og korender, og xylitol kan bruges i kager, muffins og tærter. Selv uden dem indeholder kage meget sukker og fedt, og sukkerholdig, fed mad kan give betændelse i bugspytkirtlen. Fordi risikoen afhænger af ingredienserne, vurderer vi kage som ikke anbefalet; kage med chokolade, rosiner eller xylitol kræver dyrlægehjælp med det samme.",
     "fi": "Suklaakakku voi myrkyttää koiran, ja oireet vaihtelevat oksentelusta ja ripulista epäsäännölliseen sydämenlyöntiin ja kouristuskohtauksiin. Joulukakussa on rusinoita, sultaanoja ja korintteja, ja ksylitolia voidaan käyttää kakuissa, muffinsseissa ja piiraissa. Ilman näitäkin kakku tuo mukanaan paljon sokeria ja rasvaa, ja sokeriset, runsasrasvaiset ruoat voivat johtaa haimatulehdukseen. Koska riski riippuu ainesosista, emme suosittele kakkua; suklaata, rusinoita tai ksylitolia sisältävän kakun jälkeen tarvitaan heti eläinlääkäri.",
     "nb": "Sjokoladekake kan forgifte en hund, med tegn som varierer fra oppkast og diaré til uregelmessig hjerterytme og kramper. Engelsk julekake inneholder rosiner, sultanrosiner og korinter, og xylitol kan brukes i kaker, muffins og paier. Selv uten disse ingrediensene inneholder kake mye sukker og fett, og sukkerrik og fettrik mat kan føre til betennelse i bukspyttkjertelen (pankreatitt). Siden risikoen avhenger av ingrediensene, vurderer vi kake som «Anbefales ikke». Kake med sjokolade, rosiner eller xylitol krever en tur til dyrlegen med en gang.",
-    "it": "La torta al cioccolato può avvelenare un cane, con sintomi che vanno da vomito e diarrea a battito cardiaco irregolare e convulsioni. Il dolce natalizio inglese (Christmas cake) contiene uvetta, uva sultanina e uva passa di Corinto, e lo xilitolo può essere usato in torte, muffin e crostate. Anche senza questi ingredienti, la torta apporta molti zuccheri e grassi, e i cibi zuccherati e ricchi di grassi possono portare alla pancreatite. Poiché il rischio dipende dagli ingredienti, la valutiamo come sconsigliata; la torta con cioccolato, uvetta o xilitolo richiede subito il veterinario."
+    "it": "La torta al cioccolato può avvelenare un cane, con sintomi che vanno da vomito e diarrea a battito cardiaco irregolare e convulsioni. Il dolce natalizio inglese (Christmas cake) contiene uvetta, uva sultanina e uva passa di Corinto, e lo xilitolo può essere usato in torte, muffin e crostate. Anche senza questi ingredienti, la torta apporta molti zuccheri e grassi, e i cibi zuccherati e ricchi di grassi possono portare alla pancreatite. Poiché il rischio dipende dagli ingredienti, la valutiamo come sconsigliata; la torta con cioccolato, uvetta o xilitolo richiede subito il veterinario.",
+    "de": "Schokoladenkuchen kann einen Hund vergiften, mit Anzeichen, die von Erbrechen und Durchfall bis zu Herzrhythmusstörungen und Krampfanfällen reichen. Weihnachtskuchen enthält Rosinen, Sultaninen und Korinthen, und Xylit kann in Kuchen, Muffins und Pies stecken. Auch ohne diese Zutaten steckt in Kuchen viel Zucker und Fett, und zuckerreiche, fettreiche Lebensmittel können zu einer Bauchspeicheldrüsenentzündung führen. Weil das Risiko von den Zutaten abhängt, stufen wir Kuchen als „nicht empfohlen“ ein. Bei Kuchen mit Schokolade, Rosinen oder Xylit brauchen Sie sofort einen Tierarzt."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Vomito e diarrea",
       "Irrequietezza, tremori, battito cardiaco accelerato o irregolare (cioccolato)",
       "Convulsioni"
+    ],
+    "de": [
+      "Erbrechen und Durchfall",
+      "Unruhe, Zittern, schneller oder unregelmäßiger Herzschlag (Schokolade)",
+      "Krampfanfälle"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "da": "Hvis kagen indeholdt chokolade, rosiner eller xylitol, skal du kontakte din dyrlæge eller en giftrådgivning for dyr og søge dyrlægehjælp med det samme. Hvis din hund viser tegn på forgiftning, skal du straks søge dyrlægehjælp.",
     "fi": "Jos kakussa oli suklaata, rusinoita tai ksylitolia, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan ja hakeudu heti eläinlääkärin hoitoon. Jos koirallasi on myrkytyksen merkkejä, hakeudu välittömästi eläinlääkärin hoitoon.",
     "nb": "Hvis kaken inneholdt sjokolade, rosiner eller xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang. Hvis hunden viser tegn på forgiftning, må du få den til dyrlegen umiddelbart.",
-    "it": "Se la torta conteneva cioccolato, uvetta o xilitolo, contatta subito il veterinario o un centro antiveleni veterinario e fai visitare il cane. Se il tuo cane mostra segni di avvelenamento, portalo subito dal veterinario."
+    "it": "Se la torta conteneva cioccolato, uvetta o xilitolo, contatta subito il veterinario o un centro antiveleni veterinario e fai visitare il cane. Se il tuo cane mostra segni di avvelenamento, portalo subito dal veterinario.",
+    "de": "Enthielt der Kuchen Schokolade, Rosinen oder Xylit, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und holen Sie sofort tierärztliche Hilfe. Zeigt Ihr Hund Anzeichen einer Vergiftung, gehen Sie sofort zum Tierarzt."
   },
   "serving": null,
   "child": {
@@ -125,7 +136,8 @@
     "da": "Kage er en godbid for mennesker. Nogle kager indeholder chokolade eller rosiner, som er skidt for hunde, så behold dit stykke selv.",
     "fi": "Kakku on herkku ihmisille. Joissakin kakuissa on suklaata tai rusinoita, jotka ovat koirille haitallisia, joten pidä oma palasi itselläsi.",
     "nb": "Kake er en godbit for mennesker. Noen kaker har sjokolade eller rosiner, som er dårlig for hunder, så spis kakestykket selv.",
-    "it": "La torta è un dolce per le persone. Alcune torte contengono cioccolato o uvetta, che fanno male ai cani, quindi la tua fetta tienila per te."
+    "it": "La torta è un dolce per le persone. Alcune torte contengono cioccolato o uvetta, che fanno male ai cani, quindi la tua fetta tienila per te.",
+    "de": "Kuchen ist eine Leckerei für Menschen. In manchen Kuchen stecken Schokolade oder Rosinen, die für Hunde schlecht sind, also behalte dein Stück für dich."
   },
   "faq": [
     {
@@ -138,7 +150,8 @@
         "da": "Hvad med engelsk julekage eller mince pies?",
         "fi": "Entä joulukakku tai joulupiiraat (mince pies)?",
         "nb": "Hva med engelsk julekake eller mince pies?",
-        "it": "E i dolci di Natale, come il Christmas cake o i mince pie?"
+        "it": "E i dolci di Natale, come il Christmas cake o i mince pie?",
+        "de": "Und Weihnachtskuchen oder Mince Pies?"
       },
       "a": {
         "en": "No. Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to dogs.",
@@ -149,7 +162,8 @@
         "da": "Nej. Mince pies (små engelske tærter med tørret frugt) og engelsk julekage indeholder rosiner, sultanrosiner og korender, som er meget giftige for hunde.",
         "fi": "Ei. Joulupiiraissa (mince pies) ja joulukakussa on rusinoita, sultaanoja ja korintteja, jotka ovat koirille erittäin myrkyllisiä.",
         "nb": "Nei. Mince pies og engelsk julekake inneholder rosiner, sultanrosiner og korinter, som er svært giftige for hunder.",
-        "it": "No. I mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, che sono altamente tossiche per i cani."
+        "it": "No. I mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, che sono altamente tossiche per i cani.",
+        "de": "Nein. Mince Pies und Weihnachtskuchen enthalten Rosinen, Sultaninen und Korinthen, die für Hunde stark giftig sind."
       }
     },
     {
@@ -162,7 +176,8 @@
         "da": "Er kage uden sukker sikrere?",
         "fi": "Onko sokeriton kakku turvallisempaa?",
         "nb": "Er sukkerfri kake tryggere?",
-        "it": "Una torta senza zucchero è più sicura?"
+        "it": "Una torta senza zucchero è più sicura?",
+        "de": "Ist zuckerfreier Kuchen sicherer?"
       },
       "a": {
         "en": "Not necessarily. Xylitol can be used in baked goods such as cakes, muffins and pies, and it is toxic to dogs. Check the label, especially on products sold as sugar-free or low sugar.",
@@ -173,7 +188,8 @@
         "da": "Ikke nødvendigvis. Xylitol kan bruges i bagværk som kager, muffins og tærter, og det er giftigt for hunde. Tjek varedeklarationen, især på produkter, der sælges som sukkerfri eller med lavt sukkerindhold.",
         "fi": "Ei välttämättä. Ksylitolia voidaan käyttää leivonnaisissa, kuten kakuissa, muffinsseissa ja piiraissa, ja se on koirille myrkyllistä. Tarkista pakkausmerkinnät etenkin tuotteista, joita myydään sokerittomina tai vähäsokerisina.",
         "nb": "Ikke nødvendigvis. Xylitol kan brukes i bakevarer som kaker, muffins og paier, og det er giftig for hunder. Sjekk ingredienslisten, særlig på produkter som selges som sukkerfrie eller med lite sukker.",
-        "it": "Non necessariamente. Lo xilitolo può essere usato in prodotti da forno come torte, muffin e crostate ed è tossico per i cani. Controlla l’etichetta, soprattutto sui prodotti venduti come senza zuccheri o a basso contenuto di zuccheri."
+        "it": "Non necessariamente. Lo xilitolo può essere usato in prodotti da forno come torte, muffin e crostate ed è tossico per i cani. Controlla l’etichetta, soprattutto sui prodotti venduti come senza zuccheri o a basso contenuto di zuccheri.",
+        "de": "Nicht unbedingt. Xylit kann in Backwaren wie Kuchen, Muffins und Pies stecken und ist für Hunde giftig. Prüfen Sie das Etikett, besonders bei Produkten, die als zuckerfrei oder zuckerarm beworben werden."
       }
     }
   ],
@@ -289,6 +305,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7a031b659394957caa187c2d633a761d7c8c7974e6b8c9120917198f7e0423c0"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85aecc7b3dbf1c350ab8ba548b4a2a03a304a888fe359bf96b163ee77435d5a6"
     }
   }
 }

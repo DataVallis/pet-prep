@@ -10,7 +10,8 @@
     "da": "Gurkemeje",
     "fi": "Kurkuma",
     "nb": "Gurkemeie",
-    "it": "Curcuma"
+    "it": "Curcuma",
+    "de": "Kurkuma"
   },
   "question": {
     "en": "Can dogs eat turmeric?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise gurkemeje?",
     "fi": "Saako koira syödä kurkumaa?",
     "nb": "Kan hunder spise gurkemeie?",
-    "it": "I cani possono mangiare la curcuma?"
+    "it": "I cani possono mangiare la curcuma?",
+    "de": "Dürfen Hunde Kurkuma fressen?"
   },
   "url_slug": {
     "en": "turmeric",
@@ -32,7 +34,8 @@
     "da": "gurkemeje",
     "fi": "kurkuma",
     "nb": "gurkemeie",
-    "it": "curcuma"
+    "it": "curcuma",
+    "de": "kurkuma"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Det er bedst ikke at give din hund gurkemeje uden at spørge din dyrlæge. Små mængder regnes for ufarlige, men i store mængder kan gurkemeje virke blodfortyndende og give mavebesvær, og der findes kun lidt forskning i risiciene.",
     "fi": "Ei suositella. Kurkumaa ei kannata antaa koiralle kysymättä eläinlääkäriltä. Pieniä määriä pidetään turvallisina, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja, ja sen riskeistä on vähän tutkimusta.",
     "nb": "Det er best å ikke gi hunden gurkemeie uten å spørre dyrlegen. Små mengder regnes som trygge, men i store mengder kan gurkemeie virke blodfortynnende og gi urolig mage, og det finnes lite forskning på risikoen.",
-    "it": "È meglio non dare la curcuma al tuo cane senza chiedere al veterinario. Le piccole quantità sono considerate sicure, ma in grandi quantità la curcuma può agire come anticoagulante e causare mal di stomaco, e ci sono poche ricerche sui suoi rischi."
+    "it": "È meglio non dare la curcuma al tuo cane senza chiedere al veterinario. Le piccole quantità sono considerate sicure, ma in grandi quantità la curcuma può agire come anticoagulante e causare mal di stomaco, e ci sono poche ricerche sui suoi rischi.",
+    "de": "Geben Sie Ihrem Hund Kurkuma besser nicht, ohne Ihren Tierarzt zu fragen. Kleine Mengen gelten als unbedenklich, aber in hohen Mengen kann Kurkuma blutverdünnend wirken und Magenbeschwerden verursachen, und es gibt wenig Forschung zu seinen Risiken."
   },
   "why": {
     "en": "Sources differ: one pet food expert article calls turmeric safe for dogs in small amounts, while another advises caution, notes that there is little research on its risks and that turmeric taken by mouth is poorly absorbed. Serious side effects are fairly uncommon, but in high amounts turmeric can act as a blood thinner and cause stomach upset. Because the sources disagree, we use the stricter rating. The small amounts used to colour or flavour dog food are not likely to bring any noticeable health benefits.",
@@ -55,7 +59,8 @@
     "da": "Kilderne er uenige: en artikel af en ekspert i kæledyrsfoder kalder gurkemeje ufarligt for hunde i små mængder, mens en anden anbefaler forsigtighed og skriver at der kun findes lidt forskning i risiciene, og at gurkemeje optages dårligt, når det tages gennem munden. Alvorlige bivirkninger er ret sjældne, men i store mængder kan gurkemeje virke blodfortyndende og give mavebesvær. Fordi kilderne er uenige, bruger vi den strengeste vurdering. De små mængder, der bruges til at farve eller give smag til hundefoder, giver sandsynligvis ingen mærkbare sundhedsmæssige fordele.",
     "fi": "Lähteet ovat eri mieltä: yhden lemmikinruoka-asiantuntijan artikkelin mukaan kurkuma on koirille turvallista pieninä määrinä, kun taas toinen neuvoo varovaisuuteen ja toteaa, että sen riskeistä on vähän tutkimusta ja että suun kautta otettu kurkuma imeytyy huonosti. Vakavat haittavaikutukset ovat melko harvinaisia, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja. Koska lähteet ovat eri mieltä, käytämme tiukempaa luokitusta. Koiranruoan värjäämiseen tai maustamiseen käytetyistä pienistä määristä ei todennäköisesti ole mitään havaittavaa terveyshyötyä.",
     "nb": "Kildene er uenige: en artikkel av en ekspert på hundemat kaller gurkemeie trygg for hunder i små mengder, mens en annen anbefaler forsiktighet, påpeker at det finnes lite forskning på risikoen, og at gurkemeie som svelges tas dårlig opp i kroppen. Alvorlige bivirkninger er ganske sjeldne, men i store mengder kan gurkemeie virke blodfortynnende og gi urolig mage. Fordi kildene er uenige, bruker vi den strengeste vurderingen. De små mengdene som brukes til å farge eller gi smak til hundemat, gir neppe noen merkbare helsefordeler.",
-    "it": "Le fonti non concordano: un articolo di un esperto di alimentazione animale definisce la curcuma sicura per i cani in piccole quantità, mentre un altro consiglia prudenza, osserva che ci sono poche ricerche sui suoi rischi e che la curcuma assunta per bocca viene assorbita poco. Gli effetti collaterali gravi sono piuttosto rari, ma in grandi quantità la curcuma può agire come anticoagulante e causare mal di stomaco. Poiché le fonti non sono d’accordo, usiamo la valutazione più severa. È poco probabile che le piccole quantità usate per colorare o insaporire il cibo per cani portino benefici evidenti per la salute."
+    "it": "Le fonti non concordano: un articolo di un esperto di alimentazione animale definisce la curcuma sicura per i cani in piccole quantità, mentre un altro consiglia prudenza, osserva che ci sono poche ricerche sui suoi rischi e che la curcuma assunta per bocca viene assorbita poco. Gli effetti collaterali gravi sono piuttosto rari, ma in grandi quantità la curcuma può agire come anticoagulante e causare mal di stomaco. Poiché le fonti non sono d’accordo, usiamo la valutazione più severa. È poco probabile che le piccole quantità usate per colorare o insaporire il cibo per cani portino benefici evidenti per la salute.",
+    "de": "Die Quellen sind sich nicht einig: Ein Fachartikel zu Tierfutter bezeichnet Kurkuma in kleinen Mengen als für Hunde unbedenklich, ein anderer rät zur Vorsicht, weist darauf hin, dass es wenig Forschung zu seinen Risiken gibt und dass Kurkuma bei oraler Einnahme schlecht aufgenommen wird. Schwere Nebenwirkungen sind ziemlich selten, aber in hohen Mengen kann Kurkuma blutverdünnend wirken und Magenbeschwerden verursachen. Weil die Quellen sich widersprechen, gilt die strengere Einstufung. Die kleinen Mengen, mit denen Hundefutter gefärbt oder gewürzt wird, bringen wahrscheinlich keinen spürbaren gesundheitlichen Nutzen."
   },
   "signs": {
     "en": [
@@ -84,6 +89,9 @@
     ],
     "it": [
       "Mal di stomaco (grandi quantità)"
+    ],
+    "de": [
+      "Magenbeschwerden (hohe Mengen)"
     ]
   },
   "what_to_do": {
@@ -95,7 +103,8 @@
     "da": "Tal med din dyrlæge, før du giver din hund gurkemeje eller andre kosttilskud, især hvis din hund får medicin. Gurkemeje bør ikke bruges som fast behandling af nogen sygdom.",
     "fi": "Puhu eläinlääkärin kanssa ennen kuin annat koirallesi kurkumaa tai mitä tahansa muuta ravintolisää, etenkin jos koirasi käyttää lääkitystä. Kurkumaa ei pidä käyttää minkään terveysongelman rutiinihoitoon.",
     "nb": "Snakk med dyrlegen før du gir hunden gurkemeie eller andre kosttilskudd, særlig hvis hunden får medisiner. Gurkemeie bør ikke brukes som rutinebehandling mot noen helsetilstand.",
-    "it": "Parla con il veterinario prima di dare al tuo cane la curcuma o qualsiasi altro integratore, soprattutto se il cane prende farmaci. La curcuma non deve essere usata come cura abituale per nessun problema di salute."
+    "it": "Parla con il veterinario prima di dare al tuo cane la curcuma o qualsiasi altro integratore, soprattutto se il cane prende farmaci. La curcuma non deve essere usata come cura abituale per nessun problema di salute.",
+    "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie Ihrem Hund Kurkuma oder ein anderes Ergänzungsmittel geben, besonders wenn Ihr Hund Medikamente nimmt. Kurkuma sollte nicht als Standardbehandlung für irgendeine Erkrankung eingesetzt werden."
   },
   "serving": null,
   "child": {
@@ -107,7 +116,8 @@
     "da": "Gurkemeje er et gult krydderi til madlavning for mennesker. Kun en dyrlæge kan sige, om en hund må få det, så overlad det til de voksne.",
     "fi": "Kurkuma on keltainen mauste ihmisten ruoanlaittoon. Vain eläinlääkäri voi sanoa, saako koira sitä, joten jätä asia aikuisille.",
     "nb": "Gurkemeie er et gult krydder til mat for mennesker. Bare en dyrlege kan si om en hund bør få den, så overlat det til de voksne.",
-    "it": "La curcuma è una spezia gialla che le persone usano in cucina. Solo il veterinario può dire se un cane può mangiarla, quindi lascia decidere agli adulti."
+    "it": "La curcuma è una spezia gialla che le persone usano in cucina. Solo il veterinario può dire se un cane può mangiarla, quindi lascia decidere agli adulti.",
+    "de": "Kurkuma ist ein gelbes Gewürz, das Menschen zum Kochen benutzen. Nur ein Tierarzt kann sagen, ob ein Hund es bekommen sollte, also überlass das den Erwachsenen."
   },
   "faq": [
     {
@@ -120,7 +130,8 @@
         "da": "Har gurkemejen i hundefoder sundhedsmæssige fordele?",
         "fi": "Onko koiranruoan kurkumasta terveyshyötyä?",
         "nb": "Har gurkemeien i hundemat helsefordeler?",
-        "it": "La curcuma contenuta nel cibo per cani fa bene alla salute?"
+        "it": "La curcuma contenuta nel cibo per cani fa bene alla salute?",
+        "de": "Hat die Kurkuma im Hundefutter gesundheitliche Vorteile?"
       },
       "a": {
         "en": "The levels of turmeric used to colour or flavour dog food are not likely to have any noticeable health benefits.",
@@ -131,7 +142,8 @@
         "da": "De mængder gurkemeje, der bruges til at farve eller give smag til hundefoder, giver sandsynligvis ingen mærkbare sundhedsmæssige fordele.",
         "fi": "Koiranruoan värjäämiseen tai maustamiseen käytetyt kurkumamäärät eivät todennäköisesti tuo mitään havaittavaa terveyshyötyä.",
         "nb": "Mengdene gurkemeie som brukes til å farge eller gi smak til hundemat, gir neppe noen merkbare helsefordeler.",
-        "it": "È poco probabile che le quantità di curcuma usate per colorare o insaporire il cibo per cani abbiano benefici evidenti per la salute."
+        "it": "È poco probabile che le quantità di curcuma usate per colorare o insaporire il cibo per cani abbiano benefici evidenti per la salute.",
+        "de": "Die Mengen an Kurkuma, mit denen Hundefutter gefärbt oder gewürzt wird, bringen wahrscheinlich keinen spürbaren gesundheitlichen Nutzen."
       }
     }
   ],
@@ -232,6 +244,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e28b551e192cf2dbbbbb675d1f535166fb477b537a22f72d1e520ea9cc819a30"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8bb28d77ad4c1b757700dc7396f89bb0db910e928cdbb6ab4808abf29758c3fc"
     }
   }
 }

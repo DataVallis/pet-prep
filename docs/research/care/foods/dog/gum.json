@@ -10,7 +10,8 @@
     "da": "Tyggegummi",
     "fi": "Purukumi",
     "nb": "Tyggegummi",
-    "it": "Gomma da masticare"
+    "it": "Gomma da masticare",
+    "de": "Kaugummi"
   },
   "question": {
     "en": "Can dogs eat chewing gum?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise tyggegummi?",
     "fi": "Saako koira syödä purukumia?",
     "nb": "Kan hunder spise tyggegummi?",
-    "it": "I cani possono mangiare la gomma da masticare?"
+    "it": "I cani possono mangiare la gomma da masticare?",
+    "de": "Dürfen Hunde Kaugummi fressen?"
   },
   "url_slug": {
     "en": "chewing-gum",
@@ -32,7 +34,8 @@
     "da": "tyggegummi",
     "fi": "purukumi",
     "nb": "tyggegummi",
-    "it": "gomma-da-masticare"
+    "it": "gomma-da-masticare",
+    "de": "kaugummi"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej. Tyggegummi er ikke noget for hunde. Sukkerfrit tyggegummi indeholder næsten altid xylitol, som er lige så farligt for hunde som chokolade: det kan give et hurtigt fald i blodsukkeret, kramper og leversvigt. Hvis din hund spiser tyggegummi, skal du tage den med til dyrlægen med det samme.",
     "fi": "Ei saa. Purukumi ei ole koirille. Sokeriton purukumi sisältää lähes aina ksylitolia, joka on koirille yhtä vaarallista kuin suklaa: se voi aiheuttaa verensokerin nopean laskun, kouristuskohtauksia ja maksan vajaatoiminnan. Jos koirasi syö purukumia, vie koira heti eläinlääkärille.",
     "nb": "Nei. Tyggegummi er ikke for hunder. Sukkerfritt tyggegummi inneholder nesten alltid xylitol, som er like farlig for hunder som sjokolade: det kan gi et raskt fall i blodsukkeret, kramper og leversvikt. Hvis hunden spiser tyggegummi, må du til dyrlegen umiddelbart.",
-    "it": "No. La gomma da masticare non è per i cani. Quella senza zucchero contiene quasi sempre xilitolo, pericoloso per i cani quanto il cioccolato: può causare un rapido calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Se il tuo cane mangia una gomma da masticare, portalo subito dal veterinario."
+    "it": "No. La gomma da masticare non è per i cani. Quella senza zucchero contiene quasi sempre xilitolo, pericoloso per i cani quanto il cioccolato: può causare un rapido calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Se il tuo cane mangia una gomma da masticare, portalo subito dal veterinario.",
+    "de": "Nein. Kaugummi ist nichts für Hunde. Zuckerfreier Kaugummi enthält fast immer Xylit, das für Hunde so gefährlich ist wie Schokolade: Es kann einen raschen Blutzuckerabfall, Krampfanfälle und Leberversagen verursachen. Frisst Ihr Hund Kaugummi, bringen Sie ihn sofort zum Tierarzt."
   },
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
@@ -55,7 +59,8 @@
     "da": "Xylitol er den mest almindelige og farligste ingrediens i tyggegummi, og nogle hunde får alvorlig leverskade efter at have spist det. Tyggegummi indeholder også ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og store mængder tyggegummi kan klumpe sammen i maven og give en blokering. Fordi sukkerfrit tyggegummi næsten altid indeholder xylitol, vurderer vi tyggegummi som giftigt.",
     "fi": "Ksylitoli on purukumin yleisin ja vaarallisin ainesosa, ja joillekin koirille on kehittynyt vaikea maksavaurio sen syömisen jälkeen. Purukumissa on usein myös sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuret määrät purukumia voivat kasaantua mahalaukkuun ja aiheuttaa tukoksen. Koska sokeriton purukumi sisältää lähes aina ksylitolia, luokittelemme purukumin myrkylliseksi.",
     "nb": "Xylitol er den vanligste og farligste ingrediensen i tyggegummi, og noen hunder får alvorlig leverskade etter å ha spist det. Tyggegummi inneholder også ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og store mengder tyggegummi kan klumpe seg sammen i magen og gi tarmblokkering. Siden sukkerfritt tyggegummi nesten alltid inneholder xylitol, vurderer vi tyggegummi som giftig.",
-    "it": "Lo xilitolo è l’ingrediente più comune e pericoloso delle gomme da masticare, e alcuni cani sviluppano un grave danno al fegato dopo averlo mangiato. Le gomme contengono spesso anche zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e grandi quantità di gomma possono formare un grumo nello stomaco e causare un’ostruzione. Poiché la gomma senza zucchero contiene quasi sempre xilitolo, la valutiamo come tossica."
+    "it": "Lo xilitolo è l’ingrediente più comune e pericoloso delle gomme da masticare, e alcuni cani sviluppano un grave danno al fegato dopo averlo mangiato. Le gomme contengono spesso anche zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e grandi quantità di gomma possono formare un grumo nello stomaco e causare un’ostruzione. Poiché la gomma senza zucchero contiene quasi sempre xilitolo, la valutiamo come tossica.",
+    "de": "Xylit ist der häufigste und gefährlichste Inhaltsstoff in Kaugummi, und manche Hunde erleiden nach dem Fressen schwere Leberschäden. Kaugummi enthält außerdem oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und große Mengen Kaugummi können sich im Magen zusammenballen und einen Darmverschluss verursachen. Weil zuckerfreier Kaugummi fast immer Xylit enthält, stufen wir Kaugummi als giftig ein."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Convulsioni",
       "Abbattimento",
       "I sintomi possono comparire nel giro di pochi minuti"
+    ],
+    "de": [
+      "Erbrechen",
+      "Taumeln oder Gehschwierigkeiten",
+      "Zittern",
+      "Krampfanfälle",
+      "Teilnahmslosigkeit",
+      "Die Anzeichen können schon nach wenigen Minuten beginnen"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "da": "Tag din hund med til dyrlægen med det samme, og ring til en giftrådgivning for dyr for at få råd. Giv ikke din hund noget gennem munden, medmindre din dyrlæge siger, at du skal.",
     "fi": "Vie koirasi heti eläinlääkärille ja soita eläinten myrkytysneuvontaan neuvoja varten. Älä anna koiralle mitään suun kautta, ellei eläinlääkäri neuvo sitä.",
     "nb": "Ta hunden med til dyrlegen umiddelbart, og ring giftinformasjon for dyr for å få råd. Ikke gi hunden noe i munnen med mindre dyrlegen ber deg om det.",
-    "it": "Porta subito il cane dal veterinario e chiama un centro antiveleni veterinario per un consiglio. Non dare al cane nulla per bocca, a meno che non sia il veterinario a dirtelo."
+    "it": "Porta subito il cane dal veterinario e chiama un centro antiveleni veterinario per un consiglio. Non dare al cane nulla per bocca, a meno che non sia il veterinario a dirtelo.",
+    "de": "Bringen Sie Ihren Hund sofort zum Tierarzt und rufen Sie einen Giftnotruf für Tiere an. Geben Sie Ihrem Hund nichts zu fressen oder zu trinken, es sei denn, Ihr Tierarzt weist Sie dazu an."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "da": "Tyggegummi er ikke til hunde. Hold tyggegummi væk fra din hund, og sig det straks til en voksen, hvis din hund har spist noget.",
     "fi": "Purukumi ei ole koirille. Pidä purukumi poissa koirasi ulottuvilta ja kerro heti aikuiselle, jos koirasi syö sitä.",
     "nb": "Tyggegummi er ikke for hunder. Hold tyggegummi unna hunden din, og si fra til en voksen med en gang hvis hunden spiser noe.",
-    "it": "La gomma da masticare non è per i cani. Tienila lontana dal tuo cane e dillo subito a un adulto se ne mangia."
+    "it": "La gomma da masticare non è per i cani. Tienila lontana dal tuo cane e dillo subito a un adulto se ne mangia.",
+    "de": "Kaugummi ist nichts für Hunde. Halte Kaugummi von deinem Hund fern und sag sofort einem Erwachsenen Bescheid, wenn dein Hund welchen frisst."
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "da": "Er almindeligt tyggegummi med sukker ufarligt for hunde?",
         "fi": "Onko tavallinen sokeria sisältävä purukumi turvallista koirille?",
         "nb": "Er vanlig tyggegummi med sukker trygt for hunder?",
-        "it": "La gomma normale, con zucchero, è sicura per i cani?"
+        "it": "La gomma normale, con zucchero, è sicura per i cani?",
+        "de": "Ist normaler Kaugummi mit Zucker für Hunde unbedenklich?"
       },
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
@@ -176,7 +192,8 @@
         "da": "Ikke rigtig. Tyggegummi indeholder ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og meget tyggegummi kan klumpe sammen i maven. Ring til din dyrlæge, hvis din hund har spist noget.",
         "fi": "Ei oikeastaan. Purukumissa on usein sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuri määrä purukumia voi kasaantua mahalaukkuun. Soita eläinlääkärille, jos koirasi söi sitä.",
         "nb": "Egentlig ikke. Tyggegummi inneholder ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og mye tyggegummi kan klumpe seg sammen i magen. Ring dyrlegen hvis hunden har spist noe.",
-        "it": "Non proprio. La gomma da masticare contiene spesso zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e molta gomma può formare un grumo nello stomaco. Chiama il veterinario se il tuo cane ne ha mangiata."
+        "it": "Non proprio. La gomma da masticare contiene spesso zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e molta gomma può formare un grumo nello stomaco. Chiama il veterinario se il tuo cane ne ha mangiata.",
+        "de": "Nicht wirklich. Kaugummi enthält oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und viel Kaugummi kann sich im Magen zusammenballen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welchen gefressen hat."
       }
     },
     {
@@ -189,7 +206,8 @@
         "da": "Hvilke andre produkter indeholder xylitol?",
         "fi": "Missä muissa tuotteissa on ksylitolia?",
         "nb": "Hvilke andre produkter inneholder xylitol?",
-        "it": "Quali altri prodotti contengono xilitolo?"
+        "it": "Quali altri prodotti contengono xilitolo?",
+        "de": "Welche anderen Produkte enthalten Xylit?"
       },
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
@@ -200,7 +218,8 @@
         "da": "Noget sukkerfrit slik, tandpasta, bagværk, medicin og drikkepulver. På varedeklarationer kan det også stå som birkesukker, træsukker eller birkebarkekstrakt.",
         "fi": "Joissakin sokerittomissa karkeissa, hammastahnoissa, leivonnaisissa, lääkkeissä ja juomajauheissa. Pakkausmerkinnöissä se voi esiintyä myös nimellä koivusokeri, puusokeri tai koivun kuoren uute.",
         "nb": "Noe sukkerfritt godteri, tannkrem, bakevarer, medisiner og drikkepulver. På ingredienslisten kan det også stå som bjørkesukker, tresukker eller bjørkebarkekstrakt.",
-        "it": "Alcune caramelle senza zucchero, dentifrici, prodotti da forno, medicinali e preparati per bevande. Sulle etichette può comparire anche come zucchero di betulla, zucchero di legno o estratto di corteccia di betulla."
+        "it": "Alcune caramelle senza zucchero, dentifrici, prodotti da forno, medicinali e preparati per bevande. Sulle etichette può comparire anche come zucchero di betulla, zucchero di legno o estratto di corteccia di betulla.",
+        "de": "Manche zuckerfreien Süßigkeiten, Zahnpasta, Backwaren, Medikamente und Getränkepulver. Auf Etiketten kann es auch als Birkenzucker, Holzzucker oder Birkenrindenextrakt angegeben sein."
       }
     }
   ],
@@ -339,6 +358,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "98af199035d237baa52d2888b0a024c558e838926b3fa1a4e57b052a38493525"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "60f217347d26710d969249848c342d76c84c6d364595003bfee2bb40f4a9219b"
     }
   }
 }

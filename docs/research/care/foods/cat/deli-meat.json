@@ -9,7 +9,8 @@
     "da": "Pålæg",
     "fi": "Leikkele",
     "nb": "Kjøttpålegg",
-    "it": "Salumi e affettati"
+    "it": "Salumi e affettati",
+    "de": "Aufschnitt"
   },
   "question": {
     "en": "Can cats eat deli meat?",
@@ -19,7 +20,8 @@
     "da": "Må katte spise pålæg?",
     "fi": "Saako kissa syödä leikkelettä?",
     "nb": "Kan katter spise kjøttpålegg?",
-    "it": "I gatti possono mangiare i salumi e gli affettati?"
+    "it": "I gatti possono mangiare i salumi e gli affettati?",
+    "de": "Dürfen Katzen Aufschnitt fressen?"
   },
   "url_slug": {
     "en": "deli-meat",
@@ -29,7 +31,8 @@
     "da": "paalaeg",
     "fi": "leikkele",
     "nb": "kjottpalegg",
-    "it": "salumi-e-affettati"
+    "it": "salumi-e-affettati",
+    "de": "aufschnitt"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "da": "Helst ikke. Pålæg af kød er som regel meget salt og kan indeholde krydderier, konserveringsmidler eller nitrater, som kan give kattens mave problemer. RSPCA Australia fraråder at give katte forarbejdede, tilberedte kødprodukter. Almindeligt tilberedt kød uden krydderier er et bedre valg.",
     "fi": "Ei suositella. Leikkeleet ovat yleensä runsassuolaisia, ja niissä voi olla mausteita, säilöntäaineita tai nitraatteja, jotka voivat ärsyttää kissan vatsaa. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita kissoille. Maustamaton kypsennetty liha on parempi valinta.",
     "nb": "Det er best å la være. Kjøttpålegg er vanligvis salt og kan inneholde krydder, konserveringsmidler eller nitrat som kan gi katten urolig mage. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter til katter. Vanlig tilberedt kjøtt uten krydder er et bedre valg.",
-    "it": "Meglio di no. Salumi e affettati sono di solito molto ricchi di sale e possono contenere aromi, conservanti o nitrati che possono irritare lo stomaco del gatto. L’RSPCA Australia consiglia di evitare le carni cotte industriali per i gatti. Meglio scegliere carne cotta semplice, senza spezie."
+    "it": "Meglio di no. Salumi e affettati sono di solito molto ricchi di sale e possono contenere aromi, conservanti o nitrati che possono irritare lo stomaco del gatto. L’RSPCA Australia consiglia di evitare le carni cotte industriali per i gatti. Meglio scegliere carne cotta semplice, senza spezie.",
+    "de": "Besser nicht. Aufschnitt enthält meist viel Salz und kann Gewürze, Konservierungsstoffe oder Nitrat enthalten, die einer Katze auf den Magen schlagen. RSPCA Australia rät, Katzen keine industriell hergestellten, gegarten Fleischwaren zu geben. Gegartes Fleisch ohne Gewürze ist die bessere Wahl."
   },
   "why": {
     "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
@@ -50,7 +54,8 @@
     "da": "Dyrlæger fra PetMD skriver at katte ikke bør spise kalkunpålæg, fordi det som regel indeholder meget natrium og kan indeholde krydderier, konserveringsmidler eller nitrater. Purina skriver at kalkunpålæg og andet forarbejdet kalkunkød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1).",
     "fi": "PetMD:n eläinlääkärien mukaan kissat eivät saa syödä kalkkunaleikkelettä, koska se on yleensä runsaasti natriumia sisältävää ja voi sisältää mausteita, säilöntäaineita tai nitraatteja. Purina toteaa, että kalkkunaleikkele ja muut jalostetut kalkkunalihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen.",
     "nb": "Dyrleger hos PetMD sier at katter ikke bør spise kalkunpålegg, fordi det vanligvis har høyt natriuminnhold og kan inneholde krydder, konserveringsmidler eller nitrat. Purina påpeker at kalkunpålegg og annet bearbeidet kalkunkjøtt vanligvis er fullt av ekstra natrium og krydder, og at noen av krydderne kan være giftige for katter. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1).",
-    "it": "I veterinari di PetMD sconsigliano ai gatti il tacchino affettato, perché di solito è ricco di sodio e può contenere aromi, conservanti o nitrati. Purina osserva che il tacchino affettato e le altre carni di tacchino lavorate sono di solito pieni di sodio e spezie aggiunti, e alcuni aromi potrebbero essere tossici per i gatti. L’RSPCA Australia consiglia di evitare le carni cotte industriali perché possono contenere conservanti a base di solfiti, che sono stati associati a una carenza di tiamina (vitamina B1)."
+    "it": "I veterinari di PetMD sconsigliano ai gatti il tacchino affettato, perché di solito è ricco di sodio e può contenere aromi, conservanti o nitrati. Purina osserva che il tacchino affettato e le altre carni di tacchino lavorate sono di solito pieni di sodio e spezie aggiunti, e alcuni aromi potrebbero essere tossici per i gatti. L’RSPCA Australia consiglia di evitare le carni cotte industriali perché possono contenere conservanti a base di solfiti, che sono stati associati a una carenza di tiamina (vitamina B1).",
+    "de": "Die Tierärzte von PetMD sagen, dass Katzen keinen Putenaufschnitt fressen sollten, weil er meist viel Natrium enthält und Gewürze, Konservierungsstoffe oder Nitrat enthalten kann. Purina weist darauf hin, dass Putenaufschnitt und anderes verarbeitetes Putenfleisch meist reichlich zusätzliches Natrium und Gewürze enthält, von denen manche für Katzen sogar giftig sein können. RSPCA Australia rät, industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "it": [
       "Mal di stomaco"
+    ],
+    "de": [
+      "Magenbeschwerden"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "da": "Hvis din kat har spist pålæg med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær bagefter, skal du ringe til din dyrlæge for at få råd.",
     "fi": "Jos kissasi söi leikkelettä, joka oli maustettu sipulilla tai valkosipulilla, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja, kysy neuvoa eläinlääkäriltä.",
     "nb": "Hvis katten har spist pålegg med løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis katten får urolig mage etterpå, ring dyrlegen for råd.",
-    "it": "Se il tuo gatto ha mangiato salumi aromatizzati con cipolla o aglio, contatta il veterinario il prima possibile. Se poi ha mal di stomaco, chiama il veterinario per un consiglio."
+    "it": "Se il tuo gatto ha mangiato salumi aromatizzati con cipolla o aglio, contatta il veterinario il prima possibile. Se poi ha mal di stomaco, chiama il veterinario per un consiglio.",
+    "de": "Hat Ihre Katze Aufschnitt gefressen, der mit Zwiebel oder Knoblauch gewürzt war, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie danach Magenbeschwerden, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "da": "Pålæg er for salt til katte. Din kat er gladest for sin egen kattemad.",
     "fi": "Leivän päälle laitettava leikkele on kissalle liian suolaista. Kisu on onnellisin omalla kissanruoallaan.",
     "nb": "Pålegg er for salt for katter. Pusen blir gladest for sin egen kattemat.",
-    "it": "L’affettato per i panini è troppo salato per i gatti. Il micio sta meglio con il suo cibo per gatti."
+    "it": "L’affettato per i panini è troppo salato per i gatti. Il micio sta meglio con il suo cibo per gatti.",
+    "de": "Aufschnitt fürs Brot ist für Katzen zu salzig. Am glücklichsten ist deine Katze mit ihrem eigenen Katzenfutter."
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "da": "Hvilket kød kan jeg give i stedet?",
         "fi": "Mitä lihaa voin antaa sen sijaan?",
         "nb": "Hvilket kjøtt kan jeg dele i stedet?",
-        "it": "Quale carne posso dargli al posto degli affettati?"
+        "it": "Quale carne posso dargli al posto degli affettati?",
+        "de": "Welches Fleisch kann ich stattdessen mit ihr teilen?"
       },
       "a": {
         "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
@@ -119,7 +130,8 @@
         "da": "Tilberedt, magert kød som kylling eller kalkun uden krydderier eller sovs er fint til katte. Undgå forarbejdet og krydret kød.",
         "fi": "Kypsennetty vähärasvainen liha, kuten kana tai kalkkuna ilman mausteita tai lisukkeita, sopii kissoille. Vältä jalostettuja ja maustettuja lihavalmisteita.",
         "nb": "Magert, tilberedt kjøtt som kylling eller kalkun, uten krydder eller tilsetninger, er greit for katter. Unngå bearbeidet og krydret kjøtt.",
-        "it": "Le carni magre cotte, come pollo o tacchino, senza spezie né condimenti, vanno bene per i gatti. Evita le carni lavorate e insaporite."
+        "it": "Le carni magre cotte, come pollo o tacchino, senza spezie né condimenti, vanno bene per i gatti. Evita le carni lavorate e insaporite.",
+        "de": "Gegartes, mageres Fleisch wie Huhn oder Pute ohne Gewürze oder Soßen ist für Katzen in Ordnung. Meiden Sie verarbeitetes und gewürztes Fleisch."
       }
     }
   ],
@@ -233,6 +245,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "11e0075854066571b3f8e614b025f158a437f514073e55eb0299ce700685582a"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40c8800080787a625f2111876c81dd1f9b330faa4e02497cf308464615dfe703"
     }
   }
 }

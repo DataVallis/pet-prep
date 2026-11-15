@@ -10,7 +10,8 @@
     "da": "Brød (bagt)",
     "fi": "Leipä (leivottu)",
     "nb": "Brød (bakt)",
-    "it": "Pane (cotto)"
+    "it": "Pane (cotto)",
+    "de": "Brot (gebacken)"
   },
   "question": {
     "en": "Can cats eat bread?",
@@ -21,7 +22,8 @@
     "da": "Må katte spise brød?",
     "fi": "Saako kissa syödä leipää?",
     "nb": "Kan katter spise brød?",
-    "it": "I gatti possono mangiare il pane?"
+    "it": "I gatti possono mangiare il pane?",
+    "de": "Dürfen Katzen Brot fressen?"
   },
   "url_slug": {
     "en": "bread",
@@ -32,7 +34,8 @@
     "da": "broed",
     "fi": "leipa",
     "nb": "brod",
-    "it": "pane"
+    "it": "pane",
+    "de": "brot"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Ja, et lille stykke almindeligt, gennembagt brød er fint som en godbid af og til. ASPCA skriver at bagt brød er ufarligt som en godbid af og til, så længe det ikke er rosinbrød. Rå, hævende dej er noget andet og skal holdes væk fra katte.",
     "fi": "Saa, pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää kelpaa satunnaiseksi herkuksi. ASPCA:n mukaan leivottu leipä on turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Raaka, kohoava taikina on eri asia, ja se on pidettävä poissa kissan ulottuvilta.",
     "nb": "Ja, en liten bit vanlig, helt gjennombakt brød er greit som en godbit en gang iblant. ASPCA sier at bakt brød er trygt som en sjelden godbit, så lenge det ikke er rosinbrød. Rå deig som hever seg, er noe helt annet og må holdes unna katter.",
-    "it": "Sì, un pezzetto di pane semplice e ben cotto va bene come premio occasionale. L’ASPCA afferma che il pane cotto è sicuro come premio ogni tanto, purché non sia pane all’uvetta. L’impasto crudo che lievita è un’altra cosa e va tenuto lontano dai gatti."
+    "it": "Sì, un pezzetto di pane semplice e ben cotto va bene come premio occasionale. L’ASPCA afferma che il pane cotto è sicuro come premio ogni tanto, purché non sia pane all’uvetta. L’impasto crudo che lievita è un’altra cosa e va tenuto lontano dai gatti.",
+    "de": "Ja, ein kleines Stück ungewürztes, vollständig durchgebackenes Brot ist als gelegentliches Leckerli in Ordnung. Laut ASPCA ist gebackenes Brot als gelegentliche Belohnung unbedenklich, solange es kein Rosinenbrot ist. Roher, gehender Teig ist etwas anderes und gehört nicht in Katzenreichweite."
   },
   "why": {
     "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
@@ -55,7 +59,8 @@
     "da": "På en side om hunde og katte skriver ASPCA at helt bagt brød er ufarligt for kæledyr som en godbid af og til, så længe det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen ved gærdej bliver mindre, når dejen er bagt, og gæren har hævet helt. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Blue Cross skriver at katte har brug for en kødbaseret kost. Cats Protection anbefaler at holde sig til godbidder til katte frem for menneskemad.",
     "fi": "ASPCA toteaa koiria ja kissoja käsittelevällä sivullaan, että kokonaan kypsäksi leivottu leipä on lemmikeille turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Agriculture Victorian mukaan hiivataikinan riski pienenee, kun taikina on kypsennetty ja hiiva on ehtinyt kohota kokonaan. International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi, ja Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota. Cats Protection neuvoo pitäytymään kissoille tarkoitetuissa herkuissa ihmisten ruoan sijaan.",
     "nb": "På en side om hunder og katter sier ASPCA at helt gjennombakt brød er trygt for kjæledyr som en sjelden godbit, så lenge det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen fra gjærdeig blir mindre når deigen er bakt og har hevet seg helt ferdig. International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater, og Blue Cross sier at katter trenger et kjøttbasert kosthold. Cats Protection anbefaler å holde seg til godbiter laget for katter i stedet for menneskemat.",
-    "it": "In una pagina dedicata a cani e gatti, l’ASPCA afferma che il pane ben cotto è sicuro per gli animali domestici come premio occasionale, purché non sia pane all’uvetta. Agriculture Victoria spiega che il rischio legato all’impasto lievitato diminuisce una volta che l’impasto è cotto e la lievitazione è completa. International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati, e Blue Cross sottolinea che i gatti hanno bisogno di un’alimentazione a base di carne. Cats Protection consiglia di preferire i premi per gatti agli alimenti per le persone."
+    "it": "In una pagina dedicata a cani e gatti, l’ASPCA afferma che il pane ben cotto è sicuro per gli animali domestici come premio occasionale, purché non sia pane all’uvetta. Agriculture Victoria spiega che il rischio legato all’impasto lievitato diminuisce una volta che l’impasto è cotto e la lievitazione è completa. International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati, e Blue Cross sottolinea che i gatti hanno bisogno di un’alimentazione a base di carne. Cats Protection consiglia di preferire i premi per gatti agli alimenti per le persone.",
+    "de": "Auf einer Seite über Hunde und Katzen schreibt die ASPCA, dass vollständig durchgebackenes Brot für Haustiere als gelegentliches Leckerli unbedenklich ist, solange es kein Rosinenbrot ist. Agriculture Victoria erklärt, dass das Risiko durch Hefeteig geringer wird, sobald der Teig gebacken und die Hefe vollständig aufgegangen ist. International Cat Care weist darauf hin, dass Katzen als reine Fleischfresser Kohlenhydrate schlechter verdauen und verwerten können, und laut Blue Cross brauchen Katzen eine Ernährung auf Fleischbasis. Cats Protection rät, statt Lebensmitteln für Menschen lieber Katzenleckerli zu geben."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "da": "Giv kun et lille stykke af og til. Hvis din kat har spist rå eller hævende dej i stedet for bagt brød, skal du kontakte din dyrlæge med det samme og ikke vente på, at der kommer symptomer.",
     "fi": "Anna vain pieni pala silloin tällöin. Jos kissasi on syönyt raakaa tai kohoavaa taikinaa leivotun leivän sijaan, ota heti yhteyttä eläinlääkäriin äläkä odota oireita.",
     "nb": "Gi bare en liten bit nå og da. Hvis katten har spist rå deig, eller deig som hever seg, i stedet for bakt brød, kontakt dyrlegen med en gang, og ikke vent på symptomer.",
-    "it": "Offrigli solo un pezzetto ogni tanto. Se il tuo gatto ha mangiato impasto crudo o in lievitazione invece di pane cotto, chiama subito il veterinario senza aspettare che compaiano i sintomi."
+    "it": "Offrigli solo un pezzetto ogni tanto. Se il tuo gatto ha mangiato impasto crudo o in lievitazione invece di pane cotto, chiama subito il veterinario senza aspettare che compaiano i sintomi.",
+    "de": "Geben Sie nur hin und wieder ein kleines Stück. Hat Ihre Katze rohen oder gehenden Teig statt gebackenem Brot gefressen, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht, bis Anzeichen auftreten."
   },
   "serving": {
     "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
@@ -78,7 +84,8 @@
     "da": "Et lille stykke almindeligt, gennembagt brød. Aldrig rosinbrød og aldrig rå dej.",
     "fi": "Pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää. Ei koskaan rusinaleipää eikä raakaa taikinaa.",
     "nb": "En liten bit vanlig, helt gjennombakt brød. Aldri rosinbrød og aldri rå deig.",
-    "it": "Un pezzetto di pane semplice e ben cotto. Mai pane all’uvetta e mai impasto crudo."
+    "it": "Un pezzetto di pane semplice e ben cotto. Mai pane all’uvetta e mai impasto crudo.",
+    "de": "Ein kleines Stück ungewürztes, vollständig durchgebackenes Brot. Niemals Rosinenbrot und niemals rohen Teig."
   },
   "child": {
     "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
@@ -89,7 +96,8 @@
     "da": "En lille bid almindeligt brød er en fin godbid en gang imellem. Katte har mest brug for kød, og rå dej er kun til bagning.",
     "fi": "Aivan pieni pala maustamatonta leipää kelpaa kissalle joskus herkuksi. Kissat tarvitsevat enimmäkseen lihaa, ja raaka taikina on tarkoitettu vain leivontaan.",
     "nb": "En bitteliten bit vanlig brød er greit som en godbit nå og da. Katter trenger mest kjøtt, og rå deig er bare til baking.",
-    "it": "Un pezzettino di pane semplice ogni tanto va bene come premio. I gatti hanno bisogno soprattutto di carne, e l’impasto crudo serve solo per fare il pane."
+    "it": "Un pezzettino di pane semplice ogni tanto va bene come premio. I gatti hanno bisogno soprattutto di carne, e l’impasto crudo serve solo per fare il pane.",
+    "de": "Ein winziges Stück einfaches Brot ist ab und zu als Leckerli in Ordnung. Katzen brauchen vor allem Fleisch, und roher Teig ist nur zum Backen da."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "da": "Er rå brøddej ufarlig for katte?",
         "fi": "Onko raaka leipätaikina turvallista kissoille?",
         "nb": "Er rå brøddeig trygg for katter?",
-        "it": "L’impasto crudo del pane è sicuro per i gatti?"
+        "it": "L’impasto crudo del pane è sicuro per i gatti?",
+        "de": "Ist roher Brotteig für Katzen unbedenklich?"
       },
       "a": {
         "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
@@ -113,7 +122,8 @@
         "da": "Nej. ASPCA skriver at hunde og katte aldrig må få lov til at spise rå brøddej med gær, og Agriculture Victoria skriver at gærdej kan hæve og få gas til at samle sig i kattens fordøjelsessystem.",
         "fi": "Ei. ASPCA:n mukaan koirien ja kissojen ei koskaan saa antaa syödä raakaa hiivataikinaa, ja Agriculture Victorian mukaan hiivataikina voi kohota ja aiheuttaa kaasun kertymistä kissan ruoansulatuskanavaan.",
         "nb": "Nei. ASPCA sier at hunder og katter aldri skal få spise rå gjærdeig, og Agriculture Victoria sier at gjærdeig kan heve seg og gi gassopphopning i kattens fordøyelsessystem.",
-        "it": "No. L’ASPCA afferma che non si deve mai permettere a cani e gatti di mangiare impasto di pane crudo e lievitato, e Agriculture Victoria spiega che l’impasto con lievito può gonfiarsi e far accumulare gas nell’apparato digerente del gatto."
+        "it": "No. L’ASPCA afferma che non si deve mai permettere a cani e gatti di mangiare impasto di pane crudo e lievitato, e Agriculture Victoria spiega che l’impasto con lievito può gonfiarsi e far accumulare gas nell’apparato digerente del gatto.",
+        "de": "Nein. Die ASPCA sagt, dass Hunde und Katzen niemals rohen Hefeteig fressen dürfen, und laut Agriculture Victoria kann Hefeteig im Verdauungstrakt einer Katze aufgehen und zu Gasbildung führen."
       }
     },
     {
@@ -126,7 +136,8 @@
         "da": "Må katte spise rosinbrød?",
         "fi": "Saako kissa syödä rusinaleipää?",
         "nb": "Kan katter spise rosinbrød?",
-        "it": "I gatti possono mangiare il pane all’uvetta?"
+        "it": "I gatti possono mangiare il pane all’uvetta?",
+        "de": "Dürfen Katzen Rosinenbrot fressen?"
       },
       "a": {
         "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
@@ -137,7 +148,8 @@
         "da": "Nej. Når ASPCA skriver at bagt brød er fint som en godbid af og til, gælder det ikke rosinbrød.",
         "fi": "Ei. ASPCA:n neuvo, että leivottu leipä kelpaa satunnaiseksi herkuksi, ei koske rusinaleipää.",
         "nb": "Nei. ASPCAs råd om at bakt brød er greit som en sjelden godbit gjelder ikke rosinbrød.",
-        "it": "No. Il consiglio dell’ASPCA, secondo cui il pane cotto va bene come premio occasionale, esclude il pane all’uvetta."
+        "it": "No. Il consiglio dell’ASPCA, secondo cui il pane cotto va bene come premio occasionale, esclude il pane all’uvetta.",
+        "de": "Nein. Der Rat der ASPCA, dass gebackenes Brot als gelegentliches Leckerli in Ordnung ist, gilt ausdrücklich nicht für Rosinenbrot."
       }
     }
   ],
@@ -234,6 +246,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "72cbaba1e237ccdece82dd136fd65d39c44f26c0d602922a92d5a64e5df190b9"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18fb016bf1bb402457f5c1334118c7680ce9f5e06a8c7f81eb11e1ccfd309503"
     }
   }
 }

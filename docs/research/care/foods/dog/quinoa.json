@@ -10,7 +10,8 @@
     "da": "Quinoa",
     "fi": "Kvinoa",
     "nb": "Quinoa",
-    "it": "Quinoa"
+    "it": "Quinoa",
+    "de": "Quinoa"
   },
   "question": {
     "en": "Can dogs eat quinoa?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise quinoa?",
     "fi": "Saako koira syödä kvinoaa?",
     "nb": "Kan hunder spise quinoa?",
-    "it": "I cani possono mangiare la quinoa?"
+    "it": "I cani possono mangiare la quinoa?",
+    "de": "Dürfen Hunde Quinoa fressen?"
   },
   "url_slug": {
     "en": "quinoa",
@@ -32,7 +34,8 @@
     "da": "quinoa",
     "fi": "kvinoa",
     "nb": "quinoa",
-    "it": "quinoa"
+    "it": "quinoa",
+    "de": "quinoa"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Som regel ja. Almindelig kogt quinoa er ufarligt for hunde i små mængder. Del ikke quinoa fra din egen tallerken, for den er ofte kogt med salt, hvidløg eller løg, som kan være skadelige for hunde.",
     "fi": "Yleensä saa. Maustamaton keitetty kvinoa on turvallista koirille pieninä määrinä. Älä jaa kvinoaa omalta lautaseltasi, sillä se on usein kypsennetty suolan, valkosipulin tai sipulin kanssa, jotka voivat olla koirille haitallisia.",
     "nb": "Vanligvis ja. Naturell tilberedt quinoa er trygg for hunder i små mengder. Ikke del quinoa fra din egen tallerken, for den er ofte tilberedt med salt, hvitløk eller løk, som kan være skadelig for hunder.",
-    "it": "In genere sì. La quinoa cotta in bianco è sicura per i cani in piccole quantità. Non dargli la quinoa del tuo piatto, perché spesso è cucinata con sale, aglio o cipolla, che possono far male ai cani."
+    "it": "In genere sì. La quinoa cotta in bianco è sicura per i cani in piccole quantità. Non dargli la quinoa del tuo piatto, perché spesso è cucinata con sale, aglio o cipolla, che possono far male ai cani.",
+    "de": "Grundsätzlich ja. Ungewürzt gekochte Quinoa ist für Hunde in kleinen Mengen unbedenklich. Geben Sie keine Quinoa von Ihrem eigenen Teller, denn sie wird oft mit Salz, Knoblauch oder Zwiebel gekocht, die für Hunde schädlich sein können."
   },
   "why": {
     "en": "Quinoa makes saponin to protect itself from insects. The amount is usually too small to cause problems, but dogs may be more sensitive to saponin than people, and it may irritate the intestines. Rinsing quinoa before cooking helps, and cooking makes it easier to digest. Quinoa recipes often add salt, garlic and onions, which could be toxic to dogs.",
@@ -55,7 +59,8 @@
     "da": "Quinoa danner saponin for at beskytte sig mod insekter. Mængden er som regel for lille til at give problemer, men hunde kan være mere følsomme over for saponin end mennesker, og det kan irritere tarmene. Det hjælper at skylle quinoa før kogning, og kogning gør den lettere at fordøje. Quinoaopskrifter indeholder ofte salt, hvidløg og løg, som kan være giftige for hunde.",
     "fi": "Kvinoa tuottaa saponiinia suojaksi hyönteisiltä. Määrä on yleensä liian pieni aiheuttamaan ongelmia, mutta koirat voivat olla ihmisiä herkempiä saponiinille, ja se voi ärsyttää suolistoa. Kvinoan huuhtelu ennen keittämistä auttaa, ja keittäminen helpottaa sen sulamista. Kvinoaresepteihin lisätään usein suolaa, valkosipulia ja sipulia, jotka voivat olla koirille myrkyllisiä.",
     "nb": "Quinoa produserer saponin for å beskytte seg mot insekter. Mengden er vanligvis for liten til å gi problemer, men hunder kan være mer følsomme for saponin enn mennesker, og det kan irritere tarmene. Det hjelper å skylle quinoaen før tilberedning, og tilberedning gjør den lettere å fordøye. Oppskrifter med quinoa tilsetter ofte salt, hvitløk og løk, som kan være giftige for hunder.",
-    "it": "La quinoa produce saponine per difendersi dagli insetti. La quantità di solito è troppo piccola per creare problemi, ma i cani possono essere più sensibili alle saponine delle persone e queste possono irritare l’intestino. Sciacquare la quinoa prima di cuocerla aiuta, e la cottura la rende più digeribile. Nelle ricette con la quinoa si aggiungono spesso sale, aglio e cipolla, che potrebbero essere tossici per i cani."
+    "it": "La quinoa produce saponine per difendersi dagli insetti. La quantità di solito è troppo piccola per creare problemi, ma i cani possono essere più sensibili alle saponine delle persone e queste possono irritare l’intestino. Sciacquare la quinoa prima di cuocerla aiuta, e la cottura la rende più digeribile. Nelle ricette con la quinoa si aggiungono spesso sale, aglio e cipolla, che potrebbero essere tossici per i cani.",
+    "de": "Quinoa bildet Saponin, um sich vor Insekten zu schützen. Die Menge ist meist zu gering, um Probleme zu machen, aber Hunde reagieren möglicherweise empfindlicher auf Saponin als Menschen, und es kann den Darm reizen. Hilfreich ist es, Quinoa vor dem Kochen abzuspülen, und durch das Kochen wird sie leichter verdaulich. Quinoa-Rezepte enthalten oft Salz, Knoblauch und Zwiebeln, die für Hunde giftig sein können."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "da": "Hvis din hund aldrig har fået quinoa, skal du starte med en lille mængde. Hvis den giver opkast, diarré eller forstoppelse, skal du ikke give den igen. Spørg din dyrlæge, før du giver din hund nogen ny mad.",
     "fi": "Jos koirasi ei ole aiemmin syönyt kvinoaa, aloita pienellä määrällä. Jos se aiheuttaa oksentelua, ripulia tai ummetusta, älä anna sitä enää. Kysy eläinlääkäriltä ennen kuin lisäät ruokavalioon mitään uutta ruokaa.",
     "nb": "Hvis hunden aldri har fått quinoa før, begynn med en liten mengde. Hvis quinoaen gir hunden oppkast, diaré eller forstoppelse, ikke gi den mer. Spør dyrlegen før du legger til ny mat i kostholdet.",
-    "it": "Se il tuo cane non ha mai mangiato la quinoa, comincia con una piccola quantità. Se causa vomito, diarrea o stitichezza, non darla più. Chiedi al veterinario prima di aggiungere qualsiasi alimento nuovo."
+    "it": "Se il tuo cane non ha mai mangiato la quinoa, comincia con una piccola quantità. Se causa vomito, diarrea o stitichezza, non darla più. Chiedi al veterinario prima di aggiungere qualsiasi alimento nuovo.",
+    "de": "Hat Ihr Hund noch nie Quinoa gefressen, beginnen Sie mit einer kleinen Menge. Löst sie Erbrechen, Durchfall oder Verstopfung aus, geben Sie sie nicht noch einmal. Fragen Sie Ihren Tierarzt, bevor Sie ein neues Lebensmittel füttern."
   },
   "serving": {
     "en": "Rinsed, then cooked plain, without salt, garlic, onion or other seasoning; a small amount at first.",
@@ -78,7 +84,8 @@
     "da": "Skyllet og derefter kogt uden tilsætninger, uden salt, hvidløg, løg eller andre krydderier; i begyndelsen en lille mængde.",
     "fi": "Huuhdeltuna ja sitten maustamattomana keitettynä, ilman suolaa, valkosipulia, sipulia tai muita mausteita; aluksi pieni määrä.",
     "nb": "Skylt og deretter tilberedt naturell, uten salt, hvitløk, løk eller annet krydder; i en liten mengde til å begynne med.",
-    "it": "Sciacquata e poi cotta in bianco, senza sale, aglio, cipolla o altri condimenti; all’inizio una piccola quantità."
+    "it": "Sciacquata e poi cotta in bianco, senza sale, aglio, cipolla o altri condimenti; all’inizio una piccola quantità.",
+    "de": "Abgespült und dann ohne Salz, Knoblauch, Zwiebel oder andere Gewürze gekocht. Anfangs nur eine kleine Menge."
   },
   "child": {
     "en": "Dogs can try a little plain quinoa cooked just for them. Quinoa from our plates often has onion or garlic.",
@@ -89,7 +96,8 @@
     "da": "Hunde kan prøve lidt almindelig quinoa, der er kogt specielt til dem. Quinoa fra vores tallerkener indeholder ofte løg eller hvidløg.",
     "fi": "Koira voi maistaa vähän maustamatonta kvinoaa, joka on keitetty vain sitä varten. Lautasellamme olevassa kvinoassa on usein sipulia tai valkosipulia.",
     "nb": "Hunder kan få smake litt naturell quinoa som er laget bare til dem. Quinoa fra våre tallerkener inneholder ofte løk eller hvitløk.",
-    "it": "I cani possono assaggiare un po’ di quinoa al naturale, cucinata apposta per loro. La quinoa dei nostri piatti ha spesso cipolla o aglio."
+    "it": "I cani possono assaggiare un po’ di quinoa al naturale, cucinata apposta per loro. La quinoa dei nostri piatti ha spesso cipolla o aglio.",
+    "de": "Hunde dürfen ein wenig ungewürzte Quinoa probieren, die extra für sie gekocht wurde. Quinoa von unseren Tellern enthält oft Zwiebel oder Knoblauch."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "da": "Skal jeg skylle quinoa til min hund?",
         "fi": "Pitäisikö kvinoa huuhdella koirani takia?",
         "nb": "Bør jeg skylle quinoa før jeg gir den til hunden?",
-        "it": "Devo sciacquare la quinoa per il mio cane?"
+        "it": "Devo sciacquare la quinoa per il mio cane?",
+        "de": "Sollte ich Quinoa für meinen Hund abspülen?"
       },
       "a": {
         "en": "Yes, if you're concerned about saponin, wash the quinoa before cooking it.",
@@ -113,7 +122,8 @@
         "da": "Ja, hvis du er bekymret for saponin, skal du skylle quinoaen, før du koger den.",
         "fi": "Kyllä, jos saponiini huolestuttaa, pese kvinoa ennen keittämistä.",
         "nb": "Ja, hvis du er bekymret for saponin, skyll quinoaen før du tilbereder den.",
-        "it": "Sì, se ti preoccupano le saponine, lava la quinoa prima di cuocerla."
+        "it": "Sì, se ti preoccupano le saponine, lava la quinoa prima di cuocerla.",
+        "de": "Ja, wenn Sie wegen des Saponins besorgt sind, spülen Sie die Quinoa vor dem Kochen ab."
       }
     },
     {
@@ -126,7 +136,8 @@
         "da": "Må hunde spise quinoasalat?",
         "fi": "Saako koira syödä kvinoasalaattia?",
         "nb": "Kan hunder spise quinoasalat?",
-        "it": "I cani possono mangiare l’insalata di quinoa?"
+        "it": "I cani possono mangiare l’insalata di quinoa?",
+        "de": "Dürfen Hunde Quinoa-Salat fressen?"
       },
       "a": {
         "en": "It's best not to. Never give your dog quinoa straight from your plate, as dishes often contain salt, garlic or onions.",
@@ -137,7 +148,8 @@
         "da": "Det er bedst ikke at give det. Giv aldrig din hund quinoa direkte fra din egen tallerken, for retter indeholder ofte salt, hvidløg eller løg.",
         "fi": "Ei kannata. Älä koskaan anna koirallesi kvinoaa suoraan omalta lautaseltasi, koska ruoissa on usein suolaa, valkosipulia tai sipulia.",
         "nb": "Det er best å la være. Gi aldri hunden quinoa rett fra din egen tallerken, for slike retter inneholder ofte salt, hvitløk eller løk.",
-        "it": "Meglio di no. Non dare mai al tuo cane la quinoa direttamente dal tuo piatto, perché i piatti contengono spesso sale, aglio o cipolla."
+        "it": "Meglio di no. Non dare mai al tuo cane la quinoa direttamente dal tuo piatto, perché i piatti contengono spesso sale, aglio o cipolla.",
+        "de": "Besser nicht. Geben Sie Ihrem Hund niemals Quinoa direkt von Ihrem Teller, denn solche Gerichte enthalten oft Salz, Knoblauch oder Zwiebeln."
       }
     }
   ],
@@ -256,6 +268,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f55ac3f865b34f12a5b3a32d75f71e9aa2cfb49372778e3fc2bbef74bade5d97"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "62655cd3e5007a404824b6fee1a5ce395827a49d379059d5a783cc3a8d53342a"
     }
   }
 }

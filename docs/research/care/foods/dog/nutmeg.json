@@ -10,7 +10,8 @@
     "da": "Muskatnød",
     "fi": "Muskottipähkinä",
     "nb": "Muskatnøtt",
-    "it": "Noce moscata"
+    "it": "Noce moscata",
+    "de": "Muskatnuss"
   },
   "question": {
     "en": "Can dogs eat nutmeg?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise muskatnød?",
     "fi": "Saako koira syödä muskottipähkinää?",
     "nb": "Kan hunder spise muskatnøtt?",
-    "it": "I cani possono mangiare la noce moscata?"
+    "it": "I cani possono mangiare la noce moscata?",
+    "de": "Dürfen Hunde Muskatnuss fressen?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -32,7 +34,8 @@
     "da": "muskatnoed",
     "fi": "muskottipahkina",
     "nb": "muskatnot",
-    "it": "noce-moscata"
+    "it": "noce-moscata",
+    "de": "muskatnuss"
   },
   "level": "dangerous",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Nej, hold muskatnød væk fra din hund. Den indeholder et giftstof, der hedder myristicin. Den lille mængde, der bruges i bagværk, er som regel ufarlig, men en stor mængde muskatnød kan give hallucinationer, desorientering og hurtig puls.",
     "fi": "Ei saa, pidä muskottipähkinä poissa koirasi ulottuvilta. Siinä on myristisiini-nimistä myrkkyä. Leivonnaisissa käytettävä pieni määrä on yleensä turvallista, mutta suuri määrä muskottipähkinää voi aiheuttaa aistiharhoja, sekavuutta ja nopean sykkeen.",
     "nb": "Nei, hold muskatnøtt unna hunden. Den inneholder giftstoffet myristicin. Den lille mengden som brukes i bakverk, er vanligvis trygg, men en stor mengde muskatnøtt kan gi hallusinasjoner, forvirring og hurtig hjerterytme.",
-    "it": "No, tieni la noce moscata lontana dal tuo cane. Contiene una tossina chiamata miristicina. La piccola quantità usata nei dolci da forno è in genere sicura, ma una grande quantità di noce moscata può causare allucinazioni, disorientamento e battito cardiaco accelerato."
+    "it": "No, tieni la noce moscata lontana dal tuo cane. Contiene una tossina chiamata miristicina. La piccola quantità usata nei dolci da forno è in genere sicura, ma una grande quantità di noce moscata può causare allucinazioni, disorientamento e battito cardiaco accelerato.",
+    "de": "Nein, halten Sie Muskatnuss von Ihrem Hund fern. Sie enthält einen Giftstoff namens Myristicin. Die kleine Menge in Backwaren ist in der Regel unbedenklich, aber eine große Menge Muskatnuss kann Halluzinationen, Orientierungslosigkeit und schnellen Herzschlag verursachen."
   },
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
@@ -55,7 +59,8 @@
     "da": "I store mængder kan myristicin give hallucinationer, desorientering, hurtigere puls, forhøjet blodtryk, tør mund, mavesmerter og muligvis kramper, og tegnene kan vare op til 48 timer. En hund skulle spise en meget stor mængde for at få det; den lille mængde, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Fordi selve krydderiet indeholder et giftstof, vurderer vi det som farligt.",
     "fi": "Suurina määrinä myristisiini voi aiheuttaa aistiharhoja, sekavuutta, nopeampaa sykettä, korkeaa verenpainetta, suun kuivumista, vatsakipua ja mahdollisesti kouristuskohtauksia, ja oireet voivat kestää jopa 48 tuntia. Tähän koiran pitäisi syödä hyvin suuri määrä; reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavia ongelmia, vaikka lievä vatsavaiva voi tulla. Koska itse mauste sisältää myrkkyä, luokittelemme sen vaaralliseksi.",
     "nb": "I store mengder kan myristicin gi hallusinasjoner, forvirring, hurtigere hjerterytme, høyt blodtrykk, tørr munn, magesmerter og muligens kramper, og symptomene kan vare i opptil 48 timer. En hund må spise svært mye for at det skal skje; den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlige problemer, men lett urolig mage kan forekomme. Fordi selve krydderet inneholder et giftstoff, vurderer vi det som farlig.",
-    "it": "In grandi quantità la miristicina può causare allucinazioni, disorientamento, battito cardiaco accelerato, pressione alta, secchezza delle fauci, mal di pancia ed eventualmente convulsioni, e i sintomi possono durare fino a 48 ore. Il cane dovrebbe mangiarne una quantità molto grande perché succeda; la piccola quantità usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Poiché la spezia contiene di per sé una tossina, la classifichiamo come pericolosa."
+    "it": "In grandi quantità la miristicina può causare allucinazioni, disorientamento, battito cardiaco accelerato, pressione alta, secchezza delle fauci, mal di pancia ed eventualmente convulsioni, e i sintomi possono durare fino a 48 ore. Il cane dovrebbe mangiarne una quantità molto grande perché succeda; la piccola quantità usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Poiché la spezia contiene di per sé una tossina, la classifichiamo come pericolosa.",
+    "de": "In großen Mengen kann Myristicin Halluzinationen, Orientierungslosigkeit, schnelleren Herzschlag, Bluthochdruck, trockenen Mund, Bauchschmerzen und möglicherweise Krampfanfälle verursachen, und die Anzeichen können bis zu 48 Stunden anhalten. Dafür müsste ein Hund eine sehr große Menge fressen. Die kleine Menge in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Weil das Gewürz selbst einen Giftstoff enthält, stufen wir es als gefährlich ein."
   },
   "signs": {
     "en": [
@@ -138,6 +143,15 @@
       "Mal di pancia",
       "Possibili convulsioni",
       "I sintomi possono durare fino a 48 ore"
+    ],
+    "de": [
+      "Leichte Magenbeschwerden (kleine Mengen)",
+      "Halluzinationen und Orientierungslosigkeit",
+      "Schneller Herzschlag",
+      "Bluthochdruck und trockener Mund",
+      "Bauchschmerzen",
+      "Möglicherweise Krampfanfälle",
+      "Die Anzeichen können bis zu 48 Stunden anhalten"
     ]
   },
   "what_to_do": {
@@ -149,7 +163,8 @@
     "da": "Lidt muskatnød i en bagt godbid giver meget sjældent alvorlige problemer. Hvis din hund ved et uheld har spist en stor mængde muskatnød, skal du ringe til din dyrlæge for at få råd.",
     "fi": "Vähän muskottipähkinää leivotussa herkussa aiheuttaa hyvin epätodennäköisesti vakavia ongelmia. Jos koirasi söi vahingossa suuren määrän muskottipähkinää, soita eläinlääkärille neuvoja varten.",
     "nb": "Litt muskatnøtt i en hjemmebakt godbit er svært lite sannsynlig å gi alvorlige problemer. Hvis hunden ved et uhell har spist en stor mengde muskatnøtt, ring dyrlegen for råd.",
-    "it": "Un po’ di noce moscata in un dolce da forno difficilmente causa problemi seri. Se il tuo cane ha mangiato per sbaglio una grande quantità di noce moscata, chiama il veterinario per un consiglio."
+    "it": "Un po’ di noce moscata in un dolce da forno difficilmente causa problemi seri. Se il tuo cane ha mangiato per sbaglio una grande quantità di noce moscata, chiama il veterinario per un consiglio.",
+    "de": "Ein wenig Muskatnuss in einem Gebäck verursacht sehr wahrscheinlich keine ernsten Probleme. Hat Ihr Hund versehentlich eine große Menge Muskatnuss gefressen, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten."
   },
   "serving": null,
   "child": {
@@ -161,7 +176,8 @@
     "da": "Muskatnød er et krydderi til madlavning for mennesker. Det er ikke til hunde, så hold krydderiglas uden for din hunds rækkevidde.",
     "fi": "Muskottipähkinä on mauste ihmisten ruoanlaittoon. Se ei ole koirille, joten pidä maustepurkit paikassa, johon koirasi ei ylety.",
     "nb": "Muskatnøtt er et krydder til mat for mennesker. Det er ikke for hunder, så sett krydderglassene der hunden ikke kommer til.",
-    "it": "La noce moscata è una spezia che le persone usano in cucina. Non è per i cani, quindi tieni i barattoli delle spezie dove il tuo cane non arriva."
+    "it": "La noce moscata è una spezia che le persone usano in cucina. Non è per i cani, quindi tieni i barattoli delle spezie dove il tuo cane non arriva.",
+    "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Sie ist nichts für Hunde, also stell Gewürzgläser dorthin, wo dein Hund nicht herankommt."
   },
   "faq": [
     {
@@ -174,7 +190,8 @@
         "da": "Min hund har spist en småkage med lidt muskatnød. Er det farligt?",
         "fi": "Koirani söi keksin, jossa oli vähän muskottipähkinää. Onko se vaarallista?",
         "nb": "Hunden min spiste en kjeks med litt muskatnøtt. Er det farlig?",
-        "it": "Il mio cane ha mangiato un biscotto con un po’ di noce moscata. È pericoloso?"
+        "it": "Il mio cane ha mangiato un biscotto con un po’ di noce moscata. È pericoloso?",
+        "de": "Mein Hund hat einen Keks mit ein wenig Muskatnuss gefressen. Ist das gefährlich?"
       },
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
@@ -185,7 +202,8 @@
         "da": "Den lille mængde muskatnød, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Tjek også småkagen for xylitol, som noget bagværk indeholder, og som er meget giftigt.",
         "fi": "Reseptien pieni määrä muskottipähkinää aiheuttaa hyvin epätodennäköisesti vakavia ongelmia, vaikka lievä vatsavaiva voi tulla. Tarkista keksistä myös ksylitoli, jota joissakin leivonnaisissa on ja joka on erittäin myrkyllistä.",
         "nb": "Den lille mengden muskatnøtt som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlige problemer, men lett urolig mage kan forekomme. Sjekk også kjeksen for xylitol, som enkelte bakverk inneholder, og som er svært giftig.",
-        "it": "La piccola quantità di noce moscata usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Controlla anche che il biscotto non contenga xilitolo, presente in alcuni dolci da forno e molto tossico."
+        "it": "La piccola quantità di noce moscata usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Controlla anche che il biscotto non contenga xilitolo, presente in alcuni dolci da forno e molto tossico.",
+        "de": "Die kleine Menge Muskatnuss in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Prüfen Sie den Keks außerdem auf Xylit, das manche Backwaren enthalten und das sehr giftig ist."
       }
     }
   ],
@@ -295,6 +313,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f8f2e94fafa2de55d946a4f11def858468517d17be8c99dc88a8f7fe756f6461"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a5f2f809d2a9cf01908ec8c137877f85a03533e542468169d536b943013eec7"
     }
   }
 }

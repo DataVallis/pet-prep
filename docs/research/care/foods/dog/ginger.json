@@ -10,7 +10,8 @@
     "da": "Ingefær",
     "fi": "Inkivääri",
     "nb": "Ingefær",
-    "it": "Zenzero"
+    "it": "Zenzero",
+    "de": "Ingwer"
   },
   "question": {
     "en": "Can dogs eat ginger?",
@@ -21,7 +22,8 @@
     "da": "Må hunde spise ingefær?",
     "fi": "Saako koira syödä inkivääriä?",
     "nb": "Kan hunder spise ingefær?",
-    "it": "I cani possono mangiare lo zenzero?"
+    "it": "I cani possono mangiare lo zenzero?",
+    "de": "Dürfen Hunde Ingwer fressen?"
   },
   "url_slug": {
     "en": "ginger",
@@ -32,7 +34,8 @@
     "da": "ingefaer",
     "fi": "inkivaari",
     "nb": "ingefaer",
-    "it": "zenzero"
+    "it": "zenzero",
+    "de": "ingwer"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Ja, ingefær er ufarligt for hunde i små mængder. Giv det kun med måde, fordi store mængder kan give luft i maven og kvalme. Undlad ingefærkiks og syltet ingefær.",
     "fi": "Saa, pieninä määrinä inkivääri on koirille turvallista. Anna sitä vain kohtuudella, koska suuret määrät voivat aiheuttaa ilmavaivoja ja pahoinvointia. Jätä väliin inkiväärikeksit ja marinoitu inkivääri.",
     "nb": "Ja, i små mengder er ingefær trygg for hunder. Gi den bare med måte, for store mengder kan gi gass og kvalme. Unngå ingefærkjeks og syltet ingefær.",
-    "it": "Sì, in piccole quantità lo zenzero è sicuro per i cani. Dallo solo con moderazione, perché grandi quantità possono causare flatulenza e nausea. Evita i biscotti allo zenzero e lo zenzero sott’aceto."
+    "it": "Sì, in piccole quantità lo zenzero è sicuro per i cani. Dallo solo con moderazione, perché grandi quantità possono causare flatulenza e nausea. Evita i biscotti allo zenzero e lo zenzero sott’aceto.",
+    "de": "Ja, in kleinen Mengen ist Ingwer für Hunde unbedenklich. Geben Sie ihn nur in Maßen, denn große Mengen können Blähungen und Übelkeit verursachen. Verzichten Sie auf Ingwerkekse und eingelegten Ingwer."
   },
   "why": {
     "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
@@ -55,7 +59,8 @@
     "da": "Ingefær i store mængder kan give luft i maven og kvalme, og ligesom al anden mad, der ikke gives med måde, kan det give mavebesvær. Ingefær virker blodfortyndende og kan sænke blodtrykket og blodsukkeret, så undgå det til hunde med blødningssygdomme eller hunde, der skal opereres snart, og spørg først din dyrlæge, hvis din hund har diabetes eller hjertesygdom. Nogle dyrlæger fraråder det også til drægtige og diegivende tæver. Hunde kan også være allergiske over for ingefær.",
     "fi": "Suuret määrät inkivääriä voivat aiheuttaa ilmavaivoja ja pahoinvointia, ja kuten mikä tahansa ruoka, se voi aiheuttaa vatsavaivoja, jos sitä ei anneta kohtuudella. Inkivääri ohentaa verta ja voi laskea verenpainetta ja verensokeria, joten vältä sitä koirilla, joilla on verenvuotohäiriö tai joille on tulossa leikkaus, ja kysy ensin eläinlääkäriltä, jos koirallasi on diabetes tai sydänsairaus. Jotkut eläinlääkärit neuvovat välttämään sitä myös tiineillä ja imettävillä koirilla. Koira voi olla myös allerginen inkivääriin.",
     "nb": "Ingefær i store mengder kan gi gass og kvalme, og som med all mat som ikke gis med måte, kan den føre til mageproblemer. Ingefær virker blodfortynnende og kan senke blodtrykket og blodsukkeret, så unngå den hos hunder med blødersykdommer eller hunder som snart skal opereres, og spør dyrlegen først hvis hunden har diabetes eller hjertesykdom. Noen dyrleger fraråder den også til drektige og diende tisper. Hunder kan også være allergiske mot ingefær.",
-    "it": "Lo zenzero in grandi quantità può causare flatulenza e nausea e, come qualsiasi alimento non dato con moderazione, può portare a problemi di stomaco. Lo zenzero ha un effetto anticoagulante e può abbassare la pressione e la glicemia, quindi evitalo nei cani con disturbi della coagulazione o che dovranno presto essere operati, e chiedi prima al veterinario se il tuo cane ha il diabete o una malattia cardiaca. Alcuni veterinari consigliano di evitarlo anche nelle cagne in gravidanza e in allattamento. I cani possono anche essere allergici allo zenzero."
+    "it": "Lo zenzero in grandi quantità può causare flatulenza e nausea e, come qualsiasi alimento non dato con moderazione, può portare a problemi di stomaco. Lo zenzero ha un effetto anticoagulante e può abbassare la pressione e la glicemia, quindi evitalo nei cani con disturbi della coagulazione o che dovranno presto essere operati, e chiedi prima al veterinario se il tuo cane ha il diabete o una malattia cardiaca. Alcuni veterinari consigliano di evitarlo anche nelle cagne in gravidanza e in allattamento. I cani possono anche essere allergici allo zenzero.",
+    "de": "Ingwer in großen Mengen kann Blähungen und Übelkeit verursachen, und wie jedes Lebensmittel, das nicht in Maßen gegeben wird, kann er zu Magenbeschwerden führen. Ingwer wirkt blutverdünnend und kann Blutdruck und Blutzucker senken. Meiden Sie ihn deshalb bei Hunden mit Blutgerinnungsstörungen oder vor einer bevorstehenden Operation und fragen Sie vorher Ihren Tierarzt, wenn Ihr Hund Diabetes oder eine Herzerkrankung hat. Manche Tierärzte raten auch bei trächtigen und säugenden Hündinnen davon ab. Hunde können außerdem allergisch auf Ingwer reagieren."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "da": "Hvis du vil give din hund ingefær for sundhedens skyld, skal du tale med din dyrlæge først, især hvis din hund får medicin.",
     "fi": "Jos haluat lisätä inkivääriä koirasi ruokavalioon terveyden vuoksi, puhu ensin eläinlääkärin kanssa, etenkin jos koirasi käyttää lääkitystä.",
     "nb": "Hvis du vil tilsette ingefær i kostholdet til hunden for helsens skyld, bør du snakke med dyrlegen først, særlig hvis hunden får medisiner.",
-    "it": "Se vuoi aggiungere lo zenzero all’alimentazione del tuo cane per il suo benessere, parlane prima con il veterinario, soprattutto se il cane prende farmaci."
+    "it": "Se vuoi aggiungere lo zenzero all’alimentazione del tuo cane per il suo benessere, parlane prima con il veterinario, soprattutto se il cane prende farmaci.",
+    "de": "Möchten Sie Ingwer als gesundheitsfördernde Maßnahme in die Ernährung Ihres Hundes aufnehmen, sprechen Sie zuerst mit Ihrem Tierarzt, besonders wenn Ihr Hund Medikamente nimmt."
   },
   "serving": {
     "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
@@ -78,7 +84,8 @@
     "da": "Frisk ingefær, ingefærpulver og ingefærsaft er alt sammen fint i små mængder. Skræl frisk ingefær grundigt, og hak den helt fint. Giv ikke ingefærkiks (meget sukker, nogle gange macadamianødder) eller syltet ingefær (salt, nogle gange xylitol).",
     "fi": "Tuore inkivääri, inkiväärijauhe ja inkiväärimehu sopivat kaikki pieninä määrinä. Kuori tuore inkivääri huolellisesti ja hienonna se pieneksi. Älä anna inkiväärikeksejä (paljon sokeria, joskus macadamiapähkinöitä) tai marinoitua inkivääriä (suolaa, joskus ksylitolia).",
     "nb": "Fersk ingefær, ingefærpulver og ingefærjuice er alle greit i små mengder. Skrell fersk ingefær grundig og hakk den fint. Ikke gi ingefærkjeks (mye sukker, av og til macadamianøtter) eller syltet ingefær (salt, av og til xylitol).",
-    "it": "Lo zenzero fresco, quello in polvere e il succo di zenzero vanno bene in piccole quantità. Sbuccia bene lo zenzero fresco e tritalo finemente. Non dare biscotti allo zenzero (ricchi di zucchero, a volte con noci di macadamia) né zenzero sott’aceto (sale, a volte xilitolo)."
+    "it": "Lo zenzero fresco, quello in polvere e il succo di zenzero vanno bene in piccole quantità. Sbuccia bene lo zenzero fresco e tritalo finemente. Non dare biscotti allo zenzero (ricchi di zucchero, a volte con noci di macadamia) né zenzero sott’aceto (sale, a volte xilitolo).",
+    "de": "Frischer Ingwer, Ingwerpulver und Ingwersaft sind in kleinen Mengen alle in Ordnung. Schälen Sie frischen Ingwer gründlich und hacken Sie ihn fein. Geben Sie keine Ingwerkekse (viel Zucker, manchmal Macadamianüsse) und keinen eingelegten Ingwer (Salz, manchmal Xylit)."
   },
   "child": {
     "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
@@ -89,7 +96,8 @@
     "da": "En lille smule ingefær er i orden til hunde. De voksne bestemmer, hvor meget, og ingefærkiks er ikke hundegodbidder.",
     "fi": "Aivan pieni määrä inkivääriä sopii koirille. Aikuinen päättää määrän, eivätkä inkiväärikeksit ole koiranherkkuja.",
     "nb": "En bitteliten bit ingefær er greit for hunder. De voksne bestemmer hvor mye, og ingefærkjeks er ikke hundegodbiter.",
-    "it": "Un pochino di zenzero va bene per i cani. Quanto darne lo decidono gli adulti, e i biscotti allo zenzero non sono premi per cani."
+    "it": "Un pochino di zenzero va bene per i cani. Quanto darne lo decidono gli adulti, e i biscotti allo zenzero non sono premi per cani.",
+    "de": "Ein ganz kleines bisschen Ingwer ist für Hunde in Ordnung. Wie viel, entscheiden die Erwachsenen, und Ingwerkekse sind keine Hundeleckerlis."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "da": "Må min hund få et ingefærkiks?",
         "fi": "Saako koirani inkiväärikeksin?",
         "nb": "Kan hunden min få en ingefærkjeks?",
-        "it": "Il mio cane può mangiare un biscotto allo zenzero?"
+        "it": "Il mio cane può mangiare un biscotto allo zenzero?",
+        "de": "Darf mein Hund einen Ingwerkeks haben?"
       },
       "a": {
         "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
@@ -113,7 +122,8 @@
         "da": "Det er bedst at undgå ingefærkiks. Ligesom de fleste søde sager indeholder de meget sukker og kan indeholde ingredienser, som er skadelige for hunde, fx macadamianødder.",
         "fi": "Inkiväärikeksejä on parasta välttää. Kuten useimmissa makeissa herkuissa, niissä on paljon sokeria, ja niissä voi olla koirille haitallisia ainesosia, kuten macadamiapähkinöitä.",
         "nb": "Det er best å unngå ingefærkjeks. Som de fleste søte godbiter inneholder de mye sukker og kan ha ingredienser som er skadelige for hunder, for eksempel macadamianøtter.",
-        "it": "Meglio evitare i biscotti allo zenzero. Come la maggior parte dei dolci, sono ricchi di zucchero e potrebbero contenere ingredienti dannosi per i cani, come le noci di macadamia."
+        "it": "Meglio evitare i biscotti allo zenzero. Come la maggior parte dei dolci, sono ricchi di zucchero e potrebbero contenere ingredienti dannosi per i cani, come le noci di macadamia.",
+        "de": "Verzichten Sie am besten auf Ingwerkekse. Wie die meisten Naschereien enthalten sie viel Zucker und womöglich Zutaten, die für Hunde schädlich sind, etwa Macadamianüsse."
       }
     },
     {
@@ -126,7 +136,8 @@
         "da": "Er syltet ingefær ufarligt for hunde?",
         "fi": "Onko marinoitu inkivääri turvallista koirille?",
         "nb": "Er syltet ingefær trygg for hunder?",
-        "it": "Lo zenzero sott’aceto è sicuro per i cani?"
+        "it": "Lo zenzero sott’aceto è sicuro per i cani?",
+        "de": "Ist eingelegter Ingwer für Hunde unbedenklich?"
       },
       "a": {
         "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
@@ -137,7 +148,8 @@
         "da": "Det er bedst at beholde syltet ingefær selv. De fleste hunde kan ikke lide smagen af eddike. Den indeholder salt, som din hund ikke har brug for, og den kan indeholde xylitol, som er giftigt for hunde.",
         "fi": "Marinoitu inkivääri kannattaa pitää itsellään. Useimmat koirat eivät pidä etikan mausta, siinä on suolaa, jota koirasi ei tarvitse, ja siinä voi olla ksylitolia, joka on koirille myrkyllistä.",
         "nb": "Det er best å beholde syltet ingefær for deg selv. De fleste hunder liker ikke eddiksmaken, den inneholder salt hunden ikke trenger, og den kan inneholde xylitol, som er giftig for hunder.",
-        "it": "Meglio tenere lo zenzero sott’aceto per te. Alla maggior parte dei cani non piace il sapore dell’aceto, contiene sale di cui il tuo cane non ha bisogno e può contenere xilitolo, tossico per i cani."
+        "it": "Meglio tenere lo zenzero sott’aceto per te. Alla maggior parte dei cani non piace il sapore dell’aceto, contiene sale di cui il tuo cane non ha bisogno e può contenere xilitolo, tossico per i cani.",
+        "de": "Eingelegten Ingwer behalten Sie am besten für sich. Die meisten Hunde mögen den Essiggeschmack nicht. Außerdem enthält er Salz, das Ihr Hund nicht braucht, und kann Xylit enthalten, das für Hunde giftig ist."
       }
     }
   ],
@@ -280,6 +292,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b7a1393d1645ccf37bf903ed6cedcfdf11fbab23a7f2647e5328dcd0938e11fc"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7ee2048ea5ff8740f34c4231d1d41f472004a06ad8a3d941e747365136ad9fac"
     }
   }
 }

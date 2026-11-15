@@ -9,7 +9,8 @@
     "da": "Bønner",
     "fi": "Pavut",
     "nb": "Bønner",
-    "it": "Fagioli"
+    "it": "Fagioli",
+    "de": "Bohnen"
   },
   "question": {
     "en": "Can dogs eat beans?",
@@ -19,7 +20,8 @@
     "da": "Må hunde spise bønner?",
     "fi": "Saako koira syödä papuja?",
     "nb": "Kan hunder spise bønner?",
-    "it": "I cani possono mangiare i fagioli?"
+    "it": "I cani possono mangiare i fagioli?",
+    "de": "Dürfen Hunde Bohnen fressen?"
   },
   "url_slug": {
     "en": "beans",
@@ -29,7 +31,8 @@
     "da": "boenner",
     "fi": "pavut",
     "nb": "bonner",
-    "it": "fagioli"
+    "it": "fagioli",
+    "de": "bohnen"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "da": "Ja, som en godbid. Hunde kan spise mange slags bønner, fx sorte bønner, kidneybønner, pintobønner, limabønner og hvide bønner, hvis de er udblødt og derefter kogt. Bønner kan give din hund luft i maven. Bagte bønner i sovs er ikke en god idé.",
     "fi": "Saa, herkuksi. Koira voi syödä monenlaisia papuja, kuten mustia papuja, kidneypapuja, pintopapuja, limapapuja ja valkoisia papuja, jos ne on liotettu ja sitten keitetty. Pavut voivat aiheuttaa koiralle ilmavaivoja. Kastikkeessa tarjottavat valmispavut (baked beans) eivät sovi koiralle.",
     "nb": "Ja, som godbit. Hunder kan spise mange slags bønner, for eksempel svarte bønner, kidneybønner, pintobønner, limabønner og hvite bønner, hvis de er bløtlagt og deretter kokt. Bønner kan gi hunden litt gass. Bakte bønner i saus er ikke en god idé.",
-    "it": "Sì, come premio. I cani possono mangiare molti tipi di fagioli, come i fagioli neri, rossi, pinto, di Lima e bianchi, purché siano stati messi in ammollo e poi cotti. I fagioli possono causare al cane un po’ di flatulenza. I fagioli in salsa, tipo baked beans, non sono una buona idea."
+    "it": "Sì, come premio. I cani possono mangiare molti tipi di fagioli, come i fagioli neri, rossi, pinto, di Lima e bianchi, purché siano stati messi in ammollo e poi cotti. I fagioli possono causare al cane un po’ di flatulenza. I fagioli in salsa, tipo baked beans, non sono una buona idea.",
+    "de": "Ja, als Leckerli. Hunde dürfen viele Bohnensorten fressen, etwa schwarze Bohnen, Kidneybohnen, Pintobohnen, Limabohnen und weiße Bohnen, wenn sie eingeweicht und danach gekocht wurden. Bohnen können bei Ihrem Hund Blähungen verursachen. Baked Beans in Soße sind keine gute Idee."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
@@ -50,7 +54,8 @@
     "da": "Bønner indeholder meget fiber, og når de er rå, er de næsten ufordøjelige. Udblødning og kogning hjælper hunde med at fordøje dem og kan mindske luft i maven. Bønner bør ikke erstatte kød i en hunds kost. Bagte bønner er ikke giftige i sig selv, men de indeholder meget salt og sukker, og sovsen kan irritere hundens mave; hvis hunden får dem jævnligt, kan det øge risikoen for betændelse i bugspytkirtlen.",
     "fi": "Pavuissa on paljon kuitua, ja raakoina ne ovat lähes sulamattomia. Liottaminen ja keittäminen auttavat koiraa sulattamaan ne ja voi vähentää ilmavaivoja. Pavut eivät saa korvata lihaa koiran ruokavaliossa. Kastikkeessa tarjottavat valmispavut eivät sinänsä ole myrkyllisiä, mutta niissä on paljon suolaa ja sokeria ja niiden kastike voi ärsyttää koiran vatsaa; säännöllisesti syötynä ne voivat lisätä haimatulehduksen riskiä.",
     "nb": "Bønner inneholder mye fiber, og rå er de nesten umulige å fordøye. Bløtlegging og koking gjør dem lettere for hunder å fordøye og kan redusere gassplager. Bønner bør ikke erstatte kjøtt i kosten til en hund. Bakte bønner er ikke giftige i seg selv, men de inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden får dem jevnlig, kan det øke risikoen for betennelse i bukspyttkjertelen (pankreatitt).",
-    "it": "I fagioli contengono molte fibre e, crudi, sono quasi indigeribili. Metterli in ammollo e cuocerli aiuta i cani a digerirli e può ridurre la flatulenza. I fagioli non devono sostituire la carne nell’alimentazione del cane. I fagioli in salsa non sono tossici in sé, ma contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane; mangiati con regolarità, potrebbero aumentare il rischio di pancreatite."
+    "it": "I fagioli contengono molte fibre e, crudi, sono quasi indigeribili. Metterli in ammollo e cuocerli aiuta i cani a digerirli e può ridurre la flatulenza. I fagioli non devono sostituire la carne nell’alimentazione del cane. I fagioli in salsa non sono tossici in sé, ma contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane; mangiati con regolarità, potrebbero aumentare il rischio di pancreatite.",
+    "de": "Bohnen enthalten viele Ballaststoffe, und roh sind sie fast unverdaulich. Werden sie eingeweicht und gekocht, können Hunde sie besser verdauen, und es kann Blähungen verringern. Bohnen sollten Fleisch in der Ernährung eines Hundes nicht ersetzen. Baked Beans sind an sich nicht giftig, enthalten aber viel Salz und Zucker, und ihre Soße kann den Magen eines Hundes reizen. Regelmäßig gefressen, könnten sie das Risiko einer Bauchspeicheldrüsenentzündung erhöhen."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "da": "Hvis din hund har spist nogle få bagte bønner, er en lille mængde næppe skadelig. Hold øje med din hund i 24 timer, og kontakt din dyrlæge for at få råd, hvis du ser bekymrende tegn som dårlig mave eller diarré.",
     "fi": "Jos koirasi söi vähän kastikkeessa tarjottavia valmispapuja, pieni määrä tuskin aiheuttaa suurta haittaa. Seuraa koiraa vuorokauden ajan ja kysy neuvoa eläinlääkäriltä, jos huomaat huolestuttavia oireita, kuten vatsavaivoja tai ripulia.",
     "nb": "Hvis hunden har spist noen bakte bønner, er en liten mengde lite sannsynlig å gjøre stor skade. Følg med på hunden i 24 timer, og kontakt dyrlegen for råd hvis du ser bekymringsfulle tegn, som urolig mage eller diaré.",
-    "it": "Se il tuo cane ha mangiato dei fagioli in salsa, è improbabile che una piccola quantità faccia grossi danni. Tienilo d’occhio per 24 ore e chiedi consiglio al veterinario se noti segnali preoccupanti, come disturbi di stomaco o diarrea."
+    "it": "Se il tuo cane ha mangiato dei fagioli in salsa, è improbabile che una piccola quantità faccia grossi danni. Tienilo d’occhio per 24 ore e chiedi consiglio al veterinario se noti segnali preoccupanti, come disturbi di stomaco o diarrea.",
+    "de": "Hat Ihr Hund ein paar Baked Beans gefressen, richtet eine kleine Menge wahrscheinlich kaum Schaden an. Beobachten Sie Ihren Hund 24 Stunden lang und wenden Sie sich an Ihren Tierarzt, wenn Sie besorgniserregende Anzeichen wie Magenbeschwerden oder Durchfall bemerken."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
@@ -71,7 +77,8 @@
     "da": "Udblødt først og derefter kogt, uden sovs, som en godbid en gang imellem.",
     "fi": "Ensin liotettuna ja sitten keitettynä, ilman kastiketta, satunnaisena herkkuna.",
     "nb": "Bløtlagt først og deretter kokt, uten saus, som en godbit av og til.",
-    "it": "Prima in ammollo e poi cotti, senza salsa, come premio occasionale."
+    "it": "Prima in ammollo e poi cotti, senza salsa, come premio occasionale.",
+    "de": "Erst eingeweicht und dann gekocht, ohne Soße, als gelegentliches Leckerli."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -81,7 +88,8 @@
     "da": "Kogte bønner kan være en lille godbid til hunde, men de kan give din hund lidt luft i maven!",
     "fi": "Keitetyt pavut voivat olla koiralle pieni herkku, mutta ne voivat saada koirasi pierrelemään!",
     "nb": "Kokte bønner kan være en liten godbit for hunder, men de kan gi litt gass!",
-    "it": "I fagioli cotti possono essere un piccolo premio per i cani, ma potrebbero far fare al tuo cane qualche puzzetta!"
+    "it": "I fagioli cotti possono essere un piccolo premio per i cani, ma potrebbero far fare al tuo cane qualche puzzetta!",
+    "de": "Gekochte Bohnen können für Hunde ein kleines Leckerli sein, aber dein Hund muss davon vielleicht ein bisschen pupsen!"
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "da": "Må hunde spise bagte bønner?",
         "fi": "Saako koira syödä kastikkeessa tarjottavia valmispapuja (baked beans)?",
         "nb": "Kan hunder spise bakte bønner?",
-        "it": "I cani possono mangiare i fagioli in salsa?"
+        "it": "I cani possono mangiare i fagioli in salsa?",
+        "de": "Dürfen Hunde Baked Beans fressen?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
@@ -103,7 +112,8 @@
         "da": "Helst ikke. Bønnerne er ikke giftige i sig selv, men bagte bønner indeholder meget salt og sukker, og sovsen kan irritere hundens mave. Hvis din hund har spist en smule, du har spildt på gulvet, er det sandsynligvis ikke noget at bekymre sig om.",
         "fi": "Ei kannata. Pavut eivät sinänsä ole myrkyllisiä, mutta valmispavuissa on paljon suolaa ja sokeria, ja kastike voi ärsyttää koiran vatsaa. Jos koirasi söi vähän lattialle läikkyneitä papuja, se tuskin on huolen aihe.",
         "nb": "Det er best å la være. Bønnene i seg selv er ikke giftige, men bakte bønner inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden spiste litt som du sølte på gulvet, er det trolig ingen grunn til bekymring.",
-        "it": "Meglio di no. I fagioli in sé non sono tossici, ma quelli in salsa contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane. Se il tuo cane ha mangiato un po’ di quelli che ti sono caduti sul pavimento, probabilmente non c’è da preoccuparsi."
+        "it": "Meglio di no. I fagioli in sé non sono tossici, ma quelli in salsa contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane. Se il tuo cane ha mangiato un po’ di quelli che ti sono caduti sul pavimento, probabilmente non c’è da preoccuparsi.",
+        "de": "Besser nicht. Die Bohnen selbst sind nicht giftig, aber Baked Beans enthalten viel Salz und Zucker, und die Soße kann den Magen eines Hundes reizen. Hat Ihr Hund nur ein wenig aufgeleckt, das Ihnen auf den Boden gefallen ist, ist das wahrscheinlich kein Grund zur Sorge."
       }
     },
     {
@@ -115,7 +125,8 @@
         "da": "Kan bønner erstatte kød i min hunds kost?",
         "fi": "Voivatko pavut korvata lihan koirani ruokavaliossa?",
         "nb": "Kan bønner erstatte kjøtt i kosten til hunden min?",
-        "it": "I fagioli possono sostituire la carne nell’alimentazione del mio cane?"
+        "it": "I fagioli possono sostituire la carne nell’alimentazione del mio cane?",
+        "de": "Können Bohnen das Fleisch in der Ernährung meines Hundes ersetzen?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
@@ -125,7 +136,8 @@
         "da": "Nej. Det er dårligt for hunde kun at få bønner, hvis de erstatter kød i kosten.",
         "fi": "Eivät. Pelkkien papujen syöttäminen on koirille haitallista, jos ne korvaavat lihan koiran ruokavaliossa.",
         "nb": "Nei. Det er ikke bra for hunder å få bare bønner i stedet for kjøtt.",
-        "it": "No. Dare solo fagioli fa male ai cani se prendono il posto della carne nella loro alimentazione."
+        "it": "No. Dare solo fagioli fa male ai cani se prendono il posto della carne nella loro alimentazione.",
+        "de": "Nein. Wenn Bohnen das Fleisch im Futter ersetzen, ist das schlecht für Hunde."
       }
     }
   ],
@@ -277,6 +289,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "25b9dcf3521606b0cd1a8cf54899cb45de3c0787da9d3336daf9f3cbbcd0f27d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c0f67dd147ecdfa7fc76522ba08abb49dda4f88d3ab044ed92eb6f1bb81679a"
     }
   }
 }

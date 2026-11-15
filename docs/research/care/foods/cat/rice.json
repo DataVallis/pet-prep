@@ -10,7 +10,8 @@
     "da": "Ris (kogte)",
     "fi": "Riisi (keitetty)",
     "nb": "Ris (kokt)",
-    "it": "Riso (cotto)"
+    "it": "Riso (cotto)",
+    "de": "Reis (gekocht)"
   },
   "question": {
     "en": "Can cats eat rice?",
@@ -21,7 +22,8 @@
     "da": "Må katte spise ris?",
     "fi": "Saako kissa syödä riisiä?",
     "nb": "Kan katter spise ris?",
-    "it": "I gatti possono mangiare il riso?"
+    "it": "I gatti possono mangiare il riso?",
+    "de": "Dürfen Katzen Reis fressen?"
   },
   "url_slug": {
     "en": "rice",
@@ -32,7 +34,8 @@
     "da": "ris",
     "fi": "riisi",
     "nb": "ris",
-    "it": "riso"
+    "it": "riso",
+    "de": "reis"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "da": "Ja, lidt almindelige kogte ris er fint til katte en gang imellem. Blue Cross foreslår endda at strække kattefoderet med kogte ris, når der er lidt tilbage. Men ris kan ikke erstatte kattefoder: katte har brug for kød hver dag.",
     "fi": "Saa, vähän maustamatonta keitettyä riisiä sopii kissoille silloin tällöin. Blue Cross ehdottaa jopa, että vähiin käyvää kissanruokaa voi jatkaa keitetyllä riisillä. Riisi ei kuitenkaan voi korvata kissanruokaa: kissat tarvitsevat lihaa joka päivä.",
     "nb": "Ja, litt naturell kokt ris er greit for katter nå og da. Blue Cross foreslår til og med å strekke en liten mengde kattemat med kokt ris. Men ris kan ikke erstatte kattemat: katter trenger kjøtt hver dag.",
-    "it": "Sì, un po’ di riso in bianco ogni tanto va bene. Se il cibo per gatti scarseggia, Blue Cross suggerisce perfino di allungarlo con del riso cotto. Ma il riso non può sostituire il cibo per gatti: i gatti hanno bisogno di carne ogni giorno."
+    "it": "Sì, un po’ di riso in bianco ogni tanto va bene. Se il cibo per gatti scarseggia, Blue Cross suggerisce perfino di allungarlo con del riso cotto. Ma il riso non può sostituire il cibo per gatti: i gatti hanno bisogno di carne ogni giorno.",
+    "de": "Ja, ein wenig ungewürzter gekochter Reis ist für Katzen ab und zu in Ordnung. Blue Cross empfiehlt sogar, bei knappem Vorrat das Katzenfutter mit gekochtem Reis zu strecken. Reis kann Katzenfutter aber nicht ersetzen: Katzen brauchen jeden Tag Fleisch."
   },
   "why": {
     "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
@@ -55,7 +59,8 @@
     "da": "Blue Cross skriver at hvis kattefoderet skal række i et par dage, kan man supplere det med kogte grøntsager eller ris, men katte har stadig brug for animalsk protein som tilberedt kød eller fisk hver dag. Dyrlæger fra VCA skriver at korn som ris i kæledyrsfoder giver hunde og katte en let fordøjelig energikilde, mens International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater. Blue Cross tilføjer at katte ikke har brug for kulhydrater i skånekost, og VCA skriver at tilberedt kyllingebryst med hvide ris mangler mange essentielle næringsstoffer for hunde og katte.",
     "fi": "Blue Crossin mukaan kissanruokaa voi jatkaa keitetyillä kasviksilla tai riisillä, jos sen on riitettävä muutaman päivän, mutta kissat tarvitsevat silti joka päivä eläinproteiinia, kuten kypsennettyä lihaa tai kalaa. VCA:n eläinlääkärit toteavat, että lemmikinruoassa viljat, kuten riisi, antavat koirille ja kissoille helposti sulavaa energiaa, kun taas International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi. Blue Cross lisää, etteivät kissat tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita koirille ja kissoille.",
     "nb": "Blue Cross sier at hvis kattematen må vare noen dager, kan du strekke den med kokte grønnsaker eller ris, men katter trenger fortsatt animalsk protein som tilberedt kjøtt eller fisk hver dag. Dyrleger hos VCA påpeker at kornslag som ris i kjæledyrmat gir hunder og katter en lettfordøyelig energikilde, mens International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater. Blue Cross legger til at katter ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for hunder og katter.",
-    "it": "Blue Cross afferma che, se il cibo per gatti deve durare qualche giorno, si può allungare con verdure cotte o riso, ma i gatti hanno comunque bisogno ogni giorno di proteine animali come carne o pesce cotti. I veterinari di VCA osservano che negli alimenti per animali i cereali come il riso forniscono a cani e gatti una fonte di energia facilmente digeribile, mentre International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati. Blue Cross aggiunge che i gatti non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per cani e gatti."
+    "it": "Blue Cross afferma che, se il cibo per gatti deve durare qualche giorno, si può allungare con verdure cotte o riso, ma i gatti hanno comunque bisogno ogni giorno di proteine animali come carne o pesce cotti. I veterinari di VCA osservano che negli alimenti per animali i cereali come il riso forniscono a cani e gatti una fonte di energia facilmente digeribile, mentre International Cat Care ricorda che i gatti, in quanto carnivori obbligati, digeriscono e utilizzano meno bene i carboidrati. Blue Cross aggiunge che i gatti non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per cani e gatti.",
+    "de": "Blue Cross sagt, dass Sie Katzenfutter, das ein paar Tage reichen muss, mit gekochtem Gemüse oder Reis strecken können, Katzen aber trotzdem jeden Tag tierisches Eiweiß wie gekochtes Fleisch oder Fisch brauchen. Die Tierärzte von VCA weisen darauf hin, dass Getreide wie Reis in Fertigfutter Hunden und Katzen eine leicht verdauliche Energiequelle liefert, während International Cat Care sagt, dass Katzen als reine Fleischfresser Kohlenhydrate schlechter verdauen und verwerten können. Blue Cross ergänzt, dass Katzen in einer Schonkost keine Kohlenhydrate brauchen, und laut VCA fehlen bei gekochter Hühnerbrust mit weißem Reis viele für Hunde und Katzen wichtige Nährstoffe."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "da": "Lad ris være et lille ekstra ved siden af kattefoderet. Spørg din dyrlæge, før du giver ris til en kat med dårlig mave, for katte har ikke brug for kulhydrater i skånekost.",
     "fi": "Pidä riisi pienenä lisänä kissanruoan rinnalla. Kysy eläinlääkäriltä ennen kuin annat riisiä vatsavaivaiselle kissalle, sillä kissat eivät tarvitse hiilihydraattia kevyessä ruokavaliossa.",
     "nb": "La ris være et lite tillegg ved siden av kattematen. Spør dyrlegen før du gir ris til en katt med urolig mage, siden katter ikke trenger karbohydrater i skånekost.",
-    "it": "Il riso deve restare un piccolo extra accanto al cibo per gatti. Chiedi al veterinario prima di dare riso a un gatto con mal di stomaco, perché i gatti non hanno bisogno di carboidrati in una dieta in bianco."
+    "it": "Il riso deve restare un piccolo extra accanto al cibo per gatti. Chiedi al veterinario prima di dare riso a un gatto con mal di stomaco, perché i gatti non hanno bisogno di carboidrati in una dieta in bianco.",
+    "de": "Reis bleibt nur eine kleine Beigabe zum Katzenfutter. Fragen Sie Ihren Tierarzt, bevor Sie einer Katze mit Magenbeschwerden Reis geben, denn Katzen brauchen in einer Schonkost keine Kohlenhydrate."
   },
   "serving": {
     "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
@@ -78,7 +84,8 @@
     "da": "Lidt almindelige kogte ris uden tilsat salt som et lille ekstra ved siden af kattefoderet.",
     "fi": "Vähän maustamatonta keitettyä riisiä ilman lisättyä suolaa, pienenä lisänä kissanruoan rinnalla.",
     "nb": "Litt naturell kokt ris uten tilsatt salt, som et lite tillegg ved siden av kattematen.",
-    "it": "Un po’ di riso in bianco, senza sale aggiunto, come piccolo extra accanto al cibo per gatti."
+    "it": "Un po’ di riso in bianco, senza sale aggiunto, come piccolo extra accanto al cibo per gatti.",
+    "de": "Ein wenig gekochter Reis ohne Gewürze und Salz, als kleine Beigabe zum Katzenfutter."
   },
   "child": {
     "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
@@ -89,7 +96,8 @@
     "da": "Lidt almindelige kogte ris er fint til en kat en gang imellem. Men katte har mest brug for deres kødfulde kattemad.",
     "fi": "Vähän maustamatonta keitettyä riisiä sopii kissalle joskus. Mutta kissat tarvitsevat ennen kaikkea lihaisaa kissanruokaansa.",
     "nb": "Litt naturell kokt ris er greit for en katt av og til. Men mest av alt trenger katter sin kjøttrike kattemat.",
-    "it": "Un po’ di riso in bianco ogni tanto va bene per il gatto. Ma i gatti hanno bisogno soprattutto del loro cibo per gatti a base di carne."
+    "it": "Un po’ di riso in bianco ogni tanto va bene per il gatto. Ma i gatti hanno bisogno soprattutto del loro cibo per gatti a base di carne.",
+    "de": "Ein bisschen ungewürzter gekochter Reis ist für eine Katze ab und zu in Ordnung. Aber am allermeisten braucht deine Katze ihr fleischiges Katzenfutter."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "da": "Er kylling med ris godt for en kat med dårlig mave?",
         "fi": "Sopiiko kana ja riisi kissalle, jolla on vatsavaivoja?",
         "nb": "Er kylling og ris bra for en katt med urolig mage?",
-        "it": "Pollo e riso fanno bene a un gatto con mal di pancia?"
+        "it": "Pollo e riso fanno bene a un gatto con mal di pancia?",
+        "de": "Sind Huhn und Reis gut für eine Katze mit Bauchweh?"
       },
       "a": {
         "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
@@ -113,7 +122,8 @@
         "da": "Spørg først din dyrlæge. Blue Cross skriver at katte har brug for en kødbaseret kost og ikke har brug for kulhydrater i skånekost, og VCA skriver at tilberedt kyllingebryst med hvide ris mangler mange essentielle næringsstoffer for katte.",
         "fi": "Kysy ensin eläinlääkäriltä. Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota eivätkä tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita kissoilta.",
         "nb": "Spør dyrlegen først. Blue Cross sier at katter trenger et kjøttbasert kosthold og ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for katter.",
-        "it": "Chiedi prima al veterinario. Blue Cross afferma che i gatti hanno bisogno di un’alimentazione a base di carne e non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per i gatti."
+        "it": "Chiedi prima al veterinario. Blue Cross afferma che i gatti hanno bisogno di un’alimentazione a base di carne e non hanno bisogno di carboidrati in una dieta in bianco, e VCA afferma che al petto di pollo cotto con riso bianco mancano molti nutrienti essenziali per i gatti.",
+        "de": "Fragen Sie zuerst Ihren Tierarzt. Blue Cross sagt, dass Katzen eine fleischbasierte Ernährung brauchen und in einer Schonkost keine Kohlenhydrate benötigen, und laut VCA fehlen bei gekochter Hühnerbrust mit weißem Reis viele wichtige Nährstoffe für Katzen."
       }
     }
   ],
@@ -211,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a7eb4b15608863473a831ec360ce875c7bab80a662e28414b9119461d31705f4"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df7454dddc0f5b51e91d00182ed1f92b63a3c5f247ea81e4ebe4d055ebae40ad"
     }
   }
 }
