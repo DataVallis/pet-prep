@@ -4,6 +4,7 @@
   "name": {
     "en": "French fries",
     "sl": "Pomfrit",
+    "es": "Patatas fritas de freidora",
     "cs": "Hranolky",
     "hr": "Pomfrit",
     "sv": "Pommes frites",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can dogs eat french fries?",
     "sl": "Ali lahko psi jedo pomfrit?",
+    "es": "¿Pueden los perros comer patatas fritas de freidora?",
     "cs": "Mohou psi jíst hranolky?",
     "hr": "Smiju li psi jesti pomfrit?",
     "sv": "Får hundar äta pommes frites?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "french-fries",
     "sl": "pomfrit",
+    "es": "patatas-fritas-de-freidora",
     "cs": "hranolky",
     "hr": "pomfrit",
     "sv": "pommes-frites",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "Not recommended. French fries are far too high in calories for dogs and can lead to obesity, and too much salty food is not good for them. A dropped fry is unlikely to cause salt poisoning, and plain cooked potato is fine in small amounts instead.",
     "sl": "Ni priporočljivo. Pomfrit ima za pse veliko preveč kalorij in lahko vodi v debelost, preveč slane hrane pa jim ne koristi. Padel krompirček verjetno ne bo povzročil zastrupitve s soljo, namesto pomfrita pa je v majhnih količinah v redu navaden kuhan krompir.",
+    "es": "No se recomiendan. Las patatas fritas de freidora tienen muchísimas calorías para los perros y pueden provocar obesidad, y demasiada comida salada no les conviene. Es poco probable que una patata frita que se cae al suelo cause una intoxicación por sal; la patata cocida sin nada, en cambio, está bien en pequeñas cantidades.",
     "cs": "Nedoporučuje se. Hranolky mají pro psy příliš mnoho kalorií a mohou vést k obezitě a příliš slané jídlo jim neprospívá. Jeden spadlý hranolek sotva způsobí otravu solí a obyčejný tepelně upravený brambor je v malém množství v pořádku.",
     "hr": "Ne preporučuje se. Pomfrit je previše kaloričan za pse i može dovesti do pretilosti, a previše slane hrane nije dobro za njih. Jedan komadić pomfrita koji je pao na pod vjerojatno neće izazvati trovanje solju, a umjesto toga u malim je količinama u redu običan kuhani krumpir.",
     "sv": "Rekommenderas inte. Pommes frites innehåller alldeles för många kalorier för hundar och kan leda till fetma, och för mycket salt mat är inte bra för dem. En tappad pommes frites orsakar sällan saltförgiftning, och vanlig kokt potatis går bra i små mängder i stället.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
     "sl": "AKC opozarja, da je pri hrani, kot je pomfrit, lahko preveč dobrega, veterinarski nutricionist s Cornella pa pravi, da ima pomfrit veliko preveč kalorij in lahko vodi v debelost ter slab vnos hranil. Zmerna količina slane hrane ne bi smela povzročiti zastrupitve s soljo, preveč slane hrane pa psom ne koristi, zlasti tistim z boleznijo srca, ker lahko povzroči zastajanje tekočine.",
+    "es": "La AKC señala que se puede tener demasiado de algo bueno con alimentos como las patatas fritas, y una veterinaria nutricionista de Cornell dice que las patatas fritas tienen muchísimas calorías y pueden provocar obesidad y una mala ingesta de nutrientes. La comida salada con moderación no debería causar una intoxicación por sal, pero el exceso de comida salada no es bueno para los perros, sobre todo para los que tienen enfermedades del corazón, porque puede causar retención de líquidos.",
     "cs": "AKC upozorňuje, že u jídel jako hranolky se dá snadno přehnat, a veterinární nutriční specialistka z Cornellovy univerzity říká, že hranolky mají příliš mnoho kalorií a mohou vést k obezitě a nedostatečnému příjmu živin. Slané jídlo s mírou by otravu solí způsobit nemělo, ale nadměrné množství slaného jídla psům neprospívá, zvlášť těm se srdečním onemocněním, protože může způsobit zadržování tekutin.",
     "hr": "AKC upozorava da se s hranom poput pomfrita lako pretjera, a veterinarski nutricionist sa Sveučilišta Cornell kaže da je pomfrit previše kaloričan i može dovesti do pretilosti i slabog unosa hranjivih tvari. Slana hrana u umjerenim količinama ne bi smjela izazvati trovanje solju, ali prekomjerna količina slane hrane nije dobra za pse, osobito za one sa srčanom bolešću, jer može izazvati zadržavanje tekućine.",
     "sv": "AKC påpekar att för mycket av något gott kan vara ett problem, och det gäller mat som pommes frites. En veterinärnutritionist vid Cornell säger att pommes frites innehåller alldeles för många kalorier och kan leda till fetma och dåligt näringsintag. Salt mat i måttliga mängder bör inte orsaka saltförgiftning, men alldeles för mycket salt mat är inte bra för hundar, särskilt inte för dem med hjärtsjukdom, eftersom det kan ge vätskeansamling.",
@@ -79,6 +84,12 @@
       "Bruhanje ali driska",
       "Slab apetit ali utrujenost",
       "Opotekanje, tresenje ali krči (preveč soli)"
+    ],
+    "es": [
+      "Mucha sed y muchas ganas de orinar",
+      "Vómitos o diarrea",
+      "Poco apetito o falta de energía",
+      "Tambaleo, temblores o convulsiones (demasiada sal)"
     ],
     "cs": [
       "Silná žízeň a časté močení",
@@ -138,6 +149,7 @@
   "what_to_do": {
     "en": "A fry or two usually needs nothing more than fresh drinking water. If you think your dog has eaten too much salty food, contact your vet straight away.",
     "sl": "Pri enem ali dveh krompirčkih običajno zadošča, da ima pes na voljo svežo vodo. Če mislite, da je pes pojedel preveč slane hrane, takoj pokličite veterinarja.",
+    "es": "Una patata frita o dos suelen requerir solo agua fresca para beber. Si crees que tu perro ha comido demasiada comida salada, ponte en contacto con tu veterinario enseguida.",
     "cs": "Po jednom či dvou hranolcích obvykle stačí čerstvá pitná voda. Pokud si myslíte, že pes snědl příliš mnoho slaného jídla, obraťte se ihned na veterináře.",
     "hr": "Za jedan ili dva komadića obično je dovoljna samo svježa voda za piće. Ako misliš da je pas pojeo previše slane hrane, odmah se obrati veterinaru.",
     "sv": "En eller ett par pommes frites kräver oftast inget mer än färskt dricksvatten. Om du tror att din hund har ätit för mycket salt mat ska du kontakta din veterinär direkt.",
@@ -152,6 +164,7 @@
   "child": {
     "en": "French fries are a salty people snack. Dogs do better with their own treats, so keep the fries for people.",
     "sl": "Pomfrit je slan prigrizek za ljudi. Psom bolj ustrezajo njihovi priboljški, zato naj pomfrit ostane ljudem.",
+    "es": "Las patatas fritas de freidora son un tentempié salado para las personas. A los perros les van mejor sus propios premios, así que deja las patatas fritas para las personas.",
     "cs": "Hranolky jsou slaná svačina pro lidi. Psům víc prospějí jejich vlastní pamlsky, takže hranolky nech lidem.",
     "hr": "Pomfrit je slana grickalica za ljude. Psima su bolje njihove poslastice, zato pomfrit ostavi ljudima.",
     "sv": "Pommes frites är ett salt tilltugg för människor. Hundar mår bättre av sina egna godbitar, så spara pommes fritesen till människorna.",
@@ -167,6 +180,7 @@
       "q": {
         "en": "Is plain potato better than fries?",
         "sl": "Je navaden krompir boljši od pomfrita?",
+        "es": "¿Es mejor la patata sin nada que las patatas fritas?",
         "cs": "Je obyčejný brambor lepší než hranolky?",
         "hr": "Je li obični krumpir bolji od pomfrita?",
         "sv": "Är vanlig potatis bättre än pommes frites?",
@@ -180,6 +194,7 @@
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
         "sl": "Da. Navaden pire ali mehak kuhan krompir je v majhnih količinah v redu, brez masla in začimb.",
+        "es": "Sí. El puré o la patata cocida blanda, sin mantequilla ni especias, están bien en pequeñas cantidades.",
         "cs": "Ano. Obyčejná bramborová kaše nebo měkce uvařené brambory jsou v malém množství v pořádku, bez másla a koření.",
         "hr": "Da. Običan pire ili mekano kuhan krumpir u malim je količinama u redu, bez maslaca i začina.",
         "sv": "Ja. Vanlig potatismos eller mjukt kokt potatis går bra i små mängder, utan smör och kryddor.",
@@ -280,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4367187f4e863dcb4d144ef256585bbe62044cd86bd3bd54aad1aa6553bb24cb"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c2ec113d0fedef05a4011bc6a6d756cce2d7901aeb2e9e808f2f0fbf68427058"
     },
     "cs": {
       "status": "verified",

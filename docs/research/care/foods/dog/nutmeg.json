@@ -4,6 +4,7 @@
   "name": {
     "en": "Nutmeg",
     "sl": "Muškatni orešček",
+    "es": "Nuez moscada",
     "cs": "Muškátový ořech",
     "hr": "Muškatni oraščić",
     "sv": "Muskotnöt",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can dogs eat nutmeg?",
     "sl": "Ali lahko psi jedo muškatni orešček?",
+    "es": "¿Pueden los perros comer nuez moscada?",
     "cs": "Mohou psi jíst muškátový ořech?",
     "hr": "Smiju li psi jesti muškatni oraščić?",
     "sv": "Får hundar äta muskotnöt?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "nutmeg",
     "sl": "muskatni-orescek",
+    "es": "nuez-moscada",
     "cs": "muskatovy-orech",
     "hr": "muskatni-orascic",
     "sv": "muskotnot",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "No, keep nutmeg away from your dog. It contains a toxin called myristicin. The small amount used in baked goods is generally safe, but a large amount of nutmeg can cause hallucinations, disorientation and a fast heart rate.",
     "sl": "Ne, muškatni orešček naj bo zunaj pasjega dosega. Vsebuje strup miristicin. Majhna količina v pecivu je na splošno varna, velika količina muškatnega oreščka pa lahko povzroči halucinacije, zmedenost in hiter srčni utrip.",
+    "es": "No, mantén la nuez moscada lejos de tu perro. Contiene una toxina llamada miristicina. La pequeña cantidad que se usa en productos de panadería suele ser segura, pero una cantidad grande de nuez moscada puede causar alucinaciones, desorientación y aceleración del ritmo cardíaco.",
     "cs": "Ne, muškátový ořech psovi nedávejte. Obsahuje toxin zvaný myristicin. Malé množství použité v pečivu je obvykle bezpečné, ale velké množství muškátového ořechu může způsobit halucinace, dezorientaci a zrychlený tep.",
     "hr": "Ne, muškatni oraščić drži podalje od psa. Sadrži toksin miristicin. Mala količina u pekarskim proizvodima općenito je sigurna, ali velika količina muškatnog oraščića može izazvati halucinacije, dezorijentiranost i ubrzan rad srca.",
     "sv": "Nej, håll muskotnöt borta från din hund. Den innehåller ett gift som heter myristicin. Den lilla mängd som används i bakverk är i allmänhet säker, men en stor mängd muskotnöt kan orsaka hallucinationer, förvirring och snabb hjärtrytm.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
     "sl": "Miristicin lahko v velikih količinah povzroči halucinacije, zmedenost, hitrejši srčni utrip, visok krvni tlak, suha usta, bolečine v trebuhu in morda krče, znaki pa lahko trajajo do 48 ur. Za to bi moral pes pojesti zelo veliko muškatnega oreščka; majhna količina v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Ker začimba sama vsebuje strup, jo uvrščamo med nevarne.",
+    "es": "En cantidades grandes, la miristicina puede causar alucinaciones, desorientación, aceleración del ritmo cardíaco, presión arterial alta, sequedad de boca, dolor de barriga y posiblemente convulsiones, y los síntomas pueden durar hasta 48 horas. Un perro tendría que comer una cantidad muy grande para que esto ocurriera; es muy poco probable que la pequeña cantidad que se usa en las recetas cause problemas graves, aunque podría haber un leve malestar de estómago. Como la propia especia contiene una toxina, la valoramos como peligrosa.",
     "cs": "Ve velkém množství může myristicin způsobit halucinace, dezorientaci, zrychlený tep, vysoký krevní tlak, sucho v ústech, bolest břicha a případně záchvaty a příznaky mohou trvat až 48 hodin. Pes by na to musel sníst opravdu velké množství; malé množství z receptu velmi pravděpodobně vážné potíže nezpůsobí, i když může dojít k mírnému podráždění žaludku. Protože samotné koření obsahuje toxin, hodnotíme ho jako nebezpečné.",
     "hr": "U velikim količinama miristicin može izazvati halucinacije, dezorijentiranost, ubrzan rad srca, visok krvni tlak, suha usta, bol u trbuhu i moguće napadaje, a znakovi mogu trajati i do 48 sati. Pas bi za to morao pojesti vrlo veliku količinu; mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Budući da sam začin sadrži toksin, ocjenjujemo ga kao opasan.",
     "sv": "I stora mängder kan myristicin orsaka hallucinationer, förvirring, snabbare hjärtrytm, högt blodtryck, torr mun, ont i magen och möjligen kramper, och tecknen kan hålla i sig i upp till 48 timmar. En hund skulle behöva äta en mycket stor mängd för att det ska hända; den lilla mängd som används i recept orsakar mycket sällan allvarliga problem, även om lindriga magbesvär kan förekomma. Eftersom själva kryddan innehåller ett gift bedömer vi den som farlig.",
@@ -85,6 +90,15 @@
       "Bolečine v trebuhu",
       "Morda krči",
       "Znaki lahko trajajo do 48 ur"
+    ],
+    "es": [
+      "Malestar de estómago leve (cantidades pequeñas)",
+      "Alucinaciones y desorientación",
+      "Latidos rápidos",
+      "Presión arterial alta y sequedad de boca",
+      "Dolor de barriga",
+      "Posiblemente convulsiones",
+      "Los síntomas pueden durar hasta 48 horas"
     ],
     "cs": [
       "Mírné podráždění žaludku (malé množství)",
@@ -171,6 +185,7 @@
   "what_to_do": {
     "en": "A little nutmeg in a baked treat is very unlikely to cause serious problems. If your dog ate a large amount of nutmeg by accident, call your vet for advice.",
     "sl": "Malo muškatnega oreščka v pecivu le redko povzroči resne težave. Če je pes po nesreči pojedel veliko muškatnega oreščka, pokličite veterinarja za nasvet.",
+    "es": "Es muy poco probable que un poco de nuez moscada en un dulce horneado cause problemas graves. Si tu perro ha comido por accidente una cantidad grande de nuez moscada, llama a tu veterinario para pedirle consejo.",
     "cs": "Trocha muškátového ořechu v upečeném pamlsku velmi pravděpodobně nezpůsobí vážné potíže. Pokud pes omylem snědl velké množství muškátového ořechu, zavolejte veterináři a poraďte se.",
     "hr": "Malo muškatnog oraščića u pekarskoj poslastici vrlo vjerojatno neće izazvati ozbiljne probleme. Ako je pas slučajno pojeo veliku količinu muškatnog oraščića, nazovi veterinara za savjet.",
     "sv": "Lite muskotnöt i ett bakverk orsakar mycket sällan allvarliga problem. Om din hund av misstag har ätit en stor mängd muskotnöt ska du kontakta din veterinär för råd.",
@@ -185,6 +200,7 @@
   "child": {
     "en": "Nutmeg is a spice for people's cooking. It is not for dogs, so keep spice jars where your dog can't reach them.",
     "sl": "Muškatni orešček je začimba za kuhanje. Ni za pse, zato kozarčke z začimbami pospravi tja, kamor pes ne seže.",
+    "es": "La nuez moscada es una especia para que las personas cocinen. No es para los perros, así que guarda los botes de especias donde tu perro no llegue.",
     "cs": "Muškátový ořech je koření do jídel pro lidi. Pro psy není, proto nádobky s kořením ukládej tam, kam se pes nedostane.",
     "hr": "Muškatni oraščić je začin za kuhanje. Nije za pse, zato staklenke s začinima drži tamo gdje ih pas ne može dohvatiti.",
     "sv": "Muskotnöt är en krydda för människors matlagning. Det är inte för hundar, så förvara kryddburkarna där din hund inte når.",
@@ -200,6 +216,7 @@
       "q": {
         "en": "My dog ate a cookie with a little nutmeg. Is that dangerous?",
         "sl": "Pes je pojedel piškot z malo muškatnega oreščka. Je to nevarno?",
+        "es": "Mi perro se ha comido una galleta con un poco de nuez moscada. ¿Es peligroso?",
         "cs": "Můj pes snědl sušenku s trochou muškátového ořechu. Je to nebezpečné?",
         "hr": "Moj je pas pojeo keks s malo muškatnog oraščića. Je li to opasno?",
         "sv": "Min hund åt en kaka med lite muskotnöt. Är det farligt?",
@@ -213,6 +230,7 @@
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
         "sl": "Majhna količina muškatnega oreščka v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Preverite tudi, ali piškot vsebuje ksilitol; nekatero pecivo ga vsebuje, za pse pa je zelo strupen.",
+        "es": "Es muy poco probable que la pequeña cantidad de nuez moscada que se usa en las recetas cause problemas graves, aunque podría haber un leve malestar de estómago. Mira también si la galleta lleva xilitol, que se encuentra en algunos productos de panadería y es muy tóxico.",
         "cs": "Malé množství muškátového ořechu použité v receptech velmi pravděpodobně nezpůsobí vážné potíže, i když může dojít k mírnému podráždění žaludku. Zkontrolujte také, zda sušenka neobsahuje xylitol, který se v některém pečivu vyskytuje a je velmi jedovatý.",
         "hr": "Mala količina muškatnog oraščića koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Provjeri i sadrži li keks ksilitol, koji se nalazi u nekim pekarskim proizvodima i vrlo je otrovan.",
         "sv": "Den lilla mängd muskotnöt som används i recept orsakar mycket sällan allvarliga problem, även om lindriga magbesvär kan förekomma. Kontrollera också om kakan innehåller xylitol, som en del bakverk gör och som är mycket giftigt.",
@@ -296,6 +314,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "86f12959d9874272fddbc7f90aa46bb5cc05e909d29a9402310a7f90f59b82fb"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca4d77ce08a8d9656b018f72cf1bf0677e0f346d71d4b21ee4e8d0c5e7abf2e1"
     },
     "cs": {
       "status": "verified",

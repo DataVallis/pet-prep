@@ -4,6 +4,7 @@
   "name": {
     "en": "Chewing gum",
     "sl": "Žvečilni gumi",
+    "es": "Chicle",
     "cs": "Žvýkačky",
     "hr": "Žvakaća guma",
     "sv": "Tuggummi",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can dogs eat chewing gum?",
     "sl": "Ali lahko psi jedo žvečilni gumi?",
+    "es": "¿Pueden los perros comer chicle?",
     "cs": "Mohou psi jíst žvýkačky?",
     "hr": "Smiju li psi jesti žvakaću gumu?",
     "sv": "Får hundar äta tuggummi?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "chewing-gum",
     "sl": "zvecilni-gumi",
+    "es": "chicle",
     "cs": "zvykacky",
     "hr": "zvakaca-guma",
     "sv": "tuggummi",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "No. Chewing gum is not for dogs. Sugar-free gum almost always contains xylitol, which is as dangerous to dogs as chocolate: it can cause a rapid drop in blood sugar, seizures and liver failure. If your dog eats gum, take it to the vet immediately.",
     "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju.",
+    "es": "No. El chicle no es para los perros. El chicle sin azúcar casi siempre lleva xilitol, que es tan peligroso para los perros como el chocolate: puede causar una bajada rápida del azúcar en la sangre, convulsiones e insuficiencia hepática. Si tu perro se come un chicle, llévalo al veterinario inmediatamente.",
     "cs": "Ne. Žvýkačky psům nepatří. Žvýkačky bez cukru téměř vždy obsahují xylitol, který je pro psy stejně nebezpečný jako čokoláda: může způsobit rychlý pokles hladiny cukru v krvi, záchvaty a selhání jater. Pokud pes snědl žvýkačku, jeďte okamžitě k veterináři.",
     "hr": "Ne. Žvakaća guma nije za pse. Guma bez šećera gotovo uvijek sadrži ksilitol, koji je za pse opasan kao čokolada: može izazvati nagli pad šećera u krvi, napadaje i zatajenje jetre. Ako pas pojede gumu, odmah ga odvedi veterinaru.",
     "sv": "Nej. Tuggummi är inte till för hundar. Sockerfritt tuggummi innehåller nästan alltid xylitol, som är lika farligt för hundar som choklad: det kan orsaka ett snabbt blodsockerfall, kramper och leversvikt. Om din hund äter tuggummi ska du åka till veterinären omedelbart.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
     "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene.",
+    "es": "El xilitol es el ingrediente más común y peligroso de los chicles, y algunos perros desarrollan daño hepático grave tras comerlo. Además, el chicle suele llevar azúcar, edulcorantes artificiales y otros ingredientes que pueden ser tóxicos para los perros, y grandes cantidades de chicle pueden formar una masa en el estómago y causar una obstrucción. Como el chicle sin azúcar casi siempre lleva xilitol, lo valoramos como tóxico.",
     "cs": "Xylitol je nejčastější a nejnebezpečnější přísada ve žvýkačkách a u některých psů po jeho pozření dojde k těžkému poškození jater. Žvýkačky také často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit a způsobit ucpání. Protože žvýkačky bez cukru téměř vždy obsahují xylitol, hodnotíme žvýkačky jako jedovaté.",
     "hr": "Ksilitol je najčešći i najopasniji sastojak žvakaćih guma, a kod nekih pasa nakon što ga pojedu nastane teško oštećenje jetre. Žvakaća guma često sadrži i šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a velike količine gume mogu se zgrudati u želucu i izazvati začepljenje. Budući da guma bez šećera gotovo uvijek sadrži ksilitol, gumu ocjenjujemo kao otrovnu.",
     "sv": "Xylitol är den vanligaste och farligaste ingrediensen i tuggummi, och vissa hundar får svåra leverskador efter att ha ätit det. Tuggummi innehåller dessutom ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och stora mängder tuggummi kan klumpa ihop sig i magen och orsaka stopp. Eftersom sockerfritt tuggummi nästan alltid innehåller xylitol bedömer vi tuggummi som giftigt.",
@@ -83,6 +88,14 @@
       "Krči",
       "Utrujenost in brezvoljnost",
       "Znaki se lahko začnejo že v nekaj minutah"
+    ],
+    "es": [
+      "Vómitos",
+      "Tambaleo o dificultad para caminar",
+      "Temblores",
+      "Convulsiones",
+      "Falta de energía",
+      "Los síntomas pueden empezar en cuestión de minutos"
     ],
     "cs": [
       "Zvracení",
@@ -160,6 +173,7 @@
   "what_to_do": {
     "en": "Take your dog to the vet immediately and call a pet poison helpline for advice. Don't give your dog anything by mouth unless your vet tells you to.",
     "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar.",
+    "es": "Lleva a tu perro al veterinario inmediatamente y llama a una línea de información toxicológica para animales para pedir consejo. No le des nada por la boca a tu perro salvo que tu veterinario te lo indique.",
     "cs": "Jeďte okamžitě k veterináři a pro radu zavolejte na toxikologickou linku pro zvířata. Nepodávejte psovi nic do tlamy, pokud vám to veterinář neporadí.",
     "hr": "Odmah odvedi psa veterinaru i nazovi telefonsku liniju za otrovanja životinja za savjet. Psu ne daj ništa na usta osim ako ti veterinar to ne kaže.",
     "sv": "Åk till veterinären omedelbart och ring giftrådgivningen för djur för råd. Ge inte din hund något genom munnen om inte din veterinär säger det.",
@@ -174,6 +188,7 @@
   "child": {
     "en": "Chewing gum is not for dogs. Keep gum away from your dog, and tell a grown-up right away if your dog eats some.",
     "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje.",
+    "es": "El chicle no es para los perros. Mantén los chicles lejos de tu perro y avisa enseguida a un adulto si tu perro se come alguno.",
     "cs": "Žvýkačky nejsou pro psy. Měj žvýkačky mimo dosah psa a řekni to hned dospělému, když pes nějakou sní.",
     "hr": "Žvakaća guma nije za pse. Gumu drži podalje od psa i odmah reci odrasloj osobi ako je pas pojede.",
     "sv": "Tuggummi är inte för hundar. Håll tuggummi borta från din hund och berätta direkt för en vuxen om din hund äter något.",
@@ -189,6 +204,7 @@
       "q": {
         "en": "Is regular gum with sugar safe for dogs?",
         "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?",
+        "es": "¿Es seguro para los perros el chicle normal con azúcar?",
         "cs": "Je běžná žvýkačka s cukrem pro psy bezpečná?",
         "hr": "Je li obična guma sa šećerom sigurna za pse?",
         "sv": "Är vanligt tuggummi med socker säkert för hundar?",
@@ -202,6 +218,7 @@
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
         "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja.",
+        "es": "No del todo. El chicle suele llevar azúcar, edulcorantes artificiales y otros ingredientes que pueden ser tóxicos para los perros, y mucho chicle puede formar una masa en el estómago. Llama a tu veterinario si tu perro se ha comido alguno.",
         "cs": "Ne tak úplně. Žvýkačky často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit. Pokud pes nějakou snědl, zavolejte veterináři.",
         "hr": "Ne baš. Guma često sadrži šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a mnogo gume može se zgrudati u želucu. Nazovi veterinara ako je pas pojeo gumu.",
         "sv": "Inte direkt. Tuggummi innehåller ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och mycket tuggummi kan klumpa ihop sig i magen. Kontakta din veterinär om din hund har ätit något.",
@@ -217,6 +234,7 @@
       "q": {
         "en": "Which other products contain xylitol?",
         "sl": "Kateri drugi izdelki vsebujejo ksilitol?",
+        "es": "¿Qué otros productos contienen xilitol?",
         "cs": "Které další výrobky obsahují xylitol?",
         "hr": "Koji još proizvodi sadrže ksilitol?",
         "sv": "Vilka andra produkter innehåller xylitol?",
@@ -230,6 +248,7 @@
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
         "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja.",
+        "es": "Algunas golosinas sin azúcar, la pasta de dientes, productos de panadería, medicamentos y preparados para bebidas. En las etiquetas también puede aparecer como azúcar de abedul, azúcar de madera o extracto de corteza de abedul.",
         "cs": "Některé bonbony bez cukru, zubní pasty, pečivo, léky a práškové nápoje. Na etiketách se může uvádět také jako březový cukr, dřevný cukr nebo extrakt z březové kůry.",
         "hr": "Neki bomboni bez šećera, zubne paste, pekarski proizvodi, lijekovi i praškovi za napitke. Na deklaracijama može biti naveden i kao brezov šećer, drvni šećer ili ekstrakt brezove kore.",
         "sv": "Vissa sockerfria godsaker, tandkrämer, bakverk, läkemedel och drickspulver. På innehållsförteckningar kan det också stå björksocker, vedsocker eller björkbarksextrakt.",
@@ -342,6 +361,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5665313aa60313c173e987a842f074cc38a94e7ded62c356b3eb228d3fe15b22"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53966c8b7a92600d8347671f0a60b27d085a98dbf10a0d90726f38ed0879d2a4"
     },
     "cs": {
       "status": "verified",

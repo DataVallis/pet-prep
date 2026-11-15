@@ -3,67 +3,81 @@
   "species": "dog",
   "name": {
     "en": "Water",
-    "sl": "Voda"
+    "sl": "Voda",
+    "es": "Agua"
   },
   "question": {
     "en": "Do dogs need fresh water all the time?",
-    "sl": "Ali psi potrebujejo ves čas svežo vodo?"
+    "sl": "Ali psi potrebujejo ves čas svežo vodo?",
+    "es": "¿Necesitan los perros agua fresca en todo momento?"
   },
   "url_slug": {
     "en": "water",
-    "sl": "voda"
+    "sl": "voda",
+    "es": "agua"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Dogs need fresh, clean drinking water available at all times. Wash the water bowl often, and remember that dogs may need more water in hot weather or when they exercise more. Never restrict your dog's water.",
-    "sl": "Da. Psi morajo imeti ves čas na voljo svežo, čisto pitno vodo. Posodo za vodo pogosto umivajte in pomnite, da pes v vročem vremenu ali ob več gibanja morda potrebuje več vode. Psu vode nikoli ne omejujte."
+    "sl": "Da. Psi morajo imeti ves čas na voljo svežo, čisto pitno vodo. Posodo za vodo pogosto umivajte in pomnite, da pes v vročem vremenu ali ob več gibanja morda potrebuje več vode. Psu vode nikoli ne omejujte.",
+    "es": "Sí. Los perros necesitan tener a su disposición agua limpia y fresca para beber en todo momento. Lava el bebedero a menudo y recuerda que los perros pueden necesitar más agua cuando hace calor o cuando hacen más ejercicio. No le restrinjas nunca el agua a tu perro."
   },
   "why": {
     "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
-    "sl": "Voda je nujna za vse življenje. Koliko pes pije, se lahko spreminja z vremenom, temperaturo in gibanjem. Nenadoma večje pitje lahko pomeni, da je nekaj narobe. S slano vodo je drugače: če psi pijejo slano vodo, je to zanje lahko nevarno."
+    "sl": "Voda je nujna za vse življenje. Koliko pes pije, se lahko spreminja z vremenom, temperaturo in gibanjem. Nenadoma večje pitje lahko pomeni, da je nekaj narobe. S slano vodo je drugače: če psi pijejo slano vodo, je to zanje lahko nevarno.",
+    "es": "El agua es esencial para toda la vida. La cantidad que bebe un perro puede cambiar con el clima, la temperatura y el ejercicio. Un aumento repentino de lo que bebe puede significar que algo va mal. El agua salada es distinta: cuando los perros beben agua salada, puede ser peligroso para ellos."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you think your dog is drinking or peeing more than normal, contact your vet. If your dog shows signs of dehydration, take them to the vet immediately.",
-    "sl": "Če mislite, da pes pije ali lula več kot običajno, pokličite veterinarja. Če ima pes znake dehidracije, ga takoj odpeljite k veterinarju."
+    "sl": "Če mislite, da pes pije ali lula več kot običajno, pokličite veterinarja. Če ima pes znake dehidracije, ga takoj odpeljite k veterinarju.",
+    "es": "Si crees que tu perro bebe u orina más de lo normal, ponte en contacto con tu veterinario. Si tu perro muestra síntomas de deshidratación, llévalo al veterinario inmediatamente."
   },
   "serving": {
     "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
-    "sl": "Sveža, čista voda v pogosto umiti posodi, ves čas na voljo, tudi zunaj, v vročini in na plaži."
+    "sl": "Sveža, čista voda v pogosto umiti posodi, ves čas na voljo, tudi zunaj, v vročini in na plaži.",
+    "es": "Agua limpia y fresca en un bebedero que se lave con frecuencia, disponible en todo momento, también al aire libre, cuando hace calor y en la playa."
   },
   "child": {
     "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
-    "sl": "Psi potrebujejo svežo vodo ves dan. Če preveriš, ali je posoda za vodo polna in čista, zelo pomagaš!"
+    "sl": "Psi potrebujejo svežo vodo ves dan. Če preveriš, ali je posoda za vodo polna in čista, zelo pomagaš!",
+    "es": "Los perros necesitan agua fresca todo el día. ¡Comprobar que el bebedero esté lleno y limpio es una gran forma de ayudar!"
   },
   "faq": [
     {
       "q": {
         "en": "How can I tell if my dog is dehydrated?",
-        "sl": "Kako prepoznam, da je pes dehidriran?"
+        "sl": "Kako prepoznam, da je pes dehidriran?",
+        "es": "¿Cómo puedo saber si mi perro está deshidratado?"
       },
       "a": {
         "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
-        "sl": "Znaki so manj prožna koža, izguba apetita, malo energije, sopihanje, udrte in suhe oči, suh smrček, suhe in lepljive dlesni ter gosta slina. Če jih opazite, psa takoj odpeljite k veterinarju."
+        "sl": "Znaki so manj prožna koža, izguba apetita, malo energije, sopihanje, udrte in suhe oči, suh smrček, suhe in lepljive dlesni ter gosta slina. Če jih opazite, psa takoj odpeljite k veterinarju.",
+        "es": "Los síntomas incluyen pérdida de elasticidad de la piel, pérdida de apetito, poca energía, jadeo, ojos hundidos y de aspecto seco, nariz seca, encías secas y pegajosas y saliva espesa. Lleva a tu perro al veterinario inmediatamente si los ves."
       }
     },
     {
       "q": {
         "en": "Should I limit my dog's water if they drink a lot?",
-        "sl": "Ali naj psu omejim vodo, če veliko pije?"
+        "sl": "Ali naj psu omejim vodo, če veliko pije?",
+        "es": "¿Debo limitarle el agua a mi perro si bebe mucho?"
       },
       "a": {
         "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
-        "sl": "Ne. Psu vode nikoli ne omejujte; vedno naj ima na voljo svežo pitno vodo, če pa pije več kot običajno, pokličite veterinarja."
+        "sl": "Ne. Psu vode nikoli ne omejujte; vedno naj ima na voljo svežo pitno vodo, če pa pije več kot običajno, pokličite veterinarja.",
+        "es": "No. No le restrinjas nunca el agua a tu perro; deja siempre que tenga agua fresca para beber, y ponte en contacto con tu veterinario si bebe más de lo normal."
       }
     },
     {
       "q": {
         "en": "Can dogs drink sea water?",
-        "sl": "Ali lahko psi pijejo morsko vodo?"
+        "sl": "Ali lahko psi pijejo morsko vodo?",
+        "es": "¿Pueden los perros beber agua de mar?"
       },
       "a": {
         "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
-        "sl": "Raje ne: slana voda je za pse lahko nevarna. Na plaži poskrbite, da ima pes vedno na voljo svežo vodo."
+        "sl": "Raje ne: slana voda je za pse lahko nevarna. Na plaži poskrbite, da ima pes vedno na voljo svežo vodo.",
+        "es": "Es mejor que no: el agua salada puede ser peligrosa para los perros. En la playa, asegúrate de que tu perro tenga siempre acceso a agua fresca."
       }
     }
   ],
@@ -173,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4dac23535e6318aadfe6582dc61ac9df7039904c04b6876b08d1051333cdb00f"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "97119757854a4a2369b9ad23723075fe2aef3cb51237d901b6029838d120044e"
     }
   }
 }

@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Sunflower seeds",
-    "sl": "Sončnična semena"
+    "sl": "Sončnična semena",
+    "es": "Semillas de girasol"
   },
   "question": {
     "en": "Can dogs eat sunflower seeds?",
-    "sl": "Ali lahko psi jedo sončnična semena?"
+    "sl": "Ali lahko psi jedo sončnična semena?",
+    "es": "¿Pueden los perros comer semillas de girasol?"
   },
   "url_slug": {
     "en": "sunflower-seeds",
-    "sl": "soncnicna-semena"
+    "sl": "soncnicna-semena",
+    "es": "semillas-de-girasol"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional snack, if they are shelled and unsalted. Give only plain raw or toasted sunflower seeds, never the shells, which are a choking hazard and can't be digested. Too many seeds can upset your dog's stomach.",
-    "sl": "Da, kot občasen prigrizek, če so oluščena in nesoljena. Dajte le navadna surova ali popražena sončnična semena, nikoli lupin, ki lahko povzročijo dušenje in jih pes ne prebavi. Preveč semen lahko psu razdraži želodec."
+    "sl": "Da, kot občasen prigrizek, če so oluščena in nesoljena. Dajte le navadna surova ali popražena sončnična semena, nikoli lupin, ki lahko povzročijo dušenje in jih pes ne prebavi. Preveč semen lahko psu razdraži želodec.",
+    "es": "Sí, como tentempié ocasional, si están peladas y sin sal. Da solo semillas de girasol sencillas, crudas o tostadas, nunca las cáscaras, que son un peligro de atragantamiento y no se pueden digerir. Demasiadas semillas pueden sentar mal al estómago de tu perro."
   },
   "why": {
     "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
-    "sl": "Lupine so zelo trde, med prebavo se ne razgradijo in se lahko zataknejo v prebavilih ter jih zamašijo. Sol v pakiranih semenih psom škodi. Sončnična semena vsebujejo tudi veliko maščob; preveč jih lahko povzroči bruhanje, utrujenost, slabši apetit ali druge prebavne težave."
+    "sl": "Lupine so zelo trde, med prebavo se ne razgradijo in se lahko zataknejo v prebavilih ter jih zamašijo. Sol v pakiranih semenih psom škodi. Sončnična semena vsebujejo tudi veliko maščob; preveč jih lahko povzroči bruhanje, utrujenost, slabši apetit ali druge prebavne težave.",
+    "es": "Las cáscaras son extremadamente duras, no se descomponen durante la digestión y pueden quedarse atascadas en el intestino y causar una obstrucción. La sal de las semillas envasadas es perjudicial para los perros. Las semillas de girasol también tienen mucha grasa, y demasiadas pueden provocar vómitos, falta de energía, menos apetito u otros trastornos de estómago."
   },
   "signs": null,
   "what_to_do": {
     "en": "Give only shelled, unsalted seeds, and talk to your vet before adding sunflower seeds to your dog's diet.",
-    "sl": "Dajte le oluščena, nesoljena semena in se pred dodajanjem sončničnih semen v pasjo prehrano posvetujte z veterinarjem."
+    "sl": "Dajte le oluščena, nesoljena semena in se pred dodajanjem sončničnih semen v pasjo prehrano posvetujte z veterinarjem.",
+    "es": "Da solo semillas peladas y sin sal, y habla con tu veterinario antes de añadir semillas de girasol a la dieta de tu perro."
   },
   "serving": {
     "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
-    "sl": "Oluščena, navadna (nesoljena) surova ali popražena semena, občasno in zmerno."
+    "sl": "Oluščena, navadna (nesoljena) surova ali popražena semena, občasno in zmerno.",
+    "es": "Semillas peladas, sencillas (sin sal), crudas o tostadas, de vez en cuando y en cantidades moderadas."
   },
   "child": {
     "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
-    "sl": "Psi lahko pojedo nekaj navadnih sončničnih semen brez lupin, nikoli pa slanih iz vrečke za prigrizke."
+    "sl": "Psi lahko pojedo nekaj navadnih sončničnih semen brez lupin, nikoli pa slanih iz vrečke za prigrizke.",
+    "es": "Los perros pueden mordisquear unas pocas semillas de girasol sencillas y sin cáscara, pero nunca las saladas de una bolsa de aperitivos."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat sunflower seed shells?",
-        "sl": "Ali lahko psi jedo lupine sončničnih semen?"
+        "sl": "Ali lahko psi jedo lupine sončničnih semen?",
+        "es": "¿Pueden los perros comer las cáscaras de las semillas de girasol?"
       },
       "a": {
         "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
-        "sl": "Ne. Lupine so zelo trde, pes jih ne prebavi, lahko povzročijo dušenje in zamašijo prebavila."
+        "sl": "Ne. Lupine so zelo trde, pes jih ne prebavi, lahko povzročijo dušenje in zamašijo prebavila.",
+        "es": "No. Las cáscaras son extremadamente duras, no se pueden digerir, son un grave peligro de atragantamiento y pueden causar una obstrucción en el intestino."
       }
     }
   ],
@@ -108,6 +118,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b29bce862452d7e88a479a533f54772a59d2aba98656e4e63db3eaace91177a5"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "49b7131a4794cbd7f538f43cc447fd3b188f1e6b7b26276f35e09a6d20d84eff"
     }
   }
 }

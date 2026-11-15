@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Nut butters",
-    "sl": "Oreščkova masla"
+    "sl": "Oreščkova masla",
+    "es": "Cremas de frutos secos"
   },
   "question": {
     "en": "Can dogs eat almond butter and other nut butters?",
-    "sl": "Ali lahko psi jedo mandljevo maslo in druga oreščkova masla?"
+    "sl": "Ali lahko psi jedo mandljevo maslo in druga oreščkova masla?",
+    "es": "¿Pueden los perros comer crema de almendras y otras cremas de frutos secos?"
   },
   "url_slug": {
     "en": "nut-butters",
-    "sl": "oresckova-masla"
+    "sl": "oresckova-masla",
+    "es": "cremas-de-frutos-secos"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Almond butter, yes, in small amounts, if it contains no xylitol. Many almond butters contain salt and sweeteners like xylitol, which is toxic to dogs, so always check the label. Not all nuts are safe: macadamia nuts are very toxic to dogs.",
-    "sl": "Mandljevo maslo da, v majhnih količinah, če ne vsebuje ksilitola. Mnoga mandljeva masla vsebujejo sol in sladila, kot je ksilitol, ki je za pse strupen, zato vedno preberite deklaracijo. Vsi oreščki niso varni: makadamija je za pse zelo strupena."
+    "sl": "Mandljevo maslo da, v majhnih količinah, če ne vsebuje ksilitola. Mnoga mandljeva masla vsebujejo sol in sladila, kot je ksilitol, ki je za pse strupen, zato vedno preberite deklaracijo. Vsi oreščki niso varni: makadamija je za pse zelo strupena.",
+    "es": "La crema de almendras sí, en pequeñas cantidades, si no lleva xilitol. Muchas cremas de almendras llevan sal y edulcorantes como el xilitol, que es tóxico para los perros, así que mira siempre la etiqueta. No todos los frutos secos son seguros: las nueces de macadamia son muy tóxicas para los perros."
   },
   "why": {
     "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
-    "sl": "Mandlji sami za pse niso priporočljivi, malo mandljevega masla pa je lahko varna izbira. Oreščki vsebujejo veliko maščob, preveč mandljevega masla pa lahko povzroči vnetje trebušne slinavke. Nekatera arašidova in druga oreščkova masla vsebujejo ksilitol, sladilo, ki je za pse strupeno."
+    "sl": "Mandlji sami za pse niso priporočljivi, malo mandljevega masla pa je lahko varna izbira. Oreščki vsebujejo veliko maščob, preveč mandljevega masla pa lahko povzroči vnetje trebušne slinavke. Nekatera arašidova in druga oreščkova masla vsebujejo ksilitol, sladilo, ki je za pse strupeno.",
+    "es": "No se recomienda dar almendras a los perros, pero un poco de crema de almendras puede ser una alternativa segura. Los frutos secos tienen mucha grasa, y demasiada crema de almendras puede provocar pancreatitis. Algunas cremas de cacahuete y de otros frutos secos llevan xilitol, un edulcorante que es tóxico para los perros."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you think your dog ate a nut butter containing xylitol, call your vet, an emergency clinic or an animal poison control centre right away.",
-    "sl": "Če mislite, da je pes pojedel oreščkovo maslo s ksilitolom, takoj pokličite veterinarja, dežurno veterinarsko kliniko ali center za zastrupitve živali."
+    "sl": "Če mislite, da je pes pojedel oreščkovo maslo s ksilitolom, takoj pokličite veterinarja, dežurno veterinarsko kliniko ali center za zastrupitve živali.",
+    "es": "Si crees que tu perro ha comido una crema de frutos secos con xilitol, llama enseguida a tu veterinario, a una clínica de urgencias o a una línea de información toxicológica para animales."
   },
   "serving": {
     "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
-    "sl": "Malo mandljevega masla, ki na deklaraciji nima ksilitola; kot občasen priboljšek."
+    "sl": "Malo mandljevega masla, ki na deklaraciji nima ksilitola; kot občasen priboljšek.",
+    "es": "Una pequeña cantidad de crema de almendras cuya etiqueta no incluya xilitol; como premio ocasional."
   },
   "child": {
     "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
-    "sl": "Malo mandljevega masla je lahko priboljšek, a odrasel mora najprej preveriti kozarec. Nekatere vrste za pse niso varne."
+    "sl": "Malo mandljevega masla je lahko priboljšek, a odrasel mora najprej preveriti kozarec. Nekatere vrste za pse niso varne.",
+    "es": "Un poco de crema de almendras puede ser un premio, pero un adulto debe mirar antes el tarro. Algunas clases no son seguras para los perros."
   },
   "faq": [
     {
       "q": {
         "en": "How do I know if a nut butter has xylitol?",
-        "sl": "Kako vem, ali oreščkovo maslo vsebuje ksilitol?"
+        "sl": "Kako vem, ali oreščkovo maslo vsebuje ksilitol?",
+        "es": "¿Cómo sé si una crema de frutos secos lleva xilitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
-        "sl": "Preberite seznam sestavin na deklaraciji, zlasti pri izdelkih z oznako „brez sladkorja“ ali „z malo sladkorja“."
+        "sl": "Preberite seznam sestavin na deklaraciji, zlasti pri izdelkih z oznako „brez sladkorja“ ali „z malo sladkorja“.",
+        "es": "Lee los ingredientes de la etiqueta, sobre todo en los productos marcados como sin azúcar o bajos en azúcar."
       }
     }
   ],
@@ -107,6 +117,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "baae6914425b2c65a4cd666837ffbcc3bb5f5bca8ac2bb76a8b9dfc46ef7d0a1"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5174c018f7657a4e53cafb04b47faa786a5afa459c345b54a7db1d36ea84cc3b"
     }
   }
 }

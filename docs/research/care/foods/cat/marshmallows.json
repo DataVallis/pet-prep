@@ -12,7 +12,8 @@
     "nb": "Marshmallows",
     "it": "Marshmallow",
     "de": "Marshmallows",
-    "fr": "Guimauves"
+    "fr": "Guimauves",
+    "es": "Nubes de azúcar"
   },
   "question": {
     "en": "Can cats eat marshmallows?",
@@ -25,7 +26,8 @@
     "nb": "Kan katter spise marshmallows?",
     "it": "I gatti possono mangiare i marshmallow?",
     "de": "Dürfen Katzen Marshmallows fressen?",
-    "fr": "Les chats peuvent-ils manger des guimauves ?"
+    "fr": "Les chats peuvent-ils manger des guimauves ?",
+    "es": "¿Pueden los gatos comer nubes de azúcar?"
   },
   "url_slug": {
     "en": "marshmallows",
@@ -38,7 +40,8 @@
     "nb": "marshmallows",
     "it": "marshmallow",
     "de": "marshmallows",
-    "fr": "guimauves"
+    "fr": "guimauves",
+    "es": "nubes-de-azucar"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nb": "Nei, katter bør ikke spise marshmallows. De gir katter ingen næringsverdi, for mye sukker kan være et problem for katter, og godteri med marshmallow kan inneholde sjokolade, som er giftig for katter.",
     "it": "No, i gatti non devono mangiare marshmallow. Non apportano ai gatti alcun beneficio nutrizionale, l’eccesso di zucchero può essere un problema e i dolcetti a base di marshmallow possono contenere cioccolato, tossico per i gatti.",
     "de": "Nein, Katzen sollten keine Marshmallows fressen. Sie haben für Katzen keinen Nährwert, zu viel Zucker kann bei Katzen ein Problem sein, und Marshmallow-Süßigkeiten können Schokolade enthalten, die für Katzen giftig ist.",
-    "fr": "Non, les chats ne doivent pas manger de guimauves. Elles n’ont aucun intérêt nutritionnel pour eux, l’excès de sucre peut leur poser problème, et les friandises à base de guimauve peuvent contenir du chocolat, toxique pour les chats."
+    "fr": "Non, les chats ne doivent pas manger de guimauves. Elles n’ont aucun intérêt nutritionnel pour eux, l’excès de sucre peut leur poser problème, et les friandises à base de guimauve peuvent contenir du chocolat, toxique pour les chats.",
+    "es": "No, los gatos no deben comer nubes de azúcar. No les aportan ningún beneficio nutricional, el exceso de azúcar puede ser un problema para los gatos y las golosinas de nubes pueden llevar chocolate, que es tóxico para los gatos."
   },
   "why": {
     "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
@@ -65,7 +69,8 @@
     "nb": "Pet Poison Helpline sier at marshmallows ikke er et godt valg for katter: katter kjenner søtt dårlig, marshmallows gir dem ingen næringsmessig fordel, og for mye sukker kan være et problem. Cats Protection forklarer at sukker ikke er giftig for katter, men likevel usunt, og at det gir unødvendige kalorier som kan føre til vektøkning. Godteri med marshmallow kan også inneholde sjokolade, som er giftig for katter.",
     "it": "Pet Poison Helpline afferma che i marshmallow non sono una buona scelta per i gatti: i gatti hanno una ridotta capacità di percepire il dolce, i marshmallow non offrono loro alcun beneficio nutrizionale e l’eccesso di zucchero può essere un problema. Cats Protection spiega che lo zucchero non è tossico per i gatti ma fa comunque male, perché aggiunge calorie inutili che possono portare a un aumento di peso. I dolcetti a base di marshmallow possono inoltre contenere cioccolato, tossico per i gatti.",
     "de": "Pet Poison Helpline sagt, dass Marshmallows keine gute Wahl für Katzen sind: Katzen können Süßes schlechter schmecken, Marshmallows haben für sie keinen Nährwert, und zu viel Zucker kann ein Problem sein. Cats Protection erklärt, dass Zucker für Katzen nicht giftig, aber trotzdem ungesund ist, weil er unnötige Kalorien liefert, die zu Gewichtszunahme führen können. Marshmallow-Süßigkeiten können außerdem Schokolade enthalten, die für Katzen giftig ist.",
-    "fr": "Le Pet Poison Helpline indique que les guimauves ne sont pas un bon choix pour les chats : leur capacité à percevoir le goût sucré est réduite, les guimauves n’ont aucun intérêt nutritionnel pour eux et l’excès de sucre peut poser problème. Cats Protection explique que le sucre n’est pas toxique pour les chats mais n’est pas bon pour eux : il ajoute des calories inutiles qui peuvent mener à une prise de poids. Les friandises à base de guimauve peuvent aussi contenir du chocolat, toxique pour les chats."
+    "fr": "Le Pet Poison Helpline indique que les guimauves ne sont pas un bon choix pour les chats : leur capacité à percevoir le goût sucré est réduite, les guimauves n’ont aucun intérêt nutritionnel pour eux et l’excès de sucre peut poser problème. Cats Protection explique que le sucre n’est pas toxique pour les chats mais n’est pas bon pour eux : il ajoute des calories inutiles qui peuvent mener à une prise de poids. Les friandises à base de guimauve peuvent aussi contenir du chocolat, toxique pour les chats.",
+    "es": "Pet Poison Helpline dice que las nubes de azúcar no son una buena opción para los gatos: los gatos perciben menos el sabor dulce, las nubes no les aportan ningún beneficio nutricional y el exceso de azúcar puede ser un problema. Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser sano, y añade calorías innecesarias que pueden llevar a engordar. Las golosinas de nubes también pueden llevar chocolate, que es tóxico para los gatos."
   },
   "signs": {
     "en": [
@@ -111,6 +116,10 @@
     "fr": [
       "Diarrhée",
       "Troubles digestifs"
+    ],
+    "es": [
+      "Diarrea",
+      "Malestar de estómago"
     ]
   },
   "what_to_do": {
@@ -124,7 +133,8 @@
     "nb": "Hvis katten har fått i seg marshmallows eller godteri med marshmallow, kontakt dyrlegen eller giftinformasjon for dyr for råd. Hvis godteriet inneholdt sjokolade, kontakt dyrlegen med en gang.",
     "it": "Se il tuo gatto ha mangiato marshmallow o un dolcetto a base di marshmallow, contatta il veterinario o un centro antiveleni veterinario per un consiglio. Se il dolcetto conteneva cioccolato, contatta subito il veterinario.",
     "de": "Ist Ihre Katze an Marshmallows oder einer Marshmallow-Süßigkeit gekommen, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und lassen Sie sich beraten. Enthielt die Süßigkeit Schokolade, wenden Sie sich sofort an Ihren Tierarzt.",
-    "fr": "Si votre chat a mangé des guimauves ou une friandise à base de guimauve, contactez votre vétérinaire ou un centre antipoison vétérinaire pour demander conseil. Si la friandise contenait du chocolat, contactez immédiatement votre vétérinaire."
+    "fr": "Si votre chat a mangé des guimauves ou une friandise à base de guimauve, contactez votre vétérinaire ou un centre antipoison vétérinaire pour demander conseil. Si la friandise contenait du chocolat, contactez immédiatement votre vétérinaire.",
+    "es": "Si tu gato ha comido nubes de azúcar o una golosina de nubes, ponte en contacto con tu veterinario o con una línea de información toxicológica para animales para que te orienten. Si la golosina llevaba chocolate, ponte en contacto con tu veterinario enseguida."
   },
   "serving": null,
   "child": {
@@ -138,7 +148,8 @@
     "nb": "Marshmallows er søtsaker for mennesker. Katter kjenner nesten ikke søtt, så de er ikke for pusen.",
     "it": "I marshmallow sono un dolcetto per le persone. I gatti sentono pochissimo il sapore dolce, quindi non sono per il micio.",
     "de": "Marshmallows sind eine süße Leckerei für Menschen. Katzen schmecken Süßes kaum, deshalb sind sie nichts für deine Katze.",
-    "fr": "Les guimauves sont une friandise sucrée pour les humains. Les chats perçoivent à peine le goût sucré : ce n’est pas pour ton chat."
+    "fr": "Les guimauves sont une friandise sucrée pour les humains. Les chats perçoivent à peine le goût sucré : ce n’est pas pour ton chat.",
+    "es": "Las nubes de azúcar son una golosina dulce para las personas. Los gatos casi no notan el sabor dulce, así que no son para el gatito."
   },
   "faq": [
     {
@@ -153,7 +164,8 @@
         "nb": "Er sukkerfrie marshmallows farlige for katter?",
         "it": "I marshmallow senza zucchero sono pericolosi per i gatti?",
         "de": "Sind zuckerfreie Marshmallows für Katzen gefährlich?",
-        "fr": "Les guimauves sans sucre sont-elles dangereuses pour les chats ?"
+        "fr": "Les guimauves sans sucre sont-elles dangereuses pour les chats ?",
+        "es": "¿Son peligrosas para los gatos las nubes de azúcar sin azúcar?"
       },
       "a": {
         "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
@@ -166,7 +178,8 @@
         "nb": "Noen sukkerfrie marshmallows inneholder xylitol, som er giftig for hunder. Pet Poison Helpline sier at katter ikke ser ut til å bli påvirket av xylitol på samme måte som hunder, men marshmallows er likevel ikke et godt valg for katter.",
         "it": "Alcuni marshmallow senza zucchero contengono xilitolo, tossico per i cani. Pet Poison Helpline afferma che i gatti non sembrano risentire dello xilitolo come i cani, ma i marshmallow restano comunque una scelta poco adatta ai gatti.",
         "de": "Manche zuckerfreien Marshmallows enthalten Xylit, das für Hunde giftig ist. Pet Poison Helpline sagt, dass Katzen von Xylit offenbar nicht so betroffen sind wie Hunde, aber Marshmallows sind trotzdem keine gute Wahl für Katzen.",
-        "fr": "Certaines guimauves sans sucre contiennent du xylitol, toxique pour les chiens. Le Pet Poison Helpline indique que les chats ne semblent pas réagir au xylitol comme les chiens, mais les guimauves ne sont quand même pas un bon choix pour eux."
+        "fr": "Certaines guimauves sans sucre contiennent du xylitol, toxique pour les chiens. Le Pet Poison Helpline indique que les chats ne semblent pas réagir au xylitol comme les chiens, mais les guimauves ne sont quand même pas un bon choix pour eux.",
+        "es": "Algunas nubes sin azúcar llevan xilitol, que es tóxico para los perros. Pet Poison Helpline dice que los gatos no parecen verse afectados por el xilitol como los perros, pero las nubes de azúcar siguen sin ser una buena opción para los gatos."
       }
     }
   ],
@@ -286,6 +299,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "70dee5d3e97f3a1a364216dae436c11d0732dfd8e94bd4801af255165b7314fe"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "354cb5dc170009466726e5aa30a96dc7190735f89e923244bcb6d31368fef53f"
     }
   }
 }

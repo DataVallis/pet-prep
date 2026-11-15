@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Nut butters (almond, walnut …)",
-    "sl": "Maslo iz oreščkov (mandljevo, orehovo …)"
+    "sl": "Maslo iz oreščkov (mandljevo, orehovo …)",
+    "es": "Cremas de frutos secos (de almendra, de nuez …)"
   },
   "question": {
     "en": "Can cats eat nut butters?",
-    "sl": "Ali lahko mačke jedo maslo iz oreščkov?"
+    "sl": "Ali lahko mačke jedo maslo iz oreščkov?",
+    "es": "¿Pueden los gatos comer cremas de frutos secos?"
   },
   "url_slug": {
     "en": "nut-butters",
-    "sl": "maslo-iz-oresckov"
+    "sl": "maslo-iz-oresckov",
+    "es": "cremas-de-frutos-secos"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
-    "sl": "Raje ne. Maslo iz oreščkov je narejeno iz oreščkov, ti pa vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo, bruha ali ima drisko. Nikoli ji ne dajte masla iz makadamij: makadamije so za mačke strupene."
+    "sl": "Raje ne. Maslo iz oreščkov je narejeno iz oreščkov, ti pa vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo, bruha ali ima drisko. Nikoli ji ne dajte masla iz makadamij: makadamije so za mačke strupene.",
+    "es": "Es mejor no dárselas. Las cremas de frutos secos se hacen con frutos secos, que contienen grandes cantidades de aceites y grasas que pueden poner malo a un gato, con vómitos o diarrea. No le des nunca crema de nueces de macadamia: las nueces de macadamia son tóxicas para los gatos."
   },
   "why": {
     "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
-    "sl": "Cats Protection navaja, da oreščki, kot so makadamije, mandlji in orehi, vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo. Veterinarji VCA pravijo, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko ter da so makadamije zelo mastne, lahko povzročijo vnetje trebušne slinavke in so za mačke tudi strupene. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot hrano za ljudi."
+    "sl": "Cats Protection navaja, da oreščki, kot so makadamije, mandlji in orehi, vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo. Veterinarji VCA pravijo, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko ter da so makadamije zelo mastne, lahko povzročijo vnetje trebušne slinavke in so za mačke tudi strupene. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot hrano za ljudi.",
+    "es": "Cats Protection dice que los frutos secos como las nueces de macadamia, las almendras y las nueces contienen grandes cantidades de aceites y grasas que pueden poner malo a un gato. Los veterinarios de VCA dicen que la mayoría de los frutos secos son muy grasos y pueden causar vómitos y diarrea, y que las nueces de macadamia son muy grasas, pueden causar pancreatitis y además son tóxicas para los gatos. Cats Protection aconseja ceñirse a los premios para gatos en lugar de dar comida de personas."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Bruhanje",
       "Driska"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate macadamia nut butter, or seems unwell after eating any nut butter, book an urgent appointment with your vet.",
-    "sl": "Če je mačka pojedla maslo iz makadamij ali se po kateremkoli maslu iz oreščkov ne počuti dobro, se nujno naročite pri veterinarju."
+    "sl": "Če je mačka pojedla maslo iz makadamij ali se po kateremkoli maslu iz oreščkov ne počuti dobro, se nujno naročite pri veterinarju.",
+    "es": "Si tu gato ha comido crema de nueces de macadamia, o parece encontrarse mal después de comer cualquier crema de frutos secos, pide una cita urgente con tu veterinario."
   },
   "serving": null,
   "child": {
     "en": "Nut butters are a people food and too oily for a cat's tummy. Give your cat its own cat treats instead.",
-    "sl": "Maslo iz oreščkov je hrana za ljudi in je preveč mastno za mačji trebušček. Muci raje daj njene priboljške za mačke."
+    "sl": "Maslo iz oreščkov je hrana za ljudi in je preveč mastno za mačji trebušček. Muci raje daj njene priboljške za mačke.",
+    "es": "Las cremas de frutos secos son comida de personas y tienen demasiado aceite para la barriga de un gato. Dale mejor sus propios premios para gatos."
   },
   "faq": [
     {
       "q": {
         "en": "What about peanut butter?",
-        "sl": "Kaj pa arašidovo maslo?"
+        "sl": "Kaj pa arašidovo maslo?",
+        "es": "¿Y la crema de cacahuete?"
       },
       "a": {
         "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
-        "sl": "Arašidovo maslo ima svojo stran. Veterinarji VCA pravijo, da arašidovo maslo ne sme vsebovati konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol."
+        "sl": "Arašidovo maslo ima svojo stran. Veterinarji VCA pravijo, da arašidovo maslo ne sme vsebovati konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol.",
+        "es": "La crema de cacahuete tiene su propia página. Los veterinarios de VCA dicen que cualquier crema de cacahuete debe estar libre de conservantes y de aditivos que pongan en peligro la vida, como el xilitol."
       }
     }
   ],
@@ -92,7 +105,20 @@
   ],
   "updated": "2026-11-15",
   "verification": {
-    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "53c83f6e7cc3cf86ed80b9de72a67a06fae602801df0099ef35f012f7e0699ef"},
-    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "5f21ccf842d0fa9fadedccedab9a501fda79af8352a4f0bb7aef9f93d598cc41"}
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53c83f6e7cc3cf86ed80b9de72a67a06fae602801df0099ef35f012f7e0699ef"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5f21ccf842d0fa9fadedccedab9a501fda79af8352a4f0bb7aef9f93d598cc41"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "489e604d32c474cfbf7e49253fd4514ecf48b61b06b64f430d97f33bfddf35f8"
+    }
   }
 }
