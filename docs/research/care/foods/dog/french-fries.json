@@ -11,7 +11,8 @@
     "fi": "Ranskalaiset perunat",
     "nb": "Pommes frites",
     "it": "Patatine fritte",
-    "de": "Pommes frites"
+    "de": "Pommes frites",
+    "fr": "Frites"
   },
   "question": {
     "en": "Can dogs eat french fries?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä ranskalaisia perunoita?",
     "nb": "Kan hunder spise pommes frites?",
     "it": "I cani possono mangiare le patatine fritte?",
-    "de": "Dürfen Hunde Pommes frites fressen?"
+    "de": "Dürfen Hunde Pommes frites fressen?",
+    "fr": "Les chiens peuvent-ils manger des frites ?"
   },
   "url_slug": {
     "en": "french-fries",
@@ -35,7 +37,8 @@
     "fi": "ranskalaiset-perunat",
     "nb": "pommes-frites",
     "it": "patatine-fritte",
-    "de": "pommes-frites"
+    "de": "pommes-frites",
+    "fr": "frites"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei suositella. Ranskalaiset perunat ovat koiralle aivan liian runsaskalorisia ja voivat johtaa lihavuuteen, eikä liian suolainen ruoka ole niille hyväksi. Lattialle pudonnut ranskalainen tuskin aiheuttaa suolamyrkytystä, ja maustamaton keitetty peruna sopii sen sijaan pieninä määrinä.",
     "nb": "Anbefales ikke. Pommes frites har altfor mange kalorier for hunder og kan føre til fedme, og for mye salt mat er ikke bra for dem. En enkelt pommes frites som faller på gulvet, gir neppe saltforgiftning, og vanlig kokt potet er greit i små mengder i stedet.",
     "it": "Sconsigliate. Le patatine fritte sono troppo caloriche per i cani e possono portare all’obesità, e troppo cibo salato non fa loro bene. Una patatina caduta a terra difficilmente causa un’intossicazione da sale, e al suo posto va bene un po’ di patata cotta senza condimenti, in piccole quantità.",
-    "de": "Nicht empfohlen. Pommes frites haben für Hunde viel zu viele Kalorien und können zu Übergewicht führen, und zu viel Salziges ist nicht gut für sie. Eine heruntergefallene Pommes verursacht wahrscheinlich keine Salzvergiftung. Stattdessen sind kleine Mengen einfache gekochte Kartoffeln in Ordnung."
+    "de": "Nicht empfohlen. Pommes frites haben für Hunde viel zu viele Kalorien und können zu Übergewicht führen, und zu viel Salziges ist nicht gut für sie. Eine heruntergefallene Pommes verursacht wahrscheinlich keine Salzvergiftung. Stattdessen sind kleine Mengen einfache gekochte Kartoffeln in Ordnung.",
+    "fr": "Déconseillé. Les frites sont bien trop caloriques pour les chiens et peuvent mener à l’obésité, et trop d’aliments salés ne leur conviennent pas. Il est peu probable qu’une frite tombée par terre provoque une intoxication au sel ; mieux vaut proposer, en petite quantité, une pomme de terre cuite nature."
   },
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
@@ -60,7 +64,8 @@
     "fi": "AKC toteaa, että liiasta hyvästä voi olla haittaa, ja näin on myös ranskalaisten perunoiden kaltaisten ruokien kohdalla. Cornellin eläinravitsemukseen perehtyneen eläinlääkärin mukaan ranskalaiset ovat aivan liian runsaskalorisia ja voivat johtaa lihavuuteen ja puutteelliseen ravintoaineiden saantiin. Kohtuudella syötynä suolaisen ruoan ei pitäisi aiheuttaa suolamyrkytystä, mutta liian suolainen ruoka ei ole koirille hyväksi, etenkään sydänsairaille, koska se voi aiheuttaa nesteen kertymistä elimistöön.",
     "nb": "AKC påpeker at man kan få for mye av det gode med mat som pommes frites, og en ernæringsdyrlege ved Cornell sier at pommes frites har altfor mange kalorier og kan føre til fedme og dårlig næringsopptak. Salt mat med måte bør ikke gi saltforgiftning, men for mye salt mat er ikke bra for hunder, særlig for dem med hjertesykdom, fordi det kan gi væskeansamling.",
     "it": "L’AKC osserva che con cibi come le patatine fritte è facile esagerare, e un nutrizionista veterinario della Cornell dice che le patatine sono decisamente troppo caloriche e possono portare a obesità e a un apporto scarso di nutrienti. Un po’ di cibo salato non dovrebbe causare intossicazione da sale, ma troppo cibo salato non fa bene ai cani, soprattutto a quelli con malattie cardiache, perché può causare ritenzione di liquidi.",
-    "de": "Der AKC weist darauf hin, dass man es bei Lebensmitteln wie Pommes frites leicht mit dem Guten übertreiben kann, und ein auf Ernährung spezialisierter Tierarzt von Cornell sagt, dass Pommes viel zu kalorienreich sind und zu Übergewicht und einer schlechten Nährstoffversorgung führen können. Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber übermäßig salziges Essen ist für Hunde nicht gut, besonders für Hunde mit Herzerkrankungen, weil es Wassereinlagerungen verursachen kann."
+    "de": "Der AKC weist darauf hin, dass man es bei Lebensmitteln wie Pommes frites leicht mit dem Guten übertreiben kann, und ein auf Ernährung spezialisierter Tierarzt von Cornell sagt, dass Pommes viel zu kalorienreich sind und zu Übergewicht und einer schlechten Nährstoffversorgung führen können. Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber übermäßig salziges Essen ist für Hunde nicht gut, besonders für Hunde mit Herzerkrankungen, weil es Wassereinlagerungen verursachen kann.",
+    "fr": "L’AKC souligne qu’on peut abuser même des bonnes choses avec des aliments comme les frites, et un vétérinaire nutritionniste de Cornell indique que les frites sont bien trop caloriques et peuvent mener à l’obésité et à des apports en nutriments insuffisants. Les aliments salés, avec modération, ne devraient pas provoquer d’intoxication au sel, mais un excès d’aliments salés n’est pas bon pour les chiens, surtout ceux atteints d’une maladie cardiaque, car il peut provoquer une rétention d’eau."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Erbrechen oder Durchfall",
       "Appetitlosigkeit oder Teilnahmslosigkeit",
       "Unsicherer Gang, Zittern oder Krampfanfälle (zu viel Salz)"
+    ],
+    "fr": [
+      "Forte soif et urines abondantes",
+      "Vomissements ou diarrhée",
+      "Perte d’appétit ou manque d’énergie",
+      "Démarche chancelante, tremblements ou convulsions (excès de sel)"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "fi": "Yksi tai kaksi ranskalaista perunaa ei yleensä vaadi muuta kuin raikasta juomavettä. Jos arvelet koirasi syöneen liikaa suolaista ruokaa, ota heti yhteyttä eläinlääkäriin.",
     "nb": "En pommes frites eller to krever vanligvis ikke mer enn friskt drikkevann. Hvis du tror hunden har spist for mye salt mat, må du kontakte dyrlegen med en gang.",
     "it": "Per una patatina o due di solito basta dare acqua fresca da bere. Se pensi che il tuo cane abbia mangiato troppo cibo salato, contatta subito il veterinario.",
-    "de": "Nach einer oder zwei Pommes braucht es meist nur frisches Trinkwasser. Vermuten Sie, dass Ihr Hund zu viel Salziges gefressen hat, wenden Sie sich sofort an Ihren Tierarzt."
+    "de": "Nach einer oder zwei Pommes braucht es meist nur frisches Trinkwasser. Vermuten Sie, dass Ihr Hund zu viel Salziges gefressen hat, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Une frite ou deux ne demandent généralement rien de plus que de l’eau fraîche à volonté. Si vous pensez que votre chien a mangé trop d’aliments salés, contactez immédiatement votre vétérinaire."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "fi": "Ranskalaiset perunat ovat suolainen ihmisten välipala. Koirille sopivat paremmin niiden omat herkut, joten pidä ranskalaiset ihmisten ruokana.",
     "nb": "Pommes frites er salt mat for mennesker. Hunder har det best med sine egne godbiter, så spis pommes fritesen selv.",
     "it": "Le patatine fritte sono uno spuntino salato per le persone. Ai cani fanno meglio i loro premi, quindi lascia le patatine alle persone.",
-    "de": "Pommes sind ein salziger Snack für Menschen. Hunden geht es mit ihren eigenen Leckerlis besser, also lass die Pommes den Menschen."
+    "de": "Pommes sind ein salziger Snack für Menschen. Hunden geht es mit ihren eigenen Leckerlis besser, also lass die Pommes den Menschen.",
+    "fr": "Les frites sont un en-cas salé pour les humains. Les chiens se portent mieux avec leurs propres friandises : garde les frites pour les humains."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "fi": "Onko tavallinen peruna parempaa kuin ranskalaiset?",
         "nb": "Er vanlig potet bedre enn pommes frites?",
         "it": "Le patate senza condimenti sono meglio delle patatine fritte?",
-        "de": "Sind einfache Kartoffeln besser als Pommes?"
+        "de": "Sind einfache Kartoffeln besser als Pommes?",
+        "fr": "Une pomme de terre nature est-elle préférable aux frites ?"
       },
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
@@ -173,7 +187,8 @@
         "fi": "On. Maustamaton perunamuusi tai pehmeäksi keitetyt perunat sopivat pieninä määrinä, ilman voita ja mausteita.",
         "nb": "Ja. Vanlig potetmos eller bløte kokte poteter er greit i små mengder, uten smør eller krydder.",
         "it": "Sì. Le patate senza condimenti, schiacciate o cotte finché sono morbide, vanno bene in piccole quantità, senza burro né spezie.",
-        "de": "Ja. Einfacher Kartoffelbrei oder weich gekochte Kartoffeln sind in kleinen Mengen in Ordnung, ohne Butter und Gewürze."
+        "de": "Ja. Einfacher Kartoffelbrei oder weich gekochte Kartoffeln sind in kleinen Mengen in Ordnung, ohne Butter und Gewürze.",
+        "fr": "Oui. La pomme de terre cuite tendre ou en purée nature convient en petite quantité, sans beurre ni épices."
       }
     }
   ],
@@ -305,6 +320,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "708077ac2db7aacd50fcebe0797e0f6e40da7064cdb9c1770a5d222aab196727"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d48132426bad5c113973e72c37c2834f593652f0aac1e62c03f487951f66dae9"
     }
   }
 }

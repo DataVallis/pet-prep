@@ -10,7 +10,8 @@
     "fi": "Hot dogit",
     "nb": "Hotdoger",
     "it": "Hot dog",
-    "de": "Hot Dogs"
+    "de": "Hot Dogs",
+    "fr": "Hot-dogs"
   },
   "question": {
     "en": "Can cats eat hot dogs?",
@@ -21,7 +22,8 @@
     "fi": "Saako kissa syödä hot dogeja?",
     "nb": "Kan katter spise hotdoger?",
     "it": "I gatti possono mangiare gli hot dog?",
-    "de": "Dürfen Katzen Hot Dogs fressen?"
+    "de": "Dürfen Katzen Hot Dogs fressen?",
+    "fr": "Les chats peuvent-ils manger des hot-dogs ?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -32,7 +34,8 @@
     "fi": "hot-dogit",
     "nb": "hotdoger",
     "it": "hot-dog",
-    "de": "hot-dogs"
+    "de": "hot-dogs",
+    "fr": "hot-dogs"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "fi": "Ei suositella. Hot dogit ovat jalostettua lihaa, jossa on yleensä paljon ylimääräistä suolaa ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille jopa myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita kissoille.",
     "nb": "Det er best å la være. Hotdoger er bearbeidet kjøtt, vanligvis fullt av ekstra salt og krydder, og noen av krydderne kan til og med være giftige for katter. RSPCA Australia anbefaler å unngå pølser og ferdiglagde, tilberedte kjøttprodukter til katter.",
     "it": "Meglio di no. Gli hot dog sono fatti di carne lavorata, di solito ricca di sale e spezie aggiunti, e alcuni aromi potrebbero perfino essere tossici per i gatti. L’RSPCA Australia consiglia di evitare salsicce e carni cotte industriali per i gatti.",
-    "de": "Besser nicht. Hot Dogs sind verarbeitetes Fleisch, meist mit viel zusätzlichem Salz und Gewürzen, und manche zugesetzten Gewürze können für Katzen sogar giftig sein. RSPCA Australia rät, Katzen keine Würstchen und keine industriell hergestellten, gegarten Fleischwaren zu geben."
+    "de": "Besser nicht. Hot Dogs sind verarbeitetes Fleisch, meist mit viel zusätzlichem Salz und Gewürzen, und manche zugesetzten Gewürze können für Katzen sogar giftig sein. RSPCA Australia rät, Katzen keine Würstchen und keine industriell hergestellten, gegarten Fleischwaren zu geben.",
+    "fr": "Mieux vaut éviter. Les hot-dogs sont une viande transformée, généralement riche en sel et en épices ajoutés, et certains assaisonnements peuvent même être toxiques pour les chats. La RSPCA Australia conseille d’éviter les saucisses et les viandes cuites industrielles pour les chats."
   },
   "why": {
     "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
@@ -55,7 +59,8 @@
     "fi": "Purina toteaa, että kalkkunasta tehdyt hot dogit, kalkkunamakkarat, leikkeleet ja muut jalostetut lihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen. RSPCA varoittaa, että jalostetut lihavalmisteet, kuten pekoniin käärityt makkarat (pigs in blankets), sisältävät erittäin paljon suolaa, ja monissa valmisruoissa oleva sipuli ja valkosipuli ovat kissoille myrkyllisiä.",
     "nb": "Purina påpeker at hotdoger av kalkun, kalkunpølse, kjøttpålegg og annet bearbeidet kjøtt vanligvis er fullt av ekstra natrium og krydder, og at noen av krydderne kan være giftige for katter. RSPCA Australia anbefaler å unngå pølser og ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1). RSPCA advarer om at bearbeidet kjøtt som pølser pakket inn i bacon er ekstremt salte, og løk og hvitløk, som finnes i mange ferdiglagde matvarer, er giftig for katter.",
     "it": "Purina osserva che gli hot dog di tacchino, la salsiccia di tacchino, gli affettati e le altre carni lavorate sono di solito pieni di sodio e spezie aggiunti, e alcuni aromi potrebbero essere tossici per i gatti. L’RSPCA Australia consiglia di evitare salsicce e carni cotte industriali perché possono contenere conservanti a base di solfiti, associati a una carenza di tiamina (vitamina B1). L’RSPCA avverte che le carni lavorate come i pigs in blankets (salsicce avvolte nella pancetta) sono ricchissime di sale, e che cipolla e aglio, presenti in molti cibi pronti, sono tossici per i gatti.",
-    "de": "Purina weist darauf hin, dass Puten-Hot-Dogs, Putenwurst, Aufschnitt und anderes verarbeitetes Fleisch meist reichlich zusätzliches Natrium und Gewürze enthalten und manche zugesetzten Gewürze für Katzen giftig sein können. RSPCA Australia rät, Würstchen und industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden. Die RSPCA warnt, dass verarbeitete Fleischwaren wie Würstchen im Speckmantel unglaublich viel Salz enthalten. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig."
+    "de": "Purina weist darauf hin, dass Puten-Hot-Dogs, Putenwurst, Aufschnitt und anderes verarbeitetes Fleisch meist reichlich zusätzliches Natrium und Gewürze enthalten und manche zugesetzten Gewürze für Katzen giftig sein können. RSPCA Australia rät, Würstchen und industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden. Die RSPCA warnt, dass verarbeitete Fleischwaren wie Würstchen im Speckmantel unglaublich viel Salz enthalten. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig.",
+    "fr": "Purina indique que les hot-dogs de dinde, les saucisses de dinde, la charcuterie et les autres viandes transformées sont généralement riches en sodium et en épices ajoutés, et que certains assaisonnements peuvent être toxiques pour les chats. La RSPCA Australia conseille d’éviter les saucisses et les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1). La RSPCA avertit que les viandes transformées, comme les petites saucisses enveloppées de bacon, sont extrêmement salées, et l’oignon et l’ail, présents dans de nombreux plats préparés, sont toxiques pour les chats."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "de": [
       "Magenbeschwerden",
       "Durchfall"
+    ],
+    "fr": [
+      "Troubles digestifs",
+      "Diarrhée"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "fi": "Jos kissasi söi hot dogin, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja tai ripulia, kysy neuvoa eläinlääkäriltä.",
     "nb": "Hvis katten har spist en hotdog som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis katten får urolig mage eller diaré etterpå, ring dyrlegen for råd.",
     "it": "Se il tuo gatto ha mangiato un hot dog che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se poi ha mal di stomaco o diarrea, chiama il veterinario per un consiglio.",
-    "de": "Hat Ihre Katze einen Hot Dog gefressen, der Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie danach Magenbeschwerden oder Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten."
+    "de": "Hat Ihre Katze einen Hot Dog gefressen, der Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie danach Magenbeschwerden oder Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
+    "fr": "Si votre chat a mangé un hot-dog pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. S’il a ensuite des troubles digestifs ou de la diarrhée, appelez votre vétérinaire pour demander conseil."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "fi": "Hot dogit ovat suolainen ihmisten välipala. Kisu on tyytyväisempi omista kissanherkuistaan.",
     "nb": "Hotdoger er salt mat for mennesker. Pusen blir gladere for sine egne kattegodbiter.",
     "it": "Gli hot dog sono uno spuntino salato per le persone. Il micio è più contento con i suoi premi per gatti.",
-    "de": "Hot Dogs sind ein salziger Snack für Menschen. Deine Katze freut sich mehr über ihre eigenen Katzenleckerlis."
+    "de": "Hot Dogs sind ein salziger Snack für Menschen. Deine Katze freut sich mehr über ihre eigenen Katzenleckerlis.",
+    "fr": "Les hot-dogs sont un en-cas salé pour les humains. Ton chat sera plus heureux avec ses propres friandises pour chats."
   },
   "faq": [
     {
@@ -129,7 +140,8 @@
         "fi": "Onko yksi pieni pala haitallinen?",
         "nb": "Er en liten bit skadelig?",
         "it": "Anche un boccone piccolissimo fa male?",
-        "de": "Ist ein winziger Happen schädlich?"
+        "de": "Ist ein winziger Happen schädlich?",
+        "fr": "Une toute petite bouchée est-elle nocive ?"
       },
       "a": {
         "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
@@ -140,7 +152,8 @@
         "fi": "Pieni pala maustamatonta jalostettua kalkkunalihaa, kuten kalkkunahot dogia, ei välttämättä tee paljon haittaa, mutta sitä ei kannata antaa säännöllisesti, ja maustetuissa hot dogeissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
         "nb": "En liten bit ukrydret, bearbeidet kalkunkjøtt, for eksempel en kalkunhotdog, gjør kanskje ikke stor skade, men det er best å ikke gi det jevnlig, og krydrede hotdoger kan inneholde løk eller hvitløk, som er giftig for katter.",
         "it": "Un pezzettino di carne di tacchino lavorata e non condita, come un hot dog di tacchino, potrebbe non fare grandi danni, ma è meglio non darlo con regolarità, e gli hot dog conditi possono contenere cipolla o aglio, tossici per i gatti.",
-        "de": "Ein winziges Stück ungewürztes, verarbeitetes Putenfleisch, etwa ein Puten-Hot-Dog, schadet vielleicht nicht viel, sollte aber besser nicht regelmäßig gefüttert werden. Gewürzte Hot Dogs können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind."
+        "de": "Ein winziges Stück ungewürztes, verarbeitetes Putenfleisch, etwa ein Puten-Hot-Dog, schadet vielleicht nicht viel, sollte aber besser nicht regelmäßig gefüttert werden. Gewürzte Hot Dogs können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
+        "fr": "Un tout petit morceau de viande de dinde transformée non assaisonnée, comme un hot-dog de dinde, ne fera peut-être pas beaucoup de mal, mais mieux vaut ne pas en donner régulièrement, et les hot-dogs assaisonnés peuvent contenir de l’oignon ou de l’ail, toxiques pour les chats."
       }
     }
   ],
@@ -255,6 +268,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5210bc1c16438ab88853a7237b9ce83dbb73e16a3f6626aadd52ce3c41e370cf"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68be8dbcc89b7cf9e0f29b546d7ccc85aea6b5ddd2849c5e599794b89ebcbf57"
     }
   }
 }

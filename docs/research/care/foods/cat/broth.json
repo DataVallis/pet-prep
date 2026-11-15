@@ -10,7 +10,8 @@
     "fi": "Liemi",
     "nb": "Buljong og kraft",
     "it": "Brodo",
-    "de": "Brühe und Fond"
+    "de": "Brühe und Fond",
+    "fr": "Bouillon"
   },
   "question": {
     "en": "Can cats have broth?",
@@ -21,7 +22,8 @@
     "fi": "Saako kissa juoda lientä?",
     "nb": "Kan katter få buljong?",
     "it": "I gatti possono bere il brodo?",
-    "de": "Dürfen Katzen Brühe bekommen?"
+    "de": "Dürfen Katzen Brühe bekommen?",
+    "fr": "Les chats peuvent-ils avoir du bouillon ?"
   },
   "url_slug": {
     "en": "broth",
@@ -32,7 +34,8 @@
     "fi": "liemi",
     "nb": "buljong-og-kraft",
     "it": "brodo",
-    "de": "bruehe"
+    "de": "bruehe",
+    "fr": "bouillon"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "fi": "Saa, vähän maustamatonta lientä sopii. Eläinlääkärit ehdottavat pientä määrää vähäsuolaista, ilman mausteita tehtyä kanalientä kissan juomaveden maustamiseen. Ihmisille tarkoitetut liemet tai liemikuutiot voivat olla hyvin suolaisia, ja niissä voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
     "nb": "Ja, litt naturell buljong er greit. Dyrleger foreslår en liten mengde natriumfattig kyllingbuljong uten tilsatt krydder for å gi kattens vann litt smak. Buljong- og kraftterninger til mennesker kan være veldig salte og kan inneholde løk eller hvitløk, som er giftig for katter.",
     "it": "Sì, un po’ di brodo semplice va bene. I veterinari suggeriscono una piccola quantità di brodo di pollo a basso contenuto di sodio, senza spezie aggiunte, per insaporire l’acqua del gatto. Il brodo o i dadi da brodo per le persone possono essere molto salati e contenere cipolla o aglio, che sono tossici per i gatti.",
-    "de": "Ja, ein wenig ungewürzte Brühe ist in Ordnung. Tierärzte empfehlen eine kleine Menge salzarme Hühnerbrühe ohne zugesetzte Gewürze, um Katzen das Wasser schmackhaft zu machen. Brühwürfel und Fertigbrühen für Menschen können sehr salzig sein und Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind."
+    "de": "Ja, ein wenig ungewürzte Brühe ist in Ordnung. Tierärzte empfehlen eine kleine Menge salzarme Hühnerbrühe ohne zugesetzte Gewürze, um Katzen das Wasser schmackhaft zu machen. Brühwürfel und Fertigbrühen für Menschen können sehr salzig sein und Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
+    "fr": "Oui, un peu de bouillon nature ne pose pas de problème. Les vétérinaires suggèrent une petite quantité de bouillon de poulet pauvre en sel, sans épices ajoutées, pour parfumer l’eau du chat. Les bouillons et les cubes de bouillon pour humains peuvent être très salés et contenir de l’oignon ou de l’ail, toxiques pour les chats."
   },
   "why": {
     "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
@@ -55,7 +59,8 @@
     "fi": "Cornell Feline Health Centerin mukaan veden maustaminen pienellä määrällä vähäsuolaista kanalientä voi saada kissan juomaan enemmän, ja VCA ehdottaa vähäsuolaista kanalientä ilman lisättyjä mausteita. Liemikuutiot sisältävät paljon natriumia. Sipuli ja valkosipuli, joita on monissa valmisruoissa, ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. Tuftsin eläinlääkärit neuvovat tarkistamaan kaupan liemien ainesosaluettelon huolellisesti.",
     "nb": "Cornell Feline Health Center sier at litt natriumfattig kyllingbuljong i vannet kan få en katt til å drikke mer, og VCA foreslår natriumfattig kyllingbuljong uten tilsatt krydder. Buljongterninger og kraftterninger inneholder mye natrium. Løk og hvitløk, som finnes i mange ferdiglagde matvarer, er giftig for katter selv når de er kokt eller tørket. Dyrleger ved Tufts anbefaler å lese ingredienslisten på kjøpt buljong nøye.",
     "it": "Il Cornell Feline Health Center afferma che insaporire l’acqua con una piccola quantità di brodo di pollo a basso contenuto di sodio può spingere il gatto a bere di più, e VCA suggerisce un brodo di pollo povero di sodio e senza spezie aggiunte. I dadi da brodo contengono grandi quantità di sodio. Cipolla e aglio, presenti in molti cibi pronti, sono tossici per i gatti anche se cotti o essiccati. I veterinari della Tufts consigliano di leggere con attenzione l’elenco degli ingredienti dei brodi industriali.",
-    "de": "Das Cornell Feline Health Center sagt, dass ein wenig salzarme Hühnerbrühe im Wasser eine Katze zum Trinken anregen kann, und VCA empfiehlt salzarme Hühnerbrühe ohne zusätzliche Gewürze. Brühwürfel zur Herstellung von Fond enthalten sehr viel Natrium. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig, auch gekocht oder getrocknet. Die Tierärzte von Tufts raten, bei fertiger Brühe die Zutatenliste genau zu lesen."
+    "de": "Das Cornell Feline Health Center sagt, dass ein wenig salzarme Hühnerbrühe im Wasser eine Katze zum Trinken anregen kann, und VCA empfiehlt salzarme Hühnerbrühe ohne zusätzliche Gewürze. Brühwürfel zur Herstellung von Fond enthalten sehr viel Natrium. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig, auch gekocht oder getrocknet. Die Tierärzte von Tufts raten, bei fertiger Brühe die Zutatenliste genau zu lesen.",
+    "fr": "Le Cornell Feline Health Center indique que parfumer l’eau avec une petite quantité de bouillon de poulet pauvre en sodium peut inciter un chat à boire davantage, et VCA suggère un bouillon de poulet pauvre en sel, sans épices supplémentaires. Les cubes de bouillon contiennent beaucoup de sodium. L’oignon et l’ail, présents dans de nombreux plats préparés, sont toxiques pour les chats, même cuits ou séchés. Les vétérinaires de Tufts conseillent de lire attentivement la liste des ingrédients des bouillons du commerce."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "fi": "Jos kissasi joi lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
     "nb": "Hvis katten har drukket buljong eller kraft med løk eller hvitløk, kontakt dyrlegen så fort som mulig.",
     "it": "Se il tuo gatto ha bevuto brodo che contiene cipolla o aglio, contatta il veterinario il prima possibile.",
-    "de": "Hat Ihre Katze Brühe oder Fond mit Zwiebel oder Knoblauch getrunken, wenden Sie sich so schnell wie möglich an Ihren Tierarzt."
+    "de": "Hat Ihre Katze Brühe oder Fond mit Zwiebel oder Knoblauch getrunken, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
+    "fr": "Si votre chat a bu du bouillon contenant de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible."
   },
   "serving": {
     "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
@@ -78,7 +84,8 @@
     "fi": "Vain maustamatonta, vähäsuolaista lientä, jossa ei ole sipulia, valkosipulia eikä mausteita, vähän kissan veteen sekoitettuna. Turvallisin kotitekoinen liemi on maustamatonta lihaa keitettynä pelkässä vedessä. Jätä liemikuutiot väliin.",
     "nb": "Bare naturell, natriumfattig buljong uten løk, hvitløk eller tilsatt krydder, litt blandet i kattens vann. Den tryggeste hjemmelagde buljongen er usaltet kjøtt kokt i vanlig vann. La kraftterningene ligge.",
     "it": "Solo brodo semplice, a basso contenuto di sodio, senza cipolla, aglio né spezie aggiunte, in piccola quantità mescolato all’acqua del gatto. Il brodo fatto in casa più sicuro è fatto bollendo carne non condita in sola acqua. Niente dadi da brodo.",
-    "de": "Nur ungewürzte, salzarme Brühe ohne Zwiebel, Knoblauch oder zugesetzte Gewürze, ein kleiner Schuss davon im Wasser Ihrer Katze. Am sichersten ist selbst gekochte Brühe aus ungewürztem Fleisch in reinem Wasser. Brühwürfel lassen Sie weg."
+    "de": "Nur ungewürzte, salzarme Brühe ohne Zwiebel, Knoblauch oder zugesetzte Gewürze, ein kleiner Schuss davon im Wasser Ihrer Katze. Am sichersten ist selbst gekochte Brühe aus ungewürztem Fleisch in reinem Wasser. Brühwürfel lassen Sie weg.",
+    "fr": "Uniquement du bouillon nature, pauvre en sel, sans oignon, sans ail et sans épices, un peu mélangé à l’eau de votre chat. Le bouillon maison le plus sûr se prépare avec de la viande non assaisonnée cuite dans de l’eau simple. Évitez les cubes de bouillon."
   },
   "child": {
     "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
@@ -89,7 +96,8 @@
     "fi": "Aikuinen voi lisätä kisun veteen vähän maustamatonta lientä. Ihmisten keitoissa on usein sipulia, joten kysy aina ensin.",
     "nb": "En voksen kan helle litt naturell buljong i pusens vann. Suppe til mennesker har ofte løk i seg, så spør alltid først.",
     "it": "Un adulto può aggiungere un po’ di brodo semplice all’acqua del micio. La zuppa per le persone spesso contiene cipolla, quindi chiedi sempre prima a un adulto.",
-    "de": "Ein Erwachsener kann ein bisschen ungewürzte Brühe ins Wasser der Katze geben. Suppe für Menschen enthält oft Zwiebel, also frag immer vorher nach."
+    "de": "Ein Erwachsener kann ein bisschen ungewürzte Brühe ins Wasser der Katze geben. Suppe für Menschen enthält oft Zwiebel, also frag immer vorher nach.",
+    "fr": "Un adulte peut ajouter un peu de bouillon nature dans l’eau de ton chat. La soupe pour les humains contient souvent de l’oignon : demande toujours d’abord."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "fi": "Voinko käyttää liemikuutiota?",
         "nb": "Kan jeg bruke en kraftterning?",
         "it": "Posso usare un dado da brodo?",
-        "de": "Darf ich einen Brühwürfel verwenden?"
+        "de": "Darf ich einen Brühwürfel verwenden?",
+        "fr": "Puis-je utiliser un cube de bouillon ?"
       },
       "a": {
         "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
@@ -113,7 +122,8 @@
         "fi": "Parempi olla käyttämättä. Liemikuutiot sisältävät paljon natriumia, ja valmisruoissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
         "nb": "Helst ikke. Buljongterninger og kraftterninger inneholder mye natrium, og ferdiglagde matvarer kan inneholde løk eller hvitløk, som er giftig for katter.",
         "it": "Meglio di no. I dadi da brodo contengono grandi quantità di sodio, e i cibi pronti possono contenere cipolla o aglio, che sono tossici per i gatti.",
-        "de": "Besser nicht. Brühwürfel enthalten sehr viel Natrium, und Fertiggerichte können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind."
+        "de": "Besser nicht. Brühwürfel enthalten sehr viel Natrium, und Fertiggerichte können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
+        "fr": "Mieux vaut éviter. Les cubes de bouillon contiennent beaucoup de sodium, et les plats préparés peuvent contenir de l’oignon ou de l’ail, toxiques pour les chats."
       }
     }
   ],
@@ -216,6 +226,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "76976c10495ecc053f721a7190dd87d4bf73ad3737ccd6bd32580bc16e90ec72"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67e501eb62a69a067c5cb80f5e277eef4958168d6ffb0810bea5210648db3f5b"
     }
   }
 }

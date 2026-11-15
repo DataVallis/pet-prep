@@ -11,7 +11,8 @@
     "fi": "Kaurahiutaleet",
     "nb": "Havregrøt",
     "it": "Fiocchi d’avena",
-    "de": "Haferbrei"
+    "de": "Haferbrei",
+    "fr": "Flocons d’avoine"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä kaurahiutaleita?",
     "nb": "Kan hunder spise havregrøt?",
     "it": "I cani possono mangiare i fiocchi d’avena?",
-    "de": "Dürfen Hunde Haferbrei fressen?"
+    "de": "Dürfen Hunde Haferbrei fressen?",
+    "fr": "Les chiens peuvent-ils manger des flocons d’avoine ?"
   },
   "url_slug": {
     "en": "oatmeal",
@@ -35,7 +37,8 @@
     "fi": "kaurahiutaleet",
     "nb": "havregrot",
     "it": "fiocchi-di-avena",
-    "de": "haferbrei"
+    "de": "haferbrei",
+    "fr": "flocons-d-avoine"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Saa, pieninä määrinä. Maustamattomat, maidon sijaan vedellä keitetyt kaurahiutaleet sopivat koirille. Älä koskaan anna maustettuja tai pikakaurahiutaleita, ja jätä pois suola, voi, suklaa ja rusinat.",
     "nb": "Ja, i små mengder. Naturell havregrøt kokt på vann, ikke melk, er greit for hunder. Gi aldri smaksatt eller hurtigkokt havregrøt, og ikke tilsett salt, smør, sjokolade eller rosiner.",
     "it": "Sì, in piccole quantità. I fiocchi d’avena al naturale, cotti in acqua e non nel latte, vanno bene per i cani. Non dare mai fiocchi aromatizzati o istantanei, ed evita sale, burro, cioccolato e uvetta.",
-    "de": "Ja, in kleinen Mengen. Einfacher Haferbrei, mit Wasser statt Milch gekocht, ist für Hunde in Ordnung. Geben Sie niemals Haferbrei mit Geschmack oder Instant-Haferbrei und lassen Sie Salz, Butter, Schokolade und Rosinen weg."
+    "de": "Ja, in kleinen Mengen. Einfacher Haferbrei, mit Wasser statt Milch gekocht, ist für Hunde in Ordnung. Geben Sie niemals Haferbrei mit Geschmack oder Instant-Haferbrei und lassen Sie Salz, Butter, Schokolade und Rosinen weg.",
+    "fr": "Oui, en petites quantités. Des flocons d’avoine nature, cuits à l’eau plutôt qu’au lait, conviennent aux chiens. Ne donnez jamais de flocons aromatisés ou instantanés, et évitez le sel, le beurre, le chocolat et les raisins secs."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
@@ -60,7 +64,8 @@
     "fi": "Kaurahiutaleissa on paljon kuitua, myös liukoista kuitua, joka voi auttaa koiria, joiden suolen toiminta on epäsäännöllistä. Koirat kuitenkin sulattavat maitotuotteita huonosti, raaka kaura on vaikeampi sulattaa, ja runsas kuitu voi aiheuttaa vatsavaivoja, ripulia ja oksentelua; suuri määrä voi johtaa jopa mahalaukun laajenemiseen. Kaurahiutaleissa on myös melko paljon hiilihydraatteja ja kaloreita. Maustetuissa kaurahiutaleissa on usein enemmän sokeria ja niissä voi olla ksylitolia, joka on koirille myrkyllistä, ja pikakaurahiutaleet ovat pitkälle jalostettuja.",
     "nb": "Havregryn har mye fiber, blant annet løselige fibre som kan hjelpe hunder med uregelmessig avføring. Men hunder fordøyer melkeprodukter dårlig, rå havregryn er tyngre å fordøye, og mye fiber kan gi urolig mage, diaré og oppkast; en stor mengde kan til og med føre til oppblåst mage. Havregrøt har også ganske mye karbohydrater og kalorier. Smaksatt havregrøt inneholder ofte mer sukker og kan inneholde xylitol, som er giftig for hunder, og hurtigkokt havregrøt er sterkt bearbeidet.",
     "it": "I fiocchi d’avena sono ricchi di fibre, comprese quelle solubili che possono aiutare i cani con un intestino irregolare. Ma i cani digeriscono male i latticini, l’avena cruda è più difficile da digerire e molte fibre possono causare mal di stomaco, diarrea e vomito; una grande quantità può perfino portare a una dilatazione gastrica. Sono anche abbastanza ricchi di carboidrati e calorie. I fiocchi aromatizzati hanno spesso più zucchero e possono contenere xilitolo, tossico per i cani, e quelli istantanei sono molto lavorati.",
-    "de": "Haferflocken sind reich an Ballaststoffen, auch an löslichen, die Hunden mit unregelmäßigem Stuhlgang helfen können. Aber Hunde vertragen Milchprodukte schlecht, rohe Haferflocken sind schwerer verdaulich, und viele Ballaststoffe können Magenbeschwerden, Durchfall und Erbrechen verursachen. Eine große Menge kann sogar zu einem aufgegasten Magen (Bloat) führen. Haferbrei hat außerdem recht viele Kohlenhydrate und Kalorien. Haferbrei mit Geschmack enthält oft mehr Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet."
+    "de": "Haferflocken sind reich an Ballaststoffen, auch an löslichen, die Hunden mit unregelmäßigem Stuhlgang helfen können. Aber Hunde vertragen Milchprodukte schlecht, rohe Haferflocken sind schwerer verdaulich, und viele Ballaststoffe können Magenbeschwerden, Durchfall und Erbrechen verursachen. Eine große Menge kann sogar zu einem aufgegasten Magen (Bloat) führen. Haferbrei hat außerdem recht viele Kohlenhydrate und Kalorien. Haferbrei mit Geschmack enthält oft mehr Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
+    "fr": "Les flocons d’avoine sont riches en fibres, dont des fibres solubles qui peuvent aider les chiens dont le transit est irrégulier. Mais les chiens digèrent mal les produits laitiers, les flocons crus sont plus difficiles à digérer, et beaucoup de fibres peuvent provoquer des troubles digestifs, de la diarrhée et des vomissements ; une grande quantité peut même entraîner une dilatation de l’estomac (« bloat »). Ils sont aussi assez riches en glucides et en calories. Les flocons aromatisés contiennent souvent plus de sucre et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "fi": "Aloita vähitellen ja seuraa, miten koirasi sen sietää. Jos koirasi vaikuttaa reagoivan huonosti, ota heti yhteyttä eläinlääkäriin.",
     "nb": "Introduser den gradvis, og følg med på hvordan hunden tåler den. Hvis hunden ser ut til å reagere dårlig, kontakt dyrlegen med en gang.",
     "it": "Introducili gradualmente e osserva come li tollera il tuo cane. Se sembra reagire male, contatta subito il veterinario.",
-    "de": "Gewöhnen Sie Ihren Hund schrittweise daran und beobachten Sie, wie er es verträgt. Reagiert Ihr Hund schlecht darauf, wenden Sie sich sofort an Ihren Tierarzt."
+    "de": "Gewöhnen Sie Ihren Hund schrittweise daran und beobachten Sie, wie er es verträgt. Reagiert Ihr Hund schlecht darauf, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Introduisez-les progressivement et observez comment votre chien les supporte. Si votre chien semble mal réagir, contactez immédiatement votre vétérinaire."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
@@ -85,7 +91,8 @@
     "fi": "Maustamattomia, vedellä (ei maidolla) keitettyjä kaurahiutaleita, ei liikaa kerralla. Ei raakoina, ei pikahiutaleina, eikä sokeria, suolaa, voita, suklaata, rusinoita tai makuaineita.",
     "nb": "Naturell havregrøt kokt på vann, ikke melk, og ikke for mye om gangen. Ikke rå, ikke hurtigkokt, og uten sukker, salt, smør, sjokolade, rosiner eller smakstilsetninger.",
     "it": "Fiocchi d’avena al naturale, cotti in acqua e non nel latte, senza esagerare con la quantità. Non crudi, non istantanei e senza zucchero, sale, burro, cioccolato, uvetta o aromi.",
-    "de": "Einfacher, gekochter Haferbrei mit Wasser statt Milch, nicht zu viel auf einmal. Nicht roh, nicht als Instant-Variante und ohne Zucker, Salz, Butter, Schokolade, Rosinen oder Aromen."
+    "de": "Einfacher, gekochter Haferbrei mit Wasser statt Milch, nicht zu viel auf einmal. Nicht roh, nicht als Instant-Variante und ohne Zucker, Salz, Butter, Schokolade, Rosinen oder Aromen.",
+    "fr": "Flocons d’avoine nature cuits à l’eau, et non au lait, sans en donner trop d’un coup. Ni crus, ni instantanés, et sans sucre, sel, beurre, chocolat, raisins secs ni arômes."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
@@ -97,7 +104,8 @@
     "fi": "Koira saa vähän maustamatonta, vedellä keitettyä kaurapuuroa. Makea tai maustettu puuro ei ole koirille.",
     "nb": "Hunder kan få litt naturell havregrøt kokt på vann. Søt eller smaksatt grøt er ikke for hunder.",
     "it": "I cani possono mangiare un po’ di fiocchi d’avena al naturale, cotti in acqua. Il porridge dolce o aromatizzato non è per i cani.",
-    "de": "Hunde dürfen ein wenig ungesüßten Haferbrei haben, der mit Wasser gekocht wurde. Süßer oder aromatisierter Haferbrei ist nichts für Hunde."
+    "de": "Hunde dürfen ein wenig ungesüßten Haferbrei haben, der mit Wasser gekocht wurde. Süßer oder aromatisierter Haferbrei ist nichts für Hunde.",
+    "fr": "Les chiens peuvent manger un peu de porridge nature préparé à l’eau. Le porridge sucré ou aromatisé n’est pas pour les chiens."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "fi": "Saako koira syödä raakaa kauraa?",
         "nb": "Kan hunder spise rå havregryn?",
         "it": "I cani possono mangiare l’avena cruda?",
-        "de": "Dürfen Hunde rohe Haferflocken fressen?"
+        "de": "Dürfen Hunde rohe Haferflocken fressen?",
+        "fr": "Les chiens peuvent-ils manger des flocons d’avoine crus ?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
@@ -123,7 +132,8 @@
         "fi": "Ne on parempi keittää. Ruoan päälle ripoteltuna raaka kaura on koirallesi vain vaikeampaa sulattaa.",
         "nb": "Det er bedre å koke dem. Rå havregryn strødd over maten er bare vanskeligere for hunden å fordøye.",
         "it": "Meglio cuocerla. L’avena cruda sparsa sul cibo è solo più difficile da digerire per il tuo cane.",
-        "de": "Gekocht ist besser. Rohe Haferflocken, über das Futter gestreut, kann Ihr Hund nur schwerer verdauen."
+        "de": "Gekocht ist besser. Rohe Haferflocken, über das Futter gestreut, kann Ihr Hund nur schwerer verdauen.",
+        "fr": "Mieux vaut les cuire. Des flocons crus saupoudrés sur la nourriture sont simplement plus difficiles à digérer pour votre chien."
       }
     },
     {
@@ -137,7 +147,8 @@
         "fi": "Ovatko maustetut pikakaurahiutaleet turvallisia koirille?",
         "nb": "Er smaksatt hurtiggrøt trygg for hunder?",
         "it": "I fiocchi d’avena istantanei aromatizzati sono sicuri per i cani?",
-        "de": "Ist aromatisierter Instant-Haferbrei für Hunde unbedenklich?"
+        "de": "Ist aromatisierter Instant-Haferbrei für Hunde unbedenklich?",
+        "fr": "Les flocons d’avoine instantanés aromatisés sont-ils sans danger pour les chiens ?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
@@ -149,7 +160,8 @@
         "fi": "Eivät. Maustetuissa kaurahiutaleissa on usein ylimääräistä sokeria ja niissä voi olla ksylitolia, joka on koirille myrkyllistä, ja pikakaurahiutaleet ovat voimakkaasti prosessoituja.",
         "nb": "Nei. Smaksatt havregrøt inneholder ofte ekstra sukker og kan inneholde xylitol, som er giftig for hunder, og hurtigkokt havregrøt er sterkt bearbeidet.",
         "it": "No. I fiocchi aromatizzati hanno spesso zucchero in più e possono contenere xilitolo, tossico per i cani, e quelli istantanei sono molto lavorati.",
-        "de": "Nein. Haferbrei mit Geschmack enthält oft zusätzlichen Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet."
+        "de": "Nein. Haferbrei mit Geschmack enthält oft zusätzlichen Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
+        "fr": "Non. Les flocons aromatisés contiennent souvent du sucre en plus et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés."
       }
     }
   ],
@@ -298,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f49dfd8ee2593eceabba92009ba222fdc866b535139d10cd8454ffdb8c920187"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d28d7b9a7901c42e872e6f558812c4a0c52129399c6ac17090e9ab48d955dfc0"
     }
   }
 }

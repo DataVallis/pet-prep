@@ -10,7 +10,8 @@
     "fi": "Sinappi",
     "nb": "Sennep",
     "it": "Senape",
-    "de": "Senf"
+    "de": "Senf",
+    "fr": "Moutarde"
   },
   "question": {
     "en": "Can dogs eat mustard?",
@@ -21,7 +22,8 @@
     "fi": "Saako koira syödä sinappia?",
     "nb": "Kan hunder spise sennep?",
     "it": "I cani possono mangiare la senape?",
-    "de": "Dürfen Hunde Senf fressen?"
+    "de": "Dürfen Hunde Senf fressen?",
+    "fr": "Les chiens peuvent-ils manger de la moutarde ?"
   },
   "url_slug": {
     "en": "mustard",
@@ -32,7 +34,8 @@
     "fi": "sinappi",
     "nb": "sennep",
     "it": "senape",
-    "de": "senf"
+    "de": "senf",
+    "fr": "moutarde"
   },
   "level": "dangerous",
   "answer": {
@@ -44,7 +47,8 @@
     "fi": "Ei saa, älä koskaan anna koirallesi sinappia. Sinapinsiemenet sisältävät yhdisteitä, jotka voivat tulehduttaa koiran mahalaukkua ja suolistoa, ja sinappi voi aiheuttaa oksentelua. Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi olla vakava.",
     "nb": "Nei, du bør aldri gi hunden sennep. Sennepsfrø inneholder stoffer som kan gi betennelse i magen og tarmene hos hunder, og sennep kan gi oppkast. En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan være alvorlig.",
     "it": "No, non dare mai la senape al tuo cane. I semi di senape contengono composti che possono infiammare lo stomaco e l’intestino del cane, e la senape può provocare vomito. Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri.",
-    "de": "Nein, geben Sie Ihrem Hund niemals Senf. Senfkörner enthalten Stoffe, die Magen und Darm eines Hundes entzünden können, und Senf kann Erbrechen verursachen. Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge kann aber ernst werden."
+    "de": "Nein, geben Sie Ihrem Hund niemals Senf. Senfkörner enthalten Stoffe, die Magen und Darm eines Hundes entzünden können, und Senf kann Erbrechen verursachen. Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge kann aber ernst werden.",
+    "fr": "Non, ne donnez jamais de moutarde à votre chien. Les graines de moutarde contiennent des composés qui peuvent irriter l’estomac et l’intestin d’un chien, et la moutarde peut provoquer des vomissements. Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
@@ -55,7 +59,8 @@
     "fi": "Sinappi sisältää sinapinsiemeniä, ja niissä on myrkyllisiä yhdisteitä, jotka voivat johtaa maha-suolitulehdukseen, mahalaukun ja suoliston tulehdukseen. Kaupan sinapissa voi olla myös muita koiralle haitallisia ainesosia. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat. Yksi lähde sanoo yksinkertaisesti, että sinappi voi ärsyttää koiran vatsaa, toinen kutsuu sitä myrkylliseksi, joten noudatamme tiukempaa neuvoa.",
     "nb": "Sennep er laget av sennepsfrø, og de inneholder giftige stoffer som kan gi mage-tarmbetennelse, altså betennelse i magen og tarmene. Sennep fra butikken kan dessuten inneholde andre ingredienser som kan skade hunden. Små hunder reagerer på mindre enn store hunder. En kilde sier bare at sennep kan gi urolig mage, en annen kaller den giftig, så vi følger det strengeste rådet.",
     "it": "La senape è fatta con semi di senape, che contengono composti tossici che possono causare una gastroenterite, un’infiammazione di stomaco e intestino. La senape che si compra al supermercato può contenere anche altri ingredienti dannosi per il cane. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi. Una fonte dice semplicemente che la senape può far venire mal di stomaco al cane, un’altra la definisce tossica, quindi seguiamo il consiglio più severo.",
-    "de": "Senf enthält Senfkörner mit giftigen Stoffen, die zu einer Magen-Darm-Entzündung führen können. Senf aus dem Laden kann außerdem andere Zutaten enthalten, die Ihrem Hund schaden könnten. Kleinere Hunde reagieren schon auf geringere Mengen als größere. Eine Quelle sagt schlicht, Senf könne einem Hund auf den Magen schlagen, eine andere nennt ihn giftig, deshalb folgen wir dem strengeren Rat."
+    "de": "Senf enthält Senfkörner mit giftigen Stoffen, die zu einer Magen-Darm-Entzündung führen können. Senf aus dem Laden kann außerdem andere Zutaten enthalten, die Ihrem Hund schaden könnten. Kleinere Hunde reagieren schon auf geringere Mengen als größere. Eine Quelle sagt schlicht, Senf könne einem Hund auf den Magen schlagen, eine andere nennt ihn giftig, deshalb folgen wir dem strengeren Rat.",
+    "fr": "La moutarde contient des graines de moutarde, qui renferment des composés toxiques pouvant provoquer une gastro-entérite, c’est-à-dire une inflammation de l’estomac et de l’intestin. La moutarde du commerce peut aussi contenir d’autres ingrédients nocifs pour votre chien. Les petits chiens réagissent à de plus petites quantités que les grands. Une source dit simplement que la moutarde peut déranger l’estomac d’un chien, une autre la juge toxique ; nous suivons donc l’avis le plus strict."
   },
   "signs": {
     "en": [
@@ -120,6 +125,13 @@
       "Erbrechen",
       "Durchfall",
       "Bauchschmerzen"
+    ],
+    "fr": [
+      "Refus de manger",
+      "Salivation excessive",
+      "Vomissements",
+      "Diarrhée",
+      "Douleurs au ventre"
     ]
   },
   "what_to_do": {
@@ -131,7 +143,8 @@
     "fi": "Pieni nuolaisu tuskin aiheuttaa ongelmaa. Jos koirasi söi paljon sinappia tai huomaat oireita, kuten oksentelua, kuolaamista tai vatsakipua, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
     "nb": "En liten slikk er neppe noe problem. Hvis hunden har spist mye sennep, eller du ser symptomer som oppkast, sikling eller magesmerter, kontakt dyrlegen så snart som mulig.",
     "it": "Una piccola leccata difficilmente crea problemi. Se il tuo cane ha mangiato molta senape, o noti sintomi come vomito, salivazione eccessiva o mal di pancia, contatta il veterinario il prima possibile.",
-    "de": "Kurzes Ablecken verursacht wahrscheinlich kein Problem. Hat Ihr Hund viel Senf gefressen oder bemerken Sie Anzeichen wie Erbrechen, Sabbern oder Bauchschmerzen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt."
+    "de": "Kurzes Ablecken verursacht wahrscheinlich kein Problem. Hat Ihr Hund viel Senf gefressen oder bemerken Sie Anzeichen wie Erbrechen, Sabbern oder Bauchschmerzen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
+    "fr": "Il est peu probable qu’un petit coup de langue pose problème. Si votre chien a mangé beaucoup de moutarde, ou si vous remarquez des signes comme des vomissements, une salivation excessive ou des douleurs au ventre, contactez votre vétérinaire dès que possible."
   },
   "serving": null,
   "child": {
@@ -143,7 +156,8 @@
     "fi": "Sinappi voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi, poissa koirasi ulottuvilta.",
     "nb": "Sennep kan gi hunder vondt i magen. La den bli på din egen tallerken, langt unna hunden.",
     "it": "La senape può far venire il mal di pancia ai cani. Tienila nel tuo piatto, lontano dal tuo cane.",
-    "de": "Von Senf können Hunde Bauchweh bekommen. Lass ihn auf deinem eigenen Teller, weit weg von deinem Hund."
+    "de": "Von Senf können Hunde Bauchweh bekommen. Lass ihn auf deinem eigenen Teller, weit weg von deinem Hund.",
+    "fr": "La moutarde peut donner mal au ventre aux chiens. Garde-la dans ton assiette, loin de ton chien."
   },
   "faq": [
     {
@@ -156,7 +170,8 @@
         "fi": "Koirani nuolaisi vähän sinappia. Onko se ongelma?",
         "nb": "Hunden min slikket litt sennep. Er det et problem?",
         "it": "Il mio cane ha leccato un po’ di senape. È un problema?",
-        "de": "Mein Hund hat ein bisschen Senf geleckt. Ist das ein Problem?"
+        "de": "Mein Hund hat ein bisschen Senf geleckt. Ist das ein Problem?",
+        "fr": "Mon chien a léché un peu de moutarde. Est-ce un problème ?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
@@ -167,7 +182,8 @@
         "fi": "Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi aiheuttaa vakavan ongelman. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat.",
         "nb": "En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan gi et alvorlig problem. Små hunder reagerer på mindre enn store hunder.",
         "it": "Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi.",
-        "de": "Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge könnte aber ernste Probleme verursachen. Kleinere Hunde reagieren auf weniger als größere."
+        "de": "Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge könnte aber ernste Probleme verursachen. Kleinere Hunde reagieren auf weniger als größere.",
+        "fr": "Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave. Les petits chiens réagissent à de plus petites quantités que les grands."
       }
     },
     {
@@ -180,7 +196,8 @@
         "fi": "Onko jokin sinappi turvallista?",
         "nb": "Finnes det en type sennep som er trygg?",
         "it": "Esiste una senape sicura?",
-        "de": "Ist irgendeine Senfsorte unbedenklich?"
+        "de": "Ist irgendeine Senfsorte unbedenklich?",
+        "fr": "Existe-t-il une moutarde sans danger ?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
@@ -191,7 +208,8 @@
         "fi": "Ei. Kaikkia sinappilajeja pitää välttää, myös kotitekoista, luonnonvaraista, englantilaista ja dijoninsinappia.",
         "nb": "Nei. Alle typer sennep bør unngås, også hjemmelaget sennep, villsennep, engelsk sennep og dijonsennep.",
         "it": "No. Tutti i tipi di senape vanno evitati, compresa quella fatta in casa, quella selvatica, quella inglese e quella di Digione.",
-        "de": "Nein. Verzichten Sie auf jede Senfsorte, auch auf selbst gemachten, Wild-, englischen und Dijon-Senf."
+        "de": "Nein. Verzichten Sie auf jede Senfsorte, auch auf selbst gemachten, Wild-, englischen und Dijon-Senf.",
+        "fr": "Non. Il faut éviter tous les types de moutarde, y compris la moutarde maison, la moutarde sauvage, la moutarde anglaise et la moutarde de Dijon."
       }
     }
   ],
@@ -312,6 +330,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "85ccafd2fcaed098a1a3b24b56d54b3987430358ca8212ee24916d1bf5de779c"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7ea1695b13d22861b5f8d778abaada884ccc2754a028ad8d7a0937ff1fb4932"
     }
   }
 }

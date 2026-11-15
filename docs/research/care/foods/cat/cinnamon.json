@@ -11,7 +11,8 @@
     "fi": "Kaneli",
     "nb": "Kanel",
     "it": "Cannella",
-    "de": "Zimt"
+    "de": "Zimt",
+    "fr": "Cannelle"
   },
   "question": {
     "en": "Can cats eat cinnamon?",
@@ -23,7 +24,8 @@
     "fi": "Saako kissa syödä kanelia?",
     "nb": "Kan katter spise kanel?",
     "it": "I gatti possono mangiare la cannella?",
-    "de": "Dürfen Katzen Zimt fressen?"
+    "de": "Dürfen Katzen Zimt fressen?",
+    "fr": "Les chats peuvent-ils manger de la cannelle ?"
   },
   "url_slug": {
     "en": "cinnamon",
@@ -35,7 +37,8 @@
     "fi": "kaneli",
     "nb": "kanel",
     "it": "cannella",
-    "de": "zimt"
+    "de": "zimt",
+    "fr": "cannelle"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei suositella. ASPCA luokittelee kanelin kissoille myrkyttömäksi, mutta mikä tahansa kasviaines voi aiheuttaa oksentelua ja vatsavaivoja, eikä kissa tarvitse sitä. Kanelöljy on eri asia: se on kissoille myrkyllistä.",
     "nb": "Det er best å la være. ASPCA oppgir at kanel ikke er giftig for katter, men alt plantemateriale kan gi oppkast og urolig mage, og katter har ikke bruk for kanel. Kanelolje er noe annet: den er giftig for katter.",
     "it": "Meglio di no. L’ASPCA classifica la cannella come non tossica per i gatti, ma qualsiasi materiale vegetale può causare vomito e mal di stomaco, e i gatti non ne hanno bisogno. L’olio di cannella è diverso: è tossico per i gatti.",
-    "de": "Besser nicht. Die ASPCA führt Zimt als für Katzen ungiftig auf, aber jedes pflanzliche Material kann Erbrechen und Magenbeschwerden auslösen, und Katzen brauchen ihn nicht. Zimtöl ist etwas anderes: Es ist für Katzen giftig."
+    "de": "Besser nicht. Die ASPCA führt Zimt als für Katzen ungiftig auf, aber jedes pflanzliche Material kann Erbrechen und Magenbeschwerden auslösen, und Katzen brauchen ihn nicht. Zimtöl ist etwas anderes: Es ist für Katzen giftig.",
+    "fr": "Mieux vaut éviter. L’ASPCA classe la cannelle parmi les produits non toxiques pour les chats, mais toute matière végétale peut provoquer des vomissements et des troubles digestifs, et les chats n’en ont pas besoin. L’huile de cannelle, elle, est différente : elle est toxique pour les chats."
   },
   "why": {
     "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
@@ -60,7 +64,8 @@
     "fi": "ASPCA luokittelee kanelin (Cinnamomum zeylanicum) kissoille myrkyttömäksi ja toteaa, että minkä tahansa kasviaineksen syöminen voi aiheuttaa kissoille oksentelua ja vatsavaivoja. PDSA:n mukaan kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion. Cats Protection mainitsee kanelöljyn kissoille myrkyllisten eteeristen öljyjen joukossa. Koska kaneli ei ole kissanruokaa ja sen öljy on haitallista, emme suosittele sitä.",
     "nb": "ASPCA oppgir at kanel (Cinnamomum zeylanicum) ikke er giftig for katter, og påpeker at alt plantemateriale kan gi oppkast og urolig mage hos katter. PDSA sier at katter ikke trenger noe annet enn et fullverdig kosthold. Cats Protection nevner kanelolje blant de eteriske oljene som er giftige for katter. Fordi kanel ikke er kattemat og oljen er skadelig, anbefaler vi det ikke.",
     "it": "L’ASPCA classifica la cannella (Cinnamomum zeylanicum) come non tossica per i gatti e precisa che mangiare qualsiasi materiale vegetale può causare vomito e disturbi gastrointestinali. PDSA ricorda che ai gatti non serve altro che un’alimentazione completa. Cats Protection inserisce l’olio di cannella tra gli oli essenziali tossici per i gatti. Poiché la cannella non è un alimento per gatti e il suo olio è dannoso, non la consigliamo.",
-    "de": "Die ASPCA führt Zimt (Cinnamomum zeylanicum) als für Katzen ungiftig auf und weist darauf hin, dass das Fressen von Pflanzenmaterial bei Katzen Erbrechen und Magen-Darm-Beschwerden auslösen kann. PDSA sagt, dass Katzen außer einer vollwertigen Ernährung nichts brauchen. Cats Protection zählt Zimtöl zu den ätherischen Ölen, die für Katzen giftig sind. Weil Zimt kein Katzenfutter ist und sein Öl schädlich ist, empfehlen wir ihn nicht."
+    "de": "Die ASPCA führt Zimt (Cinnamomum zeylanicum) als für Katzen ungiftig auf und weist darauf hin, dass das Fressen von Pflanzenmaterial bei Katzen Erbrechen und Magen-Darm-Beschwerden auslösen kann. PDSA sagt, dass Katzen außer einer vollwertigen Ernährung nichts brauchen. Cats Protection zählt Zimtöl zu den ätherischen Ölen, die für Katzen giftig sind. Weil Zimt kein Katzenfutter ist und sein Öl schädlich ist, empfehlen wir ihn nicht.",
+    "fr": "L’ASPCA classe la cannelle (Cinnamomum zeylanicum) parmi les produits non toxiques pour les chats, et précise que manger n’importe quelle matière végétale peut provoquer des vomissements et des troubles gastro-intestinaux chez le chat. La PDSA rappelle que les chats n’ont besoin de rien d’autre qu’une alimentation complète. Cats Protection range l’huile de cannelle parmi les huiles essentielles toxiques pour les chats. Comme la cannelle n’est pas un aliment pour chats et que son huile est nocive, nous ne la recommandons pas."
   },
   "signs": {
     "en": [
@@ -102,6 +107,10 @@
     "de": [
       "Erbrechen",
       "Magenbeschwerden"
+    ],
+    "fr": [
+      "Vomissements",
+      "Troubles digestifs"
     ]
   },
   "what_to_do": {
@@ -114,7 +123,8 @@
     "fi": "Jos kissasi söi vähän kanelia, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos kissasi nuoli tai söi kanelöljyä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita.",
     "nb": "Hvis katten har spist litt kanel, følg med på oppkast eller urolig mage. Hvis katten har slikket i seg eller spist kanelolje, kontakt dyrlegen med en gang. Ikke vent på symptomer.",
     "it": "Se il tuo gatto ha mangiato un po’ di cannella, controlla se compaiono vomito o mal di stomaco. Se ha leccato o mangiato olio di cannella, contatta subito il veterinario; non aspettare che compaiano i sintomi.",
-    "de": "Hat Ihre Katze ein wenig Zimt gefressen, achten Sie auf Erbrechen oder Magenbeschwerden. Hat Ihre Katze Zimtöl abgeleckt oder gefressen, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht, bis Anzeichen auftreten."
+    "de": "Hat Ihre Katze ein wenig Zimt gefressen, achten Sie auf Erbrechen oder Magenbeschwerden. Hat Ihre Katze Zimtöl abgeleckt oder gefressen, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht, bis Anzeichen auftreten.",
+    "fr": "Si votre chat a mangé un peu de cannelle, surveillez l’apparition de vomissements ou de troubles digestifs. S’il a léché ou mangé de l’huile de cannelle, contactez immédiatement votre vétérinaire ; n’attendez pas l’apparition de signes."
   },
   "serving": null,
   "child": {
@@ -127,7 +137,8 @@
     "fi": "Kaneli on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse sitä, joten pidä mausteet ja tuoksuöljyt poissa kisun luota.",
     "nb": "Kanel er et krydder til matlaging for mennesker. Katter trenger det ikke, så hold krydder og duftoljer unna pusen.",
     "it": "La cannella è una spezia che le persone usano in cucina. I gatti non ne hanno bisogno, quindi tieni spezie e oli profumati lontani dal micio.",
-    "de": "Zimt ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen ihn nicht, also halte Gewürze und Duftöle von deiner Katze fern."
+    "de": "Zimt ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen ihn nicht, also halte Gewürze und Duftöle von deiner Katze fern.",
+    "fr": "La cannelle est une épice pour la cuisine des humains. Les chats n’en ont pas besoin : garde les épices et les huiles parfumées loin de ton chat."
   },
   "faq": [
     {
@@ -141,7 +152,8 @@
         "fi": "Onko kanelöljy turvallista kissoille?",
         "nb": "Er kanelolje trygg for katter?",
         "it": "L’olio di cannella è sicuro per i gatti?",
-        "de": "Ist Zimtöl für Katzen unbedenklich?"
+        "de": "Ist Zimtöl für Katzen unbedenklich?",
+        "fr": "L’huile de cannelle est-elle sans danger pour les chats ?"
       },
       "a": {
         "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
@@ -153,7 +165,8 @@
         "fi": "Ei. Cats Protectionin mukaan useimmat eteeriset öljyt ovat kissoille myrkyllisiä, ja se mainitsee kanelöljyn niiden joukossa. Pidä kanelöljy ja muut eteeriset öljyt poissa kissan ulottuvilta.",
         "nb": "Nei. Cats Protection sier at de fleste eteriske oljer er giftige for katter, og nevner kanelolje blant dem. Hold kanelolje og andre eteriske oljer unna katten.",
         "it": "No. Cats Protection afferma che la maggior parte degli oli essenziali è tossica per i gatti e cita tra questi l’olio di cannella. Tieni l’olio di cannella e gli altri oli essenziali lontani dal tuo gatto.",
-        "de": "Nein. Cats Protection sagt, dass die meisten ätherischen Öle für Katzen giftig sind, und nennt Zimtöl ausdrücklich. Halten Sie Zimtöl und andere ätherische Öle von Ihrer Katze fern."
+        "de": "Nein. Cats Protection sagt, dass die meisten ätherischen Öle für Katzen giftig sind, und nennt Zimtöl ausdrücklich. Halten Sie Zimtöl und andere ätherische Öle von Ihrer Katze fern.",
+        "fr": "Non. Cats Protection indique que la plupart des huiles essentielles sont toxiques pour les chats et cite l’huile de cannelle parmi elles. Gardez l’huile de cannelle et les autres huiles essentielles hors de portée de votre chat."
       }
     }
   ],
@@ -248,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "55f335ffeeefbf2bcb5d75742bca8356ccd3c5a0222df1275afc3f781eec8eec"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e14be5ad12a6f9cdb7a116dbef3cd2760ffde1c6c05bbc195e6397b512d50253"
     }
   }
 }

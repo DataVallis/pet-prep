@@ -11,7 +11,8 @@
     "fi": "Ruokasooda",
     "nb": "Natron",
     "it": "Bicarbonato di sodio",
-    "de": "Natron"
+    "de": "Natron",
+    "fr": "Bicarbonate de soude"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä ruokasoodaa?",
     "nb": "Kan hunder spise natron?",
     "it": "I cani possono mangiare il bicarbonato di sodio?",
-    "de": "Dürfen Hunde Natron fressen?"
+    "de": "Dürfen Hunde Natron fressen?",
+    "fr": "Les chiens peuvent-ils manger du bicarbonate de soude ?"
   },
   "url_slug": {
     "en": "baking-soda",
@@ -35,7 +37,8 @@
     "fi": "ruokasooda",
     "nb": "natron",
     "it": "bicarbonato-di-sodio",
-    "de": "natron"
+    "de": "natron",
+    "fr": "bicarbonate-de-soude"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei saa, ruokasooda on koiralle haitallista suuren natriumpitoisuutensa vuoksi. Jo pienet määrät voivat olla haitallisia, etenkin pienemmille koirille. Jos koirasi söi ruokasoodaa, soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä.",
     "nb": "Nei, natron er skadelig for hunder på grunn av det høye natriuminnholdet. Selv små mengder kan være farlige, særlig for små hunder. Hvis hunden har spist natron, må du kontakte dyrlegen med en gang, selv om tegnene virker milde.",
     "it": "No, il bicarbonato di sodio fa male ai cani per l’alto contenuto di sodio. Anche piccole quantità possono essere dannose, soprattutto per i cani di piccola taglia. Se il tuo cane ha mangiato del bicarbonato, chiama subito il veterinario, anche se i sintomi sembrano lievi.",
-    "de": "Nein, Natron ist wegen seines hohen Natriumgehalts schlecht für Hunde. Schon kleine Mengen können schaden, besonders bei kleineren Hunden. Hat Ihr Hund Natron gefressen, rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken."
+    "de": "Nein, Natron ist wegen seines hohen Natriumgehalts schlecht für Hunde. Schon kleine Mengen können schaden, besonders bei kleineren Hunden. Hat Ihr Hund Natron gefressen, rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken.",
+    "fr": "Non, le bicarbonate de soude est mauvais pour les chiens à cause de sa forte teneur en sodium. Même de petites quantités peuvent être nocives, surtout pour les petits chiens. Si votre chien en a mangé, appelez immédiatement un vétérinaire, même si les signes semblent légers."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
@@ -60,7 +64,8 @@
     "fi": "Ruokasooda (natriumbikarbonaatti) sekoittaa koiran suolatasapainon ja voi johtaa natriummyrkytykseen. Kun veren natriumpitoisuus nousee, vettä siirtyy pois soluista, myös aivosoluista. Ruokasoodaa on myös kodin tuotteissa, kuten hammastahnassa ja hajunpoistoaineissa.",
     "nb": "Natron (natriumbikarbonat) forstyrrer saltbalansen hos hunder og kan føre til natriumforgiftning. Når natriumnivået i blodet stiger, trekkes vann ut av cellene, også hjerneceller. Natron finnes også i husholdningsprodukter som tannkrem og luktfjernere.",
     "it": "Il bicarbonato di sodio altera l’equilibrio salino del cane e può portare a un’intossicazione da sodio. Quando i livelli di sodio nel sangue salgono, l’acqua viene richiamata fuori dalle cellule, comprese quelle del cervello. Il bicarbonato si trova anche in prodotti di casa come il dentifricio e i deodoranti per ambienti.",
-    "de": "Natron (Natriumhydrogencarbonat) bringt den Salzhaushalt eines Hundes durcheinander und kann zu einer Natriumvergiftung führen. Steigt der Natriumspiegel im Blut, wird den Zellen Wasser entzogen, auch den Gehirnzellen. Natron steckt außerdem in Haushaltsprodukten wie Zahnpasta und Geruchsneutralisierern."
+    "de": "Natron (Natriumhydrogencarbonat) bringt den Salzhaushalt eines Hundes durcheinander und kann zu einer Natriumvergiftung führen. Steigt der Natriumspiegel im Blut, wird den Zellen Wasser entzogen, auch den Gehirnzellen. Natron steckt außerdem in Haushaltsprodukten wie Zahnpasta und Geruchsneutralisierern.",
+    "fr": "Le bicarbonate de soude (bicarbonate de sodium) perturbe l’équilibre en sel de l’organisme du chien et peut provoquer une intoxication au sodium. Quand le taux de sodium dans le sang augmente, l’eau est aspirée hors des cellules, y compris celles du cerveau. On trouve aussi du bicarbonate de soude dans des produits ménagers comme le dentifrice et les désodorisants."
   },
   "signs": {
     "en": [
@@ -142,6 +147,14 @@
       "Muskelzittern oder Gehschwierigkeiten",
       "Schnelle oder angestrengte Atmung",
       "In schweren Fällen Krampfanfälle oder Kollaps"
+    ],
+    "fr": [
+      "Troubles digestifs avec vomissements ou diarrhée occasionnels",
+      "Soif accrue, manque d’énergie",
+      "Vomissements persistants, manque d’énergie marqué",
+      "Tremblements musculaires ou difficulté à marcher",
+      "Respiration rapide ou difficile",
+      "Convulsions ou effondrement dans les cas graves"
     ]
   },
   "what_to_do": {
@@ -154,7 +167,8 @@
     "fi": "Soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä. Älä anna koiralle mitään lääkettä, ellei eläinlääkäri neuvo sitä.",
     "nb": "Kontakt dyrlegen med en gang, selv om tegnene virker milde. Ikke gi hunden medisin med mindre dyrlegen sier det.",
     "it": "Chiama subito il veterinario, anche se i sintomi sembrano lievi. Non dare al tuo cane nessun medicinale, a meno che non sia il veterinario a dirtelo.",
-    "de": "Rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken. Geben Sie Ihrem Hund keine Medikamente, es sei denn, Ihr Tierarzt rät dazu."
+    "de": "Rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken. Geben Sie Ihrem Hund keine Medikamente, es sei denn, Ihr Tierarzt rät dazu.",
+    "fr": "Appelez immédiatement un vétérinaire, même si les signes semblent légers. Ne donnez aucun médicament à votre chien sans l’avis de votre vétérinaire."
   },
   "serving": null,
   "child": {
@@ -167,7 +181,8 @@
     "fi": "Ruokasooda on ruoanlaittoon ja siivoukseen, ei koirille. Pidä pakkaus kaapissa ja kerro aikuiselle, jos koirasi löytää sen.",
     "nb": "Natron er til baking og rengjøring, ikke til hunder. Ha esken i et skap, og si fra til en voksen hvis hunden finner den.",
     "it": "Il bicarbonato serve per cucinare e per pulire, non per i cani. Tieni la scatola in un armadietto e dillo a un adulto se il tuo cane la trova.",
-    "de": "Natron ist zum Kochen und Putzen da, nicht für Hunde. Stell die Packung in den Schrank und sag einem Erwachsenen Bescheid, wenn dein Hund sie findet."
+    "de": "Natron ist zum Kochen und Putzen da, nicht für Hunde. Stell die Packung in den Schrank und sag einem Erwachsenen Bescheid, wenn dein Hund sie findet.",
+    "fr": "Le bicarbonate de soude sert à cuisiner et à nettoyer, pas aux chiens. Range la boîte dans un placard et préviens un adulte si ton chien met la patte dessus."
   },
   "faq": [
     {
@@ -181,7 +196,8 @@
         "fi": "Mistä muualta koirani voi löytää ruokasoodaa?",
         "nb": "Hvor ellers kan hunden finne natron?",
         "it": "Dove altro può trovare il bicarbonato il mio cane?",
-        "de": "Wo könnte mein Hund sonst noch Natron finden?"
+        "de": "Wo könnte mein Hund sonst noch Natron finden?",
+        "fr": "Où mon chien peut-il encore trouver du bicarbonate de soude ?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
@@ -193,7 +209,8 @@
         "fi": "Ruokasoodaa on monissa kotitalouden tuotteissa, myös hammastahnassa ja hajunpoistoaineissa. Säilytä sitä ja siivousaineita kaapeissa, joissa on salpa, tai paikoissa, joihin koira ei ylety.",
         "nb": "Natron finnes i mange husholdningsprodukter, blant annet tannkrem og luktfjernere. Oppbevar det og rengjøringsmidler i skap med lås eller på steder hunden ikke når.",
         "it": "Il bicarbonato si trova in molti prodotti di casa, tra cui dentifricio e deodoranti per ambienti. Conservalo, insieme ai detersivi, in armadietti con chiusura o in posti che il tuo cane non può raggiungere.",
-        "de": "Natron steckt in vielen Haushaltsprodukten, darunter Zahnpasta und Geruchsneutralisierer. Bewahren Sie Natron und Reinigungsmittel in verschließbaren Schränken oder an Orten auf, die für Ihren Hund unerreichbar sind."
+        "de": "Natron steckt in vielen Haushaltsprodukten, darunter Zahnpasta und Geruchsneutralisierer. Bewahren Sie Natron und Reinigungsmittel in verschließbaren Schränken oder an Orten auf, die für Ihren Hund unerreichbar sind.",
+        "fr": "On en trouve dans de nombreux produits ménagers, dont le dentifrice et les désodorisants. Rangez-le, ainsi que les produits d’entretien, dans des placards fermés ou hors de portée de votre chien."
       }
     }
   ],
@@ -307,6 +324,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ef91995b43f6bf17e7e170f959eff75c7b516a6e6342f877d4334bee6528b4f4"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4832ce7652468cd47e1ca504e28b8126f1a1dc68b120100d35e0b8db0aff1ebd"
     }
   }
 }

@@ -11,7 +11,8 @@
     "fi": "Pasta",
     "nb": "Pasta",
     "it": "Pasta",
-    "de": "Pasta"
+    "de": "Pasta",
+    "fr": "Pâtes"
   },
   "question": {
     "en": "Can dogs eat pasta?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä pastaa?",
     "nb": "Kan hunder spise pasta?",
     "it": "I cani possono mangiare la pasta?",
-    "de": "Dürfen Hunde Pasta fressen?"
+    "de": "Dürfen Hunde Pasta fressen?",
+    "fr": "Les chiens peuvent-ils manger des pâtes ?"
   },
   "url_slug": {
     "en": "pasta",
@@ -35,7 +37,8 @@
     "fi": "pasta",
     "nb": "pasta",
     "it": "pasta",
-    "de": "pasta"
+    "de": "pasta",
+    "fr": "pates"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Saa, maustamaton keitetty pasta sopii pieninä määrinä, ja eläinlääkärit käyttävät sitä jopa kevyessä ruokavaliossa, kun koira on sairas. Jätä kastike pois: sipuli ja valkosipuli ovat yleisiä ruoanlaitossa ja koirille myrkyllisiä, vaikka ne olisi kypsennetty.",
     "nb": "Ja, naturell kokt pasta går fint i små mengder, og dyrleger bruker den til og med i skånekost når en hund er syk. Hopp over sausen. Løk og hvitløk er vanlig i matlaging og er giftig for hunder, også tilberedt.",
     "it": "Sì, la pasta cotta in bianco va bene in piccole quantità, e i veterinari la usano perfino in una dieta in bianco quando un cane sta male. Niente sugo: cipolla e aglio sono molto usati in cucina e sono tossici per i cani, anche se cotti.",
-    "de": "Ja, einfache gekochte Pasta ist in kleinen Mengen in Ordnung, und Tierärzte setzen sie sogar in der Schonkost ein, wenn ein Hund krank ist. Verzichten Sie auf Soße: Zwiebel und Knoblauch kommen in vielen Gerichten vor und sind für Hunde auch gekocht giftig."
+    "de": "Ja, einfache gekochte Pasta ist in kleinen Mengen in Ordnung, und Tierärzte setzen sie sogar in der Schonkost ein, wenn ein Hund krank ist. Verzichten Sie auf Soße: Zwiebel und Knoblauch kommen in vielen Gerichten vor und sind für Hunde auch gekocht giftig.",
+    "fr": "Oui, des pâtes cuites nature conviennent en petites quantités, et les vétérinaires en utilisent même dans une alimentation douce quand un chien est malade. Évitez la sauce : l’oignon et l’ail, très courants en cuisine, sont toxiques pour les chiens, même cuits."
   },
   "why": {
     "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
@@ -60,7 +64,8 @@
     "fi": "Dogs Trust luettelee pastan ja maustamattomat nuudelit ruokien joukkoon, joita koira voi yleensä syödä kohtuudella. Cornell mainitsee keitetyn pastan vaihtoehtona, kun koira tarvitsee kevyttä ruokavaliota suolen rauhoittamiseksi, vaikka sellainen ruokavalio ei ole tasapainoinen pitkäaikaiseen ruokintaan. Sipuli, valkosipuli, purjo ja ruohosipuli voivat aiheuttaa koirille anemiaa, ja jopa pienet jäämät niistä kypsennetyssä ruoassa voivat olla myrkyllisiä. Ruoka-aineyliherkkyys, rasvapitoisuus tai annoskoko voivat silti tehdä yksittäisen koiran olon huonoksi.",
     "nb": "Dogs Trust regner opp pasta og naturelle nudler blant menneskematen som hunder vanligvis kan spise med måte. Cornell nevner tilberedt pasta som et alternativ når en hund trenger skånekost for å roe magen, selv om en slik kost ikke er balansert nok til langvarig fôring. Løk, hvitløk, purre og gressløk kan gi blodmangel (anemi) hos hunder, og selv rester i tilberedt mat kan være giftige. Intoleranse, fettinnhold eller porsjonsstørrelse kan likevel gi enkelte hunder urolig mage.",
     "it": "Dogs Trust inserisce la pasta e i noodles semplici tra gli alimenti per le persone che i cani di solito possono mangiare con moderazione. La Cornell indica la pasta cotta come un’opzione quando un cane ha bisogno di una dieta in bianco per calmare l’intestino, anche se questa dieta non è equilibrata per un’alimentazione a lungo termine. Cipolle, aglio, porri ed erba cipollina possono causare anemia nei cani, e anche tracce nel cibo cotto possono essere tossiche. Intolleranze, contenuto di grassi o dimensione della porzione possono comunque dare fastidio a un singolo cane.",
-    "de": "Dogs Trust zählt Pasta und einfache Nudeln zu den Lebensmitteln für Menschen, die Hunde in Maßen meist fressen dürfen. Cornell nennt gekochte Pasta als eine Option, wenn ein Hund eine Schonkost braucht, um den Magen-Darm-Trakt zu beruhigen, auch wenn eine solche Kost für die Dauerfütterung nicht ausgewogen ist. Zwiebeln, Knoblauch, Lauch und Schnittlauch können bei Hunden eine Blutarmut verursachen, und selbst Spuren in gekochtem Essen können giftig sein. Unverträglichkeit, Fettgehalt oder Portionsgröße können einem einzelnen Hund trotzdem auf den Magen schlagen."
+    "de": "Dogs Trust zählt Pasta und einfache Nudeln zu den Lebensmitteln für Menschen, die Hunde in Maßen meist fressen dürfen. Cornell nennt gekochte Pasta als eine Option, wenn ein Hund eine Schonkost braucht, um den Magen-Darm-Trakt zu beruhigen, auch wenn eine solche Kost für die Dauerfütterung nicht ausgewogen ist. Zwiebeln, Knoblauch, Lauch und Schnittlauch können bei Hunden eine Blutarmut verursachen, und selbst Spuren in gekochtem Essen können giftig sein. Unverträglichkeit, Fettgehalt oder Portionsgröße können einem einzelnen Hund trotzdem auf den Magen schlagen.",
+    "fr": "Dogs Trust classe les pâtes et les nouilles nature parmi les aliments pour humains que les chiens peuvent généralement manger avec modération. L’université Cornell cite les pâtes cuites comme une option quand un chien a besoin d’une alimentation douce pour apaiser son système digestif, même si ce régime n’est pas équilibré pour une alimentation à long terme. L’oignon, l’ail, le poireau et la ciboulette peuvent provoquer une anémie chez le chien, et même des traces dans un plat cuit peuvent être toxiques. L’intolérance, la teneur en graisses ou la taille de la portion peuvent malgré tout déranger l’estomac de certains chiens."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "fi": "Maustamaton pasta ei yleensä vaadi muuta. Jos koirasi söi pastaa kastikkeella, jossa voi olla sipulia tai valkosipulia, älä jää odottamaan vaan ota yhteyttä eläinlääkäriin. Kysy eläinlääkäriltä ennen kuin tarjoat ruokaa, jota koirasi ei ole aiemmin syönyt.",
     "nb": "Naturell pasta trenger vanligvis ingenting mer. Hvis hunden har spist pasta med en saus som kan inneholde løk eller hvitløk, ikke vent på symptomer. Kontakt dyrlegen. Spør dyrlegen før du gir hunden mat den ikke har fått før.",
     "it": "Se ha mangiato pasta in bianco, di solito non serve fare altro. Se il tuo cane ha mangiato pasta con un sugo che può contenere cipolla o aglio, non aspettare di vedere come va: contatta il veterinario. Chiedi al veterinario prima di offrire un alimento che il tuo cane non ha mai provato.",
-    "de": "Einfache Pasta braucht meist nichts weiter. Hat Ihr Hund Pasta mit einer Soße gefressen, die Zwiebel oder Knoblauch enthalten könnte, warten Sie nicht ab, sondern wenden Sie sich an Ihren Tierarzt. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat."
+    "de": "Einfache Pasta braucht meist nichts weiter. Hat Ihr Hund Pasta mit einer Soße gefressen, die Zwiebel oder Knoblauch enthalten könnte, warten Sie nicht ab, sondern wenden Sie sich an Ihren Tierarzt. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat.",
+    "fr": "Des pâtes nature n’exigent généralement rien de plus. Si votre chien a mangé des pâtes avec une sauce pouvant contenir de l’oignon ou de l’ail, n’attendez pas : contactez votre vétérinaire. Demandez conseil à votre vétérinaire avant de proposer un aliment que votre chien n’a jamais mangé."
   },
   "serving": {
     "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
@@ -85,7 +91,8 @@
     "fi": "Maustamatonta keitettyä pastaa tai nuudeleita kohtuudella, ilman kastiketta, sipulia, valkosipulia tai mausteita.",
     "nb": "Naturell tilberedt pasta eller nudler, med måte, uten saus, løk, hvitløk eller krydder.",
     "it": "Pasta o noodles cotti in bianco, con moderazione, senza sugo, cipolla, aglio o condimenti.",
-    "de": "Einfache gekochte Pasta oder Nudeln, in Maßen, ohne Soße, Zwiebel, Knoblauch oder Gewürze."
+    "de": "Einfache gekochte Pasta oder Nudeln, in Maßen, ohne Soße, Zwiebel, Knoblauch oder Gewürze.",
+    "fr": "Pâtes ou nouilles cuites nature, avec modération, sans sauce, oignon, ail ni assaisonnement."
   },
   "child": {
     "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
@@ -97,7 +104,8 @@
     "fi": "Vähän maustamatonta keitettyä pastaa sopii koirille. Kastikkeissa voi olla piilossa sipulia tai valkosipulia, joten kysy ensin aikuiselta.",
     "nb": "Litt naturell kokt pasta er greit for hunder. Sauser kan skjule løk eller hvitløk, så spør en voksen først.",
     "it": "Un po’ di pasta cotta in bianco va bene per i cani. I sughi possono nascondere cipolla o aglio, quindi chiedi prima a un adulto.",
-    "de": "Ein bisschen einfache gekochte Pasta ist für Hunde in Ordnung. In Soßen können sich Zwiebel oder Knoblauch verstecken, also frag vorher einen Erwachsenen."
+    "de": "Ein bisschen einfache gekochte Pasta ist für Hunde in Ordnung. In Soßen können sich Zwiebel oder Knoblauch verstecken, also frag vorher einen Erwachsenen.",
+    "fr": "Un peu de pâtes cuites nature, ça va pour les chiens. Les sauces peuvent cacher de l’oignon ou de l’ail : demande d’abord à un adulte."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "fi": "Saako koira syödä spagettia kastikkeella?",
         "nb": "Kan hunder spise spaghetti med saus?",
         "it": "I cani possono mangiare gli spaghetti al sugo?",
-        "de": "Dürfen Hunde Spaghetti mit Soße fressen?"
+        "de": "Dürfen Hunde Spaghetti mit Soße fressen?",
+        "fr": "Les chiens peuvent-ils manger des spaghettis avec de la sauce ?"
       },
       "a": {
         "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
@@ -123,7 +132,8 @@
         "fi": "Ei kannata. Kastikkeet tehdään usein sipulista tai valkosipulista, ja jopa jäljet niistä kypsennetyssä ruoassa voivat olla koirille myrkyllisiä.",
         "nb": "Det er best å la være. Sauser lages ofte med løk eller hvitløk, og selv rester av disse i tilberedt mat kan være giftige for hunder.",
         "it": "Meglio di no. I sughi sono spesso fatti con cipolla o aglio, e anche tracce di questi ingredienti nel cibo cotto possono essere tossiche per i cani.",
-        "de": "Besser nicht. Soßen werden oft mit Zwiebel oder Knoblauch gemacht, und selbst Spuren davon in gekochtem Essen können für Hunde giftig sein."
+        "de": "Besser nicht. Soßen werden oft mit Zwiebel oder Knoblauch gemacht, und selbst Spuren davon in gekochtem Essen können für Hunde giftig sein.",
+        "fr": "Mieux vaut éviter. Les sauces sont souvent préparées avec de l’oignon ou de l’ail, et même des traces de ces aliments dans un plat cuit peuvent être toxiques pour les chiens."
       }
     },
     {
@@ -137,7 +147,8 @@
         "fi": "Voiko pasta auttaa koiraa, jolla on vatsavaivoja?",
         "nb": "Kan pasta hjelpe en hund med urolig mage?",
         "it": "La pasta può aiutare un cane con mal di pancia?",
-        "de": "Kann Pasta einem Hund mit Magenbeschwerden helfen?"
+        "de": "Kann Pasta einem Hund mit Magenbeschwerden helfen?",
+        "fr": "Les pâtes peuvent-elles aider un chien qui a des troubles digestifs ?"
       },
       "a": {
         "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
@@ -149,7 +160,8 @@
         "fi": "Keitetty pasta on yksi vaihtoehto, kun sairas koira tarvitsee kevyttä ruokavaliota, mutta sellainen ruokavalio ei ole tasapainoinen eikä turvallinen pitkäaikaiseen ruokintaan.",
         "nb": "Tilberedt pasta er et alternativ når en syk hund trenger skånekost, men en slik kost er ikke balansert og ikke trygg å gi over lang tid.",
         "it": "La pasta cotta è un’opzione quando un cane malato ha bisogno di una dieta in bianco, ma questa dieta non è equilibrata e non è sicura da dare a lungo termine.",
-        "de": "Gekochte Pasta ist eine Möglichkeit, wenn ein kranker Hund eine Schonkost braucht, aber eine solche Kost ist nicht ausgewogen und für die Dauerfütterung nicht geeignet."
+        "de": "Gekochte Pasta ist eine Möglichkeit, wenn ein kranker Hund eine Schonkost braucht, aber eine solche Kost ist nicht ausgewogen und für die Dauerfütterung nicht geeignet.",
+        "fr": "Les pâtes cuites sont une option quand un chien malade a besoin d’une alimentation douce, mais ce régime n’est pas équilibré et ne convient pas à une alimentation à long terme."
       }
     }
   ],
@@ -266,6 +278,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9ffb6d359213ddcde9b9260ce831d40cfb2d56f5c8f62ed6bae84b722563daf0"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a2630a74c498e91b1615eac63cbf883291a2ceca693fc5781008a367b05f944"
     }
   }
 }
