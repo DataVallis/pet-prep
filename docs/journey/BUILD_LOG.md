@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — »Koliko dela je z labradorcem?«: povzetek brez datotek in e-naslovi brez podvajanja
+
+**Kaj:** Povzetek za starše smo isti dan naredili dvakrat. Najprej kot PDF v Lemon Squeezy, potem je David rekel, da to pri 300 pasmah in veliko jezikih ne gre: nihče ne bo nalagal tisočih datotek. Zdaj stran povzetek sestavi sama iz izbir obiskovalca (pes ali mladiček, jezik, valuta, njegove ocene stroškov), starš ga natisne ali shrani kot PDF. E-naslov je neobvezen: starš ga pusti s privolitvijo za novice, strežnik ga shrani enkrat, tudi če ga vpiše večkrat. IP-ja in imena ne shranjujemo, strežnik ne pošilja e-pošte.
+**Zakaj je pomembno:** partner, ki bo imel logotip na strani, hoče vedeti, koliko družin jo je videlo in katere pasme jih zanimajo. Dobi številke, ne naslovov.
+- 🛠 Ena stran namesto 4.500 datotek (300 pasem × 15 jezikov): podatki ostanejo na enem mestu.
+- 🤝 Partnerjem: »povemo vam, koliko družin je razmišljalo o labradorcu; njihovih naslovov ne delimo«.
+- 👩 Staršem: povzetek dobite brez e-naslova; če ga pustite, ga shranimo samo z vašo privolitvijo.
 ## 2026-11-15 — Sit kuža ne ostane brez hrane: lakota ne pade pod 25 % do naslednjega obroka
 
 **Kaj:** David je v nedeljo ob 15:32 poslal posnetek zaslona: francoski buldog, mladiček 6 mesecev, jutranji obrok opravljen (6–10 ✓), naslednji ob 17:00 — lakota pa 0 %. Vzrok je računski: lakota pade 12 % na uro, polna skleda zdrži 8 ur in 20 minut, okni pa se začneta 11 ur narazen. Med tednom šola (tihe ure, upadanje ×0,1) to skrije, ob vikendu ne. Otrok ni mogel storiti ničesar (nujni obrok je samo po zamujenem obroku), starš pa je uro kasneje dobil alarm »Nujno« — za popolnoma oskrbovanega kužka. David je izbral rešitev št. 1 z mejo 25 %: dokler je zadnji obrok opravljen, lakota obstane pri 25 % in počaka na naslednje okno; ko se okno odpre, pada naprej. Po zamujenem obroku ostane vse po starem (0 %, nujni obrok, alarm). Velja za pse in mačke, tudi za obstoječe ljubljenčke; samo strežnik, brez nove različice aplikacije.

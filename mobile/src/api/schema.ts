@@ -2072,6 +2072,33 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/summary-leads": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Leave an e-mail for PetPrep news. Public, no token; throttled per IP
+         *     (10 / hour, IPv6 /64). The parent must tick the consent box (`consent`).
+         *     One row per e-mail: a repeat visit updates the row, it never adds one.
+         *     The answer is the same for a new and a known address. No e-mail is sent
+         *     and nothing about the visitor's address is stored. A filled hidden
+         *     `website` field = bot: 201 and nothing stored
+         * @description 201 `{ok: true}`; 422 invalid body; 429 throttled.
+         *
+         *     POST /api/summary-leads
+         */
+        post: operations["summaryLead.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/web/parent-session": {
         parameters: {
             query?: never;
@@ -3381,6 +3408,34 @@ export interface components {
             website?: string | null;
             /** @enum {string|null} */
             locale?: "sl" | "en" | null;
+        };
+        /**
+         * StoreSummaryLeadRequest
+         * @description POST /api/summary-leads (M6-S05, THREEJS_OPPORTUNITIES T9). Public.
+         */
+        StoreSummaryLeadRequest: {
+            /**
+             * Format: email
+             * @description Printable ASCII without spaces only: no NUL / control bytes, no quoted local parts with
+             *     spaces, no non-ASCII — so the address is stored whole and lower-cases the same in PHP
+             *     and in PostgreSQL (the table's CHECK email = lower(email)).
+             */
+            email: string;
+            /**
+             * @description The parent ticked the consent box; without it nothing is stored.
+             * @enum {unknown}
+             */
+            consent: "yes" | "on" | "1" | 1 | "true" | true;
+            /** @enum {string} */
+            consent_version: "2026-11";
+            /** @enum {string} */
+            source: "real_cost";
+            /** @description Website language (two letters) and the breed slug of the website's breed register. */
+            locale?: string | null;
+            breed?: string | null;
+            /** @enum {string|null} */
+            stage?: "adult" | "puppy" | null;
+            website?: string | null;
         };
         /**
          * SyncStepsRequest
@@ -32062,6 +32117,32 @@ export interface operations {
                         duplicate: boolean;
                         /** @enum {string|null} */
                         outcome: "granted" | "revoked" | "transferred" | "recorded" | "ignored" | "unknown_user" | "sandbox_ignored" | "unknown_product" | null;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "summaryLead.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StoreSummaryLeadRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        ok: boolean;
                     };
                 };
             };

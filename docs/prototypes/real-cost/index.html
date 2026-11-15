@@ -92,6 +92,17 @@ input[type=range]{width:100%;accent-color:var(--ink);height:28px}
 #promise li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:6px;border:2px solid var(--ink)}
 #lead{display:flex;flex-direction:column;gap:8px}
 #lead-note{margin:0;font-size:14px;color:var(--muted,#5B645E)}
+#news{display:flex;flex-direction:column;gap:8px;margin-top:8px;padding:14px;border:1px solid var(--line);border-radius:14px}
+#news[hidden]{display:none}
+#news strong{font-size:15px}
+#news label{font-size:14px;font-weight:600}
+#news input[type=email]{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid #B9C2BB;width:100%;box-sizing:border-box}
+#news label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted)}
+#news label.chk input{flex:0 0 18px;height:18px;margin:1px 0 0}
+#news-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#news-msg{font-size:14px;font-weight:600;color:var(--warn)}#news-msg:empty{display:none}
+#news-done{margin:8px 0 0;font-size:14px;font-weight:600;color:var(--mint-text)}
+#news-other{border:0;background:none;padding:0;font:inherit;font-weight:600;color:var(--ink);text-decoration:underline;cursor:pointer}
 details{font-size:14px;color:var(--muted)}summary{cursor:pointer;font-weight:600;color:var(--ink)}
 @media (max-width:760px){
   #info{width:calc(100vw - 16px)}
@@ -230,6 +241,16 @@ details{font-size:14px;color:var(--muted)}summary{cursor:pointer;font-weight:600
   <div id="lead">
     <button class="btn" id="sheet-open" type="button" data-t="lead_b"></button>
     <p id="lead-note" data-t="lead_note"></p>
+    <form id="news" novalidate>
+      <strong data-t="news_h"></strong>
+      <label for="news-email" data-t="news_l"></label>
+      <input id="news-email" name="email" type="email" autocomplete="email" inputmode="email" data-t-ph="news_ph">
+      <input id="news-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="chk"><input id="news-consent" type="checkbox"><span data-t="news_consent"></span></label>
+      <button class="btn ghost" type="submit" data-t="news_b"></button>
+      <span id="news-msg" role="status" aria-live="polite"></span>
+    </form>
+    <p id="news-done" hidden><span data-t="news_done"></span> <button id="news-other" type="button" data-t="news_other"></button></p>
   </div>
   <details><summary data-t="src_h"></summary><p data-t="src"></p></details>
   <button class="btn ghost" data-go="intro" data-t="again"></button>
