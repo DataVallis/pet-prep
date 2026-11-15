@@ -12,7 +12,8 @@
  * video was visible, no way out). Never render a layer outside these wrappers.
  *
  * Exit (mandatory): Android back closes the game (like the top bar's ×, or does nothing while
- * the × is locked); a video stage not ready after `GAME_STAGE_WATCHDOG_MS` or a layer that threw
+ * the × is locked) — unless the game takes it over with `onBack` (the rub games: an edge swipe
+ * while rubbing is Android's back gesture, David 2026-11-15; the × stays the way out); a video stage not ready after `GAME_STAGE_WATCHDOG_MS` or a layer that threw
  * while rendering opens the escape card (× + »Nazaj«) on top of everything; a locked × comes
  * back after `GAME_ESCAPE_MS`. The exit is `onExit`, else the host's `GameExitContext`.
  *
@@ -54,6 +55,13 @@ export interface GameScreenProps {
   overlay?: ReactNode;
   /** The way out (Android back, the escape card, the top bar's × fallback); else `GameExitContext`. */
   onExit?: GameExit;
+  /**
+   * Android back while the × is open and no escape card is up: return true = handled, the game
+   * keeps running (the × stays the way out). For games played with swipes near the screen edge —
+   * there Android's back GESTURE fires by accident mid-rub. Never called while the × is locked
+   * (back does nothing then) or the escape card shows (back = exit).
+   */
+  onBack?: () => boolean;
   testID?: string;
 }
 
@@ -75,7 +83,7 @@ class LayerBoundary extends Component<{ onError: () => void; children?: ReactNod
   }
 }
 
-export default function GameScreen({ stage, field, feedback, topBar, dock, overlay, onExit, testID = 'game-screen' }: GameScreenProps) {
+export default function GameScreen({ stage, field, feedback, topBar, dock, overlay, onExit, onBack, testID = 'game-screen' }: GameScreenProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? { top: 0, bottom: 0, left: 0, right: 0 };
   const hostExit = useContext(GameExitContext);
   const exit = onExit ?? hostExit;
@@ -108,6 +116,7 @@ export default function GameScreen({ stage, field, feedback, topBar, dock, overl
   backRef.current = () => {
     const action = (escape.card ? null : close?.action) ?? exit;
     if (action === null) return false;
+    if (!escape.card && escape.exitOpen && onBack?.() === true) return true;
     if (escape.exitOpen) action();
     return true;
   };

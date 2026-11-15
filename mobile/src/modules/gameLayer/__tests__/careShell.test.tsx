@@ -3,6 +3,7 @@
  * the card screens (no rule change), now full screen with the step on the top line, a haptic per
  * counted stroke and a ✓ at the end of each step; an older binary keeps the card screens.
  */
+import { QueryClientProvider } from '@tanstack/react-query';
 import { act, fireEvent, screen } from '@testing-library/react-native';
 import * as Haptics from 'expo-haptics';
 
@@ -16,6 +17,7 @@ import { careCues, careFrame } from '@/modules/gameLayer/careFrame';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
+import { CARE_BACK_HINT_MS } from '@/modules/gameLayer/CareGameShell';
 import { resetCareShellForTests } from '@/modules/gameLayer/loadCareShell';
 import { useAppStore } from '@/store/appStore';
 import {
@@ -25,6 +27,7 @@ import {
   makeGroomingState,
   makeLiveChildState,
   makeLitterState,
+  makeMedia,
   makePet,
   makeScratchingSession,
   makeScratchingState,
@@ -192,18 +195,120 @@ describe('care games on the game layer', () => {
   });
 
   // Ball v2 device bug (David 2026-10-31): the HUD above the stage and always a way out.
-  it('grooming: the × and Android back stop the running chore; the HUD is above the stage', async () => {
-    const back = captureAndroidBack();
+  it('grooming: the × stops the running chore; the HUD is above the stage', async () => {
     mocked.startCareChore.mockResolvedValue({ status: 'accepted', session: makeChoreSession('grooming'), state: catState() });
     renderWithQuery(<ChoreOverlay kind="grooming" view={viewOf(catState())} onClose={jest.fn()} reduceMotion clock={clock} />);
     fireEvent.press(screen.getByTestId('cat-grooming-start'));
     await advance(0);
     expectHudAboveStage('cat-grooming-layer', ['cat-grooming-layer-top-close', 'cat-grooming-layer-area']);
-    expect(back.pressBack()).toBe(true);
+    fireEvent.press(screen.getByTestId('cat-grooming-layer-top-close'));
     await advance(0);
     expect(screen.queryByTestId('cat-grooming-layer')).toBeNull();
     expect(screen.getByTestId('cat-grooming-start')).toBeTruthy();
+  });
+
+  // David 2026-11-15 (production, Android): rubbing across the screen edge is Android's back
+  // GESTURE; back used to be the × = »stop«, so the litter change fell back to »Začni menjavo«
+  // right after step 1 and the session was thrown away.
+  it('litter change: an Android back mid-game (edge swipe) and a refetch between the steps never reset it — a hint, the same session, every stroke sent', async () => {
+    const back = captureAndroidBack();
+    const session = makeChoreSession('litter_change');
+    mocked.startCareChore.mockResolvedValue({ status: 'accepted', session, state: catState() });
+    mocked.finishCareChore.mockResolvedValue({
+      status: 'accepted',
+      result: { session_id: session.id, success: true, reason: null, strokes: 3, min_strokes: 10, segments_hit: 3, segments: 3, matted: false },
+      state: catState(),
+    });
+    const onClose = jest.fn();
+    const ui = (view: ChildPetView) => <ChoreOverlay kind="litter_change" view={view} onClose={onClose} reduceMotion clock={clock} />;
+    const { rerender, client } = renderWithQuery(ui(viewOf(catState())));
+    fireEvent.press(screen.getByTestId('cat-litter_change-start'));
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Izprazni stranišče');
+    await advance(1_000);
+    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
+    // Step 1 ends (✓, »Umij ga«) …
+    await advance(9_500);
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Umij ga');
+    // … a broadcast / refetch lands (a new view object; the child's own session is in it) …
+    const running = makeLitterState({}, { session_running: true, can_start: false, blocked_reason: 'litter_change_session_active', session });
+    rerender(<QueryClientProvider client={client}>{ui(viewOf({ ...catState(), litter: running } as ChildPetState))}</QueryClientProvider>);
+    await advance(1_600);
+    // … and the next rub starts at the screen edge: Android sends »back«.
+    expect(back.pressBack()).toBe(true);
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-layer')).toBeTruthy();
+    expect(screen.queryByTestId('cat-litter_change-start')).toBeNull();
+    expect(onClose).not.toHaveBeenCalled();
+    // The hint takes the line once the step text had its time (GameLine: a line stays ≥ 2 s).
+    await advance(500);
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Za konec igre tapni ×.');
+    // The game goes on with the same session: the hint leaves, the strokes before and after count.
+    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
+    await advance(CARE_BACK_HINT_MS);
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Umij ga');
+    await advance(8_300 - CARE_BACK_HINT_MS);
+    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
+    expect(back.pressBack()).toBe(true);
+    await advance(10_000);
+    expect(mocked.startCareChore).toHaveBeenCalledTimes(1);
+    expect(mocked.finishCareChore).toHaveBeenCalledWith('litter_change', session.id, [1_000, 12_600, 20_900]);
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-result-title').props.children).toBe('Sveže in čisto!');
     jest.restoreAllMocks();
+  });
+
+  it('litter change: the × still stops it (nothing sent); back while saving does nothing', async () => {
+    const back = captureAndroidBack();
+    const session = makeChoreSession('litter_change');
+    mocked.startCareChore.mockResolvedValue({ status: 'accepted', session, state: catState() });
+    mocked.finishCareChore.mockReturnValue(new Promise(() => undefined));
+    const onClose = jest.fn();
+    renderWithQuery(<ChoreOverlay kind="litter_change" view={viewOf(catState())} onClose={onClose} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-litter_change-start'));
+    await advance(0);
+    fireEvent.press(screen.getByTestId('cat-litter_change-layer-top-close'));
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-start')).toBeTruthy();
+    expect(mocked.finishCareChore).not.toHaveBeenCalled();
+    // A new game, played to the end: while it is being saved the × is locked and back is swallowed.
+    fireEvent.press(screen.getByTestId('cat-litter_change-start'));
+    await advance(30_000);
+    expect(mocked.finishCareChore).toHaveBeenCalledTimes(1);
+    expect(back.pressBack()).toBe(true);
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-layer')).toBeTruthy();
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).not.toBe('Za konec igre tapni ×.');
+    expect(onClose).not.toHaveBeenCalled();
+    jest.restoreAllMocks();
+  });
+
+  // David 2026-11-15 (production): the child rubbed the cat's resting video — no litter box at all.
+  it.each([true, false])('litter change: the stage is the litter box drawing per step, never the cat video (game layer %s)', async (layer) => {
+    setGameLayerAvailableForTests(layer);
+    resetCareShellForTests();
+    const state = catState();
+    (state.pet as { media: unknown }).media = makeMedia({ status: 'ready', videos: { idle: 'https://x/i.mp4' }, states: ['idle'] });
+    mocked.startCareChore.mockImplementation((kind: 'grooming' | 'litter_change') => Promise.resolve({ status: 'accepted', session: makeChoreSession(kind), state }));
+    // Swipe mode (David's phone) and hold mode alike.
+    for (const view of [normalizeChildState(state, 0, T0), viewOf(state)]) {
+      const { unmount } = renderWithQuery(<ChoreOverlay kind="litter_change" view={view} onClose={jest.fn()} reduceMotion clock={clock} />);
+      fireEvent.press(screen.getByTestId('cat-litter_change-start'));
+      await advance(0);
+      expect(screen.queryByTestId('cat-litter_change-stage-video')).toBeNull();
+      expect(screen.getByTestId('cat-tray', { includeHiddenElements: true })).toBeTruthy();
+      unmount();
+    }
+    // Grooming is about the cat: it keeps the cat's own video.
+    renderWithQuery(<ChoreOverlay kind="grooming" view={viewOf(state)} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-grooming-start'));
+    await advance(0);
+    expect(screen.getByTestId('cat-grooming-stage-video', { includeHiddenElements: true })).toBeTruthy();
+  });
+
+  it.each(['sl', 'en'])('the back hint fits the game line (%s)', async (lang) => {
+    await i18n.changeLanguage(lang);
+    expect(Array.from(i18n.t('common:game.backHint')).length).toBeLessThanOrEqual(GAME_LINE_MAX_CHARS);
   });
 
   it('scratching: no × during the short carry; a finish that hangs gets the × back after GAME_ESCAPE_MS', async () => {
