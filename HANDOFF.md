@@ -199,6 +199,8 @@
     ```
     **Na koncu** (ko sta strežniški in spletni PR združena in nameščena, stikalo za javnost še izklopljeno): s stikalom »Darilni boni« za kratek čas vklopljenim (ali na stagingu) se na `petprep.si/redeem` enkrat prijavi z vsakim načinom: z Google računom, ki ga uporabljaš v aplikaciji; z Apple ID-jem, ki ga uporabljaš v aplikaciji na iPhonu; z e-naslovom + geslom testnega starša. Vsak mora priti do koraka s kodo. **Če Apple vrne `account_not_found` za Apple ID iz aplikacije na iPhonu, predpostavka o `sub` (F3) ne drži: USTAVI in sporoči Claudu.**
 
+25. **#walkyourpet galerija z Instagrama (odobreno 15. 11. 2026, še ni zgrajeno; `brand/WALKYOURPET.md`).** Pred gradnjo: (1) v aplikaciji Instagram preklopi @petprep.si na profesionalni račun (Nastavitve → Vrsta računa → Business ali Creator), če še ni; (2) poveži ga s Facebook stranjo PetPrep (Meta Business Suite → Nastavitve → Računi → Instagram); (3) na developers.facebook.com ustvari aplikacijo vrste *Business*, dodaj izdelek *Instagram* in Claudu sporoči »Meta app done« (ID aplikacije; skrivnosti ne pošiljaj v klepet — vpišeš jih v `/opt/petprep/.env`, ključe pove Claude ob gradnji). Morebitni pregled aplikacije pri Meti uredimo skupaj.
+
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:

@@ -27,6 +27,12 @@
 - Aplikacije še ni v trgovinah, zato povabilo ni »prenesi in hodi«, ampak »pojdi ven s svojim ljubljenčkom zdaj« + zgodnji dostop.
 - Zagonska kampanja (teden 1): `brand/marketing/WALKYOURPET_LAUNCH.md`, grafike v `brand/marketing/walkyourpet-launch/`.
 
+## Galerija z Instagrama — odobreno, še ni zgrajeno (David 15. 11. 2026)
+- **Odločitev:** objave, ki imajo #walkyourpet in označijo @petprep.si, se samodejno zberejo, na /walkyourpet pa se prikažejo **šele, ko jih David odobri** (moderirana vrsta, nič se ne objavi samo).
+- **Načrt:** backend periodično (npr. vsako uro) prebere objave, v katerih je označen @petprep.si (Instagram Graph API, `/{ig-user-id}/tags`), in jih z oznako #walkyourpet doda v vrsto v adminu (Filament): predogled, avtor, povezava, gumba *Odobri* / *Zavrni*. Spletna stran prikaže samo odobrene, kot vgradnjo Instagram objave (avtor ostane lastnik, brez kopiranja datotek k nam).
+- **Pravila:** pred odobritvijo preveri »Varno deljenje« zgoraj (brez obrazov in imen otrok); zavrnjena ali na Instagramu izbrisana objava izgine s strani; avtor lahko kadar koli zahteva odstranitev.
+- **Pogoji (David):** @petprep.si mora biti profesionalni (Business/Creator) račun, povezan s Facebook stranjo; Meta aplikacija z dovoljenji `instagram_basic` in dostopom do vgradenj (oEmbed), za katere Meta morda zahteva pregled aplikacije. Točne zahteve preverimo ob gradnji.
+
 ## Formati (zaloga idej)
 | # | Status | Format | Ideja |
 |---|---|---|---|
