@@ -267,6 +267,12 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-15 (cloud, docs) — three.js analysis + »How much work is a Labrador?« prototype (`docs/threejs-real-cost-prototype`, David »ok daj ja, pa vse zapiši«)
+- Analysis: three.js pays off on petprep.si, not in the app and not for the pet (the pet stays video). `docs/product/THREEJS_OPPORTUNITIES.md`, ROADMAP M6-S04, DECISIONS 2026-11-15.
+- Prototype source in `docs/prototypes/real-cost/` (three.js 0.187.0 + cannon-es 0.20.0, SL + EN; `npm install && npm run serve`). **Nothing shipped:** no app, backend or website change; the e-mail form sends nothing.
+- David's decisions: currency switch € / $ / £ with the fixed ECB rate of 13 Nov 2026 and `~` on converted amounts; made-up »petprep partner« logo in the sponsor slot (placeholder, not a brand asset).
+- **Open (David):** where the parent's e-mail goes (proposal: free Lemon Squeezy product, no SMTP — the server has no mailer, `MAIL_MAILER=log`), Slovenian prices, a real partner, whether it goes live before the validation ends, port to `pet-prep-website`.
+
 ### 2026-11-15 (cloud, mobile) — weekly litter change with three gestures (`feat/cat-litter-change-interactive`, David »Želim da je bolj interaktivno«, JS only → OTA, no backend change)
 - Drag the tray to the bin (Izprazni) → rub the spots away (Umij) → press and hold the bag to the line (Napolni); drawn in the app (`mobile/src/modules/catCare/litterChange/`), same session / `strokes` payload / server verdict / routine credit. Game-layer binaries only; others keep the rub. Rules + thresholds: GAMES_SPEC §7.7.
 - **Not verified on a device** (Jest + rendered drawings only): David should play it on Android and iOS — feel of the drag / tilt, rub coverage on a small phone, hold-to-fill, »Lažje kretnje« buttons, reduce motion.

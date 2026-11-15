@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Three.js: prototip »Koliko dela je labradorec?«
+
+**Kaj:** David je vprašal, kje lahko three.js naredi korak naprej, tudi poslovno. Odgovor: na spletni strani, ne v aplikaciji — pes v aplikaciji ostane realističen video. Narejen je prototip za petprep.si: en dan z labradorcem v 3D, vsako opravilo pade kot žeton na kup, kup se pomnoži na teden, leto in 13 let (odrasel labradorec: 7.177 ur sprehodov in 9.570 obrokov), nato stroški z izbiro valute in mesto za partnerja. Samo prototip (`docs/prototypes/real-cost/`), *ni objavljen*.
+**Zakaj je pomembno:** kalkulator »koliko res stane in koliko dela je pes« je v poslovnem modelu kot vaba za starše, a še ni bil zgrajen; hkrati je prostor, ki ga lahko sponzorira zavarovalnica.
+**Kako povedati:** 🧒 »Poglej, koliko opravil pade na kup v enem dnevu — in v 13 letih.« 👩 »Preden se odločite: številke iz virov, stroški v vaši valuti.« 🤝 »Označeno mesto partnerja ob stroških ljubljenčka.« 🛠 »three.js + cannon-es, ena stran brez strežnika; številke skrbi iz registra pasem, stroški PDSA, tečaj ECB fiksiran na 13. 11. 2026.«
+
 ## 2026-11-15 — Menjava peska s tremi kretnjami: vleci, drgni, drži
 
 **Kaj:** David je po popravku menjave peska rekel: »Želim da je bolj interaktivno.« Tedenska menjava ima zdaj za vsak korak svojo kretnjo in risbo, ki sledi prstu: stranišče povlečeš do koša (nagne se in star pesek se strese vanj, trije vleki), z drgnjenjem umiješ osem madežev (pena pod prstom), s pritiskom in držanjem vreče nasuješ svež pesek do označene črte (5 sekund). Vse je narisano v aplikaciji — brez AI posnetkov, strošek 0 $. Strežnik se ni spremenil: ista 30-sekundna seja, ista ocena, ista tedenska rutina. Zgrajeno in pokrito s testi (36 novih), **na telefonu še ni preverjeno**.
