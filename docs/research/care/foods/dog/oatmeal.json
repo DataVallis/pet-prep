@@ -6,21 +6,24 @@
     "sl": "Ovseni kosmiči",
     "cs": "Ovesná kaše",
     "hr": "Zobena kaša",
-    "sv": "Havregrynsgröt"
+    "sv": "Havregrynsgröt",
+    "da": "Havregryn"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
     "sl": "Ali lahko psi jedo ovsene kosmiče?",
     "cs": "Mohou psi jíst ovesnou kaši?",
     "hr": "Smiju li psi jesti zobenu kašu?",
-    "sv": "Får hundar äta havregrynsgröt?"
+    "sv": "Får hundar äta havregrynsgröt?",
+    "da": "Må hunde spise havregryn?"
   },
   "url_slug": {
     "en": "oatmeal",
     "sl": "ovseni-kosmici",
     "cs": "ovesna-kase",
     "hr": "zobena-kasa",
-    "sv": "havregrynsgrot"
+    "sv": "havregrynsgrot",
+    "da": "havregryn"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin.",
     "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky.",
     "hr": "Da, u malim količinama. Obična zobena kaša, kuhana u vodi, a ne u mlijeku, u redu je za pse. Nikad ne daj kašu s okusima ni instant kašu, a izostavi sol, maslac, čokoladu i grožđice.",
-    "sv": "Ja, i små mängder. Okryddad havregrynsgröt kokt på vatten i stället för mjölk går bra för hundar. Ge aldrig smaksatt gröt eller snabbgröt, och undvik salt, smör, choklad och russin."
+    "sv": "Ja, i små mängder. Okryddad havregrynsgröt kokt på vatten i stället för mjölk går bra för hundar. Ge aldrig smaksatt gröt eller snabbgröt, och undvik salt, smör, choklad och russin.",
+    "da": "Ja, i små mængder. Almindelig havregrød kogt på vand i stedet for mælk er fint til hunde. Giv aldrig havregryn med smag eller instant-havregryn, og lad være med salt, smør, chokolade og rosiner."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
     "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
     "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
     "hr": "Zobena kaša bogata je vlaknima, uključujući topiva vlakna koja mogu pomoći psima s nepravilnom stolicom. No psi slabo probavljaju mliječne proizvode, sirova zob teže se probavlja, a puno vlakana može izazvati želučane tegobe, proljev i povraćanje; velika količina može čak izazvati nadutost želuca. Prilično je bogata i ugljikohidratima i kalorijama. Kaša s okusima često ima više šećera i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena.",
-    "sv": "Havregryn är rika på fibrer, bland annat lösliga fibrer som kan hjälpa hundar med oregelbunden avföring. Men hundar smälter mjölkprodukter dåligt, råa havregryn är svårare att smälta, och mycket fibrer kan orsaka magbesvär, diarré och kräkningar; en stor mängd kan till och med leda till uppblåsthet. Havregryn innehåller också ganska mycket kolhydrater och kalorier. Smaksatt gröt innehåller ofta mer socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad."
+    "sv": "Havregryn är rika på fibrer, bland annat lösliga fibrer som kan hjälpa hundar med oregelbunden avföring. Men hundar smälter mjölkprodukter dåligt, råa havregryn är svårare att smälta, och mycket fibrer kan orsaka magbesvär, diarré och kräkningar; en stor mängd kan till och med leda till uppblåsthet. Havregryn innehåller också ganska mycket kolhydrater och kalorier. Smaksatt gröt innehåller ofta mer socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad.",
+    "da": "Havregryn indeholder meget fiber, herunder opløselige fibre, som kan hjælpe hunde med uregelmæssig mave. Men hunde fordøjer mejeriprodukter dårligt, rå havregryn er sværere at fordøje, og mange fibre kan give mavebesvær, diarré og opkast; en stor mængde kan endda føre til oppustethed. Havregryn indeholder også en del kulhydrater og kalorier. Havregryn med smag indeholder ofte mere sukker og kan indeholde xylitol, som er giftigt for hunde, og instant-havregryn er stærkt forarbejdet."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja.",
     "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře.",
     "hr": "Uvodi je postupno i promatraj kako je pas podnosi. Ako pas loše reagira, odmah se obrati veterinaru.",
-    "sv": "Börja gradvis och se hur din hund tål det. Om din hund verkar må dåligt av det ska du kontakta din veterinär direkt."
+    "sv": "Börja gradvis och se hur din hund tål det. Om din hund verkar må dåligt av det ska du kontakta din veterinär direkt.",
+    "da": "Indfør det gradvist, og se, hvordan din hund tåler det. Hvis din hund ser ud til at reagere dårligt, skal du kontakte din dyrlæge med det samme."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
     "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom.",
     "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel.",
     "hr": "Obična kuhana kaša od zobi u vodi, ne u mlijeku, i ne previše odjednom. Ne sirova, ne instant i bez šećera, soli, maslaca, čokolade, grožđica ni aroma.",
-    "sv": "Okryddad, kokt havregrynsgröt gjord på vatten, inte mjölk, och inte för mycket åt gången. Inte rå, inte snabbgröt, och inget socker, salt, smör, choklad, russin eller smaktillsatser."
+    "sv": "Okryddad, kokt havregrynsgröt gjord på vatten, inte mjölk, och inte för mycket åt gången. Inte rå, inte snabbgröt, och inget socker, salt, smör, choklad, russin eller smaktillsatser.",
+    "da": "Almindelig kogt havregrød lavet på vand, ikke mælk, og ikke for meget ad gangen. Ikke rå, ikke instant og uden sukker, salt, smør, chokolade, rosiner eller smagsstoffer."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
     "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse.",
     "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není.",
     "hr": "Psi smiju dobiti malo obične zobene kaše kuhane u vodi. Slatka kaša ili kaša s okusima nije za pse.",
-    "sv": "Hundar kan få lite okryddad havregrynsgröt kokt på vatten. Söt eller smaksatt gröt är inte för hundar."
+    "sv": "Hundar kan få lite okryddad havregrynsgröt kokt på vatten. Söt eller smaksatt gröt är inte för hundar.",
+    "da": "Hunde kan få lidt almindelig havregrød lavet på vand. Sød havregrød eller havregrød med smag er ikke til hunde."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo surove ovsene kosmiče?",
         "cs": "Mohou psi jíst syrové ovesné vločky?",
         "hr": "Smiju li psi jesti sirovu zob?",
-        "sv": "Får hundar äta råa havregryn?"
+        "sv": "Får hundar äta råa havregryn?",
+        "da": "Må hunde spise rå havregryn?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
         "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi.",
         "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví.",
         "hr": "Bolje je skuhati je. Sirova zob posuta po hrani psu je samo teže probavljiva.",
-        "sv": "Det är bättre att koka dem. Råa havregryn som strös över maten är bara svårare för din hund att smälta."
+        "sv": "Det är bättre att koka dem. Råa havregryn som strös över maten är bara svårare för din hund att smälta.",
+        "da": "Det er bedre at koge dem. Rå havregryn drysset over maden er bare sværere for din hund at fordøje."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Je aromatizirana instant kaša za pse varna?",
         "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?",
         "hr": "Je li instant kaša s okusima sigurna za pse?",
-        "sv": "Är smaksatt snabbgröt säker för hundar?"
+        "sv": "Är smaksatt snabbgröt säker för hundar?",
+        "da": "Er instant-havregryn med smag ufarlige for hunde?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
         "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
         "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
         "hr": "Ne. Kaša s okusima često ima dodatni šećer i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena.",
-        "sv": "Nej. Smaksatt gröt innehåller ofta extra socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad."
+        "sv": "Nej. Smaksatt gröt innehåller ofta extra socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad.",
+        "da": "Nej. Havregryn med smag indeholder ofte ekstra sukker og kan indeholde xylitol, som er giftigt for hunde, og instant-havregryn er stærkt forarbejdet."
       }
     }
   ],
@@ -213,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d3e2b85020b9258d134b6301935a9571c1860474a38660445807b3ecfd8e15f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "385cf39a6a2521c1b74c0086b2a2902d30af4fed10a1fdebd92cf1f5c7ecc6e2"
     }
   }
 }

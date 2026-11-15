@@ -6,21 +6,24 @@
     "sl": "Kurkuma",
     "cs": "Kurkuma",
     "hr": "Kurkuma",
-    "sv": "Gurkmeja"
+    "sv": "Gurkmeja",
+    "da": "Gurkemeje"
   },
   "question": {
     "en": "Can cats eat turmeric?",
     "sl": "Ali lahko mačke jedo kurkumo?",
     "cs": "Mohou kočky jíst kurkumu?",
     "hr": "Smiju li mačke jesti kurkumu?",
-    "sv": "Får katter äta gurkmeja?"
+    "sv": "Får katter äta gurkmeja?",
+    "da": "Må katte spise gurkemeje?"
   },
   "url_slug": {
     "en": "turmeric",
     "sl": "kurkuma",
     "cs": "kurkuma",
     "hr": "kurkuma",
-    "sv": "gurkmeja"
+    "sv": "gurkmeja",
+    "da": "gurkemeje"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah.",
     "cs": "Kurkumu kočce raději nedávejte. Studií o krmení koček kurkumou je málo a kočky mají neobvykle nízkou schopnost glukuronidace, což podle výzkumníků zvyšuje riziko toxicity kurkumy u koček.",
     "hr": "Bolje je mački ne davati kurkumu. Istraživanja o hranjenju mačaka kurkumom su rijetka, a mačke imaju neobično slab kapacitet glukuronidacije, što prema istraživačima povećava rizik od otrovanja kurkumom kod mačaka.",
-    "sv": "Det är bäst att inte ge din katt gurkmeja. Det finns få studier av gurkmeja till katter, och katter har ovanligt låg förmåga till glukuronidering, vilket enligt forskare ökar risken för gurkmejaförgiftning hos katter."
+    "sv": "Det är bäst att inte ge din katt gurkmeja. Det finns få studier av gurkmeja till katter, och katter har ovanligt låg förmåga till glukuronidering, vilket enligt forskare ökar risken för gurkmejaförgiftning hos katter.",
+    "da": "Det er bedst ikke at give din kat gurkemeje. Der findes kun få undersøgelser af, hvad der sker, når katte får gurkemeje, og katte har en usædvanligt lav evne til glukuronidering, som ifølge forskerne øger risikoen for gurkemejeforgiftning hos katte."
   },
   "why": {
     "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
     "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
     "cs": "Kurkuma je výrazně žluté koření. Studie z roku 2026 v časopise Animals uvádí, že kočky mají neobvykle nízkou schopnost glukuronidace, důležitého kroku při odbourávání a vylučování kurkuminoidů z kurkumy, a že to zvyšuje riziko toxicity kurkumy u koček. Autoři dodávají, že údajů o její bezpečnosti u koček je málo. V jejich studii zdravé dospělé kočky dobře snášely extrakt z kurkumy přidaný do kompletního vyváženého krmiva pro kočky. Kočky nepotřebují nic jiného než kompletní stravu.",
     "hr": "Kurkuma je jarkožuti začin. Studija iz 2026. u časopisu Animals napominje da mačke imaju neobično slab kapacitet glukuronidacije, važnog koraka u razgradnji i izlučivanju kurkuminoida iz kurkume, te da to povećava rizik od otrovanja kurkumom kod mačaka. Autori dodaju da o njezinoj sigurnosti za mačke ima malo podataka. U njihovoj su studiji zdrave odrasle mačke dobro podnijele ekstrakt kurkume dodan potpunoj i uravnoteženoj mačjoj hrani. Mačkama ne treba ništa osim potpune hrane.",
-    "sv": "Gurkmeja är en klargul krydda. En studie från 2026 i tidskriften Animals påpekar att katter har ovanligt låg förmåga till glukuronidering, ett viktigt steg i nedbrytningen och utsöndringen av gurkmejans kurkuminoider, och att detta ökar risken för gurkmejaförgiftning hos katter. Författarna tillägger att det finns få data om dess säkerhet hos katter. I deras studie tolererades ett gurkmejaextrakt som tillsatts i en komplett och balanserad kattmat väl av friska vuxna katter. Katter behöver inget annat än en komplett kost."
+    "sv": "Gurkmeja är en klargul krydda. En studie från 2026 i tidskriften Animals påpekar att katter har ovanligt låg förmåga till glukuronidering, ett viktigt steg i nedbrytningen och utsöndringen av gurkmejans kurkuminoider, och att detta ökar risken för gurkmejaförgiftning hos katter. Författarna tillägger att det finns få data om dess säkerhet hos katter. I deras studie tolererades ett gurkmejaextrakt som tillsatts i en komplett och balanserad kattmat väl av friska vuxna katter. Katter behöver inget annat än en komplett kost.",
+    "da": "Gurkemeje er et stærkt gult krydderi. En undersøgelse fra 2026 i tidsskriftet Animals skriver at katte har en usædvanligt lav evne til glukuronidering, som er et vigtigt trin i nedbrydningen og udskillelsen af gurkemejens curcuminoider, og at det øger risikoen for gurkemejeforgiftning hos katte. Forfatterne tilføjer at der er få data om, hvor sikkert det er for katte. I deres undersøgelse blev et gurkemejeekstrakt, der var tilsat et komplet og afbalanceret kattefoder, tålt godt af raske, voksne katte. Katte har ikke brug for andet end en komplet kost."
   },
   "signs": {
     "en": [
@@ -57,6 +62,10 @@
     "sv": [
       "Kräkningar",
       "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Mavebesvær"
     ]
   },
   "what_to_do": {
@@ -64,7 +73,8 @@
     "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje.",
     "cs": "Pokud kočka olízla trochu kurkumy, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka snědla něco, co neměla, okamžitě se obraťte na veterináře; nečekejte na příznaky a nesnažte se ji doma přimět ke zvracení.",
     "hr": "Ako je mačka poliznula malo kurkume, pazi na povraćanje ili želučane tegobe. Ako je pojela nešto što nije smjela, odmah se obrati veterinaru; ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Om din katt har slickat i sig lite gurkmeja: håll ett öga på om hon kräks eller får orolig mage. Om din katt har ätit något hon inte borde ska du kontakta din veterinär direkt; vänta inte på tecken, och försök inte få katten att kräkas hemma."
+    "sv": "Om din katt har slickat i sig lite gurkmeja: håll ett öga på om hon kräks eller får orolig mage. Om din katt har ätit något hon inte borde ska du kontakta din veterinär direkt; vänta inte på tecken, och försök inte få katten att kräkas hemma.",
+    "da": "Hvis din kat har slikket på lidt gurkemeje, skal du holde øje med opkast eller mavebesvær. Hvis din kat har spist noget, den ikke burde, skal du kontakte din dyrlæge med det samme; vent ikke på tegn, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -72,7 +82,8 @@
     "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce.",
     "cs": "Kurkuma je žluté koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu drž od kočičky dál.",
     "hr": "Kurkuma je žuti začin za ljudsku hranu. Mačkama začini nisu potrebni, zato staklenku drži daleko od mace.",
-    "sv": "Gurkmeja är en gul krydda för människors mat. Katter behöver inga kryddor, så håll burken borta från katten."
+    "sv": "Gurkmeja är en gul krydda för människors mat. Katter behöver inga kryddor, så håll burken borta från katten.",
+    "da": "Gurkemeje er et gult krydderi til mennesker. Katte har ikke brug for krydderier, så hold glasset væk fra din kat."
   },
   "faq": [
     {
@@ -81,14 +92,16 @@
         "sl": "Ali je kurkuma v mačji hrani varna?",
         "cs": "Je kurkuma v kočičím krmivu bezpečná?",
         "hr": "Je li kurkuma u mačjoj hrani sigurna?",
-        "sv": "Är gurkmeja i kattmat säker?"
+        "sv": "Är gurkmeja i kattmat säker?",
+        "da": "Er gurkemeje i kattefoder ufarligt?"
       },
       "a": {
         "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
         "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo.",
         "cs": "V jedné studii dostávaly zdravé dospělé kočky čtyři měsíce kompletní krmivo s přidaným extraktem z kurkumy a snášely ho dobře. Autoři poznamenávají, že jiných studií o krmení koček kurkumou je málo.",
         "hr": "U jednoj su studiji zdrave odrasle mačke četiri mjeseca dobivale potpunu hranu s dodanim ekstraktom kurkume i dobro su je podnijele. Autori napominju da su druga istraživanja o hranjenju mačaka kurkumom rijetka.",
-        "sv": "I en studie fick friska vuxna katter en komplett kost med tillsatt gurkmejaextrakt i fyra månader, och den tolererades väl. Författarna påpekar att det finns få andra studier av gurkmeja till katter."
+        "sv": "I en studie fick friska vuxna katter en komplett kost med tillsatt gurkmejaextrakt i fyra månader, och den tolererades väl. Författarna påpekar att det finns få andra studier av gurkmeja till katter.",
+        "da": "I en undersøgelse fik raske, voksne katte en komplet kost med tilsat gurkemejeekstrakt i fire måneder, og den blev tålt godt. Forfatterne skriver at der kun findes få andre undersøgelser af, hvad der sker, når katte får gurkemeje."
       }
     }
   ],
@@ -181,6 +194,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bf65043d8be4f2a6b0960c91cc3b5a77cdc0f02c7a30d27bd2def835e43e9ef5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c9df916aec83c8296f8d007812e8f724cede1aa283f89e108965a19e08e3ce2"
     }
   }
 }

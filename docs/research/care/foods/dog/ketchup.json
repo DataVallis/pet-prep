@@ -6,21 +6,24 @@
     "sl": "Kečap",
     "cs": "Kečup",
     "hr": "Kečap",
-    "sv": "Ketchup"
+    "sv": "Ketchup",
+    "da": "Ketchup"
   },
   "question": {
     "en": "Can dogs eat ketchup?",
     "sl": "Ali lahko psi jedo kečap?",
     "cs": "Mohou psi jíst kečup?",
     "hr": "Smiju li psi jesti kečap?",
-    "sv": "Får hundar äta ketchup?"
+    "sv": "Får hundar äta ketchup?",
+    "da": "Må hunde spise ketchup?"
   },
   "url_slug": {
     "en": "ketchup",
     "sl": "kecap",
     "cs": "kecup",
     "hr": "kecap",
-    "sv": "ketchup"
+    "sv": "ketchup",
+    "da": "ketchup"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, kečapa raje ne delite s psom. Kečap sam po sebi ni strupen, a običajno vsebuje česen in čebulo, sladkor in sol, včasih pa tudi ksilitol, ki je za pse strupen.",
     "cs": "Ne, kečup je lepší se psem nesdílet. Kečup sám o sobě jedovatý není, ale obvykle obsahuje česnek a cibuli, cukr a sůl a někdy xylitol, který je pro psy jedovatý.",
     "hr": "Ne, kečap je najbolje ne dijeliti sa psom. Sam kečap nije otrovan, ali obično sadrži češnjak i luk, šećer i sol, a ponekad i ksilitol, koji je otrovan za pse.",
-    "sv": "Nej, det är bäst att inte dela ketchup med din hund. Ketchup är inte giftig i sig, men den innehåller oftast vitlök och lök, socker och salt, och ibland xylitol, som är giftigt för hundar."
+    "sv": "Nej, det är bäst att inte dela ketchup med din hund. Ketchup är inte giftig i sig, men den innehåller oftast vitlök och lök, socker och salt, och ibland xylitol, som är giftigt för hundar.",
+    "da": "Nej, det er bedst ikke at dele ketchup med din hund. Ketchup er ikke giftigt i sig selv, men det indeholder som regel hvidløg og løg, sukker og salt og nogle gange xylitol, som er giftigt for hunde."
   },
   "why": {
     "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
     "sl": "Kupljeni kečap običajno vsebuje česen in čebulo, cimet, sladkor in sol, konzervanse in kemikalije, mnoge od teh sestavin pa lahko psom škodijo. Česen in čebula lahko psu povzročita prebavne težave, včasih pa tudi resnejše posledice. Nekateri kečapi vsebujejo tudi ksilitol, ki je za pse strupen. Viri se razlikujejo v strogosti (eden pravi, da kečap ni strupen, drugi preprosto odsvetuje), zato ga psu ne priporočamo.",
     "cs": "Kupovaný kečup obvykle obsahuje česnek a cibuli, skořici, cukr a sůl, konzervanty a chemické látky a mnohé z nich mohou psům škodit. Česnek a cibule mohou psovi rozhodit žaludek a někdy mají i vážnější účinky. Některý kečup obsahuje také xylitol, který je pro psy jedovatý. Zdroje se liší v přísnosti (jeden říká, že kečup není jedovatý, jiný jednoduše odpoví ne), proto ho doporučujeme nedávat.",
     "hr": "Kupovni kečap obično sadrži češnjak i luk, cimet, šećer i sol, konzervanse i kemikalije, a mnogi od njih mogu naškoditi psima. Češnjak i luk mogu nadražiti želudac psa, a ponekad imaju i ozbiljnije učinke. Neki kečap sadrži i ksilitol, koji je otrovan za pse. Izvori se razlikuju u tome koliko su strogi (jedan kaže da kečap nije otrovan, drugi jednostavno kaže „ne“), zato savjetujemo da ga psu ne daješ.",
-    "sv": "Köpt ketchup innehåller vanligtvis vitlök och lök, kanel, socker och salt samt konserveringsmedel och andra tillsatser, och många av dem kan skada hundar. Vitlök och lök kan reta hundens mage och ibland ge allvarligare effekter. Viss ketchup innehåller också xylitol, som är giftigt för hundar. Källorna är inte överens om hur strikt man ska vara (en kallar ketchup ogiftig, en annan säger helt enkelt nej), så vi rekommenderar att du inte ger den."
+    "sv": "Köpt ketchup innehåller vanligtvis vitlök och lök, kanel, socker och salt samt konserveringsmedel och andra tillsatser, och många av dem kan skada hundar. Vitlök och lök kan reta hundens mage och ibland ge allvarligare effekter. Viss ketchup innehåller också xylitol, som är giftigt för hundar. Källorna är inte överens om hur strikt man ska vara (en kallar ketchup ogiftig, en annan säger helt enkelt nej), så vi rekommenderar att du inte ger den.",
+    "da": "Ketchup fra butikken indeholder typisk hvidløg og løg, kanel, sukker og salt, konserveringsmidler og kemikalier, og mange af dem kan skade hunde. Hvidløg og løg kan give hunden dårlig mave og har nogle gange mere alvorlige virkninger. Noget ketchup indeholder også xylitol, som er giftigt for hunde. Kilderne er uenige om, hvor strenge man skal være (en kilde kalder ketchup ugiftigt, en anden siger blot nej), så vi fraråder at give den."
   },
   "signs": {
     "en": [
@@ -52,6 +57,9 @@
     ],
     "sv": [
       "Magbesvär"
+    ],
+    "da": [
+      "Mavebesvær"
     ]
   },
   "what_to_do": {
@@ -59,7 +67,8 @@
     "sl": "Nekateri kečapi vsebujejo ksilitol, ki je za pse strupen. Če je pes pojedel kečap s ksilitolom, ravnajte po nasvetih na naši strani o ksilitolu.",
     "cs": "Některý kečup obsahuje xylitol, který je pro psy jedovatý. Pokud pes snědl kečup s xylitolem, řiďte se radami na naší stránce o xylitolu.",
     "hr": "Neki kečap sadrži ksilitol, koji je otrovan za pse. Ako je pas pojeo kečap s ksilitolom, slijedi savjet na našoj stranici o ksilitolu.",
-    "sv": "Viss ketchup innehåller xylitol, som är giftigt för hundar. Om din hund har ätit ketchup med xylitol ska du följa råden på vår sida om xylitol."
+    "sv": "Viss ketchup innehåller xylitol, som är giftigt för hundar. Om din hund har ätit ketchup med xylitol ska du följa råden på vår sida om xylitol.",
+    "da": "Noget ketchup indeholder xylitol, som er giftigt for hunde. Hvis din hund har spist ketchup med xylitol, skal du følge rådene på vores side om xylitol."
   },
   "serving": null,
   "child": {
@@ -67,7 +76,8 @@
     "sl": "Kečap je omaka za ljudi. V njem so sestavine, ki niso dobre za pse, zato naj ostane na tvojem krožniku.",
     "cs": "Kečup je omáčka pro lidi. Obsahuje věci, které psům neprospívají, takže ho nech na svém talíři.",
     "hr": "Kečap je umak za ljude. U njemu ima stvari koje nisu dobre za pse, zato ga zadrži na svom tanjuru.",
-    "sv": "Ketchup är en sås för människor. Den innehåller sådant som inte är bra för hundar, så behåll den på din egen tallrik."
+    "sv": "Ketchup är en sås för människor. Den innehåller sådant som inte är bra för hundar, så behåll den på din egen tallrik.",
+    "da": "Ketchup er en sovs til mennesker. Den indeholder ting, som ikke er gode for hunde, så behold den på din egen tallerken."
   },
   "faq": [
     {
@@ -76,14 +86,16 @@
         "sl": "Kaj pa paradižnikova omaka?",
         "cs": "A co rajčatová omáčka?",
         "hr": "Što je s umakom od rajčice?",
-        "sv": "Hur är det med tomatsås?"
+        "sv": "Hur är det med tomatsås?",
+        "da": "Hvad med tomatsovs?"
       },
       "a": {
         "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
         "sl": "Ne. Paradižnikova omaka pogosto vsebuje škodljive sestavine, kot so česen, čebula ali neprimerna zelišča.",
         "cs": "Ne. Rajčatová omáčka často obsahuje škodlivé přísady, například česnek, cibuli nebo nevhodné bylinky.",
         "hr": "Ne. Umak od rajčice često sadrži štetne sastojke poput češnjaka, luka ili nesigurnih začinskih biljaka.",
-        "sv": "Nej. Tomatsås innehåller ofta skadliga ingredienser som vitlök, lök eller olämpliga örter."
+        "sv": "Nej. Tomatsås innehåller ofta skadliga ingredienser som vitlök, lök eller olämpliga örter.",
+        "da": "Nej. Tomatsovs indeholder ofte skadelige ingredienser som hvidløg, løg eller urter, der ikke er sikre for hunde."
       }
     }
   ],
@@ -146,6 +158,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5bf3d7e1dcee7818ab8e46daa5f3bf1be89da32210a347626ac50dc176525f75"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f89f9acbee826e8570a1071e97cca90c32653322e328ecaa902ee94ee5060287"
     }
   }
 }

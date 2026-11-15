@@ -6,21 +6,24 @@
     "sl": "Bonboni in sladkarije",
     "cs": "Bonbony a sladkosti",
     "hr": "Bomboni i slatkiši",
-    "sv": "Godis"
+    "sv": "Godis",
+    "da": "Slik"
   },
   "question": {
     "en": "Can cats eat candy?",
     "sl": "Ali lahko mačke jedo sladkarije?",
     "cs": "Mohou kočky jíst bonbony?",
     "hr": "Smiju li mačke jesti bombone?",
-    "sv": "Får katter äta godis?"
+    "sv": "Får katter äta godis?",
+    "da": "Må katte spise slik?"
   },
   "url_slug": {
     "en": "candy",
     "sl": "sladkarije",
     "cs": "bonbony",
     "hr": "bomboni-i-slatkisi",
-    "sv": "godis"
+    "sv": "godis",
+    "da": "slik"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega.",
     "cs": "Ne, bonbony kočkám nepatří a nejsou pro ně bezpečné. Mnoho sladkostí obsahuje čokoládu nebo rozinky, které kočkám škodí, a spolknuté obaly mohou podráždit střeva nebo je ucpat. Kočky navíc sladkou chuť stejně nevnímají, takže jim sladkosti nic dobrého nepřinesou.",
     "hr": "Ne, bomboni nisu za mačke i nisu sigurni za njih. Mnogi slatkiši sadrže čokoladu ili grožđice, koje su štetne za mačke, a progutani omoti mogu nadražiti ili začepiti crijeva. Mačke ionako ne osjećaju slatki okus, pa im slatkiši ne daju ništa dobro.",
-    "sv": "Nej, godis är inget för katter och är inte säkert för dem. Mycket godis innehåller choklad eller russin, som är skadligt för katter, och uppätna godispapper kan irritera tarmen eller orsaka stopp. Katter kan ändå inte känna sötma, så godis ger dem inget gott."
+    "sv": "Nej, godis är inget för katter och är inte säkert för dem. Mycket godis innehåller choklad eller russin, som är skadligt för katter, och uppätna godispapper kan irritera tarmen eller orsaka stopp. Katter kan ändå inte känna sötma, så godis ger dem inget gott.",
+    "da": "Nej, slik er ikke noget for katte og er ikke ufarligt for dem. Mange søde sager indeholder chokolade eller rosiner, som er skadelige for katte, og slikpapir, der bliver slugt, kan give mavebesvær eller blokere tarmen. Katte kan i øvrigt ikke smage sødt, så slik giver dem ikke noget godt."
   },
   "why": {
     "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
     "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven.",
     "cs": "Pet Poison Helpline uvádí, že kočky by bonbony jíst neměly a že pro ně nejsou bezpečné: čokoláda je pro kočky toxická a rozinky mohou u koček způsobit selhání ledvin. VCA uvádí, že bonbony kočkám nepatří, a upozorňuje, že obaly od bonbonů mohou způsobit podráždění střev a ucpání trávicího traktu, a Blue Cross, že mnoho sladkých pamlsků je pro kočky jedovatých. Samotný cukr toxický není, ale pro kočky je nezdravý. Protože se tato nebezpečí v bonbonech skrývají tak často, používáme přísnější úroveň.",
     "hr": "Pet Poison Helpline navodi da mačke ne bi smjele jesti bombone i da bomboni nisu sigurni za mačke: čokolada je otrovna za mačke, a grožđice mogu izazvati zatajenje bubrega. VCA kaže da bomboni nisu za mačke i upozorava da omoti od bombona mogu izazvati probavne tegobe i začepljenje probavnog sustava, a Blue Cross da su mnogi slatkiši otrovni za mačke. Sam šećer nije otrovan, ali je za mačke nezdrav. Budući da bomboni tako često skrivaju te opasnosti, primjenjujemo strožu razinu.",
-    "sv": "Pet Poison Helpline säger att katter inte bör äta godis och att godis inte är säkert för katter: choklad är giftigt för katter och russin kan orsaka njursvikt hos katter. VCA säger att godis inte är något för katter och varnar för att godispapper kan ge magtarmbesvär och stopp i mag-tarmkanalen, och Blue Cross säger att många sötsaker är giftiga för katter. Socker i sig är inte giftigt, men det är onyttigt för katter. Eftersom godis så ofta döljer dessa faror använder vi den strängare nivån."
+    "sv": "Pet Poison Helpline säger att katter inte bör äta godis och att godis inte är säkert för katter: choklad är giftigt för katter och russin kan orsaka njursvikt hos katter. VCA säger att godis inte är något för katter och varnar för att godispapper kan ge magtarmbesvär och stopp i mag-tarmkanalen, och Blue Cross säger att många sötsaker är giftiga för katter. Socker i sig är inte giftigt, men det är onyttigt för katter. Eftersom godis så ofta döljer dessa faror använder vi den strängare nivån.",
+    "da": "Pet Poison Helpline skriver at katte ikke bør spise slik, og at slik ikke er ufarligt for katte: chokolade er giftigt for katte, og rosiner kan give nyresvigt hos katte. VCA skriver at slik ikke er noget for katte, og advarer om at slikpapir kan give mave-tarm-problemer og tarmblokering, og Blue Cross skriver at mange søde sager er giftige for katte. Sukker i sig selv er ikke giftigt, men det er usundt for katte. Fordi slik så ofte skjuler disse farer, bruger vi det strengeste niveau."
   },
   "signs": {
     "en": [
@@ -57,6 +62,10 @@
     "sv": [
       "Diarré eller orolig mage",
       "Magtarmbesvär efter att ha svalt en förpackning"
+    ],
+    "da": [
+      "Diarré eller mavebesvær",
+      "Mave-tarm-problemer efter at have slugt slikpapir"
     ]
   },
   "what_to_do": {
@@ -64,7 +73,8 @@
     "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "cs": "Pokud se kočka dostala k bonbonům nebo k obalu, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Volejte při jakékoli čokoládě, i malé. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Ako je mačka dohvatila bombone ili omot, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja za savjet. Nazovi zbog svake čokolade, pa i male količine. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Om din katt har kommit åt godis eller ett godispapper ska du kontakta din veterinär eller giftrådgivningen för djur och be om råd. Ring vid all choklad, även små mängder. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma."
+    "sv": "Om din katt har kommit åt godis eller ett godispapper ska du kontakta din veterinär eller giftrådgivningen för djur och be om råd. Ring vid all choklad, även små mängder. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma.",
+    "da": "Hvis din kat har fået fat i slik eller slikpapir, skal du kontakte din dyrlæge eller en giftrådgivning for dyr for at få vejledning. Ring ved enhver mængde chokolade, selv en lille smule. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -72,7 +82,8 @@
     "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi.",
     "cs": "Sladkosti jsou pro lidi, ne pro kočky. Po některých může být kočičce špatně, takže bonbony i obaly pěkně schovávej.",
     "hr": "Slatkiši su za ljude, a ne za mačke. Neki mogu razboljeti macu, zato slatkiše i omote drži pospremljene.",
-    "sv": "Godis är till för människor, inte för katter. En del kan göra katten sjuk, så håll godis och godispapper utom räckhåll."
+    "sv": "Godis är till för människor, inte för katter. En del kan göra katten sjuk, så håll godis och godispapper utom räckhåll.",
+    "da": "Slik er til mennesker, ikke til katte. Noget af det kan gøre din kat syg, så læg dit slik og dit slikpapir væk."
   },
   "faq": [
     {
@@ -81,14 +92,16 @@
         "sl": "Ali je oblizek sladkarije nujen primer?",
         "cs": "Je pohotovost, když kočka olízne bonbon?",
         "hr": "Je li jedno lizanje slatkiša hitan slučaj?",
-        "sv": "Är en slick av godis en nödsituation?"
+        "sv": "Är en slick av godis en nödsituation?",
+        "da": "Er det en nødsituation, hvis katten slikker på noget sødt?"
       },
       "a": {
         "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
         "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje.",
         "cs": "Obvykle ne. Cats Protection uvádí, že pokud kočka náhodou olízne sladký pamlsek, není třeba spěchat k veterináři. U čokolády je to jiné: volejte při jakékoli čokoládě, kterou kočka snědla.",
         "hr": "Obično nije. Cats Protection navodi da, ako mačka slučajno poliže slatku poslasticu, nema potrebe žuriti veterinaru. Čokolada je druga priča: nazovi zbog svake čokolade koju mačka pojede.",
-        "sv": "Oftast inte. Cats Protection säger att om din katt av misstag slickar på en söt godbit behöver du inte rusa till veterinären. Choklad är annorlunda: ring och fråga om all choklad som din katt äter."
+        "sv": "Oftast inte. Cats Protection säger att om din katt av misstag slickar på en söt godbit behöver du inte rusa till veterinären. Choklad är annorlunda: ring och fråga om all choklad som din katt äter.",
+        "da": "Som regel ikke. Cats Protection skriver at du ikke behøver at skynde dig til dyrlægen, hvis din kat ved en fejl slikker på noget sødt. Chokolade er noget andet: ring, hvis din kat har spist chokolade, uanset hvor lidt."
       }
     },
     {
@@ -97,14 +110,16 @@
         "sl": "Zakaj mačko zanimajo mentolovi bonboni?",
         "cs": "Proč kočku zajímají mátové bonbony?",
         "hr": "Zašto moju mačku zanimaju bomboni od paprene metvice?",
-        "sv": "Varför är min katt intresserad av pepparmyntsgodis?"
+        "sv": "Varför är min katt intresserad av pepparmyntsgodis?",
+        "da": "Hvorfor er min kat interesseret i pebermyntebolsjer?"
       },
       "a": {
         "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
         "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega.",
         "cs": "Nejde o cukr. Máta obsahuje vonné látky podobné těm v šantě kočičí, které mohou kočky přitahovat. Silice z máty jsou pro kočky toxické, proto sladkosti uchovávejte mimo dosah kočky.",
         "hr": "Ne zbog šećera. Miris metvice sadrži spojeve slične onima u mačjoj metvici, koji mogu privući mačke. Eterična ulja metvice otrovna su za mačke, zato slatkiše drži izvan dosega mačke.",
-        "sv": "Det är inte sockret. Doften av mynta innehåller ämnen som liknar de som finns i kattmynta, som kan locka katter. Eteriska oljor från mynta är giftiga för katter, så håll godis utom räckhåll för din katt."
+        "sv": "Det är inte sockret. Doften av mynta innehåller ämnen som liknar de som finns i kattmynta, som kan locka katter. Eteriska oljor från mynta är giftiga för katter, så håll godis utom räckhåll för din katt.",
+        "da": "Det er ikke sukkeret. Duften af mynte indeholder stoffer, der ligner dem i katteurt, og som kan tiltrække katte. Æteriske olier fra mynte er giftige for katte, så hold slik uden for din kats rækkevidde."
       }
     }
   ],
@@ -219,6 +234,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b59c14143afb7c95c997937e5e2626d3b8fac4bc5f4c41128b97b4750c8d6c49"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe51b5b61ca445640d17b5b56c62a8682cdc9a51cc1003fc45f0e09d2343a4b4"
     }
   }
 }

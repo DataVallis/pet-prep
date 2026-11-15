@@ -6,21 +6,24 @@
     "sl": "Pokovka (navadna)",
     "cs": "Popcorn (neochucený)",
     "hr": "Kokice (obične)",
-    "sv": "Popcorn (naturell)"
+    "sv": "Popcorn (naturell)",
+    "da": "Popcorn (naturel)"
   },
   "question": {
     "en": "Can cats eat popcorn?",
     "sl": "Ali lahko mačke jedo pokovko?",
     "cs": "Mohou kočky jíst popcorn?",
     "hr": "Smiju li mačke jesti kokice?",
-    "sv": "Får katter äta popcorn?"
+    "sv": "Får katter äta popcorn?",
+    "da": "Må katte spise popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
     "sl": "pokovka",
     "cs": "popcorn",
     "hr": "kokice",
-    "sv": "popcorn"
+    "sv": "popcorn",
+    "da": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, nekaj kosov navadne pokovke je v redu kot občasen priboljšek. Pet Poison Helpline pokovko navaja med živili, ki so varna za mačke in pse, če je brez masla in soli. Pokovka z maslom ali soljo ni za mačke.",
     "cs": "Ano, pár kousků neochuceného popcornu je jako občasný pamlsek v pořádku. Pet Poison Helpline uvádí popcorn mezi potravinami bezpečnými pro kočky i psy, pokud se vynechá máslo a sůl. Popcorn s máslem nebo solený popcorn pro kočky není.",
     "hr": "Da, nekoliko komadića običnih kokica u redu je kao povremena poslastica. Pet Poison Helpline navodi kokice među namirnicama sigurnima za mačke i pse, uz uvjet da su bez maslaca i soli. Kokice s maslacem ili solju nisu za mačke.",
-    "sv": "Ja, några bitar naturell popcorn går bra som godbit då och då. Pet Poison Helpline listar popcorn bland mat som är säker för katter och hundar, så länge du lämnar smöret och saltet därhän. Smörad eller saltad popcorn är inget för katter."
+    "sv": "Ja, några bitar naturell popcorn går bra som godbit då och då. Pet Poison Helpline listar popcorn bland mat som är säker för katter och hundar, så länge du lämnar smöret och saltet därhän. Smörad eller saltad popcorn är inget för katter.",
+    "da": "Ja, nogle få stykker naturel popcorn er fint som en godbid af og til. Pet Poison Helpline nævner popcorn blandt de fødevarer, der er ufarlige for katte og hunde, så længe der ikke er smør og salt på. Popcorn med smør eller salt er ikke noget for katte."
   },
   "why": {
     "en": "Pet Poison Helpline lists popcorn, without butter and salt, among foods that are safe for cats and dogs, and the ASPCA includes popcorn among easy treats in its snack ideas for cats and dogs. Salt is the catch: Pet Poison Helpline says excessive salt should not be in a cat's diet. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Cats Protection says it's best to stick to cat food treats rather than human foods.",
     "sl": "Pet Poison Helpline pokovko brez masla in soli navaja med živili, ki so varna za mačke in pse, ASPCA pa jo v svojih idejah za prigrizke za mačke in pse navaja med preprostimi priboljški. Težava je sol: Pet Poison Helpline navaja, da preveč soli ne sodi v mačjo prehrano. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Cats Protection pa, da se je najbolje držati priboljškov za mačke in ne človeške hrane.",
     "cs": "Pet Poison Helpline uvádí popcorn bez másla a soli mezi potravinami, které jsou bezpečné pro kočky i psy, a ASPCA řadí popcorn mezi snadné pamlsky ve svých tipech na svačinky pro kočky a psy. Háček je v soli: Pet Poison Helpline uvádí, že nadměrné množství soli by v jídelníčku kočky být nemělo. International Cat Care uvádí, že kočky jako striktní masožravci hůře tráví a využívají sacharidy, a Cats Protection radí držet se spíše pamlsků pro kočky než lidského jídla.",
     "hr": "Pet Poison Helpline navodi kokice bez maslaca i soli među namirnicama koje su sigurne za mačke i pse, a ASPCA ubraja kokice među jednostavne poslastice u svojim idejama za grickalice za mačke i pse. Kvaka je u soli: Pet Poison Helpline kaže da prekomjerna sol ne bi smjela biti u mačjoj prehrani. International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate, a Cats Protection da je najbolje držati se poslastica za mačke umjesto ljudske hrane.",
-    "sv": "Pet Poison Helpline listar popcorn, utan smör och salt, bland mat som är säker för katter och hundar, och ASPCA tar med popcorn bland enkla godbitar i sina snacksidéer för katter och hundar. Saltet är haken: Pet Poison Helpline säger att för mycket salt inte hör hemma i kattens kost. International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater, och Cats Protection säger att det är bäst att hålla sig till kattgodis i stället för mat från matbordet."
+    "sv": "Pet Poison Helpline listar popcorn, utan smör och salt, bland mat som är säker för katter och hundar, och ASPCA tar med popcorn bland enkla godbitar i sina snacksidéer för katter och hundar. Saltet är haken: Pet Poison Helpline säger att för mycket salt inte hör hemma i kattens kost. International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater, och Cats Protection säger att det är bäst att hålla sig till kattgodis i stället för mat från matbordet.",
+    "da": "Pet Poison Helpline nævner popcorn uden smør og salt blandt de fødevarer, der er ufarlige for katte og hunde, og ASPCA tager popcorn med blandt de nemme godbidder i sine snackidéer til katte og hunde. Saltet er hagen ved det: Pet Poison Helpline skriver at for meget salt ikke hører hjemme i en kats kost. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Cats Protection skriver at det er bedst at holde sig til godbidder til katte frem for menneskemad."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Ponudite le nekaj kosov navadne pokovke. Če je mačka pojedla veliko slane pokovke in bruha, ima drisko, je zelo žejna ali nenavadno utrujena, pokličite veterinarja.",
     "cs": "Nabídněte jen pár neochucených kousků. Pokud kočka snědla hodně slaného popcornu a zvrací, má průjem, je velmi žíznivá nebo neobvykle unavená, obraťte se na veterináře.",
     "hr": "Daj samo nekoliko običnih komadića. Ako je mačka pojela puno slanih kokica pa povraća, ima proljev, djeluje vrlo žedno ili neobično umorno, obrati se veterinaru.",
-    "sv": "Ge bara några naturella bitar. Om din katt har ätit mycket salt popcorn och kräks, har diarré, verkar mycket törstig eller ovanligt orkeslös, ska du kontakta din veterinär."
+    "sv": "Ge bara några naturella bitar. Om din katt har ätit mycket salt popcorn och kräks, har diarré, verkar mycket törstig eller ovanligt orkeslös, ska du kontakta din veterinär.",
+    "da": "Giv kun nogle få stykker naturel popcorn. Hvis din kat har spist meget salt popcorn og kaster op, har diarré, virker meget tørstig eller usædvanligt træt, skal du kontakte din dyrlæge."
   },
   "serving": {
     "en": "A few pieces of plain popcorn with no butter or salt.",
     "sl": "Nekaj kosov navadne pokovke brez masla in soli.",
     "cs": "Pár kousků neochuceného popcornu bez másla a soli.",
     "hr": "Nekoliko komadića običnih kokica, bez maslaca i soli.",
-    "sv": "Några bitar naturell popcorn utan smör eller salt."
+    "sv": "Några bitar naturell popcorn utan smör eller salt.",
+    "da": "Nogle få stykker naturel popcorn uden smør og salt."
   },
   "child": {
     "en": "A piece of plain popcorn can be a cat treat sometimes. Buttery, salty popcorn is just for people.",
     "sl": "Košček navadne pokovke je lahko včasih priboljšek za muco. Pokovka z maslom in soljo pa je samo za ljudi.",
     "cs": "Kousek neochuceného popcornu může být pro kočku občas pamlsek. Máslový a slaný popcorn je jen pro lidi.",
     "hr": "Komadić običnih kokica ponekad može biti poslastica za mačku. Kokice s maslacem i solju samo su za ljude.",
-    "sv": "En bit vanlig popcorn kan vara en godbit för katten ibland. Smörad, saltad popcorn är bara för människor."
+    "sv": "En bit vanlig popcorn kan vara en godbit för katten ibland. Smörad, saltad popcorn är bara för människor.",
+    "da": "Et stykke naturel popcorn kan være en godbid til katte en gang imellem. Popcorn med smør og salt er kun til mennesker."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko mačke jedo slano pokovko ali pokovko z maslom?",
         "cs": "Mohou kočky jíst solený nebo máslový popcorn?",
         "hr": "Smiju li mačke jesti slane kokice ili kokice s maslacem?",
-        "sv": "Får katter äta saltad eller smörad popcorn?"
+        "sv": "Får katter äta saltad eller smörad popcorn?",
+        "da": "Må katte spise saltet popcorn eller popcorn med smør?"
       },
       "a": {
         "en": "No. Pet Poison Helpline says to hold the butter and salt, and that excessive salt should not be in a cat's diet. Agriculture Victoria says large amounts of salt can cause excessive thirst and urination.",
         "sl": "Ne. Pet Poison Helpline svetuje pokovko brez masla in soli ter navaja, da preveč soli ne sodi v mačjo prehrano. Agriculture Victoria navaja, da lahko velike količine soli povzročijo močno žejo in pogosto uriniranje.",
         "cs": "Ne. Pet Poison Helpline radí vynechat máslo a sůl a uvádí, že nadměrné množství soli by v jídelníčku kočky být nemělo. Agriculture Victoria uvádí, že velké množství soli může způsobit nadměrnou žízeň a močení.",
         "hr": "Ne. Pet Poison Helpline kaže da maslac i sol treba izostaviti te da prekomjerna sol ne bi smjela biti u mačjoj prehrani. Agriculture Victoria navodi da velike količine soli mogu izazvati pretjeranu žeđ i mokrenje.",
-        "sv": "Nej. Pet Poison Helpline säger att du ska lämna smöret och saltet därhän, och att för mycket salt inte hör hemma i kattens kost. Agriculture Victoria säger att stora mängder salt kan orsaka kraftig törst och ökat kissande."
+        "sv": "Nej. Pet Poison Helpline säger att du ska lämna smöret och saltet därhän, och att för mycket salt inte hör hemma i kattens kost. Agriculture Victoria säger att stora mängder salt kan orsaka kraftig törst och ökat kissande.",
+        "da": "Nej. Pet Poison Helpline skriver at man skal undlade smør og salt, og at for meget salt ikke hører hjemme i en kats kost. Agriculture Victoria skriver at store mængder salt kan give kraftig tørst og hyppig vandladning."
       }
     }
   ],
@@ -166,6 +176,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6d04acdf7283f9a00e61341212be85ee7342d0c3f110e349f8abe967b2195f2c"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ab58797419fdb71bbb87af2225e38c685f26024e90f0ca701e44e736c70e74f"
     }
   }
 }

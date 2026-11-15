@@ -5,32 +5,37 @@
     "en": "Sausages",
     "sl": "Klobase",
     "hr": "Kobasice",
-    "sv": "Korv"
+    "sv": "Korv",
+    "da": "Pølser"
   },
   "question": {
     "en": "Can cats eat sausages?",
     "sl": "Ali lahko mačke jedo klobase?",
     "hr": "Smiju li mačke jesti kobasice?",
-    "sv": "Får katter äta korv?"
+    "sv": "Får katter äta korv?",
+    "da": "Må katte spise pølser?"
   },
   "url_slug": {
     "en": "sausages",
     "sl": "klobase",
     "hr": "kobasice",
-    "sv": "korv"
+    "sv": "korv",
+    "da": "poelser"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Sausages are processed, fatty and usually high in salt, and many contain preservatives, spices, onion or garlic that can be harmful to cats. RSPCA Australia advises avoiding sausages for cats because they can contain sulphite preservatives.",
     "sl": "Raje ne. Klobase so predelane, mastne in običajno zelo slane, mnoge pa vsebujejo konzervanse, začimbe, čebulo ali česen, ki mački lahko škodijo. RSPCA Avstralija svetuje, da mačkam klobas ne dajete, ker lahko vsebujejo sulfitne konzervanse.",
     "hr": "Bolje ne. Kobasice su prerađene, masne i obično jako slane, a mnoge sadrže konzervanse, začine, luk ili češnjak koji mogu naškoditi mačkama. RSPCA Australia savjetuje da se mačkama ne daju kobasice, jer mogu sadržavati sulfitne konzervanse.",
-    "sv": "Det är bäst att låta bli. Korv är bearbetad, fet och oftast salt, och många innehåller konserveringsmedel, kryddor, lök eller vitlök som kan vara skadligt för katter. RSPCA Australia avråder från korv åt katter eftersom den kan innehålla sulfitkonserveringsmedel."
+    "sv": "Det är bäst att låta bli. Korv är bearbetad, fet och oftast salt, och många innehåller konserveringsmedel, kryddor, lök eller vitlök som kan vara skadligt för katter. RSPCA Australia avråder från korv åt katter eftersom den kan innehålla sulfitkonserveringsmedel.",
+    "da": "Helst ikke. Pølser er forarbejdede, fede og som regel meget salte, og mange indeholder konserveringsmidler, krydderier, løg eller hvidløg, som kan være skadelige for katte. RSPCA Australia fraråder pølser til katte, fordi de kan indeholde sulfitkonserveringsmidler."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Purina pravi, da je zelo majhen košček klobase iz samega mesa, brez konzervansov in začimb, na splošno v redu, RSPCA Avstralija pa svetuje, naj se mačke izogibajo klobasam, klobasnemu mesu in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). Tudi klobase iz samega mesa so zelo mastne, klobase so običajno zelo slane, čebula, česen in nekatere začimbe v njih pa so lahko za mačke strupeni.",
     "hr": "Izvori se razlikuju, pa primjenjujemo strožu razinu. Purina kaže da je vrlo mali komadić kobasice isključivo od mesa, bez konzervansa i začina, općenito u redu, ali RSPCA Australia savjetuje izbjegavanje kobasica, nadjeva za kobasice i termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1). Čak su i kobasice samo od mesa vrlo masne, kobasice su obično bogate solju, a luk, češnjak i neki začini u njima mogu biti otrovni za mačke.",
-    "sv": "Källorna skiljer sig åt, så vi använder den strängare nivån. Purina säger att en mycket liten bit korv gjord av enbart kött, utan konserveringsmedel eller krydda, i allmänhet är okej, men RSPCA Australia avråder från korv, korvfärs och tillagat, industriellt framställt kött eftersom de kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). Även korv med bara kött är mycket fet, korv är vanligtvis salt, och lök, vitlök och en del kryddor i den kan vara giftiga för katter."
+    "sv": "Källorna skiljer sig åt, så vi använder den strängare nivån. Purina säger att en mycket liten bit korv gjord av enbart kött, utan konserveringsmedel eller krydda, i allmänhet är okej, men RSPCA Australia avråder från korv, korvfärs och tillagat, industriellt framställt kött eftersom de kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). Även korv med bara kött är mycket fet, korv är vanligtvis salt, och lök, vitlök och en del kryddor i den kan vara giftiga för katter.",
+    "da": "Kilderne er uenige, så vi bruger det strengeste niveau. Purina skriver at et meget lille stykke pølse af rent kød uden konserveringsmidler eller krydderier som regel er i orden, men RSPCA Australia fraråder pølser, pølsekød og forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1). Selv pølser af rent kød er meget fede, pølser er typisk meget salte, og løg, hvidløg og nogle krydderier i dem kan være giftige for katte."
   },
   "signs": {
     "en": [
@@ -48,20 +53,26 @@
     "sv": [
       "Orolig mage",
       "Diarré"
+    ],
+    "da": [
+      "Mavebesvær",
+      "Diarré"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate sausage that may contain onion or garlic, contact your vet as soon as possible. If she ate plain sausage and then has a stomach upset or diarrhoea, call your vet for advice.",
     "sl": "Če je mačka pojedla klobaso, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če je pojedla navadno klobaso in ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja.",
     "hr": "Ako je mačka pojela kobasicu koja bi mogla sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako je pojela običnu kobasicu pa ima želučane tegobe ili proljev, nazovi veterinara za savjet.",
-    "sv": "Om din katt har ätit korv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon har ätit vanlig korv och sedan får orolig mage eller diarré, ring din veterinär och be om råd."
+    "sv": "Om din katt har ätit korv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon har ätit vanlig korv och sedan får orolig mage eller diarré, ring din veterinär och be om råd.",
+    "da": "Hvis din kat har spist pølse, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten har spist en almindelig pølse og derefter får mavebesvær eller diarré, skal du ringe til din dyrlæge for at få råd."
   },
   "serving": null,
   "child": {
     "en": "Sausages are too salty and fatty for cats. Kitty's own cat treats make a much better surprise.",
     "sl": "Klobase so za muce preslane in premastne. Njeni mačji priboljški so veliko boljše presenečenje.",
     "hr": "Kobasice su previše slane i masne za mačke. Maca će se puno više razveseliti svojim mačjim poslasticama.",
-    "sv": "Korv är för salt och fet för katter. Kattens egna godbitar är en mycket bättre överraskning."
+    "sv": "Korv är för salt och fet för katter. Kattens egna godbitar är en mycket bättre överraskning.",
+    "da": "Pølser er for salte og fede til katte. Din kats egne godbidder er en meget bedre overraskelse."
   },
   "faq": [
     {
@@ -69,13 +80,15 @@
         "en": "What about the sausage skin or a raw sausage?",
         "sl": "Kaj pa ovoj klobase ali surova klobasa?",
         "hr": "Što je s kožicom kobasice ili sirovom kobasicom?",
-        "sv": "Hur är det med korvskinnet eller rå korv?"
+        "sv": "Hur är det med korvskinnet eller rå korv?",
+        "da": "Hvad med pølseskindet eller en rå pølse?"
       },
       "a": {
         "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
         "sl": "Ovoj je lahko težko prežvečiti in pogoltniti, zato se mačka lahko zaduši. Surovih klobas ji nikoli ne dajajte, ker pogosto vsebujejo škodljive bakterije, kot je salmonela.",
         "hr": "Ovitak može biti težak za žvakanje i gutanje, što može dovesti do gušenja. Sirove kobasice nikad ne treba davati, jer često sadrže štetne bakterije poput salmonele.",
-        "sv": "Skinnet kan vara svårt att tugga och svälja, vilket kan innebära kvävningsrisk. Rå korv ska aldrig ges, eftersom den ofta innehåller skadliga bakterier som salmonella."
+        "sv": "Skinnet kan vara svårt att tugga och svälja, vilket kan innebära kvävningsrisk. Rå korv ska aldrig ges, eftersom den ofta innehåller skadliga bakterier som salmonella.",
+        "da": "Skindet kan være svært at tygge og sluge, hvilket kan føre til kvælning. Rå pølser må aldrig gives, fordi de ofte indeholder skadelige bakterier som salmonella."
       }
     }
   ],
@@ -174,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0f2d95afa5a9fb01f6a7b9543ec0d18644ffd3665c58298c4256c80c9326d4d8"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "241608d117e8e999585a22de6fef411cb687c41034f5797b2b30ff8fa90fd607"
     }
   }
 }

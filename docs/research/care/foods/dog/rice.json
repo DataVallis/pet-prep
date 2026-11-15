@@ -6,21 +6,24 @@
     "sl": "Riž",
     "cs": "Rýže",
     "hr": "Riža",
-    "sv": "Ris"
+    "sv": "Ris",
+    "da": "Ris"
   },
   "question": {
     "en": "Can dogs eat rice?",
     "sl": "Ali lahko psi jedo riž?",
     "cs": "Mohou psi jíst rýži?",
     "hr": "Smiju li psi jesti rižu?",
-    "sv": "Får hundar äta ris?"
+    "sv": "Får hundar äta ris?",
+    "da": "Må hunde spise ris?"
   },
   "url_slug": {
     "en": "rice",
     "sl": "riz",
     "cs": "rize",
     "hr": "riza",
-    "sv": "ris"
+    "sv": "ris",
+    "da": "ris"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da. Navaden kuhan riž je za večino psov v majhnih količinah v redu, veterinarji pa ga uporabljajo v blagi dieti po prebavnih težavah. Skuhajte ga v vodi brez začimb in naj bodo porcije zmerne, saj lahko preveč ogljikovih hidratov povzroči pridobivanje teže.",
     "cs": "Ano. Obyčejná uvařená rýže je pro většinu psů v malém množství v pořádku a veterináři ji používají v šetřící dietě po potížích se žaludkem. Vařte ji ve vodě bez koření a dbejte na rozumné porce, protože příliš mnoho sacharidů může vést k nárůstu hmotnosti.",
     "hr": "Da. Obična kuhana riža u redu je za većinu pasa u malim količinama, a veterinari je koriste u blagoj dijeti nakon želučanih tegoba. Kuhaj je u vodi bez začina i drži porcije umjerenima, jer previše ugljikohidrata može dovesti do debljanja.",
-    "sv": "Ja. Okryddat tillagat ris går bra för de flesta hundar i små mängder, och veterinärer använder det i en skonkost efter magbesvär. Koka det i vatten utan kryddor, och håll portionerna måttliga, eftersom för mycket kolhydrater kan leda till viktuppgång."
+    "sv": "Ja. Okryddat tillagat ris går bra för de flesta hundar i små mängder, och veterinärer använder det i en skonkost efter magbesvär. Koka det i vatten utan kryddor, och håll portionerna måttliga, eftersom för mycket kolhydrater kan leda till viktuppgång.",
+    "da": "Ja. Almindelige kogte ris er fint til de fleste hunde i små mængder, og dyrlæger bruger dem i skånekost efter dårlig mave. Kog dem i vand uden krydderier, og hold portionerne små, fordi for mange kulhydrater kan give vægtstigning."
   },
   "why": {
     "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
     "sl": "Riž je sestavina nekaterih komercialnih pasjih hran, veterinarji pa ga uporabljajo kot vir ogljikovih hidratov v blagi dieti po prebavnih težavah. Začimbe lahko razdražijo želodec ali so celo strupene. Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj ga pes s sladkorno boleznijo dobi le malo in ne redno. Piščanec z rižem je mišljen kot začasna dieta pri prebavnih težavah, ne kot uravnotežena dolgoročna prehrana.",
     "cs": "Rýže se přidává do některých průmyslových krmiv pro psy a veterináři ji používají jako zdroj sacharidů v šetřící dietě po potížích se žaludkem. Koření a dochucovadla mohou žaludek podráždit nebo být dokonce jedovatá. Bílá rýže má vyšší glykemický index než hnědá a může zvýšit hladinu cukru v krvi, takže pes s cukrovkou by měl dostat jen trochu a ne pravidelně. Kuře s rýží je určeno jako dočasná strava při potížích se zažíváním, ne jako vyvážená dlouhodobá strava.",
     "hr": "Riža je sastojak nekih vrsta gotove hrane za pse, a veterinari je koriste kao izvor ugljikohidrata u blagoj dijeti nakon želučanih tegoba. Začini mogu nadražiti želudac ili čak biti otrovni. Bijela riža ima viši glikemijski indeks od smeđe i može podići šećer u krvi, zato dijabetični pas smije dobiti samo malo, ne redovito. Piletina s rižom zamišljena je kao privremena prehrana kod probavnih tegoba, a ne kao uravnotežena dugotrajna.",
-    "sv": "Ris ingår i en del hundfoder som säljs i handeln, och veterinärer använder det som kolhydratkälla i en skonkost efter magbesvär. Kryddor kan reta magen eller till och med vara giftiga. Vitt ris har ett högre glykemiskt index än brunt ris och kan höja blodsockret, så en hund med diabetes bör bara få lite, och inte regelbundet. Kyckling och ris är tänkt som en tillfällig kost vid orolig mage, inte en balanserad kost på lång sikt."
+    "sv": "Ris ingår i en del hundfoder som säljs i handeln, och veterinärer använder det som kolhydratkälla i en skonkost efter magbesvär. Kryddor kan reta magen eller till och med vara giftiga. Vitt ris har ett högre glykemiskt index än brunt ris och kan höja blodsockret, så en hund med diabetes bör bara få lite, och inte regelbundet. Kyckling och ris är tänkt som en tillfällig kost vid orolig mage, inte en balanserad kost på lång sikt.",
+    "da": "Ris er en ingrediens i noget kommercielt hundefoder, og dyrlæger bruger dem som kulhydratkilde i skånekost efter dårlig mave. Krydderier kan give mavebesvær eller endda være giftige. Hvide ris har et højere glykæmisk indeks end brune ris og kan hæve blodsukkeret, så en hund med diabetes bør kun få lidt, og ikke jævnligt. Kylling og ris er tænkt som en midlertidig kost ved dårlig fordøjelse og ikke som en afbalanceret kost på lang sigt."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Kot pri vsaki novi hrani se najprej posvetujte z veterinarjem in začnite počasi. Če ima pes sladkorno bolezen, mu dajte le malo belega riža in ne redno.",
     "cs": "Jako u každé nové potraviny se nejdřív zeptejte veterináře a začněte pomalu. Pokud má pes cukrovku, dávejte jen trochu bílé rýže a ne pravidelně.",
     "hr": "Kao i kod svake nove hrane, prvo pitaj veterinara i kreni polako. Ako je pas dijabetičar, daj samo malo bijele riže i to ne redovito.",
-    "sv": "Som med all ny mat: fråga din veterinär först och börja långsamt. Om din hund har diabetes ska du bara ge lite vitt ris, och inte regelbundet."
+    "sv": "Som med all ny mat: fråga din veterinär först och börja långsamt. Om din hund har diabetes ska du bara ge lite vitt ris, och inte regelbundet.",
+    "da": "Som med al ny mad skal du spørge din dyrlæge først og starte langsomt. Hvis din hund har diabetes, skal du kun give lidt hvide ris, og ikke regelmæssigt."
   },
   "serving": {
     "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
     "sl": "Navaden riž, kuhan v vodi, brez začimb, kot majhen del obroka.",
     "cs": "Obyčejná rýže uvařená ve vodě, bez koření a dochucovadel, jako malá část jídla.",
     "hr": "Obična riža kuhana u vodi, bez začina, kao mali dio obroka.",
-    "sv": "Okryddat ris kokt i vatten, utan kryddor, som en liten del av en måltid."
+    "sv": "Okryddat ris kokt i vatten, utan kryddor, som en liten del av en måltid.",
+    "da": "Almindelige ris kogt i vand, uden krydderier, som en lille del af et måltid."
   },
   "child": {
     "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
     "sl": "Psi lahko dobijo malo navadnega kuhanega riža. Odrasli ga skuha v vodi brez začimb, posebej za psa.",
     "cs": "Psi mohou dostat trochu obyčejné uvařené rýže. Dospělý ji uvaří ve vodě bez koření, jen pro psa.",
     "hr": "Psi smiju dobiti malo obične kuhane riže. Odrasla osoba je kuha u vodi bez začina, samo za psa.",
-    "sv": "Hundar kan få lite okryddat kokt ris. En vuxen kokar det i vatten utan kryddor, bara åt hunden."
+    "sv": "Hundar kan få lite okryddat kokt ris. En vuxen kokar det i vatten utan kryddor, bara åt hunden.",
+    "da": "Hunde kan få lidt almindelige kogte ris. En voksen koger dem i vand uden krydderier, kun til hunden."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Beli ali rjavi riž – kateri je boljši?",
         "cs": "Bílá, nebo hnědá rýže – která je lepší?",
         "hr": "Bijela ili smeđa riža: što je bolje?",
-        "sv": "Vitt eller brunt ris – vilket är bäst?"
+        "sv": "Vitt eller brunt ris – vilket är bäst?",
+        "da": "Hvide eller brune ris – hvilke er bedst?"
       },
       "a": {
         "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
         "sl": "Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj psi s sladkorno boleznijo belega riža dobijo le malo in ne redno.",
         "cs": "Bílá rýže má vyšší glykemický index než hnědá a může zvýšit hladinu cukru v krvi, takže psi s cukrovkou by měli dostat jen trochu bílé rýže a ne pravidelně.",
         "hr": "Bijela riža ima viši glikemijski indeks od smeđe i može podići šećer u krvi, pa dijabetični psi smiju dobiti samo malo bijele riže, ne redovito.",
-        "sv": "Vitt ris har ett högre glykemiskt index än brunt ris och kan höja blodsockret, så hundar med diabetes bör bara få lite vitt ris, inte regelbundet."
+        "sv": "Vitt ris har ett högre glykemiskt index än brunt ris och kan höja blodsockret, så hundar med diabetes bör bara få lite vitt ris, inte regelbundet.",
+        "da": "Hvide ris har et højere glykæmisk indeks end brune ris og kan hæve blodsukkeret, så hunde med diabetes bør kun få lidt hvide ris og ikke jævnligt."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali riž pomaga, ko ima pes drisko?",
         "cs": "Pomůže rýže, když má pes průjem?",
         "hr": "Može li riža pomoći kad pas ima proljev?",
-        "sv": "Kan ris hjälpa när min hund har diarré?"
+        "sv": "Kan ris hjälpa när min hund har diarré?",
+        "da": "Kan ris hjælpe, når min hund har diarré?"
       },
       "a": {
         "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
         "sl": "Navaden kuhan piščanec z rižem lahko pomaga, ko ima pes drisko, vendar je to začasna dieta, ki za dolgoročno hranjenje ni uravnotežena.",
         "cs": "Obyčejné vařené kuře s rýží může pomoci, když má pes průjem, ale je to dočasná dieta a není vyvážená pro dlouhodobé krmení.",
         "hr": "Obična kuhana piletina s rižom može pomoći kad pas ima proljev, ali to je privremena prehrana i nije uravnotežena za dugotrajno hranjenje.",
-        "sv": "Okryddad, tillagad kyckling och ris kan hjälpa när en hund har diarré, men det är en tillfällig kost och inte balanserad för långvarig utfodring."
+        "sv": "Okryddad, tillagad kyckling och ris kan hjälpa när en hund har diarré, men det är en tillfällig kost och inte balanserad för långvarig utfodring.",
+        "da": "Almindelig kogt kylling med ris kan hjælpe, når en hund har diarré, men det er en midlertidig kost og ikke afbalanceret til langvarig fodring."
       }
     }
   ],
@@ -180,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18e9cbbef161e94b7b8b41950c9642115440db1d042bfd86b4abc53dba40c306"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8ced20f8f70301938f946e20e77bd18f369d168f279ff574f0ea9479f11200c2"
     }
   }
 }

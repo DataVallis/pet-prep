@@ -5,51 +5,59 @@
     "en": "Broth and stock",
     "sl": "Mesna juha in osnova",
     "hr": "Juha i temeljac",
-    "sv": "Buljong och fond"
+    "sv": "Buljong och fond",
+    "da": "Bouillon og fond"
   },
   "question": {
     "en": "Can cats have broth?",
     "sl": "Ali lahko mačke jedo mesno juho?",
     "hr": "Smiju li mačke jesti juhu?",
-    "sv": "Får katter dricka buljong?"
+    "sv": "Får katter dricka buljong?",
+    "da": "Må katte få bouillon?"
   },
   "url_slug": {
     "en": "broth",
     "sl": "mesna-juha",
     "hr": "juha-i-temeljac",
-    "sv": "buljong"
+    "sv": "buljong",
+    "da": "bouillon"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain broth is fine. Vets suggest a small amount of low-sodium chicken broth with no added spices to flavour a cat's water. Broth or stock cubes made for people can be very salty and may contain onion or garlic, which are toxic to cats.",
     "sl": "Da, malo navadne mesne juhe je v redu. Veterinarji predlagajo majhno količino piščančje juhe z malo soli in brez dodanih začimb, s katero mački izboljšate okus vode. Juha ali jušne kocke za ljudi so lahko zelo slane in lahko vsebujejo čebulo ali česen, ki sta za mačke strupena.",
     "hr": "Da, malo obične juhe u redu je. Veterinari predlažu malu količinu pileće juhe s malo soli i bez dodanih začina kojom se može dati okus mačjoj vodi. Kocke za juhu i temeljac namijenjene ljudima mogu biti vrlo slane i sadržavati luk ili češnjak, koji su otrovni za mačke.",
-    "sv": "Ja, lite okryddad buljong går bra. Veterinärer föreslår en liten mängd natriumfattig kycklingbuljong utan tillsatta kryddor för att ge kattens vatten smak. Buljong och buljongtärningar för människor kan vara mycket salta och kan innehålla lök eller vitlök, som är giftigt för katter."
+    "sv": "Ja, lite okryddad buljong går bra. Veterinärer föreslår en liten mängd natriumfattig kycklingbuljong utan tillsatta kryddor för att ge kattens vatten smak. Buljong och buljongtärningar för människor kan vara mycket salta och kan innehålla lök eller vitlök, som är giftigt för katter.",
+    "da": "Ja, lidt almindelig bouillon er fint. Dyrlæger foreslår en lille smule natriumfattig hønsebouillon uden tilsatte krydderier, så kattens vand får smag. Bouillon- og fondterninger, der er lavet til mennesker, kan være meget salte og kan indeholde løg eller hvidløg, som er giftige for katte."
   },
   "why": {
     "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
     "sl": "Cornell Feline Health Center navaja, da lahko majhna količina piščančje juhe z malo natrija v vodi mačko spodbudi, da pije več, VCA pa predlaga piščančjo juho z malo natrija in brez dodanih začimb. Jušne kocke, ki se uporabljajo za pripravo osnov, vsebujejo veliko natrija. Čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, sta za mačke strupena tudi kuhana ali posušena. Veterinarji z univerze Tufts svetujejo, da natančno preberete seznam sestavin kupljenih juh.",
     "hr": "Cornell Feline Health Center navodi da malo pileće juhe s malo natrija u vodi može potaknuti mačku da pije više, a VCA preporučuje pileću juhu s malo natrija i bez dodatnih začina. Kocke za temeljac sadrže mnogo natrija. Luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke čak i kad su kuhani ili sušeni. Veterinari sa Sveučilišta Tufts savjetuju da pažljivo pročitaš popis sastojaka gotovih juha.",
-    "sv": "Cornell Feline Health Center säger att en liten mängd natriumfattig kycklingbuljong i vattnet kan få en katt att dricka mer, och VCA föreslår natriumfattig kycklingbuljong utan tillsatta kryddor. Buljongtärningar som används för att göra fond innehåller mycket natrium. Lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter även när de är tillagade eller torkade. Veterinärer vid Tufts råder dig att läsa ingredienslistan noga på köpt buljong."
+    "sv": "Cornell Feline Health Center säger att en liten mängd natriumfattig kycklingbuljong i vattnet kan få en katt att dricka mer, och VCA föreslår natriumfattig kycklingbuljong utan tillsatta kryddor. Buljongtärningar som används för att göra fond innehåller mycket natrium. Lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter även när de är tillagade eller torkade. Veterinärer vid Tufts råder dig att läsa ingredienslistan noga på köpt buljong.",
+    "da": "Cornell Feline Health Center skriver at lidt natriumfattig hønsebouillon i vandet kan få en kat til at drikke mere, og VCA foreslår natriumfattig hønsebouillon uden ekstra krydderier. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium. Løg og hvidløg, som findes i mange færdiglavede produkter, er giftige for katte, også når de er kogt eller tørret. Dyrlæger fra Tufts anbefaler at læse ingredienslisten på købt bouillon grundigt."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your cat drank broth or stock that contains onion or garlic, contact your vet as soon as possible.",
     "sl": "Če je mačka popila juho ali osnovo, ki vsebuje čebulo ali česen, čim prej pokličite veterinarja.",
     "hr": "Ako je mačka popila juhu ili temeljac s lukom ili češnjakom, što prije se obrati veterinaru.",
-    "sv": "Om din katt har druckit buljong eller fond som innehåller lök eller vitlök ska du kontakta din veterinär så snart som möjligt."
+    "sv": "Om din katt har druckit buljong eller fond som innehåller lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
+    "da": "Hvis din kat har drukket bouillon eller fond med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt."
   },
   "serving": {
     "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
     "sl": "Le navadna juha z malo soli, brez čebule, česna ali dodanih začimb, malo primešana mački v vodo. Najvarnejša domača juha je nezačinjeno meso, kuhano v navadni vodi. Jušnih kock ne uporabljajte.",
     "hr": "Samo obična juha s malo natrija, bez luka, češnjaka i dodanih začina, malo umiješana u mačju vodu. Najsigurnija je domaća juha od nezačinjenog mesa kuhanog u običnoj vodi. Kocke za juhu nemoj koristiti.",
-    "sv": "Bara okryddad, natriumfattig buljong utan lök, vitlök eller tillsatta kryddor, en liten skvätt blandad i kattens vatten. Den säkraste hemmagjorda buljongen är okryddat kött kokt i vanligt vatten. Hoppa över buljongtärningar."
+    "sv": "Bara okryddad, natriumfattig buljong utan lök, vitlök eller tillsatta kryddor, en liten skvätt blandad i kattens vatten. Den säkraste hemmagjorda buljongen är okryddat kött kokt i vanligt vatten. Hoppa över buljongtärningar.",
+    "da": "Kun almindelig, natriumfattig bouillon uden løg, hvidløg eller krydderier, en lille smule blandet i kattens vand. Den sikreste hjemmelavede bouillon er ukrydret kød kogt i almindeligt vand. Undlad bouillonterninger."
   },
   "child": {
     "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
     "sl": "Odrasli lahko muci v vodo doda malo navadne juhe. Juha za ljudi ima pogosto čebulo, zato vedno najprej vprašaj.",
     "hr": "Odrasla osoba može macinoj vodi dodati malo obične juhe. Juha za ljude često ima luk, zato uvijek prvo pitaj.",
-    "sv": "En vuxen kan blanda lite okryddad buljong i kattens vatten. Soppa för människor innehåller ofta lök, så fråga alltid först."
+    "sv": "En vuxen kan blanda lite okryddad buljong i kattens vatten. Soppa för människor innehåller ofta lök, så fråga alltid först.",
+    "da": "En voksen kan komme lidt almindelig bouillon i din kats vand. Suppe til mennesker indeholder ofte løg, så spørg altid først."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can I use a stock cube?",
         "sl": "Lahko uporabim jušno kocko?",
         "hr": "Smijem li upotrijebiti kocku za juhu?",
-        "sv": "Kan jag använda en buljongtärning?"
+        "sv": "Kan jag använda en buljongtärning?",
+        "da": "Må jeg bruge en bouillonterning?"
       },
       "a": {
         "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
         "sl": "Raje ne. Jušne kocke za pripravo osnov vsebujejo veliko natrija, že pripravljena hrana pa lahko vsebuje čebulo ali česen, ki sta za mačke strupena.",
         "hr": "Bolje ne. Kocke za temeljac sadrže mnogo natrija, a gotova jela mogu sadržavati luk ili češnjak, koji su otrovni za mačke.",
-        "sv": "Hellre inte. Buljongtärningar som används för att göra fond innehåller mycket natrium, och färdiglagade livsmedel kan innehålla lök eller vitlök, som är giftigt för katter."
+        "sv": "Hellre inte. Buljongtärningar som används för att göra fond innehåller mycket natrium, och färdiglagade livsmedel kan innehålla lök eller vitlök, som är giftigt för katter.",
+        "da": "Helst ikke. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium, og færdiglavede produkter kan indeholde løg eller hvidløg, som er giftige for katte."
       }
     }
   ],
@@ -141,6 +151,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b35094c858f57e8cf4ab372e9fdd311a1a95b242e946714fc8b33b55809df4f4"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "425a04cd8975524bd2ed79999575b836e73f6ef8fb883199b15b87dce97404b7"
     }
   }
 }
