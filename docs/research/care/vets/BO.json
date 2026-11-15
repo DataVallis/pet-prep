@@ -1,0 +1,99 @@
+{
+  "country": "BO",
+  "checked": "2026-11-13",
+  "sources": [
+    {
+      "name": "Veterinaria Lassie - own site",
+      "url": "https://veterinarialassie.com/",
+      "note": "Own page opened: address, phones, explicit 24 h emergency statement."
+    },
+    {
+      "name": "Buddy Centro Veterinario - own site",
+      "url": "https://veterinariabuddy.com/",
+      "note": "Own page opened: address, phone, hours, explicit 24 h emergency statement."
+    },
+    {
+      "name": "Veterinaria Universo - own site",
+      "url": "https://veterinariauniverso.com/en",
+      "note": "Own page opened: address, phones, hours (no 24 h)."
+    },
+    {
+      "name": "Veterinaria Rodriguez - own site",
+      "url": "https://vetrod.com/",
+      "note": "Own page opened: address, phones, hours (no 24 h)."
+    },
+    {
+      "name": "Red Uno / Opinion / Los Tiempos - Cochabamba municipal veterinary clinic",
+      "url": "https://www.reduno.com.bo/noticias/la-primera-clinica-veterinaria-publica-ya-atiende-en-cochabamba-conoce-sus-tarifas-y-servicios-2026619111631",
+      "note": "News articles opened (June 2026): clinic in La Chimba (Zoonosis facilities), Mon-Fri 08:00-16:00; no phone, street address or website published, so not added as an entry."
+    },
+    {
+      "name": "Lead lists and social pages (leads only)",
+      "url": "https://www.adoptagratis.com/clinicas-veterinarias-abiertas-las-24-horas-en-santa-cruz-bolivia/",
+      "note": "AdoptaGratis Santa Cruz page opened (names only, no contacts); its La Paz page lists obviously fake data (Mexican domain) and was ignored; mejoresrank.com and dancefree.com.co opened for names only. No entry relies on them."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Veterinaria Lassie",
+      "city": "Santa Cruz de la Sierra",
+      "region": "Santa Cruz",
+      "address": "Avenida El Trompillo # 300",
+      "phone": "3-536325 760-09980",
+      "emergency_24h": true,
+      "duty": "Says it provides 24-hour care for all emergencies; call ahead.",
+      "small_animals": true,
+      "url": "https://veterinarialassie.com/",
+      "source_url": "https://veterinarialassie.com/",
+      "checked": "2026-11-13",
+      "note": "Own home page: 'Brindamos atencion 24hrs para todas las emergencias.' Phone string 'Telf: 3-536325 760-09980' copied as published (landline + mobile). No opening hours listed."
+    },
+    {
+      "kind": "clinic",
+      "name": "Buddy Centro Veterinario",
+      "city": "Cochabamba",
+      "region": "Cochabamba",
+      "address": "Av. Oquendo entre C. Paccieri y C. Pedro Borda",
+      "phone": "+591 57715717",
+      "emergency_24h": true,
+      "duty": "Open Mon-Fri 8:00-19:00 and Sat 8:00-15:00; urgent care available 24 hours.",
+      "small_animals": true,
+      "url": "https://veterinariabuddy.com/",
+      "source_url": "https://veterinariabuddy.com/",
+      "checked": "2026-11-13",
+      "note": "Own home page: 'Emergencias 24 horas' and 'Atencion de urgencias disponible las 24 horas'. Landline 57715717, WhatsApp +591 57715717 as published."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria Universo",
+      "city": "Santa Cruz de la Sierra",
+      "region": "Santa Cruz",
+      "address": "Av. Japon esq. Paragua #3045, Barrio Cumavi",
+      "phone": "+591 3-346-1466",
+      "emergency_24h": false,
+      "duty": "Open daily 8:00-19:00; no 24-hour service listed.",
+      "small_animals": true,
+      "url": "https://veterinariauniverso.com/en",
+      "source_url": "https://veterinariauniverso.com/en",
+      "checked": "2026-11-13",
+      "note": "Own page; WhatsApp +591 721-96500. Neighbourhood spelled Cumavi/Cunavi on the page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria Rodriguez",
+      "city": "Cochabamba",
+      "region": "Cochabamba",
+      "address": "Av. Capitan Victor Ustariz Km 5 S/N, Barrio Pampa Grande",
+      "phone": "4-4022293",
+      "emergency_24h": false,
+      "duty": "Open Mon-Sat 8:00-20:00, Sun and holidays 8:00-13:00.",
+      "small_animals": true,
+      "url": "https://vetrod.com/",
+      "source_url": "https://vetrod.com/",
+      "checked": "2026-11-13",
+      "note": "Own page; WhatsApp 71460528. No 24 h claim."
+    }
+  ],
+  "notes": "Thin run: Bolivian clinics mostly publish on Facebook only. Refused: bagheeravet.com (robots_disallowed), facebook.com/EmervetBo (robots_disallowed), crovethospitalveterinario.com (client_error), vetshunter.com (bot wall). WebFetch also refused (provenance) www.uagrm.edu.bo, veterinariasudamericana.com and the NaturalVet negocio.site page, which were not circumvented. Not found: Colegio de Medicos Veterinarios Zootecnistas directory (no official site surfaced), SENASAG list, university clinic pages (UAGRM, UMSA, UMSS), duty rota (veterinario de turno), animal poison line (none found). Not added for lack of phone/url on an opened page: Clinica Veterinaria Municipal Cochabamba (La Chimba, Mon-Fri 8-16). Leads left to verify: Emervet (Santa Cruz), EVET Emergencias Veterinarias and Umevet (Cochabamba), Urgencias Veterinarias (La Paz), Veterinaria La Quinta, Animalia, San Roque, Vet-Salud, Animal House (Santa Cruz), Clinica Veterinaria Sudamericana (veterinariasudamericana.com), Bagheera (Cochabamba). Sucre, Tarija, Oruro, Uyuni: nothing found."
+}
