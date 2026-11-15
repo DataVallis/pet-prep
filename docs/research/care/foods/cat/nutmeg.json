@@ -11,7 +11,8 @@
     "fi": "Muskottipähkinä",
     "nb": "Muskatnøtt",
     "it": "Noce moscata",
-    "de": "Muskatnuss"
+    "de": "Muskatnuss",
+    "fr": "Noix de muscade"
   },
   "question": {
     "en": "Can cats eat nutmeg?",
@@ -23,7 +24,8 @@
     "fi": "Saako kissa syödä muskottipähkinää?",
     "nb": "Kan katter spise muskatnøtt?",
     "it": "I gatti possono mangiare la noce moscata?",
-    "de": "Dürfen Katzen Muskatnuss fressen?"
+    "de": "Dürfen Katzen Muskatnuss fressen?",
+    "fr": "Les chats peuvent-ils manger de la noix de muscade ?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -35,7 +37,8 @@
     "fi": "muskottipahkina",
     "nb": "muskatnott",
     "it": "noce-moscata",
-    "de": "muskatnuss"
+    "de": "muskatnuss",
+    "fr": "noix-de-muscade"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei suositella. Muskottipähkinää ei kannata antaa kissoille. Reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa haittaa, vaikka lievä vatsavaiva on mahdollinen. Hyvin suuri määrä muskottipähkinää voi olla myrkyllistä.",
     "nb": "Det er best å ikke gi katter muskatnøtt. Den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlig skade, men kan gi litt urolig mage. En svært stor mengde muskatnøtt kan være giftig.",
     "it": "Meglio non dare la noce moscata ai gatti. È molto improbabile che la piccola quantità usata nelle ricette causi danni seri, anche se può provocare un lieve mal di stomaco. Una quantità molto grande di noce moscata può essere tossica.",
-    "de": "Geben Sie Katzen besser keine Muskatnuss. Die kleine Menge, die in Rezepten verwendet wird, richtet sehr wahrscheinlich keinen ernsten Schaden an, kann aber leichte Magenbeschwerden auslösen. Eine sehr große Menge Muskatnuss kann giftig sein."
+    "de": "Geben Sie Katzen besser keine Muskatnuss. Die kleine Menge, die in Rezepten verwendet wird, richtet sehr wahrscheinlich keinen ernsten Schaden an, kann aber leichte Magenbeschwerden auslösen. Eine sehr große Menge Muskatnuss kann giftig sein.",
+    "fr": "Mieux vaut ne pas donner de noix de muscade aux chats. Il est très peu probable que la petite quantité utilisée dans les recettes cause de problème grave, mais elle peut provoquer de légers troubles digestifs. Une très grande quantité de noix de muscade peut être toxique."
   },
   "why": {
     "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
@@ -60,7 +64,8 @@
     "fi": "Muskottipähkinässä on myristisiini-nimistä myrkkyä. Pet Poison Helplinen mukaan reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa myrkytystä, ja ongelma on hyvin epätodennäköinen, jos kissa syö ruokaa, jossa on muskottipähkinää. VCA huomauttaa, että munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion.",
     "nb": "Muskatnøtt inneholder et giftstoff som heter myristicin. Pet Poison Helpline sier at den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlig forgiftning, og at det er svært lite sannsynlig at det oppstår problemer hvis en katt spiser mat med muskatnøtt i. VCA påpeker at krydder i eggnog, som muskatnøtt, kan virke giftig i store mengder. Katter trenger ikke noe annet enn et fullverdig kosthold.",
     "it": "La noce moscata contiene una tossina chiamata miristicina. Pet Poison Helpline afferma che è molto improbabile che la piccola quantità usata nelle ricette causi un’intossicazione grave, e che un gatto abbia problemi se mangia un cibo che contiene noce moscata. VCA osserva che le spezie dell’eggnog (la bevanda natalizia a base di uova), come la noce moscata, potrebbero avere effetti tossici in grandi quantità. Ai gatti non serve altro che un’alimentazione completa.",
-    "de": "Muskatnuss enthält einen Giftstoff namens Myristicin. Pet Poison Helpline sagt, dass die kleine Menge in Rezepten sehr wahrscheinlich keine ernste Vergiftung verursacht und dass ein Problem sehr unwahrscheinlich ist, wenn eine Katze Speisen mit Muskatnuss frisst. VCA weist darauf hin, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können. Katzen brauchen außer einer vollwertigen Ernährung nichts."
+    "de": "Muskatnuss enthält einen Giftstoff namens Myristicin. Pet Poison Helpline sagt, dass die kleine Menge in Rezepten sehr wahrscheinlich keine ernste Vergiftung verursacht und dass ein Problem sehr unwahrscheinlich ist, wenn eine Katze Speisen mit Muskatnuss frisst. VCA weist darauf hin, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
+    "fr": "La noix de muscade contient une toxine appelée myristicine. Le Pet Poison Helpline indique qu’il est très peu probable que la petite quantité utilisée dans les recettes provoque une intoxication grave, et qu’un problème est très improbable si un chat mange un aliment contenant de la noix de muscade. VCA note que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité. Les chats n’ont besoin de rien d’autre qu’une alimentation complète."
   },
   "signs": {
     "en": [
@@ -102,6 +107,10 @@
     "de": [
       "Leichte Magenbeschwerden",
       "Nach einer sehr großen Menge: Halluzinationen, Orientierungslosigkeit, schneller Herzschlag, trockener Mund, Bauchschmerzen oder Krampfanfälle"
+    ],
+    "fr": [
+      "Légers troubles digestifs",
+      "Après une très grande quantité : hallucinations, désorientation, cœur qui bat vite, bouche sèche, douleurs au ventre ou convulsions"
     ]
   },
   "what_to_do": {
@@ -114,7 +123,8 @@
     "fi": "Jos kissasi söi ruokaa, jossa oli vähän muskottipähkinää, seuraa, tuleeko lievää vatsavaivaa. Jos se söi suuren määrän muskottipähkinää, ota heti yhteyttä eläinlääkäriin. Älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
     "nb": "Hvis katten har spist mat med litt muskatnøtt, følg med på om den får litt urolig mage. Hvis den har spist en stor mengde muskatnøtt, kontakt dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
     "it": "Se il tuo gatto ha mangiato un cibo con un po’ di noce moscata, controlla se compare un lieve mal di stomaco. Se ne ha mangiata una grande quantità, contatta subito il veterinario. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "de": "Hat Ihre Katze Speisen mit ein wenig Muskatnuss gefressen, achten Sie auf leichte Magenbeschwerden. Hat sie eine große Menge Muskatnuss gefressen, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Hat Ihre Katze Speisen mit ein wenig Muskatnuss gefressen, achten Sie auf leichte Magenbeschwerden. Hat sie eine große Menge Muskatnuss gefressen, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mangé un aliment contenant un peu de noix de muscade, surveillez l’apparition de légers troubles digestifs. S’il en a mangé une grande quantité, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison."
   },
   "serving": null,
   "child": {
@@ -127,7 +137,8 @@
     "fi": "Muskottipähkinä on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse mausteita, joten pidä maustepurkki poissa kisun luota.",
     "nb": "Muskatnøtt er et krydder til matlaging for mennesker. Katter trenger ikke krydder, så hold krydderglasset unna pusen.",
     "it": "La noce moscata è una spezia che le persone usano in cucina. I gatti non hanno bisogno di spezie, quindi tieni il barattolo delle spezie lontano dal micio.",
-    "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen keine Gewürze, also halte das Gewürzglas von deiner Katze fern."
+    "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen keine Gewürze, also halte das Gewürzglas von deiner Katze fern.",
+    "fr": "La noix de muscade est une épice pour la cuisine des humains. Les chats n’ont pas besoin d’épices : garde le pot d’épices loin de ton chat."
   },
   "faq": [
     {
@@ -141,7 +152,8 @@
         "fi": "Onko muskottipähkinällä maustettu munatoddi turvallista kissoille?",
         "nb": "Er eggnog med muskatnøtt trygg for katter?",
         "it": "L’eggnog con noce moscata è sicuro per i gatti?",
-        "de": "Ist Eggnog mit Muskatnuss für Katzen unbedenklich?"
+        "de": "Ist Eggnog mit Muskatnuss für Katzen unbedenklich?",
+        "fr": "Le lait de poule à la noix de muscade est-il sans danger pour les chats ?"
       },
       "a": {
         "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
@@ -153,7 +165,8 @@
         "fi": "Ei. VCA:n mukaan munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä, ja se neuvoo ottamaan yhteyttä eläinlääkäriin, jos epäilet kissan juoneen munatoddia.",
         "nb": "Nei. VCA sier at krydder i eggnog, som muskatnøtt, kan virke giftig i store mengder, og anbefaler å kontakte dyrlegen hvis du tror katten har drukket eggnog.",
         "it": "No. VCA afferma che le spezie dell’eggnog, come la noce moscata, potrebbero avere effetti tossici in grandi quantità, e consiglia di contattare il veterinario se pensi che il tuo gatto abbia bevuto eggnog.",
-        "de": "Nein. VCA sagt, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können, und rät, sich an Ihren Tierarzt zu wenden, wenn Sie vermuten, dass Ihre Katze Eggnog getrunken hat."
+        "de": "Nein. VCA sagt, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können, und rät, sich an Ihren Tierarzt zu wenden, wenn Sie vermuten, dass Ihre Katze Eggnog getrunken hat.",
+        "fr": "Non. VCA indique que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité, et conseille de contacter votre vétérinaire si vous pensez que votre chat en a bu."
       }
     }
   ],
@@ -268,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e91054f35f73fdee78230b0acdcf11b90e8c9c19de656b8ef6a1c9c25f5129bf"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "08a9cbf628d2349871ce71f1b5d9d1fdfddaaedb2e6281cb95950411e8654972"
     }
   }
 }

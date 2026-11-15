@@ -11,7 +11,8 @@
     "fi": "Sokeri",
     "nb": "Sukker",
     "it": "Zucchero",
-    "de": "Zucker"
+    "de": "Zucker",
+    "fr": "Sucre"
   },
   "question": {
     "en": "Can cats eat sugar?",
@@ -23,7 +24,8 @@
     "fi": "Saako kissa syödä sokeria?",
     "nb": "Kan katter spise sukker?",
     "it": "I gatti possono mangiare lo zucchero?",
-    "de": "Dürfen Katzen Zucker fressen?"
+    "de": "Dürfen Katzen Zucker fressen?",
+    "fr": "Les chats peuvent-ils manger du sucre ?"
   },
   "url_slug": {
     "en": "sugar",
@@ -35,7 +37,8 @@
     "fi": "sokeri",
     "nb": "sukker",
     "it": "zucchero",
-    "de": "zucker"
+    "de": "zucker",
+    "fr": "sucre"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei suositella. Sokeri ei ole kissoille myrkyllistä, mutta se on niille epäterveellistä eikä anna ravintoarvoa. Kissat eivät edes maista makeaa. Makean nuolaisu ei ole hätätilanne, mutta säännölliset sokeriset herkut voivat johtaa painonnousuun, diabetekseen ja hammassairauksiin.",
     "nb": "Det er best å la være. Sukker er ikke giftig for katter, men det er usunt for dem og har ingen næringsverdi. Katter kjenner ikke engang søtt. Å slikke på noe søtt er ingen nødsituasjon, men sukkerholdige godbiter jevnlig kan føre til vektøkning, diabetes og tannsykdom.",
     "it": "Meglio di no. Lo zucchero non è tossico per i gatti, ma fa male e non ha alcun valore nutritivo. I gatti non sentono nemmeno il sapore dolce. Se lecca qualcosa di dolce non è un’emergenza, ma dare spesso dolcetti zuccherati può portare a un aumento di peso, al diabete e a malattie dei denti.",
-    "de": "Besser nicht. Zucker ist für Katzen nicht giftig, aber ungesund und ohne jeden Nährwert. Katzen können Süßes nicht einmal schmecken. Ein kurzes Lecken an etwas Süßem ist kein Notfall, aber regelmäßig zuckerhaltige Leckereien können zu Gewichtszunahme, Diabetes und Zahnerkrankungen führen."
+    "de": "Besser nicht. Zucker ist für Katzen nicht giftig, aber ungesund und ohne jeden Nährwert. Katzen können Süßes nicht einmal schmecken. Ein kurzes Lecken an etwas Süßem ist kein Notfall, aber regelmäßig zuckerhaltige Leckereien können zu Gewichtszunahme, Diabetes und Zahnerkrankungen führen.",
+    "fr": "Mieux vaut éviter. Le sucre n’est pas toxique pour les chats, mais il n’est pas bon pour eux et ne leur apporte aucune valeur nutritionnelle. Les chats ne perçoivent même pas le goût sucré. Un coup de langue n’est pas une urgence, mais des friandises sucrées données régulièrement peuvent entraîner une prise de poids, un diabète et des maladies dentaires."
   },
   "why": {
     "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
@@ -60,7 +64,8 @@
     "fi": "Kissat ovat lihansyöjiä: niiden elimistö on tehty lihan syömiseen, ei hiilihydraateille tai sokerille, eikä yksikään niiden makusilmuista tunnista makeaa. Sokeri lisää turhia kaloreita, jotka voivat nopeasti johtaa painonnousuun. Ajan myötä liiallinen sokeri voi aiheuttaa insuliiniresistenssin ja lopulta diabeteksen, ja sokeri edistää hampaiden reikiintymistä ja ientulehdusta. Ruskea sokeri ei ole sen parempaa. VCA toteaa, ettei pieni määrä sokeria useimmille kissoille haittaa, mutta Cats Protection varoittaa, että sokeristen ruokien säännöllinen antaminen voi johtaa terveysongelmiin, joten käytämme tiukempaa luokitusta.",
     "nb": "Katter er kjøttetere: kroppen deres er bygd for å spise kjøtt, ikke karbohydrater eller sukker, og ingen av smaksløkene deres kan registrere søt smak. Sukker gir unødvendige kalorier som raskt kan føre til vektøkning; over tid kan for mye sukker gi insulinresistens og til slutt diabetes, og sukker bidrar til hull i tennene og tannkjøttsykdom. Brunt sukker er ikke annerledes. VCA påpeker at litt sukker ikke er skadelig for de fleste katter, men Cats Protection advarer om at det å gi katten sukkerholdig mat jevnlig kan føre til helseproblemer, så vi bruker det strengeste nivået.",
     "it": "I gatti sono carnivori: il loro corpo è fatto per mangiare carne, non carboidrati o zucchero, e nessuna delle loro papille gustative riconosce i sapori dolci. Lo zucchero aggiunge calorie inutili che possono portare rapidamente a un aumento di peso; col tempo, troppo zucchero può causare insulino-resistenza e, alla fine, diabete, e lo zucchero favorisce carie e malattie delle gengive. Lo zucchero di canna non è diverso. VCA osserva che un po’ di zucchero non fa male alla maggior parte dei gatti, ma Cats Protection avverte che dare con regolarità cibi zuccherati potrebbe causare problemi di salute, perciò usiamo il livello più prudente.",
-    "de": "Katzen sind Fleischfresser: ihr Körper ist darauf ausgelegt, Fleisch zu verdauen, nicht Kohlenhydrate oder Zucker, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zucker liefert unnötige Kalorien, die schnell zu Gewichtszunahme führen können. Mit der Zeit kann zu viel Zucker eine Insulinresistenz und schließlich Diabetes verursachen, und Zucker trägt zu Karies und Zahnfleischerkrankungen bei. Brauner Zucker macht da keinen Unterschied. VCA weist darauf hin, dass ein wenig Zucker für die meisten Katzen nicht schlecht ist, doch Cats Protection warnt, dass regelmäßig zuckerhaltiges Futter zu gesundheitlichen Problemen führen kann. Deshalb gilt die strengere Stufe."
+    "de": "Katzen sind Fleischfresser: ihr Körper ist darauf ausgelegt, Fleisch zu verdauen, nicht Kohlenhydrate oder Zucker, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zucker liefert unnötige Kalorien, die schnell zu Gewichtszunahme führen können. Mit der Zeit kann zu viel Zucker eine Insulinresistenz und schließlich Diabetes verursachen, und Zucker trägt zu Karies und Zahnfleischerkrankungen bei. Brauner Zucker macht da keinen Unterschied. VCA weist darauf hin, dass ein wenig Zucker für die meisten Katzen nicht schlecht ist, doch Cats Protection warnt, dass regelmäßig zuckerhaltiges Futter zu gesundheitlichen Problemen führen kann. Deshalb gilt die strengere Stufe.",
+    "fr": "Les chats sont des carnivores : leur corps est conçu pour manger de la viande, pas des glucides ni du sucre, et aucune de leurs papilles ne peut détecter les saveurs sucrées. Le sucre ajoute des calories inutiles qui peuvent rapidement entraîner une prise de poids ; avec le temps, trop de sucre peut provoquer une résistance à l’insuline et, à terme, du diabète, et le sucre contribue aux caries et aux maladies des gencives. Le sucre roux n’y change rien. VCA note qu’un peu de sucre n’est pas mauvais pour la plupart des chats, mais Cats Protection avertit que donner régulièrement des aliments sucrés pourrait entraîner des problèmes de santé : nous appliquons donc le niveau le plus strict."
   },
   "signs": {
     "en": [
@@ -102,6 +107,10 @@
     "de": [
       "Durchfall",
       "Magenbeschwerden"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Troubles digestifs"
     ]
   },
   "what_to_do": {
@@ -114,7 +123,8 @@
     "fi": "Jos kissasi vain nuolaisi jotain makeaa, eläinlääkäriin ei tarvitse rynnätä. Jos se söi paljon sokerista ruokaa tai ruoassa oli suklaata, ota heti yhteyttä eläinlääkäriin.",
     "nb": "Hvis katten bare slikket på noe søtt, er det ikke nødvendig å haste til dyrlegen. Hvis den har spist mye sukkerholdig mat, eller maten inneholdt sjokolade, kontakt dyrlegen med en gang.",
     "it": "Se il tuo gatto ha solo leccato qualcosa di dolce, non serve correre dal veterinario. Se ha mangiato una grande quantità di un cibo zuccherato, o se il cibo conteneva cioccolato, contatta subito il veterinario.",
-    "de": "Hat Ihre Katze nur an etwas Süßem geleckt, müssen Sie nicht sofort zum Tierarzt eilen. Hat sie viel von einem zuckerhaltigen Lebensmittel gefressen oder enthielt es Schokolade, wenden Sie sich sofort an Ihren Tierarzt."
+    "de": "Hat Ihre Katze nur an etwas Süßem geleckt, müssen Sie nicht sofort zum Tierarzt eilen. Hat sie viel von einem zuckerhaltigen Lebensmittel gefressen oder enthielt es Schokolade, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Si votre chat vient de lécher quelque chose de sucré, il n’est pas nécessaire de se précipiter chez le vétérinaire. S’il a mangé beaucoup d’un aliment sucré, ou si l’aliment contenait du chocolat, contactez immédiatement votre vétérinaire."
   },
   "serving": null,
   "child": {
@@ -127,7 +137,8 @@
     "fi": "Kissat eivät edes maista makeaa, eikä sokeri ole niille hyväksi. Makeiset ovat ihmisille, eivät kisulle.",
     "nb": "Katter kjenner ikke engang søtt, og sukker er ikke bra for dem. Søtsaker er for mennesker, ikke for pusen.",
     "it": "I gatti non sentono nemmeno il sapore dolce e lo zucchero non gli fa bene. I dolci sono per le persone, non per il micio.",
-    "de": "Katzen können Süßes nicht einmal schmecken, und Zucker tut ihnen nicht gut. Süßigkeiten sind für Menschen da, nicht für deine Katze."
+    "de": "Katzen können Süßes nicht einmal schmecken, und Zucker tut ihnen nicht gut. Süßigkeiten sind für Menschen da, nicht für deine Katze.",
+    "fr": "Les chats ne perçoivent même pas le goût sucré, et le sucre n’est pas bon pour eux. Les sucreries sont pour les humains, pas pour ton chat."
   },
   "faq": [
     {
@@ -141,7 +152,8 @@
         "fi": "Maistavatko kissat sokerin?",
         "nb": "Kan katter kjenne sukker?",
         "it": "I gatti sentono il sapore dello zucchero?",
-        "de": "Können Katzen Zucker schmecken?"
+        "de": "Können Katzen Zucker schmecken?",
+        "fr": "Les chats perçoivent-ils le goût du sucre ?"
       },
       "a": {
         "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
@@ -153,7 +165,8 @@
         "fi": "Eivät. Kissat ovat lihansyöjiä, eikä yksikään niiden makusilmuista pysty tunnistamaan makeaa. Jos kissa kiinnostuu makeasta ruoasta, se reagoi muihin ainesosiin, kuten rasvaan tai umamin makuihin.",
         "nb": "Nei. Katter er kjøttetere, og ingen av smaksløkene deres kan registrere søt smak. Hvis en katt viser interesse for søt mat, reagerer den på andre ingredienser, som fett eller umami-smaker.",
         "it": "No. I gatti sono carnivori e nessuna delle loro papille gustative riconosce i sapori dolci. Se un gatto si interessa a un cibo dolce, sta reagendo ad altri ingredienti, come i grassi o i sapori umami.",
-        "de": "Nein. Katzen sind Fleischfresser, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zeigt eine Katze Interesse an einem süßen Lebensmittel, reagiert sie auf andere Zutaten wie Fett oder Umami-Aromen."
+        "de": "Nein. Katzen sind Fleischfresser, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zeigt eine Katze Interesse an einem süßen Lebensmittel, reagiert sie auf andere Zutaten wie Fett oder Umami-Aromen.",
+        "fr": "Non. Les chats sont des carnivores et aucune de leurs papilles ne peut détecter les saveurs sucrées. Si un chat s’intéresse à un aliment sucré, il réagit à d’autres ingrédients, comme les graisses ou les saveurs umami."
       }
     },
     {
@@ -167,7 +180,8 @@
         "fi": "Onko ruskea sokeri parempaa kissoille?",
         "nb": "Er brunt sukker bedre for katter?",
         "it": "Lo zucchero di canna è meglio per i gatti?",
-        "de": "Ist brauner Zucker besser für Katzen?"
+        "de": "Ist brauner Zucker besser für Katzen?",
+        "fr": "Le sucre roux est-il meilleur pour les chats ?"
       },
       "a": {
         "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
@@ -179,7 +193,8 @@
         "fi": "Ei. Ruskea sokeri on silti sokeria; kissan elimistölle se ei eroa valkoisesta sokerista.",
         "nb": "Nei. Brunt sukker er fortsatt sukker; for kattens kropp er det ikke annerledes enn hvitt sukker.",
         "it": "No. Lo zucchero di canna è sempre zucchero: per il corpo di un gatto non è diverso da quello bianco.",
-        "de": "Nein. Brauner Zucker ist trotzdem Zucker. Für den Körper einer Katze macht er keinen Unterschied zu weißem Zucker."
+        "de": "Nein. Brauner Zucker ist trotzdem Zucker. Für den Körper einer Katze macht er keinen Unterschied zu weißem Zucker.",
+        "fr": "Non. Le sucre roux reste du sucre : pour le corps d’un chat, il n’est pas différent du sucre blanc."
       }
     }
   ],
@@ -327,6 +342,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ed10ec95f43ed44560ee26e230f4c90c0a02d4612b14e959909e11e3675952e4"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7ffc07df2ae16172aa8b9c141a75de5f4add6e2c029e6ff387f56a0f9a66f5f8"
     }
   }
 }

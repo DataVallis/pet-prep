@@ -11,7 +11,8 @@
     "fi": "Kaakaojauhe",
     "nb": "Kakaopulver",
     "it": "Cacao in polvere",
-    "de": "Kakaopulver"
+    "de": "Kakaopulver",
+    "fr": "Cacao en poudre"
   },
   "question": {
     "en": "Can dogs eat cocoa powder?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä kaakaojauhetta?",
     "nb": "Kan hunder spise kakaopulver?",
     "it": "I cani possono mangiare il cacao in polvere?",
-    "de": "Dürfen Hunde Kakaopulver fressen?"
+    "de": "Dürfen Hunde Kakaopulver fressen?",
+    "fr": "Les chiens peuvent-ils manger du cacao en poudre ?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -35,7 +37,8 @@
     "fi": "kaakaojauhe",
     "nb": "kakaopulver",
     "it": "cacao-in-polvere",
-    "de": "kakaopulver"
+    "de": "kakaopulver",
+    "fr": "cacao-en-poudre"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Ei saa, kaakaojauhe on koirille myrkyllistä. Se on vaarallisempaa kuin tumma suklaa, koska leivontasuklaassa ja kaakaojauheessa on eniten haitallisia aineita. Jos koirasi söi kaakaojauhetta, ota heti yhteyttä eläinlääkäriin.",
     "nb": "Nei, kakaopulver er giftig for hunder. Det er enda farligere enn mørk sjokolade, for kokesjokolade og kakaopulver har mest av de skadelige stoffene. Hvis hunden har spist kakaopulver, må du kontakte dyrlegen med en gang.",
     "it": "No, il cacao in polvere è tossico per i cani. È ancora più pericoloso del cioccolato fondente, perché il cioccolato da cucina e il cacao in polvere contengono le quantità più alte di sostanze dannose. Se il tuo cane ha mangiato cacao in polvere, chiama subito il veterinario.",
-    "de": "Nein, Kakaopulver ist für Hunde giftig. Es ist sogar gefährlicher als dunkle Schokolade, denn Backschokolade und Kakaopulver enthalten die größten Mengen der schädlichen Stoffe. Hat Ihr Hund Kakaopulver gefressen, wenden Sie sich sofort an Ihren Tierarzt."
+    "de": "Nein, Kakaopulver ist für Hunde giftig. Es ist sogar gefährlicher als dunkle Schokolade, denn Backschokolade und Kakaopulver enthalten die größten Mengen der schädlichen Stoffe. Hat Ihr Hund Kakaopulver gefressen, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Non, le cacao en poudre est toxique pour les chiens. Il est encore plus dangereux que le chocolat noir, car le chocolat de cuisine et le cacao en poudre contiennent les plus fortes quantités de substances nocives. Si votre chien a mangé du cacao en poudre, parlez-en immédiatement à votre vétérinaire."
   },
   "why": {
     "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
@@ -60,7 +64,8 @@
     "fi": "Suklaassa on teobromiinia, joka on koirille myrkyllistä. Mitä enemmän kaakaota, sitä enemmän teobromiinia: valkoisessa suklaassa sitä on vähiten, kun taas leivontasuklaassa ja kaakaojauheessa sitä on eniten, joten kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa. Koirat kärsivät siitä useimmin, koska ne syövät lähes mitä tahansa ja pääsevät helposti suklaan luo.",
     "nb": "Sjokolade inneholder teobromin, som er giftig for hunder. Jo mer kakao, desto mer teobromin: hvit sjokolade har minst, mens kokesjokolade og kakaopulver har mest, så kakaopulver er enda farligere enn mørk sjokolade. Hunder rammes oftest fordi de spiser nesten alt og lett får tak i sjokolade.",
     "it": "Il cioccolato contiene teobromina, tossica per i cani. Più cacao c’è, più teobromina c’è: il cioccolato bianco ne ha meno, mentre il cioccolato da cucina e il cacao in polvere ne hanno di più, quindi il cacao in polvere è ancora più pericoloso del cioccolato fondente. A essere colpiti sono più spesso i cani, perché mangiano quasi tutto e raggiungono facilmente il cioccolato.",
-    "de": "Schokolade enthält Theobromin, das für Hunde giftig ist. Je mehr Kakao, desto mehr Theobromin: Weiße Schokolade enthält am wenigsten, Backschokolade und Kakaopulver dagegen die größten Mengen. Deshalb ist Kakaopulver sogar gefährlicher als dunkle Schokolade. Hunde sind am häufigsten betroffen, weil sie fast alles fressen und leicht an Schokolade herankommen."
+    "de": "Schokolade enthält Theobromin, das für Hunde giftig ist. Je mehr Kakao, desto mehr Theobromin: Weiße Schokolade enthält am wenigsten, Backschokolade und Kakaopulver dagegen die größten Mengen. Deshalb ist Kakaopulver sogar gefährlicher als dunkle Schokolade. Hunde sind am häufigsten betroffen, weil sie fast alles fressen und leicht an Schokolade herankommen.",
+    "fr": "Le chocolat contient de la théobromine, toxique pour les chiens. Plus il y a de cacao, plus il y a de théobromine : le chocolat blanc en contient le moins, tandis que le chocolat de cuisine et le cacao en poudre en contiennent le plus, si bien que le cacao en poudre est encore plus dangereux que le chocolat noir. Les chiens sont le plus souvent touchés parce qu’ils mangent presque n’importe quoi et ont facilement accès au chocolat."
   },
   "signs": {
     "en": [
@@ -152,6 +157,15 @@
       "Schneller oder unregelmäßiger Herzschlag",
       "Zittern und in schweren Fällen Krampfanfälle",
       "Die Anzeichen beginnen meist innerhalb von 6–12 Stunden"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Halètement, soif accrue et urines plus fréquentes",
+      "Agitation, nervosité, hyperactivité",
+      "Température corporelle élevée",
+      "Rythme cardiaque rapide ou anormal",
+      "Tremblements et, dans les cas graves, convulsions",
+      "Les signes apparaissent généralement en 6 à 12 heures"
     ]
   },
   "what_to_do": {
@@ -164,7 +178,8 @@
     "fi": "Jos koirasi söi kaakaojauhetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
     "nb": "Hvis hunden har spist kakaopulver, må du notere hvor mye og kontakte dyrlegen eller giftinformasjon for dyr med en gang.",
     "it": "Se il tuo cane ha mangiato cacao in polvere, annota quanto ne ha mangiato e parla subito con il veterinario o con un centro antiveleni veterinario.",
-    "de": "Hat Ihr Hund Kakaopulver gefressen, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere."
+    "de": "Hat Ihr Hund Kakaopulver gefressen, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
+    "fr": "Si votre chien a mangé du cacao en poudre, notez la quantité et parlez-en immédiatement à votre vétérinaire ou à un centre antipoison vétérinaire."
   },
   "serving": null,
   "child": {
@@ -177,7 +192,8 @@
     "fi": "Kaakaojauhe on ihmisten leivontaan, ei koirille. Pidä purkki kiinni ja kerro heti aikuiselle, jos koirasi pääsee siihen käsiksi.",
     "nb": "Kakaopulver er til baking for mennesker, ikke for hunder. Hold boksen lukket, og si fra til en voksen med en gang hvis hunden kommer over den.",
     "it": "Il cacao in polvere serve per i dolci delle persone, non per i cani. Tieni il barattolo chiuso e dillo subito a un adulto se il tuo cane lo trova.",
-    "de": "Kakaopulver ist zum Backen für Menschen da, nicht für Hunde. Halte die Dose geschlossen und sag sofort einem Erwachsenen Bescheid, wenn dein Hund etwas davon erwischt hat."
+    "de": "Kakaopulver ist zum Backen für Menschen da, nicht für Hunde. Halte die Dose geschlossen und sag sofort einem Erwachsenen Bescheid, wenn dein Hund etwas davon erwischt hat.",
+    "fr": "Le cacao en poudre sert aux pâtisseries des humains, pas aux chiens. Garde la boîte fermée et préviens tout de suite un adulte si ton chien en mange."
   },
   "faq": [
     {
@@ -191,7 +207,8 @@
         "fi": "Onko kaakaojauhe pahempaa kuin suklaalevy?",
         "nb": "Er kakaopulver verre enn en sjokoladeplate?",
         "it": "Il cacao in polvere è peggio di una tavoletta di cioccolato?",
-        "de": "Ist Kakaopulver schlimmer als eine Tafel Schokolade?"
+        "de": "Ist Kakaopulver schlimmer als eine Tafel Schokolade?",
+        "fr": "Le cacao en poudre est-il pire qu’une tablette de chocolat ?"
       },
       "a": {
         "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
@@ -203,7 +220,8 @@
         "fi": "On. Kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa, ja valkoisessa suklaassa on vähiten haitallisia aineita.",
         "nb": "Ja. Kakaopulver er enda farligere enn mørk sjokolade, og hvit sjokolade har minst av de skadelige stoffene.",
         "it": "Sì. Il cacao in polvere è ancora più pericoloso del cioccolato fondente, e il cioccolato bianco è quello che contiene meno sostanze dannose.",
-        "de": "Ja. Kakaopulver ist sogar gefährlicher als dunkle Schokolade, und weiße Schokolade enthält die geringste Menge der schädlichen Stoffe."
+        "de": "Ja. Kakaopulver ist sogar gefährlicher als dunkle Schokolade, und weiße Schokolade enthält die geringste Menge der schädlichen Stoffe.",
+        "fr": "Oui. Le cacao en poudre est encore plus dangereux que le chocolat noir, et le chocolat blanc contient la plus faible quantité de substances nocives."
       }
     }
   ],
@@ -318,6 +336,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0014ec01e01bbb1871500f9ff1a1955c885f41bd2e4396203d803a8a99ebf005"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "58d4a1c6c66aaed7d5797508f81e52d2a00852ec2c03eb69a4acadd5b1079747"
     }
   }
 }

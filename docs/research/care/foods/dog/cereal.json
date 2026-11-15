@@ -11,7 +11,8 @@
     "fi": "Aamiaismurot",
     "nb": "Frokostblanding",
     "it": "Cereali per la colazione",
-    "de": "Frühstückscerealien"
+    "de": "Frühstückscerealien",
+    "fr": "Céréales du petit-déjeuner"
   },
   "question": {
     "en": "Can dogs eat cereal?",
@@ -23,7 +24,8 @@
     "fi": "Saako koira syödä aamiaismuroja?",
     "nb": "Kan hunder spise frokostblanding?",
     "it": "I cani possono mangiare i cereali?",
-    "de": "Dürfen Hunde Cerealien fressen?"
+    "de": "Dürfen Hunde Cerealien fressen?",
+    "fr": "Les chiens peuvent-ils manger des céréales ?"
   },
   "url_slug": {
     "en": "cereal",
@@ -35,7 +37,8 @@
     "fi": "aamiaismurot",
     "nb": "frokostblanding",
     "it": "cereali",
-    "de": "cerealien"
+    "de": "cerealien",
+    "fr": "cereales"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "fi": "Joitakin, kohtuudella. Dogs Trust luettelee Weetabix Originalin (ei sen suklaaversioita) ruokien joukkoon, joita koira voi yleensä syödä kohtuudella. Vältä suklaamuroja sekä kaikkia muroja ja granolaa, joissa on rusinoita, sillä ne altistavat koiran munuaisten vajaatoiminnalle.",
     "nb": "Noen typer, med måte. Dogs Trust nevner Weetabix Original (ikke sjokoladevariantene) blant maten hunder vanligvis kan få med måte. Unngå frokostblanding med sjokolade og all frokostblanding eller granola med rosiner, som kan gi hunder nyresvikt.",
     "it": "Alcuni sì, con moderazione. Dogs Trust elenca i Weetabix Original (non le varianti al cioccolato) tra gli alimenti che i cani di solito possono mangiare con moderazione. Evita i cereali al cioccolato e qualsiasi cereale o granola con uvetta, che espongono i cani al rischio di insufficienza renale.",
-    "de": "Manche, in Maßen. Dogs Trust zählt Weetabix Original (nicht die Schokoladensorten) zu den Lebensmitteln, die Hunde in Maßen in der Regel bekommen dürfen. Meiden Sie Schoko-Cerealien sowie alle Cerealien und Müslis mit Rosinen, denn Rosinen bergen für Hunde das Risiko eines Nierenversagens."
+    "de": "Manche, in Maßen. Dogs Trust zählt Weetabix Original (nicht die Schokoladensorten) zu den Lebensmitteln, die Hunde in Maßen in der Regel bekommen dürfen. Meiden Sie Schoko-Cerealien sowie alle Cerealien und Müslis mit Rosinen, denn Rosinen bergen für Hunde das Risiko eines Nierenversagens.",
+    "fr": "Certaines, avec modération. Dogs Trust cite les Weetabix Original (pas leurs variétés au chocolat) parmi les aliments que les chiens peuvent généralement manger avec modération. Évitez les céréales au chocolat ainsi que toute céréale ou tout granola contenant des raisins secs, qui exposent les chiens à une insuffisance rénale."
   },
   "why": {
     "en": "Dogs Trust includes Weetabix Original, but not its chocolate varieties, in its list of human foods dogs can usually eat in moderation. Raisins can be hidden in cereals and granola, and grapes and raisins can put dogs at risk of kidney failure, even in small amounts. Chocolate can be toxic to dogs even in quite small amounts. Even foods that are usually non-toxic can upset an individual dog because of intolerance, fat content or portion size.",
@@ -60,7 +64,8 @@
     "fi": "Dogs Trust sisällyttää Weetabix Originalin, mutta ei sen suklaaversioita, luetteloonsa ihmisten ruoista, joita koira voi yleensä syödä kohtuudella. Rusinat voivat olla piilossa muroissa ja granolassa, ja viinirypäleet ja rusinat voivat altistaa koiran munuaisten vajaatoiminnalle jo pienenä määränä. Suklaa voi olla koiralle myrkyllistä jo melko pieninä määrinä. Jopa yleensä myrkyttömät ruoat voivat tehdä yksittäisen koiran olon huonoksi ruoka-aineyliherkkyyden, rasvapitoisuuden tai annoskoon vuoksi.",
     "nb": "Dogs Trust tar med Weetabix Original, men ikke sjokoladevariantene, på listen over menneskemat hunder vanligvis kan spise med måte. Rosiner kan skjule seg i frokostblanding og granola, og druer og rosiner kan gi hunder nyresvikt, selv i små mengder. Sjokolade kan være giftig for hunder selv i ganske små mengder. Selv mat som vanligvis ikke er giftig, kan gi enkelte hunder urolig mage på grunn av intoleranse, fettinnhold eller porsjonsstørrelse.",
     "it": "Dogs Trust include i Weetabix Original, ma non le varianti al cioccolato, nel suo elenco di alimenti per le persone che i cani di solito possono mangiare con moderazione. L’uvetta può nascondersi nei cereali e nella granola, e uva e uvetta possono mettere i cani a rischio di insufficienza renale, anche in piccole quantità. Il cioccolato può essere tossico per i cani anche in quantità piuttosto piccole. Anche gli alimenti di solito non tossici possono dare problemi a un singolo cane per intolleranza, contenuto di grassi o dimensione della porzione.",
-    "de": "Dogs Trust nimmt Weetabix Original, aber nicht die Schokoladensorten, in seine Liste von Lebensmitteln für Menschen auf, die Hunde in Maßen meist fressen dürfen. Rosinen können sich in Cerealien und Müsli verstecken, und Weintrauben und Rosinen bergen schon in kleinen Mengen das Risiko eines Nierenversagens für Hunde. Schokolade kann für Hunde schon in recht kleinen Mengen giftig sein. Selbst Lebensmittel, die normalerweise ungiftig sind, können einem einzelnen Hund wegen einer Unverträglichkeit, des Fettgehalts oder der Portionsgröße auf den Magen schlagen."
+    "de": "Dogs Trust nimmt Weetabix Original, aber nicht die Schokoladensorten, in seine Liste von Lebensmitteln für Menschen auf, die Hunde in Maßen meist fressen dürfen. Rosinen können sich in Cerealien und Müsli verstecken, und Weintrauben und Rosinen bergen schon in kleinen Mengen das Risiko eines Nierenversagens für Hunde. Schokolade kann für Hunde schon in recht kleinen Mengen giftig sein. Selbst Lebensmittel, die normalerweise ungiftig sind, können einem einzelnen Hund wegen einer Unverträglichkeit, des Fettgehalts oder der Portionsgröße auf den Magen schlagen.",
+    "fr": "Dogs Trust range les Weetabix Original, mais pas leurs variétés au chocolat, dans sa liste d’aliments pour humains que les chiens peuvent généralement manger avec modération. Des raisins secs peuvent se cacher dans les céréales et le granola, et les raisins frais et secs peuvent exposer les chiens à une insuffisance rénale, même en petite quantité. Le chocolat peut être toxique pour les chiens même en quantités assez faibles. Même les aliments habituellement non toxiques peuvent incommoder un chien en particulier, à cause d’une intolérance, de leur teneur en graisses ou de la taille de la portion."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "fi": "Tarkista ainesosat rusinoiden, muiden kuivattujen hedelmien ja suklaan varalta. Jos arvelet koirasi syöneen muroja, joissa oli rusinoita tai suklaata, ota heti yhteyttä eläinlääkäriin, vaikka määrä olisi ollut pieni. Kysy eläinlääkäriltä ennen kuin tarjoat ruokaa, jota koirasi ei ole aiemmin syönyt.",
     "nb": "Sjekk ingredienslisten for rosiner, annen tørket frukt og sjokolade. Hvis du tror hunden har spist frokostblanding med rosiner eller sjokolade, må du kontakte dyrlegen med en gang, selv om det bare var en liten mengde. Spør dyrlegen før du gir hunden mat den ikke har fått før.",
     "it": "Controlla negli ingredienti se ci sono uvetta, altra frutta essiccata e cioccolato. Se pensi che il tuo cane abbia mangiato cereali con uvetta o cioccolato, contatta subito il veterinario, anche se ne ha mangiati solo pochi. Chiedi al veterinario prima di offrire un alimento che il tuo cane non ha mai provato.",
-    "de": "Prüfen Sie die Zutaten auf Rosinen, anderes Trockenobst und Schokolade. Vermuten Sie, dass Ihr Hund Cerealien mit Rosinen oder Schokolade gefressen hat, wenden Sie sich sofort an Ihren Tierarzt, auch wenn es nur eine kleine Menge war. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat."
+    "de": "Prüfen Sie die Zutaten auf Rosinen, anderes Trockenobst und Schokolade. Vermuten Sie, dass Ihr Hund Cerealien mit Rosinen oder Schokolade gefressen hat, wenden Sie sich sofort an Ihren Tierarzt, auch wenn es nur eine kleine Menge war. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat.",
+    "fr": "Vérifiez dans la liste des ingrédients la présence de raisins secs, d’autres fruits secs et de chocolat. Si vous pensez que votre chien a mangé des céréales contenant des raisins secs ou du chocolat, contactez immédiatement votre vétérinaire, même si la quantité était faible. Demandez conseil à votre vétérinaire avant de proposer un aliment que votre chien n’a jamais goûté."
   },
   "serving": {
     "en": "Only in moderation, for example Weetabix Original. No chocolate, raisins or other dried fruit.",
@@ -85,7 +91,8 @@
     "fi": "Vain kohtuudella, esimerkiksi Weetabix Original. Ei suklaata, rusinoita eikä muita kuivattuja hedelmiä.",
     "nb": "Bare med måte, for eksempel Weetabix Original. Ingen sjokolade, rosiner eller annen tørket frukt.",
     "it": "Solo con moderazione, per esempio i Weetabix Original. Niente cioccolato, uvetta o altra frutta essiccata.",
-    "de": "Nur in Maßen, zum Beispiel Weetabix Original. Keine Schokolade, keine Rosinen und kein anderes Trockenobst."
+    "de": "Nur in Maßen, zum Beispiel Weetabix Original. Keine Schokolade, keine Rosinen und kein anderes Trockenobst.",
+    "fr": "Uniquement avec modération, par exemple des Weetabix Original. Pas de chocolat, de raisins secs ni d’autres fruits secs."
   },
   "child": {
     "en": "Some cereals are okay for a dog in small amounts. Chocolate or raisin cereal is not for dogs, so ask a grown-up.",
@@ -97,7 +104,8 @@
     "fi": "Jotkin murot sopivat koiralle pieninä määrinä. Suklaa- tai rusinamurot eivät ole koirille, joten kysy aikuiselta.",
     "nb": "Noen typer frokostblanding er greit for en hund i små mengder. Frokostblanding med sjokolade eller rosiner er ikke for hunder, så spør en voksen.",
     "it": "Alcuni cereali vanno bene per un cane, in piccole quantità. I cereali al cioccolato o all’uvetta non sono per i cani, quindi chiedi a un adulto.",
-    "de": "Manche Cerealien sind für einen Hund in kleinen Mengen in Ordnung. Cerealien mit Schokolade oder Rosinen sind nichts für Hunde, also frag einen Erwachsenen."
+    "de": "Manche Cerealien sind für einen Hund in kleinen Mengen in Ordnung. Cerealien mit Schokolade oder Rosinen sind nichts für Hunde, also frag einen Erwachsenen.",
+    "fr": "Certaines céréales conviennent à un chien en petite quantité. Les céréales au chocolat ou aux raisins secs ne sont pas pour les chiens : demande à un adulte."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "fi": "Saako koira syödä granolaa?",
         "nb": "Kan hunder spise granola?",
         "it": "I cani possono mangiare la granola?",
-        "de": "Dürfen Hunde Müsli fressen?"
+        "de": "Dürfen Hunde Müsli fressen?",
+        "fr": "Les chiens peuvent-ils manger du granola ?"
       },
       "a": {
         "en": "It's best not to. Raisins can be hidden in granola and cereals, and they can put dogs at risk of kidney failure.",
@@ -123,7 +132,8 @@
         "fi": "Ei kannata. Rusinat voivat olla piilossa granolassa ja muroissa, ja ne voivat altistaa koiran munuaisten vajaatoiminnalle.",
         "nb": "Det er best å la være. Rosiner kan skjule seg i granola og frokostblanding, og de kan gi hunder nyresvikt.",
         "it": "Meglio di no. L’uvetta può nascondersi nella granola e nei cereali e può mettere i cani a rischio di insufficienza renale.",
-        "de": "Besser nicht. Rosinen können sich in Müsli und Cerealien verstecken und bergen für Hunde das Risiko eines Nierenversagens."
+        "de": "Besser nicht. Rosinen können sich in Müsli und Cerealien verstecken und bergen für Hunde das Risiko eines Nierenversagens.",
+        "fr": "Mieux vaut éviter. Des raisins secs peuvent se cacher dans le granola et les céréales, et ils peuvent exposer les chiens à une insuffisance rénale."
       }
     },
     {
@@ -137,7 +147,8 @@
         "fi": "Saako koira syödä suklaamuroja?",
         "nb": "Kan hunder spise frokostblanding med sjokolade?",
         "it": "I cani possono mangiare i cereali al cioccolato?",
-        "de": "Dürfen Hunde Schoko-Cerealien fressen?"
+        "de": "Dürfen Hunde Schoko-Cerealien fressen?",
+        "fr": "Les chiens peuvent-ils manger des céréales au chocolat ?"
       },
       "a": {
         "en": "No. Chocolate can be toxic to dogs even in quite small amounts; Dogs Trust excludes chocolate varieties.",
@@ -149,7 +160,8 @@
         "fi": "Ei. Suklaa voi olla koiralle myrkyllistä jo melko pieninä määrinä; Dogs Trust rajaa suklaaversiot pois.",
         "nb": "Nei. Sjokolade kan være giftig for hunder selv i ganske små mengder, og Dogs Trust utelater sjokoladevariantene.",
         "it": "No. Il cioccolato può essere tossico per i cani anche in quantità piuttosto piccole; Dogs Trust esclude le varianti al cioccolato.",
-        "de": "Nein. Schokolade kann für Hunde schon in recht kleinen Mengen giftig sein. Dogs Trust schließt die Schokoladensorten aus."
+        "de": "Nein. Schokolade kann für Hunde schon in recht kleinen Mengen giftig sein. Dogs Trust schließt die Schokoladensorten aus.",
+        "fr": "Non. Le chocolat peut être toxique pour les chiens même en quantités assez faibles ; Dogs Trust exclut les variétés au chocolat."
       }
     }
   ],
@@ -250,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e25b36b8988795de2351593bed00f849d67064c3051d6be451f9ad75531e9000"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4f8801605a35cc68fa94ee7758859700c3ba6bd1137f4c4b6ac29d29584670df"
     }
   }
 }
