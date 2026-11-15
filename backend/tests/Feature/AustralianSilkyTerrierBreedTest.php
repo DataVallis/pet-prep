@@ -49,7 +49,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function astData(string $path): mixed
+function austData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -64,7 +64,7 @@ function astData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Australian Silky Terrier seeder row of (stage, from, key) */
-function astRow(string $stage, int $from, StageParamKey $key): array
+function austRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'australian-silky-terrier'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -73,7 +73,7 @@ function astRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function astPet(int $arrivalMonths, array $attributes = []): Pet
+function austPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -85,7 +85,7 @@ function astPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function astPin(User $parent, array $body): TestResponse
+function austPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -94,7 +94,7 @@ function astPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function astLogin(string $pin): TestResponse
+function austLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -117,7 +117,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1080, 'breeds.australian_silky_terrier'])
             ->and($config->search_keywords)->toBe(['australian silky terrier', 'avstralski svilnati terier', 'silky terrier', 'silky', 'silky terier', 'svilnati terier', 'svilni terier', 'terier', 'terrier'])
             // Legacy fallback = the adult step goal (30 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) astData('proposed_game_parameters.australian_silky_terrier.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) austData('proposed_game_parameters.australian_silky_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(3000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -125,13 +125,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = astData('proposed_game_parameters.australian_silky_terrier.care_rates.value');
+        $care = austData('proposed_game_parameters.australian_silky_terrier.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts an Australian Silky Terrier pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = astPet(36);
+        $pet = austPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('australian_silky_terrier');
 
@@ -189,36 +189,36 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.australian_silky_terrier';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(astRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(astData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(astRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(astData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(austRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(austData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(austRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(austData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(astRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(astData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(austRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(austData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 12 y (RKC lower bound "Over 12 years", S856) = 108 — the runbook order (McMillan 2024 only via
             // Wikipedia, no VetCompass median) → confirmed rule, verified.
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(astData('australian_silky_terrier.lifespan.senior_from.months'))
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * astRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(astData('australian_silky_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S856'])
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(austData('australian_silky_terrier.lifespan.senior_from.months'))
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * austRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(austData('australian_silky_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S856'])
             // McMillan 2024 via Wikipedia (tier C) is background only — never the seeded boundary.
-            ->and(astData('australian_silky_terrier.lifespan.mcmillan_2024.source_id'))->toBe('S862')
-            ->and(astData("{$pgp}.stage_boundaries_months.alternatives.senior_mcmillan_2024_via_wikipedia_13_3_y"))->toBe(120)
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', astData("{$pgp}.stage_boundaries_months.derived_from")))
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER)
-            ->and(astRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
-            ->and(astRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(108);
+            ->and(austData('australian_silky_terrier.lifespan.mcmillan_2024.source_id'))->toBe('S862')
+            ->and(austData("{$pgp}.stage_boundaries_months.alternatives.senior_mcmillan_2024_via_wikipedia_13_3_y"))->toBe(120)
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', austData("{$pgp}.stage_boundaries_months.derived_from")))
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER)
+            ->and(austRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
+            ->and(austRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(108);
 
-        expect(astRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(astData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(astRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
-            ->and(astRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(astData('australian_silky_terrier.exercise.adult.quote'))
-            ->and(astRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(astData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(astRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S856')
-            ->and(astRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
-            ->and(astRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(astData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(astRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(23)
-            ->and(astRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(astData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(30)
-            ->and(astRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(astData("{$pgp}.learning_multiplier.value"))
-            ->and(astRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
+        expect(austRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(austData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(austRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
+            ->and(austRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(austData('australian_silky_terrier.exercise.adult.quote'))
+            ->and(austRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(austData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(austRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S856')
+            ->and(austRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
+            ->and(austRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(austData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(austRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(23)
+            ->and(austRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(austData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(30)
+            ->and(austRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(austData("{$pgp}.learning_multiplier.value"))
+            ->and(austRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -228,7 +228,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('australian-silky-terrier')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.australian_silky_terrier.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) astData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) austData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -237,51 +237,51 @@ describe('life-stage data against data.json', function () {
         // tooth brushing every day (WebMD, M5-R15), ear cleaning every 2 weeks (PetMD, M5-R18) and the bath every 4 weeks
         // (WebMD, M5-R19). No nail / groomer task (no frequency), no meal gap, no heat warning (not flat-faced).
         $tasks = BreedStageParamsSeeder::DOG_CARE_TASKS['australian_silky_terrier'];
-        expect(json_encode([astData('australian_silky_terrier'), astData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(astData("{$pgp}.grooming.value"))->toBe(7)
-            ->and(astData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+        expect(json_encode([austData('australian_silky_terrier'), austData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(austData("{$pgp}.grooming.value"))->toBe(7)
+            ->and(austData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('australian_silky_terrier')
-            ->and(astData('australian_silky_terrier.exercise.after_meals.quote'))->toBeNull()
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['australian_silky_terrier'])->toBe(['S857', astData("{$pgp}.socialisation.quote")])
-            ->and(astData("{$pgp}.socialisation.quote"))->toBe(astData('australian_silky_terrier.behaviour.socialisation.quote'))
+            ->and(austData('australian_silky_terrier.exercise.after_meals.quote'))->toBeNull()
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['australian_silky_terrier'])->toBe(['S857', austData("{$pgp}.socialisation.quote")])
+            ->and(austData("{$pgp}.socialisation.quote"))->toBe(austData('australian_silky_terrier.behaviour.socialisation.quote'))
             ->and(array_keys($tasks))->toBe(['tooth_brushing', 'ear_cleaning', 'bath'])
-            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S858', astData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
-            ->and(array_slice($tasks['ear_cleaning'], 0, 5))->toBe([1, 'two_weeks', 'S857', astData("{$pgp}.ear_care.quote"), "{$pgp}.ear_care"])
-            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'month', 'S858', astData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
-            ->and(astData("{$pgp}.bathing.quote"))->toBe(astData('australian_silky_terrier.suitability.webmd_bath.quote'))
-            ->and(astData("{$pgp}.ear_care.quote"))->toBe(astData('australian_silky_terrier.suitability.petmd_ears.quote'))
-            ->and(astData("{$pgp}.tooth_brushing.quote"))->toBe(astData('australian_silky_terrier.suitability.webmd_teeth_nails.quote'))
+            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S858', austData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
+            ->and(array_slice($tasks['ear_cleaning'], 0, 5))->toBe([1, 'two_weeks', 'S857', austData("{$pgp}.ear_care.quote"), "{$pgp}.ear_care"])
+            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'month', 'S858', austData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
+            ->and(austData("{$pgp}.bathing.quote"))->toBe(austData('australian_silky_terrier.suitability.webmd_bath.quote'))
+            ->and(austData("{$pgp}.ear_care.quote"))->toBe(austData('australian_silky_terrier.suitability.petmd_ears.quote'))
+            ->and(austData("{$pgp}.tooth_brushing.quote"))->toBe(austData('australian_silky_terrier.suitability.webmd_teeth_nails.quote'))
             ->and($tasks)->not->toHaveKey('groomer_visit')->not->toHaveKey('nail_trim')
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('australian_silky_terrier');
     });
 
     it('takes the breed-level numbers from the sourced australian_silky_terrier entries', function () {
         // PetMD (S857) "around 10 pounds" → 4.5 kg (WebMD "about 10 pounds" agrees; the standards give no weight).
-        expect(astRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([4.5, 4.5])
-            ->and(astData('australian_silky_terrier.adult_weight.petmd.value'))->toEqual(['male' => [4.5, 4.5], 'female' => [4.5, 4.5]])
-            ->and(astRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(astData('australian_silky_terrier.adult_weight.petmd.source_id'))
-            ->and(astRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(astData('australian_silky_terrier.adult_weight.petmd.quote'))
-            ->and(astRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([8, 12])
-            ->and(astData('australian_silky_terrier.growth.adult_weight_reached.value'))->toStartWith('8–12 months')
+        expect(austRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([4.5, 4.5])
+            ->and(austData('australian_silky_terrier.adult_weight.petmd.value'))->toEqual(['male' => [4.5, 4.5], 'female' => [4.5, 4.5]])
+            ->and(austRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(austData('australian_silky_terrier.adult_weight.petmd.source_id'))
+            ->and(austRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(austData('australian_silky_terrier.adult_weight.petmd.quote'))
+            ->and(austRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([8, 12])
+            ->and(austData('australian_silky_terrier.growth.adult_weight_reached.value'))->toStartWith('8–12 months')
             // Coren rank 37 → Above average → 1.2.
-            ->and(astRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(37)
-            ->and(astData('australian_silky_terrier.trainability.coren_rank.value'))->toBe(37)
-            ->and(astRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('australian_silky_terrier.lifespan.rkc')
-            ->and(astRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S856')
-            ->and(astRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12)
-            ->and(astRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(astData('australian_silky_terrier.lifespan.rkc.quote'));
+            ->and(austRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(37)
+            ->and(austData('australian_silky_terrier.trainability.coren_rank.value'))->toBe(37)
+            ->and(austRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('australian_silky_terrier.lifespan.rkc')
+            ->and(austRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S856')
+            ->and(austRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12)
+            ->and(austRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(austData('australian_silky_terrier.lifespan.rkc.quote'));
 
         // Brushing every day: RKC "Grooming: Every day" → 7 (PetMD / WebMD "at least twice a week" = alternative).
-        $grooming = astRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = austRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(7)
             ->and($grooming['source_id'])->toBe('S856')
-            ->and($grooming['quote'])->toBe(astData('australian_silky_terrier.suitability.rkc_grooming.quote'))
-            ->and($grooming['quote'])->toBe(astData('proposed_game_parameters.australian_silky_terrier.grooming.quote'))
+            ->and($grooming['quote'])->toBe(austData('australian_silky_terrier.suitability.rkc_grooming.quote'))
+            ->and($grooming['quote'])->toBe(austData('proposed_game_parameters.australian_silky_terrier.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
-            ->and(astRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(astRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S857')
-            ->and(astRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
+            ->and(austRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(austRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S857')
+            ->and(austRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'australian-silky-terrier');
         expect($mine->where('key', StageParamKey::NoWalkInHeat->value)->all())->toBe([])
@@ -318,7 +318,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 30 minutes = 3,000 steps and 23 minutes = 2,300 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = astPet($arrival);
+        $pet = austPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -344,7 +344,7 @@ describe('stage rules', function () {
 
     it('learns at 1.2 × the mixed-breed speed (Coren rank 37, Above average) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = astPet(36);
+        $dog = austPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -361,7 +361,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = astPin($parent, $body);
+        $response = austPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -370,7 +370,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(astLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(austLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::AustralianSilkyTerrier)
             ->and($pet->species)->toBe(Species::Dog)
@@ -385,8 +385,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'australian_silky_terrier'] as $breed) {
-            $pin = astPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(astLogin($pin)->assertOk()->json('pet.id'));
+            $pin = austPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(austLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['australian_silky_terrier'];
@@ -399,7 +399,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = astPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = austPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -456,8 +456,8 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
         expect($standard)->toBe(['silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot'])
             ->and(array_column($colours, 'value'))->toBe($standard)
             ->and(array_column($colours, 'key'))->toBe(['blue-tan'])
-            ->and(astData('australian_silky_terrier.appearance.colours.value'))->toBe(['blue and tan'])
-            ->and(astData('australian_silky_terrier.appearance.colours.quote'))->toContain('blue and tan');
+            ->and(austData('australian_silky_terrier.appearance.colours.value'))->toBe(['blue and tan'])
+            ->and(austData('australian_silky_terrier.appearance.colours.quote'))->toContain('blue and tan');
     });
 
     it('draws the register portrait in blue and tan (the only standard colour)', function () {
@@ -476,7 +476,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->and($v1['visual_traits']['eye_color'])->toBe('dark')
             ->and($v1['visual_traits']['color_scheme'])->toBe('silver blue and tan');
 
-        $pet = astPet(108, ['origin' => PetOrigin::Adopted]);
+        $pet = austPet(108, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Australian Silky Terrier')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -497,8 +497,8 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // RKC Breed Watch Category 1, no points of concern (S856) → no breathing / hips / back chip, no BVA marketing exclusion.
             ->and($tags['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs')->not->toContain('back_spine')
-            ->and(astData('australian_silky_terrier.suitability.rkc_breed_watch.value'))->toBe('Category 1')
-            ->and(astData('proposed_game_parameters.australian_silky_terrier.marketing.value'))->toContain('in marketing: yes')
+            ->and(austData('australian_silky_terrier.suitability.rkc_breed_watch.value'))->toBe('Category 1')
+            ->and(austData('proposed_game_parameters.australian_silky_terrier.marketing.value'))->toContain('in marketing: yes')
             // The alternatives (84 Dogs Trust, 120 McMillan via Wikipedia) are never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'australian-silky-terrier')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
             ->not->toContain(84)->not->toContain(120);
@@ -518,11 +518,11 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_company')
             ->not->toContain('long_daily_exercise')->not->toContain('not_for_small_children');
 
-        expect(astData('australian_silky_terrier.behaviour.children.quote'))->toBe("they're good around other pets and children if your pup is socialized properly at a young age")
-            ->and(astData('australian_silky_terrier.behaviour.other_pets.quote'))->toContain('prey drive')->not->toContain('high prey drive')->not->toContain('strong prey drive')
-            ->and(astData('australian_silky_terrier.behaviour.time_alone.quote'))->toBeNull()
-            ->and(astData('australian_silky_terrier.suitability.rkc_size_of_home.quote'))->toBe('Flat/ Apartment')
-            ->and(astData('australian_silky_terrier.suitability.rkc_shedding.quote'))->toBe('Yes')
-            ->and(astData('australian_silky_terrier.lifespan.rkc.quote'))->toBe('Over 12 years');
+        expect(austData('australian_silky_terrier.behaviour.children.quote'))->toBe("they're good around other pets and children if your pup is socialized properly at a young age")
+            ->and(austData('australian_silky_terrier.behaviour.other_pets.quote'))->toContain('prey drive')->not->toContain('high prey drive')->not->toContain('strong prey drive')
+            ->and(austData('australian_silky_terrier.behaviour.time_alone.quote'))->toBeNull()
+            ->and(austData('australian_silky_terrier.suitability.rkc_size_of_home.quote'))->toBe('Flat/ Apartment')
+            ->and(austData('australian_silky_terrier.suitability.rkc_shedding.quote'))->toBe('Yes')
+            ->and(austData('australian_silky_terrier.lifespan.rkc.quote'))->toBe('Over 12 years');
     });
 });

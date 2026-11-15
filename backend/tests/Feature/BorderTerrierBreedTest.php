@@ -47,7 +47,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function btData(string $path): mixed
+function bortData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -62,7 +62,7 @@ function btData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Border Terrier seeder row of (stage, from, key) */
-function btRow(string $stage, int $from, StageParamKey $key): array
+function bortRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'border-terrier'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -71,7 +71,7 @@ function btRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function btPet(int $arrivalMonths, array $attributes = []): Pet
+function bortPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -83,7 +83,7 @@ function btPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function btPin(User $parent, array $body): TestResponse
+function bortPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -92,7 +92,7 @@ function btPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function btLogin(string $pin): TestResponse
+function bortLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -115,7 +115,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 950, 'breeds.border_terrier'])
             ->and($config->search_keywords)->toBe(['border terrier', 'borderski terier', 'border terier'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) btData('proposed_game_parameters.border_terrier.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) bortData('proposed_game_parameters.border_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -123,13 +123,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = btData('proposed_game_parameters.border_terrier.care_rates.value');
+        $care = bortData('proposed_game_parameters.border_terrier.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Border Terrier pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = btPet(36);
+        $pet = bortPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('border_terrier');
 
@@ -187,33 +187,33 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.border_terrier';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(btRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(btRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(bortRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(bortData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(bortRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(bortData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(btRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(bortRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(bortData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = round(0.75 × 14.2 y × 12) = round(127.8) = 128 (McMillan 2024, S771) → not provisional.
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData('border_terrier.lifespan.senior_from.months'))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * btRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(btData('border_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S771'])
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', btData("{$pgp}.stage_boundaries_months.derived_from")))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BORDER_TERRIER)
-            ->and(btRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(128)
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(bortData('border_terrier.lifespan.senior_from.months'))
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * bortRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(bortData('border_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S771'])
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', bortData("{$pgp}.stage_boundaries_months.derived_from")))
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BORDER_TERRIER)
+            ->and(bortRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
+            ->and(bortRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(128)
             // The Dogs Trust rule of thumb (84) stays an alternative.
-            ->and(btData("{$pgp}.stage_boundaries_months.alternatives"))->toBe(['senior_dogs_trust_7_y' => 84]);
+            ->and(bortData("{$pgp}.stage_boundaries_months.alternatives"))->toBe(['senior_dogs_trust_7_y' => 84]);
 
-        expect(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData('border_terrier.exercise.adult.quote'))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S769')
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
-            ->and(btRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(btData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(btData("{$pgp}.learning_multiplier.value"))
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
+        expect(bortRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bortData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(bortRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(bortRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(bortData('border_terrier.exercise.adult.quote'))
+            ->and(bortRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(bortData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(bortRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S769')
+            ->and(bortRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bortData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(bortRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
+            ->and(bortRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(bortData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
+            ->and(bortRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(bortData("{$pgp}.learning_multiplier.value"))
+            ->and(bortRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -223,50 +223,50 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('border-terrier')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.border_terrier.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) btData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) bortData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
 
         // Every sourced need is built: brushing 2× a week (M5-R13, PDSA), the meal / walk gap (M5-R16, PDSA), puppy
         // socialisation with the PDSA quote (M5-R17). No care task: no source gives a program-period frequency.
-        expect(json_encode([btData('border_terrier'), btData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(btData("{$pgp}.grooming.value"))->toBe(2)
-            ->and(btData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
-            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['border_terrier'])->toBe(['S770', btData("{$pgp}.meal_exercise_gap.quote")])
-            ->and(btData("{$pgp}.meal_exercise_gap.quote"))->toBe(btData('border_terrier.exercise.after_meals.quote'))
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['border_terrier'])->toBe(['S770', btData("{$pgp}.socialisation.quote")])
-            ->and(btData("{$pgp}.socialisation.quote"))->toBe(btData('border_terrier.behaviour.socialisation.quote'))
+        expect(json_encode([bortData('border_terrier'), bortData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(bortData("{$pgp}.grooming.value"))->toBe(2)
+            ->and(bortData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['border_terrier'])->toBe(['S770', bortData("{$pgp}.meal_exercise_gap.quote")])
+            ->and(bortData("{$pgp}.meal_exercise_gap.quote"))->toBe(bortData('border_terrier.exercise.after_meals.quote'))
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['border_terrier'])->toBe(['S770', bortData("{$pgp}.socialisation.quote")])
+            ->and(bortData("{$pgp}.socialisation.quote"))->toBe(bortData('border_terrier.behaviour.socialisation.quote'))
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('border_terrier')
             ->and(BreedStageParamsSeeder::DOG_CARE_TASKS)->not->toHaveKey('border_terrier');
     });
 
     it('takes the breed-level numbers from the sourced border_terrier entries', function () {
         // FCI weight: males 5.9–7.1 kg, females 5.1–6.4 kg → 5.1–7.1 kg.
-        expect(btRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([5.1, 7.1])
-            ->and(btData('border_terrier.adult_weight.fci.value'))->toEqual(['male' => [5.9, 7.1], 'female' => [5.1, 6.4]])
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(btData('border_terrier.adult_weight.fci.source_id'))
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(btData('border_terrier.adult_weight.fci.quote'))
-            ->and(btRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
-            ->and(btData('border_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
-            ->and(btRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(30)
-            ->and(btData('border_terrier.trainability.coren_rank.value'))->toBe(30)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('border_terrier.lifespan.median_uk')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S771')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(14.2)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(btData('border_terrier.lifespan.median_uk.quote'));
+        expect(bortRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([5.1, 7.1])
+            ->and(bortData('border_terrier.adult_weight.fci.value'))->toEqual(['male' => [5.9, 7.1], 'female' => [5.1, 6.4]])
+            ->and(bortRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(bortData('border_terrier.adult_weight.fci.source_id'))
+            ->and(bortRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(bortData('border_terrier.adult_weight.fci.quote'))
+            ->and(bortRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
+            ->and(bortData('border_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
+            ->and(bortRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(30)
+            ->and(bortData('border_terrier.trainability.coren_rank.value'))->toBe(30)
+            ->and(bortRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('border_terrier.lifespan.median_uk')
+            ->and(bortRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S771')
+            ->and(bortRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(14.2)
+            ->and(bortRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(bortData('border_terrier.lifespan.median_uk.quote'));
 
         // Brushing 2× a week: RKC "More than once a week" has no number → PDSA "a couple of times a week" → 2.
-        $grooming = btRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = bortRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(2)
             ->and($grooming['source_id'])->toBe('S770')
-            ->and($grooming['quote'])->toBe(btData('border_terrier.suitability.pdsa_grooming.quote'))
-            ->and($grooming['quote'])->toBe(btData('proposed_game_parameters.border_terrier.grooming.quote'))
+            ->and($grooming['quote'])->toBe(bortData('border_terrier.suitability.pdsa_grooming.quote'))
+            ->and($grooming['quote'])->toBe(bortData('proposed_game_parameters.border_terrier.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S770')
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
+            ->and(bortRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(bortRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S770')
+            ->and(bortRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'border-terrier');
         $gap = $mine->where('key', StageParamKey::MealExerciseGapMinutes->value)->values();
@@ -306,7 +306,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 60 minutes = 6,000 steps and 45 minutes = 4,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = btPet($arrival);
+        $pet = bortPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -331,7 +331,7 @@ describe('stage rules', function () {
 
     it('learns at 1.2 × the mixed-breed speed (Coren Above average tier, rank 30) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = btPet(36);
+        $dog = bortPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -348,7 +348,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = btPin($parent, $body);
+        $response = bortPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -357,7 +357,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(btLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(bortLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::BorderTerrier)
             ->and($pet->species)->toBe(Species::Dog)
@@ -372,8 +372,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'border_terrier'] as $breed) {
-            $pin = btPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(btLogin($pin)->assertOk()->json('pet.id'));
+            $pin = bortPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(bortLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['border_terrier'];
@@ -386,7 +386,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = btPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = bortPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -463,7 +463,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->and($v1['visual_traits']['eye_color'])->toBe('dark')
             ->and($v1['visual_traits']['color_scheme'])->toBe('grizzle and tan');
 
-        $pet = btPet(128, ['origin' => PetOrigin::Adopted]);
+        $pet = bortPet(128, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Border Terrier')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -484,8 +484,8 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // RKC Breed Watch Category 1 (S769) → no welfare chip, in marketing.
             ->and($tags['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
-            ->and(btData('border_terrier.health.breed_watch.quote'))->toBe('Category 1')
-            ->and(btData('proposed_game_parameters.border_terrier.marketing.value'))->toBe('in the app: yes; in marketing: yes')
+            ->and(bortData('border_terrier.health.breed_watch.quote'))->toBe('Category 1')
+            ->and(bortData('proposed_game_parameters.border_terrier.marketing.value'))->toBe('in the app: yes; in marketing: yes')
             // The alternative (84 Dogs Trust) is never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'border-terrier')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
             ->not->toContain(84);
@@ -500,10 +500,10 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['suits'])->not->toContain('small_children')->not->toContain('often_alone')->not->toContain('family_pet')->not->toContain('other_pets')
             ->and($tags['consider'])->not->toContain('long_daily_exercise')->not->toContain('shorter_lifespan')->not->toContain('experienced_owner');
 
-        expect(btData('border_terrier.suitability.rkc_size_of_home.quote'))->toBe('Flat/ Apartment')
-            ->and(btData('border_terrier.suitability.rkc_shedding.quote'))->toBe('Yes')
-            ->and(btData('border_terrier.lifespan.rkc.quote'))->toBe('Over 12 years')
-            ->and(btData('border_terrier.behaviour.other_pets.quote'))->toContain('high prey drive')
-            ->and(btData('border_terrier.behaviour.children.quote'))->toContain('children of all ages');
+        expect(bortData('border_terrier.suitability.rkc_size_of_home.quote'))->toBe('Flat/ Apartment')
+            ->and(bortData('border_terrier.suitability.rkc_shedding.quote'))->toBe('Yes')
+            ->and(bortData('border_terrier.lifespan.rkc.quote'))->toBe('Over 12 years')
+            ->and(bortData('border_terrier.behaviour.other_pets.quote'))->toContain('high prey drive')
+            ->and(bortData('border_terrier.behaviour.children.quote'))->toContain('children of all ages');
     });
 });

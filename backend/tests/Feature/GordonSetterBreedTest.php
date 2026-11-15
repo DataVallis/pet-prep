@@ -49,7 +49,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function gsData(string $path): mixed
+function gosData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -64,7 +64,7 @@ function gsData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Gordon Setter seeder row of (stage, from, key) */
-function gsRow(string $stage, int $from, StageParamKey $key): array
+function gosRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'gordon-setter'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -73,7 +73,7 @@ function gsRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function gsPet(int $arrivalMonths, array $attributes = []): Pet
+function gosPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -85,7 +85,7 @@ function gsPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function gsPin(User $parent, array $body): TestResponse
+function gosPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -94,7 +94,7 @@ function gsPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function gsLogin(string $pin): TestResponse
+function gosLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -117,7 +117,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1060, 'breeds.gordon_setter'])
             ->and($config->search_keywords)->toBe(['gordon setter', 'gordonski seter', 'gordon seter', 'setter', 'seter', 'black and tan setter', 'scottish setter', 'škotski seter', 'skotski seter'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) gsData('proposed_game_parameters.gordon_setter.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) gosData('proposed_game_parameters.gordon_setter.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -125,13 +125,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = gsData('proposed_game_parameters.gordon_setter.care_rates.value');
+        $care = gosData('proposed_game_parameters.gordon_setter.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Gordon Setter pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = gsPet(36);
+        $pet = gosPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('gordon_setter');
 
@@ -189,34 +189,34 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.gordon_setter';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(gsRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(gsRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(gosRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gosData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(gosRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gosData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(gsRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(gosRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gosData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 10 y (RKC lower bound "Over 10 years", S842) = 90 — the runbook order (McMillan 2024 not reachable,
             // no VetCompass median) → confirmed rule, verified.
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData('gordon_setter.lifespan.senior_from.months'))
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gsRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(gsData('gordon_setter.lifespan.senior_from.derived_from'))->toBe(['S11', 'S842'])
-            ->and(gsData('gordon_setter.lifespan.mcmillan_2024.value'))->toBeNull()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', gsData("{$pgp}.stage_boundaries_months.derived_from")))
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_GORDON_SETTER)
-            ->and(gsRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gosData('gordon_setter.lifespan.senior_from.months'))
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gosRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(gosData('gordon_setter.lifespan.senior_from.derived_from'))->toBe(['S11', 'S842'])
+            ->and(gosData('gordon_setter.lifespan.mcmillan_2024.value'))->toBeNull()
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', gosData("{$pgp}.stage_boundaries_months.derived_from")))
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_GORDON_SETTER)
+            ->and(gosRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeTrue()
+            ->and(gosRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
 
-        expect(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gsData('gordon_setter.exercise.adult.quote'))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gsData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S842')
-            ->and(gsRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
-            ->and(gsRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(gsData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gsData("{$pgp}.learning_multiplier.value"))
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
+        expect(gosRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gosData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(gosRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
+            ->and(gosRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gosData('gordon_setter.exercise.adult.quote'))
+            ->and(gosRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gosData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(gosRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S842')
+            ->and(gosRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
+            ->and(gosRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gosData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(gosRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
+            ->and(gosRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(gosData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
+            ->and(gosRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gosData("{$pgp}.learning_multiplier.value"))
+            ->and(gosRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -226,7 +226,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('gordon-setter')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.gordon_setter.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) gsData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) gosData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -235,52 +235,52 @@ describe('life-stage data against data.json', function () {
         // socialisation with the PetMD quote (M5-R17), tooth brushing every day (WebMD, M5-R15) and the bath every 4 weeks
         // (WebMD, M5-R19). No ear / nail / groomer task (no frequency), no heat warning (not flat-faced).
         $tasks = BreedStageParamsSeeder::DOG_CARE_TASKS['gordon_setter'];
-        expect(json_encode([gsData('gordon_setter'), gsData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(gsData("{$pgp}.grooming.value"))->toBe(7)
-            ->and(gsData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
-            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['gordon_setter'])->toBe(['S844', gsData("{$pgp}.meal_exercise_gap.quote")])
-            ->and(gsData("{$pgp}.meal_exercise_gap.quote"))->toBe(gsData('gordon_setter.exercise.after_meals.quote'))
-            ->and(gsData("{$pgp}.meal_exercise_gap.value"))->toBe(60)
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['gordon_setter'])->toBe(['S844', gsData("{$pgp}.socialisation.quote")])
-            ->and(gsData("{$pgp}.socialisation.quote"))->toBe(gsData('gordon_setter.behaviour.socialisation.quote'))
+        expect(json_encode([gosData('gordon_setter'), gosData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(gosData("{$pgp}.grooming.value"))->toBe(7)
+            ->and(gosData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['gordon_setter'])->toBe(['S844', gosData("{$pgp}.meal_exercise_gap.quote")])
+            ->and(gosData("{$pgp}.meal_exercise_gap.quote"))->toBe(gosData('gordon_setter.exercise.after_meals.quote'))
+            ->and(gosData("{$pgp}.meal_exercise_gap.value"))->toBe(60)
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['gordon_setter'])->toBe(['S844', gosData("{$pgp}.socialisation.quote")])
+            ->and(gosData("{$pgp}.socialisation.quote"))->toBe(gosData('gordon_setter.behaviour.socialisation.quote'))
             ->and(array_keys($tasks))->toBe(['tooth_brushing', 'bath'])
-            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S845', gsData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
-            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'month', 'S845', gsData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
-            ->and(gsData("{$pgp}.bathing.quote"))->toBe(gsData('gordon_setter.suitability.webmd_bath.quote'))
-            ->and(gsData("{$pgp}.tooth_brushing.quote"))->toBe(gsData('gordon_setter.suitability.webmd_teeth.quote'))
+            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S845', gosData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
+            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'month', 'S845', gosData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
+            ->and(gosData("{$pgp}.bathing.quote"))->toBe(gosData('gordon_setter.suitability.webmd_bath.quote'))
+            ->and(gosData("{$pgp}.tooth_brushing.quote"))->toBe(gosData('gordon_setter.suitability.webmd_teeth.quote'))
             ->and($tasks)->not->toHaveKey('groomer_visit')->not->toHaveKey('nail_trim')->not->toHaveKey('ear_cleaning')
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('gordon_setter');
     });
 
     it('takes the breed-level numbers from the sourced gordon_setter entries', function () {
         // FCI-St. N°6 (S841): males 29.5 kg, females 25.5 kg → 25.5–29.5 (PDSA 25-30 kg = alternative).
-        expect(gsRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([25.5, 29.5])
-            ->and(gsData('gordon_setter.adult_weight.fci.value'))->toEqual(['male' => [29.5, 29.5], 'female' => [25.5, 25.5]])
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gsData('gordon_setter.adult_weight.fci.source_id'))
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gsData('gordon_setter.adult_weight.fci.quote'))
-            ->and(gsRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
-            ->and(gsData('gordon_setter.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
+        expect(gosRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([25.5, 29.5])
+            ->and(gosData('gordon_setter.adult_weight.fci.value'))->toEqual(['male' => [29.5, 29.5], 'female' => [25.5, 25.5]])
+            ->and(gosRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gosData('gordon_setter.adult_weight.fci.source_id'))
+            ->and(gosRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gosData('gordon_setter.adult_weight.fci.quote'))
+            ->and(gosRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
+            ->and(gosData('gordon_setter.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
             // Coren rank 34 → Above average → 1.2.
-            ->and(gsRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(34)
-            ->and(gsData('gordon_setter.trainability.coren_rank.value'))->toBe(34)
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('gordon_setter.lifespan.rkc')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S842')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10)
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gsData('gordon_setter.lifespan.rkc.quote'));
+            ->and(gosRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(34)
+            ->and(gosData('gordon_setter.trainability.coren_rank.value'))->toBe(34)
+            ->and(gosRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('gordon_setter.lifespan.rkc')
+            ->and(gosRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S842')
+            ->and(gosRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10)
+            ->and(gosRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gosData('gordon_setter.lifespan.rkc.quote'));
 
         // Brushing every day: RKC "More than once a week" has no number → PDSA "daily grooming" → 7.
-        $grooming = gsRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = gosRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(7)
             ->and($grooming['source_id'])->toBe('S843')
-            ->and($grooming['quote'])->toBe(gsData('gordon_setter.suitability.pdsa_grooming.quote'))
-            ->and($grooming['quote'])->toBe(gsData('proposed_game_parameters.gordon_setter.grooming.quote'))
+            ->and($grooming['quote'])->toBe(gosData('gordon_setter.suitability.pdsa_grooming.quote'))
+            ->and($grooming['quote'])->toBe(gosData('proposed_game_parameters.gordon_setter.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S844')
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue()
-            ->and(gsRow('all', 0, StageParamKey::MealExerciseGapMinutes)['value'])->toBe(60)
-            ->and(gsRow('all', 0, StageParamKey::MealExerciseGapMinutes)['source_id'])->toBe('S844');
+            ->and(gosRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(gosRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S844')
+            ->and(gosRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue()
+            ->and(gosRow('all', 0, StageParamKey::MealExerciseGapMinutes)['value'])->toBe(60)
+            ->and(gosRow('all', 0, StageParamKey::MealExerciseGapMinutes)['source_id'])->toBe('S844');
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'gordon-setter');
         expect($mine->where('key', StageParamKey::NoWalkInHeat->value)->all())->toBe([])
@@ -316,7 +316,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 120 minutes = 12,000 steps and 90 minutes = 9,000 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = gsPet($arrival);
+        $pet = gosPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -342,7 +342,7 @@ describe('stage rules', function () {
 
     it('learns at 1.2 × the mixed-breed speed (Coren rank 34, Above average) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = gsPet(36);
+        $dog = gosPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -359,7 +359,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = gsPin($parent, $body);
+        $response = gosPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -368,7 +368,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(gsLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(gosLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::GordonSetter)
             ->and($pet->species)->toBe(Species::Dog)
@@ -383,8 +383,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'gordon_setter'] as $breed) {
-            $pin = gsPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(gsLogin($pin)->assertOk()->json('pet.id'));
+            $pin = gosPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(gosLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['gordon_setter'];
@@ -397,7 +397,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = gsPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = gosPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -454,7 +454,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
         expect($standard)->toBe(['black and tan (deep coal black with chestnut-red tan markings)'])
             ->and(array_column($colours, 'value'))->toBe($standard)
             ->and(array_column($colours, 'key'))->toBe(['black-tan'])
-            ->and(gsData('gordon_setter.appearance.colours.value'))->toBe(['black and tan']);
+            ->and(gosData('gordon_setter.appearance.colours.value'))->toBe(['black and tan']);
     });
 
     it('draws the register portrait in black and tan', function () {
@@ -473,7 +473,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->and($v1['visual_traits']['eye_color'])->toBe('dark brown')
             ->and($v1['visual_traits']['color_scheme'])->toBe('black and tan (coal black with chestnut-red tan markings)');
 
-        $pet = gsPet(90, ['origin' => PetOrigin::Adopted]);
+        $pet = gosPet(90, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Gordon Setter')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -495,8 +495,8 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
             // RKC Breed Watch Category 2 without returned points (S842), a long muzzle (S841) → no breathing / hips chip,
             // no BVA marketing exclusion.
             ->and($tags['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs')
-            ->and(gsData('gordon_setter.suitability.rkc_breed_watch.value'))->toBe('Category 2')
-            ->and(gsData('proposed_game_parameters.gordon_setter.marketing.value'))->toContain('in marketing: yes')
+            ->and(gosData('gordon_setter.suitability.rkc_breed_watch.value'))->toBe('Category 2')
+            ->and(gosData('proposed_game_parameters.gordon_setter.marketing.value'))->toContain('in marketing: yes')
             // The alternatives (112 Wikipedia, 108 PetMD, 84 Dogs Trust) are never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'gordon-setter')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
             ->not->toContain(112)->not->toContain(108)->not->toContain(84);
@@ -515,12 +515,12 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('shorter_lifespan')->not->toContain('needs_company')
             ->not->toContain('experienced_owner')->not->toContain('not_for_small_children')->not->toContain('older_children');
 
-        expect(gsData('gordon_setter.behaviour.children.quote'))->toContain('only moderately good with young children')
-            ->and(gsData('gordon_setter.behaviour.other_pets.quote'))->toContain('high prey drive')
-            ->and(gsData('gordon_setter.behaviour.family.quote'))->toBeNull()
-            ->and(gsData('gordon_setter.behaviour.time_alone.quote'))->toBeNull()
-            ->and(gsData('gordon_setter.suitability.rkc_size_of_home.quote'))->toBe('Large house')
-            ->and(gsData('gordon_setter.suitability.rkc_shedding.quote'))->toBe('Yes')
-            ->and(gsData('gordon_setter.lifespan.rkc.quote'))->toBe('Over 10 years');
+        expect(gosData('gordon_setter.behaviour.children.quote'))->toContain('only moderately good with young children')
+            ->and(gosData('gordon_setter.behaviour.other_pets.quote'))->toContain('high prey drive')
+            ->and(gosData('gordon_setter.behaviour.family.quote'))->toBeNull()
+            ->and(gosData('gordon_setter.behaviour.time_alone.quote'))->toBeNull()
+            ->and(gosData('gordon_setter.suitability.rkc_size_of_home.quote'))->toBe('Large house')
+            ->and(gosData('gordon_setter.suitability.rkc_shedding.quote'))->toBe('Yes')
+            ->and(gosData('gordon_setter.lifespan.rkc.quote'))->toBe('Over 10 years');
     });
 });
