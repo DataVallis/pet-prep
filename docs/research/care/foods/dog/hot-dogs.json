@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Hot dogs",
-    "sl": "Hrenovke"
+    "sl": "Hrenovke",
+    "hr": "Hrenovke (hot dog)"
   },
   "question": {
     "en": "Can dogs eat hot dogs?",
-    "sl": "Ali lahko psi jedo hrenovke?"
+    "sl": "Ali lahko psi jedo hrenovke?",
+    "hr": "Smiju li psi jesti hrenovke?"
   },
   "url_slug": {
     "en": "hot-dogs",
-    "sl": "hrenovke"
+    "sl": "hrenovke",
+    "hr": "hot-dog"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, hot dogs aren't a good choice for dogs. They are very salty and often contain sodium nitrate and seasonings such as garlic and onion powder, which can be toxic to dogs. Hot dogs can also be a choking hazard.",
-    "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši."
+    "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši.",
+    "hr": "Ne, hrenovke nisu dobar izbor za pse. Vrlo su slane i često sadrže natrijev nitrat i začine poput češnjaka i luka u prahu, koji mogu biti otrovni za pse. Hrenovke mogu izazvati i gušenje."
   },
   "why": {
     "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
-    "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili."
+    "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili.",
+    "hr": "Najveći je problem hrenovki sol: čak bi i pola jedne hrenovke vjerojatno psa daleko odvelo preko dnevne granice natrija, a previše natrija može dovesti do dehidracije i visokog krvnog tlaka. Hrenovke često sadrže natrijev nitrat, koji se povezuje s rakom, zatim MSG, šećere ili umjetna sladila, kao i češnjak i luk u prahu. Veliki psi ih mogu pokušati progutati bez žvakanja."
   },
   "signs": {
     "en": [
@@ -32,26 +37,35 @@
       "Bolečine v trebuhu",
       "Driska",
       "Bruhanje skupaj z drisko"
+    ],
+    "hr": [
+      "Bol u trbuhu",
+      "Proljev",
+      "Povraćanje uz proljev"
     ]
   },
   "what_to_do": {
     "en": "After eating a hot dog, your dog may get a tummy ache or diarrhoea, which should pass within a day. Call your vet if the diarrhoea doesn't stop or your dog is vomiting as well, as this can lead to serious dehydration.",
-    "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo."
+    "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo.",
+    "hr": "Nakon hrenovke pas može dobiti bolove u trbuhu ili proljev, što bi trebalo proći unutar jednog dana. Nazovi veterinara ako proljev ne prestane ili pas povraća, jer to može dovesti do ozbiljne dehidracije."
   },
   "serving": null,
   "child": {
     "en": "Hot dogs are too salty for dogs. At a barbecue, ask a grown-up for a little plain meat for your dog instead.",
-    "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa."
+    "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa.",
+    "hr": "Hrenovke su previše slane za pse. Na roštilju zamoli odraslu osobu da umjesto toga psu da malo običnog mesa."
   },
   "faq": [
     {
       "q": {
         "en": "What can I give my dog at a barbecue instead?",
-        "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?"
+        "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?",
+        "hr": "Što mogu dati psu na roštilju umjesto toga?"
       },
       "a": {
         "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
-        "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke."
+        "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke.",
+        "hr": "Malo običnog goveđeg, svinjskog ili pilećeg mesa bez soli i drugih začina, narezanog na komadiće za jedan zalogaj."
       }
     }
   ],
@@ -132,6 +146,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "09b9744787d97985ed2d6d9791337a1da30c78f94476ae1a6e2827552e7913dd"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50eb81cb664f3568b1f808365da52d301f909067f3b6ed2afabddc67ab222d92"
     }
   }
 }

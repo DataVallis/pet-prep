@@ -4,28 +4,33 @@
   "name": {
     "en": "Nutmeg",
     "sl": "Muškatni orešček",
-    "cs": "Muškátový ořech"
+    "cs": "Muškátový ořech",
+    "hr": "Muškatni oraščić"
   },
   "question": {
     "en": "Can dogs eat nutmeg?",
     "sl": "Ali lahko psi jedo muškatni orešček?",
-    "cs": "Mohou psi jíst muškátový ořech?"
+    "cs": "Mohou psi jíst muškátový ořech?",
+    "hr": "Smiju li psi jesti muškatni oraščić?"
   },
   "url_slug": {
     "en": "nutmeg",
     "sl": "muskatni-orescek",
-    "cs": "muskatovy-orech"
+    "cs": "muskatovy-orech",
+    "hr": "muskatni-orascic"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, keep nutmeg away from your dog. It contains a toxin called myristicin. The small amount used in baked goods is generally safe, but a large amount of nutmeg can cause hallucinations, disorientation and a fast heart rate.",
     "sl": "Ne, muškatni orešček naj bo zunaj pasjega dosega. Vsebuje strup miristicin. Majhna količina v pecivu je na splošno varna, velika količina muškatnega oreščka pa lahko povzroči halucinacije, zmedenost in hiter srčni utrip.",
-    "cs": "Ne, muškátový ořech psovi nedávejte. Obsahuje toxin zvaný myristicin. Malé množství použité v pečivu je obvykle bezpečné, ale velké množství muškátového ořechu může způsobit halucinace, dezorientaci a zrychlený tep."
+    "cs": "Ne, muškátový ořech psovi nedávejte. Obsahuje toxin zvaný myristicin. Malé množství použité v pečivu je obvykle bezpečné, ale velké množství muškátového ořechu může způsobit halucinace, dezorientaci a zrychlený tep.",
+    "hr": "Ne, muškatni oraščić drži podalje od psa. Sadrži toksin miristicin. Mala količina u pekarskim proizvodima općenito je sigurna, ali velika količina muškatnog oraščića može izazvati halucinacije, dezorijentiranost i ubrzan rad srca."
   },
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
     "sl": "Miristicin lahko v velikih količinah povzroči halucinacije, zmedenost, hitrejši srčni utrip, visok krvni tlak, suha usta, bolečine v trebuhu in morda krče, znaki pa lahko trajajo do 48 ur. Za to bi moral pes pojesti zelo veliko muškatnega oreščka; majhna količina v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Ker začimba sama vsebuje strup, jo uvrščamo med nevarne.",
-    "cs": "Ve velkém množství může myristicin způsobit halucinace, dezorientaci, zrychlený tep, vysoký krevní tlak, sucho v ústech, bolest břicha a případně záchvaty a příznaky mohou trvat až 48 hodin. Pes by na to musel sníst opravdu velké množství; malé množství z receptu velmi pravděpodobně vážné potíže nezpůsobí, i když může dojít k mírnému podráždění žaludku. Protože samotné koření obsahuje toxin, hodnotíme ho jako nebezpečné."
+    "cs": "Ve velkém množství může myristicin způsobit halucinace, dezorientaci, zrychlený tep, vysoký krevní tlak, sucho v ústech, bolest břicha a případně záchvaty a příznaky mohou trvat až 48 hodin. Pes by na to musel sníst opravdu velké množství; malé množství z receptu velmi pravděpodobně vážné potíže nezpůsobí, i když může dojít k mírnému podráždění žaludku. Protože samotné koření obsahuje toxin, hodnotíme ho jako nebezpečné.",
+    "hr": "U velikim količinama miristicin može izazvati halucinacije, dezorijentiranost, ubrzan rad srca, visok krvni tlak, suha usta, bol u trbuhu i moguće napadaje, a znakovi mogu trajati i do 48 sati. Pas bi za to morao pojesti vrlo veliku količinu; mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Budući da sam začin sadrži toksin, ocjenjujemo ga kao opasan."
   },
   "signs": {
     "en": [
@@ -54,30 +59,43 @@
       "Bolest břicha",
       "Případně záchvaty",
       "Příznaky mohou trvat až 48 hodin"
+    ],
+    "hr": [
+      "Blage želučane tegobe (male količine)",
+      "Halucinacije i dezorijentiranost",
+      "Ubrzan rad srca",
+      "Visok krvni tlak i suha usta",
+      "Bol u trbuhu",
+      "Mogući napadaji",
+      "Znakovi mogu trajati do 48 sati"
     ]
   },
   "what_to_do": {
     "en": "A little nutmeg in a baked treat is very unlikely to cause serious problems. If your dog ate a large amount of nutmeg by accident, call your vet for advice.",
     "sl": "Malo muškatnega oreščka v pecivu le redko povzroči resne težave. Če je pes po nesreči pojedel veliko muškatnega oreščka, pokličite veterinarja za nasvet.",
-    "cs": "Trocha muškátového ořechu v upečeném pamlsku velmi pravděpodobně nezpůsobí vážné potíže. Pokud pes omylem snědl velké množství muškátového ořechu, zavolejte veterináři a poraďte se."
+    "cs": "Trocha muškátového ořechu v upečeném pamlsku velmi pravděpodobně nezpůsobí vážné potíže. Pokud pes omylem snědl velké množství muškátového ořechu, zavolejte veterináři a poraďte se.",
+    "hr": "Malo muškatnog oraščića u pekarskoj poslastici vrlo vjerojatno neće izazvati ozbiljne probleme. Ako je pas slučajno pojeo veliku količinu muškatnog oraščića, nazovi veterinara za savjet."
   },
   "serving": null,
   "child": {
     "en": "Nutmeg is a spice for people's cooking. It is not for dogs, so keep spice jars where your dog can't reach them.",
     "sl": "Muškatni orešček je začimba za kuhanje. Ni za pse, zato kozarčke z začimbami pospravi tja, kamor pes ne seže.",
-    "cs": "Muškátový ořech je koření do jídel pro lidi. Pro psy není, proto nádobky s kořením ukládej tam, kam se pes nedostane."
+    "cs": "Muškátový ořech je koření do jídel pro lidi. Pro psy není, proto nádobky s kořením ukládej tam, kam se pes nedostane.",
+    "hr": "Muškatni oraščić je začin za kuhanje. Nije za pse, zato staklenke s začinima drži tamo gdje ih pas ne može dohvatiti."
   },
   "faq": [
     {
       "q": {
         "en": "My dog ate a cookie with a little nutmeg. Is that dangerous?",
         "sl": "Pes je pojedel piškot z malo muškatnega oreščka. Je to nevarno?",
-        "cs": "Můj pes snědl sušenku s trochou muškátového ořechu. Je to nebezpečné?"
+        "cs": "Můj pes snědl sušenku s trochou muškátového ořechu. Je to nebezpečné?",
+        "hr": "Moj je pas pojeo keks s malo muškatnog oraščića. Je li to opasno?"
       },
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
         "sl": "Majhna količina muškatnega oreščka v receptih le redko povzroči resne težave, lahko pa pride do blagih prebavnih težav. Preverite tudi, ali piškot vsebuje ksilitol; nekatero pecivo ga vsebuje, za pse pa je zelo strupen.",
-        "cs": "Malé množství muškátového ořechu použité v receptech velmi pravděpodobně nezpůsobí vážné potíže, i když může dojít k mírnému podráždění žaludku. Zkontrolujte také, zda sušenka neobsahuje xylitol, který se v některém pečivu vyskytuje a je velmi jedovatý."
+        "cs": "Malé množství muškátového ořechu použité v receptech velmi pravděpodobně nezpůsobí vážné potíže, i když může dojít k mírnému podráždění žaludku. Zkontrolujte také, zda sušenka neobsahuje xylitol, který se v některém pečivu vyskytuje a je velmi jedovatý.",
+        "hr": "Mala količina muškatnog oraščića koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Provjeri i sadrži li keks ksilitol, koji se nalazi u nekim pekarskim proizvodima i vrlo je otrovan."
       }
     }
   ],
@@ -157,6 +175,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6820c155d5f2815e8edb92be582b47152404683782e540e1bb0fdd169ffc6f04"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "995dd62d0933e0084570af9545d61c31167aa86af5430cac9d97e92c2abe2e5a"
     }
   }
 }

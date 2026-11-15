@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Mustard",
-    "sl": "Gorčica"
+    "sl": "Gorčica",
+    "hr": "Senf"
   },
   "question": {
     "en": "Can dogs eat mustard?",
-    "sl": "Ali lahko psi jedo gorčico?"
+    "sl": "Ali lahko psi jedo gorčico?",
+    "hr": "Smiju li psi jesti senf?"
   },
   "url_slug": {
     "en": "mustard",
-    "sl": "gorcica"
+    "sl": "gorcica",
+    "hr": "senf"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, you should never give your dog mustard. Mustard seeds contain compounds that can inflame a dog's stomach and intestines, and mustard can cause vomiting. A small lick off your plate is unlikely to cause a problem, but a large amount could be serious.",
-    "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava."
+    "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava.",
+    "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
-    "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet."
+    "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet.",
+    "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku."
   },
   "signs": {
     "en": [
@@ -36,36 +41,49 @@
       "Bruhanje",
       "Driska",
       "Bolečine v trebuhu"
+    ],
+    "hr": [
+      "Odbijanje hrane",
+      "Slinjenje",
+      "Povraćanje",
+      "Proljev",
+      "Bol u trbuhu"
     ]
   },
   "what_to_do": {
     "en": "A small lick is unlikely to cause a problem. If your dog ate a lot of mustard, or you notice signs such as vomiting, drooling or tummy pain, contact your vet as soon as possible.",
-    "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja."
+    "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja.",
+    "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru."
   },
   "serving": null,
   "child": {
     "en": "Mustard can give dogs a sore tummy. Keep it on your own plate, away from your dog.",
-    "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa."
+    "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa.",
+    "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa."
   },
   "faq": [
     {
       "q": {
         "en": "My dog licked a little mustard. Is that a problem?",
-        "sl": "Pes je polizal malo gorčice. Je to težava?"
+        "sl": "Pes je polizal malo gorčice. Je to težava?",
+        "hr": "Moj je pas poližao malo senfa. Je li to problem?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
-        "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji."
+        "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji.",
+        "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih."
       }
     },
     {
       "q": {
         "en": "Is any kind of mustard safe?",
-        "sl": "Je katera vrsta gorčice varna?"
+        "sl": "Je katera vrsta gorčice varna?",
+        "hr": "Je li neka vrsta senfa sigurna?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
-        "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski."
+        "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski.",
+        "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf."
       }
     }
   ],
@@ -151,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75d5dfdfcae20d8996f425f74e2ccc7179069253977a1d9f71d7d45599606f13"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2c46cb6906bbe4683bbbc9843696ff3c53f00005479dad4a9247ca62c9a42769"
     }
   }
 }

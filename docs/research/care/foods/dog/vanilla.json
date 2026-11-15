@@ -4,28 +4,33 @@
   "name": {
     "en": "Vanilla extract",
     "sl": "Vanilijev ekstrakt",
-    "cs": "Vanilkový extrakt"
+    "cs": "Vanilkový extrakt",
+    "hr": "Ekstrakt vanilije"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
     "sl": "Ali lahko psi zaužijejo vanilijev ekstrakt?",
-    "cs": "Mohou psi mít vanilkový extrakt?"
+    "cs": "Mohou psi mít vanilkový extrakt?",
+    "hr": "Smiju li psi jesti ekstrakt vanilije?"
   },
   "url_slug": {
     "en": "vanilla",
     "sl": "vanilija",
-    "cs": "vanilkovy-extrakt"
+    "cs": "vanilkovy-extrakt",
+    "hr": "ekstrakt-vanilije"
   },
   "level": "toxic",
   "answer": {
     "en": "No, keep vanilla extract away from your dog. Vanilla extract is mostly made from alcohol, and alcohol can easily cause vomiting, diarrhoea and a drunken walk in dogs. If your dog drank some, contact your vet straight away.",
     "sl": "Ne, vanilijev ekstrakt naj bo zunaj pasjega dosega. Vanilijev ekstrakt je večinoma narejen iz alkohola, alkohol pa pri psih zlahka povzroči bruhanje, drisko in opotekanje. Če ga je pes popil, takoj pokličite veterinarja.",
-    "cs": "Ne, vanilkový extrakt psovi nedávejte. Vanilkový extrakt se vyrábí převážně z alkoholu a alkohol může u psů snadno způsobit zvracení, průjem a vrávoravou chůzi jako po opilosti. Pokud pes vanilkový extrakt vypil, ihned se obraťte na veterináře."
+    "cs": "Ne, vanilkový extrakt psovi nedávejte. Vanilkový extrakt se vyrábí převážně z alkoholu a alkohol může u psů snadno způsobit zvracení, průjem a vrávoravou chůzi jako po opilosti. Pokud pes vanilkový extrakt vypil, ihned se obraťte na veterináře.",
+    "hr": "Ne, ekstrakt vanilije drži podalje od psa. Većim se dijelom sastoji od alkohola, a alkohol kod pasa lako izaziva povraćanje, proljev i teturav hod. Ako je pas popio malo, odmah se obrati veterinaru."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
     "sl": "Vanilijev ekstrakt je večinoma narejen iz alkohola, psi pa ga prenesejo zelo malo: alkohol zlahka povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Alkohol se po zaužitju hitro vsrka, zato je pomembno, da hitro poiščete veterinarsko pomoč. Živila, ki vsebujejo alkohol, lahko povzročijo enake težave kot alkoholne pijače.",
-    "cs": "Vanilkový extrakt se vyrábí převážně z alkoholu a psi mají malou tělesnou hmotnost: alkohol u nich snadno způsobí zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Alkohol se po spolknutí rychle vstřebává, a proto je důležité rychle získat veterinární pomoc. Potraviny obsahující alkohol mohou způsobit stejné potíže jako alkoholické nápoje."
+    "cs": "Vanilkový extrakt se vyrábí převážně z alkoholu a psi mají malou tělesnou hmotnost: alkohol u nich snadno způsobí zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Alkohol se po spolknutí rychle vstřebává, a proto je důležité rychle získat veterinární pomoc. Potraviny obsahující alkohol mohou způsobit stejné potíže jako alkoholické nápoje.",
+    "hr": "Ekstrakt vanilije većim se dijelom sastoji od alkohola, a psi su na alkohol vrlo osjetljivi, pa lako može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Alkohol se nakon gutanja brzo upija, zato je važno brzo potražiti veterinarsku pomoć. Prehrambeni proizvodi koji sadrže alkohol mogu izazvati iste probleme kao alkoholna pića."
   },
   "signs": {
     "en": [
@@ -57,18 +62,30 @@
       "Pomalejší dýchání",
       "Nízká hladina cukru v krvi, nízký krevní tlak, nízká tělesná teplota",
       "Zhroucení"
+    ],
+    "hr": [
+      "Povraćanje ili nagon na povraćanje",
+      "Proljev",
+      "Slaba koordinacija, teturav hod",
+      "Slinjenje",
+      "Potištenost ili bezvoljnost, slabost",
+      "Usporeno disanje",
+      "Nizak šećer u krvi, nizak krvni tlak, niska tjelesna temperatura",
+      "Kolaps"
     ]
   },
   "what_to_do": {
     "en": "If your dog drank vanilla extract, note how much and contact your vet or a pet poison line right away. A dog showing signs should be seen by a vet as soon as possible.",
     "sl": "Če je pes popil vanilijev ekstrakt, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali. Psa z znaki zastrupitve naj čim prej pregleda veterinar.",
-    "cs": "Pokud pes vypil vanilkový extrakt, zjistěte, kolik, a ihned se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Pes s příznaky by měl být co nejdříve vyšetřen veterinářem."
+    "cs": "Pokud pes vypil vanilkový extrakt, zjistěte, kolik, a ihned se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Pes s příznaky by měl být co nejdříve vyšetřen veterinářem.",
+    "hr": "Ako je pas popio ekstrakt vanilije, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Psa koji pokazuje znakove treba što prije pregledati veterinar."
   },
   "serving": null,
   "child": {
     "en": "Vanilla extract is for baking, not for dogs. Keep the little bottle closed and put away, and tell a grown-up if your dog finds it.",
     "sl": "Vanilijev ekstrakt je za peko, ne za pse. Stekleničko imej zaprto in pospravljeno ter povej odraslemu, če jo pes najde.",
-    "cs": "Vanilkový extrakt je na pečení, ne pro psy. Lahvičku drž zavřenou a uklizenou, a když se k ní pes dostane, řekni to dospělému."
+    "cs": "Vanilkový extrakt je na pečení, ne pro psy. Lahvičku drž zavřenou a uklizenou, a když se k ní pes dostane, řekni to dospělému.",
+    "hr": "Ekstrakt vanilije služi za pečenje, a ne za pse. Bočicu drži zatvorenu i spremljenu i reci odrasloj osobi ako je pas pronađe."
   },
   "faq": [],
   "sources": [
@@ -167,6 +184,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a75f9b920b1c31dbace555024527e2d15091891459bd3d5156e2b91c0e18d0d0"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cd68a61fce99d016b4217a359d1affa70278e3ff615d3ef215bbf6155cf0d2b4"
     }
   }
 }

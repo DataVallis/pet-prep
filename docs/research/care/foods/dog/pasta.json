@@ -4,68 +4,80 @@
   "name": {
     "en": "Pasta",
     "sl": "Testenine",
-    "cs": "Těstoviny"
+    "cs": "Těstoviny",
+    "hr": "Tjestenina"
   },
   "question": {
     "en": "Can dogs eat pasta?",
     "sl": "Ali lahko psi jedo testenine?",
-    "cs": "Mohou psi jíst těstoviny?"
+    "cs": "Mohou psi jíst těstoviny?",
+    "hr": "Smiju li psi jesti tjesteninu?"
   },
   "url_slug": {
     "en": "pasta",
     "sl": "testenine",
-    "cs": "testoviny"
+    "cs": "testoviny",
+    "hr": "tjestenina"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked pasta is fine in small amounts, and vets even use it in a bland diet when a dog is sick. Skip the sauce: onion and garlic are common in cooking and are toxic to dogs, even cooked.",
     "sl": "Da, navadne kuhane testenine so v majhnih količinah v redu, veterinarji jih celo uporabljajo v blagi dieti, ko je pes bolan. Brez omake: čebula in česen sta pogosta v kuhinji in sta za pse strupena, tudi kuhana.",
-    "cs": "Ano, obyčejné uvařené těstoviny jsou v malém množství v pořádku a veterináři je dokonce používají v šetřící dietě, když je pes nemocný. Vynechte omáčku: cibule a česnek se při vaření používají často a jsou pro psy jedovaté i po tepelné úpravě."
+    "cs": "Ano, obyčejné uvařené těstoviny jsou v malém množství v pořádku a veterináři je dokonce používají v šetřící dietě, když je pes nemocný. Vynechte omáčku: cibule a česnek se při vaření používají často a jsou pro psy jedovaté i po tepelné úpravě.",
+    "hr": "Da, obična kuhana tjestenina u redu je u malim količinama, a veterinari je čak koriste u blagoj dijeti kad je pas bolestan. Izostavi umak: luk i češnjak česti su u kuhanju i otrovni su za pse, čak i kuhani."
   },
   "why": {
     "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
     "sl": "Dogs Trust testenine in navadne rezance uvršča med človeško hrano, ki jo psi običajno lahko jedo zmerno. Cornell kuhane testenine navaja kot možnost, ko pes potrebuje blago dieto za pomiritev prebavil, vendar taka dieta za dolgoročno hranjenje ni uravnotežena. Čebula, česen, por in drobnjak lahko pri psih povzročijo slabokrvnost, strupeni pa so lahko že sledovi v kuhani hrani. Posameznega psa lahko kljub temu razdražijo nestrpnost, vsebnost maščob ali velikost porcije.",
-    "cs": "Organizace Dogs Trust řadí těstoviny a obyčejné nudle mezi lidské potraviny, které psi obvykle mohou jíst s mírou. Cornellova univerzita uvádí uvařené těstoviny jako jednu z možností, když pes potřebuje šetřící dietu na zklidnění střev, i když taková dieta není vyvážená pro dlouhodobé krmení. Cibule, česnek, pórek a pažitka mohou u psů způsobit chudokrevnost a jedovaté mohou být i stopy v uvařeném jídle. Nesnášenlivost, obsah tuku nebo velikost porce mohou přesto konkrétnímu psovi způsobit potíže."
+    "cs": "Organizace Dogs Trust řadí těstoviny a obyčejné nudle mezi lidské potraviny, které psi obvykle mohou jíst s mírou. Cornellova univerzita uvádí uvařené těstoviny jako jednu z možností, když pes potřebuje šetřící dietu na zklidnění střev, i když taková dieta není vyvážená pro dlouhodobé krmení. Cibule, česnek, pórek a pažitka mohou u psů způsobit chudokrevnost a jedovaté mohou být i stopy v uvařeném jídle. Nesnášenlivost, obsah tuku nebo velikost porce mohou přesto konkrétnímu psovi způsobit potíže.",
+    "hr": "Dogs Trust navodi tjesteninu i obične rezance među ljudskom hranom koju psi obično smiju jesti umjereno. Cornell navodi kuhanu tjesteninu kao jednu od mogućnosti kad je psu potrebna blaga dijeta za smirivanje crijeva, iako takva dijeta nije uravnotežena za dugotrajno hranjenje. Luk, češnjak, poriluk i vlasac mogu kod pasa izazvati anemiju, a čak i tragovi u kuhanoj hrani mogu biti otrovni. Netolerancija, udio masti ili veličina porcije i dalje mogu naškoditi pojedinom psu."
   },
   "signs": null,
   "what_to_do": {
     "en": "Plain pasta usually needs nothing more. If your dog ate pasta with a sauce that may contain onion or garlic, don't wait to see — contact your vet. Ask your vet before offering a food your dog hasn't tried.",
     "sl": "Pri navadnih testeninah običajno ni treba storiti ničesar. Če je pes pojedel testenine z omako, ki morda vsebuje čebulo ali česen, ne čakajte – pokličite veterinarja. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem.",
-    "cs": "Obyčejné těstoviny obvykle žádné další kroky nevyžadují. Pokud pes snědl těstoviny s omáčkou, která může obsahovat cibuli nebo česnek, nečekejte, co se stane, a obraťte se na veterináře. Než psovi nabídnete potravinu, kterou ještě nejedl, poraďte se s veterinářem."
+    "cs": "Obyčejné těstoviny obvykle žádné další kroky nevyžadují. Pokud pes snědl těstoviny s omáčkou, která může obsahovat cibuli nebo česnek, nečekejte, co se stane, a obraťte se na veterináře. Než psovi nabídnete potravinu, kterou ještě nejedl, poraďte se s veterinářem.",
+    "hr": "Obična tjestenina obično ne treba ništa dodatno. Ako je pas pojeo tjesteninu s umakom koji bi mogao sadržavati luk ili češnjak, ne čekaj da vidiš: obrati se veterinaru. Pitaj veterinara prije nego što ponudiš hranu koju pas još nije jeo."
   },
   "serving": {
     "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
     "sl": "Navadne kuhane testenine ali rezanci, zmerno, brez omake, čebule, česna in začimb.",
-    "cs": "Obyčejné uvařené těstoviny nebo nudle, s mírou, bez omáčky, cibule, česneku a koření."
+    "cs": "Obyčejné uvařené těstoviny nebo nudle, s mírou, bez omáčky, cibule, česneku a koření.",
+    "hr": "Obična kuhana tjestenina ili rezanci, umjereno, bez umaka, luka, češnjaka i začina."
   },
   "child": {
     "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
     "sl": "Malo navadnih kuhanih testenin je za pse v redu. V omakah se lahko skrivata čebula ali česen, zato najprej vprašaj odraslega.",
-    "cs": "Trocha obyčejných uvařených těstovin je pro psy v pořádku. V omáčkách se může skrývat cibule nebo česnek, proto se nejdřív zeptej dospělého."
+    "cs": "Trocha obyčejných uvařených těstovin je pro psy v pořádku. V omáčkách se může skrývat cibule nebo česnek, proto se nejdřív zeptej dospělého.",
+    "hr": "Malo obične kuhane tjestenine u redu je za pse. Umaci mogu skrivati luk ili češnjak, zato prvo pitaj odraslu osobu."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat spaghetti with sauce?",
         "sl": "Ali lahko psi jedo špagete z omako?",
-        "cs": "Mohou psi jíst špagety s omáčkou?"
+        "cs": "Mohou psi jíst špagety s omáčkou?",
+        "hr": "Smiju li psi jesti špagete s umakom?"
       },
       "a": {
         "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
         "sl": "Bolje ne. Omake pogosto vsebujejo čebulo ali česen, ti pa so za pse lahko strupeni že v sledovih v kuhani hrani.",
-        "cs": "Raději ne. Omáčky se často dělají s cibulí nebo česnekem a pro psy mohou být jedovaté i stopy v uvařeném jídle."
+        "cs": "Raději ne. Omáčky se často dělají s cibulí nebo česnekem a pro psy mohou být jedovaté i stopy v uvařeném jídle.",
+        "hr": "Bolje ne. Umaci se često prave s lukom ili češnjakom, a čak i tragovi toga u kuhanoj hrani mogu biti otrovni za pse."
       }
     },
     {
       "q": {
         "en": "Can pasta help a dog with an upset stomach?",
         "sl": "Ali testenine pomagajo psu pri prebavnih težavah?",
-        "cs": "Mohou těstoviny pomoci psovi s podrážděným žaludkem?"
+        "cs": "Mohou těstoviny pomoci psovi s podrážděným žaludkem?",
+        "hr": "Može li tjestenina pomoći psu s osjetljivim želucem?"
       },
       "a": {
         "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
         "sl": "Kuhane testenine so ena od možnosti, ko bolan pes potrebuje blago dieto, vendar taka dieta ni uravnotežena in je ni varno dajati dolgoročno.",
-        "cs": "Uvařené těstoviny jsou jednou z možností, když nemocný pes potřebuje šetřící dietu, ale taková dieta není vyvážená a není bezpečná pro dlouhodobé krmení."
+        "cs": "Uvařené těstoviny jsou jednou z možností, když nemocný pes potřebuje šetřící dietu, ale taková dieta není vyvážená a není bezpečná pro dlouhodobé krmení.",
+        "hr": "Kuhana tjestenina jedna je od mogućnosti kad bolesnom psu treba blaga dijeta, ali takva dijeta nije uravnotežena i nije sigurna za dugotrajno hranjenje."
       }
     }
   ],
@@ -147,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f15daf75b23033765d496442f4bba64f6bd652376ee6d59c8a7430ece109159"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5336b69f10aa899219c46d9835e576475515a1a88d002baa18838828df003625"
     }
   }
 }
