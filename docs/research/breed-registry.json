@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "b5c4feb5e313c2c744c648a2e3e154d4138560644bc924f0d1042c656f176552"
+      "sha256": "acf0eb018ae6aa392c42653bdd643185858ebdc87e4e9016b40e702033d71ea2"
     }
   },
   "suitability_vocabulary": {
@@ -65889,7 +65889,12 @@
           "S867"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "parson-russell-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
